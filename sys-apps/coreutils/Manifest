@@ -7,7 +7,7 @@ MD5 5a7d722a7600e8834bf39c24790caaa2 files/003_all_coreutils-gentoo-uname-s390.p
 MD5 6a9f5a2ffa31d94987039066c5072982 files/digest-coreutils-5.2.0-r2 224
 MD5 2fd5f76c3712f10e95dbc7cf72438162 ChangeLog 18425
 MD5 9253cc724d0f5ba11a7a7253c91aa6f6 coreutils-5.0-r6.ebuild 2724
-MD5 2864bf465993a7496cc4ad204f2dc3e7 coreutils-5.2.1.ebuild 3995
+MD5 026d23cf709789479474fdc4d3d8ee69 coreutils-5.2.1.ebuild 3992
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 ce3b3665ef7eec18425f7cd7de6f6236 coreutils-5.0.91-r3.ebuild 3958
 MD5 2f912270290d6f28653774d0c61c5b7e coreutils-5.0.91-r4.ebuild 4223
