@@ -1,24 +1,28 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/curl-7.9.7.ebuild,v 1.2 2002/07/11 06:30:46 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/curl-7.9.7.ebuild,v 1.3 2002/07/17 09:39:57 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Client that groks URLs"
 SRC_URI="http://curl.haxx.se/download/${P}.tar.gz"
 HOMEPAGE="http://curl.haxx.se"
 
-DEPEND=">=sys-libs/glibc-2.1.3 >=sys-libs/pam-0.75 ssl? ( >=dev-libs/openssl-0.9.6a )"
+DEPEND=">=sys-libs/pam-0.75 
+	ssl? ( >=dev-libs/openssl-0.9.6a )"
+
+SLOT="0"
+LICENSE="MPL X11"
+KEYWORDS="x86"
 
 src_compile() {
+
 	local myconf
-	if [ "`use ssl`" ]
-	then
-		myconf="--with-ssl"
-	else
-		myconf="--without-ssl"
-	fi
+	use ssl \
+		&& myconf="--with-ssl" \
+		|| myconf="--without-ssl"
+
     cd ${S}
-    ./configure --prefix=/usr --mandir=/usr/share/man $myconf || die
+    econf ${myconf} || die
     emake || die
 
 }

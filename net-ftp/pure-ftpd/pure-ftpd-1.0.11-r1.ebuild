@@ -1,17 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.11-r1.ebuild,v 1.3 2002/07/11 06:30:46 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.11-r1.ebuild,v 1.4 2002/07/17 09:39:57 seemant Exp $
 
 S="${WORKDIR}/${P}"
-SRC_URI="mirror://sourceforge/pureftpd/${P}.tar.bz2"
 DESCRIPTION="Pure-FTPd is a fast, production-quality, standard-conformant FTP server"
+SRC_URI="mirror://sourceforge/pureftpd/${P}.tar.bz2"
 HOMEPAGE="http://www.pureftpd.org/"
-SLOT="0"
+
 DEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.75 )
 	mysql? ( >=dev-db/mysql-3.23.49 )
 	postgres? ( >=dev-db/postgresql-7.2 )
 	ldap? ( >=net-nds/openldap-2.0.21 )"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
 
