@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.26 2004/10/19 08:29:08 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.27 2004/11/16 11:36:48 dragonheart Exp $
+
+  16 Nov 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/libgpg-error-1.0-locale.h.patch, libgpg-error-1.0-r1.ebuild:
+  Fixed occasional breakage with nls support. bug #63919 refers.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   libgpg-error-1.0-r1.ebuild:

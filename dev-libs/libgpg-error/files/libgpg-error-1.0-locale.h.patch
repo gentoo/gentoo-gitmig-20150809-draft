@@ -1,0 +1,10 @@
+--- configure.ac.orig	2004-11-16 20:34:14.350506736 +0930
++++ configure.ac	2004-11-16 20:34:38.026907376 +0930
+@@ -70,6 +70,7 @@
+ # Checks for header files.
+ AC_HEADER_STDC
+ AC_CHECK_HEADERS([stdlib.h])
++AC_CHECK_HEADERS([locale.h])
+ AC_FUNC_STRERROR_R
+ AC_CHECK_FUNC([strerror_r], [],
+   AC_MSG_WARN([[Without strerror_r, gpg_strerror_r might not be thread-safe]]))
