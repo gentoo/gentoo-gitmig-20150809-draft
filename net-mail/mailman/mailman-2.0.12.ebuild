@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.0.12.ebuild,v 1.7 2002/12/09 04:33:14 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.0.12.ebuild,v 1.8 2003/01/05 13:49:07 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU Mailman, the mailing list server with webinterface"
@@ -60,7 +60,7 @@ pkg_postinst() {
 	bin/update
 	bin/check_perms -f
 		einfo
-		einfo "Please read /usr/share/doc/${P}/README.gentoo for additional"
+		einfo "Please read /usr/share/doc/${P}/README.gentoo.gz for additional"
 		einfo "Setup information, mailman will NOT run unless you follow"
 		einfo "those instructions!"
 }
