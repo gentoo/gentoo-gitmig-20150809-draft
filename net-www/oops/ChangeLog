@@ -1,13 +1,18 @@
 # ChangeLog for net-www/oops
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/oops/ChangeLog,v 1.2 2002/07/14 20:25:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/oops/ChangeLog,v 1.3 2002/10/21 18:39:06 blizzy Exp $
 
-*oops-1.5.6 (1 Feb 2002)
+*oops-1.5.22 (21 Oct 2002)
 
-  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> oops-1.5.6.ebuild :
-  Added LICENSE, KEYWORDS, SLOT.
+  21 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : New version, closes bug
+  #5990.
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> oops-1.5.6.ebuild: Added
+  LICENSE, KEYWORDS, SLOT.
+
+*oops-1.5.6 (01 Feb 2002)
+
+  01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog:
   
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
