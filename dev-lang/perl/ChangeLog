@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.60 2004/05/10 16:43:14 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.61 2004/05/31 22:16:26 rac Exp $
+
+  31 May 2004; Robert Coie <rac@gentoo.org> perl-5.8.2-r1.ebuild,
+  perl-5.8.3.ebuild, perl-5.8.4.ebuild:
+  Update makemaker blocks to <6.17, not worth making everybody recompile
 
   10 May 2004; Michael McCabe <randy@gentoo.org> perl-5.8.4.ebuild:
   Stable on s390

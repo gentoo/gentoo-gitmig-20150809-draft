@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.3 2004/05/10 16:43:14 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.4 2004/05/31 22:16:26 rac Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -27,7 +27,7 @@ DEPEND="sys-apps/groff
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=sys-apps/portage-2.0.48-r4
 	>=sys-devel/libperl-${PV}
-	!<dev-perl/ExtUtils-MakeMaker-6.05-r6
+	!<dev-perl/ExtUtils-MakeMaker-6.17
 	!<dev-perl/File-Spec-0.84-r1
 	!<dev-perl/Test-Simple-0.47-r1"
 RDEPEND="berkdb? ( sys-libs/db )
