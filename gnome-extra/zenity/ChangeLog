@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.33 2004/08/22 17:46:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.34 2004/09/13 16:29:42 obz Exp $
+
+*zenity-2.6.3 (14 Sep 2004)
+
+  14 Sep 2004; Mike Gardiner <obz@gentoo.org> +files/zenity-2.6.3-utf8_fix.patch,
+  +zenity-2.6.3.ebuild:
+  New version, and a slightly updated patch, removing the first hunk which was
+  obsolete. Looking towards a last GNOME 2.6 update.
 
   22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> zenity-2.6.2.ebuild:
   Stable on alpha.
