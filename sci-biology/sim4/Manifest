@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b5b3a1f95083b4dd165ad910c1a809df sim4-20030921.ebuild 587
-MD5 9f8d66bfdbfc43664f1c1a859a32471f ChangeLog 793
+MD5 afbb63fb832feb7092455d341d4f8e78 ChangeLog 797
 MD5 50eefd281ea304818febea2f397775ed metadata.xml 1221
 MD5 743d4ddb73b01bef0fb3408b4b7b129f files/digest-sim4-20030921 55
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFByw2lI1lqEGTUzyQRAqR8AKDL51egDq+Gp0oKOgp+B7iQecfLzwCgqxk+
+9Qypc8J/UURN60CAKVgZS2Y=
+=dpdz
+-----END PGP SIGNATURE-----
