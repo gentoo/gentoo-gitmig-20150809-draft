@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r4.ebuild,v 1.7 2005/03/25 10:45:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r4.ebuild,v 1.8 2005/04/02 18:07:06 weeve Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://jabberd.jabberstudio.org/1.4/dist/jabberd-${PV}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc hppa ~sparc ~amd64 ~alpha"
+KEYWORDS="x86 ~ppc hppa sparc ~amd64 ~alpha"
 IUSE="ssl ldap ipv6 msn oscar yahoo icq"
 
 DEPEND="!net-im/jabber-server

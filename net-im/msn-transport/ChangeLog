@@ -1,6 +1,10 @@
 # ChangeLog for net-im/msn-transport
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/ChangeLog,v 1.16 2005/03/25 10:43:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/ChangeLog,v 1.17 2005/04/02 18:03:42 weeve Exp $
+
+  02 Apr 2005; Jason Wever <weeve@gentoo.org>
+  msn-transport-20040531-r1.ebuild:
+  Stable on SPARC.
 
   25 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   msn-transport-20040531-r1.ebuild:
