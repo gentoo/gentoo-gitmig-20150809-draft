@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.12 2005/01/14 22:44:26 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.13 2005/01/15 14:52:10 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -107,7 +107,7 @@ DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
 
 # Add a blocking dep on the package we're derived from
 # This is ugly, but I don't know how to get at the category of an ebuild
-for x in $(deprange-list $SLOT.0_alpha1 $SLOT.10 $(get-parent-package $(get-current-package))); do
+for x in $(deprange-list $SLOT.0_alpha1 $SLOT.10 $(get-parent-package $CATEGORY/$PN)); do
 	DEPEND="$DEPEND !$x"
 	RDEPEND="$RDEPEND !$x"
 done

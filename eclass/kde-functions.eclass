@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.84 2005/01/15 11:48:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.85 2005/01/15 14:52:10 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -386,18 +386,6 @@ get-child-packages () {
 	done
 }
 
-# Because I've no idea how to do it properly (fex how to get the category of the current ebuild),
-# this is a centralized function, and can be fixed centrally
-get-current-package () {
-	if [ -n "$KDEBASE" ]; then
-		echo -n kde-base/$PN
-	elif [ "$KMNAME" == "koffice" ]; then
-		echo -n app-office/$PN
-	else
-		die "get-current-parent-package() called from unrecognized ebuild $PN, please bugreport"
-	fi
-}
-
 # convinience functions for requesting autotools versions
 need-automake() {
 
@@ -644,7 +632,7 @@ deprange-dual() {
 	for PACKAGE in $@; do
 		PARENT=$(get-parent-package $PACKAGE)
 		NEWDEP="$NEWDEP || ( $(deprange-list $MIN $MAX $PACKAGE)"
-		if [ "$PARENT" != "$(get-parent-package $(get-current-package))" ]; then
+		if [ "$PARENT" != "$(get-parent-package $CATEGORY/$PN)" ]; then
 			NEWDEP="$NEWDEP $(deprange-list $MIN $MAX $PARENT)"
 		fi
 		NEWDEP="$NEWDEP )"
