@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.18 2003/07/15 09:27:01 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.19 2003/07/15 20:34:32 mholzer Exp $
+
+  15 Jul 2003; Martin Holzer <mholzer@gentoo.org>
+  dialog-0.9_beta20020814.ebuild, dialog-0.9_beta20030308-r1.ebuild:
+  Updated Homepage. Closes #24538.
 
   15 Jul 2003; Christian Birchinger <joker@gentoo.org>
   dialog-0.9_beta20030308-r1.ebuild:
