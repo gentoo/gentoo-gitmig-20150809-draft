@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.9-r2.ebuild,v 1.4 2003/10/20 14:25:35 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.9-r2.ebuild,v 1.5 2003/10/21 04:58:53 max Exp $
 
 DESCRIPTION="Software for generating and retrieving SNMP data."
 HOMEPAGE="http://net-snmp.sourceforge.net/"
@@ -16,9 +16,12 @@ DEPEND="virtual/glibc
 	<sys-libs/db-2
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/sed-4
-	perl? ( >=sys-devel/libperl-5.6.1 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
+	perl? (
+		>=sys-devel/libperl-5.8.0
+		>=dev-perl/ExtUtils-MakeMaker-6.11-r1
+	)"
 RDEPEND="${DEPEND}
 	perl? ( X? ( dev-perl/perl-tk ) )
 	!virtual/snmp"
