@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c380233114d3f82728c92d547d3f4c74 kpopup-0.9.7.ebuild 916
-MD5 dfe07166bd0ee295a4d72e7fe482a5cf kpopup-0.9.6_pre1.ebuild 499
-MD5 ee9cf0655ad8055efdfeee81fecabefc ChangeLog 846
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 98669fef3c4d089a9a387e84dd5c8884 files/digest-kpopup-0.9.6_pre1 68
+MD5 c380233114d3f82728c92d547d3f4c74 kpopup-0.9.7.ebuild 916
+MD5 ee9cf0655ad8055efdfeee81fecabefc ChangeLog 846
 MD5 f286f8494aae2ec4b2ad6ea845aeb18e files/digest-kpopup-0.9.7 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOfdL/rLF9B432nYRAgqhAKDQFE43KOZB/dUCTfYj8sjudkhqbACfeUv1
-Bc1GsCEaRxXzwj706+UzLis=
-=gFq0
------END PGP SIGNATURE-----
