@@ -1,6 +1,6 @@
-# Copyright 2002 Alexander Holler
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-2.5.1.ebuild,v 1.2 2003/07/23 01:44:41 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-2.5.1.ebuild,v 1.3 2003/09/29 21:10:43 mholzer Exp $
 
 My_PV="`echo $PV|cut -d. -f1,2`.r`echo $PV|cut -d. -f3`"
 My_P="${PN}-${My_PV}"
