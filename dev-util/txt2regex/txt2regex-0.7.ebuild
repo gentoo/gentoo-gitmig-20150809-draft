@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/txt2regex/txt2regex-0.7.ebuild,v 1.3 2004/05/24 20:54:42 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/txt2regex/txt2regex-0.7.ebuild,v 1.4 2004/05/26 00:50:15 kloeri Exp $
 
 DESCRIPTION="A Regular Expression wizard that converts human sentences to regexs"
 SRC_URI="http://txt2regex.sourceforge.net/${P}.tgz"
@@ -9,7 +9,7 @@ HOMEPAGE="http://txt2regex.sourceforge.net/"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~mips"
+KEYWORDS="~x86 ~sparc ~mips ~alpha"
 
 RDEPEND=">=app-shells/bash-2.04"
 
