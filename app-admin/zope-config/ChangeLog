@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/zope-config
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.30 2004/10/14 20:55:28 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.31 2004/10/20 02:24:04 weeve Exp $
+
+  19 Oct 2004; Jason Wever <weeve@gentoo.org> zope-config-0.5.ebuild:
+  Stable on sparc.
 
   14 Oct 2004; Radoslaw Stachowiak <radek@gentoo.org>
   zope-config-0.5.ebuild:
