@@ -8,5 +8,5 @@ MD5 4e611a633363995ddc515d0f5c26fb46 files/README 288
 MD5 440e33e8603dd4aad622093a60c7e32e files/digest-genkernel-1.6 66
 MD5 85c20772dc52cc678fad96d09ebc44e2 files/digest-genkernel-1.8 66
 MD5 291fa3228fe4c8ef8f5d3a820984be53 files/digest-genkernel-1.9 66
-MD5 3c6f53beb6ee2f4c370d62bcbbbd6ef7 files/digest-genkernel-2.0 195
+MD5 186b37fa1c45275a838a5029d16f8894 files/digest-genkernel-2.0 195
 MD5 dd2611bb1ae0689fbbb0ecdbca6e0cec files/bin-keymaps.tar.gz 17054
