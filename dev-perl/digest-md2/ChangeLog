@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/digest-md2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-md2/ChangeLog,v 1.2 2003/10/28 01:24:26 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-md2/ChangeLog,v 1.3 2003/12/24 22:59:07 mcummings Exp $
+
+*digest-md2-2.03 (24 Dec 2003)
+
+  24 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  digest-md2-2.03.ebuild:
+  Current version on CPAN
+  
+  Current version on CPAN
 
   27 Oct 2003; Brad House <brad_mssw@gentoo.org> digest-md2-2.01.ebuild:
   add ~amd64 flag
