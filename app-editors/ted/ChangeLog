@@ -1,15 +1,20 @@
 # ChangeLog for app-editors/ted
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+*ted-2.12 (24 Dec 2002)
+
+  24 Dec 2002; Martin Holzer <mholzer@gentoo.org> : ted-2.11.ebuild files/digest-ted-2.12 ChangeLog :
+  Version pump submitted by Mark Hollomon #12625.
+  
+
 *ted-2.11 (09 Jul 2002)
+
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
 
   09 Jul 2002; Phil Bordelon <sunflare@gentoo.org> ted-2.11.ebuild :
-
   New package.  Original ebuild submitted by Mark Hollomon
   <markholloman@comcast.net>--see Bug #3668.  Cleaned it up,
   lintool'd and repoman'd.
