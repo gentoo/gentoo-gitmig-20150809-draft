@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.2.ebuild,v 1.3 2005/02/21 15:18:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.2.ebuild,v 1.4 2005/02/28 20:18:58 azarah Exp $
 
 DESCRIPTION="Device mapper target autoconfig."
 HOMEPAGE="http://christophe.varoqui.free.fr/wiki/wakka.php?wiki=Home"
@@ -11,7 +11,7 @@ KEYWORDS="~x86 ~amd64"
 
 IUSE=""
 
-RDEPEND="sys-libs/device-mapper
+RDEPEND=">=sys-libs/device-mapper-1.00.19
 	sys-fs/udev
 	sys-fs/sysfsutils"
 
