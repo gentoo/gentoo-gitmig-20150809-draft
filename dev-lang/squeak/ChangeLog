@@ -1,8 +1,14 @@
 # ChangeLog for dev-lang/squeak
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/ChangeLog,v 1.4 2003/10/11 09:32:56 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/ChangeLog,v 1.5 2003/10/30 22:26:04 kumba Exp $
+
 
 *squeak-3.4.1-r1 (11 Oct 2003)
+
+  30 Oct 2003; Joshua Kinard <kumba@gentoo.org> squeak-3.4.1-r1.ebuild,
+  files/squeak-3.4.1-gcc33-string-fix.patch:
+  Added patch to fix gcc-3.3.x multi-line string issues
+  Closes Bug #32122
 
   11 Oct 2003; Michael Imhof <tantive@gentoo.org> :
   Version bumped. Closes #27408.
