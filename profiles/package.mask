@@ -36,7 +36,7 @@
 
 # <rendhalver@gentoo.org> (03 Jan 2003)
 # new XEmacs version masking for testing xemacs without sandbox disable
->=app-editors/xemacs-21.4.11
+#>=app-editors/xemacs-21.4.11
 
 # <azarah@gentoo.org> (07 Jan 2003)
 # new alpha release.  do not use tmpfs by default for dep cache, and
