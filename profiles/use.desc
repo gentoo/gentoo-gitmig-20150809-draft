@@ -50,6 +50,7 @@ gnome-libs - Enables optional support for gnome-libs (mainly for auto-use)
 gphoto2 - Adds digital camera support
 gpm - Adds support for sys-libs/gpm (Console-based mouse driver)
 gtk - Adds support for x11-libs/gtk+ (The GIMP Toolkit)
+gtk2 - use  gtk+-2.0.0 over gtk+-1.2 in cases where a program supports both. beware that gtk+-2 support can be bad.
 gtkhtml - Adds support for gnome-extra/gtkhtml
 guile - Adds support for dev-util/guile (interpreter for Scheme)
 icc - Use the Intel C++ Compiler if the package supports it
