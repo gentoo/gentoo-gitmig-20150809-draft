@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.ebuild,v 1.6 2004/06/26 01:42:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.ebuild,v 1.7 2004/07/04 04:53:24 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
-IUSE="${IUSE} mozcalendar mozaccess mozxmlterm mozsvg"
+IUSE="${IUSE} mozcalendar mozsvg"
 IUSE="${IUSE} moznoirc moznomail moznocompose moznoxft"
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
@@ -241,18 +241,21 @@ src_compile() {
 	#     typeaheadfind webservices spellcheck
 	# Non-defaults are:
 	#     xmlterm access-builtin datetime finger cview
-	if use mozxmlterm || use mozaccess; then
-		ewarn ""
-		ewarn "NB!!: The use of the non-default extensions is considered"
-		ewarn "unsupported, and these may not always compile properly."
-		ewarn "Please do not use if you do not know what you're doing!"
-		ewarn ""
-		sleep 3
-	fi
+
+	# Remove access and xmlterm as options since they're preventing the build
+	# more than they work. (04 Jul 2004 brad)
+	#if use mozxmlterm || use mozaccess; then
+	#	ewarn ""
+	#	ewarn "NB!!: The use of the non-default extensions is considered"
+	#	ewarn "unsupported, and these may not always compile properly."
+	#	ewarn "Please do not use if you do not know what you're doing!"
+	#	ewarn ""
+	#	sleep 3
+	#fi
 
 	local myext="default"
-	use mozxmlterm && myext="${myext},xmlterm"
-	use mozaccess  && myext="${myext},access-builtin"
+	#use mozxmlterm && myext="${myext},xmlterm"
+	#use mozaccess  && myext="${myext},access-builtin"
 	use moznoirc   && myext="${myext},-irc"
 
 	####################################

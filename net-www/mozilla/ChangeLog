@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.179 2004/06/26 01:42:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.180 2004/07/04 04:53:24 brad Exp $
+
+  04 Jul 2004; Brad Laue <brad@gentoo.org> mozilla-1.7.ebuild:
+  Remove mozaccess, mozxmlterm USE flags, as these are a hazard. They're not for
+  end-use, and are broken or constantly moving around upstream as it is.
 
   25 Jun 2004; Aron Griffis <agriffis@gentoo.org> mozilla-1.7.ebuild:
   Fix bug 54519: stop using get_number_of_jobs
