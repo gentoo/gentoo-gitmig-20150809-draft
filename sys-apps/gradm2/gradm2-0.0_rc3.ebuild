@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm2/gradm2-0.0_rc3.ebuild,v 1.1 2003/09/26 09:49:56 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm2/gradm2-0.0_rc3.ebuild,v 1.2 2004/01/03 23:06:05 solar Exp $
+
+inherit flag-o-matic gcc
 
 MY_PV=2.0-${PV/*_/}
 
@@ -9,7 +11,7 @@ DESCRIPTION="Administrative interface for grsecuritys2 access control lists"
 SRC_URI="http://www.grsecurity.net/gradm-${MY_PV}.tar.gz"
 HOMEPAGE="http://www.grsecurity.net/"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~sparc ~ppc ~alpha"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~alpha"
 SLOT="0"
 
 IUSE=""
@@ -23,27 +25,42 @@ S="${WORKDIR}/${PN}"
 src_unpack() {
 	unpack ${A} || die "Cant unpack ${A}"
 	cd ${S}
-	mv Makefile{,.orig}
+
+	# (Jan 03 2004) - <solar@gentoo>
+	# static linking required for proper operation of gradm        
+	# however ssp is known to break static linking when it's enabled
+	# in >=gcc-3.3.1 && <=gcc-3.3.2-r5 . So we strip ssp if needed.         
+	gmicro=$(gcc-micro-version)
+	if [ "$(gcc-version)" == "3.3" -a -n "${gmicro}" -a ${gmicro} -le 2 ]; then
+		# extract out gentoo revision                
+		gentoo_gcc_r=$($(gcc-getCC) -v 2>&1 | tail -n 1 | awk '{print $7}')
+		gentoo_gcc_r=${gentoo_gcc_r/,/}
+		gentoo_gcc_r=${gentoo_gcc_r/-/ }
+		gentoo_gcc_r=${gentoo_gcc_r:7}
+		[ -n "${gentoo_gcc_r}" -a ${gentoo_gcc_r} -le 5 ] && \
+			filter-flags -fstack-protector -fstack-protector-all
+	fi
+
 	ebegin "Patching Makefile to use gentoo CFLAGS"
-	sed -e "s|-O2|${CFLAGS}|" Makefile.orig > Makefile
+	sed -i -e "s|-O2|${CFLAGS}|" Makefile
 	eend $?
+
 	ebegin "Patching manpage"
 	sed -e "s:gradm:gradm2:" -e "s:GRADM:GRADM2:" < gradm.8 > gradm2.8
 	eend $?
+
 	for f in Makefile acl gradm_defs.h grlearn.c; do
 		[ -f ${f} ] && {
 			ebegin "Patching ${f} to use /etc/grsec2"
-			sed -e "s:/etc/grsec:/etc/grsec2:" \
-			< ${f} > ${f}~ && cp ${f}~ ${f}
+			sed -i -e "s:/etc/grsec:/etc/grsec2:" ${f}
 			eend $?
 		}
 	done
-	# rm *~
 }
 
 src_compile() {
 	cd ${S}
-	emake CC="${CC}" || die "compile problem"
+	emake CC="$(gcc-getCC)" || die "compile problem"
 }
 
 src_install() {
