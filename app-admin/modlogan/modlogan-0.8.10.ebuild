@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.10.ebuild,v 1.1 2003/09/24 22:37:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.10.ebuild,v 1.2 2003/10/27 10:34:47 aliz Exp $
 
 IUSE="nls mysql"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://jan.kneschke.de/projects/modlogan/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ia64 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
+KEYWORDS="x86 ~ia64 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
 
 DEPEND="virtual/x11
 	dev-libs/libxml
