@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.18.ebuild,v 1.1 2005/03/20 23:51:36 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.18.ebuild,v 1.2 2005/03/26 16:08:14 kugelfang Exp $
 
 inherit libtool gnome.org flag-o-matic gnuconfig
 
@@ -42,6 +42,16 @@ src_compile() {
 		$(use_with python) \
 		$(use_with readline) \
 		$(use_enable ipv6) || die
+
+	# Patching the Makefiles to respect get_libdir
+	# Fixes BUG #86766, please keep this.
+	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
+	for x in $(find ${S} -name "Makefile") ; do
+		sed \
+			-e "s|^\(PYTHON_SITE_PACKAGES\ =\ \/usr\/\).*\(\/python.*\)|\1$(get_libdir)\2|g" \
+			-i ${x} \
+			|| die "sed failed"
+	done
 
 	emake || die
 
