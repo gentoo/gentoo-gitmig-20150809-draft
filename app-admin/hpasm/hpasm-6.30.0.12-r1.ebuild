@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.compaq.com/pub/products/servers/supportsoftware/linux/RedHat/
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 S="${WORKDIR}"
 
 
