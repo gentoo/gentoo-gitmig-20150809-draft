@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.3.3.ebuild,v 1.2 2004/11/23 09:43:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.3.3.ebuild,v 1.3 2004/12/13 15:05:35 agriffis Exp $
 
 IUSE="gtk2 oss sdl"
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~sparc ~x86"
 DEPEND="gtk2? ( >=x11-libs/gtk+-2.0.0 )
 	!gtk2? ( =x11-libs/gtk+-1.2* )
 	sdl? ( >=media-libs/libsdl-1.2.3 )
-	>=media-libs/libsndfile-1.0.1
+	>=media-libs/libsndfile-1.0.10
 	>=media-libs/portaudio-18"
 
 src_compile() {
