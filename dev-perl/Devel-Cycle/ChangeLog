@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Devel-Cycle
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Cycle/ChangeLog,v 1.1 2004/12/05 13:34:28 mcummings Exp $
+
+*Devel-Cycle-1.02 (05 Dec 2004)
+
+  05 Dec 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Devel-Cycle-1.02.ebuild:
+  Dep for Test-Memory-Cycle
+

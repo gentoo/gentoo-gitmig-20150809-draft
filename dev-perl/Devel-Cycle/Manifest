@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 d485859b4cb8ff0a63339b4e4c3aec16 Devel-Cycle-1.02.ebuild 471
+MD5 7fbd78ab6c545c7f665fb54b4dc1e0a0 ChangeLog 376
+MD5 b74e4f1a6cba9470817c84e30eac5bdb files/digest-Devel-Cycle-1.02 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBsw4ltG5z4I8BtQoRAuNZAJ97pCVPsZ9gZ+A7D5SLyWL7bxa17wCgkOlI
+eeGpPU6HNP7roZsM1XuDjAU=
+=i5Zl
+-----END PGP SIGNATURE-----
