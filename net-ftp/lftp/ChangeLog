@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.76 2005/03/12 22:54:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.77 2005/03/25 12:42:26 ka0ttic Exp $
+
+*lftp-3.1.1 (25 Mar 2005)
+
+  25 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> +lftp-3.1.1.ebuild:
+  Version bump on behalf of dragonheart.
 
   12 Mar 2005; Aron Griffis <agriffis@gentoo.org> lftp-3.0.13.ebuild:
   Stable on alpha
