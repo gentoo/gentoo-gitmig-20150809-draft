@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.8-r1.ebuild,v 1.1 2003/11/06 21:20:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.8-r1.ebuild,v 1.2 2003/11/07 18:39:51 azarah Exp $
 
 inherit mount-boot eutils
 
@@ -46,13 +46,13 @@ src_unpack() {
 
 src_compile() {
 
+	# Do not use custom CFLAGS for stability reasons
 	emake CC="${CC:=gcc}" lilo || die
 }
 
 src_install() {
 	keepdir /boot
-	make CC="${CC:=gcc}" \
-		ROOT=${D} install || die
+	make ROOT=${D} install || die
 	into /usr
 	dosbin keytab-lilo.pl
 
