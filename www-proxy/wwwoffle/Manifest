@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bbb4d71b71573896305e44b9942ef946 ChangeLog 5457
+MD5 5226fdc22bbc42399b89b18599cf572d ChangeLog 5676
 MD5 1d58b504a9415220f2ee8c3b62e27aa9 metadata.xml 500
 MD5 07fd41412527be803f47bc33f655d04a wwwoffle-2.7h.ebuild 1851
 MD5 f22ae7381da1e4ad894c3cfd1f0d6cb9 wwwoffle-2.8b.ebuild 4534
@@ -11,14 +11,14 @@ MD5 009de7420924ad30ca9611df2d1d6299 files/digest-wwwoffle-2.8b 62
 MD5 6cf4ab4a8f2db9c8e503aac035d38eae files/wwwoffled 506
 MD5 ecf6ff07d66bdc91ff7ff6014ab5c016 files/wwwoffled-online 510
 MD5 a426ce505020deefa18627d26d04eed0 files/wwwoffled-online-2.8b 524
-MD5 4fbc4cbe0a91616eb571e970c95d79d6 files/wwwoffle-2.8c-init 543
+MD5 9927058cfa49a5ff4211562fd9b45ba9 files/wwwoffle-2.8c-init 548
 MD5 15326883b6b630a44a6ff486b78f0724 files/wwwoffle-2.8c-config-online 437
 MD5 09bad363445f5ae84603fcb283b17003 files/digest-wwwoffle-2.8c 62
-MD5 b5c93a728ed7e90f79c05cfcfa1082a3 files/wwwoffle-2.8c-init-online 695
+MD5 41257f96933dce71afd7396c1e0cc4e6 files/wwwoffle-2.8c-init-online 705
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBncaAmdTrptrqvGERAmP/AJ40E7a3MJ6oaUBunQd35PeGZZ08wwCeM8sR
-TN82Ly4YuaZIwUoArJr5JJ4=
-=VhhE
+iD8DBQFBnpsdmdTrptrqvGERAi+TAJ9tJgBX/44ZK92XWsUS3z4Y4zRwUACght+d
+CyjbRNEzlz1I+fJlLqpeAyY=
+=QiDC
 -----END PGP SIGNATURE-----

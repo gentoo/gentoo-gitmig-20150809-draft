@@ -1,6 +1,11 @@
 # ChangeLog for www-proxy/wwwoffle
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/ChangeLog,v 1.6 2004/11/19 10:10:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/ChangeLog,v 1.7 2004/11/20 01:17:10 dragonheart Exp $
+
+  20 Nov 2004; Daniel Black <dragonheart@gentoo.org> files/wwwoffle-2.8c-init,
+  files/wwwoffle-2.8c-init-online:
+  more init script fixes as per bug #71674. Thanks again to BlaisorBlade
+  <blaisorblade_spam@yahoo.it>
 
   19 Nov 2004; Daniel Black <dragonheart@gentoo.org>
   files/wwwoffle-2.8c-init-online:
