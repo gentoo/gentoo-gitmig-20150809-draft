@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnupg.org/pub/gcrypt/gnupg/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=sys-libs/zlib-1.1.3"
 RDEPEND="nls? ( sys-devel/gettext )"
