@@ -3,3 +3,4 @@ move media-plugins/xmms-xosd x11-libs/xosd
 move net-misc/shorewall net-firewall/shorewall
 move net-im/licq-console net-im/licq
 move app-crypt/gpgsm app-crypt/newpg
+move net-misc/ipchains-firewall net-firewall/ipchains-firewall
