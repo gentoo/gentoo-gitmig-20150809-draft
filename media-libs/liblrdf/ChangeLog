@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/liblrdf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.4 2003/12/07 00:47:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.5 2004/01/26 14:29:15 torbenh Exp $
+
+*liblrdf-0.3.3 (26 Jan 2004)
+
+  26 Jan 2004; <torbenh@gentoo.org> liblrdf-0.2.3.ebuild,
+  liblrdf-0.2.4.ebuild, liblrdf-0.3.1.ebuild, liblrdf-0.3.3.ebuild,
+  metadata.xml:
+  Version bump to 0.3.3
+  removal of old versions
+  added metadata.xml
 
   06 Dec 2003; Jason Wever <weeve@gentoo.org> liblrdf-0.3.1.ebuild:
   Added ~sparc keyword.
