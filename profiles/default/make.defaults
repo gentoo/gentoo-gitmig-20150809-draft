@@ -38,6 +38,7 @@ FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${x} -P \${DISTDIR}"
 #USE="nls"
 #USE="ssl postgres mysql ldap odbc"
 #USE="tex"
+#USE="guile perl java python tcltk"
 
 # C Compiler flags
 CFLAGS="-m486 -march=i486 -O2"
