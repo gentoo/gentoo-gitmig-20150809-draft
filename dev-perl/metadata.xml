@@ -6,8 +6,12 @@
 		Perl programming language.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-perl enthält Bibliotheken und Werkzeuge für die 
+		Die Kategorie dev-perl enthÃ¤lt Bibliotheken und Werkzeuge fÃ¼r die 
 		Programmiersprache Perl.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría dev-perl contiene librerías y utilidades referentes
+		al lenguaje de programación Perl.
 	</longdescription>
 </catmetadata>
 
