@@ -8,7 +8,7 @@ app-editors/emacs-21.2.1
 app-editors/vim-6.2
 app-misc/screen-3.09.15
 app-misc/srm-1.2.6
-app-shells/bash-2.05b
+app-shells/bash-2.05b-r2
 app-shells/tcsh-6.12
 app-shells/zsh-4.1.1
 app-text/enscript-1.6.3
