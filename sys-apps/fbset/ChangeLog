@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fbset
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/ChangeLog,v 1.4 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/ChangeLog,v 1.5 2003/02/09 00:52:21 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> fbset-2.1.ebuild :
+  Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
