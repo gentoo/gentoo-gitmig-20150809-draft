@@ -8,13 +8,3 @@
  BINDIR= ${PREFIX}/bin
  DOCDIR= ${PREFIX}/share/doc/nice
  MANDIR= ${PREFIX}/share/man/man1
---- bin/nicec      2004-11-14 14:06:26.000000000 +0100
-+++ bin/nicec       2004-11-14 14:08:43.370862376 +0100
-@@ -53,6 +53,7 @@
- if [ -z "$NICEC_JAR" ]; then
-   find_home "$scriptName"
-   NICEC_JAR=${APPHOME}/share/java/nice.jar
-+  NICEC_JAR=`java-config -p nice`
- fi
- 
- # Having a trailing ":" at the end of CLASSPATH seems to act as ":." on some platforms

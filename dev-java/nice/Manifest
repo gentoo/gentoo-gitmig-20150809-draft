@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ac4ed211ee282f71de72e4ac38378f2b nice-0.9.9.ebuild 1090
-MD5 cd2d4e5b22168bd765d8493fc754bc06 ChangeLog 410
+MD5 90dc6cc057f588a4d86e40c0e0aec8e6 nice-0.9.9.ebuild 1263
+MD5 66e34bbfc7270ed4193b5edb15832e84 ChangeLog 520
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 e5ec5690efd96c71d7f1437a92d7daaa files/digest-nice-0.9.9 70
-MD5 1da45564d5fbf7c40edf23127ba00131 files/nice-0.9.9.patch 653
+MD5 56f8c0ea533ef5f0061a0564c2affa6a files/nice-0.9.9.patch 294
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBl1wj/rLF9B432nYRArRYAKCpeLN0GO5RGZcIXL8fTFd2GYreswCgqwTc
-6XCJg3Fm46pzotxf6yo3V5o=
-=a6Fo
+iD8DBQFBtcOS/rLF9B432nYRAoeSAKCYoMDYMGRAtnuYjNzFN/EtRV9KcQCgtzIo
+1kSYGmjZp8LZ1z85aNGppUA=
+=uBRH
 -----END PGP SIGNATURE-----
