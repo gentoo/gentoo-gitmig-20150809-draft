@@ -1,4 +1,1 @@
-MD5 c6a79ab6f3c9e6d657a5bee36b1f6565 /files/phpmyadmin-config.patch 4857
-MD5 396133c1da8d8b716ad2da23aa0a5a30 /files/phpmyadmin-mysql-setup.sql.in 2712
-MD5 7669a6c65ef19ce4412668c208dfd76e /phpmyadmin-2.4.0.ebuild 2503
 MD5 dcd26212b311a096e1d02aa3156eec1f phpMyAdmin-2.4.0-php.tar.bz2 769848

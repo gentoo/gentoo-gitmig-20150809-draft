@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.4.0.ebuild,v 1.2 2003/04/09 10:04:04 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.4.0.ebuild,v 1.3 2003/05/06 10:24:13 twp Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://phpmyadmin.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 # only known to work on x86... can people test on other platforms?
-KEYWORDS="~x86 ~sparc ppc ~alpha"
+KEYWORDS="x86 sparc ppc alpha"
 
 DEPEND=">=net-www/apache-1.3.24-r1 >=dev-db/mysql-3.23.38 >=dev-php/mod_php-4.1.2-r5"
 
