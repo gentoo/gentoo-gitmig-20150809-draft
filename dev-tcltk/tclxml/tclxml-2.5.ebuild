@@ -1,6 +1,6 @@
 # Copyright 2003 Arcady Genkin <agenkin@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-2.5.ebuild,v 1.4 2003/08/07 03:21:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-2.5.ebuild,v 1.5 2003/09/06 23:49:10 msterret Exp $
 
 DESCRIPTION="Pure Tcl implementation of an XML parser."
 HOMEPAGE="http://tclxml.sourceforge.net/"
@@ -18,12 +18,12 @@ src_compile() {
 	econf || die
 	make || die
 
-        # Need to hack the config script.
-        sed 's:NONE:/usr:' < TclxmlConfig.sh > TclxmlConfig.sh.hacked
-        mv TclxmlConfig.sh.hacked TclxmlConfig.sh
+	# Need to hack the config script.
+	sed 's:NONE:/usr:' < TclxmlConfig.sh > TclxmlConfig.sh.hacked
+	mv TclxmlConfig.sh.hacked TclxmlConfig.sh
 }
 
 src_install() {
-        einstall || die
-        dodoc ChangeLog LICENSE README RELNOTES
+	einstall || die
+	dodoc ChangeLog LICENSE README RELNOTES
 }
