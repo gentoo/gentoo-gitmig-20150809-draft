@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-4.1.2.ebuild,v 1.2 2003/08/14 03:13:11 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-4.1.2.ebuild,v 1.3 2003/08/27 23:01:04 weeve Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ PROVIDE="virtual/antivirus"
 
 SLOT="0"
 LICENSE="F-PROT"
-KEYWORDS="~x86"
+KEYWORDS="~x86 -sparc"
 
 src_compile ()
 {

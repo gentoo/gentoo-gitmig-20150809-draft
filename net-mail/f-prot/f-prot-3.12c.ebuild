@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-3.12c.ebuild,v 1.7 2003/04/24 10:51:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-3.12c.ebuild,v 1.8 2003/08/27 23:01:03 weeve Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.f-prot.com/pub/linux/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="F-PROT"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 -sparc"
 
 # unzip and wget are needed for the check-updates.sh script
 DEPEND="virtual/glibc"

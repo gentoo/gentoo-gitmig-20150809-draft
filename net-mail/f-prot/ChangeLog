@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/f-prot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/ChangeLog,v 1.16 2003/08/21 14:23:27 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/ChangeLog,v 1.17 2003/08/27 23:01:03 weeve Exp $
+
+  27 Aug 2003; Jason Wever <weeve@gentoo.org> f-prot-3.12c.ebuild,
+  f-prot-4.1.2.ebuild, f-prot-4.2.0.ebuild:
+  Removed sparc keywords from ebuilds as it's an x86 binary only package.
 
 *f-prot-4.2.0 (21 Aug 2003)
 
