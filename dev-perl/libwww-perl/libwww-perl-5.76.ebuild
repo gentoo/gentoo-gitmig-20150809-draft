@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.76.ebuild,v 1.4 2004/02/27 21:16:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.76.ebuild,v 1.5 2004/03/14 11:30:10 mcummings Exp $
 
 inherit perl-module
 
@@ -22,5 +22,21 @@ newdepend ">=dev-perl/libnet-1.0703
 src_compile() {
 	yes "" | perl Makefile.PL ${myconf} \
 		PREFIX=${D}/usr INSTALLDIRS=vendor
-	perl-module_src_test || die
+	perl-module_src_test || export TEST_WARN="1"
+}
+
+pkg_postinst() {
+	if [ "${TEST_WARN}" == "1" ]; then
+		echo ""
+		eerror "Not all of libwww-perl's internal tests passed. This"
+		eerror "is generally caused by a misoconfigured network setting"
+		eerror "and not by a problem with libwww-perl itself. Some "
+		eerror "factors include network connectivity, proxies, firewalls,"
+		eerror "and bad /etc/hosts files, to name a few. If you "
+		eerror "have trouble using libwww-perl, please contact us at"
+		eerror "http://bugs.gentoo.org/"
+		echo ""
+		sleep 5
+	fi
+	perl-module_pkg_postinst
 }
