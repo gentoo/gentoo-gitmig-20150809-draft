@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6-r7.ebuild,v 1.1 2003/07/25 16:25:06 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6-r7.ebuild,v 1.2 2003/07/25 16:25:48 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -105,7 +105,6 @@ src_compile() {
                           --disable-toolkit-gtk2"
     fi
 
-	# Check if we should enable Xft support ...
 	if [ -z "`use moznoxft`" ]
 	then
 		if [ -n "`use gtk2`" ]
