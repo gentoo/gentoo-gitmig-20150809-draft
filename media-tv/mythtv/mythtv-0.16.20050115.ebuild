@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.20050115.ebuild,v 1.1 2005/01/18 20:11:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.20050115.ebuild,v 1.2 2005/02/06 23:58:41 cardoe Exp $
 
 inherit myth flag-o-matic eutils
 
@@ -60,6 +60,9 @@ pkg_setup() {
 setup_pro() {
 	sed -e 's:EXTRA_LIBS += -L/usr/X11R6/lib -lXinerama -lXv -lX11 -lXext -lXxf86vm:EXTRA_LIBS += -lXinerama -lXv -lX11 -lXext -lXxf86vm:' \
 		-i 'settings.pro' || die "failed to remove extra library path"
+
+	sed -e 's:LIBVERSION = 0.16:LIBVERSION = 0.16.20050115:' \
+		-i 'settings.pro' || die "failed to correct library version"
 
 
 	if [ "${ARCH}" == "amd64" ] || ! use mmx; then
