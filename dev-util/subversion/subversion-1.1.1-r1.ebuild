@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r1.ebuild,v 1.1 2004/11/12 04:38:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r1.ebuild,v 1.2 2004/11/12 16:50:54 agriffis Exp $
 
-inherit elisp-common libtool python eutils
+inherit elisp-common libtool python eutils bash-completion
 
 DESCRIPTION="A compelling replacement for CVS"
 SRC_URI="http://subversion.tigris.org/tarballs/${P/_rc/-rc}.tar.bz2"
@@ -212,11 +212,8 @@ src_install () {
 EOF
 	fi
 
-	# Install bash completion (until somebody complains, then move it to
-	# /usr/share/bash-completion and make people source it explicitly)
-	# Bug 43179
-	insinto /etc/bash_completion.d
-	newins tools/client-side/bash_completion subversion
+	# Bug 43179 - Install bash-completion if user wishes
+	dobashcompletion tools/client-side/bash_completion subversion
 
 	# Install hot backup script, bug 54304
 	newbin tools/backup/hot-backup.py svn-hot-backup
