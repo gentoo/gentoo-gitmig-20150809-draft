@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.7 2002/09/29 14:52:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.8 2002/11/24 00:13:34 spider Exp $
+
+
+*lame-3.93.0 (23 Nov 2002)
+  
+  23 Nov 2002; Spider <spider@gentoo.org> lame-3.93.0.ebuild :
+  new versioning scheme, unfortunately not followed inside the tarball so I 
+  had to hack some there. The vorbis support was cut out from this release 
+  (at least according to the changelog)  so I removed the IUSE and USE flags 
+  accordingly.
 
 *lame-3.92 (23 Apr 2002)
   29 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
