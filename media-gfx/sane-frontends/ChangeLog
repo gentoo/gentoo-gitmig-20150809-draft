@@ -1,6 +1,20 @@
 # ChangeLog for media-gfx/sane-frontends
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.8 2003/03/09 18:46:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/ChangeLog,v 1.9 2003/07/11 06:22:02 phosphan Exp $
+
+*sane-frontends-1.0.11 (11 Jul 2003)
+
+  11 Jul 2003; Patrick Kursawe <phosphan@gentoo.org>
+  sane-frontends-1.0.10.ebuild, sane-frontends-1.0.11.ebuild,
+  sane-frontends-1.0.9.ebuild:
+  Added URI with "old-version" to SRC_URI, so always one of them should work.
+
+*sane-frontends-1.0.11 (11 Jul 2003)
+
+  11 Jul 2003; Patrick Kursawe <phosphan@gentoo.org>
+  sane-frontends-1.0.10.ebuild, sane-frontends-1.0.11.ebuild,
+  sane-frontends-1.0.9.ebuild:
+  Version bump, updated download URIs
 
 *sane-frontends-1.0.10 (09 Mar 2003)
 
