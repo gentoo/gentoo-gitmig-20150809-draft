@@ -1,0 +1,6 @@
+MD5 085635aad774a3b749d53ba5e0341169 ChangeLog 1858
+MD5 c78fa853cce15e28757d3e5bd55924f3 ncftp-3.1.4.ebuild 740
+MD5 9fe476ae9d75e8b608fd7124186483ae ncftp-3.1.5.ebuild 744
+MD5 0db6823125a4957233d344c0455e359f files/digest-ncftp-3.1.4 68
+MD5 1ed78febe5ab613c947af0f8e346b8b7 files/digest-ncftp-3.1.5 68
+MD5 8b3b76f500340f4728601c1c99bb04fe files/ncftp-3.1.5-cjk.patch 360

@@ -1,0 +1,4 @@
+MD5 5fca4a7423d20eccf42111da05078f11 ChangeLog 1170
+MD5 6b9087ce1244501b04f599d6994e390b lukemftp-1.5-r4.ebuild 1592
+MD5 c2fe0246d0e341f25696c92d4ec3bb13 files/digest-lukemftp-1.5-r4 64
+MD5 774f712740b782bd672b85536408a3c5 files/lukemftp-1.5-pasv-overflow.patch 375

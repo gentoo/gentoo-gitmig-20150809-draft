@@ -1,0 +1,6 @@
+MD5 d89ba5a0a9ef9d94434d21b70e97187b ChangeLog 1515
+MD5 ea292842e221c5ff4ce55de024122b93 ftp-0.17-r1.ebuild 803
+MD5 c1e0ead72511622c46ceb36967104042 ftp-0.17-r2.ebuild 994
+MD5 036b2200a177f3266c5cbb3f4d5e4ed5 files/digest-ftp-0.17-r1 66
+MD5 036b2200a177f3266c5cbb3f4d5e4ed5 files/digest-ftp-0.17-r2 66
+MD5 b2e1a338f350747a22bc8bf6ea438c4f files/netkit-ftp-0.17+ssl-0.2.diff 45639
