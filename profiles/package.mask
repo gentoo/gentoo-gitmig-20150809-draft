@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2845 2004/05/05 00:15:35 g2boojum Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2846 2004/05/05 22:39:39 vapier Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <vapier@gentoo.org> (05 May 2004)
+# mask for testing
+>=net-analyzer/netcat-110-r6
 
 # <g2boojum@gentoo.org> (04 May 2004)
 # rsync 2.6.2 seems to be behaving badly wrt our rsync servers.  Downgrading.
