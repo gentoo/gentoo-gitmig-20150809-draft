@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1-r1.ebuild,v 1.4 2004/05/07 14:40:14 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1-r1.ebuild,v 1.5 2004/05/25 13:12:32 weeve Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -47,7 +47,7 @@ HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 IUSE="gnome kde"
 
 RDEPEND=">=sys-libs/glibc-2.1
@@ -259,9 +259,8 @@ src_unpack() {
 	#Work around recent portage sandbox troubles
 	epatch ${FILESDIR}/${PV}/build.patch
 
-#	if [ ${ARCH} = "sparc" ]; then
-#		epatch ${FILESDIR}/${PV}/openoffice-1.1.0-sparc64-fix.patch
-#	fi
+	# Linux/SPARC fixes
+	[ `use sparc` ] && epatch ${FILESDIR}/${PV}/linux-sparc.patch
 
 	#Security fix
 	epatch ${FILESDIR}/${PV}/neon.patch
