@@ -1,0 +1,105 @@
+Clean License Conditions
+
+Clean is available under a dual license: 
+1 The LGPL the standard GNU Lesser General Open Source license (see below), 
+which is free, but 
+available for non-commercial purposes only. 
+2 A commercial license (see below) that must be purchased. Information on that 
+license can be obtained 
+from Prof.dr.ir. M.J. Plasmeijer, preferably via email: rinus@cs.kun.nl.
+
+Note, that development under the LGPL license entails some restrictions and 
+responsibilities. More 
+information on the nature of the LGPL is available at www.gnu.org and 
+www.opensource.org. 
+Users can choose which they wish to operate under. However, for commercial 
+applications the 
+LGPL license is not available. Instead, developers wishing to distribute 
+commercial applications 
+(either publicly or privately) must purchase a commercial license. 
+
+Commercial purposes are those involving money (excluding the costs for 
+distributing and copying): 
+for example: 
+- selling software that uses directly or indirectly the source code of the Clean 
+system or 
+portions thereof;
+- selling services based on software that uses directly or indirectly the source 
+code of the 
+Clean system, or portions thereof;
+- using software that uses directly or indirectly the source code of the Clean 
+system, or 
+portions thereof, to examine, manage, measure or report the performance of a 
+business.
+
+Warning
+Developers who distribute commercial applications, either publicly or privately, 
+that are written using 
+the Clean system, who do not have a commercial license are in breach of these 
+license conditions 
+and of US and International copyright law. The penalties for such breaches are 
+quite severe, and 
+offenders will be prosecuted. 
+
+Note
+For a few parts of the Clean system the sources are not available yet. In 
+particular, this concerns the 
+alpha release of Sparkle. It is the intention that for 
+these parts the sources 
+will be available soon under these license conditions. For the time being, these 
+parts of the Clean 
+system are available under the old Clean license conditions (see below) only.
+
+December 21, 2001.
+
+OLD Clean License Conditions
+============================
+
+The Concurrent Clean Compiler and the Concurrent Clean Program
+Development System are developed by the Research Group on Functional
+Programming Languages at the University of Nijmegen (copyright
+University of Nijmegen, Hilt High Level Software Tools B.V. , 1987-2000).
+
+The Clean Software can be used free of charge only if it is used for
+non-profit purposes in a non-commercial environment, i.e. for
+educational or research purposes in a non-profit institute or for
+personal, non-commercial use. For this kind of use it is allowed to
+copy the software under the condition that the complete distribution
+(see the Clean Distribution page) for a certain platform is copied,
+including this license condition, copyright notice, language manual,
+help file, the compiler, the code generator and the development system.
+Under the same conditions it is allowed to re-distribute the system. We
+appreciate it very much if you would inform us when you copy or
+redistribute the system.
+
+For ANY use of Clean with a commercial purpose or in a commercial
+environment a commercial license is needed.
+
+For a commercial license one has to contact Rinus Plasmeijer either via
+the registration form
+
+    http://www.cs.kun.nl/~clean/Clean.Registration.html
+
+or via e-mail
+
+    mailto:rinus@cs.kun.nl
+
+or
+
+    Department of Computer Science
+    University of Nijmegen
+    Toernooiveld 1
+    6525 ED  Nijmegen
+    tel: +31 80 652644
+    fax: +31 80 652525.
+
+
+The Clean Software is distributed via ftp:
+
+    ftp://ftp.cs.kun.nl/pub/Clean
+    
+More information about Clean is also available on the World Wide Web:
+
+    http://www.cs.kun.nl/~clean
+
+Versions of Concurrent Clean are available for several platforms. 

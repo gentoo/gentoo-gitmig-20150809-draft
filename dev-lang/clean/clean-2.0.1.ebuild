@@ -1,13 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/clean/clean-2.0.1.ebuild,v 1.1 2002/07/18 22:05:59 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clean/clean-2.0.1.ebuild,v 1.2 2002/08/17 02:27:20 george Exp $
 
 DESCRIPTION="Clean"
-HOMEPAGE="http://foo.bar.com"
+HOMEPAGE="http://www.cs.kun.nl/~clean/"
 SRC_URI="http://www.cs.kun.nl/~clean/download/Clean20/linux/Clean2.0.1.tar.gz http://www.cs.kun.nl/~clean/download/Clean20/source/Clean${PV}Sources.tar.gz"
-LICENSE="LGPL-2.1"
+
+LICENSE="LGPL-2.1 | clean"
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc -sparc64"
+
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}"
 S="${WORKDIR}/Clean 2.0.1 Sources"
