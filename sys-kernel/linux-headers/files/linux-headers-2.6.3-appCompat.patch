@@ -1,0 +1,587 @@
+Authors: Tim Yamin <plasmaroo@gentoo.org>
+         Mike Frysinger <vapier@gentoo.org>
+         Martin Schlemmer <azarah@gentoo.org>
+
+This patch neatens up the 2.6.0 headers for user-space usage and allows backward
+compatibility on a variety of applications which are designed for 2.4 headers.
+
+diff -ur linux-2.6.0/include/linux/bitmap.h linux-2.6.0/include/linux.gentoo/bitmap.h
+--- linux-2.6.0/include/linux/bitmap.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/bitmap.h	2003-12-27 19:19:31.000000000 +0000
+@@ -1,6 +1,7 @@
+ #ifndef __LINUX_BITMAP_H
+ #define __LINUX_BITMAP_H
+ 
++#ifdef __KERNEL__
+ #ifndef __ASSEMBLY__
+ 
+ #include <linux/config.h>
+@@ -155,5 +156,5 @@
+ #endif
+ 
+ #endif /* __ASSEMBLY__ */
+-
++#endif /* __KERNEL__ */
+ #endif /* __LINUX_BITMAP_H */
+diff -ur linux-2.6.0/include/linux/buffer_head.h linux-2.6.0/include/linux.gentoo/buffer_head.h
+--- linux-2.6.0/include/linux/buffer_head.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/buffer_head.h	2003-12-27 19:19:31.000000000 +0000
+@@ -34,6 +34,8 @@
+ 
+ #define MAX_BUF_PER_PAGE (PAGE_CACHE_SIZE / 512)
+ 
++#ifdef __KERNEL__
++
+ struct page;
+ struct buffer_head;
+ struct address_space;
+@@ -283,6 +285,8 @@
+ 		__wait_on_buffer(bh);
+ }
+ 
++#endif /* __KERNEL__ */
++
+ static inline void lock_buffer(struct buffer_head *bh)
+ {
+ 	while (test_set_buffer_locked(bh))
+diff -ur linux-2.6.0/include/linux/compiler-gcc2.h linux-2.6.0/include/linux.gentoo/compiler-gcc2.h
+--- linux-2.6.0/include/linux/compiler-gcc2.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/compiler-gcc2.h	2003-12-27 19:19:31.000000000 +0000
+@@ -12,7 +12,9 @@
+ # define __builtin_expect(x, expected_value) (x)
+ #endif
+ 
++#ifndef __attribute_used__
+ #define __attribute_used__	__attribute__((__unused__))
++#endif
+ 
+ /*
+  * The attribute `pure' is not implemented in GCC versions earlier
+diff -ur linux-2.6.0/include/linux/compiler-gcc3.h linux-2.6.0/include/linux.gentoo/compiler-gcc3.h
+--- linux-2.6.0/include/linux/compiler-gcc3.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/compiler-gcc3.h	2003-12-30 23:34:55.000000000 +0000
+@@ -3,6 +3,8 @@
+ /* These definitions are for GCC v3.x.  */
+ #include <linux/compiler-gcc.h>
+ 
++#ifdef __KERNEL__
++
+ #if __GNUC_MINOR__ >= 1
+ # define inline		__inline__ __attribute__((always_inline))
+ # define __inline__	__inline__ __attribute__((always_inline))
+@@ -20,4 +22,6 @@
+ #endif
+ 
+ #define __attribute_pure__	__attribute__((pure))
+ #define __attribute_const__	__attribute__((__const__))
++
++#endif /* __KERNEL__ */
+diff -ur linux-2.6.1/include/linux/cpumask.h linux-2.6.1/include/linux.gentoo/cpumask.h
+--- linux-2.6.1/include/linux/cpumask.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.1/include/linux.gentoo/cpumask.h	2003-12-27 19:19:31.000000000 +0000
+@@ -1,6 +1,8 @@
+ #ifndef __LINUX_CPUMASK_H
+ #define __LINUX_CPUMASK_H
+ 
++#ifdef __KERNEL__
++
+ #include <linux/threads.h>
+ #include <asm/cpumask.h>
+ #include <asm/bug.h>
+@@ -68,4 +70,5 @@
+ 		cpu < NR_CPUS;						\
+ 		cpu = next_online_cpu(cpu,map))
+ 
++#endif /* __KERNEL__ */
+ #endif /* __LINUX_CPUMASK_H */
+diff -ur linux-2.6.0/include/linux/ext2_fs_sb.h linux-2.6.0/include/linux.gentoo/ext2_fs_sb.h
+--- linux-2.6.0/include/linux/ext2_fs_sb.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/ext2_fs_sb.h	2003-12-27 19:19:31.000000000 +0000
+@@ -46,9 +46,9 @@
+ 	int s_inode_size;
+ 	int s_first_ino;
+ 	spinlock_t s_next_gen_lock;
+-	u32 s_next_generation;
++	__u32 s_next_generation;
+ 	unsigned long s_dir_count;
+-	u8 *s_debts;
++	__u8 *s_debts;
+ 	struct percpu_counter s_freeblocks_counter;
+ 	struct percpu_counter s_freeinodes_counter;
+ 	struct percpu_counter s_dirs_counter;
+diff -ur linux-2.6.0/include/linux/fb.h linux-2.6.0/include/linux.gentoo/fb.h
+--- linux-2.6.0/include/linux/fb.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/fb.h	2003-12-27 19:19:31.000000000 +0000
+@@ -379,8 +379,8 @@
+ 	u32 access_align;	/* alignment per read/write             */
+ 	u32 flags;		/* see FB_PIXMAP_*                      */
+ 					  /* access methods                */
+-	void (*outbuf)(u8 *dst, u8 *addr, unsigned int size); 
+-	u8   (*inbuf) (u8 *addr);
++	void (*outbuf)(__u8 *dst, __u8 *addr, unsigned int size); 
++	__u8   (*inbuf) (__u8 *addr);
+ };
+ 
+     /*
+diff -ur linux-2.6.0/include/linux/isdn.h linux-2.6.0/include/linux.gentoo/isdn.h
+--- linux-2.6.0/include/linux/isdn.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/isdn.h	2003-12-27 19:19:31.000000000 +0000
+@@ -14,7 +14,10 @@
+ #define __ISDN_H__
+ 
+ #include <linux/ioctl.h>
++
++#ifdef __KERNEL__
+ #include <linux/isdn/fsm.h>
++#endif
+ 
+ #ifdef CONFIG_COBALT_MICRO_SERVER
+ /* Save memory */
+diff -ur linux-2.6.0/include/linux/list.h linux-2.6.0/include/linux.gentoo/list.h
+--- linux-2.6.0/include/linux/list.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/list.h	2003-12-27 19:19:31.000000000 +0000
+@@ -584,7 +584,6 @@
+ 	     pos && ({ n = pos->next; 1; }) && 				 \
+ 		({ tpos = hlist_entry(pos, typeof(*tpos), member); 1;}); \
+ 	     pos = n)
+-#else
+-#warning "don't include kernel headers in userspace"
++
+ #endif /* __KERNEL__ */
+ #endif
+diff -ur linux-2.6.0/include/linux/mod_devicetable.h linux-2.6.0/include/linux.gentoo/mod_devicetable.h
+--- linux-2.6.0/include/linux/mod_devicetable.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/mod_devicetable.h	2003-12-27 19:19:31.000000000 +0000
+@@ -10,7 +10,6 @@
+ #ifdef __KERNEL__
+ #include <linux/types.h>
+ typedef unsigned long kernel_ulong_t;
+-#endif
+ 
+ #define PCI_ANY_ID (~0)
+ 
+@@ -147,5 +146,5 @@
+ #define CCW_DEVICE_ID_MATCH_DEVICE_TYPE		0x04
+ #define CCW_DEVICE_ID_MATCH_DEVICE_MODEL	0x08
+ 
+-
++#endif /* __KERNEL__ */
+ #endif /* LINUX_MOD_DEVICETABLE_H */
+diff -ur linux-2.6.0/include/linux/radix-tree.h linux-2.6.0/include/linux.gentoo/radix-tree.h
+--- linux-2.6.0/include/linux/radix-tree.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/radix-tree.h	2003-12-27 19:19:31.000000000 +0000
+@@ -41,6 +41,8 @@
+ 	(root)->rnode = NULL;		\
+ } while (0)
+ 
++#ifdef __KERNEL__
++
+ extern int radix_tree_insert(struct radix_tree_root *, unsigned long, void *);
+ extern void *radix_tree_lookup(struct radix_tree_root *, unsigned long);
+ extern void *radix_tree_delete(struct radix_tree_root *, unsigned long);
+@@ -54,4 +56,5 @@
+ 	preempt_enable();
+ }
+ 
++#endif /* __KERNEL__ */
+ #endif /* _LINUX_RADIX_TREE_H */
+diff -ur linux-2.6.0/include/linux/smp.h linux-2.6.0/include/linux.gentoo/smp.h
+--- linux-2.6.0/include/linux/smp.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/smp.h	2003-12-27 19:19:31.000000000 +0000
+@@ -6,6 +6,8 @@
+  *		Alan Cox. <alan@redhat.com>
+  */
+ 
++
++#ifdef __KERNEL__
+ #include <linux/config.h>
+ 
+ #ifdef CONFIG_SMP
+@@ -112,4 +114,5 @@
+ #define put_cpu()		preempt_enable()
+ #define put_cpu_no_resched()	preempt_enable_no_resched()
+ 
++#endif /* __KERNEL__ */
+ #endif /* __LINUX_SMP_H */
+diff -ur linux-2.6.0/include/linux/spinlock.h linux-2.6.0/include/linux.gentoo/spinlock.h
+--- linux-2.6.0/include/linux/spinlock.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/spinlock.h	2003-12-27 19:19:31.000000000 +0000
+@@ -183,6 +183,7 @@
+ #define _raw_write_trylock(lock) ({ (void)(lock); (1); })
+ 
+ #endif /* !SMP */
++#ifdef __KERNEL__
+ 
+ /*
+  * Define the various spin_lock and rw_lock methods.  Note we define these
+@@ -465,4 +466,5 @@
+ #endif
+ }
+ 
++#endif /* __KERNEL__ */
+ #endif /* __LINUX_SPINLOCK_H */
+diff -ur linux-2.6.0/include/linux/time.h linux-2.6.0/include/linux.gentoo/time.h
+--- linux-2.6.0/include/linux/time.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/time.h	2003-12-27 19:19:31.000000000 +0000
+@@ -4,24 +4,31 @@
+ #include <asm/param.h>
+ #include <linux/types.h>
+ 
++#ifndef _SYS_TIME_H
+ #ifndef _STRUCT_TIMESPEC
++#ifndef __timespec_defined
+ #define _STRUCT_TIMESPEC
+ struct timespec {
+ 	time_t	tv_sec;		/* seconds */
+ 	long	tv_nsec;	/* nanoseconds */
+ };
++#endif /* __timespec_defined */
+ #endif /* _STRUCT_TIMESPEC */
+ 
++#ifndef _STRUCT_TIMEVAL
+ struct timeval {
+ 	time_t		tv_sec;		/* seconds */
+ 	suseconds_t	tv_usec;	/* microseconds */
+ };
++#endif /* _STRUCT_TIMEVAL */
+ 
+ struct timezone {
+ 	int	tz_minuteswest;	/* minutes west of Greenwich */
+ 	int	tz_dsttime;	/* type of dst correction */
+ };
+ 
++#endif /* _SYS_TIME_H */
++
+ #ifdef __KERNEL__
+ 
+ #include <linux/spinlock.h>
+@@ -281,6 +281,8 @@
+  * machines were long is 32-bit! (However, as time_t is signed, we
+  * will already get problems at other places on 2038-01-19 03:14:08)
+  */
++
++#ifndef _TIME_H
+ static inline unsigned long
+ mktime (unsigned int year, unsigned int mon,
+ 	unsigned int day, unsigned int hour,
+@@ -298,6 +300,7 @@
+ 	  )*60 + min /* now have minutes */
+ 	)*60 + sec; /* finally seconds */
+ }
++#endif
+ 
+ extern struct timespec xtime;
+ extern struct timespec wall_to_monotonic;
+@@ -351,15 +358,19 @@
+ #define	ITIMER_VIRTUAL	1
+ #define	ITIMER_PROF	2
+ 
++#ifndef _TIME_H
+ struct  itimerspec {
+         struct  timespec it_interval;    /* timer period */
+         struct  timespec it_value;       /* timer expiration */
+ };
++#endif /* _TIME_H */
+ 
++#ifndef _SYS_TIME_H
+ struct	itimerval {
+ 	struct	timeval it_interval;	/* timer interval */
+ 	struct	timeval it_value;	/* current value */
+ };
++#endif /* _SYS_TIME_H */
+ 
+ 
+ /*
+diff -ur linux-2.6.0/include/linux/workqueue.h linux-2.6.0/include/linux.gentoo/workqueue.h
+--- linux-2.6.0/include/linux/workqueue.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/workqueue.h	2003-12-27 19:19:31.000000000 +0000
+@@ -5,6 +5,8 @@
+ #ifndef _LINUX_WORKQUEUE_H
+ #define _LINUX_WORKQUEUE_H
+ 
++#ifdef __KERNEL__
++
+ #include <linux/timer.h>
+ #include <linux/linkage.h>
+ 
+@@ -73,5 +75,7 @@
+ 	return del_timer_sync(&work->timer);
+ }
+ 
++#endif /* __KERNEL__ */
++
+ #endif
+ 
+diff -ur linux-2.6.0/include/asm-i386/mpspec.h linux-2.6.0/include/asm-i386/mpspec.h
+--- linux-2.6.0/include/asm-i386/mpspec.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/asm-i386/mpspec.h	2004-01-19 20:01:11.000000000 +0000
+@@ -3,7 +3,7 @@
+ 
+ #include <linux/cpumask.h>
+ #include <asm/mpspec_def.h>
+-#include <mach_mpspec.h>
++#include <asm/mach-generic/mach_mpspec.h>
+ 
+ extern int mp_bus_id_to_type [MAX_MP_BUSSES];
+ extern int mp_bus_id_to_node [MAX_MP_BUSSES];
+diff -ur linux-2.6.0/include/asm-i386/processor.h linux-2.6.0/include/asm-i386/processor.h
+--- linux-2.6.0/include/asm-i386/processor.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/asm-i386/processor.h	2004-01-19 20:01:11.000000000 +0000
+@@ -8,7 +8,9 @@
+ #define __ASM_I386_PROCESSOR_H
+ 
+ #include <asm/vm86.h>
++#ifdef __KERNEL__
+ #include <asm/math_emu.h>
++#endif
+ #include <asm/segment.h>
+ #include <asm/page.h>
+ #include <asm/types.h>
+diff -ur linux-2.6.0/include/asm-i386/semaphore.h linux-2.6.0/include/asm-i386/semaphore.h
+--- linux-2.6.0/include/asm-i386/semaphore.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/asm-i386/semaphore.h	2004-01-19 20:01:11.000000000 +0000
+@@ -3,8 +3,6 @@
+ 
+ #include <linux/linkage.h>
+ 
+-#ifdef __KERNEL__
+-
+ /*
+  * SMP- and interrupt-safe semaphores..
+  *
+@@ -214,4 +212,3 @@
+ }
+ 
+ #endif
+-#endif
+diff -ur linux-2.6.0/include/asm-i386/signal.h linux-2.6.0/include/asm-i386/signal.h
+--- linux-2.6.0/include/asm-i386/signal.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/asm-i386/signal.h	2004-01-19 20:01:11.000000000 +0000
+@@ -26,7 +26,9 @@
+ /* Here we must cater to libcs that poke about in kernel headers.  */
+ 
+ #define NSIG		32
++#ifndef __sigset_t_defined
+ typedef unsigned long sigset_t;
++#endif
+ 
+ #endif /* __KERNEL__ */
+ 
+@@ -155,6 +157,7 @@
+ #else
+ /* Here we must cater to libcs that poke about in kernel headers.  */
+ 
++#ifndef _SIGNAL_H
+ struct sigaction {
+ 	union {
+ 	  __sighandler_t _sa_handler;
+@@ -164,17 +167,20 @@
+ 	unsigned long sa_flags;
+ 	void (*sa_restorer)(void);
+ };
++#endif
+ 
+ #define sa_handler	_u._sa_handler
+ #define sa_sigaction	_u._sa_sigaction
+ 
+ #endif /* __KERNEL__ */
+ 
++#ifndef _SIGNAL_H
+ typedef struct sigaltstack {
+ 	void *ss_sp;
+ 	int ss_flags;
+ 	size_t ss_size;
+ } stack_t;
++#endif
+ 
+ #ifdef __KERNEL__
+ #include <asm/sigcontext.h>
+diff -ur linux-2.6.0/include/asm-i386/smp.h linux-2.6.0/include/asm-i386/smp.h
+--- linux-2.6.0/include/asm-i386/smp.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/asm-i386/smp.h	2004-01-19 20:01:11.000000000 +0000
+@@ -70,7 +70,7 @@
+ #ifdef APIC_DEFINITION
+ extern int hard_smp_processor_id(void);
+ #else
+-#include <mach_apicdef.h>
++#include <asm/mach-generic/mach_apicdef.h>
+ static inline int hard_smp_processor_id(void)
+ {
+ 	/* we don't want to mark this access volatile - bad code generation */
+diff -ur linux-2.6.0/include/linux/types.h linux-2.6.0/include/linux.gentoo/types.h
+--- linux-2.6.0/include/linux/types.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/types.h	2004-01-19 20:01:11.000000000 +0000
+@@ -19,12 +19,24 @@
+ 
+ typedef __u32 __kernel_dev_t;
+ 
++#ifndef _SYS_SELECT_H
+ typedef __kernel_fd_set		fd_set;
++#endif
++#ifndef __dev_t_defined
+ typedef __kernel_dev_t		dev_t;
++#endif
++#ifndef __ino_t_defined
+ typedef __kernel_ino_t		ino_t;
++#endif
++#ifndef __mode_t_defined
+ typedef __kernel_mode_t		mode_t;
++#endif
++#ifndef __nlink_t_defined
+ typedef __kernel_nlink_t	nlink_t;
++#endif
++#ifndef __off_t_defined
+ typedef __kernel_off_t		off_t;
++#endif
+ typedef __kernel_pid_t		pid_t;
+ typedef __kernel_daddr_t	daddr_t;
+ typedef __kernel_key_t		key_t;
+@@ -34,7 +46,9 @@
+ 
+ #ifdef __KERNEL__
+ typedef __kernel_uid32_t	uid_t;
++#define __uid_t_defined
+ typedef __kernel_gid32_t	gid_t;
++#define __gid_t_defined
+ typedef __kernel_uid16_t        uid16_t;
+ typedef __kernel_gid16_t        gid16_t;
+ 
+@@ -49,7 +63,9 @@
+  */
+ #else
+ typedef __kernel_uid_t		uid_t;
++#define __uid_t_defined
+ typedef __kernel_gid_t		gid_t;
++#define __gid_t_defined
+ #endif /* __KERNEL__ */
+ 
+ #if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+diff -ur linux-2.6.0/include/asm-generic/siginfo.h linux-2.6.0/include/asm-generic/siginfo.h
+--- linux-2.6.0/include/asm-generic/siginfo.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/asm-generic/siginfo.h	2004-01-19 20:01:11.000000000 +0000
+@@ -4,10 +4,12 @@
+ #include <linux/compiler.h>
+ #include <linux/types.h>
+ 
++#ifndef _SIGNAL_H
+ typedef union sigval {
+ 	int sival_int;
+ 	void *sival_ptr;
+ } sigval_t;
++#endif
+ 
+ /*
+  * This is the size (including padding) of the part of the
+@@ -31,7 +33,7 @@
+ #endif
+ 
+ #ifndef HAVE_ARCH_SIGINFO_T
+-
++#ifndef _SIGNAL_H
+ typedef struct siginfo {
+ 	int si_signo;
+ 	int si_errno;
+@@ -86,7 +88,7 @@
+ 		} _sigpoll;
+ 	} _sifields;
+ } siginfo_t;
+-
++#endif
+ #endif
+ 
+ /*
+@@ -238,7 +240,7 @@
+ #endif
+ 
+ #ifndef HAVE_ARCH_SIGEVENT_T
+-
++#ifndef _SIGNAL_H
+ typedef struct sigevent {
+ 	sigval_t sigev_value;
+ 	int sigev_signo;
+@@ -253,7 +255,7 @@
+ 		} _sigev_thread;
+ 	} _sigev_un;
+ } sigevent_t;
+-
++#endif
+ #endif
+ 
+ #define sigev_notify_function	_sigev_un._sigev_thread._function
+diff -ur linux-2.6.0/include/linux/jiffies.h linux-2.6.0/include/linux.gentoo/jiffies.h
+--- linux-2.6.0/include/linux/jiffies.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/jiffies.h	2004-01-19 20:01:11.000000000 +0000
+@@ -13,15 +13,15 @@
+  * without holding read_lock_irq(&xtime_lock).
+  * get_jiffies_64() will do this for you as appropriate.
+  */
+-extern u64 jiffies_64;
++extern __u64 jiffies_64;
+ extern unsigned long volatile jiffies;
+ 
+ #if (BITS_PER_LONG < 64)
+-u64 get_jiffies_64(void);
++__u64 get_jiffies_64(void);
+ #else
+-static inline u64 get_jiffies_64(void)
++static inline __u64 get_jiffies_64(void)
+ {
+-	return (u64)jiffies;
++	return (__u64)jiffies;
+ }
+ #endif
+ 
+diff -ur linux-2.6.0/include/linux/i2c.h linux-2.6.0/include/linux.gentoo/i2c.h
+--- linux-2.6.0/include/linux/i2c.h	2004-02-07 13:29:15.099504640 -0500
++++ linux-2.6.0/include/linux.gentoo/i2c.h	2004-02-07 13:35:53.956869104 -0500
+@@ -28,10 +28,18 @@
+ #ifndef _LINUX_I2C_H
+ #define _LINUX_I2C_H
+ 
+-#include <linux/module.h>
+-#include <linux/types.h>
++#ifdef __KERNEL__
++#	include <linux/module.h>
++#	include <linux/types.h>
++#else
++#	define __KERNEL__
++#	include <linux/types.h>
++#	undef __KERNEL__
++#endif
+ #include <linux/i2c-id.h>
++#ifdef __KERNEL__
+ #include <linux/device.h>	/* for struct device */
++#endif
+ #include <asm/semaphore.h>
+ 
+ /* --- General options ------------------------------------------------	*/
+@@ -109,6 +117,7 @@
+  * events.
+  */
+ 
++#ifdef __KERNEL__
+ struct i2c_driver {
+ 	struct module *owner;
+ 	char name[32];
+@@ -268,6 +277,7 @@
+ {
+ 	dev_set_drvdata (&dev->dev, data);
+ }
++#endif
+ 
+ /*flags for the driver struct: */
+ #define I2C_DF_NOTIFY	0x01		/* notify on bus (de/a)ttaches 	*/
+@@ -599,11 +609,13 @@
+ #define i2c_is_isa_adapter(adapptr) \
+         ((adapptr)->algo->id == I2C_ALGO_ISA)
+ 
++#ifdef __KERNEL__
+ /* Tiny delay function used by the i2c bus drivers */
+ static inline void i2c_delay(signed long timeout)
+ {
+ 	set_current_state(TASK_INTERRUPTIBLE);
+ 	schedule_timeout(timeout);
+ }
++#endif
+ 
+ #endif /* _LINUX_I2C_H */
