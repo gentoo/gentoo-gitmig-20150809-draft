@@ -1,0 +1,19 @@
+# ChangeLog for sys-apps/dvhtool
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/ChangeLog,v 1.1 2003/12/09 08:11:46 seemant Exp $
+
+*dvhtool-1.0.1 (08 Dec 2003)
+
+  08 Dec 2003; Seemant Kulleen <seemant@gentoo.org> dvhtool-1.0.1.ebuild,
+  metadata.xml, files/dvhtool-1.0.1-2.diff:
+  moved from sys-apps to sys-boot
+
+*dvhtool-1.0.1 (23 Jan 2003)
+
+  10 Sep 2003; Joshua Kinard <kumba@gentoo.org> metadata.xml:
+  Added metadata.xml
+
+  23 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Initial import.  Dvhtool contains the following patches from the
+  Debian/MIPS :
+      dvhtool-1.0.1-2.diff

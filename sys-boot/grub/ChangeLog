@@ -1,0 +1,146 @@
+# ChangeLog for sys-apps/grub
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.1 2003/12/09 08:12:07 seemant Exp $
+
+*grub-0.93.20030118 (08 Dec 2003)
+
+  08 Dec 2003; Seemant Kulleen <seemant@gentoo.org> grub-0.92-r1.ebuild,
+  grub-0.93.20030118.ebuild, metadata.xml, files/grub-0.93-gcc3.3.diff,
+  files/splash.xpm.gz,
+  files/grub-0.92/grub-0.5.96.1-special-raid-devices.patch,
+  files/grub-0.92/grub-0.90-addsyncs.patch,
+  files/grub-0.92/grub-0.90-append.patch,
+  files/grub-0.92/grub-0.90-configfile.patch,
+  files/grub-0.92/grub-0.90-install.in.patch,
+  files/grub-0.92/grub-0.90-installcopyonly.patch,
+  files/grub-0.92/grub-0.90-passwordprompt.patch,
+  files/grub-0.92/grub-0.90-staticcurses.patch,
+  files/grub-0.92/grub-0.90-symlinkmenulst.patch,
+  files/grub-0.92/grub-0.90-vga16-keypressclear.patch,
+  files/grub-0.92/grub-0.91-bootonce.patch,
+  files/grub-0.92/grub-0.91-splashimagehelp.patch,
+  files/grub-0.92/grub-0.91-vga16-serial.patch,
+  files/grub-0.92/grub-0.92-automake16.patch,
+  files/grub-0.92/grub-0.92-nodeprecatedflags.patch,
+  files/grub-0.92/grub-0.92-usbfix.patch,
+  files/grub-0.92/grub-0.92-vga16.patch:
+  moved from sys-apps to sys-boot
+
+  01 Dec 2003; Alexander Gabert <pappy@gentoo.org> grub-0.93.20030118.ebuild:
+  added CC -yno_propolice because configure has problems with -nostdlib
+  requesting __guard symbol but cannot be resolved, future releases of
+  hardened-gcc will honour this behaviour
+
+  07 Sep 2003; Alexander Gabert <pappy@gentoo.org> grub-0.93.20030118.ebuild:
+  added hardened-gcc excludes
+
+  14 Sep 2003; John Mylchreest <johnm@gentoo.org>; grub-0.93.20030118.ebuild,
+  files/grub-0.93-gcc3.3.diff:
+  Updating for gcc 3.3 compat
+
+  27 Jul 2003; Olivier Crete <tester@gentoo.org> grub-0.93.20030118.ebuild:
+  Added support for static building
+
+  24 Jan 2002; <woodchip@gentoo.org> *.ebuild : Reorder mount-boot.eclass
+  function, clean some fluff.
+
+*grub-0.93.20030118 (18 Jan 2003)
+
+  11 Apr 2003; Joshua Brindle <method@gentoo.org> grub-0.92-r1.ebuild,
+  grub-0.93.20030118.ebuild:
+  Added filter-flags -fstack-protector
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> grub-0.93.20030118.ebuild :
+  This is definitely not for mips.  Maybe sometime in the future...
+
+  18 Jan 2003; Donny Davies <woodchip@gentoo.org> grub-0.93.20030118.ebuild :
+  New testing release; closing #11821, #13242, #9180.  See the ebuild
+  for the detailed patch list.
+
+*grub-0.92-r1 (02 Oct 2002)
+
+  10 Mar 2003; Seemant Kulleen <seemant@gentoo.org> grub-0.92-r1.ebuild:
+  change to use epatch instead, much prettier output
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> grub-0.92-r1.ebuild :
+  This is definitely not for mips.  Maybe sometime in the future...
+
+  06 Jan 2002; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+  PROVIDE virtual/bootloader
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+  02 Oct 2002; Donny Davies <woodchip@gentoo.org> :
+  Merge changes from Markus Krainer <markus-krainer@chello.at> to fix:
+  bootlogo; #6820.  menu.lst was renamed to grub.conf; #6300.
+
+*grub-0.92 (25 Jun 2002)
+
+  29 Sep 2002; Donny Davies <woodchip@gentoo.org> grub-0.92.ebuild :
+  Now uses mount-boot eclass; from #7903.
+
+  13 Aug 2002; Joachim Blaabjerg <styx@gentoo.org> grub-0.92.ebuild :
+  Added grub-0.92-usbfix.patch to hopefully fix bug #6372. It still compiles!
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> grub-0.92.ebuild :
+  Added KEYWORDS.
+
+  25 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Add the latest version thanks to good work from (bug #4020)
+  Markus Krainer <markus-krainer@chello.at>.  Slotified the lot,
+  as well as move splash.xpm.gz to ${FILESDIR}/, as having three
+  seems a bit much.
+
+*grub-0.90-r7 (14 July 2002)
+
+  29 Sep 2002; Donny Davies <woodchip@gentoo.org> grub-0.90-r7.ebuild :
+  Now uses mount-boot eclass; from #7903.
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
+  updated keywords (-ppc -sparc -sparc64)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> grub-0.90-r7.ebuild :
+  Added KEYWORDS.
+
+*grub-0.90-r4 (8 Mar 2002)
+*grub-0.91-r3 (8 Mar 2002)
+
+  29 Sep 2002; Donny Davies <woodchip@gentoo.org> grub-0.91-r3.ebuild :
+  Now uses mount-boot eclass; from #7903.
+
+  19 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> grub-0.91-r3.ebuild :
+  Added -ppc to keywords
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> grub-0.91-r3.ebuild :
+  Added KEYWORDS.
+
+  8 Mar 2002; Bruce A. Locke <blocke@shivan.org> : grub-0.90-r4.ebuild,
+  grub-0.91-r3.ebuild: made check of /etc/fstab not match on commented out
+  entries and added a notice telling users to remove invalid /boot entries
+  from their /etc/fstab (a user had this problem while installing)
+
+*grub-0.90-r6 (4 Feb 2002)
+*grub-0.91-r1 (4 Feb 2002)
+
+  4 Feb 2002; Daniel Robbins <drobbins@gentoo.org>: grub-0.90-r6.ebuild,
+  grub-0.91-r1.ebuild: unset CFLAGS to ensure that GRUB code is i486-compatible,
+  a good thing for a boot loader.  Upgraded /boot mounting code to be compatible
+  with systems without a dedicated /boot filesystem.  Tweaked GRUB installation
+  so that the /boot/grub/*stage* files don't get overwritten, since this could
+  mess up the currently-in-the-MBR GRUB.  These fixes also close bug #527.
+
+*grub-0.90-r5 (4 Feb 2002)
+
+  4 Feb 2002; G.Bevin <gbevin@gentoo.org> grub-0.90-r5.ebuild, grub-0.91.ebuild :  
+  Added new setup function which detects if /boot is mounted or not, in case
+  it's not mounted it will try to do it automatically and in case of a failure
+  exit with an error message.
+
+*grub-0.90-r4 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

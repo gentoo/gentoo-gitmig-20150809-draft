@@ -1,0 +1,22 @@
+# ChangeLog for sys-apps/aboot
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/ChangeLog,v 1.1 2003/12/09 08:11:32 seemant Exp $
+
+*aboot-0.9-r1 (08 Dec 2003)
+
+  08 Dec 2003; Seemant Kulleen <seemant@gentoo.org> aboot-0.9-r1.ebuild,
+  metadata.xml, files/aboot.conf:
+  moved from sys-apps to sys-boot
+
+*aboot-0.9-r1 (21 Sep 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> aboot-0.9-r1.ebuild :
+  This is definitely not for mips.
+
+  06 Jan 2002; Seemant Kulleen <seemant@gentoo.org> aboot-0.9-r1.ebuild :
+
+  PROVIDE virtual/bootloader
+
+  21 Sep 2002; Bjoern Brauel <bjb@gentoo.org>
+  Added initial ebuild
+
