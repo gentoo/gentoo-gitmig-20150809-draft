@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/florist-3.15p.ebuild,v 1.7 2004/06/29 14:54:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/florist-3.15p.ebuild,v 1.8 2005/01/01 17:24:25 eradicator Exp $
 
 inherit gnat
 

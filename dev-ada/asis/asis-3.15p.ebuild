@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.11 2004/06/24 21:45:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.12 2005/01/01 17:23:22 eradicator Exp $
 
 inherit gnat eutils
 

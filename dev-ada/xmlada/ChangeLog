@@ -1,6 +1,6 @@
 # ChangeLog for dev-ada/xmlada
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/ChangeLog,v 1.11 2004/06/29 14:56:34 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/ChangeLog,v 1.12 2005/01/01 17:25:19 eradicator Exp $
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> xmlada-0.7.1-r2.ebuild,
   xmlada-1.0.ebuild:

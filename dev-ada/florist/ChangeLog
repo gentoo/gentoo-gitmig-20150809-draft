@@ -1,6 +1,6 @@
 # ChangeLog for dev-ada/florist
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/ChangeLog,v 1.8 2004/10/02 15:21:11 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/ChangeLog,v 1.9 2005/01/01 17:24:25 eradicator Exp $
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> florist-3.15p.ebuild:
   add sed-4 dep

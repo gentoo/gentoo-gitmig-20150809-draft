@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/garlic-3.15p-r1.ebuild,v 1.5 2004/06/24 21:46:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/garlic-3.15p-r1.ebuild,v 1.6 2005/01/01 17:24:38 eradicator Exp $
 
 inherit gnat
 
