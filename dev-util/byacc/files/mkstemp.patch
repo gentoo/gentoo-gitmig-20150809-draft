@@ -1,14 +1,5 @@
 --- main.c.orig	2002-12-17 14:28:54.000000000 -0500
 +++ main.c	2002-12-17 14:29:31.000000000 -0500
-@@ -57,7 +57,7 @@
- short **derives;
- char *nullable;
- 
--extern char *mktemp();
-+extern char *mkstemp();
- extern char *getenv();
- 
- 
 @@ -264,9 +264,9 @@
      text_file_name[len + 5] = 't';
      union_file_name[len + 5] = 'u';

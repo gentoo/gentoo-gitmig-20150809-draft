@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/byacc-1.9.ebuild,v 1.6 2004/03/13 01:49:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/byacc-1.9.ebuild,v 1.7 2004/04/05 03:53:43 agriffis Exp $
 
 inherit eutils
 
@@ -14,6 +14,11 @@ KEYWORDS="x86 ppc ia64 ~sparc ~alpha ~mips ~hppa"
 
 src_compile() {
 	epatch ${FILESDIR}/mkstemp.patch
+
+	# The following patch fixes yacc to run correctly on ia64 (and
+	# other 64-bit arches).  See bug 46233
+	epatch ${FILESDIR}/byacc-1.9-ia64.patch
+
 	make PROGRAM=byacc CFLAGS="${CFLAGS}" || die
 }
 
