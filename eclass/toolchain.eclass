@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.62 2004/12/05 21:05:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.63 2004/12/07 00:09:02 vapier Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -99,9 +99,14 @@ else
 	if [ -n "${HTB_VER}" ] ; then
 		IUSE="${IUSE} boundschecking"
 	fi
-	use multislot \
-		&& SLOT="${CTARGET}-${MY_PV_FULL}" \
-		|| SLOT="${CTARGET}-${MY_PV}"
+	# Support upgrade paths here or people get pissed
+	if use multislot ; then
+		SLOT="${CTARGET}-${MY_PV_FULL}"
+	elif [[ ${CTARGET} != ${CHOST} ]] ; then
+		SLOT="${CTARGET}-${MY_PV}"
+	else
+		SLOT="${MY_PV}"
+	fi
 fi
 #----<< SLOT+IUSE logic >>----
 
