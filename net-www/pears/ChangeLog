@@ -1,6 +1,9 @@
 # ChangeLog for net-www/pears
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/pears/ChangeLog,v 1.1 2004/07/23 01:00:49 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/pears/ChangeLog,v 1.2 2004/08/01 20:54:02 dholm Exp $
+
+  01 Aug 2004; David Holm <dholm@gentoo.org> pears-1.7.ebuild:
+  Added to ~ppc.
 
 *pears-1.7 (22 Jul 2004)
 
