@@ -6,7 +6,7 @@
 # 
 #  etcat v0.1.4 (27 Apr 2003)
 #
-#  $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/etcat,v 1.4 2003/04/29 00:03:31 liquidx Exp $
+#  $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/etcat,v 1.5 2003/04/30 09:22:03 liquidx Exp $
 #
 # --| About |--------------------------------------------------------
 #
@@ -41,6 +41,8 @@
 # 
 # --| Changes |------------------------------------------------------
 #
+#  * etcat-0.1.5 (30 Apr 2003)
+#    - Fixed disappearing short opts. Oops.
 #  * etcat-0.1.4 (27 Apr 2003)
 #    - Cleaned up command execution code to provide a single place
 #      to specify functions
@@ -941,12 +943,11 @@ def main():
     # delegates the commandline stuff to functions
     pointer = 2
     # short/long opts mapping
-    shortopts = map(lambda x: x[0], options.values())
+    shortopts = map(lambda x: "-" + x[0], options.values())
     short2long = {}
     for k,v in options.items():
 	short2long[v[0]] = k
     longopts = options.keys()
-
     # loop thru arguments
     for arg in sys.argv[1:]:
 	if arg[0] == "-" and len(arg) == 2 and arg in shortopts:

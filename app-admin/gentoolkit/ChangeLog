@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.76 2003/04/29 00:03:31 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.77 2003/04/30 09:22:03 liquidx Exp $
+
+*gentoolkit-0.1.21-r1 (30 Apr 2003)
+
+  30 Apr 2003; Alastair Tse <liquidx@gentoo.org> files/scripts/etcat:
+  Major functional bugfix for etcat (#20174).
 
 *gentoolkit-0.1.21-r1 (29 Apr 2003)
 
