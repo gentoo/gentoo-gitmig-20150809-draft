@@ -1,3 +1,4 @@
+MD5 71e54313d2ccc0256ee67358e8f0ce5e gaim-0.78.ebuild 3982
 MD5 112ffe11353a192e8e160728bb305608 gaim-0.77.ebuild 4041
 MD5 1b332d24ed4e517a3b587f840c551acc gaim-0.75-r10.ebuild 3678
 MD5 7cd81686b057123d285aa821e366518b gaim-0.77-r2.ebuild 4496
@@ -6,6 +7,7 @@ MD5 19b3cafbbe380403d46cccc45a984b80 metadata.xml 481
 MD5 4989dc76d941288934c783f52931762d files/gaim-0.75-static-prpls.patch 3710
 MD5 76d3a02120c18747eb5c3335dc17b16d files/gaim-0.77-plugin-prefs.patch 3926
 MD5 4bc83ad48d260db208fcae372c2bb291 files/digest-gaim-0.77 63
+MD5 f07855631a1ef3f986568b772f335865 files/digest-gaim-0.78 63
 MD5 3a5e6167d13c4a44a8618c12629d777e files/gaim-0.77-c99.patch 4790
 MD5 a714a5babbb4387f5a5516f75548528a files/gaim-0.76cvs-yahoo-misc-fixes-1.diff 3105
 MD5 6590ac50c358f619973c6226219a5422 files/gaim-0.77-64bit_goodness.patch 4544
