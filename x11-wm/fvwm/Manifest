@@ -2,7 +2,7 @@ MD5 b83bf23f1c96084b79765739613430ac fvwm-2.5.7-r5.ebuild 8757
 MD5 09e8019bdca099708433ceed768ce83c fvwm-2.5.8-r6.ebuild 10698
 MD5 eb0454ca95d112ea66cb0e1602c7858f fvwm-2.5.10-r2.ebuild 9106
 MD5 eab7687e1b4ebb2b542f00c7aebceffe fvwm-2.5.10-r1.ebuild 9117
-MD5 a0e30b3bb70440fe8f51cbbb8e14e4dd ChangeLog 13063
+MD5 1b180a389e4b61e1bdbda705ee137e8d ChangeLog 13088
 MD5 4833e4d0685ef48988c0c5c4f9c6b377 metadata.xml 527
 MD5 2ba208645b273487941ef1de52759ae8 fvwm-2.4.18.ebuild 3171
 MD5 e2ceb5d855c5406a09d82442196efad8 files/README.transluceny.gz 5788
