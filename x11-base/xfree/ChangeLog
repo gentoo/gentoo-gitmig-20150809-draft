@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.220 2003/10/18 21:47:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.221 2003/10/19 03:34:02 spyderous Exp $
+
+  18 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
+  New PATCH_VER 2.1.19. Pulling 9132_all_4.3.0-Mesa-SSE-fixes-from-MesaCVS.patch
+  because it broken OpenGL on 2.6 kernels, at least until a 2.6-compatible patch
+  can be made. This closes bug #30541.
 
   18 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
   New PATCH_VER 2.1.18. Reverting stable branch update patch to 10-06 until ipv6
