@@ -16,4 +16,5 @@ Where xx can be one of the following:
 Name				Purpose
 ----				------
 
-00_ssl_engine_patch		Better error message for child crashing in SSL.
+00_ssl_engine.patch		Better error message for child crashing in SSL.
+00_ssl_verify_client.patch	Fixes 12355 from apache bugzilla.
