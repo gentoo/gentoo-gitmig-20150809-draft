@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.0.4.ebuild,v 1.1 2002/11/23 00:13:42 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.0.4.ebuild,v 1.2 2002/11/23 00:36:38 foser Exp $
 
 inherit libtool gnome2
 
@@ -26,7 +26,19 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 	doc? ( dev-util/gtk-doc )
 	${RDEPEND}"
 
-G2CONF="${G2CONF} --enable-panelmenu=yes"		
+#G2CONF="${G2CONF} --enable-panelmenu=yes"		
+
+src_compile() {
+        elibtoolize
+        ./configure --host=${CHOST} \
+                --prefix=/usr \
+                --sysconfdir=/etc \
+                --infodir=/usr/share/info \
+                --mandir=/usr/share/man \
+                --disable-install-schemas \
+                --enable-panelmenu=yes || die
+        make || die
+}
 
 src_install() {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
