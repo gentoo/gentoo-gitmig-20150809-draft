@@ -1,0 +1,19 @@
+--- libgphoto2-2.1.1/configure	2002-12-01 21:46:42.000000000 +0000
++++ libgphoto2-2.1.1/configure	2003-05-11 02:11:38.000000000 +0100
+@@ -13865,14 +13865,10 @@
+ # packages we're going to build will depend on libusb and libusb-devel
+ # RPM packages or not.
+ 
+-
+-if rpm -q libusb-devel > /dev/null 2>&1; then
+-  RPM_LIBUSB_DEVEL_TRUE=
+-  RPM_LIBUSB_DEVEL_FALSE='#'
+-else
++# don't let rpm -q run or else it'll break sandbox.
+   RPM_LIBUSB_DEVEL_TRUE='#'
+   RPM_LIBUSB_DEVEL_FALSE=
+-fi
++
+ 
+ 
+ 	# effective_target has to be determined in advance
