@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.34 2005/01/31 18:47:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.35 2005/01/31 19:19:36 gustavoz Exp $
+
+  31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> asterisk-1.0.5.ebuild:
+  Keyworded ~sparc
 
   31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   asterisk-1.0.3-r1.ebuild, asterisk-1.0.3.ebuild:
