@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/gammu-0.94.4.ebuild,v 1.3 2004/06/24 22:26:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/gammu-0.94.4.ebuild,v 1.4 2004/07/09 22:02:43 lv Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 S=$WORKDIR/${P}
 
-RDEPEND="irda? ( sys-kernel/linux-headers )
+RDEPEND="irda? ( virtual/os-headers )
 	mysql? ( dev-db/mysql )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	bluetooth? ( net-wireless/bluez-libs )"

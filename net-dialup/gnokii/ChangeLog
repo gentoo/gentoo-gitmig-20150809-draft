@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/gnokii
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.13 2004/06/24 22:27:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.14 2004/07/09 22:04:13 lv Exp $
+
+  09 Jul 2004; Travis Tilley <lv@gentoo.org> gnokii-0.5.10.ebuild,
+  gnokii-0.6.0.ebuild:
+  switch linux-headers dependency to virtual/os-headers
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gnokii-0.5.10.ebuild,
   gnokii-0.6.0.ebuild:

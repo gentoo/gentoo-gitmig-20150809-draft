@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.6.0.ebuild,v 1.4 2004/06/24 22:27:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.6.0.ebuild,v 1.5 2004/07/09 22:04:13 lv Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~amd64"
 
 RDEPEND="X? ( =x11-libs/gtk+-1.2* )
 	bluetooth? ( net-wireless/bluez-libs )
-	irda? (	sys-kernel/linux-headers )"
+	irda? (	virtual/os-headers )"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
