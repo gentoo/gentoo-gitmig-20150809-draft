@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.384 2005/02/26 12:40:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.385 2005/03/07 11:13:02 eradicator Exp $
+
+*gcc-4.0.0_beta20050305 (07 Mar 2005)
+
+  07 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +gcc-4.0.0_beta20050305.ebuild:
+  Version bump of gcc-4 for bleeding edge masochists.
 
 *gcc-4.0.0_alpha20050213 (17 Feb 2005)
 
