@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/fmod
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.1 2003/03/04 16:54:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.2 2003/04/07 14:35:45 livewire Exp $
+
+*fmod-3.62 (07 April 2003)
+
+  07 April 2003; Bob Johnson <livewire@gentoo.org>
+	old version missing from www.fmod.org, bumped version.
 
 *fmod-3.61 (03 Mar 2003)
 
