@@ -1,7 +1,14 @@
 # ChangeLog for app-editors/nano
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.5 2002/07/16 02:07:22 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.6 2002/09/25 23:41:47 vapier Exp $
 
+*nano-1.0.9 (25 Sep 2002)
+
+  25 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  bumped version
+
+*nano-1.0.8-r1 (12 Mar 2002)
+	
   15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
 
   Added KEYWORDS.
@@ -16,8 +23,6 @@
 	"nano" now.  Thanks to chrisa@asty.org (Chris Allegretta) in bug
 	# 1565
 
-*nano-1.0.8-r1 (12 Mar 2002)
-	
 	12 Mar 2002; Seemant Kulleen <seemant@gentoo.org>
 
 	Add USE-conditional nls compilation
