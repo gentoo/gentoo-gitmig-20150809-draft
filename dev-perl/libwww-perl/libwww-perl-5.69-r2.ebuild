@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.69-r2.ebuild,v 1.9 2004/10/16 23:57:25 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.69-r2.ebuild,v 1.10 2005/01/04 14:43:15 mcummings Exp $
 
 inherit perl-module eutils
 
 DESCRIPTION="A collection of Perl Modules for the WWW"
-SRC_URI="http://cpan.org/modules/by-module/WWW/${P}.tar.gz"
-HOMEPAGE="http://cpan.org/modules/by-module/WWW/${P}.readme"
+SRC_URI="mirror://cpan/authors/id/G/GA/GAAS/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~gaas/${P}/"
 IUSE="ssl"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"

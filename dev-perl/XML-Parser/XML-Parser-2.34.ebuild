@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/XML-Parser-2.34.ebuild,v 1.11 2004/06/29 02:26:22 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/XML-Parser-2.34.ebuild,v 1.12 2005/01/04 14:20:48 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="A Perl extension interface to James Clark's XML parser, expat"
-HOMEPAGE="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${P}.readme"
-SRC_URI="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/M/MS/MSERGEANT/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~msergeant/${P}/"
 
 LICENSE="Artistic"
 SLOT="0"

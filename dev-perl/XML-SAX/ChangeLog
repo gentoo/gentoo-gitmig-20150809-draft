@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-SAX
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.18 2004/08/03 04:10:29 rac Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.19 2005/01/04 14:21:56 mcummings Exp $
+
+  04 Jan 2005; Michael Cummings <mcummings@gentoo.org> XML-SAX-0.12.ebuild:
+  bug 76590
 
   02 Aug 2004; Robert Coie <rac@gentoo.org> XML-SAX-0.12.ebuild:
   get perl out of global scope

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-Writer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.24 2005/01/02 22:58:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.25 2005/01/04 14:31:47 mcummings Exp $
+
+  04 Jan 2005; Michael Cummings <mcummings@gentoo.org>
+  XML-Writer-0.4-r2.ebuild, XML-Writer-0.4.1.ebuild,
+  XML-Writer-0.500.ebuild, XML-Writer-0.510.ebuild:
+  bug 76590
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

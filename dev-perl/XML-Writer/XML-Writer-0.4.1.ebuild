@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/XML-Writer-0.4.1.ebuild,v 1.7 2005/01/02 22:58:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/XML-Writer-0.4.1.ebuild,v 1.8 2005/01/04 14:31:47 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="XML Writer Perl Module"
-HOMEPAGE="http://search.cpan.org/~edavis/XML-Writer-0.4.1/"
-SRC_URI="http://search.cpan.org/CPAN/authors/id/E/ED/EDAVIS/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/E/ED/EDAVIS/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~edavis/${P}/"
 IUSE=""
 LICENSE="Artistic"
 SLOT="0"

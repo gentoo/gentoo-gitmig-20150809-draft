@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Unicode-String
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-String/ChangeLog,v 1.15 2004/12/30 00:50:15 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-String/ChangeLog,v 1.16 2005/01/04 14:03:58 mcummings Exp $
+
+  04 Jan 2005; Michael Cummings <mcummings@gentoo.org>
+  Unicode-String-2.06-r1.ebuild, Unicode-String-2.06-r2.ebuild,
+  Unicode-String-2.07.ebuild:
+  bug 76590
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

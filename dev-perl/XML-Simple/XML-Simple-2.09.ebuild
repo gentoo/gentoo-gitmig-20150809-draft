@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/XML-Simple-2.09.ebuild,v 1.7 2004/10/16 23:57:24 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/XML-Simple-2.09.ebuild,v 1.8 2005/01/04 14:26:26 mcummings Exp $
 
 inherit perl-module
 

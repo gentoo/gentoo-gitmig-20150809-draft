@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/XML-SAX-0.12.ebuild,v 1.9 2004/08/03 04:10:29 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/XML-SAX-0.12.ebuild,v 1.10 2005/01/04 14:21:56 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Perl module for using and building Perl SAX2 XML parsers, filters, and drivers"
-SRC_URI="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${P}.tar.gz"
-HOMEPAGE="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${P}.readme"
+SRC_URI="mirror://cpan/authors/id/M/MS/MSERGEANT/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~msergeant/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"

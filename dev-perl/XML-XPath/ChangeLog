@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-XPath
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/ChangeLog,v 1.16 2005/01/02 23:00:49 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/ChangeLog,v 1.17 2005/01/04 14:33:53 mcummings Exp $
+
+  04 Jan 2005; Michael Cummings <mcummings@gentoo.org>
+  XML-XPath-1.12-r1.ebuild, XML-XPath-1.12.ebuild, XML-XPath-1.13.ebuild:
+  bug 76590
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
