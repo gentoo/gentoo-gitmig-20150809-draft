@@ -1,36 +1,40 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.23 2004/07/15 02:52:20 agriffis Exp $
-
-S="${WORKDIR}"
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.24 2004/10/26 14:23:13 vapier Exp $
 
 # This is somewhat old tool, has not been changed since 1999,
 # Still looks like host from bind does not provide all possible functionality
 # at least xtraceroute wants LOC support, which is provided by this tool.
-DESCRIPTION="the standalone host tool, supports LOC reporting (RFC1876)"
+
 # This is the homepage for xtraceroute, not host, but that's best I can do -
 # at least it is mentioned there.
+
+inherit toolchain-funcs
+
+DESCRIPTION="the standalone host tool, supports LOC reporting (RFC1876)"
 HOMEPAGE="http://www.dtek.chalmers.se/~d3august/xt/"
 SRC_URI="ftp://ftp.ripe.net/tools/dns/${PN}.tar.Z"
 
-KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ppc64"
-IUSE=""
 LICENSE="as-is"
 SLOT="0"
+KEYWORDS="alpha amd64 hppa mips ppc ppc64 sparc x86"
+IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
+
+S="${WORKDIR}"
 
 src_unpack() {
 	cd ${S}
 	unpack ${A}
 
-	sed -i -e "s:staff:root:" Makefile || \
-		die "sed Makefile failed"
+	sed -i -e "s:staff:root:" Makefile \
+		|| die "sed Makefile failed"
 }
 
 src_compile() {
-	emake CC="${CC}" COPTS="${CFLAGS}" || \
-		die "emake failed"
+	emake CC="$(tc-getCC)" COPTS="${CFLAGS}" \
+		|| die "emake failed"
 	# ATTN!
 	# This util has slightly different format of output from "standard" host
 	# rename it to hostx, hopefully this does not conflict with anything.
@@ -40,7 +44,7 @@ src_compile() {
 
 src_install () {
 	cd ${WORKDIR}
-	dobin hostx   || die "dobin failed"
-	doman hostx.1 || die "doman failed"
-	dodoc RE*     || die "dodoc failed"
+	dobin hostx || die "dobin failed"
+	doman hostx.1
+	dodoc RE*
 }
