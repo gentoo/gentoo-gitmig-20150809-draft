@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.00.3.ebuild,v 1.14 2004/05/10 04:13:12 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.00.3.ebuild,v 1.15 2004/05/13 20:40:25 randy Exp $
 
 inherit rpm eutils
 
@@ -13,7 +13,7 @@ ftp://ftp.redhat.com/pub/redhat/linux/8.0/en/os/i386/SRPMS/${MYP}.src.rpm"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc hppa amd64 alpha sparc ia64 mips ppc64"
+KEYWORDS="x86 ppc hppa amd64 alpha sparc ia64 mips ppc64 s390"
 
 RDEPEND="virtual/glibc"
 

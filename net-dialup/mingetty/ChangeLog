@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mingetty
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.15 2004/05/10 04:13:12 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.16 2004/05/13 20:40:25 randy Exp $
+
+  13 May 2004; Michael McCabe <randy@gentoo.org> mingetty-1.00.3.ebuild:
+  Added s390 keywords
 
   09 May 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
   mingetty-1.00.3.ebuild:
