@@ -1,8 +1,17 @@
 # ChangeLog for app-emacs/ddskk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.5 2003/08/03 18:06:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.6 2003/08/16 20:58:02 usata Exp $
+
+*ddskk-20030810 (17 Aug 2003)
+
+  17 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> ddskk-20030810.ebuild:
+  New snapshot
 
 *ddskk-12.2.0 (04 Aug 2003)
+
+  17 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> ddskk-12.2.0.ebuild,
+  files/50ddskk-gentoo.el:
+  Changed DEPEND to >=app-emacs/apel-10.6.  Marked as stable
 
   04 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> ddskk-12.2.0.ebuild,
   ddskk-12.2.0_rc3.ebuild:
@@ -22,6 +31,11 @@
   Defaults to call skkserv instead of using skk-jisyo directly.
 
 *ddskk-20020901 (31 Oct 2002)
+
+  17 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> ddskk-20020901.ebuild,
+  files/50ddskkserv-gentoo.el, files/ddskk-gentoo.patch:
+  Removed for security reason, see
+  http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0539 for detail
 
   31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   ddskk-20020901.ebuild, files/50ddskk-gentoo.el, files/ddskk-gentoo.patch,
