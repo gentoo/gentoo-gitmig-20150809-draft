@@ -1,8 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.1-r10.ebuild,v 1.2 2002/12/09 04:37:27 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.1-r10.ebuild,v 1.3 2002/12/14 21:37:46 azarah Exp $
 
 IUSE=""
+
+inherit eutils
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A shared library tool for developers"
@@ -11,7 +13,7 @@ HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="virtual/glibc"
 
@@ -29,19 +31,19 @@ src_unpack() {
 	#
 
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${PV}/${P}-nonneg.patch || die
-	patch -p0 < ${FILESDIR}/${PV}/${P}-relink.patch || die
+	epatch ${FILESDIR}/${PV}/${P}-nonneg.patch
+	epatch ${FILESDIR}/${PV}/${P}-relink.patch
 	# Fixes quoting for test's .. *VERY* important!
-	patch -p0 < ${FILESDIR}/${PV}/${P}-test.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}-duplicate-dependency.patch || die
+	epatch ${FILESDIR}/${PV}/${P}-test.patch
+	epatch ${FILESDIR}/${PV}/${P}-duplicate-dependency.patch
 	# This breaks dependancies it seems
 	# <azarah@gentoo.org> (20 Oct 2002)
-	#patch -p0 < ${FILESDIR}/${PV}/${P}-ltmain.sh-hack.patch || die
+	#epatch ${FILESDIR}/${PV}/${P}-ltmain.sh-hack.patch
 	# Do not create bogus entries in $dependency_libs or $libdir
 	# with ${D} or ${S} in them.
 	#
 	# Azarah - 07 April 2002
-	patch -p0 < ${FILESDIR}/${PV}/${P}-portage.patch-v6 || die
+	epatch ${FILESDIR}/${PV}/${P}-portage.patch-v6
 }
 
 src_compile() {

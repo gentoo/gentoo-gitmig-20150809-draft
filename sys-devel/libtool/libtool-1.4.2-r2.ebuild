@@ -1,8 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.2-r2.ebuild,v 1.2 2002/12/09 04:37:27 manson Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.2-r2.ebuild,v 1.3 2002/12/14 21:37:46 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
 
 IUSE=""
+
+inherit eutils
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A shared library tool for developers"
@@ -11,7 +13,7 @@ HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/glibc"
 
@@ -34,23 +36,23 @@ src_unpack() {
 	#      added to upate libtool
 	#
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${PV}/${PN}-1.3.5-mktemp.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${PN}-1.4-nonneg.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}-test.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}-relink.patch || die
-	patch -p0 < ${FILESDIR}/${PV}/${P}-add-x11r6-lib-in-ignores-for-rpath.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}-duplicate-dependency.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}-fix-linkage-of-cxx-code-with-gcc.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}-lib64.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}-archive-shared.patch || die
+	epatch ${FILESDIR}/${PV}/${PN}-1.3.5-mktemp.patch
+	epatch ${FILESDIR}/${PV}/${PN}-1.4-nonneg.patch
+	epatch ${FILESDIR}/${PV}/${P}-test.patch
+	epatch ${FILESDIR}/${PV}/${P}-relink.patch
+	epatch ${FILESDIR}/${PV}/${P}-add-x11r6-lib-in-ignores-for-rpath.patch
+	epatch ${FILESDIR}/${PV}/${P}-duplicate-dependency.patch
+	epatch ${FILESDIR}/${PV}/${P}-fix-linkage-of-cxx-code-with-gcc.patch
+	epatch ${FILESDIR}/${PV}/${P}-lib64.patch
+	epatch ${FILESDIR}/${PV}/${P}-archive-shared.patch
 	# This breaks dependancies it seems
 	# <azarah@gentoo.org> (20 Oct 2002)
-    #patch -p0 <${FILESDIR}/${PV}/${PN}-1.4.1-ltmain.sh-hack.patch || die
+    #epatch ${FILESDIR}/${PV}/${PN}-1.4.1-ltmain.sh-hack.patch
     # Do not create bogus entries in $dependency_libs or $libdir
     # with ${D} or ${S} in them.
     #
     # Azarah - 07 April 2002
-    patch -p0 < ${FILESDIR}/${PV}/${P}-portage.patch || die
+    epatch ${FILESDIR}/${PV}/${P}-portage.patch
 }
 
 src_compile() {
