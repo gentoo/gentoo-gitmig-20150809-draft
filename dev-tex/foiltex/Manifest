@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 37733ffa8ea1237053d9dac19b723928 ChangeLog 837
+MD5 efc561899455c06bee94c045932adb19 ChangeLog 927
 MD5 20e65723f478e1adf4ba06f7fe67a8ea foiltex-2.1.3.ebuild 704
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 2990ff787793101b3d1082cf2b8c1de5 foiltex-2.1.4a.ebuild 827
+MD5 5895bbdc01bc18c4e21e99607ac39b4d foiltex-2.1.4a.ebuild 826
 MD5 b2b51e6ef051a60bcd39c79a3770677b files/digest-foiltex-2.1.3 58
 MD5 2aba0b0c620c787b84a6f48d15422038 files/digest-foiltex-2.1.4a 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBaFORVWNWqTUmv+0RAtPdAKCInQqjj4CQmcEBaDOyo+TTeVcMQQCfa2sj
-+KfYgMkSVefH9UUJEv/j5oQ=
-=2qKg
------END PGP SIGNATURE-----

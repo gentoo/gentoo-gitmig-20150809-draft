@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 5724d0aad956108ade6be7686b2c3c01 ChangeLog 1569
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 2c12a64fad710a773ecbbb42c9e84cb4 prosper-1.00.4-r1.ebuild 1258
 MD5 3d583b0b09ba3e12d2303c522730aa26 prosper-1.5-r1.ebuild 1168
-MD5 ff103bc6e4519868e044a11f4c20a591 ChangeLog 1501
 MD5 dfc63983bdd3ff3145cfca039e08b78f files/digest-prosper-1.00.4-r1 138
 MD5 c525ef91a71f907277345e1a3017e6c0 files/digest-prosper-1.5-r1 135
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
-
-iD8DBQFBeh0BVWNWqTUmv+0RAh7+AKCKbPODQLTnTxRd2gl+jk1dC47egACfcFGY
-2GQpl0DM0WtOoQg+8jKWfL4=
-=Ochk
------END PGP SIGNATURE-----
