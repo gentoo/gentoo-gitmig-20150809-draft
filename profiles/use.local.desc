@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.655 2004/09/28 17:56:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.656 2004/09/29 23:40:44 wolf31o2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -248,7 +248,10 @@ games-server/halflife-statsme:nocstrike - no counterstrike
 games-server/halflife-statsme:nodod - no day of defeat
 games-server/halflife-statsme:notfc - no team fortress classic
 games-simulation/openttd:timidity - Add sound support (timidity)
-games-strategy/freecraft-fcmp:music - Also installs the music that the project provides
+games-strategy/freecraft-fcmp:music - Installs optional music data
+games-strategy/heroes3:maps - Installs optional map data
+games-strategy/heroes3:music - Installs optional music data
+games-strategy/heroes3:sounds - Installs optional sound data
 games-strategy/wesnoth:editor - Enable compilation editor
 games-strategy/wesnoth:nomusic - Lite install
 games-strategy/wesnoth:server - Enable compilation of server
