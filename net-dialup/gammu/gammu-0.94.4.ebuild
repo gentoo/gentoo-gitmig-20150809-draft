@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/gammu-0.94.4.ebuild,v 1.1 2004/04/12 11:18:49 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/gammu-0.94.4.ebuild,v 1.2 2004/04/13 08:57:27 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.mwiacek.com/gsm/gammu/gammu.html"
 IUSE="nls bluetooth irda mysql"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 S=$WORKDIR/${P}
 
 RDEPEND="irda? ( sys-kernel/linux-headers )
