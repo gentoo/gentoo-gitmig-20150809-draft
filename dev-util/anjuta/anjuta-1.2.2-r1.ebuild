@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.2-r1.ebuild,v 1.1 2004/07/03 14:07:16 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.2-r1.ebuild,v 1.2 2004/08/21 16:05:46 foser Exp $
 
 inherit eutils gnome2
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 ~ppc sparc ~amd64"
 
 RDEPEND=">=dev-libs/glib-2.0.6
 	>=x11-libs/gtk+-2.0.8
-	>=gnome-base/ORBit2-2.4
+	>=gnome-base/orbit-2.4
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnome-2.0.2
 	>=gnome-base/libgnomeui-2.0.2
