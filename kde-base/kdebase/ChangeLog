@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.17 2002/07/03 07:57:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.18 2002/07/26 15:38:36 danarmak Exp $
+
+  27 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix bug #3594: remove optimization flag -fomit-frame-pointer from the
+  kdm/kfrontend subdirectory's makefiles.
 
 *kdebase-3.0.2 (03 Jul 2002)
 

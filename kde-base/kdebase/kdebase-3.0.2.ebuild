@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.2.ebuild,v 1.8 2002/07/25 17:53:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.2.ebuild,v 1.9 2002/07/26 15:38:37 danarmak Exp $
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - base packages: the desktop, panel, window manager, konqueror..."
@@ -33,6 +33,14 @@ use pam		&& myconf="$myconf --with-pam=yes"	|| myconf="$myconf --with-pam=no --w
 
 # fix for verwilst's gcc 3.1 & antialiasing problem
 PATCHES="$FILESDIR/${P}-fonts.cpp.patch"
+
+src_compile() {
+
+    kde_src_compile myconf configure
+    kde_remove_flag kdm/kfrontend -fomit-frame-pointer
+    kde_src_compile make
+
+}
 
 src_install() {
 
