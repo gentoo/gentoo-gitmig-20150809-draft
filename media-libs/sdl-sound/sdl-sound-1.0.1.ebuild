@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1.ebuild,v 1.1 2003/10/14 08:01:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1.ebuild,v 1.2 2003/10/15 04:36:25 mr_bones_ Exp $
 
 MY_P="${P/sdl-/SDL_}"
 S=${WORKDIR}/${MY_P}
@@ -20,7 +20,22 @@ DEPEND=">=media-libs/libsdl-1.2
 
 IUSE="flac mikmod oggvorbis"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/gcc331.patch
+	rm aclocal.m4
+}
+
 src_compile() {
+	# the patch above plus this overkill ripped off the bootstrap scipt from
+	# the sdl_sound CVS to address bug 31163 until the next release.
+	aclocal
+	libtoolize --automake --copy --force
+	autoheader
+	automake --foreign --add-missing --copy
+	autoconf
+
 	econf \
 		`use_enable flac` \
 		`use_enable mikmod` \

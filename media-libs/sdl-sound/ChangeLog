@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-sound
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.10 2003/10/14 08:01:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.11 2003/10/15 04:36:25 mr_bones_ Exp $
+
+  14 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> sdl-sound-1.0.1.ebuild,
+  files/gcc331.patch:
+  add patch to fix up the problems gcc 3.3.1 has with the configure script.
+  This is to address bug 31163.
 
 *sdl-sound-1.0.1 (14 Oct 2003)
 
