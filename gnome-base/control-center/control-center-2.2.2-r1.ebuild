@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.2.2-r1.ebuild,v 1.3 2003/07/19 23:22:43 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.2.2-r1.ebuild,v 1.4 2003/08/31 01:59:23 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0" 
 
 DOCS="AUTHORS ChangeLog COPYING README TODO INSTALL NEWS"
+G2CONF="${G2CONF} --disable-schemas-install"
 
 src_unpack() {
 	unpack ${A}
