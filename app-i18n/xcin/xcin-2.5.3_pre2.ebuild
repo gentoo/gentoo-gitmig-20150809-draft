@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre2.ebuild,v 1.6 2003/11/04 00:27:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre2.ebuild,v 1.7 2003/11/04 00:32:59 liquidx Exp $
 
 XCIN="${P/_/.}.tar.gz"
 CHEWING="chewing-2002Jan07-snapshot.tar.gz"
@@ -53,7 +53,7 @@ src_install() {
 	dodir /etc
 	insinto /etc
 	newins ${FILESDIR}/gentoo-xcinrc xcinrc
-	
+
 	dodoc doc/*
 	for docdir in doc/En doc/En/internal doc/history doc/internal doc/modules; do
 		docinto ${docdir#doc/}
