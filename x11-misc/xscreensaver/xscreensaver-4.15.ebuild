@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.15.ebuild,v 1.12 2005/01/25 22:56:45 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.15.ebuild,v 1.13 2005/01/27 10:57:15 greg_g Exp $
 
 inherit eutils
 
@@ -142,6 +142,8 @@ src_compile() {
 }
 
 src_install() {
+	[ -n "${KDEDIR}" ] && dodir ${KDEDIR}/bin
+
 	make install_prefix="${D}" install || die
 
 	# install correctly in gnome2
