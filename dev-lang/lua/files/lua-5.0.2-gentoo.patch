@@ -1,0 +1,14 @@
+diff -Naur lua-5.0.2/Makefile lua/Makefile
+--- lua-5.0.2/Makefile	2004-03-12 02:50:55.000000000 +0100
++++ lua/Makefile	2004-08-06 09:50:10.446767504 +0200
+@@ -38,8 +38,8 @@
+ 
+ # shared libraries (for Linux)
+ so:
+-	ld -o lib/liblua.so.$V -shared src/*.o
+-	ld -o lib/liblualib.so.$V -shared src/lib/*.o
++	$(CC) -o lib/liblua.so.$V -shared src/*.o
++	$(CC) -o lib/liblualib.so.$V -shared src/lib/*.o $(EXTRA_LIBS)
+ 	cd lib; ln -fs liblua.so.$V liblua.so; ln -fs liblualib.so.$V liblualib.so
+ 
+ # binaries using shared libraries
