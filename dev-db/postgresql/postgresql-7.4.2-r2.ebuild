@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r2.ebuild,v 1.5 2004/05/25 15:57:26 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r2.ebuild,v 1.6 2004/05/25 18:00:14 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -102,7 +102,7 @@ src_compile() {
 	use tcltk && myconf="--with-tcl"
 	use python && myconf="$myconf --with-python"
 	use perl && myconf="$myconf --with-perl"
-	use jave && myconf="$myconf --with-java"
+	use java && myconf="$myconf --with-java"
 	use ssl && myconf="$myconf --with-openssl"
 	use nls && myconf="$myconf --enable-nls"
 	use libg++ && myconf="$myconf --with-CXX"
@@ -158,8 +158,12 @@ src_install() {
 	exeinto /usr/bin
 
 	if [ "`use java`" ]; then
+		# we need to remove jar file after dojar; otherwise two same jar
+		# file are installed.
 		dojar ${D}/usr/share/postgresql/java/postgresql.jar || die
-#		rm ${D}/usr/share/postgresql/java/postgresql.jar
+		rm ${D}/usr/share/postgresql/java/postgresql.jar
+		dojar ${D}/usr/share/postgresql/java/postgresql-examples.jar || die
+		rm ${D}/usr/share/postgresql/java/postgresql-examples.jar
 	fi
 
 	dodir /usr/include/postgresql/pgsql
