@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.35 2003/03/06 16:58:46 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.36 2003/03/10 14:17:38 mcummings Exp $
 
 *imagemagick-5.5.4.4 (12 Feb 2003)
 
@@ -13,6 +13,9 @@
   Version bump to latest.  Added other arches to testing in all ebuilds.
 
 *imagemagick-5.5.3.2 (03 Jan 2003)
+
+  10 Mar 2003; mcummings <mcummings@gentoo.org> imagemagick-5.5.3.2.ebuild
+  Unmarked stable. The deps for this ebuild are not satisfied on all platforms.
 
   06 Mar5 2003; phoen][x <phoenix@gentoo.org> imagemagick-5.5.3.2.ebuild
   Marked stable. dvdrip-0.50.4 depends on version 5.5.3* of imagemagick.
