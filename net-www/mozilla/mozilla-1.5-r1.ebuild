@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5-r1.ebuild,v 1.3 2003/11/18 23:19:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5-r1.ebuild,v 1.4 2003/11/20 15:58:05 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -22,9 +22,9 @@ append-flags -s -fforce-addr
 case "${ARCH}" in
 	alpha|ia64)
 		# Anything more than this causes segfaults on startup on 64-bit
-		# (but 33767)
-		export CFLAGS="${CFLAGS//-O?/-O} -Wall -fPIC -pipe"
-		export CXXFLAGS="${CXXFLAGS//-O?/-O} -Wall -fPIC -pipe"
+		# (bug 33767)
+		export CFLAGS="${CFLAGS//-O[1-9s]/-O} -Wall -fPIC -pipe"
+		export CXXFLAGS="${CXXFLAGS//-O[1-9s]/-O} -Wall -fPIC -pipe"
 		;;
 	amd64)
 		# Anything more than this causes segfaults on startup on amd64
