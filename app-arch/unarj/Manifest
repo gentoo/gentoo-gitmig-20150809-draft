@@ -3,15 +3,15 @@ Hash: SHA1
 
 MD5 985dff4f534f6b6b2a1e3ce324c72523 ChangeLog 1958
 MD5 416739c466fcd11a64bf83b0b905c486 unarj-2.63a-r1.ebuild 658
-MD5 cc04383a2797dac9d32af235cffe5236 unarj-2.63a-r2.ebuild 780
-MD5 ff29e175029520a55c6bbe96c614370b files/unarj-2.65-sanitation.patch 3040
+MD5 075a36c3ee65960f60bc7dc01311525d unarj-2.63a-r2.ebuild 779
 MD5 0fec2e24cfc04ee5279a349ea7ebc34b files/digest-unarj-2.63a-r1 62
 MD5 0fec2e24cfc04ee5279a349ea7ebc34b files/digest-unarj-2.63a-r2 62
 MD5 c690458b8e0e69d0988b7359b4c4efa7 files/unarj-2.65-CAN-2004-0947.patch 1523
+MD5 ff29e175029520a55c6bbe96c614370b files/unarj-2.65-sanitation.patch 3040
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBnL7uwDHaUUJ0mYMRAmNjAJ0T8Qn7NUwFI9Y8D0NDIyNBCUahpwCfewjz
-NZ2+w/JRY6xybUtlnzNphPw=
-=L/y9
+iD8DBQFBsADeroRuSHgZdywRAhH2AJ9TuN7+Wa46n2/jymZnJ1soxVA7VQCghtAK
+mneMELeVxVT3OqCv5poXWtY=
+=8C9Q
 -----END PGP SIGNATURE-----
