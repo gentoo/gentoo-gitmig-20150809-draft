@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.39.ebuild,v 1.2 2002/08/14 12:12:28 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.39.ebuild,v 1.3 2002/09/17 00:45:39 mcummings Exp $
 
 inherit perl-module
 
@@ -40,7 +40,7 @@ src_compile() {
 	econf \
 		--datadir=/usr/share \
 		--enable-shared \
-		--with-perl-options='INSTALLMAN1DIR=/usr/share/man/man1 INSTALLMAN3DIR=/usr/share/man/man3' \
+		--with-perl-options='INSTALLMAN1DIR=/usr/share/man/man1 INSTALLMAN3DIR=/usr/share/man/man3  PREFIX=${D}/usr' \
 		${myconf} || die
 
 
