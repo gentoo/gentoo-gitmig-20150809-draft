@@ -2,7 +2,10 @@ MD5 caaa87644f5addf0e94270cf72eb8654 ChangeLog 13777
 MD5 77e35532e87129864b834ee208641f6a icewm-1.2.16-r1.ebuild 2433
 MD5 1ea6984aaeba0e9dc3f962d7ba686f5a icewm-1.2.17.ebuild 2153
 MD5 a26b94d92c1e03083b7020e2f4c1afe9 metadata.xml 630
+MD5 1ea6984aaeba0e9dc3f962d7ba686f5a icewm-1.2.19.ebuild 2153
 MD5 9028fc0d1b794c88e4a2db9cf28f66f0 files/IceWM.desktop 200
 MD5 a15c477442ec11a68f6c5e1932e72d42 files/digest-icewm-1.2.16-r1 141
 MD5 fd57fef0e5a817b5a5ea6ffed65a3e5d files/digest-icewm-1.2.17 64
 MD5 0adfec296f9e1a9eb08a326c0690c28e files/icewm-1.2.17.ybutton.cc.patch 591
+MD5 0adfec296f9e1a9eb08a326c0690c28e files/icewm-1.2.19.ybutton.cc.patch 591
+MD5 c57345927d676af33427279528157a2e files/digest-icewm-1.2.19 64
