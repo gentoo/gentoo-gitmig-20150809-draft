@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.10.2.ebuild,v 1.2 2003/11/15 15:43:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.10.2.ebuild,v 1.3 2003/11/17 22:10:37 dholm Exp $
 
 inherit kde
 need-kde 3.1
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/k3b/${P}.tar.gz"
 RESTRICT="nomirror"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="debug dvd oggvorbis mad dvdr"
 
 newdepend ">=sys-apps/portage-2.0.49-r8
