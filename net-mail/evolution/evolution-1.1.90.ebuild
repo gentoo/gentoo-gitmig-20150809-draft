@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.1.90.ebuild,v 1.1 2002/11/09 12:58:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.1.90.ebuild,v 1.2 2002/11/10 13:10:35 azarah Exp $
 
-IUSE="ssl nls mozilla ldap doc spell pda"
+IUSE="ssl nls mozilla ldap doc spell pda ipv6"
 
 #provide Xmake and Xemake
 
@@ -37,10 +37,14 @@ RDEPEND="app-text/scrollkeeper
 	>=net-libs/soup-0.7.4-r1
 	doc?	 ( >=app-text/scrollkeeper-0.3.10-r1 )
 	ssl?     ( >=net-www/mozilla-0.9.9 )
+	ssl?     ( >=dev-libs/openssl-0.9.5 )
 	ldap?    ( >=net-nds/openldap-2.0 )
 	mozilla? ( >=net-www/mozilla-0.9.9 )
 	pda?     ( >=gnome-extra/gnome-pilot-0.1.61-r2 )
 	spell?   ( >=app-text/gnome-spell-0.4.1-r2 )"
+#	ssl?     ( mozilla? ( >=net-www/mozilla-0.9.9 ) )
+#	ssl?     ( !mozilla? ( >=dev-libs/openssl-0.9.5 ) )
+# This is how the deps should be, but portage cannot handle it
 
 # Added dependency on "dev-util/gob" this should fix a configure bug
 
@@ -53,12 +57,17 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	
+	cd ${S};
+	# Mandrake patches
+	patch -p1 < ${FILESDIR}/${P}-kde.patch || die
+	patch -p1 < ${FILESDIR}/${P}-scrollkeeper.patch || die
+	patch -p1 < ${FILESDIR}/${P}-subversion.patch || die
+	
 	# libtoolize to fix not all libs installing, and buggy .la files.
 	# also add the gnome-pilot.m4 to the macros directory to fix
 	# problems with the pilot conduct
-	cd ${S}
-	elibtoolize
-	xml-i18n-toolize --force
+	cd ${S}; cp -f ltmain.sh ${S}/libical/
+	elibtoolize --reverse-deps
 	aclocal -I macros -I /usr/share/aclocal/gnome-macros
 	autoconf
 	automake --add-missing
@@ -74,12 +83,26 @@ src_unpack() {
 
 src_compile() {
 
+	# *************************************************************
+	#
+	#   DB3 compile...
+	#
+	# *************************************************************
+
+	einfo "Compiling DB3..."
 	cd ${WORKDIR}/${DB3}/build_unix
 	../dist/configure --prefix=${WORKDIR}/db3 || die
 
 	make || die
 	make prefix=${WORKDIR}/db3 install || die
 
+	# *************************************************************
+	#
+	#   Evolution compile...
+	#
+	# *************************************************************
+
+	einfo "Compiling Evolution..."
 	cd ${S}
   
 	local myconf=""
@@ -97,30 +120,33 @@ src_compile() {
 		myconf="${myconf} --with-openldap=no"
 	fi
 
-	if [ -n "`use mozilla`" ] ; then
-		myconf="${myconf} --with-nspr-includes=${MOZILLA}/include/nspr \
-			        --with-nspr-libs=${MOZILLA}"
+	# Use Mozilla NSS libs if 'mozilla' *and* 'ssl' in USE
+	if [ -n "`use ssl`" -a -n "`use mozilla`" ] ; then
+		myconf="${myconf} --enable-nss=static \
+			--with-nspr-includes=${MOZILLA}/include/nspr \
+			--with-nspr-libs=${MOZILLA} \
+			--with-nss-includes=${MOZILLA}/include/nss \
+			--with-nss-libs=${MOZILLA}"
 	else
-		myconf="${myconf} --without-nspr-libs --without-nspr-includes"
+		myconf="${myconf} --without-nspr-libs --without-nspr-includes \
+			--without-nss-libs --without-nss-includes"
 	fi
 
-	if [ -n "`use ssl`" ] ; then
-		myconf="${myconf} --with-nss-includes=${MOZILLA}/include/nss   \
-				--with-nss-libs=${MOZILLA}"
-	else
-		myconf="${myconf} --without-nss-libs --without-nss-includes"
-	fi
-
-	# SSL needs NSPR libs  ...
+	# Else use OpenSSL if 'mozilla' not in USE  ...
 	if [ -n "`use ssl`" ] && [ -z "`use mozilla`" ] ; then
-		myconf="${myconf} --with-nspr-includes=${MOZILLA}/include/nspr \
-				--with-nspr-libs=${MOZILLA}"
+		myconf="${myconf} --enable-openssl=yes"
 	fi
 
 	if [ -n "`use doc`" ] ; then
 		myconf="${myconf} --enable-gtk-doc"
 	else
 		myconf="${myconf} --disable-gtk-doc"
+	fi
+
+	if [ -n "`use ipv6`" ] ; then
+		myconf="${myconf} --enable-ipv6=yes"
+	else
+		myconf="${myconf} --enable-ipv6=no"
 	fi
 
 	if [ -z "`use nls`" ] ; then
