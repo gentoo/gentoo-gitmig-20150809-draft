@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.28 2005/03/19 22:56:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.29 2005/03/19 22:57:39 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -58,7 +58,7 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 	fi
 fi
 if [[ ${CTARGET} == ${CHOST} ]] ; then
-	PROVIDE="virtual/glibc virtual/libc"
+	PROVIDE="virtual/libc"
 fi
 
 is_crosscompile() {
