@@ -99,7 +99,7 @@ app-admin/webconfig
 #(12/22/01 - drobbins)
 
 #untested/not approved stuff, please do not use
->=sys-apps/portage-1.8.9_pre1
+#>=sys-apps/portage-1.8.9_pre1
 >=sys-apps/portage-1.9_pre1
 
 #incomplete and very dangerous < Danarmak >
@@ -385,3 +385,6 @@ dev-lang/tcl-tk
 #tod@gentoo.org, 8 Feb 2002
 #buggy version, use 0.1.1 instead
 =dev-python/anygui-0.1
+
+#simply won't compile for us
+=dev-python/PyQt-3.0
