@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.8 2002/11/17 11:45:49 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.9 2002/11/19 15:04:09 phoenix Exp $
 
 *rep-gtk-0.17 (17 Nov 2002)
+
+  19 Nov 2002; phoen][x <phoenix@gentoo.org> rep-gtk-0.17 :
+  Put this ebuild into the stable profile.
 
   17 Nov 2002; phoen][x <phoenix@gentoo.org> rep-gtk-0.17,
   files/digest-rep-gtk-0.17 :
