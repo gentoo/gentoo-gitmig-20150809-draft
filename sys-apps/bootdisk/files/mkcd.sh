@@ -61,10 +61,11 @@ cd ${BOOTIMG}/initrd
 
 dodirs dev proc distcd etc root tmp var mnt
 cd mnt
-dodirs floppy gentoo ram
+dodirs floppy gentoo ram boot
 ln -sf /initrd/distcd .
-cd ..
 
+cd ..
+ln -sf mnt/boot boot
 echo "Creating /initrd devices"
 
 cd ${BOOTIMG}/initrd/dev
@@ -162,6 +163,8 @@ echo "Populating /usr/sbin"
 cd ${BOOTIMG}/usr/sbin
 
 doexes rc-update
+echo "Population /usr/lib"
+cp /usr/lib/joerc ${BOOTIMG}/usr/lib
 
 echo "Populating /usr/share"
 cd ${BOOTIMG}/usr/share
