@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/ChangeLog,v 1.1 2003/10/30 02:30:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/ChangeLog,v 1.2 2004/02/28 14:20:34 zypher Exp $
+
+*libtc-1.0.3 (23 Nov 2003)
+
+  28 Feb 2004; Marc Hildebrand <zypher@gentoo.org> libtc-1.0.3.ebuild:
+  Version bump
 
 *libtc-0.6.4 (29 Oct 2003)
 
