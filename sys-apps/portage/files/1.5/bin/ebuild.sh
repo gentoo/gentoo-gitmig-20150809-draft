@@ -235,32 +235,36 @@ dyn_fetch() {
 
 dyn_unpack() {
 	trap "abort_unpack" SIGINT SIGQUIT
-	local unpackwork="yes"
+	local newstuff="no"
 	if [ -e ${WORKDIR} ]
 	then
 		local x
-		for x in $A $EBUILD
+		for x in ${DISTDIR}/${A} ${EBUILD}
 		do
 			echo ">>> Checking ${x}'s mtime..."
-			if [ ${DISTDIR}/${x} -nt ${WORKDIR} ]
+			if [ ${x} -nt ${WORKDIR} ]
 			then
 				echo ">>> ${x} has been updated; recreating WORKDIR..."
+				newstuff="yes"
 				rm -rf ${WORKDIR}
 				break
 			fi
 		done
-		echo ">>> WORKDIR is up-to-date, not unpacking. (clean to force unpack)"
-		unpackwork="no"
 	fi
-	if [ "$unpackwork" = "yes" ]
+	if [ -e ${WORKDIR} ]
 	then
-		install -m0700 -d ${WORKDIR}
-		cd ${WORKDIR}
-		echo ">>> Unpacking source..."
-		src_unpack
-		echo ">>> Source unpacked."
-		cd ..
-    fi
+		if [ "$newstuff" = "no" ]
+		then
+			echo ">>> WORKDIR is up-to-date, keeping..."
+			return 0
+		fi
+	fi
+	install -m0700 -d ${WORKDIR}
+	cd ${WORKDIR}
+	echo ">>> Unpacking source..."
+	src_unpack
+	echo ">>> Source unpacked."
+	cd ..
     trap SIGINT SIGQUIT
 }
 
@@ -633,7 +637,7 @@ do
 	eval "myarg=\${${count}}"
 	case $myarg in
 	prerm|postrm|preinst|postinst|config)
-	    pkg_${myarg}
+		pkg_${myarg}
 	    ;;
 	unpack|compile|help|batchdigest|touch|clean|fetch|digest|pkginfo|pkgloc|unmerge|merge|package|install|rpm)
 	    dyn_${myarg}
@@ -650,9 +654,7 @@ do
 	esac
 	if [ $? -ne 0 ]
 	then
-        exit 1
+		exit 1
 	fi
 	count=$(( $count + 1))
 done
-
-

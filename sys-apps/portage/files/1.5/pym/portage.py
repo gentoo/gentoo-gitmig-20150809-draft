@@ -368,6 +368,7 @@ def doebuild(myebuild,mydo,checkdeps=1):
 	settings["PF"]=os.path.basename(settings["EBUILD"])[:-7]
 	mysplit=pkgsplit(settings["PF"],0)
 	if mysplit==None:
+		print "!!! Error: PF is null; exiting."
 		return 1
 	settings["P"]=mysplit[0]+"-"+mysplit[1]
 	settings["PN"]=mysplit[0]
@@ -1556,8 +1557,11 @@ class dblink:
 		mykeys.reverse()
 		
 		#do prerm script
-		doebuild(self.dbdir+"/"+self.pkg+".ebuild","prerm")
-		
+		a=doebuild(self.dbdir+"/"+self.pkg+".ebuild","prerm")
+		if a:
+			print "!!! pkg_prerm() script failed; exiting."
+			sys.exit(a)
+
 		for obj in mykeys:
 			obj=os.path.normpath(obj)
 			if not os.path.islink(obj):
@@ -1614,8 +1618,11 @@ class dblink:
 				print "<<<       ","dev",obj
 
 		#do original postrm
-		doebuild(self.dbdir+"/"+self.pkg+".ebuild","postrm")
-	
+		a=doebuild(self.dbdir+"/"+self.pkg+".ebuild","postrm")
+		if a:
+			print "!!! pkg_postrm() script failed; exiting."
+			sys.exit(a)
+
 	def merge(self,mergeroot,inforoot,mergestart=None,outfile=None):
 		
 		if mergestart==None:
@@ -1637,7 +1644,10 @@ class dblink:
 		
 			#get old contents info for later unmerging
 			oldcontents=self.getcontents()
-			doebuild(inforoot+"/"+self.pkg+".ebuild","preinst")
+			a=doebuild(inforoot+"/"+self.pkg+".ebuild","preinst")
+			if a:
+				print "!!! pkg_preinst() script failed; exiting."
+				sys.exit(a)
 			outfile=open(self.dbdir+"/CONTENTS","w")
 				
 		mergestart=mergestart
@@ -1724,7 +1734,10 @@ class dblink:
 			#this will update the virtual links that are different between the current and old provides settings
 			self.setprovides(None,oldprovides)
 			#do postinst script
-			doebuild(self.dbdir+"/"+self.pkg+".ebuild","postinst")
+			a=doebuild(self.dbdir+"/"+self.pkg+".ebuild","postinst")
+			if a:
+				print "!!! pkg_postinst() script failed; exiting."
+				sys.exit(a)
 			#update environment settings, library paths
 			env_update()	
 			print ">>>",self.cat+"/"+self.pkg,"merged."
