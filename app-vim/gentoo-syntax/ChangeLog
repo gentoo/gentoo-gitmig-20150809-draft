@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.19 2004/11/27 18:21:11 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.20 2004/12/02 16:21:28 ciaranm Exp $
+
+*gentoo-syntax-20041202 (02 Dec 2004)
+
+  02 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +gentoo-syntax-20041202.ebuild:
+  New version. Fixes bugsummary menus (bug #72888) and adds support for
+  intelligent ebuild/eclass creation based upon context.
 
 *gentoo-syntax-20041127 (27 Nov 2004)
 
