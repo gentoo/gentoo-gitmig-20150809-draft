@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-1.2.2.ebuild,v 1.2 2004/08/29 03:45:50 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-1.2.2-r1.ebuild,v 1.1 2004/09/27 07:20:42 lv Exp $
 
 DESCRIPTION="Base libraries for emulation of 32bit x86 on amd64"
 SRC_URI="http://dev.gentoo.org/~lv/emul-linux-x86-baselibs-${PV}.tar.bz2"
@@ -22,4 +22,8 @@ DEPEND="virtual/libc
 src_install() {
 	cd ${WORKDIR}
 	cp -RPvf ${WORKDIR}/* ${D}/
+
+	# oops. fix bug 65276
+	cd ${D}/emul/linux/x86/lib/
+	ln -s libz.so.? libz.so
 }
