@@ -347,6 +347,76 @@ command:</p>
 
 </body>
 	</section>
+
+	<section>
+		<title> I am trying to emerge package foo.ebuild, and it aborts
+		with a compiler error, linker error, etc.  What can I
+		do?</title>
+
+	<body><p>You can file a bug report on <uri
+	link="http://bugs.gentoo.org"> bugs.gentoo.org</uri></p></body>
+	</section>
+
+	<section>
+		<title>How do I get my screen to clear after logging out at the
+		console?</title>
+
+	<body>
+	<p>There are a couple ways.</p>
+	<ul>
+   	<li>For an individual user, you can add the following command to the
+	<path>.logout</path> file:
+<pre>
+clear
+</pre>
+	</li>
+	<li>To make each console clear before displaying the Login message
+	(issue), add the following to the top of <path>/etc/issue</path>:
+<pre>
+^[[2J^[[f
+</pre>
+
+	<p>note: the "^" character is a literal ESC character.  In vi, you can
+	type &lt;ctrl&gt;-v, &lt;ctrl&gt;,&lt;esc&gt; to get it to print.
+	Another way to achieve the same effect but on a per-console basis is to
+	edit <path>/etc/inittab</path> so that the getty lines look like the
+	following:</p>
+
+<pre>
+1:2345:respawn:/sbin/agetty -I'\033[2J\033[f' tty1 9600
+</pre>
+	</li>
+	</ul>
+	</body>
+	</section>
+
+	<section>
+		<title>Where did all my disk space go?</title>
+
+	<body>
+	<p>Here are a couple of places to check:</p>
+
+	<ul>
+
+	<li><path>/usr/portage/distfiles</path>: This is where portage stores
+	the source tarballs that are downloaded for installation.  If you don't
+	need to keep them around (either for another system or for
+	reinstallation), then you can delete these.</li>
+
+	<li><path>/var/tmp/portage</path>: This is where portage builds
+	packages, so various temporary files can build up here.  It is safe to
+	remove any files in this directory.
+
+	<p>WARNING: it should be obvious, but don't remove files from this
+	directory while portage is running.</p>
+
+	<p>Note: Depending on if/how you set your MAINTAINER variable,
+	you can use a good deal of space in <path>/var/tmp/portage</path>.</p>
+	</li>
+	</ul>
+	</body>
+	</section>
+
 </chapter>
 
 <chapter>
