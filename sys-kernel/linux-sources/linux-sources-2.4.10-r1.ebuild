@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.10-r1.ebuild,v 1.1 2001/10/06 04:33:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.10-r1.ebuild,v 1.2 2001/10/06 04:51:40 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -97,8 +97,7 @@ src_unpack() {
 
 	#specific to 2.4.10; preempt and ext3 patches
 	cd ${S}
-	patch -p1 < ${DISTDIR}/patch-rml-2.4.10-preempt-kernel-1 || die
-	patch -p1 < ${DISTDIR}/patch-rml-2.4.10-preempt-ptrace-and-jobs-fix-2 || die
+	patch -p1 < ${DISTDIR}/preempt-kernel-rml-2.4.10-7.patch
 	cat ${DISTDIR}/ext3-2.4.10.gz | gzip -dc | patch -p1 || die
 	#the LVM patch is included to replace the old version, irregardless if USE lvm is set
 	cat ${DISTDIR}/lvm-${LVMV}-${KV}.patch.bz2 | bzip2 -d | patch -N -l -p1 
