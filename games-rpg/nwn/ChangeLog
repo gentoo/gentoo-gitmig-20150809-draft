@@ -1,6 +1,6 @@
-# ChangeLog for app-games/nwn
+# ChangeLog for games-rpg/nwn
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.1 2003/09/10 06:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.2 2003/09/10 16:08:47 vapier Exp $
 
   06 Sep 2003; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.30.ebuild:
   Added RESTRICT=fetch.  Closes bug #27548.
