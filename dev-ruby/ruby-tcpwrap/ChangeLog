@@ -1,0 +1,8 @@
+# ChangeLog for dev-ruby/ruby-tcpwrap
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ChangeLog,v 1.1 2003/05/13 14:33:19 twp Exp $
+
+*ruby-tcpwrap-0.5 (13 May 2003)
+
+  13 May 2003; Tom Payne <twp@gentoo.org> ruby-tcpwrap-0.5.ebuild :
+  Initial import. Ebuild submitted by Matsuu Takuto. Bug # 20896.
