@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/libglade
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.9 2002/05/12 17:12:50 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.10 2002/05/28 22:48:42 spider Exp $
+
+libglade-1.99.12-r2 (28 May 2002)
+  28 May 2002; Spider <spider@gentoo.org> libglade-1.99.12-r2.ebuild :
+  make it depend on dev-python/PyXML, that verifies it to build
+  libglade-convert and no rebuild of python after expat is installed is
+  needed. great!
+
+
 
 libglade-1.99.12-r1 (12 May 2002)
   12 May 2002; Spider <spider@gentoo.org> libglade-1.99.12-r1.ebuild :
