@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmrproject
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/ChangeLog,v 1.16 2003/02/24 19:58:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/ChangeLog,v 1.17 2003/08/20 16:29:43 agriffis Exp $
+
+  20 Aug 2003; Aron Griffis <agriffis@gentoo.org> libmrproject-0.9.1.ebuild:
+  Add ~alpha to KEYWORDS
 
 *libmrproject-0.9.1 (24 feb 2003)
 
