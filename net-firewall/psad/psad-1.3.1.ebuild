@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.1.ebuild,v 1.2 2004/02/03 01:04:29 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.1.ebuild,v 1.3 2004/03/23 19:12:00 battousai Exp $
 
 inherit eutils
 inherit perl-module
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cipherdyne.org/psad"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 ~amd64 ~ppc ~alpha ~sparc"
 
 DEPEND="${DEPEND}
 	dev-lang/perl"
