@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r2.ebuild,v 1.2 2005/01/12 18:27:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.4.ebuild,v 1.1 2005/01/12 18:27:53 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/gawk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls build uclibc"
 
 RDEPEND="virtual/libc"
@@ -21,41 +21,40 @@ src_unpack() {
 	unpack ${A}
 
 	# Copy filefuncs module's source over ...
-	cp -PR "${FILESDIR}/filefuncs" "${WORKDIR}/" || die "cp failed"
+	cp -PR "${FILESDIR}"/filefuncs "${WORKDIR}"/ || die "cp failed"
 
 	cd ${S}
 	# support for dec compiler.
-	[ "${CC}" == "ccc" ] && epatch ${FILESDIR}/${PN}-3.1.2-dec-alpha-compiler.diff
-	epatch ${FILESDIR}/64bitnumfile.patch
+	[[ $(tc-getCC) == "ccc" ]] && epatch ${FILESDIR}/${PN}-3.1.2-dec-alpha-compiler.diff
 }
 
 src_compile() {
 	econf --bindir=/bin $(use_enable nls) || die
 	emake || die "emake failed"
 
-	cd ${WORKDIR}/filefuncs
-	emake AWKINCDIR=${S} CC=$(tc-getCC) || die "filefuncs emake failed"
+	cd ../filefuncs
+	emake AWKINCDIR="${S}" CC=$(tc-getCC) || die "filefuncs emake failed"
 }
 
 src_install() {
 	make install DESTDIR="${D}" || die "install failed"
-	cd ${WORKDIR}/filefuncs
+	cd ../filefuncs
 	make \
-		DESTDIR=${D} \
-		AWKINCDIR=${S} \
-		install || die "filefuncs install failed"
+		DESTDIR="${D}" \
+		AWKINCDIR="${S}" \
+		install \
+		|| die "filefuncs install failed"
 
 	dodir /usr/bin
 	# In some rare cases, (p)gawk gets installed as (p)gawk- and not
 	# (p)gawk-${PV} ..  Also make sure that /bin/(p)gawk is a symlink
 	# to /bin/(p)gawk-${PV}.
 	local x=
-	for x in gawk pgawk igawk
-	do
+	for x in gawk pgawk igawk ; do
 		local binpath="/bin"
 
 		case ${x} in
-		igawk|pgawk)
+			igawk|pgawk)
 				binpath="/usr/bin"
 				;;
 		esac
@@ -73,10 +72,10 @@ src_install() {
 
 		rm -f ${D}/bin/${x}
 		dosym ${x}-${PV} ${binpath}/${x}
-		[ "${binpath}" = "/usr/bin" ] && dosym /usr/bin/${x}-${PV} /bin/${x}
+		[[ ${binpath} == "/usr/bin" ]] && dosym /usr/bin/${x}-${PV} /bin/${x}
 	done
 
-	rm -f ${D}/bin/awk
+	rm -f "${D}"/bin/awk
 	dosym gawk-${PV} /bin/awk
 	# Compat symlinks
 	dodir /usr/bin
@@ -85,10 +84,9 @@ src_install() {
 
 	# Install headers
 	insinto /usr/include/awk
-	for x in ${S}/*.h
-	do
+	for x in ${S}/*.h ; do
 		# We do not want 'acconfig.h' in there ...
-		[ -f "${x}" -a "${x/acconfig\.h/}" = "${x}" ] && doins ${x}
+		[[ -f ${x} && ${x/acconfig.h/} == ${x} ]] && doins ${x}
 	done
 
 	if ! use build ; then
@@ -104,6 +102,6 @@ src_install() {
 		docinto posix
 		dodoc posix/ChangeLog
 	else
-		rm -rf "${D}"/usr/share
+		rm -r "${D}"/usr/share
 	fi
 }

@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.64 2005/01/08 02:23:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.65 2005/01/12 18:29:48 vapier Exp $
+
+*man-1.5p (12 Jan 2005)
+
+  12 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/man-1.5p-defmanpath-symlinks.patch,
+  +files/man-1.5p-parallel-make.patch, +files/man-1.5p-search-order.patch,
+  +man-1.5p.ebuild:
+  Version bump.
 
 *man-1.5o_p2 (07 Jan 2005)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.70.ebuild,v 1.2 2004/12/09 05:04:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.70.ebuild,v 1.3 2005/01/12 18:33:10 vapier Exp $
 
 DESCRIPTION="A somewhat comprehensive collection of Linux man pages"
 HOMEPAGE="http://www.win.tue.nl/~aeb/linux/man/"
