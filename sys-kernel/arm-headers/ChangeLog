@@ -1,0 +1,9 @@
+# ChangeLog for sys-kernel/arm-headers
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-headers/ChangeLog,v 1.1 2003/02/26 22:44:37 zwelch Exp $
+
+*arm-headers-2.4.19 (25 Feb 2003)
+
+  26 Feb 2003; Zach Welch <zwelch@gentoo.org> arm-headers-2.4.19.ebuild files/digest-arm-headers-2.4.19 :
+  New ebuild for ARM kernel headers, supports Netwinder only for now
+
