@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegttf
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegttf/ChangeLog,v 1.5 2004/10/31 21:52:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegttf/ChangeLog,v 1.6 2004/12/20 12:45:04 josejx Exp $
+
+  20 Dec 2004; Joseph Jezak <josejx@gentoo.org> allegttf-2.0.ebuild:
+  Marked ppc stable.
 
   01 Nov 2004; Joseph Jezak <josejx@gentoo.org> allegttf-2.0.ebuild:
   Marked ~ppc

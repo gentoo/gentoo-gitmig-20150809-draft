@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegttf/allegttf-2.0.ebuild,v 1.7 2004/10/31 21:52:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegttf/allegttf-2.0.ebuild,v 1.8 2004/12/20 12:45:04 josejx Exp $
 
 DESCRIPTION="Anti-aliased text output and font loading routines for Allegro"
 HOMEPAGE="http://huizen.dds.nl/~deleveld/allegttf.htm"
 SRC_URI="http://huizen.dds.nl/~deleveld/${P}.tar.gz"
 
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
