@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/flite
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.5 2004/03/18 07:03:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.6 2004/03/19 16:27:33 eradicator Exp $
+
+*flite-1.2 (19 Mar 2004)
+
+  19 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> flite-1.0-r1.ebuild,
+  flite-1.2.ebuild:
+  Version bump.
 
 *flite-1.0-r1 (17 Mar 2004)
 
