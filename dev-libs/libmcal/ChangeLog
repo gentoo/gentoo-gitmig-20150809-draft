@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.16 2004/08/26 10:38:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.17 2004/09/15 06:54:39 robbat2 Exp $
+
+*libmcal-0.7-r3 (14 Sep 2004)
+
+  14 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> +libmcal-0.7-r3.ebuild:
+  Fix bug #61969 with PAM.
 
   26 Aug 2004; Robin H. Johnson <robbat2@gentoo.org> libmcal-0.7-r2.ebuild:
   stable on x86.
