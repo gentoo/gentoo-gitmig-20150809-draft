@@ -1,6 +1,6 @@
 # ChangeLog for x11-terms/multi-gnome-terminal
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.15 2002/10/21 14:44:30 cselkirk Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.16 2003/02/12 09:45:06 vapier Exp $
 
 *multi-gnome-terminal-1.6.1 (18 Oct 2002)
 
