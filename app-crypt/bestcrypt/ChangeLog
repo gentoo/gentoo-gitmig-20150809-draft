@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.27 2005/01/26 08:56:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.28 2005/02/15 08:59:59 dragonheart Exp $
+
+  15 Feb 2005; Daniel Black <dragonheart@gentoo.org> -files/bcrypt,
+  -files/bcrypt2, -files/bestcrypt-1.5_p7-makefile_fix.patch,
+  bestcrypt-1.5_p10.ebuild, -bestcrypt-1.5_p7.ebuild:
+  Stilly error by me in bug #81905. Fixed to include devfsd correctly. Removed
+  old version and added devfsd restart in pkg_postinst. Thanks to Craig
+  <craig@haquarter.de>
 
   26 Jan 2005; Daniel Black <dragonheart@gentoo.org>
   -files/bestcrypt-1.5_p9-makefile_fix.patch, files/bestcrypt.devfs,
