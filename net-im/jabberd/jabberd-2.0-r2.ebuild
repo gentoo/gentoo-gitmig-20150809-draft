@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0-r2.ebuild,v 1.1 2004/11/24 10:33:23 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0-r2.ebuild,v 1.2 2004/12/15 13:43:45 humpback Exp $
 
 inherit eutils
 
@@ -49,6 +49,8 @@ src_compile() {
 	fi
 	if use mysql; then
 		enables="${enables} --enable-mysql"
+	else
+		enables="${enables} --disable-mysql"
 	fi
 	if use postgres; then
 		enables="${enables} --enable-pgsql"
