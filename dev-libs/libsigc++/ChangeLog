@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.2 2002/04/18 01:11:46 spider Exp $
+
+*Älibsigc++-1.1.9 (18 Apr 2002)
+  18 Apr 2002; Spider <spider@gentoo.org> libsigc++-1.1.9.ebuild
+  Development version, commented out the sed magic...
 
 *libsigc++-1.0.4-r1 (1 Feb 2002)
 
