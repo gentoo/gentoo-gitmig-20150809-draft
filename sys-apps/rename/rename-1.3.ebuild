@@ -1,23 +1,35 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/rename-1.3.ebuild,v 1.9 2004/10/23 05:47:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/rename-1.3.ebuild,v 1.10 2004/12/11 18:09:56 vapier Exp $
 
-DESCRIPTION="Rename is a tool for renaming files. It supports extended regular expressions."
-SRC_URI="http://rename.berlios.de/rename-1.3.tar.gz"
+inherit toolchain-funcs
+
+DESCRIPTION="tool for easily renaming files"
 HOMEPAGE="http://rename.berlios.de/"
+SRC_URI="http://rename.berlios.de/rename-1.3.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ppc64 ppc-macos"
+SLOT="0"
+KEYWORDS="ppc ppc64 ppc-macos x86"
 IUSE=""
 
-src_compile() {
-	econf --prefix=/usr || die "Failed to configure"
-	emake || die "Failed to compile"
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i \
+		-e '/^CFLAGS/s:-O3:@CFLAGS@:' \
+		-e '/strip /s:.*::' \
+		Makefile.in
+	tc-export CC
 }
 
 src_install() {
-	dobin rename
+	newbin rename xmrename || die
 	doman rename.1
 	dodoc README ChangeLog
+}
+
+pkg_postinst() {
+	ewarn "This has been renamed to 'xmrename' to avoid"
+	ewarn "a naming conflict with sys-apps/util-linux."
 }

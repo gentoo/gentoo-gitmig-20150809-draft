@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rename
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/ChangeLog,v 1.7 2004/09/12 12:14:59 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/ChangeLog,v 1.8 2004/12/11 18:09:56 vapier Exp $
+
+  11 Dec 2004; Mike Frysinger <vapier@gentoo.org> rename-1.3.ebuild:
+  Rename the binary to xmrename and clean up the Makefile #46834 by Jeroen Hoek.
 
   12 Sep 2004; Ian Leitch <port001@gentoo.org> rename-1.3.ebuild:
   Updated DESCRIPTION, #62779. Stable on x86
