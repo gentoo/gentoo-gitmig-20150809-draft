@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.0_rc4.ebuild,v 1.1 2004/06/15 14:42:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.0_rc4.ebuild,v 1.2 2004/06/16 15:31:00 azarah Exp $
 
 IUSE="nls esd gnome oss kde"
 
@@ -23,6 +23,9 @@ DEPEND=">=x11-libs/gtk+-2.0.6
 src_unpack() {
 
 	unpack ${A}
+
+	# Newer gcc needs us to explicitly cast 'const gchar *' to 'gchar *'
+	epatch ${FILESDIR}/${P}-fix-cast.patch
 
 	# Use our own $CXXFLAGS
 	cd ${S}
