@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ktail/ktail-0.6.1.ebuild,v 1.12 2003/01/03 17:00:45 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ktail/ktail-0.6.1.ebuild,v 1.13 2003/01/03 19:30:37 hannes Exp $
 
 inherit kde-base
 
@@ -18,5 +18,5 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/${PN}
 	rm removedlg.h removedlg.cpp logoptdlg.h logoptdlg.cpp cmdlinedlg.h \
-	   cmdlinedlg.cpp
+	   cmdlinedlg.cpp filterdlg.h filterdlg.cpp
 }
