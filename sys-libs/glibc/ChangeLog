@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.24 2002/10/31 18:02:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.25 2002/11/07 15:21:07 azarah Exp $
+
+*glibc-2.3.1-r2 (7 Nov 2002)
+
+  7 Nov 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.1-r2.ebuild :
+
+  Second try at ctype-compat.patch.  Add stack_end-compat patch for missing
+  libc_stack_end symbold in linker.
 
   30 Oct 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.1-r1.ebuild :
 
