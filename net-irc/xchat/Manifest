@@ -1,19 +1,29 @@
-MD5 0f4463ac60c9e77017978b8c34fb917a ChangeLog 19289
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ddb3334dfb66e34768ca19cfc5950aa9 ChangeLog 19490
 MD5 fb5772136a872c08434566d4f0bcdc7f metadata.xml 179
 MD5 e862cd62853b7ae38fc97f1fcedfcab8 xchat-1.8.11-r1.ebuild 2267
-MD5 f289ed2366a298f3116d32d37f05c880 xchat-2.0.7-r1.ebuild 2072
-MD5 7e4082c7073373ded4fb1aeb399fdc87 xchat-2.0.8-r1.ebuild 2072
-MD5 b180a836aa7fffc22028cc8987c6f9ad xchat-2.0.9.ebuild 2122
-MD5 88050d99e0a109af692377a06f769204 xchat-2.0.10-r3.ebuild 2533
-MD5 c5a1e1a858a034f8f4d8a9bdd226e015 xchat-2.4.0.ebuild 2309
+MD5 42900950f54113ecc2d9cc189623b6a2 xchat-2.0.10-r3.ebuild 2468
+MD5 04a18ffd68abba1a52a9730342839d8f xchat-2.0.7-r1.ebuild 2005
+MD5 2482bed10a2e7145bc1814f094dd41a8 xchat-2.0.8-r1.ebuild 2005
+MD5 39996d486732e1c6cff4985470843b1d xchat-2.0.9.ebuild 2061
+MD5 9c9f4381c98b78e490a1e8f8b670223a xchat-2.4.0.ebuild 2242
+MD5 3d228dd6bbf6d081f6888dd7b3d2a6af files/2.0.10-preeditstring.patch 820
 MD5 e2b99b2d2dfc54ba96e560c0ed8392df files/digest-xchat-1.8.11-r1 65
+MD5 28706a4c0068f4066e78bc9f93945fc2 files/digest-xchat-2.0.10-r3 135
 MD5 15dadb9b77f7536f6c7769689fc883c9 files/digest-xchat-2.0.7-r1 64
 MD5 aac7b6be8968c5e6e1bdf580546a18fd files/digest-xchat-2.0.8-r1 64
-MD5 a8f607d224408d4a27777d2ffce8beac files/xc1811fixststint.diff 422
-MD5 31de685eff3d16d9466416434c9fd6c3 files/xc208-fixsocks5.diff 688
 MD5 2effc9c4c2a5454c5abba3817894e865 files/digest-xchat-2.0.9 126
-MD5 ce08cfd7b93fbb37e1d9b510747a58d5 files/xc2010-fixfocus.diff 676
-MD5 3d228dd6bbf6d081f6888dd7b3d2a6af files/2.0.10-preeditstring.patch 820
-MD5 28706a4c0068f4066e78bc9f93945fc2 files/digest-xchat-2.0.10-r3 135
-MD5 bef9c7a09196ed8da457ee9fb36e8fe9 files/xc2010-fixtabcomp3.diff 828
 MD5 3ddde600db975d5c534197fa4fe2b1b7 files/digest-xchat-2.4.0 134
+MD5 a8f607d224408d4a27777d2ffce8beac files/xc1811fixststint.diff 422
+MD5 ce08cfd7b93fbb37e1d9b510747a58d5 files/xc2010-fixfocus.diff 676
+MD5 bef9c7a09196ed8da457ee9fb36e8fe9 files/xc2010-fixtabcomp3.diff 828
+MD5 31de685eff3d16d9466416434c9fd6c3 files/xc208-fixsocks5.diff 688
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBPkJ+I1lqEGTUzyQRAoy3AJ9mxMXmQ/HVLsxWDhFg5sxp48I2tQCfYiFj
+CIW9eRiZfbLADyfX8ApduQk=
+=8QzD
+-----END PGP SIGNATURE-----

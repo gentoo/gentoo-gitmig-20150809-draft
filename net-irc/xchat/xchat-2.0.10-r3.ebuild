@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.10-r3.ebuild,v 1.4 2004/09/05 13:31:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.10-r3.ebuild,v 1.5 2004/09/07 23:21:28 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,9 +12,7 @@ HOMEPAGE="http://www.xchat.org/"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="x86 sparc hppa ~ppc ~alpha ~amd64 ~ia64 ~mips ppc64"
-IUSE="perl tcltk python ssl mmx ipv6 nls"
-# Local use flag for the text frontend (bug #26427)
-IUSE="${IUSE} xchattext xchatnogtk xchatdccserver"
+IUSE="perl tcltk python ssl mmx ipv6 nls xchattext xchatnogtk xchatdccserver"
 
 # Added for to fix a sparc seg fault issue by Jason Wever <weeve@gentoo.org>
 if [ ${ARCH} = "sparc" ]
