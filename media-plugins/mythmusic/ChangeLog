@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.7 2003/09/17 06:26:59 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.8 2003/10/20 03:30:45 max Exp $
+
+*mythmusic-0.12 (19 Oct 2003)
+
+  19 Oct 2003; Max Kalika <max@gentoo.org> mythmusic-0.12.ebuild:
+  Bump to version 0.12.
 
   16 Sep 2003; Max Kalika <max@gentoo.org> mythmusic-0.10.ebuild,
   mythmusic-0.11.ebuild:
