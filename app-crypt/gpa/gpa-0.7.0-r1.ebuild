@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.0-r1.ebuild,v 1.3 2004/06/24 21:31:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.0-r1.ebuild,v 1.4 2004/07/11 19:01:36 kugelfang Exp $
 
 DESCRIPTION="Standard GUI for GnuPG"
 HOMEPAGE="http://www.gnupg.org/(en)/related_software/gpa/index.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gpa/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE="nls"
 
 DEPEND=">=x11-libs/gtk+-2.0*
