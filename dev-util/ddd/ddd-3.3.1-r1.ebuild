@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r1.ebuild,v 1.10 2003/09/06 08:39:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r1.ebuild,v 1.11 2004/01/11 13:44:31 lanius Exp $
 
 DESCRIPTION="graphical front-end for command-line debuggers"
 HOMEPAGE="http://www.gnu.org/software/ddd"
@@ -13,7 +13,7 @@ KEYWORDS="x86 sparc"
 
 DEPEND="virtual/x11
 	>=sys-devel/gdb-4.16
-	virtual/motif"
+	x11-libs/openmotif"
 
 src_compile() {
 	econf || die
