@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.39 2003/03/23 15:39:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.40 2003/03/28 07:39:06 seemant Exp $
 
   23 Mar 2003; Martin Schlemmer <azarah@gentoo.org> binutils-2.13.90.0.20.ebuild :
   Add '~x86' to KEYWORDS.
@@ -21,6 +21,10 @@
   platforms and keywords modified as necessary.
 
 *binutils-2.13.90.0.18-r1 (08 Mar 2003)
+
+  27 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  binutils-2.13.90.0.18-r1.ebuild:
+  masked for sparc, it breaks, dunno why. see bug #17193
 
   08 Mar 2003; Martin Schlemmer <azarah@gentoo.org> binutils-2.13.90.0.18-r1.ebuild :
   Update patches from Redhat.
