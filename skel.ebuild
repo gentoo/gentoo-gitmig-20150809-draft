@@ -65,8 +65,8 @@ KEYWORDS="~x86"
 IUSE="X gnome"
 
 # Build-time dependencies, such as
-#    ssl? ( >=openssl-0.9.6b )
-#    >=perl-5.6.1-r1
+#    ssl? ( >=dev-libs/openssl-0.9.6b )
+#    >=dev-lang/perl-5.6.1-r1
 # It is advisable to use the >= syntax show above, to reflect what you
 # had installed on your system when you tested the package.  Then
 # other users hopefully won't be caught without the right version of
