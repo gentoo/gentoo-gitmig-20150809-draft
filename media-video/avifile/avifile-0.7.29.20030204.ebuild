@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.29.20030204.ebuild,v 1.6 2003/02/09 19:08:47 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.29.20030204.ebuild,v 1.7 2003/02/09 23:26:52 raker Exp $
 
-IUSE="static freetype xv sdl oss dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd"
+IUSE="static freetype xv sdl dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd"
 
 MY_P="${P/.200/-200}"
 MY_S="${PN}0.7-0.7.29"
@@ -37,7 +37,7 @@ DEPEND=">=media-libs/jpeg-6b
 	esd? ( >=media-sound/esound-0.2.28 )"
 
 src_compile() {
-	local myconf=""
+	local myconf="--enable-oss"
 	local kdepre=""
 
 	use static \
@@ -67,10 +67,6 @@ src_compile() {
 	if [ "$V4L" = "NO" ]; then
 		myconf="${myconf} --disable-v4l"
 	fi
-
-	use oss \
-		&& myconf="${myconf} --enable-oss" \
-		|| myconf="${myconf} --disable-oss"
 
 	if [ "$SUN" = "NO" ]; then
 		myconf="${myconf} --disable-sunaudio"
