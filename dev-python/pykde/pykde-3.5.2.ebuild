@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.5.2.ebuild,v 1.3 2003/04/26 13:06:37 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.5.2.ebuild,v 1.4 2003/04/29 10:42:32 brain Exp $
 
 inherit eutils
 
@@ -21,8 +21,8 @@ KEYWORDS="~x86"
 DEPEND="virtual/glibc
 	sys-devel/libtool
 	>=dev-lang/python-2.2.1
-	>=dev-python/sip-3.5
-	>=dev-python/PyQt-3.5-r1
+	=dev-python/sip-3.5
+	=dev-python/PyQt-3.5-r1
 	kde-base/kdelibs"
 
 src_unpack() {

@@ -1,4 +1,4 @@
-MD5 c9b9a59640117e4b1816d12ce4fe83db pykde-3.5.2.ebuild 1239
-MD5 39b6346fcb4adcdb410d4ea377934258 ChangeLog 552
+MD5 8ae0d255170e86c459602b2035308d68 ChangeLog 728
+MD5 e3cc711d222c6cd538d4dd617961ba9b pykde-3.5.2.ebuild 1237
 MD5 0724bcacc7dc67d7071ec4a38828db1a files/digest-pykde-3.5.2 63
 MD5 87cf4dfaa7eb6c2dc39268151690e347 files/pykde-3.5.2-sandbox-patch.diff 763
