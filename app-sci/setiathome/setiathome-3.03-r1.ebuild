@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.03-r1.ebuild,v 1.5 2002/08/28 11:51:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.03-r1.ebuild,v 1.6 2002/09/19 20:22:36 owen Exp $
 
 S="${WORKDIR}/${P}"
 
@@ -15,7 +15,7 @@ RDEPEND="X? ( x11-base/xfree )"
 
 SLOT="0"
 LICENSE="proprietary"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_unpack () {
 	if [ ! -e ${DISTDIR}/${P}.tar ] ; then
