@@ -36,7 +36,8 @@ src_install() {
     doins ssmtp.conf revaliases
 }
 
-pkg_postinst() {
+pkg_config() {
+
 conffile="/etc/ssmtp/ssmtp.conf"
 hostname=`hostname -f`
 domainame=`hostname -d`
