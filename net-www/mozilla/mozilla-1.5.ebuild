@@ -1,19 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r1.ebuild,v 1.5 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5.ebuild,v 1.1 2003/10/17 09:20:03 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
-IUSE="${IUSE} mozsvg mozcalendar mozaccess mozp3p mozxmlterm"
+IUSE="${IUSE} mozcalendar mozaccess mozp3p mozxmlterm"
 IUSE="${IUSE} moznoirc moznomail moznocompose moznoxft"
 
 inherit flag-o-matic gcc eutils nsplugins
-
-# Crashes on start when compiled with -fomit-frame-pointer
-filter-flags "-fomit-frame-pointer"
-
-# Sparc support ...
-replace-sparc64-flags
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -36,14 +30,38 @@ replace-sparc64-flags
 #
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
+#
+# Crashes on start when compiled with -fomit-frame-pointer
+filter-flags "-fomit-frame-pointer"
+filter-flags -ffast-math
+append-flags -s -fforce-addr
+
+# Sparc support ...
+replace-sparc64-flags
+
+#fix to avoid gcc-3.3.x micompilation issues.
+if [ "`use ppc`" -a "$(gcc-major-version)" -eq "3" -a "$(gcc-minor-version)" -eq "3" ]
+then
+
+append-flags -fno-strict-aliasing
+
+fi
 
 # We set -O in ./configure to -O1, as -O2 cause crashes on startup ...
 # (bug #13287)
-export CFLAGS="${CFLAGS//-O?}"
-export CXXFLAGS="${CFLAGS//-O?}"
 
-EMVER="0.76.2"
-IPCVER="1.0.3"
+if [ "${ARCH}" = "amd64" ]
+then
+	# Anything more than this causes segfaults on startup on amd64
+	export CFLAGS="-Wall -O -fPIC -pipe"
+	export CXXFLAGS=${CFLAGS}
+else
+	export CFLAGS="${CFLAGS//-O?}"
+	export CXXFLAGS="${CFLAGS//-O?}"
+fi
+
+EMVER="0.76.7"
+IPCVER="1.0.4"
 
 PATCH_VER="1.0"
 
@@ -54,11 +72,11 @@ S="${WORKDIR}/mozilla"
 DESCRIPTION="The Mozilla Web Browser"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.bz2
 	crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
-	         http://enigmail.mozdev.org/dload/src/ipc-${IPCVER}.tar.gz )"
+			 http://enigmail.mozdev.org/dload/src/ipc-${IPCVER}.tar.gz )"
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -129,6 +147,10 @@ src_unpack() {
 		then
 			cd ${S}; epatch ${FILESDIR}/${PN}-alpha-xpcom-subs-fix.patch
 		fi
+		if [ "${ARCH}" = "amd64" ]
+		then
+			cd ${S}; epatch ${FILESDIR}/${PN}-1.4-amd64.patch
+		fi
 	fi
 
 	epatch ${FILESDIR}/1.2/${PN}-1.2b-default-plugin-less-annoying.patch.bz2
@@ -148,6 +170,8 @@ src_unpack() {
 	then
 		mv -f ${WORKDIR}/ipc ${S}/extensions/
 		mv -f ${WORKDIR}/enigmail ${S}/extensions/
+		cp ${FILESDIR}/enigmail/Makefile-enigmail ${S}/extensions/enigmail/Makefile
+		cp ${FILESDIR}/enigmail/Makefile-ipc ${S}/extensions/ipc/Makefile
 	fi
 
 	# Fix build with Linux 2.6
@@ -257,7 +281,7 @@ src_compile() {
 	then
 		myext="${myext},xmlterm"
 	fi
-	if [ -n "`use mozaccess-builtin`" ]
+	if [ -n "`use mozaccess`" ]
 	then
 		myext="${myext},access-builtin"
 	fi
@@ -269,15 +293,14 @@ src_compile() {
 	then
 		myext="${myext},-irc"
 	fi
-
-	if [ -n "`use mozsvg`" ]
-	then
-		export MOZ_INTERNAL_LIBART_LGPL="1"
-		myconf="${myconf} --enable-svg"
-	else
-		myconf="${myconf} --disable-svg"
-	fi
-	# re-enable calendar for 1.4, builds autonomously (no dependencies anymore)
+# Disable SVG until it's properly implemented
+#	if [ -n "`use mozsvg`" ]
+#	then
+#		export MOZ_INTERNAL_LIBART_LGPL="1"
+#		myconf="${myconf} --enable-svg"
+#	else
+#		myconf="${myconf} --disable-svg"
+#	fi
 	if [ -n "`use mozcalendar`" ]
 	then
 		myconf="${myconf} --enable-calendar"
@@ -312,7 +335,8 @@ src_compile() {
 	then
 		# mozilla wont link with X11 on alpha, for some crazy reason.
 		# set it to link explicitly here.
-		sed -i 's/\(EXTRA_DSO_LDOPTS += $(MOZ_GTK_LDFLAGS).*$\)/\1 -lX11/' ${S}/gfx/src/gtk/Makefile.in
+		sed -i 's/\(EXTRA_DSO_LDOPTS += $(MOZ_GTK_LDFLAGS).*$\)/\1 -L/usr/X11R6/lib -lX11/' \
+			${S}/gfx/src/gtk/Makefile.in
 	fi
 
 	# *********************************************************************
@@ -327,6 +351,15 @@ src_compile() {
 	# Get it to work without warnings on gcc3
 	export CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
 
+	# On amd64 we statically set 'safe' CFLAGS. Use those only.
+	# using the standard -O2 will cause segfaults on startup for amd64
+	if [ "${ARCH}" = "amd64" ]
+	then
+		ENABLE_OPTIMIZE="${CFLAGS}"
+	else
+		ENABLE_OPTIMIZE="-O2"
+	fi
+
 	cd ${S}
 	einfo "Configuring Mozilla..."
 	./configure --prefix=/usr/lib/mozilla \
@@ -340,7 +373,7 @@ src_compile() {
 		--enable-xsl \
 		--enable-crypto \
 		--enable-extensions="${myext}" \
-		--enable-optimize="-O2" \
+		--enable-optimize="${ENABLE_OPTIMIZE}" \
 		--with-default-mozilla-five-home=/usr/lib/mozilla \
 		${myconf} || die
 

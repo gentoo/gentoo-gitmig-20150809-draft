@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.121 2003/10/03 03:48:04 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.122 2003/10/17 09:20:03 brad Exp $
+
+*mozilla-1.5 (17 Oct 2003)
+
+  17 Oct 2003; Brad Laue <brad@gentoo.org> mozilla-1.5.ebuild:
+  Version bump - Mozilla 1.5
 
   02 Oct 2003; Brad House <brad_mssw@gentoo.org> mozilla-1.4-r4.ebuild,
   files/mozilla-1.4-amd64.patch:
