@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.0_rc1.ebuild,v 1.1 2004/01/04 18:55:20 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.0_rc1.ebuild,v 1.2 2004/01/04 18:56:46 avenj Exp $
 
 DESCRIPTION="Small forwarding DNS server for local networks"
 HOMEPAGE="http://www.thekelleys.org.uk/dnsmasq/"
@@ -34,6 +34,7 @@ src_install() {
 	doman dnsmasq.8
 	dodoc CHANGELOG COPYING FAQ
 	dohtml *.html
+
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/dnsmasq-init dnsmasq
 	insinto /etc/conf.d

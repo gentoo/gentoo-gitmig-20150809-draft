@@ -1,6 +1,6 @@
 MD5 8eea0c68e15bc94facee4445ba8c8ffd ChangeLog 1939
 MD5 d04df270cdc346fd8fbae36c72f0804e dnsmasq-1.18.ebuild 856
-MD5 41f6d3ff0e0021a88c47408f24e5e2c7 dnsmasq-2.0_rc1.ebuild 960
+MD5 ac362b8c749b4f95e00e8b12eb499489 dnsmasq-2.0_rc1.ebuild 961
 MD5 51334b67d2cbed22e0efec4143bc6ff0 metadata.xml 245
 MD5 1829bd3553caea92919fb856187c91fc dnsmasq-1.17.ebuild 848
 MD5 d5e8dd3af7d243913de2c5a9624d6fc2 files/digest-dnsmasq-1.18 63
