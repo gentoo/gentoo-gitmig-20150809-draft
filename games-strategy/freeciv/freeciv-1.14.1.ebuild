@@ -1,13 +1,14 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.14.1.ebuild,v 1.1 2004/01/03 20:51:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.14.1.ebuild,v 1.2 2004/01/06 22:14:11 mr_bones_ Exp $
 
 inherit games
 
 MY_P=${PN}-${PV/_/-}
 DESCRIPTION="multiplayer strategy game (Civilization Clone)"
 HOMEPAGE="http://www.freeciv.org/"
-SRC_URI="ftp://ftp.freeciv.org/freeciv/stable/${MY_P}.tar.bz2"
+SRC_URI="ftp://ftp.freeciv.org/freeciv/stable/${MY_P}.tar.bz2
+	http://www.freeciv.org/ftp/contrib/sounds/sets/stdsounds2.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -39,7 +40,7 @@ DEPEND=">=sys-devel/gettext-0.10.36
 			>=media-libs/libvorbis-1.0-r2
 		)"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	local myclient="no"
@@ -60,12 +61,15 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR=${D} || die "install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	insinto /usr/X11R6/lib/X11/app-defaults
-	doins data/Freeciv
+	doins data/Freeciv || die "doins failed"
 
 	dodoc ChangeLog INSTALL NEWS \
-		doc/{BUGS,CodingStyle,HACKING,HOWTOPLAY,PEOPLE,README*,TODO}
+		doc/{BUGS,CodingStyle,HACKING,HOWTOPLAY,PEOPLE,README*,TODO} \
+			|| die "dodoc failed"
+	# install sounds
+	cp -R ../stdsounds* "${D}${GAMES_DATADIR}/${PN}"
 	prepgamesdirs
 }

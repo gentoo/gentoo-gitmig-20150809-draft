@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.14.0-r1.ebuild,v 1.2 2003/10/13 22:13:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.14.0-r1.ebuild,v 1.3 2004/01/06 22:14:11 mr_bones_ Exp $
 
 DESCRIPTION="multiplayer strategy game (Civilization Clone)"
 HOMEPAGE="http://www.freeciv.org/"
