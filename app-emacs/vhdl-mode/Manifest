@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2550082ea1655db84a5c6e9aa449b795 vhdl-mode-3.33.2.ebuild 882
+MD5 7d539ea253f509d6af6a9396d8d1ff01 ChangeLog 562
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 a53f10c4ff745502ddb41f83473b9e0f ChangeLog 474
-MD5 792ddd890b1e4550ece823eb320ddbc3 files/digest-vhdl-mode-3.33.2 68
+MD5 ff0f55ebdd9225c3be3df5e75ab37249 vhdl-mode-3.33.2.ebuild 887
 MD5 a660a1a260fe78bf0674e003faac9cb7 files/50vhdl-mode-gentoo.el 147
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
-
-iD8DBQFBYjtlVWNWqTUmv+0RAnC6AKCiO29ANrw7y1U0dD3udxmdTKQn5gCeIChe
-mmlJ+yLmNc9O/cIaylnmkjU=
-=OGRc
------END PGP SIGNATURE-----
+MD5 792ddd890b1e4550ece823eb320ddbc3 files/digest-vhdl-mode-3.33.2 68
