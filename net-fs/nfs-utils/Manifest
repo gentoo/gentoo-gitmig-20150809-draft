@@ -1,5 +1,5 @@
-MD5 ea89a080150922de66acbd0f32c4ba85 ChangeLog 3737
-MD5 bc7e9d106d8b3c1b8ba7ab1e9ddfa284 nfs-utils-1.0.6.ebuild 1872
+MD5 03c60e718725d618872ab4a3f12e78f3 ChangeLog 3863
+MD5 87a23c8c308c66afecc2d71fec18a294 nfs-utils-1.0.6.ebuild 1868
 MD5 c65cd5fc394327242a58f9c1d49b8ac6 nfs-utils-1.0.5-r1.ebuild 1920
 MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6 67
 MD5 a02eed87e5d581e56feb0f6dfd18e6df files/exports 66
