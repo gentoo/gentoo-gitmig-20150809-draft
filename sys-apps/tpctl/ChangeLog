@@ -1,10 +1,14 @@
 # ChangeLog for sys-apps/tpctl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/ChangeLog,v 1.5 2003/02/17 16:17:07 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/ChangeLog,v 1.6 2003/05/04 13:18:17 wmertens Exp $
 
+*tpctl-4.4 (04 May 2003)
+  17 Feb 2003; Wout Mertens (wmertens@gentoo.org) tpctl-4.4.ebuild :
+  Version bump, fixing #20072
+  
 *tpctl-4.2 (17 Feb 2003)
 
-  17 Feb 2003; Wout Mertens (wmertens@gentoo.org):
+  17 Feb 2003; Wout Mertens (wmertens@gentoo.org) tpctl-4.2.ebuild :
   Version bump
 
 *tpctl-3.2 (25 April 2002)
