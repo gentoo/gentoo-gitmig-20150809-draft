@@ -1,4 +1,14 @@
-MD5 e683f5a5fff48e75b42b0bd6891b6fdd ChangeLog 444
-MD5 1727c038551ae10b19376156c0f0e828 emech-2.8.5.1.ebuild 1245
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6bbfbafa9718744eeb5b851933616133 ChangeLog 544
+MD5 0d46f4f16de88d6f8c441b900b36de2f emech-2.8.5.1.ebuild 1247
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 b60e84a422092ec3fcf1c2d21bc4e113 files/digest-emech-2.8.5.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOT50I1lqEGTUzyQRAv7zAJ0SCGzZFW7NBWdOuWZYjizNpghDGQCfdq/P
+6yAK+gsT54mzPkICUTGo/x4=
+=34pC
+-----END PGP SIGNATURE-----
