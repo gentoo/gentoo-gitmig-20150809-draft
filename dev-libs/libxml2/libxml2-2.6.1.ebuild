@@ -1,36 +1,41 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.10.ebuild,v 1.3 2003/09/06 22:29:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.1.ebuild,v 1.1 2003/10/29 17:44:01 foser Exp $
 
-inherit eutils libtool gnome.org
-
-IUSE="python readline ipv6"
+inherit eutils libtool gnome.org flag-o-matic
 
 DESCRIPTION="Version 2 of the library to manipulate XML files"
 HOMEPAGE="http://www.xmlsoft.org/"
+LICENSE="MIT"
+
+IUSE="python readline ipv6"
+SLOT="2"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
 
 DEPEND="sys-libs/zlib
 	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )"
 
-SLOT="2"
-LICENSE="MIT"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
-
 src_compile() {
-	elibtoolize
 
-	# USE zlib support breaks gnome2 (libgnomeprint for instance fails to compile with
+	# filter seemingly problematic CFLAGS (#26320)
+	filter-flags -fprefetch-loop-arrays -funroll-loops
+
+	# USE zlib support breaks gnome2
+	# (libgnomeprint for instance fails to compile with
 	# fresh install, and existing) - <azarah@gentoo.org> (22 Dec 2002).
 
 	econf --with-zlib \
 		`use_with python` \
 		`use_with readline` \
 		`use_enable ipv6` || die
+
 	emake || die
+
 }
 
 src_install() {
+
 	make \
 		DESTDIR=${D} \
 		DOCS_DIR=/usr/share/doc/${PF}/python \
@@ -41,7 +46,8 @@ src_install() {
 		TARGET_DIR=/usr/share/doc/${PF}/html \
 		install || die
 
-	dodoc AUTHORS COPYING* ChangeLog NEWS README
+	dodoc AUTHORS Copyright ChangeLog INSTALL NEWS README TODO
+
 }
 
 pkg_postinst() {
