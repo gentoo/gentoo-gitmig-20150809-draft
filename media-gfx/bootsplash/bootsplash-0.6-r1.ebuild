@@ -1,34 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r1.ebuild,v 1.1 2003/06/23 13:29:11 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r1.ebuild,v 1.2 2003/08/10 20:41:47 vapier Exp $
 
 DESCRIPTION="Graphical backgrounds for frame buffer consoles"
-
-HOMEPAGE="http://linux.tkdack.com"
-
+HOMEPAGE="http://linux.tkdack.com/"
 SRC_URI="mirror://gentoo/bootsplash-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
-
 SLOT="0"
-
 KEYWORDS="~x86"
 
-IUSE=""
-
 DEPEND=">=media-libs/freetype-2"
-
 # Not implemented yet
 #		media-libs/libmng"
-
 RDEPEND=""
 
-S=${WORKDIR}/${P}
-
 src_compile() {
-
 	# compile utils
-
 # mng is not implmented yet
 # (the util builds but the rc scripts have not been modified)
 #	cd ${S}/utils/fbmngplay
@@ -39,11 +27,9 @@ src_compile() {
 
 	cd ${S}/utils/splashutils
 	emake || die
-
 }
 
 src_install() {
-	
 	# Splash utilities
 	exeinto /sbin
 #	doexe ${S}/utils/fbmngplay/fbmngplay
