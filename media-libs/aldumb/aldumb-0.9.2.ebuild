@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/aldumb-0.9.2.ebuild,v 1.3 2004/02/20 09:53:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/aldumb-0.9.2.ebuild,v 1.4 2004/03/01 16:09:15 dholm Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="Allegro support for DUMB (an IT, XM, S3M, and MOD player library)"
 HOMEPAGE="http://dumb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dumb/dumb-${PV}-fixed.tar.gz"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 LICENSE="DUMB-0.9.2"
 SLOT="0"
 
