@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.41 2004/06/24 23:13:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.42 2004/07/07 14:37:03 vapier Exp $
+
+*libpng-1.2.5-r7 (07 Jul 2004)
+
+  07 Jul 2004; Mike Frysinger <vapier@gentoo.org>
+  files/libpng-1.2.5-gentoo.diff, -libpng-1.2.5-r6.ebuild,
+  +libpng-1.2.5-r7.ebuild:
+  Version bump to fix security bug #56307.
 
 *libpng-1.2.5-r6 (13 May 2004)
 
