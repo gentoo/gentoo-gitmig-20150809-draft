@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Archive-Tar
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/ChangeLog,v 1.13 2004/01/18 20:01:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/ChangeLog,v 1.14 2004/01/19 22:06:31 esammer Exp $
+
+  19 Jan 2004; Eric Sammer <esammer@gentoo.org> Archive-Tar-0.22-r1.ebuild,
+  Archive-Tar-0.22.ebuild, Archive-Tar-1.00.ebuild, Archive-Tar-1.05.ebuild:
+  Fixed copyright headers. Added ~arm, ~hppa, and ~mips to keywords to fix
+  depend.BAD for new module-build.
 
   18 Jan 2004; <gustavoz@gentoo.org> Archive-Tar-1.03.ebuild:
   stable on sparc
