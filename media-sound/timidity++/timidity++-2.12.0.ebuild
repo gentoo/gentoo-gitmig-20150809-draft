@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0.ebuild,v 1.9 2004/02/01 13:32:34 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0.ebuild,v 1.10 2004/02/10 09:48:52 eradicator Exp $
 
 MY_P=TiMidity++-${PV}-pre1
 S=${WORKDIR}/${MY_P}
@@ -74,4 +74,20 @@ src_install () {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING ChangeLog* INSTALL*
 	dodoc NEWS README*
+
+	if use alsa; then
+		insinto /etc/conf.d
+		newins ${FILESDIR}/conf.d.timidity timidity
+
+		exeinto /etc/init.d
+		newexe ${FILESDIR}/init.d.timidity timidity
+	fi
+}
+
+pkg_postinst() {
+if use alsa; then
+	einfo "An init script for the alsa timidity sequencer has been installed."
+	einfo "If you wish to use the timidity virtual sequencer, edit /etc/conf.d/timidity"
+	einfo "and run 'rc-update add timidity <runlevel> && /etc/init.d/timidity start'"
+fi
 }

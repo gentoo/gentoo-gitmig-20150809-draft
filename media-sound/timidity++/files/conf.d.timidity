@@ -1,0 +1,18 @@
+# TIMIDITY_OPTS
+# Command line arguements to be passed to timidity. -iA is always used
+# Common options:
+# -Os : Output to ALSA pcm device
+# -Oe : Output to esd
+# -On : Output to NAS
+#
+# -B<n>,<m> :  Set number of buffer fragments(n), and buffer size(2^m)
+#
+# -EFreverb=0         : Disable MIDI reverb effect control
+# -EFreverb=1[,level] : Enable MIDI reverb effect control
+#                       `level' is optional to specify reverb level [0..127]
+#                       This effect is only available in stereo
+#                       (default)
+# -EFreverb=2         : Global reverb effect
+
+TIMIDITY_OPTS="-B2,8 -Os -EFreverb=0"
+

@@ -1,0 +1,19 @@
+#!/sbin/runscript
+ 
+depend() {
+	need alsasound
+	use esound
+}
+ 
+start() {
+	ebegin "Starting Timidity Virtual Midi Sequencer"
+	start-stop-daemon --start --quiet --background \
+		--make-pidfile --pidfile /var/run/timidity.pid \
+		--exec /usr/bin/timidity -- -iA ${TIMIDITY_OPTS}
+	eend $?
+}
+ 
+stop() {
+	ebegin "Stopping Timidity"
+	start-stop-daemon --stop --quiet --pidfile /var/run/timidity.pid
+}
