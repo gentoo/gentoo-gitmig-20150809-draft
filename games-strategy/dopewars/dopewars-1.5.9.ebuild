@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.9.ebuild,v 1.7 2004/03/24 05:09:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.9.ebuild,v 1.8 2004/06/03 21:08:25 agriffis Exp $
 
 inherit games
 
@@ -45,7 +45,7 @@ src_unpack() {
 
 src_compile() {
 	local myservconf=""
-	if [ `use gtk` ] ; then
+	if use gtk ; then
 		myservconf="--enable-gui-server `use_enable gtk2 glib2`"
 	else
 		myservconf="--disable-gui-client --disable-glibtest --disable-gtktest"
