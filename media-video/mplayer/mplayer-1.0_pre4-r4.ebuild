@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r4.ebuild,v 1.15 2004/06/29 10:03:52 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r4.ebuild,v 1.16 2004/06/29 17:46:44 ferringb Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -110,12 +110,12 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-0.90-coreutils-fixup.patch
 
 	#bug #49669, horrid syntax errors in help/help_mp-ro.h	
-	epatch ${FILESDIR}/help_mp-ro.h.patch
+	epatch ${FILESDIR}/${P}-help_mp-ro.h.patch
 
 	# GCC 3.4 fixes
 	epatch ${FILESDIR}/${P}-alsa-gcc34.patch
 	epatch ${FILESDIR}/${P}-altivec-gcc34.patch
-	epatch ${FILESDIR}/${P}-gcc3.4-mtune.patch
+	epatch ${FILESDIR}/${P}-gcc34-mtune.patch
 	# fixes for mga driver with kernel 2.6
 	if use matrox; then
 		get_kernel_info
