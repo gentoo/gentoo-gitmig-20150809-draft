@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.0.15.ebuild,v 1.4 2004/10/21 11:29:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.0.15.ebuild,v 1.5 2004/11/08 19:22:30 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnome.org/~veillard/gamin/sources/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~hppa ~ia64 ~ppc ~s390 ~x86 ~amd64"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
