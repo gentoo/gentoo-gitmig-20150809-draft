@@ -1,3 +1,14 @@
+--- doc/lighttpd.1.orig	2005-02-06 23:58:57.661234800 -0500
++++ doc/lighttpd.1	2005-02-06 23:59:30.758203296 -0500
+@@ -5,7 +5,7 @@
+ lighttpd -D -f <configfile>
+ .SH DESCRIPTION
+ .SH FILES
+-/etc/lighttpd/lighttpd.conf
++/etc/lighttpd.conf
+ .SH CONFORMING TO
+ HTTP/1.0
+ HTTP/1.0
 --- doc/lighttpd.conf.orig	2004-04-23 18:31:13.985795352 +0100
 +++ doc/lighttpd.conf	2004-04-23 18:34:00.191528240 +0100
 @@ -25,10 +25,10 @@

@@ -1,15 +1,3 @@
-diff -urN lighttpd-1.3.10.orig/doc/lighttpd.1 lighttpd-1.3.10/doc/lighttpd.1
---- lighttpd-1.3.10.orig/doc/lighttpd.1	2005-02-06 23:58:57.661234800 -0500
-+++ lighttpd-1.3.10/doc/lighttpd.1	2005-02-06 23:59:30.758203296 -0500
-@@ -5,7 +5,7 @@
- lighttpd -D -f <configfile>
- .SH DESCRIPTION
- .SH FILES
--/etc/lighttpd/lighttpd.conf
-+/etc/lighttpd.conf
- .SH CONFORMING TO
- HTTP/1.0
- HTTP/1.0
 diff -urN lighttpd-1.3.10.orig/doc/lighttpd.conf lighttpd-1.3.10/doc/lighttpd.conf
 --- lighttpd-1.3.10.orig/doc/lighttpd.conf	2005-02-06 23:58:57.661234800 -0500
 +++ lighttpd-1.3.10/doc/lighttpd.conf	2005-02-07 00:00:50.500080688 -0500

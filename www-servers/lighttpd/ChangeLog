@@ -1,6 +1,18 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.10 2005/02/14 11:39:01 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.11 2005/02/14 14:48:29 ka0ttic Exp $
+
+*lighttpd-1.3.10-r1 (14 Feb 2005)
+
+  14 Feb 2005; Aaron Walker <ka0ttic@gentoo.org>
+  files/lighttpd-1.1.8-gentoo.diff, +files/lighttpd-1.3.10-gentoo.diff,
+  files/lighttpd-1.3.10-php.diff, +files/lighttpd-1.3.10-upstream.diff,
+  -files/lighttpd.initd, -lighttpd-1.1.8-r1.ebuild, -lighttpd-1.1.8.ebuild,
+  -lighttpd-1.2.2.ebuild, +lighttpd-1.3.10-r1.ebuild,
+  -lighttpd-1.3.10.ebuild:
+  Revision bump; fixed manual page patching which should occur in the -gentoo
+  patch, not the -php patch. Also added some post-1.3.10 upstream fixes and
+  fixed LICENSE.
 
 *lighttpd-1.3.10 (14 Feb 2005)
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.10.ebuild,v 1.1 2005/02/14 11:39:01 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.10-r1.ebuild,v 1.1 2005/02/14 14:48:29 ka0ttic Exp $
 
 inherit eutils confutils
 
 DESCRIPTION="lightweight high-performance web server"
 HOMEPAGE="http://www.lighttpd.net/"
 SRC_URI="http://www.lighttpd.net/download/${P}.tar.gz"
-LICENSE="QPL-1.0"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="mysql ssl php modchat modcache modlocalizer xattr ldap"
@@ -33,7 +33,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-1.1.8-gentoo.diff
+	epatch ${FILESDIR}/${P}-upstream.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 	use php && epatch ${FILESDIR}/${P}-php.diff
 }
 
