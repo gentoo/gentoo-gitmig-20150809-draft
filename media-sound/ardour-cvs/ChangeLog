@@ -1,10 +1,17 @@
 # ChangeLog for media-sound/ardour-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.7 2003/04/12 04:49:25 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.8 2003/05/06 13:26:50 jje Exp $
+
+*ardour-cvs-0.6.4 (06 May 2003)
+
+  06 May 2003; jje <jje@gentoo.org> ardour-cvs-0.6.4.ebuild:
+  Version bump and update pixmaps.
+  
+  Submitted by: Rob Holland and Par Karlsson.
 
 *ardour-cvs-0.6 (06 Jan 2003)
 
-  12 Apr 2003; jje ardour-cvs-0.6.ebuild:
+  12 Apr 2003; jje <jje@gentoo.org> ardour-cvs-0.6.ebuild:
   Added hack to generate version.h
 
   09 Mar 2003; jje <jje@gentoo.org> ardour-cvs-0.6.ebuild:
