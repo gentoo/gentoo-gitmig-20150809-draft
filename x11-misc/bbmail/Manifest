@@ -1,0 +1,6 @@
+MD5 d0757617335189ae4fc8f841c3ea191c ChangeLog 1092
+MD5 399523a50d0b2e8cf4edd91226ed472b bbmail-0.6.11-r2.ebuild 1063
+MD5 71ac3b65b598037b379c4eaeac38eb8d bbmail-0.8.2.ebuild 685
+MD5 e04c9471df8cabb8400bc32d6ec949e5 files/bbmail-qmail.patch 1143
+MD5 c59f54666125ac0b7230c296305ecf9b files/digest-bbmail-0.6.11-r2 64
+MD5 4b83fecd5655b2ab6127c8a38d5a9dbb files/digest-bbmail-0.8.2 64
