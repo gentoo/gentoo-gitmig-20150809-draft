@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.15 2004/10/07 19:19:56 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.16 2004/10/07 21:13:14 radek Exp $
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
 
 # This eclass is designed to streamline the construction of
@@ -112,9 +112,38 @@ zproduct_pkg_prerm()
 	# remove this zproduct from all zinstances.
 	# process zinstance.lst and proceed with zprod-update del
 	debug-print-function ${FUNCNAME} ${*}
-	ewarn "Uninstalling from all zinstances..."
 	ZINST_LST=$(ls /var/lib/zope/)
 	if [ "${ZINST_LST}" ] ; then
+		# first check and warn on any installed products into instances
+		ARE_INSTALLED=0
+		for N in ${ZINST_LST} ; do
+			if [ -s $DOT_ZFOLDER_FPATH ]
+			then
+				# check only if installed product has non empty folder lists
+				#
+				# for every fodler inside product...
+				for PFOLD in `cat $DOT_ZFOLDER_FPATH`
+				do
+					#... check if its in instance.
+					if [ -d "${ZI_DIR}${N}/Products/${PFOLD}" ]
+					then
+						ARE_INSTALLED=$[ARE_INSTALLED + 1]
+					fi
+				done
+			fi
+		done
+		# Info and wait ...
+		if [ $ARE_INSTALLED -gt 0 ]
+		then
+			#TODO: should use ebeep and epause, but i got some inheritance errors on eutils
+			#so as for now i use local version. in futuure we should inherit ueilts
+			ewarn "Detected at least $ARE_INSTALLED copies of product being removed."
+			ewarn "Sleeping 10seconds, please use CTRL+C to abort!"
+			echo -ne "\a"
+			sleep 10
+		fi
+
+		ewarn "Uninstalling from all zinstances..."
 		for N in ${ZINST_LST} ; do
 			${ROOT}/usr/sbin/zprod-manager del ${ZP_DIR}/${PF} ${ZI_DIR}${N}
 		done
