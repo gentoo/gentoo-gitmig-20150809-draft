@@ -1,6 +1,11 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.75 2004/08/02 08:57:01 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.76 2004/08/05 13:40:27 lanius Exp $
+
+*opera-7.54 (05 Aug 2004)
+
+  05 Aug 2004; Heinrich Wendel <lanius@gentoo.org> opera-7.54.ebuild:
+  version bump; mark stable because of security fixes; bug #59503
 
   02 Aug 2004; Heinrich Wendel <lanius@gentoo.org> opera-7.53.ebuild:
   use mirror://
