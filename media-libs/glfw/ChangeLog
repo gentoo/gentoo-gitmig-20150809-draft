@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/glfw
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/ChangeLog,v 1.1 2005/03/09 04:32:56 mr_bones_ Exp $
+
+*glfw-2.4.2 (08 Mar 2005)
+
+  08 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +glfw-2.4.2.ebuild:
+  initial commit - ebuild submitted by Scott 'me22' McMurray via bug #66532
+
