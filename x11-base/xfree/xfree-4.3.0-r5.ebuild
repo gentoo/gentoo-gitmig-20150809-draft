@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.11 2004/04/19 06:14:07 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.12 2004/04/19 06:19:10 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -996,9 +996,9 @@ pkg_preinst() {
 	# will regenerate them
 	for G_FONTDIR in ${G_FONTDIRS}
 	do
-		find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'fonts.*' \
+		find ${ROOT}/usr/X11R6/lib/X11/fonts/${G_FONTDIR} -type f -name 'fonts.*' \
 			-exec rm -f {} \;
-		find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'encodings.dir' \
+		find ${ROOT}/usr/X11R6/lib/X11/fonts/${G_FONTDIR} -type f -name 'encodings.dir' \
 			-exec rm -f {} \;
 	done
 
