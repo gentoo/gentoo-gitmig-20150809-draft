@@ -1,13 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4f366471502dd6fd238db7b719409944 ChangeLog 1218
+MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
+MD5 7f3fcf405b81e047cbd01bcbaf6d06a0 ChangeLog 1309
 MD5 0bebf4027c0c88ef04ad2f27908f9674 spicctrl-1.6.ebuild 579
 MD5 0d7468de1260d5c77dfa75e3f2c7e33a files/digest-spicctrl-1.6 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBW0U/I1lqEGTUzyQRArLXAKC0PoNLnoivr7gL5yHueV9sgbyOsgCg0TH7
-JSyYLmclyJN5MIUcmj0wp1A=
-=skJN
+iD8DBQFBZ5eqFhz/XBeRBtARAoOBAJ0eucmN86HOuh6hNhHcPApx78SFcgCdFJxb
+6MBW8Fo1yElAEK1nLcjRJ9c=
+=GAfv
 -----END PGP SIGNATURE-----
