@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.12.3.ebuild,v 1.3 2004/06/25 00:14:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.12.3.ebuild,v 1.4 2004/07/04 10:59:29 malc Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Stream directory browser for browsing internet radio streams"
 SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
@@ -28,4 +28,6 @@ src_unpack() {
 	cd ${S}
 	# sandbox errors work around
 	gnome2_omf_fix ${S}/help/C/Makefile.in
+	epatch ${FILESDIR}/$P-gcc34.patch
+
 }

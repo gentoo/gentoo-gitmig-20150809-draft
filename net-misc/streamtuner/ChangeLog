@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/streamtuner
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.12 2004/06/25 00:14:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.13 2004/07/04 10:59:29 malc Exp $
+
+  04 Jul 2004; <malc@gentoo.org> streamtuner-0.12.3.ebuild:
+  gcc3.4 compilation patch, fixes bug #54010
 
   24 May 2004; Daniel Ahlberg <aliz@gentoo.org> streamtuner-0.12.3.ebuild:
   Added amd64 keyword, closing #51764.
