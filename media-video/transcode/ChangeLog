@@ -1,6 +1,6 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.31 2003/03/05 18:39:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.32 2003/03/12 22:20:39 mholzer Exp $
 
 *transcode-0.6.3 (24 Feb 2003)
 
@@ -15,6 +15,14 @@
   Version bump. This closes bug #14833.
 
 *transcode-0.6.3.20030116-r1 (13 Feb 2003)
+
+  12 Mar 2003; root <root@gentoo.org> transcode-0.6.2.20021114.ebuild,
+  transcode-0.6.2.20021114.ebuild, transcode-0.6.3.20021205-r1.ebuild,
+  transcode-0.6.3.20021205-r1.ebuild, transcode-0.6.3.20021219.ebuild,
+  transcode-0.6.3.20021219.ebuild, transcode-0.6.3.20030116-r1.ebuild,
+  transcode-0.6.3.20030116-r1.ebuild, transcode-0.6.3.20030116.ebuild,
+  transcode-0.6.3.20030116.ebuild:
+  cleanup
 
   24 Feb 2003; phoen][x <phoenix@gentoo.org> :
   Ebuild has been masked (it'll be deleted later) to avoid
