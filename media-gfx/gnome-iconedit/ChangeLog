@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/gnome-iconedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/ChangeLog,v 1.6 2003/02/12 07:00:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/ChangeLog,v 1.7 2003/02/15 20:24:32 weeve Exp $
 
 *gnome-iconedit-1.2.0-r5 (1 May 2002)
+
+  15 Feb 2003; Weeve,,, <weeve@gentoo.org> gnome-iconedit-1.2.0-r5.ebuild :
+  Added sparc to keywords.
 
   19 Sep 2002; Olivier Reisch <doctomoe@gentoo.org> gnome-iconedit-1.2.0-r5.ebuild:
   Added ppc keyword
