@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.5.ebuild,v 1.2 2004/03/07 17:13:13 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.5.ebuild,v 1.3 2004/04/08 17:39:44 dmwaters Exp $
 
 IUSE="ssl nls ipv6"
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${PN}${PV//./-}
 DESCRIPTION="An excellent console-based web browser with ssl support"
 HOMEPAGE="http://lynx.browser.org/"
 SRC_URI="ftp://lynx.isc.org/lynx/${PN}2.8.5/${PN}${PV}.tar.bz2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 ~amd64 ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 ~amd64 ppc64"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -41,6 +41,7 @@ src_compile() {
 	econf \
 		--libdir=/etc/lynx \
 		--enable-cgi-links \
+		--enable-EXP_PERSISTENT_COOKIES \
 		--enable-prettysrc \
 		--enable-nsl-fork \
 		--enable-file-upload \

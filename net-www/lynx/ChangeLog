@@ -1,6 +1,12 @@
 # ChangeLog for net-www/lynx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.29 2004/03/15 09:56:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.30 2004/04/08 17:39:44 dmwaters Exp $
+
+  08 Apr 2004; Deedra Waters,,, <dmwaters@gentoo.org> lynx-2.8.5.ebuild:
+  Marked 2.8.5 2.8.5 stable on x86. Gave it a metadata.xml listing me as the
+  maintainer since it doesn't have a regular maintainer. Added
+  --enable-EXP_PERSISTENT_COOKIES--enable-EXP_PERSISTENT_COOKIES in the econf
+  part of the ebuild so that lynx could handle certain webpages's cookies.
 
   15 Mar 2004; Joshua Kinard <kumba@gentoo.org> lynx-2.8.4.1d-r1.ebuild:
   Marked stable on mips.
