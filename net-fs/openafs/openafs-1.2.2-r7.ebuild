@@ -15,6 +15,7 @@ extensive UNIX environment for accessing files easily and quickly."
 
 SRC_URI="http://www.openafs.org/dl/openafs/1.2.2/openafs-1.2.2-src.tar.bz2"
 HOMEPAGE="http://www.openafs.org/"
+LICENSE="IPL-1"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2

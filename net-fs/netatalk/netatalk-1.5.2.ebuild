@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.5.2.ebuild,v 1.3 2002/04/27 13:34:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.5.2.ebuild,v 1.4 2002/07/08 08:13:59 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="kernel level implementation of the AppleTalk Protocol Suite"
 SRC_URI="http://download.sourceforge.net/netatalk/${P}.tar.gz"
 HOMEPAGE="http://netatalk.sourceforge.net"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	pam? ( sys-libs/pam )

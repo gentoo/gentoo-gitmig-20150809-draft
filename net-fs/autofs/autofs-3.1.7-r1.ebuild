@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r1.ebuild,v 1.4 2001/08/24 14:42:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r1.ebuild,v 1.5 2002/07/08 08:13:59 aliz Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -9,6 +9,7 @@ DESCRIPTION="Automounter"
 SRC_URI="ftp://ftp.kernel.org/pub/linux/daemons/autofs/${A}
 	 ftp://ftp.de.kernel.org/pub/linux/daemons/autofs/${A}
 	 ftp://ftp.uk.kernel.org/pub/linux/daemons/autofs/${A}"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
         ldap? ( ~net-nds/openldap-1.2 )"
