@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.6 2004/06/24 23:52:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.7 2004/07/25 19:32:24 carlo Exp $
+
+  25 Jul 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  knutclient-0.8.1_pre2.ebuild:
+  fixed ${S}, missing metadata.xml
 
   27 May 2004; Jason Wever <weeve@gentoo.org> knutclient-0.7.1.ebuild:
   Added ~sparc keyword.
