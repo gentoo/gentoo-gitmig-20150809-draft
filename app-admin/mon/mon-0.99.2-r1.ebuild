@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r1.ebuild,v 1.13 2003/12/17 03:39:50 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r1.ebuild,v 1.14 2004/03/12 05:44:40 mr_bones_ Exp $
 
 DESCRIPTION="highly configurable service monitoring daemon"
 SRC_URI="mirror://kernel/software/admin/mon/${P}.tar.bz2"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.kernel.org/software/mon/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ppc64"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND=">=dev-perl/Mon-0.9
 	>=dev-perl/Time-HiRes-01.20
