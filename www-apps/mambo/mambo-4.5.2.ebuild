@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.2.ebuild,v 1.1 2005/02/21 21:39:42 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.2.ebuild,v 1.2 2005/02/25 10:18:55 beu Exp $
 
 inherit webapp eutils
 
@@ -37,8 +37,7 @@ src_install () {
 	webapp_src_preinst
 	local files="administrator/backups administrator/components components images media language modules templates"
 
-	dodoc documentation/Changelog INSTALL
-	dohtml documentation/Install.html
+	dodoc CHANGELOG INSTALL
 
 	cp -R [^d]* ${D}/${MY_HTDOCSDIR}
 
