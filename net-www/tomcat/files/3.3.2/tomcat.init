@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/files/3.3.2/tomcat.init,v 1.1 2004/07/27 13:05:00 axxo Exp $
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/files/3.3.2/tomcat.init,v 1.2 2004/07/27 15:14:12 axxo Exp $
 
 depend() {
 	need net
