@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/xscreensaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/ChangeLog,v 1.13 2002/06/11 11:11:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/ChangeLog,v 1.14 2002/06/24 02:00:58 spider Exp $
 
-
+xscreensaver-4.05 (22 Jun 2002)
+  22 Jun 2002; Spider <spider@gentoo.org> xscreensaver-4.05-r1.ebuild :
+  since I can't find how the .desktop is installed properly, I hacked around it with a use gnome () statement.  works.
+  
 *xscreensaver-4.05 (11 Jun 2002)
 
   11 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
