@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r3.ebuild,v 1.2 2005/01/31 21:54:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r3.ebuild,v 1.3 2005/02/10 01:53:32 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -74,10 +74,9 @@ src_unpack() {
 		-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
 		qmake.conf
 	cd ${S}
-#	epatch ${FILESDIR}/qt4b1.patch
+
 	epatch ${FILESDIR}/qt4b1_20041228.patch
 	epatch ${FILESDIR}/qt4-rpath.patch
-#	epatch ${FILESDIR}/qt4-qtprf.patch
 
 	sed -i -e "s:CFG_REDUCE_EXPORTS=auto:CFG_REDUCE_EXPORTS=no:" configure
 }
