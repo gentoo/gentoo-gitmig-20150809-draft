@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6i.ebuild,v 1.2 2003/02/21 14:34:04 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6i.ebuild,v 1.3 2003/02/22 00:35:21 zwelch Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
@@ -11,7 +11,7 @@ RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND} >=sys-devel/perl-5"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc mips hppa"
+KEYWORDS="x86 ppc alpha sparc mips hppa arm"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -25,7 +25,7 @@ src_unpack() {
         fi
 
     # many apps linking to openssl needs -fPIC
-	if [ "${ARCH}" = "hppa" ]
+	if [ "${ARCH}" = "hppa" -o "${ARCH}" = "arm" ]
 	then
 		CFLAGS="${CFLAGS} -fPIC"
 	fi
