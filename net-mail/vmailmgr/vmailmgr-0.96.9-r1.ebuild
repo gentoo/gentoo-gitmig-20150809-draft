@@ -1,9 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.4 2002/07/11 06:30:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.5 2002/07/17 05:26:37 seemant Exp $
 
 S=${WORKDIR}/${P}
-
 DESCRIPTION="vmailmgr - virtual domains for qmail"
 SRC_URI="http://www.vmailmgr.org/current/${P}.tar.gz"
 HOMEPAGE="http://www.vmailmgr.org"
@@ -12,6 +11,10 @@ DEPEND="virtual/glibc"
 RDEPEND=">=sys-apps/ucspi-unix-0.34
 	>=net-mail/qmail-1.03-r7
 	>=net-mail/qmail-autoresponder-0.95"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

@@ -1,17 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.3.ebuild,v 1.4 2002/07/11 06:30:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.3.ebuild,v 1.5 2002/07/17 05:26:37 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tiny POP3 server"
-SRC_URI="ftp://ftp.toontown.org/pub/teapop/teapop-0.3.3.tar.gz"
+SRC_URI="ftp://ftp.toontown.org/pub/teapop/${P}.tar.gz"
 HOMEPAGE="http://www.toontown.org/teapop/"
 DEPEND=""
 
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86"
+
 src_compile() {
 	local myconf 
-	use mysql && myconf="$myconf --enable-mysql"
-	use postgres && myconf="$myconf --enable-pgsql"
+	use mysql && myconf="${myconf} --enable-mysql"
+	use postgres && myconf="${myconf} --enable-pgsql"
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
@@ -22,7 +26,7 @@ src_compile() {
 		--enable-mailsppol=/var/spool/mail \
 		--mandir=/usr/share/man \
 		--enable-apop \
-		$myconf || die "./configure failed"
+		${myconf} || die "./configure failed"
 	emake || die
 }
 

@@ -1,20 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spruce/spruce-0.7.6-r2.ebuild,v 1.5 2002/07/11 06:30:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spruce/spruce-0.7.6-r2.ebuild,v 1.6 2002/07/17 05:26:37 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk email client"
 SRC_URI="ftp://spruce.sourceforge.net/pub/spruce/devel/${P}.tar.gz"
 HOMEPAGE="http://spruce.sourceforge.net/"
 
-RDEPEND="=x11-libs/gtk+-1.2*
+DEPEND="=x11-libs/gtk+-1.2*
 	gnome-base/libglade
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	crypt? ( app-crypt/gnupg )
 	gnome? ( >=gnome-base/gnome-print-0.29-r1 )"
 
-DEPEND="$RDEPEND
-        nls? ( sys-devel/gettext )"
+RDEPEND="nls? ( sys-devel/gettext )"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}
@@ -23,43 +26,36 @@ src_unpack() {
 }
 
 src_compile() {
-	local myopts
+	local myconf
 
 	use nls \
-		|| myopts="--disable-nls"
+		|| myconf="--disable-nls"
 
 	use ssl \
 		&& echo "SSL does not work"
-		#  myopts="$myopts --with-ssl"
+		#  myconf="${myconf} --with-ssl"
 
 	use crypt \
-		&& myopts="$myopts --enable-pgp" \
-		|| myopts="$myopts --disable-pgp"
+		&& myconf="${myconf} --enable-pgp" \
+		|| myconf="${myconf} --disable-pgp"
 
 	use gnome \
-		&& myopts="$myopts --enable-gnome"
+		&& myconf="${myconf} --enable-gnome"
 
 	CFLAGS="${CFLAGS} `gnome-config --cflags print gdk_pixbuf`"
 
-	./configure --host=${CHOST} 					\
-		    --prefix=/usr					\
-		    --sysconfdir=/etc					\
-		    --localstatedir=/var/lib				\
-		    --mandir=/usr/share/man				\
-		    --infodir=/usr/share/info				\
-	 	    ${myopts} || die
-
+	econf ${myconf} || die
 	emake || die
 }
 
 src_install () {
 	# Don't use DESTDIR, it doesn't follow the rules
-	make prefix=${D}/usr						\
-	     sysconfdir=${D}/etc					\
-	     localstatedir=${D}/var/lib					\
-	     mandir=${D}/usr/share/man					\
-	     infodir=${D}/usr/share/info				\
+	make prefix=${D}/usr \
+	     sysconfdir=${D}/etc \
+	     localstatedir=${D}/var/lib \
+	     mandir=${D}/usr/share/man \
+	     infodir=${D}/usr/share/info \
 	     install || die
 
-	dodoc ChangeLog README README.firewall INSTALL
+	dodoc ChangeLog README* AUTHORS DESIGN NEWS THANKS TODO WISHLIST
 }
