@@ -1,7 +1,11 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.14 2002/06/18 01:36:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.15 2002/06/28 07:16:45 spider Exp $
 
+gconf-1.2.0-r2 (28 jun 2002)
+  28 Jun 2002; Spider <spider@gentoo.org> gconf-1.2.0-r2.ebuild :
+  added a dep for gtk-doc to see if it helps
+  
 gconf-1.2.0-r1 (14 Jun 2002)
   14 Jun 2002; Spider <spider@gentoo.org> gconf-1.2.0-r1.ebuild :
   add a /etc/env.d/50gconf entry with config_protect_mask
