@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/cbqinit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/ChangeLog,v 1.8 2004/06/24 23:38:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/ChangeLog,v 1.9 2004/07/29 14:42:11 phosphan Exp $
+
+*cbqinit-0.7.3 (29 Jul 2004)
+
+  29 Jul 2004; Patrick Kursawe <phosphan@gentoo.org> +files/rc_cbqinit-r1,
+  +cbqinit-0.7.3.ebuild:
+  Version bump, stopping the init script does not fail any more (as it always
+  did before)
 
   07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> cbqinit-0.7.2.ebuild:
   Stable on alpha.
