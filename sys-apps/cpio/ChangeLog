@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/cpio
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/ChangeLog,v 1.12 2003/02/24 22:34:58 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/ChangeLog,v 1.13 2003/03/01 19:08:46 lostlogic Exp $
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords
@@ -14,6 +14,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *cpio-2.5 (19 Nov 2002)
+
+  01 Mar 2003; Brandon Low <lostlogic@gentoo.org> cpio-2.5.ebuild:
+  Move to stable on x86 (bug 16360), works here, among other places.
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> cpio-2.5.ebuild :
   Marked as stable for mips.
