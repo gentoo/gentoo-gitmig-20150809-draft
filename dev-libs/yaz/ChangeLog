@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yaz
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.6 2004/01/24 12:27:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.7 2004/01/27 15:16:20 gustavoz Exp $
+
+  27 Jan 2004; <gustavoz@gentoo.org> yaz-2.0.8.ebuild:
+  marked stable on sparc to fix dep problem with php/mod_php
 
   24 Jan 2004; <gustavoz@gentoo.org> yaz-2.0.8.ebuild:
   keyworded ~sparc
