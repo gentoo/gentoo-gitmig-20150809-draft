@@ -1,0 +1,13 @@
+--- Makefile.orig	2002-05-14 19:32:44.000000000 +0200
++++ Makefile	2002-05-14 19:35:37.000000000 +0200
+@@ -29,6 +29,7 @@
+ 	rm -f *.o core *~
+ 
+ install:
+-	install libdspectogram.so $(INSTALL-DIR)
+-	mkdir -p $(XMMS_DATADIR)/$(THEME_SUBDIR)
+-	install bg_*.xpm $(XMMS_DATADIR)/$(THEME_SUBDIR)
++	mkdir -p $(DESTDIR)/$(INSTALL-DIR)
++	install libdspectogram.so $(DESTDIR)$(INSTALL-DIR)
++	mkdir -p $(DESTDIR)$(XMMS_DATADIR)/$(THEME_SUBDIR)
++	install bg_*.xpm $(DESTDIR)$(XMMS_DATADIR)/$(THEME_SUBDIR)
