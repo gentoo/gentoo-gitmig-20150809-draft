@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/horde-imp-3.2.2.ebuild,v 1.1 2003/09/11 19:13:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/horde-imp-3.2.2.ebuild,v 1.2 2003/10/07 17:57:30 mholzer Exp $
 
 DESCRIPTION="IMP ${PV} provides webmail access"
 HOMEPAGE="http://www.horde.org"
@@ -53,6 +53,9 @@ src_install () {
 		GID=81
 	fi
 
+	dodoc COPYING README docs/*
+	rm -rf COPYING README docs
+
 	find_http_root
 
 	dodir ${HTTPD_ROOT}/horde/imp
@@ -68,5 +71,5 @@ pkg_postinst() {
 
 	find_http_root
 
-	einfo "Please read ${HTTPD_ROOT}/horde/imp/docs/INSTALL !"
+	einfo "Please read /usr/share/doc/${PF}/INSTALL.gz !"
 }
