@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.108 2005/01/23 10:02:36 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.109 2005/01/23 23:50:30 suka Exp $
+
+  24 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
+  files/1.1.4/ooffice-wrapper-1.3:
+  Remove unused UPDATEFLAG from wrapper
 
   23 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
   files/1.1.4/ooffice-wrapper-1.3:
