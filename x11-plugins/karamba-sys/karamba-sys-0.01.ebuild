@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-sys/karamba-sys-0.01.ebuild,v 1.4 2004/02/28 17:58:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-sys/karamba-sys-0.01.ebuild,v 1.5 2004/03/26 23:10:07 aliz Exp $
 
+IUSE=""
 DESCRIPTION="Disk Usage plugin for Karamba"
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=5823"
 SRC_URI="http://mgoransson.com/GENTOO/KDE/karamba_sys.tar.gz"

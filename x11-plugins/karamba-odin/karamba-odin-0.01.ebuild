@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-odin/karamba-odin-0.01.ebuild,v 1.3 2004/02/28 17:58:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-odin/karamba-odin-0.01.ebuild,v 1.4 2004/03/26 23:10:06 aliz Exp $
 
+IUSE=""
 DESCRIPTION="Disk/floppy/CD status plugin for Karamba"
 HOMEPAGE="http://www.kdelook.org/content/show.php?content=5820"
 SRC_URI="http://www.kdelook.org/content/files/5820-karamba_odin.tar.bz2"

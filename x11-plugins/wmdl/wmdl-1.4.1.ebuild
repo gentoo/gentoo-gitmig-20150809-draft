@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdl/wmdl-1.4.1.ebuild,v 1.6 2004/03/19 10:04:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdl/wmdl-1.4.1.ebuild,v 1.7 2004/03/26 23:10:07 aliz Exp $
 
 inherit eutils
 
-S="${WORKDIR}/${P}"
-
+IUSE=""
 DESCRIPTION="WindowMaker Doom Load dockapp"
 HOMEPAGE="http://the.homepage.doesnt.appear.to.exist.anymore.com"
 SRC_URI="http://www.ibiblio.org/pub/linux/distributions/gentoo/distfiles/${P}.tar.gz"

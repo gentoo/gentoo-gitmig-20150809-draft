@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/wmalms-1.0.0a-r1.ebuild,v 1.6 2003/12/26 17:23:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/wmalms-1.0.0a-r1.ebuild,v 1.7 2004/03/26 23:10:07 aliz Exp $
 
-S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="wmalms X-windows hardware sensors applet"
 HOMEPAGE="http://www.geocities.com/wmalms"
 SRC_URI="http://www.geocities.com/wmalms/wmalms-1.0.0a.tar.gz"

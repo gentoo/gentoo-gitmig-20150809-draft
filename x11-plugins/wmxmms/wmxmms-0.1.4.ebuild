@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/wmxmms-0.1.4.ebuild,v 1.3 2004/02/17 07:48:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/wmxmms-0.1.4.ebuild,v 1.4 2004/03/26 23:10:16 aliz Exp $
 
+IUSE=""
 MY_P=${P/wm/WM}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="WMaker DockApp: XMMS Control App"

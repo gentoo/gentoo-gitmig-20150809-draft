@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcp/wmcp-1.2.8.ebuild,v 1.6 2004/02/17 07:52:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcp/wmcp-1.2.8.ebuild,v 1.7 2004/03/26 23:10:07 aliz Exp $
 
 inherit eutils
 
 IUSE=""
-
-S=${WORKDIR}/${P}
 DESCRIPTION="A pager dockapp"
 HOMEPAGE="http://www.dockapps.com/file.php/id/158"
 SRC_URI="http://linux-sea.tucows.webusenet.com/files/x11/dock/${P}.tar.gz"

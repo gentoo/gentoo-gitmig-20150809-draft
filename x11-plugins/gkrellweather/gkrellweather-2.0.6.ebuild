@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.6.ebuild,v 1.7 2004/02/07 00:48:30 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.6.ebuild,v 1.8 2004/03/26 23:10:06 aliz Exp $
 
-S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="GKrellM2 Plugin that monitors a METAR station and displays weather
 info"
 SRC_URI="http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/${P}.tgz"

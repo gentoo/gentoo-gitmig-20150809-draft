@@ -1,9 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.7.ebuild,v 1.4 2004/02/25 23:19:44 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.7.ebuild,v 1.5 2004/03/26 23:10:08 aliz Exp $
 
-S="${WORKDIR}/${P}"
-
+IUSE=""
 DESCRIPTION="WindowMaker Network Devices (dockapp)"
 HOMEPAGE="http://www.yuv.info/wmnd/"
 SRC_URI="ftp://ftp.yuv.info/pub/wmnd/releases/${P}.tar.gz"

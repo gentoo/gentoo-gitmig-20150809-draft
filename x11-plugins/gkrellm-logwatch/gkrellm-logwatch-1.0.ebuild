@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-logwatch/gkrellm-logwatch-1.0.ebuild,v 1.5 2003/02/13 17:23:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-logwatch/gkrellm-logwatch-1.0.ebuild,v 1.6 2004/03/26 23:10:05 aliz Exp $
 
+IUSE=""
 MY_P=${P/krellm-/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A Gkrellm plugin that tracks a log file."

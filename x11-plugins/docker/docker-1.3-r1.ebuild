@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/docker/docker-1.3-r1.ebuild,v 1.1 2004/02/07 04:30:15 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/docker/docker-1.3-r1.ebuild,v 1.2 2004/03/26 23:10:05 aliz Exp $
 
-S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="Openbox app which acts as a system tray for KDE and GNOME2"
 SRC_URI="http://icculus.org/openbox/docker/${P}.tar.gz"
 HOMEPAGE="http://icculus.org/openbox/docker/"

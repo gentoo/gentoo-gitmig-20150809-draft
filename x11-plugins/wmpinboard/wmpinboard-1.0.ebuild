@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpinboard/wmpinboard-1.0.ebuild,v 1.7 2003/10/16 16:10:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpinboard/wmpinboard-1.0.ebuild,v 1.8 2004/03/26 23:10:10 aliz Exp $
 
-S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="Window Maker dock applet resembling a miniature pinboard."
 SRC_URI="http://www.tu-ilmenau.de/~gomar/stuff/wmpinboard/${P}.tar.bz2"
 HOMEPAGE="http://www.tu-ilmenau.de/~gomar/stuff/wmpinboard"

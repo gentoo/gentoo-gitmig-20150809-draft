@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bfm/gkrellm-bfm-0.5.1.ebuild,v 1.7 2003/02/13 17:23:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bfm/gkrellm-bfm-0.5.1.ebuild,v 1.8 2004/03/26 23:10:05 aliz Exp $
 
+IUSE=""
 S=${WORKDIR}/bfm-${PV}
 DESCRIPTION="A Gkrellm bubblefishymon plugin that monitors things on your machine"
 SRC_URI="http://pigeond.net/bfm/bfm-${PV}.tar.bz2"

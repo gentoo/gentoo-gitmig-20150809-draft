@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ascpu/ascpu-1.9.ebuild,v 1.8 2004/03/17 21:48:30 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ascpu/ascpu-1.9.ebuild,v 1.9 2004/03/26 23:10:05 aliz Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="CPU statistics monitor utility for X Windows"
 SRC_URI="http://www.tigr.net/afterstep/download/ascpu/${P}.tar.gz"
 HOMEPAGE="http://www.tigr.net"

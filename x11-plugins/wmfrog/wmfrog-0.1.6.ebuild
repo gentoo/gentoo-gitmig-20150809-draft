@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfrog/wmfrog-0.1.6.ebuild,v 1.1 2003/12/25 22:00:16 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfrog/wmfrog-0.1.6.ebuild,v 1.2 2004/03/26 23:10:07 aliz Exp $
 
+IUSE=""
 DESCRIPTION="This is a weather application, it shows the weather in a graphical way."
 SRC_URI="http://www.colar.net/wmapps/wmFrog-${PV}.tgz"
 HOMEPAGE="http://www.colar.net/wmapps/"

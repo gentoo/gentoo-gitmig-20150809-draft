@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkacpi/gkacpi-0.5.ebuild,v 1.5 2003/10/06 06:56:34 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkacpi/gkacpi-0.5.ebuild,v 1.6 2004/03/26 23:10:05 aliz Exp $
 
-S="${WORKDIR}/${P}"
+IUSE=""
 DESCRIPTION="ACPI monitor for Gkrellm"
 SRC_URI="http://uname.dyndns.org/~uname/files/gkacpi/${P}.tar.gz"
 HOMEPAGE="http://uname.dyndns.org/~uname/software.php"

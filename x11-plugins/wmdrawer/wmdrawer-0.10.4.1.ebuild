@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/wmdrawer-0.10.4.1.ebuild,v 1.3 2004/03/15 12:59:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/wmdrawer-0.10.4.1.ebuild,v 1.4 2004/03/26 23:10:07 aliz Exp $
 
 IUSE=""
-S=${WORKDIR}/${P}
-
 DESCRIPTION="wmDrawer is a dock application (dockapp) which provides a drawer (retractable button bar) to launch applications"
 SRC_URI="http://people.easter-eggs.org/~valos/wmdrawer/${P}.tar.gz"
 HOMEPAGE="http://people.easter-eggs.org/~valos/wmdrawer/"

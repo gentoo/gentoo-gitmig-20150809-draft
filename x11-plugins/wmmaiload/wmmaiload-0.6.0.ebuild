@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Ebuild by AutoBot (autobot@midsouth.rr.com)
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/wmmaiload-0.6.0.ebuild,v 1.5 2004/03/13 20:46:01 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/wmmaiload-0.6.0.ebuild,v 1.6 2004/03/26 23:10:08 aliz Exp $
 
-S=${WORKDIR}/${P}
-
+IUSE=""
 DESCRIPTION="dockapp that monitors one or more mailboxes."
 SRC_URI="http://tnemeth.free.fr/projets/programmes/${P}.tar.gz"
 HOMEPAGE="http://tnemeth.free.fr/projets/dockapps.html"

@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-seti/gkrellm-seti-0.7.0b-r1.ebuild,v 1.3 2004/02/28 17:58:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-seti/gkrellm-seti-0.7.0b-r1.ebuild,v 1.4 2004/03/26 23:10:05 aliz Exp $
 
+IUSE=""
 S=${WORKDIR}/${P//gkrellm-}
 DESCRIPTION="a Seti@Home Monitor Plugin for Gkrellm"
 SRC_URI="http://xavier.serpaggi.free.fr/seti/${P//gkrellm-}.tar.bz2 http://xavier.serpaggi.free.fr/seti/GKrellM_seti_plugin_GTK+2.tgz"

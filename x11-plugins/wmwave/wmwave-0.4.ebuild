@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwave/wmwave-0.4.ebuild,v 1.1 2003/12/14 05:07:08 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwave/wmwave-0.4.ebuild,v 1.2 2004/03/26 23:10:15 aliz Exp $
 
+IUSE=""
 S="${WORKDIR}/wmwave"
 KEYWORDS="~ppc ~x86"
 DESCRIPTION="wmwave is a windom manager dockapp which displays the quality, link, level and noise of an iee802.11 (wavelan) link."
