@@ -1,4 +1,5 @@
-MD5 8a4995a33fcb6a38e934c4a79f90e87e ChangeLog 13051
+MD5 d6305fe4aeb782c75e2d89731552be57 genkernel-3.1.6.ebuild 1638
+MD5 628704da0fa5ef3c0e33f9885c650afb ChangeLog 13161
 MD5 697bdc27694bc88ad6d20ed2b7041008 genkernel-1.8.ebuild 663
 MD5 1276ab96d4127d4fd0ea6d67244083bd genkernel-2.1.ebuild 1006
 MD5 40936e9063143ed6e5c22c8c29a8f013 genkernel-3.0.1.ebuild 765
@@ -21,3 +22,4 @@ MD5 dd2611bb1ae0689fbbb0ecdbca6e0cec files/bin-keymaps.tar.gz 17054
 MD5 85c20772dc52cc678fad96d09ebc44e2 files/digest-genkernel-1.8 66
 MD5 98fc638bf0e5dad6ba7e8ad55d416260 files/digest-genkernel-3.0.2 69
 MD5 5ec6b85eeb6dbc66e07879f057210e23 files/digest-genkernel-3.1.1b 270
+MD5 4dda22f8c6f55619f9a595b4f68615a9 files/digest-genkernel-3.1.6 269
