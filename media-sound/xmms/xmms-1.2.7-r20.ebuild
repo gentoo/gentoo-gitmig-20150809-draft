@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r20.ebuild,v 1.7 2003/09/07 00:06:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r20.ebuild,v 1.8 2003/09/08 09:40:13 msterret Exp $
 
 inherit libtool flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -68,10 +68,9 @@ src_unpack() {
 	# the Japanese patch and the Russian one overlap, so its one of the other
 	if use cjk; then
 		epatch ${FILESDIR}/${P}-mpg123j.patch
-        else
-                # add russian charset support
-                epatch ${FILESDIR}/xmms-russian-charset.patch
-
+	else
+		# add russian charset support
+		epatch ${FILESDIR}/xmms-russian-charset.patch
 	fi
 
 	if [ ! -f ${S}/config.rpath ] ; then
