@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.9 2003/09/24 19:50:51 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.10 2003/09/28 05:20:56 obz Exp $
+
+*gdesklets-core-0.22 (28 Sep 2003)
+
+  28 Sep 2003; Mike Gardiner <obz@gentoo.org> gdesklets-core-0.22.ebuild:
+  New version, this one includes both the external and the fontselector sensors
 
   24 Sep 2003; Todd Sunderlin <todd@gentoo.org> gdesklets-core-0.21.2.ebuild:
   added ~sparc keyword
