@@ -3,8 +3,8 @@ MD5 9002e4a8f3c814e7bbb8f1abdeccd217 libgcrypt-1.1.12.ebuild 1132
 MD5 ecdc2a61e94402741d64e37d35c8d8c7 libgcrypt-1.1.91.ebuild 752
 MD5 f0a8062f23b497a4f1381026034fc01a libgcrypt-1.1.92.ebuild 963
 MD5 e7cc39058b6e7f07ec3c3310506249a8 libgcrypt-1.1.94.ebuild 977
-MD5 a77ac74bd3206b1ec8e1f13c52649dad libgcrypt-1.2.0.ebuild 1000
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+MD5 324a92eddbbae7d3c606957b47c3d6a4 libgcrypt-1.2.0.ebuild 1030
 MD5 9bf9811b5db655640e7f280bb9bab24c files/digest-libgcrypt-1.1.12 68
 MD5 eb84241995268ddf928f15c1fc43f5ff files/digest-libgcrypt-1.1.91 68
 MD5 90f8d641fd24175958583ca806913d81 files/digest-libgcrypt-1.1.92 68

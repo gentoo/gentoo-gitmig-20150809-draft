@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.0.ebuild,v 1.9 2004/08/19 02:11:38 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.0.ebuild,v 1.10 2004/08/19 02:20:57 pvdabeel Exp $
 
 DESCRIPTION="general purpose crypto library based on the code used in GnuPG"
 HOMEPAGE="http://www.gnupg.org/"
@@ -24,7 +24,10 @@ src_install() {
 	dodoc AUTHORS BUGS ChangeLog COPYING* NEWS README* THANKS TODO VERSION
 
 	# backwards compat symlinks
-	ln -s libgcrypt.so.11 ${D}/usr/lib/libgcrypt.so.7
-	ln -s libgcrypt-pth.so.11 ${D}/usr/lib/libgcrypt-pth.so.7
-	ln -s libgcrypt-pthread.so.11 ${D}/usr/lib/libgcrypt-pthread.so.7
+	if ! use macos
+	then
+		ln -s libgcrypt.so.11 ${D}/usr/lib/libgcrypt.so.7
+		ln -s libgcrypt-pth.so.11 ${D}/usr/lib/libgcrypt-pth.so.7
+		ln -s libgcrypt-pthread.so.11 ${D}/usr/lib/libgcrypt-pthread.so.7
+	fi
 }
