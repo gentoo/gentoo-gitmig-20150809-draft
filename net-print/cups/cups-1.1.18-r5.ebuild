@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.18-r5.ebuild,v 1.2 2003/06/14 19:32:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.18-r5.ebuild,v 1.3 2003/06/17 18:24:08 woodchip Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,25 +30,17 @@ KEYWORDS="x86 ppc sparc alpha hppa"
 filter-flags -fomit-frame-pointer
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack ${A} || die
+	cd ${S} || die
 
 	epatch ${FILESDIR}/${P}-str75.patchv2
 
 	#make sure libcupsimage gets linked with libjpeg 
 	epatch ${FILESDIR}/configure-jpeg-buildfix-1.1.15.diff || die
+
 	epatch ${FILESDIR}/disable-strip.patch || die
 
-#	bzip2 -dc ${DISTDIR}/${PPATCH}.diff.bz2 | patch -p1 || die
 	WANT_AUTOCONF_2_5=1 autoconf || die
-
-	#known problem, probably will be fixed next release //woodchip; #9188
-	#covered by above patch...
-#	cd pdftops && cp Makefile Makefile.orig
-#	sed -e 's|FTFont.o||' \
-#		-e 's|SFont.o||' \
-#		-e 's|T1Font.o||' \
-#		-e 's|TTFont.o||' Makefile.orig > Makefile
 }
 
 src_compile() {
@@ -63,7 +55,6 @@ src_compile() {
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 
 	make || die "compile problem"
-
 }
 
 src_install() {
@@ -94,8 +85,9 @@ src_install() {
 	dodoc {CHANGES,CREDITS,ENCRYPTION,LICENSE,README}.txt
 	dosym /usr/share/cups/docs /usr/share/doc/${PF}/html
 
-	fowners lp.root /usr/bin/lppasswd
-	fperms 4755 /usr/bin/lppasswd
+	#seems nobody installs it like this anymore.. security risk?
+	#fowners lp.root /usr/bin/lppasswd
+	#fperms 4755 /usr/bin/lppasswd
 
 	# cleanups
 	rm -rf ${D}/etc/init.d
