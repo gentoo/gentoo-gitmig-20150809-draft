@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.3 2004/08/22 11:27:09 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.4 2005/03/14 19:39:55 mattam Exp $
 
 IUSE="debug doc glade gnome opengl svg"
 
@@ -15,8 +15,7 @@ DEPEND=">=x11-libs/gtk+-2.4*
 	glade? ( >=gnome-base/libglade-2.0.1 )
 	gnome? ( >=gnome-base/libgnomecanvas-2.2
 		>=gnome-base/gnome-panel-2.4.0
-		>=gnome-base/libgnomeui-2.4.0
-		media-libs/gdk-pixbuf )
+		>=gnome-base/libgnomeui-2.4.0 )
 	opengl? ( >=dev-ml/lablgl-0.98
 		>=x11-libs/gtkglarea-1.9* )"
 
