@@ -1,8 +1,14 @@
 # ChangeLog for app-editors/gedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.37 2003/09/08 15:19:07 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.38 2003/09/11 15:08:26 obz Exp $
 
-  08 Sep 2003; <spider@gentoo.org> gedit-2.3.5.ebuild:
+*gedit-2.4.0 (11 Sep 2003)
+
+  11 Sep 2003; Mike Gardiner <obz@gentoo.org> gedit-2.3.5.ebuild,
+  gedit-2.4.0.ebuild:
+  New version, tweaked deps in line with configure.in. Removed 2.4_rc1 version
+
+  08 Sep 2003; Spider <spider@gentoo.org> gedit-2.3.5.ebuild:
   Dependencytweaking
 
 *gedit-2.3.5 (07 Sep 2003)
