@@ -604,7 +604,6 @@ sys-kernel/linux-sources-vanilla
 <sys-devel/autoconf-2.53a
 
 # broken
-app-admin/powertweak
 app-text/sgml2x
 >=app-admin/modlogan-0.7.4 (achim)
 
