@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-3.0.1-r1.ebuild,v 1.7 2004/06/24 22:32:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-3.0.1-r1.ebuild,v 1.8 2004/08/17 21:04:23 swegener Exp $
 
 inherit eutils
 
@@ -8,7 +8,8 @@ IUSE=""
 
 DESCRIPTION="The Vixie cron daemon"
 HOMEPAGE="http://www.vix.com/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	mirror://gentoo/${P}-gentoo.patch.bz2"
 
 SLOT="0"
 LICENSE="as-is"
@@ -27,7 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch ${WORKDIR}/${P}-gentoo.patch
 
 	sed -i "s:-O2:${CFLAGS}:" Makefile
 }
