@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.60.ebuild,v 1.1 2004/05/21 17:31:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.60.ebuild,v 1.2 2004/05/25 12:34:46 carlo Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ MY_P=${P}-gpl-1.3
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="QScintilla is a port to Qt of Neil Hodgson's Scintilla C++ editor class."
-SRC_URI="http://www.river-bank.demon.co.uk/download/QScintilla/${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/qscintilla/"
 
 SLOT="0"
