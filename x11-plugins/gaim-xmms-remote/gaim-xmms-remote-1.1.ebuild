@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-xmms-remote/gaim-xmms-remote-1.1.ebuild,v 1.4 2004/06/01 04:48:58 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-xmms-remote/gaim-xmms-remote-1.1.ebuild,v 1.5 2004/06/20 18:39:07 port001 Exp $
 
 use debug && inherit debug
 
@@ -16,8 +16,6 @@ IUSE="debug"
 DEPEND="~net-im/gaim-0.77
 		media-sound/xmms"
 #RDEPEND=""
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	local myconf
