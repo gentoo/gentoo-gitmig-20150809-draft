@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/xfsdump
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.6 2004/02/11 06:47:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.7 2004/02/21 22:44:09 weeve Exp $
+
+  21 Feb 2004; Jason Wever <weeve@gentoo.org> xfsdump-1.1.7.ebuild,
+  xfsdump-2.2.16.ebuild, xfsdump-2.2.4-r1.ebuild:
+  Masked on sparc. I've added changes to 2.2.16 to get xfsdump to build on
+  sparc64, but according to http://oss.sgi.com/bugzilla/show_bug.cgi?id=298,
+  xfsdump will not function correctly when the kernel is 64 bit but the userland
+  is 32. In the future we may be able to remove this once 64 bit binary support
+  is enabled in the sparc64 profile. This may also work on sparc32, but it needs
+  testing (and can play around with keywords and masking at that time).
 
 *xfsdump-2.2.16 (11 Feb 2004)
 
