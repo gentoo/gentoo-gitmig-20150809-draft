@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001-r1.ebuild,v 1.2 2004/11/15 04:18:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001-r1.ebuild,v 1.3 2004/11/26 11:25:59 phosphan Exp $
 
 inherit eutils flag-o-matic
 
@@ -63,7 +63,11 @@ src_unpack() {
 		sed -e 's/-lXrender//g' -i lib/video/Makefile.* \
 		|| die "sed failed (Xrender)"
 	fi
-
+	# adding CFLAGS by default which exists only for x86 is no good idea
+	# but I can't get it through gcc 3.4.3 without omit-frame-pointer
+	find . -name "Makefile.in" | while read file; do
+		sed -e "s/^AM_CFLAGS = .*/AM_CFLAGS = -fomit-frame-pointer/" -i $file
+	done
 }
 
 src_compile() {
