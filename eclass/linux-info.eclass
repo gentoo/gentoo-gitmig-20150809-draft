@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.21 2005/01/31 20:03:47 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.22 2005/02/01 09:13:47 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -69,8 +69,8 @@ esac
 
 # These are legacy wrappers for toolchain-funcs.
 # I dont like them here, but oh well.
-set_arch_to_kernel() { $(tc-arch-kernel); }
-set_arch_to_portage() { $(tc-arch); }
+set_arch_to_kernel() { export ARCH="$(tc-arch-kernel)"; }
+set_arch_to_portage() { export ARCH="$(tc-arch)"; }
 
 # qeinfo "Message"
 # -------------------
