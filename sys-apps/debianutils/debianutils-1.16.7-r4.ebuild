@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r4.ebuild,v 1.11 2004/09/12 19:22:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r4.ebuild,v 1.12 2004/09/16 02:19:55 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,12 +10,12 @@ SRC_URI="mirror://gentoo/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390 macos"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390 macos ppc-macos"
 IUSE="static build"
 
 DEPEND="virtual/libc"
 RDEPEND="app-arch/bzip2
-	!macos? ( sys-apps/coreutils )"
+	!macos? ( !ppc-macos? ( sys-apps/coreutils ) )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.17 2004/09/03 21:03:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.18 2004/09/16 02:23:44 pvdabeel Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/sed/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~ppc64 sparc mips alpha arm hppa amd64 ia64 s390 macos"
+KEYWORDS="x86 ppc ~ppc64 sparc mips alpha arm hppa amd64 ia64 s390 macos ppc-macos"
 IUSE="nls static build"
 
 RDEPEND="virtual/libc"
@@ -22,6 +22,7 @@ src_compile() {
 	gnuconfig_update
 
 	use macos && EXTRA_ECONF="--program-prefix=g"
+	use ppc-macos && EXTRA_ECONF="--program-prefix=g"
 	econf `use_enable nls` || die "Configure failed"
 	if use static ; then
 		emake LDFLAGS=-static || die "Static build failed"
@@ -46,4 +47,6 @@ src_install() {
 	rm -f ${D}/usr/bin/sed
 	use macos && cd ${D} && for x in `find . -name 'sed*' -print`; do mv "$x" "${x//sed/gsed}"; done && cd ${WORKDIR}/${P}
 	use macos && dosym ../../bin/gsed /usr/bin/gsed || dosym ../../bin/sed /usr/bin/sed
+	use ppc-macos && cd ${D} && for x in `find . -name 'sed*' -print`; do mv "$x" "${x//sed/gsed}"; done && cd ${WORKDIR}/${P}
+	use ppc-macos && dosym ../../bin/gsed /usr/bin/gsed || dosym ../../bin/sed /usr/bin/sed
 }
