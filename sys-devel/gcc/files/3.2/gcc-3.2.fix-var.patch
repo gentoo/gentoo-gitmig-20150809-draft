@@ -1,0 +1,53 @@
+2002-08-17  H.J. Lu <hjl@gnu.org>
+
+	* calls.c (PUSH_ARGS_REVERSED): Define only if not defined.
+	* expr.c (PUSH_ARGS_REVERSED): Likewise.
+
+2002-07-26  H.J. Lu <hjl@gnu.org>
+
+	* config/i386/i386.h (PUSH_ARGS_REVERSED): Set to 1.
+
+diff -uNr gcc-3.2.orig/gcc/calls.c gcc-3.2/gcc/calls.c
+--- gcc-3.2.orig/gcc/calls.c	2002-04-05 09:28:47.000000000 +1000
++++ gcc-3.2/gcc/calls.c	2002-08-23 20:44:09.000000000 +1000
+@@ -46,9 +46,11 @@
+ 
+ #ifdef PUSH_ROUNDING
+ 
++#ifndef PUSH_ARGS_REVERSED
+ #if defined (STACK_GROWS_DOWNWARD) != defined (ARGS_GROW_DOWNWARD)
+ #define PUSH_ARGS_REVERSED  PUSH_ARGS
+ #endif
++#endif
+ 
+ #endif
+ 
+diff -uNr gcc-3.2.orig/gcc/config/i386/i386.h gcc-3.2/gcc/config/i386/i386.h
+--- gcc-3.2.orig/gcc/config/i386/i386.h	2002-07-15 16:54:36.000000000 +1000
++++ gcc-3.2/gcc/config/i386/i386.h	2002-08-23 20:44:09.000000000 +1000
+@@ -1581,6 +1581,10 @@
+ 
+ #define PUSH_ARGS (TARGET_PUSH_ARGS && !ACCUMULATE_OUTGOING_ARGS)
+ 
++/* We want the stack and args grow in opposite directions, even if
++   PUSH_ARGS is 0.  */
++#define PUSH_ARGS_REVERSED 1
++
+ /* Offset of first parameter from the argument pointer register value.  */
+ #define FIRST_PARM_OFFSET(FNDECL) 0
+ 
+diff -uNr gcc-3.2.orig/gcc/expr.c gcc-3.2/gcc/expr.c
+--- gcc-3.2.orig/gcc/expr.c	2002-05-07 15:43:11.000000000 +1000
++++ gcc-3.2/gcc/expr.c	2002-08-23 20:44:09.000000000 +1000
+@@ -54,9 +54,11 @@
+ 
+ #ifdef PUSH_ROUNDING
+ 
++#ifndef PUSH_ARGS_REVERSED
+ #if defined (STACK_GROWS_DOWNWARD) != defined (ARGS_GROW_DOWNWARD)
+ #define PUSH_ARGS_REVERSED	/* If it's last to first.  */
+ #endif
++#endif
+ 
+ #endif
+ 

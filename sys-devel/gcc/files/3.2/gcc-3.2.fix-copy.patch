@@ -1,0 +1,61 @@
+2002-08-18  H.J. Lu <hjl@gnu.org>
+
+	* calls.c (store_one_arg): Remove ATTRIBUTE_UNUSED on
+	variable_size. Mark any slots used for the argument as in-use
+	only if we can't pass all arguments to a library call in
+	registers.
+
+diff -uNr gcc-3.2.orig/gcc/calls.c gcc-3.2/gcc/calls.c
+--- gcc-3.2.orig/gcc/calls.c	2002-04-05 09:28:47.000000000 +1000
++++ gcc-3.2/gcc/calls.c	2002-08-23 20:51:29.000000000 +1000
+@@ -4268,7 +4268,7 @@
+      struct arg_data *arg;
+      rtx argblock;
+      int flags;
+-     int variable_size ATTRIBUTE_UNUSED;
++     int variable_size;
+      int reg_parm_stack_space;
+ {
+   tree pval = arg->tree_value;
+@@ -4343,14 +4343,22 @@
+ 		  emit_move_insn (arg->save_area, stack_area);
+ 		}
+ 	    }
++
++	  /* Now that we have saved any slots that will be overwritten
++	     by this store, mark all slots this store will use.  We
++	     must do this before we actually expand the argument since
++	     the expansion itself may trigger library calls which might
++	     need to use the same stack slot. We only do it if we can't
++	     pass all arguments to a library call in registers.  */
++	  if (arg->partial)
++	    {
++	      for (i = lower_bound; i < upper_bound; i++)
++		stack_usage_map[i] = 1;
++
++	      /* Set it so that we don't do it again.  */
++	      variable_size = 1;
++	    }
+ 	}
+-      /* Now that we have saved any slots that will be overwritten by this
+-	 store, mark all slots this store will use.  We must do this before
+-	 we actually expand the argument since the expansion itself may
+-	 trigger library calls which might need to use the same stack slot.  */
+-      if (argblock && ! variable_size && arg->stack)
+-	for (i = lower_bound; i < upper_bound; i++)
+-	  stack_usage_map[i] = 1;
+     }
+ 
+   /* If this isn't going to be placed on both the stack and in registers,
+@@ -4577,6 +4585,11 @@
+ 	arg->value = arg->stack_slot;
+     }
+ 
++  if (ACCUMULATE_OUTGOING_ARGS && !(flags & ECF_SIBCALL)
++      && argblock && ! variable_size && arg->stack)
++    for (i = lower_bound; i < upper_bound; i++)
++      stack_usage_map[i] = 1;
++
+   /* Once we have pushed something, pops can't safely
+      be deferred during the rest of the arguments.  */
+   NO_DEFER_POP;

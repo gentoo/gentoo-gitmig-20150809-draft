@@ -1,6 +1,20 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.32 2002/08/21 11:43:27 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.33 2002/08/27 20:55:39 azarah Exp $
+
+*gcc-3.2-r1 (27 Aug 2002)
+
+  27 Aug 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.2-r1.ebuild :
+
+  Update the "misconstruct function call frame" bug patches.  This resolves
+  bug #7071, thanks to Steven Wong <wongs15@tartarus.uwa.edu.au>.  Updated
+  info can be found at:
+
+    http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/0588.html
+
+  Good patch site to keep in mind (reminder to myself):
+
+    http://www.zipworld.com.au/~gschafer/lfs-tweaks.html
 
   21 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
