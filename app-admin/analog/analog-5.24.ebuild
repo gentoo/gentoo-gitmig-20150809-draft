@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.24.ebuild,v 1.6 2002/10/04 03:40:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.24.ebuild,v 1.7 2002/10/18 13:31:45 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The most popular logfile analyser in the world"
 HOMEPAGE="http://www.analog.cx/"
 SRC_URI="http://www.analog.cx/${P}.tar.gz"
+IUSE=""
 
 SLOT="0"
 LICENSE="as-is"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kemerge/kemerge-0.7.ebuild,v 1.3 2002/08/16 02:21:27 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kemerge/kemerge-0.7.ebuild,v 1.4 2002/10/18 13:31:45 aliz Exp $
 inherit kde-base
 
 need-kde 3
@@ -11,3 +11,4 @@ HOMEPAGE="http://kemerge.sourceforge.net/"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64" # ppc compilation error: see Changelog
 
+IUSE=""

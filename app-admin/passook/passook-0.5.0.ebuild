@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/passook-0.5.0.ebuild,v 1.7 2002/10/04 20:40:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/passook-0.5.0.ebuild,v 1.8 2002/10/18 13:31:45 aliz Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Password generator capable of generating pronounceable and/or secure passwords."
 SRC_URI="ftp://mackers.com/pub/scripts/passook.tar.gz"
 HOMEPAGE="http://mackers.com/misc/scripts/passook/"
+IUSE=""
 
 SLOT="0"
 LICENSE="as-is"

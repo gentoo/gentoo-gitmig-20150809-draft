@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixtest/openmosixtest-0.1-r1.ebuild,v 1.2 2002/10/17 01:52:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixtest/openmosixtest-0.1-r1.ebuild,v 1.3 2002/10/18 13:31:45 aliz Exp $
 
 S=${WORKDIR}/omtest
 DESCRIPTION="openMosix stress test"
 SRC_URI="www.openmosixview.com/omtest/omtest-${PV}-"`echo ${PR}|sed -e 's:r\+:\1:'`".tar.gz"
 HOMEPAGE="http://www.openmosixview.com/omtest/"
+IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.6.9g
 	>=sys-devel/perl-5.6.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.3 2002/10/17 01:23:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.4 2002/10/18 13:31:45 aliz Exp $
 
 # ${A}        - the tarball itself             eg:  ${PORTDIR}/distfiles/t.tgz
 # ${P}        - program name-program version   eg:  foo-1.0
@@ -37,6 +37,7 @@ SLOT="0"
 
 # KEYWORDS='x86 ppc sparc sparc64'
 KEYWORDS="x86"
+IUSE=""
 
 # Runtime dependancies
 RDEPEND="virtual/glibc

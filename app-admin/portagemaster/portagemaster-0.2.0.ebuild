@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/portagemaster-0.2.0.ebuild,v 1.2 2002/10/11 15:04:30 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/portagemaster-0.2.0.ebuild,v 1.3 2002/10/18 13:31:45 aliz Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A java portage browser and installer."
 SRC_URI="http://portagemaster.sourceforge.net/packages/${P}.tar.bz2"
 HOMEPAGE="http://portagemaster.sourceforge.net"
+IUSE=""
 
 SLOT="0"
 LICENSE="GPL-2"
