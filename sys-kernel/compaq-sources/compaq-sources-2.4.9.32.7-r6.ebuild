@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r5.ebuild,v 1.1 2004/05/29 10:54:40 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r6.ebuild,v 1.1 2004/06/19 10:45:30 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel eutils
@@ -60,6 +60,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0427.patch || die "Failed to add the CAN-2004-0427 patch!"
 	epatch ${FILESDIR}/${P}.do_brk.patch || die "Failed to patch do_brk() vulnerability!"
+	epatch ${FILESDIR}/${P}.I2C_Limits.patch || die "Failed to patch the I2C i2cdev_ioctl() kmalloc() bug!"
 	epatch ${FILESDIR}/${P}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 	epatch ${FILESDIR}/${P}.munmap.patch || die "Failed to apply munmap patch!"
 
