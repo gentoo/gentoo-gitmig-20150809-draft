@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/desklet-starterbar-0.20.ebuild,v 1.2 2003/11/01 03:44:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/desklet-starterbar-0.22.1.ebuild,v 1.1 2003/11/12 10:57:25 obz Exp $
 
 DESKLET_NAME="StarterBar"
 
@@ -17,11 +17,11 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~x86 ~sparc ~ppc"
 
-DEPEND=">=gnome-extra/gdesklets-core-0.22"
+DEPEND=">=gnome-extra/gdesklets-core-0.23"
 
 DOCS="INSTALL README"
 
-src_install( ) {
+src_install() {
 
 	SYS_PATH="/usr/share/gdesklets"
 	INSTALL_BIN="Install_${DESKLET_NAME}_Sensor.bin"
@@ -38,6 +38,9 @@ src_install( ) {
 	cp -R gfx/ ${D}${SYS_PATH}/Displays/${DESKLET_NAME}
 
 	dodoc ${DOCS}
+
+	# the desklets unpack preserves permissions of the archive
+	chown -R root:root ${D}${SYS_PATH}/Sensors/${DESKLET_NAME}
 
 }
 
