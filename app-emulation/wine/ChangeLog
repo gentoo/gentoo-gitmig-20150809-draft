@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.77 2004/08/03 15:44:30 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.78 2004/10/27 12:45:14 vapier Exp $
+
+*wine-20041019 (27 Oct 2004)
+
+  27 Oct 2004; Mike Frysinger <vapier@gentoo.org> +wine-20041019.ebuild:
+  Version bump #68525 and others.  Make sure USE flags are obeyed #35482.
 
   03 Aug 2004; Martin Holzer <mholzer@gentoo.org> wine-20040121.ebuild,
   wine-20040213.ebuild, wine-20040309.ebuild, wine-20040408-r1.ebuild,
