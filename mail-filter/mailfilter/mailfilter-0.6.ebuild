@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/mailfilter-0.6.ebuild,v 1.4 2004/07/01 19:51:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/mailfilter-0.6.ebuild,v 1.5 2004/07/14 16:43:42 agriffis Exp $
 
 IUSE="nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Mailfilter is a utility to get rid of unwanted spam mails"
 SRC_URI="mirror://sourceforge/mailfilter/${P}.tar.gz"
 HOMEPAGE="http://mailfilter.sourceforge.net/index.html"
