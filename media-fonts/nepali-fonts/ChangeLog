@@ -1,0 +1,25 @@
+# ChangeLog for media-fonts/nepali-fonts
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/nepali-fonts/ChangeLog,v 1.1 2004/01/19 06:31:50 vapier Exp $
+
+*nepali-fonts-1 (19 Jan 2004)
+
+  19 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
+
+  A collection of fonts gathered from misc websites.
+  Note that the important site is this one:
+  http://www.mpp.org.np/
+  They maintain the Nepali unicode font.
+
+  You can find misc fonts that aren't so unicode friendly:
+  (and are included only until the above font takes over everything)
+  http://www.nepali.info/
+
+  http://www.nepalipost.com/ (links at top of page)
+  http://www.moics.gov.np/download/fonts.html
+
+  These places also have fonts but are just duplicates from above:
+  http://ncthakur.itgo.com/download.htm
+  http://www.nepalhomepage.com/reference/fonts/
+  http://www.nepalnews.com.np/fonts.htm
