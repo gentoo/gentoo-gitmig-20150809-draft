@@ -1,0 +1,13 @@
+# ChangeLog for media-sound/emu10k1
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/ChangeLog,v 1.1 2002/11/05 18:03:24 vapier Exp $
+
+*emu10k1-0.20a (05 Nov 2002)
+
+  05 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Contributers (myself):
+  Doug Haas <haas.118@osu.edu>
+  Eric Favre <e.f@laposte.net>
+  John Herdy <JohnHerdy@Hotmail.com>
+  psypete <psypete@windstone.darktech.org>
+  And others ... :P
