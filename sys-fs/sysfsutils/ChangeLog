@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/sysfsutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.10 2004/07/01 21:51:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.11 2004/11/08 22:20:51 gregkh Exp $
+
+*sysfsutils-1.2.0 (08 Nov 2004)
+
+  08 Nov 2004; Greg Kroah-Hartman <gregkh@gentoo.org> metadata.xml,
+  +sysfsutils-1.2.0.ebuild:
+  1.2.0 release
+  ugh, make me the maintainer, like I don't have anything else better to do...
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   sysfsutils-0.2.0.ebuild, sysfsutils-0.3.0.ebuild, sysfsutils-0.4.0.ebuild,
