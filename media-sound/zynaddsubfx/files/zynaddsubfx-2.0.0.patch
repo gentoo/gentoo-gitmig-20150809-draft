@@ -1,0 +1,247 @@
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/ExternalPrograms/Controller/ControllerUI.fl ZynAddSubFX-2.0.0/ExternalPrograms/Controller/ControllerUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/ExternalPrograms/Controller/ControllerUI.fl	2003-11-28 14:45:03.000000000 -0600
++++ ZynAddSubFX-2.0.0/ExternalPrograms/Controller/ControllerUI.fl	2004-09-06 20:28:10.060118190 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0103 
++#version 1.0103 
+ header_name {.h} 
+ code_name {.cxx}
+ decl {\#include <FL/Fl_Box.h>} {public
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/ExternalPrograms/Controller/compile.sh ZynAddSubFX-2.0.0/ExternalPrograms/Controller/compile.sh
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/ExternalPrograms/Controller/compile.sh	2003-11-28 14:45:03.000000000 -0600
++++ ZynAddSubFX-2.0.0/ExternalPrograms/Controller/compile.sh	2004-09-06 20:29:06.231239382 -0500
+@@ -1,8 +1,8 @@
+-clean.sh
++./clean.sh
+ fluid -c ControllerUI.fl
+-gcc -c ControllerUI.cxx -o ControllerUI.o
+-gcc -c Controller.C -o Controller.o
+-gcc -c main.C -o main.o
++gcc `fltk-config --cflags` -c ControllerUI.cxx -o ControllerUI.o
++gcc `fltk-config --cflags` -c Controller.C -o Controller.o
++gcc `fltk-config --cflags` -c main.C -o main.o
+ 
+ 
+ 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/ExternalPrograms/Spliter/SpliterUI.fl ZynAddSubFX-2.0.0/ExternalPrograms/Spliter/SpliterUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/ExternalPrograms/Spliter/SpliterUI.fl	2003-11-28 14:45:03.000000000 -0600
++++ ZynAddSubFX-2.0.0/ExternalPrograms/Spliter/SpliterUI.fl	2004-09-06 20:28:10.062118162 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0102 
++#version 1.0102 
+ header_name {.h} 
+ code_name {.cxx}
+ decl {//Copyright (c) 2002-2003 Nasca Octavian Paul} {selected
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/ExternalPrograms/Spliter/compile.sh ZynAddSubFX-2.0.0/ExternalPrograms/Spliter/compile.sh
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/ExternalPrograms/Spliter/compile.sh	2003-11-28 14:45:03.000000000 -0600
++++ ZynAddSubFX-2.0.0/ExternalPrograms/Spliter/compile.sh	2004-09-06 20:29:45.103528359 -0500
+@@ -1,8 +1,8 @@
+-clean.sh
++./clean.sh
+ fluid -c SpliterUI.fl
+-gcc -c SpliterUI.cxx -o SpliterUI.o
+-gcc -c Spliter.C -o Spliter.o
+-gcc -c main.C -o main.o
++gcc `fltk-config --cflags` -c SpliterUI.cxx -o SpliterUI.o
++gcc `fltk-config --cflags` -c Spliter.C -o Spliter.o
++gcc `fltk-config --cflags` -c main.C -o main.o
+ 
+ gcc -o spliter *.o `fltk-config --ldflags` -lasound
+ 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/Makefile.inc ZynAddSubFX-2.0.0/src/Makefile.inc
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/Makefile.inc	2004-02-10 13:50:59.000000000 -0600
++++ ZynAddSubFX-2.0.0/src/Makefile.inc	2004-09-06 20:30:47.344231720 -0500
+@@ -19,9 +19,9 @@
+ #LINUX_MIDIIN=NONE
+ 
+ #Next line sets the audio output (OSS/JACK/PA)
+-LINUX_AUDIOOUT=OSS
++#LINUX_AUDIOOUT=OSS
+ #LINUX_AUDIOOUT=NONE
+-#LINUX_AUDIOOUT=JACK
++LINUX_AUDIOOUT=JACK
+ #LINUX_AUDIOOUT=JACK_RT     JACK_RT support is broken
+ #for PortAudio (PA)
+ #LINUX_AUDIOOUT=PA
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/ADnoteUI.fl ZynAddSubFX-2.0.0/src/UI/ADnoteUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/ADnoteUI.fl	2004-08-17 18:57:17.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/ADnoteUI.fl	2004-09-06 20:28:10.097117672 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/BankUI.fl ZynAddSubFX-2.0.0/src/UI/BankUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/BankUI.fl	2004-08-27 15:57:24.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/BankUI.fl	2004-09-06 20:28:10.101117616 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/ConfigUI.fl ZynAddSubFX-2.0.0/src/UI/ConfigUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/ConfigUI.fl	2004-08-27 15:50:55.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/ConfigUI.fl	2004-09-06 20:28:10.105117560 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/EffUI.fl ZynAddSubFX-2.0.0/src/UI/EffUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/EffUI.fl	2004-08-15 10:39:36.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/EffUI.fl	2004-09-06 20:28:10.116117406 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/EnvelopeUI.fl ZynAddSubFX-2.0.0/src/UI/EnvelopeUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/EnvelopeUI.fl	2004-08-17 18:56:44.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/EnvelopeUI.fl	2004-09-06 20:28:10.123117308 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/FilterUI.fl ZynAddSubFX-2.0.0/src/UI/FilterUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/FilterUI.fl	2004-08-17 18:58:54.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/FilterUI.fl	2004-09-06 20:28:10.129117224 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/LFOUI.fl ZynAddSubFX-2.0.0/src/UI/LFOUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/LFOUI.fl	2004-08-17 15:13:05.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/LFOUI.fl	2004-09-06 20:28:10.132117182 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/MasterUI.fl ZynAddSubFX-2.0.0/src/UI/MasterUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/MasterUI.fl	2004-08-24 16:21:09.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/MasterUI.fl	2004-09-06 20:28:10.140117070 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/MicrotonalUI.fl ZynAddSubFX-2.0.0/src/UI/MicrotonalUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/MicrotonalUI.fl	2004-08-22 08:51:24.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/MicrotonalUI.fl	2004-09-06 20:28:10.144117014 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/OscilGenUI.fl ZynAddSubFX-2.0.0/src/UI/OscilGenUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/OscilGenUI.fl	2004-08-15 12:00:56.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/OscilGenUI.fl	2004-09-06 20:28:10.152116902 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/PADnoteUI.fl ZynAddSubFX-2.0.0/src/UI/PADnoteUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/PADnoteUI.fl	2004-08-17 14:08:34.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/PADnoteUI.fl	2004-09-06 20:28:10.160116790 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {\#include "../Params/PADnoteParameters.h"} {public
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/PartUI.fl ZynAddSubFX-2.0.0/src/UI/PartUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/PartUI.fl	2004-08-22 06:12:53.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/PartUI.fl	2004-09-06 20:28:10.169116663 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/PresetsUI.fl ZynAddSubFX-2.0.0/src/UI/PresetsUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/PresetsUI.fl	2004-08-22 16:11:15.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/PresetsUI.fl	2004-09-06 20:28:10.173116607 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {\#include <FL/fl_ask.h>} {public
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/ResonanceUI.fl ZynAddSubFX-2.0.0/src/UI/ResonanceUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/ResonanceUI.fl	2004-08-15 09:07:09.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/ResonanceUI.fl	2004-09-06 20:28:10.176116565 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/SUBnoteUI.fl ZynAddSubFX-2.0.0/src/UI/SUBnoteUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/SUBnoteUI.fl	2004-08-16 18:48:23.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/SUBnoteUI.fl	2004-09-06 20:28:10.181116495 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/SeqUI.fl ZynAddSubFX-2.0.0/src/UI/SeqUI.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/SeqUI.fl	2004-07-15 17:00:10.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/SeqUI.fl	2004-09-06 20:28:10.183116467 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/VirKeyboard.fl ZynAddSubFX-2.0.0/src/UI/VirKeyboard.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/VirKeyboard.fl	2004-07-03 10:11:58.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/VirKeyboard.fl	2004-09-06 20:28:10.188116397 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2002-2004 Nasca Octavian Paul} {} 
+diff -burN /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/WidgetPDial.fl ZynAddSubFX-2.0.0/src/UI/WidgetPDial.fl
+--- /var/tmp/portage/zynaddsubfx-2.0.0/work/ZynAddSubFX-2.0.0/src/UI/WidgetPDial.fl	2004-07-28 15:41:51.000000000 -0500
++++ ZynAddSubFX-2.0.0/src/UI/WidgetPDial.fl	2004-09-06 20:28:10.190116369 -0500
+@@ -1,5 +1,5 @@
+ # data file for the Fltk User Interface Designer (fluid)
+-version 1.0105 
++#version 1.0105 
+ header_name {.h} 
+ code_name {.cc}
+ decl {//Copyright (c) 2004 Nasca Octavian Paul} {} 
