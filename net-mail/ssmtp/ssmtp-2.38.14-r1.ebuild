@@ -1,19 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.38.14-r1.ebuild,v 1.21 2004/03/17 22:24:22 g2boojum Exp $
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.38.14-r1.ebuild,v 1.22 2004/04/16 05:40:15 vapier Exp $
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/system/mail/mta/${P}.tar.gz"
 
-DEPEND="virtual/glibc"
-RDEPEND="!virtual/mta net-mail/mailbase"
-PROVIDE="virtual/mta"
-
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa"
-LICENSE="GPL-2"
+
+DEPEND="virtual/glibc"
+RDEPEND="!virtual/mta
+	net-mail/mailbase"
+PROVIDE="virtual/mta"
 
 src_compile() {
 	make clean || die
@@ -40,7 +39,6 @@ src_install() {
 }
 
 pkg_config() {
-
 	local conffile="/etc/ssmtp/ssmtp.conf"
 	local hostname=`hostname -f`
 	local domainame=`hostname -d`

@@ -1,22 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.48.ebuild,v 1.14 2004/03/17 22:24:22 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.48.ebuild,v 1.15 2004/04/16 05:40:15 vapier Exp $
 
-DESCRIPTION="Extremely simple MTA to get mail off the system to a
-Mailhub"
-SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/mail/mta/${P}.tar.gz"
+DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 HOMEPAGE="ftp://metalab.unc.edu/pub/Linux/system/mail/mta/"
+SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/mail/mta/${P}.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa mips amd64"
-LICENSE="GPL-2"
 IUSE=""
 
 DEPEND="virtual/glibc"
-RDEPEND="!virtual/mta net-mail/mailbase"
+RDEPEND="!virtual/mta
+	net-mail/mailbase"
 PROVIDE="virtual/mta"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	make clean || die
@@ -53,4 +51,3 @@ pkg_config() {
 		-e "s:^mailhub=mail:mailhub=mail.${domainname}:g" \
 		${conffile}.orig > ${conffile}
 }
-
