@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r2.ebuild,v 1.7 2004/06/19 05:17:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r2.ebuild,v 1.8 2004/06/25 03:10:12 agriffis Exp $
 
 inherit check-kernel fixheadtails flag-o-matic eutils gcc
 
