@@ -14,7 +14,7 @@ PSHOWALL="-ax"
 VERSION=3.6.19
 #
 # -- START --
-# $Id: lprng,v 1.1 2000/08/13 12:10:50 achim Exp $
+# $Id: lprng.rc5,v 1.1 2001/10/04 23:22:54 woodchip Exp $
 #
 # lpd           This shell script takes care of starting and stopping
 #               lpd (printer daemon).
