@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.9 2003/09/07 00:09:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.10 2003/09/11 01:23:01 msterret Exp $
 
 IUSE="crypt ipv6 activefilter"
 S=${WORKDIR}/${P}.pppoe4
@@ -30,10 +30,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-r10.patch
 
 	use activefilter && {
-    	# enable option active-filter
-    	einfo "Enabling active-filter"
+		# enable option active-filter
+		einfo "Enabling active-filter"
 		mv pppd/Makefile.linux pppd/Makefile.linux.orig
-    	sed -e 's/^#FILTER=y/FILTER=y/' <pppd/Makefile.linux.orig > \
+		sed -e 's/^#FILTER=y/FILTER=y/' <pppd/Makefile.linux.orig > \
 		pppd/Makefile.linux
 	}
 	epatch ${FILESDIR}/gcc3.3-multiline.patch
@@ -133,7 +133,7 @@ src_install() {
 
 	#Adding misc. specialized scripts to doc dir
 	dodir /usr/share/doc/${PF}/scripts
- 	dodir /usr/share/doc/${PF}/scripts/chatchat
+	dodir /usr/share/doc/${PF}/scripts/chatchat
 	insinto	/usr/share/doc/${PF}/scripts/chatchat
 	doins scripts/chatchat/*
 	insinto /usr/share/doc/${PF}/scripts

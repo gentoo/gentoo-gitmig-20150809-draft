@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r12.ebuild,v 1.10 2003/09/07 00:09:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r12.ebuild,v 1.11 2003/09/11 01:23:01 msterret Exp $
 
 IUSE="crypt ipv6 activefilter"
 S=${WORKDIR}/${P}.pppoe4
@@ -19,7 +19,7 @@ KEYWORDS="x86 ppc ~sparc hppa alpha"
 
 src_compile() {
 
-    use crypt && {
+	use crypt && {
 		zcat ${FILESDIR}/ppp-2.4.1-openssl-0.9.6-mppe-patch.gz | patch -p1
 		patch -p1 < ${FILESDIR}/ppp-2.4.1-MSCHAPv2-fix.patch
 	}
@@ -27,9 +27,9 @@ src_compile() {
 	patch -p0 < ${FILESDIR}/${P}-r10.patch
 
 	use activefilter && {
-    		# enable option active-filter
-    		mv pppd/Makefile.linux pppd/Makefile.linux.orig
-    		sed -e 's/^#FILTER=y/FILTER=y/' <pppd/Makefile.linux.orig >pppd/Makefile.linux
+		# enable option active-filter
+		mv pppd/Makefile.linux pppd/Makefile.linux.orig
+		sed -e 's/^#FILTER=y/FILTER=y/' <pppd/Makefile.linux.orig >pppd/Makefile.linux
 	}
 
 	./configure --prefix=/usr || die
@@ -92,11 +92,11 @@ src_install() {
 	doins ${FILESDIR}/chat-default
 	insopts -m0755
 	doins ${FILESDIR}/ip-up
-        exeinto /etc/init.d/
-        doexe ${FILESDIR}/net.ppp0
-        insinto /etc/conf.d
-        insopts -m0600
-        newins ${FILESDIR}/confd.ppp0 net.ppp0
+	exeinto /etc/init.d/
+	doexe ${FILESDIR}/net.ppp0
+	insinto /etc/conf.d
+	insopts -m0600
+	newins ${FILESDIR}/confd.ppp0 net.ppp0
 
 	dolib.so pppd/plugins/minconn.so
 	dolib.so pppd/plugins/passprompt.so
