@@ -1,0 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b801102a5f9e649518ad4e0fec2343c6 sleuthkit-1.70.ebuild 1290
+MD5 bbf3fb073388fe3419dee814315908ff sleuthkit-1.69.ebuild 1032
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 5b3974fdf25ba52a1dc967f46f9197a2 ChangeLog 1755
+MD5 ec26655b002b24abae4cd967da714c8e sleuthkit-1.72.ebuild 1449
+MD5 78513b8353019a07577b105b5d9460c3 files/digest-sleuthkit-1.70 66
+MD5 d3ac0995a6995b69b23d6a7392e41035 files/digest-sleuthkit-1.69 66
+MD5 02411e8cd1953fcea0e99626e5d0d8b7 files/digest-sleuthkit-1.72 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBQxF+mdTrptrqvGERAo9mAJ43wrL/90fuHOhsYAR1LYpFroGzCQCfalbo
+kJZB8driaJWPeabSxnxarXg=
+=IBBN
+-----END PGP SIGNATURE-----
