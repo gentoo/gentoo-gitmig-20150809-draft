@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.178 2003/12/01 08:48:50 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.179 2003/12/03 10:31:03 tigger Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -105,6 +105,7 @@ media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/ardour-cvs:ardour-ksi - Build ksi interface for ardour
 media-sound/jack-audio-connection-kit:jack-caps - enable capabilities
+media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
 media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
 media-sound/lilypond:nopfa - disable building pfa fonts
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
