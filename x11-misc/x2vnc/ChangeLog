@@ -1,6 +1,7 @@
 # ChangeLog for x11-misc/ikons
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.1 2002/05/10 20:48:03 verwilst Exp $
+# Author: J Robert Ray <jrray@jrray.org>
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.2 2002/08/21 05:45:40 verwilst Exp $
 
 *x2vnc (10 May 2002)
 
