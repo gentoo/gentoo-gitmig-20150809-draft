@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/ncbi-tools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.4 2003/11/11 15:49:33 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.5 2003/12/13 21:10:46 sediener Exp $
+
+*ncbi-tools-20031103 (13 Dec 2003)
+
+  13 Dec 2003; Stephen Diener <sediener@gentoo.org>
+  ncbi-tools-20031103.ebuild:
+  Added november release of ncbi-tools (blast-2.2.6 included);
+  Added support for -X
 
 *ncbi-tools-20030422 (11 Nov 2003)
 
