@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.9 2003/05/19 00:43:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.10 2003/05/21 12:59:17 taviso Exp $
 
 IUSE="berkdb"
 
@@ -64,10 +64,10 @@ src_unpack() {
 src_compile() {
 	export CFLAGS="${CFLAGS} -fPIC"
 	if [ "${ARCH}" = "alpha" ]; then
-		if [ -f /usr/lib/libots.so -a ! -f /usr/lib/libglib.so -a /usr/lib/libglib.a ]; then
+		if [ -z "`strings -a /usr/lib/libglib.a | grep -i 'Compaq Computer Corp.'`" ] ; then
 			# should be LDFLAGS, but this configure is screwy.
-			einfo "looks like you compiled glib with ccc, i need to append -lots..."
-			einfo "Dont worry if i've got this wrong, PAM will still build correctly..."
+			einfo "It looks like you compiled glib with ccc, this is okay, but"
+			einfo "I'll need to force gcc to link with libots...."
 			append-flags -lots
 			cp ${S}/modules/pam_pwdb/Makefile ${S}/modules/pam_pwdb/Makefile.orig
 			sed -e 's/$(CC) -o/$(CC) -lots -o/g' ${S}/modules/pam_pwdb/Makefile.orig > \
