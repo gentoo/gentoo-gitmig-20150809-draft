@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.14 2004/04/13 00:41:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.15 2004/04/14 17:35:35 mr_bones_ Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND=">=sys-apps/portage-2.0.47-r10
 src_unpack() {
 	unpack ${A}
 	cd ${S}/..
-	epatch "${FILESDIR}/${PF}-gentoo.diff"
+	epatch "${FILESDIR}/${PV}-gentoo.diff"
 }
 
 src_compile() {
