@@ -1,5 +1,5 @@
-MD5 0c4c8022c58ade54afddaf2f94d9afe1 rfb-0.6.1.ebuild 977
-MD5 095f721da4131e65b12323da3d51262f rfb-0.6.1-r2.ebuild 1058
+MD5 c46886283a320e5e195c213f2ea2510b rfb-0.6.1.ebuild 985
+MD5 4c72ae8aca935b156153cee0e7f743de rfb-0.6.1-r2.ebuild 1066
 MD5 153948c0daab0cd9fc6647da5287330e ChangeLog 889
 MD5 193705142d6cc32a958886b33bed5257 files/digest-rfb-0.6.1-r2 61
 MD5 8d0a143c99a1923432f70c970ccbde92 files/rfb-0.6.1-gcc3.x.patch 5981
