@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuspeedy/cpuspeedy-0.3.0.ebuild,v 1.1 2004/04/23 02:28:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuspeedy/cpuspeedy-0.3.0.ebuild,v 1.2 2004/04/26 09:34:40 dragonheart Exp $
 
 inherit python
 
@@ -22,6 +22,7 @@ src_compile() {
 src_install() {
 	make install PREFIX=${D}/usr || die "make install failed"
 	sed -i -e 's:/var/tmp/portage/cpuspeedy-0.3.0/image/::' ${D}/usr/sbin/cpuspeedy
+	mv ${D}/usr/share/doc/cpuspeedy ${D}/usr/share/doc/${PF}
 }
 
 pkg_postinst() {
