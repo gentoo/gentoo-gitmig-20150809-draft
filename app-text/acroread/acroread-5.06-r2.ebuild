@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.06-r2.ebuild,v 1.1 2002/11/21 19:28:29 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.06-r2.ebuild,v 1.2 2003/01/14 22:31:04 mholzer Exp $
 
 inherit nsplugins
 
@@ -33,8 +33,10 @@ src_install () {
 	dodir ${INSTALLDIR}
 	for i in Browsers Reader Resource
 	do
+		if [ -d ${i} ] ; then
 		chown -R root.root ${i}
 		cp -a ${i} ${D}${INSTALLDIR}
+		fi
 	done
 	
 
