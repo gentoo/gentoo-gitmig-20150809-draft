@@ -8,9 +8,11 @@ mips
 ppc
 ppc64
 ppc-macos
+ppc-od
 s390
 sh
 sparc
 x86
 x86-obsd
 x86-fbsd
+x86-od
