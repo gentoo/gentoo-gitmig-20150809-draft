@@ -1,10 +1,9 @@
 MD5 d38b2a681152d86804262e685e6d06d0 w3m-0.5-r1.ebuild 4332
 MD5 5a4fb2341659f69f82de81dc12da6e4d w3m-0.3.2.2.ebuild 3731
-MD5 f2510368a335349b461ae99885c0665d w3m-0.5.ebuild 4041
-MD5 31fb56415f34fc0a8999d2ef89bc7586 ChangeLog 9714
+MD5 c9171a4926f377df6f2b445064581bc5 ChangeLog 9864
 MD5 8e10c8fb50097c894200b100a02601eb w3m-0.4.2.ebuild 1945
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 6d3f53a7bb3e6e26f72fb257cad0541e files/digest-w3m-0.5 200
+MD5 48fb319fe478c41d84b4a0303e788fb2 w3m-0.5-r2.ebuild 4373
 MD5 838d56c55726f00c34b0c8649e948e3c files/w3m-0.4.2-form.diff 429
 MD5 5b34b82be16b1b02dd603acbfd11d9db files/w3m-libwc-gentoo.diff 437
 MD5 0fd075401455ce9205836b4267202e22 files/w3m-w3mman-gentoo.diff 1059
@@ -14,3 +13,4 @@ MD5 00a360d12cc07d61c5fd5df08a53d261 files/w3m-0.4-alpha.patch 930
 MD5 4deea28e3a4e09f22019b01b52273ab3 files/w3m-m17n-search-gentoo.diff 446
 MD5 ca82b0ff2fa196fadebdc71b825b4ccf files/w3m-0.4.2-async-m17n-gentoo.diff 1539
 MD5 79f9d642d00eb4b8c0aaf7483fc9e6e7 files/digest-w3m-0.5-r1 279
+MD5 9cd600ff1ce23fc3ad6e0c17be3ac84e files/digest-w3m-0.5-r2 207

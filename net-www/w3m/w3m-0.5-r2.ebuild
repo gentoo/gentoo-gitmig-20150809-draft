@@ -1,20 +1,25 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.5.ebuild,v 1.1 2004/03/21 19:21:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.5-r2.ebuild,v 1.1 2004/04/07 16:40:26 usata Exp $
 
-W3M_CVS_PV="1.890"
+inherit eutils
+
+W3M_CVS_PV="1.912"
 W3M_CVS_P="${PN}-cvs-${W3M_CVS_PV}"
 
 DESCRIPTION="Text based WWW browser, supports tables and frames"
 HOMEPAGE="http://w3m.sourceforge.net/
-	http://www.page.sannet.ne.jp/knabe/w3m/"
+	http://www.page.sannet.ne.jp/knabe/w3m/w3m.html"
 PATCH_PATH="http://www.page.sannet.ne.jp/knabe/w3m/"
 SRC_URI="mirror://sourceforge/w3m/${P}.tar.gz
-	async? ( ${PATCH_PATH}/${W3M_CVS_P}-async-5.diff.gz )"
+	async? ( ${PATCH_PATH}/${W3M_CVS_P}-async-1.diff.gz )
+	nls? ( ${PATCH_PATH}/${W3M_CVS_P}-nlscharset-1.diff )"
 # w3m color patch:
 #	http://homepage3.nifty.com/slokar/w3m/${P}-cvs-1.895_256-001.patch.gz
 # w3n canna inline patch:
 #	canna? ( http://www.j10n.org/files/${W3M_CVS_P}-canna.patch )
+# w3m bookmark charset patch:
+#	nls? ( ${PATCH_PATH}/${W3M_CVS_P}-bkmknls-1.diff )
 
 LICENSE="w3m"
 SLOT="0"
@@ -60,8 +65,12 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
 	epatch ${FILESDIR}/${PN}-m17n-search-gentoo.diff
 	epatch ${FILESDIR}/${PN}-libwc-gentoo.diff
+	if [ -n "`use nls`" ] ; then
+		#epatch ${DISTDIR}/${W3M_CVS_P}-bkmknls-1.diff
+		epatch ${DISTDIR}/${W3M_CVS_P}-nlscharset-1.diff
+	fi
 	if [ -n "`use async`" ] ; then
-		epatch ${DISTDIR}/${W3M_CVS_P}-async-5.diff.gz
+		epatch ${DISTDIR}/${W3M_CVS_P}-async-1.diff.gz
 		epatch ${FILESDIR}/${PN}-0.4.2-async-m17n-gentoo.diff
 	fi
 	#epatch ${DISTDIR}/${P}-cvs-1.895_256-001.patch.gz
@@ -103,16 +112,14 @@ src_compile() {
 	fi
 
 	# emacs-w3m doesn't like "--enable-m17n --disable-unicode,"
-	# so we better enable or disable both
+	# so we better enable or disable both. Default to enable
+	# m17n and unicode, see bug #47046.
 	if [ -n "`use cjk`" ] ; then
 		myconf="${myconf}
-			--enable-m17n
-			--enable-unicode
 			--enable-japanese=E
 			--with-charset=EUC-JP"
 	else
 		myconf="${myconf}
-			--disable-m17n
 			--with-charset=US-ASCII"
 	fi
 
@@ -123,6 +130,8 @@ src_compile() {
 		--with-termlib=ncurses \
 		--with-imagelib="${imagelib}" \
 		--with-migemo="${migemo_command}" \
+		--enable-m17n \
+		--enable-unicode \
 		`use_enable gpm mouse` \
 		`use_enable ssl digest-auth` \
 		`use_with ssl` \
@@ -131,7 +140,7 @@ src_compile() {
 		# `use_with canna`
 
 	# emake borked
-	make all || make all || die "make failed"
+	emake -j1 all || die "make failed"
 }
 
 src_install() {
