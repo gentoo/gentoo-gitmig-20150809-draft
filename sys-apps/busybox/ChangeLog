@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.38 2004/08/17 20:46:38 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.39 2004/08/24 02:50:30 swegener Exp $
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> busybox-1.00_rc3.ebuild:
+  Sync IUSE (uclibc missing)
 
   17 Aug 2004; <solar@gentoo.org> busybox-1.00_pre8.ebuild:
   marked 1.00_pre8 stable
