@@ -1,6 +1,18 @@
-MD5 c16bc447618baf7fb7fec55c8a9d6dd3 ChangeLog 801
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2cb234aead7bbec6565b003c6688d764 ChangeLog 969
 MD5 93a6b4ce637acb21228986111ded130c Config-Simple-4.55.ebuild 517
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 039e0916e8fdc158393d66df355d3ec2 Config-Simple-4.56.ebuild 518
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 ec5c83d0349ac66993b11cd486bbb8b5 Config-Simple-4.57.ebuild 541
 MD5 fc6798875374a96038164de3639b5fe6 files/digest-Config-Simple-4.55 69
 MD5 506f59b2d71797c05e0d6785fee79604 files/digest-Config-Simple-4.56 69
+MD5 5326e7414783783c7ff4d73d8fc46c0f files/digest-Config-Simple-4.57 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBgQXitG5z4I8BtQoRAtnDAJ9KRr0uj/P8Z6+g+99KsyJgNvX9eACeKNkr
+ZPODs5pvKtbEXPdHkcDAQMw=
+=sD0V
+-----END PGP SIGNATURE-----
