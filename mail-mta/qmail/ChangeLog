@@ -1,6 +1,6 @@
-# ChangeLog for net-mail/qmail
+# ChangeLog for mail-mta/qmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.6 2004/07/05 00:14:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.7 2004/07/17 21:37:51 aliz Exp $
 
   04 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> files/run-qmailpop3d,
   files/1.03-r13/run-qmailpop3d:
