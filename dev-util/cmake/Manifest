@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 06af9edfa3c7650bd20503507534b25e cmake-2.0.3.ebuild 745
+MD5 41a8c03326739c3095c1ed2dcc0d2301 cmake-1.8.2.ebuild 738
+MD5 8f4b42d9d9fef9555c0d629ec62ec246 ChangeLog 1288
 MD5 77eddacb964ac85728d91ea91152cc08 cmake-2.0.2.ebuild 739
 MD5 68b43dea6d3dcd11bcda04e256eb4082 cmake-1.8.3.ebuild 738
-MD5 06af9edfa3c7650bd20503507534b25e cmake-2.0.3.ebuild 745
-MD5 8fbb91bc9e9210bdf4c3c68f5aa3bc85 ChangeLog 1184
-MD5 41a8c03326739c3095c1ed2dcc0d2301 cmake-1.8.2.ebuild 738
-MD5 d09ac0128b045e4315708f386d7e3f71 files/digest-cmake-1.8.2 64
-MD5 316165835e878313370ebb53dc0ff178 files/digest-cmake-1.8.3 64
 MD5 7caa26865582e69ec72f3468a801905e files/digest-cmake-2.0.2 64
+MD5 316165835e878313370ebb53dc0ff178 files/digest-cmake-1.8.3 64
+MD5 d09ac0128b045e4315708f386d7e3f71 files/digest-cmake-1.8.2 64
 MD5 42e278a7308d53c16401c551e185ce9b files/digest-cmake-2.0.3 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBpQJfZ/iYVBmujdURArNIAJ4/QzFvHZRqC7EHz5ELiLxP6gwqOACePXYr
-o8A5MEn4GqIC4jkl49j73tc=
-=cbKK
------END PGP SIGNATURE-----
