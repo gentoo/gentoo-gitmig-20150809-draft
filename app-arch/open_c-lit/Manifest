@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fcdd0bade5ded74d1e422725b03a62c4 open_c-lit-1.4.ebuild 773
+MD5 eb215c8a9d3f8fcc3d78f2d8f3c0d774 metadata.xml 186
+MD5 9a38e79e3cf19827fc4931f6c1ac7ed2 ChangeLog 348
+MD5 8e0bce3b1b141da9c4824b9a2d400ebb files/digest-open_c-lit-1.4 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBPOcpHTu7gpaalycRArtpAJ4oivkQI9XBcwrngPiGXHTQDly3AgCgkWg0
+oQSdm5Dj4rZn9pibZYGb4T0=
+=1rIH
+-----END PGP SIGNATURE-----
