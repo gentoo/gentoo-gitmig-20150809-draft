@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/libgnome-java
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/ChangeLog,v 1.4 2004/12/28 12:56:34 axxo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/ChangeLog,v 1.5 2005/03/12 19:08:55 luckyduck Exp $
+
+*libgnome-java-2.8.3.1 (12 Mar 2005)
+
+  12 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/libgnome-java-2.8.3.1_gentoo-PN-SLOT.patch,
+  libgnome-java-2.8.2-r1.ebuild, +libgnome-java-2.8.3.1.ebuild:
+  new upstream version, partially closes #83366. added ~amd64 to KEYWORDS.
+  ebuilds and patched contributed by Andrew Cowie
+  <andrew@operationaldynamics.com>.
 
 * libgnome-java-2.8.2-r1 (17 Nov 2004)
 
