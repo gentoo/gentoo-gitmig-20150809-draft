@@ -5,8 +5,8 @@ diff -urN rc-scripts-1.4.16.orig/bin/bashlogin rc-scripts-1.4.16/bin/bashlogin
  
  cat /etc/motd 2>/dev/null
  cd /root
-+source .bashrc
-+source .bash_profile
++[ -e .bashrc ] && source .bashrc
++[ -e .bash_profile ] && source .bash_profile
  exec -l /bin/bash
 diff -urN rc-scripts-1.4.16.orig/sbin/livecd-functions.sh rc-scripts-1.4.16/sbin/livecd-functions.sh
 --- rc-scripts-1.4.16.orig/sbin/livecd-functions.sh	2004-05-21 11:22:12.000000000 -0400

@@ -1,29 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 10104ff5fb998e11aff59f8a6cca611c ChangeLog 47620
-MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
-MD5 245e39f14052cacd4e495fa02ecf2163 baselayout-1.9.4-r6.ebuild 16835
+MD5 72db596767c67e8b5777719295a5605a ChangeLog 47807
 MD5 ba009554d2c5d1aa2cd7a46b9e472b48 baselayout-1.11.8-r3.ebuild 16801
 MD5 db5570c758188667429c14fc67f0f86a baselayout-1.11.9-r1.ebuild 16956
 MD5 e819385f8aa5ac0f1a8ad035a6b9c7f7 baselayout-1.9.4-r7.ebuild 18118
+MD5 245e39f14052cacd4e495fa02ecf2163 baselayout-1.9.4-r6.ebuild 16835
+MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 MD5 dd7fbce62822fed1595f11078e23aa32 files/baselayout-1.8.6.13-r1-gcc2.patch 443
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
-MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
-MD5 50816019be7cc03120fa58d075eb07f7 files/sysvinit-2.84-selinux1.patch 3612
-MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r6 134
-MD5 330a94e9bb509eddcaa3f0d7364f353a files/rc-scripts-1.4.16-livecd.patch 1378
-MD5 7b2f5e48c4d9056df539620299c20641 files/rc-scripts-1.4.16-splash.patch 11251
 MD5 68ea8c716616fbfd5b287dadb5e9ea5c files/digest-baselayout-1.11.8-r3 69
-MD5 844ae054e507637ee440011d729858c8 files/digest-baselayout-1.11.9-r1 69
-MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r7 134
 MD5 08ade596f939beaf9f7b3657c5811593 files/rc-scripts-1.6.9-checkfs-lvm.patch 579
 MD5 126200ae85bdf0ef43de75411f71aaa8 files/rc-scripts-1.6.9-domainname.patch 380
 MD5 6ec416bfd1097d350c09e78949a736b8 files/rc-scripts-1.6.9-ifconfig.patch 266
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCHmFEMTuwkQ6eEKsRAlCOAJ4mWWoPZS9210vK9GlwHNz6bMCCRACeP7js
-uDMWlJQxlWvj93CQeoqkUws=
-=Mb0K
------END PGP SIGNATURE-----
+MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r6 134
+MD5 b4092f5ec486d78aa60a04777bb840a8 files/rc-scripts-1.4.16-livecd.patch 1420
+MD5 7b2f5e48c4d9056df539620299c20641 files/rc-scripts-1.4.16-splash.patch 11251
+MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
+MD5 50816019be7cc03120fa58d075eb07f7 files/sysvinit-2.84-selinux1.patch 3612
+MD5 844ae054e507637ee440011d729858c8 files/digest-baselayout-1.11.9-r1 69
+MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r7 134
