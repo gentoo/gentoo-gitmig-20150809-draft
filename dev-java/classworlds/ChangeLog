@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/classworlds
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/ChangeLog,v 1.9 2004/10/16 17:02:50 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/ChangeLog,v 1.10 2004/10/19 20:46:24 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  classworlds-1.0-r2.ebuild:
+  Keywords ~amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> classworlds-1.0-r2.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in

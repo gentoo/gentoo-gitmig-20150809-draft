@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/classworlds-1.0-r2.ebuild,v 1.6 2004/10/16 17:02:50 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/classworlds-1.0-r2.ebuild,v 1.7 2004/10/19 20:46:24 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://dist.codehaus.org/classworlds/distributions/classworlds-1.0-src
 SRC_URI="http://dist.codehaus.org/classworlds/distributions/${P}-src.tar.gz"
 LICENSE="codehaus-classworlds"
 SLOT="1"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE="doc jikes"
 DEPEND="=dev-java/xerces-2.6*"
 
