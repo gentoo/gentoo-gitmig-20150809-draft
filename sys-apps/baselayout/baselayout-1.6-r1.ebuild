@@ -1,9 +1,9 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.ebuild,v 1.7 2001/08/19 06:12:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.1 2001/08/21 02:13:29 drobbins Exp $
 
-SV=1.1.1
+SV=1.1.2
 S=${WORKDIR}/rc-scripts-${SV}
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts)"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
@@ -21,6 +21,12 @@ RDEPEND=">=sys-apps/devfsd-1.3.16-r1"
 #	INIT_D_SCRIPTS="cdboot cdscan"
 #fi
 
+src_compile() {
+	cp ${S}/init.d/runscript.c ${T}
+	cd ${T}
+	gcc ${CFLAGS} runscript.c -o runscript
+}
+
 src_install()
 {
 	local foo
@@ -33,7 +39,10 @@ src_install()
 		echo '!!! installed versions.  We will have an automated update system shortly.'
 		exit 1
 	fi
-	
+	dodir /sbin
+	exeinto /sbin
+	doexe ${T}/runscript
+
 	dodir /usr
 	dodir /usr/bin
 	dodir /usr/lib
@@ -84,8 +93,7 @@ src_install()
 		
 		doman ${FILESDIR}/MAKEDEV.8
 		dodoc ${FILESDIR}/copyright ${FILESDIR}/changelog.Debian
-		dodir /usr/X11R6/lib /usr/X11R6/share/man
-		ln -s share/man ${D}/usr/X11R6/man
+		dodir /usr/X11R6/lib /usr/X11R6/man
 		dodir /var/log/news
 		
 		#supervise stuff depreciated
