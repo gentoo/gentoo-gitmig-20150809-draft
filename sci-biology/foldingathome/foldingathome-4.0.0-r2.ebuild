@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-4.0.0-r2.ebuild,v 1.1 2004/12/23 18:37:10 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-4.0.0-r2.ebuild,v 1.2 2005/02/03 17:14:46 lostlogic Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)

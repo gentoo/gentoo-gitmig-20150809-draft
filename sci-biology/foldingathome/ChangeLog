@@ -1,6 +1,15 @@
 # ChangeLog for sci-biology/foldingathome
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.2 2004/12/23 20:17:26 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.3 2005/02/03 17:14:46 lostlogic Exp $
+
+*foldingathome-5.0.2-r1 (03 Feb 2005)
+
+  03 Feb 2005; Brandon Low <lostlogic@gentoo.org>
+  +files/copy_client_config-5.0.2-r1, +files/init-5.0.2-r1,
+  +foldingathome-5.0.2-r1.ebuild:
+  Fix bug 71700 hopefully. Use bash not python for copy_client_config. Update
+  the init script to do more sane things and not fail to stop on multi-cpu
+  systems.
 
 *foldingathome-4.0.0-r2 (23 Dec 2004)
 
