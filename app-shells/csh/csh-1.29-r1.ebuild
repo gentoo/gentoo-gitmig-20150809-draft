@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r1.ebuild,v 1.2 2003/06/12 21:57:51 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r1.ebuild,v 1.3 2003/06/12 22:10:04 taviso Exp $
 
 DESCRIPTION="Classic UNIX shell with C like syntax"
 HOMEPAGE="http://www.netbsd.org/"
@@ -47,7 +47,9 @@ src_compile() {
 
 	printf "/* automatically generated during %s build */\n\n" ${PF} > ${S}/signames.h
 	printf "const char *const sys_signame[NSIG + 3] = {\n" >> ${S}/signames.h
-	printf "\t\"EXIT\",\t\n" $((cnt++)) >> ${S}/signames.h
+	printf "\t\"EXIT\",\t\n" >> ${S}/signames.h
+	
+	let cnt++
 	
 	for i in `kill -l`
 	do
