@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-rsm-fuzzy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-fuzzy/ChangeLog,v 1.4 2004/08/07 05:22:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-fuzzy/ChangeLog,v 1.5 2004/08/28 19:15:36 dholm Exp $
+
+  28 Aug 2004; David Holm <dholm@gentoo.org> cl-rsm-fuzzy-1.2-r2.ebuild:
+  Added to ~ppc.
 
 *cl-rsm-fuzzy-1.2-r2 (06 Aug 2004)
 
