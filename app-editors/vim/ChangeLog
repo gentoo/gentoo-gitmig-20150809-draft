@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.144 2005/01/22 19:11:38 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.145 2005/01/22 20:57:26 ciaranm Exp $
+
+*vim-7.0_alpha20050122 (22 Jan 2005)
+
+  22 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +vim-7.0_alpha20050122.ebuild:
+  Updated vim7 snapshot.
 
   22 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> +files/vim-completion:
   Add bash-completion script. For now this is vim-7 only. If it seems to work
