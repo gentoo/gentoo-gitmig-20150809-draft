@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.3.ebuild,v 1.1 2004/12/28 23:10:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.3.ebuild,v 1.2 2004/12/29 00:05:49 vapier Exp $
 
 inherit eutils
 
@@ -46,6 +46,7 @@ src_compile() {
 		--enable-trans \
 		${mymmx} \
 		--enable-multi-charset \
+		--with-delete=execute \
 		|| die "conf failed"
 	emake || die "make failed"
 }
