@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3m
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.6 2004/10/13 23:30:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.7 2004/11/25 11:31:50 usata Exp $
+
+  25 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> w3m-0.5.1-r2.ebuild:
+  Added to ~ppc-macos; bug #61802.
 
   13 Oct 2004; <agriffis@gentoo.org> w3m-0.5.1-r1.ebuild, w3m-0.5.1-r2.ebuild:
   add ia64 keywords

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.1-r2.ebuild,v 1.3 2004/10/13 23:30:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.1-r2.ebuild,v 1.4 2004/11/25 11:31:50 usata Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://sourceforge/w3m/${P}.tar.gz
 
 LICENSE="w3m"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~ppc64 ~ia64"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~ppc64 ~ia64 ~ppc-macos"
 IUSE="X gtk gtk2 imlib imlib2 xface ssl migemo gpm cjk nls lynxkeymap"
 #IUSE="canna unicode"
 
@@ -31,10 +31,14 @@ IUSE="X gtk gtk2 imlib imlib2 xface ssl migemo gpm cjk nls lynxkeymap"
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
 	>=dev-libs/boehm-gc-6.2
-	X? ( gtk? ( gtk2? ( >=x11-libs/gtk+-2 )
-		!gtk2? ( >=media-libs/gdk-pixbuf-0.22.0 ) )
-		!gtk? ( imlib2? ( >=media-libs/imlib2-1.1.0 )
-			!imlib2? ( >=media-libs/imlib-1.9.8 ) )
+	X? (
+		!ppc-macos? (
+			gtk? ( gtk2? ( >=x11-libs/gtk+-2 )
+				!gtk2? ( >=media-libs/gdk-pixbuf-0.22.0 ) )
+			!gtk? ( imlib2? ( >=media-libs/imlib2-1.1.0 )
+				!imlib2? ( >=media-libs/imlib-1.9.8 ) )
+		)
+		ppc-macos? ( >=media-libs/imlib2-1.1.2 )
 	)
 	xface? ( media-libs/compface )
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
@@ -59,11 +63,17 @@ src_unpack() {
 
 src_compile() {
 
-	local myconf migemo_command imagelib
+	local myconf migemo_command imagelib fb
 
 	if use X ; then
-		myconf="${myconf} --enable-image=x11,fb $(use_enable xface)"
-		if use gtk2 ; then
+		# fb depends on Linux
+		use ppc-macos || fb=",fb"
+		myconf="${myconf} --enable-image=x11${fb} $(use_enable xface)"
+
+		if use ppc-macos ; then
+			# ppc-macos doesn't support gtk2, gtk and imlib
+			imagelib="imlib2"
+		elif use gtk2 ; then
 			imagelib="gtk2"
 		elif use gtk ; then
 			imagelib="gdk-pixbuf"
