@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.6 2004/08/16 10:37:07 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.7 2004/10/20 18:01:49 eldad Exp $
 
 inherit eutils
 
@@ -66,7 +66,7 @@ src_compile() {
 			echo ""
 			einfo "to /etc/portage/package.use to permanently set this package's USE flags"
 			einfo "More info on package.use is available on:"
-			einfo "     man 5 portage"
+			einfo "	    man 5 portage"
 		)
 	elif use postgres ; then
 		myconf="${myconf} --with-pgsql-xdata"
@@ -146,6 +146,20 @@ src_install() {
 
 	insinto /usr/nagios/contrib/eventhandlers/redundancy-scenario1
 	doins contrib/eventhandlers/redundancy-scenario1/*
+
+	#Apache Module
+
+	if use !noweb; then
+		if use apache2; then
+			insinto /etc/apache2/conf/modules.d
+			doins ${FILESDIR}/99_nagios.conf
+		else
+			insinto /etc/apache/conf/addon-modules
+			doins ${FILESDIR}/nagios.conf
+			echo "Include  conf/addon-modules/nagios.conf" >> ${ROOT}/etc/apache/conf/apache.conf
+		fi
+	fi
+
 }
 
 pkg_preinst() {
@@ -178,25 +192,18 @@ pkg_postinst() {
 	einfo "Remember to edit the config files in /etc/nagios"
 	einfo "Also, if you want nagios to start at boot time"
 	einfo "remember to execute:"
-	einfo "  rc-update add nagios default"
+	einfo "	 rc-update add nagios default"
 	einfo
 
-	if ! use noweb; then
+	if use !noweb; then
 		einfo "This does not include cgis that are perl-dependent"
 		einfo "Currently traceroute.cgi is perl-dependent"
 		einfo "To have ministatus.cgi requires copying of ministatus.c"
 		einfo "to cgi directory for compiling."
 
 		if use apache2; then
-			insinto /etc/apache2/conf/modules.d
-			doins ${FILESDIR}/99_nagios.conf
-
 			einfo " Edit /etc/conf.d/apache2 and add \"-D NAGIOS\""
 		else
-			insinto /etc/apache/conf/addon-modules
-			doins ${FILESDIR}/nagios.conf
-			echo "Include  conf/addon-modules/nagios.conf" >> ${ROOT}/etc/apache/conf/apache.conf
-
 			einfo " Edit /etc/conf.d/apache and add \"-D NAGIOS\""
 		fi
 
