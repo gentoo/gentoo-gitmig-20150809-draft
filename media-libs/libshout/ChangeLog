@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/libshout
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.1 2002/07/28 15:46:04 aliz Exp $
+
+*libshout-1.0.9 (28 Jul 2002)
+
+  28 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> libshout-1.0.9.ebuild : 
+
+  Initial import. Ebuild submitted by Zaheer Merali <z.merali@cs.ucl.ac.uk>.
