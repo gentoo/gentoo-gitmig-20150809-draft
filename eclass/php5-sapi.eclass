@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.9 2004/07/22 08:38:09 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.10 2004/07/28 07:40:32 stuart Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.php.net/"
 LICENSE="PHP"
 SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzlib calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbmaker dbx dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg ldap libedit mcve memlimit mhash ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session shared sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzlib calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbmaker dbx dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session shared sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc zlib"
 
 # these USE flags should have the correct dependencies
 
@@ -43,6 +43,7 @@ DEPEND="$DEPEND
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	libedit? ( dev-libs/libedit )
 	mhash? ( app-crypt/mhash )
+	mime? ( sys-apps/file )
 	ming? ( media-libs/ming )
 	mssql? ( dev-db/freetds )
 	mysql? ( >=dev-db/mysql-3.23.26 )
@@ -329,6 +330,7 @@ php5-sapi_src_compile () {
 	enable_extension_with		"mcve"			"mcve"			1
 	enable_extension_enable		"memory-limit"	"memlimit"		0
 	enable_extension_with		"mhash"			"mhash"			1
+	enable_extension_with		"mime-magic"	"mime"			0 "/usr/share/misc/file/magic.mime"
 	enable_extension_with		"ming"			"ming"			1
 	enable_extension_with		"mnogosearch"	"mnogosearch"	1
 	enable_extension_with		"msql"			"msql"			1
@@ -377,6 +379,7 @@ php5-sapi_src_compile () {
 	enable_extension_with		"readline"		"readline"		0
 	enable_extension_with		"libedit"		"libedit"		1
 
+	# all done
 
 	echo "${my_conf}"
 
