@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/spamprobe-1.0.ebuild,v 1.2 2004/12/06 15:12:01 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/spamprobe-1.0.ebuild,v 1.3 2005/01/14 14:35:14 ticho Exp $
 
 DESCRIPTION="Fast, intelligent, automatic spam detector using Paul Graham style Bayesian analysis of word counts in spam and non-spam emails."
 HOMEPAGE="http://spamprobe.sourceforge.net/"
