@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/cmucl-bin-18e.ebuild,v 1.1 2003/06/07 19:34:37 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/cmucl-bin-18e.ebuild,v 1.2 2003/06/07 20:13:58 mkennedy Exp $
 
 DESCRIPTION="CMUCL Lisp. This conforms to the ANSI Common Lisp Standard"
 HOMEPAGE="http://www.cons.org/cmucl/"
@@ -13,6 +13,8 @@ SRC_URI="ftp://ftp.cn.freebsd.org/pub/cmucl/release/${PV}/cmucl-${PV}-x86-linux.
 	ftp://ftp.cn.freebsd.org/pub/cmucl/release/${PV}/cmucl-${PV}-x86-linux.extra.tar.bz2
 	ftp://ftp.cn.freebsd.org/pub/cmucl/release/${PV}/cmucl-${PV}.source.tar.bz2
 	ftp://ftp.cn.freebsd.org/pub/cmucl/release/${PV}/cmucl-${PV}.documents.tar.bz2"
+
+PROVIDE="virtual/commonlisp"
 
 S=${WORKDIR}/${P}
 
