@@ -1,5 +1,15 @@
-MD5 744a80f7ef47a2baf56b8b90cc60bcca kooldock-0.3.ebuild 610
-MD5 fb3521a27a8fe98fc0b6e6892a735c49 ChangeLog 779
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2685de69595278669a0b69cbea95ad10 ChangeLog 873
+MD5 8179cf1a9b25b2894c68dfdb4a8e05e9 kooldock-0.3.ebuild 614
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 789e37ac05ff3871ada15b4af18a97a9 files/digest-kooldock-0.3 65
 MD5 b2e74e5e22ab6d40875f7495796d2bd0 files/kooldock-0.3-configure.patch 3567
+MD5 789e37ac05ff3871ada15b4af18a97a9 files/digest-kooldock-0.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBttD2RPjscZbntocRAmsxAKCOIJKut5HyD1W7M4Z6Rf2tGoGEngCgkAGL
+099MdT8jbFLQZpLEGCqKe2k=
+=7W5H
+-----END PGP SIGNATURE-----
