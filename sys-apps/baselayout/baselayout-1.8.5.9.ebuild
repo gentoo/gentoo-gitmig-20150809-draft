@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.9.ebuild,v 1.1 2003/04/27 15:18:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.9.ebuild,v 1.2 2003/05/20 20:49:31 azarah Exp $
 
 IUSE="bootstrap build"
 
@@ -120,16 +120,19 @@ src_compile() {
 		einfo "Building sysvinit..."
 		emake LDFLAGS="" || die "problem compiling sysvinit"
 
-		if [ -f /usr/include/awk/awk.h ]
+		if [ -z "`use bootstrap`" ]
 		then
-			# Build gawk module
-			cd ${S}/src
-			einfo "Building awk module..."
-			make || {
-				eerror "Failed to build gawk module.  Make sure you have"
-				eerror "sys-apps/gawk-3.1.1-r1 or later installed"
-				die "problem compiling gawk module"
-			}
+			if [ -f /usr/include/awk/awk.h -a ! -L ${ROOT}/lib/rcscripts/filefuncs.so ]
+			then
+				# Build gawk module
+				cd ${S}/src
+				einfo "Building awk module..."
+				make || {
+					eerror "Failed to build gawk module.  Make sure you have"
+					eerror "sys-apps/gawk-3.1.1-r1 or later installed"
+					die "problem compiling gawk module"
+				}
+			fi
 		fi
 	fi
 }

@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.7.ebuild,v 1.2 2003/05/20 20:49:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8.ebuild,v 1.1 2003/05/20 20:49:31 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
 
 IUSE="bootstrap build"
 
-SV="1.4.3.7"
+SV="1.4.3.8"
 SVREV=""
 # SysvInit version
 SVIV="2.84"
@@ -289,7 +289,9 @@ src_install() {
 	dosym ../../sbin/modules-update /usr/sbin/update-modules
 	# These moved from /etc/init.d/ to /sbin to help newb systems
 	# from breaking
-	dosbin runscript.sh functions.sh rc-services.sh rc-daemon.sh rc-help.sh
+	dosbin runscript.sh functions.sh
+	exeinto /lib/rcscripts/sh
+	doexe rc-services.sh rc-daemon.sh rc-help.sh
 
 	dodir /etc/init.d
 	exeinto /etc/init.d
@@ -305,11 +307,11 @@ src_install() {
 	# the build image ...
 	if [ -z "`use build`" ]
 	then
-		# This is for new depscan and rc-envupdate.sh
+		# This is for new depscan.sh and env-update.sh
 		# written in awk
 		into /
 		dosbin depscan.sh
-		dosbin rc-envupdate.sh
+		dosbin env-update.sh
 		insinto /lib/rcscripts/awk
 		for foo in ${S}/src/awk/*.awk
 		do
@@ -321,11 +323,6 @@ src_install() {
 #			exeinto /lib/rcscripts
 #			doexe ${S}/src/filefuncs/filefuncs.so
 #		fi
-#	else
-#		# This is the old bash ones
-#		into /
-#		newsbin depscan.sh.bash depscan.sh
-#		newsbin rc-envupdate.sh.bash rc-envupdate.sh
 	fi
 
 	# Compat symlinks (some stuff have hardcoded paths)
