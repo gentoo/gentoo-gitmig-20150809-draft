@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.51 2004/07/12 16:08:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.52 2004/07/14 15:24:01 vapier Exp $
+
+  14 Jul 2004; Mike Frysinger <vapier@gentoo.org> file-4.09.ebuild:
+  Make sure when building the python component we link against the current
+  libmagic.so and not the system one found in /usr/lib #54401 by tyarling.
 
   12 Jul 2004; <solar@gentoo.org> file-4.08.ebuild, file-4.09.ebuild:
   remove the unneeded lib/*.a cruft from a stage1 build

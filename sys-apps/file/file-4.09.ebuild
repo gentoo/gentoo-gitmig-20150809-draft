@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.09.ebuild,v 1.9 2004/07/12 16:08:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.09.ebuild,v 1.10 2004/07/14 15:24:01 vapier Exp $
 
 inherit flag-o-matic gnuconfig eutils
 use python && inherit distutils
@@ -26,13 +26,16 @@ src_unpack() {
 	# This patch is for MIPS only.  It slightly changes the 'file' output
 	# on MIPS machines to a specific format so that other programs can
 	# recognize things.
-	use mips && epatch ${FILESDIR}/${PN}-4.xx-mips-gentoo.diff
+	if use mips ; then
+		epatch ${FILESDIR}/${PN}-4.xx-mips-gentoo.diff
+		gnuconfig_update
+	fi
+
+	# make sure python links against the current libmagic #54401
+	sed -i "/library_dirs/s:'\.\./src':'../src/.libs':" python/setup.py
 }
 
 src_compile() {
-	# If running mips64, we need updated configure data
-	use mips && gnuconfig_update
-
 	# file command segfaults on hppa -  reported by gustavo@zacarias.com.ar
 	[ ${ARCH} = "hppa" ] && filter-flags "-mschedule=8000"
 
