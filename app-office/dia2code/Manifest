@@ -1,3 +1,13 @@
-MD5 133fb12c30dc60d66633fd823c691c52 dia2code-0.8.1.ebuild 818
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 59aed9eedec84272522dfe4dde37b458 ChangeLog 976
+MD5 f7dc1ce3fbe7ce42b4b4d0cfceaf3870 dia2code-0.8.1.ebuild 799
 MD5 3443ab8d52c02556db96eafb035b3521 files/digest-dia2code-0.8.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4ChwHTu7gpaalycRAqSTAJ4tg6Fgd2/JWP77YGkb1aLzlGvQ2QCdHrKt
+JL/PwhV1wR91LRRM5uyrg/4=
+=SImV
+-----END PGP SIGNATURE-----
