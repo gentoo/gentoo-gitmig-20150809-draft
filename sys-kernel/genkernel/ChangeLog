@@ -1,9 +1,16 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.13 2003/10/19 20:43:57 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.14 2003/10/19 21:37:43 zhen Exp $
+
+  19 Oct 2003; zhen <zhen@gentoo.org> genkernel-2.0.ebuild:
+  this should have been masked.
 
   19 Oct 2003; Heinrich Wendel <lanius@gentoo.org> genkernel-2.0.ebuild:
   bug #31533
+
+  19 Oct 2003; zhen <zhen@gentoo.org> genkernel-2.0.ebuild:
+  updating paths for file locations, this should fix some problems.
+  Also marking -* because no one should emerge it until it is complete.
 
 *genkernel-2.0 (19 Oct 2003)
 
