@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r6.ebuild,v 1.1 2004/04/17 09:07:59 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r6.ebuild,v 1.2 2004/06/23 23:11:29 agriffis Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -26,7 +26,7 @@ src_unpack() {
 	cd ${WORKDIR}/${KV/3/1}
 
 	# This is the crypt USE flag, keeps {USAGI/superfreeswan/patch-int/loop-jari}
-	if [ -z "`use crypt`" ]; then
+	if ! use crypt; then
 	    einfo "No Cryptographic support, dropping patches..."
 	    for file in 6* 8* ;do
 		einfo "Dropping ${file}..."
@@ -40,7 +40,7 @@ src_unpack() {
 	# {superfreeswan/patch-int/loop-jari} 
 	# Using USAGI will also cause you to drop all iptables ipv6
 	# patches.
-	if [ -z "`use usagi`" ]; then
+	if ! use usagi; then
 		einfo "Keeping {superfreeswan/patch-int/loop-jari} patches, dropping USAGI"
 		for file in 6* ;do
 			einfo "Dropping ${file}..."

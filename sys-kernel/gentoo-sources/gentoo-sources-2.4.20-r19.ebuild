@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r19.ebuild,v 1.1 2004/06/19 13:00:48 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r19.ebuild,v 1.2 2004/06/23 23:14:25 agriffis Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -43,7 +43,7 @@ src_unpack() {
 	cd ${WORKDIR}/${KV/19/14}
 
 	# This is the *ratified* aavm USE flag, enables aavm support in this kernel
-	if [ -z "`use aavm`" ]; then
+	if ! use aavm; then
 		einfo "Setting up kernel for rmap support(default)."
 		for file in *.aavm ;do
 			einfo "Dropping ${file}..."
@@ -71,7 +71,7 @@ src_unpack() {
 	fi
 
 	# This is the *ratified* evms2 USE flag, enables evms2 support
-	if [ -z "`use evms2`" ]; then
+	if ! use evms2; then
 		einfo "Setting up kernel for EVMS 1.2.1 support (default)..."
 		for file in 2* ;do
 			einfo "Dropping ${file}..."
@@ -88,7 +88,7 @@ src_unpack() {
 	fi
 
 	# This is the crypt USE flag, keeps {USAGI/superfreeswan/patch-int/loop-jari}
-	if [ -z "`use crypt`" ]; then
+	if ! use crypt; then
 		einfo "No Cryptographic support, dropping patches..."
 		for file in 6* 8* ;do
 			einfo "Dropping ${file}..."
@@ -100,7 +100,7 @@ src_unpack() {
 
 	# This is the usagi USE flag, keeps USAGI, drops {superfreeswan/patch-int/loop-jari}
 	# Using USAGI will also cause you to drop all iptables ipv6 patches
-	if [ -z "`use usagi`" ]; then
+	if ! use usagi; then
 		einfo "Keeping {superfreeswan/patch-int/loop-jari} patches, dropping USAGI"
 		for file in 6* ;do
 			einfo "Dropping ${file}..."

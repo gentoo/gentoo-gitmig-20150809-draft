@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r16.ebuild,v 1.1 2004/06/19 13:00:48 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r16.ebuild,v 1.2 2004/06/23 23:14:25 agriffis Exp $
 
 IUSE="build crypt xfs acpi4linux"
 
@@ -48,14 +48,14 @@ src_unpack() {
 	# failures, if they aren't there that is a good thing!
 
 	# This is the ratified crypt USE flag, enables IPSEC and patch-int
-	[ `use crypt` ] || rm 8*
+	use crypt || rm 8*
 
 	# This is the XFS filesystem from SGI, use at your own risk ;)
-	[ `use xfs` ] || rm *xfs*
+	use xfs || rm *xfs*
 
 	# This is the latest release of ACPI from 
 	# http://www.sourceforge.net/projects/acpi	
-	[ `use acpi4linux` ] || rm 70*
+	use acpi4linux || rm 70*
 
 	kernel_src_unpack
 
