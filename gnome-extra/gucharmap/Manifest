@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b29328ec3d5c9d93edea882585eef5a0 ChangeLog 4437
-MD5 c13579c42fec342e695a1e5799be45bc gucharmap-1.4.2.ebuild 830
+MD5 49c53ba0632dc62586ff5422e29cd175 ChangeLog 4524
+MD5 384b1d38d823ba2aabc4ecdf13fe0cdb gucharmap-1.4.2.ebuild 827
 MD5 a7b32d316a5688976814d251208cc4e5 gucharmap-1.4.1.ebuild 831
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 fa917fe7ffcae7952bd8bf5a0f756d13 files/digest-gucharmap-1.4.2 69
 MD5 a0bdcf85c74456f55df0f5b0c721d961 files/digest-gucharmap-1.4.1 69
 MD5 2d194fe17e6be8b8c4c7c23ffd02f87b files/gucharmap-1.2.0-gcc2_fix.patch 516
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByOSrKRy60XGEcJIRAmJQAKCjihRedc6BaLLCoAIr+8+l/YFaYwCgp1MU
-kVjr31apOLu+oC/Cob7FyWE=
-=T94g
------END PGP SIGNATURE-----

@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 52d51f1942b54046a321d8dd7d440891 ChangeLog 10321
+MD5 114743136466adba6efd37962c83b57f ChangeLog 10413
 MD5 f1a7f6e7010166876bf1181099cb15fd gnome-games-1.4.0.3-r3.ebuild 1274
 MD5 9db4e0ddea684696bb43e5029ecc9bb5 gnome-games-2.4.2.ebuild 1310
-MD5 0e3ea9a69a3bf6cee8dc3b055e00f809 gnome-games-2.8.1-r1.ebuild 2088
+MD5 b23028e1e36d9043009ce62501fb7daf gnome-games-2.8.1-r1.ebuild 2085
 MD5 6f8ceb48ce20b11ed95326325513ed42 gnome-games-2.6.2.ebuild 1430
-MD5 0261011a0c63f584becfd1df349ce933 gnome-games-2.8.1.ebuild 1983
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 0261011a0c63f584becfd1df349ce933 gnome-games-2.8.1.ebuild 1983
 MD5 7a5432d40a2fc309feb80b5cbc18267d gnome-games-2.8.2.ebuild 1978
 MD5 2301a09a3e02fd7e40f6ee5a7e79e95c files/digest-gnome-games-1.4.0.3-r3 72
 MD5 97e3065e45df12441df89f6ba12f4915 files/digest-gnome-games-2.4.2 71
 MD5 2105a5dad556d5ace66d269debb6fb20 files/digest-gnome-games-2.8.1-r1 71
 MD5 a405916c4c2616574b0e8a5ec5f1e9b0 files/digest-gnome-games-2.8.2 71
 MD5 9f9b4b44ecc874043f8a7a57d9e96ce7 files/digest-gnome-games-2.6.2 71
-MD5 2105a5dad556d5ace66d269debb6fb20 files/digest-gnome-games-2.8.1 71
 MD5 0ceaa7aaf955c911869551921148fab5 files/gnome-games-2.8.1-fix_upgrade.patch 1989
-MD5 7f65705cb02235fdf356420a2f6cde38 files/gnome-games-2.6.2-amd64.patch 2219
+MD5 2105a5dad556d5ace66d269debb6fb20 files/digest-gnome-games-2.8.1 71
 MD5 70c1ce37a2d4a8762d949445e21122b4 files/gnome-games-2.8.0-pkgconfig_gconf.patch 861
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByOLlKRy60XGEcJIRAllTAJ45XZtmibZozFbfhS0V4Cb4KBxeqwCgsXtq
-CsFwGWzlAndx/wADovM0NJY=
-=qpPJ
------END PGP SIGNATURE-----
+MD5 7f65705cb02235fdf356420a2f6cde38 files/gnome-games-2.6.2-amd64.patch 2219
