@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/X500-DN
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/ChangeLog,v 1.2 2004/06/25 01:09:53 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/ChangeLog,v 1.3 2005/03/30 13:57:54 mcummings Exp $
+
+  30 Mar 2005; Michael Cummings <mcummings@gentoo.org> X500-DN-0.28.ebuild:
+  Another dep missing in the Makefile. Bug 87216
 
 *X500-DN-0.28 (06 Jun 2004)
 
