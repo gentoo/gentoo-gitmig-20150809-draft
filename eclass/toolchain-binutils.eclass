@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.27 2005/03/09 17:07:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.28 2005/03/09 17:08:38 azarah Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -234,7 +234,7 @@ toolchain-binutils_pkg_postrm() {
 		else
 			binutils-config ${choice}
 		fi
-	elif [[ $(CHOST=${CTARGET} binutils-config -c) = ${CTARGET}-${PV} ]] ; then
+	elif [[ $(CHOST=${CTARGET} binutils-config -c) == ${CTARGET}-${PV} ]] ; then
 		binutils-config ${CTARGET}-${PV}
 	fi
 }
