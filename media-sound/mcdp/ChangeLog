@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mcdp
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.9 2004/10/30 10:54:22 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.10 2005/02/03 10:47:33 robbat2 Exp $
+
+  03 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> mcdp-0.3j.ebuild,
+  +files/mcdp-0.3j-dietlibc-fix.patch:
+  Fix bug #50447 properly. It's not hard dammit.
 
   30 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> mcdp-0.3j.ebuild:
   toolchain love for bug #69011.
@@ -25,5 +29,5 @@
   11 Jul 2003; jje <jje@gentoo.org> mcdp-0.3j.ebuild:
   Initial revision.
   
-  Submitted by: Freyr Gunnar Ólafsson <gnarlin@utopia.is>
+  Submitted by: Freyr Gunnar Ãlafsson <gnarlin@utopia.is>
 

@@ -1,0 +1,14 @@
+--- mcdp-0.3j/mcdp.h	2002-07-12 06:24:30.000000000 -0700
++++ mcdp-0.3j.new/mcdp.h	2005-02-03 02:37:26.000000000 -0800
+@@ -27,6 +27,11 @@
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ 
++// hack to avoid re-definition of some stuff
++#ifdef __dietlibc__
++#define _LINUX_BYTEORDER_GENERIC_H
++#endif //__dietlibc__
++
+ #include <linux/cdrom.h>
+ 
+ #include "params.h"
