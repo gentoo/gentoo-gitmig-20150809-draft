@@ -1,0 +1,7 @@
+MD5 8f00e92ffc649271bae3ea5bbf1fe732 setiathome-3.08.ebuild 2596
+MD5 827b14ec83f4865f9671282ac77937ab setiathome-3.03-r1.ebuild 2150
+MD5 f52ffe7bce73034b856bdb72d4fa5070 ChangeLog 1392
+MD5 db91eacc14b31d45e0b5a9ec1973adb6 files/seti-init.d-r1 1612
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-setiathome-3.03-r1 0
+MD5 64b90b7744efe9d67350d46ba7142d29 files/digest-setiathome-3.08 82
+MD5 ab0a71207ad0c146d59f2b512ffae9af files/seti-conf.d-r1 225

@@ -1,6 +1,10 @@
 #!/sbin/runscript
 
-cpus=`egrep -c "^processor" /proc/cpuinfo`
+cpus=`egrep -c "^bogomips" /proc/cpuinfo`
+
+depend() { 
+	need net
+}
 
 checkconfig() {
         if [ ! -e ${SETIATHOME_DIR} ]
