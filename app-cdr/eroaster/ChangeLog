@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/eroaster
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.23 2004/03/30 00:27:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.24 2004/04/26 15:36:23 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> eroaster-2.0.12.ebuild:
+  Add die following econf for bug 48950
 
   29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   eroaster-2.1.0-r2.ebuild, eroaster-2.2.0_pre6.ebuild:

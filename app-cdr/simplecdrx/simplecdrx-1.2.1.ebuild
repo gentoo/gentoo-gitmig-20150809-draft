@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.2.1.ebuild,v 1.8 2004/02/24 10:43:57 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.2.1.ebuild,v 1.9 2004/04/26 15:40:42 agriffis Exp $
 
 DESCRIPTION="CD ripping/mastering"
 HOMEPAGE="http://ogre.rocky-road.net/cdr.shtml"
@@ -29,7 +29,7 @@ src_compile() {
 	cp src/main.c src/main.c.orig
 	sed -e 's:/usr/local/share:/usr/share:g' \
 		src/main.c.orig >src/main.c || die
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 
