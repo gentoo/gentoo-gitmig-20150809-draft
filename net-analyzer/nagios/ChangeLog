@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nagios
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.21 2004/10/25 03:10:23 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.22 2005/02/15 12:08:00 dragonheart Exp $
+
+*nagios-2.0b_p1 (15 Feb 2005)
+
+  15 Feb 2005; Daniel Black <dragonheart@gentoo.org> +nagios-2.0b_p1.ebuild:
+  Version bump ebuild as per bug #81826 thanks to Marco Morales 
+  <soulse@gmail.com>
 
   24 Oct 2004; Jason Wever <weeve@gentoo.org> nagios-1.2.ebuild:
   Stable on sparc.
