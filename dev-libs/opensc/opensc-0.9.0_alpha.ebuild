@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.9.0_alpha.ebuild,v 1.2 2004/07/14 04:36:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.9.0_alpha.ebuild,v 1.3 2004/07/17 09:56:33 dholm Exp $
 
 MY_P=${P/_/-}
 DESCRIPTION="SmartCard library and applications"
@@ -9,7 +9,7 @@ SRC_URI="http://www.opensc.org/files/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="-*" #~x86
+KEYWORDS="-*" #~x86 ~ppc
 IUSE="ldap pam pcsc-lite X"
 
 RDEPEND="ldap? ( net-nds/openldap )

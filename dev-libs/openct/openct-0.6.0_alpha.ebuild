@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.0_alpha.ebuild,v 1.1 2004/07/14 03:33:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.0_alpha.ebuild,v 1.2 2004/07/17 09:54:59 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://opensc.org/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-*" #~x86
+KEYWORDS="-*" #~x86 ~ppc
 IUSE="usb"
 
 RDEPEND="virtual/libc

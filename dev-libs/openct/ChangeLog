@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openct
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.4 2004/07/14 03:33:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.5 2004/07/17 09:54:59 dholm Exp $
+
+  17 Jul 2004; David Holm <dholm@gentoo.org> openct-0.5.0.ebuild,
+  openct-0.6.0_alpha.ebuild:
+  Added to ~ppc.
 
 *openct-0.6.0_alpha (13 Jul 2004)
 
