@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/binutils-config-1.0.ebuild,v 1.2 2004/11/14 08:51:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/binutils-config-1.0.ebuild,v 1.3 2004/11/17 22:02:16 vapier Exp $
 
-DESCRIPTION="Utility to change the gcc compiler being used"
+DESCRIPTION="Utility to change the binutils being used"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI=""
 
