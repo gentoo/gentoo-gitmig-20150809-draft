@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-dev
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/ChangeLog,v 1.13 2004/09/08 01:09:59 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/ChangeLog,v 1.14 2004/10/19 07:11:12 avenj Exp $
+
+*fortune-mod-gentoo-dev-20041019 (19 Oct 2004)
+
+  19 Oct 2004; Jon Portnoy <avenj@gentoo.org> fortune-mod-gentoo-dev-20041019.ebuild :
+  Update.
 
 *fortune-mod-gentoo-dev-20040907 (07 Sep 2004)
 
@@ -52,7 +57,7 @@
   03 Sep 2003; Jon Portnoy <avenj@gentoo.org> fortune-mod-gentoo-dev-20030903.ebuild :
   Version bump, added a few new quotes. Marked stable for all currently
   keyworded archs - because frankly, who cares about unstable keywording 
-  on a small fortunes file? Really, now, be reasonable.
+  on a small fortunes file?
 
 *fortune-mod-gentoo-dev-20030809 (09 Aug 2003)
 
