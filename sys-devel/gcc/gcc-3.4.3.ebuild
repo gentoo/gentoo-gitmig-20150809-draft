@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.5 2004/11/14 09:16:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.6 2004/11/14 14:13:28 swegener Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -40,7 +40,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/binutils-2.14.90.0.8-r1
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )"
 PDEPEND="sys-devel/gcc-config
-	!nocxx? ( !n32? ( !n64? ( !uclibc? ( !build ( sys-libs/libstdc++-v3 ) ) ) ) )"
+	!nocxx? ( !n32? ( !n64? ( !uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) ) )"
 
 GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~lv/GCC/"
 #BRANCH_UPDATE="20041025"
