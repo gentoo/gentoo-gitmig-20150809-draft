@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/obconf
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.1 2003/09/09 22:49:22 tseng Exp $
+
+*obconf-1.0 (09 Sep 2003)
+
+  09 Sep 2003; Brandon Hale <tseng@gentoo.org> obconf-1.0.ebuild:
+  Initial commit.
+
