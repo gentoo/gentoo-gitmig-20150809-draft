@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gtk-xemacs/gtk-xemacs-21.1.12.ebuild,v 1.1 2000/09/10 17:34:01 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gtk-xemacs/gtk-xemacs-21.1.12_p2.ebuild,v 1.1 2000/09/14 01:14:41 achim Exp $
 
-A=gtk-xemacs-09062000.tar.bz2
+A=gtk-xemacs-09112000.tar.bz2
 S=${WORKDIR}/gtk-xemacs
 DESCRIPTION="XEmacs 21.1.12 GTK"
 SRC_URI="http://www.cs.indiana.edu/elisp/gui-xemacs/dist/${A}"
@@ -22,6 +22,7 @@ src_install() {
   prepman /usr/X11R6
   dodoc BUGS CHANGES-beta COPYING GETTING* INSTALL ISSUES PROBLEMS README*
 }
+
 
 
 
