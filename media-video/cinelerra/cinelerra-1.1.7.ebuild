@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.7.ebuild,v 1.6 2003/09/26 11:46:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.7.ebuild,v 1.7 2003/10/03 14:01:10 lu_zero Exp $
 
 inherit gcc eutils flag-o-matic
 export WANT_GCC_3="yes"
@@ -25,6 +25,7 @@ DEPEND="virtual/x11
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/gcc-3.3.1-collate.patch
+	epatch ${FILESDIR}/pthread_t_not_int.patch
 }
 
 src_compile() {
@@ -47,7 +48,7 @@ src_install() {
 	myarch="ppc"
 	fi
 	cd ${S}/${PN}/${myarch}
-	dobin ${PN}
+	dobin ${PN} || die "cinelerra not built"
 
 	cd ${S}/plugins
 	insinto /usr/lib/${PN}
