@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/skey
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.28 2005/02/06 00:24:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.29 2005/02/07 18:02:40 gustavoz Exp $
+
+  07 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> skey-1.1.5-r4.ebuild:
+  Stable on sparc
 
   06 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> skey-1.1.5-r4.ebuild:
   Stable on alpha.
