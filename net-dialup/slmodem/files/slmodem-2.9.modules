@@ -1,22 +1,13 @@
-# slmodem 2.7.x kernel modules' configuration file
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.modules,v 1.1 2004/05/23 07:16:49 dragonheart Exp $
-
-## IMPORTANT:
-## You need to customise this for your modem
-## and then run the `modules-update' command.
-
-## Uncomment one of the two MODEM options.
-define MODEM `grep MODEM= /etc/conf.d/slmodem | sed 's/MODEM=//'`
+# slmodem 2.9.x kernel modules' configuration file
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.modules,v 1.2 2004/06/05 10:41:21 dragonheart Exp $
 
 ## Uncomment this and select your country.
-define COUNTRY `grep country= /etc/conf.d/slmodem | sed 's/COUNTRY=//'`
+#define COUNTRY `grep COUNTRY= /etc/conf.d/slmodem | sed 's/COUNTRY=//'`
 
 ## You do not need to change anything below here.
-options slmdm country=${COUNTRY}
-alias char-major-212 slmdm
-alias char-major-213 slusb
+# country nolonger a option
+#options slamr country=${COUNTRY}
+#options slusb country=${COUNTRY}
 
-alias /dev/modem ${MODEM}
-alias slmdm off
-pre-install ${MODEM} modprobe slmdm
-probeall /dev/ttySL* slmdm ${MODEM}
+alias char-major-212 slamr
+alias char-major-213 slusb
