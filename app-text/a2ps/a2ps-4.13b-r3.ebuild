@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r3.ebuild,v 1.5 2002/07/11 06:30:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r3.ebuild,v 1.6 2002/07/31 17:23:18 kabau Exp $
 
 S=${WORKDIR}/${P/b/}
 DESCRIPTION="a2ps is an Any to PostScript filter"
@@ -14,6 +14,9 @@ DEPEND=">=app-text/ghostscript-6.23
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
 

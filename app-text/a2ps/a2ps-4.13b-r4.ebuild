@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r4.ebuild,v 1.1 2002/05/15 23:27:58 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r4.ebuild,v 1.2 2002/07/31 17:23:18 kabau Exp $
 
 S=${WORKDIR}/${P/b/}
 DESCRIPTION="a2ps is an Any to PostScript filter"
@@ -8,6 +8,7 @@ SRC_URI="ftp://ftp.enst.fr/pub/unix/a2ps/${P}.tar.gz"
 HOMEPAGE="http://www-inf.enst.fr/~demaille/a2ps"
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 
 DEPEND=">=app-text/ghostscript-6.23
