@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.183 2004/07/22 19:18:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.184 2004/07/24 23:27:10 agriffis Exp $
+
+  24 Jul 2004; Aron Griffis <agriffis@gentoo.org> mozilla-1.7-r1.ebuild:
+  Use emake -j1 for security stuff #58049
 
 *mozilla-1.7-r1 (22 Jul 2004)
 

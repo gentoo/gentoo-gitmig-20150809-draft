@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7-r1.ebuild,v 1.1 2004/07/22 19:18:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7-r1.ebuild,v 1.2 2004/07/24 23:27:10 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
@@ -385,11 +385,11 @@ src_compile() {
 		cd ${S}/security/coreconf || die "cd coreconf failed"
 		echo 'INCLUDES += -I$(DIST)/include/nspr -I$(DIST)/include/dbm'\
 			>>headers.mk
-		emake || die "make security headers failed"
+		emake -j1 || die "make security headers failed"
 
 		cd ${S}/security/nss || die "cd nss failed"
-		emake moz_import || die "make moz_import failed"
-		emake || die "make nss failed"
+		emake -j1 moz_import || die "make moz_import failed"
+		emake -j1 || die "make nss failed"
 	fi
 
 	####################################
