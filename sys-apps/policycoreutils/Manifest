@@ -1,6 +1,8 @@
+MD5 0e9056b46ceba2a2702743c63c455887 policycoreutils-1.2.ebuild 1248
 MD5 2eeb1df30e87ba2861eddbdc34a48bb8 metadata.xml 836
-MD5 8ae1c7bf59bd28546bd90f2e782f4be2 ChangeLog 1666
+MD5 adfa08a5c62f91a156a641173e6db52f ChangeLog 1848
 MD5 01f9e7ab1617f11ec268f35079753b4a policycoreutils-1.1-r1.ebuild 1269
+MD5 f4ce73b8cca30b1e5b2dab69475730a2 files/digest-policycoreutils-1.2 67
 MD5 6d4df7058894970c15d4066f7ad88c29 files/policycoreutils-1.0-gentoo.diff 1818
 MD5 1f231a1da642997577ac4567ee9867ac files/rlpkg 2317
 MD5 7821fa9efa9de78861110c8bd21bf714 files/newrole 326
@@ -9,3 +11,4 @@ MD5 2d09b4cfc5e5b399863a1ecd381ba33e files/digest-policycoreutils-1.1-r1 67
 MD5 4de7e167223dcedfb7978ffc3fb3c087 files/policycoreutils-1.1-setfiles.diff 2796
 MD5 7d5ff0bb4eb573840072c4a8a420cd2a files/avc_enforcing 141
 MD5 74b72f384af4ff8868c145ae98e6adaf files/avc_toggle 195
+MD5 812e996be7529c080b410ba5e3bb1ede files/policycoreutils-1.2-gentoo.diff 2201
