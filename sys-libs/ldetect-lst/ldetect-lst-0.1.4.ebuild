@@ -1,6 +1,6 @@
 # Copyright 2002 damien krotkine <dams@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect-lst/ldetect-lst-0.1.4.ebuild,v 1.7 2003/06/22 05:10:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect-lst/ldetect-lst-0.1.4.ebuild,v 1.8 2003/09/10 04:34:14 msterret Exp $
 
 ECVS_ANON="no"
 ECVS_USER="anoncvs"
@@ -23,7 +23,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 src_compile() {
 	cd ../../ldetect-lst;
 	echo " ------- pwd : $PWD"
-        patch -p1 <${FILESDIR}/ldetect-lst-0.1.4.patch || die
+	patch -p1 <${FILESDIR}/ldetect-lst-0.1.4.patch || die
 	make prefix=${D}/usr clean;
 	make
 }
