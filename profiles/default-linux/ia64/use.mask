@@ -66,3 +66,6 @@ lirc
 
 # mono compiler doesn't build on ia64 (20 Jan 2005 agriffis)
 mono
+
+# need to wait for it jrockit to go stable
+java
