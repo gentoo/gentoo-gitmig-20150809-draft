@@ -129,7 +129,17 @@ dyn_digest() {
 	    echo "MD5 $mymd5 $x" >> ${FILESDIR}/.digest-${PF}
 	fi
     done
-    mv ${FILESDIR}/.digest-${PF} ${FILESDIR}/digest-${PF}
+
+    #if we actually have a changed digest file, update it
+    #otherwise we skip it so we can avoid having lots of updated digests
+    #on CVS
+
+    if [ -n "`/usr/bin/cmp ${FILESDIR}/.digest-${PF} ${FILESDIR}/digest-${PF}`" ]
+    then
+    	mv ${FILESDIR}/.digest-${PF} ${FILESDIR}/digest-${PF}
+    else
+        rm ${FILESDIR}/.digest-${PF}
+    fi
     if [ -n "${MAINTAINER}" ]
     then
 	echo ">>> adding digest-${PF} to CVS (just in case it isn't there)"
@@ -200,6 +210,10 @@ dyn_touch() {
 		if [ -e ${DISTDIR}/${y} ]
 		then
 			touch ${DISTDIR}/${y}
+		fi
+		if [ -e ${FILESDIR}/digest-${PF} ]
+		then
+			touch ${FILESDIR}/digest-${PF}
 		fi
 	done
 	echo
@@ -1088,7 +1102,7 @@ dyn_help() {
 	echo "  clean       : clean up all source and temporary files"
 	echo "  install     : install sources to temporary directory"
 	echo "              : (for testing purposes only)"
-	echo "  touch       : update all source archives\' mtime"
+	echo "  touch       : update all source archives' and digest mtime"
 	echo "                (for distfiles maintenance)"
 	echo
 	echo "The following settings will be used for the ebuild process:"
