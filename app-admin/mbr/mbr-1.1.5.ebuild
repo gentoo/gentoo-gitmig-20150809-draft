@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mbr/mbr-1.1.5.ebuild,v 1.4 2003/06/29 15:24:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mbr/mbr-1.1.5.ebuild,v 1.5 2004/03/12 10:45:38 mr_bones_ Exp $
 
 DESCRIPTION="A replacement master boot record for IBM-PC compatible computers"
 HOMEPAGE="http://www.chiark.greenend.org.uk/~neilt/mbr/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.4.ebuild,v 1.8 2003/09/23 20:20:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.4.ebuild,v 1.9 2004/03/12 10:45:39 mr_bones_ Exp $
 
 DESCRIPTION="tune your kernel and hardware settings for optimal performance"
 SRC_URI="mirror://sourceforge/powertweak/${P}.tar.bz2"
