@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.6 2004/02/27 13:38:34 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.7 2004/05/21 03:52:12 lv Exp $
+
+*mpeg4ip-1.1 (20 May 2004)
+
+  20 May 2004; Travis Tilley <lv@gentoo.org> +mpeg4ip-1.1.ebuild:
+  version bump and removal of the now unnecessary SDL magic. finally... a
+  version of mpeg4ip that works on amd64. yay! *does a little dance*
 
   27 Feb 2004; <tester@gentoo.org> mpeg4ip-1.0.ebuild, mpeg4ip-1.0_rc1.ebuild,
   mpeg4ip-1.0_rc3.ebuild, files/sliver.patch:
