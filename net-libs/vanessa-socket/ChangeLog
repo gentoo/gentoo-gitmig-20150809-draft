@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/vanessa-socket
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/ChangeLog,v 1.10 2005/01/21 20:41:27 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/ChangeLog,v 1.11 2005/01/22 13:52:52 xmerlin Exp $
+
+  22 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org>
+  vanessa-socket-0.0.7.ebuild:
+  removed lib version patch, I'll try to find a better solution with the author
 
   22 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org>
   +files/vanessa-socket-0.0.7-version.patch, vanessa-socket-0.0.7.ebuild:

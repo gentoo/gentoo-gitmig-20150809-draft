@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/vanessa-socket-0.0.7.ebuild,v 1.5 2005/01/21 20:41:27 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/vanessa-socket-0.0.7.ebuild,v 1.6 2005/01/22 13:52:52 xmerlin Exp $
 
 inherit eutils
 
@@ -18,12 +18,6 @@ IUSE=""
 DEPEND=">=dev-libs/vanessa-logger-0.0.6"
 
 S=${WORKDIR}/${MY_P}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/vanessa-socket-0.0.7-version.patch || die
-}
 
 src_compile() {
 	econf || die "error configure"
