@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vimbuddy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimbuddy/ChangeLog,v 1.2 2005/02/18 19:13:09 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimbuddy/ChangeLog,v 1.3 2005/02/18 20:32:39 slarti Exp $
+
+  18 Feb 2005; Tom Martin <slarti@gentoo.org> vimbuddy-0.9.1.ebuild:
+  Marked ~amd64.
 
   18 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org> vimbuddy-0.9.1.ebuild:
   x86 sparc mips hppa stable
