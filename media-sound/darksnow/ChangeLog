@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/darksnow
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/ChangeLog,v 1.3 2004/10/19 06:01:29 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/ChangeLog,v 1.4 2004/11/23 04:12:08 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  darksnow-0.4.4.ebuild:
+  Added to ~amd64 and ~sparc.
 
   19 Oct 2004; Chris White <chriswhite@gentoo.org> darksnow-0.4.4.ebuild:
   One more QA issue for the road.

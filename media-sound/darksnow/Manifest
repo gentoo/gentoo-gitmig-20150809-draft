@@ -1,4 +1,14 @@
-MD5 7cbc82e85f193c48302ca99f0061e59a darksnow-0.4.4.ebuild 941
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 235bf345387c1799c28bb49c5a8657b5 ChangeLog 784
+MD5 df28d044248fc1300aebd08dd074d9d0 darksnow-0.4.4.ebuild 953
 MD5 dbafe0153b3ee5f599d5dbeac4aa3210 metadata.xml 224
-MD5 7b63ca9fa73c606644bebf7f8d02ee08 ChangeLog 671
 MD5 0648bf168b7cdfc3363612992c5d0b51 files/digest-darksnow-0.4.4 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBori/ArHZZzCEUG0RAoRUAJ9qpOtCjGKQQb1cGX/u6sLjAy8uewCZAXNW
+f1RoJaOoJFhdTNqZFYH3gQo=
+=u6JW
+-----END PGP SIGNATURE-----
