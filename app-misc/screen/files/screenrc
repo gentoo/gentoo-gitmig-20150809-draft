@@ -143,6 +143,8 @@
 # - uses background color for delete operations
   termcapinfo xterm* be
 
+# Do not use xterm's alternative window buffer, it breaks scrollback (see bug #61195)
+  termcapinfo xterm|xterms|xs ti=\E7\E[?47l
 
 # WYSE TERMINALS
 # ===============================================================
