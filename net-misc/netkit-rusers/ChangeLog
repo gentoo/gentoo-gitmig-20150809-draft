@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/netkit-rusers
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rusers/ChangeLog,v 1.1 2004/10/24 09:56:50 wmertens Exp $
+
+*net-misc/netkit-rusers-0.17 (23 Oct 2004)
+
+  23 Octy 2004; Wout Mertens <wmertens@gentoo.org> :
+  Initial import.
