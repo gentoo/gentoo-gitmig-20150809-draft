@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.24.ebuild,v 1.18 2003/06/22 05:59:59 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.24.ebuild,v 1.19 2003/06/22 19:13:11 pauldv Exp $
 
 IUSE="tcltk java"
 
@@ -28,8 +28,8 @@ src_compile() {
 		|| myconf="${myconf} --disable-tcl"
 	
 	if [ -n "${JAVAC}" ]; then
-		export JAVAC=`basename ${JAVAC}`
 		export PATH=`dirname ${JAVAC}`:${PATH}
+		export JAVAC=`basename ${JAVAC}`
 	fi
 	
 	../dist/configure \
