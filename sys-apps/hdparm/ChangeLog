@@ -1,11 +1,11 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.16 2002/12/18 06:25:57 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.17 2003/01/12 03:08:33 seemant Exp $
+
+*hdparm-5.3-r1 (08 Dec 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*hdparm-5.3-r1 (08 Dec 2002)
-
   17 Dec 2002; Seth Chandler <sethbc@gentoo.org> : hdparm-5.3-r1.ebuild
   masked ebuild for 5.3 and changed the distfiles location, corrupted
   package on the metalab mirrors  
@@ -16,6 +16,12 @@
 
 
 *hdparm-5.2-r3 (29 Sep 2002)
+
+  11 Jan 2003; Seemant Kulleen <seemant@gentoo.org> hdparm-5.2-r3.ebuild :
+
+  filter -fPIC flag from this ebuild. Interestingly enough, it doesn't
+  affect the 5.3-r1 version, so upstream made some fixes.  Closes bug #13748
+  by jwarren@cheesefoam.dyndns.org (Jeremy Warren)
 
   30 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
 
