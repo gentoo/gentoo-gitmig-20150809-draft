@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.0.19-r2.ebuild,v 1.2 2003/09/08 07:59:35 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.0.19-r2.ebuild,v 1.3 2004/04/26 04:36:40 agriffis Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-pam" \
 		|| myconf="${myconf} --disable-pam"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die
 }
 
