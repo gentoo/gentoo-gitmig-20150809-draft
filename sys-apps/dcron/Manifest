@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 606e0143eeb09f35ecc641cf5fd64fcb ChangeLog 4171
+MD5 cd46266d632f5ded7c5f47aab42a56d0 ChangeLog 4263
 MD5 c71e22840857c3311d90521ec65d8846 dcron-2.7-r10.ebuild 1587
 MD5 e3278b15f5b6a3ce2ca3007a64330bb4 dcron-2.9-r1.ebuild 1671
+MD5 e7f6a1003c78f553be97213293b93478 dcron-2.9-r2.ebuild 1834
 MD5 17a4c0e880903d51725f2b2586079257 dcron-2.9.ebuild 1588
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 1dc2e67562ef26c415300bf9868909ad dcron-2.9-r2.ebuild 1829
 MD5 b2530aa5d51acff6865b602805741f7d files/dcron.rc6 615
 MD5 562feacfdde7b16558e57b142a98326f files/crontab 824
 MD5 b228d65fab81803ea4ca5c29ea43e648 files/crontab-2.9-r1 830
@@ -16,10 +13,3 @@ MD5 b0a661ba0ae334e2d9453a144907b375 files/digest-dcron-2.7-r10 55
 MD5 2db10e843ecdf10a2b3aa5f70322310b files/digest-dcron-2.9 55
 MD5 2db10e843ecdf10a2b3aa5f70322310b files/digest-dcron-2.9-r1 55
 MD5 2db10e843ecdf10a2b3aa5f70322310b files/digest-dcron-2.9-r2 55
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+f9VmdTrptrqvGERAiqnAJ9h5v/XbZ/AVvfi2WQAnPAsy9rKLgCggIBV
-Fj9Bvra4vdRdBKHoRg65+jI=
-=UFQ6
------END PGP SIGNATURE-----

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 43e889bea3c657921fe18b042b493e72 ChangeLog 2864
+MD5 4c4b2788c4baf29eaef0c0878eb1ca55 ChangeLog 2958
 MD5 114c8147493f6193b087a0d334227782 logwatch-4.3.2.ebuild 1350
 MD5 42b35b877855e74ea6c5a50c5021a21c logwatch-5.0.ebuild 1404
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 652561d8574b08d8090f449e22720c61 logwatch-5.2.2.ebuild 1406
+MD5 d6acf23979285f3661bef15fe8c8746d logwatch-5.2.2.ebuild 1411
 MD5 cf548a7143dce1aba3792d0647ae4f90 files/digest-logwatch-4.3.2 65
 MD5 4a5e8c25106385b7e823785f6c61855d files/digest-logwatch-5.0 63
 MD5 e8d38d01460c2fcf26e92e8853bf6c84 files/digest-logwatch-5.2.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4ip+HTu7gpaalycRAjggAKD0GQUU3QUgSDpZ2xwKl2oiDyushQCfaYY5
-c3jrwbcAWofq6Vw3/Zn7/4c=
-=H+HI
------END PGP SIGNATURE-----
