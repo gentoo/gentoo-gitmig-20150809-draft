@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.19 2002/10/12 10:12:26 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.20 2002/10/25 16:47:45 cselkirk Exp $
 
 *sylpheed-claws-0.8.5 (09 Oct 2002)
+
+  25 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> sylpheed-claws-0.8.5.ebuild :
+
+  Added ppc to KEYWORDS.
 
   12 Oct 2002; Bruce A. Locke <blocke@shivan.org> sylpheed-claws-0.8.5.ebuild:
   Ebuild now installs README files, etc.
