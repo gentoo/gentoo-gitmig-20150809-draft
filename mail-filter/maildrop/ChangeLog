@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.20 2005/02/09 21:09:31 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.21 2005/02/13 13:19:18 ferdy Exp $
+
+*maildrop-1.8.0-r1 (13 Feb 2005)
+
+  13 Feb 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/maildrop-1.8.0-db4.patch, +maildrop-1.8.0-r1.ebuild:
+  Make maildrop use courier-authlib and clean the ebuild. Re-Closes #81391.
+  Thanks to Scott Taylor <swtaylor@gentoo.org> for the initial ebuild.
 
 *maildrop-1.8.0 (09 Feb 2005)
 
