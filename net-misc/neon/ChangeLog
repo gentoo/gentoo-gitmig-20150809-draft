@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/neon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.16 2003/04/23 07:59:43 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.17 2003/05/06 12:42:19 pauldv Exp $
 
 *neon-0.23.8 (15 Mar 2003)
 
@@ -42,7 +42,7 @@
 
 *neon-0.19.2-r1 (29 Oct 2002)
 
-  23 Apr 2003; Paul de Vrieze pauldv@gentoo.org neon-0.19.2-r1.ebuild:
+  23 Apr 2003; Paul de Vrieze <pauldv@gentoo.org> neon-0.19.2-r1.ebuild:
   Unmasked neon-0.19.2 as subversion-0.10_pre1 is marked stable.
 
   29 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> neon-0.19.2-r1.ebuild files/digest-neon-0.19.2-r1 :
