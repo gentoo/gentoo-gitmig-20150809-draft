@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6.ebuild,v 1.7 2004/07/31 07:29:29 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6.ebuild,v 1.8 2004/10/17 02:09:15 solar Exp $
 
 inherit eutils
 
@@ -20,6 +20,10 @@ DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.3
 	>=dev-libs/lzo-1.07
 	sys-devel/bison
+	ssl? ( >=dev-libs/openssl-0.9.6c )"
+
+RDEPEND="virtual/libc
+	>=sys-libs/zlib-1.1.3
 	ssl? ( >=dev-libs/openssl-0.9.6c )"
 
 src_unpack() {
