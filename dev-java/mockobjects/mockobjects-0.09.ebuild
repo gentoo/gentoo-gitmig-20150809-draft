@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/mockobjects-0.09.ebuild,v 1.3 2004/06/24 22:39:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/mockobjects-0.09.ebuild,v 1.4 2004/07/14 02:45:05 agriffis Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~karltk/java/distfiles/mockobjects-java-${PV}-gen
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="doc junit jikes"
+IUSE="doc junit"
 DEPEND="=dev-java/junit-3.8*"
 RDEPEND=""
 S=${WORKDIR}/mockobjects-java-${PV}
