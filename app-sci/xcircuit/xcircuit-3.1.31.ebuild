@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/xcircuit-3.1.31.ebuild,v 1.2 2004/04/19 12:55:01 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/xcircuit-3.1.31.ebuild,v 1.3 2004/04/21 06:12:28 phosphan Exp $
 
 DESCRIPTION="Circuit drawing and schematic capture program."
 SRC_URI="http://xcircuit.ece.jhu.edu/archive/${P}.tgz"
@@ -9,7 +9,7 @@ HOMEPAGE="http://xcircuit.ece.jhu.edu"
 KEYWORDS="x86 ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE=""
+IUSE="tcltk"
 
 DEPEND="virtual/x11
 	virtual/ghostscript
