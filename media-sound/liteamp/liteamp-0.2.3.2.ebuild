@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/liteamp/liteamp-0.2.3.2.ebuild,v 1.6 2004/06/25 00:09:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/liteamp/liteamp-0.2.3.2.ebuild,v 1.7 2004/07/09 03:05:44 eradicator Exp $
 
-IUSE=""
+IUSE="debug doc"
 
 inherit eutils gnome2
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://liteamp.kldp.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 
 DEPEND=">=x11-libs/gtk+-2.0.0
 	>=gnome-base/libgnomeui-2.0
