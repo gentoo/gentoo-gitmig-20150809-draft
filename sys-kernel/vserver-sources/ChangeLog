@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/vserver-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.10 2004/06/25 20:49:37 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.11 2004/07/09 13:11:45 plasmaroo Exp $
+
+*vserver-sources-2.4.26.1.28-r1 (09 Jul 2004)
+
+  09 Jul 2004; <plasmaroo@gentoo.org> +vserver-sources-2.4.26.1.28-r1.ebuild,
+  -vserver-sources-2.4.26.1.3.9-r2.ebuild,
+  +files/vserver-sources-2.4.26.1.3.9.CAN-2004-0497.patch:
+  Downgrade to 1.28 - closes bug #56171. Patched for attribute vulnerabilities,
+  bug #56479.
 
 *vserver-sources-2.4.26.1.3.9-r2 (25 Jun 2004)
 
