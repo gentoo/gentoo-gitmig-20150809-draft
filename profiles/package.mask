@@ -42,11 +42,6 @@
 # masked because of chkfontpath, bug #36109
 =media-fonts/unifont-1.0
 
-# <suka@gentoo.org> (21 Jan 2004)
-# now parallel installable to vanilla openoffice
-# needs some testing
-=app-office/openoffice-ximian-1.1.49.2-r1
-
 # <net-im@gentoo.org> (20 Jan 2004)
 # doesnt work with current msn protocol #38747
 net-im/msn4lin
