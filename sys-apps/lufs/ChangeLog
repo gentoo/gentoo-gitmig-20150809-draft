@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lufs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/ChangeLog,v 1.3 2002/11/20 13:41:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/ChangeLog,v 1.4 2002/11/24 11:56:24 mkeadle Exp $
+
+*lufs-0.8.0-r1 (24 Nov 2002)
+
+  24 Nov 2002; Matt Keadle <mkeadle@gentoo.org> lufs-0.8.0-r1.ebuild
+  files/digest-lufs-0.8.0-r1
+
+  Fixed a symlink creation that has it's parameters reversed.
 
 *lufs-0.8.0 (20 Nov 2002)
 
