@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/jmock
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.1 2005/01/04 21:34:43 luckyduck Exp $
+
+*jmock-1.0.1 (04 Jan 2005)
+
+  04 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/jmock-1.0.1-buildxml.patch, +jmock-1.0.1.ebuild:
+  Initial import. Ebuild submitted by me. Needed as a indirect dependency of
+  #63290.
+
