@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.32-r1.ebuild,v 1.3 2004/03/21 07:15:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.33.ebuild,v 1.1 2004/03/21 07:15:01 mkennedy Exp $
 
 inherit flag-o-matic common-lisp-common
 
-IUSE="X threads fastcgi postgres ldap nls berkdb"
+IUSE="X fastcgi postgres nls berkdb pcre"
 
 # Handle the case where the user has some other -falign-functions
 # option set.  Bug 34630.
@@ -41,18 +41,18 @@ DEPEND="dev-libs/libsigsegv
 	fastcgi? ( dev-libs/fcgi )
 	postgres? ( dev-db/postgresql )
 	X? ( x11-base/xfree )
-	ldap? ( net-nds/openldap )
 	readline? ( sys-libs/readline )
 	nls? ( sys-devel/gettext )
-	berkdb? ( =sys-libs/db-4* )"
+	berkdb? ( =sys-libs/db-4* )
+	pcre? ( dev-libs/libpcre )"
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${PV}/fastcgi-Makefile.in-gentoo.patch
-	epatch ${FILESDIR}/${PV}/format.lisp-gentoo.patch
+	epatch ${FILESDIR}/${PV}/berkely-db-configure-gentoo.patch.gz
 }
 
 src_compile() {
@@ -73,20 +73,19 @@ src_compile() {
 		CC="${CC} -I $(pg_config --includedir)"
 	fi
 	use fastcgi && myconf="${myconf} --with-module=fastcgi"
-#	use berkdb && myconf="${myconf} --with-module=berkeley-db" # needs work
-#	use ldap && myconf="${myconf} --with-module=dirkey"	# openldap is broken
-#	use threads && myconf="${myconf} --with-threads=POSIX_THREADS" # broken
+	use berkdb && myconf="${myconf} --with-module=berkeley-db"
+	use pcre && myconf="${myconf} --with-module=pcre"
 	./configure --prefix=/usr ${myconf} build || die "./configure failed"
 	cd build
 	./makemake ${myconf} >Makefile
 	make config.lisp
 	sed -i 's,"vi","nano",g' config.lisp
+	sed -i 's,http://www.lisp.org/HyperSpec/,http://www.lispworks.com/reference/HyperSpec/,g' config.lisp
 	make || die
 }
 
 src_install() {
 	cd build && make DESTDIR=${D} prefix=/usr install-bin || die
-
 	doman clisp.1
 	dodoc SUMMARY README* NEWS MAGIC.add GNU-GPL COPYRIGHT \
 		ANNOUNCE clisp.dvi clisp.html
@@ -116,6 +115,15 @@ pkg_preinst() {
 
 pkg_postinst() {
 	standard-impl-postinst clisp
+	while read line; do einfo "${line}"; done <<EOF
+
+PLEASE NOTE: FASL files (.fas) created by previous versions of CLISP
+are not compatible with this version of CLISP (${PV}).	You will need
+to re-create your FASLs via. recompilation.	 FASLs in
+/usr/lib/common-lisp/clisp for Common Lisp Controller-installed Lisp
+packages have aready been recompiled for you.
+
+EOF
 }
 
 pkg_postrm() {

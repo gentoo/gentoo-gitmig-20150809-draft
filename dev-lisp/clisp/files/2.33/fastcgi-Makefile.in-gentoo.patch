@@ -1,0 +1,17 @@
+diff -ur clisp-2.33.original/modules/fastcgi/Makefile.in clisp-2.33/modules/fastcgi/Makefile.in
+--- clisp-2.33.original/modules/fastcgi/Makefile.in	2004-03-03 08:41:54.000000000 -0600
++++ clisp-2.33/modules/fastcgi/Makefile.in	2004-03-20 00:02:37.235191912 -0600
+@@ -22,10 +22,10 @@
+ 	$(CLISP) -c fastcgi.lisp
+ 
+ fastcgi.o:       fastcgi.c
+-	$(CC) $(CPPFLAGS) $(CFLAGS) $(INCLUDES) -I.. -c fastcgi.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -I.. -c fastcgi.c
+ 
+ fastcgi_wrappers.o:       fastcgi_wrappers.c
+-	$(CC) $(CPPFLAGS) $(CFLAGS) $(INCLUDES) -I.. -c fastcgi_wrappers.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -I.. -c fastcgi_wrappers.c
+ 
+ # Make a module
+ clisp-module : all
+Only in clisp-2.33/modules/fastcgi: Makefile.in~

@@ -1,10 +1,23 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.14 2004/01/29 04:50:47 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.15 2004/03/21 07:15:01 mkennedy Exp $
+
+*clisp-2.33 (20 Mar 2004)
+
+  20 Mar 2004; <mkennedy@gentoo.org> clisp-2.32-r1.ebuild, clisp-2.33.ebuild,
+  files/clisp.sh, files/2.33/berkely-db-configure-gentoo.patch.gz,
+  files/2.33/fastcgi-Makefile.in-gentoo.patch,
+  files/2.33/format.lisp-gentoo.patch:
+  Added support for berkely-db module; Added support for pcre module;
+  Upcase encoding encoding in clisp.sh; Added support for fastcgi
+  module;  Removed support for threading; Removed support for LDAP;  New
+  upstream version.
 
   28 Jan 2004; <mkennedy@gentoo.org> clisp-2.32-r1.ebuild:
   inherit common-lisp-common; use function register-common-lisp-implementation,
   not /usr/sbin/register-common-lisp-implementation
+  Corrected postinst and postrm for compatibility with changes in
+  common-lisp-common eclass.
 
 *clisp-2.32-r1 (15 Jan 2004)
 
