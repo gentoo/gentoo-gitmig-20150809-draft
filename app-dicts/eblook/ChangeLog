@@ -1,0 +1,9 @@
+# ChangeLog for app-dicts/eblook
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/ChangeLog,v 1.1 2003/10/27 12:59:07 usata Exp $
+
+*eblook-1.5.1 (27 Oct 2003)
+
+  27 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> eblook-1.5.1.ebuild:
+  Intial import
+
