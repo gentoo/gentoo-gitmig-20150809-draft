@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/xfsdump
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsdump/ChangeLog,v 1.7 2002/12/16 19:24:05 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsdump/ChangeLog,v 1.8 2002/12/22 05:29:35 drobbins Exp $
+
+  21 Dec 2002; Daniel Robbins <drobbins@gentoo.org>: changed 20020330
+  ebuild to 2.0.0_p20020330 to fix policy violation.
 
 *xfsdump-2.2.4-r1 (16 Dec 2002)
 

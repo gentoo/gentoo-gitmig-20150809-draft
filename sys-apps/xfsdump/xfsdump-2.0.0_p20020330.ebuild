@@ -1,17 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsdump/xfsdump-20020330.ebuild,v 1.7 2002/10/04 06:32:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsdump/xfsdump-2.0.0_p20020330.ebuild,v 1.1 2002/12/22 05:29:35 drobbins Exp $
 
 S=${WORKDIR}/cmd/${PN}
 DESCRIPTION="xfs dump/restore utilities"
-SRC_URI="http://www.ibiblio.org/gentoo/distfiles/xfs-cmd-${PV}.tar.bz2"
+OPV=20020330
+SRC_URI="http://www.ibiblio.org/gentoo/distfiles/xfs-cmd-${OPV}.tar.bz2"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
 KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
 DEPEND="virtual/glibc sys-devel/autoconf sys-devel/make sys-apps/e2fsprogs >=sys-apps/xfsprogs-${PV} >=sys-apps/dmapi-${PV} >=sys-apps/attr-${PV}"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/glibc >=sys-apps/attr-${PV} >=sys-apps/dmapi-${PV}"
 
 src_compile() {
 	cd ${S}

@@ -1,20 +1,36 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-20020330.ebuild,v 1.12 2002/10/04 06:32:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-2.0.1_p20020330.ebuild,v 1.1 2002/12/22 05:29:35 drobbins Exp $
 
 S=${WORKDIR}/cmd/${PN}
+OPV=20020330
 DESCRIPTION="xfs filesystem utilities"
-SRC_URI="http://www.ibiblio.org/gentoo/distfiles/xfs-cmd-${PV}.tar.bz2"
+SRC_URI="http://www.ibiblio.org/gentoo/distfiles/xfs-cmd-${OPV}.tar.bz2"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc alpha"
 SLOT="0"
 LICENSE="LGPL-2.1"
+oldCFLAGS="${CFLAGS}"
+oldCXXFLAGS="${CXXFLAGS}"
 
 DEPEND="virtual/glibc sys-devel/autoconf sys-devel/make sys-apps/e2fsprogs"
 RDEPEND="virtual/glibc"
 
+ebuild_die() {
+	export CFLAGS="${oldCFLAGS}"
+	export CXXFLAGS="${oldCXXFLAGS}"
+	if([ -n "$LINE" ]) then 
+		die "Line ${2}: ${1}"
+	else
+		die "${1}"
+	fi
+}
+
+
 src_compile() {
 	cd ${S}
+	export CFLAGS="`echo ${CFLAGS} | sed "s/ -O[2-9]/ -O1/g"`"
+	export CXXFLAGS="`echo ${CXXFLAGS} | sed "s/ -O[2-9]/ -O1/g"`"
 	export OPTIMIZER="${CFLAGS}"
 	export DEBUG=-DNDEBUG
 	autoconf || die
@@ -28,12 +44,14 @@ src_compile() {
 	-e 's:-O1::' \
 	-e '/-S $(PKG/d' \
 	-e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' \
-	include/builddefs.orig > include/builddefs || die
-	emake || die
+	include/builddefs.orig > include/builddefs || ebuild_die "sed failed" 49
+	emake || ebuild_die "emake failed" 50
+	export ${oldCFLAGS}
+	export ${oldCXXFLAGS}
 }
 
 src_install() {
-	make DESTDIR=${D} DK_INC_DIR=${D}/usr/include/disk install install-dev || die
+	make DESTDIR=${D} DK_INC_DIR=${D}/usr/include/disk install install-dev || ebuild_die "make install failed" 54
 	cat ${S}/libhandle/.libs/libhandle.la | sed -e 's:installed=no:installed=yes:g' > ${D}/usr/lib/libhandle.la
 	dodir /usr/lib /lib
 	insinto /usr/lib

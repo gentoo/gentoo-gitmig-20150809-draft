@@ -1,16 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-20020330.ebuild,v 1.9 2002/12/09 04:37:24 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.0.5_p20020330.ebuild,v 1.1 2002/12/22 05:29:35 drobbins Exp $
 
 S=${WORKDIR}/cmd/${PN}
-DESCRIPTION="XFS dump/restore utilities"
-SRC_URI="http://www.ibiblio.org/gentoo/distfiles/xfs-cmd-${PV}.tar.bz2"
+OPV=20020330
+DESCRIPTION="xfs extended attributes tools"
+SRC_URI="http://www.ibiblio.org/gentoo/distfiles/xfs-cmd-${OPV}.tar.bz2"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
 KEYWORDS="x86 ppc sparc "
 SLOT="0"
 LICENSE="LGPL-2.1"
 
-DEPEND="virtual/glibc sys-devel/autoconf >=sys-apps/attr-20020330 sys-devel/make"
+DEPEND="virtual/glibc sys-devel/autoconf sys-devel/make"
 RDEPEND="virtual/glibc"
 
 src_compile() {
@@ -27,19 +28,14 @@ src_compile() {
 	sed -e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' \
 		-e "s:/usr/share/doc/${PN}:/usr/share/doc/${PF}:" \
 		-e 's:-O1::' \
+		-e 's:../$(INSTALL) -S \(.*\) $(PKG_.*_DIR)/\(.*$\)::' \
 		include/builddefs.orig > include/builddefs || die
-#		-e 's:-S \(.*\) $(PKG_.*_DIR)/\(.*$\):-S \1 \2:' \
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install install-dev install-lib || die
-	#fix freaky symlinks
-	cd ${D}/usr/lib
-	rm libacl.so
-	ln -s ../../lib/libacl.so libacl.so
-	cd ${D}/lib
-	rm *a
-	ln -s ../usr/lib/libacl.la libacl.la
-	ln -s ../usr/lib/libacl.a libacl.a
+	make DESTDIR=${D} install install-lib install-dev || die
+	#dosym /usr/lib/libattr.a /lib/libattr.a
+	#dosym /usr/lib/libattr.la /lib/libattr.la
+	#dosym /lib/libattr.so /usr/lib/libattr.so
 }

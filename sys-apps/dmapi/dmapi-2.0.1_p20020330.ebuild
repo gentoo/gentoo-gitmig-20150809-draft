@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-20020330.ebuild,v 1.8 2002/12/09 04:37:24 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.0.1_p20020330.ebuild,v 1.1 2002/12/22 05:29:35 drobbins Exp $
 
 S=${WORKDIR}/cmd/${PN}
+OPV=20020330
 DESCRIPTION="XFS data management API library"
-SRC_URI="http://www.ibiblio.org/gentoo/distfiles/xfs-cmd-${PV}.tar.bz2"
+SRC_URI="http://www.ibiblio.org/gentoo/distfiles/xfs-cmd-${OPV}.tar.bz2"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
 KEYWORDS="x86 ppc sparc "
 SLOT="0"
