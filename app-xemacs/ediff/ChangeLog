@@ -1,6 +1,6 @@
 # ChangeLog for app-xemacs/ediff
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ediff/ChangeLog,v 1.4 2003/10/03 02:21:37 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ediff/ChangeLog,v 1.5 2004/06/24 23:10:00 agriffis Exp $
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> ediff-1.46.ebuild:
   Stable on alpha

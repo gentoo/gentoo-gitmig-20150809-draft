@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sml-mode/sml-mode-0.07.ebuild,v 1.4 2004/04/01 01:55:11 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sml-mode/sml-mode-0.07.ebuild,v 1.5 2004/06/24 23:21:42 agriffis Exp $
 
 SLOT="0"
 IUSE=""

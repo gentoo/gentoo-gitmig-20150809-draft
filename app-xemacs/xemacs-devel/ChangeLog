@@ -1,6 +1,6 @@
 # ChangeLog for app-xemacs/xemacs-devel
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-devel/ChangeLog,v 1.4 2003/10/03 02:46:31 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-devel/ChangeLog,v 1.5 2004/06/24 23:25:34 agriffis Exp $
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> xemacs-devel-1.50.ebuild:
   Stable on alpha

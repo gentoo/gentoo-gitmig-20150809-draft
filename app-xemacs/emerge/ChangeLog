@@ -1,6 +1,6 @@
 # ChangeLog for app-xemacs/emerge
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/emerge/ChangeLog,v 1.4 2003/10/03 02:23:27 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/emerge/ChangeLog,v 1.5 2004/06/24 23:11:24 agriffis Exp $
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> emerge-1.09.ebuild:
   Stable on alpha
