@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.9.10-r1.ebuild,v 1.1 2002/11/06 06:20:42 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.9.10-r1.ebuild,v 1.2 2002/11/10 09:17:13 raker Exp $
 
 S="${WORKDIR}/${PN}"
 
@@ -49,7 +49,12 @@ src_install() {
    rm -rf ${D}/usr/share/openh323/include/ptlib/CVS
 
    cd ${D}/usr/lib
-   ln -sf libh323_linux_x86_r.so.${PV} libopenh323.so
+   if [ ${ARCH} = "ppc" ] ; then
+	ln -sf libh323_linux_ppc_r.so.${PV} libopenh323.so
+   else
+	ln -sf libh323_linux_x86_r.so.${PV} libopenh323.so
+   fi
+
 
 }
 
