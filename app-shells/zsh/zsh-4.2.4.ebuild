@@ -1,18 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.4.ebuild,v 1.2 2005/02/15 00:37:36 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.4.ebuild,v 1.3 2005/03/27 16:56:57 usata Exp $
 
 inherit eutils
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
 SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
-	linguas_ja? ( http://www.ono.org/software/dist/${PN}-4.2.1-euc-0.3.patch.gz )
+	linguas_ja? ( http://www.ono.org/software/dist/${PN}-4.2.4-euc-0.3.patch.gz )
 	doc? ( ftp://ftp.zsh.org/pub/${P}-doc.tar.bz2 )"
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc-macos"
+KEYWORDS="x86 ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc-macos"
 IUSE="maildir ncurses static doc pcre cap"
 
 RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
@@ -28,7 +28,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-4.2.1-gentoo.diff
 	epatch ${FILESDIR}/${PN}-init.d-gentoo.diff
-	use linguas_ja && epatch ${DISTDIR}/${PN}-4.2.1-euc-0.3.patch.gz
+	use linguas_ja && epatch ${DISTDIR}/${PN}-4.2.4-euc-0.3.patch.gz
 	cd ${S}/Doc
 	ln -sf . man1
 	# fix zshall problem with soelim
