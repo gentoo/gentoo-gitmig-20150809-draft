@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r3.ebuild,v 1.3 2002/03/23 19:20:10 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r4.ebuild,v 1.1 2002/04/09 22:06:58 karltk Exp $
 
 A=j2sdk-1.3.1-FCS-linux-i386.tar.bz2
 S=${WORKDIR}/j2sdk1.3.1
@@ -35,6 +35,12 @@ src_install () {
 	fi	
 
 	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
+
+	mv ${D}/opt/${P}/jre/lib/font.properties ${D}/opt/${P}/jre/lib/font.properties.orig
+	sed "s/standard symbols l/symbol/g" \
+		< ${D}/opt/${P}/jre/lib/font.properties.orig \
+		> ${D}/opt/${P}/jre/lib/font.properties
+	rm ${D}/opt/${P}/jre/lib/font.properties.orig
 	
 	dodir /etc/env.d/java
 	sed \
