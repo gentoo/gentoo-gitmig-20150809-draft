@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 976cd6d137c1834e929bf4072cda06d9 liferea-0.9.1.ebuild 1014
-MD5 e3fee871cb95aa5065ec7da559e9c6a7 liferea-0.9.0b.ebuild 1014
-MD5 a6b6070438a14c46f9a568f783e65cd0 ChangeLog 4093
+MD5 67631f211578bec5c64cc6f2b6a35e7a ChangeLog 4317
+MD5 a18b2181a24f884da81f49c53f3843e6 liferea-0.9.0b.ebuild 1012
 MD5 06a3512bc8cb752eab8b459f5d4d875d metadata.xml 250
+MD5 898056f6d2a6ef26f524e9a88cfc35ef liferea-0.9.1.ebuild 1012
 MD5 71890ac6533c0d3edc2b25f1a6a99393 files/digest-liferea-0.9.0b 67
 MD5 05faae4b24b9f13cdb35b5ddf538af21 files/digest-liferea-0.9.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCNI58/UDVUK2NELYRApHmAKDBAEtC7xAkJVAAxtsTwrAfPJmSjgCgvRl1
-dD17L1MrBHz6CB6EusWwXwE=
-=NOUm
------END PGP SIGNATURE-----
