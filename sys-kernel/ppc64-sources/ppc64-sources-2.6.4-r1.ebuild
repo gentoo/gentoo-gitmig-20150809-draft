@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-sources/ppc64-sources-2.6.4.ebuild,v 1.1 2004/03/31 04:32:28 tgall Exp $
-#OKV=original kernel version, KV=patched kernel version.  They can be the same.
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-sources/ppc64-sources-2.6.4-r1.ebuild,v 1.1 2004/04/15 12:21:47 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel
@@ -10,26 +9,23 @@ OKV="2.6.4"
 
 ########  last BK changeset in this patch: 1.1390
 
-EXTRAVERSION="`echo ${PV}-${PR/r/ames} | \
-	sed -e 's/[0-9]\+\.[0-9]\+\.[0-9]\+\(.*\)/\1/'`"
+AMV=1
+EXTRAVERSION="-ames1-${PR}"
 
-KV=${PV}-${PR/r/ames}
-
-S=${WORKDIR}/linux-${OKV}
+KV=${PV}${EXTRAVERSION}
+S=${WORKDIR}/${PN}-${KV}
 
 inherit eutils
-
 IUSE="extlib"
 
 # What's in this kernel?
-
 # INCLUDED: 2.6 ames snapshot
 
 DESCRIPTION="Full sources for the linux kernel 2.6 with ames's patchset"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
 	mirror://kernel/ppc64-ames264.patch.gz
 	ftp://ftp.linuxppc64.org/pub/people/tgall/ppc64-Makefilefix.patch"
-#		mirror://gentoo/patches-${OKV}.bz2"
+#	mirror://gentoo/patches-${OKV}.bz2"
 KEYWORDS="-ppc ppc64"
 DEPEND=" extlib? ( dev-libs/ucl )"
 RDEPEND="sys-apps/module-init-tools"
@@ -37,18 +33,20 @@ SLOT=${KV}
 PROVIDE="virtual/linux-sources
 		virtual/alsa"
 
-
 src_unpack() {
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
 
-	mv linux-${OKV} ${PF}
-	cd ${PF}
+	mv linux-${OKV} ${S}
+	cd ${S}
 
 	epatch ${DISTDIR}/ppc64-Makefilefix.patch
 	cp ${DISTDIR}/ppc64-ames264.patch.gz ${WORKDIR}
 	gunzip ${WORKDIR}/ppc64-ames264.patch.gz
 	epatch ${WORKDIR}/ppc64-ames264.patch
+	rm ${WORKDIR}/ppc64-ames264.patch
+
+	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
 
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
 	# also fix the EXTRAVERSION
@@ -58,18 +56,17 @@ src_unpack() {
 			Makefile.orig >Makefile || die # test, remove me if Makefile ok
 	rm Makefile.orig
 
-	cd  Documentation/DocBook
+	cd Documentation/DocBook
 	sed -e "s:db2:docbook2:g" Makefile > Makefile.new \
 		&& mv Makefile.new Makefile
+	cd ${S}
 
-	cd ${WORKDIR}/${PF}
-	#This is needed on > 2.5
+	# This is needed on > 2.5
 	MY_ARCH=${ARCH}
 	unset ARCH
-	#sometimes we have icky kernel symbols; this seems to get rid of them
+	# Sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die "make mrproper died"
 	ARCH=${MY_ARCH}
-
 }
 
 src_install() {
