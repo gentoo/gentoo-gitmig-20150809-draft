@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.72 2004/06/24 23:04:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.73 2004/06/25 18:15:01 agriffis Exp $
+
+  25 Jun 2004; Aron Griffis <agriffis@gentoo.org> cyrus-sasl-2.1.17.ebuild,
+  cyrus-sasl-2.1.18.ebuild:
+  QA - fix use invocation
 
   24 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   cyrus-sasl-2.1.18.ebuild:

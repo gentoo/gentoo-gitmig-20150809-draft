@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18.ebuild,v 1.12 2004/06/24 23:04:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18.ebuild,v 1.13 2004/06/25 18:15:01 agriffis Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -75,7 +75,7 @@ src_compile() {
 	myconf="${myconf} `use_with postgres pgsql` `use_enable postgres sql`"
 	myconf="${myconf} `use_enable java` `use_with java javahome ${JAVA_HOME}`"
 
-	if [ "`use mysql`" -o "`use postgres`" ] ; then
+	if use mysql || use postgres ; then
 		myconf="${myconf} --enable-sql"
 	else
 		myconf="${myconf} --disable-sql"
