@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 233abd25ad10fa38e49b95fe859d2d86 ChangeLog 2857
+MD5 7310b24e61ec6e56295fafcdafaaea94 ChangeLog 2984
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 d176f552d53b7381d7a58471ed7e380e prime-dict-0.8.4.ebuild 548
 MD5 ac56aad4bc2d3c10859d9c1d3971a711 prime-dict-0.8.3.ebuild 549
+MD5 c75bd3f214760aa9bcb07d1a42719ef0 prime-dict-0.8.5.ebuild 528
 MD5 47284973bc0fe947fab0a94c0e6d1437 files/digest-prime-dict-0.8.4 69
 MD5 e825a3fc411c06a197d0e158804baa31 files/digest-prime-dict-0.8.3 69
+MD5 8b087882c9c87a13968d9ac89703b9e8 files/digest-prime-dict-0.8.5 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBaDPgVWNWqTUmv+0RAhUxAJsHI5si8/G9h3jnhtmeTxMA7ZkJOQCffgv9
-sm7G9dLFZz6VdyEoq4ILznY=
-=7gSv
+iD8DBQFBusykVWNWqTUmv+0RAr/gAJ9G9x4FBMwv/QoThwtAgV13ojEaOgCgmNPj
+PZnh8W/P8gxorWpAajqZeJw=
+=CAM6
 -----END PGP SIGNATURE-----
