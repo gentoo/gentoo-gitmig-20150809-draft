@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gnet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.35 2005/02/06 17:38:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.36 2005/03/07 18:34:38 leonardop Exp $
+
+*gnet-2.0.7 (07 Mar 2005)
+
+  07 Mar 2005; Leonardo Boshell <leonardop@gentoo.org> gnet-2.0.7.ebuild:
+  New release. Added `static' USE flag. Patch no longer necessary.
 
   06 Feb 2005; Markus Rothe <corsair@gentoo.org> gnet-2.0.5.ebuild:
   Stable on ppc64
@@ -14,7 +19,7 @@
   14 Nov 2004; Kito <kito@gentoo.org> gnet-2.0.5.ebuild:
   added ~ppc-macos
 
-  09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gnet-2.0.5.ebuild:
+  09 Jul 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> gnet-2.0.5.ebuild:
   Stable on alpha.
 
   07 Jul 2004; L. Boshell <leonardop@gentoo.org> gnet-2.0.5.ebuild:
