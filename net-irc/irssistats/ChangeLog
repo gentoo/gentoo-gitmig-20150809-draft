@@ -1,0 +1,9 @@
+# ChangeLog for net-irc/irssistats
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/ChangeLog,v 1.1 2004/03/22 13:48:55 zul Exp $
+
+*irssistats-0.6 (22 Mar 2004)
+
+  22 Mar 2004; Chuck Short <zul@gentoo.org> irssistats-0.6.ebuild:
+  Initital release, ebuild written by me.
+
