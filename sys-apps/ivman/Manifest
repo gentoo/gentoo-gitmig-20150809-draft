@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 3923b6ae9bc25fc124e24e7747c8a802 metadata.xml 226
-MD5 43eaeb64b9c1364d2bc67abcbfd4191e ChangeLog 671
-MD5 3e80845d8a746dcfdd04d4c6ff928541 ivman-0.3.ebuild 841
+MD5 de9ced6256e4e9bc55d2c5ceb7666150 ChangeLog 774
+MD5 5e7da12da26920da038db07bc47d8bae ivman-0.3.ebuild 847
 MD5 18fc1db477b55bba40c6bef89d88c91c files/digest-ivman-0.3 61
 MD5 f1e67af6cdf8b51ac4c5cd5e8e7ec298 files/ivman-0.3.init 524
 MD5 1bbde55e181f71aac26d8f89b6b44330 files/ivman-0.3-cvs.update 13467
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBqNvdArHZZzCEUG0RAmTXAJ46CyVY8klJlnljB9F0mF9NOHz4LgCfZczO
-u0JyIE5bKAQ2qb4NX5U+yHk=
-=ZxNe
+iD8DBQFBqlrYArHZZzCEUG0RAiblAJ9Pu6fwvg+jnCYeYekqG7KI0bXgYgCeJ2Nl
+t0Xtf6+DuoqZJag2sY9LN74=
+=MVX/
 -----END PGP SIGNATURE-----
