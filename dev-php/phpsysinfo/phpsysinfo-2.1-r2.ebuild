@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.1-r2.ebuild,v 1.4 2004/03/29 15:45:00 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.1-r2.ebuild,v 1.5 2004/03/30 19:53:30 stuart Exp $
 
 inherit eutils kernel-mod
 
@@ -29,8 +29,8 @@ src_unpack() {
 
 	APPLY_25PATCH=-1
 	kernel-mod_is_2_4_kernel && APPLY_25PATCH=0
-	[ "APPLY_25PATCH" = "-1" ] && kernel-mod_is_2_5_kernel && APPLY_25PATCH=1
-	[ "APPLY_25PATCH" = "-1" ] && kernel-mod_is_2_6_kernel && APPLY_25PATCH=1
+	[ "$APPLY_25PATCH" = "-1" ] && kernel-mod_is_2_5_kernel && APPLY_25PATCH=1
+	[ "$APPLY_25PATCH" = "-1" ] && kernel-mod_is_2_6_kernel && APPLY_25PATCH=1
 	[ "$APPLY_25PATCH" = "1" ] && epatch ${FILESDIR}/fix_memory_display_kernel2.5.diff.gz
 }
 

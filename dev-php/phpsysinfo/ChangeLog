@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.13 2004/03/29 15:45:00 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.14 2004/03/30 19:53:30 stuart Exp $
+
+  30 Mar 2004; Stuart Herbert <stuart@gentoo.org> phpsysinfo-2.1-r2.ebuild:
+  Fix for missing '$' in the tests for whether to apply a patch or not.
 
   29 Mar 2004; Stuart Herbert <stuart@gentoo.org> phpsysinfo-2.1-r2.ebuild:
   Reduced output to the screen when deciding to apply the kernel patch
