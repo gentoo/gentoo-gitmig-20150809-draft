@@ -1,23 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.41.ebuild,v 1.5 2004/06/25 00:31:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.41.ebuild,v 1.6 2004/06/30 17:18:17 vapier Exp $
 
 inherit perl-module eutils
 CATEGORY="dev-perl"
 
 DESCRIPTION="The Perl DBI Module"
-SRC_URI="http://www.cpan.org/modules/by-module/GD/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/GD/${P}.readme"
+SRC_URI="http://www.cpan.org/modules/by-module/GD/${P}.tar.gz"
 
 LICENSE="Artistic | GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha amd64"
 IUSE="X jpeg gif truetype"
 
-DEPEND="${DEPEND}
-	media-libs/libpng
+DEPEND="media-libs/libpng
 	sys-libs/zlib
-	=media-libs/libgd-1*
+	=media-libs/gd-1*
 	truetype? ( =media-libs/freetype-1* )
 	jpeg? ( media-libs/jpeg )
 	X? ( virtual/x11 )"
