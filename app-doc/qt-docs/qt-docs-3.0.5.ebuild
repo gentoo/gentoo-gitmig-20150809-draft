@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-3.0.5.ebuild,v 1.1 2002/07/21 14:08:03 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-3.0.5.ebuild,v 1.2 2002/07/23 04:24:07 sunflare Exp $
 
 S=${WORKDIR}/qt-x11-free-$PV
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.gz"
@@ -10,16 +10,13 @@ KEYWORDS="x86 sparc sparc64 ppc"
 SLOT="3"
 LICENSE="QPL-1.0"
 
-pkg_setup() {
-	QTBASE=/usr/qt/3
-	export QTDIR=${S}
-}
-
 src_compile() {
 	einfo "Nothing to compile."
 }
 
 src_install() {
+	QTBASE=/usr/qt/3
+	export QTDIR=${S}
     cd ${S}
     # misc
     insinto /etc/env.d

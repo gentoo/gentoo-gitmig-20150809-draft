@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/qt-docs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/ChangeLog,v 1.3 2002/05/15 19:42:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/ChangeLog,v 1.4 2002/07/23 04:24:07 sunflare Exp $
+
+  22 Jul 2002; Phil Bordelon <sunflare@gentoo.org> qt-docs-3.0.5.ebuild :
+
+  Fixed something for danarmak that lets it install properly on most
+  systems.
 
 *qt-docs-3.0.4.1 (15 May 2002)
 
