@@ -7,12 +7,18 @@ myGETTEXT=`grep "sys-devel/gettext" $1`
 myBINUTILS=`grep "sys-devel/binutils" $1`
 myGCC=`grep "sys-devel/gcc" $1`
 myGLIBC=`grep "sys-libs/glibc" $1`
+myTEXINFO=`grep "sys-apps/texinfo" $1`
 
 echo "Using PORTAGE $myPORTAGE"
 echo "Using BINUTILS $myBINUTILS"
 echo "Using GCC $myGCC"
 echo "Using GETTEXT $myGETTEXT"
 echo "Using GLIBC $myGLIBC"
+
+cleanup() {
+	cp /etc/make.conf.build /etc/make.conf
+	exit $1
+}
 
 #USE may be set from the environment so we back it up for later.
 if [ "${USE-UNSET}" = "UNSET" ]
@@ -36,7 +42,7 @@ export CONFIG_PROTECT=""
 #above allows portage to overwrite stuff
 cd /usr/portage
 emerge $myPORTAGE #separate, so that the next command uses the *new* emerge
-emerge $myBINUTILS $myGCC $myGETTEXT || exit
+emerge $myBINUTILS $myGCC $myGETTEXT || cleanup 1
 if [ "$use_unset" = "yes" ]
 then
 	unset USE
@@ -45,6 +51,6 @@ else
 fi
 # This line should no longer be required
 #export USE="`spython -c 'import portage; print portage.settings["USE"];'` bootstrap"
-emerge $myGLIBC $myGETTEXT $myBINUTILS $myGCC || exit
+emerge $myGLIBC $myGETTEXT $myBINUTILS $myGCC $myTEXINFO || cleanup 1
 #restore settings
-cp /etc/make.conf.build /etc/make.conf
+cleanup 0
