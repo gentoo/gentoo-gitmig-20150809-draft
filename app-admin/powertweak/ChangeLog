@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/powertweak
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/ChangeLog,v 1.12 2004/04/16 09:02:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/ChangeLog,v 1.13 2004/04/17 11:44:36 spock Exp $
+
+*powertweak-0.99.5-r1 (17 Apr 2004)
+
+  17 Apr 2004; Michal Januszewski <spock@gentoo.org>
+  +powertweak-0.99.5-r1.ebuild:
+  Added some patches from CVS to make it work with 2.6 kernels. Closes bug
+  #42766.
 
   16 Apr 2004; Daniel Black <dragonheart@gentoo.org> powertweak-0.99.4.ebuild:
   Placed inherit at top of ebuild to fix bug #47775
