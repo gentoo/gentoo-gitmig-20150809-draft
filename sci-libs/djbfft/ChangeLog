@@ -1,0 +1,49 @@
+# ChangeLog for dev-libs/djbfft
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.1 2004/12/28 20:11:36 ribosome Exp $
+
+*djbfft-0.76 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/djbfft-0.76-gcc3.patch, +files/djbfft-0.76-shared.patch,
+  +djbfft-0.76.ebuild:
+  Moved from dev-libs/djbfft to sci-libs/djbfft.
+
+  23 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> djbfft-0.76.ebuild:
+  ~alpha keyword.
+
+  17 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  djbfft-0.76.ebuild:
+  Stable amd64, sparc, x86.  Fixed metadata herd.
+
+  05 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> djbfft-0.76.ebuild:
+  Added to ~sparc.
+
+  02 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> djbfft-0.76.ebuild:
+  Fixing latest fix by vapier (26 Oct 2004) which replaced one occurance of
+  ${CC} by $(tc-getLD).
+
+  22 Oct 2004; Guy Martin <gmsoft@gentoo.org> djbfft-0.76.ebuild:
+  Added ~hppa.
+
+  07 Oct 2004; David Holm <dholm@gentoo.org> djbfft-0.76.ebuild:
+  Added to ~ppc.
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> djbfft-0.76.ebuild:
+  Fix use invocation
+
+  26 May 2004; Travis Tilley <lv@gentoo.org> djbfft-0.76.ebuild:
+  fixed for amd64
+
+  31 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> djbfft-0.76.ebuild:
+  inherit eutils flag-o-matic; move variable setting and strip-flags into
+  function
+
+*djbfft-0.76 (11 Mar 2004)
+
+  11 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> djbfft-0.76.ebuild,
+  metadata.xml, files/djbfft-0.76-gcc3.patch, files/djbfft-0.76-shared.patch:
+  Initial import with little changes to the
+  ebuild by Stefan Briesenick <sbriesen@gmx.de> in bug #38517
+  gcc3 patch found in a newsgroup (author unknown)
+  shared patch by Stefan Briesenick <sbriesen@gmx.de>
