@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.7 2005/01/02 23:01:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.8 2005/01/04 18:28:06 wolf31o2 Exp $
+
+  04 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> pyparted-1.6.9.ebuild:
+  Marking stable on x86 and amd64 in preparation for 2005.0's release.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
