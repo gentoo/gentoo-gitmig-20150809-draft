@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.0.ebuild,v 1.17 2004/12/07 21:00:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.0.ebuild,v 1.18 2004/12/09 19:54:49 mr_bones_ Exp $
 
 inherit eutils
 
@@ -20,6 +20,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	EPATCH_SOURCE="${FILESDIR}" epatch
+	sed -i \
+		-e 's:destdir=:destdir=$(DESTDIR):' \
+		po/Makefile.in.in \
+		|| die "sed failed"
 }
 
 src_compile() {
