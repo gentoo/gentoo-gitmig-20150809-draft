@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.53 2003/06/23 15:41:49 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.54 2003/06/25 10:39:59 torbenh Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -32,9 +32,10 @@ kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
+media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/ardour-cvs:ardour-ksi - Build ksi interface for ardour
 media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
-media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
+media-sound/terminatorX:sox - Enable sox support
 media-sound/totem:gstreamer - Enable gstreamer instead of Xine backend
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-video/transcode:altivec - Enable Altivec code portions
