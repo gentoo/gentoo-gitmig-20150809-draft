@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-unit/cl-unit-1.3.1.ebuild,v 1.1 2003/10/06 10:59:38 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-unit/cl-unit-1.3.1.ebuild,v 1.2 2003/10/17 19:12:26 mkennedy Exp $
 
 inherit common-lisp
 
@@ -32,4 +32,13 @@ src_install() {
 	common-lisp-system-symlink
 	dodoc license readme
 	dohtml docs/*
+	do-debian-credits
+}
+
+pkg_preinst() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
+}
+
+pkg_postrm() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }
