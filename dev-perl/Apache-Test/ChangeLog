@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Apache-Test
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.10 2004/06/25 21:30:52 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.11 2004/10/28 11:03:52 mcummings Exp $
+
+*Apache-Test-1.15 (28 Oct 2004)
+
+  28 Oct 2004; Michael Cummings <mcummings@gentoo.org>
+  +Apache-Test-1.15.ebuild:
+  New version on cpan
 
   25 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> Apache-Test-1.07.ebuild:
   Marked stable on amd64.

@@ -1,8 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 71e76e1587aef2db74cebaabfd8ac4ec Apache-Test-1.03.ebuild 764
-MD5 0dc498231fd2c988e407aa60951feb43 Apache-Test-1.11.ebuild 784
 MD5 9bf3203778cf2df1bd1973860b28e22d Apache-Test-1.07.ebuild 780
-MD5 54704c09610f12a00822ae7fe6fca149 ChangeLog 1262
+MD5 0dc498231fd2c988e407aa60951feb43 Apache-Test-1.11.ebuild 784
+MD5 de29f8c1a65628ca8f193f272f483729 ChangeLog 1401
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 4d2f309f97e36e7b20dd3183fd04c8cc Apache-Test-1.15.ebuild 780
 MD5 6a84fba1190e8a3bbf4bcf1f5d143121 files/digest-Apache-Test-1.03 67
 MD5 b5cdf8077185b98bef4daa08faf8facd files/digest-Apache-Test-1.07 67
 MD5 393cfce45f7c5ed48291421b204291d8 files/digest-Apache-Test-1.11 68
+MD5 f63ddebaf06de3d9772484b7636bc8a7 files/digest-Apache-Test-1.15 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBgNH/tG5z4I8BtQoRAtHGAJwIs3H0/m1qoDM4x4OZdZzVbZjDMACcDlDw
+Kn8uP9iAA/S++5nvCy6XoFA=
+=xvHL
+-----END PGP SIGNATURE-----
