@@ -1,0 +1,20 @@
+--- mysql-4.0.24.bbb/Docs/manual.texi	2005-03-11 22:49:27.000000000 +0100
++++ mysql-4.0.24/Docs/manual.texi	2005-03-11 22:57:56.000000000 +0100
+@@ -91349,7 +91349,7 @@
+ 
+ @c NOTE: To regenerate this list, run the make-errmsg-table.pl script.
+ 
+-@include errmsg-table.texi
++failed to include errmsg-table.texi
+ 
+ Client error information comes from the following files:
+ 
+@@ -91370,7 +91370,7 @@
+ 
+ @c NOTE: To regenerate this list, run the make-cl-errmsg-table.pl script.
+ 
+-@include cl-errmsg-table.texi
++failed to include cl-errmsg-table.texi
+ 
+ 
+ @node Extending MySQL, Problems, Error-handling, Top

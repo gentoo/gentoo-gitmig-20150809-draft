@@ -7,6 +7,7 @@ MD5 3dfd4b94b05af738e092c6fa296d8354 mysql-4.0.23.ebuild 9059
 MD5 e1033fa49047a578ba121b90fdb2b233 mysql-3.23.52-r1.ebuild 6000
 MD5 e9fc3c775ec6fc9e6d0f871b0b30cbf5 mysql-4.0.23-r2.ebuild 9427
 MD5 b8210bb74ea56b21eeba0077ff472e9b mysql-4.1.8-r1.ebuild 9245
+MD5 a0018d2dfdc35c75029b0c2c34781927 mysql-4.0.24-r1.ebuild 11874
 MD5 8176095e06106185dd2a904061f651bd mysql-3.23.57.ebuild 6688
 MD5 a352c543b55c3b5e4a7a02c5f3ede5d6 mysql-4.0.22.ebuild 8777
 MD5 f23f946b5a74ff097603917b0fd579cb mysql-4.0.22-r2.ebuild 9621
@@ -14,7 +15,7 @@ MD5 d436e793baae2f71669b96381ce2959b mysql-3.23.58-r1.ebuild 6759
 MD5 3e5c2be526e788f57044aafcb7281e10 mysql-4.1.8.ebuild 9106
 MD5 f9b24bd73b0d75705d38ee1e0f5a3072 mysql-4.0.23-r1.ebuild 9180
 MD5 29f350c0ac3c7314a3a5527cdb597c32 mysql-4.0.24.ebuild 9802
-MD5 08255a90670cfe3d8a8aed3624ba5aa3 ChangeLog 28300
+MD5 7f0e928b44d6615aac262f3ac3d03e7b ChangeLog 28771
 MD5 a5dda17df0286cd82cae42d117784903 metadata.xml 163
 MD5 4541e130a1b0fa90db8612973b0adb75 files/mysql-4.0-mysqld-safe-sh.diff 1477
 MD5 36aa23522b241aafdb833ac4f11c4fd1 files/mysql-4.0.4-install-db-sh.diff 1439
@@ -61,13 +62,17 @@ MD5 a76ec36b83c2f0dbfba65c993f75d135 files/mysql-4.0.18-mysqlbugsecurity.diff 67
 MD5 296a01da527263926d20aca0446bc87d files/digest-mysql-3.23.56 67
 MD5 dcd899fe185459da4cb9e71c75c3bda3 files/digest-mysql-3.23.57 67
 MD5 6e0ae36e30287df25336d8bd71c0e764 files/digest-mysql-3.23.58 67
+MD5 255655c42f50e6011e1e40837d60e625 files/mysql-4.0.24-r1.rc6 1743
 MD5 977be6c68f6231cbcf1febd3305ade5d files/mysql-4.0.14-r1-tcpd-vars-fix.diff 465
 MD5 57531ccd19e17ccca95e0e3bf833cd67 files/mysql-3.23-db-3.2.3.diff 1105
+MD5 c6ff193b0612040bab879d2085b6edea files/mysql-4.0.24-manual.texi.patch 603
 MD5 a8f89d11a0913332c5f8c1da5a21cc3f files/my.cnf-4.0.14-r1 2816
+MD5 9946a8f7163970ec4f6a713c97eadbe0 files/my.cnf-4.0.24-r1 4271
 MD5 9b5ad94f6e99e65bc3373c9dd15dff08 files/mysql-4.0.17-thrssl.patch 637
 MD5 04fa914460358170e2865d20b22d2171 files/digest-mysql-4.0.22-r1 66
 MD5 04fa914460358170e2865d20b22d2171 files/digest-mysql-4.0.22-r2 66
 MD5 5c65bc30646d669193798324a56b002a files/digest-mysql-4.0.23-r1 66
 MD5 ce711c0d8387720dbb85de1d756daa75 files/digest-mysql-4.0.23-r2 67
+MD5 547fab43da8e59a03a5f3e4a500cca45 files/digest-mysql-4.0.24-r1 66
 MD5 152b9a8feef16df47b56c316c5c0601e files/mysql-4.0.13-thrssl.patch 813
 MD5 ad5636b398982a23f6fc58f18a2114fc files/mysql-4.0.18-mysqldmultisecurity.diff 3863
