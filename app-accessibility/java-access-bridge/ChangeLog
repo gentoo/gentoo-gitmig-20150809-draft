@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/java-access-bridge
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.1 2004/03/21 17:55:58 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.2 2004/03/22 22:40:06 leonardop Exp $
+
+  22 Mar 2004; L. Boshell <leonardop@gentoo.org>
+  java-access-bridge-1.3.1.ebuild:
+  Fix the order of the eclasses to inherit from.
 
 *java-access-bridge-1.3.1 (21 Mar 2004)
 

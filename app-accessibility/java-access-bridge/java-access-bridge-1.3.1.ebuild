@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.3.1.ebuild,v 1.1 2004/03/21 17:55:58 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.3.1.ebuild,v 1.2 2004/03/22 22:40:06 leonardop Exp $
 
-inherit gnome2 java-pkg
+inherit java-pkg gnome2
 
 DESCRIPTION="Gnome Java Accessibility Bridge"
 HOMEPAGE="http://www.gnome.org/"
