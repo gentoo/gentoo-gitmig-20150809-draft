@@ -6,9 +6,9 @@ MD5 078c6907afbe9d3685ad46f3fe709ef1 Archive-Zip-1.05.ebuild 573
 MD5 fd61f9238f3f5cecbd352915aa6c0881 Archive-Zip-1.06.ebuild 580
 MD5 ca6ed6e0ca7fa2dca5f413d3bbad8e5c Archive-Zip-1.10.ebuild 597
 MD5 3b12214e336ae6e342f32a70c1cce322 Archive-Zip-1.12.ebuild 581
-MD5 67218909edbb7597d04946fb1e1fac5d ChangeLog 1946
+MD5 6a61c1b226b75afe01b15fa4a1aec974 ChangeLog 2078
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 17daa1d2a6e35f99fcf590f2b1c07507 Archive-Zip-1.14.ebuild 562
+MD5 0e82b5e76e08d6ab3b75d19803bdefa7 Archive-Zip-1.14.ebuild 561
 MD5 0028ec63dd29512330ad2167159d2ba7 files/digest-Archive-Zip-1.05 67
 MD5 0028ec63dd29512330ad2167159d2ba7 files/digest-Archive-Zip-1.05-r1 67
 MD5 bf27a75d5e9bfc79fb9ffd60113a4e31 files/digest-Archive-Zip-1.06 67
@@ -18,7 +18,7 @@ MD5 20fc9467fcd9cb2979e16e5683ac05d8 files/digest-Archive-Zip-1.14 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBev1DtG5z4I8BtQoRAtM8AJ4yJq1UH6Ly+hLXscB7wyLzkgPCgACcDqMv
-/2SIF4T7SLs8p6Iru1USBBI=
-=K4cD
+iD8DBQFBewnMtG5z4I8BtQoRAuG2AJwOI6SjoFPdGLA8Sky+D9cdwaeBKACfRc60
+qIupT1u4Z3sevKRIn1DuLdo=
+=Jxar
 -----END PGP SIGNATURE-----
