@@ -1,6 +1,6 @@
-# ChangeLog for dev-libs/gtk-sharp
+# ChangeLog for x11-libs/gtk-sharp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/ChangeLog,v 1.1 2003/02/27 17:18:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/ChangeLog,v 1.2 2003/04/22 10:26:37 vapier Exp $
 
 *gtk-sharp-0.8 (24 Feb 2003)
 
