@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4.ebuild,v 1.7 2005/03/29 16:00:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4-r1.ebuild,v 1.1 2005/03/29 16:00:43 luckyduck Exp $
 
 inherit java-pkg
 
@@ -10,14 +10,14 @@ SRC_URI="mirror://apache/jakarta/velocity/binaries/velocity-${PV}/velocity-${PV}
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="doc j2ee jikes junit"
 
 DEPEND=">=virtual/jdk-1.3.1"
 RDEPEND=">=virtual/jdk-1.3.1
 	>=dev-java/ant-1.5.1
 	>=dev-java/avalon-logkit-bin-1.2
-	>=dev-java/oro-2.0.6
+	=dev-java/jakarta-oro-2.0*
 	j2ee? ( =dev-java/sun-j2ee-1.3.1* )
 	jikes? ( >=dev-java/jikes-1.17 )"
 
