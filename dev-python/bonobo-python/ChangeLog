@@ -1,8 +1,13 @@
 # ChangeLog for dev-python/bonobo-python
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/ChangeLog,v 1.2 2002/07/27 06:25:36 george Exp $
 
 *bonobo-python-0.2.0-r1 (1 Feb 2002)
+
+  26 Jul 2002; George Shapovalov <george@gentoo.org> bonobo-python-0.2.0-r1.ebuild :
+
+  added KEYWORDS,SLOT,LICENSE
+  general clean-up (whitespace, header, try->||die)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

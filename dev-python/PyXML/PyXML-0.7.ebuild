@@ -12,7 +12,7 @@ RDEPEND="${DEPEND}"
 
 SLOT="0"
 KEYWORDS="x86"
-LICENSE="as-is"
+LICENSE="PYTHON"
 
 
 src_compile() {

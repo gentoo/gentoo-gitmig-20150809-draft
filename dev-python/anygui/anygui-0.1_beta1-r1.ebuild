@@ -13,10 +13,17 @@ DEPEND=">=dev-lang/python-2.0
         qt? ( =dev-python/PyQt-2.4* ) 
         gtk? ( dev-python/pygtk )
         tcltk? ( dev-lang/tk )"
+RDEPEND="${DEPEND}"
+
 #future: 
 #       might need a wxw use variable for wxGTK for wxw? ( dev-python/wxPython )
 #       also use variable fltk for fltk? ( dev-python/PyFLTK ) no ebuild for PyFLTK yet
 #       java? ( dev-python/jython ) Java Swing (javagui) http://www.jython.org
+
+SLOT="0"
+KEYWORDS="x86"
+LICENSE="MIT"
+
         
 src_compile() {
 

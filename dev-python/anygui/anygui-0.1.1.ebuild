@@ -13,12 +13,17 @@ DEPEND=">=dev-lang/python-2.0
 	gtk? ( dev-python/pygtk )
 	tcltk? ( dev-lang/tk )
 	wxwin? ( dev-python/wxPython )"
+RDEPEND="${DEPEND}"
 
 #Propsed wxwin use variable for wxGTK for wxWindows? ( dev-python/wxPython ) *NOT* official
 #future: 
 #also use variable fltk for fltk? ( dev-python/PyFLTK ) no ebuild for PyFLTK yet
 #java? ( dev-python/jython ) Java Swing (javagui) http://www.jython.org
-        
+
+SLOT="0"
+KEYWORDS="x86"
+LICENSE="MIT"
+
 src_compile() {
 
 	python setup.py build || die "Python Build Failed"

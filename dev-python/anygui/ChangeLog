@@ -1,8 +1,10 @@
 # ChangeLog for dev-python/anygui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/ChangeLog,v 1.5 2002/03/15 22:20:45 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/ChangeLog,v 1.6 2002/07/27 06:25:36 george Exp $
 
 *anygui-0.1.1-r1 (15 Mar 2002)
+
+  26 Jul 2002; George Shapovalov <george@gentoo.org> anygui-0.1.1-r1.ebuild, anygui-0.1.1.ebuild, anygui-0.1_beta1-r1.ebuild :
 
   15 Mar 2002; T.Neidt <tod@gentoo.org> ChangeLog, anygui-0.1.1-r1.ebuild :
 
