@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/attr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.46 2004/12/16 06:14:46 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.47 2004/12/30 11:17:50 absinthe Exp $
+
+  30 Dec 2004; Dylan Carlson <absinthe@gentoo.org> attr-2.4.19.ebuild:
+  Fixed SRC_URI to close #76092.
 
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> attr-2.4.19.ebuild:
   Stable on amd64.
