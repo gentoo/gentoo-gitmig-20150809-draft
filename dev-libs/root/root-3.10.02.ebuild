@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.10.02.ebuild,v 1.1 2004/04/20 13:43:11 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.10.02.ebuild,v 1.2 2004/04/21 21:15:13 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -106,7 +106,7 @@ src_compile() {
 		ppc)
 			append-flags "-fsigned-char";;
 	esac
-	
+
 	./configure linux \
 		--aclocaldir=/usr/share/aclocal/ \
 		--bindir=/usr/bin \
