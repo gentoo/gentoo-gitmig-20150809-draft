@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmbiff
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.4 2003/02/12 09:39:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.5 2003/06/18 15:09:18 phosphan Exp $
+
+*wmbiff-0.4.15 (18 Jun 2003)
+
+  18 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> wmbiff-0.4.15.ebuild:
+  Version bump requested in bug 21273, behaves a bit nicer than the old version
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
