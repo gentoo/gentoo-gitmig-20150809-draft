@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.10 2004/07/29 22:08:57 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.11 2004/07/29 22:42:01 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -105,6 +105,13 @@ src_unpack() {
 	use gtk && unpack Blue-${BLUV}.tar.bz2
 
 	cd ${S}
+
+	if use !network; then
+		einfo "Please note, a new network USE flag was added for users"
+		einfo "with networkless installs.  If you use mplayer for streaming"
+		einfo "media, please enable the network USE flag or it will not work!"
+		einfo
+	fi
 
 	# Fix head/tail call for new coreutils
 	epatch ${FILESDIR}/${PN}-0.90-coreutils-fixup.patch
