@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/mserv
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.1 2004/03/11 08:23:42 eradicator Exp $
+
+*mserv-0.35 (10 Mar 2004)
+
+  10 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  mserv-0.35.ebuild:
+  mserv is a jukebox server. Ebuild submitted by Stephen Martin
+  <steve@deadlylaser.com> in bug #27902.
+
