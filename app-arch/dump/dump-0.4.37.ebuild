@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.37.ebuild,v 1.4 2005/01/01 11:44:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.37.ebuild,v 1.5 2005/02/05 19:15:07 solar Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
@@ -16,13 +16,15 @@ IUSE="readline static"
 DEPEND=">=sys-fs/e2fsprogs-1.27
 	>=app-arch/bzip2-1.0.2
 	>=sys-libs/zlib-1.1.4
-	virtual/os-headers
 	readline? ( sys-libs/readline )"
 RDEPEND="${DEPEND}
 	|| (
 		app-arch/star
 		app-arch/tar
 	)"
+
+# virtual/os-headers never belong in RDEPENDs
+DEPEND="${DEPEND} virtual/os-headers"
 
 src_unpack() {
 	unpack ${A}
