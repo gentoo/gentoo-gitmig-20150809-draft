@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dca623939c435639809bee1746ecc255 pyxdg-0.8.ebuild 662
-MD5 36c600d1a709999d06d40b0f2f3f5866 ChangeLog 2125
+MD5 1b4e22fd4102f44079bf02615287413c ChangeLog 2237
+MD5 105acf9590385d48d61dff6253a3935b pyxdg-0.9.ebuild 649
 MD5 58ac13388568f6d0f05ee2af5d047ab6 metadata.xml 252
 MD5 94906d1c001ebe64a7b5d9f25fd4d702 files/digest-pyxdg-0.8 60
+MD5 bea9e2c131cfc20712411b5e8318daa0 files/digest-pyxdg-0.9 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQr4gevY57Fted3ERAqrtAKCa3+wTPDjfXYPKwhCowz7Se4cgTACcDNX4
+qb5ITHnSyXEum/0lhdWzPTA=
+=ORp+
+-----END PGP SIGNATURE-----
