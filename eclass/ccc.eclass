@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.2 2003/05/26 15:53:04 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.3 2003/05/26 20:06:10 taviso Exp $
 # 
 # Authors:	Tavis Ormandy <taviso@gentoo.org>
 #			Aron Griffis <agriffis@gentoo.org>
@@ -107,9 +107,8 @@ ccc-fixup()
 	do
 		einfo "Checking for changes to `basename ${i}`..."
 		if [ -e "${i}.${suffix}" ]; then
-			einfo "Showing Diff..."
 			diff -u ${i}.${suffix} ${i}
-			sleep 2
+			sleep 1
 		fi
 	done
 }
