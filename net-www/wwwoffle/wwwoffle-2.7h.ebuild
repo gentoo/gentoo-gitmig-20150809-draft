@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.7h.ebuild,v 1.6 2004/04/25 00:44:10 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.7h.ebuild,v 1.7 2004/05/07 13:05:28 dragonheart Exp $
 
 S=${WORKDIR}/${P}
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.demon.co.uk/pub/unix/httpd/${P}.tgz
 	 ftp://ftp.ibiblio.org/pub/Linux/apps/www/servers/${P}.tgz"
 
 HOMEPAGE="http://www.gedanken.demon.co.uk/"
-KEYWORDS="~x86 ~sparc ~ppc ppc64"
+KEYWORDS="x86 ~sparc ~ppc ppc64"
 SLOT="0"
 LICENSE="GPL-2"
 

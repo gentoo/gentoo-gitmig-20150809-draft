@@ -1,6 +1,10 @@
 # ChangeLog for net-www/wwwoffle
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.16 2004/04/28 08:58:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.17 2004/05/07 13:05:28 dragonheart Exp $
+
+  07 May 2004; Daniel Black <dragonheart@gentoo.org> -wwwoffle-2.7d.ebuild,
+  wwwoffle-2.7g.ebuild, wwwoffle-2.7h.ebuild:
+  Remove old version. QA fix and added x86 keywords on 2.7{gh}
 
   28 Apr 2004; Daniel Black <dragonheart@gentoo.org> wwwoffle-2.8b.ebuild:
   Some fixes thanks to tove <bugs@veller.net> in bug #35275. Still some more to

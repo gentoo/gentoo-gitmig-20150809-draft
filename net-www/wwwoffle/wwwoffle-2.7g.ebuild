@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.7g.ebuild,v 1.6 2004/04/25 00:44:10 dragonheart Exp $
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.7g.ebuild,v 1.7 2004/05/07 13:05:28 dragonheart Exp $
 
 DESCRIPTION="wwwoffle = WWW Offline Explorer, an adv. caching proxy especially suitable for nonpermanent (e.g. dialup) Internet connections"
 
@@ -13,7 +11,7 @@ HOMEPAGE="http://www.gedanken.demon.co.uk/"
 KEYWORDS="x86 sparc"
 SLOT="0"
 LICENSE="GPL-2"
-
+IUSE="ipv6"
 DEPEND="sys-devel/flex
 	sys-libs/zlib
 	sys-devel/gcc
