@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/bonobo-activation
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/ChangeLog,v 1.25 2003/07/11 23:51:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/ChangeLog,v 1.26 2003/08/04 08:46:13 gmsoft Exp $
 
 *bonobo-activation-2.2.3 (12 Jul 2003)
 
@@ -11,6 +11,9 @@
   Added ppc in KEYWORDS
 
 *bonobo-activation-2.2.2 (27 May 2003)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> bonobo-activation-2.2.2.ebuild :
+  Marked stable on hppa.
 
   01 Jul 2003; Guy Martin <gmsoft@gentoo.org> bonobo-activation-2.2.2.ebuild :
   Added ~hppa to KEYWORDS.
