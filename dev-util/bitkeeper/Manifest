@@ -1,4 +1,4 @@
-MD5 bff4cc9a0273236741161818abeafec9 ChangeLog 3416
+MD5 618eeeaa95480f467d054427cfb5123d bitkeeper-3.2.2c.ebuild 2923
+MD5 5930410f3ee6848232689f540273dd79 ChangeLog 3528
 MD5 42bb15c37e072cf6216b4692514d08c9 metadata.xml 275
-MD5 dd8d6c00632e2457a1e9e75b123a21f6 bitkeeper-3.2.2c.ebuild 2871
-MD5 b6c04aa236064bb1764c36f8f60a071e files/digest-bitkeeper-3.2.2c 705
+MD5 b5f3245435167b364cdf62e02f12bd87 files/digest-bitkeeper-3.2.2c 785
