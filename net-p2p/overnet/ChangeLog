@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/overnet
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/ChangeLog,v 1.13 2004/09/11 16:20:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/ChangeLog,v 1.14 2004/09/12 21:28:56 mr_bones_ Exp $
+
+  12 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> overnet-1.0.2.ebuild:
+  header fix; dep fix; whitespace fix; tidy
 
 *overnet-1.0.2 (11 Sep 2004)
 
