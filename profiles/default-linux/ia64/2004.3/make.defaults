@@ -1,0 +1,58 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/2004.3/make.defaults,v 1.1 2004/09/22 16:07:49 vapier Exp $
+#
+# System-wide defaults for the Portage system
+# See portage(5) manpage
+
+USE="
+ia64
+berkdb
+bitmap-fonts
+crypt
+cups
+encode
+foomaticdb
+gdbm
+gif
+gnome
+gpm
+gtk
+gtk2
+imlib
+jpeg
+kde
+libg++
+libwww
+mikmod
+motif
+ncurses
+nls
+oggvorbis
+opengl
+oss
+pam
+pdflib
+png
+python
+qt
+quicktime
+readline
+sdl
+slang
+spell
+ssl
+tcpd
+truetype
+X
+xml2
+xmms
+xprint
+xv
+zlib
+"
+
+ARCH="ia64"
+ACCEPT_KEYWORDS="ia64"
+
+FEATURES="sfperms"
