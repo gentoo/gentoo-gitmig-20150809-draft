@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/beep-media-player
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.1 2003/11/29 22:04:18 hanno Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.2 2004/02/05 02:57:58 eradicator Exp $
+
+  04 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  beep-media-player-1.0.0_pre5.ebuild:
+  Fixed DEPEND/RDEPEND mixup.  Closes bug #40316.
 
 *beep-media-player-1.0.0_pre5 (29 Nov 2003)
 
