@@ -1,6 +1,18 @@
 # ChangeLog for games-roguelike/slashem
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/ChangeLog,v 1.7 2004/12/16 15:23:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/ChangeLog,v 1.8 2004/12/27 03:52:18 vapier Exp $
+
+*slashem-0.0.760 (26 Dec 2004)
+
+  26 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/0.0.7E6/GTK.configure, +files/0.0.7E6/Proxy.configure,
+  +files/0.0.7E6/X11.configure, +files/0.0.7E6/dot.slashemrc,
+  +files/0.0.7E6/gentoo-paths.patch, +files/0.0.7E6/gnome.configure,
+  +files/0.0.7E6/makefile.patch, +files/0.0.7E6/opengl.configure,
+  +files/0.0.7E6/prepare-gui.configure, +files/0.0.7E6/proxy.slashemrc,
+  +files/0.0.7E6/qt.configure, +files/0.0.7E6/sdl.configure,
+  +slashem-0.0.760.ebuild:
+  Version bump #43500 by Pekka Rousu.
 
   17 Dec 2004; Joseph Jezak <josejx@gentoo.org> slashem-0.0.648.ebuild:
   Marked ppc stable.
