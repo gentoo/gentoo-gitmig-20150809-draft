@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.15 2004/10/04 06:13:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.16 2004/10/24 05:47:24 battousai Exp $
+
+*linuxwacom-0.6.4 (24 Oct 2004)
+
+  24 Oct 2004; Bryan Stine <battousai@gentoo.org> +linuxwacom-0.6.4.ebuild:
+  Version bump to 0.6.4. Closes bug #67035.
 
   03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   linuxwacom-0.6.2.ebuild, linuxwacom-0.6.3.ebuild:
