@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.4-r1.ebuild,v 1.1 2003/01/31 18:08:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.4-r1.ebuild,v 1.2 2003/02/01 19:29:35 danarmak Exp $
 
 IUSE="ssl socks5 qt kde"
 
@@ -22,8 +22,8 @@ use kde && need-kde 3.0
 src_compile() {
 
 	local first_conf
-	use ssl		|| first_conf = "${first_conf} --disable-openssl"
-	use socks5	&& first_conf = "${first_conf} --enable-socks5"
+	use ssl		|| first_conf="${first_conf} --disable-openssl"
+	use socks5	&& first_conf="${first_conf} --enable-socks5"
 	
 	./configure --host=${CHOST} --prefix=/usr ${first_conf} || die
 	emake || die
