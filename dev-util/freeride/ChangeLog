@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/freeride
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/ChangeLog,v 1.1 2004/06/04 20:42:21 usata Exp $
+
+*freeride-0.6.0 (05 Jun 2004)
+
+  05 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> freeride-0.6.0.ebuild,
+  files/freeride-0.6.0-gentoo-properties.diff, files/freeride.sh:
+  Initial import. Ebuild submitted by Thomas Andersson <zeroth@darkos.com>,
+  closing bug #51127
+
