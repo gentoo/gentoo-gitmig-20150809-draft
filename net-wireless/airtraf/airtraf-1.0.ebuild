@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/airtraf-1.0.ebuild,v 1.6 2004/06/25 00:42:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/airtraf-1.0.ebuild,v 1.7 2004/09/03 15:12:57 dholm Exp $
 
 DESCRIPTION="AirTraf 802.11b Wireless traffic sniffer"
 HOMEPAGE="http://www.elixar.com/"
@@ -10,7 +10,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND=">=net-libs/libpcap-0.7.1"
 
