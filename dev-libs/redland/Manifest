@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9d3fc0545df59e809a3738f47be0cb23 redland-0.9.15.ebuild 1067
-MD5 2802bebedcdd7920769d152dcb5993f3 ChangeLog 512
-MD5 b7ff215da6fe31f5b6ea967fc03303d3 redland-0.9.16.ebuild 1244
+MD5 73f649eb9beaa682ba2ee966a5c8cb17 redland-0.9.16.ebuild 1238
+MD5 2aeccb18c99270b11723f350258c60d6 redland-0.9.15.ebuild 1060
+MD5 b59f2a704bc013b4589e258b7f64d919 ChangeLog 506
 MD5 d1520e577d6322377950c0ca427ed8f1 files/digest-redland-0.9.15 67
 MD5 edc17952f8ecbcd3d5c7991a0ab06018 files/digest-redland-0.9.16 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAzhaQHTu7gpaalycRAghbAJ4haF9SU8boe0cgkZQj6JPl4F+d+gCgpJtH
-ZBtbAOvGr2J51pAUg8y5CKw=
-=+iwX
------END PGP SIGNATURE-----

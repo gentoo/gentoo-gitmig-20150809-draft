@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 de15a2b16838c48bef2057537c740689 libedit-20040302.ebuild 749
+MD5 6f054f6d7c25f125845a19b9945657d6 libedit-20040610.ebuild 749
+MD5 3501d2d85132f440bbc25ee1736bd94b ChangeLog 361
 MD5 dd9909c8d431d328b7f97b210f957592 metadata.xml 620
-MD5 c86053615fc956a7611f16efd16708f6 libedit-20040302.ebuild 756
-MD5 a5da705d25d838e9526d586ff57cada1 ChangeLog 367
-MD5 4f03cca81a02406b27385ee6fbdc3e1f libedit-20040610.ebuild 755
 MD5 3cf606905b7366fcfff0ba31b55409c9 files/digest-libedit-20040302 68
-MD5 737f1b11b30496ab584ed7c7ca7e92a4 files/20031222-debian-to-gentoo.patch 3834
 MD5 9086fb1951eeddfb50b0342d06c758d7 files/digest-libedit-20040610 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAyS6UHTu7gpaalycRAvNRAKCupM5tB8inR9tf7G2WEdXsgAeRqwCeJD2Y
-IirqHIT5gvbhD2+FvaS7Q4g=
-=SBo/
------END PGP SIGNATURE-----
+MD5 737f1b11b30496ab584ed7c7ca7e92a4 files/20031222-debian-to-gentoo.patch 3834

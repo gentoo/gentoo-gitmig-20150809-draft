@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9cce40cfaf8a76766ef1a3a0bc7531d8 ChangeLog 1515
-MD5 dfb8aa8ffbbd3a1b85cb6834dad09198 libmcal-0.7-r1.ebuild 795
-MD5 2503170a110b75e97ede4e3ac6d373e8 libmcal-0.7.ebuild 690
-MD5 c7e073f7d5d122c93496d60e7bf4fccb libmcal-0.7-r2.ebuild 1784
-MD5 33ec0e0ab40e02bedea5e6b2b8ec51bc files/digest-libmcal-0.7 62
+MD5 1e8fb5f493285a2edddc4f1f9a980584 libmcal-0.7-r2.ebuild 1777
+MD5 a100dbafbc84ecd954f7f42fade266b2 libmcal-0.7.ebuild 681
+MD5 bb36e934f19c6d8b9f4a4346e9bc55d7 ChangeLog 1508
+MD5 6ee643806ef1b66b21947477364a5ad4 libmcal-0.7-r1.ebuild 788
 MD5 33ec0e0ab40e02bedea5e6b2b8ec51bc files/digest-libmcal-0.7-r1 62
-MD5 164c1590a106af41fb8a5de71843861b files/libmcal-0.7-fpic.patch 769
 MD5 e40f5b90c038f8c8703b83953b10012b files/digest-libmcal-0.7-r2 128
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAvTB4HTu7gpaalycRApvpAKD0rXpoGZ1W/vcv19HO/vo/4jH/LACgzDkx
-uIQS6QVgyDP75vBan1qhdFI=
-=gdzu
------END PGP SIGNATURE-----
+MD5 164c1590a106af41fb8a5de71843861b files/libmcal-0.7-fpic.patch 769
+MD5 33ec0e0ab40e02bedea5e6b2b8ec51bc files/digest-libmcal-0.7 62
