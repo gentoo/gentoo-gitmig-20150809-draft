@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.11.ebuild,v 1.5 2005/03/23 01:57:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.14.ebuild,v 1.1 2005/04/01 12:10:43 dsd Exp $
 
 inherit gnome2 eutils mono
 
