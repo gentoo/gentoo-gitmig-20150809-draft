@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xfce.org/"
 
 DEPEND="virtual/x11
         >=x11-libs/gtk+-1.2
-	gnome? ( >=gnome-base/gdk-pixbuf-0.10 )"
+	gnome? ( >=media-libs/gdk-pixbuf-0.10 )"
 
 if [ -z "`use gnome`" ]
 then
