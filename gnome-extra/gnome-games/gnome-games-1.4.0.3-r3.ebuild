@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Reviewed by Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-1.4.0.3-r3.ebuild,v 1.1 2002/03/21 05:11:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-1.4.0.3-r3.ebuild,v 1.2 2002/03/21 17:14:34 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-utils"
@@ -9,8 +9,8 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 RDEPEND=">=gnome-base/gnome-core-1.4.0.4-r1
-         >=dev-util/guile-1.5
-	 >=media-libs/gdk-pixbuf-0.11.0-r1"
+	>=dev-util/guile-1.4
+	>=media-libs/gdk-pixbuf-0.11.0-r1"
 
 DEPEND="${RDEPEND}
         >=app-text/scrollkeeper-0.2
