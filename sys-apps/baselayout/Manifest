@@ -1,38 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2e2b3f569f7c24e996a6a9ae7dc3f5ea ChangeLog 46863
-MD5 c79e8a69ea8161be1c6fc7aea865206e baselayout-1.11.7-r2.ebuild 15745
 MD5 313c753113888932800797c600f462ce baselayout-1.11.8-r3.ebuild 16882
-MD5 d9e60daa58a85965186f7dbecac8516d baselayout-1.11.8.ebuild 15655
-MD5 245e39f14052cacd4e495fa02ecf2163 baselayout-1.9.4-r6.ebuild 16835
 MD5 e819385f8aa5ac0f1a8ad035a6b9c7f7 baselayout-1.9.4-r7.ebuild 18118
+MD5 245e39f14052cacd4e495fa02ecf2163 baselayout-1.9.4-r6.ebuild 16835
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
-MD5 5861b29e21c96abf4f23a9bb34cbe279 baselayout-1.11.9.ebuild 16806
 MD5 d80dcfed01a9848a76f7fa0ab812ab5e baselayout-1.11.9-r1.ebuild 16896
-MD5 dd7fbce62822fed1595f11078e23aa32 files/baselayout-1.8.6.13-r1-gcc2.patch 443
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
-MD5 9933f0b4a90470585f9cee5372ac4d02 files/digest-baselayout-1.11.7-r2 69
-MD5 68ea8c716616fbfd5b287dadb5e9ea5c files/digest-baselayout-1.11.8 69
-MD5 68ea8c716616fbfd5b287dadb5e9ea5c files/digest-baselayout-1.11.8-r3 69
-MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r6 134
-MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r7 134
-MD5 3d1b5592b9b3398edb36d29422dc0143 files/rc-scripts-1.4.16-livecd.patch 672
-MD5 7b2f5e48c4d9056df539620299c20641 files/rc-scripts-1.4.16-splash.patch 11251
-MD5 0ba12277a13275a24b5754c0a89010bb files/rc-scripts-1.6.7-dhclient.patch 433
-MD5 17086158a470fb1a8cf207c8f97f5a6f files/rc-scripts-1.6.7-fix-runscript.patch 493
-MD5 ab2cacf47e6d0e69a8d1eb729c840a29 files/rc-scripts-1.6.7-udhcpc.patch 653
 MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
+MD5 dd7fbce62822fed1595f11078e23aa32 files/baselayout-1.8.6.13-r1-gcc2.patch 443
 MD5 adc667ea815b256d6f39259f4134f6df files/sysvinit-2.84-selinux1.patch 3556
-MD5 844ae054e507637ee440011d729858c8 files/digest-baselayout-1.11.9 69
-MD5 844ae054e507637ee440011d729858c8 files/digest-baselayout-1.11.9-r1 69
-MD5 08ade596f939beaf9f7b3657c5811593 files/rc-scripts-1.6.9-checkfs-lvm.patch 579
+MD5 7b2f5e48c4d9056df539620299c20641 files/rc-scripts-1.4.16-splash.patch 11251
+MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r6 134
+MD5 3d1b5592b9b3398edb36d29422dc0143 files/rc-scripts-1.4.16-livecd.patch 672
+MD5 68ea8c716616fbfd5b287dadb5e9ea5c files/digest-baselayout-1.11.8-r3 69
+MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r7 134
 MD5 126200ae85bdf0ef43de75411f71aaa8 files/rc-scripts-1.6.9-domainname.patch 380
+MD5 844ae054e507637ee440011d729858c8 files/digest-baselayout-1.11.9-r1 69
 MD5 6ec416bfd1097d350c09e78949a736b8 files/rc-scripts-1.6.9-ifconfig.patch 266
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCApHBArHZZzCEUG0RAqugAJ4y2PDdHi1qmS4b60carSlamATYJACfaMNw
-q8OFtrUM6gCsyd1i5+CaLcA=
-=jUky
------END PGP SIGNATURE-----
+MD5 08ade596f939beaf9f7b3657c5811593 files/rc-scripts-1.6.9-checkfs-lvm.patch 579
