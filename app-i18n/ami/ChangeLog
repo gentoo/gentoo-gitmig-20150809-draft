@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ami
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ami/ChangeLog,v 1.1 2004/05/30 09:25:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ami/ChangeLog,v 1.2 2004/06/02 02:01:51 agriffis Exp $
+
+  01 Jun 2004; Aron Griffis <agriffis@gentoo.org> ami-1.1.0.ebuild,
+  ami-1.2.2.ebuild:
+  Fix use invocation
 
 *ami-1.2.3 (30 May 2004)
 

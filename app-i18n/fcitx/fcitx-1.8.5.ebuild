@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-1.8.5.ebuild,v 1.3 2003/09/06 22:19:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-1.8.5.ebuild,v 1.4 2004/06/02 02:05:45 agriffis Exp $
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
@@ -17,7 +17,7 @@ DEPEND="virtual/x11
 S=${WORKDIR}/${P}
 
 src_compile() {
-	if [ -n "`use truetype`" ]; then
+	if use truetype; then
 		make -f Makefile.xft || die "xft make failed"
 	else
 		make || die "make failed"

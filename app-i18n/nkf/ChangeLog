@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/nkf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.15 2004/04/16 23:10:01 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.16 2004/06/02 02:02:33 agriffis Exp $
+
+  01 Jun 2004; Aron Griffis <agriffis@gentoo.org> nkf-2.0.2-r1.ebuild,
+  nkf-2.0.4.ebuild:
+  Fix use invocation
 
   17 Apr 2004; Masatomo Nakano <nakano@gentoo.org> nkf-2.0.2-r1.ebuild:
   Fixed ebuild(syntax).

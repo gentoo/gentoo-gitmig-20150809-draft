@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ami/ami-1.2.2.ebuild,v 1.1 2004/05/30 09:25:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ami/ami-1.2.2.ebuild,v 1.2 2004/06/02 02:01:51 agriffis Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="!gtk2 ( >=media-libs/gdk-pixbuf-0.7.0 )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	if [ -n "`use gtk2`" ]
+	if use gtk2
 	then
 		epatch ${DISTDIR}/${P}-imhangul_status.patch
 	fi

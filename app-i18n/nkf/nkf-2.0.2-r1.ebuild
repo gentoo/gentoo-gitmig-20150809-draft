@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.0.2-r1.ebuild,v 1.5 2004/04/16 23:10:01 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.0.2-r1.ebuild,v 1.6 2004/06/02 02:02:33 agriffis Exp $
 
 use perl && inherit perl-module
 
@@ -18,7 +18,7 @@ S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	emake CC=gcc CFLAGS="${CFLAGS}" nkf || die
-	if [ `use perl` ]; then
+	if use perl; then
 		cd ${S}/NKF.mod
 		perl-module_src_compile
 		perl-module_src_test
@@ -29,14 +29,14 @@ src_install () {
 	into /usr
 	dobin nkf
 	doman nkf.1
-	if [ `use cjk` ]; then
+	if use cjk; then
 		dodir /usr/share/man/ja/man1
 		insinto /usr/share/man/ja/man1
 		./nkf -e nkf.1j > nkf.1
 		doins nkf.1
 	fi
 	dodoc INSTALL* nkf.doc
-	if [ `use perl` ]; then
+	if use perl; then
 		cd ${S}/NKF.mod
 		perl-module_src_install
 	fi

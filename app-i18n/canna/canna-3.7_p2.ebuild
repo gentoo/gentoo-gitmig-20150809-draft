@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p2.ebuild,v 1.1 2004/05/18 22:32:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p2.ebuild,v 1.2 2004/06/02 02:04:46 agriffis Exp $
 
 inherit cannadic eutils
 
@@ -42,7 +42,7 @@ src_compile() {
 	#make libCannaDir=../lib/canna canna || die
 	make canna || die
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		einfo "Compiling DVI, PS (and PDF) document"
 		cd doc/man/guide/tex
 		xmkmf || die
@@ -79,7 +79,7 @@ src_install() {
 
 	dodoc CHANGES.jp ChangeLog INSTALL* README* WHATIS*
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		insinto /usr/share/doc/${PF}
 		doins doc/man/guide/tex/canna.{dvi,ps,pdf}
 	fi

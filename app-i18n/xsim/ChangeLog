@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/xsim
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.5 2003/06/27 09:44:57 liquidx Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.6 2004/06/02 02:04:01 agriffis Exp $
+
+  01 Jun 2004; Aron Griffis <agriffis@gentoo.org> xsim-0.3.9.4-r1.ebuild,
+  xsim-0.3.9.4-r2.ebuild:
+  Fix use invocation
 
 *xsim-0.3.9.4-r2 (27 Jun 2003)
 
