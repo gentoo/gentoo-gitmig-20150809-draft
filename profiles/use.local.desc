@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.509 2004/07/24 09:14:38 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.510 2004/07/26 07:44:47 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -513,3 +513,4 @@ x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png image
 x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
 x11-wm/icewm:silverxp - Apply ybuttons.cc.patch necessary for SilverXP theme
+x11-wm/metisse:freetype - Enable freetype font support
