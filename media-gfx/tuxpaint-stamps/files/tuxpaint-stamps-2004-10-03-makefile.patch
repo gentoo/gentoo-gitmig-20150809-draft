@@ -1,0 +1,24 @@
+diff -NurdB tuxpaint-stamps-2004-10-03-orig/Makefile tuxpaint-stamps-2004-10-03/Makefile
+--- tuxpaint-stamps-2004-10-03-orig/Makefile	2004-11-23 18:03:07.805102424 -0500
++++ tuxpaint-stamps-2004-10-03/Makefile	2004-11-23 18:09:36.746974272 -0500
+@@ -12,7 +12,7 @@
+ 
+ # Where to install things:
+ 
+-PREFIX=/usr/local
++PREFIX=/usr
+ 
+ 
+ # Data:
+@@ -78,7 +78,8 @@
+ 	@echo
+ 	@echo "...Installing stamp files... (to $(DATA_PREFIX))"
+ 	@echo
+-	@install -d $(DATA_PREFIX)stamps
+-	@cp -R stamps/* $(DATA_PREFIX)stamps
+-	@chmod -R a+rX,g-w,o-w $(DATA_PREFIX)stamps
++	@install -d $(DESTDIR)$(DATA_PREFIX)stamps
++	@find stamps -name CVS | xargs rm -rf
++	@cp -R stamps/* $(DESTDIR)$(DATA_PREFIX)stamps
++	@chmod -R a+rX,g-w,o-w $(DESTDIR)$(DATA_PREFIX)stamps
+ 
