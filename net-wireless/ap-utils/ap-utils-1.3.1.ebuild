@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ap-utils/ap-utils-1.3.1.ebuild,v 1.7 2004/06/25 00:42:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ap-utils/ap-utils-1.3.1.ebuild,v 1.8 2004/08/08 00:30:31 slarti Exp $
 
 IUSE="nls"
 
-DESCRIPTION="Wireless Access Point Utilites for Unix"
+DESCRIPTION="Wireless Access Point Utilities for Unix"
 HOMEPAGE="http://ap-utils.polesye.net/"
 SRC_URI="mirror://sourceforge/ap-utils/${P}.tar.bz2"
 RESTRICT="nomirror"
