@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/libhash
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/ChangeLog,v 1.1 2004/07/14 01:59:27 vapier Exp $
+
+*libhash-1.0.2 (13 Jul 2004)
+
+  13 Jul 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
