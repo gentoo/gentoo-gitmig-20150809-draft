@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/happydoc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.6 2003/04/04 22:29:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.7 2003/04/26 19:36:36 liquidx Exp $
 
 *happydoc-2.1 (04 Apr 2003)
 
@@ -12,6 +12,9 @@
 # Author Gontran Zepeda <gontran@gontran.net>
 
 *happydoc-2.0.1 (14 May 2002)
+
+  26 Apr 2003; Alastair Tse <liquidx@gentoo.org> happydoc-2.0.1.ebuild:
+  fix syntax error in happydoc
 
   26 Jul 2002; George Shapovalov <george@gentoo.org> happydoc-2.0.1.ebuild :
   
