@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.26 2005/01/31 20:03:47 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.27 2005/02/01 09:58:36 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -173,9 +173,9 @@ generate_modulesd() {
 		module_additions="$(eval echo \${#MODULESD_${currm}_ADDITIONS[*]})"
 		module_examples="$(eval echo \${#MODULESD_${currm}_EXAMPLES[*]})"
 
-		[ ${module_aliases} -eq 0 ] 	&& unset module_aliases
-		[ ${module_additions} -eq 0 ] 	&& unset module_additions
-		[ ${module_examples} -eq 0 ] 	&& unset module_examples
+		[[ ${module_aliases} -eq 0 ]] 	&& unset module_aliases
+		[[ ${module_additions} -eq 0 ]]	&& unset module_additions
+		[[ ${module_examples} -eq 0 ]] 	&& unset module_examples
 
 		# If we specify we dont want it, then lets exit, otherwise we assume 
 		# that if its set, we do want it.
@@ -195,6 +195,7 @@ generate_modulesd() {
 		module_config="${T}/modulesd-${currm}"
 
 		ebegin "Preparing file for modules.d"
+		einfo  "Using: ${module_config}"
 		#-----------------------------------------------------------------------
 		echo "# modules.d configuration file for ${currm}" >> ${module_config}
 		#-----------------------------------------------------------------------
@@ -207,7 +208,7 @@ generate_modulesd() {
 		echo >> ${module_config}
 
 		#-----------------------------------------------------------------------
-		if [ ${module_aliases} -gt 0 ]
+		if [[ ${module_aliases} -gt 0 ]]
 		then
 			echo  "# Internal Aliases - Do not edit" >> ${module_config}
 			echo  "# ------------------------------" >> ${module_config}
@@ -256,7 +257,7 @@ generate_modulesd() {
 				done
 				echo '' >> ${module_config}
 			fi
-		elif [ ${module_examples} -gt 0 ]
+		elif [[ ${module_examples} -gt 0 ]]
 		then
 			echo "# For Example..." >> ${module_config}
 			echo "# --------------" >> ${module_config}
@@ -269,7 +270,7 @@ generate_modulesd() {
 		fi
 
 		#-----------------------------------------------------------------------
-		if [ ${module_additions} -gt 0 ]
+		if [[ ${module_additions} -gt 0 ]]
 		then
 			for((t=0; t<${module_additions}; t++))
 			do
@@ -283,8 +284,8 @@ generate_modulesd() {
 
 		# then we install it
 		insinto /etc/modules.d
-		newins ${module_config} ${currm_path}
-		
+		newins ${module_config} ${currm_path//*\/}
+
 		# and install any documentation we might have.
 		[[ -n ${module_docs} ]] && dodoc ${module_docs}
 	done
