@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/tuxracer-0.61-r3.ebuild,v 1.4 2003/12/06 14:39:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/tuxracer-0.61-r3.ebuild,v 1.5 2004/01/12 03:43:20 mr_bones_ Exp $
 
 inherit games eutils gcc
 
@@ -44,10 +44,11 @@ src_install() {
 	make install DESTDIR=${D} || die "install failed"
 
 	dodir ${GAMES_DATADIR}/${PN}
-	cp -r ${PN}-data-${PV}/* ${D}/${GAMES_DATADIR}/${PN}/
+	cp -r ${PN}-data-${PV}/* ${D}/${GAMES_DATADIR}/${PN}/ \
+		|| die "cp failed"
 
-	dodoc README AUTHORS NEWS
-	dohtml -r html/*
+	dodoc AUTHORS ChangeLog README || die "dodoc failed"
+	dohtml -r html/* || die "dohtml failed"
 
 	prepgamesdirs
 }
