@@ -3,7 +3,7 @@
 
 . /etc/rc.d/config/functions
 
-SERVICE="svc-openssh"
+SERVICE="sshd"
 opts="start stop"
 
 gen_keys() {

@@ -1,0 +1,20 @@
+#!/bin/sh
+#RCUPDATE:boot:04:This line is required for script management
+
+
+. /etc/rc.d/config/basic
+. /etc/rc.d/config/functions
+
+# Test if we use devfs and start devfsd
+/sbin/devfsd /dev
+
+if [ -a /dev/.devfsd ]
+then
+  if [ -d /etc/devfs ]
+  then
+    ebegin "Restoring devices..."
+    /bin/cp -a /etc/devfs/* /dev
+    eend 0
+  fi
+fi
+  

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-0.8.ebuild,v 1.1 2000/12/21 08:22:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-0.8.ebuild,v 1.2 2001/01/18 18:22:11 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -21,14 +21,15 @@ src_unpack() {
 src_compile() {                           
   	cd ${S}
   	try LDFLAGS=\"-L/opt/gnome/lib -lunicode -lpspell\" ./configure --host=${CHOST} --prefix=/opt/gnome \
-		--with-pspell --with-bonobo --with-gconf
+		--with-pspell --with-bonobo 
+	 # --with-gconf
  	 # bonobo support doesn't work yet	?
   	try make
 }
 
 src_install() {                               
   	cd ${S}
-  	try make prefix=${D}/opt/gnome install
+	try make DESTDIR=${D} install
 	insinto /opt/gnome/include/gtkhtml
 	doins src/htmlurl.h
   	dodoc AUTHORS COPYING* ChangeLog README

@@ -1,14 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.10.ebuild,v 1.3 2001/01/16 06:59:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.10.ebuild,v 1.4 2001/01/18 18:22:11 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Linux Sound Architecture / Drivers"
 SRC_URI="ftp://ftp.alsa-project.org/pub/driver/${P}.tar.bz2"
 HOMEPAGE="http://www.alsa-project.org/"
-KERNEL="linux-2.4.0.3"
-MODULES=2.4.0-ac2/misc/alsa/
+KERNEL="linux-2.4.0.8"
+MODULES=2.4.0-ac8/misc/alsa/
 
 src_unpack() {
   unpack ${A}

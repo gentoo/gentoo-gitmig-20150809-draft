@@ -39,22 +39,6 @@ stop() {
 		eend $? "Stopped $SERVICE." "Error stopping $SERVICE."
 }
 
-supervise_start() {
-
-                gen_keys
-
-		ebegin "Starting supervised $SERVICE"
-		/usr/bin/svc -u /etc/supervise/sshd
-		eend $? "Started $SERVICE." "Error starting supervised $SERVICE."
-}
-
-supervise_stop() {
-
-		ebegin "Stopping supervised $SERVICE"
-		/usr/bin/svc -d /etc/supervise/sshd
-		eend $? "Stopped $SERVICE." "Error stopping supervised $SERVICE."
-}
-
 restart() {
 		stop
 		start

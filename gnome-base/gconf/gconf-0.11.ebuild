@@ -16,6 +16,11 @@ DEPEND=">=gnome-base/oaf-0.6.1
 src_unpack() {
   unpack ${A}
   cp ${FILESDIR}/bdb.h ${S}/backends/bdb.h
+  cd ${S}/po
+  cp Makefile.in.in Makefile.orig
+  sed -e "s:dir=\$\$destdir:dir=\$\(DESTDIR\)/\$\$destdir:" \
+	Makefile.orig > Makefile.in.in
+
 }
 
 src_compile() {                           
@@ -26,8 +31,8 @@ src_compile() {
 
 src_install() {                               
   cd ${S}
-  try make prefix=${D}/opt/gnome install
-
+#  try make prefix=${D}/opt/gnome install
+  try make DESTDIR=${D} install
   dodoc AUTHORS BUGS COPYING ChangeLog FAQ NEWS README* THANKS TODO
 }
 

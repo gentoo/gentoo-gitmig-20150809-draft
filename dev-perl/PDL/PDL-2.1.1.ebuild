@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.1.1.ebuild,v 1.6 2000/11/28 16:43:55 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.1.1.ebuild,v 1.7 2001/01/18 18:22:11 achim Exp $
 
 P=PDL-2.1.1
 A=${P}.tar.gz
@@ -36,13 +36,13 @@ src_install () {
     try make PREFIX=${D}/usr install
     dodoc COPYING Changes DEPENDENCIES DEVELOPMENT README MANIFEST*
     dodoc Release_Notes TODO
-    mv ${D}/usr/lib/perl5/site_perl/5.6.0/i686-linux-thread-multi/PDL/HtmlDocs ${D}/usr/doc/${P}/html
+    mv ${D}/usr/lib/perl5/site_perl/5.6.0/${CHOST%%-*}-linux/PDL/HtmlDocs ${D}/usr/doc/${P}/html
     mydir=${D}/usr/doc/${P}/html/PDL
     for i in ${mydir}/* ${mydir}/IO/* ${mydir}/Fit/* ${mydir}/Pod/* ${mydir}/Graphics/* 
     do
 	dosed ${i/${D}}
     done
-    dosed /usr/lib/perl5/site_perl/5.6.0/i686-linux-thread-multi/PDL/pdldoc.db 
+    dosed /usr/lib/perl5/site_perl/5.6.0/${CHOST%%-*}-linux/PDL/pdldoc.db 
 }
 
 

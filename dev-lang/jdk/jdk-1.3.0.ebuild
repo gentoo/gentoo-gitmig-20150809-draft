@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jdk/jdk-1.3.0.ebuild,v 1.2 2001/01/05 03:21:55 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jdk/jdk-1.3.0.ebuild,v 1.3 2001/01/18 18:22:11 achim Exp $
 
 P=jdk-1.3.0
 A=j2sdk-1.3.0-FCS-linux-i386.tar.bz2
@@ -31,7 +31,7 @@ src_install() {
   into /usr
   dodoc COPYRIGHT LICENSE README
   insinto /etc/env.d
-  dosins ${FILESDIR}/20jdk
+  doins ${FILESDIR}/20jdk
   docinto html
   dodoc README.html
 }
