@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gambas
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.12 2004/05/21 19:29:15 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.13 2004/06/24 02:40:06 genone Exp $
+
+  24 Jun 2004; Marius Mauch <genone@gentoo.org> :
+  version bump, disable preloading in the Makefile as some people reported
+  segfaults when it's on.
 
 *gambas-0.93b (21 May 2004)
 
