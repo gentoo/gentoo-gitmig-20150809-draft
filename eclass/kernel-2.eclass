@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.47 2004/11/24 16:36:38 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.48 2004/11/25 15:41:06 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -32,6 +32,7 @@
 #						  postinst and can be used to carry additional postinst
 #						  messages
 # K_EXTRAEWARN			- same as K_EXTRAEINFO except ewarn's instead of einfo's
+# K_NODETECTVER			- Dont try to detect_version in pkg_setup. we will specify KV, OKV and EXTRAVERSION ourselves.
 # H_SUPPORTEDARCH		- this should be a space separated list of ARCH's which
 #						  can be supported by the headers ebuild
 # UNIPATCH_LIST			- space delimetered list of patches to be applied to the
@@ -61,7 +62,7 @@ SLOT="${KV}"
 # Grab kernel version from KV
 KV_MAJOR=$(echo ${KV} | cut -d. -f1)
 KV_MINOR=$(echo ${KV} | cut -d. -f2)
-KV_PATCH=$(echo ${KV} | cut -d. -f3-)
+KV_PATCH=$(echo ${KV} | cut -d. -f3)
 KV_PATCH=${KV_PATCH/[-_]*/}
 
 # set LINUX_HOSTCFLAGS if not already set
@@ -142,14 +143,19 @@ universal_unpack() {
 	[ -z "${OKV}" ] && OKV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
 
 	cd ${WORKDIR}
+
 	unpack linux-${OKV}.tar.bz2
 	if [ "${OKV}" != "${KV}" ]
 	then
 		mv linux-${OKV} linux-${KV} || \
 		die "Unable to move source tree to ${KV}."
+
+		# since pkg_setup sets S, and then portage resets S we
+		# need to re-set S= or it wont be correct.
+		S="${WORKDIR}/linux-${KV}"
 	fi
+
 	cd ${S}
-	
 	# change incorrect install path
 	[ -z "${K_NOFIXINSTALL_PATH}" ] && \
 		sed -i -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' Makefile
@@ -715,5 +721,9 @@ kernel-2_pkg_setup() {
 	[ "${ETYPE}" == "headers" ] && setup_headers
 
 	# This is to fix some weird portage bug? in stable versions of portage.
-	[ "${ETYPE}" == "sources" ] && echo ">>> Preparing to unpack..."
+	if [ "${ETYPE}" == "sources" ] ;
+	then
+		[ -z "${K_NODETECTVER}" ] && detect_version
+		detect_arch
+	fi
 }
