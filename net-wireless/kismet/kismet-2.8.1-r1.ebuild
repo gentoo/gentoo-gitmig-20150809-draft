@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.8.1-r1.ebuild,v 1.7 2004/02/29 02:50:22 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.8.1-r1.ebuild,v 1.8 2004/06/15 03:17:15 agriffis Exp $
 
 DESCRIPTION="Kismet is a 802.11b wireless network sniffer."
 HOMEPAGE="http://www.kismetwireless.net/"
@@ -25,7 +25,7 @@ src_compile() {
 			`use_enable acpi`"
 	use gps || myconf="${myconf} --disable-gps"
 
-	if [ -n "`use ethereal`" ]; then
+	if use ethereal; then
 		myconf="${myconf} --with-ethereal=${WORKDIR}/ethereal-0.9.8"
 
 		cd ${WORKDIR}/ethereal-0.9.8/wiretap

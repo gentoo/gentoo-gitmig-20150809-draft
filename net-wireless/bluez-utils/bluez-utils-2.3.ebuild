@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.3.ebuild,v 1.5 2004/01/30 16:52:06 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.3.ebuild,v 1.6 2004/06/15 03:13:09 agriffis Exp $
 
 DESCRIPTION="bluetooth utilities"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -30,7 +30,7 @@ src_unpack() {
 	sed -e "s:\$(prefix)/etc/bluetooth:/etc/bluetooth:" \
 		${T}/Makefile.in > hcid/Makefile.in
 
-	if [ ! `use gtk` ]; then
+	if ! use gtk; then
 		mv -f scripts/Makefile.in ${T}/Makefile.in
 		sed -e "s:= bluepin:= :" \
 			${T}/Makefile.in > scripts/Makefile.in

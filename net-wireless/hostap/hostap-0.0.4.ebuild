@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/hostap-0.0.4.ebuild,v 1.2 2003/09/07 00:19:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/hostap-0.0.4.ebuild,v 1.3 2004/06/15 03:14:35 agriffis Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_unpack() {
 	check_KV
 	unpack ${P}.tar.gz
 
-	if [ -n "`use pcmcia`" ]; then
+	if use pcmcia; then
 		unpack ${MY_PCMCIA}.tar.gz
 		cd ${WORKDIR}/${MY_PCMCIA}
 		if [ -z "`has_version =sys-apps/pcmcia-cs-3.2.4*`" ]; then
@@ -53,7 +53,7 @@ src_unpack() {
 		-e "s:\$(EXTRA_CFLAGS):\$(EXTRA_CFLAGS) -DPRISM2_HOSTAPD:" \
 		${T}/Makefile > Makefile
 
-	if [ -n "`use pcmcia`" ] || [[ "${HOSTAP_DRIVERS}" == *pccard* ]]; then
+	if use pcmcia || [[ "${HOSTAP_DRIVERS}" == *pccard* ]]; then
 		mv Makefile ${T}
 		sed -e "s:^PCMCIA_PATH=:PCMCIA_PATH=${WORKDIR}/${MY_PCMCIA}:" \
 			${T}/Makefile > Makefile
@@ -92,7 +92,7 @@ src_install() {
 	cp ${S}/driver/modules/{hostap.o,hostap_crypt.o,hostap_crypt_wep.o}\
 		${D}${LIB_PATH}/net/
 
-	if [ -n "`use pcmcia`" ]; then
+	if use pcmcia; then
 		dodir ${LIB_PATH}/pcmcia
 		dodir /etc/pcmcia
 		cp ${S}/driver/modules/hostap_cs.o ${D}/${LIB_PATH}/pcmcia/
@@ -104,12 +104,12 @@ src_install() {
 		fi
 	fi
 
-	if [ -z "`use hostap-nopci`" ]; then
+	if ! use hostap-nopci; then
 		cp ${S}/driver/modules/hostap_pci.o\
 			${D}${LIB_PATH}/net/
 	fi
 
-	if [ -z "`use hostap-noplx`" ]; then
+	if ! use hostap-noplx; then
 		cp ${S}/driver/modules/hostap_plx.o\
 			${D}${LIB_PATH}/net/
 	fi

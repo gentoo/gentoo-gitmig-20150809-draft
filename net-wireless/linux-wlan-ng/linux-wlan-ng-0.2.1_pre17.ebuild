@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre17.ebuild,v 1.1 2004/02/04 00:14:28 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre17.ebuild,v 1.2 2004/06/15 03:16:17 agriffis Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ src_unpack() {
 
 	cd ${S}
 
-	if [ -n "`use pcmcia`" ]; then
+	if use pcmcia; then
 		if egrep '^CONFIG_PCMCIA=[ym]' /usr/src/linux/.config >&/dev/null
 		then
 			# Sadly, we still need to download these sources in SRC_URI
@@ -108,7 +108,7 @@ src_compile() {
 		kernelpcmcia="no"
 	fi
 
-	if [ -n "`use pcmcia`" ]; then
+	if use pcmcia; then
 		if [ "${kernelpcmcia}" = "no" ]; then
 			local myarch myconf
 
@@ -140,7 +140,7 @@ src_compile() {
 		-e 's:PRISM2_PCI=n:PRISM2_PCI=y:' \
 		config.in
 
-	if [ -n "`use pcmcia`" ]; then
+	if use pcmcia; then
 		if [ "${kernelpcmcia}" = "no" ];
 		then
 			export PCMCIA_CS=${PCMCIA_CS}
@@ -154,7 +154,7 @@ src_compile() {
 		config.in
 	fi
 
-	if [ -n "`use usb`" ]; then
+	if use usb; then
 		sed -i -e 's:PRISM2_USB=n:PRISM2_USB=y:' \
 			config.in
 	fi
@@ -180,7 +180,7 @@ src_install () {
 	dodir etc/wlan
 	mv ${D}/etc/conf.d/shared ${D}/etc/wlan/
 
-	if [ -z "`use build`" ]; then
+	if ! use build; then
 
 		dodir /usr/share/man/man1
 		newman ${S}/man/nwepgen.man nwepgen.1

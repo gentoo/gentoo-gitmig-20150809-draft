@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre11.ebuild,v 1.4 2004/02/01 23:33:51 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre11.ebuild,v 1.5 2004/06/15 03:16:17 agriffis Exp $
 
 
 inherit eutils
@@ -51,7 +51,7 @@ src_unpack() {
 	unpack ${PN}-gentoo-init.gz
 	cp ${WORKDIR}/${PN}-gentoo-init ${S}/etc/rc.wlan
 
-	if [ -n "`use pcmcia`" ]; then
+	if use pcmcia; then
 		unpack ${PCMCIA_CS}.tar.gz
 		cd ${PCMCIA_DIR}
 		if [ -z "`has_version =sys-apps/pcmcia-cs-3.2.4*`" ]; then
@@ -99,28 +99,28 @@ src_compile() {
 	# the kernel tree.
 	#
 
-	if [ -n "`use pcmcia`" ]; then
+	if use pcmcia; then
 		cd ${WORKDIR}/${PCMCIA_CS}
 		local myconf
-		if [ -n "`use trusted`" ] ; then
+		if use trusted ; then
 			myconf="--trust"
 		else
 			myconf="--notrust"
 		fi
 
-		if [ -n "`use apm`" ] ; then
+		if use apm ; then
 			myconf="$myconf --apm"
 		else
 			myconf="$myconf --noapm"
 		fi
 
-		if [ -n "`use pnp`" ] ; then
+		if use pnp ; then
 			myconf="$myconf --pnp"
 		else
 			myconf="$myconf --nopnp"
 		fi
 
-		if [ -n "`use nocardbus`" ] ; then
+		if use nocardbus ; then
 			myconf="$myconf --nocardbus"
 		else
 			myconf="$myconf --cardbus"
@@ -145,7 +145,7 @@ src_compile() {
 		config.in > default.config
 	mv default.config config.in
 
-	if [ -n "`use pcmcia`" ]; then
+	if use pcmcia; then
 		export PCMCIA_CS=${PCMCIA_CS}
 		sed -e 's:PCMCIA_SRC=:PCMCIA_SRC=${WORKDIR}/${PCMCIA_CS}:' \
 			-e 's:PRISM2_PLX=n:PRISM2_PLX=y:' \
@@ -156,7 +156,7 @@ src_compile() {
 	fi
 	mv default.config config.in
 
-	if [ -n "`use usb`" ]; then
+	if use usb; then
 		sed -e 's:PRISM2_USB=n:PRISM2_USB=y:' \
 			config.in > default.config
 		mv default.config config.in
@@ -182,7 +182,7 @@ src_install () {
 	dodir etc/wlan
 	mv ${D}/etc/conf.d/shared ${D}/etc/wlan/
 
-	if [ -z "`use build`" ]; then
+	if ! use build; then
 
 		dodir /usr/share/man/man1
 		newman ${S}/man/nwepgen.man nwepgen.1

@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/linux-wlan-ng
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.38 2004/04/27 22:12:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.39 2004/06/15 03:16:17 agriffis Exp $
+
+  14 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  linux-wlan-ng-0.2.0-r1.ebuild, linux-wlan-ng-0.2.0-r2.ebuild,
+  linux-wlan-ng-0.2.0-r3.ebuild, linux-wlan-ng-0.2.1_pre11.ebuild,
+  linux-wlan-ng-0.2.1_pre16.ebuild, linux-wlan-ng-0.2.1_pre17-r1.ebuild,
+  linux-wlan-ng-0.2.1_pre17.ebuild, linux-wlan-ng-0.2.1_pre19.ebuild,
+  linux-wlan-ng-0.2.1_pre20.ebuild, linux-wlan-ng-0.2.1_pre8.ebuild:
+  Fix use invocation
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   linux-wlan-ng-0.2.1_pre19.ebuild:

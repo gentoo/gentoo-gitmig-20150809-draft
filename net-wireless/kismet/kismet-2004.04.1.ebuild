@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.04.1.ebuild,v 1.1 2004/04/10 00:09:20 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.04.1.ebuild,v 1.2 2004/06/15 03:17:15 agriffis Exp $
 
 MY_P=${P/\./-}
 MY_P=${MY_P/./-R}
@@ -30,7 +30,7 @@ src_compile() {
 	myconf="`use_enable acpi`"
 	use gps || myconf="${myconf} --disable-gps"
 
-	if [ -n "`use ethereal`" ]; then
+	if use ethereal; then
 		myconf="${myconf} --with-ethereal=${WORKDIR}/ethereal-${ETHEREAL_VERSION}"
 
 		cd ${WORKDIR}/ethereal-${ETHEREAL_VERSION}/wiretap
@@ -70,7 +70,7 @@ src_install () {
 	make prefix=${D}/usr \
 		ETC=${D}/etc/kismet MAN=${D}/usr/share/man \
 		SHARE=${D}/usr/share/${PN} install || die
-	 [ -n $(use gps) ] && cp ${S}/scripts/gpsmap* ${D}/usr/bin/
+	 use gps && cp ${S}/scripts/gpsmap* ${D}/usr/bin/
 	 dodoc CHANGELOG FAQ README docs/*
 
 	exeinto /etc/init.d

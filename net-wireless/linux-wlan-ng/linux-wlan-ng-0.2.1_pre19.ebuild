@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre19.ebuild,v 1.2 2004/04/27 22:12:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre19.ebuild,v 1.3 2004/06/15 03:16:17 agriffis Exp $
 
 inherit pcmcia eutils
 
@@ -73,7 +73,7 @@ src_compile() {
 		-e 's:PRISM2_PCI=n:PRISM2_PCI=y:' \
 		config.in
 
-	if [ -n "`use pcmcia`" ]; then
+	if use pcmcia; then
 		if [ -n "${PCMCIA_SOURCE_DIR}" ];
 		then
 			export PCMCIA_SOURCE_DIR=${PCMCIA_SOURCE_DIR}
@@ -87,7 +87,7 @@ src_compile() {
 		config.in
 	fi
 
-	if [ -n "`use usb`" ]; then
+	if use usb; then
 		sed -i -e 's:PRISM2_USB=n:PRISM2_USB=y:' \
 			config.in
 	fi
@@ -113,7 +113,7 @@ src_install () {
 	dodir etc/wlan
 	mv ${D}/etc/conf.d/shared ${D}/etc/wlan/
 
-	if [ -z "`use build`" ]; then
+	if ! use build; then
 
 		dodir /usr/share/man/man1
 		newman ${S}/man/nwepgen.man nwepgen.1
