@@ -1,0 +1,19 @@
+# ChangeLog for dev-libs/gaul-devel
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/ChangeLog,v 1.1 2004/12/28 20:25:09 ribosome Exp $
+
+*gaul-devel-0.1846 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +gaul-devel-0.1846.ebuild:
+  Moved from dev-libs/gaul-devel to sci-libs/gaul-devel.
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> gaul-devel-0.1846.ebuild:
+  Fixed invalid atoms in *DEPEND.
+
+*gaul-devel-0.1846 (29 Feb 2004)
+
+  29 Feb 2004; George Shapovalov <george@gentoo.org> gaul-devel-0.1846.ebuild, Manifest, files/{digest-gaul-devel-0.1846} :
+  initial release (#22147)
+  Genetic Algorithm Utility Library
+  ebuild submitted by Kalin KOZHUHAROV <kalin@ThinRope.net>
