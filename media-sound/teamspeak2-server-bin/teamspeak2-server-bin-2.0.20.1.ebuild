@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.20.1.ebuild,v 1.9 2004/09/15 17:39:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.20.1.ebuild,v 1.10 2004/10/07 20:29:40 eradicator Exp $
 
 inherit eutils
 
@@ -60,6 +60,9 @@ src_install() {
 	keepdir /var/{lib,log,run}/teamspeak2-server
 	fowners teamspeak2 /var/{lib,log,run}/teamspeak2-server
 	fperms 700 /var/{lib,log,run}/teamspeak2-server
+
+	# Fix bug #66639
+	dosym sql /opt/teamspeak2-server/sqlite_sql
 }
 
 pkg_postinst() {
