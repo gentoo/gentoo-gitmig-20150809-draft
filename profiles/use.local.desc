@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.846 2005/01/08 03:15:55 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.847 2005/01/08 03:54:06 chriswhite Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -460,10 +460,28 @@ media-video/transcode:mjpeg - Enables mjpegtools support
 media-video/transcode:network - Enables network streaming support
 media-video/transcode:pvm - Enables private virtual machine support
 media-video/transcode:v4l - Enables video4linux support
+media-video/vlc:a52 - Enables liba52 audio support
+media-video/vlc:cdda - Enables libcdda cd audio playback support
+media-video/vlc:cddb - Enables libcddb database support for indentifying cd's
+media-video/vlc:cdio - Enables libcdio support for cd interaction
 media-video/vlc:dts - Enables DTS audio support
 media-video/vlc:dvdread - Enables usage of Ogle's libdvdread for DVD playback
+media-video/vlc:faad - Enables libfaad for mpeg-2 audio playback
+media-video/vlc:ffmpeg - Enables the use of external ffmpeg library for video playback
+media-video/vlc:freetype - Enables freetype font support
+media-video/vlc:hal - support for hal (hardware abstraction layer)
+media-video/vlc:httpd - Enables a web based interface for vlc
+media-video/vlc:libcaca - Enables libcaca colored ascii output
+media-video/vlc:live - Enables LIVE.com support
 media-video/vlc:matroska - Enables support for the matroska video format
+media-video/vlc:mpeg2 - Enables libmpeg2 mpeg-2 video playback support
+media-video/vlc:ogg - Enables libogg ogg container support
+media-video/vlc:stream - Enables vlc to stream video
+media-video/vlc:utf8 - Enables utf8 support
+media-video/vlc:vcd - Enables vcd playback support
 media-video/vlc:v4l - Enables video4linux support
+media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.
+media-video/vlc:vorbis - Enables vorbis audio codec support
 media-video/winki:css - Enables ripping of encrypted dvds
 media-video/winki:vcd - Enables creation of vcds mime preprocessor.
 net-analyzer/fprobe:messages - enable console messages
