@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.81 2003/11/08 16:49:11 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.82 2003/11/15 02:41:58 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> gtk+-1.2.10-r10.ebuild:
+  Stable on ia64
 
   08 Nov 2003; Todd Sunderlin <todd@gentoo.org> gtk+-2.2.4-r1.ebuild:
   added sparc keyword

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.48 2003/10/22 16:47:41 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.49 2003/11/15 02:42:23 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> pango-1.2.5-r1.ebuild:
+  Stable on ia64
 
   22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> pango-1.2.5.ebuild:
   set ppc in keywords

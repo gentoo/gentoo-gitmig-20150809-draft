@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.9 2003/11/08 15:18:51 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.10 2003/11/15 02:42:51 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> gtksourceview-0.6.0.ebuild:
+  Stable on ia64
 
   08 Nov 2003; Todd Sunderlin <todd@gentoo.org> gtksourceview-0.6.0.ebuild:
   added sparc keyword
