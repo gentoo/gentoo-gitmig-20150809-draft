@@ -1,0 +1,113 @@
+# ChangeLog for app-sci/ncbi-tools
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.1 2004/12/23 18:47:51 ribosome Exp $
+
+*ncbi-tools-20040616 (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/21ncbi, +files/ncbirc, +ncbi-tools-20040616.ebuild:
+  Moved from app-sci/ncbi-tools to sci-biology/ncbi-tools.
+
+  30 Nov 2004; <j4rg0n@gentoo.org> ncbi-tools-20040616.ebuild:
+  Keyworded ~ppc-macos.
+
+  22 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  ncbi-tools-20040616.ebuild:
+  Added to ~amd64
+
+  14 Oct 2004; Olivier Fisette <ribosome@gentoo.org>
+  ncbi-tools-20040616.ebuild:
+  Use gcc-getCC from gcc.eclass rather than ${CC}.
+
+  04 Oct 2004; Olivier Fisette <ribosome@gentoo.org>
+  ncbi-tools-20040616.ebuild:
+  Fixed potential bug in "SRC_URI".
+
+*ncbi-tools-20040616 (03 Oct 2004)
+
+  03 Oct 2004; Olivier Fisette <ribosome@gentoo.org> files/21ncbi,
+  -files/dot-ncbirc, +files/ncbirc, -ncbi-tools-20031103.ebuild,
+  -ncbi-tools-20040202-r1.ebuild, +ncbi-tools-20040616.ebuild:
+  Updated version and new ebuild. This fixes bug #65941.
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> ncbi-tools-20031103.ebuild,
+  ncbi-tools-20040202-r1.ebuild:
+  Fix use invocation
+
+  05 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  ncbi-tools-20040202-r1.ebuild:
+  Stable on alpha.
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org>
+  ncbi-tools-04222003-r2.ebuild, ncbi-tools-20030422.ebuild,
+  ncbi-tools-20031103.ebuild, ncbi-tools-20040202-r1.ebuild,
+  ncbi-tools-20040202.ebuild:
+  Cleanup, removing S=... with no effect
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  ncbi-tools-04222003-r2.ebuild, ncbi-tools-20030422.ebuild,
+  ncbi-tools-20031103.ebuild, ncbi-tools-20040202-r1.ebuild,
+  ncbi-tools-20040202.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org>
+  ncbi-tools-04222003-r2.ebuild, ncbi-tools-20030422.ebuild,
+  ncbi-tools-20031103.ebuild, ncbi-tools-20040202-r1.ebuild,
+  ncbi-tools-20040202.ebuild:
+  adding categorie. see 45110 for details
+
+*ncbi-tools-20040202-r1 (06 Feb 2004)
+
+  06 Feb 2004; Stephen Diener <sediener@gentoo.org>
+  ncbi-tools-20040202-r1.ebuild:
+  Replaced buggy tarball with new one.  Bumped revision to propogate.
+
+*ncbi-tools-20040202 (05 Feb 2004)
+
+  05 Feb 2004; Stephen Diener <sediener@gentoo.org>
+  ncbi-tools-04222003-r1.ebuild, ncbi-tools-04222003.ebuild,
+  ncbi-tools-20030422.ebuild, ncbi-tools-20031103.ebuild,
+  ncbi-tools-20040202.ebuild:
+  Bumped 20031103 to x86, removed old ebuilds, added new release 20040202
+
+*ncbi-tools-20040202 (04 Feb 2004)
+
+  04 Feb 2004; Stephen Diener <sediener@gentoo.org>
+  ncbi-tools-20031103.ebuild, ncbi-tools-20040202.ebuild:
+  Version bump.  Changes -O3 -> -O2 so X11 apps will work.
+
+  11 Jan 2004; Heinrich Wendel <lanius@gentoo.org>
+  ncbi-tools-04222003-r1.ebuild, ncbi-tools-04222003-r2.ebuild,
+  ncbi-tools-20030422.ebuild, ncbi-tools-20031103.ebuild:
+  fixed motif dep
+
+*ncbi-tools-20031103 (13 Dec 2003)
+
+  13 Dec 2003; Stephen Diener <sediener@gentoo.org>
+  ncbi-tools-20031103.ebuild:
+  Added november release of ncbi-tools (blast-2.2.6 included);
+  Added support for -X
+
+*ncbi-tools-20030422 (11 Nov 2003)
+
+  11 Nov 2003; <sediener@gentoo.org> ncbi-tools-20030422.ebuild:
+  added bl2seq to list of installed binaries; changed date format from 04222003
+  to 20030422; renamed files to have date appended to not collide and changed
+  SRC_URI to mirror://gentoo/
+
+*ncbi-tools-04222003-r2 (08 Oct 2003)
+
+  08 Oct 2003; Robin H. Johnson <robbat2@gentoo.org>
+  ncbi-tools-04222003-r2.ebuild:
+  modified patch from #30656, corrected two pathes in the postinst message
+
+*ncbi-tools-04222003-r1 (05 May 2003)
+
+  05 May 2003; Jon Portnoy <avenj@gentoo.org> ncbi-tools-04222003-r1.ebuild :
+  A few enhancements from Gontran Zepeda <gontran@gontran.net>.
+
+*ncbi-tools-04222003 (03 May 2003)
+
+  03 May 2003; Jon Portnoy <avenj@gentoo.org> ncbi-tools-04222003 :
+  Initial important. Ebuild submitted by Steve Diener 
+  <sediener@unity.ncsu.edu>.
