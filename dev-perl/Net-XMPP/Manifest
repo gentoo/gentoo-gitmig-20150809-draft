@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dd760a727e3161a2d2927c5f5c0f45d2 ChangeLog 750
-MD5 50d9d45500153e6b9115e7fd13c43fe3 Net-XMPP-1.0.ebuild 624
+MD5 45da57dc7ec34bf00e8a5f4c71b5fcc9 ChangeLog 833
+MD5 cdc461e1a8990dd0416b3fbb3d1d50d8 Net-XMPP-1.0.ebuild 628
 MD5 ac4be3f9a5b6a20f9589d0338b05123b metadata.xml 405
 MD5 63aa4317b0b82cbe8f26e2971626d6a6 files/digest-Net-XMPP-1.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCSypjKRy60XGEcJIRAipfAKCl+r1Y4DtaZL3msg+2qpnir2ss2wCfX1vw
-9TbrCZOobnwOqysIQXh3NbY=
-=S0Cy
------END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-XMPP
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/ChangeLog,v 1.5 2005/03/30 22:38:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/ChangeLog,v 1.6 2005/04/01 17:48:12 blubb Exp $
+
+  01 Apr 2005; Simon Stelling <blubb@gentoo.org> Net-XMPP-1.0.ebuild:
+  added ~amd64
 
   30 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> Net-XMPP-1.0.ebuild:
   Stable on sparc
