@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r10.ebuild,v 1.10 2004/12/08 02:28:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r10.ebuild,v 1.11 2004/12/16 02:21:57 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -58,8 +58,7 @@ src_install() {
 	dodir /usr/{$(get_libdir),sbin,include,lib} /$(get_libdir)
 	keepdir /usr/share/cracklib
 
-	make DESTDIR="${D}" install LIBDIR="/usr/$(get_libdir)" \
-		|| die "make install failed"
+	make DESTDIR="${D}" install LIBDIR="/usr/$(get_libdir)" || die "make install failed"
 
 	# Needed by pam
 	if [ ! -f "${D}/usr/$(get_libdir)/libcrack.a" ] && use pam ; then

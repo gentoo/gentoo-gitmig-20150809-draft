@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.60 2004/12/07 09:46:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.61 2004/12/16 02:21:57 vapier Exp $
+
+  15 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  files/cracklib-2.7-libdir.patch, cracklib-2.7-r10.ebuild:
+  Make sure the dict files respect $(get_libdir) #74553.
 
   07 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
   +files/cracklib-2.7-parallel-make.patch, cracklib-2.7-r10.ebuild:

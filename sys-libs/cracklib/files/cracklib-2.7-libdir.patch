@@ -13,3 +13,20 @@ diff -Nru cracklib,2.7.old/cracklib/Makefile cracklib,2.7/cracklib/Makefile
 +	ln -sf $(LIB).so.$(VERSION) $(DESTDIR)/$(LIBDIR)/$(LIB).so
 +	install -m 755 $(LIB).a $(DESTDIR)/$(LIBDIR)
  	install -m 644 crack.h $(DESTDIR)/usr/include
+--- cracklib,2.7.old/Makefile	2004-12-15 21:06:24.890087088 -0500
++++ cracklib,2.7/Makefile	2004-12-15 21:07:21.674454552 -0500
+@@ -14,9 +14,13 @@
+ export MAJOR MINOR VERSION
+ 
++###
++# Where do we stick libraries
++LIBDIR=/usr/lib
++
+ ###
+ # set this to the absolute path (less extn) of compressed dict.
+ 
+-DICTPATH="/usr/lib/cracklib_dict"
++DICTPATH="$(LIBDIR)/cracklib_dict"
+ 
+ ###
+ # Set this to the path of one or more files continaing wordlists.
