@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r2.ebuild,v 1.5 2004/10/20 10:04:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r2.ebuild,v 1.6 2004/10/20 10:08:11 eradicator Exp $
 
-IUSE="nls gnome opengl oggvorbis mikmod alsa oss esd mmx"
+IUSE="nls gnome opengl oggvorbis mikmod alsa oss esd mmx jack lirc mad sndfile"
 
 inherit flag-o-matic eutils
 
