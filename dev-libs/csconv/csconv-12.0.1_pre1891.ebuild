@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/csconv/csconv-12.0.1_pre1891.ebuild,v 1.1 2004/09/13 19:55:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/csconv/csconv-12.0.1_pre1891.ebuild,v 1.2 2004/10/14 20:10:53 dholm Exp $
 
 inherit iiimf eutils
 
 DESCRIPTION="A code conversion library for IIIMF"
 
 LICENSE="IBM"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="debug"
 
 DEPEND="sys-devel/automake
