@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.8 2004/12/26 03:03:11 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.9 2004/12/26 21:05:15 eradicator Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -56,7 +56,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-1_rc7-2.6.patch
 
 	# force 32 bit userland
-	[ ${ARCH} = "sparc" ] && epatch ${FILESDIR}/${P}-configure-sparc.patch
+	[ ${ARCH} = "sparc" ] && epatch ${FILESDIR}/xine-lib-1_rc7-configure-sparc.patch
 
 	# fixes #74475 security bug
 	epatch ${FILESDIR}/djb_demux_aiff.patch
@@ -118,7 +118,20 @@ src_compile() {
 	[ "${PROFILE_ARCH}" == "sparc" ] \
 		&& myconf="${myconf} --disable-vis"
 
-	use xv && myconf="${myconf} --with-xv-path=/usr/X11R6/$(get_libdir)"
+	# Adding extra logic here to deal with newer xorg-x11 ebuilds
+	if use xv; then
+		if [ -f "${ROOT}/usr/$(get_libdir)/libXv.so" ]; then
+			myconf="${myconf} --enable-shared-xv --with-xv-path=${ROOT}/usr/$(get_libdir)"
+		elif [ -f "${ROOT}/usr/$(get_libdir)/libXv.a" ]; then
+			myconf="${myconf} --enable-static-xv --with-xv-path=${ROOT}/usr/$(get_libdir)"
+		elif [ -f "${ROOT}/usr/X11R6/$(get_libdir)/libXv.so" ]; then
+			myconf="${myconf} --enable-shared-xv --with-xv-path=${ROOT}/usr/X11R6/$(get_libdir)"
+		elif [ -f "${ROOT}/usr/X11R6/$(get_libdir)/libXv.a" ]; then
+			myconf="${myconf} --enable-static-xv --with-xv-path=${ROOT}/usr/X11R6/$(get_libdir)"
+		else
+			myconf="${myconf} --enable-shared-xv"
+		fi
+	fi
 
 	# Fix compilation-errors on PowerPC #45393 & #55460 & #68251
 	if use ppc || use ppc64 ; then

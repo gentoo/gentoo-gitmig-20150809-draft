@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.167 2004/12/26 03:03:11 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.168 2004/12/26 21:05:15 eradicator Exp $
+
+  26 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xine-lib-1_rc8-r1.ebuild:
+  Xv detection now works with newer xorg-x11 versions (/usr/lib instead of
+  /usr/X11R6/lib). Using shared libXv by default.
 
   26 Dec 2004; Chris White <chriswhite@gentoo.org> xine-lib-1_rc8-r1.ebuild:
   Fixing bug #69856.
