@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.0.ebuild,v 1.1 2004/11/09 13:47:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.0.ebuild,v 1.2 2004/11/11 09:23:12 lu_zero Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -16,9 +16,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="arts ncurses dvd gtk nls 3dfx svga fbcon esd X alsa ggi speex
-	oggvorbis gnome xv oss sdl aalib slp bidi truetype v4l lirc
+	oggvorbis gnome xv oss sdl aalib bidi truetype v4l lirc
 	wxwindows imlib matroska dvb mozilla debug faad theora
-	xosd altivec png dts"
+	xosd altivec png dts" #slp
 
 RDEPEND="X? ( virtual/x11 )
 	aalib? ( >=media-libs/aalib-1.4_rc4-r2
@@ -46,7 +46,6 @@ RDEPEND="X? ( virtual/x11 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0.1
 		>=media-libs/libogg-1.1 )
 	sdl? ( >=media-libs/libsdl-1.2.5 )
-	slp? ( >=net-libs/openslp-1.0.11 )
 	bidi? ( >=dev-libs/fribidi-0.10.4 )
 	theora? ( media-libs/libtheora )
 	truetype? ( >=media-libs/freetype-2.1.4 )
@@ -64,6 +63,7 @@ RDEPEND="X? ( virtual/x11 )
 	>=media-video/ffmpeg-0.4.8.20040222
 	>=media-plugins/live-2004.07.20
 	>=media-libs/flac-1.1.0"
+#	slp? ( >=net-libs/openslp-1.0.11 )
 
 DEPEND="$RDEPEND >=sys-devel/autoconf-2.5.8
 	>=sys-devel/automake-1.7.9"
@@ -96,7 +96,7 @@ src_compile() {
 			--disable-qt --disable-kde --disable-gnome --disable-gtk \
 			--disable-libcdio --disable-libcddb --disable-vcdx \
 			--enable-ffmpeg --with-ffmpeg-mp3lame \
-			--enable-livedotcom --with-livedotcom-tree=/usr/lib/live --disable-skins --disable-skins2"
+			--enable-livedotcom --with-livedotcom-tree=/usr/lib/live --disable-skins --disable-skins2 --disable-slp"
 
 	# qt, kde, gnome and gtk interfaces are deprecated and in a bad condition
 	# the same for mga video, libdv and xvid decoders 
@@ -144,7 +144,6 @@ src_compile() {
 #		$(use_enable altivec) \
 	econf \
 		$(use_enable nls) \
-		$(use_enable slp) \
 		$(use_enable xosd) \
 		$(use_enable ncurses) \
 		$(use_enable alsa) \
@@ -178,6 +177,7 @@ src_compile() {
 		$(use_enable 3dfx glide) \
 		$(use_enable dts) \
 		${myconf} || die "configure of VLC failed"
+#		$(use_enable slp) \ broken
 
 	if [[ $(gcc-major-version) == 2 ]]; then
 		sed -i -e s:"-fomit-frame-pointer":: vlc-config || die "-fomit-frame-pointer patching failed"
