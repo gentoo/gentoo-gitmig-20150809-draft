@@ -1,10 +1,14 @@
 # ChangeLog for dev-libs/slib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/ChangeLog,v 1.5 2003/02/12 06:09:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/ChangeLog,v 1.6 2003/03/25 14:18:22 weeve Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *slib-2.4.3 (16 Mar 2002)
+
+  25 Mar 2003; Jason Wever <weeve@gentoo.org> slib-2.4.3.ebuild:
+  Updated ebuild and digest to reflect new version as the old one is no longer
+  available for download.
 
 *slib-2.4.2 (1 Feb 2002)
 

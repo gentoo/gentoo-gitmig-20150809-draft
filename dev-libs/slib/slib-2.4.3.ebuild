@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/slib-2.4.3.ebuild,v 1.10 2003/03/01 04:57:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/slib-2.4.3.ebuild,v 1.11 2003/03/25 14:18:22 weeve Exp $
 
-MY_P=${PN}2d3
+MY_P=${PN}2d5
 S=${WORKDIR}/${PN}
 DESCRIPTION="library providing functions for Scheme implementations"
 SRC_URI="http://swissnet.ai.mit.edu/ftpdir/scm/${MY_P}.zip"
