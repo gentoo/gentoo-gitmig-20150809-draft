@@ -64,3 +64,6 @@ xv
 gtk
 gtk2
 afs
+
+gcj
+objc
