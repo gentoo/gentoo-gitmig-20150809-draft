@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r6.ebuild,v 1.4 2003/10/03 18:08:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r6.ebuild,v 1.5 2003/10/14 14:29:22 mholzer Exp $
 
 inherit flag-o-matic eutils
 
@@ -94,7 +94,7 @@ src_compile() {
 	cd contrib && make vh1
 }
 
-src_instal () {
+src_install () {
 	einstall || die
 	[ -f contrib/vh1 ] && cp contrib/vh1 ${D}/usr/bin/
 	rm ${D}/usr/share/man/man1/BitchX*
