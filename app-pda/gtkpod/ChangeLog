@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.26 2005/03/17 14:07:17 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.27 2005/04/01 16:26:49 tester Exp $
+
+*gtkpod-0.88.2 (01 Apr 2005)
+
+  01 Apr 2005; Olivier Crête <tester@gentoo.org> +gtkpod-0.88.2.ebuild:
+  Version bump
 
 *gtkpod-0.88.1 (17 Mar 2005)
 
