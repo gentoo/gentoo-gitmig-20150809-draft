@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/evolution/evolution-0.12.ebuild,v 1.1 2001/08/12 23:58:49 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/evolution/evolution-0.12.ebuild,v 1.2 2001/08/13 16:02:49 hallski Exp $
 
 DB3=db-3.1.17
 A="${P}.tar.gz ${DB3}.tar.gz"
@@ -11,9 +11,8 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}
 	 http://www.sleepycat.com/update/3.1.17/${DB3}.tar.gz"
 HOMEPAGE="http://www.ximian.com"
 
-DEPEND="nls? ( sys-devel/gettext )
-	>=gnome-base/gal-0.10
-	>=gnome-base/gtkhtml-0.11.1
+DEPEND=">=gnome-base/gal-0.10
+	>=gnome-base/gtkhtml-0.11.1-r1
 	>=gnome-libs/bonobo-conf-0.10
 	>=gnome-base/bonobo-1.0.7
 	>=gnome-base/oaf-0.6.5
@@ -40,10 +39,6 @@ src_compile() {
 
     local myconf
 
-    if [ -z "`use nls`" ] ; then
-      myconf="--disable-nls"
-    fi
-    
     if [ "`use ssl`" ] ; then
       myconf="$myconf --enable-ssl"
     else
@@ -54,7 +49,7 @@ src_compile() {
 	--sysconfdir=/etc/opt/gnome --enable-file-locking=no \
 	--with-db3=${WORKDIR}/db3 --enable-nntp $myconf
 
-    try pmake
+    try emake
 }
 
 src_install () {
