@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.101 2004/12/14 10:51:56 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.102 2004/12/16 04:55:56 absinthe Exp $
+
+  15 Dec 2004; Dylan Carlson <absinthe@gentoo.org> gvim-6.3-r2.ebuild:
+  Stable on amd64.
 
   14 Dec 2004; Akinori Hattori <hattya@gentoo.org> gvim-6.3-r2.ebuild:
   stable on ia64, #bug #73715.
