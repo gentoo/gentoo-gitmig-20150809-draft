@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.7 2004/02/23 16:26:28 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.8 2004/06/17 19:57:29 pylon Exp $
 
 inherit eutils
 
@@ -17,10 +17,7 @@ IUSE="nls dvdr gtk2 gnome"
 
 DEPEND="
 	gtk2? ( >=x11-libs/gtk+-2.0.3 )
-	!gtk2? ( =x11-libs/gtk+-1.2.10* )
-	!gtk2? ( >=media-libs/gdk-pixbuf-0.16.0 )
-	=dev-libs/glib-1.2*
-	>=media-libs/giflib-3.0"
+	!gtk2? ( >=media-libs/gdk-pixbuf-0.16.0 )"
 
 RDEPEND="
 	dvdr? (

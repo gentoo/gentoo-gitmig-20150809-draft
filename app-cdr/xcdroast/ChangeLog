@@ -2,6 +2,10 @@
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp
 
+  17 Jun 2004; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha15-r3.ebuild:
+  Edited the dependency list, so that GTK+ will not be installed, when GTK2+ is
+  chosen.
+
   12 Feb 2004; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha15-r3.ebuild:
   There was still an error in the symlink...
 
