@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/quotient
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/quotient/ChangeLog,v 1.1 2004/02/17 17:03:31 lordvan Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/quotient/ChangeLog,v 1.2 2004/06/03 07:31:47 seemant Exp $
+
+  03 Jun 2004; Seemant Kulleen <seemant@gentoo.org> quotient-0.8.8.ebuild:
+  moved DEPENDency from net-mail/spambayes to mail-filter/spambayes
 
 *quotient-0.8.8 (17 Feb 2004)
 

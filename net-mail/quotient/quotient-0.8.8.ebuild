@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/quotient/quotient-0.8.8.ebuild,v 1.2 2004/02/18 00:30:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/quotient/quotient-0.8.8.ebuild,v 1.3 2004/06/03 07:31:47 seemant Exp $
 
 inherit distutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86"
 IUSE="gtk gtk2 doc"
 
 DEPEND=">=dev-python/twisted-1.1.1
-	>=net-mail/spambayes-1.0_alpha9
+	>=mail-filter/spambayes-1.0_alpha9
 	>=dev-python/Imaging-1.1.4
 	>=dev-python/lupy-0.1.5.5.1"
 
