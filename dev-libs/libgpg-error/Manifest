@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c57d3cf87e31d977c51d70a74fbfe988 ChangeLog 3459
-MD5 11f6a5baf5f133136c851bf76c97cce1 libgpg-error-1.0-r1.ebuild 834
+MD5 b0153ae67ca19243de6c4daaaea36375 libgpg-error-1.0-r1.ebuild 839
 MD5 df9c078d300477cf17fb2a82b8993ce5 libgpg-error-1.0.ebuild 855
 MD5 cbb90c3fb885f86a1c6bea0f4493f9ab metadata.xml 250
 MD5 622d2ebe3ed3ca88a279470a57ff3f30 libgpg-error-0.6-r1.ebuild 706
@@ -11,10 +8,3 @@ MD5 79ccf482189a756d86e48ae6519bae82 files/digest-libgpg-error-0.7-r1 68
 MD5 302b903544cdc360228540b136ca4826 files/digest-libgpg-error-1.0 68
 MD5 2a0413caa56a5072d7da6e76fa995239 files/digest-libgpg-error-0.6-r1 68
 MD5 302b903544cdc360228540b136ca4826 files/digest-libgpg-error-1.0-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBirGFHTu7gpaalycRAnPBAKDToMQNEzmB3F/+UgzK/X2T36xnOwCfRw8D
-PwZI7tL9z1SwyH9fBBnjGpg=
-=reG+
------END PGP SIGNATURE-----
