@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.74-r2.ebuild,v 1.1 2004/01/02 20:06:30 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.74-r2.ebuild,v 1.2 2004/01/26 09:11:52 vapier Exp $
+
+inherit eutils
 
 IUSE="nls perl spell nas ssl mozilla cjk debug"
 
