@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.14 2004/04/25 21:00:29 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.15 2004/06/18 07:03:59 eradicator Exp $
 
 DESCRIPTION="Typesafe callback system for standard C++"
 HOMEPAGE="http://libsigc.sourceforge.net/"
@@ -11,21 +11,32 @@ SLOT="1.2"
 KEYWORDS="x86 ppc sparc hppa amd64 alpha ia64"
 IUSE="debug"
 
-DEPEND="virtual/glibc"
+RDEPEND="virtual/glibc"
+
+DEPEND="${RDEPEND}
+	amd64? ( >=sys-devel/automake-1.7 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	if use amd64; then
+		libtoolize -c -f --automake
+		WANT_AUTOMAKE=1.7 aclocal -I scripts ${ACLOCAL_FLAGS} || die "aclocal failed.  Are your \$ACLOCAL_FLAGS sane?"
+		WANT_AUTOMAKE=1.7 automake --add-missing --copy
+		WANT_AUTOCONF=2.5 autoconf
+	fi
+}
 
 src_compile() {
 	local myconf
-	if [ "${ARCH}" = "amd64" ]; then
-		myconf="${myconf} --enabled-maintainer-mode"
-		libtoolize -c -f --automake
-		aclocal -I scripts $ACLOCAL_FLAGS
-		automake --add-missing --copy
-		autoconf
-	fi
+
 	use debug \
 		&& myconf="--enable-debug=yes" \
 		|| myconf="--enable-debug=no"
+
 	econf ${myconf} --enable-maintainer-mode --enable-threads || die
+
 	emake || die "emake failure"
 }
 
