@@ -1,21 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/nget/nget-0.19.1.ebuild,v 1.2 2002/09/30 00:01:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/nget/nget-0.19.1.ebuild,v 1.3 2002/10/23 19:42:13 vapier Exp $
+
+IUSE="static build"
 
 NPVER=20011209
 S=${WORKDIR}/${P}
 DESCRIPTION="Network utility to retrieve files from an NNTP news server"
-SRC_URI="http://telia.dl.sourceforge.net/sourceforge/nget/nget-0.19.1+uulib.tar.gz"
+SRC_URI="http://telia.dl.sourceforge.net/sourceforge/nget/${P}+uulib.tar.gz"
 HOMEPAGE="http://nget.sourceforge.net/"
 RDEPEND="virtual/glibc"
 DEPEND="$RDEPEND dev-libs/popt"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
-
-src_unpack() {
-	unpack ${P}+uulib.tar.gz
-}
 
 src_compile() {
 	local myconf
@@ -34,7 +32,7 @@ src_compile() {
 }
 
 src_install() {   
-	if use build || use bootcd; then
+	if use build; then
 		insinto /usr
 		dobin ${S}/src/nget	
 		return
