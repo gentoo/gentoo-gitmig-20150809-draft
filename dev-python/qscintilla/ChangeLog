@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/qscintilla
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.5 2003/02/01 13:29:59 styx Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.6 2003/02/12 06:34:52 vapier Exp $
 
 *qscintilla-1.49-r1 (1 Feb 2003) Joachim Blaabjerg <styx@gentoo.org>
 

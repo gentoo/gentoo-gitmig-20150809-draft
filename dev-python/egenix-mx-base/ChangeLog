@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/egenix-mx-base
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.7 2003/02/11 11:51:22 kain Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.8 2003/02/12 06:31:47 vapier Exp $
 
   11 Feb 2003; Bryon Roche <kain@kain.org> egenix-mx-base-2.0.4.ebuild :
 

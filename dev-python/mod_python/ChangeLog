@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/mod_python
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.4 2003/02/03 02:33:09 g2boojum Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.5 2003/02/12 06:32:42 vapier Exp $
 
 *mod_python-3.0.1 (2 Feb 2003)
 

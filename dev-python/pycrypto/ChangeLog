@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/pycrypto
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.1 2002/09/04 03:51:30 agenkin Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.2 2003/02/12 06:33:39 vapier Exp $
 
 *pycrypto-1.9_alpha4 (03 Sep 2002)
 
