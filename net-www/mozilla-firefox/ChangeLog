@@ -1,13 +1,13 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.86 2004/11/21 16:35:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.87 2004/12/03 17:10:37 agriffis Exp $
 
   21 Nov 2004; Jason Wever <weeve@gentoo.org> mozilla-firefox-1.0.ebuild:
   Stable on sparc.
 
   18 Nov 2004; Aron Griffis <agriffis@gentoo.org>
   mozilla-firefox-1.0-r3.ebuild:
-  Require recent xorg-x11 which provides xrender.pc
+  Require recent xorg-x11 which provides xrender.pc #71504
 
   17 Nov 2004; Brad Laue <brad@gentoo.org> mozilla-firefox-1.0.ebuild:
   1.0 stable on x86. Revisions based on a new build mechanism to follow shortly.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0-r3.ebuild,v 1.6 2004/11/19 02:40:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0-r3.ebuild,v 1.7 2004/12/03 17:10:37 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
 IUSE="java mozsvg"
 
 # xrender.pc appeared for the first time in xorg-x11-6.7.0-r2
-# and is required to build with support for cairo.
+# and is required to build with support for cairo.  #71504
 RDEPEND="java? ( virtual/jre )
 	>=media-libs/libmng-1.0.0
 	mozsvg? (
