@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/URI
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.2 2002/05/06 16:00:37 seemant Exp $
+
+*URI-1.18 (6 May 2002)
+
+  6 May 2002; Seemant Kulleen <seemant@gentoo.org> URI-1.18.ebuild
+  files/digest-URI-1.18 :
+
+  Version bump and conversion to eclass
 
 *URI-1.10 (1 Feb 2002)
 
