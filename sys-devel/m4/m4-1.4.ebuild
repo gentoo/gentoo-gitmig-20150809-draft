@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.ebuild,v 1.3 2003/03/11 21:11:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.ebuild,v 1.4 2003/03/16 20:42:20 mholzer Exp $
 
 IUSE="nls"
 
@@ -54,6 +54,5 @@ src_install() {
 
 #	rm -rf ${D}/usr/include
 
-	dodoc AUTHORS BACKLOG ChangeLog COPYING NEWS README* THANKS TODO
+	dodoc BACKLOG ChangeLog COPYING NEWS README* THANKS TODO
 }
-
