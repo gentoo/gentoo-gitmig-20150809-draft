@@ -1,35 +1,25 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f1139f48e1fd352fce4d964116fac5d3 ChangeLog 8334
+MD5 282521759c67404a7cc1137ca467b6e9 ChangeLog 8508
 MD5 0e3513a92097cbf36de0d981f0c6489e fetchmail-5.9.14.ebuild 1897
+MD5 8a5a81b6cd89c3cf5fe341accd3ed708 fetchmail-6.2.3.ebuild 1962
+MD5 4699605e930914b11ab0b894d5b8c545 fetchmail-6.2.4.ebuild 2143
+MD5 47387ea53567967ca0058104cba62288 fetchmail-6.2.5.ebuild 2443
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 dfd9bda1fd8499be5d1e8847c6c6e477 fetchmail-6.2.1-r1.ebuild 1778
 MD5 93696635908b3e9f12e791de449a82c8 fetchmail-6.2.2-r2.ebuild 2043
-MD5 5dbdb08954c5b4c91939bd3bd1a3b212 fetchmail-6.2.3.ebuild 1967
-MD5 4699605e930914b11ab0b894d5b8c545 fetchmail-6.2.4.ebuild 2143
-MD5 031f88c8e16b0e811217cb7c3660c735 fetchmail-6.2.5-r1.ebuild 2562
-MD5 88ab6a6b3a42df534a512df3ea4d1bc7 fetchmail-6.2.5.ebuild 2437
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 d8c4ff6091e85f5404447a2e338a8037 fetchmail-6.2.5-r1.ebuild 2568
 MD5 29d376a1042aeeeba94e911a943d5a7f files/conf.d-fetchmail 347
 MD5 1dd80e46bd5b02949ba0686086a37570 files/configure-5.9.14.diff 2046
 MD5 83f3d182af36573e8d7264ee440445ee files/digest-fetchmail-5.9.14 68
-MD5 5b0a50b0a0193afbcb7eff9ac3d5fcb7 files/digest-fetchmail-6.2.1-r1 68
-MD5 72af1b79f1e6aab29edbdefdcce8c1c7 files/digest-fetchmail-6.2.2-r2 68
 MD5 b8f3ceb78e16e9c26c34908229893659 files/digest-fetchmail-6.2.3 68
 MD5 c1c69ebb34b0848d22249ae32b770061 files/digest-fetchmail-6.2.4 68
 MD5 256e473e140583f41c7da6ecd9d815be files/digest-fetchmail-6.2.5 68
-MD5 256e473e140583f41c7da6ecd9d815be files/digest-fetchmail-6.2.5-r1 68
 MD5 c9baecd4bea485a075f696462c9ab6cc files/fetchmail 581
+MD5 5b0a50b0a0193afbcb7eff9ac3d5fcb7 files/digest-fetchmail-6.2.1-r1 68
+MD5 72af1b79f1e6aab29edbdefdcce8c1c7 files/digest-fetchmail-6.2.2-r2 68
+MD5 256e473e140583f41c7da6ecd9d815be files/digest-fetchmail-6.2.5-r1 68
 MD5 19b3a189b664bb1fb0a228c1b2bcd5f2 files/fetchmail-6.1.0-gentoo.diff 542
 MD5 c162c209d65c11b6cbdd7c33fd411b90 files/fetchmail-6.2.0-gentoo.diff 1544
 MD5 74bad5b4190b32597543a61ed0c7ec7a files/fetchmail-6.2.2-multiple-return-path.diff 1142
+MD5 32b3f4317fd807e171da3cd6c27217c2 files/fetchmail-6.2.5-kerberos.patch 1143
 MD5 91b291c03a6f375401dc2fee56beeeef files/fetchmail-6.2.5-broken-headers.patch 250
 MD5 fa0432a854f2a63b2b6fa0a8e65985f7 files/fetchmail-6.2.5-fetchsizelimit.patch 526
-MD5 32b3f4317fd807e171da3cd6c27217c2 files/fetchmail-6.2.5-kerberos.patch 1143
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBd0kfI1lqEGTUzyQRAr2uAKCbPyGRsRCX8IzdbFA56/ArwxNfDgCgpD+Q
-cGMXOicEBbcW11EHbsI44I8=
-=t+GQ
------END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.54 2004/10/20 23:38:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.55 2004/11/03 04:24:04 psi29a Exp $
+
+  02 Nov 2004; Bret Curtis,,, <psi@gentoo.org> fetchmail-6.2.3.ebuild,
+  fetchmail-6.2.5-r1.ebuild, fetchmail-6.2.5.ebuild:
+  6.2.3 stable on mips, >6.2.3 are marked ~mips
 
 *fetchmail-6.2.5-r1 (03 Sep 2004)
 
