@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/help2man
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.1 2003/02/05 02:07:03 nall Exp $
+
+*help2man-1.29 (03 Feb 2003)
+
+  03 Feb 2003; Jon Nall <nall@gentoo.org> help2man-1.29.ebuild, 
+  files/digest-help2man-1.29 :
+  Initial import. 
+
