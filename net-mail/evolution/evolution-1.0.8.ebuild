@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.5-r3.ebuild,v 1.2 2002/07/17 04:20:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.8.ebuild,v 1.1 2002/07/17 16:13:06 stroke Exp $
 
 #provide Xmake and Xemake
 
@@ -21,26 +21,23 @@ KEYWORDS="x86"
 RDEPEND=">=gnome-extra/bonobo-conf-0.14
 	>=gnome-base/bonobo-1.0.18
 	>=gnome-extra/gal-0.19.2
-	( >=gnome-base/gconf-1.0.7 
-			<gnome-base/gconf-1.1 )
+	=gnome-base/gconf-1.0*
 	>=gnome-extra/gtkhtml-1.0.2-r2
 	>=gnome-base/oaf-0.6.7
 	>=gnome-base/ORBit-0.5.12
 	( >=gnome-base/libglade-0.17-r1
-			<gnome-base/libglade-2.0 )		
+	 <gnome-base/libglade-2.0 )		
 	>=media-libs/gdk-pixbuf-0.14.0
 	>=dev-libs/libxml-1.8.16
-	( >=gnome-base/gnome-vfs-1.0.2-r2
-			<gnome-base/gnome-vfs-1.9 )		
+	=gnome-base/gnome-vfs-1.0*		
 	>=gnome-base/gnome-print-0.34
-	( >=app-text/scrollkeeper-0.2
-			<app-text/scrollkeeper-0.3 )
-	dev-util/gob
+	>=app-text/scrollkeeper-0.3.10-r1
+	>=dev-util/gob-1.0.12
 	ssl?     ( >=net-www/mozilla-0.9.9 )
 	ldap?    ( >=net-nds/openldap-2.0 )
 	mozilla? ( >=net-www/mozilla-0.9.9 )
 	pda?     ( >=gnome-extra/gnome-pilot-0.1.61-r2 )
-	spell?   ( >=app-text/gnome-spell-0.4.1-r1 )"
+	spell?   ( >=app-text/gnome-spell-0.4.1-r2 )"
 
 # Added dependency on "dev-util/gob" this should fix a configure bug
 
