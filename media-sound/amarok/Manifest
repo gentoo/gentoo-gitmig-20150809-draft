@@ -7,7 +7,7 @@ MD5 5783bb62ba81bdad5c6c18df9cbe8d8d amarok-1.0_beta4.ebuild 1120
 MD5 8b12de02c8c246493a0b1178d2d075ff amarok-1.0_beta1.ebuild 1040
 MD5 4c88c1e8fc26c1db1c091985a9f85b8e amarok-1.0.2.ebuild 1186
 MD5 1f8de102807661474cc8ed9e10cf60f9 amarok-1.0_beta3.ebuild 1120
-MD5 4257268d7679fa53fff6eb23051a1b14 ChangeLog 3074
+MD5 97ffc9c42587b90170e432db8ae24b6a ChangeLog 3103
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 3f80d3680b6b3e9e31cff181fc36157f amarok-1.0.1.ebuild 1072
 MD5 bbca3d5544beef476a52d7ec8147f9ad files/digest-amarok-1.0_beta1 69
@@ -22,7 +22,7 @@ MD5 167a3a9a42477903579be25096b8eaab files/digest-amarok-1.0.2 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFBFwUPE67gNkjlZFIRAlofAJwOcKP0qtBzuALwwBZbzTpMZe+VhgCg1Ddl
-r8JRdaY3oBsUlITZbSVWE6k=
-=pwwi
+iD8DBQFBFwZ4E67gNkjlZFIRAgrLAJ0bRVVs2TkM/9eWJHV/HfhXoFRAwwCgvGwq
+kGcSA3SD/1XfwebGD1fWtUs=
+=vBhM
 -----END PGP SIGNATURE-----
