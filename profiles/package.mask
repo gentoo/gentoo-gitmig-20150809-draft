@@ -252,11 +252,6 @@ x11-themes/gtk-xfce-engine
 # the dependency is on an old, now removed version of PyQt
 dev-python/anygui
 
-# Kevyn Shortell <trance@gentoo.org> (01 Aug 2002)
-# both .92 and 93 do not compile on x86 or ppc, masking.
-net-im/gnomemeeting
-
-
 # Chad Huneycutt <chadh@gentoo.org> (31 Jul 2002)
 # new package. needs testing
 app-office/ical
