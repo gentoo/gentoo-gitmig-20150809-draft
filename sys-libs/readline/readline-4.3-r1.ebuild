@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r1.ebuild,v 1.3 2002/10/16 09:35:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r1.ebuild,v 1.4 2002/10/16 09:50:09 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Another cute console display library"
@@ -20,9 +20,9 @@ DEPEND=">=sys-apps/bash-2.05b-r2
 src_compile() {
 
 	econf --with-curses || die
-	emake ${MAKEOPTS} || die
+	emake || die
 	cd shlib
-	emake ${MAKEOPTS} || die
+	emake || die
 
 }
 
