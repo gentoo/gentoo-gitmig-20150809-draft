@@ -1,8 +1,13 @@
 # ChangeLog for dev-java/commons-validator
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/ChangeLog,v 1.1 2002/12/03 20:03:46 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/ChangeLog,v 1.2 2002/12/27 00:33:30 strider Exp $
+
+*commons-validator-1.0.1 (26 Dec 2002)
+
+  26 Dec 2002; Adrian Almenar <strider@gentoo.org> ChangeLog commons-validator-1.0.1.ebuild files/digest-commons-validator-1.0.1:
+  New Version.
 
 *commons-validator-1.0 (03 Dec 2002)
 
-  03 Dev 2002; Adrian Almenar <strider@gentoo.org> ChangeLog commons-validator-1.0.ebuild files/digest-commons-validator-1.0:
+  03 Dec 2002; Adrian Almenar <strider@gentoo.org> ChangeLog commons-validator-1.0.ebuild files/digest-commons-validator-1.0:
   Initial import.
