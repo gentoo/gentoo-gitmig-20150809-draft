@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 688c89e349ef43ad351931df8a3467ec ChangeLog 1601
+MD5 af626e81f5d2f95f6f288746a955bd2b ChangeLog 1685
 MD5 589a270b33690e4f0f4b0e720e9c2774 lwm-1.2.0.ebuild 764
 MD5 43ffdc0b5650323a5dec031ec725778e metadata.xml 354
-MD5 5d71a567c4938f69f20439dea08b27cd lwm-1.2.1.ebuild 606
+MD5 eca6912a68079c3d5fcaf719f14d3724 lwm-1.2.1.ebuild 605
 MD5 4a569bb24ca62249459bd4b56c224b56 files/digest-lwm-1.2.1 60
 MD5 de38fd3c30f149e3e00c125c4275111d files/digest-lwm-1.2.0 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBihaHVWNWqTUmv+0RArPMAKCrlFPXzGLBulaChR3G5x5+awKaIwCfSGKv
-7IS+MDzjgGPrkwu6Qjqlos0=
-=pR57
------END PGP SIGNATURE-----
