@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-4.0-r1.ebuild,v 1.3 2004/10/17 05:46:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-4.0-r1.ebuild,v 1.4 2004/10/19 15:34:47 usata Exp $
 
-inherit eutils
-# inherit elisp-common
+inherit eutils elisp-common
 
 MY_P="${P}.0"
 
@@ -14,11 +13,11 @@ LICENSE="gnuplot"
 
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~sparc"
-IUSE="doc gd ggi pdflib plotutils png readline svga X xemacs"
-#IUSE="${IUSE} emacs"
+IUSE="doc emacs gd ggi pdflib plotutils png readline svga X xemacs"
 
 DEPEND="
 	xemacs? ( virtual/xemacs )
+	emacs? ( virtual/emacs !app-emacs/gnuplot-mode )
 	pdflib? ( media-libs/pdflib )
 	ggi? ( media-libs/libggi )
 	png? ( media-libs/libpng )
@@ -28,9 +27,10 @@ DEPEND="
 	svga? ( media-libs/svgalib )
 	readline? ( >=sys-libs/readline-4.2 )
 	plotutils? ( media-libs/plotutils )"
-#	emacs? ( app-emacs/gnuplot-mode )
 
 S=${WORKDIR}/${MY_P}
+
+E_SITEFILE="50gnuplot-gentoo.el"
 
 src_unpack() {
 	unpack ${A}
@@ -56,13 +56,7 @@ src_compile() {
 		&& myconf="${myconf} --with-readline=gnu --enable-history-file" \
 		|| myconf="${myconf} --with-readline"
 
-	if use xemacs ; then
-		export EMACS=xemacs
-		myconf="${myconf} --with-lispdir=/usr/lib/xemacs/site-packages/${PN}"
-	else
-		export EMACS=no
-		myconf="${myconf} --without-lisp-files"
-	fi
+	myconf="${myconf} --without-lisp-files"
 
 	# This is a hack to avoid sandbox violations when using the Linux console.
 	# Creating the DVI and PDF tutorials require /dev/svga to build the
@@ -83,6 +77,37 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die
 
+	if use emacs; then
+		cd lisp
+		einfo "Configuring gnuplot-mode for emacs..."
+		EMACS="emacs" lispdir="/usr/share/emacs/site-lisp/${PN}" econf || die
+		make DESTDIR=${D} install || die
+		make clean
+		cd ..
+
+		# Gentoo emacs site-lisp configuration
+		string="(add-to-list 'load-path \"/usr/share/emacs/site-lisp/${PN}\")"
+		echo -e ";;; Gnuplot site-lisp configuration\n\n${string}\n" > ${E_SITEFILE}
+		sed '/^;; move/,+4 d' lisp/dotemacs >> ${E_SITEFILE}
+		elisp-site-file-install ${E_SITEFILE}
+	fi
+
+	if use xemacs; then
+		cd lisp
+		einfo "Configuring gnuplot-mode for xemacs..."
+		EMACS="xemacs" lispdir="/usr/lib/xemacs/site-packages/${PN}" econf || die
+		make DESTDIR=${D} install || {
+			ewarn "Compiling/installing gnuplot-mode for xemacs has failed."
+			ewarn "I need xemacs-base to be installed before I can compile"
+			ewarn "the gnuplot-mode lisp files for xemacs successfully."
+			ewarn "Please try re-emerging me after app-xemacs/xemacs-base"
+			ewarn "has been successfuly emerged."
+			die
+			}
+		cd ..
+	fi
+
+
 	dodoc BUGS ChangeLog FAQ NEWS PATCHLEVEL PGPKEYS PORTING README* TODO VERSION
 
 	if use doc; then
@@ -102,10 +127,15 @@ src_install () {
 }
 
 pkg_postinst() {
+	use emacs && elisp-site-regen
 	if use svga ; then
 		einfo "In order to enable ordinary users to use SVGA console graphics"
 		einfo "gnuplot needs to be set up as setuid root.  Please note that"
 		einfo "this is usually considered to be a security hazard."
 		einfo "As root, manually \"chmod u+s /usr/bin/gnuplot\"."
 	fi
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }
