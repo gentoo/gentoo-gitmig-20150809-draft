@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1050 2005/03/28 14:45:51 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1051 2005/03/28 18:28:42 tantive Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -774,6 +774,7 @@ sys-libs/pam:pam_console - Builds the pam_console module (enables per-user devic
 sys-libs/pam:pam_timestamp - Builds the pam_timestamp module (enables recent successful attempt authentication)
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 sys-libs/uclibc:xattr - enables extended attributes
+sys-power/apcupsd:cgi - Add CGI script support
 sys-process/daemontools-scripts:withsamplescripts - Installs sample supervise scripts
 sys-process/procps:n32 - Enable n32 ABI support on mips
 www-apps/dspam-web:cyrus - Build delivery options for cyrus-imapd
