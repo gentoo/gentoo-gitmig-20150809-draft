@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/init-es/init-es-0.2-r1.ebuild,v 1.4 2004/03/14 02:17:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/init-es/init-es-0.2-r1.ebuild,v 1.5 2004/06/07 04:59:46 dragonheart Exp $
 
 DESCRIPTION="Traductor de mensajes de inicio (init)"
 HOMEPAGE="http://projects.frikis.org/"
@@ -8,7 +8,8 @@ SRC_URI="http://projects.frikis.org/gentoo/init-es/programa/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+IUSE=""
+KEYWORDS="x86 ~ppc ~alpha ~sparc"
 
 RDEPEND="sys-apps/textutils
 	sys-apps/sed"
