@@ -1,0 +1,29 @@
+#! /bin/sh
+
+PATH=$PATH:/usr/local/bin
+
+case "$1" in
+    start)
+	echo -n "starting openmosixcollector"
+	openmosixcollector -d
+	;;
+    stop)
+	echo -n "stopping openmosixcollector"
+        openmosixcollector -k
+	;;
+    checkpoint)
+        echo -n "checkpointing openmosixcollector"
+        openmosixcollector -c
+        ;;
+    restart)
+        echo -n "restarting openmosixcollector"
+        openmosixcollector -r
+        ;;
+    *)
+	echo "Usage: $0 {start|stop|checkpoint|restart}"
+	exit 1
+	;;
+esac
+
+
+
