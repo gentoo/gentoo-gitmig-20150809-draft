@@ -1,9 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/mupad/mupad-2.5.2.ebuild,v 1.2 2003/06/21 07:26:28 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mupad/mupad-2.5.2-r1.ebuild,v 1.1 2003/06/21 07:26:28 george Exp $
+
+IUSE="mupad-noscilab"
 
 VER=`echo $PV|awk -F. '{ print $1$2$3 }'`
-URLPATH="http://www.ibiblio.org/pub/Linux/apps/math/MuPAD/distrib/unix"
+URLPATH="ftp://ftp.mupad.de/MuPAD/distrib/unix/"
 INSTDIR="/usr/lib/mupad"
 INSTBINDIR="${INSTDIR}/share/bin"
 BINDIR="/usr/bin"
@@ -11,7 +13,10 @@ BINDIR="/usr/bin"
 RESTRICT="nostrip"
 DESCRIPTION="MuPAD is an open computer algebra system"
 HOMEPAGE="http://www.mupad.de/index_uni.shtml"
-SRC_URI="${URLPATH}/bin_linux_scilab_${VER}.tgz ${URLPATH}/linux_libs.tgz ${URLPATH}/share_${VER}.tgz"
+
+SRC_URI="${URLPATH}/linux_libs.tgz
+	${URLPATH}/share_${VER}.tgz
+	${URLPATH}/bin_linux_scilab_${VER}.tgz"
 
 # If version is 2.5.2, download documentation patch
 if [ "${VER}" = "252" ] ; then
@@ -22,11 +27,10 @@ fi
 LICENSE="mupad"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/glibc"
 RDEPEND="=dev-lang/tk-8.3*"
-
 
 src_unpack() {
 	echo -n ""
@@ -70,9 +74,11 @@ src_install() {
 
 	#move docs to the roper place
 	dodir /usr/share/doc/${PF}/
-	mv ${D}/usr/lib/mupad/share/{changes/*,copyright/*,doc/*} ${D}/usr/share/doc/${PF}/
-	rmdir ${D}/usr/lib/mupad/share/{changes,copyright,doc}
 	mv ${D}/usr/lib/mupad/{INSTALL,LICENSE} ${D}/usr/share/doc/${PF}/
+	for fn in changes copyright doc; do dosym /usr/lib/mupad/share/$fn /usr/share/doc/${PF}; done
+
+	#remove scilab stuff if user set the flag
+	use mupad-noscilab && rm -rf ${D}/usr/lib/mupad/packages/scilab/
 }
 
 pkg_postinst() {

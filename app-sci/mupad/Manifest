@@ -1,3 +1,5 @@
-MD5 c5acd2bd915817cd8bb2b8a528c5d7f5 ChangeLog 530
-MD5 7aa16bb91e2fb06f4a05911dc4e619af mupad-2.5.2.ebuild 3085
+MD5 3a1b02b5ce2c4a65a75f7f1e8db570d6 mupad-2.5.2.ebuild 3084
+MD5 4babf0852f924b064bc85ac55b03c9f5 mupad-2.5.2-r1.ebuild 3154
+MD5 2b4b1b8beba489bcab5b919459cfe295 ChangeLog 946
+MD5 4e05b1eb3ba3380509b9085086cad7ef files/digest-mupad-2.5.2-r1 249
 MD5 f8815e5e9d9c7c3ed0353c8a60025dff files/digest-mupad-2.5.2 249

@@ -1,6 +1,15 @@
 # ChangeLog for app-sci/mupad
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/mupad/ChangeLog,v 1.1 2003/05/12 01:14:29 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mupad/ChangeLog,v 1.2 2003/06/21 07:26:28 george Exp $
+
+*mupad-2.5.2-r1 (19 Jun 2003)
+
+  19 Jun 2003; George Shapovalov <george@gentoo.org> mupad-2.5.2-r1.ebuild :
+  added local use flag mupad-noscilab to control installation of scilab
+  supplied by package (in case user prefers to use system-wide scilab, which
+  is a separate package).
+  Moved docs to the original place, where MuPAD's online help looks for them. 
+  Instead created symlinks into FHS specified place.
 
 *mupad-2.5.2.ebuild (11 May 2003)
 
