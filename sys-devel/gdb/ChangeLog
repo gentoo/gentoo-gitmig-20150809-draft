@@ -1,8 +1,13 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.19 2003/03/24 13:53:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.20 2003/05/19 22:50:24 kumba Exp $
+
 
 *gdb-5.3 (21 Dec 2002)
+
+  19 May 2003; Joshua Kinard <kumba@gentoo.org> gdb-5.3.ebuild:
+  Added a patch that allows gdb-5.3 to compile properly
+  on sparc and set KEYWORDS to ~sparc from -sparc
 
   24 Mar 2003; Guy Martin <gmsoft@gentoo.org> gdb-5.3.ebuild :
   Added patch for hppa support. Added hppa to keywords.
