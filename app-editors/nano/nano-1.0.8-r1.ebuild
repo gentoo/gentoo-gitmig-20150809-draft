@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.8-r1.ebuild,v 1.4 2002/07/16 02:07:22 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.8-r1.ebuild,v 1.5 2002/07/25 20:51:49 kabau Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="clone of Pico with more functions in a smaller size"
@@ -11,7 +11,11 @@ DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
 	slang? ( >=sys-libs/slang-1.4.4-r1 )
 	nls? ( sys-devel/gettext )"
+
+SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
+
 src_compile() {
 	local myconf
 
