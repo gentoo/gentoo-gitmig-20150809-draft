@@ -62,8 +62,10 @@ src_unpack() {
 		#
 		# Azarah - 30 Jun 2002
 		#
-		( use mmx || use 3dnow ) && \
-			( cat ${DISTDIR}/${P}-mmx.patch.gz | gunzip -c | patch -p1 || die )
+		if use mmx || use 3dnow
+		then
+			cat ${DISTDIR}/${P}-mmx.patch.gz | gunzip -c | patch -p1 || die
+		fi
 	fi
 
 # This is for the Plover patch
