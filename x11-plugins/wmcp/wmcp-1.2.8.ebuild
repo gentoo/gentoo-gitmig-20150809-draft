@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcp/wmcp-1.2.8.ebuild,v 1.11 2004/06/24 23:07:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcp/wmcp-1.2.8.ebuild,v 1.12 2004/06/28 20:41:04 agriffis Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ~ia64 ppc ~sparc alpha hppa ~mips"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11"
 
 src_unpack() {

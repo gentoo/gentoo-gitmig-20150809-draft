@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclock/wmclock-1.0.12.2.ebuild,v 1.7 2004/06/24 23:06:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclock/wmclock-1.0.12.2.ebuild,v 1.8 2004/06/28 20:37:50 agriffis Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86 amd64 ppc ~sparc"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11"
 
 src_compile() {

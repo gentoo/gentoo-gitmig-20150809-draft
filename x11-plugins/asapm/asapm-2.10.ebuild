@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-2.10.ebuild,v 1.8 2004/06/24 22:47:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-2.10.ebuild,v 1.9 2004/06/28 20:32:48 agriffis Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="x86 sparc "
 
-DEPEND="virtual/glibc virtual/x11"
+DEPEND="virtual/libc virtual/x11"
 
 src_compile() {
 	./configure --infodir=/usr/share/info --mandir=/usr/share/man --prefix=/usr --host=${CHOST} || die
