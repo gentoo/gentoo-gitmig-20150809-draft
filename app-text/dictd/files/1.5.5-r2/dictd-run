@@ -1,3 +1,0 @@
-#!/bin/sh
-# We abuse some debugging features here to get the desired behavior
-exec dictd -s -d nodetach < /dev/null > /dev/null 2>&1
