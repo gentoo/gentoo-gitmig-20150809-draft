@@ -1,4 +1,6 @@
+MD5 648bf351aa68fa75bcf1f0e02081f7f7 xtermcontrol-2.4.ebuild 601
 MD5 1f50ce3fd004313485ad019a855015c6 xtermcontrol-2.3.ebuild 601
-MD5 2b1e6a4742cda7ed27b8027ab64bf2fc ChangeLog 647
+MD5 df333cabdd7bfbe07c5f2e4959eddfbd ChangeLog 772
 MD5 310a73b21a19bc4b439313127426fcec metadata.xml 719
 MD5 f8bacf3546f7917dcc33fa6186e94392 files/digest-xtermcontrol-2.3 68
+MD5 005fd4ad4a4b2dec83d3fad2564b8930 files/digest-xtermcontrol-2.4 68
