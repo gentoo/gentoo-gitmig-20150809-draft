@@ -1,16 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20040701.ebuild,v 1.9 2005/01/18 15:54:08 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20041222.ebuild,v 1.1 2005/01/18 15:54:08 radek Exp $
 
 inherit eutils
 
+MY_V=2.2.1
 DESCRIPTION="High-performance interface between the MTA and content checkers."
 HOMEPAGE="http://www.ijs.si/software/amavisd/"
-SRC_URI="http://www.ijs.si/software/amavisd/${PN}-${PV/_/-}.tar.gz"
+SRC_URI="http://www.ijs.si/software/amavisd/${PN}-${MY_V}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64 ~sparc ~alpha ~ppc64"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~alpha ~ppc64"
 IUSE="ldap mysql postgres milter"
 
 DEPEND=">=sys-apps/sed-4
@@ -50,7 +51,7 @@ RDEPEND="${DEPEND}
 	postgres? ( dev-perl/DBD-Pg )
 	milter? ( >=mail-mta/sendmail-8.12 )"
 
-S="${WORKDIR}/${PN}-${PV/_*/}"
+S="${WORKDIR}/${PN}-${MY_V}"
 
 AMAVIS_ROOT=/var/amavis
 
@@ -81,9 +82,12 @@ src_install() {
 	enewuser amavis -1 /bin/false ${AMAVIS_ROOT} amavis
 
 	dosbin amavisd
+	dosbin amavisd-agent
+	dosbin amavisd-nanny
 
 	insinto /etc
-	doins ${FILESDIR}/amavisd.conf
+	# we now (since 2.2.1) install original conf file
+	doins amavisd.conf
 	dosed "s:^#\\?\\\$MYHOME[^;]*;:\$MYHOME = '$AMAVIS_ROOT';:" \
 		/etc/amavisd.conf
 	if [ "$(domainname)" = "(none)" ] ; then
@@ -121,9 +125,9 @@ src_install() {
 		fowners amavis:amavis ${AMAVIS_ROOT}/${i}
 	done
 
-	newdoc test-messages/README README.samples
-	dodoc AAAREADME.first INSTALL LDAP.schema LICENSE MANIFEST RELEASE_NOTES \
-		README_FILES/* test-messages/sample-* amavisd.conf-default amavisd-agent
+	newdoc test-messages/README
+	dodoc AAAREADME.first INSTALL TODO LDAP.schema LICENSE MANIFEST RELEASE_NOTES \
+		README_FILES/* test-messages/sample-* amavisd.conf-default amavisd.conf-sample
 
 	if use milter ; then
 		cd "${S}/helper-progs"
@@ -149,7 +153,10 @@ pkg_postinst() {
 		einfo "and comment out line 170 of /etc/amavisd.conf."
 	fi
 
-	echo
+	einfo
+	einfo "This version (20041222) also changed default config file (/etc/amavisd.conf)"
+	einfo "into much simpler and lighter version. Previous defaults were installed"
+	einfo "for Your convenience at default location (/usr/share/doc/${P})."
 	ewarn
 	ewarn "This version of amavisd-new has a different layout from previous versions"
 	ewarn "available in portage. The socket, pid, and lock file, as well as the"
@@ -160,4 +167,5 @@ pkg_postinst() {
 	ewarn
 	ewarn "It may be necessary to reconfigure any helper applications."
 	ewarn
+
 }
