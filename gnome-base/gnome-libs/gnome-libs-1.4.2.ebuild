@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.4 2002/10/16 19:10:17 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.5 2002/10/23 18:45:10 spider Exp $
 
 IUSE="doc nls kde"
 
@@ -66,20 +66,9 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		sysconfdir=${D}/etc \
 		localstatedir=${D}/var/lib \
-		docdir=${D}/usr/share/doc \
+		docdir=${D}/usr/share/doc/${P} \
 		HTML_DIR=${D}/usr/share/gnome/html \
 		install || die
-
-	#do the docs
-	if [ -n "`use doc`" ]
-	then
-		cd ${S}/devel-docs
-		make prefix=${D}/usr \
-			mandir=${D}/usr/share/man \
-			docdir=${D}/usr/share/doc \
-			install || die
-		cd ${S}
-	fi
 
 	rm ${D}/usr/share/gtkrc*
 
