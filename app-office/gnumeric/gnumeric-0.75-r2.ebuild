@@ -1,8 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# /home/cvsroot/gentoo-x86/gnome-office/gnumeric/gnumeric-0.66.ebuild,v 1.1 2001/06/28 09:47:57 hallski Exp
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-0.75-r2.ebuild,v 1.1 2001/11/12 07:41:01 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-0.75-r2.ebuild,v 1.2 2001/11/13 18:16:12 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
@@ -79,7 +78,7 @@ src_compile() {
 		    --sysconfdir=/etc					\
 		    ${myconf} || die
 
-	emake || make || die "Building of package failed."
+	make || die
 }
 
 src_install() {
