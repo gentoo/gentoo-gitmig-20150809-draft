@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r5.ebuild,v 1.2 2003/08/14 14:33:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r5.ebuild,v 1.3 2003/09/04 03:47:05 usata Exp $
 
-inherit flag-o-matic eutils
+inherit ccc flag-o-matic eutils
 
 DESCRIPTION="An interactive image manipulation program for X which can deal with a wide variety of image formats"
 HOMEPAGE="http://www.trilon.com/xv/index.html"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
-IUSE="jpeg tiff png zlib X"
+IUSE="jpeg tiff png"
 RESTRICT="fetch"
 
 DEPEND="virtual/x11
@@ -22,7 +22,7 @@ DEPEND="virtual/x11
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
 	epatch ${FILESDIR}/${P}-enhanced-Nu.patch || die
 	epatch ${FILESDIR}/${PF}-gentoo-Nu.patch || die
@@ -35,6 +35,7 @@ src_compile() {
 	[ `use tiff` ] && append-flags -DDOTIFF
 	sed -i "s:CCOPTS = -O:CCOPTS = ${CFLAGS}:" Makefile
 	sed -i "s:COPTS=\t-O:COPTS= ${CFLAGS}:" tiff/Makefile
+	is-ccc && replace-cc-hardcode
 	make || die
 }
 

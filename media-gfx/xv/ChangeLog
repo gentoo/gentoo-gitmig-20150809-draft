@@ -1,8 +1,13 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.18 2003/08/14 14:33:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.19 2003/09/04 03:47:05 usata Exp $
 
 *xv-3.10a-r5 (07 Aug 2003)
+
+  04 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> xv-3.10a-r2.ebuild,
+  xv-3.10a-r3.ebuild, xv-3.10a-r4.ebuild, xv-3.10a-r5.ebuild:
+  Deleted trailing white-spaces.  Removed unused IUSE flags from -r5.
+  Merged ccc support from -r3 to -r5 and removed broken -r4.
 
   14 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> xv-3.10a-r5.ebuild,
   files/xv-3.10a-r5-ppc.patch:

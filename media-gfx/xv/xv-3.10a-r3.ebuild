@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.7 2003/08/05 17:17:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.8 2003/09/04 03:47:05 usata Exp $
 
 inherit ccc eutils
 
@@ -24,21 +24,21 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	[ `use png` ] && epatch ${WORKDIR}/${P}-naz-gentoo.patch	
+	[ `use png` ] && epatch ${WORKDIR}/${P}-naz-gentoo.patch
 	[ `use ppc` ] && [ -z `use png` ] && epatch ${FILESDIR}/xv-${PV}-ppc.patch
 }
 
 src_compile() {
 	sed -i "s:CCOPTS = -O:CCOPTS = ${CFLAGS}:" Makefile
 	sed -i "s:COPTS=\t-O:COPTS= ${CFLAGS}:" tiff/Makefile
-	is-ccc && replace-cc-hardcode 
+	is-ccc && replace-cc-hardcode
 	make || die
 }
 
 src_install() {
 	dodir /usr/bin
 	dodir /usr/share/man/man1
-	
+
 	make \
 		DESTDIR=${D} \
 		BINDIR=${D}/usr/bin \

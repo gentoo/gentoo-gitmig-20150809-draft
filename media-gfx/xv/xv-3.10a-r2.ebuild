@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r2.ebuild,v 1.15 2003/08/05 17:17:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r2.ebuild,v 1.16 2003/09/04 03:47:05 usata Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 src_install() {
 	dodir /usr/bin
 	dodir /usr/share/man/man1
-	
+
 	make \
 		DESTDIR=${D} \
 		BINDIR=${D}/usr/bin \
