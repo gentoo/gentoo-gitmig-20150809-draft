@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/e1000/e1000-5.2.52.ebuild,v 1.1 2004/06/01 20:38:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/e1000/e1000-5.2.52.ebuild,v 1.2 2004/06/03 15:53:37 dholm Exp $
 
 DESCRIPTION="Kernel driver for Intel Pro/1000 ethernet adapters."
 HOMEPAGE="http://support.intel.com/support/network/adapter/1000/index.htm"
@@ -9,7 +9,7 @@ DEPEND="virtual/linux-sources"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 SLOT="${KV}"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 S="${WORKDIR}/${P}"
 
 
