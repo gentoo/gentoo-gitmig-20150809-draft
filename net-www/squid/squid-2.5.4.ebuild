@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.4.ebuild,v 1.9 2004/02/17 22:23:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.4.ebuild,v 1.10 2004/02/19 17:46:42 woodchip Exp $
 
 IUSE="pam ldap ssl sasl snmp debug"
 
@@ -49,6 +49,7 @@ src_unpack() {
 		cd ${S}
 		mv configure.in configure.in.orig
 		sed -e 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in.orig > configure.in
+		export WANT_AUTOCONF=2.1
 		autoconf || die
 	fi
 }

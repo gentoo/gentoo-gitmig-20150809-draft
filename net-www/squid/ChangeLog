@@ -1,6 +1,9 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.31 2004/02/17 22:23:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.32 2004/02/19 17:46:42 woodchip Exp $
+
+  19 Feb 2004; Donny Davies <woodchip@gentoo.org> squid-2.5.4.ebuild:
+  Bug #41882; add 'export WANT_AUTOCONF=2.1'.
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> squid-2.5.4.ebuild:
   stable on ia64
