@@ -640,10 +640,6 @@ dev-utils/vdkbuilder
 # george - Jun 8, 2002
 =dev-lang/nhc98-1.12
 
-# X driver renaming *dont* work.
-# Azarah - 5 June 2002
-=media-video/ati-gatos-4.2.0.11-r1
-
 # According to spider this breaks gnome-vfs (sandymac, 03 May 2002):
 # and evolution (azarah, 05 May 2002)
 # Do NOT install this without backing up your glibc first.
