@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.3.2-r1.ebuild,v 1.2 2004/04/08 03:07:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.3.2-r1.ebuild,v 1.3 2004/04/18 21:04:39 lv Exp $
 
 inherit rpm eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.fedora.redhat.com/pub/fedora/linux/core/1/SRPMS/${MY_P}
 
 SLOT="0"
 LICENSE="MIT | LGPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips amd64 ~ia64 ~ppc64"
 
 RDEPEND="virtual/glibc"
 
