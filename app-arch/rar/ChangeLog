@@ -2,6 +2,11 @@
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.5 2002/05/31 01:48:14 seemant Exp
 
+*rar-3.4.0 (29 Sep 2004)
+
+  29 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> rar-3.4.0.ebuild:
+  Version bump, closing #65360.
+
   12 Aug 2004; Daniel Ahlberg <aliz@gentoo.org> rar-3.3.0.ebuild:
   Unmasked on x86 and amd64.
 
