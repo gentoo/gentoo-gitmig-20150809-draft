@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1d2263c9e1d52f3378690f5e8f9f208e dc-tool-ip-1.0.3.ebuild 556
-MD5 d4dd01421ba0c26490096712b0bae054 ChangeLog 361
+MD5 3e4947cb5f376973d0010fa9eceb79c5 dc-tool-ip-1.0.3.ebuild 550
+MD5 da39850752d28abba8f4ccc88fc705ac ChangeLog 355
 MD5 a51a6d756989bbd9d5f56e239e05287c files/digest-dc-tool-ip-1.0.3 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAym1WHTu7gpaalycRAk3aAKDdpqOaxtzLw/UAGrXmT244CXtNHwCfRmm6
-jdYdJ9vfcimCXTq0ox+OmzU=
-=gNA6
------END PGP SIGNATURE-----
