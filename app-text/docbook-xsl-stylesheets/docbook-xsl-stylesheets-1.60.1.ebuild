@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.60.1.ebuild,v 1.4 2003/06/20 01:20:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.60.1.ebuild,v 1.5 2003/07/11 20:35:23 aliz Exp $
 
 S=${WORKDIR}/docbook-xsl-${PV}
 DESCRIPTION="XSL Stylesheets for Docbook"
@@ -11,7 +11,7 @@ DEPEND="dev-libs/libxml2"
 
 SLOT="0"
 LICENSE="as-is | BSD"
-KEYWORDS="~x86 ~hppa"
+KEYWORDS="x86 ~hppa"
 
 src_install() {
 	DEST="/usr/share/sgml/docbook/xsl-stylesheets-${PV}"

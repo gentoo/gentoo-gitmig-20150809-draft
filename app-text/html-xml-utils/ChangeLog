@@ -1,6 +1,11 @@
 # ChangeLog for app-text/html-xml-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.7 2003/02/12 05:31:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.8 2003/07/11 20:35:24 aliz Exp $
+
+*html-xml-utils-2.3-r1 (13 Feb 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

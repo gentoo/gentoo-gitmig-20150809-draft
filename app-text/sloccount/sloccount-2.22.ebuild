@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.22.ebuild,v 1.2 2003/06/27 07:18:45 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.22.ebuild,v 1.3 2003/07/11 20:35:25 aliz Exp $
 
 DESCRIPTION="A set of tools for counting physical Source Lines of Code (SLOC) in a large number of languages of a potentially large set of programs."
 
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.dwheeler.com/sloccount/"
 SRC_URI="http://www.dwheeler.com/sloccount/${P}.tar.gz"
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="dev-lang/perl

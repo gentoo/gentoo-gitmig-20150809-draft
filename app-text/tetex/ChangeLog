@@ -1,6 +1,6 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.39 2003/04/12 23:48:02 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.40 2003/07/11 20:35:25 aliz Exp $
 
 *tetex-2.0.2 (14 Mar 2003)
 
@@ -87,6 +87,11 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
+*tetex-1.0.7-r12 (12 Apr 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
 *tetex-1.0.7-r11 (18 Oct 2002)
 
   07 Nov 2002; Nicholas Jones <carpaski@gentoo.org> :

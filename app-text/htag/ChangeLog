@@ -1,8 +1,8 @@
 # ChangeLog for app-text/htag
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.2 2003/02/12 15:03:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.3 2003/07/11 20:35:24 aliz Exp $
 
-* htag-0.0.22 (16 August 2002)
+*htag-0.0.22 (16 August 2002)
 
   16 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, htag-0.0.22.ebuild, files/digest-htag-0.0.22  
 

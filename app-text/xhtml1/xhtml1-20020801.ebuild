@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/xhtml1-20020801.ebuild,v 1.2 2003/02/13 09:48:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/xhtml1-20020801.ebuild,v 1.3 2003/07/11 20:35:25 aliz Exp $
 
 DESCRIPTION="DTDs for the eXtensible HyperText Markup Language 1.0"
 HOMEPAGE="http://www.w3.org/TR/${PN}/"
 SRC_URI="${HOMEPAGE}${PN}.tgz"
 LICENSE="W3C"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 DEPEND="app-text/sgml-common"
 
 src_install() {

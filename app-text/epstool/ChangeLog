@@ -1,6 +1,11 @@
 # ChangeLog for app-text/epstool
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.1 2003/07/09 14:23:06 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.2 2003/07/11 20:35:23 aliz Exp $
+
+*epstool-3.02 (09 Jul 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   09 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> :
   Initial import.

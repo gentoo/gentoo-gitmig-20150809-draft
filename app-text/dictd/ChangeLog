@@ -1,6 +1,6 @@
 # ChangeLog for app-text/dictd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.6 2003/02/12 05:22:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.7 2003/07/11 20:35:22 aliz Exp $
 
   19 Jan 2003; Olivier Reisch <doctomoe@gentoo.org> dictd-1.8.0.ebuild:
   Added ~ppc keyword
@@ -23,3 +23,13 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+
+*dictd-1.5.5-r3 (13 Feb 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*dictd-1.5.5-r2 (13 Feb 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.

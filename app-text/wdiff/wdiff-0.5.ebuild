@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.5.ebuild,v 1.1 2003/02/12 08:02:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.5.ebuild,v 1.2 2003/07/11 20:35:25 aliz Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/wdiff/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="sys-libs/libtermcap-compat
 	sys-apps/diffutils
