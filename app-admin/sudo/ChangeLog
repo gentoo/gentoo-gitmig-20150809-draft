@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.11 2003/02/12 02:26:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.12 2003/03/13 10:31:22 zwelch Exp $
 
   05 Feb 2003; Martin Schlemmer <azarah@gentoo.org> $FILESDIR/sudo :
   Update pam.d file to use system-auth via pam_stack.so.  This
@@ -15,6 +15,9 @@
   added --with-env-editor so that EDITOR is respected when using visudo
 
 *sudo-1.6.6 (26 Apr 2002)
+
+  13 Mar 2003; Zach Welch <zwelch@gentoo.org> sudo-1.6.6.ebuild:
+  add arm keyword
 
   15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
 
