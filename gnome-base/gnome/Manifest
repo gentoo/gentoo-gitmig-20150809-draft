@@ -1,32 +1,32 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f0d4d847c8feaa3ae67e171f08426d5a ChangeLog 21230
+MD5 b5cdf8945bc39bc055d563abb7227d88 ChangeLog 21328
 MD5 b09ac2c1f9d01f4679ecc08b38d48481 gnome-1.4-r3.ebuild 545
+MD5 30ee5f0fb8bfb339887611a3839f5e09 gnome-2.10_pre0.ebuild 3882
 MD5 c55062c78cdf2e2072178cbdefafcae5 gnome-2.6.2-r1.ebuild 4220
 MD5 3351cb877e35db059cee9e728036150f gnome-2.6.ebuild 3765
 MD5 481ad58b5efc4813e61fb48fe01e47bc gnome-2.8.0-r1.ebuild 3641
 MD5 c51c9c48c0bb957a28d43d8e10744589 gnome-2.8.1-r1.ebuild 3856
-MD5 06248e739315e32d9225277c04efbf7a gnome-2.8.2.ebuild 3845
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 302cc0860b6f565bd36d86ed3161fe9d gnome-2.8.3_pre0.ebuild 3861
+MD5 6763f9305229aafed0dc31b9ed84bb57 gnome-2.8.2.ebuild 3849
 MD5 d88be27ebac8d585df91e0b244a00e8d gnome-2.8.3-r1.ebuild 3869
 MD5 e5f03efd71d182d6bbcf12d70243d94c gnome-2.8.3.ebuild 3856
-MD5 30ee5f0fb8bfb339887611a3839f5e09 gnome-2.10_pre0.ebuild 3882
+MD5 302cc0860b6f565bd36d86ed3161fe9d gnome-2.8.3_pre0.ebuild 3861
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-1.4-r3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.6 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.6.2-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.0-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.1-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.3_pre0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.3 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.3-r1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.3_pre0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.10_pre0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.3-r1 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCL2HvXjcVihsel0ERAg22AJ4h0SufR1XF5teQihSj+ZoDziarwwCcDYR7
-T7yygmfV0uXzmOJC05TW32g=
-=low0
+iD8DBQFCL7FXKRy60XGEcJIRAkXkAKChAWe37fED6ZvBAq38H+HCCG8W6ACglYHb
+Zh6RfytjyqOMRWU6BM8BPEM=
+=tvqu
 -----END PGP SIGNATURE-----
