@@ -1,6 +1,14 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.20 2003/04/19 16:11:13 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.21 2003/04/20 17:48:28 agenkin Exp $
+
+*opera-7.10_beta1-r2 (20 Apr 2003)
+
+  20 Apr 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Fixed download URL.
+  Added error-checking to the sed invocation in src_compile.
+  Made the ebuild depend on fontconfig-2.1.94-r1 or later to fix display under
+  xfree-4.3 (bug #19330).
 
 *opera-7.10_beta1-r1 (19 Apr 2003)
 
