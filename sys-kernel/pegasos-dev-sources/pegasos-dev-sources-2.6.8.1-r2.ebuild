@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-dev-sources/pegasos-dev-sources-2.6.8.1-r1.ebuild,v 1.1 2004/08/17 14:17:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-dev-sources/pegasos-dev-sources-2.6.8.1-r2.ebuild,v 1.1 2004/08/22 17:20:52 dholm Exp $
 
 ETYPE="sources"
 inherit kernel-2
 detect_version
 
 # Version of gentoo patchset
-GPV=8.1.1
+GPV=8.1.2
 GPV_SRC="mirror://gentoo/pegpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}.tar.bz2"
 
 KEYWORDS="ppc"
@@ -28,7 +28,5 @@ pkg_postinst() {
 	ewarn "result you are now required to compile this support into"
 	ewarn "the kernel. You can do so by enabling the following option:"
 	ewarn "    Device Drivers -> Character devices -> Legacy (BSD) PTY Support."
-	echo
-	ewarn "Bootsplash is missing from this release."
 	echo
 }
