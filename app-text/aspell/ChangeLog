@@ -1,6 +1,21 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.16 2002/10/26 04:02:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.17 2002/11/11 13:51:02 nall Exp $
+
+*aspell-0.50.2-r1 (11 Nov 2002)
+
+  11 Nov 2002; Jon Nall <nall@gentoo.org> aspell-0.50.2-r1.ebuild
+  files/digest-aspell-0.50.2-r1 :
+
+  This fixes a problem where applications are linked against both 
+  libaspell.so AND libaspell-common.so. when aspell is upgraded,
+  the libaspell-common.so version is bumped and apps break. using
+  --remove-internal-dep=aspell-common with cause apps to link
+  only against libaspell.so, which should allow them to work across
+  multiple aspell versions. This fixes bug #9996.
+  NOTE: all apps that compile against aspell will need to be 
+  recompiled (abiword, sylpheed-claws, gnome-spell, etc)
+
 
 *aspell-0.50.2 (05 Oct 2002)
 
