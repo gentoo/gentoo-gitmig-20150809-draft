@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r3.ebuild,v 1.8 2004/05/07 19:31:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r3.ebuild,v 1.9 2004/05/28 02:41:33 agriffis Exp $
 
-inherit makeedit flag-o-matic gcc nsplugins eutils
+inherit makeedit flag-o-matic gcc nsplugins eutils mozilla-launcher
 
 S=${WORKDIR}/mozilla
 
@@ -28,8 +28,7 @@ RDEPEND="virtual/x11
 	gtk2?  ( >=x11-libs/gtk+-2.1.1 >=dev-libs/libIDL-0.8.0 )
 	!gtk2? ( =x11-libs/gtk+-1.2* >=gnome-base/ORBit-0.5.10-r1 )
 	java?  ( virtual/jre )
-	>=net-www/mozilla-launcher-1.7-r1
-	!net-www/mozilla-firefox-bin"
+	>=net-www/mozilla-launcher-1.7-r1"
 
 DEPEND="${RDEPEND}
 	virtual/glibc
@@ -277,4 +276,13 @@ pkg_postinst() {
 	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 0755 {} \; || :
 	# Fix permissions on chrome files
 	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \; || :
+
+	# This should be called in the postinst and postun of all the
+	# mozilla, mozilla-bin, firefox, firefox-bin, thunderbird and
+	# thunderbird-bin ebuilds.
+	update_mozilla_launcher_symlinks
+}
+
+pkg_postun() {
+	update_mozilla_launcher_symlinks
 }
