@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.3.ebuild,v 1.8 2004/01/05 00:19:56 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.3.ebuild,v 1.9 2004/01/05 02:57:25 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -75,19 +75,15 @@ _EOF_
 
 src_compile() {
 	export QTDIR=${S}
-# This line was part of the patch that caused the
-# access violations, removing it, and reverting to
-# the old one
-# Brad House <brad_mssw@gentoo.org> 1/4/2004
-#	export SYSCONF=${D}${QTBASE}/etc/settings
-	export SYSCONF=${QTBASE}/etc/settings
+	export SYSCONF=${D}${QTBASE}/etc/settings
 	LD_LIBRARY_PATH_OLD=${LD_LIBRARY_PATH}
 	export LD_LIBRARY_PATH=${S}/lib:${LD_LIBRARY_PATH}
 
 	# fix #11144; qt wants to create lock files etc. in that directory
-	[ -d "$QTBASE/etc/settings" ] && addwrite "$QTBASE/etc/settings"
-	[ ! -d "$QTBASE/etc/settings" ] && dodir ${QTBASE}/etc/settings
-
+	addwrite "${QTBASE}/etc/settings"
+	addwrite "$HOME/.qt"
+	dodir ${QTBASE}/etc/settings
+	
 	export LDFLAGS="-ldl"
 
 	use cups	|| myconf="${myconf} -no-cups"
@@ -107,11 +103,8 @@ src_compile() {
 		-system-libpng -ldl -lpthread -xft -platform linux-g++ -xplatform \
 		linux-g++ -xrender -prefix ${D}${QTBASE} -plugindir ${QTBASE}/plugins \
 		-docdir ${QTBASE}/doc -translationdir ${QTBASE}/translations \
-		-datadir ${QTBASE} -fast ${myconf} || die
-# This line was part of the additions that caused major access
-# violations.  Reverting to old one.
-# Brad House <brad_mssw@gentoo.org> 1/4/2004
-#		-datadir ${QTBASE} -sysconfdir ${QTBASE}/etc/settings -fast ${myconf} || die
+		-datadir ${QTBASE} -sysconfdir ${QTBASE}/etc/settings -fast ${myconf} || die
+	
 	export QTDIR=${S}
 	emake src-qmake src-moc sub-src sub-tools || die
 	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH_OLD}

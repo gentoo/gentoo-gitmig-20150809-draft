@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0_beta1.ebuild,v 1.10 2004/01/04 17:40:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0_beta1.ebuild,v 1.11 2004/01/05 02:57:25 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -59,19 +59,15 @@ src_compile() {
 	LD_LIBRARY_PATH_OLD=${LD_LIBRARY_PATH}
 	export LD_LIBRARY_PATH=${S}/lib:${LD_LIBRARY_PATH}
 
-	# REALHOME="$HOME"
-	# mkdir -p $T/fakehome/.qt
-	# export HOME="$T/fakehome"
-	# [ -d "$REALHOME/.ccache" ] && ln -sf "$REALHOME/.ccache" "$HOME/"
-
 	# fix #11144; qt wants to create lock files etc. in that directory
 	# [ -d "$QTBASE/etc/settings" ] && addwrite "$QTBASE/etc/settings"
 	# [ ! -d "$QTBASE/etc/settings" ] && dodir ${QTBASE}/etc/settings
 
 	# Let's just allow writing to these directories during Qt emerge
 	# as it makes Qt much happier.
-	addwrite "$QTBASE/etc/settings"
+	addwrite "${QTBASE}/etc/settings"
 	addwrite "$HOME/.qt"
+	dodir "${QTBASE}/etc/settings"
 
 	use nas		&& myconf="${myconf} -system-nas-sound"
 	use gif		&& myconf="${myconf} -qt-gif"
