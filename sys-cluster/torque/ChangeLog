@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/torque
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.6 2004/08/08 00:41:24 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.7 2005/02/20 09:40:02 spyderous Exp $
+
+*torque-1.2.0_p1 (20 Feb 2005)
+
+  20 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/1.2.0_p1-respect-ldflags.patch, +torque-1.2.0_p1.ebuild:
+  (#74483) Version bump. Also cleaned up the ebuild a bit and silenced QA
+  warnings about lazily bound suid binaries.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> torque-1.0.1-r6.ebuild:
   Typo in DESCRIPTION: queueing -> queuing. Bug 59717.
