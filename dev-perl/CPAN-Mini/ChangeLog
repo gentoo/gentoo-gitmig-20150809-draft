@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/CPAN-Mini
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.1 2005/03/08 18:25:09 mcummings Exp $
+
+*CPAN-Mini-0.36 (08 Mar 2005)
+
+  08 Mar 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +CPAN-Mini-0.36.ebuild:
+  Provides minicpan, a means of creating a portable CPAN
+

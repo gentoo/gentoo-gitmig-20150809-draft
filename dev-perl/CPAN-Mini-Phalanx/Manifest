@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 62a3609d0ad949d59e496bb38bd35aa1 metadata.xml 384
+MD5 23cc2b4a0220a05dad3d4cadb6f15acf CPAN-Mini-Phalanx-0.01.ebuild 664
+MD5 aad21f6e3997ab1812cebec6f71746e2 ChangeLog 449
+MD5 f626c6e4bf19d029875983ad8d4bea06 files/digest-CPAN-Mini-Phalanx-0.01 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCLe7itG5z4I8BtQoRAh+mAJ4ssWc5NvrKdjztuUTCrzGjw25jnACePgCi
+9AFEuDqyuRvOIARA3zvaIBU=
+=RTSl
+-----END PGP SIGNATURE-----
