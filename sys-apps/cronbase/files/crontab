@@ -1,0 +1,25 @@
+
+# /etc/crontab
+# 20 Apr 2002; Thilo Bangert <bangert@gentoo.org>
+
+
+# fcron || dcron:
+# This is not the system crontab! to get this working with fcron or dcron do
+# crontab /etc/crontab
+# as root.
+# NOTE: This will REPLACE root's current crontab!!
+
+# vcron:
+# ignore this file. do NOT update to this file, as it does not work with vcron
+#
+
+# check scripts in cron.hourly, cron.daily, cron.weekly and cron.monthly
+
+*/15 * * * *   test -x /usr/sbin/run-crons && /usr/sbin/run-crons 
+0 *  * * *      rm -f /var/spool/cron/lastrun/cron.hourly
+0 0  * * *      rm -f /var/spool/cron/lastrun/cron.daily
+0 0  * * 6      rm -f /var/spool/cron/lastrun/cron.weekly
+0 0  1 * *      rm -f /var/spool/cron/lastrun/cron.monthly
+
+
+

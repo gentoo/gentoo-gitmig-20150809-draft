@@ -1,0 +1,8 @@
+The Gentoo Linux Cron README
+============================
+
+
+    This document describes the way crons that are placed in portage are supposed to behave. This is to ensure that all crons behave similar and adhere to the same security standards.
+
+
+    

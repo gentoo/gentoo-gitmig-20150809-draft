@@ -20,6 +20,9 @@ src_install () {
     dodir /usr/sbin
     doexe ${FILESDIR}/run-crons
 
+    insinto /etc
+    doins ${FILESDIR}/crontab
+
     diropts -m0750; keepdir /etc/cron.hourly
     diropts -m0750; keepdir /etc/cron.daily
     diropts -m0750; keepdir /etc/cron.weekly
@@ -29,5 +32,7 @@ src_install () {
     diropts -m0770 -o root -g cron; keepdir /var/spool/cron/crontabs
 
     diropts -m0750; keepdir /var/spool/cron/lastrun
+
+    dodoc ${FILESDIR}/README
 
 }
