@@ -1,0 +1,32 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.1 2004/05/23 07:16:49 dragonheart Exp $
+
+depend() {
+    need logger
+}
+
+
+checkconfig() {
+	if [ -z "${COUNTRY}" ]; then
+		eerror "You need to config /etc/conf.d/slmodem first"
+		return 1
+	fi
+}
+
+start() {
+	ebegin "Starting slmodemd"
+	modprobe ${MODULE}
+	start-stop-daemon --start --quiet --background --make-pidfile \
+		--pidfile /var/run/slmodemd.pid --startas /usr/sbin/slmodemd \
+		-- --country=${COUNTRY} /dev/${MODEM}0
+	eend $?
+}
+
+stop() {
+    ebegin "Shutting down slmodemd"
+    start-stop-daemon --stop --quiet --pidfile /var/run/slmodemd.pid && rm /var/run/slmodemd.pid
+    eend $?
+}
+
