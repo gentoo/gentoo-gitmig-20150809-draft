@@ -1,23 +1,25 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.1.2_p5.ebuild,v 1.3 2004/05/23 15:10:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.1.2_p5.ebuild,v 1.4 2004/05/25 01:06:06 g2boojum Exp $
+
+inherit eutils
 
 DESCRIPTION="Digital clock for the X window system."
-SRC_URI="http://ftp.debian.org/debian/pool/main/d/${PN}/${PN}_${PV/_p*/}.orig.tar.gz
-		http://ftp.debian.org/debian/pool/main/d/${PN}/${PN}_${PV/_p/-}.diff.gz"
+SRC_URI="mirror://debian/pool/main/d/${PN}/${PN}_${PV/_p*/}.orig.tar.gz
+		mirror://debian/pool/main/d/${PN}/${PN}_${PV/_p/-}.diff.gz"
 HOMEPAGE="ftp://ftp.ac-grenoble.fr/ge/Xutils/"
 
 S=${WORKDIR}/${PN}
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/x11"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ../${PN}_${PV/_p/-}.diff || die "patch failed"
+	epatch ../${PN}_${PV/_p/-}.diff
 	ln -sf dclock.1 dclock.man # needed to fix xmkmf breakage
 }
 
