@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cheetah
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.8 2004/12/30 21:17:24 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.9 2005/01/20 03:05:54 gongloo Exp $
+
+  19 Jan 2005; <gongloo@gentoo.org> cheetah-0.9.15.ebuild:
+  Keyworded ~ppc-macos.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

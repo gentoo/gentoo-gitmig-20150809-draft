@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/quixote-0.6.1.ebuild,v 1.4 2004/06/25 01:48:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/quixote-0.6.1.ebuild,v 1.5 2005/01/20 02:59:36 gongloo Exp $
 
 PN0="Quixote"
 DESCRIPTION="Python HTML templating framework for developing web applications."

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.20 2005/01/09 23:50:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.21 2005/01/20 03:04:22 gongloo Exp $
+
+  19 Jan 2005; <gongloo@gentoo.org> docutils-0.3.5.ebuild:
+  Keyworded ~ppc-macos.
 
   09 Jan 2005; Jason Wever <weeve@gentoo.org> docutils-0.3.5.ebuild:
   Added ~sparc keyword as it went missing in the version bump.
