@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.19 2004/10/29 22:39:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.20 2004/10/30 13:06:56 gustavoz Exp $
+
+  30 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> cabextract-1.1.ebuild:
+  Stable on sparc wrt #69315
 
 *cabextract-1.1 (29 Oct 2004)
 
