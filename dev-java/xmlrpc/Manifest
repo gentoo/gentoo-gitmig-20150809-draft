@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 44100a967d0311f3876f93b0da277119 xmlrpc-1.2_beta1.ebuild 1331
-MD5 81741157f805ad4c6feb0ad5131e8a06 ChangeLog 772
+MD5 bfeda03a56c6402c9cf36c52b848ae4b ChangeLog 861
 MD5 2b185c626e63daaa682ff058d5558869 metadata.xml 368
+MD5 05205e94993f8d5932b8bd25c545c4d9 xmlrpc-1.2_beta1.ebuild 1337
 MD5 96233c76ff3ce205db948f00df255756 files/digest-xmlrpc-1.2_beta1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcV1Y/rLF9B432nYRAurjAJ9alDwWemQUKT1QpY2XJSo3W3pYuACglC0f
-v+1FMlZxrABYfNl1EnmfQWQ=
-=HpXp
------END PGP SIGNATURE-----
