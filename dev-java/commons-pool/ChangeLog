@@ -1,8 +1,14 @@
 # ChangeLog for dev-java/commons-pool
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.3 2002/11/02 21:59:58 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.4 2002/11/05 03:11:19 strider Exp $
 
 *commons-pool-1.0.1-r2 (02 Nov 2002)
+
+  04 Nov 2002; Adrian Almenar <strider@gentoo.org> commons-pool-1.0.1-r2.ebuild:
+  Changed KEYWORDS, removed other arch's cause i have not tested it
+  leaving only ~x86. UnMasking it from packages.mask. 
+  Removed commons-pool-1.0.1.ebuild commons-pool-1.0.1-r1.ebuild
+  files/digest-commons-pool-1.0.1 files/digest-commons-pool-1.0.1-r1
 
   02 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> commons-pool-1.0.1-r2.ebuild files/digest-commons-pool-1.0.1-r2 :
   Added Jikes compilation support. Ebuild submitted by Adrian Almenar
