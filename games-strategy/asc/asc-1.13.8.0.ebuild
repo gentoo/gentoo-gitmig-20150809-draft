@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-1.13.8.0.ebuild,v 1.1 2003/09/10 05:27:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-1.13.8.0.ebuild,v 1.2 2003/11/14 20:06:41 seemant Exp $
 
 inherit games
 
@@ -20,7 +20,7 @@ DEPEND=">=media-libs/libsdl-1.1.3
 	media-libs/sdl-mixer
 	>=media-libs/sdlmm-0.1.8
 	>=media-libs/paragui-1.0.1
-	sys-apps/bzip2"
+	app-arch/bzip2"
 
 src_unpack() {
 	unpack ${A}
