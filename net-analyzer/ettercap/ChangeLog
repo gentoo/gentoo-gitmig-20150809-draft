@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.30 2004/07/05 23:58:19 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.31 2004/07/06 12:55:58 eldad Exp $
+
+  06 Jul 2004; Eldad Zack <eldad@gentoo.org> ettercap-0.7.0.ebuild:
+  Fixed typo: changed use_enable gtk2 -> gtk.
 
   06 Jul 2004; Eldad Zack <eldad@gentoo.org> +ettercap-0.7.0.ebuild:
   Version bump.

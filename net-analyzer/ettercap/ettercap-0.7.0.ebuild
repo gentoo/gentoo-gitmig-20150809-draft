@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.0.ebuild,v 1.1 2004/07/05 23:58:19 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.0.ebuild,v 1.2 2004/07/06 12:55:58 eldad Exp $
 
 
 # the actual version is "NG-0.7.0" but I suppose portage people will not be
@@ -42,7 +42,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		`use_enable gtk2 gtk` \
+		`use_enable gtk gtk` \
 		`use_enable debug debug` \
 		`use_with ssl openssl` \
 		`use_with ncurses ncurses` \
