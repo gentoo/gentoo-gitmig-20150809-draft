@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vimspell
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimspell/ChangeLog,v 1.9 2004/05/31 17:18:13 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimspell/ChangeLog,v 1.10 2004/06/09 19:43:14 mr_bones_ Exp $
+
+  09 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  vimspell-1.84-r1.ebuild:
+  inherit eutils for epatch
 
 *vimspell-1.84-r1 (31 May 2004)
 
