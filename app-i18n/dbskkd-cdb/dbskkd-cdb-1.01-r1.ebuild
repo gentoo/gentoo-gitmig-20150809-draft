@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/dbskkd-cdb-1.01-r1.ebuild,v 1.4 2003/11/13 04:25:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/dbskkd-cdb-1.01-r1.ebuild,v 1.5 2004/04/05 03:22:17 mr_bones_ Exp $
 
 DESCRIPTION="Yet another Dictionary server for the SKK Japanese-input software"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ne.jp/asahi/bdx/info/software/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 
-KEYWORDS="x86 ppc sparc alpha amd64"
+KEYWORDS="x86 ~ppc sparc alpha amd64"
 
 IUSE=""
 
