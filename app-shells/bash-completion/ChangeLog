@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.33 2003/05/16 21:42:30 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.34 2003/05/18 14:24:34 joker Exp $
+
+  18 May 2003; Christian Birchinger <joker@gentoo.org>
+  bash-completion-20030505.ebuild:
+  Marked stable on all archs. New Gentoo completion from Zach Forrest <zach@disinformation.ca>
+  is really needed for the latest portage releases.
 
 *bash-completion-20030505 (16 May 2003)
 
