@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.4.0.ebuild,v 1.5 2004/10/03 21:47:56 swegener Exp $
 
 inherit rpm
 

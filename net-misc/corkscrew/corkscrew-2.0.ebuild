@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/corkscrew-2.0.ebuild,v 1.5 2004/10/03 21:50:58 swegener Exp $
 
 DESCRIPTION="Corkscrew is a tool for tunneling SSH through HTTP proxies."
 HOMEPAGE="http://www.agroman.net/corkscrew/"
