@@ -1,18 +1,20 @@
 # ChangeLog for dev-java/jikes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.2 2002/04/07 11:17:15 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.3 2002/07/26 10:55:41 blizzy Exp $
 
-  07 04 2002; G.Bevin <gbevin@gentoo.org> jikes-1.15.ebuild,
-  files/jikes-1.15-gcc3.patch :
-  
-  Gcc3 related fixes.
-  
-*jikes-1.15 (1 Feb 2002)
+*jikes-1.16 (26 Jul 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+  26 Jul 2002; Maik Schreiber <blizzy@gentoo.org>:
+
+  New version.
+
+  07 Apr 2002; G.Bevin <gbevin@gentoo.org> jikes-1.15.ebuild,
+  files/jikes-1.15-gcc3.patch:
+
+  GCC 3 related fixes.
+
+*jikes-1.15 (05 Dec 2001)
+
+  05 Dec 2001; G.Bevin <gbevin@gentoo.org> :
+
+  New version.
