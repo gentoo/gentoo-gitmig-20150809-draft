@@ -1,0 +1,56 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/amaya/amaya-8.7.ebuild,v 1.1 2005/03/15 14:35:22 seemant Exp $
+
+inherit libtool
+
+S=${WORKDIR}/Amaya/LINUX-ELF
+
+DESCRIPTION="The W3C Web-Browser"
+SRC_URI="ftp://ftp.w3.org/pub/amaya/${PN}-src-${PV}.tgz
+	 ftp://ftp.w3.org/pub/amaya/old/${PN}-src-${PV}.tgz"
+HOMEPAGE="http://www.w3.org/Amaya/"
+
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+LICENSE="GPL-2"
+SLOT="0"
+IUSE="gtk"
+
+RDEPEND="
+	gtk? (
+		=x11-libs/gtk+-1.2*
+		=dev-libs/glib-1.2*
+		media-libs/imlib
+	)
+	!gtk? ( x11-libs/openmotif )"
+
+DEPEND="dev-lang/perl
+	media-libs/raptor
+	${RDEPEND}"
+
+src_compile() {
+	local myconf=""
+	mkdir ${S}
+	cd ${S}
+	if use gtk
+	then
+	    myconf="${myconf} --with-gtk"
+
+	else
+	    myconf="${myconf} --without-gtk"
+	fi
+	../configure \
+		${myconf} \
+		--prefix=/usr \
+		--host=${CHOST}
+	make || die
+}
+
+src_install () {
+	dodir /usr
+	make prefix=${D}/usr install || die
+	rm ${D}/usr/bin/amaya
+	rm ${D}/usr/bin/print
+	dosym /usr/Amaya/applis/bin/amaya /usr/bin/amaya
+	dosym /usr/Amaya/applis/bin/print /usr/bin/print
+}
