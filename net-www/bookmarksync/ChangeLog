@@ -1,6 +1,18 @@
 # ChangeLog for net-www/bookmarksync
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bookmarksync/ChangeLog,v 1.4 2003/11/23 00:24:27 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/bookmarksync/ChangeLog,v 1.5 2004/06/22 11:49:14 jmglov Exp $
+
+*bookmarksync-0.3.3 (22 Jun 2004)
+
+  22 Jun 2004; Josh Glover <jmglov@gentoo.org> bookmarksync-0.3.1.ebuild,
+  bookmarksync-0.3.2.ebuild, bookmarksync-0.3.3.ebuild, metadata.xml:
+  Fixed some QA issues in all three ebuilds and added metadata.xml. Gee, thanks
+  Repoman! :)
+
+*bookmarksync-0.3.3 (22 Jun 2004)
+
+  22 Jun 2004; Josh Glover <jmglov@gentoo.org> bookmarksync-0.3.3.ebuild:
+  Version bump; submitted by Miles Lubin in bug #47889
 
   23 Nov 2003; Martin Holzer <mholzer@gentoo.org> bookmarksync-0.3.1.ebuild,
   bookmarksync-0.3.2.ebuild:
