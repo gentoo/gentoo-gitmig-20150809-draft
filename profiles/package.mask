@@ -318,20 +318,20 @@ dev-lisp/cmucl-bin
 # new kde versions mask - will clean up shortly
 # these will all be removed very soon (02-02-04)
 
-=kde-base/kde-3.2.0_rc1
-=kde-base/kde-i18n-3.2.0_rc1
-=kde-base/kdeaccessibility-3.2.0_rc1
-=kde-base/kdeadmin-3.2.0_rc1
-=kde-base/kdeaddons-3.2.0_rc1
-=kde-base/kdeartwork-3.2.0_rc1
-=kde-base/kdebindings-3.2.0_rc1
-=kde-base/kdeedu-3.2.0_rc1
-=kde-base/kdegames-3.2.0_rc1
-=kde-base/kdegraphics-3.2.0_rc1
-=kde-base/kdesdk-3.2.0_rc1
-=kde-base/kdetoys-3.2.0_rc1
-=kde-base/kdeutils-3.2.0_rc1
-=kde-base/kdemultimedia-3.2.0_rc1
+=kde-base/kde-3.2.0
+=kde-base/kde-i18n-3.2.0
+=kde-base/kdeaccessibility-3.2.0
+=kde-base/kdeadmin-3.2.0
+=kde-base/kdeaddons-3.2.0
+=kde-base/kdeartwork-3.2.0
+=kde-base/kdebindings-3.2.0
+=kde-base/kdeedu-3.2.0
+=kde-base/kdegames-3.2.0
+=kde-base/kdegraphics-3.2.0
+=kde-base/kdesdk-3.2.0
+=kde-base/kdetoys-3.2.0
+=kde-base/kdeutils-3.2.0
+=kde-base/kdemultimedia-3.2.0
 =kde-base/kdepim-3.2.0
 =kde-base/kdenetwork-3.2.0
 =kde-base/kdelibs-3.2.0
