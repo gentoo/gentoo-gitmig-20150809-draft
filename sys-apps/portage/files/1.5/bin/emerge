@@ -351,10 +351,24 @@ if "rsync" in mymode:
 
 if ("system" in mymode) or ("update" in mymode):
 	#system profile mode
-	if not os.path.exists(portage.root+"etc/make.profile/packages"):
-		print "!!!",portage.root+"etc/make.profile/packages does not exist.  \"system\" mode unavailable."
+	if os.path.exists(portage.root+"etc/make.profile/packages"):
+		pfile=portage.root+"etc/make.profile/packages"
+	elif os.path.exists("/etc/make.profile/packages"):
+		print ">>> Couldn't find",portage.root+"/etc/make.profile/packages;"
+		print ">>> Using /etc/make.profile/packages instead."
+		pfile="/etc/make.profile/packages"
+	elif os.path.exists(os.path.normpath(portage.settings["PORTDIR"]+"/profiles/default/packages")):
+		print ">>> Couldn't find",portage.root+"/etc/make.profile/packages;"
+		print ">>> Couldn't find /etc/make.profile/packages;"
+		print ">>> Found default profile in /usr/portage/profiles; using it instead."
+		pfile=os.path.normpath(portage.settings["PORTDIR"]+"/profiles/default/packages")
+	else:
+		print "!!! Couldn't find",portage.root+"/etc/make.profile/packages;"
+		print "!!! Couldn't find /etc/make.profile/packages;"
+		print "!!! Couldn't find /usr/portage/profiles/default/packages;"
+		print "\"system\" mode unavailable."
 		sys.exit(1)
-	myfile=open(portage.root+"etc/make.profile/packages","r")
+	myfile=open(pfile,"r")
 	mylines=myfile.readlines()
 	myfile.close()
 	mydepgraph=depgraph(mymode,myopts)
