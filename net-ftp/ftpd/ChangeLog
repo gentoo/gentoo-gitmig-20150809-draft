@@ -1,11 +1,12 @@
 # ChangeLog for net-ftp/ftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ChangeLog,v 1.3 2003/01/16 02:02:27 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ChangeLog,v 1.4 2003/01/16 02:25:11 raker Exp $
 
 *ftpd-0.17 (25 Nov 2002)
 
   15 Jan 2003; Nick Hadaway <raker@gentoo.org> ftpd-0.17.ebuild :
-  Fixed a typo in postinst
+  Fixed a typo in postinst and added xinetd as an RDEPEND and now
+  installing an /etc/xinetd.d/ftp.  Also changed to epatch.
 
   05 Dec 2002; Nick Hadaway <raker@gentoo.org> ftpd-0.17.ebuild :
   Marked stable.
