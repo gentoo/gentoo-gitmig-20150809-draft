@@ -1,0 +1,32 @@
+#!/bin/sh
+#RCUPDATE:2 3 4:80:This line is required for script management
+ 
+. /etc/rc.d/config/functions
+ 
+SERVICE=apcupsd
+DESC="apcupsd"
+EXE=/usr/sbin/apcupsd
+opts="start stop restart"
+ 
+start() {
+                rm -f /etc/apcupsd/powerfail
+		ebegin "Starting ${DESC}"
+                start-stop-daemon --start --quiet --exec ${EXE} -- 1>&2
+                eend $? "Error starting ${DESC}."
+}
+ 
+stop() {
+                ebegin "Stopping ${DESC}"
+                start-stop-daemon --stop --quiet --exec ${EXE} -- 1>&2
+                eend $? "Error stopping ${DESC}."
+}
+ 
+restart() {
+ 
+                stop
+                start
+ 
+}
+ 
+ 
+doservice ${@}
