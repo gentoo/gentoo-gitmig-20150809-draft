@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.40 2004/10/03 07:00:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.41 2004/10/15 06:47:50 morfic Exp $
+
+  15 Oct 2004; Daniel Goller <morfic@gentoo.org> :
+  Cleaning realvnc out of tightvnc, too buggy to maintain, 1.3 dev5 is here in
+  its place.
 
   02 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; tightvnc-1.2.8.ebuild:
   x11-base/xfree -> virtual/x11.
