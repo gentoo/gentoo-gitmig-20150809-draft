@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4496-r4.ebuild,v 1.2 2003/11/02 14:12:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4496-r4.ebuild,v 1.3 2003/11/02 15:48:02 azarah Exp $
 
+PKG_V="pkg2"
 NV_V="${PV/1.0./1.0-}"
 NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
-S="${WORKDIR}/${NV_PACKAGE}-pkg2/usr/src/nv"
+S="${WORKDIR}/${NV_PACKAGE}-${PKG_V}/usr/src/nv"
 DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
 HOMEPAGE="http://www.nvidia.com/"
-SRC_URI="ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${NV_PACKAGE}-pkg2.run"
+SRC_URI="ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${NV_PACKAGE}-${PKG_V}.run"
 
 # The slow needs to be set to $KV to prevent unmerges of modules for other kernels.
 LICENSE="NVIDIA"
@@ -78,7 +79,7 @@ is_2_6_kernel() {
 
 src_unpack() {
 	cd ${WORKDIR}
-	bash ${DISTDIR}/${NV_PACKAGE}-pkg2.run --extract-only
+	bash ${DISTDIR}/${NV_PACKAGE}-${PKG_V}.run --extract-only
 
 	# Next section applies patches for linux-2.5 kernel, and/or
 	# bugfixes for linux-2.4.  All these are from:

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.52 2003/11/02 14:12:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.53 2003/11/02 15:48:02 azarah Exp $
+
+  02 Nov 2003; Martin Schlemmer <azarah@gentoo.org>
+  nvidia-kernel-1.0.4496-r4.ebuild:
+  Add PKG_V to make sure updating the package used will not break things again.
 
   02 Nov 2003; Martin Holzer <mholzer@gentoo.org>
   nvidia-kernel-1.0.4496-r4.ebuild:
