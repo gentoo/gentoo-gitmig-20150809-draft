@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 219f53a9f00a5ef40e61b02a31115bdf ChangeLog 1656
+MD5 58d97271895adfd20599748062ef7ba8 ChangeLog 1803
 MD5 4f60a6bd1f6339f4dd59094ffc469a18 hsflinmodem-5.03.27.02122600.ebuild 802
 MD5 22ead990c1321ae98d710aa1c7ec9456 hsflinmodem-5.03.27.03042700.ebuild 821
+MD5 80b1a0401e95d2ab68169495f32a7c12 hsflinmodem-6.03.00.04082400.ebuild 823
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 c5cbbff1d0d228411ee4ef4b649bda3f hsflinmodem-6.03.00.04082400.ebuild 851
 MD5 cc8c9a24bc6049eb97ac8f5f66aec4fd files/digest-hsflinmodem-5.03.27.02122600 88
 MD5 222986571fa7485c7c0868210312f2c6 files/digest-hsflinmodem-5.03.27.03042700 88
 MD5 ad2e608019b3c31ec960b0d40edd4021 files/digest-hsflinmodem-6.03.00.04082400 84
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBXskPI1lqEGTUzyQRAnwpAJ9epWynYIAMVX+FE57U73qxKYVspgCfabyQ
-PYhWYvtGz6wCI81fHvbAA80=
-=mNAA
+iD8DBQFBjkkqjtv59x0+BrURAvpdAKCtt1RUcwo5FqPDNck0rvKf5Rz3agCgo/PP
+GU154/iXleMysq7nlukeRO0=
+=S93J
 -----END PGP SIGNATURE-----

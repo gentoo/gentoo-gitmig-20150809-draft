@@ -1,7 +1,11 @@
 # ChangeLog for net-dialup/hsflinmodem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsflinmodem/ChangeLog,v 1.12 2004/10/02 15:28:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsflinmodem/ChangeLog,v 1.13 2004/11/07 16:11:09 mrness Exp $
 
+  07 Nov 2004; Alin Nastac <mrness@gentoo.org>
+  hsflinmodem-6.03.00.04082400.ebuild:
+  Increase maintainability by proper setup of variable MY_P
+  
 *hsflinmodem-6.03.00.04082400 (25 Sep 2004)
 
   25 Sep 2004; Heinrich Wendel <lanius@gentoo.org>
