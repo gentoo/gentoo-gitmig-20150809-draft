@@ -22,6 +22,11 @@
 ##
 
 
+# John Mylchreest <johnm@gentoo.org> (14 August 2003)
+# Headers have changed and break support with many video drivers such as
+# bttv or zoran. Kernel patch is being worked on bt lm_sensor people afaik
+>=sys-apps/lm-sensors-2.8
+
 # g2boojum@gentoo.org (11 Aug 2003)
 # Masking until approved (or fixed) by the web-app folks
 net-www/scgi
