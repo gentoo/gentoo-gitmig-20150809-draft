@@ -1,0 +1,11 @@
+--- gstreamer-0.6.3/gst/gstplugin.c.old	2003-08-29 09:39:45.301019616 +0800
++++ gstreamer-0.6.3/gst/gstplugin.c	2003-08-29 09:55:03.862377064 +0800
+@@ -180,7 +180,7 @@
+   module = g_module_open (filename, G_MODULE_BIND_LAZY);
+ 
+   if (module != NULL) {
+-    if (g_module_symbol (module, "plugin_desc", (gpointer *)&desc)) {
++    if (g_module_symbol (module, "plugin_desc", (gpointer *)((void *)&desc))) {
+       GST_DEBUG (GST_CAT_PLUGIN_LOADING, "plugin \"%s\" loaded, called entry function...", filename);
+ 
+       plugin->filename = g_strdup (filename);
