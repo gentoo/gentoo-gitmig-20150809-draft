@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <pebenito@gentoo.org> (24 Jan 2004)
+# badly broken
+=sys-boot/grub-0.93.20040125
+
 # <mattam@gentoo.org> (24 Jan 2004)
 # OCaml binary incompatibility and deps not rebuilt.
 # bug #39246
