@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.63 2004/02/05 16:41:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.64 2004/02/10 06:48:46 pylon Exp $
+
+  10 Feb 2004; Lars Weiler <pylon@gentoo.org> kdegames-3.2.0.ebuild:
+  Stable on ppc.
 
   05 Feb 2004; Luca Barbato <lu_zero@gentoo.org> kdegames-3.2.0.ebuild:
   Marked ~ppc
