@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2727 2004/02/27 06:56:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2728 2004/03/03 02:11:50 weeve Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -796,3 +796,6 @@ dev-util/arch
 # mask libsqlora8 until I can find an oracle 8i install
 dev-libs/libsqlora8
 
+# weeve@gentoo.org 02 Mar 2004
+# mask slib-3.1.1 until gnucash can get a fix for it
+=dev-libs/slib-3.1.1
