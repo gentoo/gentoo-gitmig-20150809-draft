@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.3 2004/03/27 03:20:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.4 2004/04/04 18:38:50 liquidx Exp $
 
 IUSE=""
 DESCRIPTION="Gnome 2 based ALSA Mixer"
@@ -15,6 +15,11 @@ RDEPEND=">=media-libs/alsa-lib-0.9.0_rc1
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/desktop-file-utils"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-gtk24.patch
+}
 
 src_install() {
 	make DESTDIR=${D} install || die
