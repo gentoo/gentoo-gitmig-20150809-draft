@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5.ebuild,v 1.8 2003/10/25 17:19:11 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5.ebuild,v 1.9 2004/01/26 00:55:44 vapier Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -135,9 +135,9 @@ src_unpack() {
 	# <azarah@gentoo.org> (23 Feb 2003)
 	epatch ${FILESDIR}/1.3/${PN}-1.3-fix-RAW-target.patch
 
-	export WANT_AUTOCONF_2_1=1
+	export WANT_AUTOCONF=2.1
 	autoconf &> /dev/null
-	unset WANT_AUTOCONF_2_1
+	unset WANT_AUTOCONF
 
 	# Unpack the enigmail plugin
 	if [ -n "`use crypt`" -a -z "`use moznomail`" ]
