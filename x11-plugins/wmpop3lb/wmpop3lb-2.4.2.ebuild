@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/wmpop3lb-2.4.2.ebuild,v 1.7 2004/06/24 23:16:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop3lb/wmpop3lb-2.4.2.ebuild,v 1.8 2004/06/28 21:30:32 agriffis Exp $
 
 IUSE=""
 
@@ -14,7 +14,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64"
 
-DEPEND="virtual/x11"
+DEPEND="virtual/x11
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}/wmpop3
