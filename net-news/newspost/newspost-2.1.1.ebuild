@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/newspost-2.1.1.ebuild,v 1.2 2003/09/08 11:36:02 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/newspost-2.1.1.ebuild,v 1.3 2003/09/08 11:40:48 msterret Exp $
 
 DESCRIPTION="a usenet binary autoposter for unix"
 HOMEPAGE="http://newspost.unixcab.org/"
@@ -13,26 +13,24 @@ SLOT="0"
 # but it should mean that it is 64bit clean.
 KEYWORDS="x86"
 
-DEPEND="sys-libs/glibc sys-devel/gcc"
-RDEPEND="sys-libs/glibc"
-
-S=${WORKDIR}/${P}
+RDEPEND="virtual/glibc"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
-	unpack $A
-	cd $S
-	cp Makefile Makefile.orig
-	sed -e "s:OPT_FLAGS = :OPT_FLAGS = ${CFLAGS}#:" Makefile.orig > Makefile
+	unpack ${A}
+	cd ${S}
+	sed -i \
+		-e "s:OPT_FLAGS = :OPT_FLAGS = ${CFLAGS}#:" Makefile || \
+			die "sed Makefile failed"
 }
 
 src_compile() {
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install () {
 	dobin newspost
 	doman man/man1/newspost.1
-	dodoc README
-	dodoc CHANGES
-	dodoc COPYING
+	dodoc README CHANGES COPYING
 }
