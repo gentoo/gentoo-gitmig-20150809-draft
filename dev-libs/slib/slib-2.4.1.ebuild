@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/slib-2.4.1.ebuild,v 1.2 2001/06/04 21:57:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/slib-2.4.1.ebuild,v 1.3 2001/07/27 20:44:17 hallski Exp $
 
 P=slib2d1
 A=${P}.zip
@@ -11,10 +11,10 @@ SRC_URI="http://swissnet.ai.mit.edu/ftpdir/scm/${A}"
 HOMEPAGE="http://swissnet.ai.mit.edu/~jaffer/SLIB.html"
 
 DEPEND=">=app-arch/unzip-5.21
-	>=dev-util/guile-1.4
-	>=dev-libs/g-wrap-0.9.5"
-RDEPEND=">=dev-util/guile-1.4
-	>=dev-libs/g-wrap-0.9.5"
+	>=dev-util/guile-1.4"
+#	>=dev-libs/g-wrap-0.9.5"
+RDEPEND=">=dev-util/guile-1.4"
+#	>=dev-libs/g-wrap-0.9.5"
 src_install () {
 
     insinto /usr/share/guile/site/slib
