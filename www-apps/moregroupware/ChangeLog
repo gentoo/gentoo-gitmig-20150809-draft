@@ -1,0 +1,10 @@
+# ChangeLog for www-apps/moregroupware
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moregroupware/ChangeLog,v 1.1 2004/08/19 15:14:24 rl03 Exp $
+
+*moregroupware-0.7.2 (19 Aug 2004)
+
+  19 Aug 2004; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
+  +files/postinstall-en.txt, +files/reconfig, +moregroupware-0.7.2.ebuild:
+  Initial ebuild (requested in bug #55209).
+
