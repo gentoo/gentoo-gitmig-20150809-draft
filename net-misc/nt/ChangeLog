@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/ChangeLog,v 1.4 2002/06/03 06:38:35 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/ChangeLog,v 1.5 2002/06/07 20:01:18 azarah Exp $
+
+*nt-2.01 (7 Jun 2002)
+
+  7 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Bump to latest version.
 
 *nt-2.0 (30 Apr 2002)
 
