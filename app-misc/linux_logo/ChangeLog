@@ -2,7 +2,12 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author Harri Hautakangas <harri@hautakangas.com>
 # Maintainer: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux_logo/ChangeLog,v 1.1 2002/07/09 12:16:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux_logo/ChangeLog,v 1.2 2002/07/24 21:52:25 seemant Exp $
+
+  24 Jul 2002; Seemant Kulleen <seemant@gentoo.org> linux_logo-4.02.ebuild :
+
+  Now installs into the live filesystem, instead of into ${D}. Thanks to:
+  theim@umd.umich.edu (Todd Heim) in bug #5511.
 
 *linux_logo-4.02 (04 Jun 2002)
 
