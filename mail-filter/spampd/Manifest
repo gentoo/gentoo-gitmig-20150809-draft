@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a37082dafc8c980d307a73551197a641 spampd-2.11.ebuild 822
-MD5 5e29310b34becc4f38e2cba468636230 ChangeLog 1241
-MD5 f3ad4878a12fd76b683f49a0dbf9e779 spampd-2.11-r1.ebuild 830
+MD5 d92e9063954ddd208c3c8967a3baab59 spampd-2.11.ebuild 818
+MD5 a9d72e6381c3c674c8b6036f5a2f72eb ChangeLog 1352
+MD5 0a0d68c252f9a4474dfafcd0924957f5 spampd-2.11-r1.ebuild 826
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 8dc3caf9e82a80473c41b5d1e64bbbd5 files/conf 665
 MD5 17b3ddc9a6650576cdaddbc62052fe0b files/digest-spampd-2.11 62
@@ -12,7 +12,7 @@ MD5 17b3ddc9a6650576cdaddbc62052fe0b files/digest-spampd-2.11-r1 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBN7It10xuJSrg3/sRAi0nAJ9lDHT+hDQ/MHvpvhWCd0wXkxu0SACePfZx
-auR8YJLJcLIf1VaWFRbKPoY=
-=z1Ej
+iD8DBQFBVb7T10xuJSrg3/sRApYxAJ4thQIAXkUxf+gOaUUW7xucCVtUJACfZB1+
+r5bQhJ3Rh6jlHI11b0Hg1Mc=
+=WmJI
 -----END PGP SIGNATURE-----
