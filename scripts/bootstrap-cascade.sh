@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gento Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.7 2004/07/19 05:02:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.8 2004/07/23 13:41:23 solar Exp $
 
 # drobbins optimized this script at some point which made a bootstrap
 # to complete 20 mins to 2 hours faster, depending on CPU. He did this
@@ -148,7 +148,7 @@ sed 's/[][,]//g; s/ /\n/g; s/\*//g' | while read p; do n=${p##*/}; n=${n%\'};
 n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 
 # this stuff should never fail but will if not enough is installed.
-[ "${myBASELAYOUT}" = "" ] && myBASELAYOUT="$(portageq best_version / virtual/baselayout)"
+#[ "${myBASELAYOUT}" = "" ] && myBASELAYOUT="$(portageq best_version / virtual/baselayout)"
 [ "${myBASELAYOUT}" = "" ] && myBASELAYOUT="baselayout"
 [ "${myPORTAGE}" = "" ] && myPORTAGE="portage"
 [ "${myBINUTILS}" = "" ] && myBINUTILS="binutils"
@@ -161,7 +161,10 @@ n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 [ "${myNCURSES}" = "" ] && myNCURSES="ncurses"
 
 # Do we really have no 2.4.x nptl kernels in portage?
-[ "${USE_NPTL}" = 1 ] && myOS_HEADERS="$(portageq best_visible / '>=sys-kernel/linux26-headers-2.6.0')"
+if [ "${USE_NPTL}" = 1 ]; then
+	myOS_HEADERS="$(portageq best_visible / '>=sys-kernel/linux26-headers-2.6.0')"
+	[ ${myOS_HEADERS}" != "" ] && myOS_HEADERS=">=${myOS_HEADERS}"
+fi
 [ "${myOS_HEADERS}" = "" ] && myOS_HEADERS="virtual/os-headers"
 
 einfo "Using baselayout : ${myBASELAYOUT}"
@@ -208,6 +211,10 @@ export FEATURES="${FEATURES} -collision-protect"
 USE="-* build bootstrap" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
 echo -------------------------------------------------------------------------------
 export USE="${ORIGUSE} bootstrap"
+
+# We can't unmerge headers which may or may not exist yet. If your
+# trying to use nptl, it may be needed to flush out any old headers
+# before fully bootstrapping. 
 #emerge ${STRAP_EMERGE_OPTS} -C virtual/os-headers || cleanup 1
 emerge ${STRAP_EMERGE_OPTS} ${myOS_HEADERS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} || cleanup 1
 echo -------------------------------------------------------------------------------
