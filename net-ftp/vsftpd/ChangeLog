@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.41 2004/09/23 15:16:25 jforman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.42 2004/09/24 17:12:14 jforman Exp $
+
+  24 Sep 2004; Jeffrey Forman <jforman@gentoo.org> vsftpd-2.0.1.ebuild:
+  added patch for gentoo-friendly file locations, wrt bug #65116
 
 *vsftpd-2.0.1 (23 Sep 2004)
 
