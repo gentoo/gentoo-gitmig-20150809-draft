@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.45 2003/11/12 17:07:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.46 2003/11/12 22:44:28 agriffis Exp $
+
+  12 Nov 2003; Aron Griffis <agriffis@gentoo.org> gvim-6.2-r1.ebuild,
+  gvim-6.2-r2.ebuild, gvim-6.2-r3.ebuild, gvim-6.2-r5.ebuild, gvim-6.2.ebuild:
+  Conform to Spider's description of gtk/gtk2 in
+  http://marc.theaimsgroup.com/?l=gentoo-dev&m=106642560411112&w=2
 
   12 Nov 2003; Aron Griffis <agriffis@gentoo.org> gvim-6.1-r6.ebuild,
   gvim-6.1-r7.ebuild, gvim-6.1-r8.ebuild:
