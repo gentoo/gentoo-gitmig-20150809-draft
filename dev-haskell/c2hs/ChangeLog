@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/c2hs
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.1 2004/08/24 08:47:49 kosmikus Exp $
+
+*c2hs-0.13.1 (24 Aug 2004)
+
+  24 Aug 2004; Andres Loeh <kosmikus@gentoo.org> c2hs-0.13.1.ebuild,
+  metadata.xml:
+  Initial import.
+
