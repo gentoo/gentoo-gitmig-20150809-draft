@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.516 2004/07/28 20:05:00 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.517 2004/07/29 06:41:19 nakano Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -409,6 +409,8 @@ net-www/apache:distcache - Enable SSL distcache support
 net-www/apache:threads - Enable thread support
 net-www/drupal:minimal - Disables installing the additional plugins
 net-www/elinks:lua - enable lua support
+net-www/kazehakase:migemo - enable migemo support for Japanese incremental search.
+net-www/kazehakase:estraier - enable estraier support for full-text search in history.
 net-www/links:javascript - enable javascript support
 net-www/mozilla-firefox:mozdomi - Enable DOM inspector in firefox
 net-www/mozilla-firefox:moznoxft - Disable XFT support in and/or firefox
