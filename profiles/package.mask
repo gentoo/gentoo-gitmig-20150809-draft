@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <styx@gentoo.org> /16 Aug 2002)
+# Masked for testing
+>=sys-apps/quota-3.04
+
 # <seemant@gentoo.org> (16 Aug 2002)
 # Masked for testing
 =app-admin/modlogan-0.7.18
