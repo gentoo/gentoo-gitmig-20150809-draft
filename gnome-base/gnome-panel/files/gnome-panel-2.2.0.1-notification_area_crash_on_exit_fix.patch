@@ -1,0 +1,12 @@
+diff -ur gnome-panel-2.2.0.1/applets/notification_area/eggtraymanager.c gnome-panel-2.2.0.1.patched/applets/notification_area/eggtraymanager.c
+--- gnome-panel-2.2.0.1/applets/notification_area/eggtraymanager.c	2003-01-30 06:52:16.000000000 +0100
++++ gnome-panel-2.2.0.1.patched/applets/notification_area/eggtraymanager.c	2003-02-17 14:36:59.000000000 +0100
+@@ -399,7 +399,7 @@
+ 
+   invisible = manager->invisible;
+   
+-  display = GDK_WINDOW_XDISPLAY (manager->invisible);
++  display = GDK_WINDOW_XDISPLAY (manager->invisible->window);
+   
+   if (XGetSelectionOwner (display, manager->selection_atom) ==
+       GDK_WINDOW_XWINDOW (manager->invisible->window))
