@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.45 2003/06/15 17:02:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.46 2003/06/15 17:03:24 seemant Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -34,8 +34,7 @@ media-sound/totem:gstreamer - Enable gstreamer instead of Xine backend
 media-video/transcode:altivec - Enable Altivec code portions
 net-analyzer/slurm:altcolors - Use alternative color set
 net-fs/shfs:amd - Enable automounter support
-net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org
-project
+net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-mail/exim:exiscan - Patch providing support for content scanning backward-compatability
 net-mail/exim:exiscan-acl - Patch providing support for content scanning
 net-mail/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a plugin
