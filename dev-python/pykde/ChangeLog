@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pykde
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.9 2003/11/10 19:00:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.10 2003/12/17 03:37:45 kloeri Exp $
+
+  17 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> pykde-3.5.2.ebuild,
+  pykde-3.7.4.ebuild:
+  Remove old versions with broken dependencies
 
 *pykde-3.7.4-r2 (10 Nov 2003)
 
