@@ -7,7 +7,7 @@ MD5 11f83de3d100083dec4fa85c3a929f78 libxklavier-1.03.ebuild 949
 MD5 26aaee28fa7db5afc206491de549def4 libxklavier-1.04-r1.ebuild 1071
 MD5 ddfe99faedd0be2841fd37eacdc38112 libxklavier-1.04.ebuild 999
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 07113208bc9a4f2b09be2a99d1980a88 libxklavier-2.0.ebuild 962
+MD5 89637c458258530dbdee439529e39aa2 libxklavier-2.0.ebuild 1011
 MD5 2ee4cc635af9abc1de963e4d38525430 files/digest-libxklavier-1.02 68
 MD5 e25e334ceafe0426056d920a3ead52c3 files/digest-libxklavier-1.03 68
 MD5 6b672d420ef40c97961975eb5be760e2 files/digest-libxklavier-1.04 68
@@ -20,7 +20,7 @@ MD5 da5387283d8b989c1809f27825f60310 files/digest-libxklavier-2.0 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCLmS8XjcVihsel0ERAmADAKCwWZ2Aw+gCZw7yX7EDpfdc3MwGTQCg7Nsy
-9VWHtePy8bUbSS7EwqZnQrc=
-=cq2Q
+iD8DBQFCLmnfXjcVihsel0ERAtyXAJ9mNEt8FG+m9HVGmo6O4jXUm0/4NgCgjEp0
+6SxHXlAFHO5s/oT8d4sPWVw=
+=nmYh
 -----END PGP SIGNATURE-----
