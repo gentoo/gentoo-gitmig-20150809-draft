@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/wmxmms-0.1.4.ebuild,v 1.5 2004/04/06 02:58:08 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/wmxmms-0.1.4.ebuild,v 1.6 2004/04/12 07:05:05 eradicator Exp $
 
 IUSE=""
 MY_P=${P/wm/WM}
@@ -11,10 +11,18 @@ SRC_URI="http://www.dockapps.com/download.php/id/252/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha hppa amd64"
 
 DEPEND="virtual/x11
 	media-sound/xmms"
+
+src_unpack() {
+	unpack ${A}
+
+	# Fix bug #44407
+	cd ${S}
+	make clean
+}
 
 src_compile() {
 	econf || die
