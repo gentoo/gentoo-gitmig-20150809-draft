@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.1 2003/11/12 18:08:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.2 2003/11/12 21:30:11 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 #
@@ -177,7 +177,7 @@ tetex_src_install() {
 	while read l; do
 		dst=/usr/bin/`echo $l | awk '{ print $1 }'`
 		src=/usr/bin/`echo $l | awk '{ print $2 }'`
-		if [ ! -f ${D}$dst ] ; then
+		if [ ! -f ${D}$dst -a "$dst" != "$src" ] ; then
 			einfo "Making symlinks from $src to $dst"
 			dosym $src $dst
 		fi
