@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/xawdecode-1.8.1.ebuild,v 1.1 2003/11/06 09:13:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/xawdecode-1.8.2.ebuild,v 1.1 2004/01/22 06:43:00 seemant Exp $
 
 IUSE="alsa jpeg encode ffmpeg xvid lirc xosd"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND="virtual/x11
 	>=media-libs/zvbi-0.2.4
@@ -22,46 +22,35 @@ RDEPEND="virtual/x11
 	encode? ( >=media-sound/lame-3.93 )
 	jpeg? ( media-libs/jpeg )
 	lirc? ( app-misc/lirc )
-	alsa? ( media-libs/alsa-lib media-sound/alsa-utils )
+	alsa? ( >=media-libs/alsa-lib-0.9 )
 	xosd? ( >=x11-libs/xosd-2.2.2 )"
 
 DEPEND="${RDEPEND}
 	sys-apps/sed"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-configure-alsa-fixes.patch
+}
+
 src_compile() {
 	local myconf
-
-	use alsa \
-		&& myconf="${myconf} --enable-alsa" \
-		|| myconf="${myconf} --disable-alsa"
-
-	use jpeg \
-		&& myconf="${myconf} --enable-jpeg" \
-		|| myconf="${myconf} --disable-jpeg"
-
-	use lirc \
-		&& myconf="${myconf} --enable-lirc" \
-		|| myconf="${myconf} --disable-lirc"
 
 	use x86 \
 		&& myconf="${myconf} --enable-divx4linux" \
 		|| myconf="${myconf} --disable-divx4linux"
 
-	use ffmpeg \
-		&& myconf="${myconf} --enable-ffmpeg" \
-		|| myconf="${myconf} --disable-ffmpeg"
+	econf \
+		`use_enable alsa` \
+		`use_enable jpeg` \
+		`use_enable lirc` \
+		`use_enable ffmpeg` \
+		`use_enable xvid` \
+		`use_enable xosd` \
+		${myconf} || die "Configuration failed."
 
-	use xvid \
-		&& myconf="${myconf} --enable-xvid" \
-		|| myconf="${myconf} --disable-xvid"
-
-	use xosd \
-		&& myconf="${myconf} --enable-xosd" \
-		|| myconf="${myconf} --disable-xosd"
-
-	econf ${myconf} || die "Configuration failed."
-
-	emake || die
+	emake || die "Compilation failed."
 }
 
 src_install() {
@@ -85,11 +74,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	mkfontdir /usr/X11R6/lib/X11/fonts/misc > /dev/null 2>&1
+	if [ "${ROOT}" = "/" ]
+	then
+		mkfontdir /usr/X11R6/lib/X11/fonts/misc > /dev/null 2>&1
+	fi
 	einfo "Please note that this ebuild created a suid-binary:"
 	einfo "/usr/bin/xawdecode_v4l-conf"
 }
 
 pkg_postrm() {
-	mkfontdir /usr/X11R6/lib/X11/fonts/misc > /dev/null 2>&1
+	if [ "${ROOT}" = "/" ]
+	then
+		mkfontdir /usr/X11R6/lib/X11/fonts/misc > /dev/null 2>&1
+	fi
 }

@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/xawdecode
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/ChangeLog,v 1.7 2003/11/06 09:13:24 seemant Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/ChangeLog,v 1.8 2004/01/22 06:43:00 seemant Exp $
+
+*xawdecode-1.8.2 (21 Jan 2004)
+
+  21 Jan 2004; Seemant Kulleen <seemant@gentoo.org> xawdecode-1.8.0.ebuild,
+  xawdecode-1.8.1.ebuild, xawdecode-1.8.2.ebuild,
+  files/xawdecode-1.8.2-configure-alsa-fixes.patch:
+  version bump, and switched to use_enable syntax instead. This closes bug
+  #34766 by dju` <dju@elegiac.net>, with ebuilds and patches provided by: TGL
+  <degrenier@easyconnect.fr>
 
 *xawdecode-1.8.1 (06 Nov 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/xawdecode-1.8.0.ebuild,v 1.5 2003/10/29 00:36:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/xawdecode-1.8.0.ebuild,v 1.6 2004/01/22 06:43:00 seemant Exp $
 
 IUSE="alsa jpeg encode ffmpeg xvid lirc xosd"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~mips ~arm"
+KEYWORDS="x86 ~ppc ~sparc"
 
 RDEPEND="virtual/x11
 	>=media-libs/zvbi-0.2.4
@@ -31,35 +31,18 @@ DEPEND="${RDEPEND}
 src_compile() {
 	local myconf
 
-	use alsa \
-		&& myconf="${myconf} --enable-alsa" \
-		|| myconf="${myconf} --disable-alsa"
-
-	use jpeg \
-		&& myconf="${myconf} --enable-jpeg" \
-		|| myconf="${myconf} --disable-jpeg"
-
-	use lirc \
-		&& myconf="${myconf} --enable-lirc" \
-		|| myconf="${myconf} --disable-lirc"
-
 	use x86 \
 		&& myconf="${myconf} --enable-divx4linux" \
 		|| myconf="${myconf} --disable-divx4linux"
 
-	use ffmpeg \
-		&& myconf="${myconf} --enable-ffmpeg" \
-		|| myconf="${myconf} --disable-ffmpeg"
-
-	use xvid \
-		&& myconf="${myconf} --enable-xvid" \
-		|| myconf="${myconf} --disable-xvid"
-
-	use xosd \
-		&& myconf="${myconf} --enable-xosd" \
-		|| myconf="${myconf} --disable-xosd"
-
-	econf ${myconf} || die "Configuration failed."
+	econf \
+		`use_enable alsa` \
+		`use_enable jpeg` \
+		`use_enable lirc` \
+		`use_enable ffmpeg` \
+		`use_enable xvid` \
+		`use_enable xosd` \
+		${myconf} || die "Configuration failed."
 
 	emake PERF_FLAGS="${CFLAGS}" || die "Compilation failed."
 	# Or should we keep the optimized flags they suggest?
