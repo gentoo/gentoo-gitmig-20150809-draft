@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cf9bbefed22772766854d98425f479b1 ChangeLog 461
-MD5 e78530d6eca38328154c07f95444717d ccze-0.2.1.ebuild 646
+MD5 b87a52acf2f73fde7a2a76f67ca04f70 ccze-0.2.1.ebuild 643
 MD5 f6258721f177c5397ecb5650aa04d9c8 files/digest-ccze-0.2.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3E0qHTu7gpaalycRAlo1AJ0QWOf7ioCB8J/T2/5C/iSeZlfa/ACePtxe
+iuvbFp1N5JfWpz9iK3NfUUw=
+=DdZK
+-----END PGP SIGNATURE-----
