@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.1.9-r2.ebuild,v 1.2 2004/03/24 17:03:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.1.9-r3.ebuild,v 1.1 2004/03/30 00:05:44 iggy Exp $
 
 # TODO
 # the "Gentoo way" is to use /usr/src/linux, not the running kernel
@@ -20,6 +20,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
+[ "`echo ${KV} | cut -f2 -d.`" == 6 ] && SANDBOX_DISABLED="1"
+
 IUSE="lirc"
 
 DEPEND="lirc? ( app-misc/lirc )"
@@ -29,19 +31,15 @@ src_unpack() {
 
 	cd ${WORKDIR}/ivtv
 	epatch ${DISTDIR}/${PF}.patch || die "${PF} patch failed"
-	sed -i -e 's:include <linux/videodev2.h>:include "videodev2.h":' utils/radio.c
 }
 
 src_compile() {
-#	if `grep -q I2C_VERSION.*2\.8 /usr/src/linux/include/linux/i2c.h` ;then
-#		einfo "found new i2c in your kernel source"
-#		sed -i -e \
-#			's:^#CFLAGS += -DNEW_I2C:CFLAGS += -DNEW_I2C:' \
-#			${WORKDIR}/ivtv/driver/Makefile
-#	fi
+	[ "${ARCH}" == "x86" ] && old_ARCH="${ARCH}" && ARCH="i386"
 
 	cd ${WORKDIR}/ivtv/driver
 	make || die "build of driver failed"
+
+	[ -n "${old_ARCH}" ] && ARCH="${old_ARCH}"
 
 	cd ${WORKDIR}/ivtv/utils
 	make ||  die "build of utils failed"
@@ -66,8 +64,12 @@ src_install() {
 	dodoc README.mythtv-ivtv README.ptune README.radio README.vbi zvbi.diff
 	dodoc lircd-g.conf lircd.conf lircrc
 
+	[ "${ARCH}" == "x86" ] && old_ARCH="${ARCH}" && ARCH="i386"
+
 	cd ${WORKDIR}/ivtv/driver
 	make DESTDIR=${D} install || die "installation of driver failed"
+
+	[ -n "${old_ARCH}" ] && ARCH="${old_ARCH}"
 
 	dodir /etc/modules.d
 
@@ -102,5 +104,8 @@ pkg_postinst() {
 	einfo "LIRC_OPTS=\"--with-x --with-driver=hauppauge --with-major=61"
 	einfo "	--with-port=none --with-irq=none\""
 	einfo "see http://ivtv.sourceforge.net for more info"
+	echo
 	einfo "to use vbi, you'll need a few other things, check README.vbi in the docs dir"
+	echo
+	einfo "you'll also need to add 'LIRCD_OPTS=\"--device=/dev/lirc/0\"' to /etc/conf.d/lircd"
 }
