@@ -1,10 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/planet-ccrma-sources-2.4.21.ebuild,v 1.6 2004/01/07 00:31:38 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/planet-ccrma-sources-2.4.21-r4.ebuild,v 1.1 2004/01/07 00:31:38 plasmaroo Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
 inherit kernel || die
+inherit rpm || die
 
 OKV=2.4.21
 EXTRAVERSION="-1.ll.acpi"
@@ -31,24 +32,18 @@ S=${WORKDIR}/linux-${KV}
 # generate a new diff for every minor version update.  (Also not to many
 # people have 2.4.18 vanilla source tarballs floating around these days)
 
-DEPEND="${DEPEND} app-arch/rpm2targz"
+DEPEND="virtual/glibc"
 
 DESCRIPTION="Kernel source used in Planet CCRMA custom audio upgrade (based on RedHat)"
-SRC_URI="http://ccrma-www.stanford.edu/planetccrma/mirror/redhat/linux/planetcore/9/en/os/i386/kernel-source-${KV}.i386.rpm
-mirror://gentoo/${P}.tar.gz"
+SRC_URI="http://ccrma-www.stanford.edu/planetccrma/mirror/redhat/linux/planetcore/9/en/os/i386/kernel-source-${KV}.i386.rpm mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://ccrma-www.stanford.edu/ http://www.kernel.org/ http://www.redhat.com/"
 KEYWORDS="x86"
 SLOT="${KV}"
 
 src_unpack() {
 
+	rpm_unpack ${DISTDIR}/kernel-source-${KV}.i386.rpm
 	cd ${WORKDIR}
-	# Defining TMPDIR avoids breaking if /tmp is mounted in RAM
-	# and too small to hold all the temp files.
-	# Portage probably shouldn't create any files outside of
-	# /var/tmp/portage just yet anyway. :)
-	TMPDIR=${T} rpm2targz ${DISTDIR}/kernel-source-${KV}.i386.rpm
-	tar xvzf kernel-source-${KV}.i386.tar.gz || die
 
 	tar xvzf ${DISTDIR}/${P}.tar.gz || die
 
@@ -56,7 +51,9 @@ src_unpack() {
 
 	cd ${S}
 
-	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
+	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to patch do_brk() vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${PN}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 
 	kernel_universal_unpack
 }
@@ -72,4 +69,9 @@ pkg_postinst() {
 	einfo "Then edit to taste, but be careful not to tweak too much."
 	einfo "Just make sure to enable the devfs support."
 	einfo "And never run with scissors..."
+
+	ewarn "Mount your /boot partition and copy the file"
+	ewarn "PORTDIR/sys-kernel/planet-ccrma-sources/files/kernel.h"
+	ewarn "to /boot before you configure and build the kernel."
+	einfo "Don't ask why; it's a RedHat thing..."
 }
