@@ -2,6 +2,14 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+*speex-1.0.1 (21 Jun 2003)
+
+  21 Jun 2003; jje <jje@gentoo.org> speex-1.0.1.ebuild:
+  Version bump, fixes bug in wideband encoding which makes 1.0 files
+  play at lower quality on 1.0.1 decoders.
+  
+  Submitted by: Roland McIntosh <gentoo@rgm.nu>
+
   12 Jun 2003; <msterret@gentoo.org> speex-1.0.ebuild, speex-1.0_beta3.ebuild:
   fix Header
 
