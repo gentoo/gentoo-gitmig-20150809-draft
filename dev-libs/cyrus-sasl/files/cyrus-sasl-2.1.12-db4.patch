@@ -1,0 +1,41 @@
+diff -ur cyrus-sasl-2.1.12.orig/cmulocal/berkdb.m4 cyrus-sasl-2.1.12/cmulocal/berkdb.m4
+--- cyrus-sasl-2.1.12.orig/cmulocal/berkdb.m4	2003-02-03 18:51:12.000000000 +0100
++++ cyrus-sasl-2.1.12/cmulocal/berkdb.m4	2003-05-28 11:39:52.000000000 +0200
+@@ -211,12 +211,20 @@
+ 	    BDB_LIBADD=""
+ 	fi
+ 
+-        for dbname in db-4.1 db4.1 db-4.0 db4.0 db-4 db4 db-3.3 db3.3 db-3.2 db3.2 db-3.1 db3.1 db-3 db3 db
++        for dbname in db-4.1 db4.1 db-4.0 db4.0 db-4 db4 db
+           do
+-            AC_CHECK_LIB($dbname, db_create, BDB_LIBADD="$BDB_LIBADD -l$dbname";
+-              dblib="berkeley"; break, dblib="no")
++            AC_CHECK_LIB($dbname, db_create_4000, BDB_LIBADD="$BDB_LIBADD -l$dbname";
++              dblib="berkeley"; break, AC_CHECK_LIB($dbname, db_create_4001, BDB_LIBADD="$BDB_LIBADD -l$dbname";
++		dblib="berkeley"; break, dblib="no"))
+           done
+         if test "$dblib" = "no"; then
++          for dbname in db-4.1 db4.1 db-4.0 db4.0 db-4 db4 db-3.3 db3.3 db-3.2 db3.2 db-3.1 db3.1 db-3 db3 db
++            do
++              AC_CHECK_LIB($dbname, db_create, BDB_LIBADD="$BDB_LIBADD -l$dbname";
++                dblib="berkeley"; break, dblib="no")
++            done
++	fi
++        if test "$dblib" = "no"; then
+           AC_CHECK_LIB(db, db_open, BDB_LIBADD="$BDB_LIBADD -ldb";
+             dblib="berkeley"; dbname=db,
+             dblib="no")
+diff -ur cyrus-sasl-2.1.12.orig/cmulocal/sasl2.m4 cyrus-sasl-2.1.12/cmulocal/sasl2.m4
+--- cyrus-sasl-2.1.12.orig/cmulocal/sasl2.m4	2003-05-28 11:35:58.000000000 +0200
++++ cyrus-sasl-2.1.12/cmulocal/sasl2.m4	2003-05-28 11:46:11.000000000 +0200
+@@ -23,7 +23,9 @@
+   dnl
+   dnl The choice is reflected in GSSAPIBASE_LIBS
+   dnl we might need libdb
+-  AC_CHECK_LIB(db, db_open)
++  AC_CHECK_LIB(db, db_open,,
++	AC_CHECK_LIB(db, db_open_4001,,
++	AC_CHECK_LIB(db, db_open_4000)))
+ 
+   gss_impl="mit";
+   AC_CHECK_LIB(resolv,res_search)

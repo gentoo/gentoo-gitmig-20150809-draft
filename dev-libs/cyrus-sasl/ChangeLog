@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.34 2003/02/12 06:02:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.35 2003/05/28 11:34:58 pauldv Exp $
+
+  28 May 2003; Paul de Vrieze <pauldv@gentoo.org> cyrus-sasl-2.1.12.ebuild:
+  Fix cyrus-sasl to compile with db4
 
 *cyrus-sasl-2.1.12 (06 Feb 2003)
 

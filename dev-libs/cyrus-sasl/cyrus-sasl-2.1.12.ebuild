@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.12.ebuild,v 1.2 2003/02/13 10:36:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.12.ebuild,v 1.3 2003/05/28 11:34:58 pauldv Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}; cd ${S}
 	epatch ${FILESDIR}/${P}-kerberos.patch
+	epatch ${FILESDIR}/${P}-db4.patch
 }
 
 src_compile() {
