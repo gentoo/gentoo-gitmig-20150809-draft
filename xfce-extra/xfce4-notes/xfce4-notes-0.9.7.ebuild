@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/xfce4-notes-0.9.7.ebuild,v 1.8 2004/11/09 03:12:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/xfce4-notes-0.9.7.ebuild,v 1.9 2004/12/17 06:11:41 bcowan Exp $
 
 MY_P="${PN}-plugin-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ia64 ppc sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.0.6

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systray/xfce4-systray-4.1.99.2.ebuild,v 1.1 2004/12/13 20:54:24 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systray/xfce4-systray-4.1.99.2.ebuild,v 1.2 2004/12/17 06:11:41 bcowan Exp $
 
 DESCRIPTION="Xfce 4 system tray"
 HOMEPAGE="http://www.xfce.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="virtual/x11
