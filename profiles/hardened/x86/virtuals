@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/virtuals,v 1.5 2004/08/05 20:33:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/virtuals,v 1.6 2004/09/08 15:36:34 tseng Exp $
 
 virtual/bootloader		sys-boot/grub
 virtual/linux-sources		sys-kernel/hardened-sources
 virtual/modutils		sys-apps/modutils
 virtual/ruby			dev-lang/ruby
+virtual/dev-manager		sys-fs/devfsd
