@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/evolution/evolution-0.13.ebuild,v 1.1 2001/09/07 23:26:45 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/evolution/evolution-0.13.ebuild,v 1.2 2001/09/08 15:16:18 agriffis Exp $
 
 DB3=db-3.1.17
 A="${P}.tar.gz ${DB3}.tar.gz"
@@ -13,6 +13,7 @@ SRC_URI="ftp://ftp.ximian.com/pub/source/${PN}/${A}
 HOMEPAGE="http://www.ximian.com"
 
 DEPEND=">=gnome-base/gal-0.11.2
+        >=gnome-base/gconf-1.0.4
 	>=gnome-base/gtkhtml-0.12
 	>=gnome-libs/bonobo-conf-0.11
 	>=gnome-base/bonobo-1.0.8
