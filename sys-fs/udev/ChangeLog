@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.44 2004/04/12 23:29:03 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.45 2004/04/21 23:57:04 gregkh Exp $
+
+*udev-025-r1 (21 Apr 2004)
+
+  21 Apr 2004; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +files/udev.conf.post_024, +udev-025-r1.ebuild:
+  version bump.
+  
+  Changed the configs to look in /etc/udev/rules.d/ for udev rules
+  and in /etc/udev/permissions.d/ for permission files.  Put the
+  default files in those directories with the 50- prefix to allow
+  users to override anything they don't like much easier.
 
   07 Apr 2004; Will Woods <wwoods@gentoo.org> udev-024-r1.ebuild:
   added ~alpha to KEYWORDS
