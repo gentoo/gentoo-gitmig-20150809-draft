@@ -1,8 +1,13 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.2 2003/08/17 11:07:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.3 2003/09/08 17:11:35 usata Exp $
 
 *dvipdfmx-20030813 (17 Aug 2003)
+
+  09 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> dvipdfmx-20030728.ebuild,
+  dvipdfmx-20030813.ebuild:
+  Changed DEPEND to app-text/ptex (app-text/tetex contains dvipdfm binary).
+  Marked as stable for x86, alpha and ppc.
 
   17 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> dvipdfmx-20030813.ebuild,
   files/dvipdfmx-20030813-gentoo.diff:
