@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.1.ebuild,v 1.4 2003/09/11 01:21:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.1.ebuild,v 1.5 2004/02/19 09:10:37 eradicator Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture tools"
 HOMEPAGE="http://www.alsa-project.org"
@@ -16,6 +16,15 @@ SRC_URI="ftp://ftp.alsa-project.org/pub/tools/${P}.tar.bz2"
 S="${WORKDIR}/${P}"
 
 # This is a list of the tools in the package.
+#
+# By default, all the supported tools will be compiled.
+# If you want to only compile for specific tool(s), set ALSA_TOOLS
+# environment to a space-separated list of toolss that you want to build.
+# For example:
+#
+#   env ALSA_TOOLS='as10k1 ac3dec' emerge alsa-tools 
+#
+[ x"${ALSA_TOOLS}" = x ] &&
 ALSA_TOOLS="ac3dec as10k1 envy24control sb16_csp seq/sbiload"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.1.ebuild,v 1.2 2004/01/10 16:37:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.1.ebuild,v 1.3 2004/02/19 09:10:37 eradicator Exp $
 
 IUSE=""
 
@@ -25,6 +25,15 @@ DEPEND=">=media-libs/alsa-lib-1.0.1
 # This is a list of the tools in the package.
 # Some of the tools don't make proper use of CFLAGS, even though
 # all of them seem to use autoconf.  This needs to be fixed.
+#
+# By default, all the supported tools will be compiled.
+# If you want to only compile for specific tool(s), set ALSA_TOOLS
+# environment to a space-separated list of toolss that you want to build.
+# For example:
+#
+#   env ALSA_TOOLS='as10k1 ac3dec' emerge alsa-tools 
+#
+[ x"${ALSA_TOOLS}" = x ] &&
 ALSA_TOOLS="ac3dec as10k1 envy24control hdspconf hdsploader hdspmixer \
 	mixartloader rmedigicontrol sb16_csp seq/sbiload sscape_ctl \
 	us428control usx2yloader vxloader"
