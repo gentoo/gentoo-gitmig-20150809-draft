@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.13 2003/03/06 06:53:57 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.14 2003/06/04 02:16:31 lostlogic Exp $
+
+*gtk-gnutella-0.92_rc (03 Jun 2003)
+
+  03 Jun 2003; Brandon Low <lostlogic@gentoo.org> gtk-gnutella-0.92_rc.ebuild:
+  Bumpage, still unstable
 
 *gtk-gnutella-0.91.9.1 (06 Mar 2003)
 
