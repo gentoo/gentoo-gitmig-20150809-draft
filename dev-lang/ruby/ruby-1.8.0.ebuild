@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0.ebuild,v 1.2 2003/08/11 01:34:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0.ebuild,v 1.3 2003/08/16 09:39:24 twp Exp $
 
 inherit flag-o-matic eutils gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="~alpha ~arm ~hppa ~mips ~sparc ~x86"
 IUSE="socks5 tcltk"
 
 DEPEND=">=sys-libs/glibc-2.1.3

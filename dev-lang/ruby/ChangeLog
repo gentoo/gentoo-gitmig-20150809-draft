@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.32 2003/08/11 01:34:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.33 2003/08/16 09:39:24 twp Exp $
+
+  16 Aug 2003; Tom Payne <twp@gentoo.org> ruby-1.8.0.ebuild :
+  Added all ~ARCHs to KEYWORDS. Bug # 26570.
 
   10 Aug 2003; Aron Griffis <agriffis@gentoo.org> ruby-1.8.0.ebuild:
   Make vim message in pkg_postinst more clear
