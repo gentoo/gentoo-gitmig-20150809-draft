@@ -1,22 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.13 2004/10/05 10:33:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.14 2004/12/07 10:07:36 eradicator Exp $
+
+IUSE="doc"
 
 inherit eutils fixheadtails gcc
 
 MY_P=${P/-/_}
+
 DESCRIPTION="Speech tools for Festival Text to Speech engine"
 HOMEPAGE="http://www.cstr.ed.ac.uk/"
 SRC_URI="http://www.cstr.ed.ac.uk/download/festival/1.4.3/${MY_P}-release.tar.gz
 	 doc? ( http://www.cstr.ed.ac.uk/download/festival/1.4.3/festdoc-1.4.2.tar.gz )"
-DEPEND=">=sys-apps/sed-4"
 
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64"
-IUSE="doc"
+KEYWORDS="amd64 ppc sparc x86"
 
-RDEPEND="virtual/libc"
+RDEPEND="sys-libs/ncurses"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 S="${WORKDIR}/speech_tools"
 

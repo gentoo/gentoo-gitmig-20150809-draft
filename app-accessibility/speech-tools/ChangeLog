@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.13 2004/10/05 10:33:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.14 2004/12/07 10:07:36 eradicator Exp $
+
+  07 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  speech-tools-1.2.3.ebuild:
+  Added ncurses DEP.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   speech-tools-1.2.3.ebuild:
