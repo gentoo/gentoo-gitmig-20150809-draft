@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.75 2004/08/10 16:32:12 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.76 2004/08/13 00:40:42 kumba Exp $
+
+  12 Aug 2004; Joshua Kinard <kumba@gentoo.org>
+  +files/procps-mips-define-pagesize.patch, procps-3.2.2-r1.ebuild,
+  procps-3.2.3.ebuild:
+  Added patch for mips that sets the value of PAGE_SIZE via a call to sysconf
+  due to changes in mips-headers.
 
 *procps-3.2.3 (10 Aug 2004)
 

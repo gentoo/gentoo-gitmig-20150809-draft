@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.3.ebuild,v 1.1 2004/08/10 16:32:12 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.3.ebuild,v 1.2 2004/08/13 00:40:42 kumba Exp $
 
 inherit flag-o-matic eutils
 
@@ -20,6 +20,11 @@ src_unpack() {
 	cd ${S}
 
 	sed -i -e "/install/s: --strip : :" Makefile
+
+	# mips 2.4.23 headers (and 2.6.x) don't allow PAGE_SIZE to be defined in
+	# userspace anymore, so this patch instructs procps to get the
+	# value from sysconf().
+	use mips && epatch ${FILESDIR}/${PN}-mips-define-pagesize.patch
 }
 
 src_compile() {
