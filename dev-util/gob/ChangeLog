@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/gob
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.15 2003/05/22 13:18:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.16 2003/07/06 11:47:33 gmsoft Exp $
 
 *gob-2.0.6 (22 May 2003)
 
@@ -37,6 +37,9 @@
   gnome2 version
 
 *gob-1.0.12 (11 Apr 2002)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> gob-1.0.12.ebuild :
+  Added hppa to KEYWORDS.
 
   28 Mar 2003; Aron Griffis <agriffis@gentoo.org> gob-1.0.12.ebuild:
   Mark stable on alpha
