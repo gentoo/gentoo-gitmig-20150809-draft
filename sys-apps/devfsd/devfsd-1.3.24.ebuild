@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devfsd/devfsd-1.3.20.ebuild,v 1.6 2001/12/31 23:47:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devfsd/devfsd-1.3.24.ebuild,v 1.1 2002/02/19 16:24:29 azarah Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Daemon for the Linux Device Filesystem"
@@ -18,7 +18,7 @@ src_unpack() {
 	cp GNUmakefile GNUmakefile.orig
 	sed -e "s:-O2:${CFLAGS}:g" \
 		-e 's:/usr/man:/usr/share/man:' \
-		-e '30,32d;8,12d;9d' -e '6c\' \
+		-e '29,31d;11,16d' -e '6c\' \
 		-e 'DEFINES	:= -DLIBNSL="\\"/lib/libnsl.so.1\\""' \
 		GNUmakefile.orig > GNUmakefile
 }
@@ -30,5 +30,10 @@ src_compile() {
 src_install() {
 	dodir /sbin /usr/share/man /etc
 	make PREFIX=${D} install || die
+
+	#config file is handled in baselayout
 	rm -f ${D}/etc/devfsd.conf
+		
+	dodoc devfsd.conf COPYING* INSTALL
 }
+
