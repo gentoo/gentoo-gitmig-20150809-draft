@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gqview
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.41 2004/09/21 07:03:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.42 2004/10/14 20:32:43 agriffis Exp $
+
+  14 Oct 2004; Aron Griffis <agriffis@gentoo.org> gqview-1.5.3.ebuild:
+  add ~alpha and ~ia64
 
 *gqview-1.5.3 (21 Sep 2004)
 
