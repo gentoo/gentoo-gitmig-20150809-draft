@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.9.1.ebuild,v 1.5 2003/09/05 22:13:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.9.1.ebuild,v 1.6 2003/11/28 10:39:25 aliz Exp $
 
 DESCRIPTION="Stream directory browser for browsing internetradio streams"
-SRC_URI="http://osdn.dl.sourceforge.net/sourceforge/streamtuner/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/streamtuner/${P}.tar.gz"
 HOMEPAGE="http://www.nongnu.org/streamtuner/"
 KEYWORDS="x86"
 SLOT="0"
