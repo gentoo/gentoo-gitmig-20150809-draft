@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r10.ebuild,v 1.13 2004/04/30 20:57:38 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r10.ebuild,v 1.14 2004/06/10 16:58:24 agriffis Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -92,7 +92,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ `use cjk` ]; then
+	if use cjk; then
 		ewarn
 		ewarn "You have chosen (by selecting 'USE=cjk') to compile with"
 		ewarn "a patch for CJK support.  Please be aware that this patch"

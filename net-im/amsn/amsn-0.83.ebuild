@@ -21,7 +21,7 @@ DEPEND=">=dev-lang/tcl-8.3.3
 
 src_compile() {
 
-	if [ -n "`use imlib`" ]
+	if use imlib
 	then
 		einfo "Compiling the freedesktop notification plugin"
 		cd ${S}/plugins/traydock
@@ -37,7 +37,7 @@ src_install() {
 	# Remove all CVS crap
 	find ${D} -type d -name CVS -exec rm -rf {} \;
 
-	if [ -n "`use gnome`" ]
+	if use gnome
 	then
 		dodir /usr/share/applications
 		cp ${FILESDIR}/amsn.desktop ${D}/usr/share/applications
@@ -47,7 +47,7 @@ src_install() {
 	fi
 
 
-	if [ -n "`use kde`" ]
+	if use kde
 	then
 		dodir ${D}/usr/share/applnk
 		cp ${FILESDIR}/amsn.desktop ${D}/usr/share/applnk/
@@ -56,7 +56,7 @@ src_install() {
 		cp -a ${S}/icons/* ${D}/${KDEDIR}/share/icons/default.kde
 	fi
 
-	if [ -n "`use imlib`" ]
+	if use imlib
 	then
 		einfo "Installing the freedesktop notification plugin"
 		dodir /usr/lib/amsn/plugins/traydock

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.90.ebuild,v 1.10 2004/04/27 19:44:07 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.90.ebuild,v 1.11 2004/06/10 16:54:52 agriffis Exp $
 
 S="${WORKDIR}/msn"
 DESCRIPTION="Alvaro's Messenger client for MSN"
@@ -31,7 +31,7 @@ src_unpack() {
 
 src_compile() {
 
-	if [ -n "`use imlib`" ]
+	if use imlib
 	then
 		einfo "Compiling the freedesktop notification plugin"
 		cd ${S}/plugins/traydock
@@ -47,7 +47,7 @@ src_install() {
 	# Remove all CVS extra stuff
 	find ${D} -type d -name CVS -exec rm -rf {} \;
 
-	if [ -n "`use gnome`" ]
+	if use gnome
 	then
 		dodir /usr/share/applications
 		cp ${D}/usr/share/amsn/amsn.desktop ${D}/usr/share/applications
@@ -57,7 +57,7 @@ src_install() {
 	fi
 
 
-	if [ -n "`use kde`" ]
+	if use kde
 	then
 		dodir /usr/share/applnk/Internet
 		cp ${D}/usr/share/amsn/amsn.desktop ${D}/usr/share/applnk/Internet/
@@ -66,7 +66,7 @@ src_install() {
 		cp -a ${S}/icons/* ${D}/${KDEDIR}/share/icons/default.kde
 	fi
 
-	if [ -n "`use imlib`" ]
+	if use imlib
 	then
 		einfo "Installing the freedesktop notification plugin"
 		dodir /usr/lib/amsn/plugins/traydock
@@ -83,7 +83,7 @@ src_install() {
 	dodoc TODO README FAQ
 }
 pkg_postinst() {
-	if [ -n "`use xmms`" ]
+	if use xmms
 	then
 		einfo "For XMMS use in amsn, make sure the xmms-infopipe plugin is enabled."
 	fi
