@@ -1,16 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepattack/wepattack-0.1.3.ebuild,v 1.2 2003/01/01 05:13:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepattack/wepattack-0.1.3.ebuild,v 1.3 2003/01/20 16:28:30 vapier Exp $
 
 MY_P="WepAttack-${PV}"
 DESCRIPTION="WLAN tool for breaking 802.11 WEP keys"
 HOMEPAGE="http://wepattack.sourceforge.net/"
 SRC_URI="mirror://sourceforge/wepattack/${MY_P}.tar.gz"
 
-LICENSE=""
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE=""
 
 DEPEND="sys-libs/zlib
 	net-libs/libpcap
