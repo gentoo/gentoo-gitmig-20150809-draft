@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-191.ebuild,v 1.6 2004/06/12 23:31:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-191.ebuild,v 1.7 2004/06/13 22:53:32 spyderous Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,9 +13,11 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips arm hppa amd64"
 IUSE="truetype Xaw3d unicode"
 
-DEPEND="virtual/x11
+DEPEND="|| ( x11-base/xorg-x11 >=x11-base/xfree-4.3.0-r7 )
 	sys-apps/utempter
 	Xaw3d? ( x11-libs/Xaw3d )"
+# Doesn't work because of broken portage (#8810)
+# virtual/x11"
 
 src_unpack() {
 	unpack ${A}

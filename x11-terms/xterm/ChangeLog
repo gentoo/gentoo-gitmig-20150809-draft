@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.27 2004/06/12 19:59:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.28 2004/06/13 22:53:32 spyderous Exp $
+
+  13 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-191.ebuild:
+  Change virtual/x11 dep because of #8810.
 
   12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> xterm-184.ebuild:
   Stable on alpha.
