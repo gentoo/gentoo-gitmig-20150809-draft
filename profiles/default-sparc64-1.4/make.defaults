@@ -11,6 +11,7 @@ COMPILER="gcc3"
 #
 ARCH="sparc64"
 CHOST=sparc-unknown-linux-gnu
+PLATFORM=sparc64-unknown-linux-gnu
 
 # Options passed to make during the build process
 # MAKEOPTS="-j2"
