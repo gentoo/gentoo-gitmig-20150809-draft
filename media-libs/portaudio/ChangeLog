@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/portaudio
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.15 2004/11/04 01:42:18 geoman Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.16 2005/02/17 12:14:20 hansmi Exp $
+
+  17 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> portaudio-18.1.ebuild:
+  Added to ~hppa.
 
   03 Nov 2004; Stephen P. Becker <geoman@gentoo.org> portaudio-18.1.ebuild:
   added ~mips keyword
