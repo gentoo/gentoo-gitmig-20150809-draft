@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.9.1.ebuild,v 1.4 2004/06/09 23:46:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.9.1.ebuild,v 1.5 2004/06/21 01:04:41 humpback Exp $
 
 inherit gnuconfig
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="ssh"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE="X ipv6 crypt openssh"
 
 DEPEND="X? ( virtual/x11 )
