@@ -1,11 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r1.ebuild,v 1.1 2003/06/12 20:34:31 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r1.ebuild,v 1.2 2003/06/12 21:57:51 taviso Exp $
 
 DESCRIPTION="Classic UNIX shell with C like syntax"
 HOMEPAGE="http://www.netbsd.org/"
 
-SRC_URI="http://cvs.gentoo.org/~taviso/${P}.tar.gz"
+SRC_URI="http://cvs.gentoo.org/~taviso/${P}.tar.gz
+	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-release-1-6/src/etc/skel/dot.cshrc
+	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-release-1-6/src/etc/skel/dot.login"
 
 LICENSE="BSD"
 SLOT="0"
@@ -15,8 +17,7 @@ IUSE="static doc"
 DEPEND="virtual/glibc
 	sys-devel/pmake
 	>=sys-apps/sed-4
-	doc? ( sys-apps/groff )
-	sys-apps/util-linux"
+	doc? ( sys-apps/groff )"
 RDEPEND="virtual/glibc"
 
 inherit flag-o-matic eutils ccc
@@ -33,6 +34,8 @@ src_compile() {
 	cd ${S}; cp ${WORKDIR}/printf.c \
 				${WORKDIR}/vis.h \
 				${WORKDIR}/vis.c \
+				${DISTDIR}/dot.login \
+				${DISTDIR}/dot.cshrc \
 				${S} 
 				
 	# this parses the output of the bash builtin `kill`
@@ -42,7 +45,7 @@ src_compile() {
 
 	local cnt=0
 
-	printf "/* automatically generated during %s build */\n\n" ${P} > ${S}/signames.h
+	printf "/* automatically generated during %s build */\n\n" ${PF} > ${S}/signames.h
 	printf "const char *const sys_signame[NSIG + 3] = {\n" >> ${S}/signames.h
 	printf "\t\"EXIT\",\t\n" $((cnt++)) >> ${S}/signames.h
 	
@@ -67,6 +70,7 @@ src_compile() {
 	sed -i 's!\(#include "proc.h"\)!\1\n#include "signames.h"\n!g' ${S}/proc.c
 	sed -i 's#\(strpct.c time.c\)#\1 vis.c#g' ${S}/Makefile
 	sed -i 's!#include "namespace.h"!!g' ${S}/vis.c
+	sed -i 's#/usr/games/fortune#/usr/bin/fortune#g' ${S}/dot.login
 
 	# maybe they dont warn on BSD, but _damn_.
 	export NOGCCERROR=1
@@ -91,13 +95,25 @@ src_compile() {
 		${PMAKE_PATH:-/usr/bin/}pmake
 	}
 	cd ${S}
+
+	einfo "Making empty configuration files.."
+	printf "#\n# System-wide .cshrc file for csh(1).\n\n" >	csh.cshrc 
+	printf "#\n# System-wide .login file for csh(1).\n\n" > csh.login
+	printf "if ( -f /etc/csh.env ) source /etc/csh.env\n" >> csh.login
+	printf "#\n# System-wide .logout file for csh(1).\n\n" > csh.logout
 }
 
 src_install() {
 	exeinto /bin
 	doexe csh
+	
 	doman csh.1
+	
 	use doc && dodoc USD.doc/paper.ps
+	dodoc dot.cshrc dot.login
+	
+	insinto /etc
+	doins csh.cshrc csh.login csh.logout
 }
 
 pkg_postinst() {
@@ -105,12 +121,20 @@ pkg_postinst() {
 	use doc >/dev/null && {
 		einfo "An Introduction to the C shell by William Joy, a "
 		einfo "postscript document included with this shell has"
-		einfo "been installed in /usr/share/docs/${P}, if you are new"
+		einfo "been installed in /usr/share/doc/${PF}, if you are new"
 		einfo "to the C shell, you may find it interesting."
 	} || {
 		einfo "You didnt have the \`doc\` use flag set, the"
 		einfo "postscript document \"An Introduction to the C"
 		einfo "shell by William Joy\" was not installed."
 	}
+	echo
+	einfo "Example login scripts have been installed in /usr/share/doc/${PF}."
+	einfo "You can install a simple dot.cshrc like this:"
+	einfo
+	einfo "	% zcat /usr/share/doc/${PF}/dot.cshrc > ~/.cshrc"
+	einfo "	% zcat /usr/share/doc/${PF}/dot.login > ~/.login"
+	einfo
+	einfo "And then edit to your liking."
 	echo
 }
