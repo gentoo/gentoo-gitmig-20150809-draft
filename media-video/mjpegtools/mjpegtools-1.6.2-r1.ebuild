@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r1.ebuild,v 1.7 2004/04/28 19:39:43 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r1.ebuild,v 1.8 2004/05/12 13:46:27 pappy Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -68,7 +68,7 @@ src_compile() {
 	econf ${myconf} || die
 
 	if has_pie ; then
-		pie_magic="`test_flag -yet_exec` `test_flag -nopie`"
+		pie_magic="`test_flag -fno-pic` `test_flag -nopie`"
 		for i in `find "${S}" -name "Makefile"` ; do
 			sed -e "s:CC = gcc:CC = gcc ${pie_magic}:g" \
 				-e "s:CXX = gcc:CXX = g++ ${pie_magic}:g" \
