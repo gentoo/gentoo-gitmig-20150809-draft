@@ -1,5 +1,5 @@
-MD5 b602238639d381eb955112f7f4f6cf8b ChangeLog 337
-MD5 bdd05a94d226efda65feafe877657ccb mod_layout-4.0.1a.ebuild 937
+MD5 c4ec5e7fb1ac14ca040399455bfcb2bb ChangeLog 437
+MD5 6a18b848b92cc4ec0d04a970bdb83b6d mod_layout-4.0.1a.ebuild 938
 MD5 ed08f74402be537f28435ce409adb86d files/15_mod_layout.conf 4590
 MD5 31f7af245df33de3e73bfcf60898240b files/digest-mod_layout-4.0.1a 68
 MD5 9ce33c60579d3b6a35ac6d2722b0888c files/mod_layout-4.0.1a-register.patch 585

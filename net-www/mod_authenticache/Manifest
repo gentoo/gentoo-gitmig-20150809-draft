@@ -1,5 +1,5 @@
-MD5 fd12e91d64395e16ff5bd08eb87894ba ChangeLog 357
-MD5 24c1a80f5d9b413527a63bf72d4b6805 mod_authenticache-2.0.6.ebuild 1005
+MD5 1fe1988e4773a3732c6e3c2e81b8d823 ChangeLog 463
+MD5 60ba29faa6d57383c7f93c4795d22a3c mod_authenticache-2.0.6.ebuild 1006
 MD5 21bd6cd7eb4fbf068d9dd7d65a86a6e5 files/28_mod_authenticache.conf 697
 MD5 a10c55270ccdd21b842df6553f9f3dea files/digest-mod_authenticache-2.0.6 74
 MD5 55d24e495e8ecc0121bc0edb320b3f5d files/dot-htaccess 178

@@ -1,4 +1,4 @@
-MD5 104831b09986d6d31f6c39c45a92675c ChangeLog 330
-MD5 bb1eba45c7fecde1bb9759bf1f1e3561 mod_vdbh-1.0.2.ebuild 881
+MD5 9e744c7bbf49cbef33ec8a49bcb2e914 ChangeLog 427
+MD5 3bda3f232ed1645fd70364f77992ea4b mod_vdbh-1.0.2.ebuild 882
 MD5 7473b02ca15e6b03e19b1b01c5f02026 files/21_mod_vdbh.conf 548
 MD5 3e4e2e532cd0eaf5fc84c4d9d9917f77 files/digest-mod_vdbh-1.0.2 65

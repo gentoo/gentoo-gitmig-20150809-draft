@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_external/mod_auth_external-2.2.3.ebuild,v 1.2 2003/02/13 15:36:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_external/mod_auth_external-2.2.3.ebuild,v 1.3 2003/07/12 15:15:39 woodchip Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.unixpapa.com/software/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2"
 DEPEND="sys-libs/pam =net-www/apache-2*"
 LICENSE="Apache-1.1"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 SLOT="0"
 

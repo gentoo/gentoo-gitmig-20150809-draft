@@ -1,5 +1,5 @@
-MD5 3b0f2885b21446d652f7fc838928dcc3 ChangeLog 345
-MD5 b44b9285bffa361919211133cab26e88 mod_injection-0.3.0.ebuild 993
+MD5 fdd820db91536e99972b551faf32b97a ChangeLog 447
+MD5 8e314af404fe6a3bcb0d608316120ee4 mod_injection-0.3.0.ebuild 994
 MD5 a3f0476015e2855d6cf3e66904b232ee files/23_mod_injection.conf 425
 MD5 410d8669ac36d7b41a388e09552a56f8 files/digest-mod_injection-0.3.0 70
 MD5 189338a2b70fef859aa31149b9143123 files/mod_injection-0.3.0-register.patch 919

@@ -1,4 +1,4 @@
-MD5 f998ba51ab512d1ed600ea65df6ff3ae ChangeLog 325
-MD5 1f025c621b0dba81b4b7a8575de2a77c mod_tcl-1.0.ebuild 853
+MD5 25b98d5775895a71a7375fd9a3ec8f12 ChangeLog 419
+MD5 82739085dcf96042509c97e711be53d7 mod_tcl-1.0.ebuild 854
 MD5 cbffddf639b56fd470943100478e18dc files/27_mod_tcl.conf 203
 MD5 289c346a0106a5488604599fd5e91ae6 files/digest-mod_tcl-1.0 63
