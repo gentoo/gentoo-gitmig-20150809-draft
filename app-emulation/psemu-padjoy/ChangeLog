@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/psemu-padjoy
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-padjoy/ChangeLog,v 1.1 2002/06/03 02:53:20 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-padjoy/ChangeLog,v 1.2 2002/07/29 13:11:02 stubear Exp $
+
+*psemu-padjoy-0.61 (27 Jul 2002)
+
+  27 Jul 2002; Stuart Bouyer <stubear@gentoo.org> psemu-padjoy-0.61.ebuild :
+
+  Added SLOT, LICENSE, and KEYWORDS="x86"
 
 *psemu-padjoy-0.61 (2 June 2002)
 
