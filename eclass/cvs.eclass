@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.32 2003/02/21 14:07:46 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.33 2003/03/19 11:54:21 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -80,7 +80,7 @@ cvs_fetch() {
 	debug-print-function $FUNCNAME $*
 
 	debug-print "$FUNCNAME: init:
-ECVS_CVS_COMMAND=$ECVS_CVS_COMMAND
+9ECVS_CVS_COMMAND=$ECVS_CVS_COMMAND
 ECVS_CVS_OPTIONS=$ECVS_CVS_OPTIONS
 ECVS_TOP_DIR=$ECVS_TOP_DIR
 ECVS_SERVER=$ECVS_SERVER
@@ -134,13 +134,11 @@ DIR=$DIR"
 	# add option for local (non-recursive) fetching
 	[ -n "$ECVS_LOCAL" ] && ECVS_CVS_OPTIONS="$ECVS_CVS_OPTIONS -l"
 	
-	# prepare a cvspass file just for this session so that cvs thinks we're logged
-	# in at the cvs server. we don't want to mess with ~/.cvspass.
-	echo ":pserver:${ECVS_SERVER} A" > "${T}/cvspass"
+	# prepare a cvspass file just for this session, we don't want to mess with ~/.cvspass
+	touch "${T}/cvspass"
 	export CVS_PASSFILE="${T}/cvspass"
 	chown $ECVS_RUNAS "${T}/cvspass"
-	#export CVSROOT=:pserver:${ECVS_USER}@${ECVS_SERVER}
-	
+
 	# Note: cvs update and checkout commands are unified.
 	# we make sure a CVS/ dir exists in our module subdir with the right
 	# Root and Repository entries in it and cvs update.
@@ -275,9 +273,8 @@ EndOfFile
 ########################### End of inline-python ##################################
 	else
 		# is anonymous cvs.
-		debug-print "$FUNCNAME: using anonymous cvs login"
 		# is there a password to use for login with this "anonymous" login
-		if [ -n $ECVS_PASS ]; then
+		if [ -n "$ECVS_PASS" ]; then
 			debug-print "$FUNCNAME: using anonymous cvs login with password"
 
 # inline-python #
@@ -299,16 +296,33 @@ child.expect(pexpect.EOF)
 EndOfFile
 # End of inline-python #
 
+		else
+		    debug-print "$FUNCNAME: using anonymous cvs login (without password)"
+		    # passwordless, truly anonymous login; or login with empty (but existing)
+		    # password.
+		    # make cvs think we're logged in at the cvs server,
+		    # because i don't trust myself to write the right code for the case
+		    # where the password is empty but still required (what's the bash test
+		    # to see if a variable is defined? -n returns false if it is defined
+		    # but empty...)
+		    echo ":pserver:${ECVS_SERVER} A" > "${T}/cvspass"
+		    # remember we did this so we don't try to run cvs logout later
+		    DONT_LOGOUT=yes
 		fi
+
+		debug-print "$FUNCNAME: running $ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS"
 		$ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS || die "died running cvs update"
 
 	fi
 
-	# log out and restore ownership
-	if [ "$ECVS_RUNAS" == "`whoami`" ]; then
-	    cvs logout &> /dev/null
-	else
-	    su $ECVS_RUNAS -c "cvs logout" &> /dev/null
+	# log out and restore ownership as needed
+	if [ -z "$DONT_LOGOUT" ]; then
+	    debug-print "$FUNCNAME: cvs logout stuff"
+	    if [ "$ECVS_RUNAS" == "`whoami`" ]; then
+		cvs logout &> /dev/null
+	    else
+		su $ECVS_RUNAS -c "cvs logout" &> /dev/null
+	    fi
 	fi
 	chown `whoami` "${T}/cvspass"
 }
