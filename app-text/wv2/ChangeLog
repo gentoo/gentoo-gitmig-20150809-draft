@@ -1,6 +1,18 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.1 2003/02/25 16:58:25 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.2 2003/04/05 22:02:43 danarmak Exp $
+
+*wv2-0.0.8 (06 Apr 2003)
+
+  06 Apr 2003; Dan Armak <danarmak@gentoo.org> wv2-0.0.8.ebuild:
+  New version. Add stable x86 keyword.
+
+*wv2-0.0.8 (28 Mar 2003)
+
+  28 Mar 2003; Dan Armak <danarmak@gentoo.org> wv2-0.0.8.ebuild:
+  
+  New upstream (bugfix) version, also fixed ebuild so that RDEPEND
+  also contains DEPEND.
 
 *wv2-0.0.7 (25 Feb 2003)
 
