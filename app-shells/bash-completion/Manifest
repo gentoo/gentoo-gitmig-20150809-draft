@@ -2,19 +2,20 @@
 Hash: SHA1
 
 MD5 966a1b97060ac3708d22d088e3cf49d6 bash-completion-20041017-r3.ebuild 2621
-MD5 d15e96907acc7c2554b88a3566d0f6bd bash-completion-20050121.ebuild 2638
-MD5 d1d0d6030fcaebe074c6b45f36da14a6 ChangeLog 16613
+MD5 d40377e38750d274590de97e86b57783 bash-completion-20050121-r1.ebuild 2705
+MD5 bf330d4b08959722d3be5a8f42aa4c83 ChangeLog 16894
 MD5 00e8cae3d9ece63e4be61f4a2b3afd5e metadata.xml 930
+MD5 4406981db9a6c4f413d3f9f4b14eae91 files/gentoo-bashcomp-20050117-equery.diff 3329
 MD5 9aca91cdcddd5454ebc4f17efe465d71 files/digest-bash-completion-20041017-r3 152
 MD5 b6b11ab0684a97cfd9a9ba78f5fa9f9a files/20041017-rcs.diff 574
+MD5 35fc8232b26ca995623692bea7df2e5d files/digest-bash-completion-20050121-r1 152
 MD5 3b7f1d6155d6deff5812264ef6bc4c07 files/bash-completion 724
-MD5 35fc8232b26ca995623692bea7df2e5d files/digest-bash-completion-20050121 152
 MD5 64ca0b5063d0874c6104a4b174cb0d40 files/20050121-gentoo.diff 1894
 MD5 61eddfb92948b070333a59498edf5266 files/20041017-gentoo.diff 2032
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB8aTQEZCkKN40op4RAu5VAKDDmrFr058qTygWyX0l/SlZ71utEQCdEA4C
-ggV1x3qqFjoNrAOOj4WTDH8=
-=j81N
+iD8DBQFCA3BTEZCkKN40op4RAgqzAKDByxVptmyUeXSI2NS5E92JOa0XGgCggPAB
+ehbzw1Xt5M8cKZ79hrDoCJI=
+=exeS
 -----END PGP SIGNATURE-----
