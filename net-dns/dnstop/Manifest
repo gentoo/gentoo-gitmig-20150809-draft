@@ -1,3 +1,5 @@
-MD5 bb80e927e1944c51b7fea9275109fde1 ChangeLog 342
 MD5 2e8cf49e03b825f16cad92dff34ff54e dnstop-20030124.ebuild 709
+MD5 6f9d7f6f001eac7fd576bb3513abb7ec ChangeLog 508
+MD5 e0042fb60599d70def78fda6e61e0187 dnstop-20030228.ebuild 717
 MD5 f253c14e9fd625129c3947a9eee0b639 files/digest-dnstop-20030124 65
+MD5 62d027147b3b5980c98fa019ae575ad1 files/digest-dnstop-20030228 65

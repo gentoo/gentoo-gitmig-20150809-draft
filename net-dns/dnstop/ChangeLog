@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/dnstop
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.1 2003/02/28 07:00:03 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.2 2003/06/04 19:51:45 brad Exp $
+
+*dnstop-20030228 (04 June 2003)
+
+  04 June 2003; Brad Laue <brad@gentoo.org> dnstop-20030228.ebuild :
+  Update to 20030228 - ebuild submitted by bugsubmit@snerk.org.
 
 *dnstop-20030124 (28 Feb 2003)
 
