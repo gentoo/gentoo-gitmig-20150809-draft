@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-5.2.0.ebuild,v 1.1 2005/01/25 15:15:35 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-5.2.0.ebuild,v 1.2 2005/01/25 17:14:38 angusyoung Exp $
 
 inherit eutils
 
@@ -46,8 +46,8 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	emake install DESTDIR=${D} || die
 
-	# They are not installed by einstall
+	# They are not installed by emake install
 	dodoc README AUTHORS ChangeLog COPYING DETAILS NEWS TODO
 }

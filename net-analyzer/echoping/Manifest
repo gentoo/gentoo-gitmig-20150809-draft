@@ -1,5 +1,5 @@
-MD5 1378fc308d493e3de6a8db60366b6245 echoping-5.2.0.ebuild 1318
-MD5 a565c40826bb449ef902f20adfd1b69d ChangeLog 459
+MD5 e9cef2f0b518a8bf5cb446d30001a6a0 echoping-5.2.0.ebuild 1341
+MD5 0aafdddfc5d27567dbf1497f56d1bb6a ChangeLog 584
 MD5 ac3074aa551da20b321f380c591f0847 metadata.xml 256
 MD5 4783578f5986c067408a04d82e5ed589 files/digest-echoping-5.2.0 66
 MD5 031f7ebff5b4da097049a014ad9b4890 files/maxtoread-5.2.0.patch 298

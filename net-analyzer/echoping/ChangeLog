@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/echoping
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.1 2005/01/25 15:15:35 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.2 2005/01/25 17:14:38 angusyoung Exp $
+
+  25 Jan 2005; Otavio R. Piske <angusyoung@gentoo.org> echoping-5.2.0.ebuild:
+  Removed einstall in favour of emake install
 
 *echoping-5.2.0 (25 Jan 2005)
 
