@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.8.3-r1.ebuild,v 1.1 2002/06/21 12:12:03 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.8.3-r1.ebuild,v 1.2 2002/06/21 12:23:57 stroke Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}
@@ -9,13 +9,12 @@ SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${MY_P}.tar.gz"
 HOMEPAGE="http://www.dtek.chalmers.se/groups/dvd/"
 
 
-DEPEND=">=media-video/ogle-0.8.2
-        ( >=x11-libs/gtk+-1.2.0
-        <x11-libs/gtk+-2.0.0 )
-        dev-libs/libxml2
-        sys-devel/bison
-        ( >=gnome-base/libglade-0.17-r6
-        <gnome-base/libglade-2.0.0"
+DEPEND=">=media-video/ogle-${PV}
+	=x11-libs/gtk+-1.2*
+	dev-libs/libxml2
+	sys-devel/bison
+	( >=gnome-base/libglade-0.17-r6
+	<gnome-base/libglade-2.0.0 )"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
