@@ -12,6 +12,7 @@ virtual/dev-manager	sys-fs/udev
 virtual/dhcpc		net-misc/dhcpcd
 virtual/editor		app-editors/nano
 virtual/emacs	   	app-editors/emacs
+virtual/fam		app-admin/fam
 virtual/flim		app-emacs/flim
 virtual/ghc		dev-lang/ghc
 virtual/ghostscript	app-text/ghostscript
