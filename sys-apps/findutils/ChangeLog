@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.26 2004/01/16 20:59:47 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.27 2004/01/17 02:34:51 darkspecter Exp $
+
+  17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> :
+  manifest fix
 
   16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org>
   findutils-4.1.20-r1.ebuild:
