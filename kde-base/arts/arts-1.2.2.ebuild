@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.2.ebuild,v 1.2 2004/04/19 19:32:49 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.2.ebuild,v 1.3 2004/04/22 01:30:52 vapier Exp $
 
 inherit kde flag-o-matic
 set-kdedir 3.2
@@ -11,7 +11,7 @@ SRC_URI="mirror://kde/stable/${PV/1.2.2/3.2.2}/src/${PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.2"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~alpha ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa ~amd64 ~ia64"
 IUSE="alsa oggvorbis esd artswrappersuid mad"
 
 DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
@@ -77,7 +77,7 @@ CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/48kdepaths-3.2.2 # numbe
 }
 
 pkg_postinst() {
-	if [ ! `use artswrappersuid` ] ; then
+	if ! use artswrappersuid ; then
 		einfo "Run chmod +s ${PREFIX}/bin/artswrapper to let artsd use realtime priority"
 		einfo "and so avoid possible skips in sound. However, on untrusted systems this"
 		einfo "creates the possibility of a DoS attack that'll use 100% cpu at realtime"
