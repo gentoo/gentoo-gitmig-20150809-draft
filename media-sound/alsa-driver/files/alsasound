@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.9 2002/12/21 17:14:48 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.10 2003/03/03 18:33:30 agenkin Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -10,7 +10,7 @@
 # This script requires /usr/sbin/alsactl and /usr/bin/aconnect programs
 # from the alsa-utils package.
 #
-# Copyright (c) by Jaroslav Kysela <perex@suse.cz>
+# Copyright (c) by Jaroslav Kysela <perex@suse.cz> 
 #
 #
 #  This program is free software; you can redistribute it and/or modify
@@ -98,6 +98,13 @@ start() {
       $alsascrdir/$t
     fi
   done
+
+  #
+  # touch lockfile if lockdir exists
+  #
+  if [ -d /var/lock/subsys ] ; then
+    touch /var/lock/subsys/alsasound
+  fi
 }
 
 terminate() {
@@ -142,12 +149,18 @@ stop() {
   #
   # remove all sound modules
   #
-  /sbin/lsmod | grep -E "^snd" | grep -v "snd-hammerfall-mem" | while read line; do \
+  /sbin/lsmod | grep -E "^snd" | grep -Ev "^(snd-page-alloc|snd-hammerfall-mem)" | while read line; do \
      /sbin/rmmod `echo $line | cut -d ' ' -f 1`; \
   done
   # remove the 2.2 soundcore module (if possible)
   /sbin/rmmod soundcore 2> /dev/null
   /sbin/rmmod gameport 2> /dev/null
 
+  #
+  # remove lockfile if lockdir exists
+  #
+  if [ -d /var/lock/subsys ] ; then
+    rm -f /var/lock/subsys/alsasound
+  fi
   eend 0
 }
