@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-3.4.ebuild,v 1.1 2004/12/27 18:53:15 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-3.4.ebuild,v 1.2 2004/12/27 19:10:13 ribosome Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ RDEPEND="${DEPEND}
 	dev-util/guile
 	media-gfx/graphviz
 	app-sci/gtkwave
-	app-sci/espresso-ab"
+	sci-electronics/espresso-ab"
 
 S=${WORKDIR}/${Name}-${My_PV}
 
