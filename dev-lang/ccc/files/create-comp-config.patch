@@ -1,0 +1,21 @@
+--- usr/lib/compaq/ccc-6.5.9.001-6/alpha-linux/bin/create-comp-config.sh.old	2004-02-08 00:28:25.000000000 -0500
++++ usr/lib/compaq/ccc-6.5.9.001-6/alpha-linux/bin/create-comp-config.sh	2004-02-08 00:28:00.000000000 -0500
+@@ -364,8 +364,17 @@
+ }
+ #
+ # Get the list of include directories from the list displayed by gcc -v
++# Sort gcc-lib paths last.
+ #
+-USR_DIST_INC=`sed -n -e '1,/^\#include <...>/d' -e '/^End of search list/q' -e '/^/p' /tmp/${PREFIX}_install$$.log`
++USR_DIST_INC=`
++    sed -n \
++	-e '1,/^\#include <...>/d' \
++	-e '/^End of search list/q' \
++	-e '/gcc-lib/!p' /tmp/${PREFIX}_install$$.log;
++    sed -n \
++	-e '1,/^\#include <...>/d' \
++	-e '/^End of search list/q' \
++	-e '/gcc-lib/p' /tmp/${PREFIX}_install$$.log`
+ 
+ # Get the name of the linker command (ld or collect2), and library directories
+ # by examining the way gcc invoked the linker

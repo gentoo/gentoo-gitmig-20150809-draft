@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ccc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ChangeLog,v 1.5 2004/02/07 02:27:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ChangeLog,v 1.6 2004/02/08 05:37:38 agriffis Exp $
+
+*ccc-6.5.9.001-r2 (08 Feb 2004)
+
+  08 Feb 2004; Aron Griffis <agriffis@gentoo.org> ccc-6.5.9.001-r2.ebuild,
+  files/create-comp-config.patch:
+  Add patch to sort gcc-lib include paths last. Thanks to Marc Giger for
+  figuring this out
 
 *ccc-6.5.9.001-r1 (06 Feb 2004)
 
