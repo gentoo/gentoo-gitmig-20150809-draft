@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.9 2004/08/04 18:51:46 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.10 2004/08/09 04:34:00 vapier Exp $
 
 inherit flag-o-matic gcc gnuconfig eutils
 
@@ -87,12 +87,12 @@ src_install() {
 	use ipv6 && dobin ping6
 	dosbin arping
 	into /usr
-	dobin tracepath
-	use ipv6 && dobin trace{path,route}6
+	dosbin tracepath
+	use ipv6 && dosbin trace{path,route}6
 	dosbin clockdiff rarpd rdisc ipg tftpd
 
-	fperms 4711 /bin/ping /usr/bin/tracepath
-	use ipv6 && fperms 4711 /bin/ping6 /usr/bin/trace{path,route}6
+	fperms 4711 /bin/ping
+	use ipv6 && fperms 4711 /bin/ping6
 
 	dodoc INSTALL RELNOTES
 
