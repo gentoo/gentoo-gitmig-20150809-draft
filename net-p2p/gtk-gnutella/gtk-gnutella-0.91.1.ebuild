@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.91.1.ebuild,v 1.10 2004/06/25 00:33:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.91.1.ebuild,v 1.11 2004/07/15 03:50:16 agriffis Exp $
 
-IUSE=""
+IUSE="gnome"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A GTK+ Gnutella client"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 RESTRICT="nomirror"
