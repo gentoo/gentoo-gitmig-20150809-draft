@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.2a-r1.ebuild,v 1.1 2005/02/13 03:32:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.2a-r1.ebuild,v 1.2 2005/02/13 13:59:46 eradicator Exp $
 
 inherit eutils toolchain-funcs python
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="python"
 
 DEPEND="virtual/libc
-		python? ( virtual/python )"
+	python? ( virtual/python )"
 
 src_unpack() {
 	unpack ${A}
@@ -32,7 +32,7 @@ src_compile() {
 		cd ${S}/py_ext
 		python_version
 		my_python="python${PYVER}"
-		PYLIBDIR="/usr/lib/python${PYVER}"
+		PYLIBDIR="/usr/$(get_libdir)/python${PYVER}"
 		PYINCDIR="/usr/include/python${PYVER}"
 		emake CC="$(tc-getCC) -Wall" CFLAGS="${CFLAGS}" \
 			PYINCDIR="${PYINCDIR}" PYLIBDIR="${PYLIBDIR}" \
@@ -53,7 +53,7 @@ src_install() {
 	if use python; then
 		cd ${S}/py_ext
 		python_version
-		PYLIBDIR="/usr/lib/python${PYVER}"
+		PYLIBDIR="/usr/$(get_libdir)/python${PYVER}"
 		insinto ${PYLIBDIR}/site-packages
 		doins mingcmodule.so ming.py
 		newdoc README README.python
@@ -65,6 +65,6 @@ src_install() {
 pkg_postinst() {
 	if use python; then
 		python_version
-		python_mod_compile /usr/lib/python${PYVER}/site-packages/ming.py
+		python_mod_compile /usr/$(get_libdir)/python${PYVER}/site-packages/ming.py
 	fi
 }
