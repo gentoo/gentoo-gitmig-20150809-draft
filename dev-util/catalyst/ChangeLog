@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.37 2005/01/07 19:44:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.38 2005/01/14 20:02:30 wolf31o2 Exp $
+
+*catalyst-1.1.2 (14 Jan 2005)
+
+  14 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -catalyst-1.0.8.1-r1.ebuild, -catalyst-1.0.8.1.ebuild,
+  -catalyst-1.0.9.ebuild, +catalyst-1.1.2.ebuild:
+  ...and God looked down upon Catalyst 1.1.2, and He saw that it was good.
+  This closes bugs #73556, #76530, #70663, #70518, #76146, #70425, #68307,
+  #77480, #76542, #66592, and #75336.
 
   07 Jan 2005; Markus Rothe <corsair@gentoo.org> catalyst-1.1.1.ebuild:
   Stable on ppc64

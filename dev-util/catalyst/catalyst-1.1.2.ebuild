@@ -1,37 +1,42 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.0.9.ebuild,v 1.4 2005/01/06 21:01:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.2.ebuild,v 1.1 2005/01/14 20:02:30 wolf31o2 Exp $
 
 inherit eutils
 
 DESCRIPTION="Gentoo Linux official release metatool"
 HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst"
-SRC_URI="mirror://gentoo/${P}.tar.bz2
-		http://dev.gentoo.org/~zhen/catalyst/${P}.tar.bz2"
-
+SRC_URI="http://dev.gentoo.org/~wolf31o2/sources/catalyst/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
-IUSE="doc cdr"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+IUSE="doc ccache cdr"
 
 DEPEND=""
 RDEPEND="dev-lang/python
 	sys-apps/portage
-	dev-util/ccache
 	amd64? ( sys-apps/linux32 )
-	cdr? ( app-cdr/cdrtools app-misc/zisofs-tools sys-fs/squashfs-tools )
-	>=sys-kernel/genkernel-3.0.2b"
+	ccache? ( dev-util/ccache )
+	cdr? ( app-cdr/cdrtools app-misc/zisofs-tools >=sys-fs/squashfs-tools-2.1 )
+	>=sys-kernel/genkernel-3.1.0a"
 
 S=${WORKDIR}/${PN}
+
+pkg_setup() {
+	if use ccache; then
+		einfo "Enabling ccache support for catalyst."
+	else
+		ewarn "Disabling ccache support for catalyst.  If this is not what you intended,"
+		ewarn "then you should add ccache to your USE."
+	fi
+}
 
 src_install() {
 	insinto /usr/lib/${PN}/arch
 	doins arch/*
 	insinto /usr/lib/${PN}/modules
 	doins modules/*
-	insinto /usr/lib/${PN}/livecd/kconfig
-	doins livecd/kconfig/*
 	insinto /usr/lib/${PN}/livecd/cdtar
 	doins livecd/cdtar/*
 	exeinto /usr/lib/${PN}/livecd/isogen
