@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.21 2004/04/27 15:54:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.22 2004/04/27 18:16:36 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> libmatroska-0.5.2.ebuild,
+  libmatroska-0.6.2.ebuild, libmatroska-0.6.3.ebuild,
+  libmatroska-0.7.0.ebuild:
+  Add flag-o-matic for bug 49179
 
 *libmatroska-0.7.0 (27 Apr 2004)
 

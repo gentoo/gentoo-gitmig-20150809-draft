@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.0.ebuild,v 1.1 2004/04/27 15:54:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.0.ebuild,v 1.2 2004/04/27 18:16:36 agriffis Exp $
+
+inherit flag-o-matic
 
 IUSE=""
 
@@ -36,3 +38,4 @@ src_install () {
 	einstall || die "make install failed"
 	dodoc ${S}/LICENSE.*
 }
+
