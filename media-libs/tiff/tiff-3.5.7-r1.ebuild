@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.7-r1.ebuild,v 1.17 2004/06/24 23:24:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.7-r1.ebuild,v 1.18 2004/09/17 04:31:40 nerdboy Exp $
 
 MY_P=${P/tiff-/tiff-v}
 S=${WORKDIR}/${MY_P}
@@ -24,14 +24,14 @@ src_unpack() {
 }
 
 src_compile() {
-	OPTIMIZER="${CFLAGS}" ./configure --noninteractive || die
-	emake || die
+	OPTIMIZER="${CFLAGS}" ./configure --noninteractive || die "configure failed"
+	emake || die "emake barfed"
 }
 
 src_install() {
-	dodir /usr/{bin,lib,share/man,share/doc/${PF}/html}
+	dodir /usr/{bin,lib,share/man,share/doc}
 	dodir /usr/share/doc/${PF}/html
-	make ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" install || die
+	make ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" install || die "make install failed"
 	preplib /usr
 	dodoc COPYRIGHT README TODO VERSION
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.8 2004/09/16 02:08:25 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.9 2004/09/17 04:31:40 nerdboy Exp $
 
 MY_S=${P/tiff-/tiff-v}
 MY_P=${PN}-v${PV/_beta/-beta}
@@ -24,7 +24,7 @@ src_unpack() {
 		ewarn "Applying lzw-compression toolkit..."
 		unpack  libtiff-lzw-compression-kit-1.5.tar.gz || die "lzw unpack failed"
 		cd libtiff-lzw-compression-kit-1.5/
-		cp -f tif_lzw.c ${S}/.
+		cp -f tif_lzw.c ${S}/libtiff/.
 		cp README-LZW-COMPRESSION ${S}/.
 	fi
 	cd ${S}
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/{bin,lib,share/man,share/doc/${PF}/html}
+	dodir /usr/{bin,lib,share/man,share/doc/}
 	dodir /usr/share/doc/${PF}/html
 	ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" make install || die
 	preplib /usr

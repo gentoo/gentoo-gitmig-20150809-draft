@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1.ebuild,v 1.6 2004/09/17 04:31:40 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.7-r2.ebuild,v 1.1 2004/09/17 04:31:40 nerdboy Exp $
 
-MY_S=${P/tiff-/tiff-v}
-MY_P=${PN}-v${PV/_beta/-beta}
+MY_P=${P/tiff-/tiff-v}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Library for manipulation of TIFF (Tag Image File Format) images."
 SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/${MY_P}.tar.gz"
@@ -12,10 +11,10 @@ HOMEPAGE="http://www.libtiff.org/"
 DEPEND=">=media-libs/jpeg-6b
 	>=sys-libs/zlib-1.1.3-r2"
 
-IUSE=""
+IUSE="private"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa mips amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
 
 src_unpack() {
 	unpack ${A}
@@ -25,14 +24,18 @@ src_unpack() {
 }
 
 src_compile() {
-	OPTIMIZER="${CFLAGS}" ./configure --noninteractive || die
-	emake || die
+	OPTIMIZER="${CFLAGS}" ./configure --noninteractive || die "configure failed"
+	emake || die "emake barfed"
 }
 
 src_install() {
-	dodir /usr/{bin,lib,share/man,share/doc/}
+	dodir /usr/{bin,lib,share/man,share/doc}
 	dodir /usr/share/doc/${PF}/html
-	make ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" install || die
+	if use private ; then
+	    make ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" install-private || die "make install-private failed"
+	else
+	    make ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" install || die "make install failed"
+	fi
 	preplib /usr
 	dodoc COPYRIGHT README TODO VERSION
 }
