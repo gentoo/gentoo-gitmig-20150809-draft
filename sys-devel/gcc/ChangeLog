@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.339 2004/10/26 04:46:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.340 2004/10/26 19:44:20 lv Exp $
+
+  26 Oct 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.2-r3.ebuild:
+  keyword as testing on amd64, mips, ppc64, and x86
 
   26 Oct 2004; Mike Frysinger <vapier@gentoo.org>
   +files/3.4.2/400-mips-pr17565.patch, +files/3.4.2/401-ppc-eabi-typo.patch,
