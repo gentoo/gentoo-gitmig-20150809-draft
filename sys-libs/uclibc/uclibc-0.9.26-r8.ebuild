@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.26-r8.ebuild,v 1.2 2005/01/12 03:42:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.26-r8.ebuild,v 1.3 2005/01/14 04:24:16 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -210,6 +210,13 @@ src_unpack() {
 	cp .config myconfig
 
 	emake clean >/dev/null || die "could not clean"
+
+	echo
+	einfo "Runtime Prefix: $(alt_rprefix)"
+	einfo "Devel Prefix:   $(alt_prefix)"
+	einfo "CBUILD:         ${CBUILD:-${CHOST}}"
+	einfo "CHOST:          ${CHOST}"
+	einfo "CTARGET:        ${CTARGET}"
 }
 
 src_compile() {
@@ -261,9 +268,6 @@ src_install() {
 	[[ ${CTARGET} != ${CHOST} ]] && return 0
 
 	if [[ ${CHOST} == *-uclibc ]] ; then
-#		rm -f "${D}"$(alt_prefix)/lib/lib*_pic.a
-#		! use static && use build && rm -f "${D}"$(alt_prefix)/lib/lib*.a
-
 		emake PREFIX="${D}" install_utils || die "install-utils failed"
 		dodir /usr/bin
 		exeinto /usr/bin
