@@ -74,7 +74,8 @@ done
 function ph_update() {
    echo "`date` : Updating ph files"
    echo "`date` : Updating ph files">>$LOG
-   cd /usr/include; h2ph * sys/* arpa/* netinet/* bits/* security/* asm/* >>$LOG
+		cd /usr/include; h2ph * sys/* arpa/* netinet/* bits/* security/* asm/* gnu/* linux/*>>$LOG
+		cd /usr/include/linux; h2ph * >>$LOG
 }
 
 # Build a list of modules installed under older perls - only valid if the module was an ebuild :)

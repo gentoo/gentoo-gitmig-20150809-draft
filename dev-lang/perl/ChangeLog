@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.102 2005/01/16 17:56:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.103 2005/01/26 17:11:49 mcummings Exp $
+
+*perl-5.8.4-r2 (26 Jan 2005)
+
+  26 Jan 2005; Michael Cummings <mcummings@gentoo.org>
+  +files/file_path_rmtree.patch, files/libperl_rebuilder, files/perl-cleaner,
+  +perl-5.8.2-r2.ebuild, +perl-5.8.4-r2.ebuild, +perl-5.8.5-r3.ebuild,
+  +perl-5.8.6-r2.ebuild:
+  Bump for bug 75696 involving temporary file perms in File::Path. Includes
+  fixes for h2ph conversion, bug 75955 Includes change over to perl-cleaner from
+  libperl_rebuilder, bugs 60447, 62301, 62669, 66688, 73932, 71287
 
   16 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   perl-5.8.5-r2.ebuild, perl-5.8.6-r1.ebuild, perl-5.8.6.ebuild:

@@ -1,5 +1,15 @@
 #!/bin/bash
 
+echo "libperl_rebuilder has been replaced by perl-cleaner"
+echo "Please use it instead - its a lot more sane in its"
+echo "approach to your box."
+echo ""
+echo "libperl_rebuilder will start up in ten seconds."
+echo "Press CTL-C to exit and use the much improved"
+echo "perl-cleaner..."
+
+sleep 11
+
 LOG=/tmp/perl-update.log
 
 echo "The script will attempt to re-emerge your perl modules, any packages"
