@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.1.ebuild,v 1.6 2003/02/13 17:23:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.1.ebuild,v 1.7 2003/06/08 05:11:03 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a GKrellM plugin for hddtemp (which reads the temperature of SMART IDE hard drives)"
@@ -11,14 +11,14 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 
-DEPEND="=app-admin/gkrellm-1.2*"
+DEPEND="=app-admin/gkrellm-1.2*
+	>=sys-apps/sed-4"
 RDEPEND=">=app-admin/hddtemp-0.2"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
 	# patch Makefile
-	mv Makefile Makefile.orig
-	sed -e "s:^CFLAGS.*:CFLAGS=${CFLAGS} -fPIC:" Makefile.orig > Makefile
+	sed -i "s:^CFLAGS.*:CFLAGS=${CFLAGS} -fPIC:" Makefile
 }
 
 src_compile() {
