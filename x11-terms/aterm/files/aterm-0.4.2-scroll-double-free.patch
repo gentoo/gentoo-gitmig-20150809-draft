@@ -1,0 +1,61 @@
+diff -Naur aterm-0.4.2-orig/src/screen.c aterm-0.4.2/src/screen.c
+--- aterm-0.4.2-orig/src/screen.c	2005-02-06 22:15:49.000000000 +0100
++++ aterm-0.4.2/src/screen.c	2005-02-06 22:16:58.000000000 +0100
+@@ -448,6 +448,8 @@
+     for (i = 0; i < total_rows; i++) {
+ 	if (screen.text[i]) {	/* then so is screen.rend[i] */
+ 	    FREE(screen.text[i]);
++	}
++	if (screen.rend[i]) {
+ 	    FREE(screen.rend[i]);
+ 	}
+     }
+@@ -784,6 +786,8 @@
+     if (count > 0) {
+ /* A: scroll up */
+ 
++	void *t;
++
+ 	MIN_IT(count, row2 - row1 + 1);
+ /* A1: Copy lines that will get clobbered by the rotation */
+ 	for (i = 0, j = row1; i < count; i++, j++) {
+@@ -793,9 +797,13 @@
+ 	}
+ /* A2: Rotate lines */
+ 	for (j = row1; (j + count) <= row2; j++) {
+-	    screen.text[j] = screen.text[j + count];
++	    t = screen.text[j + count];
++	    screen.text[j + count] = NULL;
++	    screen.text[j] = t;
+ 	    screen.tlen[j] = screen.tlen[j + count];
+-	    screen.rend[j] = screen.rend[j + count];
++	    t = screen.rend[j + count];
++	    screen.rend[j + count] = NULL;
++	    screen.rend[j] = t;
+ 	}
+ /* A3: Resurrect lines */
+ 	for (i = 0; i < count; i++, j++) {
+@@ -805,6 +813,7 @@
+ 	}
+     } else if (count < 0) {
+ /* B: scroll down */
++	void *t;
+ 
+ 	count = min(-count, row2 - row1 + 1);
+ /* B1: Copy lines that will get clobbered by the rotation */
+@@ -815,9 +824,13 @@
+ 	}
+ /* B2: Rotate lines */
+ 	for (j = row2; (j - count) >= row1; j--) {
+-	    screen.text[j] = screen.text[j - count];
++	    t = screen.text[j - count];
++	    screen.text[j - count] = NULL;
++	    screen.text[j] = t;
+ 	    screen.tlen[j] = screen.tlen[j - count];
+-	    screen.rend[j] = screen.rend[j - count];
++	    t = screen.rend[j - count];
++	    screen.rend[j - count] = NULL;
++	    screen.rend[j] = t;
+ 	}
+ /* B3: Resurrect lines */
+ 	for (i = 0, j = row1; i < count; i++, j++) {

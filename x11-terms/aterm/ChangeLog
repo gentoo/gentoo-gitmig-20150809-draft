@@ -1,6 +1,15 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.58 2005/02/06 00:52:55 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.59 2005/02/06 21:34:10 spock Exp $
+
+*aterm-0.4.2-r12 (06 Feb 2005)
+
+  06 Feb 2005; Michał Januszewski <spock@gentoo.org>
+  +files/aterm-0.4.2-scroll-double-free.patch, +aterm-0.4.2-r12.ebuild,
+  aterm-1.00_beta2.ebuild:
+  Added a fix for bug #75604. aterm-0.4.2-r12 is the first 0.4.2 ebuild that
+  uses the xgetdefault USE flag. If you have some problems with how your
+  ~/.Xdefaults is handled, try enabling/disabling this flag.
 
 *aterm-1.00_beta2 (06 Feb 2005)
 

@@ -1,10 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bb4c569c7c6b2d8d1d59bab8b5b7ce7e aterm-1.00_beta2.ebuild 1555
+MD5 d960cc3ac5eba8e6dbf6635ebbde673e aterm-1.00_beta2.ebuild 1652
 MD5 cfdac67e637f4ef919ea59a599de13df aterm-0.4.2-r11.ebuild 2879
 MD5 59ea7920f8bed448ead90626580d91ef aterm-0.4.2-r7.ebuild 2049
-MD5 12478f784ccec5f7eec0b03def1f01a5 ChangeLog 10458
+MD5 29bd18da6fea2dddad1e67ad06dee456 aterm-0.4.2-r12.ebuild 2955
+MD5 1802c3b912181d2530ce146ccb3953a8 ChangeLog 10855
 MD5 41328649bf184e80ecc1043bc7b44ec0 aterm-0.4.2-r9.ebuild 2369
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 f35d671ae7390589e50cb67736e90fc3 files/digest-aterm-1.00_beta2 69
@@ -12,6 +13,7 @@ MD5 c2aedeeb3e7cc1dcc9361a021a570973 files/aterm-0.4.2-paste.patch 2160
 MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r7 128
 MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r9 128
 MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r11 128
+MD5 2b5573768ab860ead256fa2af0a1882a files/digest-aterm-0.4.2-r12 64
 MD5 1ddbe9b625c32cb9e67d8ee23af57110 files/aterm-0.4.2-patch-pack000.patch 4124
 MD5 df2652026f1f4f3e4444db9cddc145b6 files/aterm-0.4.2-qtpaste.patch 2510
 MD5 18e59b417ce4b6394317ac17da46c122 files/aterm-0.4.2-internal-border.patch 3246
@@ -20,12 +22,13 @@ MD5 80558db5a2d61eaaf6998877b616bbd0 files/aterm-0.4.2-copynpaste-r3.patch 6358
 MD5 e91e244a20f4bff5ed4238e4cdb4d87a files/aterm-0.4.2-paste_mouse_outside.patch 6267
 MD5 1c869d8199dea55badd3758c5967e182 files/aterm-0.4.2-copynpaste.patch 3668
 MD5 001fefd640df8a6318e8597f86c6e08c files/aterm-0.4.2-ja-savelines.patch 4459
+MD5 64a8e39eb81e3b76ec3a28e0c36b2c30 files/aterm-0.4.2-scroll-double-free.patch 1826
 MD5 56383dccdb085d09e33858081b774724 files/aterm-0.4.2-borderless.patch 4692
 MD5 8faf173b6f8032958f1bc48d7877353c files/aterm-0.4.2-savelines.patch 4081
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCBWp2chej4aZK9/cRAn4/AJ9UfHctm3y5ofmbjXB2ugoBhRfbOgCdGXkf
-rtrHTceOmFg7SkjHS9Meq4Y=
-=8sb4
+iD8DBQFCBo2lchej4aZK9/cRAqwdAJ9V9djkquPcXiUSoLeHVZUbGHNdNACfQXbl
+FEzXs7pSDnQ8wr1vSHpWIyg=
+=VBYU
 -----END PGP SIGNATURE-----
