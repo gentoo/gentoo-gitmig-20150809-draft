@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-20031202.ebuild,v 1.7 2004/10/26 14:10:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-20031202.ebuild,v 1.8 2004/10/31 05:19:45 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}/${MY_P}
 
