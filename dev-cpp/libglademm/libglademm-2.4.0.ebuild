@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.4.0.ebuild,v 1.7 2004/06/24 21:49:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.4.0.ebuild,v 1.8 2004/06/26 01:23:53 khai Exp $
 
 inherit gnome2 eutils
 
@@ -13,7 +13,7 @@ SLOT="2.4"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-RDEPEND=">=gnome-base/libglade-2
+RDEPEND=">=gnome-base/libglade-2.3.6
 	>=dev-cpp/gtkmm-2.4"
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	${RDEPEND}"
