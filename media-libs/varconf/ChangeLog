@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/varconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.1 2002/07/18 22:57:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.2 2002/10/01 20:46:32 verwilst Exp $
+
+*varconf-0.5.4 (1 Okt 2002) Bart Verwilst <verwilst@gentoo.org>:
+
+  bugfix release
 
 *varconf-0.5.0 (18 Jul 2002)
 
