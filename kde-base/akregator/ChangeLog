@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.2 2005/01/15 20:14:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.3 2005/01/18 18:31:36 danarmak Exp $
+
+  18 Jan 2005; Dan Armak <danarmak@gentoo.org> :
+  Build the kontact plugin as well. Fixes 78516.
 
   15 Jan 2005; Dan Armak <danarmak@gentoo.org> akregator-3.4.0_beta1.ebuild:
   Added missing dep on libkdeipm. Closes bug #78123.
