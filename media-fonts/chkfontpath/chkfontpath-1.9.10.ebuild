@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/chkfontpath/chkfontpath-1.9.10.ebuild,v 1.1 2003/07/22 01:55:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/chkfontpath/chkfontpath-1.9.10.ebuild,v 1.2 2004/02/22 21:14:00 agriffis Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://rpmfind.net/linux/rawhide/1.0/SRPMS/SRPMS/${P}-${RPM_V}.src.rpm
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips"
 
 DEPEND="virtual/glibc
 	app-arch/rpm2targz

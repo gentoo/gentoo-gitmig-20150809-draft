@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.0-r1.ebuild,v 1.3 2003/09/11 01:39:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.0-r1.ebuild,v 1.4 2004/02/22 21:13:45 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Korean Baekmuk Font"
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://ftp.nnongae.com/pub/gentoo/"
 
 SLOT="0"
 LICENSE="BAEKMUK"
-KEYWORDS="x86 sparc  ppc"
+KEYWORDS="x86 sparc ppc"
 
 DEPEND="virtual/x11"
 
