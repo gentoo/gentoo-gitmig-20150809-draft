@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: powerpc-utils-1.1.3.ebuild,v 1.2 2002/06/22 00:13:53 gerk Exp $
+# $Id: powerpc-utils-1.1.3.ebuild,v 1.3 2002/06/22 00:21:55 gerk Exp $
 
 S=${WORKDIR}/${P}
 DEBRV=3
@@ -15,6 +15,7 @@ LICENSE="GPL"
 
 pkg_setup() {
 	if [ ${ARCH} != "ppc" ] ; then
+		eerror "Sorry, this is a PPC only package."
 		die "Sorry, this as a PPC only pacakge."		
 	fi
 }
