@@ -37,7 +37,7 @@ ACCEPT_KEYWORDS="mips"
 #  'usersandbox' enables sandboxing while portage is running under userpriv.
 #                unpack -- for debugging purposes only.
 
-FEATURES="sandbox sfperms strict nodoc noinfo noman"
+FEATURES="sandbox sfperms strict nodoc noinfo noman autoconfig"
 #FEATURES="${FEATURES} userpriv usersandbox"
 PORTDIR=/usr/portage/
 PKGDIR=${PORTDIR}/packages/${CHOST}/
