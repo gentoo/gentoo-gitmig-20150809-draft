@@ -1,8 +1,13 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.7 2002/06/08 12:57:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.8 2002/07/23 22:10:34 gerk Exp $
 
 *libsdl-1.2.4-20020601 (7 Jun 2002)
+
+  23 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords, and removed nasm as RDEPEND (it is not
+  required to run or comile this lib and does not work on 
+  non x86 ARCHes)
 
   7 June 2002; Seemant Kulleen <seemant@gentoo.org>
   libsdl-1.2.4-20020601.ebuild files/digest-libsdl-1.2.4-20020601 :
