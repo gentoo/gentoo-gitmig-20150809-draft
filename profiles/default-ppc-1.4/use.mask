@@ -12,6 +12,7 @@ sse
 firebird
 tcc
 acpi
+uml
 
 # No stable enough gcc-3.3.x available on ppc
 nptl

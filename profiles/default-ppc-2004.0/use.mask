@@ -17,6 +17,8 @@ x86
 uclibc
 firebird
 fmod
+uml
+
 # media-libs/glide-v3 requires some extra work on ppc
 3dfx
 
