@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1.ebuild,v 1.6 2004/07/14 17:12:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1.ebuild,v 1.7 2004/08/07 23:12:44 slarti Exp $
 
-DESCRIPTION="Converts Bitmaps to vector-grahics"
+DESCRIPTION="Converts Bitmaps to vector-graphics"
 SRC_URI="mirror://sourceforge/autotrace/${P}.tar.gz"
 RESTRICT="nomirror"
 HOMEPAGE="http://autotrace.sourceforge.net/"

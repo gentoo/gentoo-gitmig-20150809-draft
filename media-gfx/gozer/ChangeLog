@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gozer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gozer/ChangeLog,v 1.5 2004/07/16 09:43:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gozer/ChangeLog,v 1.6 2004/08/07 23:14:12 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> gozer-0.7-r1.ebuild:
+  Typo in DESCRIPTION: arbitary -> arbitrary. Bug 59717.
 
   16 Jul 2004; David Holm <dholm@gentoo.org> gozer-0.7-r1.ebuild:
   Added to ~ppc.

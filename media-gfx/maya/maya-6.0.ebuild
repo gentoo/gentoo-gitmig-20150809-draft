@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.0.ebuild,v 1.4 2004/06/24 22:45:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.0.ebuild,v 1.5 2004/08/07 23:17:22 slarti Exp $
 
 # Note that this ebuild requires you to set the MAYA_INSTALL_LOC environment
 # variable to the location of your maya RPMS and documentation:
@@ -22,7 +22,7 @@ inherit rpm eutils
 IUSE="bundled-libs"
 S="${WORKDIR}"
 
-DESCRIPTION="Alias Wavefront's Maya.  Comercial modeling and animation package."
+DESCRIPTION="Alias Wavefront's Maya.  Commercial modeling and animation package."
 HOMEPAGE="http://www.alias.com/eng/products-services/maya/index.shtml"
 
 # Patches to download go into SRC_URI

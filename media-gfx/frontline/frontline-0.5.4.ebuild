@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/frontline/frontline-0.5.4.ebuild,v 1.5 2004/07/05 13:14:23 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/frontline/frontline-0.5.4.ebuild,v 1.6 2004/08/07 23:13:29 slarti Exp $
 
 IUSE=""
 
-DESCRIPTION="Front-End to Autotrace (Converts Bitmaps to vector-grahics)"
+DESCRIPTION="Front-End to Autotrace (Converts Bitmaps to vector-graphics)"
 SRC_URI="http://ftp1.sourceforge.net/autotrace/${P}.tar.gz"
 HOMEPAGE="http://autotrace.sourceforge.net/"
 

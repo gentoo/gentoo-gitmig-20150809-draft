@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r5.ebuild,v 1.17 2004/07/14 17:51:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r5.ebuild,v 1.18 2004/08/07 23:18:08 slarti Exp $
 
 S=${WORKDIR}/povray31
-DESCRIPTION="The Persistance Of Vision Ray Tracer"
+DESCRIPTION="The Persistence Of Vision Ray Tracer"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/povuni_s_3.1.tgz
 	http://www.ibiblio.org/gentoo/distfiles/povuni_d_3.1.tgz"
 HOMEPAGE="http://www.povray.org/"

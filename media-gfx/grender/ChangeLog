@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/grender
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grender/ChangeLog,v 1.3 2004/07/19 09:57:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grender/ChangeLog,v 1.4 2004/08/07 23:15:13 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> grender-0.1.3.ebuild:
+  Typo in DESCRIPTION: aa -> a. Bug 59717.
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> grender-0.1.3.ebuild:
   Stable x86.
