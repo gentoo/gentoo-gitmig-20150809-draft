@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2_rc2.ebuild,v 1.1 2003/01/31 02:59:42 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2_rc2.ebuild,v 1.2 2003/01/31 18:22:06 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="GNOME 2.0 - merge this package to merge the Gnome2 desktop"
@@ -69,14 +69,15 @@ RDEPEND="!gnome-base/gnome-core
 	>=net-libs/linc-1.0.1
 	>=gnome-base/libglade-2.0.1
 	>=x11-libs/libwnck-2.2
-	>=gnome-base/ORBit2-2.5.1
+	>=gnome-base/ORBit2-2.6
 
 	>=gnome-base/libgnomeprint-2.2.1
 	>=gnome-base/libgnomeprintui-2.2.1
 
 	>=x11-themes/gnome-icon-theme-0.1.5
 	>=x11-themes/gnome-themes-1
-	>=app-arch/file-roller-2.2.1"
+	>=app-arch/file-roller-2.2.1
+	>=gnome-extra/nautilus-media-0.2.0"
 #	>=x11-libs/libzvt-2.0.1
 
 pkg_postinst () {
