@@ -1,6 +1,21 @@
 # ChangeLog for sys-kernel/mips-headers
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.24 2004/10/02 05:49:51 kumba Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.25 2005/02/06 04:48:42 kumba Exp $
+
+*mips-headers-2.4.28 (05 Feb 2005)
+
+  05 Feb 2005; Joshua Kinard <kumba@gentoo.org>
+  -files/mips-headers-2.6.0-fb.patch,
+  -files/mips-headers-2.6.0-sysctl_h-compat.patch,
+  -files/mips-headers-2.6.3-strict-ansi-fix.patch,
+  -files/mips-headers-2.6.6-appCompat.patch,
+  -files/mips-headers-2.6.6-spaces_h-kernel.patch,
+  -files/mips-patches-gcc-makefile-fix.patch, -mips-headers-2.4.21-r1.ebuild,
+  -mips-headers-2.4.21-r2.ebuild, mips-headers-2.4.22-r1.ebuild,
+  mips-headers-2.4.23.ebuild, -mips-headers-2.4.25.ebuild,
+  +mips-headers-2.4.28.ebuild, -mips-headers-2.6.6-r1.ebuild:
+  Added an ebuild for 2.4.28 and cleaned out some older versions no longer
+  needed.
 
   01 Oct 2004; Joshua Kinard <kumba@gentoo.org> mips-headers-2.6.8.1.ebuild:
   Wrong keyword, move to ~mips.

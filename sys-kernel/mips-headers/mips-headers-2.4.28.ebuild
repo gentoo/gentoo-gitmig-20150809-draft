@@ -1,15 +1,15 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.25.ebuild,v 1.3 2004/07/15 03:53:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.28.ebuild,v 1.1 2005/02/06 04:48:42 kumba Exp $
 
 ETYPE="headers"
 inherit kernel
 
-OKV=${PV/_/-}
-CVSDATE=20040222
-EXTRAVERSION=-mipscvs-${CVSDATE}
+OKV="${PV/_/-}"
+CVSDATE="20050105"
+EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
-S=${WORKDIR}/linux-${KV}
+S="${WORKDIR}/linux-${KV}"
 
 # What's in this kernel?
 
@@ -24,7 +24,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 HOMEPAGE="http://www.linux-mips.org/"
 SLOT="0"
 PROVIDE="virtual/os-headers"
-KEYWORDS="-*"
+KEYWORDS="-* ~mips"
 IUSE=""
 
 src_unpack() {
@@ -33,7 +33,7 @@ src_unpack() {
 	cd ${S}
 
 	# Update the vanilla sources with linux-mips CVS changes
-	cat ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff | patch -p1
+	epatch ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff
 
 	kernel_universal_unpack
 }
