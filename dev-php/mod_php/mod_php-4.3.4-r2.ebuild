@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.4-r2.ebuild,v 1.6 2004/01/11 00:38:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.4-r2.ebuild,v 1.7 2004/01/11 04:04:15 mr_bones_ Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -58,7 +58,7 @@ RDEPEND="${RDEPEND} ${DEPEND_EXTRA}"
 
 # Add a 'return 0' as we DON'T want the return code checked
 pkg_setup() {
-	use debug && einfo "Installing in SLOT=${SLOT}" 
+	use debug && einfo "Installing in SLOT=${SLOT}"
 	return 0
 }
 
