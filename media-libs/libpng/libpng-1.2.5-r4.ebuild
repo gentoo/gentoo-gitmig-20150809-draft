@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r4.ebuild,v 1.3 2003/02/13 12:50:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r4.ebuild,v 1.4 2003/03/01 20:17:39 lostlogic Exp $
 
 inherit flag-o-matic eutils
 
@@ -33,16 +33,13 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die
+	emake CC="${CC}" CXX="${CXX}"|| die "Make failed"
 }
 
 src_install() {
 	dodir /usr/{include,lib}
 	dodir /usr/share/man
-	make \
-		DESTDIR=${D} \
-		MANPATH=/usr/share/man \
-		install || die
+	einstall MANPATH=${D}/usr/share/man|| die "Failed to install"
 
 	doman libpng.3 libpngpf.3 png.5
 	dodoc ANNOUNCE CHANGES KNOWNBUG LICENSE README TODO Y2KINFO
