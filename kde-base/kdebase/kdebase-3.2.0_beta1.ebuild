@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta1.ebuild,v 1.2 2003/11/01 14:57:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta1.ebuild,v 1.3 2003/11/05 19:14:14 caleb Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
@@ -65,6 +65,10 @@ src_install() {
 	rm startkde.orig
 	chmod a+x startkde
 
+	# kcontrol modules
+	cd ${D}/${KDEDIR}/etc/xdg/menus
+	ln -s default_kde-settings.menu kde-settings.menu
+
 	# x11 session script
 	cd ${T}
 	echo "#!/bin/sh
@@ -100,5 +104,4 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 
 pkg_postinst() {
 	mkdir -p ${KDEDIR}/share/templates/.source/emptydir
-
 }
