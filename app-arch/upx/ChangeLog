@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/upx
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/ChangeLog,v 1.9 2004/04/16 13:35:34 randy Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/ChangeLog,v 1.10 2004/06/24 21:38:57 agriffis Exp $
 
   16 Apr 2004; Michael McCabe <randy@gentoo.org> upx-1.24-r1.ebuild:
   adding s390 keywords

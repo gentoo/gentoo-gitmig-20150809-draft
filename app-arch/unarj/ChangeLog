@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/unarj
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unarj/ChangeLog,v 1.8 2003/11/25 03:38:17 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unarj/ChangeLog,v 1.9 2004/06/24 21:37:28 agriffis Exp $
 
   24 Nov 2003; Aron Griffis <agriffis@gentoo.org> unarj-2.63a-r1.ebuild:
   Mark stable on alpha

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/gtk-splitter-2.2.ebuild,v 1.3 2004/06/03 15:58:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/gtk-splitter-2.2.ebuild,v 1.4 2004/06/24 21:30:45 agriffis Exp $
 
 DESCRIPTION="split/combine files !"
 HOMEPAGE="http://gtk-splitter.sourceforge.net/"

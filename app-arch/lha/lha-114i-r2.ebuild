@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i-r2.ebuild,v 1.1 2004/05/04 12:17:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i-r2.ebuild,v 1.2 2004/06/24 21:32:22 agriffis Exp $
 
 inherit eutils
 

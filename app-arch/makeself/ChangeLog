@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/makeself
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/ChangeLog,v 1.5 2004/06/06 14:37:53 dragonheart Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/ChangeLog,v 1.6 2004/06/24 21:33:03 agriffis Exp $
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   makeself-2.1.2.ebuild:

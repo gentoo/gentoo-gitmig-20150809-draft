@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.36.ebuild,v 1.3 2004/06/16 15:15:55 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.36.ebuild,v 1.4 2004/06/24 21:30:03 agriffis Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}

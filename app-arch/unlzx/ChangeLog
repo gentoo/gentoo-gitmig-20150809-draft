@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/unlzx
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/ChangeLog,v 1.11 2004/06/06 14:41:33 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/ChangeLog,v 1.12 2004/06/24 21:37:38 agriffis Exp $
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   unlzx-1.1.ebuild:

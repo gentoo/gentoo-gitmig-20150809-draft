@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-1.2b.ebuild,v 1.8 2004/04/27 16:23:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-1.2b.ebuild,v 1.9 2004/06/24 21:37:18 agriffis Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="ACE unarchiver"
