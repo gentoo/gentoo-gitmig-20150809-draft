@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-2.09.ebuild,v 1.4 2004/07/15 02:52:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-2.09.ebuild,v 1.5 2004/10/07 15:18:34 vapier Exp $
 
 inherit eutils gcc
 
@@ -8,10 +8,10 @@ DESCRIPTION="SysLinux, IsoLinux and PXELinux bootloader"
 HOMEPAGE="http://syslinux.zytor.com/"
 SRC_URI="mirror://kernel/linux/utils/boot/syslinux/${P}.tar.bz2"
 
-KEYWORDS="~x86 -ppc -sparc"
-IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="-* x86"
+IUSE=""
 
 DEPEND="dev-lang/nasm
 	sys-fs/mtools"
