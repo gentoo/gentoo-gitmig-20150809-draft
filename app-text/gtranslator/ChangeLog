@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gtranslator
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.10 2003/09/28 04:33:49 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.11 2003/09/28 13:41:26 obz Exp $
+
+  28 Sep 2003; Mike Gardiner <obz@gentoo.org> gtranslator-1.0.ebuild:
+  Dep tweaking, removed ~sparc from 1.0, and added pkgconfig dep
 
 *gtranslator-1.0 (28 Sep 2003)
 
