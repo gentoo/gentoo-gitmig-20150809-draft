@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 24db6ff1612fd0510be2ba0e6fabb150 ChangeLog 2164
-MD5 1219aeed9adb3dee5fcde9e84132dbc1 glimpse-4.17.4.ebuild 1199
+MD5 7ee06a544e8c38081b8d93efb1c07f16 ChangeLog 2287
+MD5 f581a6599124a304f647bc3c5e964be4 glimpse-4.17.4.ebuild 1203
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 9f826af149f05d9576b11f1fcf583dc9 glimpse-4.18.0.ebuild 1239
+MD5 45691e4519af0d05e78cf070eea8aa83 glimpse-4.18.0.ebuild 1243
 MD5 a1275d58e7fbf52d926178e7c4b2c16a files/digest-glimpse-4.17.4 66
 MD5 344aa4793307f2aa3574436006c0e14a files/4.17.4-gcc3.patch 2131
 MD5 fc0addd1a3501736c39e5a70ae882717 files/digest-glimpse-4.18.0 66
@@ -12,7 +12,7 @@ MD5 bcfe7c55d54ccab22d6d272cef2b235d files/4.18.0-gcc3.patch 2106
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBoIapmdTrptrqvGERAna8AJ4mqUsysv0rJLMlZRDYJWkWdom2bQCghAc4
-UF3w+7h9NBRMk33ys595/tA=
-=wTSz
+iD8DBQFBoJKDmdTrptrqvGERAjeGAJ4jX+KNr/y4c5tmldCHBgwUS7JB4ACfakik
+30l62rodkKwyaq6DUfJ0W4o=
+=p2Yo
 -----END PGP SIGNATURE-----
