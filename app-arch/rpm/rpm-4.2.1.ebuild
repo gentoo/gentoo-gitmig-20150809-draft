@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.9 2004/01/15 19:59:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.10 2004/01/25 12:38:02 liquidx Exp $
 
-inherit flag-o-matic libtool eutils
+inherit python flag-o-matic libtool eutils
 
 DESCRIPTION="Red Hat Package Management Utils"
 SRC_URI="mirror://gentoo/rpm-4.2.1.tar.gz"
@@ -19,14 +19,14 @@ RDEPEND="=sys-libs/db-3.2*
 	dev-libs/elfutils
 	>=dev-libs/beecrypt-3.1.0-r1
 	nls? ( sys-devel/gettext )
-	python? ( =dev-lang/python-2.2* )
-	doc? ( app-doc/doxygen )"
-S=${WORKDIR}/rpm-4.2.1
+	python? ( >=dev-lang/python-2.2 )
+	!ia64? ( doc? ( app-doc/doxygen ) )"
 
 strip-flags
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/rpm-4.2-python2.3.diff
 }
 
 src_compile() {
@@ -35,8 +35,10 @@ src_compile() {
 	unset LD_ASSUME_KERNEL
 	local myconf
 	myconf="--enable-posixmutexes --without-javaglue"
+	
+	python_version
 	use python \
-		&& myconf="${myconf} --with-python=2.2" \
+		&& myconf="${myconf} --with-python=${PYVER}" \
 		|| myconf="${myconf} --without-python"
 
 	econf ${myconf} `use_enable nls` || die
@@ -81,4 +83,12 @@ pkg_postinst() {
 		einfo "No RPM database found... Creating database..."
 		${ROOT}/usr/bin/rpm --initdb --root=${ROOT}
 	fi
+	
+	python_version
+	python_mod_optimize /usr/lib/python${PYVER}/site-packages/rpmdb
+}
+
+pkg_postrm() {
+	python_version
+	python_mod_cleanup
 }

@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.32 2004/01/15 19:59:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.33 2004/01/25 12:38:02 liquidx Exp $
+
+  25 Jan 2004; Alastair Tse <liquidx@gentoo.org> rpm-4.2.1.ebuild,
+  files/rpm-4.2-python2.3.diff:
+  Using python eclass to choose python version, optimize/remove pyc/pyo, added
+  py2.3 patch thanks to Vaclav Slavik <vaclav.slavik@matfyz.cz> (#39282)
 
   15 Jan 2004; <agriffis@gentoo.org> rpm-4.2.1.ebuild:
   stable on alpha and ia64
