@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.8 2002/12/13 10:59:37 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.9 2002/12/13 12:38:48 cretin Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -13,6 +13,9 @@
   Add missing 'dodir /etc/modules.d'.
 
 *svgalib-1.9.16 (20 Nov 2002)
+
+  13 Dec 2002; Stefan Jones <cretin@gentoo.org> svgalib-1.9.16-gentoo.diff :
+  Made all files compile with -fPIC, fixes prelink warnings.
 
   20 Nov 2002; Martin Schlemmer <azarah@gentoo.org> svgalib-1.9.16.ebuild :
   New version, thanks to great work of Javier Marcet <jmarcet@pobox.com>,
