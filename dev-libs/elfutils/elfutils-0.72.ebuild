@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.72.ebuild,v 1.3 2003/01/07 18:34:32 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.72.ebuild,v 1.4 2003/01/13 19:33:35 cretin Exp $
 
 IUSE=""
 
@@ -17,6 +17,16 @@ KEYWORDS="~x86 ~sparc ~ppc ~alpha"
 DEPEND="virtual/glibc
 	>=sys-devel/gcc-3.2.1-r6
 	!dev-libs/libelf"
+
+src_unpack() {
+	unpack ${A}
+
+	for x in $(find ${S}/ -name Makefile.in) ; do
+		cp ${x} ${x}.orig
+		sed -e 's:-Werror::g' \
+		${x}.orig > ${x}
+	done
+}
 
 src_compile() {
 	econf --program-prefix="eu-" \
