@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.ebuild,v 1.1 2001/12/17 16:23:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.ebuild,v 1.2 2001/12/17 23:18:51 azarah Exp $
 
 NPVER=20011209
 S=${WORKDIR}/${P}
@@ -27,9 +27,10 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use nls || myconf="--disable-nls"
-	use ssl && myconf="$myconf --with-ssl"
-	[ -z "$DEBUG" ] && myconf="$myconf --disable-debug"
-	CFLAGS="${CFLAGS} -I/usr/include/openssl"
+	use ssl && myconf="${myconf} --with-ssl"
+	use ssl || myconf="${myconf} --without-ssl --disable-opie --disable-digest"
+	[ -z "$DEBUG" ] && myconf="${myconf} --disable-debug"
+	use ssl && CFLAGS="${CFLAGS} -I/usr/include/openssl"
 	./configure --prefix=/usr --sysconfdir=/etc/wget \
 		--infodir=/usr/share/info --mandir=usr/share/man $myconf || die
 	if use static; then
