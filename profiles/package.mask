@@ -944,9 +944,9 @@ net-mail/spamassassin
 =x11-wm/blackbox-0.65.0.20020702
 
 # raker@gentoo.org 05 Jul 2002
-# masking due to compile issues with gnustep-base
-=dev-util/gnustep-make-1.3.4
-=dev-util/gnustep-base-1.3.4
+# masking unstable gnustep builds
+>=dev-util/gnustep-make-1.3.0
+>=dev-util/gnustep-base-1.3.0
 # test this build.  doesn't require gnustep-env :)
 >=x11-wm/WindowMaker-0.80.1-r2
 
@@ -962,3 +962,7 @@ net-mail/spamassassin
 # aliz@gentoo.org 09 Jul 2002
 # sys-apps/util-linux/util-linux-2.11r-r1 masked for testing
 =sys-apps/util-linux-2.11r-r1
+
+# raker@gentoo.org 10 Jul 2002
+# net-mail/postfix/postfix-1.1.11-r2 masked for testing saslv2 patch
+=net-mail/postfix-1.1.11-r2
