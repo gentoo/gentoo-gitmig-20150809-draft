@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.19 2004/05/12 18:00:03 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.20 2004/05/25 23:41:59 squinky86 Exp $
+
+*amule-2.0.0_rc3 (25 May 2004)
+
+  25 May 2004; Jon Hood <squinky86@gentoo.org> +amule-2.0.0_rc3.ebuild:
+  version bump, closes #45855; thanks to Giacomo Perale <ghepeu@virgilio.it>
+  for the ebuild
 
   12 May 2004; Jon Hood <squinky86@gentoo.org> amule-1.2.6.ebuild:
   putting back into ~amd64 since zlib dependency is still in ~arch
