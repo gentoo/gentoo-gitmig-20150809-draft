@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/zsnes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/ChangeLog,v 1.15 2003/02/12 04:04:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/ChangeLog,v 1.16 2003/07/10 08:24:40 msterret Exp $
+
+  10 Jul 2003; Michael Sterrett <msterret@gentoo.org> zsnes-1.36.ebuild:
+  use emake; use use_with
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
