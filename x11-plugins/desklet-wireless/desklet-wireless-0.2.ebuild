@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-wireless/desklet-wireless-0.2.ebuild,v 1.1 2004/07/18 09:34:26 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-wireless/desklet-wireless-0.2.ebuild,v 1.2 2004/07/18 09:42:07 obz Exp $
 
 DESKLET_NAME="Wireless"
 
@@ -27,6 +27,11 @@ src_install() {
 
 	# first we install the Sensor
 	python ${INSTALL_BIN} --nomsg ${D}${SYS_PATH}/Sensors
+
+	# fix up the Sensor which tries to look in /sbin for
+	# iwconfig, instead of /usr/sbin
+	sed -i -e "s/\/sbin\/iwconfig/\/usr\/sbin\/iwconfig/" \
+		${D}${SYS_PATH}/Sensors/${DESKLET_NAME}/__init__.py
 
 	# and then the .displays
 	cd ${S}/WirelessDisplay
