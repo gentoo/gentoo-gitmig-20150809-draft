@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdumpfs/pdumpfs-0.6.ebuild,v 1.3 2004/04/11 16:32:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdumpfs/pdumpfs-0.6.ebuild,v 1.4 2004/04/14 07:46:15 aliz Exp $
 
 DESCRIPTION="a daily backup system similar to Plan9's dumpfs"
 HOMEPAGE="http://www.namazu.org/~satoru/pdumpfs/"
@@ -13,8 +13,6 @@ IUSE="cjk"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/ruby"
-
-S=${WORKDIR}/${P}
 
 src_install() {
 	dobin pdumpfs
