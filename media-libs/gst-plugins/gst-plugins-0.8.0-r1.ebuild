@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.8.0.ebuild,v 1.1 2004/03/22 00:29:41 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.8.0-r1.ebuild,v 1.1 2004/03/24 01:14:24 foser Exp $
 
 # IMPORTANT
 #
@@ -29,11 +29,8 @@ DEPEND="${RDEPEND}
 
 #PDEPEND=">=media-plugins/gst-plugins-oss-${PV}"
 
-#BUILD_GST_PLUGINS="ffmpeg"
-#BUILD_GST_PLUGINS=""
-BUILD_GST_PLUGINS="oss"
-# FIXME : build the oss plugin here, because
-# it won't build as a seperate module
+# we need x for the x overlay to get linked
+GST_PLUGINS_BUILD="x xshm"
 
 src_unpack() {
 
@@ -72,7 +69,11 @@ src_compile() {
 src_install() {
 
 	gnome2_src_install
-	gst-plugins_remove_unversioned_binaries
+#	gst-plugins_remove_unversioned_binaries
+
+	# forgotten header, should be included next release
+	insinto /usr/include/gstreamer-0.8/gst/xoverlay/
+	doins ${S}/gst-libs/gst/xoverlay/xoverlay.h
 
 }
 
@@ -86,12 +87,12 @@ pkg_postinst () {
 	echo ""
 	einfo "The Gstreamer plugins setup has changed quite a bit on Gentoo,"
 	einfo "applications now should provide you with the basic plugins."
-	echo ""
-	einfo "Right now this package installs at least an OSS output plugin to have"
-	einfo "a standard sound output plugin, but this might change in the future."
+#	echo ""
+#	einfo "Right now this package installs at least an OSS output plugin to have"
+#	einfo "a standard sound output plugin, but this might change in the future."
 	echo ""
 	einfo "The new seperate plugins are all named 'gst-plugins-<plugin>'."
-	einfo "To get a listing of currently available plugins do 'emerge -s gst-plugins-'."
+	einfo "To get a listing of currently available plugins execute 'emerge -s gst-plugins-'."
 	einfo "In most cases it shouldn't be needed though to emerge extra plugins."
 
 }

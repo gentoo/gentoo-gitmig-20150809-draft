@@ -1,7 +1,13 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.61 2004/03/22 00:29:41 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.62 2004/03/24 01:14:24 foser Exp $
+
+*gst-plugins-0.8.0-r1 (23 Mar 2004)
+
+  23 Mar 2004; foser <foser@gentoo.org> gst-plugins-0.8.0-r1.ebuild :
+  Add missing headers & adapt to changes in eclass
+  Build x plugin by default to have the x interface built  
 
 *gst-plugins-0.8.0 (21 Mar 2004)
 
