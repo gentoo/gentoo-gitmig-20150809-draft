@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.69 2004/05/12 15:37:42 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.70 2004/05/21 22:18:06 ciaranm Exp $
+
+*vim-core-6.3_beta2 (21 May 2004)
+
+  21 May 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +vim-core-6.3_beta2.ebuild:
+  Added vim 6.3b (as _beta2) ebuilds in preparation for 6.3 final. These are
+  masked in package.mask -- if you unmask locally, you should unmask vim, gvim
+  and vim-core. Only leaving in ~arch on archs for which I've tested, filing a
+  bug for everyone else.
 
   12 May 2004; Ciaran McCreesh <ciaranm@gentoo.org> vim-core-6.2-r9.ebuild:
   Stable on sparc, mips
