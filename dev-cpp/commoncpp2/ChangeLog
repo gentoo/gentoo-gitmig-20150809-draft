@@ -11,6 +11,8 @@
   08 Dec 2003; Heinrich Wendel <lanius@gentoo.org> commoncpp2-1.0.12.ebuild:
   ~x86 -> x86
 
+*commoncpp2-1.0.13 (07 Dec 2003)
+
   07 Dec 2003; Heinrich Wendel <lanius@gentoo.org> commoncpp2-1.0.13.ebuild:
   bump
 

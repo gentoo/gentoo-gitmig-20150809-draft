@@ -1,6 +1,6 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.7 2003/10/27 01:53:38 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.8 2004/01/04 18:54:49 aliz Exp $
 
   26 Oct 2003; Brad House <brad_mssw@gentoo.org> gtkmm-1.2.9-r2.ebuild:
   add amd64 flag
@@ -86,7 +86,8 @@
   17 Jun 2002 ;Spider <spider@gentoo.org> gtkmm-1.3.15.ebuild :
   New version. updated libsigc++ dep
   
-gtkmm-1.2.9 (13 Jun 2002)
+gtkmm-1.2.9-r2 (13 Jun 2002)
+
   13 Jun 2002; Spider <spider@gentoo.org> gtkmm-1.2.9-r2.ebuild :
   fixing up some dependencies before gnome2 release. I'm not maintaining this, just fixing bugs I've helped introduce :)
   

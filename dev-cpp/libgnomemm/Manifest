@@ -1,6 +1,6 @@
 MD5 925a83266fc920f0512e832cf05ecad8 libgnomemm-2.0.0-r1.ebuild 725
 MD5 4cc281b7c689ff7c23a15ed6a29f3ca1 libgnomemm-2.0.1.ebuild 592
-MD5 1dd982245707b184f9fc464a46839c93 ChangeLog 1540
+MD5 0bc1e4564c7475ae5476f8bdea49e0bf ChangeLog 1541
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 2d32d65a8f8c930689fc0c23f769946e files/libgnomemm-2.0.0-pkgconfig.patch 1083
 MD5 24c2db8638fe53dba09a9a20ca0844e9 files/digest-libgnomemm-2.0.0-r1 68
