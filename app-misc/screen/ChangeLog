@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.30 2003/04/16 00:19:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.31 2003/04/28 05:04:42 zwelch Exp $
 
 *screen-3.9.15 (13 Mar 2003)
+
+  27 Apr 2003; Zach Welch <zwelch@gentoo.org> screen-3.9.15.ebuild:
+  Add arm to KEYWORDS
 
   16 Apr 2003; Guy Martin <gmsoft@gentoo.org> screen-3.9.15.ebuild :
   Marked stable on hppa.
