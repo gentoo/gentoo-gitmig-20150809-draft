@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.4.0.1.ebuild,v 1.2 2003/10/05 14:09:01 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.4.0.1.ebuild,v 1.3 2003/10/14 07:23:30 obz Exp $
 
 inherit gnome2
 
@@ -21,4 +21,4 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.21"
 
-DOC="AUTHORS ChangeLog COPYING* MAINTAINERS TODO NEWS README"
+DOCS="AUTHORS ChangeLog COPYING* MAINTAINERS TODO NEWS README"

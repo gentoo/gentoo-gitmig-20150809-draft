@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.0.0.ebuild,v 1.7 2003/09/17 15:09:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.0.0.ebuild,v 1.8 2003/10/14 07:23:30 obz Exp $
 
 inherit gnome2
 
@@ -21,4 +21,4 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )
 	>=dev-util/pkgconfig-0.12.0"
 
-DOC="AUTHORS ChangeLog COPYING* MAINTAINERS TODO NEWS README"
+DOCS="AUTHORS ChangeLog COPYING* MAINTAINERS TODO NEWS README"
