@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 0816a7c5f3a729b880fd6d168564da3b ChangeLog 1658
 MD5 20b49405ed1acec1dd55d522ef2722a0 sdl-net-1.2.4.ebuild 646
-MD5 e0f58f4cebaf1f1396f8c042225cc567 sdl-net-1.2.5.ebuild 670
+MD5 30c85801d66860e85de1640c760f5fa0 sdl-net-1.2.5.ebuild 676
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 df9292fba38ccb74f6c1b3ecdc0ead40 files/digest-sdl-net-1.2.4 65
 MD5 f119d85316c2c2ebabc21b58d7194d53 files/digest-sdl-net-1.2.5 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBiCL0HTu7gpaalycRAsNAAJ0TorBqfSsOx9vQuuydGJVUoaiNGQCfUDB9
-uQB/gI9rJUDYZR9DWaLWyBg=
-=QOdz
+iD8DBQFBoXZmHTu7gpaalycRAtBtAKCuKeogQjPKLMZdp7O2KTWtJ3QHlwCeK6yK
+nssdLM/W0QuNYNR3xhIqUPo=
+=CWxd
 -----END PGP SIGNATURE-----
