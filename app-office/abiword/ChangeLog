@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.73 2004/04/20 19:54:51 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.74 2004/04/23 16:57:25 fmccor Exp $
+
+  23 Apr 2004; Ferris McCormick <fmccor@gentoo.org> abiword-2.0.5.ebuild:
+  Mark stable for sparc.
 
   20 Apr 2004; foser <foser@gentoo.org> abiword-2* :
   Disable debugging to be on the safe side, it's a bit too intrusive
