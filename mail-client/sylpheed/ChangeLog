@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.7 2004/06/06 19:25:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.8 2004/06/07 14:13:42 agriffis Exp $
+
+  07 Jun 2004; Aron Griffis <agriffis@gentoo.org> sylpheed-0.9.4-r1.ebuild,
+  sylpheed-0.9.5-r1.ebuild, sylpheed-0.9.8-r2.ebuild,
+  sylpheed-0.9.9-r1.ebuild:
+  Fix use invocation
 
   06 Jun 2004; Jason Wever <weeve@gentoo.org> sylpheed-0.9.10-r1.ebuild:
   Stable on sparc.
