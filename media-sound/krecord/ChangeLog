@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/krecord
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/ChangeLog,v 1.1 2002/07/28 16:56:34 danarmak Exp $
+
+*krecord-1.11 (28 Jul 2002)
+
+  28 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Initial version. krecord is a KDE sound recording too - simple. but
+  useful. Ebuild submitted by Rusty Phillips. Closes #4848.
