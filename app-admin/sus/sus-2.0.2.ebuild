@@ -1,13 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sus/sus-2.0.2.ebuild,v 1.4 2004/03/12 10:45:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sus/sus-2.0.2.ebuild,v 1.5 2004/04/19 07:53:01 vapier Exp $
+
+inherit gcc
 
 DESCRIPTION="allows certain users to run commands as root or other users"
-SRC_URI="http://pdg.uow.edu.au/sus/${P}.tar.Z"
 HOMEPAGE="http://pdg.uow.edu.au/sus/"
+SRC_URI="http://pdg.uow.edu.au/sus/${P}.tar.Z"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~sparc mips"
 IUSE="pam"
 
@@ -18,21 +20,20 @@ src_compile() {
 	local myconf
 	local lflags
 	myconf="-DDEBUG"
-	use pam > /dev/null 2>&1 && myconf="${myconf} -DUSE_PAM" && lflags="-lpam"
+	use pam && myconf="${myconf} -DUSE_PAM" && lflags="-lpam"
 	myconf="${myconf} -DPROMISCUOUS -DUSE_SHADOW \
 		-DSUSERS=\\\"/etc/susers.cpp\\\""
 	make \
-		CC=${CC} \
+		CC=$(gcc-getCC) \
 		CFLAGS="${CFLAGS} ${myconf}" \
 		LFLAGS="${lflags}" \
 		sus || die
 }
 
 src_install() {
-	ln -s man/sus.1 sus.8
-	dobin sus
-	doman sus.8
-	dodoc COPYING INSTALL README susers.sample
+	dobin sus || die
+	newman man/sus.1 sus.8
+	dodoc INSTALL README susers.sample
 	dodir /var/run/sus
 	insinto /etc
 	newins ${FILESDIR}/susers.cpp susers.cpp
