@@ -1,3 +1,8 @@
+MD5 138f44b8e5a273ed560a15cd92bbeb92 lyx-1.2.1.ebuild 1519
+MD5 53080f05292c64fde0df4c2259bda353 lyx-1.3.3.ebuild 2748
+MD5 00a0d9b4fd772539f20f8ad090fb0d93 lyx-1.3.2-r1.ebuild 3559
+MD5 1d4caec9561c3e5b575e2a77ac2e06ab ChangeLog 6799
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 4dc1e1cc2b4e056a629fbfd1334c390e files/lyx.desktop 188
 MD5 363bfca924cf46b61d21faa4dbfcd43f files/lyx-1.3.3-configure-diff 1953
 MD5 935b222f056a26177177f1b7790bc318 files/lyx-1.3.2-configure.diff 439
@@ -5,8 +10,3 @@ MD5 f6bf30211847fb321f0000cd415d9e5b files/lyx-1.3.2-nomktex.patch 449
 MD5 adf50f8b30bcf7f72ae36842b3fce02d files/digest-lyx-1.2.1 62
 MD5 4792953c07222743fef5e69276b5cf03 files/digest-lyx-1.3.3 239
 MD5 8de1b633e396a6902ee47cee4a56613d files/digest-lyx-1.3.2-r1 169
-MD5 138f44b8e5a273ed560a15cd92bbeb92 lyx-1.2.1.ebuild 1519
-MD5 05337290d240cb2fb5d8968d956db7da lyx-1.3.3.ebuild 2700
-MD5 9fccda22f7c99d01bc806d587a7d28c5 lyx-1.3.2-r1.ebuild 3513
-MD5 1d4caec9561c3e5b575e2a77ac2e06ab ChangeLog 6799
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
