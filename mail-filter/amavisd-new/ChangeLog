@@ -1,6 +1,17 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.19 2005/01/19 19:10:46 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.20 2005/01/19 23:01:32 langthang Exp $
+
+*amavisd-new-2.2.1 (19 Jan 2005)
+
+  19 Jan 2005; Tuấn Văn <langthang@gentoo.org>
+  +files/amavisd-new-2.2.1-amavisd.conf-gentoo.patch,
+  +files/amavisd-new-2.2.1-qmail-lf-workaround.patch,
+  +amavisd-new-2.2.1.ebuild:
+  Remove amavisd-new-20041222.ebuild. Bring in the ebuild attached in bug
+  #77425 as previous was missing some of the improvements. Thanks to Sune
+  Kloppenborg Jeppesen <jaervosz@gentoo.org>, Christian Zoffoli
+  <xmerlin@gentoo.org> and everyone have contributed.
 
 *amavisd-new-0.20040701 (19 Jan 2005)
 

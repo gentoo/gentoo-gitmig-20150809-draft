@@ -1,0 +1,14 @@
+--- amavisd-new-2.2.1/amavisd.chris	2005-01-09 18:05:09.000000000 +0100
++++ amavisd-new-2.2.1/amavisd	2005-01-09 18:05:47.360864816 +0100
+@@ -3948,9 +3948,9 @@
+         # to reduce the likelyhood of a qmail bare-LF bug (bare LF reported
+         # when CR and LF are separated by a TCP packet boundary) one may use
+         # this 'while' line, reading line by line, instead of the normal one:
+-###     while (defined($_=$msg->getline)) {
++        while (defined($_=$msg->getline)) {
+ 
+-        while ($msg->read($_, 16384) > 0) {
++###     while ($msg->read($_, 16384) > 0) {
+           $smtp_handle->datasend($_)
+             or die "datasend timed out while sending body\n";
+         }

@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20041222.ebuild,v 1.1 2005/01/18 15:54:08 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.2.1.ebuild,v 1.1 2005/01/19 23:01:32 langthang Exp $
 
 inherit eutils
 
-MY_V=2.2.1
 DESCRIPTION="High-performance interface between the MTA and content checkers."
 HOMEPAGE="http://www.ijs.si/software/amavisd/"
-SRC_URI="http://www.ijs.si/software/amavisd/${PN}-${MY_V}.tar.gz"
+SRC_URI="http://www.ijs.si/software/amavisd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -34,7 +33,7 @@ RDEPEND="${DEPEND}
 	dev-perl/Convert-TNEF
 	dev-perl/Convert-UUlib
 	dev-perl/MIME-Base64
-	>=dev-perl/MIME-tools-5.413
+	>=dev-perl/MIME-tools-5.415
 	>=dev-perl/MailTools-1.58
 	dev-perl/net-server
 	dev-perl/libnet
@@ -51,8 +50,6 @@ RDEPEND="${DEPEND}
 	postgres? ( dev-perl/DBD-Pg )
 	milter? ( >=mail-mta/sendmail-8.12 )"
 
-S="${WORKDIR}/${PN}-${MY_V}"
-
 AMAVIS_ROOT=/var/amavis
 
 src_unpack() {
@@ -62,6 +59,16 @@ src_unpack() {
 		einfo "Patching with courier support."
 		epatch "amavisd-new-courier.patch" || die "patch failed"
 	fi
+
+	if $(has_version mail-mta/qmail) || $(has_version mail-mta/qmail-ldap) ; then
+		einfo "Patching with qmail qmqp support."
+		epatch "amavisd-new-qmqpqq.patch" || die "patch failed"
+
+		einfo "Patching with qmail lf bug workaround."
+		epatch "${FILESDIR}/${P}-qmail-lf-workaround.patch" || die "patch failed"
+	fi
+
+	epatch "${FILESDIR}/${P}-amavisd.conf-gentoo.patch" || die "patch failed"
 }
 
 src_compile() {
@@ -81,13 +88,10 @@ src_install() {
 	enewgroup amavis
 	enewuser amavis -1 /bin/false ${AMAVIS_ROOT} amavis
 
-	dosbin amavisd
-	dosbin amavisd-agent
-	dosbin amavisd-nanny
+	dosbin amavisd amavisd-agent amavisd-nanny
 
 	insinto /etc
-	# we now (since 2.2.1) install original conf file
-	doins amavisd.conf
+	newins amavisd.conf-sample amavisd.conf
 	dosed "s:^#\\?\\\$MYHOME[^;]*;:\$MYHOME = '$AMAVIS_ROOT';:" \
 		/etc/amavisd.conf
 	if [ "$(domainname)" = "(none)" ] ; then
@@ -97,7 +101,7 @@ src_install() {
 		dosed "s:^#\\?\\\$mydomain[^;]*;:\$mydomain = '$(domainname)';:" \
 			/etc/amavisd.conf
 	fi
-	if ! `has_version mail-filter/spamassassin` ; then
+	if ! $(has_version mail-filter/spamassassin) ; then
 		einfo "Disabling anti-spam code in amavisd.conf..."
 
 		dosed "s:^#[\t ]*@bypass_spam_checks_maps[\t ]*=[\t ]*(1);:\@bypass_spam_checks_maps = (1);:" \
@@ -125,9 +129,18 @@ src_install() {
 		fowners amavis:amavis ${AMAVIS_ROOT}/${i}
 	done
 
-	newdoc test-messages/README
-	dodoc AAAREADME.first INSTALL TODO LDAP.schema LICENSE MANIFEST RELEASE_NOTES \
-		README_FILES/* test-messages/sample-* amavisd.conf-default amavisd.conf-sample
+	if $(has_version net-nds/openldap ) ; then
+		einfo "Adding ${P} schema to openldap schema dir."
+		dodir /etc/openldap/schema
+		insinto /etc/openldap/schema
+		insopts -o root -g root -m 644
+		newins LDAP.schema ${PN}.schema || die
+		newins LDAP.schema ${PN}.schema.default || die
+	fi
+
+	newdoc test-messages/README README.samples
+	dodoc AAAREADME.first INSTALL LICENSE MANIFEST RELEASE_NOTES \
+		README_FILES/* test-messages/sample-* amavisd.conf-default amavisd-agent
 
 	if use milter ; then
 		cd "${S}/helper-progs"
@@ -136,7 +149,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if `has_version mail-filter/razor` ; then
+	if $(has_version mail-filter/razor) ; then
 		einfo "Setting up initial razor config files..."
 
 		razor-admin -create -home=${ROOT}${AMAVIS_ROOT}/.razor
@@ -145,27 +158,12 @@ pkg_postinst() {
 		chown -R amavis:amavis ${ROOT}${AMAVIS_ROOT}/.razor
 	fi
 
-	if ! `has_version mail-filter/spamassassin` ; then
+	if ! $(has_version mail-filter/spamassassin) ; then
 		echo
 		einfo "Amavisd-new no longer requires SpamAssassin, but no anti-spam checking"
 		einfo "will be performed without it. Since you do not have SpamAssassin installed,"
 		einfo "all spam checks have been disabled. To enable them, install SpamAssassin"
-		einfo "and comment out line 170 of /etc/amavisd.conf."
+		einfo "and comment out the line containing: "
+		einfo "@bypass_virus_checks_maps = (1); in /etc/amavisd.conf."
 	fi
-
-	einfo
-	einfo "This version (20041222) also changed default config file (/etc/amavisd.conf)"
-	einfo "into much simpler and lighter version. Previous defaults were installed"
-	einfo "for Your convenience at default location (/usr/share/doc/${P})."
-	ewarn
-	ewarn "This version of amavisd-new has a different layout from previous versions"
-	ewarn "available in portage. The socket, pid, and lock file, as well as the"
-	ewarn "temporary, razor, and spamassassin configuration directories have all"
-	ewarn "moved to:"
-	ewarn
-	ewarn "${AMAVIS_ROOT}"
-	ewarn
-	ewarn "It may be necessary to reconfigure any helper applications."
-	ewarn
-
 }
