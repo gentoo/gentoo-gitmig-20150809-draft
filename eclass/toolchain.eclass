@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.121 2005/03/06 00:00:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.122 2005/03/08 12:00:09 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1077,16 +1077,6 @@ gcc_do_make() {
 		append-ldflags -static
 	fi
 
-	STAGE1_CFLAGS=${STAGE1_CFLAGS--O}
-
-	if is_crosscompile; then
-		BOOT_CFLAGS=${BOOT_CFLAGS--O2}
-	else
-		# we only want to use the system's CFLAGS if not building a
-		# cross-compiler.
-		BOOT_CFLAGS=${BOOT_CFLAGS-"$(get_abi_CFLAGS) ${CFLAGS}"}
-	fi
-
 	# Fix for libtool-portage.patch
 	local OLDS=${S}
 	S=${WORKDIR}/build
@@ -1110,6 +1100,23 @@ gcc_do_make() {
 		MAKE_COMMAND="make"
 	else
 		MAKE_COMMAND="emake"
+	fi
+
+	if [[ ${GCC_MAKE_TARGET} == "all" ]] ; then
+		STAGE1_CFLAGS=${STAGE1_CFLAGS-"${CFLAGS}"}
+	else
+		STAGE1_CFLAGS=${STAGE1_CFLAGS-"-O"}
+	fi
+
+	if is_crosscompile; then
+		# In 3.4, BOOT_CFLAGS is never used on a crosscompile...
+		# but I'll leave this in anyways as someone might have had
+		# some reason for putting it in here... --eradicator
+		BOOT_CFLAGS=${BOOT_CFLAGS-"-O2"}
+	else
+		# we only want to use the system's CFLAGS if not building a
+		# cross-compiler.
+		BOOT_CFLAGS=${BOOT_CFLAGS-"$(get_abi_CFLAGS) ${CFLAGS}"}
 	fi
 
 	pushd ${WORKDIR}/build
@@ -1167,22 +1174,52 @@ gcc_do_filter_flags() {
 	# dont want to funk ourselves
 	filter-flags '-mabi*' -m32 -m64
 
-	# filter *common* flags that will make other gcc's angry
 	case ${GCC_BRANCH_VER} in
-		3.3)
-			case $(tc-arch) in
-				x86|amd64) filter-flags '-mtune=*';;
-			esac
-		;;
-		3.4)
-			case $(tc-arch) in
-				x86|amd64) filter-flags '-mcpu=*';;
-			esac
-		;;
+	3.3)
+		case $(tc-arch) in
+			x86|amd64) filter-flags '-mtune=*';;
+		esac
+	;;
+	3.4|4.*)
+		case $(tc-arch) in
+			x86|amd64) filter-flags '-mcpu=*';;
+		esac
+	;;
 	esac
 
 	# Compile problems with these (bug #6641 among others)...
 	#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
+
+	# CFLAGS logic (verified with 3.4.3):
+	# CFLAGS:
+	#   This conflicts when creating a crosscompiler, so set to a sane
+	#     default in this case:
+	#   used in ./configure and elsewhere for the native compiler
+	#   used by gcc when creating libiberty.a
+	#   used by xgcc when creating libstdc++ (and probably others)!
+	#     this behavior should be removed...
+	#
+	# CXXFLAGS:
+	#   used by xgcc when creating libstdc++
+	#
+	# STAGE1_CFLAGS (not used in creating a crosscompile gcc):
+	#   used by ${CHOST}-gcc for building stage1 compiler
+	#
+	# BOOT_CFLAGS (not used in creating a crosscompile gcc):
+	#   used by xgcc for building stage2/3 compiler
+
+	if is_crosscompile; then
+		CFLAGS="-O2 -pipe"
+	fi
+
+	# If we're doing make all or making a crosscompiler, optimize
+	# our stage1.
+	# If we're a cross-compiler, set BOOT_CFLAGS, CFLAGS, and CXXFLAGS
+	# for our target.
+	if is_crosscompile; then
+		local VAR="CFLAGS_"${CTARGET//-/_}
+		CXXFLAGS=${!VAR}
+	fi
 
 	export GCJFLAGS=${GCJFLAGS:-${CFLAGS}}
 }
