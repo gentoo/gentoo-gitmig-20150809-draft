@@ -1,12 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/qtunit-0.9.8.ebuild,v 1.1 2004/03/20 19:16:54 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/qtunit-0.9.8.ebuild,v 1.2 2004/05/16 20:36:44 centic Exp $
 
 DESCRIPTION="Unit testing framework for c++"
 SRC_URI="http://www.uwyn.com/download/qtunit/${P}.tar.bz2"
 HOMEPAGE="http://www.uwyn.com/projects/qtunit/"
 
 SLOT="0"
+IUSE=""
+
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc"
 
