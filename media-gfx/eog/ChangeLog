@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.56 2004/03/21 16:28:38 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.57 2004/03/23 15:01:23 foser Exp $
+
+*eog-2.6.0 (23 Mar 2004)
+
+  23 Mar 2004; foser <foser@gentoo.org> eog-2.6.0.ebuild :
+  Gnome 2.6 final
 
 *eog-2.5.91 (21 Mar 2004)
 
