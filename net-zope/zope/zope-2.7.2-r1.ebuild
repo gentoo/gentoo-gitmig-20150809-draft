@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.2-r1.ebuild,v 1.1 2004/09/11 21:07:44 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.2-r1.ebuild,v 1.2 2004/09/18 07:14:11 lanius Exp $
 
 inherit eutils
 
@@ -26,10 +26,10 @@ S="${WORKDIR}/Zope-${PV}-0"
 ZUID=zope
 ZGID=zope
 ZGID_INST="$(echo ${PN}-${PV} | sed -e 's/\./_/g' )"
-ZS_DIR=${ROOT%/}/usr/lib/
-ZI_DIR=${ROOT%/}/var/lib/zope/
-ZSERVDIR=${ZS_DIR}${PN}-${PV}/
-ZINSTDIR=${ZI_DIR}${PN}-${PV}/
+ZS_DIR=${ROOT%/}/usr/lib
+ZI_DIR=${ROOT%/}/var/lib/zope
+ZSERVDIR=${ZS_DIR}/${PN}-${PV}
+ZINSTDIR=${ZI_DIR}/${PN}-${PV}
 
 RCNAME=zope.initd
 
@@ -60,11 +60,11 @@ setup_security() {
 install_instance() {
 	# Here we add our default zope instance.
 	if [ -d ${ZINSTDIR} ] ; then
-		die "Default instance directory (${ZINSTDIR} already exists!"
+		die "Default instance directory (${ZINSTDIR}) already exists!"
 	fi
-	if [ -f ${ZI_DIR}.default ] ; then
-		def_instance=`cat ${ZI_DIR}.default`
-		die "Default instance file (${ZI_DIR}.default already exists -> $def_instance"
+	if [ -f ${ZI_DIR}/.default ] ; then
+		def_instance=`cat ${ZI_DIR}/.default`
+		die "Default instance file (${ZI_DIR}/.default) already exists -> $def_instance"
 	fi
 	einfo "Creating default zope instance at ${ZINSTDIR} with command:"
 	einfo "/usr/sbin/zope-config --zserv=${ZSERVDIR} --zinst=${ZINSTDIR} --zgid=${ZGID_INST} --zinituser"
@@ -124,10 +124,10 @@ src_install() {
 	fi
 
 	make install PREFIX=${D}${ZSERVDIR}
-	rm -rf ${D}${ZSERVDIR}doc
-	dosym ${DOCDESTTREE} ${D}${ZSERVDIR}doc
+	rm -rf ${D}${ZSERVDIR}/doc
+	dosym ${DOCDESTTREE} ${D}${ZSERVDIR}/doc
 
-	skel=${D}${ZSERVDIR}skel
+	skel=${D}${ZSERVDIR}/skel
 	dodir /etc/init.d
 	cp ${FILESDIR}/${PV}/zope.initd ${skel}/zope.initd
 }
