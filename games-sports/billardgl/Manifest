@@ -1,3 +1,4 @@
-MD5 f211ce963bfb4ecfb03e07f7358f8a55 files/digest-billardgl-1.75-r1 66
-MD5 864a39e9425bff374bec3eea13eafd59 billardgl-1.75-r1.ebuild 887
 MD5 748666b2ec0b2e7e208bd05ad47fb0ca ChangeLog 1563
+MD5 864a39e9425bff374bec3eea13eafd59 billardgl-1.75-r1.ebuild 887
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 f211ce963bfb4ecfb03e07f7358f8a55 files/digest-billardgl-1.75-r1 66

@@ -1,3 +1,4 @@
-MD5 7e9ec0cee63a42f327ed7d5de7127028 files/digest-foobillard-2.8 67
-MD5 043c869874576d0a0aa98f51b770509c foobillard-2.8.ebuild 1125
 MD5 029ff68d9f60dccccd0100b30e65e260 ChangeLog 1448
+MD5 043c869874576d0a0aa98f51b770509c foobillard-2.8.ebuild 1125
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 7e9ec0cee63a42f327ed7d5de7127028 files/digest-foobillard-2.8 67
