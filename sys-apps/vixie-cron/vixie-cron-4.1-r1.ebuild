@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r1.ebuild,v 1.1 2004/09/24 15:01:45 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r1.ebuild,v 1.2 2004/09/25 15:10:00 ciaranm Exp $
 
 inherit eutils
 
 IUSE="selinux pam"
 
-SELINUX_PATCH="${P}-selinux.diff.bz2"
+SELINUX_PATCH="${P}-selinux.diff"
 
 DESCRIPTION="The Vixie cron daemon"
 HOMEPAGE="http://www.vix.com/"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.25 2004/09/24 15:01:45 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.26 2004/09/25 15:10:00 ciaranm Exp $
+
+  25 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> -vixie-cron-4.1.ebuild:
+  Remove 4.1, 4.1-r1 is about to be unmasked
 
 *vixie-cron-4.1-r1 (24 Sep 2004)
 
