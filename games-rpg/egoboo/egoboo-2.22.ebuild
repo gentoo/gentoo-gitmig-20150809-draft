@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.8 2004/05/05 01:17:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.9 2004/05/10 17:51:54 vapier Exp $
 
-inherit eutils flag-o-matic games
+inherit eutils flag-o-matic games gcc
 
 DESCRIPTION="A 3d dungeon crawling adventure in the spirit of NetHack"
 HOMEPAGE="http://egoboo.sourceforge.net/"
@@ -21,7 +21,7 @@ RDEPEND="virtual/glibc
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	replace-cpu-flags i686 'athlon*' pentium4
@@ -30,9 +30,9 @@ src_unpack() {
 	cd ${S}
 
 	sed -i \
-		-e "/^CC=/ s:=.*:=${CC}:" \
+		-e "/^CC=/ s:=.*:=$(gcc-getCC):" \
 		-e "s:-ffast-math -funroll-loops -O3 -g:${CFLAGS}:" code/Makefile \
-			|| die "sed code/Makefile failed"
+		|| die "sed code/Makefile failed"
 	sed \
 		-e "s:GENTOODIR:${GAMES_DATADIR}:" "${FILESDIR}/${P}.sh" \
 			> "${T}/egoboo" || die "sed wrapper failed"
@@ -49,8 +49,8 @@ src_compile() {
 
 src_install () {
 	dogamesbin "${T}/egoboo" || die "dogamesbin failed"
-	dodoc egoboo.txt || die "dodoc failed"
-	dodir "${GAMES_DATADIR}/${PN}" "${GAMES_BINDIR}" || die "dodir failed"
+	dodoc egoboo.txt
+	dodir "${GAMES_DATADIR}/${PN}" "${GAMES_BINDIR}"
 	cp -R basicdat/ import/ modules/ players/ text/ \
 		code/egoboo controls.txt setup.txt \
 		"${D}${GAMES_DATADIR}/${PN}" || die "cp failed"
