@@ -1,10 +1,16 @@
 # ChangeLog for dev-java/mysql-jdbc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mysql-jdbc/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mysql-jdbc/ChangeLog,v 1.2 2002/07/08 17:48:11 blizzy Exp $
 
-*mysql-jdbc-1.2.3-r1 (1 Feb 2002)
+*mysql-jdbc-2.0.14 (08 Jul 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  08 Jul 2002; Maik Schreiber <bZ@iq-computing.de> :
+
+  New version, closes bug #3760.
+
+*mysql-jdbc-1.2.3-r1 (01 Feb 2002)
+
+  01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
