@@ -5,5 +5,8 @@
 		The app-emacs category contains extension packages for the Emacs text
 		editor.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie app-emacs enthält Pakete für den Texteditor Emacs.
+	</longdescription>
 </catmetadata>
 
