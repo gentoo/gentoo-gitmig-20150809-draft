@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/libgtk-java
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/ChangeLog,v 1.5 2005/03/02 14:26:20 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/ChangeLog,v 1.6 2005/03/02 16:07:34 karltk Exp $
 
 *libgtk-java-2.4.8.1 (02 Mar 2005)
 
@@ -10,7 +10,7 @@
   +files/libgtk-java-2.4.8.1_gentoo-PN-SLOT.patch,
   +libgtk-java-2.4.8.1.ebuild:
   New upstream release. Ebuild submitted by Andrew F. Cowie
-  <afcowie@operationaldynamics.com>. Partial fix for #83366.
+  <andrew@operationaldynamics.com>. Partial fix for #83366.
 
 * libgtk-java-2.4.7.2 (27 Dec 2004)
 

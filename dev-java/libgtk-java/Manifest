@@ -2,7 +2,7 @@ MD5 8cb11393c9eb31237b9b1a6ace840f1b libgtk-java-2.4.8.1.ebuild 3346
 MD5 41ccd73b971613a795b578f97a702cbd libgtk-java-2.4.6-r2.ebuild 3043
 MD5 20764715913c1c083549f17b669148ba libgtk-java-2.4.7.2.ebuild 3343
 MD5 fb7e56cb47cba5872442e1bfa7ea4d2d libgtk-java-2.4.6-r1.ebuild 3007
-MD5 b2b02a03fffd9eda8b99b6d466db4d06 ChangeLog 3309
+MD5 10476f25c2c69fbfb16fc01aff83d1fc ChangeLog 3308
 MD5 23e70539fce4ef96d51e3043420acb8c metadata.xml 975
 MD5 d5868ac77f6fa3fcf16ec100095cb0af files/digest-libgtk-java-2.4.6-r1 70
 MD5 d5868ac77f6fa3fcf16ec100095cb0af files/digest-libgtk-java-2.4.6-r2 70
