@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.5-r1.ebuild,v 1.1 2003/05/30 09:23:56 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.5-r1.ebuild,v 1.2 2003/06/07 19:04:54 zwelch Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ DESCRIPTION="a program to distribute compilation of C code across several machin
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
+KEYWORDS="x86 ppc sparc alpha hppa mips arm"
 
 OPV="1.2"
 LPV="2.3"
@@ -98,7 +98,7 @@ pkg_postinst() {
 	einfo "Portage 2.0.46-r11+ will take advantage of distcc if you put"
 	einfo "distcc into the FEATURES setting in make.conf and use" 
 	einfo "distcc-config --set-hosts. Do NOT set CC=distcc or similar."
-	ewarn "See http://cvs.gentoo.org/~zwelch/distcc.html for information."
+	ewarn "See \"http://wiki.dev.gentoo.org/gentoo/moin.cgi/UsingDistcc\" for information."
 }
 
 #pkg_prerm() {
