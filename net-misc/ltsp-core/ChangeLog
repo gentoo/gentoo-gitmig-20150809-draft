@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ltsp-core
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ChangeLog,v 1.6 2003/05/26 14:18:13 frame Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ChangeLog,v 1.7 2003/06/25 14:55:45 frame Exp $
+
+*ltsp-core-3.0.9-r1 (25 June 2003)
+
+  25 June 2003; Andres Toomsalu <frame@pfm.ee>:
+  fixed typo in subnet declaration with dhcpd.conf and unmasked ltsp-core-3.0.9-r1.ebuild
 
 *ltsp-core-3.0.9-r1 (26 May 2003)
 
