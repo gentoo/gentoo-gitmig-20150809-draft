@@ -1,4 +1,4 @@
-MD5 752580a351299fe15119ebcdaa13b3ea files/digest-setserial-2.17-r2 65
-MD5 40c097914f93d015b31e8f7f2482704c ChangeLog 1072
+MD5 56a3d17a4f8165f1b95788a27b39f77f setserial-2.17-r2.ebuild 806
+MD5 e6e4ea45426a581a8aa7754fbf566875 ChangeLog 1067
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 e6de58de9587b5f5cfca3b52a727d8ce setserial-2.17-r2.ebuild 813
+MD5 752580a351299fe15119ebcdaa13b3ea files/digest-setserial-2.17-r2 65
