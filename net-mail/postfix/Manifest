@@ -1,4 +1,5 @@
 MD5 2c904f060968d879be6a209b51dec470 postfix-2.0.9-r1.ebuild 5574
+MD5 9c79b03b87bd2d99fd9c2dc578f05f16 postfix-2.0.10-r1.ebuild 5374
 MD5 4066ec45baab8fbd5a791b0a78f68163 postfix-2.0.10.ebuild 5350
 MD5 ead334460917ae4879673b31d59f46e8 postfix-2.0.9.ebuild 5471
 MD5 76726846989c0b6a5fc643d06b804e45 postfix-1.1.11.20020917-r1.ebuild 4945
@@ -23,4 +24,5 @@ MD5 32967889bdab593d4329d63cfc07820d files/digest-postfix-2.0.8 220
 MD5 e126c8295dad90d20bf2d6a47086ab0e files/digest-postfix-2.0.9 220
 MD5 798b43d4f63482e4eae84941d5b4f40e files/smtp.pam 206
 MD5 3004148a32063214f57f0316b9f46116 files/postfix 517
+MD5 499f6d9f2295ba6e359ce568842d050c files/digest-postfix-2.0.10-r1 295
 MD5 803eb5ffc166aaaf2f3b78ddf71fe73d files/postfix-2.0.0/main.cf.diff 2382
