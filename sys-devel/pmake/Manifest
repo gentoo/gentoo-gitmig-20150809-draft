@@ -1,11 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6ac55e7f68397334c8333433be6d51af ChangeLog 2329
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 336d3adf2338104742e56b230e3cd99b pmake-1.45-r2.ebuild 1544
-MD5 547fd07724ab9c1098e7ec123bb3c4ad pmake-1.45-r3.ebuild 1543
-MD5 0e93e6ceadce3b7884c104ef13fd4750 pmake-1.45-r4.ebuild 1760
-MD5 56b250e5c99455640556fcb776b9bd7e files/01_all_groffpatch.patch 485
+MD5 c3010dbdeac90bd3280bf57b0865a5de pmake-1.45-r4.ebuild 1706
 MD5 1095ca9c07bda375bf9674fe20d79ba6 files/02_all_mktemp.patch 406
-MD5 aa2eb71443dc4352bdf910fcbaf9f05e files/digest-pmake-1.45-r2 65
-MD5 aa2eb71443dc4352bdf910fcbaf9f05e files/digest-pmake-1.45-r3 65
 MD5 aa2eb71443dc4352bdf910fcbaf9f05e files/digest-pmake-1.45-r4 65
 MD5 456fc1935fead6cfc1235eddf6259847 files/skipdots.patch 677
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB2iIjroRuSHgZdywRAsrnAJ0Zm25qG4OoSTH/4pYjzlOS8yZRJgCfUppB
+8OO7T87XrhT2gJsVeFkQFaU=
+=Hh0u
+-----END PGP SIGNATURE-----

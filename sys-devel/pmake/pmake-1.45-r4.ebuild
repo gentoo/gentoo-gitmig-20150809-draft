@@ -1,10 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r4.ebuild,v 1.7 2004/07/02 08:42:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r4.ebuild,v 1.8 2005/01/04 04:56:48 vapier Exp $
 
 inherit eutils
-EPATCH_SOURCE="${FILESDIR}"
-EPATCH_SUFFIX="patch"
 
 DESCRIPTION="BSD build tool to create programs in parallel"
 HOMEPAGE="http://www.netbsd.org/"
