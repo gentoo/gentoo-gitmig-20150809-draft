@@ -1,0 +1,8 @@
+# ChangeLog for app-sci/gturing
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gturing/ChangeLog,v 1.1 2002/12/18 13:11:44 hanno Exp $
+
+*gturing-0.1.1 (18 Dec 2002)
+
+  18 Dec 2002; Hanno Boeck <hanno@gentoo.org> gturing-0.1.1.ebuild :
+  gturing is a turing machine simulator for GNOME.
