@@ -7,10 +7,11 @@ MD5 ca97ce21935a2b201db8a672dd3353bc tkcvs-7.2.2.ebuild 1072
 MD5 c0adf7b7f51ee32613312c89caf88631 tkcvs-7.1.4.ebuild 1140
 MD5 84f449e2b115f6ebcccd5b06cf90bef9 files/digest-tkcvs-7.2.1 64
 MD5 80cab2952537a0017e0401abc8b5731e files/digest-tkcvs-7.2.2 64
+MD5 4a6d3697b88a2a80ef6332cfe3a3748e files/digest-tkcvs-7.1.4 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBpb4KmdTrptrqvGERAiG0AJ9hlIY6k2+ffVQQw56c67mufLmoMgCdEQCv
-yi7M9CGE/2PxR2OU5Pu3Bp8=
-=wFNF
+iD8DBQFBpkLYmdTrptrqvGERAqiVAJ9582vvhYExtAuAr/OEpY8fhrkE8ACbBiOZ
+WEqH8/37xMbZZPiLKoQTO8c=
+=aOF7
 -----END PGP SIGNATURE-----
