@@ -1,3 +1,5 @@
 MD5 a3c1be0e4af7f84da2e59aae931c4b85 kcdlabel-2.11.ebuild 480
+MD5 bfdcc2b9aaefa2a482204d6585465043 kcdlabel-2.12.ebuild 479
 MD5 4f7f0ab5879534e6603e448ae25e31f6 ChangeLog 408
 MD5 06edea195d41b4009a106f61798039ad files/digest-kcdlabel-2.11 70
+MD5 c235b43131df0245020f8a24928925e8 files/digest-kcdlabel-2.12 70
