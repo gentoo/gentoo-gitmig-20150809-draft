@@ -1,0 +1,46 @@
+# ChangeLog for net-www/mod_mono
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.1 2004/08/15 17:14:02 stuart Exp $
+
+*mod_mono-0.8 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/70_mod_mono.conf, +mod_mono-0.10.ebuild, +mod_mono-0.11.ebuild,
+  +mod_mono-0.13.ebuild, +mod_mono-0.8.ebuild, +mod_mono-1.0.ebuild:
+  Moved from net-www/mod_mono to www-apache/mod_mono.
+
+  18 Jul 2004; David Holm <dholm@gentoo.org> mod_mono-1.0.ebuild:
+  Added to ~ppc.
+
+*mod_mono-1.0 (30 Jun 2004)
+
+  30 Jun 2004; Peter Johanson <latexer@gentoo.org> +mod_mono-1.0.ebuild:
+  1.0. Nuff said.
+
+*mod_mono-0.13 (27 Jun 2004)
+
+  27 Jun 2004; Peter Johanson <latexer@gentoo.org> +mod_mono-0.13.ebuild:
+  Release candidate goodness.
+
+*mod_mono-0.11 (17 Jun 2004)
+
+  17 Jun 2004; Chuck Short <zul@gentoo.org> mod_mono-0.11.ebuild:
+  Version bump. Closes 54062.
+
+  17 Jun 2004; Chuck Short <zul@gentoo.org> mod_mono-0.10.ebuild:
+  Stable for x86.
+
+*mod_mono-0.10 (03 Jun 2004)
+
+  03 Jun 2004; Chuck Short <zul@gentoo.org> mod_mono-0.10.ebuild:
+  Version bump, closes #52880.
+
+  02 Jun 2004; David Holm <dholm@gentoo.org> mod_mono-0.8.ebuild:
+  Added to ~ppc.
+
+*mod_mono-0.8 (23 May 2004)
+
+  23 May 2004; Chuck Short <zul@gentoo.org> metadata.xml, mod_mono-0.8.ebuild,
+  files/70_mod_mono.conf:
+  Initial ebuild. Ebuild modified by alot of people. CLoes #41655.
+
