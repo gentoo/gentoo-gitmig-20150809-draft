@@ -37,9 +37,11 @@
 *>=sys-kernel/mips-headers-2.4.21
 *>=sys-devel/gnuconfig-20030708
 
-# Not in portage yet
 # Controls the front LCD panel
-*>=sys-apps/lcdutils
+*sys-apps/lcdutils
+
+# Modern bootloader
+*sys-boot/colo
 
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
