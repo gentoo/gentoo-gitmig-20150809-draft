@@ -1,0 +1,91 @@
+#!/bin/bash
+
+function die () 
+{
+	echo
+	echo "***"
+	echo "*** Fatal error: $*"
+	echo "***"
+	exit 1
+}
+
+if [ $1 = "start" -o $1 = "install" ]; then
+
+	cd "${MY_INSTALLDIR}" || die "Cannot find install dir ${MY_INSTALLDIR}"
+
+	FILE="bugzilla.cron.daily bugzilla.cron.tab cronset.sh firstcheck.sh"
+	for file in ${FILE}; do
+		sed -e "s|/var/www/bugzilla|${MY_INSTALLDIR}|g;" -i ${D}/${MY_INSTALLDIR}/${FILE}
+	done
+	
+	if ( test -a localconfig ) ; then
+		echo "The following does not work on previous installations, please run checksetup.pl in ${MY_INSTALLDIR}"
+		exit 1
+	fi
+
+	echo
+	echo "Finalizing the installation of bugzilla in ${MY_INSTALLDIR}"
+	echo
+	
+	# config setting
+	echo "Details for the bugzilla database"
+	echo "(This scripts creates the database & user)"
+	echo
+	echo -n "mysql bugs db name [bugs]: "; read mybugsdb
+	if (test -z ${mybugsdb}) ; then mybugsdb="bugs" ; fi
+
+	echo -n "mysql bugs db host [localhost]: "; read mybugshost
+	if (test -z ${mybugshost}) ; then mybugshost="localhost" ; fi
+
+	echo -n "mysql bugs dbuser name [bugs]: "; read mybugsuser
+	if (test -z ${mybugsuser}) ; then mybugsuser="bugs" ; fi
+
+	echo -n "mysql bugs dbuser password: "; read mybugspwd
+	if (test -z ${mybugspwd}) ; then echo "Error: no dbuser password" ; exit 1; fi
+
+	cat bz.cfg.templ   | sed -e "s/tmpdbname/${mybugsdb}/
+	s/tmphost/${mybugshost}/
+	s/tmpdbuser/${mybugsuser}/
+	s/tmpdbpass/${mybugspwd}/"  > bz.cfg.pl
+
+	if [ ! -f bz.cfg.pl ] ; then echo "Error: no template for db vars" ; exit 1 ; fi
+
+	# privileges
+	echo "Setting correct privileges for bugzilla mysql connection"
+	echo -n "Please enter login info for user who has grant privileges on ${mybugshost} [$USER]: "; read adminuser
+	if (test -z ${adminuser}) ; then adminuser="$USER" ; fi
+	if [ "${mybugshost}" != "localhost" ]; then
+		echo -n "Client address for bugzilla (at db side) [$(hostname -f)]: "; read clientaddr
+		if (test -z ${clientaddr}) ; then clientaddr="$(hostname -f)" ; fi
+	fi
+	# this will be default for localhost
+	if (test -z ${clientaddr}) ; then clientaddr="${mybugshost}" ; fi
+
+	# if $bugshost == localhost, don't specify -h argument, so local socket can be used.
+	host=${mybugshost/localhost}
+	mysql -u ${adminuser} ${host:+-h ${host}} -p mysql --exec="GRANT SELECT,INSERT,UPDATE,DELETE,INDEX, ALTER,CREATE,DROP,REFERENCES ON ${mybugsdb}.* TO ${mybugsuser}@${clientaddr} IDENTIFIED BY '${mybugspwd}'; FLUSH PRIVILEGES;"  || {
+		echo "Error running query!"
+		echo
+		echo "Please run it manually on ${host}."
+		echo
+		echo "   \$ mysql -u ${adminuser} -p mysql --exec=\"GRANT SELECT,INSERT,UPDATE,DELETE,INDEX, ALTER,CREATE,DROP,REFERENCES ON ${mybugsdb}.* TO ${mybugsuser}@${clientaddr} IDENTIFIED BY '${mybugspwd}'; FLUSH PRIVILEGES;\""
+		echo
+	}
+
+	echo "Setting the template for localconfig variables"
+	chmod 755 ./checksetup.pl
+	./checksetup.pl bz.cfg.pl || exit 1
+
+	echo "Final step: setting all html templates and db tables"
+	chmod 750 ${MY_INSTALLDIR}/firstcheck.sh
+	chmod 755 ./firstcheck.sh
+	./firstcheck.sh || die "firstcheck.sh config script failed"
+
+	echo -n "Do you want to set a crontab [y/N]" ; read cronyes
+	if [ "${cronyes}+" = "y+" ] ; then 
+		crontab -u apache ${MY_INSTALLDIR}/bugzilla.cron.tab
+	fi
+
+else
+	echo $1
+fi

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.0_rc3.ebuild,v 1.2 2004/10/29 07:26:35 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.0_rc3.ebuild,v 1.3 2005/01/19 13:28:24 stuart Exp $
 
 inherit webapp
 MY_P=${P/.0_/}

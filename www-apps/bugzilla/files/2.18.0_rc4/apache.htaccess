@@ -1,0 +1,3 @@
+Order Allow,Deny
+Options +ExecCGI +FollowSymLinks
+AllowOverride Limit
