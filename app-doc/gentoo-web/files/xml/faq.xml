@@ -150,7 +150,7 @@ that you can build apps from sources. We generally only build binaries for relea
 
 	<section>
 		<title>Why is KDE not reading <path>/etc/profile</path>?</title>
-		<body><p>You need to add <c>--login</c> to the first line in <path>/opt/kde2.1/startkde</path>, so that it reads as follows:</p>
+		<body><p>You need to add <c>--login</c> to the first line in <path>/opt/kde2.1/bin/startkde</path>, so that it reads as follows:</p>
 		<pre>#!/bin/sh --login</pre>
 		</body>
 	</section>
