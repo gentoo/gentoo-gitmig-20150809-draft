@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.7 2004/02/10 04:52:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.8 2004/04/18 23:32:50 mr_bones_ Exp $
 
-inherit games perl-module
+inherit perl-module games
 
 NET_CLIENT_P=frozen-bubble-client-0.0.3
 NET_SERVER_P=frozen-bubble-server-0.0.3
