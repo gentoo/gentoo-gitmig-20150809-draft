@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.13.ebuild,v 1.6 2003/02/13 14:03:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.13.ebuild,v 1.7 2003/04/13 22:43:52 liquidx Exp $
 
 IUSE="nls gtk2"
 
@@ -18,6 +18,14 @@ DEPEND="virtual/x11
 	gtk2? ( >=x11-libs/gtk+-2.0.0 )"
 
 RDEPEND="nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# fix to allow compiling against >=x11-libs/gtk+-2.2
+	# for gftp-2.0.13 only, fixed in 2.0.14
+	patch -p0 < ${FILESDIR}/${P}-gtk2.2.patch || die "died applying patch"
+}
 
 src_compile() {
 	local myconf

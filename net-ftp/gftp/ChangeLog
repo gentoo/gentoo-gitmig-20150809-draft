@@ -1,6 +1,6 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.15 2003/04/05 03:25:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.16 2003/04/13 22:43:52 liquidx Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -21,6 +21,10 @@
   New version
 
 *gftp-2.0.13 (23 Jul 2002)
+
+  13 Apr 2003; Alastair Tse <liquidx@gentoo.org> gftp-2.0.13.ebuild,
+  files/gftp-2.0.13-gtk2.2.patch:
+  fix compile problems with gtk2.2
 
   20 Aug 2002; Mark Guertin <gerk@gentoo.org> gftp-2.0.13.ebuild :
   Added ppc to keywords

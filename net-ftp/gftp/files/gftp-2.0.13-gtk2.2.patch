@@ -1,0 +1,22 @@
+--- src/gtk/gftp-gtk.c	2002-07-17 13:05:33.000000000 +0100
++++ src/gtk/gftp-gtk.c	2003-04-13 22:53:01.000000000 +0100
+@@ -62,7 +62,7 @@
+ GtkWidget * stop_btn, * hostedit, * useredit, * passedit, * portedit, * logwdw,
+           * dlwdw, * protocol_menu, * optionmenu;
+ GtkAdjustment * logwdw_vadj;
+-#if GTK_MAJOR_VERSION == 2 && GTK_MINOR_VERSION == 0
++#if GTK_MAJOR_VERSION > 1
+ GtkTextMark * logwdw_textmark;
+ #endif
+ int local_start, remote_start, trans_start, log_start, tools_start;
+--- src/gtk/gftp-gtk.h	2002-07-17 11:37:18.000000000 +0100
++++ src/gtk/gftp-gtk.h	2003-04-13 22:58:46.000000000 +0100
+@@ -102,7 +102,7 @@
+ extern GtkWidget * stop_btn, * hostedit, * useredit, * passedit,
+                  * portedit, * logwdw, * dlwdw, * protocol_menu, * optionmenu;
+ extern GtkAdjustment * logwdw_vadj;
+-#if GTK_MAJOR_VERSION == 2 && GTK_MINOR_VERSION == 0
++#if GTK_MAJOR_VERSION > 1
+ extern GtkTextMark * logwdw_textmark;
+ #endif
+ extern int local_start, remote_start, trans_start, log_start, tools_start;
