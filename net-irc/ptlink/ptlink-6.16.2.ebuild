@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink/ptlink-6.16.2.ebuild,v 1.3 2004/06/09 20:37:09 ciaranm Exp $
 
 MY_P="PTlink${PV}"
 DESCRIPTION="PTlink IRCd is a secure IRC daemon with many advanced features."
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.ptlink.net/"
 SRC_URI="ftp://ftp.sunsite.dk/projects/ptlink/ircd/${MY_P}.tar.gz"
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 IUSE="ipv6"
 DEPEND="virtual/glibc"
