@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/devel-chroots
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/ChangeLog,v 1.15 2005/02/19 12:59:30 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/ChangeLog,v 1.16 2005/02/27 20:52:30 astinus Exp $
+
+  27 Feb 2005; Alex Howells <astinus@gentoo.org> metadata.xml:
+  Metadata updated, I'm taking over maintenance for the time being.
 
 *devel-chroots-1.0.0 (19 Feb 2005)
 
