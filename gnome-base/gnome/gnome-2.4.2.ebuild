@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2.ebuild,v 1.1 2004/02/05 22:26:48 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2.ebuild,v 1.2 2004/02/05 23:09:06 spider Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -13,9 +13,6 @@ IUSE="cdr dvdr doc accessibility samba"
 # when unmasking for an arch
 # double check none of the deps are still masked !
 
-# NOTE TO DEVS : 
-# THIS IS AN UPDATE TRACKING PACK ONLY MEANT FOR GNOME DEVS
-# NO NEED TO ADD ARCH KEYWORDS, THOSE WILL BE ADDED IN REGULAR RELEASES
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64"
 
 #  Note to developers:
@@ -107,9 +104,9 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/yelp-2.4.2
 	>=x11-libs/vte-0.11.10
 
-	>=app-text/scrollkeeper-0.3.12
+	>=app-text/scrollkeeper-0.3.14
 	>=dev-util/pkgconfig-0.15
-	>=dev-util/intltool-0.27.2
+	>=dev-util/intltool-0.30
 
 	cdr? ( >=gnome-extra/nautilus-cd-burner-0.6.1 )
 	dvdr? ( >=gnome-extra/nautilus-cd-burner-0.6.1 )
