@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gnorpm/gnorpm-0.96.ebuild,v 1.5 2002/07/25 14:16:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gnorpm/gnorpm-0.96.ebuild,v 1.6 2002/07/25 14:53:55 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Gnome RPM Frontend"
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-RDEPEND= >=gnome-base/gnome-libs-1.4.1.2-r1
+RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	>=sys-libs/db-3.2.3h
 	>=gnome-base/libghttp-1.0.9-r1
 	>=app-arch/rpm-3.0.5"

@@ -1,12 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/zoo-2.10.ebuild,v 1.2 2002/07/17 20:44:58 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/zoo-2.10.ebuild,v 1.3 2002/07/25 14:53:55 seemant Exp $
 
 DESCRIPTION="Manipulate archives of files in compressed form."
+SRC_URI="ftp://ftp.kiarchive.ru/pub/unix/arcers/${P}pl1.tar.gz"
+
+SLOT="0"
+LICENSE=""
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
-SRC_URI="ftp://ftp.kiarchive.ru/pub/unix/arcers/${P}pl1.tar.gz"
-SLOT="0"
 src_unpack () {
 
 	unpack ${P}pl1.tar.gz
