@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/xfoil
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xfoil/ChangeLog,v 1.1 2003/12/04 05:20:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xfoil/ChangeLog,v 1.2 2004/02/04 09:48:50 george Exp $
+
+*xfoil-6.94-r1 (03 Feb 2004)
+
+  03 Feb 2004; George Shapovalov <george@gentoo.org> xfoil-6.94-r1.ebuild :
+  adjusted ebuild for the new blas virtuals, masked for now (until blas reorg is complete)
 
 *xfoil-6.94 (03 Dec 2003)
 
