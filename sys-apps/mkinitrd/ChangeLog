@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mkinitrd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.6 2003/10/19 04:00:10 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.7 2003/10/27 19:01:58 pebenito Exp $
+
+  27 Oct 2003; Chris PeBenito <pebenito@gentoo.org> mkinitrd-3.5.7-r1.ebuild,
+  mkinitrd-3.5.7.ebuild:
+  Add linux-headers dependancy to close #31580.
 
 *mkinitrd-3.5.7-r1 (18 Oct 2003)
 
