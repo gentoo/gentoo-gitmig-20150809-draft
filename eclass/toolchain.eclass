@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.8 2004/09/08 21:01:38 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.9 2004/09/08 21:08:22 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -573,7 +573,9 @@ gcc_do_configure() {
 	fi
 
 	# multilib support
-	if use !nomultilib && [ -z "${GCC_TARGET_NO_MULTILIB}" ] ; then
+	if [ -n "${GCC_TARGET_NO_MULTILIB}" ] ; then
+		confgcc="${confgcc} --disable-multilib"
+	elif use !nomultilib && (use amd64 || use mips) ; then
 		confgcc="${confgcc} --enable-multilib"
 	else
 		confgcc="${confgcc} --disable-multilib"
