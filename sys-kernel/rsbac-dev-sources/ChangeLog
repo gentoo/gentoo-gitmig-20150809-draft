@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/rsbac-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.17 2004/12/11 12:52:26 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.18 2004/12/16 18:43:00 kang Exp $
+
+  16 Dec 2004; Guillaume Destuynder <kang@gentoo.org> :
+  1.2.4pre + 2.6.9 in ~x86
 
   11 Dec 2004; Guillaume Destuynder <kang@gentoo.org>
   files/rsbac-dev-sources-2.6.7-dos_mem_disc2.patch:
