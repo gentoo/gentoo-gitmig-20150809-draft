@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/blassic
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.17 2005/03/17 12:35:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.18 2005/03/21 20:16:58 gmsoft Exp $
+
+  21 Mar 2005; Guy Martin <gmsoft@gentoo.org> blassic-0.10.0.ebuild:
+  Stable on hppa.
 
   17 Mar 2005; Joseph Jezak <josejx@gentoo.org> blassic-0.10.0.ebuild:
   Marked ppc for bug #84754.
