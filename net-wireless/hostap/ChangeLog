@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/hostap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/ChangeLog,v 1.16 2003/06/11 07:54:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/ChangeLog,v 1.17 2003/06/18 15:21:53 phosphan Exp $
+
+  18 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> :
+  Fixed missing digests (bug 21466)
 
 *hostap-0.0.3-r1 (11 Jun 2003)
 
