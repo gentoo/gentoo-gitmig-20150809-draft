@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.36 2005/01/04 20:28:08 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.37 2005/01/06 18:27:53 mrness Exp $
+
+  06 Jan 2005; Alin Nastac <mrness@gentoo.org> -files/3.70-gcc3.patch,
+  -files/3.70-openssl.patch, -files/wvcrash-uclibc-gentoo.patch,
+  -files/wvstreams-3.70-gentoo.patch, -files/wvstreams-3.74-fPIC.patch,
+  -files/wvstreams-3.74-makefile.patch, -files/wvstreams-3.75-fPIC.patch,
+  -files/wvstreams-3.75-gcc34.patch, -files/wvstreams-3.75-makefile.patch,
+  -files/wvstreams-3.75-tcl_8_4.patch, -wvstreams-3.70-r2.ebuild,
+  -wvstreams-3.74.ebuild, -wvstreams-3.75-r1.ebuild, -wvstreams-3.75.ebuild:
+  Remove obsolete ebuilds.
 
   04 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org>
   wvstreams-4.0-r1.ebuild:
