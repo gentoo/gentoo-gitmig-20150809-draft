@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.10 2002/12/09 04:37:27 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.11 2002/12/12 21:38:29 tuxus Exp $
+ 
+  *gettext-0.11.1  (12 Dec 2002)
+  12 Dec 2002 ; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords.
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
