@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0_alpha2.ebuild,v 1.2 2002/12/01 12:22:04 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0_alpha2.ebuild,v 1.3 2003/01/05 03:53:11 hannes Exp $
 
 inherit kde-base
 need-kde 3
@@ -36,4 +36,5 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	cat ${FILESDIR}/${P}-gentoo.diff.bz2 | bzip2 -d | patch -p0
+	patch -p0 < ${FILESDIR}/${P}-kde-3.0.5a.diff
 }

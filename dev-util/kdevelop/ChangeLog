@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.17 2002/12/13 10:56:49 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.18 2003/01/05 03:53:11 hannes Exp $
+
+  04 Jan 2003; Hannes Mehnert <hannes@gentoo.org> kdevelop-3.0_alpha2.ebuild:
+  added patch to compile with kde-3.0.5a. fixes #12913
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
