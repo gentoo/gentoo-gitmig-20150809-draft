@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.10 2003/05/19 00:43:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.11 2003/07/11 05:57:55 rac Exp $
+
+*libperl-5.8.1_rc1 (10 Jul 2003)
+
+  10 Jul 2003; <rac@gentoo.org> libperl-5.8.1_rc1.ebuild,
+  files/libperl-5.8.1_rc1-create-libperl-soname.patch:
+  Upstream version bump.  Experimental.
 
   18 May 2003; Tavis Ormandy <taviso@gentoo.org> libperl-5.8.0.ebuild:
   removing gcc hardcoded compiler, using ${CC:-gcc}
