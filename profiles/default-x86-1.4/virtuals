@@ -43,3 +43,4 @@ virtual/skkserv		app-i18n/skkserv
 virtual/snmp		net-analyzer/net-snmp
 virtual/winkernel	sys-kernel/win4lin-sources
 virtual/imap-c-client	net-libs/c-client
+virtual/wine		app-emulation/wine app-emulation/winex app-emulation/winex-cvs
