@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.4-r1.ebuild,v 1.4 2003/08/17 22:55:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.5.ebuild,v 1.1 2003/08/17 22:55:28 vapier Exp $
 
 use kde && inherit kde
 
@@ -10,10 +10,10 @@ DESCRIPTION="Really Slick Screensavers using OpenGL for XScreenSaver"
 HOMEPAGE="http://rss-glx.sourceforge.net/"
 SRC_URI="mirror://sourceforge/rss-glx/${MY_P}.tar.bz2"
 
-IUSE="kde sse 3dnow"
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+SLOT="0"
+KEYWORDS="~x86 ~ppc"
+IUSE="kde sse 3dnow"
 
 DEPEND="virtual/x11
 	virtual/opengl
@@ -22,8 +22,8 @@ DEPEND="virtual/x11
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/${P}-kdedesktop.patch
-	epatch ${FILESDIR}/${P}-gcc33.patch
 }
 
 src_compile() {
@@ -33,13 +33,13 @@ src_compile() {
 	myconf="${myconf} --with-configdir=/usr/share/control-center/screensavers/" \
 
 	if [ -n "`use kde`" ]; then
-		local desktopfile=`find . -name \*.desktop`
-		for x in $desktopfile; do
-			sed -i -e 's:Exec=kxsrun \(.*\):Exec=kxsrun /usr/lib/xscreensaver/\1:g' \
-				   -e 's:Exec=kxsconfig \(.*\):Exec=kxsconfig /usr/lib/xscreensaver/\1:g' \
-				   $x
-		done
-	
+		find . -name '*.desktop' -exec \
+			sed -i \
+				-e 's:Exec=kxsrun \(.*\):Exec=kxsrun /usr/lib/xscreensaver/\1:g' \
+				-e 's:Exec=kxsconfig \(.*\):Exec=kxsconfig /usr/lib/xscreensaver/\1:g' \
+				'{}' \
+			\; \
+			|| die "couldnt sed desktop files"
 		[ -n "${KDEDIR}" ] \
 			&& myconf="${myconf} --with-kdessconfigdir=${KDEDIR}/share/applnk/System/ScreenSavers"
 	fi			
@@ -48,7 +48,6 @@ src_compile() {
 		`use_enable sse` \
 		`use_enable 3dnow` \
 		${myconf} || die
-		
 	emake || die
 }
 
@@ -62,6 +61,7 @@ src_install() {
 
 pkg_postinst() {
 	if [ -f ${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver ]; then
+		[ -n "`grep 'euphoria --root' /usr/X11R6/lib/X11/app-defaults/XScreenSaver`" ] && return 0
 		einfo "Adding Really Slick Screensavers to XScreenSaver"
 
 		sed -i '/*programs:/a\
@@ -76,13 +76,15 @@ pkg_postinst() {
     GL:     \"Skyrocket\"  skyrocket --root   \\n\\\
     GL:    \"Solarwinds\"  solarwinds --root  \\n\\\
     GL:     \"Colorfire\"  colorfire --root   \\n\\\
-    GL:  \"Hufos Smoke\"  hufo_smoke --root  \\n\\\
-    GL: \"Hufos Tunnel\"  hufo_tunnel --root \\n\\\
+    GL:   \"Hufos Smoke\"  hufo_smoke --root  \\n\\\
+    GL:  \"Hufos Tunnel\"  hufo_tunnel --root \\n\\\
     GL:    \"Sundancer2\"  sundancer2 --root  \\n\\\
     GL:          \"BioF\"  biof --root        \\n\\\
+    GL:    \"MatrixView\"  matrixview --root  \\n\\\
+    GL:   \"Spirographx\"  spirographx --root \\n\\\
     GL:   \"BusySpheres\"  busyspheres --root \\n\\' \
 	${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver
-	
+
 	else
 		einfo "Unable to add these to XScreenSaver configuration"
 		einfo "Read /usr/share/doc/${PF}/README.xscreensaver.gz for"
@@ -91,9 +93,11 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+	has_version rss-glx && return 0
 	if [ -f ${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver ]; then
 		einfo "Removing Really Slick Screensavers from XScreenSaver configuration."
-		sed -e '/\"Cyclone\"  cyclone/d' \
+		sed \
+			-e '/\"Cyclone\"  cyclone/d' \
 			-e '/\"Euphoria\"  euphoria/d' \
 			-e '/\"Fieldlines\"  fieldlines/d' \
 			-e '/\"Flocks\"  flocks/d' \
@@ -108,8 +112,9 @@ pkg_postrm() {
 			-e '/\"Hufos Tunnel\"  hufo_tunnel/d' \
 			-e '/\"Sundancer2\"  sundancer2/d' \
 			-e '/\"BioF\"  biof/d' \
+			-e '/\"MatrixView\"  matrixview/d' \
+			-e '/\"Spirographx\"  spirographx/d' \
 			-e '/\"BusySpheres\"  busyspheres/d' -i \
-		${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver			
+			${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver
 	fi
 }
-

@@ -1,14 +1,19 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.6 2003/06/12 23:19:38 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.7 2003/08/17 22:55:28 vapier Exp $
+
+*rss-glx-0.7.5 (17 Aug 2003)
+
+  17 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + fix auto-removing of xscreensaver stuff from config file.
+
+*rss-glx-0.7.4-r1 (04 Jun 2003)
 
   13 Jun 2003; Alastair Tse <liquidx@gentoo.org> rss-glx-0.7.4-r1.ebuild:
   added kde symlink for kxs* things
 
   07 Jun 2003; Alastair Tse <liquidx@gentoo.org> rss-glx-0.7.4-r1.ebuild:
   added sed-4 deps
-
-*rss-glx-0.7.4-r1 (04 Jun 2003)
 
   03 Jun 2003; Alastair Tse <liquidx@gentoo.org> rss-glx-0.7.4-r1.ebuild,
   files/rss-glx-0.7.4-gcc33.patch, files/rss-glx-0.7.4-kdedesktop.patch:
