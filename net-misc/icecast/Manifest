@@ -1,13 +1,23 @@
-MD5 ada12ffec12146971537870bdb63e98a icecast-2.0.1-r1.ebuild 1037
-MD5 3d532f0952b83f659df5f79fb972fe84 icecast-2.0.2.ebuild 1111
-MD5 04c211c8c18cedac521fea9a8d6ef612 icecast-2.1.0.ebuild 1064
-MD5 bd568037ef1237d61842abb81981d30a icecast-2.2.0.ebuild 1173
-MD5 ee26616c70669d145e38342b96ec6300 ChangeLog 6584
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1d176de90b0eaf8feca9889ced47d510 ChangeLog 6734
+MD5 5eff8bd7d69f53898b122ef0ce6d4019 icecast-2.0.1-r1.ebuild 1047
+MD5 f21d4be19306962df91c96bc5cfd7f8c icecast-2.0.2.ebuild 1113
+MD5 35e72eff92353c4b76c470ca554d4ad9 icecast-2.1.0.ebuild 1066
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
-MD5 294ad1abe0a9f4abc496f53e158695be files/init.d.icecast 357
-MD5 473c7b8b865ecfdfd794414c980fe659 files/digest-icecast-2.0.1-r1 65
+MD5 b611a72f4f9939514d8a258412f918f9 icecast-2.2.0.ebuild 1173
 MD5 a5f4b4836da859fb3b50704c437e2ba9 files/1.3.12-errno.patch 1732
+MD5 473c7b8b865ecfdfd794414c980fe659 files/digest-icecast-2.0.1-r1 65
 MD5 222ea172a59c3efde7c67585f4b08939 files/digest-icecast-2.0.2 65
 MD5 0d1040986ca91ef513c0666a47161be0 files/digest-icecast-2.1.0 65
+MD5 294ad1abe0a9f4abc496f53e158695be files/init.d.icecast 357
 MD5 31957ee65102675eaa5950f85de03a3f files/digest-icecast-2.2.0 65
 MD5 7fea29ea3b0c1cd4cda72553db01dfa9 files/2.2.0-gentoo.patch 15011
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCIPFW+uC/ViVka/0RAm4PAKCEPOSJxrvg+ro8xQLzPwtMSPrwHwCeKSY0
+2fuZZS35nBS1DyQJmJVAEOI=
+=NqXD
+-----END PGP SIGNATURE-----
