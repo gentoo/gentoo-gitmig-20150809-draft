@@ -1,5 +1,5 @@
-MD5 a9682d6cd30083b2f4f89bf73414fff8 ChangeLog 402
+MD5 82dab4469aea2d0e94afc25d87a18165 ChangeLog 526
 MD5 5643d23c2f1a0e8d132bc5a1b37fdbea overnet-0.48.2.ebuild 701
-MD5 ccada38465e6024e47fc54e4d31b3f3b overnet-0.50.1.ebuild 708
+MD5 46e46f1079a4e1fba6afb854708cb037 overnet-0.50.1.ebuild 707
 MD5 415d74128e7b5d106da1e490f0622b0d files/digest-overnet-0.48.2 65
 MD5 4aa3312ad3dc997a03c29c2bcee2b728 files/digest-overnet-0.50.1 65
