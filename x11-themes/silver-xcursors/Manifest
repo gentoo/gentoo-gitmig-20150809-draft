@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dc4a388b6709a08d43720c53c9b3975f ChangeLog 1396
 MD5 93a18f7ad6c172b5a49a40d0b91a3075 silver-xcursors-0.3-r1.ebuild 1541
 MD5 38615510da96e0739707dce97b71c21a silver-xcursors-0.3.ebuild 1492
-MD5 3211698b11f4115c7d6ee85c2da5a158 silver-xcursors-0.4.ebuild 1732
+MD5 fb96e2a4c0a0997c18491cee9bd44938 silver-xcursors-0.4.ebuild 1719
 MD5 662bafca39db1431ee8003d8aa7499da files/digest-silver-xcursors-0.3 80
 MD5 662bafca39db1431ee8003d8aa7499da files/digest-silver-xcursors-0.3-r1 80
 MD5 d63fa85c7f2ec4a227617435dbc2f935 files/digest-silver-xcursors-0.4 80
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFAylnbHTu7gpaalycRAuXKAKCjjeFq+XGiIBK8HFbi8s30EMPLuACeNeKU
+buny6uo+lK5eUCeSdQDuW0s=
+=oOqZ
+-----END PGP SIGNATURE-----
