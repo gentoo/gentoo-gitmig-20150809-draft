@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/gnomba-0.6.2.ebuild,v 1.4 2002/10/04 06:11:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/gnomba-0.6.2.ebuild,v 1.5 2002/11/27 20:11:51 foser Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome Samba Browser"
@@ -29,6 +29,10 @@ src_compile ()
 
 src_install ()
 {
+	#remove control chars from desktop file
+	mv gnomba.desktop gnomba.desktop.bad
+	tr -d '\015' < gnomba.desktop.bad > gnomba.desktop
+
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		install || die

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gnomba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/ChangeLog,v 1.2 2002/07/07 06:54:01 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/ChangeLog,v 1.3 2002/11/27 20:11:51 foser Exp $
+
+  27 Nov 2002; foser <foser@gentoo.org> gnomba-0.6.2.ebuild :
+  Fix .desktop file (bug #11199)
 
 *gnomba-0.6.2 (14 June 2002)
 
