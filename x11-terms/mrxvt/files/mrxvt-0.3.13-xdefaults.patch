@@ -1,0 +1,230 @@
+--- xdefaults.c.orig	2005-02-04 04:57:51.000000000 +0900
++++ xdefaults.c	2005-02-18 17:36:49.168153000 +0900
+@@ -24,7 +24,7 @@
+  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+  *----------------------------------------------------------------------*/
+ /*
+-** $Id: mrxvt-0.3.13-xdefaults.patch,v 1.1 2005/02/18 13:37:22 usata Exp $
++** $Id: mrxvt-0.3.13-xdefaults.patch,v 1.1 2005/02/18 13:37:22 usata Exp $
+ */
+ 
+ #include "../config.h"
+@@ -58,7 +58,7 @@
+ # ifndef USE_XGETDEFAULT
+ void  rxvt_get_xdefaults (rxvt_t*, FILE*, const char*);
+ # else
+-char* get_xdefault_resource (XrmDatabase database, char *name, char *subClass, char *fullClass, char *resource);
++char* get_xdefault_resource (XrmDatabase database, const char *name, char *subClass, char *fullClass, char *resource);
+ # endif
+ #endif
+ /*--------------------------------------------------------------------*
+@@ -100,7 +100,7 @@
+ 	{(flag), -1, NULL, (opt), NULL, (desc), (multiple)}
+ 
+ /* convenient macros */
+-#define optList_strlen(i)						\
++#define optList_STRLEN(i)						\
+ 	(optList[i].flag ? 0 : (optList[i].arg ? STRLEN(optList[i].arg) : 1))
+ #define optList_isBool(i)					\
+ 	(optList[i].flag & Opt_Boolean)
+@@ -735,7 +735,7 @@
+ 				int			 len = 0;
+ 
+ 				if (!optList_isBool(i)) {
+-					len = optList_strlen(i);
++					len = optList_STRLEN(i);
+ 					if (len > 0)
+ 						len++;	/* account for space */
+ 				}
+@@ -750,7 +750,7 @@
+ 				}
+ 				fprintf(stderr, " [-%s%s", (optList_isBool(i) ?
+ 					"/+" : ""), optList[i].opt);
+-				if (optList_strlen(i))
++				if (optList_STRLEN(i))
+ 					fprintf(stderr, " %s]", optList[i].arg);
+ 				else
+ 					fprintf(stderr, "]");
+@@ -1002,7 +1002,7 @@
+ 		if (entry < optList_size()) {
+ 			if (optList_isReverse(entry))
+ 				flag = (flag == On) ? Off : On;
+-			if (optList_strlen(entry)) {	/* string value */
++			if (optList_STRLEN(entry)) {	/* string value */
+ 				const char	 *str = argv[++i];
+ 
+ 				DBG_MSG(2, (stderr, "string (%s,%s) = ",
+@@ -1437,86 +1437,97 @@
+ #ifdef USE_XGETDEFAULT
+ /* INTPROTO */
+ char* 
+-get_xdefault_resource(XrmDatabase database, char *name, char *subClass, char *fullClass, char *resource)
++get_xdefault_resource(XrmDatabase database, const char *name, char *subClass, char *fullClass, char *resource)
+ {
+-    char *resourceClass;
+-    char *str_class;
+-    char *str_name;
+-    char *generic_return_str_type = NULL;
+-    char *return_str_type = NULL;
+-    int i;
+-
+-    Bool foundGeneric;
+-    Bool found;
+-
+-    XrmValue return_value;
+-    static char *invalidPrefix = "! invalid name !";
+-
+-    int prefix_len = strlen(invalidPrefix);
+-    if (strlen(name) > prefix_len) {
+-        prefix_len = strlen(name);
+-    }
+-    if (strlen(subClass) > prefix_len) {
+-        prefix_len = strlen(subClass);
+-    }
+-    if (strlen(fullClass) > prefix_len) {
+-        prefix_len = strlen(fullClass);
+-    }
+-    str_class = malloc(prefix_len + strlen(resource) + 1);
+-    str_name = malloc(prefix_len + strlen(resource) + 1);
+-    sprintf(str_name, "%s.%s", name, resource);
+-
+-    /* translate resource to class */
+-    resourceClass = malloc(strlen(resource) + 1);
+-    resourceClass[0] = toupper(resource[0]);
+-    for (i = 1; i < strlen(resource); i++) {
+-        if (resource[i - 1] == '.') {
+-            resourceClass[i] = toupper(resource[i]);
+-        } else {
+-            resourceClass[i] = resource[i];
+-        }
+-    }
+-    resourceClass[strlen(resource)] = 0;
++	char*	resourceClass;
++	char*	str_class;
++	char*	str_name;
++	char*	generic_return_str_type = NULL;
++	char*	return_str_type = NULL;
++	int		len, i;
++	Bool	foundGeneric;
++	Bool	found;
++	XrmValue		return_value;
++
++	static char*	invalidPrefix = "! invalid name !";
++	int				prefix_len = STRLEN(invalidPrefix);
++	/* find the maximal prefix_len */
++	if (STRLEN(name) > prefix_len) {
++		prefix_len = STRLEN(name);
++	}
++	if (STRLEN(subClass) > prefix_len) {
++		prefix_len = STRLEN(subClass);
++	}
++	if (STRLEN(fullClass) > prefix_len) {
++		prefix_len = STRLEN(fullClass);
++	}
++
++	/* allocate memory for str_class and str_name */
++	len = prefix_len + STRLEN(resource) + 2;
++	str_class = malloc(len);
++	str_name = malloc(len);
++
++	snprintf(str_name, len-1, "%s.%s", name, resource);
++	str_name[len-1] = (char) 0;
++
++	/* translate resource to class */
++	resourceClass = malloc(STRLEN(resource) + 1);
++	resourceClass[0] = toupper(resource[0]);
++	for (i = 1; i < STRLEN(resource); i++) {
++		if (resource[i - 1] == '.') {
++			resourceClass[i] = toupper(resource[i]);
++		}
++		else {
++			resourceClass[i] = resource[i];
++		}
++	}
++	resourceClass[STRLEN(resource)] = 0;
+ 
+-    /*
+-    ** We need to get resources with two different class names. If
++	/*
++	** We need to get resources with two different class names. If
+ 	** both subClass and fullClass exist, then subClass takes
+ 	** precedence.
+-    **
+-    ** The original algorithm for this was to get null-prefix resource
+-    ** (i.e. *resource) as well as the subClass resource. If they
++	**
++	** The original algorithm for this was to get null-prefix resource
++	** (i.e. *resource) as well as the subClass resource. If they
+ 	** matched, then the fullClass was used. Unfortunately this has
+ 	** a weakness; with the following database:
+-    **   *resource: value1
+-    **   subClass.resource: value1
+-    **   fullClass.resource: value2
+-    ** the value used will be 'value2' instead of 'value1'. This is
++	**   *resource: value1
++	**   subClass.resource: value1
++	**   fullClass.resource: value2
++	** the value used will be 'value2' instead of 'value1'. This is
+ 	** incorrect.
+-    **
+-    ** However, we can cheat. XrmGetResource returns string pointers
++	**
++	** However, we can cheat. XrmGetResource returns string pointers
+ 	** that are actually pointing to the internal string in the
+ 	** database. Thus, if the *pointer* returned when looking for
+ 	** the generic resource is the same as that for the subClass,
+ 	** then they found the same thing.
+-    **
+-    ** Note that XGetDefault *cannot* be used, as we may be getting
++	**
++	** Note that XGetDefault *cannot* be used, as we may be getting
+ 	** multi-level resources, something that it does not support.
+-    */
+-    sprintf(str_class, "%s.%s", invalidPrefix, resourceClass);
+-    foundGeneric = XrmGetResource(database, str_name, str_class, &generic_return_str_type, &return_value);
+-
+-    sprintf(str_class, "%s.%s", subClass, resourceClass);
+-    found = XrmGetResource(database, str_name, str_class, &return_str_type, &return_value);
+-
+-    if (!found || (foundGeneric && found && generic_return_str_type == return_str_type) ) {
+-        /* Subclass returned nothing or the same physical thing as the the generic. Try fullClass. */
+-        sprintf(str_class, "%s.%s", fullClass, resourceClass);
+-        found = XrmGetResource(database, str_name, str_class, &return_str_type, &return_value);
+-    }
+-
+-    free(str_class);
+-    free(str_name);
+-    return found ? (char *) return_value.addr : NULL;
++	*/
++	snprintf(str_class, len-1, "%s.%s", invalidPrefix, resourceClass);
++	str_name[len-1] = (char) 0;
++	foundGeneric = XrmGetResource(database, str_name, str_class, &generic_return_str_type, &return_value);
++
++	snprintf(str_class, len-1, "%s.%s", subClass, resourceClass);
++	str_name[len-1] = (char) 0;
++	found = XrmGetResource(database, str_name, str_class, &return_str_type, &return_value);
++
++	if (!found ||
++		(foundGeneric && found && generic_return_str_type == return_str_type) ) {
++		/* Subclass returned nothing or the same physical thing as the the generic. Try fullClass. */
++		snprintf(str_class, len-1, "%s.%s", fullClass, resourceClass);
++		str_name[len-1] = (char) 0;
++		found = XrmGetResource(database, str_name, str_class, &return_str_type, &return_value);
++	}
++
++	/* free memory */
++	free(str_class);
++	free(str_name);
++
++	return found ? (char *) return_value.addr : NULL;
+ }
+ #endif	/* USE_XGETDEFAULT */
+ 
+@@ -1619,7 +1630,6 @@
+ 	for (entry = 0; entry < optList_size(); entry++) {
+ 		int				s;
+ 		char*			p;
+-		char*			p0;
+ 		register int	i;
+ 		register int	loop = optList[entry].multiple ? MAX_PAGES : 1;
+ 
