@@ -1,20 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 43bf6bceda55032c9b77f35ea1c4fbc0 mrxvt-0.3.11.ebuild 2138
+MD5 44c45374206c26a78d62b5d40c133478 mrxvt-0.3.11.ebuild 2138
 MD5 3ff31b5479b2a0244f5711fff3155aed metadata.xml 221
-MD5 4a02639943c3d138e69f3bc58b462c23 ChangeLog 1936
-MD5 22c3d5276699305349e5a28c21cc6414 mrxvt-0.3.6.ebuild 2124
-MD5 2fd0e9fca4b1fbc138c9d9c9898dfd7b mrxvt-0.3.9.ebuild 2134
-MD5 e90bb5db6ee2c129b00e99f0e16587de mrxvt-0.3.10.ebuild 2138
+MD5 7e1481a81496fd12880c53068a1def58 ChangeLog 2055
+MD5 0187b49d01f2033ec78dddc6f2b83add mrxvt-0.3.12.ebuild 2138
+MD5 d781081fef9bedd702b675a066ff7029 mrxvt-0.3.6.ebuild 2124
+MD5 da60d33f78c61a3de7f036e5b0c66715 mrxvt-0.3.9.ebuild 2134
+MD5 4a35b164886fcb715a39a3e824ec1255 mrxvt-0.3.10.ebuild 2138
 MD5 7c9e022929f61df97ba70589eb5472bf files/digest-mrxvt-0.3.11 64
 MD5 fc6e798ac1c4eb37d93b24a048844d55 files/digest-mrxvt-0.3.10 64
 MD5 cee18b29ccc9b416733d6d2c7cfe4fc8 files/digest-mrxvt-0.3.6 60
 MD5 5cd5d045034d93c8cfcefa10960f099f files/digest-mrxvt-0.3.9 63
+MD5 97a062086b26cbe392dd10aba52e37e7 files/digest-mrxvt-0.3.12 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBwREBVWNWqTUmv+0RAkgxAJ9qFIvbiNdrmr3YXKoGSAYTJJOBFQCfTfN1
-Khg42gkV+B1WT3B/CJGpsPA=
-=uDdr
+iD8DBQFB7y4nVWNWqTUmv+0RAgbWAJ41BhRLTt9LYO1xlUHMKGyJfXMoxQCfWMkl
+x3nn81Cr4xu0x8Vd+agDU2E=
+=omRg
 -----END PGP SIGNATURE-----
