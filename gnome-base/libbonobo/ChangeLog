@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libbonobo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.55 2004/06/04 04:10:45 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.56 2004/06/15 23:37:31 kloeri Exp $
+
+  16 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> libbonobo-2.6.0.ebuild:
+  Stable on alpha.
 
   04 Jun 2004; Stephen P. Becker <geoman@gentoo.org> libbonobo-2.6.0.ebuild:
   Stable on mips.

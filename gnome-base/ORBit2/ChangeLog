@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/ORBit2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ChangeLog,v 1.53 2004/06/03 22:52:21 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ChangeLog,v 1.54 2004/06/15 23:35:53 kloeri Exp $
+
+  16 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> ORBit2-2.10.0.ebuild:
+  Stable on alpha.
 
   03 Jun 2004; Stephen P. Becker <geoman@gentoo.org> ORBit2-2.10.0.ebuild:
   Stable on mips.
