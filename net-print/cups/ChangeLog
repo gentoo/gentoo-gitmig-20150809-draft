@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.40 2003/06/17 18:24:08 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.41 2003/07/02 22:17:56 aliz Exp $
+
+*cups-1.1.19 (02 Jul 2003)
+
+  03 Jul 2003; Daniel Ahlerg <aliz@gentoo.org> cups-1.1.19.ebuild :
+  Version bump.
 
   17 Jun 2003; Donny Davies <woodchip@gentoo.org> cups-1.1.18-r5.ebuild:
   Dont install lppasswd setuid.
