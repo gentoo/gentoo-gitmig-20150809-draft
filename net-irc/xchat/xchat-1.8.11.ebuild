@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11.ebuild,v 1.6 2003/03/25 10:14:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11.ebuild,v 1.7 2003/07/13 16:48:27 liquidx Exp $
 
 inherit eutils
 
@@ -79,17 +79,13 @@ src_compile() {
 		&& myflags="`python-config`" \
 	 	&& myopts="${myopts} --enable-python"
 	
-	./configure \
-		--prefix=/usr \
-		--host=${CHOST} \
-		${myopts} || die
 	
+	econf ${myopts} || die
 	emake || die
 }
 
 src_install() {
-	make prefix=${D}/usr \
-		install || die
+	make DESTDIR=${D} install || die
 
 	use gnome && ( \
 		insinto /usr/share/gnome/apps/Internet

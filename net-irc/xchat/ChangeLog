@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.57 2003/07/09 17:14:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.58 2003/07/13 16:48:27 liquidx Exp $
+
+  13 Jul 2003; Alastair Tse <liquidx@gentoo.org> xchat-1.8.11.ebuild:
+  use econf and DESTDIR to prevent installing stuff in /usr/etc
 
 *xchat-2.0.3-r1 (08 Jul 2003)
 
