@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.142 2005/01/19 12:31:10 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.143 2005/01/21 18:14:41 pylon Exp $
+
+  21 Jan 2005; Lars Weiler <pylon@gentoo.org> kdegraphics-3.2.3-r4.ebuild,
+  kdegraphics-3.3.2-r2.ebuild:
+  Stable on ppc; bug #78619.
 
 *kdegraphics-3.4.0_beta1-r1 (19 Jan 2005)
 
