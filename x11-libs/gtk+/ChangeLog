@@ -1,8 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.19 2002/07/15 11:17:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.20 2002/07/16 00:06:06 owen Exp $
 
 *gtk+-2.0.5-r2 (15 Jul 2002)
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added PPC to KEYWORDS.
 
   15 Jul 2002; Seemant Kulleen <seemant@gentoo.org> gtk+-2.0.5-r2.ebuild
   files/digest-gtk+-2.0.5-r2 :
