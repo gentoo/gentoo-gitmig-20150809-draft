@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Richard Lowe <richlowe@richlowe.net>
 # Maintainer: Tools Team <tools@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ri-0.7a.ebuild,v 1.2 2002/07/08 01:57:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ri-0.8a.ebuild,v 1.1 2002/07/08 01:57:47 agriffis Exp $
 
 S="${WORKDIR}/ri"
 DESCRIPTION="Ruby Interactive reference"
@@ -17,10 +17,9 @@ DEPEND=">=dev-lang/ruby-1.6.2" # Specified in ${HOMEPAGE}
 src_unpack () {
    unpack ${A}
    cd ${S}
-   patch < ${FILESDIR}/${P}-gentoo.patch || die
 }
 
 src_install () {
    dodoc COPYING ChangeLog README
-   ruby install.rb
+   DESTDIR=${D} ruby install.rb
 }
