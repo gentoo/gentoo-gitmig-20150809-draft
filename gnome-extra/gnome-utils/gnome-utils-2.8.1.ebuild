@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.8.1.ebuild,v 1.7 2005/01/09 11:15:10 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.8.1.ebuild,v 1.8 2005/01/22 06:39:16 vapier Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Utilities for the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/"
-LICENSE="GPL-2"
 
-IUSE="ipv6"
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ~ia64 ~mips"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64 ~mips"
+IUSE="ipv6"
 
 RDEPEND=">=x11-libs/gtk+-2.3.2
 	>=gnome-base/libgnome-2.5
