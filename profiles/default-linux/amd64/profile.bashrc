@@ -15,6 +15,16 @@ addpredict /usr/lib64/python2.4/
 addpredict /usr/lib64/python2.5/
 addpredict /usr/lib64/python3.0/
 
+# sandbox is disabled for /dev/null by default, so this bug isnt caught.
+# hopefully this will help us figure out where this problem occurs...
+if [ ! -e /dev/null ] ; then
+	eerror "/dev/null doesnt exist! this is bad! tail -n 20 /var/log/emerge.log and attach the output to http://bugs.gentoo.org/show_bug.cgi?id=65876"
+	exit 1
+elif [ -f /dev/null ] ; then
+	eerror "/dev/null is a normal file! this is bad! tail -n 20 /var/log/emerge.log and attach the output to http://bugs.gentoo.org/show_bug.cgi?id=65876"
+	exit 1
+fi
+
 
 # currently theoretical multilib stuff only available if using portage 2.0.51
 CHOST32="i686-pc-linux-gnu"
