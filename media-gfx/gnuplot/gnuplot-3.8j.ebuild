@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.8j.ebuild,v 1.2 2004/02/09 07:42:48 augustus Exp $
-
-IUSE="X readline svga plotutils pdflib doc"
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.8j.ebuild,v 1.3 2004/02/21 07:01:50 vapier Exp $
 
 MY_P="${P}.0"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Quick and useful plotting program"
+HOMEPAGE="http://www.gnuplot.info/"
 SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz"
-HOMEPAGE="http://www.gnuplot.info"
 
-SLOT="0"
 LICENSE="gnuplot"
-KEYWORDS="x86 ~ppc ~alpha ~sparc ~amd64"
+SLOT="0"
+KEYWORDS="x86 ppc ~sparc ~alpha ~amd64"
+IUSE="X readline svga plotutils pdflib doc"
 
 # Old png driver seems to have problems; switching to gd instead
 DEPEND=">=media-libs/libgd-2
@@ -35,21 +34,14 @@ src_compile() {
 		&& myconf="${myconf} --with-plot=/usr/lib" \
 		|| myconf="${myconf} --without-plot"
 
-	use pdflib \
-		&& myconf="${myconf} --with-pdf" \
-		|| myconf="${myconf} --without-pdf"
-
-	use X \
-		&& myconf="${myconf} --with-x" \
-		|| myconf="${myconf} --without-x"
+	myconf="${myconf} `use_with pdflib pdf`"
+	myconf="${myconf} `use_with X x`"
 
 	use readline \
 		&& myconf="${myconf} --with-readline=gnu" \
 		|| myconf="${myconf} --with-readline"
 
-	use svga \
-		&& myconf="${myconf} --with-linux-vga" \
-		|| myconf="${myconf} --without-linux-vga"
+	myconf="${myconf} `use_with svga vga`"
 
 	econf \
 		--datadir=/usr/share/gnuplot \
