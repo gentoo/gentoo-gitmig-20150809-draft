@@ -278,6 +278,7 @@ src_compile() {
 	then
 	    cd ${S}/extras/xfs-${XFSV}/acl
 	    try make distclean
+	    rm -f include/builddefs
 	    try make \
 		CPPFLAGS=\""-I${S}/include"\" \
 		configure
@@ -292,6 +293,7 @@ src_compile() {
 	    
 	    cd ${S}/extras/xfs-${XFSV}/attr
 	    try make distclean
+	    rm -f include/builddefs
 	    try make \
 		CPPFLAGS=\""-I${S}/include"\" \
 		configure
@@ -306,6 +308,7 @@ src_compile() {
 	    
 	    cd ${S}/extras/xfs-${XFSV}/xfsprogs
 	    try make distclean
+	    rm -f include/builddefs
 	    try make \
 		CPPFLAGS=\""-I${S}/include"\" \
 		configure
@@ -323,6 +326,7 @@ src_compile() {
 	    cd ${S}/extras/xfs-${XFSV}/dmapi
 	    ln -sf ../../xfsprogs/include include/xfs
 	    try make distclean
+	    rm -f include/builddefs
 	    try make \
 		CPPFLAGS=\""-I${S}/include -I${S}/extras/xfs-${XFSV}/dmapi/include"\" \
 		configure
@@ -338,6 +342,7 @@ src_compile() {
 	    ln -sf ../../xfsprogs/include include/xfs
 	    ln -sf ../../attr/include include/attr
 	    try make distclean
+	    rm -f include/builddefs
 	    try make \
 		CPPFLAGS=\""-I${S}/include -I${S}/extras/xfs-${XFSV}/xfsdump/include -I${S}/extras/xfs-${XFSV}/xfsprogs/include -I${S}/extras/xfs-${XFSV}/attr/include"\" \
 		LDFLAGS=\""-L${S}/extras/xfs-${XFSV}/attr/libattr -L${S}/extras/xfs-${XFSV}/xfsprogs/libxfs -L${S}/extras/xfs-${XFSV}/xfsprogs/libhandle -lhandle"\" \
@@ -373,7 +378,7 @@ src_compile() {
 	    # This is needed for linux-extras
 	    if [ -f "Makefile.conf" ]
 	    then
-		try make distclean
+		try make mrproper
 	    fi
 	    try ./configure --with-kernel=\"${S}\" --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
 	    try make
@@ -599,9 +604,3 @@ pkg_postinst() {
 	cp -a .config.eg .config
     fi
 }
-
-#pkg_postrm() {
-#
-#    rm -f ${ROOT}/usr/src/linux
-#    rm -rf ${ROOT}/usr/src/linux-${KV}
-#}
