@@ -10,6 +10,7 @@ mmx
 svga
 sse 
 firebird
+tcc
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
