@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.14 2004/05/05 00:49:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.15 2004/05/05 14:34:41 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails
 
@@ -242,7 +242,9 @@ src_install () {
 	use !mips && use ldap && doins ${FILESDIR}/2.0.49/46_mod_ldap.conf
 
 	#drop in a convenient link to the manual
-	dosym /usr/share/doc/${PF}/manual ${DATADIR}/htdocs/manual
+	if use docs; then
+		dosym /usr/share/doc/${PF}/manual ${DATADIR}/htdocs/manual
+	fi
 
 	#SLOT=2!!!
 	cd ${D}
