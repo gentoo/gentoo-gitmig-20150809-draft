@@ -1,10 +1,18 @@
 # ChangeLog for app-portage/gentoo-stats
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoo-stats/ChangeLog,v 1.3 2004/03/16 23:51:34 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoo-stats/ChangeLog,v 1.4 2004/03/29 00:12:39 mksoft Exp $
+
+*gentoo-stats-0.5.1 (29 Mar 2004)
+
+  29 Mar 2004; <mksoft@gentoo.org> gentoo-stats-0.5.1.ebuild:
+  Fixed wrong return value in case of succesfull update
+  added portage pym dir to sys.path
+  Modified swap/mem param to sent as string instead of int, close #46016
+  Verbose error message in case of an exception
 
 *gentoo-stats-0.5 (17 Mar 2004)
 
-  17 Mar 2004; <meir@gentoo.org> gentoo-stats-0.5.ebuild:
+  17 Mar 2004; <mksoft@gentoo.org> gentoo-stats-0.5.ebuild:
   New version, rewritten in python
 
 *gentoo-stats-0.4 (15 Aug 2003)
