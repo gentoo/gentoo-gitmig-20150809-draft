@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p9.ebuild,v 1.3 2004/04/26 12:14:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p9.ebuild,v 1.4 2004/05/30 09:25:20 robbat2 Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ RDEPEND="${DEPEND}
 	ldap? ( dev-perl/perl-ldap )
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
-	milter? ( >=net-mail/sendmail-8.12 )"
+	milter? ( >=mail-mta/sendmail-8.12 )"
 
 S="${WORKDIR}/${PN}-${PV/_*/}"
 

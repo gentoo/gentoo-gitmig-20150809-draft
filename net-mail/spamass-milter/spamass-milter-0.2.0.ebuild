@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spamass-milter/spamass-milter-0.2.0.ebuild,v 1.2 2003/09/05 09:07:00 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spamass-milter/spamass-milter-0.2.0.ebuild,v 1.3 2004/05/30 09:24:38 robbat2 Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~sparc"
 
 DEPEND=">=sys-devel/autoconf-2.57
 	>=sys-devel/automake-1.7.2"
-RDEPEND=">=net-mail/sendmail-8.12.9
+RDEPEND=">=mail-mta/sendmail-8.12.9
 	>=dev-perl/Mail-SpamAssassin-2.53"
 
 S=${WORKDIR}/${P}
