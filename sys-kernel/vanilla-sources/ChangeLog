@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.2 2002/07/16 04:49:51 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.3 2002/08/03 02:47:15 christoph Exp $
+
+*vanilla-sources-2.4.19 (02 Aug 2002)
+
+  02 Aug 2002; Christoph Lameter <christoph@gentoo.org>
+  Update to 2.4.19. Remove kernel renaming on unpack since upstream
+  does that now. 
 
 *vanilla-sources-2.4.18 (09 Jul 2002)
 
@@ -10,3 +16,4 @@
   09 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> ChangeLog :
 
   Added ChangeLog.
+
