@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.5-r2.ebuild,v 1.2 2003/06/21 21:19:38 drobbins Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.5-r2.ebuild,v 1.3 2003/06/29 22:38:10 mholzer Exp $
 
 IUSE="doc"
 
@@ -29,9 +27,6 @@ XPWRFAILDIR=${XSYSCONFDIR}
 src_unpack() {
 	unpack ${A}
 	cp -a ${WORKDIR}/gd1.2 ${S}/src/
-#	cp -a ${S} ${S}-orig
-	epatch "${FILESDIR}/${PV}/init.patch"
-	epatch "${FILESDIR}/${PV}/restart.patch"
 }
 
 src_compile() {
@@ -83,4 +78,3 @@ src_install () {
 		dodoc vim/*
 	fi
 }
-
