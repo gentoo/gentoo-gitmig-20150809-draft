@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/stratego
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/ChangeLog,v 1.17 2004/12/29 22:07:37 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/ChangeLog,v 1.18 2005/01/06 13:42:56 karltk Exp $
+
+*stratego-0.12 (06 Jan 2005)
+
+  06 Jan 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +stratego-0.12.ebuild:
+  New upstream release. Looooong overdue inclusion. My bad.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
