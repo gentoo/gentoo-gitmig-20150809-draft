@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.7 2003/03/11 11:27:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.8 2003/05/22 02:07:25 weeve Exp $
+
+  21 May 2003; Jason Wever <weeve@gentoo.org> unixODBC-2.0.6.ebuild:
+  Added sparc to keywords.
 
 *unixODBC-2.2.2 (9 Jul 2002)
 
