@@ -1,0 +1,105 @@
+#!/usr/bin/env python
+
+from xml.sax import saxexts
+from xml.sax import saxlib
+import sys
+import string
+
+dElem=("title","sub","author","authori","date")
+
+def whitezap(tx):
+    return string.join(string.split(tx)," ")
+
+class myhandler(saxlib.HandlerBase):
+    inpart=""
+    myinfo={}
+    def __init__(self):
+        self.start_tag = {'name' : [], 'indent': '', 'line' : ''}
+    def startDocument(self):
+        self.level=-1
+    def startElement(self,name,attrs):
+        sys.stderr.write("<"+name+">\n")
+        self.level=self.level+1
+        if name == "guide":
+			sys.stdout.write("<html>\n<head>\n")
+            
+			for x in dElem:
+                self.myinfo[x]=attrs.get(x,"")
+            sys.stdout.write('<!-- TITLE and AUTHOR -->\n<p><strong class="title">'+self.myinfo["title"]+'</strong><br>'+"\n")
+            sys.stdout.write('<strong class="subtitle">'+self.myinfo["sub"]+"</strong></p>\n")
+            if attrs.get("email",""):
+                sys.stdout.write('<p><a href=mailto:'+attrs.get("email","")+'>'+self.myinfo["author"]+'</a>')
+            else:
+                sys.stdout.write('<p>'+self.myinfo["author"])
+            sys.stdout.write("<br>\n"+self.myinfo["authori"]+"<br>\n"+self.myinfo["date"]+"</p>\n<!-- END TITLE and AUTHOR -->\n\n")
+        elif name == "abs":
+            sys.stdout.write("<!-- ABSTRACT -->\n<em>")
+        elif name == "subhead":
+            sys.stdout.write('<strong class="subhead">')
+        elif name == "code":
+            self.inpart="code"
+            sys.stdout.write('<P><A NAME="'+attrs.get("name","")+'">\n')
+            if attrs.get("caption",""):
+                sys.stdout.write('<strong>'+attrs.get("caption","")+'</strong>\n')
+            sys.stdout.write('<table border="0" cellpadding="0" class="code-sample" width="100%"><tr><td><pre>\n')
+        elif name == "figure":
+            sys.stdout.write('<P><A NAME="'+attrs.get("name","")+'">')
+            if attrs.get("caption",""):
+                sys.stdout.write("<strong>"+attrs.get("caption","")+"</strong>")
+            sys.stdout.write('<br>\n<IMG SRC="'+attrs.get("src",""))
+            if attrs.get("width",""):
+                sys.stdout.write(' WIDTH="'+attrs.get("width","")+'"')
+            if attrs.get("height",""):
+                sys.stdout.write(' HEIGHT="'+attrs.get("height","")+'"')
+            sys.stdout.write('" VALIGN=TOP BORDER="0" ALT="'+attrs.get("alt","")+'"></P>\n\n')
+        elif name == "sidebar":
+            sys.stdout.write('<p>\n<table border="0" cellpadding="0" class="sidebar" width="35%"><tr><td><P>\n<strong class="subhead">'+attrs.get("caption","")+'</strong>\n<BR>\n')
+        else:
+            sys.stderr.write("Unkown element <"+name+">, writing to output\n")
+            sys.stdout.write("<"+name)
+            for x in attrs.keys():
+                sys.stdout.write(" "+x+'="'+attrs.get(x,"")+'"')
+            sys.stdout.write(">")
+
+    def endElement(self,name):
+        sys.stderr.write("</"+name+">\n")
+        if name == "test":
+            sys.stdout.write("</b>")
+        elif name == "doc":
+            sys.stdout.write('<p><strong class="subhead">About the author</strong><br>\n')
+            mybio=open("/home/drobbins/.bio","r")
+            for x in mybio.readlines():
+                sys.stdout.write(x)
+            mybio.close()
+            sys.stdout.write("</p>\n\n<!-- END BODY -->\n</body></html>")
+        elif name == "abs":
+            sys.stdout.write("</em>\n<!-- END ABSTRACT -->\n\n")
+        elif name == "subhead":
+            sys.stdout.write("</strong><br>\n")
+        elif name == "code":
+            sys.stdout.write("</pre></td></tr></table></P>\n")
+            self.inpart=""
+        elif name == "sidebar":
+            sys.stdout.write("\n</td></tr></table></p>\n")
+        elif name in ("docinfo","figure"):
+            pass
+        elif name == "br":
+            pass
+        #only output start element for HTML
+        else:
+            sys.stderr.write("Unkown element </"+name+">, writing to output\n")
+            sys.stdout.write("</"+name+">")
+    def characters(self,ch,start,length):
+        tx=ch[start:start+length]
+        if self.inpart=="code":
+            #write code, untouched
+            sys.stdout.write(tx)
+            return
+        sys.stdout.write(tx)
+        
+parser=saxexts.make_parser()
+dh=myhandler()
+parser.setDocumentHandler(dh)
+parser.parseFile(sys.stdin)
+parser.close()
+
