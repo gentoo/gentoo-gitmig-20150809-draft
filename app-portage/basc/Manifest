@@ -1,10 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0b47a58a9bf901edcc629d7ef8725334 ChangeLog 937
-MD5 01f7a8fd07110a4efa67aad2eb752185 basc-1.3.9-r1.ebuild 1863
-MD5 dcb8dc246c5de4b71523851e3328623c basc-1.3.9.ebuild 1860
 MD5 f771ec5e8f277ad4d47d4339d412ba85 metadata.xml 257
-MD5 ef0b96bcea6556e638594fd33069d98a basc-1.4.0.ebuild 1937
-MD5 0288131fe2de9aa726190fe164388bea basc-1.5.0.ebuild 1988
-MD5 e2d5a46d807b9a6fc2aba48df22d2971 files/digest-basc-1.3.9 61
-MD5 e2d5a46d807b9a6fc2aba48df22d2971 files/digest-basc-1.3.9-r1 61
-MD5 9caadc0bb597176ab249c93650452438 files/digest-basc-1.4.0 61
+MD5 692f212cf12e9ddc6372a88ee46867bc basc-1.5.0.ebuild 1871
 MD5 2c675d7d3e70daedb76091e742fed699 files/digest-basc-1.5.0 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB09t9roRuSHgZdywRAq95AJ9aLDpM5kqDIf36miSDlrcYrfnTcACdEvLF
+6DQgJ+G2FPgNkjDmbhGhk0g=
+=Eax8
+-----END PGP SIGNATURE-----
