@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-base/digest-base-1.05.ebuild,v 1.6 2004/01/07 17:17:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-base/digest-base-1.05.ebuild,v 1.7 2004/01/08 18:23:17 gustavoz Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://http://www.cpan.org/modules/by-authors/id/G/GA/GAAS/${MY_P}.rea
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 ppc sparc alpha ~hppa ia64" #~arm"
+KEYWORDS="x86 amd64 ppc sparc alpha hppa ia64" #~arm"
 
 mydoc="rfc*.txt"
 
