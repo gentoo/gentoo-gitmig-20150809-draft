@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/tcpreen
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreen/ChangeLog,v 1.4 2004/07/30 19:14:22 kugelfang Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreen/ChangeLog,v 1.5 2005/03/23 00:27:12 vanquirius Exp $
+
+*tcpreen-1.4.2 (22 Mar 2005)
+
+  22 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> +tcpreen-1.4.2.ebuild:
+  Version bump.
 
   30 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> tcpreen-1.2.4.ebuild:
   Marked ~amd64.
