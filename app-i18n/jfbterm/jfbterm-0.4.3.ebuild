@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.4.3.ebuild,v 1.2 2003/09/27 08:07:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.4.3.ebuild,v 1.3 2003/10/02 16:35:42 usata Exp $
 
 inherit flag-o-matic
 replace-flags "-march=pentium3" "-mcpu=pentium3"
@@ -36,10 +36,8 @@ src_install() {
 	dodir /usr/share/fonts/jfbterm
 	einstall || die
 
-	if [ ! -e /usr/share/terminfo/j/jfbterm ] ; then
-		dodir /usr/share/terminfo
-		tic terminfo.jfbterm -o${D}/usr/share/terminfo || die
-	fi
+	dodir /usr/share/terminfo
+	tic terminfo.jfbterm -o${D}/usr/share/terminfo || die
 
 	mv ${D}/etc/jfbterm.conf{.sample,}
 
