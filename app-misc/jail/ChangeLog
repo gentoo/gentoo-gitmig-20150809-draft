@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/jail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.8 2003/02/12 05:01:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.9 2003/07/30 23:46:46 raker Exp $
+
+  30 Jul 2003; Nick Hadaway <raker@gentoo.org> jail-1.9-r1.ebuild:
+  Added a patch so /etc/shells gets the correct entry.  Thanks to
+  Florian Blumel on bug #25390 for noticing this.
 
 *jail-1.9-r1 (28 Jan 2003)
 
@@ -18,7 +22,6 @@
 
   26 Jul 2002; Nick Hadaway <raker@gentoo.org>
   jail-1.9.ebuild, files/digest-jail-1.9, files/jail-gentoo.diff :
-
   Initial ebuild in portage.  Thanks to Pau Oliva for doing the initial ebuild
   legwork.  Made some very minor adjustments in ebuild for FHS compliance.
   Pau Oliva <pau@eSlack.org
