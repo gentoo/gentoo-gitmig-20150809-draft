@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.27.ebuild,v 1.9 2004/10/13 14:35:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.27.ebuild,v 1.10 2004/11/09 21:28:09 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,7 @@ RDEPEND="virtual/libc
 	sys-apps/procps
 	!virtual/lpr"
 
-LICENSE="GPL-2 | Artistic"
+LICENSE="|| ( GPL-2 Artistic )"
 SLOT="0"
 
 src_compile() {
