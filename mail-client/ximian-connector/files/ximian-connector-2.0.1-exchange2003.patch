@@ -1,0 +1,15 @@
+===================================================================
+RCS file: /cvs/gnome/evolution-exchange/mail/mail-stub-exchange.c,v
+retrieving revision 1.8
+retrieving revision 1.9
+diff -u -r1.8 -r1.9
+--- mail/mail-stub-exchange.c	2004/09/14 19:28:45	1.8
++++ mail/mail-stub-exchange.c	2004/09/30 20:22:35	1.9
+@@ -2241,7 +2241,6 @@
+ 					 data->str, data->len);
+ 	g_string_free (data, FALSE);
+ 	soup_message_add_header (msg->request_headers, "Saveinsent", "f");
+-	soup_message_set_http_version (msg, SOUP_HTTP_1_0);
+ 
+ 	status = e2k_context_send_message (mse->ctx, NULL, msg);
+ 	if (E2K_HTTP_STATUS_IS_SUCCESSFUL (status))
