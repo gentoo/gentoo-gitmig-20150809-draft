@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.4 2004/01/30 12:33:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.5 2004/02/24 18:50:32 max Exp $
 
-inherit gnuconfig ssl-cert
+inherit eutils gnuconfig ssl-cert
 
 DESCRIPTION="Internet Message Support Protocol (IMSP) server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/"
@@ -20,12 +20,12 @@ RDEPEND=">=sys-libs/db-3.2
 	ldap? ( >=net-nds/openldap-2.0 )
 	ssl? ( >=net-misc/stunnel-4 )"
 
-DEPEND="$RDEPEND
-	sys-devel/gnuconfig
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
 	>=sys-devel/autoconf-2.58
 	sys-devel/automake
 	sys-devel/libtool
-	>=sys-apps/sed-4"
+	sys-devel/gnuconfig"
 
 S="${WORKDIR}/${PN}-v${PV}"
 
