@@ -11,17 +11,14 @@ HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=dev-libs/glib-1.2.8"
 
-
 src_compile() {                           
-  try ./configure --host=${CHOST} --prefix=/opt/gnome
-  try pmake
+	./configure --host=${CHOST} --prefix=/opt/gnome || die
+
+	emake || die
 }
 
 src_install() {                               
-  try make prefix=${D}/opt/gnome install
+	make DESTDIR=${D} install || die
 
-  dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
+	dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
 }
-
-
-

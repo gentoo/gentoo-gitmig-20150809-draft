@@ -9,29 +9,26 @@ DESCRIPTION="eel"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=gnome-base/gnome-vfs-1.0.1
-        >=media-libs/gdk-pixbuf-0.11.0
-        >=media-libs/freetype-2.0.1
-	>=gnome-libs/librsvg-1.0
+RDEPEND=">=media-libs/freetype-2.0.1
+         >=gnome-base/gnome-vfs-1.0.1
+         >=media-libs/gdk-pixbuf-0.11.0
+	 >=gnome-libs/librsvg-1.0"
+
+DEPEND="${RDEPEND}
         >=dev-util/xml-i18n-tools-0.8.4"
 
-RDEPEND=">=media-libs/freetype-2.0.1
-        >=gnome-base/gnome-vfs-1.0.1
-        >=media-libs/gdk-pixbuf-0.11.0
-	>=gnome-libs/librsvg-1.0"
 
 src_compile() {                           
-  try ./configure --host=${CHOST} --prefix=/opt/gnome \
-	--sysconfdir=/etc/opt/gnome
-  try make  # Doesn't work with -j 4 (hallski)
+	./configure --host=${CHOST}					\
+		    --prefix=/opt/gnome					\
+		    --sysconfdir=/etc/opt/gnome				\
+		    --mandir=/opt/gnome/man || die
+
+	make || die # Doesn't work with -j 4 (hallski)
 }
 
-src_install() {                               
-  try make DESTDIR=${D} install
-#  try make prefix=${D}/opt/gnome install
+src_install() {                           
+	make DESTDIR=${D} install || die
 
-  dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
+	dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
 }
-
-
-

@@ -9,17 +9,20 @@ DESCRIPTION="GNOME Basic"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=gnome-base/gnome-print-0.29"
+RDEPEND=">=gnome-base/gnome-print-0.29"
 
+DEPEND="${RDEPEND}"
 
-src_compile() {                           
-  try ./configure --host=${CHOST} --prefix=/opt/gnome
-  try pmake
+src_compile() {
+	./configure --host=${CHOST} --prefix=/opt/gnome || die
+
+	emake || die
 }
 
 src_install() {                               
-  try make prefix=${D}/opt/gnome install
-  dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
+	make DESTDIR=${D} install || die 
+
+	dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
 }
 
 
