@@ -4,12 +4,26 @@
 # /space/gentoo/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass
 ECLASS=flag-o-matic
 
+#
+#Remove particular flags from C[XX]FLAGS
+#
 filter-flags () {
 
 	for x in $1; do
 		CFLAGS="${CFLAGS/$x}"
 		CXXFLAGS="${CXXFLAGS/$x}"
 	done
+
+}
+
+#
+#Add flags to the current C[XX]FLAGS
+#
+append-flags () {
+
+
+	CFLAGS="$CFLAGS $1"
+	CXXFLAGS="$CXXFLAGS $1"
 
 }
 
