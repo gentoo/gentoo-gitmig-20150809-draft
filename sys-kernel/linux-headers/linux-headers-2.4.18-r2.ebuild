@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.18-r2.ebuild,v 1.2 2002/04/29 21:01:13 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.18-r2.ebuild,v 1.3 2002/05/08 21:50:21 murphy Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -88,9 +88,10 @@ src_install() {
 		dodir /usr/include/asm
 		if [ `expr $KERNEL_ARCH ":" "sparc"` -eq 5 ]
 		then
+			mkdir -p ${D}/usr/include/asm-sparc64 ${D}/usr/include/asm-sparc
 			if [ "$KERNEL_ARCH" = "sparc64" ]
 			then
-				cp -ax ${S}/include/asm-sparc64 ${D}/usr/include/asm-sparc64
+				cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
 				if [ ! -r ${D}/usr/include/asm-sparc64/asm_offsets.h ]
 				then
 					cp -ax ${SPARCFILEDIR}/sparc64-asm_offsets.h \
@@ -98,7 +99,7 @@ src_install() {
 				fi
 			fi
 
-			cp -ax ${S}/include/asm-sparc ${D}/usr/include/asm-sparc
+			cp -ax ${S}/include/asm-sparc/* ${D}/usr/include/asm-sparc
 			if [ ! -r ${D}/usr/include/asm-sparc/asm_offsets.h ]
 			then
 				cp -ax ${SPARCFILEDIR}/sparc-asm_offsets.h \
