@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.22 2002/10/28 22:50:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.23 2002/11/05 07:07:25 raker Exp $
+
+*imagemagick-5.4.9.1 (05 Nov 2002)
+
+  05 Nov 2002; Nick Hadaway <raker@gentoo.org>
+  imagemagick-5.4.9.1-r1.ebuild, files/digest-imagemagick-5.4.9.1-r1 :
+  Added dependancy on media-libs/jbigkit for jbig support.  Ebuild
+  already had --with-jbig specified...
 
 *imagemagick-5.4.7.4 (28 Oct 2002)
 
