@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/kdesdk-meta-3.4.0.ebuild,v 1.4 2005/03/26 01:43:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/kdesdk-meta-3.4.0.ebuild,v 1.5 2005/04/03 21:22:55 greg_g Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="3.4"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
-IUSE=""
+IUSE="subversion"
 
 RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/cervisia)
@@ -25,5 +25,5 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/kompare)
 	$(deprange $PV $MAXKDEVER kde-base/kspy)
 	$(deprange $PV $MAXKDEVER kde-base/kuiviewer)
-	$(deprange $PV $MAXKDEVER kde-base/kdesdk-kioslaves)
+	subversion? ( $(deprange $PV $MAXKDEVER kde-base/kdesdk-kioslaves) )
 	$(deprange $PV $MAXKDEVER kde-base/umbrello)"
