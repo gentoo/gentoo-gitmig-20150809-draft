@@ -357,10 +357,6 @@ media-video/lives
 # uses old libnet and may contain secuirty hole.
 <=net-analyzer/hogwash-0.4
 
-# lanius@gentoo.org (15 Aug 2003)
-# needs a lot more testing
->net-misc/ltsp-core-3.0.9-r3
-
 # <plasmaroo@gentoo.org> (04 Jan 2004)
 # Headers have changed and break support with many video drivers such as
 # bttv or zoran. This is kept masked at the level which the latest
