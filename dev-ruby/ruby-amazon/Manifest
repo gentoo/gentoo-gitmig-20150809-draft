@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5ed17003238726440398bc4c51f9eb33 ruby-amazon-0.8.5.ebuild 552
-MD5 d59bfb53d97287e34aae5e73e5d715b3 ChangeLog 1656
+MD5 6dee000ea6253b21e660f2050ab43b84 ChangeLog 1727
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 a585c4db99b7b7b3c09d679562b54d32 ruby-amazon-0.9.0.ebuild 553
+MD5 5ed17003238726440398bc4c51f9eb33 ruby-amazon-0.8.5.ebuild 552
+MD5 34c61e30bacb1a5f23810a23ee8dfbad ruby-amazon-0.9.0.ebuild 555
 MD5 d9e8ff5274e6e1d1285693c7893e3fde files/digest-ruby-amazon-0.8.5 69
 MD5 3b1ee26eb7480a9821a1557d9a8a8907 files/digest-ruby-amazon-0.9.0 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCJZx7/UDVUK2NELYRAsUpAKCOp/dffTBdxfNisbYaNxopTm/GnwCginV3
-tFYBiECwpCL/+9nZX8pZhg4=
-=VbbZ
------END PGP SIGNATURE-----

@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e110d2ae833ada3a773b2bde50a00452 ruby-libglade2-0.8.1.ebuild 537
-MD5 5c65da9cb12245ccc6e5a353dbebbe8e ruby-libglade2-0.9.1.ebuild 569
-MD5 f780825a2094197caa698b8daa623787 ruby-libglade2-0.11.0.ebuild 518
-MD5 408f84fc4e0457fd84b64a642eeeef63 ruby-libglade2-0.8.0.ebuild 503
-MD5 cbd015874cd84af6ca9b3c8d97683afe ruby-libglade2-0.12.0.ebuild 523
-MD5 6b95717f5966c850159d8308604d0f18 ruby-libglade2-0.10.1.ebuild 551
-MD5 fa55b8d7dc72c900f3cda1ed1267c3fb ChangeLog 2591
+MD5 57bf441124eafeb52f1e5d500acd885d ChangeLog 2666
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 f15d65d18e7816f32c3bcf8023b5835b files/digest-ruby-libglade2-0.8.0 73
-MD5 7de5312a62217022283595b441356cde files/digest-ruby-libglade2-0.8.1 73
-MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-libglade2-0.9.1 73
+MD5 bb3841fa0bae1f38603869e52970ccf3 ruby-libglade2-0.10.1.ebuild 551
+MD5 ca68eda4826b71592405277dd18572e1 ruby-libglade2-0.11.0.ebuild 518
+MD5 13026369736b13efad2426683790c852 ruby-libglade2-0.12.0.ebuild 525
+MD5 5f5a8e0b308f9566db5cf58c60836385 ruby-libglade2-0.8.0.ebuild 500
+MD5 8d7625d6f6f039ce395d36c8f1c96d26 ruby-libglade2-0.8.1.ebuild 534
+MD5 66f8e57588b58f5121053bb785c59091 ruby-libglade2-0.9.1.ebuild 569
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-libglade2-0.10.1 74
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-libglade2-0.11.0 75
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-libglade2-0.12.0 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCNNBo/UDVUK2NELYRAj/3AKCsHZ+LFLUOdjWiNul5dN+Am/Nt0QCeIfrz
-wz46PakxebbGaVqEI1BTnvE=
-=538S
------END PGP SIGNATURE-----
+MD5 f15d65d18e7816f32c3bcf8023b5835b files/digest-ruby-libglade2-0.8.0 73
+MD5 7de5312a62217022283595b441356cde files/digest-ruby-libglade2-0.8.1 73
+MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-libglade2-0.9.1 73

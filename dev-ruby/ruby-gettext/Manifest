@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e38bbab3aa307a138af0e6d4ba3d0bb5 ChangeLog 1481
+MD5 c39a7e8db7f7015bc040a87a54ec3cd5 ChangeLog 1559
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 d0f09c49f122bfed7872e181a5b85860 ruby-gettext-0.5.5.ebuild 1024
-MD5 fd95db40a175c0601f46d3cfe33d0e9a ruby-gettext-0.6.1.ebuild 785
-MD5 77b3648cdbd01e988c8970c660e18d0a ruby-gettext-0.8.0.ebuild 785
+MD5 f627ad5ff607220013d3de73eb862d88 ruby-gettext-0.5.5.ebuild 1024
+MD5 1e6b907077d981e7cc2c14298b6282c6 ruby-gettext-0.6.1.ebuild 785
+MD5 39c7a9b8fc1749e2d5e06b46a943740c ruby-gettext-0.8.0.ebuild 792
 MD5 770fb7480ebbf5099485ebe952a7ef77 files/digest-ruby-gettext-0.5.5 77
 MD5 87f436fbbc56a6c11c2b736fa7577412 files/digest-ruby-gettext-0.6.1 77
 MD5 3f9f54c54433f47db8d8f61aa187bc25 files/digest-ruby-gettext-0.8.0 77
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBuDPPVWNWqTUmv+0RAmLVAJ48FmqjqMwAbuIz+WQszu5AI9+rAwCgmi79
-qe31thhs4pbJaBhsDNGpHtc=
-=FnCj
------END PGP SIGNATURE-----
