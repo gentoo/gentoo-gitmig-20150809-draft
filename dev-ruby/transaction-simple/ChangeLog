@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/transaction-simple
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/transaction-simple/ChangeLog,v 1.1 2004/09/02 09:34:09 usata Exp $
+
+*transaction-simple-1.1.1 (02 Sep 2004)
+
+  02 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +transaction-simple-1.1.1.ebuild:
+  Initial import. Ebuild submitted by awk <glawk01@awks.org>,
+  closing bug #59048.
+
