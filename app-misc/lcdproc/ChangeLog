@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.4 2003/01/07 16:58:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.5 2003/02/06 02:12:10 latexer Exp $
+
+*lcdproc-0.4.3-r2 (05 Feb 2003)
+
+  05 Feb 2003; Peter Johanson <latexer@gentoo.org> lcdproc-0.4.3-r2.ebuild :
+  Ebuild updates as per #15004. Now build specific drivers by setting
+  LCDPROC_DRIVERS before emerging. Updated init scripts as well. Updates thanks
+  to Rene Wagner <reenoo@gmx.net>.
 
 *lcdproc-0.4.3-r1 (07 Jan 2003)
 
