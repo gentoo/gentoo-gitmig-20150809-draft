@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.10-r1.ebuild,v 1.4 2004/11/12 16:01:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.10-r1.ebuild,v 1.5 2004/11/12 20:10:54 gustavoz Exp $
 
 inherit flag-o-matic gnuconfig eutils distutils libtool
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 mips ~ppc ~ppc64 s390 sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 mips ~ppc ~ppc64 s390 sh sparc x86"
 IUSE="python build"
 
 DEPEND="virtual/libc
