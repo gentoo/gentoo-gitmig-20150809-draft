@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 76904031795f546d17a2821afda8e308 speedfreq-0.7.2-r1.ebuild 1931
 MD5 d8bc4f6e1fe76cf04011d89d01e4c503 speedfreq-0.7.2.ebuild 1822
 MD5 9fa94b527615f98737479bd6db01d919 ChangeLog 2000
@@ -13,3 +16,10 @@ MD5 ec528182b5f97ed77b798e760bfef35b files/speedfreq.conf 776
 MD5 384a3c0ba9c47cef45f4b202e69f5581 files/digest-speedfreq-0.5 64
 MD5 f96b11d757583258d2fff576c68b06e2 files/digest-speedfreq-0.7.2-r2 66
 MD5 9cd026350463268af426e1a2cb8f6d97 files/battery-new.sh 1185
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCNzV0LLFUmVNQ7rkRAmJEAKCNFSA5lciuCjaj6xcJ3F4NqqMEXgCeJrL0
+XqsHgnd12jxoUUlW383yuEI=
+=iUtw
+-----END PGP SIGNATURE-----
