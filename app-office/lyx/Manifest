@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f31cc37fe1e27ac354cde2bce2aa24de ChangeLog 8445
-MD5 3925403c80b71359c1074917d6be5d2e lyx-1.3.5.ebuild 3367
+MD5 9bcf9c90820344d4439887bf39b92f34 ChangeLog 8618
+MD5 b60fb8f718d407fdf555280270485656 lyx-1.3.5.ebuild 3326
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 7fc8aae1299ce94858b4748daa9b2973 lyx-1.3.4.ebuild 3142
+MD5 643a993dd58f7b161f1a5de6cbbc886e lyx-1.3.4.ebuild 3103
 MD5 5ccd191a3dc796feeda9dcee291d2863 files/digest-lyx-1.3.5 239
 MD5 296163b72f99143379e73e616ce4e728 files/digest-lyx-1.3.4 239
 MD5 b86918456f67f911e357a76308cd0fdb files/lyx-1.3.4-gcc34.patch 6589
@@ -15,7 +15,7 @@ MD5 2a779b20a7425abd5eea3b5ee01698f7 files/lyx-1.3.5-boost.patch 655
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBfLcAVWNWqTUmv+0RAlZ8AKClCq/IHn8MTOhssA4XBNcNWvcGwACgipoY
-B3kAuU/z+WHmYQl0sz/mexc=
-=w8Nf
+iD8DBQFBmEC4VWNWqTUmv+0RAn3YAKCPgxU3QrdIctSHZnaRBBO8yuYVGwCgkzlJ
+IE1K31YVPf9dUEHVEs+j79w=
+=GXFg
 -----END PGP SIGNATURE-----

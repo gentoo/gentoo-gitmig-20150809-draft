@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.11 2004/10/25 08:25:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.12 2004/11/15 05:44:32 usata Exp $
 
 inherit kde-functions eutils libtool
 
@@ -103,8 +103,7 @@ pkg_postinst() {
 	einfo "Updating the font cache"
 	fc-cache -f --system-only
 
-	einfo ""
-	einfo "================"
+	draw_line
 	einfo ""
 	einfo "How to use Hebrew in LyX:"
 	einfo "1. emerge app-text/ivritex."
@@ -114,8 +113,8 @@ pkg_postinst() {
 	einfo "3. use lyx's qt interface (compile with USE=qt) for maximum effect."
 	einfo ""
 
-	if ! use qt ; then
-	einfo "================"
+	if ! useq qt ; then
+	draw_line
 	einfo ""
 	einfo "If you have a multi-head setup not using xinerama you can only use lyx"
 	einfo "on the 2nd head if not using qt (maybe due to a xforms bug). See bug #40392."
