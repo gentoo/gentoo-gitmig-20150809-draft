@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.564 2004/08/17 02:42:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.565 2004/08/17 18:11:13 foser Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -229,6 +229,7 @@ kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages r
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
 kde-base/kdemultimedia:cdparanoia - Enables build support for the cdparanoia package
 kde-base/kdenetwork:wifi - Enable wireless network functions in kde
+mail-client/evolution:nntp : Enable evolution nntp (news) functionality
 mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 mail-client/mozilla-thunderbird:mozplaintext - Disallow HTML editing for email
 mail-client/mozilla-thunderbird:xprint - Enable xprint support in mozilla (also firefox, thunderbird), http://www.mozilla.org/projects/xprint/
