@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.11 2003/07/31 18:10:04 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.12 2003/09/05 11:21:50 weeve Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.mozilla.org/projects/nss/"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="x86 ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc sparc ~alpha"
 
 DEPEND="virtual/glibc
 	app-arch/zip
