@@ -1,6 +1,13 @@
 # ChangeLog for net-www/screem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/ChangeLog,v 1.1 2004/08/15 17:32:52 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/ChangeLog,v 1.2 2004/08/23 17:05:21 azarah Exp $
+
+*screem-0.10.2-r1 (23 Aug 2004)
+
+  23 Aug 2004; Martin Schlemmer <azarah@gentoo.org> +screem-0.10.2-r1.ebuild:
+  Fix bug #59470 - the problem was the 'cd ${S}/pixmaps' line, as the ebuild
+  did not cd back to '$S' again, calling the emake in the pixmaps dir, which
+  ended up having the whole thing compiled with 'prefix=${D}/usr'.
 
 *screem-0.6.2 (15 Aug 2004)
 
