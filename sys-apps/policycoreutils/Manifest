@@ -1,18 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 db4c02cbb99a33e6d005e976c93cd5dc ChangeLog 6456
+MD5 95e27cb482c679bbb7cc7df401aae053 ChangeLog 6658
 MD5 2eeb1df30e87ba2861eddbdc34a48bb8 metadata.xml 836
-MD5 e4e0c9f001b78a6fa04f9d76ce4256b4 policycoreutils-1.18-r1.ebuild 3384
 MD5 0d670a4b3022a87e1f49de7a3710a922 policycoreutils-1.20-r1.ebuild 3304
-MD5 62eac355bd774e69b2ced7cdaf4d9c4d files/digest-policycoreutils-1.18-r1 145
+MD5 81aa5679f7e26b8674ff05b8faaaf815 policycoreutils-1.22.ebuild 3372
 MD5 930be7e755de9c362e41b85c50793680 files/digest-policycoreutils-1.20-r1 146
-MD5 308dfedc40a02c48b8cc5118feb8f9ef files/policycoreutils-1.16-genhomedircon-compat.diff 1744
-MD5 b6b925cfe77dec139f161917b9837e63 files/policycoreutils-nonls.diff 5207
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCEGKzGSBEIeh4AEYRAqo3AJsGQ33hkf4SOzmpDeGz5SswkORLYQCffTr4
-YhV+TCbn730NOOZ02tAbEv0=
-=nH/N
------END PGP SIGNATURE-----
+MD5 7a74a3135f746668eccc7a1521bd11cb files/digest-policycoreutils-1.22 146
+MD5 e4fae02aa0cf1196385194111e1a482c files/policycoreutils-1.22-genhomedircon-quiet.diff 670

@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f7f6d8306b2d057d053447181f6b0b26 ChangeLog 3388
+MD5 83fbe178827ff3775f8af1945793c9bc ChangeLog 3526
 MD5 927093fd813bc45afc77ef11c9258e91 metadata.xml 360
-MD5 0abcb1bcd2747df5bed7e7f9cf3c07f6 checkpolicy-1.18.ebuild 1228
 MD5 1ac67d81fe2646ee810799604a9f75c3 checkpolicy-1.20.ebuild 1228
+MD5 d2565a40cec5917a2a6e90cf7e1f65f2 checkpolicy-1.22.ebuild 1043
 MD5 d607f647a52bbb00a5bf754fe4f1dc90 files/checkpolicy-1.16-no-netlink-warn.diff 1022
-MD5 c9bca9508ff124ef4bc19252bdef032b files/digest-checkpolicy-1.18 64
 MD5 8a83e26d25b110d854b64fbacaaf912f files/digest-checkpolicy-1.20 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCD/DsMTuwkQ6eEKsRAtmqAKCJDYmkCkOiR1cz+fjNC1jvzbHUNQCfeq3J
-ruOYUKVobzkcG4HoMvwZBIc=
-=3zqI
------END PGP SIGNATURE-----
+MD5 4d0b80c6cd8e1b17acbb212cbd7ca68b files/digest-checkpolicy-1.22 64
