@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.5.ebuild,v 1.9 2004/04/30 00:15:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.5.ebuild,v 1.10 2004/05/05 15:20:27 randy Exp $
 
 IUSE="ultra1"
 
 K_NOUSENAME="yes"
 ETYPE="sources"
 SPARC_URI="mirror://gentoo/patches-2.6.5-sparc.tar.bz2"
+S390_URI="mirror://gentoo/patches-2.6.5-s390.tar.bz2"
 inherit kernel-2
 detect_version
 detect_arch
@@ -18,7 +19,7 @@ UNIPATCH_LIST="${ARCH_PATCH}"
 
 use ultra1 || UNIPATCH_EXCLUDE="99_U1-hme-lockup"
 
-KEYWORDS="x86 ~sparc ~alpha ~ia64 ppc arm"
+KEYWORDS="x86 ~sparc ~alpha ~ia64 ppc arm s390"
 
 pkg_postinst() {
 	postinst_sources
