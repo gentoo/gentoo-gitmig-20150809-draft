@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.91 2004/11/18 03:13:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.92 2004/12/04 09:00:49 josejx Exp $
+
+  04 Dec 2004; Joseph Jezak <josejx@gentoo.org> openoffice-1.1.3-r1.ebuild:
+  Added missing files for ppc build and marked ~ppc, see bug #71286.
 
   17 Nov 2004; Jason Wever <weeve@gentoo.org> openoffice-1.1.3.ebuild:
   Stable on sparc.

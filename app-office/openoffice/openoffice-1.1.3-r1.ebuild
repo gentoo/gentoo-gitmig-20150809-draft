@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3-r1.ebuild,v 1.4 2004/11/16 09:29:39 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3-r1.ebuild,v 1.5 2004/12/04 09:00:50 josejx Exp $
 
 # Notes:
 #
@@ -33,12 +33,16 @@ INSTDIR="${LOC}/OpenOffice.org"
 S="${WORKDIR}/OOo_${PV}_src"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
 SRC_URI="mirror://openoffice/stable/${PV}/OOo_${PV}-1_source.tar.gz
-		http://www.stlport.org/archive/STLport-4.6.2.tar.gz"
+		http://www.stlport.org/archive/STLport-4.6.2.tar.gz
+		ppc? ( http://www.openoffice.org/files/documents/111/2112/LINUXGCCPinc.zip
+			   http://www.openoffice.org/files/documents/111/2113/LINUXGCCPlib.zip
+			   http://www.openoffice.org/files/documents/111/2114/LINUXGCCPruntime.zip )"
+
 HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="|| ( LGPL-2  SISSL-1.1 )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND="!app-office/openoffice-bin
 	>=sys-libs/glibc-2.1
@@ -210,9 +214,16 @@ src_unpack() {
 
 	cd ${WORKDIR}
 	unpack ${A}
+	cd ${S}
+
+	# Fix for missing ppc mozilla includes bug #71268
+	if use ppc; then
+		cp ${DISTDIR}/LINUXGCCPinc.zip ${S}/moz/zipped || die
+		cp ${DISTDIR}/LINUXGCCPlib.zip ${S}/moz/zipped || die
+		cp ${DISTDIR}/LINUXGCCPruntime.zip ${S}/moz/zipped || die
+	fi
 
 	#Still needed: The STLport patch
-	cd ${S}
 	cp ${DISTDIR}/STLport-4.6.2.tar.gz ${S}/stlport/download || die
 	epatch ${FILESDIR}/${PV}/newstlportfix2.patch
 
