@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/pysoulseek
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.33 2004/03/13 12:27:34 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.34 2004/03/25 03:17:59 weeve Exp $
+
+  24 Mar 2004; Jason Wever <weeve@gentoo.org> pysoulseek-1.2.4b.ebuild:
+  Marked stable on sparc.
 
 *pysoulseek-1.2.5 (13 Mar 2004)
 
