@@ -1,9 +1,12 @@
 # ChangeLog for dev-libs/libIDL
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.11 2003/07/01 17:07:10 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.12 2003/07/01 18:28:29 gmsoft Exp $
 
 
 *libIDL-0.8.2 (27 May 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> libIDL-0.8.2.ebuild :
+  Added hppa to KEYWORDS.
 
   01 Jul 2003; Todd Sunderlin <todd@gentoo.org> libIDL-0.8.2.ebuild :
   set stable on sparc
