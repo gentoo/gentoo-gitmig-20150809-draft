@@ -1,5 +1,3 @@
-MD5 3347f2e12d8236d0ae7a276da580455d ChangeLog 838
-MD5 980f2b24a51ba3fb65daa830b83b19eb jinit-0.1.9-r1.ebuild 927
-MD5 980f2b24a51ba3fb65daa830b83b19eb jinit-0.1.11.ebuild 927
-MD5 8190e2c353eda71dee59efb094a76ea6 files/digest-jinit-0.1.9-r1 62
+MD5 a76df79f683d0cc2636e68df9769a47e ChangeLog 1005
+MD5 fb523fda146d12941681ff014e1cc751 jinit-0.1.11.ebuild 924
 MD5 196df975a9a83e67a8733fa8e2f57024 files/digest-jinit-0.1.11 63
