@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r2.ebuild,v 1.7 2003/02/15 19:40:22 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r2.ebuild,v 1.8 2003/09/07 00:12:23 msterret Exp $
 
 inherit eutils
 
@@ -20,20 +20,20 @@ KEYWORDS="x86 ppc sparc alpha hppa mips"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	
+
 	if [ "`use ssl`" ]; then
 		epatch ${FILESDIR}/${MY_P}+ssl-0.2.diff
 	fi
 }
 
-src_compile() {			  
+src_compile() {
 	./configure --prefix=/usr || die
 	cp MCONFIG MCONFIG.orig
 	sed -e "s:-pipe -O2:${CFLAGS}:" MCONFIG.orig > MCONFIG
 	emake || die
 }
 
-src_install() {							   
+src_install() {
 	into /usr
 	dobin ftp/ftp
 	doman ftp/ftp.1 ftp/netrc.5

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.6.ebuild,v 1.1 2003/07/25 06:11:38 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.6.ebuild,v 1.2 2003/09/07 00:12:23 msterret Exp $
 
 IUSE="ssl socks5 nls alpha"
 
@@ -14,13 +14,13 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 -ppc ~sparc ~alpha"
 
-DEPEND=">=sys-libs/ncurses-5.1 
+DEPEND=">=sys-libs/ncurses-5.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	socks5? ( >=net-misc/dante-1.1.12 )
 	nls? ( sys-devel/gettext )
 	alpha? ( dev-lang/perl )
 	alpha? ( >=sys-apps/sed-4 )"
-RDEPEND="nls? ( sys-devel/gettext )"	
+RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
 	local myconf

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9_rc1.ebuild,v 1.5 2003/06/25 18:44:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9_rc1.ebuild,v 1.6 2003/09/07 00:12:23 msterret Exp $
 
 IUSE="ldap pam postgres mysql ssl tcpd"
 
@@ -25,7 +25,7 @@ DEPEND="net-libs/libpcap
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
 	cd ${S}
-}	
+}
 
 
 src_compile() {
@@ -35,11 +35,11 @@ src_compile() {
 	use pam && modules="${modules}:mod_auth_pam"
 	use tcpd && modules="${modules}:mod_wrap"
 
-	if use ldap; then 
+	if use ldap; then
 		einfo ldap
 		modules="${modules}:mod_ldap"
 		export LDFLAGS="-lresolv"
-	fi	
+	fi
 
 	if use ssl; then
 		einfo ssl
@@ -59,7 +59,7 @@ src_compile() {
 	# New modules for 1.2.9
 	# Not sure how these should be enabled yet as no use variables
 	# apply currently.  Uncomment if you want to use them though.
-	# -raker 06/16/2003 
+	# -raker 06/16/2003
 	#
 	# modules="${modules}:mod_ifsession"
 	# modules="${modules}:mod_radius"
@@ -99,7 +99,7 @@ src_install() {
 	newins ${FILESDIR}/proftpd.conf proftpd.conf.sample
 
 	if use pam; then
-		insinto /etc/pam.d 
+		insinto /etc/pam.d
 		newins ${S}/contrib/dist/rpm/ftp.pamd ftp
 	fi
 
@@ -113,7 +113,7 @@ pkg_postinst() {
 	groupadd proftpd &>/dev/null
 	id proftpd &>/dev/null || \
 		useradd -g proftpd -d /home/ftp -s /bin/false proftpd
-	einfo 
+	einfo
 	einfo 'You can find the config files in /etc/proftpd'
 	einfo
 }

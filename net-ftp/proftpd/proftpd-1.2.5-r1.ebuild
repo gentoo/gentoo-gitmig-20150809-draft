@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.5-r1.ebuild,v 1.12 2003/02/13 14:05:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.5-r1.ebuild,v 1.13 2003/09/07 00:12:23 msterret Exp $
 
 IUSE="ldap pam postgres mysql"
 
@@ -22,7 +22,7 @@ DEPEND="net-libs/libpcap
 src_unpack() {
 
 #Fix bug #3791
-	
+
 	unpack ${P}.tar.bz2
     cd ${WORKDIR}/${P}
     patch contrib/mod_sql_postgres.c < ${FILESDIR}/mod_sql_postgres.c.patch || die "config patch failed"
@@ -58,7 +58,7 @@ src_compile() {
 }
 
 src_install() {
-	
+
 	#Note rundir needs to be specified to avoid sanbox violation
 	#on initial install. See Make.rules
 	einstall \
@@ -86,7 +86,7 @@ src_install() {
 	newins ${FILESDIR}/proftpd.conf proftpd.conf.sample
 
 	if [ "`use pam`" ] ; then
-		insinto /etc/pam.d 
+		insinto /etc/pam.d
 		newins ${S}/contrib/dist/rpm/ftp.pamd ftp
 	fi
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.13.ebuild,v 1.7 2003/04/13 22:43:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.13.ebuild,v 1.8 2003/09/07 00:12:23 msterret Exp $
 
 IUSE="nls gtk2"
 
@@ -31,7 +31,7 @@ src_compile() {
 	local myconf
 
 	use nls || myconf="--disable-nls"
-	use gtk2 && myconf="${myconf} --enable-gtk20" 
+	use gtk2 && myconf="${myconf} --enable-gtk20"
 
 	econf ${myconf} || die
 	emake || die

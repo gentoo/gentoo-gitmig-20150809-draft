@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.2.ebuild,v 1.9 2003/04/12 00:30:47 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.2.ebuild,v 1.10 2003/09/07 00:12:23 msterret Exp $
 
 IUSE="ssl socks5 nls"
 
@@ -10,11 +10,11 @@ DESCRIPTION="LFTP is a sophisticated ftp/http client, file transfer program."
 HOMEPAGE="http://ftp.yars.free.net/projects/lftp/"
 SRC_URI="http://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/${P}.tar.bz2"
 
-DEPEND=">=sys-libs/ncurses-5.1 
+DEPEND=">=sys-libs/ncurses-5.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	socks5? ( >=net-misc/dante-1.1.12 )
 	nls? ( sys-devel/gettext )"
-RDEPEND="nls? ( sys-devel/gettext )"	
+RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -64,5 +64,5 @@ src_install() {
 
 	dodoc BUGS COPYING ChangeLog FAQ FEATURES MIRRORS \
 		NEWS README* THANKS TODO
-	
+
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.5.ebuild,v 1.11 2003/07/18 21:31:41 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.5.ebuild,v 1.12 2003/09/07 00:12:23 msterret Exp $
 
 IUSE="cjk"
 S=${WORKDIR}/${P}
@@ -26,5 +26,5 @@ src_install() {
 	einstall || die
 
 	dodoc README.txt doc/*.txt
-	dohtml doc/html/*.html 
+	dohtml doc/html/*.html
 }

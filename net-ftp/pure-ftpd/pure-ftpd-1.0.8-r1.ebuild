@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.8-r1.ebuild,v 1.10 2003/02/13 14:06:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.8-r1.ebuild,v 1.11 2003/09/07 00:12:23 msterret Exp $
 
 IUSE="ldap pam postgres mysql"
 
@@ -49,5 +49,5 @@ src_install() {
 	newins ${FILESDIR}/pure-ftpd.conf_d pure-ftpd
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/pure-ftpd.rc6 pure-ftpd		
+	newexe ${FILESDIR}/pure-ftpd.rc6 pure-ftpd
 }

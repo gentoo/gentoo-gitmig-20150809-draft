@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.14_rc1.ebuild,v 1.4 2003/02/13 14:04:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.14_rc1.ebuild,v 1.5 2003/09/07 00:12:23 msterret Exp $
 
 IUSE="nls gtk2"
 P=${PN}-${PV/_/}
@@ -26,11 +26,11 @@ src_compile() {
 		&& myconf="--enable-nls" \
 		|| myconf="--disable-nls"
 
-	# do not use enable-{gtk20,gtkport} they are not recognized 
+	# do not use enable-{gtk20,gtkport} they are not recognized
 	# and will disable building the gtkport alltogether
 	use gtk2 \
 		&& myconf="${myconf}" \
-		|| myconf="${myconf} --disable-gtk20" 
+		|| myconf="${myconf} --disable-gtk20"
 
 	econf ${myconf} || die
 	emake || die

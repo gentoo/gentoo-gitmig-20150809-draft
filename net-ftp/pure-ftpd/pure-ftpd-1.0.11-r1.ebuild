@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.11-r1.ebuild,v 1.9 2003/02/13 14:06:00 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.11-r1.ebuild,v 1.10 2003/09/07 00:12:23 msterret Exp $
 
 IUSE="ldap pam postgres mysql"
 
@@ -26,7 +26,7 @@ src_compile() {
 	use ldap && myconf="${myconf} --with-ldap"
 	use mysql && myconf="${myconf} --with-mysql"
 	use postgres && myconf="${myconf} --with-pgsql"
-	
+
 	./configure --prefix=/usr --mandir=/usr/share/man \
 		--with-altlog --with-extauth \
 		--with-puredb --with-cookie \

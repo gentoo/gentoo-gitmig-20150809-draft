@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-1.1.3-r1.ebuild,v 1.3 2003/07/13 11:55:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-1.1.3-r1.ebuild,v 1.4 2003/09/07 00:12:23 msterret Exp $
 
 inherit flag-o-matic
 
@@ -53,7 +53,7 @@ src_install() {
 
 	insinto /etc/vsftpd ; doins ${FILESDIR}/ftpusers
 	insinto /etc/vsftpd ; newins ${FILESDIR}/vsftpd.conf vsftpd.conf.sample
-	insinto /etc/xinetd.d 
+	insinto /etc/xinetd.d
 	if [ -n `use ipv6` ]; then
 		newins ${FILESDIR}/vsftpd.xinetd.ipv6 vsftpd
 	else

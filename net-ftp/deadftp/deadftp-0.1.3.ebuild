@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/deadftp/deadftp-0.1.3.ebuild,v 1.9 2003/02/13 14:03:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/deadftp/deadftp-0.1.3.ebuild,v 1.10 2003/09/07 00:12:23 msterret Exp $
 
 IUSE="nls"
 
@@ -20,7 +20,7 @@ DEPEND="=dev-libs/glib-1.2*
 	>=gnome-base/ORBit-0.5.16
 	>=gnome-base/gnome-libs-1.4.1.7"
 
-RDEPEND="nls? ( >=sys-devel/gettext-0.10.40 
+RDEPEND="nls? ( >=sys-devel/gettext-0.10.40
 	>=dev-util/intltool-0.11 )"
 
 
