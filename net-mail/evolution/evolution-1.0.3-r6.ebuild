@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.3-r5.ebuild,v 1.1 2002/04/22 19:58:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.3-r6.ebuild,v 1.1 2002/04/23 13:53:06 g2boojum Exp $
 
 #provide Xmake and Xemake
 . /usr/portage/eclass/inherit.eclass
@@ -71,7 +71,7 @@ src_unpack() {
 	then
 		cp -f ${FILESDIR}/gnome-pilot.m4 ${S}/macros || die
 	fi
-	libtoolize --copy --force
+	[ -z "`use pda`" ] && libtoolize --copy --force
 	aclocal -I macros
 	autoconf
 	automake --add-missing
