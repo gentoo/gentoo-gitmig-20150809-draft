@@ -1,10 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.18.ebuild,v 1.7 2002/11/02 10:44:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.18.ebuild,v 1.8 2002/11/11 16:00:22 vapier Exp $
 
 IUSE="nls mysql"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Logfile Analyzer"
 SRC_URI="http://jan.kneschke.de/projects/modlogan/download/${P}.tar.gz
 	 http://www.kneschke.de/projekte/modlogan/download/gd-1.8.1.tar.gz"
@@ -12,7 +11,7 @@ HOMEPAGE="http://jan.kneschke.de/projects/modlogan/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="virtual/x11
 	dev-libs/libxml
@@ -50,7 +49,7 @@ src_compile() {
 		--libdir=/usr/lib/modlogan \
 		--with-gd=${WORKDIR}/gd-1.8.1/ \
 		--disable-check-dynamic \
-		${myconf} || die
+		${myconf}
 
 	make || die
 }
@@ -79,7 +78,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	if [ ! -a ${ROOT}etc/modlogan/modlogan.conf ]
 	then
 		cd ${ROOT}/etc/modlogan
@@ -97,5 +95,4 @@ pkg_postinst() {
 		modlogan.def.conf.sample > modlogan.def.conf
 		rm modlogan.def.conf.sample
 	fi
-
 }
