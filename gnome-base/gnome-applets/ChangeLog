@@ -1,7 +1,10 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.13 2002/09/06 03:54:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.14 2002/09/15 00:43:49 spider Exp $
 
+*gnome-applets-2.0.3 (14 Sep 2002)
+  14 Sep 2002; Spider <spider@gentoo.org> gnome-applets-2.0.3.ebuild :
+  versionbump
 
 *gnome-applets-2.0.2 (06 Sep 2002)
   06 Sep 2002; Spider <spider@gentoo.org> gnome-applets-2.0.2.ebuild :
