@@ -1,0 +1,9 @@
+# ChangeLog for app-i18n/x-unikey
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/ChangeLog,v 1.1 2004/06/28 07:42:07 pclouds Exp $
+
+  28 Jun 2004; <pclouds@gentoo.org> x-unikey-0.9.1d.ebuild,
+  files/01x-unikey:
+  new package, committed by Lang Thang <langthang@vn21.homelinux.org> in bug
+  #49301
+
