@@ -1,5 +1,6 @@
 MD5 596d5e8c32cd198760838dd1acaed295 linesrv-2.1.6-r1.ebuild 1882
 MD5 7cce0004f9e80c8b7333962c9f2db743 linesrv-2.1.8.ebuild 1736
+MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 760ed2283adbc402ad2cbff252f67d6b ChangeLog 1120
 MD5 29e20aa982eafe8d1a66419009ef82bf files/digest-linesrv-2.1.8 70
 MD5 fcf1fee9b36c1cd1bfb2933c4b6826e3 files/digest-linesrv-2.1.6-r1 70
