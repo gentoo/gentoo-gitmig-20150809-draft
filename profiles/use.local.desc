@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.417 2004/06/04 21:18:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.418 2004/06/05 19:25:56 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -105,10 +105,10 @@ dev-java/quartz:servlet-2.3 - Enable servlet-2.3 support
 dev-java/quartz:servlet-2.4 - Enable servlet-2.4 support
 dev-java/quartz:struts - Enable struts support
 dev-java/sun-j2sdk:nptl - Enable support for NPTL 
-dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
-dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
 dev-lang/R:bzlib - use bzlib compression library
 dev-lang/R:pcre -  add perl compatible regular expressions support
+dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
+dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
 dev-lang/tcl:threads - Enable threads as some packages require it.
 dev-lang/tk:threads - Enable threads as some packages require it.
@@ -315,8 +315,8 @@ net-wireless/hostap-driver:hostap-nopci - Set to not install hostap_pci driver
 net-wireless/hostap-driver:hostap-noplx - Set to not install hostap_plx driver
 net-wireless/hostap:hostap-nopci - Set to not install hostap_pci driver
 net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
-net-www/apache:threads - Enable thread support
 net-www/apache:distcache - Enable SSL distcache support
+net-www/apache:threads - Enable thread support
 net-www/elinks:lua - enable lua support
 net-www/links:javascript - enable javascript support
 net-www/memcached:php - Include the PHP API for memcached
@@ -367,10 +367,10 @@ sys-devel/binutils:multitarget - Adds support to binutils for canadian cross com
 sys-devel/gcc:f77 - Build support for the f77 language
 sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
 sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
-sys-devel/gcc:objc - Build support for the Objective C code language
-sys-devel/gcc:uclibc - Enable uclibc specific patches for gcc
 sys-devel/gcc:n32 - Enable n32 ABI support on mips
 sys-devel/gcc:n64 - Enable n64 support on mips
+sys-devel/gcc:objc - Build support for the Objective C code language
+sys-devel/gcc:uclibc - Enable uclibc specific patches for gcc
 sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/libperl:threads - Enable Perl threads, has some compatibility problems
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
@@ -382,8 +382,9 @@ sys-devel/uclibc-buildroot:nommu - No memory management unit on target architect
 sys-devel/uclibc-buildroot:propolice - Stack-Smashing Protection
 sys-devel/uclibc-buildroot:savedconfig - Adds support to user defined configs
 sys-devel/uclibc-buildroot:softfloat - software floating point calculations for FPU lacking processors
-sys-fs/lufs:lufsusermount - allow users to mount LUFS filesystems
 sys-fs/lufs:disablekernelsupport - If you already have a patched lufs kernel, skip the module building part
+sys-fs/lufs:lufsusermount - allow users to mount LUFS filesystems
+sys-kernel/alpha-sources:usagi - adds USAGI (Linux IPv6 Development Project) support
 sys-kernel/development-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/development-sources:vanilla - keep the kernel sources in a vanilla state and do not apply anything from genpatches.
 sys-kernel/gentoo-sources:aavm - adds Andrea Arcangeli's vm support (removes rmap by Rik van Riel which is the default)
@@ -396,9 +397,9 @@ sys-kernel/ppc64-sources:extlib - If you want to use gcloop a external lib is ne
 sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/wolk-sources:wolk-bootsplash - If you want WOLK's own bootsplash patch (deprecated)
 sys-kernel/wolk-sources:wolk-supermount - If you want to use supermount (deprecated)
-sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
 sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp
 sys-libs/glibc:makecheck - makes glibc perform a 'make check' before merging and prevents it from installing unless all the tests pass
+sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:freetype - Enables Freetype font support
@@ -430,4 +431,3 @@ x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
 x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
 x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
-
