@@ -1,18 +1,25 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.2.1.ebuild,v 1.8 2003/11/13 03:42:10 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.2.1.ebuild,v 1.9 2004/03/15 01:33:45 spider Exp $
 
-IUSE="doc"
 
-PN=GConf
-P=${PN}-${PV}
 
 inherit gnome2
 
+MY_PN=GConf
+MY_P=${MY_PN}-${PV}
+PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
+S=${WORKDIR}/${MY_P}
+
+
+
 DESCRIPTION="Gnome Configuration System and Daemon"
 HOMEPAGE="http://www.gnome.org/"
-LICENSE="LGPL-2"
+SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
+
+IUSE="doc"
+LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="x86 ppc ~alpha ~sparc ~hppa ~amd64"
 
