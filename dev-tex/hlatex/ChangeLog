@@ -1,0 +1,11 @@
+# ChangeLog for dev-tex/hlatex
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/ChangeLog,v 1.1 2004/09/02 01:34:51 usata Exp $
+
+*hlatex-0.991 (02 Sep 2004)
+
+  02 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +hlatex-0.991.ebuild:
+  Initial import. Ebuild submitted by Hwang Joonhyung <envia@chol.com>,
+  closing bug #51406.
+
