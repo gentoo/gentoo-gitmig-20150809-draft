@@ -1,0 +1,18 @@
+===================================================================
+RCS file: /cvsroot/gaim/gaim/src/prefs.c,v
+retrieving revision 1.410
+retrieving revision 1.411
+diff -u -r1.410 -r1.411
+--- gaim/gaim/src/prefs.c	2003/07/18 14:34:08	1.410
++++ gaim/gaim/src/prefs.c	2003/07/24 05:32:53	1.411
+@@ -441,7 +441,9 @@
+ 			return;
+ 		}
+ 
+-		if(strcmp(pref->value.string, value)) {
++		if((value && !pref->value.string) ||
++				(!value && pref->value.string) ||
++				strcmp(pref->value.string, value)) {
+ 			g_free(pref->value.string);
+ 			pref->value.string = g_strdup(value);
+ 			do_callbacks(name, pref);

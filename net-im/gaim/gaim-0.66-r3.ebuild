@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.66-r3.ebuild,v 1.1 2003/08/04 00:59:35 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.66-r3.ebuild,v 1.2 2003/08/05 21:17:48 rizzo Exp $
 
 IUSE="nls perl spell nas ssl cjk"
 
@@ -28,6 +28,7 @@ DEPEND="=sys-libs/db-1*
 src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${P}
+	epatch ${FILESDIR}/gaim-0.66-prefs.c.diff
 	use ssl && {
 		cd ${S}/plugins
 		unpack encrypt-${EV}.tar.gz
