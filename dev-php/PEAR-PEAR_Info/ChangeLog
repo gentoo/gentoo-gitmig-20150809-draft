@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-PEAR_Info
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_Info/ChangeLog,v 1.8 2004/08/03 17:08:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_Info/ChangeLog,v 1.9 2004/11/07 04:03:21 weeve Exp $
+
+  06 Nov 2004; Jason Wever <weeve@gentoo.org> PEAR-PEAR_Info-1.5.2.ebuild:
+  Stable on sparc.
 
   03 Aug 2004; <agriffis@gentoo.org> PEAR-PEAR_Info-1.5.1.ebuild,
   PEAR-PEAR_Info-1.5.2.ebuild:
