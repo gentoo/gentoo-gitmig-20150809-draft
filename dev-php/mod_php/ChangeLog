@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.164 2004/07/14 16:17:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.165 2004/07/14 21:37:50 lu_zero Exp $
+
+  14 Jul 2004; Luca Barbato <lu_zero@gentoo.org> mod_php-4.3.8.ebuild:
+  Marked ppc for security reason (bug #56985)
 
   14 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> :
   add hardendephp support for 4.3.8
