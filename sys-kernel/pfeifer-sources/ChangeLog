@@ -1,16 +1,18 @@
 # ChangeLog for sys-kernel/pfeifer-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.8 2003/05/08 21:35:16 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.9 2003/05/10 16:20:02 pfeifer Exp $
 
   TODO:
     better ide chipset support (ie. CSB6)
     fine tune gcc optimizations (yes, there is a bit more to look @)
-    XFS support (Dragon is working on this...)
     
   * Maybe:
     RSBAC
     NPTL (doubtful)
     skas - probably through yet another use flag... cause most will *not* want this
+  * Not in 2.4:
+    XFS will wait for official inclusion in 2.6 til then xfs-sources is the Gentoo
+    kernel for xfs support
 
 *pfeifer-sources-2.4.20.1_pre11 (08 May 2003)
 
