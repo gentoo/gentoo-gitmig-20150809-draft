@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-ddvcard/aqhbci-ddvcard-0.9.5_beta.ebuild,v 1.2 2005/02/01 23:50:28 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-ddvcard/aqhbci-ddvcard-1.0.1_beta.ebuild,v 1.1 2005/02/01 23:50:28 hanno Exp $
 
 DESCRIPTION="DDV-Card plugin for aqhbci"
 HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
@@ -12,6 +12,7 @@ IUSE="debug"
 DEPEND=">=net-libs/aqhbci-0.9.6_beta
 	>=sys-libs/libchipcard-0.9.9_beta"
 S=${WORKDIR}/${P/_/}
+MAKEOPTS="-j1"
 
 src_compile() {
 	econf `use_enable debug` || die
