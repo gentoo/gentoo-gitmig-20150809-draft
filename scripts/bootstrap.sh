@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.52 2003/10/31 20:03:13 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.53 2003/11/01 05:30:24 azarah Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -62,7 +62,7 @@ fi
 echo
 echo -e "${GOOD}Gentoo Linux${GENTOO_VERS}; \e[34;01mhttp://www.gentoo.org/${NORMAL}"
 echo -e "Copyright 2001-2003 Gentoo Technologies, Inc.; Distributed under the GPL"
-if [ "$STRAP_EMERGE_OPTS" = "-f" ]
+if [ "${STRAP_EMERGE_OPTS}" = "-f" ]
 then
 	echo "Fetching all bootstrap-related archives..."
 else
@@ -71,13 +71,13 @@ fi
 echo
 
 # This should not be set to get glibc to build properly. See bug #7652.
-LD_LIBRARY_PATH=""
+LD_LIBRARY_PATH=
 
 # We do not want stray $TMP, $TMPDIR or $TEMP settings
 unset TMP TMPDIR TEMP
 
 cleanup() {
-	if [ -n "$STRAP_RUN" ]
+	if [ -n "${STRAP_RUN}" ]
 	then
 		if [ -f /etc/make.conf.build ]
 		then
@@ -89,7 +89,7 @@ cleanup() {
 
 # Trap ctrl-c and stuff.  This should fix the users make.conf
 # not being restored.
-if [ -n "$STRAP_RUN" ]
+if [ -n "${STRAP_RUN}" ]
 then
 	cp -f /etc/make.conf /etc/make.conf.build
 fi
@@ -123,6 +123,8 @@ fi
 myBASELAYOUT=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-apps/baselayout | sed 's:^\*::'`
 myPORTAGE=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-apps/portage | sed 's:^\*::'`
 myGETTEXT=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-devel/gettext | sed 's:^\*::'`
+# Not all profiles have gettest in the system profile anymore ...
+[ -z "${myGETTEXT}" ] && myGETTEXT="sys-devel/gettext"
 myBINUTILS=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-devel/binutils | sed 's:^\*::'`
 myGCC=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-devel/gcc | sed 's:^\*::'`
 myGLIBC=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-libs/glibc | sed 's:^\*::'`
@@ -176,6 +178,14 @@ then
 	echo "exporting FTP_PROXY=${FTP_PROXY}"
 	export FTP_PROXY
 fi
+if [ -x /usr/bin/gcc-config ]
+then
+	GCC_CONFIG="/usr/bin/gcc-config"
+
+elif [ -x /usr/sbin/gcc-config ]
+then
+	GCC_CONFIG="/usr/sbin/gcc-config"
+fi
 
 # Disable autoclean, or it b0rks
 export AUTOCLEAN="no"
@@ -185,57 +195,53 @@ export CONFIG_PROTECT="-*"
 	
 USE="-* build bootstrap" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
 
-if [ -x /usr/bin/gcc-config ]
-then
-	GCC_CONFIG="/usr/bin/gcc-config"
-	
-elif [ -x /usr/sbin/gcc-config ]
-then
-	GCC_CONFIG="/usr/sbin/gcc-config"
-fi
-
-# Basic support for gcc multi version/arch scheme ...
-if [ -n "$STRAP_RUN" ]
-then
-	if test -x ${GCC_CONFIG} &> /dev/null && \
-	${GCC_CONFIG} --get-current-profile &> /dev/null
-	then
-		# Make sure we get the old gcc unmerged ...
-		emerge clean || cleanup 1
-		# Make sure the profile and /lib/cpp and /usr/bin/cc are valid ...
-		${GCC_CONFIG} "`${GCC_CONFIG} --get-current-profile`" &> /dev/null
-	fi
-fi
-
 export USE="${ORIGUSE} bootstrap"
 emerge ${STRAP_EMERGE_OPTS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} || cleanup 1
 
-# We used to call emerge once, but now we call it twice. Why? Because gcc may
-# have been built to use a different LDPATH. We want subsequent packages merged
-# to pick up any new gcc libraries. Breaking the emerge after gcc should allow
-# this to happen. This *should* allow issues like the following to be fixed (as
-# of 30 Oct 2003, whether this fixes the issue in this forums post is
-# unconfirmed):
+# If say both gcc and binutils was build for i486, and we then merge
+# binutils for i686 without removing the i486 version (Note that this is
+# _only_ when its exactly the same version of binutils ... if we have say
+# 2.14.90.0.6 build for i486, and bootstrap then merge 2.14.90.0.7 for i686,
+# we will not have issues.  More below ...), gcc's search path will
+# still have
 #
-# http://forums.gentoo.org/viewtopic.php?t=100263
+#   /usr/lib/gcc-lib/i486-pc-linux-gnu/<gcc_version>/../../../../i486-pc-linux-gnu/bin/
 #
-# If you have questions or information about this change, like whether this
-# fixed or didn't fix the "zlib undefined symbol: xmalloc_set_program_name"
-# issue, please email rac@gentoo.org, drobbins@gentoo.org and
-# azarah@gentoo.org.
-
-# rac 2003.10.31
-# addendum - now it's three times, with a clean in the middle.
-# failure to do this was causing two sets of binutils to hang around,
-# and if they had different targets, the /usr/bin symlinks get
-# confused.
-
-if [ -n "$STRAP_RUN" ]
+# before /usr/bin, and thus it will use the i486 versions of binutils binaries
+# which causes issues.  The reason for this issues is that when bootstrap merge
+# exactly the same version for i686, both will have installed the same files to
+# /usr/lib, and thus also USE the same libraries, cause as/ld to fail with
+# unresolved symbols during compiling/linking.
+#
+# More info on this can be found by looking at bug #32140:
+#
+#   http://bugs.gentoo.org/show_bug.cgi?id=32140
+#
+# We now thus run an 'emerge clean' just after merging binutils ...
+#
+# NB: thanks to <rac@gentoo.org> for bringing me on the right track
+#     (http://forums.gentoo.org/viewtopic.php?t=100263)
+#
+# <azarah@gentoo.org> (1 Nov 2003)
+if [ -n "${STRAP_RUN}" ]
 then
     emerge clean || cleanup 1
 fi
 
 emerge ${STRAP_EMERGE_OPTS} ${myGCC} || cleanup 1
+
+# Basic support for gcc multi version/arch scheme ...
+if [ -n "${STRAP_RUN}" ]
+then
+	if test -x ${GCC_CONFIG} &>/dev/null && \
+	   ${GCC_CONFIG} --get-current-profile &>/dev/null
+	then
+		# Make sure we get the old gcc unmerged ...
+		emerge clean || cleanup 1
+		# Make sure the profile and /lib/cpp and /usr/bin/cc are valid ...
+		${GCC_CONFIG} "`${GCC_CONFIG} --get-current-profile`" &>/dev/null
+	fi
+fi
 
 emerge ${STRAP_EMERGE_OPTS} ${myGLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
 # ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
