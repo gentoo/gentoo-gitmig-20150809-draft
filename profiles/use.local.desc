@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.196 2003/12/29 11:49:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.197 2003/12/29 11:53:28 mholzer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -105,9 +105,7 @@ media-libs/libgd:freetype-version-1 - if for some reason you want to use freetyp
 media-libs/libsdl:noaudio - Allow users to disable audio support completely (at their own risk)
 media-libs/libsdl:nojoystick - Allow users to disable joystick support completely (at their own risk)
 media-libs/libsdl:novideo - Allow users to disable video support completely (at their own risk)
-media-libs/sdl-sound:speex - Enable speex sound support
 media-libs/sdl-sound:physfs - Enable physfs support
-media-libs/xine-lib:speex - Enable speex sound support
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/ardour-cvs:ardour-ksi - Build ksi interface for ardour

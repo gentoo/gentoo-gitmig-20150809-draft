@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.129 2003/12/29 11:49:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.130 2003/12/29 11:53:28 mholzer Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -145,6 +145,7 @@ slang - Adds support for the slang text display library (it's like ncurses, but 
 slp - Adds Service Locator Protocol support to CUPS
 snmp - Adds support for the Simple Network Management Protocol if available
 socks5 - Adds support for the socks5 proxy
+speex - Adds support for the speex audio codec
 spell - Adds dictionary support
 sse - fast floating point optimisation for Pentium class chips
 ssl - Adds support for Secure Socket Layer connections
