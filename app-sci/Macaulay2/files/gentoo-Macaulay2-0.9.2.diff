@@ -206,3 +206,40 @@ diff -U 3 -dHrN -- Macaulay2-0.9.2-orig/include/config.Makefile.in Macaulay2-0.9
  bindir = $(target)/bin
  
  RANLIB = @RANLIB@
+--- Macaulay2-0.9.2/Macaulay2/e/EGB1.hpp	1999-09-09 23:47:12.000000000 +0200
++++ Macaulay2-0.9.2/Macaulay2/e/EGB1.hpp.new	2004-12-13 11:48:17.208554431 +0100
+@@ -104,8 +104,6 @@
+ };
+ class EGB1 : public EGroebnerComputation
+ {
+-  class iterator;
+-  friend class iterator;
+ private:
+   // Ring information
+   const EInterface I;
+@@ -255,6 +253,9 @@
+ 
+   virtual int new_calc(const EStopConditions &stop);
+ 
++  class iterator;
++  friend class iterator;
++
+   class iterator {
+     const EGB1 *comp;
+     int i;
+--- Macaulay2-0.9.2/include/config.Makefile.in	2004-12-13 12:29:02.776249827 +0100
++++ Macaulay2-0.9.2/include/config.Makefile.in.new	2004-12-13 12:47:35.221607868 +0100
+@@ -110,13 +110,6 @@
+ ifeq "$(GCC)" "yes"
+ CFLAGS   += -Wall -Wshadow -Wcast-qual
+ CXXFLAGS += -Wall -Wshadow -Wcast-qual
+-ifeq "$(OPTIMIZE)" "yes"
+-CFLAGS   += -O3 -fexpensive-optimizations
+-CXXFLAGS += -O3 -fexpensive-optimizations
+-else
+-CFLAGS   += -O0
+-CXXFLAGS += -O0
+-endif
+ endif
+ 
+ ifeq "$(STRIP)" "no"
