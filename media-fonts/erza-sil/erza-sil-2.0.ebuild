@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/erza-sil/erza-sil-2.0.ebuild,v 1.2 2004/10/17 09:26:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/erza-sil/erza-sil-2.0.ebuild,v 1.3 2005/03/28 09:46:14 usata Exp $
 
 inherit font
 
@@ -13,8 +13,11 @@ LICENSE="SIL-freeware"	# non-free
 SRC_URI="ftp://ftp.sil.org/fonts/win/${MY_P}"
 #SRC_URI="http://scripts.sil.org/cms/scripts/render_download.php?site_id=nrsi&format=file&media_id=${MY_P}&filename=${MY_P}"
 
+DEPEND="app-arch/unzip"
+RDEPEND=""
+
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE="X"
 
 DOCS="Documentation/*"

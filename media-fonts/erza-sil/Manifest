@@ -1,4 +1,14 @@
-MD5 e720dce54771026c9d02651877157019 ChangeLog 503
-MD5 4ec8aa35bed6aae7484be91f7a7a40cf erza-sil-2.0.ebuild 863
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 99bebc72177774d0cd9fc588fcd25d78 ChangeLog 634
+MD5 a3280d391433cfdfae9ed06ab2938ae5 erza-sil-2.0.ebuild 897
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 113ec949b81d6ff92f8f269a96634ab0 files/digest-erza-sil-2.0 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCR9JuVWNWqTUmv+0RAn6TAJ9OrE+5MTOTkYZJe3NjMEjmHw/ARgCfUuK7
+B9eXAsDmlS7U62oIVwE1ZQU=
+=nw4M
+-----END PGP SIGNATURE-----
