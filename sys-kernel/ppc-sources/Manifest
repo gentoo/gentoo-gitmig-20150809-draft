@@ -1,6 +1,6 @@
 MD5 d37db3528f6b0dbd97bfa20445d3b405 ppc-sources-2.4.21-r2.ebuild 2296
 MD5 3eb8aa8dc939aec206b54ce23327e690 ppc-sources-2.4.22-r3.ebuild 1558
-MD5 eafec7467707aabab43f92f7821c0b31 ChangeLog 6578
+MD5 13eabeb9f8a256d878073de166b7496c ChangeLog 6583
 MD5 97d392b240106d997db8a43f8c85dda4 ppc-sources-2.4.20-r4.ebuild 1796
 MD5 a19258ab16aeeb0eeb4db4c76ad2d3a8 ppc-sources-2.4.23.ebuild 2728
 MD5 c82da7f4afb43d26dfecd57abf3db054 ppc-sources-2.4.19-r3.ebuild 3277
@@ -9,7 +9,7 @@ MD5 f978892f6d9dd3e70c979bf6f39e587e ppc-sources-2.4.20-r2.ebuild 1786
 MD5 fe945af4911b04acd2c0f473c7c64f35 metadata.xml 267
 MD5 a2662c3627acdf5de3051e84612ccc19 ppc-sources-2.4.19-r4.ebuild 3433
 MD5 e067af7bf5f5e3601087820c4396f186 ppc-sources-2.4.22-r2.ebuild 1546
-MD5 89e38390f32c12bccc25aa9561672b3e ppc-sources-2.4.23-r1.ebuild 2986
+MD5 7239e3446cc8bd358cc2d4a7310b9d1f ppc-sources-2.4.23-r1.ebuild 2994
 MD5 e953754cd19954d599b33d19b88bd8b9 ppc-sources-2.4.22-r1.ebuild 1638
 MD5 03e6bd9e5b006cf33107865925e24d8d ppc-sources-2.4.20-r1.ebuild 3111
 MD5 22c490110a93d6c863712bc726399b94 ppc-sources-2.4.19-r6.ebuild 3266
