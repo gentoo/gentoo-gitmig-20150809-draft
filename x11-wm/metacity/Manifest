@@ -1,8 +1,9 @@
+MD5 66e7d5c3d7353513c805f3e731a43676 metacity-2.8.6.ebuild 998
 MD5 634676b37223574247c7abcee92b40c6 metacity-2.8.1.ebuild 879
 MD5 d561a0fe198d90a681bf1777e00937d9 metacity-2.8.5.ebuild 1000
 MD5 7203b287eb7f0597ec876d5dc67ab5fc metacity-2.8.0.ebuild 1383
 MD5 b8c054acc237ca65bc428edcb22074d2 metacity-2.6.3.ebuild 1047
-MD5 bad9bd8fa7c39266b39d1e43062ab8fc ChangeLog 8059
+MD5 a7785fc7ca17aee1132b03051adb6e98 ChangeLog 8200
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 3df3ac465600a8778f3eaec889cf2094 metacity-2.6.5.ebuild 1056
 MD5 888edb091b2a7f1feebf5ad86907048f files/metacity-2.4.3-ppc-gcc3.2.diff 1062
@@ -11,4 +12,5 @@ MD5 401c8abc54cf89761ae05db69a25aa60 files/digest-metacity-2.6.5 68
 MD5 ad3de36c7f3732f72fa88331f5266ba6 files/digest-metacity-2.8.0 68
 MD5 518f2435e25b7cd5e532fe83b3178e4c files/digest-metacity-2.8.1 68
 MD5 6785913225bcd05588b8b2adf011f3c9 files/digest-metacity-2.8.5 68
+MD5 cb56b63e849c924d574bb926f1c139be files/digest-metacity-2.8.6 68
 MD5 2562cf5fc7b8b4158301e47955a98c09 files/metacity-2.8.0-xinerama_config_test.patch 466
