@@ -27,7 +27,12 @@ src_compile() {
 
 src_install () {
 
-    try make DESTDIR=${D} install
+    dodir /usr/bin
+    insinto /usr/bin
+    dobin screen
+    dodir
+    insinto /usr/share/terminfo
+    doins terminfo/screencap
     insinto /etc
     doins etc/screenrc
     dodoc README ChangeLog INSTALL COPYING TODO
