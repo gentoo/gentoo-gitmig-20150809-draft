@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/alternatives.eclass,v 1.2 2003/10/07 20:26:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/alternatives.eclass,v 1.3 2003/10/07 20:28:52 liquidx Exp $
 
 # Author :     Alastair Tse <liquidx@gentoo.org> (03 Oct 2003)
 # Short Desc:  Creates symlink to the latest version of multiple slotted
@@ -53,7 +53,6 @@ alternatives_auto_makesym() {
 	REGEX=$2
 
 	ALT="`ls -1 --color=never ${ROOT}${REGEX} | sed -e "s:^${ROOT}::" | sort -r | xargs`"
-	einfo "alternatives: $ROOT $REGEX $ALT"
 	if [ -n "${ALT}" ]; then
 		alternatives_makesym ${SOURCE} ${ALT}
 	else
