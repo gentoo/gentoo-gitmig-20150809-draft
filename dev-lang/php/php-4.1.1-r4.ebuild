@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.1-r4.ebuild,v 1.1 2002/02/23 20:35:19 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.1-r4.ebuild,v 1.2 2002/02/23 20:38:06 g2boojum Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting language"
@@ -112,6 +112,11 @@ src_compile() {
 		else
 			echo "imap compiled w/o SSL"
 			myconf="$myconf --with-imap"
+			# php build will fail if imap doesn't have SSL support
+			echo "unfortunately, the php build will fail due to"
+			echo "strange header errors in /usr/include/imap4r1.h"
+			echo "Please rebuild uw-imap or pine w/ 'ssl' in USE"
+			die
 		fi
 	fi
 	use libwww && myconf="$myconf --with-xml" || myconf="$myconf --disable-xml"
