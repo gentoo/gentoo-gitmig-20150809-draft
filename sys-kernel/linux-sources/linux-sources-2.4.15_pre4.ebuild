@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.15_pre4.ebuild,v 1.3 2001/11/16 19:09:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.15_pre4.ebuild,v 1.4 2001/11/16 21:56:40 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -84,8 +84,26 @@ then
 	RDEPEND=""
 fi
 
-# this is not pretty...
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${KS}/include"
+
+patchorama() {
+	local x
+	for x in ${*} 
+	do
+		[ -d "$x" ] && continue
+		echo ">>> Applying ${x}..."
+		if [ "${x##.*}" = "bz2" ]
+		then
+			cat $x | bzip2 -d | patch -p1 -l
+		elif [ "${x##.*}" = "gzip" ]
+  		then
+			cat $x | gzip -d | patch -p1 -l
+		else
+			patch -p1 -l < $x
+		fi
+	done
+}
+
 
 src_unpack() {
 
@@ -104,16 +122,9 @@ src_unpack() {
 	fi
 	dodir /usr/src/linux-${KV}-extras
 
-	#Please do not change this section unless you know what you are doing.  There is a
-	#reason why we apply a pre-generated LVM patch. --drobbins
-#	cat ${DISTDIR}/lvm-${LVMV}-${KV}.patch.bz2 | bzip2 -d | patch -N -l -p1 
-	cd ${S2}
-	unpack lvm_${LVMV}.tar.gz
-
-	#apply low-latency patch
 	cd ${S}
-	cat ${DISTDIR}/${LOWLV}-low-latency.patch.gz | gzip -d | patch -p1 || die
-
+	patchorama ${DISTDIR}/${LOWLV}-low-latency.patch.gz ${FILESDIR}/2.4.15pre1aa1/*
+	
 	#apply ACPI updates
 	cat ${DISTDIR}/acpi-${ACPIV}.diff.gz | gzip -d | patch -p1 || die
 
