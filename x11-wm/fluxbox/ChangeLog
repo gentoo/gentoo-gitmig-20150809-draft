@@ -1,7 +1,13 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.12 2002/05/24 22:04:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.13 2002/06/18 23:12:51 stroke Exp $
 
+*fluxbox-0.19-r1 (19 Jun 2002)
+
+  19 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> fluxbox-0.19-r1.ebuild
+  
+  Upstream bugfix patch (#2) applied. Also closes (#3864).
+  
 *fluxbox-0.19 (24 May 2002)
 
   24 May 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.19.ebuild
