@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.4 2003/02/12 06:08:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.5 2003/07/08 20:33:53 liquidx Exp $
+
+*nspr-4.3 (08 Jul 2003)
+
+  08 Jul 2003; Alastair Tse <liquidx@gentoo.org> nspr-4.3.ebuild:
+  version bump, fixes duplicate fstat symbol in library.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
