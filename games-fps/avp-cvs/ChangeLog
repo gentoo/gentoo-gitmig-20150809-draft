@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/avp-cvs
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp-cvs/ChangeLog,v 1.5 2004/03/31 03:40:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp-cvs/ChangeLog,v 1.6 2004/04/03 21:26:45 spyderous Exp $
+
+  03 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  avp-cvs-20031110.ebuild:
+  Change XFree86 references to X11.
 
   30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   avp-cvs-20031110.ebuild:
