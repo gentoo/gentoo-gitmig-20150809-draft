@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.8.3.ebuild,v 1.1 2004/12/29 14:06:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.8.3.ebuild,v 1.2 2005/01/05 15:40:14 foser Exp $
 
 inherit flag-o-matic
 
@@ -29,7 +29,7 @@ src_compile() {
 	# Restrictions taken from the mplayer ebuild
 	# See bug #64262 for more info
 	# let's play the filtration game!
-	filter-flags -fPIE -fPIC -fstack-protector -fforce-addr -momit-leaf-frame-pointer -msse2 -falign-functions
+	filter-flags -fPIE -fPIC -fstack-protector -fforce-addr -momit-leaf-frame-pointer -msse2 -msse3 -falign-functions
 	# ugly optimizations cause MPlayer to cry on x86 systems!
 	if use x86 ; then
 		replace-flags -O0 -O2
