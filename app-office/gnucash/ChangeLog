@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.20 2003/04/28 14:32:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.21 2003/05/01 15:49:15 liquidx Exp $
+
+  01 May 2003; Alastair Tse <liquidx@gentoo.org> gnucash-1.8.2-r1.ebuild:
+  fixed scrollkeeper problem and digest
 
 *gnucash-1.8.2-r1 (28 Apr 2003)
 
