@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/crypto-sources/crypto-sources-2.4.19-r6.ebuild,v 1.1 2002/05/27 17:27:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/crypto-sources/crypto-sources-2.4.19-r6.ebuild,v 1.2 2002/06/03 04:51:31 rphillips Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -11,8 +11,8 @@ KV=2.4.19-crypto-r6
 S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
 
-What's in this kernel?
-
+# What's in this kernel?
+#
 # INCLUDED:
 #	from http://www.kernel.org (ac):
 #		2.4.19-pre7-ac2
