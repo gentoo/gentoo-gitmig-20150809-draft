@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.11 2004/09/27 11:31:36 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.12 2004/12/04 07:12:05 usata Exp $
+
+  04 Dec 2004; Mamoru KOMACHI <usata@gentoo.org>
+  gentoolkit-dev-0.2.0_pre4.ebuild:
+  Stable on ppc-macos; _pre4 is the only one capable of handling ppc-macos
+  keyword correctly (ekeyword).
 
 *gentoolkit-dev-0.2.0_pre4 (27 Sep 2004)
 

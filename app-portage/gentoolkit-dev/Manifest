@@ -1,10 +1,20 @@
-MD5 16a90d2c6b7793793b6ad912cd9ea757 ChangeLog 1556
-MD5 e484d31cd82315c5a4430c58a504d7c7 gentoolkit-dev-0.2.0_pre1.ebuild 848
-MD5 5f551d730b5b9029b8ca6caa63bcea04 metadata.xml 282
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c74d778ed3124f3d7acfb7b5ab1647bf gentoolkit-dev-0.2.0_pre2.ebuild 836
 MD5 fdcdcebfdf3e2da4308d0c4d3d678669 gentoolkit-dev-0.2.0_pre3.ebuild 781
-MD5 c69ca73c327a9122bbf18f9fcd35a690 gentoolkit-dev-0.2.0_pre4.ebuild 870
+MD5 982041111c1c833e1090d37b2aad6cc3 ChangeLog 1748
+MD5 5f551d730b5b9029b8ca6caa63bcea04 metadata.xml 282
+MD5 e484d31cd82315c5a4430c58a504d7c7 gentoolkit-dev-0.2.0_pre1.ebuild 848
+MD5 3dd2008ba4f30e181cd110be265a665d gentoolkit-dev-0.2.0_pre4.ebuild 865
 MD5 2149baac97fc3c0f484b3e26700ec308 files/digest-gentoolkit-dev-0.2.0_pre1 76
 MD5 47a45e7f1915dc44fa7a790762a40b00 files/digest-gentoolkit-dev-0.2.0_pre2 76
 MD5 4d29b752105bd2477bfcae7da1e0ee2d files/digest-gentoolkit-dev-0.2.0_pre3 76
 MD5 5cd657348dea0e64cce7ab63cda746d0 files/digest-gentoolkit-dev-0.2.0_pre4 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (Darwin)
+
+iD8DBQFBsWNPVWNWqTUmv+0RAqXtAJ9uOaN/K3Ap0FcWqZsn1y2kibvPAgCgjlsQ
+2dHy9LLtXQho1ij895typEM=
+=OV0P
+-----END PGP SIGNATURE-----
