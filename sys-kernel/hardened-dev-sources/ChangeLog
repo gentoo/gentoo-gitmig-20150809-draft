@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.11 2004/04/18 08:30:44 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.12 2004/04/18 09:21:40 method Exp $
+
+  18 Apr 2004; Joshua Brindle <method@gentoo.org> :
+  added ramfs-xattr to hardened-patches
 
 *hardened-dev-sources-2.6.5-r2 (18 Apr 2004)
 
