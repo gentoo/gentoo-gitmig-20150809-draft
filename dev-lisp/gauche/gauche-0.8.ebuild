@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.8.ebuild,v 1.2 2004/06/24 23:58:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.8.ebuild,v 1.3 2004/07/04 09:30:57 hattya Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/gauche/${MY_P}.tgz"
 
 RESTRICT="nomirror"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
