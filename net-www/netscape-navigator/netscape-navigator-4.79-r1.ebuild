@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-navigator/netscape-navigator-4.79-r1.ebuild,v 1.12 2004/06/25 01:07:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-navigator/netscape-navigator-4.79-r1.ebuild,v 1.13 2005/03/15 20:07:32 seemant Exp $
 
 S=${WORKDIR}/navigator-v479.x86-unknown-linux2.2
 DESCRIPTION="Netscape Navigator 4.79"
@@ -10,6 +10,8 @@ HOMEPAGE="http://developer.netscape.com/support/index.html"
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc"
 LICENSE="NETSCAPE"
+
+IUSE=""
 
 RDEPEND=">=sys-libs/lib-compat-1.0
 	net-www/netscape-flash"
