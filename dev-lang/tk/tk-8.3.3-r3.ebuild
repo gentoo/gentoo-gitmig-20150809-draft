@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.3-r3.ebuild,v 1.4 2003/02/13 10:31:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.3-r3.ebuild,v 1.5 2003/03/20 21:08:05 zwelch Exp $
 
 S=${WORKDIR}/${PN}${PV}
 SRC_URI="ftp://ftp.scriptics.com/pub/tcl/tcl8_3/${PN}${PV}.tar.gz"
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha arm"
 
 src_unpack() {
 	unpack ${A}

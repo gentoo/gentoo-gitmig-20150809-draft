@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/tk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.11 2003/03/08 15:00:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.12 2003/03/20 21:08:05 zwelch Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
@@ -13,6 +13,9 @@
   New revision.
 
 *tk-8.3.3-r3 (11 Nov 2002)
+
+  20 Mar 2003; Zach Welch <zwelch@gentoo.org> tk-8.3.3-r3.ebuild:
+  add arm keyword
 
   11 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org>
   tk-8.3.3-r3.ebuild files/digest-tk-8.3.3-r3:
