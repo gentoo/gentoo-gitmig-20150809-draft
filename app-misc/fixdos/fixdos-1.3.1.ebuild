@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fixdos/fixdos-1.3.1.ebuild,v 1.2 2002/07/25 16:55:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fixdos/fixdos-1.3.1.ebuild,v 1.3 2002/10/17 00:14:17 vapier Exp $
 
 S=${WORKDIR}/fixDos-${PV}
 DESCRIPTION="Set of utilities such as crlf which converts files between UNIX and DOS newlines."
@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.3.2.ebuild,v 1.4 2002/07/29 18:32:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.3.2.ebuild,v 1.5 2002/10/17 00:19:01 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ROX-Filer is a fast and powerful graphical file manager"
@@ -15,10 +15,9 @@ DEPEND=">=x11-libs/gtk+-2.0.5
 	>=dev-libs/glib-2.0.4
 	>=dev-libs/libxml2-2.4.23
 	>=x11-misc/shared-mime-info-0.7"
-
+RDEPEND="${DEPEND}"
 
 src_install() {
-
 	# libxml2 header fix
 	CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml -I/usr/include/libxml2"
 

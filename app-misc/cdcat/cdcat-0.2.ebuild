@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/cdcat-0.2.ebuild,v 1.4 2002/10/04 04:54:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/cdcat-0.2.ebuild,v 1.5 2002/10/17 00:07:24 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="CD Catalog is a simple yet effective CD indexing program."
@@ -15,6 +15,7 @@ DEPEND=">=sys-apps/sed-3.02.80
 	>=sys-apps/grep-2.4.2
 	>=sys-apps/findutils-4.1
 	>=app-cdr/cdrtools-1.11"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.0.1.ebuild,v 1.7 2002/10/04 04:54:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.0.1.ebuild,v 1.8 2002/10/17 00:06:29 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="boxes draws any kind of boxes around your text!"
@@ -8,6 +8,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/utils/text/${P}.src.tar.gz"
 HOMEPAGE="http://www6.informatik.uni-erlangen.de/~tsjensen/boxes/"
 
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99.2.ebuild,v 1.6 2002/10/04 04:55:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99.2.ebuild,v 1.7 2002/10/17 00:14:17 vapier Exp $
 
 SYNCMAL="0.62.2"
 MALSYNC="2.0.7"
@@ -14,6 +14,7 @@ HOMEPAGE="http://jpilot.org/"
 # And you'll also need an avangto account. 
 
 DEPEND="=x11-libs/gtk+-1.2* >=dev-libs/pilot-link-0.9.5"
+RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -48,7 +49,6 @@ src_compile() {
 }
 
 src_install() {
-
 	# work around for broken Makefile
 	dodir /usr/bin
 
@@ -65,6 +65,4 @@ src_install() {
 	newdoc jpilot-syncmal_${SYNCMAL}/README README.jpilot-syncmal
 	dodoc jpilot-syncmal_${SYNCMAL}/malsync/Doc/README_AvantGo 
 	dodoc jpilot-syncmal_${SYNCMAL}/malsync/Doc/README_malsync
-
 }
-

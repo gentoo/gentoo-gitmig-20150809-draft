@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a.ebuild,v 1.2 2002/10/05 05:39:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a.ebuild,v 1.3 2002/10/17 00:08:19 vapier Exp $
 
 IUSE="X"
 
@@ -15,6 +15,7 @@ KEYWORDS="x86"
 
 DEPEND="X? ( virtual/x11 )
 	sys-libs/ncurses"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 

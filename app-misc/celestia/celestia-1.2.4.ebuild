@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/celestia-1.2.4.ebuild,v 1.6 2002/10/05 05:39:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/celestia-1.2.4.ebuild,v 1.7 2002/10/17 00:07:24 vapier Exp $
 
 IUSE="gtk gnome"
 
@@ -20,6 +20,7 @@ DEPEND="gtk? ( =x11-libs/gtk+-1.2*
 	virtual/glu
 	media-libs/jpeg
 	media-libs/libpng"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	local myconf

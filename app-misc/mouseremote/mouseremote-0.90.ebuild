@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/mouseremote-0.90.ebuild,v 1.4 2002/10/04 04:57:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/mouseremote-0.90.ebuild,v 1.5 2002/10/17 00:16:37 vapier Exp $
 
 S=${WORKDIR}/MouseRemote
 DESCRIPTION="X10 MouseRemote"
@@ -14,7 +14,6 @@ KEYWORDS="x86"
 RDEPEND="dev-perl/Time-HiRes"
 DEPEND="${RDEPEND}"
 
-
 src_compile() {
 	patch -p1 < ${FILESDIR}/${PN}-gentoo.diff || die
 	cd MultiMouse && emake \
@@ -23,11 +22,11 @@ src_compile() {
 	    JMANDIR=/usr/share/man/ja_JP.ujis || die
 }
 
-src_install () {
+src_install() {
 	dobin MultiMouse/multimouse
 	dosbin MultiMouse/multimoused
 
-    dodoc README MultiMouse/README.jis MultiMouse/README.newstuff
+	dodoc README MultiMouse/README.jis MultiMouse/README.newstuff
 	newdoc MultiMouse/README README.MultiMouse
 	newdoc client/MouseRemote.conf MouseRemote.conf.dist
 	newdoc client/MouseRemote.pl MouseRemote.pl.dist
@@ -45,10 +44,10 @@ pkg_postinst() {
 
 	einfo "To use the mouse function in X, add the following to your XF86Config"
 	einfo "Section \"InputDevice\""
-    einfo "	Identifier  \"MouseREM\""
-    einfo "	Driver      \"mouse\""
-    einfo "	Option      \"Protocol\"      \"MouseSystems\""
-    einfo "	Option      \"Device\"        \"/dev/mumse\""
+	einfo "	Identifier  \"MouseREM\""
+	einfo "	Driver      \"mouse\""
+	einfo "	Option      \"Protocol\"      \"MouseSystems\""
+	einfo "	Option      \"Device\"        \"/dev/mumse\""
 	einfo "EndSection"
 	einfo
 	einfo "Don't forget to add the new device to the section \"ServerLayout\""

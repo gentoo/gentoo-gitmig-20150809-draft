@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux_logo/linux_logo-4.05.ebuild,v 1.1 2002/10/13 01:46:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux_logo/linux_logo-4.05.ebuild,v 1.2 2002/10/17 00:14:56 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Displays an ansi or an ascii logo and some system information."
@@ -8,6 +8,7 @@ SRC_URI="http://www.deater.net/weave/vmwprod/linux_logo/${P}.tar.gz"
 HOMEPAGE="http://www.deater.net/weave/vmwprod/linux_logo/" 
 
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -26,7 +27,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	dobin linux_logo
 	doman linux_logo.1
 	dodoc BUGS CHANGES COPYING README README.CUSTOM_LOGOS TODO USAGE

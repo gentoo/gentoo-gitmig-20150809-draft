@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.4 2002/10/05 05:39:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.5 2002/10/17 00:19:01 vapier Exp $
 
 IUSE="readline"
 
@@ -16,9 +16,9 @@ KEYWORDS="x86"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	readline? ( >=sys-libs/readline-4.1 )"
+RDEPEND="${DEPEND}"
 
 src_compile() {
-
 	cp -f Makefile Makefile.orig
 	sed -e "s:^LIBTERMCAP=-ltermcap$:LIBTERMCAP=-lncurses:" \
 		Makefile.orig > Makefile
@@ -44,8 +44,8 @@ src_install() {
 
 pkg_postinst() {
 	if ! groupmod usb; then
-        groupadd -g 85 usb || die "problem adding group usb"
-    fi
+		groupadd -g 85 usb || die "problem adding group usb"
+	fi
 
 	echo
 	einfo "To use nomadii, you need to have usbdevfs compiled in your kernel"

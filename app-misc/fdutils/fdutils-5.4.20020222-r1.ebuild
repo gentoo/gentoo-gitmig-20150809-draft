@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222-r1.ebuild,v 1.1 2002/10/03 08:46:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222-r1.ebuild,v 1.2 2002/10/17 00:10:30 vapier Exp $
 
 S=${WORKDIR}/${PN}-5.4
 DESCRIPTION="The fdutils package contains utilities for configuring and debugging the Linux floppy driver"
@@ -14,6 +14,7 @@ KEYWORDS="x86"
 
 DEPEND=">=app-admin/mtools-3
 	>=app-text/tetex-1.0.7-r10"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack fdutils-5.4.tar.gz
@@ -25,8 +26,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
-	
+src_install() {
 	dodir /usr/bin
 	dodir /usr/share/man/man1
 	dodir /usr/share/man/man4

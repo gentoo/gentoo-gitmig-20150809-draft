@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.14.ebuild,v 1.4 2002/10/04 04:54:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.14.ebuild,v 1.5 2002/10/17 00:10:30 vapier Exp $
 
 M=endeavour2-mimetypes
 S=${WORKDIR}/${P}
@@ -16,6 +16,7 @@ KEYWORDS="x86"
 DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.10
 	>=media-gfx/iv-0.1.9"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
@@ -30,7 +31,7 @@ src_compile() {
 }
 
 
-src_install () {
+src_install() {
 	dobin endeavour2/endeavour2
 	doman endeavour2/endeavour2.1
 	dodir /usr/share/icons
