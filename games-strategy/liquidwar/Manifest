@@ -1,7 +1,4 @@
 MD5 276848de3047f6cb6ec7e57a32485231 ChangeLog 1912
 MD5 f2edf9e2c34dd58338a5b5be25ea97e0 liquidwar-5.6.2.ebuild 1575
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 338e51c1ff06b37b39cd888bbaa566cf liquidwar-5.6.1.ebuild 1079
 MD5 baa58ba47700f8e6b8525f9d35093e57 files/digest-liquidwar-5.6.2 68
-MD5 29a673ba920badafbb70251f63177d18 files/liquidwar-gcc-3.3-fix.patch 1134
-MD5 501e5f0f75ebd8b160bb68a0511dff51 files/digest-liquidwar-5.6.1 68
