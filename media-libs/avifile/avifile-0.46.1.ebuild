@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avifile/avifile-0.46.1.ebuild,v 1.1 2000/09/08 19:06:35 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avifile/avifile-0.46.1.ebuild,v 1.2 2000/09/08 20:33:36 achim Exp $
 
 A="${P}.tar.gz binaries.zip"
 S=${WORKDIR}/${P}
@@ -32,6 +32,11 @@ src_install () {
     dodir /usr/libexec/avifile/win32
     cd ${D}/usr/libexec/avifile/win32
     unzip ${DISTDIR}/binaries.zip
+    cd ${S}
+    dodoc COPYING README
+    cd doc
+    dodoc CREDITS EXCEPTIONS FreeBSD LICENSING TODO
+    dodoc VIDEO-PERFORMANCE WARNINGS
 }
 
 
