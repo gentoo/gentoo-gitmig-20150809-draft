@@ -1,6 +1,11 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.21 2002/12/15 21:34:48 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.22 2002/12/22 21:59:19 foser Exp $
+
+*abiword-1.0.4_pre1-r2 (22 Dec 2002)
+
+  22 Dec 2002; foser <foser@gentoo.org> abiword-1.0.4_pre1-r2.ebuild :
+  And we're giving the perl stuff a chance again
 
 *abiword-1.0.4_pre1-r1 (19 Nov 2002)
 
