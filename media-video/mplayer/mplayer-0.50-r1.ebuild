@@ -33,7 +33,7 @@ DEPEND="virtual/glibc
 
 RDEPEND="virtual/glibc
         media-libs/win32codecs
-        >=media-libs/divx4linux-20010824
+        >=media-libs/divx4linux-20011010
         dvd? ( media-libs/libdvdread )
         decss? ( media-libs/libdvdcss )
 	opengl? ( virtual/opengl )
