@@ -1,39 +1,34 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmltex/xmltex-1.0.ebuild,v 1.3 2001/04/11 18:12:38 achim Exp $
+# Author: Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmltex/xmltex-1.0.ebuild,v 1.4 2002/04/27 09:36:11 seemant Exp $
 
-#P=
-A=base.tar.gz
-S=${WORKDIR}/base
+MY_P="base"
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="A namespace-aware XML parser written in Tex"
-SRC_URI="ftp://ftp.tex.ac.uk/tex-archive/macros/xmltex/${A}"
+SRC_URI="ftp://ftp.tex.ac.uk/tex-archive/macros/xmltex/${MY_P}.tar.gz"
 HOMEPAGE="http://users.ox.ac.uk/~rahtz/passivetex/"
 
 DEPEND="app-text/tetex"
-
-src_unpack() {
-    unpack ${A}
-    cd ${S}
-    cp ${FILESDIR}/${P}-Makefile Makefile
-}
+SLOT="0"
 
 src_compile() {
-    try make
+	cp ${FILESDIR}/${P}-Makefile Makefile
+	make || die
 }
 
 src_install () {
 
-    try make DESTDIR=${D} install
-    dodir /usr/bin
-    cd ${D}/usr/bin
-    ln -sf /usr/bin/virtex xmltex
-    ln -sf /usr/bin/pdfvirtex pdfxmltex
+	make DESTDIR=${D} install || die
+	dodir /usr/bin
+	cd ${D}/usr/bin
+	ln -sf /usr/bin/virtex xmltex
+	ln -sf /usr/bin/pdfvirtex pdfxmltex
 }
 
 pkg_postinst() {
-  if [ -e /usr/bin/mktexlsr ]
-  then
-    /usr/bin/mktexlsr
-  fi
+	if [ -e /usr/bin/mktexlsr ]
+	then
+		/usr/bin/mktexlsr
+	fi
 }
