@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.16 2003/07/26 00:02:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.17 2003/07/26 00:46:11 vapier Exp $
 
 *vmware-workstation-4.0.4460-r1 (25 Jul 2003)
 
@@ -31,7 +31,12 @@
   11 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump for people who want to use the beta.
 
-*vmware-workstation-3.2.1.2237.ebuild (17 Jul 2003)
+*vmware-workstation-3.2.1.2237-r1 (25 Jul 2003)
+
+  25 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to try to add glibc-2.3.2 support #16444.
+
+*vmware-workstation-3.2.1.2237 (17 Jul 2003)
 
   17 Jul 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump to the latest version of 3.2.
