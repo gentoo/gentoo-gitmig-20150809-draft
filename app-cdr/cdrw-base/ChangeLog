@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrw-base
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrw-base/ChangeLog,v 1.4 2003/11/09 18:58:21 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrw-base/ChangeLog,v 1.5 2003/11/10 01:53:49 spyderous Exp $
+
+  09 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; cdrw-base-0.2.ebuild:
+  Fixing typos in description.
 
   09 Nov 2003; <spider@gentoo.org> cdrw-base-0.2.ebuild:
   Moved to x86
