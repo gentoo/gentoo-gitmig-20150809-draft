@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.2-r1.ebuild,v 1.5 2002/08/01 11:40:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.2-r1.ebuild,v 1.6 2002/08/01 19:43:01 gerk Exp $
 inherit kde kde.org
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
 # check need for glib >=1.3.3 (we have 1.2.10 only; configure has no glib flag but searches for it)
 
 DESCRIPTION="KDE $PV - base libraries needed by all kde programs"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 HOMEPAGE="http//www.kde.org/"
 
 SLOT="3.0"

@@ -1,8 +1,11 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.5 2002/07/03 07:57:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.6 2002/08/01 19:46:03 gerk Exp $
 
 *kdesdk-3.0.2 (03 Jul 2002)
+
+  01 Aug 2002; Mark Guertin <gerk@gentoo.org> kde-3.0.2.ebuild :
+  Added ppc to keywords
 
   03 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  : : : : : : : : : : : : : :
 

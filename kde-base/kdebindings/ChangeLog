@@ -4,6 +4,9 @@
 
 *kdebindings-3.0.2 (04 Jul 2002)
  
+  01 Aug 2002; Mark Guertin <gerk@gentoo.org> kde-3.0.2.ebuild :
+  Added ppc to keywords
+
   04 Jul 2002; phoen][x <phoenix@gentoo.org>
 
   Added the digest.

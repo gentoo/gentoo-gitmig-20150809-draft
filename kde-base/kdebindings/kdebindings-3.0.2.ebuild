@@ -6,7 +6,7 @@ inherit kde-dist
 
 DESCRIPTION="KDE $PV - kde library bindings for languages other than c++"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 newdepend ">=kde-base/kdebase-${PV}
 	=x11-libs/gtk+-1.2*
