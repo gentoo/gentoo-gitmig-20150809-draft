@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-2.2.0.ebuild,v 1.3 2005/01/28 02:04:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-2.2.0.ebuild,v 1.4 2005/03/24 19:12:00 vanquirius Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A remote security scanner for Linux (nessus-plugins)"
@@ -10,12 +10,7 @@ DEPEND=">=net-analyzer/nessus-core-${PV}"
 SLOT="0"
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ppc64"
-
-src_compile() {
-	econf || die "configure failed"
-	emake || die "emake failed"
-}
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64 ~ppc64"
 
 src_install() {
 	make \
