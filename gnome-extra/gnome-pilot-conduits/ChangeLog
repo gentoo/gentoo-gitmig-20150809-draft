@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-pilot-conduits
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot-conduits/ChangeLog,v 1.6 2003/03/14 01:52:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot-conduits/ChangeLog,v 1.7 2003/04/21 14:53:44 liquidx Exp $
+
+*gnome-pilot-conduits-2.0.5 (21 Apr 2003)
+
+  21 Apr 2003; Alastair Tse <liquidx@gentoo.org>
+  gnome-pilot-conduits-2.0.5.ebuild:
+  evo-1.3.2 version bump. note that palm is not currently supported in evo-1.3.2
+  so do not merge this unless you know what you are doing.
 
 *gnome-pilot-conduits-2.0.1 (14 Mar 2003)
 
