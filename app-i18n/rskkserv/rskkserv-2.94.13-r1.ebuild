@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.94.13-r1.ebuild,v 1.1 2004/03/02 19:27:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.94.13-r1.ebuild,v 1.2 2004/03/27 16:27:06 usata Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.unixuser.org/~ysjj/rskkserv/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="dev-lang/ruby
 	dev-ruby/ruby-tcpwrap"
