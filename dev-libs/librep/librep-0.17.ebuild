@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17.ebuild,v 1.9 2004/10/03 21:17:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17.ebuild,v 1.10 2004/10/14 03:11:54 lu_zero Exp $
 
 IUSE="readline"
 
@@ -29,7 +29,7 @@ src_compile() {
 	use readline \
 		&& myconf='--with-readline' \
 		|| myconf='--without-readline'
-
+	use ppc && myconf="${myconf} --with-stack-direction=1"
 	LC_ALL=""
 	LINGUAS=""
 	LANG=""

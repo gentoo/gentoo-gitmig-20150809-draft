@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6b54ac0aa944746708d6657b49db4fc8 ChangeLog 3453
-MD5 cb0797d43ae9e4509e2103ffa7426a7d librep-0.16.2.ebuild 1224
-MD5 9748a678f70abaef59c68318f9453392 librep-0.17.ebuild 1226
+MD5 480474336414d1a7f92e33f628fb9a8e librep-0.17.ebuild 1281
+MD5 2ee6de1fcf9d584fa9ee5cdd1828ddac ChangeLog 3541
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 cb0797d43ae9e4509e2103ffa7426a7d librep-0.16.2.ebuild 1224
 MD5 93ba6a49abdce2a3efd71bcb47bc6ca2 files/digest-librep-0.16.2 64
 MD5 07a234e62724c3d45a1b69f1c04cd0a9 files/digest-librep-0.17 64
 MD5 8c655620e7f5d0dc0ee9b8ef6351158d files/librep-0.15.2-exec.patch 425
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYGxZI1lqEGTUzyQRAjvhAJ9hVtpXj5OA+MTPvT4wf60bNip8HQCfWBWu
-Pe9bcr8ip+bArCQXsIm/XF4=
-=Iolj
------END PGP SIGNATURE-----
