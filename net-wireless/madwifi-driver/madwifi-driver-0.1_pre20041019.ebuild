@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20041019.ebuild,v 1.1 2004/10/19 18:49:42 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20041019.ebuild,v 1.2 2004/10/22 19:16:11 solar Exp $
 
-# All work on madwifi is pretty much done under the WPA branch. At some
-# point in the near future it should be merged back into HEAD. 
-# cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/madwifi co -r WPA madwifi
+# cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/madwifi login
+# cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/madwifi co -r HEAD madwifi
+# cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/madwifi logout
 
 inherit eutils kernel-mod
 
@@ -21,7 +21,8 @@ SLOT="0"
 
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="app-arch/sharutils"
+RDEPEND=""
 
 S=${WORKDIR}
 
