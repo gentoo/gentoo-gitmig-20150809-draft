@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/getmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.12 2004/06/24 23:22:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.13 2004/07/07 20:45:35 langthang Exp $
+
+  07 Jul 2004; Tuan Van<langthang@gentoo.org> :
+  Version bump bug #47741. Thanks to tove <bugs-at-veller-dot-net>, Daniel 
+  Webert <daniel_webert-at-web-dot-de>.
 
   07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> getmail-3.2.1.ebuild:
   Stable on alpha.
