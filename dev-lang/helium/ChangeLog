@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/helium
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.9 2004/07/02 04:27:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.10 2004/10/16 23:10:26 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> helium-1.1.ebuild,
+  helium-1.2.ebuild:
+  dojar --> java-pkg_dojar
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> helium-1.1.ebuild,
   helium-1.2.ebuild:

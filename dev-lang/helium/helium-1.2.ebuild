@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.2.ebuild,v 1.5 2004/07/02 04:27:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.2.ebuild,v 1.6 2004/10/16 23:10:26 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="Helium (for learning Haskell)"
 HOMEPAGE="http://www.cs.uu.nl/helium"
@@ -50,7 +52,7 @@ src_install() {
 		demodir=${D}/usr/lib/helium/demo \
 		install || die
 	# install hint
-	dojar ${DISTDIR}/Hint.jar
+	java-pkg_dojar ${DISTDIR}/Hint.jar
 	# create wrappers
 	dobin ${FILESDIR}/helium-wrapper
 	dosym /usr/bin/helium-wrapper /usr/bin/helium
