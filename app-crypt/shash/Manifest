@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 88c9ad71a6e9e0fff5296cff9f8e7824 ChangeLog 1402
+MD5 942587c5975588bb061a1d880a24e37f ChangeLog 1481
 MD5 5aa9af147b815004b0cf0a2dfd88124a metadata.xml 445
 MD5 8605e5cb3c656b6a328ee62118ef605e shash-0.2.6-r1.ebuild 1015
 MD5 6a686d232cbb0eeadba51ea32851c8a9 files/0.2.6-manpage-fixes.patch 1451
@@ -10,7 +10,7 @@ MD5 1f217dc9a5042927a1cf690a44da380f files/shash.bash-completion 1003
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBmHgiI1lqEGTUzyQRAh2JAJ4/OxkudLF6KICqzn4NINvd7s2VfgCghtjK
-KYIfZM1aHbaaYkUr5lV5PvU=
-=cQEe
+iD8DBQFBmHlDI1lqEGTUzyQRAgZUAKCMLZnkyGJWWgypqyE6OiwaoVQYGwCgr6no
+Evo0A4Oe7lx88M1yEOkyyjA=
+=ri7i
 -----END PGP SIGNATURE-----
