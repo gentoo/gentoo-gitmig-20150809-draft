@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.28 2004/09/03 21:03:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.29 2004/09/22 12:21:53 liquidx Exp $
+
+*usbutils-0.11-r4 (22 Sep 2004)
+
+  22 Sep 2004; Alastair Tse <liquidx@gentoo.org> +usbutils-0.11-r4.ebuild:
+  new sanitised usb.ids (#59411)
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   usbutils-0.11-r1.ebuild, usbutils-0.11.ebuild:
