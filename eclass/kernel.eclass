@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.40 2003/11/18 19:41:12 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.41 2003/11/18 19:43:09 johnm Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -13,7 +13,7 @@ EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 [ -z "${OKV}" ] && OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
 
-if [ -z "${EXTRAVERSION}" -a "${PN/-*/}" != "linux" -a "${PN/-*/}" != "vanilla"]
+if [ -z "${EXTRAVERSION}" -a "${PN/-*/}" != "linux" -a "${PN/-*/}" != "vanilla" ]
 then
 	EXTRAVERSION="-${PN/-*/}"
 	[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
