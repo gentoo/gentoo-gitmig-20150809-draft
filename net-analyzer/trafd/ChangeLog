@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/trafd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/ChangeLog,v 1.6 2004/06/24 22:22:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/ChangeLog,v 1.7 2004/07/10 10:28:11 eldad Exp $
+
+  10 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
+  trafd-3.0.1.ebuild:
+  Tidy up
 
   15 Jun 2004; Jon Hood <squinky86@gentoo.org> trafd-3.0.1.ebuild:
   applying fixes from Eldad Zack <eldad@stoneshaft.ath.cx>

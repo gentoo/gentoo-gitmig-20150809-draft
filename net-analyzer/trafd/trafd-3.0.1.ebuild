@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/trafd-3.0.1.ebuild,v 1.7 2004/06/24 22:22:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/trafd-3.0.1.ebuild,v 1.8 2004/07/10 10:28:11 eldad Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="The BPF Traffic Collector"
 SRC_URI="ftp://ftp.riss-telecom.ru/pub/dev/trafd/${P}.tgz
 	http://metalab.unc.edu/pub/Linux/system/network/management/tcpdump-richard-1.7.tar.gz
@@ -14,6 +13,7 @@ HOMEPAGE="ftp://ftp.riss-telecom.ru/pub/dev/trafd/"
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="x86"
+IUSE=""
 
 # -lbpft -lpcap -lcurses -ltermcap -lfl
 DEPEND="net-libs/libpcap
