@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/apachetop
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.8 2004/03/30 22:44:55 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.9 2004/03/30 23:07:38 zul Exp $
+
+  30 Mar 2004; Chuck Short <zul@gentoo.org> :
+  Version bump, closes #41429.
+  Added depend on sys-libs/libtermcap-compat or apachetop would not build.
 
 *apachetop-0.10 (30 Mar 2004)
 
