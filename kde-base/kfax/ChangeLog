@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfax/ChangeLog,v 1.1 2005/01/15 02:24:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfax/ChangeLog,v 1.2 2005/01/17 17:29:06 danarmak Exp $
+
+  17 Jan 2005; Dan Armak <danarmak@gentoo.org> kfax-3.4.0_beta1.ebuild:
+  Add missing dep on tiff, needed for kfaxview. Closes bug #78317.
 
 *kfax-3.4.0_beta1 (15 Jan 2005)
 
