@@ -10,9 +10,10 @@ HOMEPAGE="http://people.easter-eggs.org/~valos/wmdrawer/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
-DEPEND="virtual/x11"
+DEPEND="virtual/x11
+	media-libs/gdk-pixbuf"
 
 src_compile() {
 	emake || die "make failed!"
@@ -20,7 +21,7 @@ src_compile() {
 
 src_install() {
 	dobin wmdrawer
-	dodoc COPYING INSTALL README TODO wmdrawerrc.example 
+	dodoc COPYING INSTALL README TODO AUTHORS ChangeLog wmdrawerrc.example 
 	gzip -cd doc/wmdrawer.1x.gz > wmdrawer.1
 	doman wmdrawer.1
 }
