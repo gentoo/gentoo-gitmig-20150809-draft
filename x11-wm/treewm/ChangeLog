@@ -1,12 +1,16 @@
 # ChangeLog for x11-wm/treewm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/treewm/ChangeLog,v 1.10 2003/09/17 02:24:04 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/treewm/ChangeLog,v 1.11 2004/02/18 15:22:36 lordvan Exp $
 
 *treewm-0.4.5 (16 Sep 2003)
 
   16 Sep 2003; <chuck@gentoo.org> treewm-0.4.5.ebuild:
   Version bump, thanks to Rudolf Polzer <gentoo-oe@durchnull.de>.
   Closes bug #28812.
+  18 Feb 2004; Thomas Raschbacher <lordvan@gentoo.org> treewm-0.4.5.ebuild:
+  0.4.5: Marked stable on x86
+  0.4.4: added sys-apps/chpax dep; Thanks to James Lund <vax@ufreeze.com>
+  Bug #39542 
 
 *treewm-0.4.4 (14 Sep 2003)
   14 Sep 2003; Thomas Raschbacher <lordvan@gentoo.org> treewm-0.4.4.ebuild:
