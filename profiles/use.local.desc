@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.314 2004/04/24 19:03:51 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.315 2004/04/25 01:42:31 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -239,7 +239,7 @@ net-misc/asterisk:nozaptel - Disable zaptel support
 net-misc/gnugk:accounting - Enables call logging (accounting)
 net-misc/gnugk:radius - Enables radius support
 net-misc/ntp:nodroproot - Disable support for running ntpd as a non-root user
-net-misc/ntp:parse-clocks - Add parse clock support
+net-misc/ntp:parse-clocks - Add support for PARSE clocks
 net-misc/nut:cgi - Add CGI script support
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:chroot - Enable chrooting support.
