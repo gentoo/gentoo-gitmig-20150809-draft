@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20021002.ebuild,v 1.1 2002/11/15 14:49:27 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20021002.ebuild,v 1.2 2002/11/15 15:19:33 cretin Exp $
 
 IUSE=""
 
@@ -16,7 +16,9 @@ SLOT="0"
 
 KEYWORDS="x86 sparc sparc64 ppc alpha"
 
-DEPEND=">=dev-libs/libelf-0.8"
+DEPEND=">=dev-libs/libelf-0.8
+		>=sys-libs/glibc-2.3.1
+		>=sys-devel/binutils-2.13.90.0.10"
 
 S="${WORKDIR}/prelink"
 
