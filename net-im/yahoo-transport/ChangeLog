@@ -1,6 +1,11 @@
 # ChangeLog for net-im/yahoo-transport
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/ChangeLog,v 1.5 2004/04/08 02:14:56 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/ChangeLog,v 1.6 2004/04/27 22:03:21 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  yahoo-transport-2.3.0-r1.ebuild, yahoo-transport-2.3.0-r2.ebuild,
+  yahoo-transport-2.3.0.ebuild:
+  Add inherit eutils
 
 *yahoo-transport-2.3.0-r2 (08 Apr 2004)
 

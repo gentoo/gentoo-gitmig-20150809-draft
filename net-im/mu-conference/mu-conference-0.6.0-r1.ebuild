@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.6.0-r1.ebuild,v 1.1 2004/04/08 02:10:07 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.6.0-r1.ebuild,v 1.2 2004/04/27 22:00:54 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Jabber Multi-User Chat"
 HOMEPAGE="http://mu-conference.jabberstudio.org/"
