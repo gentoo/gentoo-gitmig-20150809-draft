@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.21 2005/02/05 15:51:41 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.22 2005/02/06 06:30:35 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -76,11 +76,9 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	jack? ( >=media-libs/bio2jack-0.3-r1 )
 	xmms? ( media-sound/xmms )
 	xanim? ( >=media-video/xanim-2.80.1-r4 )
-	>=sys-apps/portage-2.0.36
 	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}
-	x86? ( dev-lang/nasm )
 	app-arch/unzip"
 
 SLOT="0"
@@ -166,6 +164,10 @@ src_unpack() {
 	# backport the gif recognition from pre6...
 	# yay! - Chris
 	epatch ${FILESDIR}/${PN}-gif.patch
+
+	# fixes 80564 involved in x11 lib directory
+	# detection
+	epatch ${FILESDIR}/${PN}-x11.patch
 }
 
 linguas_warn() {

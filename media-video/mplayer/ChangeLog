@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.267 2005/02/05 15:51:40 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.268 2005/02/06 06:30:35 chriswhite Exp $
+
+  06 Feb 2005; Chris White <chriswhite@gentoo.org> +files/mplayer-x11.patch,
+  mplayer-1.0_pre5-r5.ebuild, mplayer-1.0_pre6.ebuild:
+  Fixed bug #80564 with a patch by nickc and removed uneeded deps on portage and
+  nasm.
 
   06 Feb 2005; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r5.ebuild,
   mplayer-1.0_pre6.ebuild:
