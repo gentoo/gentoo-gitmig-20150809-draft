@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.22 2004/10/30 10:41:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.23 2004/11/13 07:07:03 kito Exp $
+
+  13 Nov 2004; Kito <kito@gentoo.org> :
+  added patch from FreeBSD ports. Fixes mem leaks and minor display bugs.
+  ~ppc-macos keyword
 
   30 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mpg321-0.2.10-r1.ebuild:
