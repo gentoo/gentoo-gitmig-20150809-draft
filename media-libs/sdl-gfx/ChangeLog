@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/sdl-gfx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.9 2003/03/04 09:42:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.10 2003/03/10 22:19:43 agriffis Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -10,6 +10,9 @@
 
 
 *sdl-gfx-2.0.3 (5 Jul 2002)
+
+  10 Mar 2003; Aron Griffis <agriffis@gentoo.org> sdl-gfx-2.0.3.ebuild:
+  Mark stable on alpha
 
   04 Mar 2003; Seemant Kulleen <seemant@gentoo.org> sdl-gfx-2.0.3.ebuild:
   filter flags to change the -O to -O2

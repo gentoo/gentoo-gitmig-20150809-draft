@@ -1,10 +1,13 @@
 # ChangeLog for media-libs/sdlmm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdlmm/ChangeLog,v 1.5 2003/02/12 07:17:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdlmm/ChangeLog,v 1.6 2003/03/10 22:19:43 agriffis Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *sdlmm-0.1.8-r1 (7 Sep 2002)
+
+  10 Mar 2003; Aron Griffis <agriffis@gentoo.org> sdlmm-0.1.8-r1.ebuild:
+  Mark stable on alpha
 
   7 Sep 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   sdlmm-0.1.8-r1.ebuild, files/digest-sdlmm-0.1.8-r1 :
