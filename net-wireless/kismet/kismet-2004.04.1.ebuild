@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.04.1.ebuild,v 1.3 2004/06/25 00:45:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.04.1.ebuild,v 1.4 2004/06/25 12:56:58 hanno Exp $
 
 MY_P=${P/\./-}
 MY_P=${MY_P/./-R}
@@ -20,6 +20,11 @@ DEPEND="gps? ( >=dev-libs/expat-1.95.4 dev-libs/gmp media-gfx/imagemagick )
 RDEPEND="net-wireless/wireless-tools"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/kismet_gcc34.gz
+}
 
 src_compile() {
 	local myconf
