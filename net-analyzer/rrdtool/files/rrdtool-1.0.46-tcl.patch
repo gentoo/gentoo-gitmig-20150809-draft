@@ -1,0 +1,26 @@
+--- rrdtool-1.0.46.orig/tcl/Makefile.am	2003-12-01 06:01:14.000000000 +0800
++++ rrdtool-1.0.46/tcl/Makefile.am	2004-03-09 12:07:43.000000000 +0800
+@@ -22,7 +22,7 @@
+ if COMP_TCL
+ 
+ $(TCL_LIB_FILE): tclrrd.o
+-        $(TCL_SHLIB_LD) $(LIBDIRS) $< -o $@ @RRD_PRIVATE_LINK@ -lm $(TCL_LIB_SPEC)
++	$(TCL_SHLIB_LD) $(LIBDIRS) $< -o $@ @RRD_PRIVATE_LINK@ -lm $(TCL_LIB_SPEC)
+ 
+ tclrrd.o: tclrrd.c
+ 	$(CC) $(CFLAGS) $(TCL_SHLIB_CFLAGS) $(INCLUDES) -c $< -DVERSION=\"$(VERSION)\"
+--- rrdtool-1.0.46.orig/tcl/Makefile.in	2004-01-04 20:40:54.000000000 +0800
++++ rrdtool-1.0.46/tcl/Makefile.in	2004-03-09 12:42:16.000000000 +0800
+@@ -320,10 +320,10 @@
+ 
+ 
+ @COMP_TCL_TRUE@$(TCL_LIB_FILE): tclrrd.o
+-@COMP_TCL_TRUE@        $(TCL_SHLIB_LD) $(LIBDIRS) $< -o $@ @RRD_PRIVATE_LINK@ -lm $(TCL_LIB_SPEC)
++@COMP_TCL_TRUE@	$(TCL_SHLIB_LD) $(LIBDIRS) $< -o $@ @RRD_PRIVATE_LINK@ -lm $(TCL_LIB_SPEC)
+ 
+ @COMP_TCL_TRUE@tclrrd.o: tclrrd.c
+-@COMP_TCL_TRUE@	$(CC) $(CFLAGS) $(TCL_SHLIB_CFLAGS) $(INCLUDES) -c $< -DVERSION=\"$(VERSION)\"
++@COMP_TCL_TRUE@	$(CC) $(CFLAGS) $(TCL_SHLIB_CFLAGS) $(INCLUDES) -I$(AM_CPPFLAGS) -c $< -DVERSION=\"$(VERSION)\"
+ 
+ @COMP_TCL_TRUE@all-local: $(TCL_LIB_FILE)
+ 

@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.30 2004/02/17 22:37:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.31 2004/03/09 05:39:51 mboman Exp $
+
+*rrdtool-1.0.46 (09 Mar 2004)
+
+  09 Mar 2004; Michael Boman <mboman@gentoo.org> rrdtool-1.0.46.ebuild,
+  files/rrdtool-1.0.46-tcl.patch:
+  New upstream version. Closes bug 43997.
 
   17 Feb 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   rrdtool-1.0.45-r2.ebuild:
