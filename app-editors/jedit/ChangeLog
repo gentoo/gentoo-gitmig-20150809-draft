@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.8 2002/10/19 12:22:53 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.9 2002/11/01 18:30:37 karltk Exp $
+
+*jedit-4.1_pre4 (01 Nov 2002)
+
+  19 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> jedit-4.1_pre4.ebuild files/digest-jedit-4.1_pre4 :
+  New upstream version. Ebuild submitted by Mike Rosseel <Mike.Rosseel@gmx.net>.
+
+*jedit-4.0.3-r2 (24 Jul 2002)
 
   19 Oct 2002; Maik Schreiber <blizzy@gentoo.org> jedit-4.0.ebuild,
   jedit-4.0.3.ebuild, jedit-4.0.3-r1.ebuild, jedit-4.0.3-r2.ebuild:
@@ -10,8 +17,6 @@
   jedit-4.0.3.ebuild, jedit-4.0.3-r1.ebuild, jedit-4.0.3-r2.ebuild:
   Disabled compilation with jikes: jikes-1.16 appears to produce
   garbage that makes jEdit fail on startup.
-
-*jedit-4.0.3-r2 (24 Jul 2002)
 
   18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> jedit-4.0.3-r2.ebuild :
   Updated to mirror://sourceforge in SRC_URI.
