@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r7.ebuild,v 1.6 2005/01/03 00:08:00 ciaranm Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r7.ebuild,v 1.7 2005/01/23 00:36:23 eradicator Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
-inherit eutils gnuconfig
+inherit eutils gnuconfig multilib
 
 # NOTE:  We install libltdl of libtool-1.3x for compat reasons ...
 
@@ -143,6 +143,9 @@ src_unpack() {
 src_compile() {
 	lt_setup
 
+	local myconf=
+	has_multilib_profile && myconf="--libdir=/usr/$(get_libdir)"
+
 	#
 	# ************ libtool-1.3x ************
 	#
@@ -150,7 +153,7 @@ src_compile() {
 	cd ${OLD_S}
 
 	einfo "Configuring ${OLD_S##*/} ..."
-	./configure --host=${CHOST} \
+	./configure ${myconf} --host=${CHOST} \
 			--prefix=/usr \
 			--infodir=/usr/share/info || die
 
@@ -164,7 +167,7 @@ src_compile() {
 	cd ${S}
 
 	einfo "Configuring ${S##*/} ..."
-	./configure --host=${CHOST} \
+	./configure ${myconf} --host=${CHOST} \
 		--prefix=/usr \
 		--infodir=/usr/share/info || die
 
