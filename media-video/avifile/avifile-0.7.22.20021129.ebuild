@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.22.20021129.ebuild,v 1.1 2002/12/13 06:49:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.22.20021129.ebuild,v 1.2 2002/12/13 22:24:40 lostlogic Exp $
 
 IUSE="nas avi sdl kde oggvorbis 3dnow qt"
 
@@ -87,7 +87,7 @@ src_install () {
 	dodir /usr/lib /usr/bin
 	use avi && dodir /usr/lib/win32
 
-	make prefix=${D}/usr datadir=${D}/usr/share install || die
+	make prefix=${D}/usr datadir=${D}/usr/share mandir=${D}/usr/share/man install || die
 
 	cd ${S}
 	dodoc COPYING README
