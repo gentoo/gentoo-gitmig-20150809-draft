@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Leo Lipelis <aeoo@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.18.ebuild,v 1.1 2002/02/02 08:09:15 aeoo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.18.ebuild,v 1.2 2002/02/02 08:13:46 aeoo Exp $
 
 
 S=${WORKDIR}/${P}
@@ -27,5 +27,5 @@ src_install() {
 	mv gentoorc gentoorc.orig
 	sed -e 's:\(<path>"\)icons\("</path>\):\1/usr/share/gentoo/icons\2:' \
 		gentoorc.orig > gentoorc
-	rm gentoo.orig
+	rm gentoorc.orig
 }
