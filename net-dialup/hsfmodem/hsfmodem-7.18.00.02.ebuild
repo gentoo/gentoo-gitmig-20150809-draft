@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.02.ebuild,v 1.1 2005/01/04 19:30:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.02.ebuild,v 1.2 2005/02/06 19:00:26 mrness Exp $
 
 DESCRIPTION="Linuxant's modem driver for Connexant HSF chipset"
 HOMEPAGE="http://www.linuxant.com/drivers/hsf/index.php"
@@ -11,7 +11,7 @@ DEPEND="virtual/libc"
 IUSE=""
 SLOT="0"
 LICENSE="Conexant"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* x86 ~amd64"
 
 S="${WORKDIR}"
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/hsfmodem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.3 2005/01/05 08:43:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.4 2005/02/06 19:00:26 mrness Exp $
+
+  06 Feb 2005; Alin Nastac <mrness@gentoo.org>
+  -hsfmodem-6.03.00.04111200.ebuild, hsfmodem-7.18.00.02.ebuild:
+  Mark stable on x86 and remove old one.
 
 *hsfmodem-7.18.00.02 (04 Jan 2005)
 
