@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.3 2004/11/16 16:00:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.4 2004/11/30 23:12:07 swegener Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -14,7 +14,7 @@ case ${PN} in
 esac
 
 RDEPEND="virtual/x11
-	!moznoxft ( virtual/xft )
+	!moznoxft? ( virtual/xft )
 	>=media-libs/fontconfig-2.1
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/jpeg-6b
