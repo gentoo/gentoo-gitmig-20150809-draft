@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 32587c6d187367d5766759020c923011 ChangeLog 4887
+MD5 46820289f983c43ef27cf0cec2b9c18a ChangeLog 5080
 MD5 ed81470e0a1698d713b04ecb69d5a9e0 metadata.xml 449
-MD5 595ce03a36cf50bcbc04a606a7a49529 frozen-bubble-1.0.0-r4.ebuild 2640
-MD5 8cf539c3152b6516cee5a2db86e371f8 files/1.0.0-fb-sdlperl-deb.patch 1694
+MD5 d6e6d8f4e2fd739e198a6aa7697ad7b5 frozen-bubble-1.0.0-r4.ebuild 2647
+MD5 86a6531e8161adee5ffb70b836bc47c4 files/frozen-bubble-1.0.0-sdl-perl-2.patch 3218
 MD5 68158fb15a08fd3d3ce60326fc3cb235 files/1.0.0-sdl-perl-check.patch 707
 MD5 c30d59b06b6112e4d3ca9ba2117c3202 files/1.0.0-no-chainreaction.patch 357
 MD5 9a77f057ee51c039f467c20fa822159d files/digest-frozen-bubble-1.0.0-r4 228
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB1IRHroRuSHgZdywRAnGkAJ47SKhQLkU/f81cL31lGaFWBu3kggCdF/en
-A0NqzmqBR/IuU7smC4X2tek=
-=WWVY
------END PGP SIGNATURE-----
