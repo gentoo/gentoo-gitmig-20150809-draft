@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/galib
+# ChangeLog for dev-libs/galib
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/galib/ChangeLog,v 1.1 2003/10/16 12:50:33 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/galib/ChangeLog,v 1.2 2003/10/18 07:19:40 vapier Exp $
 
 *galib-2.4.5 (16 Oct 2003)
 
