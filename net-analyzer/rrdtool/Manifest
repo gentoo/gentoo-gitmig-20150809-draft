@@ -1,10 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0c0e881b527385864b80c66881548947 rrdtool-1.0.42-r1.ebuild 2242
 MD5 e4acce78bdbb0d39318cff50a1da1661 rrdtool-1.0.46.ebuild 2759
 MD5 4c4038dc596939f72ef89846382e1ba8 rrdtool-1.0.45-r1.ebuild 2297
 MD5 dc14bf81b27063da73b71cf7163ce1c4 rrdtool-1.0.45.ebuild 2276
 MD5 2d4f76f7c52f48306f28c4f82d9cd8ed rrdtool-1.0.40-r1.ebuild 2178
-MD5 d73720aae18a761383693498305e48e3 rrdtool-1.0.47.ebuild 2689
-MD5 a826e1cb39b7e7552165a70627ffb352 ChangeLog 6305
+MD5 a451cd75df750da81cdf79f5115cdd8d rrdtool-1.0.47.ebuild 2631
+MD5 5a4d1855e426f710e740146b2a05ba5a ChangeLog 6501
 MD5 c0b48928d9b670b8837a080dfc28df60 metadata.xml 794
 MD5 83c969024d1d6d7e6e093e0c03e416e6 rrdtool-1.0.45-r2.ebuild 2624
 MD5 db9507e851ba51a61398c1ac7816f72a files/rrdtool-1.0.47-fPIC.patch 587
@@ -17,3 +20,10 @@ MD5 dd9238326165d64f1c400c9e38cfda28 files/digest-rrdtool-1.0.45-r1 67
 MD5 dd9238326165d64f1c400c9e38cfda28 files/digest-rrdtool-1.0.45-r2 67
 MD5 0375bc1ad29af2bbb7fc1782eef03896 files/rrdtool-1.0.46-tcl.patch 1170
 MD5 db9507e851ba51a61398c1ac7816f72a files/rrdtool-1.0.46-fPIC.patch 587
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA/vDYT+MN7JbqCpMRAoISAJ0T91w4YhgxWRsodpMGEqfdNMa56ACdFXPK
+61X6tlUSLGn1l6/wHKz9VLc=
+=xwJZ
+-----END PGP SIGNATURE-----

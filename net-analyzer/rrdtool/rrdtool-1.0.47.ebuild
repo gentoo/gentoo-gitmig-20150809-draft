@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.47.ebuild,v 1.6 2004/07/14 22:33:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.47.ebuild,v 1.7 2004/07/21 22:43:34 eldad Exp $
 
 inherit perl-module flag-o-matic gnuconfig eutils
 
@@ -41,34 +41,24 @@ src_compile() {
 	filter-flags -ffast-math
 
 	local myconf
+	myconf="${myconf} --datadir=/usr/share --enable-shared"
+
 	use tcltk \
 		&& myconf="${myconf} --with-tcllib=/usr/lib" \
 		|| myconf="${myconf} --without-tcllib"
 
-	if use perl ; then
-	MMSIXELEVEN=`perl -e 'use ExtUtils::MakeMaker; print( $ExtUtils::MakeMaker::VERSION ge "6.11" )'`
-	  if [ "${MMSIXELEVEN}" ]; then
-	   econf \
-		--datadir=/usr/share \
-		--enable-shared \
-		--with-perl-options='INSTALLDIRS=vendor destdir=${D}/' \
-		${myconf} || die
+	if use perl; then
+		econf ${myconf} --with-perl-options='PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}' || die "econf failed"
 
-	  else
-	   econf \
-		--datadir=/usr/share \
-		--enable-shared \
-		--with-perl-options='PREFIX=${D}/usr INSTALLDIRS=vendor' \
-		${myconf} || die
-	  fi
+		# libraries without -fPIC? feh!
+		for libdir in cgilib* gd* libpng* zlib*; do
+			sed -i -e 's/^CFLAGS.*/& -fPIC/' ${libdir}/Makefile
+		done
 	else
-	 econf \
-	  --datadir=/usr/share \
-	  --enable-shared \
-	  ${myconf} || die
+		econf ${myconf} || die "econf failed"
 	fi
 
-	make || die
+	make || die "make failed"
 }
 
 src_install() {
@@ -96,6 +86,9 @@ src_install() {
 		perlinfo
 		mytargets="site-perl-install"
 		perl-module_src_install || die
+
+		# remove duplicate installation into /usr/lib/perl
+		rm -Rf ${D}/usr/lib/perl
 	fi
 
 	if use tcltk ; then
