@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.55 2004/11/25 21:34:15 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.56 2004/12/01 15:38:07 vapier Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -71,7 +71,7 @@ if [ "${GCC_VAR_TYPE}" == "versioned" ] ; then
 	fi
 	INCLUDEPATH="${INCLUDEPATH:="${LIBPATH}/include"}"
 	BINPATH="${BINPATH:="${PREFIX}/${CTARGET}/gcc-bin/${MY_PV_FULL}"}"
-	DATAPATH="${DATAPATH:="${PREFIX}/share/gcc-data/${CTARGET}/${MY_PV}"}"
+	DATAPATH="${DATAPATH:="${PREFIX}/share/gcc-data/${CTARGET}/${MY_PV_FULL}"}"
 	# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
 	# We will handle /usr/include/g++-v3/ with gcc-config ...
 	STDCXX_INCDIR="${STDCXX_INCDIR:="${LIBPATH}/include/g++-v${MY_PV/\.*/}"}"
@@ -95,15 +95,13 @@ if [ "${ETYPE}" == "gcc-library" ] ; then
 	IUSE="nls build uclibc"
 	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
 else
-	IUSE="static nls bootstrap build multilib gcj gtk fortran nocxx objc hardened uclibc n32 n64"
+	IUSE="static nls bootstrap build multislot multilib gcj gtk fortran nocxx objc hardened uclibc n32 n64"
 	if [ -n "${HTB_VER}" ] ; then
 		IUSE="${IUSE} boundschecking"
 	fi
-	if [ "${CHOST}" == "${CTARGET}" ] ; then
-		SLOT="${PV%.*}"
-	else
-		SLOT="${CTARGET}-${PV%.*}"
-	fi
+	use multislot \
+		&& SLOT="${CTARGET}-${MY_PV_FULL}" \
+		|| SLOT="${CTARGET}-${MY_PV}"
 fi
 #----<< SLOT+IUSE logic >>----
 
