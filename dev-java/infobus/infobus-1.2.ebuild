@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus/infobus-1.2.ebuild,v 1.5 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus/infobus-1.2.ebuild,v 1.6 2004/01/17 04:45:00 strider Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ S=${WORKDIR}
 DESCRIPTION="InfoBus enables dynamic exchange of data between JavaBeans component architecture."
 SRC_URI=""
 HOMEPAGE="http://java.sun.com/products/javabeans/infobus/index.html"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm"
+KEYWORDS="x86 ppc sparc alpha"
 LICENSE="infobus"
 SLOT="0"
 DEPEND=">=app-arch/unzip-5.50-r1"
