@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <jhhudso@gentoo.org> (18 Oct 2002)
+# Masking pending an unfreeze.
+>=net-dns/djbdns-1.05-r4
+
 # <hannes@gentoo.org> (18 Oct 2002)
 # masked kde-i18n-*-3.1_beta2 permanently
 =app-i18n/kde-i18n-3.1_beta2
