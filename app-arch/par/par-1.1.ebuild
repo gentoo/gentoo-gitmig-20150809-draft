@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par/par-1.1.ebuild,v 1.20 2004/10/11 16:10:08 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par/par-1.1.ebuild,v 1.21 2004/10/31 04:54:28 vapier Exp $
 
 DESCRIPTION="Parchive archive fixing tool"
 HOMEPAGE="http://parchive.sourceforge.net/"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64 ~ppc-macos"
 IUSE=""
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 S=${WORKDIR}/par-cmdline
