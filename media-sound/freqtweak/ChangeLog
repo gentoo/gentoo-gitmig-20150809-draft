@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/freqtweak
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.5 2003/09/16 14:46:46 tigger Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.6 2004/02/10 11:08:13 eradicator Exp $
+
+  10 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  freqtweak-0.4.7.ebuild, freqtweak-0.5.0.ebuild, freqtweak-0.5.2.ebuild:
+  Added check for wxGTK being compiled without unicode support to close bug
+  #37573.
 
 *freqtweak-0.5.2 (16 Sep 2003)
 
