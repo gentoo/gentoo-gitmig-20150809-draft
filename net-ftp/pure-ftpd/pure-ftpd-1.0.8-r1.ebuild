@@ -1,17 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.8.ebuild,v 1.1 2002/02/01 15:09:30 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.8-r1.ebuild,v 1.1 2002/02/03 12:51:31 verwilst Exp $
 
 S="${WORKDIR}/pure-ftpd-1.0.8"
 SRC_URI="http://prdownloads.sourceforge.net/pureftpd/${P}.tar.gz"
 DESCRIPTION="Pure-FTPd is a fast, production-quality, standard-conformant FTP server"
 
 DEPEND="virtual/glibc
-	pam? ( >=sys-libs/pam )
-	mysql? ( >=dev-db/mysql )
-	postgres? ( >=dev-db/postgresql )
-	ldap? ( >=net-nds/openldap )"
+	pam? ( >=sys-libs/pam-0.75 )
+	mysql? ( >=dev-db/mysql-3.23.47 )
+	postgres? ( >=dev-db/postgresql-7.1.3 )
+	ldap? ( >=net-nds/openldap-2.0.21 )"
 
 src_compile() {
 
