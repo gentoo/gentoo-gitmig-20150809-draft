@@ -1,0 +1,11 @@
+--- dvgrab-1.5/work/dvgrab-1.5/ieee1394io.h	2004-01-04 21:46:21.000000000 +0000
++++ dvgrab-1.5_patched/work/dvgrab-1.5/ieee1394io.h	2004-07-31 18:50:28.246428088 +0100
+@@ -33,7 +33,7 @@
+ 
+ class IEEE1394Reader
+ {
+-private:
++protected:
+ 	/// the number of frames that had to be thrown away because
+ 	/// our inFrames queue did not contain available frames
+ 	static int droppedFrames;
