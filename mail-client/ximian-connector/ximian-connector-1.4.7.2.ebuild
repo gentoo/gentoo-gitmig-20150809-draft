@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.4.7.2.ebuild,v 1.3 2004/08/22 05:02:10 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.4.7.2.ebuild,v 1.4 2004/09/24 20:27:56 liquidx Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.ximian.com/pub/source/evolution/${PF}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="debug doc"
 
 RDEPEND=">=mail-client/evolution-1.4
@@ -21,7 +21,8 @@ RDEPEND=">=mail-client/evolution-1.4
 		>=gnome-base/libglade-2.0
 		>=gnome-base/libgnomeui-2.0
 		>=gnome-base/libbonobo-2.0
-		>=net-nds/openldap-2.1.30-r2"
+		>=net-nds/openldap-2.1.30-r2
+		>=app-crypt/mit-krb5-1.3"
 
 DEPEND="${RDEPEND}
 		dev-util/intltool
