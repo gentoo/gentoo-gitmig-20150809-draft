@@ -1,4 +1,7 @@
-MD5 bd0ec80b45c5994a9e9483c96e9d1f3d ChangeLog 2576
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dc43f6502513d2de6e936e4d77553c5b ChangeLog 2590
 MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
 MD5 fc4e7ab6fa8b4129bd91fb123ba326e2 vtun-2.5-r1.ebuild 1928
 MD5 e0f4ea4eb361994b283c6a5aa64573ee vtun-2.5-r2.ebuild 2031
@@ -14,3 +17,10 @@ MD5 1e46f74e06c298440ef80e55ea493cbb files/vtun-2.5-r2-gentoo-gcc3.1.patch 767
 MD5 49170c19de7a8830d2d2135f244b750a files/vtun-2.6-makefile.patch 1919
 MD5 e19e6e833add738ce8f46e18c7d7d060 files/vtun.rc 772
 MD5 a806782ec385a60514f85833ed455fbc files/vtund-start.conf 1174
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBXsrlI1lqEGTUzyQRAsTKAJ9lp3nkQIy0vf8T2DIkqQJrdQp6KgCeLMLW
+1Pp0bOMves1o6XprzoHt2Sc=
+=dato
+-----END PGP SIGNATURE-----
