@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.119 2003/09/12 17:34:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.120 2003/09/19 17:58:46 lanius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -52,6 +52,7 @@ dev-php/mod_php:gd-external - Use the external version of libgd rather than the 
 dev-php/php:gd-external - Use the external version of libgd rather than the bundled one
 dev-python/anygui:wxwin - enable wxwin support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
+dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 gnome-extra/libgda:sqlite - Enable sqlite support for GnomeDB.
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
