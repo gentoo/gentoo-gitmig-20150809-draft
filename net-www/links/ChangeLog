@@ -1,6 +1,9 @@
 # ChangeLog for net-www/links
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.51 2004/09/21 18:03:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.52 2004/09/22 15:24:20 gustavoz Exp $
+
+  22 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> links-2.1_pre15.ebuild:
+  Stable on sparc
 
   21 Sep 2004; Heinrich Wendel <lanius@gentoo.org> links-2.1_pre15.ebuild:
   stable on x86
