@@ -1,17 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.7.37.ebuild,v 1.5 2003/02/13 10:02:40 vapier Exp $
-
-IUSE="python tcltk"
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.7.37.ebuild,v 1.6 2003/06/28 06:48:04 vapier Exp $
 
 S=${WORKDIR}/${PN}-${PV%.*}
 DESCRIPTION="Embedded database library"
 HOMEPAGE="http://www.equi4.com/metakit/"
 SRC_URI="http://www.equi4.com/pub/mk/${PN}-${PV%.*}-${PV##*.}.tar.gz"
-DEPEND="python? ( >=dev-lang/python-2.2.1 ) tcltk? ( >=dev-lang/tcl-8.3.3-r2 )"
+
 KEYWORDS="x86"
 LICENSE="MetaKit"
 SLOT="0"
+IUSE="python tcltk"
+
+DEPEND="python? ( >=dev-lang/python-2.2.1 )
+	tcltk? ( >=dev-lang/tcl-8.3.3-r2 )"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -39,11 +41,7 @@ src_install () {
 	local pydir
 	pydir=`python-config | cut -d" " -f1 | sed -e 's/-l//g'`/site-packages
 
-	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		install || die
+	make install DESTDIR=${D} || die
 
 	if [ -n "`use python`" ]
 	then
