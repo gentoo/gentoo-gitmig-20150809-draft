@@ -1,8 +1,15 @@
 # ChangeLog for net-dialup/xc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/ChangeLog,v 1.4 2003/05/23 07:57:52 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/ChangeLog,v 1.5 2003/07/01 23:45:56 kumba Exp $
+
 
 *xc-4.3.2 (06 Sep 2002)
+
+  01 Jul 2003; Joshua Kinard <kumba@gentoo.org> xc-4.3.2.ebuild:
+  Fixed compile-time issue in which ${WARN} was somehow being called into the
+  Makefile and killing the build by making all text turn yellow. Added a WARN=""
+  to the make line in src_compile().  Closes Bug #23799.
+  Also added ~sparc and ~mips to KEYWORDS
 
   23 May 2003; Chuck Brewer <killian@gentoo.org>:
   Added manifest.
