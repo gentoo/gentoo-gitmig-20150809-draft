@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.1.1.ebuild,v 1.7 2005/01/01 16:16:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.1.1.ebuild,v 1.8 2005/03/25 18:49:14 blubb Exp $
 
-inherit libtool gnome2
+inherit libtool gnome2 eutils
 
 DESCRIPTION="Gnome Bible study software"
 HOMEPAGE="http://gnomesword.sf.net/"
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE="spell"
 
 RDEPEND="=gnome-extra/libgtkhtml-3.0*
@@ -31,3 +31,9 @@ DEPEND="${RDEPEND}
 
 G2CONF="${G2CONF} --enable-sword_cvs $(use_enable spell pspell)"
 DOCS="COPYING NEWS ChangeLog README TODO"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/gnomesword-2.1.1-gcc-3.4.patch
+}

@@ -1,4 +1,5 @@
-MD5 9694b86211d32096872f3439c333fd8d ChangeLog 659
-MD5 6abf8467617f157a7fb7e302b1658c2c gnomesword-2.1.1.ebuild 911
+MD5 1f69244d65eb806fad7be1c91c79220d ChangeLog 817
+MD5 3ff99c5b8ba93bd19f4828fb768f3a79 gnomesword-2.1.1.ebuild 1011
 MD5 e42392e84823e6329bc4b8228fd7b9bd metadata.xml 222
 MD5 c0c12f952a54eadc42e02d1a65435ed5 files/digest-gnomesword-2.1.1 69
+MD5 c7c3a66ca0618cbc1ec047753829a4aa files/gnomesword-2.1.1-gcc-3.4.patch 365

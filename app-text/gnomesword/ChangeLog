@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gnomesword
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.4 2005/01/01 16:16:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.5 2005/03/25 18:49:14 blubb Exp $
+
+  25 Mar 2005; <blubb@gentoo.org> +files/gnomesword-2.1.1-gcc-3.4.patch,
+  gnomesword-2.1.1.ebuild:
+  added Will Brigg's patch and ~amd64 keyword, see bug #86444
 
   18 Sep 2004; Jon Hood <squinky86@gentoo.org> gnomesword-2.1.1.ebuild:
   Stable on x86.
