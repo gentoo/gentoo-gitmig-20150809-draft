@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/kdar/kdar-1.3.0.ebuild,v 1.2 2005/01/01 11:46:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/kdar/kdar-1.3.2.ebuild,v 1.1 2005/01/26 08:08:48 matsuu Exp $
 
 inherit kde
-need-kde 3.2
+need-kde 3.3
 
 DESCRIPTION="the KDE Disk Archiver"
 HOMEPAGE="http://kdar.sourceforge.net/"
