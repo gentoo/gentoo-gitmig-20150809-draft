@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.1.ebuild,v 1.7 2004/12/28 20:30:54 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.1.ebuild,v 1.8 2005/03/13 22:00:32 luckyduck Exp $
 
 IUSE="esd motif guile X gtk ruby alsa"
 

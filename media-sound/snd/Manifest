@@ -1,6 +1,18 @@
-MD5 3d32fdbfa7762a5674096a434eb8a8c2 snd-7.4.ebuild 1684
-MD5 f0a34b9d358e420deb9daab2bd3538b6 snd-7.1.ebuild 1747
-MD5 829502a202c2b2b26d75c09735ba1856 ChangeLog 2279
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 154b8f4fa93069bcd35e82adb57a3f96 snd-7.10.ebuild 1686
+MD5 a4c03d06859af513f6e5ccfa9146002a snd-7.4.ebuild 1685
+MD5 4d3145a9e25bc6694a22cbe9fd5761cf snd-7.1.ebuild 1748
+MD5 fda2e4c4f9a12e75010ea3a594abaa46 ChangeLog 2413
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
+MD5 64e6271ddc8b655bf67b620f325dc01d files/digest-snd-7.10 61
 MD5 2c4ab24ebd10504d1d4f2a704ea4e309 files/digest-snd-7.1 60
 MD5 19c799488e3d5a9e0c8ad9334b88b262 files/digest-snd-7.4 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCNLgF06ebR+OMO78RAq70AJ98QLbypoArHAD70s9jMB4B73YHSwCfePxF
+8/IAUiQYWBBMdEpBqxgHRB0=
+=S8fj
+-----END PGP SIGNATURE-----

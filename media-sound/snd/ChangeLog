@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/snd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.19 2004/12/28 20:31:26 ribosome Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.20 2005/03/13 22:00:32 luckyduck Exp $
+
+*snd-7.10 (13 Mar 2005)
+
+  13 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +snd-7.10.ebuild:
+  new upstream release, fixes #81448
 
   28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> snd-7.4.ebuild:
   Dependency update: dev-libs/gsl -> sci-libs/gsl.
