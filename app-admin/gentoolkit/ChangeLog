@@ -1,8 +1,12 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.31 2002/07/19 22:59:56 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.32 2002/07/22 16:16:34 karltk Exp $
 
 *gentoolkit-0.1.15-r1 (19 Jul 2002)
+
+  22 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.15-r1.ebuild :
+
+  Fixed HOMEPAGE url, and update the home page.
 
   19 Jul 2002; Brandon Low <lostlogic@gentoo.org> files/scripts/dep-clean gentoolkit-0.1.15-r1.ebuild:
 
