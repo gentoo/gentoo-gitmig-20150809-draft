@@ -1,9 +1,19 @@
-MD5 51bf32e46ca9872ee89af67f06a59beb ChangeLog 2318
-MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 38a56d9528b0af6d2020a597335777ed tmpwatch-2.8.4.ebuild 939
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7e82f948ef09fea97bd1177161a23f96 tmpwatch-2.9.0.ebuild 1073
-MD5 3634da5e9fae632fcf180e035aecb2e3 tmpwatch-2.9.1.1.ebuild 1424
-MD5 dda6f902f6f95e2696dadeecd0bfeb64 files/digest-tmpwatch-2.8.4 68
-MD5 185828eaf60e27de261fa50a676a47b6 files/digest-tmpwatch-2.9.0 68
+MD5 0e14a7a19e3f9746ca1690857b1bd634 tmpwatch-2.9.1.1.ebuild 1423
+MD5 38a56d9528b0af6d2020a597335777ed tmpwatch-2.8.4.ebuild 939
+MD5 f69d90193e61b7ec48defbfb3b2a822e ChangeLog 2416
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 36fb3f752cee37085358a9b85ece55a8 files/digest-tmpwatch-2.9.1.1 68
 MD5 c2b96ff8dc2c589482deaa38b4a03016 files/tmpwatch.cron 1365
+MD5 dda6f902f6f95e2696dadeecd0bfeb64 files/digest-tmpwatch-2.8.4 68
+MD5 185828eaf60e27de261fa50a676a47b6 files/digest-tmpwatch-2.9.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhA8iEZCkKN40op4RAskQAJ4jLLufVq5B3adIGAWq6ZY4g/wycQCfdRBT
+Z7m8Kny6SUNjXqtmJXutC6c=
+=t5AR
+-----END PGP SIGNATURE-----
