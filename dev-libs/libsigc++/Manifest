@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5e9cf4192d3bf0a7c098e6ac937b77ca libsigc++-2.0.10.ebuild 1111
+MD5 6dd533a655426164e7055d30f8172fd0 libsigc++-2.0.10.ebuild 1118
 MD5 e48c7bb1105948b286784f27e30fa66d libsigc++-1.2.3.ebuild 1041
 MD5 c1752a0d3dd0446994f41f3357a59f01 libsigc++-1.2.5.ebuild 1466
 MD5 401a2c3b3020ab9d031f9ea40fe45045 libsigc++-1.2.2.ebuild 1042
 MD5 701745d1fd6c90c8456d7873b4568ee7 libsigc++-2.0.1.ebuild 1313
-MD5 87223e72a9f2786b2d79710fc32f6d2d ChangeLog 5739
+MD5 ec021e23b3c78ac16cdfb427f8156708 ChangeLog 5897
 MD5 1db8b39da1cafe821d7087ae7e628cfb libsigc++-2.0.5.ebuild 1404
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 09db05165ade799adc26846ff7c3eb5f libsigc++-1.0.4-r2.ebuild 1568
@@ -21,7 +21,7 @@ MD5 628fd3eec229a5ec7bdf9751004f9b46 files/digest-libsigc++-1.0.4-r2 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCOOOsntT9W3vfTuoRAs13AKCZjJDSVxdPi+kY+QGhjpds/oN+hACfXXpa
-vhJl5niWH+pMAb+MNcH3Q/U=
-=ZZ4S
+iD8DBQFCObsgntT9W3vfTuoRAlS2AJ9CvUfLoyqVqBeRoYHAxyCrTf1qlACdFUG1
+sdD5/KHzGu8XHkJgV4X2GFI=
+=R8WT
 -----END PGP SIGNATURE-----
