@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.46.ebuild,v 1.1 2004/03/09 05:39:51 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.46.ebuild,v 1.2 2004/03/18 15:23:22 aliz Exp $
 
-inherit perl-module flag-o-matic gnuconfig
+inherit perl-module flag-o-matic gnuconfig eutils
 
 DESCRIPTION="A system to store and display time-series data"
 HOMEPAGE="http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/"
@@ -32,6 +32,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-tcl.patch # 1.0.46 has a broke TCL Makefile
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-fPIC.patch
 }
 
 src_compile() {
@@ -42,8 +45,6 @@ src_compile() {
 	use tcltk \
 		&& myconf="${myconf} --with-tcllib=/usr/lib" \
 		|| myconf="${myconf} --without-tcllib"
-
-	use amd64 && gnuconfig_update
 
 	if [ `use perl` ] ; then
 	MMSIXELEVEN=`perl -e 'use ExtUtils::MakeMaker; print( $ExtUtils::MakeMaker::VERSION ge "6.11" )'`

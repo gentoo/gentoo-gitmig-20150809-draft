@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.31 2004/03/09 05:39:51 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.32 2004/03/18 15:23:22 aliz Exp $
+
+  18 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> rrdtool-1.0.46.ebuild,
+  files/rrdtool-1.0.46-fPIC.patch:
+  Must compile private lib with -fPIC on amd64.
 
 *rrdtool-1.0.46 (09 Mar 2004)
 
