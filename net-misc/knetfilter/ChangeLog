@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/knetfilter
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetfilter/ChangeLog,v 1.4 2002/07/08 18:03:30 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetfilter/ChangeLog,v 1.5 2002/07/21 16:40:17 danarmak Exp $
+
+*knetfilter-3.0.2 (21 Jul 2002)
+
+  21 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New upstream release.
 
 *knbetfilter-3.0.1 (17 May 2002)
 
