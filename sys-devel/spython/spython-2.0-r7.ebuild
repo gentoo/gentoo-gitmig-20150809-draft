@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.4 2001/08/24 04:45:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.5 2001/08/27 05:28:12 drobbins Exp $
 
 S=${WORKDIR}/Python-2.0
 S2=${WORKDIR}/python-fchksum-1.1
@@ -52,7 +52,7 @@ src_compile() {
 
     export LDFLAGS=-static
 
-    try ./configure --prefix=/usr --without-libdb
+    ./configure --prefix=/usr --without-libdb || die
 
     #libdb3 support is available from http://pybsddb.sourceforge.net/; the one
     #included with python is for db 1.85 only.
@@ -73,7 +73,7 @@ src_compile() {
 src_install() {
 	
     dodir /usr/share/man
-    try make install prefix=${D}/usr MANDIR=${D}/usr/share/man
+    make install prefix=${D}/usr MANDIR=${D}/usr/share/man || die
 	dosym spython /usr/bin/python	
 
 	rm -rf ${D}/usr/include
@@ -88,7 +88,11 @@ src_install() {
         rm -rf ${D}/usr/share/man
 		rm -rf ${D}/usr/lib/python${PV}/{test,config}
 		rm -rf ${D}/usr/include
-    fi
+    	cd ${D}/usr/lib/spython2.0
+		#clean out byte-compiled stuff.  Not absolutely required, and doing so saves space 
+		find -iname '*.pyc' | xargs rm
+		find -iname '*.pyo' | xargs rm
+	fi
 }
 
 pkg_preinst() {
