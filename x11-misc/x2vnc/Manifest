@@ -3,7 +3,7 @@ MD5 73306e20ac1b1ef3b82127d6585e9431 metadata.xml 229
 MD5 e0c32353ba39596963a7dee39cc38812 x2vnc-1.3.1.ebuild 609
 MD5 2dc61cd9dbfd649160dd7c02fd914a4a x2vnc-1.5.1-r1.ebuild 821
 MD5 c9da4ee85179cb50396db10ba01887bc x2vnc-1.5.1.ebuild 590
-MD5 7fca1e17f3483ff4667edb9406ad2580 x2vnc-1.6.ebuild 726
+MD5 a0766d629b3ed57879a81ba88a204dc6 x2vnc-1.6.ebuild 736
 MD5 eb06c797c1a1151b43fe899de595134a files/digest-x2vnc-1.3.1 61
 MD5 c2a74343b9025063716f8799fcd3b2b0 files/digest-x2vnc-1.5.1 62
 MD5 c2a74343b9025063716f8799fcd3b2b0 files/digest-x2vnc-1.5.1-r1 62
