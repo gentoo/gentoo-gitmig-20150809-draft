@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.78 2003/07/14 22:36:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.79 2003/07/18 20:34:39 lanius Exp $
+
+  18 Jul 2003; lanius@gentoo.org postfix-2.0.11.ebuild,
+  postfix-2.0.12-r1.ebuild, postfix-2.0.13-r1.ebuild, postfix-2.0.13.ebuild,
+  files/smtpd-2.0.conf:
+  fixed smtpd.conf for postfix 2.0 (bug #24556)
 
 *postfix-2.0.13-r1 (14 Jul 2003)
 
