@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.8 2004/08/02 02:51:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.9 2004/08/13 12:59:34 dragonheart Exp $
 
 depend() {
 	need logger
@@ -33,27 +33,31 @@ function loadsmodule {
 	if [ "$?" -gt 0 ]
 	then
 		eerror "Missing ${MODULE}. Please set up /etc/conf.d/slmodem"
-		eend 1;
+		return 1;
     	fi
+
+	if [ -z "${MDEV}" ]; then MDEV="/dev/${MODULE}0"; fi
 
 	#sleep as per http://bugs.gentoo.org/show_bug.cgi?id=47947#c59
 	ebegin "Waiting for ${MODULE} modem driver initialisation"
 	local COUNT=0
-	echo -e "${NORMAL}   "
-	echo -ne "${NORMAL}"
+	if [ "$RC_NOCOLOR" != "yes" ]; then 
+		echo -e "\e[A\e[49G   "
+		echo -ne "\e[A\e[49G"
+	fi
 	while [ ! -c ${MDEV} -a ${COUNT} -lt 5 ];
 	do
 		sleep 0.5
-		echo -ne "."
+		echo -n "."
 		COUNT=`expr ${COUNT} + 1`
    	done
-    
-	echo -ne "\n"
-    
+
+	if [ "$RC_NOCOLOR" != "yes" ]; then echo; fi
+ 
 	if [ ! -c ${MDEV} ];
 	then
 		eerror "Module - ${MODULE} failed to initialise device ${MDEV}"
-		eend 1
+		return 1
 	else
 		eend 0 
 	fi
@@ -88,20 +92,23 @@ start() {
 stop() {
 	ebegin "Shutting down slmodemd"
 	start-stop-daemon --stop --quiet --pidfile /var/run/slmodemd.pid && rm /var/run/slmodemd.pid
-	eend ${?}
+	result=${?}
+	unlink ${LN_DEV} 2> /dev/null
+	eend ${result}
 	if [ ! "${MODULE}" == "alsa" ];
 	then
 		ebegin "Waiting for ${MODULE} modem driver unload"
-		echo -e "${NORMAL}   "
-		echo -ne "${NORMAL}"
+		if [ "$RC_NOCOLOR" != "yes" ]; then
+			echo -e "\e[A\e[43G   "
+			echo -ne "\e[A\e[43G"
+		fi
 		for ((a=0,result=1; result==1 && a <= 5 ; a++))
 		do
 			sleep 0.25
-			echo -ne "."
+			echo -n "."
 			modprobe -r slamr 2> /dev/null && result=0
 		done
-		echo -ne "\n"
+		if [ "$RC_NOCOLOR" != "yes" ]; then echo; fi
 		eend ${result}
 	fi
-	unlink ${LN_DEV} 2> /dev/null
 }

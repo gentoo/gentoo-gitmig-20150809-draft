@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.19 2004/08/02 03:21:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.20 2004/08/13 12:59:34 dragonheart Exp $
+
+*slmodem-2.9.9-r2 (13 Aug 2004)
+
+  13 Aug 2004; Daniel Black <dragonheart@gentoo.org> files/slmodem-2.9.conf,
+  files/slmodem-2.9.init, +slmodem-2.9.9-r2.ebuild, -slmodem-2.9.9.ebuild:
+  revision bump - improves init scripts and provides fixes listed in bug #59244.
+  Many thank to Stefan Schweizer <sschweizer@gmail.com> who summitted the init
+  script and fixes. Thanks also to Christian Roessner <info@roessner-net.com>
+  for sumbitting the bug
 
   02 Aug 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml:
   metadata updated. Dual maintence with spyderous

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9.ebuild,v 1.3 2004/08/01 09:40:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9-r2.ebuild,v 1.1 2004/08/13 12:59:34 dragonheart Exp $
 
 inherit kmod eutils
 
@@ -20,6 +20,11 @@ RDEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )"
 
 src_unpack() {
+
+	ewarn "This ebuild is sensive to use flags (usb, alsa)."
+	ewarn "Please select approprately based on your hardware."
+	ewarn "use -usb if you have a PCI modem"
+
 	# Unpack and set some variables
 	kmod_src_unpack
 
@@ -72,8 +77,10 @@ src_install() {
 	unset ARCH
 	emake DESTDIR=${D} \
 		KERNEL_VER=${KV_VERSION_FULL} \
-		install-drivers \
+		install-drivers install-test\
 		|| die "driver install failed"
+
+	mv ${D}/usr/sbin/modem_test ${D}/usr/sbin/slmodem_test
 
 	dosbin modem/slmodemd
 	dodir /var/lib/slmodem
@@ -87,16 +94,17 @@ src_install() {
 
 	if use alsa
 	then
-		sed -i -e "s/ALSA=.*/ALSA=yes/" -e "s:# DEV=/dev/ttySL0:DEV=/dev/ttySL0:" ${D}//etc/conf.d/slmodem
+		sed -i -e "s/# ALSACONF //g" ${D}/etc/conf.d/slmodem
 	else
-		sed -i -e "s/ALSA=.*/ALSA=yes/" ${D}//etc/conf.d/slmodem
+		sed -i -e "s/# NONALSACONF //g" ${D}/etc/conf.d/slmodem
 		if use usb
 		then
-			sed -i -e "s:# DEV=/dev/slusb0:DEV=/dev/slusb0:" ${D}//etc/conf.d/slmodem
+			sed -i -e "s/# USBCONF //g" ${D}/etc/conf.d/slmodem
 		else
-			sed -i -e "s:# DEV=/dev/slamr0:DEV=/dev/slamr0:" ${D}//etc/conf.d/slmodem
+			sed -i -e "s/# PCICONF //g" ${D}/etc/conf.d/slmodem
 		fi
 	fi
+	sed -i -e "s/ALSACONF//g" -e "s/PCICONF//g" -e "s/USBCONF//g" ${D}/etc/conf.d/slmodem
 
 
 	# Make some devices if we aren't using devfs
@@ -107,9 +115,11 @@ src_install() {
 		insinto /etc/modules.d/; newins ${FILESDIR}/${PN}-2.9.modules ${PN}
 	elif [ -e ${ROOT}/dev/.udev ] ; then
 	# udev
-		# FIX Symlink
+		# check Symlink
 		dodir /etc/udev/rules.d/
-		echo 'KERNEL="slamr", NAME="slamr0", SYMLINK="modem"' > \
+		echo 'KERNEL="slamr", NAME="slamr0" > \
+			 ${D}/etc/udev/rules.d/55-${PN}.rules
+		echo 'KERNEL="slusb", NAME="slusb0" >> \
 			 ${D}/etc/udev/rules.d/55-${PN}.rules
 		dodir /etc/udev/permissions.d
 		echo 'slamr*:root:dialout:0660' > \
@@ -118,12 +128,21 @@ src_install() {
 		make -C drivers DESTDIR=${D} KERNELRELEASE=1 KERNEL_VER=${KV_VERSION_FULL} install-devices
 	fi
 
+	dodir /etc/hotplug
+
+	#if [ -r ${ROOT}/etc/hotplug/blacklist ]
+	#then
+	#	cp ${ROOT}/etc/hotplug/blacklist ${D}/etc/hotplug/
+	#fi
+
+	dodir /etc/hotplug/blacklist.d
+	echo -e "slusb\nslamr" >> ${D}/etc/hotplug/blacklist.d/55-${PN}
 }
 
 pkg_postinst() {
 	kmod_pkg_postinst
 
-	#depmod -a
+	depmod -a
 
 	# Make some devices if we aren't using devfs
 	# If we are using devfs, restart it
@@ -144,6 +163,8 @@ pkg_postinst() {
 	echo
 
 	einfo "You must edit /etc/conf.d/${PN} for your configuration"
+
+	ewarn "To avoid problems add slusb/slamr to /etc/hotplug/blacklist"
 
 	einfo "To add slmodem to your startup - type : rc-update add slmodem default"
 
