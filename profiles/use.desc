@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.190 2004/10/20 19:48:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.191 2004/10/22 17:40:54 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -49,6 +49,7 @@ ctype - Enables ctype functions
 cups - Add support for CUPS (Common Unix Printing System)
 curl - Adds support for client-side URL transfer library
 curlwrappers - Adds support for using curl in streams
+cxx - Enable support for C++ (DONT DISABLE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 db2 - Enables support for IBM DB2 database server
 dba - Enables dbm-compatible layers
 dbase - Adds support for dbase file format
