@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-0.9.7.ebuild,v 1.4 2002/10/04 05:28:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-0.9.7.ebuild,v 1.5 2002/11/29 11:28:02 woodchip Exp $
 
 S=${WORKDIR}/mod_ruby-${PV}
 DESCRIPTION="A Ruby Module for Apache"
@@ -10,9 +10,7 @@ LICENSE="GPL-2/LGPL-2.1"
 KEYWORDS="x86"
 SLOT="0"
 
-DEPEND="virtual/glibc
-	>=net-www/apache-1.3
-	>=dev-lang/ruby-1.6.1"
+DEPEND="=net-www/apache-1* >=dev-lang/ruby-1.6.1"
 
 src_compile() {
 	ruby ./configure.rb --with-apxs=/usr/sbin/apxs || die	
