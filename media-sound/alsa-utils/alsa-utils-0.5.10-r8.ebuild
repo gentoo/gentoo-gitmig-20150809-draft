@@ -33,5 +33,5 @@ src_install() {
 	dodoc seq/aseqnet/README.aseqnet
 	newdoc alsamixer/README README.alsamixer
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/alsa.rc6 alsa
+	exeinto /etc/init.d ; newexe ${FILESDIR}/alsa-0.5.10 alsa
 }
