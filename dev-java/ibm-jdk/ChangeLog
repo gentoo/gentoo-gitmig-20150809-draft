@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jdk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.37 2004/04/07 03:33:22 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.38 2004/04/18 14:48:07 zx Exp $
+
+  18 Apr 2004; Chris Aniszczyk <zx@gentoo.org> ibm-jdk-1.4.1-r1.ebuild:
+  Fixing typo in ebuild. Closes #47850.
+  Thanks Tom <tomk@bu.edu>.
 
 *ibm-jdk-1.4.1-r1 (06 Apr 2004)
 

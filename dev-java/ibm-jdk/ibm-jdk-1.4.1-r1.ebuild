@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.1-r1.ebuild,v 1.2 2004/04/07 03:33:22 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.1-r1.ebuild,v 1.3 2004/04/18 14:48:07 zx Exp $
 
 inherit java nsplugins
 
 DESCRIPTION="IBM Java Development Kit, version 1.4.1"
 HOMEPAGE="https://www6.software.ibm.com/dl/lxdk/lxdk-p"
-SRC_URI="x86? ( IBMJava2-SDK-142.tgz )
+SRC_URI="x86? ( IBMJava2-SDK-141.tgz )
 		ppc? ( IBMJava2-SDK-141.ppc.tgz )"
 RESTRICT="fetch"
 SLOT="1.4"
@@ -70,7 +70,7 @@ pkg_postinst() {
 	if [ !`use X` ] ; then
 		einfo "********************************************************"
 		eerror "You're not using X so its possible that you dont have"
-		eerror "a X server installed, please read the following warn: "
+		eerror "a X server installed, please read the following warning: "
 		eerror "Some parts of IBM JDK require XFree86 to be installed."
 		eerror "Be careful which Java libraries you attempt to use."
 		einfo "********************************************************"
