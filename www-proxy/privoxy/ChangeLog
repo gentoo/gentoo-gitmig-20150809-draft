@@ -1,6 +1,9 @@
 # ChangeLog for www-proxy/privoxy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/ChangeLog,v 1.4 2004/09/05 09:23:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/ChangeLog,v 1.5 2004/12/29 01:53:50 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
@@ -24,7 +27,7 @@
   privoxy-3.0.2.ebuild, privoxy-3.0.3.ebuild:
   Fix user/group addition re #58526
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> privoxy-3.0.3.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> privoxy-3.0.3.ebuild:
   Stable on alpha.
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> privoxy-3.0.2.ebuild,
