@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13.ebuild,v 1.1 2004/02/08 15:08:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13.ebuild,v 1.2 2004/02/08 23:44:52 drobbins Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -326,7 +326,7 @@ src_install() {
 	# These moved from /etc/init.d/ to /sbin to help newb systems
 	# from breaking
 	dosbin runscript.sh functions.sh
-	use livecd && livecd-functions.sh
+	use livecd && dosbin livecd-functions.sh
 	exeinto /lib/rcscripts/sh
 	doexe rc-services.sh rc-daemon.sh rc-help.sh
 	cd ${S}/bin
