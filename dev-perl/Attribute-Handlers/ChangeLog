@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Attribute-Handlers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Attribute-Handlers/ChangeLog,v 1.5 2003/02/12 06:13:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Attribute-Handlers/ChangeLog,v 1.6 2003/05/21 21:50:55 rac Exp $
+
+*Attribute-Handlers-0.78-r1 (21 May 2003)
+
+  21 May 2003; <rac@gentoo.org> Attribute-Handlers-0.78-r1.ebuild:
+  Install into core perl directories, so the 5.8 core module may be overwritten.
+  Thanks to Nicholas Wourms <dragon@gentoo.org> for the suggestion in bug
+  #12573.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
