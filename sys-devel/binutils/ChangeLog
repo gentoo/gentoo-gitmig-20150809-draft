@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.78 2003/10/07 18:15:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.79 2003/10/22 16:28:52 darkspecter Exp $
+
+  22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org>
+  binutils-2.14.90.0.6-r5.ebuild:
+  set ppc in keywords
 
 *binutils-2.14.90.0.6-r6 (07 Oct 2003)
 
