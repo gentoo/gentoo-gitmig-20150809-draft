@@ -1,6 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-2.50.ebuild,v 1.3 2001/08/15 19:22:29 lordjoe Exp $
 
 A=unrar250.zip
 S=${WORKDIR}/${P}
