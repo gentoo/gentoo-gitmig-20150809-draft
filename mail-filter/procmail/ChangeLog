@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/procmail
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/ChangeLog,v 1.10 2004/12/08 01:16:49 swtaylor Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/ChangeLog,v 1.11 2005/01/27 19:03:06 ticho Exp $
+
+  27 Jan 2005; Andrej Kacian <ticho@gentoo.org> procmail-3.22-r6.ebuild:
+  Added selinux support. Bug #79751.
 
   07 Dec 2004; Scott W Taylor <swtaylor@gentoo.org> procmail-3.22-r6.ebuild:
   remove mail-mta/courier block

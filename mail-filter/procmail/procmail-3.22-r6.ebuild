@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.11 2004/12/08 01:16:49 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.12 2005/01/27 19:03:06 ticho Exp $
 
 inherit eutils
 
@@ -11,11 +11,12 @@ SRC_URI="http://www.procmail.org/${P}.tar.gz"
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips s390 ppc64"
-IUSE="mbox"
+IUSE="mbox selinux"
 PROVIDE="virtual/mda"
 
 DEPEND="virtual/libc virtual/mta"
-RDEPEND="virtual/libc"
+RDEPEND="virtual/libc
+	selinux? ( sec-policy/selinux-procmail )"
 
 src_compile() {
 # With gcc-3.1 and newer, there is a bug with aggressive optimization caused by
