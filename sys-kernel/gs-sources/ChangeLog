@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.50 2004/08/09 23:38:45 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.51 2004/10/11 20:12:11 dsd Exp $
+
+  11 Oct 2004; Daniel Drake<dsd@gentoo.org>:
+  Removing package from portage, as its unmaintained/broken. Please use
+  gentoo-sources or gentoo-dev-sources now.
 
 *gs-sources-2.4.25_pre7-r11 (10 Aug 2004)
 
