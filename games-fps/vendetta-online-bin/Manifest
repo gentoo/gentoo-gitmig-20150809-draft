@@ -1,4 +1,14 @@
-MD5 ec0b1cf7b298f996923b7609be8e6ae1 vendetta-online-bin-1.ebuild 1184
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 168ee0296a6dbf059bd81dbbc6570f06 ChangeLog 449
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 d77ac063112dbe6de9e2c463b8c10fb4 vendetta-online-bin-1.ebuild 1183
 MD5 b3144657c0fb9cb7a584260cd6538df6 files/digest-vendetta-online-bin-1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrWp+roRuSHgZdywRAhCnAJ9hp+MC0xB4+W0iFS9Qe9OsEb4s0gCfWDOm
+DdvWIG7CZD1yWOcSru6sMBw=
+=wSZo
+-----END PGP SIGNATURE-----
