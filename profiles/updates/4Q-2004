@@ -94,3 +94,4 @@ move app-sci/epix media-gfx/epix
 move app-sci/kst media-gfx/kst
 move app-sci/labplot media-gfx/labplot
 move app-sci/qmatplot media-gfx/qmatplot
+move app-sci/scigraphica media-gfx/scigraphica
