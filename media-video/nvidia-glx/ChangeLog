@@ -1,11 +1,14 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.73 2005/01/20 23:21:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.74 2005/01/20 23:25:10 eradicator Exp $
+
+*nvidia-glx-1.0.6629-r3 (20 Jan 2005)
 
   20 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
-  nvidia-glx-1.0.6629-r2.ebuild:
-  Make new revision install both 32bit and 64bit versions to make games herd
-  QA hapy.
+  -nvidia-glx-1.0.6629-r2.ebuild, +nvidia-glx-1.0.6629-r3.ebuild:
+  Make new revision install both 32bit and 64bit versions on 2004.3 to make 
+  games herd QA hapy.  Forcing revbump to make sure 2004.3 users get updated
+  correctly.
 
   20 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   nvidia-glx-1.0.6629-r2.ebuild:
