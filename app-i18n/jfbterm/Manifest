@@ -3,8 +3,10 @@ MD5 367b93e97a9e47eaef3f72243891439b jfbterm-0.3.12.ebuild 1135
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 4b5128e422830a09ab3b2c72c378ff18 jfbterm-0.3.16.ebuild 1335
 MD5 f8d50b1f5648df4973dbf1599997b840 jfbterm-0.4.0.ebuild 1334
+MD5 83fe1c13229fcca2b7a676410a94d555 jfbterm-0.4.1.ebuild 1312
 MD5 9e93ac5a5ce5371fe60243ba3278701a files/digest-jfbterm-0.3.12 65
 MD5 130efdf13aad34ae5f0175444d52e830 files/jfbterm.conf.extra 3884
 MD5 e4b59496f2d92bde0401211a5a935c5c files/jfbterm.conf.xfree 3803
 MD5 d25c5c4426f8bd7e8d2ecd30b4a33e0b files/digest-jfbterm-0.3.16 66
 MD5 cdcc0ea3588e3b865489a55e9769ce73 files/digest-jfbterm-0.4.0 65
+MD5 a5c408e951c7ab9f4334769afa29f360 files/digest-jfbterm-0.4.1 65
