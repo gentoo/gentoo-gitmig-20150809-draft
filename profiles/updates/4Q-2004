@@ -252,3 +252,4 @@ move app-sci/vis5d+ sci-geosciences/vis5d+
 move app-misc/grass sci-geosciences/grass
 move dev-libs/libticables sci-libs/libticables
 move app-sci/blas sci-libs/blas
+move app-sci/lapack sci-libs/lapack
