@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.78 2004/09/02 13:37:40 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.79 2004/09/08 15:05:43 vapier Exp $
+
+  08 Sep 2004; Mike Frysinger <vapier@gentoo.org> ncurses-5.3-r5.ebuild,
+  ncurses-5.4-r1.ebuild, ncurses-5.4-r2.ebuild, ncurses-5.4-r3.ebuild,
+  ncurses-5.4-r4.ebuild, ncurses-5.4-r5.ebuild:
+  Generate a ldscript for libcurses.so too #51901.
 
   02 Sep 2004; Travis Tilley <lv@gentoo.org> ncurses-5.4-r1.ebuild,
   ncurses-5.4-r2.ebuild, ncurses-5.4-r3.ebuild, ncurses-5.4-r4.ebuild,

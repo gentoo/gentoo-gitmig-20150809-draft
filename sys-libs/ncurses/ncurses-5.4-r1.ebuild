@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.25 2004/09/02 13:37:40 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.26 2004/09/08 15:05:43 vapier Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 
@@ -87,6 +87,7 @@ src_install() {
 	mv *.a ${D}/usr/$(get_libdir)
 	# bug #4411
 	gen_usr_ldscript libncurses.so || die "gen_usr_ldscript failed"
+	gen_usr_ldscript libcurses.so || die "gen_usr_ldscript failed"
 
 	# We need the basic terminfo files in /etc, bug #37026
 	einfo "Installing basic terminfo files in /etc..."

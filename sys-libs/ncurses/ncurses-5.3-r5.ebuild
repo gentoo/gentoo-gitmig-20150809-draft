@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r5.ebuild,v 1.18 2004/08/12 00:48:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r5.ebuild,v 1.19 2004/09/08 15:05:43 vapier Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 
@@ -72,6 +72,7 @@ src_install() {
 	mv *.a ${D}/usr/lib
 	# bug #4411
 	gen_usr_ldscript libncurses.so || die "gen_usr_ldscript failed"
+	gen_usr_ldscript libcurses.so || die "gen_usr_ldscript failed"
 
 # Breaks ncurses-5.3-xterm.patch
 #	# With this fix, the default xterm has color as it should
