@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.6.4.1.ebuild,v 1.3 2003/12/21 12:04:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.6.4.1.ebuild,v 1.4 2003/12/24 16:23:31 usata Exp $
 
 IUSE=""
 
@@ -16,8 +16,10 @@ LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="x86"
 
+# kde-base/kdebase is needed for konqueror
 DEPEND="virtual/glibc
 	>=x11-libs/qt-3.1
+	>=kde-base/kdebase-3.1
 	>=kde-base/kdelibs-3.1
 	>=kde-base/arts-1.1.4
 	>=sys-devel/gcc-3.2
