@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/viruskiller/viruskiller-0.9.ebuild,v 1.3 2004/04/27 08:15:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/viruskiller/viruskiller-0.9.ebuild,v 1.4 2004/06/07 07:50:12 mr_bones_ Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="${P}-1.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 RESTRICT="fetch"
 IUSE=""
 
