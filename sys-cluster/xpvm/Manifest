@@ -1,11 +1,21 @@
-MD5 4b64cc7fb14d0a0062781486c86f7dae xpvm-1.2.5-r1.ebuild 1396
-MD5 01905836c514adfa88c40a5203e3b31e xpvm-1.2.5-r3.ebuild 1527
-MD5 5e2384139164c2c3865e1e73961cb89a xpvm-1.2.5.ebuild 1475
-MD5 48a49fc5dbedb30da3d3d4e68193f415 xpvm-1.2.5-r2.ebuild 1395
-MD5 e21e230b2b067e979db1fd9d12df5a98 ChangeLog 1100
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6e81b0c2865131efbea0925821788b4f ChangeLog 1239
 MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
+MD5 da38d93c0a0e5c01996a68f0fb01cd1c xpvm-1.2.5-r1.ebuild 1499
+MD5 1205d1288a7ed3d6aa231b3372c9c129 xpvm-1.2.5-r2.ebuild 1498
+MD5 b1e441f24c884009912c1fafa2759429 xpvm-1.2.5-r3.ebuild 1630
+MD5 5e2384139164c2c3865e1e73961cb89a xpvm-1.2.5.ebuild 1475
+MD5 915d49a269c55c9d68cf0d7d30f1b272 files/digest-xpvm-1.2.5 63
 MD5 915d49a269c55c9d68cf0d7d30f1b272 files/digest-xpvm-1.2.5-r1 63
 MD5 915d49a269c55c9d68cf0d7d30f1b272 files/digest-xpvm-1.2.5-r2 63
 MD5 915d49a269c55c9d68cf0d7d30f1b272 files/digest-xpvm-1.2.5-r3 63
-MD5 915d49a269c55c9d68cf0d7d30f1b272 files/digest-xpvm-1.2.5 63
 MD5 d35a792494704198c2d97ff3e4b9e033 files/xpvm-1.2.5-gentoo.diff 2904
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBHhfWI1lqEGTUzyQRArKvAJ9l3vvQap90GdOFFTHctWptC01/CQCfa8pG
+tr9iFgV7NtSu5oE0NhX87kE=
+=ejML
+-----END PGP SIGNATURE-----
