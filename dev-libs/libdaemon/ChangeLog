@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdaemon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.10 2004/12/20 22:29:09 config Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.11 2004/12/21 10:24:32 ka0ttic Exp $
+
+  21 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> libdaemon-0.7.ebuild:
+  Remove --enable/disable-doxygen since upstream doesnt provide it anymore -
+  bug 75068.
 
   20 Dec 2004; Benjamin Schindler <config@gentoo.org> libdaemon-0.7.ebuild:
   Fixed a typo in 0.7 ebuild - makes configure fail if doc-use flag isn't set

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.7.ebuild,v 1.2 2004/12/20 22:29:09 config Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.7.ebuild,v 1.3 2004/12/21 10:24:32 ka0ttic Exp $
 
 DESCRIPTION="Simple library for creating daemon processes in C"
 HOMEPAGE="http://0pointer.de/lennart/projects/libdaemon/"
@@ -14,12 +14,9 @@ IUSE="doc"
 DEPEND="doc? ( app-doc/doxygen net-www/lynx )"
 
 src_compile() {
-	local myconf="--disable-doxygen --disable-lynx"
-	use doc	&& myconf="--enable-doxygen --enable-lynx"
-
-	econf ${myconf} || die "econf failed"
-
+	econf $(use_enable doc lynx) || die "econf failed"
 	emake || die "emake failed"
+
 	if use doc ; then
 		einfo "Building documentation"
 		make doxygen || die "make doxygen failed"
