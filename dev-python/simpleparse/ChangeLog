@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/simpleparse
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.5 2004/09/23 18:35:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.6 2004/11/04 16:53:27 pythonhead Exp $
+
+  04 Nov 2004; Rob Cakebread <pythonhead@gentoo.org> simpleparse-1.0.ebuild,
+  simpleparse-2.0.0.ebuild:
+  depend on app-arch/unzip bug# 69831, marked stable x86
 
   23 Sep 2004; <blubb@gentoo.org> simpleparse-2.0.0.ebuild:
   added ~amd64
