@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/fte
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.24 2005/01/01 13:24:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.25 2005/01/12 16:05:16 hanno Exp $
+
+*fte-20050108 (12 Jan 2005)
+
+  12 Jan 2005; Hanno Boeck <hanno@gentoo.org> +files/fte-gcc34,
+  +fte-20050108.ebuild:
+  Version bump and gcc 3.4-fix.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   fte-20020324-r1.ebuild, fte-20020324-r2.ebuild:
