@@ -1,4 +1,4 @@
-MD5 f99bdbe68caa44c40ef71762f27da40c files/xboard-4.2.6-patch.diff 362
 MD5 4c2b6f7e0d86f5583e227d94bde222cc files/digest-xboard-4.2.6-r1 65
-MD5 96670b64ef4211568bd980c3d01e3093 ChangeLog 576
-MD5 7bb3ba5f851d87986f0301812c065a91 xboard-4.2.6-r1.ebuild 667
+MD5 f99bdbe68caa44c40ef71762f27da40c files/xboard-4.2.6-patch.diff 362
+MD5 bd00890e7785a61e2c6c1fdd38236935 ChangeLog 580
+MD5 bbe8260401f8e569bf76686faabb68e3 xboard-4.2.6-r1.ebuild 686
