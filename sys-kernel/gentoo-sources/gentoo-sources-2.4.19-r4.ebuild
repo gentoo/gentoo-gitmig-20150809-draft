@@ -1,34 +1,47 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r1.ebuild,v 1.2 2002/04/30 23:39:55 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r4.ebuild,v 1.1 2002/05/08 05:49:06 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
 OKV=2.4.18
-KV=2.4.19-gentoo-r1
+KV=2.4.19-gentoo-r4
 S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
 
 # What's in this kernel?
 
 # INCLUDED:
-#	2.4.19-pre7-ac2
-#	grsecurity-1.9.4 (with fixes and a fix for an NVIDIA driver compile problem)
-#   2.4.19-pre7-low-latency
-#   htb2 (QoS support)
-#   preempt-kernel-rml-2.4.19-pre7-ac2-1.patch
-#	preempt-stats-rml-2.4.19-pre5-ac3-1.patch
-#	1000 HZ patch
-#	from jp10 (http://www.infolinux.de/jp10):
-#		41_twofish-2.4.3.bz2
-#		50_crypto-patch-int-2.4.18.1.bz2
-#		50_crypto-patch-int-2.4.18.1-1.bz2
+#	from http://www.kernel.org (ac):
+#		2.4.19-pre7-ac2
+#		removed the software suspend patch; it can be dangerous and
+#		conflicts with the new ACPI
+#	from http://oss.sgi.com/projects/xfs:
+#		SGI XFS 1.1 (Official release code -- the most thoroughly tested)
+#	from http://www.grsecurity.org:
+#		grsecurity-1.9.4 (with 2 updates/fixes and a fix for an NVIDIA driver compile problem)
+#	from http://www.zipworld.com.au/~akpm/linux/schedlat.html:
+#   	2.4.19-pre7-low-latency
+#	from http://luxik.cdi.cz/~devik/qos/htb/:
+#   	htb2 (QoS support)
+#	from http://www.tech9.net/rml/linux:
+#   	preempt-kernel-rml-2.4.19-pre7-ac2-1.patch
+#		preempt-stats-rml-2.4.19-pre5-ac3-1.patch
+#	from Daniel Robbins:
+#		i386 1000 HZ patch (trivial; jp also has a one-line patch for this one) 
+#	from http://www.infolinux.de/jp10:
+#		40_TIOCGDEV.bz2
 #		51_loop-jari-2.4.16.0.bz2
-#		90_freeswan-1.97.bz2
-#	from aa:
-#		00_3.5G-address-space-4 (from Andrea Archangeli)
+#		98_tkparse-4096.bz2
+#	from http://www.kernel.org (aa):
+#		00_3.5G-address-space-4
+#	from http://www.sourceforge.net/projects/acpi:
+#		acpi-20020404-2.4.18.diff.gz
+#		(This allows booting of Toshiba Satellite 5005-S507 "legacy free" laptops)
+#	from Blue Lizard <webmaster at dofty.zzn.com>:
+#		A 2-line patch to enable compatibility with the new SiS 740/961 Athlon chipset
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2  http://www.ibiblio.org/gentoo/distfiles/linux-gentoo-${KV}.patch.bz2"
@@ -105,21 +118,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	[ "$ETYPE" = "headers" ] && return
-	cd ${ROOT}usr/src/linux-${KV}
-	make mrproper
-	if [ -e "${ROOT}usr/src/linux/.config" ]
+	if [ ! -e ${ROOT}usr/src/linux ]
 	then
-		cp "${ROOT}usr/src/linux/.config" .config
-		#we only make dep when upgrading to a new kernel (with existing config)
-		#The default setting will be selected.
-		yes "" | make oldconfig
-		echo "Ignore any errors from the yes command above."
-		make dep
-	else
-		cp "${ROOT}usr/src/linux-${KV}/arch/i386/defconfig" .config
+		rm -f ${ROOT}usr/src/linux
+		ln -sf linux-${KV} ${ROOT}/usr/src/linux
 	fi
-	#remove /usr/src/linux symlink
-	rm -f ${ROOT}/usr/src/linux
-	#set up a new one
-	ln -sf linux-${KV} ${ROOT}/usr/src/linux
 }
