@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/gnome-office/gnumeric/gnumeric-0.66.ebuild,v 1.1 2001/06/28 09:47:57 hallski Exp
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-0.70-r2.ebuild,v 1.1 2001/10/06 20:15:36 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-0.70-r2.ebuild,v 1.2 2001/10/22 10:04:44 hallski Exp $
 
 
 A=${P}.tar.gz
@@ -22,7 +22,7 @@ RDEPEND=">=gnome-base/gnome-print-0.30
 	bonobo? ( >=gnome-base/bonobo-1.0.9-r1 ) "
 
 DEPEND="${RDEPEND}
-        >=dev-util/xml-i18n-tools-0.8.4
+        >=dev-util/intltool-0.11
         nls? ( sys-devel/gettext )"
 
 src_unpack() {
