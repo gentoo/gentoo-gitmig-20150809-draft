@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.2.ebuild,v 1.5 2004/07/14 15:07:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.2.ebuild,v 1.6 2004/07/19 21:53:35 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -32,8 +32,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=x11-libs/gtk+-2.4.4
 	>=x11-libs/pango-1.4
 
-	>=dev-libs/libxml2-2.6.9
-	>=dev-libs/libxslt-1.1.6
+	>=dev-libs/libxml2-2.6.11
+	>=dev-libs/libxslt-1.1.8
 
 	>=x11-libs/libxklavier-1.02
 	>=media-libs/audiofile-0.2.6
@@ -52,7 +52,7 @@ RDEPEND="!gnome-base/gnome-core
 	amd64? ( >=gnome-base/libbonobo-2.6.0 )
 
 	>=gnome-base/libbonoboui-2.6.1
-	>=gnome-base/libgnome-2.6.1.1
+	>=gnome-base/libgnome-2.6.1.1-r1
 	>=gnome-base/libgnomeui-2.6.1.1
 	>=gnome-base/libgnomecanvas-2.6.1.1
 	>=gnome-base/libglade-2.4

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.1_rc1.ebuild,v 1.6 2004/07/14 15:07:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.1_rc1.ebuild,v 1.7 2004/07/19 21:53:35 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -47,7 +47,7 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=gnome-base/libbonobo-2.6
 	>=gnome-base/libbonoboui-2.6
-	>=gnome-base/libgnome-2.6.1.1
+	>=gnome-base/libgnome-2.6.1.1-r1
 	>=gnome-base/libgnomeui-2.6.1.1
 	>=gnome-base/libgnomecanvas-2.6.1.1
 	>=gnome-base/libglade-2.3.6
