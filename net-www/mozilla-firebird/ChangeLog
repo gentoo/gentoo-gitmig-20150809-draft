@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla-firebird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.13 2003/07/25 16:25:06 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.14 2003/07/29 05:39:39 brad Exp $
+
+*mozilla-firebird-0.6.1 (29 Jul 2003)
+
+  29 Jul 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-0.6.1.ebuild:
+  Version bump
 
 *mozilla-firebird-0.6-r7 (25 Jul 2003)
 
