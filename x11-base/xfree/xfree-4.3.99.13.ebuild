@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.13.ebuild,v 1.2 2003/10/06 10:27:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.13.ebuild,v 1.3 2003/10/07 01:53:48 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
 RESTRICT="nostrip"
 
-IUSE="3dfx sse mmx 3dnow xml2 truetype nls cjk doc ipv6 debug static pam"
+IUSE="3dfx sse mmx 3dnow xml2 truetype nls cjk doc ipv6 debug static pam sdk gatos"
 
 filter-flags "-funroll-loops"
 
@@ -41,7 +41,7 @@ strip-flags
 USE_SNAPSHOT="yes"
 
 FILES_VER="0.1"
-PATCH_VER="0.2"
+PATCH_VER="0.3"
 FT2_VER="2.1.4"
 XCUR_VER="0.3.1"
 SISDRV_VER="090903-1"
@@ -517,6 +517,12 @@ src_install() {
 			install DESTDIR=${D} || die
 	else
 		make install DESTDIR=${D} || die
+	fi
+
+	if use sdk || use gatos
+	then
+		einfo "Installing XFree86 SDK..."
+		make install.sdk DESTDIR=${D} || die
 	fi
 
 	# We do not want these, so remove them ...

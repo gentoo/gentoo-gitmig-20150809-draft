@@ -1,4 +1,4 @@
-MD5 ab320b1b0d442121366f89e401b0e1a7 XFree86-4.3.99.13.tar.bz2 14550952
+MD5 908b6c8b7ba2d52e54565c2f728fdfff XFree86-4.3.99.13.tar.bz2 42148984
 MD5 4d7d5fdc4ed56c144ef998302581478c eurofonts-X11.tar.bz2 8811
 MD5 cfdef5d00cd4a7937ff4bc136dab1932 xfsft-encodings.tar.bz2 11811
 MD5 d0fab996daf97adf095e2dad0bd9012e gentoo-cursors-tad-0.3.1.tar.bz2 1196991
@@ -13,10 +13,9 @@ MD5 ed39c8ef91b9fb80f76f702568291bd5 times32.exe 661728
 MD5 0d7ea16cac6261f8513a061fbfcdb2b5 trebuc32.exe 357200
 MD5 12d2a75f8156e10607be1eaa8e8ef120 verdan32.exe 351992
 MD5 230a1d13a365b22815f502eb24d9149b webdin32.exe 185072
-MD5 3d4ee581df78c9dacc6e97aa07a1af72 gemini-koi8-u.tar.bz2 439173
 MD5 a3d78acc5b0762a7853e3be51250f2bb XFree86-4.3.99.13-files-0.1.tar.bz2 10777
 MD5 222bffcae6c2be37ec5cd993037f4f45 xf86Wacom.c.gz 26156
 MD5 537bb3e2da7642bd979ebc1cafa8dce7 savage-1.1.27t.zip 76974
 MD5 f4266ac7a00b72576280c18af5fdd966 sis_drv_src_090903-1.tar.gz 419840
 MD5 140fbd3daa649f7ad81066b9ac5bf929 synaptics-0.11.7.tar.bz2 54580
-MD5 4c41add353e0684116d63f60f5ad501e XFree86-4.3.99.13-patches-0.2.tar.bz2 75095
+MD5 a475985618491f50ef6a057bdb6a293d XFree86-4.3.99.13-patches-0.3.tar.bz2 96984
