@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.53 2003/10/01 14:27:09 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.54 2003/10/10 09:36:25 aliz Exp $
+
+*openssl-0.9.6k-r1 (10 Oct 2003)
+
+  10 Oct 2003; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.6k-r1.ebuild:
+  Adding the fix for bn.h to the 0.9.6k series
 
   01 Oct 2003; Jon Portnoy <avenj@gentoo.org> openssl-0.9.7c.ebuild :
   Stable for ia64
