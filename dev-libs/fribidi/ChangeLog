@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.2 2003/04/08 12:15:45 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.3 2003/07/04 09:13:33 lu_zero Exp $
+
+  04 Jun 2003; Luca Barbato <lu_zero@gentoo.org> fribidi-0.10.4.ebuild :
+  Added ~ppc keyword
 
   08 Apr 2003; Dan Armak <danarmak@gentoo.org> fribidi-0.10.4.ebuild:
   At the same time I added this ebuild to dev-libs, foser added a very similar
