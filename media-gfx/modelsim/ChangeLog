@@ -1,0 +1,8 @@
+# ChangeLog for media-gfx/modelsim
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/modelsim/ChangeLog,v 1.1 2003/07/10 00:19:07 vapier Exp $
+
+*modelsim-5.7d (09 Jul 2003)
+
+  09 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Chris Bainbridge <chrb@dcs.ed.ac.uk> #8312.
