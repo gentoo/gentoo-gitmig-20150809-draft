@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/wmmon
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/ChangeLog,v 1.8 2004/05/22 03:04:35 joker Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/ChangeLog,v 1.9 2004/06/24 23:13:35 agriffis Exp $
 
 *wmmon-1.0_beta2-r2 (22 May 2004)
 

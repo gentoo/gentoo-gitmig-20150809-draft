@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/epplets-0.7.ebuild,v 1.8 2004/05/27 15:12:06 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/epplets-0.7.ebuild,v 1.9 2004/06/24 22:51:51 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="Base files for Enlightenment epplets and some epplets"

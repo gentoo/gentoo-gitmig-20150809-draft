@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmlaunch/gkrellmlaunch-0.4.ebuild,v 1.5 2004/03/26 23:10:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmlaunch/gkrellmlaunch-0.4.ebuild,v 1.6 2004/06/24 22:55:25 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="a Program-Launcher Plugin for GKrellM"

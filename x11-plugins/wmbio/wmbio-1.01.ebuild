@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/wmbio-1.01.ebuild,v 1.5 2004/04/30 22:17:28 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/wmbio-1.01.ebuild,v 1.6 2004/06/24 23:05:46 agriffis Exp $
 
 IUSE=""
 S=${WORKDIR}/wmbio/src

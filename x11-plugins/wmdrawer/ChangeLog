@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/wmdrawer
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.6 2004/03/15 12:59:58 aliz Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.7 2004/06/24 23:08:59 agriffis Exp $
 
   15 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> wmdrawer-0.10.4.1.ebuild:
   Stable on amd64.

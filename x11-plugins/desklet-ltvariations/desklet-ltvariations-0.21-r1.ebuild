@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ltvariations/desklet-ltvariations-0.21-r1.ebuild,v 1.3 2004/04/12 16:42:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ltvariations/desklet-ltvariations-0.21-r1.ebuild,v 1.4 2004/06/24 22:49:58 agriffis Exp $
 
 DESKLET_NAME="LTVariations"
 

@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/gkrellm-volume
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/ChangeLog,v 1.17 2004/01/22 05:32:47 pylon Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/ChangeLog,v 1.18 2004/06/24 22:58:24 agriffis Exp $
 
   22 Jan 2004; Lars Weiler <pylon@gentoo.org> gkrellm-volume-2.1.9.ebuild:
   Add ~ppc to keywords

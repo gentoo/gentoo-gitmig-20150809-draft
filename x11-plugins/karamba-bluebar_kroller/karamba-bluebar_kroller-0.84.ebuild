@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-bluebar_kroller/karamba-bluebar_kroller-0.84.ebuild,v 1.4 2004/03/27 15:41:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-bluebar_kroller/karamba-bluebar_kroller-0.84.ebuild,v 1.5 2004/06/24 23:01:04 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="Kroller and Bluebar plugins together for Karamba"

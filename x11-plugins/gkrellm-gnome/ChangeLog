@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/gkrellm-gnome
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gnome/ChangeLog,v 1.6 2003/06/12 22:23:41 msterret Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gnome/ChangeLog,v 1.7 2004/06/24 22:54:39 agriffis Exp $
 
   12 Jun 2003; <msterret@gentoo.org> gkrellm-gnome-0.1.ebuild:
   fix Header

@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/desklet-weather
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-weather/ChangeLog,v 1.7 2004/04/27 12:36:22 obz Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-weather/ChangeLog,v 1.8 2004/06/24 22:51:31 agriffis Exp $
 
 *desklet-weather-0.25 (27 Apr 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.2.ebuild,v 1.9 2004/04/29 12:42:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.2.ebuild,v 1.10 2004/06/24 22:56:19 agriffis Exp $
 
 IUSE=""
 S=${WORKDIR}/${PN}

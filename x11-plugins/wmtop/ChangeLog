@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/wmtop
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/ChangeLog,v 1.4 2003/12/14 04:43:32 pylon Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/ChangeLog,v 1.5 2004/06/24 23:18:40 agriffis Exp $
 
   14 Dec 2003; Lars Weiler <pylon@gentoo.org> wmtop-0.84.ebuild:
   Make stable on ppc

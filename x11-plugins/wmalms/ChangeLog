@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/wmalms
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/ChangeLog,v 1.5 2003/12/26 17:23:20 weeve Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/ChangeLog,v 1.6 2004/06/24 23:04:29 agriffis Exp $
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> wmalms-1.0.0a-r1.ebuild:
   Masked on sparc as lm_sensors doesn't work.

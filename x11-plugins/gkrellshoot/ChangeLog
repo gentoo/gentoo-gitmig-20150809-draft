@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/gkrellshoot
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/ChangeLog,v 1.10 2004/04/13 16:22:00 kugelfang Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/ChangeLog,v 1.11 2004/06/24 22:59:30 agriffis Exp $
 
   13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> gkrellshoot-0.4.1.ebuild:
   marked ~amd64

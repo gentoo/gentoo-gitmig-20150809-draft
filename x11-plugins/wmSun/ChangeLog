@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/wmSun
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSun/ChangeLog,v 1.3 2004/03/14 00:17:00 geoman Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSun/ChangeLog,v 1.4 2004/06/24 23:17:59 agriffis Exp $
 
   13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> wmSun-1.03.ebuild:
   Added ~mips keyword.

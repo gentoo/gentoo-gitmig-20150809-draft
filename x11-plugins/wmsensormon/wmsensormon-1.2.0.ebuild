@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/wmsensormon-1.2.0.ebuild,v 1.1 2004/06/13 04:17:22 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/wmsensormon-1.2.0.ebuild,v 1.2 2004/06/24 23:16:53 agriffis Exp $
 
 IUSE=""
 S=${WORKDIR}/${P/_/-}/${PN}

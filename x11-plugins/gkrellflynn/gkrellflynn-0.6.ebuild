@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellflynn/gkrellflynn-0.6.ebuild,v 1.11 2004/04/30 21:02:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellflynn/gkrellflynn-0.6.ebuild,v 1.12 2004/06/24 22:53:14 agriffis Exp $
 
 IUSE=""
 HOMEPAGE="http://horus.comlab.uni-rostock.de/flynn/"

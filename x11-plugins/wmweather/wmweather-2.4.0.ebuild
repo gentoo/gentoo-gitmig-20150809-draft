@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather/wmweather-2.4.0.ebuild,v 1.8 2004/04/12 16:42:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather/wmweather-2.4.0.ebuild,v 1.9 2004/06/24 23:19:42 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="Dockable applette for WindowMaker that shows weather."

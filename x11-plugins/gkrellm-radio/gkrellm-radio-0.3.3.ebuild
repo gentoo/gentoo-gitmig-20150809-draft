@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-radio/gkrellm-radio-0.3.3.ebuild,v 1.7 2004/03/26 23:10:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-radio/gkrellm-radio-0.3.3.ebuild,v 1.8 2004/06/24 22:57:09 agriffis Exp $
 
 IUSE=""
 S=${WORKDIR}/${PN}

@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/wmSpaceWeather
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.6 2004/04/06 02:55:01 zx Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.7 2004/06/24 23:17:48 agriffis Exp $
 
   05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> wmSpaceWeather-1.04.ebuild:
   Inherit eutils, marking stable on hppa

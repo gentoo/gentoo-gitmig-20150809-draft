@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2.ebuild,v 1.7 2004/06/19 04:00:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2.ebuild,v 1.8 2004/06/24 23:13:35 agriffis Exp $
 
 S=${WORKDIR}/wmmon.app
 IUSE=""

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-diskinfo/desklet-diskinfo-0.1.4-r1.ebuild,v 1.3 2004/06/22 20:59:07 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-diskinfo/desklet-diskinfo-0.1.4-r1.ebuild,v 1.4 2004/06/24 22:49:39 agriffis Exp $
 
 SENS_NAME="Disk"
 DISP_NAME="diskinfo"

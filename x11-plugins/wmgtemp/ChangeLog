@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/wmgtemp
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.5 2003/11/16 22:50:49 pyrania Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.6 2004/06/24 23:10:14 agriffis Exp $
 
 *wmgtemp-0.7 (16 Nov 2003)
 

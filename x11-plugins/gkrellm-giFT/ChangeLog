@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/gkrellm-giFT
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-giFT/ChangeLog,v 1.4 2004/06/12 18:21:17 pyrania Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-giFT/ChangeLog,v 1.5 2004/06/24 22:54:28 agriffis Exp $
 
   12 Jun 2004; <pyrania@gentoo.org> gkrellm-giFT-0.2.2.ebuild:
   Fixed bug #50350.

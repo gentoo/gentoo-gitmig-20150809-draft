@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1.ebuild,v 1.7 2004/03/27 15:41:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1.ebuild,v 1.8 2004/06/24 23:10:48 agriffis Exp $
 
 IUSE=""
 S=${WORKDIR}/wmifs.app/wmifs

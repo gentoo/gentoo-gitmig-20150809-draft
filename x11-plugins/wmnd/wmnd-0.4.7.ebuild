@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.7.ebuild,v 1.7 2004/06/22 21:14:40 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.7.ebuild,v 1.8 2004/06/24 23:14:38 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="WindowMaker Network Devices (dockapp)"

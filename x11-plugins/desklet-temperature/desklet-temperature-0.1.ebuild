@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-temperature/desklet-temperature-0.1.ebuild,v 1.3 2003/11/01 03:45:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-temperature/desklet-temperature-0.1.ebuild,v 1.4 2004/06/24 22:51:20 agriffis Exp $
 
 DESKLET_NAME="TempNOAA"
 

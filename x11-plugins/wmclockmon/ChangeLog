@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/wmclockmon
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.14 2004/06/24 12:51:17 s4t4n Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.15 2004/06/24 23:06:50 agriffis Exp $
 
 *wmclockmon-0.8.0 (24 Jun 2004)
 

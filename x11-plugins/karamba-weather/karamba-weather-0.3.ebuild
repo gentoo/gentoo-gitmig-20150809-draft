@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-weather/karamba-weather-0.3.ebuild,v 1.10 2004/04/30 21:51:44 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-weather/karamba-weather-0.3.ebuild,v 1.11 2004/06/24 23:03:17 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="Weather plugin for Karamba"

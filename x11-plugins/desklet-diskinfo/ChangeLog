@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/desklet-diskinfo
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-diskinfo/ChangeLog,v 1.5 2004/06/22 20:59:07 kugelfang Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-diskinfo/ChangeLog,v 1.6 2004/06/24 22:49:38 agriffis Exp $
 
   22 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
   desklet-diskinfo-0.1.4-r1.ebuild:

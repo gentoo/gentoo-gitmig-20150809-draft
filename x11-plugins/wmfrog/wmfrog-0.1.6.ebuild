@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfrog/wmfrog-0.1.6.ebuild,v 1.3 2004/04/30 22:43:17 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfrog/wmfrog-0.1.6.ebuild,v 1.4 2004/06/24 23:09:43 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="This is a weather application, it shows the weather in a graphical way."

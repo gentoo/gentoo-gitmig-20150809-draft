@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/wmsensormon
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.4 2004/06/13 04:17:22 pyrania Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.5 2004/06/24 23:16:53 agriffis Exp $
 
 *wmsensormon-1.2.0 (13 Jun 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmem/asmem-1.10.ebuild,v 1.1 2004/05/11 18:40:20 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmem/asmem-1.10.ebuild,v 1.2 2004/06/24 22:48:24 agriffis Exp $
 
 inherit eutils
 
