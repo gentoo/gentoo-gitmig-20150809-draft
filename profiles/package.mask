@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3436 2004/12/31 03:36:10 dragonheart Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3437 2004/12/31 12:43:31 pvdabeel Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -35,10 +35,6 @@ dev-php/asp2php
 # Ringtones being masked per security bug #74700
 net-ftp/junkie
 app-misc/ringtonetools
-
-# <vapier@gentoo.org> (30 Dec 2004)
-# Masking pending security review
-app-portage/basc
 
 # <eradicator@gentoo.org> (29 Dec 2004)
 # Works occassionally... I think the problem might be related to using
