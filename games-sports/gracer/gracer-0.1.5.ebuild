@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.6 2004/06/24 23:24:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.7 2004/06/28 17:23:29 jhuebel Exp $
 
-inherit games eutils
+inherit gnuconfig games eutils
 
 DESCRIPTION="3D motor sports simulator"
 HOMEPAGE="http://gracer.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gracer/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ~amd64"
 IUSE="gif jpeg png joystick"
 
 RDEPEND="virtual/x11
@@ -32,6 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
+	gnuconfig_update
 	egamesconf \
 		`use_enable joystick` \
 		`use_enable gif` \
