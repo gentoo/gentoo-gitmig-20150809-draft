@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.238 2004/12/18 22:06:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.239 2004/12/18 23:39:43 absinthe Exp $
+
+  18 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
+  mplayer-1.0_pre5-r5.ebuild:
+  Stable on amd64.
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> mplayer-1.0_pre5-r5.ebuild:
   Stable on ppc64; bug #74473
