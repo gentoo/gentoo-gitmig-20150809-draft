@@ -17,10 +17,10 @@ done
 
 case $# in
 1)
-	if [ -f /usr/X11R6/bin/start.$1 ]
+	if [ -f /usr/X11R6/bin/wm/$1 ]
 	then
 	   source /etc/profile
-  	  /usr/X11R6/bin/start.$1
+  	  /usr/X11R6/bin/wm/$1
 	else
 		#failsafe
 		exec xterm -geometry 80x24-0-0
@@ -34,13 +34,23 @@ case $# in
   if [ -s "$startup" -a -x "$startup" ]; then
 	exec "$startup"
   else
-    if [ -r "$resources" ]; then
-      xrdb -load "$resources"
-    fi
+	if [ -f $HOME/.wm ]
+	then
+	    mywm="/usr/X11R6/bin/wm/`cat $HOME/.wm`"
+	    if [ -f $mywm ]
+	    then
+	        source /etc/profile
+		$mywm
+		exit 0
+	    fi
+	else
+	    if [ -r "$resources" ]; then	
+		xrdb -load "$resources"
+		exec xsm
+	    fi
+	fi
   fi
-  exec xsm
   ;;
 
 esac
 
-echo $# $1 > /root/information

@@ -25,9 +25,14 @@ if [ -f $usermodmap ]; then
 fi
 
 # start some nice program
-if [ -f /usr/X11R6/bin/start.$WINDOWMANAGER ]
+if [ -f $HOME/.wm ]
 then
-  /usr/X11R6/bin/start.$WINDOWMANAGER
+  mywm="/usr/X11R6/bin/wm/`cat $HOME/.wm`"
+  if [ -f $mywm ]
+  then
+    $mywm
+    exit 0
+  fi
 else
   twm &
   xclock -geometry 50x50-1+1 &
