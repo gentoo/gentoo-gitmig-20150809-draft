@@ -1,7 +1,8 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6,v 1.6 2001/12/06 20:17:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6,v 1.7 2002/03/13 19:53:10 azarah Exp $
+
 
 depend() {
 	need net
@@ -35,7 +36,8 @@ gen_keys() {
 start() {
 	checkconfig || return 1
 	ebegin "Starting sshd"
-	start-stop-daemon --start --quiet --exec /usr/sbin/sshd
+	start-stop-daemon --start --quiet --pidfile /var/run/sshd.pid \
+		--startas /usr/sbin/sshd
 	eend $?
 }
 
@@ -44,3 +46,4 @@ stop() {
 	start-stop-daemon --stop --quiet --pidfile /var/run/sshd.pid
 	eend $?
 }
+
