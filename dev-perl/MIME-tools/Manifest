@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4470d158b5d39fdbf7307cc0d72ecc4a ChangeLog 1952
+MD5 8b0ec7b5f1871cd7039148035ce98fb9 ChangeLog 2034
 MD5 b84afdf7c48237844f00dfd1e35d7f24 MIME-tools-5.411a-r1.ebuild 557
 MD5 b161c9f7735c2e602d3411eaa0faef1d MIME-tools-5.411a-r2.ebuild 766
 MD5 569c89ee8d433f3f23e076290aa8cd8e MIME-tools-5.411a.ebuild 554
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 421f2c57937a13854134c018dc791491 MIME-tools-5.413.ebuild 719
 MD5 e9f2aa04a0934da3b2987a33e1318ed1 MIME-tools-5.414.ebuild 734
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 b987111f7c2b917bf5fae7d6701d9d80 MIME-tools-5.415.ebuild 734
+MD5 c85973a2209ad92ae49e3746a5bd223c MIME-tools-5.415.ebuild 728
 MD5 2b9f918b7af42f1813ce451d63063a22 files/digest-MIME-tools-5.411a 69
 MD5 2b9f918b7af42f1813ce451d63063a22 files/digest-MIME-tools-5.411a-r1 69
 MD5 2b9f918b7af42f1813ce451d63063a22 files/digest-MIME-tools-5.411a-r2 69
 MD5 3fb53265184137c028f40fcbbb04d4d5 files/digest-MIME-tools-5.413 68
 MD5 a8779e960cdc26cf5dccad0873154377 files/digest-MIME-tools-5.414 68
 MD5 102e5bbb02994f63b2087054f46da6c8 files/digest-MIME-tools-5.415 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBgMdgtG5z4I8BtQoRApPNAJ4guyURZYmIw9ZtJvfURPbYSy8qDACeJqqW
-yqe3x45axrlnUItOZ4Jg650=
-=rzk+
------END PGP SIGNATURE-----
