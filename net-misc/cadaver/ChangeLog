@@ -1,10 +1,11 @@
 # ChangeLog for net-misc/cadaver
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.13 2004/11/01 20:15:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.14 2004/12/16 09:44:19 corsair Exp $
 
-  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+  16 Dec 2004; Markus Rothe <corsair@gentoo.org> cadaver-0.22.2.ebuild:
+  Stable on ppc64
 
-  cadaver-0.22.2.ebuild:
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org> cadaver-0.22.2.ebuild:
   Marked ~ppc64; bug #66755
 
   01 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> cadaver-0.22.2.ebuild:
