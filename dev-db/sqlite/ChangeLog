@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.57 2004/11/11 09:56:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.58 2004/12/04 18:18:16 fafhrd Exp $
+
+*sqlite-3.0.8-r1 (04 Dec 2004)
+
+  04 Dec 2004; Armando Di Cianno <fafhrd@gentoo.org> +sqlite-3.0.8-r1.ebuild:
+  I have added a sqlite-3.0.8-r1 which incorporates a "nothreadsafe" USE flag,
+  and thus enables thread safety by default. I would have rather not have added
+  a "noflag" and bump the package, but this at least enforces proper behavior of
+  the library, if one where to upgrade sqlite. This had to be done as the
+  package was broken for me and many others without thread safety.
 
   11 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   sqlite-3.0.8.ebuild:

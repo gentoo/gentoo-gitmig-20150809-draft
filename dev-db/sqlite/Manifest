@@ -1,25 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0ea51b2f6bc53454a9d49bbc252d39fd ChangeLog 7620
-MD5 4d4bfa913883e6229573e79b6f02aa3b metadata.xml 275
-MD5 860577d3f598990290ec0bd0fc89a9dd sqlite-2.8.13.ebuild 836
-MD5 8953a08cf332e2c67c304975ab2827c2 sqlite-2.8.14.ebuild 860
-MD5 f3bea22128d945c814915f4dddc6cf3a sqlite-2.8.15.ebuild 969
-MD5 f7f2b6db996414ddea4f372063c9732c sqlite-3.0.6.ebuild 1041
-MD5 fc1d6171cb71e35f1732a1dddcf68e39 sqlite-3.0.7.ebuild 990
 MD5 3b2bd41fec51fd35f41562f17309974b sqlite-3.0.8.ebuild 1020
+MD5 8953a08cf332e2c67c304975ab2827c2 sqlite-2.8.14.ebuild 860
+MD5 fc1d6171cb71e35f1732a1dddcf68e39 sqlite-3.0.7.ebuild 990
+MD5 860577d3f598990290ec0bd0fc89a9dd sqlite-2.8.13.ebuild 836
+MD5 f3bea22128d945c814915f4dddc6cf3a sqlite-2.8.15.ebuild 969
+MD5 afa680c5e36d4c92a03e36214594cb8b ChangeLog 8108
+MD5 f7f2b6db996414ddea4f372063c9732c sqlite-3.0.6.ebuild 1041
+MD5 4d4bfa913883e6229573e79b6f02aa3b metadata.xml 275
+MD5 52e0a2c4b58401280e84611a02129b0d sqlite-3.0.8-r1.ebuild 1813
+MD5 572dbaa55a4dd1cec17ee827911ee243 files/digest-sqlite-3.0.8-r1 65
+MD5 217c8f27a3185a30858423e31e1aa4d9 files/sqlite-2.8.15-alignement-fix.patch 538
 MD5 c35f34620d18893001720951f8ea0c73 files/digest-sqlite-2.8.13 65
 MD5 c9c200833c7c14eb4d750bb00455199e files/digest-sqlite-2.8.14 65
 MD5 b4031f19b8a32fa2b9dd4dfaf4b57ad0 files/digest-sqlite-2.8.15 65
 MD5 5aeb0a32e55ac5562756134561b39dae files/digest-sqlite-3.0.6 65
 MD5 e92b7000fca35af325e2ac65bce666e0 files/digest-sqlite-3.0.7 65
-MD5 217c8f27a3185a30858423e31e1aa4d9 files/sqlite-2.8.15-alignement-fix.patch 538
 MD5 572dbaa55a4dd1cec17ee827911ee243 files/digest-sqlite-3.0.8 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBkzdkArHZZzCEUG0RAq4KAJ9qeh854Kd3TGH1SY2hu/nNqeWGAQCfRm9D
-JG4Bn4ZKrfKuj1e+hna37A8=
-=IDRD
------END PGP SIGNATURE-----
