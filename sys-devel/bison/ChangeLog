@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.36 2005/01/11 10:07:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.37 2005/01/11 14:32:21 corsair Exp $
+
+  11 Jan 2005; Markus Rothe <corsair@gentoo.org> bison-1.875d.ebuild:
+  Stable on ppc64; bug #77434
 
   11 Jan 2005; Luca Barbato <lu_zero@gentoo.org> bison-1.875d.ebuild:
   Marked ppc
