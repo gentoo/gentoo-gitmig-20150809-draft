@@ -1,15 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: ChangeLog,v 1.1 2002/04/27 13:12:31 pvdabeel Exp $
+# $Id: ChangeLog,v 1.2 2002/05/05 06:47:41 kain Exp $
+
+*ppc-sources-2.4.19-r3 <kain@kain.org> :
+
+  Second official ppc kernel release:
+
+  More drivers in the defconfig for the cdrom image have been integrated;
+  We also have the drm-kernel from the ati.2 drivers at gatos.sf.net integrated
+  in.  These work better on the TiBook rev2 (I don't know about rev3).
+
+  Fixes also in the ebuild
 
 *ppc-sources-2.4.19 <pvdabeel@gentoo.org> :
 
   First official ppc kernel release
 
-1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
