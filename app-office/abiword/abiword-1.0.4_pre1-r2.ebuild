@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.4_pre1-r2.ebuild,v 1.1 2002/12/22 21:59:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.4_pre1-r2.ebuild,v 1.2 2003/02/04 23:40:15 jmorgan Exp $
 
 IUSE="perl nls gnome build spell jpeg xml2"
 S=${WORKDIR}/${P}/abi
 DESCRIPTION="Text processor"
 SRC_URI="http://download.sourceforge.net/abiword/abiword-${PV}.tar.gz"
 HOMEPAGE="http://www.abisource.com"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 DEPEND="virtual/x11
