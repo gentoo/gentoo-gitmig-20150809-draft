@@ -1,12 +1,16 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.18 2003/12/14 03:55:22 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.19 2003/12/20 16:14:33 gmsoft Exp $
 
   13 Dec 2003; Brad House <brad_mssw@gentoo.org> emacs-21.3-r2.ebuild,
   files/emacs-21.3-amd64.patch:
   mark stable on amd64 and patch
 
 *emacs-21.3-r2 (08 Dec 2003)
+
+  20 Dec 2003; Guy Martin <gmsoft@gentoo.org> emacs-21.3-r2.ebuild
+  files/emacs-21.3-hppa.patch :
+  Fix hppa compilation with a patch. Marked stable on hppa.
 
   08 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> emacs-21.3-r2.ebuild:
   Disable Xaw3d if USE="-Xaw3d" even when it is installed, bug 35300
