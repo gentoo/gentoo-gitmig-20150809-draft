@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r7.ebuild,v 1.7 2004/06/24 22:51:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r7.ebuild,v 1.8 2004/08/07 21:40:46 slarti Exp $
 
 inherit sgml-catalog
 
-DESCRIPTION="Python interface to SGML software specificially in a
+DESCRIPTION="Python interface to SGML software specifically in a
 DocBook/OpenJade environment.  Provides sgml2{html,txt,rtf,dvi,ps}"
 HOMEPAGE="http://sgmltools-lite.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sgmltools-lite/${P}.tar.gz
