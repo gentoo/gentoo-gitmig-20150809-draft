@@ -1,19 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.10.ebuild,v 1.1 2003/05/22 17:48:09 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.10-r1.ebuild,v 1.1 2003/06/01 03:50:51 lostlogic Exp $
 
 inherit eutils
 
-TLS_P="pfixtls-0.8.13-2.0.9-0.9.7b"
-IPV6_P="ipv6-1.14-pf-2.0.9"
-IPV6_TLS_P="tls+ipv6-1.14-pf-2.0.9"
+TLS_P="pfixtls-0.8.13-${PV}-0.9.7b"
+IPV6="1.14"
+IPV6_P="ipv6-${IPV6}-pf-${PV}"
+IPV6_TLS_P="tls+${IPV6_P}"
 IUSE="ssl mysql sasl ldap ipv6 maildir mbox"
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org"
 SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
 	ssl? ( ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/${TLS_P}.tar.gz )
-	ipv6? ( http://www.ipnet6.org/postfix/download/${IPV6_P}.patch.gz )
-	ipv6? ( http://www.ipnet6.org/postfix/download/${IPV6_TLS_P}.patch.gz )"
+	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/${IPV6}/${IPV6_P}.patch.gz )
+	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/${IPV6}/${IPV6_TLS_P}.patch.gz )"
 LICENSE="IPL-1"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc"
