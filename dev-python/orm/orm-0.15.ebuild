@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/orm-0.15.ebuild,v 1.1 2004/05/01 23:32:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/orm-0.15.ebuild,v 1.2 2004/05/04 13:00:17 kloeri Exp $
 
 IUSE="firebird mysql postgres"
 
@@ -8,7 +8,7 @@ inherit distutils
 
 DESCRIPTION="The Object Relational Membrane is an attempt to write an Object Relational Layer that is as thin as possible."
 HOMEPAGE="http://www.tux4web.de/computer/software/orm/"
-SRC_URI="${HOMEPAGE}download/${P}.tar.gz"
+SRC_URI="http://www.tux4web.de/computer/software/orm/download/${P}.tar.gz"
 
 DEPEND=">=dev-lang/python-2.2.3
 	dev-python/egenix-mx-base
