@@ -1,12 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/radiance/radiance-3.5.ebuild,v 1.1 2003/12/14 17:44:53 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/radiance/radiance-3.5.ebuild,v 1.2 2003/12/15 04:33:32 brandy Exp $
 
 MY_P=${P/./R}
 MY_P=${MY_P/radiance-/rad}
 
-# Compilation fails with multiple jobs here
-MAKEOPTS=""
+IUSE="X"
 
 DESCRIPTION="Radiance is a suite of programs for the analysis and visualization of lighting in design"
 HOMEPAGE="http://radsite.lbl.gov/radiance/"
@@ -17,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86"
 
 RDEPEND="media-libs/tiff
-		virtual/x11"
+	X? ( virtual/x11 dev-lang/tk )"
 
 DEPEND="${RDEPEND}"
 
@@ -26,6 +25,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}/ray
 	mkdir -p src/lib
+
+	use X ||  epatch ${FILESDIR}/${P}-noX11.patch
 
 	# patch to not build libtiff that comes with Radiance
 	cp src/px/Rmakefile src/px/Rmakefile.orig
@@ -54,7 +55,7 @@ src_compile() {
 	for i in $srcdirs ;
 	do
 		pushd $i
-		emake "SPECIAL=" \
+		make "SPECIAL=" \
 			"OPT=$CFLAGS -DSPEED=200" \
 			"MACH=-Dlinux -L/usr/X11R6/lib -I/usr/include/X11 -DNOSTEREO -DBIGMEM" \
 			ARCH=IBMPC "COMPAT=bmalloc.o erf.o getpagesize.o" \
@@ -89,6 +90,8 @@ src_install() {
 	doman doc/man/man3/*.3
 	doman doc/man/man5/*.5
 	prepallman
+
+	dodoc README
 
 	docinto notes
 	dodoc doc/notes/*
