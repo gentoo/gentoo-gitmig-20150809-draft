@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.28 2003/03/31 15:38:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.29 2003/05/29 07:59:02 utx Exp $
+
+*mutt-1.5.4-r1 (29 May 2003)
+
+  29 May 2003; Stanislav Brabec <utx@gentoo.org> mutt-1.4.1-r1.ebuild,
+  mutt-1.5.4-r1.ebuild: Fixed mbox build (from mutt-1.4-r3). Added message
+  about transparent background.
 
   26 Mar 2003; Peter Johanson <latexer@gentoo.org> :
   Changed 'use_enable ssl' to 'use_with ssl'. bug #18253
