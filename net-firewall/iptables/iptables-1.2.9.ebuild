@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.9 2004/03/09 23:30:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.10 2004/03/29 13:29:49 aliz Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,8 +19,7 @@ DEPEND="virtual/os-headers"
 src_unpack() {
 	replace-flags -O0 -O2
 
-	unpack ${A}
-	cd ${S}
+	unpack ${A} ; cd ${S}
 
 	epatch ${FILESDIR}/${PV}-files
 
@@ -34,6 +33,8 @@ src_unpack() {
 }
 
 src_compile() {
+	check_KV
+
 	# prevent it from causing ICMP errors.
 	# http://bugs.gentoo.org/show_bug.cgi?id=23645
 	filter-flags "-fstack-protector"
