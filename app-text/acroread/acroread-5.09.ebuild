@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.09.ebuild,v 1.3 2004/07/01 11:55:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.09.ebuild,v 1.4 2004/08/13 10:16:28 plasmaroo Exp $
 
 inherit nsplugins eutils
 
@@ -13,7 +13,7 @@ IUSE="cjk"
 
 SLOT="0"
 LICENSE="Adobe"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 
 RESTRICT="nostrip"
 DEPEND="virtual/libc
@@ -71,7 +71,6 @@ src_install() {
 }
 
 pkg_postinst () {
-
 	# fix wrong directory permissions (bug #25931)
 	find ${INSTALLDIR} -type d | xargs chmod 755 || die
 }
