@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20040629.ebuild,v 1.2 2004/08/30 01:16:39 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20040629.ebuild,v 1.3 2004/09/06 01:13:57 pebenito Exp $
 
 IUSE="build"
+
+inherit eutils
 
 DESCRIPTION="Gentoo base policy for SELinux"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
@@ -77,13 +79,6 @@ pkg_postinst() {
 		eerror "The above policy file(s) should be removed if possible." || \
 		einfo "None found."
 
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	sleep 4
+	ebeep 4
+	epause 4
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20040225.ebuild,v 1.6 2004/06/28 00:10:36 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20040225.ebuild,v 1.7 2004/09/06 01:13:57 pebenito Exp $
 
 IUSE="build"
 
@@ -60,13 +60,6 @@ pkg_postinst() {
 	echo
 	ewarn "Please check the Changelog, there may be important information."
 	echo
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-	sleep 8
+	ebeep 4
+	epause 4
 }
