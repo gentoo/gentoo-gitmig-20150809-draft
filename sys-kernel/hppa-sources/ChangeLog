@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hppa-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.38 2004/06/24 22:58:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.39 2004/07/03 22:15:39 gmsoft Exp $
+
+*hppa-sources-2.4.26_p6 (03 Jul 2004)
+
+  03 Jul 2004; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.26_p6.ebuild,
+  files/CAN-2004-0495-2.4-sparse.patch, files/CAN-2004-0535-2.4-e1000.patch:
+  Version bump. Harmony driver fix (alsa) + security fix.
 
 *hppa-sources-2.4.26_p4 (07 Jun 2004)
 
