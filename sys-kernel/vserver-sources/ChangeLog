@@ -1,0 +1,11 @@
+# ChangeLog for sys-kernel/vserver-sources
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.1 2004/03/25 13:41:30 tantive Exp $
+
+*vserver-sources-2.4.25.1.3.8 (25 Mar 2004)
+
+  25 Mar 2004; Michael Imhof <tantive@gentoo.org> vserver-sources-2.4.24.1.26.ebuild,
+  vserver-sources-2.4.25.1.3.8.ebuild:
+  Inital ebuilds. Submitted by Thomas Eckert <eckert.thomas@gmx.net>. Closes
+  #24619.
+
