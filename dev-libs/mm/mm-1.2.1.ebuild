@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.2.1.ebuild,v 1.10 2003/02/13 10:47:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.2.1.ebuild,v 1.11 2003/03/12 19:27:15 zwelch Exp $
 
 S=${WORKDIR}/${P}
 inherit libtool
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc"
 
 LICENSE="as-is"
 SLOT="1.2"
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa arm"
 
 src_unpack() {
 	unpack ${A}
