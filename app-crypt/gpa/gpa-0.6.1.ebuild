@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.6.1.ebuild,v 1.7 2004/02/07 02:30:05 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.6.1.ebuild,v 1.8 2004/04/25 21:57:25 agriffis Exp $
 
 DESCRIPTION="Standard GUI for GnuPG"
 SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gpa/${P}.tar.gz"
@@ -18,7 +18,7 @@ DEPEND=">=x11-libs/gtk+-2.0*
 
 
 src_compile() {
-	GPGME_CONFIG=/usr/bin/gpgme4-config econf `use_enable nls`
+	GPGME_CONFIG=/usr/bin/gpgme4-config econf `use_enable nls` || die "econf failed"
 
 	emake || die
 }

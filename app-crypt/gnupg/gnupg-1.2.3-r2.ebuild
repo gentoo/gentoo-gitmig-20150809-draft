@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r2.ebuild,v 1.10 2004/03/13 12:37:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r2.ebuild,v 1.11 2004/04/25 21:55:25 agriffis Exp $
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
@@ -31,7 +31,7 @@ src_compile() {
 		myconf="${myconf} --enable-m-guard"
 	fi
 
-	econf ${myconf} --libexecdir=/usr/lib
+	econf ${myconf} --libexecdir=/usr/lib || die "econf failed"
 	emake
 }
 

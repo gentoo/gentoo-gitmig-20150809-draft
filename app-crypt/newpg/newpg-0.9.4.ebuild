@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/newpg/newpg-0.9.4.ebuild,v 1.5 2004/03/13 21:50:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/newpg/newpg-0.9.4.ebuild,v 1.6 2004/04/25 22:01:37 agriffis Exp $
 
 DESCRIPTION="NewPG is the S/MIME variant of GnuPG which does also include the gpg-agent, useful even for GnuPG"
 HOMEPAGE="http://www.gnupg.org/"
@@ -21,7 +21,7 @@ src_compile() {
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
 
-	econf ${myconf} --disable-dependency-tracking
+	econf ${myconf} --disable-dependency-tracking || die "econf failed"
 	make || die
 }
 

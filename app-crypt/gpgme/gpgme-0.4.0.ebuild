@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.4.0.ebuild,v 1.14 2004/04/23 23:59:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.4.0.ebuild,v 1.15 2004/04/25 21:59:23 agriffis Exp $
 
 DESCRIPTION="GnuPG Made Easy (GPGME) is a library designed to make access to GnuPG easier for applications."
 SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gpgme/${P}.tar.gz"
@@ -40,7 +40,7 @@ src_unpack() {
 src_compile() {
 	econf	$(use_enable nls) \
 		$(use_enable crypt gpgmeplug) \
-		$(use_enable doc maintainer-mode)
+		$(use_enable doc maintainer-mode) || die "econf failed"
 	emake || die
 }
 
