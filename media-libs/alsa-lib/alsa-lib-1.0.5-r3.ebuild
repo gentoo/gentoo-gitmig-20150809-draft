@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.5-r3.ebuild,v 1.2 2004/08/04 19:57:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.5-r3.ebuild,v 1.3 2004/08/17 23:25:36 gmsoft Exp $
 
 IUSE="static jack"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.alsa-project.org/"
 SRC_URI="mirror://alsaproject/lib/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha amd64 -sparc ~ia64 ~ppc64"
+KEYWORDS="x86 ~ppc ~alpha amd64 -sparc ~ia64 ~ppc64 hppa"
 LICENSE="GPL-2 LGPL-2.1"
 
 RDEPEND="virtual/alsa
@@ -39,6 +39,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
+
+	# needed to avoid gcc looping internaly
+	use hppa && export CFLAGS="-O1 -pipe"
 
 	econf --enable-static=no --enable-shared=yes || die
 	emake || die
