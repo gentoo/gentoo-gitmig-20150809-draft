@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.225 2004/10/31 00:47:14 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.226 2004/11/06 00:46:30 chriswhite Exp $
+
+  06 Nov 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre4-r7.ebuild,
+  mplayer-1.0_pre5-r4.ebuild:
+  Fixed optimization filtering per bug #70175.
 
   31 Oct 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre4-r7.ebuild,
   mplayer-1.0_pre5-r2.ebuild, mplayer-1.0_pre5-r4.ebuild:

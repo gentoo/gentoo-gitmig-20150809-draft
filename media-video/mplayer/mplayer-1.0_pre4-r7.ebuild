@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.22 2004/10/31 00:47:14 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.23 2004/11/06 00:46:30 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -162,6 +162,12 @@ src_compile() {
 
 	filter-flags -fPIE -fPIC -fstack-protector -fforce-addr -momit-leaf-frame-pointer -msse2 -falign-functions
 	local myconf=
+
+	# ugly optimizations cause MPlayer to cry on x86 systems!
+	if use x86 ; then
+		replace-flags -O0 -O2
+		replace-flags -O3 -O2
+	fi
 
 	if use dvd; then
 		myconf="${myconf} $(use_enable dvdread) $(use_enable !dvdread mpdvdkit)"
