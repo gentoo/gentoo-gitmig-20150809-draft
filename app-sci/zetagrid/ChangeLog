@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/zetagrid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.19 2003/12/11 19:15:44 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.20 2003/12/11 19:43:10 tantive Exp $
+
+  11 Dec 2003; Michael Imhof <tantive@gentoo.org> files/zeta.sh,
+  files/zetagrid.init:
+  Changed scripts to allow logging. Closes #35261.
 
 *zetagrid-1.8.6-r1 (11 Dec 2003)
 

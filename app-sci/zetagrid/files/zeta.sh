@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/files/zeta.sh,v 1.5 2003/12/11 19:15:44 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/files/zeta.sh,v 1.6 2003/12/11 19:43:10 tantive Exp $
 
 # ======================================================================
 #  zeta.sh        Start script for the ZetaGrid client
@@ -32,4 +32,4 @@ else
     proxies=""
 fi
 
-nohup nice -n 19 java -Xmx128m $proxies -Djava.library.path=. -Dsun.net.inetaddr.ttl=0 -Dnetworkaddress.cache.ttl=0 -Dnetworkaddress.cache.negative.ttl=0 -cp zeta.jar:zeta_client.jar zeta.ZetaClient &
+nice -n 19 java -Xmx128m $proxies -Djava.library.path=. -Dsun.net.inetaddr.ttl=0 -Dnetworkaddress.cache.ttl=0 -Dnetworkaddress.cache.negative.ttl=0 -cp zeta.jar:zeta_client.jar zeta.ZetaClient &
