@@ -257,6 +257,7 @@ sys-devel/gdb-5.3-20030128
 sys-devel/gnuserv-2
 sys-devel/m4-1.4
 sys-devel/make-3.79
+sys-devel/patch-2.5.8
 sys-libs/db-6
 sys-libs/ncurses-8.1
 sys-libs/pam-1.9
