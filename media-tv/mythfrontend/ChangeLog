@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythfrontend
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.21 2004/09/11 12:33:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.22 2004/09/12 10:06:59 aliz Exp $
+
+  12 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mythfrontend-0.16.ebuild:
+  Make compilation distcc friendly, closing #63672.
 
   11 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mythfrontend-0.16.ebuild:
   Synced dependencies with mythtv.

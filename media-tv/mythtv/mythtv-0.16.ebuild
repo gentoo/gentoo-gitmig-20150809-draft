@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.ebuild,v 1.4 2004/09/10 18:01:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.ebuild,v 1.5 2004/09/12 10:07:19 aliz Exp $
 
 inherit myth flag-o-matic
 
@@ -30,9 +30,6 @@ DEPEND=">=media-libs/freetype-2.0
 
 RDEPEND="${DEPEND}
 	!media-tv/mythfrontend"
-
-# Fix bugs 40964 and 42943.
-filter-flags -fforce-addr -fPIC
 
 pkg_setup() {
 	if use X; then QTP=x11-libs/qt; else QTP=x11-libs/qt-embedded; fi
@@ -139,6 +136,14 @@ setup_pro() {
 		-i 'settings.pro' || die "enable xrandr sed failed"
 }
 
+src_unpack() {
+	# Fix bugs 40964 and 42943.
+	filter-flags -fforce-addr -fPIC
+
+	myth_src_unpack
+}
+
+
 src_compile() {
 	export QMAKESPEC="linux-g++"
 
@@ -146,7 +151,13 @@ src_compile() {
 	sed -i -e "s:OPTFLAGS=.*:OPTFLAGS=${CFLAGS}:g" config.mak
 
 	qmake -o "Makefile" "${PN}.pro"
-	make || die
+	make qmake || die
+	emake -C libs/libavcodec || die
+	emake -C libs/libavformat || die
+	emake -C libs/libmyth || die
+	emake -C libs/libmythtv || die
+	emake -C libs || die
+	emake || die
 }
 
 src_install() {

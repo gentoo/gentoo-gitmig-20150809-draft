@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.ebuild,v 1.3 2004/09/11 12:33:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.ebuild,v 1.4 2004/09/12 10:06:59 aliz Exp $
 
 inherit myth
 
@@ -139,6 +139,13 @@ setup_pro() {
 		-i 'settings.pro' || die "enable xrandr sed failed"
 }
 
+src_unpack() {
+	# Fix bugs 40964 and 42943.
+	filter-flags -fforce-addr -fPIC
+
+	myth_src_unpack
+}
+
 src_compile() {
 	export QMAKESPEC="linux-g++"
 
@@ -146,7 +153,12 @@ src_compile() {
 	sed -i -e "s:OPTFLAGS=.*:OPTFLAGS=${CFLAGS}:g" config.mak
 
 	qmake -o "Makefile" "mythtv.pro"
-	make || die
+	emake -C libs/libavcodec || die
+	emake -C libs/libavformat || die
+	emake -C libs/libmyth || die
+	emake -C libs/libmythtv || die
+	emake -C libs || die
+	emake || die
 }
 
 src_install() {
