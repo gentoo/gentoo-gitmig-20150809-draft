@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.3.2.ebuild,v 1.2 2004/02/28 18:19:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.3.2.ebuild,v 1.3 2004/03/11 19:06:29 eradicator Exp $
 
 IUSE="ncurses arts alsa python oss mikmod oggvorbis jack audiofile"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A package for multitrack audio processing"
 SRC_URI="http://ecasound.seul.org/download/${P}.tar.gz"
 HOMEPAGE="http://eca.cx/"
 LICENSE="GPL-2"
 
 SLOT="1"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	jack?	( virtual/jack )
