@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.5.ebuild,v 1.11 2004/01/14 17:33:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.5.ebuild,v 1.12 2004/02/07 07:15:28 liquidx Exp $
 
-inherit flag-o-matic virtualx gnome2
+# kde before gnome2, otherwise kde_src_install will override gnome2_src_install
 use kde && inherit kde
+inherit flag-o-matic virtualx gnome2
 
 # problems with -O3 on gcc-3.3.1
 replace-flags -O3 -O2
