@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.1 2001/09/03 04:57:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.2 2001/09/03 05:43:26 drobbins Exp $
 
 SV=1.1.5
 S=${WORKDIR}/rc-scripts-${SV}
@@ -134,7 +134,7 @@ src_install()
 		[ -f $foo ] && doins $foo
 	done
 	#going back to symlink mtab; it just plain works better
-	ln -s /proc/mounts /etc/mtab
+	dosym /proc/mounts /etc/mtab
 	chmod go-rwx ${D}/etc/shadow
 	keepdir /lib /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
