@@ -3,6 +3,13 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/festival/ChangeLog,v 1 2002/05/07
 # 03:58:19 naz Exp $
 
+*festival-1.4.3 (20 Jul 2003)
+
+  20 Jul 2003; jje <jje@gentoo.org> festival-1.4.3.ebuild:
+  Version bump. Speech-tools is now split out into a seperate build.
+  
+  Submitted by: Paul Giordano <giordano@covad.net>
+
 *festival-1.4.2-r3 (01 Dec 2002)
 
   01 Dec 2002; Matt Keadle <mkeadle@gentoo.org> festival-1.4.2-r3.ebuild
