@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.7 2003/12/18 22:44:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.8 2003/12/29 08:17:54 seemant Exp $
 
 inherit libtool flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
-PATCHVER=0.1
+IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
+PATCHVER=0.1
 DESCRIPTION="X MultiMedia System"
 HOMEPAGE="http://www.xmms.org/"
 SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.gz
@@ -15,8 +16,7 @@ SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa"
-IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
+KEYWORDS="x86 ~ppc ~sparc ~alpha hppa"
 
 DEPEND="app-arch/unzip
 	=x11-libs/gtk+-1.2*
@@ -26,6 +26,7 @@ DEPEND="app-arch/unzip
 	gnome? ( <gnome-base/gnome-panel-1.5.0 )
 	opengl? ( virtual/opengl )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
+
 RDEPEND="${DEPEND}
 	directfb? ( dev-libs/DirectFB )
 	nls? ( dev-util/intltool )"

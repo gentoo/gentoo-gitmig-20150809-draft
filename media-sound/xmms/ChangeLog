@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.80 2003/12/18 22:44:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.81 2003/12/29 08:17:54 seemant Exp $
+
+  29 Dec 2003; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.7-r23.ebuild:
+  move -r23 to stable x86 as there have not been any complaints about it.
+  Should close all the gettext related bugs about it, notably bug #36332 by
+  Craig Goodrich <craigg@hiwaay.net>
 
   18 Dec 2003; Martin Holzer <mholzer@gentoo.org> xmms-1.2.7-r20.ebuild,
   xmms-1.2.7-r23.ebuild:
