@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/grep
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.30 2004/06/30 15:52:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.31 2004/08/17 22:38:07 agriffis Exp $
+
+  17 Aug 2004; Aron Griffis <agriffis@gentoo.org> grep-2.5.1-r4.ebuild:
+  Move uclibc stuff forward from -r1. It appears solar only put it in -r1 for
+  some reason. Mark -r4 stable on alpha and ia64
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> grep-2.5.1-r1.ebuild:
   sync IUSE (+static)
