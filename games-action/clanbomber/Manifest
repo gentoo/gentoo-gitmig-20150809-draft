@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 82e254e4819eeeaf19880d1e20c979fe clanbomber-1.04.ebuild 912
 MD5 9802c0debb23dfefb27aa3bdac592d53 ChangeLog 641
 MD5 042c680a45dc47c6b52b7f6643ef0ae2 metadata.xml 664
 MD5 f5d44857e66661fc49082136bdc762e5 clanbomber-1.05.ebuild 1083
-MD5 e2b7d8463098a618a534512c27e44ae0 files/digest-clanbomber-1.04 68
 MD5 ee76e48cb66f47c894a990e83dea2802 files/1.04-no-display.patch 1122
-MD5 18333125f34d58cb129c22c86ad7ef50 files/1.05-no-display.patch 1217
 MD5 fe0f8b2ccaef47cc0612a83d6cb0cea8 files/digest-clanbomber-1.05 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBHyUmHTu7gpaalycRAti5AKDWuzwzIWhBKaF1A1F6cvdQWST3FQCg5uIJ
-5S/lrmPOpYxG9EbPi25oXxQ=
-=GRte
------END PGP SIGNATURE-----
+MD5 18333125f34d58cb129c22c86ad7ef50 files/1.05-no-display.patch 1217
