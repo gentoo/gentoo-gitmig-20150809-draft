@@ -1,10 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r3.ebuild,v 1.5 2003/07/06 14:19:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r3.ebuild,v 1.6 2004/02/01 15:17:29 usata Exp $
 
-inherit eutils
-
-IUSE="tetex"
+IUSE="doc"
 
 S=${WORKDIR}/iproute2
 DESCRIPTION="Kernel 2.4 routing and traffic control utilities"
@@ -17,7 +15,9 @@ LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ~ppc sparc ~alpha hppa ~mips"
 
 DEPEND="virtual/linux-sources
-		>=sys-apps/sed-4"
+		>=sys-apps/sed-4
+		doc? ( virtual/tetex )"
+RDEPEND="virtual/glibc"
 
 pkg_setup() {
 	# Make sure kernel headers are really available
@@ -71,7 +71,7 @@ src_install() {
 	docinto examples ; dodoc examples/*
 	dodir /etc/iproute2
 	insinto /etc/iproute2 ; doins ${S}/etc/iproute2/*
-	if [ "`use tetex`" ] ; then
+	if [ "`use doc`" ] ; then
 		docinto ps ; dodoc doc/*.ps
 	fi
 }

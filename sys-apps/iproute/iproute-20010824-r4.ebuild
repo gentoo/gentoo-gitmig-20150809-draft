@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r4.ebuild,v 1.9 2004/01/09 19:52:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r4.ebuild,v 1.10 2004/02/01 15:17:29 usata Exp $
 
-inherit eutils
-
-IUSE="tetex"
+IUSE="doc"
 
 DEBIANPATCH="${P/-/_}-11.diff.gz"
 SRCFILE="iproute2-2.4.7-now-ss${PV/20}.tar.gz"
@@ -24,7 +22,7 @@ KEYWORDS="x86 ~amd64 ppc sparc alpha hppa ~mips"
 # ~robbat2 2003/08/16
 DEPEND="virtual/os-headers
 		>=sys-apps/sed-4
-		tetex? ( app-text/tetex )"
+		doc? ( virtual/tetex )"
 RDEPEND="virtual/glibc"
 
 src_unpack() {
@@ -72,7 +70,7 @@ src_install() {
 	docinto examples ; dodoc examples/*
 	dodir /etc/iproute2
 	insinto /etc/iproute2 ; doins ${S}/etc/iproute2/*
-	if use tetex && [ -n "`ls doc/*.ps`" ] ; then
+	if use doc && [ -n "`ls doc/*.ps`" ] ; then
 		docinto ps ; dodoc doc/*.ps
 	fi
 }
