@@ -20,6 +20,11 @@ media-libs/nurbs++
 # Azarah (26 May 2002)
 =media-video/avifile-0.7.20020412
 
+# These ones are untested, and introduce new stuff
+# azarah - 28 May 2002
+=x11-base/xfree-4.2.0-r11
+>=net-www/mozilla-1.0_rc3-r2
+
 # Just masked until more testing can be done. (sandymac, 24 May 2002)
 # If you unmask mozilla, please do so to galeon and nautilus as well
 # changed nautilus mask to not block natuils 1.1.18 
