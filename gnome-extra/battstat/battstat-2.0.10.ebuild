@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/battstat/battstat-2.0.10.ebuild,v 1.1 2001/07/31 08:28:57 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/battstat/battstat-2.0.10.ebuild,v 1.2 2001/10/06 23:59:26 hallski Exp $
 
 A="battstat_applet-${PV}.tar.gz"
 S=${WORKDIR}/battstat_applet-${PV}
@@ -10,31 +10,28 @@ SRC_URI="http://download.sourceforge.net/battstat/${A}"
 HOMEPAGE="http://battstat.sourceforge.net"
 
 DEPEND="virtual/glibc
-	>=gnome-base/gnome-libs-1.2.0
-	>=gnome-base/gnome-core-1.4.0
+	>=gnome-base/gnome-libs-1.4.1.2-r1
+	>=gnome-base/gnome-core-1.4.0.4-r1
 	>=sys-apps/apmd-3.0.1
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
-    local myconf
+	local myconf
 
-    if [ -z "`use nls`" ] ; then
-        myconf="--disable-nls"
-    fi
+	if [ -z "`use nls`" ] ; then
+        	myconf="--disable-nls"
+	fi
 
-    cd ${S}
+	./configure --host=${CHOST}					\
+		    --prefix=/usr					\
+		    --sysconfdir=/etc					\
+	            $myconf || die
 
-    try ./configure --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome \
-	            --mandir=/opt/gnome/man $myconf
-
-    try make
-
+	emake || die
 }
 
 src_install () {
+	make DESTDIR=${D} install || die
 
-    try make DESTDIR=${D} install
-
-    dodoc AUTHORS COPYING ChangeLog NEWS README TODO
-
+	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
