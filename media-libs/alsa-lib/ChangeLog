@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.16 2002/12/31 15:20:59 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.17 2003/01/16 23:11:13 wwoods Exp $
+
+  16 Jan 2002; Will Woods <wwoods@gentoo.org> : alsa-lib-0.5.10b.ebuild
+  added ~alpha keyword
 
   31 Dec 2002; Olivier Reisch <doctomoe@gentoo.org>
   alsa-lib-0.9.0_rc6.ebuild :
