@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclgpgme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.12 2004/10/02 18:49:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.13 2004/10/31 15:30:55 tgall Exp $
+
+  31 Oct 2004; Tom Gall <tgall@gentoo.org> tclgpgme-1.0-r1.ebuild:
+  stable on ppc64, bug #64485
 
   02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> tclgpgme-1.0-r1.ebuild:
   Stable on alpha, requested in bug 64485.
