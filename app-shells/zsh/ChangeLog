@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.19 2003/04/17 08:48:11 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.20 2003/07/23 17:48:19 usata Exp $
+
+*zsh-4.0.7 (24 Jul 2003)
+
+  24 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> zsh-4.0.7.ebuild,
+  files/zprofile:
+  New version. Added maildir flag to IUSE. Changed Zsh startup file
+  from /etc/zsh/zshenv to /etc/zsh/zprofile suggested by James
+  Michael Fults <jmf@gtcom.net> in bug #19924.
 
 *zsh-4.0.6-r4 (17 Apr 2003)
 
