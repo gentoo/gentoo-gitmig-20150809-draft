@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.ebuild,v 1.1 2003/02/03 05:35:40 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.ebuild,v 1.2 2003/02/03 05:37:56 satai Exp $
 
 inherit flag-o-matic
 
@@ -112,7 +112,7 @@ src_install() {
 	make prefix=${D}/usr \
 		bindir=${D}/usr/bin \
 		datadir=${D}/usr/share \
-		mandir=${D}/usr/share/man/man1 \
+		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		texmf=${D}/usr/share/texmf \
 		install || die
