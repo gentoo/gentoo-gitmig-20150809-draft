@@ -1,6 +1,13 @@
 # ChangeLog for net-fsautofsChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.10 2002/10/27 05:21:15 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.11 2002/11/18 02:00:18 bcowan Exp $
+
+*autofs-3.1.7-r5 (17 Nov 2002)
+  
+  17 Nov 2002; Brad Cowan <bcowan@gebtoo.org> autofs-3.1.7-r5.ebuild,
+  files/digest-autofs-3.1.7-r5, files/ldap_config.patch, files/autofs.rc8 :
+
+  More ldap fixes, init script still needs some tweaking.
 
 *autofs-3.1.7-r4 (27 Oct 2002)
   
