@@ -28,6 +28,7 @@ atlas - Adds support for atlas instead of blas in dev-lang/R
 avi - Adds Win32 AVI support and also adds avifile (Library for avi) support
 berkdb - Adds support for sys-libs/db (Berkeley DB for MySQL)
 bonobo - Adds support for gnome-base/bonobo (Gnome CORBA interfaces)
+crypt - Add support for encryption -- using mcrypt or gpg where applicable
 cups - Add support for CUPS (Common Unix Printing System)
 dga - Adds DGA Support (Xfree86 ) (DGA=Direct Graphic Access)
 directfb - Adds support for DirectFB layer (library for FB devices)
@@ -45,7 +46,6 @@ gdbm - Adds support for sys-libs/gdbm (GNU database libraries)
 ggi - Adds support for media-libs/libggi (non-X video api/drivers)
 gif - Adds GIF image support
 gnome - Adds GNOME support
-gpg - Adds support for gpg (GnuPG encryption system)
 gphoto2 - Adds digital camera support
 gpm - Adds support for sys-libs/gpm (Console-based mouse driver)
 gtk - Adds support for x11-libs/gtk+ (The GIMP Toolkit)
@@ -65,7 +65,6 @@ libg++ - Adds C++ modules in dev-db/postgresql (libpq++)
 libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric 
 libmpeg3 - Adds mpeg support to mplayer
 libwww - Adds libwww support (General purpose WEB API)
-mcrypt - Adds mcrypt support to php (contains several encryption algorithms)
 mga - Adds Matrox MGA support to mplayer
 mhash - Adds mhash library support to php (library of hash algorithms)
 mikmod - 
