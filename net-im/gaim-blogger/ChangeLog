@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gaim-blogger
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-blogger/ChangeLog,v 1.15 2004/10/21 15:38:12 rizzo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-blogger/ChangeLog,v 1.16 2005/03/22 10:20:05 eradicator Exp $
+
+  22 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  gaim-blogger-1.0.0.ebuild:
+  Multilib cleanups and don't use einstall. Use proper toolchain CC.
+  Added to ~amd64.
 
   21 Oct 2004; Don Seiler <rizzo@gentoo.org> -gaim-blogger-0.81.ebuild,
   -gaim-blogger-0.82.ebuild, gaim-blogger-1.0.0.ebuild:

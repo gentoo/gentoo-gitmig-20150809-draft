@@ -1,4 +1,14 @@
-MD5 b35ffe56e61e8ae3b389c337b53add56 ChangeLog 1997
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f4ce87cb5c5f4beb5ffe21f59f1fb5d0 ChangeLog 2177
+MD5 07bf9be484cfa2e47c942ccb84366a0d gaim-blogger-1.0.0.ebuild 1072
 MD5 cc472fba95d8a54396fde67e2d303086 metadata.xml 639
-MD5 0b7d421f5d8392e385b78a6d7452dd16 gaim-blogger-1.0.0.ebuild 974
 MD5 6ba6036d95785c26d53ab610aa23791c files/digest-gaim-blogger-1.0.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCP/FjArHZZzCEUG0RAl18AJwJ9kRofdjYOFrhzAga5msJ7hF+ZACeIPBR
+uBvBC56K8fz38P5580qIjrY=
+=ofvQ
+-----END PGP SIGNATURE-----
