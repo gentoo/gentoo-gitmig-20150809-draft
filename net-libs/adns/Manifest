@@ -1,5 +1,5 @@
-MD5 3de07de364abef2619f856f69ea5a405 ChangeLog 1136
+MD5 90f36d25c990fec637b271dd8236617a ChangeLog 1232
 MD5 4b8f1b684f71f72b3acf4414f3f5c2f0 adns-1.0.ebuild 816
-MD5 50a88b9c3915176a0c06ced897cb6b8f adns-1.1.ebuild 817
+MD5 4a3fcd07562936e8f4b42a99c5163745 adns-1.1.ebuild 815
 MD5 11e178ba008aecd0b4f867a8b86d084d files/digest-adns-1.0 60
 MD5 02d0728348754d60e1859fdb915fe6bf files/digest-adns-1.1 60

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/adns-1.1.ebuild,v 1.3 2004/02/22 22:48:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/adns-1.1.ebuild,v 1.4 2004/03/29 17:47:09 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced, easy to use, asynchronous-capable DNS client library and utilities"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.chiark.greenend.org.uk/users/ian/adns/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 amd64"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~mips ia64 amd64"
 
 DEPEND="virtual/glibc"
 
