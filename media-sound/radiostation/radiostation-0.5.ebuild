@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiostation/radiostation-0.5.ebuild,v 1.2 2004/02/22 22:29:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiostation/radiostation-0.5.ebuild,v 1.3 2004/02/24 08:31:55 mr_bones_ Exp $
 
 DESCRIPTION="Managements system for online audio streams"
 HOMEPAGE="http://mindx.dyndns.org/kde/radio/"
@@ -18,11 +18,11 @@ DEPEND="kde? ( >=kde-base/kdelibs-3.1 )
 	net-misc/wget
 	media-sound/xmms"
 
-KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~mips ~alpha ~hppa"
+KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa"
 
 S=${WORKDIR}/kderadiostation-${PV}
 SRC_URI="http://mindx.dyndns.org/kde/radio/source/kderadiostation-${PV}.tar.gz
-         http://mindx.dyndns.org/kde/radio/source/radiostation"
+	http://mindx.dyndns.org/kde/radio/source/radiostation"
 
 src_unpack() {
 	if [ `use kde` ]; then
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
 	if [ `use kde` ]; then
 		einstall || die "Unsuccessful install"
-		dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO 
+		dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
 	fi
 
 	dobin ${WORKDIR}/radiostation
