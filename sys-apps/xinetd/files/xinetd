@@ -1,13 +1,14 @@
 #!/bin/sh
 #RCUPDATE:3 4:72:This line is required for script management
 
+. /etc/rc.d/config/basic
 . /etc/rc.d/config/functions
 
 SERVICE=xinetd
 EXE="/usr/sbin/xinetd"
 opts="start stop reconfig"
 
-start() {
+prepconfig() {
 		if [ ! -e /etc/xinetd.conf ] ; then
 		   einfo "Creating new config from inetd..."
 		   /usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
@@ -21,21 +22,37 @@ start() {
 			eerror "Xinetd not started.  Config file not found."
 			exit 1
 		fi
+}
+
+start() {
+		prepconfig
+
 		ebegin "Starting ${SERVICE}"
-		/usr/bin/svc -u /etc/svc.d/control/xinetd
+		start-stop-daemon --start --quiet --exec $EXE 1>&2
 		eend $? "Error starting ${SERVICE}."
 }
 
 stop() {
 		ebegin "Stopping ${SERVICE}"
+		start-stop-daemon --stop --quiet -u root -n $SERVICE 1>&2
+		eend $? "Error stopping ${SERVICE}."
+}
+
+supervise_start() {
+
+		prepconfig
+
+		ebegin "Starting ${SERVICE}"
+		/usr/bin/svc -u /etc/svc.d/control/xinetd
+		eend $? "Error starting ${SERVICE}."
+}
+
+supervise_stop() {
+		ebegin "Stopping ${SERVICE}"
 		/usr/bin/svc -d /etc/svc.d/control/xinetd
 		eend $? "Error stopping ${SERVICE}."
 }
 
-reconfig () {
-		stop
-		start
-}
 
 doservice ${@}
 
