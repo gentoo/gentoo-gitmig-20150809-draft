@@ -1,14 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6f82532dcf0e4325ece63bc5263aaca4 acroread-asianfonts-20020815.ebuild 915
-MD5 09ae02aa0c130df350d0a2ee861fb0c7 ChangeLog 994
+MD5 bf215f3cc66658ef6695a11684f9d74e ChangeLog 1343
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
+MD5 a81b44884017b478c9e1af7f0f8d8d6f acroread-asianfonts-7.0.20020815.ebuild 1881
+MD5 3896a71c5e279e5eb5403cef2b049554 acroread-asianfonts-5.0.20020815.ebuild 1858
+MD5 6f82532dcf0e4325ece63bc5263aaca4 acroread-asianfonts-20020815.ebuild 915
 MD5 fa09b5ed5d7b5b0f9579df23428a52c4 files/digest-acroread-asianfonts-20020815 241
+MD5 fa09b5ed5d7b5b0f9579df23428a52c4 files/digest-acroread-asianfonts-7.0.20020815 241
+MD5 fa09b5ed5d7b5b0f9579df23428a52c4 files/digest-acroread-asianfonts-5.0.20020815 241
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCOJB706ebR+OMO78RAp9YAJ9lJv2OaKbnsmoW/tsX+lKz1xcptACgjodh
-NX8MhxZu3FkUM5wTtfpNxy0=
-=FJhq
+iD8DBQFCSBvmVWNWqTUmv+0RAmq+AJ9T90VEZa6Tc3KkbqRJsb1s/xJ20gCdF0Nu
+Btx62iys+7A2L8e8gIQIXOE=
+=Vik3
 -----END PGP SIGNATURE-----
