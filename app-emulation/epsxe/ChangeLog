@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/epsxe
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/epsxe/ChangeLog,v 1.12 2003/08/17 19:48:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/epsxe/ChangeLog,v 1.13 2003/08/24 22:25:06 vapier Exp $
+
+*epsxe-1.6.0-r3 (24 Aug 2003)
+
+  24 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added a better wrapper script, thanks to Benjamin Hamilton.
 
 *epsxe-1.6.0-r2 (17 Aug 2003)
 
