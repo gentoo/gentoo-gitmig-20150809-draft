@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e6dca082427e588312d7178ac84df6d7 dmalloc-5.4.2.ebuild 1004
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 216ad5f5c3d6450bfa26b6456315eb0a dmalloc-5.4.2.ebuild 1004
+MD5 7d7d8f0fed57749963117aebc4283425 ChangeLog 2532
 MD5 6fccdfe7d00f967c2afaf860082039b3 dmalloc-4.8.2-r1.ebuild 834
 MD5 bc4b0816edfe0d270f37836b094c4407 dmalloc-5.3.0.ebuild 997
-MD5 cdbdb80342f07a8d3aae6b361950ef3a ChangeLog 2436
-MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 ee3cc894963eba0ee4a8a395fd958ba2 files/dmalloc-5.4.2-respect-DESTDIR.diff 4349
-MD5 d7d2c9ed36553b70e9fc9ffae863ff70 files/digest-dmalloc-5.3.0 62
-MD5 df2d7ec5445ffe67bd282af7f73139e0 files/digest-dmalloc-5.4.2 62
-MD5 9e69097981f3eb71bc12b8c3b5789b59 files/dmalloc-5.2.4-fpic.patch 1349
-MD5 2944158ef624e5e2d6d2ca9df1abbc64 files/dmalloc-5.3.0-respect-DESTDIR.diff 4338
 MD5 f50369b9728f749d86934c0b728619ef files/dmalloc-5.3.0-fpic.patch 1440
+MD5 9e69097981f3eb71bc12b8c3b5789b59 files/dmalloc-5.2.4-fpic.patch 1349
 MD5 005387d8e427b7c5704d67259d9e32e1 files/digest-dmalloc-4.8.2-r1 62
+MD5 d7d2c9ed36553b70e9fc9ffae863ff70 files/digest-dmalloc-5.3.0 62
+MD5 2944158ef624e5e2d6d2ca9df1abbc64 files/dmalloc-5.3.0-respect-DESTDIR.diff 4338
+MD5 df2d7ec5445ffe67bd282af7f73139e0 files/digest-dmalloc-5.4.2 62
+MD5 ee3cc894963eba0ee4a8a395fd958ba2 files/dmalloc-5.4.2-respect-DESTDIR.diff 4349
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB8TJnEZCkKN40op4RAuihAKCMpwVE02Qlnnw/mia9Cm0MY+kfNgCcDqvi
-4Q9Xf+0WtJ5MkBk8JTEap+Y=
-=H/y8
+iD8DBQFB97AjKRy60XGEcJIRAkkLAJ4zIAWzP3vZQ7/whzcDLSoFWj629ACdEqNI
+8mcSG07ZgavA/1x1NygC+YY=
+=Isf0
 -----END PGP SIGNATURE-----
