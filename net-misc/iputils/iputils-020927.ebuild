@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-020927.ebuild,v 1.6 2003/04/05 23:11:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-020927.ebuild,v 1.7 2003/06/20 18:26:26 avenj Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="Network monitoring tools including ping and ping6"
@@ -9,14 +9,15 @@ HOMEPAGE="ftp://ftp.inr.ac.ru/ip-routing"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ~sparc ~alpha ~ppc hppa ~mips"
-IUSE="doc"
+#IUSE="doc"
+IUSE=""
 
 DEPEND="virtual/glibc
-	virtual/os-headers
-	doc? ( app-text/openjade
-		dev-perl/SGMLSpm
-		app-text/docbook-sgml-dtd
-		app-text/docbook-sgml-utils )"
+	virtual/os-headers"
+#	doc? ( app-text/openjade
+#		dev-perl/SGMLSpm
+#		app-text/docbook-sgml-dtd
+#		app-text/docbook-sgml-utils )
 
 RDEPEND="virtual/glibc"
 
@@ -30,9 +31,9 @@ src_unpack() {
 
 src_compile() {
 	make KERNEL_INCLUDE="/usr/include" || die
-	if [ "`use doc`" ]; then
-		make html || die
-	fi
+#	if [ "`use doc`" ]; then
+#		make html || die
+#	fi
 	make man || die
 }
 
@@ -50,7 +51,7 @@ src_install () {
 	dodoc INSTALL RELNOTES
 	doman doc/*.8
 
-	if [ "`use doc`" ]; then
-		dohtml doc/*.html
-	fi
+#	if [ "`use doc`" ]; then
+#		dohtml doc/*.html
+#	fi
 }

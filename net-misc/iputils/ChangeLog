@@ -1,9 +1,14 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.9 2003/04/05 23:11:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.10 2003/06/20 18:26:26 avenj Exp $
 
 
 *iputils-020927 (03 Jan 2003)
+
+  20 Jun 2003; Jon Portnoy <avenj@gentoo.org> iputils-020927.ebuild :
+  Temporarily yanked out all of the USE="doc" stuff until a more
+  permanent fix can be implemented. Was breaking emerge system for 
+  users with doc in USE.
 
   6 Apr 2003; Guy Martin <gmsoft@gentoo.org> iputils-020927.ebuild :
   Marked stable on hppa. Changed depend sys-kernel/linux-headers to virtual/os-headers.
