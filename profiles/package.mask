@@ -494,13 +494,6 @@ dev-lang/tcl-tk
 # This is the new version of shadow, needs more beta testing
 >=sys-apps/shadow-4.0.3
 
-#george@gentoo.org
-#10 Apr 2002
-#gpc rebuilds gcc backend when installed.
-#I removed all gcc entries (so supposedly it is a clean install)
-#masked for a few days for testing
-dev-lang/gpc
-
 #seemant@gentoo.org
 #11 Apr 2002
 # USE dependent nls bloat reduction, but needs more testing
