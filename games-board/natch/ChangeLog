@@ -1,0 +1,10 @@
+# ChangeLog for games-board/natch
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/natch/ChangeLog,v 1.1 2005/03/27 00:40:40 mr_bones_ Exp $
+
+*natch-2.3 (26 Mar 2005)
+
+  26 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +natch-2.3.ebuild:
+  initial commit (bug #67638)
+
