@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/poi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.4 2004/06/24 22:40:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.5 2004/07/22 14:47:24 axxo Exp $
+
+*poi-2.5 (22 Jul 2004)
+
+  22 Jul 2004; Thomas Matthijs <axxo@gentoo.org>
+  +files/poi-2.0-jikes-fix.patch, +files/poi-2.5-jikes-fix.patch,
+  poi-2.0.ebuild, +poi-2.5.ebuild:
+  added junit use flag: run junit tests
+  new upstream version + patch to fix compilation with jikes (closes 57863)
+  added depend on jikes
 
   20 Apr 2004; Martin Holzer <mholzer@gentoo.org> poi-2.0.ebuild:
   src_uri now uses mirror://apache
