@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/oftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.9 2004/03/27 22:23:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.10 2004/03/31 19:29:05 eradicator Exp $
+
+*oftpd-0.3.7-r1 (31 Mar 2004)
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  oftpd-0.3.6-r7.ebuild, oftpd-0.3.7-r1.ebuild, oftpd-0.3.7.ebuild:
+  Someone mucked up the configure line when they were marking this stable (bug
+  #46348), so I am revbumping it.
 
   27 Mar 2004; Luca Barbato <lu_zero@gentoo.org> oftpd-0.3.7.ebuild:
   Marked ppc for securty issue with the previous version see  #45738
