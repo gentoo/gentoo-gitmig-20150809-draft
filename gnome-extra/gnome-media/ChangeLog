@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.55 2004/07/04 13:22:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.56 2004/07/11 15:41:59 spider Exp $
+
+*gnome-media-2.6.2 (11 Jul 2004)
+
+  11 Jul 2004; <spider@gentoo.org> +gnome-media-2.6.2.ebuild:
+  versionbump
 
   04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gnome-media-2.6.0.ebuild:
   Stable on alpha.
