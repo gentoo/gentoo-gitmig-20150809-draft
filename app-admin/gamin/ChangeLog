@@ -1,6 +1,24 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.9 2004/09/16 21:02:13 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.10 2004/09/21 20:35:57 azarah Exp $
+
+*gamin-0.0.10 (21 Sep 2004)
+
+  21 Sep 2004; Martin Schlemmer <azarah@gentoo.org>
+  +files/gamin-0.0.10-HAVE_LINUX-and-ENABLE_DNOTIFY-cleanup.patch,
+  +gamin-0.0.10.ebuild:
+  Update version.  Add a patch that does:
+  -  Use ENABLE_DNOTIFY (instead of #ifdef linux) in gam_server.c
+    to include gam_dnotify.h and init the dnotify backend, else
+    we get link errors if we build with inotify support, as
+    gam_dnotify.o was not build
+    (./configure --enable-inotify --disable-kernel).
+  -  Use '#ifdef HAVE_LINUX' instead of '#ifdef linux', as this
+    is what is defined in config.h if we are building for linux.
+    I might be wrong here, but I think 'linux' gets defined by
+    gcc ...
+  -  Actually build dnotify backend again if --enable-inotify was
+     passed, but not --disable-kernel.
 
 *gamin-0.0.9 (16 Sep 2004)
 
