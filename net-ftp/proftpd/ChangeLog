@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.47 2004/01/24 04:38:49 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.48 2004/01/24 07:31:23 blkdeath Exp $
+
+  24 Jan 2004; Stewart Honsberger <blkdeath@gentoo.org> files/proftpd.rc6:
+  Re: Bug #28345 added "--retry 20" to start-stop-daemon line in init script
+  to account for stray processes.
 
   23 Jan 2004; Nick Hadaway <raker@gentoo.org> proftpd-1.2.9.ebuild:
   Removed libpcap dependancy.  See bug #36291.  Also removed unneeded
