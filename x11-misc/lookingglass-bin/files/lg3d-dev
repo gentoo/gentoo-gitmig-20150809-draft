@@ -1,0 +1,46 @@
+#!/bin/bash
+# Copyright (c) 2004, Thomas Matthijs <axxo@gentoo.org>
+# Copyright (c) 2004, Gentoo Foundation
+#
+# Licensed under the GNU General Public License, v2
+
+# From java-utils.eclass
+get-vm-version() {
+        local version=$(java-config -f | sed -r "s/^[a-zA-Z-]+//")
+        echo ${version}
+}
+
+is-vm-version-ge() {
+        local user_major=${1-0}
+        local user_minor=${2-0}
+        local user_patch=${3-0}
+        local user_version=${user_major}.${user_minor}.${user_patch}
+        
+        local vm_version=`get-vm-version`
+
+        local ver_rx="([0-9]+)\.([0-9]+)\.([0-9]+)(.*)"
+        local vm_major=$(echo ${vm_version} | sed -r "s/${ver_rx}/\1/")
+        local vm_minor=$(echo ${vm_version} | sed -r "s/${ver_rx}/\2/")
+        local vm_patch=$(echo ${vm_version} | sed -r "s/${ver_rx}/\3/")
+        local vm_extra=$(echo ${vm_version} | sed -r "s/${ver_rx}/\4/")
+
+        if [ ${vm_major} -ge ${user_major} ] && [ ${vm_minor} -gt ${user_minor} ] ; then
+                echo "Detected a JDK >= ${user_version}"
+                return 0
+        elif [ ${vm_major} -ge ${user_major} ] && [ ${vm_minor} -ge ${user_minor} ] && [ ${vm_patch} -ge ${user_patch} ] ; then
+                echo "Detected a JDK >= ${user_version}"
+                return 0
+        else
+                echo "Detected a JDK < ${user_version}"
+                return 1
+        fi
+}
+
+if ! is-vm-version-ge 1 5; then
+	echo "You current jdk is not >= 1.5"
+	echo "Please use java-config to select a 1.5"
+	exit 1
+fi
+
+cd /opt/lg3d/
+exec bin/lg3d-dev $@

@@ -1,0 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c384b869008fa6366d81b4e25c3f3f16 lookingglass-bin-0.5.ebuild 1433
+MD5 28c2cc06e069ade9b22cfd3f488ec03e ChangeLog 608
+MD5 4eab4a2a65e10445b60c38d572d32f90 metadata.xml 1303
+MD5 9453465d4068db6beb83f7ecd83877bd files/displayserver.patch 965
+MD5 c512448b1cfd702cd4c35db2a4ee2dab files/lg3d-dev.patch 1019
+MD5 f9c1e87c14a5a0e1953fc8d592075e2d files/digest-lookingglass-bin-0.5 61
+MD5 91f1438b05137e9aa3d97bcb466b67af files/setup.patch 473
+MD5 c2b7f23ab0e6d18c4224155b3431c4a4 files/lg3d-session 1541
+MD5 69f715f50e4361ffe65e4ac7875c38a6 files/lg3d-dev 1537
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBC72U/rLF9B432nYRAo7bAKC5NP6zzAyxK7vWur9nyXP3E9v/0gCfT1Bm
+sv13NNUfFROhhhQwmR/cowQ=
+=Phal
+-----END PGP SIGNATURE-----

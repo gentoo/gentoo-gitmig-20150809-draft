@@ -1,0 +1,21 @@
+--- bin/displayserver	2004-06-27 06:25:06.000000000 +0200
++++ bin/displayserver	2004-07-29 11:53:51.160475080 +0200
+@@ -13,6 +13,12 @@
+  
+ echo $path >> /tmp/lgserver.log
+ 
++set lp="`java-config -i sun-java3d,jai`"
++set cp="`java-config -p sun-java3d,jai`:${CLASSPATH}"
++
++echo java.library.path ${lp} >> /tmp/lgserver.log
++echo classpath ${cp} >> /tmp/lgserver.log
++
+ 
+ pkill -f "rmiregistry ${RMI_PORT}"
+ sleep 1
+@@ -26,4 +32,4 @@
+ # Add lib/i386 to path so we can find cep
+ set path=( ${scriptdir}/../lib/i386 $path )
+ 
+-java  -Dj3d.sortShape3DBounds="true" -Dlg.configurl=${LGCONFIG} ${DISP_CONFIG} org.jdesktop.lg3d.displayserver.socketconnector.ServerHandler |& tee -a /var/tmp/lgserver.log | grep "SEVERE\|WARNING" -
++java -cp ${cp} -Djava.library.path=${lp} -Dj3d.sortShape3DBounds="true" -Dj3d.sortShape3DBounds="true" -Dlg.configurl=${LGCONFIG} ${DISP_CONFIG} org.jdesktop.lg3d.displayserver.socketconnector.ServerHandler |& tee -a /var/tmp/lgserver.log 

@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/lookingglass-bin
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lookingglass-bin/ChangeLog,v 1.1 2004/07/31 15:39:18 axxo Exp $
+
+*lookingglass-bin-0.5 (31 Jul 2004)
+
+  31 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +files/displayserver.patch, +files/lg3d-dev, +files/lg3d-dev.patch,
+  +files/lg3d-session, +files/setup.patch, +lookingglass-bin-0.5.ebuild:
+  initial import, requested in 55611, ebuild mostly by me, thanks too 
+  Sveinung Kvilhaugsvik <sveinung@HotPOP.com> and <nosdr4g@hotmail.com>

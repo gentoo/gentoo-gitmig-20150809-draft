@@ -1,0 +1,20 @@
+--- bin/lg3d-dev	2004-07-28 21:09:27.432202120 +0200
++++ bin/lg3d-dev	2004-07-28 21:33:44.272728696 +0200
+@@ -22,6 +22,11 @@
+  
+ echo $path >> /tmp/lgserver.log
+ 
++set lp="`java-config -i sun-java3d,jai`"
++set cp="`java-config -p sun-java3d,jai`:${CLASSPATH}"
++
++echo java.library.path ${lp} >> /tmp/lgserver.log
++echo classpath ${cp} >> /tmp/lgserver.log
+ 
+ pkill rmiregistry
+ sleep 1
+@@ -30,4 +35,4 @@
+ 
+ setenv DISP_CONFIG -Dlg.displayconfigurl=file://${scriptdir}/../etc/lg3d/displayconfig/j3d1x1
+ 
+-java  -Dj3d.sortShape3DBounds="true" -Dlg.configurl=${LGCONFIG} ${DISP_CONFIG} -Dorg.jdesktop.jz.jzcoresrc=$LGCORESRC org.jdesktop.lg3d.displayserver.socketconnector.ServerHandler |& tee -a /var/tmp/lgserver.log | grep "SEVERE\|WARNING" -
++java -cp ${cp} -Djava.library.path=${lp} -Dj3d.sortShape3DBounds="true" -Dlg.configurl=${LGCONFIG} ${DISP_CONFIG} -Dorg.jdesktop.jz.jzcoresrc=$LGCORESRC org.jdesktop.lg3d.displayserver.socketconnector.ServerHandler |& tee -a /var/tmp/lgserver.log  | grep "SEVERE\|WARNING" -
