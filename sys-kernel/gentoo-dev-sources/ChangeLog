@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.163 2005/01/04 09:29:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.164 2005/01/06 14:41:27 dsd Exp $
+
+  06 Jan 2005; Daniel Drake <dsd@gentoo.org>
+  gentoo-dev-sources-2.6.10-r1.ebuild, gentoo-dev-sources-2.6.10-r2.ebuild,
+  gentoo-dev-sources-2.6.10.ebuild, gentoo-dev-sources-2.6.9-r1.ebuild,
+  gentoo-dev-sources-2.6.9-r10.ebuild, gentoo-dev-sources-2.6.9-r11.ebuild,
+  gentoo-dev-sources-2.6.9-r12.ebuild, gentoo-dev-sources-2.6.9-r13.ebuild,
+  gentoo-dev-sources-2.6.9-r2.ebuild, gentoo-dev-sources-2.6.9-r3.ebuild,
+  gentoo-dev-sources-2.6.9-r4.ebuild, gentoo-dev-sources-2.6.9-r5.ebuild,
+  gentoo-dev-sources-2.6.9-r6.ebuild, gentoo-dev-sources-2.6.9-r7.ebuild,
+  gentoo-dev-sources-2.6.9-r8.ebuild, gentoo-dev-sources-2.6.9-r9.ebuild,
+  gentoo-dev-sources-2.6.9.ebuild:
+  Remove unneeded ucl depends
 
   04 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   gentoo-dev-sources-2.6.10-r2.ebuild:
