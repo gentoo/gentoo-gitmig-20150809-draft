@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/plt/plt-202.ebuild,v 1.3 2003/06/12 20:34:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/plt/plt-202.ebuild,v 1.4 2003/07/12 09:37:51 aliz Exp $
 
 S=${WORKDIR}/${PN}/src
 DESCRIPTION="PLT Scheme, including DrScheme, mzscheme, mred, and mzc"
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc
 	sys-devel/binutils"
 #RDEPEND=""
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/hyperspec/hyperspec-6.0.ebuild,v 1.2 2003/06/19 03:16:31 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/hyperspec/hyperspec-6.0.ebuild,v 1.3 2003/07/12 09:37:51 aliz Exp $
 
 inherit elisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.lispworks.com/reference/HyperSpec/"
 SRC_URI=""
 LICENSE="HyperSpec"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="emacs? ( virtual/emacs app-emacs/ilisp )"
 
