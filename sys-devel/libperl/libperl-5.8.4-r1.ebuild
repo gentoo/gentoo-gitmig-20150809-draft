@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.4-r1.ebuild,v 1.5 2004/08/07 00:09:12 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.4-r1.ebuild,v 1.6 2004/08/14 23:42:34 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -280,7 +280,6 @@ src_install() {
 			install || die "Unable to make install"
 
 		cp -f utils/h2ph utils/h2ph_patched
-		epatch ${FILESDIR}/perl-5.8.0-RC2-special-h2ph-not-failing-on-machine_ansi_header.patch
 
 		LD_LIBRARY_PATH=. ./perl -Ilib utils/h2ph_patched \
 			-a -d ${D}/usr/lib/perl5/${PV}/${myarch}${mythreading} <<EOF
