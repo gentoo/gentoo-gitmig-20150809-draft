@@ -3,15 +3,17 @@ Hash: SHA1
 
 MD5 f334c41a1a1d4817b41fe11cf35eac21 avidemux-2.0.34_rc2.ebuild 2636
 MD5 3e7529efab3b4c2630ae395e30ca890f avidemux-2.0.36.ebuild 2604
+MD5 0df3945d4a234df5430c6376a06ee625 avidemux-2.0.38_rc2.ebuild 2629
 MD5 4c24428398acd26c384e724f5e2cd71a avidemux-2.0.24.ebuild 2482
 MD5 dc94855a01eb66b0d3c329e46eb85e76 avidemux-2.0.34_rc1-r1.ebuild 3078
-MD5 ad5d474ba782f2a80aed29ac7dbdff75 ChangeLog 11653
+MD5 892bced3fd6431c5db72f76e744f168d ChangeLog 11785
 MD5 07ec34f7b85bdce7aff93574b527d1c5 avidemux-2.0.38_rc1.ebuild 2684
 MD5 5846b93f88b88de1c06950c94bf09e21 avidemux-2.0.34_rc1.ebuild 2417
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
 MD5 f9121be7bae99c7b33f4140c70799dce files/digest-avidemux-2.0.34_rc2 71
 MD5 03b785183df3226642178240a15f5a25 files/digest-avidemux-2.0.24 68
 MD5 7b49ecad9a48d74f4e99127f434ce29b files/avidemux-2.0.34-test1_faac.patch 631
+MD5 fa51202c1d7fc830fcd290028cb4a203 files/digest-avidemux-2.0.38_rc2 72
 MD5 c235b3c2a9d464d8729ec6698895866e files/alsa.patch 607
 MD5 c850494d08353a205ed94f81f6005aa4 files/digest-avidemux-2.0.34_rc1 74
 MD5 17fbb9e32a12d47d86a3f135c74da118 files/patch_jpeg.diff 1819
@@ -29,7 +31,7 @@ MD5 82846937f7ffde09813d938fe907c5e7 files/digest-avidemux-2.0.36 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCS8vARPjscZbntocRAjOnAJ0Qo/kQWzlVtYSG49RtIQtMeb+QJQCfZgFe
-Gzm1Kbdf8eBBb2Aiio/zwfI=
-=kpwl
+iD8DBQFCT8dMRPjscZbntocRAiUaAJ9k+9YJsktIVsfHekre57p3R3sPjQCeIk0I
+xJVOlonuGI87Wjk3miiSHrU=
+=Tn6R
 -----END PGP SIGNATURE-----
