@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.20 2004/02/27 19:42:47 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.21 2004/02/29 15:04:38 aliz Exp $
 
   27 Feb 2004; Sven Blumenstein <bazik@gentoo.org> rep-gtk-0.17-r1.ebuild:
   Stable on sparc. Forgot to commit :)
@@ -43,7 +43,7 @@
   files/digest-rep-gtk-0.17 :
   Version bump - needed for sawfish-1.2.
 
-rep-gtk-0.15-r3 (3 Sep 2002)
+*rep-gtk-0.15-r3 (3 Sep 2002)
   
   20 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> rep-gtk-0.15-r3.ebuild :
 

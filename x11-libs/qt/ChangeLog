@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.126 2004/02/20 15:30:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.127 2004/02/29 15:04:38 aliz Exp $
 
   20 Feb 2004; Guy Martin <gmsoft@gentoo.org> qt-3.3.0-r1.ebuild:
   Marked stable on hppa.
@@ -558,7 +558,8 @@ qt-3.2.0 (30 Jul 2003)
   to qt-3.0.3 which will be in 3.0.4. Closes bugs #1828 and (hopefully) #1610.
   Also, added libqt.so.* -> libqt-mt.so.* symlinks. Closes bug #1787.
 
-*qt-2.3.2-r1 and qt-3.0.3-r1 (16 Apr 2002)
+*qt-2.3.2-r1 (16 Apr 2002)
+*qt-3.0.3-r1 (16 Apr 2002)
   
   27 Apr 2002; Paul de Vrieze <pauldv@gentoo.org> qt-2.3.2-r1.ebuild:
   Fix problem of qt-2.3.2, that was interactive when using userpriv mode.
@@ -567,7 +568,8 @@ qt-3.2.0 (30 Jul 2003)
   Added optional gif dependency, since we now have a USE flag (in make.defaults)
   for it.  Thanks to tminos in #gentoo for pointing this out.
 
-*qt-2.3.2-r1 and qt-3.0.3-r1 (12 Apr 2002)
+*qt-2.3.2-r1 (12 Apr 2002)
+*qt-3.0.3-r1 (12 Apr 2002)
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> qt-2.3.2-r1.ebuild qt-3.0.3-r1.ebuild :
   Compile against newer libpng
@@ -586,7 +588,8 @@ qt-3.2.0 (30 Jul 2003)
   
   Version upgrade.
 
-*qt-3.0.2-r1, qt-2.3.1-r1 (24 Mar 2002)
+*qt-3.0.2-r1 (24 Mar 2002)
+*qt-2.3.1-r1 (24 Mar 2002)
 
   24 Mar 2002; Dan Armak <danarmak@gentoo.org> changelog:
   

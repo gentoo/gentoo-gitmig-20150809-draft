@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwmfun/libwmfun-0.0.4.ebuild,v 1.5 2003/06/04 13:43:13 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwmfun/libwmfun-0.0.4.ebuild,v 1.6 2004/02/29 15:04:38 aliz Exp $
 
 DESCRIPTION="Additional FUN! WindowMaker library"
 HOMEPAGE="http://www.windowmaker.org"
@@ -20,7 +20,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${WORKDIR}
-	patch -p0 < ${FILESDIR}/proplist-freetype2.diff
+	epatch ${FILESDIR}/proplist-freetype2.diff
 
 }
 

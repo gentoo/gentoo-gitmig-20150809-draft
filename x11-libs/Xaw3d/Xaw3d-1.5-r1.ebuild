@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.16 2004/02/18 13:43:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.17 2004/02/29 15:04:28 aliz Exp $
 
 # Ok, hopefully this will resolv the problem with the version of libXaw3d that
 # gets created.
@@ -42,8 +42,7 @@ src_unpack() {
 
 	# This adds more familiar scroll-bar look and feel for Emacs and
 	# others <mkennedy@gentoo.org>
-	mv Imakefile Imakefile~ \
-		&& sed -e 's,#.*EXTRA_DEFINES,EXTRA_DEFINES,g' <Imakefile~ >Imakefile || die
+	sed -i -e 's,#.*EXTRA_DEFINES,EXTRA_DEFINES,g' Imakefile || die
 }
 
 src_compile() {
