@@ -1,0 +1,6 @@
+# ChangeLog for dev-java/axion
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/ChangeLog,v 1.1 2004/03/30 23:59:47 karltk Exp $
+
+  01 Apr 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  axion-1.0_rc2.ebuild: Initial import. Ebuild submitted by myself.
