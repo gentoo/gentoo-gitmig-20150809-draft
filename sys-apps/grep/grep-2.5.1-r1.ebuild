@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.20 2004/04/27 21:09:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.21 2004/04/29 01:09:38 vapier Exp $
 
 inherit gnuconfig flag-o-matic eutils
-
 
 DESCRIPTION="GNU regular expression matcher"
 HOMEPAGE="http://www.gnu.org/software/grep/grep.html"
@@ -13,7 +12,7 @@ SRC_URI="http://ftp.club.cc.cmu.edu/pub/gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa ia64 ppc64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE="nls build"
 
 DEPEND="virtual/glibc
@@ -34,7 +33,7 @@ src_compile() {
 
 	local myconf=""
 	use nls || myconf="--disable-nls"
-	use static && append-flags -static && LDFLAGS="${LDFLAGS} -static"
+	use static && append-flags -static && append-ldflags -static
 
 	econf \
 		--bindir=/bin \
