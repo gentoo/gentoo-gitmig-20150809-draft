@@ -1,9 +1,9 @@
 # ChangeLog for games-fps/cube
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/ChangeLog,v 1.8 2004/11/11 21:02:44 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/ChangeLog,v 1.9 2004/11/12 16:02:04 blubb Exp $
 
   11 Nov 2004; Simon Stelling <blubb@gentoo.org> cube-20040522.ebuild:
-  added ~amd64
+  added ~amd64 
 
   16 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> cube-20040522.ebuild:
   fix compile issue (bug #60453); more error checking; tidy
