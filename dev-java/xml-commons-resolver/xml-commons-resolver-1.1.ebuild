@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/xml-commons-resolver-1.1.ebuild,v 1.2 2004/10/16 17:41:15 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/xml-commons-resolver-1.1.ebuild,v 1.3 2004/10/18 12:29:46 dholm Exp $
 
 inherit eutils java-pkg
 
@@ -11,7 +11,7 @@ DEPEND=">=virtual/jdk-1.3
 		>=dev-java/ant"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="doc"
 
 src_compile() {
