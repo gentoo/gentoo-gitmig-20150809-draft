@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.2.ebuild,v 1.1 2004/10/16 19:22:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.2.ebuild,v 1.2 2004/10/17 14:42:20 liquidx Exp $
 
 inherit eutils virtualx gnome2 flag-o-matic alternatives
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ximian.com/products/evolution/"
 
 LICENSE="GPL-2"
 SLOT="2.0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~mips ~hppa"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~hppa"
 IUSE="ssl mozilla ldap doc spell ipv6 kerberos crypt nntp debug pda"
 
 # Top stanza are ximian deps
@@ -66,20 +66,19 @@ src_unpack() {
 	cd ${S}
 	# bug #66166 -- temporary workaround until new baselayout exists
 	epatch ${FILESDIR}/${P}-gentoo_etc_services.patch
+	# bug #67824 -- fix typo of USE -ipv6
+	epatch ${FILESDIR}/${P}-camel_typo.patch
 }
 
 src_compile() {
 	# problems with -O3 on gcc-3.3.1
 	replace-flags -O3 -O2
 
-	elibtoolize
-
 	if [ "${ARCH}" = "hppa" ]; then
 		append-flags "-fPIC -ffunction-sections"
 		export LDFLAGS="-ffunction-sections -Wl,--stub-group-size=25000"
 	fi
 
-	einfo "Compiling Evolution..."
 	cd ${S}
 	local myconf=""
 

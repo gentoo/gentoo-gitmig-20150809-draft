@@ -1,0 +1,11 @@
+--- camel/camel-service.c.old	2004-10-17 13:26:37.177192232 +0100
++++ camel/camel-service.c	2004-10-17 13:27:14.303548168 +0100
+@@ -896,7 +896,7 @@
+ 	else
+ 		memcpy (&myhints, hints, sizeof (myhints));
+ 	
+-	myhints.ai_faimily = AF_INET;
++	myhints.ai_family = AF_INET;
+ 	hints = &myhints;
+ #endif
+ 
