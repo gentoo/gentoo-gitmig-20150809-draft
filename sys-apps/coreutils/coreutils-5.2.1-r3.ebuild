@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r3.ebuild,v 1.4 2005/03/03 17:51:47 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r3.ebuild,v 1.5 2005/03/03 17:59:18 ciaranm Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="nls build acl selinux static uclibc"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
-	acl? ( sys-apps/acl sys-process/attr )
+	acl? ( sys-apps/acl sys-apps/attr )
 	nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.3-r5"
 DEPEND="${RDEPEND}

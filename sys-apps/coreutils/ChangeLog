@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.120 2005/03/03 17:51:47 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.121 2005/03/03 17:59:18 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  coreutils-5.2.1-r3.ebuild, coreutils-5.2.1-r4.ebuild:
+  Fix dep mess made by epkgmove
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   coreutils-5.2.1-r3.ebuild:
