@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.0_beta3.ebuild,v 1.1 2004/01/03 13:10:27 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.0_beta3.ebuild,v 1.2 2004/01/29 04:17:36 agriffis Exp $
 
 MY_P=${PN}core-${PV/_beta/-beta}
 S="${WORKDIR}/${MY_P}/build/generic"
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
 
 src_compile() {
 	[ -z "${CC}" ] && export CC="gcc"
