@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>rizzo@gentoo.org</email>
+  <name>Don Seiler</name>
+<!--  <description>Description of the maintainership</description> -->
+</maintainer>
+<longdescription>Abook is a text-based addressbook program designed to use with mutt mail client.</longdescription>
+</pkgmetadata>

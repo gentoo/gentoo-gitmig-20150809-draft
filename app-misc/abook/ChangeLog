@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/abook
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.6 2003/12/26 12:25:55 pyrania Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.7 2004/02/09 16:40:35 rizzo Exp $
+
+*abook-0.5.1-r1 (09 Feb 2004)
+
+  09 Feb 2004; Don Seiler <rizzo@gentoo.org>; abook-0.5.1-r1.ebuild,
+  metadata.xml, files/0.5.1-01_mutt-filter:
+  In 0.5.1 there is a bug in mutt import filter which causes crashes. Patched
+  it.
 
 *abook-0.5.1 (26 Dec 2003)
 
