@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3019 2004/07/24 18:34:28 humpback Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3020 2004/07/24 21:35:29 batlogg Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -52,11 +52,6 @@ app-portage/generate-use
 =net-analyzer/nessus-plugins-2.1*
 =net-analyzer/nessus-2.1*
 =net-analyzer/nessus-core-2.1*
-
-# <batlogg@gentoo.org> (14 July 2004)
-# not sure if ebuild is stable enough for production use. needs some additional work.
-=net-zope/zope-2.7.1
-=app-admin/zope-config-0.4
 
 # <genone@gentoo.org> (13 July 2004)
 # upstream is dead, ferringb is working on a replacement
