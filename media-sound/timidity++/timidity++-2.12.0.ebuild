@@ -1,18 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0.ebuild,v 1.5 2002/10/05 05:39:16 drobbins Exp $
-
-IUSE="nas esd motif X gtk oggvorbis tcltk slang alsa"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0.ebuild,v 1.6 2003/08/20 04:36:05 vapier Exp $
 
 MY_P=TiMidity++-${PV}-pre1
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A handy MIDI to WAV converter with OSS and ALSA output support"
-SRC_URI="http://www.goice.co.jp/member/mo/timidity/dist/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.goice.co.jp/member/mo/timidity/"
+SRC_URI="http://www.goice.co.jp/member/mo/timidity/dist/${MY_P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+SLOT="0"
+KEYWORDS="x86 ppc"
+IUSE="nas esd motif X gtk oggvorbis tcltk slang alsa"
 
 DEPEND=">=sys-libs/ncurses-5.0
 	X? ( >=x11-base/xfree-4.0 )
