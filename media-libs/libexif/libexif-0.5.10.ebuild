@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.5.8.ebuild,v 1.3 2003/02/28 16:54:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.5.10.ebuild,v 1.1 2003/07/25 20:20:37 lanius Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://libexif.sf.net/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="dev-util/pkgconfig"
 
