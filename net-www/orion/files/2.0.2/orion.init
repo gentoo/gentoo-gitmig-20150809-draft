@@ -1,0 +1,30 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/files/2.0.2/orion.init,v 1.1 2004/07/16 14:00:35 axxo Exp $
+
+depend() {
+	need net
+}
+
+start()	{
+	ebegin "Starting orion"
+	cd ${ORION_DIR}
+	su - orion -c /opt/orion/sbin/start_orion.sh 
+	eend $?
+}
+
+stop()	{
+	ebegin "Stopping orion"
+	su - orion -c /opt/orion/sbin/stop_orion.sh
+	sleep 2
+	eend $?
+}
+
+restart() {
+	ebegin "Restarting orion"
+	su - orion -c /opt/orion/sbin/stop_orion.sh
+	sleep 5
+	su - orion -c /opt/orion/sbin/start_orion.sh
+	eend $?
+}

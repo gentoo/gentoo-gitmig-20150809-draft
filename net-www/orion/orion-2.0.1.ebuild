@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.1.ebuild,v 1.6 2004/06/25 01:08:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.1.ebuild,v 1.7 2004/07/16 14:00:35 axxo Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ LICENSE="ORIONSERVER"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.3
 	app-arch/unzip"
+IUSE=""
 
 src_unpack() {
 	unzip -q ${DISTDIR}/${At} || die

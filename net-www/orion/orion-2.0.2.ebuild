@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.14 2004/07/16 14:00:35 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.2.ebuild,v 1.1 2004/07/16 14:00:35 axxo Exp $
 
 inherit eutils
 
@@ -9,9 +9,9 @@ S=${WORKDIR}/${PN}
 At=${PN}${PV}.zip
 
 DESCRIPTION="Orion EJB/J2EE application webserver"
-SRC_URI=""
+SRC_URI="http://www.orionserver.com/distributions/${At}"
 HOMEPAGE="http://www.orionserver.com/"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86"
 LICENSE="ORIONSERVER"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.3
@@ -19,14 +19,6 @@ DEPEND=">=virtual/jdk-1.3
 IUSE=""
 
 src_unpack() {
-	if [ ! -f ${DISTDIR}/${At} ] ; then
-		einfo "Due to licensing restrictions, you must:"
-		einfo " "
-		einfo "1. Download ${At} from ${HOMEPAGE}."
-		einfo "2. Place ${At} into ${DISTDIR}."
-		einfo "3. Run 'emerge' on this ebuild again to continue."
-		die "Missing ${DISTDIR}/${At}; aborting."
-	fi
 	unzip -q ${DISTDIR}/${At} || die
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/${PV}-gentoo.patch
