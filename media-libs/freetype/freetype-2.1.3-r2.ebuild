@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.3-r2.ebuild,v 1.1 2002/12/15 05:47:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.3-r2.ebuild,v 1.2 2003/02/09 15:21:56 foser Exp $
 
 IUSE="doc"
 
@@ -36,7 +36,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${SPV}/${P}-slighthint.patch
 }
 
-
 src_compile() {
 	# Enable Bytecode Interpreter.
 	append-flags "${CFLAGS} -DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
@@ -60,4 +59,3 @@ src_install() {
 
 	use doc && dohtml -r docs/*
 }
-
