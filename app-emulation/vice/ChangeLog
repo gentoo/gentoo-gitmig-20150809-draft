@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.1 2002/08/03 21:38:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.2 2002/11/08 15:34:38 hanno Exp $
+
+*vice-1.10 (08 Nov 2002)
+
+  08 Nov 2002; Hanno Boeck <hanno@gentoo.org> vice-1.10.ebuild :
+  New version.
+  Also fixed dependencies (no need to depend on full gnome).
 
 *vice-1.9 (03 Aug 2002)
 
