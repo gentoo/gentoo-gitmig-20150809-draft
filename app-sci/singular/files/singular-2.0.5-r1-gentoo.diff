@@ -1,0 +1,94 @@
+--- singuname.sh	2003-08-07 12:48:09.000000000 +0200
++++ singuname.sh.new	2003-08-07 12:50:14.000000000 +0200
+@@ -168,6 +168,18 @@
+         echo ${prefix}-Unknown
+         exit 1
+     fi
++# PowerPC Linux ########################################################
++elif (echo $uname_a | $egrep " ppc " > $devnull)
++then
++    prefix=ppc
++    if (echo $uname_a | $egrep "Linux" > $devnull)
++    then
++        echo ${prefix}-Linux
++        exit 0
++    else
++        echo ${prefix}-Unknown
++        exit 1
++    fi
+ else # Unknown ########################################################
+     echo Unknown
+     exit 2
+--- Singular/mod_raw.cc	2003-08-22 12:53:30.000000000 +0200
++++ Singular/mod_raw.cc.new	2004-03-12 10:07:14.000000000 +0100
+@@ -40,7 +40,7 @@
+ void* dynl_open_binary_warn(char* binary_name, const char* msg)
+ {
+   void* handle = NULL;
+-  const char* bin_dir = feGetResource('b');
++  const char* bin_dir = feGetResource('r');
+   if (bin_dir != NULL)
+   {
+     char path_name[MAXPATHLEN];
+@@ -104,6 +104,10 @@
+ #define HAVE_ELF_SYSTEM
+ #endif
+ 
++#if defined(ppc_Linux)
++#define HAVE_ELF_SYSTEM
++#endif
++
+ #if defined(HAVE_ELF_SYSTEM)
+ #include <dlfcn.h>
+ 
+--- Singular/feResource.cc.orig	2004-03-03 12:26:07.000000000 +0100
++++ Singular/feResource.cc	2004-03-22 21:19:24.005384472 +0100
+@@ -45,7 +45,7 @@
+ #define SINGULAR_DEFAULT_DIR "/usr/local/Singular/"S_VERSION1
+ #endif
+ #else // ! defined(MAKE_DISTRIBUTION)
+-#define SINGULAR_DEFAULT_DIR S_ROOT_DIR
++#define SINGULAR_DEFAULT_DIR "/usr"
+ #endif // defined(MAKE_DISTRIBUTION)
+ 
+ #ifdef ix86_Win
+@@ -83,15 +83,12 @@
+ {
+   {"SearchPath",    's',     feResPath,  NULL,
+    "$SINGULARPATH;"
+-   "%b/LIB;"
+-   "%r/LIB;"
+-   "%r/../LIB;"
++   "%r/share/singular/LIB;"
+    "%d/LIB;"
+-   "%d/../LIB"
+    ""},
+-  {"Singular",  'S',    feResBinary,"SINGULAR_EXECUTABLE",  "%d/"S_UNAME"/Singular"EXT,""},
+-  {"BinDir",    'b',    feResDir,   "SINGULAR_BIN_DIR",     "%d/"S_UNAME            ""},
+-  {"RootDir",   'r',    feResDir,   "SINGULAR_ROOT_DIR",    "%b/..",                ""},
++  {"Singular",  'S',    feResBinary,"SINGULAR_EXECUTABLE",  "%d/bin/Singular"EXT,""},
++  {"BinDir",    'b',    feResDir,   "SINGULAR_BIN_DIR",     "%d/bin",""},
++  {"RootDir",   'r',    feResDir,   "SINGULAR_ROOT_DIR",    "%d",                ""},
+   {"DefaultDir",'d',    feResDir,   "SINGULAR_DEFAULT_DIR",  SINGULAR_DEFAULT_DIR,  ""},
+   {"InfoFile",  'i',    feResFile,  "SINGULAR_INFO_FILE",   "%r/info/singular.hlp", ""},
+   {"IdxFile",   'x',    feResFile,  "SINGULAR_IDX_FILE",    "%r/doc/singular.idx",  ""},
+@@ -105,7 +102,7 @@
+ #ifdef ix86_Win
+   {"rxvt",     'X',    feResBinary,"RXVT",                "%b/rxvt.exe",             ""},
+ #else
+-  {"xterm",     'X',    feResBinary,"XTERM",                "%b/xterm",             ""},
++  {"xterm",     'X',    feResBinary,"XTERM",                "%d/X11R6/bin/xterm",             ""},
+ #endif
+   {"Path",      'p',    feResPath,  NULL,                   "%b;$PATH",         ""},
+ #endif // ! defined(macintosh)
+--- Singular/mod_raw.cc.orig	2004-03-22 23:20:46.424288520 +0100
++++ Singular/mod_raw.cc	2004-03-22 23:22:11.975282792 +0100
+@@ -44,7 +44,7 @@
+   if (bin_dir != NULL)
+   {
+     char path_name[MAXPATHLEN];
+-    sprintf(path_name, "%s%s%s.%s", bin_dir, DIR_SEPP, binary_name, 
++    sprintf(path_name, "%s%s%s%s.%s", bin_dir, "/lib/singular", DIR_SEPP, binary_name, 
+             DL_TAIL);
+     handle = dynl_open(path_name);
+     if (handle == NULL && ! warn_handle)
