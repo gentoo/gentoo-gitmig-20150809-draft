@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-24.6.ebuild,v 1.1 2004/12/28 16:10:55 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-24.6.ebuild,v 1.2 2005/01/04 20:38:53 sekretarz Exp $
 
 IUSE=""
 DESCRIPTION="GIMPS - The Great Internet Mersenne Prime Search"
@@ -11,7 +11,7 @@ DEPEND=">=sys-apps/baselayout-1.8.0
 	>=sys-libs/glibc-2.1"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~x86 ~amd64"
 
 S="${WORKDIR}"
 I="/opt/gimps"
