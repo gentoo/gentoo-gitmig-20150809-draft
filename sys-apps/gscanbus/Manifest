@@ -1,0 +1,4 @@
+MD5 e87ac9898be689ad38a0dcde252b81c4 ChangeLog 365
+MD5 1358390d556d7deb191d9dac7c30260a gscanbus-0.7.1.ebuild 706
+MD5 325a51d833e143f51cccb972b4114b3b files/gscanbus-0.71-gcc33.patch 1054
+MD5 07de4a00e351e05697644561222458a4 files/digest-gscanbus-0.7.1 63
