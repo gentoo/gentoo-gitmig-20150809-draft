@@ -6,6 +6,10 @@
 KEYMAP="us"
 CONSOLEFONT="grfixed"
 
+#pete lives in the USE, and uses these settings
+#KEYMAP="us"
+#CONSOLEFONT="t -m straight-to-font"
+
 SULOGIN=no				# Set to yes if you want sulogin to be spawned on bootup
 DELAYLOGIN=yes				# Set to no if you want to be able to login over telnet/rlogin
 					# before system startup is complete (as soon as inetd is started)
@@ -16,4 +20,7 @@ FSCKFIX=no				# Set FSCKFIX to "yes" if you want to add "-y" to the fsck at star
 ARCH=`uname -m`				# Architecture
 NFSSERVER=no				# Set to yes if you want to run an nfsserver
 YP_DOMAIN=""				# Enter your NIS domainname here
+
+MOUSE="ms"				# Set to the mouse type as used by gpm (auto, ps2, ms, etc.)
+
 DISPLAYMANAGER=""			# Enter your display manager here (xdm,kdm,gdm)
