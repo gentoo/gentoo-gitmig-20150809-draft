@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/extutils-depends
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-depends/ChangeLog,v 1.1 2003/07/20 15:41:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-depends/ChangeLog,v 1.2 2003/08/18 10:44:20 mcummings Exp $
+
+*extutils-depends-0.102 (18 Aug 2003)
+
+  18 Aug 2003; Michael Cummings <mcummings@gentoo.org>
+  extutils-depends-0.102.ebuild:
+  CPAN Version bump; minor bug fix
 
 *extutils-depends-0.101 (20 Jul 2003)
 
