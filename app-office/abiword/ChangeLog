@@ -1,7 +1,12 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.46 2003/08/15 19:06:49 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.47 2003/08/18 22:56:00 foser Exp $
 
+*abiword-1.99.4-r2 (19 Aug 2003)
+
+  19 Aug 2003; foser <foser@gentoo.org> abiword-1.99.4-r2.ebuild :
+  Added ots plugin patch (#26824), harcode imagemagick disabling (#25721)
+ 
 *abiword-1.99.4-r1 (15 Aug 2003)
 
   15 Aug 2003; <spider@gentoo.org> abiword-1.99.4-r1.ebuild,
