@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.1.4.ebuild,v 1.1 2004/01/14 20:13:03 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.1.4.ebuild,v 1.2 2004/06/05 00:49:58 weeve Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="GTK frontend to proftpd"
@@ -8,7 +8,7 @@ HOMEPAGE="http://mange.dynup.net/linux.html"
 SRC_URI="http://mange.dynup.net/linux/gproftpd/${P}.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 SLOT="0"
 
