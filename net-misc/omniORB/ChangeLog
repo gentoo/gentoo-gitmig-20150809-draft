@@ -1,8 +1,15 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.9 2002/12/13 11:00:14 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.10 2002/12/14 09:54:11 lordvan Exp $
 
+*omniORB-4.0.0 (14 Dec 2002)
+  14 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org>
+  new version(without omniORBpy which is a seperate package now)
+  new version numbering scheme
+	
+/* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
  
 *omniORB-305 (25 Jul 2002)
 
