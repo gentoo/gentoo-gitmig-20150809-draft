@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.169 2003/11/10 22:50:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.170 2003/11/11 09:17:27 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -60,6 +60,7 @@ dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/liboop:adns - enable adns support
 dev-lips/bigloo-lib:expat - enable expat support
 dev-lips/bigloo-lib:ipcs - enable ipcs support
+dev-libs/uclibc:etdyn - enables etdyn support for PaX Address Space Layout Randomization
 dev-php/mod_php:gd-external - Use the external version of libgd rather than the bundled one
 dev-php/php:gd-external - Use the external version of libgd rather than the bundled one
 dev-python/anygui:wxwin - enable wxwin support
