@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.253 2004/09/17 19:42:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.254 2004/09/19 04:18:34 lv Exp $
+
+*glibc-2.3.4.20040918 (19 Sep 2004)
+
+  18 Sep 2004; Travis Tilley <lv@gentoo.org> -glibc-2.3.4.20040916.ebuild,
+  +glibc-2.3.4.20040918.ebuild:
+  new snapshot, fixes building with 2.4. go team upstream support.
 
   17 Sep 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.4.20040916.ebuild:
   removed keywords for archs that still use a 2.4 kernel, since recent nscd
