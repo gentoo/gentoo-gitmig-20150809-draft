@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.16 2004/06/29 03:51:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.17 2004/07/24 01:34:29 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -56,12 +56,11 @@ src_unpack() {
 	# side - although reproduceble with later 2.4 kernels, it is
 	# especially easy with 2.6 kernels.
 	echo '#define PGRP_PIPE 1' >> config-bot.h
+
+	gnuconfig_update
 }
 
 src_compile() {
-	# If running mips64, we need updated configure data
-	use mips && gnuconfig_update
-
 	filter-flags -malign-double
 
 	local myconf=
