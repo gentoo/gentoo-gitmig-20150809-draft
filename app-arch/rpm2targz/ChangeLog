@@ -1,6 +1,15 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.8 2003/05/21 16:17:33 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.9 2003/06/21 13:00:41 liquidx Exp $
+
+*rpm2targz-9.0 (21 Jun 2003)
+
+  21 Jun 2003; Alastair Tse <liquidx@gentoo.org> rpm2targz-9.0.ebuild:
+  version bump to slackware-9.0's rpm2targz. made our own tarball for
+  versioning purposes. otherwise digests/mirror will break.
+  this version uses rpm2cpio (from app-arch/rpm) if available, which
+  solves the flakey-ness of rpmoffset for certain binary rpms.
+  
 
   21 May 2003; Tavis Ormandy <taviso@gentoo.org> rpm2targz-8.0.ebuild:
   removing gcc hardcode.
