@@ -1,6 +1,14 @@
 # ChangeLog for net-www/jboss
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/ChangeLog,v 1.6 2003/03/26 12:24:10 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/ChangeLog,v 1.7 2003/05/08 15:47:48 mkennedy Exp $
+
+*jboss-3.2.1 (08 May 2003)
+
+  08 May 2003; Matthew Kennedy <mkennedy@gentoo.org> jboss-3.2.1.ebuild,
+  files/3.2.1/log4j.xml, files/3.2.1/conf.d/jboss, files/3.2.1/env.d/50jboss,
+  files/3.2.1/init.d/jboss, files/conf.d/jboss:
+  Resolves bug #19929. New configuration and improvements from Alex Winawer
+  <gentoo@winawer.net>
 
 *jboss-3.0.6 (17 Mar 2003)
 

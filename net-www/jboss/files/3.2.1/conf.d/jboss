@@ -1,11 +1,9 @@
-# The directory containing bin, server and lib dirs.
-JBOSS_HOME="@jbossprefix@"
-
 # You can choose which configuration you want to run JBoss with.  The
 # default configuration is, you guessed it, 'default'. The Gentoo
 # JBoss installation ships with two other predefined configurations;
 # 'all' and 'minimal'. The configurations are located in
 # $JBOSS_HOME/server/
+
 JBOSS_CONF="default"
 # JBOSS_CONF="all"
 # JBOSS_CONF="minimal"
@@ -13,13 +11,17 @@ JBOSS_CONF="default"
 # Console logging defaults to '/dev/null'. This env variable is
 # included for debugging purposes.  You might have to run add
 # $JBOSS_USER to the 'console' group to gain access to '/dev/console'.
+
 JBOSS_CONSOLE="/dev/null" 
 # JBOSS_CONSOLE="/dev/console"
 
 # The user JBoss will run as. Comment the next line to run as root
+
 JBOSS_USER="jboss"
 
 # Commands used in starting/stopping the server
 CMD_START="$JBOSS_HOME/bin/run.sh -c $JBOSS_CONF" 
-CMD_STOP="$JAVA_HOME/bin/java -classpath $JBOSS_HOME/bin/shutdown.jar org.jboss.Shutdown"
+
+CMD_STOP="$JAVA_HOME/bin/java -classpath $JBOSS_HOME/bin/shutdown.jar:$JBOSS_HOME/lib/jboss-system.jar:`java-config --classpath=jboss` org.jboss.Shutdown -S"
+
 SUBIT="su $JBOSS_USER -c "
