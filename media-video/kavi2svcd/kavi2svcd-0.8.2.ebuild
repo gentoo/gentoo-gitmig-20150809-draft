@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/kavi2svcd-0.8.2.ebuild,v 1.4 2004/04/16 22:54:35 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/kavi2svcd-0.8.2.ebuild,v 1.5 2004/05/14 05:18:06 vapier Exp $
 
-inherit kde-base
+inherit kde
 need-kde 3
 
 DESCRIPTION="GUI for generating VCD-compliant MPEG files from an AVI or MPEG file"
@@ -18,3 +18,8 @@ DEPEND=">=media-video/transcode-0.6.6
 	kde-base/kdelibs
 	cdr? ( >=media-video/vcdimager-0.7.19
 		>=app-cdr/cdrdao-1.1.7-r1 )"
+
+src_unpack() {
+	kde_src_unpack
+	sed -i 's:;;$:;:' ${S}/kavi2svcd/{prefclass,vcdclass}.h
+}
