@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.4.28-r2.ebuild,v 1.1 2004/12/24 19:52:45 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.4.28-r2.ebuild,v 1.2 2005/01/02 18:17:26 chrb Exp $
 
 ETYPE="sources"
 inherit kernel-2
