@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.33 2004/07/05 06:21:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.34 2004/07/06 09:53:03 mr_bones_ Exp $
+
+  06 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  timidity++-2.13.0-r1.ebuild:
+  Fix typo (bug #56213); remove nomirror
 
   04 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   timidity++-2.13.0-r1.ebuild:

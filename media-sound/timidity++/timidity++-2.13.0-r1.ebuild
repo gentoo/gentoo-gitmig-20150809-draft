@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0-r1.ebuild,v 1.6 2004/07/05 07:04:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0-r1.ebuild,v 1.7 2004/07/06 09:53:03 mr_bones_ Exp $
 
 inherit gnuconfig
 
@@ -11,7 +11,6 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="A handy MIDI to WAV converter with OSS and ALSA output support"
 HOMEPAGE="http://timidity.sourceforge.net/"
 SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -110,15 +109,15 @@ pkg_postinst() {
 	einfo ""
 	einfo "A timidity config file has been installed in /etc/timidity.cfg."
 	einfo ""
-	einfo "Youu need to edit this config file to reference your sound fonts."
-	einfo "If youu don't know what this means, try emerging timidity-eawpatches."
+	einfo "You need to edit this config file to reference your sound fonts."
+	einfo "If you don't know what this means, try emerging timidity-eawpatches."
 	einfo ""
 	einfo "An init script for the alsa timidity sequencer has been installed."
 	einfo "If you wish to use the timidity virtual sequencer, edit /etc/conf.d/timidity"
 	einfo "and run 'rc-update add timidity <runlevel> && /etc/init.d/timidity start'"
 
 	if use sparc; then
-		ewarn "sparc support is expirimental. oss, alsa, esd, and portaudio do not work."
+		ewarn "sparc support is experimental. oss, alsa, esd, and portaudio do not work."
 		ewarn "-Ow (save to wave file) does..."
 	fi
 }
