@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cpuspeedy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuspeedy/ChangeLog,v 1.6 2004/04/26 09:34:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuspeedy/ChangeLog,v 1.7 2004/04/26 12:50:34 dragonheart Exp $
+
+  26 Apr 2004; Daniel Black <dragonheart@gentoo.org> cpuspeedy-0.3.0.ebuild:
+  Changed sed to use ${D} vice fixed directory thanks to Priit Laes
 
   26 Apr 2004; Daniel Black <dragonheart@gentoo.org> cpuspeedy-0.3.0.ebuild:
   Fix docdir install
