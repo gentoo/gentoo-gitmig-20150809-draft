@@ -1,9 +1,11 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.40 2004/07/30 18:53:56 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.41 2004/07/30 19:06:10 squinky86 Exp $
 
   30 Jul 2004; Jon Hood <squinky86@gentoo.org> freenet-0.5.2.1-r8.ebuild:
   Added backup abilities from Todd Walton <todd@hardboot.org>, #58726
+  Download packed seednodes for updates from Alexander Schneider
+  <A.Schneider@magicspace.de>, #58898
 
   28 Apr 2004; Travis Tilley <lv@gentoo.org> freenet-0.5.2.1-r8.ebuild:
   added ~amd64 keyword, since freenet actually works with the beta sun-jdk even

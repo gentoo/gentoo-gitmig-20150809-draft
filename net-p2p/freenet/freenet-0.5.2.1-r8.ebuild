@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.6 2004/07/30 18:53:56 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.7 2004/07/30 19:06:10 squinky86 Exp $
 
 inherit eutils
 
@@ -78,14 +78,15 @@ pkg_config() {
 	if [ -z "$(echo ${YN}|sed -e s/y//i)" ];then
 		einfo "Press U within 2 seconds to try an unstable snapshot"
 		read -n 1 -t 2 YN
+		cp -f /usr/lib/freenet/freenet.jar /usr/lib/freenet/freenet.jar.old
 		if [ "${YN}" == "U" ] || [ "${YN}" == "u" ]; then
-			cp -f /usr/lib/freenet/freenet.jar /usr/lib/freenet/freenet.jar.old
 			wget http://freenetproject.org/snapshots/freenet-unstable-latest.jar -O /usr/lib/freenet/freenet.jar
-			wget http://freenetproject.org/snapshots/unstable.ref -O /var/freenet/seednodes.ref
+			wget http://freenetproject.org/snapshots/unstable.ref.bz2 -O /var/freenet/seednodes.ref.bz2
+			bunzip2 -f /var/freenet/seednodes.ref.bz2
 		else
-			cp -f /usr/lib/freenet/freenet.jar /usr/lib/freenet/freenet.jar.old
 			wget http://freenetproject.org/snapshots/freenet-latest.jar -O /usr/lib/freenet/freenet.jar
-			wget http://freenetproject.org/snapshots/seednodes.ref -O /var/freenet/seednodes.ref
+			wget http://freenetproject.org/snapshots/seednodes.ref.bz2 -O /var/freenet/seednodes.ref.bz2
+			bunzip2 -f /var/freenet/seednodes.ref.bz2
 		fi
 		touch -d "1/1/1970" /var/freenet/seednodes.ref
 		chown freenet:freenet /var/freenet/seednodes.ref
