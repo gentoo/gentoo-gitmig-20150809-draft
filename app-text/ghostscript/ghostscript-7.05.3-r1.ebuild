@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.3-r1.ebuild,v 1.4 2002/08/16 02:42:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.3-r1.ebuild,v 1.5 2002/08/16 12:57:35 seemant Exp $
 
 S=${WORKDIR}/espgs-${PV}
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
@@ -9,11 +9,15 @@ ftp://ftp.easysw.com/pub/ghostscript/gnu-gs-fonts-std-6.0.tar.gz
 ftp://ftp.easysw.com/pub/ghostscript/gnu-gs-fonts-other-6.0.tar.gz
 http://lxm3200.sourceforge.net/lxm3200-0.4.1-gs5.50-src.tar.gz"
 HOMEPAGE="http://www.easysw.com/"
-DEPEND="virtual/glibc >=media-libs/jpeg-6b >=media-libs/libpng-1.2.1 >=sys-libs/zlib-1.1.4 X? ( virtual/x11 )"
-RDEPEND="${DEPEND}"
-LICENSE="GPL-2 LGPL-2"
+
 SLOT="0"
+LICENSE="GPL-2 LGPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
+
+DEPEND=">=media-libs/jpeg-6b 
+	>=media-libs/libpng-1.2.1
+	>=sys-libs/zlib-1.1.4
+	X? ( virtual/x11 )"
 
 src_unpack() {
 	unpack espgs-${PV}-source.tar.bz2 || die
@@ -35,21 +39,16 @@ src_compile() {
 	use X && myconf="--with-x" || myconf="--without-x" 
 	use cups && myconf="${myconf} --enable-cups" || myconf="${myconf} --disable-cups"
 
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
+	econf \
 		--with-gimp-print \
 		${myconf} || die "./configure failed"
 
-	emake || die "make failed"
+	make || die "make failed"
 }
 
 src_install() {
-	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		install_prefix=${D} \
-		install || die "make install failed"
+	einstall \
+		install_prefix=${D} || die "make install failed"
 
 	cd ${WORKDIR}
 	cp -a fonts ${D}/usr/share/ghostscript || die

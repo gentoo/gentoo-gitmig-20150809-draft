@@ -1,8 +1,14 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.13 2002/07/19 23:56:28 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.14 2002/08/16 12:57:35 seemant Exp $
 
 *ghostscript-7.05.3 (19 Jul 2002)
+
+  16 Aug 2002; Seemant Kulleen <seemant@gentoo.org>
+  ghostscript-7.05.3.ebuild :
+
+  Fixed the emake to make, and general beautification. Fixes bug
+  #5931 by darkspe@katamail.com (Marco)
 
   19 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
 
