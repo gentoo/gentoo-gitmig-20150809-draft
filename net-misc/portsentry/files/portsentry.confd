@@ -1,3 +1,0 @@
-# Config file for /etc/init.d/portsentry
-
-#PORTSENTRY_MODES="udp tcp stcp atcp sudp audp
