@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts/unfonts-1.0.ebuild,v 1.2 2004/09/11 18:57:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts/unfonts-1.0.ebuild,v 1.3 2004/09/29 06:57:05 usata Exp $
 
 inherit font
 
@@ -14,7 +14,7 @@ SRC_URI="http://kldp.net/download.php/1425/${MY_PN}-core-${PV}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~amd64"
+KEYWORDS="x86 ppc alpha ~amd64"
 IUSE=""
 
 FONT_SUFFIX="ttf"
