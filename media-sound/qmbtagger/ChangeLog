@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmbtagger
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/ChangeLog,v 1.8 2004/10/10 18:37:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/ChangeLog,v 1.9 2004/10/10 22:56:40 swegener Exp $
+
+  11 Oct 2004; Sven Wegener <swegener@gentoo.org> :
+  Removed stray digests.
 
   10 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/qmbtagger-0.07-errno.patch, -qmbtagger-0.04.ebuild,
