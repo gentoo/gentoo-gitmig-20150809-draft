@@ -5,7 +5,7 @@
 <maintainer>
 	<email>pebenito@gentoo.org</email>
 	<name>Chris PeBenito</name>
-	<description>SELinux patch maintainer</description>
+	<description>Maintainer</description>
 </maintainer>
 <longdescription>Mkinitrd creates initial ramdisks for use when the kernel first loads.</longdescription>
 </pkgmetadata>

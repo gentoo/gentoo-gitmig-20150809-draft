@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/mkinitrd-3.5.7.ebuild,v 1.2 2003/08/07 20:56:02 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/mkinitrd-3.5.7.ebuild,v 1.3 2003/10/07 03:10:58 pebenito Exp $
 
 IUSE="selinux"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.redhat.com"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND="dev-libs/popt
 	x86? ( dev-libs/dietlibc )"
