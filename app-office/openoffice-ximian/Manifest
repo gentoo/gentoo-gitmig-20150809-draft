@@ -1,4 +1,4 @@
-MD5 9fb397e7d778042a6ff86a0f7b25a634 openoffice-ximian-1.1.51.ebuild 14857
+MD5 6fa53ac34ee795b8cf56ec4743671283 openoffice-ximian-1.1.51.ebuild 14959
 MD5 987b9cc61bd74ae41a06d7397c49fca0 openoffice-ximian-1.1.52.ebuild 15157
 MD5 ac0c8dcd83c58485129d49587320253f ChangeLog 7979
 MD5 f3942f82433bf5ae16461240cbcc4984 metadata.xml 300
@@ -11,6 +11,7 @@ MD5 9c99fdd340eb8e4c9f09c236eb1a899f files/1.1.0/xooffice-wrapper-1.3 9398
 MD5 7499a81bad1959834a0e6f995200e3e8 files/1.1.0/openoffice-1.1.0-linux-2.6-fix.patch 603
 MD5 7992a51f23c05fdc0b3c422c171f637a files/1.1.0/config.patch 502
 MD5 7978a9c1f590a83622b8040ee83197a4 files/1.1.0/nptl.patch 1285
+MD5 fc8711196de6324c9fae45342d159bf3 files/1.1.0/build.patch 330
 MD5 57dffa4a9df0ca77ebcca05122634d9e files/1.1.0/newstlportfix.patch 10867
 MD5 6ecbfeab440a03f031dbfa0631404aa0 files/1.1.1/ximian-openoffice.applications 980
 MD5 d1a499cfa276614323b547e013d5c6a0 files/1.1.1/ximian-openoffice.keys 6298
