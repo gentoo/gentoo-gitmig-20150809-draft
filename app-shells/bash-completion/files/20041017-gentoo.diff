@@ -1,0 +1,39 @@
+diff -urN bash_completion.orig/bash_completion bash_completion/bash_completion
+--- bash_completion.orig/bash_completion	2004-11-27 04:26:41.356337311 -0500
++++ bash_completion/bash_completion	2004-11-27 04:27:07.461009682 -0500
+@@ -104,7 +104,8 @@
+ complete -f -X '!*.@(ogg|OGG|m3u|flac|spx)' ogg123
+ complete -f -X '!*.@(mp3|MP3|ogg|OGG|pls|m3u)' gqmpeg freeamp
+ complete -f -X '!*.fig' xfig
+-complete -f -X '!*.@(mid?(i))' timidity playmidi
++complete -f -X '!*.@(mid?(i))' playmidi
++complete -f -X '!*.@(mid?(i)|rmi|RMI)' timidity
+ complete -f -X '*.@(o|so|so.!(conf)|a|tar?(.@(gz|bz2))|tgz|tbz2|rpm|zip|ZIP|gif|GIF|jp?(e)g|JP?(E)G|mp3|MP3|mp?(e)g|MPG|avi|AVI|asf|ASF|ogg|OGG|class|CLASS)' vi vim gvim rvim view rview rgvim rgview gview
+ complete -f -X '*.@(o|so|so.!(conf)|a|rpm|gif|GIF|jp?(e)g|JP?(E)G|mp3|MP3|mp?(e)g|MPG|avi|AVI|asf|ASF|ogg|OGG|class|CLASS)' emacs
+ complete -f -X '!*.@(exe|EXE|com|COM|scr|SCR)' wine
+@@ -4693,7 +4694,7 @@
+ 			return 0
+ 			;;
+ 		-audiofile)
+-			_filedir '@(mp3|MP3|mpg|MPG|ogg|OGG|wav|WAV)'
++			_filedir '@(mp3|MP3|mpg|MPG|ogg|OGG|wav|WAV|mid|MID)'
+ 			return 0
+ 			;;
+ 		-font)
+@@ -4985,7 +4986,7 @@
+ 					-xvidencopts -of --verbose' -- $cur) )
+ 			;;
+ 		*)
+-			_filedir '@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|ASF|vob|VOB|bin|BIN|dat|DAT|vcd|VCD|ps|PS|pes|PES|fli|FLI|viv|VIV|rm|RM|ram|RAM|yuv|YUV|mov|MOV|qt|QT|mp[34]|MP[34]|og[gm]|OG[GM]|wav|WAV|dump|DUMP|mkv|MKV|m4a|M4A|aac|AAC|m2v|M2V|dv|DV)'
++			_filedir '@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|ASF|vob|VOB|bin|BIN|dat|DAT|vcd|VCD|ps|PS|pes|PES|fli|FLI|viv|VIV|rm|RM|ram|RAM|yuv|YUV|mov|MOV|qt|QT|mp[34]|MP[34]|og[gm]|OG[GM]|wav|WAV|dump|DUMP|mkv|MKV|m4a|M4A|aac|AAC|m2v|M2V|dv|DV|mid|MID|ts|TS)'
+ 			;;
+ 	esac
+ 
+diff -urN bash_completion.orig/contrib/gkrellm bash_completion/contrib/gkrellm
+--- bash_completion.orig/contrib/gkrellm	2004-11-27 04:26:41.354337642 -0500
++++ bash_completion/contrib/gkrellm	2004-11-27 04:33:27.155938637 -0500
+@@ -34,3 +34,4 @@
+ 
+ }
+ complete -F _gkrellm gkrellm
++complete -F _gkrellm gkrellm2

@@ -1,6 +1,17 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.81 2004/11/15 15:34:01 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.82 2004/11/27 09:42:59 ka0ttic Exp $
+
+*bash-completion-20041017-r2 (27 Nov 2004)
+
+  27 Nov 2004; Aaron Walker <ka0ttic@gentoo.org>
+  +files/20041017-gentoo.diff, -bash-completion-20040704.ebuild,
+  bash-completion-20041017-r1.ebuild, +bash-completion-20041017-r2.ebuild,
+  -bash-completion-20041017.ebuild:
+  Revision bump; new gentoo-bashcomp release. Also, added gentoo patch for
+  extra filetypes support for .ts (bug 67201) and others. Fixed gkrellm
+  completion to complete for gkrellm2 as well. Marked 20041017-r1 stable on
+  x86.
 
   15 Nov 2004; Aaron Walker <ka0ttic@gentoo.org>
   bash-completion-20041017-r1.ebuild:

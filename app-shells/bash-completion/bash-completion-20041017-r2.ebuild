@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017.ebuild,v 1.4 2004/11/04 17:27:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017-r2.ebuild,v 1.1 2004/11/27 09:42:59 ka0ttic Exp $
 
-GENCOMP_VERS="1.0_beta2"
+inherit eutils
+
+GENCOMP_VERS="1.0_beta3"
 
 DESCRIPTION="Programmable Completion for bash (includes emerge and ebuild commands)"
 HOMEPAGE="http://www.caliban.org/bash/index.shtml#completion"
@@ -20,9 +22,18 @@ RDEPEND=">=app-shells/bash-2.05a"
 
 S=${WORKDIR}/${PN/-/_}
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gentoo.diff
+}
+
 src_install() {
 	insinto /etc
 	doins bash_completion
+
+	# >=dev-util/subversion-1.1.1-r3 provides extremely superior completions
+	has_version ">=dev-util/subversion-1.1.1-r3" && rm contrib/subversion
 
 	insinto /usr/share/bash-completion
 	doins contrib/*
@@ -44,7 +55,7 @@ pkg_postinst() {
 	echo
 	einfo "Add the following line to your ~/.bashrc to"
 	einfo "activate completion support in your bash:"
-	einfo "[ -f /etc/profile.d/bash-completion ] && source /etc/profile.d/bash-completion"
+	einfo "[ -f /etc/profile.d/bash-completion ] && . /etc/profile.d/bash-completion"
 	einfo
 	einfo "Additional complete functions can be enabled by symlinking them from"
 	einfo "/usr/share/bash-completion to /etc/bash_completion.d"
