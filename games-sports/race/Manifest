@@ -1,5 +1,5 @@
-MD5 c611e92cceb933b480e191c0d76fc6b2 ChangeLog 551
-MD5 815c60dd5232faed78e4e097a3180413 race-0.5.ebuild 1198
+MD5 1823a2703e52894605729829af7da5db ChangeLog 545
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 0049ca7b0af3622ed9de741106134d0e race-0.5.ebuild 1188
 MD5 e8ca685e0adb1972e290852a3583ca47 files/0.5-gentoo.patch 3224
 MD5 f7ccf6058ee9a01cfbd5e475d8c2e834 files/digest-race-0.5 61
