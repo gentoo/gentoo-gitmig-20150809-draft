@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/units/units-1.80.ebuild,v 1.6 2004/05/05 00:28:52 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/units/units-1.80.ebuild,v 1.7 2004/05/06 11:46:32 fmccor Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/units/units.html"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="x86 ppc alpha amd64 ~sparc"
+KEYWORDS="x86 ppc alpha amd64 sparc"
 
 DEPEND=">=sys-libs/readline-4.1-r2
 	>=sys-libs/ncurses-5.2-r3"
