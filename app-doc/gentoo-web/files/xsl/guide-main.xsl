@@ -136,7 +136,7 @@
 				</tr>
 				<tr>
 				<td class="alttext">
-					<font size="-1">Updated <xsl:value-of select="/guide/date"/></font>
+					Updated <xsl:value-of select="/guide/date"/>
 				</td>
 				</tr>
 				<tr>
@@ -284,6 +284,8 @@ User Docs:<br/>
 										<a href="http://www.qksrv.net/click-477620-57886" target="_top" >
 					<img src="http://www.qksrv.net/image-477620-57886" width="88" height="31" alt="Online Auto Loans" border="0"/></a><br/><br/>	
 						Developer Docs:<br/>
+						<!-- <font color="#ff0000">New!</font> <a class="altlink" href="/doc/cvs-tutorial.html">CVS Tutorial</a><br/> -->
+						<!-- can enable line above on Sep 13 2001 --> 
 						<a class="altlink" href="/doc/gentoo-howto.html">Development HOWTO</a><br/>
 						<a class="altlink" href="/doc/xml-guide.html">XML Documentation Guide</a><br/>
 						<br/>
