@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-10.7.ebuild,v 1.3 2004/07/01 19:49:25 eradicator Exp $
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-10.7.ebuild,v 1.4 2004/07/14 16:24:24 agriffis Exp $
 
 DESCRIPTION="Nail is a mail user agent derived from Berkeley Mail 8.1 and contains builtin support for MIME messages."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
