@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.13 2002/12/13 04:17:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.14 2002/12/14 17:35:44 azarah Exp $
+
+*freetype-2.1.3-r1 (14 Dec 2002)
+
+  14 Dec 2002; Martin Schlemmer <azarah@gentoo.org> freetype-2.1.3-r1.ebuild :
+  Only apply the FT Smooth patch if 'smooth' in USE.  I should really use a
+  better USE flag, but until a more generic one is found ...  I did this,
+  as not everybody wants this, and it makes some fonts look worse ...
 
 *freetype-2.1.3 (13 Dec 2002)
 
