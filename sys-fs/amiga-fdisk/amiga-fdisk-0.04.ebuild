@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/amiga-fdisk/amiga-fdisk-0.04.ebuild,v 1.1 2004/06/08 12:41:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/amiga-fdisk/amiga-fdisk-0.04.ebuild,v 1.2 2004/06/25 03:17:51 agriffis Exp $
 
 DESCRIPTION="Amiga disklabel partitioning utility"
 HOMEPAGE="http://www.freiburg.linux.de/~stepan/projects/"

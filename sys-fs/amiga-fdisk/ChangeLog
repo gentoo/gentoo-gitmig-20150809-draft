@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/amiga-fdisk
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/amiga-fdisk/ChangeLog,v 1.1 2004/06/08 12:41:57 vapier Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/amiga-fdisk/ChangeLog,v 1.2 2004/06/25 03:17:50 agriffis Exp $
 
   17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> amiga-fdisk-0.04.ebuild:
   set ppc in keywords
