@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.16 2002/12/03 00:20:36 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.17 2002/12/04 23:28:59 doctomoe Exp $
+
+  04 Dec 2002; Olivier Reisch <doctomoe@gentoo.org> kdenetwork-3.1.ebuild:
+  Added ppc keyword
 
   02 Dec 2002; Hannes Mehnert <hannes@gentoo.org> kdenetwork-3.1.ebuild:
   added patch to compile on alpha
