@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pslib
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.1 2004/11/01 14:04:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.2 2004/11/12 18:52:01 blubb Exp $
+
+  12 Nov 2004; Simon Stelling <blubb@gentoo.org> pslib-0.2.4.ebuild:
+  added ~amd64
 
 *pslib-0.2.4 (01 Nov 2004)
 
