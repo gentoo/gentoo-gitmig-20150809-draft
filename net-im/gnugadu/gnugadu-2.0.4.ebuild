@@ -1,10 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.0.3.ebuild,v 1.4 2004/06/28 21:37:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.0.4.ebuild,v 1.1 2004/08/05 10:02:46 spock Exp $
 
-IUSE="debug tlen esd oss xosd arts jabber perl"
+IUSE="debug tlen esd oss xosd arts jabber perl spell"
 
-MY_P="gg2-2.0.3"
+inherit eutils
+
+MY_P="gg2-${PV}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="GTK-based Gadu-Gadu, Tlen and Jabber IM client"
 SRC_URI="mirror://sourceforge/ggadu/${MY_P}.tar.bz2"
@@ -25,10 +27,16 @@ DEPEND=">=x11-libs/gtk+-2.2.0
 	esd? ( media-sound/esound )
 	tlen? ( net-libs/libtlen )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-2.0.3-aspell-link.patch
+}
+
 src_compile() {
 
 	myconf="--with-gui --with-gadu --with-remote --with-docklet_system_tray --with-docklet_dockapp --with-sms --with-update --with-external"
-#	use spell && myconf="${myconf} --with-gtkspell"
+	use spell && myconf="${myconf} --with-gtkspell"
 
 	if use arts; then
 		myconf="${myconf} --with-arts --with-arts-prefix=`artsc-config --arts-prefix`"
