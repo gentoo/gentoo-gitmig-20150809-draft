@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.1.ebuild,v 1.3 2002/08/18 16:41:05 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.1.ebuild,v 1.4 2002/08/19 23:11:50 azarah Exp $
 
 SV="1.3.8"
 SVREV=""
@@ -53,7 +53,7 @@ src_unpack() {
 	tar -jxf ${FILESDIR}/rc-scripts-${SV}${SVREV}.tar.bz2 || die
 
 	echo ">>> Unpacking termcap.bz2"
-	bzcat ${DISTDIR}/termcap.bz2 > ${WORKDIR}/termcap || die
+	bzip2 -dc ${DISTDIR}/termcap.bz2 > ${WORKDIR}/termcap || die
 
 	#fix CFLAGS for sysvinit stuff
 	cd ${S2}
