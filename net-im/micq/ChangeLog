@@ -1,8 +1,13 @@
 # ChangeLog for net-im/micq
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.14 2003/10/09 19:54:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.15 2003/11/20 21:39:09 usata Exp $
 
 *micq-0.4.10.5 (10 Oct 2003)
+
+  20 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> micq-0.4.10.4.ebuild,
+  micq-0.4.10.5.ebuild:
+  Considered as stable for x86. Removed 0.4.10.4 since master site
+  stopped to distribute it (it had a lot of bugs).
 
   10 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> micq-0.4.10.5.ebuild:
   Version bumped.
