@@ -1,0 +1,11 @@
+# ChangeLog for media-gfx/figurine
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/figurine/ChangeLog,v 1.1 2002/11/08 21:17:43 george Exp $
+
+*figurine-1.0.5 (08 Nov 2002)
+
+  08 Nov 2002; George Shapovalov <george@gentoo.org> figurine-1.0.5.ebuild :
+
+  initial commit
+  Figurine is a vector based graphical editor similar to XFig.
+  ebuild submitted by Eivind Tagseth <eivindt-gentoo@multinet.no>
