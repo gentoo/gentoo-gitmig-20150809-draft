@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/unix2tcp
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unix2tcp/ChangeLog,v 1.1 2003/09/22 20:45:04 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unix2tcp/ChangeLog,v 1.2 2004/04/16 20:37:25 randy Exp $
+
+  16 Apr 2004; Michael McCabe <randy@gentoo.org> unix2tcp-0.7.2.ebuild:
+  adding s390 to keywords
 
 *unix2tcp-0.7.2 (22 Sep 2003)
 
