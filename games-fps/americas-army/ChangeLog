@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/americas-army
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.19 2004/07/19 16:41:41 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.20 2004/07/26 04:39:40 mr_bones_ Exp $
+
+  25 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  americas-army-210.ebuild:
+  error check install
 
   19 Jul 2004; <augustus@gentoo.org> americas-army-210.ebuild:
   Added amd64 keyword and added RDEPEND on emul-linux-x86-xlibs for amd64. Bug

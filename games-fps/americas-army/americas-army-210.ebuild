@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-210.ebuild,v 1.6 2004/07/19 16:41:41 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-210.ebuild,v 1.7 2004/07/26 04:39:40 mr_bones_ Exp $
 
 inherit games
 
@@ -51,11 +51,14 @@ src_install() {
 	tar -jxf binaries.tar.bz2 -C ${Ddir}/ || die "binaries untar failed"
 
 	dodoc README.linux
-	insinto ${dir} ; doins ArmyOps.xpm README.linux ArmyOps210_EULA.txt
-	insinto /usr/share/pixmaps ; doins ArmyOps.xpm
-	exeinto ${dir} ; doexe bin/armyops
+	insinto ${dir}
+	doins ArmyOps.xpm README.linux ArmyOps210_EULA.txt || die "doins failed"
+	insinto /usr/share/pixmaps
+	doins ArmyOps.xpm || die "doins failed"
+	exeinto ${dir}
+	doexe bin/armyops || die "doexe failed"
 
-	dogamesbin ${FILESDIR}/armyops
+	dogamesbin "${FILESDIR}/armyops"
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/armyops
 	dosym ${dir}/armyops ${GAMES_BINDIR}/armyops
 
