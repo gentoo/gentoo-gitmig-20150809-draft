@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.27 2003/08/07 09:15:46 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.28 2003/08/22 01:56:51 zul Exp $
+
+  21 Aug 2003; <chuck@gentoo.org> :
+  Added SSL suport, closes bug #26343.
 
   07 Aug 2003; Tavis Ormandy <taviso@gentoo.org> irssi-0.8.6-r2.ebuild:
   stable on alpha
