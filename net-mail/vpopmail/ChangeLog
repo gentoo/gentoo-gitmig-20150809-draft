@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.39 2004/08/20 23:05:05 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.40 2004/08/21 19:10:47 pvdabeel Exp $
 
 *vpopmail-5.4.6 (20 Aug 2004)
+
+  21 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> vpopmail-5.4.6.ebuild:
+  Masked stable on ppc - advisory #60844
 
   20 Aug 2004; Tuan Van <langthang@gentoo.org> +vpopmail-5.4.6.ebuild:
   Version bump wrt bug #60844.
