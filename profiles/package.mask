@@ -52,12 +52,12 @@
 
 # <caleb@gentoo.org> (10 Sep 2003)
 # new kde versions mask
-=kde-base/kdelibs-3.2.0_alpha1
-=kde-base/kdebase-3.2.0_alpha1
-=kde-base/kdelibs-3.2.0_alpha1
-=kde-base/kdenetwork-3.2.0_alpha1
-=kde-base/kdepim-3.2.0_alpha1
-=kde-base/arts-1.2.0_alpha1
+>=kde-base/kdelibs-3.2.0_alpha1
+>=kde-base/kdebase-3.2.0_alpha1
+>=kde-base/kdelibs-3.2.0_alpha1
+>=kde-base/kdenetwork-3.2.0_alpha1
+>=kde-base/kdepim-3.2.0_alpha1
+>=kde-base/arts-1.2.0_alpha1
 
 # <spider@gentoo.org> (04 Sep 2003)
 # <spider@gentoo.org> (08 Sep 2003)
