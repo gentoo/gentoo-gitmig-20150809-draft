@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/basc-1.5.9.ebuild,v 1.2 2005/03/18 20:55:19 swegener Exp $
 
 # ebuild contributed by Alexander Mieland and Daniel Herzog
 
