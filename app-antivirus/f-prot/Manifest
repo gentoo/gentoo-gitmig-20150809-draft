@@ -1,30 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 67c2a881a97b3e8b30f7561501eceb74 f-prot-4.2.1.ebuild 1009
-MD5 732a96525dbd1750e3f976f66b41c6be ChangeLog 5658
-MD5 d04cbb92e57ea763797cbd315e67be7d f-prot-4.4.1.ebuild 1072
-MD5 3e89a773d24935efe49db8ca4b89c655 f-prot-4.3.1.ebuild 1009
+MD5 9cd56a6d45e743e481d122c48d2e6fdf ChangeLog 5976
 MD5 3bf44a2cd492aedb8f27a23f2fe357ff metadata.xml 261
-MD5 888c39400c55771e678883f05db45034 f-prot-4.3.0.ebuild 1010
-MD5 f2b4cc21bcfc29b99c8abdab5308cc29 f-prot-4.4.7.ebuild 1082
-MD5 9eca6cb5c4ff0774e848ab6dba94e364 f-prot-4.4.6.ebuild 1064
-MD5 97d0695fec0ea4bbe3c2491cc7e82cf6 f-prot-4.4.2.ebuild 1062
 MD5 7cc888442e29098bf7bf062b166a26fd f-prot-4.4.8.ebuild 1084
-MD5 18ed21b4ced8f73c854c629e1f44aaeb f-prot-4.3.2.ebuild 1072
-MD5 aca1bdab97a08537bf776f637aa6cb38 files/digest-f-prot-4.2.1 70
-MD5 fe21444540d27c390e9b614d62f5c839 files/digest-f-prot-4.3.0 70
 MD5 66f201719b958a89ce10a41fa439170f files/digest-f-prot-4.4.8 70
-MD5 8db625e23ca0bf7561387694fbebd561 files/digest-f-prot-4.4.7 70
-MD5 6ed6ab62b8c5b373a83eebf95a9a0e8c files/digest-f-prot-4.4.1 70
-MD5 835269ea994ea7f625aeca865052ac09 files/digest-f-prot-4.3.2 70
-MD5 c92bee2efd18ccd081cd84ef405a5b8a files/digest-f-prot-4.4.6 70
-MD5 39f0c4cc81ea550a37c6c9c554d7a651 files/digest-f-prot-4.4.2 70
-MD5 e19967ada0b4a8864988cc04b6cc8521 files/digest-f-prot-4.3.1 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBn1od10xuJSrg3/sRAh0rAJoD1Fde3avNQE4n7MWVYPfq6YM2VQCdEHlr
-bAlNpHMPO8MDXkikIHabTEs=
-=SgHX
+iD8DBQFBn1vv10xuJSrg3/sRAqI5AJ42OsuptTtRjRCyoBGUiG61TBoxNwCfRWJl
+L2g8uSmI5hlhinLKzDmnKcU=
+=AXej
 -----END PGP SIGNATURE-----

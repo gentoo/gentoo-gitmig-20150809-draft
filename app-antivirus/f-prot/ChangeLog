@@ -1,6 +1,13 @@
 # ChangeLog for app-antivirus/f-prot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.16 2004/11/20 14:51:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.17 2004/11/20 14:59:22 ticho Exp $
+
+  20 Nov 2004; Andrej Kacian <ticho@gentoo.org> -f-prot-4.2.1.ebuild,
+  -f-prot-4.3.0.ebuild, -f-prot-4.3.1.ebuild, -f-prot-4.3.2.ebuild,
+  -f-prot-4.4.1.ebuild, -f-prot-4.4.2.ebuild, -f-prot-4.4.6.ebuild,
+  -f-prot-4.4.7.ebuild:
+  Removed all ebuilds except 4.4.8, since they're no longer available from
+  upstream.
 
 *f-prot-4.4.8 (20 Nov 2004)
 
