@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8-r1.ebuild,v 1.9 2004/07/11 15:49:26 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8-r1.ebuild,v 1.10 2004/07/14 14:01:00 lv Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils gcc
 
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
 HOMEPAGE="http://cdrdao.sourceforge.net/"
@@ -26,6 +26,15 @@ DEPEND=">=dev-util/pccts-1.33.24-r1
 	>=sys-apps/sed-4"
 
 src_unpack() {
+	if ([ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ] && use gnome); then
+		eerror "xdao current will not compile using gcc 3.4. in order to compile"
+		eerror "and install cdrdao, you will have to USE="-gnome". a simple way"
+		eerror "to do this via portage is to:"
+		einfo "mkdir -p /etc/portage"
+		einfo "echo \"app-cdr/cdrdao -gnome\" >> /etc/portage/package.use"
+		die "xdao wont compile using gcc 3.4"
+	fi
+
 	unpack ${A}
 
 	cd ${S}

@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.49 2004/07/14 13:24:04 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.50 2004/07/14 14:01:00 lv Exp $
+
+  14 Jul 2004; Travis Tilley <lv@gentoo.org> cdrdao-1.1.8-r1.ebuild,
+  cdrdao-1.1.8.ebuild, cdrdao-1.1.9.ebuild:
+  make cdrdao die if trying to compile with gcc 3.4 and USE=gnome, since xdao
+  does not yet compile. however, cdrdao compiles fine without problems now that
+  it's dependencies have been fixed for gcc 3.4
 
   14 Jul 2004; Travis Tilley <lv@gentoo.org> +files/cdrdao-1.1.9-cast.patch:
   add cast patch for cdrdao 1.1.9
