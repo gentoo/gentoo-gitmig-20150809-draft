@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.31.ebuild,v 1.1 2003/08/11 21:53:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.31.ebuild,v 1.2 2003/08/11 22:12:01 foser Exp $
 
-IUSE="tcpd alsa ipv6"
+IUSE="tcpd alsa"
 
 inherit libtool gnome.org
 
@@ -29,7 +29,6 @@ src_compile() {
 
 	econf \
 		--sysconfdir=/etc/esd \
-		`use_enable ipv6` \
 		${myconf} || die
 
 	make || die
