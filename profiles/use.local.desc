@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.19 2003/05/03 15:26:48 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.20 2003/05/12 16:47:31 mholzer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -12,6 +12,7 @@ app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet b
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
+media-video/transcode - Enable Altivec code portions
 net-www/mozilla:moznoirc - If you do NOT want the IRC client built with mozilla
 net-www/mozilla:moznomail - If you do NOT want the mail client built with mozilla
 net-www/mozilla:moznocompose - If you do NOT want the web page composer built with mozilla
