@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/gkrellm-seti
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellm-seti/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellm-seti/ChangeLog,v 1.2 2002/07/14 22:34:08 seemant Exp $
+
+*gkrellm-seti-0.7.0b (14 Jul 2002)
+
+  14 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  gkrellm-seti-0.7.0b.ebuild files/digest-gkrellm-seti-0.7.0b :
+
+  Xavier (upstream author) has this hack to work with recent gkrellm
+  releases.  Closes bug #4495 by ela@mausehaus.org (Michaela Susan Buesing)
 
 *gkrellm-seti-0.7.0 (1 Feb 2002)
 
