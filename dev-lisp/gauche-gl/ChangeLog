@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/gauche-gl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche-gl/ChangeLog,v 1.3 2003/12/31 04:38:57 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche-gl/ChangeLog,v 1.4 2004/02/21 16:18:04 hattya Exp $
+
+  22 Feb 2004; Akinori Hattori <hattya@gentoo.org> gauche-gl-0.3.1.ebuild,
+  metadata.xml:
+  moved slot 0.1 -> 0.
+  I've taken over from karltk.
 
 *gauche-gl-0.3.1 (30 Dec 2003)
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche-gl/gauche-gl-0.1.3.ebuild,v 1.3 2003/09/06 22:35:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche-gl/gauche-gl-0.1.3.ebuild,v 1.4 2004/02/21 16:18:04 hattya Exp $
 
 DESCRIPTION="OpenGL 1.1 bindings for Gauche"
 HOMEPAGE="http://gauche.sf.net"
 SRC_URI="mirror://sourceforge/gauche/Gauche-gl-${PV}.tgz"
 LICENSE="BSD"
-SLOT="0.1"
+SLOT="0"
 KEYWORDS="x86"
 DEPEND="virtual/glibc
 	virtual/opengl
