@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/dvdbackup-0.1.1-r1.ebuild,v 1.1 2004/04/09 06:22:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/dvdbackup-0.1.1-r1.ebuild,v 1.2 2004/04/09 13:47:14 dholm Exp $
 
 inherit gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dvd-create.sourceforge.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc amd64"
+KEYWORDS="x86 sparc amd64 ~ppc"
 IUSE=""
 
 DEPEND="media-libs/libdvdread"
