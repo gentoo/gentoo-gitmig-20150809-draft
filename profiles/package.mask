@@ -81,10 +81,6 @@ x11-themes/gtk-xfce-engine
 # Kismet package is new please test
 =net-analyzer/kismet-2.4.6
 
-# phoen][x <phoenix@gentoo.org> (04 Aug 2002)
-# Masked the new winex for testing (and it needs lots of that)
-=app-emulation/winex-20020804
-
 # Dan Armak <danarmak@gentoo.org> (04 Aug 2002)
 # remask kde 3.1_alpha1 because people who don't emerge rsync --clean
 # see it as unmasked even though i removed the ebuilds from cvs
