@@ -1,11 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.34.0.ebuild,v 1.1 2003/12/19 19:53:57 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.34.0.ebuild,v 1.2 2003/12/20 20:16:46 pauldv Exp $
 
 inherit elisp-common libtool
 
-BACKUP_ADMIN="svnadmin-0.27"
-BACKUP_ADMIN_DIR="/usr/lib/subversion/bin"
 DESCRIPTION="A compelling replacement for CVS"
 SRC_URI="http://svn.collab.net/tarballs/${P}.tar.gz"
 HOMEPAGE="http://subversion.tigris.org/"
@@ -164,11 +162,6 @@ src_install () {
 	do
 		[ -f ${f} ] && dodoc ${f}
 	done
-	if use berkdb; then
-		mkdir -p ${D}/${BACKUP_ADMIN_DIR}
-		cp ${DISTDIR}/${BACKUP_ADMIN}.bz2 ${D}${BACKUP_ADMIN_DIR} ||die
-		bunzip2 ${D}${BACKUP_ADMIN_DIR}/${BACKUP_ADMIN}.bz2 ||die
-	fi
 
 	cd ${S}
 	echo "installing html book"
@@ -228,15 +221,6 @@ pkg_postinst() {
 			einfo "   htpasswd2 -m -c ${SVN_REPOS_LOC}/conf/svnusers USERNAME"
 		fi
 
-		if [ -x ${BACKUP_ADMIN} ]; then
-			ewarn ""
-			ewarn "The subversion database format has been changed. For that reason the"
-			ewarn "old admin utility was kept, and can now be found at the following"
-			ewarn "location: ${BACKUP_ADMIN}"
-			ewarn ""
-			ewarn "For more information look at:"
-			ewarn "http://svn.collab.net/repos/svn/trunk/notes/repos_upgrade_HOWTO"
-		fi
 	else
 		einfo "Your subversion is client only as the server is only build when"
 		einfo "the berkdb flag is set"
