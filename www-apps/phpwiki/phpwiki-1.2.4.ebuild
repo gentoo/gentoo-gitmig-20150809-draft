@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.2.4.ebuild,v 1.2 2004/08/30 19:38:42 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.2.4.ebuild,v 1.3 2004/09/03 01:18:28 dholm Exp $
 
 inherit webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://phpwiki.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 RDEPEND="virtual/php
