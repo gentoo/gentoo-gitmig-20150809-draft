@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.4.3.ebuild,v 1.2 2004/02/11 12:25:42 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.4.3.ebuild,v 1.3 2004/03/07 17:29:39 iluxa Exp $
 
 S=${WORKDIR}/${P/_alpha[0-9][0-9]}
 
@@ -12,7 +12,7 @@ DESCRIPTION="An enhanced (world's fastest) tar, as well as enhanced mt/rmt"
 SRC_URI="ftp://ftp.berlios.de/pub/${PN}/${P}.tar.bz2"
 
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/star.html"
-KEYWORDS="x86 amd64 ppc ~sparc"
+KEYWORDS="x86 amd64 ppc ~sparc ~mips"
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="virtual/glibc"
