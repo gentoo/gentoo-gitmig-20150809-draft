@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.41 2004/10/30 13:27:35 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.42 2004/11/01 14:44:48 klieber Exp $
+
+*cfengine-2.1.10-r2 (01 Nov 2004)
+
+  01 Nov 2004; Kurt Lieber <klieber@gentoo.org> +cfengine-2.1.10-r2.ebuild:
+  Add inherit eutils
 
   30 Oct 2004; Kurt Lieber <klieber@gentoo.org> cfengine-2.1.10-r1.ebuild:
   marking stable on x86 and ppc
