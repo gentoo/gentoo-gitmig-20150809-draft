@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/pfaedit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/ChangeLog,v 1.17 2004/06/24 22:46:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/ChangeLog,v 1.18 2004/10/09 20:56:31 usata Exp $
+
+*pfaedit-20040310 (10 Oct 2004)
+
+  10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> -pfaedit-030512.ebuild,
+  -pfaedit-031123.ebuild, +pfaedit-20040310.ebuild:
+  Version bumped. Preparing for transition to fontforge.
 
   18 May 2004; Mamoru KOMACHI <usata@gentoo.org> pfaedit-030512.ebuild,
   pfaedit-031123.ebuild:
