@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.11 2003/10/01 09:27:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.12 2003/10/18 19:20:10 raker Exp $
+
+IUSE="nls esd gnome oss oggvorbis"
 
 # Fix so that updating can only be done by 'cp old.ebuild new.ebuild'
 MY_P="`echo ${P} |sed -e 's:-::' -e 's:_b:B:'`"
@@ -13,7 +15,6 @@ HOMEPAGE="http://gnometoaster.rulez.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc "
-IUSE="nls esd gnome oss oggvorbis"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2 )
@@ -32,10 +33,12 @@ RDEPEND="=x11-libs/gtk+-1.2*
 src_unpack() {
 	unpack ${A} ; cd ${S}
 	epatch ${FILESDIR}/scdtosr.diff
+	epatch ${FILESDIR}/configure.in.diff
 }
 
 src_compile() {
 	local myconf=""
+
 	use nls	|| myconf="$myconf --disable-nls"
 
 	use gnome \
@@ -50,7 +53,14 @@ src_compile() {
 		&& myconf="$myconf --with-oss" \
 		|| myconf="$myconf --without-oss"
 
+	touch configure
+	touch `find . -name \*.m4`
+	touch `find . -name \*.in`
+	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOMAKE_1_4=1
+
 	econf ${myconf}
+
 	emake || die "parallel make failed"
 }
 
