@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.52.ebuild,v 1.7 2004/07/15 16:41:12 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.52.ebuild,v 1.8 2004/07/17 21:34:08 suka Exp $
 
 inherit rpm
 
@@ -173,7 +173,7 @@ src_install() {
 			s|^\tArchiveSize\s+\= .*|\tArchiveSize\t = 0;\r| or \
 			s|^\tContains\s+\= .*|\tContains\t = ();\r| or \
 			s|\t\t\t\t\t\".*|\r|g)" \
-			${INSTDIR}/program/instdb.ins
+			${D}${INSTDIR}/program/instdb.ins
 	done
 
 	# Make sure these do not get nuked.
