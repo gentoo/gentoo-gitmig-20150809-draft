@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/sisctrl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/ChangeLog,v 1.1 2003/11/23 17:59:23 port001 Exp $
+
+*sisctrl-0.0.20031119 (23 Nov 2003)
+
+  23 Nov 2003; Ian Leitch <port001@gentoo.org> sisctrl-0.0.20031119.ebuild:
+  Initial commit, thanks to Terje Kvernes <terjekv@math.uio.no> for submiting
+  the original ebuild and others for testing - #26073
+
