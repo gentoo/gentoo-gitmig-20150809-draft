@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fake64/fake64-0.0.4_pre20021020.ebuild,v 1.3 2004/06/07 05:28:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fake64/fake64-0.0.4_pre20021020.ebuild,v 1.4 2004/06/12 00:40:21 mr_bones_ Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.fakelabs.org/code/fake64/Fake64-20.10.2002.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE=""
+IUSE="mms 3dnow sse"
 
 DEPEND="virtual/x11
 	virtual/opengl
