@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/gnome-iconedit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/ChangeLog,v 1.4 2002/05/02 04:28:47 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/ChangeLog,v 1.5 2002/09/19 12:18:01 doctomoe Exp $
 
 *gnome-iconedit-1.2.0-r5 (1 May 2002)
+
+  19 Sep 2002; Olivier Reisch <doctomoe@gentoo.org> gnome-iconedit-1.2.0-r5.ebuild:
+  Added ppc keyword
 
   12 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   gnome-iconedit-1.2.0-r5, files/gnome-iconedit-1.2.0-r5 :
