@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.7 2002/12/13 10:59:56 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.8 2003/01/29 00:39:16 raker Exp $
+
+*pure-ftpd-1.0.13a (28 Jan 2003)
+
+  28 Jan 2003; Nick Hadaway <raker@gentoo.org> pure-ftpd-1.0.13a.ebuld,
+  files/digest-pure-ftpd-1.0.13a, files/pureftpd.rc6-r1 :
+  Version bump.  And changed the init script so start-stop-daemon
+  is utilized.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
