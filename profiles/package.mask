@@ -214,8 +214,6 @@ app-admin/logsentry
 =net-mail/courier-imap-1.5.3
 # added choosable maildir/mbox support
 =net-mail/uw-imap-2001a-r3
-# version bump.  lots of fixes
-=media-gfx/gimp-print-4.2.2
 # new ipv6 patch.  squashes ssl patch though.
 =sys-apps/ucspi-tcp-0.88-r4
 
