@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/edna
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.11 2004/10/07 03:27:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.12 2004/10/15 16:59:39 swegener Exp $
+
+  15 Oct 2004; Sven Wegener <swegener@gentoo.org> edna-0.5-r3.ebuild:
+  Added inherit eutils for get_libdir. Thanks to Thomas Kirchner
+  <gentoo@halffull.org> in bug #67669.
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> edna-0.5-r3.ebuild:
   get_libdir fixes.
