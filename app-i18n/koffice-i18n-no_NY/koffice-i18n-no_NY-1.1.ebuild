@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Dan Armak <danarmak@gentoo.ogr>
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n-no_NY/koffice-i18n-no_NY-1.1.ebuild,v 1.1 2001/10/26 13:52:06 danarmak Exp $
+# Author Dan Armak <danarmak@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n-no_NY/koffice-i18n-no_NY-1.1.ebuild,v 1.2 2002/05/02 09:10:59 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit koffice-i18n || die
