@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r2.ebuild,v 1.1 2005/02/10 01:49:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r2.ebuild,v 1.2 2005/02/11 16:02:17 greg_g Exp $
 
 inherit eutils flag-o-matic
 
@@ -67,9 +67,6 @@ src_unpack() {
 
 	epatch ${FILESDIR}/qt-no-rpath-uic.patch
 	epatch ${FILESDIR}/qt-no-rpath.patch
-
-	# fix fullscreen mode for 64 bit archs (kde bug 92992)
-	#  epatch ${FILESDIR}/${P}-amd64-fullscreen.patch
 
 	# fix freeze caused by bad interaction with kde klipper (kde bug 80072)
 	epatch ${FILESDIR}/${P}-qclipboard-hack.patch
