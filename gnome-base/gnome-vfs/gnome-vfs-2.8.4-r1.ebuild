@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.8.4-r1.ebuild,v 1.3 2005/04/05 14:51:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.8.4-r1.ebuild,v 1.4 2005/04/05 17:26:50 gustavoz Exp $
 
 inherit gnome2 eutils
 
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc ~alpha ~sparc ~hppa ~amd64 ~mips ~ia64 ppc64 ~arm"
+KEYWORDS="x86 ppc ~alpha sparc ~hppa ~amd64 ~mips ~ia64 ppc64 ~arm"
 IUSE="doc ssl gnutls samba ipv6 hal howl"
 
 RDEPEND=">=dev-libs/glib-2
