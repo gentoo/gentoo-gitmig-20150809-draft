@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.41.ebuild,v 1.2 2004/08/02 12:44:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.41.ebuild,v 1.3 2004/08/15 12:18:23 dholm Exp $
 
 inherit gnat
 
@@ -22,7 +22,7 @@ S="${WORKDIR}/gcc-${MY_PV}"
 GNATBUILD="${WORKDIR}/build"
 case ${ARCH} in
 	x86)	GNATBOOT="${WORKDIR}/boot"
-			GNATBOOTINST="${WORKDIR}/${P}-i686-pc-linux-gnu-bin"
+			GNATBOOTINST="${WORKDIR}/gnat-3.15p-i686-pc-linux-gnu-bin"
 			;;
 	ppc)
 			GNATBOOT="${WORKDIR}/gnat-3.15p-powerpc-unknown-linux-gnu"
