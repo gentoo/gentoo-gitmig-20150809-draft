@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2a.ebuild,v 1.1 2003/07/19 13:25:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2a.ebuild,v 1.2 2003/09/05 12:10:36 msterret Exp $
 
 MY_P="TkPasMan-${PV}"
 
@@ -21,7 +21,7 @@ RDEPEND="ssl? ( dev-libs/openssl )
 	>=dev-lang/tcl-8.3"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}	
+	unpack ${A} ; cd ${S}
 
 	use ssl || sed -i "s:^USE_OPENSSL=true:USE_OPENSSL=false:g" config
 }

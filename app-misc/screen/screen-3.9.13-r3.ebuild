@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.13-r3.ebuild,v 1.5 2003/02/13 09:08:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.13-r3.ebuild,v 1.6 2003/09/05 12:10:36 msterret Exp $
 
 inherit flag-o-matic
 
@@ -35,7 +35,7 @@ src_compile() {
 	addpredict "`tty`"
 	addpredict "${SSH_TTY}"
 
-	# check config.h for other settings such as the 
+	# check config.h for other settings such as the
 	# max-number of windows allowed by screen.
 	append-flags "-DPTYMODE=0620 -DPTYGROUP=5"
 	use pam && myconf="--enable-pam" && append-flags "-DUSE_PAM"
@@ -49,14 +49,14 @@ src_compile() {
 	# (15 Jan 2003 agriffis)
 	mv term.h term.h.old
 	awk '/^#define/ { if (defs[$2]) next; defs[$2] = $3 }
-                    { print }
-                END { for (d in defs) { 
-						if (d !~ /_C../) continue; 
+				{ print }
+			END { for (d in defs) {
+						if (d !~ /_C../) continue;
 						d2 = gensub(/C/, "", 1, d);
-						if (d2 in defs) continue; 
-                        print "#define " d2 " " defs[d]
-                      }
-                    }' term.h.old > term.h || die "Failed to fix term.h"
+						if (d2 in defs) continue;
+						print "#define " d2 " " defs[d]
+					}
+				}' term.h.old > term.h || die "Failed to fix term.h"
 
 	emake || die "Failed to compile"
 }

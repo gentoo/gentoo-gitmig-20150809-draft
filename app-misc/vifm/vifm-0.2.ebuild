@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.2.ebuild,v 1.3 2003/07/11 19:30:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.2.ebuild,v 1.4 2003/09/05 12:10:36 msterret Exp $
 
 DESCRIPTION="Console file manager with vi/vim-like keybindings"
 HOMEPAGE="http://vifm.sourceforge.net/"
@@ -26,7 +26,7 @@ src_unpack() {
 	mv -f Makefile.in ${T}
 	sed -e "s:(datadir)/@PACKAGE@:(datadir)/${P}:" \
 		${T}/Makefile.in > Makefile.in
-	
+
 	mv -f config.c ${T}
 	sed -e "s:/usr/local/share/vifm:/usr/share/${P}:g" \
 		${T}/config.c > config.c
@@ -40,7 +40,7 @@ src_compile() {
 src_install() {
 	einstall || die
 
-	dodoc INSTALL AUTHORS TODO README 
+	dodoc INSTALL AUTHORS TODO README
 }
 pkg_postinst() {
 	einfo "To use vim to view the vifm help, copy /usr/share/${P}/vifm.txt"

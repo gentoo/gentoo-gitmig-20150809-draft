@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/proxyper/proxyper-333.ebuild,v 1.2 2003/07/01 22:31:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/proxyper/proxyper-333.ebuild,v 1.3 2003/09/05 12:10:36 msterret Exp $
 
 
 # This is my very first ebuild. I hope it will be easy since there's no
@@ -23,7 +23,7 @@ elif [ `use ppc` ]; then
 elif [ `use sparc` ]; then
 	S="${WORKDIR}/${PN}${PV}-linux-sparc"
 elif [ `use alpha` ]; then
-    S="${WORKDIR}/${PN}${PV}-linux-alpha"
+	S="${WORKDIR}/${PN}${PV}-linux-alpha"
 fi
 
 RESTRICT="nomirror"

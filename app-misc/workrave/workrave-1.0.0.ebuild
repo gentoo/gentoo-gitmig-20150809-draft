@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.0.0.ebuild,v 1.6 2003/07/12 22:23:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.0.0.ebuild,v 1.7 2003/09/05 12:10:36 msterret Exp $
 
 DESCRIPTION="assists in the recovery and prevention of Repetitive Strain Injury (RSI)"
 HOMEPAGE="http://workrave.sourceforge.net/"
@@ -29,7 +29,7 @@ src_compile() {
 	use xml2  && myconf="${myconf} --enable-xml"
 
 	econf ${myconf}
-		
+
 	emake || die "Compilation failed"
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/todo-manager-bronze/todo-manager-bronze-20020711.ebuild,v 1.7 2003/02/13 09:09:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/todo-manager-bronze/todo-manager-bronze-20020711.ebuild,v 1.8 2003/09/05 12:10:36 msterret Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="A task manager."
@@ -26,10 +26,10 @@ src_install() {
 	doins __init__.py controls.py interface.py main.py objectlistbox.py setup.py tdm_calendar.py tdmcalls.py tk_options	todo-manager todo-manager.py todo-manager.pyw
 	insinto /opt/todo-manager/plugins
 	doins __init__.py plg_standard.py plugin.py
-	
+
 	insinto /etc/env.d
 	doins ${FILESDIR}/97todomanager
-	
+
 	dodoc AUTHORS.txt ChangeLog.txt LICENSE.txt PKG-INFO README.txt TODO.txt
 	dohtml doc/*
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/grc-1.0.6.ebuild,v 1.1 2003/04/05 01:56:01 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/grc-1.0.6.ebuild,v 1.2 2003/09/05 12:10:36 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Generic Colouriser is yet another colouriser for beautifying your logfiles or output of commands"
@@ -15,10 +15,10 @@ RDEPEND="dev-lang/python"
 
 src_install()  {
 	insinto /usr/share/grc
-	doins conf.* 
+	doins conf.*
 	insinto /etc
 	doins grc.conf
-	dobin grc grcat 
+	dobin grc grcat
 	dodoc README INSTALL TODO CHANGES CREDITS
 	doman grc.1 grcat.1
 }

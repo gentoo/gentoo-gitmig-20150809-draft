@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/largorecipes/largorecipes-0.9.0.3.ebuild,v 1.2 2003/07/11 19:30:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/largorecipes/largorecipes-0.9.0.3.ebuild,v 1.3 2003/09/05 12:10:36 msterret Exp $
 
 # Based on an original ebuild by Per Wigren <wigren@home.se>
 
@@ -8,7 +8,7 @@ inherit java-pkg
 
 DESCRIPTION="LargoRecipes is an application for managing recipes."
 SRC_URI="mirror://sourceforge/largorecipes/${PN}-0.9.0.1.jar
-         mirror://sourceforge/largorecipes/${PN}patch-${PV}.jar"
+	mirror://sourceforge/largorecipes/${PN}patch-${PV}.jar"
 HOMEPAGE="http://largorecipes.sourceforge.net/"
 
 IUSE=""
@@ -29,8 +29,7 @@ src_compile() {
 }
 
 src_install() {
-
-    dobin ${FILESDIR}/largorecipes
-    java-pkg_dojar ${PN}-0.9.0.1.jar
-    java-pkg_dojar ${PN}patch-0.9.0.3.jar
+	dobin ${FILESDIR}/largorecipes
+	java-pkg_dojar ${PN}-0.9.0.1.jar
+	java-pkg_dojar ${PN}patch-0.9.0.3.jar
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lhinv/lhinv-1.1-r2.ebuild,v 1.5 2003/03/11 21:11:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lhinv/lhinv-1.1-r2.ebuild,v 1.6 2003/09/05 12:10:36 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Linux Hardware Inventory"
@@ -13,7 +13,7 @@ KEYWORDS="x86"
 
 RDEPEND="dev-lang/perl"
 
-src_compile() {													 
+src_compile() {
 	cd ${S}/cgi
 	cp w3hinv w3hinv.orig
 	sed -e "s:^my \$HINV =.*:my \$HINV =\"/usr/bin/lhinv\";:" \
@@ -22,7 +22,7 @@ src_compile() {
 	make local || die
 }
 
-src_install() {															 
+src_install() {
 	cd ${S}
 	into /usr
 	dobin lhinv
@@ -30,6 +30,6 @@ src_install() {
 	dodoc AUTHORS BUGS CHANGELOG COPYING README TODO
 	newdoc cgi/README README.cgi
 	insinto /home/httpd/cgi-bin
-	insopts -m 755 
+	insopts -m 755
 	doins cgi/w3hinv
 }

@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.3.8.ebuild,v 1.2 2003/06/03 08:29:09 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.3.8.ebuild,v 1.3 2003/09/05 12:10:36 msterret Exp $
 
-IUSE="" 
+IUSE=""
 
 DESCRIPTION="fast and powerful graphical file manager"
 HOMEPAGE="http://rox.sourceforge.net/"
@@ -23,11 +23,11 @@ src_install() {
 	dodir /usr/share/Choices
 	cp -rf MIME-icons/ ${D}/usr/share/Choices/
 	cp -rf MIME-types/ ${D}/usr/share/Choices/
-	
+
 	cd ${S}
 	doman rox.1
 
-	dodir /usr/bin	
+	dodir /usr/bin
 	cp -rf ROX-Filer/ ${D}/usr/share/
 	${D}/usr/share/ROX-Filer/AppRun --compile
 	(cd ${D}/usr/share/ROX-Filer/src; make clean) > /dev/null

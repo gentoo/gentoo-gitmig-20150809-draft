@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colortail/colortail-0.3.0-r2.ebuild,v 1.7 2003/02/13 08:54:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colortail/colortail-0.3.0-r2.ebuild,v 1.8 2003/09/05 12:10:36 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Colortail custom colors your log files and works like tail"
@@ -23,9 +23,9 @@ src_compile() {
 	./configure --prefix=/usr --host=${CHOST}
 	make || die
 }
- 
+
 src_install()  {
-	
+
 	make DESTDIR=${D} install || die
 	dodoc README example-conf/conf*
 	dodir /usr/bin/wrappers

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.2 2003/02/13 09:06:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.3 2003/09/05 12:10:36 msterret Exp $
 
 # orig.tar.gz and debian-diff contains an underscore in the name
 # whereas the other files (including the unpacked sources)
@@ -32,7 +32,7 @@ src_unpack() {
 
 src_compile() {
 	mmv_CFLAGS=" -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
-	
+
 	emake CC="gcc " CFLAGS="${mmv_CFLAGS} ${CFLAGS} " LDFLAGS=" -s " || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r2.ebuild,v 1.2 2003/09/02 16:06:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r2.ebuild,v 1.3 2003/09/05 12:10:36 msterret Exp $
 
 IUSE="gpm nls samba ncurses X slang"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/managers/${PN}/${P}.tar.gz"
 DEPEND=">=sys-apps/e2fsprogs-1.19
 	ncurses? ( >=sys-libs/ncurses-5.2-r5 )
 	=dev-libs/glib-2*
-	>=sys-libs/pam-0.72 
+	>=sys-libs/pam-0.72
 	gpm? ( >=sys-libs/gpm-1.19.3 )
 	slang? ( >=sys-libs/slang-1.4.2 )
 	samba? ( >=net-fs/samba-2.2.3a-r1 )
@@ -21,16 +21,16 @@ DEPEND=">=sys-apps/e2fsprogs-1.19
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha mips hppa arm"
-	
-src_compile() {                           
+
+src_compile() {
 	local myconf=""
-	
+
 	if ! use slang && ! use ncurses
-	    then  
+	    then
 		myconf="${myconf} --with-screen=mcslang"
 	    elif
 		use ncurses && ! use slang
-	    then 
+	    then
 		myconf="${myconf} --with-screen=ncurses"
 	    else
 		use slang && myconf="${myconf} --with-screen=slang"
@@ -43,16 +43,16 @@ src_compile() {
 	use nls \
 	    && myconf="${myconf} --with-included-gettext" \
 	    || myconf="${myconf} --disable-nls"
-							
+
 	use X \
 	    && myconf="${myconf} --with-x" \
 	    || myconf="${myconf} --without-x"
-	
+
 	use samba \
 	    && myconf="${myconf} --with-samba --with-configdir=/etc/samba
 				--with-codepagedir=/var/lib/samba/codepages" \
 	    || myconf="${myconf} --without-samba"
- 
+
 	econf \
 	    --with-vfs \
 	    --with-gnu-ld \
@@ -67,12 +67,12 @@ src_compile() {
 	emake || die
 }
 
-src_install() {                               
+src_install() {
 	 cat ${FILESDIR}/chdir-4.6.0.gentoo >>\
 	 ${S}/lib/mc-wrapper.sh
-	
+
 	einstall || die
-	
+
 	dodoc ABOUT-NLS COPYING* ChangeLog AUTHORS MAINTAINERS FAQ INSTALL* NEWS README*
 
 	insinto /usr/share/mc
@@ -80,11 +80,11 @@ src_install() {
 }
 
 pkg_postinst() {
-        einfo "Add the following line to your ~/.bashrc to"
-		einfo "allow mc to chdir to it's latest working dir at exit"
-		einfo ""
-		einfo "# Midnight Commander chdir enhancement"
-		einfo "if [ -f /usr/share/mc/mc.gentoo ]; then"
-		einfo "	. /usr/share/mc/mc.gentoo"
-		einfo "fi"
+	einfo "Add the following line to your ~/.bashrc to"
+	einfo "allow mc to chdir to it's latest working dir at exit"
+	einfo ""
+	einfo "# Midnight Commander chdir enhancement"
+	einfo "if [ -f /usr/share/mc/mc.gentoo ]; then"
+	einfo "	. /usr/share/mc/mc.gentoo"
+	einfo "fi"
 }

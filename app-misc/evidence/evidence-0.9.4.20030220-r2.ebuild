@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.4.20030220-r2.ebuild,v 1.3 2003/06/30 23:56:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.4.20030220-r2.ebuild,v 1.4 2003/09/05 12:10:36 msterret Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-    epatch ${FILESDIR}/${PN}-info-direntry.patch || die "patch failed"
+	epatch ${FILESDIR}/${PN}-info-direntry.patch || die "patch failed"
 
 	for x in evidence.themes/engines/sb_edb.c setup/*
 	do
@@ -77,13 +77,13 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	
+
 	find ${D} -name CVS -type d -exec rm -rf '{}' \;
 
 	# Fixup broken symlinks
 	dosym gfilerunner /usr/share/evidence/icons/default
 	dosym azundris /usr/share/evidence/themes/default
-	
+
 	dodoc AUTHORS ChangeLog NEWS README docs/*
 }
 

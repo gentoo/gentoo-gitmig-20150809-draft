@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xtrlock/xtrlock-2.0-r1.ebuild,v 1.1 2003/04/24 10:15:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xtrlock/xtrlock-2.0-r1.ebuild,v 1.2 2003/09/05 12:10:36 msterret Exp $
 
 MY_P=${PN}_${PV}-6
 S=${WORKDIR}/${P}
@@ -29,7 +29,7 @@ src_compile() {
 
 src_install() {
 	dobin xtrlock
-	chmod u+s ${D}/usr/bin/xtrlock 
+	chmod u+s ${D}/usr/bin/xtrlock
 	mv xtrlock.man xtrlock.1
 	doman xtrlock.1
 }

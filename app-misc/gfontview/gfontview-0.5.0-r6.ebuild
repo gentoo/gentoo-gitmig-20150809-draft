@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r6.ebuild,v 1.2 2003/07/29 13:54:03 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r6.ebuild,v 1.3 2003/09/05 12:10:36 msterret Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
-        epatch ${FILESDIR}/01_all_gcc33.patch.bz2 
+	epatch ${FILESDIR}/01_all_gcc33.patch.bz2
 }
 
 src_compile() {
@@ -37,5 +37,5 @@ src_install() {
 	einstall
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 	insinto /usr/X11R6/include/X11/pixmaps/
-	doins error.xpm openhand.xpm font.xpm t1.xpm tt.xpm 
+	doins error.xpm openhand.xpm font.xpm t1.xpm tt.xpm
 }

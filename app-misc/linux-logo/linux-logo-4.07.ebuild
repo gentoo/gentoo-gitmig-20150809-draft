@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.07.ebuild,v 1.1 2003/08/30 00:33:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.07.ebuild,v 1.2 2003/09/05 12:10:36 msterret Exp $
 
 MY_P=${PN/-/_}-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Displays an ansi or an ascii logo and some system information."
-HOMEPAGE="http://www.deater.net/weave/vmwprod/linux_logo/" 
+HOMEPAGE="http://www.deater.net/weave/vmwprod/linux_logo/"
 SRC_URI="http://www.deater.net/weave/vmwprod/linux_logo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 
-src_unpack() { 
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 	gunzip linux_logo.1.gz

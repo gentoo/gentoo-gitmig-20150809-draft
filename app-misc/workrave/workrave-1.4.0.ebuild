@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0.ebuild,v 1.1 2003/08/31 06:55:09 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0.ebuild,v 1.2 2003/09/05 12:10:36 msterret Exp $
 
 DESCRIPTION="Helpful utility to attack Repetitive Strain Injury (RSI)"
 HOMEPAGE="http://workrave.sourceforge.net/"
@@ -51,7 +51,7 @@ src_compile() {
 	use xml2  && myconf="${myconf} --enable-xml"
 
 	econf ${myconf} || die
-	
+
 	# emake will bring nothing but trouble if you're using the `nls' USE
 	# var
 	make || die "Compilation failed"

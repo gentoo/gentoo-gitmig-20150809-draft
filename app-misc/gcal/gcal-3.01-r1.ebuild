@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/gcal-3.01-r1.ebuild,v 1.2 2003/08/06 07:56:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/gcal-3.01-r1.ebuild,v 1.3 2003/09/05 12:10:36 msterret Exp $
 
 DESCRIPTION="The GNU Calendar - a replacement for cal"
 HOMEPAGE="http://www.gnu.org/software/gcal/gcal.html"
@@ -31,15 +31,15 @@ src_install() {
 	done
 
 	# Rebuild the symlinks that makefile created into the image /usr/bin
-	# directory during make install 
-	dosym /usr/share/gcal/misc/daily/daily /usr/bin/gcal-daily 
-	dosym /usr/share/gcal/misc/ddiff/ddiff /usr/bin/gcal-ddiff 
-	dosym /usr/share/gcal/misc/ddiff/ddiffdrv /usr/bin/gcal-ddiffdrv 
-	dosym /usr/share/gcal/misc/dst/dst /usr/bin/gcal-dst 
-	dosym /usr/share/gcal/misc/gcalltx/gcalltx /usr/bin/gcal-gcalltx 
-	dosym /usr/share/gcal/misc/gcalltx/gcalltx.pl /usr/bin/gcal-gcalltx.pl 
-	dosym /usr/share/gcal/misc/moon/moon /usr/bin/gcal-moon 
-	dosym /usr/share/gcal/misc/mrms/mrms /usr/bin/gcal-mrms 
-	dosym /usr/share/gcal/misc/srss/srss /usr/bin/gcal-srss 
+	# directory during make install
+	dosym /usr/share/gcal/misc/daily/daily /usr/bin/gcal-daily
+	dosym /usr/share/gcal/misc/ddiff/ddiff /usr/bin/gcal-ddiff
+	dosym /usr/share/gcal/misc/ddiff/ddiffdrv /usr/bin/gcal-ddiffdrv
+	dosym /usr/share/gcal/misc/dst/dst /usr/bin/gcal-dst
+	dosym /usr/share/gcal/misc/gcalltx/gcalltx /usr/bin/gcal-gcalltx
+	dosym /usr/share/gcal/misc/gcalltx/gcalltx.pl /usr/bin/gcal-gcalltx.pl
+	dosym /usr/share/gcal/misc/moon/moon /usr/bin/gcal-moon
+	dosym /usr/share/gcal/misc/mrms/mrms /usr/bin/gcal-mrms
+	dosym /usr/share/gcal/misc/srss/srss /usr/bin/gcal-srss
 	dosym /usr/share/gcal/misc/wloc/wlocdrv /usr/bin/gcal-wlocdrv
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r4.ebuild,v 1.2 2003/06/29 23:17:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r4.ebuild,v 1.3 2003/09/05 12:10:36 msterret Exp $
 
 DESCRIPTION="Fontviewer for PostScript Type 1 and TrueType"
 SRC_URI="mirror://sourceforge/gfontview/${P}.tar.gz"
@@ -28,5 +28,5 @@ src_install() {
 	einstall
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 	insinto /usr/X11R6/include/X11/pixmaps/
-	doins error.xpm openhand.xpm font.xpm t1.xpm tt.xpm 
+	doins error.xpm openhand.xpm font.xpm t1.xpm tt.xpm
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.15-r1.ebuild,v 1.1 2003/07/12 07:58:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.15-r1.ebuild,v 1.2 2003/09/05 12:10:36 msterret Exp $
 
 inherit flag-o-matic
 
@@ -35,7 +35,7 @@ src_compile() {
 	addpredict "`tty`"
 	addpredict "${SSH_TTY}"
 
-	# check config.h for other settings such as the 
+	# check config.h for other settings such as the
 	# max-number of windows allowed by screen.
 	append-flags "-DPTYMODE=0620 -DPTYGROUP=5"
 	use pam && myconf="--enable-pam" && append-flags "-DUSE_PAM"
@@ -50,15 +50,15 @@ src_compile() {
 #	mv term.h term.h.old
 #	awk '/^#define/ { if (defs[$2]) next; defs[$2] = $3 }
 #                    { print }
-#                END { for (d in defs) { 
-#						if (d !~ /_C../) continue; 
+#                END { for (d in defs) {
+#						if (d !~ /_C../) continue;
 #						d2 = gensub(/C/, "", 1, d);
-#						if (d2 in defs) continue; 
+#						if (d2 in defs) continue;
 #                        print "#define " d2 " " defs[d]
 #                      }
 #                    }' term.h.old > term.h || die "Failed to fix term.h"
 
-    # Second try to fix bug 12683, this time without changing term.h
+	# Second try to fix bug 12683, this time without changing term.h
 	# The last try seemed to break screen at run-time.
 	# (16 Jan 2003 agriffis)
 	LC_ALL=POSIX make term.h || die "Failed making term.h"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glabels/glabels-1.90.0.ebuild,v 1.4 2003/07/28 09:55:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glabels/glabels-1.90.0.ebuild,v 1.5 2003/09/05 12:10:36 msterret Exp $
 
 DESCRIPTION="Program for creating labels and business cards"
 HOMEPAGE="http://snaught.com/glabels/"
@@ -11,10 +11,10 @@ IUSE=""
 SRC_URI="http://snaught.com/${PN}/source/${P}.tar.gz"
 
 DEPEND=">=x11-libs/gtk+-2.0.5
-    >=dev-libs/libxml2-2.4.23
-    >=gnome-base/libgnomeprint-1.115
-    >=gnome-base/libgnomeprintui-1.115
-    >=gnome-base/libgnomecanvas-2.0.1
+	>=dev-libs/libxml2-2.4.23
+	>=gnome-base/libgnomeprint-1.115
+	>=gnome-base/libgnomeprintui-1.115
+	>=gnome-base/libgnomecanvas-2.0.1
 	>=gnome-base/libgnomeui-2.0.1
 	>=gnome-base/libbonobo-2
 	>=dev-util/pkgconfig-0.8
@@ -28,7 +28,7 @@ src_compile() {
 	emake || die "Compilation failed"
 }
 src_install() {
-    einstall || die "Installation failed"
+	einstall || die "Installation failed"
 
 	# Put the .desktop file in a more reasonable place
 	mv \

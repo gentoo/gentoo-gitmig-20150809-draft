@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.6.20030629_pre1.ebuild,v 1.3 2003/07/18 13:05:12 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.6.20030629_pre1.ebuild,v 1.4 2003/09/05 12:10:36 msterret Exp $
 
 inherit enlightenment eutils
 
@@ -81,7 +81,7 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	
+
 	find ${D} -name CVS -type d -exec rm -rf '{}' \;
 
 	# Fixup broken symlinks

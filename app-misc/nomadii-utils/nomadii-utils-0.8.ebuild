@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.7 2003/02/13 09:07:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.8 2003/09/05 12:10:36 msterret Exp $
 
 IUSE="readline"
 
@@ -31,13 +31,13 @@ src_compile() {
 		sed -e "s:^USE_READLINE=1$:USE_READLINE=0:" \
 			Makefile.orig > Makefile
 	fi
-		
+
 	emake || die "compile failure"
 }
 
 src_install() {
 	dodir /usr/bin /usr/share/man/man1
-	dobin nomadii 
+	dobin nomadii
 	newman nomadii.man nomadii.1
 }
 

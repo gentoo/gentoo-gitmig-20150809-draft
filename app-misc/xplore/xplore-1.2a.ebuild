@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xplore/xplore-1.2a.ebuild,v 1.1 2003/03/29 23:53:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xplore/xplore-1.2a.ebuild,v 1.2 2003/09/05 12:10:36 msterret Exp $
 
 IUSE=""
 
@@ -26,9 +26,9 @@ src_compile() {
 		-e "s:^XCOMM \(BINDIR = /usr\)/local\(/bin\):\1\2:" \
 		-e "s:^XCOMM \(MANPATH = /usr\)/local\(/man\):\1/share\2:" \
 		Xplore.tmpl.orig > Xplore.tmpl
-		
+
 	xmkmf -a || die "xmkmf Makefile creation failed"
-    # parallel make fails
+	# parallel make fails
 	make || die "make failed"
 }
 

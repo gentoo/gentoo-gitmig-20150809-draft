@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.0.1.ebuild,v 1.11 2003/08/06 23:25:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.0.1.ebuild,v 1.12 2003/09/05 12:10:36 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="boxes draws any kind of boxes around your text!"
@@ -29,7 +29,7 @@ src_compile() {
 src_install() {
 	dobin src/boxes
 	doman doc/boxes.1
-	dodoc README* COPYING 
+	dodoc README* COPYING
 	insinto /usr/share/boxes
 	doins boxes-config
 }

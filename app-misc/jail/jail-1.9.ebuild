@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9.ebuild,v 1.9 2003/03/11 21:11:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9.ebuild,v 1.10 2003/09/05 12:10:36 msterret Exp $
 
 S="${WORKDIR}/${PN}_1-9_stable"
 DESCRIPTION="Jail Chroot Project is a tool that builds a chrooted environment and automagically configures and builds all the required files, directories and libraries"
@@ -64,6 +64,6 @@ src_install() {
 		rm ${f}.orig
 	done
 
-	cd ${S}/doc 
+	cd ${S}/doc
 	dodoc CHANGELOG INSTALL README SECURITY VERSION
 }

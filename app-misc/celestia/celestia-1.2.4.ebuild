@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/celestia-1.2.4.ebuild,v 1.12 2003/02/13 08:54:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/celestia-1.2.4.ebuild,v 1.13 2003/09/05 12:10:36 msterret Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND="gtk? ( =x11-libs/gtk+-1.2* 
+DEPEND="gtk? ( =x11-libs/gtk+-1.2*
 	<x11-libs/gtkglarea-1.99.0 )
 	gnome? ( =gnome-base/gnome-libs-1.4* )
 	>=media-libs/glut-3.7-r2

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/symlinks-1.2.ebuild,v 1.3 2003/06/24 20:21:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/symlinks-1.2.ebuild,v 1.4 2003/09/05 12:10:36 msterret Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,14 +19,14 @@ DEPEND="virtual/glibc"
 src_compile() {
 	# bugfixes from the debian project.
 	epatch ${DISTDIR}/symlinks_1.2-4.1.diff.gz || die "patching failed"
-	
+
 	# could be useful if being used to repair
 	# symlinks that are preventing shared libraries from
 	# functioning.
-	# 
-	
+	#
+
 	use static && append-flags -static
-	
+
 	emake || die
 }
 

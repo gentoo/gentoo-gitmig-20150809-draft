@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.6.ebuild,v 1.4 2003/06/29 23:17:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.6.ebuild,v 1.5 2003/09/05 12:10:36 msterret Exp $
 
 inherit eutils
 
@@ -90,7 +90,7 @@ src_compile() {
 	case ${LIRC_OPTS}
 	in
 	  *"any"*)
-		if [ "${SMP}" = 1 ]; then    
+		if [ "${SMP}" = 1 ]; then
 			# The parallel driver will not work with SMP kernels
 			# so we need to compile without it
 			emake -C drivers "SUBDIRS=lirc_dev lirc_serial \
@@ -123,7 +123,7 @@ src_install() {
 			do
 			doins drivers/${i}/${i}.o
 			done
-		fi			
+		fi
 	;;
 	esac
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.3.4_p1.ebuild,v 1.1 2003/09/02 10:55:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.3.4_p1.ebuild,v 1.2 2003/09/05 12:10:36 msterret Exp $
 
 MY_P=${P/_p/-pl}
 
@@ -90,6 +90,6 @@ pkg_postinst() {
 	einfo "--------------------------------------------"
 	einfo "For upgrades, just run"
 	einfo "# cd ${DST_PATH}"
-	einfo "# sh ./secure.sh" 
+	einfo "# sh ./secure.sh"
 	einfo
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.1-r1.ebuild,v 1.13 2003/02/13 09:04:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.1-r1.ebuild,v 1.14 2003/09/05 12:10:36 msterret Exp $
 
 DESCRIPTION="lcdproc - displays system status on Matrix-Orbital 20x4 LCD on a serial port."
 SRC_URI="http://lcdproc.omnipotent.net/${P}.tar.gz"
@@ -22,7 +22,7 @@ src_install() {
 	doexe server/LCDd
 	doexe clients/lcdproc/lcdproc
 	doman docs/lcdproc.1
-	dodoc README ChangeLog COPYING INSTALL 
+	dodoc README ChangeLog COPYING INSTALL
 	docinto docs
 	dodoc docs/README.dg* docs/*.txt
 	docinto clients/example

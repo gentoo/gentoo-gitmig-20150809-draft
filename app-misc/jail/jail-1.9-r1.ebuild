@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r1.ebuild,v 1.5 2003/07/30 23:46:46 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r1.ebuild,v 1.6 2003/09/05 12:10:36 msterret Exp $
 
 inherit eutils
 
@@ -72,6 +72,6 @@ src_install() {
 	sed "s:/usr/etc:/etc:" < libjail.pm.orig > libjail.pm
 	rm libjail.pm.orig
 
-	cd ${S}/doc 
+	cd ${S}/doc
 	dodoc CHANGELOG INSTALL README SECURITY VERSION
 }

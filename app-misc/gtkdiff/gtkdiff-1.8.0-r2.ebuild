@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtkdiff/gtkdiff-1.8.0-r2.ebuild,v 1.8 2003/05/29 00:08:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtkdiff/gtkdiff-1.8.0-r2.ebuild,v 1.9 2003/09/05 12:10:36 msterret Exp $
 
 DESCRIPTION="GNOME Frontend for diff"
 SRC_URI="http://home.catv.ne.jp/pp/ginoue/software/gtkdiff/${P}.tar.gz"
@@ -23,5 +23,5 @@ src_compile() {
 
 src_install() {
 	einstall
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO 
+	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }

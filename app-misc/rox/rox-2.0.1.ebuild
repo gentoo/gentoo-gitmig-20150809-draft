@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-2.0.1.ebuild,v 1.1 2003/08/29 00:40:48 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-2.0.1.ebuild,v 1.2 2003/09/05 12:10:36 msterret Exp $
 
 IUSE=""
 
@@ -27,7 +27,7 @@ src_install() {
 	cd ${S}
 	doman rox.1
 
-	dodir /usr/bin	
+	dodir /usr/bin
 	cp -rf ROX-Filer/ ${D}/usr/share/
 	rm ${D}/usr/share/ROX-Filer/src/configure # see bug #26162
 

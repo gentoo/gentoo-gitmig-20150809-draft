@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.5.55-r7.ebuild,v 1.3 2003/03/29 11:13:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.5.55-r7.ebuild,v 1.4 2003/09/05 12:10:36 msterret Exp $
 
 IUSE="gpm nls samba ncurses X pam slang"
 
@@ -24,8 +24,8 @@ DEPEND=">=sys-apps/e2fsprogs-1.19
 	samba? ( >=net-fs/samba-2.2.3a-r1 )
 	X? ( virtual/x11 )"
 
-src_compile() {                           
-	
+src_compile() {
+
 	local myconf=""
 
 	use pam \
@@ -55,9 +55,9 @@ src_compile() {
 		    cp Makefile.in Makefile.in.orig
 		    sed -e 's:$(LIBDIR)\(/codepages\):/var/lib/samba\1:' \
 			Makefile.in.orig > Makefile.in )
-	
+
 	use nls || myconf="${myconf} --disable-nls"
-	
+
 	cd ${S}
 	libtoolize --force --copy
 	aclocal -I ${S}/macros
@@ -72,10 +72,10 @@ src_compile() {
 	make || die
 }
 
-src_install() {                               
-	
+src_install() {
+
 	einstall
-	
+
 	dodoc ABOUT-NLS COPYING* FAQ INSTALL* NEWS README*
 }
 

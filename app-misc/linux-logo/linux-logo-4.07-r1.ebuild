@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.07-r1.ebuild,v 1.1 2003/08/30 00:33:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.07-r1.ebuild,v 1.2 2003/09/05 12:10:36 msterret Exp $
 
 inherit eutils
 
 MY_P=${PN/-/_}-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Displays an ansi or an ascii logo and some system information."
-HOMEPAGE="http://www.deater.net/weave/vmwprod/linux_logo/" 
+HOMEPAGE="http://www.deater.net/weave/vmwprod/linux_logo/"
 SRC_URI="http://www.deater.net/weave/vmwprod/linux_logo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -19,7 +19,7 @@ DEPEND="virtual/glibc
 	>=sys-apps/sed-4"
 RDEPEND="nls? ( sys-devel/gettext )"
 
-src_unpack() { 
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 	echo "./logos/gentoo.logo" >> logo_config
@@ -40,7 +40,7 @@ src_compile() {
 src_install() {
 	dobin linux_logo
 	doman linux_logo.1.gz
-	
+
 	dodoc BUGS CHANGES COPYING README README.CUSTOM_LOGOS TODO USAGE
 	dodoc LINUX_LOGO.FAQ
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.3-r1.ebuild,v 1.3 2003/06/10 17:44:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.3-r1.ebuild,v 1.4 2003/09/05 12:10:36 msterret Exp $
 
 SRC_URI="mirror://sourceforge/lcdproc/${P}.tar.gz"
 DESCRIPTION="Client/Server suite to drive all kinds of LCD (-like) devices"
@@ -48,17 +48,17 @@ src_compile() {
 }
 
 src_install() {
- 	dosbin server/LCDd
- 	dobin clients/lcdproc/lcdproc
+	dosbin server/LCDd
+	dobin clients/lcdproc/lcdproc
 
- 	doman docs/lcdproc.1 docs/LCDd.8
+	doman docs/lcdproc.1 docs/LCDd.8
 
- 	dodoc README ChangeLog COPYING INSTALL
+	dodoc README ChangeLog COPYING INSTALL
 
 	use doc && dohtml docs/lcdproc-user/*.html
 
 	docinto docs
- 	dodoc docs/README.dg* docs/*.txt
+	dodoc docs/README.dg* docs/*.txt
 
 	insinto /usr/share/doc/${PF}/clients/examples
 	doins clients/examples/*.pl
@@ -69,7 +69,7 @@ src_install() {
 	doins LCDd.conf
 	doins scripts/lcdproc.conf
 
- 	exeinto /etc/init.d
+	exeinto /etc/init.d
 	doexe ${FILESDIR}/LCDd
 	doexe ${FILESDIR}/lcdproc
 }

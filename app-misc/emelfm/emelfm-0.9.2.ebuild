@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm/emelfm-0.9.2.ebuild,v 1.8 2003/02/13 08:55:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm/emelfm-0.9.2.ebuild,v 1.9 2003/09/05 12:10:36 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A file manager that implements the popular two-pane design."
@@ -20,13 +20,13 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf 
+	local myconf
 
 	if use nls ; then
 		make PREFIX=/usr \
 			CC="gcc ${CFLAGS}" \
 			NLS=-DENABLE_NLS || die
-	else 
+	else
 		make PREFIX=/usr \
 			CC="gcc ${CFLAGS}" \
 			NLS= || die
@@ -41,7 +41,7 @@ src_install() {
 			NLS=-DENABLE_NLS \
 			DOC_DIR=${D}/usr/share/doc/${P} \
 			install || die
-	else 
+	else
 		make PREFIX=${D}/usr NLS= \
 			DOC_DIR=${D}/usr/share/doc/${P} \
 			install || die

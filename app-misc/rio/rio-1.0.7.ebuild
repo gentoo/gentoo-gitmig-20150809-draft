@@ -18,7 +18,7 @@ UNPACKDIR=rio107
 S=${WORKDIR}/${UNPACKDIR}
 
 src_compile() {
-	emake || die 
+	emake || die
 }
 
 src_install() {

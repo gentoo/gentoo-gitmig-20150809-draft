@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.09a-r1.ebuild,v 1.11 2003/09/01 18:09:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.09a-r1.ebuild,v 1.12 2003/09/05 12:10:36 msterret Exp $
 
 IUSE="truetype gif nls imlib"
 
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
- 	
+
 	local myconf
 
 	use gif \
@@ -49,14 +49,14 @@ src_compile() {
 		--with-xa \
 		--disable-vflib \
 		${myconf} || die
-	
+
 	xmkmf || die
 	make Makefiles || die
 	make clean || die
 	make || die
 }
 
-src_install() {                               
+src_install() {
 	make \
 		DESTDIR=${D} \
 		install || die
