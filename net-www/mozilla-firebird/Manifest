@@ -2,11 +2,13 @@ MD5 0a0b11d86465f6fa20dbea2b27a36239 mozilla-firebird-0.6.ebuild 4028
 MD5 ea497964b6dbf52847c8094487529365 mozilla-firebird-0.6-r1.ebuild 4015
 MD5 194139858e8b3ff8cecd1b466e97bdfc mozilla-firebird-0.6-r2.ebuild 4015
 MD5 b97d58c783770c19dbdd03d946e32090 mozilla-firebird-0.6-r3.ebuild 4034
-MD5 3fe316fdd6d1f0b76140ed7d71ddd9f4 ChangeLog 1243
+MD5 cbcb3f5173f64dbdf410bbd0c67a249b ChangeLog 1498
 MD5 8ca497e8450db916c56c95ea96fcbfc9 mozilla-firebird-0.6-r4.ebuild 4713
+MD5 20bf702da9bd56488bf11f7898806f5c mozilla-firebird-0.6-r5.ebuild 4737
 MD5 6e4352482ed149b3b9aca78d83de1124 files/MozillaFirebird 753
 MD5 78b9eef353e1aff29cef379e4de6b9fa files/digest-mozilla-firebird-0.6 81
 MD5 78b9eef353e1aff29cef379e4de6b9fa files/digest-mozilla-firebird-0.6-r1 81
 MD5 78b9eef353e1aff29cef379e4de6b9fa files/digest-mozilla-firebird-0.6-r2 81
 MD5 78b9eef353e1aff29cef379e4de6b9fa files/digest-mozilla-firebird-0.6-r3 81
 MD5 78b9eef353e1aff29cef379e4de6b9fa files/digest-mozilla-firebird-0.6-r4 81
+MD5 78b9eef353e1aff29cef379e4de6b9fa files/digest-mozilla-firebird-0.6-r5 81
