@@ -1,6 +1,6 @@
-# ChangeLog for dev-perlgtk-perlChangeLog/
+# ChangeLog for dev-perl/gtk-perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.16 2002/12/13 10:56:40 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.17 2002/12/17 19:35:58 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
