@@ -1,4 +1,5 @@
 MD5 2fea3b7ccf1d56ddb8ce7432a44a8f40 pfeifer-sources-2.4.21.1_pre4.ebuild 4399
+MD5 82eebf3c9049416226e92d98b106813f pfeifer-sources-2.4.22-r1.ebuild 1600
 MD5 d39ceae0278f2748f4a225878fa72368 pfeifer-sources-2.4.20.1_pre12.ebuild 4601
 MD5 9852f85bb5350cc26480175972d5c6fb pfeifer-sources-2.4.22-r0.ebuild 1597
 MD5 a82db960e7732543dceeed6610e35453 pfeifer-sources-2.4.20.1_pre11.ebuild 4562
@@ -7,3 +8,4 @@ MD5 1ada6b5466d035f65ce80c2cd3ed060e files/digest-pfeifer-sources-2.4.20.1_pre11
 MD5 31a37f6216dd3d883c38e0701ccf686e files/digest-pfeifer-sources-2.4.20.1_pre12 152
 MD5 a99cf43863da90ebcf117de912c70ee6 files/digest-pfeifer-sources-2.4.21.1_pre4 151
 MD5 635c1543550e413d92e83fffb210f810 files/digest-pfeifer-sources-2.4.22-r0 135
+MD5 50af6f76292dcb70f3d5595d7456a2d6 files/digest-pfeifer-sources-2.4.22-r1 138
