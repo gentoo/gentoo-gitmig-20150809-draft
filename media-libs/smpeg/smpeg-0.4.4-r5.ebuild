@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r4.ebuild,v 1.18 2004/08/12 00:19:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r5.ebuild,v 1.1 2005/03/29 06:55:26 vapier Exp $
 
-inherit eutils gcc gnuconfig
+inherit eutils toolchain-funcs
 
 DESCRIPTION="SDL MPEG Player Library"
 HOMEPAGE="http://www.lokigames.com/development/smpeg.php3"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.lokigames.com/pub/open-source/smpeg/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ppc64"
+KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 IUSE="X gtk opengl debug"
 
 DEPEND=">=media-libs/libsdl-1.2.0
@@ -20,18 +20,17 @@ DEPEND=">=media-libs/libsdl-1.2.0
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gnu-stack.patch
 	sed -i \
 		-e 's:-mcpu=ev4 -Wa,-mall::' \
 		-e 's:-march=486::' \
 		-e 's:-march=pentium -mcpu=pentiumpro::' \
-		configure \
-		|| die "sed configure failed"
+		configure || die "sed configure failed"
 	# GCC 3.1 fix from bug #5558 (cardoe 08/03/02)
 	sed -i \
 		-e '/^libsmpeg_la_LIBADD =/s:$: -lsupc++:' Makefile.in \
 		|| die "sed Makefile.in failed"
-	gnuconfig_update
 }
 
 src_compile() {

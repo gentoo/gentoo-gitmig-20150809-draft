@@ -1,3 +1,4 @@
-MD5 64ba581d6ce48975caad98ec9f8af8b1 ChangeLog 2724
-MD5 b55cebdd89364e8abbe3d58fd36afa41 smpeg-0.4.4-r4.ebuild 1439
-MD5 228adf6a40bb4eef222c38d23f97014b files/digest-smpeg-0.4.4-r4 63
+MD5 f29cad817e61bb94d6244bdeece339fd ChangeLog 2964
+MD5 53bcb83a6322ddf97adc35f0b04f1a80 smpeg-0.4.4-r5.ebuild 1460
+MD5 ff8036a570bdd3a43ed9710f91ca0556 files/smpeg-0.4.4-gnu-stack.patch 907
+MD5 228adf6a40bb4eef222c38d23f97014b files/digest-smpeg-0.4.4-r5 63

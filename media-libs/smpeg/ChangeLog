@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/smpeg
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.19 2004/08/12 00:19:45 mr_bones_ Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.20 2005/03/29 06:55:26 vapier Exp $
+
+*smpeg-0.4.4-r5 (29 Mar 2005)
+
+  29 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/smpeg-0.4.4-gnu-stack.patch, -smpeg-0.4.4-r4.ebuild,
+  +smpeg-0.4.4-r5.ebuild:
+  Make sure that the libsmpeg.so has a non-executable gnu stack marking.
 
   11 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> smpeg-0.4.4-r4.ebuild:
   gnuconfig_update in src_unpack
