@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 489f48113e73b65b56b8130ad6dda3a4 projectx-0.81.7.ebuild 1159
-MD5 6362b3b192089177a7e40ddc1506ca9c ChangeLog 439
+MD5 50816bb2421ad77c727a4d944099ee5c ChangeLog 527
 MD5 528b4267eb6de7cfbb5000ac5507f007 metadata.xml 215
-MD5 af303240d6ff60c3c83a323ea2f4ab73 files/digest-projectx-0.81.7 71
+MD5 e5590f9b820c5ba430ab53db7e117a8a projectx-0.81.7.ebuild 1165
 MD5 66747c7e41172eca650581213ea161d5 files/build.xml 1069
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBC/GE/rLF9B432nYRAmRSAJ4yuRUHxlIB0nchSgfVtL+rbIJrGQCgjXRA
-74YAgfscGdKX5mZQvqQ0R9o=
-=16AS
------END PGP SIGNATURE-----
+MD5 af303240d6ff60c3c83a323ea2f4ab73 files/digest-projectx-0.81.7 71
