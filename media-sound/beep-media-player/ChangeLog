@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.18 2004/10/19 22:21:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.19 2004/10/20 06:01:12 eradicator Exp $
+
+  19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  beep-media-player-0.9.7_rc2-r2.ebuild:
+  Added default plugin set to PDEPEND.
 
   19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> files/beep-config:
   Added support for FAKE_XMMS_VERSION to beep-config.
@@ -12,9 +16,8 @@
   -files/beep-media-player.desktop, -beep-media-player-0.9.6.1-r1.ebuild,
   -beep-media-player-0.9.7_rc2-r1.ebuild,
   +beep-media-player-0.9.7_rc2-r2.ebuild:
-  Removing old version. Marking stable on x86. Moved header files and setup
-  symlinks to make more compatible with xmms plugins in the upcomming
-  xmms-plugin.eclass.
+  Removing old version. Moved header files and setup symlinks to make more
+  compatible with xmms plugins in the upcomming xmms-plugin.eclass.
 
   05 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   beep-media-player-0.9.7_rc2-r1.ebuild:
