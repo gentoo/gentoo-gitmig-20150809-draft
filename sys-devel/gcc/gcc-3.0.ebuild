@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.ebuild,v 1.1 2001/06/18 21:54:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.ebuild,v 1.2 2001/06/18 22:23:28 achim Exp $
 
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
@@ -103,6 +103,8 @@ src_compile() {
 
 src_install() {
 
+    mkdir ${CHOST}
+    cp mkinstalldirs ${CHOST}
 	try make install prefix=${D}${T} mandir=${D}${T}/share/man infodir=${D}${T}/share/info
 
     FULLPATH=${D}${T}/lib/gcc-lib/${CHOST}/${PV}
