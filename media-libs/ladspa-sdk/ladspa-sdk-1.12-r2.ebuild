@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r2.ebuild,v 1.6 2004/10/07 02:53:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r2.ebuild,v 1.7 2004/10/23 08:05:46 mr_bones_ Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.ladspa.org/"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
-KEYWORDS="x86 ~ppc sparc ~alpha amd64 ~macos ~ppc-macos"
+KEYWORDS="x86 ~ppc sparc ~alpha amd64 ~ppc-macos"
 
 DEPEND="virtual/libc
 	>=sys-apps/sed-4"

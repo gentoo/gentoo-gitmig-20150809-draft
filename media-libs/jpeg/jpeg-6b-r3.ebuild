@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.34 2004/10/10 18:12:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.35 2004/10/23 08:06:05 mr_bones_ Exp $
 
 inherit gnuconfig flag-o-matic libtool eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.uu.net/graphics/jpeg/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha arm amd64 hppa ia64 macos mips ppc ppc64 ppc-macos s390 sparc x86"
+KEYWORDS="alpha arm amd64 hppa ia64 mips ppc ppc64 ppc-macos s390 sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
