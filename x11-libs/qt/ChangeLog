@@ -1,11 +1,15 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.12 2002/05/05 12:03:51 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.13 2002/05/07 17:03:50 danarmak Exp $
 
-*qt-3.0.3 (5 May 2002)
+*qt-3.0.4-r1 (7 May 2002)
+
+  7 May 2002; Dan Armak <danarmak@gentoo.org> changelog:
+  Fix bug #2470 (qt not compiling with USE nas on)
+
+*qt-3.0.4 (5 May 2002)
 
   5 May 2002; Dan Armak <danarmak@gentoo.org> changelog:
-
   qt-3.0.4 (bugfix release).
 
   30 Apr 2002; Dan Armak <danarmak@gentoo.org> changelog:
