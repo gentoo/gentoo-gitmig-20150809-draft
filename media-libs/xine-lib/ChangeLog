@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.17 2002/08/06 15:34:23 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.18 2002/08/06 21:16:03 seemant Exp $
+
+*xine-lib-0.9.10-r1 (06 Aug 2002)
+
+  06 Aug 2002; Seemant Kulleen <seemant@gentoo.org>
+  xine-lib-0.9.10-r1.ebuild :
+
+  this is the only version which works with ppc.  resurrected for that
+  purpose.
 
 *xine-lib-0.9.13 (06 Aug 2002)
 
