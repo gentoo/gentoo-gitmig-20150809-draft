@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.17 2004/08/19 22:09:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.18 2004/08/24 03:09:21 swegener Exp $
 
 inherit eutils gnuconfig
 
 DESCRIPTION="GNU awk pattern-matching language"
 HOMEPAGE="http://www.gnu.org/software/gawk/gawk.html"
-SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/gawk/${P}.tar.gz"
+SRC_URI="mirror://gnu/gawk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
