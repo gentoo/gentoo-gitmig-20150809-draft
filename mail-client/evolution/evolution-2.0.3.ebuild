@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.3.ebuild,v 1.1 2004/12/29 17:12:27 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.3.ebuild,v 1.2 2005/01/08 23:36:24 slarti Exp $
 
 inherit eutils virtualx gnome2 flag-o-matic alternatives
 

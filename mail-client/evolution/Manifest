@@ -1,20 +1,30 @@
-MD5 dad6657ce9376178fb561002aa40f5e0 evolution-1.2.4.ebuild 6251
-MD5 c4dc97c2d84214bca4f69acaa87cec0a evolution-2.0.3.ebuild 3963
-MD5 d2e40ea76259c876593c6ac19acc9412 evolution-2.0.2.ebuild 4054
-MD5 04034205a31f0b0feb05843eb5e64f2e evolution-1.4.6.ebuild 5702
-MD5 1e7971cc9001e4f27123486c39036016 ChangeLog 21282
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9615ffa7f6426a7f08544a23ee7fa049 ChangeLog 21375
+MD5 0e26bab8ac570ce0deb481e2249e69f2 evolution-1.4.6.ebuild 5701
+MD5 4936db7d1aa77e38c5b71f77d46e08f8 evolution-2.0.2.ebuild 4053
+MD5 7c0483bef60bedff8559f3b9043d0f7e evolution-2.0.3.ebuild 3966
 MD5 80850151bae2bd61c4ac796f83656ef6 metadata.xml 217
-MD5 7b8c1cc2fd2428815184d471af4bb3bf files/evolution-2.0.3-gentoo_etc_services.patch 1662
-MD5 a3a0071b78894fc80b10a0ec765647f5 files/evolution-1.4.4-alpha.patch 1799
-MD5 8cc9e70dc9a35125fa2a37d58be5d139 files/evolution-2.0.2-gentoo_etc_services.patch 1712
-MD5 c837abd50d990dea46fcea32b8a1b001 files/evolution-1.1.90-kde.patch 689
-MD5 8a4178ab2571a9be24e1c27cfedf20bb files/evolution-2.0.2-camel_typo.patch 298
-MD5 f44bc5e363c1f976a7a72676886b9d13 files/evolution-1.1.90-subversion.patch 470
-MD5 6e58f5e7a4195267cc545d8c9eba07a3 files/evolution-1.5.93-addressbooklibs.patch 564
-MD5 5d430637760a0c93974ed91b72a16438 files/digest-evolution-1.2.4 131
+MD5 f8967572708473b4e0c251f754929631 evolution-1.2.4.ebuild 6254
 MD5 fe0cafc4040da525377526f4a1fa297f files/digest-evolution-1.4.6 132
-MD5 55cb14a4c3057ba1f6d91bea14ec28b6 files/digest-evolution-2.0.2 70
-MD5 988789d67b6d0e09eea25ba441cda871 files/digest-evolution-2.0.3 70
-MD5 dc2deff6647a30a151572ec5d6e11c77 files/evolution-2.0.1-camel.patch 457
+MD5 8a4178ab2571a9be24e1c27cfedf20bb files/evolution-2.0.2-camel_typo.patch 298
+MD5 8cc9e70dc9a35125fa2a37d58be5d139 files/evolution-2.0.2-gentoo_etc_services.patch 1712
 MD5 4df81c3442025403034c53975ba663b1 files/evolution-gcc34.patch 3044
 MD5 8909b7f2d3483d55036f21ca2780e4a3 files/evolution-1.1.90-sharedldap.patch 370
+MD5 dc2deff6647a30a151572ec5d6e11c77 files/evolution-2.0.1-camel.patch 457
+MD5 6e58f5e7a4195267cc545d8c9eba07a3 files/evolution-1.5.93-addressbooklibs.patch 564
+MD5 7b8c1cc2fd2428815184d471af4bb3bf files/evolution-2.0.3-gentoo_etc_services.patch 1662
+MD5 5d430637760a0c93974ed91b72a16438 files/digest-evolution-1.2.4 131
+MD5 a3a0071b78894fc80b10a0ec765647f5 files/evolution-1.4.4-alpha.patch 1799
+MD5 988789d67b6d0e09eea25ba441cda871 files/digest-evolution-2.0.3 70
+MD5 55cb14a4c3057ba1f6d91bea14ec28b6 files/digest-evolution-2.0.2 70
+MD5 f44bc5e363c1f976a7a72676886b9d13 files/evolution-1.1.90-subversion.patch 470
+MD5 c837abd50d990dea46fcea32b8a1b001 files/evolution-1.1.90-kde.patch 689
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4G7sCHk4+ZoBpvsRAnTvAJ41wlbFBNHFyi91mZJbM89u4yQlqACeLkdk
+LdXy4xvw91mFne+ePL/LsU0=
+=r1Yu
+-----END PGP SIGNATURE-----
