@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.0.2.ebuild,v 1.9 2002/10/04 05:43:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.0.2.ebuild,v 1.10 2002/10/05 05:39:14 drobbins Exp $
+
+IUSE="pda"
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - PIM (Personal Information Management) apps: korganizer..."

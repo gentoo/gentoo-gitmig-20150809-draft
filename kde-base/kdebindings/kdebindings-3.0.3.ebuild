@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header:
 # TODO: add gnustep bindings
+
+IUSE="python mozilla java"
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - kde library bindings for languages other than c++"

@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.6.0_pre1.ebuild,v 1.2 2002/10/04 05:39:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.6.0_pre1.ebuild,v 1.3 2002/10/05 05:39:14 drobbins Exp $
+
+IUSE="gpm nls samba ncurses X pam slang"
 
 MY_T="${PN}-4.6.0-pre1"
 S=${WORKDIR}/${MY_T}
