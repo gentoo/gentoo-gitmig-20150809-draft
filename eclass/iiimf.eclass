@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/iiimf.eclass,v 1.9 2004/09/15 09:01:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/iiimf.eclass,v 1.10 2005/03/30 17:00:35 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -35,11 +35,13 @@ S="${WORKDIR}/${IMSDK}/${PN}"
 iiimf_src_compile() {
 
 	if [ "${PV:0:2}" -eq 12 ] ; then
+		libtoolize --copy --force
 		./autogen.sh
 	fi
 
 	econf --enable-optimize \
-		`use_enable debug` || die
+		--localstatedir=/var \
+		$(use_enable debug) || die
 	# emake doesn't work on some libraries
 	emake -j1 || die
 }
