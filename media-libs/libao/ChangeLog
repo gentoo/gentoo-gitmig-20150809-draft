@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.22 2004/02/10 01:15:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.23 2004/02/12 11:56:14 eradicator Exp $
+
+  12 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libao-0.8.4-r1.ebuild:
+  Added mmap USE flag to toggle the --enable-alsa09-mmap configure option.
+  Closes bug #32201.
 
   09 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
   Fix autoconf/libtool issues #40901.
