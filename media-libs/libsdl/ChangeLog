@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.12 2002/10/12 20:05:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.13 2002/11/28 19:07:29 styx Exp $
+
+  28 Nov 2002; Joachim Blaabjerg <styx@gentoo.org> libsdl-1.2.5.ebuild :
+
+  Added a small sed statement to fix DirectFB b0rkage. No bump.
 
 *libsdl-1.2.5 (12 Oct 2002)
 

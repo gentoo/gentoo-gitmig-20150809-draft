@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5.ebuild,v 1.2 2002/10/16 19:10:17 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5.ebuild,v 1.3 2002/11/28 19:07:29 styx Exp $
 
 IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa directfb"
 
@@ -27,7 +27,7 @@ RDEPEND=">=media-libs/audiofile-0.1.9
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
-
+# What's this?
 #src_unpack() {
 
 	#unpack ${A}
@@ -42,6 +42,14 @@ DEPEND="${RDEPEND}
 	#	-e "s:DIKI_SCRLOCK:DIKI_SCROLL_LOCK:" \
 	#	SDL_DirectFB_events.c.orig > SDL_DirectFB_events.c
 #}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}/src/video/directfb
+	cp SDL_DirectFB_video.c SDL_DirectFB_video.c.orig
+	sed -e "s:DICAPS_ALL, ::" SDL_DirectFB_video.c.orig \
+		> SDL_DirectFB_video.c
+}
 
 src_compile() {
 	local myconf
