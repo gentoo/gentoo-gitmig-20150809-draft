@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.0.7_rc1-r1.ebuild,v 1.1 2002/07/27 00:53:56 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.0.7_rc1-r1.ebuild,v 1.2 2002/08/01 11:58:59 seemant Exp $
 
 . /usr/portage/eclass/inherit.eclass
 inherit java
