@@ -1,2 +1,3 @@
 LDPATH=/opt/mozilla
+MOZILLA_FIVE_HOME=/opt/mozilla
 
