@@ -1,6 +1,16 @@
-MD5 d81a5cb32ab9fe822fb5a112d2ee0e37 ChangeLog 844
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7d987accee7242d22567d533a74e7f28 wmdate-0.7.ebuild 956
+MD5 369da39cec33da8299c62af05ba96cb3 ChangeLog 948
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 f88c2a5dad87c8bc9824ec8b81eebd14 wmdate-0.7.ebuild 948
+MD5 cbce7d60a34c9e6e85e1ceca103ba8b0 files/wmdate.desktop 210
 MD5 3531a546777dce8d7d88b1a576413556 files/digest-wmdate-0.7 61
 MD5 a842ee25f4a612037b0b05c2b05f7fe7 files/wmdate-ComplexProgramTargetNoMan.patch 349
-MD5 cbce7d60a34c9e6e85e1ceca103ba8b0 files/wmdate.desktop 210
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsykuCHk4+ZoBpvsRAs0xAJ96um5EthpLNEE5TcFWQj7EXW8FbACfe/aF
+LV0DmdhGWr/leWgsixmcXS0=
+=Ba8B
+-----END PGP SIGNATURE-----

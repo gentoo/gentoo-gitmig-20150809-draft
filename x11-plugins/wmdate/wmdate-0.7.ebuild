@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdate/wmdate-0.7.ebuild,v 1.6 2004/11/24 05:20:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdate/wmdate-0.7.ebuild,v 1.7 2004/12/05 15:27:34 slarti Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ DEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ppc64 ~sparc"
+KEYWORDS="x86 ppc ppc64 ~sparc ~amd64"
 
 src_unpack() {
 	unpack ${A}

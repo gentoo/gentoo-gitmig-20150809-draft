@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdate
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdate/ChangeLog,v 1.6 2004/11/24 05:20:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdate/ChangeLog,v 1.7 2004/12/05 15:27:34 slarti Exp $
+
+  05 Dec 2004; Tom Martin <slarti@gentoo.org> wmdate-0.7.ebuild:
+  Marked ~amd64, resolves bug 69978.
 
   23 Nov 2004; Jason Wever <weeve@gentoo.org> wmdate-0.7.ebuild:
   Added ~sparc keyword.
