@@ -1,9 +1,14 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.51 2004/10/10 13:34:40 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.52 2004/10/18 07:13:27 seemant Exp $
 
   10 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> gnucash-1.8.9.ebuild:
   Fixed missing eclass in inherit (eutils). Neccessary for get_libdir().
+
+  18 Oct 2004; Seemant Kulleen <seemant@gentoo.org> gnucash-1.8.8.ebuild:
+  Change gnucash-docs to 1.8.4 to solve a similar problem with gnucash-1.8.8
+  that was solved earlier with 1.8.9. Closes bug #67966 by Bruce Guenter
+  <bruceg@em.ca>
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gnucash-1.8.7.ebuild, gnucash-1.8.8.ebuild, gnucash-1.8.9.ebuild:
