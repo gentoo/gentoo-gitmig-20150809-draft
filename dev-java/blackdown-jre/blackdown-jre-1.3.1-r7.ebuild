@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.25 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.26 2003/09/10 01:45:59 msterret Exp $
 
 inherit java
 
 S=${WORKDIR}/j2re1.3.1
 DESCRIPTION="Blackdown Java Runtime Environment 1.3.1"
 SRC_URI="x86? ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.1/i386/FCS/j2re-1.3.1-FCS-linux-i386.tar.bz2
-        ppc? ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.1/ppc/FCS-02b/j2re-1.3.1-02b-FCS-linux-ppc.bin
-        sparc? ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.1/sparc/FCS-02b/j2re-1.3.1-02b-FCS-linux-sparc.bin"
+	ppc? ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.1/ppc/FCS-02b/j2re-1.3.1-02b-FCS-linux-ppc.bin
+	sparc? ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.1/sparc/FCS-02b/j2re-1.3.1-02b-FCS-linux-sparc.bin"
 HOMEPAGE="http://www.blackdown.org"
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.5"
@@ -35,7 +35,7 @@ src_install () {
 	dodir /opt/${P}
 
 	cp -dpR ${S}/{bin,lib,man,plugin} ${D}/opt/${P}/
-        find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
+	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
 
 	dodoc COPYRIGHT LICENSE README INSTALL
 	dohtml README.html

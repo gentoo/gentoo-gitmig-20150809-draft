@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r3.ebuild,v 1.7 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r3.ebuild,v 1.8 2003/09/10 01:49:07 msterret Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -15,11 +15,11 @@ inherit java nsplugins
 ZLIB_VERSION=1.1.4
 
 JAVA_PATCHES="j2sdk-1.4.0-disable-sanity-check.patch.bz2
-              j2sdk-1.4.0-fix-intl-files.patch.bz2
-              j2sdk-1.4.0-gcc3-syntax.patch.bz2
-              j2sdk-1.4.0-glibc-2.3.1-fixes.patch.bz2
-              j2sdk-1.4.0-link-jpda-2-libjvm.patch.bz2
-              j2sdk-1.4.0-remove-fixed-paths.patch.bz2"
+	j2sdk-1.4.0-fix-intl-files.patch.bz2
+	j2sdk-1.4.0-gcc3-syntax.patch.bz2
+	j2sdk-1.4.0-glibc-2.3.1-fixes.patch.bz2
+	j2sdk-1.4.0-link-jpda-2-libjvm.patch.bz2
+	j2sdk-1.4.0-remove-fixed-paths.patch.bz2"
 
 S=${WORKDIR}/j2sdk
 
@@ -75,19 +75,19 @@ pkg_setup() {
 src_unpack() {
 	die_flag=""
 	if [ ! -f ${DISTDIR}/${SRC_MOZHEADERS} ] ; then
-      eerror "Please download ${SRC_MOZHEADERS} from ${HOMEPAGE} to ${DISTDIR}"
-      die_flag=1
+		eerror "Please download ${SRC_MOZHEADERS} from ${HOMEPAGE} to ${DISTDIR}"
+		die_flag=1
 	fi
 
 	if [ ! -f ${DISTDIR}/${SRC_JAVA} ] ; then
-      eerror "Please download ${SRC_JAVA} from ${HOMEPAGE} to ${DISTDIR}"
-	  die_flag=1
+		eerror "Please download ${SRC_JAVA} from ${HOMEPAGE} to ${DISTDIR}"
+		die_flag=1
 	fi
 
-    if [ ! -f ${DISTDIR}/${SRC_SUNMOTIF} ] ; then
-      eerror "Please download ${SRC_SUNMOTIF} from ${HOMEPAGE} to ${DISTDIR}"
-      die_flag=1
-    fi
+	if [ ! -f ${DISTDIR}/${SRC_SUNMOTIF} ] ; then
+		eerror "Please download ${SRC_SUNMOTIF} from ${HOMEPAGE} to ${DISTDIR}"
+		die_flag=1
+	fi
 
 	[ ! -z ${die_flag} ] && die "Some source files were not found"
 
@@ -116,9 +116,9 @@ src_unpack() {
 	chmod +w Makefile
 	sed -e "s:1.1.3:${ZLIB_VERSION}:" Makefile.orig > Makefile
 
-    mkdir -p ${S}/motif
-    cd ${S}/motif
-    unpack ${SRC_SUNMOTIF}
+	mkdir -p ${S}/motif
+	cd ${S}/motif
+	unpack ${SRC_SUNMOTIF}
 }
 
 src_compile () {
@@ -127,7 +127,7 @@ src_compile () {
 
 	# Otherwise the command:
 	# (cd  /var/tmp/portage/sun-j2sdk-1.4.0-r1/work/j2sdk/control/build/linux-i386/j2re-image; tar cf - .) | \
-	#    (cd  /var/tmp/portage/sun-j2sdk-1.4.0-r1/work/j2sdk/control/build/linux-i386/j2sdk-image/jre; tar xf -)
+	# (cd  /var/tmp/portage/sun-j2sdk-1.4.0-r1/work/j2sdk/control/build/linux-i386/j2sdk-image/jre; tar xf -)
 	# Will fail, you have been warned!!!! There are NO sandbox violations anyway
 	LD_PRELOAD_SAVE=$LD_PRELOAD
 	unset LD_PRELOAD
@@ -151,9 +151,9 @@ src_compile () {
 
 	cd ${S}/control/make
 	# MUST use make, we DONT want any -j options!
-    JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"`
+	JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"`
 	if [ -z "$JOBS" ]; then
-	   JOBS=1
+		JOBS=1
 	fi
 	make HOTSPOT_BUILD_JOBS=${JOBS} || die
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1-r1.ebuild,v 1.4 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1-r1.ebuild,v 1.5 2003/09/10 01:49:07 msterret Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -13,13 +13,13 @@ IUSE="nptl"
 inherit java nsplugins
 
 JAVA_PATCHES="disable-sanity-check
-			fix-intl-files
-			gcc3-syntax
-			glibc-2.3.1-fixes
-			link-jpda-2-libjvm
-			remove-fixed-paths
-			force-motif
-			gcc3.3-fixes"
+	fix-intl-files
+	gcc3-syntax
+	glibc-2.3.1-fixes
+	link-jpda-2-libjvm
+	remove-fixed-paths
+	force-motif
+	gcc3.3-fixes"
 
 S=${WORKDIR}/j2sdk
 

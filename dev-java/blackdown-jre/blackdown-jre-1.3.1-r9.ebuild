@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.5 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.6 2003/09/10 01:45:59 msterret Exp $
 
 IUSE=""
 
@@ -25,11 +25,11 @@ KEYWORDS="ppc"
 
 src_unpack () {
 	if (use ppc) || (use sparc) || (use sparc64) ; then
-                # this is built on gcc 3.2 so only update if gcc 3.x is present
-                [ -z "${CC}" ] && CC=gcc
-                if [ "`${CC} -dumpversion | cut -d. -f1,2`" = "2.95" ] ; then
-                        die "This is for gcc 3.x only"
-                fi
+	# this is built on gcc 3.2 so only update if gcc 3.x is present
+	[ -z "${CC}" ] && CC=gcc
+	if [ "`${CC} -dumpversion | cut -d. -f1,2`" = "2.95" ] ; then
+		die "This is for gcc 3.x only"
+	fi
 
 		tail -n +422 ${DISTDIR}/${A} | tar xjf -
 	else
@@ -45,7 +45,7 @@ src_install () {
 	dodir /opt/${P}
 
 	cp -dpR ${S}/{bin,lib,man,plugin} ${D}/opt/${P}/
-        find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
+	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
 
 	dodoc COPYRIGHT LICENSE README INSTALL
 	dohtml README.html

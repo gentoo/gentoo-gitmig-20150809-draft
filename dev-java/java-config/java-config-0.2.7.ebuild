@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-0.2.7.ebuild,v 1.6 2003/03/29 11:28:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-0.2.7.ebuild,v 1.7 2003/09/10 01:46:57 msterret Exp $
 
 IUSE=""
 
@@ -19,6 +19,6 @@ src_install () {
 	dobin ${FILESDIR}/${PV}/java-config
 	doman ${FILESDIR}/${PV}/java-config.1
 
- 	insinto /etc/env.d
- 	doins ${FILESDIR}/${PV}/30java-finalclasspath
+	insinto /etc/env.d
+	doins ${FILESDIR}/${PV}/30java-finalclasspath
 }

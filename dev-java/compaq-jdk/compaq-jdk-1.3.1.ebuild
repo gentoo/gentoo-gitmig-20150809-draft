@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1.ebuild,v 1.7 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1.ebuild,v 1.8 2003/09/10 01:46:24 msterret Exp $
 
 IUSE="doc"
 
@@ -13,8 +13,8 @@ DESCRIPTION="Compaq Java Development Kit 1.3.1 for Alpha/Linux/GNU"
 HOMEPAGE="http://h18012.www1.hp.com/java/documentation/1.3.1/linux/docs/index.html"
 DEPEND="virtual/glibc
 	app-arch/rpm2targz
-    dev-libs/libots
-    dev-libs/libcpml
+	dev-libs/libots
+	dev-libs/libcpml
 	>=dev-java/java-config-0.2.5
 	>=x11-libs/openmotif-2.1.30-r1
 	doc? ( ~dev-java/java-sdk-docs-1.3.1 )"
