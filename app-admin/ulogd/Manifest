@@ -1,0 +1,7 @@
+MD5 21faaea2a76754d24bc7be893c806edd ChangeLog 1181
+MD5 bd228d1fdeaeede8124704657a640ae5 ulogd-0.97-r1.ebuild 1124
+MD5 b48cbbfdf76d0af6b552d6ff4ecfdc1e ulogd-0.98.ebuild 1182
+MD5 04005ad49c96b691ff84b1305379d3c8 files/digest-ulogd-0.97-r1 61
+MD5 7d8c6f58accc97b0ce3beb6fc172d5df files/digest-ulogd-0.98 62
+MD5 d21cc9239b60422b448ef743edaf9560 files/ulogd 755
+MD5 86019df8b3674b4649f91134561f6c59 files/ulogd-0.98 763
