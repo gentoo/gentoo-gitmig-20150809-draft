@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-1.0.2-r3.ebuild,v 1.3 2002/07/18 12:38:11 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-1.0.2-r3.ebuild,v 1.4 2002/07/27 21:44:51 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="EEL libraries for GNOME"
@@ -12,7 +12,7 @@ LICENSE="LGPL-2.1"
 RDEPEND=">=media-libs/freetype-2.0.1
          =gnome-base/gnome-vfs-1.0*
          >=media-libs/gdk-pixbuf-0.11.0-r1
-		 >=gnome-base/librsvg-1.0.1-r1"
+		 =gnome-base/librsvg-1.0*"
 
 DEPEND="${RDEPEND}
         nls? ( >=dev-util/intltool-0.11 )"
