@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-iris
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-iris/ChangeLog,v 1.9 2004/06/28 09:25:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-iris/ChangeLog,v 1.10 2004/07/06 23:49:29 eradicator Exp $
+
+  06 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-iris-0.11.ebuild:
+  -sparc
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-iris-0.10.ebuild, xmms-iris-0.11.ebuild:
