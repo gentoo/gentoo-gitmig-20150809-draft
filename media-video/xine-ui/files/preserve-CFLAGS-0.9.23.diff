@@ -1,0 +1,206 @@
+--- configure.org	2003-12-29 12:21:25.000000000 +0100
++++ configure	2003-12-29 12:24:08.000000000 +0100
+@@ -19409,203 +19409,6 @@
+     ;;
+ 
+   i?86*-*-linux* | i386-*-solaris* | i?86-* | k?-* | athlon-*)
+-    if test "$GCC" = yes; then
+-
+-		echo "$as_me:$LINENO: checking if $CC supports \"-mcpu=i386\" flags" >&5
+-echo $ECHO_N "checking if $CC supports \"-mcpu=i386\" flags... $ECHO_C" >&6
+-    SAVE_CFLAGS="$CFLAGS"
+-    CFLAGS=""-mcpu=i386""
+-    cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_try_cflags_ok=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-ac_cv_try_cflags_ok=no
+-fi
+-rm -f conftest.$ac_objext conftest.$ac_ext
+-    CFLAGS="$SAVE_CFLAGS"
+-    echo "$as_me:$LINENO: result: $ac_cv_try_cflags_ok" >&5
+-echo "${ECHO_T}$ac_cv_try_cflags_ok" >&6
+-    if test x"$ac_cv_try_cflags_ok" = x"yes"; then
+-        sarchopt="-mcpu"
+-    else
+-        echo "$as_me:$LINENO: checking if $CC supports \"-march=i386\" flags" >&5
+-echo $ECHO_N "checking if $CC supports \"-march=i386\" flags... $ECHO_C" >&6
+-    SAVE_CFLAGS="$CFLAGS"
+-    CFLAGS=""-march=i386""
+-    cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_try_cflags_ok=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-ac_cv_try_cflags_ok=no
+-fi
+-rm -f conftest.$ac_objext conftest.$ac_ext
+-    CFLAGS="$SAVE_CFLAGS"
+-    echo "$as_me:$LINENO: result: $ac_cv_try_cflags_ok" >&5
+-echo "${ECHO_T}$ac_cv_try_cflags_ok" >&6
+-    if test x"$ac_cv_try_cflags_ok" = x"yes"; then
+-        sarchopt="-march"
+-    else
+-         echo "$as_me:$LINENO: result: ** no cpu optimization supports **" >&5
+-echo "${ECHO_T}** no cpu optimization supports **" >&6
+-	          sarchopt=no
+-    fi
+-    fi
+-
+-	        echo "$as_me:$LINENO: checking if $CC supports \"$sarchopt=athlon\" flags" >&5
+-echo $ECHO_N "checking if $CC supports \"$sarchopt=athlon\" flags... $ECHO_C" >&6
+-    SAVE_CFLAGS="$CFLAGS"
+-    CFLAGS=""$sarchopt=athlon""
+-    cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_try_cflags_ok=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-ac_cv_try_cflags_ok=no
+-fi
+-rm -f conftest.$ac_objext conftest.$ac_ext
+-    CFLAGS="$SAVE_CFLAGS"
+-    echo "$as_me:$LINENO: result: $ac_cv_try_cflags_ok" >&5
+-echo "${ECHO_T}$ac_cv_try_cflags_ok" >&6
+-    if test x"$ac_cv_try_cflags_ok" = x"yes"; then
+-        k7cpu="athlon"
+-    else
+-        k7cpu="i686"
+-    fi
+-
+-		CFLAGS="-O3 -pipe -fomit-frame-pointer $f_af $f_al $f_aj $m_wm $m_psb -fexpensive-optimizations $f_si $f_nsa -ffast-math -funroll-loops -finline-functions $CFLAGS"
+-	DEBUG_CFLAGS="-O $DEBUG_CFLAGS"
+-
+-
+-	if test x"$sarchopt" != "xno"; then
+-
+-	    archopt_val=
+-
+-	    case "$host_alias" in
+-	    i386-*) # *BSD return this even on a P III #-))
+-		archopt_val=i386 ;;
+-	    i486-*) # oh dear!
+-		archopt_val=i486 ;;
+-	    i586-*)
+-		archopt_val=pentium ;;
+-	    i686-*)
+-		archopt_val=pentiumpro
+-		if test x"$check_athlon" = "xyes"; then
+-		    if test -f /proc/cpuinfo; then
+-			modelname=`cat /proc/cpuinfo | grep "model\ name\	:" | sed -e 's/ //g' | cut -d':' -f2`
+-			case "$modelname" in
+-			*Athlon* | *Duron* | *K7*)
+-			    archopt_val="$k7cpu" ;;
+-			esac
+-		    fi
+-		fi
+-		;;
+-	    k6-*)
+-		archopt_val=k6 ;;
+-	    k7-*)
+-		archopt_val=k7 ;;
+-	    athlon-*)
+-		archopt_val=athlon ;;
+-	    esac
+-
+-	    if test x"$archopt_val" != x; then
+-		CFLAGS="$sarchopt=$archopt_val $CFLAGS"
+-		DEBUG_CFLAGS="$sarchopt=$archopt_val $DEBUG_CFLAGS"
+-	    fi
+-
+-	fi
+-
+-    else
+-		CFLAGS="-O $CFLAGS"
+-	DEBUG_CFLAGS="-O $DEBUG_CFLAGS"
+-    fi
+-
+-
+ cat >>confdefs.h <<\_ACEOF
+ #define __i386__ 1
+ _ACEOF
