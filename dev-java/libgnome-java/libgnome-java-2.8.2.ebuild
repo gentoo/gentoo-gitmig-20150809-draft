@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/libgnome-java-2.8.2.ebuild,v 1.3 2005/03/12 19:08:55 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/libgnome-java-2.8.2.ebuild,v 1.4 2005/03/31 18:56:11 luckyduck Exp $
 
 #
 # WARNING: Because java-gnome is a set of bindings to native GNOME libraries,
@@ -19,6 +19,7 @@ HOMEPAGE="http://java-gnome.sourceforge.net/"
 RDEPEND=">=gnome-base/libgnome-2.8.0
 	>=gnome-base/libgnomeui-2.8.0
 	>=dev-java/libgtk-java-2.4.6
+	>=gnome-base/libgnomecanvas-2.8.0
 	>=virtual/jre-1.2"
 
 #

@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bcf36ecd2e50fa4d908d42d7baa58c6b libgnome-java-2.8.2-r1.ebuild 3346
-MD5 ffb0f8317c0bcb7acdd3e28e22967cd1 libgnome-java-2.8.3.1.ebuild 3032
-MD5 b1d921462059b922fd935295dccc7ca2 libgnome-java-2.8.2.ebuild 3214
-MD5 44360592a93afebc9f9ba9a8ddb06d6a ChangeLog 1876
+MD5 e0a52a0a3bf1d1594c1f340066fa79e6 libgnome-java-2.8.2-r1.ebuild 3381
+MD5 13c2706dfd5b5682fdbf335aee169d88 libgnome-java-2.8.3.1.ebuild 3072
+MD5 a454b05c06a8cf2ee43479a468497453 libgnome-java-2.8.2.ebuild 3249
+MD5 cf09bb53c0998313eccb93ce0164bf65 ChangeLog 2083
 MD5 de0a216d1797f18db9dc83e5aedee360 metadata.xml 1002
 MD5 a8a8cdd7ec44ae7402032003fe1bb7ab files/digest-libgnome-java-2.8.2-r1 72
 MD5 efea40cf1a5eb3c48001cde4ead5c123 files/digest-libgnome-java-2.8.3.1 74
@@ -12,9 +12,9 @@ MD5 b5f8aad83ed35026438574e04a3122ac files/libgnome-java-2.8.2_gentoo-PN-SLOT.pa
 MD5 a8a8cdd7ec44ae7402032003fe1bb7ab files/digest-libgnome-java-2.8.2 72
 MD5 d8bbcf350e68bf0a42c37ecbef32c8dd files/libgnome-java-2.8.3.1_gentoo-PN-SLOT.patch 508
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCTEGf/rLF9B432nYRAjElAJ9wCyg8rwrgUdw2fltQ6danZwQwJQCdG6Us
-8BSNRg9cL24FrDDpim+XVoY=
-=vXKw
+iD8DBQFCTEfk06ebR+OMO78RAnRiAJ9jY3JfCP99uJVPW0kyAhIc9jsyRACfcd4K
+j2cVhV60RdXnomrBzvqHb3k=
+=rypC
 -----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/libgnome-java
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/ChangeLog,v 1.7 2005/03/31 18:29:15 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/ChangeLog,v 1.8 2005/03/31 18:56:11 luckyduck Exp $
+
+  31 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  libgnome-java-2.8.2-r1.ebuild, libgnome-java-2.8.2.ebuild,
+  libgnome-java-2.8.3.1.ebuild:
+  added missing libgnomecanvas dependency, fixes #72630
 
   31 Mar 2005; Thomas Matthijs <axxo@gentoo.org>
   libgnome-java-2.8.3.1.ebuild:
