@@ -1,0 +1,56 @@
+#gif
+#mmx
+#3dnow
+#odbc
+#fbcon		
+#oss
+#libg++
+#objprelink
+#nls
+#mitshm
+#sse
+#xinerama
+directfb	dev-libs/DirectFB
+ungif		media-libs/ungif
+gtkhtml		gnome-extra/gtkhtml
+alsa		media-libs/alsa-lib
+gdbm		sys-libs/gdbm
+berkdb		sys-libs/db
+slang		sys-libs/slang
+readline	sys-libs/readline
+arts		kde-base/arts
+tetex		app-text/tetex
+aalib		media-libs/aalib	
+nas		media-libs/nas
+bonobo		gnome-base/bonobo
+ggi		media-libs/libggi
+tcltk		dev-lang/tcl dev-lang/tk
+# java		virtual/jre
+guile		dev-util/guile
+ruby		dev-lang/ruby
+mysql		dev-db/mysql
+postgres	dev-db/postgresql
+X		x11-base/xfree
+sdl		media-libs/libsdl
+gpm		sys-libs/gpm
+tcpd		sys-apps/tcp-wrappers
+pam		sys-libs/pam
+libwww		net-libs/libwww
+ssl		dev-libs/openssl
+perl		dev-lang/perl
+python		dev-lang/python
+esd		media-sound/esound
+imlib		media-libs/imlib
+oggvorbis	media-libs/libvorbis
+gnome		gnome-base/gnome
+gtk		x11-libs/gtk+
+qt		x11-libs/qt
+kde		kde-base/kdebase
+motif		x11-libs/openmotif
+opengl		virtual/opengl
+mozilla		net-www/mozilla
+gphoto2		media-gfx/gphoto2
+ldap		net-nds/openldap
+snmp		net-analyzer/ucd-snmp
+cdr		app-cdr/cdrtools
+scanner		media-gfx/sane-backends

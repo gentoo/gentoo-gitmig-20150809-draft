@@ -1,0 +1,53 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.1 2004/08/05 18:51:07 solar Exp $
+
+# Anything that relies on vm86.h will not built on amd64
+# SVGAlib doesnt build
+svga
+
+# Too many packages assume that mmx/sse/sse2/3dnow are 86-32 only things to
+# make them useful on amd64. Anyway, all amd64 cpus have them, so they should
+# not be many flag dependant in this case
+mmx
+#sse
+#sse2
+3dnow
+
+# x86 binary only for now
+icc
+
+# Firebird doesnt build on amd64
+firebird
+
+# Chris PeBenito <pebenito@gentoo.org>
+# must use a SELinux profile
+selinux
+
+# x86 binary only, used by php
+fdftk
+uclibc
+
+# altivec is a ppc instruction set.
+altivec
+
+ifc
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+adabas
+birdstep
+cpdflib
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave
+informix
+ingres
+pfpro
+solid
+sybase
+sybase-ct
