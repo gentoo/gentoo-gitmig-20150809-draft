@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2_beta1-r1.ebuild,v 1.1 2002/04/26 22:51:42 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2_beta1-r1.ebuild,v 1.2 2002/04/29 15:31:56 drobbins Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.koffice.org/"
 SRC_URI="ftp://ftp.kde.org/pub/kde/unstable/koffice-1.2-beta1/src/koffice-1.2-beta1.tar.bz2"
 
 DEPEND="$DEPEND
-	>=dev-lang/python-2.2"
+	>=dev-lang/python-2.2-r7"
 
 
 src_unpack() {

@@ -1,8 +1,8 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
-#for testing only
-=sys-apps/portage-1.9.4_pre1
+# this ebuild had problems (drobbins, 29 Apr 2002):
+=dev-lang/python-2.2-r6
 
 # pam-login is a new package that is based on util-linux's /bin/login,
 # but adds shadow features.
