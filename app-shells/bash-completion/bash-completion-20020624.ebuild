@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20020624.ebuild,v 1.6 2002/07/25 15:39:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20020624.ebuild,v 1.7 2002/07/25 15:44:04 aliz Exp $
 
 S=${WORKDIR}/${PN/-/_}
 
@@ -11,6 +11,7 @@ KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 
+DEPEND=""
 RDEPEND=">=sys-apps/bash-2.05a"
 
 src_install () {
