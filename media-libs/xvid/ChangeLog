@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.5 2002/12/27 06:43:54 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.6 2003/02/02 03:39:23 gerk Exp $
 
 *xvid-0.9.0 (02 Dec 2002)
+
+  02 Feb 2003; Mark Guertin <gerk@gentoo.org> xvid-0.9.0.build :
+  Fixed SRC_URI
 
   19 Dec 2002; Rajiv Manglani <rajiv@gentoo.org> xvid-0.9.0.ebuild :
 
