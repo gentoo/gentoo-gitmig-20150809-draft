@@ -1,0 +1,10 @@
+# ChangeLog for sys-libs/pam_require
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_require/ChangeLog,v 1.1 2004/12/05 12:51:32 trapni Exp $
+
+*pam_require-0.6 (05 Dec 2004)
+
+  05 Dec 2004; Christian Parpart <trapni@gentoo.org> +metadata.xml,
+  +pam_require-0.6.ebuild:
+  initial import
+
