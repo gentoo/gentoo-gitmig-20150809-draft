@@ -1,7 +1,15 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.21 2002/10/25 23:31:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.22 2002/11/05 03:27:54 spider Exp $
 
+
+*glib-2.0.7 (04 Nov 2002)
+
+  04 Nov 2002; Spider <spider@gentoo.org> glib-2.0.7.ebuild 
+  files/digest-glib-2.0.7 :  Whoppie, new version released and ready for 
+  testing. bugfix release that is binary compatible.
+
+  
 *glib-1.2.10-r5 (26 Oct 2002)
 
   26 Oct 2002; Martin Schlemmer <azarah@gentoo.org > :
