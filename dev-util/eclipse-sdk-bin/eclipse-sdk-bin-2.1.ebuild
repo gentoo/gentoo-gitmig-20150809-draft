@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk-bin/eclipse-sdk-bin-2.1.ebuild,v 1.3 2003/09/06 17:30:55 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk-bin/eclipse-sdk-bin-2.1.ebuild,v 1.4 2003/09/06 23:50:42 msterret Exp $
 
-DESCRIPTION="Eclipse Tools Platform, full binary" 
+DESCRIPTION="Eclipse Tools Platform, full binary"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download2.eclipse.org/downloads/drops/R-2.1-200303272130/eclipse-SDK-2.1-linux-gtk.zip"
 IUSE=""
