@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0a.ebuild,v 1.2 2004/01/21 21:24:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0a.ebuild,v 1.3 2004/03/04 22:37:51 agriffis Exp $
 
 DESCRIPTION="Library for build EFI Applications"
 SRC_URI="ftp://ftp.hpl.hp.com/pub/linux-ia64/gnu-efi-3.0a.tar.gz"
 HOMEPAGE="http://developer.intel.com/technology/efi"
 
-KEYWORDS="~ia64 ~x86"
+KEYWORDS="ia64 ~x86"
 SLOT="3"
 LICENSE="GPL-2"
 IUSE=""
