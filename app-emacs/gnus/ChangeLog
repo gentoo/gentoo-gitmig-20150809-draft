@@ -1,0 +1,8 @@
+# ChangeLog for app-emacs/gnus
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.1 2003/09/10 05:52:29 mkennedy Exp $
+
+*gnus-5.10.2 (10 Sep 2003)
+
+  10 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  Initial import.  Ebuild submitted by Bjorn Lindstrom <bkhl@privat.utfors.se>.
