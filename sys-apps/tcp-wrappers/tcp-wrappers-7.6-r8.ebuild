@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r8.ebuild,v 1.10 2004/04/09 05:04:30 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r8.ebuild,v 1.11 2004/04/21 22:05:24 vapier Exp $
 
 inherit eutils
 
@@ -8,20 +8,22 @@ MY_P="${P//-/_}"
 
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="TCP Wrappers"
-SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz
-	mirror://gentoo/${P}-r7-patches.tar.bz2"
 HOMEPAGE="ftp://ftp.porcupine.org/pub/security/index.html"
-IUSE="ipv6 static"
-SLOT="0"
+SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz
+	mirror://gentoo/${PF}-patches.tar.bz2"
+
 LICENSE="freedist"
-KEYWORDS="x86 amd64 ~ppc sparc alpha mips hppa ia64 ~ppc64 s390"
+SLOT="0"
+KEYWORDS="x86 amd64 ppc sparc alpha mips hppa ia64 ppc64 s390"
+IUSE="ipv6 static"
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4"
 RDEPEND="virtual/glibc"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A}
+	cd ${S}
 
 	chmod ug+w Makefile
 	sed -i -e "s:-O:${CFLAGS}:" \
@@ -58,7 +60,7 @@ src_compile() {
 }
 
 src_install() {
-	dosbin tcpd tcpdchk tcpdmatch safe_finger try-from
+	dosbin tcpd tcpdchk tcpdmatch safe_finger try-from || die
 
 	doman *.[358]
 	dosym hosts_access.5.gz /usr/share/man/man5/hosts.allow.5.gz
@@ -70,7 +72,7 @@ src_install() {
 	into /usr
 	dolib.a libwrap.a
 
-	if [ -z `use static` ]; then
+	if ! use static ; then
 		into /
 		newlib.so libwrap.so libwrap.so.0.${PV}
 		dosym /lib/libwrap.so.0.${PV} /lib/libwrap.so.0
