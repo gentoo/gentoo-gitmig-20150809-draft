@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/gtk-engines-thinice-2.0.2-r1.ebuild,v 1.2 2003/07/19 23:55:04 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/gtk-engines-thinice-2.0.2-r1.ebuild,v 1.3 2003/09/28 16:58:50 liquidx Exp $
 
 inherit gtk-engines2
 
@@ -20,3 +20,15 @@ SLOT="2"
 
 GTK1_S=${WORKDIR}/${GTK1_PN}-${GTK1_VER}
 GTK2_S=${WORKDIR}/${GTK2_PN}-${GTK2_VER}
+
+src_unpack() {
+	unpack ${A}
+	if [ -d "${GTK1_S}" -a "${ARCH}" = "amd64" ]; then
+		cd ${GTK1_S}
+		aclocal
+		autoheader
+		automake -a -c
+		autoconf
+		libtoolize -c -f
+	fi	
+}
