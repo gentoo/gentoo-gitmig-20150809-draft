@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.3.ebuild,v 1.3 2005/03/22 00:04:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.5.ebuild,v 1.1 2005/03/22 00:04:28 foser Exp $
 
 inherit eutils fdo-mime
 
@@ -12,9 +12,9 @@ S=${WORKDIR}/${P}/abi
 DESCRIPTION="Fully featured yet light and fast cross platform word processor"
 HOMEPAGE="http://www.abisource.com"
 
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.bz2"
 
-KEYWORDS="x86 ~sparc ~alpha ~ppc amd64 ~hppa ~ppc64"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64 ~hppa ~ppc64"
 LICENSE="GPL-2"
 SLOT="2"
 
@@ -79,7 +79,7 @@ src_install() {
 
 	dodir /usr/{bin,lib}
 
-	CFLAGS="${CFLAGS} -DHAVE_NAUTILUS=0" make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 
 	dosed "s:Exec=abiword:Exec=abiword-2.2:" /usr/share/applications/abiword.desktop
 
