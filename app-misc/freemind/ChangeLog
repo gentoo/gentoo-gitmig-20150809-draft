@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/freemind
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.7 2004/04/10 16:07:59 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.8 2004/05/05 16:35:12 sejo Exp $
+
+  05 May 2004; <SeJo@gentoo.org> freemind-0.7.1.ebuild:
+  added ~ppc keyword
 
   10 Apr 2004; Chris Aniszczyk <zx@gentoo.org> freemind-0.6.7.ebuild,
   freemind-0.7.1.ebuild:
