@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.                                                                                         
 # Distributed under the terms of the GNU General Public License v2                                                                      
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/mtxdrivers-pro-1.0_beta4.ebuild,v 1.3 2003/06/06 17:39:23 prez Exp $                     
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/mtxdrivers-pro-1.0_beta4.ebuild,v 1.4 2003/06/06 17:42:34 prez Exp $                     
 
 At="mtxdrivers-pro-rh9.0-beta4.tar.gz"
 S="${WORKDIR}/mtxdrivers-pro-RH9.0-beta4"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.matrox.com/mga/products/parhelia/home.cfm"
 DEPEND=">=x11-base/xfree-4.2.0
 	virtual/kernel
 	opengl-update
-    -mtxdrivers"
+    !mtxdrivers"
 
 SLOT="0"
 LICENSE="Matrox"
