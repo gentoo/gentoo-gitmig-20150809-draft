@@ -1,6 +1,6 @@
 # ChangeLog for dev-ada/gps-bin
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/ChangeLog,v 1.5 2004/01/04 18:48:52 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/ChangeLog,v 1.6 2004/06/24 21:47:09 agriffis Exp $
 
   11 Dec 2003; George Shapovalov <george@gentoo.org> gps-bin-1.2.2.ebuild:
   fixed symlink to create the correct point version (#35596)

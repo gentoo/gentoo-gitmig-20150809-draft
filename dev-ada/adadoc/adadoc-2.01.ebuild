@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/adadoc-2.01.ebuild,v 1.3 2003/10/06 00:05:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/adadoc-2.01.ebuild,v 1.4 2004/06/24 21:45:03 agriffis Exp $
 
 inherit gnat
 
