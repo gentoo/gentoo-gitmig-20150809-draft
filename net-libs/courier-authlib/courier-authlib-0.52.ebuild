@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.52.ebuild,v 1.1 2005/01/02 03:59:13 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.52.ebuild,v 1.2 2005/01/02 07:27:54 langthang Exp $
 
 inherit eutils gnuconfig
 
@@ -42,10 +42,12 @@ src_unpack() {
 		epatch ${FILESDIR}/configure-db4.patch
 		export WANT_AUTOCONF="2.5"
 		gnuconfig_update
+		libtoolize --copy --force
 		ebegin "Recreating configure"
 			autoconf ||  die "recreate configure failed"
 		eend $?
 		cd ${S}/bdbobj
+		libtoolize --copy --force
 		ebegin "Recreating bdbobj/configure"
 			autoconf ||  die "recreate bdbobj/configure failed"
 		eend $?
