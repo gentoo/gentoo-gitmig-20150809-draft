@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.8.ebuild,v 1.4 2004/03/23 09:15:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.8.ebuild,v 1.5 2004/04/05 02:35:55 rphillips Exp $
 
 DESCRIPTION="ODBC Interface for Linux"
 HOMEPAGE="http://www.unixodbc.org/"
@@ -53,8 +53,13 @@ src_compile() {
 
 	if [ "`use gnome`" ]
 	then
+		# Symlink for configure
+		ln -s ${S}/odbcinst/.libs ./lib
+		# Symlink for libtool
+		ln -s ${S}/odbcinst/.libs ./lib/.libs
 		cd gODBCConfig
 		./configure --host=${CHOST} \
+				--with-odbc=${S} \
 				--prefix=/usr \
 				--sysconfdir=/etc/unixODBC \
 				${myconf} || die
