@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 2001-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-0.2.5.ebuild,v 1.2 2002/09/07 23:47:22 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-0.2.5.ebuild,v 1.3 2002/09/08 00:22:06 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gentoo-specific configuration for Java"
@@ -13,6 +13,6 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64"
 
 src_install () {
-	dobin ${FILESDIR}/java-config
-	doman ${FILESDIR}/java-config.1
+	dobin ${FILESDIR}/${PV}/java-config
+	doman ${FILESDIR}/${PV}/java-config.1
 }

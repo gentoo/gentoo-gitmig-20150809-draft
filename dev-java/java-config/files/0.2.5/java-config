@@ -1,12 +1,12 @@
 #! /bin/sh
 # 
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 2001-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config-0.2.5,v 1.1 2002/09/07 23:45:00 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/0.2.5/java-config,v 1.1 2002/09/08 00:22:06 karltk Exp $
 
-version=0.2.0
+version=0.2.5
 all_params="$*"
 
 SYSTEM_ARCH=`echo $ARCH |\
@@ -19,7 +19,6 @@ fi
 
 PFORM="i386"
 
-CLASSPATH=`echo ${CLASSPATH} | sed "s/:\.//g"`
 case $SYSTEM_ARCH in
 	ppc)	PFORM="ppc";;
 	i386)	PFORM="i386";;
@@ -98,7 +97,29 @@ classpathfor()
 			exit 1
 		fi
 	done
-	echo $total  | sed "s/::/:/g" 
+	echo $total | sed "s/::/:/g"
+}
+
+normalise_classpath() {
+	local iter=`echo $1|sed "s/::/:/g"|sed "s/^://"`
+	local result
+	oldifs=${IFS}
+	IFS=":"
+	set -f -- ${iter}
+	while [ "$1" != "" ] ; do
+        	found=`false`
+	        for i in ${result} ; do
+        	        if [ "$i" == "$1" ] ; then
+               			found=1
+	                fi
+	        done
+	        if [ ! $found ] && [ $1 != "." ] ; then
+			result="${result}:$1"
+	        fi
+	        shift
+	done
+	IFS="${oldifs}"
+	echo ${result} | sed "s/^://"
 }
 
 findpluginpath() {
@@ -210,7 +231,9 @@ function set_vm() {
 }
 
 function calc_full_classpath() {
-	echo "${CLASSPATH}:`classpathfor $1`:." | sed "s/::/:/g"
+	local foo=`classpathfor $1`
+	local bar=`normalise_classpath "${CLASSPATH}:${foo}"`
+	echo "${bar}:."
 }
 
 if [ $# == 0 ] ; then
@@ -241,10 +264,10 @@ while test $# -gt 0; do
 			findpluginpath $optarg
 		;;
 		--classpath)
-			echo ${CLASSPATH}
+			normalise_classpath ${CLASSPATH}
 		;;
 		--classpath=*)
-			classpathfor $optarg
+			normalise_classpath `classpathfor $optarg`
 		;;
 		--full-classpath=*)
 			calc_full_classpath $optarg
