@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0_pre3.ebuild,v 1.1 2003/07/09 21:03:02 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0_pre3.ebuild,v 1.2 2003/07/14 18:59:04 agriffis Exp $
 
 IUSE="socks5 tcltk"
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils gnuconfig
 
 S=${WORKDIR}/${P%_pre*}
 DESCRIPTION="An object-oriented scripting language"
@@ -28,6 +28,11 @@ src_unpack() {
 
 	# Allow Ruby to build correctly with Dante/SOCKS support.
 	epatch ${FILESDIR}/ruby-1.8.0_pre2-socks.patch
+
+	# Enable build on alpha EV67
+	if use alpha; then
+		gnuconfig_update || die "gnuconfig_update failed"
+	fi
 }
 
 src_compile() {
