@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.43-r1.ebuild,v 1.2 2001/10/30 01:50:23 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.43-r1.ebuild,v 1.3 2001/11/05 03:54:49 chadh Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The MySQL Database"
@@ -113,8 +113,8 @@ src_install() {
 	cp scripts/mysqlaccess.conf ${D}/etc/mysql
 	cp ${FILESDIR}/my.cnf ${D}/etc/mysql
 
-	dodir /etc/rc.d/init.d
-	cp ${FILESDIR}/mysql ${D}/etc/rc.d/init.d/mysql
+	dodir /etc/init.d
+	cp ${FILESDIR}/mysql ${D}/etc/init.d/mysql
 	
 	# MySQL Docs
 	
