@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/usermode-utilities
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.13 2003/09/21 23:33:47 tantive Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.14 2004/01/28 08:56:29 spock Exp $
+
+*usermode-utilities-20040114 (28 Jan 2004)
+
+  28 Jan 2004; Michal Januszewski <spock@gentoo.org>
+  usermode-utilities-20020906.ebuild, usermode-utilities-20030118.ebuild,
+  usermode-utilities-20030120.ebuild, usermode-utilities-20030122.ebuild,
+  usermode-utilities-20030202.ebuild, usermode-utilities-20030205-r1.ebuild,
+  usermode-utilities-20030205.ebuild, usermode-utilities-20030903.ebuild,
+  usermode-utilities-20040114.ebuild:
+  Version bump, fixed headers in all ebuilds.
 
 *usermode-utilities-20030903 (22 Sep 2003)
 
