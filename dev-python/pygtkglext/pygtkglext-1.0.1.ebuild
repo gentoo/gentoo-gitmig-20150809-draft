@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.0.1.ebuild,v 1.5 2004/06/25 01:39:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.0.1.ebuild,v 1.6 2004/07/20 20:05:00 kloeri Exp $
 
 inherit python eutils
 
@@ -18,7 +18,7 @@ DEPEND=">=dev-lang/python-2.2.3-r3
 	>=dev-libs/glib-2.0
 	>=x11-libs/gtk+-2.0
 	>=x11-libs/gtkglext-1.0.0
-	dev-python/PyOpenGL
+	dev-python/pyopengl
 	virtual/x11
 	virtual/opengl
 	virtual/glu"

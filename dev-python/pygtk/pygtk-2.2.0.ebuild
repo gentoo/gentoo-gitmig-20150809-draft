@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.2.0.ebuild,v 1.9 2004/07/14 21:51:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.2.0.ebuild,v 1.10 2004/07/20 20:03:37 kloeri Exp $
 
 inherit gnome.org python flag-o-matic
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-lang/python-2.2
 	>=dev-libs/glib-2
 	gnome? ( >=gnome-base/libglade-2 )
 	opengl? ( virtual/opengl
-		dev-python/PyOpenGL
+		dev-python/pyopengl
 		>=x11-libs/gtkglarea-1.99 )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"

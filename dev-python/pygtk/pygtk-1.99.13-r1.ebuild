@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.13-r1.ebuild,v 1.17 2004/07/14 21:51:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.13-r1.ebuild,v 1.18 2004/07/20 20:03:37 kloeri Exp $
 
 # since its a development version
 inherit debug
@@ -33,5 +33,5 @@ src_install() {
 
 pkg_postinst() {
 	einfo 'If you built pygtk with OpenGL support you still need to emerge'
-	einfo 'PyOpenGL to actually be able to use it. '
+	einfo 'pyopengl to actually be able to use it. '
 }

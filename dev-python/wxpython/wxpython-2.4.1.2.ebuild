@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.1.2.ebuild,v 1.2 2004/07/03 12:44:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.1.2.ebuild,v 1.3 2004/07/20 20:09:35 kloeri Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ RDEPEND=">=dev-lang/python-2.1
 	jpeg? ( media-libs/jpeg )
 	tiff? ( media-libs/tiff )
 	>=sys-libs/zlib-1.1.4
-	opengl? ( >=dev-python/PyOpenGL-2.0.0.44 )"
+	opengl? ( >=dev-python/pyopengl-2.0.0.44 )"
 
 DEPEND="${RDEPEND}
 	gtk2? ( dev-util/pkgconfig )"

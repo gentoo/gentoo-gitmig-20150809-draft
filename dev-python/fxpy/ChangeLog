@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/fxpy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fxpy/ChangeLog,v 1.4 2004/07/09 00:37:18 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fxpy/ChangeLog,v 1.5 2004/07/20 19:59:04 kloeri Exp $
+
+  20 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> fxpy-1.0.5.ebuild:
+  dev-python/PyOpenGL is now dev-python/pyopengl - adjust dependencies
+  accordingly.
 
   08 Jul 2004; Rob Cakebread <pythonhead@gentoo.org> fxpy-1.0.5.ebuild:
   Marked stable on x86

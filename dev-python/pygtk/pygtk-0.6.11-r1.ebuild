@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-0.6.11-r1.ebuild,v 1.7 2004/07/14 21:51:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-0.6.11-r1.ebuild,v 1.8 2004/07/20 20:03:37 kloeri Exp $
 
 inherit python
 
@@ -18,7 +18,7 @@ DEPEND="virtual/python
 	>=media-libs/imlib-1.8
 	>=media-libs/gdk-pixbuf-0.9.0
 	=x11-libs/gtk+-1.2*
-	opengl? ( virtual/opengl dev-python/PyOpenGL )"
+	opengl? ( virtual/opengl dev-python/pyopengl )"
 
 src_unpack() {
 	unpack ${A}

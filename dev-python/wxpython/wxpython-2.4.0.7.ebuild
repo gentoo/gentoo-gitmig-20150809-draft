@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.0.7.ebuild,v 1.2 2004/07/03 12:44:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.0.7.ebuild,v 1.3 2004/07/20 20:09:35 kloeri Exp $
 
 IUSE="opengl gtk2"
 
@@ -23,7 +23,7 @@ DEPEND=">=dev-lang/python-2.1
 	!gtk2? (
 		=x11-libs/gtk+-1.2*
 		=dev-libs/glib-1.2* )
-	opengl? ( >=dev-python/PyOpenGL-2.0.0.44 )"
+	opengl? ( >=dev-python/pyopengl-2.0.0.44 )"
 
 pkg_setup() {
 	# xfree should not install these, remove until the fixed
