@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/fileutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.3 2002/05/03 20:37:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.4 2002/05/04 05:49:17 drobbins Exp $
+
+  03 May 2002; Daniel Robbins <drobbins@gentoo.org>: Added acl.c.diff to fix
+  compilation with nls disabled.  Blocke is sending this fix upstream to
+  acl.bestbits.at.  No rev bump -- no need for a recompile if it worked for
+  people.
 
 *fileutils-4.1.8-r1 (02 May 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.8-r1.ebuild,v 1.1 2002/05/03 20:37:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.8-r1.ebuild,v 1.2 2002/05/04 05:49:17 drobbins Exp $
 
 ACLPV=4.1.8acl-0.8.25
 
@@ -17,6 +17,7 @@ RDEPEND="virtual/glibc
 
 src_unpack() {
 	if [ "`use acl`" ]; then
+		echo "USING ACL"
 		cp ${DISTDIR}/${P}.tar.gz ${WORKDIR}/.
 		xdelta patch ${DISTDIR}/fileutils-${ACLPV}.xdelta ${WORKDIR}/${P}.tar.gz || die
 		tar xz --no-same-owner -f ${WORKDIR}/${P}acl.tar.gz || die 
@@ -25,6 +26,8 @@ src_unpack() {
 	else
 		unpack ${P}.tar.gz ; cd ${S}
 	fi
+	cd ${S}/lib
+	cat ${FILESDIR}/acl.c.diff | patch -p0 -l || die
 }
 
 src_compile() {
@@ -35,6 +38,8 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--bindir=/bin \
 		${myconf} || die
+	#fix NULL undefined compilation problem when nls not in USE (and no libintl.h is #included)
+	echo "#include <stddef.h>" >> config.in
 	emake || die
 }
 
