@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/files/vmware.rc,v 1.3 2004/02/15 08:08:56 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/files/vmware.rc,v 1.4 2004/07/14 21:24:28 agriffis Exp $
 
 depend() {
 	need localmount
