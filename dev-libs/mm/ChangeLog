@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/ChangeLog,v 1.7 2003/02/12 06:07:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/ChangeLog,v 1.8 2003/02/12 17:44:47 gmsoft Exp $
+
+  12 Feb 2003; Guy Martin <gmsoft@gentoo.org> mm-1.2.1.ebuild :
+  Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
