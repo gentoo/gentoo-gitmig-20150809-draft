@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r5.ebuild,v 1.1 2003/12/02 07:43:51 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r5.ebuild,v 1.2 2003/12/17 07:03:48 kumba Exp $
 
 ETYPE="sources"
 inherit kernel
@@ -28,7 +28,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 HOMEPAGE="http://www.linux-mips.org/"
 SLOT="${OKV}"
 PROVIDE="virtual/linux-sources"
-KEYWORDS="-* ~mips"
+KEYWORDS="-* mips"
 
 src_unpack() {
 	unpack ${A}
