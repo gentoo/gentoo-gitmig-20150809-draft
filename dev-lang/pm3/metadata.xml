@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>vapier@gentoo.org</email>
+  <name>Mike Frysinger</name>
+</maintainer>
+<longdescription>
+designed and implemented at the Systems Research Center of Digital Equipment 
+Corporation, and later extended and improved by a large number of individuals and 
+organizations. In recent years, the most complete and actively worked-on 
+distribution of Modula-3 was maintained at the Ecole Polytechnique de Montréal by 
+Michel Dagenais. In March 2002 Michel Dagenais has announced that the WWW and CVS 
+services for PM3 will be terminated in August 2002. Till that time, releases of 
+and information concerning PM3 can still be found at m3.polymtl.ca/m3/. The PM3 
+CVS repository has already been moved to www.elegosoft.com.
+</longdescription>
+</pkgmetadata>
