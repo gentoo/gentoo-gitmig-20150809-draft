@@ -5,7 +5,7 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A ucspi implementation for unix sockets."
-SRC_URI="ftp://untroubled.org/ucspi-unix/${P}.tar.gz"
+SRC_URI="http://untroubled.org/ucspi-unix/${P}.tar.gz"
 
 HOMEPAGE="http://untroubled.org"
 
