@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0c60eccf092b265846cce89266a44d9d ChangeLog 2860
+MD5 62473df8d39859c0c1b083779ced0735 ChangeLog 2963
 MD5 44d075a7ec8dc46d21f7550cad8ea910 taglist-3.2.ebuild 603
 MD5 57828d81f2e6715d7aca657b7b960db7 taglist-3.3.ebuild 456
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 5658c0a7ebee470fc9ae940bb56f9f60 taglist-3.0.ebuild 587
 MD5 f818bddc99102fa67ab0e08935f68a80 taglist-3.1.ebuild 594
-MD5 a74cb3d34b06ce9fb0c5d6f1eb572161 taglist-3.4.ebuild 461
+MD5 6402422ca00d119ee62ceac27e098935 taglist-3.4.ebuild 499
 MD5 13e07aaa174d9d15359697d158218944 files/digest-taglist-3.3 63
 MD5 6c7387e0d96db70dfc803f7cfd973a1e files/digest-taglist-3.4 63
 MD5 1959df873c7b76886a2e6380b743002c files/digest-taglist-3.0 63
@@ -17,7 +17,7 @@ MD5 c7f319a44a948c29f40f341c69126fd9 files/taglist-2.6-exuberant.patch 349
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBJn0pLLFUmVNQ7rkRAudXAKCoBKd6XJjWw5st+EXuvhAXqcAUfwCcDmOQ
-z/bD5th+ElE0l+3Cvu2MMCQ=
-=9KbC
+iD8DBQFBOm0LLLFUmVNQ7rkRAshuAJ9lTopyjS82kJdKlLt5d0FdbS9PQgCfZdB6
+Cry6lIBVa1ZI1HB6w8vH4jE=
+=bKA+
 -----END PGP SIGNATURE-----
