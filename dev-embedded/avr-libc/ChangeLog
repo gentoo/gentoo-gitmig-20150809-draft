@@ -1,6 +1,18 @@
 # ChangeLog for dev-embedded/avr-libc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.4 2004/07/21 10:52:59 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.5 2004/09/23 22:35:26 dragonheart Exp $
+
+*avr-libc-1.0.4 (24 Sep 2004)
+
+  24 Sep 2004; Daniel Black <dragonheart@gentoo.org> avr-libc-1.0.2-r1.ebuild,
+  +avr-libc-1.0.4.ebuild:
+  Unset all CFLAGS so it will compile. Most flags will make this fail. As per
+  bug #57754
+
+*avr-libc-1.0.4 (24 Sep 2004)
+
+  24 Sep 2004; Daniel Black <dragonheart@gentoo.org> +avr-libc-1.0.4.ebuild:
+  version bump as per bug #52979. Thanks to Ming Zhao <zhaoming@tsinghua.org.cn>
 
   21 Jul 2004; Alexander Gabert <pappy@gentoo.org> avr-libc-1.0.2-r1.ebuild:
   fix for Bug 57754, added files to distfiles dir on toucan
