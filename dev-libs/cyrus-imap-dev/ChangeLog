@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-imap-dev
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.14 2004/01/20 18:39:42 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.15 2004/04/19 15:53:00 dragonheart Exp $
+
+  20 Apr 2004; Daniel Black <dragonheart@gentoo.org>
+  cyrus-imap-dev-2.2.3.ebuild:
+  QA - removed runtime dependance on autoconf, automake, libtool and sed
 
 *cyrus-imap-dev-2.2.3 (20 Jan 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.2.3.ebuild,v 1.3 2004/01/30 05:28:02 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.2.3.ebuild,v 1.4 2004/04/19 15:53:00 dragonheart Exp $
 
 inherit eutils
 
@@ -13,11 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="afs kerberos snmp ssl tcpd"
 
-DEPEND="virtual/glibc
-	sys-devel/libtool
-	>=sys-devel/autoconf-2.58
-	sys-devel/automake
-	>=sys-apps/sed-4
+RDEPEND="virtual/glibc
 	>=sys-libs/db-3.2
 	>=dev-libs/cyrus-sasl-2.1.12
 	afs? ( >=net-fs/openafs-1.2.2 )
@@ -25,6 +21,12 @@ DEPEND="virtual/glibc
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+
+DEPEND="${RDEPEND}
+	sys-devel/libtool
+	>=sys-devel/autoconf-2.58
+	sys-devel/automake
+	>=sys-apps/sed-4"
 
 S="${WORKDIR}/cyrus-imapd-${PV}"
 

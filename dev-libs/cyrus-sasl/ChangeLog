@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.64 2004/04/18 17:53:42 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.65 2004/04/19 15:57:20 dragonheart Exp $
+
+  20 Apr 2004; Daniel Black <dragonheart@gentoo.org> cyrus-sasl-2.1.17.ebuild,
+  cyrus-sasl-2.1.18.ebuild:
+  QA - removed runtime dependance on autoconf, automake, libtool and sed
 
   18 Apr 2004; Travis Tilley <lv@gentoo.org> cyrus-sasl-2.1.18.ebuild:
   marked stable on amd64 since the last version marked stable doesnt even seem
