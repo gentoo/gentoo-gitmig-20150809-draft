@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r10.ebuild,v 1.1 2004/07/12 13:30:46 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r10.ebuild,v 1.2 2004/07/13 18:04:13 spock Exp $
 
 inherit eutils
 
@@ -38,7 +38,12 @@ src_unpack() {
 	fi
 
 	epatch ${FILESDIR}/aterm-0.4.2-patch-pack000.patch
-	epatch ${FILESDIR}/aterm-0.4.2-savelines.patch
+
+	if use cjk ; then
+		epatch ${FILESDIR}/aterm-0.4.2-ja-savelines.patch
+	else
+		epatch ${FILESDIR}/aterm-0.4.2-savelines.patch
+	fi
 }
 
 src_compile() {

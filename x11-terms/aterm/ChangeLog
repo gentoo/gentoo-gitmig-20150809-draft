@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.36 2004/07/13 03:37:20 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.37 2004/07/13 18:04:13 spock Exp $
+
+  13 Jul 2004; Michal Januszewski <spock@gentoo.org>
+  +files/aterm-0.4.2-ja-savelines.patch, aterm-0.4.2-r10.ebuild:
+  Added a special savelines patch for CJK users, the standard one can't be
+  applied cleany after the -ja patch. This closes #56904.
 
   12 Jul 2004; Tom Gall <tgall@gentoo.org> aterm-0.4.2-r9.ebuild:
   added ~ppc64, bug #55255
