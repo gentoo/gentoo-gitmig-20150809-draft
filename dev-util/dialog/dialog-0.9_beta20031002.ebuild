@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-0.9_beta20031002.ebuild,v 1.10 2004/01/16 12:05:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-0.9_beta20031002.ebuild,v 1.11 2004/02/22 22:33:55 agriffis Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://hightek.org/dialog/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc alpha hppa ~arm amd64 ia64 ppc64 mips"
+KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ia64 ppc64 mips"
 
 DEPEND=">=app-shells/bash-2.04-r3
 	>=sys-libs/ncurses-5.2-r5"
