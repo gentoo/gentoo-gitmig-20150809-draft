@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1-r1.ebuild,v 1.6 2004/05/07 06:13:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1-r1.ebuild,v 1.7 2004/06/06 16:55:29 kugelfang Exp $
 
 MY_P="${PN}${PV}"
 DESCRIPTION="Geometry library"
@@ -9,7 +9,7 @@ SRC_URI="http://www.geom.umn.edu/software/qhull/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 sparc ~ppc ~amd64"
+KEYWORDS="x86 sparc ~ppc amd64"
 IUSE=""
 
 RDEPEND="virtual/glibc"
