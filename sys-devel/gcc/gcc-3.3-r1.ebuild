@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3-r1.ebuild,v 1.4 2003/08/24 08:40:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3-r1.ebuild,v 1.5 2003/08/24 17:30:06 azarah Exp $
 
 IUSE="static nls bootstrap java build X"
 
@@ -586,5 +586,11 @@ pkg_postinst() {
 	
 	# Fix ncurses b0rking (if r5 isn't unmerged)
 	find ${ROOT}/usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
+
+	# http://dev.gentoo.org/~pappy/hardened-gcc/docs/etdyn-ssp.html
+	if has_version '>=sys-devel/hardened-gcc-1.2'
+	then
+		[ "${ROOT}" = "/" ] && hardened-gcc -A
+	fi
 }
 
