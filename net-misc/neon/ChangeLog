@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/neon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.9 2002/10/29 21:03:34 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.10 2002/11/02 23:24:55 method Exp $
+
+*neon-0.23.5 (2 Nov 2002)
+  2 Nov 2002; Joshua Brindle (method@gentoo.org) neon-0.23.5.ebuild files/digest-neon-0.23.3 :
+  Added zlib support, new upstream version
 
 *neon-0.23.3 (26 Oct 2002)
 
