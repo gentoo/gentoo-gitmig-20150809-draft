@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.69-r2.ebuild,v 1.2 2004/01/18 22:18:03 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.69-r2.ebuild,v 1.3 2004/01/20 13:31:22 gustavoz Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://cpan.org/modules/by-module/WWW/${P}.readme"
 IUSE="ssl"
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 ~ppc ~sparc alpha hppa ~arm ~mips"
+KEYWORDS="x86 amd64 ~ppc sparc alpha hppa ~arm ~mips"
 
 newdepend ">=dev-perl/libnet-1.0703
 	>=dev-perl/HTML-Parser-3.13

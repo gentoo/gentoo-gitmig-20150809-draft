@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-SSLeay
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.9 2004/01/18 20:20:28 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.10 2004/01/20 13:30:00 gustavoz Exp $
+
+  20 Jan 2004; <gustavoz@gentoo.org> Crypt-SSLeay-0.49.ebuild:
+  stable on sparc
 
   18 Jan 2004; <tuxus@gentoo.org> Crypt-SSLeay-0.49.ebuild:
   Added ~mips to KEYWORDS.
