@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/tpctl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/ChangeLog,v 1.9 2003/12/25 10:35:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/ChangeLog,v 1.10 2004/02/26 00:56:21 humpback Exp $
+
+  26 Feb 2004; Gustavo Felisberto <humpback@gentoo.org>; tpctl-3.2.ebuild,
+  tpctl-4.2.ebuild, tpctl-4.4-r1.ebuild, tpctl-4.4.ebuild, tpctl-4.8.ebuild:
+  Adding -* and maintaining x86 or ~x86. There are only x86 thinkpads. See bug
+  34495
 
 *tpctl-4.8 (25 Dec 2003)
 

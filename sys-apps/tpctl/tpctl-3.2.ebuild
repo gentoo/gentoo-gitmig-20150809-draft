@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/tpctl-3.2.ebuild,v 1.12 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/tpctl-3.2.ebuild,v 1.13 2004/02/26 00:56:21 humpback Exp $
 
 IUSE="ncurses tpctlir perl"
 
@@ -12,7 +12,7 @@ KV=""
 DESCRIPTION="Thinkpad system control user space programs"
 SRC_URI="mirror://sourceforge/tpctl/${MYP}.tar.gz"
 HOMEPAGE="http://tpctl.sourceforge.net/tpctlhome.htm"
-KEYWORDS="x86 amd64 -ppc"
+KEYWORDS="-* x86"
 SLOT="0"
 LICENSE="GPL-2"
 
