@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motiontrack/motiontrack-0.1.0.ebuild,v 1.2 2004/07/23 16:09:38 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motiontrack/motiontrack-0.1.0.ebuild,v 1.3 2004/07/23 23:39:21 mr_bones_ Exp $
 
 
 DESCRIPTION="A set of tools that detect motion between two images"
@@ -16,12 +16,17 @@ IUSE="libgd imagemagick debug"
 DEPEND="virtual/libc
 	debug? (
 		libgd? (
-			imagemagick?  ( >=media-gfx/imagemagick-5.5.7 ) : ( media-libs/gd )
-		) : ( >=media-gfx/imagemagick-5.5.7 )
-	) : (
+			imagemagick? ( >=media-gfx/imagemagick-5.5.7 )
+			!imagemagick? ( media-libs/gd )
+		)
+		!libgd? ( >=media-gfx/imagemagick-5.5.7 )
+	)
+	!debug? (
 		imagemagick? (
-			gd? ( media-libs/gd ) : ( >=media-gfx/imagemagick-5.5.7 )
-		) : ( media-libs/gd )
+			gd? ( media-libs/gd )
+			!gd? ( >=media-gfx/imagemagick-5.5.7 )
+		)
+		!imagemagick? ( media-libs/gd )
 	)"
 
 src_compile() {
@@ -29,11 +34,11 @@ src_compile() {
 	local myconf
 
 	if use libgd; then
-	 if use imagemagick; then
-		einfo "motiontrack can only use one of libgd or imagemagick, not both."
-		einfo "default is libgd when debug is unset, imagemagick otherwise."
-		einfo "please unset one of these use flags if you have other intentions."
-	 fi
+		if use imagemagick; then
+			einfo "motiontrack can only use one of libgd or imagemagick, not both."
+			einfo "default is libgd when debug is unset, imagemagick otherwise."
+			einfo "please unset one of these use flags if you have other intentions."
+		fi
 	fi
 	if use debug; then
 		#default to imagemagick for providing better features
@@ -71,5 +76,3 @@ src_install() {
 	make DESTDIR=${D} install || die "install failed"
 	dodoc README src/TheCode.txt
 }
-
-
