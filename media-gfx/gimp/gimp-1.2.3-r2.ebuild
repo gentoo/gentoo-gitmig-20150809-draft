@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r2.ebuild,v 1.1 2002/02/23 06:46:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r2.ebuild,v 1.2 2002/03/21 15:14:35 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GIMP"
@@ -122,8 +122,7 @@ src_install() {
 	
 	dodoc AUTHORS COPYING ChangeLog* *MAINTAINERS README* TODO
 	dodoc docs/*.txt docs/*.ps docs/Wilber* docs/quick_reference.tar.gz
-	docinto html/libgimp
-	dodoc devel-docs/libgimp/html/*.html
+	dohtml -r devel-docs
 	docinto devel
 	dodoc devel-docs/*.txt
 }
