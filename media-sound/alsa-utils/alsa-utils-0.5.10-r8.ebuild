@@ -3,7 +3,7 @@
 # /home/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.5.10-r6.ebuild,v 1.1 2001/10/02 20:34:44 woodchip Exp
 
 S=${WORKDIR}/${P}
-DESCRIPTION="Advanced Linux Sound Architecture / Utils"
+DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 SRC_URI="ftp://ftp.alsa-project.org/pub/utils/${P}.tar.bz2"
 HOMEPAGE="http://www.alsa-project.org/"
 
