@@ -1,0 +1,8 @@
+# ChangeLog for games-action/snipes
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/snipes/ChangeLog,v 1.1 2005/01/29 05:39:03 vapier Exp $
+
+*snipes-1.0.0 (29 Jan 2004)
+
+  29 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Cyp #79869.
