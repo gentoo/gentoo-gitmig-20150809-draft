@@ -1,16 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d75d475bf3c0f4dca15a4b97bef8254e dnsmasq-2.8.ebuild 970
+MD5 9275e645adae9001012c9d26839c58e1 ChangeLog 5100
+MD5 fa3cc9b3e71bac3b5d4b9330a40ccade dnsmasq-2.9.ebuild 1023
+MD5 23413334748a2b9bb5bee14e1bd2e231 dnsmasq-2.8-r1.ebuild 1027
+MD5 51334b67d2cbed22e0efec4143bc6ff0 metadata.xml 245
+MD5 b35ce45591ac4fcd6ced25486a5a2c90 dnsmasq-2.7.ebuild 970
 MD5 26b4f1cdd80b7aee01db99e5ecf2ec0f dnsmasq-2.5-r1.ebuild 1018
 MD5 5bd9d2da09d4793b6c5fe71229f92842 dnsmasq-2.5.ebuild 961
-MD5 23413334748a2b9bb5bee14e1bd2e231 dnsmasq-2.8-r1.ebuild 1027
-MD5 b35ce45591ac4fcd6ced25486a5a2c90 dnsmasq-2.7.ebuild 970
-MD5 73fa0cf23360aa3ea8ee68a2767d2bea ChangeLog 5006
-MD5 a2cf771f79b03975dd980a57469035f9 dnsmasq-2.9.ebuild 1028
-MD5 51334b67d2cbed22e0efec4143bc6ff0 metadata.xml 245
-MD5 fc1326c5ef78a5ba4a73f6261806579f files/dnsmasq.confd 339
-MD5 9740ffe29b6d012b66cd2e532b8915ce files/digest-dnsmasq-2.5-r1 62
-MD5 39075dfeab4bbded5f0e8680df29e414 files/digest-dnsmasq-2.8-r1 63
-MD5 51224c4bafcccf490d6de12440f681e5 files/dnsmasq-init 504
-MD5 9740ffe29b6d012b66cd2e532b8915ce files/digest-dnsmasq-2.5 62
-MD5 c1cc976385b3ebe0fb4f72e3795e1e4c files/digest-dnsmasq-2.7 62
 MD5 39075dfeab4bbded5f0e8680df29e414 files/digest-dnsmasq-2.8 63
+MD5 51224c4bafcccf490d6de12440f681e5 files/dnsmasq-init 504
 MD5 d48a297550b42f81be10bd5fcf4e15a7 files/digest-dnsmasq-2.9 63
+MD5 fc1326c5ef78a5ba4a73f6261806579f files/dnsmasq.confd 339
+MD5 9740ffe29b6d012b66cd2e532b8915ce files/digest-dnsmasq-2.5 62
+MD5 39075dfeab4bbded5f0e8680df29e414 files/digest-dnsmasq-2.8-r1 63
+MD5 c1cc976385b3ebe0fb4f72e3795e1e4c files/digest-dnsmasq-2.7 62
+MD5 9740ffe29b6d012b66cd2e532b8915ce files/digest-dnsmasq-2.5-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBAYE9LLFUmVNQ7rkRAmHlAKCxSn0bFYgP+z7dNU/5JXddnMA05ACglH6U
+UMEpmF9A+Ys7DiEPyeftUHs=
+=74+Y
+-----END PGP SIGNATURE-----
