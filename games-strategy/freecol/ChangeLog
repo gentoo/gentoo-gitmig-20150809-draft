@@ -1,0 +1,10 @@
+# ChangeLog for games-strategy/freecol
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.1 2004/12/09 08:30:06 mr_bones_ Exp $
+
+*freecol-0.3.0 (09 Dec 2004)
+
+  09 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +freecol-0.3.0.ebuild:
+  initial commit - ebuild submitted by lwillems via bug #64608
+
