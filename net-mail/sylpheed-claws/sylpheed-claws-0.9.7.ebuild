@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.7.ebuild,v 1.2 2003/11/29 04:01:27 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.7.ebuild,v 1.3 2003/12/09 17:56:49 lanius Exp $
 
 IUSE="nls gnome xface dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
@@ -34,7 +34,7 @@ DEPEND=">=sys-apps/sed-4
 	spell? ( virtual/aspell-dict )
 	xface? ( >=media-libs/compface-1.4 )
 	clamav? ( net-mail/clamav )
-	pdflib? ( app-text/ghostscript )
+	pdflib? ( virtual/ghostscript )
 	nls? ( >=sys-devel/gettext-0.12 )
 	x11-misc/shared-mime-info"
 

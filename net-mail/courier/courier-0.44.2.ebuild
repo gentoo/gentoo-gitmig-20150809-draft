@@ -24,7 +24,7 @@ RDEPEND="virtual/glibc
 	>=sys-libs/gdbm-1.8.0
 	crypt? ( >=app-crypt/gnupg-1.0.4 )
 	fax? (	>=media-libs/netpbm-9.12
-		>=app-text/ghostscript-7.05.5
+		virtual/ghostscript
 		>=net-dialup/mgetty-1.1.28 )
 	pam? ( >=sys-libs/pam-0.75 )
 	mysql? ( >=dev-db/mysql-3.23.36 )
