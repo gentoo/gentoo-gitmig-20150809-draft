@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/adjtimex-1.16.ebuild,v 1.4 2004/07/01 20:39:23 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/adjtimex-1.16.ebuild,v 1.5 2004/07/15 02:32:41 agriffis Exp $
 
 inherit fixheadtails eutils
 
@@ -15,8 +15,6 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="virtual/libc"
-
-S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${P/-/_}.orig.tar.gz
