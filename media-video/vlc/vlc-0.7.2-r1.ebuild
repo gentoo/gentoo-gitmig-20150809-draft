@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2-r1.ebuild,v 1.6 2004/11/01 01:13:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2-r1.ebuild,v 1.7 2004/12/14 12:27:42 eradicator Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="arts ncurses dvd gtk nls 3dfx svga fbcon esd X alsa ggi speex
 	oggvorbis gnome xv oss sdl aalib slp bidi truetype v4l lirc
-	wxwindows imlib matroska dvb mozilla debug faad theora
+	wxwindows imlib matroska dvb mozilla debug aac theora
 	xosd altivec png dts"
 
 RDEPEND="X? ( virtual/x11 )
@@ -31,7 +31,7 @@ RDEPEND="X? ( virtual/x11 )
 		>=media-libs/libdvdnav-0.1.9
 		>=media-libs/libdvdplay-1.0.1 )
 	esd? ( >=media-sound/esound-0.2.22 )
-	faad? ( >=media-libs/faad2-2.0_rc3 )
+	aac? ( >=media-libs/faad2-2.0_rc3 )
 	ggi? ( >=media-libs/libggi-2.0_beta3 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 	gtk? ( =x11-libs/gtk+-1.2* )
@@ -156,7 +156,7 @@ src_compile() {
 		$(use_enable ggi) \
 		$(use_enable sdl) \
 		$(use_enable mad) \
-		$(use_enable faad) \
+		$(use_enable aac faad) \
 		$(use_enable v4l) \
 		$(use_enable dvd) \
 		$(use_enable dvd vcd) \

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.1.ebuild,v 1.12 2004/11/01 01:13:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.1.ebuild,v 1.13 2004/12/14 12:27:42 eradicator Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -16,7 +16,7 @@ SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~x86"
-IUSE="3dfx X aalib alsa arts debug dvb dvd esd faad fbcon ggi gnome gtk imlib
+IUSE="3dfx X aalib alsa arts debug dvb dvd esd aac fbcon ggi gnome gtk imlib
 	joystick kde lirc mad matroska mozilla ncurses nls oggvorbis oss qt sdl slp svga
 	truetype v4l wxwindows xosd xv xvid"
 
@@ -30,7 +30,7 @@ RDEPEND="X? ( virtual/x11 )
 		>=media-libs/libdvdcss-1.2.8
 		>=media-libs/libdvdplay-1.0.1 )
 	esd? ( >=media-sound/esound-0.2.22 )
-	faad? ( >=media-libs/faad2-1.1 )
+	aac? ( >=media-libs/faad2-1.1 )
 	ggi? ( >=media-libs/libggi-2.0_beta3 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 	gtk? ( =x11-libs/gtk+-1.2* )
@@ -132,7 +132,7 @@ src_compile(){
 
 	use mad && myconf="${myconf} --enable-mad"
 
-	use faad && myconf="${myconf} --enable-faad"
+	use aac && myconf="${myconf} --enable-faad"
 
 	use xvid && myconf="${myconf} --enable-xvid"
 

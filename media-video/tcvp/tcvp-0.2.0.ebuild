@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/tcvp-0.2.0.ebuild,v 1.6 2004/06/25 00:50:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/tcvp-0.2.0.ebuild,v 1.7 2004/12/14 12:24:16 eradicator Exp $
 
 DESCRIPTION="A modular player and encoder/transcoder for music and video."
 HOMEPAGE="http://tcvp.sourceforge.net/"
@@ -10,7 +10,7 @@ SLOT="0"
 LICENSE="MIT"
 KEYWORDS="~x86 ~ppc"
 
-IUSE="faad mpeg mad alsa dvd encode ffmpeg oggvorbis oss"
+IUSE="aac mpeg mad alsa dvd encode ffmpeg oggvorbis oss"
 
 DEPEND=">=dev-libs/libtc-1.1.0
 	>=dev-libs/tc2-0.6.0
@@ -18,7 +18,7 @@ DEPEND=">=dev-libs/libtc-1.1.0
 	>=media-libs/a52dec-0.7.4
 	>=media-sound/cdparanoia-3.9.8-r1
 	>=sys-apps/file-4.0
-	faad? ( media-libs/faad2 )
+	aac? ( media-libs/faad2 )
 	alsa? ( >=media-libs/alsa-lib-1.0.3b-r2 )
 	dvd? ( >=media-libs/libdvdnav-0.1.9 )
 	encode? ( >=media-libs/faac-1.23.5
