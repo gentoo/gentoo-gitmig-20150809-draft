@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/files/2.0/start_orion.sh,v 1.1 2003/03/22 03:28:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/files/2.0/start_orion.sh,v 1.2 2004/07/18 04:26:56 dragonheart Exp $
 
 source /etc/conf.d/orion
 JAVAC=${JAVA_HOME}/bin/javac
