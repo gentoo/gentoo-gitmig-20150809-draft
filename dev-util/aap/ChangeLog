@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/aap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.10 2004/06/28 04:35:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.11 2004/10/02 19:15:25 ciaranm Exp $
+
+*aap-1.070 (02 Oct 2004)
+
+  02 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org> +aap-1.070.ebuild:
+  Bump, bug #66137
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> aap-1.055.ebuild:
   Stable on sparc, added ~mips
