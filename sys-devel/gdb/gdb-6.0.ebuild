@@ -1,23 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.0.ebuild,v 1.2 2003/10/18 21:34:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.0.ebuild,v 1.3 2003/11/07 16:44:18 vapier Exp $
 
-IUSE="nls"
+inherit flag-o-matic eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
 SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha -hppa ~amd64 ~mips"
+IUSE="nls"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
 	nls? ( sys-devel/gettext )"
-
-inherit flag-o-matic eutils
-replace-flags -O? -O2
 
 src_unpack() {
 	unpack ${A}
@@ -32,18 +29,12 @@ src_unpack() {
 }
 
 src_compile() {
-
-	local myconf
-
-	use nls && myconf="--enable-nls" || myconf="--disable-nls"
-
-	econf ${myconf} || die
-
+	replace-flags -O? -O2
+	econf `use_enable nls` || die
 	make || die
 }
 
 src_install() {
-
 	 make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
@@ -83,4 +74,3 @@ src_install() {
 	dodoc mmalloc/COPYING.LIB mmalloc/MAINTAINERS \
 		mmalloc/ChangeLog mmalloc/TODO
 }
-
