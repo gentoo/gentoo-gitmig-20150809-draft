@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2_beta2.ebuild,v 1.5 2002/07/26 16:12:53 danarmak Exp $
-
-inherit kde-base || die
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2_beta2.ebuild,v 1.6 2002/08/09 08:30:48 danarmak Exp $
+inherit kde-base
 
 need-kde 3
 
@@ -33,6 +32,7 @@ src_compile() {
 
     #the dir kchar/kdchart cannot be compiled with the -fomit-frame-pointer flag present
     kde_remove_flag kchart/kdchart -fomit-frame-pointer
+    kde_remove_flag kugar/kudesigner -fomit-frame-pointer # bug 4572
 
     kde_src_compile make
 	
