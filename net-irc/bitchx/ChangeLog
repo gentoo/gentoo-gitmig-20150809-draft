@@ -1,6 +1,15 @@
-# ChangeLog for net-ircbitchxChangeLog/
+# ChangeLog for net-irc/bitchx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.11 2002/10/25 21:53:53 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.12 2002/11/11 19:18:11 phoenix Exp $
+
+*bitchx-1.0.19-r3 (11 Nov 2002)
+
+  21 Oct 2002; phoen][x <phoenix@gentoo.org> bitchx-1.0.19-r3.ebuild,
+  files/digest-bitchx-1.0.19-r3 :
+
+  Used sed to patch include/config.h. BitchX now compiles with #define LATIN1 ON.
+  This shouldn't break anything but add support for the standard LATIN1 letters.
+  This closes bug #10332.
 
 *bitchx-1.0.19-r2 (26 Jun 2002)
 
