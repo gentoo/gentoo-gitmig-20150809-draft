@@ -1,9 +1,19 @@
-MD5 011729eb15e5be756cabc6775db23704 diald-1.0-r1.ebuild 1565
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 76ffaedd5dadf91e2126a31c3227bc33 ChangeLog 606
+MD5 011729eb15e5be756cabc6775db23704 diald-1.0-r1.ebuild 1565
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 a5410dd309151f9ee528b9409343ec1b files/diald-1.0-gentoo.patch 3066
 MD5 ae3f48bcca1dd04078341a2140be83b6 files/diald-1.0-c-files.patch 345
+MD5 a5410dd309151f9ee528b9409343ec1b files/diald-1.0-gentoo.patch 3066
 MD5 0c082c51f45b19f083013649003444f6 files/diald-init 718
-MD5 2cfca07830ff595a949c93942271b266 files/diald.conf 994
+MD5 7249a39cdcf0e96f3886a162f5ef5fb0 files/diald.conf 997
+MD5 e60fcccdbfaa9afadd4f9f9d9982af4f files/diald.filter 4647
 MD5 24b297f6cfd14147c48759fbadb36e6d files/digest-diald-1.0-r1 61
-MD5 2831d472bda08a0f4d716f2eeaba050a files/diald.filter 4644
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+fUmmdTrptrqvGERAhXNAJ99XlGypqQU4gHV0uC/PHXdDzr2WQCeMgSF
+Qwna1KKE5yevTJnapXjj42w=
+=vVkT
+-----END PGP SIGNATURE-----
