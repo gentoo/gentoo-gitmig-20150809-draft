@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.35 2004/02/02 18:15:25 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.36 2004/02/04 11:15:04 mholzer Exp $
+
+*phpmyadmin-2.5.6_rc1 (04 Feb 2004)
+
+  04 Feb 2004; Martin Holzer <mholzer@gentoo.org> phpmyadmin-2.5.6_rc1.ebuild,
+  files/config.inc.php-2.5.6_rc1.patch, files/mysql-setup.sql.in-2.5.6_rc1:
+  Version bumped.
 
   02 Feb 2004; Martin Holzer <mholzer@gentoo.org> phpmyadmin-2.5.5_p1.ebuild:
   Marked stable on all ARCHes.
