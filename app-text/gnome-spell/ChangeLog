@@ -1,6 +1,6 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.19 2003/04/10 05:56:44 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.20 2003/04/10 06:23:07 vladimir Exp $
 
 *gnome-spell-1.0.1 (14 Mar 2003)
 
@@ -20,6 +20,9 @@
   Changed sparc ~sparc keywords
  
 *gnome-spell-0.5 (27 Sep 2002)
+
+  09 Apr 2003; Graham Forest <vladimir@gentoo.org> gnome-spell-0.5.ebuild:
+  Downgraded to ~ppc
 
   09 Apr 2003; Graham Forest <vladimir@gentoo.org> gnome-spell-0.5.ebuild:
   set ppc in keywords
