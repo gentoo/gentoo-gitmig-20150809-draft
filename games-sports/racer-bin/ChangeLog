@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/racer-bin
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/racer-bin/ChangeLog,v 1.2 2003/09/12 15:39:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/racer-bin/ChangeLog,v 1.3 2003/11/01 06:04:39 mr_bones_ Exp $
+
+  31 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  racer-bin-0.5.0-r1.ebuild:
+  more error checking/messages; local variables; fix permissions for bug 31694
 
   12 Jul 2003; Michael Sterrett <msterret@gentoo.org>
   racer-bin-0.5.0-r1.ebuild:
