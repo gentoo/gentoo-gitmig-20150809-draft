@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gperf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.10 2004/02/18 13:08:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.11 2004/03/08 05:10:35 psi29a Exp $
+
+  08 Mar 2004; Bret Curtis <psi29a@gentoo.org> gperf-3.0.1.ebuild:
+  Added ~mips to KEYWORDS.
 
   18 Feb 2004; Aron Griffis <agriffis@gentoo.org> gperf-2.7.2.ebuild:
   stable on ia64
