@@ -2,8 +2,9 @@ MD5 63f5d5add45a34870e61e2e39d70b919 gaim-0.63-r1.ebuild 1835
 MD5 563bfa3942598d75f097aaf618e9bfe3 gaim-0.66.ebuild 2163
 MD5 c312c7f2f86088e2cbae1c306fb009ee gaim-0.59.9-r1.ebuild 2173
 MD5 75b5b8d5565abeeca9fdad904cc765d6 gaim-0.65-r1.ebuild 2167
-MD5 66bb0f954b6b38f3eeea92c326c0c718 ChangeLog 11024
-MD5 1555034c22ce079183040f20941a434c gaim-0.66-r2.ebuild 1953
+MD5 4f44b2925a246230608b7cc55a48df19 ChangeLog 11144
+MD5 769049deda9ae8a4f818bc6b74a5baff metadata.xml 506
+MD5 00c380b0a716b59b0c7e2c6eca2d3510 gaim-0.66-r2.ebuild 1951
 MD5 07beb4e67f5dd8cafed146e45b919144 files/digest-gaim-0.59.9-r1 128
 MD5 ee8fb28717ed5fd8bdfce0b4c0611d75 files/digest-gaim-0.66 126
 MD5 908f7feabba8c8b1d74510f1f2b7706d files/digest-gaim-0.63-r1 126
