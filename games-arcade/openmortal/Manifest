@@ -1,4 +1,6 @@
 MD5 31c584cfb605242a0a9181b14dd5fcb2 ChangeLog 563
 MD5 1e4dbd1317fda5c9019eb55a692336f1 openmortal-0.3.ebuild 786
 MD5 b244cf1c41a78cacb62296d573935c07 metadata.xml 245
+MD5 8967329946db86e2f477a7e60e02867d openmortal-0.4.ebuild 825
 MD5 1c59a24603272eec70547898f8a824b3 files/digest-openmortal-0.3 69
+MD5 46db17ba8287f05dd8841f39eb469438 files/digest-openmortal-0.4 69
