@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/gkrellm-mailwatch
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-mailwatch/ChangeLog,v 1.5 2002/12/13 11:00:58 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-mailwatch/ChangeLog,v 1.6 2003/01/18 18:07:54 mholzer Exp $
+
+*gkrellm-mailwatch-2.1 (18 Jan 2003)
+
+  18 Jan 2003; Martin Holzer <mholzer@gentoo.org> gkrellm-mailwatch-2.1.ebuild
+  files/digest-gkrellm-mailwatch-2.1 ChangeLog :
+  Version bumped. Closes #14136
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
