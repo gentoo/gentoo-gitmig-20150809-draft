@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a7a22dff2729087f63ccb2aabe60fd2e Carp-Clan-5.3.ebuild 501
-MD5 3b0554c639c3cb7244377c9f81c0cff2 ChangeLog 489
+MD5 f95a3abb131848e14df84bb34d47ad00 ChangeLog 584
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 6a7d132e472c3f0ebef8adac20c97819 Carp-Clan-5.3.ebuild 505
 MD5 f79385873e6263a43276621779045e32 files/digest-Carp-Clan-5.3 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB8Vy4tG5z4I8BtQoRAkoVAJ99S21ZTll4wCC2om2NRpkZZqKXewCfanYX
-UbHkyvAcQk6TCvO29iVf2qk=
-=BupY
+iD8DBQFB8aVHugEuf3OQ0akRAlDUAJ4o1vKeO6e4TQFwcgJCgGkDrl9ydgCgkGEc
+MjgUF2Go0FLpKXTl3CP6cHo=
+=4KR+
 -----END PGP SIGNATURE-----
