@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.59 2004/06/25 18:30:49 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.60 2004/06/26 23:50:38 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -22,23 +22,16 @@ if [ ${PN} != vim-core ]; then
 		perl?    ( dev-lang/perl )
 		python?  ( dev-lang/python )
 		selinux? ( sys-libs/libselinux )
-		acl?     ( sys-apps/acl )"
+		acl?     ( sys-apps/acl )
+		ruby?    ( dev-lang/ruby )"
 	RDEPEND="$RDEPEND
 		cscope?  ( dev-util/cscope )
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
 		python?  ( dev-lang/python )
 		selinux? ( sys-libs/libselinux )
-		acl?     ( sys-apps/acl )"
-	# Vim versions after 6.2d should work with Ruby 1.8 because of a local
-	# Gentoo patch; working on putting it upstream (22 May 2003 agriffis)
-	if [[ "$PV" < 6.2 || ( "$PV" == 6.2_pre* && "${PV#*pre}" -lt 4 ) ]]; then
-		DEPEND="$DEPEND ruby? ( =dev-lang/ruby-1.6* )" # 1.8 doesn't work
-		RDEPEND="$RDEPEND ruby? ( =dev-lang/ruby-1.6* )"
-	else
-		DEPEND="$DEPEND ruby? ( dev-lang/ruby )"
-		RDEPEND="$RDEPEND ruby? ( dev-lang/ruby )"
-	fi
+		acl?     ( sys-apps/acl )
+		ruby?    ( dev-lang/ruby )"
 
 	if [ ${PN} = vim ] && [ "${ARCH}" != "arm" ]; then
 		IUSE="$IUSE vim-with-x minimal"
