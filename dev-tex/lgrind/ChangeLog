@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/lgrind
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/ChangeLog,v 1.4 2004/04/13 14:31:14 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/ChangeLog,v 1.5 2004/05/08 09:56:57 usata Exp $
+
+  08 May 2004; Mamoru KOMACHI <usata@gentoo.org> lgrind-3.67-r1.ebuild,
+  lgrind-3.67.ebuild:
+  Stable on x86. Removed old ebuild.
 
   13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> lgrind-3.67-r1.ebuild:
   marked ~amd64
