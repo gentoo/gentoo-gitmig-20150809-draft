@@ -1,6 +1,12 @@
 # ChangeLog for app-text/docbook2X
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.9 2003/02/12 05:23:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.10 2003/07/07 14:00:41 ykoehler Exp $
+
+*docbook2X-0.6.1-r2 (03 Jan 2003)
+
+  7 Jul 2003; Yannick Koehler <ykoehler@gentoo.org> :
+  Perl site arch installation directory now obtained dynamically.
+  This resolve bug 16969.  Thanks to Michael Cummings.
 
 *docbook2X-0.6.1-r1 (03 Jan 2003)
 
@@ -13,7 +19,7 @@
   used.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *docbook2X-0.6.1 (1 Feb 2002)
 
   31 Jan 2003; Yannick Koehler <ykoehler@gentoo.org> :
@@ -30,7 +36,7 @@
   Added LICENSE, KEYWORDS, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
