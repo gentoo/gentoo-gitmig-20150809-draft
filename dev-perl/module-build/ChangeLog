@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/module-build
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/ChangeLog,v 1.7 2004/05/26 09:13:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/ChangeLog,v 1.8 2004/06/05 13:23:46 mcummings Exp $
+
+  05 Jun 2004; Michael Cummings <mcummings@gentoo.org>
+  module-build-0.22.ebuild:
+  fixed archive-tar dep, missing deps
 
   26 May 2004; Bryan Østergaard <kloeri@gentoo.org> module-build-0.22.ebuild:
   Stable on alpha.
