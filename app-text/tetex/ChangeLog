@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.79 2005/01/20 20:23:22 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.80 2005/01/21 10:22:54 hardave Exp $
+
+  21 Jan 2005; Hardave Riar <hardave@gentoo.org> tetex-2.0.2-r5.ebuild:
+  Stable on mips, bug #75801.
 
   20 Jan 2005; Ferris McCormick <fmccor@gentoo.org> tetex-2.0.2-r5.ebuild:
   Stable for sparc, bug 75801. Builds, installs, and seems to create documents
