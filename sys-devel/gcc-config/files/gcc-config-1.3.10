@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.10,v 1.1 2005/01/31 05:39:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.10,v 1.2 2005/02/01 05:38:27 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 
 trap ":" INT QUIT TSTP
@@ -486,13 +486,18 @@ if [[ -z ${CC_COMP} ]] ; then
 fi
 
 if [[ ${DOIT} != "get_current_profile" ]] ; then
-	CC_COMP_NO_SPECS=$(echo ${CC_COMP} | awk -F- '{ print $1"-"$2"-"$3"-"$4"-"$5 }')
-
 	GCC_LIB=$(source "${GCC_ENV_D}/${CC_COMP}"
 		cmd_setup
 		echo ${LDPATH} | ${AWK} -F/ '{ print  "/"$2"/"$3"/"$4"/" }')
 
-	if [[ ! -d ${ROOT}/${GCC_LIB}/${CC_COMP_NO_SPECS%-*}/${CC_COMP_NO_SPECS##*-} ]] || \
+	CC_COMP_TARGET=$(echo ${CC_COMP} | awk -F- '{ print $1"-"$2"-"$3"-"$4 }')
+	CC_COMP_VERSION=${CC_COMP/${CC_COMP_TARGET}-/}
+
+	if [[ ! -d ${ROOT}/${GCC_LIB}/${CC_COMP_TARGET}/${CC_COMP_VERSION} ]]; then
+		CC_COMP_VERSION=${CC_COMP_VERSION%-*}
+	fi
+
+	if [[ ! -d ${ROOT}/${GCC_LIB}/${CC_COMP_TARGET}/${CC_COMP_VERSION} ]] || \
 	   [[ ! -f ${GCC_ENV_D}/${CC_COMP} ]]
 	then
 		eerror "$0: Profile does not exist or invalid setting for ${GCC_ENV_D}/${CC_COMP}" 1>&2
@@ -504,7 +509,8 @@ if [[ ${CHECK_CHOST} = "yes" ]] ; then
 	# Chosen CHOST are not the same as the real CHOST according to
 	# make.conf, and --use-portage-chost option was given, so do nothing
 	get_real_chost
-	[[ ${CC_COMP%-*} != ${REAL_CHOST} ]] && exit 0
+	CC_COMP_TARGET=$(echo ${CC_COMP} | awk -F- '{ print $1"-"$2"-"$3"-"$4 }')
+	[[ ${CC_COMP_TARGET} != ${REAL_CHOST} ]] && exit 0
 fi
 
 eval ${DOIT}
