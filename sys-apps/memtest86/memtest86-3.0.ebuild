@@ -31,20 +31,21 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	patch -p1<${FILESDIR}/memtest86-3.0-gcc3-gentoo.patch || die
+}
 
 src_compile() {
-	cd ${S}
-	patch -p1<${FILESDIR}/memtest86-3.0-gcc3-gentoo.patch
-	emake || die
+	make CCFLAGS='-Wall -fomit-frame-pointer -fno-builtin' || die
 }
 
 src_install() {
-
 	dodir /boot/memtest86
 	cp memtest.bin ${D}/boot/memtest86
 
 	dodoc README README.build-process
-	
 }
 
 pkg_postinst() {
