@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/gail-1.4.1.ebuild,v 1.3 2004/01/18 14:10:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/gail-1.4.1.ebuild,v 1.4 2004/01/29 05:01:24 agriffis Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Part of Gnome Accessibility"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha sparc hppa ~amd64"
+KEYWORDS="x86 ~ppc alpha sparc hppa ~amd64 ia64"
 LICENSE="GPL-2"
 
 RDEPEND=">=x11-libs/gtk+-2.1.3
