@@ -1,0 +1,9 @@
+# ChangeLog for sys-devel/gcc-compat
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-compat/ChangeLog,v 1.1 2002/09/19 17:40:31 carpaski Exp $
+
+*sys-lib/gcc-compat-1.4 (19 Sep 2002)
+
+  19 Sep 2002; Nicholas Jones <carpaski@gentoo.org> :
+  Created the ebuild. $PV == PROFILE TO ATTAIN
+
