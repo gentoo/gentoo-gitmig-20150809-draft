@@ -2,7 +2,10 @@
 <!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <catmetadata>
 	<longdescription lang="en">
-		The dev-tcltk contains Tcl- and Tk-related libraries and tools.
+		The dev-tcltk category contains Tcl- and Tk-related libraries and tools.
+	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie dev-tcltk enthält Bibliotheken und Werkzeuge für Tcl und Tk.
 	</longdescription>
 </catmetadata>
 
