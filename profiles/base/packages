@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.23 2004/11/16 05:14:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.24 2004/11/24 04:07:53 vapier Exp $
 
 # Gentoo Base Profile
 
@@ -55,7 +55,6 @@
 *sys-apps/procps
 *sys-apps/psmisc
 *sys-apps/sed
-*sys-apps/setserial
 *sys-apps/shadow
 *sys-apps/texinfo
 *sys-apps/which
