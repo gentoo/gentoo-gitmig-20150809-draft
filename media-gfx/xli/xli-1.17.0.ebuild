@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.2 2002/07/23 05:18:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.3 2002/10/18 20:50:24 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X Load Image: view images or load them to root window"
@@ -15,6 +15,7 @@ DEPEND="virtual/x11
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.0.5
 	>=media-libs/jpeg-6b-r2"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	cp Imakefile Imakefile.orig
@@ -33,7 +34,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	into /usr
 	dobin xli xlito
 	dodoc README README.xloadimage ABOUTGAMMA TODO chkgamma.jpg
@@ -49,7 +50,7 @@ src_install () {
 	cp /dev/null ${D}/usr/X11R6/lib/X11/app-defaults/Xli
 	echo "path=/usr/X11R6/include/X11/bitmaps /usr/X11R6/include/X11/images" \
 		>> ${D}/usr/X11R6/lib/X11/app-defaults/Xli
-	echo "extension=.gif .jpg .rle .csun .msun .sun .face .xbm .bm"  \
+	echo "extension=.gif .jpg .rle .csun .msun .sun .face .xbm .bm" \
 		>> ${D}/usr/X11R6/lib/X11/app-defaults/Xli
 	chmod a+r ${D}/usr/X11R6/lib/X11/app-defaults/Xli
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.3d-r1.ebuild,v 1.5 2002/10/04 05:45:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.3d-r1.ebuild,v 1.6 2002/10/18 20:50:24 vapier Exp $
 
 MY_P=${P/transfig-/transfig.}
 S=${WORKDIR}/${MY_P}
@@ -15,6 +15,7 @@ KEYWORDS="x86 ppc"
 DEPEND="virtual/x11
 	>=media-libs/jpeg-6
 	media-libs/libpng"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -28,7 +29,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	# gotta set up the dirs for it....
 	dodir /usr/bin
 	dodir /usr/sbin
@@ -36,8 +37,8 @@ src_install () {
 	dodir /usr/X11R6/lib/fig2dev
 
 	#Now install it.
-	make	\
-		DESTDIR=${D}	\
+	make \
+		DESTDIR=${D} \
 		install || die
 
 	#Install docs
