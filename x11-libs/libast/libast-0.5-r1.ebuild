@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-0.5-r1.ebuild,v 1.8 2004/01/02 21:29:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-0.5-r1.ebuild,v 1.9 2004/01/22 01:28:17 vapier Exp $
 
 DESCRIPTION="LIBrary of Assorted Spiffy Things"
 HOMEPAGE="http://www.eterm.org/download/"
@@ -17,17 +17,14 @@ DEPEND="virtual/x11
 	perl? ( dev-libs/libpcre )"
 
 src_compile() {
-	local myconf
-	myconf="$myconf `use_with imlib`"
-	if [ "${ARCH}" == "x86" ]; then
-		myconf="`use_enable mmx`"
-	fi
-
-	econf $myconf || die
+	econf \
+		`use_with imlib` \
+		`use_enable mmx` \
+		|| die
 	emake || die
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc README
+	dodoc README DESIGN ChangeLog
 }
