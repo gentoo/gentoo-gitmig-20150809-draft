@@ -85,3 +85,4 @@ move app-sci/embassy-emnu sci-biology/embassy-emnu
 move app-sci/embassy-esim4 sci-biology/embassy-esim4
 move app-sci/embassy-hmmer sci-biology/embassy-hmmer
 move app-sci/embassy-meme sci-biology/embassy-meme
+move app-sci/embassy-mse sci-biology/embassy-mse
