@@ -1,10 +1,16 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.3 2002/06/11 20:34:10 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.4 2002/07/25 04:48:30 spider Exp $
 
 *at-spi-1.0.1 (10 Jun 2002)
+ 25 Jul 2002; Spider <spider@gentoo.org>
+ KEYOWRDS
+ mirror://
+
+
  10 Jun 2002; Spider <spider@gentoo.org> at-spi-1.0.1.ebuild :
  new version, eclassed , removed hack for headers
+
 
 *at-spi-0.12.1-r1 (01 Jun  2002)
   01 Jun 2002; Spider <spider@gentoo.org> ChangeLog at-spi-0.12.1-r1.ebuild :
