@@ -22,7 +22,7 @@ src_compile() {
 		die "You have not specified any supported databases in your use flags (mysql, pgsql, sqlite, oracle)"
 	fi
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake
 }
 
