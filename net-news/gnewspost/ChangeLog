@@ -1,6 +1,9 @@
 # ChangeLog for net-news/gnewspost
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/ChangeLog,v 1.5 2004/03/30 14:53:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/ChangeLog,v 1.6 2004/04/27 21:57:14 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gnewspost-0.6.ebuild:
+  Add inherit eutils
 
   30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> gnewspost-0.6.ebuild:
   Adding amd64 keyword and fixing dependencies, closing #45934.
