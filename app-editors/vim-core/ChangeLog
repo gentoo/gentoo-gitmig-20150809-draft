@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.19 2003/04/02 14:41:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.20 2003/04/16 02:14:56 gmsoft Exp $
 
 *vim-core-6.1-r5 (22 Mar 2003)
+
+  16 Apr 2003; Guy Martin <gmsoft@gentoo.org> vim-core-6.1-r5.ebuild :
+  Marked stable on hppa.
 
   02 Apr 2003; Aron Griffis <agriffis@gentoo.org> vim-core-6.1-r5.ebuild:
   Move primary deps to eclass and add IUSE=ncurses in support of bug 18488
