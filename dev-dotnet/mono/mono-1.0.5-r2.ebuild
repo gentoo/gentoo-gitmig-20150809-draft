@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.5-r2.ebuild,v 1.6 2005/01/03 04:18:46 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.5-r2.ebuild,v 1.7 2005/01/04 15:58:39 latexer Exp $
 
 inherit eutils mono flag-o-matic debug
 
@@ -47,7 +47,7 @@ src_unpack() {
 
 	# Fix MONO_CFG_DIR for signing
 	sed -i \
-		"s:^\t\(MONO.*SNK)\):\tMONO_CFG_DIR='${D}/etc/' \1:" \
+		"s:^\t\(MONO_PATH.*)\):\tMONO_CFG_DIR='${D}/etc/' \1:" \
 		${MCS_S}/build/library.make
 
 	# add our own little in-place mcs script
@@ -58,7 +58,9 @@ src_unpack() {
 	chmod +x ${S}/runtime/monoresgen
 
 	PATH="${S}/runtime:${PATH}"
+	MONO_CFG_DIR='${D}/etc/'
 	export PATH
+	export MONO_CFG_DIR
 }
 
 src_compile() {
@@ -76,6 +78,12 @@ src_compile() {
 
 	cd ${S}
 	ln -s ../runtime ${WORKDIR}/${P}/runtime/lib
+
+	# Now that we have a valid config for lib mappings, put them
+	# in our temporary config directory.
+
+	dodir /etc/mono
+	cp ${S}/data/{config,machine.config} ${D}/etc/mono/
 
 	cd ${MCS_S}
 	echo "prefix=${S}/runtime" > build/config.make
