@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/bmon
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.4 2003/06/20 23:33:49 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.5 2004/01/08 14:38:27 lostlogic Exp $
+
+*bmon-1.2.1 (08 Jan 2004)
+
+  08 Jan 2004; Brandon Low <lostlogic@gentoo.org> bmon-1.2.1.ebuild:
+  Mark stable for x86
+
+*bmon-1.2.1 (20 Oct 2003)
+
+  20 Oct 2003; Brandon Low <lostlogic@gentoo.org> bmon-1.2.1.ebuild:
+  Minor bugfix
 
 *bmon-1.2.0 (18 Jun 2003)
 
