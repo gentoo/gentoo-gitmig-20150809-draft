@@ -1,23 +1,18 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/files/lcdproc,v 1.4 2001/12/23 23:25:19 azarah Exp $
-
-# NB: Config is in /etc/conf.d/lcdproc
-
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/files/lcdproc,v 1.5 2003/01/07 16:58:28 aliz Exp $
 
 start() {
 	ebegin "Starting LCDProc"
-	 ln -s /dev/$port /dev/lcd	
-	 /usr/local/bin/LCDd -d $driver -b on -i off
-	 /usr/local/bin/lcdproc $clients & 
-	eend
+	source /etc/lcdproc.conf
+	ebegin "Starting lcdproc"
+	/usr/bin/lcdproc -d ${SCREENS}
+	eend $?
 }
 
 stop() {
 	ebegin "Stopping LCDProc"
-	 killall lcdproc 
-	 killall LCDd  
-	 rm -f /dev/lcd
-	eend
+	killall lcdproc 
+	eend $?
 }
