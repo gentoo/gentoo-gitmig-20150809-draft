@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.13 2003/08/09 15:27:53 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.14 2003/08/15 16:25:09 solar Exp $
+
+  15 Aug 2003; <solar@gentoo.org> valgrind-2.0_pre20030725.ebuild:
+  Added a configure.in patch for 2.6
 
 *valgrind-2.0_pre20030725 (09 Aug 2003)
 
