@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.28 2004/08/11 21:03:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.29 2004/09/15 20:22:12 agriffis Exp $
+
+*mozilla-thunderbird-0.8 (15 Sep 2004)
+
+  15 Sep 2004; <agriffis@gentoo.org> +mozilla-thunderbird-0.8.ebuild:
+  Bump to 0.8 for security bug 63996
 
 *mozilla-thunderbird-0.7.3-r1 (11 Aug 2004)
 
