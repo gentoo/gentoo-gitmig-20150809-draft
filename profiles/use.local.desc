@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.713 2004/11/05 03:17:54 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.714 2004/11/05 13:31:24 nakano Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -137,6 +137,7 @@ dev-db/firebird:inetd - If you want inetd version instead of a superserver (daem
 dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
 dev-db/postgresql:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/postgresql:pg-vacuumdelay - Adds in the vacuum inter-page delay feature.
+dev-db/postgresql:threads - enable thread support
 dev-db/rekall:xbase - Support for the Xbase db family, covering dBase, Clipper, FoxPro, Visual dBase/Objects/FoxPro plus some older products.
 dev-db/tora:oracle - Enable oracle support
 dev-dotnet/gtk-sharp:gnomedb - Enable gnomedb support
