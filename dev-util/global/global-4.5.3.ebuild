@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-4.5.3.ebuild,v 1.1 2003/07/24 17:31:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-4.5.3.ebuild,v 1.2 2004/03/13 01:43:18 mr_bones_ Exp $
 
 IUSE="ssl postgres"
 
@@ -8,7 +8,6 @@ DESCRIPTION="Global can find the locations of specified object in C, C++, Yacc, 
 HOMEPAGE="http://www.gnu.org/software/global/"
 LICENSE="GPL-2"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
-S=${WORKDIR}/${P}
 
 KEYWORDS="~x86"
 SLOT="0"

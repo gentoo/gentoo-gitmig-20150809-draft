@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/lincvs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.22 2004/03/07 01:58:47 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.23 2004/03/13 01:44:24 mr_bones_ Exp $
+
+  12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> lincvs-1.1.5.ebuild,
+  lincvs-1.1.6.ebuild, lincvs-1.2.0.ebuild:
+  Don't assign default to S; header fix
 
   07 Mar 2004; Gustavo Felisberto <humpback@gentoo.org>;
   files/lincvs-1.3.0-rc2-gentoo.diff:

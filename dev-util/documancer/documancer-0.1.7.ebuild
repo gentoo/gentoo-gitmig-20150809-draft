@@ -1,8 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/documancer-0.1.7.ebuild,v 1.2 2003/09/06 08:39:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/documancer-0.1.7.ebuild,v 1.3 2004/03/13 01:42:04 mr_bones_ Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Programmer's documentation reader with very fast fulltext searching"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://documancer.sourceforge.net"

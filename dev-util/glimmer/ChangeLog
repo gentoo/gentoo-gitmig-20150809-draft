@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/glimmer
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/ChangeLog,v 1.11 2003/02/12 06:42:37 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/ChangeLog,v 1.12 2004/03/13 01:43:06 mr_bones_ Exp $
+
+  12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  glimmer-1.2.1-r4.ebuild, glimmer-1.2.1-r5.ebuild:
+  Don't assign default to S; header fix
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,8 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mergetrees/mergetrees-0.9.3.ebuild,v 1.10 2003/09/06 08:39:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mergetrees/mergetrees-0.9.3.ebuild,v 1.11 2004/03/13 01:44:46 mr_bones_ Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A three-way directory merge tool"
 SRC_URI="http://cvs.bofh.asn.au/mergetrees/${P}.tar.gz"
 HOMEPAGE="http://cvs.bofh.asn.au/mergetrees/"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cutils
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.5 2003/09/09 17:28:54 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.6 2004/03/13 01:41:29 mr_bones_ Exp $
+
+  12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> cutils-1.6-r1.ebuild,
+  cutils-1.6.ebuild:
+  Don't assign default to S; header fix
 
 *cutils-1.6-r1 (09 Sep 2003)
 

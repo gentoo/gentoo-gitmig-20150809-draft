@@ -1,10 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-5.1.1.ebuild,v 1.8 2003/02/13 11:56:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-5.1.1.ebuild,v 1.9 2004/03/13 01:44:11 mr_bones_ Exp $
 
 IUSE="nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A graphical interface to the GNU debugger"
 HOMEPAGE="http://sources.redhat.com/insight/index.html"
 SRC_URI="ftp://sources.redhat.com/pub/gdb/releases/${P}.tar.bz2"

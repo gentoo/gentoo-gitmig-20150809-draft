@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hxd/hxd-0.70.ebuild,v 1.1 2003/09/08 17:29:03 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hxd/hxd-0.70.ebuild,v 1.2 2004/03/13 01:43:57 mr_bones_ Exp $
 
 DESCRIPTION="Binary to hexadecimal converter"
 HOMEPAGE="http://www-tet.ee.tu-berlin.de/solyga/linux/"
@@ -13,8 +13,6 @@ IUSE=""
 
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	econf || die

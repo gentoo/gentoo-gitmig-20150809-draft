@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/fhist
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.6 2004/02/24 23:04:22 bazik Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.7 2004/03/13 01:42:27 mr_bones_ Exp $
+
+  12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> fhist-1.10.ebuild,
+  fhist-1.8.ebuild:
+  Don't assign default to S; header fix
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> fhist-1.10.ebuild:
   KEYWORDS+=sparc

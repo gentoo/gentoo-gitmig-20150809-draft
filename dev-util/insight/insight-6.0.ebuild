@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.0.ebuild,v 1.1 2003/10/29 17:32:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.0.ebuild,v 1.2 2004/03/13 01:44:11 mr_bones_ Exp $
 
 IUSE="nls"
 
@@ -15,7 +15,6 @@ RDEPEND="${DEPEND}
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~alpha"
 SRC_URI="ftp://sources.redhat.com/pub/gdb/releases/${P}.tar.bz2"
-S=${WORKDIR}/${P}
 
 INSIGHTDIR="/opt/insight"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/re2c-0.9.1.ebuild,v 1.1 2003/06/03 18:04:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/re2c-0.9.1.ebuild,v 1.2 2004/03/13 01:45:19 mr_bones_ Exp $
 
 inherit eutils
 
@@ -12,8 +12,6 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 DEPEND=">=byacc-1.9"
-#RDEPEND="" # Inherited from ${DEPEND}
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A} || die

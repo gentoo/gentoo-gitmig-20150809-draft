@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/insight
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.8 2003/10/29 17:32:10 plasmaroo Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.9 2004/03/13 01:44:11 mr_bones_ Exp $
+
+  12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> insight-5.1.1.ebuild,
+  insight-5.2.1.ebuild, insight-5.3.ebuild, insight-6.0.ebuild:
+  Don't assign default to S; header fix
 
 *insight-6.0 (29 Oct 2003)
 

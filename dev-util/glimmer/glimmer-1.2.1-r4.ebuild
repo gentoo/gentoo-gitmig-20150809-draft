@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/glimmer-1.2.1-r4.ebuild,v 1.6 2003/09/06 08:39:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/glimmer-1.2.1-r4.ebuild,v 1.7 2004/03/13 01:43:06 mr_bones_ Exp $
 
 S=${WORKDIR}/glimmer-${P_VERSION}
 DESCRIPTION="All-purpose gnome code editor."
