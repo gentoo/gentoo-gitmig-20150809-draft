@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.65 2004/07/03 19:20:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.66 2004/07/07 21:03:11 leonardop Exp $
+
+*gedit-2.6.1-r1 (07 Jul 2004)
+
+  07 Jul 2004; L. Boshell <leonardop@gentoo.org> gedit-2.6.1-r1.ebuild,
+  files/gedit-2.6.1-highlight_fix.patch:
+  Added patch from Gnome's CVS to fix broken behaviour on the highlight
+  syntax preferences dialog. Resolves bug #50654.
 
   03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gedit-2.6.0.ebuild:
   Stable on alpha.
