@@ -1,4 +1,14 @@
-MD5 feddf881ad19707408fc6afb17e08e13 gnome-sharp-1.0.4.ebuild 557
-MD5 f621b3738e2aed6d53612d86d60ebfe3 ChangeLog 648
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4dcc82977e5c4583ae9c1f3542d187ef gnome-sharp-1.0.4.ebuild 551
+MD5 341247680b57325d57d255d4e3622996 ChangeLog 757
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 MD5 b63c29f6761c048a9d7943713c15c78c files/digest-gnome-sharp-1.0.4 147
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB1I70I1lqEGTUzyQRAnt/AKChxNRxeXJQXM3SO432uH5+InwwIwCfchpa
+UprlbyFwMgYAqh6Xyhgdx5E=
+=Rcs/
+-----END PGP SIGNATURE-----

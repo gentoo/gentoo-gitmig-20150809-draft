@@ -1,4 +1,14 @@
-MD5 012b8319c78c929037efd32e9af25bf8 gconf-sharp-1.0.4.ebuild 796
-MD5 df8e85cf2670816b0392482de46106df ChangeLog 537
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0bf5a00573e48ba45081f2d0e2dce43f gconf-sharp-1.0.4.ebuild 790
+MD5 6a5d887468b6882588ba36b0d4bcdf41 ChangeLog 646
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 MD5 b63c29f6761c048a9d7943713c15c78c files/digest-gconf-sharp-1.0.4 147
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB1I6aI1lqEGTUzyQRAg5VAKC9ffDGUOYvee0Ns0QZJUfmWtpmGgCfQimL
+FtI+TxschXuBrGT6kj5uCGw=
+=FhML
+-----END PGP SIGNATURE-----

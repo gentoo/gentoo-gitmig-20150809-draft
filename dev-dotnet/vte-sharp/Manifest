@@ -1,4 +1,14 @@
-MD5 40e120fff1e99f00cb0bcbb44ada3d2a vte-sharp-1.0.4.ebuild 375
-MD5 a651079a15b615d2b0c9d7f277c4745f ChangeLog 394
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 74e4921e888509b5447e04f1b7e99ec0 vte-sharp-1.0.4.ebuild 369
+MD5 d1165988e2c55c243668a2ebb63871ea ChangeLog 501
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 MD5 b63c29f6761c048a9d7943713c15c78c files/digest-vte-sharp-1.0.4 147
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB1I+EI1lqEGTUzyQRAibZAJ4nwVfSJUDOoXlcSWbqu8ObagyZzQCg0qSB
+Kk7wVCSIGiFCbAQbkrc8Q2o=
+=eV39
+-----END PGP SIGNATURE-----

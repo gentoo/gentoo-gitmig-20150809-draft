@@ -1,4 +1,14 @@
-MD5 c6e5c4e4cbaec47909c7652f81452df8 ChangeLog 527
-MD5 0a4bb98c5b81d76adb53be34691116ef art-sharp-1.0.4.ebuild 389
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1e87d7f380dbc8493bebfac748c2e765 ChangeLog 634
+MD5 50b9f424157a6bdfeebc3babf491cd9c art-sharp-1.0.4.ebuild 383
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 MD5 b63c29f6761c048a9d7943713c15c78c files/digest-art-sharp-1.0.4 147
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB1I+wI1lqEGTUzyQRAk3JAJ9MOgX8iM5wBXni49zczwe+I8zNVACfQy3j
+0WurNEnFs3EFGhJMQEw+uPw=
+=AoWs
+-----END PGP SIGNATURE-----
