@@ -1,4 +1,4 @@
-MD5 46c2c2005d7984b790c71e53c1af74f1 horde-nag-1.1.1.ebuild 609
-MD5 42f92bff5dde2c873ea431c0ed72e49f ChangeLog 452
-MD5 6d4c399f10b562f26c52f03f47275f66 metadata.xml 305
 MD5 ed87062d38fb658a4109dc36e44afceb files/digest-horde-nag-1.1.1 61
+MD5 48c44ce5b6e4ee1dc9993014f7f4d9bc ChangeLog 453
+MD5 6d4c399f10b562f26c52f03f47275f66 metadata.xml 305
+MD5 5c749d720006c640187510213a4afc43 horde-nag-1.1.1.ebuild 610
