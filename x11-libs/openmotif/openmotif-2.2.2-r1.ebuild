@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r1.ebuild,v 1.7 2003/05/01 01:50:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r1.ebuild,v 1.8 2003/05/09 19:19:06 taviso Exp $
 
 S=${WORKDIR}/openMotif-2.2.2
 
@@ -11,7 +11,7 @@ PROVIDE="virtual/motif"
 
 LICENSE="MOTIF"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc "
+KEYWORDS="x86 ppc ~sparc alpha"
 
 DEPEND="virtual/glibc
 	virtual/x11"
