@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/testunit/testunit-0.1.8.ebuild,v 1.3 2003/09/08 02:19:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/testunit/testunit-0.1.8.ebuild,v 1.4 2004/02/26 17:50:02 usata Exp $
+
+inherit ruby
 
 DESCRIPTION="unit testing framework for the Ruby language"
 HOMEPAGE="http://testunit.talbott.ws/"
@@ -10,14 +12,5 @@ LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="~x86"
 
-DEPEND=">=dev-lang/ruby-1.6.7"
-
-src_install() {
-	ruby setup.rb config --prefix=${D}/usr || die
-	ruby setup.rb setup || die
-	ruby setup.rb install || die
-	dodoc ChangeLog README TODO
-
-	dohtml -r doc/
-	dohtml -r examples
-}
+DEPEND="=dev-lang/ruby-1.6.8*"
+RUBY="/usr/bin/ruby16"
