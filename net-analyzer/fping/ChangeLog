@@ -1,15 +1,21 @@
 # ChangeLog for net-anaylzer/fping
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.1 2002/06/28 11:54:12 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.2 2002/07/23 19:11:28 phoenix Exp $
 
   28 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
   moved to net-analyzer
 
+*fping-2.4_beta2-r1 (23 Jul 2002)
+
+  23 Jul 2002; phoen][x <phoenix@gentoo.org> :
+  Version bump - the ipv6 fping didnt work.
+  Closes bug #5347.
+
 *fping-2.4_beta2 (2 Jun 2002)
 
   2 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
-
   Version bump; move to /usr/sbin.
+
 
 *fping-2.2_beta1 (1 Feb 2002)
 
