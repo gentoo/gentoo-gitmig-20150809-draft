@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.5.2.ebuild,v 1.1 2003/04/17 12:25:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.5.2.ebuild,v 1.2 2003/04/23 15:26:25 vapier Exp $
 
 inherit eutils
 
@@ -9,14 +9,15 @@ MIN_PV=${PV##*[0-9].}
 MY_PN="PyKDE"
 MY_P=${MY_PN}-${MAJ_PV}-${MIN_PV}
 
-IUSE=""
-S="${WORKDIR}/${MY_P}"
-DESCRIPTION="PyKDE is a set of Python bindings for the KDE libs"
+S=${WORKDIR}/${MY_P}
+DESCRIPTION="set of Python bindings for the KDE libs"
 SRC_URI="http://www.river-bank.demon.co.uk/download/PyKDE2/${MY_P}.tar.gz"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/pykde/"
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
+
 DEPEND="virtual/glibc
 	sys-devel/libtool
 	>=dev-lang/python-2.2.1
@@ -44,8 +45,6 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc ChangeLog AUTHORS THANKS README
-	dodir /usr/share/doc/${P}/
-	mv ${D}/usr/share/doc/* ${D}/usr/share/doc/${P}/
+	dodir /usr/share/doc/${PF}/
+	mv ${D}/usr/share/doc/* ${D}/usr/share/doc/${PF}/
 }
-
-

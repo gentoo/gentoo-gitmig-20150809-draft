@@ -1,19 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/happydoc-2.0.1.ebuild,v 1.10 2003/02/13 11:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/happydoc-2.0.1.ebuild,v 1.11 2003/04/23 15:23:53 vapier Exp $
 
-# HappyDoc version numbering is not very compatible with portage -- kludgeing
-S=${WORKDIR}/HappyDoc-r2_0_1/
-
-DESCRIPTION="HappyDoc is a tool for extracting documentation from Python sourcecode."
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/happydoc/HappyDoc_r2_0_1.tar.gz"
+MY_PN="HappyDoc"
+MY_PV="${PV//./_}
+S=${WORKDIR}/${MY_PN}-r${MY_PV}
+DESCRIPTION="tool for extracting documentation from Python sourcecode"
+SRC_URI="mirror://sourceforge/happydoc/${MY_PN}_r${MY_PV}.tar.gz"
 HOMEPAGE="http://happydoc.sourceforge.net/"
-
-DEPEND="virtual/python"
 
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc alpha"
+
+DEPEND="virtual/python"
 
 src_compile() {
 	python setup.py build || die
