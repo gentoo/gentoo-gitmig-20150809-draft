@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.2.2.ebuild,v 1.2 2001/12/29 03:15:03 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.2.2.ebuild,v 1.3 2002/04/27 21:30:00 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text based WWW browser, supports tables and frames"
