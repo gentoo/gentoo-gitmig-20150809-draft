@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r3.ebuild,v 1.2 2003/03/20 17:32:17 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r3.ebuild,v 1.3 2003/03/29 01:58:06 seemant Exp $
 
 IUSE="nls build afs selinux"
 
@@ -38,7 +38,8 @@ src_compile() {
 		export LIBS=/usr/afsws/lib/pam_afs.so.1
 	fi
 		
-	./configure --host=${CHOST} \
+	./configure \
+		--host=${CHOST} \
 		--prefix=/usr \
 		--localstatedir=/var/spool/locate \
 		${myconf} || die
@@ -50,13 +51,13 @@ src_install() {
 	#do not change 'localstatedir=/var/spool/locate' to
 	#'localstatedir=${D}/var/spool/locate', as it will then be hardcoded
 	#into locate and updatedb
-	make prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		localstatedir=/var/spool/locate \
+	einstall \
+		localstatedir=${D}/var/spool/locate \
 		libexecdir=${D}/usr/lib/find \
-		install || die
+		|| die
 		
+	prepallman
+
 	dosed "s:TMPDIR=/usr/tmp:TMPDIR=/tmp:" usr/bin/updatedb
 	rm -rf ${D}/usr/var
 	if [ -z "`use build`" ] 
@@ -65,7 +66,5 @@ src_install() {
 	else
 		rm -rf ${D}/usr/share
 	fi
-	dodir /var/spool/locate
-	touch ${D}/var/spool/locate/.keep
+	keepdir /var/spool/locate
 }
-
