@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.63 2004/03/20 21:21:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.64 2004/04/08 06:20:01 battousai Exp $
+
+*xfree-drm-4.3.0-r8 (06 Apr 2004)
+
+  06 Apr 2004; Bryan Stine <bryan@gentoo.org> xfree-drm-4.3.0-r8.ebuild:
+  Added in-development version 4.3.0-r8. This is not ready for use yet. Changes
+  from previous include handling 2.6 kernels and the modules.d fix. I may have
+  forgotten something here and there may be more coming.
 
   20 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xfree-drm-4.3.0-r2.ebuild:
