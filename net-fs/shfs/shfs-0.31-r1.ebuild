@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.31-r1.ebuild,v 1.9 2004/06/24 22:44:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.31-r1.ebuild,v 1.10 2004/10/04 22:47:14 pvdabeel Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ppc amd64"
 
 DEPEND="virtual/linux-sources
 		net-misc/openssh
