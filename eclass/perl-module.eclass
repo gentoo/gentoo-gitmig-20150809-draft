@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.30 2002/10/25 19:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.31 2002/11/04 01:41:13 mcummings Exp $
 # The perl-module eclass is designed to allow easier installation of perl
 # modules, and their incorporation into the Gentoo Linux system.
 
@@ -41,6 +41,11 @@ perl-module_src_install() {
 	dodir ${POD_DIR}
 	
 	test -z ${mytargets} && mytargets="install"
+	eval `perl '-V:installsitearch'`
+	SITE_ARCH=${installsitearch}
+	eval `perl '-V:installarchlib'`
+	ARCH_LIB=${installarchlib}
+					 
 	
 	make \
 		PREFIX=${D}/usr \
@@ -52,6 +57,16 @@ perl-module_src_install() {
 		INSTALLMAN6DIR=${D}/usr/share/man/man6 \
 		INSTALLMAN7DIR=${D}/usr/share/man/man7 \
 		INSTALLMAN8DIR=${D}/usr/share/man/man8 \
+		INSTALLSITEMAN1DIR=${D}/usr/share/man/man1 \
+		INSTALLSITEMAN2DIR=${D}/usr/share/man/man2 \
+		INSTALLSITEMAN3DIR=${D}/usr/share/man/man3 \
+		INSTALLSITEMAN4DIR=${D}/usr/share/man/man4 \
+		INSTALLSITEMAN5DIR=${D}/usr/share/man/man5 \
+		INSTALLSITEMAN6DIR=${D}/usr/share/man/man6 \
+		INSTALLSITEMAN7DIR=${D}/usr/share/man/man7 \
+		INSTALLSITEMAN8DIR=${D}/usr/share/man/man8 \
+		INSTALLSITEARCH=${D}/${SITE_ARCH} \
+		INSTALLSCRIPT=${D}/usr/bin \
 		${myinst} \
 		${mytargets} || die
 
