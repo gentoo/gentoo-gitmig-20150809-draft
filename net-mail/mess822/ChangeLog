@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mess822
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/ChangeLog,v 1.4 2004/03/01 21:07:27 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/ChangeLog,v 1.5 2004/04/15 16:11:10 kugelfang Exp $
+
+  15 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> mess822-0.58-r1.ebuild:
+  marked ~amd64
 
 *mess822-0.58-r1 (07 Aug 2003)
 
