@@ -1,17 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-1.3.ebuild,v 1.2 2004/03/14 22:11:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-1.3.ebuild,v 1.3 2004/03/17 08:12:46 seemant Exp $
 
-P=${P/bashburn/BashBurn}
-S=${WORKDIR}/BashBurn
+IUSE=""
+
+MY_P=${P//b/B}
+S=${WORKDIR}/${PN//b/B}
 DESCRIPTION="cd burning shell script"
 HOMEPAGE="http://bashburn.sourceforge.net"
-SRC_URI="mirror://sourceforge/bashburn/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc"
-IUSE=""
-DEPEND=""
-SLOT="0"
+
+DEPEND="virtual/glibc"
+
+RDEPEND="app-shells/bash"
 
 src_compile() {
 	echo "Skipping Compile"
