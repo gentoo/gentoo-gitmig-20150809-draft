@@ -1,0 +1,8 @@
+# ChangeLog for media-gfx/gpp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpp/ChangeLog,v 1.1 2003/10/16 18:24:15 leonardop Exp $
+
+*gpp-0.5c (16 Oct 2003)
+
+  16 Oct 2003; L. Boshell <leonardop@gentoo.org> gpp-0.5c.ebuild :
+  Initial import. Thanks to khai for his work on bug #31236.
