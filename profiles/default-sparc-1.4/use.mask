@@ -15,6 +15,7 @@ icc-pgo
 ifc
 informix
 firebird
+ladcca
 lirc
 mmx
 mmx2
