@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r4.ebuild,v 1.9 2003/02/13 09:32:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r4.ebuild,v 1.10 2003/03/01 04:09:45 vapier Exp $
 
 S=${WORKDIR}/${P/b/}
-DESCRIPTION="a2ps is an Any to PostScript filter"
+DESCRIPTION="Any to PostScript filter"
 SRC_URI="ftp://ftp.enst.fr/pub/unix/a2ps/${P}.tar.gz"
 HOMEPAGE="http://www-inf.enst.fr/~demaille/a2ps/"
 
@@ -19,21 +19,17 @@ RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
-	econf --sysconfdir=/etc/a2ps `use_enable nls`
+	econf --sysconfdir=/etc/a2ps `use_enable nls` || die
 	emake || die
 }
 
-src_install() { 			      
+src_install() {
 	dodir /usr/share/emacs/site-lisp
 
-	make \
-		prefix=${D}/usr \
-		datadir=${D}/usr/share \
+	einstall \
 		sysconfdir=${D}/etc/a2ps \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
 		lispdir=${D}/usr/share/emacs/site-lisp \
-		install || die
+		|| die
 
-	dodoc ANNOUNCE AUTHORS ChangeLog COPYING FAQ NEWS README THANKS TODO
+	dodoc ANNOUNCE AUTHORS ChangeLog FAQ NEWS README THANKS TODO
 }

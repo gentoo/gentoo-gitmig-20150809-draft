@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/dvipdfm-0.13.2c.ebuild,v 1.8 2003/02/13 09:36:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/dvipdfm-0.13.2c.ebuild,v 1.9 2003/03/01 04:14:55 vapier Exp $
 
-S=${WORKDIR}/${PN}
-DESCRIPTION="Dvipdfm is a DVI to PDF translator."
+DESCRIPTION="DVI to PDF translator"
 SRC_URI="http://gaspra.kettering.edu/dvipdfm/${P}.tar.gz"
 HOMEPAGE="http://gaspra.kettering.edu/dvipdfm/"
-KEYWORDS="x86 ppc sparc "
+
+KEYWORDS="x86 ppc sparc"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -14,25 +14,17 @@ DEPEND=">=app-text/tetex-1.0.7
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4"
 
-src_compile() {
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--bindir=/usr/bin \
-		--datadir=/usr/share \
-		--mandir=/usr/share/man || die
+S=${WORKDIR}/${PN}
 
+src_compile() {
+	econf || die
 	emake || die
 }
 
 src_install () {
-	make prefix=${D}/usr \
-		bindir=${D}/usr/bin \
-		datadir=${D}/usr/share \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		install || die
+	einstall || die
 
-	dodoc AUTHORS COPYING ChangeLog Credits INSTALL* NEWS OBTAINING README* TODO
+	dodoc AUTHORS ChangeLog Credits INSTALL* NEWS OBTAINING README* TODO
 
 	cp latex-support/dvipdfm.def ${D}/usr/share/doc/${P}/
 	cp -a doc ${D}/usr/share/doc/${P}/manual

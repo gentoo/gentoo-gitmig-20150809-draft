@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.0-r1.ebuild,v 1.6 2003/02/13 09:38:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.0-r1.ebuild,v 1.7 2003/03/01 04:17:59 vapier Exp $
 
-DESCRIPTION="GtkSpell is a spell library for GTK2"
+DESCRIPTION="spell library for GTK2"
 SRC_URI="http://gtkspell.sourceforge.net/download/${P}.tar.gz"
 HOMEPAGE="http://gtkspell.sourceforge.net/"
 
@@ -16,11 +16,11 @@ RDEPEND=">=dev-libs/glib-2.0.4
 	>=app-text/aspell-0.50"
 
 src_compile() {
-	econf `use_enable nls`
+	econf `use_enable nls` || die
 	emake || die "compile failure"
 }
 
 src_install() {
-	einstall
-	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README
+	einstall || die
+	dodoc AUTHORS ChangeLog NEWS README
 }
