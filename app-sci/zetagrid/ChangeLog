@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/zetagrid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.17 2003/04/13 22:33:28 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.18 2003/12/08 12:10:08 tantive Exp $
+
+*zetagrid-1.8.6 (08 Dec 2003)
+
+  08 Dec 2003; Michael Imhof <tantive@gentoo.org> zetagrid-1.8.6.ebuild:
+  Version bumped.
 
 *zetagrid-1.8.4 (15 Apr 2003)
 
