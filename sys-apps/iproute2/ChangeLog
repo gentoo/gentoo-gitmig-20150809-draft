@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.13 2004/08/04 03:38:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.14 2004/08/09 04:05:32 vapier Exp $
+
+*iproute2-2.4.7.20020116-r1 (09 Aug 2004)
+
+  09 Aug 2004; Mike Frysinger <vapier@gentoo.org>
+  +iproute2-2.4.7.20020116-r1.ebuild, -iproute2-2.4.7.20020116.ebuild:
+  Version bump to install correctly more files #59460 by Daniel Black.
 
   04 Aug 2004; Daniel Black <dragonheart@gentoo.org> :
   digest fix - files/digest-iproute2-2.4.7.20020116

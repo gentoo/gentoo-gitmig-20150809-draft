@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.20020116.ebuild,v 1.11 2004/08/04 05:01:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.20020116-r1.ebuild,v 1.1 2004/08/09 04:05:32 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -77,7 +77,9 @@ src_compile() {
 src_install() {
 	into /
 	cd ${S}/ip
-	dosbin ifcfg ip routef routel rtacct rtmon rtpr || die "dosbin * failed"
+	dosbin ifcfg ip routef routel rtmon rtpr || die "dosbin ip failed"
+	cd ${S}/misc
+	dosbin arpd ifstat nstat rtacct rtstat ss || die "dosbin misc failed"
 	cd ${S}/tc
 	dosbin tc || die "dosbin tc failed"
 	cd ${S}
