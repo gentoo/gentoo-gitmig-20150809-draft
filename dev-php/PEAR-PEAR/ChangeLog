@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.10 2005/03/07 06:41:48 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.11 2005/03/09 06:28:03 sebastian Exp $
+
+  09 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-PEAR-1.3.5-r1.ebuild, PEAR-PEAR-1.3.5.ebuild:
+  Add missing KEYWORDs.
 
   07 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-PEAR-1.3.5-r1.ebuild:
