@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<xsl:output method="xml" indent="yes"/> 
+<xsl:output method="html" indent="yes"/> 
 
 <xsl:template match="/guide">
 	<html>
@@ -35,8 +35,7 @@
 	<p class="tochead">Table of contents:</p>
 	<p class="tocitem">
 	<xsl:for-each select="chapter">
-		&lt;a href="#<xsl:value-of select="./@link"/>"&gt;
-		<xsl:value-of select="title"/>&lt;/a&gt;
+		<a href="#{generate-id()}"><xsl:value-of select="title"/></a>
 		<br/>
 	</xsl:for-each>		
 	</p>
@@ -51,8 +50,7 @@
 <xsl:template match="author">
 <xsl:choose>
 	<xsl:when test="@email">
-		<![CDATA[<a href="mailto:]]><xsl:value-of select="@email"/><![CDATA[">]]>
-		<xsl:value-of select="."/><![CDATA[</a>]]>
+		<a href="mailto:{@email}"><xsl:value-of select="."/></a>
 	</xsl:when>
 	<xsl:otherwise>
 		<xsl:value-of select="."/>
@@ -64,8 +62,7 @@
 </xsl:template>
 
 <xsl:template match="chapter">
-	&lt;a name="<xsl:value-of select="./@link"/>"&gt;
-	<p class="chaphead"><xsl:value-of select="title"/></p>&lt;/a&gt;
+	<a name="{generate-id()}"><p class="chaphead"><xsl:value-of select="title"/></p></a>
 	<xsl:apply-templates select="section"/>
 </xsl:template>
 
@@ -74,8 +71,70 @@
 	<xsl:apply-templates select="body"/>
 </xsl:template>
 
+<xsl:template match="note">
+	<p class="notehead"><xsl:value-of select="title"/></p>
+	<xsl:apply-templates select="body"/>
+</xsl:template>
+
+<xsl:template match="important">
+	<p class="importanthead"><xsl:value-of select="title"/></p>
+	<xsl:apply-templates select="body"/>
+</xsl:template>
+
+<xsl:template match="warning">
+	<p class="warninghead"><xsl:value-of select="title"/></p>
+	<xsl:apply-templates select="body"/>
+</xsl:template>
+
 <xsl:template match="body">
-	<xsl:copy-of select="./node()"/>
+	<xsl:apply-templates />
+</xsl:template>
+
+<xsl:template match="code">
+	<span class="code"><xsl:apply-templates /></span> 
+</xsl:template>
+
+<xsl:template match="pre">
+	<pre>
+	<xsl:apply-templates />
+	</pre>
+</xsl:template>
+
+<xsl:template match="path">
+	<span class="path"><xsl:apply-templates /></span>
+</xsl:template>
+
+<xsl:template match="p">
+	<p class="para"><xsl:apply-templates /></p>
+</xsl:template>
+
+<xsl:template match="e">
+	<span class="emphasis"><xsl:apply-templates /></span>
+</xsl:template>
+
+<xsl:template match="link">
+	<a href="{@path}"><xsl:value-of select="."/></a>
+</xsl:template>
+
+<xsl:template match="mail">
+	<a href="mailto:{@link}"><xsl:value-of select="."/></a>
+</xsl:template>
+
+<xsl:template match="table">
+	<table><xsl:apply-templates /></table>
+</xsl:template>
+
+<xsl:template match="tr">
+	<tr><xsl:apply-templates /></tr>
+</xsl:template>
+
+<xsl:template match="ti">
+	<td class="tableinfo"><xsl:apply-templates /></td>
+</xsl:template>
+
+<xsl:template match="th">
+	<td class="tablehead"><b><xsl:apply-templates /></b></td>
 </xsl:template>
 
 </xsl:stylesheet>
+

@@ -49,7 +49,13 @@ H1 {
 	text-decoration: underline;
 }
 
+.code {
+	font-weight: bold;
+}
 
+.path {
+	font-style: italic;
+}
 
 /*.secthead { 
 	font-family: Verdana,Arial,Helvetica; 
@@ -64,6 +70,10 @@ H1 {
 
 .secondtable { 
 	margin: 4.0em 0% 0.1em 3%; 
+}
+
+.tablehead {
+	background: #e0e0e0;
 }
 
 .doclink { 
