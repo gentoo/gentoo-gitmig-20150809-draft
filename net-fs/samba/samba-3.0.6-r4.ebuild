@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.6-r4.ebuild,v 1.3 2004/09/08 03:32:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.6-r4.ebuild,v 1.4 2004/09/08 12:25:38 kugelfang Exp $
 
 inherit eutils flag-o-matic
 
@@ -49,7 +49,7 @@ SLOT="0"
 # some archs are removed due to dependency tree integrity for ldap and
 #   dev-perl/Crypt-SmbHash flags
 #   should be: KEYWORDS="~arm ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 amd64"
 
 src_unpack() {
 	local i
@@ -143,7 +143,7 @@ src_compile() {
 	fi
 	#-----------------------------------------------------------------------
 	# glibc preload issue
-	append-ldflags -Wl,-z,now
+	append-ldflags -Wl,-z,now -L/usr/$(get_libdir)
 	for info_var in myconf CFLAGS LDFLAGS; do
 		einfo "${info_var} is: ${!info_var}"
 	done
