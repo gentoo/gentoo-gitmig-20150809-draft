@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.1.4.ebuild,v 1.7 2003/10/13 19:32:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.1.4.ebuild,v 1.8 2003/11/17 18:12:26 caleb Exp $
 
 inherit kde
 need-kde ${PV}
@@ -27,7 +27,7 @@ BASEDIR="mirror://kde/stable/${PV}/src/kde-i18n"
 
 for pkg in $LANGS
 do
-	SRC_URI="$SRC_URI linguas_${pkg}? ( $BASEDIR/kde-i18n-${pkg}-${PV}.tar.bz2)"
+	SRC_URI="$SRC_URI linguas_${pkg}? ( $BASEDIR/kde-i18n-${pkg}-${PV}.tar.bz2 )"
 done
 
 
