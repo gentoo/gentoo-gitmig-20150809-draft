@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_pre22.ebuild,v 1.2 2004/09/11 04:00:22 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_pre22.ebuild,v 1.3 2004/09/11 05:04:33 carpaski Exp $
 
 IUSE="build multilib selinux"
 
@@ -215,7 +215,7 @@ pkg_postinst() {
 
 	install -o root -g portage -m 2770 -d "${ROOT}/var/lib/portage"
 	einfo "Checking ${ROOT}/var/lib/portage for bad/illegal files:"
-	find "${ROOT}/var/lib/portage" ! -gid $(id -g portage) -o -perm -002 -print0 | xargs -0n 500 rm -Rvf
+	find "${ROOT}/var/lib/portage" ! -gid $(id -g portage) -o -perm -002 -print0 | ${XARGS} -0n 500 rm -Rvf
 
 	OLDWORLD="${ROOT}/var/cache/edb/world"
 	NEWWORLD="${ROOT}/var/lib/portage/world"
@@ -331,8 +331,8 @@ pkg_postinst() {
 		chown -R root:portage "${ROOT}usr/portage/distfiles"
 		chmod 0664 "${ROOT}usr/portage/distfiles"/*
 
-		find "${ROOT}usr/portage/distfiles" -type f -maxlevel 1 -print0 | \
-		xargs -0 -n 500 chmod 0644
+		find "${ROOT}usr/portage/distfiles" -type f -maxdepth 1 -print0 | \
+		${XARGS} -0 -n 500 chmod 0644
 
 		chmod 2775 "${ROOT}usr/portage/distfiles"
 		chmod 2775 "${ROOT}usr/portage/distfiles/cvs-src"
@@ -340,15 +340,15 @@ pkg_postinst() {
 	if [ -d "${ROOT}/${PORTDIR}/distfiles" ]; then
 		chown -R root:portage "${ROOT}/${PORTDIR}/distfiles"
 
-		find "${ROOT}/${PORTDIR}/distfiles" -type f -maxlevel 1 -print0 | \
-		xargs -0 -n 500 chmod 0644
+		find "${ROOT}/${PORTDIR}/distfiles" -type f -maxdepth 1 -print0 | \
+		${XARGS} -0 -n 500 chmod 0644
 
 		chmod 2775 "${ROOT}/${PORTDIR}/distfiles"
 		chmod 2775 "${ROOT}/${PORTDIR}/distfiles/cvs-src"
 	fi
 
 	chown -R root:portage ${ROOT}var/cache/edb
-	find ${ROOT}var/cache/edb -type f -print0 | xargs -0 -n 500 chmod 664
+	find ${ROOT}var/cache/edb -type f -print0 | ${XARGS} -0 -n 500 chmod 664
 
 #
 # Take a shot at fixing the world file...
