@@ -1,0 +1,52 @@
+# ChangeLog for www-client/ci
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/ci/ChangeLog,v 1.1 2004/09/08 13:31:55 usata Exp $
+
+*ci-1.1.5 (08 Sep 2004)
+
+  08 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +ci-1.0.0.ebuild, +ci-1.1.5.ebuild, +ci-1.1.6.ebuild:
+  Moved from net-www/ci to www-client/ci.
+
+  26 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> ci-1.1.6.ebuild:
+  Marked as stable.
+
+*ci-1.1.6 (12 Apr 2004)
+
+  12 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ci-1.0.0.ebuild,
+  ci-1.1.3.ebuild, ci-1.1.4.ebuild, ci-1.1.5.ebuild, ci-1.1.6.ebuild:
+  Version bumped and removed old ebuilds. virtual/ruby fix
+
+*ci-1.1.5 (03 Mar 2004)
+
+  03 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> ci-1.1.5.ebuild:
+  Version bumped
+
+*ci-1.1.4 (01 Feb 2004)
+
+  01 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> ci-1.1.4.ebuild:
+  Version bumped
+
+*ci-1.1.3 (12 Jan 2004)
+
+  12 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> ci-1.1.2-r1.ebuild,
+  ci-1.1.2.ebuild, ci-1.1.3.ebuild:
+  Version bumped. Marked 1.1.2-r1 (including oniguruma fix) stable.
+
+*ci-1.1.2-r1 (19 Dec 2003)
+
+  19 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> ci-1.1.2-r1.ebuild,
+  files/ci-1.1.2-gentoo.diff:
+  Fixed wrong file creation bug
+
+*ci-1.1.2 (18 Dec 2003)
+
+  18 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> ci-1.0.0.ebuild,
+  ci-1.1.2.ebuild:
+  Version bumped, corrected RDEPEND, marked previous version stable
+
+*ci-1.0.0 (06 Nov 2003)
+
+  06 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> ci-1.0.0.ebuild:
+  Initial import
+
