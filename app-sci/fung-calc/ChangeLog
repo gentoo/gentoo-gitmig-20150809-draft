@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/fung-calc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/fung-calc/ChangeLog,v 1.9 2004/09/22 10:31:47 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/fung-calc/ChangeLog,v 1.10 2004/10/27 21:13:43 motaboy Exp $
+
+  27 Oct 2004; Simone Gotti <motaboy@gentoo.org>
+  +files/fung-calc-1.3.2b-configure.patch, fung-calc-1.3.2b.ebuild:
+  Changed the ebuild to use the 'kde' eclass; Added a patch to the configure
+  script to honor the 'arts' use flag, this fixes bug #69092.
 
   22 Sep 2004; Patrick Kursawe <phosphan@gentoo.org> fung-calc-1.3.2b.ebuild:
   Applying fPIC patch always - makes testing easier, helps prelinking and
