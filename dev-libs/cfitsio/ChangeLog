@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cfitsio
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cfitsio/ChangeLog,v 1.7 2004/07/26 23:43:14 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cfitsio/ChangeLog,v 1.8 2004/07/31 03:03:52 squinky86 Exp $
+
+  30 Jul 2004; Jon Hood <squinky86@gentoo.org> cfitsio-2.490.ebuild:
+  change virtual/glibc to virtual/libc
 
   26 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
   cfitsio-2.430.ebuild, cfitsio-2.490.ebuild:
