@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r14.ebuild,v 1.1 2003/10/12 22:52:33 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r14.ebuild,v 1.2 2003/10/13 19:41:05 carpaski Exp $
 
 IUSE="build"
 
@@ -34,6 +34,7 @@ python_version() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}/pym
+	gzip -dc ${FILESDIR}/portage-2.0.49-r13_fixdbmsg.diff.gz | sed 's:49-r13:49-r14:' | patch &> /dev/null
 }
 
 src_compile() {
