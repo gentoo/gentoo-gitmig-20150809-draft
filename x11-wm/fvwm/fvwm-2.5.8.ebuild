@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.6 2003/11/04 18:40:21 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.7 2003/11/04 22:32:33 taviso Exp $
 
 inherit eutils
 
@@ -231,8 +231,10 @@ src_install() {
 		rm -rf ${D}/usr/bin/fvwm-perllib ${D}/usr/share/man/man1/fvwm-perllib.1
 	fi
 
-	# cool hints test application, maybe useful 
-	# for developers.
+	# neat utility for testing fvwm behaviour on applications
+	# setting various hints, creates a simple black window with 
+	# configurable hints set. 
+	# maybe useful for developers...
 	if use debug; then
 		dobin ${S}/tests/hints/hints_test
 		newdoc ${S}/tests/hints/README README.hints
