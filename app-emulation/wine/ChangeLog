@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.21 2002/10/15 14:55:37 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.22 2002/11/04 18:31:53 phoenix Exp $
+
+*wine-20021031 (04 Nov 2002)
+
+  04 Oct 2002; phoen][x <phoenix@gentoo.org> wine-20021031.ebuild, ChangeLog,
+  files/wine-20021031-fake_windows.tar.bz2, files/wine-20021031-misc.tar.bz2 :
+
+  Bumped to new version. Added Kazaa Lite compatibility to ~/.wine/config.
+  This closes bug #7568.
 
 *wine-20021007 (12 Oct 2002)
 
