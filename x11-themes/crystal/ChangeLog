@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/crystal
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.2 2004/08/19 13:30:05 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.3 2004/08/28 22:27:10 dholm Exp $
+
+  29 Aug 2004; David Holm <dholm@gentoo.org> crystal-0.7.5.ebuild:
+  Added to ~ppc.
 
 *crystal-0.7.5 (16 Aug 2004)
 
