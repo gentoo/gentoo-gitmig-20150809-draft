@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.43 2004/06/08 02:15:31 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.44 2004/06/19 22:03:21 swegener Exp $
+
+  20 Jun 2004; Sven Wegener <swegener@gentoo.org>
+  +files/1.1/bitchx-1.1-gcc34.patch, bitchx-1.1.ebuild:
+  Fixed compile error with gcc-3.4. Closes bug #54454.
 
   07 Jun 2004; Chuck Short <zul@gentoo.org> bitchx-1.0.19-r5.ebuild,
   bitchx-1.0.19-r6.ebuild, bitchx-1.1.ebuild:
