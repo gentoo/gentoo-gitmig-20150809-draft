@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.4 2004/11/09 23:09:08 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.5 2004/11/14 09:16:55 vapier Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -282,13 +282,16 @@ src_install() {
 		cd ${D}${BINPATH}
 		for x in gcc g++ c++ g77 gcj
 		do
-			rm -f ${CTARGET}-${x}
-			[ -f "${x}" ] && ln -sf ${x} ${CTARGET}-${x}
+			if [ "${CHOST}" == "${CTARGET}" ] && [ -f "${CTARGET}-${x}" ]
+			then
+				[ ! -f "${x}" ] && mv "${CTARGET}-${x}" "${x}"
+				ln -sf ${x} ${CTARGET}-${x}
+			fi
 
 			if [ -f "${CTARGET}-${x}-${PV}" ]
 			then
 				rm -f ${CTARGET}-${x}-${PV}
-				ln -sf ${x} ${CTARGET}-${x}-${PV}
+				ln -sf ${CTARGET}-${x} ${CTARGET}-${x}-${PV}
 			fi
 		done
 	fi

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 82b01b5609a77192dd568d3eac39bf67 ChangeLog 72679
 MD5 4bcf46d8a3f5509cf09f23017408095d gcc-2.95.3-r8.ebuild 8407
 MD5 9d2f881e949534e2585b5b1e32b8edf9 gcc-3.1.1-r2.ebuild 9274
@@ -23,7 +26,7 @@ MD5 eaccd73f2955ff6549a0f6e29dded1b3 gcc-3.4.1-r2.ebuild 31259
 MD5 849d93a55dc7e809cf4e3e04b8444d95 gcc-3.4.1-r3.ebuild 31292
 MD5 ee95564bedb8cace16469a654758fed4 gcc-3.4.1.ebuild 30323
 MD5 909de7efc10756a28b62323c45d40e6d gcc-3.4.2-r2.ebuild 13482
-MD5 b41455f91b2cce1b4256ea3fd38795d7 gcc-3.4.3.ebuild 13442
+MD5 39b25dbcbc7419c5df4f540035a6114f gcc-3.4.3.ebuild 13546
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 f7e7042c2ddf66e344b30cbc66ebaf73 files/cc 24
 MD5 80d122265d3062847a4a1b161abe1d26 files/cpp 24
@@ -123,3 +126,10 @@ MD5 c919e0a2cd429d0121b6133c1b4e41a6 files/3.4.0/gcc34-ice-hack.patch 8605
 MD5 bae93db3186aa0fc25d659b7799ef499 files/3.4.0/gcc34-ppc64-m32-m64-multilib-only.patch 825
 MD5 17b3190d64e34ed7709d022b326d08ae files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
 MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBlyLcHTu7gpaalycRAqJuAJ4o5FjqginbQ65e3uRSs3NlwFgKFQCg+qHx
+jWtkjQooermofIpKgpHtdVw=
+=Pkc7
+-----END PGP SIGNATURE-----
