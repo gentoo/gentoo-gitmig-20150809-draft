@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mckoi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/ChangeLog,v 1.5 2004/11/03 11:34:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/ChangeLog,v 1.6 2004/12/21 11:42:58 axxo Exp $
+
+  21 Dec 2004; Thomas Matthijs <axxo@gentoo.org> mckoi-1.0.2.ebuild:
+  fixes 75110
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> mckoi-1.0.2.ebuild:
   depend on app-arch/unzip

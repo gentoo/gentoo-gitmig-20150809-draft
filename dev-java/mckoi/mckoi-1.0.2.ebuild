@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/mckoi-1.0.2.ebuild,v 1.5 2004/11/03 11:34:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/mckoi-1.0.2.ebuild,v 1.6 2004/12/21 11:42:58 axxo Exp $
 
 inherit java-pkg
 
@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
-	javac -classpath src:lib:`java-config -p gnu-regexp` -d lib/ \
+	javac -classpath src:lib:$(java-config -p gnu-regexp-1) -d lib/ \
 		src/com/mckoi/runtime/McKoiDBMain.java \
 		src/com/mckoi/JDBCDriver.java \
 		src/com/mckoi/database/jdbcserver/DefaultLocalBootable.java \
