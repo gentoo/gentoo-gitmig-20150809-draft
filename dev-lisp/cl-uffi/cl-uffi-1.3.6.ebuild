@@ -1,12 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/cl-uffi-1.3.6.ebuild,v 1.2 2003/10/17 17:17:02 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/cl-uffi-1.3.6.ebuild,v 1.3 2004/04/21 17:28:06 vapier Exp $
 
-inherit common-lisp
+inherit common-lisp eutils
 
 DESCRIPTION="UFFI is a package to [portably] interface Common Lisp programs with C-language compatible libraries."
 HOMEPAGE="http://uffi.med-info.com/"
 SRC_URI="http://files.b9.com/uffi/uffi-${PV}.tar.gz"
+
 LICENSE="LLGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"

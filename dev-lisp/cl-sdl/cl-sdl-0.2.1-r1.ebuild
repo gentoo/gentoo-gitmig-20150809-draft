@@ -1,16 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/cl-sdl-0.2.1-r1.ebuild,v 1.2 2003/10/17 18:21:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/cl-sdl-0.2.1-r1.ebuild,v 1.3 2004/04/21 17:17:20 vapier Exp $
 
-inherit common-lisp
+inherit common-lisp eutils
 
 DESCRIPTION="Common Lisp bindings to the SDL graphics library, and OpenGL libraries"
 HOMEPAGE="http://cl-sdl.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cl-sdl/${PN}_${PV}.tar.gz"
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+
 DEPEND="dev-lisp/cl-uffi
 	=media-libs/libsdl-1.2*
 	=media-libs/sdl-ttf-2*

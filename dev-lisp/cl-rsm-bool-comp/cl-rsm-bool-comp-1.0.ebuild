@@ -1,23 +1,23 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-bool-comp/cl-rsm-bool-comp-1.0.ebuild,v 1.2 2003/10/27 00:12:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-bool-comp/cl-rsm-bool-comp-1.0.ebuild,v 1.3 2004/04/21 17:14:11 vapier Exp $
 
-inherit common-lisp
+inherit common-lisp eutils
 
 DESCRIPTION="McIntire's Common Lisp Boolean Function Comparison Library"
 HOMEPAGE="http://packages.debian.org/unstable/devel/cl-rsm-bool-comp.html"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-rsm-bool-comp/cl-rsm-bool-comp_1.0.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
 # Compilation problems on SBCL and runtime SEGV on CMUCL
 KEYWORDS="-x86"
 IUSE=""
+
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp "
 
 CLPACKAGE=rsm-bool-comp
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}

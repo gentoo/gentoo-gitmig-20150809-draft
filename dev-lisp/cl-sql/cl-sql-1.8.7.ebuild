@@ -1,21 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-1.8.7.ebuild,v 1.1 2004/01/27 21:44:41 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-1.8.7.ebuild,v 1.2 2004/04/21 17:26:15 vapier Exp $
 
-inherit common-lisp
+inherit common-lisp eutils
 
 DEB_PV=1
 
 DESCRIPTION="A multi-platform SQL interface for Common Lisp"
-HOMEPAGE="http://clsql.med-info.com/
-	http://packages.debian.org/unstable/devel/cl-sql.html
-	http://www.cliki.net/CLSQL"
+HOMEPAGE="http://clsql.med-info.com/ http://packages.debian.org/unstable/devel/cl-sql.html http://www.cliki.net/CLSQL"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-sql/cl-sql_${PV}.orig.tar.gz
 	http://ftp.debian.org/debian/pool/main/c/cl-sql/cl-sql_${PV}-${DEB_PV}.diff.gz"
+
 LICENSE="LLGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="postgres mysql"
+
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp
 	dev-lisp/cl-md5
@@ -115,7 +115,6 @@ pkg_prerm() {
 	use postgres && /usr/sbin/unregister-common-lisp-source clsql-postgresql
 	use mysql && /usr/sbin/unregister-common-lisp-source clsql-mysql
 }
-
 
 pkg_preinst() {
 	rm -rf /usr/lib/common-lisp/*/clsql* || true
