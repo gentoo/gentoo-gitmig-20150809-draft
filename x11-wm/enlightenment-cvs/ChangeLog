@@ -1,9 +1,13 @@
 # ChangeLog for x11-wm/enlightenment-cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/ChangeLog,v 1.4 2002/12/13 11:01:05 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/ChangeLog,v 1.5 2002/12/21 07:57:14 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*enlightenment-cvs-20021219 (21 Dec 2002)
+
+  21 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  CVS snapshot style !  this brings together snapshots of HEAD and SPLIT so
+  that it all *compiles* correctly ... who knows if it *runs* ;D
+
 *enlightenment-cvs-20021027 (27 Oct 2002)
 
   27 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
