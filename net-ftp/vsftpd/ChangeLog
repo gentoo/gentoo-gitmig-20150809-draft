@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.13 2003/06/05 04:40:26 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.14 2003/06/09 07:46:42 raker Exp $
+
+*vsftpd-1.2.0 (09 Jun 2003)
+
+  09 Jun 2003; Nick Hadaway <raker@gentoo.org> vsftpd-1.2.0.ebuild.
+  files/vsftpd-1.2.0-gentoo.diff.bz2:
+  Version bump.  Fixed ipv6 logic for xinetd.  Now ipv6 support is 
+  included in the source so no patch is needed.  Updated the gentoo 
+  patch for this version.
 
 *vsftpd-1.1.3-r1 (06 Apr 2003)
 
