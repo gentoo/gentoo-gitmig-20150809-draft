@@ -1,7 +1,8 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/eclass/inherit.eclass,v 1.20 2003/02/16 04:26:21 vapier Exp $
+#
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/inherit.eclass,v 1.19 2002/10/25 19:55:52 vapier Exp $
 
 ##########################################################################
 #
@@ -9,4 +10,3 @@
 # inherit method cannot be uninstalled. However, it doesn't need to contain any code :-)
 #
 ##########################################################################
-

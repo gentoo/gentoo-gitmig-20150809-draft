@@ -1,6 +1,10 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.26 2002/10/20 00:12:06 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.27 2003/02/16 04:26:21 vapier Exp $
+#
+# Authors:
+# Bruce A. Locke <blocke@shivan.org>
+# Spidler <spidler@gentoo.org>
 
 inherit libtool gnome.org
 
@@ -8,10 +12,6 @@ if [ -n "$DEBUG" ]
 then
 inherit debug
 fi
-
-# Authors:
-# Bruce A. Locke <blocke@shivan.org>
-# Spidler <spidler@gentoo.org>
 
 # Gnome 2 ECLASS
 ECLASS="gnome2"

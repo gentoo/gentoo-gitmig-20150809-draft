@@ -1,9 +1,11 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.17 2002/07/12 15:24:36 danarmak Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.18 2003/02/16 04:26:21 vapier Exp $
+#
 # Author: Spider
-# A general DEBUG eclass to ease inclusion of debugging information and to remove "bad" flags from CFLAGS
+#
+# A general DEBUG eclass to ease inclusion of debugging information
+# and to remove "bad" flags from CFLAGS
 
 # Debug ECLASS
 ECLASS="debug"

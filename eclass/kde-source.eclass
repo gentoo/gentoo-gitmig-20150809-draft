@@ -1,8 +1,9 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.13 2003/02/16 04:26:21 vapier Exp $
+#
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.12 2002/10/25 19:55:52 vapier Exp $
-
+#
 # This is for kde-base cvs ebuilds. Read comments about settings.
 # It uses $S and sets $SRC_URI, so inherit it as late as possible (certainly after any other eclasses).
 # See http://www.gentoo.org/~danarmak/kde-cvs.html !

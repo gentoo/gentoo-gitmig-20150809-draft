@@ -1,7 +1,9 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.org.eclass,v 1.26 2003/02/16 04:26:21 vapier Exp $
+#
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.org.eclass,v 1.25 2003/01/05 12:41:49 hannes Exp $
+#
 # Contains the locations of ftp.kde.org packages and their mirrors
 
 ECLASS=kde.org

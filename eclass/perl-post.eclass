@@ -1,7 +1,9 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-post.eclass,v 1.10 2003/02/16 04:26:21 vapier Exp $
+#
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-post.eclass,v 1.9 2002/10/25 19:55:52 vapier Exp $
+#
 # The perl-post eclass is designed to allow the ${installarchdir}/perllocal.pod
 # file to be updated cleanly after perl and/or perl-modules are installed
 # or removed.

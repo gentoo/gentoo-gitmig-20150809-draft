@@ -1,7 +1,9 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.5 2003/02/16 04:26:21 vapier Exp $
+#
 # Author Ryan Phillips <rphillips@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.4 2002/12/06 23:56:18 rphillips Exp $
+#
 # Ripped from the vim ebuilds. src_compile and install
 # should be integrated in at some point
 

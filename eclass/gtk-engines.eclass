@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.18 2003/01/31 15:07:29 spider Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.19 2003/02/16 04:26:21 vapier Exp $
+#
 # The gtk-engines eclass is inherited by all gtk-engines-* ebuilds.
 #
 # Please note that Gtk engines are special packages that mainly provide

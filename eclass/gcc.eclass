@@ -1,7 +1,9 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.10 2003/02/16 04:26:21 vapier Exp $
+#
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.9 2003/01/19 23:36:03 azarah Exp $
+#
 # This eclass contains (or should) functions to get common info about gcc
 
 ECLASS=gcc

@@ -1,7 +1,9 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-pre.eclass,v 1.4 2003/02/16 04:26:21 vapier Exp $
+#
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-pre.eclass,v 1.3 2002/10/25 19:55:52 vapier Exp $
+#
 # This is for kde prereleases (alpha, beta etc.) which have a _ (underscore) in their portage ebuild
 # names but not in their source archives and source dirs. To be inherited after setting SRC_URI and WORKDIR.
 

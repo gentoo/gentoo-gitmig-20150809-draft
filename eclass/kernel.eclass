@@ -1,6 +1,7 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.16 2003/02/04 23:11:27 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.17 2003/02/16 04:26:21 vapier Exp $
+#
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
 

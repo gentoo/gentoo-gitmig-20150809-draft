@@ -1,7 +1,9 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.6 2003/02/16 04:26:21 vapier Exp $
+#
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.5 2002/10/25 19:55:52 vapier Exp $
+#
 # The base eclass defines some default functions and variables. Nearly everything
 # else inherits from here.
 

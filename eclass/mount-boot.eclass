@@ -1,15 +1,15 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mount-boot.eclass,v 1.7 2003/01/25 01:49:58 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mount-boot.eclass,v 1.8 2003/02/16 04:26:21 vapier Exp $
+#
+# If the live system has a separate /boot partition configured, then this
+# function tries to ensure that it's mounted in rw mode, exiting with an
+# error if it cant. It does nothing if /boot isn't a separate partition.
 
 ECLASS=mount-boot
 INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS pkg_preinst
-
-# If the live system has a separate /boot partition configured, then this
-# function tries to ensure that it's mounted in rw mode, exiting with an
-# error if it cant. It does nothing if /boot isn't a separate partition.
 
 mount-boot_mount_boot_partition(){
 	# note that /dev/BOOT is in the Gentoo default /etc/fstab file

@@ -1,9 +1,11 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/makeedit.eclass,v 1.4 2002/08/29 23:56:15 azarah Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/eclass/makeedit.eclass,v 1.5 2003/02/16 04:26:21 vapier Exp $
+#
 # Author: Spider
-# makeedit eclass, will remove -Wreturn-type and -Wall from compiling, this will reduce the RAM requirements.
+#
+# makeedit eclass, will remove -Wreturn-type and -Wall from compiling,
+# this will reduce the RAM requirements.
 
 # Debug ECLASS
 ECLASS="makeedit"
