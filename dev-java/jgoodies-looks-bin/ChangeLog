@@ -1,13 +1,13 @@
 # ChangeLog for dev-java/jgoodies-looks-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks-bin/ChangeLog,v 1.7 2004/10/26 13:41:28 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks-bin/ChangeLog,v 1.8 2004/10/27 14:39:29 axxo Exp $
 
-  26 Oct 2004; <keanu@gentoo.org> jgoodies-looks-bin-1.2.2.ebuild:
+  26 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jgoodies-looks-bin-1.2.2.ebuild:
   keyword ~sparc
 
 *jgoodies-looks-bin-1.2.2 (26 Oct 2004)
 
-  26 Oct 2004; <keanu@gentoo.org> +jgoodies-looks-bin-1.2.2.ebuild:
+  26 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +jgoodies-looks-bin-1.2.2.ebuild:
   Version bump, updated ebuild submitted by Jan Brinkmann
   <lucky@the-luckyduck.de>
 

@@ -1,12 +1,12 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.20 2004/10/23 16:07:15 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.21 2004/10/27 14:33:57 axxo Exp $
 
 *rhino-1.5.5 (23 Oct 2004)
 
-  23 Oct 2004; <keanu@gentoo.org> +rhino-1.5.5.ebuild,
+  23 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +rhino-1.5.5.ebuild,
   -rhino-1.5_rc5.ebuild:
-  Renamed _realy_ properly now (i hope)
+  Realy renamed properly now
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> rhino-1.5_rc5.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in

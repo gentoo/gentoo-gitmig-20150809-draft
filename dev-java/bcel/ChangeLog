@@ -1,8 +1,8 @@
 # ChangeLog for dev-java/bcel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.17 2004/10/26 14:28:13 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.18 2004/10/27 14:32:24 axxo Exp $
 
-  26 Oct 2004; <keanu@gentoo.org> bcel-5.1.ebuild:
+  26 Oct 2004; Thomas Matthijs <axxo@gentoo.org> bcel-5.1.ebuild:
   patch in src_unpack not src_compile
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> bcel-5.1.ebuild:
