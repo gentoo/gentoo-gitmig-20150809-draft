@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/shash
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/ChangeLog,v 1.5 2004/09/24 18:18:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/ChangeLog,v 1.6 2004/09/27 00:49:54 swegener Exp $
+
+*shash-0.2.6-r1 (27 Sep 2004)
+
+  27 Sep 2004; Sven Wegener <swegener@gentoo.org>
+  +files/shash.bash-completion, +shash-0.2.6-r1.ebuild:
+  Revision bump. Added support for bash-completion. Thanks to James Rowe
+  <jnrowe@ukfsn.org> in bug #64493.
 
   24 Sep 2004; Sven Wegener <swegener@gentoo.org>
   +files/0.2.6-manpage-fixes.patch, shash-0.2.6.ebuild:
