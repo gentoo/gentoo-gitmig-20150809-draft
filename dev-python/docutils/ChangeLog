@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.13 2004/11/01 00:13:09 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.14 2004/11/02 00:35:24 absinthe Exp $
+
+  01 Nov 2004; Dylan Carlson <absinthe@gentoo.org> docutils-0.3.3-r1.ebuild:
+  Keywords ~amd64.
 
 *docutils-0.3.5 (31 Oct 2004)
 
