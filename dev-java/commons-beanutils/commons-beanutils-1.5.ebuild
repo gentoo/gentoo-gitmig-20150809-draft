@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.5.ebuild,v 1.1 2002/11/06 18:27:09 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.5.ebuild,v 1.2 2002/11/07 04:10:51 strider Exp $
 
 S=${WORKDIR}/${PN}-${PV}-src
 DESCRIPTION="The Jakarta BeanUtils component provides easy-to-use wrappers around Reflection and Introspection APIs"
@@ -32,12 +32,10 @@ src_compile() {
 		myc="${myc} -Dbuild.compiler=jikes"
 	fi
 
-#   FIXME: THIS ACTUALLY IS NOT WORKING
-
-#	if [ -n "`use junit`" ] ; then
-#		echo "junit.jar=`java-config --classpath=junit`" >> build.properties
-#		ANT_OPTS=${myc} ant test || die "Testing Classes Failed"
-#	fi
+	if [ -n "`use junit`" ] ; then
+		echo "junit.jar=`java-config --classpath=junit`" | sed  s/:.*// >> build.properties
+		ANT_OPTS=${myc} ant test || die "Testing Classes Failed"
+	fi
 
 	ANT_OPTS=${myc} ant jar || die "Compilation Failed"
 	ANT_OPTS=${myc} ant javadoc || die "Unable to create documents"
