@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eclipse-cdt-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/ChangeLog,v 1.5 2003/02/12 06:40:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/ChangeLog,v 1.6 2003/05/02 19:24:51 latexer Exp $
+
+*eclipse-cdt-bin-20030501 (02 May 2003)
+
+  02 May 2003; Peter Johanson <latexer@gentoo.org> eclipse-cdt-bin-20030501.ebuild:
+  Bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
