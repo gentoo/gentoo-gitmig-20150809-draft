@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gaming-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.25 2004/06/14 18:53:22 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.26 2004/06/19 11:11:37 plasmaroo Exp $
+
+*gaming-sources-2.4.20-r13 (19 Jun 2004)
+
+  19 Jun 2004; <plasmaroo@gentoo.org> -gaming-sources-2.4.20-r12.ebuild,
+  +gaming-sources-2.4.20-r13.ebuild,
+  +files/gaming-sources-2.4.20.I2C_Limits.patch:
+  Added a patch to add in missing I2C sanity checks that were added upstream in
+  2.4.21.
 
 *gaming-sources-2.4.20-r12 (14 Jun 2004)
 
