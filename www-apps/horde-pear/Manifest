@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 437b355e6bee8f0f24014247fbcac168 horde-pear-1.3-r1.ebuild 771
 MD5 aeb848a2aab39abe83242b5e4aab5b15 ChangeLog 1410
 MD5 ed43df3a2681ce4431c0e2bb80ea1e2f metadata.xml 597
 MD5 4205e3abaa29875a9315ceb34a93b945 files/digest-horde-pear-1.3-r1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOfBO/rLF9B432nYRAg+WAKCk6gbxBQ8jOMXV/+EkFw/NnNboXgCgqgJg
+YZTYjRlbh7n32uhs9MfcdBI=
+=GATk
+-----END PGP SIGNATURE-----
