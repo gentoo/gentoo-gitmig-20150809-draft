@@ -310,7 +310,7 @@ complete -o default -F _ebuild ebuild
 #
 # rc-update completion command
 #
-_rc-update()
+_rc_update()
 {
 	local cur prev initdir runlvdir origdir
 
@@ -336,7 +336,7 @@ _rc-update()
 
 	return 0
 }
-complete -F _rc-update rc-update
+complete -F _rc_update rc-update
 
 #
 # This function loosely emulates emerge, but, as the name implies,
