@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.14.ebuild,v 1.3 2003/07/13 15:35:08 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.14.ebuild,v 1.4 2003/07/13 20:24:58 raker Exp $
 
 inherit eutils
 
@@ -10,8 +10,8 @@ HOMEPAGE="http://asg.web.cmu.edu/sasl/"
 SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="2"
-KEYWORDS="~x86 ~ppc sparc ~hppa"
-IUSE="gdbm berkdb ldap mysql kerberos static ssl java pam" #otp krb4
+KEYWORDS="x86 ~ppc sparc ~hppa"
+IUSE="gdbm berkdb ldap mysql kerberos static ssl java pam" # otp krb4
 
 RDEPEND=">=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
@@ -20,8 +20,7 @@ RDEPEND=">=sys-libs/db-3.2
 	berkdb? ( >=sys-libs/db-3.2.9 )
 	ldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( >=dev-db/mysql-3.23.51 )
-	kerberos? ( virtual/krb5 )
-	krb4? ( app-crypt/kth-krb )
+	kerberos? ( >=app-crypt/mit-krb5-1.2.6 )
 	java? ( virtual/jdk )"
 DEPEND="${RDEPEND}
 	sys-devel/libtool
@@ -76,6 +75,7 @@ src_compile() {
 
 	use kerberos && myconf="${myconf} --enable-gssapi" \
 		|| myconf="${myconf} --disable-gssapi"
+
 	# Kerberos 4 support doesn't compile.. and i'm not sure why
 	# If you want to test/fix for me, emerge kth-krb
 	# and have at it. :) -raker 02/07/2003
