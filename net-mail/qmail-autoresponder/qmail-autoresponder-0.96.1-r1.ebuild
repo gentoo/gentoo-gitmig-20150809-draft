@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1-r1.ebuild,v 1.1 2003/11/29 03:36:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1-r1.ebuild,v 1.2 2003/11/29 03:47:39 robbat2 Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Rate-limited autoresponder for qmail."
@@ -9,7 +9,7 @@ HOMEPAGE="http://untroubled.org/qmail-autoresponder/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="x86 sparc ppc ~alpha ~mips ~arm ~hppa"
 
 DEPEND="virtual/glibc
 		dev-libs/bglibs
@@ -56,5 +56,5 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "Please see /usr/share/doc/${PF}/README for per-user configurations"
+	einfo "Please see /usr/share/doc/${PF}/README.gz for per-user configurations"
 }
