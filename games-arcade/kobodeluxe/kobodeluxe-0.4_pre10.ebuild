@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.1 2004/05/14 18:51:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.2 2004/06/15 15:18:13 wolf31o2 Exp $
 
-inherit games
+inherit games flag-o-matic
 
 IUSE="opengl"
 
@@ -25,6 +25,7 @@ DEPEND="$RDEPEND
 SLOT=0
 
 src_unpack() {
+	filter-flags -fforce-addr
 	unpack ${A}
 	cd ${S}
 	# Fix paths
