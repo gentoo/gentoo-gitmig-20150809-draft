@@ -1,10 +1,8 @@
 # /etc/fcron/fcron.deny
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/files/fcron.deny,v 1.1 2002/11/20 18:33:34 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/files/fcron.deny,v 1.2 2004/04/18 21:18:43 vapier Exp $
 #
 # List here every users who are not allowed to use fcron/fcrontab.
 # You must put one name by line.
 # The word "all" means that every users that are not in fcron.allow
 # are not allowed to use that softwares ( should be put on the top ).
-
-all

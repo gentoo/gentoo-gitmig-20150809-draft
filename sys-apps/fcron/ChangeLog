@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/fcron
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.21 2004/04/10 02:50:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.22 2004/04/18 21:18:42 vapier Exp $
+
+  18 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Change the default fcron.{allow,deny} files to allow everyone so that
+  the generic Gentoo situation of using a cron group to handle access 
+  control works seemlessly #37904 Klaus-J. Wolf.
 
   09 Apr 2004; Joshua Kinard <kumba@gentoo.org> fcron-2.0.0-r4.ebuild:
   Marked stable on mips.
