@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.45 2004/02/21 00:12:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.46 2004/03/01 08:47:29 mholzer Exp $
+
+*alsa-utils-1.0.3 (01 Mar 2004)
+
+  01 Mar 2004; Martin Holzer <mholzer@gentoo.org> alsa-utils-1.0.3.ebuild:
+  Version bumped.
 
   20 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
   alsasound init script has been updated to fix terminate (bug #35916) and 2.6

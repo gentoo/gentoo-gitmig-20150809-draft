@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.2.ebuild,v 1.2 2004/02/12 12:20:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.2.ebuild,v 1.3 2004/03/01 08:47:29 mholzer Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -56,6 +56,4 @@ pkg_postinst() {
 	einfo "and run modules-update. You can do this like so:"
 	einfo "	# nano -w /etc/modules.d/alsa && modules-update"
 	echo
-	ewarn "Pausing for 20 seconds to give you time to read..."
-	sleep 20
 }
