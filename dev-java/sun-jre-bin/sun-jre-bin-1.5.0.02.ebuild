@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.02.ebuild,v 1.1 2005/03/28 01:14:30 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.02.ebuild,v 1.2 2005/04/03 20:08:41 axxo Exp $
 
 inherit java eutils
 
@@ -24,7 +24,7 @@ SLOT="1.5"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="~x86 ~amd64"
 RESTRICT="fetch"
-IUSE="gnome kde mozilla"
+IUSE="mozilla"
 
 DEPEND=">=dev-java/java-config-1.2
 	sys-apps/sed
@@ -121,22 +121,7 @@ src_install() {
 		${D}/opt/${P}/plugin/desktop/sun_java.desktop > \
 		${T}/sun_java.desktop
 
-	if use x86; then
-		if use gnome ; then
-			#TODO check this on Gnome
-			dodir /usr/share/gnome/apps/Internet
-			insinto /usr/share/gnome/apps/Internet
-			doins ${T}/sun_java.desktop
-		fi
-
-		if use kde ; then
-			dodir /usr/share/applnk/Internet
-			insinto /usr/share/applnk/Internet
-			doins ${T}/sun_java.desktop
-		fi
-	else
-		eerror "Sorry no kde, gnome support for your arch now."
-	fi
+	domenu ${T}/sun_java.desktop
 
 	set_java_env ${FILESDIR}/${VMHANDLE}
 }
@@ -190,9 +175,6 @@ pkg_postinst() {
 	fi
 
 	echo
-	eerror "Some parts of Sun's JRE require XFree86 to be installed."
+	eerror "Some parts of Sun's JRE require virtual/x11 to be installed."
 	eerror "Be careful which Java libraries you attempt to use."
-
-	ebeep 5
-	epause 8
 }

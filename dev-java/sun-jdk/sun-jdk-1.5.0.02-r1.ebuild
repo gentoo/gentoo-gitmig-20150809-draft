@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.02-r1.ebuild,v 1.1 2005/03/25 22:37:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.02-r1.ebuild,v 1.2 2005/04/03 20:08:27 axxo Exp $
 
 inherit java eutils
 
@@ -151,22 +151,7 @@ src_install() {
 		${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop > \
 		${T}/sun_java.desktop
 
-	if use x86; then
-		if use gnome ; then
-			#TODO check this on Gnome
-			dodir /usr/share/gnome/apps/Internet
-			insinto /usr/share/gnome/apps/Internet
-			doins ${T}/sun_java.desktop
-		fi
-
-		if use kde ; then
-			dodir /usr/share/applnk/Internet
-			insinto /usr/share/applnk/Internet
-			doins ${T}/sun_java.desktop
-		fi
-	else
-		eerror "Sorry no kde, gnome support for your arch now."
-	fi
+	domenu ${T}/sun_java.desktop
 
 	set_java_env ${FILESDIR}/${VMHANDLE}
 

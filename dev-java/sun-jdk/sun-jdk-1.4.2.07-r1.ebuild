@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.07-r1.ebuild,v 1.1 2005/03/25 22:37:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.07-r1.ebuild,v 1.2 2005/04/03 20:08:27 axxo Exp $
 
 inherit java eutils
 
@@ -20,7 +20,7 @@ SLOT="1.4"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="x86 -*"
 RESTRICT="fetch"
-IUSE="doc gnome kde mozilla jce"
+IUSE="doc mozilla jce"
 
 DEPEND=">=dev-java/java-config-1.1.5
 	sys-apps/sed
@@ -133,17 +133,7 @@ src_install() {
 		${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop > \
 		${T}/sun_java.desktop
 
-	if use gnome ; then
-		#TODO check this on Gnome
-		dodir /usr/share/applications
-		insinto /usr/share/applications
-		doins ${T}/sun_java.desktop
-	fi
-	if use kde ; then
-		dodir /usr/share/applnk/Internet
-		insinto /usr/share/applnk/Internet
-		doins ${T}/sun_java.desktop
-	fi
+	domenu ${T}/sun_java.desktop
 
 	set_java_env ${FILESDIR}/${VMHANDLE}
 
