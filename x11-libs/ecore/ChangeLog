@@ -1,12 +1,11 @@
 # ChangeLog for x11-libs/ecore
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ChangeLog,v 1.13 2004/06/28 17:27:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ChangeLog,v 1.14 2004/08/10 03:16:24 vapier Exp $
 
-*ecore-1.0.0.20040529_pre7 (28 Jun 2004)
+*ecore-1.0.0_pre7 (09 Aug 2004)
 
-  28 Jun 2004; Aron Griffis <agriffis@gentoo.org>
-  ecore-1.0.0.20040529_pre7.ebuild:
-  sync IUSE
+  09 Aug 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
 
 *ecore-1.0.0.* (18 Oct 2003)
 
