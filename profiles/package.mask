@@ -76,7 +76,7 @@ app-text/sgml2x
 >=x11-base/xfree-4.1.0-r1
 # incompatible
 >=sys-devel/autoconf-2.50
-
+>=net-www/mozilla-0.9.2
 # untested
 >=sys-devel/libtool-1.4
 
