@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ermixer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.6 2003/04/04 12:25:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.7 2003/06/12 20:48:49 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> ermixer-0.8.ebuild:
+  add Header
 
   27 Feb 2003; Luca Barbato <lu_zero@gentoo.org> :
   SRC_URI change  Thanks to Michele Balistreri <brain87@gmx.net> for the notice.
