@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numeric
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.5 2004/05/04 11:58:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.6 2004/05/31 21:40:59 kloeri Exp $
+
+  31 May 2004; Bryan Østergaard <kloeri@gentoo.org> numeric-23.1.ebuild:
+  Stable on alpha.
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> numeric-22.0.ebuild:
   Add missing IUSE.
