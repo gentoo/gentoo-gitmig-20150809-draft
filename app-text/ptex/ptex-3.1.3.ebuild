@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.3.ebuild,v 1.6 2004/04/08 22:56:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.3.ebuild,v 1.7 2004/04/17 00:45:25 weeve Exp $
 
 PTEX_TEXMF_PV=2.1
 TETEX_PV=2.0.2
@@ -21,7 +21,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="x86 alpha amd64 ~sparc"
+KEYWORDS="x86 alpha amd64 sparc"
 
 PDEPEND="app-text/xdvik"
 

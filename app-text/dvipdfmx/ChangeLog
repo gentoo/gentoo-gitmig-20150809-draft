@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.10 2004/03/14 21:03:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.11 2004/04/17 00:44:08 weeve Exp $
+
+  16 Apr 2004; Jason Wever <weeve@gentoo.org> dvipdfmx-20031110.ebuild:
+  Stable on sparc.
 
   14 Mar 2004; Jason Wever <weeve@gentoo.org> dvipdfmx-20031110.ebuild:
   Added ~sparc keyword.
