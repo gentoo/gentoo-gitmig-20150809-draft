@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/unace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.10 2003/06/24 13:52:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.11 2003/07/08 21:50:26 darkspecter Exp $
+
+  08 Jul 2003; Bartosch Pixa <darkspecter@gentoo.org> unace-1.2b.ebuild,
+  unace-2.0.4.ebuild, unace-2.2.ebuild:
+  set -ppc in keywords
 
   24 Jun 2003; Jason Wever <weeve@gentoo.org> unace-1.2b.ebuild,
   unace-2.0.4.ebuild, unace-2.2.ebuild:
