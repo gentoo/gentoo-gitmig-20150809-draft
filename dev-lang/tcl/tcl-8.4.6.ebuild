@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.6.ebuild,v 1.6 2004/04/25 00:19:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.6.ebuild,v 1.7 2004/04/26 02:50:06 mr_bones_ Exp $
 
 IUSE="threads"
 
@@ -19,7 +19,7 @@ S=${WORKDIR}/${PN}${PV}
 
 pkg_setup() {
 
-	if [ "`use threads`" ]
+	if use threads
 	then
 		ewarn ""
 		ewarn "PLEASE NOTE: You are compiling ${P} with"
@@ -36,7 +36,7 @@ src_compile() {
 
 	local local_config_use=""
 
-	if [ "`use threads`" ]
+	if use threads
 	then
 		local_config_use="--enable-threads"
 	fi

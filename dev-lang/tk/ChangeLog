@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.32 2004/04/24 19:00:40 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.33 2004/04/26 02:53:24 mr_bones_ Exp $
+
+  25 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> tk-8.3.4-r1.ebuild,
+  tk-8.4.6.ebuild:
+  don't depend on use echo
 
   24 Apr 2004; Ian Leitch <port001@gentoo.org> tk-8.3.4-r1.ebuild,
   tk-8.4.6.ebuild:

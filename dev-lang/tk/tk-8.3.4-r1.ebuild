@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.4-r1.ebuild,v 1.7 2004/04/24 19:00:40 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.4-r1.ebuild,v 1.8 2004/04/26 02:53:24 mr_bones_ Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ S=${WORKDIR}/${PN}${PV}
 
 pkg_setup() {
 
-	if [ "`use threads`" ]
+	if use threads
 	then
 		ewarn ""
 		ewarn "PLEASE NOTE: You are compiling ${P} with"
@@ -49,7 +49,7 @@ src_compile() {
 
 	local local_config_use=""
 
-	if [ "`use threads`" ]
+	if use threads
 	then
 		local_config_use="--enable-threads"
 	fi

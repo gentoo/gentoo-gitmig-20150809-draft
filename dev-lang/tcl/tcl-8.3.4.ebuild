@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.4.ebuild,v 1.11 2004/04/24 19:06:44 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.4.ebuild,v 1.12 2004/04/26 02:50:06 mr_bones_ Exp $
 
 IUSE="threads"
 
@@ -22,7 +22,7 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 
 pkg_setup() {
 
-	if [ "`use threads`" ]
+	if use threads
 	then
 		ewarn ""
 		ewarn "PLEASE NOTE: You are compiling ${P} with"
@@ -39,7 +39,7 @@ src_compile() {
 
 	local local_config_use=""
 
-	if [ "`use threads`" ]
+	if use threads
 	then
 		local_config_use="--enable-threads"
 	fi
