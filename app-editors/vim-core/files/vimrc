@@ -18,31 +18,20 @@ set ruler               " Show the cursor position all the time
 set modelines=0
 
 if v:lang =~ "^ko"
-   set fileencodings=euc-kr
-   set guifontset=-*-*-medium-r-normal--16-*-*-*-*-*-*-*
+  set fileencodings=euc-kr
+  set guifontset=-*-*-medium-r-normal--16-*-*-*-*-*-*-*
 elseif v:lang =~ "^ja_JP"
-   set fileencodings=euc-jp
-   set guifontset=-misc-fixed-medium-r-normal--14-*-*-*-*-*-*-*
+  set fileencodings=euc-jp
+  set guifontset=-misc-fixed-medium-r-normal--14-*-*-*-*-*-*-*
 elseif v:lang =~ "^zh_TW"
-   set fileencodings=big5
-   set guifontset=-sony-fixed-medium-r-normal--16-150-75-75-c-80-iso8859-1,-taipei-fixed-medium-r-normal--16-150-75-75-c-160-big5-0
+  set fileencodings=big5
+  set guifontset=-sony-fixed-medium-r-normal--16-150-75-75-c-80-iso8859-1,-taipei-fixed-medium-r-normal--16-150-75-75-c-160-big5-0
 elseif v:lang =~ "^zh_CN"
-   set fileencodings=gb2312
-   set guifontset=*-r-*
+  set fileencodings=gb2312
+  set guifontset=*-r-*
 endif
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
-   set fileencodings=utf-8,latin1
-endif
-
-" Only do this part when compiled with support for autocommands
-if has("autocmd")
-  " In text files, always limit the width of text to 78 characters
-  autocmd BufRead *.txt set tw=78
-  " When editing a file, always jump to the last cursor position
-  autocmd BufReadPost *
-  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-  \   exe "normal g'\"" |
-  \ endif
+  set fileencodings=utf-8,latin1
 endif
 
 " Don't use Ex mode, use Q for formatting
@@ -56,21 +45,32 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 if &term=="xterm"
-	set t_RV=          " don't check terminal version
-	set t_Co=8
-	set t_Sb=^[4%dm
-	set t_Sf=^[3%dm
+  set t_RV=          " don't check terminal version
+  set t_Co=8
+  set t_Sb=^[4%dm
+  set t_Sf=^[3%dm
 endif
 
 if has("autocmd")
 
-" Gentoo-specific settings for ebuilds.  These are the federally-mandated
-" required tab settings.  See the following for more information:
-" http://www.gentoo.org/doc/en/xml/gentoo-howto.xml
 augroup gentoo
-    au!
-    au BufRead,BufNewFile *.e{build,class} let is_bash=1|set ft=sh
-	au BufRead,BufNewFile *.e{build,class} set ts=4 sw=4 noexpandtab
+  au!
+
+  " Gentoo-specific settings for ebuilds.  These are the federally-mandated
+  " required tab settings.  See the following for more information:
+  " http://www.gentoo.org/doc/en/xml/gentoo-howto.xml
+  au BufRead,BufNewFile *.e{build,class} let is_bash=1|set ft=sh
+  au BufRead,BufNewFile *.e{build,class} set ts=4 sw=4 noexpandtab
+
+  " In text files, limit the width of text to 78 characters, but be careful
+  " that we don't override the user's setting.
+  autocmd BufNewFile,BufRead *.txt if &tw == 0 | set tw=78 | endif
+
+  " When editing a file, always jump to the last cursor position
+  autocmd BufReadPost *
+        \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+        \   exe "normal g'\"" |
+        \ endif
 augroup END
 
 endif " has("autocmd")
