@@ -1,19 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.35.ebuild,v 1.8 2002/12/10 01:18:55 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.35.ebuild,v 1.9 2002/12/19 15:15:03 azarah Exp $
 
-IUSE="nls static build icc"
+IUSE="nls static build" # icc"
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="A yacc-compatible parser generator"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/bison/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/bison/bison.html"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 
-DEPEND="nls? ( sys-devel/gettext )
-	icc? ( dev-lang/icc )"
+DEPEND="nls? ( sys-devel/gettext )"
+#	icc? ( dev-lang/icc )"
 
 src_compile() {
 
@@ -22,7 +23,7 @@ src_compile() {
 	then
 		myconf="--disable-nls"
 	fi
-	use icc && CC="iccbin" CXX="iccbin" LD="iccbin"
+#	use icc && CC="iccbin" CXX="iccbin" LD="iccbin"
 
 	./configure --prefix=/usr \
 		--datadir=/usr/share \

@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.75.ebuild,v 1.5 2002/12/10 01:18:55 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.75.ebuild,v 1.6 2002/12/19 15:15:03 azarah Exp $
 
-IUSE="nls static build icc"
+IUSE="nls static build" # icc"
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A yacc-compatible parser generator"
@@ -14,12 +14,12 @@ SLOT="0"
 # do not compile xfree
 KEYWORDS="~x86"
 
-DEPEND="nls? ( sys-devel/gettext )
-	icc? ( dev-lang/icc )"
+DEPEND="nls? ( sys-devel/gettext )"
+#	icc? ( dev-lang/icc )"
 
 src_compile() {
 
-	use icc && CC="iccbin" CXX="iccbin" LD="iccbin"
+#	use icc && CC="iccbin" CXX="iccbin" LD="iccbin"
 	local myconf=""
 	
 	use nls || myconf="--disable-nls"
