@@ -1,22 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-online-bin/vendetta-online-bin-1.ebuild,v 1.1 2004/12/01 06:26:27 warpzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-online-bin/vendetta-online-bin-1.ebuild,v 1.2 2004/12/01 06:42:52 warpzero Exp $
 
-inherit games eutils
+inherit eutils games
 
+S=${WORKDIR}
 DESCRIPTION="Space-based MMORPG with amazing graphics"
 HOMEPAGE="http://www.vendetta-online.com/"
 SRC_URI="vendetta-linux-installer.sh"
-S=${WORKDIR}
 
 RESTRICT="nomirror fetch"
-
 LICENSE="guild"
 KEYWORDS="-* ~x86 ~amd64"
-IUSE="amd64"
+IUSE=""
 SLOT="0"
 
-DEPEND=""
 RDEPEND="virtual/x11
 	virtual/opengl
 	=x11-libs/gtk+-1.2*
