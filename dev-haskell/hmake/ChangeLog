@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hmake
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.2 2003/06/24 14:20:03 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.3 2003/06/24 15:10:10 kosmikus Exp $
+
+  24 Jun 2003; Andres Loeh <kosmikus@gentoo.org> hmake-3.08.ebuild,
+  files/patch-3.08-cpp:
+  Removed the patches again. Source archive includes them now.
 
 *hmake-3.08 (24 Jun 2003)
 
