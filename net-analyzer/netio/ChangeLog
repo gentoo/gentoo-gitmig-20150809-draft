@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netio
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/ChangeLog,v 1.3 2003/11/01 22:29:37 mholzer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/ChangeLog,v 1.4 2004/02/28 17:20:02 weeve Exp $
+
+  28 Feb 2004; Jason Wever <weeve@gentoo.org> netio-1.23.ebuild:
+  Added ~sparc keyword, resolves bug #43209.
 
   02 Nov 2003; Martin Holzer <mholzer@gentoo.org> netio-1.23.ebuild:
   adding unzip. Closes #32485
