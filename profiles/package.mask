@@ -4,6 +4,12 @@
 #for testing only
 =sys-apps/portage-1.9.4_pre1
 
+# pam-login is a new package that is based on util-linux's /bin/login,
+# but adds shadow features.
+>=sys-apps/util-linux-2.11o-r3
+>=sys-apps/shadow-4.0.2-r5
+>=sys-apps/pam-login-3.6
+
 # masked for security reasons
 # see
 # http://online.securityfocus.com/advisories/4061
