@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk-bin/eclipse-sdk-bin-2.1.ebuild,v 1.4 2003/09/06 23:50:42 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk-bin/eclipse-sdk-bin-2.1.ebuild,v 1.5 2003/12/04 08:27:11 karltk Exp $
 
 DESCRIPTION="Eclipse Tools Platform, full binary"
 HOMEPAGE="http://www.eclipse.org/"
@@ -9,7 +9,11 @@ IUSE=""
 
 SLOT="0"
 LICENSE="CPL-1.0"
-KEYWORDS="~x86 ~ppc ~sparc"
+# 2003-12-04: karltk
+# This ebuild has been deprecated. Please switch over to
+# dev-util/eclipse-sdk. We will not solicit updates to this
+# ebuild.
+KEYWORDS=""
 
 DEPEND="${RDEPEND}
 	>=virtual/jdk-1.3
