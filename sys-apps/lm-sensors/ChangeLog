@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.7 2003/10/18 17:11:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.8 2003/10/30 22:18:32 mholzer Exp $
+
+  31 Oct 2003; Martin Holzer <mholzer@gentoo.org> lm-sensors-2.7.0-r1.ebuild,
+  lm-sensors-2.7.0.ebuild, lm-sensors-2.8.0.ebuild:
+  changing slot to ${KV}
 
   19 Oct 2003; Martin Holzer <mholzer@gentoo.org> lm-sensors-2.7.0-r1.ebuild,
   lm-sensors-2.7.0.ebuild, lm-sensors-2.8.0.ebuild:
