@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.2-r2.ebuild,v 1.5 2004/03/30 18:52:45 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.2-r2.ebuild,v 1.6 2004/03/30 22:29:46 stkn Exp $
 
 inherit eutils
 
@@ -13,10 +13,10 @@ SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86 ppc sparc"
+KEYWORDS="x86 ppc sparc ~alpha"
 
 DEPEND=">=sys-apps/sed-4
-	>=dev-libs/pwlib-1.5.2
+	>=dev-libs/pwlib-1.5.2-r3
 	>=media-video/ffmpeg-0.4.7
 	ssl? ( dev-libs/openssl )"
 
@@ -39,7 +39,7 @@ pkg_setup() {
 	fi
 
 	if has_version ">=sys-devel/gcc-3.3.2"; then
-		ewarn "If you are experiencing problems emerging openh323 with gcc-3.3.2"
+		ewarn "If you are experiencing problems emerging openh323 with gcc-3.3.x"
 		ewarn "please try using CFLAGS=\"-O1\" when emergeing"
 		ewarn "we are currently investigating this problem..."
 		ewarn ""
@@ -67,7 +67,8 @@ src_compile() {
 	export OPENH323DIR=${S}
 
 	# NOTRACE avoid compilation problems, we disable PTRACING using NOTRACE=1
-	makeopts="${makeopts} ASNPARSER=/usr/bin/asnparser NOTRACE=1"
+	# setting LDFLAGS prevents openh323 from using the wrong libs
+	makeopts="${makeopts} ASNPARSER=/usr/bin/asnparser LDFLAGS=-L${S}/lib NOTRACE=1"
 
 	if [ "`use ssl`" ]; then
 		export OPENSSLFLAG=1
@@ -83,7 +84,13 @@ src_install() {
 	local OPENH323_ARCH ALT_ARCH
 	# make NOTRACE=1 opt ==> linux_$ARCH_n
 	# make opt           ==> linux_$ARCH_r
-	OPENH323_ARCH="linux_${ARCH}_n"
+
+	# amd64 needs special treatment
+	if [ ${ARCH} = "amd64" ]; then
+		OPENH323_ARCH="linux_x86_64_n"
+	else
+		OPENH323_ARCH="linux_${ARCH}_n"
+	fi
 
 	dodir /usr/bin /usr/lib/ /usr/share
 	make PREFIX=${D}/usr install || die "install failed"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.4 2004/03/30 14:44:23 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.5 2004/03/30 22:29:46 stkn Exp $
 
 IUSE="ssl"
 
@@ -88,7 +88,13 @@ src_install() {
 	local OPENH323_ARCH ALT_ARCH
 	# make NOTRACE=1 opt ==> linux_$ARCH_n
 	# make opt           ==> linux_$ARCH_r
-	OPENH323_ARCH="linux_${ARCH}_n"
+
+	# amd64 needs special treatment
+	if [ ${ARCH} = "amd64" ]; then
+		OPENH323_ARCH="linux_x86_64_n"
+	else
+		OPENH323_ARCH="linux_${ARCH}_n"
+	fi
 
 	dodir /usr/bin /usr/lib/ /usr/share
 	make PREFIX=${D}/usr install || die "install failed"
