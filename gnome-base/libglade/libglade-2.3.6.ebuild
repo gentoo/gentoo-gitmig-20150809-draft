@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.3.6.ebuild,v 1.11 2004/11/08 18:18:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.3.6.ebuild,v 1.12 2005/02/12 11:06:20 joem Exp $
 
 # FIXME : catalog stuff
 inherit gnome2
