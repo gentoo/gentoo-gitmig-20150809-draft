@@ -1,5 +1,5 @@
-MD5 f03d09b234c2fc2f6e745444f712c3c5 kcontrol-3.4.0_beta1.ebuild 1188
-MD5 05927a22a32783466152588ffed6e451 ChangeLog 490
+MD5 6b6878d73a86b9cbe81129a0276ae4eb kcontrol-3.4.0_beta1.ebuild 1217
+MD5 6ca10fd527dfa393fe6ee34870f319a2 ChangeLog 613
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-kcontrol-3.4.0_beta1 216
 MD5 64e656c39553f20b12d38eca1f8120d6 files/configure.in.in-kdm-settings.diff 686
