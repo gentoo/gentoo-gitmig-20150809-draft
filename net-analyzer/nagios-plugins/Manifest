@@ -1,18 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c0582d3362a3b47e25f82a08ea553ecf nagios-plugins-1.3.1-r1.ebuild 2826
+MD5 d5404db58e2a9319bb9292d1872b748d nagios-plugins-1.3.1-r1.ebuild 2867
 MD5 28e87bdecda2a6c56ad1fc2dc3f339db nagios-plugins-1.3.1.ebuild 1708
-MD5 5d85c52abb9ea4a7af5a38b5952c4d36 ChangeLog 4380
+MD5 f8b7b9707df098af88b0581fc737d2ee ChangeLog 4617
 MD5 a3aa02d9b004cdb8629496aa61024fb7 metadata.xml 256
 MD5 39af7074b023625d9a75730bd6932437 files/digest-nagios-plugins-1.3.1 72
+MD5 c8c25561d4871462ea03dc0490ced91b files/check_swap.c.patch 2212
 MD5 acb0b2b914b27b67b9a33807b1e6838e files/install-opts-fix.diff 3168
 MD5 ee71da291efd7427bd9786591a98df34 files/nagios-plugins-noradius.patch 2661
 MD5 39af7074b023625d9a75730bd6932437 files/digest-nagios-plugins-1.3.1-r1 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBoHX9T+MN7JbqCpMRAoxvAKCIy4yQ8Fh8Quvm7h3kW3vo5RUZ4wCfap0L
-mm8JxmnuhDYP8rB0ufehjXc=
-=fRSk
+iD8DBQFBoHs7T+MN7JbqCpMRAmeNAJ9PCZxLZQ0gTrFMAqSnVjcEf8eUBwCfciTl
+CEZI4jeW3NQwlgv0VuDWqII=
+=jXgD
 -----END PGP SIGNATURE-----

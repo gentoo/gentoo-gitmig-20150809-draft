@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.12 2004/11/21 11:08:39 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.13 2004/11/21 11:31:07 eldad Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nagios.org/"
 SRC_URI="mirror://sourceforge/nagiosplug/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="ldap mysql postgres ssl samba snmp nagios-dns nagios-ntp nagios-ping nagios-ssh"
 
 DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
@@ -40,6 +40,7 @@ src_compile() {
 	use ssl && myconf="${myconf} --with-openssl" || myconf="${myconf} --without-openssl"
 
 	epatch ${FILESDIR}/nagios-plugins-noradius.patch
+	epatch ${FILESDIR}/check_swap.c.patch
 
 	./configure ${myconf} \
 		--host=${CHOST} \
