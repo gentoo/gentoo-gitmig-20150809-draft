@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.137 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.138 2004/04/21 08:48:29 kumba Exp $
+
+  21 Apr 2004; Joshua Kinard <kumba@gentoo.org> qt-3.3.1-r2.ebuild:
+  Added a patch for mips that passes -Wa,-relax-branch to gcc/g++, otherwise the
+  build eventually dies. Also added ~mips to KEYWORDS, and added an 'inherit
+  eutils'.
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> qt-2.3.2-r1.ebuild,
   qt-3.2.3-r1.ebuild, qt-3.3.0-r1.ebuild, qt-3.3.1-r1.ebuild:
