@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.88.0.ebuild,v 1.2 2004/12/19 06:32:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.89.0.ebuild,v 1.1 2004/12/19 06:32:16 vapier Exp $
 
-inherit games flag-o-matic
+inherit games eutils
 
 DESCRIPTION="GNU/Linux port of the MAME emulator with GUI menu"
 HOMEPAGE="http://advancemame.sourceforge.net/"
@@ -29,6 +29,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-pic.patch #74899
 
 	use x86 && \
 		ln -s $(which nasm) "${T}/${CHOST}-nasm"
@@ -39,9 +41,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=""
-	is-flags -fPIC || myconf="$(use_enable x86 asm)"
-	env PATH="${PATH}:${T}" \
+	PATH="${PATH}:${T}"
 	egamesconf \
 		$(use_enable alsa) \
 		$(use_enable expat) \
@@ -53,6 +53,7 @@ src_compile() {
 		$(use_enable svga svgalib) \
 		$(use_enable truetype freetype) \
 		$(use_enable zlib) \
+		$(use_enable x86 asm) \
 		--with-emu=${PN/advance} \
 		|| die
 	emake || die "emake failed"
