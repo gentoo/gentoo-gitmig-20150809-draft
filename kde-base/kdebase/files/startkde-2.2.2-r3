@@ -1,0 +1,126 @@
+#!/bin/bash --login
+export KDEDIR="_KDEDIR_"
+export KDEDIRS="_KDEDIR_:${KDEDIRS}"
+export PATH="_KDEDIR_/bin:${PATH}"
+rm -rf ~/.kde
+ln -fs ~/.kde2 ~/.kde
+[ -e "~/.kde2" ] || mkdir ~/.kde2
+####################################################
+# DEFAULT GENTOO KDE STARTUP SCRIPT ( KDE-2.2.2 ) ##
+####################################################
+
+#################################
+#Initial cleanup of old sessions#
+#################################
+real_display=`echo $DISPLAY | sed "s/://" | sed "s/\..*//"`
+rm -f ~/.DCOPserver-`/bin/hostname`_$DISPLAY
+
+#####################################
+#Check for space on /tmp and "$HOME"#
+#If not, abort startup		    #
+#####################################
+space_tmp=`df /tmp | xargs | cut -d" " -f11`
+space_home=`df "$HOME" | xargs | cut -d" " -f11`
+
+if [ $space_tmp -lt 50 ]; then
+    echo $"Not enough free disk space on /tmp"
+    exit 1
+fi
+
+if [ $space_home -lt 25 ]; then
+    echo $"Not enough free disk space on "$HOME""
+    exit 1
+fi
+
+############################################
+#Check for write access on /tmp and "$HOME"#
+#If not, abort startup              	   #
+############################################
+testfile_tmp=`mktemp /tmp/KDE.startkde.XXXXXX`
+testfile_home=`mktemp "$HOME"/KDE.startkde.XXXXXX`
+
+if ! echo TEST_TEXT >$testfile_tmp 2>/dev/null ; then
+    echo $"You don't have write permissions for /tmp"
+    exit 1
+fi
+rm -f $testfile_tmp
+
+if ! echo TEST_TEXT >$testfile_home 2>/dev/null ; then
+     echo $"You don't have write permissions for "$HOME""
+     exit 1
+fi
+rm -f $testfile_home
+
+##########################
+#Set Background and stuff#
+##########################
+xsetroot -cursor_name left_ptr -solid '#5477A0'
+
+#####################
+#Set the KDE Home...#
+####################
+kdehome=$HOME/.kde
+test -n "$KDEHOME" && kdehome=$KDEHOME
+
+###########################
+#Activate Font Directories#
+###########################
+usr_odir=$kdehome/share/fonts/override
+usr_fdir=$kdehome/share/fonts
+if test -n "$KDEDIRS"; then
+  kdedirs_first=`echo $KDEDIRS|sed -e 's/:.*//'`
+  sys_odir=$kdedirs_first/share/fonts/override
+  sys_fdir=$kdedirs_first/share/fonts
+else
+  sys_odir=$KDEDIR/share/fonts/override
+  sys_fdir=$KDEDIR/share/fonts
+fi
+
+########################################################
+#Check for newly installed fonts, if we have permission#
+########################################################
+
+test -d $usr_odir && (mkfontdir $usr_odir ; xset +fp $usr_odir)
+test -d $sys_odir && xset +fp $sys_odir
+test -d $usr_fdir && (mkfontdir $usr_fdir ; xset fp+ $usr_fdir)
+test -d $sys_fdir && xset fp+ $sys_fdir
+
+####################################
+# Ask X11 to rebuild its font list.#
+####################################
+xset fp rehash
+
+##################################################################
+#Link "tmp" resource to directory in /tmp                        #
+#Create a dir /tmp/kde-$USER, links $KDEHOME/tmp-$HOSTNAME to it.#
+##################################################################
+lnusertemp tmp >/dev/null
+
+########################################################################
+#Link "socket" resource to directory in /tmp                           #
+#Create a dir /tmp/ksocket-$USER, links $KDEHOME/socket-$HOSTNAME to it#
+########################################################################
+lnusertemp socket >/dev/null
+
+########################
+#Start the splashscreen#
+########################
+ksplash
+
+###########################################################
+#Set LD_BIND_NOW to increase the efficiency of kdeinit.   #
+#kdeinit unsets this variable before loading applications.#
+###########################################################
+# turn it off, it creates aa trouble
+#LD_BIND_NOW=true kdeinit +kcminit +knotify
+kdeinit +kcminit +knotify
+
+###########################################################
+# finally, give the session control to the session manager#
+###########################################################
+ksmserver --restore
+
+##########
+#Clean up#
+##########
+kdeinit_shutdown
