@@ -374,6 +374,8 @@ class config:
 		for x in self.configlist:
 			if x.has_key(mykey):
 				returnme=returnme+expand(x[mykey],self.configlist)
+				#without this break, it concats all settings together -- interesting!
+				break
 		return returnme		
 	
 	def has_key(self,mykey):
