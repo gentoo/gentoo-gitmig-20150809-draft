@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.8.ebuild,v 1.3 2004/10/02 00:00:23 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.8.ebuild,v 1.4 2004/12/18 16:58:30 hansmi Exp $
 
 # flag-o-matic needed for replace-sparc64-flags
 inherit flag-o-matic eutils
@@ -10,13 +10,14 @@ SRC_URI="http://www.fefe.de/fnord/${P}.tar.bz2
 	mirror://gentoo/${P}-gentoo.diff"
 HOMEPAGE="http://www.fefe.de/fnord/"
 
-KEYWORDS="~x86 ~sparc ppc"
+KEYWORDS="~x86 sparc ppc"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
 DEPEND="dev-libs/dietlibc"
-RDEPEND="sys-apps/daemontools"
+RDEPEND="sys-apps/daemontools
+	sys-apps/ucspi-tcp"
 
 pkg_setup() {
 
