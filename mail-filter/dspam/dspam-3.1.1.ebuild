@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.1.ebuild,v 1.4 2004/08/28 04:21:17 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.1.ebuild,v 1.5 2004/09/06 00:55:55 ciaranm Exp $
 
 inherit eutils
 
@@ -49,7 +49,7 @@ pkg_setup() {
 		echo
 		ewarn "Waiting 30 seconds before starting..."
 		ewarn "(Control-C to abort)..."
-		sleep 30
+		epause 30
 	fi
 	id dspam 2>/dev/null || enewgroup dspam 65532
 	id dspam 2>/dev/null || enewuser dspam 65532 /bin/bash ${HOMEDIR} dspam
