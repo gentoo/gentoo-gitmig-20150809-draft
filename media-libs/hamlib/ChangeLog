@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/hamlib
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.11 2004/12/08 23:41:12 killsoft Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.12 2005/01/11 01:24:37 kloeri Exp $
+
+  11 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> hamlib-1.2.2.ebuild:
+  Stable on alpha.
 
   08 Dec 2004; Robb Romans <killsoft@gentoo.org> :
   New in 1.2.3:
