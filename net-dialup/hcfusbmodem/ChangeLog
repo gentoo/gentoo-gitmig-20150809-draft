@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/hcfusbmodem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/ChangeLog,v 1.8 2004/07/01 22:07:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/ChangeLog,v 1.9 2004/11/07 12:23:08 mrness Exp $
+
+*hcfusbmodem-1.01.04082400 (07 Nov 2004)
+
+  07 Nov 2004; Alin Nastac <mrness@gentoo.org>
+  +hcfusbmodem-1.01.04082400.ebuild:
+  version bump to latest full version
+  beta version no longer available on home page
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   hcfusbmodem-0.98.02090200.ebuild, hcfusbmodem-0.99.03042703.ebuild:
