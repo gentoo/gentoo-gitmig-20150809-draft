@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xrick
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/ChangeLog,v 1.6 2004/12/28 23:51:51 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/ChangeLog,v 1.7 2005/01/01 11:07:20 corsair Exp $
+
+  01 Jan 2005; Markus Rothe <corsair@gentoo.org> xrick-021212-r1.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
