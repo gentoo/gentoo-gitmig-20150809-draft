@@ -1,5 +1,15 @@
-MD5 d7b1096ca005191d2fbc73b502a16924 ChangeLog 899
-MD5 4feb27f11d950ebe858a945cb642d29e kedpm-0.4.0.ebuild 1561
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8a3a4a79c6d05f7409011500549a777e kedpm-0.4.0.ebuild 1568
+MD5 0b5789ee5699f6394a5f174e85d5cc92 ChangeLog 1003
 MD5 f18362b0e6199455a0da169b4f9298cf metadata.xml 362
-MD5 34870b4494ae80b5bdc9cc16ee6e4410 files/digest-kedpm-0.4.0 62
 MD5 3b9db9ce461473c5671acd122eb92b15 files/setup-doc.patch 627
+MD5 34870b4494ae80b5bdc9cc16ee6e4410 files/digest-kedpm-0.4.0 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB4pLZZ/iYVBmujdURAk1hAJ4thyHqeah26c8RNsJ4XdXBL+l0lgCg2MAO
+mvYzoiQYn7F4dQmFMJsE8Oc=
+=WWXz
+-----END PGP SIGNATURE-----

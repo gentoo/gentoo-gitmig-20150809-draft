@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/kedpm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.8 2005/01/01 11:07:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.9 2005/01/10 14:36:01 sekretarz Exp $
+
+  10 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org> kedpm-0.4.0.ebuild:
+  Added to ~amd64, bug #76049
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> kedpm-0.4.0.ebuild:
   Masked kedpm-0.4.0.ebuild stable for ppc
