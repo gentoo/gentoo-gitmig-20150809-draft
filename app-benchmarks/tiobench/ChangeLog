@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/tiobench
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.5 2004/06/24 21:29:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.6 2004/07/18 17:29:31 aliz Exp $
+
+  18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> :
+  Added amd64 keyword, closing #57108.
 
 *tiobench-0.3.3-r1 (03 Mar 2004)
 
