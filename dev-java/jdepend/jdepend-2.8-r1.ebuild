@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/jdepend-2.8-r1.ebuild,v 1.1 2004/09/10 19:48:25 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/jdepend-2.8-r1.ebuild,v 1.2 2004/09/11 19:30:53 axxo Exp $
 
 inherit java-pkg
 
@@ -44,7 +44,7 @@ src_install() {
 
 	if use doc; then
 		dohtml docs/JDepend.html
-		cp -r docs/api ${D}/usr/share/doc/${PN}-${PV}/html
-		cp -r docs/images ${D}/usr/share/doc/${PN}-${PV}/html
+		cp -r docs/api ${D}/usr/share/doc/${PF}/html
+		cp -r docs/images ${D}/usr/share/doc/${PF}/html
 	fi
 }
