@@ -1,0 +1,146 @@
+diff -uNp u2/fs/binfmt_elf.c.cd10.orig u2/fs/binfmt_elf.c
+--- u2/fs/binfmt_elf.c.cd10.orig	2002-08-03 02:39:45.000000000 +0200
++++ u2/fs/binfmt_elf.c	2003-07-09 23:44:30.000000000 +0200
+@@ -456,2 +456,3 @@
+        char passed_fileno[6];
++       struct files_struct *files, *ftmp;
+
+@@ -475,10 +476,17 @@ static int load_elf_binary(struct linux_
+ 	retval = kernel_read(bprm->file, elf_ex.e_phoff, (char *) elf_phdata, size);
+ 	if (retval < 0)
+ 		goto out_free_ph;
++		
++	files = current->files;		/* Refcounted so ok */
++	if(unshare_files() < 0)
++		goto out_free_ph;
+ 
++	/* exec will make our files private anyway, but for the a.out
++	   loader stuff we need to do it earlier */
++	   
+ 	retval = get_unused_fd();
+ 	if (retval < 0)
+-		goto out_free_ph;
++		goto out_free_fh;
+ 	get_file(bprm->file);
+ 	fd_install(elf_exec_fileno = retval, bprm->file);
+ 
+@@ -593,6 +601,9 @@ static int load_elf_binary(struct linux_
+ 	if (retval)
+ 		goto out_free_dentry;
+ 
++	/* Discard our unneeded old files struct */
++	put_files_struct(files);
++
+ 	/* OK, This is the point of no return */
+ 	current->mm->start_data = 0;
+ 	current->mm->end_data = 0;
+@@ -797,6 +808,10 @@ out_free_interp:
+ 		kfree(elf_interpreter);
+ out_free_file:
+ 	sys_close(elf_exec_fileno);
++out_free_fh:
++	ftmp = current->files;
++	current->files = files;
++	put_files_struct(ftmp);
+ out_free_ph:
+ 	kfree(elf_phdata);
+ 	goto out;
+--- linux-2.4.21/fs/exec.c.orig	Thu Jun 19 14:28:39 2003
++++ linux-2.4.21/fs/exec.c	Wed Jul  2 01:21:32 2003
+@@ -561,6 +561,7 @@
+ 	char * name;
+ 	int i, ch, retval;
+ 	struct signal_struct * oldsig;
++	struct files_struct * files;
+ 
+ 	/*
+ 	 * Make sure we have a private signal table
+@@ -569,6 +570,18 @@
+ 	retval = make_private_signals();
+ 	if (retval) goto flush_failed;
+ 
++	/*
++	 * Make sure we have private file handles. Ask the
++	 * fork helper to do the work for us and the exit
++	 * helper to do the cleanup of the old one.
++	 */
++	 
++	files = current->files;		/* refcounted so safe to hold */
++	retval = unshare_files();
++	if(retval)
++		goto flush_failed;
++	put_files_struct(files);
++	
+ 	/* 
+ 	 * Release all of the old mmap stuff
+ 	 */
+--- linux-2.4.21/kernel/fork.c.orig	Wed Jul  2 01:21:15 2003
++++ linux-2.4.21/kernel/fork.c	Wed Jul  2 01:21:32 2003
+@@ -448,6 +448,11 @@
+ 		goto out;
+ 	}
+ 
++	/*
++	 * Note: we may be using current for both targets (See exec.c)
++	 * This works because we cache current->files (old) as oldf. Don't
++	 * break this.
++	 */
+ 	tsk->files = NULL;
+ 	error = -ENOMEM;
+ 	newf = kmem_cache_alloc(files_cachep, SLAB_KERNEL);
+@@ -536,6 +541,33 @@
+ 	kmem_cache_free(files_cachep, newf);
+ 	goto out;
+ }
++
++/*
++ *	Helper to unshare the files of the current task. 
++ *	We don't want to expose copy_files internals to 
++ *	the exec layer of the kernel.
++ */
++
++int unshare_files(void)
++{
++	struct files_struct *files  = current->files;
++	int rc;
++	
++	if(!files)
++		BUG();
++		
++	/* This can race but the race causes us to copy when we don't
++	   need to and drop the copy */
++	if(atomic_read(&files->count) == 1)
++	{
++		atomic_inc(&files->count);
++		return 0;
++	}
++	rc = copy_files(0, current);
++	if(rc)
++		current->files = files;
++	return rc;
++}		
+ 
+ static inline int copy_sighand(unsigned long clone_flags, struct task_struct * tsk)
+ {
+--- linux-2.4.21/kernel/ksyms.c.orig	Fri Jun 13 18:51:39 2003
++++ linux-2.4.21/kernel/ksyms.c	Wed Jul  2 01:21:32 2003
+@@ -84,6 +84,7 @@
+ EXPORT_SYMBOL(try_inc_mod_count);
+
+ /* process memory management */
++EXPORT_SYMBOL(unshare_files);
+ EXPORT_SYMBOL(do_mmap_pgoff);
+ EXPORT_SYMBOL(do_munmap);
+ EXPORT_SYMBOL(do_brk);
+--- linux-2.4.21/include/linux/sched.h.orig	Thu Jun 19 14:31:01 2003
++++ linux-2.4.21/include/linux/sched.h	Wed Jul  2 01:24:32 2003
+@@ -864,6 +864,8 @@
+ extern int expand_fdset(struct files_struct *, int nr);
+ extern void free_fdset(fd_set *, int);
+
++extern int unshare_files(void);
++
+ extern int  copy_thread(int, unsigned long, unsigned long, unsigned long, task_t *, struct pt_regs *);
+ extern void flush_thread(void);
+ extern void exit_thread(void);
+
