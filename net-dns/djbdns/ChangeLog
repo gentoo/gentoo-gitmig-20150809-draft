@@ -1,9 +1,8 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.8 2002/12/09 04:33:09 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.9 2002/12/13 10:59:52 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *djbdns-1.05-r5 (17 Nov 2002)
 

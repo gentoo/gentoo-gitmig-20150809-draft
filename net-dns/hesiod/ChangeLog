@@ -1,9 +1,8 @@
 # ChangeLog for net-dns/hesiod
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.3 2002/12/09 04:33:11 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.4 2002/12/13 10:59:52 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *hesiod-3.0.2 (8 Jun 2002)
 
