@@ -1,35 +1,31 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r1.ebuild,v 1.5 2003/08/27 21:51:31 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r1.ebuild,v 1.6 2003/11/10 09:03:38 spyderous Exp $
 
-S=${WORKDIR}/pvm-${PV}
+MY_P="${P/-}"
 DESCRIPTION="PVM: Parallel Virtual Machine"
-SRC_URI="ftp://ftp.netlib.org/pvm3/pvm${PV}.tgz "
 HOMEPAGE="http://www.epm.ornl.gov/pvm/pvm_home.html"
+SRC_URI="ftp://ftp.netlib.org/pvm3/${MY_P}.tgz "
 IUSE=""
-
-DEPEND="virtual/glibc"
-RDEPEND=""
-
+DEPEND=""
+RDEPEND="virtual/glibc"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ~alpha"
+S="${WORKDIR}/${MY_P%%.*}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}
-	patch -p0 <${FILESDIR}/pvm-3.4.4-gentoo.diff || die
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.diff || die
 }
 
 src_compile() {
-	cd ${WORKDIR}/pvm3
-	export PVM_ROOT=${WORKDIR}"/pvm3"
+	export PVM_ROOT="${S}"
 	emake || die
 }
 
 src_install() {
-	cd ${WORKDIR}/pvm3
-
 	dodir /usr/share/man
 	rm man/man1 -fr
 	mv man/man3 ${D}/usr/share/man/
@@ -47,11 +43,9 @@ src_install() {
 	echo PVM_ARCH=LINUX >>98pvm
 	insinto /etc/env.d
 	doins 98pvm
-
 }
 
 pkg_postinst() {
 	ewarn "Environment Variables have changed. Do not forget to reboot or perform"
 	ewarn "source /etc/profile before using pvm !"
 }
-
