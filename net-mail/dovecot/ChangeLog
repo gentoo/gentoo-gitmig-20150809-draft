@@ -1,0 +1,8 @@
+# ChangeLog for net-mail/dovecot
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.1 2004/04/10 14:21:11 g2boojum Exp $
+
+  10 Apr 2004; Grant Goodyear <g2boojum@hotmail.com> :
+  Long overdue new package.  Thanks to Zach Bagnell, Andreas Simon, Lars 
+  Trieloff, Andrew Cooks, Tony Vroon, and tseng.
+
