@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.18.ebuild,v 1.1 2005/01/07 21:52:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.18.ebuild,v 1.2 2005/01/10 15:04:06 mkennedy Exp $
 
 inherit common-lisp-common eutils
 
@@ -54,7 +54,7 @@ src_unpack() {
 	cp ${FILESDIR}/${PV}/customize-target-features.lisp-prefix \
 		${S}/customize-target-features.lisp
 	use x86 && use threads \
-		&& echo '(enable :sb-threads)' \
+		&& echo '(enable :sb-thread)' \
 		>>${S}/customize-target-features.lisp
 	use ldb \
 		&& echo '(enable :sb-ldb)' \
