@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.2.ebuild,v 1.2 2004/03/06 12:03:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.2.ebuild,v 1.3 2004/04/22 22:47:31 khai Exp $
 
 inherit gnome2
 
@@ -35,6 +35,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	gnome2_omf_fix
+
+	# Fix gtk-2.4 deprecation issues
+	epatch ${FILESDIR}/stardict-gtk24.patch
 }
 
 src_install() {
