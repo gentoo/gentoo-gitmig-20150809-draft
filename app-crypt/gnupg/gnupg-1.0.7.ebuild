@@ -1,10 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.0.7.ebuild,v 1.13 2002/10/17 12:57:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.0.7.ebuild,v 1.14 2002/11/30 03:12:22 vapier Exp $
 
-IUSE="nls"
-
-S="${WORKDIR}/${P}"
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
 SRC_URI="ftp://ftp.gnupg.org/pub/gcrypt/gnupg/${P}.tar.gz"
@@ -12,10 +9,10 @@ SRC_URI="ftp://ftp.gnupg.org/pub/gcrypt/gnupg/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
+IUSE="nls"
 
 DEPEND=">=sys-libs/zlib-1.1.3"
 RDEPEND="nls? ( sys-devel/gettext )"
-	
 
 src_unpack() {
 	unpack "${A}"
@@ -25,22 +22,19 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
+	local myconf="--enable-static-rnd=linux"
 	use nls || myconf="--disable-nls"
 
 	# Bug #6387, --enable-m-guard causes bus error on sparcs
 	if [ "${ARCH}" != "sparc" -a "${ARCH}" != "sparc64" ]; then
 		myconf="${myconf} --enable-m-guard"
 	fi
-	econf \
-		--enable-static-rnd=linux \
-		--host="${CHOST}" \
-		${myconf} || die
+	econf ${myconf}
 
-	emake || make || die
+	make || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc ABOUT-NLS AUTHORS BUGS COPYING ChangeLog INSTALL NEWS PROJECTS
 	dodoc README TODO VERSION
