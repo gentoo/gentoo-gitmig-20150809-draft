@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.25 2004/02/20 17:33:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.26 2004/03/19 18:34:47 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -75,28 +75,28 @@ ruby_econf() {
 			--localstatedir=/var/lib \
 			--with-ruby=${RUBY} \
 			${EXTRA_ECONF} \
-			$@ || die "econf failed"
+			"$@" || die "econf failed"
 	fi
 	if [ -f install.rb ] ; then
-		${RUBY} install.rb config --prefix=/usr $@ \
+		${RUBY} install.rb config --prefix=/usr "$@" \
 			|| die "install.rb config failed"
-		${RUBY} install.rb setup $@ \
+		${RUBY} install.rb setup "$@" \
 			|| die "install.rb setup failed"
 	fi
 	if [ -f setup.rb ] ; then
-		${RUBY} setup.rb config --prefix=/usr $@ \
+		${RUBY} setup.rb config --prefix=/usr "$@" \
 			|| die "setup.rb config failed"
-		${RUBY} setup.rb setup $@ \
+		${RUBY} setup.rb setup "$@" \
 			|| die "setup.rb setup failed"
 	fi
 	if [ -f extconf.rb ] ; then
-		${RUBY} extconf.rb $@ || die "extconf.rb failed"
+		${RUBY} extconf.rb "$@" || die "extconf.rb failed"
 	fi
 }
 
 ruby_emake() {
 	if [ -f makefiles -o -f GNUmakefile -o -f makefile -o -f Makefile ] ; then
-		make CC=${CC:-gcc} CXX=${CXX:-g++} $@ || die "emake for ruby failed"
+		make CC=${CC:-gcc} CXX=${CXX:-g++} "$@" || die "emake for ruby failed"
 	fi
 }
 
@@ -104,24 +104,24 @@ ruby_src_compile() {
 
 	# You can pass configure options via EXTRA_ECONF
 	ruby_econf || die
-	ruby_emake $@ || die
+	ruby_emake "$@" || die
 }
 
 ruby_einstall() {
 	local siteruby
 
 	if [ -f install.rb ] ; then
-		${RUBY} install.rb config --prefix=${D}/usr $@ \
+		${RUBY} install.rb config --prefix=${D}/usr "$@" \
 			|| die "install.rb config failed"
-		${RUBY} install.rb install $@ \
+		${RUBY} install.rb install "$@" \
 			|| die "install.rb install failed"
 	elif [ -f setup.rb ] ; then
-		${RUBY} setup.rb config --prefix=${D}/usr $@ \
+		${RUBY} setup.rb config --prefix=${D}/usr "$@" \
 			|| die "setup.rb config failed"
-		${RUBY} setup.rb install $@ \
+		${RUBY} setup.rb install "$@" \
 			|| die "setup.rb install failed"
 	elif [ -f extconf.rb -o -f Makefile ] ; then
-		make DESTDIR=${D} $@ install || die "make install failed"
+		make DESTDIR=${D} "$@" install || die "make install failed"
 	else
 		siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitedir"]')
 		insinto ${siteruby}
@@ -154,22 +154,22 @@ erubydoc() {
 
 ruby_src_install() {
 
-	ruby_einstall $@ || die
+	ruby_einstall "$@" || die
 
 	erubydoc
 }
 
 # erubyconf, erubymake and erubyinstall are kept for compatibility
 erubyconf() {
-	ruby_econf $@
+	ruby_econf "$@"
 }
 
 erubymake() {
-	ruby_emake $@
+	ruby_emake "$@"
 }
 
 erubyinstall() {
-	ruby_einstall $@
+	ruby_einstall "$@"
 }
 
 # prepall adds SLOT support for ruby.eclass
