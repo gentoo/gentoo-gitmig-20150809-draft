@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c488561f5cdd9e299a09baa0af5371b2 ChangeLog 1161
-MD5 21d547fd24ce3665a3750a6602dd583a audiotag-0.12.ebuild 692
+MD5 b3b20a25448857737991916243125177 ChangeLog 1248
+MD5 94dee29024ce5e8ec0c350ebed34660a audiotag-0.12.ebuild 693
+MD5 8469c5d769bd4afe077aa654bbbd3a68 audiotag-0.13.ebuild 710
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 e8f1def9185967b87508032e9b418483 audiotag-0.13.ebuild 714
 MD5 a226e76d5dc4582827fff8bc0f544130 files/digest-audiotag-0.12 64
 MD5 ed2c6c9a7a7d74e9f03f15a3558a03d0 files/digest-audiotag-0.13 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxRNIArHZZzCEUG0RAg+QAJ0Sy0KZfZ4xxQc2zgtypcVLAdBwEACfRZ3d
-CUVMJmMBaFDcMRWBKuW2mDE=
-=Ct0s
------END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.6a.ebuild,v 1.9 2004/12/16 08:56:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.6a.ebuild,v 1.10 2005/01/01 11:09:21 eradicator Exp $
 
 IUSE=""
 
