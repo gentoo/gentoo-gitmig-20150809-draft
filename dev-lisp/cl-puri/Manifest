@@ -1,4 +1,6 @@
-MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 3130e79cfa27a0a6eb2dbf3e2d48c3e5 cl-puri-1.3.1.ebuild 855
+MD5 32da1ed03f3b4d71ce99e949bf630ad0 cl-puri-1.3.1-r1.ebuild 706
 MD5 550ce97606493fd299aa12f6e06b9496 ChangeLog 318
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 6308a81de284883bda0b3b516c054b56 files/digest-cl-puri-1.3.1-r1 61
 MD5 6308a81de284883bda0b3b516c054b56 files/digest-cl-puri-1.3.1 61

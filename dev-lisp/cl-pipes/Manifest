@@ -1,4 +1,6 @@
-MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 b3e50d0999deb0dc14d4ee5f42ba65f3 cl-pipes-1.2.ebuild 839
 MD5 4ddba182bb18466088abbd9130ccf06a ChangeLog 428
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 48f55b594f1abb226397212bea011ea4 cl-pipes-1.2.1.ebuild 690
 MD5 fbc7c4a05ad9e1a874a7769c308018db files/digest-cl-pipes-1.2 67
+MD5 50aed0f14f4e4bca6fc2748b9cd21ee4 files/digest-cl-pipes-1.2.1 69

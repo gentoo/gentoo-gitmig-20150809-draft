@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-uffi
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/ChangeLog,v 1.8 2003/12/02 01:30:06 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/ChangeLog,v 1.9 2004/02/12 09:13:20 mkennedy Exp $
+
+*cl-uffi-1.4.6-r1 (12 Feb 2004)
+
+  12 Feb 2004; <mkennedy@gentoo.org> cl-uffi-1.4.6-r1.ebuild:
+  Cleanup for eclass changes.
 
 *cl-uffi-1.4.6 (01 Dec 2003)
 

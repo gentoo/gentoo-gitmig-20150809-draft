@@ -12,5 +12,7 @@ added from other CLXes around the net.  Main features:
  - XFREE86-VIDMODE extension
  - experimental RENDER extension
  - X Authority support that works with SSH forwarding
+
+CLX is to Common Lisp, what xlib is to C.
 </longdescription>
 </pkgmetadata>

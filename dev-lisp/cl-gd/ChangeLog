@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-gd
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/ChangeLog,v 1.4 2003/10/30 09:01:30 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/ChangeLog,v 1.5 2004/02/12 09:13:13 mkennedy Exp $
+
+*cl-gd-0.2.0-r1 (12 Feb 2004)
+
+  12 Feb 2004; <mkennedy@gentoo.org> cl-gd-0.2.0-r1.ebuild, metadata.xml:
+  Cleanup for eclass changes.
 
 *cl-gd-0.2.0 (30 Oct 2003)
 

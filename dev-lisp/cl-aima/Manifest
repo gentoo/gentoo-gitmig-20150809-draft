@@ -1,4 +1,6 @@
 MD5 87db609d57ed4d93a096c3c989f53e87 cl-aima-1.0.2.ebuild 1532
+MD5 3f474baa96d302265ef8baf67f92b99e cl-aima-1.0.2-r1.ebuild 1391
 MD5 4016507928fefb54dbbb55d1a427f380 ChangeLog 453
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 1b11e210086362909b8f0d4af6489c09 files/digest-cl-aima-1.0.2 136
+MD5 1b11e210086362909b8f0d4af6489c09 files/digest-cl-aima-1.0.2-r1 136

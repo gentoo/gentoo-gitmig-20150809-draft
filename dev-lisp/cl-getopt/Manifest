@@ -1,4 +1,6 @@
-MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 f627ed330ed4a452861f0fb72766ca8e cl-getopt-1.0.1.ebuild 836
 MD5 5201bf4839acbf90071f053a944b96fe ChangeLog 324
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 9929a081e3f615cf94cb6414d82dca83 cl-getopt-1.0.1-r1.ebuild 687
+MD5 7eafaa96d43ecbdee58c0f535c8813fa files/digest-cl-getopt-1.0.1-r1 62
 MD5 7eafaa96d43ecbdee58c0f535c8813fa files/digest-cl-getopt-1.0.1 62

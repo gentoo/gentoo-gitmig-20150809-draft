@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-meta
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-meta/ChangeLog,v 1.1 2004/01/27 21:59:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-meta/ChangeLog,v 1.2 2004/02/12 09:13:14 mkennedy Exp $
+
+*cl-meta-0.1.2-r1 (12 Feb 2004)
+
+  12 Feb 2004; <mkennedy@gentoo.org> cl-meta-0.1.2-r1.ebuild:
+  Cleanup for eclass changes.
 
 *cl-meta-0.1.2 (15 Jan 2004)
 

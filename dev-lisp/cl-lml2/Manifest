@@ -1,4 +1,6 @@
+MD5 e8f63c4323c2c3fb87674cd074b22696 cl-lml2-1.5.0.ebuild 763
+MD5 3aa12877b878d973b23ea747cd6217e6 ChangeLog 318
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 1bded94436b0a4ba85c71e0147ef5b15 cl-lml2-1.4.1.ebuild 904
-MD5 3aa12877b878d973b23ea747cd6217e6 ChangeLog 318
 MD5 4aed492f0cfd7414c3ae2d8fd98c7b88 files/digest-cl-lml2-1.4.1 61
+MD5 d5eee64ea0698fbdac2cb0644ba816de files/digest-cl-lml2-1.5.0 61

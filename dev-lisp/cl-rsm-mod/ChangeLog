@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-rsm-mod
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-mod/ChangeLog,v 1.1 2003/10/18 10:13:19 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-mod/ChangeLog,v 1.2 2004/02/12 09:13:19 mkennedy Exp $
+
+*cl-rsm-mod-1.2 (12 Feb 2004)
+
+  12 Feb 2004; <mkennedy@gentoo.org> cl-rsm-mod-1.2.ebuild:
+  Cleanup for eclass changes.
 
 *cl-rsm-mod-1.1 (18 Oct 2003)
 

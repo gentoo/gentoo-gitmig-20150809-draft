@@ -1,4 +1,6 @@
-MD5 b379aa8d1fae982a74023c7e8d17827a metadata.xml 479
+MD5 154a8d2414beba9c989cf6a232925f6d cl-syslog-0.9.1-r1.ebuild 737
 MD5 200063b7c11d84f86da87483b813b5da cl-syslog-0.9.1.ebuild 878
 MD5 141d019fd9225bcaea7da1c3ead63ace ChangeLog 407
+MD5 b379aa8d1fae982a74023c7e8d17827a metadata.xml 479
+MD5 018138c1f1cccb965321dd1de1984344 files/digest-cl-syslog-0.9.1-r1 65
 MD5 018138c1f1cccb965321dd1de1984344 files/digest-cl-syslog-0.9.1 65

@@ -1,4 +1,6 @@
 MD5 9d6b4c8f10563e19f53627b36cfce273 cl-html-template-0.1.2.ebuild 964
-MD5 52cb3e07425a725c8e62abf58972764d ChangeLog 588
+MD5 1c7aacae58d033d9fc50e66598a2e2b8 cl-html-template-0.1.2-r1.ebuild 747
+MD5 07b3b583bf877d7f4e0b840edf7090a1 ChangeLog 732
 MD5 62ae8c3eff56ac62a83acdd3a0ab6966 metadata.xml 702
+MD5 73454c494abcf80a74cbda0937b17070 files/digest-cl-html-template-0.1.2-r1 70
 MD5 73454c494abcf80a74cbda0937b17070 files/digest-cl-html-template-0.1.2 70

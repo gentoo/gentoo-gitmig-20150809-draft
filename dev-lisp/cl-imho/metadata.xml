@@ -2,4 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>common-lisp</herd>
+<longdescription>
+IMHO is a toolkit that provides facilities for building highly
+interactive web applications, like WebCheckout. Some of the features
+that are in a useful state at this point are: session management,
+componentized document construction, template-based HTML rendering,
+and Java/Javascript integration. It is a loose functional equivalent
+of Apple's WebObjects framework."
+</longdescription>
 </pkgmetadata>

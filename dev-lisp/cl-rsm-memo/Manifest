@@ -1,4 +1,6 @@
-MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 6fcdd764039077230e31d535db1a7300 cl-rsm-memo-1.1.1.ebuild 910
 MD5 b662ce5cc17fcca3415c17890835955c ChangeLog 431
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 5540f10a50224a3ad09cfbfae8e82f4f cl-rsm-memo-1.1.1-r1.ebuild 770
+MD5 0269150a658e18ffb065b13ff2673b6d files/digest-cl-rsm-memo-1.1.1-r1 67
 MD5 0269150a658e18ffb065b13ff2673b6d files/digest-cl-rsm-memo-1.1.1 67

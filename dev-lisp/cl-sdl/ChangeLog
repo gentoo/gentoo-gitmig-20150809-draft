@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-sdl
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/ChangeLog,v 1.4 2004/01/06 04:38:36 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/ChangeLog,v 1.5 2004/02/12 09:13:20 mkennedy Exp $
+
+*cl-sdl-0.2.2-r1 (12 Feb 2004)
+
+  12 Feb 2004; <mkennedy@gentoo.org> cl-sdl-0.2.2-r1.ebuild:
+  Cleanup for eclass changes.
 
 *cl-sdl-0.2.2 (05 Jan 2004)
 

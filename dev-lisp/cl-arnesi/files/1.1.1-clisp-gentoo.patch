@@ -1,0 +1,18 @@
+--- arnesi.asd~	2004-02-11 11:41:06.425327448 -0600
++++ arnesi.asd	2004-02-11 11:41:35.123964592 -0600
+@@ -32,6 +32,7 @@
+                              (:file "specials" :depends-on ("packages" "hash"))
+                              (:file "string" :depends-on ("packages" "list"))
+                              (:file "vector" :depends-on ("packages" "flow-control"))
++			     #-clisp
+                              (:module :code-transformers
+                               :components ((:file "cps" :depends-on (:walk "reconstruct"))
+ 					   (:file "reconstruct" :depends-on (:walk))
+@@ -60,6 +61,6 @@
+ 				     (:file "string"  :depends-on ("suite"))
+ 				     (:file "sequence" :depends-on ("suite"))
+ 				     (:file "suite")
+-				     (:file "walk" :depends-on ("suite")))))
++				     #-clisp (:file "walk" :depends-on ("suite")))))
+   :depends-on (:arnesi :FiveAM)
+   :in-order-to ((compile-op (load-op :arnesi))))

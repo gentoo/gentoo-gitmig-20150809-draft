@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-unit
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-unit/ChangeLog,v 1.3 2003/10/17 19:12:26 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-unit/ChangeLog,v 1.4 2004/02/12 09:13:21 mkennedy Exp $
+
+*cl-unit-1.3.1-r1 (12 Feb 2004)
+
+  12 Feb 2004; <mkennedy@gentoo.org> cl-unit-1.3.1-r1.ebuild:
+  Cleanup for eclass changes.
 
   17 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org> cl-unit-1.3.1.ebuild:
   preisnt, postrm

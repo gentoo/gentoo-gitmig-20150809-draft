@@ -1,0 +1,13 @@
+--- lml2-1.5.0/apache-dir.lisp~	2004-02-03 12:33:15.000000000 -0600
++++ lml2-1.5.0/apache-dir.lisp	2004-02-11 16:04:28.197093000 -0600
+@@ -141,8 +141,8 @@
+ 	     (html-stream
+ 	      stream
+ 	      ((:img :border "0" 
+-		     :src (format nil "~Aback.png" icon-base
+-				  :alt "[DIR]")))))
++		     :src (format nil "~Aback.png" icon-base)
++				  :alt "[DIR]"))))
+ 	   " "
+ 	   (write-name-link stream (first parent) (second parent))
+ 	   " "

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-xml
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xml/ChangeLog,v 1.1 2004/01/10 03:59:12 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xml/ChangeLog,v 1.2 2004/02/12 09:13:21 mkennedy Exp $
+
+*cl-xml-2-r1 (12 Feb 2004)
+
+  12 Feb 2004; <mkennedy@gentoo.org> cl-xml-2-r1.ebuild:
+  Cleanup for eclass changes.
 
 *cl-xml-2 (09 Jan 2004)
 

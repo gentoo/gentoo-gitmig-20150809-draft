@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-arnesi
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-arnesi/ChangeLog,v 1.1 2003/11/30 12:14:22 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-arnesi/ChangeLog,v 1.2 2004/02/12 09:13:13 mkennedy Exp $
+
+*cl-arnesi-1.1.1 (12 Feb 2004)
+
+  12 Feb 2004; <mkennedy@gentoo.org> cl-arnesi-1.1.1.ebuild,
+  files/1.1.1-clisp-gentoo.patch:
+  Cleanup for eclass changes.
 
 *cl-arnesi-1.1.0 (30 Nov 2003)
 
