@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.24 2004/08/28 16:16:45 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.25 2004/09/06 20:51:19 ciaranm Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -37,7 +37,7 @@ do_filter_flags() {
 		[ ! -z "${setting}" ] && \
 			replace-flags -mcpu="${setting}" -mtune="${setting}" && \
 			ewarn "-mcpu is deprecated on your arch\a\a\a" && \
-			sleep 5
+			epause 5
 		strip-unsupported-flags
 	fi
 

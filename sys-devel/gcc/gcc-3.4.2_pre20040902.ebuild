@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2_pre20040902.ebuild,v 1.3 2004/09/06 13:37:06 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2_pre20040902.ebuild,v 1.4 2004/09/06 20:51:19 ciaranm Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -90,7 +90,7 @@ do_filter_flags() {
 		[ ! -z "${setting}" ] && \
 			replace-flags -mcpu="${setting}" -mtune="${setting}" && \
 			ewarn "-mcpu is deprecated on your arch\a\a\a" && \
-			sleep 5
+			epause 5
 		strip-unsupported-flags
 	fi
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.318 2004/09/06 06:25:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.319 2004/09/06 20:51:19 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> gcc-3.4.1-r2.ebuild,
+  gcc-3.4.1.ebuild, gcc-3.4.2_pre20040902.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
   06 Sep 2004; Luca Barbato <lu_zero@gentoo.org> gcc-3.4.1-r2.ebuild:
   Marked ppc
