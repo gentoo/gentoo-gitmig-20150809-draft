@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.36 2004/03/05 18:14:08 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.37 2004/03/24 21:19:17 mr_bones_ Exp $
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> hdparm-5.3-r2.ebuild:
+  don't set DEPEND="${RDEPEND}" (bug #45343); IUSE; tidy
 
   02 Mar 2004; Brian Jackson <iggy@gentoo.org> hdparm-5.5.ebuild:
   adding initial s390 support
