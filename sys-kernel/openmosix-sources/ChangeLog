@@ -1,7 +1,18 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.45 2004/06/08 11:21:31 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.46 2004/06/14 20:01:13 voxus Exp $
 
+*openmosix-sources-2.4.22-r7 (14 Jun 2004)
+*openmosix-sources-2.4.22-r8 (14 Jun 2004)
+
+  14 Jun 2004; Konstantin Arkhipov <voxus@gentoo.org>
+  +files/openmosix-sources-2.4.22.signal_fix.patch,
+  +openmosix-sources-2.4.22-r8.ebuild:
+  Security update: added patch for clear_fpu macro (#53804).
+  
+  openmosix-sources-2.4.22-r7.ebuild:
+  Unmasked.
+  
   08 Jun 2004; Konstantin Arkhipov <voxus@gentoo.org>
   +files/openmosix-sources.CAN-2004-0001.patch,
   +files/openmosix-sources.CAN-2004-0181.patch,
