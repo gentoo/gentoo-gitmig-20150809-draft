@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.81a.ebuild,v 1.2 2003/11/19 19:37:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.82-r1.ebuild,v 1.1 2003/11/19 19:37:52 weeve Exp $
 
 inherit eutils
 
@@ -10,13 +10,24 @@ SRC_URI="http://get.bitlbee.org/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~alpha"
-IUSE="tcpd"
+KEYWORDS="~x86 ~sparc ~alpha"
+IUSE="debug jabber msn oscar yahoo"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	msn? ( >=net-libs/libsoup-1.99.26 )"
+
+pkg_setup() {
+	einfo "Note: as of bitlbee-0.82-r1, all protocols are useflags."
+	einfo "      Make sure you've enabled the flags you want."
+}
 
 src_unpack() {
 	unpack ${P}.tar.gz
+
+	# Patch from bitlbee to fix a segfault when trying to enable 
+	# unsupported accounts.
+	cd ${S}
+	epatch ${FILESDIR}/${P}-segv.diff
 
 	# Patch the default xinetd file to add/adjust values to Gentoo defaults
 	cd ${S}/doc
@@ -24,8 +35,14 @@ src_unpack() {
 }
 
 src_compile() {
+	# setup useflags
 	local myconf
-	use tcpd && myconf="${myconf} --tcpd=1"
+	use debug && myconf="${myconf} --debug=1"
+	use msn || myconf="${myconf} --msn=0"
+	use jabber || myconf="${myconf} --jabber=0"
+	use oscar || myconf="${myconf} --oscar=0"
+	use yahoo || myconf="${myconf} --yahoo=0"
+
 	econf --datadir=/usr/share/bitlbee --etcdir=/etc/bitlbee ${myconf}
 	emake || die "make failed"
 
@@ -48,7 +65,7 @@ src_install() {
 	dohtml -A sgml doc/*.sgml
 	doman doc/bitlbee.8
 
-	dobin utils/bitlbeed
+	dobin utils/bitlbeed utils/create_nicksfile.pl
 
 	insinto /etc/xinetd.d
 	newins doc/bitlbee.xinetd bitlbee
