@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r2.ebuild,v 1.7 2004/06/10 19:24:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r2.ebuild,v 1.8 2004/06/23 01:13:42 humpback Exp $
 
 inherit eutils
 
@@ -12,17 +12,17 @@ SRC_URI="http://jabberd.jabberstudio.org/1.4/dist/jabberd-${PV}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="!net-im/jabber-server
 	=dev-libs/pth-1.4.0
 	ssl? ( >=dev-libs/openssl-0.9.6i )
 	ldap? ( =net-nds/openldap-2* )"
 
-PDEPEND="msn? ( net-im/msn-transport )
-		 oscar? ( net-im/aim-transport )
-		 yahoo? ( net-im/yahoo-transport )
-		 icq? ( net-im/jit )"
+PDEPEND="msn? ( =net-im/msn-transport-1.2.8_rc1 )
+		 oscar? ( <net-im/aim-transport-20040131-r1 )
+		 yahoo? ( <net-im/yahoo-transport-2.3.1 )
+		 icq? ( <net-im/jit-1.1.6-r3 )"
 
 src_unpack() {
 	unpack jabberd-${PV}.tar.gz
