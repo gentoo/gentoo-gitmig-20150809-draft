@@ -1,14 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.4 2002/03/12 16:05:09 tod Exp
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/xtraceroute-0.9.0.ebuild,v 1.4 2002/07/18 23:22:52 seemant Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="neat graphical traceroute displaying route on the globe"
 SRC_URI="http://www.dtek.chalmers.se/~d3august/xt/dl/${P}.tar.gz
 	http://www.dtek.chalmers.se/~d3august/xt/dl/ndg_files.tar.gz"
 HOMEPAGE="http://www.dtek.chalmers.se/~d3august/xt/"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="x11-base/xfree
 	=x11-libs/gtk+-1.2*

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.35-r3.ebuild,v 1.1 2002/06/11 01:01:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.35-r3.ebuild,v 1.2 2002/07/18 23:22:51 seemant Exp $
 
 inherit perl-module
 
@@ -9,11 +9,15 @@ DESCRIPTION="A system to store and display time-series data"
 SRC_URI="http://ee-staff.ethz.ch/~oetiker/webtools/rrdtool/pub/${P}.tar.gz"
 HOMEPAGE="http://ee-staff.ethz.ca/~oetiker/webtools/rrdtool/"
 
-RDEPEND="tcltk? ( dev-lang/tcl )"
-
 DEPEND="perl? ( sys-devel/perl )
 	sys-apps/gawk
 	>=media-libs/libgd-1.8.3"
+
+RDEPEND="tcltk? ( dev-lang/tcl )"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 TCLVER=""
 
@@ -59,6 +63,7 @@ src_install () {
 	rm -rf ${D}/usr/doc
 	rm -rf ${D}/usr/html
 	rm -rf ${D}/usr/man
+	a
 	rm -rf ${D}/usr/contrib
 	rm -rf ${D}/usr/examples
 	
@@ -80,6 +85,8 @@ src_install () {
 		echo "package ifneeded Rrd ${PV} [list load [file join \$$dir .. tclrrd${PV}.so]]" \
 			>> ${D}/usr/lib/tcl${TCL_VER}/tclrrd${PV}/pkgIndex.tcl
 	)
+
+	dodoc CHANGES COPY* CONTR* README TODO
 
 }
 

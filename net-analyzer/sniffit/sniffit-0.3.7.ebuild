@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7.ebuild,v 1.3 2002/07/11 06:30:45 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7.ebuild,v 1.4 2002/07/18 23:22:51 seemant Exp $
 
 MY_P=${P/-/.}.beta
 S=${WORKDIR}/${MY_P}
@@ -9,7 +9,12 @@ SRC_URI="http://reptile.rug.ac.be/~coder/sniffit/files/${MY_P}.tar.gz
 	 http://www.clan-tva.com/m0rpheus/sniffit_0.3.7.beta-10.diff"
 HOMEPAGE="http://reptile.rug.ac.be/~coder/sniffit/sniffit.html"
 
-DEPEND=">=net-libs/libpcap-0.6.2 >=sys-libs/ncurses-5.2"
+DEPEND=">=net-libs/libpcap-0.6.2
+	>=sys-libs/ncurses-5.2"
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
@@ -26,5 +31,5 @@ src_compile() {
 src_install () {
 	dobin sniffit
 	doman sniffit.5 sniffit.8
-	dodoc README.FIRST PLUGIN-HOWTO
+	dodoc README* PLUGIN-HOWTO BETA* HISTORY LICENSE changelog
 }

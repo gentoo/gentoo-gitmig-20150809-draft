@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12.ebuild,v 1.3 2002/07/18 14:45:49 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12.ebuild,v 1.4 2002/07/18 23:22:51 seemant Exp $
 
 MY_P=${PN}-1.4a12
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="x86"
 
-DEPEND=">=sys-libs/glibc-2.1.3"
+DEPEND="virtual/glibc"
 
 src_install () {
 	cd ${S}

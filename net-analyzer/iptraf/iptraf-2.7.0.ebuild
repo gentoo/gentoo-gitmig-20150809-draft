@@ -1,13 +1,15 @@
 # Copyright 2001-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0.ebuild,v 1.1 2002/06/20 15:24:31 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0.ebuild,v 1.2 2002/07/18 23:22:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IPTraf is an ncurses-based IP LAN monitor"
 SRC_URI="ftp://ftp.cebu.mozcom.com/pub/linux/net/${P}.tar.gz"
 HOMEPAGE="http://cebu.mozcom.com/riker/iptraf/"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND=">=sys-libs/ncurses-5.2-r1"
 RDEPEND="${DEPEND}"
@@ -23,6 +25,5 @@ src_install() {
 	doman Documentation/*.8
 	htmlinto html
 	dohtml Documentation/*.{html}
-	dodir
-	/var/{lib,run,log}/iptraf
+	dodir /var/{lib,run,log}/iptraf
 }

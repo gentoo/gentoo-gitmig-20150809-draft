@@ -1,26 +1,29 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.2.ebuild,v 1.2 2002/07/11 06:30:43 drobbins Exp $
-A=netperf-2.2alpha.tar.gz
-S=${WORKDIR}/${PN}-2.2alpha
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.2.ebuild,v 1.3 2002/07/18 23:22:50 seemant Exp $
+
+MY_P=${P}alpha
+S=${WORKDIR}/${P}alpha
 DESCRIPTION="This is a brief readme file for the netperf TCP/UDP/sockets/etc
 performance benchmark tools"
-SRC_URI="ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/${A}"
+SRC_URI="ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/${MY_P}.tar.gz"
 HOMEPAGE="http://www.netperf.org/"
+
 DEPEND=""
 
-#RDEPEND=""
+SLOT="0"
+LICENSE="HP"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-   patch -p0 < ${FILESDIR}/netperf-2.2alpha.diff
+	patch -p0 < ${FILESDIR}/netperf-2.2alpha.diff
 }
 
 src_compile() {
 	
-	try make
-	#try make
+	make || die
 }
 
 src_install () {
@@ -32,4 +35,3 @@ src_install () {
 	
 
 }
-

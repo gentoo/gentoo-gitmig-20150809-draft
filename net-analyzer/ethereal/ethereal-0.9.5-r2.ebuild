@@ -1,13 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.5-r2.ebuild,v 1.1 2002/06/30 03:06:55 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.5-r2.ebuild,v 1.2 2002/07/18 23:22:43 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A commercial-quality network protocol analyzer"
 SRC_URI="http://www.ethereal.com/distribution/${P}.tar.gz"
 HOMEPAGE="http://www.ethereal.com/"
-LICENSE="GPL-2"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 RDEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.4

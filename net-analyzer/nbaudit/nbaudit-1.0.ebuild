@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/nbaudit-1.0.ebuild,v 1.7 2002/07/11 06:30:43 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/nbaudit-1.0.ebuild,v 1.8 2002/07/18 23:22:50 seemant Exp $
 
 
 # Its officially called nat10 but the name conflicts with other projects
@@ -14,13 +14,19 @@ HOMEPAGE="http://www.tux.org/pub/security/secnet/tools/nat10"
 
 DEPEND=""
 
+SLOT="0"
+LICENSE="GPL"
+KEYWORDS="x86"
+
 src_compile() {
 
-   mv Makefile Makefile.old
-   sed -e "s/# FLAGSM = -DLINUX -DSHADOW_PWD/FLAGSM = -DLINUX -DSHADOW_PWD -DNO_ASMSIGNALH/" -e "s/# LIBSM = -lshadow/LIBSM = -lshadow/" Makefile.old > Makefile
+	mv Makefile Makefile.old
+	sed -e "s/# \(FLAGSM = -DLINUX -DSHADOW_PWD\)/\1 -DNO_ASMSIGNALH/" \
+		-e "s/# LIBSM = -lshadow/LIBSM = -lshadow/" \
+		Makefile.old > Makefile
 
-   # NOTE: DO NOT SET CFLAGS OR THE PROGRAM WILL SEGFAULT
-   make all || die
+	# NOTE: DO NOT SET CFLAGS OR THE PROGRAM WILL SEGFAULT
+	make all || die
 
 }
 

@@ -1,14 +1,15 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.1-r6.ebuild,v 1.2 2002/07/11 06:30:45 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.1-r6.ebuild,v 1.3 2002/07/18 23:22:51 seemant Exp $
 
+S=${WORKDIR}/${P}
 DESCRIPTION="Automated port scan detector and response tool"
 HOMEPAGE="http://www.psionic.com/abacus/portsentry/"
-
 SRC_URI="http://www.psionic.com/tools/${P}.tar.gz"
-S=${WORKDIR}/${P}
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 

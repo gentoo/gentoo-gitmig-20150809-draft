@@ -1,20 +1,19 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.04-r1.ebuild,v 1.1 2002/07/02 09:51:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.04-r1.ebuild,v 1.2 2002/07/18 23:22:51 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Blinks keyboard LEDs (Light Emitting Diode) indicating outgoing
 and incoming network packets on selected network interface."
-
 HOMEPAGE="http://www.hut.fi/~jlohikos/tleds/"
 SRC_URI="http://www.hut.fi/~jlohikos/tleds/public/${P}.tgz
 	http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${P}-FuRy.patch.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
-DEPEND="virtual/glibc
-	X? ( virtual/x11 )"
+DEPEND="X? ( virtual/x11 )"
 
 
 src_unpack() {

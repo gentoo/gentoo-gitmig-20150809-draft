@@ -1,15 +1,18 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.6.6-r1.ebuild,v 1.2 2002/07/11 06:30:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.6.6-r1.ebuild,v 1.3 2002/07/18 23:22:43 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ettercap is a multipurpose sniffer/interceptor/logger for switched LAN."
 SRC_URI="http://ettercap.sourceforge.net/download/${P}.tar.gz"
 HOMEPAGE="http://ettercap.sourceforge.net"
-LICENSE="GPL-2"
-SLOT="0"
 
-DEPEND="sys-libs/ncurses	ssl? ( dev-libs/openssl )"
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND="sys-libs/ncurses
+	ssl? ( dev-libs/openssl )"
 
 src_compile() {
 	local myconf

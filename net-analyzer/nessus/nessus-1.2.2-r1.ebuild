@@ -1,30 +1,25 @@
 # Copyright 2000-2002 Achim Gottinger
 # Distributed under the GPL by Gentoo Technologies, Inc.
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-1.2.2-r1.ebuild,v 1.1 2002/07/17 10:41:02 carpaski Exp $
-
-LICENSE="GPL-2"
-DESCRIPTION="A remote security scanner for Linux"
-HOMEPAGE="http://www.nessus.org/"
-SLOT="1"
-KEYWORDS="x86 ppc"
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-1.2.2-r1.ebuild,v 1.2 2002/07/18 23:22:50 seemant Exp $
 
 S=${WORKDIR}
+DESCRIPTION="A remote security scanner for Linux"
+HOMEPAGE="http://www.nessus.org/"
+
 SRC_URI="ftp://ftp.nessus.org/pub/${PN}/${P}/src/${PN}-libraries-${PV}.tar.gz
 	 ftp://ftp.nessus.org/pub/${PN}/${P}/src/${PN}-core-${PV}.tar.gz
 	 ftp://ftp.nessus.org/pub/${PN}/${P}/src/${PN}-plugins-${PV}.tar.gz
 	 ftp://ftp.nessus.org/pub/${PN}/${P}/src/libnasl-${PV}.tar.gz"
 
-DEPEND="virtual/glibc
-	virtual/x11
+DEPEND="virtual/x11
 	sys-devel/m4
 	>=dev-libs/gmp-3.1.1
 	>=sys-libs/zlib-1.1.4
 	=x11-libs/gtk+-1.2*"
 
-RDEPEND="virtual/glibc virtual/x11
-	>=dev-libs/gmp-3.1.1
-	>=sys-libs/zlib-1.1.4
-	=x11-libs/gtk+-1.2*"
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
 
 
 src_compile() {
