@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0-r1.ebuild,v 1.9 2004/06/24 23:12:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0-r1.ebuild,v 1.10 2004/07/15 00:50:36 agriffis Exp $
 
 inherit gcc eutils gnuconfig libtool
 
 IUSE="ssl"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="libESMTP is a library that implements the client side of the SMTP protocol"
 SRC_URI="http://www.stafford.uklinux.net/libesmtp/${P}.tar.bz2"
 HOMEPAGE="http://www.stafford.uklinux.net/libesmtp/"
@@ -57,4 +56,3 @@ src_install () {
 	dodoc AUTHORS COPYING COPYING.GPL INSTALL ChangeLog NEWS Notes README TODO
 	dohtml doc/api.xml
 }
-
