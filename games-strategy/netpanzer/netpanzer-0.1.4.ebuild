@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.1.4.ebuild,v 1.1 2004/02/22 15:23:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.1.4.ebuild,v 1.2 2004/03/05 23:52:05 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="Fast-action multiplayer strategic network game"
 HOMEPAGE="http://netpanzer.berlios.de/"
@@ -35,15 +35,11 @@ src_compile() {
 }
 
 src_install() {
-	# don't put a '/' between ${D} and ${GAMES_PREFIX} because of a jam bug
-	# (more than 3 continuos slashes don't work
-	jam -sprefix=${D}${GAMES_PREFIX} \
-		-sdatadir=${D}${GAMES_DATADIR} \
-		-smandir=${D}/usr/share/man install || die "jam install failed"
+	jam -sDESTDIR="${D}" install || die "jam install failed"
 
 	cd ${WORKDIR}/${PN}data-${DATAVERSION}/ &&
-	jam -sprefix=${D}${GAMES_PREFIX} \
-		-sdatadir=${D}${GAMES_DATADIR} \
-		-smandir=${D}/usr/share/man install || die "jam install failed (on data package)"
+	# Don't use DESTDIR yet, because 0.1.3 didn't support that yet
+	jam -sdatadir="${D}${GAMES_DATADIR}" install \
+		|| die "jam install failed (data package)"
 	prepgamesdirs
 }
