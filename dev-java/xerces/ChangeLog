@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.38 2005/01/15 14:03:02 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.39 2005/01/15 15:58:08 luckyduck Exp $
+
+*xerces-2.3.0-r1 (15 Jan 2005)
+
+  15 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/xerces-2.3.0-gentoo.patch, +xerces-2.3.0-r1.ebuild,
+  xerces-2.3.0.ebuild:
+  removed packed jar issue of xerces-2.3.0. fixes bug #63287.
 
 *xerces-2.6.2-r2 (15 Jan 2005)
 
