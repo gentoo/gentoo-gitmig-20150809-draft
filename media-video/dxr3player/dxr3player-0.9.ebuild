@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/dxr3player-0.9.ebuild,v 1.2 2004/11/09 20:39:31 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/dxr3player-0.9.ebuild,v 1.3 2005/03/21 15:53:13 luckyduck Exp $
 
 DESCRIPTION="A DVD player for Linux, supports the DXR3 (aka Hollywood+) board."
 HOMEPAGE="http://dxr3player.sourceforge.net/"
