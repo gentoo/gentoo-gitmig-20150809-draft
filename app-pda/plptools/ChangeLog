@@ -3,6 +3,9 @@
 
 *plptools-0.11.ebuild (17 Dec 2002)
 
+  10 Apr 2003; B.Lauwers <blauwers@gentoo.org> plptools-0.11-r1.ebuild :
+  Fixed build per BUG 16017
+
   17 Dec 2002; B.Lauwers <blauwers@gentoo.org> :
   Initial release. Set of libraries and utilities to communicate with a Psion
   palmtop over a serial line. Ebuild submitted by Stas Gobunov <left@komus.net>
