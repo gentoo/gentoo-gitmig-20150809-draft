@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0_beta2.ebuild,v 1.2 2003/12/24 19:23:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0_beta2.ebuild,v 1.3 2003/12/26 12:18:49 caleb Exp $
 inherit kde-base flag-o-matic
 
 IUSE="alsa oggvorbis esd artswrappersuid mad"
@@ -19,7 +19,7 @@ KEYWORDS="~x86"
 
 newdepend "alsa? ( media-libs/alsa-lib virtual/alsa )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
-	esd? ( media-libs/esound )
+	esd? ( media-sound/esound )
 	mad? ( media-libs/libmad media-libs/libid3tag )
 	media-libs/audiofile
 	>=dev-libs/glib-2
