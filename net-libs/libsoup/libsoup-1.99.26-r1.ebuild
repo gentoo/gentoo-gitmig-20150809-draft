@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-1.99.26-r1.ebuild,v 1.1 2003/11/22 15:07:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-1.99.26-r1.ebuild,v 1.2 2003/11/22 15:18:24 liquidx Exp $
 
 inherit gnome.org libtool
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-msn.patch	
+	epatch ${FILESDIR}/${P}-msn.patch
 	# added --with-ssl=openssl|gnutls to choose between the two.
 	epatch ${FILESDIR}/${P}-with_ssl.patch
 	cd ${S}; aclocal; automake; autoconf
