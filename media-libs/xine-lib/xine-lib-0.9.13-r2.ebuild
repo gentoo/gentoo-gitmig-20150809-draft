@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r2.ebuild,v 1.4 2003/02/13 12:56:56 vapier Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r2.ebuild,v 1.5 2003/02/14 00:51:00 agenkin Exp $ 
 
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa"
 
@@ -26,7 +26,7 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 	esd? ( media-sound/esound )
 	dvd? ( >=media-libs/libdvdcss-0.0.3.3
 	       >=media-libs/libdvdread-0.9.2 )
-	arts? ( kde-base/kdelibs )
+	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
 	aalib? ( media-libs/aalib )
 	directfb? ( >=dev-libs/DirectFB-0.9.9

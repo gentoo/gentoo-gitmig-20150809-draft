@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.36 2003/02/12 07:18:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.37 2003/02/14 00:51:00 agenkin Exp $
 
 *xine-lib-1_beta4 (28 Jan 2003)
+
+  13 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Removed dependency on kdelibs (bug 15595).
 
   01 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
   Depending on >=flac-1.0.4 since compilation breaks with 1.0.1.
@@ -49,6 +52,9 @@
   Updated SRC_URI to pull from SF mirrors.
 	
 *xine-lib-0.9.13-r2 (02 Nov 2002)
+
+  13 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Removed dependency on kdelibs (bug 15595).
 
   01 Dec 2002; Martin Holzer <mholzer@gentoo.org> xine-0.9.13-r2.ebuild :
   Updated SRC_URI to pull from SF mirrors.
