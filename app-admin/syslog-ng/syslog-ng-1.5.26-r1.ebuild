@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.5.26-r1.ebuild,v 1.3 2003/06/29 15:24:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.5.26-r1.ebuild,v 1.4 2003/09/04 04:33:59 msterret Exp $
 
 DESCRIPTION="syslog replacement with advanced filtering features"
 SRC_URI="http://www.balabit.hu/downloads/syslog-ng/1.5/${P}.tar.gz"
@@ -45,6 +45,6 @@ src_install() {
 
 pkg_postinst() {
 	einfo "A sample configuration file can be found in /etc/syslog-ng."
-    einfo "To convert your existing syslog.conf for use with syslog-ng,"
-    einfo "use the syslog2ng script in /usr/share/doc/${PF}."
+	einfo "To convert your existing syslog.conf for use with syslog-ng,"
+	einfo "use the syslog2ng script in /usr/share/doc/${PF}."
 }

@@ -1,3 +1,6 @@
+MD5 7f265159e4301c280d967f7d940f18e6 ChangeLog 1095
+MD5 96f9cca8215d6e0286f08431592d3677 metadata.xml 597
+MD5 5c8184a23c5468c8f123917658364591 tripwire-2.3.1.2.ebuild 2835
 MD5 9493ba83857bc6cfcd276f74becaa98e files/digest-tripwire-2.3.1.2 142
 MD5 0700fa22e2353e11c842f48453703d96 files/tripwire-2.3.0-50-rfc822.patch.bz2 347
 MD5 fa08ee8d578671e3f18b1ce684e0fa31 files/tripwire-2.3.1-2-fhs.patch.bz2 327
@@ -11,6 +14,3 @@ MD5 9bbdaa3abc2c11b40d15b5d19d2c56f0 files/tripwire.txt 8401
 MD5 4a83584d44a4974cd6d48d695dfd1d67 files/twcfg.txt 604
 MD5 c0cf6e656870aa10c4ba2e4730080131 files/twinstall.sh 10100
 MD5 1c477e41e000e6579665e97f75a9cefb files/twpol.txt 51817
-MD5 7f265159e4301c280d967f7d940f18e6 ChangeLog 1095
-MD5 96f9cca8215d6e0286f08431592d3677 metadata.xml 597
-MD5 17bbd86a17600e0b787837cf44bda724 tripwire-2.3.1.2.ebuild 2844

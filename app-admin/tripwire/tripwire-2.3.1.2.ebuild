@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2.ebuild,v 1.4 2003/08/05 14:35:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2.ebuild,v 1.5 2003/09/04 04:32:20 msterret Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://flow.dl.sourceforge.net/sourceforge/tripwire/tripwire-${TW_VER}.
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 -alpha"
-#NOTE:  im working on integrating debians portability fixes, alpha support (at least) 
+#NOTE:  im working on integrating debians portability fixes, alpha support (at least)
 #		will be working soon.
 
 DEPEND="virtual/glibc
@@ -39,18 +39,18 @@ src_unpack() {
 	epatch ${FILESDIR}/tripwire-2.3.1-gcc3.patch.bz2
 	epatch ${FILESDIR}/tripwire-jbj.patch.bz2
 	epatch ${FILESDIR}/tripwire-mkstemp.patch.bz2
-	
+
 	# pull out the interesting debian patches
 	filterdiff  -i '*/man/man8/twadmin.8' \
 		-z  --strip=1	\
 		${DISTDIR}/tripwire_2.3.1.2-6.1.diff.gz > ${T}/debian-patch.diff
 	epatch ${T}/debian-patch.diff
-	
+
 	# cleanup ready for build
 	rm -rf ${S}/src/STLport*
 	touch ${S}/src/STLport_r ${S}/src/STLport_d
-}				
-	
+}
+
 src_compile() {
 	cd ${S}/src
 	emake release RPM_OPT_FLAGS="${CXXFLAGS}"
@@ -71,15 +71,15 @@ src_install() {
 
 	dodir /etc/tripwire
 	dodir /var/lib/tripwire/report
-	
+
 	exeinto /etc/cron.daily
 	doexe ${FILESDIR}/tripwire.cron
-	
+
 	dodoc README Release_Notes ChangeLog COPYING policy/policyguide.txt TRADEMARK \
 	${FILESDIR}/tripwire.gif ${FILESDIR}/tripwire.txt
 
 	insinto /etc/tripwire
-	doins ${FILESDIR}/twcfg.txt ${FILESDIR}/twpol.txt 
+	doins ${FILESDIR}/twcfg.txt ${FILESDIR}/twpol.txt
 
 	exeinto /etc/tripwire
 	doexe ${FILESDIR}/twinstall.sh
