@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.15.ebuild,v 1.1 2003/08/14 06:24:14 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.15.ebuild,v 1.2 2003/08/17 14:52:02 taviso Exp $
 
 IUSE="gdbm berkdb ldap mysql kerberos static ssl java pam" # otp krb4
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="The Cyrus SASL (Simple Authentication and Security Layer)"
 HOMEPAGE="http://asg.web.cmu.edu/sasl/"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~alpha"
 
 RDEPEND=">=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
@@ -36,6 +36,12 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# compaq-sdk checks for -D_REENTRANT.
+	# use -pthread to take care of all the cpp stuff.
+	# -taviso #24998 (17 Aug 03)
+	use alpha && append-flags -pthread -D_REENTRANT
+
 	libtoolize --copy --force
 	aclocal -I config -I cmulocal || die
 	autoheader || die
