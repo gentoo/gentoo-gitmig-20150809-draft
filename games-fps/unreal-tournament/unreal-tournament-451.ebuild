@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.3 2003/10/05 02:42:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.4 2004/01/15 03:08:09 vapier Exp $
 
 inherit games eutils
 
@@ -23,8 +23,7 @@ S=${WORKDIR}
 
 pkg_setup() {
 	check_license
-	games_get_cd System/
-	games_verify_cd ${PN}
+	cdrom_get_cds System/
 	games_pkg_setup
 }
 
@@ -41,13 +40,13 @@ src_install() {
 	dodir ${dir}
 
 	# Help, Logs, Music, Textures, Web
-	cp -rf ${GAMES_CD}/{Help,Logs,Music,Textures,Web} ${Ddir}/ || die "copy Help, Logs, Music, Textures, Web"
+	cp -rf ${CDROM_ROOT}/{Help,Logs,Music,Textures,Web} ${Ddir}/ || die "copy Help, Logs, Music, Textures, Web"
 	tar -zxf Credits.tar.gz -C ${Ddir} || die "extract credits texture"
 	# NetGamesUSA.com
 	tar -zxf NetGamesUSA.com.tar.gz -C ${Ddir}/ || die "extract NetGamesUSA.com"
 	# Sounds
 	dodir ${dir}/Sounds
-	cp -rf ${GAMES_CD}/Sounds/*.uax ${Ddir}/Sounds/ || die "copy Sounds"
+	cp -rf ${CDROM_ROOT}/Sounds/*.uax ${Ddir}/Sounds/ || die "copy Sounds"
 
 	# System
 	if [ `use 3dfx` ] ; then
@@ -56,7 +55,7 @@ src_install() {
 		tar -zxf OpenGL.ini.tar.gz -C ${Ddir} || die "install OpenGL ini"
 	fi
 	tar -zxf data.tar.gz -C ${Ddir} || die "extract System data"
-	cp ${GAMES_CD}/System/*.u ${Ddir}/System/ || die "copy System data"
+	cp ${CDROM_ROOT}/System/*.u ${Ddir}/System/ || die "copy System data"
 
 	# the most important things, ucc & ut :)
 	exeinto ${dir}
@@ -88,11 +87,11 @@ src_install() {
 	cd ${Ddir}
 	export HOME=${T}
 	export UT_DATA_PATH=${Ddir}/System
-	for f in `find ${GAMES_CD}/Maps/ -name '*.uz' -printf '%f '` ; do
-		./ucc decompress ${GAMES_CD}/Maps/${f} -nohomedir || die "uncompressing map ${f}"
+	for f in `find ${CDROM_ROOT}/Maps/ -name '*.uz' -printf '%f '` ; do
+		./ucc decompress ${CDROM_ROOT}/Maps/${f} -nohomedir || die "uncompressing map ${f}"
 		mv System/${f:0:${#f}-3} Maps/ || die "copy map ${f}"
 	done
-	cp -rf ${GAMES_CD}/Maps/*.unr ${Ddir}/Maps/ # some cd's have uncompressed maps ??
+	cp -rf ${CDROM_ROOT}/Maps/*.unr ${Ddir}/Maps/ # some cd's have uncompressed maps ??
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
 	# be different ... that means portage will try to unmerge some files (!)
