@@ -1,6 +1,20 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.2 2002/04/25 21:38:42 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.3 2002/04/29 08:29:14 seemant Exp $
+
+*xv-3.10a-r1 (29 Apr 2002)
+
+  29 Apr 2002; Seemant Kulleen <seemant@gentoo.org> xv-3.10a-r1.ebuild
+  files/digest-xv-3.10a.ebuild files/xv-naz-gentoo.patch :
+
+  This patch, submitted by NAZ (from #gentoo) now brings in png, jpeg and tiff
+  support.  The only issue is that, if you want support for one of those, you
+  get to have support for all of them.  While unfortunate, this unavoidable, due
+  to the manner in which xv's Makefiles are laid out.  To think, there actually
+  is a configure script.  And also, it's been more than half a decade since
+  this package came out -- you'd think the author would issue an upgrade.
+  </rant>
+
 
   25 Apr 2002; Thilo Bangert <bangert@gentoo.org> :
   
