@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.6 2002/11/14 20:37:54 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.7 2002/11/26 23:39:58 verwilst Exp $
+
+*k3b-0.7.5 (27 Nov 2002)
+
+  27 Nov 2002; Bart Verwilst <verwilst@gentoo.org>:
+  New version, removed all old ones
 
 *k3b-0.7.4 (14 Nov 2002)
 
