@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.5-r2.ebuild,v 1.4 2003/09/28 17:48:01 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.5-r2.ebuild,v 1.5 2003/10/11 19:04:55 lanius Exp $
 
 IUSE="nls gtk readline cups foomaticdb ppds"
 
@@ -39,7 +39,7 @@ src_compile() {
 		&& myconf="${myconf} --with-gimp" \
 		|| myconf="${myconf} --without-gimp"
 
-	if [ `use cups` ]; then
+	if [ "`use cups`" ]; then
 		myconf="${myconf} --with-cups"
 	else
 		myconf="${myconf} --without-cups"
@@ -68,6 +68,10 @@ src_compile() {
 src_install () {
 	make install DESTDIR=${D} || die
 
+	if [ ! "`use ppds`" ]; then
+		rm -fR ${D}/usr/share/cups/model/
+	fi
+
 	exeinto /usr/share/gimp-print
 	doexe test/{unprint,pcl-unprint,bjc-unprint,parse-escp2,curve,escp2-weavetest,run-testdither,run-weavetest,testdither}
 
@@ -77,4 +81,9 @@ src_install () {
 	dohtml doc/FAQ.html
 	dohtml -r doc/users_guide/html doc/developer/developer-html
 	rm -fR ${D}/usr/share/gimp-print/doc
+}
+
+pkg_postinst () {
+	einfo "The gimp-print ebuild no longer creates the ppds automatically, please use foomatic"
+	einfo "to do so or remerge gimp-print with the ppds use flag."
 }

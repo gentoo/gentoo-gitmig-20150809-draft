@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.24 2003/10/03 12:40:27 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.25 2003/10/11 19:04:55 lanius Exp $
+
+  11 Oct 2003; Heinrich Wendel <lanius@gentoo.org> gimp-print-4.2.5-r2.ebuild,
+  gimp-print-4.3.18.ebuild, gimp-print-4.3.19.ebuild,
+  gimp-print-4.3.20.ebuild, gimp-print-4.3.21.ebuild:
+  bug #25747
 
   03 Oct 2003; Heinrich Wendel <lanius@gentoo.org> gimp-print-4.3.21.ebuild:
   stable  bump
