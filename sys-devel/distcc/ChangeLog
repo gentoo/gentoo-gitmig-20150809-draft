@@ -1,10 +1,14 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.52 2003/07/11 02:07:10 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.53 2003/07/12 19:57:46 lisa Exp $
 
 *distcc-2.8 (09 Jul 2003)
   10 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
   New version released and committed (Still with the patch to fix tmpdir)
+
+  12 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  Changed the USE flags from 'gnome' to 'gtk2' since distccmon-gnome was
+  changed to use gtk instead of gnome libraries.
 
 *distcc-2.7.1 (01 Jul 2003)
 
