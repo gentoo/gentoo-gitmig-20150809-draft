@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/snes9x
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.5 2004/03/19 09:20:47 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.6 2004/04/12 06:56:17 mr_bones_ Exp $
+
+  11 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> snes9x-1.39-r1.ebuild,
+  snes9x-1.41.1.ebuild:
+  clean older ebuilds
 
 *snes9x-1.42 (04 Dec 2003)
 
