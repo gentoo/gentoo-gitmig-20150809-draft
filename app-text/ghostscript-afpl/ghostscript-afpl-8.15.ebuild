@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.15.ebuild,v 1.2 2004/09/29 15:33:04 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.15.ebuild,v 1.3 2004/11/30 13:57:40 lanius Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/ghostscript/${MY_P}.tar.gz
 
 LICENSE="Aladdin"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="X cups cjk gtk"
 
 PROVIDE="virtual/ghostscript"
@@ -73,7 +73,7 @@ src_compile() {
 	if use cups; then
 		echo 'include pstoraster/cups.mak' >> Makefile
 		sed -i -e 's:DEVICE_DEVS17=:DEVICE_DEVS17=$(DD)cups.dev:' Makefile
-		sed -i -e 's:LDFLAGS= $(XLDFLAGS):LDFLAGS=-L/usr/include -lcups -lcupsimage $(XLDFLAGS):' Makefile
+		sed -i -e 's:LDFLAGS=\(.*\)$(XLDFLAGS):LDFLAGS=\1-L/usr/include -lcups -lcupsimage $(XLDFLAGS):' Makefile
 	fi
 
 	# search path fix

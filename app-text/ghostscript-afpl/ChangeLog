@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.23 2004/09/29 15:33:04 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.24 2004/11/30 13:57:40 lanius Exp $
+
+  30 Nov 2004; lanius@gentoo.org ghostscript-afpl-8.15.ebuild:
+  fix compilation with cups; mark stable
 
   29 Sep 2004; Heinrich Wendel <lanius@gentoo.org>
   ghostscript-afpl-8.15.ebuild:
