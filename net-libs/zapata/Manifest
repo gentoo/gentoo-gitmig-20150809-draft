@@ -1,6 +1,6 @@
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
 MD5 267d8ff5ceac7982c38b127bc356fceb zapata-0.7.0.ebuild 688
-MD5 834108e0217dc1c3430c6ec2eab99314 ChangeLog 1033
+MD5 b3c901a24e42848a82d50af330c744d9 ChangeLog 879
 MD5 6ca7131df2dabefbffff95b3e1308b26 zapata-0.8.1.ebuild 695
 MD5 f3111e207e5114a1be6348dad3b5deb8 zapata-0.9.1.ebuild 740
 MD5 98e28c21184c73af63cfa49be07a7392 files/zapata-mkdir-usrinclude.patch 375
