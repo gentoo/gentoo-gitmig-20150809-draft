@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.3-r2.ebuild,v 1.5 2003/09/06 23:32:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.3-r2.ebuild,v 1.6 2003/09/10 22:25:13 msterret Exp $
 
 inherit distutils
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="x86 ~sparc ~alpha ~ppc"
 LICENSE="as-is"
 
- src_compile() {
+src_compile() {
 	export OPT=${CFLAGS}
 
 	#Build the core imaging library (libImaging.a)
@@ -28,7 +28,7 @@ LICENSE="as-is"
 
 	#Not configured by configure
 	sed \
-    	-e "s:\(JPEGINCLUDE=[[:blank:]]*/usr/\)local/\(include\).*:\1\2:" \
+		-e "s:\(JPEGINCLUDE=[[:blank:]]*/usr/\)local/\(include\).*:\1\2:" \
 	Makefile.orig > Makefile
 	emake || die
 	cd ${S}
@@ -39,7 +39,7 @@ src_install ()
 {
 	local mydoc="CHANGES* CONTENTS"
 	distutils_src_install
-    distutils_python_version
+	distutils_python_version
 
 	# install headers required by media-gfx/sketch
 	insinto "${ROOT}/usr/include/python${PYVER}"

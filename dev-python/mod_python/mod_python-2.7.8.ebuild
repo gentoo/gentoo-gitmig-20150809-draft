@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.8.ebuild,v 1.10 2003/09/06 23:32:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.8.ebuild,v 1.11 2003/09/10 22:29:45 msterret Exp $
 
 DESCRIPTION="Python module for Apache 1.x, not for Apache 2.x"
 SRC_URI="http://www.modpython.org/dist/${P}.tgz"
@@ -49,7 +49,7 @@ src_install() {
 
 	# compileall.py is needed or make install will fail
 	cp /usr/lib/python2.2/compileall.py ${D}usr/lib/python2.2/
- 	emake D=${D} install || die
+	emake D=${D} install || die
 	rm ${D}usr/lib/python2.2/compileall.py
 
 	insinto /etc/apache/conf/addon-modules

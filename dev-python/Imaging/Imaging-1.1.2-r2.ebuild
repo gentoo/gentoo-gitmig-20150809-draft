@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.2-r2.ebuild,v 1.15 2003/09/06 23:32:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.2-r2.ebuild,v 1.16 2003/09/10 22:25:13 msterret Exp $
 
 IUSE="tcltk"
 
@@ -36,7 +36,7 @@ src_compile() {
 
 	#Not configured by configure
 	sed \
-    	-e "s:\(JPEGINCLUDE=[[:blank:]]*/usr/\)local/\(include\).*:\1\2:" \
+		-e "s:\(JPEGINCLUDE=[[:blank:]]*/usr/\)local/\(include\).*:\1\2:" \
 		-e "s:\(OPT=[[:blank:]]*\).*:\1${CFLAGS}:" \
 	Makefile.orig > Makefile
 
