@@ -1,21 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.19.ebuild,v 1.5 2003/04/24 20:56:48 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.20-r1.ebuild,v 1.1 2003/04/24 20:56:48 vladimir Exp $
 
 DESCRIPTION="Static HTML photo album generator"
-
 HOMEPAGE="http://bins.sautret.org/"
-
 SRC_URI="http://jsautret.free.fr/BINS/${P}.tar.gz"
-
 LICENSE="GPL-2"
-
 SLOT="0"
-
 KEYWORDS="~x86 ~sparc ~alpha ~ppc"
 
 DEPEND=">=dev-lang/perl-5.6.1-r6
-        >=media-gfx/imagemagick-5.4.7-r2
+        >=media-gfx/imagemagick-5.5.5.3
+		>=dev-perl/perlmagick-5.5.5.3
         >=dev-perl/ImageSize-2.99
         >=dev-perl/ImageInfo-1.04-r1
         >=dev-perl/IO-String-1.01-r1
@@ -33,7 +29,6 @@ DEPEND=">=dev-lang/perl-5.6.1-r6
         >=dev-perl/XML-XQL-0.67"
 
 src_unpack() {
-
 	unpack ${P}.tar.gz
 	cd ${S}
 
@@ -51,6 +46,5 @@ src_unpack() {
 }
 
 src_install() {
-
 	env DESTDIR=${D} PREFIX="/usr" ./install.sh || die
 }
