@@ -1,0 +1,22 @@
+--- config.in	2003-09-28 09:46:38.000000000 +0100
++++ config.new	2003-12-23 22:46:02.000000000 +0000
+@@ -16,7 +16,8 @@
+ #INCLUDE	= ./libraries/4.1.12/include
+ #INCLUDE	= ./libraries/4.1.24.NC/include
+ #INCLUDE	= ./libraries/4.1.25/include
+-INCLUDE	= ./libraries/4.2.41/include
++#INCLUDE	= ./libraries/4.2.41/include
++INCLUDE		= /usr/include
+ 
+ # 2. Where is libdb?
+ #
+@@ -32,7 +33,8 @@
+ #LIB	= ./libraries/4.1.12/lib
+ #LIB	= ./libraries/4.1.24.NC/lib
+ #LIB	= ./libraries/4.1.25/lib
+-LIB	= ./libraries/4.2.41/lib
++#LIB	= ./libraries/4.2.41/lib
++LIB	= /usr/lib
+ 
+ #LIB	= ./libraries/1.85/lib
+ 
