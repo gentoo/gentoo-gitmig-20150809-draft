@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.22-r2.ebuild,v 1.15 2005/02/27 17:56:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.22-r2.ebuild,v 1.16 2005/02/28 11:33:42 robbat2 Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -127,10 +127,11 @@ src_unpack() {
 
 	# upstream bug http://bugs.mysql.com/bug.php?id=7971
 	# names conflict with stuff in 2.6.10 kernel headers
+	echo ${S}/client/mysqltest.c ${S}/extra/replace.c | xargs -n1 \
 	sed -i \
 		-e "s/set_bit/my__set_bit/g" \
 		-e "s/clear_bit/my__clear_bit/g" \
-	    ${S}/extra/replace.c || die "Failed to fix bitops"
+	    || die "Failed to fix bitops"
 }
 
 src_compile() {
