@@ -1,0 +1,7 @@
+MD5 177a862b422f866d313d6818cbcdb8f2 ChangeLog 528
+MD5 90518de7af3be8a9d9e05833a09aafac mailfront-0.76.ebuild 1356
+MD5 c8feb17068db3a9c76338795d2ae4b13 mailfront-0.85.ebuild 1600
+MD5 821bd667ade9f7f7db866a8da35ee79b files/digest-mailfront-0.76 65
+MD5 80b212672ab6ec0736b766f6fbc27b83 files/run-pop3front 268
+MD5 81d6dc7f2191d21b27936ca258bd52f1 files/run-smtpfront 460
+MD5 dce4100cef0a627afe76d6008b889ac5 files/digest-mailfront-0.85 65
