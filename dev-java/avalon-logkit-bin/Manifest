@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e0857f62912a8aa5ca73c488577970bb avalon-logkit-bin-1.2.ebuild 743
+MD5 6d4e8d4e18615955144f614fc0331ea6 ChangeLog 1294
 MD5 ff72aa4f1316339417dd2df2225c1983 avalon-logkit-bin-1.2.2.ebuild 834
-MD5 09f00c9c57123e48ef83472c3d7e48b1 ChangeLog 1207
+MD5 e0857f62912a8aa5ca73c488577970bb avalon-logkit-bin-1.2.ebuild 743
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 f91f5dde7fd989c6aa2d4fdf8ca3062a files/digest-avalon-logkit-bin-1.2.2 64
 MD5 cf94b537a4f9f4020d76a203b13ad0d6 files/digest-avalon-logkit-bin-1.2 66
+MD5 f91f5dde7fd989c6aa2d4fdf8ca3062a files/digest-avalon-logkit-bin-1.2.2 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBC4do/rLF9B432nYRAhJyAJ9SWb6UeUzYA7XLkWOVmkSj9MxszACfeG5H
-WR8YtSTT4Uz9El5lCZ3wQvc=
-=OJT/
+iD8DBQFBOqxlI1lqEGTUzyQRAs3kAJ9izg8VNwfzKBAvrwyuY7J47dui5QCgkAiv
+44MxC5LAOzRAhtwrUIcyRwk=
+=x5En
 -----END PGP SIGNATURE-----
