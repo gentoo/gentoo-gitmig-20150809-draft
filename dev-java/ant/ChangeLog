@@ -1,8 +1,12 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.15 2002/11/18 18:33:48 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.16 2002/11/22 16:26:38 strider Exp $
 
 *ant-1.5.1-r2 (18 Nov 2002)
+
+  22 Nov 2002; Adrian Almenar <strider@gentoo.org> ant-1.5.1-r2.ebuild
+  Changed Keywords "~x86 ~ppc" to "x86 ppc", inserting "~sparc64". Needs more
+  tests on sparc64 not only me.
 
   18 Nov 2002; Adrian Almenar <strider@gentoo.org> ant-1.5.1-r2.ebuild files/digest-ant-1.5.1-r2: Added (Marked for Testing)
   files/1.5.1/ant: Changed
