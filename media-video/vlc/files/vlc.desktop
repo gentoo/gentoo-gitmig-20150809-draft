@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Exec=/usr/bin/vlc
+Icon=/usr/share/vlc/vlc48x48.png
+Terminal=false
+Name=VLC Media Player
+GenericName=Media Player
+Categories=Application;AudioVideo;Player
