@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.8 2003/02/13 19:31:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.9 2003/05/17 11:20:57 mholzer Exp $
+
+*mtr-0.54 (17 May 2003)
+
+  17 May 2003; Martin Holzer <mholzer@gentoo.org> mtr-0.54.ebuild:
+  Version bumped. Closes #21135.
 
   13 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
