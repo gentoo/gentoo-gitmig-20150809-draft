@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.1-r2.ebuild,v 1.3 2003/02/13 17:02:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.1-r2.ebuild,v 1.4 2003/03/15 12:25:10 gmsoft Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/qt-x11-free-${PV}
 DESCRIPTION="QT version ${PV}"
 SLOT="3"
 LICENSE="QPL-1.0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa"
 
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.bz2"
 
@@ -59,6 +59,14 @@ src_unpack() {
 	    cp qmake.conf qmake.conf.orig
 	    sed -e "s:= gcc:= ${CC}:" qmake.conf.orig > qmake.conf
 	fi
+
+	# hppa need some additional flags
+	if [ "${ARCH}" = "hppa" ]; then
+		echo "QMAKE_CFLAGS += -fPIC -ffunction-sections" >> qmake.conf
+		echo "QMAKE_CXXFLAGS += -fPIC -ffunction-sections" >> qmake.conf
+		echo "QMAKE_LFLAGS += -ffunction-sections -Wl,--stub-group-size=25000" >> qmake.conf
+	fi
+
 	# on alpha we need to compile everything with -fPIC
 	if [ ${ARCH} == "alpha" ]; then
 	    cp qmake.conf qmake.conf.orig

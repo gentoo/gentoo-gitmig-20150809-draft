@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.53 2003/02/12 09:24:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.54 2003/03/15 12:25:10 gmsoft Exp $
 
   04 Feb 2003; Hannes Mehnert <hannes@gentoo.org> qt-3.1.0-r3.ebuild,
   qt-3.1.1-r2.ebuild: changed dependency from x11-libs/xft to virtual/xft
@@ -10,10 +10,18 @@
 
 *qt-3.1.0-r3 (02 Feb 2003)
 
+  15 mar 2003; Guy Martin <gmsoft@gentoo.org> qt-3.1.0-r3.ebuild :
+  Added some flags for a succefull build on hppa.
+  Added hppa to keywords.
+
   07 Feb 2003; Jason Wever <weeve@gentoo.org> qt-3.1.0-r3.ebuild ;
   Changed ~sparc keyword to sparc.
 
 *qt-3.1.1-r2 (02 Feb 2003)
+
+  15 mar 2003; Guy Martin <gmsoft@gentoo.org> qt-3.1.1-r2.ebuild :
+  Added some flags for a succefull build on hppa.
+  Added ~hppa to keywords.
 
   02 Feb 2003; Hannes Mehnert <hannes@gentoo.org> qt-3.1.0-r3.ebuild,
   qt-3.1.1-r2.ebuild: added xft dependency
