@@ -1,3 +1,5 @@
-MD5 a0facf6bdb5286c306ddd87f4d4647ec files/digest-kssh-0.6 63
-MD5 445b7b2cf3c2f5985995becd2d6c354e kssh-0.6.ebuild 504
 MD5 11f0f187c12a6dd6d8cc362108508eb0 ChangeLog 730
+MD5 445b7b2cf3c2f5985995becd2d6c354e kssh-0.6.ebuild 504
+MD5 1d1d283f858fcba2a68a729cde844360 kssh-0.7.ebuild 481
+MD5 a0facf6bdb5286c306ddd87f4d4647ec files/digest-kssh-0.6 63
+MD5 4c3c8f2d16263edcc08db53c5e0929ea files/digest-kssh-0.7 60
