@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/project-starfighter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/ChangeLog,v 1.6 2004/11/02 21:05:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/ChangeLog,v 1.7 2004/12/28 10:32:45 josejx Exp $
+
+  28 Dec 2004; Joseph Jezak <josejx@gentoo.org>
+  project-starfighter-1.1.ebuild:
+  Marked ppc stable.
 
   03 Nov 2004; Joseph Jezak <josejx@gentoo.org>
   project-starfighter-1.1.ebuild:
