@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.51 2004/08/24 04:07:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.52 2004/09/01 12:26:31 lv Exp $
+
+  01 Sep 2004; Travis Tilley <lv@gentoo.org> +files/cracklib-2.7-libdir.patch,
+  cracklib-2.7-r10.ebuild:
+  added a patch that makes cracklib lib64/lib32 aware. marked stable on amd64
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> cracklib-2.7-r7.ebuild,
   cracklib-2.7-r8.ebuild:

@@ -1,0 +1,15 @@
+diff -Nru cracklib,2.7.old/cracklib/Makefile cracklib,2.7/cracklib/Makefile
+--- cracklib,2.7.old/cracklib/Makefile	2004-09-01 08:05:36.149998376 -0400
++++ cracklib,2.7/cracklib/Makefile	2004-09-01 08:10:57.108205312 -0400
+@@ -27,7 +27,8 @@
+ 	-rm -f $(OBJ) $(LIB).so $(LIB).a $(LIB).so.$(VERSION) *~
+ 
+ install: $(LIB).so $(LIB).a crack.h
+-	install -m 755 $(LIB).so.$(VERSION) $(DESTDIR)/usr/lib
+-	ln -sf $(LIB).so.$(VERSION) $(DESTDIR)/usr/lib/$(LIB).so
+-	install -m 755 $(LIB).a $(DESTDIR)/usr/lib
++	install -m 644 $(LIB).so $(DESTDIR)/$(LIBDIR)
++	install -m 755 $(LIB).so.$(VERSION) $(DESTDIR)/$(LIBDIR)
++	ln -sf $(LIB).so.$(VERSION) $(DESTDIR)/$(LIBDIR)/$(LIB).so
++	install -m 755 $(LIB).a $(DESTDIR)/$(LIBDIR)
+ 	install -m 644 crack.h $(DESTDIR)/usr/include

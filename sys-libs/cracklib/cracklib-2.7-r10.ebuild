@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r10.ebuild,v 1.1 2004/08/12 08:10:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r10.ebuild,v 1.2 2004/09/01 12:26:31 lv Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.crypticide.org/users/alecm/security/${MY_P}.tar.gz"
 
 LICENSE="CRACKLIB"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ~ppc64 ~s390"
 IUSE="pam uclibc"
 
 RDEPEND="sys-apps/miscfiles
@@ -29,6 +29,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-redhat.patch
 	epatch ${FILESDIR}/${P}-gentoo-new.diff
 	epatch ${FILESDIR}/${P}-static-lib.patch
+	epatch ${FILESDIR}/${P}-libdir.patch
 
 	# add compressed dict support, taken from shadow-4.0.4.1
 	use uclibc && epatch ${FILESDIR}/${PN}-${PV}-gzip.patch
@@ -50,27 +51,27 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/{lib,sbin,include} /lib
+	dodir /usr/{$(get_libdir),sbin,include,lib} /$(get_libdir)
 	keepdir /usr/share/cracklib
 
-	make DESTDIR="${D}" install || die "make install failed"
+	make DESTDIR="${D}" install LIBDIR=/usr/$(get_libdir) || die "make install failed"
 
 	# Needed by pam
-	if [ ! -f "${D}/usr/lib/libcrack.a" ] && use pam
+	if [ ! -f "${D}/usr/$(get_libdir)/libcrack.a" ] && use pam
 	then
 		eerror "Could not find libcrack.a which is needed by core components!"
 		die "Could not find libcrack.a which is needed by core components!"
 	fi
 
 	# correct permissions on static lib
-	[ -x ${D}/usr/lib/libcrack.a ] && fperms 644 usr/lib/libcrack.a
+	[ -x ${D}/usr/$(get_libdir)/libcrack.a ] && fperms 644 usr/$(get_libdir)/libcrack.a
 
 	# put libcrack.so.2.7 in /lib for cases where /usr isn't available yet
-	mv ${D}/usr/lib/libcrack.so* ${D}/lib
+	mv ${D}/usr/$(get_libdir)/libcrack.so* ${D}/$(get_libdir)
 
 	# This link is needed and not created. :| bug #9611
-	cd ${D}/lib
-	dosym libcrack.so.2.7 /lib/libcrack.so.2
+	cd ${D}/$(get_libdir)
+	dosym libcrack.so.2.7 /$(get_libdir)/libcrack.so.2
 
 	## remove it, if not needed
 	##use pam || rm -f ${D}/usr/lib/libcrack.a
@@ -84,7 +85,7 @@ src_install() {
 	#fix the permissions on it as they may be wrong in some cases
 	fperms 644 usr/include/packer.h
 
-	preplib /usr/lib /lib
+	preplib /usr/$(get_libdir) /$(get_libdir)
 
 	dodoc HISTORY LICENCE MANIFEST POSTER README
 }
