@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.04.ebuild,v 1.4 2003/09/08 07:10:41 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.04.ebuild,v 1.5 2003/09/11 01:40:10 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A tiny, fast authoritative nameserver that queries LDAP and can be updated instantly"
@@ -19,18 +19,18 @@ RDEPEND="${DEPEND}
 	sys-apps/ucspi-tcp"
 
 src_compile() {
-    local myconf="--prefix=/usr "
+	local myconf="--prefix=/usr "
 
-    cd ${S}
-    ./configure ${myconf}
-    emake || die "Compilation failed"
+	cd ${S}
+	./configure ${myconf}
+	emake || die "Compilation failed"
 }
 
 src_install() {
-    einstall || die "Installation failed"
+	einstall || die "Installation failed"
 
 
-    dodoc AUTHORS CHANGELOG FAQ INSTALL  COPYING NEWS README* TODO
+	dodoc AUTHORS CHANGELOG FAQ INSTALL  COPYING NEWS README* TODO
 }
 
 pkg_postinst() {
