@@ -1,9 +1,14 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.1 2003/05/15 17:25:25 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.2 2003/06/12 12:37:08 yakina Exp $
+
+*im-ja-0.5 (12 Jun 2003)
+
+  12 Jun 2003; YAMAKURA Makoto <yakina@gentoo.org> im-ja-0.5.ebuild,
+  files/digest-im-ja-0.5: New version. Bug #22621 
 
 *im-ja-0.4 (16 May 2003)
 
-  16 May 2003; <yakina@gentoo.org> ChangeLog, Manifest, im-ja-0.4.ebuild,
+  16 May 2003; YAMAKURA Makoto <yakina@gentoo.org> ChangeLog, Manifest, im-ja-0.4.ebuild,
   files/digest-im-ja-0.4: Initial import. Ebuild submitted by Ryan Shaw
   and Edward Middleton. Bug #16408
