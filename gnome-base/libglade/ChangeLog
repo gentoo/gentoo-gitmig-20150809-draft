@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/libglade
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.52 2004/11/05 22:42:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.53 2004/12/06 03:09:34 obz Exp $
+
+*libglade-2.4.1 (06 Dec 2004)
+
+  06 Dec 2004; Mike Gardiner <obz@gentoo.org> +libglade-2.4.1.ebuild:
+  New version, had to rework the patch slightly to fit the new Makefile.am/in
 
   05 Nov 2004; Markus Rothe <corsair@gentoo.org> libglade-0.17-r6.ebuild:
   Marked ~ppc64; bug #69450
