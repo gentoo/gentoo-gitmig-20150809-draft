@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta3.ebuild,v 1.2 2003/01/29 02:12:16 agenkin Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta4.ebuild,v 1.1 2003/01/29 23:06:22 agenkin Exp $ 
 
 DESCRIPTION="Core libraries for Xine movie player."
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa"
 
 SLOT="0"
-KEYWORDS="-x86"
+KEYWORDS="~x86"
 
 S=${WORKDIR}/${PN}-${PV/_/-}
 SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}.tar.gz"
@@ -38,6 +38,7 @@ filter-flags "-maltivec -mabi=altivec"
 
 src_compile() {
 
+	# Use the built-in dvdnav plugin.
 	local myconf="--with-included-dvdnav"
 	
 	# Most of these are not working currently, but are here for completeness
