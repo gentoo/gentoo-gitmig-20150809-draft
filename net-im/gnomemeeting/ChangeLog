@@ -1,6 +1,13 @@
 # ChangeLog for net-im/gnomemeeting
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.9 2002/10/30 17:43:57 raker Exp $
+# $Header:
+
+*gnomemeeting-0.94.1 (12 Nov 2002)
+
+  12 Nov 2002; Matt Keadle <mkeadle@gentoo.org
+  gnomemeeting-*.ebuild:
+
+  Changed instances of 'Speex' to 'speex'
 
 *gnomemeeting-0.94.1 (24 Oct 2002)
 
