@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r4.ebuild,v 1.4 2003/02/15 19:52:43 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r5.ebuild,v 1.1 2003/02/27 08:48:02 vapier Exp $
 
 inherit eutils
 
@@ -41,7 +41,13 @@ src_install() {
 	dohtml -r html/*
 
 	insinto /usr/share/ntp
-	doins scripts/* ${FILESDIR}/ntp.conf
+	doins ${FILESDIR}/ntp.conf
+	rm -rf `find scripts/ \
+		-name '*.in' -o \
+		-name 'Makefile*' -o \
+		-name 'rc[12]' -o \
+		-name support`
+	mv scripts/* ${D}/usr/share/ntp/
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/ntpd.rc ntpd
 	insinto /etc/conf.d ; newins ${FILESDIR}/ntpd.confd ntpd
