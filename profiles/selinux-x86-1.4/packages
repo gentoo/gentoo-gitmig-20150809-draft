@@ -31,12 +31,12 @@
 *>=sys-apps/pam-login-3.14
 *>=sys-apps/shadow-4.0.3-r7
 *>=sys-apps/util-linux-2.12
-*>=sys-libs/pam-0.75-r9
-*>=sys-libs/pwdb-0.61-r4
+*>=sys-libs/pam-0.77
 
 # optional SELinux-patched programs:
 >=app-admin/logrotate-3.6.5-r1
 >=sys-apps/vixie-cron-3.0.1-r2
+>=sys-libs/pwdb-0.61-r4
 
 # must use coreutils (these RDEP on it):
 >=sys-apps/fileutils-4.1.11-r2
