@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.47 2004/01/06 16:01:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.48 2004/01/14 22:57:09 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
 # 	Seemant Kulleen <seemant@gentoo.org>
 # 	Aron Griffis <agriffis@gentoo.org>
 
-inherit eutils vim-doc
+inherit eutils vim-doc flag-o-matic
 ECLASS=vim
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_unpack
@@ -160,7 +160,10 @@ vim_src_unpack() {
 src_compile() {
 	local myconf confrule
 
-	# Fix bug #18245: Prevent "make" from the following chain:
+	# Fix bug 37354: Disallow -funroll-all-loops on amd64
+	[[ $ARCH == amd64 ]] && filter-flags -funroll-all-loops
+
+	# Fix bug 18245: Prevent "make" from the following chain:
 	# (1) Notice configure.in is newer than auto/configure
 	# (2) Rebuild auto/configure
 	# (3) Notice auto/configure is newer than auto/config.mk
