@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/urlview-0.9.ebuild,v 1.1 2001/07/18 00:46:22 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/urlview-0.9.ebuild,v 1.2 2002/04/26 05:34:23 tod Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="extracts urls from text and will send them to another app"
@@ -12,20 +12,32 @@ DEPEND=">=sys-libs/ncurses-5.2"
 #RDEPEND=""
 
 src_compile() {
-	try ./configure --infodir=/usr/share/info --mandir=/usr/share/man \
-	--prefix=/usr --sysconfdir=/etc --host=${CHOST}
+
+	./configure \
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--host=${CHOST} || die "Configure Failed"
 	
-	try emake
-	#try make
+	 emake || die "Parallel Make Failed"
+
 }
 
 src_install () {
 	
-	# try make prefix=${D}/usr install
 
-    try make DESTDIR=${D} install
-	 dodoc README INSTALL ChangeLog AUTHORS COPYING sample.urlview
-	 dobin url_handler.sh
+	dodir /usr/share/man/man1
+
+	make infodir=${D}/usr/share/info \
+		mandir=${D}/usr/share/man \
+		prefix=${D}/usr \
+		sysconfdir=${D}/etc \
+		install || die "Installation Failed"
+	
+	dodoc README INSTALL ChangeLog AUTHORS COPYING sample.urlview
+	dobin url_handler.sh
+
 }
 
 pkg_postinst() {

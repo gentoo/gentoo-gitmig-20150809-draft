@@ -1,7 +1,13 @@
 # ChangeLog for net-misc/urlview
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/ChangeLog,v 1.2 2002/04/26 05:34:23 tod Exp $
 
+*urlview-0.9 (25 Apr 2002)
+
+  25 Apr 2002; Tod Neidt <tod@gentoo.org> urlview-0.9.ebuild :
+
+  Fixed sandbox violation. Updated syntax.
+  
 *urlview-0.9 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
