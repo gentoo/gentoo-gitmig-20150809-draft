@@ -1,3 +1,5 @@
-MD5 47dfa08ad9924b143ca5175f4a23d672 iiimecf-11.4.1467.ebuild 664
+MD5 843b166e3bee84966982a4893c533111 iiimecf-11.4.1467.ebuild 664
+MD5 b5fdfdb443a94c51bb339c56188361e9 metadata.xml 175
+MD5 73ddb02506371ac49f62f27f2d5afc49 ChangeLog 371
 MD5 355b2f5cdf0a9c4263f3bc963a83f085 files/50iiimecf-gentoo.el 159
 MD5 5db19d1b3aa08ebd6259e5ef6a882b1d files/digest-iiimecf-11.4.1467 71
