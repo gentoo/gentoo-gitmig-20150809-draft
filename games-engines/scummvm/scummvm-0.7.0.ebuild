@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.7.0.ebuild,v 1.5 2005/01/23 03:04:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.7.0.ebuild,v 1.6 2005/01/24 04:29:51 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -37,6 +37,8 @@ src_compile() {
 		|| myconf="${myconf} --backend=x11"
 	use debug \
 		|| myconf="${myconf} --disable-debug"
+	use oggvorbis \
+		|| myconf="${myconf} --disable-mpeg2"
 
 	# not an autoconf script so dont call econf
 	# mpeg2 support needs vorbis (bug #79149) so turn it off if -oggvorbis
@@ -45,7 +47,6 @@ src_compile() {
 		$(use_enable mad) \
 		$(use_enable flac) \
 		$(use_enable oggvorbis vorbis) \
-		$(use_enable oggvorbis mpeg2) \
 		$(use_enable zlib) \
 		$(use_enable x86 nasm) \
 		${myconf} \

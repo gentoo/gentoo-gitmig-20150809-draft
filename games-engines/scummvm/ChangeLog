@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.19 2005/01/23 03:04:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.20 2005/01/24 04:29:51 mr_bones_ Exp $
+
+  23 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org> scummvm-0.7.0.ebuild:
+  fix non-working option (bug #79279)
 
   22 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org> scummvm-0.7.0.ebuild:
   mpeg2 support needs vorbis (bug #79149) so turn it off if -oggvorbis
