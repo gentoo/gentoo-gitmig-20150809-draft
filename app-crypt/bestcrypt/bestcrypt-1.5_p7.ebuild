@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.5_p7.ebuild,v 1.2 2005/01/01 12:25:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.5_p7.ebuild,v 1.3 2005/01/03 04:33:12 dragonheart Exp $
 
 inherit flag-o-matic eutils check-kernel
 
 MY_PN="bcrypt"
 DESCRIPTION="commercially licensed transparent filesystem encryption"
 HOMEPAGE="http://www.jetico.com/"
-SRC_URI="http://www.jetico.com/linux/BestCrypt-${PV/_p/-}.tar.gz"
+SRC_URI="mirror://gentoo/BestCrypt-${PV/_p/-}.tar.gz"
 
 LICENSE="bestcrypt"
 SLOT="0"

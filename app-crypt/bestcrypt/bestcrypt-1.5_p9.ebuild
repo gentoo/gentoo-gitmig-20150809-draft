@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.5_p9.ebuild,v 1.1 2005/01/03 04:23:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.5_p9.ebuild,v 1.2 2005/01/03 04:33:12 dragonheart Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs
 
@@ -33,7 +33,7 @@ MODULE_NAMES="bc(block:${S}/mod)
 		bc_serpent(block:${S}/mod/serpent)
 		bc_rc6(block:${S}/mod/rc6)
 		bc_twofish(block:${S}/mod/twofish)"
-		
+	
 src_unpack() {
 	unpack BestCrypt-${PV/_p/-}.tar.gz
 	cd ${S}
