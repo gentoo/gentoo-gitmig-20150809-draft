@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.9 2003/02/12 08:06:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.10 2003/02/25 18:18:21 gmsoft Exp $
 
   07 Feb 2002; Matthew Turk <satai@gentoo.org> libwww-5.4.0-r1.ebuild
   Block >=mysql-4 conditionally on USE=mysql.
@@ -8,6 +8,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *libwww-5.4.0-r1 (05 Sep 2002)
+
+  25 Feb 2003; Guy Martin <gmsoft@gentoo.org> libwww-5.4.0-r1.ebuild :
+  Added hppa to keywords.
 
   15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> libwww-5.4.0-r1.ebuild :
   Add alpha to KEYWORDS
