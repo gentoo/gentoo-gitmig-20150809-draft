@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/config-kernel/config-kernel-0.3.3.ebuild,v 1.2 2004/04/07 22:37:16 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/config-kernel/config-kernel-0.3.3.ebuild,v 1.3 2004/04/07 22:38:08 johnm Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 DEPEND=">=sys-apps/sed-4"
 RDEPEND="virtual/python"
-KEYWORDS="x86 amd64 ia64 ppc ppc64 sparc hppa mips"
+KEYWORDS="x86 amd64 ia64 ppc ppc64 sparc hppa mips alpha"
 IUSE=""
 
 src_unpack() {
