@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gimps/gimps-23.5.ebuild,v 1.4 2004/06/24 22:00:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gimps/gimps-23.5.ebuild,v 1.5 2004/11/04 19:51:34 spock Exp $
 
 IUSE=""
 DESCRIPTION="GIMPS - The Great Internet Mersenne Prime Search"
@@ -22,6 +22,7 @@ src_install () {
 
 	dodir ${I} /var/lib/gimps
 	cp mprime ${D}/${I}
+	chmod a-w ${D}/${I}/mprime
 	chown nobody:nogroup ${D}/${I}
 	chown nobody:nogroup ${D}/${I}/mprime
 
