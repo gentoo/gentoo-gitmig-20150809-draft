@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.68 2004/02/17 16:47:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.69 2004/02/22 20:50:14 aliz Exp $
+
+  22 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> util-linux-2.12-r5.ebuild:
+  Add installation of rdev on amd64. Closing #35902.
 
 *util-linux-2.12-r5 (17 Feb 2004)
 

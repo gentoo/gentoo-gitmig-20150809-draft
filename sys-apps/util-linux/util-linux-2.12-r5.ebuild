@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r5.ebuild,v 1.1 2004/02/17 16:47:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r5.ebuild,v 1.2 2004/02/22 20:50:14 aliz Exp $
 
 IUSE="crypt nls static pam selinux"
 
@@ -111,6 +111,9 @@ src_unpack() {
 
 	# /bin/kill is provided by procps ONLY
 	epatch ${FILESDIR}/${PN}-no-kill.patch
+
+	# Install rdev on amd64 platform
+	epatch ${FILESDIR}/${P}-amd64_rdev_installation.patch
 }
 
 src_compile() {
