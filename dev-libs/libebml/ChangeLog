@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.35 2005/03/11 18:50:00 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.36 2005/03/11 18:54:05 luckyduck Exp $
+
+  11 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> libebml-0.7.2.ebuild:
+  stable on x86
 
   11 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> libebml-0.7.3.ebuild:
   added ~amd64 to KEYWORDS.

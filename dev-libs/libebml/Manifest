@@ -8,8 +8,8 @@ MD5 8da77c73e5a7bd973a53e647c215bcdc libebml-0.6.0.ebuild 687
 MD5 4223efda32f877af89ed0fd99a255ccd libebml-0.7.3.ebuild 1451
 MD5 25052c5813057b2bc799cfb8303c5e5b libebml-0.7.0.ebuild 1066
 MD5 1e9f27778af3795bfdf2718583193a9e libebml-0.6.4.ebuild 1059
-MD5 eecb35c590705f39e5742d3116257883 libebml-0.7.2.ebuild 1173
-MD5 e8bc324edabf9bcf7e9433f2553bbc13 ChangeLog 5641
+MD5 ee8ac63eaf5bcec56182c4c7a17d20f5 libebml-0.7.2.ebuild 1174
+MD5 bd474541c4d624148a514f8c28181282 ChangeLog 5732
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 787d8df057d0dfeed620ab1d2f42b185 libebml-0.7.1-r1.ebuild 1194
 MD5 505ac5c579900c6a541ced0d9cc9442e files/libebml-shared.patch 1880
@@ -26,7 +26,7 @@ MD5 3ff5642e6fac5f3c15a074ae89af2e6c files/digest-libebml-0.7.1-r1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCMehe06ebR+OMO78RAvYjAJ43oSRjeuUYUXGRdujYFfFeNtvNFgCeIkEs
-TDOJGxZOGs+6I+SLbwsHuXM=
-=Vs6C
+iD8DBQFCMelT06ebR+OMO78RAgxgAKCYcl/JBILrbkhVTDfz8ygO1aJSiACfao5U
+ssDr4sQv0P6HuyZHoD7hLBs=
+=1Dr6
 -----END PGP SIGNATURE-----
