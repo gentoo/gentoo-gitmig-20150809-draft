@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/conectiva-crystal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/ChangeLog,v 1.10 2003/02/12 09:45:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/ChangeLog,v 1.11 2003/04/23 13:52:26 danarmak Exp $
+
+  23 Apr 2003; Dan Armak <danarmak@gentoo.org>
+  conectiva-crystal-021209.ebuild:
+  Added warning message about this theme being part of kdeartwork-3.1.
 
 *conectiva-crystal-021209 (09 Dec 02)
 
