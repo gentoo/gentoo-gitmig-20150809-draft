@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.15 2003/06/30 18:50:51 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.16 2003/07/02 09:43:09 liquidx Exp $
+
+  02 Jul 2003; Alastair Tse <liquidx@gentoo.org> gtkspell-2.0.4.ebuild,
+  files/gtkspell-2.0.4-docbookx.patch:
+  make docs use dtd 4.1.2 to workaround missing docbook-4.2 xml dtd
 
   30 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> gtkspell-2.0.4.ebuild:
   set ppc in keywords
