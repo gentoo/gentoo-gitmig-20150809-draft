@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.89.0.ebuild,v 1.2 2005/01/20 04:43:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.90.0.ebuild,v 1.1 2005/01/20 04:43:58 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -29,8 +29,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-pic.patch #74899
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-pic.patch" #74899
 
 	use x86 && \
 		ln -s $(which nasm) "${T}/${CHOST}-nasm"
