@@ -1,0 +1,57 @@
+# ChangeLog for media-fonts/culmus
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.1 2004/05/15 09:07:53 usata Exp $
+
+*culmus-0.93-r1 (15 May 2004)
+
+  15 May 2004; Mamoru KOMACHI <usata@gentoo.org> culmus-0.8.ebuild,
+  culmus-0.90-r1.ebuild, culmus-0.90.ebuild, culmus-0.93-r1.ebuild,
+  culmus-0.93.ebuild:
+  Moved from x11-misc. Changed font path location to /usr/share/fonts.
+  Closing bug #26217.
+
+  09 May 2004; <SeJo@gentoo.org> culmus-0.93.ebuild:
+  added ~ppc keyword
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> culmus-0.93.ebuild:
+  Added IUSE=
+
+  11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> culmus-0.90-r1.ebuild,
+  culmus-0.93.ebuild:
+  fixup and marked stable.
+
+*culmus-0.93 (30 Jan 2004)
+  30 Jan 2004; Meir Kriheli <mksoft@gentoo.org> culmus-0.93.ebuild:
+  New  upstream version
+  Now includes the fancy culmus fonts as well, closes #29314
+
+  30 Jan 2004; Meir Kriheli <mksoft@gentoo.org> culmus-0.8.ebuild:
+  Copyright set to 2004
+  
+  30 Jan 2004; Meir Kriheli <mksoft@gentoo.org> culmus-0.90.ebuild:
+  Copyright set to 2004
+
+  30 Jan 2004; Meir Kriheli <mksoft@gentoo.org> culmus-0.90-r1.ebuild:
+  Copyright set to 2004
+
+  24 Jan 2004; Brandon Hale <tseng@gentoo.org> metadata.xml:
+  Fix corrupted metadata, bug 39234.
+
+  15 Oct 2003; Alex Veber <coronalvr@gentoo.org> culmus-0.90-r1.ebuild:
+  move to stable
+
+*culmus-0.90-r1 (11 Sep 2003)
+  11 Sep 2003; Meir Kriheli <mksoft@gentoo.org> culmus-0.90-r1.ebuild:
+  Include upstream fixes for display problems with OpenOffice.org
+
+*culmus-0.90 (15 Aug 2003)
+
+  15 Aug 2003; Alex Veber <coronalvr@gentoo.org> culmus-0.90.ebuild:
+  version bump
+
+*culmus-0.8 (07 Apr 2003)
+
+  07 Apr 2003; Dan Armak <danarmak@gentoo.org> culmus-0.8.ebuild:
+  Culmus is a package of free Hebrew type1 fonts. Ebuild submitted by Meir
+  Kriheli. Closes submission #18377.
+
