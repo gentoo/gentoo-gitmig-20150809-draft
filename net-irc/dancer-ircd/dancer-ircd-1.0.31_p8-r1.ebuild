@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/dancer-ircd-1.0.31_p8-r1.ebuild,v 1.7 2004/05/29 16:16:27 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/dancer-ircd-1.0.31_p8-r1.ebuild,v 1.8 2004/06/10 19:34:42 agriffis Exp $
 
 DESCRIPTION="A ircd with ipv6 support use by the freenode network"
 HOMEPAGE="http://freenode.net/dancer_ircd.shtml"
@@ -53,7 +53,7 @@ src_compile() {
 
 src_install() {
 
-	if [ "`use doc`" ]
+	if use doc
 	then
 		echo doc
 		docbook2html -u doc/sgml/dancer-oper-guide/dancer-oper-guide.sgml
@@ -97,7 +97,7 @@ pkg_postinst() {
 		einfo "SMALLNET=\"n\" emerge dancer-ircd"
 	fi
 
-	if [ -z "`use doc`" ]
+	if ! use doc
 	then
 		einfo If you need the dancer-oper-guide or the
 		einfo dancer-user-guide, please reemerge with
