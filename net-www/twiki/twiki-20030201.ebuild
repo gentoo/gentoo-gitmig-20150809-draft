@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/gentoo-x86/net-www/tiki/tiki-1.6.ebuild
+# $Header: /var/cvsroot/gentoo-x86/net-www/twiki/twiki-20030201.ebuild,v 1.3 2004/01/27 23:18:40 mholzer Exp $ 
 
 inherit webapp-apache
 
