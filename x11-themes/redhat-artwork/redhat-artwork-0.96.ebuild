@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.96.ebuild,v 1.4 2004/08/04 23:01:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.96.ebuild,v 1.5 2004/08/13 22:34:47 mr_bones_ Exp $
 
 inherit eutils rpm
 
@@ -96,9 +96,9 @@ src_compile() {
 
 	)
 
-	[ -z "`use kde`" -o -z "`use gtk`" ] && (
+	if ! use kde || ! use gtk ; then
 		aclocal && autoconf && automake --add-missing || die "auto* failed"
-	)
+	fi
 
 	# paths have to be fixed for kde
 	use kde && (

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/redhat-artwork 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.35 2004/08/04 23:01:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.36 2004/08/13 22:34:47 mr_bones_ Exp $
+
+  13 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  redhat-artwork-0.96.ebuild:
+  fix use invocation
 
   04 Aug 2004; Alastair Tse <liquidx@gentoo.org> -redhat-artwork-0.39.ebuild,
   -redhat-artwork-0.47.ebuild, -redhat-artwork-0.81.ebuild,
