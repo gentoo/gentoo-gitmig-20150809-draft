@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.30 2004/02/18 20:24:52 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.31 2004/02/18 22:33:29 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -526,14 +526,19 @@ detect_arch() {
 	# with the neccessary info for the arch sepecific compatibility
 	# patchsets.
 	
-	local LOCAL_ARCH
-	local COMPAT_URI	
+	local ALL_ARCH
+	local LOOP_ARCH
+	local COMPAT_URI
 
-	LOCAL_ARCH="$(echo ${ARCH} | tr [a-z] [A-Z])"
-	COMPAT_URI="${LOCAL_ARCH}_URI"
-
-	ARCH_URI="${!COMPAT_URI}"
-	ARCH_PATCH="${DISTDIR}/${ARCH_URI/*\//}"
+	ALL_ARCH="X86 PPC PCC64 SPARC MIPS ALPHA ARM HPPA AMD64 IA64 X86OBSD"
+	for LOOP_ARCH in ${ALL_ARCH}
+	do
+		COMPAT_URI="${LOOP_ARCH}_URI"
+		COMPAT_URI="${!COMPAT_URI}"
+		ARCH_URI="${ARCH_URI} $(echo ${LOOP_ARCH} | tr [A-Z] [a-z])? ( ${COMPAT_URI} )"
+		
+		[ "${LOOP_ARCH}" == "$(echo ${ARCH} | tr [a-z] [A-Z])" ] && ARCH_PATCH="${DISTDIR}/${COMPAT_URI/*\//}"
+	done
 }
 
 
