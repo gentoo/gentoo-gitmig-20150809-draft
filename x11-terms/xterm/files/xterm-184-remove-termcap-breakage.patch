@@ -1,0 +1,11 @@
+diff -urN xterm-184.orig/Makefile.in xterm-184/Makefile.in
+--- xterm-184.orig/Makefile.in	2004-04-07 22:23:57.000000000 -0400
++++ xterm-184/Makefile.in	2004-04-07 22:24:38.000000000 -0400
+@@ -182,7 +182,6 @@
+ 
+ install-full \
+ install-tc ::
+-	@test -f /etc/termcap && echo 'You must install the termcap entry manually by editing /etc/termcap'
+ 
+ installdirs: $(INSTALL_DIRS)
+ 

@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.6 2004/04/08 01:57:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.7 2004/04/08 02:34:52 spyderous Exp $
+
+  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-179.ebuild,
+  xterm-184.ebuild, files/xterm-184-remove-termcap-breakage.patch:
+  After further discussion with Mike, decided to drop termcap support entirely
+  and stop resultant breakage with a one-line patch.
 
   07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-179.ebuild,
   xterm-184.ebuild:

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-184.ebuild,v 1.7 2004/04/08 01:57:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-184.ebuild,v 1.8 2004/04/08 02:34:52 spyderous Exp $
+
+inherit eutils
 
 IUSE="truetype"
 
@@ -14,11 +16,12 @@ LICENSE="X11"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
 
 DEPEND="virtual/x11
-	sys-apps/utempter
-	sys-libs/libtermcap-compat"
+	sys-apps/utempter"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
+
+	epatch ${FILESDIR}/${P}-remove-termcap-breakage.patch
 
 	# Keep the blue from previous xterms, instead of the dodgerblue and
 	# steelblue
