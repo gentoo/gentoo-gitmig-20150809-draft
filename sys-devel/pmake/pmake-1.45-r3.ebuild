@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r3.ebuild,v 1.2 2004/02/20 22:18:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r3.ebuild,v 1.3 2004/02/26 05:48:39 weeve Exp $
 
 inherit eutils
 EPATCH_SOURCE="${FILESDIR}"
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${PN}_${PV}-11.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha ia64 amd64"
+KEYWORDS="x86 ~ppc alpha ia64 amd64 ~sparc"
 
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}
