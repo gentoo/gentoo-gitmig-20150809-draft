@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.110 2004/01/15 04:17:13 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.111 2004/01/16 09:50:51 iggy Exp $
+
+*mm-sources-2.6.1-r4 (16 Jan 2004)
+
+  16 Jan 2004; Brian Jackson <iggy@gentoo.org> mm-sources-2.6.1-r4.ebuild:
+  version bump, changed to use kernel-2.eclass
 
 *mm-sources-2.6.1-r3 (14 Jan 2004)
 
