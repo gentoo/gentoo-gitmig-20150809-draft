@@ -1,19 +1,14 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.3 2002/04/26 06:49:28 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.4 2002/05/04 04:28:40 drobbins Exp $
 
 *cvs-1.11.2 (26 Apr 2002)
 
-  26 Apr 2002; Arcady Genkin <agenkin@thpoon.com> cvs-1.11.2.ebuild :
-
-  Updated to version 1.11.2
-  Changed download URI to use HTTP instead of FTP, b/c the ftp server of 
-  cvshome.org seems flaky.
+  26 Apr 2002; Arcady Genkin <agenkin@thpoon.com> cvs-1.11.2.ebuild : Updated
+  to version 1.11.2 Changed download URI to use HTTP instead of FTP, b/c the
+  ftp server of cvshome.org seems flaky.
 
 *cvs-1.11.1_p1 (16 Mar 2002)
 
-  16 Mar 2002; Bruce A. Locke <blocke@shivan.org> cvs-1.11.1_p1.ebuild :
-
-  Update to cvs 1.11.1p1 with Redhat's external zlib linking patch
-
-
+  16 Mar 2002; Bruce A. Locke <blocke@shivan.org> cvs-1.11.1_p1.ebuild : Update
+  to cvs 1.11.1p1 with Redhat's external zlib linking patch
