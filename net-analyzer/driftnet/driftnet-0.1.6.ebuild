@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6.ebuild,v 1.2 2002/08/14 12:11:44 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6.ebuild,v 1.3 2002/09/07 09:05:13 seemant Exp $
 
 DESCRIPTION="Driftnet is a program which listens to network traffic and picks out images from TCP streams it observes."
 HOMEPAGE="http://www.ex-parrot.com/~chris/driftnet/"
@@ -25,9 +25,9 @@ src_compile() {
 	then
 		emake || die "gtk+ build failed"
 		mv driftnet driftnet-gtk
-		make clean
+		make clean || die
 	fi
-	patch -p1 <${FILESDIR}/${P}-nogtk.patch
+	patch -p1 <${FILESDIR}/${P}-nogtk.patch || die
 	emake || die
 }
 
@@ -41,6 +41,4 @@ src_install () {
 	chown root.wheel ${D}/usr/bin/driftnet
 	chmod 750 ${D}/usr/bin/driftnet
 	chmod u+s ${D}/usr/bin/driftnet
-	
 }
-
