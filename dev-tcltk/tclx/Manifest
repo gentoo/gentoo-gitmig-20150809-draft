@@ -1,5 +1,5 @@
-MD5 fb1ad64462c4272607ec904893b7fa6a ChangeLog 1594
-MD5 38b88bd8284fb87a225ec2c57ab540d1 tclx-8.3-r1.ebuild 1948
+MD5 20a01eecae4250ad0fea39ad3dd01a03 ChangeLog 1724
+MD5 dcd8e4bcff04a1cf3b34f14f03aff46d tclx-8.3-r1.ebuild 1951
 MD5 2c26f37db546c97d3ee9e80ded3dfa13 tclx-8.3.ebuild 1627
 MD5 3c218afaa0edc44f1195d0c013f7d85c files/digest-tclx-8.3 180
 MD5 1d4e6ad4bf55d13d432197bc480ac445 files/digest-tclx-8.3-r1 188

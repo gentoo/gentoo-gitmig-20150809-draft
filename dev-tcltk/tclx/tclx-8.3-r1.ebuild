@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3-r1.ebuild,v 1.4 2003/11/16 17:34:17 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3-r1.ebuild,v 1.5 2003/12/16 02:24:54 weeve Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.slackware.com/pub/slackware/slackware-8.1/source/tcl/tclx/${P
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha amd64"
+KEYWORDS="~x86 ~ppc ~alpha amd64 ~sparc"
 
 DEPEND=">=dev-lang/tcl-8.4.2
 	X? >=dev-lang/tk-8.4.2"
