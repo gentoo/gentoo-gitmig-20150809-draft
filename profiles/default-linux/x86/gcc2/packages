@@ -78,7 +78,6 @@ dev-libs/elfutils
 ~sys-devel/prelink
 <=app-arch/rpm-4.1
 <=games-emulation/fceultra-0.90
-<=sys-apps/attr-2.4.1
 
 # Needs >=readline-4.2
 <media-sound/cdcd-0.6.4
