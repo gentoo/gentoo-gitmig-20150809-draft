@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.76 2005/04/03 11:29:00 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.77 2005/04/04 09:40:28 avenj Exp $
+
+  04 Apr 2005; Jon Portnoy <avenj@gentoo.org> dnsmasq-2.22.ebuild :
+  Stable on x86.
 
   03 Apr 2005; Hardave Riar <hardave@gentoo.org> dnsmasq-2.22.ebuild:
   Stable on mips, bug #86718.
