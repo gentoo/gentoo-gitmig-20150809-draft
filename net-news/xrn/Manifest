@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cf9da2a39aa7597d4ee7d56f945773e4 xrn-9.02.ebuild 1491
+MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
+MD5 1ae375d046d702199ae52c8b4bd9c774 ChangeLog 410
+MD5 69b946a3172cc8432fb0c88878783797 files/digest-xrn-9.02 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBAZazAXomK8S72HoRAm+lAJ9wJszAjuHFwNuG+Rt5any2O1q7sgCfYjcX
+kvxymzjh3Q89iIyOmGqgNGg=
+=tHzN
+-----END PGP SIGNATURE-----

@@ -1,0 +1,11 @@
+# ChangeLog for net-news/xrn
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/xrn/ChangeLog,v 1.1 2004/07/23 22:51:21 swegener Exp $
+
+*xrn-9.02 (24 Jul 2004)
+
+  24 Jul 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +xrn-9.02.ebuild:
+  Initial import, ebuild submitted by Alastair Murray
+  <alastairmurray@hotmail.com> in bug #56345.
+
