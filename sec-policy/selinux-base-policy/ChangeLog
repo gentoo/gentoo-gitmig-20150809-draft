@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.9 2003/11/13 05:57:48 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.10 2003/11/27 17:51:43 pebenito Exp $
+
+  27 Nov 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20031010-r1.ebuild:
+  Mark stable.  Add build USE flag for stage building.
 
 *selinux-base-policy-20031010-r1 (12 Nov 2003)
 

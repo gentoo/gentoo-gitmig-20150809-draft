@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20031010-r1.ebuild,v 1.1 2003/11/13 05:57:48 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20031010-r1.ebuild,v 1.2 2003/11/27 17:51:43 pebenito Exp $
 
-IUSE=""
+IUSE="build"
 
 DESCRIPTION="Gentoo base policy for SELinux"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
-DEPEND=""
+KEYWORDS="x86 ppc sparc"
+DEPEND="build? ( sys-devel/make )"
 RDEPEND="sys-devel/m4
 	 sys-devel/make"
 
@@ -25,13 +25,26 @@ src_unpack() {
 }
 
 src_install() {
-	dodir /etc/security/selinux/src
+	if use build; then
+		# generate a file_contexts
+		dodir ${POLICYDIR}/file_contexts
+		einfo "Ignore the checkpolicy error on the next line."
+		make -C ${S} \
+			FC=${D}/${POLICYDIR}/file_contexts/file_contexts \
+			${D}/${POLICYDIR}/file_contexts/file_contexts
 
-	insinto /etc/security
-	doins ${S}/appconfig/*
+		[ ! -f ${D}/${POLICYDIR}/file_contexts/file_contexts ] && \
+			die "file_contexts was not generated."
+	else
+		# install full policy
+		dodir /etc/security/selinux/src
 
-	cp -a ${S} ${D}/${POLICYDIR}
-	rm -fR ${D}/${POLICYDIR}/appconfig
+		insinto /etc/security
+		doins ${S}/appconfig/*
+
+		cp -a ${S} ${D}/${POLICYDIR}
+		rm -fR ${D}/${POLICYDIR}/appconfig
+	fi
 }
 
 pkg_postinst() {
