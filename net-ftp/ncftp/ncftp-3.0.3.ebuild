@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.0.2.ebuild,v 1.4 2001/06/24 20:13:37 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.0.3.ebuild,v 1.1 2001/07/18 18:55:42 jerry Exp $
 
 A=${P}-src.tar.gz
 S=${WORKDIR}/${P}
@@ -12,8 +12,7 @@ HOMEPAGE="http://www.ncftp.com/"
 DEPEND="virtual/glibc >=sys-libs/ncurses-5.2"
 
 src_compile() {
-
-    try ./configure --prefix=/usr/share/man --host=${CHOST}
+    try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST}
     try make
 }
 
@@ -23,4 +22,10 @@ src_install () {
 
     dodoc CHANGELOG FIREWALL-PROXY-README LICENSE.txt
         READLINE-README README WHATSNEW-3.0
+}
+
+pkg_postinst() {
+    if [ ! -e ${ROOT}usr/bin/ftp ]; then
+        ln -s lukemftp ${ROOT}/usr/bin/ftp
+    fi
 }
