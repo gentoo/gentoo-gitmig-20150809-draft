@@ -38,39 +38,26 @@ PCV="3.1.26"
 
 # We use build in /usr/src/linux in case of linux-extras
 # so we need no sources
-if [ ! "$PN" = "linux-extras" ] ; then
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 http://www.kernel.org/pub/linux/kernel/people/alan/2.4/patch-${KV}.bz2
-	 http://dice.mfa.kfki.hu/download/reiserfs-3.6.25-2.4.4/linux-2.4.4-knfsd-6.g.patch.gz
-	 http://dice.mfa.kfki.hu/download/reiserfs-3.6.25-2.4.4/linux-2.4.4-procinfo-1.d.patch.gz
-	 http://dice.mfa.kfki.hu/download/reiserfs-3.6.25-2.4.4/reiserfs-quota-2.4.4.dif.bz2"
+	http://www.kernel.org/pub/linux/kernel/people/alan/i2.4/patch-${KV}.bz2
+	http://dice.mfa.kfki.hu/download/reiserfs-3.6.25-2.4.4/linux-2.4.4-knfsd-6.g.patch.gz
+	http://dice.mfa.kfki.hu/download/reiserfs-3.6.25-2.4.4/linux-2.4.4-procinfo-1.d.patch.gz
+	http://dice.mfa.kfki.hu/download/reiserfs-3.6.25-2.4.4/reiserfs-quota-2.4.4.dif.bz2
+	http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz
+	ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMVARC}.tar.gz
+	ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2
+	http://prdownloads.sourceforge.net/pcmcia-cs/pcmcia-cs-${PCV}.tar.gz"
 
-#        http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-${JFSV}-patch.tar.gz
-#	 http://download.sourceforge.net/xmlprocfs/linux-2.4-xmlprocfs-${XMLV}.patch.gz
-#	 ftp://ftp.reiserfs.com/pub/reiserfs-for-2.4/linux-${OKV}-reiserfs-${RV}.patch.gz
-
-if [ "`use lm_sensors`" ] ; then
-    SRC_URI="${SRC_URI} http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz"
-fi
-if [ "`use lvm`" ] ; then
-    SRC_URI="${SRC_URI} ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMVARC}.tar.gz"
-fi
-if [ "`use alsa`" ] ; then 
-    SRC_URI="${SRC_URI} ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2"
-    if [ "$PN" = "linux" ] ; then
-	PROVIDE="virtual/kernel virtual/alsa"
-    else
+if [ "$PN" != "linux-extras" ]
+then
 	PROVIDE="virtual/kernel"
-    fi
 fi
-if [ "`use pcmcia-cs`" ] ; then
-    SRC_URI="${SRC_URI} http://prdownloads.sourceforge.net/pcmcia-cs/pcmcia-cs-${PCV}.tar.gz"
-fi
-
-else
-    if [ "`use alsa`" ] ; then
-	PROVIDE="virtual/alsa"
-    fi
+if [ "$PN" != "linux-sources" ]
+then
+	if [ "`use alsa`" ]
+	then
+		PROVIDE="$PROVIDE virtual/alsa"
+	fi
 fi
 
 HOMEPAGE="http://www.kernel.org/
