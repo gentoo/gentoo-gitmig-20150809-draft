@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.18 2004/10/18 05:46:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.19 2004/10/18 18:29:43 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -11,9 +11,16 @@
 # libxkbfile.so, libxkbui.so
 
 # TODO
-# 11 August 2004 <spyderous@gentoo.org>
-#   TARGET: patchset 0.2
-#		Nothing yet =)
+# 18 October 2004 <spyderous@gentoo.org>
+#   TARGET: 6.8.0-r2
+#		Add some logic so /usr/X11R6/lib can actually be a symlink
+#			- Move everything inside to /usr/lib while retaining its MD5 so
+#				it will still be uninstalled when portage follows the symlink.
+#				Note: A simple `mv` does this. Do in pkg_preinst().
+#   TARGET: 6.8.0-r3
+#		Same for /usr/X11R6/include
+#   TARGET: 6.8.0-r4
+#		Same for /usr/X11R6/bin
 
 inherit eutils flag-o-matic gcc xfree
 
@@ -174,6 +181,14 @@ cflag_setup() {
 }
 
 pkg_setup() {
+	#################################################
+	### GET RID OF THIS ONCE THIS EBUILD IS READY ###
+	#################################################
+	if [ -z "${BREAKME}" ]
+	then
+		die "Set the BREAKME variable to emerge this. It's in development. Stop using it."
+	fi
+
 	FILES_DIR="${WORKDIR}/files"
 	PATCHDIR="${WORKDIR}/patch"
 	EXCLUDED="${PATCHDIR}/excluded"
@@ -210,7 +225,7 @@ pkg_setup() {
 		die "The dmx and doc USE flags are temporarily incompatible and result in a dead build."
 	fi
 
-	# on amd64 we need /usr/X11R6/lib64/X11/locale/lib to be a symlink
+	# on amd64 we need /usr/lib64/X11/locale/lib to be a symlink
 	# created by the emul lib ebuild in order for adobe acrobat, staroffice,
 	# and a few other apps to work.
 	use amd64 && get_libdir_override lib64
@@ -252,10 +267,16 @@ host_def_setup() {
 		# Enable i810 on x86_64 (RH #126687)
 		echo "#define XF86ExtraCardDrivers i810" >> ${HOSTCONF}
 
-		# FHS install locations for docs
+		# FHS install locations
 		echo "#define ManDirectoryRoot /usr/share/man" >> ${HOSTCONF}
 		echo "#define DocDir /usr/share/doc/${PF}" >> ${HOSTCONF}
 		echo "#define FontDir /usr/share/fonts" >> ${HOSTCONF}
+		# Saving this for a later revision
+		# echo "#define BinDir /usr/bin" >> ${HOSTCONF}
+		# /usr/X11R6/lib with exception of /usr/X11R6/lib/X11
+		echo "#define LibDir /usr/$(get_libdir)" >> ${HOSTCONF}
+		# /usr/X11R6/lib/X11
+		echo "#define UsrLibDir /usr/$(get_libdir)" >> ${HOSTCONF}
 
 		# Make man4 and man7 stuff get 'x' suffix like everything else
 		# Necessary so we can install to /usr/share/man without overwriting
@@ -683,14 +704,6 @@ src_compile() {
 
 }
 
-pkgconfig_install() {
-	# This one needs to be in /usr/lib
-	insinto /usr/$(get_libdir)/pkgconfig
-	doins ${D}/usr/X11R6/$(get_libdir)/pkgconfig/*.pc
-	# Now remove the invalid xft.pc, and co ...
-	rm -rf ${D}/usr/X11R6/$(get_libdir)/pkgconfig
-}
-
 backward_compat_setup() {
 	# Backwards compatibility for /usr/share move
 	G_FONTDIRS="CID Speedo TTF Type1 encodings local misc util"
@@ -699,20 +712,23 @@ backward_compat_setup() {
 		G_FONTDIRS="${G_FONTDIRS} 75dpi 100dpi"
 	fi
 
-	dodir /usr/X11R6/$(get_libdir)/X11/fonts/
+	dodir /usr/$(get_libdir)/X11/fonts/
 	for G_FONTDIR in ${G_FONTDIRS}
 	do
-		dosym ${ROOT}/usr/share/fonts/${G_FONTDIR} /usr/X11R6/$(get_libdir)/X11/fonts/${G_FONTDIR}
+		dosym ${ROOT}/usr/share/fonts/${G_FONTDIR} /usr/$(get_libdir)/X11/fonts/${G_FONTDIR}
 	done
 
 	dosym ${ROOT}/usr/share/man /usr/X11R6/man
+	# Have the top-level lib symlink made first, so real dirs don't get created
+	dosym ${ROOT}/usr/lib /usr/X11R6/lib
 	dosym ${ROOT}/usr/share/doc/${PF} /usr/X11R6/$(get_libdir)/X11/doc
+#	dosym ${ROOT}/usr/share/bin /usr/X11R6/bin
 }
 
 compose_files_setup() {
 	# Hack from Mandrake (update ours that just created Compose files for
 	# all locales)
-	for x in $(find ${D}/usr/X11R6/$(get_libdir)/X11/locale/ -mindepth 1 -type d)
+	for x in $(find ${D}/usr/$(get_libdir)/X11/locale/ -mindepth 1 -type d)
 	do
 		# make empty Compose files for some locales
 		# CJK must not have that file (otherwise XIM don't works some times)
@@ -734,7 +750,7 @@ compose_files_setup() {
 
 	# Another hack from Mandrake -- to fix dead + space for the us
 	# international keyboard
-	for i in ${D}/usr/X11R6/$(get_libdir)/X11/locale/*/Compose
+	for i in ${D}/usr/$(get_libdir)/X11/locale/*/Compose
 	do
 		sed -i \
 			-e 's/\(<dead_diaeresis> <space>\).*$/\1 : "\\"" quotedbl/' \
@@ -792,10 +808,10 @@ setup_dynamic_libgl() {
 	ebegin "Moving libGL and friends for dynamic switching"
 		dodir /usr/$(get_libdir)/opengl/${PN}/{$(get_libdir),extensions,include}
 		local x=""
-		for x in ${D}/usr/X11R6/$(get_libdir)/libGL.so* \
-			${D}/usr/X11R6/$(get_libdir)/libGL.la \
-			${D}/usr/X11R6/$(get_libdir)/libGL.a \
-			${D}/usr/X11R6/$(get_libdir)/libMesaGL.so
+		for x in ${D}/usr/$(get_libdir)/libGL.so* \
+			${D}/usr/$(get_libdir)/libGL.la \
+			${D}/usr/$(get_libdir)/libGL.a \
+			${D}/usr/$(get_libdir)/libMesaGL.so
 		do
 			if [ -f ${x} -o -L ${x} ]
 			then
@@ -803,7 +819,7 @@ setup_dynamic_libgl() {
 				mv -f ${x} ${D}/usr/$(get_libdir)/opengl/${PN}/$(get_libdir)
 			fi
 		done
-		for x in ${D}/usr/X11R6/$(get_libdir)/modules/extensions/libglx*
+		for x in ${D}/usr/$(get_libdir)/modules/extensions/libglx*
 		do
 			if [ -f ${x} -o -L ${x} ]
 			then
@@ -852,7 +868,7 @@ strip_execs() {
 		if [ -f ${x} ]
 			then
 				# Dont do the modules ...
-				if [ "${x/\/usr\/X11R6\/$(get_libdir)\/modules}" = "${x}" ]
+				if [ "${x/\/usr\/$(get_libdir)\/modules}" = "${x}" ]
 				then
 					echo "`echo ${x} | sed -e "s|${D}||"`"
 					${STRIP} ${x} || :
@@ -861,7 +877,7 @@ strip_execs() {
 		done
 		# Now do the libraries ...
 		for x in ${D}/usr/{$(get_libdir),$(get_libdir)/opengl/${PN}/$(get_libdir)}/*.so.* \
-			${D}/usr/X11R6/{$(get_libdir),$(get_libdir)/X11/locale/$(get_libdir)/common}/*.so.*
+			${D}/usr/{$(get_libdir),$(get_libdir)/X11/locale/$(get_libdir)/common}/*.so.*
 		do
 			if [ -f ${x} ]
 			then
@@ -927,11 +943,15 @@ update_config_files() {
 
 fix_opengl_symlinks() {
 	# Remove invalid symlinks
-	rm -f ${D}/usr/$(get_libdir)/libGL.*
+	for LINK in $(find ${D}/usr/$(get_libdir) \
+		-name libGL.* -type l)
+	do
+		rm -f ${LINK}
+	done
 	# Create required symlinks
-	dosym libGL.so.1.2 /usr/X11R6/$(get_libdir)/libGL.so
-	dosym libGL.so.1.2 /usr/X11R6/$(get_libdir)/libGL.so.1
-	dosym libGL.so.1.2 /usr/X11R6/$(get_libdir)/libMesaGL.so
+	dosym libGL.so.1.2 /usr/$(get_libdir)/libGL.so
+	dosym libGL.so.1.2 /usr/$(get_libdir)/libGL.so.1
+	dosym libGL.so.1.2 /usr/$(get_libdir)/libMesaGL.so
 }
 
 src_install() {
@@ -957,12 +977,10 @@ src_install() {
 		make install.sdk DESTDIR=${D} || die
 	fi
 
-	pkgconfig_install
-
 	einfo "Installing man pages..."
 	make install.man DESTDIR=${D} || die
 	einfo "Compressing man pages..."
-	prepman /usr/X11R6
+	prepman /usr
 
 	if use nls
 	then
@@ -973,7 +991,7 @@ src_install() {
 	backward_compat_setup
 
 	# Fix permissions on locale/common/*.so
-	for x in ${D}/usr/X11R6/$(get_libdir)/X11/locale/$(get_libdir)/common/*.so*
+	for x in ${D}/usr/$(get_libdir)/X11/locale/$(get_libdir)/common/*.so*
 	do
 		if [ -f ${x} ]
 		then
@@ -982,8 +1000,8 @@ src_install() {
 	done
 
 	# Fix permissions on modules ...
-	for x in $(find ${D}/usr/X11R6/$(get_libdir)/modules -name '*.o') \
-	         $(find ${D}/usr/X11R6/$(get_libdir)/modules -name '*.so')
+	for x in $(find ${D}/usr/$(get_libdir)/modules -name '*.o') \
+	         $(find ${D}/usr/$(get_libdir)/modules -name '*.so')
 	do
 		if [ -f ${x} ]
 		then
@@ -994,23 +1012,23 @@ src_install() {
 	# We zap our CFLAGS in the host.def file, as hardcoded CFLAGS can
 	# mess up other things that use xmkmf
 	ebegin "Fixing $(get_libdir)/X11/config/host.def"
-		cp ${D}/usr/X11R6/$(get_libdir)/X11/config/host.def ${T}
+		cp ${D}/usr/$(get_libdir)/X11/config/host.def ${T}
 		awk '!/OptimizedCDebugFlags|OptimizedCplusplusDebugFlags|GccWarningOptions/ {print $0}' \
-			${T}/host.def > ${D}/usr/X11R6/$(get_libdir)/X11/config/host.def
-		# theoretically, /usr/X11R6/lib/X11/config is a possible candidate for
+			${T}/host.def > ${D}/usr/$(get_libdir)/X11/config/host.def
+		# theoretically, /usr/lib/X11/config is a possible candidate for
 		# config file management. If we find that people really worry about imake
 		# stuff, we may add it.  But for now, we leave the dir unprotected.
 	eend 0
 
 	# EURO support
 	ebegin "Euro Support..."
-		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/X11R6/$(get_libdir)" \
+		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/$(get_libdir)" \
 		${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-8x14.bdf | \
 			gzip -9 > ${D}/usr/share/fonts/misc/Xlat9-8x14-lat9.pcf.gz
-		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/X11R6/$(get_libdir)" \
+		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/$(get_libdir)" \
 		${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-9x16.bdf | \
 			gzip -9 > ${D}/usr/share/fonts/misc/Xlat9-9x16-lat9.pcf.gz
-		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/X11R6/$(get_libdir)" \
+		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/$(get_libdir)" \
 		${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-10x20.bdf | \
 			gzip -9 > ${D}/usr/share/fonts/misc/Xlat9-10x20-lat9.pcf.gz
 	eend 0
@@ -1021,8 +1039,7 @@ src_install() {
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../X11R6/include/DPS /usr/include/DPS
 	dosym ../X11R6/include/GL /usr/include/GL
-	dosym ../X11R6/$(get_libdir)/X11 /usr/$(get_libdir)/X11
-	dosym ../../usr/X11R6/$(get_libdir)/X11/xkb /etc/X11/xkb
+	dosym ../../usr/$(get_libdir)/X11/xkb /etc/X11/xkb
 
 	if use glx
 	then
@@ -1034,14 +1051,14 @@ src_install() {
 	dosym ../../../var/lib/xdm /etc/X11/xdm/authdir
 
 	# .la files for libtool support
-	insinto /usr/X11R6/$(get_libdir)
-	doins ${FILES_DIR}/lib/*.la
+	insinto /usr/$(get_libdir)
+	doins ${FILES_DIR}/$(get_libdir)/*.la
 
 	# Backwards compat, FHS, etc.
 	dosym ../../usr/X11R6/bin/Xorg /etc/X11/X
 
 	# Fix perms
-	fperms 755 /usr/X11R6/$(get_libdir)/X11/xkb/geometry/sgi
+	fperms 755 /usr/$(get_libdir)/X11/xkb/geometry/sgi
 	fperms 755 /usr/X11R6/bin/dga
 
 	compose_files_setup
@@ -1077,9 +1094,6 @@ src_install() {
 	# We move libGLU to /usr/lib now
 	dosym libGLU.so.1.3 /usr/$(get_libdir)/libMesaGLU.so
 
-	# we want libGLU.so* in /usr/lib
-	mv ${D}/usr/X11R6/$(get_libdir)/libGLU.* ${D}/usr/$(get_libdir)
-
 	if use glx
 	then
 		setup_dynamic_libgl
@@ -1105,7 +1119,7 @@ src_install() {
 	# For Battoussai's gatos stuffs:
 	if use sdk
 	then
-		insinto /usr/X11R6/$(get_libdir)/Server/include
+		insinto /usr/$(get_libdir)/Server/include
 		doins ${S}/extras/drm/shared/drm.h
 	fi
 
@@ -1125,8 +1139,9 @@ clean_dynamic_libgl() {
 	fi
 
 	# make sure we do not have any stale files lying around
-	# that could break things.
+	# that could break things. Check old and new locations.
 	rm -f ${ROOT}/usr/X11R6/$(get_libdir)/libGL*
+	rm -f ${ROOT}/usr/$(get_libdir)/libGL*
 }
 
 pkg_preinst() {
@@ -1175,31 +1190,31 @@ pkg_preinst() {
 		rm -f ${ROOT}/etc/X11/app-defaults
 	fi
 
-	if [ ! -L ${ROOT}/usr/X11R6/$(get_libdir)/X11/app-defaults ] && \
-	   [ -d ${ROOT}/usr/X11R6/$(get_libdir)/X11/app-defaults ]
+	if [ ! -L ${ROOT}/usr/$(get_libdir)/X11/app-defaults ] && \
+	   [ -d ${ROOT}/usr/$(get_libdir)/X11/app-defaults ]
 	then
 		if [ ! -d ${ROOT}/etc/X11/app-defaults ]
 		then
 			mkdir -p ${ROOT}/etc/X11/app-defaults
 		fi
 
-		mv -f ${ROOT}/usr/X11R6/$(get_libdir)/X11/app-defaults ${ROOT}/etc/X11
+		mv -f ${ROOT}/usr/$(get_libdir)/X11/app-defaults ${ROOT}/etc/X11
 	fi
 
-	if [ -L ${ROOT}/usr/X11R6/$(get_libdir)/X11/xkb ]
+	if [ -L ${ROOT}/usr/$(get_libdir)/X11/xkb ]
 	then
-		rm -f ${ROOT}/usr/X11R6/$(get_libdir)/X11/xkb
+		rm -f ${ROOT}/usr/$(get_libdir)/X11/xkb
 	fi
 
 	if [ ! -L ${ROOT}/etc/X11/xkb ] && \
 	   [ -d ${ROOT}/etc/X11/xkb ]
 	then
-		if [ ! -d ${ROOT}/usr/X11R6/$(get_libdir)/X11/xkb ]
+		if [ ! -d ${ROOT}/usr/$(get_libdir)/X11/xkb ]
 		then
-			mkdir -p ${ROOT}/usr/X11R6/$(get_libdir)/X11
+			mkdir -p ${ROOT}/usr/$(get_libdir)/X11
 		fi
 
-	    mv -f ${ROOT}/etc/X11/xkb ${ROOT}/usr/X11R6/$(get_libdir)/X11
+	    mv -f ${ROOT}/etc/X11/xkb ${ROOT}/usr/$(get_libdir)/X11
 	fi
 
 	# Run this even for USE=-glx, to clean out old stuff from possible
@@ -1236,7 +1251,7 @@ font_setup() {
 
 	ebegin "Generating encodings.dir..."
 		# Create the encodings.dir in /usr/share/fonts/encodings
-		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/$(get_libdir)" \
+		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
 		${ROOT}/usr/X11R6/bin/mkfontdir -n \
 			-e ${ROOT}/usr/share/fonts/encodings \
 			-e ${ROOT}/usr/share/fonts/encodings/large \
@@ -1262,7 +1277,7 @@ font_setup() {
 				if [ "${x/encodings}" = "${x}" -a \
 				     -n "$(find ${x} -iname '*.tt[cf]' -print)" ]
 				then
-					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/$(get_libdir)" \
+					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
 					${ROOT}/usr/X11R6/bin/ttmkfdir -x 2 \
 						-e ${ROOT}/usr/share/fonts/encodings/encodings.dir \
 						-o ${x}/fonts.scale -d ${x}
@@ -1270,7 +1285,7 @@ font_setup() {
 				elif [ "${x/encodings}" = "${x}" -a \
 					-n "$(find ${x} -iname '*.[po][ft][abcf]' -print)" ]
 				then
-					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/$(get_libdir)" \
+					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
 					${ROOT}/usr/X11R6/bin/mkfontscale \
 						-a ${ROOT}/usr/share/fonts/encodings/encodings.dir \
 						-- ${x}
@@ -1287,7 +1302,7 @@ font_setup() {
 
 			if [ "${x/encodings}" = "${x}" ]
 			then
-				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/$(get_libdir)" \
+				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
 				${ROOT}/usr/X11R6/bin/mkfontdir \
 					-e ${ROOT}/usr/share/fonts/encodings \
 					-e ${ROOT}/usr/share/fonts/encodings/large \
@@ -1307,7 +1322,7 @@ font_setup() {
 			if [ "${x/encodings}" = "${x}" -a \
 			     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
 			then
-				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/$(get_libdir)" \
+				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
 				${ROOT}/usr/X11R6/bin/xftcache ${x} &> /dev/null
 			fi
 		done
@@ -1404,7 +1419,7 @@ pkg_postinst() {
 		fi
 	fi
 
-	for x in $(find ${ROOT}/usr/X11R6/$(get_libdir)/X11/locale/ -mindepth 1 -type d)
+	for x in $(find ${ROOT}/usr/$(get_libdir)/X11/locale/ -mindepth 1 -type d)
 	do
 		# Remove old compose files we might have created incorrectly
 		# CJK must not have that file (otherwise XIM don't works some times)
@@ -1434,24 +1449,24 @@ pkg_postinst() {
 	if use ppc64
 	then
 		#The problem about display driver is fixed.
-		cd ${ROOT}/usr/X11R6/$(get_libdir)/modules/drivers
+		cd ${ROOT}/usr/$(get_libdir)/modules/drivers
 		mv fbdev_drv.so fbdev_drv.so.orig
 		mv ati_drv.so ati_drv.so.orig
 		mv nv_drv.so nv_drv.so.orig
 
-		ld -shared -o ${ROOT}/usr/X11R6/$(get_libdir)/modules/drivers/fbdev_drv.so ${ROOT}/usr/X11R6/$(get_libdir)/modules/drivers/fbdev_drv.so.orig ${ROOT}/usr/X11R6/$(get_libdir)/modules/linux/libfbdevhw.so ${ROOT}/usr/X11R6/$(get_libdir)/modules/libshadow.so ${ROOT}/usr/X11R6/$(get_libdir)/modules/libshadowfb.so ${ROOT}/usr/X11R6/$(get_libdir)/modules/libfb.so
-		ld -rpath ${ROOT}/usr/X11R6/$(get_libdir)/modules/drivers -shared -o ati_drv.so ati_drv.so.orig radeon_drv.so atimisc_drv.so fbdev_drv.so r128_drv.so vga_drv.so
-		ld -rpath ${ROOT}/usr/X11R6/$(get_libdir)/modules/drivers -shared -o nv_drv.so nv_drv.so.orig fbdev_drv.so vga_drv.so
+		ld -shared -o ${ROOT}/usr/$(get_libdir)/modules/drivers/fbdev_drv.so ${ROOT}/usr/$(get_libdir)/modules/drivers/fbdev_drv.so.orig ${ROOT}/usr/$(get_libdir)/modules/linux/libfbdevhw.so ${ROOT}/usr/$(get_libdir)/modules/libshadow.so ${ROOT}/usr/$(get_libdir)/modules/libshadowfb.so ${ROOT}/usr/$(get_libdir)/modules/libfb.so
+		ld -rpath ${ROOT}/usr/$(get_libdir)/modules/drivers -shared -o ati_drv.so ati_drv.so.orig radeon_drv.so atimisc_drv.so fbdev_drv.so r128_drv.so vga_drv.so
+		ld -rpath ${ROOT}/usr/$(get_libdir)/modules/drivers -shared -o nv_drv.so nv_drv.so.orig fbdev_drv.so vga_drv.so
 
 		if use glx
 		then
 			#The problem about DRI module and GLX module is fixed.
-			cd ${ROOT}/usr/X11R6/$(get_libdir)/modules/extensions
+			cd ${ROOT}/usr/$(get_libdir)/modules/extensions
 			mv libglx.so libglx.so.orig
 			mv libdri.so libdri.so.orig
 
-			ld -rpath ${ROOT}/usr/X11R6/$(get_libdir)/modules/extensions -shared -o libglx.so libglx.so.orig libGLcore.so
-			ld -rpath ${ROOT}/usr/X11R6/$(get_libdir)/modules/extensions -shared -o libdri.so libdri.so.orig libglx.so
+			ld -rpath ${ROOT}/usr/$(get_libdir)/modules/extensions -shared -o libglx.so libglx.so.orig libGLcore.so
+			ld -rpath ${ROOT}/usr/$(get_libdir)/modules/extensions -shared -o libdri.so libdri.so.orig libglx.so
 		fi
 	fi
 
@@ -1462,11 +1477,11 @@ pkg_prerm() {
 
 	if use ppc64
 	then
-		cd ${ROOT}/usr/X11R6/$(get_libdir)/modules/drivers
+		cd ${ROOT}/usr/$(get_libdir)/modules/drivers
 		mv fbdev_drv.so.orig fbdev_drv.so
 		mv ati_drv.so.orig ati_drv.so
 		mv nv_drv.so.orig nv_drv.so
-		cd ${ROOT}/usr/X11R6/$(get_libdir)/modules/extensions
+		cd ${ROOT}/usr/$(get_libdir)/modules/extensions
 		if use glx
 		then
 			mv libglx.so.orig libglx.so
@@ -1487,6 +1502,5 @@ pkg_postrm() {
 		then
 			ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
 		fi
-		ln -snf ../X11R6/$(get_libdir)/X11 ${ROOT}/usr/$(get_libdir)/X11
 	fi
 }
