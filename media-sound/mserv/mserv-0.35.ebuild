@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35.ebuild,v 1.7 2004/07/19 20:07:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35.ebuild,v 1.8 2004/09/15 16:34:23 eradicator Exp $
+
+IUSE="oggvorbis"
 
 inherit webapp-apache eutils
 
 DESCRIPTION="Jukebox-style music server"
 HOMEPAGE="http://www.mserv.org"
 SRC_URI="mirror://sourceforge/mserv/${P}.tar.gz"
-RESTRICT="nomirror"
 LICENSE="mserv"
 
 SLOT="0"
-KEYWORDS="x86 ~sparc ~amd64"
-IUSE="oggvorbis"
+KEYWORDS="x86 sparc amd64"
 
 DEPEND="virtual/libc"
 RDEPEND=">=dev-lang/perl-5.6.1

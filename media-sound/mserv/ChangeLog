@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mserv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.7 2004/07/19 20:07:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.8 2004/09/15 16:34:23 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> mserv-0.35.ebuild:
+  Stable amd64, sparc.
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> mserv-0.35.ebuild:
   Added to ~sparc ~amd64
