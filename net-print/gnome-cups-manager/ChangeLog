@@ -1,6 +1,12 @@
 # ChangeLog for net-print/gnome-cups-manager
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.1 2003/06/24 00:57:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.2 2003/07/05 09:44:38 liquidx Exp $
+
+*gnome-cups-manager-0.17 (05 Jul 2003)
+
+  05 Jul 2003; Alastair Tse <liquidx@gentoo.org>
+  gnome-cups-manager-0.17.ebuild:
+  version bump. should start work now with natilius' printer://
 
 *gnome-cups-manager-0.16 (24 Jun 2003)
 
