@@ -1,0 +1,15 @@
+diff -ruN arts-1.3.1.orig/flow/audioioalsa.cc arts-1.3.1/flow/audioioalsa.cc
+--- arts-1.3.1.orig/flow/audioioalsa.cc	2004-11-14 17:58:25.343403280 +0100
++++ arts-1.3.1/flow/audioioalsa.cc	2004-11-14 17:54:27.951492336 +0100
+@@ -114,7 +114,11 @@
+ 	 */
+     m_card = snd_defaults_pcm_card();  //!! need interface !!
+     m_device = snd_defaults_pcm_device(); //!!
++#ifdef WORDS_BIGENDIAN
++    m_format = SND_PCM_SFMT_S16_BE;
++#else
+     m_format = SND_PCM_SFMT_S16_LE;
++#endif
+     m_bufferMode = block;  //block/stream (stream mode doesn't work yet)
+ 
+ 	if(m_card >= 0) {
