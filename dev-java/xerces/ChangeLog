@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.24 2004/06/24 22:45:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.25 2004/08/27 19:59:05 axxo Exp $
+
+  27 Aug 2004; Thomas Matthijs <axxo@gentoo.org> xerces-2.6.2-r1.ebuild:
+  x86
 
   06 Jun 2004; Jason Wever <weeve@gentoo.org> xerces-2.6.2.ebuild:
   Stable on sparc.

@@ -5,14 +5,14 @@ MD5 42c27581a32bf53f2a5caf894fb7e2e0 ant-1.5.3-r5.ebuild 2945
 MD5 f1875d8d41873c47c423c573a0022594 ant-1.6.2.ebuild 2210
 MD5 6571a038b72a8ec54ba705a3ca37d958 ant-1.6.2-r1.ebuild 2215
 MD5 050ac1afea674f2d58b6cea499f83cec ant-1.6.0-r2.ebuild 1608
-MD5 e89340cae0920c3b77b7cb0fb2a33cb7 ant-1.6.2-r3.ebuild 2225
+MD5 5f6b6c258c3edf75842d1753a95dc309 ant-1.6.2-r3.ebuild 2224
 MD5 0a9e579c0585e31fa0f608df4fc596ab ant-1.5.4-r1.ebuild 3013
 MD5 feb875c667f1fe035a07b0709bfa3b83 ant-1.6.1-r1.ebuild 2233
 MD5 cdb8b5b010df8ff5460d310b98b2f086 ant-1.6.1.ebuild 2222
 MD5 16df02d2f27b258ec276ae47cb5fb844 ant-1.6.2-r2.ebuild 2221
 MD5 c658c82e510af29ddedca0f00f1d9cfd ant-1.6.0-r3.ebuild 1594
-MD5 2a3dc6a389d5bcf5a130a74036e6625d ChangeLog 11855
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 e11a84cb5c1d91c1f925dfd417a338e8 ChangeLog 11948
+MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
 MD5 9796e31a633d28a00242c76325bb85b4 files/20ant 26
 MD5 742e94a3c64e9b5cddc7ce7863d1afac files/digest-ant-1.6.1 74
 MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-1.6.2 74
@@ -39,7 +39,7 @@ MD5 513e668eb2658a553a6abe8c9fb33288 files/1.6.2/ant 2492
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFBL41x/rLF9B432nYRAs4sAJ9FrsryDg+S+b3MJYWbglt0v/YrIgCgunZv
-8hpXlAXTJ4/fLS978YeBpRQ=
-=+9AO
+iD8DBQFBL5O6/rLF9B432nYRAn/5AJ46qzWFdMgEWfMEmYu1SSt7y3odWQCeKoxf
+KPec5ZlKT9n9NBSBYDpeu0o=
+=KT/O
 -----END PGP SIGNATURE-----
