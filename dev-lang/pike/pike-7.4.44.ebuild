@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation, Emil Skoldberg, Fredrik Mellstrom (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.44.ebuild,v 1.4 2004/06/26 14:52:49 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.44.ebuild,v 1.5 2004/10/20 15:38:20 scandium Exp $
 
 inherit fixheadtails
 
@@ -9,7 +9,7 @@ IUSE="debug doc gdbm gif gtk java jpeg mysql oci8 odbc opengl pdflib postgres sc
 S="${WORKDIR}/Pike-v${PV}"
 HOMEPAGE="http://pike.ida.liu.se/"
 DESCRIPTION="Pike programming language and runtime"
-SRC_URI="ftp://pike.ida.liu.se/pub/pike/all/${PV}/Pike-v${PV}.tar.gz"
+SRC_URI="http://pike.ida.liu.se/pub/pike/all/${PV}/Pike-v${PV}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
