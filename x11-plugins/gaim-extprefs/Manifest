@@ -1,4 +1,6 @@
-MD5 c10b9f735ae3f93fc86da9688fbcbc0c ChangeLog 683
 MD5 06979ecbabbd40b4719cf1383617b4cc gaim-extprefs-0.3.ebuild 829
 MD5 4e1932633984524faebd0664288510b9 metadata.xml 458
+MD5 3c977ac57417680a772c413c5d0be87b ChangeLog 805
+MD5 5535b5c48080e2f924ddc61431e8ade3 gaim-extprefs-0.4.ebuild 829
 MD5 ef683462e25321d9f94fbeda3a7065d2 files/digest-gaim-extprefs-0.3 68
+MD5 8208e6ff994eddc392fee60515f96f43 files/digest-gaim-extprefs-0.4 68
