@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# <phoenix@gentoo.org> (18 Feb 2003)
+# Can't test it - i'm no winex subscriber ( no credit-card :( )
+app-emulation/winex-transgaming
 
 # <mholzer@gentoo.org> (09 Feb 2003)
 >=media-video/mjpegtools-1.6.1
