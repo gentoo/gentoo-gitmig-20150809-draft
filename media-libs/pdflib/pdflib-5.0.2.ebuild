@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.21 2004/10/07 03:02:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.22 2004/10/16 23:11:42 axxo Exp $
+
+inherit java-pkg
 
 MY_PN="${PN/pdf/PDF}-Lite"
 MY_P="${MY_PN}-${PV}-Unix-src"
@@ -78,7 +80,7 @@ src_install() {
 
 	# seemant: seems like the makefiles for pdflib generate the .jar file
 	# anyway
-	use java && dojar bind/pdflib/java/pdflib.jar
+	use java && java-pkg_dojar bind/pdflib/java/pdflib.jar
 
 	# karltk: This is definitely NOT how it should be done!
 	# we need this to create pdflib.jar (we will not have the source when
@@ -94,6 +96,6 @@ src_install() {
 #
 #		jar cf pdflib.jar com/pdflib/*.class
 #
-#		dojar pdflib.jar
+#		java-pkg_dojar pdflib.jar
 #	fi
 }
