@@ -1,0 +1,42 @@
+diff -Nrup ssmtp-2.60/ssmtp.c ssmtp-2.60-solar/ssmtp.c
+--- ssmtp-2.60/ssmtp.c	2004-04-15 17:03:24.000000000 -0400
++++ ssmtp-2.60-solar/ssmtp.c	2004-04-23 02:55:27.000000000 -0400
+@@ -100,18 +100,20 @@ void log_event(int priority, char *forma
+ {
+ 	char buf[(BUF_SZ + 1)];
+ 	va_list ap;
+-
++#if (defined (LOGFILE) && defined(LOGFILE_FILENAME))
++	FILE *fp;
++#endif
+ 	va_start(ap, format);
+ 	(void)vsnprintf(buf, BUF_SZ, format, ap);
+ 	va_end(ap);
+ 
+-#ifdef LOGFILE
+-	if((fp = fopen("/tmp/ssmtp.log", "a")) != (FILE *)NULL) {
++#if (defined (LOGFILE) && defined(LOGFILE_FILENAME))      
++	if((fp = fopen(LOGFILE_FILENAME, "a")) != (FILE *)NULL) {
+ 		(void)fprintf(fp, "%s\n", buf);
+ 		(void)fclose(fp);
+ 	}
+ 	else {
+-		(void)fprintf(stderr, "Can't write to /tmp/ssmtp.log\n");
++		(void)fprintf(stderr, "Can't write to "LOGFILE_FILENAME"\n");
+ 	}
+ #endif
+ 
+diff -Nrup ssmtp-2.60/ssmtp.h ssmtp-2.60-solar/ssmtp.h
+--- ssmtp-2.60/ssmtp.h	2002-09-27 09:18:24.000000000 -0400
++++ ssmtp-2.60-solar/ssmtp.h	2004-04-23 02:55:59.000000000 -0400
+@@ -22,6 +22,10 @@
+ #define MAXARGS  _POSIX_ARG_MAX
+ #endif
+ 
++#if (defined (LOGFILE) && !defined(LOGFILE_FILENAME))
++#define LOGFILE_FILENAME "/dev/stdout"
++#endif
++
+ typedef enum {False, True} bool_t;
+ 
+ struct string_list {
