@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.2.2.ebuild,v 1.1 2003/06/17 17:05:19 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.2.2.ebuild,v 1.2 2003/06/20 21:55:49 liquidx Exp $
 
 inherit gnome2
 
@@ -21,6 +21,7 @@ RDEPEND=">=gnome-base/gconf-1.2.1
 	>=gnome-base/bonobo-activation-2.2
 	>=gnome-base/libglade-2.0.1
 	>=gnome-base/librsvg-2.0.1
+	>=gnome-base/eel-2.2.0
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )"
 
