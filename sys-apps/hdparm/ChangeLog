@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.47 2004/08/16 22:56:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.48 2004/08/20 08:17:45 avenj Exp $
+
+  20 Aug 2004; Jon Portnoy <avenj@gentoo.org> files/hdparm-init-6 :
+  Quote argument to -z.  See bug #60989.
 
 *hdparm-5.6 (16 Aug 2004)
 

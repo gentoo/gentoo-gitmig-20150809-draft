@@ -61,7 +61,7 @@ start() {
                 fi
             done
 
-            [ -z $args ] && for alias in /dev/discs/*
+            [ -z "$args" ] && for alias in /dev/discs/*
             do
                 if [ $alias/disc -ef $device ]
                 then
