@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.25 2002/10/01 14:17:06 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.26 2002/10/05 19:29:29 danarmak Exp $
+
+  05 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Make the default kdmrc use /etc/X11/xdm/Xsetup_0. It was using the
+  genkdmconf-generated Xsetup, which didn't know about our /etc/X11/Sessions
+  files.
 
 *kdebase-3.0.3-r1 (01 Oct 2002)
 

@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.3-r1.ebuild,v 1.5 2002/10/05 19:29:29 danarmak Exp $
-
-IUSE="ssl opengl motif ldap encode samba cups oggvorbis pam"
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4.ebuild,v 1.1 2002/10/05 19:29:29 danarmak Exp $
 inherit kde-dist
+
+IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba qt31patch"
 
 DESCRIPTION="KDE $PV - base packages: the desktop, panel, window manager, konqueror..."
 
@@ -21,6 +21,8 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	samba? ( net-fs/samba )" 
 #	lm_sensors? ( ?/lm_sensors ) # ebuild doesn't exist yet
 
+DEPEND="$DEPEND sys-apps/gzip"
+
 myconf="$myconf --with-dpms --with-cdparanoia"
 
 use ldap	&& myconf="$myconf --with-ldap" 	|| myconf="$myconf --without-ldap"
@@ -32,6 +34,24 @@ use oggvorbis 	&& myconf="$myconf --with-vorbis"	|| myconf="$myconf --without-vo
 use opengl	&& myconf="$myconf --with-gl"		|| myconf="$myconf --without-gl"
 use ssl		&& myconf="$myconf --with-ssl"		|| myconf="$myconf --without-ssl"
 use pam		&& myconf="$myconf --with-pam=yes"	|| myconf="$myconf --with-pam=no --with-shadow"
+
+src_unpack() {
+    
+    base_src_unpack
+
+    # Enable this local USE flag to allow nspluginviewer to compile with qt 3.1.x.
+    # It will patch nsplugins/viewer dir to cvs HEAD status.
+    # THIS MAY BE UNSTABLE AND YOU SHOULD NOT USE IT UNLESS YOU REALLY HAVE TO
+    # USE KDE 3.0.4 WITH QT >=3.1.X!
+    # Also note that kdebase 3.0.3 will compile just fine with all version of QT.
+    # However kdebase 3.0.4 introduced an nspluginviewer fix that necessitates this
+    # additional patch to work with qt 3.1.
+    if [ -n "`use qt31patch`" ]; then
+	cd $S
+	/bin/zcat "$FILESDIR/$P-nspluginviewer-qt31.diff.gz" | patch -p0 --
+    fi
+
+}
 
 src_compile() {
 
@@ -72,9 +92,9 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 
     cd ${D}/${KDEDIR}/share/config/kdm || die
     mv kdmrc kdmrc.orig
-    sed -e "s:SessionTypes=:SessionTypes=kde-${PV},:" \
-	-e "s:Session=${PREFIX}/share/config/kdm/Xsession:Session=/etc/X11/xdm/Xsession:"  kdmrc.orig > kdmrc
-    rm kdmrc.orig
+	sed -e "s:SessionTypes=:SessionTypes=kde-${PV},:" \
+	-e "s:Session=${PREFIX}/share/config/kdm/Xsession:Session=/etc/X11/xdm/Xsession:"  kdmrc.orig > kdmrc    
+	rm kdmrc.orig
 
     #backup splashscreen images, so they can be put back when unmerging 
     #mosfet or so.
