@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/atlas
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/ChangeLog,v 1.8 2003/10/01 10:53:22 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/ChangeLog,v 1.9 2004/02/25 14:29:15 aliz Exp $
+
+*atlas-3.6.0 (25 Feb 2004)
+
+  25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> atlas-3.6.0.ebuild:
+  Add new version that as real amd64 support. Closing #37446.
 
 *atlas-3.5.11 (30 Sep 2003)
 
