@@ -1,11 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.23 2003/01/15 18:54:48 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.24 2003/01/15 19:12:53 raker Exp $
 
 *wxGTK-2.4.0 (01 Jan 2003)
 
   15 Jan 2003; Nick Hadaway <raker@gentoo.org> wxGTK-2.4.0.ebuild :
-  Marked stable.  SLOT'd back to 0.
+  Marked stable.  SLOT'd back to 0.  Fixed dependancy misnomers.
 
   07 Jan 2003; Martin Holzer <mholzer@gentoo.org> wxGTK-2.4.0.ebuild,
   files/digest-wxGTK-2.4.0 ChangeLog :
