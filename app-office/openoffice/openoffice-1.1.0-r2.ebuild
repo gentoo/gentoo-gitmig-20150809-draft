@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r2.ebuild,v 1.6 2003/11/14 19:37:24 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r2.ebuild,v 1.7 2004/01/17 17:08:23 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -30,6 +30,7 @@ inherit flag-o-matic eutils
 # Compile problems with these ...
 filter-flags "-funroll-loops"
 filter-flags "-fomit-frame-pointer"
+filter-flags "-fprefetch-loop-arrays"
 append-flags "-fno-strict-aliasing"
 replace-flags "-O3" "-O2"
 
@@ -293,7 +294,10 @@ src_unpack() {
 #	einfo "Removing crashrep from the installed set"
 #	sed -i -e "s,\(crashrep \),," ${S}/instsetoo/prj/build.lst
 
-
+	if [ "$(gcc-version)" == "3.2" ]; then
+		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
+		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
+	fi
 
 	# Now for our optimization flags ...
 	perl -pi -e "s|^CFLAGSOPT=.*|CFLAGSOPT=${CFLAGS}|g" \
@@ -329,11 +333,6 @@ get_EnvSet() {
 }
 
 src_compile() {
-
-	if [ "$(gcc-version)" == "3.2" ]; then
-		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
-		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
-	fi
 
 	addpredict /bin
 	addpredict /root/.gconfd
@@ -593,8 +592,9 @@ src_install() {
 
 		for x in ${D}${INSTDIR}/share/gnome/net/*.desktop
 		do
-			# We have to handle setup differently
+			# We have to handle soffice and setup differently
 			perl -pi -e "s:${INSTDIR}/program/setup:/usr/bin/oosetup:g" ${x}
+			perl -pi -e "s:${INSTDIR}/program/soffice:/usr/bin/ooffice:g" ${x}
 			# Now fix the rest
 			perl -pi -e "s:${INSTDIR}/program/s:/usr/bin/oo:g" ${x}
 			doins ${x}
@@ -614,8 +614,9 @@ src_install() {
 
 		for x in ${kdeloc}/*.desktop
 		do
-			# We have to handle setup differently
+			# We have to handle soffice and setup differently
 			perl -pi -e "s:${INSTDIR}/program/setup:/usr/bin/oosetup:g" ${x}
+			perl -pi -e "s:${INSTDIR}/program/soffice:/usr/bin/ooffice:g" ${x}
 			# Now fix the rest
 			perl -pi -e "s:${INSTDIR}/program/s:/usr/bin/oo:g" ${x}
 			doins ${x}
