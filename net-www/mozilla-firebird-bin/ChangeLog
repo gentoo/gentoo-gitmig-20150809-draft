@@ -1,8 +1,8 @@
 # ChangeLog for net-www/mozilla-firebird-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/ChangeLog,v 1.1 2003/06/03 15:15:48 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/ChangeLog,v 1.2 2003/06/03 15:19:54 brad Exp $
 
-*firebird-bin-0.6 (17 May 2003)
+*firebird-bin-0.6 (03 June 2003)
 
   03 June 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-bin-0.6.ebuild,
   Initial import of this. Added several improvements to the ebuild this is
