@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 96516aeb0e66a91abca505708b9c4820 intel-536ep-4.69.ebuild 1264
-MD5 bd109ea11a072a0717c6408a5d9972b4 ChangeLog 427
+MD5 4b16aab8baba321770511796d59fb480 intel-536ep-4.69.ebuild 1292
+MD5 addb1d1f29acff746ec28730a7b049df ChangeLog 581
 MD5 4a05a31c48e912c88a3677b9c597516c metadata.xml 227
 MD5 18ed5f89cb69ae749a0c4f41abb7b5b3 files/intel536ep.confd 111
 MD5 29c69d64bc64efc141963b2fc3af1e19 files/intel536ep.initd 920
@@ -10,7 +10,7 @@ MD5 ca1e9b07e5f36835a0332562ee1d3e64 files/digest-intel-536ep-4.69 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB8iBCjiC39V7gKu0RAqXbAJ4irYGF/ZOfRjyaluf1U/eFl1FpxgCgtO0l
-NJY8DSDG6RNbK6fUuvSKTT4=
-=L9q6
+iD8DBQFCCo9EjiC39V7gKu0RAkrYAJ9WA+64ieLDfX8Z93xowXkkFD/p1ACeLotu
+jvoqiiRCkW4EIajf0ukpXu4=
+=t07y
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/intel-536ep
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/ChangeLog,v 1.1 2005/01/22 09:43:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/ChangeLog,v 1.2 2005/02/09 22:31:21 mrness Exp $
+
+  10 Feb 2005; Alin Nastac <mrness@gentoo.org> intel-536ep-4.69.ebuild:
+  Fix broken compilation when installed on a machine with a 2.4 kernel (#81120).
 
 *intel-536ep-4.69 (22 Jan 2005)
 
