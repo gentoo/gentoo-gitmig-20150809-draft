@@ -1,4 +1,4 @@
-MD5 42c14021f9b8bc65fe7d89e07f3cb286 ChangeLog 3660
+MD5 1b52164ae96256dad544b1191a0d2410 ChangeLog 3798
 MD5 ad25a2a0b6ade60c13ad8040f3c319c6 metadata.xml 378
 MD5 46a2892f6e39271209b313b0523629a1 mips-sources-2.4.21-r2.ebuild 1204
 MD5 b351f7c79ce78b5745dd55ac21e16d49 mips-sources-2.4.22-r1.ebuild 1399
@@ -11,5 +11,5 @@ MD5 054c3c8e9c8804a13c79d01ec52793ed files/mipscvs-2.4.21-makefile-fix.patch 915
 MD5 3ec0bd6b14384ef98b64cb997030f3cc files/mipscvs-2.4.22-makefile-fix.patch 1344
 MD5 e40e67b089d55da6d5aeb91ae63a81cb files/mipscvs-2.4.22-sgiwd-fix.patch 1256
 MD5 c111f35ab5bf4506b4974d7336eea3dc files/digest-mips-sources-2.4.22-r3 144
-MD5 b202bb8b3e3d39a0824ca73d770182b9 files/mipscvs-2.4.22-makefile-mips64-tweak.patch 528
+MD5 5b060a7bbac28c36788a02e99721db97 files/mipscvs-2.4.22-makefile-mips64-tweak.patch 529
 MD5 e300a3e148a7dcc38a0e099494fb6cb3 files/bigendian-byteorder-fix.patch 1557
