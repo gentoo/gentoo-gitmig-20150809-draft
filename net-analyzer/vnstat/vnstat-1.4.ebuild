@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4.ebuild,v 1.9 2005/01/21 19:05:26 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4.ebuild,v 1.10 2005/03/03 00:46:15 ka0ttic Exp $
 
 DESCRIPTION="Console-based network traffic monitor that keeps statistics of network usage"
 HOMEPAGE="http://humdi.net/vnstat/"
@@ -50,8 +50,8 @@ pkg_postinst() {
 		einfo "vnstat\'s cron script is now installed as /etc/cron.hourly/vnstat."
 		einfo "Please remove /etc/cron.d/vnstat."
 	else
-		einfo "A cron script has been installed to /etc/cron.hourly/vnstat."
+		einfo "A cron script has been installed to /etc/cron.hourly/vnstat.cron."
 	fi
 	einfo "To update your interface database automatically with"
-	einfo "cron, uncomment the lines in /etc/cron.hourly/vnstat."
+	einfo "cron, uncomment the lines in /etc/cron.hourly/vnstat.cron."
 }
