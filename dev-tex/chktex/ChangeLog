@@ -1,6 +1,6 @@
 # ChangeLog for dev-tex/chktex
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.4 2004/02/09 08:26:23 absinthe Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.5 2004/06/25 02:11:52 agriffis Exp $
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> chktex-1.5-r2.ebuild:
   added amd64 keyword.

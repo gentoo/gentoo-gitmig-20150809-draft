@@ -1,7 +1,7 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Felix Kurth <felix@fkurth.de>
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/foiltex/foiltex-2.1.3.ebuild,v 1.4 2004/04/17 16:36:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/foiltex/foiltex-2.1.3.ebuild,v 1.5 2004/06/25 02:13:32 agriffis Exp $
 
 inherit latex-package
 

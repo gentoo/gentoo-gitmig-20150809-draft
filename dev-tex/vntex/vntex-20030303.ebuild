@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/vntex/vntex-20030303.ebuild,v 1.3 2004/05/07 14:21:56 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/vntex/vntex-20030303.ebuild,v 1.4 2004/06/25 02:17:48 agriffis Exp $
 
 DESCRIPTION="Vietnamese support for TeX"
 HOMEPAGE="http://vntex.sourceforge.net/"

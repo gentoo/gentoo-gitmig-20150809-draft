@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cdcover/cdcover-1.3b.ebuild,v 1.4 2004/05/06 15:25:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cdcover/cdcover-1.3b.ebuild,v 1.5 2004/06/25 02:11:43 agriffis Exp $
 
 inherit latex-package
 

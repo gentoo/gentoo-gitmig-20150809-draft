@@ -1,6 +1,6 @@
 # ChangeLog for dev-tex/ppower4
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ppower4/ChangeLog,v 1.5 2004/06/16 15:45:59 ciaranm Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ppower4/ChangeLog,v 1.6 2004/06/25 02:16:48 agriffis Exp $
 
   16 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> ppower4-0.9.6.ebuild:
   Added ~sparc, bug #53552

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: koma-script-20040111-r1.ebuild,v 1.6 2004/06/21 18:55:22 hansmi Exp $
+# $Id: koma-script-20040111-r1.ebuild,v 1.7 2004/06/25 02:14:32 agriffis Exp $
 
 inherit latex-package
 

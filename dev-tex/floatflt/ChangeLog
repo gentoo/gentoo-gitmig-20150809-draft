@@ -1,5 +1,5 @@
 # ChangeLog for dev-tex/floatflt
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> floatflt-1.31a.ebuild:
   Added IUSE=.
