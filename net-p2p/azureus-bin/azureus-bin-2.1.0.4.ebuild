@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.1.0.4.ebuild,v 1.4 2004/10/26 21:43:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.1.0.4.ebuild,v 1.5 2004/10/26 22:48:05 eradicator Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ LICENSE="GPL-2 BSD"
 SLOT="0"
 
 # Still in progress... trying to get most external classes in through DEPENDs rather than 
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="gtk kde"
 
 DEPEND="virtual/libc
