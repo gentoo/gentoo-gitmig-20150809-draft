@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.73 2003/04/11 17:02:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.74 2003/04/11 23:39:49 weeve Exp $
 
   11 Apr 2003; Dan Armak <danarmak@gentoo.org> kdebase-3.1.1a.ebuild:
   Add notice about mtools (bug #4934). See the notice at the end of the ebuild
@@ -12,7 +12,10 @@
   files/2.2.2-r5/startkde-2.2.2-r5-gentoo:
   The same security fixes for 2.2.2.
 
-*kdeutils-3.1.1a (08 Apr 2003)
+*kdebase-3.1.1a (08 Apr 2003)
+
+  11 Apr 2003; Jason Wever <weeve@gentoo.org> kdebase-3.1.1a.ebuild:
+  Changed ~sparc keyword to sparc.
 
   08 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdebase-3.1.1a.ebuild,
   files/3.1.1a/*:
