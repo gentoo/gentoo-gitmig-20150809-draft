@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.8 2003/04/24 21:07:01 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.9 2003/04/27 09:23:02 killian Exp $
+
+*minicom-1.83.1-r1 (24 Apr 2003)
+
+  24 Apr 2003; Graham Forest <vladimir@gentoo.org> minicom-1.83.1-r1.eb$
+  minicom-2.00.0.ebuild:
+  Added einfo for bug 9526
 
   19 Mar 2003; Guy Martin <gmsoft@gentoo.org> minicom-1.83.1-r1.ebuild :
   Added hppa to keywords.
@@ -23,11 +29,7 @@
 
 *minicom-1.83.1-r1 (1 Feb 2002)
 
-  24 Apr 2003; Graham Forest <vladimir@gentoo.org> minicom-1.83.1-r1.ebuild,
-  minicom-2.00.0.ebuild:
-  Added einfo for bug 9526
-
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
