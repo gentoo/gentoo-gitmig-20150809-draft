@@ -1,17 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4986eb03aa05e3480972643cdc42afa9 fwbuilder-2.0.2.ebuild 850
+MD5 71aaea3a16833edc7dc26285915f29a5 ChangeLog 7447
 MD5 11e6f232f520cdf75476e709f2b3bc7e fwbuilder-1.1.2.ebuild 1390
-MD5 eb9856bc5402a9a226e2325d9192e453 fwbuilder-2.0.4.ebuild 866
-MD5 e56288494acf9c62384144d1887627ff fwbuilder-2.0.6.ebuild 867
-MD5 1155a6757dc0702e0fa6ddda4c095534 fwbuilder-2.0.1.ebuild 819
-MD5 76e4de6ec9b217c66c524497197dae75 fwbuilder-2.0.3.ebuild 945
-MD5 0e32814aa6441caf8511454323bbdb00 ChangeLog 7345
-MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
-MD5 8719c7510feae1b658a046b360130d03 fwbuilder-2.0.5.ebuild 866
 MD5 3fa6fa9b1139da67bb478856fb0e5b4a fwbuilder-2.0.0.ebuild 834
-MD5 b7ecd1d8440ad584eead03ccddd2a800 files/fwbuilder-1.1.2-nls_fix.patch 382
+MD5 1155a6757dc0702e0fa6ddda4c095534 fwbuilder-2.0.1.ebuild 819
+MD5 4986eb03aa05e3480972643cdc42afa9 fwbuilder-2.0.2.ebuild 850
+MD5 76e4de6ec9b217c66c524497197dae75 fwbuilder-2.0.3.ebuild 945
+MD5 eb9856bc5402a9a226e2325d9192e453 fwbuilder-2.0.4.ebuild 866
+MD5 8719c7510feae1b658a046b360130d03 fwbuilder-2.0.5.ebuild 866
+MD5 be322ac2b0d56963f1dee6fd600708da fwbuilder-2.0.6.ebuild 871
+MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 c1a7d072ddaa87c67e47e135f6cbd1cf files/digest-fwbuilder-1.1.2 68
 MD5 c1fa80e0d8e4fecdab2f4954a4331849 files/digest-fwbuilder-2.0.0 67
 MD5 8e082dd18bf1a4f65177d623d336457c files/digest-fwbuilder-2.0.1 67
@@ -20,11 +16,5 @@ MD5 c0a74a19faa5841b76a422ac2997a887 files/digest-fwbuilder-2.0.3 67
 MD5 53d2a461d760b41716b37876d0ef6d51 files/digest-fwbuilder-2.0.4 68
 MD5 9f20f25d4d825eab6d030825464b9c64 files/digest-fwbuilder-2.0.5 68
 MD5 70fea7193b1f73a34e3cf49a2ac9c9c7 files/digest-fwbuilder-2.0.6 68
+MD5 b7ecd1d8440ad584eead03ccddd2a800 files/fwbuilder-1.1.2-nls_fix.patch 382
 MD5 44b9d595271946adccdbfaa63eca4c5f files/fwbuilder-2.0.3-errno.patch 407
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCPErz06ebR+OMO78RAvZMAJ9FdHcq3WwpYkmQp0tetfCGUOBY+QCeOWad
-AHJZQR38PjOPzUP4CDxkV3c=
-=mWuu
------END PGP SIGNATURE-----
