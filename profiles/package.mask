@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (10 Mar 2003)
+# Testing portage-2.0.47-r9
+=sys-apps/portage-2.0.47-r9
+
 # <lordvan@gentoo.org> (10 Mar 2003)
 # ##changed Version scheme from 305 to 4.0.0
 =net-misc/omniORB-304*
