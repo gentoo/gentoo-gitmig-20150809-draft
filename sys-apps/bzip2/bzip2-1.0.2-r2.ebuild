@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.2-r2.ebuild,v 1.24 2003/09/17 23:56:39 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.2-r2.ebuild,v 1.25 2003/09/21 17:36:33 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A high-quality data compressor used extensively by Gentoo Linux"
-SRC_URI="ftp://sources.redhat.com/pub/bzip2/v102/${P}.tar.gz"
 HOMEPAGE="http://sources.redhat.com/bzip2/"
+SRC_URI="ftp://sources.redhat.com/pub/bzip2/v102/${P}.tar.gz"
 
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm ia64"
-SLOT="0"
 LICENSE="BZIP2"
+SLOT="0"
+KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm ia64"
+IUSE="build static"
 
 DEPEND="virtual/glibc"
 
@@ -21,6 +21,7 @@ src_unpack() {
 	# for optimizations, we keep -fomit-frame-pointer and -fno-strength-reduce
 	# for speed.  -fstrength-reduce seems to slow down the code slightly on x86.
 	# (drobbins)
+	use static && CFLAGS="${CFLAGS} -static"
 	sed -e 's:\$(PREFIX)/man:\$(PREFIX)/share/man:g' \
 		-e "s:-O2:${CFLAGS}:g" \
 		Makefile.orig > Makefile || die
@@ -62,4 +63,3 @@ src_install() {
 		ln -s bzip2 bunzip2
 	fi
 }
-

@@ -1,9 +1,11 @@
 # ChangeLog for sys-apps/bzip2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/ChangeLog,v 1.17 2003/03/02 01:36:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/ChangeLog,v 1.18 2003/09/21 17:36:33 vapier Exp $
   
-  02 Mar 2003; Seemant Kulleen <seemant@gentoo.org> bzip2-1.0.2-r2.ebuild :
+  21 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added static support #29266.
 
+  02 Mar 2003; Seemant Kulleen <seemant@gentoo.org> bzip2-1.0.2-r2.ebuild :
   changed the einstall back to make install, because it was causing sandbox
   violations. Thanks to Jay Pfeifer in #-dev for the fix and rac00n in #gentoo for
   finding it.
