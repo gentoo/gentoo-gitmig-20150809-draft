@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.96 2005/01/10 17:02:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.97 2005/01/13 01:21:47 vapier Exp $
+
+*procps-3.2.4-r1 (12 Jan 2005)
+
+  12 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/3.2.4-linux26-slab.patch, +procps-3.2.4-r1.ebuild,
+  -procps-3.2.4.ebuild:
+  Add patch from upstream to fix newer slab version #77301 by regala.
 
   10 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> procps-3.2.4.ebuild:
   Stable on sparc

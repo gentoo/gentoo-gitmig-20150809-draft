@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.4.ebuild,v 1.9 2005/01/10 17:02:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.4-r1.ebuild,v 1.1 2005/01/13 01:21:47 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -18,6 +18,9 @@ RDEPEND=">=sys-libs/ncurses-5.2-r2"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# Upstream patch to support newer linux #77301
+	epatch "${FILESDIR}"/${PV}-linux26-slab.patch
 
 	# Clean up the makefile
 	# firstly we want to control stripping
