@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.37 2003/11/17 09:49:32 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.38 2003/11/29 22:31:11 taviso Exp $
+
+*gnupg-1.2.3-r4 (29 Nov 2003)
+
+  29 Nov 2003; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.3-r4.ebuild,
+  files/gnupg-1.2.3-disable-elgamal.diff:
+  disable elgamal sign+encrypt,
+  http://lists.gnupg.org/pipermail/gnupg-announce/2003q4/000277.html
 
   17 Nov 2003; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.3-r3.ebuild:
   stable.
