@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-synaesthesia/xmms-synaesthesia-0.0.3_rc3.ebuild,v 1.8 2004/09/14 07:15:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-synaesthesia/xmms-synaesthesia-0.0.3_rc3-r1.ebuild,v 1.1 2005/03/23 18:59:00 eradicator Exp $
 
 IUSE=""
 
@@ -26,9 +26,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gcc34.patch
 	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
 	gnuconfig_update
+
+	rm config.cache
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README
 }

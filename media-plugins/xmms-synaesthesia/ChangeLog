@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/xmms-synaesthesia
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-synaesthesia/ChangeLog,v 1.9 2004/09/14 07:15:10 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-synaesthesia/ChangeLog,v 1.10 2005/03/23 18:59:00 eradicator Exp $
+
+*xmms-synaesthesia-0.0.3_rc3-r1 (23 Mar 2005)
+
+  23 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -xmms-synaesthesia-0.0.3_rc3.ebuild,
+  +xmms-synaesthesia-0.0.3_rc3-r1.ebuild:
+  Remove config.cache file which got included in the tarball by upstream.
+  Revbump, but keeping stable.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-synaesthesia-0.0.3_rc3.ebuild:

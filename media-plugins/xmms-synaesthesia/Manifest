@@ -1,6 +1,16 @@
-MD5 5c3b2ea4aa61ede224532a4fb47b6b31 ChangeLog 1316
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b30bec0fc9c20e109f1d66061ffff52c ChangeLog 1608
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 336c643bad7c3e75fcf52540231b9644 xmms-synaesthesia-0.0.3_rc3.ebuild 832
-MD5 7ba67c996535a47c1b9e0136f01a631f files/digest-xmms-synaesthesia-0.0.3_rc3 79
-MD5 859fafdcac4022b35eca555e692a64d1 files/xmms-synaesthesia-0.0.3_rc3-gcc34.patch 4218
+MD5 c13f39845961de6f185761d0082d9c50 xmms-synaesthesia-0.0.3_rc3-r1.ebuild 855
 MD5 3981baf76e4c63e1a2120828475f757d files/xmms-synaesthesia-0.0.3_rc3-amd64.patch 4703
+MD5 859fafdcac4022b35eca555e692a64d1 files/xmms-synaesthesia-0.0.3_rc3-gcc34.patch 4218
+MD5 7ba67c996535a47c1b9e0136f01a631f files/digest-xmms-synaesthesia-0.0.3_rc3-r1 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQbyOArHZZzCEUG0RAiBgAJ0VsG90WyobDZ0iU4HrjTQjT9umTgCeK80Y
+Lg2QU4dQB0Vgrqr+l21k79E=
+=no4o
+-----END PGP SIGNATURE-----
