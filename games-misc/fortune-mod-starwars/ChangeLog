@@ -1,6 +1,6 @@
-# ChangeLog for app-games/fortune-mod-starwars
+# ChangeLog for games-misc/fortune-mod-starwars
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-starwars/ChangeLog,v 1.1 2003/09/10 18:14:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-starwars/ChangeLog,v 1.2 2003/09/10 20:26:48 vapier Exp $
 
 
 *fortune-mod-starwars-0.1.ebuild (12 Aug 2002)
