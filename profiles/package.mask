@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2779 2004/03/28 19:52:55 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2780 2004/03/28 20:29:41 humpback Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -25,8 +25,8 @@
 
 # <humpback@gentoo.org> (28 Mar 2004)
 # Needs some more testing
-=net-im/jabberoo-1.9.3
-=net-im/gabber-1.9.3
+>=net-im/jabberoo-1.9.3
+>=net-im/gabber-1.9.3
 
 # <usata@gentoo.org> (27 Mar 2004)
 # warning when loading bookmark and imcomplete frame support
