@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake3-urbanterror
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/ChangeLog,v 1.6 2003/10/14 02:14:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/ChangeLog,v 1.7 2004/01/29 10:07:36 vapier Exp $
+
+*quake3-urbanterror-3.2 (29 Jan 2004)
+
+  29 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #39070 by Keith Constable.
 
 *quake3-urbanterror-3.1-r1 (13 Oct 2003)
 
