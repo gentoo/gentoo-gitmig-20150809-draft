@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/capisuite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.10 2004/11/14 20:56:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.11 2004/11/15 19:18:37 mrness Exp $
+
+  15 Nov 2004; Alin Nastac <mrness@gentoo.org> capisuite-0.4.4-r1.ebuild:
+  Solve bug #71187, unblocked by #53889.
 
 *capisuite-0.4.4-r1 (14 Nov 2004)
 
