@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Authen-PAM
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-PAM/ChangeLog,v 1.17 2004/06/25 00:08:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-PAM/ChangeLog,v 1.18 2004/08/29 06:00:41 tgall Exp $
+
+  29 Aug 2004; Tom Gall <tgall@gentoo.org> Authen-PAM-0.14.ebuild:
+  stable on ppc64, bug #60198
 
   17 Apr 2004; Michael McCabe <randy@gentoo.org> Authen-PAM-0.14.ebuild:
   added s390 keywords
