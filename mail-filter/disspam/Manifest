@@ -1,21 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c9f3d4e9fcfa37a58abf79daff65d837 ChangeLog 1756
+MD5 c98689c998443c757a8a2458a7a80a8a ChangeLog 1853
+MD5 f83366b7eebbd95dc20c27082c415858 disspam-0.10.ebuild 640
 MD5 56bbfbe82cae14e9e1313a4d1545e540 disspam-0.12.ebuild 832
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 ee04dea02ffb9e3349287a72c0803bf1 disspam-0.14.ebuild 853
-MD5 f83366b7eebbd95dc20c27082c415858 disspam-0.10.ebuild 640
 MD5 56457e8f7acac6a07d09f728acf8f57e disspam-0.12-r1.ebuild 1100
+MD5 4681ec9962783e0662ec248982be66cb disspam-0.14.ebuild 855
 MD5 ddb8a156da69c67f9ed6054ee673afc4 files/digest-disspam-0.10 62
-MD5 be17e97b664b6edd999e63392d4341ef files/digest-disspam-0.14 63
 MD5 548d657cf971ba884004c6d2a64380fa files/digest-disspam-0.12 63
 MD5 7f9a737e57d995d4630d4186543669fe files/0.12-sa302fix.patch 617
 MD5 548d657cf971ba884004c6d2a64380fa files/digest-disspam-0.12-r1 63
+MD5 be17e97b664b6edd999e63392d4341ef files/digest-disspam-0.14 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCBxEUQlM6RnzZP+IRAvcDAJ9wqmQBGGTQWfugkMK4KHK6ML0itQCgt/LM
-4hrZ5c1xPEMGnb44D8CXWs8=
-=rnH6
+iD8DBQFCCMBlKRy60XGEcJIRAhZLAJ0RKmOKv2ck1IcDyEyUngZkuhaxqQCfSShk
+Z1mNl/7xzt2+Js5JwPfevGY=
+=ORM2
 -----END PGP SIGNATURE-----
