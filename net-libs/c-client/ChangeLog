@@ -1,8 +1,11 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.1 2003/06/08 03:41:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.2 2003/06/21 11:50:03 gmsoft Exp $
 
 *c-client-2002d (07 Jun 2003)
+
+  20 Jun 2003; Guy Martin <gmsoft@gentoo.org> c-client-2002d.ebuild :
+  Added hppa to KEYWORDS to fix dependencies problem with mod_php.
 
   07 Jun 2003; Robin Johnson <robbat2@gentoo.org> Manifest,
   files/digest-c-client-2002d, files/2002d-Makefile.patch, ChangeLog,

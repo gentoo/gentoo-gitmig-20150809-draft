@@ -1,4 +1,4 @@
-MD5 c491ec056799038d462c1117b9df16e1 ChangeLog 520
-MD5 4bbd575786eefe30845f77bac654d926 c-client-2002d.ebuild 1822
-MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-c-client-2002d 62
+MD5 315261c3fa434730e0c6533e0705a3cd ChangeLog 657
+MD5 907ce9c2dddc9a8530b6ba8f519ccb3e c-client-2002d.ebuild 1820
 MD5 c8cf618ac210e06a1641871b30550e8f files/2002d-Makefile.patch 2174
+MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-c-client-2002d 62

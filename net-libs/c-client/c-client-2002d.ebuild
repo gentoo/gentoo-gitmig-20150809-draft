@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002d.ebuild,v 1.1 2003/06/08 03:41:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002d.ebuild,v 1.2 2003/06/21 11:50:04 gmsoft Exp $
 
 MY_PN=imap
 MY_P=${MY_PN}-${PV}
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.washington.edu/imap/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc ~hppa ~alpha"
+KEYWORDS="x86 ~sparc ~ppc hppa ~alpha"
 IUSE="ssl"
 
 PROVIDE="virtual/imap-c-client"
