@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-1.8.ebuild,v 1.2 2004/04/19 08:56:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-1.8.ebuild,v 1.3 2004/06/06 00:10:24 dragonheart Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/src-highlite/source-highlight.html"
 SRC_URI="ftp://ftp.gnu.org/gnu/src-highlite/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc"
 SLOT="0"
 
 DEPEND="sys-apps/gawk
@@ -20,8 +20,6 @@ DEPEND="sys-apps/gawk
 	virtual/glibc"
 
 RDEPEND="virtual/glibc"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	econf || die
