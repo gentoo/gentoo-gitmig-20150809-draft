@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 64acc4686f01553a3c28e0e322ef5589 vanilla-sources-2.6.11_rc1.ebuild 484
 MD5 1cbe43ad9a9aeb8b0f99c7b917cb8a45 vanilla-sources-2.6.10.ebuild 475
 MD5 2b03b5303004069d236540fff82d3077 vanilla-sources-2.6.7.ebuild 456
@@ -6,7 +9,7 @@ MD5 cf226acb54a03c4e89a07e378c358a89 vanilla-sources-2.4.29.ebuild 476
 MD5 83b70dd75d9c8783e7b29e19cf2f2d5c vanilla-sources-2.4.27.ebuild 472
 MD5 447993921185b57a86d870426511e9cf vanilla-sources-2.6.11_rc3.ebuild 487
 MD5 87e74a237fdeaf3d3ba47305f035e8aa vanilla-sources-2.4.24-r1.ebuild 529
-MD5 d906f5c5599347682281deaec0fb1e52 ChangeLog 10233
+MD5 d2723d754983950e136993bde2eb3e4b ChangeLog 10384
 MD5 31eb28103b65ea473ff4926f43f02455 vanilla-sources-2.4.20.ebuild 515
 MD5 d354a53c79720fe471a144852d850fc3 vanilla-sources-2.0.40.ebuild 2739
 MD5 7eeaa66d6ef9652cf01be43981c99574 vanilla-sources-2.4.26.ebuild 472
@@ -17,7 +20,7 @@ MD5 5e5cffe00b203d438fa15e1b0b9373a8 vanilla-sources-2.4.25.ebuild 534
 MD5 d3fe4307495d4302c375f45795afcca7 vanilla-sources-2.4.23.ebuild 472
 MD5 7fd084c8e807a3d8b7a26921764e4687 vanilla-sources-2.4.21.ebuild 565
 MD5 95b3a12c5484c087c1999a1c3dfa932f vanilla-sources-2.6.11_rc2.ebuild 489
-MD5 7674087538fad65e4f89caf7fca04c6f vanilla-sources-2.6.11_rc5.ebuild 429
+MD5 b38c60eda36bb00d1a26af5598722e95 vanilla-sources-2.6.11_rc5.ebuild 553
 MD5 9b4eb4b258ac28ddde823f42eeb05c39 vanilla-sources-2.6.11_rc4.ebuild 487
 MD5 97ebbee3ab02255ccaa15c4280e8ace2 vanilla-sources-2.4.28.ebuild 472
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-vanilla-sources-2.4.21 67
@@ -42,3 +45,10 @@ MD5 d8266c3fd31880277da566681a943098 files/digest-vanilla-sources-2.4.24-r1 67
 MD5 bbc9b6e1761a30c6c7f7a9f8dec1e7e3 files/digest-vanilla-sources-2.4.20 67
 MD5 1d8193a0ded31699ec3b7bf85dd6cbfa files/digest-vanilla-sources-2.0.40 66
 MD5 79ee1ad9f4629595cd8d0cd20ca56dc1 files/digest-vanilla-sources-2.4.23 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCHk+Ep5vW4rUFj5oRAlG/AJ4sPKcZDtu0DCBQx1FsXkHGVhXW0ACfRyLZ
+yQX7t5J5wd40ZQMoe9/EeyQ=
+=Ps4D
+-----END PGP SIGNATURE-----
