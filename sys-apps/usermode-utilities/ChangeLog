@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/usermode-utilities
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.9 2003/02/12 09:11:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.10 2003/03/02 20:47:42 tantive Exp $
+
+*usermode-utilities-20030205 (02 Mar 2003)
+
+  02 Mar 2003; Michael Imhof <tantive@gentoo.org>
+  Version bumped. Cleaned out old ebuilds.
+
+*usermode-utilities-20030202 (02 Mar 2003)
+
+  02 Mar 2003; Michael Imhof <tantive@gentoo.org>
+  Version bumped.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
@@ -38,25 +48,3 @@
 
   08 Oct 2002; Michael Imhof <tantive@gentoo.org>
   Version bump thanks to sasquach
-  
-*usermode-utilities-20020821 (08 Oct 2002)
-
-  08 Oct 2002; Michael Imhof <tantive@gentoo.org>
-  Version bump thanks to sasquach
-
-*usermode-utilities-20020729 (08 Oct 2002)
-
-  08 Oct 2002; Michael Imhof <tantive@gentoo.org>
-  Version bump thanks to sasquach
-
-*usermode-utilities-20020718 (23 Jul 2002)
-
-  23 Jul 2002; Seemant Kulleen <seemant@gentoo.org> usermode-20020718.ebuild :
-  Version bump thanks to sasquach in #gentoo
-
-*usermode-utilities-20020415 (27 Apr 2002)
-
-  27 Apr 2002; Bruce A. Locke <blocke@shivan.org> usermode-20020415.ebuild:
-
-  Bumped to new version and quick change to ebuild to make it more version
-  independent.
