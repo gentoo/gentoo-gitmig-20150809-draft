@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.6 2003/08/19 01:05:50 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.7 2003/08/21 19:24:23 pebenito Exp $
+
+  21 Aug 2003; Chris PeBenito <pebenito@gentoo.org> libselinux-1.1-r1.ebuild:
+  Add a dep for portage. The newer versions have labelling support for the old
+  API.
 
   18 Aug 2003; Chris PeBenito <pebenito@gentoo.org> libselinux-1.1-r1.ebuild,
   metadata.xml:
