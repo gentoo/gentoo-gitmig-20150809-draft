@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.6.0.ebuild,v 1.2 2004/03/28 18:24:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.6.0.ebuild,v 1.3 2004/04/05 20:09:20 agriffis Exp $
 
 # FIXME : can use gnutls
 inherit gnome2 eutils
@@ -12,7 +12,7 @@ SLOT="2"
 DESCRIPTION="Gnome Virtual Filesystem"
 HOMEPAGE="http://www.gnome.org/"
 
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~mips"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~mips ~ia64"
 LICENSE="GPL-2 LGPL-2"
 
 RDEPEND=">=dev-libs/glib-2
