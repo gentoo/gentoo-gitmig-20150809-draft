@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-0.13.ebuild,v 1.7 2004/06/24 22:41:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-0.13.ebuild,v 1.8 2004/07/14 17:40:59 agriffis Exp $
 
 IUSE="nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="gthumb is an Image Viewer and Browser for Gnome."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gthumb.sourceforge.net/"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.12-r1.ebuild,v 1.8 2004/06/24 22:40:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.12-r1.ebuild,v 1.9 2004/07/14 17:39:54 agriffis Exp $
 
 inherit eutils
 
@@ -25,8 +25,6 @@ DEPEND="virtual/x11
 	pdflib? ( >=media-libs/pdflib-4.0.3 )
 	>=sys-apps/sed-4"
 #	x11-libs/xmhtml
-
-S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${A}
