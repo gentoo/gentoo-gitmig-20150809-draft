@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.6.0.ebuild,v 1.2 2003/06/04 13:42:22 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.6.0.ebuild,v 1.3 2003/06/26 20:33:41 raker Exp $
 
 DESCRIPTION="GNUstep makefile package"
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="virtual/glibc
 	>=sys-devel/gcc-3.1
@@ -22,6 +22,7 @@ DEPEND="virtual/glibc
 
 src_compile() {
 	./configure \
+		--prefix=/usr/GNUstep \
 		--host=${CHOST} || die "./configure failed"
 	emake || die
 }
