@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm-addons/gtkmm-addons-0.5.3.ebuild,v 1.15 2003/07/13 12:48:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm-addons/gtkmm-addons-0.5.3.ebuild,v 1.16 2004/04/17 23:02:17 aliz Exp $
 
 MY_P="`echo ${P} |sed -e 's/-//' -e 's/g/G/' -e 's/a/A/'`"
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://home.wtal.de/petig/Gtk/"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc "
-
+IUSE=""
 DEPEND="=x11-libs/gtk+-1.2*
 	>=dev-cpp/gtkmm-1.2.5-r1"
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/startup-notification
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/ChangeLog,v 1.15 2004/04/07 11:32:14 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/ChangeLog,v 1.16 2004/04/17 23:02:17 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
+  startup-notification-0.5.ebuild:
+  Removed S.
 
 *startup-notification-0.6 (07 Apr 2004)
 

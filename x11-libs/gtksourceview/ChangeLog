@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.21 2004/03/27 01:10:55 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.22 2004/04/17 23:02:17 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> gtksourceview-0.7.0-r1.ebuild,
+  gtksourceview-0.7.1.ebuild:
+  Inherit eutils.
 
   26 Mar 2004; Jon Portnoy <avenj@gentoo.org>
   gtksourceview-0.7.1.ebuild :

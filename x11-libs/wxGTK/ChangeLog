@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.46 2004/03/25 06:46:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.47 2004/04/17 23:02:17 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> wxGTK-2.4.1-r1.ebuild,
+  wxGTK-2.4.2.ebuild:
+  Inherit eutils, fixed IUSE flags.
 
   24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> wxGTK-2.4.0.ebuild,
   wxGTK-2.4.1-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ViewKlass/ViewKlass-0.6.0.ebuild,v 1.6 2004/01/27 19:56:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ViewKlass/ViewKlass-0.6.0.ebuild,v 1.7 2004/04/17 23:02:17 aliz Exp $
 
 IUSE=""
 
@@ -14,8 +14,6 @@ DEPEND="x11-libs/openmotif"
 
 SLOT="0"
 KEYWORDS="~x86 ~sparc"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	zcat ${FILESDIR}/${P}-gentoo.patch| patch -p1 || die

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r2.ebuild,v 1.9 2004/02/17 08:09:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r2.ebuild,v 1.10 2004/04/17 23:02:17 aliz Exp $
 
 inherit eutils
 
 DESCRIPTION="X FreeType library, also known as Xft2.0"
 HOMEPAGE="http://fontconfig.org/"
 SRC_URI="http://fontconfig.org/release/fcpackage.${PV/\.0\./_}.tar.gz"
-
+IUSE=""
 LICENSE="fontconfig"
 SLOT="0"
 KEYWORDS="x86 ppc alpha sparc hppa ~amd64"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/guile-gtk 
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.6 2004/01/10 14:50:34 obz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.7 2004/04/17 23:02:17 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> guile-gtk-0.19-r1.ebuild:
+  Inherit eutils, added IUSE=
 
   10 Jan 2004; Mike Gardiner <obz@gentoo.org> guile-gtk-1.2.0.31.ebuild:
   Fixed install *.sc to *.scm typo, to install the examples

@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.1-r1.ebuild,v 1.6 2003/02/13 16:59:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.1-r1.ebuild,v 1.7 2004/04/17 23:02:17 aliz Exp $
 
 inherit gnome2
 
-S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="Zed's Virtual Terminal Library"
 SRC_URI="mirror://gnome/2.0.0/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"

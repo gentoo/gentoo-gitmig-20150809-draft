@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.28 2004/04/05 13:46:05 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.29 2004/04/17 23:02:17 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> xosd-2.2.4-r2.ebuild,
+  xosd-2.2.5-r1.ebuild, xosd-2.2.5.ebuild:
+  Inherit eutils.
 
   05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> xosd-2.2.4-r2.ebuild,
   xosd-2.2.5-r1.ebuild, xosd-2.2.5.ebuild:

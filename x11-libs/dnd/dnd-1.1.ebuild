@@ -1,12 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/dnd-1.1.ebuild,v 1.14 2004/03/01 12:32:15 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/dnd-1.1.ebuild,v 1.15 2004/04/17 23:02:17 aliz Exp $
+
+inherit eutils
 
 S=${WORKDIR}/DND/DNDlib
 DESCRIPTION="OffiX' Drag'n'drop library"
 HOMEPAGE="http://leb.net/OffiX"
 SRC_URI="http://leb.net/OffiX/dnd.1.1.tgz"
-
+IUSE=""
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="x86 sparc alpha ia64 amd64 ~ppc"

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.1-r2.ebuild,v 1.11 2004/04/12 18:46:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.1-r2.ebuild,v 1.12 2004/04/17 23:02:17 aliz Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
-S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="Zed's Virtual Terminal Library"
 SRC_URI="mirror://gnome/2.0.0/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
@@ -27,5 +27,5 @@ src_unpack() {
 	unpack ${A}
 
 	# This patch fixes a bug related to the numeric keypad. See bug #9536
-	patch -p0 <${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 }

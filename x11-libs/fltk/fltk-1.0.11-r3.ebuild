@@ -1,10 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.0.11-r3.ebuild,v 1.10 2003/09/07 00:23:27 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.0.11-r3.ebuild,v 1.11 2004/04/17 23:02:17 aliz Exp $
 
 IUSE="opengl"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="C++ user interface toolkit for X and OpenGL."
 SRC_URI="ftp://ftp.fltk.org/pub/fltk/${PV}/${P}-source.tar.bz2"
 HOMEPAGE="http://www.fltk.org"

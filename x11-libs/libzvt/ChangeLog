@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libzvt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/ChangeLog,v 1.17 2004/04/12 18:46:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/ChangeLog,v 1.18 2004/04/17 23:02:17 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> libzvt-2.0.1-r1.ebuild,
+  libzvt-2.0.1-r2.ebuild:
+  Changed patch to epatch, removed S, added IUSE.
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> libzvt-2.0.1-r1.ebuild:
+  Removed S, added IUSE
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> libzvt-2.0.1-r2.ebuild:
   Mark stable on amd64.

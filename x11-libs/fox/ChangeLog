@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.14 2004/04/10 21:23:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.15 2004/04/17 23:02:17 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> fox-1.0.43.ebuild,
+  fox-1.0.49.ebuild:
+  Added IUSE=
 
   10 Apr 2004; David Holm <dholm@gentoo.org> fox-1.0.49.ebuild:
   Added to ~ppc.

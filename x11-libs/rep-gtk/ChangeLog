@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.23 2004/03/30 04:24:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.24 2004/04/17 23:02:17 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> rep-gtk-0.15-r3.ebuild,
+  rep-gtk-0.16.ebuild:
+  Removed S, added IUSE.
 
   29 Mar 2004; Aron Griffis <agriffis@gentoo.org> metadata.xml,
   rep-gtk-0.18.ebuild, files/rep-gtk-0.18-gtk24.patch:

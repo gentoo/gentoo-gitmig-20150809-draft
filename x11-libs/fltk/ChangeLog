@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.30 2004/03/05 14:57:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.31 2004/04/17 23:02:17 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> fltk-1.0.11-r3.ebuild:
+  Removed S=
 
   05 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> fltk-1.1.4.ebuild:
   stable on sparc

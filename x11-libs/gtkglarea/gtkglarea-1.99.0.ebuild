@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.16 2004/03/17 00:50:44 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.17 2004/04/17 23:02:17 aliz Exp $
 
 inherit gnome2 gnuconfig
 
 DESCRIPTION="GL extensions for gtk+"
 HOMEPAGE="http://www.gnome.org/"
-
+IUSE=""
 SLOT="2"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips"
