@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.27.ebuild,v 1.4 2004/08/16 16:45:12 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.27.ebuild,v 1.5 2004/08/16 18:36:21 squinky86 Exp $
 
 inherit eutils
 
@@ -59,7 +59,7 @@ src_install() {
 
 	dodoc ChangeLog Copying.txt Developers.txt Install.txt
 	cd ${S}/distrib
-	dodoc ChangeLog Authors.txt Bugs.txt Copying.txt Developers.txt Install.txt Readme.txt Todo.txt ed2k_links.txt
+	dodoc ChangeLog Authors.txt Bugs.txt Copying.txt Developers.txt Install.txt Readme.txt Todo.txt ed2k_links.txt Changelog_spiralvoice
 	dohtml FAQ.html
 
 	insinto /usr/share/doc/${PF}/scripts
