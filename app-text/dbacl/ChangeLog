@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dbacl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dbacl/ChangeLog,v 1.3 2003/02/12 05:22:35 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dbacl/ChangeLog,v 1.4 2004/04/15 21:36:35 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org> dbacl-1.3.ebuild:
+  adding s390 keywords
 
 *dbacl-1.3 (09 Jan 2003)
 
