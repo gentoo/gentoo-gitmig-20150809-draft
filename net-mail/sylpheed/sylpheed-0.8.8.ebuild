@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.8.8.ebuild,v 1.2 2003/01/07 05:26:38 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.8.8.ebuild,v 1.3 2003/01/08 20:17:41 bcowan Exp $
 
 IUSE="ssl xface ipv6 nls gnome ldap crypt pda"
 
@@ -25,7 +25,6 @@ DEPEND="=x11-libs/gtk+-1.2*
 	gnome? ( >=media-libs/gdk-pixbuf-0.11.0-r1 )"
 
 src_compile() {
-
 	local myconf
 
 	use gnome || myconf="${myconf} --disable-gdk-pixbuf --disable-imlib"
@@ -50,12 +49,15 @@ src_compile() {
 }
 
 src_install () {
-
 	einstall 	
 
 	dodir /usr/share/pixmaps 
 	insinto /usr/share/pixmaps
 	doins *.png
+	
+	dodir /etc
+	insinto /etc
+	doins ${FILESDIR}/mime.types
 	
 	if use gnome
 	    then
