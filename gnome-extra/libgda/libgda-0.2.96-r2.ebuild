@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.96-r2.ebuild,v 1.4 2002/10/05 05:39:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.96-r2.ebuild,v 1.5 2002/10/19 22:01:14 cselkirk Exp $
 
 IUSE="odbc postgres mysql"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/gnome-db"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc sparc64 ppc"
 
 
 RDEPEND="virtual/glibc
@@ -27,7 +27,7 @@ RDEPEND="virtual/glibc
 	 >=dev-db/sqlite-2.0.8
 	 mysql? ( >=dev-db/mysql-3.23.26 )
 	 postgres? ( >=dev-db/postgresql-7.1 )
-	 odbc? ( >=dev-db/unixODBC-1.8.13 )"
+	 odbc? ( >=dev-db/unixODBC-2.0.6 )"
 
 # ldap support is currently broken (this fixes bug #4019)
 #	 ldap? ( >=net-nds/openldap-1.2.11 )"
