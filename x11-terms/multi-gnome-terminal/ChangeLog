@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/multi-gnome-terminal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.16 2003/02/12 09:45:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.17 2003/04/28 02:44:39 azarah Exp $
+
+*multi-gnome-terminal-1.6.2 (28 Apr 2003)
+
+  28 Apr 2003; Martin Schlemmer <azarah@gentoo.org> multi-gnome-terminal-1.6.2.ebuild :
+  Update version.
 
 *multi-gnome-terminal-1.6.1 (18 Oct 2002)
 
