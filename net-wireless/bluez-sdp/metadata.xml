@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>wireless</herd>
+<maintainer>
+  <email>latexer@gentoo.org</email>
+  <name>Peter Johanson</name>
+  <description>Keep it up to date until someone dedicated to it takes over</description>
+</maintainer>
+</pkgmetadata>
