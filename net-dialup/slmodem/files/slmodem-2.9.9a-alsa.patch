@@ -1,0 +1,24 @@
+From Jos Delbar <jos.delbar@ugent.be>
+Written and posted to gentoo bugzilla before 2.9.10 was released
+http://bugs.gentoo.org/60676
+
+--- slmodem-2.9.9a/modem/modem_cmdline.c	2005-01-19 14:34:16.009578193 +0100
++++ slmodem-2.9.9a-fixed/modem/modem_cmdline.c	2005-01-19 14:36:57.987589517 +0100
+@@ -103,7 +103,7 @@
+ 	{'v',"version","show version and exit"},
+ 	{'c',"country","default modem country name",MANDATORY,STRING,"USA"},
+ 	{ 0 ,"countrylist","show list of supported countries"},
+-	{'a',"alsa","ALSA mode (see README for howto)"},
++	{'a',"alsa","ALSA mode (see README for howto)",OPTIONAL,STRING,"hw:1"},
+ 	{'g',"group","Modem TTY group",MANDATORY,STRING,"uucp"},
+ 	{'p',"perm","Modem TTY permission",MANDATORY,INTEGER,"0660"},
+ 	{'n',"nortpriority","run with regular priority"},
+@@ -237,7 +237,7 @@
+ 		PR_INFO("ALSA support is not compiled in (see README for howto).\n");
+ 		exit(1);
+ #endif
+-		modem_dev_name = modem_alsa_dev_name;
++		modem_dev_name = opt_list[OPT_ALSA].arg_val;
+ 		use_alsa = 1;
+ 	}
+ 	if(opt_list[OPT_GROUP].found)

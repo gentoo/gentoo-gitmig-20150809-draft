@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.37 2005/01/18 21:42:31 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.38 2005/01/21 16:09:20 dsd Exp $
+
+*slmodem-2.9.9a-r1 (21 Jan 2005)
+
+  21 Jan 2005; Daniel Drake <dsd@gentoo.org> +files/slmodem-2.9.9a-alsa.patch,
+  +slmodem-2.9.9a-r1.ebuild:
+  Readd ALSA modem fix thanks to Jos Delbar <jos.delbar@ugent.be> in bug 77184
 
   19 Jan 2005; Daniel Drake <dsd@gentoo.org> -slmodem-2.9.10-r1.ebuild,
   slmodem-2.9.9a.ebuild:
