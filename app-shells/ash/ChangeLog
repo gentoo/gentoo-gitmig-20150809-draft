@@ -1,8 +1,13 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for app-shells/ash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.1 2003/02/09 09:36:30 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.2 2003/02/11 11:18:13 seemant Exp $
 
 *ash-1.6 (09 Feb 2003)
+
+  10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> ash-1.6.ebuild :
+
+  Moved the patch off-site to the mirrors instead, and did some ebuild
+  syntax cleanup.
 
   09 Feb 2003; Matthew Turk <satai@gentoo.org> :
   Initial import.  Ebuild submitted by Tavis Ormandy <taviso@sdf.lonestar.org>
