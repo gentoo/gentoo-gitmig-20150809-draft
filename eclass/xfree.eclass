@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.18 2004/02/23 04:45:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.19 2004/02/25 19:31:12 spyderous Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -69,14 +69,14 @@ get_KV_info() {
 }
 
 is_kernel() {
-        get_KV_info
-                                                                                
-        if [ "${KV_major}" -eq "${1}" -a "${KV_minor}" -eq "${2}" ]
-        then
-                return 0
-        else
-                return 1
-        fi
+	get_KV_info
+
+	if [ "${KV_major}" -eq "${1}" -a "${KV_minor}" -eq "${2}" ]
+	then
+		return 0
+	else
+		return 1
+	fi
 }
 
 # For stripping binaries, but not drivers or modules.
