@@ -1,10 +1,16 @@
 # ChangeLog for app-crypt/mcrypt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.5 2003/03/28 12:37:03 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.6 2003/04/24 17:40:07 robbat2 Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*mcrypt-2.6.4 (24 Apr 2003)
+
+  24 Apr 2003; Robin Johnson <robbat2@gentoo.org> mcrypt-2.6.4.ebuild:
+  added new ebuild. 
+  In unstable only due to update to new libmcrypt.
  
 *mcrypt-2.6.2 (31 Oct 2002)
+  
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> mcrypt-2.6.2.ebuild
   ppc stable
