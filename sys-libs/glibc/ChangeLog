@@ -1,13 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.264 2004/10/04 11:29:35 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.265 2004/10/04 11:31:07 lv Exp $
 
 *glibc-2.3.4.20041002 (04 Oct 2004)
 
   04 Oct 2004; Travis Tilley <lv@gentoo.org> -glibc-2.3.4.20040928.ebuild,
   +glibc-2.3.4.20041002.ebuild:
   updated to the latest fedora-branch snapshot. among other things, this fixes
-  the NPTL pthread_mutex_timedwait bug detailed at
+  the pthread_mutex_timedwait bug detailed at
   http://sources.redhat.com/bugzilla/show_bug.cgi?id=417
 
   01 Oct 2004; Joshua Kinard <kumba@gentoo.org> glibc-2.3.4.20040808.ebuild:
