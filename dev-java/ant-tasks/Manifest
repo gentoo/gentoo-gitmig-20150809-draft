@@ -1,4 +1,14 @@
-MD5 d3cdd5754e7bcf18f9c82a385b438edb ant-tasks-1.6.2-r5.ebuild 3618
-MD5 7a222504fbcb98393470699a24f5277c ChangeLog 6562
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ce0c396447ba6459cbfa9bad54a21f7e ant-tasks-1.6.2-r5.ebuild 3618
+MD5 45ff891c63c8503a91c6bd3e87ca3992 ChangeLog 6558
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
 MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-tasks-1.6.2-r5 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBQgOu/rLF9B432nYRAkp0AKDNNvJAmX6We3hY+Q5Q9bFs6TexDACeLCvb
+rPC1f0vYiL8L/6BbJY80cjA=
+=Ykwh
+-----END PGP SIGNATURE-----

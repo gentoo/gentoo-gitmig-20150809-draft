@@ -1,6 +1,16 @@
-MD5 d88083e6e4c2b58089114054a036f8dc jdepend-2.6-r1.ebuild 1432
-MD5 48f89f44fab162e6fab66bae517f7f03 jdepend-2.8-r1.ebuild 1420
-MD5 8c7a7d90c1d6d7101cbebcefa9c423ad ChangeLog 1729
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ece62e512bf95e2e265a2c76612011c7 jdepend-2.6-r1.ebuild 1434
+MD5 5539c05beda03bc79c07b64e963c5187 jdepend-2.8-r1.ebuild 1425
+MD5 9f7369901a98a7a1f21fe515139b4730 ChangeLog 1729
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 8edc146649c8fbc403b70d2bce7702f5 files/digest-jdepend-2.6-r1 60
 MD5 bff97b12035abbf9e1411b1b40b87cfa files/digest-jdepend-2.8-r1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBQgVd/rLF9B432nYRAncYAKCrJmQsRpyHjoVOpqvi69eT2+oZRQCeL9ud
+Zlqh6xIvXCslizFA6FJ+TNE=
+=7RXp
+-----END PGP SIGNATURE-----
