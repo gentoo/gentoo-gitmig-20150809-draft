@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.55.ebuild,v 1.6 2004/06/24 22:00:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.55.ebuild,v 1.7 2005/02/07 00:39:23 rphillips Exp $
 
 DESCRIPTION="A free source code editing component for the FOX-Toolkit"
 HOMEPAGE="http://www.nongnu.org/fxscintilla"
