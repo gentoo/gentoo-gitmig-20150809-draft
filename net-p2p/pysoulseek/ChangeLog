@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/pysoulseek
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.11 2003/03/16 17:31:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.12 2003/03/24 23:26:50 malverian Exp $
+
+*pysoulseek-1.0.3.12.7 (24 Mar 2003)
+
+  24 Mar 2003; Philip Walls <malverian@gentoo.org> 
+  pysoulseek-1.0.3.12.7.ebuild, files/digest-pysoulseek-1.0.3.12.7 :
+  Version bump. ebuild also now automatically fetches and hyriand patch 
+  based on package version after the pysoulseek-MAJOR.MINOR.REVISION. In
+  this case, the hyriand-12.7 patch is downloaded and patched automatically.
 
 *pysoulseek-1.0.0-r1 (16 Mar 2003)
 
