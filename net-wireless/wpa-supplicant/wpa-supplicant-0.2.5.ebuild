@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa-supplicant/wpa-supplicant-0.2.5.ebuild,v 1.2 2004/10/18 12:27:04 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa-supplicant/wpa-supplicant-0.2.5.ebuild,v 1.3 2004/11/29 17:43:04 brix Exp $
 
-inherit eutils
+inherit toolchain-funcs eutils
 
 MADWIFI_VERSION="0.1_pre20040906"
 
@@ -20,7 +20,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="gsm pcap ssl"
 
-DEPEND="sys-apps/sed"
+DEPEND="sys-apps/sed
+		dev-util/pkgconfig"
 RDEPEND="gsm? ( sys-apps/pcsc-lite )
 		pcap? ( net-libs/libpcap
 				dev-libs/libdnet )
@@ -31,13 +32,16 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${WORKDIR}/${MY_P}-ipw2100.diff
+	epatch ${FILESDIR}/${MY_P}-pkg-config.patch
 
 	sed -i "s:madwifi/wpa::" ${S}/Makefile
 
+	sed -i "s:gcc:$(tc-getCC):g" ${S}/Makefile
+
 	# Use pcap and libdnet if we have it.
 	if use pcap; then
-		sed -i "s:^#CFLAGS\(.*\):CFLAGS\1:" ${S}/Makefile
-		sed -i "s:^#LIBS\(.*\):LIBS\1:" ${S}/Makefile
+		sed -i "s:^#\(CFLAGS\):\1:" ${S}/Makefile
+		sed -i "s:^#\(LIBS\):\1:" ${S}/Makefile
 	fi
 
 	cp ${FILESDIR}/${P}-config ${S}/.config || die

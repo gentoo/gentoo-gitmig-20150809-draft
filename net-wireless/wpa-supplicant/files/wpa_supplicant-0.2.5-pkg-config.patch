@@ -1,0 +1,50 @@
+diff -urp wpa_supplicant-0.2.5/Makefile wpa_supplicant-0.2.5-pkg-config/Makefile
+--- wpa_supplicant-0.2.5/Makefile	2004-10-04 01:36:26.000000000 +0200
++++ wpa_supplicant-0.2.5-pkg-config/Makefile	2004-11-29 16:13:24.052231960 +0100
+@@ -9,15 +9,10 @@ endif
+ # Include directories for CVS version
+ CFLAGS += -I../driver/modules -I../utils -I../hostapd
+ 
+-# Uncomment following two lines and fix the paths if you have installed openssl
+-# in non-default location
+-#CFLAGS += -I/usr/local/openssl/include
+-#LIBS += -L/usr/local/openssl/lib
+-
+ # Uncomment following two lines to use portable libdnet and libpcap instead of
+ # Linux-specific internal implementation for L2 packet handling
+-#CFLAGS += -DUSE_DNET_PCAP
+-#LIBS=-ldnet -lpcap
++#CFLAGS += -DUSE_DNET_PCAP $(shell dnet-config --cflags)
++#LIBS = $(shell dnet-config --libs) -lpcap
+ 
+ all: verify_config wpa_supplicant wpa_passphrase wpa_cli
+ 
+@@ -173,23 +168,22 @@ endif
+ 
+ ifdef CONFIG_PCSC
+ # PC/SC interface for smartcards (USIM, GSM SIM)
+-CFLAGS += -DPCSC_FUNCS
++CFLAGS += -DPCSC_FUNCS $(shell pkg-config --cflags libpcsclite)
+ OBJS += pcsc_funcs.o
+-# -lpthread may not be needed depending on how pcsc-lite was configured
+-LIBS += -lpcsclite -lpthread
++LIBS += $(shell pkg-config --libs libpcsclite)
+ endif
+ 
+ ifdef TLS_FUNCS
+ # Shared TLS functions (needed for EAP_TLS, EAP_PEAP, and EAP_TTLS)
+ CFLAGS += -DEAP_TLS_FUNCS
+ OBJS += eap_tls_common.o
+-LIBS += -lssl
+-LIBS_p += -lcrypto
++LIBS += $(shell pkg-config --libs openssl)
++LIBS_p += $(shell pkg-config --libs openssl)
+ endif
+ 
+ ifdef MS_FUNCS
+ ifndef TLS_FUNCS
+-LIBS += -lcrypto
++LIBS += $(shell pkg-config --libs openssl)
+ endif
+ OBJS += ms_funcs.o
+ endif
