@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/sudo/sudo-1.0.ebuild,v 1.1 2004/09/09 20:46:06 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/sudo/sudo-1.0.ebuild,v 1.2 2004/10/07 16:41:52 ciaranm Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: edit restricted files from a normal vim session"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=729"
 LICENSE="as-is"
-KEYWORDS="~x86 ~sparc ~mips"
+KEYWORDS="x86 sparc mips"
 IUSE=""
 
 RDEPEND="app-admin/sudo"
