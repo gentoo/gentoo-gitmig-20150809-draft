@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0-r2.ebuild,v 1.1 2004/09/04 16:10:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0-r2.ebuild,v 1.2 2004/09/05 23:34:17 ciaranm Exp $
 
 IUSE="opengl"
 
@@ -30,7 +30,7 @@ pkg_setup() {
 	einfo "If you want GSL library support in PDL,"
 	einfo "you need to emerge dev-libs/gsl first."
 	echo ""
-	sleep 5
+	epause 5
 }
 src_unpack() {
 
