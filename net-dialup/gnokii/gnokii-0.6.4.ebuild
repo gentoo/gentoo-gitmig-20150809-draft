@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.6.3.ebuild,v 1.12 2004/11/17 23:07:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.6.4.ebuild,v 1.1 2004/11/17 23:07:36 mrness Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="a client that plugs into your handphone"
 HOMEPAGE="http://www.gnokii.org/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnokii.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ppc sparc x86 alpha ~ppc64"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86 ~alpha ~ppc64"
 IUSE="nls X bluetooth irda sms postgres mysql"
 
 RDEPEND="X? ( =x11-libs/gtk+-1.2* )
@@ -24,12 +24,15 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-bindir.patch
-	epatch ${FILESDIR}/${PN}-0.6.3-nounix98pty.patch
+	cd ${S} && \
+		sed -i -e 's:/usr/local/:/usr/:g' Docs/sample/gnokiirc && \
+		epatch ${FILESDIR}/${P}-nounix98pty.patch || \
+			die "something has changed in this package"
 }
 
 src_compile() {
+	append-ldflags "-Wl,-z,now" #avoid QA notices
+
 	econf \
 		`use_enable nls` \
 		`use_with X x` \
@@ -54,27 +57,24 @@ src_compile() {
 src_install() {
 	einstall || die "make install failed"
 
-	dodoc Docs/*
-	cp -r Docs/sample ${D}/usr/share/doc/${PF}/sample
-	cp -r Docs/protocol ${D}/usr/share/doc/${PF}/protocol
+	insinto /etc
+	doins Docs/sample/gnokiirc
 
 	doman Docs/man/*
-
-	insinto /etc
-	doins ${S}/Docs/sample/gnokiirc
+	dodir /usr/share/doc/${PF}
+	cp -r Docs/sample ${D}/usr/share/doc/${PF}/sample
+	cp -r Docs/protocol ${D}/usr/share/doc/${PF}/protocol
+	rm -rf Docs/man Docs/sample Docs/protocol
+	dodoc Docs/*
 
 	# only one file needs suid root to make a psuedo device
-	fperms 4755 ${D}/usr/sbin/mgnokiidev
+	fperms 4755 /usr/sbin/mgnokiidev
 
-	if use sms
-	then
+	if use sms;	then
 		cd ${S}/smsd
 
 		einstall || die "smsd make install failed"
 	fi
-
-	insinto /usr/share/pixmaps
-	doins ${FILESDIR}/${PN}.png
 
 	insinto /usr/share/applications
 	doins ${FILESDIR}/${PN}.desktop
