@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.11 2005/01/13 03:00:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.12 2005/01/26 21:20:08 kaiowas Exp $
 
 MY_P=arpwatch-2.1a11
 S=${WORKDIR}/$MY_P
@@ -11,10 +11,12 @@ SRC_URI="ftp://ftp.ee.lbl.gov/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 hppa ~ppc sparc x86"
-IUSE=""
+IUSE="selinux"
 
 DEPEND="net-libs/libpcap
 	sys-libs/ncurses"
+
+RDEPEND="selinux? ( sec-policy/selinux-arpwatch )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arpwatch
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.10 2005/01/13 03:00:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.11 2005/01/26 21:20:08 kaiowas Exp $
+
+  26 Jan 2005; petre rodan <kaiowas@gentoo.org> arpwatch-2.1.11-r1.ebuild:
+  added selinux RDEPEND
 
   12 Jan 2005; Jason Wever <weeve@gentoo.org> arpwatch-2.1.11-r1.ebuild:
   Stable on sparc.
