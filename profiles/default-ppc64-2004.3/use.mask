@@ -21,6 +21,7 @@ svga
 sse
 scanner 
 firebird
+mzscheme
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
