@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.3-r1.ebuild,v 1.1 2004/01/09 03:33:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.3-r1.ebuild,v 1.2 2004/01/09 03:35:02 liquidx Exp $
 
 inherit libtool
 
@@ -51,7 +51,7 @@ src_unpack() {
 	unpack ${A}
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.1.2-norpm.patch
 	# canon camera ids backported from CVS (bug #35624)
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.1.3-canon.patch	
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.1.3-canon.patch
 }
 
 src_compile() {
@@ -110,5 +110,5 @@ pkg_postinst() {
 		eerror "and therefore unable to generate hotplug usermap."
 		eerror "You will have to manually generate it by running:"
 		eerror " /usr/lib/libgphoto2/print-usb-usermap > ${HOTPLUG_USERMAP}"
-	fi		
+	fi
 }
