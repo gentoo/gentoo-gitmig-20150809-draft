@@ -2,13 +2,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.3.0/chooser.sh,v 1.1 2003/02/28 04:28:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.3.0/chooser.sh,v 1.2 2003/06/15 04:02:47 seemant Exp $
 
 # If $XSESSION is "", source first /etc/conf.d/basic, and then /etc/rc.conf
 if [ -z "${XSESSION}" ]
 then
-	[ -f /etc/conf.d/basic ] && source /etc/conf.d/basic
-	[ -f /etc/rc.conf ] && source /etc/rc.conf
+	[ -f /etc/conf.d/basic ] && . /etc/conf.d/basic
+	[ -f /etc/rc.conf ] && . /etc/rc.conf
 fi
 
 # Find a match for $XSESSION in /etc/X11/Sessions
