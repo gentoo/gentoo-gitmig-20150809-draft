@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre15.ebuild,v 1.8 2004/09/03 23:24:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre15.ebuild,v 1.9 2004/09/09 12:25:20 pvdabeel Exp $
 
 IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg"
 
@@ -21,7 +21,7 @@ KEYWORDS="~x86 ppc ~sparc alpha ~mips ~hppa ~amd64 ~ia64 macos ~ppc64"
 # (not required in text mode), so let's add libpng for X? and fbcon?
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
-	gpm? ( sys-libs/gpm )
+	!macos? ( gpm? ( sys-libs/gpm ) )
 	javascript? ( >=sys-devel/flex-2.5.4a )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
