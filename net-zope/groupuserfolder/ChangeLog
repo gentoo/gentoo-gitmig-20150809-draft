@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/groupuserfolder
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/groupuserfolder/ChangeLog,v 1.4 2004/03/13 22:10:47 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/groupuserfolder/ChangeLog,v 1.5 2004/03/26 23:01:31 batlogg Exp $
+
+*groupuserfolder-2.0 (27 Mar 2004)
+
+  27 Mar 2004; Jodok Batlogg <batlogg@gentoo.org>; groupuserfolder-2.0.ebuild:
+  version bump
 
 *groupuserfolder-2.0_beta3 (13 Mar 2004)
 
