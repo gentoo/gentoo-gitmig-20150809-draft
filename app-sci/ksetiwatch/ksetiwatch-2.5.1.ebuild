@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ksetiwatch/ksetiwatch-2.5.1.ebuild,v 1.2 2002/10/25 17:56:33 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ksetiwatch/ksetiwatch-2.5.1.ebuild,v 1.3 2002/11/02 10:31:44 hannes Exp $
 
 inherit kde-base || die
 need-kde 3
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 DESCRIPTION="A monitoring tool for SETI@home, similar to SETIWatch for Windows"
 HOMEPAGE="http://ksetiwatch.sourceforge.net"

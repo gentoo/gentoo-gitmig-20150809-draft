@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/mpqc-2.1.2.ebuild,v 1.2 2002/10/31 19:36:55 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/mpqc-2.1.2.ebuild,v 1.3 2002/11/02 10:31:44 hannes Exp $
 
 SLOT="0"
 HOMEPAGE="http://aros.ca.sandia.gov/~cljanss/mpqc/"
@@ -8,7 +8,7 @@ SRC_URI="http://aros.ca.sandia.gov/~cljanss/mpqc/distrib/${P}.tar.gz
 	doc? ( http://aros.ca.sandia.gov/~cljanss/mpqc/distrib/${PN}-man-${PV}.tar.gz )"
 DESCRIPTION="The Massively Parallel Quantum Chemistry Program"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="doc X"
 
 DEPEND="sys-devel/flex
