@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/steptalk-0.8.3_pre20040927.ebuild,v 1.2 2004/10/18 12:13:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/steptalk-0.8.3_pre20040927.ebuild,v 1.3 2004/10/21 19:10:16 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -30,7 +30,7 @@ src_install() {
 	egnustep_env
 	egnustep_install || die
 
-	if [ `use doc` ]; then
+	if use doc ; then
 		egnustep_env
 		cd Documentation
 		mkdir -p ${TMP}/tmpdocs

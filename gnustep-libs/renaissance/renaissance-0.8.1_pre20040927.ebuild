@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/renaissance/renaissance-0.8.1_pre20040927.ebuild,v 1.2 2004/10/17 10:02:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/renaissance/renaissance-0.8.1_pre20040927.ebuild,v 1.3 2004/10/21 19:09:54 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -29,7 +29,7 @@ src_install() {
 	cd ${S}
 	egnustep_env
 	egnustep_install || die
-	if [ `use doc` ]; then
+	if use doc ; then
 		egnustep_env
 		cd Documentation
 		egnustep_make
