@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/xmms-cdread
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdread/ChangeLog,v 1.4 2003/10/29 23:49:18 lu_zero Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdread/ChangeLog,v 1.5 2004/02/09 19:47:46 agriffis Exp $
+
+  07 Feb 2004; Aron Griffis <agriffis@gentoo.org> xmms-cdread-0.14a-r1.ebuild,
+  files/endian.patch:
+  Apply the endian patch to all arches since it's ifdef'd anyway. Add ~alpha and
+  ~ia64
 
   30 Oct 2003 Luca Barbato <lu_zero@gentoo.org> :
   Added a patch to fix an endianess issue thanks to KruzeS <kruzes@sapo.pt>

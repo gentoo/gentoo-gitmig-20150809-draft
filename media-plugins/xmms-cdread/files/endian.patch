@@ -9,11 +9,13 @@ diff -Naur xmms-cdread-0.14a/filter.c xmms-cdread-0.14a-endian/filter.c
  
  typedef double real;
  
-@@ -37,9 +38,16 @@
+@@ -37,9 +38,18 @@
  	int i, j, k;
  	sample *data = buf;
  	real ol, or;
++#ifdef __BIG_ENDIAN
 +	char *p;
++#endif
  
  	if (!cd_eq_on) return;
  
