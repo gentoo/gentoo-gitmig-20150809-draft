@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/xmail-1.15.ebuild,v 1.4 2003/07/13 13:32:32 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/xmail-1.15.ebuild,v 1.5 2003/09/05 02:38:47 msterret Exp $
 
 DESCRIPTION="The world's fastest email server"
 HOMEPAGE="http://www.xmailserver.org/"
@@ -13,15 +13,15 @@ DEPEND="virtual/glibc"
 PROVIDE="virtual/mta"
 
 pkg_setup() {
-        if ! grep -q ^xmail: /etc/group
-        then
-                groupadd xmail || die "problem adding group xmail"
-        fi
-        if ! grep -q ^xmail: /etc/passwd
-        then
+	if ! grep -q ^xmail: /etc/group
+	then
+		groupadd xmail || die "problem adding group xmail"
+	fi
+	if ! grep -q ^xmail: /etc/passwd
+	then
 		useradd -g xmail -d /dev/null -s /bin/false xmail \
-                        || die "problem adding user xmail"
-        fi
+			|| die "problem adding user xmail"
+	fi
 }
 
 src_compile() {
@@ -42,11 +42,11 @@ src_install() {
 	dodir /etc/xmail/logs
 	dodir /etc/init.d
 	dodir /etc/conf.d
-	
+
 	touch ${D}/chroot/xmail/var/MailRoot/bin/.keep
 
 	for i in cmdaliases custdomains domains filters pop3linklocks\
-		pop3links pop3locks userauth 
+		pop3links pop3locks userauth
 	do
 		dodir /etc/xmail/${i}
 		touch ${D}/etc/xmail/${i}/.keep
@@ -58,7 +58,7 @@ src_install() {
 		touch ${D}/etc/xmail/userauth/${i}/.keep
 	done
 	rm -f ${D}/etc/xmail/userauth/.keep
-	
+
 	einfo "Installing the XMail initial configuration"
 	insopts -o xmail -g xmail -m 600
 	cd ${S}/MailRoot
@@ -75,14 +75,14 @@ src_install() {
 	do
 		touch ${D}/etc/xmail/${i}.tab
 	done
-	
+
 	einfo "Installing the XMail documentation"
 	umask 022
 	dodoc ${S}/docs/*
 	dodoc ${S}/gpl.txt
 	dodoc ${S}/ToDo.txt
-	
-	
+
+
 	einfo "Installing the XMail software"
 	insinto /etc/env.d
 	doins ${FILESDIR}/15xmail

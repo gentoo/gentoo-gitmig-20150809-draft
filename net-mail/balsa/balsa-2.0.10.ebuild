@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.10.ebuild,v 1.3 2003/06/10 12:51:14 liquidx Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.10.ebuild,v 1.4 2003/09/05 02:37:14 msterret Exp $
 
 inherit gnome2 eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 	local myconf
 	use ssl \
 		&& myconf="${myconf} --with-ssl" \
-		|| myconf="${myconf} --without-ssl" 
+		|| myconf="${myconf} --without-ssl"
 	use gtkhtml \
 		&& myconf="${myconf} --enable-gtkhtml" \
 		|| myconf="${myconf} --disable-gtkhtml"
