@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.1-r1.ebuild,v 1.4 2003/07/02 14:03:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.1-r1.ebuild,v 1.5 2003/07/09 16:43:16 liquidx Exp $
 
 inherit libtool flag-o-matic
 
@@ -17,7 +17,7 @@ KEYWORDS="x86 ~ppc sparc"
 
 # jpeg useflag -> exif support
 # aalib -> needs libjpeg
-DEPEND=">=dev-libs/libusb-0.1.6
+RDEPEND=">=dev-libs/libusb-0.1.6
 	dev-libs/popt
 	>=media-libs/libgphoto2-2.1.1-r2
 	ncurses? ( dev-libs/cdk )
@@ -26,6 +26,8 @@ DEPEND=">=dev-libs/libusb-0.1.6
 	jpeg? (	media-libs/libexif )
 	readline? ( sys-libs/readline )"
 
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 
