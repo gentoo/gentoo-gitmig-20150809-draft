@@ -1,0 +1,25 @@
+# ChangeLog for app-sci/vbs
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vbs/ChangeLog,v 1.1 2004/12/27 20:29:23 ribosome Exp $
+
+*vbs-1.4.0 (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/vbs-gcc-3.4.patch, +vbs-1.4.0.ebuild:
+  Moved from app-sci/vbs to sci-electronics/vbs.
+
+  03 Oct 2004; <plasmaroo@gentoo.org> vbs-1.4.0.ebuild,
+  +files/vbs-gcc-3.4.patch:
+  Patching VBS for gcc-3.4; bug #65613.
+
+  05 Jun 2004; David Holm <dholm@gentoo.org> vbs-1.4.0.ebuild:
+  Added to ~ppc.
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> vbs-1.4.0.ebuild:
+  Adding IUSE
+
+*vbs-1.4.0 (30 Nov 2003)
+
+  30 Nov 2003; <plasmaroo@gentoo.org> vbs-1.4.0.ebuild:
+  Initial commit...
+

@@ -1,0 +1,44 @@
+--- src/common/bvector.h	2003-01-12 04:40:59.000000000 +0000
++++ src/common/bvector.h	2004-10-03 18:19:38.364060736 +0100
+@@ -88,10 +88,6 @@
+ 		position_type _begin; // Starting position.
+ 		position_type _end; // Stopping position.
+ 		size_type _size; // Size of this sub-bit vector.
+-
+-		// Only bit_vector can create a sub_bit_vector object.
+-		sub_bit_vector(bit_vector &, const position_type, const position_type);
+-		sub_bit_vector(const sub_bit_vector &);
+ 	public:
+ 		sub_bit_vector &operator=(const sub_bit_vector &);
+ 		sub_bit_vector &operator=(const const_sub_bit_vector &);
+@@ -100,6 +96,10 @@
+ 			{ return _size; }
+ 		ostream_type &info(ostream_type &) const;
+ 
++		// Only bit_vector can create a sub_bit_vector object.
++		sub_bit_vector(bit_vector &, const position_type, const position_type);
++		sub_bit_vector(const sub_bit_vector &);
++
+ 		// We don't need any other method, yet!
+ 		};
+ 	class const_sub_bit_vector
+@@ -113,15 +113,15 @@
+ 		position_type _begin; // Starting position.
+ 		position_type _end; // Stopping position.
+ 		size_type _size; // Size of this sub-bit vector.
+-
+-		// Only bit_vector can create a sub_bit_vector object.
+-		const_sub_bit_vector(const bit_vector &, const position_type, const position_type);
+-		const_sub_bit_vector(const const_sub_bit_vector &);
+ 	public:
+ 		size_type size() const
+ 			{ return _size; }
+ 		ostream_type &info(ostream_type &) const;
+ 
++		// Only bit_vector can create a sub_bit_vector object.
++		const_sub_bit_vector(const bit_vector &, const position_type, const position_type);
++		const_sub_bit_vector(const const_sub_bit_vector &);
++
+ 		// We don't need any other method, yet!
+ 		};
+ 
