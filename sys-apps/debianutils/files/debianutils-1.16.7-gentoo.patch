@@ -10,7 +10,6 @@ diff -urN debianutils-1.16.7.old/installkernel debianutils-1.16.7/installkernel
       = "$1-$ver" ] ; then
        ln -sf "$1-$ver.old" "$dir/$1.old"
      else
-diff -urN debianutils-1.16.7.old/mkboot debianutils-1.16.7/mkboot
 --- debianutils-1.16.7.old/mkboot	2002-10-16 20:20:42.000000000 -0700
 +++ debianutils-1.16.7/mkboot	2003-04-03 16:16:55.000000000 -0800
 @@ -14,7 +14,13 @@
@@ -21,7 +20,7 @@ diff -urN debianutils-1.16.7.old/mkboot debianutils-1.16.7/mkboot
 +    # Right way in Gentoo to check, but grub is in system profile,
 +    # so rather check for lilo first....
 +    if [ -x /usr/bin/portageq ] ; then
-+        portageq has_version / "sys-apps/grub" && return 0 || return 1
++        portageq has_version / "sys-boot/grub" && return 0 || return 1
 +    else
 +        return 1
 +    fi
@@ -71,7 +70,6 @@ diff -urN debianutils-1.16.7.old/mkboot debianutils-1.16.7/mkboot
      echo -en "\nShould I make a bootdisk? (y/n) "
      read input
      if [ "$input" = "y" ] ; then
-diff -urN debianutils-1.16.7.old/mkboot~ debianutils-1.16.7/mkboot~
 --- debianutils-1.16.7.old/mkboot~	1969-12-31 16:00:00.000000000 -0800
 +++ debianutils-1.16.7/mkboot~	2002-10-16 20:20:42.000000000 -0700
 @@ -0,0 +1,177 @@
@@ -252,7 +250,6 @@ diff -urN debianutils-1.16.7.old/mkboot~ debianutils-1.16.7/mkboot~
 +fi
 +
 +makedisk $1
-diff -urN debianutils-1.16.7.old/run-parts.c debianutils-1.16.7/run-parts.c
 --- debianutils-1.16.7.old/run-parts.c	2002-10-16 21:19:37.000000000 -0700
 +++ debianutils-1.16.7/run-parts.c	2003-04-03 16:17:20.000000000 -0800
 @@ -120,7 +120,8 @@
