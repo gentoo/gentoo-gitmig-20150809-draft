@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r2.ebuild,v 1.2 2004/10/07 02:17:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r2.ebuild,v 1.3 2004/11/01 20:34:11 corsair Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.xfig.org"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa amd64 ~ppc64"
 
 DEPEND="virtual/x11
 	>=media-libs/jpeg-6
