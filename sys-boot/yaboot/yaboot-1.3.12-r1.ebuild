@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.12-r1.ebuild,v 1.2 2004/05/23 18:09:41 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.12-r1.ebuild,v 1.3 2004/05/24 17:54:53 dostrow Exp $
 
 inherit eutils
 
@@ -20,6 +20,18 @@ DEPEND="sys-apps/powerpc-utils
 PROVIDE="virtual/bootloader"
 
 MAKEOPTS='PREFIX=/usr MANDIR=share/man'
+
+pkg_setup() {
+	case "$(uname -r)" in
+		2.5.*|2.6.0*|2.6.1|2.6.1-*|2.6.2|2.6.2-*)
+		eerror "You are running Linux kernel `uname -r` which is not supported"
+		eerror "Please note if you are running a 2.6 kernel the verison"
+		eerror "of ofpath included in this revision of yaboot requires"
+		eerror "that you run a kernel >= 2.6.3."
+		die
+		;;
+	esac
+}
 
 src_compile() {
 	export -n CFLAGS
