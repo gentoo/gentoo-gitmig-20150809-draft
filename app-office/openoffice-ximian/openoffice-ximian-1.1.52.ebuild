@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.52.ebuild,v 1.5 2004/04/05 14:00:09 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.52.ebuild,v 1.6 2004/04/11 16:23:50 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -53,7 +53,7 @@ PATCHDIR=${WORKDIR}/ooo-build-${PV}
 ICONDIR=${WORKDIR}/ooo-icons-${ICON_VER}
 S="${WORKDIR}/oo_${OO_VER}_src"
 DESCRIPTION="Ximian-ized version of OpenOffice.org, a full office productivity suite."
-SRC_URI="mirror://openoffice/stable/${OO_VER}/OOo_${OO_VER}_source.tar.bz2
+SRC_URI="mirror://openoffice/stable/${OO_VER}/OOo_${OO_VER}p1_source.tar.bz2
 	http://ooo.ximian.com/packages/${PATCHLEVEL}/ooo-build-${PV}.tar.gz
 	http://ooo.ximian.com/packages/ooo-icons-${ICON_VER}.tar.gz"
 
@@ -228,7 +228,7 @@ src_unpack() {
 	oo_setup
 
 	cd ${WORKDIR}
-	unpack OOo_${OO_VER}_source.tar.bz2 ooo-build-${PV}.tar.gz ooo-icons-${ICON_VER}.tar.gz
+	unpack OOo_${OO_VER}p1_source.tar.bz2 ooo-build-${PV}.tar.gz ooo-icons-${ICON_VER}.tar.gz
 
 	#Still needed: The STLport patch
 	cd ${S}
@@ -240,6 +240,9 @@ src_unpack() {
 
 	#Additional patch for Kernel 2.6
 	epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-linux-2.6-fix.patch
+
+	#Work around recent portage sandbox troubles
+	epatch ${FILESDIR}/${OO_VER}/build.patch
 
 	if [ ${ARCH} = "sparc" ]; then
 		epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-sparc64-fix.patch
