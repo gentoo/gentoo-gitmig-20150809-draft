@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wavemon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.11 2004/06/25 00:47:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.12 2004/09/05 11:21:30 malc Exp $
+
+  05 Sep 2004; Malcolm Lashley <malc@gentoo.org> wavemon-0.4.0b.ebuild:
+  ~amd64 closes bug #60425
 
   13 Jun 2004; Hanno Boeck <hanno@gentoo.org> +files/wavemon_gcc34_fix.gz,
   wavemon-0.4.0b.ebuild:
