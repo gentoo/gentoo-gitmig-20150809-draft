@@ -1,15 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.08.ebuild,v 1.3 2002/07/16 11:36:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.08.ebuild,v 1.4 2002/07/16 22:41:26 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A lightweight, speed optimized color management engine"
 SRC_URI="http://www.littlecms.com/${P}.tar.gz"
 HOMEPAGE="http://www.littlecms.com/index.htm"
 
-DEPEND="tiff? ( media-libs/tiff )
-	jpeg? ( media-libs/jpeg
-		sys-libs/zlib )"
+DEPEND="media-libs/tiff
+	media-libs/jpeg
+	sys-libs/zlib"
 
 SLOT="0"
 LICENSE="GPL"
