@@ -8,7 +8,7 @@
 # Leo Lipelis <aeoo@gentoo.org>
 # Karl Trygve Kalleberg <karltk@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.5 2002/06/26 05:05:33 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.6 2002/06/26 06:32:26 lostlogic Exp $
 
 function get_config() {
 	item=$1
@@ -37,7 +37,7 @@ function scan() {
 			rfile=`echo "${file}" | sed -e "s:^.*/::"`
 			if [[ "${ofile:10}" != "${rfile:10}" ]] || [[ ${opath} != ${rpath} ]]; then
 				if [[ -z `diff -Nu ${rpath}/${rfile} ${rpath}/${rfile:10}|
-						  grep "^[+-][^+-]"|grep -v '# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.5 2002/06/26 05:05:33 lostlogic Exp $'` ]]; then
+						  grep "^[+-][^+-]"|grep -v '# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.6 2002/06/26 06:32:26 lostlogic Exp $'` ]]; then
 					mv ${rpath}/${rfile} ${rpath}/${rfile:10}
 					continue
 				else
@@ -50,7 +50,7 @@ function scan() {
 				fi
 			fi
 			if [[ -z `diff -Nu ${rpath}/${rfile} ${rpath}/${ofile}|
-					  grep "^[+-][^+-]"|grep -v '# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.5 2002/06/26 05:05:33 lostlogic Exp $'` ]]; then
+					  grep "^[+-][^+-]"|grep -v '# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.6 2002/06/26 06:32:26 lostlogic Exp $'` ]]; then
 				mv ${rpath}/${rfile} ${rpath}/${ofile}
 				continue
 			else
@@ -85,7 +85,7 @@ function do_file() {
 	local -i fcount
 	until (( `cat ${TMP}/files/${input}|wc -l` < 2 )); do
 		my_input=0
-		(( `cat ${TMP}/files/${input}|wc -l` == 2 )) && my_input=1 && fcount=2
+		(( `cat ${TMP}/files/${input}|wc -l` == 2 )) && my_input=1
 		until (( ${my_input} > 0 )) && \
 			  (( ${my_input} < `cat ${TMP}/files/${input}|wc -l` )); do
 			fcount=0
@@ -103,6 +103,8 @@ function do_file() {
 			[ ${my_input} == -1 ] && break
 		done
 		[ ${my_input} == -1 ] && break
+
+		fcount=${my_input}+1
 
 		file=`cat ${TMP}/files/${input} | sed -e "${fcount}p;d"`
 		ofile=`head -n1 ${TMP}/files/${input}`
