@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/mips-sources
+# Copyright 1999-2003 Gentoo Technologies, Inc.; Distributed under the GPLv2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dvhtool/ChangeLog,v 1.1 2003/01/23 15:44:20 tuxus Exp $
+
+*dvhtool-1.0.1 (23 Jan 2003)
+
+  23 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Initial import.  Dvhtool contains the following patches from the
+  Debian/MIPS :
+      dvhtool-1.0.1-2.diff
