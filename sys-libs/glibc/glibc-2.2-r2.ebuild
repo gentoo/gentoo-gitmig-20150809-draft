@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2-r2.ebuild,v 1.3 2000/11/16 17:21:59 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2-r2.ebuild,v 1.4 2000/11/17 01:03:07 drobbins Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -85,6 +85,14 @@ pkg_preinst()
   sln ${ROOT}tmp/ld-linux.so.2 ${ROOT}lib/ld-linux.so.2
   cp ${ROOT}lib/libc.so.6 ${ROOT}tmp
   sln ${ROOT}tmp/libc.so.6 ${ROOT}lib/libc.so.6
+
+	if [ -e ${ROOT}etc/localtime ]
+	then
+		#keeping old timezone
+		rm ${D}/etc/localtime
+	else
+		echo "Please remember to set your timezone using the zic command."
+	fi
 }
 
 pkg_postinst()

@@ -19,7 +19,7 @@ do
    if [ "${f/*LSB shared object*/1}" == "1" ]
    then
 	echo $x
-	strip ${x}
+	strip --strip-unneeded ${x}
    fi
 done
 

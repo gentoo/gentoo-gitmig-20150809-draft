@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/db/db-3.1.17-r1.ebuild,v 1.1 2000/11/16 16:19:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/db/db-3.1.17-r1.ebuild,v 1.2 2000/11/17 01:03:07 drobbins Exp $
 
 A=${P}-patched.tar.gz
 S=${WORKDIR}/${P}-patched
@@ -14,25 +14,32 @@ HOMEPAGE="http://www.mysql.com"
 src_compile() {
 
     cd ${S}/build_unix
-    try ../dist/configure --enable-compat185 --prefix=/usr --host=${CHOST} --enable-shared --enable-rpc
-    try make
+    try ../dist/configure --enable-compat185 --enable-dump185 --prefix=/usr --host=${CHOST} --enable-shared --enable-static --enable-rpc --enable-cxx
 
+	echo
+    echo "Building static libs..."
+    make libdb=libdb-3.1.a libdb-3.1.a
+	make libcxx=libdb_cxx-3.1.a libdb_cxx-3.1.a
+
+	echo
+    echo "Building db_dump185..."
+	try /bin/sh ./libtool --mode=compile cc -c ${CFLAGS} -I/usr/include/db1 -I../dist/../include -D_REENTRANT ../dist/../db_dump185/db_dump185.c
+	try gcc -s -static -o db_dump185 db_dump185.lo -L/usr/lib -ldb1
+	
+	echo
+	echo "Building everything else..."
+	try make libdb=libdb-3.1.a libcxx=libdb_cxx-3.1.a LDFLAGS="-s"	
 }
 
 src_install () {
-
-    cd ${S}/build_unix
-    try make prefix=${D}/usr install
     cd ${S}
-    dodoc README LICENSE
+	try make libdb=libdb-3.1.a libcxx=libcxx_3.1.a prefix=${D}/usr install
+    dolib.a libdb-3.1.a libdb_cxx-3.1.a
+	dolib libdb-3.1.la libdb_cxx-3.1.la
+	dodoc README LICENSE
 	mv ${D}/usr/docs ${D}/usr/doc/${PF}/html
 	dodir usr/include/db3
 	cd ${D}/usr/include
-	local x 
-	for x in *.h
-	do
-		mv ${x} db3
-		ln -s db3/${x} ${x}
-	done
+	mv *.h db3
 }
 
