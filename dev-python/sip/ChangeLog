@@ -1,6 +1,8 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.8 2002/12/13 10:56:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.9 2002/12/14 00:06:55 verwilst Exp $
+
+*sip-3.5 (14 December 2002) Bart Verwilst <verwilst@gentoo.org>
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
