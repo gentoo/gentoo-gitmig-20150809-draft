@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.20 2003/09/09 08:42:52 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.21 2003/09/21 11:41:29 aliz Exp $
 
 inherit kde-base
 
@@ -11,10 +11,13 @@ DESCRIPTION="KDE ${PV} - KOffice"
 HOMEPAGE="http://www.koffice.org/"
 
 # turns out kde.org.eclass doesn't work here
-SRC_PATH="kde/stable/${P}/src/${P}.tar.bz2"
-SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
-	 ftp://ftp.fh-heilbronn.de/pub/mirrors/$SRC_PATH
-	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
+#SRC_PATH="kde/stable/${P}/src/${P}.tar.bz2"
+#SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
+#	 ftp://ftp.fh-heilbronn.de/pub/mirrors/$SRC_PATH
+#	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
+SRC_URI="mirror://kde/stable/${P}/src/${P}.tar.bz2
+	ftp://ftp.fh-heilbronn.de/pub/mirrors/kde/stable/${P}/src/${P}.tar.bz2
+	ftp://ftp.sourceforge.net/pub/mirrors/kde/stable/${P}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="x86 ppc"

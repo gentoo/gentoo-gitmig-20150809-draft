@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2_beta2.ebuild,v 1.12 2003/09/09 08:42:52 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2_beta2.ebuild,v 1.13 2003/09/21 11:41:29 aliz Exp $
 inherit kde-base
 
 need-kde 3
@@ -9,7 +9,7 @@ S="${WORKDIR}/koffice-1.2-beta2"
 DESCRIPTION="A free, integrated office suite for KDE, the K Desktop Environment."
 HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
-SRC_URI="ftp://ftp.kde.org/pub/kde/unstable/koffice-1.2-beta2/src/koffice-1.2-beta2.tar.bz2"
+SRC_URI="mirror://kde/unstable/${PN}-${PV/_/-}/src/${PN}-${PV/_/-}.tar.bz2"
 
 KEYWORDS="x86 ppc"
 
