@@ -1,0 +1,9 @@
+# ChangeLog for net-im/msnlib
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.1 2003/04/19 14:00:45 liquidx Exp $
+
+*msnlib-4 (19 Apr 2003)
+
+  19 Apr 2003; Alastair Tse <liquidx@gentoo.org> Manifest, msnlib-4.ebuild:
+  initial ebuild
+
