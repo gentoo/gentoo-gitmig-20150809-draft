@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.2.0_beta2.ebuild,v 1.6 2003/12/28 03:42:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.2.0_beta2.ebuild,v 1.7 2004/01/02 14:10:33 caleb Exp $
 inherit kde-dist
 
 IUSE="gphoto2 tetex scanner opengl"
@@ -28,7 +28,7 @@ use gphoto2	&& myconf="$myconf --with-kamera \
 
 use tetex 	&& myconf="$myconf --with-system-kpathsea --with-tex-datadir=/usr/share"
 
-use scanner	|| DO_NOT_COMPILE="kooka libkscan"
+use scanner	|| DO_NOT_COMPILE="$DO_NOT_COMPILE kooka libkscan"
 
 myconf="$myconf --with-imlib --with-imlib-config=/usr/bin"
 
