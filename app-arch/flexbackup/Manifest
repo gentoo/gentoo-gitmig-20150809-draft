@@ -1,4 +1,6 @@
-MD5 1338cc8c9e015fa944ea8d0a5482eaea ChangeLog 1218
+MD5 38641b80bf932fb4a8e573d6a5ef8fb7 flexbackup-1.2.0-r1.ebuild 1151
 MD5 7c3bed6e1dc0cff84656df175639a932 flexbackup-1.2.0.ebuild 1003
+MD5 94afee39bd65f917020631d3e636d6a7 ChangeLog 1497
+MD5 b0c86b38bbe5091e6f24dcb361170543 files/digest-flexbackup-1.2.0-r1 67
 MD5 14858ea6950835f29fa80e2921940b3b files/Makefile-gentoo.diff 397
 MD5 b0c86b38bbe5091e6f24dcb361170543 files/digest-flexbackup-1.2.0 67
