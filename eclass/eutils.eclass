@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.144 2005/02/03 22:11:33 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.145 2005/02/03 22:33:36 chriswhite Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -34,24 +34,28 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # Chris White <chriswhite@gentoo.org> (03 Feb 2005)
 
 ecpu_check() {
-    CPU_FLAGS=$1
-    USER_CPU=`grep "flags" /proc/cpuinfo`
+	if [ $CROSSCOMPILE -eq 1 ]
+	then
+	else
+		CPU_FLAGS=$1
+		USER_CPU=`grep "flags" /proc/cpuinfo`
 
-    for flags in `seq 1 ${#CPU_FLAGS[@]}`
-    do
-        if has ${CPU_FLAGS[$flags - 1]} $USER_CPU && ! has ${CPU_FLAGS[$flags - 1]} $USE
-        then
-            ewarn "Your system is ${CPU_FLAGS[$flags - 1]} capable but you don't have it enabled!"
-            ewarn "You might be cross compiling (in this case set CROSSCOMPILE to 1 to disable this warning."
-        fi
+		for flags in `seq 1 ${#CPU_FLAGS[@]}`
+		do
+			if has ${CPU_FLAGS[$flags - 1]} $USER_CPU && ! has ${CPU_FLAGS[$flags - 1]} $USE
+			then
+				ewarn "Your system is ${CPU_FLAGS[$flags - 1]} capable but you don't have it enabled!"
+				ewarn "You might be cross compiling (in this case set CROSSCOMPILE to 1 to disable this warning."
+			fi
 
-        if ! has ${CPU_FLAGS[$flags - 1]} $USER_CPU  && has ${CPU_FLAGS[$flags -1]} $USE
-        then
-            ewarn "You have ${CPU_FLAGS[$flags - 1]} support enabled but your processor doesn't"
-            ewarn "Seem to support it!  You might be cross compiling or do not have /proc filesystem"
-            ewarn "enabled.  If either is the case, set CROSSCOMPILE to 1 to disable this warning."
-        fi
-    done
+			if ! has ${CPU_FLAGS[$flags - 1]} $USER_CPU  && has ${CPU_FLAGS[$flags -1]} $USE
+			then
+				ewarn "You have ${CPU_FLAGS[$flags - 1]} support enabled but your processor doesn't"
+				ewarn "Seem to support it!  You might be cross compiling or do not have /proc filesystem"
+				ewarn "enabled.  If either is the case, set CROSSCOMPILE to 1 to disable this warning."
+			fi
+		done
+	fi
 }
 
 # Wait for the supplied number of seconds. If no argument is supplied, defaults
