@@ -1,22 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pyvorbis/pyvorbis-1.1.ebuild,v 1.1 2002/11/30 21:08:11 mkennedy Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pyvorbis/pyvorbis-1.1.ebuild,v 1.2 2003/01/20 16:21:54 vapier Exp $
 
 DESCRIPTION="Python bindings for the ogg.vorbis library"
 HOMEPAGE="http://www.andrewchatham.com/pyogg/"
 SRC_URI="http://www.andrewchatham.com/pyogg/download/${P}.tar.gz"
+
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
-# Is distutils packaged with python now?
 DEPEND="dev-lang/python
 	media-libs/libogg
 	>=media-libs/pyogg-1.1"
-
-S="${WORKDIR}/${P}"
 
 src_compile() {
 	./config_unix.py || die
