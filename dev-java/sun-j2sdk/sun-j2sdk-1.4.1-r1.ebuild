@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1-r1.ebuild,v 1.10 2004/07/02 04:23:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1-r1.ebuild,v 1.11 2004/07/14 11:44:21 axxo Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -23,10 +23,11 @@ JAVA_PATCHES="disable-sanity-check
 
 S=${WORKDIR}/j2sdk
 
-SRC_JAVA="j2sdk-1_4_1-src-scsl.zip"
-SRC_MOZHEADERS="j2sdk-1_4_1-mozilla_headers-unix.zip"
+MY_PV=${PV//./_}
+SRC_JAVA="j2sdk-${MY_PV}-src-scsl.zip"
+SRC_MOZHEADERS="j2sdk-${MY_PV}-mozilla_headers-unix.zip"
 
-SRC_URI=""
+SRC_URI="${SRC_JAVA} ${SRC_MOZHEADERS}"
 
 DESCRIPTION="Sun's J2SE Development Kit, version 1.4.1 (From sources)"
 HOMEPAGE="http://wwws.sun.com/software/java2/download.html"
@@ -34,6 +35,7 @@ HOMEPAGE="http://wwws.sun.com/software/java2/download.html"
 SLOT="0"
 KEYWORDS="x86 -ppc -alpha -sparc"
 LICENSE="sun-csl"
+RESTRICT="fetch"
 
 RDEPEND="virtual/libc
 	virtual/x11
@@ -48,6 +50,13 @@ PDEPEND="doc? ( =dev-java/java-sdk-docs-1.4.1* )"
 PROVIDE="virtual/jre-1.4.1
 	virtual/jdk-1.4.1
 	virtual/java-scheme-2"
+
+pkg_nofetch() {
+	einfo "Please download"
+	einfo "  - ${SRC_MOZHEADERS}"
+	einfo "  - ${SRC_JAVA}"
+	einfo "from ${HOMEPAGE} and place them in ${DISTDIR}"
+}
 
 pkg_setup() {
 	#Check if we have enough space
@@ -71,19 +80,6 @@ pkg_setup() {
 }
 
 src_unpack() {
-	die_flag=""
-	if [ ! -f ${DISTDIR}/${SRC_MOZHEADERS} ] ; then
-		eerror "Please download ${SRC_MOZHEADERS} from ${HOMEPAGE} to ${DISTDIR}"
-		die_flag=1
-	fi
-
-	if [ ! -f ${DISTDIR}/${SRC_JAVA} ] ; then
-		eerror "Please download ${SRC_JAVA} from ${HOMEPAGE} to ${DISTDIR}"
-		die_flag=1
-	fi
-
-	[ ! -z ${die_flag} ] && die "Some source files were not found"
-
 	mkdir ${S}
 	cd ${S}
 	unpack ${SRC_JAVA}
@@ -104,13 +100,6 @@ src_unpack() {
 src_compile () {
 	cd ${S}
 	unset CLASSPATH JAVA_HOME JAVAC
-
-	# Otherwise the command:
-	# (cd  /var/tmp/portage/sun-j2sdk-1.4.0-r1/work/j2sdk/control/build/linux-i386/j2re-image; tar cf - .) | \
-	#    (cd  /var/tmp/portage/sun-j2sdk-1.4.0-r1/work/j2sdk/control/build/linux-i386/j2sdk-image/jre; tar xf -)
-	# Will fail, you have been warned!!!! There are NO sandbox violations anyway
-	LD_PRELOAD_SAVE=$LD_PRELOAD
-	unset LD_PRELOAD
 
 	# Any CFLAGS will cause the build to fail!
 	# If you don't believe me ...
@@ -139,8 +128,6 @@ src_compile () {
 		JOBS=1
 	fi
 	make HOTSPOT_BUILD_JOBS=${JOBS} || die
-
-	export LD_PRELOAD=$LD_PRELOAD_SAVE
 }
 
 src_install () {
