@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.10 2003/05/21 12:59:17 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.11 2003/05/21 13:02:12 taviso Exp $
 
 IUSE="berkdb"
 
@@ -64,7 +64,7 @@ src_unpack() {
 src_compile() {
 	export CFLAGS="${CFLAGS} -fPIC"
 	if [ "${ARCH}" = "alpha" ]; then
-		if [ -z "`strings -a /usr/lib/libglib.a | grep -i 'Compaq Computer Corp.'`" ] ; then
+		if [ ! -z "`strings -a /usr/lib/libglib.a | grep -i 'Compaq Computer Corp.'`" ] ; then
 			# should be LDFLAGS, but this configure is screwy.
 			einfo "It looks like you compiled glib with ccc, this is okay, but"
 			einfo "I'll need to force gcc to link with libots...."
