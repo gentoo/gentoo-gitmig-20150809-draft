@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.35 2004/03/18 05:51:32 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.36 2004/03/20 04:16:42 zx Exp $
+
+  23 Mar 2004; Chris Aniszczyk <zx@gentoo.org> :
+  Fixed SRC_URI to allow for PPC's ;) Closes #45134
 
   18 Mar 2004; Chris Aniszczyk <zx@gentoo.org> ibm-jdk-1.3.1-r3.ebuild,
   ibm-jdk-1.4.1.ebuild:
