@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.6 2003/08/12 17:34:14 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.7 2003/10/03 15:37:20 agriffis Exp $
+
+  03 Oct 2003; Aron Griffis <agriffis@gentoo.org> fakeroot-0.4.4-r1.ebuild:
+  Use gnuconfig_update and mark stable on alpha
 
   12 Aug 2003; Alexander Gabert <pappy@gentoo.org> fakeroot-0.4.4.ebuild:
   tested and compiled on hppa

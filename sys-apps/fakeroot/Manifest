@@ -1,5 +1,5 @@
-MD5 cbf7db679c1b765276f0da0fe5a54608 ChangeLog 846
-MD5 9b47fa6bfa32ddadfd4aec59b802aa41 fakeroot-0.4.4-r1.ebuild 808
+MD5 93665c302555d3172cfac4a9a809c541 ChangeLog 974
+MD5 eb0803fb0fa27f613daf27b0fb2079a5 fakeroot-0.4.4-r1.ebuild 912
 MD5 0c4405bb0324caaec91bee34e3456a4b fakeroot-0.4.4.ebuild 698
 MD5 a192b4e65779c0403da6a1868edc5ac3 files/digest-fakeroot-0.4.4 70
 MD5 a192b4e65779c0403da6a1868edc5ac3 files/digest-fakeroot-0.4.4-r1 70
