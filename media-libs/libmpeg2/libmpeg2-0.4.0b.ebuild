@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.7 2004/06/06 19:58:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.8 2004/06/07 03:07:31 mr_bones_ Exp $
 
-inherit libtool flag-o-matic
+inherit eutils libtool flag-o-matic
 
 MY_P="${P/libmpeg2/mpeg2dec}"
 S="${WORKDIR}/${MY_P/b/}"
