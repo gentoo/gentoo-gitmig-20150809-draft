@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.70 2004/09/10 22:40:31 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.71 2004/09/19 23:32:32 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -101,7 +101,7 @@ apply_vim_patches() {
 	einfo "Filtering vim patches..."
 	p=${WORKDIR}/${VIM_ORG_PATCHES%.tar*}.patch
 	ls ${WORKDIR}/vimpatches | sort | \
-	xargs -i gzip -dc ${WORKDIR}/vimpatches/{} | awk '
+	while read f; do gzip -dc ${WORKDIR}/vimpatches/${f}; done | awk '
 		/^Subject: Patch/ {
 			if (patchnum) {printf "\n" >"/dev/stderr"}
 			patchnum = $3
