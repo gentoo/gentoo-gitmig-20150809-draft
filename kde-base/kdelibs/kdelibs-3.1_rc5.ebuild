@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1_rc5.ebuild,v 1.4 2002/12/09 13:26:44 jmorgan Exp $
-inherit kde kde.org 
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1_rc5.ebuild,v 1.5 2002/12/15 13:38:19 bjb Exp $
+inherit kde kde.org flag-o-matic
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
 # check need for glib >=1.3.3 (we have 1.2.10 only; configure has no glib flag but searches for it)
@@ -56,6 +56,7 @@ src_unpack() {
 
 src_compile() {
 
+	use alpha && append-flags -mieee  
 	kde_src_compile myconf
 
 	use ipv6	|| myconf="$myconf --with-ipv6-lookup=no"
