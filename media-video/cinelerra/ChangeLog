@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cinelerra
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.14 2003/10/03 14:01:10 lu_zero Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.15 2004/02/14 00:59:48 lu_zero Exp $
+
+  14 Feb 2004; Luca Barbato <lu_zero@gentoo.org> cinelerra-1.1.7.ebuild:
+  Fixed a missing dep
 
   03 Oct 2003; Luca Barbato <lu_zero@gentoo.org> cinelerra-1.1.7.ebuild:
   Fixed bugs 28859, 26795
