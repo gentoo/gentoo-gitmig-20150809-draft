@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.5 2004/06/03 21:58:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.6 2004/06/03 22:01:42 vapier Exp $
 
 inherit eutils games
 
@@ -16,7 +16,6 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/x11
-	sdl? ( media-libs/libsdl )
 	media-libs/libpng
 	sys-libs/zlib"
 
