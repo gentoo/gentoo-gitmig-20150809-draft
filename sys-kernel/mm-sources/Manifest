@@ -1,4 +1,5 @@
 MD5 e0590507089b43e572cca6589ed37fb6 mm-sources-2.6.5_rc2-r5.ebuild 1034
+MD5 8a1e6ae80611ad0a877e2d07e8ca44f6 mm-sources-2.6.5_rc3-r4.ebuild 1034
 MD5 98cdeaf5d06b3bb2008a9eb6c3b5f284 mm-sources-2.6.5_rc2-r2.ebuild 1034
 MD5 8a1e6ae80611ad0a877e2d07e8ca44f6 mm-sources-2.6.5_rc3-r1.ebuild 1034
 MD5 8f049a90dbe5476c063b1e7fb47d69db ChangeLog 24489
@@ -12,6 +13,7 @@ MD5 b2b79501357921787373b0364e186401 files/digest-mm-sources-2.6.5_rc2-r2 194
 MD5 af57dceae578f11cdfa8f70933c46ae0 files/digest-mm-sources-2.6.5_rc2-r3 194
 MD5 074647c75c86f58a5381172e7bf94b9e files/digest-mm-sources-2.6.5_rc2-r5 194
 MD5 5cc23fbf414209d431ee76ed9dd420aa files/digest-mm-sources-2.6.5_rc3-r1 194
+MD5 71c5c843c0908cb6178fd11cc357cd22 files/digest-mm-sources-2.6.5_rc3-r4 194
 MD5 a613978c67d87fc251c04d2a52dddcc2 files/2.6.4-r1-tty-fix.diff 575
 MD5 8f578df14b624397068e82c4f6c51232 files/2.6.4-r1-debug-spinlock-fix.diff 325
 MD5 d3e6aaa68beb4ad5f78b43e7c7b98e44 files/devfs-boot-hang-fix.patch 2399
