@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.6.ebuild,v 1.1 2004/08/04 04:01:08 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.6.ebuild,v 1.2 2004/08/04 12:28:24 lv Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 IUSE=""
 
 # -amd64: Even after patching like ppc for correct ENDIANNESS, we have various size problems... hopefully a later version will solve this...
-KEYWORDS="~x86 ~ppc ~sparc -amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 DEPEND="sys-libs/glibc" # sys-devel/automake - needed if we remove the html docs from /usr/share
 
 src_compile() {
