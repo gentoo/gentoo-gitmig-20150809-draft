@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/muse
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.14 2005/01/21 21:29:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.15 2005/01/29 14:01:37 luckyduck Exp $
+
+  29 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> muse-0.9.1.ebuild:
+  added ~amd64 to KEYWORDS. fixes #79925
 
 *muse-0.9.1 (21 Jan 2005)
 
