@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r6.ebuild,v 1.3 2002/04/30 14:50:35 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r6.ebuild,v 1.4 2002/06/24 18:22:20 azarah Exp $
 
 TV=4.0
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
-	ftp://ftp.gnu.org/pub/gnu/texinfo/texinfo-${TV}.tar.gz"
+	ftp://ftp.gnu.org/pub/gnu/texinfo/texinfo-${TV}.tar.gz
+	ftp://ftp.ibiblio.org/pub/linux/distributions/gentoo/distfiles/texinfo-${TV}.tar.gz"
 
 S=${WORKDIR}/${P}
 
