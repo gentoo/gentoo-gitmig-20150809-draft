@@ -1,18 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.0.ebuild,v 1.4 2003/07/02 09:29:52 phosphan Exp $
-
-S=${WORKDIR}/${PN}
-
-IUSE="ssl sdl"
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.0.ebuild,v 1.5 2003/08/03 02:25:45 vapier Exp $
 
 DESCRIPTION="Portable Multiplatform Class Libraries for OpenH323"
-HOMEPAGE="http://www.openh323.org"
+HOMEPAGE="http://www.openh323.org/"
 SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="MPL-1.1"
+SLOT="0"
 KEYWORDS="~x86 ~ppc -sparc"
+IUSE="ssl sdl"
 
 DEPEND=">=sys-devel/bison-1.28
 	>=sys-devel/flex-2.5.4a
@@ -22,22 +19,24 @@ DEPEND=">=sys-devel/bison-1.28
 	sdl? ( media-libs/libsdl )
 	ssl? ( dev-libs/openssl )"
 
+S=${WORKDIR}/${PN}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}/make
-    # filter out -O3 and -mcpu embedded compiler flags
-	sed -e "s:-mcpu=\$(CPUTYPE)::" \
-		-e "s:-O3 -DNDEBUG:-DNDEBUG:" \
-		-i unix.mak
 
+	# filter out -O3 and -mcpu embedded compiler flags
+	sed -i \
+		-e "s:-mcpu=\$(CPUTYPE)::" \
+		-e "s:-O3 -DNDEBUG:-DNDEBUG:" \
+		unix.mak
 }
 
 src_compile() {
-
 	if [ "`use ssl`" ]; then
 		export OPENSSLFLAG=1
-       	export OPENSSLDIR=/usr
-       	export OPENSSLLIBS="-lssl -lcrypt"
+		export OPENSSLDIR=/usr
+		export OPENSSLLIBS="-lssl -lcrypt"
 	fi
 
 	econf || die "configure failed"
@@ -78,9 +77,8 @@ src_install() {
 	fi
 
 	# strip ${S} stuff
-	sed -i -e "s:^PWLIBDIR.*:PWLIBDIR=/usr/share/pwlib:" ${D}/usr/bin/ptlib-config
-	sed -i -e "s:^PWLIBDIR.*:PWLIBDIR=/usr/share/pwlib:" ${D}/usr/share/pwlib/make/ptbuildopts.mak
-
+	dosed "s:^PWLIBDIR.*:PWLIBDIR=/usr/share/pwlib:" /usr/bin/ptlib-config
+	dosed "s:^PWLIBDIR.*:PWLIBDIR=/usr/share/pwlib:" /usr/share/pwlib/make/ptbuildopts.mak
 
 	dodoc ReadMe.txt History.txt
 }

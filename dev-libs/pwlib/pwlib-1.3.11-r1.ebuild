@@ -1,34 +1,30 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.3.11-r1.ebuild,v 1.6 2003/02/13 10:50:45 vapier Exp $
-
-S=${WORKDIR}/${PN}
-
-IUSE="ssl"
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.3.11-r1.ebuild,v 1.7 2003/08/03 02:25:45 vapier Exp $
 
 DESCRIPTION="Libs needed for GnomeMeeting"
-HOMEPAGE="http://www.openh323.org"
+HOMEPAGE="http://www.openh323.org/"
 SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="x86 ppc -sparc "
+SLOT="0"
+KEYWORDS="x86 ppc -sparc"
+IUSE="ssl"
 
 DEPEND=">=sys-devel/bison-1.28
 	>=sys-devel/flex-2.5.4a
 	dev-libs/expat
 	ssl? ( dev-libs/openssl )"
 
-src_unpack() {
+S=${WORKDIR}/${PN}
 
+src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${PF}.diff || die
-
+	epatch ${FILESDIR}/${PF}.diff
 }
 
 src_compile() {
-
 	export PWLIBDIR=${S}
 	export PWLIB_BUILD="yes"
 
@@ -42,11 +38,9 @@ src_compile() {
 
 	cd tools/asnparser
 	make optshared || die
-
 }
 
 src_install() {
-
 	dodir /usr/lib /usr/include/ptlib/unix/ptlib \
 		/usr/share/pwlib /usr/include/ptclib
 
@@ -74,5 +68,4 @@ src_install() {
 	else
 		ln -sf libpt_linux_x86_r.so.${PV} libpt.so
 	fi
-
 }

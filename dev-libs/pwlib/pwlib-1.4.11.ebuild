@@ -1,48 +1,41 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.4.11.ebuild,v 1.3 2003/05/16 23:30:11 liquidx Exp $
-
-S=${WORKDIR}/${PN}
-
-IUSE="ssl"
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.4.11.ebuild,v 1.4 2003/08/03 02:25:45 vapier Exp $
 
 DESCRIPTION="Libs needed for GnomeMeeting"
-HOMEPAGE="http://www.openh323.org"
+HOMEPAGE="http://www.openh323.org/"
 SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="MPL-1.1"
+SLOT="0"
 KEYWORDS="x86 ~ppc -sparc"
+IUSE="ssl"
 
 DEPEND=">=sys-devel/bison-1.28
 	>=sys-devel/flex-2.5.4a
 	dev-libs/expat
 	ssl? ( dev-libs/openssl )"
 
+S=${WORKDIR}/${PN}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}/make
-    
-    # filter out -O3 and -mcpu embedded compiler flags
-	cp unix.mak unix.mak.orig
-	sed \
+
+	# filter out -O3 and -mcpu embedded compiler flags
+	sed -i \
 		-e "s:-mcpu=\$(CPUTYPE)::" \
 		-e "s:-O3 -DNDEBUG:-DNDEBUG:" \
-		< unix.mak.orig > unix.mak
-        
-    # patch unix.mak so it doesn't require annoying upgrades
-    cp unix.mak unix.mak.orig2
-    sed \
-    	-e "s:-DP_SSL -I\$(OPENSSLDIR)/include -I\$(OPENSSLDIR)/crypto:-DP_SSL:" \
-        -e "s:^LDFLAGS.*\+= -L\$(OPENSSLDIR)/lib -L\$(OPENSSLDIR):LDFLAGS +=:" \
-        < unix.mak.orig2 > unix.mak
-        
-    rm unix.mak.orig unix.mak.orig2
-        
+		unix.mak
+
+	# patch unix.mak so it doesn't require annoying upgrades
+	sed -i \
+		-e "s:-DP_SSL -I\$(OPENSSLDIR)/include -I\$(OPENSSLDIR)/crypto:-DP_SSL:" \
+		-e "s:^LDFLAGS.*\+= -L\$(OPENSSLDIR)/lib -L\$(OPENSSLDIR):LDFLAGS +=:" \
+		unix.mak
 }
 
 src_compile() {
-
 	export PWLIBDIR=${S}
 	export PWLIB_BUILD="yes"
 
@@ -56,11 +49,9 @@ src_compile() {
 
 	cd tools/asnparser
 	make optshared || die
-
 }
 
 src_install() {
-
 	dodir /usr/lib /usr/include/ptlib/unix/ptlib \
 		/usr/share/pwlib /usr/include/ptclib
 
@@ -88,5 +79,4 @@ src_install() {
 	else
 		ln -sf libpt_linux_x86_r.so.${PV} libpt.so
 	fi
-
 }
