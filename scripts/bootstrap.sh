@@ -24,15 +24,8 @@ cleanup() {
 }
 
 #USE may be set from the environment so we back it up for later.
-if [ "${USE-UNSET}" = "UNSET" ]
-then
-	use_unset=yes
-else
-	use_old="$USE"
-	use_unset=no
-fi
+export ORIGUSE="`spython -c 'import portage; print portage.settings["USE"];'`"
 export USE="build"
-
 #get correct CFLAGS, CHOST, CXXFLAGS, MAKEOPTS since make.conf will be
 #overwritten
 cp /etc/make.conf /etc/make.conf.build
@@ -46,14 +39,9 @@ export CONFIG_PROTECT=""
 cd /usr/portage
 emerge $myPORTAGE #separate, so that the next command uses the *new* emerge
 emerge $myBASELAYOUT $myBINUTILS $myGCC $myGETTEXT || cleanup 1
-if [ "$use_unset" = "yes" ]
-then
-	unset USE
-else
-	export USE="$use_old"
-fi
+#make.conf has been overwritten, so we explicitly export our original settings
+export USE="$ORIGUSE"
 # This line should no longer be required
-#export USE="`spython -c 'import portage; print portage.settings["USE"];'` bootstrap"
 emerge $myGLIBC $myGETTEXT $myBINUTILS $myGCC $myTEXINFO || cleanup 1
-#restore settings
+#restore original make.conf
 cleanup 0
