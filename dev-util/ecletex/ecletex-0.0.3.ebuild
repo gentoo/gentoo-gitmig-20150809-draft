@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ecletex-0.0.3.ebuild,v 1.7 2005/02/13 01:28:48 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ecletex-0.0.3.ebuild,v 1.8 2005/02/14 07:42:13 mr_bones_ Exp $
 
 inherit eclipse-ext
 
@@ -45,7 +45,7 @@ src_unpack() {
 
 	echo "classpath = $y" > build.properties
 
-	
+
 	mkdir -p ${stagedir}
 }
 
