@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.02.ebuild,v 1.2 2003/12/07 17:41:49 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.02.ebuild,v 1.3 2003/12/09 00:21:30 strider Exp $
 
 IUSE="doc gnome kde mozilla"
 
@@ -138,15 +138,11 @@ pkg_postinst () {
 
 	#Thanks to Douglas Pollock <douglas.pollock@magma.ca> for this
 	#comment found on the sun-jdk 1.2.2 ebuild that he sent.
-	if [ !"`use X`" ] ; then
-		einfo "********************************************************"
-		eerror "You're not using X so its possible that you dont have"
-		eerror "a X server installed, please read the following warn: "
-		eerror "Some parts of Sun's JDK require XFree86 to be installed."
-		eerror "Be careful which Java libraries you attempt to use."
-		einfo "********************************************************"
-		echo
-	fi
+	einfo "*********************************************************"
+	eerror "Some parts of Sun's JDK require XFree86 to be installed."
+	eerror "Be careful which Java libraries you attempt to use."
+	einfo "*********************************************************"
+	echo
 
 	einfo "******************************************************"
 	einfo " After installing ${P} this"
