@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.4.4.ebuild,v 1.6 2002/10/05 05:39:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.4.4.ebuild,v 1.7 2002/11/09 19:01:50 seemant Exp $
 
 IUSE="arts qt ncurses dvd gtk nls 3dfx esd directfb kde X alsa ggi oggvorbis gnome"
 
@@ -8,6 +8,10 @@ S=${WORKDIR}/${P}
 DESCRIPTION="VideoLAN Client - DVD/video player"
 SRC_URI="http://www.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.videolan.org"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
 
 DEPEND="X? ( virtual/x11 )
 	qt? ( x11-libs/qt )
@@ -28,10 +32,6 @@ DEPEND="X? ( virtual/x11 )
 	>=media-libs/libdvbpsi-0.1.1"
 
 RDEPEND="nls? ( sys-devel/gettext )"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
 
 # get kde and arts paths
 if [ -n "`use kde`" -o -n "`use arts`" ]; then
