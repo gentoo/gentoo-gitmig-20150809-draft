@@ -1,0 +1,146 @@
+#
+# The purpose of this file is to record all possible use items available 
+# in Gentoo at this time.
+#
+# Gentoo Developers:
+# * If you add a use item to an ebuild, please add it to this list
+#   along with a short description.
+# * If you remove a use item from this list, make sure it is no longer used
+#   in ANY ebuild.
+# * If you think you can write a better description of a use item, please do.
+# * If you see use items without a description, and know what it means,
+#   please fill it in.
+#
+# <jhhudso@gentoo.org>
+#
+# Last updated: 11 Apr 2002 21:31:03 CDT
+#
+
+3dfx  - Adds support for 3dfx video cards. See: voodoo4,voodoo5,voodoo6
+3dnow - Adds support for 3dnow multimedia processor instructions
+aalib - Adds support for media-libs/aalib (ASCI-Graphics Library)
+acl - Adds support for sys-apps/acl (XFS dump/restore utilities)
+afs - Adds OpenAFS support (distributed file system)
+alsa - Adds support for media-libs/alsa-lib (Advanced Linux Sound Architecture)
+apm - Adds APM (Advanced Power Management) support
+arts - Adds support for kde-base/kdelibs / kde-base/arts
+atlas - Adds support for atlas instead of blas in dev-lang/R 
+avi - Adds Win32 AVI support
+avifile - Adds support for media-video/avifile (Library for AVI-Files)
+berkdb - Adds support for sys-libs/db (Berkeley DB for MySQL)
+bonobo - Adds support for gnome-base/bonobo (Gnome CORBA interfaces)
+bootcd - Used for building a package without manpages, extras for ISO image
+bootstrap - Used for not building addons to key packages during bootstrap
+build - Used for not building addons to key packages during bootstrap
+css - Add CSS Support (Most likely DeCSS Support)
+cups - Add support for CUPS (Common Unix Printing System)
+decss - Adds support for DVDs
+dga - Adds DGA Support (Xfree86 )
+directfb - Adds support for dev-libs/DirectFB (library for FB devices)
+dvd - Adds support for DVDs
+encode - Adds support for MEncoder
+esd - Adds support for media-sound/esound (Enlightened Sound Daemon)
+evo - Adds support for evolution in gnumeric
+fbcon - Adds framebuffer support
+fbdev - Adds framebuffer support
+flash - Adds support for creating flash files using Ming
+gb - Adds support for Gnome Basic to gnumeric
+gd - Adds support for sys-libs/gdbm (GNU database libraries)
+gdbm - Adds support for sys-libs/gdbm (GNU database libraries)
+gettext - Adds support for the GNU locale utilities
+ggi - Adds support for media-libs/libggi (non-X video api/drivers)
+gif - Adds GIF image support
+glide - Adds media-libs/glide support to Xfree86
+gnome - Adds GNOME support
+gpg - Adds support for gpg (GnuPG encryption system)
+gpgme - Add support for gpgme to net-mail/sylpheed-claws
+gphoto2 - Adds digital camera support
+gpm - Adds support for sys-libs/gpm (Console-based mouse driver)
+gtk - Adds support for x11-libs/gtk+ (The GIMP Toolkit)
+gtkhtml - Adds support for gnome-extra/gtkhtml
+guile - Adds support for dev-util/guile (interpreter for Scheme)
+imap - Adds support for IMAP
+imlib - Adds support for media-libs/imlib (Image loading and rendering library)
+innodb - Adds innodb support for mySQL (transaction support)
+ipv6 - Adds support for IP version 6
+java - Adds support for Java
+jpeg - Adds JPEG image support
+jpilot - Adds JPilot support (Software for the Palm Pilot)
+kde - Adds support for kde-base/kde (K Desktop Enviroment)
+lame - Adds support for the lame mp3 encoder
+lcms - Adds lcms support to media-gfx/imagemagick (Color management)
+ldap - Adds LDAP support (Lightweight Directory Access Protocol)
+libg++
+libgda
+libmpeg3
+libwww
+licq
+mcrypt
+mga
+mhash
+mitshm
+mmx
+motif
+mozaccess-builtin
+mozctl
+mozilla
+mozirc
+mozxmlterm
+mta
+mysql
+nas
+ncurses
+nls
+nocardbus
+objprelink
+odbc
+ogg
+oggvorbis
+opengl
+oss
+pam
+pcmcia
+pda
+pdflib
+perl
+pic
+pixbuf
+plotutils
+pnp
+postgres
+python
+qt
+qtmt
+quicktime
+readline
+ruby
+samba
+sdl
+slang
+slp
+snmp
+socks5
+spell
+sse
+ssl
+static
+svga
+tcl
+tcltk
+tcpd
+tetex
+tex
+truetype
+trusted
+ungif
+voodoo3
+voodoo4
+voodoo5
+vorbis
+X
+xface
+xml
+xml2
+xmms
+xv
+zeo
