@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/stress
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.9 2003/08/11 17:31:37 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.10 2004/04/26 15:34:26 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> stress-0.18.1.ebuild:
+  Add die following econf for bug 48950
 
   12 Aug 2003; Martin Holzer <mholzer@gentoo.org> stress-0.18.1.ebuild:
   Marked x86 stable.
