@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/crossdev
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.6 2004/09/03 19:37:35 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.7 2005/03/03 18:44:33 vapier Exp $
+
+*crossdev-0.9 (03 Mar 2005)
+
+  03 Mar 2005; Mike Frysinger <vapier@gentoo.org> +files/crossdev,
+  +crossdev-0.9.ebuild:
+  Version bumpage, use the portage tree now.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   crossdev-0.4-r1.ebuild:

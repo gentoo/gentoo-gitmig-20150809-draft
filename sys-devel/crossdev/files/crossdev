@@ -1,0 +1,205 @@
+#!/bin/bash
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.1 2005/03/03 18:44:33 vapier Exp $
+
+source /sbin/functions.sh || exit 1
+die() {
+	echo
+	eerror $*
+	eerror If you file a bug, please attach the following logfiles:
+	eerror ${PORT_LOGDIR}/cross-${CTARGET}-info.log
+	eerror ${logfile}
+	exit 1
+}
+
+usage() {
+cat << EOF
+
+Usage: ${HILITE}crossdev${NORMAL} ${GOOD}[options]${NORMAL} ${BRACKET}--target TARGET${NORMAL}
+
+${GOOD}Options${NORMAL}:
+    ${GOOD}-b, --binutils${NORMAL} ver    Specify version of binutils to use
+    ${GOOD}-g, --gcc${NORMAL} ver         Specify version of gcc to use
+    ${GOOD}-k, --kernel${NORMAL} ver      Specify version of kernel headers to use
+    ${GOOD}-l, --libc${NORMAL} ver        Specify version of libc to use
+    ${GOOD}-p, -v, -a${NORMAL}            Options to pass to emerge (see emerge(1))
+
+    ${GOOD}-s1, --stage1${NORMAL}         Build a C compiler (no libc/C++)
+    ${GOOD}-s2, --stage2${NORMAL}         Build a C compiler & libc (no C++)
+    ${GOOD}-s3, --stage3${NORMAL}         Build a C/C++ compiler & libc [default]
+
+${BRACKET}Target (-t)${NORMAL}:
+    The target takes the form:   ${BRACKET}ARCH-VENDOR-OS-LIBC${NORMAL}
+    The default 'pc-linux-gnu' will be appended if only ARCH is specified.
+    Examples:
+       arm-pc-linux-gnu      hppa2.0-pc-linux-gnu   sparc-pc-linux-gnu
+       i386-pc-linux-uclibc  mips-pc-linux-uclibc   sh4-pc-linux-uclibc
+
+For more info, please see ${HILITE}crossdev${NORMAL}(8).
+EOF
+	exit ${1:-0}
+}
+
+parse_target() {
+	[[ -z $1 ]] && usage 1
+	CTARGET=$1
+	local CPRE=${CTARGET%%-*} CPOST=${CTARGET#*-}
+
+	# Did they give us just an ARCH or the full TARGET ?
+	[[ ${CTARGET/-} == ${CTARGET} || -z ${CPOST} ]] && CPOST="pc-linux-gnu"
+
+	# Let's accept ARCH in both the portage and the standard forms ...
+	# CTARGET is in the standard form while TARCH is in the portage form
+	case ${CPRE} in
+		alpha*)     TARCH=alpha;;
+		arm*)       TARCH=arm;;
+		hppa*)      TARCH=hppa;;
+		ia64*)      TARCH=ia64;;
+		i?86*)      TARCH=x86;;
+		x86)        TARCH=x86;    CPRE="i386";;
+		m68*)       TARCH=m68k;;
+		mips*)      TARCH=mips;;
+		powerpc64*) TARCH=ppc64;;
+		ppc64)      TARCH=ppc64;  CPRE="powerpc64";;
+		powerpc*)   TARCH=ppc;;
+		ppc)        TARCH=ppc;    CPRE="powerpc";;
+		sparc*)     TARCH=sparc;;
+		s390*)      TARCH=s390;;
+		sh*)        TARCH=sh;;
+		x86_64*)    TARCH=amd64;;
+		amd64)      TARCH=amd64;  CPRE="x86_64";;
+		*)          usage 1;;
+	esac
+	CTARGET=${CPRE}-${CPOST}
+}
+hr() {
+	local c=${COLUMNS:-0}
+	if [[ ${c} -eq 0 ]] ; then
+		c=$(stty size 2> /dev/null)
+		[[ -z ${c} ]] \
+			&& c=50 \
+			|| c=${c##* }
+	fi
+	local br=""
+	for ((i=0; i<${c}; ++i)) ; do
+		br=${br}-
+	done
+	echo ${br}
+}
+
+#################
+EOPTS=
+UOPTS=
+TARCH=
+HARCH=
+CTARGET=
+STAGE=3
+BVER="[latest]"
+GVER="[latest]"
+KVER="[latest]"
+LPKG="glibc"
+LVER="[latest]"
+
+while [[ $# -gt 0 ]] ; do
+	case $1 in
+	-t|--target)   shift; parse_target $1;;
+	-b|--binutils) shift; BVER=-$1;;
+	-g|--gcc)      shift; GVER=-$1;;
+	-k|--kernel)   shift; KVER=-$1;;
+	-l|--libc)     shift; LVER=-$1;;
+	-s?|--stage?)  STAGE=${1:0-1};;
+	-p|-v|-a)      UOPTS="${UOPTS} $1";;
+	-h|--help)     usage;;
+	*)             eerror "UNKNOWN OPTION: '$1'" ; usage 1;;
+	esac
+	shift
+done
+[[ -z ${CTARGET} ]] && usage 1
+[[ ${CTARGET} == *-uclibc ]] && LPKG="uclibc"
+
+#################
+HARCH=$(env -uARCH portageq envvar ARCH)
+PORTDIR_OVERLAY=$(portageq envvar PORTDIR_OVERLAY)
+PORTDIR=$(portageq envvar PORTDIR)
+PORT_LOGDIR=$(portageq envvar PORT_LOGDIR)
+PORT_LOGDIR=${PORT_LOGDIR:-/var/log/portage}
+[[ ! -d ${PORT_LOGDIR} ]] && mkdir -p ${PORT_LOGDIR}
+(
+hr
+einfo "Host Portage ARCH:     ${HARCH}"
+einfo "Target Portage ARCH:   ${TARCH}"
+einfo "Target System:         ${CTARGET}"
+einfo "Stage:                 ${STAGE}"
+echo
+einfo "binutils:              ${BVER}"
+einfo "gcc:                   ${GVER}"
+[[ ${STAGE} -gt 1 ]] && \
+einfo "linux-headers:         ${KVER}" && \
+einfo "libc:                  ${LPKG}${LVER}"
+echo
+einfo "PORTDIR_OVERLAY:       ${PORTDIR_OVERLAY}"
+einfo "PORT_LOGDIR:           ${PORT_LOGDIR}"
+hr
+) >& ${PORT_LOGDIR}/cross-${CTARGET}-info.log
+cat ${PORT_LOGDIR}/cross-${CTARGET}-info.log
+
+#################
+mkdir -p /etc/portage
+[[ -z $(grep -s "^cross-${CTARGET}$" /etc/portage/categories) ]] \
+	&& echo cross-${CTARGET} >> /etc/portage/categories
+mkdir -p "${PORTDIR_OVERLAY}"/cross-${CTARGET}
+
+cd /etc/portage
+set_keywords() {
+	local pkg=$1 ver=$2
+	sed -i -e "/cross-${CTARGET}\/${pkg}/d" package.keywords package.mask
+	if [[ ${ver} == "[latest]" ]] ; then
+		echo "cross-${CTARGET}/${pkg} $TARCH ~$TARCH" >> package.keywords
+	else
+		echo ">cross-${CTARGET}/${pkg}-${ver}" >> package.mask
+		echo "cross-${CTARGET}/${pkg} * ~* -*" >> package.keywords
+	fi
+}
+touch package.keywords package.mask
+set_keywords binutils ${BVER}
+set_keywords gcc ${GVER}
+set_keywords linux-headers ${KVER}
+set_keywords ${LPKG} ${LVER}
+
+cd "${PORTDIR_OVERLAY}"/cross-${CTARGET}
+ln -sf "${PORTDIR}"/sys-devel/binutils
+ln -sf "${PORTDIR}"/sys-kernel/linux-headers
+ln -sf "${PORTDIR}"/sys-devel/gcc
+ln -sf "${PORTDIR}"/sys-libs/${LPKG} ${LPKG}
+
+#################
+doemerge() {
+	local logfile=${PORT_LOGDIR}/cross-${CTARGET}
+	[[ -z $2 ]] \
+		&& logfile=${logfile}-$1.log \
+		|| logfile=${logfile}-$2.log
+
+	ebegin "Emerging cross-${2:-$1}"
+	if [[ ${UOPTS/-v} != ${UOPTS} ]] ; then
+		emerge cross-${CTARGET}/$1 ${EOPTS} \
+			2>&1 | tee ${logfile} || die "$1 failed :("
+	else
+		emerge cross-${CTARGET}/$1 ${EOPTS} \
+			>& ${logfile} || die "$1 failed :("
+	fi
+	eend 0
+}
+
+# we include the '-u' so that we don't re-emerge packages
+EOPTS="${UOPTS} -u --nodeps"
+
+doemerge binutils
+USE=nocxx doemerge gcc gcc-stage1
+doemerge linux-headers
+USE=$TARCH doemerge ${LPKG}
+
+if ! type -p ${CTARGET}-g++ > /dev/null ; then
+	EOPTS="${UOPTS} --nodeps"
+fi
+doemerge gcc gcc-stage2
