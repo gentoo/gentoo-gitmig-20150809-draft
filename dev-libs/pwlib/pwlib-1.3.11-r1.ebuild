@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.3.11-r1.ebuild,v 1.2 2002/11/09 19:50:06 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.3.11-r1.ebuild,v 1.3 2002/11/09 19:59:08 raker Exp $
 
 S=${WORKDIR}/${PN}
 
-IUSE="esd ssl"
+IUSE="ssl"
 
 DESCRIPTION="Libs needed for GnomeMeeting"
 HOMEPAGE="http://www.openh323.org"
@@ -69,6 +69,10 @@ src_install() {
 	rm -rf ${D}/usr/share/pwlib/include/ptlib/CVS
 
 	cd ${D}/usr/lib
-	ln -sf libpt_linux_x86_r.so.${PV} libpt.so
+	if [ ${ARCH} = "ppc" ] ; then
+		ln -sf libpt_linux_ppc_r.so.${PV} libpt.so
+	else
+		ln -sf libpt_linux_x86_r.so.${PV} libpt.so
+	fi
 
 }
