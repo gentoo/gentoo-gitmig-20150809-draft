@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.4.0b.ebuild,v 1.8 2004/09/05 11:21:30 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.4.0b.ebuild,v 1.9 2004/09/10 07:06:45 brix Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="ncurses based monitor util for your wavelan cards"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://www.janmorgenstern.de/projects-software.html"
