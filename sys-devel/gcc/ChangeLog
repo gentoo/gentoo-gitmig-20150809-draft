@@ -1,6 +1,17 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.206 2004/04/20 22:41:08 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.207 2004/04/22 02:48:33 vapier Exp $
+
+  21 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.2.3-r2 gcc-3.2.3-r3
+  gcc-3.2.3-r4:
+  Bump r4 to stable and clean it up so we can force out r2 and r3 in the future.
+
+  21 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-2.95.3-r7 gcc-2.95.3-r8:
+  Clean up ebuilds (filter-flags and similar) and bump r8 to stable for ppc/sparc/alpha
+  so we can trim out r7 in the future.
+
+  21 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.0.4:
+  Clean up the ebuild (filter-flags and similar).
 
   20 Apr 2004; <solar@gentoo.org> gcc-3.3.3-r2.ebuild:
   add s390 gcc-3.3.3 patch from bug 47915, added USE flags for f77, objc from
