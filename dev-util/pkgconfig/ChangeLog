@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.17 2003/12/29 03:23:16 kumba Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.18 2004/03/02 18:41:10 iggy Exp $
+
+  02 Mar 2004; Brian Jackson <iggy@gentoo.org> pkgconfig-0.15.0.ebuild:
+  s390 keywords
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> pkgconfig-0.15.0.ebuild:
   Move to mips stable (~mips -> mips)
