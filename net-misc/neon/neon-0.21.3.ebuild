@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.21.3.ebuild,v 1.8 2003/02/13 15:01:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.21.3.ebuild,v 1.9 2003/05/31 09:01:32 pvdabeel Exp $
 
 IUSE="ssl"
 
@@ -14,7 +14,7 @@ DEPEND="dev-libs/libxml2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 ppc sparc "
 
 src_compile() {
 	local myconf
