@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.4 2004/04/12 23:14:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.5 2004/04/16 13:30:21 kugelfang Exp $
+
+  16 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> gconfmm-2.0.1.ebuild:
+  Added src_compile that allows compilation on amd64, marked ~amd64
 
   12 Apr 2004; Guy Martin <gmsoft@gentoo.org> gconfmm-2.0.1.ebuild:
   Marked stable on hppa.
