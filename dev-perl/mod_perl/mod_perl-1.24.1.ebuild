@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.24.1.ebuild,v 1.2 2000/12/15 07:29:29 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.24.1.ebuild,v 1.3 2000/12/21 08:22:28 achim Exp $
 
 P=mod_perl-1.24
 A=${P}_01.tar.gz
@@ -24,8 +24,6 @@ src_compile() {
     cp Makefile Makefile.orig
     sed -e "s:apxs_install doc_install:doc_install:" Makefile.orig > Makefile
     try make
-#    cd src/modules/perl
-#    apxs -c -I /usr/lib/perl5/5.6.0/i686-linux-thread-multi/CORE mod_perl.c
 }
 
 src_install () {
