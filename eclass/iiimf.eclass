@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/iiimf.eclass,v 1.7 2004/09/13 20:11:13 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/iiimf.eclass,v 1.8 2004/09/14 10:56:17 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -12,30 +12,16 @@ ECLASS=iiimf
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_compile src_install
 
-snapshot() {
-	if [ "${PV:0:2}" -eq 12 ] ; then
-		true
-	else
-		false
-	fi
-}
-
 IMSDK_PV="r${PV//./_}"
-if snapshot ; then
-	MY_INFIX="-src-"
-	MY_PV="${IMSDK_PV/_pre/-svn}"
-	MY_SUFFIX="tgz"
-else
-	MY_INFIX="."
-	MY_PV="${IMSDK_PV/_p/.}"
-	MY_SUFFIX="tar.bz2"
-fi
-IMSDK_P="im-sdk${MY_INFIX}${MY_PV}"
-IMSDK="im-sdk-${MY_PV/./-}"
+MY_PV="${IMSDK_PV/_pre/-svn}"
+MY_PV="${MY_PV/_p/-svn}"
+IMSDK_P="im-sdk-src-${MY_PV}"
+IMSDK="${IMSDK_P/-src/}}"
 
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.openi18n.org/subgroups/im/IIIMF/"
-SRC_URI="http://www.openi18n.org/download/docs/im-sdk/${IMSDK_P}.${MY_SUFFIX}"
+SRC_URI="mirror://gentoo/${IMSDK_P}.tgz
+	http://dev.gentoo.org/~usata/distfiles/${IMSDK_P}.tgz"
 
 LICENSE="MIT X11"
 SLOT="0"
@@ -48,7 +34,9 @@ S="${WORKDIR}/${IMSDK}/${PN}"
 
 iiimf_src_compile() {
 
-	snapshot && ./autogen.sh
+	if [ "${PV:0:2}" -eq 12 ] ; then
+		./autogen.sh
+	fi
 
 	econf --enable-optimize \
 		`use_enable debug` || die
