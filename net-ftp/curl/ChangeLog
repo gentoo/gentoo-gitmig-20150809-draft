@@ -1,12 +1,15 @@
 # ChangeLog for net-ftp/curl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/ChangeLog,v 1.17 2003/06/19 21:13:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/ChangeLog,v 1.18 2003/08/04 22:12:59 gmsoft Exp $
 
   19 Jun 2003; Alastair Tse <liquidx@gentoo.org> curl-7.10.5-r1.ebuild:
   marking as stable x86 because it includes a fairly important bugfix over all
   7.10.x series
 
 *curl-7.10.5-r1 (13 Jun 2003)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> curl-7.10.5-r1.ebuild :
+  Marked stable on hppa.
 
   14 Jun 2003; Guy Martin <gmsoft@gentoo.org> curl-7.10.5-r1.ebuild :
   Added ~hppa to KEYWORDS.
