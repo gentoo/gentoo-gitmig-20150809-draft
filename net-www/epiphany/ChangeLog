@@ -1,6 +1,10 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.69 2004/09/16 14:48:00 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.70 2004/09/16 19:58:53 gustavoz Exp $
+
+  16 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  epiphany-1.2.9-r1.ebuild:
+  Stable on sparc wrt #63996
 
 *epiphany-1.4.0 (16 Sep 2004)
 *epiphany-1.2.9-r1 (16 Sep 2004)
