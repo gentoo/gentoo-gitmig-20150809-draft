@@ -1,8 +1,14 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.6 2002/07/24 01:41:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.7 2002/09/07 13:58:22 seemant Exp $
 
 *rpm-4.0.4-r3 (23 Jul 2002)
+
+  07 Sep 2002; Seemant Kulleen <seemant@gentoo.org> rpm-4.0.4-r3.ebuild :
+
+  This package can not compile with autoconf-2.53a, so autoconf-2.1 is
+  forced.  Thanks to: garion@garion.mnbsyr.com (John Sutherland) in bug
+  #7595
 
   23 Jul 2002; Seemant Kulleen <seemant@gentoo.org> rpm-4.0.4-r3.ebuild :
 

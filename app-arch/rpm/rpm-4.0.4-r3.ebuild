@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r3.ebuild,v 1.2 2002/08/16 02:34:18 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r3.ebuild,v 1.3 2002/09/07 13:58:22 seemant Exp $
 
 # note to self: check for java deps
 
@@ -22,6 +22,8 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_unpack() {
+
+	export WANT_AUTOCONF_2_1=1
 
 	unpack ${A}
 	cd ${S}
