@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r1.ebuild,v 1.1 2003/04/05 16:41:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r1.ebuild,v 1.2 2003/04/21 18:55:11 lostlogic Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://id3lib.sourceforge.net/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/glibc"
 
@@ -18,7 +18,7 @@ export CPPFLAGS="${CPPFLAGS} -Wno-deprecated"
 
 src_install() {
 
-	make DESTDIR=${D} install || die
+	einstall || die "Install failed"
 	dosym /usr/lib/libid3-3.8.so.3 /usr/lib/libid3-3.8.so.0.0.0
 	dosym /usr/lib/libid3-3.8.so.0.0.0 /usr/lib/libid3-3.8.so.0
 	
