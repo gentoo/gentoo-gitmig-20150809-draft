@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jitac
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.5 2004/08/24 03:08:17 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.6 2004/09/21 18:05:24 axxo Exp $
+
+  21 Sep 2004; Thomas Matthijs <axxo@gentoo.org> jitac-0.2.0.ebuild:
+  now builds from source
 
   23 Aug 2004; Chris Aniszczyk <zx@gentoo.org> jitac-0.2.0.ebuild:
   Marking stable on x86
