@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/howto-html
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.8 2003/02/12 03:37:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.9 2003/10/06 13:14:03 lanius Exp $
+
+*howto-html-20031006 (06 Oct 2003)
+
+  06 Oct 2003; Heinrich Wendel <lanius@gentoo.org> howto-html-20020328.ebuild,
+  howto-html-20031006.ebuild:
+  version bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
