@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/subterfugue
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/ChangeLog,v 1.4 2003/02/12 09:08:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/ChangeLog,v 1.5 2003/04/08 23:04:05 liquidx Exp $
+
+*subterfugue-0.2.1a (09 Apr 2003)
+
+  09 Apr 2003; Alastair Tse <liquidx@gentoo.org> subterfugue-0.2-r1.ebuild,
+  subterfugue-0.2.1a.ebuild, files/subterfugue-0.2.1a-setup.py:
+  custom distutils script for unmaintained subterfugue build that only supports
+  python 2.1. also massive cleanup of the ebuild.
 
 *subterfugue-0.2-r1 (1 Feb 2002)
 
