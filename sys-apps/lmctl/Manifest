@@ -1,14 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b13c2ae2688d4fe2d1ea87b1ba77cef4 lmctl-0.3.2.ebuild 913
-MD5 3d4dfb4356f56ee83e0f426163e3b6cf metadata.xml 231
 MD5 4dbce2a0ef3584c79b433fa652bedc0b ChangeLog 463
-MD5 9e0da21fd6f234d98d9952777960cda6 files/digest-lmctl-0.3.2 63
+MD5 3d4dfb4356f56ee83e0f426163e3b6cf metadata.xml 231
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB38MqmPFBzbX68WERAlikAJwO9RNWXEukcRrBcNcoxPhINqFWWACfTQZH
-5vVxy7OheyBjM1JOO2ePnVg=
-=pmrs
+iD8DBQFB38oKmPFBzbX68WERAkeZAJ0VTlJ/BrdgjKjxAVyfL0Hgp9Gv7QCgk5FO
+4IjczaaTqhg3+2fjlTEPnI4=
+=V2io
 -----END PGP SIGNATURE-----
