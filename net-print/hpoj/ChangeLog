@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hpoj
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.18 2004/06/25 00:39:45 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.19 2005/01/04 18:33:29 hansmi Exp $
+
+  04 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> hpoj-0.91-r3.ebuild:
+  Added to ~ppc, bug 76504.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> hpoj-0.91-r2.ebuild,
   hpoj-0.91-r3.ebuild:
