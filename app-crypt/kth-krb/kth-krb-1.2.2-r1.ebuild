@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r1.ebuild,v 1.1 2003/10/05 23:31:57 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r1.ebuild,v 1.2 2003/10/20 04:41:23 rphillips Exp $
 
 DESCRIPTION="Kerberos 4 implementation from KTH"
 SRC_URI="ftp://ftp.pdc.kth.se/pub/krb/src/krb4-${PV}.tar.gz"
@@ -58,5 +58,5 @@ src_install() {
 	# rphillips: cludge to fix the paths
 	einfo "Fixing /usr/athena/lib library paths"
 	cd ${D}/usr/athena/lib
-	sed -i 's:/var/tmp/portage/kth-krb-.*/image/::g' *.la
+	sed -i 's:${D}/::g' *.la
 }
