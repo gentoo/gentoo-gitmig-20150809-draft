@@ -33,6 +33,11 @@
 
 # PPC PROFILE
 
+# xine currently has (known) ppc problems
+<media-libs/xine-lib-0.9.11
+<media-video/xine-ui-0.9.11
+
+
 # hfsplusutils masked for testing - Gerk - June 20, 2002
 sys-apps/hfsplusutils
 
