@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/qmhandle
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmhandle/ChangeLog,v 1.1 2003/08/05 06:07:44 robbat2 Exp $
+
+*qmhandle-1.1.1 (04 Aug 2003)
+
+  04 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  qmhandle-1.1.1.ebuild, files/qmHandle-gentoo.patch:
+  Initial commit.
+
