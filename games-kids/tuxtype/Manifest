@@ -1,6 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 779396426cc2c9d19cbd343a27759f88 ChangeLog 1834
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 98d277872c82fa4046306182bbe7bcce tuxtype-1.0.3-r1.ebuild 1011
-MD5 95f50ef533cb7a011cee68c8ce08b7f9 tuxtype-1.0.3.ebuild 967
-MD5 5427e31fed2ec8f809c162df0c8ab2b6 files/digest-tuxtype-1.0.3 67
 MD5 5427e31fed2ec8f809c162df0c8ab2b6 files/digest-tuxtype-1.0.3-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0+qCroRuSHgZdywRAoiIAJwJeKJ7+ZxArIdExc1uvBfkonPZhQCdHY90
+ZVSrRL0qQDLtMiDldW+YvZA=
+=Gaei
+-----END PGP SIGNATURE-----
