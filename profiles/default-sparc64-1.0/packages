@@ -1,8 +1,5 @@
 # This file created automagically by ../default-sparc-1.0/scripts/generate-packages.sh on Tue Jul 16 21:16:24 UTC 2002
 
-# does not build with gcc-2.x
-<media-gfx/graphviz-1.9
-
 *>=sys-apps/baselayout-1.7.3
 *>=sys-apps/portage-1.8.9_pre25
 *~sys-devel/binutils-2.11.92.0.12.3
@@ -139,7 +136,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by ../default-sparc-1.0/scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.47 2003/12/11 16:26:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.48 2004/01/28 11:48:27 vapier Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh

@@ -33,7 +33,6 @@
 
 #does not build with gcc-2.x
 sys-fs/ntfsprogs
-<media-gfx/graphviz-1.9
 <app-arch/rar-3.2.0
 
 *>=sys-apps/baselayout-1.7.3
