@@ -1,8 +1,11 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.3 2002/06/25 20:24:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.4 2002/07/25 05:00:29 gerk Exp $
 
 *netatalk-1.5.3.1 (26 Jun 2002)
+
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   26 Jun 2002; Seemant Kulleen <seemant@gentoo.org> netatalk-1.5.3.1.ebuild
   files/digest-netatalk-1.5.3.1 :
