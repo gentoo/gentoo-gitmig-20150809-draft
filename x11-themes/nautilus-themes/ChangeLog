@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/nautilus-themes
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nautilus-themes/ChangeLog,v 1.4 2004/02/29 23:13:17 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nautilus-themes/ChangeLog,v 1.5 2004/03/24 19:29:04 gustavoz Exp $
+
+  24 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  nautilus-themes-1.0.ebuild:
+  stable on sparc
 
   01 Mar 2004; Markus Nigbur <pyrania@gentoo.org> nautilus-themes-1.0.ebuild:
   Stable on x86.
