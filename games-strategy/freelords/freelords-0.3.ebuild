@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.ebuild,v 1.2 2003/10/27 12:59:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.ebuild,v 1.3 2003/10/27 13:00:57 vapier Exp $
 
 inherit games
 
@@ -29,7 +29,7 @@ src_unpack() {
 
 src_compile() {
 	egamesconf --disable-paraguitest || die
-	emake || die
+	emake CXXFLAGS="${CXXFLAGS}" || die
 }
 
 src_install() {
