@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.9 2004/06/24 22:05:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.10 2004/07/05 11:04:45 solar Exp $
+
+  05 Jul 2004; <solar@gentoo.org> fakeroot-0.4.4-r1.ebuild,
+  files/fakeroot-0.4.4-faked.patch:
+  update ebuild to use epatch vs calling patch directly. Also added a patch that
+  will allow fakeroot to be compiled with gcc-3.4/uclibc
 
   02 Apr 2004; Jon Portnoy <avenj@gentoo.org> fakeroot-0.4.4-r1.ebuild :
   Use gnuconfig_update for all archs.
