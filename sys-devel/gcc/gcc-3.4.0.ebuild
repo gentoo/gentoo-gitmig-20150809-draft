@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.10 2004/04/27 23:39:00 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.11 2004/04/28 17:00:37 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj hardened f77 objc uclibc"
 
@@ -255,7 +255,7 @@ src_unpack() {
 	# it fail right near the end, so lets die right away when parts that are
 	# known to be broken are going to be compiled.
 	# Travis Tilley <lv@gentoo.org>
-	use java && use gcj && die "gcj will not compile yet with gcc 3.4.0. re-emerge with USE=-gcj"
+	use amd64 && use java && use gcj && die "gcj will not compile yet with gcc 3.4.0 on amd64. re-emerge with USE=-gcj"
 	use amd64 && use multilib && die "multilib support will not compile yet with gcc 3.4.0. re-emerge with USE=-multilib"
 
 
