@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.7-r1.ebuild,v 1.8 2000/12/28 15:31:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.7-r2.ebuild,v 1.1 2001/01/01 23:26:29 drobbins Exp $
 
 P=samba-2.0.7
 A=${P}.tar.gz
@@ -21,9 +21,7 @@ src_compile() {
   cd ${S}/source
   CFLAGS="$CFLAGS -I/usr/include/openssl" try ./configure --prefix=/usr \
 	--sysconfdir=/etc/smb --localstatedir=/var/log --libdir=/etc/smb --sbindir=/usr/sbin \
-	--with-automount \
-	--with-utmp --without-sambabook --with-netatalk \
-	--with-smbmount --with-pam --with-syslog \
+	--with-automount --with-utmp --without-sambabook --with-netatalk --with-smbmount --with-pam \
 	--with-privatedir=/etc/smb/private --with-lockdir=/var/lock --with-swatdir=/usr/share/swat
   try make
 }
@@ -68,6 +66,19 @@ src_install() {
 	cp ${O}/files/samba ${D}/etc/rc.d/init.d
 	diropts -m0700
 	dodir /etc/smb/private
+
+	#supervise support
+	local x
+	for x in smbd nmbd
+	do
+		dodir /var/supervise/${x}/log
+		chmod +t ${D}/var/supervise/${x}
+		exeinto /var/supervise/${x}
+		newexe ${FILESDIR}/${x}-run run
+		exeinto /var/supervise/${x}/log
+		newexe ${FILESDIR}/${x}-log run
+		dosym /var/supervise/${x}/log/${x}-log /var/log/${x}.d
+	done
 }
 
 pkg_config() {

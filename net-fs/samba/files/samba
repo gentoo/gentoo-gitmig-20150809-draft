@@ -1,33 +1,46 @@
 #!/bin/sh
-#RCUPDATE:2 3 4:75:This line is required for script management
+#RCUPDATE:3 4:76:This line is required for script management
 
 . /etc/rc.d/config/functions
 
-SERVICE0=nmbd
-SERVICE1=smbd
+SERVICE=samba
 opts="start stop restart"
 
 EXE0=/usr/sbin/nmbd
 EXE1=/usr/sbin/smbd
 
 start() {
-		ebegin "Starting $SERVICE0..."
-     		start-stop-daemon --start --quiet --exec $EXE0 
-		eend $? "Started $SERVICE0." "Error Starting $SERVICE0."
-		ebegin "Starting $SERVICE1..."
-     		start-stop-daemon --start --quiet --exec $EXE1 
-		eend $? "Started $SERVICE1." "Error Starting $SERVICE1."
+		ebegin "Starting $SERVICE"
+		start-stop-daemon --start --quiet --exec $EXE0 
+		result=$?
+		start-stop-daemon --start --quiet --exec $EXE1 
+		result=$(( $result + $? ))
+		eend $result "Started $SERVICE." "Error starting $SERVICE."
 
 }
 
 stop() {
-		ebegin "Stopping $SERVICE0..."
-		start-stop-daemon --stop --quiet --exec $EXE0
-		eend $? "Stopped $SERVICE0." "Error Stopping $SERVICE0."
-		ebegin "Stopping $SERVICE1..."
-		start-stop-daemon --stop --quiet --exec $EXE1
-		eend $? "Stopped $SERVICE1." "Error Stopping $SERVICE1."
+		ebegin "Starting $SERVICE"
+		start-stop-daemon --stop --quiet --exec $EXE0 
+		result=$?
+		start-stop-daemon --stop --quiet --exec $EXE1 
+		result=$(( $result + $? ))
+		eend $result "Stopped $SERVICE." "Error stopping $SERVICE."
 
+}
+supervise_start() {
+		ebegin "Starting supervised $SERVICE"
+		svc -u /etc/supervise/smbd
+		svc -u /etc/supervise/nmbd
+		eend $? "Started $SERVICE." "Error starting $SERVICE."
+}
+
+
+supervise_stop() {
+		ebegin "Stopping supervised $SERVICE"
+		svc -d /etc/supervise/smbd
+		svc -d /etc/supervise/nmbd
+		eend $? "Stopped $SERVICE." "Error stopping $SERVICE."
 }
 
 restart () {
