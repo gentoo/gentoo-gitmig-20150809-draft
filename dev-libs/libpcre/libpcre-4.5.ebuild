@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-4.5.ebuild,v 1.4 2004/09/04 13:03:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-4.5.ebuild,v 1.5 2004/09/06 08:53:45 kloeri Exp $
 
 inherit libtool flag-o-matic eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-${PV}.tar.bz
 
 LICENSE="as-is"
 SLOT="3"
-KEYWORDS="x86 ~ppc sparc ~alpha ~arm ~hppa amd64 ~ia64 ~ppc64 ~s390 ~mips"
+KEYWORDS="x86 ~ppc sparc alpha ~arm ~hppa amd64 ~ia64 ~ppc64 ~s390 ~mips"
 IUSE=""
 
 DEPEND="virtual/libc"
