@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.3.ebuild,v 1.10 2004/02/08 03:06:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.3.ebuild,v 1.11 2004/03/26 21:13:37 eradicator Exp $
 
 IUSE="debug esd X gtk oggvorbis gnome arts alsa nls"
 
-inherit kde-functions
+inherit kde-functions eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="An extremely full-featured mp3/vorbis/cd player with ALSA support, previously called FreeAmp"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 RESTRICT="nomirror"
@@ -58,7 +57,7 @@ src_compile() {
 	myconf="${myconf} `use_enable esd`"
 	myconf="${myconf} `use_enable arts`"
 	myconf="${myconf} `use_enable alsa`"
-	myconf="${myconf} `use_enable gnome cobra`"
+	myconf="${myconf} `use_enable gnome corba`"
 
 	if use arts; then
 		set-kdedir 3

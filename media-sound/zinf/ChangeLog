@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/zinf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.22 2004/02/24 02:07:17 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.23 2004/03/26 21:13:37 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> zinf-2.2.3.ebuild,
+  zinf-2.2.4.ebuild, zinf-2.2.5.ebuild:
+  Fixed DEPs, and stuff caught by aliz's QA script.
 
   24 Feb 2004; Sven Blumenstein <bazik@gentoo.org> zinf-2.2.5.ebuild:
   Masked on sparc. Segfault on playing mp3 :(
