@@ -1,7 +1,11 @@
 # ChangeLog for media-video/bcast
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/bcast/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bcast/ChangeLog,v 1.2 2002/04/12 17:05:59 spider Exp $
 
+*bcast-2000c-r1 (11 Apr 2002)
+  11 Apr 2002; Spider <spider@gentoo.org>
+  Update all glib dependencies to use glib-1.2*  in preparation of unmasking the glib-2.0.1 packages
+    
 *bcast-2000c-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
