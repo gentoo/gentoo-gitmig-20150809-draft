@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squidalyser/squidalyser-0.2.55.ebuild,v 1.7 2004/03/23 18:59:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squidalyser/squidalyser-0.2.55.ebuild,v 1.8 2004/06/11 11:53:02 kloeri Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://ababa.org/dist/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~alpha ~ppc"
+KEYWORDS="x86 ~sparc alpha ~ppc"
 
 DEPEND="net-www/squid
 	dev-lang/perl
