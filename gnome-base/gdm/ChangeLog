@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.53 2004/02/22 20:04:09 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.54 2004/03/17 01:11:59 geoman Exp $
+
+  16 Mar 2004; Stephen P. Becker <geoman@gentoo.org> gdm-2.4.4.7.ebuild:
+  Added ~mips keyword.
 
   22 Feb 2004; Chris PeBenito <pebenito@gentoo.org> gdm-2.4.4.7.ebuild:
   Fix SELinux to use_with in G2CONF.
