@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.153 2005/02/18 21:55:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.154 2005/02/23 01:10:58 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1481,43 +1481,43 @@ cdrom_locate_file_on_cd() {
 #   directories and uses the union of the lists.
 strip-linguas() {
 	local ls newls
-	if [ "$1" == "-i" ] || [ "$1" == "-u" ] ; then
-		local op="$1"; shift
+	if [[ $1 == "-i" ]] || [[ $1 == "-u" ]] ; then
+		local op=$1; shift
 		ls=" $(find "$1" -name '*.po' -printf '%f ') "; shift
 		local d f
 		for d in "$@" ; do
-			if [ "${op}" == "-u" ] ; then
-				newls="${ls}"
+			if [[ ${op} == "-u" ]] ; then
+				newls=${ls}
 			else
 				newls=""
 			fi
 			for f in $(find "$d" -name '*.po' -printf '%f ') ; do
-				if [ "${op}" == "-i" ] ; then
-					[ "${ls/ ${f} /}" != "${ls}" ] && newls="${newls} ${f}"
+				if [[ ${op} == "-i" ]] ; then
+					[[ ${ls/ ${f} /} != ${ls} ]] && newls="${newls} ${f}"
 				else
-					[ "${ls/ ${f} /}" == "${ls}" ] && newls="${newls} ${f}"
+					[[ ${ls/ ${f} /} == ${ls} ]] && newls="${newls} ${f}"
 				fi
 			done
-			ls="${newls}"
+			ls=${newls}
 		done
-		ls="${ls//.po}"
+		ls=${ls//.po}
 	else
-		ls="$@"
+		ls=$@
 	fi
 
 	ls=" ${ls} "
 	newls=""
 	for f in ${LINGUAS} ; do
-		if [ "${ls/ ${f} /}" != "${ls}" ] ; then
+		if [[ ${ls/ ${f} /} != ${ls} ]] ; then
 			newls="${newls} ${f}"
 		else
 			ewarn "Sorry, but ${PN} does not support the ${f} LINGUA"
 		fi
 	done
-	if [ -z "${newls}" ] ; then
+	if [[ -z ${newls} ]] ; then
 		unset LINGUAS
 	else
-		export LINGUAS="${newls}"
+		export LINGUAS=${newls:1}
 	fi
 }
 
