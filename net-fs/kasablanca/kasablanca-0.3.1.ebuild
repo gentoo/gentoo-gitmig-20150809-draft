@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/kasablanca/kasablanca-0.3.1.ebuild,v 1.3 2004/04/26 07:30:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/kasablanca/kasablanca-0.3.1.ebuild,v 1.4 2004/04/29 23:35:05 dragonheart Exp $
 
 inherit kde
 need-kde 3.1
@@ -29,7 +29,7 @@ COMMONDEPENDS="dev-libs/expat
 	sys-devel/gcc
 	sys-libs/glibc
 	sys-libs/zlib
-	x11-base/xfree
+	virtual/x11
 	x11-libs/qt"
 
 DEPEND="${DEPEND}
