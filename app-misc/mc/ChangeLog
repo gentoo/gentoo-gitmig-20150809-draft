@@ -16,6 +16,9 @@
 
 *mc-4.6.0 (05 Feb 2003)
 
+  17 Jun 2003; Guy Martin <gmsoft@gentoo.org> mc-4.6.0.ebuild :
+  Added hppa to KEYWORDS.
+
   31 Mar 2003; Christian Birchinger <joker@gentoo.org> mc-4.6.0.ebuild:
   Added sparc stable keyword
 
