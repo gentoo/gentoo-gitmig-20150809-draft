@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.8 2002/07/30 12:25:25 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.9 2002/08/01 19:45:04 gerk Exp $
 
   30 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
@@ -8,6 +8,9 @@
   bugfix in that new revision (#5615).
 
 *kdepim-3.0.2 (03 Jul 2002)
+
+  01 Aug 2002; Mark Guertin <gerk@gentoo.org> kde-3.0.2.ebuild :
+  Added ppc to keywords
 
   23 Jul 2002; Ryan Phillips <rphillips@gentoo.org> kdepim-3.0.2.ebuild :
 
