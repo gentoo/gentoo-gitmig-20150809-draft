@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/srvx/srvx-1.3.0.2005_p2.ebuild,v 1.1 2005/01/07 08:26:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/srvx/srvx-1.3.0.2005_p6.ebuild,v 1.1 2005/01/23 20:46:33 swegener Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.blackhole.plus.com/simon/srvx/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="bahamut"
+IUSE="bahamut debug"
 
 DEPEND=">=sys-devel/automake-1.8
 	>=sys-devel/autoconf-2.59"
@@ -24,13 +24,15 @@ RDEPEND=""
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	local PROTOCOL="p10"
+	local PROTOCOL="p10" MALLOC="system"
 	use bahamut && PROTOCOL="bahamut"
+	use debug && MALLOC="srvx"
 
 	./autogen.sh || die "autogen.sh failed"
 
 	econf \
-		--with-protocol=$PROTOCOL \
+		--with-protocol=${PROTOCOL} \
+		--with-malloc=${MALLOC} \
 		--enable-modules=helpserv,memoserv,sockcheck \
 		|| die "econf failed"
 	emake all-recursive || die "emake failed"
@@ -57,8 +59,10 @@ src_install() {
 	done
 
 	dodoc \
-		AUTHORS INSTALL NEWS README TODO srvx.conf.example sockcheck.conf.example \
-		docs/{access-levels,cookies,helpserv,ircd-modes}.txt || die "dodoc failed"
+		AUTHORS INSTALL NEWS README TODO UPGRADE \
+		{sockcheck,srvx}.conf.example \
+		docs/{access-levels,cookies,helpserv,ircd-modes}.txt \
+		|| die "dodoc failed"
 
 	newinitd ${FILESDIR}/srvx.init.d srvx || die "newinitd failed"
 	newconfd ${FILESDIR}/srvx.conf.d srvx || die "newconfd failed"
