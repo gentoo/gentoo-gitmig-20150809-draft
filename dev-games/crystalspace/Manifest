@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ee57a512766bae0dfcf88452136cc05f ChangeLog 1833
 MD5 e4c7a49ca08eb200cfa0a9f9246e2257 metadata.xml 959
-MD5 26fa201134c798931d9ca15c72d2283f crystalspace-0.98.4.ebuild 1829
+MD5 1c90ebf5799e46f6eb8770407a6235b9 crystalspace-0.98.4.ebuild 1824
 MD5 e28ffc0ee4f66ce9d10b5005d0acbf59 files/0.98.4-gl.patch 1632
 MD5 bec0edb0863c282510494dc014bbf750 files/digest-crystalspace-0.98.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB3e5WroRuSHgZdywRApEgAJ9AP0bGcSq9hnKj7Tpwe1uDgDpnlACgiKDN
+7epGR7ZRcQBZBcSsvJkHgNE=
+=izuy
+-----END PGP SIGNATURE-----
