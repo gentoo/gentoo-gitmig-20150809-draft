@@ -1,0 +1,9 @@
+# ChangeLog for net-libs/libsoup
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.1 2003/03/14 00:16:56 liquidx Exp $
+
+*libsoup-1.99.12 (14 Mar 2003)
+
+  14 Mar 2003; Alastair Tse <liquidx@gentoo.org> libsoup-1.99.12.ebuild:
+  inital ebuild. new version of soup that uses glib2 rather than glib1.
+
