@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.5 2003/09/29 21:04:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.6 2003/10/24 18:34:49 usata Exp $
 
 inherit flag-o-matic eutils
 filter-flags "-fstack-protector"
@@ -156,7 +156,7 @@ src_install() {
 	#fix for lousy upstream permisssions on /usr/share/texmf files
 	#NOTE: do not use fowners, as its not recursive ...
 	einfo "Fixing permissions..."
-	chown -R root.root ${D}/usr/share/texmf
+	chown -R root:root ${D}/usr/share/texmf
 }
 
 pkg_postinst() {

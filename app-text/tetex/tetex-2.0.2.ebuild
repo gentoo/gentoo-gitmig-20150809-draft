@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2.ebuild,v 1.11 2003/09/27 14:06:11 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2.ebuild,v 1.12 2003/10/24 18:34:49 usata Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -153,7 +153,7 @@ src_install() {
 	#fix for lousy upstream permisssions on /usr/share/texmf files
 	#NOTE: do not use fowners, as its not recursive ...
 	einfo "Fixing permissions..."
-	chown -R root.root ${D}/usr/share/texmf
+	chown -R root:root ${D}/usr/share/texmf
 	dodir /etc/env.d/
 	echo 'CONFIG_PROTECT="/usr/share/texmf/tex/generic/config/ /usr/share/texmf/tex/platex/config/"' > ${D}/etc/env.d/98tetex
 }
