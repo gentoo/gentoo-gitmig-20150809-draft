@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/skk-jisyo-extra
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/ChangeLog,v 1.14 2004/06/30 17:40:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/ChangeLog,v 1.15 2004/08/26 11:38:36 usata Exp $
+
+  26 Aug 2004; Mamoru KOMACHI <usata@gentoo.org>
+  skk-jisyo-extra-200407.ebuild:
+  Stable on x86, alpha and ppc.
 
 *skk-jisyo-extra-200407 (01 Jul 2004)
 

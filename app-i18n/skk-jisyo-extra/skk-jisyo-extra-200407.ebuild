@@ -1,16 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/skk-jisyo-extra-200407.ebuild,v 1.1 2004/06/30 17:40:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/skk-jisyo-extra-200407.ebuild,v 1.2 2004/08/26 11:38:36 usata Exp $
 
 DESCRIPTION="Extra SKK dictionaries in plain text and cdb format"
 HOMEPAGE="http://openlab.ring.gr.jp/skk/dic.html"
-SRC_URI="mirror://gentoo/${PF}.tar.gz
-	http://dev.gentoo.org/~usata/distfiles/${PF}.tar.gz"
+SRC_URI="mirror://gentoo/${PF}.tar.gz"
 
 # see each SKK-JISYO's header for detail
 LICENSE="GPL-2 public-domain freedist"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 alpha ppc ~sparc"
 IUSE=""
 
 DEPEND="sys-apps/gawk
