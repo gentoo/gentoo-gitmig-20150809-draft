@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.210 2004/01/08 08:42:33 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.211 2004/01/16 23:55:33 max Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -156,12 +156,13 @@ net-im/jabber-server:j-nomsn - If you do NOT want the MSN transport built with j
 net-im/jabber-server:j-nomuconf - If you do NOT want the mu-conference addon built with jabber-server
 net-im/jabber-server:j-noyahoo - If you do NOT want the Yahoo transport built with jabber-server (removes glib dependency)
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
-net-irc/xchat:xchattext - Enables the text/console front end to XChat.
+net-irc/xchat:xchattext - Enables the text/console front end to XChat
 net-libs/libnvcserver:no24bpp - disable 24bpp support
 net-libs/libnvcserver:nobackchannel - disable backchannel support
-net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support.
+net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support
 net-mail/amavisd-new:milter - Enable Sendmail milter support
 net-mail/courier:fax - Enables fax support in the courier mail server
+net-mail/cyrus-imapd:drac - Enable dynamic relay support in the cyrus imap server
 net-mail/exim:exiscan - Patch providing support for content scanning backward-compatability
 net-mail/exim:exiscan-acl - Patch providing support for content scanning
 net-mail/exim:lmtp - Adds support for lmtp
