@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.44 2004/11/09 01:48:38 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.45 2004/11/23 19:16:06 carlo Exp $
+
+  23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> PyQt-3.13.ebuild:
+  stable on x86
 
   08 Nov 2004; Daniel Ostrow <dostrow@gentoo.org> PyQt-3.13.ebuild:
   Marked ~ppc64
