@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.11 2005/01/17 20:56:26 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.12 2005/01/17 21:25:21 suka Exp $
 
 # Notes:
 #
@@ -448,7 +448,6 @@ src_install() {
 	cd ${S}/instsetoo/${SOLPATH}/${LANGNO}/normal
 	./setup -v -noexit -nogui -r:${T}/autoresponse || die "Setup failed"
 
-	echo
 	einfo "Removing build root from registry..."
 	# Remove totally useless stuff.
 	rm -f ${D}${INSTDIR}/program/{setup.log,sopatchlevel.sh} || die
@@ -481,7 +480,7 @@ src_install() {
 	if use gnome
 	then
 		insinto /usr/share/gnome/apps/OpenOffice.org
-		# Install the files needed for the catagory
+		# Install the files needed for the category
 		doins ${D}${INSTDIR}/share/gnome/net/.directory
 		doins ${D}${INSTDIR}/share/gnome/net/.order
 
@@ -504,7 +503,7 @@ src_install() {
 		local kdeloc="${D}${INSTDIR}/share/kde/net/"
 
 		insinto /usr/share/applnk/OpenOffice.org\ 1.1
-		# Install the files needed for the catagory
+		# Install the files needed for the category
 		doins ${kdeloc}/.directory
 		dodir /usr/share
 		# Install the icons and mime info

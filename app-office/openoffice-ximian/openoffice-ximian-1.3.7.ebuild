@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.8 2005/01/17 20:43:25 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.9 2005/01/17 21:26:17 suka Exp $
 
 # Notes:
 #
@@ -309,7 +309,6 @@ src_unpack() {
 
 	einfo "Munging font mappings ..."
 	${PATCHDIR}/bin/font-munge ${S}/officecfg/registry/data/org/openoffice/VCL.xcu || die
-	echo "done munging fonts."
 }
 
 get_EnvSet() {
@@ -509,7 +508,6 @@ src_install() {
 	#Fix for parallel install
 	sed -i -e s/sversionrc/xversionrc/g ${D}${INSTDIR}/program/bootstraprc ${D}${INSTDIR}/program/instdb.ins || die
 
-	echo
 	einfo "Removing build root from registry..."
 	# Remove totally useless stuff.
 	rm -f ${D}${INSTDIR}/program/{setup.log,sopatchlevel.sh} || die
