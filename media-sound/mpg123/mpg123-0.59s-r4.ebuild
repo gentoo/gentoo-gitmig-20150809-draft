@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r4.ebuild,v 1.8 2004/09/19 03:10:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r4.ebuild,v 1.9 2004/09/23 04:29:06 vapier Exp $
 
 inherit eutils
-
-IUSE="mmx 3dnow esd nas oss"
 
 DESCRIPTION="Real Time mp3 player"
 HOMEPAGE="http://www.mpg123.de/"
@@ -12,7 +10,8 @@ SRC_URI="http://www.mpg123.de/mpg123/${PN}-pre${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ia64 amd64 ppc sparc alpha hppa mips"
+KEYWORDS="x86 ia64 amd64 ppc sparc alpha hppa mips"
+IUSE="mmx 3dnow esd nas oss"
 
 RDEPEND="virtual/libc
 	 esd? ( media-sound/esound )
