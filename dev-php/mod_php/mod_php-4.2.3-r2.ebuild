@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.3-r2.ebuild,v 1.4 2002/12/23 04:40:11 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.3-r2.ebuild,v 1.5 2002/12/27 17:42:30 rphillips Exp $
 
 IUSE="apache2 freetype postgres tiff libwww nls jpeg ssl gd oci8 mysql X gdbm curl imap png xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -104,7 +104,7 @@ src_compile() {
 	use ssl && myconf="${myconf} --with-openssl"
 	use curl && myconf="${myconf} --with-curl"
 	use snmp && myconf="${myconf} --with-snmp --enable-ucd-snmp-hack"
-	use cjk && myconf="${myconf} --enable-mbstring"
+	use cjk && myconf="${myconf} --enable-mbstring --enable-mbregex"
 	use gdbm && myconf="${myconf} --with-gdbm=/usr"
 	use berkdb && myconf="${myconf} --with-db3=/usr"
 	use mysql && myconf="${myconf} --with-mysql=/usr" || myconf="${myconf} --without-mysql"
