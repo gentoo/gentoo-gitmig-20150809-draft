@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.6.10-r1.ebuild,v 1.4 2004/06/24 21:25:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.6.10-r1.ebuild,v 1.5 2004/06/29 19:28:05 agriffis Exp $
 
 IUSE=""
 
@@ -17,7 +17,8 @@ KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 
-DEPEND=">=sys-devel/autoconf-2.58 >=dev-lang/perl-5.6.1"
+DEPEND=">=sys-devel/autoconf-2.58 >=dev-lang/perl-5.6.1
+	>=sys-apps/sed-4"
 RDEPEND=">=net-nds/portmap-5b-r6"
 
 src_unpack() {
