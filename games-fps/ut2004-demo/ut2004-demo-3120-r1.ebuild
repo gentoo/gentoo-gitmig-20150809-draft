@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r1.ebuild,v 1.1 2004/02/20 18:51:28 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r1.ebuild,v 1.2 2004/02/21 21:40:29 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -44,7 +44,7 @@ src_install() {
 	dodir ${GAMES_BINDIR}
 	dosym ${dir}/ut2004demo ${GAMES_BINDIR}/ut2004demo
 
-	if [ "${ARCH}" = "amd64" ]; then
+	if [ "${ARCH}" = "x86" ]; then
 		# Ping patch
 		exeinto ${dir}/System
 		doexe ut2004-bin

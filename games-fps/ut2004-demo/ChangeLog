@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-demo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.4 2004/02/20 18:51:28 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.5 2004/02/21 21:40:29 wolf31o2 Exp $
+
+  21 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-demo-3120-r1.ebuild:
+  Fixing ping patch lines and closing bug #42096.
 
 *ut2004-demo-3120-r1 (20 Feb 2004)
 
