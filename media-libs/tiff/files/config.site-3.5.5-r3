@@ -1,0 +1,12 @@
+JPEG="yes"
+ZIP="yes"
+HTML="yes"
+DIR_BIN=${D}/usr/bin
+DIR_LIB=${D}/usr/lib
+DIR_INC=${D}/usr/include
+DIR_MAN=${D}/usr/man
+DIRS_LIBINC="/usr/include"
+DIR_JPEGLIB="/usr/lib"
+DIR_GZLIB="/usr/lib"
+DSOSUF="so"
+#MANSCHEME="bsd-nroff-gzip-0.gz"
