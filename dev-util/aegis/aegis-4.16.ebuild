@@ -1,12 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.4.ebuild,v 1.10 2003/12/08 16:43:44 karltk Exp $
 
 IUSE="tcltk"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A transaction based revision control system"
-SRC_URI="http://aegis.sourceforge.net/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/aegis/${P}.tar.gz"
 HOMEPAGE="http://aegis.sourceforge.net"
 
 DEPEND="sys-libs/zlib
@@ -17,7 +15,7 @@ DEPEND="sys-libs/zlib
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="~x86 ~sparc ~alpha"
 
 src_compile() {
 	# By default aegis configure puts shareable read/write files (locks etc)
@@ -49,15 +47,7 @@ src_install () {
 	# reason so do the files under /usr/share, even though
 	# they are read-only.
 	chown -R root:root ${D}/usr/share
-
-	# Remove duplicate documention etc.
-	rm -r ${D}/usr/share/aegis/en
-	rm -r ${D}/usr/share/aegis/de
-	rm -r ${D}/usr/share/aegis/man1
-
-	# Leaving out the .dvi versions and junk.
-	dodoc lib/en/*.txt
-	dodoc lib/en/*.ps
+	dodoc lib/en/*
 
 	# Link to share dir so user has a chance of noticing it.
 	dosym /usr/share/aegis /usr/share/doc/${PF}/scripts

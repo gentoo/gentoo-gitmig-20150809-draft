@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aegis
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.10 2004/02/24 22:57:03 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.11 2004/04/30 01:55:25 karltk Exp $
+
+  30 Aprc 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  aegis-4.16.ebuild: New upstream version. Removed 4.4 and 4.7.
 
   24 Feb 2004; Sven Blumenstein <bazik@gentoo.org> aegis-4.9.ebuild:
   KEYWORDS+=sparc
