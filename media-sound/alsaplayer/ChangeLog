@@ -1,8 +1,15 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.6 2002/06/08 02:11:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.7 2002/09/17 22:47:34 seemant Exp $
 
 *alsaplayer-0.99.71.20020607 (7 Jun 2002)
+
+  17 Sep 2002; Seemant Kulleen <seemant@gentoo.org>
+  alsaplayer-0.99.71.20020607.ebuild :
+
+  Andy Lo-A-Foe (alsaplayer upstream author) informs me that the qt plugin
+  is no longer shipped with alsaplayer, so all qt stuff has gone from the
+  ebuild.
 
   7 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
   alsaplayer-0.99.71.20020607.ebuild

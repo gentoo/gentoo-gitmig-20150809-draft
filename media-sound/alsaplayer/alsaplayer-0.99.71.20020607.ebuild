@@ -1,19 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.71.20020607.ebuild,v 1.3 2002/07/19 12:27:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.71.20020607.ebuild,v 1.4 2002/09/17 22:47:34 seemant Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Media player primarily utilising ALSA"
 SRC_URI="http://www.alsaplayer.org/${P}.tar.bz2"
 HOMEPAGE="http://www.alsaplayer.org/"
-QTROOT="/usr/qt/3"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="alsa? ( >=media-libs/alsa-lib-0.5.10 )
-	qt? ( >=x11-libs/qt-3.0.1 )
 	doc? ( app-doc/doxygen )
 	esd? ( media-sound/esound )
 	gtk? ( x11-libs/gtk+ )
@@ -52,12 +50,6 @@ src_compile() {
 	use gtk \
 		&& myconf="${myconf} --enable-gtk" \
 		|| myconf="${myconf} --disable-gtk --disable-gtktest --disable-glibtest"
-
-	use qt \
-		&& myconf="${myconf} --enable-qt \
-				--with-qt-libdir=${QTROOT}/lib \
-				--with-qt-indir=${QTROOT}/include \
-				--with-qt-bindir=${QTROOT}/bin"
 
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
