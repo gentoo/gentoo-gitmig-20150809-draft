@@ -1,0 +1,10 @@
+# ChangeLog for net-www/twiki
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/twiki/ChangeLog,v 1.1 2003/12/30 17:11:48 mholzer Exp $
+
+*twiki-20030201 (30 Dec 2003)
+
+  30 Dec 2003; Martin Holzer <mholzer@gentoo.org> metadata.xml,
+  twiki-20030201.ebuild:
+  Initial ebuild by myself. Closes 25969
+
