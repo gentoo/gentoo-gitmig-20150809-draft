@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.31 2005/01/28 08:15:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.32 2005/02/14 12:26:31 robbat2 Exp $
+
+  14 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> files/conf-common,
+  files/1.03-r12/conf-common, files/1.03-r13/conf-common:
+  Bug #71815. AMD64 needs the softlimit higher else qmail fails to start in
+  strange ways.
 
   28 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> files/conf-smtpd:
   Small notice about not enabling fixcrio when using SSL, bug 79799.
