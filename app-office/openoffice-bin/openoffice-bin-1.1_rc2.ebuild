@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1_rc2.ebuild,v 1.1 2003/08/02 08:29:10 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1_rc2.ebuild,v 1.2 2003/08/04 15:52:50 brad Exp $
 
 IUSE="kde gnome"
 
@@ -147,8 +147,11 @@ src_install() {
 		# Install the files needed for the catagory
 		doins ${D}${INSTDIR}/share/gnome/net/.directory
 		doins ${D}${INSTDIR}/share/gnome/net/.order
-		
-		for x in ${D}${INSTDIR}/share/gnome/net/*.desktop
+
+		# Change this to ooo*.desktop from *.desktop for now, since
+		# otherwise two sets of icons will appear in the GNOME menu.
+		# <brad@gentoo.org> (04 Aug 2003)
+		for x in ${D}${INSTDIR}/share/gnome/net/ooo*.desktop
 		do
 			# We have to handle setup differently
 			perl -pi -e "s:${INSTDIR}/program/setup:/usr/bin/oosetup:g" ${x}
