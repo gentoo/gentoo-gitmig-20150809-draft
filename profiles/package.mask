@@ -320,9 +320,6 @@ net-misc/gkrellmwireless
 #Should be tested
 =net-mail/teapop-0.3.3
 
-# Needs to be tested under KDE env. with sandbox
-dev-util/poedit
-
 # the packages dependent on tcl-tk have been updated to
 # support the seperation of both
 dev-lang/tcl-tk
