@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r2.ebuild,v 1.2 2003/09/06 22:25:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r2.ebuild,v 1.3 2003/09/16 23:35:44 seemant Exp $
 
 inherit gcc eutils
 
@@ -27,28 +27,32 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	EPATCH_OPTS="-p1 -d ${S}"
 	if [ `gcc-major-version` -eq 3 ] ; then
-		EPATCH_SINGLE_MSG="Patching for gcc 3.0..." \
-		epatch ${DISTDIR}/mysql++-gcc-3.0.patch.gz
-		if [ `gcc-minor-version` -eq 2 ] ; then
-			EPATCH_SINGLE_MSG="Patching for gcc 3.2..." \
-			epatch ${DISTDIR}/mysql++-gcc-3.2.patch.gz
-			if [ `gcc-micro-version` -ge 2 ] ; then
-				EPATCH_SINGLE_MSG="Patching for gcc >=3.2.2..." \
-				epatch ${DISTDIR}/mysql++-gcc-3.2.2.patch.gz
+		if [ `gcc-minor-version` -ne 3 ] ; then
+			EPATCH_SINGLE_MSG="Patching for gcc 3.0..." \
+			epatch ${DISTDIR}/mysql++-gcc-3.0.patch.gz
+			if [ `gcc-minor-version` -eq 2 ] ; then
+				EPATCH_SINGLE_MSG="Patching for gcc 3.2..." \
+				epatch ${DISTDIR}/mysql++-gcc-3.2.patch.gz
+				if [ `gcc-micro-version` -ge 2 ] ; then
+					EPATCH_SINGLE_MSG="Patching for gcc >=3.2.2..." \
+					epatch ${DISTDIR}/mysql++-gcc-3.2.2.patch.gz
+				fi
+			elif [ `gcc-minor-version` -eq 4 ] ; then
+				EPATCH_SINGLE_MSG="Patching for gcc 3.4 (patch for 3.2 needed first)..." \
+				epatch ${DISTDIR}/mysql++-gcc-3.2.patch.gz
+				EPATCH_SINGLE_MSG="Patching for gcc 3.4..." \
+				epatch ${DISTDIR}/mysqlplus-gcc-3.4.patch.gz
 			fi
-		elif [ `gcc-minor-version` -eq 3 ] ; then
-			EPATCH_SINGLE_MSG="Patching for gcc 3.3..." \
-			epatch ${DISTDIR}/patch_gcc_3.3.gz
-		elif [ `gcc-minor-version` -eq 4 ] ; then
-			EPATCH_SINGLE_MSG="Patching for gcc 3.4 (patch for 3.2 needed first)..." \
-			epatch ${DISTDIR}/mysql++-gcc-3.2.patch.gz
-			EPATCH_SINGLE_MSG="Patching for gcc 3.4..." \
-			epatch ${DISTDIR}/mysqlplus-gcc-3.4.patch.gz
-		fi
+		# Doesn't work for gcc-3.3
 		EPATCH_SINGLE_MSG="Patching to fix some warnings and errors..." \
 		epatch ${FILESDIR}/mysql++-1.7.9-gcc_throw.patch
 		# This is included in mysql++-gcc-3.2.2.patch.gz
 		#EPATCH_SINGLE_MSG="Patch for const char* error" \
+		elif [ `gcc-minor-version` -eq 3 ] ; then
+			mv ${S}/sqlplusint/Makefile.in ${S}/sqlplusint/Makefile.in.old
+			EPATCH_SINGLE_MSG="Patching for gcc 3.3..." \
+			epatch ${DISTDIR}/patch_gcc_3.3.gz
+		fi
 		#epatch ${FILESDIR}/mysql++-1.7.9-mysql4-gcc3.patch
 	else
 		EPATCH_SINGLE_MSG="Patch for const char* error" \
