@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Class-Default
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/ChangeLog,v 1.5 2004/12/29 23:12:18 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/ChangeLog,v 1.6 2005/03/16 14:47:36 mcummings Exp $
+
+*Class-Default-1.1 (16 Mar 2005)
+
+  16 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  Class-Default-1.1.ebuild:
+  Removed style for builder
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

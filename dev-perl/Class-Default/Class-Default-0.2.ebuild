@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/Class-Default-0.2.ebuild,v 1.8 2004/10/17 02:03:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/Class-Default-0.2.ebuild,v 1.9 2005/03/16 14:47:36 mcummings Exp $
 
 inherit perl-module
 
