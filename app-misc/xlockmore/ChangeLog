@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/xlockmore
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/ChangeLog,v 1.10 2003/02/12 05:11:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/ChangeLog,v 1.11 2003/03/02 12:39:15 weeve Exp $
 
 *xlockmore-5.04 (10 Jun 2002)
+
+  02 Mar 2003; Jason Wever <weeve@gentoo.org> xlockmore-5.04.ebuild:
+  Added ~sparc to keywords.
 
   10 Jun 2002; Brandon Low <lostlogic@gentoo.org> xlockmore-5.04.ebuild :
 
