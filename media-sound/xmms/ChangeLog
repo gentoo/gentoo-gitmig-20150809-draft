@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.61 2003/08/10 03:09:28 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.62 2003/08/16 09:27:34 jje Exp $
+
+*xmms-1.2.7-r25 (16 Aug 2003)
+
+  16 Aug 2003; jje <jje@gentoo.org> xmms-1.2.7-r25.ebuild,
+  files/xmms-nptl.patch:
+  Added nptl patch. See bug #26172.
 
   10 Aug 2003; jje <jje@gentoo.org> xmms-1.2.7-r24.ebuild:
   Fixed typo in SRC_URI fix. Moral? Don't change anything after you've tested...
