@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/zprod-manager
 # Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/ChangeLog,v 1.4 2004/04/06 23:16:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/ChangeLog,v 1.5 2004/06/06 14:33:14 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  zprod-manager-0.1.ebuild:
+  QA - IUSE fix
 
   06 Apr 2004; Jason Wever <weeve@gentoo.org> zprod-manager-0.1.ebuild:
   Added ~sparc keyword wrt bug #46924.
