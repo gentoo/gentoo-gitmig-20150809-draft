@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.17 2005/03/27 21:46:17 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.18 2005/04/02 23:32:24 luckyduck Exp $
+
+*ant-core-1.6.2-r2 (03 Apr 2005)
+
+  03 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> files/1.6.2-ant,
+  -ant-core-1.6.2-r1.ebuild, +ant-core-1.6.2-r2.ebuild:
+  updated java-config call in the wrapper script to reflect oro->jakarta-oro
+  move.
 
   27 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> ant-core-1.6.2-r1.ebuild:
   corrected installation of the ant wrapper script for the new revision, fixes

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.2-r1.ebuild,v 1.2 2005/03/27 21:46:17 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.2-r2.ebuild,v 1.1 2005/04/02 23:32:24 luckyduck Exp $
 
 inherit java-pkg eutils
 
