@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.14 2004/06/19 23:12:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.15 2004/06/21 05:33:31 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -270,6 +270,9 @@ host_def_setup() {
 		echo "#define MiscManDir \$(MANSOURCEPATH)7" >> config/cf/host.def
 		echo "#define MiscManSuffix 7x /* use just one tab or cpp will die */" \
 			>> config/cf/host.def
+
+		# Don't build xterm -- use external (#54051)
+		echo "#define BuildXterm NO" >> config/cf/host.def
 
 		# Xwrapper has been removed so we now need to use the set uid server
 		# again, this mustve happened somewhere after 4.3.0 in the development.

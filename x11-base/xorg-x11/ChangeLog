@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.61 2004/06/19 23:12:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.62 2004/06/21 05:33:31 spyderous Exp $
+
+  21 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.7.0-r1.ebuild:
+  Forgot to stop building xterm, somehow (#54051).
 
   19 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.7.0-r1.ebuild:
