@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/grdesktop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.5 2003/02/12 08:22:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.6 2003/05/05 04:40:10 bcowan Exp $
+
+*grdesktop-0.19 (12 Mar 2003)
+
+  12 Mar 2003; Brad Cowan <bcowan@gentoo.org> grdesktop-0.19.ebuild,
+  files/digest-grdesktop-0.19 :
+
+  Version bump. 
 
   03 Dec 2003; Matthew Turk <satai@gentoo.org>
   Changing from docbook2X to docbook-sgml-utils.
