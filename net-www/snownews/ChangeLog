@@ -1,6 +1,11 @@
 # ChangeLog for net-www/snownews
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/ChangeLog,v 1.4 2004/03/10 20:56:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/ChangeLog,v 1.5 2004/04/23 12:57:29 stuart Exp $
+
+*snownews-1.5.2 (23 Apr 2004)
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> snownews-1.5.2.ebuild:
+  Version bump; see bug #44346
 
 *snownews-1.4.4 (10 Mar 2004)
 
