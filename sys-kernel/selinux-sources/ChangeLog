@@ -1,8 +1,11 @@
 # ChangeLog for sys-kernel/selinux-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.11 2003/04/02 03:08:15 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.12 2003/04/02 03:26:45 method Exp $
 
 *selinux-sources-2.4.20-r3 (01 Apr 2003)
+
+  01 Apr 2003; Joshua Brindle <method@gentoo.org> selinux-sources-2.4.20-r3.ebuild:
+  changed patch
 
   01 Apr 2003; Joshua Brindle <method@gentoo.org> selinux-sources-2.4.20-r2.ebuild,
   selinux-sources-2.4.20-r3.ebuild:
