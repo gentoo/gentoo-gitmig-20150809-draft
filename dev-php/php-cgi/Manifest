@@ -1,8 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 07cdd1fbd75c997734fbe74941410662 ChangeLog 6365
+MD5 eddb199d9bb18a6e4633519d53c7216e ChangeLog 6480
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
+MD5 6b2b7476afc79cdd7b54f38431ec6bdd php-cgi-4.3.10.ebuild 924
 MD5 ca42c18e46b70937fe8c3ff46ec89dc2 php-cgi-4.3.8-r1.ebuild 771
 MD5 a673bafe30cbf7e555363d4c6a136081 php-cgi-4.3.8.ebuild 752
 MD5 97e002bcf522c1fb90a38b7708789ce3 php-cgi-4.3.9-r1.ebuild 813
@@ -13,9 +14,8 @@ MD5 dea7eefba04e3e8d7fa6dcb9f01bd95a php-cgi-5.0.0-r1.ebuild 898
 MD5 ff8d280e1df6a129bc07898d5acbb1c0 php-cgi-5.0.0.ebuild 751
 MD5 dffa69fb33eb0cadc0ba2d01e178dda8 php-cgi-5.0.1.ebuild 895
 MD5 ad706bf1cfd99db6f3c56df52111feff php-cgi-5.0.2.ebuild 910
-MD5 9a81700001782ac723dfcccaa4c16a1c php-cgi-4.3.10.ebuild 925
 MD5 9193dfb9a173442bb6afd6f270d962fd php-cgi-5.0.3.ebuild 926
-MD5 ad986b02a371b2fea3b4ae5060c9dc81 files/stdint.diff 358
+MD5 0b0247c6314c5f7d6685268262edfd24 files/digest-php-cgi-4.3.10 206
 MD5 390a659097a43447e44ab5bdd59378b5 files/digest-php-cgi-4.3.8 282
 MD5 390a659097a43447e44ab5bdd59378b5 files/digest-php-cgi-4.3.8-r1 282
 MD5 aeed7aba3334e2f1437aa1ef48d850e8 files/digest-php-cgi-4.3.9 205
@@ -26,14 +26,14 @@ MD5 11f305b98b753ee023da8503a360762a files/digest-php-cgi-5.0.0 63
 MD5 11f305b98b753ee023da8503a360762a files/digest-php-cgi-5.0.0-r1 63
 MD5 14d868f33e29b3c9a70b118e9da58dd0 files/digest-php-cgi-5.0.1 63
 MD5 4792b645fe6b66cd3f1b1ec88d4d20e8 files/digest-php-cgi-5.0.2 63
+MD5 89a3a3b437e24b7ccc044376843d8446 files/digest-php-cgi-5.0.3 63
 MD5 cd07c33356df77acd61cd300f2869d19 files/php-5.0.0-httpauthfix.patch 518
 MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
-MD5 0b0247c6314c5f7d6685268262edfd24 files/digest-php-cgi-4.3.10 206
-MD5 89a3a3b437e24b7ccc044376843d8446 files/digest-php-cgi-5.0.3 63
+MD5 ad986b02a371b2fea3b4ae5060c9dc81 files/stdint.diff 358
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBwkQpKRy60XGEcJIRAkLFAJwJS/BqWcPrVJcqGqDD1FXMjsv23gCfT2hF
-lWUU3k6HzJGWpmQ5IwL3yYs=
-=3ceY
+iD8DBQFBwkWsKRy60XGEcJIRAhdBAJwNGH0JFVbW4Bu1Xfkthyw7hwWfwgCgowJc
+9A3mY9FcerT+fpZ9WndoGhQ=
+=dsGx
 -----END PGP SIGNATURE-----
