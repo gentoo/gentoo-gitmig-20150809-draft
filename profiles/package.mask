@@ -295,7 +295,7 @@ sys-kernel/linux-sources-vanilla
 
 # in development
 #>=sys-devel/gcc-2.96
-net-mail/sendmail
+#net-mail/sendmail
 
 # incompatible
 #added pspell-ispell till i sort out the *spells
@@ -616,7 +616,7 @@ app-cdr/cddump
 
 # jnelson@gentoo.org 1 May 2002
 # mask ntp 4.1.72* as they are alpha
-=net-misc/ntp-4.1.72
+=net-misc/ntp-4.1.72*
 
 # seemant@gentoo.org 1 May 2002
 # masking xine-ui with directfb support until the requisite extra files tarball
