@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2963 2004/06/25 07:36:49 mr_bones_ Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2964 2004/06/26 02:18:31 humpback Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -44,7 +44,7 @@ net-misc/pxes
 
 # <humpback@gentoo.org>
 # Needs testing
-=net-im/skype-*
+net-im/skype
 
 # <seemant@gentoo.org>
 # Hard masking, because this depends on linux-headers-2.6 which has -* in
