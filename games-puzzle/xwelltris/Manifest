@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7fc1b1888f7914d7e7a477ea4b72bf39 ChangeLog 705
-MD5 aef1827b2f3942555f79538215b745e4 xwelltris-1.0.1.ebuild 1123
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 19f06d9be023bb820d87789a84556f05 xwelltris-1.0.1.ebuild 1112
 MD5 f7cce601c76be9bc02185c11ee24bbb5 files/digest-xwelltris-1.0.1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB5dHCroRuSHgZdywRAuZQAJ9715X93MXo1wx4lYSNx+61hCyHTgCgjRyO
++20AtBgp2Jh3o8dmwx1FLQI=
+=g4+p
+-----END PGP SIGNATURE-----

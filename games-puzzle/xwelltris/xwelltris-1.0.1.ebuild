@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xwelltris/xwelltris-1.0.1.ebuild,v 1.8 2004/12/28 15:27:00 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xwelltris/xwelltris-1.0.1.ebuild,v 1.9 2005/01/13 01:40:52 vapier Exp $
 
 inherit games
 
@@ -13,10 +13,8 @@ SLOT="0"
 KEYWORDS="x86 amd64 ppc"
 IUSE="sdl"
 
-RDEPEND="|| (
-		sdl? ( media-libs/libsdl media-libs/sdl-image )
-		virtual/x11
-	)"
+RDEPEND="virtual/x11
+	sdl? ( media-libs/libsdl media-libs/sdl-image )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
