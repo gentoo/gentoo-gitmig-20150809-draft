@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 95031facc569d2c1648198d81f7cbbc0 joda-time-0.95.ebuild 852
-MD5 8024e7fc8668473995dc3113eafba275 ChangeLog 686
+MD5 e17916db3a28e466df770d4261415bfa ChangeLog 784
+MD5 807ad21890549d3b79f242e8e6f526fc joda-time-0.95.ebuild 863
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d999a843cd11311464e92b51af174d3a files/digest-joda-time-0.95 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVmh/rLF9B432nYRAuJJAKCvKTu7ZU/ce+d4r6cJOlc84z9FgQCeKriI
-W/3WIsYG77G0gsXbmiS3rvU=
-=9P7M
------END PGP SIGNATURE-----
