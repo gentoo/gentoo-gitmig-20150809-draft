@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/scanforssp.awk,v 1.1 2003/12/28 21:46:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/scanforssp.awk,v 1.2 2003/12/28 22:56:41 azarah Exp $
 
 function printn(string)
 {
@@ -150,7 +150,7 @@ BEGIN {
 
 		FOUND = 0
 
-		pipe = "find " DIRLIST[x] "/ -type f -perm -1 -maxdepth 90 2>/dev/null"
+		pipe = "find " DIRLIST[x] "/ -type f -perm -1 -maxdepth 9 2>/dev/null"
 		while ((((pipe) | getline scan_files) > 0) && (!FOUND)) {
 
 			# Do nothing if the file is located in gcc's internal lib path
