@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/netkit-talk
+# ChangeLog for net-misc/netkit-rwho
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.1 2003/05/22 21:06:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.2 2003/06/20 04:18:46 vapier Exp $
 
 *netkit-rwho-0.17 (22 May 2003)
 
