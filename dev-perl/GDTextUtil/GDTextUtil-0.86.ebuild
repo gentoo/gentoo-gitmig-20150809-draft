@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/GDTextUtil-0.86.ebuild,v 1.4 2004/06/25 00:32:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/GDTextUtil-0.86.ebuild,v 1.5 2004/07/14 17:37:19 agriffis Exp $
 
 IUSE=""
 
 inherit perl-module
 
-S=${WORKDIR}/${P}
 CATEGORY="dev-perl"
 DESCRIPTION="Text utilities for use with GD"
 SRC_URI="http://www.cpan.org/modules/by-module/GD/${P}.tar.gz"
