@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.10-r5.ebuild,v 1.9 2004/11/04 05:18:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.10-r5.ebuild,v 1.10 2004/12/07 02:01:22 kloeri Exp $
 
 inherit eutils flag-o-matic
 
@@ -71,9 +71,6 @@ src_unpack() {
 
 	# fix some issues reported since the 2.5.10 release.
 	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.10-post-release.diff
-
-	# build fails on alpha with certain options without this.
-	use alpha && append-flags -fPIC
 
 	# just in case anyone on mips want to test.
 	use mips && epatch ${FILESDIR}/fvwm-2.5.10-mips-compat.diff
