@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sndfile/xmms-sndfile-1.2-r1.ebuild,v 1.1 2004/10/19 23:24:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sndfile/xmms-sndfile-1.2-r1.ebuild,v 1.2 2004/10/22 09:59:00 eradicator Exp $
 
 IUSE=""
+
+NOBMP="1"
 
 inherit xmms-plugin
 

@@ -4,15 +4,15 @@ Hash: SHA1
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 f3cf82616332ccfa710b62be4d2c21e1 xmms-sndfile-1.1.ebuild 705
 MD5 26bf87e406b2cf22e9dce97b69886e26 xmms-sndfile-1.2.ebuild 718
-MD5 2c81790eb58e8fe17de83426c177eceb xmms-sndfile-1.2-r1.ebuild 833
-MD5 2789d147635ca796167ed17a799115af ChangeLog 1064
+MD5 107445df471b2420cd83f871001766cd xmms-sndfile-1.2-r1.ebuild 844
+MD5 44ff143560b4fc2ef3a953237ea37dd4 ChangeLog 1205
 MD5 4d95bad03ac0d3e7994d1b8382efb273 files/digest-xmms-sndfile-1.1 68
 MD5 bc4fa27c4ae0ab1d8845eeab3fbc1e32 files/digest-xmms-sndfile-1.2 68
 MD5 bc4fa27c4ae0ab1d8845eeab3fbc1e32 files/digest-xmms-sndfile-1.2-r1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBdaIgArHZZzCEUG0RAuRAAJ9ko7YdzMh1Zugw7DNkpPQoJmHKFACfZGw4
-UvA1v4krx9fI+g+wphjf1Mk=
-=tyDR
+iD8DBQFBeNnyArHZZzCEUG0RAhx/AJ47nMmQ9b/kmSs4RAD128mQ/FkLIQCfYOiM
+CawS7CymFjAh9A1ZtqzjKsY=
+=iDTQ
 -----END PGP SIGNATURE-----
