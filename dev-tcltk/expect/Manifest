@@ -1,0 +1,7 @@
+MD5 8ea3faab3c1c633df22a1b266a9f3cd9 ChangeLog 2074
+MD5 3042ef1bbd250a6436430342da6649de expect-5.33.0.ebuild 1518
+MD5 7c19d7336fabb9495a3c513c00a7780e expect-5.37.1-r1.ebuild 1742
+MD5 919e88f06c33c46aebc2477e55cd7765 expect-5.37.1.ebuild 1550
+MD5 434e2974143229e6e3fa85c7bb50a62d files/digest-expect-5.33.0 65
+MD5 f4bfc81e857154719e1924f00b505ea3 files/digest-expect-5.37.1 65
+MD5 f4bfc81e857154719e1924f00b505ea3 files/digest-expect-5.37.1-r1 65
