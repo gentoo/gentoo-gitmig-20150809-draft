@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbh
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbh/ChangeLog,v 1.9 2004/04/18 05:08:16 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbh/ChangeLog,v 1.10 2004/04/26 22:53:10 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> dbh-1.0.18.ebuild:
+  Stable on alpha and ia64
 
 *dbh-1.0.18 (18 Apr 2004)
 
