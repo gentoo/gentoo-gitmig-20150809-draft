@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.39 2004/03/19 00:29:19 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.40 2004/03/19 23:01:19 gustavoz Exp $
+
+  19 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> pwlib-1.6.3-r1.ebuild:
+  ~sparc lovin
 
   19 Mar 2004; Stefan Knoblich <stkn@gentoo.org> pwlib-1.6.3-r1.ebuild:
   fixes bugs #45016 and #45059 (thx to Konrad Rieck <kr@roqe.org>)
