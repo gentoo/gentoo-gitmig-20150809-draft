@@ -146,3 +146,4 @@ move sys-kernel/hppa-dev-sources sys-kernel/hppa-sources
 move app-sci/balsa sci-electronics/balsa
 move app-sci/chipmunksystem sci-electronics/chipmunksystem
 move app-sci/electric sci-electronics/electric
+move app-sci/espresso-ab sci-electronics/espresso-ab
