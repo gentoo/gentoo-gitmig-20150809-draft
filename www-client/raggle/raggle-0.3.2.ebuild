@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/raggle/raggle-0.3.2.ebuild,v 1.3 2005/01/04 15:47:14 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/raggle/raggle-0.3.2.ebuild,v 1.4 2005/03/19 14:42:53 kloeri Exp $
 
 inherit ruby
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.raggle.org/"
 SRC_URI="http://www.raggle.org/files/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~mips ~alpha ~hppa ~amd64 ~ppc"
+KEYWORDS="x86 ~sparc ~mips alpha ~hppa ~amd64 ~ppc"
 IUSE=""
 
 USE_RUBY="ruby16 ruby18 ruby19"

@@ -1,6 +1,9 @@
 # ChangeLog for www-client/raggle
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/raggle/ChangeLog,v 1.9 2005/01/04 15:47:14 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/raggle/ChangeLog,v 1.10 2005/03/19 14:42:53 kloeri Exp $
+
+  19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> raggle-0.3.2.ebuild:
+  Stable on alpha.
 
   04 Jan 2005; Michael Kohl <citizen428@gentoo.org> raggle-0.3.2.ebuild:
   Marked stable on x86.
