@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.1.9-r1.ebuild,v 1.2 2004/03/09 20:20:47 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.1.9-r1.ebuild,v 1.3 2004/03/10 07:51:05 mr_bones_ Exp $
 
 # TODO
 # the "Gentoo way" is to use /usr/src/linux, not the running kernel
@@ -66,7 +66,7 @@ src_install() {
 	dobin test_ioctl ivtvfbctl ivtvplay ptune-ui.pl ptune.pl record-v4l2.pl radio
 	newdoc README README.utils
 	dodoc README.mythtv-ivtv README.ptune README.radio README.vbi
-	dodoc lircd-g.conf lircd.conf lircrc 
+	dodoc lircd-g.conf lircd.conf lircrc
 
 	cd ${WORKDIR}/ivtv/driver
 	make DESTDIR=${D} install || die "installation of driver failed"
