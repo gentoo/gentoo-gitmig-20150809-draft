@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.1.1.ebuild,v 1.6 2004/08/03 04:01:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.1.1.ebuild,v 1.7 2004/08/03 04:44:55 vapier Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
-SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2"
+SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2
+	mirror://gentoo/gdb-6.1-hppa-01.patch.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
@@ -20,9 +21,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/gdb-6.1-ppc64-01.patch
-	epatch ${FILESDIR}/gdb-6.1-hppa-01.patch
+	epatch ${WORKDIR}/gdb-6.1-hppa-01.patch
 	epatch ${FILESDIR}/gdb-6.1-uclibc.patch
-
 }
 
 src_compile() {
