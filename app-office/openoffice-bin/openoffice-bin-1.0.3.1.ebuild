@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.3.1.ebuild,v 1.7 2004/06/24 22:43:43 agriffis Exp $
-
-IUSE="kde gnome"
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.3.1.ebuild,v 1.8 2004/06/28 14:19:23 vapier Exp $
 
 inherit virtualx
 
@@ -24,23 +22,24 @@ else
 fi;
 
 DESCRIPTION="OpenOffice productivity suite"
+HOMEPAGE="http://www.openoffice.org/"
 SRC_URI="x86? ( http://ny1.mirror.openoffice.org/stable/${PV//.1/}/OOo_${MY_PV}_LinuxIntel_install.tar.gz
 		http://sf1.mirror.openoffice.org/stable/${PV//.1/}/OOo_${MY_PV}_LinuxIntel_install.tar.gz
 		http://vlaai.snt.utwente.nl/pub/software/openoffice/stable/${PV//.1/}/libvcl641li.so.gz )
 	ppc? ( ftp://ftp.yellowdoglinux.com/pub/yellowdog/software/openoffice/OOo_${MY_PV}_LinuxPowerPC_installer.tar.gz )"
-HOMEPAGE="http://www.openoffice.org"
 
-DEPEND="virtual/glibc
+LICENSE="LGPL-2 | SISSL-1.1"
+SLOT="0"
+KEYWORDS="~x86 -ppc -sparc"
+IUSE="kde gnome"
+
+DEPEND="virtual/libc
 	>=dev-lang/perl-5.0
 	virtual/x11
 	app-arch/zip
 	app-arch/unzip
 	|| ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 )
 	!app-office/openoffice"
-
-LICENSE="LGPL-2 | SISSL-1.1"
-SLOT="0"
-KEYWORDS="~x86 -ppc -sparc"
 
 src_install() {
 

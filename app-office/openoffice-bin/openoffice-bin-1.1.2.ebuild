@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.2.ebuild,v 1.2 2004/06/24 22:43:43 agriffis Exp $
-
-IUSE="kde gnome"
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.2.ebuild,v 1.3 2004/06/28 14:19:23 vapier Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -17,34 +15,32 @@ use ppc && MY_P="OOo_${PV}_LinuxPowerPC_en_installer"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="OpenOffice productivity suite"
-
+HOMEPAGE="http://www.openoffice.org/"
 SRC_URI="x86? ( mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.tar.gz )
 	amd64? ( mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.tar.gz )"
-
-HOMEPAGE="http://www.openoffice.org"
-
-DEPEND="sys-apps/findutils
-	virtual/glibc
-	>=dev-lang/perl-5.0
-	virtual/x11
-	app-arch/zip
-	app-arch/unzip
-	|| ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 )
-	!app-office/openoffice
-	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
-
-RDEPEND="virtual/glibc
-	>=dev-lang/perl-5.0
-	virtual/x11
-	app-arch/zip
-	app-arch/unzip
-	|| ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 )
-	!app-office/openoffice
-	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
 KEYWORDS="~x86 -sparc"
+IUSE="kde gnome"
+
+DEPEND="sys-apps/findutils
+	virtual/libc
+	>=dev-lang/perl-5.0
+	virtual/x11
+	app-arch/zip
+	app-arch/unzip
+	|| ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 )
+	!app-office/openoffice
+	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
+RDEPEND="virtual/libc
+	>=dev-lang/perl-5.0
+	virtual/x11
+	app-arch/zip
+	app-arch/unzip
+	|| ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 )
+	!app-office/openoffice
+	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 
 src_install() {
 	# Sandbox issues; bug #8587
