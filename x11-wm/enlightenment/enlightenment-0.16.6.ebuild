@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6.ebuild,v 1.4 2003/11/07 20:11:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6.ebuild,v 1.5 2003/11/12 04:13:31 vapier Exp $
 
 DESCRIPTION="Enlightenment Window Manager"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -20,14 +20,20 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}-${PV/_pre?/}
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-kde-menu.patch
+}
+
 src_compile() {
+#		`use_enable gnome hints-gnome` \
+#		`use_enable kde hints-kde` \
 	econf \
 		`use_enable nls` \
 		`use_enable esd sound` \
 		--enable-upgrade \
 		--enable-hints-ewmh \
-		`use_enable gnome hints-gnome` \
-		`use_enable kde hints-kde` \
 		--enable-fsstd \
 		--enable-zoom \
 		|| die
