@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.09.ebuild,v 1.9 2004/05/04 23:04:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.09.ebuild,v 1.10 2004/05/25 14:34:26 mcummings Exp $
 
 inherit perl-module
 
@@ -21,6 +21,7 @@ IUSE="nls"
 DEPEND="${DEPEND}
 	>=dev-perl/XML-Parser-2.31
 	dev-perl/Scalar-List-Utils
+	dev-perl/XML-XPath
 	>=dev-libs/expat-1.95.5
 	nls? ( >=dev-perl/Text-Iconv-1.2-r1 )"
 

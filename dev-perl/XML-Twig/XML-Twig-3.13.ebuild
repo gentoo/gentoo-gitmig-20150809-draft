@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.13.ebuild,v 1.3 2004/05/04 23:04:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.13.ebuild,v 1.4 2004/05/25 14:34:26 mcummings Exp $
 
 inherit perl-module
 
@@ -26,6 +26,7 @@ DEPEND="${DEPEND}
 	dev-perl/Tie-IxHash
 	dev-perl/XML-SAX-Writer
 	dev-perl/XML-Handler-YAWriter
+	dev-perl/XML-XPath
 	nls? ( >=dev-perl/Text-Iconv-1.2-r1 )"
 
 src_compile() {
