@@ -1,0 +1,73 @@
+--- atari.c-orig	2003-02-10 11:22:32.000000000 +0000
++++ atari.c	2003-07-31 23:58:35.000000000 +0100
+@@ -389,16 +389,57 @@
+ 			tv_mode = TV_PAL;
+ 		else if (strcmp(argv[i], "-ntsc") == 0)
+ 			tv_mode = TV_NTSC;
+-		else if (strcmp(argv[i], "-osa_rom") == 0)
+-			strcpy(atari_osa_filename, argv[++i]);
+-		else if (strcmp(argv[i], "-osb_rom") == 0)
+-			strcpy(atari_osb_filename, argv[++i]);
+-		else if (strcmp(argv[i], "-xlxe_rom") == 0)
+-			strcpy(atari_xlxe_filename, argv[++i]);
+-		else if (strcmp(argv[i], "-5200_rom") == 0)
+-			strcpy(atari_5200_filename, argv[++i]);
+-		else if (strcmp(argv[i], "-basic_rom") == 0)
+-			strcpy(atari_basic_filename, argv[++i]);
++		else if (strcmp(argv[i], "-osa_rom") == 0) {
++ 		        if ( (i+1) < *argc ) {
++			          memset(atari_osa_filename,'\0',sizeof(atari_osa_filename));
++			          strncpy(atari_osa_filename, argv[++i], sizeof(atari_osa_filename)-1);
++			}
++			else {
++			          printf("Missing argument for '-osa_rom'\n");
++				  return( 1 );
++			}
++
++		}
++		else if (strcmp(argv[i], "-osb_rom") == 0) {
++ 		        if ( (i+1) < *argc ) {
++			          memset(atari_osb_filename,'\0',sizeof(atari_osb_filename));
++			          strncpy(atari_osb_filename, argv[++i],sizeof(atari_osb_filename)-1);
++			}
++			else {
++			          printf("Missing argument for '-osb_rom'\n");
++				  return( 1 );
++			}
++		}
++		else if (strcmp(argv[i], "-xlxe_rom") == 0) {
++ 		        if ( (i+1) < *argc ) {
++			          memset(atari_xlxe_filename,'\0',sizeof(atari_xlxe_filename));
++			          strncpy(atari_xlxe_filename, argv[++i], sizeof(atari_xlxe_filename)-1);
++			}
++			else {
++			          printf("Missing argument for '-xlxe_rom'\n");
++				  return( 1 );
++			}
++		}
++		else if (strcmp(argv[i], "-5200_rom") == 0) {
++ 		        if ( (i+1) < *argc ) {
++			          memset(atari_5200_filename,'\0',sizeof(atari_5200_filename));
++			          strncpy(atari_5200_filename, argv[++i], sizeof(atari_5200_filename)-1);
++			}
++			else {
++			          printf("Missing argument for '-5200_rom'\n");
++				  return( 1 );
++			}
++		}
++		else if (strcmp(argv[i], "-basic_rom") == 0) {
++ 		        if ( (i+1) < *argc ) {
++			          memset(atari_basic_filename,'\0',sizeof(atari_basic_filename));
++			          strncpy(atari_basic_filename, argv[++i], sizeof(atari_basic_filename)-1);
++			}
++			else {
++			          printf("Missing argument for '-basic_rom'\n");
++				  return( 1 );
++			}
++		}
+ 		else if (strcmp(argv[i], "-cart") == 0) {
+ 			rom_filename = argv[++i];
+ 		}
+
+
+
