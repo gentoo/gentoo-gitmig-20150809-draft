@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc2.ebuild,v 1.3 2005/04/06 07:10:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc2.ebuild,v 1.4 2005/04/06 07:28:24 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -64,12 +64,12 @@ src_compile() {
 	use mad || export ac_cv_header_mad_h=no
 	use a52 || export ac_cv_header_a52dec_a52=no
 
+	use mmx || myconf="${myconf} --disable-mmx"
+	use altivec || myconf="${myconf} --disable-altivec"
 	use debug && myconf="${myconf} --enable-debug=full"
 
 	econf \
 		$(use_enable nls) \
-		$(use_enable altivec) \
-		$(use_enable mmx) \
 		$(use_enable aac faac) $(use_enable aac faad) \
 		$(use_with pic) \
 		--disable-warnings \
