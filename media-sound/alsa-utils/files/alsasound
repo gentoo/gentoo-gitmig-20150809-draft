@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.18 2004/11/16 22:28:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.19 2004/11/20 10:47:28 eradicator Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -69,9 +69,13 @@ load_modules() {
 		done
 	fi
 
-	# We want to ensure snd-seq is loaded as it is needed for things like timidity even if
-	# we don't use a real sequencer.
+	# We want to ensure snd-seq is loaded as it is needed for things like
+	# timidity even if we don't use a real sequencer.
 	DRIVERS="${DRIVERS} $(modprobe -l | grep "snd.seq\." | sed -e "s:\/.*\/::" -e "s:\..*::")"
+
+	# We want to ensure snd-ioctl32 is loaded as it is needed for 32bit
+	# compatibility
+	DRIVERS="${DRIVERS} $(modprobe -l | grep "snd.ioctl32\." | sed -e "s:\/.*\/::" -e "s:\..*::")"
 
 	for DRIVER in ${DRIVERS}
 	do
