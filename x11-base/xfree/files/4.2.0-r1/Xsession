@@ -18,16 +18,10 @@ do
 	fi
 done
 
-case $# in
-1)
-	case $1 in
-	failsafe)
-		exec xterm -geometry 80x24-0-0
-		;;
-	esac
-esac
-
-#  The startup script is not intended to have arguments.
+# handle KDM
+if [ -n "$1" ]; then
+	XSESSION="$1"
+fi
 
 startup=$HOME/.xsession
 resources=$HOME/.Xresources
