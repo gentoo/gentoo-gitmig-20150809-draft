@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.34 2003/07/02 12:38:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.35 2003/07/08 00:43:28 vapier Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
@@ -13,7 +13,7 @@ inherit eutils
 ECLASS=games
 INHERITED="$INHERITED $ECLASS"
 
-EXPORT_FUNCTIONS pkg_postinst pkg_setup
+EXPORT_FUNCTIONS pkg_postinst src_compile pkg_setup
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 IUSE="dedicated"
@@ -102,6 +102,11 @@ games_pkg_setup() {
 	enewuser ${GAMES_USER} 35 /bin/false /usr/games ${GAMES_GROUP}
 	use dedicated && enewuser ${GAMES_USER_DED} 36 /bin/false /usr/games ${GAMES_GROUP}
 	return 0
+}
+
+games_src_compile() {
+	egamesconf || die "egamesconf failed"
+	emake || die "emake failed"
 }
 
 # pkg_postinst function ... create env.d entry and warn about games group
