@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.20-r1.ebuild,v 1.5 2004/08/25 16:18:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.20-r1.ebuild,v 1.6 2004/08/26 05:30:17 vapier Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -17,12 +17,12 @@ S=${WORKDIR}/${NEWP}
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
 HOMEPAGE="http://www.mysql.com/"
 SRC_URI="mirror://mysql/Downloads/${SDIR}/${NEWP}.tar.gz"
-RESTRICT="nomirror"
 
-KEYWORDS="~ia64 ~x86 sparc ppc ~amd64 ~hppa alpha mips ~s390 ~arm ~ppc64"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="ia64 ~x86 sparc ppc amd64 hppa alpha mips ~s390 arm ~ppc64"
 IUSE="static readline innodb berkdb tcpd ssl perl debug"
+RESTRICT="nomirror"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r6 )
