@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.114 2004/05/05 01:46:08 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.115 2004/05/08 20:21:25 kumba Exp $
+
+  08 May 2004; Joshua Kinard <kumba@gentoo.org>
+  binutils-2.14.90.0.8-r1.ebuild:
+  Originally masked because these binutils would produce non-booting kernels on
+  mips. That problem has been resolved in the kernel sources now, so it's safe
+  to put these into unstable (2.15 needs more testing).
 
 *binutils-2.15.90.0.1.1-r1 (04 May 2004)
 
