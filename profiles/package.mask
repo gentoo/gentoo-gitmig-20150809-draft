@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3015 2004/07/22 05:15:23 squinky86 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3016 2004/07/22 22:20:45 solar Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,9 @@
 ##
 ##   End example
 ##
+# <solar@gentoo> (Jul 22 2004)
+# I no longer wish to maintain this problematic package.
+dev-libs/elfsh
 
 # <robbat2@gentoo.org> (19 July 2004)
 # Mask because it seems broken.
