@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nwutil/nwutil-1.4.ebuild,v 1.1 2004/06/27 22:12:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nwutil/nwutil-1.4.ebuild,v 1.2 2004/06/27 22:13:06 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://packages.debian.org/stable/base/nwutil"
 SRC_URI="mirror://debian/pool/main/n/nwutil/${PN}_${PV}.orig.tar.gz
 	mirror://debian/pool/main/n/nwutil/${PN}_${PV}-${DEB_VER}.diff.gz"
 
-LICENSE=""
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* arm"
 IUSE=""
