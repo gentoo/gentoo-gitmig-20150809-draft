@@ -1,5 +1,5 @@
-MD5 4f3d647eeb1670e3d8d0358536bde6b1 clearsilver-0.9.7.ebuild 2096
-MD5 26fed2927a74303d55c7e9ec75bfd031 ChangeLog 527
+MD5 a9e13b2396c6398b8261cb29fc818d98 ChangeLog 615
+MD5 107e3e69310136c6a7388661e59f49d7 clearsilver-0.9.7.ebuild 2100
 MD5 3d182d43f7f0341a9a42f96694f04e72 metadata.xml 224
 MD5 4c227dbc14edacb199c6a4df09c64fce files/0.9.7-python.patch 391
 MD5 478f0f67e9ea8486fbea128e5c80dd24 files/digest-clearsilver-0.9.7 69
