@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ati-drivers-extra
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.4 2004/04/10 16:26:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.5 2004/04/11 17:57:38 lu_zero Exp $
+
+  11 Apr 2004; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-extra-3.7.6.ebuild:
+  Workaround for ~cat/pkg-version not behaving
 
   10 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
   ati-drivers-extra-3.7.6.ebuild:
