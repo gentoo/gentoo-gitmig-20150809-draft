@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.6-r1.ebuild,v 1.11 2004/12/21 11:07:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.6-r1.ebuild,v 1.12 2005/03/13 03:13:19 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tcl/${PN}${PV}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc64 sparc hppa amd64 ppc ~mips alpha ~arm ~ia64"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="threads"
 
 DEPEND=">=sys-apps/sed-4.0.5
