@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/emul-linux-x86-nvidia-1.0.6106.ebuild,v 1.3 2004/07/07 01:14:02 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/emul-linux-x86-nvidia-1.0.6106.ebuild,v 1.4 2004/07/13 16:07:31 lv Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${NV_PACKAGE}-$
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 RESTRICT="nostrip"
 IUSE=""
 
