@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wavemon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.4 2002/12/17 19:46:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.5 2003/01/07 11:02:00 jrray Exp $
+
+*wavemon-0.4.0b (07 Jan 2003)
+
+  07 Jan 2003; J Robert Ray <jrray@gentoo.org> : Version bump to 0.4.0b.
+  Upstream tarball is named wavemon-current, so manually placed a tarball with
+  the version in the filename onto ibiblio, to avoid future problems and a
+  collision with the 0.3.3 ebuild.  Global CFLAGS are now respected.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
