@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 48c2a29965444d44758d2f18be04c4eb ChangeLog 370
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 baf8c9dba6a6eafeb865f9ef48a99442 quake3-matrix-2.4_beta.ebuild 599
+MD5 a67ffe91b4a16d1ca29c6a0684420348 files/digest-quake3-matrix-2.4_beta 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBz43jroRuSHgZdywRAkCJAKCBstUql9+kV3teH9PHTOFgleKrrQCggt8V
+ve7fgo5CTWR2o+wzsd2We88=
+=EkyJ
+-----END PGP SIGNATURE-----
