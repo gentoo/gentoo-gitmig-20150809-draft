@@ -1,14 +1,24 @@
-MD5 7a6e158d68d1bcee9757342ca7bc96dd baselayout-1.10.3.ebuild 15517
-MD5 b7128478f52fb7c49b6f8ade4b189a4e baselayout-1.9.4-r3.ebuild 17696
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 85c8b2b1481dd0c39000bbae05b79686 ChangeLog 37992
+MD5 d759b7747667de07ea70eb4fcb881c39 baselayout-1.9.4-r3.ebuild 17716
+MD5 b818b2fcad9ed9c678790cf5f1246b43 baselayout-1.10.3.ebuild 15503
+MD5 5053921385ee855be656feff4c6abcf4 baselayout-1.10.4.ebuild 15503
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
-MD5 0a830a22f9ed715233d4da059f2c619c baselayout-1.10.4.ebuild 15517
-MD5 05107d356a186fc02adff43dc241f9ed baselayout-1.9.4-r4.ebuild 16481
-MD5 dd7fbce62822fed1595f11078e23aa32 files/baselayout-1.8.6.13-r1-gcc2.patch 443
-MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
-MD5 ab3b5bbd5ce8a8b1386c834ff4a118b4 files/digest-baselayout-1.10.3 69
-MD5 2a99e8726f3939af8e637269f4fd4818 files/digest-baselayout-1.10.4 69
-MD5 adc667ea815b256d6f39259f4134f6df files/sysvinit-2.84-selinux1.patch 3556
+MD5 0e60f7030427d948f6264bfba6ce612a baselayout-1.9.4-r4.ebuild 16501
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r3 134
+MD5 ab3b5bbd5ce8a8b1386c834ff4a118b4 files/digest-baselayout-1.10.3 69
+MD5 2a99e8726f3939af8e637269f4fd4818 files/digest-baselayout-1.10.4 69
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r4 134
+MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
+MD5 dd7fbce62822fed1595f11078e23aa32 files/baselayout-1.8.6.13-r1-gcc2.patch 443
+MD5 adc667ea815b256d6f39259f4134f6df files/sysvinit-2.84-selinux1.patch 3556
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBJQITHTu7gpaalycRAlckAKCkiD4wu7nLQoP8nSUblVGDoQiS2ACfSAFA
+MW36Sn0DMNe6bZJlKu/mCHA=
+=V5GS
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.4.ebuild,v 1.1 2004/08/18 20:44:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.4.ebuild,v 1.2 2004/08/19 19:39:36 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,17 +18,15 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="bootstrap build livecd static uclibc"
 
-DEPEND="virtual/os-headers"
-
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
-RDEPEND="${DEPEND}
+RDEPEND=">=sys-apps/sysvinit-2.84
 	!build? ( !bootstrap? (
 		>=sys-apps/gawk-3.1.1-r2
 		>=sys-apps/util-linux-2.11z-r6
-	) )
-	>=sys-apps/sysvinit-2.84"
+	) )"
+DEPEND="virtual/os-headers"
 
 src_unpack() {
 	unpack ${A}
