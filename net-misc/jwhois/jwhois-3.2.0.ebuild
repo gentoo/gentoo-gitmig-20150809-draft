@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/jwhois-3.2.0.ebuild,v 1.5 2002/12/09 04:33:16 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/jwhois-3.2.0.ebuild,v 1.6 2003/02/12 01:12:13 rajiv Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Internet Whois client capable of recursive queries"
-HOMEPAGE="http://http://www.gnu.org/software/jwhois/"
+HOMEPAGE="http://www.gnu.org/software/jwhois/"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 SRC_URI="http://www.mirror.ac.uk/sites/ftp.gnu.org/gnu/jwhois/${P}.tar.gz
