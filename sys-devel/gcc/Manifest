@@ -7,8 +7,7 @@ MD5 840f9c25e867afe238633c890f8ad71a gcc-3.3.3-r5.ebuild 24366
 MD5 6d3c667669a40fff1625e7517d7e889b gcc-3.3.ebuild 16623
 MD5 849d93a55dc7e809cf4e3e04b8444d95 gcc-3.4.1-r3.ebuild 31292
 MD5 9451c01d4755a9f08026d9377a34eb38 gcc-3.4.2-r2.ebuild 13507
-MD5 86a6507162bd04b5677e8ffd24c4e786 gcc-3.3.5.ebuild 11495
-MD5 503287b2ea7e0af44e9518ac1753af97 ChangeLog 73489
+MD5 5cb78bf6e391c11868861bd44cc36123 ChangeLog 73588
 MD5 88e3f17c34499c5c82dfbbe04ed7a6fb gcc-3.4.3.ebuild 13586
 MD5 4bcf46d8a3f5509cf09f23017408095d gcc-2.95.3-r8.ebuild 8407
 MD5 9d2f881e949534e2585b5b1e32b8edf9 gcc-3.1.1-r2.ebuild 9274
@@ -22,6 +21,7 @@ MD5 66089d59b528c2f119a3b525b68ecbc7 gcc-3.3.3.ebuild 22304
 MD5 638023a605f75bd0b58558ea92d8cff9 gcc-3.3.4-r1.ebuild 24863
 MD5 1011668da4153e33c8e69808381d96f4 gcc-3.3.4-r2.ebuild 24671
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
+MD5 17b7e1a8fab3272beea644dacdb55b3e gcc-3.3.5.ebuild 11496
 MD5 f7e7042c2ddf66e344b30cbc66ebaf73 files/cc 24
 MD5 80d122265d3062847a4a1b161abe1d26 files/cpp 24
 MD5 3213bd50acdbbd71ce7dd3e40710e30e files/digest-gcc-2.95.3-r8 64
@@ -51,7 +51,7 @@ MD5 8baffb486c75efe253bd2daa88daa7d6 files/gcc331_use_multilib.amd64.patch 352
 MD5 e3193bdffb435b77a21bfb504ff6f591 files/mkinfodir 7324
 MD5 ea2cf3df0d89a26d5fdc1a531176e395 files/pro-police-docs.patch 3287
 MD5 07b57d62aa1a8cd4d1cd37984ebe2053 files/scan_libgcc_linked_ssp.sh 861
-MD5 e11f033805f7349a3567ee30c82d2fb1 files/digest-gcc-3.3.5 361
+MD5 454652372363986ccf7974279150d516 files/digest-gcc-3.3.5 442
 MD5 b1a242694f56184cbcdd40ba25800d50 files/2.95.3/gcc-2.95.3-alpha.diff 14345
 MD5 523970c128b929fe7c7cf36508ebd1d5 files/2.95.3/gcc-2.95.3-new-atexit.diff 13604
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
