@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/calcchecksum
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/ChangeLog,v 1.3 2004/06/24 21:30:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/ChangeLog,v 1.4 2004/06/28 23:40:32 carlo Exp $
+
+  29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> calcchecksum-1.6_pre1.ebuild:
+  QA: inherit kde-base -> inherit kde
 
   16 May 2004; Dominik Stadler <centic@gentoo.org>
   calcchecksum-1.6_pre1.ebuild:
