@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.191 2004/10/22 17:40:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.192 2004/10/22 17:48:09 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -49,7 +49,6 @@ ctype - Enables ctype functions
 cups - Add support for CUPS (Common Unix Printing System)
 curl - Adds support for client-side URL transfer library
 curlwrappers - Adds support for using curl in streams
-cxx - Enable support for C++ (DONT DISABLE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 db2 - Enables support for IBM DB2 database server
 dba - Enables dbm-compatible layers
 dbase - Adds support for dbase file format
@@ -189,6 +188,7 @@ nls - Adds Native Language Support (using gettext - GNU locale utilities)
 nptl - Enable support for NPTL
 nocardbus - Disables cardbus support in pcmcia-cs
 nocd - Tells emerge to install all files required to run the application without a CD mounted
+nocxx - Enable support for C++ (DONT ENABLE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 oci8 - Adds Oracle 8 Support
 odbc - Adds ODBC Support (Open DataBase Connectivity)
 offensive - Enables potentially offensive items in packages
