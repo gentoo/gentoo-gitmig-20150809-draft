@@ -1,18 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f320f0e6a3974766043b61a69ec31ec7 ChangeLog 978
+MD5 bce771e98358d7dc17f18fb05f5e2e4e ChangeLog 1124
 MD5 b1bfef7f74ddacfb441dec7211ee057b metadata.xml 532
-MD5 4f4e3bdd84bc0342fb911c46639cdc89 selinux-clockspeed-20031221.ebuild 407
-MD5 523535feb0a9de6668e6d9a6457a08c3 selinux-clockspeed-20041016.ebuild 406
 MD5 53b8ea676a97a20318279f3e42bb89b3 selinux-clockspeed-20041121.ebuild 406
-MD5 1f5ecf3157af9ae009cc0c5e3d4262b6 files/digest-selinux-clockspeed-20031221 77
-MD5 f94e904578d752673302951a87542ed3 files/digest-selinux-clockspeed-20041016 77
 MD5 d96e7aab2cd762f18d1d7c961503f73e files/digest-selinux-clockspeed-20041121 77
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBo21MGSBEIeh4AEYRApTWAJ9DtrtXcFH53qUWAlPHSdBLo1JlswCfa8Na
-RCUp4llRRLCWKEomUWJQWks=
-=Jhw8
+iD8DBQFBvC0iGSBEIeh4AEYRAqpUAJ4/NBlnHS4KHVuRGLF/YqwtnWAE1wCfZubi
+CAEIrIHP6hqBqmjWovQXus8=
+=Fquc
 -----END PGP SIGNATURE-----
