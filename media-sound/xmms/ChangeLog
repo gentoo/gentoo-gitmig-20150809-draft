@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.102 2004/02/24 11:35:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.103 2004/02/24 22:35:23 eradicator Exp $
+
+  24 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-1.2.8-r3.ebuild,
+  xmms-1.2.8-r4.ebuild, xmms-1.2.9-r1.ebuild, xmms-1.2.9-r2.ebuild:
+  Added blocker !media-plugins/xmms-alsa
 
   24 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-1.2.8-r3.ebuild,
   xmms-1.2.8-r4.ebuild, xmms-1.2.9-r1.ebuild, xmms-1.2.9-r2.ebuild:

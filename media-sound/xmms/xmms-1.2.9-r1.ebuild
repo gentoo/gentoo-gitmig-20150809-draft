@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9-r1.ebuild,v 1.8 2004/02/24 11:35:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9-r1.ebuild,v 1.9 2004/02/24 22:35:23 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -26,6 +26,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	xml? ( >=dev-libs/libxml-1.8.15 )
 	opengl? ( virtual/opengl )
 	alsa? ( >=media-libs/alsa-lib-0.9.0 )
+	!media-plugins/xmms-alsa
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )"
 
 RDEPEND="${DEPEND}
