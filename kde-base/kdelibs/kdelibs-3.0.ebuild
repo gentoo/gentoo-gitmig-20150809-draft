@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.ebuild,v 1.1 2002/04/03 18:14:06 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.ebuild,v 1.2 2002/04/03 21:09:32 gbevin Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde kde.org
 #don't inherit kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
@@ -51,7 +51,7 @@ set-kdedir $PV
 
 src_unpack() {
 
-    kde-source_src_unpack
+    base_src_unpack
     kde_sandbox_patch ${S}/kio/misc/kpac
 
 }
