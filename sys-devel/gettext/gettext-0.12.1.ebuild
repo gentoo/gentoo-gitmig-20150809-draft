@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.19 2004/07/02 08:39:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.20 2004/07/15 03:28:34 agriffis Exp $
 
 inherit eutils
 
-IUSE="nls emacs"
+IUSE="bootstrap emacs nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
@@ -81,4 +80,3 @@ src_install() {
 
 	dodoc AUTHORS BUGS COPYING ChangeLog DISCLAIM NEWS README* THANKS TODO
 }
-

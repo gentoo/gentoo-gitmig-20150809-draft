@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.5-r1.ebuild,v 1.20 2004/06/24 22:46:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.5-r1.ebuild,v 1.21 2004/07/15 03:28:34 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
@@ -70,4 +69,3 @@ src_install() {
 
 	dodoc AUTHORS BUGS COPYING ChangeLog DISCLAIM NEWS README* THANKS TODO
 }
-
