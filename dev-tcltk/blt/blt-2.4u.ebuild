@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4u.ebuild,v 1.5 2003/09/04 05:13:00 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4u.ebuild,v 1.6 2004/03/13 09:53:56 mr_bones_ Exp $
 
 
 S="${WORKDIR}/${PN}${PV}"
