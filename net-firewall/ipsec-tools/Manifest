@@ -3,10 +3,8 @@ MD5 8ab0f354384bf0af0ac5f036bf870678 ipsec-tools-0.3.1.ebuild 1601
 MD5 1e8b9993c9d4f8bc53955cf690469564 ipsec-tools-0.4.ebuild 1692
 MD5 a428291d8a22a606eda6e16845741e9a ipsec-tools-0.2.5.ebuild 1549
 MD5 20913a445c3eac38edca0ae43e36b1de ipsec-tools-0.3.3.ebuild 1599
-MD5 8d9e70077e798938ba93705627ab6c73 ChangeLog 3650
+MD5 1a3d8f54f02e7add13d87fc7a085b600 ChangeLog 3768
 MD5 c58d4bbba473ea6b78a0e815b29b2aa6 metadata.xml 286
-MD5 24ee48e05a328a28589fc557e1716378 ipsec-tools-0.5_rc1.ebuild 1330
-MD5 8559ca8fed77999cc96a0512190a7da9 files/digest-ipsec-tools-0.5_rc1 72
 MD5 84cffb83a2579976f872a29d42767714 files/ipsec.conf.sample 260
 MD5 2060a9a972f7975e1fdc755eec1d7791 files/digest-ipsec-tools-0.4 67
 MD5 da6f1a46fe846d9a36c49865af536935 files/digest-ipsec-tools-0.5 68
