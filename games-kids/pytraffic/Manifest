@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a705a0632c8a49a719eb5aac18278cea pytraffic-1.2.1.ebuild 975
+MD5 130c79ac0aa99f6c9d208811fc565847 pytraffic-1.2.1.ebuild 981
 MD5 2aea0f8fb60a59ef65946a31fcd31216 ChangeLog 367
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 23d02af40cdc1e4ebd9234573e05b7c2 files/digest-pytraffic-1.2.1 67
@@ -9,7 +9,7 @@ MD5 435a1b2a65ae7fc35c83fbeb7397d829 files/1.2.1-gentoo-dirs.patch 1730
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB156FroRuSHgZdywRAphIAKCSXhAx/z/mliQkhalClUi+E0NJLACeIdnq
-frHrNMz0ZGknadV33t11EjI=
-=PTZz
+iD4DBQFB2KvOroRuSHgZdywRAq6RAJ40BJv6qAzjpIbykW1redavuRl5fACXU0Qp
+7/FSFIR0b+SMGgL3abR4hg==
+=XrWS
 -----END PGP SIGNATURE-----
