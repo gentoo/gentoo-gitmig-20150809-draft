@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.2.13.ebuild,v 1.2 2001/04/13 16:59:03 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.2.13.ebuild,v 1.3 2001/06/04 03:33:03 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,18 +10,17 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}
          ftp://gnome.eazel.com/pub/gnome/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=gnome-base/gnome-env-1.0
-	>=media-libs/imlib-1.9.10
+DEPEND=">=media-libs/imlib-1.9.10
 	>=media-sound/esound-0.2.22
 	>=gnome-base/ORBit-0.5.7
-	>=sys-libs/db-1.85-r1"
+	<sys-libs/db-2"
 
 src_compile() {                           
 
   try ./configure --host=${CHOST} --prefix=/opt/gnome \
 	--sysconfdir=/etc/opt/gnome \
-	--mandir=/opt/gnome/share/man \
-	--localstatedir=/var --enable-prefer-db1
+	--mandir=/opt/gnome/man \
+	--localstatedir=/var --enable-prefere-db1
 
   try make
 }
@@ -29,7 +28,7 @@ src_compile() {
 src_install() {
 
   try make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome \
-	mandir=${D}/opt/gnome/share/man \
+	mandir=${D}/opt/gnome/man \
 	localstatedir=${D}/var install
 
   into /opt/gnome

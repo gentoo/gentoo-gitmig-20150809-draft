@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.3.ebuild,v 1.3 2001/05/03 16:38:57 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.3.ebuild,v 1.4 2001/06/04 03:33:03 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,7 +10,6 @@ SRC_URI="http://xml.sergeant.org/download/${A}"
 HOMEPAGE="http://xml.sergeant.org/"
 
 DEPEND=">=sys-devel/perl-5
-	>=net-www/apache-ssl-1.3.17.2.8.0-r1
 	>=dev-perl/libapreq-0.31
 	>=dev-perl/Compress-Zlib-1.10
 	>=dev-perl/Error-0.13

@@ -5,30 +5,21 @@
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="The Gnome Application Libraries"
+DESCRIPTION="The Gnome WWW Libraries"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}
          ftp://gnome.eazel.com/pub/gnome/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=gnome-base/gnome-libs-1.2.12
-	>=net-libs/libwww-1.5.3-r1"
+DEPEND=">=gnome-base/gnome-libs-1.2.13 >=net-libs/libwww-1.5.3-r1 gnome-base/gnome-env"
+RDEPEND=">=net-libs/libwww-1.5.3-r1 gnome-base/gnome-env"
 
-
-
-src_unpack() {
-  unpack ${A}
-}
-
-src_compile() {                           
-  cd ${S}
+src_compile() {
   try ./configure --host=${CHOST} --prefix=/opt/gnome
   try make
 }
 
 src_install() {
-  cd ${S}
   try make prefix=${D}/opt/gnome install
-
   dodoc AUTHORS ChangeLog NEWS README
 }
 
