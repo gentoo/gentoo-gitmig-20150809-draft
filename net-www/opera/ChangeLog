@@ -1,6 +1,9 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.39 2003/10/22 22:47:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.40 2003/11/13 13:22:28 lanius Exp $
+
+  13 Nov 2003; Heinrich Wendel <lanius@gentoo.org> opera-6.12_beta1.ebuild:
+  bump, stable cause of security issues, see opera changelog
 
   23 Oct 2003; Heinrich Wendel <lanius@gentoo.org> opera-6.12_beta1.ebuild,
   opera-7.21.ebuild:
