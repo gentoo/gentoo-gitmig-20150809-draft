@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6i.ebuild,v 1.3 2003/02/22 00:35:21 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6i.ebuild,v 1.4 2003/02/25 18:34:56 zwelch Exp $
+
+IUSE=""
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
@@ -18,20 +20,25 @@ src_unpack() {
 
 	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
 
-        if [ "${ARCH}" = "mips" ]
-        then
-        cd ${S}
-        patch -p1 < ${FILESDIR}/openssl-0.9.6-mips.diff || die
-        fi
+	if [ "${ARCH}" = "mips" ]
+	then
+		cd ${S}
+		patch -p1 < ${FILESDIR}/openssl-0.9.6-mips.diff || die
+	fi
 
     # many apps linking to openssl needs -fPIC
-	if [ "${ARCH}" = "hppa" -o "${ARCH}" = "arm" ]
+	if [ "${ARCH}" = "hppa" ]
 	then
 		CFLAGS="${CFLAGS} -fPIC"
 	fi
-						 
-
-	cp Configure Configure.orig
+	if [ "${ARCH}" = "arm" ]; then
+		# patch linker to add -ldl or things linking aginst libcrypto fail
+		sed -e \
+			's!^"linux-elf-arm"\(.*\)::BN\(.*\)!"linux-elf-arm"\1:-ldl:BN\2!' \
+			Configure > Configure.orig
+	else
+		cp Configure Configure.orig
+	fi
 	sed -e "s/-O3/$CFLAGS/" -e "s/-m486//" Configure.orig > Configure
 }
 

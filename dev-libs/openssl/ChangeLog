@@ -1,10 +1,13 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.28 2003/02/22 00:35:21 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.29 2003/02/25 18:34:56 zwelch Exp $
+
+  23 Feb 2003; Zach Welch <zwelch@gentoo.org> openssl-0.9.6i.ebuild :
+  Add arm patch to ebuild to fix problems linking aginst libcrypto.so
+  Cleanup several lintool violations
 
   21 Feb 2003; Zach Welch <zwelch@gentoo.org> openssl-0.9.6i.ebuild :
   Added arm to keywords.
-  Added -fPIC to CFLAGS for arm needed by many apps linking to openssl.
 
   21 Feb 2003; Jan Seidel <tuxus@gentoo.org> openssl-0.9.6g-r1.ebuild openssl-0.9.6i.ebuild :
   added a patch for mips
