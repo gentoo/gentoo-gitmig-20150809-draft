@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/hsflinmodem
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 
+*hsflinmodem-5.03.03.02110301 (09 Nov 2002)
+
+  09 Nov 2002; Hanno Boeck <hanno@gentoo.org> hsflinmodem-5.03.03.02110301.ebuild :
+  New version. Cleaned up ebuild and deleted old versions.
+
 *hsflinmodem-5.03.03.02101001 (13 Oct 2002)
 
   13 Oct 2002; Hanno Boeck <hanno@gmx.de>
