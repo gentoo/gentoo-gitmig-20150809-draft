@@ -1,0 +1,10 @@
+# ChangeLog for app-text/expander
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/expander/ChangeLog,v 1.1 2003/10/30 04:07:34 brandy Exp $
+
+*expander-2.0.5 (30 Oct 2003)
+
+  30 Oct 2003; Brandy Westcott brandy@gentoo.org expander-2.0.5.ebuild:
+  Initial import. Expander is a utility that acts as a filter for text editors.
+  Closes bug #30604.
+
