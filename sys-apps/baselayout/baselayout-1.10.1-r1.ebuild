@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.1-r1.ebuild,v 1.1 2004/06/29 21:19:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.1-r1.ebuild,v 1.2 2004/06/30 01:08:01 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
-IUSE="bootstrap build livecd static selinux uclibc"
+IUSE="bootstrap build livecd static uclibc"
 
 DEPEND="virtual/os-headers"
 
