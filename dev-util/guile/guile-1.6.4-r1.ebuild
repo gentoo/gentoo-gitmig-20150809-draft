@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.17 2004/08/19 21:09:44 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.18 2004/08/21 00:24:37 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/guile/"
 SRC_URI="mirror://gnu/guile/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc sparc mips alpha arm hppa amd64 ia64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.1
@@ -20,7 +20,6 @@ DEPEND=">=sys-libs/ncurses-5.1
 #       the actual guile version that was used in the past.
 #
 #       So I'm slotting this as 12 beacuse of the library major version
-
 SLOT="12"
 MAJOR="1.6"
 
