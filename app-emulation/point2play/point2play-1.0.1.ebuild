@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.0.1.ebuild,v 1.1 2003/05/01 16:08:37 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.0.1.ebuild,v 1.2 2003/07/11 18:52:11 aliz Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"
 HOMEPAGE="http://www.transgaming.com/"
 
 SLOT="3"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="Aladdin" # not sure about that .. comments?
 
 RDEPEND="virtual/x11
