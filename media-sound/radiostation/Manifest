@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 51089d49288007e62eef6c5b92381120 ChangeLog 1170
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 fe253ad1ba8d30b71e9e0b926ed99900 radiostation-0.5.ebuild 1322
-MD5 ec58cf3b344f09ce6ac15e0777ab260e ChangeLog 1037
+MD5 3af5a955535629d9b7477c6798acce12 radiostation-0.5.ebuild 1326
 MD5 d335b7467594cfd21208c7c932a63c11 files/digest-radiostation-0.5 126
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCNwu9I1lqEGTUzyQRApL+AKCqyF4l6yvJ0jds3hp4q4JFlOQBewCg3X3a
+SUJkBX5vP9vKCR5ikg+DS8g=
+=37JB
+-----END PGP SIGNATURE-----
