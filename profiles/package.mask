@@ -23,7 +23,8 @@
 
 # <satai@gentoo.org> (13 Jan 2003)
 # Getting ready for the tetex-2.0 release.
->app-text/tetex-1.0.7-r11
+# Leave room for 1.0.7 revision updates (18 Jan 2003 agriffis)
+>app-text/tetex-1.0.7-r20
 
 # <carpaski@gentoo.org> (12 Jan 2003)
 # Testing for UserPriv compile. Works, but breaks a couple ebuilds.
