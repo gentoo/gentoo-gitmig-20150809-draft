@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.63 2003/12/17 19:42:29 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.64 2003/12/18 05:03:11 brad_mssw Exp $
+
+*development-sources-2.6.0 (18 Dec 2003)
+
+  18 Dec 2003; Brad House <brad_mssw@gentoo.org>
+  development-sources-2.6.0.ebuild:
+  Add official 2.6.0 branch. Please do not patch this kernel, it should stay
+  vanilla, gentoo-dev-sources is the one you want to patch
 
   09 Dec 2003; <spider@gentoo.org> development-sources-2.6.0_beta7-r3.ebuild,
   development-sources-2.6.0_beta7-r5.ebuild,
