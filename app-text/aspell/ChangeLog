@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.33 2004/04/02 19:15:09 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.34 2004/04/03 07:27:10 mr_bones_ Exp $
+
+  02 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> aspell-0.50.3.ebuild:
+  inherit eutils for epatch
 
   02 Apr 2004; Jon Portnoy <avenj@gentoo.org> aspell-0.50.5.ebuild,
   aspell-0.50.4.1.ebuild, aspell-0.50.3.ebuild :
