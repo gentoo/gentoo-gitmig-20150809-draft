@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.43 2005/01/12 16:10:31 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.44 2005/01/30 10:18:00 lanius Exp $
+
+  30 Jan 2005; lanius@gentoo.org totem-0.100-r2.ebuild:
+  mark amd64
 
 *totem-0.100-r2 (12 Jan 2005)
 
