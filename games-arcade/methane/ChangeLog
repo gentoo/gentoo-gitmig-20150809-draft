@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/methane
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/ChangeLog,v 1.7 2005/03/02 04:03:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/ChangeLog,v 1.8 2005/03/14 09:02:50 mr_bones_ Exp $
+
+*methane-1.4.7 (14 Mar 2005)
+
+  14 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> +methane-1.4.7.ebuild:
+  version bump (bug #85173); clean old version
 
   01 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> methane-1.4.6.ebuild:
   no clanlib for alpha and ppc
