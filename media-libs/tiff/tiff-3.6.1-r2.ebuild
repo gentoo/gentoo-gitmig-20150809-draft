@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.12 2004/10/10 18:06:54 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r2.ebuild,v 1.1 2004/10/13 14:03:34 solar Exp $
 
 inherit eutils
 
@@ -10,11 +10,13 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="Library for manipulation of TIFF (Tag Image File Format) images."
 HOMEPAGE="http://www.libtiff.org/"
 SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/${MY_P}.tar.gz
-	ftp://ftp.remotesensing.org/libtiff/libtiff-lzw-compression-kit-1.5.tar.gz"
+	ftp://ftp.remotesensing.org/libtiff/libtiff-lzw-compression-kit-1.5.tar.gz
+	mirror://gentoo/libtiff-3.6.1-alt-bound.patch.bz2
+	mirror://gentoo/libtiff-3.6.1-chris-bound.patch.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc mips alpha arm hppa amd64 ia64 s390 macos ppc-macos"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 macos ppc-macos ~ppc64"
 IUSE="lzw-tiff"
 
 DEPEND=">=media-libs/jpeg-6b
@@ -30,13 +32,14 @@ src_unpack() {
 		cp README-LZW-COMPRESSION ${S}/.
 	fi
 	cd ${S}
-	cp ${FILESDIR}/config.site-3.6.1-r1 config.site
-	echo "DIR_HTML=\"/usr/share/doc/${PF}/html\"" >> config.site
-	echo "DIR_LIB=\"/usr/$(get_libdir)\"" >> config.site
-	echo "DIR_JPEGLIB=\"/usr/$(get_libdir)\"" >> config.site
-	echo "DIR_GZLIB=\"/usr/$(get_libdir)\"" >> config.site
+	cp ${FILESDIR}/config.site config.site
+	echo "DIR_HTML="${D}/usr/share/doc/${PF}/html"" >> config.site
+	epatch ${FILESDIR}/${PN}-3.6.1-r1-man.so.patch || die "man.so patch failed"
 
-	epatch ${FILESDIR}/${PF}-man.so.patch || die "man.so patch failed"
+	#security fixes for memory allocation problems and numerous integer overflows.
+	epatch ${DISTDIR}/lib${PN}-${PV}-alt-bound.patch.bz2
+	epatch ${DISTDIR}/lib${PN}-${PV}-alt-bound-fix2.patch.bz2
+	epatch ${DISTDIR}/lib${PN}-${PV}-chris-bound.patch.bz2
 }
 
 src_compile() {
@@ -45,10 +48,9 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/{bin,$(get_libdir),share/man,share/doc/}
+	dodir /usr/{bin,lib,share/man,share/doc/}
 	dodir /usr/share/doc/${PF}/html
-	# 'make' before environment variables on a command-line does not work with non-gnu make.
-	DESTDIR="${D}" ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" make install || die
+	ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" make install || die
 	preplib /usr
 	dodoc README TODO VERSION README-LZW-COMPRESSION
 }

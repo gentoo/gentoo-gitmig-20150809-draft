@@ -1,20 +1,22 @@
-MD5 39c22b1781ea950b0097c93b01ec5145 ChangeLog 3625
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 580241f532bfb5aeed5fb1deefac2aee tiff-3.6.1-r2.ebuild 2140
+SHA1 181cdf8dd87e787374d7333d02bbe5b916d38c0c tiff-3.6.1-r2.ebuild 2140
+MD5 b17f1b75392a228647e3b4f268d25fe4 ChangeLog 4286
+SHA1 f138163e5bdaceb7f40468326db4e07c4d442987 ChangeLog 4286
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 c31d9d63858dbe4359a2fe322cf9270a tiff-3.5.5.ebuild 1694
-MD5 6ef6236d88b8697f8a0d0cd0c137fbe9 tiff-3.5.7-r1.ebuild 1088
-MD5 0f539d87b6bbcccd29b4e881d7572fe7 tiff-3.5.7-r2.ebuild 1247
-MD5 1f5924fda085dbb6d5cde797be448269 tiff-3.6.0.ebuild 1076
-MD5 6541afecc746d30a44f0d28b7ba912d3 tiff-3.6.0_beta2.ebuild 1069
-MD5 7d9f6f86d24f88c10af093cb7b60b787 tiff-3.6.1-r1.ebuild 2067
-MD5 d219bd7d9f4ff3a5380d73f9b7943a8e tiff-3.6.1.ebuild 1069
+SHA1 d6147d00f16e8cfeef893d0764b0675a93d62849 metadata.xml 160
 MD5 eb56b1622d6a778c616bfb2453471ce1 files/config.site 488
-MD5 eb56b1622d6a778c616bfb2453471ce1 files/config.site-3.5.6_beta 488
-MD5 cc09334404bed71d88cbee093ecfbea3 files/digest-tiff-3.5.5 63
-MD5 5e55504066911b414c36963ad6ca9070 files/digest-tiff-3.5.7-r1 63
-MD5 5e55504066911b414c36963ad6ca9070 files/digest-tiff-3.5.7-r2 63
-MD5 6e51a8db6b120904c1e2ddb0f0eaf349 files/digest-tiff-3.6.0 64
-MD5 0bdb0f11a1ee24db3e7fc07875ca4c44 files/digest-tiff-3.6.0_beta2 70
-MD5 f53e1604a1fd165e2e83afca8a3e63aa files/digest-tiff-3.6.1 64
-MD5 9401ca061c9d5140dfbefbac98d58212 files/digest-tiff-3.6.1-r1 145
+SHA1 b45b9e5ba7f61e97f07314c201ea7424e4d9f0b4 files/config.site 488
+MD5 cad49e9764cabaf8ae55434dfba57f4d files/digest-tiff-3.6.1-r2 632
+SHA1 a17a3a9c97030d8d509da0b60f03f566fa6a30a4 files/digest-tiff-3.6.1-r2 632
 MD5 dca7d9db2819ce30468b1a44b7575aaa files/tiff-3.6.1-r1-man.so.patch 364
-MD5 bae48bb199ec2a87e521c417819003e6 files/config.site-3.6.1-r1 355
+SHA1 d28ab469b8a07bf282480cf93e7db46be52225b3 files/tiff-3.6.1-r1-man.so.patch 364
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBbTVw94CCfB4KcwwRAq4aAKDBqk9FUczhe8pGWkfTBorFZvuwdwCaAxEY
+FvMUrRB7asBwGTFKMMbcPvA=
+=nudt
+-----END PGP SIGNATURE-----

@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.27 2004/10/10 18:06:54 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.28 2004/10/13 14:03:34 solar Exp $
+
+*tiff-3.6.1-r2 (13 Oct 2004)
+
+  13 Oct 2004; <solar@gentoo.org> -files/config.site-3.5.6_beta,
+  -files/config.site-3.6.1-r1, -tiff-3.5.5.ebuild, -tiff-3.5.7-r1.ebuild,
+  -tiff-3.5.7-r2.ebuild, -tiff-3.6.0.ebuild, -tiff-3.6.0_beta2.ebuild,
+  -tiff-3.6.1-r1.ebuild, +tiff-3.6.1-r2.ebuild, -tiff-3.6.1.ebuild:
+  security bump. - libtiff has memory allocation problems and numerous integer
+  overflows. Due to the nature of this and the way it could be abused 3.6.1-r2
+  is is being marked stable on all arches and older ebuilds have been removed.
+  Testing was preformed by vapier/sejo/kloeri for every arch we have except
+  ppc64 who failed to have anybody test.
 
   10 Oct 2004; Hasan Khalil <gongloo@gentoo.org> tiff-3.6.1-r1.ebuild:
   fix for non-gnu make.
