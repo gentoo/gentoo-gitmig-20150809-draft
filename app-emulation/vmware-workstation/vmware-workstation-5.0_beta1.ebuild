@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0_beta1.ebuild,v 1.1 2004/11/30 00:53:14 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0_beta1.ebuild,v 1.2 2004/12/24 02:54:10 kingtaco Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -9,11 +9,13 @@
 inherit eutils
 
 S=${WORKDIR}/vmware-distrib
-NP="VMware-workstation-e.x.p-10737"
+NP="VMware-workstation-e.x.p-11608"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
-SRC_URI="${NP}.tar.gz
-	mirror://gentoo/vmware.png"
+
+# Mike Doty <kingtaco@gentoo.org> removed "mirror://gentoo/vmware.png" from SRC_URI and moved to 
+# FILESDIR because of fetch restrict.  also changed relevant ins* lines
+SRC_URI="${NP}.tar.gz"
 
 LICENSE="vmware"
 IUSE=""
@@ -77,9 +79,9 @@ src_install() {
 	# A simple icon I made
 	dodir /opt/vmware/lib/icon
 	insinto /opt/vmware/lib/icon
-	doins ${DISTDIR}/vmware.png || die
+	doins ${FILESDIR}/vmware.png || die
 	insinto /usr/share/pixmaps
-	doins ${DISTDIR}/vmware.png || die
+	doins ${FILESDIR}/vmware.png || die
 
 	make_desktop_entry vmware "VMWare Workstation" vmware.png
 
