@@ -3,6 +3,6 @@ MD5 36b85699310d5fc0373c61ef3cbfa6fa files/digest-vegastrike-0.4.1 82
 MD5 2e620174666c33d1a873ea9f3f68286e files/0.3.1-vsinstall.patch 975
 MD5 6106850a49aab787ec7af37878f3518a files/vegastrike-0.3.1-gcc3.patch 3437
 MD5 8dbf7ed99fc931fa8667dbe606eea9fb vegastrike-0.3.1.ebuild 2284
-MD5 2fe55646fbb26de705aa78b807d88097 vegastrike-0.4.1.ebuild 2888
+MD5 61d91a38b3fcf5ff4e1b2f32159c7323 vegastrike-0.4.1.ebuild 2886
 MD5 855f4624c226a9dcbe4f21527216eff7 ChangeLog 1375
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
