@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222-r1.ebuild,v 1.11 2004/03/14 10:59:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222-r1.ebuild,v 1.12 2004/05/17 15:22:19 usata Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND=">=sys-fs/mtools-3
-	tetex? ( >=app-text/tetex-1.0.7-r10 )"
+	tetex? ( virtual/tetex )"
 
 src_unpack() {
 	unpack ${A}

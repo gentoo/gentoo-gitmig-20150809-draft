@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.4.1.ebuild,v 1.6 2003/09/03 03:59:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.4.1.ebuild,v 1.7 2004/05/17 15:21:34 usata Exp $
 
 DESCRIPTION="Command line To Do List manager"
 HOMEPAGE="http://www.rc0.org.uk/tdl/"
@@ -17,7 +17,7 @@ RDEPEND="readline? ( >=sys-libs/readline-4.3
 DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	>=sys-apps/sed-4
-	doc? ( app-text/tetex )"
+	doc? ( virtual/tetex )"
 
 S=${WORKDIR}/${P}
 
