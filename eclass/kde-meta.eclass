@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.19 2005/02/06 07:38:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.20 2005/02/10 21:19:51 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -261,6 +261,11 @@ function kde-meta_src_unpack() {
 	for section in $sections; do
 	case $section in
 	unpack)
+		
+		# kdepim packages all seem to reply on libkdepim/kdepimmacros.h
+		if [ "$KMNAME" == "kdepim" ]; then
+			KMEXTRACTONLY="$KMEXTRACTONLY libkdepim"
+		fi
 		
 		# Create final list of stuff to extract
 		extractlist=""
