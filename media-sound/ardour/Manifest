@@ -1,5 +1,6 @@
 MD5 7d3441226b962d038a5e288ada67058e ardour-0.9_beta16.ebuild 1175
 MD5 f197fc6c26a82d2b0f105f775c74dc46 ardour-0.9_beta11-r1.ebuild 1177
+MD5 0335442bd57edfd8e96333bebc7b8add ardour-0.9_beta18.ebuild 1267
 MD5 85ae7ef7d14a7eee5260cac5e52a82be ardour-0.9_beta17.ebuild 1267
 MD5 ae6da285ffd7cfde5c24ce3f4d585fae ardour-0.9_beta14.ebuild 1175
 MD5 63fded7f3804942f1ab5fb8631b23c40 ChangeLog 4308
@@ -7,5 +8,6 @@ MD5 aac458f88f62ba55a7c6e028008acce4 metadata.xml 245
 MD5 70693c54e8c510859384503ff9ed10cc files/digest-ardour-0.9_beta14 72
 MD5 3e39c45e572cf4ec921e0554fd226f11 files/digest-ardour-0.9_beta16 72
 MD5 df7a09804b9e2413a2e3163cd6ee9c63 files/digest-ardour-0.9_beta17 72
+MD5 deaa03228c326df68ddb39830f3549d0 files/digest-ardour-0.9_beta18 72
 MD5 e016dfbfc8e85547954395c455b04e61 files/ardour-gcc34.patch 9562
 MD5 d20e0aaa416ef820fd3c6767245288e8 files/digest-ardour-0.9_beta11-r1 72

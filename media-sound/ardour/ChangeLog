@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.28 2004/07/16 09:35:12 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.29 2004/07/21 12:44:50 eldad Exp $
+
+*ardour-0.9_beta18 (21 Jul 2004)
+
+  21 Jul 2004; Eldad Zack <eldad@gentoo.org> +ardour-0.9_beta18.ebuild:
+  Version bump. disabled ksi support.
 
   16 Jul 2004; Eldad Zack <eldad@gentoo.org> +files/ardour-gcc34.patch,
   ardour-0.9_beta17.ebuild:
