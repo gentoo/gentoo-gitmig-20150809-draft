@@ -1,6 +1,9 @@
 # ChangeLog for net-www/dillo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.32 2004/03/27 16:34:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.33 2004/03/29 14:47:04 gustavoz Exp $
+
+  29 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> dillo-0.7.3-r5.ebuild:
+  stable on sparc
 
   28 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> dillo-0.7.3-r5.ebuild:
   Applied misc patch (frame, tab, truetype, auth, ssl ...) by default.
