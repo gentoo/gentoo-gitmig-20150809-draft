@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.98 2005/02/01 19:03:13 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.99 2005/02/03 21:12:09 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -573,21 +573,21 @@ update_vim_symlinks() {
 	fi
 
 	# Make or remove convenience symlink, vim -> gvim
-	if [[ -f /usr/bin/gvim ]]; then
-		ln -s gvim /usr/bin/vim 2>/dev/null
-	elif [[ -L /usr/bin/vim && ! -f /usr/bin/vim ]]; then
-		rm /usr/bin/vim
+	if [[ -f ${ROOT}/usr/bin/gvim ]]; then
+		ln -s gvim ${ROOT}/usr/bin/vim 2>/dev/null
+	elif [[ -L ${ROOT}/usr/bin/vim && ! -f ${ROOT}/usr/bin/vim ]]; then
+		rm ${ROOT}/usr/bin/vim
 	fi
 
 	# Make or remove convenience symlinks to vim
-	if [[ -f /usr/bin/vim ]]; then
+	if [[ -f ${ROOT}/usr/bin/vim ]]; then
 		for f in ${syms}; do
-			ln -s vim /usr/bin/${f} 2>/dev/null
+			ln -s vim ${ROOT}/usr/bin/${f} 2>/dev/null
 		done
 	else
 		for f in ${syms}; do
-			if [[ -L /usr/bin/${f} && ! -f /usr/bin/${f} ]]; then
-				rm -f /usr/bin/${f}
+			if [[ -L ${ROOT}/usr/bin/${f} && ! -f ${ROOT}/usr/bin/${f} ]]; then
+				rm -f ${ROOT}/usr/bin/${f}
 			fi
 		done
 	fi
