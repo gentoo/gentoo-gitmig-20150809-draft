@@ -1,4 +1,0 @@
-835c835
-<         if(hasattr(gt,"text") and len(gt.text) > 0):
----
->         if(hasattr(gt,"text") and gt.text != None and len(gt.text) > 0):
