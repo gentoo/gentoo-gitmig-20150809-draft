@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/eplayer/eplayer-0.7.20031025.ebuild,v 1.2 2003/10/25 16:35:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/eplayer/eplayer-0.7.20031108.ebuild,v 1.1 2003/11/08 23:55:25 vapier Exp $
 
 inherit enlightenment
 
-DESCRIPTION="an OggVorbis audio player"
+DESCRIPTION="an audio player built on the EFL"
 
 DEPEND="media-libs/libvorbis
 	>=media-video/ffmpeg-0.4.8
