@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.106 2004/12/29 02:35:55 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.107 2004/12/29 19:32:25 kloeri Exp $
+
+  29 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> kdeadmin-3.3.2.ebuild:
+  Stable on alpha, bug 72750.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

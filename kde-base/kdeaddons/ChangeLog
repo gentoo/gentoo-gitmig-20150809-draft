@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.111 2004/12/28 19:19:27 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.112 2004/12/29 19:26:07 kloeri Exp $
+
+  29 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> kdeaddons-3.3.2.ebuild:
+  Stable on alpha, bug 72750.
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> kdeaddons-3.3.2.ebuild:
   Stable on amd64.

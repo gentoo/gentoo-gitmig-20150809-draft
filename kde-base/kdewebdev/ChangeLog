@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.28 2004/12/28 19:17:39 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.29 2004/12/29 19:33:38 kloeri Exp $
+
+  29 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> kdewebdev-3.3.2.ebuild:
+  Stable on alpha, bug 72750.
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> kdewebdev-3.3.2.ebuild:
   Stable on amd64.
