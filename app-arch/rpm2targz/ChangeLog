@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.22 2004/04/13 22:54:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.23 2004/04/14 19:55:04 randy Exp $
+
+  14 Apr 2004; Michael McCabe <randy@gentoo.org> rpm2targz-9.0-r2.ebuild:
+  adding s390 to keywords
 
   13 Apr 2004; Joshua Kinard <kumba@gentoo.org> rpm2targz-9.0-r2.ebuild:
   Marked stable on mips.
