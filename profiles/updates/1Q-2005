@@ -126,8 +126,8 @@ slotmove =kde-base/korundum-3.4* 3.4 0
 slotmove =media-libs/libmusepack-1.1 1.1 0
 slotmove =media-libs/flac-1.2 1.2 0
 move net-analyzer/ucd-snmp net-analyzer/net-snmp
-slotmove =x11-libs/openmotif-2.1* 2.1 0
-slotmove =x11-libs/openmotif-2.2* 2.2 0
+slotmove =x11-libs/openmotif-2.1* 0 2.1
+slotmove =x11-libs/openmotif-2.2* 0 2.2
 slotmove =app-editors/emacs-21.3.50* 21.3.50 22.0.50
 move sys-apps/lm-sensors sys-apps/lm_sensors
 move kde-base/konqueror-arkplugin kde-base/konq-plugins
@@ -152,7 +152,7 @@ move kde-base/konqueror-webarchiver kde-base/konq-plugins
 move sys-libs/device-mapper sys-fs/device-mapper
 move sys-apps/mdadm sys-fs/mdadm
 move net-analyzer/snort_inline net-analyzer/snort
-slotmove x11-libs/lesstif 2.1 0
+slotmove x11-libs/lesstif 0 2.1
 move sys-apps/lsof sys-process/lsof
 move sys-apps/htop sys-process/htop
 move sys-apps/acctail sys-process/acctail
