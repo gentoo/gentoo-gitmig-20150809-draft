@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.ebuild,v 1.11 2004/11/22 22:48:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.ebuild,v 1.12 2004/12/14 12:16:05 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,12 +11,12 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ppc ~sparc alpha amd64 ia64 arm ~mips"
-IUSE="altivec debug doc dvd encode faad imlib mmx oggvorbis sdl static truetype"
+IUSE="altivec debug doc dvd encode aac imlib mmx oggvorbis sdl static truetype"
 
 DEPEND="encode? ( >=media-sound/lame-3.92 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0-r1 )
 	doc? ( >=app-text/texi2html-1.64 )
-	faad? ( >=media-libs/faad2-1.1 )
+	aac? ( >=media-libs/faad2-1.1 )
 	dvd? ( >=media-libs/a52dec-0.7.4 )
 	sdl? ( >=media-libs/libsdl-1.2.5 )
 	imlib? ( >=media-libs/imlib2-1.0.6 )
@@ -42,7 +42,7 @@ src_compile() {
 	use mmx || myconf="${myconf} --disable-mmx"
 	use encode && myconf="${myconf} --enable-mp3lame"
 	use oggvorbis && myconf="${myconf} --enable-vorbis"
-	use faad && myconf="${myconf} --enable-faad --enable-faadbin"
+	use aac && myconf="${myconf} --enable-faad --enable-faadbin"
 	use dvd && myconf="${myconf} --enable-a52 --enable-a52bin"
 	use static || myconf="${myconf} --enable-shared"
 	use sdl || myconf="${myconf} --disable-ffplay"
