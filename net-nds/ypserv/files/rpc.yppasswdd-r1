@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/files/rpc.yppasswdd-r1,v 1.1 2004/06/08 05:28:54 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/files/rpc.yppasswdd-r1,v 1.2 2004/06/11 19:56:53 eradicator Exp $
 
 depend() {
 	need net portmap ypserv
@@ -9,7 +9,6 @@ depend() {
 
 start() {
 	ebegin "Starting rpc.yppasswdd"
-	start-stop-daemon --start --quiet --exec /usr/sbin/rpc.yppasswdd
 	YOPTS=""
 	if [ -n "${YPPASSWDD_OPTS}" ]; then YOPTS="-- $YPPASSWDD_OPTS"; fi
 	start-stop-daemon --start --quiet --exec /usr/sbin/rpc.yppasswdd ${YOPTS}
