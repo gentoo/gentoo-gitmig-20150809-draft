@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.37-r1.ebuild,v 1.6 2004/11/01 00:48:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.37-r1.ebuild,v 1.7 2004/11/28 19:05:56 blubb Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,7 @@ SRC_URI="http://www.openwall.com/john/b/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ppc ~alpha"
+KEYWORDS="~x86 ~sparc ppc ~alpha ~amd64"
 #KEYWORDS removed until "generic" target is fixed - "~mips ~hppa"
 IUSE="mmx ntlm skey mysql kerberos"
 
