@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.25 2004/01/09 22:00:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.26 2004/04/06 10:45:18 method Exp $
+
+  06 Apr 2004; Joshua Brindle <method@gentoo.org> gpm-1.20.1.ebuild:
+  added selinux policy to rdepend
 
   09 Jan 2004; Jason Wever <weeve@gentoo.org> gpm-1.20.1.ebuild:
   Marked stable on sparc.

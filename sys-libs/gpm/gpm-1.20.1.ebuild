@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.15 2004/02/22 23:09:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.16 2004/04/06 10:45:18 method Exp $
 
-IUSE=""
+IUSE="selinux"
 # Please use this variable to keep patch names sane for our patches!
 PATCH_VER="1.0"
 
@@ -23,6 +23,7 @@ HOMEPAGE="ftp://arcana.linux.it/pub/gpm/"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	sys-devel/autoconf"
+RDEPEND="selinux? ( sec-policy/selinux-gpm )"
 
 SLOT="0"
 LICENSE="GPL-2"
