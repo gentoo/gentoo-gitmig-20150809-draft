@@ -1,0 +1,11 @@
+# ChangeLog for games-util/loki_setupdb
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_setupdb/ChangeLog,v 1.1 2004/09/21 22:17:45 wolf31o2 Exp $
+
+*loki_setupdb-20040916 (21 Sep 2004)
+
+  21 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +loki_setupdb-20040916.ebuild:
+  Initial import. Ebuild submitted by Alex Linke <incubation.11@freenet.de> to
+  bug #63648. Closing bug #63648.
+
