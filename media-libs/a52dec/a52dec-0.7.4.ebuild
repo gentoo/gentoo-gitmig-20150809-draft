@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4.ebuild,v 1.17 2004/07/01 07:53:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4.ebuild,v 1.18 2004/09/28 02:04:20 vapier Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://liba52.sourceforge.net/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 arm"
 IUSE="oss static"
 
 DEPEND=">=sys-devel/autoconf-2.52d-r1"
