@@ -1,6 +1,12 @@
 # ChangeLog for net-im/msn-transport
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/ChangeLog,v 1.5 2004/05/24 00:42:32 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/ChangeLog,v 1.6 2004/06/01 11:24:14 humpback Exp $
+
+*msn-transport-20040531 (01 Jun 2004)
+
+  01 Jun 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  msn-transport-20040531.ebuild, files/msn-transport.init:
+  Adding new version and updating init script. Getting close to update.
 
   24 May 2004; Gustavo Felisberto <humpback@gentoo.org>;
   msn-transport-1.2.8_rc1.ebuild, msn-transport-20040228.ebuild:

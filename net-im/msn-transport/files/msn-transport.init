@@ -15,7 +15,7 @@ stop() {
 	ebegin "Stoping MSN Jabber Transport"
 	kill `cat /var/log/jabber/msnt.pid`
 	sleep 2
-	if ( -f /var/log/jabber/msnt.pid ); then
+	if [ -f /var/log/jabber/msnt.pid ]; then
 		kill -9 `cat /var/log/jabber/msnt.pid`
 		rm -f /var/log/jabber/msnt.pid
 	fi
