@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.0.ebuild,v 1.3 2004/04/05 21:13:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.1.ebuild,v 1.1 2004/05/04 22:35:52 foser Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64"
 IUSE="doc tiff jpeg"
 
 RDEPEND="virtual/x11
@@ -18,11 +18,15 @@ RDEPEND="virtual/x11
 	>=dev-libs/atk-1.0.1
 	>=x11-libs/pango-1.4
 	>=media-libs/libpng-1.2.1
+	>=x11-themes/gnome-icon-theme-1.2
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.5.7 )"
+
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
+	sys-devel/autoconf
 	doc? ( >=dev-util/gtk-doc-1 )"
+
 
 src_unpack() {
 
@@ -34,6 +38,8 @@ src_unpack() {
 	epatch ${FILESDIR}/gtk+-2.0.6-exportsymbols.patch
 	# beautifying patch for disabled icons
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
+	# define a sensible default icon theme
+	epatch ${FILESDIR}/${P}-define_sensible_icon_theme.patch
 
 	autoconf || die
 
