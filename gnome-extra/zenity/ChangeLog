@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.16 2004/03/17 01:04:18 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.17 2004/03/21 16:55:16 foser Exp $
+
+*zenity-2.5.91 (21 Mar 2004)
+
+  21 Mar 2004; foser <foser@gentoo.org> zenity-2.5.91.ebuild :
+  Gnome 2.6 commit
 
   16 Mar 2004; Stephen P. Becker <geoman@gentoo.org> zenity-1.8.ebuild:
   Added ~mips keyword.
