@@ -1,10 +1,14 @@
 # ChangeLog for net-im/gnomeicu
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.11 2002/09/15 11:48:21 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.12 2002/09/20 14:33:37 spider Exp $
 
 *gnomeicu-0.98.111-r1 (15 Sep 2002)
-  15 Sep 2002; Spider <spider@gentoo.org>  gnomeicu-0.98.111-r1.ebuild :
- generally cleaned up
+  
+  20 Sep 2002; Spider <spider@gentoo.org> gnomeicu-0.98.111-r1.ebuild : Removed 
+  the deprecated "--with-statusmenu" flag from the use gnome section. I got a 
+  mail  from Olivier Crete <olivier.crete@tester.ca> that it doesnt do anything and is removed in the next release
+
+  15 Sep 2002; Spider <spider@gentoo.org>  gnomeicu-0.98.111-r1.ebuild :  generally cleaned up
   enable debug
   enable status applet
   

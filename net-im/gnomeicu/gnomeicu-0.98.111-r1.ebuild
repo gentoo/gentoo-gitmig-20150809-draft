@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.111-r1.ebuild,v 1.1 2002/09/15 11:48:21 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.111-r1.ebuild,v 1.2 2002/09/20 14:33:37 spider Exp $
 
 
 inherit debug
@@ -29,7 +29,10 @@ src_compile() {
 	local myconf
 
 	myconf="--prefix=/usr --with-debug"
-	use gnome && myconf="${myconf} --with-statusmenu"
+## with statusmenu is deprecated according to <olivier.crete@tester.ca> (GnomeICU go-maintainer)
+
+
+##	use gnome && myconf="${myconf} --with-statusmenu"
 	econf \
 		${myconf} || die
 
