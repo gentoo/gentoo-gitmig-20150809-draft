@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.88 2004/03/30 05:22:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.89 2004/04/09 07:05:10 lv Exp $
+
+*gtk+-2.4.0-r1 (09 Apr 2004)
+
+  09 Apr 2004; Travis Tilley <lv@gentoo.org> gtk+-2.4.0-r1.ebuild,
+  files/gtk+-2.4.0-uimanager-zero-becomes-null.patch:
+  added patch to fix a crash in epiphany that may or may not occur only on
+  amd64. for more information on this bug, please refer to
+  http://bugzilla.gnome.org/show_bug.cgi?id=138997
 
   30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; gtk+-2.2.4-r1.ebuild,
   gtk+-2.4.0.ebuild:

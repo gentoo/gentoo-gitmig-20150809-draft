@@ -1,0 +1,20 @@
+--- gtk/gtkuimanager.c.old	2004-04-09 02:36:33.679152760 -0400
++++ gtk/gtkuimanager.c	2004-04-09 02:45:50.571492256 -0400
+@@ -584,7 +584,7 @@
+ 		    "object_signal::connect_proxy", G_CALLBACK (cb_proxy_connect_proxy), self,
+ 		    "object_signal::disconnect_proxy", G_CALLBACK (cb_proxy_disconnect_proxy), self,
+ 		    "object_signal::pre_activate", G_CALLBACK (cb_proxy_pre_activate), self,
+-		    "object_signal::post_activate", G_CALLBACK (cb_proxy_post_activate), self, 0);
++		    "object_signal::post_activate", G_CALLBACK (cb_proxy_post_activate), self, NULL);
+ 
+   /* dirty all nodes, as action bindings may change */
+   dirty_all_nodes (self);
+@@ -619,7 +619,7 @@
+                        "any_signal::disconnect_proxy", G_CALLBACK (cb_proxy_disconnect_proxy), self,
+                        "any_signal::pre_activate", G_CALLBACK (cb_proxy_pre_activate), self,
+                        "any_signal::post_activate", G_CALLBACK (cb_proxy_post_activate), self, 
+-                       0);
++                       NULL);
+   g_object_unref (action_group);
+ 
+   /* dirty all nodes, as action bindings may change */
