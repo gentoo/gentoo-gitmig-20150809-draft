@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverputt/neverputt-0.18.3.ebuild,v 1.1 2003/10/31 23:40:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverputt/neverputt-0.18.3.ebuild,v 1.2 2004/02/10 06:12:44 mr_bones_ Exp $
 
 inherit games
 
@@ -9,9 +9,10 @@ DESCRIPTION="Mini golf game forked from the neverball code"
 HOMEPAGE="http://icculus.org/neverball/"
 SRC_URI="http://icculus.org/neverball/${P}.tar.bz2"
 
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.2
 	>=media-libs/sdl-mixer-1.2.5
