@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/commonbox-styles
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/ChangeLog,v 1.6 2002/09/04 12:18:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/ChangeLog,v 1.7 2002/09/25 21:12:38 mkeadle Exp $
+
+*commonbox-styles-0.4 (25 Sep 2002)
+
+  25 Sep 2002; Matt Keadle <mkeadle@gentoo.org>
+  commonbox-styles-0.4.ebuild files/digest-commonbox-styles-0.4 :
+
+  Version bump to include new openbox theme (fieron)
 
 *commonbox-styles-0.3 (04 Sep 2002)
 
