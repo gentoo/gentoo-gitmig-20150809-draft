@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.12 2004/06/13 12:58:03 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.13 2004/06/13 13:19:52 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -163,7 +163,7 @@ subversion_svn_fetch() {
 		cd "${ESVN_CO_DIR}"
 
 		local NOW=$(date +%s) UPDATE=$(date -r .svn/entries +%s) INTERVAL=3600
-		if expr ${NOW} - ${UPDATE} \> ${INTERVAL} >/dev/null; then
+		if (( ${NOW} - ${UPDATE} > ${INTERVAL} )); then
 			${ESVN_UPDATE_CMD} || die "${ESVN}: can't update from ${ESVN_REPO_URI}."
 
 		else
