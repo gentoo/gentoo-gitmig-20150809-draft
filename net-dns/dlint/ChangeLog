@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/dlint
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/ChangeLog,v 1.5 2004/06/24 22:34:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/ChangeLog,v 1.6 2004/10/19 14:10:26 ticho Exp $
+
+  19 Oct 2004; Andrej Kacian <ticho@gentoo.org> :
+  Fix deprecated use of head(1) and tail(1). Closes #67995, reported by Ray
+  Booysen <bugzilla.gentoo@rjb.za.net>. Also, optimized the ebuild a bit.
+  Added sys-apps/coreutils to DEPEND, since head and tail are provided by that
+  package. And finally, set myself as maintainer for dlint.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
