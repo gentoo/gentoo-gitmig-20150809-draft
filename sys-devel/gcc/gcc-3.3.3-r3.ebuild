@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.5 2004/04/30 00:31:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.6 2004/05/03 09:14:26 vapier Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
@@ -355,12 +355,15 @@ src_unpack() {
 	# enable it by default ...
 
 	cd ${WORKDIR}/${P}
-	epatch ${DISTDIR}/${PIE_SSP_PATCH}
-	use uclibc || epatch ${DISTDIR}/${PIE_EXCLUSION_PATCH}
+	if [ "${ARCH}" != "arm" ]
+	then
+		epatch ${DISTDIR}/${PIE_SSP_PATCH}
+		use uclibc || epatch ${DISTDIR}/${PIE_EXCLUSION_PATCH}
+	fi
 
 	release_version="${release_version}, pie-${PIE_VER}"
 
-	if [ -n "`use hardened`" -a "${ARCH}" != "sparc" ]
+	if [ -n "`use hardened`" -a "${ARCH}" != "sparc" -a "${ARCH}" != "arm" ]
 	then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
 		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP|' \
