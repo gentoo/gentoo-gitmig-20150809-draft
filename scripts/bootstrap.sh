@@ -23,6 +23,7 @@ cleanup() {
 
 #USE may be set from the environment so we back it up for later.
 export ORIGUSE="`spython -c 'import portage; print portage.settings["USE"];'`"
+export GENTOO_MIRRORS="`spython -c 'import portage; print portage.settings["GENTOO_MIRRORS"];'`"
 export USE="build"
 #get correct CFLAGS, CHOST, CXXFLAGS, MAKEOPTS since make.conf will be
 #overwritten
