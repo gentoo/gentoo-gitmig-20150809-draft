@@ -1,6 +1,9 @@
 # ChangeLog for net-www/screem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/ChangeLog,v 1.13 2003/09/16 20:35:10 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/ChangeLog,v 1.14 2004/02/23 19:31:44 bazik Exp $
+
+  23 Feb 2004; Sven Blumenstein <bazik@gentoo.org> screem-0.8.1.ebuild:
+  Stable on sparc. Thanks to Lars Weiler <pylon@gentoo.org> for testing!
 
 *screem-0.8.1 (16 Sep 2003)
 
