@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.11 2004/06/06 10:03:11 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.12 2004/06/13 12:58:03 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -53,7 +53,11 @@ ESVN_STORE_DIR="${DISTDIR}/svn-src"
 ## -- ESVN_REPO_URI:  repository uri
 #
 # e.g. http://foo/trunk, svn://bar/trunk
-# but currentry support http and https only.
+#
+# supported protocols:
+#   http://
+#   https://
+#   svn://
 #
 [ -z "${ESVN_REPO_URI}" ]  && ESVN_REPO_URI=""
 
@@ -103,7 +107,7 @@ subversion_svn_fetch() {
 	# ESVN_REPO_URI is empty.
 	[ -z "${ESVN_REPO_URI}" ] && die "${ESVN}: ESVN_REPO_URI is empty."
 
-	# http and https only...
+	# check for the protocol.
 	case ${ESVN_REPO_URI%%:*} in
 		http)	;;
 		https)	;;
@@ -121,18 +125,21 @@ subversion_svn_fetch() {
 	! has userpriv ${FEATURE} && addwrite "/root/.subversion"
 
 	if [ ! -d "${ESVN_STORE_DIR}" ]; then
-		mkdir -p "${ESVN_STORE_DIR}" || die "${ESVN}: can't mkdir ${ESVN_STORE_DIR}."
+		mkdir -p "${ESVN_STORE_DIR}"      || die "${ESVN}: can't mkdir ${ESVN_STORE_DIR}."
 		chmod -f o+rw "${ESVN_STORE_DIR}" || die "${ESVN}: can't chmod ${ESVN_STORE_DIR}."
+
 		einfo "created store directory: ${ESVN_STORE_DIR}"
 		einfo
 	fi
 
 	cd "${ESVN_STORE_DIR}"
 
-	if [ -z ${ESVN_REPO_URI##*/} ]; then
+	if [ -z "${ESVN_REPO_URI##*/}" ]; then
 		ESVN_REPO_FIX="${ESVN_REPO_URI%/}"
+
 	else
 		ESVN_REPO_FIX="${ESVN_REPO_URI}"
+
 	fi
 
 	ESVN_CO_DIR="${ESVN_PROJECT}/${ESVN_REPO_FIX##*/}"
@@ -142,10 +149,11 @@ subversion_svn_fetch() {
 		einfo "subversion check out start -->"
 		einfo "   checkout from: ${ESVN_REPO_URI}"
 
-		mkdir -p "${ESVN_PROJECT}" || die "${ESVN}: can't mkdir ${ESVN_PROJECT}."
+		mkdir -p "${ESVN_PROJECT}"      || die "${ESVN}: can't mkdir ${ESVN_PROJECT}."
 		chmod -f o+rw "${ESVN_PROJECT}" || die "${ESVN}: can't chmod ${ESVN_PROJECT}."
 		cd "${ESVN_PROJECT}"
 		${ESVN_FETCH_CMD} "${ESVN_REPO_URI}" || die "${ESVN}: can't fetch from ${ESVN_REPO_URI}."
+
 		einfo "   checkouted in: ${ESVN_STORE_DIR}/${ESVN_CO_DIR}"
 
 	else
@@ -157,8 +165,10 @@ subversion_svn_fetch() {
 		local NOW=$(date +%s) UPDATE=$(date -r .svn/entries +%s) INTERVAL=3600
 		if expr ${NOW} - ${UPDATE} \> ${INTERVAL} >/dev/null; then
 			${ESVN_UPDATE_CMD} || die "${ESVN}: can't update from ${ESVN_REPO_URI}."
+
 		else
 			echo "Skip updating..."
+
 		fi
 
 		einfo "    updated in: ${ESVN_STORE_DIR}/${ESVN_CO_DIR}"
@@ -184,6 +194,7 @@ subversion_bootstrap() {
 
 	if [ "${ESVN_PATCHES}" ]; then
 		einfo "apply paches -->"
+
 		for PATCH in ${ESVN_PATCHES}; do
 			if [ -f "${PATCH}" ]; then
 				epatch ${PATCH}
@@ -205,6 +216,7 @@ subversion_bootstrap() {
 
 	if [ "${ESVN_BOOTSTRAP}" ]; then
 		einfo "begin bootstrap -->"
+
 		if [ -f "${ESVN_BOOTSTRAP}" -a -x "${ESVN_BOOTSTRAP}" ]; then
 			einfo "   bootstrap with a file: ${ESVN_BOOTSTRAP}"
 			eval "./${ESVN_BOOTSTRAP}" || die "${ESVN}: can't execute ESVN_BOOTSTRAP."
