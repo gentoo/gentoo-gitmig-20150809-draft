@@ -3,9 +3,9 @@ MD5 f578328c0cd4c8ace071ec52411ffe4e gnome2-user-docs-2.0.1.ebuild 712
 MD5 029daf60af17d2115fa65e8f35f4a59d gnome2-user-docs-1.93-r1.ebuild 709
 MD5 196da9b195a95c5bcd11d405feef3249 gnome2-user-docs-2.0.5.ebuild 484
 MD5 e648563bd7beecce8ea5ea7e5c6266f7 gnome2-user-docs-2.0.0.ebuild 707
-MD5 e47f5ef1302bdbf6a5dfc85cff90876e ChangeLog 1979
+MD5 1648186ca7bf7c0bc7fb7ab7c184e98b ChangeLog 2101
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 196da9b195a95c5bcd11d405feef3249 gnome2-user-docs-2.4.0.ebuild 484
+MD5 a19847475d73f1c5c3ee3e17d4028ec7 gnome2-user-docs-2.4.0.ebuild 484
 MD5 2b13b6692d32a3e736f5e0e45024fbb2 files/digest-gnome2-user-docs-2.0.0 76
 MD5 ff66192c705b95a5734ae9d211ff3f89 files/digest-gnome2-user-docs-2.0.1 76
 MD5 014e733ea36d0ba0b05b762a7932ce88 files/digest-gnome2-user-docs-2.0.5 76
