@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gplcver/gplcver-1.10j.ebuild,v 1.1 2004/07/26 15:26:37 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gplcver/gplcver-1.10j.ebuild,v 1.2 2004/07/26 17:47:43 chrb Exp $
 
 MY_PN=gpl-cver
 
@@ -33,4 +33,7 @@ src_install() {
 	doman doc/systasks.1
 	dodoc doc/README doc/cver*[!htm] doc/dbg.hlp doc/systasks.pdf vcddiff.dir/README.vcddiff
 	dohtml doc/cver.faq.htm
+	dodir /usr/include/cver_pli_incs
+	insinto /usr/include/cver_pli_incs
+	doins pli_incs/*.h
 }
