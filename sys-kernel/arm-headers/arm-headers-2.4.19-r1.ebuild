@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-headers/arm-headers-2.4.19-r1.ebuild,v 1.4 2003/10/27 13:49:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-headers/arm-headers-2.4.19-r1.ebuild,v 1.5 2004/02/06 18:18:27 iggy Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE=""
