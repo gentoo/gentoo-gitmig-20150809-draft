@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.3.ebuild,v 1.2 2004/12/09 09:09:31 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.3-r1.ebuild,v 1.1 2005/01/09 19:14:57 kumba Exp $
 
 
 # Variables 
@@ -10,6 +10,7 @@ TMP_P="${P/-${MYARCH}/}"
 TMP_PN="${PN/-${MYARCH}/}"
 I="/usr"
 S="${WORKDIR}/${P}"
+IUSE="ip28"
 BRANCH_UPDATE=""
 
 DESCRIPTION="Mips64 Kernel Compiler (Experimental)"
@@ -52,6 +53,11 @@ src_unpack() {
 	# Patch in Branch update
 	if [ ! -z "${BRANCH_UPDATE}" ]; then
 		epatch ${WORKDIR}/${TMP_P}-branch-update-${BRANCH_UPDATE}.patch
+	fi
+
+	# If on an IP28 box (set by profile), then add in cache barrier patch
+	if use ip28; then
+		epatch ${FILESDIR}/gcc-3.4.2-mips-ip28_cache_barriers.patch
 	fi
 
 	# Make gcc's version info specific to Gentoo

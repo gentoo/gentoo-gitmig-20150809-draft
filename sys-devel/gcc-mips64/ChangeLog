@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gcc-mips64
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.10 2004/12/09 09:09:31 kumba Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.11 2005/01/09 19:14:57 kumba Exp $
+
+*gcc-mips64-3.4.3-r1 (09 Jan 2005)
+
+  09 Jan 2005; Joshua Kinard <kumba@gentoo.org>
+  +files/gcc-3.4.2-mips-ip28_cache_barriers.patch,
+  +gcc-mips64-3.4.3-r1.ebuild, -gcc-mips64-3.4.3.ebuild:
+  Add ip28 cache barrier patch for gcc-mips64. Anyone using this probably has an
+  inkling of what it does. Only used in this case for kernels. The system gcc
+  can use it for other things is absolutely needed.
 
   09 Dec 2004; Joshua Kinard <kumba@gentoo.org>
   -files/gcc-3.3.1-gentoo-branding.patch,
