@@ -7,7 +7,7 @@ MD5 89403525f4da5e8458fd7f720d6de6ee linux26-headers-2.6.6-r1.ebuild 4223
 MD5 21dcb669b4e8535f0a04f40ad2c4c9ff metadata.xml 224
 MD5 b3d1c41a74dbe1041b4082288cacd3ca linux26-headers-2.6.7-r4.ebuild 4031
 MD5 91179c84e3dc8dadcfdad16cabede343 linux26-headers-2.6.5.ebuild 4188
-MD5 649888756dbdeee5eb8cc380bc30bfba linux26-headers-2.6.8.1-r1.ebuild 4535
+MD5 d0cb7106bf3a5f6266aefe15553df50a linux26-headers-2.6.8.1-r1.ebuild 4534
 MD5 18bed04a1b45de515096089cc10913ec files/digest-linux26-headers-2.6.8.1 68
 MD5 14a0de85d11206096f05e186cebab07b files/linux26-headers-2.6.8.1-appCompat.patch 53549
 MD5 0501d9fb994e3c9721b2a239e92e30c6 files/linux26-headers-2.6.8.1-strict-ansi-fix.patch 4086
@@ -31,7 +31,7 @@ MD5 9f83b3bf65ac599e58c5b96ed2569963 files/linux26-headers-2.6.8.1-sparc-signal_
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBrzRLroRuSHgZdywRAvRwAJwL2pZBLZ78YPrCax6alByv3YxjvgCeKsj4
-WGHXM731XKZoDFxFxU8eHMk=
-=R93x
+iD8DBQFBrzUproRuSHgZdywRAg0PAJ9Qh+Kis5mhtz3R5GtTMHQLAfWEWgCeI3tu
+/wPCWxv1Q2HeRl5xTTO8Ae4=
+=OgRn
 -----END PGP SIGNATURE-----
