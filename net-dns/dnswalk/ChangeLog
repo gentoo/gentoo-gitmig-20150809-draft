@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnswalk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnswalk/ChangeLog,v 1.5 2004/06/24 22:35:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnswalk/ChangeLog,v 1.6 2004/08/29 23:33:55 kugelfang Exp $
+
+  30 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> dnswalk-2.0.2.ebuild:
+  Marked ~amd64.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
