@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0-r3.ebuild,v 1.1 2003/12/08 01:22:39 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0-r3.ebuild,v 1.2 2003/12/14 02:29:45 pylon Exp $
 
 IUSE="nls"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://blackboxwm.sf.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc"
 MYCONF="--disable-nls"
 
 mydoc="AUTHORS LICENSE README ChangeLog* TODO* data/README*"
