@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.12 2004/11/04 00:08:06 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.13 2004/11/04 01:52:13 geoman Exp $
+
+# Stephen P. Becker <geoman@gentoo.org>
+# masked for now until this can be properly tested with alsa
+jack
 
 # Stephen P. Becker <geoman@gentoo.org>
 # masked because of silly java deps with gnome
