@@ -11,3 +11,4 @@ move app-misc/kbeam kde-misc/kbeam
 move app-misc/kleds kde-misc/kleds
 move app-misc/kkeyled kde-misc/kkeyled
 move app-misc/kexchange kde-misc/kexchange
+move app-misc/krecipes kde-misc/krecipes
