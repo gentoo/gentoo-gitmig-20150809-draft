@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.09a-r1.ebuild,v 1.7 2002/10/05 05:39:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.09a-r1.ebuild,v 1.8 2003/01/16 12:38:30 seemant Exp $
 
 IUSE="truetype gif nls imlib"
 
@@ -43,6 +43,9 @@ src_compile() {
 	use nls \
 		&& myconf="${myconf} --enable-locale" \
 		|| myconf="${myconf} --disable-locale"
+
+	use nls && use truetype \
+		&& myconf="${myconf} --enable-freetype-charset16"
 
 	export LIBS="-L/usr/lib/ -L/usr/X11R6/lib/ -lX11"
 
