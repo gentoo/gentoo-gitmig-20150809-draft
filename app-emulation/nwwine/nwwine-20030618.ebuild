@@ -1,20 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/nwwine/nwwine-20030618.ebuild,v 1.1 2003/06/28 11:18:37 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/nwwine/nwwine-20030618.ebuild,v 1.2 2003/08/01 20:22:45 vapier Exp $
 
 DESCRIPTION="A special version of wine for the Never Winter Nights toolkit"
+HOMEPAGE="http://www.winehq.com/ http://republika.pl/nwnlinux/"
 SRC_URI="mirror://gentoo/${P}-misc.tar.bz2
         ftp://128.173.184.249/Linux/nwwine/nwwine-based-on-${PV}.tar.gz
 	mirror://gentoo/${P}-fake_windows.tar.bz2
 	mirror://gentoo/wine-nvidia-fix.patch.gz"
 
-HOMEPAGE="http://www.winehq.com/ http://republika.pl/nwnlinux/"
-
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 -ppc -sparc"
-IUSE="nas arts cups opengl alsa tcltk"
-S=${WORKDIR}/nwwine-based-on-${PV}
+IUSE="nas arts cups opengl alsa tcltk debug"
 
 DEPEND="sys-devel/gcc
 	sys-devel/flex
@@ -30,6 +28,8 @@ DEPEND="sys-devel/gcc
 	cups? ( net-print/cups )
 	opengl? ( virtual/opengl )"
 
+S=${WORKDIR}/nwwine-based-on-${PV}
+
 src_compile() {
 	cd ${S}/dlls/opengl32
 	epatch ${WORKDIR}/wine-nvidia-fix.patch
@@ -38,32 +38,31 @@ src_compile() {
 	#fix the nwwine wrapper
 	mv nwwine.sh nwwine.old
 	sed -e "s:wine:/usr/lib/nwwine/bin/wine:" nwwine.old > nwwine.sh
-	
-	local myconf
 
-	use opengl && myconf="--enable-opengl" || myconf="--disable-opengl"
-	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 	# there's no configure flag for cups, arts, alsa and nas, it's supposed to be autodetected
 
 	# use the default setting in ./configure over the /etc/make.conf setting
 	unset CFLAGS CXXFLAGS
 
-	./configure --prefix=/usr/lib/${PN} \
+	./configure \
+		--prefix=/usr/lib/${PN} \
 		--sysconfdir=/etc/${PN} \
 		--host=${CHOST} \
 		--enable-curses \
-		${myconf} || die "configure failed"
+		`use_enable opengl` \
+		`use_enable debug trace` \
+		`use_enable debug` \
+		|| die "configure failed"
 
 	# No parallel make
 	make depend all || die "make depend all failed"
 	cd programs && emake || die
 }
 
-src_install () {
+src_install() {
 	local WINEMAKEOPTS="prefix=${D}/usr/lib/${PN}"
 
 	### Install wine to ${D}
-	cd ${S}
 	make ${WINEMAKEOPTS} install || die
 	cd ${S}/programs
 	make ${WINEMAKEOPTS} install || die

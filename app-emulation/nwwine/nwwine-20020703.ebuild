@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/nwwine/nwwine-20020703.ebuild,v 1.4 2003/06/29 20:06:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/nwwine/nwwine-20020703.ebuild,v 1.5 2003/08/01 20:22:45 vapier Exp $
 
 DESCRIPTION="A special version of wine for the Never Winter Nights toolkit"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.winehq.com/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 -ppc -sparc"
-IUSE="nas arts cups opengl alsa tcltk"
+IUSE="nas arts cups opengl alsa tcltk debug"
 
 DEPEND="sys-devel/gcc
 	sys-devel/flex
@@ -26,21 +26,20 @@ DEPEND="sys-devel/gcc
 	opengl? ( virtual/opengl )"
 
 src_compile() {
-	cd ${S}
-	local myconf
-
-	use opengl && myconf="--enable-opengl" || myconf="--disable-opengl"
-	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 	# there's no configure flag for cups, arts, alsa and nas, it's supposed to be autodetected
 
 	# use the default setting in ./configure over the /etc/make.conf setting
 	unset CFLAGS CXXFLAGS
 
-	./configure --prefix=/usr/lib/${PN} \
+	./configure \
+		--prefix=/usr/lib/${PN} \
 		--sysconfdir=/etc/${PN} \
 		--host=${CHOST} \
 		--enable-curses \
-		${myconf} || die "configure failed"
+		`use_enable opengl` \
+		`use_enable debug trace` \
+		`use_enable debug` \
+		|| die "configure failed"
 
 	sed -i -e 's:wine.pm:include/wine.pm:' ${S}/programs/winetest/Makefile || \
 		die "sed programs/winetest/Makefile failed"
@@ -50,11 +49,10 @@ src_compile() {
 	cd programs && emake || die
 }
 
-src_install () {
+src_install() {
 	local WINEMAKEOPTS="prefix=${D}/usr/lib/${PN}"
 
 	### Install wine to ${D}
-	cd ${S}
 	make ${WINEMAKEOPTS} install || die
 	cd ${S}/programs
 	make ${WINEMAKEOPTS} install || die
