@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.5_pre20040515.ebuild,v 1.2 2004/05/17 17:15:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.5_pre20040515.ebuild,v 1.3 2004/05/19 01:00:14 gmsoft Exp $
 
 MY_V=${PV/_pre/-CVS}
 DESCRIPTION="PALO : PArisc Linux Loader"
@@ -26,7 +26,6 @@ src_compile() {
 	emake -C palo CFLAGS="${CFLAGS} -I../include -I../lib" || die
 	emake -C ipl CFLAGS="${CFLAGS} -I. -I../lib -I../include -fwritable-strings -mdisable-fpregs -Wall" || die
 	emake MACHINE=parisc iplboot
-	emake || die
 }
 
 src_install() {
