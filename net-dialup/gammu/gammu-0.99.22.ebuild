@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/gammu-0.99.22.ebuild,v 1.1 2005/01/17 05:46:46 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/gammu-0.99.22.ebuild,v 1.2 2005/02/06 11:54:10 mrness Exp $
 
 inherit eutils
 
@@ -20,11 +20,6 @@ RDEPEND="irda? ( virtual/os-headers )
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
-
-src_unpack() {
-	unpack ${A}
-	#epatch ${FILESDIR}/${P}-LastCalendar.patch
-}
 
 src_compile() {
 	local myconf
