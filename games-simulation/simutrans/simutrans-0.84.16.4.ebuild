@@ -1,19 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.84.16.2.ebuild,v 1.2 2005/03/09 22:38:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.84.16.4.ebuild,v 1.1 2005/03/09 22:38:31 mr_bones_ Exp $
 
 inherit games
 
 MY_PV=${PV//./_}
-S="${WORKDIR}/${PN}"
 DESCRIPTION="A free Transport Tycoon clone"
 HOMEPAGE="http://www.simutrans.de/"
-SRC_URI="http://hajo.simutrans.com/download/simubase-${MY_PV}.zip
+SRC_URI="http://hajo.simutrans.com/download/simubase-${MY_PV/_4/_2}.zip
 	http://hajo.simutrans.com/download/simulinux-${MY_PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* x86 ~amd64"
+KEYWORDS="-* ~amd64 x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
@@ -24,8 +23,10 @@ RDEPEND="media-libs/libsdl
 		app-emulation/emul-linux-x86-sdl
 	)"
 
+S=${WORKDIR}/${PN}
+
 src_install() {
-	local dir="${GAMES_PREFIX_OPT}/${PN}"
+	local dir=${GAMES_PREFIX_OPT}/${PN}
 
 	games_make_wrapper simutrans ./simutrans "${dir}"
 	keepdir "${dir}/save"
