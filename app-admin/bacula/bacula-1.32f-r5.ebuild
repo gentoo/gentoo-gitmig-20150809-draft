@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f-r5.ebuild,v 1.2 2004/03/19 22:54:43 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f-r5.ebuild,v 1.3 2004/03/21 17:46:46 zul Exp $
 
 MY_P="bacula-1.32f-5"
 S="${WORKDIR}/${MY_P}"
@@ -38,10 +38,10 @@ src_compile() {
 		&& myconf="${myconf} --enable-client-only"
 
 	#might be handy to have static bins in certain situations ...
-	use static \
-		&& myconf="${myconf} --enable-static-tools \
-		--enable-static-fd --enable-static-sd \
-		--enable-static-dir --enable-static-cons"
+	#use static \
+	#	&& myconf="${myconf} --enable-static-tools \
+	#	--enable-static-fd --enable-static-sd \
+	#	--enable-static-dir --enable-static-cons"
 	myconf="
 		`use_enable readline`
 		`use_enable gnome`
@@ -77,17 +77,56 @@ src_compile() {
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 
 	emake || die "compile problem"
+
+	if use static
+	then
+		cd ${S}/src/filed
+		make static-baula-fd
+		cd ${S}/src/console
+		make static-console
+		cd ${S}/src/dird
+		make static-bacula-dir
+		if use gnome
+		then
+		  cd ${S}/src/gnome-console
+		  make static-gnome-console
+		fi
+		cd ${S}/src/stored
+		make static-bacula-sd
+	fi
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
+
+	if use static
+	then
+		cd ${S}/src/filed
+		cp static-bacula-fd ${D}/usr/sbin/bacula-fd
+		cd ${S}/src/console
+		cp static-console ${D}/usr/sbin/console
+		cd ${S}/src/dird
+		cp static-bacula-dir ${D}/usr/sbin/bacula-dir
+		if use gnome
+		then
+			cd ${S}/src/gnome-console
+			cp static-gnome-console ${D}/usr/sbin/gnome-console
+		fi
+		cd ${S}/src/storge
+		cp static-bacula-sd ${D}/usr/sbin/bacula-sd
+	fi
+
 	rm -rf ${D}/var #empty dir
 
-	dodoc ABOUT-NLS COPYING ChangeLog CheckList INSTALL \
-		README ReleaseNotes kernstodo doc/bacula.pdf
-	cp -a examples ${D}/usr/share/doc/${PF}
+	for a in ${S}/{ABOUT-NLS,COPYING,Changelog,CheckList,INSTALL \
+			README,ReleaseNotes,kernstodo,doc/bacula.pdf}
+	do
+		dodoc $a
+	done
+
+	cp -a ${S}/examples ${D}/usr/share/doc/${PF}
 	chown -R root:root ${D}/usr/share/doc/${PF} #hrmph :\
-	dohtml -r doc/html-manual doc/home-page
+	dohtml -r ${S}/doc/html-manual doc/home-page
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/bacula-init bacula

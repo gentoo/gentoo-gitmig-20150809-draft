@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f.ebuild,v 1.4 2004/03/16 18:57:25 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f.ebuild,v 1.5 2004/03/21 17:46:46 zul Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="featureful client/server network backup suite"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/bacula/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc"
 IUSE="readline tcpd ssl gnome mysql sqlite X static"
 
 #theres a local sqlite use flag. use it -OR- mysql, not both.
@@ -49,10 +49,6 @@ src_compile() {
 		&& myconf="${myconf} --enable-client-only"
 
 	#might be handy to have static bins in certain situations ...
-	use static \
-		&& myconf="${myconf} --enable-static-tools \
-		--enable-static-fd --enable-static-sd \
-		--enable-static-dir --enable-static-cons"
 	myconf="
 		`use_enable readline`
 		`use_enable gnome`
@@ -88,10 +84,48 @@ src_compile() {
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 
 	emake || die "compile problem"
+
+	if use static
+	then
+		cd ${S}/src/files
+		make static-bacula-fd
+		cd ${S}/src/console
+		make static-console
+		cd ${S}/src/dird
+		make static-bacula-dir
+		if use gnome
+		then
+		  cd ${S}/src/gnome-console
+		  make static-gnome-console
+		fi
+		cd ${S}/src/storged
+		make static-bacula-sd
+	fi
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
+
+	if use static
+	then
+		cd ${S}/src/filed
+		cp static-bacula-fd ${D}/usr/sbin/bacula-fd
+		rm -f ${D}/usr/sbin/static-bacula-fd
+		cd ${S}/src/console
+		cp static-console ${D}/usr/sbin/console
+		cd ${S}/src/dird
+		cp static-bacula-dir  ${D}/usr/sbin/bacula-dir
+		rm -f ${D}/usr/sbin/static-bacula-dir
+		if use gnome
+		then
+		   cd ${S}/src/gnome-console
+		   cp static-gnome-console ${D}/usr/sbin/gnome-console
+		fi
+		cd ${S}/src/storage
+		cp static-bacula-sd ${D}/usr/sbin/bacula-sd
+		rm -f ${D}/usr/sbin/static-bacula-sd
+	fi
+
 	rm -rf ${D}/var #empty dir
 
 	dodoc ABOUT-NLS COPYING ChangeLog CheckList INSTALL \

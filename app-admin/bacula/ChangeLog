@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/bacula
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.17 2004/03/19 22:54:43 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.18 2004/03/21 17:46:46 zul Exp $
+
+  21 Mar 2004; Chuck Short <zul@gentoo.org> bacula-1.32f-r5.ebuild,
+  bacula-1.32f.ebuild:
+  Fixed broken static support. Closes #23998.
 
   16 Mar 2004; Chuck Short <zul@gentoo.org> bacula-1.32f.ebuild:
   Added ~sparc keyword
