@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.51 2004/10/22 04:57:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.52 2004/11/10 17:54:28 gregkh Exp $
+
+  10 Nov 2004; Greg Kroah-Hartman <gregkh@gentoo.org>
+  hotplug-20040923.ebuild:
+  20040923 marked stable on x86
 
   22 Oct 2004; Chris Gianelloni <wolf31o2@gentoo.org> files/hotplug.rc:
   Added a check for livecd firmware tarball on disk.
