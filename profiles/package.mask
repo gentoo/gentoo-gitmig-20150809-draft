@@ -43,6 +43,13 @@ dev-java/sun-j2sdk
 # masked for testing
 =app-emulation/pose-3.5-r1
 
+# <mcummings@gentoo.org> (28 Jul 2002)
+# new version of perl - incompatible with 5.6 IO model
+# tested on 05 Aug 2002 on ppc by pvdabeel@gentoo.org
+# make test failed on ppc
+# added -r1, threads and fixes to ebuild - 08/10/02
+>=sys-devel/perl-5.8.0
+
 # <tantive@gentoo.org> (28 Aug 2002)
 # masked because there is a freeze, and to test them.
 =sys-kernel/openmosix-sources-2.4.18-r2
