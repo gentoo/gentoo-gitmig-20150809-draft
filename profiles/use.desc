@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.102 2003/06/23 20:04:42 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.103 2003/06/30 04:19:41 vapier Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -25,6 +25,7 @@ crypt - Add support for encryption -- using mcrypt or gpg where applicable
 cups - Add support for CUPS (Common Unix Printing System)
 curl - Adds support for client-side URL transfer library
 debug - Tells configure and the makefiles to build for debugging. Effects vary acrosss packages, but generally it will at least add -g to CFLAGS. Remember to set FEATURES+=nostrip too.
+dedicated - Adds support for dedicated game servers
 dga - Adds DGA Support (Xfree86) (DGA=Direct Graphic Access)
 directfb - Adds support for DirectFB layer (library for FB devices)
 doc - Adds extra documentation (API, Javadoc, etc)
