@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gfax/gfax-0.7.3.ebuild,v 1.1 2005/03/01 15:52:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gfax/gfax-0.7.3.ebuild,v 1.2 2005/03/11 03:21:07 latexer Exp $
 
 inherit gnome2 mono eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="${IUSE}"
 
-RDEPEND=">=dev-dotnet/mono-0.93
+RDEPEND=">=dev-lang/mono-0.93
 	=dev-dotnet/gtk-sharp-1.0*
 	=dev-dotnet/gconf-sharp-1.0*
 	=dev-dotnet/glade-sharp-1.0*

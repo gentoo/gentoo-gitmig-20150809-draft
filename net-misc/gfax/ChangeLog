@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gfax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gfax/ChangeLog,v 1.4 2005/03/01 15:52:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gfax/ChangeLog,v 1.5 2005/03/11 03:21:07 latexer Exp $
+
+  10 Mar 2005; Peter Johanson <latexer@gentoo.org> gfax-0.6.4.ebuild,
+  gfax-0.7.2.ebuild, gfax-0.7.3.ebuild:
+  mono moved from dev-dotnet -> dev-lang
 
 *gfax-0.7.3 (01 Mar 2005)
 
