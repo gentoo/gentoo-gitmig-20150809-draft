@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.76 2004/11/03 23:51:35 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.77 2004/11/07 04:01:39 morfic Exp $
+
+  06 Nov 2004; Daniel Goller <morfic@gentoo.org> icewm-1.2.17_pre2.ebuild:
+  Small change in ebuild and testing signing
 
 *icewm-1.2.17_pre2 (03 Nov 2004)
 

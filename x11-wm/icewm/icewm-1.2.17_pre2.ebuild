@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.17_pre2.ebuild,v 1.1 2004/11/03 23:51:35 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.17_pre2.ebuild,v 1.2 2004/11/07 04:01:39 morfic Exp $
 
 inherit eutils
 
@@ -91,6 +91,6 @@ src_install(){
 
 	if use silverxp
 	then
-	einfo "Please use Version 1.2.14-3 of the Silverxp theme"
+	einfo "Please use Version >=1.2.14-3 of the Silverxp theme"
 	fi
 }
