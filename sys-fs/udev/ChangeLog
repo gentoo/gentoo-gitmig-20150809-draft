@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.99 2005/03/20 17:42:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.100 2005/03/24 08:06:57 gregkh Exp $
+
+*udev-056 (24 Mar 2005)
+
+  24 Mar 2005; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-056.ebuild:
+  added 056 release
 
   20 Mar 2005; Markus Rothe <corsair@gentoo.org> udev-045.ebuild:
   Stable on ppc64
