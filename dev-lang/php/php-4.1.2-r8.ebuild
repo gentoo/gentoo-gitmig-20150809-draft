@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.2-r8.ebuild,v 1.1 2002/04/27 09:26:07 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.2-r8.ebuild,v 1.2 2002/04/28 23:38:19 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting language"
@@ -80,7 +80,7 @@ src_compile() {
 
 	myconf="--without-readline --without-t1lib"
 	use pam && myconf="${myconf} --with-pam"
-	use nls && myconf="${myconf} --with-gettext" || myconf="${myconf} --without-gettext"
+	use nls || myconf="${myconf} --without-gettext"
 	use gdbm && myconf="${myconf} --with-gdbm=/usr"
 	use berkdb && myconf="${myconf} --with-db3=/usr"
 	use mysql && myconf="${myconf} --with-mysql=/usr"
