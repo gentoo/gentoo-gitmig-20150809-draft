@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.06.ebuild,v 1.4 2004/04/11 15:02:43 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.06.ebuild,v 1.5 2004/04/26 01:46:30 lv Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://somewhere.fscked.org/fireflies/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 
 RDEPEND="virtual/x11
 	virtual/opengl
