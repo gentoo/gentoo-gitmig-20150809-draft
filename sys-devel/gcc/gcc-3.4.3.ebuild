@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.2 2004/11/08 00:27:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.3 2004/11/08 04:37:46 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -45,7 +45,7 @@ PDEPEND="sys-devel/gcc-config
 GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~lv/GCC/"
 #BRANCH_UPDATE="20041025"
 PATCH_VER="1.0"
-PIE_VER="8.7.6.5"
+PIE_VER="8.7.6.6"
 PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
 PP_VER="3_4_3"
 PP_FVER="${PP_VER//_/.}-0"

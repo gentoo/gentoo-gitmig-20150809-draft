@@ -19,12 +19,13 @@ MD5 638023a605f75bd0b58558ea92d8cff9 gcc-3.3.4-r1.ebuild 24863
 MD5 ee95564bedb8cace16469a654758fed4 gcc-3.4.1.ebuild 30323
 MD5 eaccd73f2955ff6549a0f6e29dded1b3 gcc-3.4.1-r2.ebuild 31259
 MD5 849d93a55dc7e809cf4e3e04b8444d95 gcc-3.4.1-r3.ebuild 31292
-MD5 6387748ea628404e15e60678841e624d gcc-3.4.3.ebuild 13037
-MD5 5964360e1dedcf827729ebe83f66fc85 ChangeLog 72229
+MD5 b05a52684d756d80bb86d035ad3b004e .ChangeLog.swp 16384
+MD5 557a9d2785165de2d6f2ac3013c8e8d8 ChangeLog 72542
 MD5 7196ef2e21bcde2f5c7de114cfa5dfc2 gcc-3.3.3-r3.ebuild 23582
 MD5 840f9c25e867afe238633c890f8ad71a gcc-3.3.3-r5.ebuild 24366
 MD5 083cab66f461d2a9ab2054e8fa7ce28c gcc-3.3.4-r2.ebuild 24911
 MD5 56c9a61f1a68e1a62685ee3379d208e6 gcc-3.4.2-r2.ebuild 13478
+MD5 25f418d24c69ca69975db279a0f37185 gcc-3.4.3.ebuild 13037
 MD5 f7e7042c2ddf66e344b30cbc66ebaf73 files/cc 24
 MD5 80d122265d3062847a4a1b161abe1d26 files/cpp 24
 MD5 3213bd50acdbbd71ce7dd3e40710e30e files/digest-gcc-2.95.3-r8 64
@@ -57,7 +58,7 @@ MD5 8baffb486c75efe253bd2daa88daa7d6 files/gcc331_use_multilib.amd64.patch 352
 MD5 e3193bdffb435b77a21bfb504ff6f591 files/mkinfodir 7324
 MD5 ea2cf3df0d89a26d5fdc1a531176e395 files/pro-police-docs.patch 3287
 MD5 07b57d62aa1a8cd4d1cd37984ebe2053 files/scan_libgcc_linked_ssp.sh 861
-MD5 ffc5d24c5ae533dbb0e01b8cbefea22d files/digest-gcc-3.4.3 357
+MD5 a6385e1a4df2e8691fa6d1d0fcf47525 files/digest-gcc-3.4.3 357
 MD5 b1a242694f56184cbcdd40ba25800d50 files/2.95.3/gcc-2.95.3-alpha.diff 14345
 MD5 523970c128b929fe7c7cf36508ebd1d5 files/2.95.3/gcc-2.95.3-new-atexit.diff 13604
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
@@ -117,11 +118,6 @@ MD5 aa8e15a63d797df37bbd4e489ed0267f files/3.4.1/gcc-3.4.1-mips-n64only.patch 61
 MD5 14fec2000fc63536d4cf22195e88e14f files/3.4.1/gcc-3.4.1-r2-gentoo-branding.patch 781
 MD5 97d7409ba5038bea85f9cabe023e28a6 files/3.4.1/gcc-3.4.1-spec-env.patch 755
 MD5 df06b1cf70425c78e2e59136ed372ab4 files/3.4.1/gcc341-ppc64-mozilla-ICE-fix.patch 729
-MD5 018cfc78f9f42289621aebca1b909142 files/3.4.2/600-gcc34-arm-ldm-peephole.patch 2960
-MD5 21fedc5631fa37bb4dcf95884c59a0fa files/3.4.2/601-gcc34-arm-ldm.patch 3372
-MD5 a6836578185d0f1bb135f5f87a799d30 files/3.4.2/602-sdk-libstdc++-includes.patch 778
-MD5 fa73ded7fb7d8c19c4c92acf2fddcb3a files/3.4.2/700-pr15068-fix.patch 2008
-MD5 1489f266485813748e85e34f09c69be6 files/3.4.2/800-arm-bigendian.patch 2434
 MD5 a720c913b78bcfbd7f63319130fadd4a files/3.4.2/810-arm-bigendian-uclibc.patch 1139
 MD5 b2922cfe76692e7d2b373a0a255f405e files/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch 14248
 MD5 2970ce4d26f78bbb7e76f1d41a177bfb files/3.4.2/gcc34-fix-sse2_pinsrw.patch 901
