@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/firewalk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/ChangeLog,v 1.2 2005/01/25 11:34:10 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/ChangeLog,v 1.3 2005/01/25 17:21:45 angusyoung Exp $
+
+  25 Jan 2005; Otavio R. Piske <angusyoung@gentoo.org> firewalk-5.0.ebuild:
+  Replaced eisnstall with emake install
 
   25 Jan 2005; Otavio R. Piske <angusyoung@gentoo.org> firewalk-5.0.ebuild:
   Removed inheritance of eutils class
