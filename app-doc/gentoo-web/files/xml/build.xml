@@ -58,7 +58,7 @@ sources for the system build.
 </p>
 <pre>
 # <i>cd /etc/rc.d/config</i>
-# <i>cp OFF-inet.eth0 inet.eth0</i>
+# <i>cp OFF_inet.eth0 inet.eth0</i>
 # <i>vim inet.eth0</i>
 # <i>vim /etc/resolv.conf</i>
 # <i>modprobe 8139too</i> <comment>(replace 8139too with your module)</comment>
@@ -227,7 +227,7 @@ We'll need to activate this swap next.</p>
 Perform the following steps:</p>
 <pre>
 # <i>cd /mnt/cdrom/gentoo</i>
-# <i>tar --numeric-owner -xvjpf build-ix86-*.tbz2 -C /mnt/gentoo</i>
+# <i>tar --numeric-owner -xvjpf build-*.tbz2 -C /mnt/gentoo</i>
 # <i>mount --bind /proc /mnt/gentoo/proc</i>
 # <i>cp /etc/resolv.conf /mnt/gentoo/etc</i>
 </pre>
