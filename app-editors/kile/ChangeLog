@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.4 2002/10/04 10:19:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.5 2002/10/04 11:38:52 danarmak Exp $
+
+*kile-1.3_beta (04 Oct 2002)
+
+  04 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  An ever newer upstream version, fixes some additional problems for me. Also
+  masked.
 
 *kile-1.2 (04 Oct 2002)
 
