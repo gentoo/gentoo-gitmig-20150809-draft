@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.37-r1.ebuild,v 1.4 2004/06/27 21:31:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.37-r1.ebuild,v 1.5 2004/10/02 23:00:02 ka0ttic Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="fast password cracker"
 HOMEPAGE="http://www.openwall.com/john/"
 SRC_URI="http://www.openwall.com/john/b/${MY_P}.tar.gz
-	mirror://gentoo/${PF/theripper/}-gentoo.patch"
+	mirror://gentoo/${PF/theripper/}-gentoo.patch.bz2"
 
 #
 # john-{$PV}-gentoo.patch is a heavly hacked combination of:

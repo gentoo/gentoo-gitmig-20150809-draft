@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.19 2004/09/19 15:33:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.20 2004/10/02 23:00:02 ka0ttic Exp $
+
+  02 Oct 2004; Aaron Walker <ka0ttic@gentoo.org>
+  johntheripper-1.6.37-r1.ebuild:
+  Compress gentoo patch; fixes bug #61804
 
   19 Sep 2004; Tom Gall <tgall@gentoo.org> johntheripper-1.6-r3.ebuild:
   stable on ppc64, bug #60890
