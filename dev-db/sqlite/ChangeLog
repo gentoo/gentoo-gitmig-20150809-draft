@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.67 2005/03/04 20:56:42 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.68 2005/03/12 21:21:59 arj Exp $
+
+*sqlite-3.1.5 (12 Mar 2005)
+
+  12 Mar 2005; Anders Rune Jensen <arj@gentoo.org> +sqlite-3.1.5.ebuild:
+  New version.
 
   04 Mar 2005; Kito <kito@gentoo.org> sqlite-3.1.3.ebuild:
   ~ppc-macos keyword
