@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.4.0_rc1.ebuild,v 1.2 2005/02/27 20:25:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.4.0_rc1.ebuild,v 1.3 2005/03/09 16:03:23 cryos Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"
 SLOT="3.4"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="arts"
 
 RDEPEND="
