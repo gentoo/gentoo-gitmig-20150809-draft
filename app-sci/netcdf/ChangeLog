@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/netcdf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/netcdf/ChangeLog,v 1.10 2004/03/03 13:37:45 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/netcdf/ChangeLog,v 1.11 2004/03/26 12:22:50 phosphan Exp $
+
+  26 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> netcdf-3.5.0-r2.ebuild,
+  netcdf-3.5.0-r3.ebuild:
+  Adding IUSE and inherit eutils
 
   03 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> netcdf-3.5.0-r3.ebuild:
   Some arches were missing in -r3 that were added to -r2, assume it was a
