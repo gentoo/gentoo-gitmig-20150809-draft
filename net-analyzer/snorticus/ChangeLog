@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snorticus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snorticus/ChangeLog,v 1.4 2004/06/24 22:18:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snorticus/ChangeLog,v 1.5 2004/08/07 23:55:43 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> snorticus-1.0.4.ebuild:
+  Typo in DESCRIPTION: managment -> management. Bug 59717.
 
   07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> snorticus-1.0.4.ebuild:
   src_postinst() -> pkg_postinst()

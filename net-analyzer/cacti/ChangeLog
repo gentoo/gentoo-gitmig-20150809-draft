@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.26 2004/07/08 03:36:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.27 2004/08/07 23:52:22 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> cacti-0.8.5a.ebuild:
+  Typo in DESCRIPTION: frondend -> frontend. Bug 59717.
 
   07 Jul 2004; Jason Wever <weeve@gentoo.org> cacti-0.8.5a.ebuild:
   Stable on sparc.

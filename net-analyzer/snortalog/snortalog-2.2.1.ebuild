@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.2.1.ebuild,v 1.3 2004/07/08 22:56:22 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.2.1.ebuild,v 1.4 2004/08/07 23:54:54 slarti Exp $
 
-DESCRIPTION="a powerfull perl script that summarizes snort logs"
+DESCRIPTION="a powerful perl script that summarizes snort logs"
 SRC_URI="http://jeremy.chartier.free.fr/${PN}/${PN}_v${PV}.tgz"
 HOMEPAGE="http://jeremy.chartier.free.fr/snortalog/"
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.5a.ebuild,v 1.7 2004/07/08 03:36:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.5a.ebuild,v 1.8 2004/08/07 23:52:22 slarti Exp $
 
 inherit eutils webapp-apache
 
-DESCRIPTION="Cacti is a complete frondend to rrdtool"
+DESCRIPTION="Cacti is a complete frontend to rrdtool"
 HOMEPAGE="http://www.raxnet.net/products/cacti/"
 SRC_URI="http://www.raxnet.net/downloads/${PN}/${P}.tar.gz"
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ibmonitor/ibmonitor-1.2.ebuild,v 1.5 2004/07/13 17:37:13 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ibmonitor/ibmonitor-1.2.ebuild,v 1.6 2004/08/07 23:53:25 slarti Exp $
 
-DESCRIPTION="Interactive bandiwidth monitor"
+DESCRIPTION="Interactive bandwidth monitor"
 HOMEPAGE="http://ibmonitor.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}.tar.gz"
 RESTRICT="nomirror"

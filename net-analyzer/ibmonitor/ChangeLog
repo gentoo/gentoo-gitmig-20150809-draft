@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ibmonitor
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ibmonitor/ChangeLog,v 1.4 2004/07/10 12:20:18 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ibmonitor/ChangeLog,v 1.5 2004/08/07 23:53:25 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> ibmonitor-1.2.ebuild:
+  Typo in DESCRIPTION: bandiwidth -> bandwidth. Bug 59717.
 
   10 Jul 2004; Eldad Zack <eldad@gentoo.org> ibmonitor-1.2.ebuild:
   tidy
