@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-2.20040723-r1.ebuild,v 1.4 2004/09/10 19:05:52 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-2.20040903.ebuild,v 1.1 2004/09/10 19:05:52 lucass Exp $
 
 MY_P="${P/-2./-}"
 DESCRIPTION="Configurable and full featured theme for FVWM, with lots of transparency."
@@ -8,7 +8,7 @@ HOMEPAGE="http://fvwm-crystal.linux.net.pl/"
 SRC_URI="http://fvwm-crystal.linux.net.pl/files/files/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ppc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE="xmms"
 RDEPEND=">=x11-wm/fvwm-2.5.10
 	app-admin/sudo
@@ -17,7 +17,6 @@ RDEPEND=">=x11-wm/fvwm-2.5.10
 	media-sound/aumix
 	x11-misc/fvwm-crystal-apps
 	x11-misc/habak
-	x11-misc/xdaliclock
 	x11-terms/aterm
 	xmms? ( media-plugins/xmms-shell
 		>=media-sound/xmms-1.2.7
@@ -44,7 +43,7 @@ src_install() {
 	doins addons/gdm/fvwm-crystal.desktop
 
 	# Bug in tarball
-	fperms 644 /usr/share/${PN}/fvwm/bigicons/thunderbird.png
+	fperms 755 /usr/share/${PN}/fvwm/decorations/Fear
 }
 
 pkg_postinst() {
