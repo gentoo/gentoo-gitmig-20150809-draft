@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/nicotine
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/ChangeLog,v 1.6 2003/11/22 04:43:42 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/ChangeLog,v 1.7 2003/12/05 21:22:28 tseng Exp $
+
+*nicotine-1.0.6 (05 Dec 2003)
+
+  05 Dec 2003; Brandon Hale <tseng@gentoo.org> nicotine-1.0.6.ebuild:
+  version bump
 
 *nicotine-1.0.6_rc1 (21 Nov 2003)
 
