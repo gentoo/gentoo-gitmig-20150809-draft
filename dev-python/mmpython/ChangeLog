@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mmpython
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/ChangeLog,v 1.5 2003/11/03 16:49:16 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/ChangeLog,v 1.6 2003/11/17 03:34:01 max Exp $
+
+  16 Nov 2003; <max@gentoo.org> mmpython-0.2.ebuild, mmpython-0.3.ebuild:
+  Move inherit line to the top so it doesn't stomp DEPENDs.
 
 *mmpython-0.3 (03 Nov 2003)
 
