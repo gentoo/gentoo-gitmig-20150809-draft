@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.3-r1.ebuild,v 1.1 2002/02/19 00:57:17 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.3-r2.ebuild,v 1.1 2002/02/20 23:48:21 woodchip Exp $
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
@@ -22,11 +22,19 @@ DEPEND="virtual/glibc
 	mta-tls? ( >=dev-libs/openssl-0.9.6c )"
 RDEPEND="${DEPEND} >=net-mail/mailbase-0.00 !virtual/mta"
 
+pkg_setup() {
+	if ! grep -q ^postdrop: /etc/group ; then
+		groupadd postdrop || die "problem adding group postdrop"
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 
-	use mta-tls && \
-	( cd ${S} ; patch -p1 < ${WORKDIR}/pfixtls-${POSTFIX_TLS_VER}/pfixtls.diff || die )
+	if [ "`use mta-tls`" ] ; then
+		cd ${S}
+		patch -p1 < ${WORKDIR}/pfixtls-${POSTFIX_TLS_VER}/pfixtls.diff || die
+	fi
 
 	cd ${S}/conf
 	cp main.cf main.cf.orig
@@ -36,12 +44,20 @@ src_unpack() {
 	cp mail_params.h mail_params.h.orig
 	sed -e "s:/usr/libexec/postfix:/usr/lib/postfix:" mail_params.h.orig > mail_params.h
 
-	use mta-mysql && \
-	( CCARGS="${CCARGS} -DHAS_MYSQL" ; AUXLIBS="${AUXLIBS} -lmysqlclient -lm" )
-	use mta-ldap && \
-	( CCARGS="${CCARGS} -DHAS_LDAP" ; AUXLIBS="${AUXLIBS} -lldap -llber" )
-	use mta-tls && \
-	( CCARGS="${CCARGS} -DHAS_SSL" ; AUXLIBS="${AUXLIBS} -lssl" )
+	if [ "`use mta-mysql`" ] ; then
+		CCARGS="${CCARGS} -DHAS_MYSQL"
+		AUXLIBS="${AUXLIBS} -lmysqlclient -lm"
+	fi
+
+	if [ "`use mta-ldap`" ] ; then
+		CCARGS="${CCARGS} -DHAS_LDAP"
+		AUXLIBS="${AUXLIBS} -lldap -llber"
+	fi
+
+	if [ "`use mta-tls`" ] ; then
+		CCARGS="${CCARGS} -DHAS_SSL"
+		AUXLIBS="${AUXLIBS} -lssl"
+	fi
 
 	# stuff we always want...
 	CCARGS="${CCARGS} -I/usr/include -DHAS_PCRE -DUSE_SASL_AUTH"
@@ -63,6 +79,9 @@ src_install () {
 
 	cd ${S}/bin
 	dosbin post* sendmail
+	chown root.postdrop ${D}/usr/sbin/{postdrop,postqueue}
+	chmod 2755 ${D}/usr/sbin/{postdrop,postqueue}
+
 	dosym /usr/sbin/sendmail /usr/bin/mail
 	dosym /usr/sbin/sendmail /usr/bin/mailq
 	dosym /usr/sbin/sendmail /usr/bin/newaliases
@@ -97,10 +116,6 @@ src_install () {
 
 pkg_postinst() {
 	install -d 0755 ${ROOT}/var/spool/postfix
-
-        if ! grep -q ^postdrop: /etc/group ; then
-                groupadd postdrop || die "problem adding group postdrop"
-        fi
 
 	echo
 	echo "*****************************************************************"
