@@ -1,15 +1,21 @@
 # Copyright (c) Vitaly Kushneriuk
 # Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/login-app/login-app-2.0.0_alpha7.ebuild,v 1.4 2002/07/11 06:30:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/login-app/login-app-2.0.0_alpha7.ebuild,v 1.5 2002/07/17 00:04:10 seemant Exp $
 
 _P=Login.app-2.0.0-Alpha-7
 S=${WORKDIR}/${_P}
 
-DESCRIPTION=""
+DESCRIPTION="Graphical Login Utility"
 SRC_URI="http://largo.windowmaker.org/files/Login.app/${_P}.tar.gz"
 HOMEPAGE="http://largo.windowmaker.org/Login.app/"
-DEPEND=">=x11-libs/libPropList-0.10.1 x11-base/xfree virtual/glibc >=sys-libs/zlib-1.1.3 >=media-libs/jpeg-6b >=media-libs/libpng-1.0.12 >=media-libs/tiff-3.5.7 >=media-libs/libungif-4.1.0 >=x11-wm/WindowMaker-0.80.0 >=sys-libs/zlib-1.1.3"
-#RDEPEND=""
+DEPEND=">=x11-libs/libPropList-0.10.1 
+	>=sys-libs/zlib-1.1.4 
+	>=media-libs/jpeg-6b 
+	>=media-libs/libpng-1.2
+	>=media-libs/tiff-3.5.7 
+	>=media-libs/libungif-4.1.0 
+	>=x11-wm/WindowMaker-0.80.0"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"

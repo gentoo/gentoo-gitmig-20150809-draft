@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ikons/ikons-0.5.8.ebuild,v 1.3 2002/07/11 06:30:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ikons/ikons-0.5.8.ebuild,v 1.4 2002/07/17 00:04:10 seemant Exp $
 
 S="${WORKDIR}/iKons_058"
 DESCRIPTION="iKons iconset for KDE 2.x"
@@ -8,6 +8,7 @@ SRC_URI="http://www.kde-look.org/content/files/602-iKons_058_devel.tar.gz"
 HOMEPAGE="http://users.skynet.be/bk369046/icon.htm"
 KEYWORDS="x86"
 SLOT="0"
+LICENSE="as-is"
 
 src_compile() {
 
