@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10-r1.ebuild,v 1.10 2004/01/29 13:33:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10-r1.ebuild,v 1.11 2004/01/29 19:17:45 agriffis Exp $
 
 inherit gnuconfig
 inherit flag-o-matic
@@ -30,8 +30,8 @@ src_compile() {
 	[ -z `use alsa` ] || myconf="${myconf} --enable-alsa"
 	[ -z `use oss` ]  || myconf="${myconf} --enable-oss"
 
-	use alpha && gnuconfig_update
-	use amd64 && gnuconfig_update
+	# alpha, amd64 and ia64 (at least) need gnuconfig_update
+	gnuconfig_update
 
 	econf ${myconf} || die
 	emake || die
