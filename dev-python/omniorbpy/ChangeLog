@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/omniorbpy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.3 2004/09/05 07:26:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.4 2004/10/04 21:50:29 kloeri Exp $
+
+*omniorbpy-2.4 (04 Oct 2004)
+
+  04 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> +omniorbpy-2.4.ebuild:
+  Version bump.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
