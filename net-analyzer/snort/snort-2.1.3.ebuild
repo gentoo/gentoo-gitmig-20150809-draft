@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.3.ebuild,v 1.2 2004/07/01 20:18:32 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.3.ebuild,v 1.3 2004/07/30 20:17:33 vapier Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
 HOMEPAGE="http://www.snort.org/"
@@ -51,6 +51,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	gnuconfig_update
+
 	#is this needed in 2.0? -Method
 	#epatch ${FILESDIR}/${P}-configure.patch
 	use flexresp && epatch ${FILESDIR}/${PV}-libnet-1.0.patch
