@@ -1,0 +1,16 @@
+# ChangeLog for app-shells/scsh
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.1 2002/02/24 22:31:38 karltk Exp $
+
+*scsh-0.6.0 ( 25 Feb 2002 )
+
+  25 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog scsh-0.6.0 files/digest-scsh-0.6.0:
+
+  Scsh is a Unix shell embedded in Scheme. It provides full access to POSIX as
+  well as extensions common to most Unix implementations. Scsh also features 
+  many abstractions to ease system programming: process abstraction, 
+  event-based interrupt handling, sophisticated I/O support and enables 
+  concurrent system programming.
+
+  Ebuild contributed by Matthew Kennedy <mbkennedy@ieee.org>.
+
