@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.14 2004/08/06 16:54:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.15 2004/08/07 19:27:25 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -30,6 +30,7 @@ DEPEND="$DEPEND
 	!<=dev-php/php-4.99.99
 	berkdb? ( =sys-libs/db-4* )
 	bzlib? ( app-arch/bzip2 )
+	cpdflib? ( >=media-libs/clibpdf-2* )
 	crypt? ( >=dev-libs/libmcrypt-2.4 )
 	curl? ( >=net-misc/curl-7.10.2 )
 	fam? ( app-admin/fam )
@@ -37,7 +38,7 @@ DEPEND="$DEPEND
 	gd-external? ( media-libs/gd )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	gmp? ( dev-libs/gmp )
-	imap? ( net-libs/c-client )
+	imap? ( virtual/imap-c-client )
 	jpeg? ( >=media-libs/jpeg-6b )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	libedit? ( dev-libs/libedit )
@@ -124,7 +125,6 @@ php5-sapi_check_awkward_uses () {
 	fi
 
 	# iodbc not available; upstream web site down
-
 	if useq iodbc ; then
 		eerror
 		eerror "We have not been able to add iodbc support to Gentoo yet, as we"
@@ -133,6 +133,15 @@ php5-sapi_check_awkward_uses () {
 		eerror "For now, please use the 'odbc' USE flag instead."
 		eerror
 		die "iodbc support incomplete; gentoo bug"
+	fi
+
+	# Sanity check for Oracle
+	if useq oci8 && [ -z "${ORACLE_HOME}" ]; then
+		eerror
+		eerror "You must have the ORACLE_HOME variable in your environment!"
+		eerror
+		die "Oracle configuration incorrect; user error"
+		
 	fi
 
 	if useq dba ; then
@@ -156,8 +165,8 @@ php5-sapi_check_awkward_uses () {
 		enable_extension_enable	"gd-jis-conf"	"nls" 0
 		enable_extension_enable	"gd-native-ttf"	"truetype" 0
 	else
-		enable_extension_with	"freetype-dir"	"truetype"	0
-		enable_extension_with	"t1lib"			"truetype"	0 
+		enable_extension_with	"freetype-dir"	"truetype"	0 "/usr"
+		enable_extension_with	"t1lib"			"truetype"	0 "/usr"
 		enable_extension_enable	"gd-jis-conf"	"nls"		0
 		enable_extension_enable	"gd-native-ttf"	"truetype"	0
 		enable_extension_with 	"jpeg-dir" 		"jpeg" 		0 "/usr"
@@ -170,7 +179,8 @@ php5-sapi_check_awkward_uses () {
 
 	if useq imap ; then
 		enable_extension_with "imap" "imap" 1
-		enable_extension_with "imap-ssl" "ssl" 1
+		# the IMAP-SSL arg doesn't parse 'shared,/usr/lib' right
+		enable_extension_with "imap-ssl" "ssl" 0
 	fi
 
 	if useq ldap ; then
@@ -197,6 +207,7 @@ php5-sapi_check_awkward_uses () {
 
 	if useq mysql ; then
 		enable_extension_with		"mysql"			"mysql"			1
+		enable_extension_with		"mysql-sock"	"mysql"			0 "/var/run/mysqld/mysqld.sock"
 	else
 		enable_extension_with		"mysqli"		"mysqli"			1
 	fi
@@ -313,6 +324,7 @@ php5-sapi_src_compile () {
 	enable_extension_enable		"bcmath"		"bcmath"		1
 	enable_extension_with		"bz2"			"bzlib"			1
 	enable_extension_enable		"calendar"		"calendar"		1
+	enable_extension_with		"jpeg-dir" 		"cpdflib" 		0 "/usr"
 	enable_extension_with		"cpdflib"		"cpdflib"		1
 	enable_extension_disable	"ctype"			"ctype"			0
 	enable_extension_with		"curl"			"curl"			1
@@ -337,8 +349,8 @@ php5-sapi_src_compile () {
 	enable_extension_disable	"libxml"		"xml2"			0
 	enable_extension_enable		"mbstring"		"nls"			1
 	enable_extension_with		"mcrypt"		"crypt"			1
-	enable_extension_with		"mcve"			"mcve"			1
 	enable_extension_with		"openssl-dir"	"mcve"			0 "/usr"
+	enable_extension_with		"mcve"			"mcve"			1
 	enable_extension_enable		"memory-limit"	"memlimit"		0
 	enable_extension_with		"mhash"			"mhash"			1
 	enable_extension_with		"mime-magic"	"mime"			0 "/usr/share/misc/file/magic.mime"
@@ -409,11 +421,33 @@ php5-sapi_src_install () {
 		dobin sapi/cli/php
 	fi
 
+	# get the extension dir
+	PHPEXTDIR="`${D}/usr/bin/php-config --extension-dir`"
+
 	# don't forget the php.ini file
+	local phpinisrc=php.ini-dist
+	einfo "Setting extension_dir in php.ini"
+	sed -e "s|^extension_dir .*$|extension_dir = ${PHPEXTDIR}|g" -i ${phpinisrc}
+	
+	# A patch for PHP for security. PHP-CLI interface is exempt, as it cannot be
+	# fed bad data from outside.
+	if [ "${PHPSAPI}" != "cli" ]; then
+		einfo "Securing fopen wrappers"
+		sed -e 's|^allow_url_fopen .*|allow_url_fopen = Off|g' -i ${phpinisrc}
+	fi
+
+	einfo "Setting correct include_path"
+	sed -e 's|^;include_path .*|include_path = ".:/usr/lib/php"|' -i ${phpinisrc}
+
+	if useq shared; then
+		for x in `ls ${D}${PHPEXTDIR}/*.so | sort`; do 
+			echo "extension=`basename ${x}`" >> ${phpinisrc}
+		done;
+	fi
 
 	dodir ${PHP_INI_DIR}
 	insinto ${PHP_INI_DIR}
-	newins php.ini-dist ${PHP_INI_FILE}
+	newins ${phpinisrc} ${PHP_INI_FILE}
 
 	# we only install the following for the PHP_PROVIDER_PKG ebuild
 
