@@ -1,10 +1,13 @@
 # ChangeLog for app-text/htmldoc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.6 2003/02/12 05:31:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.7 2003/02/15 07:18:03 gerk Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *htmldoc-1.8.20 (06 Aug 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> htmldoc-1.8.20.ebuild :
+  set ppc in keywords
 
   06 Aug 2002; Nick Hadaway <raker@gentoo.org>
   htmldoc-1.8.20.ebuild, files/digest-htmldoc-1.8.20, files/fonts.diff :
