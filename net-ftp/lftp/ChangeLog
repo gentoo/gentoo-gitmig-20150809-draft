@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.56 2004/09/11 16:25:15 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.57 2004/09/13 11:18:56 dragonheart Exp $
+
+  13 Sep 2004; Daniel Black <dragonheart@gentoo.org> lftp-3.0.7-r1.ebuild,
+  -lftp-3.0.7.ebuild, -lftp-3.0.3.ebuild, -lftp-3.0.2.ebuild:
+  x86 stable - removed memory leaking and excess versions
 
   11 Sep 2004; Tom Martin <slarti@gentoo.org> lftp-3.0.6.ebuild:
   Stable on amd64.
@@ -10,7 +14,7 @@
 
 *lftp-3.0.7-r1 (27 Aug 2004)
 
-  27 Aug 2004; <dan@gentoo.org> +files/lftp-3.0.7-memleak.patch,
+  27 Aug 2004; <dragonheart@gentoo.org> +files/lftp-3.0.7-memleak.patch,
   +lftp-3.0.7-r1.ebuild:
   Memory leak fixed - thanks to Luke Macken in bug #61335. OSX fix thanks to
   Miguel Sousa Filipe in bug #61349
