@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r1.ebuild,v 1.8 2003/09/06 22:25:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r1.ebuild,v 1.9 2004/02/22 19:42:28 agriffis Exp $
 
 inherit gcc eutils
 
@@ -16,7 +16,7 @@ SRC_URI="http://mysql.he.net/Downloads/${PN}/${P}.tar.gz
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~hppa ~mips ~arm ~sparc ~ppc"
+KEYWORDS="x86 ~alpha ~hppa ~mips ~sparc ~ppc"
 
 DEPEND=">=dev-db/mysql-3.23.49"
 
