@@ -630,8 +630,9 @@ app-misc/nomadii-utils
 # masked while licensing is sorted out
 app-misc/ldapbrowser
 
+# <nerdboy@gentoo.org> (12 Jan 2004) commented for 1.0.4 update
 # new ebuild.  probably x86-only as well.
-app-misc/mwavem
+#app-misc/mwavem
 
 # <karltk@gentoo.org> (18 Jul 2002)
 # standard library does not compile
