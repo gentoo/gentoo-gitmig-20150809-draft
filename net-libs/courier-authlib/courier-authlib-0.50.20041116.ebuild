@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.50.20041116.ebuild,v 1.2 2004/11/20 12:04:33 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.50.20041116.ebuild,v 1.3 2004/11/21 07:01:39 mr_bones_ Exp $
 
 inherit eutils gnuconfig
 
@@ -55,7 +55,7 @@ src_compile() {
 			myconf="${myconf} --with-db=db"
 	fi
 	use gdbm && myconf="${myconf} --with-db=gdbm"
-	
+
 
 	if [ -f /var/vpopmail/etc/lib_deps ]; then
 		myconf="${myconf} --with-authvchkpw --without-authmysql --without-authpgsql"
@@ -104,4 +104,3 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/courier-authlib-initd courier-authlib || die "init.d failed"
 }
-
