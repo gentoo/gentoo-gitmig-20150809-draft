@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/module-info
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/ChangeLog,v 1.1 2003/06/26 17:04:09 mcummings Exp $
+
+*module-info-0.20 (26 Jun 2003)
+
+  26 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  module-info-0.20.ebuild:
+  Dep for module-build, part of the alzabo deps
+
