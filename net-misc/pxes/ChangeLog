@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pxes
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.10 2004/04/03 18:23:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.11 2004/04/03 18:29:05 wolf31o2 Exp $
+
+  03 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.8.ebuild:
+  Added squashfs-tools RDEPEND.
 
 *pxes-0.8 (03 Apr 2004)
 
