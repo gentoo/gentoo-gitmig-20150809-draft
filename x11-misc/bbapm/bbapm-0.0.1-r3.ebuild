@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/bbapm-0.0.1-r3.ebuild,v 1.9 2004/06/24 22:11:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/bbapm-0.0.1-r3.ebuild,v 1.10 2004/06/28 19:50:10 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,7 +15,8 @@ KEYWORDS="x86"
 replace-flags "-fomit-frame-pointer" ""
 
 DEPEND="virtual/blackbox
-	>=sys-apps/apmd-3.0.1"
+	>=sys-apps/apmd-3.0.1
+	>=sys-apps/sed-4"
 
 src_unpack() {
 
