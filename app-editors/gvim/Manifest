@@ -1,4 +1,4 @@
-MD5 06d542474a345c21565deec8202c7c58 ChangeLog 6001
+MD5 8123c140d0d23a360829d226dd0400e3 ChangeLog 6120
 MD5 b679d9da17e02a199140d21c86e2db78 gvim-6.1-r6.ebuild 882
 MD5 89a5c4e099606893625de35ee83b994b gvim-6.1-r7.ebuild 1016
 MD5 4df303831489a7b1491341b0d0645512 gvim-6.1-r8.ebuild 1060
@@ -11,7 +11,7 @@ MD5 4ee8d17f689312ea9576ab417eb195d6 gvim-6.2_pre6.ebuild 957
 MD5 fa7475041ef0597fbbbbc3a96676994e gvim-6.2_pre6-r1.ebuild 960
 MD5 e8e26c64f34d3fd03dbcc4ecac8a8fae gvim-6.2.ebuild 940
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
-MD5 ecadd7dac27464c94f61d4a88193fb99 gvim-6.2-r1.ebuild 942
+MD5 c9d5ca52d1c1fedb5cb528ad0342813b gvim-6.2-r1.ebuild 945
 MD5 6e49a557b4aa48015c9d45aa4c9cc1d9 files/digest-gvim-6.1-r6 272
 MD5 b19b599dce25d2ede09805671e9dd58e files/digest-gvim-6.1-r7 272
 MD5 d1c6ba5952b719c7be9c961510204fff files/digest-gvim-6.1-r8 276
