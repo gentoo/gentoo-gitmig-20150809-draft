@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/aget
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/ChangeLog,v 1.1 2004/03/28 07:44:44 vapier Exp $
+
+*aget-0.4 (28 Mar 2004)
+
+  28 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Daniel Fullmer #43411.
