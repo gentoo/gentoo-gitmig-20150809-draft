@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.4.2c.ebuild,v 1.3 2004/06/25 02:47:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.4.2c.ebuild,v 1.4 2004/07/03 12:20:34 kloeri Exp $
 
 inherit distutils eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2.3-r1
-	>=dev-python/wxPython-2.4.2.4"
+	>=dev-python/wxpython-2.4.2.4"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.5.1d.ebuild,v 1.5 2004/06/25 02:47:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.5.1d.ebuild,v 1.6 2004/07/03 12:20:34 kloeri Exp $
 
 inherit distutils eutils
 
@@ -16,7 +16,7 @@ S="${WORKDIR}/${MY_P}"
 
 DEPEND=">=virtual/python-2.2.3-r1"
 
-RDEPEND=">=dev-python/wxPython-2.4.2.4
+RDEPEND=">=dev-python/wxpython-2.4.2.4
 	>=dev-util/wxglade-0.3.2
 	>=dev-python/pychecker-0.8.13
 	${DEPEND}"
