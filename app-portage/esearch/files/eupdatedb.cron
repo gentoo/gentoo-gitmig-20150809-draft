@@ -2,7 +2,7 @@
 
 # Run some script
 
-SCRIPT="eupdatedb"
+SCRIPT="/usr/sbin/eupdatedb"
 
 DATE="`date +%Y%m%d`"
 LOG="/var/log/${SCRIPT}"
@@ -10,7 +10,7 @@ LOG="/var/log/${SCRIPT}"
 # Start logging
 echo "--- Starting ${SCRIPT} for ${DATE} ---" >> ${LOG}
 
-${SCRIPT} && \
+${SCRIPT} --quiet && \
 echo "${SCRIPT}: success." >> ${LOG} || \
 echo "ERROR: ${SCRIPT} failed." >> ${LOG}
 
