@@ -1,4 +1,14 @@
-MD5 e1927ed438cedd923c3d6ec7b6dd5f8b ChangeLog 634
-MD5 30577c247d4dd965ff2f097b44980d5a gnu-netcat-0.7.1.ebuild 781
-MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ef1abed9dd77cb3bc4af195c74e72239 gnu-netcat-0.7.1.ebuild 779
+MD5 6f3065e52b50f0ddfcc1cd3f97527473 ChangeLog 733
+MD5 41fd70e4bb6db4ef064f15731b5aa78a metadata.xml 227
 MD5 18c72f77c7d5016cb4425084707f36ff files/digest-gnu-netcat-0.7.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBIIsIT+MN7JbqCpMRAnOFAJ9GG9269lA/sHBTflx2iHYqxsrHzwCfTyWV
+xLogIiy4I/ApxMjkO71SuNA=
+=4ghY
+-----END PGP SIGNATURE-----

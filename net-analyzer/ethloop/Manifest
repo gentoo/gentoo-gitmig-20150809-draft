@@ -1,4 +1,14 @@
-MD5 8a9f6b511e4cbe5bff3b10ff7e83f3f4 ChangeLog 482
-MD5 8e72130348222e049760bd9fa83f3519 ethloop-10.ebuild 565
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ed5f1c74527a881b5fec25002d8c734f ethloop-10.ebuild 564
+MD5 51d476edc344bab8417560c06be2e8ff ChangeLog 560
 MD5 3c5ff5e66702ce3fbb010eea8fb1da10 metadata.xml 244
 MD5 70d7e3ea63f12f27c86a0ae488756544 files/digest-ethloop-10 56
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBIIppT+MN7JbqCpMRAixMAJ94D1EqNmaZigSuVpdPYDYsJJSzBQCfexhX
+WyLDydJ1K1I+ekAc54So1NQ=
+=+SLd
+-----END PGP SIGNATURE-----
