@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.426 2004/06/09 14:02:06 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.427 2004/06/09 21:48:54 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -103,7 +103,7 @@ dev-java/quartz:oracle - Enable oracle support
 dev-java/quartz:servlet-2.3 - Enable servlet-2.3 support
 dev-java/quartz:servlet-2.4 - Enable servlet-2.4 support
 dev-java/quartz:struts - Enable struts support
-dev-java/sun-j2sdk:nptl - Enable support for NPTL 
+dev-java/sun-j2sdk:nptl - Enable support for NPTL
 dev-lang/R:bzlib - use bzlib compression library
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
@@ -210,6 +210,7 @@ media-libs/libsdl:libcaca - Add support for colored ASCII-art graphics
 media-libs/libsdl:noaudio - Allow users to disable audio support completely (at their own risk)
 media-libs/libsdl:nojoystick - Allow users to disable joystick support completely (at their own risk)
 media-libs/libsdl:novideo - Allow users to disable video support completely (at their own risk)
+media-libs/openvrml:javascript - Script node JavaScript support
 media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/tiff:lzw-tiff - Enable the LZW Compression Toolkit (Unisys license)
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
@@ -419,7 +420,7 @@ x11-base/xfree-drm:sis - If you have an SiS video card
 x11-base/xfree:gatos - Performs GATOS-specific actions including SDK install
 x11-base/xfree:sdk - Builds the software development kit
 x11-base/xorg-x11:sdk - Builds the software development kit
-x11-libs/fltk:nptl - Enable support for NPTL 
+x11-libs/fltk:nptl - Enable support for NPTL
 x11-libs/gtk-sharp:gnomedb - Enable gnomedb support
 x11-libs/gtkmathview:t1lib - Enable t1lib support
 x11-libs/wxGTK:unicode - Adds Unicode support. Must be used in combination with gtk2
