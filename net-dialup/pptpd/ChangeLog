@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/pptpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/ChangeLog,v 1.9 2004/07/01 22:09:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/ChangeLog,v 1.10 2004/08/25 02:48:52 swegener Exp $
+
+  25 Aug 2004; Sven Wegener <swegener@gentoo.org> pptpd-1.1.3.ebuild:
+  Changed SRC_URI to use mirror:// syntax.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> pptpd-1.1.2.ebuild,
   pptpd-1.1.3.20030409.ebuild, pptpd-1.1.3.ebuild, pptpd-1.1.4_beta3.ebuild,
