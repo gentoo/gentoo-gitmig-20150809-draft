@@ -1047,9 +1047,10 @@ class packagetree:
 	
 	def resolve_key(self,mykey):
 		"generates new key, taking into account virtual keys"
-		if self.virtual:
-			if self.virtual.has_key(mykey):
-				return self.virtual[mykey]
+		if not self.tree.has_key(mykey):
+			if self.virtual:
+				if self.virtual.has_key(mykey):
+					return self.virtual[mykey]
 		return mykey
 
 	def exists_specific(self,myspec):
