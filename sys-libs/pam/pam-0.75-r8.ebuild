@@ -1,16 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r8.ebuild,v 1.1 2002/10/13 09:35:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r8.ebuild,v 1.2 2002/10/13 13:14:03 azarah Exp $
 
 IUSE="berkdb"
 
 inherit gcc
 
+PATCH_LEVEL=".1"
+
 S=${WORKDIR}/Linux-PAM-${PV}
 S2=${WORKDIR}/pam
 DESCRIPTION="Pluggable Authentication Modules"
 SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.tar.gz
-	mirror://gentoo/pam-${PVR}-gentoo.tbz2"
+	mirror://gentoo/pam-${PVR}${PATCH_LEVEL}-gentoo.tbz2"
 HOMEPAGE="http://www.redhat.com/linux-info/pam/"
 
 LICENSE="PAM"
@@ -29,10 +31,6 @@ DEPEND=">=sys-libs/cracklib-2.7-r3
 src_unpack() {
 	unpack ${A}
 
-#	cd ${WORKDIR}
-#	tar -jxf ${FILESDIR}/pam-${PVR}-gentoo.tbz2 || \
-#		die "Failed to unpack patches"
-		
 	cd ${S}
 	tar -jxf ${S2}/pam-redhat-0.75-41.1.tar.bz2 || \
 		die "Failed to unpack pam-redhat-0.75-41.1.tar.bz2"
