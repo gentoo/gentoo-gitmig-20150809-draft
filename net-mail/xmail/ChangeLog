@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/xmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/ChangeLog,v 1.4 2003/07/13 13:32:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/ChangeLog,v 1.5 2003/07/21 07:17:04 raker Exp $
+
+*xmail-1.16 (21 Jul 2003)
+
+  21 Jul 2003; Nick Hadaway <raker@gentoo.org> xmail-1.16.ebuild:
+  Version bump.  Also fixed files/* so that there aren't any cr-lf
+  remnants.  Made xmailwizard executable.
 
 *xmail-1.15 (26 May 2003)
   
