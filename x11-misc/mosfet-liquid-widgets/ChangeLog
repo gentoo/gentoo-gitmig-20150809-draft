@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/mosfet-liquid-widgets
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mosfet-liquid-widgets/ChangeLog,v 1.4 2002/04/14 19:19:10 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mosfet-liquid-widgets/ChangeLog,v 1.5 2002/05/12 11:51:10 verwilst Exp $
+
+*mosfet-liquid-widgets-0.9.5 (14 April 2002)
+
+  14 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
+
+  New release, fixes some more bugs.. Removed older 0.9.x ebuilds.
+  0.7 still available for KDE 2 users.
 
 *mosfet-liquid-widgets-0.9.4 (14 April 2002)
 
