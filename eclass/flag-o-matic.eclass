@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.18 2003/06/17 14:38:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.19 2003/06/19 13:23:41 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -56,8 +56,8 @@ filter-flags() {
 }
 
 append-flags() {
-	CFLAGS="${CFLAGS} $1"
-	CXXFLAGS="${CXXFLAGS} $1"
+	CFLAGS="${CFLAGS} $@"
+	CXXFLAGS="${CXXFLAGS} $@"
 }
 
 replace-flags() {
