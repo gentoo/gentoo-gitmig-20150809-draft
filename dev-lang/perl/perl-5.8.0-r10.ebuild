@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r10.ebuild,v 1.11 2003/06/22 06:06:43 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r10.ebuild,v 1.12 2003/06/22 06:09:27 drobbins Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -83,7 +83,7 @@ KEYWORDS="amd64 x86 sparc ppc ~alpha mips ~hppa"
 IUSE="berkdb doc gdbm threads"
 
 DEPEND="sys-apps/groff
-	berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 )
+	berkdb? ( amd64? sys-libs/db : ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 ) )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=sys-apps/portage-2.0.45-r5"
 if [ "${PN}" = "perl" ]
@@ -92,7 +92,8 @@ then
 		=sys-devel/libperl-${PV}*"
 fi
 
-RDEPEND="berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 ) 
+RDEPEND="
+	berkdb? ( amd64? sys-libs/db : ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 ) )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
 if [ "${PN}" = "libperl" ]
