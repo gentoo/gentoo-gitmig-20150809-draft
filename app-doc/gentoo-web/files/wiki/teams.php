@@ -129,13 +129,13 @@
 	$tmp = 0;
 	while ( $each = each($leaders) ) {
 		if (!$each['value']) break; //seems to want to always loop at least once. *shrug*
-		$handle = mysql_query( 'select username from users where uid='.$each['value'] );
-		list( $handle ) = mysql_fetch_row( $handle );
+		$handle = mysql_query( 'select username,email from users where uid='.$each['value'] );
+		list( $handle, $email ) = mysql_fetch_row( $handle );
 		if (!$tmp) {
 			print '<ul style="margin:0;">';
 			$tmp = 1;
 		}
-		print "<li> $handle\n";
+		print "<li> <a href=\"mailto:$email\">$handle</a>\n";
 	}
 	if ($tmp) print '</ul>';
 	else print "<p>Team $team is unleaded!</p>";
