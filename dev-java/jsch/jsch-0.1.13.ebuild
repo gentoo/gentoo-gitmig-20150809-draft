@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.13.ebuild,v 1.1 2004/02/14 05:18:58 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.13.ebuild,v 1.2 2004/02/15 09:29:11 dholm Exp $
 
 DESCRIPTION="JSch is a pure Java implementation of SSH2."
 HOMEPAGE="http://www.jcraft.com/jsch/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}.zip"
 
 LICENSE="jcraft"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="doc jikes"
 RESTRICT="nomirror"
 
