@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3733 2005/03/15 22:12:26 seemant Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3734 2005/03/16 10:09:43 eradicator Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -216,11 +216,6 @@ app-portage/kuroo
 # moving to bese-2004@common-lisp.net/arnesi--dev--1.2 patch scheme
 =dev-lisp/cl-arnesi-1.2.0
 =dev-lisp/cl-arnesi-1.2.3*
-
-# Jeremy Huddleston <eradicator@gentoo.org> (15 Feb 2005)
-# Masked for development while fixing bugs that cropped up with the
-# 2.3.4.20050125 release.  Will unmask once they've been resolved.
-=sys-libs/glibc-2.3.4.20050125-r1
 
 # foser <foser@gentoo.org> (14 Feb 2005)
 # unmaintained (#82037)
