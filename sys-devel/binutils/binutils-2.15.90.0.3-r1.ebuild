@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.3-r1.ebuild,v 1.1 2004/04/19 04:24:06 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.3-r1.ebuild,v 1.2 2004/04/21 17:44:49 vapier Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -40,7 +40,6 @@ src_unpack() {
 
 	epatch ${WORKDIR}/patch
 
-
 	# Libtool is broken (Redhat).
 	for x in ${S}/opcodes/Makefile.{am,in}
 	do
@@ -58,7 +57,9 @@ src_unpack() {
 
 src_compile() {
 	# Generate borked binaries.  Bug #6730
-	filter-flags "-fomit-frame-pointer -fssa"
+	filter-flags -fomit-frame-pointer -fssa
+	# Filter CFLAGS=".. -O2 .." on arm
+	use arm && replace-flags -O? -O
 
 	local myconf=
 	[ ! -z "${CBUILD}" ] && myconf="--build=${CBUILD}"
@@ -68,9 +69,6 @@ src_compile() {
 
 	# untested functionality.
 	# use cross && myconf="${myconf} --targets-all"
-
-	# Filter CFLAGS=".. -O2 .." on arm
-	use arm && replace-flags -O? -O
 
 	# Fix /usr/lib/libbfd.la
 	elibtoolize --portage

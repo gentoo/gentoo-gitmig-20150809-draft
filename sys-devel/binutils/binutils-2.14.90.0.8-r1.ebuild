@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.6 2004/03/23 06:48:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.7 2004/04/21 17:44:49 vapier Exp $
 
 IUSE="nls bootstrap build"
 
@@ -8,9 +8,6 @@ IUSE="nls bootstrap build"
 #                      the manpages, but seems this is incorrect ....
 
 inherit eutils libtool flag-o-matic
-
-# Generate borked binaries.  Bug #6730
-filter-flags "-fomit-frame-pointer -fssa"
 
 PATCHVER="1.2"
 
@@ -56,6 +53,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# Generate borked binaries.  Bug #6730
+	filter-flags "-fomit-frame-pointer -fssa"
+
 	local myconf=
 	[ ! -z "${CBUILD}" ] && myconf="--build=${CBUILD}"
 	use nls && \

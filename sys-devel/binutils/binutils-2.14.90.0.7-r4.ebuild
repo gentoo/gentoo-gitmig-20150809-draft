@@ -1,34 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.7-r4.ebuild,v 1.3 2004/02/23 00:18:02 agriffis Exp $
-
-IUSE="nls bootstrap build"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.7-r4.ebuild,v 1.4 2004/04/21 17:44:49 vapier Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
 
 inherit eutils libtool flag-o-matic
 
-# Generate borked binaries.  Bug #6730
-filter-flags "-fomit-frame-pointer -fssa"
-
-S="${WORKDIR}/${P}"
 DESCRIPTION="Tools necessary to build programs"
+HOMEPAGE="http://sources.redhat.com/binutils/"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2"
-HOMEPAGE="http://sources.redhat.com/binutils/"
 
-SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
+SLOT="0"
 KEYWORDS="amd64 x86 ~ppc alpha sparc mips hppa ia64 ppc64"
+IUSE="nls bootstrap build"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )
 	!build? ( !bootstrap? ( dev-lang/perl ) )"
 
-
 src_unpack() {
-
 	unpack ${A}
 
 	cd ${S}
@@ -63,8 +56,7 @@ src_unpack() {
 	#
 	#  http://sources.redhat.com/ml/binutils/2003-11/msg00069.html
 	#
-	[ -z "`use sparc`" ] && \
-		epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.7-ppc-reloc.patch
+	use sparc || epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.7-ppc-reloc.patch
 
 	# Teach ld how to ensure that the TLS segment p_vaddr is aligned
 	# for a number of archs.
@@ -75,14 +67,8 @@ src_unpack() {
 	# http://sources.redhat.com/ml/binutils/2003-12/msg00205.html
 	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.7-bfd-pt-gnu-segment-fix.patch
 
-	if [ "${ARCH}" = "amd64" ]
-	then
-		epatch ${FILESDIR}/${PN}-2.14.amd64-32bit-path-fix.patch
-	fi
-
-	use x86 &> /dev/null \
-		&& epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.20-array-sects-compat.patch
-
+	use amd64 && epatch ${FILESDIR}/${PN}-2.14.amd64-32bit-path-fix.patch
+	use x86 && epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.20-array-sects-compat.patch
 
 	# Libtool is broken (Redhat).
 	for x in ${S}/opcodes/Makefile.{am,in}
@@ -106,12 +92,9 @@ src_compile() {
 		myconf="${myconf} --without-included-gettext" || \
 		myconf="${myconf} --disable-nls"
 
-	# Filter CFLAGS=".. -O2 .." on arm
-	if [ "${ARCH}" = "arm" ]
-	then
-		CFLAGS="$(echo "${CFLAGS}" | sed -e 's,-O[2-9] ,-O1 ,')"
-	fi
-
+	# Generate borked binaries.  Bug #6730
+	filter-flags -fomit-frame-pointer -fssa
+	use arm && filter-flags -O2 -O3
 
 	# Fix /usr/lib/libbfd.la
 	elibtoolize --portage
@@ -129,9 +112,9 @@ src_compile() {
 	emake tooldir="${ROOT}/usr/bin" \
 		all || die
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
-		if [ -z "`use bootstrap`" ]
+		if ! use bootstrap
 		then
 			# Nuke the manpages to recreate them (only use this if we have perl)
 			find . -name '*.1' -exec rm -f {} \; || :
@@ -142,7 +125,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
