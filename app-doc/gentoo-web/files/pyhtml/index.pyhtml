@@ -99,27 +99,45 @@ entry=0
 a=open(portdir+"/ChangeLog")
 mylines=a.readlines()
 pos=0
-while (pos<len(mylines)) and (entry<17):
+while (pos<len(mylines)) and (entry<30):
 	curline=mylines[pos][:-1]
 	if len(curline)==0:
 		pos=pos+1
 		continue
 	splitline=string.split(curline)
 	print '<p class="itemdesc">'
+	if not len(splitline):
+		sys.stderr.write("!!! Error on line "+`pos+1`+"\n")
+		sys.exit(1)
 	if splitline[0]=="date":
+		if len(splitline)<=1:
+			sys.stderr.write("!!! Error on line "+`pos+1`+"\n")
+			sys.exit(1)
 		print '<table width="100%" border=0 cellspacing=0 cellpadding=0><tr><td align="center" class="infobox"><b>'+string.join(splitline[1:]," ")+"</b></td></tr></table>"
 		pos=pos+1
 		continue
 	elif splitline[0]=="new":
+		if len(splitline)<=1:
+			sys.stderr.write("!!! Error on line "+`pos+1`+"\n")
+			sys.exit(1)
 		pkgsplit=string.split(splitline[1],"/")
 		print "<b>New package",splitline[1]+"</b>"
 	elif splitline[0]=="upd":
+		if len(splitline)<=3:
+			sys.stderr.write("!!! Error on line "+`pos+1`+"\n")
+			sys.exit(1)
 		pkgsplit=string.split(splitline[1],"/")
 		print "<b>Updated package",splitline[1],"to",splitline[3]+"</b>"
 	elif splitline[0]=="rel":
+		if len(splitline)<=1:
+			sys.stderr.write("!!! Error on line "+`pos+1`+"\n")
+			sys.exit(1)
 		print "<h2>New Release! Gentoo Linux",splitline[1]+"</h2>"
 		desc=""
 	elif splitline[0]=="del":
+		if len(splitline)<=1:
+			sys.stderr.write("!!! Error on line "+`pos+1`+"\n")
+			sys.exit(1)
 		print "<b>Removed package",splitline[1]+"</b>"
 		desc=""
 	pos=pos+2
@@ -142,8 +160,8 @@ while (pos<len(mylines)) and (entry<17):
 	<tr height="1%">
 		<td class="infobox">
 			<p class="info">
-				&copy; 2000 <a href="http://www.gentoo.org">Gentoo Technologies, Inc.</a>  All rights reserved. Linux is a 
-				registered trademark of Linus Torvalds. developerWorks is a registered trademark of IBM. Contact: 
+				&copy; 2000-2001 <a href="http://www.gentoo.org">Gentoo Technologies, Inc.</a>  All rights reserved. Linux is a 
+				registered trademark of Linus Torvalds. Contact: 
 				<a href="mailto:www@gentoo.org">www@gentoo.org</a>
 			</p>
 		</td>
