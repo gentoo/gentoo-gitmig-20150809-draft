@@ -1,6 +1,6 @@
-# ChangeLog for app-games/castle-combat
+# ChangeLog for games-strategy/castle-combat
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/ChangeLog,v 1.1 2003/09/10 05:27:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/ChangeLog,v 1.2 2003/09/10 15:51:46 vapier Exp $
 
   12 Jul 2003; Michael Sterrett <msterret@gentoo.org>
   castle-combat-0.7.4.ebuild:
