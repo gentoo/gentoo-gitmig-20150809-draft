@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.73.ebuild,v 1.1 2001/01/18 14:41:20 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.73.ebuild,v 1.2 2001/01/20 01:13:36 achim Exp $
 
 P=pam-${PV}
 A=Linux-PAM-${PV}.tar.gz
@@ -46,7 +46,12 @@ src_install() {
    fi
  done
  doman doc/man/*.[38] 
- preplib /
+ dosym libpam.so.0.73 /lib/libpam.so
+ dosym libpamc.so.0.73 /lib/libpamc.so
+ dosym libpam_misc.so.0.73 /lib/libpam_misc.so
+ dosym libpam.so.0.73 /lib/libpam.so.0
+ dosym libpamc.so.0.73 /lib/libpamc.so.0
+ dosym libpam_misc.so.0.73 /lib/libpam_misc.so.0
 }
 
 

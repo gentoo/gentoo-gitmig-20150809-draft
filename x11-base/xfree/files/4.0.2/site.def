@@ -1,5 +1,4 @@
 #define HasZlib YES
-#define HasGcc2 YES
 #define HasGcc2ForCplusplus YES
 #define ForceNormalLib YES
 #define BuildXinerama YES

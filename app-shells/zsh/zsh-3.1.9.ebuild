@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-3.1.9.ebuild,v 1.3 2000/11/01 04:44:12 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-3.1.9.ebuild,v 1.4 2001/01/20 01:13:36 achim Exp $
 
 P=zsh-3.1.9
 A=${P}.tar.gz
@@ -16,13 +16,16 @@ DEPEND=">=sys-libs/glibc-2.1.3
 
 src_compile() {                           
 	cd ${S}
-	try ./configure --prefix=/ --mandir=/usr/man --infodir=/usr/info --host=${CHOST}
+	try ./configure --prefix=/ --mandir=/usr/man --infodir=/usr/info \
+	    --libdir=/usr/lib --host=${CHOST}
 	try make
 }
 
 src_install() {                               
 	cd ${S}
-	try make prefix=${D} mandir=${D}/usr/man infodir=${D}/usr/info install.bin install.man
+	try make prefix=${D} mandir=${D}/usr/man infodir=${D}/usr/info \
+		libdir=${D}/usr/lib \
+		install.bin install.man install.modules
 	prepman
 	dodoc ChangeLog META-FAQ README
 	docinto StartupFiles

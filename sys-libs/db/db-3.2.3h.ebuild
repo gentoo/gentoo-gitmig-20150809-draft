@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h.ebuild,v 1.1 2001/01/18 18:22:11 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h.ebuild,v 1.2 2001/01/20 01:13:36 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}/build_unix
@@ -51,7 +51,7 @@ src_install () {
 	cd ${D}/usr/include
 	mv *.h db3
 	ln db3/db.h db.h
-	cd ${D}/usr/lib
-	ln -s libdb-3.2.a libdb.a
+#	cd ${D}/usr/lib
+#	ln -s libdb-3.2.a libdb.a
 }
 

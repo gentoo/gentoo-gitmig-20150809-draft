@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r2.ebuild,v 1.1 2001/01/18 21:38:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r2.ebuild,v 1.2 2001/01/20 01:13:36 achim Exp $
 
 P=sharutils-4.2.1
 A=${P}.tar.gz
@@ -34,7 +34,7 @@ src_install() {
         cd ${D}/usr/share/locale
         for i in *.
         do
-          mv ${i} ${i%%.}
+           rm -rf ${i}
         done
 	rm -rf ${D}/usr/lib
 	cd ${S}
