@@ -1,6 +1,9 @@
 # ChangeLog for app-text/opensp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.11 2004/03/04 17:53:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.12 2004/03/21 07:47:46 kumba Exp $
+
+  21 Mar 2004; Joshua Kinard <kumba@gentoo.org> opensp-1.5-r1.ebuild:
+  Marked stable on mips.
 
   04 Mar 2004; Joshua Kinard <kumba@gentoo.org> opensp-1.5-r1.ebuild:
   Added ~mips to KEYWORDS to satisfy repoman deps and added gnuconfig for mips.
