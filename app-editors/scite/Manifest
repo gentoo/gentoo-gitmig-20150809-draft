@@ -3,8 +3,8 @@ MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 9b99c735833410c4d863b47c0ee61d60 scite-1.4.9.ebuild 1329
 MD5 7954463b548282c780a5674346e39c54 scite-1.5.1.ebuild 1330
 MD5 eb336b16dcbf235faeb51eabf76314a1 scite-1.5.4.ebuild 1680
-MD5 337f3df268594b57158f494e3e8a3c6b scite-1.5.6.ebuild 1681
-MD5 86496f3e231540fa6e35089a88eb1ce0 scite-1.5.7.ebuild 1864
+MD5 5c10170a5cd8fee591a4c281885f9924 scite-1.5.6.ebuild 1680
+MD5 de4f87d5c62c547a2fa6d4b5f6900f77 scite-1.5.7.ebuild 1864
 MD5 e21b1647de51e2cea2682beaf5522ea7 files/digest-scite-1.4.9 57
 MD5 9ee947d9de84f03b11e6b1f7f195d87a files/digest-scite-1.5.1 57
 MD5 8f703db06b0c2938ae6349c2970ead59 files/digest-scite-1.5.4 57
