@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.25 2003/06/15 16:46:04 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.26 2003/06/22 18:12:33 hanno Exp $
+
+*icewm-1.2.9 (22 Jun 2003)
+
+  22 Jun 2003; Hanno Boeck <hanno@gentoo.org> icewm-1.2.9.ebuild:
+  Version bump.
 
   15 Jun 2003; Brad Cowan <bcowan@gentoo.org> icewm-1.2.0-r1.ebuild,
   icewm-1.2.2-r1.ebuild, icewm-1.2.3.ebuild, icewm-1.2.5.ebuild,
