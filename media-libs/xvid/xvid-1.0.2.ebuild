@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.2.ebuild,v 1.1 2004/09/04 16:29:58 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.2.ebuild,v 1.2 2004/09/06 08:45:30 mr_bones_ Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="1"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~ppc64 ~mips"
 IUSE="doc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	x86? ( >=dev-lang/nasm-0.98.36 )"
 
 S="${WORKDIR}/${MY_P}/build/generic"
