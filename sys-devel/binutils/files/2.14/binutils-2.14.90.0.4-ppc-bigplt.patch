@@ -1,0 +1,16 @@
+2003-05-31  Jakub Jelinek  <jakub@redhat.com>
+
+	* elf32-ppc.c (allocate_dynrelocs): Use single slot for first 8192
+	plt entries, not just 8191.
+
+--- bfd/elf32-ppc.c.jj	2003-05-30 11:19:17.000000000 -0400
++++ bfd/elf32-ppc.c	2003-05-30 18:22:31.000000000 -0400
+@@ -2719,7 +2719,7 @@ allocate_dynrelocs (h, inf)
+ 	     for two entries is allocated.  */
+ 	  s->_raw_size += PLT_ENTRY_SIZE;
+ 	  if ((s->_raw_size - PLT_INITIAL_ENTRY_SIZE) / PLT_ENTRY_SIZE
+-	      >= PLT_NUM_SINGLE_ENTRIES)
++	      > PLT_NUM_SINGLE_ENTRIES)
+ 	    s->_raw_size += PLT_ENTRY_SIZE;
+ 
+ 	  /* We also need to make an entry in the .rela.plt section.  */

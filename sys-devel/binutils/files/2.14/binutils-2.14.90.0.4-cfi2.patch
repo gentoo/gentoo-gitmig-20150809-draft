@@ -1,0 +1,651 @@
+2003-06-05  Michal Ludvig  <mludvig@suse.cz>
+
+	* dw2gencfi.c (cfi_add_CFA_insn, cfi_add_CFA_insn_reg)
+	(cfi_add_CFA_insn_reg_reg, cfi_add_CFA_insn_reg_offset): New.
+	(cfi_add_CFA_offset, cfi_add_CFA_def_cfa)
+	(cfi_add_CFA_register, cfi_add_CFA_def_cfa_register)
+	(cfi_add_CFA_def_cfa_offset): Use cfi_add_CFA_insn_*().
+	(cfi_add_CFA_restore, cfi_add_CFA_undefined)
+	(cfi_add_CFA_same_value, cfi_add_CFA_remember_state)
+	(cfi_add_CFA_restore_state, cfi_add_CFA_nop): New.
+	(cfi_pseudo_table): New directives .cfi_return_column,
+	.cfi_restore, .cfi_undefined, .cfi_same_value,
+	.cfi_remember_state, .cfi_restore_state, .cfi_nop.
+	(dot_cfi, output_cfi_insn): Handle new directives.
+	* dw2gencfi.h (cfi_add_CFA_restore, cfi_add_CFA_undefined)
+	(cfi_add_CFA_same_value, cfi_add_CFA_remember_state)
+	(cfi_add_CFA_restore_state, cfi_add_CFA_nop): New prototypes.
+
+2003-06-04  Richard Henderson  <rth@redhat.com>
+
+	* dw2gencfi.c (output_cfi_insn): Fix typo for negative offsets.
+
+	* dw2gencfi.c (cfi_finish): Set .eh_frame read-only.
+
+2003-06-04  Richard Henderson  <rth@redhat.com>
+
+	* config/tc-alpha.c (s_alpha_usepv): New.
+	(md_pseudo_table): Add it.
+	(alpha_cfi_frame_initial_instructions): New.
+	* config/tc-alpha.h (TARGET_USE_CFIPOP): New.
+	(tc_cfi_frame_initial_instructions): New.
+	* doc/c-alpha.texi: Document .usepv.
+
+testsuite/
+2003-06-04  Richard Henderson  <rth@redhat.com>
+
+	* gas/alpha/elf-usepv-1.[sd]: New.
+	* gas/alpha/elf-usepv-2.[sd]: New.
+	* gas/alpha/alpha.exp: Run them.
+	* gas/cfi/cfi-alpha-3.[sd]: New.
+	* gas/cfi/cfi.exp: Run it.
+
+--- gas/dw2gencfi.c	2 Jun 2003 22:48:59 -0000	1.7
++++ gas/dw2gencfi.c	5 Jun 2003 09:23:47 -0000	1.10
+@@ -164,6 +164,54 @@ cfi_set_return_column (unsigned regno)
+   cur_fde_data->return_column = regno;
+ }
+ 
++/* Universal functions to store new instructions.  */
++
++static void
++cfi_add_CFA_insn(int insn)
++{
++  struct cfi_insn_data *insn_ptr = alloc_cfi_insn_data ();
++
++  insn_ptr->insn = insn;
++}
++
++static void
++cfi_add_CFA_insn_reg (int insn, unsigned regno)
++{
++  struct cfi_insn_data *insn_ptr = alloc_cfi_insn_data ();
++
++  insn_ptr->insn = insn;
++  insn_ptr->u.r = regno;
++}
++
++static void
++cfi_add_CFA_insn_offset (int insn, offsetT offset)
++{
++  struct cfi_insn_data *insn_ptr = alloc_cfi_insn_data ();
++
++  insn_ptr->insn = insn;
++  insn_ptr->u.i = offset;
++}
++
++static void
++cfi_add_CFA_insn_reg_reg (int insn, unsigned reg1, unsigned reg2)
++{
++  struct cfi_insn_data *insn_ptr = alloc_cfi_insn_data ();
++
++  insn_ptr->insn = insn;
++  insn_ptr->u.rr.reg1 = reg1;
++  insn_ptr->u.rr.reg2 = reg2;
++}
++
++static void
++cfi_add_CFA_insn_reg_offset (int insn, unsigned regno, offsetT offset)
++{
++  struct cfi_insn_data *insn_ptr = alloc_cfi_insn_data ();
++
++  insn_ptr->insn = insn;
++  insn_ptr->u.ri.reg = regno;
++  insn_ptr->u.ri.offset = offset;
++}
++
+ /* Add a CFI insn to advance the PC from the last address to LABEL.  */
+ 
+ void
+@@ -183,11 +231,7 @@ cfi_add_advance_loc (symbolS *label)
+ void
+ cfi_add_CFA_offset (unsigned regno, offsetT offset)
+ {
+-  struct cfi_insn_data *insn = alloc_cfi_insn_data ();
+-  
+-  insn->insn = DW_CFA_offset;
+-  insn->u.ri.reg = regno;
+-  insn->u.ri.offset = offset;
++  cfi_add_CFA_insn_reg_offset (DW_CFA_offset, regno, offset);
+ }
+ 
+ /* Add a DW_CFA_def_cfa record to the CFI data.  */
+@@ -195,12 +239,7 @@ cfi_add_CFA_offset (unsigned regno, offs
+ void
+ cfi_add_CFA_def_cfa (unsigned regno, offsetT offset)
+ {
+-  struct cfi_insn_data *insn = alloc_cfi_insn_data ();
+-  
+-  insn->insn = DW_CFA_def_cfa;
+-  insn->u.ri.reg = regno;
+-  insn->u.ri.offset = offset;
+-
++  cfi_add_CFA_insn_reg_offset (DW_CFA_def_cfa, regno, offset);
+   cur_cfa_offset = offset;
+ }
+ 
+@@ -209,11 +248,7 @@ cfi_add_CFA_def_cfa (unsigned regno, off
+ void
+ cfi_add_CFA_register (unsigned reg1, unsigned reg2)
+ {
+-  struct cfi_insn_data *insn = alloc_cfi_insn_data ();
+-  
+-  insn->insn = DW_CFA_register;
+-  insn->u.rr.reg1 = reg1;
+-  insn->u.rr.reg2 = reg2;
++  cfi_add_CFA_insn_reg_reg (DW_CFA_register, reg1, reg2);
+ }
+ 
+ /* Add a DW_CFA_def_cfa_register record to the CFI data.  */
+@@ -221,10 +256,7 @@ cfi_add_CFA_register (unsigned reg1, uns
+ void
+ cfi_add_CFA_def_cfa_register (unsigned regno)
+ {
+-  struct cfi_insn_data *insn = alloc_cfi_insn_data ();
+-  
+-  insn->insn = DW_CFA_def_cfa_register;
+-  insn->u.r = regno;
++  cfi_add_CFA_insn_reg (DW_CFA_def_cfa_register, regno);
+ }
+ 
+ /* Add a DW_CFA_def_cfa_offset record to the CFI data.  */
+@@ -232,14 +264,46 @@ cfi_add_CFA_def_cfa_register (unsigned r
+ void
+ cfi_add_CFA_def_cfa_offset (offsetT offset)
+ {
+-  struct cfi_insn_data *insn = alloc_cfi_insn_data ();
+-  
+-  insn->insn = DW_CFA_def_cfa_offset;
+-  insn->u.i = offset;
+-
++  cfi_add_CFA_insn_offset (DW_CFA_def_cfa_offset, offset);
+   cur_cfa_offset = offset;
+ }
+ 
++void
++cfi_add_CFA_restore (unsigned regno)
++{
++  cfi_add_CFA_insn_reg (DW_CFA_restore, regno);
++}
++
++void
++cfi_add_CFA_undefined (unsigned regno)
++{
++  cfi_add_CFA_insn_reg (DW_CFA_undefined, regno);
++}
++
++void
++cfi_add_CFA_same_value (unsigned regno)
++{
++  cfi_add_CFA_insn_reg (DW_CFA_same_value, regno);
++}
++
++void
++cfi_add_CFA_remember_state (void)
++{
++  cfi_add_CFA_insn (DW_CFA_remember_state);
++}
++
++void
++cfi_add_CFA_restore_state (void)
++{
++  cfi_add_CFA_insn (DW_CFA_restore_state);
++}
++
++void
++cfi_add_CFA_nop (void)
++{
++  cfi_add_CFA_insn (DW_CFA_nop);
++}
++
+ 
+ /* Parse CFI assembler directives.  */
+ 
+@@ -248,7 +312,8 @@ static void dot_cfi_startproc (int);
+ static void dot_cfi_endproc (int);
+ 
+ /* Fake CFI type; outside the byte range of any real CFI insn.  */
+-#define CFI_adjust_cfa_offset 0x100
++#define CFI_adjust_cfa_offset	0x100
++#define CFI_return_column	0x101
+ 
+ const pseudo_typeS cfi_pseudo_table[] =
+   {
+@@ -260,6 +325,13 @@ const pseudo_typeS cfi_pseudo_table[] =
+     { "cfi_adjust_cfa_offset", dot_cfi, CFI_adjust_cfa_offset },
+     { "cfi_offset", dot_cfi, DW_CFA_offset },
+     { "cfi_register", dot_cfi, DW_CFA_register },
++    { "cfi_return_column", dot_cfi, CFI_return_column },
++    { "cfi_restore", dot_cfi, DW_CFA_restore },
++    { "cfi_undefined", dot_cfi, DW_CFA_undefined },
++    { "cfi_same_value", dot_cfi, DW_CFA_same_value },
++    { "cfi_remember_state", dot_cfi, DW_CFA_remember_state },
++    { "cfi_restore_state", dot_cfi, DW_CFA_restore_state },
++    { "cfi_nop", dot_cfi, DW_CFA_nop },
+     { NULL, NULL, 0 }
+   };
+ 
+@@ -343,46 +415,74 @@ dot_cfi (int arg)
+ 
+   switch (arg)
+     {
+-      /* Instructions that take two arguments (register, integer). */
+     case DW_CFA_offset:
+-    case DW_CFA_def_cfa:
+       reg1 = cfi_parse_reg ();
+       cfi_parse_separator ();
+       offset = cfi_parse_const ();
++      cfi_add_CFA_offset (reg1, offset);
++      break;
+ 
+-      if (arg == DW_CFA_def_cfa)
+-	cfi_add_CFA_def_cfa (reg1, offset);
+-      else
+-	cfi_add_CFA_offset (reg1, offset);
++    case DW_CFA_def_cfa:
++      reg1 = cfi_parse_reg ();
++      cfi_parse_separator ();
++      offset = cfi_parse_const ();
++      cfi_add_CFA_def_cfa (reg1, offset);
+       break;
+ 
+-      /* Instructions that take two arguments (register, register). */
+     case DW_CFA_register:
+       reg1 = cfi_parse_reg ();
+       cfi_parse_separator ();
+       reg2 = cfi_parse_reg ();
+-
+       cfi_add_CFA_register (reg1, reg2);
+       break;
+ 
+-      /* Instructions that take one register argument.  */
+     case DW_CFA_def_cfa_register:
+       reg1 = cfi_parse_reg ();
+       cfi_add_CFA_def_cfa_register (reg1);
+       break;
+ 
+-      /* Instructions that take one integer argument.  */
+     case DW_CFA_def_cfa_offset:
+       offset = cfi_parse_const ();
+       cfi_add_CFA_def_cfa_offset (offset);
+       break;
+ 
+-      /* Special handling for pseudo-instruction.  */
+     case CFI_adjust_cfa_offset:
+       offset = cfi_parse_const ();
+       cfi_add_CFA_def_cfa_offset (cur_cfa_offset + offset);
+       break;
+ 
++    case DW_CFA_restore:
++      reg1 = cfi_parse_reg ();
++      cfi_add_CFA_restore (reg1);
++      break;
++
++    case DW_CFA_undefined:
++      reg1 = cfi_parse_reg ();
++      cfi_add_CFA_undefined (reg1);
++      break;
++
++    case DW_CFA_same_value:
++      reg1 = cfi_parse_reg ();
++      cfi_add_CFA_same_value (reg1);
++      break;
++
++    case CFI_return_column:
++      reg1 = cfi_parse_reg ();
++      cfi_set_return_column (reg1);
++      break;
++
++    case DW_CFA_remember_state:
++      cfi_add_CFA_remember_state ();
++      break;
++
++    case DW_CFA_restore_state:
++      cfi_add_CFA_restore_state ();
++      break;
++
++    case DW_CFA_nop:
++      cfi_add_CFA_nop ();
++      break;
++
+     default:
+       abort ();
+     }
+@@ -553,8 +653,10 @@ output_cfi_insn (struct cfi_insn_data *i
+       break;
+ 
+     case DW_CFA_def_cfa_register:
+-      out_one (DW_CFA_def_cfa_register);
+-      out_uleb128 (insn->u.i);
++    case DW_CFA_undefined:
++    case DW_CFA_same_value:
++      out_one (insn->insn);
++      out_uleb128 (insn->u.r);
+       break;
+ 
+     case DW_CFA_def_cfa_offset:
+@@ -571,12 +673,25 @@ output_cfi_insn (struct cfi_insn_data *i
+ 	}
+       break;
+ 
++    case DW_CFA_restore:
++      regno = insn->u.r;
++      if (regno <= 0x3F)
++	{
++	  out_one (DW_CFA_restore + regno);
++	}
++      else
++	{
++	  out_one (DW_CFA_restore_extended);
++	  out_uleb128 (regno);
++	}
++      break;
++
+     case DW_CFA_offset:
+       regno = insn->u.ri.reg;
+       offset = insn->u.ri.offset / DWARF2_CIE_DATA_ALIGNMENT;
+       if (offset < 0)
+ 	{
+-	  out_one (DW_CFA_offset_extended);
++	  out_one (DW_CFA_offset_extended_sf);
+ 	  out_uleb128 (regno);
+ 	  out_sleb128 (offset);
+ 	}
+@@ -599,8 +714,10 @@ output_cfi_insn (struct cfi_insn_data *i
+       out_uleb128 (insn->u.rr.reg2);
+       break;
+ 
++    case DW_CFA_remember_state:
++    case DW_CFA_restore_state:
+     case DW_CFA_nop:
+-      out_one (DW_CFA_nop);
++      out_one (insn->insn);
+       break;
+ 
+     default:
+@@ -722,6 +839,9 @@ select_cie_for_fde (struct fde_entry *fd
+ 	      break;
+ 
+ 	    case DW_CFA_def_cfa_register:
++	    case DW_CFA_restore:
++	    case DW_CFA_undefined:
++	    case DW_CFA_same_value:
+ 	      if (i->u.r != j->u.r)
+ 		goto fail;
+ 	      break;
+@@ -785,7 +905,7 @@ cfi_finish (void)
+   cfi_seg = subseg_new (".eh_frame", 0);
+ #ifdef BFD_ASSEMBLER
+   bfd_set_section_flags (stdoutput, cfi_seg,
+-			 SEC_ALLOC | SEC_LOAD | SEC_RELOC | SEC_DATA);
++			 SEC_ALLOC | SEC_LOAD | SEC_DATA | SEC_READONLY);
+ #endif
+   subseg_set (cfi_seg, 0);
+   record_alignment (cfi_seg, 2);
+--- gas/dw2gencfi.h	27 May 2003 16:52:46 -0000	1.2
++++ gas/dw2gencfi.h	5 Jun 2003 09:23:47 -0000	1.3
+@@ -37,10 +37,17 @@ extern void cfi_new_fde (struct symbol *
+ extern void cfi_end_fde (struct symbol *);
+ extern void cfi_set_return_column (unsigned);
+ extern void cfi_add_advance_loc (struct symbol *);
++
+ extern void cfi_add_CFA_offset (unsigned, offsetT);
+ extern void cfi_add_CFA_def_cfa (unsigned, offsetT);
+ extern void cfi_add_CFA_register (unsigned, unsigned);
+ extern void cfi_add_CFA_def_cfa_register (unsigned);
+ extern void cfi_add_CFA_def_cfa_offset (offsetT);
++extern void cfi_add_CFA_restore (unsigned);
++extern void cfi_add_CFA_undefined (unsigned);
++extern void cfi_add_CFA_same_value (unsigned);
++extern void cfi_add_CFA_remember_state (void);
++extern void cfi_add_CFA_restore_state (void);
++extern void cfi_add_CFA_nop (void);
+ 
+ #endif /* DW2GENCFI_H */
+--- gas/config/tc-alpha.c	30 May 2003 03:01:11 -0000	1.57
++++ gas/config/tc-alpha.c	5 Jun 2003 03:27:03 -0000	1.58
+@@ -267,6 +267,7 @@ static void s_alpha_file PARAMS ((int));
+ static void s_alpha_loc PARAMS ((int));
+ static void s_alpha_stab PARAMS ((int));
+ static void s_alpha_coff_wrapper PARAMS ((int));
++static void s_alpha_usepv PARAMS ((int));
+ #endif
+ #ifdef OBJ_EVAX
+ static void s_alpha_section PARAMS ((int));
+@@ -4822,8 +4823,65 @@ alpha_elf_md_end (void)
+ 	cfi_end_fde (p->func_end_sym);
+       }
+ }
++
++static void
++s_alpha_usepv (int unused ATTRIBUTE_UNUSED)
++{
++  char *name, name_end;
++  char *which, which_end;
++  symbolS *sym;
++  int other;
++
++  name = input_line_pointer;
++  name_end = get_symbol_end ();
++
++  if (! is_name_beginner (*name))
++    {
++      as_bad (_(".usepv directive has no name"));
++      *input_line_pointer = name_end;
++      ignore_rest_of_line ();
++      return;
++    }
++
++  sym = symbol_find_or_make (name);
++  *input_line_pointer++ = name_end;
++
++  if (name_end != ',')
++    {
++      as_bad (_(".usepv directive has no type"));
++      ignore_rest_of_line ();
++      return;
++    }
++
++  SKIP_WHITESPACE ();
++  which = input_line_pointer;
++  which_end = get_symbol_end ();
++
++  if (strcmp (which, "no") == 0)
++    other = STO_ALPHA_NOPV;
++  else if (strcmp (which, "std") == 0)
++    other = STO_ALPHA_STD_GPLOAD;
++  else
++    {
++      as_bad (_("unknown argument for .usepv"));
++      other = 0;
++    }
++  
++  *input_line_pointer = which_end;
++  demand_empty_rest_of_line ();
++
++  S_SET_OTHER (sym, other | (S_GET_OTHER (sym) & ~STO_ALPHA_STD_GPLOAD));
++}
+ #endif /* OBJ_ELF */
+ 
++/* Standard calling conventions leaves the CFA at $30 on entry.  */
++
++void
++alpha_cfi_frame_initial_instructions ()
++{
++  cfi_add_CFA_def_cfa_register (30);
++}
++
+ #ifdef OBJ_EVAX
+ 
+ /* Handle the section specific pseudo-op.  */
+@@ -5669,6 +5727,7 @@ const pseudo_typeS md_pseudo_table[] = {
+   {"loc", s_alpha_loc, 9},
+   {"stabs", s_alpha_stab, 's'},
+   {"stabn", s_alpha_stab, 'n'},
++  {"usepv", s_alpha_usepv, 0},
+   /* COFF debugging related pseudos.  */
+   {"begin", s_alpha_coff_wrapper, 0},
+   {"bend", s_alpha_coff_wrapper, 1},
+--- gas/config/tc-alpha.h	30 May 2003 03:01:11 -0000	1.17
++++ gas/config/tc-alpha.h	5 Jun 2003 03:27:03 -0000	1.18
+@@ -161,6 +161,11 @@ do {									\
+ 	     (long) FIX->tc_fix_data.next_reloc);			\
+ } while (0)
+ 
++#define TARGET_USE_CFIPOP 1
++
++#define tc_cfi_frame_initial_instructions alpha_cfi_frame_initial_instructions
++extern void alpha_cfi_frame_initial_instructions(void);
++
+ #define DWARF2_LINE_MIN_INSN_LENGTH	4
+ #define DWARF2_DEFAULT_RETURN_COLUMN	26
+ #define DWARF2_CIE_DATA_ALIGNMENT	-8
+--- gas/doc/c-alpha.texi	19 Dec 2002 01:11:31 -0000	1.4
++++ gas/doc/c-alpha.texi	5 Jun 2003 03:27:03 -0000	1.5
+@@ -379,6 +379,18 @@ to perform a load of the GP register; 2 
+ used in some non-standard way and so the linker cannot elide the load of
+ the procedure vector during relaxation.
+ 
++@item .usepv @var{function}, @var{which}
++Used to indicate the use of the @code{$27} register, similar to 
++@code{.prologue}, but without the other semantics of needing to 
++be inside an open @code{.ent}/@code{.end} block.
++
++The @var{which} argument should be either @code{no}, indicating that
++@code{$27} is not used, or @code{std}, indicating that the first two
++instructions of the function perform a GP load.
++
++One might use this directive instead of @code{.prologue} if you are
++also using dwarf2 CFI directives.
++
+ @item .gprel32 @var{expression}
+ Computes the difference between the address in @var{expression} and the
+ GP for the current object file, and stores it in 4 bytes.  In addition
+
+--- gas/testsuite/gas/alpha/alpha.exp	7 Nov 2002 00:42:18 -0000	1.6
++++ gas/testsuite/gas/alpha/alpha.exp	5 Jun 2003 03:27:03 -0000	1.7
+@@ -34,6 +34,8 @@ if { [istarget alpha*-*-*] } then {
+ 	run_dump_test "elf-tls-1"
+ 	run_list_test "elf-tls-2" ""
+ 	run_list_test "elf-tls-3" ""
++	run_dump_test "elf-usepv-1"
++	run_list_test "elf-usepv-2" ""
+     }
+ 
+     run_dump_test "fp"
+--- gas/testsuite/gas/cfi/cfi.exp	31 May 2003 19:36:45 -0000	1.3
++++ gas/testsuite/gas/cfi/cfi.exp	5 Jun 2003 03:27:03 -0000	1.4
+@@ -16,5 +16,6 @@ if { [istarget alpha*-*-*] } then {
+     if $elf {
+ 	run_dump_test "cfi-alpha-1"
+ 	run_dump_test "cfi-alpha-2"
++	run_dump_test "cfi-alpha-3"
+     }
+ }
+--- gas/testsuite/gas/alpha/elf-usepv-1.d	2003-01-30 05:24:37.000000000 -0500
++++ gas/testsuite/gas/alpha/elf-usepv-1.d	2003-06-04 23:27:03.000000000 -0400
+@@ -0,0 +1,11 @@
++#objdump: --syms
++#name: alpha elf-usepv-1
++
++.*:     file format elf64-alpha
++
++SYMBOL TABLE:
++0*0000000 l    d  .text	0*0000000 
++0*0000000 l    d  .data	0*0000000 
++0*0000000 l    d  .bss	0*0000000 
++0*0000000 l       .text	0*0000000 0x80 foo
++0*0000004 l       .text	0*0000000 0x88 bar
+--- gas/testsuite/gas/alpha/elf-usepv-1.s	2003-01-30 05:24:37.000000000 -0500
++++ gas/testsuite/gas/alpha/elf-usepv-1.s	2003-06-04 23:27:03.000000000 -0400
+@@ -0,0 +1,6 @@
++	.usepv foo, no
++foo:
++	nop
++	.usepv bar, std
++bar:
++	nop
+--- gas/testsuite/gas/alpha/elf-usepv-2.l	2003-01-30 05:24:37.000000000 -0500
++++ gas/testsuite/gas/alpha/elf-usepv-2.l	2003-06-04 23:27:03.000000000 -0400
+@@ -0,0 +1,2 @@
++.*: Assembler messages:
++.*:1: Error: unknown argument for .usepv
+--- gas/testsuite/gas/alpha/elf-usepv-2.s	2003-01-30 05:24:37.000000000 -0500
++++ gas/testsuite/gas/alpha/elf-usepv-2.s	2003-06-04 23:27:03.000000000 -0400
+@@ -0,0 +1 @@
++	.usepv foo, bar
+--- gas/testsuite/gas/cfi/cfi-alpha-3.d	2003-01-30 05:24:37.000000000 -0500
++++ gas/testsuite/gas/cfi/cfi-alpha-3.d	2003-06-04 23:27:03.000000000 -0400
+@@ -0,0 +1,32 @@
++#readelf: -wf
++#name: CFI on alpha, 3
++The section .eh_frame contains:
++
++00000000 00000010 00000000 CIE
++  Version:               1
++  Augmentation:          "zR"
++  Code alignment factor: 4
++  Data alignment factor: -8
++  Return address column: 26
++  Augmentation data:     1b
++
++  DW_CFA_def_cfa_reg: r30
++  DW_CFA_nop
++
++00000014 00000024 00000018 FDE cie=00000000 pc=0000001c..0000005c
++  DW_CFA_advance_loc: 4 to 00000020
++  DW_CFA_def_cfa_offset: 32
++  DW_CFA_advance_loc: 4 to 00000024
++  DW_CFA_offset: r26 at cfa-32
++  DW_CFA_advance_loc: 4 to 00000028
++  DW_CFA_offset: r9 at cfa-24
++  DW_CFA_advance_loc: 4 to 0000002c
++  DW_CFA_offset: r15 at cfa-16
++  DW_CFA_advance_loc: 4 to 00000030
++  DW_CFA_offset: r34 at cfa-8
++  DW_CFA_advance_loc: 4 to 00000034
++  DW_CFA_def_cfa_reg: r15
++  DW_CFA_advance_loc: 36 to 00000058
++  DW_CFA_def_cfa: r30 ofs 0
++  DW_CFA_nop
++
+--- gas/testsuite/gas/cfi/cfi-alpha-3.s	2003-01-30 05:24:37.000000000 -0500
++++ gas/testsuite/gas/cfi/cfi-alpha-3.s	2003-06-04 23:27:03.000000000 -0400
+@@ -0,0 +1,37 @@
++	.file	1 "z.c"
++	.set noat
++	.set noreorder
++.text
++	.align 4
++	.globl f
++	.type f,@function
++	.usepv f,no
++	.cfi_startproc
++f:
++	lda $30,-32($30)
++	.cfi_adjust_cfa_offset 32
++	stq $26,0($30)
++	.cfi_offset $26, -32
++	stq $9,8($30)
++	.cfi_offset $9, -24
++	stq $15,16($30)
++	.cfi_offset $15, -16
++	stt $f2,24($30)
++	.cfi_offset $f2, -8
++	mov $30,$15
++	.cfi_def_cfa_register $15
++
++	nop
++	nop
++	nop
++
++	mov $15,$30
++	ldq $26,0($30)
++	ldq $9,8($30)
++	ldt $f2,24($30)
++	ldq $15,16($30)
++	lda $30,32($30)
++	.cfi_def_cfa $30, 0
++	ret $31,($26),1
++	.size f, .-f
++	.cfi_endproc

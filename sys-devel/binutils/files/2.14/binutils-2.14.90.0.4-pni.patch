@@ -1,0 +1,442 @@
+gas/
+
+2003-05-05  H.J. Lu <hongjiu.lu@intel.com>
+
+	* gas/config/tc-i386.c (md_assemble): Support Intel Precott New
+	Instructions.
+
+	* gas/config/tc-i386.h (CpuPNI): New.
+	(CpuUnknownFlags): Add CpuPNI.
+
+gas/testsuite/
+
+2003-05-05  H.J. Lu <hongjiu.lu@intel.com>
+
+	* gas/i386/i386.exp: Add prescott.
+
+	* gas/i386/prescott.d: New file.
+	* gas/i386/prescott.s: Likewise.
+
+include/opcode/
+
+2003-05-05  H.J. Lu <hongjiu.lu@intel.com>
+
+	* i386.h (i386_optab): Support Intel Precott New Instructions.
+
+opcodes/
+
+2003-05-05  H.J. Lu <hongjiu.lu@intel.com>
+
+	* i386-dis.c (PNI_Fixup): New. Fix up "mwait" and "monitor" in
+	Intel Precott New Instructions.
+	(PREGRP27): New. Added for "addsubpd" and "addsubps".
+	(PREGRP28): New. Added for "haddpd" and "haddps".
+	(PREGRP29): New. Added for "hsubpd" and "hsubps".
+	(PREGRP30): New. Added for "movsldup" and "movddup".
+	(PREGRP31): New. Added for "movshdup" and "movhpd".
+	(PREGRP32): New. Added for "lddqu".
+	(dis386_twobyte): Use PREGRP30 to replace the "movlpX" entry.
+	Use PREGRP31 to replace the "movhpX" entry. Use PREGRP28 for
+	entry 0x7c. Use PREGRP29 for entry 0x7d. Use PREGRP27 for
+	entry 0xd0. Use PREGRP32 for entry 0xf0.
+	(twobyte_has_modrm): Updated.
+	(twobyte_uses_SSE_prefix): Likewise.
+	(grps): Use PNI_Fixup in the "sidtQ" entry.
+	(prefix_user_table): Add PREGRP27, PREGRP28, PREGRP29, PREGRP30,
+	PREGRP31 and PREGRP32.
+	(float_mem): Use "fisttp{l||l|}" in entry 1 in opcode 0xdb.
+	Use "fisttpll" in entry 1 in opcode 0xdd.
+	Use "fisttp" in entry 1 in opcode 0xdf.
+
+--- gas/config/tc-i386.c.pni	2003-02-27 11:27:09.000000000 -0800
++++ gas/config/tc-i386.c	2003-05-05 08:27:55.000000000 -0700
+@@ -1392,6 +1392,21 @@ md_assemble (line)
+ 
+   if (i.tm.opcode_modifier & ImmExt)
+     {
++      if ((i.tm.cpu_flags & CpuPNI) && i.operands > 0)
++	{
++          /* These Intel Precott New Instructions have the fixed
++	     operands with an opcode suffix which is coded in the same
++	     place as an 8-bit immediate field would be. Here we check
++	     those operands and remove them afterwards.  */
++	  unsigned int x;
++
++	  for (x = 0; x < i.operands; x++) 
++	    if (i.op[x].regs->reg_num != x)
++	      as_bad (_("can't use register '%%%s' as operand %d in '%s'."),
++			i.op[x].regs->reg_name, x + 1, i.tm.name);
++	  i.operands = 0;
++ 	}
++
+       /* These AMD 3DNow! and Intel Katmai New Instructions have an
+ 	 opcode suffix which is coded in the same place as an 8-bit
+ 	 immediate field would be.  Here we fake an 8-bit immediate
+--- gas/config/tc-i386.h.pni	2003-01-23 09:20:47.000000000 -0800
++++ gas/config/tc-i386.h	2003-05-05 08:27:55.000000000 -0700
+@@ -243,13 +243,14 @@ typedef struct
+ #define CpuSSE	       0x1000	/* Streaming SIMD extensions required */
+ #define CpuSSE2	       0x2000	/* Streaming SIMD extensions 2 required */
+ #define Cpu3dnow       0x4000	/* 3dnow! support required */
++#define CpuPNI	       0x8000	/* Prescott New Instuctions required */
+ 
+   /* These flags are set by gas depending on the flag_code.  */
+ #define Cpu64	     0x4000000   /* 64bit support required  */
+ #define CpuNo64      0x8000000   /* Not supported in the 64bit mode  */
+ 
+   /* The default value for unknown CPUs - enable all features to avoid problems.  */
+-#define CpuUnknownFlags (Cpu086|Cpu186|Cpu286|Cpu386|Cpu486|Cpu586|Cpu686|CpuP4|CpuSledgehammer|CpuMMX|CpuSSE|CpuSSE2|Cpu3dnow|CpuK6|CpuAthlon)
++#define CpuUnknownFlags (Cpu086|Cpu186|Cpu286|Cpu386|Cpu486|Cpu586|Cpu686|CpuP4|CpuSledgehammer|CpuMMX|CpuSSE|CpuSSE2|CpuPNI|Cpu3dnow|CpuK6|CpuAthlon)
+ 
+   /* the bits in opcode_modifier are used to generate the final opcode from
+      the base_opcode.  These bits also are used to detect alternate forms of
+--- gas/testsuite/gas/i386/i386.exp.pni	2002-11-06 09:20:11.000000000 -0800
++++ gas/testsuite/gas/i386/i386.exp	2003-05-05 08:54:06.000000000 -0700
+@@ -56,6 +56,7 @@ if [expr ([istarget "i*86-*-*"] ||  [ist
+     run_dump_test "absrel"
+     run_dump_test "pcrel"
+     run_dump_test "sub"
++    run_dump_test "prescott"
+ 
+     # PIC is only supported on ELF targets.
+     if { ([istarget "*-*-elf*"] || [istarget "*-*-linux*"] )
+--- gas/testsuite/gas/i386/prescott.d.pni	2003-05-05 08:53:28.000000000 -0700
++++ gas/testsuite/gas/i386/prescott.d	2003-05-05 09:23:20.000000000 -0700
+@@ -0,0 +1,37 @@
++#objdump: -dw
++#name: i386 prescott
++
++.*: +file format .*
++
++Disassembly of section .text:
++
++0+000 <foo>:
++   0:	66 0f d0 01 [ 	]*addsubpd \(%ecx\),%xmm0
++   4:	66 0f d0 ca [ 	]*addsubpd %xmm2,%xmm1
++   8:	f2 0f d0 13 [ 	]*addsubps \(%ebx\),%xmm2
++   c:	f2 0f d0 dc [ 	]*addsubps %xmm4,%xmm3
++  10:	df 88 90 90 90 90 [ 	]*fisttp 0x90909090\(%eax\)
++  16:	db 88 90 90 90 90 [ 	]*fisttpl 0x90909090\(%eax\)
++  1c:	dd 88 90 90 90 90 [ 	]*fisttpll 0x90909090\(%eax\)
++  22:	dd 88 90 90 90 90 [ 	]*fisttpll 0x90909090\(%eax\)
++  28:	dd 88 90 90 90 90 [ 	]*fisttpll 0x90909090\(%eax\)
++  2e:	66 0f 7c 65 00 [ 	]*haddpd 0x0\(%ebp\),%xmm4
++  33:	66 0f 7c ee [ 	]*haddpd %xmm6,%xmm5
++  37:	f2 0f 7c 37 [ 	]*haddps \(%edi\),%xmm6
++  3b:	f2 0f 7c f8 [ 	]*haddps %xmm0,%xmm7
++  3f:	66 0f 7d c1 [ 	]*hsubpd %xmm1,%xmm0
++  43:	66 0f 7d 0a [ 	]*hsubpd \(%edx\),%xmm1
++  47:	f2 0f 7d d2 [ 	]*hsubps %xmm2,%xmm2
++  4b:	f2 0f 7d 1c 24 [ 	]*hsubps \(%esp,1\),%xmm3
++  50:	f2 0f f0 2e [ 	]*lddqu  \(%esi\),%xmm5
++  54:	0f 01 c8 [ 	]*monitor %eax,%ecx,%edx 
++  57:	0f 01 c8 [ 	]*monitor %eax,%ecx,%edx 
++  5a:	f2 0f 12 f7 [ 	]*movddup %xmm7,%xmm6
++  5e:	f2 0f 12 38 [ 	]*movddup \(%eax\),%xmm7
++  62:	f3 0f 16 01 [ 	]*movshdup \(%ecx\),%xmm0
++  66:	f3 0f 16 ca [ 	]*movshdup %xmm2,%xmm1
++  6a:	f3 0f 12 13 [ 	]*movsldup \(%ebx\),%xmm2
++  6e:	f3 0f 12 dc [ 	]*movsldup %xmm4,%xmm3
++  72:	0f 01 c9 [ 	]*mwait   %eax,%ecx 
++  75:	0f 01 c9 [ 	]*mwait   %eax,%ecx 
++	...
+--- gas/testsuite/gas/i386/prescott.s.pni	2003-05-05 08:53:31.000000000 -0700
++++ gas/testsuite/gas/i386/prescott.s	2003-05-05 08:46:29.000000000 -0700
+@@ -0,0 +1,34 @@
++#Prescott New Instructions
++
++	.text
++foo:
++	addsubpd	(%ecx),%xmm0
++	addsubpd	%xmm2,%xmm1
++	addsubps	(%ebx),%xmm2
++	addsubps	%xmm4,%xmm3
++	fisttp		0x90909090(%eax)
++	fisttpl		0x90909090(%eax)
++	fisttpd		0x90909090(%eax)
++	fisttpq		0x90909090(%eax)
++	fisttpll	0x90909090(%eax)
++	haddpd		0x0(%ebp),%xmm4
++	haddpd		%xmm6,%xmm5
++	haddps		(%edi),%xmm6
++	haddps		%xmm0,%xmm7
++	hsubpd		%xmm1,%xmm0
++	hsubpd		(%edx),%xmm1
++	hsubps		%xmm2,%xmm2
++	hsubps		(%esp,1),%xmm3
++	lddqu		(%esi),%xmm5
++	monitor
++	monitor		%eax,%ecx,%edx
++	movddup		%xmm7,%xmm6
++	movddup		(%eax),%xmm7
++	movshdup	(%ecx),%xmm0
++	movshdup	%xmm2,%xmm1
++	movsldup	(%ebx),%xmm2
++	movsldup	%xmm4,%xmm3
++	mwait
++	mwait		%eax,%ecx
++
++	.p2align	4,0
+--- include/opcode/i386.h.pni	2002-07-08 08:39:20.000000000 -0700
++++ include/opcode/i386.h	2003-05-05 08:27:55.000000000 -0700
+@@ -1302,6 +1302,30 @@ static const template i386_optab[] = {
+ {"punpckhqdq",2, 0x660f6d,  X, CpuSSE2, FP|Modrm,	{ RegXMM|LLongMem, RegXMM, 0 } },
+ {"punpcklqdq",2, 0x660f6c,  X, CpuSSE2, FP|Modrm,	{ RegXMM|LLongMem, RegXMM, 0 } },
+ 
++/* Prescott New Instructions.  */
++
++{"addsubpd",  2, 0x660fd0,  X, CpuPNI, FP|Modrm,	{ RegXMM|LLongMem, RegXMM, 0 } },
++{"addsubps",  2, 0xf20fd0,  X, CpuPNI, FP|Modrm,	{ RegXMM|LLongMem, RegXMM, 0 } },
++{"fisttp",    1, 0xdf,      1, CpuPNI, sl_FP|FloatMF|Modrm, { ShortMem|LongMem, 0, 0} },
++/* Intel Syntax */
++{"fisttpd",   1, 0xdd,      1, CpuPNI, FP|Modrm,	{ LLongMem, 0, 0} },
++{"fisttpq",   1, 0xdd,      1, CpuPNI, FP|Modrm,	{ LLongMem, 0, 0} },
++{"fisttpll",  1, 0xdd,      1, CpuPNI, FP|Modrm,	{ LLongMem, 0, 0} },
++{"haddpd",    2, 0x660f7c,  X, CpuPNI, FP|Modrm,	{ RegXMM|LLongMem, RegXMM, 0 } },
++{"haddps",    2, 0xf20f7c,  X, CpuPNI, FP|Modrm,	{ RegXMM|LLongMem, RegXMM, 0 } },
++{"hsubpd",    2, 0x660f7d,  X, CpuPNI, FP|Modrm,	{ RegXMM|LLongMem, RegXMM, 0 } },
++{"hsubps",    2, 0xf20f7d,  X, CpuPNI, FP|Modrm,	{ RegXMM|LLongMem, RegXMM, 0 } },
++{"lddqu",     2, 0xf20ff0,  X, CpuPNI, FP|Modrm,	{ LLongMem, RegXMM, 0 } },
++{"monitor",   0, 0x0f01, 0xc8, CpuPNI, FP|ImmExt,	{ 0, 0, 0} },
++/* Need to ensure only "monitor %eax,%ecx,%edx" is accepted. */
++{"monitor",   3, 0x0f01, 0xc8, CpuPNI, FP|ImmExt,	{ Reg32, Reg32, Reg32} },
++{"movddup",   2, 0xf20f12,  X, CpuPNI, FP|Modrm,	{ RegXMM|LLongMem, RegXMM, 0 } },
++{"movshdup",  2, 0xf30f16,  X, CpuPNI, FP|Modrm,	{ RegXMM|LLongMem, RegXMM, 0 } },
++{"movsldup",  2, 0xf30f12,  X, CpuPNI, FP|Modrm,	{ RegXMM|LLongMem, RegXMM, 0 } },
++{"mwait",     0, 0x0f01, 0xc9, CpuPNI, FP|ImmExt,	{ 0, 0, 0} },
++/* Need to ensure only "mwait %eax,%ecx" is accepted.  */
++{"mwait",     2, 0x0f01, 0xc9, CpuPNI, FP|ImmExt,	{ Reg32, Reg32, 0} },
++
+ /* AMD 3DNow! instructions.  */
+ 
+ {"prefetch", 1, 0x0f0d,	   0, Cpu3dnow, FP|Modrm,		{ ByteMem, 0, 0 } },
+--- opcodes/i386-dis.c.pni	2003-03-24 09:53:02.000000000 -0800
++++ opcodes/i386-dis.c	2003-05-05 08:27:55.000000000 -0700
+@@ -93,6 +93,7 @@ static void OP_XS PARAMS ((int, int));
+ static void OP_3DNowSuffix PARAMS ((int, int));
+ static void OP_SIMD_Suffix PARAMS ((int, int));
+ static void SIMD_Fixup PARAMS ((int, int));
++static void PNI_Fixup PARAMS ((int, int));
+ static void BadOp PARAMS ((void));
+ 
+ struct dis_private {
+@@ -417,6 +418,12 @@ fetch_data (info, addr)
+ #define PREGRP24  NULL, NULL, USE_PREFIX_USER_TABLE, NULL, 24, NULL, 0
+ #define PREGRP25  NULL, NULL, USE_PREFIX_USER_TABLE, NULL, 25, NULL, 0
+ #define PREGRP26  NULL, NULL, USE_PREFIX_USER_TABLE, NULL, 26, NULL, 0
++#define PREGRP27  NULL, NULL, USE_PREFIX_USER_TABLE, NULL, 27, NULL, 0
++#define PREGRP28  NULL, NULL, USE_PREFIX_USER_TABLE, NULL, 28, NULL, 0
++#define PREGRP29  NULL, NULL, USE_PREFIX_USER_TABLE, NULL, 29, NULL, 0
++#define PREGRP30  NULL, NULL, USE_PREFIX_USER_TABLE, NULL, 30, NULL, 0
++#define PREGRP31  NULL, NULL, USE_PREFIX_USER_TABLE, NULL, 31, NULL, 0
++#define PREGRP32  NULL, NULL, USE_PREFIX_USER_TABLE, NULL, 32, NULL, 0
+ 
+ #define X86_64_0  NULL, NULL, X86_64_SPECIAL, NULL,  0, NULL, 0
+ 
+@@ -776,11 +783,11 @@ static const struct dis386 dis386_twobyt
+   /* 10 */
+   { PREGRP8 },
+   { PREGRP9 },
+-  { "movlpX",		XM, EX, SIMD_Fixup, 'h' }, /* really only 2 operands */
++  { PREGRP30 },
+   { "movlpX",		EX, XM, SIMD_Fixup, 'h' },
+   { "unpcklpX",		XM, EX, XX },
+   { "unpckhpX",		XM, EX, XX },
+-  { "movhpX",		XM, EX, SIMD_Fixup, 'l' },
++  { PREGRP31 },
+   { "movhpX",		EX, XM, SIMD_Fixup, 'l' },
+   /* 18 */
+   { GRP14 },
+@@ -895,8 +902,8 @@ static const struct dis386 dis386_twobyt
+   { "(bad)",		XX, XX, XX },
+   { "(bad)",		XX, XX, XX },
+   { "(bad)",		XX, XX, XX },
+-  { "(bad)",		XX, XX, XX },
+-  { "(bad)",		XX, XX, XX },
++  { PREGRP28 },
++  { PREGRP29 },
+   { PREGRP23 },
+   { PREGRP20 },
+   /* 80 */
+@@ -990,7 +997,7 @@ static const struct dis386 dis386_twobyt
+   { "bswap",		RMeSI, XX, XX },
+   { "bswap",		RMeDI, XX, XX },
+   /* d0 */
+-  { "(bad)",		XX, XX, XX },
++  { PREGRP27 },
+   { "psrlw",		MX, EM, XX },
+   { "psrld",		MX, EM, XX },
+   { "psrlq",		MX, EM, XX },
+@@ -1026,7 +1033,7 @@ static const struct dis386 dis386_twobyt
+   { "pmaxsw",		MX, EM, XX },
+   { "pxor",		MX, EM, XX },
+   /* f0 */
+-  { "(bad)",		XX, XX, XX },
++  { PREGRP32 },
+   { "psllw",		MX, EM, XX },
+   { "pslld",		MX, EM, XX },
+   { "psllq",		MX, EM, XX },
+@@ -1078,15 +1085,15 @@ static const unsigned char twobyte_has_m
+   /* 40 */ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, /* 4f */
+   /* 50 */ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, /* 5f */
+   /* 60 */ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, /* 6f */
+-  /* 70 */ 1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1, /* 7f */
++  /* 70 */ 1,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1, /* 7f */
+   /* 80 */ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, /* 8f */
+   /* 90 */ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, /* 9f */
+   /* a0 */ 0,0,0,1,1,1,0,0,0,0,0,1,1,1,1,1, /* af */
+   /* b0 */ 1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1, /* bf */
+   /* c0 */ 1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0, /* cf */
+-  /* d0 */ 0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, /* df */
++  /* d0 */ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, /* df */
+   /* e0 */ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, /* ef */
+-  /* f0 */ 0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0  /* ff */
++  /* f0 */ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0  /* ff */
+   /*       -------------------------------        */
+   /*       0 1 2 3 4 5 6 7 8 9 a b c d e f        */
+ };
+@@ -1095,21 +1102,21 @@ static const unsigned char twobyte_uses_
+   /*       0 1 2 3 4 5 6 7 8 9 a b c d e f        */
+   /*       -------------------------------        */
+   /* 00 */ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, /* 0f */
+-  /* 10 */ 1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0, /* 1f */
++  /* 10 */ 1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0, /* 1f */
+   /* 20 */ 0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0, /* 2f */
+   /* 30 */ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, /* 3f */
+   /* 40 */ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, /* 4f */
+   /* 50 */ 0,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1, /* 5f */
+   /* 60 */ 0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1, /* 6f */
+-  /* 70 */ 1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1, /* 7f */
++  /* 70 */ 1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1, /* 7f */
+   /* 80 */ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, /* 8f */
+   /* 90 */ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, /* 9f */
+   /* a0 */ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, /* af */
+   /* b0 */ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, /* bf */
+   /* c0 */ 0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0, /* cf */
+-  /* d0 */ 0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0, /* df */
++  /* d0 */ 1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0, /* df */
+   /* e0 */ 0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0, /* ef */
+-  /* f0 */ 0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0  /* ff */
++  /* f0 */ 1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0  /* ff */
+   /*       -------------------------------        */
+   /*       0 1 2 3 4 5 6 7 8 9 a b c d e f        */
+ };
+@@ -1349,7 +1356,7 @@ static const struct dis386 grps[][8] = {
+   /* GRP7 */
+   {
+     { "sgdtQ",	 M, XX, XX },
+-    { "sidtQ",	 M, XX, XX },
++    { "sidtQ", PNI_Fixup, 0, XX, XX },
+     { "lgdtQ",	 M, XX, XX },
+     { "lidtQ",	 M, XX, XX },
+     { "smswQ",	Ev, XX, XX },
+@@ -1638,6 +1645,48 @@ static const struct dis386 prefix_user_t
+     { "punpcklqdq", XM, EX, XX },
+     { "(bad)", XM, EX, XX },
+   },
++  /* PREGRP27 */
++  {
++    { "(bad)", MX, EX, XX },
++    { "(bad)", XM, EX, XX },
++    { "addsubpd", XM, EX, XX },
++    { "addsubps", XM, EX, XX },
++  },
++  /* PREGRP28 */
++  {
++    { "(bad)", MX, EX, XX },
++    { "(bad)", XM, EX, XX },
++    { "haddpd", XM, EX, XX },
++    { "haddps", XM, EX, XX },
++  },
++  /* PREGRP29 */
++  {
++    { "(bad)", MX, EX, XX },
++    { "(bad)", XM, EX, XX },
++    { "hsubpd", XM, EX, XX },
++    { "hsubps", XM, EX, XX },
++  },
++  /* PREGRP30 */
++  {
++    { "movlpX", XM, EX, SIMD_Fixup, 'h' }, /* really only 2 operands */
++    { "movsldup", XM, EX, XX },
++    { "movlpd", XM, EX, XX },
++    { "movddup", XM, EX, XX },
++  },
++  /* PREGRP31 */
++  {
++    { "movhpX", XM, EX, SIMD_Fixup, 'l' },
++    { "movshdup", XM, EX, XX },
++    { "movhpd", XM, EX, XX },
++    { "(bad)", XM, EX, XX },
++  },
++  /* PREGRP32 */
++  {
++    { "(bad)", XM, EX, XX },
++    { "(bad)", XM, EX, XX },
++    { "(bad)", XM, EX, XX },
++    { "lddqu", XM, M, XX },
++  },
+ };
+ 
+ static const struct dis386 x86_64_table[][2] = {
+@@ -2294,7 +2343,7 @@ static const char *float_mem[] = {
+   "fidivr{l||l|}",
+   /* db */
+   "fild{l||l|}",
+-  "(bad)",
++  "fisttp{l||l|}",
+   "fist{l||l|}",
+   "fistp{l||l|}",
+   "(bad)",
+@@ -2312,7 +2361,7 @@ static const char *float_mem[] = {
+   "fdivr{l||l|}",
+   /* dd */
+   "fld{l||l|}",
+-  "(bad)",
++  "fisttpll",
+   "fst{l||l|}",
+   "fstp{l||l|}",
+   "frstor",
+@@ -2330,7 +2379,7 @@ static const char *float_mem[] = {
+   "fidivr",
+   /* df */
+   "fild",
+-  "(bad)",
++  "fisttp",
+   "fist",
+   "fistp",
+   "fbld",
+@@ -4138,6 +4187,33 @@ SIMD_Fixup (extrachar, sizeflag)
+ }
+ 
+ static void
++PNI_Fixup (extrachar, sizeflag)
++     int extrachar ATTRIBUTE_UNUSED;
++     int sizeflag ATTRIBUTE_UNUSED;
++{
++  if (mod == 3 && reg == 1)
++    {
++      char *p = obuf + strlen (obuf);
++
++      /* Override "sidt".  */
++      if (rm)
++	{
++	  /* mwait %eax,%ecx  */
++	  strcpy (p - 4, "mwait   %eax,%ecx");
++	}
++      else
++	{
++	  /* monitor %eax,%ecx,%edx"  */
++	  strcpy (p - 4, "monitor %eax,%ecx,%edx");
++	}
++
++      codep++;
++    }
++  else
++    OP_E (0, sizeflag);
++}
++
++static void
+ BadOp (void)
+ {
+   /* Throw away prefixes and 1st. opcode byte.  */

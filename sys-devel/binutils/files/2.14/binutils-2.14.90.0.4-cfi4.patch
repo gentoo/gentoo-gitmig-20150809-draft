@@ -1,0 +1,384 @@
+2003-06-18  Jakub Jelinek  <jakub@redhat.com>
+
+	* dw2gencfi.c (EH_FRAME_ALIGNMENT): Define if not defined.
+	(output_cie): Don't pad.
+	(output_fde): Add align argument.  Pad to align if not 0.
+	(cfi_finish): Set .eh_frame alignment to EH_FRAME_ALIGNMENT.
+	Pad just last FDE to EH_FRAME_ALIGNMENT.
+
+	* gas/cfi/cfi-i386.d: Regenerated.
+	* gas/cfi/cfi-common-1.d: Regenerated.
+	* gas/cfi/cfi-common-2.d: Regenerated.
+	* gas/cfi/cfi-common-3.d: Regenerated.
+	* gas/cfi/cfi-x86_64.d: Regenerated.
+	* gas/cfi/cfi-alpha-1.d: Regenerated.
+	* gas/cfi/cfi-alpha-2.d: Regenerated.
+	* gas/cfi/cfi-alpha-3.d: Regenerated.
+
+--- gas/dw2gencfi.c.jj	2003-06-17 03:59:16.000000000 -0400
++++ gas/dw2gencfi.c	2003-06-18 07:25:06.000000000 -0400
+@@ -41,6 +41,14 @@
+ # endif
+ #endif
+ 
++#ifndef EH_FRAME_ALIGNMENT
++# ifdef BFD_ASSEMBLER
++#  define EH_FRAME_ALIGNMENT (bfd_get_arch_size (stdoutput) == 64 ? 3 : 2)
++# else
++#  define EH_FRAME_ALIGNMENT 2
++# endif
++#endif
++
+ #ifndef tc_cfi_frame_initial_instructions
+ # define tc_cfi_frame_initial_instructions() ((void)0)
+ #endif
+@@ -836,13 +844,12 @@ output_cie (struct cie_entry *cie)
+     for (i = cie->first; i != cie->last; i = i->next)
+       output_cfi_insn (i);
+ 
+-  frag_align (2, 0, 0);
+   symbol_set_value_now (end_address);
+ }
+ 
+ static void
+ output_fde (struct fde_entry *fde, struct cie_entry *cie,
+-	    struct cfi_insn_data *first)
++	    struct cfi_insn_data *first, int align)
+ {
+   symbolS *after_size_address, *end_address;
+   expressionS exp;
+@@ -874,7 +881,8 @@ output_fde (struct fde_entry *fde, struc
+   for (; first; first = first->next)
+     output_cfi_insn (first);
+ 
+-  frag_align (2, 0, 0);
++  if (align)
++    frag_align (align, 0, 0);
+   symbol_set_value_now (end_address);
+ }
+ 
+@@ -990,7 +998,7 @@ cfi_finish (void)
+ 			 SEC_ALLOC | SEC_LOAD | SEC_DATA | SEC_READONLY);
+ #endif
+   subseg_set (cfi_seg, 0);
+-  record_alignment (cfi_seg, 2);
++  record_alignment (cfi_seg, EH_FRAME_ALIGNMENT);
+ 
+   /* Make sure check_eh_frame doesn't do anything with our output.  */
+   save_flag_traditional_format = flag_traditional_format;
+@@ -1002,7 +1010,7 @@ cfi_finish (void)
+       struct cie_entry *cie;
+ 
+       cie = select_cie_for_fde (fde, &first);
+-      output_fde (fde, cie, first);
++      output_fde (fde, cie, first, fde->next == NULL ? EH_FRAME_ALIGNMENT : 0);
+     }
+ 
+   flag_traditional_format = save_flag_traditional_format;
+--- gas/testsuite/gas/cfi/cfi-i386.d.jj	2003-05-28 02:56:00.000000000 -0400
++++ gas/testsuite/gas/cfi/cfi-i386.d	2003-06-18 12:04:17.000000000 -0400
+@@ -2,7 +2,7 @@
+ #name: CFI on i386
+ The section .eh_frame contains:
+ 
+-00000000 00000014 00000000 CIE
++00000000 00000012 00000000 CIE
+   Version:               1
+   Augmentation:          "zR"
+   Code alignment factor: 1
+@@ -12,37 +12,29 @@ The section .eh_frame contains:
+ 
+   DW_CFA_def_cfa: r4 ofs 4
+   DW_CFA_offset: r8 at cfa-4
+-  DW_CFA_nop
+-  DW_CFA_nop
+ 
+-00000018 00000014 0000001c FDE cie=00000000 pc=00000020..00000032
+-  DW_CFA_advance_loc: 6 to 00000026
++00000016 00000014 0000001a FDE cie=00000000 pc=0000001e..00000030
++  DW_CFA_advance_loc: 6 to 00000024
+   DW_CFA_def_cfa_offset: 4664
+-  DW_CFA_advance_loc: 11 to 00000031
++  DW_CFA_advance_loc: 11 to 0000002f
+   DW_CFA_def_cfa_offset: 4
+ 
+-00000030 00000018 00000034 FDE cie=00000000 pc=0000004a..00000057
+-  DW_CFA_advance_loc: 1 to 0000004b
++0000002e 00000018 00000032 FDE cie=00000000 pc=00000048..00000055
++  DW_CFA_advance_loc: 1 to 00000049
+   DW_CFA_def_cfa_offset: 8
+   DW_CFA_offset: r5 at cfa-8
+-  DW_CFA_advance_loc: 2 to 0000004d
++  DW_CFA_advance_loc: 2 to 0000004b
+   DW_CFA_def_cfa_reg: r5
+-  DW_CFA_advance_loc: 9 to 00000056
++  DW_CFA_advance_loc: 9 to 00000054
+   DW_CFA_def_cfa_reg: r4
+ 
+-0000004c 00000014 00000050 FDE cie=00000000 pc=00000073..00000083
+-  DW_CFA_advance_loc: 2 to 00000075
++0000004a 00000014 0000004e FDE cie=00000000 pc=00000071..00000081
++  DW_CFA_advance_loc: 2 to 00000073
+   DW_CFA_def_cfa_reg: r3
+-  DW_CFA_advance_loc: 13 to 00000082
++  DW_CFA_advance_loc: 13 to 00000080
+   DW_CFA_def_cfa: r4 ofs 4
+ 
+-00000064 00000010 00000068 FDE cie=00000000 pc=0000009b..000000a1
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
+-
+-00000078 00000010 0000007c FDE cie=00000000 pc=000000b5..000000c4
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
++00000062 0000000d 00000066 FDE cie=00000000 pc=00000099..0000009f
++
++00000073 0000000d 00000077 FDE cie=00000000 pc=000000b0..000000bf
+ 
+--- gas/testsuite/gas/cfi/cfi-common-1.d.jj	2003-06-07 23:59:44.000000000 -0400
++++ gas/testsuite/gas/cfi/cfi-common-1.d	2003-06-18 12:13:51.000000000 -0400
+@@ -2,7 +2,7 @@
+ #name: CFI common 1
+ The section .eh_frame contains:
+ 
+-00000000 00000010 00000000 CIE
++00000000 0000000d 00000000 CIE
+   Version:               1
+   Augmentation:          "zR"
+   Code alignment factor: .*
+@@ -10,15 +10,14 @@ The section .eh_frame contains:
+   Return address column: .*
+   Augmentation data:     1b
+ 
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
+ 
+-00000014 00000018 00000018 FDE cie=00000000 pc=.*
++00000011 0000001b 00000015 FDE cie=00000000 pc=.*
+   DW_CFA_advance_loc: 4 to .*
+   DW_CFA_def_cfa: r0 ofs 16
+   DW_CFA_offset: r1 at cfa-8
+   DW_CFA_advance_loc: 4 to .*
+   DW_CFA_def_cfa_offset: 32
+   DW_CFA_offset: r2 at cfa-24
+-
++  DW_CFA_nop
++  DW_CFA_nop
++  DW_CFA_nop
+--- gas/testsuite/gas/cfi/cfi-common-2.d.jj	2003-06-07 23:59:44.000000000 -0400
++++ gas/testsuite/gas/cfi/cfi-common-2.d	2003-06-18 12:16:12.000000000 -0400
+@@ -2,7 +2,7 @@
+ #name: CFI common 2
+ The section .eh_frame contains:
+ 
+-00000000 00000010 00000000 CIE
++00000000 0000000d 00000000 CIE
+   Version:               1
+   Augmentation:          "zR"
+   Code alignment factor: .*
+@@ -10,11 +10,8 @@ The section .eh_frame contains:
+   Return address column: .*
+   Augmentation data:     1b
+ 
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
+ 
+-00000014 0000001c 00000018 FDE cie=00000000 pc=.*
++00000011 0000001[bf] 00000015 FDE cie=00000000 pc=.*
+   DW_CFA_advance_loc: 4 to .*
+   DW_CFA_def_cfa: r0 ofs 16
+   DW_CFA_advance_loc: 4 to .*
+@@ -25,5 +22,5 @@ The section .eh_frame contains:
+   DW_CFA_restore_state
+   DW_CFA_advance_loc: 4 to .*
+   DW_CFA_def_cfa_offset: 0
+-  DW_CFA_nop
+-
++# 64-bit arches will have here 4 times DW_CFA_nop
++#...
+--- gas/testsuite/gas/cfi/cfi-x86_64.d.jj	2003-05-28 02:56:00.000000000 -0400
++++ gas/testsuite/gas/cfi/cfi-x86_64.d	2003-06-18 12:30:09.000000000 -0400
+@@ -2,7 +2,7 @@
+ #name: CFI on x86-64
+ The section .eh_frame contains:
+ 
+-00000000 00000014 00000000 CIE
++00000000 00000012 00000000 CIE
+   Version:               1
+   Augmentation:          "zR"
+   Code alignment factor: 1
+@@ -12,40 +12,32 @@ The section .eh_frame contains:
+ 
+   DW_CFA_def_cfa: r7 ofs 8
+   DW_CFA_offset: r16 at cfa-8
+-  DW_CFA_nop
+-  DW_CFA_nop
+ 
+-00000018 00000014 0000001c FDE cie=00000000 pc=00000020..00000034
+-  DW_CFA_advance_loc: 7 to 00000027
++00000016 00000014 0000001a FDE cie=00000000 pc=0000001e..00000032
++  DW_CFA_advance_loc: 7 to 00000025
+   DW_CFA_def_cfa_offset: 4668
+-  DW_CFA_advance_loc: 12 to 00000033
++  DW_CFA_advance_loc: 12 to 00000031
+   DW_CFA_def_cfa_offset: 8
+ 
+-00000030 0000001c 00000034 FDE cie=00000000 pc=00000038..00000047
+-  DW_CFA_advance_loc: 1 to 00000039
++0000002e 00000019 00000032 FDE cie=00000000 pc=00000036..00000045
++  DW_CFA_advance_loc: 1 to 00000037
+   DW_CFA_def_cfa_offset: 16
+   DW_CFA_offset: r6 at cfa-16
+-  DW_CFA_advance_loc: 3 to 0000003c
++  DW_CFA_advance_loc: 3 to 0000003a
+   DW_CFA_def_cfa_reg: r6
+-  DW_CFA_advance_loc: 10 to 00000046
++  DW_CFA_advance_loc: 10 to 00000044
+   DW_CFA_def_cfa: r7 ofs 8
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
+ 
+-00000050 00000014 00000054 FDE cie=00000000 pc=00000058..0000006b
+-  DW_CFA_advance_loc: 3 to 0000005b
++0000004b 00000013 0000004f FDE cie=00000000 pc=00000053..00000066
++  DW_CFA_advance_loc: 3 to 00000056
+   DW_CFA_def_cfa_reg: r12
+-  DW_CFA_advance_loc: 15 to 0000006a
++  DW_CFA_advance_loc: 15 to 00000065
+   DW_CFA_def_cfa_reg: r7
+-  DW_CFA_nop
+ 
+-00000068 00000010 0000006c FDE cie=00000000 pc=00000070..00000076
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
++00000062 0000000d 00000066 FDE cie=00000000 pc=0000006a..00000070
+ 
+-0000007c 00000010 00000080 FDE cie=00000000 pc=00000084..00000096
++00000073 00000011 00000077 FDE cie=00000000 pc=0000007b..0000008d
++  DW_CFA_nop
+   DW_CFA_nop
+   DW_CFA_nop
+   DW_CFA_nop
+--- gas/testsuite/gas/cfi/cfi-common-3.d.jj	2003-06-11 19:16:58.000000000 -0400
++++ gas/testsuite/gas/cfi/cfi-common-3.d	2003-06-18 12:18:06.000000000 -0400
+@@ -1,8 +1,8 @@
+ #readelf: -wf
+-#name: CFI common 2
++#name: CFI common 3
+ The section .eh_frame contains:
+ 
+-00000000 00000010 00000000 CIE
++00000000 0000000d 00000000 CIE
+   Version:               1
+   Augmentation:          "zR"
+   Code alignment factor: .*
+@@ -10,12 +10,11 @@ The section .eh_frame contains:
+   Return address column: .*
+   Augmentation data:     1b
+ 
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
+ 
+-00000014 00000010 00000018 FDE cie=00000000 pc=.*
++00000011 00000013 00000015 FDE cie=00000000 pc=.*
+   DW_CFA_advance_loc: 4 to .*
+   DW_CFA_remember_state
+   DW_CFA_restore_state
+-
++  DW_CFA_nop
++  DW_CFA_nop
++  DW_CFA_nop
+--- gas/testsuite/gas/cfi/cfi-alpha-1.d.jj	2003-05-29 23:01:12.000000000 -0400
++++ gas/testsuite/gas/cfi/cfi-alpha-1.d	2003-06-18 12:38:36.000000000 -0400
+@@ -2,7 +2,7 @@
+ #name: CFI on alpha
+ The section .eh_frame contains:
+ 
+-00000000 00000010 00000000 CIE
++00000000 0000000f 00000000 CIE
+   Version:               1
+   Augmentation:          "zR"
+   Code alignment factor: 4
+@@ -11,16 +11,12 @@ The section .eh_frame contains:
+   Augmentation data:     1b
+ 
+   DW_CFA_def_cfa_reg: r30
+-  DW_CFA_nop
+ 
+-00000014 0000001c 00000018 FDE cie=00000000 pc=0000001c..00000050
+-  DW_CFA_advance_loc: 24 to 00000034
++00000013 00000019 00000017 FDE cie=00000000 pc=0000001b..0000004f
++  DW_CFA_advance_loc: 24 to 00000033
+   DW_CFA_def_cfa: r15 ofs 32
+   DW_CFA_offset: r26 at cfa-32
+   DW_CFA_offset: r9 at cfa-24
+   DW_CFA_offset: r15 at cfa-16
+   DW_CFA_offset: r34 at cfa-8
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
+ 
+--- gas/testsuite/gas/cfi/cfi-alpha-2.d.jj	2003-05-31 15:36:45.000000000 -0400
++++ gas/testsuite/gas/cfi/cfi-alpha-2.d	2003-06-18 12:41:56.000000000 -0400
+@@ -5,5 +5,5 @@
+ 
+ RELOCATION RECORDS FOR \[\.eh_frame\]:
+ OFFSET           TYPE              VALUE 
+-0*000001c SREL32            \.text
+-0*0000030 SREL32            \.text\+0x0*0000004
++0*000001b SREL32            \.text
++0*000002c SREL32            \.text\+0x0*0000004
+--- gas/testsuite/gas/cfi/cfi-alpha-3.d.jj	2003-06-04 23:27:03.000000000 -0400
++++ gas/testsuite/gas/cfi/cfi-alpha-3.d	2003-06-18 12:42:52.000000000 -0400
+@@ -2,7 +2,7 @@
+ #name: CFI on alpha, 3
+ The section .eh_frame contains:
+ 
+-00000000 00000010 00000000 CIE
++00000000 0000000f 00000000 CIE
+   Version:               1
+   Augmentation:          "zR"
+   Code alignment factor: 4
+@@ -11,22 +11,26 @@ The section .eh_frame contains:
+   Augmentation data:     1b
+ 
+   DW_CFA_def_cfa_reg: r30
+-  DW_CFA_nop
+ 
+-00000014 00000024 00000018 FDE cie=00000000 pc=0000001c..0000005c
+-  DW_CFA_advance_loc: 4 to 00000020
++00000013 00000029 00000017 FDE cie=00000000 pc=0000001b..0000005b
++  DW_CFA_advance_loc: 4 to 0000001f
+   DW_CFA_def_cfa_offset: 32
+-  DW_CFA_advance_loc: 4 to 00000024
++  DW_CFA_advance_loc: 4 to 00000023
+   DW_CFA_offset: r26 at cfa-32
+-  DW_CFA_advance_loc: 4 to 00000028
++  DW_CFA_advance_loc: 4 to 00000027
+   DW_CFA_offset: r9 at cfa-24
+-  DW_CFA_advance_loc: 4 to 0000002c
++  DW_CFA_advance_loc: 4 to 0000002b
+   DW_CFA_offset: r15 at cfa-16
+-  DW_CFA_advance_loc: 4 to 00000030
++  DW_CFA_advance_loc: 4 to 0000002f
+   DW_CFA_offset: r34 at cfa-8
+-  DW_CFA_advance_loc: 4 to 00000034
++  DW_CFA_advance_loc: 4 to 00000033
+   DW_CFA_def_cfa_reg: r15
+-  DW_CFA_advance_loc: 36 to 00000058
++  DW_CFA_advance_loc: 36 to 00000057
+   DW_CFA_def_cfa: r30 ofs 0
+   DW_CFA_nop
++  DW_CFA_nop
++  DW_CFA_nop
++  DW_CFA_nop
++  DW_CFA_nop
++  DW_CFA_nop
+ 

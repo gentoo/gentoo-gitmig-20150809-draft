@@ -1,0 +1,632 @@
+2003-05-29  Ulrich Drepper  <drepper@redhat.com>
+	    Jakub Jelinek  <jakub@redhat.com>
+
+bfd/
+	* elflink.h (elf_link_add_object_symbols): Use !info->executable
+	instead of info->shared where appropriate.
+	(bfd_elfNN_size_dynamic_sections, elf_link_output_extsym): Likewise.
+	* elflink.c (_bfd_elf_create_got_section): Likewise.
+	(_bfd_elf_link_create_dynamic_sections): Likewise.
+	(_bfd_elf_link_assign_sym_version): Likewise.
+	* elf32-i386.c (elf_i386_size_dynamic_sections): Create .interp section
+	and DT_DEBUG dynamic tag even for position independent executables.
+	* elf32-ppc.c (ppc_elf_size_dynamic_sections): Likewise.
+	* elf32-s390.c (elf_s390_size_dynamic_sections: Likewise.
+	* elf64-ppc.c (ppc64_elf_size_dynamic_sections: Likewise.
+	* elf64-s390.c (elf_s390_size_dynamic_sections: Likewise.
+	* elf64-x86-64.c (elf64_x86_64_size_dynamic_sections: Likewise.
+	* elfxx-ia64.c (elfNN_ia64_size_dynamic_sections: Likewise.
+	* elf32-sparc.c (elf32_sparc_size_dynamic_sections: Likewise.
+	* elf64-alpha.c (elf64_alpha_size_dynamic_sections: Likewise.
+	* elf64-sparc.c (sparc64_elf_size_dynamic_sections: Likewise.
+include/
+	* bfdlink.h (struct bfd_link_info): Add pie and executable
+	bits.
+ld/
+	* lexsup.c (OPTION_PIE): Define.
+	(ld_options): Add -pie and --pic-executable options.
+	(parse_args): Handle OPTION_PIE.
+	* ldmain.c (main): Initialize link_info.pie and
+	link_info.executable.
+	* genscripts.sh: Generate PIE scripts.
+	* ld.texinfo: Document -pie and --pic-executable options.
+	* emultempl/elf32.em (gld${EMULATION_NAME}_after_open):
+	(gld${EMULATION_NAME}_place_orphan): Likewise.
+	(gld${EMULATION_NAME}_get_script): Include PIE scripts.
+	* scripttempl/elf.sc: In PIE scripts set . the same way as in
+	shared scripts.
+	* emulparams/elf_i386.sh (GENERATE_PIE_SCRIPT): Set to yes.
+	* emulparams/elf64_ia64.sh (GENERATE_PIE_SCRIPT): Likewise.
+	* emulparams/elf32ppc.sh (GENERATE_PIE_SCRIPT): Likewise.
+	* emulparams/elf64ppc.sh (GENERATE_PIE_SCRIPT): Likewise.
+	* emulparams/elf_x86_64.sh (GENERATE_PIE_SCRIPT): Likewise.
+	* emulparams/elf_s390.sh (GENERATE_PIE_SCRIPT): Likewise.
+	* emulparams/elf32_sparc.sh (GENERATE_PIE_SCRIPT): Likewise.
+	* emulparams/elf64_sparc.sh (GENERATE_PIE_SCRIPT): Likewise.
+	* emulparams/elf64alpha.sh (GENERATE_PIE_SCRIPT): Likewise.
+	* emulparams/elf64_s390.sh (GENERATE_PIE_SCRIPT): Likewise.
+	* emulparams/elf_i386.sh (GENERATE_PIE_SCRIPT): Likewise.
+
+--- bfd/elf32-i386.c.jj	2003-05-23 10:18:52.000000000 -0400
++++ bfd/elf32-i386.c	2003-05-28 03:18:13.000000000 -0400
+@@ -1797,7 +1797,7 @@ elf_i386_size_dynamic_sections (output_b
+   if (htab->elf.dynamic_sections_created)
+     {
+       /* Set the contents of the .interp section to the interpreter.  */
+-      if (! info->shared)
++      if (info->executable)
+ 	{
+ 	  s = bfd_get_section_by_name (dynobj, ".interp");
+ 	  if (s == NULL)
+@@ -1963,7 +1963,7 @@ elf_i386_size_dynamic_sections (output_b
+ #define add_dynamic_entry(TAG, VAL) \
+   bfd_elf32_add_dynamic_entry (info, (bfd_vma) (TAG), (bfd_vma) (VAL))
+ 
+-      if (! info->shared)
++      if (info->executable)
+ 	{
+ 	  if (!add_dynamic_entry (DT_DEBUG, 0))
+ 	    return FALSE;
+--- bfd/elflink.h.jj	2003-05-23 10:18:52.000000000 -0400
++++ bfd/elflink.h	2003-05-28 06:27:38.000000000 -0400
+@@ -474,7 +474,7 @@ elf_link_add_object_symbols (abfd, info)
+      .gnu.warning.SYMBOL are treated as warning symbols for the given
+      symbol.  This differs from .gnu.warning sections, which generate
+      warnings when they are included in an output file.  */
+-  if (! info->shared)
++  if (info->executable)
+     {
+       asection *s;
+ 
+@@ -1321,7 +1321,7 @@ elf_link_add_object_symbols (abfd, info)
+ 		}
+ 	      else
+ 		new_flag = ELF_LINK_HASH_DEF_REGULAR;
+-	      if (info->shared
++	      if (! info->executable
+ 		  || (old_flags & (ELF_LINK_HASH_DEF_DYNAMIC
+ 				   | ELF_LINK_HASH_REF_DYNAMIC)) != 0)
+ 		dynsym = TRUE;
+@@ -2174,7 +2174,7 @@ NAME(bfd_elf,size_dynamic_sections) (out
+       if (bfd_get_section_by_name (output_bfd, ".preinit_array") != NULL)
+ 	{
+ 	  /* DT_PREINIT_ARRAY is not allowed in shared library.  */
+-	  if (info->shared)
++	  if (! info->executable)
+ 	    {
+ 	      bfd *sub;
+ 	      asection *o;
+@@ -2440,7 +2440,7 @@ NAME(bfd_elf,size_dynamic_sections) (out
+ 
+       if (info->flags_1)
+ 	{
+-	  if (! info->shared)
++	  if (info->executable)
+ 	    info->flags_1 &= ~ (DF_1_INITFIRST
+ 				| DF_1_NODELETE
+ 				| DF_1_NOOPEN);
+@@ -4417,7 +4417,8 @@ elf_link_output_extsym (h, data)
+      referenced by regular files, because we will already have issued
+      warnings for them.  */
+   if (! finfo->info->relocateable
+-      && (! finfo->info->shared || ! finfo->info->allow_shlib_undefined)
++      && (finfo->info->executable
++	  || ! finfo->info->allow_shlib_undefined)
+       && h->root.type == bfd_link_hash_undefined
+       && (h->elf_link_hash_flags & ELF_LINK_HASH_REF_DYNAMIC) != 0
+       && (h->elf_link_hash_flags & ELF_LINK_HASH_REF_REGULAR) == 0
+--- bfd/elf32-ppc.c.jj	2003-05-23 10:18:52.000000000 -0400
++++ bfd/elf32-ppc.c	2003-05-28 03:19:08.000000000 -0400
+@@ -2920,7 +2920,7 @@ ppc_elf_size_dynamic_sections (output_bf
+   if (elf_hash_table (info)->dynamic_sections_created)
+     {
+       /* Set the contents of the .interp section to the interpreter.  */
+-      if (! info->shared)
++      if (info->executable)
+ 	{
+ 	  s = bfd_get_section_by_name (htab->elf.dynobj, ".interp");
+ 	  BFD_ASSERT (s != NULL);
+@@ -3102,7 +3102,7 @@ ppc_elf_size_dynamic_sections (output_bf
+ #define add_dynamic_entry(TAG, VAL) \
+   bfd_elf32_add_dynamic_entry (info, (bfd_vma) (TAG), (bfd_vma) (VAL))
+ 
+-      if (!info->shared)
++      if (info->executable)
+ 	{
+ 	  if (!add_dynamic_entry (DT_DEBUG, 0))
+ 	    return FALSE;
+--- bfd/elf32-s390.c.jj	2003-05-15 16:42:24.000000000 -0400
++++ bfd/elf32-s390.c	2003-05-28 03:19:32.000000000 -0400
+@@ -1927,7 +1927,7 @@ elf_s390_size_dynamic_sections (output_b
+   if (htab->elf.dynamic_sections_created)
+     {
+       /* Set the contents of the .interp section to the interpreter.  */
+-      if (! info->shared)
++      if (info->executable)
+ 	{
+ 	  s = bfd_get_section_by_name (dynobj, ".interp");
+ 	  if (s == NULL)
+@@ -2085,7 +2085,7 @@ elf_s390_size_dynamic_sections (output_b
+ #define add_dynamic_entry(TAG, VAL) \
+   bfd_elf32_add_dynamic_entry (info, (bfd_vma) (TAG), (bfd_vma) (VAL))
+ 
+-      if (! info->shared)
++      if (info->executable)
+ 	{
+ 	  if (!add_dynamic_entry (DT_DEBUG, 0))
+ 	    return FALSE;
+--- bfd/elf64-ppc.c.jj	2003-05-23 10:18:52.000000000 -0400
++++ bfd/elf64-ppc.c	2003-05-28 03:19:51.000000000 -0400
+@@ -5737,7 +5737,7 @@ ppc64_elf_size_dynamic_sections (output_
+   if (htab->elf.dynamic_sections_created)
+     {
+       /* Set the contents of the .interp section to the interpreter.  */
+-      if (! info->shared)
++      if (info->executable)
+ 	{
+ 	  s = bfd_get_section_by_name (dynobj, ".interp");
+ 	  if (s == NULL)
+@@ -5936,7 +5936,7 @@ ppc64_elf_size_dynamic_sections (output_
+ #define add_dynamic_entry(TAG, VAL) \
+   bfd_elf64_add_dynamic_entry (info, (bfd_vma) (TAG), (bfd_vma) (VAL))
+ 
+-      if (!info->shared)
++      if (info->executable)
+ 	{
+ 	  if (!add_dynamic_entry (DT_DEBUG, 0))
+ 	    return FALSE;
+--- bfd/elf64-s390.c.jj	2003-05-15 16:42:25.000000000 -0400
++++ bfd/elf64-s390.c	2003-05-28 03:20:08.000000000 -0400
+@@ -1898,7 +1898,7 @@ elf_s390_size_dynamic_sections (output_b
+   if (htab->elf.dynamic_sections_created)
+     {
+       /* Set the contents of the .interp section to the interpreter.  */
+-      if (! info->shared)
++      if (info->executable)
+ 	{
+ 	  s = bfd_get_section_by_name (dynobj, ".interp");
+ 	  if (s == NULL)
+@@ -2056,7 +2056,7 @@ elf_s390_size_dynamic_sections (output_b
+ #define add_dynamic_entry(TAG, VAL) \
+   bfd_elf64_add_dynamic_entry (info, (bfd_vma) (TAG), (bfd_vma) (VAL))
+ 
+-      if (! info->shared)
++      if (info->executable)
+ 	{
+ 	  if (!add_dynamic_entry (DT_DEBUG, 0))
+ 	    return FALSE;
+--- bfd/elf64-x86-64.c.jj	2003-05-05 17:46:47.000000000 -0400
++++ bfd/elf64-x86-64.c	2003-05-28 05:44:30.000000000 -0400
+@@ -1618,7 +1618,7 @@ elf64_x86_64_size_dynamic_sections (outp
+   if (htab->elf.dynamic_sections_created)
+     {
+       /* Set the contents of the .interp section to the interpreter.  */
+-      if (! info->shared)
++      if (info->executable)
+ 	{
+ 	  s = bfd_get_section_by_name (dynobj, ".interp");
+ 	  if (s == NULL)
+@@ -1779,7 +1779,7 @@ elf64_x86_64_size_dynamic_sections (outp
+ #define add_dynamic_entry(TAG, VAL) \
+   bfd_elf64_add_dynamic_entry (info, (bfd_vma) (TAG), (bfd_vma) (VAL))
+ 
+-      if (! info->shared)
++      if (info->executable)
+ 	{
+ 	  if (!add_dynamic_entry (DT_DEBUG, 0))
+ 	    return FALSE;
+--- bfd/elfxx-ia64.c.jj	2003-05-15 16:42:25.000000000 -0400
++++ bfd/elfxx-ia64.c	2003-05-28 03:24:40.000000000 -0400
+@@ -2903,7 +2903,7 @@ elfNN_ia64_size_dynamic_sections (output
+ 
+   /* Set the contents of the .interp section to the interpreter.  */
+   if (ia64_info->root.dynamic_sections_created
+-      && !info->shared)
++      && info->executable)
+     {
+       sec = bfd_get_section_by_name (dynobj, ".interp");
+       BFD_ASSERT (sec != NULL);
+@@ -3078,7 +3078,7 @@ elfNN_ia64_size_dynamic_sections (output
+ 	 later (in finish_dynamic_sections) but we must add the entries now
+ 	 so that we get the correct size for the .dynamic section.  */
+ 
+-      if (!info->shared)
++      if (info->executable)
+ 	{
+ 	  /* The DT_DEBUG entry is filled in by the dynamic linker and used
+ 	     by the debugger.  */
+--- bfd/elf32-sparc.c.jj	2003-05-28 03:03:45.000000000 -0400
++++ bfd/elf32-sparc.c	2003-05-28 03:20:48.000000000 -0400
+@@ -1820,7 +1820,7 @@ elf32_sparc_size_dynamic_sections (outpu
+   if (elf_hash_table (info)->dynamic_sections_created)
+     {
+       /* Set the contents of the .interp section to the interpreter.  */
+-      if (! info->shared)
++      if (info->executable)
+ 	{
+ 	  s = bfd_get_section_by_name (dynobj, ".interp");
+ 	  BFD_ASSERT (s != NULL);
+@@ -1997,7 +1997,7 @@ elf32_sparc_size_dynamic_sections (outpu
+ #define add_dynamic_entry(TAG, VAL) \
+   bfd_elf32_add_dynamic_entry (info, (bfd_vma) (TAG), (bfd_vma) (VAL))
+ 
+-      if (!info->shared)
++      if (info->executable)
+ 	{
+ 	  if (!add_dynamic_entry (DT_DEBUG, 0))
+ 	    return FALSE;
+--- bfd/elf64-alpha.c.jj	2003-05-15 16:42:25.000000000 -0400
++++ bfd/elf64-alpha.c	2003-05-28 03:21:20.000000000 -0400
+@@ -4090,7 +4090,7 @@ elf64_alpha_size_dynamic_sections (outpu
+   if (elf_hash_table (info)->dynamic_sections_created)
+     {
+       /* Set the contents of the .interp section to the interpreter.  */
+-      if (!info->shared)
++      if (info->executable)
+ 	{
+ 	  s = bfd_get_section_by_name (dynobj, ".interp");
+ 	  BFD_ASSERT (s != NULL);
+@@ -4176,7 +4176,7 @@ elf64_alpha_size_dynamic_sections (outpu
+ #define add_dynamic_entry(TAG, VAL) \
+   bfd_elf64_add_dynamic_entry (info, (bfd_vma) (TAG), (bfd_vma) (VAL))
+ 
+-      if (!info->shared)
++      if (info->executable)
+ 	{
+ 	  if (!add_dynamic_entry (DT_DEBUG, 0))
+ 	    return FALSE;
+--- bfd/elf64-sparc.c.jj	2003-05-28 03:03:45.000000000 -0400
++++ bfd/elf64-sparc.c	2003-05-28 03:21:59.000000000 -0400
+@@ -1781,7 +1781,7 @@ sparc64_elf_size_dynamic_sections (outpu
+   if (elf_hash_table (info)->dynamic_sections_created)
+     {
+       /* Set the contents of the .interp section to the interpreter.  */
+-      if (! info->shared)
++      if (info->executable)
+ 	{
+ 	  s = bfd_get_section_by_name (dynobj, ".interp");
+ 	  BFD_ASSERT (s != NULL);
+@@ -1880,7 +1880,7 @@ sparc64_elf_size_dynamic_sections (outpu
+       struct elf_strtab_hash *dynstr;
+       struct elf_link_hash_table *eht = elf_hash_table (info);
+ 
+-      if (!info->shared)
++      if (info->executable)
+ 	{
+ 	  if (!add_dynamic_entry (DT_DEBUG, 0))
+ 	    return FALSE;
+--- bfd/elflink.c.jj	2003-05-23 10:18:52.000000000 -0400
++++ bfd/elflink.c	2003-05-28 06:20:40.000000000 -0400
+@@ -94,7 +94,7 @@ _bfd_elf_create_got_section (abfd, info)
+       h->elf_link_hash_flags |= ELF_LINK_HASH_DEF_REGULAR;
+       h->type = STT_OBJECT;
+ 
+-      if (info->shared
++      if (! info->executable
+ 	  && ! _bfd_elf_link_record_dynamic_symbol (info, h))
+ 	return FALSE;
+ 
+@@ -144,7 +144,7 @@ _bfd_elf_link_create_dynamic_sections (a
+ 
+   /* A dynamically linked executable has a .interp section, but a
+      shared library does not.  */
+-  if (! info->shared)
++  if (info->executable)
+     {
+       s = bfd_make_section (abfd, ".interp");
+       if (s == NULL
+@@ -227,7 +227,7 @@ _bfd_elf_link_create_dynamic_sections (a
+   h->elf_link_hash_flags |= ELF_LINK_HASH_DEF_REGULAR;
+   h->type = STT_OBJECT;
+ 
+-  if (info->shared
++  if (! info->executable
+       && ! _bfd_elf_link_record_dynamic_symbol (info, h))
+     return FALSE;
+ 
+@@ -295,7 +295,7 @@ _bfd_elf_create_dynamic_sections (abfd, 
+       h->elf_link_hash_flags |= ELF_LINK_HASH_DEF_REGULAR;
+       h->type = STT_OBJECT;
+ 
+-      if (info->shared
++      if (! info->executable
+ 	  && ! _bfd_elf_link_record_dynamic_symbol (info, h))
+ 	return FALSE;
+     }
+@@ -1760,7 +1760,7 @@ _bfd_elf_link_assign_sym_version (h, dat
+ 
+       /* If we are building an application, we need to create a
+ 	 version node for this version.  */
+-      if (t == NULL && ! info->shared)
++      if (t == NULL && info->executable)
+ 	{
+ 	  struct bfd_elf_version_tree **pp;
+ 	  int version_index;
+--- include/bfdlink.h.jj	2003-05-23 10:18:54.000000000 -0400
++++ include/bfdlink.h	2003-05-28 03:15:38.000000000 -0400
+@@ -291,6 +291,12 @@ struct bfd_link_info
+   /* TRUE if relaxation is being finalized.  */
+   unsigned int relax_finalizing: 1;
+ 
++  /* TRUE if generating a position independent executable.  */
++  unsigned int pie: 1;
++
++  /* TRUE if generating an executable, position independent or not.  */
++  unsigned int executable : 1;
++
+   /* Which symbols to strip.  */
+   enum bfd_link_strip strip;
+ 
+--- ld/emulparams/elf_i386.sh.jj	2002-03-07 14:52:39.000000000 -0500
++++ ld/emulparams/elf_i386.sh	2003-05-28 03:15:38.000000000 -0400
+@@ -9,4 +9,5 @@ MACHINE=
+ NOP=0x90909090
+ TEMPLATE_NAME=elf32
+ GENERATE_SHLIB_SCRIPT=yes
++GENERATE_PIE_SCRIPT=yes
+ NO_SMALL_DATA=yes
+--- ld/emulparams/elf64_ia64.sh.jj	2003-05-15 16:42:25.000000000 -0400
++++ ld/emulparams/elf64_ia64.sh	2003-05-28 03:15:38.000000000 -0400
+@@ -16,6 +16,7 @@ fi
+ TEXT_START_ADDR="0x4000000000000000"
+ DATA_ADDR="0x6000000000000000 + (. & (${MAXPAGESIZE} - 1))"
+ GENERATE_SHLIB_SCRIPT=yes
++GENERATE_PIE_SCRIPT=yes
+ NOP=0x00300000010070000002000001000400  # a bundle full of nops
+ OTHER_GOT_SECTIONS="
+   .IA_64.pltoff ${RELOCATING-0} : { *(.IA_64.pltoff) }"
+--- ld/emulparams/elf32ppc.sh.jj	2003-03-19 12:19:16.000000000 -0500
++++ ld/emulparams/elf32ppc.sh	2003-05-28 03:15:38.000000000 -0400
+@@ -4,6 +4,7 @@
+ TEMPLATE_NAME=elf32
+ EXTRA_EM_FILE=ppc32elf
+ GENERATE_SHLIB_SCRIPT=yes
++GENERATE_PIE_SCRIPT=yes
+ SCRIPT_NAME=elf
+ OUTPUT_FORMAT="elf32-powerpc"
+ TEXT_START_ADDR=0x01800000
+--- ld/emulparams/elf64ppc.sh.jj	2003-01-21 13:21:34.000000000 -0500
++++ ld/emulparams/elf64ppc.sh	2003-05-28 03:15:38.000000000 -0400
+@@ -2,6 +2,7 @@ TEMPLATE_NAME=elf32
+ EXTRA_EM_FILE=ppc64elf
+ ELFSIZE=64
+ GENERATE_SHLIB_SCRIPT=yes
++GENERATE_PIE_SCRIPT=yes
+ SCRIPT_NAME=elf
+ OUTPUT_FORMAT="elf64-powerpc"
+ TEXT_START_ADDR=0x10000000
+--- ld/emulparams/elf_x86_64.sh.jj	2003-03-19 12:19:16.000000000 -0500
++++ ld/emulparams/elf_x86_64.sh	2003-05-28 03:15:38.000000000 -0400
+@@ -10,6 +10,7 @@ MACHINE=
+ NOP=0x90909090
+ TEMPLATE_NAME=elf32
+ GENERATE_SHLIB_SCRIPT=yes
++GENERATE_PIE_SCRIPT=yes
+ NO_SMALL_DATA=yes
+ 
+ if [ "x${host}" = "x${target}" ]; then
+--- ld/emulparams/elf_s390.sh.jj	2002-03-07 14:52:39.000000000 -0500
++++ ld/emulparams/elf_s390.sh	2003-05-28 03:15:38.000000000 -0400
+@@ -8,3 +8,4 @@ MACHINE=
+ NOP=0x07070707
+ TEMPLATE_NAME=elf32
+ GENERATE_SHLIB_SCRIPT=yes 
++GENERATE_PIE_SCRIPT=yes 
+--- ld/emulparams/elf64_sparc.sh.jj	2003-03-19 12:19:16.000000000 -0500
++++ ld/emulparams/elf64_sparc.sh	2003-05-28 03:30:35.000000000 -0400
+@@ -8,6 +8,7 @@ ARCH="sparc:v9"
+ MACHINE=
+ DATA_PLT=
+ GENERATE_SHLIB_SCRIPT=yes
++GENERATE_PIE_SCRIPT=yes
+ NOP=0x01000000
+ NO_SMALL_DATA=yes
+ 
+--- ld/emulparams/elf32_sparc.sh.jj	2002-03-07 14:52:39.000000000 -0500
++++ ld/emulparams/elf32_sparc.sh	2003-05-28 03:30:49.000000000 -0400
+@@ -10,4 +10,5 @@ MACHINE=
+ TEMPLATE_NAME=elf32
+ DATA_PLT=
+ GENERATE_SHLIB_SCRIPT=yes
++GENERATE_PIE_SCRIPT=yes
+ NO_SMALL_DATA=yes
+--- ld/emulparams/elf64alpha.sh.jj	2003-03-19 12:19:16.000000000 -0500
++++ ld/emulparams/elf64alpha.sh	2003-05-28 03:31:11.000000000 -0400
+@@ -11,6 +11,7 @@ NONPAGED_TEXT_START_ADDR="0x120000000"
+ ARCH=alpha
+ MACHINE=
+ GENERATE_SHLIB_SCRIPT=yes
++GENERATE_PIE_SCRIPT=yes
+ DATA_PLT=
+ # Note that the number is always big-endian, thus we have to 
+ # reverse the digit string.
+--- ld/emulparams/elf64_s390.sh.jj	2003-03-19 12:19:16.000000000 -0500
++++ ld/emulparams/elf64_s390.sh	2003-05-28 03:31:25.000000000 -0400
+@@ -9,6 +9,7 @@ MACHINE=
+ NOP=0x07070707
+ TEMPLATE_NAME=elf32
+ GENERATE_SHLIB_SCRIPT=yes 
++GENERATE_PIE_SCRIPT=yes
+ 
+ # Treat a host that matches the target with the possible exception of "x"
+ # in the name as if it were native.
+--- ld/emultempl/elf32.em.jj	2003-05-28 03:03:45.000000000 -0400
++++ ld/emultempl/elf32.em	2003-05-28 05:37:00.000000000 -0400
+@@ -643,7 +643,7 @@ gld${EMULATION_NAME}_after_open ()
+   struct bfd_link_needed_list *needed, *l;
+ 
+   /* We only need to worry about this when doing a final link.  */
+-  if (link_info.relocateable || link_info.shared)
++  if (link_info.relocateable || !link_info.executable)
+     return;
+ 
+   /* Get the list of files which appear in DT_NEEDED entries in
+@@ -1181,7 +1181,7 @@ gld${EMULATION_NAME}_place_orphan (file,
+ 
+   /* If this is a final link, then always put .gnu.warning.SYMBOL
+      sections into the .text section to get them out of the way.  */
+-  if (! link_info.shared
++  if (link_info.executable
+       && ! link_info.relocateable
+       && strncmp (secname, ".gnu.warning.", sizeof ".gnu.warning." - 1) == 0
+       && hold_text.os != NULL)
+@@ -1475,6 +1475,14 @@ if cmp -s ldscripts/${EMULATION_NAME}.x 
+ echo '  ; else if (!config.magic_demand_paged) return' >> e${EMULATION_NAME}.c
+ sed $sc ldscripts/${EMULATION_NAME}.xn                 >> e${EMULATION_NAME}.c
+ fi
++if test -n "$GENERATE_PIE_SCRIPT" ; then
++if test -n "$GENERATE_COMBRELOC_SCRIPT" ; then
++echo '  ; else if (link_info.pie && link_info.combreloc) return' >> e${EMULATION_NAME}.c
++sed $sc ldscripts/${EMULATION_NAME}.xdc                >> e${EMULATION_NAME}.c
++fi
++echo '  ; else if (link_info.pie) return'	       >> e${EMULATION_NAME}.c
++sed $sc ldscripts/${EMULATION_NAME}.xd                 >> e${EMULATION_NAME}.c
++fi
+ if test -n "$GENERATE_SHLIB_SCRIPT" ; then
+ if test -n "$GENERATE_COMBRELOC_SCRIPT" ; then
+ echo '  ; else if (link_info.shared && link_info.combreloc) return' >> e${EMULATION_NAME}.c
+@@ -1512,6 +1520,18 @@ cat >>e${EMULATION_NAME}.c <<EOF
+     return "ldscripts/${EMULATION_NAME}.xn";
+ EOF
+ fi
++if test -n "$GENERATE_PIE_SCRIPT" ; then
++if test -n "$GENERATE_COMBRELOC_SCRIPT" ; then
++cat >>e${EMULATION_NAME}.c <<EOF
++  else if (link_info.pie && link_info.combreloc)
++    return "ldscripts/${EMULATION_NAME}.xdc";
++EOF
++fi
++cat >>e${EMULATION_NAME}.c <<EOF
++  else if (link_info.pie)
++    return "ldscripts/${EMULATION_NAME}.xd";
++EOF
++fi
+ if test -n "$GENERATE_SHLIB_SCRIPT" ; then
+ if test -n "$GENERATE_COMBRELOC_SCRIPT" ; then
+ cat >>e${EMULATION_NAME}.c <<EOF
+--- ld/scripttempl/elf.sc.jj	2003-05-28 03:03:45.000000000 -0400
++++ ld/scripttempl/elf.sc	2003-05-28 03:15:38.000000000 -0400
+@@ -180,8 +180,9 @@ ${RELOCATING- /* For some reason, the So
+ SECTIONS
+ {
+   /* Read-only sections, merged into text segment: */
+-  ${CREATE_SHLIB-${RELOCATING+. = ${TEXT_BASE_ADDRESS};}}
++  ${CREATE_SHLIB-${CREATE_PIE-${RELOCATING+. = ${TEXT_BASE_ADDRESS};}}}
+   ${CREATE_SHLIB+${RELOCATING+. = ${SHLIB_TEXT_START_ADDR:-0} + SIZEOF_HEADERS;}}
++  ${CREATE_PIE+${RELOCATING+. = ${SHLIB_TEXT_START_ADDR:-0} + SIZEOF_HEADERS;}}
+   ${CREATE_SHLIB-${INTERP}}
+   ${INITIAL_READONLY_SECTIONS}
+   ${TEXT_DYNAMIC+${DYNAMIC}}
+--- ld/lexsup.c.jj	2003-05-15 16:42:25.000000000 -0400
++++ ld/lexsup.c	2003-05-28 03:15:38.000000000 -0400
+@@ -139,6 +139,7 @@ int parsing_defsym = 0;
+ #define OPTION_NO_STRIP_DISCARDED	(OPTION_STRIP_DISCARDED + 1)
+ #define OPTION_ACCEPT_UNKNOWN_INPUT_ARCH    (OPTION_NO_STRIP_DISCARDED + 1)
+ #define OPTION_NO_ACCEPT_UNKNOWN_INPUT_ARCH (OPTION_ACCEPT_UNKNOWN_INPUT_ARCH + 1)
++#define OPTION_PIE			(OPTION_NO_ACCEPT_UNKNOWN_INPUT_ARCH + 1)
+ 
+ /* The long options.  This structure is used for both the option
+    parsing and the help text.  */
+@@ -373,6 +374,10 @@ static const struct ld_option ld_options
+       '\0', NULL, N_("Create a shared library"), ONE_DASH },
+   { {"Bshareable", no_argument, NULL, OPTION_SHARED }, /* FreeBSD.  */
+       '\0', NULL, NULL, ONE_DASH },
++  { {"pie", no_argument, NULL, OPTION_PIE},
++      '\0', NULL, N_("Create a position independent executable"), ONE_DASH },
++  { {"pic-executable", no_argument, NULL, OPTION_PIE},
++      '\0', NULL, NULL, TWO_DASHES },
+   { {"sort-common", no_argument, NULL, OPTION_SORT_COMMON},
+       '\0', NULL, N_("Sort common symbols by size"), TWO_DASHES },
+   { {"sort_common", no_argument, NULL, OPTION_SORT_COMMON},
+@@ -958,6 +961,15 @@ parse_args (argc, argv)
+ 	  else
+ 	    einfo (_("%P%F: -shared not supported\n"));
+ 	  break;
++	case OPTION_PIE:
++	  if (config.has_shared)
++	    {
++	      link_info.shared = TRUE;
++	      link_info.pie = TRUE;
++	    }
++	  else
++	    einfo (_("%P%F: -pie not supported\n"));
++	  break;
+ 	case 'h':		/* Used on Solaris.  */
+ 	case OPTION_SONAME:
+ 	  command_line.soname = optarg;
+--- ld/genscripts.sh.jj	2003-03-19 12:19:16.000000000 -0500
++++ ld/genscripts.sh	2003-05-28 03:15:38.000000000 -0400
+@@ -227,6 +227,31 @@ if test -n "$GENERATE_SHLIB_SCRIPT"; the
+     rm -f ${COMBRELOC}
+     COMBRELOC=
+   fi
++  unset CREATE_SHLIB
++fi
++
++if test -n "$GENERATE_PIE_SCRIPT"; then
++  LD_FLAG=pie
++  DATA_ALIGNMENT=${DATA_ALIGNMENT_s-${DATA_ALIGNMENT_}}
++  CREATE_PIE=" "
++  # Note that TEXT_START_ADDR is set to NONPAGED_TEXT_START_ADDR.
++  (
++    echo "/* Script for ld -pie: link position independent executable */"
++    . ${srcdir}/emulparams/${EMULATION_NAME}.sh
++    . ${srcdir}/scripttempl/${SCRIPT_NAME}.sc
++  ) | sed -e '/^ *$/d;s/[ 	]*$//' > ldscripts/${EMULATION_NAME}.xd
++  if test -n "$GENERATE_COMBRELOC_SCRIPT"; then
++    LD_FLAG=cpie
++    DATA_ALIGNMENT=${DATA_ALIGNMENT_sc-${DATA_ALIGNMENT}}
++    COMBRELOC=ldscripts/${EMULATION_NAME}.xc.tmp
++    ( echo "/* Script for -pie -z combreloc: position independent executable, combine & sort relocs */"
++      . ${srcdir}/emulparams/${EMULATION_NAME}.sh
++      . ${srcdir}/scripttempl/${SCRIPT_NAME}.sc
++    ) | sed -e '/^ *$/d;s/[ 	]*$//' > ldscripts/${EMULATION_NAME}.xdc
++    rm -f ${COMBRELOC}
++    COMBRELOC=
++  fi
++  unset CREATE_PIE
+ fi
+ 
+ case " $EMULATION_LIBPATH " in
+--- ld/ldmain.c.jj	2003-05-15 16:42:25.000000000 -0400
++++ ld/ldmain.c	2003-05-28 03:15:38.000000000 -0400
+@@ -291,6 +291,8 @@ main (argc, argv)
+   link_info.emitrelocations = FALSE;
+   link_info.task_link = FALSE;
+   link_info.shared = FALSE;
++  link_info.pie = FALSE;
++  link_info.executable = FALSE;
+   link_info.symbolic = FALSE;
+   link_info.export_dynamic = FALSE;
+   link_info.static_link = FALSE;
+@@ -368,6 +370,9 @@ main (argc, argv)
+ 	einfo (_("%P%F: -f may not be used without -shared\n"));
+     }
+ 
++  if (! link_info.shared || link_info.pie)
++    link_info.executable = TRUE;
++
+   /* Treat ld -r -s as ld -r -S -x (i.e., strip all local symbols).  I
+      don't see how else this can be handled, since in this case we
+      must preserve all externally visible symbols.  */
+--- ld/ld.texinfo.jj	2003-05-05 17:46:49.000000000 -0400
++++ ld/ld.texinfo	2003-05-29 07:35:25.000000000 -0400
+@@ -1209,6 +1209,18 @@ command @code{OUTPUT_FORMAT} can also sp
+ this option overrides it.  @xref{BFD}.
+ @end ifclear
+ 
++@kindex -pie
++@kindex --pic-executable
++@item -pie
++@itemx --pic-executable
++@cindex position independent executables
++Create a position independent executable.  This is currently only supported on
++ELF platforms.  Position independent executables are similar to shared
++libraries in that they are relocated by the dynamic linker to the virtual
++address OS chooses for them (which can varry between invocations), like
++normal dynamically linked executables they can be executed and symbols
++defined in the executable cannot be overridden by shared libraries.
++
+ @kindex -qmagic
+ @item -qmagic
+ This option is ignored for Linux compatibility.

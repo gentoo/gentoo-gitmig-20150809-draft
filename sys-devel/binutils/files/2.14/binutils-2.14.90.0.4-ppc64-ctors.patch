@@ -1,0 +1,20 @@
+2003-06-10  Alan Modra  <amodra@bigpond.net.au>
+
+	* emulparams/elf64ppc.sh (EXECUTABLE_SYMBOLS, OTHER_BSS_END_SYMBOLS,
+	CTOR_START, CTOR_END, DTOR_START, DTOR_END): Don't define.
+
+--- ld/emulparams/elf64ppc.sh	30 May 2003 15:50:11 -0000
++++ ld/emulparams/elf64ppc.sh	10 Jun 2003 04:27:28 -0000
+@@ -12,12 +12,6 @@ COMMONPAGESIZE=0x1000
+ ARCH=powerpc:common64
+ MACHINE=
+ NOP=0x60000000
+-EXECUTABLE_SYMBOLS='PROVIDE (__stack = 0); PROVIDE (___stack = 0);'
+-OTHER_BSS_END_SYMBOLS='__end = .;'
+-CTOR_START='PROVIDE (__CTOR_LIST__ = .); PROVIDE (___CTOR_LIST__ = .);'
+-CTOR_END='PROVIDE (__CTOR_END__ = .); PROVIDE (___CTOR_END__ = .);'
+-DTOR_START='PROVIDE (__DTOR_LIST__ = .); PROVIDE (___DTOR_LIST__ = .);'
+-DTOR_END='PROVIDE (__DTOR_END__ = .); PROVIDE (___DTOR_END__ = .);'
+ OTHER_TEXT_SECTIONS="*(.sfpr .glink)"
+ BSS_PLT=
+ OTHER_BSS_SYMBOLS="

@@ -1,0 +1,25 @@
+2003-06-06  Jakub Jelinek  <jakub@redhat.com>
+
+	* elf-bfd.h (SYMBOL_REFERENCES_LOCAL, SYMBOL_CALLS_LOCAL): Return
+	true even if -pie.
+
+--- bfd/elf-bfd.h.jj	2003-06-03 18:25:09.000000000 -0400
++++ bfd/elf-bfd.h	2003-06-06 11:30:25.000000000 -0400
+@@ -217,7 +217,7 @@ struct elf_link_hash_entry
+    it's necessary for shared libs to also reference the .plt even
+    though the symbol is really local to the shared lib.  */
+ #define SYMBOL_REFERENCES_LOCAL(INFO, H)				\
+-  ((! (INFO)->shared							\
++  (((INFO)->executable							\
+     || (INFO)->symbolic							\
+     || (H)->dynindx == -1						\
+     || ELF_ST_VISIBILITY ((H)->other) == STV_INTERNAL			\
+@@ -227,7 +227,7 @@ struct elf_link_hash_entry
+ 
+ /* Will _calls_ to this symbol always call the version in this object?  */
+ #define SYMBOL_CALLS_LOCAL(INFO, H)					\
+-  ((! (INFO)->shared							\
++  (((INFO)->executable							\
+     || (INFO)->symbolic							\
+     || (H)->dynindx == -1						\
+     || ELF_ST_VISIBILITY ((H)->other) != STV_DEFAULT			\

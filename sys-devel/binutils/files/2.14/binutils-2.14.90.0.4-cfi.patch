@@ -1,0 +1,2690 @@
+2003-06-02  Alan Modra  <amodra@bigpond.net.au>
+
+	* read.c (emit_expr): Set dot_value.
+	* dw2gencfi.c (output_fde): Remove pcrel reloc hack.
+
+2003-06-02  Alan Modra  <amodra@bigpond.net.au>
+
+	* macro.c (sub_actual): Don't lose string if it turns out that
+	&string wasn't an arg.
+
+2003-05-31  Richard Henderson  <rth@redhat.com>
+
+	* dw2gencfi.c (output_fde): Use fix_new to emit pc-relative reloc.
+	(cfi_finish): Set flag_traditional_format around .eh_frame data.
+
+2003-05-29  Richard Henderson  <rth@redhat.com>
+
+	* config/tc-alpha.c (alpha_cur_ent_sym): Remove.
+	(all_frame_data, plast_frame_data, cur_frame_data): New.
+	(s_alpha_ent): Record data for dwarf2 cfi.
+	(s_alpha_end, s_alpha_mask, s_alpha_frame, s_alpha_prologue): Likewise.
+	(alpha_elf_md_end): Emit dwarf2 cfi for ecoff unwind directives.
+	* config/tc-alpha.h (md_end): New.
+	(DWARF2_DEFAULT_RETURN_COLUMN): New.
+	(DWARF2_CIE_DATA_ALIGNMENT): New.
+
+2003-05-27  Richard Henderson  <rth@redhat.com>
+
+	* expr.c (make_expr_symbol): Fold FAKE_LABEL_NAME use into the
+	symbol_create call.
+	(current_location): Use symbol_temp_new_now.
+	* stabs.c (s_stab_generic): Use symbol_temp_new.
+	* symbols.c (temp_label_name): Remove.
+	(symbol_temp_new, symbol_temp_make): Use FAKE_LABEL_NAME.
+
+2003-05-27  Richard Henderson  <rth@redhat.com>
+
+	* dw2gencfi.c, dw2gencfi.h: Rewrite from scratch.
+	* as.c (main): Always call cfi_finish.
+	* config/tc-i386.c (x86_dwarf2_return_column): New.
+	(x86_cie_data_alignment): New.
+	(md_begin): Set them.
+	(tc_x86_cfi_init): Remove.
+	(tc_x86_regname_to_dw2regnum): Fix 32-bit register numbers;
+	return int, not unsigned long; don't as_bad here.
+	(tc_x86_frame_initial_instructions): Streamline; use
+	updated api.
+	* config/tc-i386.h (tc_cfi_init): Remove.
+	(DWARF2_DEFAULT_RETURN_COLUMN): New.
+	(DWARF2_CIE_DATA_ALIGNMENT): New.
+
+2003-05-27  Richard Henderson  <rth@redhat.com>
+
+	* symbols.c (temp_label_name): New.
+	(symbol_temp_new, symbol_temp_new_now, symbol_temp_make): New.
+	(symbol_set_value_now): New.
+	* symbols.h: Prototype them.
+	* dwarf2dbg.c: Use them.
+	(fake_label_name, symbol_new_now, set_symbol_value_now): Remove.
+
+testsuite/
+2003-05-31  Richard Henderson  <rth@redhat.com>
+
+	* gas/alpha/elf-reloc-8.d: Correct .eh_frame relocs.
+	* gas/cfi/cfi-alpha-2.d: New.
+	* gas/cfi/cfi-alpha-2.s: New.
+	* gas/cfi/cfi.exp: Run it.
+
+2003-05-29  Richard Henderson  <rth@redhat.com>
+
+	* gas/alpha/elf-reloc-8.d: Add .eh_frame relocs.
+	* gas/cfi/cfi-alpha-1.d: New.
+	* gas/cfi/cfi-alpha-1.s: New.
+	* gas/cfi/cfi.exp: Run it.
+
+2003-05-27  Richard Henderson  <rth@redhat.com>
+
+	* gas/cfi/cfi-i386.d: Update for dw2gencfi rewrite.
+	* gas/cfi/cfi-x86_64.d: Likewise.
+	* gas/cfi/cfi-i386-2.d: New.
+	* gas/cfi/cfi-i386-2.s: New.
+
+--- gas/as.c	20 May 2003 14:31:44 -0000	1.44
++++ gas/as.c	27 May 2003 16:52:46 -0000	1.45
+@@ -911,9 +911,9 @@ main (argc, argv)
+      assembly debugging or on behalf of the compiler, emit it now.  */
+   dwarf2_finish ();
+ 
+-#ifdef TARGET_USE_CFIPOP
++  /* If we constructed dwarf2 .eh_frame info, either via .cfi 
++     directives from the user or by the backend, emit it now.  */
+   cfi_finish ();
+-#endif
+ 
+   if (seen_at_least_1_file ()
+       && (flag_always_generate_output || had_errors () == 0))
+--- gas/dw2gencfi.c	21 May 2003 11:31:07 -0000	1.4
++++ gas/dw2gencfi.c	2 Jun 2003 22:48:59 -0000	1.7
+@@ -19,812 +19,789 @@
+    Software Foundation, 59 Temple Place - Suite 330, Boston, MA
+    02111-1307, USA.  */
+ 
+-#include <errno.h>
+ #include "as.h"
+ #include "dw2gencfi.h"
+ 
+-struct cie_entry
++
++/* We re-use DWARF2_LINE_MIN_INSN_LENGTH for the code alignment field
++   of the CIE.  Default to 1 if not otherwise specified.  */
++#ifndef DWARF2_LINE_MIN_INSN_LENGTH
++# define DWARF2_LINE_MIN_INSN_LENGTH 1
++#endif
++
++/* If TARGET_USE_CFIPOP is defined, it is required that the target
++   provide the following definitions.  Otherwise provide them to 
++   allow compilation to continue.  */
++#ifndef TARGET_USE_CFIPOP
++# ifndef DWARF2_DEFAULT_RETURN_COLUMN
++#  define DWARF2_DEFAULT_RETURN_COLUMN 0
++# endif
++# ifndef DWARF2_CIE_DATA_ALIGNMENT
++#  define DWARF2_CIE_DATA_ALIGNMENT 1
++# endif
++#endif
++
++#ifndef tc_cfi_frame_initial_instructions
++# define tc_cfi_frame_initial_instructions() ((void)0)
++#endif
++
++
++struct cfi_insn_data
+ {
+-  unsigned long offset;
+-  size_t size;
+-  void *data;
+-  struct cie_entry *next;
++  struct cfi_insn_data *next;
++  int insn;
++  union {
++    struct {
++      unsigned reg;
++      offsetT offset;
++    } ri;
++
++    struct {
++      unsigned reg1;
++      unsigned reg2;
++    } rr;
++
++    unsigned r;
++    offsetT i;
++
++    struct {
++      symbolS *lab1;
++      symbolS *lab2;
++    } ll;
++  } u;
+ };
+ 
+-struct cfi_data
++struct fde_entry
+ {
+-  enum cfi_insn insn;
+-  long param[2];
+-  struct cfi_data *next;
++  struct fde_entry *next;
++  symbolS *start_address;
++  symbolS *end_address;
++  struct cfi_insn_data *data;
++  struct cfi_insn_data **last;
++  unsigned int return_column;
+ };
+ 
+-struct cfi_info
++struct cie_entry
+ {
+-  addressT start_address;
+-  addressT end_address;
+-  addressT last_address;
+-  const char *labelname;
+-  struct cfi_data *data;
+-  struct cfi_info *next;
++  struct cie_entry *next;
++  symbolS *start_address;
++  unsigned int return_column;
++  struct cfi_insn_data *first, *last;
+ };
+ 
+-/* Current open CFI entry.  */
+-static struct cfi_info *cfi_info;
++
++/* Current open FDE entry.  */
++static struct fde_entry *cur_fde_data;
++static symbolS *last_address;
++static offsetT cur_cfa_offset;
++
++/* List of FDE entries.  */
++static struct fde_entry *all_fde_data;
++static struct fde_entry **last_fde_data = &all_fde_data;
+ 
+ /* List of CIEs so that they could be reused.  */
+ static struct cie_entry *cie_root;
+ 
+-/* Current target config.  */
+-static struct cfi_config current_config;
++
++/* Construct a new FDE structure and add it to the end of the fde list.  */
+ 
+-/* This is the main entry point to the CFI machinery.  */
+-static void dot_cfi (int arg);
++static struct fde_entry *
++alloc_fde_entry (void)
++{
++  struct fde_entry *fde = xcalloc (1, sizeof (struct fde_entry));
+ 
+-const pseudo_typeS cfi_pseudo_table[] =
+-  {
+-    { "cfi_verbose", dot_cfi, CFI_verbose },
+-    { "cfi_startproc", dot_cfi, CFI_startproc },
+-    { "cfi_endproc", dot_cfi, CFI_endproc },
+-    { "cfi_def_cfa", dot_cfi, CFA_def_cfa },
+-    { "cfi_def_cfa_register", dot_cfi, CFA_def_cfa_register },
+-    { "cfi_def_cfa_offset", dot_cfi, CFA_def_cfa_offset },
+-    { "cfi_adjust_cfa_offset", dot_cfi, CFI_adjust_cfa_offset },
+-    { "cfi_offset", dot_cfi, CFA_offset },
+-    { "cfi_register", dot_cfi, CFA_register },
+-    { NULL, NULL, 0 }
+-  };
++  cur_fde_data = fde;
++  *last_fde_data = fde;
++  last_fde_data = &fde->next;
++
++  fde->last = &fde->data;
++  fde->return_column = DWARF2_DEFAULT_RETURN_COLUMN;
++
++  return fde;
++}
++
++/* The following functions are available for a backend to construct its
++   own unwind information, usually from legacy unwind directives.  */
++
++/* Construct a new INSN structure and add it to the end of the insn list
++   for the currently active FDE.  */
+ 
+-static const char *
+-cfi_insn_str (enum cfi_insn insn)
++static struct cfi_insn_data *
++alloc_cfi_insn_data (void)
+ {
+-  switch (insn)
+-    {
+-    case CFA_nop:
+-      return "CFA_nop";
+-    case CFA_set_loc:
+-      return "CFA_set_loc";
+-    case CFA_advance_loc1:
+-      return "CFA_advance_loc1";
+-    case CFA_advance_loc2:
+-      return "CFA_advance_loc2";
+-    case CFA_advance_loc4:
+-      return "CFA_advance_loc4";
+-    case CFA_offset_extended:
+-      return "CFA_offset_extended";
+-    case CFA_resotre_extended:
+-      return "CFA_resotre_extended";
+-    case CFA_undefined:
+-      return "CFA_undefined";
+-    case CFA_same_value:
+-      return "CFA_same_value";
+-    case CFA_register:
+-      return "CFA_register";
+-    case CFA_remember_state:
+-      return "CFA_remember_state";
+-    case CFA_restore_state:
+-      return "CFA_restore_state";
+-    case CFA_def_cfa:
+-      return "CFA_def_cfa";
+-    case CFA_def_cfa_register:
+-      return "CFA_def_cfa_register";
+-    case CFA_def_cfa_offset:
+-      return "CFA_def_cfa_offset";
+-    case CFA_advance_loc:
+-      return "CFA_advance_loc";
+-    case CFA_offset:
+-      return "CFA_offset";
+-    case CFA_restore:
+-      return "CFA_restore";
+-    default:
+-      break;
+-    }
++  struct cfi_insn_data *insn = xcalloc (1, sizeof (struct cfi_insn_data));
+ 
+-  return "CFA_unknown";
++  *cur_fde_data->last = insn;
++  cur_fde_data->last = &insn->next;
++
++  return insn;
+ }
+ 
+-static struct cfi_data *
+-alloc_cfi_data (void)
++/* Construct a new FDE structure that begins at LABEL.  */
++
++void 
++cfi_new_fde (symbolS *label)
+ {
+-  return (struct cfi_data *) xcalloc (sizeof (struct cfi_info), 1);
++  struct fde_entry *fde = alloc_fde_entry ();
++  fde->start_address = label;
++  last_address = label;
+ }
+ 
+-static struct cfi_info *
+-alloc_cfi_info (void)
++/* End the currently open FDE.  */
++
++void 
++cfi_end_fde (symbolS *label)
+ {
+-  return (struct cfi_info *) xcalloc (sizeof (struct cfi_info), 1);
++  cur_fde_data->end_address = label;
++  cur_fde_data = NULL;
+ }
+ 
+-/* Parse arguments.  */
+-static int
+-cfi_parse_arg (long *param, int resolvereg)
++/* Set the return column for the current FDE.  */
++
++void
++cfi_set_return_column (unsigned regno)
+ {
+-  long value;
+-  int retval = -1;
+-  int nchars;
++  cur_fde_data->return_column = regno;
++}
+ 
+-  assert (param != NULL);
+-  SKIP_WHITESPACE ();
++/* Add a CFI insn to advance the PC from the last address to LABEL.  */
+ 
+-  if (sscanf (input_line_pointer, "%li%n", &value, &nchars) >= 1)
+-    {
+-      input_line_pointer += nchars;
+-      retval = 1;
+-    }
+-#ifdef tc_regname_to_dw2regnum
+-  else if (resolvereg && ((is_name_beginner (*input_line_pointer))
+-			   || (*input_line_pointer == '%'
+-			       && is_name_beginner (*(++input_line_pointer)))))
+-    {
+-      char *name, c, *p;
++void
++cfi_add_advance_loc (symbolS *label)
++{
++  struct cfi_insn_data *insn = alloc_cfi_insn_data ();
+ 
+-      name = input_line_pointer;
+-      c = get_symbol_end ();
+-      p = input_line_pointer;
++  insn->insn = DW_CFA_advance_loc;
++  insn->u.ll.lab1 = last_address;
++  insn->u.ll.lab2 = label;
++
++  last_address = label;
++}
+ 
+-      if ((value = tc_regname_to_dw2regnum (name)) >= 0)
+-	retval = 1;
++/* Add a DW_CFA_offset record to the CFI data.  */
+ 
+-      *p = c;
+-    }
+-#endif
+-  else
+-    as_bad (resolvereg ?
+-	    _("can't convert argument to a register number") :
+-	    _("can't convert argument to an integer"));
++void
++cfi_add_CFA_offset (unsigned regno, offsetT offset)
++{
++  struct cfi_insn_data *insn = alloc_cfi_insn_data ();
++  
++  insn->insn = DW_CFA_offset;
++  insn->u.ri.reg = regno;
++  insn->u.ri.offset = offset;
++}
+ 
+-  if (retval > 0)
+-    *param = value;
++/* Add a DW_CFA_def_cfa record to the CFI data.  */
+ 
+-  SKIP_WHITESPACE ();
+-  if (*input_line_pointer == ',')
+-    {
+-      input_line_pointer++;
+-      SKIP_WHITESPACE ();
+-    }
++void
++cfi_add_CFA_def_cfa (unsigned regno, offsetT offset)
++{
++  struct cfi_insn_data *insn = alloc_cfi_insn_data ();
++  
++  insn->insn = DW_CFA_def_cfa;
++  insn->u.ri.reg = regno;
++  insn->u.ri.offset = offset;
+ 
+-  return retval;
++  cur_cfa_offset = offset;
+ }
+ 
+-static int
+-cfi_parse_reg (long *param)
++/* Add a DW_CFA_register record to the CFI data.  */
++
++void
++cfi_add_CFA_register (unsigned reg1, unsigned reg2)
+ {
+-  return cfi_parse_arg (param, 1);
++  struct cfi_insn_data *insn = alloc_cfi_insn_data ();
++  
++  insn->insn = DW_CFA_register;
++  insn->u.rr.reg1 = reg1;
++  insn->u.rr.reg2 = reg2;
+ }
+ 
+-static int
+-cfi_parse_const (long *param)
++/* Add a DW_CFA_def_cfa_register record to the CFI data.  */
++
++void
++cfi_add_CFA_def_cfa_register (unsigned regno)
+ {
+-  return cfi_parse_arg (param, 0);
++  struct cfi_insn_data *insn = alloc_cfi_insn_data ();
++  
++  insn->insn = DW_CFA_def_cfa_register;
++  insn->u.r = regno;
+ }
+ 
++/* Add a DW_CFA_def_cfa_offset record to the CFI data.  */
++
+ void
+-cfi_add_insn (enum cfi_insn insn, long param0, long param1)
++cfi_add_CFA_def_cfa_offset (offsetT offset)
+ {
+-  struct cfi_data *data_ptr;
++  struct cfi_insn_data *insn = alloc_cfi_insn_data ();
++  
++  insn->insn = DW_CFA_def_cfa_offset;
++  insn->u.i = offset;
+ 
+-  if (!cfi_info->data)
+-    {
+-      cfi_info->data = alloc_cfi_data ();
+-      data_ptr = cfi_info->data;
+-    }
+-  else
+-    {
+-      data_ptr = cfi_info->data;
++  cur_cfa_offset = offset;
++}
+ 
+-      while (data_ptr && data_ptr->next)
+-	data_ptr = data_ptr->next;
++
++/* Parse CFI assembler directives.  */
+ 
+-      data_ptr->next = alloc_cfi_data ();
++static void dot_cfi (int);
++static void dot_cfi_startproc (int);
++static void dot_cfi_endproc (int);
+ 
+-      data_ptr = data_ptr->next;
+-    }
++/* Fake CFI type; outside the byte range of any real CFI insn.  */
++#define CFI_adjust_cfa_offset 0x100
+ 
+-  data_ptr->insn = insn;
+-  data_ptr->param[0] = param0;
+-  data_ptr->param[1] = param1;
+-}
++const pseudo_typeS cfi_pseudo_table[] =
++  {
++    { "cfi_startproc", dot_cfi_startproc, 0 },
++    { "cfi_endproc", dot_cfi_endproc, 0 },
++    { "cfi_def_cfa", dot_cfi, DW_CFA_def_cfa },
++    { "cfi_def_cfa_register", dot_cfi, DW_CFA_def_cfa_register },
++    { "cfi_def_cfa_offset", dot_cfi, DW_CFA_def_cfa_offset },
++    { "cfi_adjust_cfa_offset", dot_cfi, CFI_adjust_cfa_offset },
++    { "cfi_offset", dot_cfi, DW_CFA_offset },
++    { "cfi_register", dot_cfi, DW_CFA_register },
++    { NULL, NULL, 0 }
++  };
+ 
+ static void
+-cfi_advance_loc (void)
++cfi_parse_separator (void)
+ {
+-  addressT curr_address = frag_now_fix ();
+-  if (cfi_info->last_address == curr_address)
+-    return;
+-  cfi_add_insn (CFA_advance_loc,
+-		(long) (curr_address - cfi_info->last_address), 0);
+-  cfi_info->last_address = curr_address;
++  SKIP_WHITESPACE ();
++  if (*input_line_pointer == ',')
++    input_line_pointer++;
++  else
++    as_bad (_("missing separator"));
+ }
+ 
+-static long
+-get_current_offset (struct cfi_info *info)
++static unsigned
++cfi_parse_reg (void)
+ {
+-  long current_offset = 0;
+-  struct cfi_data *data = info->data;
++  int regno;
++  expressionS exp;
++
++#ifdef tc_regname_to_dw2regnum
++  SKIP_WHITESPACE ();
++  if (is_name_beginner (*input_line_pointer)
++      || (*input_line_pointer == '%'
++	  && is_name_beginner (*++input_line_pointer)))
++    {
++      char *name, c;
++
++      name = input_line_pointer;
++      c = get_symbol_end ();
++
++      if ((regno = tc_regname_to_dw2regnum (name)) < 0)
++	{
++	  as_bad (_("bad register expression"));
++	  regno = 0;
++	}
++
++      *input_line_pointer = c;
++      return regno;
++    }
++#endif
+ 
+-  current_offset = 0;
+-  while (data)
++  expression (&exp);
++  switch (exp.X_op)
+     {
+-      if (data->insn == CFA_def_cfa)
+-	current_offset = data->param[1];
+-      else if (data->insn == CFA_def_cfa_offset)
+-	current_offset = data->param[0];
+-      data = data->next;
++    case O_register:
++    case O_constant:
++      regno = exp.X_add_number;
++      break;
++
++    default:
++      as_bad (_("bad register expression"));
++      regno = 0;
++      break;
+     }
+ 
+-  return current_offset;
++  return regno;
++}
++
++static offsetT
++cfi_parse_const (void)
++{
++  return get_absolute_expression ();
+ }
+ 
+ static void
+-cfi_make_insn (int arg)
++dot_cfi (int arg)
+ {
+-  long param[2] = { 0, 0 };
++  offsetT offset;
++  unsigned reg1, reg2;
+ 
+-  if (!cfi_info)
++  if (!cur_fde_data)
+     {
+       as_bad (_("CFI instruction used without previous .cfi_startproc"));
+       return;
+     }
+ 
+-  cfi_advance_loc ();
++  /* If the last address was not at the current PC, advance to current.  */
++  if (symbol_get_frag (last_address) != frag_now
++      || S_GET_VALUE (last_address) != frag_now_fix ())
++    cfi_add_advance_loc (symbol_temp_new_now ());
+ 
+   switch (arg)
+     {
+       /* Instructions that take two arguments (register, integer). */
+-    case CFA_offset:
+-    case CFA_def_cfa:
+-      if (cfi_parse_reg (&param[0]) < 0)
+-	{
+-	  as_bad (_("first argument to %s is not a register"),
+-		  cfi_insn_str (arg));
+-	  return;
+-	}
+-      if (cfi_parse_const (&param[1]) < 0)
+-	{
+-	  as_bad (_("second argument to %s is not a number"),
+-		  cfi_insn_str (arg));
+-	  return;
+-	}
++    case DW_CFA_offset:
++    case DW_CFA_def_cfa:
++      reg1 = cfi_parse_reg ();
++      cfi_parse_separator ();
++      offset = cfi_parse_const ();
++
++      if (arg == DW_CFA_def_cfa)
++	cfi_add_CFA_def_cfa (reg1, offset);
++      else
++	cfi_add_CFA_offset (reg1, offset);
+       break;
+ 
+-    case CFA_register:
+-      if (cfi_parse_reg (&param[0]) < 0)
+-	{
+-	  as_bad (_("first argument to %s is not a register"),
+-		  cfi_insn_str (arg));
+-	  return;
+-	}
+-      if (cfi_parse_reg (&param[1]) < 0)
+-	{
+-	  as_bad (_("second argument to %s is not a register"),
+-		  cfi_insn_str (arg));
+-	  return;
+-	}
++      /* Instructions that take two arguments (register, register). */
++    case DW_CFA_register:
++      reg1 = cfi_parse_reg ();
++      cfi_parse_separator ();
++      reg2 = cfi_parse_reg ();
++
++      cfi_add_CFA_register (reg1, reg2);
+       break;
+ 
+       /* Instructions that take one register argument.  */
+-    case CFA_def_cfa_register:
+-      if (cfi_parse_reg (&param[0]) < 0)
+-	{
+-	  as_bad (_("argument to %s is not a register"), cfi_insn_str (arg));
+-	  return;
+-	}
++    case DW_CFA_def_cfa_register:
++      reg1 = cfi_parse_reg ();
++      cfi_add_CFA_def_cfa_register (reg1);
+       break;
+ 
+       /* Instructions that take one integer argument.  */
+-    case CFA_def_cfa_offset:
+-      if (cfi_parse_const (&param[0]) < 0)
+-	{
+-	  as_bad (_("argument to %s is not a number"), cfi_insn_str (arg));
+-	  return;
+-	}
++    case DW_CFA_def_cfa_offset:
++      offset = cfi_parse_const ();
++      cfi_add_CFA_def_cfa_offset (offset);
+       break;
+ 
+       /* Special handling for pseudo-instruction.  */
+     case CFI_adjust_cfa_offset:
+-      if (cfi_parse_const (&param[0]) < 0)
+-	{
+-	  as_bad (_("argument to %s is not a number"),
+-		    ".cfi_adjust_cfa_offset");
+-	  return;
+-	}
+-      param[0] += get_current_offset (cfi_info);
+-      arg = CFA_def_cfa_offset;
++      offset = cfi_parse_const ();
++      cfi_add_CFA_def_cfa_offset (cur_cfa_offset + offset);
+       break;
+ 
+     default:
+-      as_bad (_("unknown CFI instruction %d (%s)"), arg, cfi_insn_str (arg));
+-      return;
++      abort ();
+     }
+-  cfi_add_insn (arg, param[0], param[1]);
++
++  demand_empty_rest_of_line ();
+ }
+ 
+-static symbolS *
+-cfi_get_label (void)
++static void
++dot_cfi_startproc (int ignored ATTRIBUTE_UNUSED)
+ {
+-  char symname[40], *symbase=".Llbl_cfi";
+-  symbolS *symbolP;
+-  unsigned int i = 0;
++  int simple = 0;
+ 
+-  snprintf (symname, sizeof (symname), "%s_0x%lx",
+-	    symbase, (long) frag_now_fix ());
+-  while ((symbolP = symbol_find (symname)))
++  if (cur_fde_data)
++    {
++      as_bad (_("previous CFI entry not closed (missing .cfi_endproc)"));
++      return;
++    }
++
++  cfi_new_fde (symbol_temp_new_now ());
++
++  SKIP_WHITESPACE ();
++  if (is_name_beginner (*input_line_pointer))
+     {
+-      if ((S_GET_VALUE (symbolP) == frag_now_fix ())
+-	  && (S_GET_SEGMENT (symbolP) == now_seg))
+-	return symbolP;
++      char *name, c;
+ 
+-      snprintf (symname, sizeof (symname), "%s_0x%lx_%u",
+-		symbase, (long) frag_now_fix (), i++);
++      name = input_line_pointer;
++      c = get_symbol_end ();
++
++      if (strcmp (name, "simple") == 0)
++	{
++	  simple = 1;
++	  *input_line_pointer = c;
++	}
++      else
++	input_line_pointer = name;
+     }
+-#ifdef BFD_ASSEMBLER
+-  symbolP = (symbolS *) local_symbol_make (symname, now_seg,
+-					   (valueT) frag_now_fix (),
+-					   frag_now);
+-#else
+-  symbolP = symbol_make (symname);
+-#endif
+-  return symbolP;
++  demand_empty_rest_of_line ();
++
++  if (!simple)
++    tc_cfi_frame_initial_instructions ();
+ }
+ 
+ static void
+-dot_cfi_startproc (void)
++dot_cfi_endproc (int ignored ATTRIBUTE_UNUSED)
+ {
+-#ifdef tc_cfi_frame_initial_instructions
+-  const char *simple = "simple";
+-#endif
+-
+-  if (cfi_info)
++  if (! cur_fde_data)
+     {
+-      as_bad (_("previous CFI entry not closed (missing .cfi_endproc)"));
++      as_bad (_(".cfi_endproc without corresponding .cfi_startproc"));
+       return;
+     }
+ 
+-#if defined(TARGET_USE_CFIPOP)
+-  /* Because this file is linked even for architectures that 
+-     don't use CFI, we must wrap this call.  */
+-  if (current_config.addr_length == 0)
+-    tc_cfi_init ();
+-#endif
+-
+-  cfi_info = alloc_cfi_info ();
++  cfi_end_fde (symbol_temp_new_now ());
++}
+ 
+-  cfi_info->start_address = frag_now_fix ();
+-  cfi_info->last_address = cfi_info->start_address;
+-  cfi_info->labelname = S_GET_NAME (cfi_get_label ());
++
++/* Emit a single byte into the current segment.  */
+ 
+-  SKIP_WHITESPACE ();
+-#ifdef tc_cfi_frame_initial_instructions
+-  if (strncmp (simple, input_line_pointer, strlen (simple)) != 0)
+-    tc_cfi_frame_initial_instructions ();
+-  else
+-    input_line_pointer += strlen (simple);
+-#endif
++static inline void
++out_one (int byte)
++{
++  FRAG_APPEND_1_CHAR (byte);
+ }
+ 
+-#define cfi_is_advance_insn(insn)				\
+-  ((insn >= CFA_set_loc && insn <= CFA_advance_loc4)		\
+-   || insn == CFA_advance_loc)
++/* Emit a two-byte word into the current segment.  */
+ 
+-/* Output CFI instructions to the file.  */
++static inline void
++out_two (int data)
++{
++  md_number_to_chars (frag_more (2), data, 2);
++}
+ 
+-enum data_types
+-  {
+-    t_ascii = 0,
+-    t_byte = 1,
+-    t_half = 2,
+-    t_long = 4,
+-    t_quad = 8,
+-    t_uleb128 = 0x10,
+-    t_sleb128 = 0x11
+-  };
++/* Emit a four byte word into the current segment.  */
+ 
+-static int
+-output_data (char **p, unsigned long *size, enum data_types type, long value)
++static inline void
++out_four (int data)
+ {
+-  char *ptr = *p;
+-  unsigned int ret_size;
+-
+-  switch (type)
+-    {
+-    case t_byte:
+-      ret_size = 1;
+-      break;
+-    case t_half:
+-      ret_size = 2;
+-      break;
+-    case t_long:
+-      ret_size = 4;
+-      break;
+-    case t_quad:
+-    case t_uleb128:
+-    case t_sleb128:
+-      ret_size = 8;
+-      break;
+-    default:
+-      /* This should never happen - throw an internal error.  */
+-      as_fatal (_("unknown type %d"), type);
+-      return 0;
+-    }
+-
+-  if (*size < ret_size)
+-    {
+-      as_bad (_("output_data buffer is too small"));
+-      return 0;
+-    }
+-
+-  switch (type)
+-    {
+-    case t_byte:
+-      *ptr = (char) value;
+-      if (verbose)
+-	printf ("\t.byte\t0x%x\n", (unsigned char) *ptr);
+-      break;
+-    case t_half:
+-      *(short *) ptr = (short) value & 0xFFFF;
+-      if (verbose)
+-	printf ("\t.half\t0x%x\n", (unsigned short) *ptr);
+-      break;
+-    case t_long:
+-      *(int *) ptr = (int) value & 0xFFFFFFFF;
+-      if (verbose)
+-	printf ("\t.long\t0x%x\n", (unsigned int) *ptr);
+-      break;
+-    case t_quad:
+-      *(long long *) ptr = (long long) value & 0xFFFFFFFF;
+-      if (verbose)
+-	printf ("\t.quad\t0x%x\n", (unsigned int) *ptr);
+-      break;
+-    case t_uleb128:
+-    case t_sleb128:
+-      ret_size = output_leb128 (ptr, value, type == t_sleb128);
+-      if (verbose)
+-	printf ("\t.%s\t0x%lx\n",
+-		type == t_sleb128 ? "sleb128" : "uleb128",
+-		value);
+-      break;
+-    default:
+-      as_fatal (_("unknown type %d"), type);
+-      return 0;
+-    }
++  md_number_to_chars (frag_more (4), data, 4);
++}
+ 
+-  *size -= ret_size;
+-  *p += ret_size;
++/* Emit an unsigned "little-endian base 128" number.  */
+ 
+-  return ret_size;
++static void
++out_uleb128 (addressT value)
++{
++  output_leb128 (frag_more (sizeof_leb128 (value, 0)), value, 0);
+ }
+ 
+-static int
+-cfi_output_insn (struct cfi_data *data, char **buf, unsigned long *buf_size)
++/* Emit an unsigned "little-endian base 128" number.  */
++
++static void
++out_sleb128 (offsetT value)
+ {
+-  char **pbuf = buf, *orig_buf = *buf;
+-  unsigned long size;
++  output_leb128 (frag_more (sizeof_leb128 (value, 1)), value, 1);
++}
+ 
+-  if (!data || !buf)
+-    as_fatal (_("cfi_output_insn called with NULL pointer"));
++static void
++output_cfi_insn (struct cfi_insn_data *insn)
++{
++  offsetT offset;
++  unsigned int regno;
+ 
+-  switch (data->insn)
++  switch (insn->insn)
+     {
+-    case CFA_advance_loc:
+-      if (verbose)
+-	printf ("\t# %s(%ld)\n", cfi_insn_str (data->insn),
+-		data->param[0]);
+-      if (data->param[0] <= 0x3F)
+-	{
+-	  output_data (pbuf, buf_size, t_byte, CFA_advance_loc +
+-		       (data->param[0] / current_config.code_align));
++    case DW_CFA_advance_loc:
++      {
++	symbolS *from = insn->u.ll.lab1;
++	symbolS *to = insn->u.ll.lab2;
++
++	if (symbol_get_frag (to) == symbol_get_frag (from))
++	  {
++	    addressT delta = S_GET_VALUE (to) - S_GET_VALUE (from);
++	    addressT scaled = delta / DWARF2_LINE_MIN_INSN_LENGTH;
++
++	    if (scaled <= 0x3F)
++	      out_one (DW_CFA_advance_loc + scaled);
++	    else if (delta <= 0xFF)
++	      {
++	        out_one (DW_CFA_advance_loc1);
++	        out_one (delta);
++	      }
++	    else if (delta <= 0xFFFF)
++	      {
++	        out_one (DW_CFA_advance_loc2);
++	        out_two (delta);
++	      }
++	    else
++	      {
++	        out_one (DW_CFA_advance_loc4);
++	        out_four (delta);
++	      }
++	  }
++	else
++	  {
++	    expressionS exp;
++
++	    exp.X_op = O_subtract;
++	    exp.X_add_symbol = to;
++	    exp.X_op_symbol = from;
++	    exp.X_add_number = 0;
++
++	    /* The code in ehopt.c expects that one byte of the encoding
++	       is already allocated to the frag.  This comes from the way
++	       that it scans the .eh_frame section looking first for the
++	       .byte DW_CFA_advance_loc4.  */
++	    frag_more (1);
++
++	    frag_var (rs_cfa, 4, 0, DWARF2_LINE_MIN_INSN_LENGTH << 3,
++		      make_expr_symbol (&exp), frag_now_fix () - 1,
++		      (char *) frag_now);
++	  }
++      }
++      break;
++
++    case DW_CFA_def_cfa:
++      offset = insn->u.ri.offset;
++      if (offset < 0)
++	{
++	  out_one (DW_CFA_def_cfa_sf);
++	  out_uleb128 (insn->u.ri.reg);
++	  out_uleb128 (offset);
+ 	}
+-      else if (data->param[0] <= 0xFF)
++      else
+ 	{
+-	  output_data (pbuf, buf_size, t_byte, CFA_advance_loc1);
+-	  output_data (pbuf, buf_size, t_byte,
+-		       data->param[0] / current_config.code_align);
++	  out_one (DW_CFA_def_cfa);
++	  out_uleb128 (insn->u.ri.reg);
++	  out_uleb128 (offset);
+ 	}
+-      else if (data->param[0] <= 0xFFFF)
++      break;
++
++    case DW_CFA_def_cfa_register:
++      out_one (DW_CFA_def_cfa_register);
++      out_uleb128 (insn->u.i);
++      break;
++
++    case DW_CFA_def_cfa_offset:
++      offset = insn->u.i;
++      if (offset < 0)
+ 	{
+-	  output_data (pbuf, buf_size, t_byte, CFA_advance_loc2);
+-	  output_data (pbuf, buf_size, t_half,
+-		       data->param[0] / current_config.code_align);
++	  out_one (DW_CFA_def_cfa_offset_sf);
++	  out_sleb128 (offset);
+ 	}
+       else
+ 	{
+-	  output_data (pbuf, buf_size, t_byte, CFA_advance_loc4);
+-	  output_data (pbuf, buf_size, t_long,
+-		       data->param[0] / current_config.code_align);
++	  out_one (DW_CFA_def_cfa_offset);
++	  out_uleb128 (offset);
+ 	}
+       break;
+ 
+-    case CFA_def_cfa:
+-      if (verbose)
+-	printf ("\t# CFA_def_cfa(%ld,%ld)\n",
+-		data->param[0], data->param[1]);
+-      output_data (pbuf, buf_size, t_byte, CFA_def_cfa);
+-      output_data (pbuf, buf_size, t_uleb128, data->param[0]);
+-      output_data (pbuf, buf_size, t_uleb128, data->param[1]);
+-      break;
+-
+-    case CFA_def_cfa_register:
+-    case CFA_def_cfa_offset:
+-      if (verbose)
+-	printf ("\t# %s(%ld)\n", cfi_insn_str (data->insn),
+-		data->param[0]);
+-      output_data (pbuf, buf_size, t_byte, data->insn);
+-      output_data (pbuf, buf_size, t_uleb128, data->param[0]);
+-      break;
+-
+-    case CFA_offset:
+-      if (verbose)
+-	printf ("\t# %s(%ld,%ld)\n", cfi_insn_str (data->insn),
+-		data->param[0], data->param[1]);
+-
+-      /* Check whether to use CFA_offset or CFA_offset_extended.  */
+-      if (data->param[0] <= 0x3F)
+-	output_data (pbuf, buf_size, t_byte, CFA_offset + data->param[0]);
++    case DW_CFA_offset:
++      regno = insn->u.ri.reg;
++      offset = insn->u.ri.offset / DWARF2_CIE_DATA_ALIGNMENT;
++      if (offset < 0)
++	{
++	  out_one (DW_CFA_offset_extended);
++	  out_uleb128 (regno);
++	  out_sleb128 (offset);
++	}
++      else if (regno <= 0x3F)
++	{
++	  out_one (DW_CFA_offset + regno);
++	  out_uleb128 (offset);
++	}
+       else
+ 	{
+-	  output_data (pbuf, buf_size, t_byte, CFA_offset_extended);
+-	  output_data (pbuf, buf_size, t_uleb128, data->param[0]);
++	  out_one (DW_CFA_offset_extended);
++	  out_uleb128 (regno);
++	  out_uleb128 (offset);
+ 	}
+-      output_data (pbuf, buf_size, t_uleb128,
+-		   data->param[1] / current_config.data_align);
+       break;
+ 
+-    case CFA_register:
+-      if (verbose)
+-	printf ("\t# %s(%ld,%ld)\n", cfi_insn_str (data->insn),
+-		data->param[0], data->param[1]);
+-      output_data (pbuf, buf_size, t_byte, CFA_register);
+-      output_data (pbuf, buf_size, t_uleb128, data->param[0]);
+-      output_data (pbuf, buf_size, t_uleb128, data->param[1]);
+-      break;
+-
+-    case CFA_nop:
+-      if (verbose)
+-	printf ("\t# CFA_nop\n");
+-      output_data (pbuf, buf_size, t_byte, CFA_nop);
++    case DW_CFA_register:
++      out_one (DW_CFA_register);
++      out_uleb128 (insn->u.rr.reg1);
++      out_uleb128 (insn->u.rr.reg2);
++      break;
++
++    case DW_CFA_nop:
++      out_one (DW_CFA_nop);
+       break;
+ 
+     default:
+-      as_warn ("CFA_unknown[%d](%ld,%ld)", data->insn,
+-	       data->param[0], data->param[1]);
++      abort ();
+     }
+-  size = *pbuf - orig_buf;
+-  *buf = *pbuf;
+-  *buf_size -= size;
+-  return size;
+ }
+ 
+ static void
+-dot_cfi_endproc (void)
++output_cie (struct cie_entry *cie)
+ {
+-  struct cfi_data *data_ptr;
+-  struct cie_entry *cie_ptr;
+-  char *cie_buf, *fde_buf, *pbuf, *where;
+-  unsigned long buf_size, cie_size, fde_size, last_cie_offset;
+-  unsigned long fde_initloc_offset, fde_len_offset, fde_offset;
+-  segT saved_seg, cfi_seg;
++  symbolS *after_size_address, *end_address;
+   expressionS exp;
++  struct cfi_insn_data *i;
+ 
+-  if (! cfi_info)
+-    {
+-      as_bad (_(".cfi_endproc without corresponding .cfi_startproc"));
+-      return;
+-    }
+-  cfi_info->end_address = frag_now_fix ();
+-
+-  /* Open .eh_frame section.  */
+-  saved_seg = now_seg;
+-  cfi_seg = subseg_new (".eh_frame", 0);
+-#ifdef BFD_ASSEMBLER
+-  bfd_set_section_flags (stdoutput, cfi_seg,
+-			 SEC_ALLOC | SEC_LOAD | SEC_RELOC | SEC_DATA);
+-#endif
+-  subseg_set (cfi_seg, 0);
++  cie->start_address = symbol_temp_new_now ();
++  after_size_address = symbol_temp_make ();
++  end_address = symbol_temp_make ();
++
++  exp.X_op = O_subtract;
++  exp.X_add_symbol = end_address;
++  exp.X_op_symbol = after_size_address;
++  exp.X_add_number = 0;
++
++  emit_expr (&exp, 4);				/* Length */
++  symbol_set_value_now (after_size_address);
++  out_four (0);					/* CIE id */
++  out_one (DW_CIE_VERSION);			/* Version */
++  out_one ('z');				/* Augmentation */
++  out_one ('R');
++  out_one (0);
++  out_uleb128 (DWARF2_LINE_MIN_INSN_LENGTH);	/* Code alignment */
++  out_sleb128 (DWARF2_CIE_DATA_ALIGNMENT);	/* Data alignment */
++  out_one (cie->return_column);			/* Return column */
++  out_uleb128 (1);				/* Augmentation size */
++  out_one (DW_EH_PE_pcrel | DW_EH_PE_sdata4);
++
++  if (cie->first)
++    for (i = cie->first; i != cie->last; i = i->next)
++      output_cfi_insn (i);
+ 
+-  /* Build CIE.  */
+-  cie_buf = xcalloc (1024, 1);
+-  /* Skip space for CIE length.  */
+-  pbuf = cie_buf + 4;
+-  buf_size = 1020;
+-
+-  if (verbose)
+-    printf ("# CIE *****\n");
+-
+-  /* CIE id.  */
+-  output_data (&pbuf, &buf_size, t_long, 0x0);
+-  /* Version.  */
+-  output_data (&pbuf, &buf_size, t_byte, 1);
+-  /* Augmentation.  */
+-  output_data (&pbuf, &buf_size, t_byte, 0);
+-  /* Code alignment.  */
+-  output_data (&pbuf, &buf_size, t_uleb128, current_config.code_align);
+-  /* Data alignment.  */
+-  output_data (&pbuf, &buf_size, t_sleb128, current_config.data_align);
+-  /* Return address column.  */
+-  output_data (&pbuf, &buf_size, t_byte, current_config.ra_column);
+-
+-  /* Build CFI instructions.  */
+-  data_ptr = cfi_info->data;
+-  while (data_ptr && !cfi_is_advance_insn (data_ptr->insn))
+-    {
+-      cfi_output_insn (data_ptr, &pbuf, &buf_size);
+-      data_ptr = data_ptr->next;
+-    }
+-
+-  /* Align the whole data to current_config.eh_align.  */
+-  cie_size = pbuf - cie_buf;
+-  cie_size += current_config.eh_align - cie_size % current_config.eh_align;
+-
+-  /* CIE length.  */
+-  pbuf = cie_buf;
+-  output_data (&pbuf, &buf_size, t_long, cie_size - 4);
+-
+-  /* OK, we built the CIE. Let's write it to the file...  */
+-  last_cie_offset = frag_now_fix ();
+-
+-  /* Check if we have already emitted the exactly same CIE. 
+-     If yes then use its offset instead and don't put out 
+-     the new one.  */
+-  cie_ptr = cie_root;
+-  while (cie_ptr)
+-    {
+-      if (cie_ptr->size == cie_size - 4
+-	  && memcmp (cie_ptr->data, cie_buf + 4, cie_ptr->size) == 0)
+-	break;
+-      cie_ptr = cie_ptr->next;
+-    }
+-
+-  /* If we have found the same CIE, use it...  */
+-  if (cie_ptr)
+-    {
+-      if (verbose)
+-	printf ("# Duplicate CIE found. Previous is at offset %lu\n",
+-		cie_ptr->offset);
+-      last_cie_offset = cie_ptr->offset;
+-    }
+-  else
+-    {
+-      /* Otherwise join this CIE to the list.  */
+-      where = (unsigned char *) frag_more (cie_size);
+-      memcpy (where, cie_buf, cie_size);
+-      if (cie_root)
+-	{
+-	  cie_ptr = cie_root;
+-	  while (cie_ptr->next)
+-	    cie_ptr = cie_ptr->next;
+-	  cie_ptr->next = calloc (sizeof (struct cie_entry), 1);
+-	  cie_ptr = cie_ptr->next;
+-	}
+-      else
+-	{
+-	  cie_root = calloc (sizeof (struct cie_entry), 1);
+-	  cie_ptr = cie_root;
+-	}
++  frag_align (2, 0, 0);
++  symbol_set_value_now (end_address);
++}
+ 
+-      cie_ptr->size = cie_size - 4;
+-      cie_ptr->data = calloc (cie_ptr->size, 1);
+-      cie_ptr->offset = last_cie_offset;
+-      memcpy (cie_ptr->data, cie_buf + 4, cie_ptr->size);
+-    }
++static void
++output_fde (struct fde_entry *fde, struct cie_entry *cie,
++	    struct cfi_insn_data *first)
++{
++  symbolS *after_size_address, *end_address;
++  expressionS exp;
+ 
+-  /* Clean up.  */
+-  free (cie_buf);
++  after_size_address = symbol_temp_make ();
++  end_address = symbol_temp_make ();
+ 
+-  /* Build the FDE...  */
+-  fde_buf = xcalloc (1024, 1);
+-  pbuf = fde_buf;
+-  buf_size = 1024;
++  exp.X_op = O_subtract;
++  exp.X_add_symbol = end_address;
++  exp.X_op_symbol = after_size_address;
++  exp.X_add_number = 0;
++  emit_expr (&exp, 4);				/* Length */
++  symbol_set_value_now (after_size_address);
+ 
+-  /* Offset of this FDE in current fragment.  */
+-  fde_offset = frag_now_fix ();
++  exp.X_add_symbol = after_size_address;
++  exp.X_op_symbol = cie->start_address;
++  emit_expr (&exp, 4);				/* CIE offset */
++  
++  exp.X_add_symbol = fde->start_address;
++  exp.X_op_symbol = symbol_temp_new_now ();
++  emit_expr (&exp, 4);				/* Code offset */
+ 
+-  if (verbose)
+-    {
+-      printf ("# FDE: start=0x%lx, end=0x%lx, delta=%d\n",
+-	      (long) cfi_info->start_address,
+-	      (long) cfi_info->end_address,
+-	      (int) (cfi_info->end_address - cfi_info->start_address));
+-    }
++  exp.X_add_symbol = fde->end_address;
++  exp.X_op_symbol = fde->start_address;		/* Code length */
++  emit_expr (&exp, 4);
+ 
+-  /* FDE length (t_long, 4 bytes) - will be set later.  */
+-  fde_len_offset = pbuf - fde_buf;
+-  pbuf += 4;
+-  buf_size -= 4;
++  out_uleb128 (0);				/* Augmentation size */
+ 
+-  /* CIE pointer - offset from here.  */
+-  output_data (&pbuf, &buf_size, t_long, fde_offset - last_cie_offset + 4);
++  for (; first; first = first->next)
++    output_cfi_insn (first);
+ 
+-  /* FDE initial location - this must be set relocatable!  */
+-  fde_initloc_offset = pbuf - fde_buf + fde_offset;
+-  output_data (&pbuf, &buf_size, current_config.addr_length,
+-	       cfi_info->start_address);
++  frag_align (2, 0, 0);
++  symbol_set_value_now (end_address);
++}
+ 
+-  /* FDE address range.  */
+-  output_data (&pbuf, &buf_size, current_config.addr_length,
+-	       cfi_info->end_address - cfi_info->start_address);
++static struct cie_entry *
++select_cie_for_fde (struct fde_entry *fde, struct cfi_insn_data **pfirst)
++{
++  struct cfi_insn_data *i, *j;
++  struct cie_entry *cie;
+ 
+-  while (data_ptr)
++  for (cie = cie_root; cie; cie = cie->next)
+     {
+-      cfi_output_insn (data_ptr, &pbuf, &buf_size);
+-      data_ptr = data_ptr->next;
+-    }
++      if (cie->return_column != fde->return_column)
++	continue;
++      for (i = cie->first, j = fde->data;
++	   i != cie->last && j != NULL;
++	   i = i->next, j = j->next)
++	{
++	  if (i->insn != j->insn)
++	    goto fail;
++	  switch (i->insn)
++	    {
++	    case DW_CFA_advance_loc:
++	      /* We reached the first advance in the FDE, but did not
++		 reach the end of the CIE list.  */
++	      goto fail;
+ 
+-  fde_size = pbuf - fde_buf;
+-  fde_size += current_config.eh_align - fde_size % current_config.eh_align;
++	    case DW_CFA_offset:
++	    case DW_CFA_def_cfa:
++	      if (i->u.ri.reg != j->u.ri.reg)
++		goto fail;
++	      if (i->u.ri.offset != j->u.ri.offset)
++		goto fail;
++	      break;
+ 
+-  /* Now we can set FDE length.  */
+-  pbuf = fde_buf + fde_len_offset;
+-  buf_size = 4;
+-  output_data (&pbuf, &buf_size, t_long, fde_size - 4);
++	    case DW_CFA_register:
++	      if (i->u.rr.reg1 != j->u.rr.reg1)
++		goto fail;
++	      if (i->u.rr.reg2 != j->u.rr.reg2)
++		goto fail;
++	      break;
+ 
+-  /* Copy FDE to objfile.  */
+-  where = (unsigned char *) frag_more (fde_size);
+-  memcpy (where, fde_buf, fde_size);
++	    case DW_CFA_def_cfa_register:
++	      if (i->u.r != j->u.r)
++		goto fail;
++	      break;
+ 
+-  /* Set relocation for initial address.  */
+-  buf_size = current_config.addr_length;
+-  memset (&exp, 0, sizeof (exp));
+-  exp.X_op = O_symbol;
+-  exp.X_add_symbol = symbol_find (cfi_info->labelname);
+-  fix_new_exp (frag_now, fde_initloc_offset,
+-	       current_config.addr_length,
+-	       &exp, 0, current_config.reloc_type);
++	    case DW_CFA_def_cfa_offset:
++	      if (i->u.i != j->u.i)
++		goto fail;
++	      break;
+ 
+-  /* Clean up.  */
+-  free (fde_buf);
++	    default:
++	      abort ();
++	    }
++	}
+ 
+-  free (cfi_info);
+-  cfi_info = NULL;
++      /* Success if we reached the end of the CIE list, and we've either
++	 run out of FDE entries or we've encountered an advance.  */
++      if (i == cie->last && (!j || j->insn == DW_CFA_advance_loc))
++	{
++	  *pfirst = j;
++	  return cie;
++	}
+ 
+-  /* Restore previous segment.  */
+-  subseg_set (saved_seg, 0);
+-}
++    fail:;
++    }
+ 
+-void
+-dot_cfi (int arg)
+-{
+-  long param;
++  cie = xmalloc (sizeof (struct cie_entry));
++  cie->next = cie_root;
++  cie_root = cie;
++  cie->return_column = fde->return_column;
++  cie->first = fde->data;
+ 
+-  switch (arg)
+-    {
+-    case CFI_startproc:
+-      dot_cfi_startproc ();
+-      break;
+-    case CFI_endproc:
+-      dot_cfi_endproc ();
+-      break;
+-    case CFA_def_cfa:
+-    case CFA_def_cfa_register:
+-    case CFA_def_cfa_offset:
+-    case CFA_offset:
+-    case CFA_register:
+-    case CFI_adjust_cfa_offset:
+-      cfi_make_insn (arg);
+-      break;
+-    case CFI_verbose:
+-      if (cfi_parse_const (&param) >= 0)
+-	verbose = (int) param;
+-      else
+-	verbose = 1;
+-      break;
+-    default:
+-      as_bad (_("unknown CFI code 0x%x (%s)"), arg, cfi_insn_str (arg));
++  for (i = cie->first; i ; i = i->next)
++    if (i->insn == DW_CFA_advance_loc)
+       break;
+-    }
+-  ignore_rest_of_line ();
+-}
+ 
+-void
+-cfi_set_config (struct cfi_config *cfg)
+-{
+-  assert (cfg != NULL);
+-  assert (cfg->addr_length > 0);
++  cie->last = i;
++  *pfirst = i;
++   
++  output_cie (cie);
+ 
+-  current_config = *cfg;
++  return cie;
+ }
+ 
+ void
+ cfi_finish (void)
+ {
+-  if (cfi_info)
+-    as_bad (_("open CFI at the end of file; missing .cfi_endproc directive"));
++  segT cfi_seg;
++  struct fde_entry *fde;
++  int save_flag_traditional_format;
++
++  if (cur_fde_data)
++    {
++      as_bad (_("open CFI at the end of file; missing .cfi_endproc directive"));
++      cur_fde_data->end_address = cur_fde_data->start_address;
++    }
++
++  if (all_fde_data == 0)
++    return;
++
++  /* Open .eh_frame section.  */
++  cfi_seg = subseg_new (".eh_frame", 0);
++#ifdef BFD_ASSEMBLER
++  bfd_set_section_flags (stdoutput, cfi_seg,
++			 SEC_ALLOC | SEC_LOAD | SEC_RELOC | SEC_DATA);
++#endif
++  subseg_set (cfi_seg, 0);
++  record_alignment (cfi_seg, 2);
++
++  /* Make sure check_eh_frame doesn't do anything with our output.  */
++  save_flag_traditional_format = flag_traditional_format;
++  flag_traditional_format = 1;
++
++  for (fde = all_fde_data; fde ; fde = fde->next)
++    {
++      struct cfi_insn_data *first;
++      struct cie_entry *cie;
++
++      cie = select_cie_for_fde (fde, &first);
++      output_fde (fde, cie, first);
++    }
++
++  flag_traditional_format = save_flag_traditional_format;
+ }
+--- gas/dw2gencfi.h	20 May 2003 07:58:06 -0000	1.1
++++ gas/dw2gencfi.h	27 May 2003 16:52:46 -0000	1.2
+@@ -24,77 +24,23 @@
+ 
+ #include "elf/dwarf2.h"
+ 
+-struct cfi_config {
+-  /* Target address length in bytes. (usually 4 or 8).
+-     Round it up for archs like S/390 with 31b addresses.  */
+-  unsigned int addr_length;
+-
+-  /* Alignment of .eh_frame blocks in bytes (usually 1, 4 or 8).  */
+-  unsigned int eh_align;
+-
+-  /* Code alignment (1 for x86/amd64 machines, 4 or 8 for
+-     RISC machines). Consult Dwarf2 standard for details.  */
+-  int code_align;
+-
+-  /* Data (stack) alignment (-4 on x86, -8 on amd64, something
+-     positive on archs where stack grows up).  Consult Dwarf2
+-     standard for details.  */
+-  int data_align;
+-
+-  /* Return address column (0x8 on x86, 0x10 on amd64).  Consult
+-     Dwarf2 standard for details.  */
+-  int ra_column;
+-
+-  /* Relocation type for init_addr FDE record. (BFD_RELOC_64
+-     on amd64).  */
+-  int reloc_type;
+-};
+-
+-/* Codes of CFI instructions taken from Dwarf2 standard.  */
+-enum cfi_insn {
+-  CFA_nop = DW_CFA_nop,
+-  CFA_set_loc = DW_CFA_set_loc,
+-  CFA_advance_loc1 = DW_CFA_advance_loc1,
+-  CFA_advance_loc2 = DW_CFA_advance_loc2,
+-  CFA_advance_loc4 = DW_CFA_advance_loc4,
+-  CFA_offset_extended = DW_CFA_offset_extended,
+-  CFA_resotre_extended = DW_CFA_restore_extended,
+-  CFA_undefined = DW_CFA_undefined,
+-  CFA_same_value = DW_CFA_same_value,
+-  CFA_register = DW_CFA_register,
+-  CFA_remember_state = DW_CFA_remember_state,
+-  CFA_restore_state = DW_CFA_restore_state,
+-  CFA_def_cfa = DW_CFA_def_cfa,
+-  CFA_def_cfa_register = DW_CFA_def_cfa_register,
+-  CFA_def_cfa_offset = DW_CFA_def_cfa_offset,
+-  CFA_advance_loc = DW_CFA_advance_loc,
+-  CFA_offset = DW_CFA_offset,
+-  CFA_restore = DW_CFA_restore,
+-
+-  /* These don't belong to the standard.  */
+-  CFI_startproc = 0xff00,
+-  CFI_endproc = 0xff01,
+-  CFI_adjust_cfa_offset = 0xff10,
+-  CFI_verbose = 0xffff
+-};
++struct symbol;
+ 
+ extern const pseudo_typeS cfi_pseudo_table[];
+ 
+-/* Insert .cfi_* directives to the list of pseudo-ops.  */
+-void cfi_pop_insert PARAMS ((void));
+-
+-/* Set/change setup of the CFI machinery.  This change won't
+-   affect already generated CIEs/FDEs.  */
+-void cfi_set_config PARAMS ((struct cfi_config *cfg));
+-
+ /* cfi_finish() is called at the end of file. It will complain if
+    the last CFI wasn't properly closed by .cfi_endproc.  */
+-void cfi_finish PARAMS ((void));
++extern void cfi_finish (void);
+ 
+-/* Add CFI instruction to the list of instructions
+-   of the current frame. cfi_add_insn() could be used
+-   in tc_cfi_frame_initial_instructions() to add instructions
+-   needed for every frame (ie. those that usually go to CIE).  */
+-void cfi_add_insn (enum cfi_insn insn, long param0, long param1);
++/* Entry points for backends to add unwind information.  */
++extern void cfi_new_fde (struct symbol *);
++extern void cfi_end_fde (struct symbol *);
++extern void cfi_set_return_column (unsigned);
++extern void cfi_add_advance_loc (struct symbol *);
++extern void cfi_add_CFA_offset (unsigned, offsetT);
++extern void cfi_add_CFA_def_cfa (unsigned, offsetT);
++extern void cfi_add_CFA_register (unsigned, unsigned);
++extern void cfi_add_CFA_def_cfa_register (unsigned);
++extern void cfi_add_CFA_def_cfa_offset (offsetT);
+ 
+ #endif /* DW2GENCFI_H */
+--- gas/dwarf2dbg.c	21 Apr 2003 18:23:25 -0000	1.62
++++ gas/dwarf2dbg.c	27 May 2003 16:00:04 -0000	1.63
+@@ -157,9 +157,6 @@ static bfd_boolean loc_directive_seen;
+ /* Current location as indicated by the most recent .loc directive.  */
+ static struct dwarf2_line_info current;
+ 
+-/* Fake label name.  */
+-static char const fake_label_name[] = ".L0\001";
+-
+ /* The size of an address on the target.  */
+ static unsigned int sizeof_address;
+ 
+@@ -174,8 +171,6 @@ static void out_two PARAMS ((int));
+ static void out_four PARAMS ((int));
+ static void out_abbrev PARAMS ((int, int));
+ static void out_uleb128 PARAMS ((addressT));
+-static symbolS *symbol_new_now PARAMS ((void));
+-static void set_symbol_value_now PARAMS ((symbolS *));
+ static offsetT get_frag_fix PARAMS ((fragS *));
+ static void out_set_addr PARAMS ((segT, fragS *, addressT));
+ static int size_inc_line_addr PARAMS ((int, addressT));
+@@ -621,25 +616,6 @@ out_abbrev (name, form)
+   out_uleb128 (form);
+ }
+ 
+-/* Create a new fake symbol whose value is the current position.  */
+-
+-static symbolS *
+-symbol_new_now ()
+-{
+-  return symbol_new (fake_label_name, now_seg, frag_now_fix (), frag_now);
+-}
+-
+-/* Set the value of SYM to the current position in the current segment.  */
+-
+-static void
+-set_symbol_value_now (sym)
+-     symbolS *sym;
+-{
+-  S_SET_SEGMENT (sym, now_seg);
+-  S_SET_VALUE (sym, frag_now_fix ());
+-  symbol_set_frag (sym, frag_now);
+-}
+-
+ /* Get the size of a fragment.  */
+ 
+ static offsetT
+@@ -676,7 +652,7 @@ out_set_addr (seg, frag, ofs)
+   expressionS expr;
+   symbolS *sym;
+ 
+-  sym = symbol_new (fake_label_name, seg, ofs, frag);
++  sym = symbol_temp_new (seg, ofs, frag);
+ 
+   out_opcode (DW_LNS_extended_op);
+   out_uleb128 (sizeof_address + 1);
+@@ -894,8 +870,8 @@ relax_inc_line_addr (line_delta, seg, to
+   expressionS expr;
+   int max_chars;
+ 
+-  to_sym = symbol_new (fake_label_name, seg, to_ofs, to_frag);
+-  from_sym = symbol_new (fake_label_name, seg, from_ofs, from_frag);
++  to_sym = symbol_temp_new (seg, to_ofs, to_frag);
++  from_sym = symbol_temp_new (seg, from_ofs, from_frag);
+ 
+   expr.X_op = O_subtract;
+   expr.X_add_symbol = to_sym;
+@@ -1124,9 +1100,9 @@ out_debug_line (line_seg)
+ 
+   subseg_set (line_seg, 0);
+ 
+-  line_start = symbol_new_now ();
+-  prologue_end = symbol_make (fake_label_name);
+-  line_end = symbol_make (fake_label_name);
++  line_start = symbol_temp_new_now ();
++  prologue_end = symbol_temp_make ();
++  line_end = symbol_temp_make ();
+ 
+   /* Total length of the information for this compilation unit.  */
+   expr.X_op = O_subtract;
+@@ -1188,13 +1164,13 @@ out_debug_line (line_seg)
+ 
+   out_file_list ();
+ 
+-  set_symbol_value_now (prologue_end);
++  symbol_set_value_now (prologue_end);
+ 
+   /* For each section, emit a statement program.  */
+   for (s = all_segs; s; s = s->next)
+     process_entries (s->seg, s->head->head);
+ 
+-  set_symbol_value_now (line_end);
++  symbol_set_value_now (line_end);
+ }
+ 
+ /* Emit data for .debug_aranges.  */
+@@ -1250,11 +1226,11 @@ out_debug_aranges (aranges_seg, info_seg
+       symbolS *beg, *end;
+ 
+       frag = first_frag_for_seg (s->seg);
+-      beg = symbol_new (fake_label_name, s->seg, 0, frag);
++      beg = symbol_temp_new (s->seg, 0, frag);
+       s->text_start = beg;
+ 
+       frag = last_frag_for_seg (s->seg);
+-      end = symbol_new (fake_label_name, s->seg, get_frag_fix (frag), frag);
++      end = symbol_temp_new (s->seg, get_frag_fix (frag), frag);
+       s->text_end = end;
+ 
+       expr.X_op = O_symbol;
+@@ -1322,8 +1298,8 @@ out_debug_info (info_seg, abbrev_seg, li
+ 
+   subseg_set (info_seg, 0);
+ 
+-  info_start = symbol_new_now ();
+-  info_end = symbol_make (fake_label_name);
++  info_start = symbol_temp_new_now ();
++  info_end = symbol_temp_make ();
+ 
+   /* Compilation Unit length.  */
+   expr.X_op = O_subtract;
+@@ -1421,7 +1397,7 @@ out_debug_info (info_seg, abbrev_seg, li
+      dwarf2 draft has no standard code for assembler.  */
+   out_two (DW_LANG_Mips_Assembler);
+ 
+-  set_symbol_value_now (info_end);
++  symbol_set_value_now (info_end);
+ }
+ 
+ void
+--- gas/expr.c	18 Oct 2002 01:56:39 -0000	1.46
++++ gas/expr.c	27 May 2003 19:19:29 -0000	1.47
+@@ -67,7 +67,6 @@ make_expr_symbol (expressionP)
+      expressionS *expressionP;
+ {
+   expressionS zero;
+-  const char *fake;
+   symbolS *symbolP;
+   struct expr_symbol_line *n;
+ 
+@@ -91,13 +90,11 @@ make_expr_symbol (expressionP)
+       expressionP = &zero;
+     }
+ 
+-  fake = FAKE_LABEL_NAME;
+-
+   /* Putting constant symbols in absolute_section rather than
+      expr_section is convenient for the old a.out code, for which
+      S_GET_SEGMENT does not always retrieve the value put in by
+      S_SET_SEGMENT.  */
+-  symbolP = symbol_create (fake,
++  symbolP = symbol_create (FAKE_LABEL_NAME,
+ 			   (expressionP->X_op == O_constant
+ 			    ? absolute_section
+ 			    : expr_section),
+@@ -745,13 +742,8 @@ current_location (expressionp)
+     }
+   else
+     {
+-      symbolS *symbolp;
+-
+-      symbolp = symbol_new (FAKE_LABEL_NAME, now_seg,
+-			    (valueT) frag_now_fix (),
+-			    frag_now);
+       expressionp->X_op = O_symbol;
+-      expressionp->X_add_symbol = symbolp;
++      expressionp->X_add_symbol = symbol_temp_new_now ();
+       expressionp->X_add_number = 0;
+     }
+ }
+--- gas/macro.c	13 Mar 2003 11:49:33 -0000	1.21
++++ gas/macro.c	2 Jun 2003 15:03:20 -0000	1.22
+@@ -637,6 +637,7 @@ sub_actual (start, in, t, formal_hash, k
+     {
+       /* Doing this permits people to use & in macro bodies.  */
+       sb_add_char (out, '&');
++      sb_add_sb (out, t);
+     }
+   else if (copyifnotthere)
+     {
+--- gas/read.c	20 May 2003 07:58:06 -0000	1.62
++++ gas/read.c	2 Jun 2003 22:48:58 -0000	1.63
+@@ -3444,6 +3444,8 @@ emit_expr (exp, nbytes)
+   if (need_pass_2)
+     return;
+ 
++  dot_value = frag_now_fix ();
++
+ #ifndef NO_LISTING
+ #ifdef OBJ_ELF
+   /* When gcc emits DWARF 1 debugging pseudo-ops, a line number will
+--- gas/stabs.c	18 May 2002 12:53:30 -0000	1.19
++++ gas/stabs.c	27 May 2003 19:19:29 -0000	1.20
+@@ -371,13 +371,11 @@ s_stab_generic (what, stab_secname, stab
+ 	}
+       else
+ 	{
+-	  const char *fake;
+ 	  symbolS *symbol;
+ 	  expressionS exp;
+ 
+ 	  /* Arrange for a value representing the current location.  */
+-	  fake = FAKE_LABEL_NAME;
+-	  symbol = symbol_new (fake, saved_seg, dot, saved_frag);
++	  symbol = symbol_temp_new (saved_seg, dot, saved_frag);
+ 
+ 	  exp.X_op = O_symbol;
+ 	  exp.X_add_symbol = symbol;
+--- gas/symbols.c	20 May 2003 07:58:06 -0000	1.44
++++ gas/symbols.c	27 May 2003 19:19:29 -0000	1.46
+@@ -588,6 +588,27 @@ symbol_make (name)
+   return (symbolP);
+ }
+ 
++symbolS *
++symbol_temp_new (seg, ofs, frag)
++     segT seg;
++     valueT ofs;
++     fragS *frag;
++{
++  return symbol_new (FAKE_LABEL_NAME, seg, ofs, frag);
++}
++
++symbolS *
++symbol_temp_new_now ()
++{
++  return symbol_temp_new (now_seg, frag_now_fix (), frag_now);
++}
++
++symbolS *
++symbol_temp_make ()
++{
++  return symbol_make (FAKE_LABEL_NAME);
++}
++
+ /* Implement symbol table lookup.
+    In:	A symbol's name as a string: '\0' can't be part of a symbol name.
+    Out:	NULL if the name was not in the symbol table, else the address
+@@ -2059,6 +2080,17 @@ symbol_set_value_expression (s, exp)
+   if (LOCAL_SYMBOL_CHECK (s))
+     s = local_symbol_convert ((struct local_symbol *) s);
+   s->sy_value = *exp;
++}
++
++/* Set the value of SYM to the current position in the current segment.  */
++
++void
++symbol_set_value_now (sym)
++     symbolS *sym;
++{
++  S_SET_SEGMENT (sym, now_seg);
++  S_SET_VALUE (sym, frag_now_fix ());
++  symbol_set_frag (sym, frag_now);
+ }
+ 
+ /* Set the frag of a symbol.  */
+--- gas/symbols.h	20 May 2003 07:58:06 -0000	1.12
++++ gas/symbols.h	27 May 2003 16:00:04 -0000	1.13
+@@ -59,6 +59,10 @@ symbolS *symbol_create PARAMS ((const ch
+ 				fragS * frag));
+ struct local_symbol *local_symbol_make PARAMS ((const char *name, segT section, 
+ 					 valueT value, fragS * frag));
++symbolS *symbol_temp_new PARAMS ((segT, valueT, fragS *));
++symbolS *symbol_temp_new_now PARAMS ((void));
++symbolS *symbol_temp_make PARAMS ((void));
++
+ symbolS *colon PARAMS ((const char *sym_name));
+ void local_colon PARAMS ((int n));
+ void symbol_begin PARAMS ((void));
+@@ -172,6 +176,7 @@ extern symbolS *symbol_next PARAMS ((sym
+ extern expressionS *symbol_get_value_expression PARAMS ((symbolS *));
+ extern void symbol_set_value_expression PARAMS ((symbolS *,
+ 						 const expressionS *));
++extern void symbol_set_value_now PARAMS ((symbolS *));
+ extern void symbol_set_frag PARAMS ((symbolS *, fragS *));
+ extern fragS *symbol_get_frag PARAMS ((symbolS *));
+ extern void symbol_mark_used PARAMS ((symbolS *));
+--- gas/config/tc-alpha.c	3 May 2003 16:04:11 -0000	1.56
++++ gas/config/tc-alpha.c	30 May 2003 03:01:11 -0000	1.57
+@@ -60,6 +60,7 @@
+ #ifdef OBJ_ELF
+ #include "elf/alpha.h"
+ #include "dwarf2dbg.h"
++#include "dw2gencfi.h"
+ #endif
+ 
+ #include "safe-ctype.h"
+@@ -407,11 +408,6 @@ static symbolS *alpha_lit8_symbol;
+ static offsetT alpha_lit8_literal;
+ #endif
+ 
+-#ifdef OBJ_ELF
+-/* The active .ent symbol.  */
+-static symbolS *alpha_cur_ent_sym;
+-#endif
+-
+ /* Is the assembler not allowed to use $at?  */
+ static int alpha_noat_on = 0;
+ 
+@@ -4382,6 +4378,25 @@ s_alpha_sdata (ignore)
+ #endif
+ 
+ #ifdef OBJ_ELF
++struct alpha_elf_frame_data
++{
++  symbolS *func_sym;
++  symbolS *func_end_sym;
++  symbolS *prologue_sym;
++  unsigned int mask;
++  unsigned int fmask;
++  int fp_regno;
++  int ra_regno;
++  offsetT frame_size;
++  offsetT mask_offset;
++  offsetT fmask_offset;
++
++  struct alpha_elf_frame_data *next;
++};
++
++static struct alpha_elf_frame_data *all_frame_data;
++static struct alpha_elf_frame_data **plast_frame_data = &all_frame_data;
++static struct alpha_elf_frame_data *cur_frame_data;
+ 
+ /* Handle the .section pseudo-op.  This is like the usual one, but it
+    clears alpha_insn_label and restores auto alignment.  */
+@@ -4418,12 +4433,21 @@ s_alpha_ent (dummy)
+ 	{
+ 	  symbolS *sym;
+ 
+-	  if (alpha_cur_ent_sym)
++	  if (cur_frame_data)
+ 	    as_warn (_("nested .ent directives"));
+ 
+ 	  sym = symbol_find_or_make (name);
+ 	  symbol_get_bfdsym (sym)->flags |= BSF_FUNCTION;
+-	  alpha_cur_ent_sym = sym;
++
++	  cur_frame_data = calloc (1, sizeof (*cur_frame_data));
++	  cur_frame_data->func_sym = sym;
++
++	  /* Provide sensible defaults.  */
++	  cur_frame_data->fp_regno = 30;	/* sp */
++	  cur_frame_data->ra_regno = 26;	/* ra */
++
++	  *plast_frame_data = cur_frame_data;
++	  plast_frame_data = &cur_frame_data->next;
+ 
+ 	  /* The .ent directive is sometimes followed by a number.  Not sure
+ 	     what it really means, but ignore it.  */
+@@ -4463,22 +4487,27 @@ s_alpha_end (dummy)
+ 	  symbolS *sym;
+ 
+ 	  sym = symbol_find (name);
+-	  if (sym != alpha_cur_ent_sym)
++	  if (!cur_frame_data)
++	    as_warn (_(".end directive without matching .ent"));
++	  else if (sym != cur_frame_data->func_sym)
+ 	    as_warn (_(".end directive names different symbol than .ent"));
+ 
+ 	  /* Create an expression to calculate the size of the function.  */
+ 	  if (sym)
+ 	    {
+-	      symbol_get_obj (sym)->size =
+-		(expressionS *) xmalloc (sizeof (expressionS));
+-	      symbol_get_obj (sym)->size->X_op = O_subtract;
+-	      symbol_get_obj (sym)->size->X_add_symbol
+-		= symbol_new ("L0\001", now_seg, frag_now_fix (), frag_now);
+-	      symbol_get_obj (sym)->size->X_op_symbol = sym;
+-	      symbol_get_obj (sym)->size->X_add_number = 0;
++	      OBJ_SYMFIELD_TYPE *obj = symbol_get_obj (sym);
++	      expressionS *exp = xmalloc (sizeof (expressionS));
++
++	      obj->size = exp;
++	      exp->X_op = O_subtract;
++	      exp->X_add_symbol = symbol_temp_new_now ();
++	      exp->X_op_symbol = sym;
++	      exp->X_add_number = 0;
++
++	      cur_frame_data->func_end_sym = exp->X_add_symbol;
+ 	    }
+ 
+-	  alpha_cur_ent_sym = NULL;
++	  cur_frame_data = NULL;
+ 
+ 	  *input_line_pointer = name_end;
+ 	}
+@@ -4498,7 +4527,45 @@ s_alpha_mask (fp)
+ 	ecoff_directive_mask (0);
+     }
+   else
+-    discard_rest_of_line ();
++    {
++      long val;
++      offsetT offset;
++
++      if (!cur_frame_data)
++	{
++	  if (fp)
++	    as_warn (_(".fmask outside of .ent"));
++	  else
++	    as_warn (_(".mask outside of .ent"));
++	  discard_rest_of_line ();
++	  return;
++	}
++
++      if (get_absolute_expression_and_terminator (&val) != ',')
++	{
++	  if (fp)
++	    as_warn (_("bad .fmask directive"));
++	  else
++	    as_warn (_("bad .mask directive"));
++	  --input_line_pointer;
++	  discard_rest_of_line ();
++	  return;
++	}
++
++      offset = get_absolute_expression ();
++      demand_empty_rest_of_line ();
++
++      if (fp)
++	{
++	  cur_frame_data->fmask = val;
++          cur_frame_data->fmask_offset = offset;
++	}
++      else
++	{
++	  cur_frame_data->mask = val;
++	  cur_frame_data->mask_offset = offset;
++	}
++    }
+ }
+ 
+ static void
+@@ -4508,7 +4575,36 @@ s_alpha_frame (dummy)
+   if (ECOFF_DEBUGGING)
+     ecoff_directive_frame (0);
+   else
+-    discard_rest_of_line ();
++    {
++      long val;
++
++      if (!cur_frame_data)
++	{
++	  as_warn (_(".frame outside of .ent"));
++	  discard_rest_of_line ();
++	  return;
++	}
++
++      cur_frame_data->fp_regno = tc_get_register (1);
++
++      SKIP_WHITESPACE ();
++      if (*input_line_pointer++ != ','
++	  || get_absolute_expression_and_terminator (&val) != ',')
++	{
++	  as_warn (_("bad .frame directive"));
++	  --input_line_pointer;
++	  discard_rest_of_line ();
++	  return;
++	}
++      cur_frame_data->frame_size = val;
++
++      cur_frame_data->ra_regno = tc_get_register (0);
++
++      /* Next comes the "offset of saved $a0 from $sp".  In gcc terms
++	 this is current_function_pretend_args_size.  There's no place
++	 to put this value, so ignore it.  */
++      s_ignore (42);
++    }
+ }
+ 
+ static void
+@@ -4524,7 +4620,7 @@ s_alpha_prologue (ignore)
+   if (ECOFF_DEBUGGING)
+     sym = ecoff_get_cur_proc_sym ();
+   else
+-    sym = alpha_cur_ent_sym;
++    sym = cur_frame_data ? cur_frame_data->func_sym : NULL;
+ 
+   if (sym == NULL)
+     {
+@@ -4549,6 +4645,9 @@ s_alpha_prologue (ignore)
+       as_bad (_("Invalid argument %d to .prologue."), arg);
+       break;
+     }
++
++  if (cur_frame_data)
++    cur_frame_data->prologue_sym = symbol_temp_new_now ();
+ }
+ 
+ static char *first_file_directive;
+@@ -4641,6 +4740,87 @@ s_alpha_coff_wrapper (which)
+       as_bad (_("ECOFF debugging is disabled."));
+       ignore_rest_of_line ();
+     }
++}
++
++/* Called at the end of assembly.  Here we emit unwind info for frames
++   unless the compiler has done it for us.  */
++
++void
++alpha_elf_md_end (void)
++{
++  struct alpha_elf_frame_data *p;
++
++  if (cur_frame_data)
++    as_warn (_(".ent directive without matching .end"));
++
++  /* If someone has generated the unwind info themselves, great.  */
++  if (bfd_get_section_by_name (stdoutput, ".eh_frame") != NULL)
++    return;
++
++  /* Generate .eh_frame data for the unwind directives specified.  */
++  for (p = all_frame_data; p ; p = p->next)
++    if (p->prologue_sym)
++      {
++	/* Create a temporary symbol at the same location as our
++	   function symbol.  This prevents problems with globals.  */
++	cfi_new_fde (symbol_temp_new (S_GET_SEGMENT (p->func_sym),
++				      S_GET_VALUE (p->func_sym),
++				      symbol_get_frag (p->func_sym)));
++
++	cfi_set_return_column (p->ra_regno);
++	cfi_add_CFA_def_cfa_register (30);
++	if (p->fp_regno != 30 || p->mask || p->fmask || p->frame_size)
++	  {
++	    unsigned int mask;
++	    offsetT offset;
++
++	    cfi_add_advance_loc (p->prologue_sym);
++
++	    if (p->fp_regno != 30)
++	      if (p->frame_size != 0)
++		cfi_add_CFA_def_cfa (p->fp_regno, p->frame_size);
++	      else
++		cfi_add_CFA_def_cfa_register (p->fp_regno);
++	    else if (p->frame_size != 0)
++	      cfi_add_CFA_def_cfa_offset (p->frame_size);
++
++	    mask = p->mask;
++	    offset = p->mask_offset;
++
++	    /* Recall that $26 is special-cased and stored first.  */
++	    if ((mask >> 26) & 1)
++	      {
++	        cfi_add_CFA_offset (26, offset);
++		offset += 8;
++		mask &= ~(1 << 26);
++	      }
++	    while (mask)
++	      {
++		unsigned int i;
++		i = mask & -mask;
++		mask ^= i;
++		i = ffs (i) - 1;
++
++		cfi_add_CFA_offset (i, offset);
++		offset += 8;
++	      }
++
++	    mask = p->fmask;
++	    offset = p->fmask_offset;
++	    while (mask)
++	      {
++		unsigned int i;
++		i = mask & -mask;
++		mask ^= i;
++		i = ffs (i) - 1;
++
++		cfi_add_CFA_offset (i + 32, offset);
++		offset += 8;
++	      }
++	  }
++
++	cfi_end_fde (p->func_end_sym);
++      }
+ }
+ #endif /* OBJ_ELF */
+ 
+--- gas/config/tc-alpha.h	7 Nov 2002 00:42:18 -0000	1.16
++++ gas/config/tc-alpha.h	30 May 2003 03:01:11 -0000	1.17
+@@ -128,6 +128,11 @@ extern flagword alpha_elf_section_flags 
+ #define tc_frob_file_before_fix() alpha_before_fix ()
+ extern void alpha_before_fix PARAMS ((void));
+ 
++#ifdef OBJ_ELF
++#define md_end  alpha_elf_md_end
++extern void alpha_elf_md_end PARAMS ((void));
++#endif
++
+ /* New fields for supporting explicit relocations (such as !literal to mark
+    where a pointer is loaded from the global table, and !lituse_base to track
+    all of the normal uses of that pointer).  */
+@@ -156,4 +161,6 @@ do {									\
+ 	     (long) FIX->tc_fix_data.next_reloc);			\
+ } while (0)
+ 
+-#define DWARF2_LINE_MIN_INSN_LENGTH 4
++#define DWARF2_LINE_MIN_INSN_LENGTH	4
++#define DWARF2_DEFAULT_RETURN_COLUMN	26
++#define DWARF2_CIE_DATA_ALIGNMENT	-8
+--- gas/config/tc-i386.c	20 May 2003 07:58:06 -0000	1.139
++++ gas/config/tc-i386.c	27 May 2003 16:52:47 -0000	1.140
+@@ -319,6 +319,12 @@ static unsigned int no_cond_jump_promoti
+ /* Pre-defined "_GLOBAL_OFFSET_TABLE_".  */
+ symbolS *GOT_symbol;
+ 
++/* The dwarf2 return column, adjusted for 32 or 64 bit.  */
++unsigned int x86_dwarf2_return_column;
++
++/* The dwarf2 data alignment, adjusted for 32 or 64 bit.  */
++int x86_cie_data_alignment;
++
+ /* Interface to relax_segment.
+    There are 3 major relax states for 386 jump insns because the
+    different types of jumps add different sizes to frags when we're
+@@ -987,6 +993,17 @@ md_begin ()
+       record_alignment (bss_section, 2);
+     }
+ #endif
++
++  if (flag_code == CODE_64BIT)
++    {
++      x86_dwarf2_return_column = 16;
++      x86_cie_data_alignment = -8;
++    }
++  else
++    {
++      x86_dwarf2_return_column = 8;
++      x86_cie_data_alignment = -4;
++    }
+ }
+ 
+ void
+@@ -6301,42 +6318,15 @@ intel_putback_token ()
+   prev_token.str = NULL;
+ }
+ 
+-void
+-tc_x86_cfi_init (void)
+-{
+-  struct cfi_config cfi_config;
+-
+-  if (flag_code == CODE_64BIT)
+-    {
+-      cfi_config.addr_length = 8;
+-      cfi_config.eh_align = 8;
+-      cfi_config.code_align = 1;
+-      cfi_config.data_align = -8;
+-      cfi_config.ra_column = 0x10;
+-      cfi_config.reloc_type = BFD_RELOC_64;
+-    }
+-  else
+-    {
+-      cfi_config.addr_length = 4;
+-      cfi_config.eh_align = 4;
+-      cfi_config.code_align = 1;
+-      cfi_config.data_align = -4;
+-      cfi_config.ra_column = 0x08;
+-      cfi_config.reloc_type = BFD_RELOC_32;
+-    }
+-
+-  cfi_set_config (&cfi_config);
+-}
+-
+-unsigned long
++int
+ tc_x86_regname_to_dw2regnum (const char *regname)
+ {
+   unsigned int regnum;
+   unsigned int regnames_count;
+   char *regnames_32[] =
+     {
+-      "eax", "ebx", "ecx", "edx",
+-      "edi", "esi", "ebp", "esp",
++      "eax", "ecx", "edx", "ebx",
++      "esp", "ebp", "esi", "edi",
+       "eip"
+     };
+   char *regnames_64[] =
+@@ -6364,21 +6354,18 @@ tc_x86_regname_to_dw2regnum (const char 
+     if (strcmp (regname, regnames[regnum]) == 0)
+       return regnum;
+ 
+-  as_bad (_("unknown register name '%s'"), regname);
+   return -1;
+ }
+ 
+ void
+ tc_x86_frame_initial_instructions (void)
+ {
+-  if (flag_code == CODE_64BIT)
+-    {
+-      cfi_add_insn (CFA_def_cfa, tc_x86_regname_to_dw2regnum ("rsp"), 8);
+-      cfi_add_insn (CFA_offset, tc_x86_regname_to_dw2regnum ("rip"), -8);
+-    }
+-  else
+-    {
+-      cfi_add_insn (CFA_def_cfa, tc_x86_regname_to_dw2regnum ("esp"), 4);
+-      cfi_add_insn (CFA_offset, tc_x86_regname_to_dw2regnum ("eip"), -4);
+-    }
++  static unsigned int sp_regno;
++
++  if (!sp_regno)
++    sp_regno = tc_x86_regname_to_dw2regnum (flag_code == CODE_64BIT
++					    ? "rsp" : "esp");
++
++  cfi_add_CFA_def_cfa (sp_regno, -x86_cie_data_alignment);
++  cfi_add_CFA_offset (x86_dwarf2_return_column, x86_cie_data_alignment);
+ }
+--- gas/config/tc-i386.h	20 May 2003 07:58:07 -0000	1.40
++++ gas/config/tc-i386.h	27 May 2003 16:52:47 -0000	1.41
+@@ -546,18 +546,18 @@ extern void sco_id PARAMS ((void));
+ #endif
+ 
+ /* We want .cfi_* pseudo-ops for generating unwind info.  */
+-#define TARGET_USE_CFIPOP
+-#ifdef TARGET_USE_CFIPOP
++#define TARGET_USE_CFIPOP 1
+ 
+-#define tc_cfi_init() tc_x86_cfi_init ()
+-extern void tc_x86_cfi_init PARAMS ((void));
++extern unsigned int x86_dwarf2_return_column;
++#define DWARF2_DEFAULT_RETURN_COLUMN x86_dwarf2_return_column
++
++extern int x86_cie_data_alignment;
++#define DWARF2_CIE_DATA_ALIGNMENT x86_cie_data_alignment
+ 
+ #define tc_regname_to_dw2regnum tc_x86_regname_to_dw2regnum
+-extern unsigned long tc_x86_regname_to_dw2regnum PARAMS ((const char *regname));
++extern int tc_x86_regname_to_dw2regnum PARAMS ((const char *regname));
+ 
+ #define tc_cfi_frame_initial_instructions tc_x86_frame_initial_instructions
+ extern void tc_x86_frame_initial_instructions PARAMS ((void));
+-
+-#endif /* TARGET_USE_CFIPOP */
+ 
+ #endif /* TC_I386 */
+--- gas/testsuite/gas/alpha/elf-reloc-8.d	7 Nov 2002 00:42:19 -0000	1.1
++++ gas/testsuite/gas/alpha/elf-reloc-8.d	31 May 2003 19:36:45 -0000	1.3
+@@ -307,3 +307,24 @@ OFFSET *TYPE *VALUE 
+ 0*0000048 REFQUAD           \.init\.text\+0x0*00005f0
+ 0*0000050 REFQUAD           \.init\.data\+0x0*0000029
+ 0*0000058 REFQUAD           \.init\.text\+0x0*0000610
++
++
++RELOCATION RECORDS FOR \[\.eh_frame\]:
++OFFSET *TYPE *VALUE 
++0*000001c SREL32            \.init\.text
++0*0000034 SREL32            \.init\.text\+0x0*0000050
++0*0000048 SREL32            \.init\.text\+0x0*0000080
++0*000005c SREL32            \.init\.text\+0x0*00000b0
++0*0000080 SREL32            \.init\.text\+0x0*00002c0
++0*00000a0 SREL32            \.init\.text\+0x0*00005a0
++0*00000b8 SREL32            \.init\.text\+0x0*00005f0
++0*00000cc SREL32            \.init\.text\+0x0*0000610
++0*00000e0 SREL32            \.init\.text\+0x0*0000630
++0*00000fc SREL32            \.init\.text\+0x0*0000750
++0*0000120 SREL32            \.init\.text\+0x0*0000990
++0*000013c SREL32            \.init\.text\+0x0*0000a10
++0*0000150 SREL32            \.init\.text\+0x0*0000a20
++0*0000164 SREL32            \.init\.text\+0x0*0000a40
++0*000017c SREL32            \.init\.text\+0x0*0000a90
++0*0000190 SREL32            \.init\.text\+0x0*0000aa0
++0*00001a4 SREL32            \.text
+--- gas/testsuite/gas/cfi/cfi-i386.d	20 May 2003 14:31:44 -0000	1.2
++++ gas/testsuite/gas/cfi/cfi-i386.d	27 May 2003 16:52:49 -0000	1.3
+@@ -2,50 +2,46 @@
+ #name: CFI on i386
+ The section .eh_frame contains:
+ 
+-00000000 00000010 00000000 CIE
++00000000 00000014 00000000 CIE
+   Version:               1
+-  Augmentation:          ""
++  Augmentation:          "zR"
+   Code alignment factor: 1
+   Data alignment factor: -4
+   Return address column: 8
++  Augmentation data:     1b
+ 
+-  DW_CFA_def_cfa: r7 ofs 4
++  DW_CFA_def_cfa: r4 ofs 4
+   DW_CFA_offset: r8 at cfa-4
+   DW_CFA_nop
+   DW_CFA_nop
+ 
+-00000014 00000014 00000018 FDE cie=00000000 pc=00000000..00000012
+-  DW_CFA_advance_loc: 6 to 00000006
++00000018 00000014 0000001c FDE cie=00000000 pc=00000020..00000032
++  DW_CFA_advance_loc: 6 to 00000026
+   DW_CFA_def_cfa_offset: 4664
+-  DW_CFA_advance_loc: 11 to 00000011
++  DW_CFA_advance_loc: 11 to 00000031
+   DW_CFA_def_cfa_offset: 4
+-  DW_CFA_nop
+ 
+-0000002c 00000018 00000030 FDE cie=00000000 pc=00000012..0000001f
+-  DW_CFA_advance_loc: 1 to 00000013
++00000030 00000018 00000034 FDE cie=00000000 pc=0000004a..00000057
++  DW_CFA_advance_loc: 1 to 0000004b
+   DW_CFA_def_cfa_offset: 8
+-  DW_CFA_offset: r6 at cfa-8
+-  DW_CFA_advance_loc: 2 to 00000015
+-  DW_CFA_def_cfa_reg: r6
+-  DW_CFA_advance_loc: 9 to 0000001e
+-  DW_CFA_def_cfa_reg: r7
+-  DW_CFA_nop
++  DW_CFA_offset: r5 at cfa-8
++  DW_CFA_advance_loc: 2 to 0000004d
++  DW_CFA_def_cfa_reg: r5
++  DW_CFA_advance_loc: 9 to 00000056
++  DW_CFA_def_cfa_reg: r4
+ 
+-00000048 00000014 0000004c FDE cie=00000000 pc=0000001f..0000002f
+-  DW_CFA_advance_loc: 2 to 00000021
+-  DW_CFA_def_cfa_reg: r1
+-  DW_CFA_advance_loc: 13 to 0000002e
+-  DW_CFA_def_cfa: r7 ofs 4
+-  DW_CFA_nop
++0000004c 00000014 00000050 FDE cie=00000000 pc=00000073..00000083
++  DW_CFA_advance_loc: 2 to 00000075
++  DW_CFA_def_cfa_reg: r3
++  DW_CFA_advance_loc: 13 to 00000082
++  DW_CFA_def_cfa: r4 ofs 4
+ 
+-00000060 00000010 00000064 FDE cie=00000000 pc=0000002f..00000035
+-  DW_CFA_nop
++00000064 00000010 00000068 FDE cie=00000000 pc=0000009b..000000a1
+   DW_CFA_nop
+   DW_CFA_nop
+   DW_CFA_nop
+ 
+-00000074 00000010 00000078 FDE cie=00000000 pc=00000035..00000044
+-  DW_CFA_nop
++00000078 00000010 0000007c FDE cie=00000000 pc=000000b5..000000c4
+   DW_CFA_nop
+   DW_CFA_nop
+   DW_CFA_nop
+--- gas/testsuite/gas/cfi/cfi-x86_64.d	20 May 2003 14:31:44 -0000	1.2
++++ gas/testsuite/gas/cfi/cfi-x86_64.d	27 May 2003 16:52:49 -0000	1.3
+@@ -1,68 +1,51 @@
+ #readelf: -wf
+ #name: CFI on x86-64
+-
+ The section .eh_frame contains:
+ 
+ 00000000 00000014 00000000 CIE
+   Version:               1
+-  Augmentation:          ""
++  Augmentation:          "zR"
+   Code alignment factor: 1
+   Data alignment factor: -8
+   Return address column: 16
++  Augmentation data:     1b
+ 
+   DW_CFA_def_cfa: r7 ofs 8
+   DW_CFA_offset: r16 at cfa-8
+   DW_CFA_nop
+   DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
+ 
+-00000018 0000001c 0000001c FDE cie=00000000 pc=00000000..00000014
+-  DW_CFA_advance_loc: 7 to 00000007
++00000018 00000014 0000001c FDE cie=00000000 pc=00000020..00000034
++  DW_CFA_advance_loc: 7 to 00000027
+   DW_CFA_def_cfa_offset: 4668
+-  DW_CFA_advance_loc: 12 to 00000013
++  DW_CFA_advance_loc: 12 to 00000033
+   DW_CFA_def_cfa_offset: 8
+-  DW_CFA_nop
+ 
+-00000038 00000024 0000003c FDE cie=00000000 pc=00000000..0000000f
+-  DW_CFA_advance_loc: 1 to 00000001
++00000030 0000001c 00000034 FDE cie=00000000 pc=00000038..00000047
++  DW_CFA_advance_loc: 1 to 00000039
+   DW_CFA_def_cfa_offset: 16
+   DW_CFA_offset: r6 at cfa-16
+-  DW_CFA_advance_loc: 3 to 00000004
++  DW_CFA_advance_loc: 3 to 0000003c
+   DW_CFA_def_cfa_reg: r6
+-  DW_CFA_advance_loc: 10 to 0000000e
++  DW_CFA_advance_loc: 10 to 00000046
+   DW_CFA_def_cfa: r7 ofs 8
+   DW_CFA_nop
+   DW_CFA_nop
+   DW_CFA_nop
+-  DW_CFA_nop
+ 
+-00000060 0000001c 00000064 FDE cie=00000000 pc=00000000..00000013
+-  DW_CFA_advance_loc: 3 to 00000003
++00000050 00000014 00000054 FDE cie=00000000 pc=00000058..0000006b
++  DW_CFA_advance_loc: 3 to 0000005b
+   DW_CFA_def_cfa_reg: r12
+-  DW_CFA_advance_loc: 15 to 00000012
++  DW_CFA_advance_loc: 15 to 0000006a
+   DW_CFA_def_cfa_reg: r7
+   DW_CFA_nop
+-  DW_CFA_nop
+ 
+-00000080 0000001c 00000084 FDE cie=00000000 pc=00000000..00000006
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
++00000068 00000010 0000006c FDE cie=00000000 pc=00000070..00000076
+   DW_CFA_nop
+   DW_CFA_nop
+   DW_CFA_nop
+ 
+-000000a0 0000001c 000000a4 FDE cie=00000000 pc=00000000..00000012
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
+-  DW_CFA_nop
++0000007c 00000010 00000080 FDE cie=00000000 pc=00000084..00000096
+   DW_CFA_nop
+   DW_CFA_nop
+   DW_CFA_nop
+--- gas/testsuite/gas/cfi/cfi.exp	20 May 2003 08:01:19 -0000	1.1
++++ gas/testsuite/gas/cfi/cfi.exp	31 May 2003 19:36:45 -0000	1.3
+@@ -5,3 +5,16 @@ if [istarget "x86_64-*"] then {
+ if [istarget "i?86-*"] then {
+     run_dump_test "cfi-i386"
+ }
++
++if { [istarget alpha*-*-*] } then {
++
++    set elf [expr [istarget *-*-elf*] \
++                  || [istarget *-*-linux*] \
++                  || [istarget *-*-freebsd*] \
++                  || [istarget *-*-netbsd*] ]
++
++    if $elf {
++	run_dump_test "cfi-alpha-1"
++	run_dump_test "cfi-alpha-2"
++    }
++}
+--- gas/testsuite/gas/cfi/cfi-alpha-1.d	2003-01-30 05:24:37.000000000 -0500
++++ gas/testsuite/gas/cfi/cfi-alpha-1.d	2003-05-29 23:01:12.000000000 -0400
+@@ -0,0 +1,26 @@
++#readelf: -wf
++#name: CFI on alpha
++The section .eh_frame contains:
++
++00000000 00000010 00000000 CIE
++  Version:               1
++  Augmentation:          "zR"
++  Code alignment factor: 4
++  Data alignment factor: -8
++  Return address column: 26
++  Augmentation data:     1b
++
++  DW_CFA_def_cfa_reg: r30
++  DW_CFA_nop
++
++00000014 0000001c 00000018 FDE cie=00000000 pc=0000001c..00000050
++  DW_CFA_advance_loc: 24 to 00000034
++  DW_CFA_def_cfa: r15 ofs 32
++  DW_CFA_offset: r26 at cfa-32
++  DW_CFA_offset: r9 at cfa-24
++  DW_CFA_offset: r15 at cfa-16
++  DW_CFA_offset: r34 at cfa-8
++  DW_CFA_nop
++  DW_CFA_nop
++  DW_CFA_nop
++
+--- gas/testsuite/gas/cfi/cfi-alpha-1.s	2003-01-30 05:24:37.000000000 -0500
++++ gas/testsuite/gas/cfi/cfi-alpha-1.s	2003-05-29 23:01:12.000000000 -0400
+@@ -0,0 +1,28 @@
++	.file	1 "z.c"
++	.set noat
++	.set noreorder
++.text
++	.align 4
++	.globl f
++	.ent f
++$f..ng:
++f:
++	.frame $15,32,$26,0
++	.mask 0x4008200,-32
++	.fmask 0x4,-8
++	lda $30,-32($30)
++	stq $26,0($30)
++	stq $9,8($30)
++	stq $15,16($30)
++	stt $f2,24($30)
++	mov $30,$15
++	.prologue 0
++	mov $15,$30
++	ldq $26,0($30)
++	ldq $9,8($30)
++	ldt $f2,24($30)
++	ldq $15,16($30)
++	lda $30,32($30)
++	ret $31,($26),1
++	.end f
++	.ident	"GCC: (GNU) 2.96 20000731 (Red Hat Linux 7.2 2.96-112.7.1)"
+--- gas/testsuite/gas/cfi/cfi-alpha-2.d	2003-01-30 05:24:37.000000000 -0500
++++ gas/testsuite/gas/cfi/cfi-alpha-2.d	2003-05-31 15:36:45.000000000 -0400
+@@ -0,0 +1,9 @@
++#objdump: -r -j .eh_frame
++#name: CFI on alpha, 2
++
++.*:     file format elf64-alpha
++
++RELOCATION RECORDS FOR \[\.eh_frame\]:
++OFFSET           TYPE              VALUE 
++0*000001c SREL32            \.text
++0*0000030 SREL32            \.text\+0x0*0000004
+--- gas/testsuite/gas/cfi/cfi-alpha-2.s	2003-01-30 05:24:37.000000000 -0500
++++ gas/testsuite/gas/cfi/cfi-alpha-2.s	2003-05-31 15:36:45.000000000 -0400
+@@ -0,0 +1,14 @@
++	.text
++	.ent foo
++foo:
++	.frame $30, 0, $26, 0
++	.prologue 1
++	ret
++	.end foo
++
++	.ent bar
++bar:
++	.frame $30, 0, $26, 0
++	.prologue 1
++	ret
++	.end bar
+--- gas/testsuite/gas/cfi/cfi-i386-2.d	2003-01-30 05:24:37.000000000 -0500
++++ gas/testsuite/gas/cfi/cfi-i386-2.d	2003-05-27 12:52:49.000000000 -0400
+@@ -0,0 +1,26 @@
++#readelf: -wf
++#name: CFI on i386, 2
++The section .eh_frame contains:
++
++00000000 00000014 00000000 CIE
++  Version:               1
++  Augmentation:          "zR"
++  Code alignment factor: 1
++  Data alignment factor: -4
++  Return address column: 8
++  Augmentation data:     1b
++
++  DW_CFA_def_cfa: r4 ofs 4
++  DW_CFA_offset: r8 at cfa-4
++  DW_CFA_nop
++  DW_CFA_nop
++
++00000018 00000018 0000001c FDE cie=00000000 pc=00000020..00000029
++  DW_CFA_advance_loc: 1 to 00000021
++  DW_CFA_def_cfa_offset: 8
++  DW_CFA_offset: r5 at cfa-8
++  DW_CFA_advance_loc: 4 to 00000025
++  DW_CFA_offset: r3 at cfa-12
++  DW_CFA_def_cfa_offset: 12
++  DW_CFA_nop
++
+--- gas/testsuite/gas/cfi/cfi-i386-2.s	2003-01-30 05:24:37.000000000 -0500
++++ gas/testsuite/gas/cfi/cfi-i386-2.s	2003-05-27 12:52:49.000000000 -0400
+@@ -0,0 +1,17 @@
++	.text
++	.globl foo
++	.type foo,@function
++	.cfi_startproc
++foo:
++	push %ebp
++	.cfi_adjust_cfa_offset 4
++	.cfi_offset %ebp, -8
++	.align 4
++	push %ebx
++	.cfi_offset %ebx, -12
++	.cfi_adjust_cfa_offset 4
++	nop
++	pop %ebx
++	pop %ebp
++	ret
++	.cfi_endproc
