@@ -1,6 +1,6 @@
 # ChangeLog for media-video/xawtv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.9 2002/12/12 09:29:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.10 2002/12/12 18:43:57 seemant Exp $
 
 
 *xawtv-3.80 (12 Dec 2002)
@@ -11,6 +11,8 @@
   Version bump, thanks to: jordanmeek@yahoo.com (Jordan Meek) in bug #11143.
   Also, this solves the issue with 3.78, where the fonts would screw up X
   completely, closing bug #10238 by googleplex@wi.rr.com (Dave Berenson)
+
+  Later, same day: some small fixes for fonts again.
 
 *xawtv-3.78 (04 Nov 2002)
 
