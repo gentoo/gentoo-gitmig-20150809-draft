@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.4 2005/01/01 19:09:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.5 2005/01/02 00:40:23 josejx Exp $
+
+  02 Jan 2005; Joseph Jezak <josejx@gentoo.org> texmaker-1.11.ebuild:
+  Marked ~ppc.
 
   01 Jan 2005; Jason Wever <weeve@gentoo.org> texmaker-1.11.ebuild:
   Added ~sparc keyword.
