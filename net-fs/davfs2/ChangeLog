@@ -1,0 +1,28 @@
+# ChangeLog for net-www/davfs2
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.1 2004/08/15 17:55:12 stuart Exp $
+
+*davfs2-0.2.1 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +davfs2-0.2.1.ebuild,
+  +davfs2-0.2.2.ebuild:
+  Moved from net-www/davfs2 to net-fs/davfs2.
+
+  03 Jun 2004; David Holm <dholm@gentoo.org> davfs2-0.2.2.ebuild:
+  Added to ~ppc.
+
+*davfs2-0.2.2 (01 Jun 2004)
+
+  01 Jun 2004; Martin Holzer <mholzer@gentoo.org> davfs2-0.2.1.ebuild,
+  davfs2-0.2.2.ebuild:
+  Version bumed. Closes 51166
+
+  11 Oct 2003; Martin Holzer <mholzer@gentoo.org> davfs2-0.2.1.ebuild:
+  Added ssl with IUSE. Closes #25165.
+
+*davfs2-0.2.1 (17 Apr 2003)
+
+  17 Apr 2003; Seth Chandler <sethbc@gentoo.org>; Manifest,
+  davfs2-0.2.1.ebuild:
+  initial import courtesy of me =)
+
