@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.7 2003/11/16 01:05:10 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.8 2003/12/23 05:30:28 obz Exp $
+
+*gtk-engines-xfce-2.1.7 (23 Dec 2003)
+
+  23 Dec 2003; Mike Gardiner <obz@gentoo.org> gtk-engines-xfce-2.1.6.ebuild,
+  gtk-engines-xfce-2.1.7.ebuild:
+  New version, and removed ~mips and ~arm keywords, as gtk+ isnt marked (stable
+  or testing) on those archs
 
 *gtk-engines-xfce-2.1.6 (26 Sep 2003)
 
