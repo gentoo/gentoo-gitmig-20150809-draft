@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3506 2005/01/20 08:18:24 cardoe Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3507 2005/01/20 11:57:24 ciaranm Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# <ciaranm@gentoo.org> (20 Jan 2005)
+# broken tabs, see bug #78794
+=x11-wm/fluxbox-0.9.12
 
 # <kosmikus@gentoo.org> (19 Jan 2005)
 # several compilation problems using current gcc's,
