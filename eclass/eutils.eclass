@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.16 2003/02/03 14:10:37 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.17 2003/02/09 22:41:16 azarah Exp $
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
 #
@@ -330,11 +330,11 @@ get_number_of_jobs() {
 	if [ "`egrep "^[[:space:]]*MAKEOPTS=" /etc/make.conf | wc -l`" -gt 0 ]
 	then
 		ADMINOPTS="`egrep "^[[:space:]]*MAKEOPTS=" /etc/make.conf | cut -d= -f2 | sed 's/\"//g'`"
-		ADMINPARAM="${ADMINOPTS##*-j}"
-		ADMINPARAM="${ADMINPARAM%% -*}"
+		ADMINPARAM="`echo ${ADMINOPTS} | gawk '{match($0, /-j *[0-9]*/, opt); print opt[0]}'`"
+		ADMINPARAM="${ADMINPARAM/-j}"
 	fi
 
-	export MAKEOPTS="`echo ${MAKEOPTS} | sed -e 's:-j[0-9]*::g'`"
+	export MAKEOPTS="`echo ${MAKEOPTS} | sed -e 's:-j *[0-9]*::g'`"
 	
 	if [ "${ARCH}" = "x86" -o "${ARCH}" = "hppa" ]
 	then
