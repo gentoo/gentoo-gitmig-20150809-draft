@@ -1,8 +1,12 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.17 2002/12/09 04:25:04 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.18 2002/12/09 13:23:15 jmorgan Exp $
 
 \* Autoupdate keywords (12-6-02)
+
+  08 Dec 2002; Jack Morgan <jmorgan@gentoo.org> arts-1.1.0_rc5 :
+  Added sparc keyword
+
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
   08 Dec 2002; Hannes Mehnert <hannes@gentoo.org> arts-1.1.0.x.ebuild:
