@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.29 2003/10/21 04:58:53 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.30 2003/10/30 23:53:46 max Exp $
+
+  30 Oct 2003; Max Kalika <max@gentoo.org> files/snmpd.rc6:
+  Use pidfile.
 
   20 Oct 2003; Max Kalika <max@gentoo.org> net-snmp-5.0.9-r2.ebuild:
   Add DEPEND on ExtUtils-MakeMaker-6.11-r1 to fix sandbox problems.
