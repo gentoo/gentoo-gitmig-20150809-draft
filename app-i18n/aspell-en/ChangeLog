@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/aspell-en
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/aspell-en/ChangeLog,v 1.1 2002/08/14 14:52:44 seemant Exp $
+
+*aspell-en-0.0_pre10 (14 Aug 2002)
+
+  14 Aug 2002; Seemant Kulleen <seemant@gentoo.org>
+  aspell-en-0.0_pre10.ebuild :
+
+  New english language dictionaries for use with aspell-0.50
