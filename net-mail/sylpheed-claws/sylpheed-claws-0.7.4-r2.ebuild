@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.7.4-r1.ebuild,v 1.1 2002/03/20 20:38:18 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.7.4-r2.ebuild,v 1.1 2002/04/10 17:26:45 karltk Exp $
 
 S=${WORKDIR}/sylpheed-${PV}claws
 DESCRIPTION="Bleeding edge version of Sylpheed"
@@ -53,7 +53,19 @@ src_compile() {
 		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
+		--program-suffix=-claws \
 		${myconf} || die "./configure failed"
+
+	for i in `find . -name Makefile` ; do
+		cp $i ${i}.orig
+		sed "s/PACKAGE = sylpheed/PACKAGE = sylpheed-claws/" \
+			< ${i}.orig \
+			> ${i}
+	done
+	cp sylpheed.desktop sylpheed.desktop.orig
+	sed "s/sylpheed.png/sylpheed-claws.png/" \
+		< sylpheed.desktop.orig
+		> sylpheed.desktop
 
 	emake || die
 }
@@ -62,4 +74,7 @@ src_install () {
 	make DESTDIR=${D} install || die
 	
 	use gnome || rm -rf ${D}/usr/share/gnome
+
+	mv ${D}/usr/share/pixmaps/sylpheed.png \
+		${D}/usr/share/pixmaps/sylpheed-claws.png
 }

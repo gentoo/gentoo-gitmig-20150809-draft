@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.4 2002/03/24 13:52:32 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.5 2002/04/10 17:26:44 karltk Exp $
+
+*sylpheed-claws-0.7.4-r2 (10 Apr 2002)
+
+  10 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> sylpheed-claws-0.7.4-r2.ebuild files/digest-sylpheed-claws-0.7.4-r2:
+
+  Can now coexist with normal sylpheed. Binary renamed to sylpheed-claws.
+
+  Removed sylpheed-claws-0.7.4-r1.ebuild files/digest-sylpheed-claws-0.7.4-r1
 
 *sylpheed-claws-0.7.4 ( 12 Mar 2002 )
 
