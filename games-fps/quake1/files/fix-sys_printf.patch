@@ -1,0 +1,22 @@
+--- WinQuake/sys_linux.c.orig	2003-08-03 02:54:02.900882698 -0400
++++ WinQuake/sys_linux.c	2003-08-03 02:54:24.568968240 -0400
+@@ -86,7 +86,7 @@
+ void Sys_Printf (char *fmt, ...)
+ {
+ 	va_list		argptr;
+-	char		text[1024];
++	char		text[2048];
+ 	unsigned char		*p;
+ 
+ 	va_start (argptr,fmt);
+--- QW/client/sys_linux.c.orig	2003-08-03 02:53:55.186276383 -0400
++++ QW/client/sys_linux.c	2003-08-03 02:54:18.706027413 -0400
+@@ -141,7 +141,7 @@
+ void Sys_Error (char *error, ...)
+ { 
+     va_list     argptr;
+-    char        string[1024];
++    char        string[2048];
+ 
+ // change stdin to non blocking
+     fcntl (0, F_SETFL, fcntl (0, F_GETFL, 0) & ~FNDELAY);

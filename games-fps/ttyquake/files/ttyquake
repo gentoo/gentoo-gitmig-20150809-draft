@@ -1,0 +1,26 @@
+#!/bin/sh
+DISPLAY=
+export LD_LIBRARY_PATH=GENTOO_LIBDIR:${LD_LIBRARY_PATH}
+
+if [ `whoami` = "root" ];then
+   echo "***********************************"
+   echo "* You can't run ttyquake as root. *"
+   echo "* Didn't you read the damn README *"
+   echo "* file?                           *"
+   echo "***********************************"
+   exit
+fi
+
+if [ -u GAMES_BINDIR/squake ];then
+   echo "**********************************"
+   echo "*  /squake is setuid.  ttyquake  *"
+   echo "* won't work unless you turn off *"
+   echo "* the setuid bit.  As root,      *"
+   echo "* please do:                     *"
+   echo "*   chmod -s squake              *"
+   echo "* and then run ttyquake again.   *"
+   echo "**********************************"
+   exit
+fi
+
+exec squake -nostdout $*

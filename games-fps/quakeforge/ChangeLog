@@ -1,0 +1,39 @@
+# ChangeLog for app-games/quakeforge
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+
+*quakeforge-0.5.4 (18 Jul 2003)
+
+  18 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + clean up all use option selections + add more optional support + games.eclass.
+
+*quakeforge-0.5.2-r1 (20 Mar 2003)
+
+  20 Mar 2003; Graham Forest <vladimir@gentoo.org> quakeforge-0.5.2-r1.ebuild:
+  Removed usage of pic USE flag
+
+*quakeforge-0.5.2 (03 Oct 2002)
+
+  03 Oct 2002; Mike Frysinger <vapier@gentoo.org> quakeforge-0.5.2.ebuild :
+  Finally updated quakeforge :) #8647 ... added to the install process (docs)
+  Updated SRC_URI to point to sourceforge now since its a *real* release
+
+*quakeforge-0.5.0_pre20020906 (9 Sep 2002)
+
+  09 Sep 2002; Seemant Kulleen <seemant@gentoo.org>
+  quakeforge-0.5.0_pre20020906.ebuild
+  files/digest-quakeforge-0.5.0_pre20020906 :
+
+  compile bug with gcc-3.2 and ipv6 solved.  Ebuild submitted by: SpanKY
+  (vapier@netzero.com) in bug #5596 reported by onilinken@hotmail.com (Linken)
+
+*quakeforge-0.5.0 (21 julio 2002)
+
+  22 Aug 2002; J. Alberto Suárez López <bass@gentoo.org> quakeforge-0.5.0.ebuild :  
+  Now SRC_URI i direct to the tarball of quakeforge in Gentoo mirrors,
+  and not to the hourly created in the official homepage.
+  Aclaration: before the tarball used was the _same_ of now.
+
+  21 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> quakeforge-0.5.0.ebuild :
+  First Relase.
+

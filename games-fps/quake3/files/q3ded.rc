@@ -1,0 +1,24 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+}
+
+start() {
+                ebegin "Starting baseq3 dedicated..."
+		export HOME=/root
+                screen -A -m -d -S q3ded su - q3 -c /opt/quake3/startq3ded
+		eend $?
+}
+
+stop() {
+                ebegin "Stopping baseq3 dedicated..."
+                pid=`screen -list | grep q3ded | awk -F . '{ print $1 }' | sed -e s/.//`
+		kill $pid
+		eend $?
+
+}
+
+status() {
+                screen -list | grep q3ded
+}

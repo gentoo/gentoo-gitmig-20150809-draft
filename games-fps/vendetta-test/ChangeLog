@@ -1,0 +1,9 @@
+# ChangeLog for app-games/vendetta-test
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-test/ChangeLog,v 1.1 2003/09/09 18:10:15 vapier Exp $
+
+*vendetta-test-0 (02 Sep 2003)
+
+  02 Sep 2003; Michael Sterrett <msterret@gentoo.org> vendetta-test-0.ebuild:
+  initial commit
+

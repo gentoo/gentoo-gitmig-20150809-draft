@@ -1,0 +1,41 @@
+# ChangeLog for app-games/quake3
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+
+  05 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> quake3-1.32b.ebuild:
+  Updated to use games user, make a desktop entry, and added to description
+
+*quake3-1.32b (31 Dec 2002)
+
+  31 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #12847.
+
+*quake3-1.32 (29 Nov 2002)
+
+  29 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added games.eclass support
+
+*quake3-1.31-r1 (15 Jul 2002)
+
+  29 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added games.eclass support
+
+  07 Sep 2002; J.Alberto S.L. <bass@gentoo.org> quake3-1.31-r1.ebuild:
+  LICENSE changed to Q3AEULA.
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added -ppc -sparc -sparc64 to keywords
+
+  15 Jul 2002; J.Alberto S.L. <bass@gentoo.org> quake3-1.31-r1.ebuild
+  Really fixed perms.
+
+  15 Jul 2002; Brandon Low <lostlogic@gentoo.org> quake3-1.31-r1.ebuild:
+  Fix a few other dumbnesses in the ebuild.  Nothing terribly important.
+
+*quake3-1.31 (25 Jun 2002)
+
+  25 Jun 2002; J.Alberto S.L. <bass@gentoo.org> quake3-1.31.ebuild:
+  Fixed a problem with perms on bin files.
+
+  25 Jun 2002; J.Alberto S.L. <bass@gentoo.org> quake3-1.31.ebuild:
+  First relase by Alexander Gretencord <arutha@gmx.de>.

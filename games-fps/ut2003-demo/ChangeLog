@@ -1,0 +1,104 @@
+# ChangeLog for app-games/ut2003-demo
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.1 2003/09/09 18:10:15 vapier Exp $
+
+  30 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-demo-2206-r2.ebuild:
+  Adding menu entry.  Closes bug #27594.
+
+*ut2003-demo-2206-r2 (23 May 2003)
+
+  23 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Updated results.sh script to fix #19392.
+
+  23 May 2003; Daniel Robbins <drobbins@gentoo.org>: Aliz's security "fix"
+  actually totally broke this ebuild. In the absence of a working fix, it's
+  being removed. Also removing use of evil "games" group.
+  
+  18 May 2003; Daniel Ahlberg <aliz@gentooo.org> : Added missing desktop file.
+
+*ut2003-demo-2206-r1 (16 May 2003)
+
+  16 May 2003; Daniel Ahlberg <aliz@gentoo.org> : 
+  Security update. Ebuild contributed by Chris Gianelloni wolf31o2@hotmail.com in #20993.
+
+*ut2003-demo-2206 (25 Feb 2003)
+
+  25 Feb 2003; Daniel Robbins <drobbins@gentoo.org> : A new release from
+  icculus.org with lots of nice fixes. I'm removing all the older versions of
+  ut2003-demo from CVS because this one is clearly preferable and also has a new
+  versioning scheme (by build number rather than timestamp.) There still seems
+  to be some trouble with the benchmarking, particularly MinDetail. MaxDetail works
+  perfectly for me, while MinDetail seems to look for WinDrv for some reason. But
+  it works fine when I run the command manually. Weird.
+  
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*ut2003-demo-20020925-r2 (06 Oct 2002)
+
+  06 Oct 2002; phoen][x <phoenix@gentoo.org> ChangeLog, ut2003-demo-20020925-r2.ebuild,
+  files/digest-ut2003-demo-20020925-r2, files/benchmark:
+
+  Fixed the benchmarking.
+
+*ut2003-demo-20020925-r1 (25 Sep 2002)
+
+  25 Sep 2002; phoen][x <phoenix@gentoo.org> ChangeLog, ut2003-demo-20020925-r1.ebuild,
+  files/digest-ut2003-demo-20020925-r1, files/results.sh, files/ut2003-demo:
+
+  Removed results.py and added results.sh. This makes the ebuild compatible with the 
+  LiveCD (the LiveCD doesnt come with python).
+
+*ut2003-demo-20020925 (25 Sep 2002)
+
+  25 Sep 2002; Mike Frysinger <vapier@gentoo.org> ChangeLog, ut2003-demo-20020925.ebuild :
+
+  My bad, 1080c is not a new patch, but a supplement to 1080b ... this fixes that ... #8313
+
+*ut2003-demo-20020919 (19 Sep 2002)
+
+  19 Sep 2002; Mike Frysinger <vapier@gentoo.org> ChangeLog, ut2003-demo-20020919.ebuild :
+
+  1080c is out, fixes #8081
+
+*ut2003-demo-20020918-r1 (19 Sep 2002)
+  
+  18 Sep 2002; phoen][x <phoenix@gentoo.org> ChangeLog, ut2003-demo-20020918-r1.ebuild,
+  files/digest-ut2003-demo-20020918, files/results.py, files/ut2003-demo, files/benchmark:
+
+  Revision bump. Added a wrapper which is able to benchmark ut2003. Made the game
+  executable by users who aren't in group games. Fixed a few minor bugs.
+
+
+*ut2003-demo-20020918 (18 Sep 2002)
+  
+  18 Sep 2002; phoen][x <phoenix@gentoo.org> ChangeLog, ut2003-demo-20020918.ebuild,
+  files/digest-ut2003-demo-20020918 :
+
+  This version includes the patch 1080. Installation directory switched to /opt
+  again, sorry for that (this was the last location change, i promise). 
+
+*ut2003-demo-20020915 (15 Sep 2002)
+  
+  17 Sep 2002; phoen][x <phoenix@gentoo.org> ChangeLog, ut2003-demo-20020915.ebuild:
+
+  chmod'ed the whole game to "o-rwx" - that prevent users who aren't members of
+  group 'games' from playing the game. Added a message about that to pkg_postinst().
+
+  16 Sep 2002; phoen][x <phoenix@gentoo.org> ChangeLog, ut2003-demo-20020915.ebuild:
+
+  Added "-f" to "rm ${S}/${FILENAME}",
+
+  Changed install location to /usr/local/games.
+ 
+  Fixed the permissions.
+
+  15 Sep 2002; phoen][x <phoenix@gentoo.org> ChangeLog, ut2003-demo-20020915.ebuild
+  files/digest-ut2003-demo-20020915, files/misc.tar.bz2: 
+
+  Initial import. This package installs the official Unreal Tournament 2003 demo to 
+  /opt/ut2003-demo.
+
+  Modified DEPEND.
+
+  Added --nox11 to prevent the installer from starting.

@@ -1,0 +1,8 @@
+# ChangeLog for app-games/quake3-threewave
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-threewave/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+
+*quake3-threewave-1.6 (12 Aug 2003)
+
+  12 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by simon hasite <zyklon@gmx.net> #26445.

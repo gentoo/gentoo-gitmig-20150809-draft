@@ -1,0 +1,36 @@
+--- WinQuake/Makefile.orig	2003-07-14 15:13:27.000000000 -0400
++++ WinQuake/Makefile	2003-07-14 15:43:31.000000000 -0400
+@@ -64,11 +64,12 @@
+ # SETUP AND BUILD
+ #############################################################################
+ 
+-TARGETS=$(BUILDDIR)/bin/squake \
+-	$(BUILDDIR)/bin/glquake \
+-	$(BUILDDIR)/bin/glquake.glx \
+-	$(BUILDDIR)/bin/glquake.3dfxgl \
+-	$(BUILDDIR)/bin/quake.x11
++TARGETS=\
++   $(BUILDDIR)/bin/squake \
++   $(BUILDDIR)/bin/glquake \
++   $(BUILDDIR)/bin/glquake.glx \
++   $(BUILDDIR)/bin/glquake.3dfxgl \
++   $(BUILDDIR)/bin/quake.x11 
+ 	# $(BUILDDIR)/bin/unixded
+ 
+ build_debug:
+--- QW/Makefile.orig	2003-07-14 15:13:12.000000000 -0400
++++ QW/Makefile	2003-07-14 15:44:00.000000000 -0400
+@@ -71,7 +71,12 @@
+ TARGETS=$(BUILDDIR)/qwsv 
+ #$(BUILDDIR)/qwcl.x11
+ else
+-TARGETS=$(BUILDDIR)/qwsv $(BUILDDIR)/qwcl $(BUILDDIR)/qwcl.x11 $(BUILDDIR)/glqwcl $(BUILDDIR)/glqwcl.glx
++TARGETS=\
++   $(BUILDDIR)/qwsv \
++   $(BUILDDIR)/qwcl \
++   $(BUILDDIR)/qwcl.x11 \
++   $(BUILDDIR)/glqwcl \
++   $(BUILDDIR)/glqwcl.glx 
+ endif
+ 
+ build_debug:

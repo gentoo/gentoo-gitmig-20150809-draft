@@ -1,0 +1,28 @@
+# ChangeLog for app-games/unreal-tournament
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.1 2003/09/09 18:10:15 vapier Exp $
+
+  29 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  unreal-tournament-436.ebuild, unreal-tournament-451.ebuild:
+  Add .desktop file.  Closes bug #27542.
+
+*unreal-tournament-451 (10 Jul 2003)
+
+  10 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added UTPG patch to bring UT up to snuff :)
+  Thanks to mrannanj for pointing it out.
+
+*unreal-tournament-436 (23 Oct 2002)
+
+  21 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Reworked ebuild to install everything by hand.  This
+  bypasses shortcomings of loki installer and other requirements.
+
+  11 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added --target option to use ${T} in place of /tmp.
+
+  03 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added a check for regular UT version.
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import. Ebuild submitted by me.

@@ -1,0 +1,10 @@
+--- Makefile.orig	2003-06-28 22:04:22.000000000 -0400
++++ Makefile	2003-06-28 22:04:54.000000000 -0400
+@@ -342,6 +342,7 @@
+ 	TARGETS += $(BUILDDIR)/ref_softaa.$(SHLIBEXT)
+ endif
+ 
++RELEASE_CFLAGS += $(OPTCFLAGS)
+ all: build_debug build_release
+ 
+ build_debug:

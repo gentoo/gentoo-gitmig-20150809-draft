@@ -1,0 +1,13 @@
+# ChangeLog for app-games/quake3-ra3
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-ra3/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+
+*quake3-ra3-1.7 (02 Sep 2003)
+
+  02 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #27572.
+
+*quake3-ra3-1.65 (02 Jul 2003)
+
+  02 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Erik Swanson <gentoo-bugzilla@erik.swanson.name> #20306.

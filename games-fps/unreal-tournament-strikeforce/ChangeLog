@@ -1,0 +1,11 @@
+# ChangeLog for app-games/strikeforce
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-strikeforce/ChangeLog,v 1.1 2003/09/09 18:10:15 vapier Exp $
+
+  18 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> strikeforce-1.75.ebuild:
+  Corrected download location for SF175.zip, bug #13269
+
+*strikeforce-1.75 (23 Oct 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import. Ebuild submitted by me.

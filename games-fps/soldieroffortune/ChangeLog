@@ -1,0 +1,10 @@
+# ChangeLog for app-games/soldieroffortune
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+
+*soldieroffortune-1.06a (27 Jul 2003)
+
+  27 Jul 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  soldieroffortune-1.06a.ebuild, files/sof:
+  Initial import.  Ebuild by me.
+

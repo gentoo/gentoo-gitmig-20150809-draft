@@ -1,0 +1,23 @@
+# ChangeLog for app-games/enemy-territory
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+
+  05 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  enemy-territory-2.55.ebuild:
+  Updated description
+
+  16 Jul 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  enemy-territory-2.55.ebuild, files/et-ded, files/et-ded.rc, files/etded,
+  files/etded.rc, files/startetded:
+  Add support for unpack_makeself, KDE/Gnome .desktop entries, and USE=dedicated.
+
+  27 Jun 2003; <msterret@gentoo.org> enemy-territory-2.55.ebuild:
+  spell "Wolfenstein" correctly
+  use correct license
+
+*enemy-territory-2.55 (21 Jun 2003)
+
+  21 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuilds submitted by:
+  Chris Gianelloni <wolf31o2@hotmail.com> #21902
+  Frederic Mangeant <frederic.mangeant@free.fr> #22152

@@ -1,0 +1,39 @@
+# ChangeLog for app-games/americas-army
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+
+  27 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  americas-army-170.ebuild, americas-army-190.ebuild:
+  Added esound dependency.  Closes bug #27320.
+
+*americas-army-190 (25 Aug 2003)
+
+  25 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  americas-army-190.ebuild:
+  Updated to newest version and setting it as stable. I will be removing the
+  older version in one week, since it will no longer be valid. I am also working
+  on a version of this with dedicated server support, since the dedicated server
+  is now shipped with the game.
+
+  06 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  americas-army-170.ebuild:
+  I removed an extra line when cleaning up the ebuild which caused problems. The
+  line has been added back to the ebuild.
+
+  05 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  americas-army-170.ebuild:
+  Fixed to use unpack_makeself
+
+  04 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  americas-army-170.ebuild:
+  Finally added license file
+
+  16 Jul 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  americas-army-170.ebuild:
+  Changed executable script to armyops, to match executable name.  Added item to
+  create .desktop entries for Gnome/KDE.
+
+*americas-army-170 (21 Jun 2003)
+
+  21 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Chris Gianelloni <wolf31o2@hotmail.com> #21947.

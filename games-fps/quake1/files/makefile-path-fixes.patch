@@ -1,0 +1,36 @@
+--- WinQuake/Makefile.orig	2003-07-14 15:13:27.000000000 -0400
++++ WinQuake/Makefile	2003-07-14 15:17:10.000000000 -0400
+@@ -27,4 +27,4 @@
+ 
+-MOUNT_DIR=/grog/Projects/WinQuake
+-MASTER_DIR=/grog/Projects/QuakeMaster
++MOUNT_DIR=../WinQuake
++MASTER_DIR=../QuakeMaster
+ MESA_DIR=/usr/local/src/Mesa-2.6
+@@ -35,3 +35,3 @@
+ 
+-EGCS=/usr/local/egcs-1.1.2/bin/gcc
++EGCS=gcc
+ CC=$(EGCS)
+@@ -47,5 +47,5 @@
+ 
+-MESAGLLDFLAGS=-L/usr/X11/lib -L/usr/local/lib -L$(MESA_DIR)/lib -lMesaGL -lglide2x -lX11 -lXext -ldl
++MESAGLLDFLAGS=-L/usr/X11R6/lib -L/usr/local/lib -L$(MESA_DIR)/lib -lMesaGL -lglide2x -lX11 -lXext -ldl
+ TDFXGLLDFLAGS=-L$(TDFXGL_DIR)/release$(ARCH)$(GLIBC) -l3dfxgl -lglide2x -ldl
+-GLLDFLAGS=-L/usr/X11/lib -L/usr/local/lib -lGL -lX11 -lXext -ldl -lXxf86dga -lXxf86vm -lm
++GLLDFLAGS=-L/usr/X11R6/lib -L/usr/local/lib -lGL -lX11 -lXext -ldl -lXxf86dga -lXxf86vm -lm
+ GLCFLAGS=-DGLQUAKE -I$(MESA_DIR)/include -I/usr/include/glide
+--- QW/Makefile.orig	2003-07-14 15:13:12.000000000 -0400
++++ QW/Makefile	2003-07-14 15:15:41.000000000 -0400
+@@ -29,3 +29,3 @@
+ 
+-MAINDIR=/grog/Projects/QW
++MAINDIR=../QW
+ 
+@@ -54,4 +54,4 @@
+ XLDFLAGS=-L/usr/X11R6/lib -lX11 -lXext
+-GL_SVGA_LDFLAGS=-L/usr/X11/lib -L/usr/local/src/Mesa-3.0/lib -lm -lMesaGL -lglide2x -lX11 -lXext -lvga
+-GL_X11_LDFLAGS=-L/usr/X11/lib -L/usr/local/src/Mesa-3.0/lib -lm -lGL -lX11 -lXext
++GL_SVGA_LDFLAGS=-L/usr/X11R6/lib -L/usr/local/src/Mesa-3.0/lib -lm -lMesaGL -lglide2x -lX11 -lXext -lvga
++GL_X11_LDFLAGS=-L/usr/X11R6/lib -L/usr/local/src/Mesa-3.0/lib -lm -lGL -lX11 -lXext
+ 

@@ -1,0 +1,26 @@
+# ChangeLog for app-games/doomlegacy
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+
+*doomlegacy-1.40-r2 (13 Aug 2003)
+
+  13 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Remove x86 specific code (#26201).  Add games.eclass support.
+
+*doomlegacy-1.40-r1 (06 Mar 2003)
+
+  29 Jul 2003; Michael Sterrett <msterret@gentoo.org>
+  doomlegacy-1.40-r1.ebuild:
+  use sed -i
+
+  06 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added a patch to fix glibc errno (#16267) #16715.
+  Also tweaked makefile patch to allow custom CFLAGS.
+
+*doomlegacy-1.40 (28 Oct 2002)
+
+  30 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added a small patch for people who arent running with `opengl-update xfree`
+
+  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Dries Harnie <Bulletz_1900@hotmail.com>.

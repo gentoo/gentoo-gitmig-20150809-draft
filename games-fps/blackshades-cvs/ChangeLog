@@ -1,0 +1,15 @@
+# ChangeLog for app-games/blackshades-cvs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+
+*blackshades-cvs-20030712 (12 Jul 2003)
+
+  03 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Fixed SRC_URI to point to a better texture tarball ... zakk pointed out my mistake ;)
+
+  29 Jul 2003; Michael Sterrett <msterret@gentoo.org>
+  blackshades-cvs-20030712.ebuild:
+  sed the Makefile in src_unpack instead of src_compile; depend on sed >= 4
+
+  12 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for #21249.

@@ -1,0 +1,15 @@
+# ChangeLog for app-games/duke3d
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+
+  25 Aug 2003; Michael Sterrett <msterret@gentoo.org> duke3d-20030817.ebuild:
+  added flag-o-matic; DEPEND on sed >= 4; filter -O3 down to -O2 for bug 26968;
+  add a couple of error messages
+
+  18 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> duke3d-20030817.ebuild:
+  Fixing dependency.  Closing bug #26855
+
+*duke3d-20030817 (17 Aug 2003)
+
+  17 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.

@@ -1,0 +1,14 @@
+# ChangeLog for app-games/prboom
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+
+  08 Sep 2003; Michael Sterrett <msterret@gentoo.org> prboom-2.2.3.ebuild:
+  massage the DEPEND lines around; add media-libs/smpeg which config checks for.
+
+*prboom-2.2.3 (24 Oct 2002)
+
+  27 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added an nvidia test/patch so that it'll work on NVidia GL #19025.
+
+  24 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Dirk-Jan Heijs <heijs@phys.rug.nl>.

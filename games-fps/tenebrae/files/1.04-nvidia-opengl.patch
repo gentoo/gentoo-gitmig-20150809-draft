@@ -1,0 +1,56 @@
+--- glquake.h	2003-07-14 17:06:01.000000000 -0400
++++ ../../glquake.h	2003-07-15 02:24:09.000000000 -0400
+@@ -483,7 +483,7 @@
+ 
+ #endif /* !__APPLE__ && !MACOSX */
+ 
+-#ifndef GL_VERSION_1_3 
++//#ifndef GL_VERSION_1_3 
+ typedef void (APIENTRY * PFNGLACTIVETEXTUREARBPROC) (GLenum texture);
+ typedef void (APIENTRY * PFNGLCLIENTACTIVETEXTUREARBPROC) (GLenum texture);
+ typedef void (APIENTRY * PFNGLMULTITEXCOORD1DARBPROC) (GLenum target, GLdouble s);
+@@ -518,7 +518,7 @@
+ typedef void (APIENTRY * PFNGLMULTITEXCOORD4IVARBPROC) (GLenum target, const GLint *v);
+ typedef void (APIENTRY * PFNGLMULTITEXCOORD4SARBPROC) (GLenum target, GLshort s, GLshort t, GLshort r, GLshort q);
+ typedef void (APIENTRY * PFNGLMULTITEXCOORD4SVARBPROC) (GLenum target, const GLshort *v);
+-#endif
++//#endif
+ 
+ extern PFNGLACTIVETEXTUREARBPROC qglActiveTextureARB;
+ extern PFNGLCLIENTACTIVETEXTUREARBPROC qglClientActiveTextureARB;
+@@ -657,7 +657,7 @@
+ #endif /* !__APPLE__ && !MACOSX */
+ 
+ // - DC - 
+-#if !defined(SDL) && !defined (__glx__)
++//#if !defined(SDL) && !defined (__glx__)
+ typedef void (APIENTRY * PFNGLCOMBINERPARAMETERFVNVPROC) (GLenum pname, const GLfloat *params);
+ typedef void (APIENTRY * PFNGLCOMBINERPARAMETERFNVPROC) (GLenum pname, GLfloat param);
+ typedef void (APIENTRY * PFNGLCOMBINERPARAMETERIVNVPROC) (GLenum pname, const GLint *params);
+@@ -671,7 +671,7 @@
+ typedef void (APIENTRY * PFNGLGETCOMBINEROUTPUTPARAMETERIVNVPROC) (GLenum stage, GLenum portion, GLenum pname, GLint *params);
+ typedef void (APIENTRY * PFNGLGETFINALCOMBINERINPUTPARAMETERFVNVPROC) (GLenum variable, GLenum pname, GLfloat *params);
+ typedef void (APIENTRY * PFNGLGETFINALCOMBINERINPUTPARAMETERIVNVPROC) (GLenum variable, GLenum pname, GLint *params);
+-#endif
++//#endif
+ 
+ extern PFNGLCOMBINERPARAMETERFVNVPROC qglCombinerParameterfvNV;
+ extern PFNGLCOMBINERPARAMETERIVNVPROC qglCombinerParameterivNV;
+@@ -892,7 +892,7 @@
+ 
+ //PENTA: VERTEX_PROGRAM
+ 
+-#ifndef GL_NV_vertex_program
++//#ifndef GL_NV_vertex_program
+ /* NV_vertex_program */
+ #define GL_VERTEX_PROGRAM_NV              0x8620
+ #define GL_VERTEX_STATE_PROGRAM_NV        0x8621
+@@ -1042,7 +1042,7 @@
+ typedef void (APIENTRY * PFNGLVERTEXATTRIBS4FVNVPROC) (GLuint index, GLsizei count, const GLfloat *v);
+ typedef void (APIENTRY * PFNGLVERTEXATTRIBS4SVNVPROC) (GLuint index, GLsizei count, const GLshort *v);
+ typedef void (APIENTRY * PFNGLVERTEXATTRIBS4UBVNVPROC) (GLuint index, GLsizei count, const GLubyte *v);
+-#endif
++//#endif
+ 
+ extern PFNGLAREPROGRAMSRESIDENTNVPROC qglAreProgramsResidentNV ;
+ extern PFNGLBINDPROGRAMNVPROC qglBindProgramNV ;

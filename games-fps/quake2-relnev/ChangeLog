@@ -1,0 +1,22 @@
+# ChangeLog for app-games/quake2-relnev
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-relnev/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+
+*quake2-relnev-0.15 (29 Jun 2003)
+
+  30 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  renamed (whoops) and added support to build qmax & normal binary.
+
+  29 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Reworked and cleaned up to close #8222.
+  All optional features are supported and qmax has been added.
+
+*quake2-0.15.1 (18 Nov 2002)
+
+  18 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump from lundy.
+
+*quake2-0.14.1 (06 Nov 2002)
+
+  06 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Mike Lundy <novas007@gmx.net>.

@@ -1,0 +1,32 @@
+# ChangeLog for app-games/ut2003
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.1 2003/09/09 18:10:15 vapier Exp $
+
+  08 Sep 2003; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225.ebuild:
+  Fixed sound and player model picker issues.  Closes bugs # 27357 and 27451.
+
+  26 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225.ebuild:
+  Fixing problem with location of .ini files during installtion. Closing bug
+  #27357
+
+  14 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225.ebuild,
+  files/ucc, files/ut2003:
+  Fixing bug #26396
+
+  07 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225.ebuild:
+  Fixing ebuild to unpack file directly rather than using unpack_makeself.
+  Apparently, I wasn't paying much attention when updating some ebuilds and made
+  this change. Closing bug #26129. Thanks for pointing this out, Hendrik.
+
+  06 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225.ebuild:
+  Fixed sandbox violation
+
+  05 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225.ebuild:
+  Fixed to use unpack_makeself
+
+*ut2003-2225 (21 Jul 2003)
+
+  21 Jul 2003; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225.ebuild,
+  files/ucc, files/ut2003:
+  Initial import to portage.  Ebuild submitted by me.
+

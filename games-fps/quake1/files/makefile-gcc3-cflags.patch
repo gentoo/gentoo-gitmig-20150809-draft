@@ -1,0 +1,18 @@
+--- WinQuake/Makefile.orig	2003-07-14 15:13:27.000000000 -0400
++++ WinQuake/Makefile	2003-07-14 15:17:10.000000000 -0400
+@@ -39,3 +39,3 @@
+ BASE_CFLAGS=-Dstricmp=strcasecmp
+-RELEASE_CFLAGS=$(BASE_CFLAGS) -g -mpentiumpro -O6 -ffast-math -funroll-loops \
++RELEASE_CFLAGS=$(BASE_CFLAGS) GENTOO_CFLAGS -O6 -ffast-math -funroll-loops \
+ 	-fomit-frame-pointer -fexpensive-optimizations
+--- QW/Makefile.orig	2003-07-14 15:13:12.000000000 -0400
++++ QW/Makefile	2003-07-14 15:15:41.000000000 -0400
+@@ -45,5 +45,5 @@
+ else
+-RELEASE_CFLAGS=$(BASE_CFLAGS) -m486 -O6 -ffast-math -funroll-loops \
+-	-fomit-frame-pointer -fexpensive-optimizations -malign-loops=2 \
+-	-malign-jumps=2 -malign-functions=2
++RELEASE_CFLAGS=$(BASE_CFLAGS) GENTOO_CFLAGS -O6 -ffast-math -funroll-loops \
++	-fomit-frame-pointer -fexpensive-optimizations -falign-loops=2 \
++	-falign-jumps=2 -falign-functions=2
+ endif

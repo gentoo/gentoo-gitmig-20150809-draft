@@ -1,0 +1,21 @@
+# ChangeLog for app-games/quake3-urbanterror
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+
+*quake3-urbanterror-3 (17 Aug 2003)
+
+  17 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #26577.  Also SLOT=3 since 3 can work with 2.
+
+*quake3-urbanterror-2.6_beta1 (02 Jul 2003)
+
+  17 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add SLOT=2
+
+  02 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + games-q3mod.eclass support.
+
+*quake3-urbanterror-2.6_beta (29 Nov 2002)
+
+  29 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuilds submitted by moonlite@linux.nu and tuxisuau@7a69ezine.org.

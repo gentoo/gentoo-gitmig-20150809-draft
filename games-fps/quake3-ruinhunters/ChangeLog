@@ -1,0 +1,16 @@
+# ChangeLog for app-games/quake3-ruinhunters
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-ruinhunters/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+  
+*quake3-ruinhunters-1.0a (20 Mar 2003)
+
+  16 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added games-q3mod.eclass support #23871.
+
+  04 Apr 2003; Philip Walls <malverian@gentoo.org>
+  quake3-ruinhunters-1.0a.ebuild :
+  Make sure it unpacks the full package and patch in the correct order
+
+  20 Mar 2003; Philip Walls <malverian@gentoo.org>
+  quake3-ruinhunters-1.0a.ebuild files/digest-quake3-ruinhunters-1.0a :
+  Initial import.
