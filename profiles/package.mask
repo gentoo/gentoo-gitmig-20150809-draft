@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <vapier@gentoo.org> (03 Mar 2003)
+# package compiles fine then doesnt run ...
+app-games/xboing
+
 # <foser@gentoo.org> (27 Feb 2003)
 # Doesnt work with new gst versions, waiting for new version to appear
 dev-util/gst-editor
