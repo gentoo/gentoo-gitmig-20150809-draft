@@ -1,5 +1,11 @@
 # Copyright 2002 Gentoo Technologies, Inc.
-# System-wide defaults for the gcc 3.2 Portage system
+# System-wide defaults for the gcc 3.3 Portage system
+
+#Experimental: trying to use these USE variables to build up from stage 2->3
+#thus eliminating the inherent fragility of using USE for this
+
+GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses"
+
 
 USE="amd64 oss 3dnow apm arts avi berkdb crypt -cups encode foomaticdb gdbm gif gpm gtk  gtk2 imlib
 -java jpeg kde gnome libg++ libwww mikmod mmx motif mpeg ncurses nls oggvorbis
