@@ -31,8 +31,8 @@ sys-apps/fakeroot
 
 # <satai@gentoo.org> (13 Aug 2002)
 # masked for mirrors
-app-text/latex-foiltex
-app-text/latex-floatflt
+#app-text/latex-foiltex
+#app-text/latex-floatflt
 
 # <blizzy@gentoo.org> (12 Aug 2002)
 # masked for testing
