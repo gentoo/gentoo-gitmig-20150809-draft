@@ -2,9 +2,10 @@ MD5 fa576cf95d91d964af1c5505c82f0fe0 ChangeLog 1537
 MD5 a4f1bc017ca723056dcf4d643683573c cinelerra-1.0.0.ebuild 1128
 MD5 c69120050a1046a849e4231a12794dc9 cinelerra-110802.ebuild 1200
 MD5 45261dea1dfdab3edf6ef0a7548634a7 cinelerra-1.1.5.ebuild 1218
-MD5 312641da1a8632d7232567c2c0255f3f cinelerra-1.1.6.ebuild 1215
+MD5 17c165d5d0be193b2065eeeab27c0172 cinelerra-1.1.6.ebuild 1216
 MD5 bb1b390c6a20a9240f1100c3a3974b0d files/digest-cinelerra-1.0.0 73
 MD5 0251b5e587fcbf93534c1633a3d27ad1 files/digest-cinelerra-110802 74
 MD5 ea82f6b3b08112f20623ddb10bf97fce files/compile-1.1.5.diff 300491
 MD5 07cc4d63fc6636b11a09265bd359f02c files/digest-cinelerra-1.1.5 74
 MD5 82ff059ba49d16e7d44ad7ce42976a93 files/digest-cinelerra-1.1.6 74
+MD5 c0580488c2d8defbd6aafbd00cee10ef files/compile-1.1.6.diff 7521
