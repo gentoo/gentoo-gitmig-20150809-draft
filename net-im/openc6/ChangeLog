@@ -1,6 +1,10 @@
 # ChangeLog for net-im/openc6
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openc6/ChangeLog,v 1.8 2004/07/13 17:03:47 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openc6/ChangeLog,v 1.9 2004/11/24 21:33:04 sekretarz Exp $
+
+  24 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  openc6-0.9.6_beta.ebuild:
+  Added to ~amd64, bug #72370
 
   13 Jul 2004; Don Seiler <rizzo@gentoo.org>
   -files/openc6-0.9.5_beta-fixes.patch, -openc6-0.9.2.ebuild,

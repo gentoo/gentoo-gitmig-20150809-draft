@@ -1,5 +1,15 @@
-MD5 779d310dc42dff75423b6273c837dd9a ChangeLog 1310
-MD5 1c3fa3185ce0c29f1cccca30a49d9a7a openc6-0.9.6_beta.ebuild 639
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6b30fa712aa3e1267858434c227a8b4f openc6-0.9.6_beta.ebuild 650
+MD5 fa333e5555322cbbf6ab6176e1f52079 ChangeLog 1427
 MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
-MD5 f0fd438c32cdb30cd9b55c63e1e0e723 files/openc6-0.9.6_beta-fixes.patch 533
 MD5 f9cc4ad4d63731039030f7c21009839d files/digest-openc6-0.9.6_beta 70
+MD5 f0fd438c32cdb30cd9b55c63e1e0e723 files/openc6-0.9.6_beta-fixes.patch 533
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpP4dZ/iYVBmujdURAhw/AJ0dKVgzz5+WdJpOs+iBX5sIpF9EtACeMrJJ
+9uUnoNFoqP52Bh8bwbS3YZo=
+=MO7z
+-----END PGP SIGNATURE-----
