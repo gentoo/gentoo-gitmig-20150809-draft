@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alsa-oss
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.15 2003/07/29 20:01:08 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.16 2003/10/24 16:06:17 mholzer Exp $
+
+*alsa-oss-0.9.8 (25 Oct 2003)
+
+  25 Oct 2003; Martin Holzer <mholzer@gentoo.org> alsa-oss-0.9.8.ebuild:
+  Version bumped.
 
 *alsa-oss-0.9.6 (29 Jul 2003)
 
