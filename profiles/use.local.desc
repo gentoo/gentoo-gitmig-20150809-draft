@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.482 2004/07/14 21:53:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.483 2004/07/15 08:36:29 axxo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -140,6 +140,7 @@ dev-java/quartz:servlet-2.4 - Enable servlet-2.4 support
 dev-java/quartz:struts - Enable struts support
 dev-java/sun-j2sdk:nptl - Enable support for NPTL
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
+dev-java/velocity:j2ee - Add j2ee support
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
