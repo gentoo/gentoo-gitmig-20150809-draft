@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.1.2.ebuild,v 1.1 2002/10/27 13:55:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.1.2.ebuild,v 1.2 2002/10/29 14:55:07 foser Exp $
 
 inherit gnome2 debug
 
@@ -9,7 +9,7 @@ DESCRIPTION="File Roller is an archive manager for the GNOME environment."
 HOMEPAGE="http://fileroller.sourceforge.net/"
 
 # not in gnome/sources yet :(
-#SRC_URI="http://ftp.gnome.org/pub/GNOME/desktop/2.1/2.1.0/sources/${P}.tar.bz2"
+SRC_URI="http://ftp.gnome.org/pub/GNOME/desktop/2.1/2.1.1/sources/${P}.tar.bz2"
 #even worse, not at gnome.org at all yet
 #SRC_URI="mirror://sourceforge/fileroller/${P}.tar.gz"
 
