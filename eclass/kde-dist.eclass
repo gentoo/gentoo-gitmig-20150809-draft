@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.14 2002/07/12 22:58:08 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.15 2002/07/18 14:07:15 danarmak Exp $
 # This is the kde-dist eclass for >=2.2.1 kde base packages. Don't use for kdelibs though :-)
 # Don't use it for e.g. kdevelop, koffice because of their separate versionnig schemes.
 inherit kde-base kde.org
@@ -19,7 +19,7 @@ DESCRIPTION="KDE ${PV} - "
 HOMEPAGE="http://www.kde.org/"
 
 # doesn't work well for unstable versions
-[ "$PV" == "3.1_alpha1" ] || myconf="$myconf --enable-final"
+[ "$PV" == "3.1_alpha1" -o "$PV" == "5" ] || myconf="$myconf --enable-final"
 
 LICENSE="GPL-2"
 
