@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r4.ebuild,v 1.10 2003/03/13 17:39:00 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r4.ebuild,v 1.11 2003/03/15 14:45:38 azarah Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ppc ~sparc ~alpha hppa arm mips"
+KEYWORDS="x86 ppc ~sparc ~alpha hppa arm mips"
 
 # We must be sertain that we have a bash that is linked
 # to its internal readline, else we may get problems.
@@ -60,6 +60,7 @@ src_install() {
 
 	dodir /lib
 	mv ${D}/usr/lib/*.so* ${D}/lib
+	rm -f ${D}/lib/*.old
 	# bug #4411
 	gen_usr_ldscript libreadline.so
 	gen_usr_ldscript libhistory.so
