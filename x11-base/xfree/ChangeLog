@@ -1,12 +1,12 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.241 2003/11/11 20:21:58 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.242 2003/11/18 10:04:00 spyderous Exp $
 
   11 Nov 2003; Alexander Gabert <pappy@gentoo.org> xfree-4.3.0-r3.ebuild,
   xfree-4.3.99.15.ebuild:
   removed sleep statements from hardened-gcc if statements
 
-  09 Nov 2003; root <root@gentoo.org> xfree-4.3.99.13.ebuild:
+  09 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.99.13.ebuild:
   Pulling old dev snapshot.
 
   09 Nov 2003; Alexander Gabert <pappy@gentoo.org> xfree-4.3.0-r3.ebuild:
