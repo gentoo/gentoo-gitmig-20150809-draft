@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.55 2003/11/30 23:17:09 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.56 2003/12/09 20:28:55 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,msterret}@gentoo.org
 #
@@ -138,9 +138,12 @@ games_pkg_postinst() {
 games_get_cd() {
 	export GAMES_CD=${GAMES_CDROM}
 	if [ -z "${GAMES_CD}" ] ; then
+		local dir="$(dirname $1)"
+		local file="$(basename $1)"
 		local mline=""
 		for mline in `mount | egrep -e '(iso|cdrom)' | awk '{print $3}'` ; do
-			find ${mline} -iname ${1} -maxdepth 1 -printf '' && GAMES_CD=${mline}
+			[ -d "${mline}/${dir}" ] || continue
+			find ${mline}/${dir} -iname ${file} -maxdepth 1 -printf '' && GAMES_CD=${mline}
 		done
 	fi
 	[ ! -z "${GAMES_CD}" ] && einfo "Using ${GAMES_CD} as the data source"
