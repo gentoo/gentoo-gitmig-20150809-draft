@@ -1,0 +1,12 @@
+# ChangeLog for app-sci/oregano
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/oregano/ChangeLog,v 1.1 2002/06/13 07:35:44 lostlogic Exp $
+
+*oregano-0.23 (13 Jun 2002)
+
+  13 Jun 2002; Brandon Low <lostlogic@gentoo.org> oregano-0.23.ebuild:
+
+  Initial ebuild, this seems like a very nice schematic editing program
+  I was working a lab report this morning, tried to emerge xcircuit, but
+  got SegFaults so I decided to find something else.  Then I made an
+  ebuild for it.
