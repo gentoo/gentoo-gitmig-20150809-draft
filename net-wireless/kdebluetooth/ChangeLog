@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.25 2005/03/13 13:44:31 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.26 2005/03/14 21:31:26 motaboy Exp $
+
+  14 Mar 2005; Simone Gotti <motaboy@gentoo.org>
+  kdebluetooth-0.99_beta1-r1.ebuild, kdebluetooth-0.99_beta1.ebuild:
+  kdebluetooth-0.99_beta1 needs >=bluez-lib-2.15. Fixes bug #85127.
 
 *kdebluetooth-0.99_beta1-r1 (13 Mar 2005)
 
