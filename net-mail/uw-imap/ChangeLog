@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.50 2005/01/28 11:58:01 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.51 2005/01/28 22:34:09 hansmi Exp $
+
+  28 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> uw-imap-2004c.ebuild:
+  Stable on ppc.
 
   28 Jan 2005; Andrej Kacian <ticho@gentoo.org> -uw-imap-2002e-r4.ebuild:
   Removing aging ebuild.
