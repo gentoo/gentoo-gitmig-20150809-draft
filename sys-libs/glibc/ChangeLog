@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.222 2004/08/07 17:53:20 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.223 2004/08/07 22:49:02 lu_zero Exp $
+
+  08 Aug 2004; Luca Barbato <lu_zero@gentoo.org>
+  glibc-2.3.4.20040619-r1.ebuild:
+  Removed a patch
 
   07 Aug 2004; <solar@gentoo.org> glibc-2.3.4.20040619-r1.ebuild,
   files/2.3.3/ssp.c:

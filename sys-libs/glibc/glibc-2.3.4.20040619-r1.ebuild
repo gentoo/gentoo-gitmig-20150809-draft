@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.5 2004/08/07 17:53:20 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.6 2004/08/07 22:49:02 lu_zero Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -391,14 +391,12 @@ do_arch_mips_patches() {
 
 do_arch_ppc_patches() {
 	cd ${S};
-	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-nptl-altivec.patch
 	# Any needed patches for ppc go here
 }
 
 
 do_arch_ppc64_patches() {
 	cd ${S};
-	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-nptl-altivec.patch
 	# Any needed patches for ppc64 go here
 }
 
