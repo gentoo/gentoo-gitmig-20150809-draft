@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/edb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.10 2003/04/09 15:51:37 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.11 2003/06/29 17:29:13 vapier Exp $
+
+*edb-1.0.3.20030629 (29 Jun 2003)
+
+  29 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage (bug fixes from CVS).
 
 *edb-1.0.3.20030220-r1 (20 Mar 2003)
 
