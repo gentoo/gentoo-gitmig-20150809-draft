@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/multiimonc
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/ChangeLog,v 1.1 2004/06/02 21:00:55 hansmi Exp $
+
+*multiimonc-0.3.2 (02 Jun 2004)
+
+  02 Jun 2004; Michael Hanselmann <hansmi@gentoo.org>; multiimonc-0.3.2.ebuild,
+  ChangeLog, metadata.xml:
+  Initial import.
