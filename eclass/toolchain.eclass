@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.82 2005/01/16 09:16:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.83 2005/01/16 09:20:08 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -743,9 +743,9 @@ gcc_src_unpack() {
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
-	einfo "$(tc-arch)"
+	#einfo "$(tc-arch)"  # VAPIER: this gives me "wtf"... changing below to '${ARCH}'
 
-	if [[ $(tc-arch) == "amd64" ]] \
+	if [[ "${ARCH}" == "amd64" ]] \
 	   && [[ -z ${SKIP_MULTILIB_HACK} ]] && use multilib
 	then
 		disgusting_gcc_multilib_HACK || die "multilib hack failed"
