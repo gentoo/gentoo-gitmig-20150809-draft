@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0.1-r1.ebuild,v 1.3 2003/06/18 14:19:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0.1-r1.ebuild,v 1.4 2003/06/19 15:43:58 taviso Exp $
 
 DESCRIPTION="A scalable configuration management system."
 HOMEPAGE="http://www.bitkeeper.com/"
@@ -13,7 +13,7 @@ SRC_URI="x86? ( bk-3.0.1-x86-glibc22-linux.bin )
 
 SLOT="0"
 LICENSE="BKL"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~arm ~hppa"
+KEYWORDS="x86 ~ppc ~sparc alpha ~arm ~hppa"
 IUSE="X"
 
 # binary package, so no DEPENDs; X optional in RDEPENDs
