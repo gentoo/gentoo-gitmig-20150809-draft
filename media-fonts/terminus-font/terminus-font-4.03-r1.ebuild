@@ -1,14 +1,14 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.03-r1.ebuild,v 1.1 2003/09/26 05:17:28 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.03-r1.ebuild,v 1.2 2004/01/31 14:26:45 usata Exp $
 
 DESCRIPTION="A clean fixed font for the console and X11"
-HOMEPAGE="http://www.is-vn.bg/hamster/jimmy-en.htm"
+HOMEPAGE="http://www.is-vn.bg/hamster/jimmy-en.html"
 SRC_URI="http://www.is-vn.bg/hamster/${P}.tar.gz
 	http://www.is-vn.bg/hamster/courier-like-a.diff.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="X"
 
 DEPEND="sys-apps/gawk
@@ -45,6 +45,7 @@ src_install() {
 	# If user wants fonts for X11
 	if [ -n "`use X`" ]; then
 		make install-pcf || die
+		mkfontdir ${D}/usr/share/fonts/terminus
 	fi
 
 	dodoc README*
