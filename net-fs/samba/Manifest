@@ -1,6 +1,6 @@
 MD5 952110f64c7d71ef5c90e6ff41331f61 samba-3.0.0-r1.ebuild 10762
 MD5 11978d96cfebe10cabfbc2c6da2f04ee samba-2.2.8a.ebuild 10853
-MD5 6c674e7f521bea4c88233ecfcadef42e ChangeLog 11998
+MD5 2d3ff891c772fafd49de0074fd18150c ChangeLog 12001
 MD5 eeb3ec0ae25e9d4f7ce62c32b52d5996 metadata.xml 466
 MD5 f9ae9b62d92d4006947fea94e0dd8db2 samba-3.0.0.ebuild 9474
 MD5 cac4662bb25a75115b40c9558de26f26 files/winbind-init 503
