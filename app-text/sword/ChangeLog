@@ -1,6 +1,11 @@
 # ChangeLog for app-text/sword
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.6 2003/02/12 05:35:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.7 2003/07/16 19:33:00 raker Exp $
+
+*sword-1.5.5.99 (16 Jul 2003)
+
+  16 Jul 2003; Nick Hadaway <raker@gentoo.org> sword-1.5.5.99.ebuild:
+  Added new version for support of the latest bibletime-1.3rc1
 
 *sword-1.5.5 (02 Nov 2002)
 
