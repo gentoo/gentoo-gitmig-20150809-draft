@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-0.9.ebuild,v 1.3 2004/08/25 13:16:44 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-0.9.ebuild,v 1.4 2004/10/02 14:19:34 squinky86 Exp $
 
 inherit kernel-mod
 
@@ -76,7 +76,7 @@ pkg_postinst() {
 	einfo "to function. Download these to /root for example, then"
 	einfo "run 'ndiswrapper -i /root/foo.inf'. After that you can delete them."
 	einfo "They will be copied to the proper location."
-	einfo "One done, please run 'update-modules'."
+	einfo "Once done, please run 'update-modules'."
 	einfo
 	einfo "As of release 0.9, you no longer have to call 'loadndiswrapper'"
 	einfo "explicitly.  The module will handle it automatically."
