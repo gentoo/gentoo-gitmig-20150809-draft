@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/vorbis-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.13 2003/11/17 00:20:08 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.14 2003/11/22 19:13:41 lostlogic Exp $
+
+*vorbis-tools-1.0.1 (22 Nov 2003)
+
+  22 Nov 2003; Brandon Low <lostlogic@gentoo.org> vorbis-tools-1.0.1.ebuild:
+  Bump
 
 *vorbis-tools-1.0-r2 (17 Nov 2003)
 
