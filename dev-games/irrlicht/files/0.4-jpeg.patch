@@ -1,0 +1,10 @@
+--- CSurfaceLoaderJPG.h.orig	2004-01-02 00:27:49.873066440 -0500
++++ CSurfaceLoaderJPG.h	2004-01-02 00:27:56.236099112 -0500
+@@ -67 +67 @@
+-	static u8 fill_input_buffer (j_decompress_ptr cinfo);
++	static boolean fill_input_buffer (j_decompress_ptr cinfo);
+--- CSurfaceLoaderJPG.cpp.orig	2004-01-02 00:26:38.162968032 -0500
++++ CSurfaceLoaderJPG.cpp	2004-01-02 00:27:39.699613040 -0500
+@@ -43 +43 @@
+-u8 CSurfaceLoaderJPG::fill_input_buffer (j_decompress_ptr cinfo)
++boolean CSurfaceLoaderJPG::fill_input_buffer (j_decompress_ptr cinfo)

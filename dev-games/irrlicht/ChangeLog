@@ -1,0 +1,8 @@
+# ChangeLog for dev-games/irrlicht
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.1 2004/01/02 06:02:31 vapier Exp $
+
+*irrlicht-0.4 (02 Jan 2003)
+
+  02 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by #35652.
