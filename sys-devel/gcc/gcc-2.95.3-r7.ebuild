@@ -1,16 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.14 2002/12/09 04:37:27 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.15 2002/12/15 17:05:50 azarah Exp $
 
 IUSE="nls static build"
 
-TV=4.0
+TV="4.0"
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
 #	ftp://ftp.gnu.org/pub/gnu/texinfo/texinfo-${TV}.tar.gz
 #	ftp://ftp.ibiblio.org/pub/linux/distributions/gentoo/distfiles/texinfo-${TV}.tar.gz"
 
-S=${WORKDIR}/${P}
-LOC=/usr
+S="${WORKDIR}/${P}"
+LOC="/usr"
 DESCRIPTION="Modern GCC C/C++ compiler and an included, upgraded version of texinfo to boot"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 SLOT="0"
@@ -130,7 +130,7 @@ src_install() {
 		${D}/etc/env.d/05gcc
 	# Also set CC and CXX
 	echo "CC=\"gcc\"" >> ${D}/etc/env.d/05gcc
-	echo "CXX=\"gcc\"" >> ${D}/etc/env.d/05gcc
+	echo "CXX=\"g++\"" >> ${D}/etc/env.d/05gcc
 	
 	cd ${S}
     if [ -z "`use build`" ]
