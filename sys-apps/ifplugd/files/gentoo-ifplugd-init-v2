@@ -1,0 +1,61 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/files/gentoo-ifplugd-init-v2,v 1.1 2003/08/06 18:00:34 wmertens Exp $
+
+#NB: Config is in /etc/conf.d/ifplugd
+
+opts="stop start status suspend resume"
+
+IFPLUGD=/usr/sbin/ifplugd
+
+[ -z "$INTERFACES" ] && INTERFACES="eth0"
+[ "$INTERFACES" = "auto" ] && INTERFACES=`cat /proc/net/dev | awk '{ print $1 }' | grep ^eth | cut -d: -f1`
+
+# Handle starting for all interfaces
+# $1 is extra args, $2 is action name
+do_all_if() {
+	local status
+	for IF in $INTERFACES ; do
+		echo -n "$IF "
+		$IFPLUGD $1 -i $IF $ARGS
+		status=$?
+		[ $status -ne 0 ] && break
+	done
+	echo
+	eend $status "Couldn't $2 ifplugd for $IF"
+}
+	
+start() {
+	einfon "Starting ifplugd: "
+	do_all_if "" start
+}
+
+stop() {
+	einfon "Stopping ifplugd: "
+	do_all_if -k stop
+	# Now we have to wait until it's actually down
+	local i=10
+	while [ $i -gt 0 ] && status | grep -q "running as"; do
+		i=$(( $i - 1 ))
+		sleep 1
+	done
+	if [ $i -eq 0 ]; then
+		eend 1 "Timeout exceeded, ifplugd won't die!"
+	fi
+}
+
+status() {
+	do_all_if -c "get status from"
+}
+
+suspend() {
+	einfon "Suspending ifplugd: "
+	do_all_if -S suspend
+}
+
+resume() {
+	einfon "Resuming ifplugd: "
+	do_all_if -R resume
+}
+# vim:ts=4

@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.2 2003/04/22 10:26:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.3 2003/08/06 18:00:32 wmertens Exp $
+
+*ifplugd-0.15 (17 Mar 2003)
+
+  06 Aug 2003; Wout Mertens <wmertens@gentoo.org> ebuild, files/gentoo-*-v2 :
+  Version bump, versioned action and init script. Init script now supports
+  suspend and resume.
+  Note: For it to work on my system (eepro100), I need to add -m mii to the
+  options, and add -a. I think. Testers welcome.
+  TODO: add an /etc/apm/event.d/ifplugd script
 
   21 Mar 2003; Wout Mertens <wmertens@gentoo.org> :
   Fixed the action script, otherwise ifplugd would die when dhcpcd
