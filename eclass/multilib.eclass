@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.8 2005/01/13 19:30:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.9 2005/01/15 13:44:31 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -213,8 +213,10 @@ prep_ml_includes() {
 			for dir in ${dirs}; do
 				local args="${dir}"
 				local abi
+				dodir ${dir}/gentoo-multilib
 				for abi in $(get_abi_order); do
-					args="${args} $(get_abi_CDEFINE ${abi}):${dir}.${abi}"
+					mv ${D}/${dir}.${abi} ${D}/${dir}/gentoo-multilib/${abi}
+					args="${args} $(get_abi_CDEFINE ${abi}):${dir}/gentoo-multilib/${abi}"
 				done
 				create_ml_includes ${args}
 			done
