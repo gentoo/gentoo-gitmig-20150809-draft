@@ -1,0 +1,7 @@
+# ChangeLog for media-video/avifile
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.1 2002/04/02 22:07:16 danarmak Exp $
+
+*libdv-0.9 (2 Apr 2002)
+
+  2 Apr 2002; Dan Armak <danarmak@gentoo.org> ChangeLog : initial version
