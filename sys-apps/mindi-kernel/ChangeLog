@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mindi-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi-kernel/ChangeLog,v 1.5 2004/06/24 22:16:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi-kernel/ChangeLog,v 1.6 2004/06/30 21:14:21 agriffis Exp $
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> mindi-kernel-1.0.ebuild:
+  sync IUSE (missing)
 
   01 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> mindi-kernel-1.0.ebuild:
   Removing amd64 keyword since this package depends on a package that depends on
