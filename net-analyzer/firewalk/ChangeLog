@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/firewalk
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/ChangeLog,v 1.1 2005/01/25 11:29:05 angusyoung Exp $
+
+*firewalk-5.0 (25 Jan 2005)
+
+  25 Jan 2005; Otavio R. Piske <angusyoung@gentoo.org> +metadata.xml,
+  +firewalk-5.0.ebuild:
+  Initial release. Thanks to Lionel <lionel@ferette.net> for submitting the
+  ebuild
+
