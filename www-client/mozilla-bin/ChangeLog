@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/ChangeLog,v 1.4 2005/03/23 17:19:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/ChangeLog,v 1.5 2005/03/23 19:17:50 agriffis Exp $
+
+  23 Mar 2005; Aron Griffis <agriffis@gentoo.org> -mozilla-bin-1.7.6.ebuild,
+  mozilla-bin-1.7.6-r1.ebuild:
+  Remove 1.7.6 in favor of 1.7.6-r1 to avoid build/rebuild cycle
 
 *mozilla-bin-1.7.6-r1 (23 Mar 2005)
 

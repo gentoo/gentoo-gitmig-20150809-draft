@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.6-r1.ebuild,v 1.1 2005/03/23 15:30:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.6-r1.ebuild,v 1.2 2005/03/23 19:15:27 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit multilib
@@ -23,7 +23,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV}/s
 		http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz
 	) )"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64 ~hppa"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
