@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.16 2003/09/06 23:51:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.17 2003/12/07 23:40:37 foser Exp $
 
 IUSE="nls mozilla"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.gnome.org/projects/nautilus/"
 
 # =gnome-base/gnome-core-1.4*
 RDEPEND="mozilla? ( >=net-www/mozilla-1.0_rc3 )
-	>=app-admin/fam-oss-2.6.4
+	>=app-admin/fam-2.6.4
 	>=media-sound/cdparanoia-3.9.8
 	>=gnome-base/bonobo-1.0.9-r1
 	>=gnome-base/libghttp-1.0.9-r1

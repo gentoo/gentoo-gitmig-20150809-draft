@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.1.ebuild,v 1.2 2003/10/21 21:19:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.1.ebuild,v 1.3 2003/12/07 23:40:37 foser Exp $
 
 inherit gnome2
 
@@ -14,7 +14,7 @@ IUSE="oggvorbis cups gstreamer"
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/pango-1.2
 	>=x11-libs/gtk+-2.2
-	>=gnome-base/eel-${PV}
+	=gnome-base/eel-${PV}
 	>=dev-libs/libxml2-2.4.7
 	>=gnome-base/gnome-vfs-2.3.5
 	>=media-sound/esound-0.2.27
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/ORBit2-2.4
 	>=x11-libs/startup-notification-0.5
 	dev-libs/popt
-	app-admin/fam-oss
+	app-admin/fam
 	sys-apps/eject
 	!gstreamer? ( oggvorbis? ( media-sound/vorbis-tools ) )
 	cups? ( net-print/libgnomecups

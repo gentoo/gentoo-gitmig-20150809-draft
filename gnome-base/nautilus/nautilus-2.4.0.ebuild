@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.0.ebuild,v 1.10 2003/11/15 02:49:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.0.ebuild,v 1.11 2003/12/07 23:40:37 foser Exp $
 
 inherit gnome2
 
@@ -31,7 +31,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/ORBit2-2.4
 	>=x11-libs/startup-notification-0.5
 	dev-libs/popt
-	app-admin/fam-oss
+	app-admin/fam
 	sys-apps/eject
 	oggvorbis? ( media-sound/vorbis-tools )
 	cups? ( net-print/libgnomecups
