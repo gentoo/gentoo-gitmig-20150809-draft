@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/cpu-1.4.3.ebuild,v 1.1 2004/02/11 21:01:18 jake Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/cpu-1.4.3.ebuild,v 1.2 2004/04/20 15:44:57 mholzer Exp $
 
 DESCRIPTION="LDAP user management tool written in C and loosely based on FreeBSD's pw(8)"
 HOMEPAGE="http://cpu.sourceforge.net/"
@@ -15,9 +15,9 @@ RDEPEND="net-nds/openldap
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.54"
 
-WANT_AUTOCONF_2_5=1
-
 src_compile() {
+	export WANT_AUTOCONF=2.5
+
 	local myconf
 
 	# provide PASSWD support as well
