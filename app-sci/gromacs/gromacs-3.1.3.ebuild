@@ -9,9 +9,8 @@ SRC_URI="ftp://ftp.gromacs.org/pub/gromacs/${P}.tar.gz"
 
 HOMEPAGE="http://www.gromacs.org/"
 
-DEPEND="mpi? ( >=lam-6.5.2 )
-	>=fftw-2.1.3
-	>=sys-devel/binutils-2.10.91.0.2"
+DEPEND=">=dev-libs/fftw-2.1.3
+		>=sys-devel/binutils-2.10.91.0.2"
 
 RDEPEND="${DEPEND}"
 
