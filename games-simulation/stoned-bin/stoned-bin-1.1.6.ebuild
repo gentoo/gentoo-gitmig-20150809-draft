@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/stoned-bin/stoned-bin-1.1.6.ebuild,v 1.1 2005/02/22 19:45:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/stoned-bin/stoned-bin-1.1.6.ebuild,v 1.2 2005/02/23 12:35:06 wolf31o2 Exp $
 
 inherit games
 
@@ -21,7 +21,7 @@ RDEPEND="virtual/opengl
 	sys-libs/zlib
 	media-libs/libpng"
 
-S="${WORKDIR}/${P/-bin}"
+S=${WORKDIR}/${P/-bin}-386-linux
 
 src_install() {
 	into "${GAMES_PREFIX_OPT}"
