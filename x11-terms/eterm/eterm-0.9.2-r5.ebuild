@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2-r5.ebuild,v 1.9 2004/06/28 21:56:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2-r5.ebuild,v 1.10 2004/07/23 20:28:02 vapier Exp $
 
 inherit eutils
 
@@ -10,9 +10,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="A vt102 terminal emulator for X"
 HOMEPAGE="http://www.eterm.org/"
 SRC_URI="mirror://sourceforge/eterm/${MY_P}.tar.gz
-	http://www.eterm.org/download/${MY_P}.tar.gz
-	 mirror://sourceforge/eterm/${MY_PN}-bg-${PV}.tar.gz
-	http://www.eterm.org/download/${MY_PN}-bg-${PV}.tar.gz"
+	mirror://sourceforge/eterm/${MY_PN}-bg-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,5 +1,15 @@
-MD5 7202a6986ad2af00a6d73be68a498c0f eterm-0.9.2-r5.ebuild 1654
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1ea6862ca5415cc099cb24539045345e ChangeLog 3874
+MD5 6200ec7abbd6741653ac5bcaaf4aadf9 eterm-0.9.2-r5.ebuild 1550
 MD5 c97cacef51ce9af2ed721636c4436fe1 metadata.xml 631
-MD5 309a7b42f0c4a1580943f0078f90bd50 files/digest-eterm-0.9.2-r5 129
 MD5 c06f18d32325d81aa5c4a895a8798a82 files/0.9.2-ansi16.patch 1730
+MD5 309a7b42f0c4a1580943f0078f90bd50 files/digest-eterm-0.9.2-r5 129
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBAXULHTu7gpaalycRAlR/AKCRSpdkAvC4fk/pwi9bcicnP9rDqQCgo26z
+QN8J7L5mGjlc8PNiLmeYzn8=
+=u52C
+-----END PGP SIGNATURE-----
