@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-LibXML
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.30 2004/07/28 22:53:42 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.31 2004/07/29 21:17:33 rac Exp $
+
+  29 Jul 2004; Robert Coie <rac@gentoo.org> XML-LibXML-1.58.ebuild:
+  keyword ~mips to satisfy axkit and libxslt
 
   28 Jul 2004; Robert Coie <rac@gentoo.org> -XML-LibXML-1.54-r1.ebuild,
   -XML-LibXML-1.56-r1.ebuild, -XML-LibXML-1.56.ebuild, XML-LibXML-1.58.ebuild:
