@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.64.ebuild,v 1.7 2003/10/13 07:03:52 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.64.ebuild,v 1.8 2003/12/14 22:38:07 spider Exp $
 
 DESCRIPTION="Common Lisp Controller"
 HOMEPAGE="http://packages.debian.org/unstable/devel/common-lisp-controller.html"
@@ -72,7 +72,7 @@ pkg_postinst() {
 		if [ -f "$compiler" -a -r "$compiler}" ] ; then
 			i=${compiler##*/}
 			i=${i%.sh}
-			chown -R cl-builder.cl-builder /usr/lib/common-lisp/${i} >/dev/null || true
+			chown -R cl-builder:cl-builder /usr/lib/common-lisp/${i} >/dev/null || true
 		fi
 	done
 

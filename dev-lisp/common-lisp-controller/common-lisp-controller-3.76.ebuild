@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.76.ebuild,v 1.2 2003/11/25 07:18:12 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.76.ebuild,v 1.3 2003/12/14 22:38:07 spider Exp $
 
 DESCRIPTION="Common Lisp Controller"
 HOMEPAGE="http://packages.debian.org/unstable/devel/common-lisp-controller.html"
@@ -78,7 +78,7 @@ pkg_postinst() {
 			bash "$compiler" install-clc || true
 		    echo Done rebuilding
 			einfo ">>> Setting permissions for cl-builder in /usr/lib/common-lisp/${i}"
-			chown -R cl-builder.cl-builder /usr/lib/common-lisp/${i} >/dev/null || true
+			chown -R cl-builder:cl-builder /usr/lib/common-lisp/${i} >/dev/null || true
 		fi
 	done
 }

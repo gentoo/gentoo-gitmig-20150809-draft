@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-source/cmucl-source-18e.ebuild,v 1.1 2003/09/22 03:11:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-source/cmucl-source-18e.ebuild,v 1.2 2003/12/14 22:41:21 spider Exp $
 
 inherit common-lisp
 
@@ -83,7 +83,7 @@ src_install() {
 	doins own-work/clx/*.{ps.gz,el} own-work/clx/README* # own-work/clx/Makefile
 	insinto /usr/share/doc/${PF}/clx/clxman
 	doins own-work/clx/clxman/*
-	chown -R root.root ${D}/usr/share/common-lisp/source/
+	chown -R root:root ${D}/usr/share/common-lisp/source/
 }
 
 pkg_postinst() {
