@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.27 2003/09/17 11:05:08 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.28 2003/09/29 17:41:42 mholzer Exp $
+
+  29 Sep 2003; Martin Holzer <mholzer@gentoo.org> phpmyadmin-2.5.3-r1.ebuild:
+  Marked x86 stable.
 
 *phpmyadmin-2.5.3 (11 Sep 2003)
 
