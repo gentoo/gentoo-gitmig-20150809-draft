@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_log_sql
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/ChangeLog,v 1.19 2005/02/27 18:46:12 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/ChangeLog,v 1.20 2005/02/28 00:46:30 trapni Exp $
+
+  28 Feb 2005; Christian Parpart <trapni@gentoo.org>
+  mod_log_sql-1.100.ebuild:
+  adding to ~amd64
 
   27 Feb 2005; Michael Stewart <vericgar@gentoo.org> mod_log_sql-1.100.ebuild:
   Removing ~amd64, bug #83482

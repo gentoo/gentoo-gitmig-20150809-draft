@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.100.ebuild,v 1.3 2005/02/27 18:46:12 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.100.ebuild,v 1.4 2005/02/28 00:46:30 trapni Exp $
 
 inherit eutils apache-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.outoforder.cc/downloads/${PN}/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="ssl dbi"
 
 DEPEND=">=dev-db/mysql-3.23.30
