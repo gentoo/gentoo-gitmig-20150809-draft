@@ -1,4 +1,4 @@
-MD5 43cfadac548b18767864b6c01797df5f files/digest-autorespond-2.0.4 137
-MD5 f2fdb082f70e125887cc8624b21e1e30 ChangeLog 899
-MD5 8c2b7dc319119e62a7f6b9df2e9236c6 autorespond-2.0.4.ebuild 935
 MD5 5e658b705b2985d36d82b2a5d218ec78 metadata.xml 224
+MD5 2b713ccc1fcbe3805b92a49202e28080 ChangeLog 995
+MD5 21d12f16e2cc4fc34aa1a903fdb755a9 autorespond-2.0.4.ebuild 933
+MD5 43cfadac548b18767864b6c01797df5f files/digest-autorespond-2.0.4 137
