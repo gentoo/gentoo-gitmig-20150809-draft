@@ -9,8 +9,12 @@ if [ $1 = "install" ]; then
 	sed -e "s|\$Bin/\.\./\.\.|${VHOST_ROOT}/${P}|g" -i ${VHOST_CGIBINDIR}/${PN}/*
 
 elif [ $1 = "clean" ]; then
-	rm -rf ${VHOST_ROOT}/${P}/Kernel/Config.pm.dist	${VHOST_ROOT}/${P}/scripts/*
-	rm -rf ${VHOST_CGIBINDIR}/${PN}
-	cd ${VHOST_ROOT}/${P}
-	rm -rf bin doc scripts var Kernel/Config Kernel/Language* Modules Output	System cpan-lib
+#	rm -rf ${VHOST_ROOT}/${P}/Kernel/Config.pm.dist	${VHOST_ROOT}/${P}/scripts/*
+#	rm -rf ${VHOST_CGIBINDIR}/${PN}
+#	cd ${VHOST_ROOT}/${P}
+#	rm -rf bin doc scripts var Kernel/Config Kernel/Language* Modules Output	System cpan-lib
+
+	echo "************"
+	echo "Automatic uninstallation disabled until I figure out bug #65850 -- rl03"
+	echo"*************"
 fi
