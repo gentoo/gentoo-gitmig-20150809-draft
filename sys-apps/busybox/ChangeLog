@@ -1,14 +1,21 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.2 2002/04/24 21:28:49 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.3 2002/05/20 22:36:33 wmertens Exp $
 
-  24 Feb 2002; Donny Davies <woodchip@gentoo.org>
-  files/Config.h-0.60.2-cd :
+*busybox-0.60.3 (21 May 2002)
+
+  21 May 2002; Wout Mertens <wmertens@gentoo.org> busybox-0.60.3.ebuild
+  files/dodeps files/Config.h-0.60.3-cd:
+
+  Upped to new stable version. Played with settings to get smallish build
+  that provides as much as possible. See the files/dodeps script.
+
+*busybox-0.60.2 (1 Feb 2002)
+
+  24 Feb 2002; Donny Davies <woodchip@gentoo.org> files/Config.h-0.60.2-cd :
 
   Comment out #define BB_MT since we're including the 'real' mt-st on the
   boot CD now.
-
-*busybox-0.60.2 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
