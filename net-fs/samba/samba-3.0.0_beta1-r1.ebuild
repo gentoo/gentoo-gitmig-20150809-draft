@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.0_beta1-r1.ebuild,v 1.1 2003/06/17 07:04:35 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.0_beta1-r1.ebuild,v 1.2 2003/07/16 14:19:37 pvdabeel Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ DEPEND="sys-devel/autoconf dev-libs/popt
 	pam? sys-libs/pam
 	python? dev-lang/python"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
