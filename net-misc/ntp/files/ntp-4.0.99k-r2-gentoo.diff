@@ -1,0 +1,23 @@
+--- ntp-4.0.99k23/ntpdate/ntpdate.c.orig	Thu May 24 23:12:27 2001
++++ ntp-4.0.99k23/ntpdate/ntpdate.c	Thu May 24 23:12:06 2001
+@@ -43,9 +43,9 @@
+ # include "timers.h"
+ 
+ /* select wants a zero structure ... */
+-struct timeval timeout = {0,0};
++struct timeval timeout2 = {0,0};
+ #else
+-struct timeval timeout = {60,0};
++struct timeval timeout2 = {60,0};
+ #endif
+ 
+ #ifdef HAVE_NETINFO
+@@ -557,7 +557,7 @@
+ 			 */
+ 			rdfdes = fdmask;
+ #ifdef HAVE_POLL_H
+-			nfound = poll(&rdfdes, 1, timeout.tv_sec * 1000);
++			nfound = poll(&rdfdes, 1, timeout2.tv_sec * 1000);
+ #else
+ 			nfound = select(fd+1, &rdfdes, (fd_set *)0,
+ 					(fd_set *)0, &timeout);
