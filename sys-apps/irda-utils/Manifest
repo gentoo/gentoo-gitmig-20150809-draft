@@ -4,5 +4,5 @@ MD5 ce3a8b809cc663fb62208da1c2b8993b irda-utils-0.9.15.ebuild 1667
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 10a500d681ec4e01d3d614987d5c9068 files/digest-irda-utils-0.9.13 69
 MD5 b853c309634581523261878b433cc4ac files/digest-irda-utils-0.9.15 69
-MD5 fcc3d075e8caf8fdef170d74bf326149 files/irda.conf 92
-MD5 7fccf9657251fe7cc07b9db1aa5e3b18 files/irda.rc 986
+MD5 88bd74309d1676c338e161afc7bdacdf files/irda.conf 321
+MD5 b9d42674fa97997929679735c5417bf1 files/irda.rc 978
