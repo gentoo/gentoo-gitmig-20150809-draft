@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/hogwash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hogwash/ChangeLog,v 1.9 2004/06/24 22:03:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hogwash/ChangeLog,v 1.10 2004/07/09 11:43:33 eldad Exp $
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> hogwash-0.1d-r2.ebuild,
+  hogwash-0.2.0_pre7.ebuild, hogwash-0.4.0_pre1.ebuild:
+  Added missing IUSE. Added metadata.
 
 *hogwash-0.4.0_pre1 (10 Feb 2003)
 
