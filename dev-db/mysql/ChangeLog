@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.12 2002/07/26 03:01:13 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.13 2002/07/26 04:06:34 woodchip Exp $
+
+  25 Jul 2002; Donny Davies <woodchip@gentoo.org> mysql-3.23.51-r3.ebuild :
+
+  Fix initscript install.  s/mysql.rc6/mysql.init/
 
 *mysql-3.23.51-r3 (25 Jul 2002)
 
