@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/prosper
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/ChangeLog,v 1.14 2004/12/28 21:26:26 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/ChangeLog,v 1.15 2005/04/03 06:03:34 j4rg0n Exp $
+
+  03 Apr 2005; Lina Pezzella <j4rg0n@gentoo.org> prosper-1.5-r1.ebuild:
+  Testing ppc-macos. Bug #86077. Thanks to Benjamin Braatz for reporting
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> prosper-1.5-r1.ebuild:
   Stable on amd64.
