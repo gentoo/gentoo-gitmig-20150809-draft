@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.49 2003/07/20 18:16:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.50 2003/07/21 11:15:59 solar Exp $
+
+  21 Jul 2003; <solar@gentoo.org> util-linux-2.11z-r7.ebuild:
+  verified -fPIC works with this pkg on x86, sparc64, ppc and hppa
 
   20 Jul 2003; Martin Schlemmer <azarah@gentoo.org>
   util-linux-2.11z-r7.ebuild, files/util-linux-2.11z-01-nfsv4-crypt.dif:
