@@ -1,8 +1,18 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.28 2003/02/15 16:53:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.29 2003/02/24 19:58:29 phoenix Exp $
+
+*transcode-0.6.3 (24 Feb 2003)
+
+  24 Feb 2003; phoen][x <phoenix@gentoo.org> transcode-0.6.3.ebuild,
+  files/digest-transcode-0.6.3 :
+  Version bump. This closes bug #14833.
 
 *transcode-0.6.3.20030116-r1 (13 Feb 2003)
+
+  24 Feb 2003; phoen][x <phoenix@gentoo.org> :
+  Ebuild has been masked (it'll be deleted later) to avoid
+  downgrade problems (in portage, 0.6.3.* > 0.6.3).
 
   13 Feb 2003; Nick Hadaway <raker@gentoo.org>
   transcode-0.6.3.20030116-r1.ebuild,
@@ -11,6 +21,12 @@
   doesn't appear to be detected with mplayer-0.90_rc2 but is
   with _rc3...
 
+  13 Feb 2003; Nick Hadaway <raker@gentoo.org>
+  transcode-0.6.3.20030116-r1.ebuild,
+  files/digest-transcode-0.6.3.20030116-re :
+  Library support appears now to complete. :)  Depending on the
+  hopefully soon to be marked stable series 10 of netpbm.
+
   13 Feb 2003; Mark Guertin <gerk@gentoo.org> transcode-0.6.0.ebuild transcode-0.6.1-r1.ebuild
   transcode-0.6.2.20021114.ebuild transcode-0.6.2.ebuild transcode-0.6.3.20021205-r1.ebuild
   transcode-0.6.3.20021219.ebuild transcode-0.6.3.20030116.ebuild :
@@ -18,24 +34,18 @@
 
 *transcode-0.6.3.20030116 (13 Feb 2003)
 
-  13 Feb 2003; phoen][x <phoenix@gentoo.org> transcode-0.6.3.20030116.ebuild :
-  Removed "-mfpmath=sse" and "-fPic" from C(XX)FLAGS - these setting caused a 
-  break in the compilation. See bug #14920 for more information.
-
-*transcode-0.6.3.20030116-r1 (13 Feb 2003)
-
-  13 Feb 2003; Nick Hadaway <raker@gentoo.org>
-  transcode-0.6.3.20030116-r1.ebuild,
-  files/digest-transcode-0.6.3.20030116-re :
-  Library support appears now to complete. :)  Depending on the
-  hopefully soon to be marked stable series 10 of netpbm.
-
-*transcode-0.6.3.20030116 (19 Jan 2003)
+  24 Feb 2003; phoen][x <phoenix@gentoo.org> :
+  Ebuild has been masked (it'll be deleted later) to avoid
+  downgrade problems (in portage, 0.6.3.* > 0.6.3).
 
   19 Jan 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.3.20030116.ebuild files/digest-transcode-0.6.3.20030116 ChangeLog :
   Version bumped. Closes #14066.
 
 *transcode-0.6.3.20021219 (19 Jan 2003)
+
+  24 Feb 2003; phoen][x <phoenix@gentoo.org> :
+  Ebuild has been masked (it'll be deleted later) to avoid
+  downgrade problems (in portage, 0.6.3.* > 0.6.3).
 
   19 Jan 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.3.20021219.ebuild files/digest-transcode-0.6.3.20021219 ChangeLog :
   Version bumped. Now works without avifile !!!. Closes #12471.
@@ -45,10 +55,18 @@
 
 *transcode-0.6.3.20021205-r1 (19 Jan 2003)
 
+  24 Feb 2003; phoen][x <phoenix@gentoo.org> :
+  Ebuild has been masked (it'll be deleted later) to avoid
+  downgrade problems (in portage, 0.6.3.* > 0.6.3).
+
   19 Jan 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.3.20021205-r1.ebuild files/digest-transcode-0.6.3.20021205-r1 ChangeLog :
   Now works without avifile !!! and supports subtitles. Closes #12452. 
 
 *transcode-0.6.3.20021205 (11 Dec 2002)
+
+  24 Feb 2003; phoen][x <phoenix@gentoo.org> :
+  Version is not in portage anymore. cvs log shows that mholzer deleted this version
+  on Jan 19 2003.
 
   11 Dec 2002; B.Lauwers <blauwers@gentoo.org> Changelog, transcode-0.6.3.20021205.ebuild :
   Bumped to new version per Bug#11114
