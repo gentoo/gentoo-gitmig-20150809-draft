@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.20 2003/09/07 18:55:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.21 2003/10/04 18:44:47 livewire Exp $
+
+*gs-sources-2.4.23_pre6 (04 Oct 2003)
+
+  04 Oct; Bob Johnson <livewire@gentoo.org>
+	- new patchset to get rolling again
+	- freeswan-2.02,evms,3.5-useraddress,preempt,xfs,ecc,bootsplash,win4lin
 
 gs-sources-2.4.22_pre2 (29 June 2003)
 
