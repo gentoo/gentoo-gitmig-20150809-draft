@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0-r2.ebuild,v 1.12 2004/12/23 23:21:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0-r2.ebuild,v 1.13 2005/01/12 14:31:41 vapier Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 
@@ -13,12 +13,14 @@ DESCRIPTION="Kernel module tools for the development kernel >=2.5.48"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/rusty/modules"
 SRC_URI="mirror://kernel/linux/kernel/people/rusty/modules/${MYP}.tar.bz2
 	mirror://kernel/linux/kernel/people/rusty/modules/old/${MYP}.tar.bz2
-	!no-old-linux? ( mirror://kernel/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2 )"
+	mirror://kernel/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2"
+#	!no-old-linux? ( mirror://kernel/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
-IUSE="no-old-linux"
+IUSE=""
+#IUSE="no-old-linux"
 
 DEPEND="virtual/libc
 	sys-libs/zlib
@@ -36,11 +38,11 @@ src_unpack() {
 	# together.
 	#
 	# <drobbins@gentoo.org> (26 Mar 2003)
-	if ! use no-old-linux ; then
+#	if ! use no-old-linux ; then
 		cd ${WORKDIR}/modutils-${MODUTILS_PV}
 		epatch ${FILESDIR}/modutils-2.4.22-no-above-below.patch
 		epatch ${FILESDIR}/modutils-2.4.27-gcc34.patch
-	fi
+#	fi
 
 	# Support legacy .o modules
 	cd ${S}; epatch ${FILESDIR}/${PN}-0.9.15-legacy-modext-support.patch
@@ -58,15 +60,15 @@ src_unpack() {
 
 	cd ${S}
 	gnuconfig_update
-	if ! use no-old-linux ; then
+#	if ! use no-old-linux ; then
 		cp config.{guess,sub} ${WORKDIR}/modutils-${MODUTILS_PV}/
-	fi
+#	fi
 }
 
 src_compile() {
 	filter-flags -fPIC
 
-	if ! use no-old-linux ; then
+#	if ! use no-old-linux ; then
 		einfo "Building modutils..."
 		cd ${WORKDIR}/modutils-${MODUTILS_PV}
 		econf \
@@ -78,7 +80,7 @@ src_compile() {
 		local mymake=""
 		[ "${ARCH}" = "hppa" ] && mymake="ARCH=hppa"
 		emake ${mymake} || die "emake modutils failed"
-	fi
+#	fi
 
 	einfo "Building module-init-tools..."
 	cd ${S}
@@ -90,7 +92,7 @@ src_compile() {
 }
 
 src_install() {
-	if ! use no-old-linux ; then
+#	if ! use no-old-linux ; then
 		local mymake=""
 		[ "${ARCH}" = "hppa" ] && mymake="ARCH=hppa"
 		cd ${WORKDIR}/modutils-${MODUTILS_PV}
@@ -132,14 +134,15 @@ src_install() {
 			dosym insmod.old /sbin/${f}
 			dosym insmod.static.old /sbin/${f}.static
 		done
-	fi
+#	fi
 
 	cd ${S}
 	einstall prefix=${D}
 
 	# Install compat symlink
 	dosym ../bin/lsmod /sbin/lsmod
-	use no-old-linux || dosym ../sbin/insmod.old /bin/lsmod.old
+	#use no-old-linux || 
+	dosym ../sbin/insmod.old /bin/lsmod.old
 	# Install the modules.conf2modprobe.conf tool, so we can update
 	# modprobe.conf.
 	into /

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/module-init-tools
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.74 2004/12/23 23:21:01 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.75 2005/01/12 14:31:41 vapier Exp $
+
+  12 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  module-init-tools-3.0-r2.ebuild, module-init-tools-3.1.ebuild:
+  Remove USE=no-old-linux until modules-update can be updated to use 2.6 depmod.
 
   23 Dec 2004; Mike Frysinger <vapier@gentoo.org>
   +files/modutils-2.4.27-gcc34.patch, module-init-tools-3.0-r2.ebuild,
