@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtifiles/libtifiles-0.5.1.ebuild,v 1.2 2003/09/08 07:19:26 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtifiles/libtifiles-0.5.1.ebuild,v 1.3 2003/11/04 11:14:40 phosphan Exp $
 
 DESCRIPTION="libtifiles is a necessary library for the TiLP calculator linking program."
 HOMEPAGE="http://tilp.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tilp/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 # Only tested on x86...
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="dev-libs/libticables"
 
