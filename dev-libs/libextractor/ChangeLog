@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libextractor
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/ChangeLog,v 1.15 2004/04/26 00:58:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/ChangeLog,v 1.16 2004/04/28 18:31:01 squinky86 Exp $
+
+*libextractor-0.3.0 (28 Apr 2004)
+
+  28 Apr 2004; Jon Hood <squinky86@gentoo.org> libextractor-0.3.0.ebuild:
+  version bump; closing 48171
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> libextractor-0.2.6.ebuild:
   Add die following econf for bug 48950
