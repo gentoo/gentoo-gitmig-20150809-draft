@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0.ebuild,v 1.2 2002/12/30 21:39:00 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0.ebuild,v 1.3 2002/12/31 00:21:48 rphillips Exp $
 
 IUSE="apache2 freetype postgres tiff libwww nls jpeg ssl gd oci8 mysql X gdbm curl imap png xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -61,7 +61,6 @@ RDEPEND="
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
 	cd ${S}
-	echo ${S}
 
         # Configure Patch for wired uname -a
 	mv configure configure.old
@@ -70,7 +69,7 @@ src_unpack() {
 
 	# fix PEAR installer
 	cp pear/PEAR/Registry.php pear/PEAR/Registry.old
-	sed "s:\$ds = DIRECTORY_SEPARATOR:\$ds = DIRECTORY_SEPARATOR;\$pear_install_dir = \'$WORKDIR/../image/\'.\$pear_install_dir:g" pear/PEAR/Registry.old > pear/PEAR/Registry.php
+	sed "s:\$ds = DIRECTORY_SEPARATOR:\$ds = DIRECTORY_SEPARATOR;\$pear_install_dir = \'$D/\'.\$pear_install_dir:g" pear/PEAR/Registry.old > pear/PEAR/Registry.php
 
 	#if [ "`use java`" ] ; then
 
@@ -204,14 +203,13 @@ src_compile() {
 	make || die "compile problem"
 }
 
-
+ 
 src_install() {
-	export INSTALL_ROOT=${D}
- 	make INSTALL_ROOT=${D} install-pear || die
+	# disable pear for now.
+ 	# make INSTALL_ROOT=${D} install-pear || die
 
 	dodoc CODING_STANDARDS LICENSE EXTENSIONS 
-	dodoc RELEASE_PROCESS README.* TODO NEWS
-	dodoc ChangeLog* *.txt
+	dodoc README.* TODO NEWS
 
 	cat php.ini-dist | sed "s/register_globals = Off/register_globals = On/g" > php.ini
 	insinto /etc/php4
@@ -250,7 +248,7 @@ pkg_postinst() {
 		einfo "automagically and setup Apache to load php when it starts."
 	fi
 	einfo
-	einfo "Please remeber:"
+	einfo "Please remember:"
 	einfo "This install of PHP has set register_globals = On (lower security)"
 	einfo "Please read http://www.php.net/release_4_1_2.php"
 	einfo "(Section: External variables) for further information."
