@@ -1,12 +1,17 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.14 2003/03/14 07:10:02 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.15 2003/06/02 20:16:36 drobbins Exp $
 
-  14 Mar 2003; Daniel Robbins <drobbins@gentoo.org> flac-1.1.0.ebuild: 
-  added dependency on id3lib to (R)DEPEND.
+  02 Jun 2003; Daniel Robbins <drobbins@gentoo.org> flac-1.1.0.ebuild: xmms USE
+  won't be considered if X USE isn't set (to help people who like to do -X and
+  be safe;) moved libtool eclass inherit line to later in the ebuild so it's
+  after the DEPEND/RDEPEND defs. Also unmasking on Alpha.
   
-  10 Feb 2003; Aron Griffis <agriffis@gentoo.org> flac-1.1.0.ebuild :
-  Add ~alpha to KEYWORDS
+  14 Mar 2003; Daniel Robbins <drobbins@gentoo.org> flac-1.1.0.ebuild: added
+  dependency on id3lib to (R)DEPEND.
+  
+  10 Feb 2003; Aron Griffis <agriffis@gentoo.org> flac-1.1.0.ebuild : Add
+  ~alpha to KEYWORDS
 
 *flac-1.1.0 (29 Jan 2003)
 
