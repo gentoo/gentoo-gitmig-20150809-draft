@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/treecc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/ChangeLog,v 1.10 2004/08/08 07:05:03 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/ChangeLog,v 1.11 2004/08/10 11:09:16 scandium Exp $
+
+  10 Aug 2004; Rainer Groesslinger <scandium@gentoo.org> treecc-0.3.2.ebuild:
+  stable on all architectures
+  (no changes that affect code generation in this release)
 
 *treecc-0.3.2 (08 Aug 2004)
 
