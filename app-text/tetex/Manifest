@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 58716a9d3a9d6afa8adb1f816a51b4cf ChangeLog 15810
+MD5 448ae9488ef41cfef17fbafcce0afa05 ChangeLog 15963
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 8f27cd5e7c06b0c37851607799f69316 tetex-1.0.7-r13.ebuild 4770
-MD5 ce42b172448e218ca9235bef316239a6 tetex-3.0-r1.ebuild 2126
+MD5 7c26bd1a9d2cb0677c5f011e638f378f tetex-3.0-r1.ebuild 2125
 MD5 3cbcc333592523639a4244772e6d86b3 tetex-2.0.2-r6.ebuild 1170
 MD5 18a2c88ee01a228f443743b3cbf2a234 tetex-2.0.2-r4.ebuild 611
 MD5 0540c1a933a0b1285ea70403d50fe6f0 tetex-2.0.2-r5.ebuild 1161
@@ -25,7 +25,7 @@ MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCSrIgVWNWqTUmv+0RAteQAKCCxEcU1BJtHChTEwhWnwqmD7VwhwCggmFV
-mpC2gCu8aksahoM1Oejh5Dw=
-=0DGl
+iD8DBQFCTiUAVWNWqTUmv+0RAgrZAJ9Ue/HMuLiwehib0VMnHarpOxwuFwCbBvcY
+BQfisldx29hn3SePEzh4Mu4=
+=DK0P
 -----END PGP SIGNATURE-----
