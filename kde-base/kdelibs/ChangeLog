@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.25 2002/11/13 20:55:15 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.26 2002/11/14 07:38:44 hannes Exp $
+
+*kdelibs-3.0.4-r1 (14 Nov 2002)
+
+  14 Nov 2002; Hannes Mehnert <hannes@gentoo.org> kdelibs-3.0.4-r1.ebuild:
+  this fixes security bug #10707, thanks to n2uro@aol.com (Samuel Greenfeld)
+  for submission
 
   13 Nov 2002; Hannes Mehnert <hannes@gentoo.org> kdelibs-3.1_rc2.ebuild,
   kde-3.1_rc3.ebuild: fixed dependencies, they depend on libxml2-2.4.24,
