@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r5.ebuild,v 1.3 2004/02/06 20:58:22 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r5.ebuild,v 1.4 2004/02/15 09:14:17 spock Exp $
 
 DESCRIPTION="Graphical backgrounds for frame buffer consoles"
 HOMEPAGE="http://linux.tkdack.com/"
@@ -15,12 +15,18 @@ S="${WORKDIR}/${PF}"
 DEPEND=">=media-libs/freetype-2
 	media-libs/libmng"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i 's#$(LIBDIR)/libmng-mini.a#$(LIBDIR)/libmng.a $(LIBDIR)/libjpeg.a#' utils/fbmngplay/Makefile
+}
+
 src_compile() {
 	# compile utils
 	# the util builds but the rc scripts have not been modified
 	# animated boot up require patches to the baselayout package
 	cd ${S}/utils/fbmngplay
-	emake fbmngplay || die
+	emake || die
 
 	cd ${S}/utils/fbtruetype
 	emake || die
@@ -33,6 +39,7 @@ src_install() {
 	# Splash utilities
 	exeinto /sbin
 	doexe ${S}/utils/fbmngplay/fbmngplay
+	doexe ${S}/utils/fbmngplay/fbmngplay.static
 	doexe ${S}/utils/fbtruetype/fbtruetype
 	doexe ${S}/utils/fbtruetype/fbtruetype.static
 	newexe ${S}/utils/splashutils/splash splash.bin
@@ -95,6 +102,10 @@ pkg_postinst() {
 	einfo Run:
 	einfo "    rc-update add bootsplash default"
 	einfo to change the console images after startup
+	echo ""
+	einfo Please note that in case /usr is a separate partition
+	einfo "you'll need to use the statically linked versions of Bootplash"
+	einfo 'utilities (fbmngplay.static, fbtruetype.static) during boot-time.'
 	echo ""
 }
 
