@@ -1,6 +1,11 @@
 # ChangeLog for net-news/slrn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.31 2004/10/17 01:51:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.32 2004/11/12 23:42:55 swegener Exp $
+
+  13 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  -files/0.9.8.1/slrn-0.9.8.1-lastchar.diff,
+  +files/0.9.8.1/slrn-0.9.8.1-lastchar2.diff, slrn-0.9.8.1.ebuild:
+  Updated lastchar patch from upstream.
 
   17 Oct 2004; Sven Wegener <swegener@gentoo.org>
   +files/0.9.8.1/slrn-0.9.8.1-fetch.diff,
