@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.2.ebuild,v 1.3 2003/09/06 22:04:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.2.ebuild,v 1.4 2003/09/09 17:18:08 liquidx Exp $
 
 IUSE="ssl"
 
@@ -79,6 +79,8 @@ src_install() {
 	# mod to keep gnugk happy
 	insinto /usr/share/openh323/src
 	newins ${FILESDIR}/openh323-1.11.7-emptyMakefile Makefile
+	insinto /usr/share/openh323
+	doins version.h
 
 	rm ${D}/usr/lib/libopenh323.so
 	dosym /usr/lib/libh323_${OPENH323_ARCH}.so.${PV} /usr/lib/libopenh323.so
