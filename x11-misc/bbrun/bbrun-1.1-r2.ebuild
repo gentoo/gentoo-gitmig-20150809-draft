@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Craig Joly <joly@ee.ualberta.ca>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.1-r1.ebuild,v 1.2 2001/10/01 00:20:58 lordjoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.1-r2.ebuild,v 1.1 2001/10/06 10:08:20 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="blackbox program execution dialog box"
@@ -9,13 +9,13 @@ SRC_URI="http://bbtools.thelinuxcommunity.org/sources/contrib/${P}.tar.gz"
 HOMEPAGE="http://bbtools.thelinuxcommunity.org/contrib.phtml"
 
 DEPEND=">=x11-wm/blackbox-0.61
-        >=x11-libs/gtk+-1.2.10"
+        >=x11-libs/gtk+-1.2.10-r4"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}/bbrun
 	mv Makefile Makefile.orig
-	try sed '/CFLAGS =/ s:$: -I/usr/X11R6/include/gtk-1.2 -I/usr/include/glib-1.2 '"${CFLAGS}"':' Makefile.orig > Makefile
+	try sed '/CFLAGS =/ s:$: -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 '"${CFLAGS}"':' Makefile.orig > Makefile
 }
 
 src_compile() {
@@ -24,14 +24,14 @@ src_compile() {
 }
 
 src_install () {
-	into /usr/X11R6
+	into /usr
 	dobin bbrun/bbrun
 	dodoc README COPYING
 }
 
 pkg_postinst() {
-	cd ${ROOT}usr/X11R6/bin/wm
+	cd ${ROOT}usr/bin/wm
 	if [ ! "`grep bbrun blackbox`" ] ; then
-	sed -e "s/.*blackbox/exec \/usr\/X11R6\/bin\/bbrun \&\n&/" blackbox | cat > blackbox
+	sed -e "s/.*blackbox/exec \/usr\/bin\/bbrun \&\n&/" blackbox | cat > blackbox
 	fi
 }

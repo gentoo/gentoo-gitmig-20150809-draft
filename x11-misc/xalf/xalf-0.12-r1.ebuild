@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
 # Maintainer: Desktop Team
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xalf/xalf-0.12.ebuild,v 1.1 2001/08/22 10:40:33 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xalf/xalf-0.12-r1.ebuild,v 1.1 2001/10/06 10:08:20 azarah Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -10,8 +10,8 @@ DESCRIPTION="X11 Application Launch Feedback"
 SRC_URI="http://www.lysator.liu.se/~astrand/projects/xalf/${A}"
 HOMEPAGE="http://www.lysator.liu.se/~astrand/projects/xalf/"
 
-DEPEND=">=x11-libs/gtk+-1.2.0
-	gnome? ( >=gnome-base/gnome-core-1.2.2.1
+DEPEND=">=x11-libs/gtk+-1.2.10-r4
+	gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1
 	         gnome-base/control-center )"
 
 src_compile() {
@@ -20,9 +20,9 @@ src_compile() {
 
   if [ "`use gnome`" ]
   then
-	myconf="--prefix=/opt/gnome --enable-capplet"
+	myconf="--prefix=/usr --enable-capplet"
   else
-	myconf="--prefix=/usr/X11R6 --disable-capplet"
+	myconf="--prefix=/usr --disable-capplet"
   fi
 
   ./configure --host=${CHOST} ${myconf} || die "Failed to configure package."
@@ -32,11 +32,7 @@ src_compile() {
 
 src_install() {
 
-  if [ -n "`use gnome`" ] ; then
-  	make prefix=${D}/opt/gnome install || die
-  else
-  	make prefix=${D}/usr/X11R6 install || die
-  fi
+  make prefix=${D}/usr install || die
 
   dodoc AUTHORS COPYING ChangeLog README
 }
