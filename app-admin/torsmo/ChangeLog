@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/torsmo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.16 2004/12/05 20:39:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.17 2004/12/07 21:06:19 dragonheart Exp $
+
+  08 Dec 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/torsmo-0.17-mldonkey.patch, torsmo-0.17-r1.ebuild:
+  Added torsmo-0.17-mldonkey.patch as per bug #73485. Thank to Lloyd
+  <stuff@whatafool.com> for the bug report.
 
   06 Dec 2004; Daniel Black <dragonheart@gentoo.org> torsmo-0.17-r1.ebuild:
   moved from kernel-mod to linux-info eclass as per bug #73472 with patch by dsd.

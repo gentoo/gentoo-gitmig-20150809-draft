@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.17-r1.ebuild,v 1.3 2004/12/05 20:39:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.17-r1.ebuild,v 1.4 2004/12/07 21:06:19 dragonheart Exp $
 
 inherit eutils linux-info
 
@@ -28,8 +28,9 @@ src_unpack() {
 	use mozilla && epatch ${FILESDIR}/${P}-mozilla.patch
 	if kernel_is 2 4
 	then
-		epatch ${FILESDIR}/${P}-kernel2.4.patch
+		epatch ${FILESDIR}/${P}-kernel2.4.patch || die
 	fi
+	epatch ${FILESDIR}/${P}-mldonkey.patch || die
 }
 
 src_install() {
