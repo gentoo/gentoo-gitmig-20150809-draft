@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.2.6.ebuild,v 1.5 2004/07/09 22:53:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.2.6.ebuild,v 1.6 2004/08/02 21:12:09 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -58,7 +58,7 @@ src_install () {
 	rm -f ${D}/usr/share/epic/help/Makefile
 	rm -rf ${D}/usr/share/epic/help/CVS
 
-	chown -R root.root ${D}/usr/share/epic/help
+	chown -R root:root ${D}/usr/share/epic/help
 }
 
 pkg_postinst() {

@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.39 2004/07/29 21:07:35 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.40 2004/08/02 21:12:09 swegener Exp $
+
+*epic4-2.0-r1 (02 Aug 2004)
+
+  02 Aug 2004; Sven Wegener <swegener@gentoo.org> epic4-1.2.6.ebuild,
+  +epic4-2.0-r1.ebuild, -epic4-2.0.ebuild:
+  Revision bump for updated help files and permission issue (bug #59075).
+  Changed the chown from user.group to user:group.
 
   29 Jul 2004; Guy Martin <gmsoft@gentoo.org> epic4-2.0.ebuild:
   Stable on hppa.

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.0.ebuild,v 1.10 2004/07/29 21:07:35 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.0-r1.ebuild,v 1.1 2004/08/02 21:12:09 swegener Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="Epic4 IRC Client"
 HOMEPAGE="http://epicsol.org/"
 SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/${P}.tar.bz2
-	 ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-20040308.tar.gz"
+	 ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-20040801.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
@@ -53,12 +53,12 @@ src_install () {
 	dodoc nicknames outputhelp server_groups SILLINESS TS4
 
 	dodir /usr/share/epic
-	tar zxvf ${DISTDIR}/epic4-help-20040308.tar.gz -C ${D}/usr/share/epic
+	tar zxvf ${DISTDIR}/epic4-help-20040801.tar.gz -C ${D}/usr/share/epic
 
 	rm -f ${D}/usr/share/epic/help/Makefile
 	rm -rf ${D}/usr/share/epic/help/CVS
 
-	chown -R root.root ${D}/usr/share/epic/help
+	chown -R root:root ${D}/usr/share/epic/help
 }
 
 pkg_postinst() {
@@ -71,4 +71,7 @@ pkg_postinst() {
 	if [ ! -f ${ROOT}/usr/share/epic/script/local ]; then
 		cp ${FILESDIR}/local ${ROOT}/usr/share/epic/script/
 	fi
+
+	# Fix for bug 59075
+	chmod 755 ${ROOT}/usr/share/epic/help
 }
