@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-sgml-dtd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/ChangeLog,v 1.14 2003/11/15 02:55:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/ChangeLog,v 1.15 2003/11/15 02:57:04 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org>
+  docbook-sgml-dtd-4.1-r1.ebuild:
+  Stable on ia64
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org>
   docbook-sgml-dtd-3.1-r1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-xml-simple-dtd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.11 2003/09/13 05:59:28 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.12 2003/11/15 02:56:31 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org>
+  docbook-xml-simple-dtd-4.1.2.4.ebuild:
+  Stable on ia64
 
 *docbook-xml-simple-dtd-1.0 (13 Sep 2003)
 
