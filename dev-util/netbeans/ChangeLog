@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.19 2004/06/04 07:58:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.20 2004/06/08 21:33:06 mr_bones_ Exp $
+
+  08 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> netbeans-3.3.2.ebuild,
+  netbeans-3.4.ebuild, netbeans-3.5.ebuild, netbeans-3.6.ebuild:
+  clean older ebuilds
 
   04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> netbeans-3.5.1.ebuild:
   Stable on alpha.
