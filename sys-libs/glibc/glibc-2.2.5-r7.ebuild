@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.20 2002/10/30 02:44:58 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.21 2002/11/02 21:05:19 seemant Exp $
 
 IUSE="nls pic build"
 
@@ -156,7 +156,7 @@ src_unpack() {
 	then
 		einfo "Applying nall's sparc32-semctl patch..."
 		cd ${S} 
-		patch -p1 < ${FILESDIR}/${PV}${P}-sparc32-semctl.patch > /dev/null || die
+		patch -p1 < ${FILESDIR}/${PV}/${P}-sparc32-semctl.patch > /dev/null || die
 	fi
 }
 
