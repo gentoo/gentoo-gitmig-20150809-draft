@@ -1,0 +1,11 @@
+--- src/shar.c.orig	2004-04-06 17:51:40.849154592 -0400
++++ src/shar.c	2004-04-06 17:53:13.843017376 -0400
+@@ -1905,7 +1905,7 @@
+ 	break;
+ 
+       case 'o':
+-	strcpy (output_base_name, optarg);
++	strncpy (output_base_name, optarg, sizeof(output_base_name));
+ 	if (!strchr (output_base_name, '%'))
+ 	  strcat (output_base_name, ".%02d");
+ 	part_number = 0;

@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.3 2004/03/05 18:09:16 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.4 2004/04/06 21:55:33 vapier Exp $
+
+*sharutils-4.2.1-r8 (06 Apr 2004)
+
+  06 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Add buffer size checking #46998 by Florian Schilhabel.
 
   02 Mar 2004; Brian Jackson <iggy@gentoo.org> sharutils-4.2.1-r7.ebuild:
   adding initial s390 support
