@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/haskell-mode
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.4 2004/01/18 17:42:46 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.5 2004/01/18 17:47:39 jbms Exp $
+
+*haskell-mode-1.44-r1 (18 Jan 2004)
+
+  18 Jan 2004; Jeremy Maitin-Shepard <jbms@gentoo.org>
+  haskell-mode-1.44-r1.ebuild, haskell-mode-1.44.ebuild:
+  Revision bump.
 
   18 Jan 2004; Jeremy Maitin-Shepard <jbms@gentoo.org>
   haskell-mode-1.44.ebuild, files/50haskell-mode-gentoo.el:
