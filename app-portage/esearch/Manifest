@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fbb6fe345e65c9b7fa51b2ae10f85067 metadata.xml 166
-MD5 2ec5f82b75fc0ca0070e93a8be263b16 esearch-0.6.2.ebuild 864
-MD5 0733ed23c833279723e3696a8048dabe ChangeLog 3204
 MD5 0813933691562e7c6a3971f1c7f03f59 esearch-0.6.3.ebuild 895
-MD5 5cc41b341ae3198b00e2f8fb353c9658 files/eupdatedb.cron 615
+MD5 2ec5f82b75fc0ca0070e93a8be263b16 esearch-0.6.2.ebuild 864
+MD5 0885967fd235474e03059fd59ddddca1 ChangeLog 3232
+MD5 fbb6fe345e65c9b7fa51b2ae10f85067 metadata.xml 166
 MD5 c86fa62acc6e7a3d1cb984f8a37d005c files/digest-esearch-0.6.2 64
 MD5 53120313045a2fd37eb14c638238e15a files/digest-esearch-0.6.3 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBA/Kt6J2i8a8J4okRAsfCAKCiF/UcjOImxRxf9AZ3JiEHkZKdBgCfc1nB
-bhfEvzicuLGqpR4FutqyXaQ=
-=DPWJ
------END PGP SIGNATURE-----
+MD5 5cc41b341ae3198b00e2f8fb353c9658 files/eupdatedb.cron 615
