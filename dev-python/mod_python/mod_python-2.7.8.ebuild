@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.8.ebuild,v 1.3 2002/11/17 09:13:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.8.ebuild,v 1.4 2002/11/29 11:25:36 woodchip Exp $
 
 DESCRIPTION="Python module for Apache"
 SRC_URI="http://www.modpython.org/dist/${P}.tgz"
@@ -10,8 +10,7 @@ LICENSE="AS-IS"
 KEYWORDS="~x86"
 SLOT="0"
 
-DEPEND=">=net-www/apache-1.3.26-r2
-	dev-lang/python"
+DEPEND="=net-www/apache-1* dev-lang/python"
 
 src_unpack() {
 	unpack ${A}
