@@ -1,3 +1,6 @@
-MD5 4bf09c4c545f6bf52553b1df8e40dfcd ChangeLog 1076
+MD5 c7f549d68db01ab1374aaaca745d4cb5 ChangeLog 1213
 MD5 7cea3c85073f53cd5911bdae985eaeff cook-2.20.ebuild 751
+MD5 9449fc78d8ab61c242ef8da8f244f426 cook-2.24.ebuild 750
+MD5 f5ca48222c20db748f67d924018d9ea2 metadata.xml 1152
+MD5 29e53f56f421381adba874bde0ec4393 files/digest-cook-2.24 61
 MD5 4be1f5bce7cfcda18e62970a88d5e081 files/digest-cook-2.20 61
