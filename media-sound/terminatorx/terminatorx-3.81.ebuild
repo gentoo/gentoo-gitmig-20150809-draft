@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.5 2004/04/01 08:37:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.6 2004/04/03 23:49:04 spyderous Exp $
 
 inherit gnome2
 
@@ -21,7 +21,7 @@ DEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	sox? ( media-sound/sox )
 	>=x11-libs/gtk+-2.2.0
 	>=dev-libs/glib-2.2.0
-	>=x11-base/xfree-4.2.0-r11
+	virtual/x11
 	dev-libs/libxml
 	media-libs/audiofile
 	media-libs/ladspa-sdk

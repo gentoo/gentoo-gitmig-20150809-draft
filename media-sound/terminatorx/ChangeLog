@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/terminatorx
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.7 2004/04/01 08:37:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.8 2004/04/03 23:49:04 spyderous Exp $
+
+  03 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  terminatorx-3.81.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   01 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   terminatorx-3.81.ebuild:
