@@ -1,5 +1,6 @@
-MD5 d1c070f33cf7b08cfd61ec70a1303a40 ipvsadm-1.21.ebuild 947
 MD5 0a1ad0a715a823bb9d0bf55db70a8d3b ChangeLog 1068
 MD5 61203435ed5dc50e2259e1df1322b779 metadata.xml 411
+MD5 d1c070f33cf7b08cfd61ec70a1303a40 ipvsadm-1.21-r1.ebuild 947
 MD5 4701a5d41fbd71b84a132051fba6a024 files/digest-ipvsadm-1.21 63
+MD5 4701a5d41fbd71b84a132051fba6a024 files/digest-ipvsadm-1.21-r1 63
 MD5 8917dc6c5e9896799b461ce56a94d333 files/ipvsadm-init 745
