@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.20 2005/01/27 19:19:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.21 2005/02/21 05:23:32 vapier Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -200,7 +200,7 @@ src_unpack() {
 
 	# Fix a compilation-error on Mac OS X
 	# qmail doesn't run yet on Mac OS X, but this will help in the future
-	if useq macos; then
+	if useq ppc-macos; then
 		epatch ${FILESDIR}/${PVR}/qmail-macos-dns-fix.patch
 	fi
 
