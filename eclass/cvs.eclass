@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.14 2002/09/08 16:17:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.15 2002/09/08 21:21:06 azarah Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -81,6 +81,8 @@ DIR=$DIR"
 	# if ECVS_TOP_DIR is a symlink to a dir, get the real dir's path,
 	# otherwise addwrite() doesn't work
 	if [ -n "$ECVS_TOP_DIR" ]; then
+		# create $ECVS_TOP_DIR if missing
+		[ ! -d $ECVS_TOP_DIR -a ! -L $ECVS_TOP_DIR ] && mkdir -p $ECVS_TOP_DIR
 	    cd -P $ECVS_TOP_DIR
 	    ECVS_TOP_DIR="`pwd`"
 	    cd $OLDPWD
