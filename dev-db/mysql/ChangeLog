@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.131 2004/10/18 17:21:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.132 2004/10/18 20:59:41 kloeri Exp $
+
+  18 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> mysql-4.0.21.ebuild:
+  Stable on alpha, bug 67062.
 
   18 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> mysql-4.0.21.ebuild:
   Stable on sparc wrt #67062
