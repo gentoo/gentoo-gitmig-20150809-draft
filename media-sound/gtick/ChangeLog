@@ -1,11 +1,16 @@
 # ChangeLog for media-sound/gtick
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.1 2003/08/06 11:31:55 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.2 2003/08/09 00:50:29 jje Exp $
+
+  09 Aug 2003; jje <jje@gentoo.org> gtick-0.2.1.ebuild:
+  Version bump and remove hardcoded version number.
+
+  Submitted by: Nicolas GRANDCLAUDE <ngclaude@visitmail.com>
 
 *gtick-0.2.1 (06 Aug 2003)
 
   06 Aug 2003; jje <jje@gentoo.org> gtick-0.2.1.ebuild:
   Initial revision.
   
-  Submitted by Nicolas GRANDCLAUDE <ngclaude@visitmail.com>
+  Submitted by: Nicolas GRANDCLAUDE <ngclaude@visitmail.com>
 
