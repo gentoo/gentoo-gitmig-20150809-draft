@@ -1,0 +1,9 @@
+# ChangeLog for app-text/wv2
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.1 2003/02/25 16:58:25 verwilst Exp $
+
+*wv2-0.0.7 (25 Feb 2003)
+
+  25 Feb 2003: Bart Verwilst <verwilst@gentoo.org> wv2-0.0.7.ebuild
+  New version, initial ebuild in Portage
+
