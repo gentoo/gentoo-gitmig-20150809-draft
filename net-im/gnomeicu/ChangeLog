@@ -1,6 +1,13 @@
 # ChangeLog for net-im/gnomeicu
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.6 2002/07/30 14:28:11 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.7 2002/07/30 18:17:44 stroke Exp $
+
+*gnomeicu-0.98.2-r5 (30 Jul 2002)
+  30 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gnomeicu-0.98.2-r5.ebuild : 
+  Disabled socks5 support. Also fixes bug #3775
+  If socks5 is in USE gnomeicu will not build, failing with the 'undefined 
+  reference to SOCKSinit' error. This is because we don't have anything to 
+  support socks5 in portage as far as I know.
 
 *gnomeicu-0.98.2-r4 (30 Jul 2002)
 

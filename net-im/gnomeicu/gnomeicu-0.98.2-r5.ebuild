@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.2-r3.ebuild,v 1.3 2002/07/17 09:08:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.2-r5.ebuild,v 1.1 2002/07/30 18:17:44 stroke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome ICQ Client"
@@ -15,6 +15,8 @@ DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r2
 	gnome? ( =gnome-base/gnome-panel-1.4* )
 	esd? ( >=media-sound/esound-0.2.23 )"
 
+	# socks5? ( something to support socks5 in portage is needed )
+
 RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
@@ -24,9 +26,14 @@ KEYWORDS="x86 ppc"
 src_compile() {                           
 	local myconf
 
-	use esd || myconf="--disable-esd-test"
+	myconf="--prefix=/usr"
+
+	use esd || myconf="${myconf} --disable-esd-test"
 	
-	use socks5 || myconf="${myconf} --enable-socks5"
+	# Disabling socks5 support. if socks5 is present
+	# in USE, gnomeicu buid will fail. Check ChangeLog
+	# for more info about this issue. stroke@gentoo.org 
+	# use socks5 && myconf="${myconf} --enable-socks5"
 	
 	use nls || ( \
 		myconf="${myconf} --disable-nls"
@@ -46,7 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr \
+	make DESTDIR=${D} \
 	     sysconfdir=${D}/etc \
 	     localstatedir=${D}/var/log	\
 	     install || die
