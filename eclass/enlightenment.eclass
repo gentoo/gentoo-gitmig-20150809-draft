@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.10 2004/02/01 19:37:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.11 2004/02/03 00:01:45 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -19,8 +19,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64"
 IUSE="nls doc"
 
-newdepend "doc? ( app-doc/doxygen )"
-newrdepend "nls? ( sys-devel/gettext )"
+DEPEND="doc? ( app-doc/doxygen )"
+RDEPEND="nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}
 
