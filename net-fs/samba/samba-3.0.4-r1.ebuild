@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.4-r1.ebuild,v 1.2 2004/06/15 02:31:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.4-r1.ebuild,v 1.3 2004/06/18 10:08:52 satya Exp $
 
 inherit eutils
 
@@ -188,6 +188,8 @@ src_compile() {
 	cd ${S}/source
 	gcc ${CFLAGS} client/mount.cifs.c -o bin/mount.cifs
 	assert "mount.cifs compile problem"
+	# build smbget
+	make bin/smbget; assert "smbget compile error"
 
 	# Build selected samba-vscan plugins.
 	if use oav
@@ -212,7 +214,7 @@ src_compile() {
 }
 
 src_install() {
-	local extra_bins="debug2html smbfilter talloctort mount.cifs"
+	local extra_bins="debug2html smbfilter talloctort mount.cifs smbget"
 	#smbsh editreg
 	extra_bins="${extra_bins} smbtorture msgtest masktest locktest \
 		locktest2 nsstest vfstest rpctorture"
@@ -228,9 +230,11 @@ src_install() {
 		einfo "Extra binaries: ${i}"
 	done
 	# Installing these setuid-root allows users to (un)mount smbfs/cifs.
-	fperms 4111 /usr/bin/smbumount
-	fperms 4111 /usr/bin/smbmnt
-	fperms 4111 /usr/bin/mount.cifs
+	for i in /usr/bin/smbumount /usr/bin/smbmnt /usr/bin/mount.cifs
+	do
+		fperms 4111 ${i}
+		einfo "suid: ${i}"
+	done
 	# Nsswitch extensions. Make link for wins and winbind resolvers.
 	exeinto /lib
 	for i in wins winbind

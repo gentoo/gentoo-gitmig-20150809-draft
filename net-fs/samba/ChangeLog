@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.81 2004/06/15 12:46:30 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.82 2004/06/18 10:08:52 satya Exp $
+
+  18 Jun 2004; Christian Andreetta <satya@gentoo.org> samba-3.0.2a-r2.ebuild,
+  samba-3.0.4-r1.ebuild:
+  closing bug #53236 (Jaco Kroon), #53082: smbget and mount.cifs
 
   15 Jun 2004; Christian Andreetta <satya@gentoo.org> samba-3.0.2a-r2.ebuild:
   minor initscript fix (as per bug #53962), oav support fix (#52009, Alessandro

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.2a-r2.ebuild,v 1.12 2004/06/15 12:46:30 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.2a-r2.ebuild,v 1.13 2004/06/18 10:08:52 satya Exp $
 
 inherit eutils
 
@@ -368,6 +368,7 @@ src_install() {
 	# to work transparently with the standard 'mount' command..
 	dodir /sbin
 	dosym /usr/bin/smbmount /sbin/mount.smbfs
+	dosym /usr/bin/mount.cifs /sbin/mount.cifs #see bug #53236
 
 	# make the smb backend symlink for cups printing support..
 	if use cups; then
