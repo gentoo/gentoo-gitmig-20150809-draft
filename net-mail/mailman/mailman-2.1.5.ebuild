@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5.ebuild,v 1.4 2004/06/08 22:03:27 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5.ebuild,v 1.5 2004/06/12 03:33:39 agriffis Exp $
 
 IUSE="apache2"
 
@@ -59,7 +59,7 @@ src_install () {
 	chown -R mailman:mailman ${ID}
 	chmod 2775 ${ID}
 
-	if [ "`use apache2`" ]; then
+	if use apache2; then
 		dodir /etc/apache2/conf/modules.d
 		insinto /etc/apache2/conf/modules.d
 		newins ${FILESDIR}/mailman.conf 50_mailman.conf
@@ -111,7 +111,7 @@ pkg_postinst() {
 	einfo "Setup information, mailman will NOT run unless you follow"
 	einfo "those instructions!"
 	einfo ""
-	if [ ! "`use apache2`" ]; then
+	if ! use apache2; then
 		einfo "It appears that you aren't running apache2..."
 		einfo "ebuild /var/db/pkg/net-mail/${PN}/${PF}.ebuild config"
 		einfo "to add the mailman hooks to your config"
@@ -119,7 +119,7 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	if [ ! "`use apache2`" ]; then
+	if ! use apache2; then
 		einfo "Updating apache config"
 		einfo "added: \"Include  conf/addon-modules/mailman.conf\""
 		einfo "to ${ROOT}etc/apache/conf/apache.conf"

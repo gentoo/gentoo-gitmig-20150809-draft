@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.10.4.ebuild,v 1.4 2004/05/30 19:15:35 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.10.4.ebuild,v 1.5 2004/06/12 03:29:22 agriffis Exp $
 
 IUSE="debug gnutls ipv6 ldap maildir pam postgres sasl ssl vpopmail nopop3d"
 
@@ -76,7 +76,7 @@ src_install () {
 	# Gentoo's default ($HOME/.maildiir/ or /var/spool/mail/$USER)
 	if [ ! -e /etc/dovecot.conf ]; then
 		cd ${D}/etc
-		if [ "`use maildir`" ]; then
+		if use maildir; then
 			sed s/^#default_mail_env.*$/default_mail_env\ =\ maildir:%h\\/.maildir/	dovecot-example.conf > dovecot.conf
 		else
 			sed s/^#default_mail_env.*$/default_mail_env\ =\ mbox:\\/var\\/spool\\/mail\\/%u/ dovecot-example.conf > dovecot.conf
