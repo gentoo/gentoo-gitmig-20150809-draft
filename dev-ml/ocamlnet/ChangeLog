@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.13 2005/03/14 19:45:53 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.14 2005/03/27 15:17:22 mattam Exp $
+
+  27 Mar 2005; Matthieu Sozeau <mattam@gentoo.org> -ocamlnet-0.97.1.ebuild,
+  ocamlnet-0.98.ebuild:
+  Remove old version, latest is stable on ppc.
 
   14 Mar 2005; Matthieu Sozeau <mattam@gentoo.org> ocamlnet-0.98.ebuild:
   Add ~amd64.
