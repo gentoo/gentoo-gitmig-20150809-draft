@@ -567,11 +567,6 @@ app-misc/lphdisk
 # new ebuild.  probably x86-only as well.
 app-misc/mwavem
 
-# <spider@gentoo.org> (19 Jul 2002)
-# new ebuild, waiting for our good ppc guys to test this and sparkle with holy pengin .... whatever
-net-analyzer/driftnet
-
-
 # <chadh@gentoo.org> (18 Jul 2002)
 # new ebuild.  Almost certainly an x86-only package.
 media-libs/libfame
