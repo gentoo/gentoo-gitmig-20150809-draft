@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.3.ebuild,v 1.1 2002/05/20 22:36:33 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.3.ebuild,v 1.2 2002/05/21 00:08:53 wmertens Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities for rescue and embedded systems"
@@ -17,8 +17,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# If the var BUSYBOX_STATIC is set, it will buid a static busybox
-	[ -n "$BUSYBOX_STATIC" ] && myconf="$myconf DOSTATIC=true"
+	use static && myconf="$myconf DOSTATIC=true"
 	emake $myconf || die
 }
 

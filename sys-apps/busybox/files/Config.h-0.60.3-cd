@@ -217,7 +217,7 @@
 #define BB_FEATURE_USE_INITTAB
 //
 //Enable init being called as /linuxrc
-//#define BB_FEATURE_LINUXRC
+#define BB_FEATURE_LINUXRC
 //
 //Have init enable core dumping for child processes (for debugging only) 
 //#define BB_FEATURE_INIT_COREDUMPS
