@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.74-r1.ebuild,v 1.2 2003/12/09 02:36:09 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.74-r1.ebuild,v 1.3 2003/12/12 15:49:47 rizzo Exp $
 
 IUSE="nls perl spell nas ssl mozilla cjk debug"
 
@@ -64,6 +64,10 @@ src_compile() {
 
 	econf ${myconf} || die "Configuration failed"
 	use perl && sed -i -e 's:^\(PERL_MM_PARAMS =.*PREFIX=\)\(.*\):\1'${D}'\2:' plugins/perl/Makefile
+
+	einfo "Replacing -Os CFLAG with -O2"
+	replace-flags -Os -O2
+
 	emake || MAKEOPTS="${MAKEOPTS} -j1" emake || die "Make failed"
 
 	use ssl && {
