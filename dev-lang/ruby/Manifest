@@ -2,10 +2,10 @@ MD5 a9a4efafdafd29c05cb3fd6244f89113 ruby-1.8.0_pre4.ebuild 1638
 MD5 03860f14dbfb94fec12a4b8579f7bc1f ruby-1.8.0_pre2-r1.ebuild 1380
 MD5 0403378153bb43e860eff9011b1ad607 ruby-1.8.0_pre3.ebuild 1643
 MD5 59904ebd31b17bdf842d34ecba1f4387 ruby-1.8.0_pre2-r3.ebuild 1524
-MD5 a9a4efafdafd29c05cb3fd6244f89113 ruby-1.8.0_pre5.ebuild 1638
+MD5 e45d9e8df05296921d6f36ffc205d8a9 ruby-1.8.0_pre5.ebuild 1643
 MD5 34491a182f5f81f2468d799ee05dfd5d ruby-1.6.8-r1.ebuild 875
 MD5 a357995f80c9f0c2a5c928ccf2e22fb6 ruby-1.6.8.ebuild 750
-MD5 89264cee61d2f1f0db592545907432f8 ChangeLog 3180
+MD5 e130a735fc9ef918e0d6579fba5c5f81 ChangeLog 3307
 MD5 557fc0b69af82ee16ef65e0be0cffb2b ruby-1.8.0_pre2.ebuild 810
 MD5 74581d9cf84f902656ab173bbf9ce48c ruby-1.8.0_pre2-r2.ebuild 1419
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
