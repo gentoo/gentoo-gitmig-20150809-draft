@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.95.ebuild,v 1.1 2005/04/03 06:35:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.95.ebuild,v 1.2 2005/04/04 08:09:06 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -20,6 +20,7 @@ RDEPEND="media-libs/libsdl
 	media-libs/sdl-ttf
 	media-libs/sdl-gfx"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	>=sys-apps/portage-2.0.51"
 
 S="${WORKDIR}/SMC 0.95 Preview 1"
