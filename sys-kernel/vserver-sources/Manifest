@@ -1,20 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 16b5caf0255512f66efe4d5763536503 ChangeLog 2339
+MD5 d5935dfa72808eae9ccbea5a9316a65f ChangeLog 2516
 MD5 aa56cf15a7bbeb714ab4dae1e8c670e5 metadata.xml 546
 MD5 a5ba52ae80eddd196e830c53bbc8ba83 vserver-sources-1.9.3.ebuild 677
-MD5 0522d03565c3ef923e127fec6d3cbce9 vserver-sources-1.9.5_rc1.ebuild 683
 MD5 e0455bb8f024f206a5111df57e058c2c vserver-sources-1.9.4.ebuild 682
 MD5 3405132e37777f939582c127a721cc2b vserver-sources-1.9.5_rc1-r1.ebuild 837
+MD5 0522d03565c3ef923e127fec6d3cbce9 vserver-sources-1.9.5_rc1.ebuild 683
+MD5 589282f93827230b8bc5f495ff66d7fc vserver-sources-1.9.5.ebuild 757
 MD5 90fec4ec5fc9d3ea8bf24823820837f7 files/digest-vserver-sources-1.9.3 135
+MD5 e17b723d0c9c7c910b80b441f95f45f0 files/digest-vserver-sources-1.9.4 207
 MD5 8bbd40c27b5573f623ab96abeaa8b118 files/digest-vserver-sources-1.9.5_rc1 141
 MD5 593cceddac697a04ab9caa51ecfdd0cc files/digest-vserver-sources-1.9.5_rc1-r1 240
-MD5 e17b723d0c9c7c910b80b441f95f45f0 files/digest-vserver-sources-1.9.4 207
+MD5 b50468c5d8f1620c185243b906ee98de files/digest-vserver-sources-1.9.5 140
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCL/F1ArHZZzCEUG0RArKEAJ4se4wqtwhcSddxlZcyNyxfNozgcgCdF1IM
-zzObs6lP2OhlHSzLDIQeyrM=
-=PgeY
+iD8DBQFCSWORmPFBzbX68WERAjJRAJ0b3lml3AmFLtEbGm0Xde7sw5jPDACeLGX9
+61eRuSPVW+ABXnXu2vFncJI=
+=8XCc
 -----END PGP SIGNATURE-----
