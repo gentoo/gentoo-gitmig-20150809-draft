@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r10.ebuild,v 1.6 2005/01/29 21:18:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r10.ebuild,v 1.7 2005/02/06 09:22:13 mrness Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -110,11 +110,11 @@ src_install() {
 	doins ${FILESDIR}/${PV}/chat-default
 
 	insopts -m0755
-	doins ${FILESDIR}/${PV}/ip-up
-	doins ${FILESDIR}/${PV}/ip-down
+	doins ${FILESDIR}/ip-up
+	doins ${FILESDIR}/ip-down
 
 	exeinto /etc/init.d/
-	doexe ${FILESDIR}/${PV}/net.ppp0
+	doexe ${FILESDIR}/net.ppp0
 
 	if useq pam; then
 		insinto /etc/pam.d
@@ -124,7 +124,7 @@ src_install() {
 
 	insinto /etc/conf.d
 	insopts -m0600
-	newins ${FILESDIR}/${PV}/confd.ppp0 net.ppp0
+	newins ${FILESDIR}/confd.ppp0 net.ppp0
 
 	dolib.so pppd/plugins/minconn.so
 	dolib.so pppd/plugins/passprompt.so

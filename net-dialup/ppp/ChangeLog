@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.99 2005/01/29 21:18:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.100 2005/02/06 09:22:13 mrness Exp $
+
+  06 Feb 2005; Alin Nastac <mrness@gentoo.org> files/confd.ppp0,
+  files/ip-down, files/ip-up, files/net.ppp0, -files/2.4.2/confd.ppp0,
+  -files/2.4.2/ip-down, -files/2.4.2/ip-up, -files/2.4.2/net.ppp0,
+  -files/2.4.3/confd.ppp0, -files/2.4.3/ip-down, -files/2.4.3/ip-up,
+  -files/2.4.3/net.ppp0, ppp-2.4.2-r10.ebuild, ppp-2.4.3-r1.ebuild,
+  ppp-2.4.3.ebuild:
+  Use same scripts in all versions.
 
   30 Jan 2005; Daniel Black <dragonheart@gentoo.org> ppp-2.4.1-r14.ebuild,
   ppp-2.4.2-r10.ebuild, ppp-2.4.3-r1.ebuild, ppp-2.4.3.ebuild:
@@ -15,7 +23,7 @@
 
   09 Jan 2005; Alin Nastac <mrness@gentoo.org>
   +files/2.4.3/fixes-from-upstream-cvs.patch, +ppp-2.4.3-r1.ebuild:
-  Add fixes from upstream CVS for bug IDs 1103-1106. See bug #58275 and #74093..
+  Add fixes from upstream CVS for bug IDs 1103-1106. See bug #58275 and #74093.
 
   08 Jan 2005; Alin Nastac <mrness@gentoo.org> -files/ppp-2.4.1-r10.patch,
   -ppp-2.4.2-r9.ebuild:

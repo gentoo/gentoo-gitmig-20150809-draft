@@ -1,8 +1,7 @@
 # /etc/conf.d/net.ppp0:
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/confd.ppp0,v 1.2 2004/07/18 03:50:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/confd.ppp0,v 1.3 2005/02/06 09:22:13 mrness Exp $
 
 # Config file for /etc/init.d/net.ppp0
-
 
 PEER="MyPeer"                   # Define peer (aka ISP)
 DEBUG="no"                      # Turn on debugging
@@ -21,6 +20,7 @@ PASSWORD="passwd"               # Your password/secret.  Ugly I know, but i
                                 # on.  700 permission on /etc/init.d/net.ppp0
                                 # should be enouth for now.
 NUMBER="9180000"                # The telephone number of your ISP
+                                # leave blank for leased-line operation.
 REMIP=""                        # The ip of the remote box if it should be set
 NETMASK=""                      # Netmask
 IPADDR=""                       # Our IP if we have a static one
@@ -31,29 +31,19 @@ RETRYTIMEOUT="60"               # Retry timeout for when ONDEMAND="yes" or
 IDLETIMEOUT="600"               # Idle timeout for when ONDEMAND="yes"
 PEERDNS="no"                    # Should pppd set the peer dns?
 
-# This does not currently work due to a bug in pppd (I think)
-FWSCRIPT="/etc/init.d/firewall" # Optional FW script that pppd should start
-                                # and stop when the link comes up or drop.
-                                # It should be a script that takes one
-                                # argument, namely the action that should
-                                # be taken (start|stop).  The name of the
-                                # external interface on which the firewall
-                                # should be activated, should be hardcoded
-                                # into the script (you will tipically have
-                                # fw.ppp0, fw.ppp1, etc if you have more than
-                                # one ppp interface).
-                                #
-                                # called: ${FWSCRIPT} [start|stop]
-
 AUTOCFGFILES="yes"              # By default this scripts will generate
                                 # /etc/ppp/chat-isp, /etc/ppp/chap-secrets,
                                 # /etc/ppp/pap-secrets and /etc/ppp/peers/isp
-                                # automagically.  Set to "no" if you experience
+                                # automatically.  Set to "no" if you experience
                                 # problems, or need specialized scripts.  You
                                 # will have to create these files by hand then.
-                                # Also, the FWSCRIPT feature will not work.
+
+AUTOCHATSCRIPT="yes"            # By default this script iwll generate
+                                # /etc/ppp/chat-${PEER} automatically. Set to "no"
+                                # if you experience problems, or need specialized
+                                # scripts. You will have to create these files by
+                                # hand then.
 
 
 # Directory where the templates is stored
 TEMPLATEDIR=/etc/ppp
-
