@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.6 2002/12/07 05:21:33 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.7 2003/01/07 15:58:27 aliz Exp $
 
 S=${WORKDIR}/logcheck-${PV}
 DESCRIPTION="LogSentry automatically monitors your system logs and mails security violations to you on a periodic basis"
@@ -13,7 +13,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc sparc"
 
 DEPEND="sys-apps/supersed"
-RDEPEND=""
+RDEPEND="${DEPEND}
+	net-mail/mailx"
 
 src_compile() {
 
