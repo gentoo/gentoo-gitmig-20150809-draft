@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.21 2003/07/30 20:54:12 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.22 2003/08/02 20:48:48 seemant Exp $
+
+*openafs-1.2.9 (02 Aug 2003)
+
+  02 Aug 2003; Seemant Kulleen <seemant@gentoo.org> openafs-1.2.9.ebuild,
+  openafs-1.3.2-r1.ebuild, openafs-1.3.2.ebuild:
+  new version in the stable 1.2 series. Ebuild by Bernhard Schmidt
+  <berni@birkenwald.de> in bug #21688 opened by: Ian <ian@stacken.kth.se>. This
+  ebuild was extensively tested and cleaned up by: Steven Jenkins
+  <steven.jenkins@ieee.org>
 
   12 Jun 2003; <msterret@gentoo.org> openafs-1.2.8.ebuild,
   openafs-1.3.2-r1.ebuild, openafs-1.3.2.ebuild:
