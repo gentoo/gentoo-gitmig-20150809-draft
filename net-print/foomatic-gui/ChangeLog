@@ -1,0 +1,8 @@
+# ChangeLog for net-print/foomatic-gui
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/ChangeLog,v 1.1 2004/08/04 15:35:39 lanius Exp $
+
+  04 Aug 2004; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
+  initial import, thx to Martin Klaffenboeck <martin.klaffenboeck@gmx.at>,
+  bug #40163
+
