@@ -1,19 +1,22 @@
 # ChangeLog for dev-php/asp2php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/asp2php/ChangeLog,v 1.3 2003/10/14 03:41:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/asp2php/ChangeLog,v 1.4 2003/11/10 17:49:42 coredumb Exp $
 
   13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   add metadata.xml
 
 *asp2php-0.76.17-r1 (02 Aug 2003)
 
-  02 Aug 2002; Tal Peer <coredumb@gentoo.rog> asp2php-0.76.17-r1.ebuild:
+  10 Oct 2003; Tal Peer <coredumb@gentoo.org> asp2php-0.76-r1.ebuild:
+  x86 stable.
+
+  02 Aug 2003; Tal Peer <coredumb@gentoo.org> asp2php-0.76.17-r1.ebuild:
   Fixed src_install's wrong behaviour - it installed the binary twice, once in 
   /bin and once in /usr/bin.
 
 *asp2php-0.76.17 (02 Aug 2003)
 
-  02 Aug 2002; Tal Peer <coredumb@gentoo.rog> asp2php-0.76.17.ebuild:
+  02 Aug 2003; Tal Peer <coredumb@gentoo.org> asp2php-0.76.17.ebuild:
   Initial import. Contributed by: Lin Zhemin <ljm@ljm.idv.tw> (Fixes bug #25738).
   
   

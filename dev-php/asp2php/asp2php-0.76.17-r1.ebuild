@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/asp2php/asp2php-0.76.17-r1.ebuild,v 1.2 2003/09/08 04:45:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/asp2php/asp2php-0.76.17-r1.ebuild,v 1.3 2003/11/10 17:49:42 coredumb Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="ASP to PHP translator"
@@ -8,7 +8,7 @@ SRC_URI="http://www.mikekohn.com/asp2php/${P}.tar.gz"
 HOMEPAGE="http://asp2php.naken.cc/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 src_unpack() {
 	unpack ${P}.tar.gz
