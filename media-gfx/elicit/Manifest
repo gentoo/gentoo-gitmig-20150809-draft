@@ -1,4 +1,14 @@
-MD5 f6e237b55ddc1b5141f708432fdc7319 elicit-0.8.0.20040522.ebuild 543
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4380fef4dee07977eec358da3a63cc10 ChangeLog 335
+MD5 511134abc22b5b180bc0e83fe795c216 elicit-0.8.0.20040710.ebuild 541
 MD5 e278aab9096d59677b60b477be54fec4 metadata.xml 287
-MD5 6a7443ee0cd96aba139d05d7182dd877 files/digest-elicit-0.8.0.20040522 74
+MD5 aa9372520f2ef7a8e8ffc9e1eb84fbb6 files/digest-elicit-0.8.0.20040710 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA8iI4HTu7gpaalycRAqM1AJ47kgTNJpQG5t60F5QMnMh4CcJp2QCguWek
+t4rTHW8MM82K0/IW0gVWFGk=
+=ZNij
+-----END PGP SIGNATURE-----
