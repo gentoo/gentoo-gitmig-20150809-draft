@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.42-r1.ebuild,v 1.2 2004/04/27 21:07:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.42-r1.ebuild,v 1.3 2004/06/04 04:39:36 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
 HOMEPAGE="http://www.snes9x.com/"
@@ -52,13 +52,16 @@ src_compile() {
 				target=snes9x;;
 		esac
 		# this stuff is ugly but hey the build process sucks ;)
+		OPTFLAGS="${CXXFLAGS} -DHAVE_LIBPNG" \
 		egamesconf \
 			--with-screenshot \
 			$(use_with joystick) \
 			${vidconf} \
 			$(use_with x86 assembler) \
 				|| die
-		emake ${target} || die "making ${target}"
+		emake \
+			EXTRALIBS="$(libpng-config --libs) -lpthread" \
+			${target} || die "making ${target}"
 		mv ${target} "${S}/mybins/"
 		cd "${WORKDIR}"
 		rm -rf "${S}/snes9x"
@@ -67,7 +70,7 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin mybins/*
+	dogamesbin mybins/* || die "dogamesbin failed"
 	dodoc faqs.txt readme.txt readme.unix snes9x/*.txt
 	prepgamesdirs
 }

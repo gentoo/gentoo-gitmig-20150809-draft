@@ -1,5 +1,5 @@
-MD5 1bb23f19915cf16d9fd231bf26b2fd4a ChangeLog 2726
-MD5 3d86381a9fcea9a3ff57927b83989c02 snes9x-1.42-r1.ebuild 1694
+MD5 f904bbaab28248cf9b5d5a44d4143dcb ChangeLog 2836
+MD5 1951a2a2ded803d369d70c63ce060938 snes9x-1.42-r1.ebuild 1818
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 12216340a66b7cfccf1891ca058d9335 files/nojoy.patch 507
 MD5 82847f439abd1f8ae87876515e60ccdf files/1.42-system-zlib.patch 2004
