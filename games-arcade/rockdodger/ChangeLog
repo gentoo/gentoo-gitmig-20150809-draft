@@ -1,6 +1,14 @@
 # ChangeLog for games-arcade/rockdodger
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/ChangeLog,v 1.4 2004/11/11 00:32:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/ChangeLog,v 1.5 2004/12/02 01:07:43 mr_bones_ Exp $
+
+*rockdodger-0.6.0a-r1 (01 Dec 2004)
+
+  01 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/0.6.0a-sec.patch, +rockdodger-0.6.0a-r1.ebuild,
+  -rockdodger-0.6.0a.ebuild:
+  security patch to fix possible local exploit from users in the games group
+  (bug #73060); patch from Ulf Harnhammar
 
   11 Nov 2004; Joseph Jezak <josejx@gentoo.org> rockdodger-0.6.0a.ebuild:
   Marked ppc stable.

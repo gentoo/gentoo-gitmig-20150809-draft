@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/rockdodger-0.6.0a.ebuild,v 1.5 2004/11/11 00:32:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/rockdodger-0.6.0a-r1.ebuild,v 1.1 2004/12/02 01:07:43 mr_bones_ Exp $
 
 inherit games
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	GAME_DEST_DIR="${GAMES_DATADIR}/${PN}"
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Modify highscores & data directory and add our CFLAGS to the Makefile
 	sed -i \
@@ -39,6 +39,7 @@ src_unpack() {
 	sed -i \
 		-e "s:512:1024:" sound.c \
 			|| die "sed sound.c failed"
+	epatch "${FILESDIR}/${PV}-sec.patch"
 }
 
 src_install() {
