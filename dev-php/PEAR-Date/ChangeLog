@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Date
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.5 2003/10/14 03:41:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.6 2003/12/23 17:01:36 coredumb Exp $
+
+*PEAR-Date-1.4 (23 Dec 2003)
+
+  23 Dec 2003; Tal Peer,,, <coredumb@gentoo.org> PEAR-Date-1.4.ebuild:
+  Version bump, uses the new eclass.
 
   13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   add metadata.xml
