@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.16 2004/07/24 18:40:54 erik_swanson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.17 2004/07/26 03:49:58 j4rg0n Exp $
+
+  25 Jul 2004; Lina Pezzella <j4rg0n@gentoo.org>
+  Fixed Manifest.
 
   24 Jul 2004; Erik Swanson <erik@gentoo.org> tor-0.0.7.2.ebuild:
   Added macos to KEYWORDS
