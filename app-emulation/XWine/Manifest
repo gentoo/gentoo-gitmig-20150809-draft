@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 1157650bd4454976f59c4bd2073d3ed5 XWine-0.3.2.ebuild 1105
+MD5 218500fa6ef62551ad4b5ff2726154a2 XWine-0.3.1.ebuild 1037
 MD5 598ce0c1f179f7cf762fd04a8876a176 ChangeLog 1623
-MD5 994d97bf9dc83788b818f7fd5c1db592 XWine-0.3.1.ebuild 1043
-MD5 dfec3795fe1aecbd9aa78a9108cc8778 XWine-0.3.2.ebuild 1111
 MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
+MD5 a593986c3cc61044428d0f01fe06b1aa files/fix-compile.patch 553
 MD5 4837a922513d4f243f19eb64789f2556 files/digest-XWine-0.3.1 66
 MD5 1a3b9953738fd3b0df84b1e7d030932c files/digest-XWine-0.3.2 66
-MD5 a593986c3cc61044428d0f01fe06b1aa files/fix-compile.patch 553
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA22fxHTu7gpaalycRApVRAKDYUiF97TGmO/o8y17KI9J3NKkApgCfbF5J
-ou1qreWCbXRsq7bpbT3qZ0U=
-=9QPT
------END PGP SIGNATURE-----

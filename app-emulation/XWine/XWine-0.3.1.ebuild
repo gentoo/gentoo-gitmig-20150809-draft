@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/XWine-0.3.1.ebuild,v 1.5 2004/06/24 23:46:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/XWine-0.3.1.ebuild,v 1.6 2004/08/21 15:22:50 foser Exp $
 
 DESCRIPTION="GTK+ frontend for Wine"
 HOMEPAGE="http://darken33.free.fr/"
@@ -14,7 +14,7 @@ IUSE="nls"
 DEPEND="=x11-libs/gtk+-1*
 	sys-devel/bison
 	>=gnome-base/gnome-libs-1.4.2
-	>=gnome-base/ORBit-0.5.17
+	=gnome-base/orbit-0*
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${P}_en
