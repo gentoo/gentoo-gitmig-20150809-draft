@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/icets-1.1.ebuild,v 1.3 2003/09/05 23:18:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/icets-1.1.ebuild,v 1.4 2004/03/03 12:50:30 phosphan Exp $
 
 DESCRIPTION="IceWM Theme Editor"
 SRC_URI="mirror://sourceforge/icecc/${P}.tar.bz2"
@@ -9,7 +9,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND=">=qt-3.0.0"
+RDEPEND=">=qt-3.0.0"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 
@@ -18,9 +20,8 @@ src_unpack() {
 
 	# Change the default directory that it looks into to be consistent
 	# with Gentoo's layout
-	cp icets.cpp icets.cpp.orig
-	sed "s:/usr/local/share/icewm/themes:/usr/share/icewm/themes:" \
-		icets.cpp.orig > icets.cpp
+	sed -i -e "s:/usr/local/share/icewm/themes:/usr/share/icewm/themes:" \
+		icets.cpp
 }
 
 src_compile () {
