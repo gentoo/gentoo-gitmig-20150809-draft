@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.30 2003/10/02 22:08:15 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.31 2003/10/24 16:03:02 mholzer Exp $
+
+*alsa-utils-0.9.8 (25 Oct 2003)
+
+  25 Oct 2003; Martin Holzer <mholzer@gentoo.org> alsa-utils-0.9.8.ebuild:
+  Version bumped.
 
   04 Sep 2003; John Mylchreest <johnm@gentoo.org>; files/alsasound:
   Updating init script to load all oss compat modules. not just pcm-oss
