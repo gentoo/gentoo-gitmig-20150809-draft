@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.8.ebuild,v 1.4 2002/06/28 09:13:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.8.ebuild,v 1.5 2002/06/28 10:22:57 trance Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Core components of the GNOME desktop environment"
@@ -10,13 +10,11 @@ SRC_URI="ftp://ftp.yggdrasil.com/mirrors/site/ftp.gnome.org/pub/GNOME/stable/sou
 HOMEPAGE="http://www.gnome.org/"
 
 RDEPEND="=gnome-base/control-center-1.4*
-	 >=gnome-base/libglade-0.17-r1
-	 >=gnome-base/gnome-libs-1.4.1.2-r1
-	 >=media-libs/gdk-pixbuf-0.16.0-r1
-	 cups? ( >=gnome-base/gnome-print-0.35 )
-	 !gnome-base/gnome-session
-	 !x11-terms/gnome-terminal
-	 !gnome-base/gnome-desktop"
+     ( =gnome-base/libglade-0.17*
+       <gnome-base/libglade-0.99.0 )
+     >=gnome-base/gnome-libs-1.4.1.2-r1
+     >=media-libs/gdk-pixbuf-0.16.0-r1"
+
 
 DEPEND="${RDEPEND}
         >=sys-apps/tcp-wrappers-7.6
