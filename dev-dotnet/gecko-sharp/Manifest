@@ -1,6 +1,16 @@
-MD5 2c2f185dc1a87f343b36cfc6153604f7 ChangeLog 2412
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f0ab99570b3660738c26f598b34d4442 ChangeLog 2505
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
+MD5 fa6093ae2df2197985e3652ad352f429 gecko-sharp-0.6.ebuild 755
 MD5 db1be19a20595a792f034d0588335373 gecko-sharp-0.5-r2.ebuild 750
-MD5 5d3053b0b5bd7988c0ee9909f377212e gecko-sharp-0.6.ebuild 749
-MD5 41db66016dd18480802fc0e658a04746 files/digest-gecko-sharp-0.5-r2 67
 MD5 9aa313387703e02ad1bcddcde0729a66 files/digest-gecko-sharp-0.6 67
+MD5 41db66016dd18480802fc0e658a04746 files/digest-gecko-sharp-0.5-r2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCEN1y5mJXAu5GbtIRAsqyAKCCC08fApdoo3h4kxaXu29Cmxr6vQCdGkNO
+4pEMDRVtEosHGIMChYFoNjw=
+=Ymte
+-----END PGP SIGNATURE-----
