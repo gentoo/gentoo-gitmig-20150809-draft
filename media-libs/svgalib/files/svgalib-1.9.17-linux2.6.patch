@@ -121,12 +121,15 @@ diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/kernel25compat.h svgalib-1.9.17
 diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/kernel26compat.h svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/kernel26compat.h
 --- svgalib-1.9.17/kernel/svgalib_helper/kernel26compat.h	1970-01-01 02:00:00.000000000 +0200
 +++ svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/kernel26compat.h	2003-08-03 14:33:28.000000000 +0200
-@@ -0,0 +1,50 @@
+@@ -0,0 +1,49 @@
 +#ifndef minor
 +#define minor(x) MINOR(x)
 +#endif
 +
 +#ifndef KERNEL_VERSION
++# include <linux/version.h>
++#else
++# undef KERNEL_VERSION
 +# include <linux/version.h>
 +#endif
 +
@@ -137,12 +140,8 @@ diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/kernel26compat.h svgalib-1.9.17
 +# endif
 +
 +#define my_remap_page_range(vma, start, ofs, len, prot) remap_page_range(start,ofs,len,prot)
-+# ifdef __KERNEL__
-+  typedef void irqreturn_t;
-+# else
-+#  if LINUX_VERSION_CODE < KERNEL_VERSION(2,4,23)
++# if LINUX_VERSION_CODE < KERNEL_VERSION(2,4,23)
 +   typedef void irqreturn_t;
-+#  endif
 +# endif
 +#else
 +
