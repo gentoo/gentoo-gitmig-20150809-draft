@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-0.9.4-r1.ebuild,v 1.2 2005/02/05 13:53:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-0.9.4-r1.ebuild,v 1.3 2005/02/07 20:35:59 luckyduck Exp $
 
 inherit eutils
 
@@ -36,5 +36,6 @@ src_install() {
 	cd ${D}usr/bin
 	mv ./ifo_dump ./ifo_dump_dvdread
 
+	cd ${S}
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
 }
