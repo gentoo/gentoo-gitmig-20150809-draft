@@ -595,7 +595,7 @@ if [ -n "$MACOS" ] ; then
 	MACOSBOOT="macos=${MACOS}\n"
 fi
 if [ -n "OSX" ] ; then
-	OSXBOOT="osx=${OSX}\n"
+	OSXBOOT="macosx=${OSX}\n"
 fi
 
 
