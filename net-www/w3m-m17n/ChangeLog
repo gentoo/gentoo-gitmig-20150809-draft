@@ -1,6 +1,12 @@
 # ChangeLog for net-www/w3m-m17n
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/ChangeLog,v 1.2 2003/08/12 16:38:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/ChangeLog,v 1.3 2003/08/16 20:49:44 usata Exp $
+
+*w3m-m17n-20030308-r1 (17 Aug 2003)
+
+  17 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> w3m-m17n-20030308-r1.ebuild:
+  Fixed w3mman-m17n default browser path.  Create symlinks to w3m if
+  it is not installed.
 
 *w3m-m17n-0.4.1.20030308 (13 Aug 2003)
 
@@ -12,7 +18,7 @@
 
 *w3m-m17n-20030308 (20 Jun 2003)
 
-  20 Jun 2003; YAMAKURA Makot <yakina@gentoo.org> w3m-m17n-20030308.ebuild,
+  20 Jun 2003; YAMAKURA Makoto <yakina@gentoo.org> w3m-m17n-20030308.ebuild,
   files/digest-w3m-m17n-20030308,ChangeLog,Manifest:
 
   Initial import. Ebuild submitted by Mamoru KOMACHI <usata@sodan.ecc.u-tokyo.ac.jp>.
