@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gift-gnutella
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/ChangeLog,v 1.7 2004/04/20 18:02:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/ChangeLog,v 1.8 2004/04/25 18:50:18 squinky86 Exp $
+
+  25 Apr 2004; Jon Hood <squinky86@gentoo.org>
+  gift-gnutella-0.0.5.ebuild, gift-gnutella-0.0.9.1.ebuild,
+  gift-gnutella-0.0.9.2.ebuild, gift-gnutella-0.0.9.ebuild:
+  fix typos in econf line
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gift-gnutella-0.0.5.ebuild, gift-gnutella-0.0.9.1.ebuild,

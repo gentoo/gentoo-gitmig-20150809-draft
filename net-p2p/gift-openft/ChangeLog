@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gift-openft
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.8 2004/04/20 18:03:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.9 2004/04/25 18:53:33 squinky86 Exp $
+
+  25 Apr 2004; Jon Hood <squinky86@gentoo.org>
+  gift-openft-0.1.0.5.ebuild, gift-openft-0.2.1.1.ebuild,
+  gift-openft-0.2.1.2.ebuild:
+  fix typos in econf line
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gift-openft-0.1.0.5.ebuild, gift-openft-0.2.1.1.ebuild,
