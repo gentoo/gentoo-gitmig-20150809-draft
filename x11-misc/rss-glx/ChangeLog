@@ -1,13 +1,19 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.7 2003/08/17 22:55:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.8 2003/08/18 23:43:08 vapier Exp $
 
 *rss-glx-0.7.5 (17 Aug 2003)
+
+  18 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Remove -fPIC from CFLAGS #26885.
 
   17 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump + fix auto-removing of xscreensaver stuff from config file.
 
 *rss-glx-0.7.4-r1 (04 Jun 2003)
+
+  18 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Remove -fPIC from CFLAGS #26885.
 
   13 Jun 2003; Alastair Tse <liquidx@gentoo.org> rss-glx-0.7.4-r1.ebuild:
   added kde symlink for kxs* things
