@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <spyderous@gentoo.org> (13 Oct 2003)
+# Masked until xfree stops installing the same files
+x11-misc/synaptics
+
 # <usata@gentoo.org> (11 Oct 2003)
 # SLOT support, testing.
 =dev-lang/ruby-1.6.8-r2
