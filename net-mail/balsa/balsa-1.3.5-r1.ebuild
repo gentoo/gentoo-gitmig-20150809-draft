@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke (blocke@shivan.org)
 # Modified by Riccardo Persichetti (ricpersi@libero.it)
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.3.5.ebuild,v 1.2 2002/05/11 22:43:59 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.3.5-r1.ebuild,v 1.1 2002/05/11 22:43:59 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Balsa: email client for GNOME"
