@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/teknap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teknap/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teknap/ChangeLog,v 1.2 2002/04/27 12:10:57 seemant Exp $
+
+*teknap-1.3g (27 Apr 2002)
+
+  27 Apr 2002; Seemant Kulleen <seemant@gentoo.org> teknap-1.3g.ebuild
+  files/digest-teknap-1.3g
+
+  Version bump.  Also cleaned up the ebuild for 1.3f
 
 *teknap-1.3f-r1 (1 Feb 2002)
 
