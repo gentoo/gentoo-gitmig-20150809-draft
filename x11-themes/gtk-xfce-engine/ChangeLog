@@ -1,7 +1,12 @@
 # ChangeLog for x11-themes/gtk-xfce-engine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-xfce-engine/ChangeLog,v 1.1 2002/07/09 13:39:54 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-xfce-engine/ChangeLog,v 1.2 2002/07/18 22:37:47 spider Exp $
 
+
+*gtk-xfce-engine-2.0.7 (18 Jul 2002)
+ 18 Jul 2002; Spider <spider@gentoo.org> gtk-xfce-engine-2.0.7.ebuild: 
+ version bump, fix KEYWORDS
+ 
 *gtk-xfce-engine-2.0.6 (09 Jul 2002)
 
   09 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gtk-xfce-engine-2.0.6.ebuild :
