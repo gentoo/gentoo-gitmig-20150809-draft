@@ -1,12 +1,15 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.7 2002/07/08 16:04:18 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.8 2002/08/01 19:33:10 gerk Exp $
 
 *arts-1.0.2-r1 (08 Jul 2002) Bart Verwilst <verwilst@gentoo.org>:
 
   Fixes newly discovered root exploit in artswrapper.
 
 *arts-1.0.2 (03 Jul 2002)
+
+  01 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   03 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
