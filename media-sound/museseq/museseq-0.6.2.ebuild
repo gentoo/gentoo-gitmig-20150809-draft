@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2.ebuild,v 1.8 2004/04/16 14:27:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2.ebuild,v 1.9 2004/05/26 17:59:59 kugelfang Exp $
 
-inherit virtualx eutils
+inherit virtualx eutils kde-functions
+need-qt 3
 
 MY_P=muse-${PV}
 DESCRIPTION="The Linux (midi) MUSic Editor (a sequencer)"
@@ -50,7 +51,10 @@ src_compile() {
 	mkdir -p $T/fakehome/.kde
 	mkdir -p $T/fakehome/.qt
 	export HOME="$T/fakehome"
-	addwrite "${QTDIR}/etc/settings"
+	#addwrite "${QTDIR}/etc/settings"
+	# commented this out, proper fix is need-qt 3 from 
+	# kde-functions.
+	# Danny van Dyk <kugelfang@gentoo.org> 2004/05/26
 
 	# things that should access the real homedir
 	[ -d "$REALHOME/.ccache" ] && ln -sf "$REALHOME/.ccache" "$HOME/"
