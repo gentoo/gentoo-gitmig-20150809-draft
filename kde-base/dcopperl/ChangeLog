@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/dcopperl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.10 2005/03/18 17:12:44 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.11 2005/03/19 19:00:54 danarmak Exp $
+
+*dcopperl-3.4.0-r1 (19 Mar 2005)
+
+  19 Mar 2005; Dan Armak <danarmak@gentoo.org> +dcopperl-3.4.0-r1.ebuild:
+  Don't clobber perllocal.pod; use the functions from perl-module.eclass to
+  handle it properly. Fixes bug 83520. Credit goes to Yaakov S, who also
+  submitted the change to perl-module.eclass.
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> dcopperl-3.4.0.ebuild:
   Added to ~ppc

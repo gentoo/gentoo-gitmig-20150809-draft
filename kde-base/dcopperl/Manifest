@@ -1,24 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 026e16f6ed422aa026a44765167f4709 dcopperl-3.3.1-r1.ebuild 547
 MD5 44910e757a7272a2a668bdb85d253862 dcopperl-3.4.0.ebuild 795
 MD5 57b163fc5e6fe93c43bc76e4c27da83e dcopperl-3.4.0_rc1.ebuild 796
-MD5 18584af07a1b9745928bdf427daf927b ChangeLog 2150
+MD5 63cea23f9e8ed3b5934c63e891a80c5c dcopperl-3.4.0-r1.ebuild 944
+MD5 f7be2c3b736a17615d69d03aa42625a6 ChangeLog 2456
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 1b1e06629e9705a8d173c2b853bbf5ce dcopperl-3.3.1-r2.ebuild 779
 MD5 f551b581b8c735f53c6908db3439eda1 dcopperl-3.3.1.ebuild 451
 MD5 3946152f4855210898ab9178271cf802 files/digest-dcopperl-3.4.0_rc1 394
 MD5 6830fc45ae55313b9f8515babcf58b79 files/digest-dcopperl-3.3.1-r1 71
 MD5 6830fc45ae55313b9f8515babcf58b79 files/digest-dcopperl-3.3.1-r2 71
+MD5 b49bfb02ebaf3b34e2e5c4c5750429d6 files/digest-dcopperl-3.4.0-r1 71
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 d793eee91b4c53d85e826da7e98ed495 files/installdirs-vendor.diff 574
 MD5 6830fc45ae55313b9f8515babcf58b79 files/digest-dcopperl-3.3.1 71
 MD5 b49bfb02ebaf3b34e2e5c4c5750429d6 files/digest-dcopperl-3.4.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOwcLUpKYMelfdYERAk1hAJ9QkXrNDTXG3uhoKqpofuiZZHswUgCeKKJO
-Y0fn25nP7J6ItWm2xt9aJlI=
-=0bcM
------END PGP SIGNATURE-----
