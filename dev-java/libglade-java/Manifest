@@ -4,8 +4,8 @@ Hash: SHA1
 MD5 3ded0ce79fea023e616fbf5ce992272b libglade-java-2.8.2-r1.ebuild 3298
 MD5 82520f56771b441b3e590f2bd7c94087 libglade-java-2.8.2.2.ebuild 3536
 MD5 c1c9e5992b374f3123f2213961ee6f8a libglade-java-2.8.2.ebuild 3294
-MD5 1d3a4a180747d4687c39126c2943a238 ChangeLog 2087
-MD5 b3642b8d11c73f681ccf6e163e1fa3cf libglade-java-2.8.3.1.ebuild 3170
+MD5 0274161864eeff4b61a0f9cd47356c97 ChangeLog 2193
+MD5 17cd9b4923b56217038456cccb60b717 libglade-java-2.8.3.1.ebuild 3227
 MD5 d50086d74d4377e4f0a73922c949eac1 metadata.xml 1305
 MD5 eda99aeb347c072151e20c330b8cc3c4 files/digest-libglade-java-2.8.2-r1 71
 MD5 7ac5fbc0483956edf0634e70b501ce1a files/libglade-java-2.8.2_signal-connection-fix.patch 630
@@ -15,9 +15,9 @@ MD5 7ca0226e8641ea6429ce47f0d1cc1bde files/libglade-java-2.8.3.1_gentoo-PN-SLOT.
 MD5 eda99aeb347c072151e20c330b8cc3c4 files/digest-libglade-java-2.8.2 71
 MD5 c068d53842b2d7d7efdca61acf5d72ca files/libglade-java-2.8.2_gentoo-PN-SLOT.patch 1190
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCM0E706ebR+OMO78RAvE3AKCWRElUsSUkk/qHJgEVAbwPzVOA9QCdEns0
-v22IV3JMxu2L7InQ830SEmo=
-=8nYf
+iD8DBQFCTEHc/rLF9B432nYRAlJiAJwPhfgcE8EQ8Jvg2F9owg7PKEmtOACgn39W
+nccah4bAiKNN4l3sK5OOLGk=
+=NwU1
 -----END PGP SIGNATURE-----
