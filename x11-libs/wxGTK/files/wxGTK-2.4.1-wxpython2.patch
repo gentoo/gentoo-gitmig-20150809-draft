@@ -1,15 +1,6 @@
 diff -ru ./common/filefn.cpp ../../wxPythonSrc-2.4.1.2/src/common/filefn.cpp
 --- wxGTK-2.4.1/src/common/filefn.cpp	2003-06-08 09:13:13.000000000 +0100
 +++ wxGTK-2.4.1/src/common/filefn.cpp	2003-06-11 21:20:15.000000000 +0100
-@@ -4,7 +4,7 @@
- // Author:      Julian Smart
- // Modified by:
- // Created:     29/01/98
--// RCS-ID:      $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
-+// RCS-ID:      $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
- // Copyright:   (c) 1998 Julian Smart
- // Licence:     wxWindows license
- /////////////////////////////////////////////////////////////////////////////
 @@ -1595,6 +1595,8 @@
      wxChar buf[256];
      GetWindowsDirectory(buf, 256);
@@ -22,15 +13,6 @@ diff -ru ./common/filefn.cpp ../../wxPythonSrc-2.4.1.2/src/common/filefn.cpp
 diff -ru ./common/log.cpp ../../wxPythonSrc-2.4.1.2/src/common/log.cpp
 --- wxGTK-2.4.1/src/common/log.cpp	2003-06-08 09:13:14.000000000 +0100
 +++ wxGTK-2.4.1/src/common/log.cpp	2003-06-16 21:46:45.000000000 +0100
-@@ -4,7 +4,7 @@
- // Author:      Vadim Zeitlin
- // Modified by:
- // Created:     29/01/98
--// RCS-ID:      $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
-+// RCS-ID:      $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
- // Copyright:   (c) 1998 Vadim Zeitlin <zeitlin@dptmaths.ens-cachan.fr>
- // Licence:     wxWindows license
- /////////////////////////////////////////////////////////////////////////////
 @@ -114,13 +114,24 @@
  //     macros and not all compilers inline vararg functions.
  // ----------------------------------------------------------------------------
@@ -74,15 +56,6 @@ diff -ru ./common/log.cpp ../../wxPythonSrc-2.4.1.2/src/common/log.cpp
 diff -ru ./common/menucmn.cpp ../../wxPythonSrc-2.4.1.2/src/common/menucmn.cpp
 --- wxGTK-2.4.1/src/common/menucmn.cpp	2003-06-08 09:13:14.000000000 +0100
 +++ wxGTK-2.4.1/src/common/menucmn.cpp	2003-06-11 00:48:46.000000000 +0100
-@@ -4,7 +4,7 @@
- // Author:      Vadim Zeitlin
- // Modified by:
- // Created:     26.10.99
--// RCS-ID:      $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
-+// RCS-ID:      $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
- // Copyright:   (c) wxWindows team
- // Licence:     wxWindows license
- ///////////////////////////////////////////////////////////////////////////////
 @@ -332,6 +332,7 @@
      wxCHECK_MSG( item, FALSE, wxT("invalid item in wxMenu::Append()") );
  
@@ -110,15 +83,6 @@ diff -ru ./common/menucmn.cpp ../../wxPythonSrc-2.4.1.2/src/common/menucmn.cpp
 diff -ru ./common/regex.cpp ../../wxPythonSrc-2.4.1.2/src/common/regex.cpp
 --- wxGTK-2.4.1/src/common/regex.cpp	2003-06-08 09:13:14.000000000 +0100
 +++ wxGTK-2.4.1/src/common/regex.cpp	2003-06-16 21:46:45.000000000 +0100
-@@ -4,7 +4,7 @@
- // Author:      Karsten Ballüder and Vadim Zeitlin
- // Modified by:
- // Created:     13.07.01
--// RCS-ID:      $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
-+// RCS-ID:      $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
- // Copyright:   (c) 2000 Karsten Ballüder <ballueder@gmx.net>
- //                  2001 Vadim Zeitlin <vadim@wxwindows.org>
- // Licence:     wxWindows licence
 @@ -204,21 +204,24 @@
              m_nMatches = 1;
  
@@ -158,15 +122,6 @@ diff -ru ./common/regex.cpp ../../wxPythonSrc-2.4.1.2/src/common/regex.cpp
 diff -ru ./gtk/timer.cpp ../../wxPythonSrc-2.4.1.2/src/gtk/timer.cpp
 --- wxGTK-2.4.1/src/gtk/timer.cpp	2003-06-08 09:13:21.000000000 +0100
 +++ wxGTK-2.4.1/src/gtk/timer.cpp	2003-06-17 18:23:24.000000000 +0100
-@@ -2,7 +2,7 @@
- // Name:        gtk/timer.cpp
- // Purpose:     wxTimer implementation
- // Author:      Robert Roebling
--// Id:          $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
-+// Id:          $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
- // Copyright:   (c) 1998 Robert Roebling
- // Licence:     wxWindows licence
- /////////////////////////////////////////////////////////////////////////////
 @@ -41,12 +41,7 @@
      gdk_threads_leave();
  
@@ -183,15 +138,6 @@ diff -ru ./gtk/timer.cpp ../../wxPythonSrc-2.4.1.2/src/gtk/timer.cpp
 diff -ru ./gtk/window.cpp ../../wxPythonSrc-2.4.1.2/src/gtk/window.cpp
 --- wxGTK-2.4.1/src/gtk/window.cpp	2003-06-08 09:13:22.000000000 +0100
 +++ wxGTK-2.4.1/src/gtk/window.cpp	2003-06-19 20:14:52.000000000 +0100
-@@ -2,7 +2,7 @@
- // Name:        gtk/window.cpp
- // Purpose:
- // Author:      Robert Roebling
--// Id:          $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
-+// Id:          $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
- // Copyright:   (c) 1998 Robert Roebling, Julian Smart
- // Licence:     wxWindows licence
- /////////////////////////////////////////////////////////////////////////////
 @@ -3629,12 +3629,10 @@
          wxapp_install_idle_handler();
  
@@ -219,15 +165,6 @@ diff -ru ./gtk/window.cpp ../../wxPythonSrc-2.4.1.2/src/gtk/window.cpp
 diff -ru ./html/htmlpars.cpp ../../wxPythonSrc-2.4.1.2/src/html/htmlpars.cpp
 --- wxGTK-2.4.1/src/html/htmlpars.cpp	2003-06-08 09:13:16.000000000 +0100
 +++ wxGTK-2.4.1/src/html/htmlpars.cpp	2003-06-11 00:34:25.000000000 +0100
-@@ -2,7 +2,7 @@
- // Name:        htmlpars.cpp
- // Purpose:     wxHtmlParser class (generic parser)
- // Author:      Vaclav Slavik
--// RCS-ID:      $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
-+// RCS-ID:      $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
- // Copyright:   (c) 1999 Vaclav Slavik
- // Licence:     wxWindows Licence
- /////////////////////////////////////////////////////////////////////////////
 @@ -872,7 +872,7 @@
      }
  
@@ -240,15 +177,6 @@ diff -ru ./html/htmlpars.cpp ../../wxPythonSrc-2.4.1.2/src/html/htmlpars.cpp
 diff -ru ./html/m_layout.cpp ../../wxPythonSrc-2.4.1.2/src/html/m_layout.cpp
 --- wxGTK-2.4.1/src/html/m_layout.cpp	2003-06-08 09:13:16.000000000 +0100
 +++ wxGTK-2.4.1/src/html/m_layout.cpp	2003-06-09 23:25:08.000000000 +0100
-@@ -2,7 +2,7 @@
- // Name:        m_layout.cpp
- // Purpose:     wxHtml module for basic paragraphs/layout handling
- // Author:      Vaclav Slavik
--// RCS-ID:      $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
-+// RCS-ID:      $Id: wxGTK-2.4.1-wxpython2.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
- // Copyright:   (c) 1999 Vaclav Slavik
- // Licence:     wxWindows Licence
- /////////////////////////////////////////////////////////////////////////////
 @@ -80,7 +80,7 @@
  };
  
