@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat-systray
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/ChangeLog,v 1.17 2004/12/27 02:59:10 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/ChangeLog,v 1.18 2005/01/01 07:52:13 swegener Exp $
+
+  01 Jan 2005; Sven Wegener <swegener@gentoo.org>
+  xchat-systray-2.4.5-r1.ebuild:
+  Added more error checking. Use doins -r to install files.
 
   26 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xchat-systray-2.4.5-r1.ebuild:
