@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.10 2004/11/14 12:54:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.11 2004/12/16 20:47:49 blubb Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -49,6 +49,8 @@ src_unpack() {
 	fi
 
 	if use amd64; then
+		aclocal
+		libtoolize --copy --force
 		autoreconf || die
 	fi
 
