@@ -1,20 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.3.ebuild,v 1.8 2004/07/17 11:01:19 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.3.ebuild,v 1.9 2004/07/17 11:20:51 axxo Exp $
 
 inherit java-pkg
 
 IUSE="debug doc"
 
-file_main=${P}-ojdbc14.jar
-file_main_debug=${P}-ojdbc14_g.jar
-file_rowset=${P}-ocrs12.zip
-file_doc=${P}-javadoc.tar
-
 file_main_orig=ojdbc14.jar
 file_main_debug_orig=ojdbc14_g.jar
 file_rowset_orig=ocrs12.zip
 file_doc_orig=javadoc.tar
+
+file_main=${P}-${file_main_orig}
+file_main_debug=${P}-${file_main_debug_orig}
+file_rowset=${P}-${file_rowset_orig}
+file_doc=${P}-${file_doc_orig}
 
 S=${WORKDIR}
 DESCRIPTION="JDBC 3.0 Drivers for Oracle"
@@ -42,7 +42,7 @@ pkg_nofetch() {
 	use debug > /dev/null && einfo "    - ${file_main_debug_orig}"
 	einfo " 3. Rename the files:"
 	einfo "    - ${file_main_orig} --> ${file_main}"
-	einfo "    - ${file_rowset_orig}-} --> ${file_rowset}"
+	einfo "    - ${file_rowset_orig} --> ${file_rowset}"
 	use doc > /dev/null && einfo "    - ${file_doc_orig} --> ${file_doc}"
 	use debug > /dev/null && einfo "    - ${file_main_debug_orig} --> ${file_main_debug}"
 	einfo " 4. Place the files in ${DISTDIR}"
