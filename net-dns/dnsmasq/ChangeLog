@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.1 2002/06/29 00:55:03 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.2 2002/08/30 11:22:22 cybersystem Exp $
+
+*dnsmasq-1.6 (30 Aug 2002)
+  30 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> :
+  Added ppc to keywords.
 
 *dnsmasq-1.6 (6 Jun 2002)
   6 Jun 2002; Donny Davies <woodchip@gentoo.org> :

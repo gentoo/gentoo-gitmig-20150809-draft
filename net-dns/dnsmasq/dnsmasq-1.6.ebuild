@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-1.6.ebuild,v 1.3 2002/08/14 12:10:49 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-1.6.ebuild,v 1.4 2002/08/30 11:22:27 cybersystem Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Proxy DNS server"
@@ -11,7 +11,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
