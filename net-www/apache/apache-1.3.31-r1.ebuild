@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.31-r1.ebuild,v 1.13 2004/09/28 02:57:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.31-r1.ebuild,v 1.14 2005/01/08 23:37:10 hollow Exp $
 
 inherit eutils fixheadtails
 
