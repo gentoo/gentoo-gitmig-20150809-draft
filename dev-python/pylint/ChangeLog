@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pylint
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.1 2003/10/14 18:23:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.2 2003/11/06 01:00:51 liquidx Exp $
+
+  06 Nov 2003; Alastair Tse <liquidx@gentoo.org> pylint-0.2.1.ebuild:
+  oops, forgot the deps in my moment of madness. adding logilab-common and optik
+  to deps (#32820)
 
 *pylint-0.2.1 (14 Oct 2003)
 
