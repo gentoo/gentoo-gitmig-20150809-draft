@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r5.ebuild,v 1.7 2004/09/17 02:05:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r5.ebuild,v 1.8 2004/09/17 07:52:28 sejo Exp $
 
 inherit java-pkg
 
@@ -20,11 +20,9 @@ DEPEND=">=virtual/jdk-1.2
 #	servlet? ( >=net-www/tomcat-5.0 )
 
 src_unpack() {
-	addwrite .hotspot
 	cp ${DISTDIR}/${A} ${WORKDIR}
 	cd ${WORKDIR}
 	`java-config -J` -classpath . ${PN}-${MY_PV} -o ${S}/ demo lib source || die "unpack failed"
-
 }
 
 src_compile() {

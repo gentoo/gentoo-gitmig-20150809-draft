@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jython
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.18 2004/09/16 08:24:48 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.19 2004/09/17 07:52:28 sejo Exp $
+
+  17 Sep 2004; <SeJo@gentoo.org> jython-2.1-r5.ebuild:
+  removed addwrite .hotspot, thx Mr_Bones
 
   16 Sep 2004; <SeJo@gentoo.org> jython-2.1-r5.ebuild:
   bugfixing with axxo works great
