@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.5 2004/08/24 21:01:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.6 2004/08/26 00:52:56 vapier Exp $
+
+  25 Aug 2004; Mike Frysinger <vapier@gentoo.org> files/openntpd.rc:
+  Touch up init.d #61660 by Lars Geiger.
 
 *openntpd-20040824p (24 Aug 2004)
 
