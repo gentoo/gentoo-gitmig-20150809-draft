@@ -1,5 +1,6 @@
-MD5 ae83855cebf2c7772bcb102ce298ea77 milo-2.4.18.ebuild 8113
+MD5 a8c2f9dc2988688b2990dccdd2f3cbc0 milo-2.4.18.ebuild 8113
 MD5 51d36e2f8c42a6385f9c8e041e698cea ChangeLog 849
+MD5 382a839b2dd3b36aee659eba1be42e2d metadata.xml 752
 MD5 987873fb766bc62dcb7336015388e4e3 files/mkserial_no.c 1264
 MD5 d3af0c52f49dbc1430e1ed77878273c5 files/milo-2.2-18-gcc3-gentoo.diff 5624
 MD5 f6830f117d7528a50b53e85150040d73 files/linux-2.2.25-gcc3-milo.diff 3542
