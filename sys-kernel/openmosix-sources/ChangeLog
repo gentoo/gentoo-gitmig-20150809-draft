@@ -1,7 +1,12 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.5 2002/09/03 16:29:58 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.6 2002/09/08 13:39:14 tantive Exp $
 
+
+*openmosix-sources-2.4.19-r4 (08 Sep 2002)
+
+  08 Sep 2002; Michael Imhof <tantive@gentoo.org>
+  Added a patch to compile using gcc3.
 
 *openmosix-sources-2.4.19-r3 (02 Sep 2002)
 
