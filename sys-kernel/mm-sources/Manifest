@@ -1,4 +1,4 @@
-MD5 3d97b3d157f24a36f3c4ee3f0987885c ChangeLog 12745
+MD5 45a48ce9c4bac353f5012f4e73c08a6c ChangeLog 12743
 MD5 de6f56266c94e31a0b8a4d9c4da0d9f1 mm-sources-2.6.0_beta3-r1.ebuild 2072
 MD5 b140135947ad7abf9969215cb14f61bb mm-sources-2.6.0_beta3-r2.ebuild 2101
 MD5 9eb810173fe9cef5fde58c9da6efc4cd mm-sources-2.6.0_beta3-r3.ebuild 2109
@@ -8,7 +8,7 @@ MD5 31b4471944762587c36e5bdcf2c828b8 mm-sources-2.6.0_beta4-r3.ebuild 2924
 MD5 067d3364059f1f766f1407963b4cc095 mm-sources-2.6.0_beta4-r4.ebuild 2920
 MD5 1e325327e7b60ce6c03a78769b398455 mm-sources-2.6.0_beta4-r5.ebuild 2920
 MD5 34c045a7e9f4abd2150a14dbc07845c1 mm-sources-2.6.0_beta4-r6.ebuild 2920
-MD5 34c045a7e9f4abd2150a14dbc07845c1 mm-sources-2.6.0_beta5-r1.ebuild 2920
+MD5 369dd5a00a331a49950bab517d319f80 mm-sources-2.6.0_beta5-r1.ebuild 2918
 MD5 7a30e716e2d27e98aaa68d5eee6c63b2 files/digest-mm-sources-2.6.0_beta3-r1 136
 MD5 c21a38ab9d0191bf6d8e29c62ed33a8f files/digest-mm-sources-2.6.0_beta3-r2 136
 MD5 9dd17030e60ec4e849afdb6d610e231d files/digest-mm-sources-2.6.0_beta3-r3 137
