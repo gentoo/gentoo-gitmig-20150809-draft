@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.16 2004/08/07 00:42:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.17 2004/08/20 04:40:32 tester Exp $
+
+  20 Aug 2004; <tester@gentoo.org> gtkpod-0.80.2.ebuild:
+  Marking stable on x86
 
   06 Aug 2004; <tester@gentoo.org> gtkpod-0.80.2.ebuild, -gtkpod-0.70.ebuild:
   Added patch so it compiles with gtk 2.0 and cleanup up 0.70
