@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.1-r1.ebuild,v 1.3 2003/09/23 04:26:43 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.1-r1.ebuild,v 1.4 2003/09/29 19:28:54 pebenito Exp $
 
-IUSE=""
+IUSE="build"
 
 DESCRIPTION="SELinux core utilites"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -12,11 +12,10 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 
 DEPEND="sys-libs/libselinux
-	sys-apps/attr
-	sys-libs/pam"
+	!build? ( sys-libs/pam )"
 
 RDEPEND="${DEPEND}
-	sys-apps/mkinitrd"
+	!build? ( sys-apps/mkinitrd )"
 
 S=${WORKDIR}/${P}
 
@@ -34,7 +33,9 @@ src_unpack() {
 }
 
 src_compile() {
-	SUBDIRS="load_policy newrole run_init setfiles"
+
+	use build && SUBDIRS="setfiles" \
+		|| SUBDIRS="load_policy newrole run_init setfiles"
 
 	for i in ${SUBDIRS}; do
 		einfo "Compiling ${i}"
@@ -44,8 +45,12 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install
+	if use build; then
+		dosbin ${S}/setfiles/setfiles
+	else
+		make DESTDIR="${D}" install
 
-	dosbin ${FILESDIR}/rlpkg
-	dobin ${FILESDIR}/{avc_enforcing,avc_toggle}
+		dosbin ${FILESDIR}/rlpkg
+		dobin ${FILESDIR}/{avc_enforcing,avc_toggle}
+	fi
 }
