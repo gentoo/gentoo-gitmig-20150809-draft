@@ -1,6 +1,6 @@
 # Copyright 2002 moto kawasaki <kawasaki@kawasaki3.org>
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/apel/apel-2002.06.21.0106.ebuild,v 1.1 2002/06/26 01:27:31 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/apel/apel-2002.06.21.0106.ebuild,v 1.2 2002/06/26 02:06:10 george Exp $
 
 Name=`echo ${P} | sed -e 's#\.##g'`
 A="${Name}.tar.gz"
@@ -10,7 +10,7 @@ DESCRIPTION="A Portable Emacs Library -- apel"
 SRC_URI="ftp://ftp.m17n.org/pub/mule/apel/snapshots/${A}"
 HOMEPAGE="http://www.m17n.org/apel/"
 
-DEPEND="emacs"
+DEPEND=">=app-editors/emacs-20.4"
 RDEPEND="${DEPEND}"
 
 SLOT="0"

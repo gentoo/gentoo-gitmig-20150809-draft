@@ -1,13 +1,13 @@
 # Copyright 2002 moto kawasaki <kawasaki@kawasaki3.org>
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/flim/flim-1.14.4.ebuild,v 1.1 2002/06/26 01:49:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/flim/flim-1.14.4.ebuild,v 1.2 2002/06/26 02:06:10 george Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library to provide basic features about message representation or encoding -- FLIM"
 SRC_URI="ftp://ftp.m17n.org/pub/mule/flim/flim-1.14/${P}.tar.gz"
 HOMEPAGE="http://www.m17n.org/flim/"
-DEPEND="emacs
-		apel"
+DEPEND=">=app-editors/emacs-20.4
+        >=dev-lisp/apel-9.22"
 RDEPEND="${DEPEND}"
 
 SLOT="0"
