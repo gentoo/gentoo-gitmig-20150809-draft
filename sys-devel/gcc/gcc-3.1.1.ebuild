@@ -14,14 +14,16 @@ inherit libtool
 
 MY_PV="`echo ${PV} | cut -d. -f1,2`"
 GCC_SUFFIX=-${MY_PV}
-LOC=/usr
+LOC="/usr"
 # dont install in /usr/include/g++-v3/, as it will nuke gcc-3.0.x installs
 STDCXX_INCDIR="${LOC}/include/g++-v${MY_PV/\./}"
+PATCHES="${WORKDIR}/patches"
 SLOT="${MY_PV}"
 S=${WORKDIR}/${P}
 #SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
 #	ftp://ftp.funet.fi/pub/mirrors/sourceware.cygnus.com/pub/gcc/releases/${P}/${P}.tar.bz2"
-SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P}-20020701.tar.bz2"
+SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P}-20020701.tar.bz2
+	http://www.ibiblio.org/gentoo/distfiles/${P}-patches.tbz2"
 DESCRIPTION="Modern GCC C/C++ compiler"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
@@ -63,40 +65,43 @@ FAKE_ROOT=""
 
 src_unpack() {
 	unpack ${P}-20020701.tar.bz2
+
+	mkdir -p ${WORKDIR}/patches
+	tar -jxf ${DISTDIR}/${P}-patches.tbz2 -C ${WORKDIR}/patches || die
 	
 	cd ${S}
 	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
 
 	# Red Hat and Suse patches
-	for x in ${MY_PV}/gcc31-boehm-gc-libs.patch.bz2 \
-	         ${MY_PV}/gcc31-fde-merge-compat.patch.bz2 \
-	         ${MY_PV}/gcc31-attr-visibility.patch.bz2 \
-	         ${PV}/gcc311-attr-visibility2.patch.bz2 \
-	         ${PV}/gcc311-trunc_int_for_mode.patch.bz2 \
-	         ${PV}/gcc311-x86_64-q_regs_operand.patch.bz2 \
-	         ${MY_PV}/gcc31-dwarf2-pr6436-test.patch.bz2 \
-	         ${PV}/gcc311-c++-pretty_function.patch.bz2 \
-	         ${PV}/gcc311-c++-tsubst-asm.patch.bz2 \
-	         ${PV}/gcc311-i386-memtest-test.patch.bz2 \
-	         ${MY_PV}/gcc31-fold-const2.patch.bz2 \
-	         ${PV}/gcc311-ada-addr2line.patch.bz2 \
-	         ${PV}/gcc311-ada-link.patch.bz2 \
-	         ${PV}/gcc311-java-no-rpath.patch.bz2 \
-	         ${MY_PV}/gcc31-test-rotate.patch.bz2 \
-	         ${PV}/gcc311-x86_64-libiberty-pic.patch.bz2 \
-	         ${PV}/gcc311-test-rh65771.patch.bz2 \
-	         ${PV}/gcc311-i386-default-momit-leaf-frame-pointer.patch.bz2 \
-	         ${PV}/gcc311-i386-profile-olfp.patch.bz2 \
-	         ${PV}/gcc311-i386-pic-label-thunk.patch.bz2 \
-	         ${PV}/gcc311-pr6842.patch.bz2 \
-			 ${PV}/gcc311-tree-code.patch.bz2 \
-			 ${PV}/gcc311-hard-reg-sharing.patch.bz2 \
-	         ${PV}/gcc311-x86_64-addr-diff.patch.bz2 \
-	         ${PV}/gcc311-x86_64-profile.patch.bz2 \
-	         ${PV}/gcc311-x86_64-biarch.patch.bz2
+	for x in ${FILESDIR}/${MY_PV}/gcc31-boehm-gc-libs.patch.bz2 \
+	         ${FILESDIR}/${MY_PV}/gcc31-fde-merge-compat.patch.bz2 \
+	         ${FILESDIR}/${MY_PV}/gcc31-attr-visibility.patch.bz2 \
+	         ${PATCHES}/gcc311-attr-visibility2.patch.bz2 \
+	         ${PATCHES}/gcc311-trunc_int_for_mode.patch.bz2 \
+	         ${PATCHES}/gcc311-x86_64-q_regs_operand.patch.bz2 \
+	         ${FILESDIR}/${MY_PV}/gcc31-dwarf2-pr6436-test.patch.bz2 \
+	         ${PATCHES}/gcc311-c++-pretty_function.patch.bz2 \
+	         ${PATCHES}/gcc311-c++-tsubst-asm.patch.bz2 \
+	         ${PATCHES}/gcc311-i386-memtest-test.patch.bz2 \
+	         ${FILESDIR}/${MY_PV}/gcc31-fold-const2.patch.bz2 \
+	         ${PATCHES}/gcc311-ada-addr2line.patch.bz2 \
+	         ${PATCHES}/gcc311-ada-link.patch.bz2 \
+	         ${PATCHES}/gcc311-java-no-rpath.patch.bz2 \
+	         ${FILESDIR}/${MY_PV}/gcc31-test-rotate.patch.bz2 \
+	         ${PATCHES}/gcc311-x86_64-libiberty-pic.patch.bz2 \
+	         ${PATCHES}/gcc311-test-rh65771.patch.bz2 \
+	         ${PATCHES}/gcc311-i386-default-momit-leaf-frame-pointer.patch.bz2 \
+	         ${PATCHES}/gcc311-i386-profile-olfp.patch.bz2 \
+	         ${PATCHES}/gcc311-i386-pic-label-thunk.patch.bz2 \
+	         ${PATCHES}/gcc311-pr6842.patch.bz2 \
+			 ${PATCHES}/gcc311-tree-code.patch.bz2 \
+			 ${PATCHES}/gcc311-hard-reg-sharing.patch.bz2 \
+	         ${PATCHES}/gcc311-x86_64-addr-diff.patch.bz2 \
+	         ${PATCHES}/gcc311-x86_64-profile.patch.bz2 \
+	         ${PATCHES}/gcc311-x86_64-biarch.patch.bz2
 	do
-		bzip2 -dc ${FILESDIR}/${x} | \
+		bzip2 -dc ${x} | \
 			patch -p0 || die "failed with patch ${x}"
 		echo &>${T}/foo
 	done
