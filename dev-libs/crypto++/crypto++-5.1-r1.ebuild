@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.1-r1.ebuild,v 1.3 2004/04/30 17:43:41 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.1-r1.ebuild,v 1.4 2004/05/01 17:24:27 agriffis Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 #-O3 causes segfaults
 replace-flags -O3 -O2
