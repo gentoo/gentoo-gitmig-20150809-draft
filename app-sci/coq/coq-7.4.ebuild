@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/coq-7.4.ebuild,v 1.4 2004/06/24 21:56:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/coq-7.4.ebuild,v 1.5 2004/07/14 01:33:10 lv Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.inria.fr/INRIA/${PN}/V${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE="norealanalysis"
 
 DEPEND=">=dev-lang/ocaml-3.06"

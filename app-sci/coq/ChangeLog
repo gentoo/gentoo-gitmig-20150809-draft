@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/coq
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/ChangeLog,v 1.5 2004/07/09 21:42:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/ChangeLog,v 1.6 2004/07/14 01:33:10 lv Exp $
+
+  13 Jul 2004; Travis Tilley <lv@gentoo.org> coq-7.4.ebuild:
+  adding ~amd64 keyword
 
 *coq-8.0 (01 Jul 2004)
 
