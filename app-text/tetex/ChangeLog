@@ -1,8 +1,12 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.38 2003/04/10 01:54:33 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.39 2003/04/12 23:48:02 method Exp $
 
 *tetex-2.0.2 (14 Mar 2003)
+
+  12 Apr 2003; Joshua Brindle <method@gentoo.org> tetex-1.0.7-r12.ebuild,
+  tetex-2.0.2.ebuild:
+  added filter-flag -fstack-protector
 
   09 Apr 2003; Matthew Turk <satai@gentoo.org> tetex-1.0.7-r12.ebuild,
   tetex-2.0.2.ebuild:
