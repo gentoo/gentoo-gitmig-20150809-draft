@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/portagemaster
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/ChangeLog,v 1.12 2003/02/12 02:26:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/ChangeLog,v 1.13 2003/08/15 06:34:14 strider Exp $
+
+  15 Aug 2003; Adrian Almenar <strider@gentoo.org> portagemaster-0.2.0.ebuild:
+  Now this package can compile with jikes, updated sparc keyword to stable.
 
 *portagemaster-0.2.0 (11 Oct 2002)
 
