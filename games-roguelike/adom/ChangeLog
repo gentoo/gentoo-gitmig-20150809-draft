@@ -1,6 +1,6 @@
 # ChangeLog for games-roguelike/adom
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/adom/ChangeLog,v 1.4 2004/03/10 13:40:06 aliz Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/adom/ChangeLog,v 1.5 2004/06/24 23:11:57 agriffis Exp $
 
   10 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> adom-1.1.1-r1.ebuild:
   Adding amd64 keyword. Closing #44158.

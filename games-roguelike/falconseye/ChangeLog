@@ -1,6 +1,6 @@
 # ChangeLog for games-roguelike/falconseye
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/ChangeLog,v 1.5 2004/05/10 23:35:21 lv Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/ChangeLog,v 1.6 2004/06/24 23:12:29 agriffis Exp $
 
   10 May 2004; Travis Tilley <lv@gentoo.org> falconseye-1.9.4a.ebuild:
   added ~amd64 keyword
