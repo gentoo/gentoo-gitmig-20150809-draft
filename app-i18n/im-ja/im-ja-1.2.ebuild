@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.2.ebuild,v 1.1 2004/07/02 08:36:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.2.ebuild,v 1.2 2004/07/04 02:44:17 usata Exp $
 
 inherit gnome2
 
@@ -45,7 +45,10 @@ src_compile() {
 	use anthy || myconf="$myconf --disable-anthy"
 	use skk || myconf="$myconf --disable-skk"
 	#use debug && myconf="$myconf --enable-debug"
-	gnome2_src_compile $myconf || die
+
+	# gnome2_src_compile automatically sets debug IUSE flag
+	econf $myconf || die "econf im-ja failed"
+	emake || die "emake im-ja failed"
 }
 
 pkg_postinst() {
