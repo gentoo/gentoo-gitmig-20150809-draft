@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gwcc/gwcc-0.9.6-r1.ebuild,v 1.11 2002/10/05 05:39:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gwcc/gwcc-0.9.6-r2.ebuild,v 1.1 2002/10/15 13:54:51 foser Exp $
 
 IUSE="nls"
 
@@ -20,8 +20,10 @@ RDEPEND="nls? ( sys-devel/gettext )
 
 src_compile() {
 	local myconf
-
-	use nls || myconf="--disable-nls"
+	
+	#sandbox fix, always disable nls
+	myconf="--disable-nls"
+	#use nls || myconf="--disable-nls"
 
 	econf ${myconf} || die
 	make || die
