@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2-r5.ebuild,v 1.3 2003/11/14 08:29:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2-r5.ebuild,v 1.4 2004/01/02 21:49:09 aliz Exp $
 
 inherit eutils
 
@@ -9,12 +9,12 @@ MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A vt102 terminal emulator for X"
 HOMEPAGE="http://www.eterm.org/"
-SRC_URI="http://www.eterm.org/download/${MY_P}.tar.gz
-	 http://www.eterm.org/download/${MY_PN}-bg-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/eterm/${MY_P}.tar.gz http://www.eterm.org/download/${MY_P}.tar.gz
+	 mirror://sourceforge/eterm/${MY_PN}-bg-${PV}.tar.gz http://www.eterm.org/download/${MY_PN}-bg-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
 IUSE="mmx etwin"
 
 DEPEND="virtual/x11
@@ -32,17 +32,23 @@ src_unpack() {
 }
 
 src_compile() {
-	econf \
-		--with-imlib \
+	local myconf
+	myconf="--with-imlib \
 		--enable-trans \
 		--with-x \
 		--enable-multi-charset \
 		--with-delete=execute \
 		--with-backspace=auto \
 		--enable-escreen \
-		`use_enable etwin` \
-		`use_enable mmx` \
-		|| die "conf failed"
+		`use_enable etwin`"
+
+	if [ "${ARCH}" == "x86" ]; then
+		myconf="$myconf `use_enable mmx`"
+	else
+		myconf="$myconf --disable-mmx"
+	fi
+
+	econf $myconf || die "conf failed"
 	emake || die "make failed"
 }
 
