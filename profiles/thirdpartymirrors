@@ -1,5 +1,5 @@
 sourceforge  	http://unc.dl.sourceforge.net/sourceforge http://belnet.dl.sourceforge.net/sourceforge ftp://telia.dl.sourceforge.net/pub/sourceforge
 gentoo		http://www.ibiblio.org/pub/linux/distributions/gentoo/distfiles
-gnome		ftp://ftp.gnome.org/pub/gnome/2.0.0 ftp://archive.progeny.com/GNOME/2.0.0 ftp://ftp.sunet.se/pub/X11/GNOME/2.0.0 ftp://ftp.no.gnome.org/pub/GNOME/2.0.0  
+gnome		ftp://ftp.gnome.org/pub/gnome ftp://archive.progeny.com/GNOME ftp://ftp.sunet.se/pub/X11/GNOME ftp://ftp.no.gnome.org/pub/GNOME ftp://ftp.gnome.org/pub/gnome/2.0.0  
 kde		http://ibiblio.org/pub/packages/desktops/kde/ ftp://ftp.kde.org/pub/kde/ ftp://download.us.kde.org/pub/kde/ ftp://ftp.gtlib.cc.gatech.edu/pub/kde ftp://download.uk.kde.org/pub/kde/ ftp://download.au.kde.org/pub/kde/ ftp://download.at.kde.org/pub/kde/ ftp://download.tw.kde.org/pub/kde/ 
 gnu		http://www.ibiblio.org/pub/gnu ftp://mirrors.kernel.org/gnu ftp://aeneas.mit.edu/pub/gnu
