@@ -1,9 +1,12 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.92 2004/06/21 09:45:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.93 2004/06/23 05:32:06 stuart Exp $
 
   21 Jun 2004; Robin H. Johnson <robbat2@gentoo.org> :
   digest fix
+
+  22 Jun 2004; Stuart Herbert <stuart@gentoo.org> :
+  Added support to the eclass for hardenedphp on 4.3.7
 
   14 Jun 2004; Joshua Kinard <kumba@gentoo.org> php-4.3.7.ebuild,
   php-5.0_beta1-r1.ebuild:
