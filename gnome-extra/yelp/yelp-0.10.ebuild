@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-0.10.ebuild,v 1.1 2002/06/05 16:54:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-0.10.ebuild,v 1.2 2002/07/19 13:37:26 stroke Exp $
 
 inherit gnome2 
 
@@ -10,6 +10,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL"
+KEYWORDS="x86"
 
 RDEPEND=">=gnome-base/ORBit2-2.4.0
 	>=gnome-base/libgnomeui-1.117.2
