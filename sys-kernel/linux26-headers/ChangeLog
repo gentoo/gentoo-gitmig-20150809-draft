@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.50 2005/01/06 15:43:26 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.51 2005/01/11 02:57:56 eradicator Exp $
+
+*linux26-headers-2.6.8.1-r3 (10 Jan 2005)
+
+  10 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/generate-asm-amd64, +linux26-headers-2.6.8.1-r3.ebuild:
+  amd64 now gets x86-64 and i386 headers using a similar method to sparc...
+  I'll rewrite that script to use better abstraction soon.
 
 *linux26-headers-2.6.8.1-r2 (06 Jan 2005)
 
