@@ -1,0 +1,220 @@
+--- build/build/BIF/build.bif	2004-09-28 06:57:27.000000000 +0900
++++ build/build/BIF/build2.bif	2004-11-13 14:06:18.584771848 +0900
+@@ -13,21 +13,21 @@
+       <cvstag id="hxclient_1_4_2_neptunex" type="branch"/>
+     
+       <sdk name="faad2_include" path="c:/faad2/include">
+-    NOTE: This module needs the faad2 library in order
+-    to build. See datatype/aac/codec/readme.txt for more
+-    information on the faad2 library. Developers may
+-    put the faad2 library anywhere they wish on their disk,
+-    but in order to link in this library, developers should
+-    have the following two lines in their .buildrc file:
+-    SetSDKPath("faad2_include", "/path/to/faad2/includedir")
+-    SetSDKPath("faad2_lib",     "/path/to/faad2library")
+-    The "/path/to/faad2/includedir" should be changed to
+-    the path to the faad2 library's include directory.
+-    The "/path/to/faad2library" should be changed to the
+-    file name with full path to the faad2 library binary.
+-    Note that these paths will be platform-specific.
+-    See BUILD_ROOT/build/doc/buildrc.html for more
+-    information about .buildrc files and SetSDKPath().
++    NOTE: This module needs the faad2 library in order
++    to build. See datatype/aac/codec/readme.txt for more
++    information on the faad2 library. Developers may
++    put the faad2 library anywhere they wish on their disk,
++    but in order to link in this library, developers should
++    have the following two lines in their .buildrc file:
++    SetSDKPath("faad2_include", "/path/to/faad2/includedir")
++    SetSDKPath("faad2_lib",     "/path/to/faad2library")
++    The "/path/to/faad2/includedir" should be changed to
++    the path to the faad2 library's include directory.
++    The "/path/to/faad2library" should be changed to the
++    file name with full path to the faad2 library binary.
++    Note that these paths will be platform-specific.
++    See BUILD_ROOT/build/doc/buildrc.html for more
++    information about .buildrc files and SetSDKPath().
+       </sdk>
+       <sdk name="faad2_lib" path="c:/faad2/faad2.lib"/>
+     
+@@ -4947,13 +4947,13 @@
+       <cvstag id="hxclient_1_4_2_neptunex" type="branch"/>
+     
+       <sdk name="dxsdk" path="c:/dxsdk">
+-    NOTE: This module needs the DirectX SDK in order
+-    to build. Developers may put the SDK anywhere they wish on
+-    their disk.  But to inform the build system of its location,
+-    developers should have the following line in their .buildrc file:
+-    SetSDKPath("dxsdk", "/path/to/DirectXSDK")
+-    See BUILD_ROOT/build/doc/buildrc.html for more
+-    information about .buildrc files and SetSDKPath().
++    NOTE: This module needs the DirectX SDK in order
++    to build. Developers may put the SDK anywhere they wish on
++    their disk.  But to inform the build system of its location,
++    developers should have the following line in their .buildrc file:
++    SetSDKPath("dxsdk", "/path/to/DirectXSDK")
++    See BUILD_ROOT/build/doc/buildrc.html for more
++    information about .buildrc files and SetSDKPath().
+       </sdk>
+     
+       <attribute id="no_build"/>
+@@ -5085,13 +5085,13 @@
+       <cvstag id="hxclient_1_4_2_neptunex" type="branch"/>
+     
+       <sdk name="gapi" path="c:\gapi">
+-    NOTE: This module needs the GAPI (Game API) SDK in order
+-    to build. Developers may put the SDK anywhere they wish on
+-    their disk.  But to inform the build system of its location,
+-    developers should have the following line in their .buildrc file:
+-    SetSDKPath("gapi", "/path/to/GAPISDK")
+-    See BUILD_ROOT/build/doc/buildrc.html for more
+-    information about .buildrc files and SetSDKPath().
++    NOTE: This module needs the GAPI (Game API) SDK in order
++    to build. Developers may put the SDK anywhere they wish on
++    their disk.  But to inform the build system of its location,
++    developers should have the following line in their .buildrc file:
++    SetSDKPath("gapi", "/path/to/GAPISDK")
++    See BUILD_ROOT/build/doc/buildrc.html for more
++    information about .buildrc files and SetSDKPath().
+       </sdk>
+     
+       <attribute id="no_build"/>
+@@ -5108,13 +5108,13 @@
+       <cvstag id="hxclient_1_4_2_neptunex" type="tag"/>
+     
+       <sdk name="gtk2sdk" path="c:/Dev-C++">
+-    NOTE: This module needs the Dropline Gtk+ Windows SDK in order
+-    to build. Developers may put the SDK anywhere they wish on
+-    their disk.  But to inform the build system of its location,
+-    developers should have the following line in their .buildrc file:
+-    SetSDKPath("gtk2sdk", "/path/to/gtk2sdk")
+-    See BUILD_ROOT/build/doc/buildrc.html for more
+-    information about .buildrc files and SetSDKPath().
++    NOTE: This module needs the Dropline Gtk+ Windows SDK in order
++    to build. Developers may put the SDK anywhere they wish on
++    their disk.  But to inform the build system of its location,
++    developers should have the following line in their .buildrc file:
++    SetSDKPath("gtk2sdk", "/path/to/gtk2sdk")
++    See BUILD_ROOT/build/doc/buildrc.html for more
++    information about .buildrc files and SetSDKPath().
+       </sdk>
+     
+       <attribute id="no_build"/>
+@@ -5221,14 +5221,14 @@
+       <cvstag id="hxclient_1_4_2_neptunex" type="branch"/>
+     
+       <sdk name="mspsdk_81">
+-    NOTE: This module needs the MS 8.1 SDK
+-    to build. Developers may put the SDK anywhere they wish on
+-    their disk.  But to inform the build system of its location,
+-    developers should have the following line in their .buildrc file:
+-    SetSDKPath("mspsdk_81_include", "/path/to/ms_81_sdk/include")
+-    SetSDKPath("mspsdk_81_lib", "/path/to/ms_81_sdk/lib")
+-    See BUILD_ROOT/build/doc/buildrc.html for more
+-    information about .buildrc files and SetSDKPath().
++    NOTE: This module needs the MS 8.1 SDK
++    to build. Developers may put the SDK anywhere they wish on
++    their disk.  But to inform the build system of its location,
++    developers should have the following line in their .buildrc file:
++    SetSDKPath("mspsdk_81_include", "/path/to/ms_81_sdk/include")
++    SetSDKPath("mspsdk_81_lib", "/path/to/ms_81_sdk/lib")
++    See BUILD_ROOT/build/doc/buildrc.html for more
++    information about .buildrc files and SetSDKPath().
+       </sdk>
+     
+       <attribute id="no_build"/>
+@@ -5257,13 +5257,13 @@
+       <cvstag id="hxclient_1_4_2_neptunex" type="branch"/>
+     
+       <sdk name="oggvorbissdk" path="c:/oggvorbissdk">
+-    NOTE: This module needs the Ogg-Vorbis SDK in order
+-    to build. Developers may put the SDK anywhere they wish on
+-    their disk.  But to inform the build system of its location,
+-    developers should have the following line in their .buildrc file:
+-    SetSDKPath("oggvorbissdk", "/path/to/oggvorbisSDK")
+-    See BUILD_ROOT/build/doc/buildrc.html for more
+-    information about .buildrc files and SetSDKPath().
++    NOTE: This module needs the Ogg-Vorbis SDK in order
++    to build. Developers may put the SDK anywhere they wish on
++    their disk.  But to inform the build system of its location,
++    developers should have the following line in their .buildrc file:
++    SetSDKPath("oggvorbissdk", "/path/to/oggvorbisSDK")
++    See BUILD_ROOT/build/doc/buildrc.html for more
++    information about .buildrc files and SetSDKPath().
+       </sdk>
+     
+       <attribute id="no_build"/>
+@@ -5401,6 +5401,29 @@
+         player_mime_include player_widget filesystem_http
+       </source_dependlist>
+     </module>
++    
++    <!-- PLAYER_GENTOO -->
++    <module id="player_gentoo" name="player/app/gtk" group="player">
++      <cvs root="helix"/>
++      <cvstag id="hxclient_1_4_2_neptunex" type="tag"/>
++    
++      <attribute id="has_version_file"/>
++    
++      <includeplatforms>
++        unix
++      </includeplatforms>
++    
++      <defines>
++        HELIX_FEATURE_NO_INTERNAL_PREFS=1
++      </defines>
++      <dependlist>
++        player_mime_util player_widget common_runtime common_system common_container
++        common_dbgtool common_util common_unittest player_installer_postinst player_installer_archive player_installer_stage1
++      </dependlist>
++      <source_dependlist>
++        player_mime_include player_widget filesystem_http
++      </source_dependlist>
++    </module>
+ 
+     <!-- PLAYER_HXCLIENTKIT -->
+     <module id="player_hxclientkit" name="player/hxclientkit" group="player">
+@@ -7589,14 +7612,14 @@
+       <cvstag id="hxclient_1_4_2_neptunex" type="branch"/>
+     
+       <sdk name="qt5sdk">
+-    NOTE: This module needs the QuickTime 5 SDK in order
+-    to build. Developers may put the SDK anywhere they wish on
+-    their disk.  But to inform the build system of its location,
+-    developers should have the following line in their .buildrc file:
+-    SetSDKPath("qt5sdk_include", "/path/to/QuickTime5SDK/CIncludes")
+-    SetSDKPath("qt5sdk_lib", "/path/to/QuickTime5SDK/Libraries")
+-    See BUILD_ROOT/build/doc/buildrc.html for more
+-    information about .buildrc files and SetSDKPath().
++    NOTE: This module needs the QuickTime 5 SDK in order
++    to build. Developers may put the SDK anywhere they wish on
++    their disk.  But to inform the build system of its location,
++    developers should have the following line in their .buildrc file:
++    SetSDKPath("qt5sdk_include", "/path/to/QuickTime5SDK/CIncludes")
++    SetSDKPath("qt5sdk_lib", "/path/to/QuickTime5SDK/Libraries")
++    See BUILD_ROOT/build/doc/buildrc.html for more
++    information about .buildrc files and SetSDKPath().
+       </sdk>
+     
+       <attribute id="no_build"/>
+@@ -9562,13 +9585,13 @@
+       <cvstag id="hxclient_1_4_2_neptunex" type="branch"/>
+     
+       <sdk name="wtlce" path="c:\wtlce">
+-    NOTE: This module needs the WTLCE (Windows Template Library for CE) SDK in order
+-    to build. Developers may put the SDK anywhere they wish on
+-    their disk.  But to inform the build system of its location,
+-    developers should have the following line in their .buildrc file:
+-    SetSDKPath("wtlce", "/path/to/wtlcesdk")
+-    See BUILD_ROOT/build/doc/buildrc.html for more
+-    information about .buildrc files and SetSDKPath().
++    NOTE: This module needs the WTLCE (Windows Template Library for CE) SDK in order
++    to build. Developers may put the SDK anywhere they wish on
++    their disk.  But to inform the build system of its location,
++    developers should have the following line in their .buildrc file:
++    SetSDKPath("wtlce", "/path/to/wtlcesdk")
++    See BUILD_ROOT/build/doc/buildrc.html for more
++    information about .buildrc files and SetSDKPath().
+       </sdk>
+     
+       <attribute id="no_build"/>

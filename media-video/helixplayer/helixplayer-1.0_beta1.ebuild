@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0_beta1.ebuild,v 1.2 2004/07/15 01:25:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0_beta1.ebuild,v 1.3 2004/11/14 05:20:59 chriswhite Exp $
 
 DESCRIPTION="A free open-source media player by real"
 HOMEPAGE="http://www.helixplayer.org/"
@@ -23,6 +23,7 @@ inherit nsplugins eutils
 S=${WORKDIR}/player_all-bingo-beta-20040615
 
 src_unpack() {
+
 	unpack ${A}
 	cd ${S}
 
@@ -30,7 +31,7 @@ src_unpack() {
 	epatch ${FILESDIR}/gcc_versioncheck.patch
 
 	#fixes the .bif file to create a gentoo_player custom target
-	epatch ${FILESDIR}/gentoo_bif.patch
+	epatch ${FILESDIR}/${P}-bif.patch
 
 	#fixes the strange tarball name that gets created
 	epatch ${FILESDIR}/installer-naming.patch

@@ -1,9 +1,24 @@
-MD5 d67d8292cbf83484b2387f860d3ac6cd helixplayer-1.0_beta1.ebuild 3265
-MD5 0fc01a04748a0562f3d8f4514f7aff0e ChangeLog 799
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1bdf1805dda493f136e075ba65d99a4a ChangeLog 1195
+MD5 d048b58893fd828d4a1ef086997d6ae2 helixplayer-1.0_beta1.ebuild 3264
 MD5 b545cb646f8e1ac50777745dfc1f380d metadata.xml 342
-MD5 bded820ce4994950f10c24c5177f50fa files/installer-naming.patch 555
-MD5 b3efbf0d42d95ec571e60aaf9377d787 files/gcc_versioncheck.patch 502
-MD5 d9d3bd60b0c7de98d93ccde45775936d files/digest-helixplayer-1.0_beta1 88
+MD5 3c089b45285987e4a598702098eb396a helixplayer-1.0.1.ebuild 1858
 MD5 6438303cb10431e6fe1fd8c1a24328d4 files/50helix 22
-MD5 b83696db32d29e1c07d27cb6ba16414e files/gentoo_bif.patch 10461
 MD5 9ff4380a6e2acce72f2685a5f5a03b2c files/buildrc 35
+MD5 d9d3bd60b0c7de98d93ccde45775936d files/digest-helixplayer-1.0_beta1 88
+MD5 b3efbf0d42d95ec571e60aaf9377d787 files/gcc_versioncheck.patch 502
+MD5 bded820ce4994950f10c24c5177f50fa files/installer-naming.patch 555
+MD5 cca1189dbb5ff1bc6e0fb9545a5e47ba files/digest-helixplayer-1.0.1 67
+MD5 b83696db32d29e1c07d27cb6ba16414e files/helixplayer-1.0_beta1-bif.patch 10461
+MD5 05e35dbf9a20d31273bd7677ee716ff6 files/helixplayer-1.0.1-bif.patch 10637
+MD5 d0e729f34bd20584c1359cb713433907 files/helixplayer-1.0.1-sem_t.patch 690
+MD5 b83696db32d29e1c07d27cb6ba16414e files/gentoo_bif.patch 10461
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBlutNFdQwWVoAgN4RAlJhAJ9pLnxCcCLq3JsnAcBqgpxP8RwzQwCg9j+u
+H2TZL4z5YOU0EBDeD6Rgf/A=
+=+plE
+-----END PGP SIGNATURE-----
