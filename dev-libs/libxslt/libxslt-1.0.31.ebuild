@@ -1,30 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.30-r1.ebuild,v 1.3 2003/07/07 15:19:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.31.ebuild,v 1.1 2003/07/07 15:19:32 foser Exp $
 
 inherit libtool gnome.org
 
 IUSE="python"
 DESCRIPTION="XSLT libraries and tools"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="http://www.xmlsoft.org/"
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="x86 ~ppc sparc alpha ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 
 RDEPEND=">=dev-libs/libxml2-2.5.6
 	python? ( dev-lang/python )"
-
+# FIXME is perl really needed (?)
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 
 src_compile() {
 	elibtoolize
 
-	local myconf
-
-	use python && myconf="--with-python" || myconf="--without-python"
-
-	econf ${myconf} || die
+	econf `use_with python` || die
 
 	emake || die
 }
