@@ -38,6 +38,7 @@
 *~sys-libs/glibc-2.2.5
 ~sys-kernel/linux-headers-2.4.17
 >=sys-apps/sysklogd-1.4.1
+*>=dev-lang/python-2.2-r5
 
 >=x11-base/xfree-4.1.0-r2
 
@@ -109,7 +110,6 @@
 *sys-devel/make
 *sys-devel/patch
 *sys-libs/cracklib  
-*>=dev-lang/python-2.2-r5
 *sys-libs/db
 *sys-libs/gdbm  
 *sys-libs/ncurses     

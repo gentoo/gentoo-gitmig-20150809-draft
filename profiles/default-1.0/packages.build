@@ -21,7 +21,7 @@ sys-devel/flex
 sys-devel/gcc
 sys-devel/make
 sys-devel/patch
-sys-devel/spython
+dev-lang/python
 net-misc/wget
 net-misc/rsync
 app-editors/nano
