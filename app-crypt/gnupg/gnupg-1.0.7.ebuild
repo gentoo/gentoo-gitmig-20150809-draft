@@ -27,6 +27,7 @@ src_compile() {
 	local myconf
 	use nls || myconf="--disable-nls"
 
+	# Bug #6387, --enable-m-guard causes bus error on sparcs
 	if [ "${ARCH}" != "sparc" -a "${ARCH}" != "sparc64" ]; then
 		myconf="${myconf} --enable-m-guard"
 	fi
