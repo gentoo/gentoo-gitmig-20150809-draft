@@ -1,0 +1,43 @@
+diff -ur iptraf-2.7.0/src/ifaces.c iptraf-2.7.0-ath0/src/ifaces.c
+--- iptraf-2.7.0/src/ifaces.c	2002-05-08 02:43:27.000000000 -0700
++++ iptraf-2.7.0-ath0/src/ifaces.c	2004-08-05 12:48:53.000000000 -0700
+@@ -32,14 +32,14 @@
+ #include "error.h"
+ 
+ extern int accept_unsupported_interfaces;
+-#define NUM_SUPPORTED_IFACES 20
++#define NUM_SUPPORTED_IFACES 21
+ 
+ extern int daemonized;
+ 
+ char ifaces[][6] =
+     { "lo", "eth", "sl", "ppp", "ippp", "plip", "fddi", "isdn", "dvb",
+       "pvc", "hdlc", "ipsec", "sbni", "tr", "wvlan", "wlan", "sm2", "sm3",
+-      "pent", "lec" };
++      "pent", "lec", "ath" };
+ 
+ char *ltrim(char *buf)
+ {
+diff -ur iptraf-2.7.0/src/packet.c iptraf-2.7.0-ath0/src/packet.c
+--- iptraf-2.7.0/src/packet.c	2002-05-08 02:44:08.000000000 -0700
++++ iptraf-2.7.0-ath0/src/packet.c	2004-08-05 12:56:57.000000000 -0700
+@@ -80,6 +80,8 @@
+     case ARPHRD_ETHER:
+ 	if (strncmp(ifname, "eth", 3) == 0)
+ 	    result = LINK_ETHERNET;
++	else if (strncmp(ifname, "ath", 3) == 0)
++	    result = LINK_ETHERNET;
+ 	else if (strncmp(ifname, "plip", 4) == 0)
+ 	    result = LINK_PLIP;
+ 	else if (strncmp(ifname, "fddi", 4) == 0)    /* For some Ethernet- */
+diff -ur iptraf-2.7.0/src/promisc.c iptraf-2.7.0-ath0/src/promisc.c
+--- iptraf-2.7.0/src/promisc.c	2002-01-15 17:51:03.000000000 -0800
++++ iptraf-2.7.0-ath0/src/promisc.c	2004-08-05 12:57:20.000000000 -0700
+@@ -81,6 +81,7 @@
+ 	     */
+ 
+ 	    if ((strncmp(buf, "eth", 3) == 0) ||
++	        (strncmp(buf, "ath", 3) == 0) ||
+ 		(strncmp(buf, "fddi", 4) == 0) ||
+   	        (strncmp(ptmp->params.ifname, "wvlan", 4) == 0) ||
+ 	        (strncmp(ptmp->params.ifname, "lec", 3) == 0) ||

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.15 2005/01/25 13:30:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0-r1.ebuild,v 1.16 2005/02/27 00:20:02 solar Exp $
 
 inherit eutils
 
@@ -20,7 +20,9 @@ DEPEND=">=sys-libs/ncurses-5.2-r1"
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
+	epatch ${FILESDIR}/iptraf-2.7.0-atheros.patch
 	use ipv6 && epatch ${DISTDIR}/${P}-ipv6-${V6PATCH_LEVEL}.diff
+
 	cd src
 	cp dirs.h dirs.h.orig
 	sed -e s:/var/local/iptraf:/var/lib/iptraf: -e s:/usr/local/bin:/usr/sbin: dirs.h.orig > dirs.h
