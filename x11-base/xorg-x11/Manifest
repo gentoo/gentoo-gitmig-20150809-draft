@@ -5,9 +5,9 @@ MD5 c0f8e417ca09b7e0a6cb0df5345c9ade xorg-x11-6.8.0-r4.ebuild 52258
 MD5 964bf2fe7bbddb6eab73140faa911397 xorg-x11-6.8.1.901-r1.ebuild 52453
 MD5 44835fc4c8bb9d475d312cfb96671654 xorg-x11-6.8.1.902-r1.ebuild 50722
 MD5 ce42c938819216d0ca122f33b4d2b8ab xorg-x11-6.8.1.902.ebuild 50073
-MD5 2e08db1f99a14c2a2a79759f405ee7cc ChangeLog 76255
+MD5 737b86951ccbc044e698cea951d32b79 ChangeLog 76635
 MD5 f0a1630bdfcd21822fe30cd226f06514 xorg-x11-6.8.1.903.ebuild 57859
-MD5 c9033610b5743b22157ac858674704bf xorg-x11-6.8.1.904.ebuild 58131
+MD5 3c61b783ef90ec2e38d56b70cf687e0a xorg-x11-6.8.1.904.ebuild 58131
 MD5 a3314fbdc270d7d84ea14fd477b8d048 files/digest-xorg-x11-6.7.0-r3 904
 MD5 70facbdb85b7ef2bc9b9b702442eda7e files/digest-xorg-x11-6.8.0-r3 908
 MD5 fa94b81b33045020143c8d9ded15a3ac files/digest-xorg-x11-6.8.0-r4 911
@@ -16,4 +16,4 @@ MD5 b59b9e9b5fe5a900264d9e6766a4b3f9 files/digest-xorg-x11-6.8.1.902 517
 MD5 b59b9e9b5fe5a900264d9e6766a4b3f9 files/digest-xorg-x11-6.8.1.902-r1 517
 MD5 f14e22fa0891e99c1000c0d61d7e8a0c files/xpm-secfix-thomas.diff 55674
 MD5 24b596cf50b39b2198ce67257bef8717 files/digest-xorg-x11-6.8.1.903 517
-MD5 fd0e073fabe5e5b9837c22e83f82a66b files/digest-xorg-x11-6.8.1.904 517
+MD5 0dd57a49ab06f953e8569c3051202650 files/digest-xorg-x11-6.8.1.904 517
