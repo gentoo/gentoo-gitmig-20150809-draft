@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-gcc/avr-gcc-3.3-r1.ebuild,v 1.3 2004/03/15 02:16:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-gcc/avr-gcc-3.3-r1.ebuild,v 1.4 2004/03/15 02:19:51 seemant Exp $
 
-IUSE=""
+IUSE="nls"
 
 MY_P=${P/avr-/}
 DESCRIPTION="The GNU C compiler for the AVR microcontroller architecture"
@@ -19,7 +19,8 @@ DEPEND="virtual/glibc
 src_compile() {
 	econf \
 		--target=avr \
-		--enable-languages=c || die
+		--enable-languages=c \
+		`use_enable nls` || die
 
 	emake || die
 }
