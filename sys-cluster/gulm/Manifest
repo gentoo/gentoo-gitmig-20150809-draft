@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 eb4f393b8a87abeac7ab69a7169cc17b gulm-1.0_pre2.ebuild 815
+MD5 626c10f252779b4564091602ddd019f8 ChangeLog 280
+MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
+MD5 838b24dbd62ada6732e349b7350e46ce files/digest-gulm-1.0_pre2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB+NDZgMUyd/cdjWsRAh5jAJ4l3dBQRcltScFpXdkM753s2GuBmwCffbAu
+oRvBYffgoY7qzFVTnnELjy0=
+=VE8d
+-----END PGP SIGNATURE-----
