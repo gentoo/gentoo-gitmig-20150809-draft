@@ -1,6 +1,6 @@
 MD5 8f6932db0e432e589c41d9928d4198a0 amavisd-new-20030616_p8.ebuild 2630
 MD5 1417aabd41c7b66e06f012fac0edad91 amavisd-new-20030616_p9.ebuild 2901
-MD5 c2152dff08aa677209a2ad3fcaab9fcc ChangeLog 4995
+MD5 5d3689ebec909d9446a75835a54d5f06 ChangeLog 4994
 MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
 MD5 1f1f4cf9c92f92f966361a8ac08aa543 files/amavisd.rc6 305
 MD5 3256d64018bee64fa34ed62fb93e44af files/sql_timeout.patch 3282

@@ -2,7 +2,7 @@ MD5 fb31c25d1d61faf8f4defab191ab24b4 maildrop-1.5.2.ebuild 2548
 MD5 f8e475410c508e77c0cf9dc29cc47c4b maildrop-1.4.0-r1.ebuild 1634
 MD5 02359a95f5fd8598379aa92aee334f61 maildrop-1.5.3.ebuild 2525
 MD5 4248dcfe4907ba9b2247bd2736b82513 maildrop-1.5.3-r1.ebuild 2467
-MD5 7b4e6f5d7e7afc08e0def8ed7d5a16c3 ChangeLog 5419
+MD5 29190e52405a7afd3a4ba598827930a0 ChangeLog 5418
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 a0e238f4cd5c4a52dfb06754051b6dfe files/digest-maildrop-1.5.2 67
 MD5 afbd9f7ee066fa84ac9efd57bce9f461 files/digest-maildrop-1.5.3 67

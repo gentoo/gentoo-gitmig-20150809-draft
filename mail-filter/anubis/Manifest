@@ -1,6 +1,6 @@
 MD5 3c698e8a3f7f59300484418a07756c08 anubis-3.6.2.ebuild 975
 MD5 04e61ab39618ff33b8e098b30ab1416b anubis-3.6.2-r1.ebuild 1076
-MD5 4c48ee1875dc61e1c28fbff89ba2b73f ChangeLog 1050
+MD5 c3744646a43ddfa721582870a4324bb0 ChangeLog 1049
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 24def86bd1cfb613e6c0dcf55194d449 files/digest-anubis-3.6.2 64
 MD5 a345a52e49034f67fe700e0464804933 files/3.6.2-secfixes.patch.gz 1455
