@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.74 2003/12/09 20:18:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.75 2004/01/13 06:11:08 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1132,4 +1132,169 @@ EOF
 			die "Failed to accept license"
 			;;
 	esac
+}
+
+# Aquire cd(s) for those lovely cd-based emerges.  Yes, this violates
+# the whole 'non-interactive' policy, but damnit I want CD support !
+#
+# with these cdrom functions we handle all the user interaction and
+# standardize everything.  all you have to do is call cdrom_get_cds()
+# and when the function returns, you can assume that the cd has been
+# found at CDROM_ROOT.
+#
+# normally the cdrom functions will refer to the cds as 'cd #1', 'cd #2',
+# etc...  if you want to give the cds better names, then just export
+# the CDROM_NAME_X variables before calling cdrom_get_cds().
+#
+# for those multi cd ebuilds, see the cdrom_load_next_cd() below.
+#
+# Usage: cdrom_get_cds <file on cd1> [file on cd2] [file on cd3] [...]
+# - this will attempt to locate a cd based upon a file that is on
+#   the cd ... the more files you give this function, the more cds
+#   the cdrom functions will handle
+cdrom_get_cds() {
+	# first we figure out how many cds we're dealing with by
+	# the # of files they gave us
+	local cdcnt=0
+	local f=
+	for f in "$@" ; do
+		cdcnt=$((cdcnt + 1))
+		export CDROM_CHECK_${cdcnt}="$f"
+	done
+	export CDROM_TOTAL_CDS=${cdcnt}
+	export CDROM_CURRENT_CD=1
+
+	# now we see if the user gave use CD_ROOT ...
+	# if they did, let's just believe them that it's correct
+	if [ ! -z "${CD_ROOT}" ] ; then
+		export CDROM_ROOT="${CD_ROOT}"
+		einfo "Found CD #${CDROM_CURRENT_CD} root at ${CDROM_ROOT}"
+		return
+	fi
+	# do the same for CD_ROOT_X
+	if [ ! -z "${CD_ROOT_1}" ] ; then
+		local var=
+		cdcnt=0
+		while [ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ] ; do
+			cdcnt=$((cdcnt + 1))
+			var="CD_ROOT_${cdcnt}"
+			if [ -z "${!var}" ] ; then
+				eerror "You must either use just the CD_ROOT"
+				eerror "or specify ALL the CD_ROOT_X variables."
+				eerror "In this case, you will need ${CDROM_TOTAL_CDS} CD_ROOT_X variables."
+				die "could not locate CD_ROOT_${cdcnt}"
+			fi
+			export CDROM_ROOTS_${cdcnt}="${!var}"
+		done
+		export CDROM_ROOT=${CDROM_ROOTS_1}
+		einfo "Found CD #${CDROM_CURRENT_CD} root at ${CDROM_ROOT}"
+		return
+	fi
+
+	if [ ${CDROM_TOTAL_CDS} -eq 1 ] ; then
+		einfon "This ebuild will need the "
+		if [ -z "${CDROM_NAME}" ] ; then
+			echo "cdrom for ${PN}."
+		else
+			echo "${CDROM_NAME}."
+		fi
+		echo
+		einfo "If you do not have the CD, but have the data files"
+		einfo "mounted somewhere on your filesystem, just export"
+		einfo "the variable CD_ROOT so that it points to the"
+		einfo "directory containing the files."
+		echo
+	else
+		einfo "This package will need access to ${CDROM_TOTAL_CDS} cds."
+		cdcnt=0
+		while [ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ] ; do
+			cdcnt=$((cdcnt + 1))
+			var="CDROM_NAME_${cdcnt}"
+			[ ! -z "${!var}" ] && einfo " CD ${cdcnt}: ${!var}"
+		done
+		echo
+		einfo "If you do not have the CDs, but have the data files"
+		einfo "mounted somewhere on your filesystem, just export"
+		einfo "the following variables so they point to the right place:"
+		einfon ""
+		cdcnt=0
+		while [ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ] ; do
+			cdcnt=$((cdcnt + 1))
+			echo -n " CD_ROOT_${cdcnt}"
+		done
+		echo
+		einfo "Or, if you have all the files in the same place, or"
+		einfo "you only have one cdrom, you can export CD_ROOT"
+		einfo "and that place will be used as the same data source"
+		einfo "for all the CDs."
+		echo
+	fi
+	export CDROM_CURRENT_CD=0
+	cdrom_load_next_cd
+}
+
+# this is only used when you need access to more than one cd.
+# when you have finished using the first cd, just call this function.
+# when it returns, CDROM_ROOT will be pointing to the second cd.
+# remember, you can only go forward in the cd chain, you can't go back.
+cdrom_load_next_cd() {
+	export CDROM_CURRENT_CD=$((CDROM_CURRENT_CD + 1))
+	local var=
+
+	unset CDROM_ROOT
+	var=CDROM_ROOTS_${CDROM_CURRENT_CD}
+	if [ -z "${!var}" ] ; then
+		var="CDROM_CHECK_${CDROM_CURRENT_CD}"
+		cdrom_locate_file_on_cd ${!var}
+	else
+		export CDROM_ROOT="${!var}"
+	fi
+
+	einfo "Found CD #${CDROM_CURRENT_CD} root at ${CDROM_ROOT}"
+}
+
+# this is used internally by the cdrom_get_cds() and cdrom_load_next_cd()
+# functions.  this should *never* be called from an ebuild.
+# all it does is try to locate a give file on a cd ... if the cd isn't
+# found, then a message asking for the user to insert the cdrom will be
+# displayed and we'll hang out here until:
+# (1) the file is found on a mounted cdrom
+# (2) the user hits CTRL+C
+cdrom_locate_file_on_cd() {
+	while [ -z "${CDROM_ROOT}" ] ; do
+		local dir="$(dirname ${@})"
+		local file="$(basename ${@})"
+		local mline=""
+		local showedmsg=0
+
+		for mline in `mount | egrep -e '(iso|cdrom)' | awk '{print $3}'` ; do
+			[ -d "${mline}/${dir}" ] || continue
+			[ ! -z "$(find ${mline}/${dir} -iname ${file} -maxdepth 1)" ] \
+				&& export CDROM_ROOT=${mline}
+		done
+
+		if [ -z "${CDROM_ROOT}" ] ; then
+			echo
+			if [ ${showedmsg} -eq 0 ] ; then
+				if [ ${CDROM_TOTAL_CDS} -eq 1 ] ; then
+					if [ -z "${CDROM_NAME}" ] ; then
+						einfo "Please insert the cdrom for ${PN} now !"
+					else
+						einfo "Please insert the ${CDROM_NAME} cdrom now !"
+					fi
+				else
+					if [ -z "${CDROM_NAME_1}" ] ; then
+						einfo "Please insert cd #${CDROM_CURRENT_CD} for ${PN} now !"
+					else
+						local var="CDROM_NAME_${CDROM_CURRENT_CD}"
+						einfo "Please insert+mount the ${!var} cdrom now !"
+					fi
+				fi
+				showedmsg=1
+			fi
+			einfo "Press return to scan for the cd again"
+			einfo "or hit CTRL+C to abort the emerge."
+			read
+		fi
+	done
 }
