@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.31 2003/12/12 23:34:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.32 2004/02/01 20:32:42 vapier Exp $
+
+*esound-0.2.32-r1 (01 Feb 2004)
+
+  01 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bumped to fix segfaults with new alsa #36417.
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> esound-0.2.32.ebuild:
   Stable on ia64
