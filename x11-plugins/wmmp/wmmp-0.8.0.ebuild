@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# 
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp/wmmp-0.8.0.ebuild,v 1.3 2003/11/19 17:39:56 mholzer Exp $
 
 IUSE=""
 
