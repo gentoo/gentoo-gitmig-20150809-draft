@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.13 2002/05/31 14:35:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.14 2002/06/02 11:44:05 doctomoe Exp $
+
+*xmms-1.2.7-r8 (02 June 2002)
+
+  02 June 2002; Olivier Reisch <doctomoe@gentoo.org> xmms-1.2.7-r8.ebuild:
+
+  xmms-1.2.7 r6 and r7 are broken on PPC. The src_unpack function fails on the
+  3dnow/mmx patch inclusion check. Included an arch check to exclude the code
+  from being executed on PPC.
 
 *xmms-1.2.7-r7 (30 May 2002)
 
