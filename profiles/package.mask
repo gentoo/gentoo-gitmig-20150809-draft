@@ -22,10 +22,6 @@
 ##
 
 
-# <azarah@gentoo.org> (19 Sep 2002)
-# Missing files .. what can I say ?
->=net-mail/postfix-1.1.11.20020822
-
 # <raker@gentoo.org> (18 Sep 2002)
 # New verison of ghostscript.
 # Please test and report on bug #7787
