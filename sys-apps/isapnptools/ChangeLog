@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/isapnptools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/ChangeLog,v 1.5 2004/06/24 22:12:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/ChangeLog,v 1.6 2004/10/06 01:41:46 vapier Exp $
+
+*isapnptools-1.26-r1 (05 Oct 2004)
+
+  05 Oct 2004; Mike Frysinger <vapier@gentoo.org> +files/isapnp.rc,
+ +isapnptools-1.26-r1.ebuild:
+  Move isapnp to /sbin/ to fix init.d dependency problems #63538.
 
 *isapnptools-1.23-r6.ebuild (14 July 2002)
 
