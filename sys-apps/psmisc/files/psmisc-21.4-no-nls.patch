@@ -1,0 +1,71 @@
+--- src/fuser.c.mps	2004-06-08 18:21:33 +0200
++++ src/fuser.c	2004-06-08 18:27:13 +0200
+@@ -31,9 +31,13 @@
+ #include <linux/kdev_t.h>	/* for MKDEV */
+ #include <linux/major.h>	/* for LOOP_MAJOR */
+ #endif
++#ifdef USE_NLS
+ #include <libintl.h>
+ #include <locale.h>
+ #define _(String) gettext (String)
++#else
++#define _(String) (String)
++#endif
+ 
+ #include "comm.h"
+ #include "loop.h"         /* for loop_info */
+@@ -1007,9 +1011,11 @@ main (int argc, char **argv)
+   no_files = 1;
+ 
+   /* Setup the i18n */
++#ifdef USE_NLS
+   setlocale(LC_ALL, "");
+   bindtextdomain(PACKAGE, LOCALEDIR);
+   textdomain(PACKAGE);
++#endif
+ 
+   if (argc < 2)
+     usage ();
+--- src/killall.c.mps	2004-06-08 18:21:38 +0200
++++ src/killall.c	2004-06-08 18:26:51 +0200
+@@ -25,9 +25,13 @@
+ #include <selinux/fs_secure.h>
+ #include <selinux/ss.h>
+ #endif /*FLASK_LINUX*/
++#ifdef USE_NLS
+ #include <libintl.h>
+ #include <locale.h>
+ #define _(String) gettext (String)
++#else
++#define _(String) (String)
++#endif
+ 
+ #include "comm.h"
+ #include "signals.h"
+@@ -467,9 +471,11 @@ main (int argc, char **argv)
+   sig_num = SIGTERM;
+ 
+   /* Setup the i18n */
++#ifdef USE_NLS
+   setlocale(LC_ALL, "");
+   bindtextdomain(PACKAGE, LOCALEDIR);
+   textdomain(PACKAGE);
++#endif
+ 
+   opterr = 0;
+ #ifdef FLASK_LINUX
+--- src/pstree.c.mps	2004-06-08 18:27:39 +0200
++++ src/pstree.c	2004-06-08 18:28:03 +0200
+@@ -22,8 +22,12 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/ioctl.h>
++#ifdef USE_NLS
+ #include <libintl.h>
+ #define _(String) gettext (String)
++#else
++#define _(String) (String)
++#endif
+ 
+ #include "comm.h"
+ 

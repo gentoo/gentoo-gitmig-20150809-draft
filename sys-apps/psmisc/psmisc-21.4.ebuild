@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.7 2004/06/11 13:54:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.8 2004/06/15 07:16:28 solar Exp $
 
 inherit eutils gnuconfig
 
@@ -16,7 +16,8 @@ KEYWORDS="~x86 ~ppc ~sparc ~mips alpha arm hppa ~amd64 ~ia64 ~ppc64 s390"
 IUSE="nls selinux"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
-	selinux? ( sys-libs/libselinux )"
+	selinux? ( sys-libs/libselinux )
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
@@ -26,6 +27,7 @@ src_unpack() {
 		# Necessary selinux patch
 		epatch ${FILESDIR}/${SELINUX_PATCH}
 	fi
+	use nls || epatch ${FILESDIR}/${P}-no-nls.patch
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.2-r4.ebuild,v 1.15 2004/04/09 05:00:27 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.2-r4.ebuild,v 1.16 2004/06/15 07:16:28 solar Exp $
 
 inherit eutils gnuconfig
 
@@ -16,7 +16,8 @@ KEYWORDS="x86 amd64 ppc sparc ~alpha hppa mips ia64 ppc64 s390"
 IUSE="nls selinux"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
-	selinux? ( sys-libs/libselinux )"
+	selinux? ( sys-libs/libselinux )
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
@@ -42,6 +43,7 @@ src_unpack() {
 	# pointer that is used, thanks to bug submitted (bug #28234) by
 	# Grant McDorman <grant.mcdorman@sympatico.ca>.
 	epatch ${FILESDIR}/${P}-fix-realloc.patch
+	use nls || epatch ${FILESDIR}/${P}-no-nls.patch
 }
 
 src_compile() {
