@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.18 2004/01/12 17:55:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.19 2004/01/13 15:39:04 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -32,8 +32,6 @@ INHERITED="${INHERITED} ${ECLASS}"
 EXPORT_FUNCTIONS erubyconf erubymake erubyinstall erubydoc \
 	src_unpack econf emake src_compile einstall src_install
 
-inherit eutils
-
 HOMEPAGE="http://raa.ruby-lang.org/list.rhtml?name=${PN}"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
@@ -56,7 +54,11 @@ ruby_src_unpack() {
 
 	unpack ${A}
 	# apply bulk patches
-	[[ -n "${PATCHES}" ]] && xpatch "${PATCHES}"
+	if [[ -n "${PATCHES}" ]] ; then
+		for p in ${PATCHES} ; do
+			epatch $p
+		done
+	fi
 
 	if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
 		cd ${WORKDIR}
