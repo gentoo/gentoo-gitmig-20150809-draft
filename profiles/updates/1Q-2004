@@ -10,3 +10,4 @@ move x11-misc/wmium x11-plugins/wmium
 move x11-misc/docker x11-plugins/docker
 move x11-wm/ion-devel x11-wm/ion2
 move app-benchmarks/volcanomark app-benchmarks/volanomark
+move net-www/mozilla-firebird-bin net-www/mozilla-firefox-bin
