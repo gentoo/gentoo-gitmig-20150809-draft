@@ -1,0 +1,8 @@
+# ChangeLog for sys-libs/rvm
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# 
+
+*rvm-1.6 (01 Jul 2002)
+
+  01 Jul 2002; Greg Briggs <gb006k@mail.rochester.edu> rvm-1.6.ebuild: Created
+  ebuild for this package.
