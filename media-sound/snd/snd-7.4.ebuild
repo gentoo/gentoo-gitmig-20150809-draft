@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.0.ebuild,v 1.2 2004/04/11 17:38:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.4.ebuild,v 1.1 2004/05/21 18:50:41 squinky86 Exp $
 
 IUSE="esd motif guile X gtk ruby alsa"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://snd.sourceforge.net"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND="X? ( virtual/x11 )
 	dev-libs/gsl
@@ -53,7 +53,7 @@ src_compile() {
 		&& myconf="${myconf} --with-x" \
 		|| myconf="${myconf} --without-x"
 
-# Seems to cause problem I will look into it but for now we will just disable
+# looks like gl is still broke
 #	use gl \
 #		&& myconf="${myconf} --with-just-gl" \
 #		|| myconf="${myconf} --without-gl"
@@ -67,8 +67,10 @@ src_compile() {
 src_install () {
 	dobin snd
 
-	dodoc COPYING HISTORY.Snd README.Snd TODO.Snd
+	dodoc COPYING *.Snd *.scm *.rb *.png *.html
 
-	cd contrib/tutorial
+	cd tutorial
 	dohtml *
+	insinto /usr/share/doc/${PF}/html/images/jpg
+	doins images/jpg/*
 }

@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/snd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.12 2004/04/11 17:38:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.13 2004/05/21 18:50:41 squinky86 Exp $
+
+*snd-7.4 (21 May 2004)
+
+  21 May 2004; Jon Hood <squinky86@gentoo.org> -snd-6.7.ebuild,
+  -snd-7.0.ebuild, +snd-7.4.ebuild:
+  version bump and cleanup irt #48464
 
   12 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> snd-6.7.ebuild,
   snd-7.0.ebuild, snd-7.1.ebuild:
