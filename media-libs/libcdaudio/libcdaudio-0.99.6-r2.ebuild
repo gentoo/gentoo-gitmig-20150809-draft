@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.6-r2.ebuild,v 1.8 2004/06/24 23:06:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.6-r2.ebuild,v 1.9 2004/07/14 20:01:00 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -11,6 +11,7 @@ HOMEPAGE="http://libcdaudio.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc ~alpha ~hppa ~mips amd64"
+IUSE=""
 
 src_compile() {
 	patch -p1 < ${FILESDIR}/${P}-sanity-checks.patch
