@@ -1,10 +1,11 @@
 # IMPORTANT: In order to parse this new format, you need Portage 1.6 or later!
+
 # OK; you're staring at this file and you have no idea what these stars are
 # for.  Here's the scoop.  An initial "*" marks a package that is part of the
 # official "base" system profile.  If there's a "*", then "emerge system" will
 # use the line in its calculations of what "should" be installed for this
-# profile.  Lines without a "*" prefix will be ignored for profile
-# calculations.
+# profile.  Lines without a "*" prefix will be ignored for profile calculations.
+
 # Now, this is new: *all* lines (star or no star) will be used as a special
 # package *inclusion* mask.  For example, the line *=sys-devel/gcc-2.95.3-r1
 # will cause Portage to totally ignore all gcc ebuilds other than
@@ -21,20 +22,35 @@
 # and still useful.  But it should mainly be used for broken ebuilds only.
 # package.mask continues to function as normal, masking out ebuilds from *all*
 # system profiles.
+
 # Which to use?  Use the profile-specific stuff to "lock down" specific
-# versions of ebuilds.  Gentoo Linux 1.0_rc6 uses certain known-compatible
+# versions of ebuilds.  Gentoo Linux 1.4 uses certain known-compatible
 # versions of binutils, gcc and glibc, so we lock them down here.  This
 # prevents the user from shooting himself/herself in the foot by installing a
 # wacky version.
-!dev-lang/gpc
+
+# SPARC Profile
+
+# These don't make sense on sparc 
+~sys-devel/bin86
+~sys-apps/lilo
+~sys-apps/grub
+
+# sparc specfic pkgs
+*sys-apps/sparc-utils
+*sys-apps/silo
+*dev-util/dialog
+
+# default-sparc-1.4 pkgs 
 *>=sys-apps/baselayout-1.8.5.5
-*>=sys-apps/portage-2.0.45-r4
-*>=sys-devel/binutils-2.13.90.0.16
-*>=sys-devel/gcc-3.2
+*>=sys-apps/portage-2.0.45-r2
+*=sys-devel/binutils-2.13.90.0.16
+*>=sys-devel/gcc-3.2.1
 *>=sys-libs/glibc-2.3.1-r2
 >=sys-kernel/linux-headers-2.4.19
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
+
 >=x11-base/xfree-4.2.1
 *app-shells/sash
 *sys-devel/perl
@@ -83,7 +99,6 @@
 *sys-devel/autoconf
 *>=sys-devel/automake-1.6.1-r5
 *sys-devel/bc
-#*sys-devel/bin86
 *sys-devel/bison
 *sys-devel/flex
 *sys-devel/gettext
@@ -94,16 +109,12 @@
 *sys-libs/cracklib  
 *<sys-libs/db-3.2.10
 *sys-libs/gdbm  
-*>=sys-libs/ncurses-5.2-r7
-*>=sys-libs/pam-0.75-r9
+*>=sys-libs/ncurses-5.2.20020511-r3
+*>=sys-libs/pam-0.75-r10
 *sys-libs/pwdb      
 *sys-libs/readline  
 *sys-libs/slang
 *sys-libs/zlib
 *net-misc/openssh
 *sys-apps/devfsd
-*sys-apps/sparc-utils
-*sys-apps/silo
-*dev-util/dialog
-
 

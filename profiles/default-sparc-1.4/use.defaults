@@ -1,15 +1,4 @@
-#gif
-#mmx
-#3dnow
-#odbc
-#fbcon		
-#qtmt
-#oss
-#libg++
-#objprelink
-#nls
-#mitshm
-#sse
+# Not recommended: mmx, 3dnow, sse, svga, gpm
 directfb	dev-libs/DirectFB
 ungif		media-libs/ungif
 gtkhtml		gnome-extra/gtkhtml
@@ -23,7 +12,6 @@ tetex		app-text/tetex
 aalib		media-libs/aalib	
 nas		media-libs/nas
 bonobo		gnome-base/bonobo
-#svga
 ggi		media-libs/libggi
 tcltk		dev-lang/tcl dev-lang/tk
 java		virtual/jre
@@ -33,7 +21,6 @@ mysql		dev-db/mysql
 postgres	dev-db/postgresql
 X		x11-base/xfree
 sdl		media-libs/libsdl
-#gpm		sys-libs/gpm
 tcpd		sys-apps/tcp-wrappers
 pam		sys-libs/pam
 libwww		net-libs/libwww
