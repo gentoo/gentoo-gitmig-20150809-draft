@@ -1,6 +1,6 @@
 MD5 232c9a440f58d6f1a15c750ba4a25c48 qt-3.1.2-r3.ebuild 4979
 MD5 3ea4b4de8bf408a89bad7560499c5517 qt-2.3.2-r1.ebuild 2274
-MD5 d2282a0399378f6c0dc52ccee8345d8d qt-3.2.1.ebuild 4915
+MD5 d6eaf30f09242dbfda85caa715c9e152 qt-3.2.1.ebuild 4929
 MD5 a3dd25c9f882f04df789dddc02ed3177 qt-3.0.5-r2.ebuild 3896
 MD5 00e9d63f2373eecbf8d070845e3ed794 qt-3.1.0-r3.ebuild 4698
 MD5 aff33d960efe2f7ef7782bd0a7cc9441 qt-3.1.2-r4.ebuild 5340
@@ -11,7 +11,7 @@ MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
 MD5 2d5b68b38185a30a28ffb2b652258cb8 files/45qt3 83
 MD5 7a287bc7609ad2420f70af6d4c58302f files/50qt2 63
 MD5 edd5c27031cc5f29070a9094425f09d9 files/digest-qt-3.2.0 72
-MD5 89e3274d3b0079fdcfea7606de13360e files/digest-qt-3.2.1 78
+MD5 b79277b535797e854be75d1c396de0f2 files/digest-qt-3.2.1 72
 MD5 c6dc1b6fadcb4897d4c7b0a768c2d196 files/qt-3.1.2-r3-qsocket.diff 447
 MD5 04fdd1779f4aca06b809528a2d0bad7a files/qt-3.1.2-coreutils-fixup.patch 4203
 MD5 b87df8ba9bf813ffe5e280fa2d79da25 files/qt-3.1.2-qpsprinter-ttc-otf-italic-20030429.patch 19286

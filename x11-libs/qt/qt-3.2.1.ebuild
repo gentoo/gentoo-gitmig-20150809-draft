@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1.ebuild,v 1.8 2003/09/16 12:55:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1.ebuild,v 1.9 2003/09/17 14:49:52 caleb Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -93,7 +93,7 @@ src_compile() {
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
 	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
-	use xinerama    && mycong="${myconf} -xinerama"
+	use xinerama    && myconf="${myconf} -xinerama"
 
 	# avoid wasting time building things we won't install
 	#rm -rf tutorial examples
@@ -132,7 +132,7 @@ src_install() {
 	ln -s libqt-mt.so.3 libqt-mt.so
 
 	# libqt -> libqt-mt symlinks
-	ln -s libqt-mt.so.3.2.1 libqt.so.3.2.0
+	ln -s libqt-mt.so.3.2.1 libqt.so.3.2.1
 	ln -s libqt-mt.so.3.2 libqt.so.3.2
 	ln -s libqt-mt.so.3 libqt.so.3
 	ln -s libqt-mt.so libqt.so
