@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.34 2003/06/25 16:04:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.35 2003/06/26 15:25:24 phosphan Exp $
+
+  26 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> ethereal-0.9.13.ebuild:
+  Copied the addwrite line to compile - fixes bug 23514 and should definitely
+  not break anything
 
   25 Jun 2003; Luca Barbato <lu_zero@gentoo.org> ethereal-0.9.13.ebuild:
   Force libtool regeneration in order to fix a build issue, marked ppc.

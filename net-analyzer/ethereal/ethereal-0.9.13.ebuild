@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.13.ebuild,v 1.8 2003/06/25 22:04:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.13.ebuild,v 1.9 2003/06/26 15:25:24 phosphan Exp $
 
 IUSE="gtk ipv6 snmp ssl gtk2"
 inherit libtool
@@ -63,7 +63,7 @@ src_compile() {
 		--sysconfdir=/etc/ethereal \
 		--with-plugindir=/usr/lib/ethereal/plugins/${PV} \
 		${myconf} || die "bad ./configure"
-
+	addwrite "/usr/share/snmp/mibs/.index"
 	emake || die "compile problem"
 }
 
