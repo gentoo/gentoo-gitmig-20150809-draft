@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/ubh/ubh-2.5.ebuild,v 1.1 2004/01/17 16:52:17 esammer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/ubh/ubh-2.5.ebuild,v 1.2 2004/06/19 01:59:44 swegener Exp $
 
 DESCRIPTION="The Usenet Binary Harvester"
 HOMEPAGE="http://ubh.sourceforge.net/"
 SRC_URI="http://ubh.sourceforge.net/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 DEPEND=">=dev-perl/libnet-1.0607
 		>=dev-perl/News-Newsrc-1.07
