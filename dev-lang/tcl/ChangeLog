@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.26 2004/03/04 18:17:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.27 2004/04/20 00:28:01 port001 Exp $
+
+  20 Apr 2004; Ian Leitch <port001@gentoo.org> -tcl-8.3.3-r1.ebuild,
+  -tcl-8.3.3-r3.ebuild, -tcl-8.4.3.ebuild, -tcl-8.4.4.ebuild,
+  -tcl-8.4.5.ebuild:
+  Removed stable ebuilds
 
 *tcl-8.4.6 (04 Mar 2004)
 
