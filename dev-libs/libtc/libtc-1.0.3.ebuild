@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/libtc-1.0.3.ebuild,v 1.6 2004/07/14 14:47:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/libtc-1.0.3.ebuild,v 1.7 2005/04/01 04:37:40 agriffis Exp $
 
 IUSE="static"
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~mips ~ia64 ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~mips ia64 ~amd64"
 
 DEPEND="virtual/libc"
 

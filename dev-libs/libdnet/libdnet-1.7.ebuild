@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.7.ebuild,v 1.11 2005/02/27 05:35:30 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.7.ebuild,v 1.12 2005/04/01 04:31:50 agriffis Exp $
 
 DESCRIPTION="simplified, portable interface to several low-level networking routines"
 HOMEPAGE="http://libdnet.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/libdnet/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc hppa ~ia64 ~amd64"
+KEYWORDS="x86 ppc sparc hppa ia64 ~amd64"
 IUSE=""
 
 src_unpack() {
