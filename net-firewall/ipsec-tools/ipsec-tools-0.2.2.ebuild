@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc. et al. <http://bugs.gentoo.org/show_bug.cgi?id=26796>
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.2.2.ebuild,v 1.1 2003/12/16 18:04:33 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.2.2.ebuild,v 1.2 2004/01/03 13:44:31 plasmaroo Exp $
 
 DESCRIPTION="IPsec-Tools is a port of KAME's IPsec utilities to the Linux-2.6 IPsec implementation."
 HOMEPAGE="http://ipsec-tools.sourceforge.net/"
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc
 pkg_setup() {
 	my_KV=`echo ${KV} | cut -f-2 -d "."`
 	if [ ${my_KV} != "2.6" ] ; then
-		echo; eerror "You need a 2.6.x kernel to use the ipsec tools!"; echo
+		echo; eerror "You need a 2.6.x kernel to use the ipsec tools!"; die "You need a 2.6 kernel to use ipsec-tools!"
 	fi
 }
 
