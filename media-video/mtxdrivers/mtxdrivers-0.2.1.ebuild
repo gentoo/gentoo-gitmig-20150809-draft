@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.                                                                                         
 # Distributed under the terms of the GNU General Public License v2                                                                      
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.2.1.ebuild,v 1.2 2003/04/20 01:27:45 prez Exp $                     
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.2.1.ebuild,v 1.3 2003/04/20 01:29:08 prez Exp $                     
 
 RELEASE=2002
 SRC_URI="ftp://ftp.matrox.com/pub/mga/archive/linux/${RELEASE}/${P/-/_}.tgz"
@@ -29,6 +29,7 @@ src_compile() {
 
 	if [ ! -e ${S}/xfree86/${Xversion} ]; then
 		eerror "Matrox does not support XFree v${Xversion}"
+		exit 1
 	fi
 
 	cd ${S}/kernel/src
