@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 e69d303af9f75b33c0f1d2b8959c0f36 sh-utils-2.0.15.ebuild 2286
+MD5 5f9179ad3d3168736729083de76e81bd sh-utils-2.0.15-r1.ebuild 490
 MD5 b815112851c9ab47b9157a4f41d72c65 ChangeLog 4973
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 5f9179ad3d3168736729083de76e81bd sh-utils-2.0.15-r1.ebuild 490
-MD5 66be5ea4a059963b088934abcfe865ea sh-utils-2.0.15.ebuild 2304
+MD5 b0454d28beed9edd23c9facdd154174f files/sh-utils-2.0.15-gentoo.diff 2585
+MD5 3862186589a94a3a12eec30eb838bd0a files/sh-utils-2.0.11-gentoo.diff 3922
 MD5 5fdc646eb14d3f40c0a6f81eb897d339 files/digest-sh-utils-2.0.15 68
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sh-utils-2.0.15-r1 0
-MD5 3862186589a94a3a12eec30eb838bd0a files/sh-utils-2.0.11-gentoo.diff 3922
-MD5 b0454d28beed9edd23c9facdd154174f files/sh-utils-2.0.15-gentoo.diff 2585
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4GTaHTu7gpaalycRAqwRAJ9BrCTVXOwGMX8apjHaYAK5e6VlWACfYwI2
-T9Yu3XWa/Y2bxyFIyAnkXVI=
-=5Hy1
------END PGP SIGNATURE-----

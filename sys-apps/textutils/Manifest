@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 90483f0f83033c082ad3a779659f04ab textutils-2.1.ebuild 1035
+MD5 f380b1e6a9265fbf5a82090b5356dfc1 textutils-2.0.21.ebuild 1201
+MD5 19496cfe15390d08a2a1c01cf60ba120 textutils-2.1-r1.ebuild 481
 MD5 419fabf7ac795f20373225c612a385eb ChangeLog 3119
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 e19a933bb77efc8645e6e98e6ac69d63 textutils-2.0.21.ebuild 1219
-MD5 19496cfe15390d08a2a1c01cf60ba120 textutils-2.1-r1.ebuild 481
-MD5 6529155f1db96ef8f4b7d66a5a694a19 textutils-2.1.ebuild 1053
-MD5 7ffe6874d60801287cacb37785919e0e files/digest-textutils-2.0.21 69
-MD5 912d3e77416726cfd0e4fbe8b53a3468 files/digest-textutils-2.1 66
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-textutils-2.1-r1 0
 MD5 fa618c23a88a25c243798aacf2db59a6 files/textutils-2.0.21-gentoo.diff 1278
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4GfoHTu7gpaalycRAqqYAJ4sO4NqNF37KBaMeQYLHc0hcV7jWQCffvm1
-p2J9tbgUouVlsOtmKOXDuLw=
-=54zM
------END PGP SIGNATURE-----
+MD5 912d3e77416726cfd0e4fbe8b53a3468 files/digest-textutils-2.1 66
+MD5 7ffe6874d60801287cacb37785919e0e files/digest-textutils-2.0.21 69
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-textutils-2.1-r1 0
