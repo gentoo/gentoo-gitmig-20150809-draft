@@ -1,0 +1,18 @@
+diff -Naru postgresql-8.0.0rc1.org/src/bin/initdb/initdb.c postgresql-8.0.0rc1/src/bin/initdb/initdb.c
+--- postgresql-8.0.0rc1.org/src/bin/initdb/initdb.c	2004-11-29 03:05:03.000000000 +0000
++++ postgresql-8.0.0rc1/src/bin/initdb/initdb.c	2004-12-04 18:02:43.757485824 +0000
+@@ -2617,13 +2617,7 @@
+ 	get_parent_directory(bin_dir);
+ 	
+ 	printf(_("\nSuccess. You can now start the database server using:\n\n"
+-			 "    %s%s%s%spostmaster -D %s%s%s\n"
+-			 "or\n"
+-			 "    %s%s%s%spg_ctl -D %s%s%s -l logfile start\n\n"),
+-	  QUOTE_PATH, bin_dir, QUOTE_PATH, (strlen(bin_dir) > 0) ? DIR_SEP : "",
+-	  QUOTE_PATH, pg_data_native, QUOTE_PATH,
+-	  QUOTE_PATH, bin_dir, QUOTE_PATH, (strlen(bin_dir) > 0) ? DIR_SEP : "",
+-	  QUOTE_PATH, pg_data_native, QUOTE_PATH);
++		   "/etc/init.d/postgresql start\n\n"));
+ 
+ 	return 0;
+ }
