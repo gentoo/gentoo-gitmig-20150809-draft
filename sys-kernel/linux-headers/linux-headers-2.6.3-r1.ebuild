@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.3-r1.ebuild,v 1.2 2004/02/29 20:52:40 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.3-r1.ebuild,v 1.3 2004/03/21 06:25:59 kumba Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -82,7 +82,7 @@ src_install() {
 	kernel_src_install
 
 	# If this is sparc, then we need to place asm_offsets.h in the proper location(s)
-	if [ -n "`use sparc`" ]; then
+	if [ "${PROFILE_ARCH}" = "sparc64" ]; then
 
 		# We don't need /usr/include/asm, generate-asm-sparc will take care of this
 		rm -Rf ${D}/usr/include/asm
@@ -90,15 +90,11 @@ src_install() {
 		# We do need empty directories, though...
 		dodir /usr/include/asm
 		dodir /usr/include/asm-sparc
+		dodir /usr/include/asm-sparc64
 
-		# Copy asm-sparc
+		# Copy asm-sparc and asm-sparc64
 		cp -ax ${S}/include/asm-sparc/* ${D}/usr/include/asm-sparc
-
-		# If this is sparc64, then we need asm-sparc64 stuff too
-		if [ "${PROFILE_ARCH}" = "sparc64" ]; then
-			dodir /usr/include/asm-sparc64
-			cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
-		fi
+		cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
 
 		# Check if generate-asm-sparc exists
 		if [ -a "${FILESDIR}/generate-asm-sparc" ]; then
