@@ -9,7 +9,7 @@ S=${WORKDIR}/${P}
 IUSE=""
 
 SLOT="0"
-LICENSE="LGPL-2"
+LICENSE="LGPL-2.1"
 KEYWORDS="~x86"
 
 DEPEND="virtual/glibc"
