@@ -52,6 +52,9 @@ app-admin/webconfig
 # drobbins (12/31/2001)
 =sys-devel/bison-1.30
 
+# needs testing first .. dont want a repeat of 1.30
+=sys-devel/bison-1.32
+
 # broken
 =app-doc/quanta-docs-1.0
 
