@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.7 2004/11/19 23:29:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.8 2004/11/21 07:02:27 mr_bones_ Exp $
 
 IUSE="oss doc"
 
@@ -21,7 +21,7 @@ RDEPEND="virtual/modutils
 	 ~media-sound/alsa-headers-${PV}"
 
 DEPEND="${RDEPEND}
-	sys-devel/patch	
+	sys-devel/patch
 	virtual/linux-sources
 	>=sys-devel/autoconf-2.50
 	sys-apps/debianutils"
