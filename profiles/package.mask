@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# solar@gentoo.org (Sept 24 2003)
+# masked for security reasons. bug #26780
+<net-mail/qmail-autoresponder-2.02
+
 # <strider@gentoo.org> (21 Sep 2003)
 # ant 1.5.4 the ebuild is ok but ant
 # script its no working too well
@@ -668,7 +672,3 @@ app-misc/todo-manager-bronze
 # agriffis@gentoo.org 29 Jul 2003
 # mask nforce-net-1.0.0261 for bug 24815
 =net-misc/nforce-net-1.0.0261*
-
-# solar@gentoo.org Sept 24 2003
-# masked for security reasons. bug #26780
-<net-mail/qmail-autoresponder-2.02
