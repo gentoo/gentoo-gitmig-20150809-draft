@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/fwanalog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fwanalog/ChangeLog,v 1.5 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fwanalog/ChangeLog,v 1.6 2003/01/04 01:50:34 aliz Exp $
+
+*fwanalog-0.6.1 (04 Jan 2003)
+
+  04 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump. Found by Henning Westerholt <henning@skalatan.de> in #11405.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
