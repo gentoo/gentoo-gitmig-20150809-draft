@@ -1,0 +1,19 @@
+diff -ur wavbreaker-0.4.orig/src/wavinfo.c wavbreaker-0.4/src/wavinfo.c
+--- wavbreaker-0.4.orig/src/wavinfo.c	2003-10-25 17:06:20.000000000 -0400
++++ wavbreaker-0.4/src/wavinfo.c	2003-12-28 07:43:20.000000000 -0500
+@@ -12,6 +12,7 @@
+ 	char str[128];
+ 	FILE *fp;
+ 	int i;
++	SampleInfo sampleInfo;
+ 
+ 	if (argc < 2) {
+ 		printf("must pass filename of wave file.\n");
+@@ -21,7 +22,6 @@
+ 	for (i = 1; i < argc; i++) {
+ 		printf("Header info for: %s\n", argv[i]);
+ 
+-		SampleInfo sampleInfo;
+ 		if (wav_read_header(argv[i], &sampleInfo, 1) != 0) {
+ 			printf(wav_get_error_message());
+ 		}
