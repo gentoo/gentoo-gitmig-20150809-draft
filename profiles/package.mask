@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (04 Aug 2002)
+# Testing...
+=net-ftp/kbear-2.0_beta1
+
 # Spider <spider@gentoo.org> (04 Aug 2002)
 # seems that stroke got theese released before my changed ebuilds made it into the tree
 # theese remove debugging information from the builds, and change libtool behaviour.
@@ -96,7 +100,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1171 2002/08/04 07:07:19 spider Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1172 2002/08/04 10:21:15 carpaski Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
