@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/psycopg-py21
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg-py21/ChangeLog,v 1.1 2003/03/08 23:44:46 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg-py21/ChangeLog,v 1.2 2003/04/05 20:44:54 kutsuya Exp $
 
 *psycopg-py21-1.1.2 (08 Mar 2003)
+
+  05 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> psycopg-py21-1.1.2.ebuild:
+  ~x86 -> x86 and added ~ppc
 
   08 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> psycopg-py21-1.1.2.ebuild:
   Initial import. Basically a fork of 1.1.2, but adds extension to python2.1.
