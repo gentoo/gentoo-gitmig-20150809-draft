@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6.ebuild,v 1.2 2004/03/21 11:30:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6.ebuild,v 1.3 2004/03/21 22:32:49 nakano Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${PV}.tar.bz2
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~hppa ~ia64 mips"
+KEYWORDS="x86 ppc sparc alpha amd64 hppa ia64 mips"
 IUSE="ssl nls java python tcltk perl libg++ pam readline zlib"
 
 DEPEND="virtual/glibc
