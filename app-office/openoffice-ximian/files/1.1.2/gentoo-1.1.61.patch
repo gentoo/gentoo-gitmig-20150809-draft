@@ -1,0 +1,10 @@
+--- patches/OOO_1_1_2/apply 2004-05-08 08:54:17.055306480 +0200
++++ patches/OOO_1_1_2/apply 2004-05-08 08:54:17.057306176 +0200
+@@ -16,6 +16,7 @@
+ Debian : DebianBase, XineramaPIC
+ DebianWoody: DebianBase, OldLibArt
+ Ximian : XimianOnly, LinuxCommon, GnomeVFS, GnomeCUPS, GlobalDesktopFiles, StartupNotification, ODKFixes, VBABits, Lotus
++Gentoo : XimianOnly, LinuxCommon, GnomeVFS, GnomeCUPS, GlobalDesktopFiles, StartupNotification, ODKFixes, VBABits, Lotus, NativeWidgets,
+ RedHatBase : LinuxCommon, GnomeVFS, OOoCUPS, StartupNotification, RedHatOnly, ODKFixes, NativeWidgets, VBABits, Lotus
+ RHFedora : RedHatBase, RHFedoraOnly
+ RHTaroon : RedHatBase, RHTaroonOnly, OldLibArt
