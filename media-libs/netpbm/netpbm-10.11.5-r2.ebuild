@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.5-r2.ebuild,v 1.1 2003/03/20 13:59:36 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.5-r2.ebuild,v 1.2 2003/04/14 10:52:20 cretin Exp $
 
 IUSE="svga"
 
@@ -34,7 +34,7 @@ src_unpack() {
 	fi
 
 	sed <${FILESDIR}/${PV}/Makefile.${cfg} >Makefile.config \
-		-e "s|-O3|${CFLAGS}|"
+		-e "s|-O3|${CFLAGS} -fPIC|"
 }
 
 src_compile() {

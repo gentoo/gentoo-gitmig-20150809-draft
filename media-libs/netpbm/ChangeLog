@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.18 2003/03/20 13:59:36 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.19 2003/04/14 10:52:20 cretin Exp $
 
 *netpbm-10.11.5-r2 (20 Mar 2003)
+
+  14 Apr 2003; Stefan Jones <cretin@gentoo.org> netpbm-10.11.5-r2.ebuild:
+  Added -fPIC to CFLAGS for prelink.
 
   20 Mar 2003; Graham Forest <vladimir@gentoo.org> netpbm-10.11.4-r1.ebuild,
   netpbm-10.11.5-r2.ebuild:
