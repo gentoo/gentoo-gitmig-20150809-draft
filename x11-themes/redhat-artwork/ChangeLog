@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.41 2004/11/07 19:54:05 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.42 2004/12/04 16:32:27 centic Exp $
+
+*redhat-artwork-0.120 (04 Dec 2004)
+
+  04 Dec 2004; Dominik Stadler <centic@gentoo.org>
+  +redhat-artwork-0.120.ebuild:
+  Add new Version 0.120, fixes Bug 55326 and 71144.
 
   07 Nov 2004; <pyrania@gentoo.org> redhat-artwork-0.96.ebuild:
   Added dev-util/intltool dependency.
