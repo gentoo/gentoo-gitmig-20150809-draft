@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/leaflet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/ChangeLog,v 1.6 2004/06/25 02:15:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/ChangeLog,v 1.7 2004/12/28 21:28:52 absinthe Exp $
+
+  28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> leaflet-19990601.ebuild:
+  Stable on amd64.
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> leaflet-19990601.ebuild:
   Added IUSE=.

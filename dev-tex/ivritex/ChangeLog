@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/ivritex
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.8 2004/10/09 21:12:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.9 2004/12/28 21:31:39 absinthe Exp $
+
+  28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> ivritex-1.1.2.ebuild:
+  Stable on amd64.
 
   10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> -ivritex-1.1.1.ebuild,
   ivritex-1.1.2.ebuild:

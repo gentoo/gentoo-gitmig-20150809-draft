@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-calendar/latex-calendar-3.1.ebuild,v 1.6 2004/06/25 02:15:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-calendar/latex-calendar-3.1.ebuild,v 1.7 2004/12/28 21:29:50 absinthe Exp $
 
 inherit latex-package
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://www.ctan.org/tex-archive/macros/latex/contrib/calendar/"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc ppc ~amd64"
+KEYWORDS="x86 sparc ppc amd64"
 IUSE=""
 
 src_compile() {
