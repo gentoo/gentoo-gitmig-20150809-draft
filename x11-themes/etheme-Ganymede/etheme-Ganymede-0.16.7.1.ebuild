@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/etheme-Ganymede/etheme-Ganymede-0.16.7.1.ebuild,v 1.2 2004/06/24 23:25:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/etheme-Ganymede/etheme-Ganymede-0.16.7.1.ebuild,v 1.3 2004/07/23 17:43:33 tgall Exp $
 
 MY_PV="0.02"
 MY_PN="${PN/etheme-}"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/enlightenment/enlightenment-theme-${MY_PN}-0.16-${
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ppc64"
 IUSE=""
 
 DEPEND=">=x11-wm/enlightenment-0.16.7_pre3"
