@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.2.1.ebuild,v 1.9 2003/09/07 00:23:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.2.1.ebuild,v 1.10 2003/09/10 04:26:09 msterret Exp $
 
 inherit eutils libtool
 
@@ -46,7 +46,7 @@ src_install() {
 	einstall
 	rm ${D}/etc/pango/pango.modules
 
- 	dodoc AUTHORS ChangeLog COPYING README INSTALL NEWS TODO*
+	dodoc AUTHORS ChangeLog COPYING README INSTALL NEWS TODO*
 }
 
 pkg_postinst() {
