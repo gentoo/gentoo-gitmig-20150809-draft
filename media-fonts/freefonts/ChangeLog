@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/freefonts
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/ChangeLog,v 1.3 2004/02/04 00:19:33 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/ChangeLog,v 1.4 2004/02/09 17:59:22 absinthe Exp $
+
+  09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> freefonts-0.10-r2.ebuild:
+  amd64 marked stable.
 
   03 Feb 2004; <augustus@gentoo.org> freefonts-0.10-r2.ebuild:
   Added ~amd64 keyword.
