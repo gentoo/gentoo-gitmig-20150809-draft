@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texi2html
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.7 2003/03/13 18:54:31 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.8 2003/06/30 18:12:35 darkspecter Exp $
+
+  30 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> texi2html-1.64.ebuild:
+  set ppc in keywords
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> texi2html-1.64.ebuild :
   Added ~ppc keyword
