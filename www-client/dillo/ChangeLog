@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.8 2004/12/26 04:36:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.9 2004/12/27 14:55:02 gustavoz Exp $
+
+  27 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> dillo-0.8.3-r3.ebuild:
+  Stable on sparc
 
   26 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> -dillo-0.8.3-r1.ebuild,
   -dillo-0.8.3-r2.ebuild, dillo-0.8.3-r3.ebuild:
