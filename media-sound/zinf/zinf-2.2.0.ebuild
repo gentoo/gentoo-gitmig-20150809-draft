@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.0.ebuild,v 1.3 2002/07/13 15:09:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.0.ebuild,v 1.4 2002/07/13 15:48:00 danarmak Exp $
 
 inherit kde-functions 
 
@@ -17,7 +17,7 @@ RDEPEND="virtual/glibc
 	esd? ( media-sound/esound ) alsa? ( media-libs/alsa-lib )
 	gnome? ( gnome-base/ORBit )
 	gtk? ( >=media-libs/gdk-pixbuf-0.8 )
-	X? ( virtual/x11 ) arts? ( kde-base/kdelibs )
+	X? ( virtual/x11 ) arts? ( kde-base/arts )
 	oggvorbis? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND} dev-lang/nasm sys-devel/perl"
 LICENSE="GPL-2"
@@ -41,11 +41,17 @@ src_unpack() {
 }
 
 src_compile() {
-	set-kdedir 3
+
+	if [ -n "`which artsc-config`" ]; then
+	    ARTSPREFIX="`artsc-config --arts-prefix`"
+	else
+	    ARTSPREFIX="/usr/kde/3"
+	fi
+
 	local myconf
 	use alsa || myconf="${myconf} --disable-alsa"
 	use esd  || myconf="${myconf} --disable-esd"
-	use arts && myconf="${myconf} --with-extra-includes=${KDEDIR}/include"
+	use arts && myconf="${myconf} --with-extra-includes=${ARTSPREFIX}/include"
 
 	./configure --prefix=/usr --host=${CHOST} ${myconf} || die
 	make ; assert "compile problem :("
