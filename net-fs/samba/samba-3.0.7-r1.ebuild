@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.7-r1.ebuild,v 1.2 2004/09/23 04:24:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.7-r1.ebuild,v 1.3 2004/09/24 21:15:26 sejo Exp $
 
 inherit eutils flag-o-matic
 #---------------------------------------------------------------------------
@@ -161,14 +161,6 @@ src_compile() {
 	use readline \
 		&& myconf="${myconf} --with-readline" \
 		|| myconf="${myconf} --without-readline"
-	#Fix #57063 ------------------------------------------------------------
-	# too cautious for some archs: maybe -O2 is sufficient on some of them
-	strip-flags
-	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ]; then
-		replace-flags -O? -O1
-	else
-		replace-flags -O? -O1
-	fi
 	#-----------------------------------------------------------------------
 	if [ "${ARCH}" != "amd64" ]; then
 		use kerberos && use ldap \
