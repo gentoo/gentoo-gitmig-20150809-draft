@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/bcast-2000/bcast-2000b-r1.ebuild,v 1.3 2000/12/08 19:02:39 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bcast-2000/bcast-2000b-r2.ebuild,v 1.1 2000/12/08 19:02:39 achim Exp $
 
 A=${P}-src.tar.gz
 S=${WORKDIR}/${P}
