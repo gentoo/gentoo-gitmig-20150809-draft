@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.10 2004/07/16 01:59:47 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.11 2004/07/23 20:03:49 erik_swanson Exp $
+
+  23 Jul 2004; Erik Swanson <erik_swanson@gentoo.org> dos2unix-3.1.ebuild:
+  Added macos to KEYWORDS re bug #58101
 
   15 Jul 2004; Tom Gall <tgall@gentoo.org> dos2unix-3.1.ebuild:
   stable on ppc64, bug #55545
