@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1-r1.ebuild,v 1.1 2004/11/11 18:36:36 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1-r1.ebuild,v 1.2 2004/11/12 09:52:13 mr_bones_ Exp $
 
 DVB_TTPCI_FW="dvb-ttpci-01.fw-261c"
 DESCRIPTION="Standalone DVB driver for Linux kernel 2.4.x"
@@ -74,7 +74,7 @@ src_install() {
 		insinto /usr/include/linux/dvb
 		doins *.h
 	fi
-	
+
 	#install the main docs
 	cd ${S}
 	dodoc MAKEDEV-DVB.sh NEWS README README.bt8xx TODO TROUBLESHOOTING
