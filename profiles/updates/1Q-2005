@@ -209,3 +209,4 @@ move sys-apps/hibernate-script sys-power/hibernate-script
 move sys-apps/powermgmt-base sys-power/powermgmt-base
 move sys-apps/apcupsd sys-power/apcupsd
 move sys-apps/cpufrequtils sys-power/cpufrequtils
+move net-fs/idmapd net-libs/nfsidmap
