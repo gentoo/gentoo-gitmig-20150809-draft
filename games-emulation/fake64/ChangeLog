@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/fake64
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fake64/ChangeLog,v 1.1 2003/09/19 05:06:16 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fake64/ChangeLog,v 1.2 2004/06/07 05:28:57 mr_bones_ Exp $
+
+  06 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  fake64-0.0.4_pre20021020.ebuild:
+  IUSE; tidy; error check sed
 
 *fake64-0.0.4_pre20021020 (19 Sep 2003)
 
