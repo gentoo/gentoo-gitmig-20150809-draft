@@ -2,4 +2,4 @@ MD5 a5283e7face794bf3bdf3b666e8da3ce files/digest-gemsvnc-2-r1 58
 MD5 79fb1e43b4b86d9448018e7e32826799 files/2-daemon-runforever.patch 1027
 MD5 9406c08cbc39bbdb152ef82f93a44183 files/2-many-bpp.patch 1097
 MD5 cde0f03ad1f91435a5f1ec7cd80ab420 ChangeLog 929
-MD5 d5dca862c5a79e527654449c585d6545 gemsvnc-2-r1.ebuild 860
+MD5 5ed833b2f26e67f046f3e6d0c5044ba7 gemsvnc-2-r1.ebuild 868
