@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hpijs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.6 2002/10/02 12:48:08 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.7 2002/10/25 13:40:04 woodchip Exp $
+
+*hpijs-1.2.2-r1 (25 Oct 2002)
+
+  25 Oct 2002; Donny Davies <woodchip@gentoo.org> :
+  Add Richard Spencer-Smith's patch, thanks to Agile_MindNBody@Yahoo.com; #8664.
 
 *hpijs-1.2.2 (02 Oct 2002)
 
@@ -19,6 +24,7 @@
 
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> hpijs-1.1.ebuild :
   Added KEYWORDS.
+
   06 Jun 2002; Donny Davies <woodchip@gentoo.org> :
   Chase latest release, add LICENSE + SLOT; close #3080.
 
@@ -26,5 +32,6 @@
 
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> hpijs-1.0.4.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
+
   10 Apr 2002; Donny Davies <woodchip@gentoo.org> hpijs-1.0.4.ebuild :
   New package contributed by Steve Flack <steve_flack@ntlworld.com>.
