@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/info
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/info/ChangeLog,v 1.4 2003/09/03 22:38:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/info/ChangeLog,v 1.5 2003/11/15 04:38:57 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> info-1.7-r1.ebuild:
+  Stable on ia64
 
   03 Sep 2003; Jason Wever <weeve@gentoo.org> info-1.7-r1.ebuild,
   info-1.7.ebuild:
