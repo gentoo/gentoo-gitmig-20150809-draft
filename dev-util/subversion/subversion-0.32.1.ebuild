@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.32.1.ebuild,v 1.1 2003/10/29 14:29:06 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.32.1.ebuild,v 1.2 2003/11/09 11:41:06 dholm Exp $
 
 inherit elisp-common libtool
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://subversion.tigris.org/"
 
 SLOT="0"
 LICENSE="Apache-1.1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="ssl apache2 berkdb python emacs"
 
 S=${WORKDIR}/${PN}-${PV}
