@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r12.ebuild,v 1.2 2004/02/18 08:17:18 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r12.ebuild,v 1.3 2004/02/18 17:15:14 plasmaroo Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -33,7 +33,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 http://dev.gentoo.org/~plasmaroo/patches/kernel/gentoo-sources/patches-${KV/12/11}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
-KEYWORDS="-* -amd64 -ia64"
+KEYWORDS="-* ~amd64"
 SLOT="${KV}"
 
 

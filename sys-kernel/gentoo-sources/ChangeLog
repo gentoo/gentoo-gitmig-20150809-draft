@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.58 2004/02/16 16:11:59 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.59 2004/02/18 17:15:13 plasmaroo Exp $
+
+*gentoo-sources-2.4.20-r13 (18 Feb 2004)
+
+  18 Feb 2004; <plasmaroo@gentoo.org> gentoo-sources-2.4.20-r13.ebuild,
+  gentoo-sources-2.4.22-r7.ebuild:
+  Added the patch for the mremap/munmap vulnerability. Bug #42024.
 
 *gentoo-sources-2.4.22-r6 (16 Feb 2004)
 
