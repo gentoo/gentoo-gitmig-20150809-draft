@@ -1,0 +1,15 @@
+diff -ruN binutils-2.14.90.0.6.old/ld/emulparams/elf_i386.sh binutils-2.14.90.0.6/ld/emulparams/elf_i386.sh
+--- binutils-2.14.90.0.6.old/ld/emulparams/elf_i386.sh	2003-07-23 11:08:12.000000000 -0400
++++ binutils-2.14.90.0.6/ld/emulparams/elf_i386.sh	2003-09-29 14:23:21.252678192 -0400
+@@ -11,3 +11,11 @@
+ GENERATE_SHLIB_SCRIPT=yes
+ GENERATE_PIE_SCRIPT=yes
+ NO_SMALL_DATA=yes
++
++case "$target" in
++  x86_64*-linux*)
++    LIBPATH_SUFFIX=32 
++  ;;
++esac
++
++

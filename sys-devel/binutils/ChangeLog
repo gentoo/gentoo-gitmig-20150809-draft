@@ -1,7 +1,13 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.74 2003/09/21 05:28:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.75 2003/10/03 14:37:33 brad_mssw Exp $
 
+  03 Oct 2003; Brad House <brad_mssw@gentoo.org>
+  binutils-2.14.90.0.6-r3.ebuild,
+  files/binutils-2.14.amd64-32bit-path-fix.patch:
+  32bit search path for amd64 was /lib and /usr/lib. That is obviously wrong.
+  Make the search path /lib32 and /usr/lib32 instead, which should be symlinks
+  to the real location of your 32bit install. This patch is amd64 ONLY
 
 *binutils-2.14.90.0.6-r3 (13 Sep 2003)
 

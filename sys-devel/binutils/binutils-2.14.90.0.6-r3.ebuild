@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.6-r3.ebuild,v 1.4 2003/09/20 21:50:58 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.6-r3.ebuild,v 1.5 2003/10/03 14:37:33 brad_mssw Exp $
 
 IUSE="nls bootstrap build"
 
@@ -73,6 +73,10 @@ src_unpack() {
 	if [ "${ARCH}" == "hppa" ] || [ "${ARCH}" == "hppa64" ]
 	then
 		epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.6-hppa-static.diff
+	fi
+	if [ "${ARCH}" == "amd64" ]
+	then
+		epatch ${FILESDIR}/${PN}-2.14.amd64-32bit-path-fix.patch
 	fi
 
 	use x86 &> /dev/null \
