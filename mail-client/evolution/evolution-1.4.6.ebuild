@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.6.ebuild,v 1.18 2005/03/13 02:25:12 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.6.ebuild,v 1.19 2005/03/23 16:17:35 seemant Exp $
 
 inherit flag-o-matic virtualx gnome2 eutils alternatives
 
@@ -39,7 +39,7 @@ RDEPEND="=gnome-extra/libgtkhtml-3.0.10*
 	>=gnome-base/libgnomeprint-2.2
 	crypt? ( >=app-crypt/gnupg-1.2.2 )
 	ssl? ( mozilla? ( || ( ( >=dev-libs/nspr-4.3 >=dev-libs/nss-3.8 )
-	                       net-www/mozilla
+	                       www-client/mozilla
 	                     )
 	                ) )
 	ssl? ( !mozilla? ( >=dev-libs/openssl-0.9.5 ) )
@@ -150,13 +150,13 @@ src_compile() {
 			NSPR_LIB=/usr/lib/nspr
 			NSS_INC=/usr/include/nss
 			NSPR_INC=/usr/include/nspr
-		elif has_version "net-www/mozilla"; then
+		elif has_version "www-client/mozilla"; then
 			NSS_LIB=/usr/lib/mozilla
 			NSPR_LIB=/usr/lib/mozilla
 			NSS_INC=/usr/lib/mozilla/include/nss
 			NSPR_INC=/usr/lib/mozilla/include/nspr
 		else
-			eerror "Neither net-www/mozilla nor dev-libs/nspr found."
+			eerror "Neither www-client/mozilla nor dev-libs/nspr found."
 			die "unexpected error. unable to find nss/nspr"
 		fi
 

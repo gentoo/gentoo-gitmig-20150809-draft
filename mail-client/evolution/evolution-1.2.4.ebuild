@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.2.4.ebuild,v 1.6 2005/01/08 23:36:24 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.2.4.ebuild,v 1.7 2005/03/23 16:17:35 seemant Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6 kerberos kde crypt"
 
@@ -36,7 +36,7 @@ RDEPEND="app-text/scrollkeeper
 	crypt? ( >=app-crypt/gnupg-1.2.2 )
 	doc?	 ( >=app-text/scrollkeeper-0.3.10-r1 )
 	ssl? (
-		mozilla? ( >=net-www/mozilla-0.9.9 )
+		mozilla? ( >=www-client/mozilla-0.9.9 )
 		!mozilla? ( >=dev-libs/openssl-0.9.5 ) )
 	ldap?    ( >=net-nds/openldap-2.0 )
 	pda?     ( =app-pda/gnome-pilot-0.1*
