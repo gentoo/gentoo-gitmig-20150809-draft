@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.88 2003/10/26 21:11:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.89 2003/10/26 21:15:14 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
@@ -392,9 +392,10 @@ php_src_compile() {
 	filter-flags "-D_LARGEFILE_SOURCE=1"
 	filter-flags "-D_LARGEFILE_SOURCE"
 	#fixes bug #14067
-	replace-flags "-march=k6" "-march=i586"
-	replace-flags "-march=k6-2" "-march=i586"
+	# changed order to run it in reverse for bug #32022 and #12021 
 	replace-flags "-march=k6-3" "-march=i586"
+	replace-flags "-march=k6-2" "-march=i586"
+	replace-flags "-march=k6" "-march=i586"
 
 	LIBS="${LIBS}" econf \
 		${myconf} || die "bad ./configure"
