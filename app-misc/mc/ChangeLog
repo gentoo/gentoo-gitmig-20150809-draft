@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.72 2005/02/12 12:24:13 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.73 2005/02/12 21:34:22 hansmi Exp $
+
+  12 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> mc-4.6.0-r13.ebuild:
+  Stable on ppc.
 
 *mc-4.6.0-r13 (12 Feb 2005)
 
