@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.7 2004/03/16 17:14:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.8 2004/03/17 08:59:57 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -604,7 +604,8 @@ src_compile() {
 
 	einfo "Building XFree86..."
 	cd ${S}
-	FAST=1 emake World FONTDIR="${S}/fonts" || die
+	FAST=1 emake World FONTDIR="/usr/share/fonts" || die
+#	FAST=1 emake World FONTDIR="${S}/fonts" || die
 
 	if use nls
 	then
