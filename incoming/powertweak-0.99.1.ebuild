@@ -6,20 +6,17 @@
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
 DESCRIPTION="Powertweak"
-SRC_URI="http://download.sourceforge.net/powertweak/"${A}
+SRC_URI="http://download.sourceforge.net/powertweak/${A}"
 HOMEPAGE="http://powertweak.sourceforge.net"
 
 DEPEND=">=x11-libs/gtk+-1.2.8
 	>=gnome-base/libxml-1.8.10"
 
 src_compile() {
-  cd ${S}
-
 # fix minor bug in textmode/Makefile.am with no -L<path> to libxml.so
   sed -e "s:GPML = -lgpm:GPML = -L/opt/gnome/lib -lgpm:" < src/textmode/Makefile.am > src/textmode/Makefile.am_fix
   mv src/textmode/Makefile.am_fix src/textmode/Makefile.am
   ./autogen.sh
-
 
   try ./configure --host=${CHOST} --prefix=/usr/X11R6 --with-xml-prefix=/opt/gnome
   try make

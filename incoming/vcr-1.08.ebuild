@@ -6,18 +6,14 @@
 # ${D} == temporary directory where to install the stuff (/tmp/portage/<$P>/image)
 # ${WORKDIR} == /tmp/portage/${P}/work
 
+A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Console base vcr program"
 SRC_URI="http://www.stack.nl/~brama/vcr/src/${P}.tar.gz"
-
 HOMEPAGE="http://www.stack.nl/~brama/vcr/index.html"
 
 #DEPEND="avifile 0.53 || 0.6"
 #RDEPEND="??"
-
-src_unpack() {
-  unpack ${P}.tar.gz
-}
 
 src_compile() {
 # some more experienced might make chech here if we have avifile 0.53 or 0.6
