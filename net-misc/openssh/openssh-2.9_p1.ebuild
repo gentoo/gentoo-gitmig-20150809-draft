@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p1.ebuild,v 1.2 2001/05/30 18:24:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p1.ebuild,v 1.3 2001/06/01 22:07:00 grant Exp $
 
 P=openssh-2.9p1
 A=${P}.tar.gz
@@ -34,7 +34,7 @@ src_compile() {
 
     try ./configure --prefix=/usr --sysconfdir=/etc/ssh \
 	--libexecdir=/usr/lib/misc --mandir=/usr/share/man \
-	--with-ipv4-default --host=${CHOST} ${myconf}                         
+	--with-ipv4-default --disable-suid-ssh --host=${CHOST} ${myconf}                         
     try make
 }
 
