@@ -1,10 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.6.1_p2.ebuild,v 1.7 2003/09/16 19:32:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.6.1_p2.ebuild,v 1.8 2003/09/26 06:05:51 vapier Exp $
 
 inherit eutils
-
-IUSE="ipv6 static pam tcpd kerberos selinux"
 
 # Make it more portable between straight releases
 # and _p? releases.
@@ -14,6 +12,11 @@ DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 SRC_URI="ftp://ftp.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/${PARCH}.tar.gz
 	selinux? ( http://lostlogicx.com/gentoo/openssh_3.6p1-5.se1.diff.bz2 )"
+
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64"
+IUSE="ipv6 static pam tcpd kerberos selinux"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
 # This new rev will use the new openssl.
@@ -28,11 +31,7 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-apps/groff
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
-
-
-SLOT="0"
-LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64"
+PROVIDE="virtual/ssh"
 
 src_unpack() {
 	unpack ${PARCH}.tar.gz

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2.ebuild,v 1.4 2003/09/23 19:56:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2.ebuild,v 1.5 2003/09/26 06:06:30 vapier Exp $
 
 inherit eutils flag-o-matic ccc
 [ `use kerberos` ] && append-flags -I/usr/include/gssapi
@@ -15,10 +15,14 @@ SELINUX_PATCH="openssh-3.7.1_p1-selinux.diff.bz2"
 S=${WORKDIR}/${PARCH}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
-IUSE="ipv6 static pam tcpd kerberos skey selinux X509"
 SRC_URI="mirror://openssh/${PARCH}.tar.gz
 	selinux? ( http://dev.gentoo.org/~pebenito/${SELINUX_PATCH} )"
 #	X509? ( http://roumenpetrov.info/openssh/x509g2/${X509_PATCH} )
+
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64 ia64"
+IUSE="ipv6 static pam tcpd kerberos skey selinux X509"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
 # This new rev will use the new openssl.
@@ -36,10 +40,7 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-apps/groff
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
-
-SLOT="0"
-LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64 ia64"
+PROVIDE="virtual/ssh"
 
 src_unpack() {
 	unpack ${PARCH}.tar.gz ; cd ${S}
