@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-clamav
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-clamav/ChangeLog,v 1.1 2004/10/28 14:02:45 kaiowas Exp $
+
+*selinux-clamav-20041016 (28 Oct 2004)
+
+  28 Oct 2004; petre rodan <kaiowas@gentoo.org> +metadata.xml,
+  +selinux-clamav-20041016.ebuild:
+  initial commit
+
