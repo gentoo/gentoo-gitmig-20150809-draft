@@ -1,2 +1,14 @@
-MD5 3094f57973d21dab5a4b14bee90dd9dc gnetman-0.0.1_pre20041222.ebuild 618
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d7c8c91757d12b9faa6f1b43f10874fd gnetman-0.0.1_pre20041222.ebuild 685
+MD5 809db6cb6c60d8171bdd0782bf518082 ChangeLog 355
+MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
 MD5 2cc962728a2908e87a1ae805af731d0d files/digest-gnetman-0.0.1_pre20041222 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB1/3HI1lqEGTUzyQRAswEAJ9JYA/MC8vWKJzc9VUu72xTXKFraACfec8X
+Orvllc/T1VCBFg+n1XZ7B5E=
+=men5
+-----END PGP SIGNATURE-----
