@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakeroot
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.16 2005/03/22 00:06:08 ferringb Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.17 2005/03/23 18:39:43 seemant Exp $
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> fakeroot-1.1.5.ebuild:
+  keyworded for testing on amd64
 
   21 Mar 2005; Brian Harring <ferringb@gentoo.org> fakeroot-1.1.5.ebuild:
   Stabling it for x86.
