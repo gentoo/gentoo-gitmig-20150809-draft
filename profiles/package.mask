@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3188 2004/09/25 20:57:32 scandium Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3189 2004/09/26 06:27:18 carpaski Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# Nicholas Jones <carpaski@gentoo.org> (26 Sept 2004)
+# NFS breaks distfiles in this version. Fix: delete lockfiles while running.
+=sys-apps/portage-2.0.51_rc3
 
 # Rainer Groesslinger <scandium@gentoo.org> (25 Sept 2004)
 # masked for testing new stuff
