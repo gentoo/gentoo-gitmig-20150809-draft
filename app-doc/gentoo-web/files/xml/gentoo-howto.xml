@@ -267,7 +267,7 @@ you may only want to require a package if a certain USE variable is set. This is
 <tr><ti>ssl</ti><ti>use SSL</ti><ti></ti></tr>
 <tr><ti>tcltk</ti><ti>use Tcl/TK</ti><ti></ti></tr>
 <tr><ti>tcpd</ti><ti>use tcpd/tcp_wrappers</ti><ti></ti></tr>
-<tr><ti>xfs</ti><ti>enable the SGI XFS journaling filesystem</ti><ti><c>sys-kernel-package</c></ti></tr>
+<tr><ti>xfs</ti><ti>enable the SGI XFS journaling filesystem</ti><ti><c>sys-kernel</c> packages</ti></tr>
 </table>
 </body>
 </section>
@@ -318,16 +318,16 @@ default installation destinations are fine, with a few exceptions:</p>
 <tr><ti>*<c>compile</c></ti><ti>compiles the package</ti><ti><c>src_compile</c></ti></tr>
 <tr><ti><c>rpm</c></ti><ti>creates an RPM from the package</ti><ti>n/a</ti></tr>
 <tr><ti><c>package</c></ti><ti>creates a Gentoo <c>tbz2</c> package</ti><ti>n/a</ti></tr>
-<tr><ti>*<c>prerm</c></ti><ti>executes the pre-removal stage of the package</ti><ti>pkg_prerm</ti></tr>
-<tr><ti>*<c>postrm</c></ti><ti>executes the post-removal stage of the package</ti><ti>pkg_postrm</ti></tr>
-<tr><ti>*<c>preinst</c></ti><ti>executes the pre-installation stage of the package</ti><ti>pkg_preinst</ti></tr>
-<tr><ti>*<c>postinst</c></ti><ti>executes the post-installation stage of the package</ti><ti>pkg_postinst</ti></tr>
-<tr><ti><c>config</c></ti><ti>sets up a default configuration once the package is merged</ti><ti>src_config</ti></tr>
+<tr><ti>*<c>prerm</c></ti><ti>executes the pre-removal stage of the package</ti><ti><c>pkg_prerm</c></ti></tr>
+<tr><ti>*<c>postrm</c></ti><ti>executes the post-removal stage of the package</ti><ti><c>pkg_postrm</c></ti></tr>
+<tr><ti>*<c>preinst</c></ti><ti>executes the pre-installation stage of the package</ti><ti><c>pkg_preinst</c></ti></tr>
+<tr><ti>*<c>postinst</c></ti><ti>executes the post-installation stage of the package</ti><ti><c>pkg_postinst</c></ti></tr>
+<tr><ti><c>config</c></ti><ti>sets up a default configuration once the package is merged</ti><ti><c>src_config</c></ti></tr>
 <tr><ti>*<c>touch</c></ti><ti>updates the mtimes for each source archive in the package</ti><ti>n/a</ti></tr>
 <tr><ti>*<c>clean</c></ti><ti>cleans the work directory for the package</ti><ti>n/a</ti></tr>
 <tr><ti>*<c>fetch</c></ti><ti>fetches the package source tarballs</ti><ti>n/a</ti></tr>
 <tr><ti>*<c>digest</c></ti><ti>creates a digest file for the package</ti><ti>n/a</ti></tr>
-<tr><ti>*<c>install</c></ti><ti>installs the package into the image directory</ti><ti>src_install</ti></tr>
+<tr><ti>*<c>install</c></ti><ti>installs the package into the image directory</ti><ti><c>src_install</c></ti></tr>
 <tr><ti><c>unmerge</c></ti><ti>unmerges the package from your filesystem</ti><ti>n/a</ti></tr>
 </table>
 <p>Note: commands with an asterisk (*) are normally only used by the developer.</p>
