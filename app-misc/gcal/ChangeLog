@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gcal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.16 2005/01/01 15:03:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.17 2005/02/05 10:18:45 hansmi Exp $
+
+  05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> gcal-3.01-r2.ebuild:
+  Stable on ppc.
 
   27 Dec 2004; <gongloo@gentoo.org> gcal-3.01-r2.ebuild:
   Added ~ppc-macos.
