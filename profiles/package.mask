@@ -39,7 +39,10 @@
 
 # Daniel Ahlberg <aliz@gentoo.org> (02 Aug 2002)
 # masked for testing
-=sys-libs/glibc-2.2.5-r6
+#
+# <azarah@gentoo.org> (03 Aug 2002)
+# also mask -r7, as it will need testing.
+>=sys-libs/glibc-2.2.5-r6
 
 # George Shapovalov <george@gentoo.org> (01 Aug 2002)
 # sandbox violation
@@ -75,7 +78,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1163 2002/08/03 16:59:52 blizzy Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1164 2002/08/03 19:38:36 azarah Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
