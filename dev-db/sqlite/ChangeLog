@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.16 2003/07/26 09:05:43 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.17 2003/09/30 20:11:05 nakano Exp $
+
+*sqlite-2.8.6 (30 Sep 2003)
+
+  30 Sep 2003; Masatomo Nakano <nakano@gentoo.org> sqlite-2.8.6.ebuild:
+  Version bump.
 
 *sqlite-2.8.5 (26 Jul 2003)
 
