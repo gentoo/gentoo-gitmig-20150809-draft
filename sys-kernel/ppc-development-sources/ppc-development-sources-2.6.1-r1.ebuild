@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ppc-development-sources-2.6.1-r1.ebuild,v 1.1 2004/01/09 16:04:13 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ppc-development-sources-2.6.1-r1.ebuild,v 1.2 2004/01/09 19:57:43 darkspecter Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -38,8 +38,6 @@ src_unpack() {
 	cd ${PF}
 	bzcat ${DISTDIR}/patches-${KV}.bz2 | patch -p1 || die "patch failed"
 	find . -iname "*~" | xargs rm 2> /dev/null
-
-	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
 
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
 	# also fix the EXTRAVERSION
