@@ -1,6 +1,10 @@
 # ChangeLog for games-action/bzflag
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.16 2005/01/27 13:16:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.17 2005/03/14 05:56:12 mr_bones_ Exp $
+
+  14 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  bzflag-2.0.0.20050117.ebuild:
+  add desktop entry support for bug #85155
 
   27 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   bzflag-1.10.8.20041007.ebuild, bzflag-2.0.0.20050117.ebuild:

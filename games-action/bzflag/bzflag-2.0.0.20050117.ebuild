@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.0.20050117.ebuild,v 1.5 2005/03/13 06:17:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.0.20050117.ebuild,v 1.6 2005/03/14 05:56:12 mr_bones_ Exp $
 
-inherit flag-o-matic games
+inherit eutils flag-o-matic games
 
 DESCRIPTION="OpenGL accelerated 3d tank combat simulator game"
 HOMEPAGE="http://www.BZFlag.org/"
@@ -14,13 +14,17 @@ KEYWORDS="amd64 ppc x86"
 IUSE="adns curl dedicated"
 # kerberos"
 
-RDEPEND="!dedicated? ( virtual/opengl media-libs/libsdl )
-	adns? ( net-libs/adns )
-	curl? ( net-misc/curl )"
+RDEPEND="adns? ( net-libs/adns )
+	curl? ( net-misc/curl )
+	!dedicated? (
+		virtual/opengl
+		media-libs/libsdl )"
+
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	cp data/bzflag-48x48.png "${T}/bzflag.png"
 	sed -i \
 		-e 's:^CFLAGS=.*::' \
 		-e 's:^CXXFLAGS=.*::' \
@@ -51,5 +55,9 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS README.UNIX TODO README ChangeLog BUGS PORTING
+	if ! use dedicated ; then
+		doicon "${T}/bzflag.png"
+		make_desktop_entry bzflag "BZFlag"
+	fi
 	prepgamesdirs
 }
