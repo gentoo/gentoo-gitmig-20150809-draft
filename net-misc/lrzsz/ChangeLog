@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lrzsz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/ChangeLog,v 1.9 2004/06/24 23:55:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/ChangeLog,v 1.10 2004/09/11 16:19:52 gmsoft Exp $
+
+  11 Sep 2004; Guy Martin <gmsoft@gentoo.org> lrzsz-0.12.20-r1.ebuild:
+  Stable on hppa.
 
   24 Apr 2004; Dylan Carlson <absinthe@gentoo.org> lrzsz-0.12.20-r1.ebuild:
   Added amd64 to KEYWORDS.
