@@ -111,7 +111,7 @@
 *<sys-apps/dcron-2.7-r5
 *<sys-apps/devfsd-1.3.16
 *<sys-apps/isapnptools-1.23-r6
-*<sys-libs/gpm-1.19.3-r4 
+*<sys-libs/gpm-1.19.3-r4
 #multiple support in portage is needed for this
 #<net-fs/samba-2.0.10-r6
 <net-fs/samba-2.2.1a-r6

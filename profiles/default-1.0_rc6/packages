@@ -111,7 +111,6 @@
 *sys-libs/cracklib  
 *sys-libs/db
 *sys-libs/gdbm  
-*sys-libs/gpm    
 *sys-libs/ncurses     
 # Removed since it's really no need for this to be default, and it together 
 # with defaulting to db in /etc/nsswitch.conf breaks evolution >= 0.11.
@@ -128,6 +127,7 @@
 *sys-kernel/linux-headers
 
 #these ones have the new rc6 style init scripts
+*>=sys-libs/gpm-1.19.3-r5
 *>=sys-apps/isapnptools-1.23-r6
 *>=sys-apps/dcron-2.7-r5
 *>=net-misc/openssh-2.9_p2-r6
