@@ -1,6 +1,11 @@
 # ChangeLog for net-www/dansguardian
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian/ChangeLog,v 1.3 2004/08/27 20:04:01 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian/ChangeLog,v 1.4 2004/08/27 20:16:36 rl03 Exp $
+
+*dansguardian-2.8.0.2 (27 Aug 2004)
+
+  27 Aug 2004; Renat Lumpau <rl03@gentoo.org> +dansguardian-2.8.0.2.ebuild:
+  Version bump, updated location of cgi-in. Closes #58400, 54961.
 
   27 Aug 2004; Renat Lumpau <rl03@gentoo.org> metadata.xml:
   Method is no longer maintaining dansguardian; reassigning to web-apps.
