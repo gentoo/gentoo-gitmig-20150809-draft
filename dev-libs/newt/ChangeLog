@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/0.50.35
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.1 2002/07/23 22:23:54 lostlogic Exp $
+
+*newt-0.50.35 (23 Jul 2002)
+
+  23 Jul 2002; Brandon Low <lostlogic@gentoo.org> newt-0.50.35.ebuild:
+
+  Thanks to Andreas Kotowicz <koto@mynetix.de> for this initial ebuild.
