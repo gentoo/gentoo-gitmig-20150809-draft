@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/mylink/mylink-0.93.ebuild,v 1.1 2003/12/29 04:46:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/mylink/mylink-0.93.ebuild,v 1.2 2003/12/29 18:35:31 vapier Exp $
 
 inherit games eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="x86"
 
 DEPEND=">=dev-lang/perl-5.8.0
 	>=dev-lang/tk-8.3.4
+	dev-perl/perl-tk
 	dev-perl/Data-Dumper
 	dev-perl/Digest-MD5
 	dev-perl/libwww-perl
