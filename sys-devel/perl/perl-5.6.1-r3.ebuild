@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r3.ebuild,v 1.1 2002/02/01 11:25:56 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r3.ebuild,v 1.2 2002/03/21 11:26:54 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
@@ -154,11 +154,11 @@ EOF
 # DOCUMENTATION
 
     dodoc Changes* Artistic Copying README Todo* AUTHORS
+    prepalldocs
 
 # HTML Documentation
-
-    dodir /usr/share/doc/${PF}/html
+    
+	dodir /usr/share/doc/${PF}/html
     ./perl installhtml --recurse --htmldir=${D}/usr/share/doc/${PF}/html
-    prepalldocs
 
 }
