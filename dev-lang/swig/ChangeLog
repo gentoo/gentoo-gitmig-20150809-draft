@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.14 2003/11/05 01:21:09 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.15 2003/11/23 10:24:54 lanius Exp $
+
+  23 Nov 2003; Heinrich Wendel <lanius@gentoo.org> swig-1.3.19.ebuild:
+  stable on x86
 
   04 Nov 2003; Brad House <brad_mssw@gentoo.org> swig-1.3.19.ebuild:
   mark as stable on amd64
