@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.6 2002/11/07 08:10:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.7 2002/11/11 04:42:48 nall Exp $
 
 *webmin-1.030 (07 Nov 2002)
+
+  10 Nov 2002; Jon Nall <nall@gentoo.org> webmin-1.030.ebuild :
+  added ~ppc to KEYWORDS
 
   07 Nov 2002; Seemant Kulleen <seemant@gentoo.org> webmin-1.030.ebuild
   files/digest-webmin-1.030 :
