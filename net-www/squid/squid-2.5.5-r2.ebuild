@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.5-r2.ebuild,v 1.11 2004/07/01 22:50:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.5-r2.ebuild,v 1.12 2004/07/15 05:28:29 cyfred Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ RDEPEND="virtual/libc
 	selinux? ( sec-policy/selinux-squid )"
 DEPEND="${RDEPEND} dev-lang/perl"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ~ia64 s390 ~amd64"
+KEYWORDS="x86 ppc sparc alpha hppa ~ia64 s390 amd64"
 SLOT="0"
 
 src_unpack() {
@@ -179,4 +179,9 @@ pkg_postinst() {
 	# empty dirs..
 	install -m0755 -o squid -g squid -d ${ROOT}/var/cache/squid
 	install -m0755 -o squid -g squid -d ${ROOT}/var/log/squid
+
+	echo
+	ewarn "Squid authentication helpers have been installed suid root"
+	ewarn "This allows shadow based authentication, see bug #52977 for more"
+	echo
 }
