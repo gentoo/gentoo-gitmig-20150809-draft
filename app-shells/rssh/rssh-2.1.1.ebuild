@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.1.1.ebuild,v 1.4 2003/10/14 20:11:02 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.1.1.ebuild,v 1.5 2004/04/25 22:59:11 agriffis Exp $
 
 DESCRIPTION="Restricted shell for SSHd."
 HOMEPAGE="http://rssh.sourceforge.net/"
@@ -18,7 +18,7 @@ src_compile() {
 		--libexecdir=/usr/lib/misc \
 		--with-scp=/usr/bin/scp \
 		--with-sftp-server=/usr/lib/misc/sftp-server \
-		`use_enable static`
+		`use_enable static` || die "econf failed"
 	emake || die
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/rssh
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.3 2003/10/14 20:11:02 max Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.4 2004/04/25 22:59:11 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> rssh-2.1.1.ebuild:
+  Add die following econf for bug 48950
 
   14 Oct 2003; Max Kalika <max@gentoo.org> rssh-2.1.1.ebuild:
   Comply with Gentoo policies with respect to libexecdir.
