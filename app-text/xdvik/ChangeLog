@@ -1,6 +1,12 @@
 # ChangeLog for app-text/xdvik
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.20 2004/10/24 15:38:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.21 2004/11/19 11:50:03 usata Exp $
+
+*xdvik-22.84.5 (19 Nov 2004)
+
+  19 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +xdvik-22.84.5.ebuild:
+  Version bumped and added neXt USE flag. Thanks to Dmitry S. Kulyabov
+  <dharma@mx.pfu.edu.ru>; bug #71249.
 
   25 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> xdvik-22.40y-r2.ebuild:
   Updated kochi-substitute's font path.
