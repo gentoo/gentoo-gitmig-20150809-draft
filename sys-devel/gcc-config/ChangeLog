@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.2 2002/11/10 11:58:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.3 2002/11/10 15:17:26 azarah Exp $
+
+*gcc-config-1.2 (10 Nov 2002)
+
+  10 Nov 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Include all LDPATH's for this CHOST in /etc/ld.so.conf.
+  Add --use-portage-chost option so that it will only change
+  gcc profile if CHOST is same as that of make.conf.
 
 *gcc-config-1.1 (10 Nov 2002)
 
