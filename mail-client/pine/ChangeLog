@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.8 2004/07/17 22:08:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.9 2004/07/21 23:11:35 malc Exp $
+
+  21 Jul 2004; <malc@gentoo.org> pine-4.60.ebuild:
+  Add ~amd64 after testing per req: from langthang
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> pine-4.50-r4.ebuild,
   pine-4.58-r1.ebuild, pine-4.58-r2.ebuild, pine-4.58-r3.ebuild,
