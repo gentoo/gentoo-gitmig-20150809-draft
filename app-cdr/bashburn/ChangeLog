@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/bashburn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.7 2004/09/30 20:41:55 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.8 2004/10/05 11:22:55 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bashburn-1.3.ebuild, bashburn-1.4.ebuild:
+  Masked bashburn-1.4.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bashburn-1.3.ebuild:
+  Masked bashburn-1.3.ebuild stable for ppc
 
   30 Sep 2004; Tom Martin <slarti@gentoo.org> bashburn-1.4.ebuild:
   Marked ~amd64.

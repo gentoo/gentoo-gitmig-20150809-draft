@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r3.ebuild,v 1.13 2004/07/03 22:05:11 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r3.ebuild,v 1.14 2004/10/05 11:22:55 pvdabeel Exp $
 
 inherit kde eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/arson/${P}-kde3.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64"
+KEYWORDS="x86 sparc amd64 ppc"
 IUSE="oggvorbis"
 
 DEPEND=">=media-sound/cdparanoia-3.9.8

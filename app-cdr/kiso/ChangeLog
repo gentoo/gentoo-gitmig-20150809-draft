@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/kiso
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.6 2004/09/19 18:22:06 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.7 2004/10/05 11:22:55 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> kiso-0.4.2.ebuild:
+  Masked kiso-0.4.2.ebuild stable for ppc
 
 *kiso-0.6 (19 Sep 2004)
 

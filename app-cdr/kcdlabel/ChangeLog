@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/kcdlabel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdlabel/ChangeLog,v 1.9 2004/08/25 12:41:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdlabel/ChangeLog,v 1.10 2004/10/05 11:22:55 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kcdlabel-2.12.ebuild:
+  Masked kcdlabel-2.12.ebuild stable for ppc
 
   25 Aug 2004; Jason Wever <weeve@gentoo.org> kcdlabel-2.12.ebuild:
   Added ~sparc keyword.

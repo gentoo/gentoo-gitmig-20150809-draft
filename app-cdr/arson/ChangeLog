@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/arson
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.34 2004/07/22 04:59:53 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.35 2004/10/05 11:22:55 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  arson-0.9.7-r3.ebuild, arson-0.9.8_beta2.ebuild:
+  Masked arson-0.9.8_beta2.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  arson-0.9.7-r3.ebuild:
+  Masked arson-0.9.7-r3.ebuild stable for ppc
 
   22 Jul 2004; Travis Tilley <lv@gentoo.org> arson-0.9.8_beta2.ebuild:
   stable on amd64

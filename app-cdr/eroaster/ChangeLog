@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/eroaster
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.27 2004/09/03 19:12:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.28 2004/10/05 11:22:55 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  eroaster-2.2.0_pre6.ebuild:
+  Masked eroaster-2.2.0_pre6.ebuild stable for ppc
 
   03 Sep 2004; Caleb Tennis <caleb@gentoo.org> -eroaster-2.0.12.ebuild:
   Remove old masked version

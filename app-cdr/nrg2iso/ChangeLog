@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/nrg2iso
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.8 2004/07/30 10:28:32 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.9 2004/10/05 11:22:56 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  nrg2iso-0.2-r1.ebuild, nrg2iso-0.2.ebuild:
+  Masked nrg2iso-0.2.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  nrg2iso-0.2-r1.ebuild:
+  Masked nrg2iso-0.2-r1.ebuild stable for ppc
 
 *nrg2iso-0.4 (30 Jul 2004)
 

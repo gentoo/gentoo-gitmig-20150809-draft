@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/nrg2iso-0.2.ebuild,v 1.5 2004/06/27 21:17:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/nrg2iso-0.2.ebuild,v 1.6 2004/10/05 11:22:56 pvdabeel Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://gregory.kokanosky.free.fr/v4/linux/${PN}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc"
 IUSE=""
 
 DEPEND="virtual/libc"

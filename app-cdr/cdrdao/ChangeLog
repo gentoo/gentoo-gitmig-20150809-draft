@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.50 2004/07/14 14:01:00 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.51 2004/10/05 11:22:55 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  cdrdao-1.1.7.ebuild:
+  Masked cdrdao-1.1.7.ebuild stable for ppc
 
   14 Jul 2004; Travis Tilley <lv@gentoo.org> cdrdao-1.1.8-r1.ebuild,
   cdrdao-1.1.8.ebuild, cdrdao-1.1.9.ebuild:
