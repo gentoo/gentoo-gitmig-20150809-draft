@@ -23,6 +23,6 @@ src_compile() {
 src_install () {
 
     try make DESTDIR=${D} install
-    dodoc README ChangeLog FAQ Themes
+    dodoc README Changelog
 }
 
