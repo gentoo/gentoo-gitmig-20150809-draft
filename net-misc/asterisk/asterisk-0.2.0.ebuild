@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 IUSE="doc"
 
 DEPEND="virtual/glibc
-		sys-apps/supersed
+		=sys-apps/sed-4*
 		doc? ( app-doc/doxygen )"
 
 src_compile() {
@@ -20,7 +20,7 @@ src_compile() {
 	emake || die
 
 	# One small error in Makefile
-	ssed -i 's:mkdir -p /etc/asterisk:mkdir -p $(INSTALL_PREFIX)/etc/asterisk:' \
+	sed -i 's:mkdir -p /etc/asterisk:mkdir -p $(INSTALL_PREFIX)/etc/asterisk:' \
 		${S}/Makefile
 }
 

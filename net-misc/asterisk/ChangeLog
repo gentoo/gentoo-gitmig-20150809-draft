@@ -3,7 +3,10 @@
 # $Header
 
 *asterisk-0.2.0 (28 Nov 2002)
-  
+
+  22 Apr 2003; Brandon Low <lostlogic@gentoo.org> asterisk-0.2.0.ebuild:
+  Change supersed dependencies
+
   28 Nov 2002; Matt Keadle <mkeadle@gentoo.org> asterisk-0.2.0.ebuild
   files/digest-asterisk-0.2.0:
 
