@@ -1,12 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Lars S. Jensen <larssj@nospam.dk>
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-0.10.5.ebuild,v 1.3 2002/06/23 18:35:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-0.10.5.ebuild,v 1.4 2002/07/10 15:10:29 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A firewall GUI"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
 HOMEPAGE="http://fwbuilder.sourceforge.net"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND="( >=dev-libs/libsigc++-1.0.4-r1
 	 <dev-libs/libsigc++-1.1.0 )
