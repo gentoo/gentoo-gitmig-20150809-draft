@@ -1,8 +1,19 @@
-MD5 98f473b8e6f30c14e0e62bbadd544264 bbppp-0.2.2-r1.ebuild 879
-MD5 9156af16a1396c71d563cb4a7e215e65 bbppp-0.2.3.ebuild 828
-MD5 0971fb69a9a99ee48d4210bbcd10b7f5 bbppp-0.2.2-r2.ebuild 873
-MD5 9fa69950b74d24fff7d4912681e3adc2 ChangeLog 1337
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 902f45f58693528dcc072a7ef2528daf bbppp-0.2.2-r1.ebuild 878
+MD5 cf5aca8a769f8939673c45f532952378 bbppp-0.2.3.ebuild 1008
+MD5 52fecfbca0ed78563d76302343b54ca1 bbppp-0.2.2-r2.ebuild 872
+MD5 f24a33849b4d7c6c3a6c303c32f96224 ChangeLog 1493
 MD5 d42cf2dcf1d1ec3872a841e0a5de140a metadata.xml 244
+MD5 2d9e9b50a2d05c586f3faf22158596f2 files/bbppp-gcc3-multiline.diff 2884
 MD5 7eeb78566dc0cecf2c5e381067c1ed0a files/digest-bbppp-0.2.2-r1 62
 MD5 7eeb78566dc0cecf2c5e381067c1ed0a files/digest-bbppp-0.2.2-r2 62
 MD5 e8cc607e24fb73eae134b7aee08591b6 files/digest-bbppp-0.2.3 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4Cj4EZCkKN40op4RAly8AJwJXmk9FS1crTDTVsWZU8N4eUCLKACgh2VT
+ebQPtCgtwuBaKVQiih5IGjo=
+=vhWc
+-----END PGP SIGNATURE-----
