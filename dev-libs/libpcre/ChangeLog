@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.11 2003/03/21 17:28:55 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.12 2003/04/15 09:18:11 mholzer Exp $
+
+*libpcre-4.2 (15 Apr 2003)
+
+  15 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
+  libpcre-4.2.ebuild:
+  Version bumped.
 
 *libpcre-3.9-r2 (10 Mar 2003)
 
