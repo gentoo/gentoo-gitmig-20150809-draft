@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.34 2004/06/24 23:13:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.35 2004/07/25 19:08:57 alexander Exp $
+
+  25 Jul 2004; Alexander Plank <alexander@gentoo.org> libnet-1.1.2.1.ebuild:
+  Added macos keyword (thanks Ryan Ramsey <admin@v3rt3x.mine.nu>)
 
   08 May 2004; Joshua Kinard <kumba@gentoo.org> libnet-1.1.2.1.ebuild:
   Added gnuconfig support for mips.
