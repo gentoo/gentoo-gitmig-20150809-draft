@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.4 2002/08/06 14:30:50 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.5 2002/08/27 17:11:33 aliz Exp $
+
+*libnet-1.1.0 (27 Aug 2002)
+
+  27 Aug 2002; Daniel Ahlberg <aliz@gentoo.org:
+  Version bump. Closes #7039. Ebuild contributed by michael.sterrett@coat.com.
 
 *libnet-1.0.2a-r1 (27 Mar 2002)
 
