@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc2.ebuild,v 1.1 2004/06/09 19:21:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc2.ebuild,v 1.2 2004/06/17 21:18:42 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
@@ -22,9 +22,13 @@ DESCRIPTION="The Mozilla Web Browser"
 HOMEPAGE="http://www.mozilla.org"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV}/src/${PN}-source-${MY_PV}.tar.bz2
 	crypt? ( !moznomail? (
-		http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
 		http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz
+		mirror://gentoo/enigmail-${EMVER}-r1.tar.gz
 	) )"
+# Normally the following would be used instead of the mirror://gentoo/
+# reference above, but the upstream source tarball changed without
+# changing the filename.  (17 Jun 2004 agriffis)
+#		http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
 SLOT="0"
