@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-0.99.ebuild,v 1.2 2004/04/22 16:54:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-0.99.ebuild,v 1.3 2004/06/15 04:43:26 eradicator Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://corecodec.org/download.php/195/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="media-sound/xmms"
