@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1.ebuild,v 1.2 2002/11/24 01:20:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1.ebuild,v 1.3 2002/11/24 04:03:55 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -393,7 +393,9 @@ pkg_postinst() {
 	then
 		OLD_GCC_VERSION="`cat ${WORKDIR}/.oldgccversion`"
 
-		${FILESDIR}/fix_libtool_files.sh ${OLD_GCC_VERSION}
+		cp -f ${FILESDIR}/fix_libtool_files.sh ${T}
+		chmod +x ${T}/fix_libtool_files.sh
+		${T}/fix_libtool_files.sh ${OLD_GCC_VERSION}
 	fi
 }
 
