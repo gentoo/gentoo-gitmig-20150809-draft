@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uncommonsql/cl-uncommonsql-1.2.1.ebuild,v 1.2 2003/10/17 19:00:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uncommonsql/cl-uncommonsql-1.2.1.ebuild,v 1.3 2003/10/17 19:02:59 mkennedy Exp $
 
 inherit common-lisp
 
@@ -67,9 +67,9 @@ pkg_prerm() {
 }
 
 pkg_preinst() {
-	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
+	rm -rf /usr/lib/common-lisp/*/uncommonsql* || true
 }
 
 pkg_postrm() {
-	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
+	rm -rf /usr/lib/common-lisp/*/uncommonsql* || true
 }
