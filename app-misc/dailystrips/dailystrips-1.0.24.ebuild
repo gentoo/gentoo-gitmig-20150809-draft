@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Justin Lambert <jlambert@eml.cc>>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/dailystrips-1.0.24.ebuild,v 1.1 2002/05/25 01:37:21 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/dailystrips-1.0.24.ebuild,v 1.2 2002/05/25 01:39:50 agenkin Exp $
 
 DESCRIPTION="dailystrips automatically downloads your favorite online comics from the web."
 HOMEPAGE="http://dailystrips.sourceforge.net/"
@@ -24,9 +24,8 @@ src_unpack() {
 src_install() {
 	dobin dailystrips
 	dodoc README BUGS CHANGELOG TODO
-	cd ${S}
 
 	keepdir /etc
 	insinto /etc
-	doins ${S}/strips.def
+	doins strips.def
 }
