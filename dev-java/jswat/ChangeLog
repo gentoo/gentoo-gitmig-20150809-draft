@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jswat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/ChangeLog,v 1.17 2004/10/16 17:26:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/ChangeLog,v 1.18 2004/10/17 09:06:31 axxo Exp $
+
+*jswat-2.28 (17 Oct 2004)
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +jswat-2.28.ebuild:
+  version bump
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jswat-1.7.1-r1.ebuild,
   jswat-2.21-r1.ebuild, jswat-2.25-r1.ebuild, jswat-2.25.ebuild,
