@@ -1,6 +1,29 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.101 2004/11/28 12:43:20 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.102 2004/11/30 00:37:44 cyfred Exp $
+
+  30 Nov 2004; Andrew Bevitt <cyfred@gentoo.org>
+  -files/1.0.4363/NVIDIA_kernel-1.0-4363-2.5-20030714.diff,
+  -files/1.0.4496/NVIDIA_kernel-1.0-4496-2.6-20030905.diff,
+  -files/1.0.4496/NVIDIA_kernel-1.0-4496-2.6-20031026.diff,
+  -files/1.0.4496/NVIDIA_kernel-1.0-4496-2.6-pci_name-20030905.diff,
+  -files/1.0.4499/NVIDIA_kernel-1.0-4499-2.6-20031014.diff,
+  -files/1.0.5328/NVIDIA_kernel-1.0-5328-2.4-via-chipset-fix.patch,
+  -files/1.0.5328/NVIDIA_kernel-1.0-5328-2.6-20031226.diff,
+  -files/1.0.5328/NVIDIA_kernel-1.0-5328-2.6-20040105.diff,
+  -files/1.0.5332/NVIDIA-Linux-x86_64-1.0-5332-2.6.diff,
+  -files/1.0.5336/Makefile,
+  -files/1.0.5336/NVIDIA_kernel-1.0-5336-2.6-20040521.patch,
+  -files/1.0.5336/NVIDIA_kernel-1.0-5336-basic-sysfs-support-v2.patch,
+  -files/1.0.5336/NVIDIA_kernel-1.0-5336-basic-sysfs-support.patch,
+  -files/1.0.5336/NVIDIA_kernel-1.0-5336-fix-makefile-for-2.6.patch,
+  -files/1.0.5336/NVIDIA_kernel-1.0-5336-kbuild-koutput-support.patch,
+  -files/1.0.6106/NVIDIA_kernel-1.0-6106-koutput-support.patch,
+  -nvidia-kernel-1.0.4363-r3.ebuild, -nvidia-kernel-1.0.4496-r3.ebuild,
+  -nvidia-kernel-1.0.4499.ebuild, -nvidia-kernel-1.0.5328-r1.ebuild,
+  -nvidia-kernel-1.0.5332-r1.ebuild, -nvidia-kernel-1.0.5336-r4.ebuild,
+  -nvidia-kernel-1.0.6106-r1.ebuild, -nvidia-kernel-1.0.6111-r2.ebuild:
+  Removing all the masked (deprecated) versions.
 
   28 Nov 2004; John Mylchreest <johnm@gentoo.org> :
   Forgot to update this so doing so now. after adding support for
