@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/mod-ruby
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/ChangeLog,v 1.6 2003/06/11 00:15:17 twp Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/ChangeLog,v 1.7 2004/02/20 17:46:06 usata Exp $
+
+*mod-ruby-1.1.1-r2 (21 Feb 2004)
+
+  21 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> mod-ruby-1.1.1-r1.ebuild,
+  mod-ruby-1.1.1-r2.ebuild, mod-ruby-1.1.1.ebuild:
+  Fixed typo
 
   10 Jun 2003; Tom Payne <twp@gentoo.org> mod-ruby-1.1.1-r1.ebuild :
   Build and install docs if USE=doc. Bug # 20805.
