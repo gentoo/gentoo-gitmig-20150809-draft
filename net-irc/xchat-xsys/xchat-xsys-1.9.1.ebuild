@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-1.9.1.ebuild,v 1.2 2004/12/27 02:58:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-1.9.1.ebuild,v 1.3 2004/12/27 03:01:07 eradicator Exp $
+
+IUSE=""
 
 inherit flag-o-matic eutils
 
@@ -11,8 +13,7 @@ HOMEPAGE="http://mshoup.us/downloads/xsys/README-${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE=""
+KEYWORDS="~amd64 ~x86"
 S=${WORKDIR}/${MY_P}
 
 DEPEND=">=net-irc/xchat-2.4.0"
