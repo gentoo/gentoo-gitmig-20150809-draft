@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.39.3.ebuild,v 1.4 2002/11/30 02:39:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.39.3.ebuild,v 1.5 2002/12/09 04:33:13 manson Exp $
 
 DESCRIPTION="An MTA designed specifically for maildirs"
 SRC_URI="http://ftp1.sourceforge.net/courier/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.courier-mta.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc "
 IUSE="gdbm tcltk postgres ldap berkdb mysql pam"
 
 PROVIDE="virtual/mta

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ximian-connector-1.2.0.ebuild,v 1.2 2002/11/21 00:46:16 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ximian-connector-1.2.0.ebuild,v 1.3 2002/12/09 04:33:15 manson Exp $
 
 DESCRIPTION="Ximian Connector (An Evolution Plugin to talk to Exchange Servers)"
 HOMEPAGE="http://www.ximian.com"
 LICENSE="Ximian-Connector"
 SLOT="0"
-KEYWORDS="~ppc -sparc -sparc64 -alpha"
+KEYWORDS="~ppc -sparc  -alpha"
 RESTRICT="fetch nostrip"
 
 XIMIAN_ARCH="blargh"

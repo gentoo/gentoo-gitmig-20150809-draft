@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-sumo/qmail-sumo-1.03-r7.ebuild,v 1.6 2002/10/04 06:09:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-sumo/qmail-sumo-1.03-r7.ebuild,v 1.7 2002/12/09 04:33:15 manson Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Qmail - merge this package to merge all qmail packages"
@@ -9,7 +9,7 @@ SRC_URI=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 RDEPEND=">=net-mail/qmail-1.03-r6
 	>=net-mail/qmail-pop3d-1.03-r1

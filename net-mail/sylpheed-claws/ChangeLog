@@ -1,7 +1,10 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.22 2002/11/26 13:26:46 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.23 2002/12/09 04:33:15 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *sylpheed-claws-0.8.6 (26 Nov 2002)
 
   26 Nov 2002; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.8.6.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9.ebuild,v 1.8 2002/11/30 19:52:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9.ebuild,v 1.9 2002/12/09 04:33:13 manson Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc "
 IUSE="ssl kerberos perl snmp afs"
 
 PROVIDE="virtual/imapd"

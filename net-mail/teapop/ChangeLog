@@ -1,7 +1,10 @@
 # ChangeLog for net-mail/teapop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.4 2002/11/05 02:05:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.5 2002/12/09 04:33:15 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *teapop-0.3.3 (23 Mar 2002)
 
   04 Nov 2002; Seemant Kulleen <seemant@gentoo.org> teapop-0.3.3.ebuild :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailanalog/qmailanalog-0.70.ebuild,v 1.6 2002/10/04 06:09:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailanalog/qmailanalog-0.70.ebuild,v 1.7 2002/12/09 04:33:15 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="collection of tools to help you analyze qmail's activity record."
@@ -9,7 +9,7 @@ HOMEPAGE="http://cr.yp.to/qmailanalog.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="sys-apps/groff"
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pinepgp/pinepgp-0.18.0.ebuild,v 1.4 2002/10/17 18:24:10 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pinepgp/pinepgp-0.18.0.ebuild,v 1.5 2002/12/09 04:33:14 manson Exp $
 
 DESCRIPTION="Use GPG/PGP with Pine"
 HOMEPAGE="http://www.megaloman.com/~hany/software/pinepgp/"
 SRC_URI="http://www.megaloman.com/~hany/_data/pinepgp/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~sparc64"
+KEYWORDS="~x86 ~sparc "
 
 RDEPEND="net-mail/pine"
 DEPEND="${RDEPEND}"

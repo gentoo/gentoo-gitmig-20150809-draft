@@ -1,7 +1,10 @@
 # ChangeLog for net-mail/ripmime
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # AUTHOR: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.1 2002/07/10 20:48:54 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.2 2002/12/09 04:33:15 manson Exp $
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 
 *ripmime-1.2.16.16 (10 Jul 2002)
  

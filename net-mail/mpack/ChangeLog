@@ -1,7 +1,10 @@
 # ChangeLog for net-mail/mpack
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.2 2002/08/02 10:56:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.3 2002/12/09 04:33:14 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *mpack-1.5-r1 (02 Aug 2002)
 
   02 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> mpack-1.5-r1.ebuild :

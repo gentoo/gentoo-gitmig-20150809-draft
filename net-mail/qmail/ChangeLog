@@ -1,7 +1,10 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.8 2002/11/23 08:22:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.9 2002/12/09 04:33:14 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *qmail-1.03-r9 (11 Sep 2002)
 
   23 Nov 2002; Nick Hadaway <raker@gentoo.org> qmail-1.03-r9.ebuild :

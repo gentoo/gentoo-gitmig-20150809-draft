@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53.ebuild,v 1.8 2002/10/04 21:13:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53.ebuild,v 1.9 2002/12/09 04:33:14 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Simple yet powerful mailing list manager for qmail."
@@ -9,7 +9,7 @@ HOMEPAGE="http://cr.yp.to/software/ezmlm.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=" sys-apps/groff"
 

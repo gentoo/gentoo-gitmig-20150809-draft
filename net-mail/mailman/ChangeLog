@@ -1,7 +1,10 @@
 # ChangeLog for net-mailmailmanChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.1 2002/07/17 03:11:56 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.2 2002/12/09 04:33:14 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *-mailman-2.0.12 (16 Jul 2002)
 
   16 Jul 2002; Ben Lutgens <lamer@gentoo.org> mailman-2.0.1.2.ebuild,

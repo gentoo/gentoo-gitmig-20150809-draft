@@ -1,7 +1,10 @@
 # ChangeLog for net-mail/razor
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/ChangeLog,v 1.1 2002/07/09 14:42:48 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/ChangeLog,v 1.2 2002/12/09 04:33:15 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *razor-2.12 (09 Jul 2002)
 
   09 Jul 2002; Maik Schreiber <blizzy@gentoo.org> :

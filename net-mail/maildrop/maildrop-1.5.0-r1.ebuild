@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.0-r1.ebuild,v 1.2 2002/11/11 12:54:29 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.0-r1.ebuild,v 1.3 2002/12/09 04:33:14 manson Exp $
 
 IUSE="mysql ldap"
 
@@ -18,7 +18,7 @@ PROVIDE="virtual/mda"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~sparc64"
+KEYWORDS="~x86 ~sparc "
 
 # FYI:  There appears to be a problem with maildrop when compiled with gcc-3.2.
 # I've tested (and am using) mysql support.  I haven't tested ldap yet.

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Script Revised by Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-416e.ebuild,v 1.2 2002/11/07 19:37:40 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-416e.ebuild,v 1.3 2002/12/09 04:33:15 manson Exp $
 
 DAT_VER=4228
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.mcafee.com/"
 
 SLOT="0"
 LICENSE="VirusScan"
-KEYWORDS="x86 ~sparc ~sparc64"
+KEYWORDS="x86 ~sparc "
 RESTRICT="nostrip"
 DEPEND=""
 RDEPEND=""

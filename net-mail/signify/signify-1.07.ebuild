@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/signify/signify-1.07.ebuild,v 1.9 2002/10/04 06:09:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/signify/signify-1.07.ebuild,v 1.10 2002/12/09 04:33:15 manson Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A (semi-)random e-mail signature rotator"
@@ -11,7 +11,7 @@ DEPEND="sys-devel/perl"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="x86 sparc sparc64 ppc"
+KEYWORDS="x86 sparc  ppc"
 
 src_compile() {						   
    echo "Perl script!  Woohoo!  No need to compile!"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5-r2.ebuild,v 1.4 2002/10/24 23:23:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5-r2.ebuild,v 1.5 2002/12/09 04:33:13 manson Exp $
 
 IUSE="ssl perl snmp afs"
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc "
 
 PROVIDE="virtual/imapd"
 RDEPEND="virtual/glibc
