@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.57 2004/05/25 19:24:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.58 2004/06/03 23:52:46 geoman Exp $
+
+  03 Jun 2004; Stephen P. Becker <geoman@gentoo.org> gstreamer-0.8.1.ebuild:
+  Stable on mips.
 
   25 May 2004; Guy Martin <gmsoft@gentoo.org> gstreamer-0.8.1.ebuild:
   Marked stable on hppa.
