@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.3.ebuild,v 1.1 2003/08/01 01:56:49 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.3.ebuild,v 1.2 2003/08/01 02:03:35 lostlogic Exp $
 
 DESCRIPTION="A OpenFT, Gnutella and FastTrack p2p network client"
 HOMEPAGE="http://gift.sourceforge.net"
@@ -20,7 +20,6 @@ src_compile() {
 
 	econf || die "Configure failed"
 	emake || die "Make failed"
-#CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" || die "Make failed"
 
 }
 
@@ -31,16 +30,15 @@ src_install() {
 		 giftdatadir=${D}/usr/share/giFT \
 		 giftperldir=${D}/usr/bin \
 		 libgiftincdir=${D}/usr/include/libgift || die "Install failed"
-
-	# Fix the giFT-setup executable.
-#	cd ${D}/usr/bin
-#	sed -i -e 's:$prefix/etc/giFT/:/etc/giFT/:' giFT-setup
-
 }
 
 pkg_postinst() {
-	einfo "First of all you need to run giFT-setup with your normal"
+	einfo "First, you need to run giFT-setup with your normal"
 	einfo "user account to create the giFT configuration files."
+	echo
+	einfo "This package no longer contains any protocol plugins,"
+	einfo "please try gift-fasttrack, gift-openft, gift-gnutella"
+	einfo "for protocol support."
 	echo
 	einfo "If you encounter issues with this package, please contact"
 	einfo "us via bugs.gentoo.org rather than attempting to contact"
