@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.34 2004/06/29 17:43:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.35 2004/07/17 21:54:02 aliz Exp $
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> libperl-5.8.2-r1.ebuild,
   libperl-5.8.2.ebuild, libperl-5.8.3.ebuild, libperl-5.8.4-r1.ebuild,
@@ -8,6 +8,7 @@
   kill sparc64 use flag
 
 *libperl-5.8.4-r1 (16 Jun 2004)
+*libperl-5.8.2-r1 (16 Jun 2004)
 
   16 Jun 2004; Daniel Black <dragonheart@gentoo.org>
   +files/libperl-5.8.2-uclibc.patch, +files/libperl-5.8.4-uclibc.patch,
