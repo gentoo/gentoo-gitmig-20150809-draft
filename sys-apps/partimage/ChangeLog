@@ -1,6 +1,25 @@
 # ChangeLog for sys-apps/partimage
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/ChangeLog,v 1.13 2004/10/28 19:17:43 blubb Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/ChangeLog,v 1.14 2005/01/16 15:30:56 xmerlin Exp $
+
+*partimage-0.6.4-r2 (16 Jan 2005)
+
+  16 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> metadata.xml,
+  +files/partimage-0.6.4-chown.patch,
+  +files/partimage-0.6.4-fixserverargs.diff,
+  +files/partimage-0.6.4-not_install_info.patch, +files/partimaged.conf,
+  +files/partimaged.init, +files/partimagedusers.5, partimage-0.6.2.ebuild,
+  partimage-0.6.4-r1.ebuild, +partimage-0.6.4-r2.ebuild,
+  partimage-0.6.4.ebuild:
+  massive cleanup in partimage-0.6.4-r2.ebuild, merged swift@gentoo.org patch to
+  fix -d flag in partimaged (bug #65717).
+
+  16 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> metadata.xml,
+  +files/partimage.1, +files/partimaged.8, +files/partimaged.conf,
+  +files/partimaged.init, +files/partimagedusers.5, partimage-0.6.2.ebuild,
+  partimage-0.6.4-r1.ebuild, partimage-0.6.4.ebuild:
+  added init script and conf file posted by Sven Vermeulen <swift@gentoo.org>
+  (bug #59873). added man pages partimage.1 partimaged.8 partimagedusers.5
 
   28 Oct 2004; Simon Stelling <blubb@gentoo.org> partimage-0.6.2.ebuild,
   partimage-0.6.4-r1.ebuild, partimage-0.6.4.ebuild:

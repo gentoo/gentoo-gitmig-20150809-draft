@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/partimage-0.6.4-r1.ebuild,v 1.6 2004/10/28 19:17:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/partimage-0.6.4-r1.ebuild,v 1.7 2005/01/16 15:30:56 xmerlin Exp $
 
 inherit gnuconfig eutils
 
@@ -38,9 +38,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	# we can do better security ourselves
-	epatch ${FILESDIR}/${P}-nodumbpermchecks.diff
 	cd ${S}
+	# we can do better security ourselves
+	epatch ${FILESDIR}/${P}-nodumbpermchecks.diff || die
+	epatch ${FILESDIR}/${P}-fixserverargs.diff || die
 	# Patch Makefile.am so we can take over some of is install work
 	#patch -p1 < ${FILESDIR}/${PF}-gentoo.patch || die "patch failed"
 	sed '18d' -i configure.ac
@@ -82,6 +83,12 @@ src_install() {
 	keepdir /var/log/partimage
 	insinto /etc/partimaged
 	doins ${FILESDIR}/servercert.cnf
+
+	# init.d / conf.d
+	exeinto /etc/init.d ; newexe ${FILESDIR}/${PN}d.init ${PN}d || die
+	insinto /etc/conf.d ; newins ${FILESDIR}/${PN}d.conf ${PN}d || die
+
+	doman debian/partimage.1 debian/partimaged.8 ${FILESDIR}/partimagedusers.5 || die
 }
 
 # vars for SSL stuff
