@@ -1,5 +1,5 @@
 # Common Configuration file for all qmail daemons
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/files/1.03-r3/conf-common,v 1.1 2004/05/30 10:52:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/files/1.03-r3/conf-common,v 1.2 2004/07/18 03:27:44 dragonheart Exp $
 
 # Qmail User IDS to run daemons as
 QMAILDUID=`id -u qmaild`

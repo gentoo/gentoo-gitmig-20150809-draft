@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/files/1.03-r4/servercert.cnf,v 1.1 2004/05/30 10:52:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/files/1.03-r4/servercert.cnf,v 1.2 2004/07/18 03:27:44 dragonheart Exp $
 # Robin H. Johnson <robbat2@gentoo.org> - October 17, 2003
 # This is the openssl config file to generate keys for qmail
 # It is read by mkservercert
