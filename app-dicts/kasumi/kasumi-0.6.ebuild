@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-0.5.ebuild,v 1.1 2004/11/05 15:30:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-0.6.ebuild,v 1.1 2004/11/30 04:42:29 usata Exp $
 
 DESCRIPTION="Anthy dictionary maintenance tool"
 HOMEPAGE="http://kasumi.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/${PN}/12111/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/${PN}/12382/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
