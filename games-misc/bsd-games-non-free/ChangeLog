@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/bsd-games-non-free
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/ChangeLog,v 1.8 2004/12/29 00:08:32 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/ChangeLog,v 1.9 2005/04/05 15:56:16 blubb Exp $
+
+  05 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  bsd-games-non-free-2.13.ebuild:
+  added ~amd64
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
