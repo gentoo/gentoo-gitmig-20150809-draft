@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/openjms-bin
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms-bin/ChangeLog,v 1.3 2004/01/05 23:22:24 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms-bin/ChangeLog,v 1.4 2004/01/06 15:46:06 lostlogic Exp $
+
+*openjms-bin-0.7.5-r2 (06 Jan 2004)
+
+  06 Jan 2004; Brandon Low <lostlogic@gentoo.org> openjms-bin-0.7.5-r2.ebuild,
+  files/10openjms-0.7.5:
+  Add CONFIG_PROTECT for openjms configuration files
 
 *openjms-bin-0.7.5-r1 (05 Jan 2004)
 
