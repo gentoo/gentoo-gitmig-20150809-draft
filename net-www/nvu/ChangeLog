@@ -1,6 +1,9 @@
 # ChangeLog for net-www/nvu
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/ChangeLog,v 1.10 2004/12/09 05:20:17 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/ChangeLog,v 1.11 2004/12/21 18:07:14 chriswhite Exp $
+
+  22 Dec 2004; Chris White <chriswhite@gentoo.org> files/nvu.desktop:
+  Fixed a typo in the .desktop file as per Bug #75010.
 
 *nvu-0.60 (09 Dec 2004)
 
