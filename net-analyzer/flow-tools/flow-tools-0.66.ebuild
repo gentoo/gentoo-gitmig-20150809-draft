@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.66.ebuild,v 1.3 2004/06/24 22:01:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.66.ebuild,v 1.4 2004/07/01 19:45:09 squinky86 Exp $
 
 DESCRIPTION="Flow-tools is a package for collecting and processing NetFlow data"
 HOMEPAGE="http://www.splintered.net/sw/flow-tools/"
@@ -12,9 +12,9 @@ KEYWORDS="x86"
 
 IUSE=""
 
-DEPEND="virtual/glibc sys-apps/tcp-wrappers sys-libs/zlib"
-
-S=${WORKDIR}/${P}
+DEPEND="virtual/libc
+	sys-apps/tcp-wrappers
+	sys-libs/zlib"
 
 src_compile() {
 	aclocal
