@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 beceacdeec552e85b93d6eb14b12440c modplugplay-1.0.ebuild 804
-MD5 67a34a1809f536d7737ab328c20e40df ChangeLog 388
+MD5 682353c79fa915ed715e96ec409c933c modplugplay-1.0.ebuild 802
+MD5 9a1321f8b5c36618eca1a0a22f8f5fcc ChangeLog 493
 MD5 53bae16c517e3a8b9b5a3ca824f5c7df files/digest-modplugplay-1.0 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBk+hgArHZZzCEUG0RAunkAJ9Gq2vP2ONV+bd2aMdgxL93o3zSyQCfSKSC
-LRfEzQWNGwFvVMBD47TihTI=
-=89YT
+iD8DBQFBxRf+ArHZZzCEUG0RAj3HAJ9r8Kiti8UEB37/m5YjSp1e+MC/5gCgiW8O
+7v3GKNM5Voo5NOHFJIgEEkY=
+=0omd
 -----END PGP SIGNATURE-----
