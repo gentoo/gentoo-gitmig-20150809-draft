@@ -1,7 +1,7 @@
-MD5 e7174a1235ebc33dd63795d4be8244a2 ChangeLog 14528
+MD5 e320aefd486952c61d4830eb21b78751 ChangeLog 14707
 MD5 23df33d6b22c462f267c44c1b1d9eea4 evolution-1.2.3.ebuild 5916
 MD5 8cbd6785d4eca6ad34ce38cf714fcf5c evolution-1.2.4.ebuild 6385
-MD5 738c73544f93db082a40ae54aa76e12f evolution-1.4.5.ebuild 5558
+MD5 dafbc933ebb65a42be056f833eb51a5c evolution-1.4.5.ebuild 5715
 MD5 80850151bae2bd61c4ac796f83656ef6 metadata.xml 217
 MD5 f17beebbd2d9ff5d49f48352be1b359c files/digest-evolution-1.2.3 131
 MD5 3137288dd17e357d0972dab00e4f6b6d files/digest-evolution-1.2.4 1230
@@ -10,4 +10,5 @@ MD5 c837abd50d990dea46fcea32b8a1b001 files/evolution-1.1.90-kde.patch 689
 MD5 8909b7f2d3483d55036f21ca2780e4a3 files/evolution-1.1.90-sharedldap.patch 370
 MD5 f44bc5e363c1f976a7a72676886b9d13 files/evolution-1.1.90-subversion.patch 470
 MD5 a3a0071b78894fc80b10a0ec765647f5 files/evolution-1.4.4-alpha.patch 1799
+MD5 6174a41481c88eb948a8e119cf93ea94 files/evolution-1.4.5-nztimezone.patch 1852
 MD5 980771bb5349699c8d8ecd6b6f035b50 files/gnome-pilot.m4 6452

@@ -1,0 +1,53 @@
+Index: camel-mime-utils.c
+===================================================================
+RCS file: /cvs/gnome/evolution/camel/camel-mime-utils.c,v
+retrieving revision 1.183.4.4
+diff -u -r1.183.4.4 camel-mime-utils.c
+--- camel-mime-utils.c	26 Sep 2003 16:04:49 -0000	1.183.4.4
++++ camel-mime-utils.c	8 Oct 2003 16:40:41 -0000
+@@ -3530,12 +3530,12 @@
+ 		offset = (*inptr++)=='-'?-1:1;
+ 		offset = offset * header_decode_int(&inptr);
+ 		d(printf("abs signed offset = %d\n", offset));
+-		if (offset < -1200 || offset > 1200)
++		if (offset < -1200 || offset > 1400)
+ 			offset = 0;
+ 	} else if (isdigit(*inptr)) {
+ 		offset = header_decode_int(&inptr);
+ 		d(printf("abs offset = %d\n", offset));
+-		if (offset < -1200 || offset > 1200)
++		if (offset < -1200 || offset > 1400)
+ 			offset = 0;
+ 	} else {
+ 		char *tz = decode_token(&inptr);
+Index: camel-text-index.c
+===================================================================
+RCS file: /cvs/gnome/evolution/camel/camel-text-index.c,v
+retrieving revision 1.16
+diff -u -r1.16 camel-text-index.c
+--- camel-text-index.c	11 Jun 2003 19:38:33 -0000	1.16
++++ camel-text-index.c	8 Oct 2003 16:40:44 -0000
+@@ -55,6 +55,8 @@
+ /* cursor debug */
+ #define c(x)
+ 
++#define CAMEL_TEXT_INDEX_MAX_WORDLEN  (60)
++
+ #ifdef ENABLE_THREADS
+ #define CAMEL_TEXT_INDEX_LOCK(kf, lock) (e_mutex_lock(((CamelTextIndex *)kf)->priv->lock))
+ #define CAMEL_TEXT_INDEX_UNLOCK(kf, lock) (e_mutex_unlock(((CamelTextIndex *)kf)->priv->lock))
+@@ -1478,11 +1480,12 @@
+ 			utf8[utf8len] = 0;
+ 			g_string_append(p->buffer, utf8);
+ 		} else {
+-			if (p->buffer->len) {
++			if (p->buffer->len < CAMEL_TEXT_INDEX_MAX_WORDLEN) {
+ 				text_index_name_add_word(idn, p->buffer->str);
+ 				/*camel_index_name_add_word(idn, p->buffer->str);*/
+-				g_string_truncate(p->buffer, 0);
+ 			}
++			
++			g_string_truncate (p->buffer, 0);
+ 		}
+ 	}
+ 
