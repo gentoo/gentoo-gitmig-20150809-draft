@@ -1,0 +1,5 @@
+MD5 b3089a22f33a39676bb267f8d3d59c07 metadata.xml 1012
+MD5 215cb6d3909e1e5e94400d0d24cf83a0 middleman-1.8.1.ebuild 1349
+MD5 f310f39bd53b2a586b1f6ae1755dd09c files/digest-middleman-1.8.1 67
+MD5 6b68ca5d2a3f5f50f7f15a4cfd513c7c files/init.d/mman 854
+MD5 5cca318658e1fe03d10adece2c8e4d42 files/conf.d/mman 108
