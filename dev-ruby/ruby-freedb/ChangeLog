@@ -1,8 +1,11 @@
 # ChangeLog for dev-ruby/ruby-freedb
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-freedb/ChangeLog,v 1.1 2003/07/31 14:02:21 twp Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-freedb/ChangeLog,v 1.2 2004/03/11 20:00:39 usata Exp $
 
 *ruby-freedb-0.5 (31 Jul 2003)
+
+  12 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-freedb-0.5.ebuild:
+  Updated HOMEPAGE and SRC_URI. Introduced ruby.eclass
 
   31 Jul 2003; Tom Payne <twp@gentoo.org> ruby-freedb-0.5.ebuild :
   Initial version. Ebuild submitted by Matt Michalowski. Bug # 25548.
