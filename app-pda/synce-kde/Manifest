@@ -1,3 +1,6 @@
-MD5 8d678ff1b2a396d9487e41bc7d501a0b ChangeLog 473
+MD5 94f12ac7f7e3e2dcded052f9a665a3e7 synce-kde-0.7.2.ebuild 1182
+MD5 7db926f039c3423febdc93be19646526 ChangeLog 589
+MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
 MD5 7a310c3462102710d515e5a66961de82 synce-kde-0.6.1.ebuild 1180
 MD5 79536d5a6c86b20bb2307cc315815423 files/digest-synce-kde-0.6.1 129
+MD5 9c54ff9a25a140c8fa92228da9a38ce7 files/digest-synce-kde-0.7.2 130

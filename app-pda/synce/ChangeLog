@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/synce
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce/ChangeLog,v 1.2 2003/09/22 14:05:43 abhishek Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce/ChangeLog,v 1.3 2004/03/26 12:34:10 tad Exp $
+
+*synce-0.8.9 (26 Mar 2004)
+
+  26 Mar 2004; Troy Dack <troy@gentoo.org> synce-0.8.9.ebuild:
+  Version bump.
 
 *synce-0.8.4-r1 (22 Sep 2003)
 

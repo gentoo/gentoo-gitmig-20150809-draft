@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/synce-librapi2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.5 2004/02/29 00:12:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.6 2004/03/26 12:34:10 tad Exp $
+
+*synce-librapi2-0.8.9 (26 Mar 2004)
+
+  26 Mar 2004; Troy Dack <troy@gentoo.org> synce-librapi2-0.8.9.ebuild:
+  Version bump.
 
   29 Feb 2004; Alastair Tse <liquidx@gentoo.org> synce-librapi2-0.3.ebuild,
   synce-librapi2-0.7.ebuild, synce-librapi2-0.8.1.ebuild:
