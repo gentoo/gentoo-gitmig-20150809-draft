@@ -1,0 +1,13 @@
+--- pmud-0.10.1/pmud.8~	2001-12-15 16:52:40.000000000 -0600
++++ pmud-0.10.1/pmud.8	2002-04-13 19:26:00.000000000 -0500
+@@ -160,8 +160,8 @@
+ /etc/power/pwrctl-local
+ /etc/power/levels
+ /etc/powerstatus
+-/etc/rc.d/init.d/pmud
+-/etc/sysconfig/power
++/etc/init.d/pmud
++/etc/power.conf
+ .fi
+ .Sh AUTHORS
+ initial pmud package by Paul Mackerras and initial manual and changes to
