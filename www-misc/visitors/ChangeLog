@@ -1,0 +1,19 @@
+# ChangeLog for net-www/visitors
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.1 2004/08/15 18:16:21 stuart Exp $
+
+*visitors-0.2a (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +visitors-0.2a.ebuild:
+  Moved from net-www/visitors to www-misc/visitors.
+
+  12 Jun 2004; David Holm <dholm@gentoo.org> visitors-0.2a.ebuild:
+  Added to ~ppc.
+
+*visitors-0.2a (11 Jun 2004)
+
+  11 Jun 2004; Chuck Short <zul@gentoo.org> metadata.xml,
+  visitors-0.2a.ebuild:
+  Initial Ebuild written by Sven Wegener. Closes #50919.
+
