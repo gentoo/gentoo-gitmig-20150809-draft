@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.148 2004/09/27 03:32:41 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.149 2004/09/30 14:08:35 phosphan Exp $
+
+  30 Sep 2004; Patrick Kursawe <phosphan@gentoo.org>
+  -files/xine-lib-1_rc3-configure-sparc.patch,
+  -files/xine-lib-1_rc4-configure-sparc.patch, -xine-lib-0.9.13-r3.ebuild,
+  -xine-lib-1_rc2.ebuild, -xine-lib-1_rc3-r1.ebuild,
+  -xine-lib-1_rc4-r1.ebuild, -xine-lib-1_rc4.ebuild,
+  -xine-lib-1_rc5-r2.ebuild, xine-lib-1_rc5-r3.ebuild, xine-lib-1_rc6.ebuild:
+  Big cleanup.
+  Removing xvid and divx4linux dependencies, see bug #56179
 
   26 Sep 2004; Tom Gall <tgall@gentoo.org> xine-lib-1_rc5-r3.ebuild
   stable on ppc64, bug #59948

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r3.ebuild,v 1.11 2004/09/27 03:32:41 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r3.ebuild,v 1.12 2004/09/30 14:08:35 phosphan Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -19,8 +19,7 @@ IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theor
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	!amd64? ( X? ( virtual/x11 ) )
 	amd64? ( X? ( || ( x11-base/xorg-x11 >=x11-base/xfree-4.3.0-r6 ) ) )
-	avi? ( x86? ( >=media-libs/win32codecs-0.50
-	       media-libs/divx4linux ) )
+	avi? ( x86? ( >=media-libs/win32codecs-0.50 ) )
 	esd? ( media-sound/esound )
 	dvd? ( >=media-libs/libdvdcss-1.2.7 )
 	arts? ( kde-base/arts )
@@ -33,7 +32,6 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	>=media-libs/flac-1.0.4
 	sdl? ( >=media-libs/libsdl-1.1.5 )
 	>=media-libs/libfame-0.9.0
-	!ia64? ( >=media-libs/xvid-0.9.0 )
 	theora? ( media-libs/libtheora )
 	speex? ( media-libs/speex )"
 DEPEND="${RDEPEND}

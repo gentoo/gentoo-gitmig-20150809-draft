@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc6.ebuild,v 1.7 2004/09/21 01:19:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc6.ebuild,v 1.8 2004/09/30 14:08:35 phosphan Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -19,8 +19,7 @@ IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theor
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	!amd64? ( X? ( virtual/x11 ) )
 	amd64? ( X? ( || ( x11-base/xorg-x11 >=x11-base/xfree-4.3.0-r6 ) ) )
-	avi? ( x86? ( >=media-libs/win32codecs-0.50
-	       media-libs/divx4linux ) )
+	avi? ( x86? ( >=media-libs/win32codecs-0.50 ) )
 	esd? ( media-sound/esound )
 	dvd? ( >=media-libs/libdvdcss-1.2.7 )
 	arts? ( kde-base/arts )
@@ -33,7 +32,6 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	>=media-libs/flac-1.0.4
 	sdl? ( >=media-libs/libsdl-1.1.5 )
 	>=media-libs/libfame-0.9.0
-	!ia64? ( >=media-libs/xvid-0.9.0 )
 	theora? ( media-libs/libtheora )
 	speex? ( media-libs/speex )"
 DEPEND="${RDEPEND}
@@ -55,11 +53,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# ffmpeg include is in the wrong directory.. gotta fix that.
-	# use ffmpeg && epatch ${FILESDIR}/${P}-ffmpeg.patch
-
-	# gcc2 fixes provided by <T.Henderson@cs.ucl.ac.uk> in #26534
-	#epatch ${FILESDIR}/${P}-gcc2_fix.patch
 	# preserve CFLAGS added by drobbins, -O3 isn't as good as -O2 most of the time
 	epatch ${FILESDIR}/protect-CFLAGS.patch-${PV}
 	# plasmaroo: Kernel 2.6 headers patch
@@ -67,14 +60,7 @@ src_unpack() {
 	# force 32 bit userland
 	[ ${ARCH} = "sparc" ] && epatch ${FILESDIR}/${P}-configure-sparc.patch
 
-	# always_inline means inline-or-fail, so it's no suprise that xine-lib
-	# fails to compile with gcc 3.4 when this one inline fails
-	#epatch ${FILESDIR}/xine-lib-gcc34.patch
-
 	elibtoolize #40317
-
-	# Fix building on amd64, #49569
-	#use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
 
 	# Fix detection of hppa2.0 and hppa1.1 CHOST
 	use hppa && sed -e 's/hppa-/hppa*-linux-/' -i ${S}/configure
@@ -110,9 +96,6 @@ src_compile() {
 	use avi	&& use x86 \
 		&& myconf="${myconf} --with-w32-path=/usr/lib/win32" \
 		|| myconf="${myconf} --disable-asf"
-
-	#use ffmpeg \
-	#	&& myconf="${myconf} --with-external-ffmpeg"
 
 	use sparc \
 		&& myconf="${myconf} --build=${CHOST}"
