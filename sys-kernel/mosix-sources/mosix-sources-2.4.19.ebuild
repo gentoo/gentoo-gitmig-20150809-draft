@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mosix-sources/mosix-sources-2.4.19.ebuild,v 1.8 2003/09/07 07:26:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mosix-sources/mosix-sources-2.4.19.ebuild,v 1.9 2003/12/01 22:54:22 iggy Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -46,6 +46,8 @@ src_unpack() {
 	if [ `gcc -dumpversion | cut -d. -f1` == 3 ]; then
 		cat ${DISTDIR}/linux-gentoo-${KV}-gcc3.patch.bz2 | bzip2 -d | patch -p1 || die
 	fi
+
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
