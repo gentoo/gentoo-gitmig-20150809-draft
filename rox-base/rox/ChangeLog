@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.5 2005/01/27 13:42:44 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.6 2005/01/27 18:40:23 gustavoz Exp $
+
+  27 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> rox-2.1.4.ebuild:
+  Stable on sparc
 
 *rox-2.1.5 (27 Jan 2005)
 
