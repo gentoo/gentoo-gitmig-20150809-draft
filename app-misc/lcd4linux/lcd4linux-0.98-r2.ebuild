@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.98-r1.ebuild,v 1.1 2002/05/20 10:54:06 seemant Exp
 
+IUSE="kde pda png"
+
 S=${WORKDIR}/${P}
 DESCRIPTION="system and ISDN information is shown on an external display or in a X11 window."
 SRC_URI="http://download.sourceforge.net/lcd4linux/${P}.tar.gz"

@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r1.ebuild,v 1.6 2002/10/04 04:58:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r1.ebuild,v 1.7 2002/10/05 05:39:09 drobbins Exp $
+
+IUSE="nls esd gnome"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small personal databases manager for Linux"

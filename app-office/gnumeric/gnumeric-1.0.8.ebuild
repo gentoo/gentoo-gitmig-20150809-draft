@@ -1,7 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.8.ebuild,v 1.5 2002/10/04 04:59:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.8.ebuild,v 1.6 2002/10/05 05:39:09 drobbins Exp $
+
+IUSE="nls libgda gb evo python bonobo guile perl"
 
 #provide Xmake and Xemake
 

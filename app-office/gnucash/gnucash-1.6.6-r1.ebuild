@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.6-r1.ebuild,v 1.2 2002/08/19 05:32:15 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.6-r1.ebuild,v 1.3 2002/10/05 05:39:09 drobbins Exp $
+
+IUSE="nls postgres"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A personal finance manager"
