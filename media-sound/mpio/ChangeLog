@@ -1,0 +1,8 @@
+# ChangeLog for media-sound/mpio
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpio/ChangeLog,v 1.1 2004/11/12 19:46:55 fvdpol Exp $
+
+  12 Nov 2004; Frank van de Pol <fvdpol@gentoo.org> :
+  Initial ebuild, submitted by Martin Scmitz <martin@linux-tv.org> and Peter Ton
+  <peterton@hotpop.com. Closes bug#46375.
+
