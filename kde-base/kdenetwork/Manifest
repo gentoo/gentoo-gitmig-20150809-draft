@@ -1,37 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c93a4d3bf985fa8a749a4ec1d42e3090 ChangeLog 15144
-MD5 0ec2c51c6328a9c2d4f77b6c6e64a007 kdenetwork-3.2.3.ebuild 1243
-MD5 15ba8e503304d746e65dedba1b142f03 kdenetwork-3.3.1.ebuild 1225
-MD5 01567182a1024587ce102e345b27a9b9 kdenetwork-3.3.0.ebuild 1290
-MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 56b188bb8ea9947924ba585d958570aa ChangeLog 15299
+MD5 bc9a8ef963f846d204e3deb605482fe9 kdenetwork-3.1.5.ebuild 897
 MD5 8ca1ddb44e1789e711218d60395307b3 kdenetwork-3.2.0.ebuild 1182
 MD5 3bece517a429d8a402d85ffc30a37427 kdenetwork-3.2.2.ebuild 1276
-MD5 8961e7ba76002a9f272e6305853b4e96 kdenetwork-3.3.1-r1.ebuild 1263
+MD5 0ec2c51c6328a9c2d4f77b6c6e64a007 kdenetwork-3.2.3.ebuild 1243
+MD5 15ba8e503304d746e65dedba1b142f03 kdenetwork-3.3.1.ebuild 1225
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 2ebf1e1662cf3fb9e7dd2c400672793c kdenetwork-3.2.3-r1.ebuild 1319
-MD5 bc9a8ef963f846d204e3deb605482fe9 kdenetwork-3.1.5.ebuild 897
-MD5 d97100af0cb95f733660b7a61492d71f files/lisa.conf 452
+MD5 0b57dbfe3810e79ff1c7798d85787a76 kdenetwork-3.3.1-r1.ebuild 1306
+MD5 01567182a1024587ce102e345b27a9b9 kdenetwork-3.3.0.ebuild 1290
 MD5 419e4285f4c61e2c2f5cb24cfc3c6145 files/digest-kdenetwork-3.1.5 70
-MD5 a32555833318266feb7ea1f68742fdf7 files/yahoo-fix-connect-062404.patch 1139
-MD5 72eca9b8637e868d730399e0becc045d files/digest-kdenetwork-3.2.3 70
-MD5 804c7026171e401cf3733ba8e6987461 files/digest-kdenetwork-3.2.2 70
-MD5 8dcaf6114da2b32d2bce63e39a38758e files/3.3.0-kget.diff 1321
-MD5 93d1b5a88409a2adfec615de70dcaf70 files/linuxwirelesswidget.cpp.diff 796
 MD5 62110957dfcdb489a410148cb79839e1 files/digest-kdenetwork-3.2.0 70
-MD5 805378603d34bf14a7b856f30374428b files/3.3.0-kopete.diff 566
-MD5 ee738112b91143ae2af44dceb3d26ab1 files/digest-kdenetwork-3.3.0 70
-MD5 732cc856c1e48585781d79173f5d271b files/lisa 538
 MD5 a0086a72d069c5606f1e2ea81b98fea8 files/digest-kdenetwork-3.3.1 70
-MD5 28c3ba792f8a0ce436216062cefa7908 files/reslisa 549
-MD5 a0086a72d069c5606f1e2ea81b98fea8 files/digest-kdenetwork-3.3.1-r1 70
-MD5 72eca9b8637e868d730399e0becc045d files/digest-kdenetwork-3.2.3-r1 70
-MD5 3939e85ee43aba114cc3ece4194145b6 files/reslisa.conf 340
+MD5 804c7026171e401cf3733ba8e6987461 files/digest-kdenetwork-3.2.2 70
+MD5 72eca9b8637e868d730399e0becc045d files/digest-kdenetwork-3.2.3 70
 MD5 8dcaf6114da2b32d2bce63e39a38758e files/3.3.1-kget.diff 1321
+MD5 93d1b5a88409a2adfec615de70dcaf70 files/linuxwirelesswidget.cpp.diff 796
+MD5 732cc856c1e48585781d79173f5d271b files/lisa 538
+MD5 d97100af0cb95f733660b7a61492d71f files/lisa.conf 452
+MD5 28c3ba792f8a0ce436216062cefa7908 files/reslisa 549
+MD5 3939e85ee43aba114cc3ece4194145b6 files/reslisa.conf 340
+MD5 72eca9b8637e868d730399e0becc045d files/digest-kdenetwork-3.2.3-r1 70
+MD5 a32555833318266feb7ea1f68742fdf7 files/yahoo-fix-connect-062404.patch 1139
+MD5 8dcaf6114da2b32d2bce63e39a38758e files/3.3.0-kget.diff 1321
+MD5 ee738112b91143ae2af44dceb3d26ab1 files/digest-kdenetwork-3.3.0 70
+MD5 805378603d34bf14a7b856f30374428b files/3.3.0-kopete.diff 566
+MD5 a0086a72d069c5606f1e2ea81b98fea8 files/digest-kdenetwork-3.3.1-r1 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBmzX1ugEuf3OQ0akRAnFJAKCF6sbT7EDfKmrDWTZGVwEaaEKwdgCfXfG6
-xR3dgMpop70AJPmP/j7Pz1w=
-=7vTz
+iD8DBQFBs4Z0ArHZZzCEUG0RAqwiAKCAT0zArXuYtuKIVQjGA39lK4ZEPACePaGV
+GweR76qFyZb8G9vwtnrG9SQ=
+=5pZk
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.1-r1.ebuild,v 1.3 2004/11/17 11:28:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.1-r1.ebuild,v 1.4 2004/12/05 22:06:33 eradicator Exp $
 
 inherit kde-dist eutils
 
@@ -24,7 +24,8 @@ src_unpack() {
 
 src_compile() {
 	myconf="$myconf `use_enable slp`"
-	use wifi || DO_NOT_COMPILE="$DO_NOT_COMPILE wifi"
+	( use wifi && use arts ) || DO_NOT_COMPILE="$DO_NOT_COMPILE wifi"
+	export DO_NOT_COMPILE
 	kde_src_compile
 }
 

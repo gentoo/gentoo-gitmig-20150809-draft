@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.115 2004/11/17 11:28:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.116 2004/12/05 22:06:33 eradicator Exp $
+
+  05 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  kdenetwork-3.3.1-r1.ebuild:
+  The wifi module doesn't compile if arts support is disabled.
 
   17 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
   kdenetwork-3.3.1-r1.ebuild:
