@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.2 2004/08/19 13:25:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r7.ebuild,v 1.1 2004/08/19 13:25:12 usata Exp $
 
 ONIGURUMA="onigd2_3_1"
 MY_P=${P/_pre/-preview}
@@ -9,13 +9,12 @@ inherit flag-o-matic alternatives eutils gnuconfig
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
-SRC_URI="mirror://ruby/${PV%.*}/${MY_P}.tar.gz"
-SRC_URI="${SRC_URI}
+SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
 	cjk? ( http://www.geocities.jp/kosako1/oniguruma/archive/${ONIGURUMA}.tar.gz )"
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 -ia64 ~s390 macos"
+KEYWORDS="~alpha ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE="socks5 tcltk cjk"
 
 RDEPEND="virtual/libc
@@ -23,7 +22,7 @@ RDEPEND="virtual/libc
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
 	socks5? ( >=net-misc/dante-1.1.13 )
-	tcltk? ( dev-lang/tk )
+	tcltk?  ( dev-lang/tk )
 	>=dev-ruby/ruby-config-0.3
 	!=dev-lang/ruby-cvs-1.8*"
 DEPEND="sys-devel/autoconf
@@ -31,30 +30,33 @@ DEPEND="sys-devel/autoconf
 	${RDEPEND}"
 PROVIDE="virtual/ruby"
 
-S=${WORKDIR}/${P%_*}
+S=${WORKDIR}/${P%_pre*}
 
 src_unpack() {
 	unpack ${A}
 
 	if use cjk ; then
 		einfo "Applying ${ONIGURUMA}"
-		pushd ${WORKDIR}/oniguruma
+		pushd oniguruma
 		econf --with-rubydir=${S} || die "econf failed"
 		make ${SLOT/./}
 		popd
 	fi
 
 	# Enable build on alpha EV67
-	if use alpha ; then
+	if [ "${ARCH}" = "alpha" ] ; then
 		gnuconfig_update || die "gnuconfig_update failed"
 	fi
+
+	# bug #60525
+	epatch ${FILESDIR}/${P}-CGI::Session.patch
 }
 
 src_compile() {
 	filter-flags -fomit-frame-pointer
 
 	# Socks support via dante
-	if use socks5; then
+	if ! use socks5 ; then
 		# Socks support can't be disabled as long as SOCKS_SERVER is
 		# set and socks library is present, so need to unset
 		# SOCKS_SERVER in that case.
@@ -76,38 +78,30 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	if use macos ; then
-		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%.*}.dylib
-		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%_*}.dylib
-	else
-		dosym /usr/lib/libruby${SLOT/./}.so.${PV%_*} /usr/lib/libruby.so.${PV%.*}
-		dosym /usr/lib/libruby${SLOT/./}.so.${PV%_*} /usr/lib/libruby.so.${PV%_*}
-	fi
+	dosym /usr/lib/libruby${SLOT/./}.so.${PV} /usr/lib/libruby.so.${PV%.*}
+	dosym /usr/lib/libruby${SLOT/./}.so.${PV} /usr/lib/libruby.so.${PV}
 
 	dodoc COPYING* ChangeLog MANIFEST README* ToDo
 }
 
 pkg_postinst() {
-	if ! use macos ; then
-		ewarn
-		ewarn "Warning: Vim won't work if you've just updated ruby from"
-		ewarn "1.6.x to 1.8.x due to the library version change."
-		ewarn "In that case, you will need to remerge vim."
-		ewarn
+	ewarn
+	ewarn "Warning: Vim won't work if you've just updated ruby from"
+	ewarn "1.6.x to 1.8.x due to the library version change."
+	ewarn "In that case, you will need to remerge vim."
+	ewarn
 
-		if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
-			${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
-		fi
-		einfo
-		einfo "You can change the default ruby interpreter by ${ROOT}usr/sbin/ruby-config"
-		einfo
+	if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
+		${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 	fi
+	einfo
+	einfo "You can change the default ruby interpreter by ${ROOT}usr/sbin/ruby-config"
+	einfo
 }
 
 pkg_postrm() {
-	if ! use macos ; then
-		if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
-			${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
-		fi
+
+	if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
+		${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 	fi
 }
