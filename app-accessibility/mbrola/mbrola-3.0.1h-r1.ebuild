@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.12 2005/01/01 10:51:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.13 2005/01/11 11:07:58 eradicator Exp $
 
-IUSE=""
+IUSE="emul-linux-x86"
 
 S=${WORKDIR}
 
@@ -15,7 +15,7 @@ SRC_URI="${URL}/bin/pclinux/mbr301h.zip
 
 DEPEND=">=app-accessibility/festival-1.4.2
 	app-arch/unzip
-	amd64? ( app-emulation/emul-linux-x86-glibc )"
+	emul-linux-x86? ( app-emulation/emul-linux-x86-glibc )"
 
 SLOT="0"
 LICENSE="MBROLA"
