@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.6.ebuild,v 1.17 2005/01/08 23:36:24 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.6.ebuild,v 1.18 2005/03/13 02:25:12 obz Exp $
 
 inherit flag-o-matic virtualx gnome2 eutils alternatives
 
@@ -45,7 +45,10 @@ RDEPEND="=gnome-extra/libgtkhtml-3.0.10*
 	ssl? ( !mozilla? ( >=dev-libs/openssl-0.9.5 ) )
 	ldap? ( >=net-nds/openldap-2.0 )
 	kerberos? ( >=app-crypt/mit-krb5-1.2.5 )
-	doc? ( >=app-text/scrollkeeper-0.3.10-r1 )"
+	doc? ( >=app-text/scrollkeeper-0.3.10-r1 )
+	!gnome-extra/evolution-data-server"
+# libebook conflicts with eds and evolution 1.4 links against
+# it incorrectly, see bug #72487 <obz@gentoo.org>
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
