@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 93e31a28f56dd16f9fb2e71b635cd127 ChangeLog 786
+MD5 f6e8c91d6fb9a776db72407dcdf0fbe9 ChangeLog 903
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 fc86e31e0c0c54b8c5f00d09c39c31b8 usbd-0.1.ebuild 814
+MD5 6d9108fb52a2c34233347c8ce6d0a07b usbd-0.1.ebuild 813
 MD5 44582f35ae2f6b3765620c92aabba729 files/digest-usbd-0.1 60
 MD5 8b5a41a7335d390fbf46a49b9759a252 files/usbd 400
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBHheAI1lqEGTUzyQRAnKcAKCYaJvk+NFgFGQN7ZLIdMUvyF97igCgu1oJ
-iLc6s0uRXUjVxfIHoCOnvH4=
-=mrkp
------END PGP SIGNATURE-----

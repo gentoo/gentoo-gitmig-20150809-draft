@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0e64a30ac1103f2439b9aa0db0307d89 ChangeLog 1338
-MD5 1fd2c3f7abfe31238c33b49023c79007 kudzu-knoppix-1.1.36.ebuild 1021
+MD5 b7a95bb0bf3780d7be0db2837536bc14 ChangeLog 1480
+MD5 2285ed1d90f58d1948eea50a30056207 kudzu-knoppix-1.1.36.ebuild 1022
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 MD5 5310a8dffb3e81e7c81fccd43d0ce18d files/digest-kudzu-knoppix-1.1.36 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4iiXHTu7gpaalycRAqZ7AJwPWIb/HpkeJVZKGBXAmQ+AfZLQuwCgqRRX
-YClUGpczFvk82i8GFzLEHRQ=
-=mql+
------END PGP SIGNATURE-----
