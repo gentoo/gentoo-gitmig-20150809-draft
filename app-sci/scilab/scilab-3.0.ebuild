@@ -1,70 +1,55 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r3.ebuild,v 1.8 2004/08/19 23:06:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-3.0.ebuild,v 1.1 2004/08/19 23:06:45 ribosome Exp $
 
-inherit virtualx eutils
-
-DESCRIPTION="Scientific software package for numerical computations, Matlab lookalike"
-SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/${P}.src.tar.gz
-	http://www-rocq.inria.fr/scilab/bugfix/patch_browsehelp.tar.gz"
+DESCRIPTION="Scientific software package for numerical computations (Matlab lookalike)"
+SRC_URI="ftp://ftp.inria.fr/INRIA/Scilab/distributions/${P}.src.tar.gz"
 HOMEPAGE="http://www.scilab.org/"
 
 LICENSE="scilab"
 SLOT="0"
-KEYWORDS="x86 amd64"
-IUSE="tcltk gtk ifc"
+KEYWORDS="~x86 ~amd64"
+IUSE="tcltk atlas gtk gtk2 Xaw3d"
 
-DEPEND="virtual/x11
-	x11-libs/Xaw3d
+RDEPEND="virtual/x11
 	sys-libs/ncurses
-	tcltk? ( dev-lang/tk )
-	x86? ( ifc? ( dev-lang/ifc ) )
-	gtk? ( =x11-libs/gtk+-1.2*
-			>=gnome-base/gnome-libs-1.4.2
-			>=dev-libs/glib-2.2
-			media-libs/jpeg
-			media-libs/libpng
-			sys-libs/zlib )"
+	atlas? ( dev-libs/atlas )
+	gtk? (
+		>=gnome-base/gnome-libs-1.4.2
+		>=dev-libs/glib-2.2
+		media-libs/jpeg
+		media-libs/libpng
+		sys-libs/zlib
+		gtk2? ( >=x11-libs/gtk+-2*
+			>=x11-libs/libzvt-2*
+			>=gnome-extra/libgtkhtml-2*
+		)
+		!gtk2? ( =x11-libs/gtk+-1.2* )
+	)
+	tcltk? ( >=dev-lang/tk-8.4
+		>=dev-lang/tcl-8.4 )
+	Xaw3d? ( x11-libs/Xaw3d )"
 
-pkg_setup() {
-	local SCLB
-	SCLB=`which scilab`
-	if [ -e "${SCLB}" ]; then
-		ewarn "Previous version of scilab was detected on your system"
-		ewarn "Unfortunately these versions cause problems for newer ones during update"
-		ewarn 'Please uninstall it with "emerge unmerge scilab" before continuig'
-		die
-	fi
-	if ! use ifc && [ -z `which g77` ]; then
-		#if ifc is defined then the dep was already checked
-		eerror "No fortran compiler found on the system!"
-		eerror "Please add f77 to your USE flags and reemerge gcc!"
-		die
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S} && unpack ${DISTFILES}/patch_browsehelp.tar.gz
-	if [ ${ARCH} = "amd64" ]; then
-		epatch ${FILESDIR}/${P}-configure.patch
-		cd ${S}
-		autoconf
-	fi
-}
+DEPEND="${RDEPEND}
+	app-text/sablotron
+	dev-libs/libxslt"
 
 src_compile() {
 	local myopts
-
 	use tcltk || myopts="${myopts} --without-tk"
-	use gtk && myopts="${myopts} --with-gtk" || myopts="${myopts} --without-gtk"
+	use Xaw3d || myopts="${myopts} --without-xaw3d"
+	use atlas && myopts="${myopts} --with-atlas-library=/usr/lib"
+	use gtk2 && myopts="${myopts} --with-gtk2" || \
+		use gtk && myopts="${myopts} --with-gtk"
 
-	econf ${myopts} || die "./configure failed"
-	export HOME=${S}
-	make all || die
+	econf ${myopts} || die
+	env HOME=${S} make all || die
 }
 
 src_install() {
+	# These instructions come from the file ${P}/Makefile, mostly section
+	# install. Make sure files have not been removed or added to these list
+	# when you use this ebuild as a template for future versions.
 	PVMBINDISTFILES="\
 		${P}/pvm3/Readme \
 		${P}/pvm3/lib/pvm \
@@ -75,7 +60,6 @@ src_install() {
 		${P}/pvm3/lib/LINUX/pvmgs \
 		${P}/pvm3/lib/LINUX/pvm \
 		${P}/pvm3/bin/LINUX/*"
-
 	BINDISTFILES="\
 		${P}/.binary \
 		${P}/.pvmd.conf \
@@ -103,10 +87,8 @@ src_install() {
 		${P}/imp/NperiPos.ps \
 		${P}/imp/giffonts \
 		${P}/macros \
-		${P}/man/eng/*.htm \
-		${P}/man/eng/*/*.htm \
-		${P}/man/fr/*/*.htm \
-		${P}/man/fr/*.htm \
+		${P}/man/eng/ \
+		${P}/man/fr/ \
 		${P}/man/*.dtd \
 		${P}/man/*/*.xsl \
 		${P}/maple \
@@ -126,6 +108,7 @@ src_install() {
 		${P}/routines/intersci/sparse.h \
 		${P}/routines/menusX/*.h \
 		${P}/routines/scicos/scicos.h \
+		${P}/routines/scicos/scicos_block.h \
 		${P}/routines/sun/*.h \
 		${P}/routines/xsci/*.h \
 		${P}/scripts \
@@ -137,18 +120,29 @@ src_install() {
 	strip bin/scilex
 	cd ${S}/tests && make distclean
 	cd ${S}/examples && make distclean
+	cd ${S}/man && make man
+
 	dodir /usr/lib
-	(cd ${S}/..; tar cf - ${BINDISTFILES} ${PVMBINDISTFILES} | (cd ${D}/usr/lib; tar xf -))
+	(cd ${S}/.. && tar cf - ${BINDISTFILES} ${PVMBINDISTFILES} | (cd ${D}/usr/lib; tar xf -))
 	rm .binary
 
 	dodir /usr/bin
 	dosym /usr/lib/${P}/bin/scilab /usr/bin/scilab
 	dosym /usr/lib/${P}/bin/intersci /usr/bin/intersci
 	dosym /usr/lib/${P}/bin/intersci-n /usr/bin/intersci-n
+}
 
-	#now scilab wants to create some wrappers, and we will need to adjust the paths
-	cd ${D}/usr/lib/${P}
-	make || die "wrapper creation failed"
-	cd macros && make && cd .. || die macros creation failed
-	grep -rle "${D}" * | xargs sed -i -e "s:${D}:/:g"
+pkg_preinst() {
+	# The compile and install process causes the work folder to be registered
+	# as the runtime folder in the launch script. This is corrected here.
+	BAD_LINE=SCI\=\"${WORKDIR}/${P}\"
+	FIXED_LINE=SCI\=\"/usr/lib/${P}\"
+	sed -i -e "s#${BAD_LINE}#${FIXED_LINE}#" ${D}/usr/lib/${P}/bin/scilab
+}
+
+pkg_postinst() {
+	einfo "To tell Scilab about your printers, set the environment"
+	einfo "variable PRINTERS in the form:"
+	einfo
+	einfo "PRINTERS=\"firstPrinter:secondPrinter:anotherPrinter\""
 }

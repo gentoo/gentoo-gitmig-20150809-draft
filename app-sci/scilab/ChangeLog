@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/scilab
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.19 2004/06/30 19:26:37 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.20 2004/08/19 23:06:45 ribosome Exp $
+
+*scilab-3.0
+
+  19 Aug 2004; Olivier Fisette <ribosome@gentoo.org>
+  scilab-2.7-r3.ebuild, scilab-3.0.ebuild:
+  Version bump. Added 2.7-r3 to x86.
 
   30 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> -scilab-2.6.ebuild,
   -scilab-2.7-r1.ebuild, scilab-2.7-r2.ebuild, -scilab-2.7.ebuild:
