@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.14 2003/02/12 02:57:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.15 2003/02/19 21:09:23 raker Exp $
+
+*rpm-4.1 (19 Feb 2003)
+
+  19 Feb 2003; Nick Hadaway <raker@gentoo.org> rpm-4.1.ebuild, 
+  files/digest-rpm-4.1, files/rpm-4.1-system-popt.diff :
+  Package builds.  rpm doesn't run.  All are -arch.  This has
+  been added to portage so people can test and maybe find a
+  fix.  Pwease?
 
 *rpm-4.0.4-r4 (12 Oct 2002)
 
