@@ -1,12 +1,14 @@
 # ChangeLog for dev-libs/cel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cel/ChangeLog,v 1.2 2003/04/28 23:17:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cel/ChangeLog,v 1.3 2003/05/19 10:58:46 lordvan Exp $
 
 *cel-20030413 (13 Apr 2003)
 
   13 Apr 2003; Philip Walls <malverian@gentoo.org> cel-20030413.ebuild :
   Cel snapshot that works with Planeshift
-
+  19 May 2003; Thomas Raschbacher <lordvan@gentoo.org> cel-20030413.ebuild:
+  installing cel.cex to /opt/crystal/bin now so cs-config can find it
+	
 *cel-0.96_p001 (02 Apr 2003)
 
   02 Apr 2003; Philip Walls <malverian@gentoo.org> cel-0.96_p001.ebuild :

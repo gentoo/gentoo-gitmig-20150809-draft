@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cel/cel-20030413.ebuild,v 1.1 2003/04/27 22:01:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cel/cel-20030413.ebuild,v 1.2 2003/05/19 10:58:46 lordvan Exp $
 
 inherit games
 
@@ -35,7 +35,9 @@ src_install() {
 	into ${CEL_PREFIX}
 	dolib.so *.so
 
-	dogamesbin cel.cex
+	insinto ${CEL_PREFIX}/bin
+	doins	cel.cex
+	#dogamesbin cel.cex
 	mv celtst ${D}/${CEL_PREFIX}/
 
 	prepgamesdirs
