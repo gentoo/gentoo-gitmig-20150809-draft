@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dda94ac820a81dfc6b7e3c857d3a23a3 gcc-apple-1762.ebuild 1031
 MD5 e0bd1771e5df98bd4bdf3b3437831756 ChangeLog 542
-MD5 e526e84277cb8eb1bcf73840117ff45a metadata.xml 220
+MD5 fa396712a769e3d8895d3a382332f57d gcc-apple-1762.ebuild 1030
+MD5 ad43b9d82abfe6d24b8f3a282ac0ac67 metadata.xml 216
 MD5 7fa514d0f03a62a64a75d80ab2b222a2 files/digest-gcc-apple-1762 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCF9JqI1lqEGTUzyQRAotiAKDFWtFfWL0qx+hxRQh0vzW4oQD4RgCgrtqh
-iCPS4U7VrJNPIwHk+nMKjYM=
-=8ZVg
------END PGP SIGNATURE-----
