@@ -1,6 +1,11 @@
 # ChangeLog for media-video/qc-usb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.5 2004/10/06 16:19:13 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.6 2004/11/11 19:24:09 liquidx Exp $
+
+*qc-usb-0.6.2 (11 Nov 2004)
+
+  11 Nov 2004; Alastair Tse <liquidx@gentoo.org> +qc-usb-0.6.2.ebuild:
+  version bump - compat with new kernel
 
   06 Oct 2004; Karol Wojtaszek <sekretarz@gentoo.org>
   +files/qc-usb-0.6.0-gcc34.patch, qc-usb-0.6.0.ebuild:
