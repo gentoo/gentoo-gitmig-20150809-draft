@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdw
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.7 2005/01/31 06:58:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.8 2005/01/31 06:59:14 mr_bones_ Exp $
+
+  31 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org> -cdw-0.2.0.ebuild,
+  -cdw-0.2.0_pre3.ebuild:
+  clean old ebuilds
 
 *cdw-0.2.3 (31 Jan 2005)
 
