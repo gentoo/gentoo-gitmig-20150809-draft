@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2-r2.ebuild,v 1.1 2000/11/15 18:09:12 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2-r2.ebuild,v 1.2 2000/11/15 18:18:39 achim Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -31,7 +31,7 @@ src_unpack() {
     unpack glibc-${PV}.tar.gz
     cd ${S}
     unpack glibc-linuxthreads-${PV}.tar.gz
-    patch -p0 < ${FILESDIR}/glibc-2.2-ldconfig.patch
+    patch -p1 < ${FILESDIR}/glibc-2.2-ldconfig.patch
 }
 
 src_install() {
