@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.16 2003/05/16 15:30:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.17 2003/05/21 15:57:31 joker Exp $
+
+  21 May 2003; Christian Birchinger <joker@gentoo.org> nfs-utils-1.0.3.ebuild:
+  Added sparc stable keyword
 
   16 May 2003; Martin Holzer <mholzer@gentoo.org> nfs-utils-1.0.3.ebuild:
   Marked as stable
