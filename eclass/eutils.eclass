@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.121 2004/10/19 19:51:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.122 2004/10/31 04:34:08 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -579,7 +579,7 @@ emktemp() {
 #
 # egetent(database, key)
 egetent() {
-	if useq macos || useq ppc-macos ; then
+	if use ppc-macos ; then
 		case "$2" in
 		  *[!0-9]*) # Non numeric
 			nidump $1 . | awk -F":" "{ if (\$1 ~ /^$2$/) {print \$0;exit;} }"
@@ -736,7 +736,7 @@ enewuser() {
 	local eextra="$@"
 	local oldsandbox="${SANDBOX_ON}"
 	export SANDBOX_ON="0"
-	if useq macos || useq ppc-macos ;
+	if use ppc-macos
 	then
 		### Make the user
 		if [ -z "${eextra}" ]
@@ -829,7 +829,7 @@ enewgroup() {
 		then
 			if [ -z "`egetent group ${egid}`" ]
 			then
-				if useq macos || useq ppc-macos ; then
+				if use ppc-macos ; then
 					opts="${opts} ${egid}"
 				else
 					opts="${opts} -g ${egid}"
@@ -853,7 +853,7 @@ enewgroup() {
 	# add the group
 	local oldsandbox="${SANDBOX_ON}"
 	export SANDBOX_ON="0"
-	if useq macos || useq ppc-macos ;
+	if use ppc-macos
 	then
 		if [ ! -z "${eextra}" ];
 		then
