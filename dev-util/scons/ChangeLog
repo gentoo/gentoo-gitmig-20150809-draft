@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scons
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.22 2004/10/19 10:03:43 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.23 2004/10/31 01:30:27 weeve Exp $
+
+  30 Oct 2004; Jason Wever <weeve@gentoo.org> scons-0.96.1.ebuild:
+  Stable on sparc.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> scons-0.94-r1.ebuild,
   scons-0.95.ebuild, scons-0.96.1.ebuild, scons-0.96.ebuild:
