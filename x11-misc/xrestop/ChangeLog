@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/xrestop
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.1 2004/01/04 05:21:38 port001 Exp $
+
+*xrestop-0.2 (04 Jan 2004)
+
+  04 Jan 2004; Ian Leitch <port001@gentoo.org> xrestop-0.2.ebuild:
+  Initial commit; #36439
+
