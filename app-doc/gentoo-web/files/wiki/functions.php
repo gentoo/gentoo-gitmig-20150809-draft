@@ -50,8 +50,8 @@ global $uid, $dbusername; ?>
 			font-family: Verdana, Helvetica, Sans-serif; margin:0;
 			padding:0; font-size: xx-small; }
 
-	p		{font-size: xx-small; }
-	td		{font-size: xx-small; }
+	p		{font-size: x-small; }
+	td		{font-size: x-small; }
 -->
 </style>
 </head>
