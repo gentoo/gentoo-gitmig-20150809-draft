@@ -1,0 +1,16 @@
+# ChangeLog for dev-java/velocity
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.1 2003/03/17 00:07:53 absinthe Exp $
+
+*velocity-1.3 (16 Mar 2003)
+
+  16 Mar 2003; Dylan Carlson <absinthe@gentoo.org> velocity-1.3.ebuild:
+  Initial import.
+  
+  Velocity is a Java-based template engine, a simple and powerful development
+  tool that allows you to easily create and render documents that format and
+  present your data, focusing on two main areas of usage:
+  
+  * servlet-based WWW development
+  * general application use
+
