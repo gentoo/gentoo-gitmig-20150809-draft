@@ -5,7 +5,7 @@ MD5 aa0e1507450730eadf835e1a82aaaacb xfce4-4.0.3.1.ebuild 1075
 MD5 567734850bed2efc90212a71279da969 xfce4-4.0.1.ebuild 1028
 MD5 ed5f2404f71b427572c2f835bc234c78 xfce4-4.0.2.ebuild 1060
 MD5 ae79ddde7016b2620aae1badf240175e xfce4-4.0.3.ebuild 1058
-MD5 3155b819d4103dfc00efb17b0f7bed94 xfce4-4.0.4.ebuild 1058
+MD5 7df0cc2925aa119615cfb2137ad34ef5 xfce4-4.0.4.ebuild 1064
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-4.0.3.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-4.0.0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-4.0.1 0
