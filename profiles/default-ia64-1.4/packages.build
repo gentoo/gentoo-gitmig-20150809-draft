@@ -6,16 +6,14 @@ sys-apps/bzip2
 sys-apps/debianutils
 sys-apps/diffutils
 sys-apps/file
-sys-apps/fileutils
+sys-apps/coreutils
 sys-apps/findutils
 sys-apps/gawk
 sys-apps/grep
 sys-apps/gzip
 sys-apps/portage
 sys-apps/sed
-sys-apps/sh-utils
 sys-apps/tar
-sys-apps/textutils
 sys-devel/binutils
 sys-devel/bison
 sys-devel/flex
