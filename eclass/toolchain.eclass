@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.19 2004/09/23 20:13:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.20 2004/09/25 16:33:54 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -320,10 +320,6 @@ gcc_quick_unpack() {
 		unpack ${PIE_CORE}
 	fi
 
-	# Fixup libtool to correctly generate .la files with portage
-	cd ${S}
-	elibtoolize --portage --shallow
-
 	popd > /dev/null
 }
 
@@ -608,6 +604,10 @@ gcc_src_unpack() {
 	# gcc 3.4.1 cvs has patches that need back porting.. 
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
 	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
+
+	# Fixup libtool to correctly generate .la files with portage
+	cd ${S}
+	elibtoolize --portage --shallow
 
 	gnuconfig_update
 
