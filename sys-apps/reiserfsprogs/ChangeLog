@@ -1,8 +1,13 @@
 # ChangeLog for sys-apps/reiserfsprogs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/ChangeLog,v 1.16 2003/04/24 16:10:12 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/ChangeLog,v 1.17 2003/04/25 19:15:18 mholzer Exp $
 
 *reiserfsprogs-3.6.6 (24 Apr 2003)
+
+  25 Apr 2003; Martin Holzer <mholzer@gentoo.org> reiserfsprogs-3.6.2.ebuild,
+  reiserfsprogs-3.6.3.ebuild, reiserfsprogs-3.6.4-r1.ebuild,
+  reiserfsprogs-3.6.5-r1.ebuild, reiserfsprogs-3.6.6.ebuild:
+  Now downloading via http. Closes #19933.
 
   24 Apr 2003; Brandon Low <lostlogic@gentoo.org> reiserfsprogs-3.6.6.ebuild:
   Bump to latest from namesys, this version includes the bugfix from 3.6.5-r1
