@@ -1,16 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.2.ebuild,v 1.2 2002/03/03 12:37:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.2.ebuild,v 1.3 2002/03/17 22:49:07 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities to deal with user accounts"
 SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz"
 
 DEPEND=">=sys-libs/pam-0.75-r4
+	>=sys-libs/cracklib-2.7-r3
 	sys-devel/gettext"
 	
-RDEPEND=">=sys-libs/pam-0.75-r4"
+RDEPEND=">=sys-libs/pam-0.75-r4
+	>=sys-libs/cracklib-2.7-r3"
 
 src_compile() {
 	./configure	--disable-desrpc \
@@ -40,9 +42,6 @@ src_install() {
 	dosym /usr/sbin/vipw /usr/sbin/vigr
 	# remove dead links
 	rm -f ${D}/bin/{sg,vipw}
-
-	insinto /usr/lib
-	doins ${FILESDIR}/cracklib/cracklib_dict.*
 
 	insinto /etc
 	# Using a securetty with devfs device names added
