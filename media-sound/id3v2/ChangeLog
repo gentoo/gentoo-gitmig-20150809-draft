@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/id3v2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.15 2004/06/25 00:06:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.16 2004/09/01 07:56:29 eradicator Exp $
+
+*id3v2-0.1.11 (01 Sep 2004)
+
+  01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/id3v2-0.1.11-alpha.patch, +id3v2-0.1.11.ebuild:
+  Version bump closes bug #62102.
 
   16 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> id3v2-0.1.10.ebuild:
   Stable x86, sparc, and amd64.
