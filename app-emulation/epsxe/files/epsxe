@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ ! -f ~/.epsxe ]; then
+if [ ! -d ~/.epsxe ]; then
 	echo You are running ePSXe for the first time.
 	echo Setting up your ePSXe environment... Please wait...
 	
