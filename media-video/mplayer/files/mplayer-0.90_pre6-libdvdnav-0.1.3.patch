@@ -1,0 +1,457 @@
+diff -urN MPlayer-0.90pre6/Makefile MPlayer-20020812/Makefile
+--- MPlayer-0.90pre6/Makefile	Thu Jul 25 05:37:27 2002
++++ MPlayer-20020812/Makefile	Sat Aug 10 20:45:31 2002
+@@ -280,6 +280,9 @@
+ 	-rm -f *.o *.a .depend configure.log
+ 	@for a in $(PARTS); do $(MAKE) -C $$a distclean; done
+ 
++strip:
++	strip -s $(ALL_PRG)
++
+ dep:	depend
+ 
+ depend:
+@@ -287,6 +290,15 @@
+ 	$(CC) -MM $(CFLAGS) mplayer.c mencoder.c $(SRCS_MPLAYER) $(SRCS_MENCODER) 1>.depend
+ 	@for a in $(PARTS); do $(MAKE) -C $$a dep; done
+ 
++# ./configure must be run if it changed in CVS
++config.h: configure
++	@echo "############################################################"
++	@echo "####### Please run ./configure again - it's changed! #######"
++	@echo "############################################################"
++ifeq ($(wildcard .developer),)
++	@exit 1
++endif
++
+ # do not rebuild after cvs commits if .developer file is present!
+ 
+ # rebuild at every config.h/config.mak change:
+diff -urN MPlayer-0.90pre6/configure MPlayer-20020812/configure
+--- MPlayer-0.90pre6/configure	Mon Aug  5 19:23:22 2002
++++ MPlayer-20020812/configure	Sun Aug 11 19:14:41 2002
+@@ -3083,6 +3101,10 @@
+   else
+    _ld_css="$_ld_css -ldvdnav"
+   fi
++  if test -n "$_dvdnavconfig" ; then
++   _dvdnav_version=`$_dvdnavconfig --version | sed "s/\.//g"`
++   _def_dvdnav_version="#define DVDNAVVERSION $_dvdnav_version"
++  fi
+   if test -n "$_dvdnavdir" ; then
+    _inc_extra="$_inc_extra -I$_dvdnavdir"
+   fi
+@@ -4382,6 +4416,7 @@
+ 
+ /* DVD navigation support using libdvdnav */
+ $_def_dvdnav
++$_def_dvdnav_version
+ 
+ /* Define this to enable MPEG 1/2 image postprocessing (requires a FAST CPU!) */
+ #define MPEG12_POSTPROC 1
+diff -urN MPlayer-0.90pre6/libmpcodecs/native/msvidc.c MPlayer-20020812/libmpcodecs/native/msvidc.c
+--- MPlayer-0.90pre6/libmpcodecs/native/msvidc.c	Sun Jan 13 08:01:04 2002
++++ MPlayer-20020812/libmpcodecs/native/msvidc.c	Fri Aug  9 23:30:20 2002
+@@ -11,6 +11,7 @@
+ 
+ #include "config.h"
+ #include "bswap.h"
++#define quad quad_m
+ 
+ #define LE_16(x) (le2me_16(*(unsigned short *)(x)))
+ 
+diff -urN MPlayer-0.90pre6/libmpcodecs/ve_lavc.c MPlayer-20020812/libmpcodecs/ve_lavc.c
+--- MPlayer-0.90pre6/libmpcodecs/ve_lavc.c	Mon Jul  8 23:34:24 2002
++++ MPlayer-20020812/libmpcodecs/ve_lavc.c	Wed Aug  7 02:08:57 2002
+@@ -67,6 +67,7 @@
+ static int lavc_param_strict= 0;
+ static int lavc_param_data_partitioning= 0;
+ static int lavc_param_gray=0;
++static int lavc_param_mpeg_quant=0;
+ 
+ #include "cfgparser.h"
+ 
+@@ -101,6 +102,9 @@
+ #if LIBAVCODEC_BUILD >= 4614
+ 	{"gray", &lavc_param_gray, CONF_TYPE_FLAG, 0, 0, CODEC_FLAG_PART, NULL},
+ #endif
++#if LIBAVCODEC_BUILD >= 4619
++	{"mpeg_quant", &lavc_param_mpeg_quant, CONF_TYPE_FLAG, 0, 0, 1, NULL},
++#endif
+ 	{NULL, NULL, 0, 0, 0, 0, NULL}
+ };
+ #endif
+@@ -156,7 +160,10 @@
+     if(lavc_param_packet_size )lavc_venc_context.rtp_mode=1;
+     lavc_venc_context.strict_std_compliance= lavc_param_strict;
+ #endif
+-
++#if LIBAVCODEC_BUILD >= 4619
++    lavc_venc_context.mpeg_quant=lavc_param_mpeg_quant;
++#endif
++    
+     /* keyframe interval */
+     if (lavc_param_keyint >= 0) /* != -1 */
+ 	lavc_venc_context.gop_size = lavc_param_keyint;
+diff -urN MPlayer-0.90pre6/libmpcodecs/vf_noise.c MPlayer-20020812/libmpcodecs/vf_noise.c
+--- MPlayer-0.90pre6/libmpcodecs/vf_noise.c	Sun Jun 16 15:54:36 2002
++++ MPlayer-20020812/libmpcodecs/vf_noise.c	Sun Aug 11 12:52:22 2002
+@@ -42,15 +42,20 @@
+ //===========================================================================//
+ 
+ static inline void lineNoise_C(uint8_t *dst, uint8_t *src, int8_t *noise, int len, int shift);
++static inline void lineNoiseAvg_C(uint8_t *dst, uint8_t *src, int len, int8_t **shift);
+ 
+ static void (*lineNoise)(uint8_t *dst, uint8_t *src, int8_t *noise, int len, int shift)= lineNoise_C;
++static void (*lineNoiseAvg)(uint8_t *dst, uint8_t *src, int len, int8_t **shift)= lineNoiseAvg_C;
+ 
+ typedef struct FilterParam{
+ 	int strength;
+ 	int uniform;
+ 	int temporal;
+ 	int quality;
++        int averaged;
++        int shiftptr;
+ 	int8_t *noise;
++	int8_t *prev_shift[MAX_RES][3];
+ }FilterParam;
+ 
+ struct vf_priv_s {
+@@ -65,17 +70,21 @@
+ static int8_t *initNoise(FilterParam *fp){
+ 	int strength= fp->strength;
+ 	int uniform= fp->uniform;
++	int averaged= fp->averaged;
+ 	int8_t *noise= memalign(16, MAX_NOISE*sizeof(int8_t));
+-	int i;
++	int i, j;
+ 
+ 	srand(123457);
+ 
+ 	for(i=0; i<MAX_NOISE; i++)
+ 	{
+-		if(uniform)
+-			noise[i]= ((rand()/11)%strength) - strength/2;
+-		else
+-		{
++	        if(uniform) {
++		        if (averaged) {
++			        noise[i]= (((rand()/11)%strength) - strength/2)/3;
++		        } else {
++			        noise[i]= ((rand()/11)%strength) - strength/2;
++		        }
++                } else {
+ 			double x1, x2, w, y1;
+ 			do {
+ 				x1 = 2.0 * rand()/(float)RAND_MAX - 1.0;
+@@ -86,12 +95,18 @@
+ 			w = sqrt( (-2.0 * log( w ) ) / w );
+ 			y1= x1 * w;
+ 
+-			y1*= strength / sqrt(3.0); 
++			y1*= strength / sqrt(3.0);
+ 			if     (y1<-128) y1=-128;
+ 			else if(y1> 127) y1= 127;
++			if (averaged) y1 /= 3.0;
+ 			noise[i]= (int)y1;
+ 		}
+ 	}
++	
++
++	for (i = 0; i < MAX_RES; i++)
++	    for (j = 0; j < 3; j++)
++		fp->prev_shift[i][j] = noise + (rand()&(MAX_SHIFT-1));
+ 
+ 	if(nonTempRandShift[0]==-1){
+ 		for(i=0; i<MAX_RES; i++){
+@@ -100,9 +115,12 @@
+ 	}
+ 
+ 	fp->noise= noise;
++	fp->shiftptr= 0;
+ 	return noise;
+ }
+ 
++/***************************************************************************/
++
+ #ifdef HAVE_MMX
+ static inline void lineNoise_MMX(uint8_t *dst, uint8_t *src, int8_t *noise, int len, int shift){
+ 	int mmx_len= len&(~7);
+@@ -172,6 +190,63 @@
+ 	}
+ }
+ 
++/***************************************************************************/
++
++#ifdef HAVE_MMX
++static inline void lineNoiseAvg_MMX(uint8_t *dst, uint8_t *src, int len, int8_t **shift){
++	int mmx_len= len&(~7);
++
++	asm volatile(
++		"movl %5, %%eax			\n\t"
++		".balign 16			\n\t"
++		"1:				\n\t"
++		"movq (%1, %%eax), %%mm1	\n\t"
++		"movq (%0, %%eax), %%mm0	\n\t"
++		"paddb (%2, %%eax), %%mm1	\n\t"
++		"paddb (%3, %%eax), %%mm1	\n\t"
++		"movq %%mm0, %%mm2		\n\t"
++		"movq %%mm1, %%mm3		\n\t"
++		"punpcklbw %%mm0, %%mm0		\n\t"
++		"punpckhbw %%mm2, %%mm2		\n\t"
++		"punpcklbw %%mm1, %%mm1		\n\t"
++		"punpckhbw %%mm3, %%mm3		\n\t"
++		"pmulhw %%mm0, %%mm1		\n\t"
++		"pmulhw %%mm2, %%mm3		\n\t"
++		"paddw %%mm1, %%mm1		\n\t"
++		"paddw %%mm3, %%mm3		\n\t"
++		"paddw %%mm0, %%mm1		\n\t"
++		"paddw %%mm2, %%mm3		\n\t"
++		"psrlw $8, %%mm1		\n\t"
++		"psrlw $8, %%mm3		\n\t"
++                "packuswb %%mm3, %%mm1		\n\t"
++		"movq %%mm1, (%4, %%eax)	\n\t"
++		"addl $8, %%eax			\n\t"
++		" js 1b				\n\t"
++		:: "r" (src+mmx_len), "r" (shift[0]+mmx_len), "r" (shift[1]+mmx_len), "r" (shift[2]+mmx_len), 
++                   "r" (dst+mmx_len), "g" (-mmx_len)
++		: "%eax"
++	);
++
++	if(mmx_len!=len){
++		int8_t *shift2[3]={shift[0]+mmx_len, shift[1]+mmx_len, shift[2]+mmx_len};
++		lineNoiseAvg_C(dst+mmx_len, src+mmx_len, len-mmx_len, shift2);
++	}
++}
++#endif
++
++static inline void lineNoiseAvg_C(uint8_t *dst, uint8_t *src, int len, int8_t **shift){
++	int i;
++        int8_t *src2= (int8_t*)src;
++	
++	for(i=0; i<len; i++)
++	{
++	    const int n= shift[0][i] + shift[1][i] + shift[2][i];
++	    dst[i]= src2[i]+((n*src2[i])>>7);
++	}
++}
++
++/***************************************************************************/
++
+ static void noise(uint8_t *dst, uint8_t *src, int dstStride, int srcStride, int width, int height, FilterParam *fp){
+ 	int8_t *noise= fp->noise;
+ 	int y;
+@@ -200,10 +275,17 @@
+ 		else			shift= nonTempRandShift[y];
+ 
+ 		if(fp->quality==0) shift&= ~7;
+-		lineNoise(dst, src, noise, width, shift);
++		if (fp->averaged) {
++		    lineNoiseAvg(dst, src, width, fp->prev_shift[y]);
++		    fp->prev_shift[y][fp->shiftptr] = noise + shift;
++		} else {
++		    lineNoise(dst, src, noise, width, shift);
++		}
+ 		dst+= dstStride;
+ 		src+= srcStride;
+ 	}
++	fp->shiftptr++;
++	if (fp->shiftptr == 3) fp->shiftptr = 0;
+ }
+ 
+ static int config(struct vf_instance_s* vf,
+@@ -215,8 +297,7 @@
+ 
+ static void get_image(struct vf_instance_s* vf, mp_image_t *mpi){
+     if(mpi->flags&MP_IMGFLAG_PRESERVE) return; // don't change
+-    if(!(mpi->flags&MP_IMGFLAG_ACCEPT_STRIDE) && mpi->imgfmt!=vf->priv->outfmt)
+-	return; // colorspace differ
++    if(mpi->imgfmt!=vf->priv->outfmt) return; // colorspace differ
+     // ok, we can do pp in-place (or pp disabled):
+     vf->priv->dmpi=vf_get_image(vf->next,mpi->imgfmt,
+         mpi->type, mpi->flags, mpi->w, mpi->h);
+@@ -301,6 +382,11 @@
+ 	if(pos && pos<max) fp->temporal=1;
+ 	pos= strchr(args, 'h');
+ 	if(pos && pos<max) fp->quality=1;
++	pos= strchr(args, 'a');
++	if(pos && pos<max) {
++	    fp->temporal=1;
++	    fp->averaged=1;
++	}
+ 
+ 	if(fp->strength) initNoise(fp);
+ }
+@@ -337,10 +423,14 @@
+ 
+  
+ #ifdef HAVE_MMX
+-    if(gCpuCaps.hasMMX) lineNoise= lineNoise_MMX;
++    if(gCpuCaps.hasMMX){
++        lineNoise= lineNoise_MMX;
++        lineNoiseAvg= lineNoiseAvg_MMX;
++    }
+ #endif
+ #ifdef HAVE_MMX2
+     if(gCpuCaps.hasMMX2) lineNoise= lineNoise_MMX2;
++//    if(gCpuCaps.hasMMX) lineNoiseAvg= lineNoiseAvg_MMX2;
+ #endif
+     
+     return 1;
+diff -urN MPlayer-0.90pre6/libmpdemux/demux_real.c MPlayer-20020812/libmpdemux/demux_real.c
+--- MPlayer-0.90pre6/libmpdemux/demux_real.c	Mon Aug  5 05:13:45 2002
++++ MPlayer-20020812/libmpdemux/demux_real.c	Mon Aug 12 02:04:37 2002
+@@ -8,6 +8,9 @@
+     TODO: fix the whole syncing mechanism
+     
+     $Log: not supported by cvs2svn $
++    Revision 1.20  2002/08/12 00:04:37  arpi
++    RV40 support
++
+     Revision 1.19  2002/08/05 03:13:45  arpi
+     fixed 'eof at 66s' bug
+ 
+@@ -518,7 +521,8 @@
+ 	    ds_add_packet(ds, dp);
+ 	} else
+ 	if (sh_video != NULL) {
+-	    if (sh_video->format==0x30335652 ||
++	    if (sh_video->format==0x30345652 ||
++		sh_video->format==0x30335652 ||
+ 		sh_video->format==0x30325652 ) {
+ 		// we need a more complicated demuxing
+ 		// a block may contain multiple packets
+@@ -1065,6 +1069,9 @@
+ 			case 0x30202002:
+ 			    /* codec id: rv30 */
+ 			    break;
++			case 0x40000000:
++			    /* codec id: rv40 */
++			    break;
+ 			default:
+ 			    /* codec id: none */
+ 			    mp_msg(MSGT_DEMUX,MSGL_V,"unknown id: %x\n", tmp);
+diff -urN MPlayer-0.90pre6/mplayer.c MPlayer-20020812/mplayer.c
+--- MPlayer-0.90pre6/mplayer.c	Mon Aug  5 20:37:14 2002
++++ MPlayer-20020812/mplayer.c	Sun Aug 11 19:14:41 2002
+@@ -1468,7 +1468,7 @@
+ 
+     if(play_n_frames>=0){
+       --play_n_frames;
+-      if(play_n_frames<=0) eof = PT_NEXT_ENTRY;
++      if(play_n_frames<0) eof = PT_NEXT_ENTRY;
+     }
+ 
+ /*========================== PLAY AUDIO ============================*/
+@@ -2390,9 +2390,9 @@
+       }
+ #endif
+     } break;
+-    case MP_CMD_MUTE: {
+-     mixer_mute();
+-    }
++    case MP_CMD_MUTE:
++      mixer_mute();
++      break;
+     case MP_CMD_LOADFILE : {
+       play_tree_t* e = play_tree_new();
+       play_tree_add_file(e,cmd->args[0].v.s);
+@@ -2692,7 +2692,24 @@
+         break;
+         }
+       case DVDNAV_SPU_STREAM_CHANGE: {
+-        dvdnav_stream_change_event_t * stream_change=(dvdnav_stream_change_event_t*)(dvdnav_event->details);
++#if DVDNAVVERSION > 012
++        dvdnav_spu_stream_change_event_t *stream_change = (dvdnav_spu_stream_change_event_t*)(dvdnav_event->details);
++
++        printf("DVDNAV Event: Nav SPU Stream Change: phys: %d/%d/%d logical: %d\n",
++                stream_change->physical_wide,
++                stream_change->physical_letterbox,
++                stream_change->physical_pan_scan,
++                stream_change->logical);
++
++        if (vo_spudec && dvdsub_id!=stream_change->physical_wide) {
++                mp_msg(MSGT_INPUT,MSGL_DBG2,"d_dvdsub->id change: was %d is now %d\n",
++                        d_dvdsub->id,stream_change->physical_wide);
++                // FIXME: need a better way to change SPU id
++                d_dvdsub->id=dvdsub_id=stream_change->physical_wide;
++                if (vo_spudec) spudec_reset(vo_spudec);
++        }
++#else
++        dvdnav_stream_change_event_t *stream_change = (dvdnav_stream_change_event_t*)(dvdnav_event->details);
+ 
+         printf("DVDNAV Event: Nav SPU Stream Change: phys: %d logical: %d\n",
+                 stream_change->physical,
+@@ -2705,12 +2722,16 @@
+                 d_dvdsub->id=dvdsub_id=stream_change->physical;
+                 if (vo_spudec) spudec_reset(vo_spudec);
+         }
+-
++#endif
+         break;
+         }
+       case DVDNAV_AUDIO_STREAM_CHANGE: {
+         int aid_temp;
++#if DVDNAVVERSION > 012
++        dvdnav_audio_stream_change_event_t *stream_change = (dvdnav_audio_stream_change_event_t*)(dvdnav_event->details);
++#else
+         dvdnav_stream_change_event_t *stream_change = (dvdnav_stream_change_event_t*)(dvdnav_event->details);
++#endif
+ 
+         printf("DVDNAV Event: Nav Audio Stream Change: phys: %d logical: %d\n",
+                 stream_change->physical,
+diff -urN MPlayer-0.90pre6/postproc/postprocess_template.c MPlayer-20020812/postproc/postprocess_template.c
+--- MPlayer-0.90pre6/postproc/postprocess_template.c	Sun May  5 13:08:59 2002
++++ MPlayer-20020812/postproc/postprocess_template.c	Thu Aug  8 12:46:16 2002
+@@ -122,7 +122,7 @@
+ 		"movd %%mm0, %0					\n\t"
+ 		: "=r" (numEq)
+ 		: "r" (src), "r" (stride)
+-		: "%ebx"
++		: "%eax", "%ebx"
+ 		);
+ 	numEq= (-numEq) &0xFF;
+ 
+diff -urN MPlayer-0.90pre6/spudec.c MPlayer-20020812/spudec.c
+--- MPlayer-0.90pre6/spudec.c	Wed Jul 24 18:47:29 2002
++++ MPlayer-20020812/spudec.c	Tue Aug  6 15:32:55 2002
+@@ -927,25 +927,7 @@
+ 
+ void *spudec_new_scaled(unsigned int *palette, unsigned int frame_width, unsigned int frame_height)
+ {
+-  spudec_handle_t *this = calloc(1, sizeof(spudec_handle_t));
+-  if (this) {
+-    if (palette) {
+-      memcpy(this->global_palette, palette, sizeof(this->global_palette));
+-      this->auto_palette = 0;
+-    }
+-    else {
+-      /* No palette, compute one */
+-      this->auto_palette = 1;
+-    }
+-    this->packet = NULL;
+-    this->image = NULL;
+-    this->scaled_image = NULL;
+-    this->orig_frame_width = frame_width;
+-    this->orig_frame_height = frame_height;
+-  }
+-  else
+-    mp_msg(MSGT_SPUDEC,MSGL_FATAL, "FATAL: spudec_init: calloc");
+-  return this;
++  return spudec_new_scaled_vobsub(palette, NULL, 0, frame_width, frame_height);
+ }
+ 
+ /* get palette custom color, width, height from .idx file */
+@@ -957,8 +939,10 @@
+     this->packet = NULL;
+     this->image = NULL;
+     this->scaled_image = NULL;
+-    this->orig_frame_width = frame_width;
+-    this->orig_frame_height = frame_height;
++    /* XXX Although the video frame is some size, the SPU frame is
++       always maximum size i.e. 720 wide and 576 or 480 high */
++    this->orig_frame_width = 720;
++    this->orig_frame_height = (frame_height == 480 || frame_height == 240) ? 480 : 576;
+     this->custom = custom;
+     // set up palette:
+     this->auto_palette = 1;
