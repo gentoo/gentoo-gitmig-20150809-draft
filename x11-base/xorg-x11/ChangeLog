@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.268 2005/01/14 07:51:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.269 2005/01/14 21:51:40 lu_zero Exp $
+
+  14 Jan 2005; Luca Barbato <lu_zero@gentoo.org> xorg-x11-6.8.1.902.ebuild:
+  Marked ~ppc
 
 *xorg-x11-6.8.1.902 (13 Jan 2005)
 
