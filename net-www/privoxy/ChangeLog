@@ -1,6 +1,9 @@
 # ChangeLog for net-www/privoxy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.14 2003/10/01 20:04:49 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.15 2003/10/18 18:35:36 mholzer Exp $
+
+  19 Oct 2003; Martin Holzer <mholzer@gentoo.org> privoxy-3.0.2.ebuild:
+  x86 stable.
 
   01 Oct 2003; Tavis Ormandy <taviso@gentoo.org> privoxy-3.0.2.ebuild:
   Stable on alpha
