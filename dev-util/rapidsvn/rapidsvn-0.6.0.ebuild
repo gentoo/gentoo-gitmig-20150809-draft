@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.6.0.ebuild,v 1.1 2004/06/02 12:24:16 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.6.0.ebuild,v 1.2 2004/06/25 02:44:54 agriffis Exp $
 
 DESCRIPTION="Cross-platform GUI front-end for the Subversion revision system."
 HOMEPAGE="http://rapidsvn.tigris.org/"

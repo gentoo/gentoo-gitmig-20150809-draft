@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/sel-0.08.4.ebuild,v 1.2 2004/06/04 09:12:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/sel-0.08.4.ebuild,v 1.3 2004/06/25 02:46:17 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A filemanager for shell scripts"

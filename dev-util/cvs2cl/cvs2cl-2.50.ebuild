@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2cl/cvs2cl-2.50.ebuild,v 1.3 2004/05/18 23:58:50 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2cl/cvs2cl-2.50.ebuild,v 1.4 2004/06/25 02:25:52 agriffis Exp $
 
 #ECVS_SERVER="cvs -d :pserver:anonymous@cvs.red-bean.com:/usr/local/cvs login"
 #ECVS_PASS="the key"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cbg-editor/eclipse-cbg-editor-0.3.7.ebuild,v 1.1 2004/06/10 16:28:18 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cbg-editor/eclipse-cbg-editor-0.3.7.ebuild,v 1.2 2004/06/25 02:29:57 agriffis Exp $
 
 inherit eclipse-ext
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.7.9.ebuild,v 1.7 2004/04/03 23:06:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.7.9.ebuild,v 1.8 2004/06/25 02:33:54 agriffis Exp $
 
 DESCRIPTION="GNUstep GUI backend"
 HOMEPAGE="http://www.gnustep.org"

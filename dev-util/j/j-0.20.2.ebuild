@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/j/j-0.20.2.ebuild,v 1.2 2004/05/26 15:57:32 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/j/j-0.20.2.ebuild,v 1.3 2004/06/25 02:36:50 agriffis Exp $
 
 IUSE=""
 SRC_URI="mirror://sourceforge/armedbear-${PN}/${P}.tar.gz"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/comparator-2.3.ebuild,v 1.3 2004/03/13 00:26:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/comparator-2.3.ebuild,v 1.4 2004/06/25 02:23:40 agriffis Exp $
 
 inherit distutils
 DESCRIPTION="ESR's utility for making fast comparisons among large source trees"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/indent-2.2.9.ebuild,v 1.13 2004/05/14 02:18:13 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/indent-2.2.9.ebuild,v 1.14 2004/06/25 02:36:09 agriffis Exp $
 
 DESCRIPTION="Indent program source files"
 HOMEPAGE="http://www.gnu.org/software/indent/indent.html"

@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/btyacc
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/btyacc/ChangeLog,v 1.3 2004/03/17 09:44:42 seemant Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/btyacc/ChangeLog,v 1.4 2004/06/25 02:21:29 agriffis Exp $
 
   17 Mar 2004; Seemant Kulleen <seemant@gentoo.org> btyacc-3.0.ebuild:
   spelling of Berkeley fixed, thanks to: Martin Rieder <bugs@martinrieder.de> in

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-5.3.ebuild,v 1.2 2004/03/13 01:44:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-5.3.ebuild,v 1.3 2004/06/25 02:36:29 agriffis Exp $
 
 IUSE="nls"
 

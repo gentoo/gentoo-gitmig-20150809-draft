@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/qtunit-0.9.7.ebuild,v 1.12 2004/05/16 20:36:44 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/qtunit-0.9.7.ebuild,v 1.13 2004/06/25 02:44:43 agriffis Exp $
 
 DESCRIPTION="unit testing framework for c++"
 SRC_URI="http://freesoftware.fsf.org/download/qtunit/${P}.tar.bz2"

@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/gob
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.25 2004/04/23 10:26:03 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.26 2004/06/25 02:34:57 agriffis Exp $
 
   23 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> gob-1.0.12.ebuild:
   Unmask on amd64.

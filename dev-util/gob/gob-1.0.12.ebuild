@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-1.0.12.ebuild,v 1.15 2004/04/23 10:26:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-1.0.12.ebuild,v 1.16 2004/06/25 02:34:57 agriffis Exp $
 
 DESCRIPTION="preprocessor for making GTK+ objects with inline C code"
 SRC_URI="http://ftp.5z.com/pub/gob/${P}.tar.gz"

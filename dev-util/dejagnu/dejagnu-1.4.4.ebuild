@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/dejagnu-1.4.4.ebuild,v 1.3 2004/04/19 06:47:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/dejagnu-1.4.4.ebuild,v 1.4 2004/06/25 02:27:53 agriffis Exp $
 
 DESCRIPTION="DejaGnu is a framework for testing other programs"
 HOMEPAGE="http://www.gnu.org/software/dejagnu/"

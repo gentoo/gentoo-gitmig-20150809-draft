@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.28.ebuild,v 1.1 2004/02/26 21:43:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.28.ebuild,v 1.2 2004/06/25 02:39:24 agriffis Exp $
 
 IUSE=""
 

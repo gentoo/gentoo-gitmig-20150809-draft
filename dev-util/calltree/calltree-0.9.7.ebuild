@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/calltree/calltree-0.9.7.ebuild,v 1.1 2004/04/05 18:32:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/calltree/calltree-0.9.7.ebuild,v 1.2 2004/06/25 02:21:53 agriffis Exp $
 
 DESCRIPTION="A plugin for cachegrind that adds call-graph profiling, needed by kcachegrind"
 HOMEPAGE="http://kcachegrind.sourceforge.net/"

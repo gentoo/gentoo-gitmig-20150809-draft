@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/fhist
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.7 2004/03/13 01:42:27 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.8 2004/06/25 02:31:41 agriffis Exp $
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> fhist-1.10.ebuild,
   fhist-1.8.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.3.1.ebuild,v 1.5 2004/04/05 08:55:40 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.3.1.ebuild,v 1.6 2004/06/25 02:51:26 agriffis Exp $
 
 MY_P=${P/xmingw-/}
 S=${WORKDIR}/${MY_P}

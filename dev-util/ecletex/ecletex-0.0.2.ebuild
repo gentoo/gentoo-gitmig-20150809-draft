@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ecletex-0.0.2.ebuild,v 1.1 2004/05/29 01:02:42 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ecletex-0.0.2.ebuild,v 1.2 2004/06/25 02:29:46 agriffis Exp $
 
 DESCRIPTION="LaTeX plugin for Eclipse 3.0 and newer"
 HOMEPAGE="http://etex.sf.net"

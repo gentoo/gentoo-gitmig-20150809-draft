@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/perforce
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/ChangeLog,v 1.6 2004/02/18 11:34:29 stuart Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/ChangeLog,v 1.7 2004/06/25 02:42:20 agriffis Exp $
 
   19 Feb 2004; root <root@gentoo.org> :
   Updated digests; files were changed by Perforce

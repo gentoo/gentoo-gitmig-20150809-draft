@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/gnustep-base-1.6.0.ebuild,v 1.4 2004/05/04 16:05:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/gnustep-base-1.6.0.ebuild,v 1.5 2004/06/25 02:34:05 agriffis Exp $
 
 DESCRIPTION="GNUstep base package"
 HOMEPAGE="http://www.gnustep.org"

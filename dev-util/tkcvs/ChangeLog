@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/tkcvs
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.9 2004/06/21 13:48:17 fmccor Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.10 2004/06/25 02:48:33 agriffis Exp $
 
   21 Jun 2004; Ferris McCormick <fmccor@gentoo.org> tkcvs-7.1.2.ebuild,
   tkcvs-7.1.4.ebuild:

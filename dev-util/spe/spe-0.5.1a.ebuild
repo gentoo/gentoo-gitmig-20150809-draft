@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.5.1a.ebuild,v 1.3 2004/05/28 15:41:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.5.1a.ebuild,v 1.4 2004/06/25 02:47:19 agriffis Exp $
 
 inherit distutils eutils
 

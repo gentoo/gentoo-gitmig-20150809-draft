@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel2gas/intel2gas-1.3.3.ebuild,v 1.2 2004/05/07 12:56:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel2gas/intel2gas-1.3.3.ebuild,v 1.3 2004/06/25 02:36:40 agriffis Exp $
 
 DESCRIPTION="Converts assembler source from Intel (NASM), to AT&T (gas)"
 HOMEPAGE="http://www.niksula.cs.hut.fi/~mtiihone/intel2gas/"

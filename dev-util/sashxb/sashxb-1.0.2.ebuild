@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sashxb/sashxb-1.0.2.ebuild,v 1.7 2003/09/15 17:51:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sashxb/sashxb-1.0.2.ebuild,v 1.8 2004/06/25 02:45:56 agriffis Exp $
 
 S="${WORKDIR}/${P}"
 

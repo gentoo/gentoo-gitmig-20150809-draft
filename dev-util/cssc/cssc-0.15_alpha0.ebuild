@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cssc/cssc-0.15_alpha0.ebuild,v 1.3 2004/03/13 01:49:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cssc/cssc-0.15_alpha0.ebuild,v 1.4 2004/06/25 02:24:40 agriffis Exp $
 
 MY_P=${P/cssc/CSSC}
 MY_P=${MY_P/_alpha/alpha.pl}

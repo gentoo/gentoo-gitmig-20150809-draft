@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/gcvs-1.0_beta3-r1.ebuild,v 1.9 2003/09/06 08:39:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/gcvs-1.0_beta3-r1.ebuild,v 1.10 2004/06/25 02:32:51 agriffis Exp $
 
 MY_P=${P/eta/}
 MY_P=${MY_P/_/}

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/dirdiff-1.6.ebuild,v 1.1 2004/05/11 15:23:30 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/dirdiff-1.6.ebuild,v 1.2 2004/06/25 02:29:13 agriffis Exp $
 
 inherit eutils
 

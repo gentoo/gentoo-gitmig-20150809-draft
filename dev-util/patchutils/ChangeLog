@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/patchutils
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.16 2004/06/04 08:01:56 kloeri Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.17 2004/06/25 02:41:48 agriffis Exp $
 
   04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> patchutils-0.2.29.ebuild:
   Stable on alpha.

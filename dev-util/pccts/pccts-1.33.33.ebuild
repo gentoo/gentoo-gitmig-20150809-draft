@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.33.ebuild,v 1.7 2004/03/12 20:32:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.33.ebuild,v 1.8 2004/06/25 02:42:09 agriffis Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Purdue Compiler Construction Tool Set is an embedded C/C++ parser generator"

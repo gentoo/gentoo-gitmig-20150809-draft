@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/monodoc
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.15 2004/06/16 05:50:59 latexer Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.16 2004/06/25 02:41:06 agriffis Exp $
 
 *monodoc-0.17 (16 Jun 2004)
 

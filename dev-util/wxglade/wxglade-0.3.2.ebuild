@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.3.2.ebuild,v 1.2 2004/04/17 00:34:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.3.2.ebuild,v 1.3 2004/06/25 02:50:46 agriffis Exp $
 
 S="${WORKDIR}/wxGlade-${PV}"
 DESCRIPTION="Glade-like GUI designer which can generate Python, Perl, C++ or XRC code"

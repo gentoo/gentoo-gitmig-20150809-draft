@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/sgb-20030623.ebuild,v 1.1 2004/01/11 08:19:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/sgb-20030623.ebuild,v 1.2 2004/06/25 02:46:27 agriffis Exp $
 
 DESCRIPTION="Stanford GraphBase"
 HOMEPAGE="ftp://labrea.stanford.edu/pub/sgb/"

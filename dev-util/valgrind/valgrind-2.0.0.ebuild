@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.0.0.ebuild,v 1.5 2004/05/15 17:33:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.0.0.ebuild,v 1.6 2004/06/25 02:49:45 agriffis Exp $
 
 inherit flag-o-matic eutils
 RESTRICT="nostrip"

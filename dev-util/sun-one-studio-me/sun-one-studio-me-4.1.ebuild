@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sun-one-studio-me/sun-one-studio-me-4.1.ebuild,v 1.4 2004/05/05 16:55:09 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sun-one-studio-me/sun-one-studio-me-4.1.ebuild,v 1.5 2004/06/25 02:48:13 agriffis Exp $
 
 DESCRIPTION="Sun ONE Studio Mobile Edition"
 HOMEPAGE="http://wwws.sun.com/software/sundev/jde/studio_me/index.html"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.9.ebuild,v 1.8 2004/04/30 11:02:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.9.ebuild,v 1.9 2004/06/25 02:18:41 agriffis Exp $
 
 IUSE="tcltk"
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/sun-one-studio
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sun-one-studio/ChangeLog,v 1.3 2003/06/04 03:39:23 tberman Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sun-one-studio/ChangeLog,v 1.4 2004/06/25 02:48:03 agriffis Exp $
 
   01 Jun 2003; Todd Berman <tberman@gentoo.org> sun-one-studio-4.1.ebuild:
   Added proper license.

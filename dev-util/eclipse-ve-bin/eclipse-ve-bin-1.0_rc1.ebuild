@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-ve-bin/eclipse-ve-bin-1.0_rc1.ebuild,v 1.1 2004/06/03 11:58:28 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-ve-bin/eclipse-ve-bin-1.0_rc1.ebuild,v 1.2 2004/06/25 02:30:50 agriffis Exp $
 
 inherit eclipse-ext
 

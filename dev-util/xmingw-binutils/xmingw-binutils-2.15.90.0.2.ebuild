@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-binutils/xmingw-binutils-2.15.90.0.2.ebuild,v 1.1 2004/04/15 10:22:55 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-binutils/xmingw-binutils-2.15.90.0.2.ebuild,v 1.2 2004/06/25 02:51:16 agriffis Exp $
 
 inherit eutils
 

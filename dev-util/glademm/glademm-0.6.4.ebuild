@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-0.6.4.ebuild,v 1.10 2004/04/25 21:45:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-0.6.4.ebuild,v 1.11 2004/06/25 02:33:22 agriffis Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.1.0_alpha.ebuild,v 1.10 2004/03/13 01:49:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.1.0_alpha.ebuild,v 1.11 2004/06/25 02:20:53 agriffis Exp $
 
 BOA_VER=0.1.0-alpha
 S=${WORKDIR}/boa
