@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.5.0.ebuild,v 1.2 2004/10/19 03:18:25 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.5.0.ebuild,v 1.3 2004/10/19 03:29:51 mr_bones_ Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 DESCRIPTION="Lists directories recursively, and produces an indented listing of files."
 HOMEPAGE="http://mama.indstate.edu/users/ice/tree/"
@@ -15,7 +15,7 @@ IUSE=""
 
 src_compile() {
 	emake \
-		CC="$(gcc-getCC)" \
+		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS} -DLINUX_BIGFILE" \
 		|| die "emake failed"
 }
