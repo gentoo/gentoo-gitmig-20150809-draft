@@ -1,29 +1,35 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.22.ebuild,v 1.2 2003/11/11 16:15:14 foser Exp $
-
-IUSE="doc python aalib png jpeg tiff gtkhtml mmx sse X altivec"
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0_pre1.ebuild,v 1.1 2004/01/09 00:27:26 foser Exp $
 
 inherit debug flag-o-matic libtool
 
-SV="`echo ${PV} | cut -d'.' -f1,2`"
-DESCRIPTION="Development series of Gimp"
-SRC_URI="mirror://gimp/v${SV}/v${PV}/${P}.tar.bz2"
+MY_PV=${PV/_/}
+MY_P=${PN}-${MY_PV}
+S=${WORKDIR}/${MY_P}
+
+DESCRIPTION="GNU Image Manipulation Program - Development series"
+SRC_URI="mirror://gimp/v${MY_PV}/testing/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
+
 SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~hppa ~sparc"
+IUSE="doc python aalib png jpeg tiff gtkhtml mmx sse X altivec"
 
 # protect against over optimisation (related to #21787)
-replace-flags -Os -O2
-MAKEOPTS="${MAKEOPTS} -j1"
+#replace-flags -Os -O2
+#MAKEOPTS="${MAKEOPTS} -j1"
 
 # FIXME : some more things can be (local) USE flagged
+# FIXME : printing needs to be re-enabled
+
 RDEPEND=">=dev-libs/glib-2.2
 	>=x11-libs/gtk+-2.2.2
-	>=x11-libs/pango-1.2
+	>=x11-libs/pango-1.2.2
 	>=media-libs/fontconfig-2.2
 	>=media-libs/libart_lgpl-2.3.8-r1
+	sys-libs/zlib
 
 	gtkhtml? ( =gnome-extra/libgtkhtml-2* )
 
@@ -42,21 +48,29 @@ RDEPEND=">=dev-libs/glib-2.2
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	dev-util/intltool
-	sys-devel/gettext
 	doc? ( >=dev-util/gtk-doc-1 )"
+#	sys-devel/gettext
 
+# Attention : libtool hack not needed anymore it seems (testing)
 src_unpack() {
 
 	unpack ${A}
-
 	cd ${S}
 	# Fix linking to older version of gimp if installed - this should
 	# void liquidx's hack, so it is removed.
-	epatch ${FILESDIR}/ltmain_sh-1.5.0-fix-relink.patch
-
+#	epatch ${FILESDIR}/ltmain_sh-1.5.0-fix-relink.patch
 	# note: this make elibtoolize do some weird things, so disabling - liquidx
 	# replace ltmain.sh from libtool 1.5a with libtool 1.4.x
 	#cd ${S}; aclocal; automake; libtoolize --force; autoconf
+
+	# fix problems with libtool-0.28 generated stuff
+	intltoolize --force
+
+	export WANT_AUTOMAKE=1.7
+	export WANT_AUTOCONF=2.5
+	aclocal || die
+	autoconf || die
+	automake -a || die
 
 }
 
@@ -101,7 +115,7 @@ src_install() {
 
 	# Install desktop file in the right place
 	insinto /usr/share/applications
-	newins ${S}/data/misc/gimp.desktop gimp-${SV}.desktop
+	newins ${S}/data/misc/gimp.desktop gimp-${PV}.desktop
 
 	dodoc AUTHORS COPYING ChangeL* HACKING INSTALL \
 		MAINTAINERS NEWS PLUGIN_MAINTAINERS README* TODO*
@@ -110,12 +124,11 @@ src_install() {
 
 pkg_postinst() {
 
-	ewarn "The ${SV} Gimp series have been reslotted to SLOT 2."
-	ewarn "To clean up old ${SV} version remove all ${SV} series and recompile."
+	ewarn "The development Gimp series have been reslotted to SLOT 2"
+	ewarn "To clean up old 1.3 versions use 'emerge -C =gimp-1.3* -vp'"
 	echo ""
 	ewarn "If you are upgrading from an earlier 1.3 release, please note that"
 	ewarn "the gimprc and sessionrc file formats changed. We suggest you remove"
 	ewarn "your personal ~/.gimp-1.3 directory and do a fresh user installation."
 
 }
-
