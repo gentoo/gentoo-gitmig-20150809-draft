@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/ebview
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.4 2003/12/14 16:27:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.5 2003/12/31 21:09:01 usata Exp $
+
+*ebview-0.3.2 (01 Jan 2004)
+
+  01 Jan 2004; <usata@gentoo.org> ebview-0.3.1.ebuild, ebview-0.3.2.ebuild,
+  files/ebview-gettext-0.12-gentoo.diff:
+  Version bumped.
 
   15 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> ebview-0.3.1.ebuild:
   Fixed compilation problem with gettext-0.12
