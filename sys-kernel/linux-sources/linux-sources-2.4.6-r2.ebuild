@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.6-r2.ebuild,v 1.7 2001/08/08 00:45:40 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.6-r2.ebuild,v 1.8 2001/08/08 00:57:47 pete Exp $
 
 #OKV=original kernel version, KV=patched kernel version
 
@@ -142,7 +142,7 @@ src_unpack() {
 		cd ${S2}
 		echo "Unpacking and applying LVM patch..."
 		unpack lvm_${LVMV}.tar.gz
-		try cd LVM/${LVMV}
+		cd LVM/${LVMV}
 
 		# I had to hack this in so that LVM will look in the current linux
 		# source directory instead of /usr/src/linux for stuff - pete
@@ -163,7 +163,7 @@ src_unpack() {
 #			cd ${S}/extras
 #			unpack lm_sensors-${SENV}.tar.gz
 #			unpack i2c-${SENV}.tar.gz
-#			try cd i2c-${SENV}
+#			cd i2c-${SENV}
 #			try rmdir src
 #			try ln -s ../.. src
 #			try mkpatch/mkpatch.pl . /usr/src/linux | patch -p1 -E -d /usr/src/linux
@@ -175,7 +175,7 @@ src_unpack() {
 #			-e \"s#^PREFIX.*#PREFIX := /usr#\" \
 #			-e \"s#^MANDIR.*#MANDIR := /usr/share/man#\" \
 #			Makefile.orig > Makefile
-#			try cd ${S}/extras/lm_sensors-${SENV}
+#			cd ${S}/extras/lm_sensors-${SENV}
 #			try rmdir src
 #			try ln -s ../.. src
 #			try ln -s ../i2c-${SENV} i2c-src
