@@ -1,8 +1,13 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.14 2003/06/14 17:38:28 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.15 2003/06/15 21:32:44 kumba Exp $
+
 
 *ssmtp-2.60.3 (09 Jun 2003)
+
+  15 Jun 2003; Joshua Kinard <kumba@gentoo.org> :
+  Fixed Security Volation -- starttls.diff missing from Manifest
+  Added local USE Flag "md5sum" since the previous "md5" was not a valid USE flag
 
   14 Jun 2003; Nick Hadaway <raker@gentoo.org> ssmtp-2.60.3.ebuild:
   Added some code so the config file has TLS enabled is ssl is in USE.
