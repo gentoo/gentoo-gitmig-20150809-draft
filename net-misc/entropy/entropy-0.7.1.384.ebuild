@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/entropy/entropy-0.7.1.384.ebuild,v 1.2 2004/06/24 23:43:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/entropy/entropy-0.7.1.384.ebuild,v 1.3 2004/07/15 02:48:30 agriffis Exp $
 
 MY_PV_BUILD=${PV/*.}
 MY_PV=${PV/.${MY_PV_BUILD}}
@@ -11,6 +11,7 @@ SRC_URI="http://entropy.stop1984.com/files/entropy-${MY_PV}-${MY_PV_BUILD}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE="mysql"
 
 DEPEND="sys-libs/zlib
 	dev-libs/expat
