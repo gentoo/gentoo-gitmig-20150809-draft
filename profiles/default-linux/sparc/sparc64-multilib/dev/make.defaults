@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.1 2004/12/11 02:12:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.2 2004/12/14 03:46:07 eradicator Exp $
 
 ARCH="sparc"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -8,7 +8,11 @@ ACCEPT_KEYWORDS="${ARCH}"
 # Used in ebuilds for verifying 64bit userland
 PROFILE_ARCH="sparc64-multilib"
 
+# In theory, we should be able to just change this (in make.conf) to switch
+# between building for 32/64bit
 CHOST="sparc64-unknown-linux-gnu"
+
+# Always use the sparc64 kernel
 PLATFORM="sparc64-unknown-linux-gnu"
 
 # Compiler flags
@@ -27,7 +31,12 @@ USE="${GRP_STAGE23_USE} alsa bitmap-fonts crypt cups fortran f77 fbcon gif jpeg 
 CONF_LIBDIR="lib64"
 CONF_MULTILIBDIR="lib"
 
-CHOST32="sparc-unknown-linux-gnu"
 ARCH_WRAPPER="sparc32"
+
+CHOST32="sparc-unknown-linux-gnu"
 CC32="gcc32"
 CPP32="g++32"
+
+CHOST64="sparc64-unknown-linux-gnu"
+CC64="gcc64"
+CPP64="g++64"
