@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/python-fchksum
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.5 2002/12/13 10:56:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.6 2003/01/19 16:44:40 tuxus Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -11,6 +11,9 @@
   Add KEYWORDS, LICENSE, and SLOT to 1.6.1 as well
 
 *python-fchksum-1.6.1 (24 Apr 2002)
+
+  19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   24 Apr 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog 
    python-fchksum-1.6.1.ebuild:
