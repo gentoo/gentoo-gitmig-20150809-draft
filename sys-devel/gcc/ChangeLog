@@ -1,9 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.258 2004/06/02 09:44:08 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.259 2004/06/02 11:01:46 lv Exp $
 
   02 Jun 2004; Joshua Kinard <kumba@gentoo.org> gcc-3.4.0-r6.ebuild:
   Added ~mips back to KEYWORDS.
+
+  02 Jun 2004; Travis Tilley <lv@gentoo.org>
+  +files/3.4.0/gcc34-ia64-lib64.patch, +files/3.4.0/gcc34-multi32-hack.patch,
+  +files/3.4.0/gcc34-ppc64-m32-m64-multilib-only.patch, gcc-3.4.0-r6.ebuild:
+  added some last minute multilib fixes for ppc64, ia64, and sparc
 
 *gcc-3.4.0-r6 (01 Jun 2004)
 
