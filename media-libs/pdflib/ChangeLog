@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.17 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.18 2003/03/31 11:26:27 joker Exp $
 
 *pdflib-4.0.3-r1 (13 Jan 2003)
+
+  31 Mar 2003; Christian Birchinger <joker@gentoo.org> pdflib-4.0.3-r1.ebuild:
+  Added sparc keyword
 
   25 Mar 2003; Aron Griffis <agriffis@gentoo.org> pdflib-4.0.3-r1.ebuild:
   Add ~alpha to KEYWORDS
