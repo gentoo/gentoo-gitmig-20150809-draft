@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-0.27.0.ebuild,v 1.1 2003/11/09 13:39:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-0.27.0.ebuild,v 1.2 2003/11/09 20:29:50 mr_bones_ Exp $
 
 inherit libtool
 
@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-    make DESTDIR=${D} install|| die "Install failed"
+	make DESTDIR=${D} install|| die "Install failed"
 #	dosym /usr/lib/libxml++-0.1.a /usr/lib/libxml++.a
 #	dosym /usr/lib/libxml++-0.1.so /usr/lib/libxml++.so
 	dodoc AUTHORS COPYING ChangeLog NEWS README*
