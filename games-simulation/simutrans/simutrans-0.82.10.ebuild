@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.82.10.ebuild,v 1.1 2003/09/18 19:14:55 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.82.10.ebuild,v 1.2 2003/09/18 19:20:18 msterret Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.simugraph.com/simutrans/data/simubase-0_82_9exp.zip
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 
 DEPEND="app-arch/unzip"
 RDEPEND="media-libs/libsdl"
