@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.3.90.ebuild,v 1.1 2003/09/07 22:39:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.3.90.ebuild,v 1.2 2003/09/08 05:09:18 msterret Exp $
 
 inherit gnome2
 
@@ -27,7 +27,7 @@ RDEPEND=">=x11-libs/gtk+-2.2.1
 	>=media-libs/libart_lgpl-2.2
 
 	>=gnome-base/libgnomeprintui-2.2.1.1
-	jpeg? ( >=media-libs/libexif-0.5.10 
+	jpeg? ( >=media-libs/libexif-0.5.10
 		media-libs/jpeg )"
 
 DEPEND="${RDEPEND}
@@ -38,5 +38,5 @@ DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS HACKING DEPENDS THANKS  TODO
 
 use jpeg \
 	&& G2CONF="${G2CONF} --with-libjpeg" \
-	|| G2CONF="${G2CONF} --without-libjpeg" 
+	|| G2CONF="${G2CONF} --without-libjpeg"
 
