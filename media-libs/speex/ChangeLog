@@ -18,6 +18,9 @@
 
 *speex-1.0.2 (21 Nov 2003)
 
+  8 Jan 2004; Guy Martin <gmsoft@gentoo.org> speex-1.0.2.ebuild :
+  Marked stable on hppa.
+
   21 Nov 2003; Martin Holzer <mholzer@gentoo.org> speex-1.0.2.ebuild:
   Version bumped.
 
