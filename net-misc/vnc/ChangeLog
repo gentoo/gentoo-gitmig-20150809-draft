@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/vnc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.7 2002/11/18 17:10:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.8 2002/11/21 10:16:42 raker Exp $
 
 *vnc-3.3.5 (18 Nov 2002)
+
+  21 Nov 2002; Nick Hadaway <raker@gentoo.org> vnc-3.3.5.ebuild :
+  Marked stable.
 
   18 Nov 2002; Nick Hadaway <raker@gentoo.org> vnc-3.3.5.ebuild,
   files/digest-vnc-3.3.5 :
