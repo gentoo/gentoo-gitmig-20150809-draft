@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.6.12.ebuild,v 1.7 2002/08/01 11:40:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.6.12.ebuild,v 1.8 2002/09/21 00:32:38 vapier Exp $
 
 
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ DESCRIPTION="SteelBank Common Lisp"
 SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
          mirror://sourceforge/sbcl/${P}-linux-binary.tar.bz2"
 
-HOMEPAGE="http://sbcl.sf.net/"
+HOMEPAGE="http://sbcl.sourceforge.net/"
 
 PROVIDE="virtual/commonlisp"
 
