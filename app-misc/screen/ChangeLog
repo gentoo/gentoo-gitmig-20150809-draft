@@ -1,7 +1,14 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.2 2002/03/21 08:07:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.3 2002/04/07 01:27:52 jhhudso Exp $
 
+*screen-3.9.11-r1 (6 Mar 2002)
+
+  6 Mar 2002; Jared H. Hudson <jhhudso@gentoo.org> screen-3.9.11-r1.ebuild
+
+  Fixed sandbox error where configure attempts to write to tty
+  to see if it has permissions to.
+	
 *screen-3.9.11 (21 Mar 2002)
 
   21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> screen-3.9.11.ebuild
