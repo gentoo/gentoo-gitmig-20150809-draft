@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc. 
+# Copyright 1999-2004 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openc6/openc6-0.9.2.ebuild,v 1.1 2003/10/16 03:36:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openc6/openc6-0.9.2.ebuild,v 1.2 2004/03/14 17:26:33 mr_bones_ Exp $
 
-inherit kde-base
+inherit kde
 
 need-kde 3.1
 need-qt 3.1
