@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <strider@gentoo.org> (02 Dec 2002)
+# ibm-jdk-1.4.0 causes problems with other
+# java packages, so masking it.
+=dev-java/ibm-jdk-1.4.0
+
 # <prez@gentoo.org> (01 Dec 2002)
 # New ebuild, should be tested.
 =dev-db/postgresql-7.3
@@ -267,11 +272,6 @@ sys-devel/prelink
 ~app-i18n/kde-i18n-zh_CN-3.1_rc2
 ~app-i18n/kde-i18n-zh_TW-3.1_rc2
 ~app-i18n/kde-i18n-zu-3.1_rc2
-
-# <strider@gentoo.org> (4 Nov 2002)
-# Masked since all jakarta projects dont have jakarta- preffix
-# Moved to dev-java/regexp
->=dev-java/jakarta-regexp-1.2
 
 # <danarmak@gentoo.org> (1 Nov 2002)
 # old and broken. I hope there'll be a new release soon - there's a kwintv3 project that's basically
