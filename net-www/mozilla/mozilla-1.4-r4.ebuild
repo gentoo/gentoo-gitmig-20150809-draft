@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r4.ebuild,v 1.1 2003/09/21 18:57:12 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r4.ebuild,v 1.2 2003/09/25 08:03:09 taviso Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -323,7 +323,8 @@ src_compile() {
 	then
 		# mozilla wont link with X11 on alpha, for some crazy reason.
 		# set it to link explicitly here.
-		sed -i 's/\(EXTRA_DSO_LDOPTS += $(MOZ_GTK_LDFLAGS).*$\)/\1 -lX11/' ${S}/gfx/src/gtk/Makefile.in
+		sed -i 's/\(EXTRA_DSO_LDOPTS += $(MOZ_GTK_LDFLAGS).*$\)/\1 -L/usr/X11R6/lib -lX11/' \
+			${S}/gfx/src/gtk/Makefile.in
 	fi
 
 	# *********************************************************************
