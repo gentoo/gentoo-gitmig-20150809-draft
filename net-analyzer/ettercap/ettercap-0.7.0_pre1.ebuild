@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.0_pre1.ebuild,v 1.2 2004/06/24 22:01:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.0_pre1.ebuild,v 1.3 2004/07/01 17:32:15 squinky86 Exp $
 
 
 # the actual version is "NG-0.7.0" but I suppose portage people will not be
@@ -21,7 +21,7 @@ KEYWORDS="~x86"
 IUSE="ssl ncurses gtk debug"
 
 # libtool is needed because it provides libltdl (needed for plugins)
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 		 sys-libs/zlib
 		 >=sys-devel/libtool-1.4.3
 		 >=net-libs/libnet-1.1.2.1
