@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-0.9.17.ebuild,v 1.1 2004/02/24 23:00:15 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-0.9.17.ebuild,v 1.2 2004/03/18 08:27:31 kosmikus Exp $
 
 DESCRIPTION="David's Advanced Revision Control System is yet another replacement for CVS"
 HOMEPAGE="http://abridgegame.org/darcs"
@@ -8,10 +8,11 @@ SRC_URI="http://abridgegame.org/darcs/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc"
+IUSE="doc wxwindows"
 
 DEPEND=">=net-ftp/curl-7.10.2
 	>=virtual/ghc-6.0
+	wxwindows?  ( dev-haskell/wxhaskell )
 	doc?  ( virtual/tetex
 		dev-tex/latex2html )"
 
@@ -20,6 +21,8 @@ RDEPEND=">=net-ftp/curl-7.10.2"
 S=${WORKDIR}/${P}
 
 src_compile() {
+	local myconf
+	myconf="`use_with wxwindows wx`"
 	if [ `use doc` ]; then
 		mv GNUmakefile GNUmakefile.orig
 		cat GNUmakefile.orig \
@@ -37,8 +40,9 @@ src_compile() {
 		--prefix=/usr \
 		--datadir=/usr/share \
 		--sysconfdir=/etc \
-		--mandir=/usr/share/man || die
-		echo 'INSTALLWHAT=installbin' >> autoconf.mk
+		--mandir=/usr/share/man \
+		${myconf} || die
+	echo 'INSTALLWHAT=installbin' >> autoconf.mk
 	make all || die
 }
 
