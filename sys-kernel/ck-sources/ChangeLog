@@ -1,0 +1,11 @@
+# ChangeLog for sys-kernel/ck-sources
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.1 2002/12/08 20:08:07 lostlogic Exp $
+
+*ck-sources-2.4.20-r1 (08 Dec 2002)
+
+  08 Dec 2002; Brandon Low <lostlogic@gentoo.org> ck-sources-2.4.20-r1.ebuild:
+
+  New package for -ck sources, Con Kolivas is a w00t mad kernel
+  benchmarker, in general his kernels are known to be VERY high
+  performance.  Enjoy.
