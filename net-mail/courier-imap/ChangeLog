@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.103 2004/12/16 10:09:05 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.104 2004/12/24 00:07:25 langthang Exp $
+
+  23 Dec 2004; Tuan Van <langthang@gentoo.org>
+  files/courier-imap-4.0.0_rc1-courier-imapd-ssl.rc6,
+  files/courier-imap-4.0.0_rc1-courier-imapd.rc6,
+  files/courier-imap-4.0.0_rc1-courier-pop3d-ssl.rc6,
+  files/courier-imap-4.0.0_rc1-courier-pop3d.rc6:
+  authdaemond --> courier-authlib
 
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
   courier-imap-3.0.8.ebuild:
