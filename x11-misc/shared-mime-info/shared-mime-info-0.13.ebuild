@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.13.ebuild,v 1.2 2004/02/17 23:19:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.13.ebuild,v 1.3 2004/02/22 13:46:31 lanius Exp $
 
 DESCRIPTION="The Shared MIME-info Database specification."
 HOMEPAGE="http://www.freedesktop.org"
@@ -13,7 +13,8 @@ USE=""
 
 DEPEND=">=sys-apps/gawk-3.1.0
 	>=dev-libs/glib-2.0.4
-	>=dev-libs/libxml2-2.4.23"
+	>=dev-libs/libxml2-2.4.23
+	dev-perl/XML-Parser"
 
 src_install () {
 	einstall || die
