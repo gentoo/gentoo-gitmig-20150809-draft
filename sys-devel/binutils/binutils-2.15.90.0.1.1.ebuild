@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.1.ebuild,v 1.1 2004/03/05 05:14:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.1.1.ebuild,v 1.1 2004/03/06 06:24:16 kumba Exp $
 
 IUSE="nls bootstrap build"
 
@@ -18,7 +18,7 @@ S="${WORKDIR}/${P}"
 DESCRIPTION="Tools necessary to build programs"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2
-	mirror://gentoo/${P}-patches-${PATCHVER}.tar.bz2"
+	mirror://gentoo/${PN}-2.15.90.0.1-patches-${PATCHVER}.tar.bz2"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 
 SLOT="0"
@@ -26,8 +26,6 @@ LICENSE="GPL-2 | LGPL-2"
 KEYWORDS="-*"
 
 DEPEND="virtual/glibc
-	>=sys-devel/automake-1.8
-	>=sys-devel/autoconf-2.59
 	nls? ( sys-devel/gettext )
 	!build? ( !bootstrap? ( dev-lang/perl ) )"
 
@@ -43,23 +41,6 @@ src_unpack() {
 	mv ${WORKDIR}/patch/05* ${WORKDIR}/patch/skip/
 
 	epatch ${WORKDIR}/patch
-
-	# <hjl@lucon.org>
-	# Some generated fils in binutils 2.15.90.0.1 weren't updated. As the
-	# result, the assembler man page isn't installed. The work around
-	# requires automake 1.8.2 and autoconf 2.59:
-	echo -e ""
-	ebegin "Regenerating several Makefiles so as.1 manpage is installed"
-	export WANT_AUTOMAKE="1.8"
-	cd ${S}/gas
-	aclocal
-	automake --cygnus Makefile
-	automake --cygnus doc/Makefile
-	autoconf
-	cd ${S}
-	export -n WANT_AUTOMAKE
-	echo -e ""
-	eend
 
 
 	# Libtool is broken (Redhat).

@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.107 2004/03/05 05:14:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.108 2004/03/06 06:24:16 kumba Exp $
+
+*binutils-2.15.90.0.1.1 (06 Mar 2004)
+
+  06 Mar 2004; Joshua Kinard <kumba@gentoo.org> binutils-2.15.90.0.1.1.ebuild,
+  binutils-2.15.90.0.1.ebuild:
+  New minor revision that fixes the as.1 manpage issue and an ia64 linker bug.
 
 *binutils-2.15.90.0.1 (04 Mar 2004)
 
