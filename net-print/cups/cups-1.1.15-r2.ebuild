@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.15-r2.ebuild,v 1.5 2002/10/05 05:39:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.15-r2.ebuild,v 1.6 2002/10/07 15:32:52 raker Exp $
 
 IUSE="ssl slp pam"
 
@@ -18,20 +18,22 @@ DEPEND="virtual/glibc
 	>=media-libs/libpng-1.2.1
 	>=media-libs/tiff-3.5.5
 	>=media-libs/jpeg-6b"
-RDEPEND="${DEPEND} !virtual/lpr
-		>=app-text/ghostscript-7.05.3"
+RDEPEND="${DEPEND} !virtual/lpr"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack() {
+
 	unpack ${A} ; cd ${S}
 	# make sure libcupsimage gets linked with libjpeg
 	patch -p0 < ${FILESDIR}/configure-jpeg-buildfix-1.1.15.diff || die
 	patch -p1 < ${FILESDIR}/disable-strip.patch || die
+
 }
 
 src_compile() {
+
 	local myconf
 	use pam || myconf="${myconf} --disable-pam"
 	use ssl || myconf="${myconf} --disable-ssl"
@@ -43,9 +45,11 @@ src_compile() {
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 
 	make || die "compile problem"
+
 }
 
 src_install() {
+
 	dodir /var/spool /var/log/cups /etc/cups
 
 	make \
@@ -100,9 +104,11 @@ src_install() {
 	insinto /etc/pam.d ; newins ${FILESDIR}/cups.pam cups
 	exeinto /etc/init.d ; newexe ${FILESDIR}/cupsd.rc6 cupsd
 	insinto /etc/xinetd.d ; newins ${FILESDIR}/cups.xinetd cups-lpd
+
 }
 
 pkg_postinst() {
+
 	install -d -m0755 ${ROOT}/var/log/cups
 	install -d -m0755 ${ROOT}/var/spool
 	install -m0700 -o lp -d ${ROOT}/var/spool/cups
@@ -114,4 +120,5 @@ pkg_postinst() {
 	einfo "emerge >=app-text/ghostscript-7.05-r1 if you need to print"
 	einfo "to a non-postscript printer"
 	einfo
+
 }
