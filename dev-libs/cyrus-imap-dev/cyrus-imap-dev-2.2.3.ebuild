@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.2.3.ebuild,v 1.4 2004/04/19 15:53:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.2.3.ebuild,v 1.5 2004/04/26 17:55:26 agriffis Exp $
 
 inherit eutils
 
@@ -69,7 +69,7 @@ src_compile() {
 		--with-auth=unix \
 		--without-perl \
 		--disable-cyradm \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	emake -C "${S}/lib" all || die "compile problem"
 }
