@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041006.ebuild,v 1.2 2004/10/07 22:24:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041006.ebuild,v 1.3 2004/10/11 13:49:19 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -40,8 +40,7 @@ SRC_URI="http://dev.gentoo.org/~lv/${PN}-${BASE_PV}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="2.2"
-#KEYWORDS="-* ~x86 ~amd64 ~hppa ~ppc64 ~ppc"
-KEYWORDS="-*"
+KEYWORDS="-* ~x86 ~amd64 ~hppa ~ppc64 ~ppc"
 IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
@@ -469,7 +468,7 @@ do_fedora_patches() {
 	# go team ramdom nptl stuff
 	want_nptl && epatch ${S}/fedora/glibc-nptl-check.patch
 
-	(use x86 || use alpha || use sparc) || rm -rf glibc-compat
+	#(use x86 || use alpha || use sparc) || rm -rf glibc-compat
 	rm -f sysdeps/alpha/alphaev6/memcpy.S
 	find . -type f -size 0 -o -name "*.orig" -exec rm -f {} \;
 	touch `find . -name configure`
