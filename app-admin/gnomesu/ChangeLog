@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/gnomesu
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/ChangeLog,v 1.1 2003/06/08 19:43:03 liquidx Exp $
+
+*gnomesu-0.3.1 (08 Jun 2003)
+
+  08 Jun 2003; Alastair Tse <liquidx@gentoo.org> gnomesu-0.3.1.ebuild,
+  files/gnomesu-0.3.1-desktopfix.patch:
+  new package. thanks to Nicholas D. Wolfwood <wolfwood@users.sourceforge.net>
+  (#22133) (#14547)
+
