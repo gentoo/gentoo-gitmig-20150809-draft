@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.77 2004/07/19 10:01:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.78 2004/07/19 19:27:45 eradicator Exp $
+
+*alsa-lib-1.0.5-r3 (19 Jul 2004)
+
+  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/fix-asound_h.patch, -files/test-asound_h.c,
+  -alsa-lib-1.0.5-r2.ebuild, +alsa-lib-1.0.5-r3.ebuild:
+  Updated to use alsa-headers solution to missing kernel headers.
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-lib-1.0.3b-r2.ebuild, alsa-lib-1.0.4.ebuild, alsa-lib-1.0.5-r2.ebuild,
