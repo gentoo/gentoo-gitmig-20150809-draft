@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.45-r5.ebuild,v 1.2 2002/12/13 17:12:57 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.45-r5.ebuild,v 1.3 2002/12/14 23:03:25 carpaski Exp $
 
 IUSE="build"
 
@@ -206,7 +206,7 @@ pkg_postinst() {
 	einfo "personal ebuilds.  NOTE: PORTDIR_OVERLAY support is *beta* code; it may not"
 	einfo "work correctly yet."
 	echo
-	einfo "NOTICE: PLEASE update your make.globals. All user changes to varaibles"
+	einfo "NOTICE: PLEASE update your make.globals. All user changes to variables"
 	einfo "in make.globals should be placed in make.conf. DO NOT MODIFY make.globals."
 	einfo "AUTOCLEAN's default has been changed to 'yes' to ensure that libraries are"
 	einfo "treated properly during merges. NOT updating make.globals may result in you"
