@@ -294,10 +294,6 @@ x11-terms/powershell
 # masked coz all our packages only use the old version
 >=net-libs/libnet-1.1.0
 
-* <seemant@gentoo.org> (09 Sep 2002)
-# masked coz it is old and broken
-=app-games/quakeforge-0.5.0
-
 # <karltk@gentoo.org> (08 Sep 2002)
 # This fixes a few problems, but should not be unmasked 
 # before it's properly tested, probably not before 1.4
