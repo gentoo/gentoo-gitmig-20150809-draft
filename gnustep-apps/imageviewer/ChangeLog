@@ -1,0 +1,28 @@
+# ChangeLog for app-gnustep/imageviewer
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/imageviewer/ChangeLog,v 1.1 2004/07/23 13:21:27 fafhrd Exp $
+
+*imageviewer-0.6.2 (23 Jul 2004)
+
+  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> +metadata.xml,
+  +imageviewer-0.6.2.ebuild:
+  Moved from app-gnustep/imageviewer to gnustep-apps/imageviewer.
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  imageviewer-0.6.2.ebuild:
+  Changing the eclass to gnustep-old
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  imageviewer-0.6.2.ebuild:
+  Changing the eclass to gnustep-old
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> imageviewer-0.6.2.ebuild:
+  Added IUSE=
+
+  18 Oct 2003; Nick Hadaway <raker@gentoo.org> imageviewer-0.6.2.ebuild:
+  Fixed the policy violation of setting ${A}
+
+*imageviewer-0.6.2 (17 Jul 2003)
+
+  17 Jul 2003; Michele Balistreri <brain@gentoo.org> imageviewer-0.6.2.ebuild:
+  New ebuild.
