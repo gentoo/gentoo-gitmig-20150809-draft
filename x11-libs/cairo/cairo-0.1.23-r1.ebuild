@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.1.23-r1.ebuild,v 1.3 2004/09/01 00:12:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.1.23-r1.ebuild,v 1.4 2004/09/10 19:29:08 twp Exp $
 
 DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
@@ -19,7 +19,7 @@ DEPEND="virtual/x11
 	>=media-libs/libpixman-0.1.1"
 
 src_compile() {
-	PKG_CONFIG_PATH=${FILESDIR} econf || die
+	PKG_CONFIG_PATH=${PKG_CONFIG_PATH+$PKG_CONFIG_PATH:}${FILESDIR} econf || die
 	emake || die
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.13 2004/09/03 15:35:19 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.14 2004/09/10 19:29:08 twp Exp $
+
+  10 Sep 2004; Tom Payne <twp@gentoo.org> cairo-0.1.18-r1.ebuild,
+  -cairo-0.1.18.ebuild, cairo-0.1.23-r1.ebuild, -cairo-0.1.23.ebuild:
+  Respect user's PKG_CONFIG_PATH. Bug # 62814. Stable on x86.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   cairo-0.1.18-r1.ebuild, cairo-0.1.18.ebuild:
