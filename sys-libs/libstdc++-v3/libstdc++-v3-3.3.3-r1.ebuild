@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3.ebuild,v 1.1 2004/05/23 09:14:24 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.1 2004/05/24 21:17:43 lv Exp $
 
 IUSE="nls"
 
@@ -66,7 +66,7 @@ HOMEPAGE="http://gcc.gnu.org/libstdc++/"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="~amd64"
+KEYWORDS="-*"
 
 if [ "${CHOST}" == "${CCHOST}" ]
 then
@@ -147,6 +147,7 @@ src_compile() {
 		--disable-checking \
 		--enable-cstdio=stdio \
 		--enable-__cxa_atexit \
+		--enable-version-specific-runtime-libs \
 		--with-gxx-include-dir=${STDCXX_INCDIR} \
 		--with-local-prefix=${LOC}/local \
 		${myconf} || die
@@ -201,10 +202,13 @@ src_install() {
 		install-target-libstdc++-v3 || die
 
 	# we dont want the headers...
-	rm -rf ${D}/${LOC}/lib/gcc-lib
+	rm -rf ${D}/${STDCXX_INCDIR}
 	# or locales...
 	rm -rf ${D}/${LOC}/share
 	# or anything other than the .so files, really.
 	find ${D} | grep -e c++.la$ -e c++.a$ | xargs rm -f
+
+	mkdir -p ${D}/etc/env.d/
+	echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/99libstdc++
 }
 
