@@ -1,0 +1,11 @@
+--- ion-3ds-20040316/libtu/Makefile	2004-03-16 18:24:21.000000000 +0100
++++ ion/libtu/Makefile	2004-03-16 20:47:10.731978736 +0100
+@@ -8,7 +8,7 @@
+ 
+ ######################################
+ 
+-INCLUDES += -I./include
++INCLUDES += -I./include -I..
+ CFLAGS += $(C89_SOURCE) $(POSIX_SOURCE) 
+ 
+ SOURCES=misc.c output.c util.c optparser.c parser.c tokenizer.c \
