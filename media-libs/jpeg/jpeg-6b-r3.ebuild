@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.8 2003/01/31 18:50:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.9 2003/02/12 18:05:41 gmsoft Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ijg.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 DEPEND="virtual/glibc"
 
@@ -26,7 +26,7 @@ src_unpack() {
 	# allow /etc/make.conf's HOST setting to apply
 	cd ${S}
 	cp configure configure.orig 
-	sed 's/ltconfig.*/& $chost/' configure.orig > configure
+	sed 's/ltconfig.*/& $CHOST/' configure.orig > configure
 	use alpha && gnuconfig_update
 }
 
