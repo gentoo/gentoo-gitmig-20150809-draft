@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-3.0.1-r1.ebuild,v 1.9 2004/10/01 22:25:10 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-3.0.1-r1.ebuild,v 1.10 2004/11/22 23:37:32 gmsoft Exp $
 
 IUSE="3dnow altivec mpi sse"
 
@@ -14,7 +14,7 @@ SLOT="3.0"
 LICENSE="GPL-2"
 DEPEND="virtual/libc"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 amd64 ~ppc-macos"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 amd64 ~ppc-macos ~hppa"
 
 #-fpmath=xx is reported to cause trouble on pentium4 m series
 #(for 3.0.x: this sort of thing should be handled by the --enable-sse
