@@ -1,0 +1,15 @@
+diff -ur src/alsa.h.org src/alsa.h
+--- src/alsa.h.org	2003-07-10 18:55:23.000000000 -0500
++++ src/alsa.h	2003-12-07 18:04:52.616425896 -0600
+@@ -38,6 +38,11 @@
+ #include <xmms/plugin.h>
+ #include <xmms/configfile.h>
+ 
++#include <alsa/version.h>
++#if SND_LIB_MAJOR==1
++#define ALSA_PCM_OLD_HW_PARAMS_API
++#define ALSA_PCM_NEW_HW_PARAMS_API
++#endif
+ #include <alsa/asoundlib.h>
+ #include <alsa/pcm_plugin.h>
+ 

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/alsa-xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-xmms/ChangeLog,v 1.11 2003/12/06 23:34:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-xmms/ChangeLog,v 1.12 2004/01/03 12:58:08 mholzer Exp $
+
+  03 Jan 2004; Martin Holzer <mholzer@gentoo.org> alsa-xmms-0.9.12.ebuild,
+  files/alsa-xmms-alsa.patch:
+  Adding patch to compile with alsa-1.0. Closes 35266
 
   07 Dec 2003; Heinrich Wendel <lanius@gentoo.org> alsa-xmms-0.9.12.ebuild:
   ~ppc > ppc
