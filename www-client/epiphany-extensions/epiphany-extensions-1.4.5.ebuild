@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-1.4.5.ebuild,v 1.1 2005/03/18 18:18:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-1.4.5.ebuild,v 1.2 2005/03/23 15:16:08 seemant Exp $
 
 inherit gnome2
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND=">=net-www/epiphany-1.4.6
+RDEPEND=">=www-client/epiphany-1.4.6
 	>=dev-libs/libxml2-2.6
 	>=dev-libs/glib-2.4
 	>=x11-libs/gtk+-2.4
