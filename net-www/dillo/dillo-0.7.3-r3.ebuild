@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r2.ebuild,v 1.3 2003/11/05 19:30:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r3.ebuild,v 1.1 2003/11/05 19:30:24 usata Exp $
 
 inherit flag-o-matic
 
 S2=${WORKDIR}/dillo-gentoo-extras-patch3
-I18N_P=${P}-i18n-misc-20031012
+I18N_P=${P}-i18n-misc-20031105-2
 
 DESCRIPTION="Lean GTK+-based web browser"
 HOMEPAGE="http://www.dillo.org/"
@@ -15,7 +15,7 @@ SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha ~mips ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 # Note that truetype, ssl and nls IUSE flags will take effect
 # only if you enable cjk IUSE flag.
 IUSE="ipv6 kde gnome mozilla truetype ssl cjk nls"
@@ -70,7 +70,8 @@ src_compile() {
 		myconf="`use_enable nls`
 			`use_enable ssl`
 			`use_enable truetype anti-alias`
-			--enable-meta-refresh"
+			--enable-meta-refresh
+			--enable-web-search"
 	fi
 
 	econf `use_enable ipv6` \
