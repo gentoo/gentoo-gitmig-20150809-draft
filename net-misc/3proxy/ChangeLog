@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/3proxy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/3proxy/ChangeLog,v 1.5 2004/07/01 20:38:28 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/3proxy/ChangeLog,v 1.6 2004/12/11 17:19:55 vapier Exp $
+
+*3proxy-0.5b (11 Dec 2004)
+
+  11 Dec 2004; Mike Frysinger <vapier@gentoo.org> +3proxy-0.5b.ebuild:
+  Version bump (notified by author).
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> 3proxy-0.4.3b.ebuild,
   3proxy-0.4.5b.ebuild:
