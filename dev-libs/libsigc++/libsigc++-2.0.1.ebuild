@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.1.ebuild,v 1.1 2004/05/09 12:40:31 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.1.ebuild,v 1.2 2004/05/10 09:32:03 mr_bones_ Exp $
 
 DESCRIPTION="Typesafe callback system for standard C++"
 HOMEPAGE="http://libsigc.sourceforge.net/"
@@ -18,7 +18,7 @@ src_compile() {
 	use debug \
 		&& myconf="--enable-debug=yes" \
 		|| myconf="--enable-debug=no"
-	
+
 	econf ${myconf} || die
 	aclocal
 	automake --gnu --add-missing
