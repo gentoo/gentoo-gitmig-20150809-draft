@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/lapack-atlas
 # Copyright 2004-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/ChangeLog,v 1.12 2004/07/13 03:42:20 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/ChangeLog,v 1.13 2004/09/09 12:31:13 tchiwam Exp $
+ 
+  09 Sep 2004; Philippe Trottier <tchiwam@gentoo.org> lapack-atlas-3.6.0.ebuild:
+  marked ~ppc64
 
   12 Jul 2004; George Shapovalov <george@gentoo.org> lapack-atlas-3.6.0.ebuild :
   added filtering of CFLAGS for g77 (#56265), 
