@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.14 2004/10/04 22:57:27 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.15 2004/10/27 08:41:14 eldad Exp $
 
 inherit gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/ntop/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc hppa ~amd64 ~ppc64"
-IUSE="ssl readline tcpd ncurses"
+IUSE="ssl readline tcpd"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
 	>=net-libs/libpcap-0.5.2
@@ -19,8 +19,7 @@ DEPEND=">=sys-libs/gdbm-1.8.0
 	>=media-libs/libpng-1.2.5
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r4 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	readline? ( >=sys-libs/readline-4.1 )
-	ncurses? ( sys-libs/ncurses )"
+	readline? ( >=sys-libs/readline-4.1 )"
 
 src_unpack() {
 	unpack ${A}
@@ -34,7 +33,6 @@ src_compile() {
 	use readline || myconf="${myconf} --without-readline"
 	use tcpd || myconf="${myconf} --with-tcpwrap"
 	use ssl || myconf="${myconf} --without-ssl"
-	use ncurses || myconf="${myconf} --without-curses"
 
 	econf ${myconf} || die "configure problem"
 	make || die "compile problem"
@@ -59,3 +57,10 @@ src_install() {
 	exeinto /etc/init.d ; newexe ${FILESDIR}/ntop-init ntop
 	insinto /etc/conf.d ; newins ${FILESDIR}/ntop-confd ntop
 }
+
+pkg_postinst() {
+
+	einfo "Notice that intop was removed upstream as of 3.0."
+
+}
+

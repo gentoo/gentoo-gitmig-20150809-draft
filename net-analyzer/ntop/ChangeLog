@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.30 2004/09/26 04:07:27 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.31 2004/10/27 08:41:14 eldad Exp $
+
+  27 Oct 2004; Eldad Zack <eldad@gentoo.org> ntop-3.0.ebuild:
+  Removed dep on ncurses since intop was removed at 3.0.
 
   25 Sep 2004; Tom Gall <tgall@gentoo.org> ntop-3.0.ebuild:
   added ~ppc64, bug #64101

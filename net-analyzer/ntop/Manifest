@@ -1,21 +1,31 @@
-MD5 1f3740b2299a2aeed55bd59da7db484b ChangeLog 3371
-MD5 846e7479e3e9df4363f2721b7fb47320 metadata.xml 233
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f8fa02df05889d48a97e2d2cc9c87de2 ntop-2.0.99_rc2-r2.ebuild 2475
 MD5 118587c02e62fe9233be53149ca9645a ntop-2.2.ebuild 2106
+MD5 b2252d7686d4b31006c573908d459e77 ntop-3.0.ebuild 1607
+MD5 385476405a0caa006be5c0f2240b036d ChangeLog 3491
+MD5 846e7479e3e9df4363f2721b7fb47320 metadata.xml 233
 MD5 d8a7fc02aed44266a97a55331fa74ecd ntop-2.2c.ebuild 2893
-MD5 938f38398e523b855a65bf3c4d3a887d ntop-3.0.ebuild 1619
-MD5 e8f42646f3226a9ad43cac51773512f0 files/digest-ntop-2.0.99_rc2-r2 65
-MD5 b7642cd2d05562431a2af66604275657 files/digest-ntop-2.2 58
-MD5 c4aa8efff06387c497036191b144f9b4 files/digest-ntop-2.2c 59
-MD5 35c576fac5bd8cbf0da850ccc00dd924 files/digest-ntop-3.0 58
-MD5 88d37ec04dd4a3e9e9f8bf41f2034a59 files/gd-1.8.3-fpic.patch 2063
-MD5 5003d9e995282d95b49774ace14b5768 files/gdchart0.94c-fpic.patch 913
-MD5 f70a4a4b75bf37b837a19f376222ecb6 files/libpng-1.2.4-fpic.patch 335
-MD5 a9cad5851ac81cbd8589f60287f3e497 files/ntop-confd 131
-MD5 9e6b1e20779d7fb6699c956adf6b8b05 files/ntop-init 294
-MD5 a54569fa0dac85ba1b47df0f3963bed2 files/tcpwrap.patch 407
 MD5 a99957dc7ed74f72f833af10fd786352 files/zlib-1.1.4-build-fPIC.patch 2157
 MD5 c616d28ca5e20b41ef7696379d6bc8ad files/zlib-1.1.4-build-static-with-fpic.patch 346
-MD5 72490e2d8f00f11cd3d70f8352b2c9ad files/zlib-1.1.4-glibc.patch 323
+MD5 e8f42646f3226a9ad43cac51773512f0 files/digest-ntop-2.0.99_rc2-r2 65
+MD5 b7642cd2d05562431a2af66604275657 files/digest-ntop-2.2 58
+MD5 35c576fac5bd8cbf0da850ccc00dd924 files/digest-ntop-3.0 58
 MD5 d11cf0bd8fc84eb7a006583ade1ce3c4 files/zlib-1.1.4-gzprintf.patch 7436
+MD5 88d37ec04dd4a3e9e9f8bf41f2034a59 files/gd-1.8.3-fpic.patch 2063
+MD5 f70a4a4b75bf37b837a19f376222ecb6 files/libpng-1.2.4-fpic.patch 335
+MD5 a9cad5851ac81cbd8589f60287f3e497 files/ntop-confd 131
 MD5 58b797a8da0e12e6cebaa0140f6493df files/zlib-1.1.4-mapfile.patch 1876
+MD5 c4aa8efff06387c497036191b144f9b4 files/digest-ntop-2.2c 59
+MD5 72490e2d8f00f11cd3d70f8352b2c9ad files/zlib-1.1.4-glibc.patch 323
+MD5 9e6b1e20779d7fb6699c956adf6b8b05 files/ntop-init 294
+MD5 a54569fa0dac85ba1b47df0f3963bed2 files/tcpwrap.patch 407
+MD5 5003d9e995282d95b49774ace14b5768 files/gdchart0.94c-fpic.patch 913
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBf18PT+MN7JbqCpMRAqHWAJ9984dXtzRMEWKNq4QOyh0lbqg+7ACdEw8I
+tBcZacjwfCUbKutDRleEnPg=
+=DZCa
+-----END PGP SIGNATURE-----
