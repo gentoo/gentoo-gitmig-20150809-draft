@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.30 2003/02/09 21:29:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.31 2003/02/09 21:33:06 mholzer Exp $
 
 *imagemagick-5.5.3.2 (03 Jan 2003)
 
@@ -38,10 +38,12 @@
   Added dependancy on media-libs/jbigkit for jbig support.  Ebuild
   already had --with-jbig specified...
 
-*imagemagick-5.4.7.4 (28 Oct 2002)
+*imagemagick-5.4.7.4-r1 (09 Feb 2003)
 
-  09 Feb 2003; Martin Holzer <mholzer@gentoo.org> imagemagick-5.4.7.4.ebuild
+  09 Feb 2003; Martin Holzer <mholzer@gentoo.org> imagemagick-5.4.7.4-r1.ebuild
   Corrected html doc dir. Closes #15386.
+
+*imagemagick-5.4.7.4 (28 Oct 2002)
 
   28 Oct 2002; Seemant Kulleen <seemant@gentoo.org>
   imagemagick-5.4.7.4.ebuild files/digest-imagemagick-5.4.7.4 :
