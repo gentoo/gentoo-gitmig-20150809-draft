@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ctags
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.17 2004/03/24 21:41:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.18 2004/04/07 16:23:18 iggy Exp $
+
+  07 Apr 2004; Brian Jackson <iggy@gentoo.org> ctags-5.5-r1.ebuild:
+  added s390 keyword
 
   24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> ctags-5.5.ebuild:
   don't set DEPEND="${RDEPEND}" (actually do the fix)
