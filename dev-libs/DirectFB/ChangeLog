@@ -1,43 +1,42 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.14 2002/10/19 20:54:53 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.15 2002/10/30 17:02:28 vapier Exp $
+
+*DirectFB-0.9.13-r1 (30 Oct 2002)
+
+  30 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added a gcc3.x fix for libflash and a library linkage fix for libpng-1.2.5
 
 *DirectFB-0.9.13 (27 Aug 2002)
 
   27 Aug 2002; Seemant Kulleen <seemant@gentoo.org> DirectFB-0.9.13.ebuild
   files/digest-DirectFB-0.9.13 :
-
   Version bump.
 
 *DirectFB-0.9.12 (20 Jun 2002)
 
   19 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> DirectFB-0.9.12.ebuild :
-
   Added ppc to KEYWORDS.
 
   20 Jun 2002; Seemant Kulleen <seemant@gentoo.org> DirectFB-0.9.12.ebuild
   files/digest-DirectFB-0.9.12 :
-
   Version bump.
 
 *DirectFB-0.9.11 (7 Jun 2002)
 
   7 Jun 2002; Seemant Kulleen <seemant@gentoo.org> DirectFB-0.9.11-r1.ebuild
   files/digest-DirectFB-0.9.11-r1 :
-
   Fixed so that it finds the libmpeg3 headers.
 
 *DirectFB-0.9.11 (6 Jun 2002)
 
   6 Jun 2002; Seemant Kulleen <seemant@gentoo.org> DirectFB-0.9.11.ebuild
   files/digest-DirectFB-0.9.11 :
-
   Version bump.
 
 *DirectFB-0.9.10-r1 (26 Apr 2002)
 
   26 May 2002; Martin Schlemmer <azarah@gentoo.org> DirectFB-0.9.10-r1.ebuild :
-
   Having "mmx" in use did not enable it .. fixed.  Updated avifile DEPEND
   for now ... this will be needed when I can get it patched to work with
   avifile-0.7.4.
@@ -46,13 +45,11 @@
 
   26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> DirectFB-0.9.10.ebuild
   files/digest-DirectFB-0.9.10 :
-
   Version bump to bugfix release.
 
 *DirectFB-0.9.9-r2 (15 Apr 2002)
 
   15 Apr 2002; Seemant Kulleen <seemant@gentoo.org> DirectFB-0.9.9-r2.ebuild :
-
   Update: still blah.  I have removed the necessity of the libmpeg3 tarball
   at least.  These people need to learn about libtool.  Anyway, by patching
   the Makefile to point it to the static libmpeg3.a file in /usr/lib, it
@@ -72,20 +69,17 @@
 *DirectFB-0.9.9 (12 Apr 2002)
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> DirectFB-0.9.9.ebuild :
-
   Version bump, but avi support is still broken.  Note that the avifile
   USE toggle is now just avi.
 
 *DirectFB-0.9.7 (21 Mar 2002)
   
   21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> DirectFB-0.9.7.ebuild :
-
   HTML documentation need not be gzipped.
 
 *DirectFB-0.9.7 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
