@@ -1,0 +1,5 @@
+MD5 a4940bd9d19067fc0df2609f87599575 mDNSResponder-98.ebuild 1064
+MD5 7b3dbc9cf7dd081edc5c91bf04327faf ChangeLog 495
+MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 7087496865b0e264a209619124877965 files/mDNSResponder-98-Makefiles.patch 3631
+MD5 854ae89c0e0738fa68590659fe262309 files/digest-mDNSResponder-98 69

@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/mDNSResponder
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.1 2005/02/06 18:22:01 motaboy Exp $
+
+*mDNSResponder-98 (06 Feb 2005)
+
+  06 Feb 2005; Simone Gotti <motaboy@gentoo.org> +metadata.xml,
+  +files/mDNSResponder-98-Makefiles.patch, +mDNSResponder-98.ebuild:
+  Initial ebuild. mDNSResponder from Apple, needed by various programs like
+  kdelibs-3.4. Closes bug #75046.
+
