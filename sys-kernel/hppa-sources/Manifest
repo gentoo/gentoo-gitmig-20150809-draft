@@ -1,4 +1,4 @@
-MD5 0be8edd4b76926990ee2ebe185a28fc0 ChangeLog 2662
+MD5 c7180e426ffc574a42703be1985eed05 ChangeLog 2797
 MD5 1e3744c222c2f70420e3c838f23eda49 hppa-sources-2.4.21_p10.ebuild 1575
 MD5 1c4fc0810448418aac81748630439a83 hppa-sources-2.4.21_p13.ebuild 1893
 MD5 ade0a7515d5df27c7a0b85eee0a0e1d9 hppa-sources-2.4.21_p2.ebuild 1096
@@ -7,7 +7,7 @@ MD5 a02977c93f49011f2d4fa90b1ce58f43 hppa-sources-2.4.21_p7.ebuild 1096
 MD5 d414dc1f863ecb364ba4178dfd1e831e hppa-sources-2.4.21_p8.ebuild 1499
 MD5 e8b13c794cfa7c8d800b3a20fef1cd75 hppa-sources-2.4.21_p9.ebuild 1574
 MD5 aee5360e47d20ea46579bd2d58b3d2c4 hppa-sources-2.4.22_p6.ebuild 1809
-MD5 3150d38f6149fe8621336c70af37379c hppa-sources-2.4.22_p10.ebuild 1800
+MD5 369f43fcedb162140f53fa380b21aa0a hppa-sources-2.4.22_p10.ebuild 1799
 MD5 7743c939ccccf0343faed987e12b489b files/digest-hppa-sources-2.4.21_p10 334
 MD5 306724fa77532e2a73c383f7322f1e56 files/digest-hppa-sources-2.4.21_p13 469
 MD5 605092c92ae7fda21bdfc646556c3318 files/digest-hppa-sources-2.4.21_p2 136
