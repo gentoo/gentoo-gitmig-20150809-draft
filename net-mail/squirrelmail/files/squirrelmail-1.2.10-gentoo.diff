@@ -5,15 +5,6 @@ retrieving revision 1.179.2.21
 diff -u -r1.179.2.20 -r1.179.2.21
 --- squirrelmail/squirrelmail/src/read_body.php	2002/11/16 06:06:25	1.179.2.20
 +++ squirrelmail/squirrelmail/src/read_body.php	2002/12/05 13:24:43	1.179.2.21
-@@ -9,7 +9,7 @@
-  * This file is used for reading the msgs array and displaying
-  * the resulting emails in the right frame.
-  *
-- * $Id: squirrelmail-1.2.10-gentoo.diff,v 1.1 2002/12/15 13:44:00 aliz Exp $
-+ * $Id: squirrelmail-1.2.10-gentoo.diff,v 1.1 2002/12/15 13:44:00 aliz Exp $
-  */
- 
- require_once('../src/validate.php');
 @@ -393,10 +393,10 @@
  $delimiter = $_SESSION['delimiter'];
  
