@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-salza
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-salza/ChangeLog,v 1.1 2005/03/20 06:12:27 mkennedy Exp $
+
+*cl-salza-0.4 (20 Mar 2005)
+
+  20 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-salza-0.4.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
