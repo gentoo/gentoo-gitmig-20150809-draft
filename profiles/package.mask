@@ -26,11 +26,6 @@
 >=net-p2p/gift-cvs-0.10.0
 
 # <rac@gentoo.org> (15 July 2003)
-# emergency mask because of confirmed reports of compilation failure
-# see bug 24570
->dev-libs/dvnet-0.9.4
-
-# <rac@gentoo.org> (15 July 2003)
 # depends on vendordir perl
 =dev-perl/File-Spec-0.84-r1
 
