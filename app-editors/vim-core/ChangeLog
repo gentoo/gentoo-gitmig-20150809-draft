@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.95 2004/07/15 21:01:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.96 2004/07/15 22:18:10 lv Exp $
+
+  15 Jul 2004; Travis Tilley <lv@gentoo.org> vim-core-6.3-r1.ebuild:
+  stable on amd64
 
   15 Jul 2004; Luca Barbato <lu_zero@gentoo.org> vim-core-6.3-r1.ebuild:
   Marked ppc
