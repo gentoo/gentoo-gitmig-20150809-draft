@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.22 2004/06/29 03:55:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.23 2004/09/12 18:59:47 taviso Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ KEYWORDS="x86 ppc sparc ~mips alpha ~hppa amd64 ia64 ~ppc64 s390"
 IUSE=""
 
 DEPEND="virtual/libc
-	sys-apps/coreutils"
+	sys-apps/coreutils
+	!app-shells/ksh"
 
 src_unpack() {
 	unpack ${P}.tar.gz
