@@ -1,6 +1,6 @@
 # ChangeLog for app-text/antiword
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.7 2003/03/09 14:54:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.8 2003/03/16 18:38:47 seemant Exp $
 
   08 Mar 2003; Seemant Kulleen <seemant@gentoo.org> antiword-0.33.ebuild :
 
@@ -10,6 +10,10 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *antiword-0.32 (1 Feb 2002)
+
+  16 Mar 2003; Seemant Kulleen <seemant@gentoo.org> antiword-0.32.ebuild:
+  same fix for antiword-0.32, thanks to: Jean Jordaan
+  <jean@upfrontsystems.co.za> in bug #17606
 
   17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> antiword-0.32.ebuild, antiword-0.33.ebuild :
   Added IUSE.
