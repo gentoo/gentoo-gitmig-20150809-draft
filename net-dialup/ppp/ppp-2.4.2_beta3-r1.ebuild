@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2_beta3-r1.ebuild,v 1.1 2003/12/22 15:16:18 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2_beta3-r1.ebuild,v 1.2 2003/12/24 03:49:07 brad_mssw Exp $
 
 MY_PV=${PV/_beta/b}
 MY_P=${PN}-${MY_PV}
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.samba.org/pub/ppp/${MY_P}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa -amd64 ~ia64"
 IUSE="ipv6 activefilter pam"
 
 DEPEND="virtual/glibc
