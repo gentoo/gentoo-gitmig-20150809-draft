@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.0.ebuild,v 1.4 2003/01/19 16:13:04 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.0.ebuild,v 1.5 2003/02/06 07:58:27 jrray Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -55,7 +55,13 @@
 
 IUSE="berkdb gdbm"
 
-inherit eutils
+inherit eutils flag-o-matic 
+
+# Perl has problems compiling with -Os in your flags
+replace-flags "-Os" "-O2"
+# This flag makes compiling crash in interesting ways
+filter-flags "-malign-double"
+
 
 # The slot of this binary compat version of libperl.so
 PERLSLOT="1"
@@ -107,19 +113,28 @@ pkg_setup() {
 	if [ -n "`use threads`" ]
 	then
 		ewarn ""
-		ewarn "PLEASE NOTE: If you wish to compile perl-5.8 with "
-		ewarn "threading enabled, you must restart this emerge "
+		ewarn "PLEASE NOTE: You are compiling perl-5.8 with"
+		ewarn "threading enabled."
+		ewarn "Threading is not supported by all applications "
+		ewarn "that compile against perl. You use threading at "
+		ewarn "your own discretion. "
+		ewarn ""
+		sleep 10
+	else
+		ewarn ""
+		ewarn "PLEASE NOTE: If you want to compile perl-5.8 with"
+		ewarn "threading enabled , you must restart this emerge"
 		ewarn "with USE=threads emerge...."
 		ewarn "Threading is not supported by all applications "
 		ewarn "that compile against perl. You use threading at "
 		ewarn "your own discretion. "
 		ewarn ""
-		sleep 15
+		sleep 10
 	fi
 
 	if [ "${PN}" = "perl" -a ! -f /usr/lib/${LIBPERL} ]
 	then
-		# Make sure whe have libperl installed ...
+		# Make sure we have libperl installed ...
 		eerror "Cannot find /usr/lib/${LIBPERL}!  Make sure that you"
 		eerror "have sys-libs/libperl installed properly ..."
 		die "Cannot find /usr/lib/${LIBPERL}!"
@@ -195,7 +210,7 @@ src_compile() {
 			-Dcc='gcc' \
 			-Dprefix='/usr' \
 			-Dvendorprefix='/usr' \
-			-Dsiteprefixx='/usr' \
+			-Dsiteprefix='/usr' \
 			-Dlocincpth=' ' \
 			-Doptimize="${CFLAGS}" \
 			-Duselargefiles \
@@ -212,15 +227,14 @@ src_compile() {
 		make -f Makefile ${LIBPERL} || die "Unable to make libperl.so" 
 		mv ${LIBPERL} ${WORKDIR}
 	else
-	
-		cat > config.over <<EOF
+cat > config.over <<EOF
 installprefix=${D}/usr
 installarchlib=\`echo \$installarchlib | sed "s!\$prefix!\$installprefix!"\`
 installbin=\`echo \$installbin | sed "s!\$prefix!\$installprefix!"\`
 installman1dir=\`echo \$installman1dir | sed "s!\$prefix!\$installprefix!"\`
 installman3dir=\`echo \$installman3dir | sed "s!\$prefix!\$installprefix!"\`
-installman1dir=`echo $installman1dir | sed "s!/share/share/!/share/!"`
-installman3dir=`echo $installman3dir | sed "s!/share/share/!/share/!"`
+installman1dir=\`echo \$installman1dir | sed "s!/share/share/!/share/!"\`
+installman3dir=\`echo \$installman3dir | sed "s!/share/share/!/share/!"\`
 installman1dir=\`echo \$installman1dir | sed "s!/usr/man/!/usr/share/man/!"\`
 installman3dir=\`echo \$installman3dir | sed "s!/usr/man/!/usr/share/man/!"\`
 man1ext=1
@@ -230,18 +244,19 @@ installscript=\`echo \$installscript | sed "s!\$prefix!\$installprefix!"\`
 installsitelib=\`echo \$installsitelib | sed "s!\$prefix!\$installprefix!"\`
 installsitearch=\`echo \$installsitearch | sed "s!\$prefix!\$installprefix!"\`
 EOF
-
+sleep 10
 		sh Configure -des \
 			-Darchname="${myarch}" \
 			-Dcc='gcc' \
 			-Dprefix='/usr' \
 			-Dvendorprefix='/usr' \
-			-Dsiteprefixx='/usr' \
+			-Dsiteprefix='/usr' \
 			-Dlocincpth=' ' \
 			-Doptimize="${CFLAGS}" \
 			-Duselargefiles \
 			-Dd_dosuid \
 			-Dd_semctl_semun \
+			-Dscriptdir=/usr/bin \
 			-Dman3ext='3pm' \
 			-Dcf_by='Gentoo' \
 			-Ud_csh \
@@ -294,10 +309,12 @@ wait.h
 EOF
 
 		# This is to fix a missing c flag for backwards compat
-		dosed "s:ccflags=':ccflags='-DPERL5 :" \
-			/usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm
-		dosed "s:cppflags=':cppflags='-DPERL5 :" \
-			/usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm
+		for i in `find ${D}/usr/lib/perl5 -iname "Config.pm"`;do
+			sed -e "s:ccflags=':ccflags='-DPERL5 :" \
+			    -e "s:cppflags=':cppflags='-DPERL5 :" \
+				${i} > ${i}.new &&\
+				mv ${i}.new ${i} || die "Sed failed"
+		done
 
 		# A poor fix for the miniperl issues
 		dosed 's:./miniperl:/usr/bin/perl:' /usr/lib/perl5/${PV}/ExtUtils/xsubpp
@@ -310,9 +327,12 @@ EOF
 			--man1dir="${D}/usr/share/man/man1" --man1ext='1' \
 			--man3dir="${D}/usr/share/man/man3" --man3ext='3'
 
-		# This removes ${D} from Config.pm
-		dosed /usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm
-		dosed /usr/lib/perl5/${PV}/${myarch}${mythreading}/.packlist
+		# This removes ${D} from Config.pm and .packlist
+		for i in `find ${D} -iname "Config.pm"` `find ${D} -iname ".packlist"`;do 
+			einfo "Removing ${D} from ${i}..."
+			sed -e "s:${D}::" ${i} > ${i}.new &&\
+				mv ${i}.new ${i} || die "Sed failed"
+		done
 	fi
 	
 	dodoc Changes* Artistic Copying README Todo* AUTHORS
@@ -401,22 +421,27 @@ pkg_postinst() {
 
 		eerror ""
 		eerror "If this is an upgrade to a perl 5.6.1 system,"
+		eerror "~OR~ an upgrade to a previous Gentoo release"
+		eerror "of perl 5.8.0, prior to -r8 "
 		eerror "you may need to recompile applications that"
 		eerror "were emerged against the old libperl.so"
 		eerror ""
-		eerror "Please re-emerge any packages that depended "
-		eerror "on perl. If after upgrading a package gives "
+		eerror "${FILESDIR}/libperl_rebuilder "
+		eerror "is provided to assist with this. "
+		eerror "PLEASE DO NOT INTERRUPT THE RUNNING OF THIS SCRIPT."
+		eerror "Part of the rebuilding of applications compiled against "
+		eerror "your old libperl involves temporarily unmerging"
+		eerror "them - interruptions could leave you with unmerged"
+		eerror "packages before they can be remerged."
+		eerror ""
+		eerror "If you have run the rebuilder and a package still gives"
 		eerror "you trouble, and re-emerging it fails to correct"
 		eerror "the problem, please check http://bugs.gentoo.org/"
 		eerror "for more information or to report a bug."
 		eerror ""
-		eerror "If this is a re-emerge of perl-5.8, please read"
-		eerror "the ChangeLog for more information and remember"
-		eerror "to emerge Safe again."
+		sleep 5
 		eerror ""
-		eerror "For tips on remerging you perl modules, please see:"
-		eerror "http://cvs.gentoo.org/~mcummings/perl58.html"
-		eerror ""
+		
 	fi
 }
 
