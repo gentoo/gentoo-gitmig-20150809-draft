@@ -1,21 +1,29 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.4 2002/03/16 03:45:47 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.5 2002/04/04 05:05:34 drobbins Exp $
+
+*openssh-3.1_p1-r2 (03 Apr 2002)
+
+  03 Apr 2002; Daniel Robbins <drobbins@gentoo.org> files/sshd.pam: new pam
+  sshd file to use pam_stack, pam_nologin and pam_shells, as well as use
+  pam_unix instead of pam_pwdb.  Added updated shadow dependency if pam is
+  enabled (to depend upon our new shadow with the pam_pwdb to pam_unix
+  conversion).
 
 *openssh-3.1_p1 (7 Mar 2002)
 
- 15 Mar 2002; Bruce A. Locke <blocke@shivan.org> files/sshd.rc6 files/sshd.rc5 :
+  15 Mar 2002; Bruce A. Locke <blocke@shivan.org> files/sshd.rc6 files/sshd.rc5 :
 
- ssh1 keygen requires a new option in the initscripts
+  ssh1 keygen requires a new option in the initscripts
 
- 13 Mar 2002; M.Schlemmer <azarah@gentoo.org> openssh-3.1_p1-r1.ebuild :
+  13 Mar 2002; M.Schlemmer <azarah@gentoo.org> openssh-3.1_p1-r1.ebuild :
 
- Update rc-script not to fail on restart if there is open sessions.
+  Update rc-script not to fail on restart if there is open sessions.
 
- 7 Mar 2002; F.Meyndert <m0rpheus@gentoo.org> openssh-3.1_p1.ebuild :
+  7 Mar 2002; F.Meyndert <m0rpheus@gentoo.org> openssh-3.1_p1.ebuild :
 
- Updated openssh to version 3.1 that fixes a nasty off by one bug in all
- previous version. That caused a local root hole.
+  Updated openssh to version 3.1 that fixes a nasty off by one bug in all
+  previous version. That caused a local root hole.
 
 *openssh-3.0.2_p1-r1 (1 Feb 2002)
 
