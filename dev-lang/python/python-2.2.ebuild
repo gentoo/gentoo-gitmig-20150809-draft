@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.ebuild,v 1.1 2002/01/02 16:55:21 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.ebuild,v 1.2 2002/01/03 16:37:29 g2boojum Exp $
 
 S=${WORKDIR}/Python-${PV}
 FCHKSUM="python-fchksum-1.6"
@@ -119,7 +119,7 @@ src_install() {
 
 	# install our own custom python-config
 	exeinto /usr/bin
-	doexe ${FILESDIR}/python-config
+	newexe ${FILESDIR}/python-config-2.2 python-config
 
 	# If USE tcltk lets install idle
 	# Need to script the python version in the path
@@ -127,5 +127,6 @@ src_install() {
 		mkdir "${D}/usr/lib/python2.2/tools"
 		mv "${S}/Tools/idle" "${D}/usr/lib/python2.2/tools/"
 		dosym /usr/lib/python2.2/tools/idle/idle.py /usr/bin/idle.py
+		dosym /usr/bin/idle.py /usr/bin/idle
 	fi
 }
