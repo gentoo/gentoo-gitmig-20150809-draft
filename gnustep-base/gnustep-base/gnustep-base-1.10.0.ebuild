@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.0.ebuild,v 1.1 2004/09/24 01:04:11 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.0.ebuild,v 1.2 2004/09/26 02:46:57 fafhrd Exp $
 
 inherit gnustep
 
@@ -20,7 +20,6 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 	=dev-libs/gmp-4.1*
 	=dev-libs/openssl-0.9.7*
 	=dev-libs/libffi-3*
-	amd64? =dev-libs/libffi-3.4.1
 	=sys-libs/zlib-1.2*
 	${DOC_DEPEND}"
 RDEPEND="${DEPEND}

@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.4 2004/09/24 01:04:11 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.5 2004/09/26 02:46:57 fafhrd Exp $
+
+  25 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  gnustep-base-1.10.0.ebuild:
+  Made library depends less strict.
 
 *gnustep-base-1.10.0 (08 Sep 2004)
 
