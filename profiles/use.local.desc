@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.890 2005/01/23 03:29:47 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.891 2005/01/23 06:41:22 pylon Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -19,6 +19,8 @@ app-admin/sudo:skey - Add support for one time passwords (single use passwords)
 app-admin/webalizer:geoip - Enable support for IP country lookup
 app-admin/webmin:webmin-minimal - Install the minimal webmin distribution
 app-cdr/k3b:monkey - Enable support for Monkey's audio codec
+app-cdr/ogmrip:matroska - Enables support for the matroska video format
+app-cdr/ogmrip:subp - Subtitle ripping preliminary support
 app-crypt/gnupg:bzip2 - use transparent bzip2 compression
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-crypt/gnupg:smartcard - Enables smartcard support
