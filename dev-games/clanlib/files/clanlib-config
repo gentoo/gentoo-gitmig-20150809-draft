@@ -1,0 +1,27 @@
+#!/bin/sh
+
+if [ ! "`ls /usr/lib/clanlib-* 2> /dev/null`" ] ; then
+	echo "No installed versions of ClanLib detected!"
+	exit 1
+fi
+
+showusage() {
+	echo "USAGE: clanlib-update <version to use>"
+	echo -n "  versions currently installed:"
+	for d in /usr/lib/clanlib-* ; do
+		d=`basename ${d}`
+		echo -n " ${d:8}"
+	done
+	echo
+	exit 1
+}
+
+[ -z "${1}" ] && showusage
+[ ! -d "/usr/lib/clanlib-${1}" ] && showusage
+
+for lib in /usr/lib/clanlib-${1}/* ; do
+	b=`basename ${lib}`
+	ln -sf ${lib} /usr/lib/${b}
+done
+rm -f /usr/include/ClanLib
+ln -sf /usr/include/clanlib-${1} /usr/include/ClanLib

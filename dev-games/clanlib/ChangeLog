@@ -1,6 +1,11 @@
 # ChangeLog for app-games/clanlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.1 2003/07/13 03:13:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.2 2003/07/17 00:12:58 vapier Exp $
+
+*clanlib-0.7.2-r1 (16 Jul 2003)
+
+  16 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  SLOT-ed version #22594.
 
 *clanlib-0.7.2 (27 Jun 2003)
 
@@ -16,6 +21,11 @@
   29 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump.
 
+*clanlib-0.6.5-r1 (16 Jul 2003)
+
+  16 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  SLOT-ed version #22594.
+
 *clanlib-0.6.5 (17 Apr 2003)
 
   29 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
@@ -28,6 +38,11 @@
 
   02 Okt 2002; Bart Verwilst <verwilst@gentoo.org> :
   New version
+
+*clanlib-0.5.4-r4 (16 Jul 2003)
+
+  16 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  SLOT-ed version #22594.
 
 *clanlib-0.5.4-r3 (14 Apr 2002)
 
