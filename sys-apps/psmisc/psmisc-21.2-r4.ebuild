@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.2-r4.ebuild,v 1.13 2004/03/21 02:55:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.2-r4.ebuild,v 1.14 2004/03/22 01:25:09 kumba Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 SELINUX_PATCH="psmisc-21.2-selinux.diff.bz2"
 
@@ -45,6 +45,10 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# Detect mips systems properly
+	use mips && gnuconfig_update
+
 	local myconf="--with-gnu-ld"
 	use nls || myconf="${myconf} --disable-nls"
 	use selinux && myconf="${myconf} --enable-flask"
