@@ -1,5 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/blight_input/blight_input-0.0.4.ebuild,v 1.4 2003/06/12 19:53:47 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An input plugin for the mupen64 N64 emulator"
