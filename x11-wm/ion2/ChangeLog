@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.20 2004/09/05 19:22:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.21 2004/09/23 18:27:50 blubb Exp $
+
+  23 Sep 2004; <blubb@gentoo.org> ion2-20040729.ebuild:
+  added ~amd64 and fixed sandbox issues
 
   05 Sep 2004; Guy Martin <gmsoft@gentoo.org> ion2-20040729.ebuild:
   Fixed and marked stable on hppa.
