@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.10 2003/11/14 11:41:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.11 2003/11/14 21:24:44 seemant Exp $
 
 inherit eutils gcc
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 alpha"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	app-arch/tar
-	sys-apps/gzip"
+	app-arch/gzip"
 
 src_unpack() {
 	unpack ${A}
