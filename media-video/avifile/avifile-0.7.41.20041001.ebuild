@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.2 2004/10/06 07:16:50 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.3 2004/10/06 09:53:12 phosphan Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,6 +45,7 @@ src_unpack() {
 
 	# make sure pkgconfig file is correct #53183
 	cd ${S}
+	epatch ${FILESDIR}/throw.patch
 	rm -f avifile.pc
 	sed -i "/^includedir=/s:avifile$:avifile-${PV:0:3}:" avifile.pc.in
 }
