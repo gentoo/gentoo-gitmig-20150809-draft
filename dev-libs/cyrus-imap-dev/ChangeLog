@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/cyrus-imap-dev
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.6 2002/12/13 10:56:29 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.7 2003/02/07 20:21:47 raker Exp $
+
+*cyrus-imap-dev-2.1.12 (07 Feb 2003)
+
+  07 Feb 2003; Nick Hadaway <raker@gentoo.org>
+  cyrus-imap-dev-2.1.12.ebuild,
+  files/digest-cyrus-imap-dev-2.1.12,
+  files/cyrus-imap-dev-2.1.12-libwrap.patch :
+  Version bump.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
