@@ -1,4 +1,4 @@
-*** client/dhclient.c	Wed Aug  8 10:46:14 2001
++++ client/dhclient.c	Wed Aug  8 10:46:14 2001
 --- client/dhclient.c.fix	Sat Sep 21 12:15:21 2002
 ***************
 *** 198,205 ****
