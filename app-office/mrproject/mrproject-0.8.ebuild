@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.8.ebuild,v 1.1 2003/02/03 04:08:38 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.8.ebuild,v 1.2 2003/02/04 19:17:16 nall Exp $
 
 DESCRIPTION="Project manager for Gnome2"
 SRC_URI="ftp://ftp.codefactory.se/pub/software/mrproject/source/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://mrproject.codefactory.se/"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="doc nls"
 
 RDEPEND=">=x11-libs/gtk+-2.0.5
