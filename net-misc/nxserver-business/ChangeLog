@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-business
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-business/ChangeLog,v 1.5 2003/12/26 19:34:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-business/ChangeLog,v 1.6 2003/12/29 15:42:53 stuart Exp $
+
+  29 Dec 2003; Stuart Herbert <stuart@gentoo.org> :
+  Nomachine have finally released the RPM for 1.3.0-24, so I can now add the
+  digest ;-)
 
 *nxserver-business-1.3.0-r1 (26 Dec 2003)
 
