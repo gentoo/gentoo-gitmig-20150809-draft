@@ -1,7 +1,10 @@
-MD5 adfec29777e18d8bf24a3b5b70cfdef2 lesstif-0.93.94-r2.ebuild 2317
-MD5 5fe548272790f7b85e5193d015499d70 lesstif-0.94.0-r5.ebuild 2166
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f11926f13b36cc2b1a710f595adc46c0 lesstif-0.93.94-r2.ebuild 2485
+MD5 c2421a74e7164fab17297683337ba8c7 lesstif-0.94.0-r5.ebuild 2334
 MD5 9b4f3806aa89a43b17fa8aac8775e889 lesstif-0.94.0-r2.ebuild 2111
-MD5 7d1baf2eb1adc3405e6f33837c90513d ChangeLog 7532
+MD5 71b9b7609d6139a58f74386ad686a3f3 ChangeLog 7720
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 ca6ecc032ac0934b8c737650d6550162 lesstif-0.94.0.ebuild 2039
 MD5 50f3abd88dd0c45de68a1cec931c4909 files/digest-lesstif-0.94.0 68
@@ -9,3 +12,10 @@ MD5 10373c1e87b0208cd26888011a4d92de files/CAN-2005-0605.patch 1194
 MD5 023d4c47c73d11f6668f99e0cbe9ed05 files/digest-lesstif-0.93.94-r2 142
 MD5 50f3abd88dd0c45de68a1cec931c4909 files/digest-lesstif-0.94.0-r2 68
 MD5 50f3abd88dd0c45de68a1cec931c4909 files/digest-lesstif-0.94.0-r5 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCMFphevY57Fted3ERAqgyAJ9J99hn8PJRFlUlZuwpI0wmEtmXvQCfZX0u
+qGikwa6cMf1Rpv5P/c/cBqE=
+=koLV
+-----END PGP SIGNATURE-----
