@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.11.ebuild,v 1.1 2004/08/11 09:28:43 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.11.ebuild,v 1.2 2004/08/11 13:50:18 dragonheart Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ DEPEND="doc? ( >=app-doc/doxygen-1.2.15
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/makefile.doc.in.patch || die "failed to patch"
 	cd ${S}
 	epatch ${FILESDIR}/configure.in.patch || die "failed to patch"
 }
@@ -28,11 +29,11 @@ src_unpack() {
 src_compile() {
 
 
-	local myconf
-	if has maketest ${FEATURES} || use maketest;
-	then
-		myconf="${myconf} --enable-test"
-	fi
+	#local myconf
+	#if has maketest ${FEATURES} || use maketest;
+	#then
+	#	myconf="${myconf} --enable-test"
+	#fi
 
 	autoconf
 	econf --enable-test `use_enable doc` || die

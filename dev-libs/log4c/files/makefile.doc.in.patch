@@ -1,0 +1,11 @@
+--- log4c-1.0.11/doc/Makefile.in.orig	2004-08-11 22:24:32.497489472 +0930
++++ log4c-1.0.11/doc/Makefile.in	2004-08-11 22:24:59.267419824 +0930
+@@ -254,7 +254,7 @@
+ 		echo "$(INSTALL_DATA) $$i $(DESTDIR)$(docdir)"; \
+ 		$(INSTALL_DATA) $$i $(DESTDIR)$(docdir); \
+ 	done
+-	cp -r html $(docdir)
++	cp -r html $(DESTDIR)$(docdir)
+ 
+ uninstall-local:
+ 	@for i in ./man/man3/*.3; do \
