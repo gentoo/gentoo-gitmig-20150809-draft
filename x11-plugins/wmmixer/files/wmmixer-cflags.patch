@@ -1,0 +1,10 @@
+--- configure	2004-08-02 12:16:27.093499344 +0200
++++ configure	2004-08-02 12:24:14.391459256 +0200
+@@ -822,7 +822,6 @@
+ 
+ have_alsa=no
+ have_oss=no
+-CXXFLAGS='-pedantic -W -Wall -g'
+ 
+ 
+ 

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4.ebuild,v 1.6 2004/06/28 20:52:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4.ebuild,v 1.7 2004/08/02 10:52:48 s4t4n Exp $
+
+inherit eutils
 
 IUSE="alsa oss"
 
@@ -14,7 +16,7 @@ DEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~mips"
+KEYWORDS="x86 ~sparc ~mips"
 
 S="${WORKDIR}/${PN}-2.0b4"
 
@@ -23,6 +25,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i 's#/usr/local/share#/usr/share#g' src/wmmixer.h example/*
+
+	# Allow use of Gentoo CXXFLAGS
+	epatch ${FILESDIR}/wmmixer-cflags.patch
 }
 
 src_compile() {
