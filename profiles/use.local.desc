@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.13 2003/04/15 21:01:36 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.14 2003/04/22 13:33:37 liquidx Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -34,3 +34,4 @@ sys-libs/glibc:pic - If you want prelink support built into glibc
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 x11-misc/lineakd:xosd - Sends display using the X On Screen Display library
+dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
