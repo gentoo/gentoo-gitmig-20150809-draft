@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r2.ebuild,v 1.1 2003/12/08 05:18:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r2.ebuild,v 1.2 2003/12/14 03:55:22 brad_mssw Exp $
 
 IUSE="X nls motif leim gnome Xaw3d"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/emacs/${P}.tar.gz
 HOMEPAGE="http://www.gnu.org/software/emacs"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha amd64"
 
 DEPEND="sys-libs/ncurses
 	sys-libs/gdbm
@@ -37,6 +37,11 @@ DFILE=emacs.desktop
 filter-flags -fstack-protector
 
 src_compile() {
+	epatch ${FILESDIR}/${P}-amd64.patch
+	unset WANT_AUTOCONF_2_5
+	export WANT_AUTOCONF_2_1=1
+	autoconf
+
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
 	if [ "`use X`" ] ; then

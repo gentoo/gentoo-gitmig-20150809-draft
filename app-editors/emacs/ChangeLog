@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.17 2003/12/08 05:18:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.18 2003/12/14 03:55:22 brad_mssw Exp $
+
+  13 Dec 2003; Brad House <brad_mssw@gentoo.org> emacs-21.3-r2.ebuild,
+  files/emacs-21.3-amd64.patch:
+  mark stable on amd64 and patch
 
 *emacs-21.3-r2 (08 Dec 2003)
 
