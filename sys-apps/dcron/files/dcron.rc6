@@ -6,7 +6,8 @@ depend() {
 
 start() {
 	ebegin "Starting dcron"
-	start-stop-daemon --start --quiet --exec /usr/sbin/crond
+	start-stop-daemon --start --quiet --exec /usr/sbin/crond \
+		-- >>/var/log/cron.log 2>&1
 	eend $?
 }
 
