@@ -1,19 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fd6ab887bad670ee8bf2abcaf6f0162f ChangeLog 2276
-MD5 ef356714ab02a84c6e88fe3720749aea metadata.xml 1022
+MD5 5d0a44006bd804d591e60465de6f247f gnustep-back-xlib-0.9.5_pre20041126.ebuild 1115
+MD5 5d0a44006bd804d591e60465de6f247f gnustep-back-xlib-0.9.5_pre20041203.ebuild 1115
 MD5 b841fc146693588b26e8249c6f56f596 gnustep-back-xlib-0.9.4.ebuild 1011
 MD5 72c0c80f35125e4a348237843a4a37e3 gnustep-back-xlib-0.9.5_pre20041116.ebuild 1250
 MD5 0dcb2e8f4eedab02789731b913b5ee8e gnustep-back-xlib-0.9.5_pre20041030.ebuild 1250
-MD5 14c86d6ff5e83af36ad3d54266af5c99 files/config-gnustep-back-xlib.sh 181
+MD5 fd6ab887bad670ee8bf2abcaf6f0162f ChangeLog 2276
+MD5 ef356714ab02a84c6e88fe3720749aea metadata.xml 1022
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-back-xlib-0.9.5_pre20041030 0
-MD5 9c943c0c0837bfe718a98769bc25d366 files/digest-gnustep-back-xlib-0.9.4 70
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-back-xlib-0.9.5_pre20041116 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBo6BYArHZZzCEUG0RArJyAJ4tlRUvwyremRx8qxX7L6PBU9w84gCfWRzj
-Yv1+QX5BN+7xnzSWN42QxcQ=
-=C+i2
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-back-xlib-0.9.5_pre20041126 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-back-xlib-0.9.5_pre20041203 0
+MD5 9c943c0c0837bfe718a98769bc25d366 files/digest-gnustep-back-xlib-0.9.4 70
+MD5 14c86d6ff5e83af36ad3d54266af5c99 files/config-gnustep-back-xlib.sh 181
