@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/dancer-ircd-1.0.31_p8-r1.ebuild,v 1.4 2004/01/03 04:05:52 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/dancer-ircd-1.0.31_p8-r1.ebuild,v 1.5 2004/02/15 03:18:19 weeve Exp $
 
 DESCRIPTION="A ircd with ipv6 support use by the freenode network"
 HOMEPAGE="http://freenode.net/dancer_ircd.shtml"
@@ -15,7 +15,7 @@ DEPEND="doc? ( app-text/openjade
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~hppa"
+KEYWORDS="x86 ~hppa ~sparc"
 IUSE="ipv6 doc"
 #RDEPEND=""
 S=${WORKDIR}/${PN}-${PV/_p/+maint}
