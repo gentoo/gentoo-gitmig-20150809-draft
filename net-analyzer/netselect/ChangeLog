@@ -1,0 +1,13 @@
+# ChangeLog for net-analyzer/netselect
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.1 2002/07/11 16:33:32 stroke Exp $
+
+*netselect-0.3 (11 Jul 2002)
+
+  11 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> netselect-0.3.ebuild :
+
+  New package.
+  Ebuild written by: Leonardo Boshell <gentoo@kapcoweb.com>
+
+
+
