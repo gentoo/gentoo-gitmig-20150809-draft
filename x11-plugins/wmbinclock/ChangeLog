@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmbinclock
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbinclock/ChangeLog,v 1.1 2003/06/03 06:05:00 bcowan Exp $
+
+*wmbinclock-0.1 (03 Jun 2003)
+
+  03 Jun 2003; Brad Cowan <bcowan@gentoo.org> wmbinclock-0.1.ebuild:
+  Initial import. Thanks to Bret Towe bug #18110.
+
