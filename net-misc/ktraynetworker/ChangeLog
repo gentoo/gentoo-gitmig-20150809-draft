@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/ktraynetworker
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ktraynetworker/ChangeLog,v 1.1 2004/06/23 22:35:26 centic Exp $
+
+*ktraynetworker-0.7 (24 Jun 2004)
+
+  24 Jun 2004; Dominik Stadler <centic@gentoo.org> +metadata.xml,
+  +ktraynetworker-0.7.ebuild:
+  Add new application, thanks for the ebuild in Bug 43307
+
