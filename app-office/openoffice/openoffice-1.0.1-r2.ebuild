@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r1.ebuild,v 1.7 2002/12/02 14:25:35 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r2.ebuild,v 1.1 2002/12/02 14:25:35 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -26,7 +26,7 @@
 #   Get support going for installing a custom language pack.  Also
 #   need to be able to install more than one language pack.
 
-inherit flag-o-matic eutils
+inherit flag-o-matic
 # Compile problems with these ...
 filter-flags "-funroll-loops"
 filter-flags "-fomit-frame-pointer"
@@ -63,7 +63,7 @@ HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="gnome kde"
 
 RDEPEND=">=sys-libs/glibc-2.1
@@ -72,7 +72,7 @@ RDEPEND=">=sys-libs/glibc-2.1
 	app-arch/zip
 	app-arch/unzip
 	dev-libs/expat
-	>=virtual/jdk-1.3.1
+	>=virtual/jdk-1.4.0
 	ppc? ( >=sys-libs/glibc-2.2.5-r7
 	>=sys-devel/gcc-3.2 )" # needed for sqrtl patch recently introduced
 
@@ -116,11 +116,11 @@ pkg_setup() {
 		eerror "system VM before proceeding:"
 		eerror
 		eerror " # emerge blackdown-jdk"
-		eerror " # java-config --set-system-vm=blackdown-jdk-1.3.1"
+		eerror " # java-config --set-system-vm=blackdown-jdk-1.4.1_beta"
 		eerror " # env-update"
 		eerror " # source /etc/profile"
 		eerror
-		eerror "At the time of writing, this was version 1.3.1, so please"
+		eerror "At the time of writing, this was version 1.4.1_beta, so please"
 		eerror "adjust the version according to the version installed in"
 		eerror "/opt."
 		eerror
@@ -160,7 +160,7 @@ src_unpack() {
 	# Get OO to build with gcc-3.2's libstdc++.so (Az)
 	if [ "$(gcc-version)" = "3.2" ]
 	then
-		epatch ${FILESDIR}/${PV}/${P}-use-libstdc++-5.0.0.patch
+		epatch ${FILESDIR}/${PV}/${P}-use-libstdc++-5.0.1.patch
 	fi
 
 	# Debian patch to enable build of zipdep
@@ -168,8 +168,8 @@ src_unpack() {
 
 	# Some Debian patches to get the build to use $CC and $CXX,
 	# thanks to nidd from #openoffice.org
-	epatch ${FILESDIR}/${PV}/${P}-gcc-version-check.patch
-	epatch ${FILESDIR}/${PV}/${P}-set-compiler-vars.patch
+	epatch  ${FILESDIR}/${PV}/${P}-gcc-version-check.patch
+	epatch  ${FILESDIR}/${PV}/${P}-set-compiler-vars.patch
 	epatch ${FILESDIR}/${PV}/${P}-use-compiler-vars.patch
 	# Update configure before we do anything else.
 	cd ${S}/config_office; autoconf || die; cd ${S}
@@ -190,7 +190,6 @@ src_unpack() {
 
 	# Misc Debian patches to fixup build
 	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-no-mozab.patch
-	rm -f ${S}/moz/prj/build.lst
 	echo "moz     moz : NULL" > ${S}/moz/prj/build.lst
 
 	# Misc patches from Mandrake
@@ -239,6 +238,10 @@ src_unpack() {
 	do
 		perl -pi -e "s/^(PRJNAME)/MAXPROCESS=1\n\1/" ${x}/makefile.mk
 	done
+
+	# Seth -- Dec 1 2002
+        einfo "Patching for jdk >= 1.4.0..."
+        patch -p 0 < ${FILESDIR}/${PV}/${P}-fix-jdk-1.4.0.patch || die
 }
 
 get_EnvSet() {
@@ -451,7 +454,7 @@ src_install() {
 	# Install wrapper script
 	exeinto /usr/bin
 	sed -e "s|<pv>|${PV}|g" \
-		${FILESDIR}/${PV}/ooffice-wrapper > ${T}/ooffice
+		${FILESDIR}/${PV}/ooffice-wrapper-1.1 > ${T}/ooffice
 	doexe ${T}/ooffice
 	# Component symlinks
 	dosym ooffice /usr/bin/oocalc
