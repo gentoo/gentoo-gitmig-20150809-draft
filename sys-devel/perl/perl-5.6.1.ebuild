@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1.ebuild,v 1.5 2001/06/16 23:48:33 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1.ebuild,v 1.6 2001/06/17 12:51:07 achim Exp $
 
 
 A=${P}.tar.gz
@@ -12,11 +12,11 @@ HOMEPAGE="http://www.perl.org"
 
 DEPEND="virtual/glibc sys-apps/groff
         berkdb? ( >=sys-libs/db-3.2.3h-r3
-                  >=sys-libs/db-1.85-r1 )
+                  =sys-libs/db-1.85-r1 )
 	gdbm?   ( >=sys-libs/gdbm-1.8.0 )"
 
 RDEPEND="virtual/glibc
-        berkdb? ( >=sys-libs/db-3.2.3h-r3 >=sys-libs/db-1.85-r1 )
+        berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 )
 	gdbm?   ( >=sys-libs/gdbm-1.8.0 )"
 
 src_compile() {

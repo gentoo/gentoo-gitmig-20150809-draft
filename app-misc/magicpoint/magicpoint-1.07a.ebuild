@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.07a.ebuild,v 1.2 2001/06/03 09:54:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.07a.ebuild,v 1.3 2001/06/17 12:51:07 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -14,9 +14,9 @@ DEPEND="virtual/glibc virtual/x11
 	gif?   ( >=media-libs/giflib-4.0.1 )"
 
 src_compile() {
-   source /etc/profile
+   
    export LIBS="-L/usr/lib/ -L/usr/X11R6/lib/ -lX11"
-   if [ `use gif` | `use ungif` ]; then
+   if [ "`use gif`" ] && [ "`use ungif`" ] ; then
      GIF_FLAG="--enable-gif";
    else
      GIF_FLAG="--disable-gif";

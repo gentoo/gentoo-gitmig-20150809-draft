@@ -85,8 +85,12 @@ HOMEPAGE="http://www.kernel.org/
 if [ ! $PN = "linux-extras" ] ; then
     RDEPEND=">=sys-apps/reiserfs-utils-3.6.25-r1"
     DEPEND=">=sys-apps/modutils-2.4.2 sys-devel/perl"
-#else
-#    DEPEND=">=sys-kernel/linux-sources-${PV}_${PR}"
+else
+    DEPEND=">=sys-kernel/linux-sources-${PV}_${PR}"
+fi
+if [ "`use build`" ] && [ $PN = "linux-sources" ] ; then
+    DEPEND=""
+    RDEPEND=""
 fi
 
 # this is not pretty...
@@ -321,7 +325,6 @@ src_install() {
 	    cd ${KS}/extras/lm_sensors-${SENV}
 	    make install
 	fi
-	
 	if [ "${PN}" = "linux" ] 
 	then
 	    dodir /usr/src
@@ -379,8 +382,17 @@ src_install() {
 	cd ${S}
 	make mrproper
 
-	echo ">>> Copying sources..."
-	cp -ax ${S} ${D}/usr/src
+	if [ "`use build`" ] ; then
+	    dodir /usr/src/linux-${KV}
+	    #grab includes and documentation only
+	    echo ">>> Copying includes and documentation..."
+	    cp -ax ${S}/include ${D}/usr/src/linux-${KV}
+	    cp -ax ${S}/Documentation ${D}/usr/src/linux-${KV}
+
+	else
+		echo ">>> Copying sources..."
+		cp -ax ${S} ${D}/usr/src
+	fi
 	
 	#don't overwrite existing .config if present
 	cd ${D}/usr/src/linux-${KV}
