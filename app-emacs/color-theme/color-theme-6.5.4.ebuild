@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/color-theme-6.5.4.ebuild,v 1.6 2004/11/01 03:42:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/color-theme-6.5.4.ebuild,v 1.7 2004/11/11 08:33:20 mkennedy Exp $
 
-inherit elisp
+inherit elisp eutils
 
 IUSE=""
 
@@ -14,3 +14,8 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 sparc"
 
 SITEFILE="50${PN}-gentoo.el"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${PV}-easy-menu-gentoo.patch
+}
