@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2-r5.ebuild,v 1.5 2004/02/27 03:55:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2-r5.ebuild,v 1.6 2004/02/29 21:36:00 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/eterm/${MY_P}.tar.gz http://www.eterm.org/download
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 IUSE="mmx etwin escreen"
 
 DEPEND="virtual/x11
