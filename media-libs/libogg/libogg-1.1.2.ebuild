@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.1.2.ebuild,v 1.9 2005/02/05 10:46:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.1.2.ebuild,v 1.10 2005/02/09 11:33:28 lu_zero Exp $
 
 inherit eutils
 
@@ -23,11 +23,4 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-
-	# remove the docs installed by make install, since I'll install
-	# them in portage package doc directory
-	rm -r "${D}"/usr/share/doc
-
-	dodoc AUTHORS CHANGES README
-	dohtml doc/*.{html,png}
 }
