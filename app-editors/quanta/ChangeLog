@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/quanta
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.24 2004/02/18 18:00:48 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.25 2004/02/24 13:28:32 caleb Exp $
+
+  24 Feb 2004; Caleb Tennis <caleb@gentoo.org> quanta-3.2.0.ebuild:
+  Mark x86 stable
 
   18 Feb 2004; Dylan Carlson <absinthe@gentoo.org> quanta-3.2.0.ebuild:
   added ~amd64 keyword.
