@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.99.5.ebuild,v 1.4 2004/08/21 15:28:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.99.5.ebuild,v 1.5 2004/08/23 10:47:05 usata Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/~suzhe/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~amd64"
+KEYWORDS="x86 alpha ~amd64"
 IUSE="gnome"
 
 RDEPEND="virtual/x11
@@ -27,6 +27,8 @@ DEPEND="${RDEPEND}
 	dev-lang/perl"
 PDEPEND="|| ( app-i18n/scim-m17n
 		app-i18n/scim-uim
+		app-i18n/scim-chinese
+		app-i18n/scim-hangul
 		>=app-i18n/scim-tables-0.4.0 )"
 
 ELTCONF="--reverse-deps"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.99.4.ebuild,v 1.4 2004/08/21 15:28:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.99.8.ebuild,v 1.1 2004/08/23 10:47:05 usata Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/~suzhe/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha"
+KEYWORDS="~x86 ~alpha ~ppc ~amd64"
 IUSE="gnome"
 
 RDEPEND="virtual/x11
@@ -25,8 +25,10 @@ RDEPEND="virtual/x11
 	!<app-i18n/scim-chinese-0.4.0"
 DEPEND="${RDEPEND}
 	dev-lang/perl"
-PDEPEND="|| ( app-i18n/scim-m17n
-		app-i18n/scim-uim
+PDEPEND="|| ( >=app-i18n/scim-m17n-0.1.2
+		>=app-i18n/scim-uim-0.1.3
+		>=app-i18n/scim-chinese-0.4.2
+		>=app-i18n/scim-hangul-0.1.1
 		>=app-i18n/scim-tables-0.4.0 )"
 
 ELTCONF="--reverse-deps"
@@ -74,6 +76,8 @@ pkg_postinst() {
 	einfo
 	einfo "where 'your_language' can be zh_CN, zh_TW, ja_JP.eucJP or any other"
 	einfo "UTF-8 locale such as en_US.UTF-8 or ja_JP.UTF-8"
+	einfo
+	einfo "If you prefer KDE/Qt interface, try emerge app-i18n/skim."
 	einfo
 	einfo "To use Chinese input methods:"
 	einfo "	# emerge app-i18n/scim-tables app-i18n/scim-chinese"

@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.29 2004/08/14 00:36:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.30 2004/08/23 10:47:05 usata Exp $
+
+*scim-0.99.8 (23 Aug 2004)
+
+  23 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> -scim-0.99.3.ebuild,
+  -scim-0.99.4.ebuild, scim-0.99.5.ebuild, scim-0.99.6.ebuild,
+  +scim-0.99.8.ebuild:
+  Version bumped. Added scim-chinese and scim-hangul to PDEPEND.
+  This closes bug #61320.
 
 *scim-0.99.6 (14 Aug 2004)
 
