@@ -1,3 +1,4 @@
+MD5 1dc01d5fc3e82c56f846bd8d8f856657 qt-3.2.2.ebuild 6097
 MD5 42cd5976a5be37ca6d3c663f2ed51bbf qt-3.2.1-r2.ebuild 6070
 MD5 232c9a440f58d6f1a15c750ba4a25c48 qt-3.1.2-r3.ebuild 4979
 MD5 3ea4b4de8bf408a89bad7560499c5517 qt-2.3.2-r1.ebuild 2274
@@ -18,6 +19,7 @@ MD5 7a287bc7609ad2420f70af6d4c58302f files/50qt2 63
 MD5 65c6cd464a60955c85a85b1dfd487c04 files/0004-qiconview_etc_ctrl_selecting.patch 2207
 MD5 edd5c27031cc5f29070a9094425f09d9 files/digest-qt-3.2.0 72
 MD5 b79277b535797e854be75d1c396de0f2 files/digest-qt-3.2.1 72
+MD5 1fd4137cd6f3d062dfd25523ee18468d files/digest-qt-3.2.2 72
 MD5 e4054a5914b182318d548c53beea9590 files/0020-designer-deletetabs.patch 3493
 MD5 c6dc1b6fadcb4897d4c7b0a768c2d196 files/qt-3.1.2-r3-qsocket.diff 447
 MD5 0c06df8bd83ccf54e9045ef5703a1703 files/0024-fix_enter_leave_notify.patch 1374

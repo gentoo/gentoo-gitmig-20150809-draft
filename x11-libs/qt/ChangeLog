@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.88 2003/10/02 20:29:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.89 2003/10/16 13:16:11 caleb Exp $
+
+*qt-3.2.2 (16 Oct 2003)
+
+  16 Oct 2003; root <root@gentoo.org> qt-3.2.2.ebuild,
+  files/0026-netwm-fullscreen.patch, files/0027-dnd-leak.patch,
+  files/0028-fix_sub_popup_crash.patch:
+  New Qt version.  Built off of qt-3.2.1-r2.ebuild, but added a few patches
+  from the KDE website to fix a few bugs that are (still) present in this
+  version of Qt.
 
 *qt-3.2.1-r2 (02 Oct 2003)
 
