@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4.ebuild,v 1.15 2004/12/18 09:26:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4.ebuild,v 1.16 2004/12/20 14:34:55 absinthe Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jdk-1.4"
 LICENSE="Apache-1.1"
 SLOT="2.4"
-KEYWORDS="x86 ~sparc ppc ~amd64 ~ppc64"
+KEYWORDS="x86 ~sparc ppc amd64 ~ppc64"
 IUSE="jikes doc"
 
 S=${WORKDIR}/jakarta-tomcat-5.0.19-src/jakarta-servletapi-5
