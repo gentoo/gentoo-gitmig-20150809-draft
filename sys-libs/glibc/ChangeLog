@@ -1,8 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.28 2002/11/16 10:48:35 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.29 2002/11/16 18:28:29 azarah Exp $
 
 *glibc-2.3.1-r2 (7 Nov 2002)
+
+  16 Nov 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.1-r2.ebuild :
+
+  Fix type-o that caused manpages not installing (bug #10645).
+  Update to use epatch.
 
   16 Nov 2002: Stefan Jones <cretin@gentoo.org> glibc-2.3.1-r2.ebuild :
   Changed --with-header to --with-headers to fix fake configure option.

@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.3 2002/11/16 10:48:35 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.4 2002/11/16 18:28:29 azarah Exp $
 
 IUSE="nls pic build"
 
-inherit flag-o-matic gcc
+inherit eutils flag-o-matic gcc
 
 filter-flags "-fomit-frame-pointer -malign-double"
 
@@ -71,14 +71,13 @@ pkg_config() {
 src_unpack() {
 	unpack glibc-${PV}.tar.gz || die
 	# Extract pre-made man pages.  Otherwise we need perl, which is a no-no.
-	mkdir man; cd man
+	mkdir -p ${S}/man; cd ${S}/man
 	tar xjf ${FILESDIR}/glibc-manpages-${PV}.tar.bz2 || die
 	cd ${S}
 	unpack glibc-linuxthreads-${PV}.tar.gz || die
 	
 	# This next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
-	einfo "Applying test-lfs-timeout patch..."
-	cd ${S}/io; patch -p0 < ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch > /dev/null || die
+	cd ${S}/io; epatch ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch
 
 	# This add back glibc 2.2 compadibility.  See bug #8766 and #9586 for more info,
 	# and also:
@@ -90,8 +89,7 @@ src_unpack() {
 	# Thanks to Jan Gutter <jangutter@tuks.co.za> for reporting it.
 	#
 	# <azarah@gentoo.org> (26 Oct 2002).
-	einfo "Applying ctype-compat patch..."
-	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-ctype-compat-v2.patch > /dev/null || die
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-ctype-compat-v2.patch
 
 	# One more compat issue which breaks sun-jdk-1.3.1.  See bug #8766 for more
 	# info, and also:
@@ -101,16 +99,14 @@ src_unpack() {
 	# Thanks to Jan Gutter <jangutter@tuks.co.za> for reporting it.
 	#
 	# <azarah@gentoo.org> (30 Oct 2002).
-	einfo "Applying libc_wait-compat patch..."
-	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-libc_wait-compat.patch > /dev/null || die
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-libc_wait-compat.patch
 
 	# One more compat issue ... libc_stack_end is missing from ld.so.
 	# Got this one from diffing redhat glibc tarball .. would help if
 	# they used patches and not modified tarball ...
 	#
 	# <azarah@gentoo.org> (7 Nov 2002).
-	einfo "Applying stack_end-compat patch..."
-	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-stack_end-compat.patch > /dev/null || die
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-stack_end-compat.patch
 }
 
 src_compile() {
