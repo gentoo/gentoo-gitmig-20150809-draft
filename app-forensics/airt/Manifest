@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 76ddb044ddd0c75c56c5439a03287677 airt-0.4.ebuild 1075
+MD5 dd09b3d3602805b1bbcac35ef93e82c6 metadata.xml 707
+MD5 51c610e08d33ffa49e4e32729eb97770 ChangeLog 389
+MD5 827cc186dcaac15ec33e2fdf18c78399 files/digest-airt-0.4 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB9vifmdTrptrqvGERAqocAJ9kdpKQ/xxD3yje+vdYYHWC9fLcNgCZAZwG
+DB/7lsF9gDrAa0AfdmWxHi0=
+=jPRI
+-----END PGP SIGNATURE-----
