@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.21 2005/01/02 23:24:33 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.22 2005/01/13 04:35:36 vapier Exp $
+
+*iproute2-2.6.10.20050112 (12 Jan 2005)
+
+  12 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  +iproute2-2.6.10.20050112.ebuild:
+  Version bump.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
