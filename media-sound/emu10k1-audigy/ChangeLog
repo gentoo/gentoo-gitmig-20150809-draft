@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/emu10k1-audigy 
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1-audigy/ChangeLog,v 1.1 2002/07/16 20:19:07 drobbins Exp $
+
+*emu10k1-audigy-20020214-r1 (16 Jul 2002)
+
+  16 Jul 2002; Daniel Robbins <drobbins@gentoo.org> : new version with a fixed
+  audigy-script that includes the right path for emu-dspmgr.  Also added
+  LICENSE, SLOT and KEYWORDS variables.  Oh.  And this ChangeLog :)
