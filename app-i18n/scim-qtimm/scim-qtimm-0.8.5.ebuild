@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.8.5.ebuild,v 1.1 2005/03/05 13:24:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.8.5.ebuild,v 1.2 2005/03/08 01:00:31 usata Exp $
 
 inherit kde-functions
 
@@ -26,6 +26,11 @@ pkg_setup() {
 }
 
 src_compile() {
+
+	# bug #84369
+	if which kde-config >/dev/null 2>&1 ; then
+		export KDEDIR=$(kde-config --prefix)
+	fi
 
 	econf $(use_enable nls) || die
 	emake -j1 || die "make failed."
