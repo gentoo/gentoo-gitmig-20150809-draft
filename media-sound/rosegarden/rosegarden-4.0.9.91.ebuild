@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.91_rc2.ebuild,v 1.4 2005/01/11 14:14:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.91.ebuild,v 1.1 2005/01/11 14:14:39 eradicator Exp $
 
 IUSE="alsa arts jack"
 
@@ -11,8 +11,7 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="MIDI and audio sequencer and notation editor."
 HOMEPAGE="http://www.rosegardenmusic.com/"
-#SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
-SRC_URI="http://www.telegraph-road.org/rosegarden/rosegarden-4-0.9.91rc2.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
