@@ -3,3 +3,4 @@ move app-misc/yasr app-accessibility/yasr
 
 move media-sound/festival app-accessibility/festival
 move media-sound/speechd app-accessibility/speechd
+move media-sound/speech-tools app-accessibility/speech-tools
