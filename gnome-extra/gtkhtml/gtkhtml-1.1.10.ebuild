@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10.ebuild,v 1.1 2003/04/05 19:59:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10.ebuild,v 1.2 2003/04/06 11:47:48 azarah Exp $
 
 IUSE="nls gnome"
 
@@ -37,8 +37,14 @@ DEPEND="${RDEPEND}"
 src_compile() {
 	elibtoolize
 
-	local myconf=""
-	use nls || myconf="${myconf} --disable-nls"
+	local myconf=
+	
+	use nls || {
+		myconf="${myconf} --disable-nls"
+
+		mkdir -p ${S}/intl
+		touch ${S}/intl/libgettext.h
+	}
 
 	# Evo users need to have bonobo support
 	#use bonobo \
