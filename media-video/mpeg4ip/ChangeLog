@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.8 2004/06/01 15:25:04 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.9 2004/06/05 15:25:52 tester Exp $
+
+  05 Jun 2004; <tester@gentoo.org> mpeg4ip-1.1.ebuild:
+  Made xvid, nas, alsa, esd, arts support use flags. Fixed a few bugs (including
+  #52693 and 52071). And disabled mp4live because I can't get it to build.
 
   01 Jun 2004; <tester@gentoo.org> mpeg4ip-1.0.ebuild, mpeg4ip-1.1.ebuild:
   only --disable-v4l2 is valid, fixes bug #52649, removed useless cruft from
