@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.29.ebuild,v 1.4 2003/03/28 09:18:02 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.29.ebuild,v 1.5 2003/06/29 15:24:07 aliz Exp $
 
 DESCRIPTION="featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 IUSE="readline tcpd ssl gnome mysql sqlite X static"
 

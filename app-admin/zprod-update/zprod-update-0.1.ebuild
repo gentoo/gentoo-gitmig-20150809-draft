@@ -1,6 +1,6 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-update/zprod-update-0.1.ebuild,v 1.2 2003/03/04 05:03:35 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-update/zprod-update-0.1.ebuild,v 1.3 2003/06/29 15:24:08 aliz Exp $
 
 DESCRIPTION="Gentoo Zope Product selection tool."
 SRC_URI=""
@@ -9,7 +9,7 @@ IUSE=""
  
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
  
 DEPEND=">=dev-util/dialog-0.7
         sys-apps/grep

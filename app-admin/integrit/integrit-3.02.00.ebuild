@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/integrit-3.02.00.ebuild,v 1.5 2003/06/11 20:48:38 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/integrit-3.02.00.ebuild,v 1.6 2003/06/29 15:24:07 aliz Exp $
 
 DESCRIPTION="file integrity verification program"
 SRC_URI="http://www.noserose.net/e/integrit/download/${P}.tar.gz"
 HOMEPAGE="http://integrit.sourceforge.net/"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"

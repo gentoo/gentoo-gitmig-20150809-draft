@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/xstow-0.4.6.ebuild,v 1.2 2003/04/23 14:24:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/xstow-0.4.6.ebuild,v 1.3 2003/06/29 15:24:08 aliz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://xstow.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="ncurses"
 
 DEPEND="virtual/glibc

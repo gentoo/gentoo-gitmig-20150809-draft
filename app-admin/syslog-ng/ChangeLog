@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.32 2003/05/31 07:43:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.33 2003/06/29 15:24:07 aliz Exp $
+
+*syslog-ng-1.4.16-r1 (12 Mar 2003)
+
+  29 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   31 May 2003; Seemant Kulleen <seemant@gentoo.org>
   syslog-ng-1.6.0_rc3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/pydf-0.9.6.ebuild,v 1.1 2003/05/04 01:32:19 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/pydf-0.9.6.ebuild,v 1.2 2003/06/29 15:24:07 aliz Exp $
 
 S="${WORKDIR}/${P}"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://melkor.dnp.fmph.uniba.sk/~garabik/pydf"
 LICENSE="as-is"
 DEPEND="dev-lang/python"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE=""
 
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.31.ebuild,v 1.3 2003/03/28 09:12:47 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.31.ebuild,v 1.4 2003/06/29 15:24:07 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The most popular logfile analyser in the world"
@@ -10,7 +10,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc"
 
 DEPEND=">=dev-libs/libpcre-3.4
 	>=media-libs/libgd-1.8.3

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modconf/modconf-0.2.43.ebuild,v 1.3 2003/03/28 09:48:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modconf/modconf-0.2.43.ebuild,v 1.4 2003/06/29 15:24:07 aliz Exp $
 
 # Some notes:  This should rather depend on dev-libs/newt, and use whiptail,
 #              not dev-util/dialog.
@@ -20,7 +20,7 @@ HOMEPAGE="http://packages.debian.org/stable/base/modconf.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="dev-util/dialog
 	virtual/modutils"
