@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>gaim-bugs@gentoo.org</email>
+</maintainer>
+<longdescription>Gaim XMMS Remote (known as gxr from here on) is a Gaim plugin that lets you control XMMS from within gaim. GXR lets you play, pause, and stop the current song. Aswell as navigate to the next and previous song in your playlist. It will also display your playlist as a submenu if you have that preference turned on.</longdescription>
+</pkgmetadata>
