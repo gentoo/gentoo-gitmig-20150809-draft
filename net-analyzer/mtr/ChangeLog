@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.12 2003/06/10 11:52:52 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.13 2003/06/17 21:23:50 gmsoft Exp $
 
   10 Jun 2003; Christian Birchinger <joker@gentoo.org> mtr-0.54.ebuild:
   Added sparc stable keyword
@@ -10,6 +10,9 @@
   Now installs into right location. closes #21495.
 
 *mtr-0.54 (17 May 2003)
+
+  17 Jun 2003; Guy Martin <gmsoft@gentoo.org> mtr-0.54.ebuild :
+  Added hppa to KEYWORDS.
 
   17 May 2003; Martin Holzer <mholzer@gentoo.org> mtr-0.54.ebuild:
   Version bumped. Closes #21135.
