@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/w3
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/ChangeLog,v 1.6 2004/03/08 17:12:36 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/ChangeLog,v 1.7 2004/03/08 21:12:07 avenj Exp $
+
+  08 Mar 2004; Jon Portnoy <avenj@gentoo.org> w3-4.0_pre47-r1.ebuild :
+  AMD64 keywords.
 
   08 Mar 2004; Bartosch Pixa <darkspecter@gentoo.org> w3-4.0_pre47-r1.ebuild:
   set ~ppc in keywords
