@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/placelesstranslationservice-fork
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/placelesstranslationservice-fork/ChangeLog,v 1.1 2004/03/26 22:52:07 batlogg Exp $
+
+*placelesstranslationservice-fork-1.0_rc3 (26 Mar 2004)
+
+  26 Mar 2004; Jodok Batlogg <batlogg@gentoo.org>;
+  placelesstranslationservice-fork-1.0_rc3.ebuild:
+  initial import
+
