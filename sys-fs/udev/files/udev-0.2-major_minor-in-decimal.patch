@@ -1,0 +1,50 @@
+--- udev-0.2/udev-add.c.orig	2003-07-24 17:54:49.000000000 +0200
++++ udev-0.2/udev-add.c	2003-10-12 07:22:56.406960904 +0200
+@@ -47,10 +47,15 @@
+  * Yes, this will probably change when we go to a bigger major/minor
+  * range, and will have to be changed at that time.
+  */
++/*
++ * NOTE:  The major/minor values stored in "dev" is no longer in hex!
++ *
++ * <azarah@gentoo.org> (12 Sep 2003)
++ */
+ static int get_major_minor(struct sysfs_class_device *class_dev, int *major, int *minor)
+ {
+ 	char temp[3];
+-	int retval = 0;
++	int retval = 0, i, j;
+ 
+ 	char *dev;
+ 
+@@ -60,15 +65,21 @@
+ 
+ 	dbg("dev = %s", dev);
+ 
+-	temp[0] = dev[0];
+-	temp[1] = dev[1];
+-	temp[2] = 0x00;
+-	*major = (int)strtol(&temp[0], NULL, 16);
+-
+-	temp[0] = dev[2];
+-	temp[1] = dev[3];
+-	temp[2] = 0x00;
+-	*minor = (int)strtol(&temp[0], NULL, 16);
++	/* Scan from the start of the string stored in "dev"
++	 * until we get to a ':' ... */
++	i = 0;
++	while (dev[i] != ':')
++		temp[i] = dev[i++];
++	temp[i] = 0x00;
++	*major = (int)strtol(&temp[0], NULL, 10);
++
++	/* Now continue scanning *after* the ':' until we get
++	 * to the end of the string ... */
++	j = ++i;
++	while (dev[i] != 0x00)
++		temp[i-j] = dev[i++];
++	temp[i-j] = 0x00;
++	*minor = (int)strtol(&temp[0], NULL, 10);
+ 
+ 	dbg("found major = %d, minor = %d", *major, *minor);
+ 

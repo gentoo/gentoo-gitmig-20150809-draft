@@ -1,0 +1,83 @@
+# <serial>
+ttyS*:root:tty:0660
+# <floppy>
+fd[0-1]*:root:floppy:0660
+# <sound>
+dsp*:root:audio:0660
+audio*:root:audio:0660
+midi*:root:audio:0660
+mixer*:root:audio:0660
+sequencer*:root:audio:0660
+sound/*:root:audio:0660
+snd/*:root:audio:0660
+beep:root:audio:0660
+admm*:root:audio:0660
+adsp*:root:audio:0660
+aload*:root:audio:0660
+amidi*:root:audio:0660
+dmfm*:root:audio:0660
+dmmidi*:root:audio:0660
+sndstat:root:audio:0660
+# <cdrom>
+cdrom*:root:cdrom:0660
+rdvd:root:cdrom:0660
+# <pilot>
+pilot:root:uucp0660
+# <jaz>
+jaz*:root:disk:0660
+# <zip>
+pocketzip*:root:disk:0660
+zip*:root:disk:0660
+# <ls120>
+ls120:root:disk:0660
+ls120*:root:disk:0660
+# <scanner>
+scanner:root:root:0600
+usb/scanner*:root:root:0600
+# <camera>
+camera*:root:root:0600
+usb/dc2xx*:root:root:0600
+usb/mdc800*:root:root:0600
+# <memstick>
+memstick*:root:root:0600
+# <flash>
+flash*:root:root:0600
+# <diskonkey>
+diskonkey*:root:disk:0660
+# <rem_ide>
+microdrive*:root:disk:0660
+# <fb>
+fb:root:root:0600
+fb[0-9]*:root:root:0600
+fb/*:root:root:0600
+# <kbd>
+kbd:root:root:0600
+# <joystick>
+js[0-9]*:root:root:0600
+# <v4l>
+video*:root:video:0660
+radio*:root:video:0660
+winradio*:root:video:0660
+vtx*:root:video:0660
+vbi*:root:video:0660
+video/*:root:video:0660
+vttuner:root:video:0660
+# <gpm>
+gpmctl:root:root:0700
+# <dri>
+nvidia*:root:video:0660
+3dfx*:root:video:0660
+# <mainboard>
+apm_bios:root:root:0600
+# <burner>
+scd*:root:cdrw:0660
+sg*:root:cdrw:0660
+pcd*:root:cdrw:0660
+pg*:root:cdrw:0660
+cdwriter:root:cdrw:0660
+# <usb>
+usb/dabusb*:root:usb:0660
+usb/mdc800*:root:usb:0660
+usb/rio500:root:usb:0660
+ttyUSB*:root:usb:0660
+
