@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r6.ebuild,v 1.4 2003/09/20 18:31:22 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r6.ebuild,v 1.5 2003/09/20 19:10:30 pappy Exp $
 
 IUSE="crypt nls static pam"
 
@@ -95,9 +95,6 @@ src_compile() {
 	if [ "`use static`" ] ; then
 		export LDFLAGS=-static
 	fi
-
-	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	has_version 'sys-devel/hardened-gcc' && export CC="${CC} -yet_exec"
 
 	econf || die "configure failed"
 
