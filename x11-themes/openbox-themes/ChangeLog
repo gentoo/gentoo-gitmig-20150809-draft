@@ -1,0 +1,9 @@
+# ChangeLog for x11-themes/openbox-themes
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/openbox-themes/ChangeLog,v 1.1 2003/09/09 23:16:27 tseng Exp $
+
+*openbox-themes-0.1 (09 Sep 2003)
+
+  09 Sep 2003; Brandon Hale <tseng@gentoo.org> openbox-themes-0.1.ebuild:
+  Initial commit.
+
