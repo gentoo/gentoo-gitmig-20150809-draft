@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ulogd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.16 2004/02/24 10:13:51 bazik Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.17 2004/02/27 11:16:23 aliz Exp $
+
+  27 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> ulogd-1.02.ebuild:
+  amd64 unmask.
 
   24 Feb 2004; Sven Blumenstein <bazik@gentoo.org> ulogd-1.02.ebuild:
   Stable on sparc.
