@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/zebra
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.3 2003/04/28 19:57:16 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.4 2003/05/31 19:31:50 solar Exp $
+
+*zebra-0.93b-r1 (31 May 2003)
+
+  28 Apr 2003; Ned Ludd <solar@gentoo.org> Manifest,
+  zebra-0.93b-r1.ebuild:
+  Added support for ospfapi extentions, and better 
+  {init,conf}.d scripts
 
 *zebra-0.93b (28 Apr 2003)
 
