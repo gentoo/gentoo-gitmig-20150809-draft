@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.53-r4.ebuild,v 1.3 2003/02/28 22:00:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.53-r4.ebuild,v 1.4 2003/04/05 03:31:06 weeve Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.washington.edu/pine/
 
 SLOT="0"
 LICENSE="PICO"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 IUSE="ssl ldap"
 
 DEPEND="virtual/glibc
