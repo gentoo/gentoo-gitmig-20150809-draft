@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/AppConfig-1.52-r1.ebuild,v 1.9 2004/07/14 16:33:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/AppConfig-1.52-r1.ebuild,v 1.10 2004/09/03 16:40:39 pvdabeel Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/author/ABW/AppConfig-1.52/"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 sparc alpha ~ppc"
+KEYWORDS="x86 amd64 sparc alpha ppc"
 IUSE=""
 
 src_unpack() {

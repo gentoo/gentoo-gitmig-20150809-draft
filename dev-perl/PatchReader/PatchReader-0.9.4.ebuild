@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/PatchReader-0.9.4.ebuild,v 1.4 2004/08/28 23:55:13 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/PatchReader-0.9.4.ebuild,v 1.5 2004/09/03 16:39:15 pvdabeel Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/J/JK/JKEISER/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86"
 
 DEPEND="dev-perl/File-Temp"
 IUSE=""

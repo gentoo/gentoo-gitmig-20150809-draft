@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/AppConfig-1.56-r2.ebuild,v 1.3 2004/07/14 16:33:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/AppConfig-1.56-r2.ebuild,v 1.4 2004/09/03 16:40:39 pvdabeel Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cpan.org/authors/id/ABW/${P}.tar.gz"
 
 LICENSE="Artistic | GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc ~alpha ~ppc"
+KEYWORDS="~x86 ~amd64 ~sparc ~alpha ppc"
 IUSE=""
 
 DEPEND="dev-perl/Test-Simple"
