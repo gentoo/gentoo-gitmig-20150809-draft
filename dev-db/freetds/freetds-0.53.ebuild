@@ -5,7 +5,7 @@
 S=${WORKDIR}/${P}
 DESCRIPTION="Tabular Datastream Library"
 SRC_URI="http://ibiblio.org/pub/Linux/ALPHA/freetds/${P}.tgz"
-HOMEPAGE="http://ibiblio.org/pub/Linux/ALPHA/freetds/"
+HOMEPAGE="http://www.freetds.org/"
 DEPEND="virtual/glibc"
 RDEPEND=${DEPEND}
 SLOT="0"

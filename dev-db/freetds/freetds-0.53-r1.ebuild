@@ -1,11 +1,11 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.53-r1.ebuild,v 1.1 2002/08/30 14:45:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.53-r1.ebuild,v 1.2 2002/09/20 20:43:57 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tabular Datastream Library"
 SRC_URI="http://ibiblio.org/pub/Linux/ALPHA/freetds/${P}.tgz"
-HOMEPAGE="http://ibiblio.org/pub/Linux/ALPHA/freetds/"
+HOMEPAGE="http://www.freetds.org/"
 
 DEPEND="virtual/glibc"
 
