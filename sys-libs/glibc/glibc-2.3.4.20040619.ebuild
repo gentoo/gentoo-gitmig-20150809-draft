@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.4 2004/06/24 23:04:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.5 2004/06/25 15:35:06 vapier Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
 
@@ -61,7 +61,7 @@ RDEPEND="virtual/os-headers
 	sys-apps/baselayout
 	nls? ( sys-devel/gettext )"
 
-PROVIDE="virtual/glibc"
+PROVIDE="virtual/glibc virtual/libc"
 
 
 # Theoretical cross-compiler support

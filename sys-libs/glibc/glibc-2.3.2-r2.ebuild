@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r2.ebuild,v 1.20 2004/06/24 23:04:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r2.ebuild,v 1.21 2004/06/25 15:35:06 vapier Exp $
 
 IUSE="nls pic build nptl debug"
 
@@ -75,7 +75,7 @@ RDEPEND="virtual/os-headers
 	nls? ( sys-devel/gettext )
 	build? ( >=sys-apps/portage-1.9.0 )"
 
-PROVIDE="virtual/glibc"
+PROVIDE="virtual/glibc virtual/libc"
 
 
 # Convert a string type kernel version (2.4.0) to an int (132096)

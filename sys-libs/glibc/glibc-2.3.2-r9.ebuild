@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.26 2004/06/24 23:04:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.27 2004/06/25 15:35:06 vapier Exp $
 
 IUSE="nls pic build nptl debug"
 
@@ -73,7 +73,7 @@ RDEPEND="virtual/os-headers
 
 PDEPEND="ppc? ( >=sys-kernel/linux-headers-2.4.22 )"
 
-PROVIDE="virtual/glibc"
+PROVIDE="virtual/glibc virtual/libc"
 
 
 # Try to get a kernel source tree with version equal or greater
