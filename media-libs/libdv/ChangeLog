@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.32 2004/06/24 23:07:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.33 2004/11/14 09:26:07 corsair Exp $
+
+  14 Nov 2004; Markus Rothe <corsair@gentoo.org> libdv-0.102.ebuild:
+  Marked ~ppc64; bug #68112
 
   01 Jun 2004; Travis Tilley <lv@gentoo.org> libdv-0.102.ebuild:
   stable on amd64
