@@ -1,18 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 87ebc355aaabac5f19b2aeb1d4e52015 ChangeLog 1255
+MD5 31077f14ce630dddd079485b543186b8 ChangeLog 1395
 MD5 c88092184926549fd28a504c79731af2 metadata.xml 256
-MD5 6b3b4bd4eb1793e19e8bda8eeb59540d xmms-lirc-1.2.ebuild 1095
-MD5 32fd7585379b697bac800f3031e6d5da xmms-lirc-1.4.ebuild 897
-MD5 0682813ee85839c5761a6af4469c2943 xmms-lirc-1.4-r1.ebuild 847
-MD5 19b4c490804812ecd2769abad0051675 files/digest-xmms-lirc-1.2 72
+MD5 eec91d4470c1e25aa53520d78405fd50 xmms-lirc-1.4.ebuild 847
 MD5 daf069664fbae9d0b8ac415216c608e5 files/digest-xmms-lirc-1.4 72
-MD5 daf069664fbae9d0b8ac415216c608e5 files/digest-xmms-lirc-1.4-r1 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBdji2ArHZZzCEUG0RAntlAJ4x6Cxf+IVsgjaw5FqSh0kn4qXo3QCfSXgB
-1B5SahNAgkL0xIWmA+/n0yg=
-=OFW+
+iD8DBQFBkW6AArHZZzCEUG0RAqodAKCAohXuJGeapzpVeBRoNzTrWw+H+QCeIYPG
+wK1eqqwlDqbiJ3VblaLalQI=
+=84Mr
 -----END PGP SIGNATURE-----
