@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.3.4.ebuild,v 1.6 2004/10/04 20:24:59 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.3.4.ebuild,v 1.7 2005/01/11 13:31:56 gustavoz Exp $
 
 # Variables 
 inherit eutils flag-o-matic

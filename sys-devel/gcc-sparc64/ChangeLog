@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc-sparc64
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.19 2004/11/30 04:58:42 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.20 2005/01/11 13:31:56 gustavoz Exp $
+
+  11 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gcc-sparc64-3.3.5.ebuild:
+  Stable on sparc
 
   29 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gcc-sparc64-3.3.5.ebuild:
