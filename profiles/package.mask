@@ -394,7 +394,7 @@ x11-terms/powershell
 
 # <raker@gentoo.org> (11 Sep 2002)
 # New qmail ebuild.  Please test tls, smtp-auth, and ldap support
-=net-mail/qmail-1.03-r9
+>=net-mail/qmail-1.03-r9
 
 # <seemant@gentoo.org> (10 Sep 2002)
 # masked coz all our packages only use the old version
