@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+*mc-4.6.0-r5 (29 Mar 2004)
+
+  29 Mar 2004; Heinrich Wendel <lanius@gentoo.org> mc-4.6.0-r5.ebuild,
+  files/mc-4.6.0-cpan-2003-1023.patch:
+  security bug #45957, mark stable
+
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> mc-4.5.55-r7.ebuild,
   mc-4.6.0-r2.ebuild, mc-4.6.0-r3.ebuild, mc-4.6.0-r4.ebuild:
   Don't assign default to S; header fix

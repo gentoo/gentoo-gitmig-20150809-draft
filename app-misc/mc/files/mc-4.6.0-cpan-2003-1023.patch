@@ -1,0 +1,19 @@
+diff -ru mc-4.5.55/vfs/direntry.c mc-4.5.55.new/vfs/direntry.c
+--- mc-4.5.55/vfs/direntry.c	2001-08-16 15:23:05.000000000 -0700
++++ mc-4.5.55.new/vfs/direntry.c	2004-01-06 16:36:00.000000000 -0800
+@@ -374,6 +374,7 @@
+ 	}
+     }
+ 
++#if 0
+     /* Convert absolute paths to relative ones */
+     if (*linkname == PATH_SEP) {
+ 	char *p, *q;
+@@ -391,6 +392,7 @@
+ 	}
+ 	linkname = buf;
+     }
++#endif
+ 
+     return (MEDATA->find_entry) (me, entry->dir, linkname, follow - 1, 0);
+ }
