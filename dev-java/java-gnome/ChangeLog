@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.23 2005/03/12 19:29:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.24 2005/03/31 19:12:54 axxo Exp $
+
+  31 Mar 2005; Thomas Matthijs <axxo@gentoo.org> java-gnome-0.8.3.ebuild:
+  add gnomeui & libgtkhtml to depend
 
 *java-gnome-2.8.3 (12 Mar 2005)
 
