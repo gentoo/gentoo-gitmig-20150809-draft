@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/rfswitch
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rfswitch/ChangeLog,v 1.1 2004/07/09 19:39:55 latexer Exp $
+
+*rfswitch-0.1 (09 Jul 2004)
+
+  09 Jul 2004; Peter Johanson <latexer@gentoo.org> +metadata.xml,
+  +rfswitch-0.1.ebuild:
+  Initial commit. Ebuild by yours truly.
+
