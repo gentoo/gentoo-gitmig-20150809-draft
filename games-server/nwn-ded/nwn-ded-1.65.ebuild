@@ -1,14 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.65.ebuild,v 1.1 2004/12/30 08:45:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.65.ebuild,v 1.2 2004/12/30 09:40:38 vapier Exp $
 
 inherit games
+
+DIALOG_URL_BASE=http://nwdownloads.bioware.com/neverwinternights/patch/dialog/
 
 DESCRIPTION="Neverwinter Nights Dedicated server"
 HOMEPAGE="http://nwn.bioware.com/downloads/standaloneserver.html"
 SRC_URI="http://nwdownloads.bioware.com/neverwinternights/standaloneserver/NWNDedicatedServer1.64.zip
 	http://content.bioware.com/neverwinternights/linux/165/linuxserverupdate1xxto165.tar.gz
-	http://nwdownloads.bioware.com/neverwinternights/patch/dialog/english/NWNEnglish1.65dialog.zip"
+	linguas_fr? ( ${DIALOG_URL_BASE}/french/NWNFrench${PV}dialog.zip )
+	linguas_de? ( ${DIALOG_URL_BASE}/german/NWNGerman${PV}dialog.zip )
+	linguas_it? ( ${DIALOG_URL_BASE}/italian/NWNItalian${PV}dialog.zip )
+	linguas_es? ( ${DIALOG_URL_BASE}/spanish/NWNSpanish${PV}dialog.zip )
+	!linguas_de? ( !linguas_fr? ( !linguas_es? ( !linguas_it? (
+		${PATCH_URL_BASE}eng.tar.gz ${DIALOG_URL_BASE}/english/NWNEnglish${PV}dialog.zip
+	) ) ) )"
 
 LICENSE="NWN-EULA"
 SLOT="0"
@@ -27,7 +35,8 @@ src_unpack() {
 	rm -f *dedserver*.{tar.gz,sit}
 
 	unpack linuxserverupdate1xxto165.tar.gz
-	unpack NWNEnglish1.65dialog.zip
+	local Aarray=(${A})
+	unpack ${Aarray[2]}
 }
 
 src_install() {
