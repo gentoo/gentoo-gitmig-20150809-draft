@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmms-xmmsmplayer
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-xmmsmplayer/ChangeLog,v 1.7 2004/07/13 08:33:42 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-xmmsmplayer/ChangeLog,v 1.8 2005/03/28 16:59:09 astinus Exp $
+
+  28 Mar 2005; Alex Howells <astinus@gentoo.org> xmms-xmmsmplayer-0.5.ebuild:
+  Seems to work for quite a few users, last reported failure was eradicator in
+  June 2004. Going to keyword ~amd64, would like to hear feedback from AMD64
+  users who've tested it out and had it work/fail. This is with regard to Bug
+  86944.
 
   13 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-xmmsmplayer-0.5.ebuild:
