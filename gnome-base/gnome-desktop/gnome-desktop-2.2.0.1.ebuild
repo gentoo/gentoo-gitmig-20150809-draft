@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.2.0.1.ebuild,v 1.7 2003/05/30 10:17:14 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.2.0.1.ebuild,v 1.8 2003/07/09 16:18:34 liquidx Exp $
 
 inherit gnome2
 
@@ -17,6 +17,7 @@ RDEPEND=">=x11-libs/gtk+-2.1
 	>=gnome-base/libgnomecanvas-2
 	>=gnome-base/gnome-vfs-2
 	>=x11-libs/startup-notification-0.5
+	app-text/scrollkeeper
 	!gnome-base/gnome-core"
 
 DEPEND="${RDEPEND}
