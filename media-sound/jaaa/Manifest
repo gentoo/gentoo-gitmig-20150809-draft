@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d4373b3325e1a64909410ab2860fe34f ChangeLog 599
+MD5 90a7e621ed702f87117247b8445b2709 ChangeLog 719
 MD5 48663a5d9b066b747a04bc13e7306c0c jaaa-0.1.1.ebuild 850
 MD5 ae2f0ce6b633cd6e8ea199bdabb85098 metadata.xml 227
+MD5 803e0c60840bfb3e78e3efb03cf729c4 jaaa-0.1.2.ebuild 847
 MD5 e6c376d9556fb2165bb225a463160036 files/digest-jaaa-0.1.1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBoncyArHZZzCEUG0RAtWjAJ9EGGTxBNoVsma5vp2C3X116t08YwCfXwrh
-meUB/FdmM/bEmPLpYK/jUhI=
-=CjHS
------END PGP SIGNATURE-----
+MD5 c5fa8f63fe2bbc7af6e782c5af3f1e69 files/digest-jaaa-0.1.2 62
