@@ -1,6 +1,9 @@
 # ChangeLog for media-video/tuxzap-programs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/ChangeLog,v 1.5 2004/06/25 00:51:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/ChangeLog,v 1.6 2004/08/12 21:09:12 chriswhite Exp $
+
+  13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
+  Adding missing metadata.xml. Taking over as maintainer.
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   tuxzap-programs-0.2.3.ebuild:
