@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gamma/xemacs-gamma-21.4.6.ebuild,v 1.2 2002/07/11 06:30:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gamma/xemacs-gamma-21.4.6.ebuild,v 1.3 2002/07/27 23:37:27 seemant Exp $
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
@@ -39,8 +39,6 @@ DEPEND=">=sys-libs/gdbm-1.8.0
 	tiff? ( media-libs/tiff )
 	png? ( =media-libs/libpng-1.2* )
 	jpeg? ( media-libs/jpeg )
-
-	mule? ()
 
 	X? ( virtual/x11 )"
 
