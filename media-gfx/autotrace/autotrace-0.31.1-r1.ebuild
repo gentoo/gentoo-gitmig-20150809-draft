@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r1.ebuild,v 1.8 2004/06/24 22:33:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r1.ebuild,v 1.9 2004/07/13 06:34:34 eradicator Exp $
 
 IUSE="png flash imagemagick"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://autotrace.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 alpha ~ppc ~amd64"
+KEYWORDS="~x86 alpha ~ppc ~amd64 ~sparc"
 
 DEPEND=">=x11-libs/gtkDPS-0.3.3
 	media-libs/libexif
