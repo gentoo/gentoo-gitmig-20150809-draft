@@ -1,5 +1,5 @@
-MD5 9d5d49d8b248243216097a67f18388c8 ChangeLog 665
+MD5 97269dad6d8145de7ed41459d07d9e8f ChangeLog 775
 MD5 17b4958b2bb0b4700e0ab8cdb753b9f6 metadata.xml 397
-MD5 31621a758d1dc8aa75e130ccc5d9e33c mkinitrd-3.5.7.ebuild 917
+MD5 166f29ba80d7acdafd51cbcbed61b79a mkinitrd-3.5.7.ebuild 927
 MD5 1a8259233cb009f44a8fe20a8aa828b5 files/digest-mkinitrd-3.5.7 66
 MD5 0bc4fe62070fcfc54254d0e8c636ef32 files/mkinitrd-selinux.diff 1007
