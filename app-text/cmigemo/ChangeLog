@@ -1,8 +1,12 @@
 # ChangeLog for app-text/cmigemo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.5 2004/03/11 18:56:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.6 2004/03/13 08:55:11 usata Exp $
 
 *cmigemo-1.2 (12 Mar 2004)
+
+  13 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> cmigemo-1.2.ebuild,
+  files/cmigemo-1.2-migemo-dict.diff:
+  Added missing migemo-dict patch.
 
   12 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> cmigemo-1.2.ebuild:
   Version bumped. Thanks to NODA Kai <g340299@mail.ecc.u-tokyo.ac.jp> for

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.2.ebuild,v 1.1 2004/03/11 18:56:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.2.ebuild,v 1.2 2004/03/13 08:55:11 usata Exp $
 
 IUSE="emacs"
 
@@ -24,7 +24,7 @@ src_unpack() {
 
 	unpack ${A}
 
-	has_version 'app-editors/vim-core' && epatch ${FILESDIR}/${P}-migemo-dict.diff
+	epatch ${FILESDIR}/${P}-migemo-dict.diff
 
 	touch ${S}/dict/SKK-JISYO.L
 
