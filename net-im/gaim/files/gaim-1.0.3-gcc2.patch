@@ -1,0 +1,16 @@
+--- gaim-1.0.3/src/log.c~	2004-11-11 14:11:43 -0500
++++ gaim-1.0.3/src/log.c	2004-11-16 22:41:18 -0500
+@@ -74,11 +74,12 @@ void gaim_log_free(GaimLog *log)
+ void gaim_log_write(GaimLog *log, GaimMessageFlags type,
+ 		    const char *from, time_t time, const char *message)
+ {
++	struct _gaim_logsize_user *lu;
++
+ 	g_return_if_fail(log);
+ 	g_return_if_fail(log->logger);
+ 	g_return_if_fail(log->logger->write);
+ 
+-	struct _gaim_logsize_user *lu;
+ 	(log->logger->write)(log, type, from, time, message);
+ 
+ 	lu = g_new(struct _gaim_logsize_user, 1);

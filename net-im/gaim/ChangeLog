@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.268 2004/11/16 20:18:01 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.269 2004/11/17 17:17:01 rizzo Exp $
+
+  17 Nov 2004; Don Seiler <rizzo@gentoo.org> +files/gaim-1.0.3-gcc2.patch,
+  gaim-1.0.3-r1.ebuild:
+  Fix for gcc-2.95.  Thanks to Matt Taylor for posting it.  Fixes bug #71483.
 
   16 Nov 2004; Don Seiler <rizzo@gentoo.org> gaim-1.0.3-r1.ebuild:
   Depending on dev-libs/nss-3.9.2-r1.  Fixes bug #71004
