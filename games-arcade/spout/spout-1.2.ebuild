@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/spout/spout-1.2.ebuild,v 1.1 2004/07/21 08:23:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/spout/spout-1.2.ebuild,v 1.2 2004/07/21 18:47:13 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -9,7 +9,7 @@ DESCRIPTION="Abstract Japanese caveflier / shooter"
 HOMEPAGE="http://code.mizzenblog.com/index.php?cat=2"
 SRC_URI="http://code.mizzenblog.com/spout/${MY_P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
