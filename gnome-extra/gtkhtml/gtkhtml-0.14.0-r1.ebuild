@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authour: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-0.14.0-r1.ebuild,v 1.1 2001/10/06 10:06:52 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-0.14.0-r1.ebuild,v 1.2 2001/10/07 12:32:47 azarah Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -37,7 +37,7 @@ src_install() {
 	make DESTDIR=${D} install || die "Package installation failed."
 
 	# Fix the double entry in Control Center
-	rm ${D}/opt/gnome/share/control-center/capplets/gtkhtml-properties.desktop
+	rm ${D}/usr/share/control-center/capplets/gtkhtml-properties.desktop
 
   	dodoc AUTHORS COPYING* ChangeLog README
   	dodoc NEWS TODO
