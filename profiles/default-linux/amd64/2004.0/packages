@@ -1,0 +1,33 @@
+# Copyright 2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.0/packages,v 1.1 2004/04/09 18:33:52 jhuebel Exp $
+
+>dev-lang/gpc-2.1
+
+*net-misc/dhcpcd
+*net-misc/openssh
+
+*>=sys-apps/baselayout-1.7.9-r1
+*sys-apps/hdparm
+*sys-apps/linux32
+*>=sys-apps/portage-2.0.25
+*<sys-apps/shadow-5
+*sys-apps/slocate
+>=sys-apps/sysklogd-1.4.1
+*>=sys-apps/texinfo-4.2-r1
+*sys-apps/util-linux
+
+*>=sys-devel/automake-1.6.1-r5
+*sys-devel/bin86
+*>=sys-devel/binutils-2.13.90.0.4
+*>=sys-devel/gcc-3.2
+*>=sys-devel/libtool-1.4.1-r4
+
+*sys-fs/devfsd
+
+*>=sys-libs/glibc-2.2.5
+*>=sys-libs/ncurses-5.2.20020112a
+*>=sys-libs/pam-0.75-r9
+*sys-libs/pwdb      
+
+>=x11-base/xfree-4.1.0-r12

@@ -1,0 +1,32 @@
+# Copyright 2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/packages.build,v 1.1 2004/04/09 18:33:52 jhuebel Exp $
+
+sys-apps/baselayout
+sys-libs/glibc
+sys-apps/texinfo
+app-shells/bash
+app-arch/bzip2
+sys-apps/debianutils
+sys-apps/diffutils
+sys-apps/file
+sys-apps/coreutils
+sys-apps/findutils
+sys-apps/gawk
+sys-apps/grep
+app-arch/gzip
+sys-apps/portage
+sys-apps/sed
+app-arch/tar
+sys-devel/binutils
+sys-devel/bison
+sys-devel/flex
+sys-devel/gcc
+sys-devel/make
+sys-devel/patch
+dev-lang/python
+net-misc/wget
+net-misc/rsync
+app-editors/nano
+sys-apps/net-tools
+sys-apps/less

@@ -1,0 +1,24 @@
+# Copyright 2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.0/virtuals,v 1.1 2004/04/09 18:33:52 jhuebel Exp $
+
+# Virtuals specific to the Gentoo/amd64 2004.0 release
+
+# Virtuals
+virtual/alsa			sys-kernel/gentoo-dev-sources
+virtual/bootloader		sys-boot/grub-static
+virtual/cdrtools		app-cdr/cdrtools
+virtual/cron			sys-apps/dcron
+virtual/kernel			sys-kernel/linux-headers
+virtual/linux-sources		sys-kernel/gentoo-dev-sources
+virtual/logger			app-admin/sysklogd
+virtual/modutils		sys-apps/module-init-tools
+virtual/os-headers		sys-kernel/linux-headers
+virtual/winkernel		sys-kernel/win4lin-sources
+
+# Package Remapping
+sys-apps/console-tools		sys-apps/kbd
+sys-apps/fileutils		sys-apps/coreutils
+sys-apps/reiserfs-utils		sys-fs/reiserfsprogs
+sys-apps/sh-utils		sys-apps/coreutils
+sys-apps/textutils		sys-apps/coreutils
