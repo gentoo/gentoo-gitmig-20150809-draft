@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.11 2003/04/12 16:22:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.12 2003/04/12 16:33:54 seemant Exp $
+
+*slocate-2.7-r1 (12 Apr 2003)
+
+  12 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
+  slocate-2.7-r1.ebuild:
+  OK, I bumped the version just because of people worrying about the bogus error
+  messages that slocate puts out when first run. For instance without a db file,
+  locate will error out. With a blank db file, it will report nothing, as
+  expected. So, we check if a db file exists, if not, we install a blank one.
+  Additionally, slocate cries about an update.conf file, so we just create a
+  blank one with a note pointing to the sample one in the doc folder.
 
 *slocate-2.7 (02 Feb 2003)
 
