@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/aspell-nl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/aspell-nl/ChangeLog,v 1.2 2002/08/15 00:31:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/aspell-nl/ChangeLog,v 1.3 2002/08/15 08:27:30 seemant Exp $
+
+*aspell-nl-0.0.0.10 (15 Aug 2002)
+
+  15 Aug 2002; Seemant Kulleen <seemant@gentoo.org>
+  aspell-nl-0.0.0.10.ebuild aspell-nl-0.0_pre10.ebuild :
+
+  removed the pre one in favour of the 0.0.0.10 eclass'd ebuild.
 
 *aspell-nl-0.0_pre10 (14 Aug 2002)
 
