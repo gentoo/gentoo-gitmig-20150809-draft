@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/dccserver
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dccserver/ChangeLog,v 1.1 2003/07/26 20:48:13 gregf Exp $
+
+*dccserver-0.3 (26 Jul 2003)
+
+  26 Jul 2003; Greg Fitzgerald <gregf@gentoo.org> dccserver-0.3.ebuild,
+  metadata.xml:
+  Initial Release. Closes bug #21610 submitted by Frank Zschockelt
+  <gentoo@freakysoft.de>
+
