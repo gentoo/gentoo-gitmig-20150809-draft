@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc., Emil Skoldberg (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.28-r1.ebuild,v 1.4 2003/10/27 16:15:23 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.28-r1.ebuild,v 1.5 2003/10/29 13:22:54 scandium Exp $
 
 inherit flag-o-matic
 
 # -fomit-frame-pointer breaks the compilation
 filter-flags -fomit-frame-pointer
 
-IUSE="debug doc gdbm gif gnome gtk java jpeg mysql oci8 odbc opengl pdflib postgres scanner tiff truetype zlib"
+IUSE="debug doc gdbm gif gnome gtk java jpeg mysql oci8 odbc opengl pdflib postgres scanner sdl tiff truetype zlib"
 
 S="${WORKDIR}/Pike-v${PV}"
 HOMEPAGE="http://pike.ida.liu.se/"
