@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.1.8.ebuild,v 1.3 2005/03/29 14:36:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.1.8.ebuild,v 1.4 2005/04/03 13:52:35 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -9,15 +9,16 @@ SRC_URI="http://dev.gentoo.org/~karltk/projects/java/distfiles/${P}.gentoo.tar.b
 HOMEPAGE="http://www.lugrin.ch/fesi"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="doc examples jikes source"
 DEPEND=">=virtual/jdk-1.3
-	jikes? ( >=dev-java/jikes-1.21 )
 	>=dev-java/ant-core-1.4
+	jikes? ( >=dev-java/jikes-1.21 )
+	source? ( app-arch/zip )"
+RDEPEND=">=virtual/jdk-1.3
 	=dev-java/bsf-2.3*
 	=dev-java/jakarta-oro-2.0*
-	>=dev-java/javacc-3.2"
-RDEPEND=">=virtual/jdk-1.3
+	>=dev-java/javacc-3.2
 	=dev-java/gnu-regexp-1.1*"
 
 src_unpack() {
