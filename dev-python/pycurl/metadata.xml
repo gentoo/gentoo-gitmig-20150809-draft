@@ -2,4 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>python</herd>
+<longdescription>
+PycURL is a Python interface to libcurl. PycURL can be used to fetch
+objects identified by a URL from a Python program, similar to the urllib
+Python module. All the functionality provided by libcurl can used through
+the pycurl interface. 
+</longdescription>
 </pkgmetadata>
