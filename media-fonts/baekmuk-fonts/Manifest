@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 9835327a8486ee37cefad2aeec0ce162 ChangeLog 3008
-MD5 30be1f36e8ab94f37ce7556277032f01 baekmuk-fonts-2.1-r1.ebuild 1509
-MD5 041fcf33d263f2e9e5de5f9813451964 baekmuk-fonts-2.2.ebuild 1219
+MD5 f18af720d3579c0c2e4a2c4552683b15 baekmuk-fonts-2.1-r1.ebuild 1513
+MD5 669d5219813feb24cc5de74413066ddc baekmuk-fonts-2.2.ebuild 1222
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
-MD5 02b55c492446f336c5bb2f2ddbfc1cc7 files/digest-baekmuk-fonts-2.1-r1 71
 MD5 117421a93602c1ac44a8e8286e8d072d files/digest-baekmuk-fonts-2.2 199
+MD5 02b55c492446f336c5bb2f2ddbfc1cc7 files/digest-baekmuk-fonts-2.1-r1 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBegptVWNWqTUmv+0RAvD/AKC2Yfw1x/IoEcPs9vnGxY3tNFa4PgCfXnor
-Jp04v294IOaB7wmim9gsawU=
-=B3R5
+iD8DBQFBib2EHTu7gpaalycRAub5AKCnOJZhhdZj3Esf6e7jP226W6xwWACfT2fs
+a4GWJIugp87xDtbwtB5VIxQ=
+=fNhe
 -----END PGP SIGNATURE-----
