@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3773 2005/03/29 23:45:12 avenj Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3774 2005/03/30 00:14:32 trapni Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -44,10 +44,6 @@ dev-util/gcvs
 # Masatomo Nakano <nakano@gentoo.org> (25 Mar 2005)
 # Masked due to dependency masked wxGTK-2.5*.
 =dev-db/pgadmin3-1.2.0
-
-# Christian Parpart <trapni@gentoo.org> (22 March 2005)
-# masked for testing
-=www-apps/mediawiki-1.4.0
 
 # Luca Barbato <lu_zero@gentoo.org> (22 March 2005)
 # Experimental ebuild
