@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.83 2004/12/11 10:48:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.84 2004/12/19 06:44:39 obz Exp $
+
+  19 Dec 2004; Mike Gardiner <obz@gentoo.org> gnome-session-2.8.1.ebuild:
+  Keyworded x86 and ppc for GNOME 2.8.1
 
   11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   gnome-session-2.8.0.ebuild:
