@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <scandium@gentoo.org> (18 July 2003)
+# package is obsolete and unsupported
+# use net-p2p/xmule instead
+net-p2p/lmule
+
 # <rac@gentoo.org> (17 July 2003) 
 # emergency mask because of confirmed reports of compilation failure 
 # see bug 24570 
