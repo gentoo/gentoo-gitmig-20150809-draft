@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f18aeff586452f47e7b1e51a41767a81 commons-primitives-1.0.ebuild 1099
-MD5 2b398b182dbf0d0a36120bb8a4cc185c ChangeLog 689
+MD5 3278f9d8979ea140b8192162de5d2665 ChangeLog 797
+MD5 d7a0b694d85dfda80ee25d19bf42674b commons-primitives-1.0.ebuild 1110
 MD5 0310767b2ff676820a832934e4121aef metadata.xml 510
 MD5 fc86ad5bce5744c5bb8b9e3f61f702d6 files/digest-commons-primitives-1.0 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVXX/rLF9B432nYRAgVjAJ9sTNwffXz7IR2kSgK2PAki5esbDACgqVbf
-ERqAC0MBxiV8dyfL+5zMXOg=
-=2RJm
------END PGP SIGNATURE-----
