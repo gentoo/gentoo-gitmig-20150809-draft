@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.21 2003/01/07 09:17:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.22 2003/01/19 17:09:23 tuxus Exp $
 
   07 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7.ebuild :
   Added warning message and some info on how to successfully emerge new version.
@@ -34,6 +34,9 @@
   Changed openssldir to /etc as suggested by Corporate Gadfly <corporate_gadfly@hotmail.com> in #9315.
 
 *opessl-0.9.6g (29 Aug 2002)
+
+  19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   06 Oct 2002; Jack Morgan <jmorgan@gentoo.org> :
   Added sparc/sparc64 keywords 
