@@ -1,0 +1,18 @@
+# ChangeLog for sys-apps/hotplug
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/ChangeLog,v 1.1 2004/09/21 00:27:44 gregkh Exp $
+
+*coldplug-20040920 (20 Sep 2004)
+
+  20 Sep 2004; Greg Kroah-Hartman <gregkh@gentoo.org> +metadata.xml,
+  +files/coldplug.rc, +coldplug-20040920.ebuild:
+  New package, coldplug.  Split out from hotplug to hold the 
+  init script that tries to load modules for devices that are
+  already present in the system at boot time.
+  
+  It can cause problems and lockups, so use at your own risk.
+  
+  I've disabled the ability to unload stuff at shutdown as that
+  just caused too many problems, lockups, and oopses.  No other
+  distro enables this feature, and now I realize why :)
+

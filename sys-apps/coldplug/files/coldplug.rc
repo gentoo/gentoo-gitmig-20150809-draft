@@ -1,0 +1,31 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/files/coldplug.rc,v 1.1 2004/09/21 00:27:44 gregkh Exp $
+
+depend() {
+	need modules
+}
+
+checkconfig() {
+	if [ ! -d /etc/hotplug ] ; then
+		eerror "Coldplug requires scripts & configs in /etc/hotplug !"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	
+	for RC in /etc/hotplug/*.rc
+	do
+		NAME=`basename $RC .rc`
+		ebegin "Coldplugging $NAME devices"
+		# We do not want to check the return status, as
+		# some of the scripts may fail due to drivers not
+		# compiled as modules ...
+		$RC start
+		eend 0
+	done
+}
+
