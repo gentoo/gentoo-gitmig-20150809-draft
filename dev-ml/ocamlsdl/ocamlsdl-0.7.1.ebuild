@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlsdl/ocamlsdl-0.7.1.ebuild,v 1.1 2004/08/25 21:05:32 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlsdl/ocamlsdl-0.7.1.ebuild,v 1.2 2005/02/17 20:15:56 mattam Exp $
 
 inherit findlib
 
@@ -11,14 +11,14 @@ SRC_URI="mirror://sourceforge/ocamlsdl/${P}.tar.gz"
 LICENSE="LGPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
-IUSE="doc opengl truetype noimage nomixer"
+KEYWORDS="x86 ppc"
+IUSE="doc opengl truetype" #noimage nomixer
 
 DEPEND=">=dev-lang/ocaml-3.04
 >=media-libs/libsdl-1.2
 opengl? ( >=dev-ml/lablgl-0.98 )
-!nomixer? ( >=media-libs/sdl-mixer-1.2 )
-!noimage? ( >=media-libs/sdl-image-1.2 )
+>=media-libs/sdl-mixer-1.2
+>=media-libs/sdl-image-1.2
 truetype? ( >=media-libs/sdl-ttf-2.0 )"
 
 src_compile() {
@@ -36,13 +36,13 @@ src_compile() {
 		fi
 	fi
 
-	use noimage && myconf="${myconf} --without-sdl-image"
-	use nomixer && myconf="${myconf} --without-sdl-mixer"
+	#use noimage && myconf="${myconf} --without-sdl-image"
+	#use nomixer && myconf="${myconf} --without-sdl-mixer"
 
 	econf $myconf \
 		`use_enable truetype sdl-ttf` \
 		|| die
-	make all || die
+	emake all || die
 }
 
 src_install() {
