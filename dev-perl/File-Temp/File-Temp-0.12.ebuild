@@ -16,6 +16,6 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/File/${MY_P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~sparc64 ~alpha"
 
 DEPEND="${DEPEND}"
