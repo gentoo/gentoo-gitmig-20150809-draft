@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.8 2004/03/17 22:52:27 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.9 2004/03/18 22:41:06 aliz Exp $
 
   17 Mar 2004; David Holm <dholm@gentoo.org> amarok-0.9.ebuild:
   Added to ~ppc.
@@ -18,6 +18,7 @@
   version bump
 
 *amarok-0.7.0 (22 Jan 2004)
+*amarok-0.8.3 (22 Jan 2004)
 
   22 Jan 2004; Heinrich Wendel <lanius@gentoo.org> amarok-0.6.0.ebuild,
   amarok-0.6.91.ebuild, amarok-0.7.0.ebuild, amarok-0.8.3.ebuild:

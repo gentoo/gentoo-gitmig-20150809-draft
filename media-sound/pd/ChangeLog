@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/pd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.8 2004/02/07 21:51:31 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.9 2004/03/18 22:41:07 aliz Exp $
 
   07 Feb 2004; Brian Harring <ferringb@gentoo.org> metadata.xml,
   pd-0.37.0.ebuild, files/pd-0.37.0-jack-fix.patch:
@@ -14,6 +14,7 @@
   Version bumped.
 
 *pd-0.36.0 (16 Aug 2003)
+*pd-0.35.0-r2 (16 Aug 2003)
 
   16 Aug 2003; jje <jje@gentoo.org> pd-0.35.0-r1.ebuild,
   pd-0.35.0-r2.ebuild, pd-0.36.0.ebuild, pd-0.37_pre8.ebuild,
