@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/bastille-2.1.1.ebuild,v 1.2 2003/08/02 10:24:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/bastille-2.1.1.ebuild,v 1.3 2003/08/03 03:12:17 solar Exp $
 
 inherit perl-module
 
-IUSE=""
+IUSE="tcltk"
 
 MY_PN=${PN/b/B}
 MY_P=${MY_PN}-${PV}
@@ -20,7 +20,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 
 RDEPEND="dev-perl/Curses
-	dev-perl/perl-tk"
+	tcltk? ( dev-perl/perl-tk )"
 
 src_unpack() {
 	unpack ${A}
@@ -31,14 +31,14 @@ src_compile() {
 
 	cd ${S}/psad/Psad.pm
 	SRC_PREP="no" perl-module_src_compile
-	make test
+	emake test
 
 	cd ${S}/psad/Unix-Syslog-0.98
 	SRC_PREP="no" perl-module_src_compile
-	make test
+	emake test
 
 	cd ${S}/psad/whois-4.5.29
-	make || die
+	emake || die
 	
 	cd ${S}
 }
@@ -75,7 +75,8 @@ src_install() {
 
 	perlinfo
 	insinto ${SITE_LIB}
-	doins Bastille_Curses.pm Bastille_Tk.pm
+	doins Bastille_Curses.pm
+	use tcltk && doins Bastille_Tk.pm
 	insinto ${SITE_LIB}/Curses
 	doins Curses/Widgets.pm
 
@@ -119,4 +120,5 @@ pkg_postinst() {
 		mknod -m 600 ${ROOT}/var/log/psadfifo p
 		eend $?
 	fi
+	use tcltk || einfo "When not using the Tk interface you will need to start use the -c flag when calling ${PN} from command line. example ${PN} -c --os GE1.4"
 }
