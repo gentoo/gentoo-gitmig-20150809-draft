@@ -1,5 +1,5 @@
-MD5 4a85d8c34cffeb7a96252da757b65978 facturalux-0.4.ebuild 1316
-MD5 3895bead4582831746cb508e6062ce93 ChangeLog 572
+MD5 f1e129b25270d7f530a2ee5e7af0c26f facturalux-0.4.ebuild 1324
+MD5 be423fa08fd5d4268672797446c79fbb ChangeLog 668
 MD5 3364b5f5a39640c81b871eb91173ff75 files/facturalux-0.4-gentoo.patch 2042
 MD5 8cc773b781c5ea9afc0bedc6a8a7500b files/facturalux-base-0.0-gentoo.patch 3416
 MD5 6f37b351d44e9d4cd4a1cbe8d05be6dc files/digest-facturalux-0.4 145
