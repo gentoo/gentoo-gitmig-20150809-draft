@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.7 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.8 2002/12/16 18:54:36 bcowan Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -15,6 +15,11 @@
   
   Fixed symlinks and "modernized" ebuild.
   
+  16 Dec 2002; Brad Cowan <bcowan@gentoo.org> dmapi-2.0.5-r1.ebuild,
+  files/dmapi-2.0.5-r1:
+  
+  Changed symlinks.
+
 *dmapi-20020330.ebuild (14 July 2002)
 
   21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
