@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r3.ebuild,v 1.11 2004/10/06 11:41:44 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r3.ebuild,v 1.12 2004/10/16 05:01:21 usata Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -58,7 +58,8 @@ src_compile() {
 	use nls || myconf="${myconf} --disable-nls"
 	if use X ; then
 		if use motif && use lesstif; then
-			export LIBS="-L/usr/X11R6/lib/lesstif/"
+			append-ldflags -L/usr/X11R6/lib/lesstif -R/usr/X11R6/lib/lesstif
+			export CPPFLAGS="${CPPFLAGS} -I/usr/X11R6/include/lesstif"
 		fi
 		myconf="${myconf}
 			--with-x

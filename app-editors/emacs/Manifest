@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 86057a34fde59eb633c7ae1bf852a2e8 ChangeLog 6203
+MD5 761200aae3263fd17926174bc09888d5 ChangeLog 6410
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 7c1bb3b83cc8d65547925c15dd605a71 emacs-21.3-r2.ebuild 2190
 MD5 4ff8a8c4e69f80929f2c1f7aac9a7dd3 emacs-18.59.ebuild 2002
-MD5 856465bdcf5420f48b1213e131fc36f2 emacs-21.3-r3.ebuild 2518
-MD5 ef77d63f86a77803c4d749b6dfaf356d emacs-21.3-r4.ebuild 3595
+MD5 e9abc3b23cdb10be0f4af44307852fda emacs-21.3-r3.ebuild 2604
+MD5 c8362e5135d10f660627227f2cff4e27 emacs-21.3-r4.ebuild 3682
 MD5 4163870348c1c0d4dc485dff749fe5cb files/digest-emacs-21.3-r2 126
 MD5 2f000567bd6037e79de677b0edd814ab files/60emacs-21.envd 34
 MD5 6aafc439ab1c05f97db2bfefc707bdcc files/emacs-21.desktop 196
@@ -21,7 +21,7 @@ MD5 2aaf4fc4c9513f13c4edb24327247f83 files/emacs-21.3-ppc64.patch 1622
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBbalPVWNWqTUmv+0RAg/BAKCVCpBhar2RVCzDN9Ub+9Pes7EZfgCfeUKY
-5pvsfNIe2dg8OYdCKl/rDTk=
-=Rdq9
+iD8DBQFBcKnKVWNWqTUmv+0RAmQeAJ9NKb9+91ppm59kBCmyzYd1DsrOGACglxxX
+5mcox4NweMQwZV5u9kyR6CM=
+=WqNF
 -----END PGP SIGNATURE-----

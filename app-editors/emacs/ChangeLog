@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.40 2004/10/13 22:22:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.41 2004/10/16 05:01:21 usata Exp $
+
+  16 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> emacs-21.3-r3.ebuild,
+  emacs-21.3-r4.ebuild:
+  Fixed compile problem when lesstif USE flag is set but openmotif is not
+  installed. This closes bug #67492.
 
   14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> emacs-21.3-r4.ebuild:
   Specify alternatives version explicitly.
