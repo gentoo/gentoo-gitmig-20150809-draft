@@ -526,10 +526,6 @@ app-emacs/monk
 # new version has some issues with gcc-3.2
 =dev-lisp/gcl-2.4.3
 
-# <aliz@gentoo.org> (14 Oct 2002)
-# sourcefile removed from upstream
-=media-libs/SoQt
-
 # <foser@gentoo.org> (13 Oct 2002)
 # gtkmm-addons is broken for gcc32
 x11-libs/gtkmm-addons
@@ -545,10 +541,6 @@ x11-libs/gtkmm-addons
 # Upstream too buggy to use. Doesn't seem to be a stable or pre
 # release that actually works.
 x11-terms/powershell
-
-# <aliz@gentoo.org> (26 Aug 2002)
-# Masked to force lynx-2.8.4.1c
-=net-www/lynx-2.8.4a-r4
 
 # <danarmak@gentoo.org> (20 Aug 2002)
 # masked for extensive testing
