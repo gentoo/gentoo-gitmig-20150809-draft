@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.43 2005/03/01 14:02:47 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.44 2005/03/04 23:26:28 ciaranm Exp $
+
+*dspam-3.4_rc1 (04 Mar 2005)
+
+  04 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> dspam-3.2.4.ebuild,
+  dspam-3.2.6.ebuild, dspam-3.2.7.ebuild, dspam-3.3.11.ebuild,
+  dspam-3.3.8.ebuild, dspam-3.4_beta1.ebuild, dspam-3.4_beta2.ebuild,
+  dspam-3.4_beta3.ebuild, dspam-3.4_rc1.ebuild, dspam-3.4_rc2.ebuild:
+  Move sys-apps/cronbase -> sys-process/cronbase
 
 *dspam-3.4_rc2 (01 Mar 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4_beta3.ebuild,v 1.2 2005/02/17 07:53:23 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4_beta3.ebuild,v 1.3 2005/03/04 23:26:28 ciaranm Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="mysql? ( >=dev-db/mysql-3.23 )
 		postgres? ( >=dev-db/postgresql-7.4.3 )
 		>=sys-libs/db-4.0
 		"
-RDEPEND="sys-apps/cronbase
+RDEPEND="sys-process/cronbase
 		app-admin/logrotate"
 KEYWORDS="~x86 ~ppc ~alpha"
 SLOT="0"
