@@ -1,6 +1,6 @@
-# ChangeLog for dev-perlHTML-CleanChangeLog/
+# ChangeLog for dev-perl/HTML-Clean
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Clean/ChangeLog,v 1.5 2002/12/13 10:56:38 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Clean/ChangeLog,v 1.6 2002/12/17 19:24:16 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
