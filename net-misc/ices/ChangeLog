@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/ices
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.1 2002/07/25 20:41:39 raker Exp $
+
+*ices-0.2.3 (25 Jul 2002)
+
+  25 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  ices-0.2.3.ebuild, files/digset-ices-0.2.3, files/docdir.diff :
+
+  Initial adding of ebuild to portage.  Leaving masked until I know the
+  status of the shared python library.
