@@ -1,8 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.54.ebuild,v 1.2 2002/12/15 11:58:45 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.54a.ebuild,v 1.1 2002/12/16 19:17:19 woodchip Exp $
 
 IUSE="static readline innodb berkdb tcpd ssl"
+
+# bug #11681; get b0rked code when using -march=k6 with this package.
+inherit flag-o-matic
+replace-flags "-march=k6-3" "-march=i586"
+replace-flags "-march=k6-2" "-march=i586"
+replace-flags "-march=k6" "-march=i586"
 
 SVER=${PV%.*}
 #normal releases:
@@ -17,6 +23,7 @@ SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/${SDIR
 S=${WORKDIR}/${P}
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 ~sparc alpha"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
@@ -24,8 +31,6 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	>=sys-libs/zlib-1.1.3
 	sys-devel/perl
 	sys-apps/procps"
-
-KEYWORDS="x86 ~sparc alpha"
 
 # HEY!
 # the benchmark stuff in /usr/share/mysql/sql-bench and
@@ -49,8 +54,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-# The following fix is due to a bug with bdb on sparc's. See: 
-# http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
+	# The following fix is due to a bug with bdb on sparc's. See: 
+	# http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
 	if use sparc || use sparc64
 	then
 		myconf="${myconf} --without-berkeley-db"
@@ -98,7 +103,7 @@ src_install() {
 	make install DESTDIR=${D} benchdir_root=/usr/share/mysql || die
 
 	# eeek, not sure whats going on here.. are these needed by anything?
-	use innodb && insinto /usr/lib/mysql && doins ${WORKDIR}/../libs/*
+#	use innodb && insinto /usr/lib/mysql && doins ${WORKDIR}/../libs/*
 
 	# move client libs, install a couple of missing headers
 	mv ${D}/usr/lib/mysql/libmysqlclient*.so* ${D}/usr/lib
