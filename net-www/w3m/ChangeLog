@@ -1,6 +1,12 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.46 2004/01/21 15:26:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.47 2004/02/07 13:16:21 usata Exp $
+
+*w3m-0.4.2-r8 (07 Feb 2004)
+
+  07 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> w3m-0.4.2-r8,
+  files/w3m-0.4.2-form.diff:
+  Fixed form rendering bug when --disable-m17n
 
 *w3m-0.4.2-r7 (22 Jan 2004)
 
