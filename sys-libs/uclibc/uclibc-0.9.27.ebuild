@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.7 2005/02/20 03:08:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.8 2005/02/21 02:22:12 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -17,20 +17,19 @@ if [[ ${CTARGET} == ${CHOST} ]] && [[ ${CHOST} != *-uclibc ]] ; then
 	export CTARGET=${CHOST%%-*}-pc-linux-uclibc
 fi
 
-# To make a new CVS_VER we do.
+# To make a new SVN_VER we do.
 # wget -O - http://uclibc.org/downloads/snapshots/uClibc-`date +%Y%m%d`.tar.bz2 | tar jxf -
-# tar jxf /usr/portage/distfiles/uClibc-0.9.26.tar.bz2
-# diff -urN --exclude .cvsignore --exclude CVS uClibc-0.9.26 uClibc | bzip2 - > uClibc-0.9.26-cvs-update-`date +%Y%m%d`.patch.bz2
-# rm -rf uClibc-0.9.26-cvs-update-`date +%Y%m%d`.patch.bz2  uClibc uClibc-0.9.26
+# tar jxf /usr/portage/distfiles/uClibc-0.9.27.tar.bz2
+# diff -urN --exclude .svn uClibc-0.9.27 uClibc | bzip2 - > uClibc-0.9.27-svn-update-`date +%Y%m%d`.patch.bz2
+# rm -rf uClibc-0.9.27-svn-update-`date +%Y%m%d`.patch.bz2  uClibc uClibc-0.9.27
 
 MY_P=${P/ucl/uCl}
-# only CVS_VER >= 20041117 is supported
-CVS_VER="20050114"
+SVN_VER="20050114"
 PATCH_VER="1.0"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
-	mirror://gentoo/${MY_P}-cvs-update-${CVS_VER}.patch.bz2
+	mirror://gentoo/${MY_P}-cvs-update-${SVN_VER}.patch.bz2
 	mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.bz2"
 
 LICENSE="LGPL-2"
@@ -120,8 +119,8 @@ src_unpack() {
 
 	########## PATCHES ##########
 
-	[[ -n ${CVS_VER} ]] && \
-		epatch ${WORKDIR}/${MY_P}-cvs-update-${CVS_VER}.patch
+	[[ -n ${SVN_VER} ]] && \
+		epatch ${WORKDIR}/${MY_P}-cvs-update-${SVN_VER}.patch
 
 	if [[ -n ${PATCH_VER} ]] ; then
 		unpack ${MY_P}-patches-${PATCH_VER}.tar.bz2
@@ -166,6 +165,7 @@ src_unpack() {
 	done
 	echo "UCLIBC_HAS_FULL_RPC=y" >> .config
 	echo "PTHREADS_DEBUG_SUPPORT=y" >> .config
+	echo "UCLIBC_HAS_TZ_FILE_READ_MANY=n" >> .config
 
 	#if use nls ; then
 	#	sed -i -e "s:# UCLIBC_HAS_LOCALE is not set:UCLIBC_HAS_LOCALE=y:" .config
@@ -259,11 +259,7 @@ src_compile() {
 		emake -j1 ${makeopts} utils || die "could not make utils"
 	fi
 
-	if ! use build ; then
-		if ! hasq maketest $RESTRICT ; then
-			src_test
-		fi
-	fi
+	! use build && ! hasq test $RESTRICT && src_test
 }
 
 src_test() {
@@ -283,6 +279,10 @@ src_install() {
 	# remove files coming from kernel-headers
 	# scsi is uclibc's own directory since cvs 20040212
 	rm -r "${D}"$(alt_prefix)/include/{asm,linux,asm-generic}
+
+	# clean up misc cruft
+	find "${D}"$(alt_prefix)/include -type d '(' -name CVS -o -name .svn ')' | xargs rm -r
+	find "${D}"$(alt_prefix)/include -type f -name .cvsignore | xargs rm -f
 
 	# Make sure we install the sys-include symlink so that when 
 	# we build a 2nd stage cross-compiler, gcc finds the target 
@@ -318,12 +318,6 @@ if [[ ${CHOST} == *-uclibc ]] ; then
 	if [[ ! -e ${ROOT}/etc/TZ ]] ; then
 		echo "Please remember to set your timezone in /etc/TZ."
 		echo "UTC" > "${ROOT}"/etc/TZ
-	fi
-
-	if [[ ! -e ${ROOT}/etc/ld.so.conf ]] ; then
-		[[ -d ${ROOT}/usr/X11R6/lib ]] \
-			&& echo "/usr/X11R6/lib" > "${ROOT}"/etc/ld.so.conf \
-			|| > "${ROOT}"/etc/ld.so.conf
 	fi
 
 	if [[ ${ROOT} == "/" ]] ; then
