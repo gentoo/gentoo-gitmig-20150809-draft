@@ -1,0 +1,9 @@
+# ChangeLog for sys-kernel/ppc-sources-crypto
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ChangeLog,v 1.1 2003/02/04 10:26:54 doctomoe Exp $
+
+*ppc-sources-crypto-2.4.20 (03 Feb 2003)
+
+  03 Feb 2003; Olivier Reisch <doctomoe@gentoo.org> all:
+  First ppc crypto kernel release. Basically a 2.4.20-ben5 with
+  cryptoapi-0.1.0, cryptoloop 0.0.1-pre1 and loop-jari patch for 2.4.20
