@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.12.0.ebuild,v 1.6 2004/12/11 09:52:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.12.0.ebuild,v 1.7 2004/12/12 04:37:31 joem Exp $
 
 inherit gnome2 eutils
 
@@ -19,9 +19,13 @@ IUSE="doc ssl"
 
 RDEPEND=">=dev-libs/glib-2
 	>=dev-libs/popt-1.5
-	>=dev-libs/libIDL-0.7.4
+	>=dev-libs/libIDL-0.8.2
 	dev-util/indent
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
+
+#libIDL dep in configure.in is wrong
+#needs at least 0.8.2, see bug #73521 <joem@gentoo.org>
+
 # FIXME linc is now integrated, but a block isn't necessary
 # and probably complicated FIXME
 
