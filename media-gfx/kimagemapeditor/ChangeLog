@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/kimagemapeditor
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimagemapeditor/ChangeLog,v 1.8 2004/08/30 18:53:11 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimagemapeditor/ChangeLog,v 1.9 2004/12/02 15:43:30 carlo Exp $
+
+  02 Dec 2004; Carsten Lohrke <carlo@gentoo.org>
+  kimagemapeditor-0.9.5.1.ebuild:
+  QA: need-kde() after R/DEPEND
 
   30 Aug 2004; Carsten Lohrke <carlo@gentoo.org>
   kimagemapeditor-0.9.5.1.ebuild:
