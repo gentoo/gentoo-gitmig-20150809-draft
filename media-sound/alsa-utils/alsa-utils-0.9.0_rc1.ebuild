@@ -10,7 +10,7 @@ S=${WORKDIR}/${P/_rc/rc}
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
-	=media-libs/alsa-lib-0.9.0_rc1"
+	~media-libs/alsa-lib-0.9.0_rc1"
 
 src_compile() {
 	./configure \
