@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.60 2004/05/11 20:56:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.61 2004/05/11 22:56:30 gmsoft Exp $
+
+  11 May 2004; Guy Martin <gmsoft@gentoo.org> exim-4.34.ebuild:
+  Marked stable on hppa.
 
   11 May 2004; Bryan Østergaard <kloeri@gentoo.org> exim-4.34.ebuild:
   Stable on alpha, bug #50217.
