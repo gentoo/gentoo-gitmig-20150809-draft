@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-6.1.ebuild,v 1.3 2004/10/14 22:04:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-6.1.ebuild,v 1.4 2004/10/31 05:14:26 vapier Exp $
 
 inherit eutils games
 
@@ -10,10 +10,10 @@ SRC_URI="mirror://sourceforge/gcompris/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="amd64 ppc x86"
 IUSE="python editor"
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	>=dev-libs/glib-2.0
 	=x11-libs/gtk+-2*
 	>=gnome-base/libgnomecanvas-2.0.2
@@ -23,13 +23,14 @@ DEPEND="virtual/x11
 	dev-libs/libxml2
 	dev-libs/popt
 	games-board/gnuchess
-	sys-apps/texinfo
-	app-text/texi2html
 	python? ( dev-lang/python )
 	editor? (
 		>=gnome-base/libgnome-1.96.0
 		>=gnome-base/libgnomeui-1.96.0
 	)"
+DEPEND="${RDEPEND}
+	sys-apps/texinfo
+	app-text/texi2html"
 
 src_compile() {
 	export GNUCHESS="${GAMES_BINDIR}/gnuchess"

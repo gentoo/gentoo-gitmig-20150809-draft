@@ -1,9 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 68f671d36fbd5ae3727b81b83d0fc6bd ChangeLog 1839
-MD5 9bcd06631031e99a9483f899ef2bcc78 gcompris-3.2.ebuild 1748
+MD5 91d4304a8e7edf5ec572c798c8e3e834 gcompris-6.1.ebuild 1208
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 ab9997908baeb9fe3b6bd9d105d9900d gcompris-4.2-r1.ebuild 1904
-MD5 0655ac80512839c34375e02df12c8a82 gcompris-6.1.ebuild 1193
-MD5 0346bcf761b5cad47d9ce1289da0305a files/digest-gcompris-3.2 63
 MD5 ed46e5543c3cac51faffd85ee6f2163e files/digest-gcompris-6.1 66
-MD5 6b1b23d5029e636524f9ac59e52ba52b files/4.2-lang.patch 392
-MD5 3819cc11a98a4e03ee7bc74f550f424c files/digest-gcompris-4.2-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhHTQHTu7gpaalycRAntYAKDlCuvE4Yv5gZV+PLAYBxpkUvf4+wCfTR7o
+2YdO1ZV0TuSfV3qlluTygw8=
+=fizc
+-----END PGP SIGNATURE-----
