@@ -1,0 +1,12 @@
+diff -ur mysql++-1.7.9-old/sqlplusint/connection.cc mysql++-1.7.9/sqlplusint/connection.cc
+--- mysql++-1.7.9-old/sqlplusint/connection.cc	2003-05-08 12:20:12.000000000 -0700
++++ mysql++-1.7.9/sqlplusint/connection.cc	2003-05-08 12:23:50.000000000 -0700
+@@ -109,7 +109,7 @@
+ }
+ 
+ std::string Connection::info () {
+-  char *i = mysql_info(&mysql);
++  const char *i = mysql_info(&mysql);
+   if (!i)
+     return string();
+   else

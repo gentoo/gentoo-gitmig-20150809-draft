@@ -1,0 +1,204 @@
+diff -rc mysql++-1.7.9/sqlplusint/connection1.hh mysql++-1.7.9.patched/sqlplusint/connection1.hh
+*** mysql++-1.7.9/sqlplusint/connection1.hh	Wed Feb 19 20:57:09 2003
+--- mysql++-1.7.9.patched/sqlplusint/connection1.hh	Wed Feb 19 21:01:07 2003
+***************
+*** 11,19 ****
+  #include <vector.h>
+  #include <deque.h>
+  #include <list.h>
+! #include <slist.h>
+! #include <set.h>
+! #include <map.h>
+  #include <multiset.h>
+  #include "define_short"
+  #include "exceptions.hh"
+--- 11,19 ----
+  #include <vector.h>
+  #include <deque.h>
+  #include <list.h>
+! #include <ext/slist>
+! #include <set>
+! #include <map>
+  #include <multiset.h>
+  #include "define_short"
+  #include "exceptions.hh"
+diff -rc mysql++-1.7.9/sqlplusint/convert1.hh mysql++-1.7.9.patched/sqlplusint/convert1.hh
+*** mysql++-1.7.9/sqlplusint/convert1.hh	Sat May 19 18:44:48 2001
+--- mysql++-1.7.9.patched/sqlplusint/convert1.hh	Wed Feb 19 21:01:07 2003
+***************
+*** 16,22 ****
+      operator TYPE () {return num;}\
+    };\
+  
+! extern double strtod (const char *, char **);
+  
+  mysql__convert(float, strtod)
+  mysql__convert(double, strtod)
+--- 16,22 ----
+      operator TYPE () {return num;}\
+    };\
+  
+! extern double strtod (const char *, char **) throw ();
+  
+  mysql__convert(float, strtod)
+  mysql__convert(double, strtod)
+***************
+*** 33,40 ****
+      operator TYPE () {return num;}\
+    };\
+  
+! extern long strtol(const char *str, char **ptr, int base);
+! extern unsigned long strtoul(const char *str, char **ptr, int base);
+  
+  mysql__convert(char, strtol)
+  mysql__convert(signed char, strtol)
+--- 33,40 ----
+      operator TYPE () {return num;}\
+    };\
+  
+! extern long strtol(const char *str, char **ptr, int base) throw();
+! extern unsigned long strtoul(const char *str, char **ptr, int base) throw();
+  
+  mysql__convert(char, strtol)
+  mysql__convert(signed char, strtol)
+***************
+*** 58,65 ****
+  extern "C" {
+  extern char *longlong2str(longlong val,char *dst,int radix);
+  extern char *longlong10_to_str(longlong val,char *dst,int radix);
+! extern longlong strtoll(const char *nptr,char **endptr,int base);
+! extern ulonglong strtoull(const char *nptr,char **endptr,int base);
+  }
+  mysql__convert(longlong, strtoll)
+  mysql__convert(ulonglong, strtoull)
+--- 58,65 ----
+  extern "C" {
+  extern char *longlong2str(longlong val,char *dst,int radix);
+  extern char *longlong10_to_str(longlong val,char *dst,int radix);
+! extern longlong strtoll(const char *nptr,char **endptr,int base) throw();
+! extern ulonglong strtoull(const char *nptr,char **endptr,int base) throw();
+  }
+  mysql__convert(longlong, strtoll)
+  mysql__convert(ulonglong, strtoull)
+diff -rc mysql++-1.7.9/sqlplusint/exceptions.hh mysql++-1.7.9.patched/sqlplusint/exceptions.hh
+*** mysql++-1.7.9/sqlplusint/exceptions.hh	Wed Feb 19 20:57:09 2003
+--- mysql++-1.7.9.patched/sqlplusint/exceptions.hh	Wed Feb 19 21:04:50 2003
+***************
+*** 13,39 ****
+  //: Exception thrown when a BadQuery is encountered
+  class BadQuery : public exception {
+  public:
+!   BadQuery(const string &er = "") : error(er) {}
+!   const string error; //: The error message
+    virtual const char* what( void ) const { return error.c_str(); }
+  };
+  
+  //: Exception structure thrown when a bad conversion takes place
+  class BadConversion : public exception {
+!   const string _what;
+  public:
+    const char*  type_name;  //:
+!   const string data;       //:
+    size_t       retrieved;  //:
+    size_t       actual_size;//:
+    BadConversion(const char* tn, const char* d, size_t r, size_t a)
+!     : _what(string("Tried to convert \"") + string(d ? d : "") + "\" to a \"" + string(tn ? tn : "")),
+        type_name(tn), data(d), retrieved(r), actual_size(a) {};
+  
+!   BadConversion(const string &wt, const char* tn, const char* d, size_t r, size_t a)
+      : _what(wt), type_name(tn), data(d), retrieved(r), actual_size(a) {};
+  
+!   BadConversion(const string& wt = "")
+      : _what(wt), type_name("unknown"), data(""), retrieved(0), actual_size(0) {};
+  
+    virtual const char* what( void ) const { return _what.c_str(); }
+--- 13,39 ----
+  //: Exception thrown when a BadQuery is encountered
+  class BadQuery : public exception {
+  public:
+!   BadQuery(const std::string &er = "") : error(er) {}
+!   const std::string error; //: The error message
+    virtual const char* what( void ) const { return error.c_str(); }
+  };
+  
+  //: Exception structure thrown when a bad conversion takes place
+  class BadConversion : public exception {
+!   const std::string _what;
+  public:
+    const char*  type_name;  //:
+!   const std::string data;       //:
+    size_t       retrieved;  //:
+    size_t       actual_size;//:
+    BadConversion(const char* tn, const char* d, size_t r, size_t a)
+!     : _what(std::string("Tried to convert \"") + std::string(d ? d : "") + "\" to a \"" + std::string(tn ? tn : "")),
+        type_name(tn), data(d), retrieved(r), actual_size(a) {};
+  
+!   BadConversion(const std::string &wt, const char* tn, const char* d, size_t r, size_t a)
+      : _what(wt), type_name(tn), data(d), retrieved(r), actual_size(a) {};
+  
+!   BadConversion(const std::string& wt = "")
+      : _what(wt), type_name("unknown"), data(""), retrieved(0), actual_size(0) {};
+  
+    virtual const char* what( void ) const { return _what.c_str(); }
+***************
+*** 42,50 ****
+  //: Thrown when a *Null* value is trying to be converted into a type
+  //: it can't convert to.
+  class BadNullConversion : public exception {
+!   const string _what;
+  public:
+!   BadNullConversion(const string &wt = "") : _what(wt) {}
+    virtual const char* what( void ) const { return _what.c_str(); }
+  };
+  
+--- 42,50 ----
+  //: Thrown when a *Null* value is trying to be converted into a type
+  //: it can't convert to.
+  class BadNullConversion : public exception {
+!   const std::string _what;
+  public:
+!   BadNullConversion(const std::string &wt = "") : _what(wt) {}
+    virtual const char* what( void ) const { return _what.c_str(); }
+  };
+  
+***************
+*** 52,60 ****
+  // Thrown when not enough parameters are provided for a
+  // template query.
+  class SQLQueryNEParms : public exception {
+!   const string _what;
+  public:
+!   SQLQueryNEParms(const char *c) : _what(string(c ? c : "")), error(c) {}
+    const char* error; //:
+    virtual const char* what( void ) const { return _what.c_str(); }
+  };
+--- 52,60 ----
+  // Thrown when not enough parameters are provided for a
+  // template query.
+  class SQLQueryNEParms : public exception {
+!   const std::string _what;
+  public:
+!   SQLQueryNEParms(const char *c) : _what(std::string(c ? c : "")), error(c) {}
+    const char* error; //:
+    virtual const char* what( void ) const { return _what.c_str(); }
+  };
+diff -rc mysql++-1.7.9/sqlplusint/result1.hh mysql++-1.7.9.patched/sqlplusint/result1.hh
+*** mysql++-1.7.9/sqlplusint/result1.hh	Wed Feb 19 20:57:09 2003
+--- mysql++-1.7.9.patched/sqlplusint/result1.hh	Wed Feb 19 21:03:09 2003
+***************
+*** 149,155 ****
+  // yet.
+  //
+  class Result : public ResUse, 
+! 	       public const_subscript_container<Result,Row,const Row>
+  {
+    friend class Connection;
+  public:
+--- 149,155 ----
+  // yet.
+  //
+  class Result : public ResUse, 
+! 	       virtual public const_subscript_container<Result,Row,const Row>
+  {
+    friend class Connection;
+  public:
