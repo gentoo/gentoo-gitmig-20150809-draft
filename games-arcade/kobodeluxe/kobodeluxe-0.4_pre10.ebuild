@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.2 2004/06/15 15:18:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.4_pre10.ebuild,v 1.3 2004/06/18 18:51:57 hansmi Exp $
 
 inherit games flag-o-matic
 
@@ -8,7 +8,7 @@ IUSE="opengl"
 
 DESCRIPTION="An SDL port of xkobo, a addictive space shoot-em-up"
 HOMEPAGE="http://www.olofson.net/kobodl/"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 LICENSE="GPL-2"
 
 MY_P="KoboDeluxe-${PV/_/}"
