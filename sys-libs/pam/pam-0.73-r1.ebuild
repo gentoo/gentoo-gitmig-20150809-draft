@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.73-r1.ebuild,v 1.1 2001/02/07 16:10:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.73-r1.ebuild,v 1.2 2001/02/07 21:04:43 achim Exp $
 
 P=pam-${PV}
 A=Linux-PAM-${PV}.tar.gz
@@ -28,6 +28,7 @@ src_compile() {
 
   cp Make.Rules Make.orig
   sed -e "s:/usr/bin/install:/bin/install:" \
+      -e "s:-Wpointer-arith::" \
       -e "s:^CFLAGS=:CFLAGS=${CFLAGS} :" Make.orig > Make.Rules
 
   if [ -z "`use berkdb`" ]
