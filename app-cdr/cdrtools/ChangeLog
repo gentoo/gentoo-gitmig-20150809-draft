@@ -1,11 +1,11 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.24 2002/12/09 04:17:37 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.25 2002/12/10 00:19:15 agenkin Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
- 
 *cdrtools-2.0 (2 Dec 2002)
+  9 Dec 2002; Arcady Genkin <agenkin@getoo.org> cdrtools-2.0_pre2.ebuild :
+  Version bump.
+
   2 Dec 2002; Arcady Genkin <agenkin@getoo.org> cdrtools-2.0_pre1.ebuild :
   Version bump.
 
