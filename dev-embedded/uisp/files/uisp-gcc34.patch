@@ -1,0 +1,10 @@
+--- Global.h.orig	2003-02-18 02:46:14.000000000 +0930
++++ Global.h	2005-01-03 08:36:31.379803544 +0930
+@@ -29,6 +29,7 @@
+ #define __GLOBAL
+ 
+ #include <assert.h>
++#include <stdio.h>
+ 
+ typedef unsigned char TByte;
+ typedef unsigned TAddr;
