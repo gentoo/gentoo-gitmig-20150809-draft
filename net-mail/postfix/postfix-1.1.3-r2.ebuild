@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.3-r2.ebuild,v 1.1 2002/02/20 23:48:21 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.3-r2.ebuild,v 1.2 2002/03/18 02:00:53 woodchip Exp $
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
@@ -117,10 +117,11 @@ src_install () {
 pkg_postinst() {
 	install -d 0755 ${ROOT}/var/spool/postfix
 
-	echo
-	echo "*****************************************************************"
-	echo "* NOTE:  Be sure to update /etc/postfix/master.cf to the latest *"
-	echo "*        version or else postfix will no longer work.           *"
-	echo "*****************************************************************"
-	echo
+	einfo "***************************************************************"
+	einfo "* NOTE: If config file protection is enabled and you upgraded *"
+	einfo "*       from an earlier version of postfix you must update    *"
+	einfo "*       /etc/postfix/master.cf to the latest version          *"
+	einfo "*       (/etc/postfix/._cfg????_master.cf). Otherwise postfix *"
+	einfo "*       will not work correctly.                              *"
+	einfo "***************************************************************"
 }
