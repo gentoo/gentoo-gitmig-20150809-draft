@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.17_rc1.ebuild,v 1.1 2003/08/21 04:12:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.17_rc1.ebuild,v 1.2 2003/09/11 01:25:54 msterret Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ S=${WORKDIR}/${P/_rc1}
 
 src_unpack() {
 	unpack ${A}
-        cd ${S}
+	cd ${S}
 	epatch ${FILESDIR}/libnids_gcc33_fix
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.16.ebuild,v 1.13 2003/08/23 04:54:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.16.ebuild,v 1.14 2003/09/11 01:25:54 msterret Exp $
 
 inherit eutils
 
@@ -17,8 +17,8 @@ KEYWORDS="x86 ~ppc sparc ~alpha"
 
 src_unpack () {
 	unpack ${A}
-        cd ${S}
-        epatch ${FILESDIR}/libnids_gcc33_fix
+	cd ${S}
+	epatch ${FILESDIR}/libnids_gcc33_fix
 }
 
 src_compile() {
