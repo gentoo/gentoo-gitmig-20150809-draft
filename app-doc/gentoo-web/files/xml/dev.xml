@@ -1,43 +1,51 @@
 <?xml version='1.0'?>
-<!DOCTYPE guide PUBLIC "-//Gentoo//DTD Guide XML V1.0//EN"
-"/usr/share/sgml/gentoo/guide/guide.dtd">
 <guide>
 <title>Gentoo Linux Development Guide</title>
-<author title="Chief Architect" email="drobbins@gentoo.org">Daniel Robbins</author>
-<author title="Editor" email="thomasfl@gentoo.org">Thomas Flavel</author>
+<author title="Chief Architect"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
+<author title="Editor"><mail link="thomasfl@gentoo.org">Thomas Flavel</mail></author>
 
 <abstract>This guide breifley covers how to keep your packages up to date, and how to maintain
 your system.</abstract>
 
-<version>1.0</version>
-<date>19 Feb 2001</date>
+<version>1.1</version>
+<date>09 Apr 2001</date>
 
-<chapter link="chap1">
+<chapter>
 <title>Package Management</title>
 
 <section>
 <title>Getting Started</title>
-<body><p>After you get Gentoo Linux installed and you play around a bit, you may find some bugs or
+<body>
+
+<p>After you get Gentoo Linux installed and you play around a bit, you may find some bugs or
 quirks in some packages, or maybe you'd like to install the latest Gentoo Linux software 
 packages or update your current packages. To do this, you'll need to download our Portage
 ports tree. We have provided an anonymous rsync server that you can use to get our latest
 Portage tree. Here's how you use it.</p>
-<p>First, make a directory called /usr/portage. Then, make sure rsync is installed. If it
-isn't, download it from our ibiblio mirror and install it by typing "<code>pkgmerge
-rsync-x.y.z.tbz2</code>". Then, use the following command to synchronize your Portage
+
+<p>First, make a directory called <path>/usr/portage</path>. Then, make sure rsync is installed. If it
+isn't, download it from our ibiblio mirror and install it by typing <c>pkgmerge
+rsync-x.y.z.tbz2</c>. Then, use the following command to synchronize your Portage
 directory:
-</p><pre># rsync -avz rsync://cvs.gentoo.org/gentoo-x86-portage/*
-/usr/portage
+</p>
+<pre>
+# <path>rsync -avz rsync://cvs.gentoo.org/gentoo-x86-portage/* /usr/portage</path>
 </pre>
 
 <p>Periodically, you'll want to run this next form of the rsync command, which will delete
-any old ebuild scripts. <font color="#FF0000">Please note that it will delete any of your
-personal changes or additions to the /usr/portage tree, so use this command with
-caution.</font> If you are making regular changes to your /usr/portage tree, you may want to
+any old ebuild scripts. </p>
+
+<warn>Please note that it will delete any of your
+personal changes or additions to the <path>/usr/portage tree</path>, so use this command with
+caution.</warn>
+
+<p>If you are making regular changes to your <path>/usr/portage</path> tree, you may want to
 contact Daniel for CVS access so that you can commit some or all of them to our official CVS
-tree. With that being said, here's the rsync update command with deletion:</p>
-<pre># rsync -avz --delete --exclude=distfiles/* --exclude=packages/*
-rsync://cvs.gentoo.org/gentoo-x86-portage/* /usr/portage
+tree. With that being said, here's the <c>rsync</c> update command with deletion:</p>
+
+<pre>
+# <i>rsync -avz --delete --exclude=distfiles/* --exclude=packages/* \
+rsync://cvs.gentoo.org/gentoo-x86-portage/* /usr/portage</i>
 </pre>
 </body>
 </section>
@@ -47,37 +55,55 @@ rsync://cvs.gentoo.org/gentoo-x86-portage/* /usr/portage
 <body>
 <p>Before using our Portage tree, it's important that you update Portage. To do this, do the 
 following:
-</p><pre># cd /usr/portage/sys-apps/portage
-# ebuild portage-x.y.z.ebuild merge</pre>
+</p>
+
+<pre>
+# <i>cd /usr/portage/sys-apps/portage</i>
+# <i>ebuild portage-x.y.z.ebuild merge</i>
+</pre>
 
 <p>Now you'll be using the most recent version of portage, and you can start to use our ebuild
 system to update your installed software.</p>
+
 </body>
 </section>
 
 <section>
 <title>Important Commands</title>
-<body><p>To see how up-to-date your system is, type "<code>portage-maintain | more</code>". 
-Portage will display a list of those packages which could be updated to the most recent
-version. To install a package, enter its directory in /usr/portage, i.e:
-</p><pre># cd /usr/portage/net-irc/xchat
-</pre><p>Then, run "ebuild merge":</p>
-<pre># ebuild xchat-1.4.2.ebuild merge
+<body><p> 
+To install a package, enter its directory in <path>/usr/portage</path>, i.e:
+</p>
+
+<pre>
+# <i>cd /usr/portage/net-irc/xchat</i> 
+</pre>
+
+<p>Then, run <c>ebuild merge</c>:</p>
+
+<pre>
+# <i>ebuild xchat-1.4.2.ebuild merge</i>
 </pre>
 
 <p>The xchat sources will be downloaded (and stored in /usr/portage/distfiles), verified, 
 unpacked, compiled and installed to a temporary directory. Then, they will be merged into the
 local filesystem and a package database will be created at /var/db/pkg/net-irc/xchat/CONTENTS,
 containing the files installed and the md5sums for all files.</p>
+
 </body>
 </section>
 
 <section>
 <title>Upgrading packages</title>
-<body><p>The standard way to upgrade packages under Gentoo Linux is to merge the new package,
+<body>
+
+<p>The standard way to upgrade packages under Gentoo Linux is to merge the new package,
 and then unmerge the old package. This is safe (and fun!) to do. First, merge the new package
 as per the above instructions. Then, uninstall the old package by typing something
-like:</p><pre># portage-unmerge net-irc/xchat-1.0.0-r1</pre>
+like:</p>
+
+<pre>
+# <i>ebuild /var/db/pkg/net-irc/xchat-1.0.0-r1/xchat-1.0.0-r1.ebuild unmerge</i>
+</pre>
 
 <p>It's important to specify the category and exact package version in the above format.  
 Then, this particular package will be unmerged. Portage uses what is called a "safe"
