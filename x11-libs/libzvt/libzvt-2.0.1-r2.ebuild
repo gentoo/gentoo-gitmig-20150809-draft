@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.1-r2.ebuild,v 1.16 2004/10/01 00:21:04 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.1-r2.ebuild,v 1.17 2004/10/22 22:51:22 liquidx Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Zed's Virtual Terminal Library"
 HOMEPAGE="http://www.gnome.org/"
-SRC_URI="mirror://gnome/2.0.0/sources/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"

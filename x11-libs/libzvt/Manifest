@@ -1,13 +1,15 @@
-MD5 054165a973cf4854efa7bdcc3a7ef385 libzvt-2.0.0-r1.ebuild 1148
-MD5 fc2ca8eb07648f798ace6d6375664e18 libzvt-2.0.0.ebuild 1091
-MD5 8e7f06f356359165d78aad9993e66dd1 libzvt-2.0.1.ebuild 1126
-MD5 6db7551556860e48ba58c605d1d9de34 libzvt-2.0.1-r1.ebuild 647
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 22b9e27df247d574013c79c4b3568160 libzvt-2.0.1-r2.ebuild 800
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 009e915a22eac8bc6954b2661d5f8207 ChangeLog 2766
-MD5 cceb6479fbaceb1e7c8698fe547a98c3 files/digest-libzvt-2.0.0-r1 65
-MD5 cceb6479fbaceb1e7c8698fe547a98c3 files/digest-libzvt-2.0.0 65
-MD5 c447acdeafe5afe1c8c51337db30ddf9 files/digest-libzvt-2.0.1 65
+MD5 f49479d0f6f4969c3e9cd2aa344c8287 libzvt-2.0.1-r2.ebuild 743
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 c447acdeafe5afe1c8c51337db30ddf9 files/digest-libzvt-2.0.1-r2 65
-MD5 c447acdeafe5afe1c8c51337db30ddf9 files/digest-libzvt-2.0.1-r1 65
 MD5 e6d5d4cb4b88822dc078b4081252e9ec files/libzvt-2.0.1-gentoo.diff 689
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBeY78Rkyva5PS18kRAi3CAJ9dyrKq0EudgKnJh/TUZMQUdiIiyQCgxPTj
+Y0MSllEbfdeFyFWVIlGfbKo=
+=F94p
+-----END PGP SIGNATURE-----
