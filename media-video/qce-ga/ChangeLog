@@ -1,6 +1,9 @@
 # ChangeLog for media-video/qce-ga
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qce-ga/ChangeLog,v 1.2 2003/02/19 00:59:22 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qce-ga/ChangeLog,v 1.3 2003/05/23 19:43:41 liquidx Exp $
+
+  23 May 2003; Alastair Tse <liquidx@gentoo.org> qce-ga-0.40d.ebuild:
+  marking as stable x86
 
 *qce-ga-0.40d (18 Feb 2003)
 
