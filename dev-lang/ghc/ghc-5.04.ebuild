@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-$ $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.ebuild,v 1.3 2002/08/14 15:48:13 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.ebuild,v 1.4 2002/08/21 04:05:18 george Exp $
 
 
 # ebuild for Glorious Glasgow Haskell
@@ -45,6 +45,7 @@ DEPEND="virtual/glibc
 		>=sys-devel/make-3.79.1
 		>=sys-apps/sed-3.02.80
 		>=sys-devel/flex-2.5.4a
+		>=dev-libs/gmp-4.1
 		opengl? ( virtual/opengl
 				virtual/glu
 				virtual/glut )"

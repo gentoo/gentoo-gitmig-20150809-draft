@@ -1,10 +1,14 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.3 2002/08/08 20:06:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.4 2002/08/21 04:05:18 george Exp $
 
 *ghc-5.04.ebuild (08 Aug 2002)
 
-  18 Jun 2002; George Shapovalov <george@gentoo.org> ghc-5.04.ebuild, files/ghc-5.04-gentoo.patch.bz2 :
+  19 Aug 2002; George Shapovalov <george@gentoo.org> ghc-5.04.ebuild :
+
+  fixed header, added >=dev-libs/gmp-4.1 dependency
+
+  08 Jul 2002; George Shapovalov <george@gentoo.org> ghc-5.04.ebuild, files/ghc-5.04-gentoo.patch.bz2 :
 
   new version,
   bzipped patched (too large otherwise),
