@@ -1,3 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ee20cf0b24313d215a4c8d02068412f0 ChangeLog 5239
+MD5 d0dad7daa0e6d356fc35f778fed36006 metadata.xml 225
+MD5 85e01aba6ef80152b17fa48f232e6e8d iproute2-2.4.7.20020116.ebuild 2789
+MD5 de5c06a8683121911feedbaec39a610d iproute2-2.4.7.20010824-r5.ebuild 2727
+MD5 039fbc8702f8cb4b0c9ff1d15a1c515a iproute2-2.6.7.20040608.ebuild 1738
 MD5 6430380d9057802a2f24581b2e7e1b3d files/digest-iproute2-2.4.7.20010824-r5 150
 MD5 299a059309d3dbe6202e0380c34bd7e1 files/digest-iproute2-2.4.7.20020116 83
 MD5 9977add19060fbeac6a3582ce8a5e098 files/2.4.7.20020116-htb.patch 9207
@@ -7,7 +15,11 @@ MD5 d3a321fa8b70eef6df11d7343a14fd02 files/2.4.7.20020116-hfsc.patch 9507
 MD5 2d163d8622e69d17eb7ba73a61ffb51e files/2.4.7.20020116-local-exploit-fix.patch 666
 MD5 0d2d21898d30525b3b77936c68a53dd4 files/2.4.7.20020116-manpages.patch 107468
 MD5 249c1788ee3cc7a3d55dee871076a5a1 files/2.4.7.20020116-misc-deb-fixes.patch 977
-MD5 e9bcfff4bfbe70910ca35d59c12f7e4f ChangeLog 5024
-MD5 d0dad7daa0e6d356fc35f778fed36006 metadata.xml 225
-MD5 6547ba67872e9dc7328d5c89cbb1d980 iproute2-2.4.7.20020116.ebuild 2793
-MD5 de5c06a8683121911feedbaec39a610d iproute2-2.4.7.20010824-r5.ebuild 2727
+MD5 efc13e1a9a4a7bd080305d540ff5d48d files/digest-iproute2-2.6.7.20040608 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA16DoHTu7gpaalycRAnA+AJ9Ua4RJmKC8zRjq/QgHn3rcSS1jYgCgrpLf
+v2TMqUUDs5DVPeJb0ks+kdk=
+=akyG
+-----END PGP SIGNATURE-----
