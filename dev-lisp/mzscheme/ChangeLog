@@ -1,6 +1,6 @@
 # ChangeLog for dev-lisp/mzscheme
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/ChangeLog,v 1.4 2002/09/08 19:49:53 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/ChangeLog,v 1.5 2002/09/21 00:31:00 vapier Exp $
 
 *mzscheme-201 ( 17 Feb 2002 )
 
@@ -9,6 +9,9 @@
   collects. Ebuild submitted by Jeremiah Mahler <jmahler@pacbell.net>.
 
 *mzscheme-103_pre1 ( 17 Feb 2002 )
+
+  20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated HOMEPAGE variable
 
   01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> mzscheme-103_pre1.ebuild :
 
