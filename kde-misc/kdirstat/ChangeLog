@@ -1,0 +1,75 @@
+# ChangeLog for app-misc/kdirstat
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/ChangeLog,v 1.1 2004/10/30 17:23:11 carlo Exp $
+
+*kdirstat-2.3.7 (30 Oct 2004)
+
+  30 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  +files/kdirstat-2.4.0-configure.patch, +files/kdirstatapp.h.fix.patch,
+  +kdirstat-2.2.0.ebuild, +kdirstat-2.3.7.ebuild, +kdirstat-2.4.0.ebuild:
+  Moved from app-misc/kdirstat to kde-misc/kdirstat.
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> kdirstat-2.4.0.ebuild:
+  Stable on sparc.
+
+  19 Oct 2004; <motaboy@gentoo.org> +files/kdirstat-2.4.0-configure.patch,
+  kdirstat-2.4.0.ebuild:
+  Added a patch for the configure script to honor the "arts" USE flag. Now it
+  should compile also with USE=-arts.
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> kdirstat-2.4.0.ebuild:
+  inherit eutils, trim trailing whitespace
+
+  28 Jun 2004; Carsten Lohrke <carlo@gentoo.org>
+  +files/kdirstatapp.h.fix.patch, kdirstat-2.2.0.ebuild,
+  kdirstat-2.3.7.ebuild, kdirstat-2.4.0.ebuild:
+  gcc-3.4 fix (thanks to morfic),
+  QA: mirror://, need-kde, kde-base -> kde
+
+  01 May 2004; Dominik Stadler <centic@gentoo.org> kdirstat-2.2.0.ebuild,
+  kdirstat-2.3.7.ebuild, kdirstat-2.4.0.ebuild:
+  Add missing IUSE and SLOT
+
+  23 Mar 2004; <augustus@gentoo.org> kdirstat-2.4.0.ebuild:
+  Added ~amd64 keyword.
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> kdirstat-2.4.0.ebuild:
+  Added ~sparc keyword.
+
+*kdirstat-2.4.0 (29 Aug 2003)
+
+  29 Aug 2003; Caleb Tennis <caleb@gentoo.org>:
+  Version bump
+
+*kdirstat-2.3.7 (11 Aug 2003)
+
+  11 Aug 2003; Caleb Tennis <caleb@gentoo.org>:
+  New version.
+
+*kdirstat-2.2.0 (1 Jun 2002)
+
+  1 Jun 2002; Dan Armak <danarmak@gentoo.org> Changelog:
+  
+  New upstream version.
+
+*kdirstat-2.1.1_beta0 (4 May 2002)
+
+  4 May 2002; Dan Armak <danarmak@gentoo.org> Changelog:
+  
+  New upstream version, first kde3 version.
+
+*kdirstat-2.0.0 (5 Mar 2002)
+
+  5 Mar 2002; Dan Armak <danarmak@gentoo.org> Changelog:
+  
+  New upstream version, described as the final kde2 version.
+
+*kdirstat-1.8.4_beta (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
