@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r2.ebuild,v 1.11 2005/01/01 16:15:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r2.ebuild,v 1.12 2005/03/04 11:43:13 lanius Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.easysw.com/"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="ppc"
+KEYWORDS="ppc amd64"
 IUSE="X cups cjk"
 
 DEPEND="virtual/libc
@@ -90,4 +90,8 @@ src_install() {
 		unpack adobe-cmaps-200204.tar.gz
 		unpack acro5-cmaps-2001.tar.gz
 	fi
+
+	# bug #83876, collision with gcc
+	rm -f ${D}/usr/share/man/de/man1/ansi2knr.1.gz
+	rm -f ${D}/usr/share/man/man1/ansi2knr.1.gz
 }

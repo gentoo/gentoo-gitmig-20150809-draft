@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r7.ebuild,v 1.20 2005/01/01 16:15:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r7.ebuild,v 1.21 2005/03/04 11:43:13 lanius Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -140,4 +140,8 @@ src_install() {
 	#einstall
 	#dosed "s:^prefix=.*:prefix=/usr:" /usr/bin/ijs-config
 	make DESTDIR="${D}" install || die
+
+	# bug #83876, collision with gcc
+	rm -f ${D}/usr/share/man/de/man1/ansi2knr.1.gz
+	rm -f ${D}/usr/share/man/man1/ansi2knr.1.gz
 }

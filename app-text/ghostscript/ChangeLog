@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.95 2005/03/04 11:24:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.96 2005/03/04 11:43:13 lanius Exp $
+
+  04 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
+  ghostscript-7.05.6-r2.ebuild, ghostscript-7.07.1-r7.ebuild,
+  ghostscript-7.07.1-r8.ebuild:
+  stable on x86, fix man pages
 
   04 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
   -ghostscript-7.05.6-r1.ebuild, -ghostscript-7.05.6.ebuild,
@@ -68,7 +73,7 @@
   08 Oct 2004; Guy Martin <gmsoft@gentoo.org> ghostscript-7.07.1-r7.ebuild:
   Marked stable on hppa.
 
-  07 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  07 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   ghostscript-7.07.1-r7.ebuild:
   Stable on alpha, bug 66357.
 
