@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/alternatives.eclass,v 1.6 2003/11/01 18:33:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/alternatives.eclass,v 1.7 2003/11/24 10:57:06 liquidx Exp $
 
 # Author :     Alastair Tse <liquidx@gentoo.org> (03 Oct 2003)
 # Short Desc:  Creates symlink to the latest version of multiple slotted
@@ -81,15 +81,14 @@ alternatives_makesym() {
 	for alt in ${ALTERNATIVES}; do
 		if [ -f "${pref}${alt}" ]; then
 			einfo "Linking ${alt} to ${pref}${SYMLINK}"
-			[ -L "${pref}${SYMLINK}" ] && rm -f ${pref}${SYMLINK}
 			#are files in same directory?
 			if [ "${alt%/*}" = "${SYMLINK%/*}" ]
 			then
 				#yes; strip leading dirname from alt to create relative symlink
-				ln -s ${alt##*/} ${pref}${SYMLINK}
+				ln -sf ${alt##*/} ${pref}${SYMLINK}
 			else
 				#no; keep absolute path
-				ln -s ${pref}${alt} ${pref}${SYMLINK}
+				ln -sf ${pref}${alt} ${pref}${SYMLINK}
 			fi
 			break
 		fi
