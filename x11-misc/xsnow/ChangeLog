@@ -1,10 +1,13 @@
 # ChangeLog for x11-misc/xsnow
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.3 2002/12/13 11:00:55 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.4 2003/02/04 16:14:26 nall Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *xsnow-1.42
+
+	04 Feb 2003; Jon Nall <nall@gentoo.org> xsnow-1.42.ebuild :
+	keyworded ~ppc
 
 	19 Feb 2002; Aron Griffis <agriffis@gentoo.org> xsnow-1.42.ebuild :
 
