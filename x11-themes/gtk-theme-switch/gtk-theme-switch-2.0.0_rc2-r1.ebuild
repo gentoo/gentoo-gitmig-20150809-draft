@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-2.0.0_rc2-r1.ebuild,v 1.1 2004/01/03 01:06:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-2.0.0_rc2-r1.ebuild,v 1.2 2004/01/03 01:07:20 seemant Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -20,7 +20,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${WORKDIR}/${MY_P}b.patch
 }
-	
 
 src_compile() {
 	make || die
