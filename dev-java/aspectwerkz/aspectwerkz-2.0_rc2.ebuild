@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2.ebuild,v 1.1 2005/01/05 22:12:05 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2.ebuild,v 1.2 2005/02/17 17:19:52 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -22,6 +22,7 @@ RDEPEND=">=virtual/jre-1.4
 		=dev-java/qdox-20050104"
 DEPEND=">=virtual/jdk-1.4
 		>=dev-java/ant-core-1.5
+		app-arch/unzip
 		jikes? ( >=dev-java/jikes-1.21 )"
 IUSE="jikes"
 
