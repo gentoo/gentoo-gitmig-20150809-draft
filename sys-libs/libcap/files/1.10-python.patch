@@ -21,15 +21,18 @@ diff -ur libcap-1.10.orig/libcap/Makefile libcap-1.10/libcap/Makefile
  
  _makenames: _makenames.c cap_names.sed
  	$(CC) $(CFLAGS) $(LDFLAGS) $< -o $@
-@@ -66,6 +71,12 @@
+@@ -66,6 +71,15 @@
  	ln -sf $(MINLIBNAME) $(MAJLIBNAME)
  	ln -sf $(MAJLIBNAME) $(LIBNAME).so
  
 +libcap_wrap.c: include/sys/capability.h
 +	swig -python -o libcap_wrap.c include/sys/capability.h
 +
-+$(PYTHONMODNAME): $(OBJS) libcap_wrap.o
-+	$(LD) -x -shared -o $@ libcap_wrap.o $(OBJS)
++libcap_wrap.o: libcap_wrap.c
++	$(CC) $(CFLAGS) -fPIC -c $< -o $@
++
++$(PYTHONMODNAME): $(LOBJS) libcap_wrap.o
++	$(LD) -x -shared -o $@ libcap_wrap.o $(LOBJS)
 +
  %.o: %.c $(INCLS)
  	$(CC) $(CFLAGS) -c $< -o $@

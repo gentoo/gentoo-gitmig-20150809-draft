@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r4.ebuild,v 1.3 2004/05/28 18:01:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r4.ebuild,v 1.4 2004/06/24 02:47:31 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -39,11 +39,6 @@ src_compile() {
 		myflags="${myflags} PYTHON=1 PYTHONMODDIR=/usr/lib/python${PYTHONVER}/site-packages"
 		append-flags -I/usr/include/python${PYTHONVER}
 	fi
-
-	use pic && append-flags -fPIC
-	use alpha && append-flags -fPIC
-	use amd64 && append-flags -fPIC
-	use hppa && append-flags -fPIC
 
 	emake COPTFLAG="${CFLAGS}" LDFLAGS="${LDFLAGS}" DEBUG="" ${myflags} || die
 }
