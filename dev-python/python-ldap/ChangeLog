@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.11 2003/07/12 12:49:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.12 2003/09/02 23:56:19 liquidx Exp $
+
+  03 Sep 2003; Alastair Tse <liquidx@gentoo.org>
+  python-ldap-2.0.0_pre13.ebuild:
+  added sasl dep and tweaked the usage of ldap and ldap_r in mylibs (#25143)
 
 *python-ldap-2.0.0_pre13 (01 Jul 2003)
 
