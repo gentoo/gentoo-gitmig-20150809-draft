@@ -1,0 +1,70 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/files/mod-mono-server.initd,v 1.1 2005/02/17 05:30:33 trapni Exp $
+
+depend() {
+	use net
+	after dotnet
+}
+
+start() {
+	[ -z "$MonoServerRootDir" ] && \
+	MonoServerRootDir="/usr/share/doc/xsp/test"
+	[ -z "$MonoApplications" ] && \
+	MonoApplications="/mono:/usr/share/doc/xsp/test,/:."
+	[ -z "$UnixSocketFileName" ] && \
+	UnixSocketFileName="/tmp/mod_mono_server"
+	[ -z "$MonoServerAddress" ] && \
+	MonoServerAddress=127.0.0.1
+	[ -z "$MonoServerPort" ] && \
+	MonoServerPort=8080
+
+	MONO_SERVER_OPTS="--root ${MonoServerRootDir} \
+--applications ${MonoApplications} --nonstop"
+
+	[ -n "$MonoApplicationsConfigDir" ] && \
+	MONO_SERVER_OPTS="${MONO_SERVER_OPTS} \
+--appconfigdir ${MonoApplicationsConfigDir}"
+
+	case "$MonoServerChannel" in
+	"tcp" )
+		MONO_SERVER_OPTS="${MONO_SERVER_OPTS} \
+--address ${MonoServerAddress} --port ${MonoServerPort}"
+		;;
+	
+	"unix" )
+		[ -f "$UnixSocketFileName" ] && rm -f $UnixSocketFileName
+		MONO_SERVER_OPTS="${MONO_SERVER_OPTS} \
+--filename ${UnixSocketFileName}"
+		;;
+
+	* )
+		eerror "Please set a valid value for MonoServerChannel"
+		return 1
+		;;
+	esac
+
+	export MONO_SHARED_DIR=/tmp
+
+	ebegin "Starting mod-mono-server"
+
+	start-stop-daemon --quiet --start \
+		--background \
+		--make-pidfile \
+		--pidfile /var/run/aspnet/mod-mono-server.pid \
+		--chuid apache \
+		--exec /usr/bin/mono /usr/bin/mod-mono-server.exe \
+		-- $MONO_SERVER_OPTS
+
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping mod-mono-server"
+
+	start-stop-daemon -o --quiet --stop \
+		--pidfile /var/run/aspnet/mod-mono-server.pid
+
+	eend $?
+}

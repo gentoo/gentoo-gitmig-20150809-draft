@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.0.5-r1.ebuild,v 1.1 2005/02/09 03:01:39 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.0.5-r1.ebuild,v 1.2 2005/02/17 05:30:33 trapni Exp $
 
 inherit mono eutils
 
@@ -42,7 +42,9 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	exeinto /etc/init.d ; newexe ${FILESDIR}/xsp.initd xsp
+	newexe ${FILESDIR}/mod-mono-server.initd
 	insinto /etc/conf.d ; newins ${FILESDIR}/xsp.confd xsp
+	newins ${FILESDIR}/mod-mono-server.confd
 
 	keepdir /var/run/aspnet
 

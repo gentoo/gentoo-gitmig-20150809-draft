@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.18 2005/02/09 03:01:39 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.19 2005/02/17 05:30:33 trapni Exp $
+
+  17 Feb 2005; Christian Parpart <trapni@gentoo.org>
+  +files/mod-mono-server.confd, +files/mod-mono-server.initd:
+  adding mod-mono-server init.d/conf.d helper script for mod_mono; It is
+  questionable whether to add those right here or into mod_mono ebuild as the
+  server from dev-dotnet/xsp is started, but started for mod_mono as
+  mod-mono-server. however. See bug 70943.
 
 *xsp-1.0.5-r1 (08 Feb 2005)
 
