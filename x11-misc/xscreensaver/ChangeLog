@@ -1,12 +1,15 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.24 2003/05/29 20:35:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.25 2003/05/29 20:39:25 msterret Exp $
+
+  29 May 2003; <msterret@gentoo.org> :
+  Manifest
 
 *xscreensaver-4.10 (29 May 2003)
 
   29 May 2003; <msterret@gentoo.org> xscreensaver-4.10.ebuild,
   files/xscreensaver-4.10-norpm.patch:
-  version bump
+  version bump 
 
 *xscreensaver-4.09-r1 (26 May 2003)
 
@@ -40,7 +43,7 @@
 *xscreensaver-4.06-r2 (26 Oct 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
   01 Dec 2002; Seemant Kulleen <seemant@gentoo.org>
   xscreensaver-4.06-r2.ebuild :
 
@@ -85,12 +88,12 @@
 
   29 Sep 2002; Martin Schlemmer <azarah@gentoo.org> pam.d/xscreensaver: Update
   pam.d file to use system-auth.  Bug #5953.
-  
+
   21 Jul 2002; Spider <spider@gentoo.org> xscreensaver-4.05-r3.ebuild: Dep
   change solves bug 4743
 
 *xscreensaver-4.05-r3 (07 July 2002)
-  
+
   07 Jul 2002; phoen][x <phoenix@gentoo.org> xscreensaver-4.05-r3.ebuild,
   files/digest-xscreensaver-4.05-r3: Version bump - old source was not
   available anymore. Added KEYWORDS, LICENSE, SLOT.
@@ -111,7 +114,7 @@
   22 Jun 2002; Spider <spider@gentoo.org> xscreensaver-4.05-r1.ebuild:
   since I can't find how the .desktop is installed properly, I hacked around
   it with a use gnome () statement.  works.
-  
+
 *xscreensaver-4.05 (11 Jun 2002)
 
   11 Jun 2002; Seemant Kulleen <seemant@gentoo.org> xscreensaver-4.05.ebuild:
@@ -158,7 +161,7 @@
 
   19 Mar 2002; Seemant Kulleen <seemant@gentoo.org> xscreensaver-4.0.2.ebuild:
   Copied over the 4.01-r1 ebuild to bump version.
- 
+
 *screensaver-4.01-r1 (04 Mar 2002)
 
   04 Mar 2002; M.Schlemmer <azarah@gentoo.org> xscreensaver-4.01-r1,
