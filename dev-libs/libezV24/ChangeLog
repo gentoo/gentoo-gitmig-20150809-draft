@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/libezV24
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libezV24/ChangeLog,v 1.1 2003/11/19 20:12:23 weeve Exp $
+
+*libezV24-0.1.1 (19 Nov 2003)
+
+  19 Nov 2003; Jason Wever <weeve@gentoo.org> libezV24-0.1.1.ebuild,
+  metadata.xml, files/libezV24-0.1.1-Makefile.diff,
+  files/libezV24-0.1.1-test-v24.c.diff:
+  Initial import, resolves bug #26028.
+

@@ -1,0 +1,5 @@
+MD5 20ce9bbdcae80ecc3374c6e966a317e5 libezV24-0.1.1.ebuild 932
+MD5 2a5762a2fabad322c719d20246607c47 libezV24-0.1.1.ebuild.orig 585
+MD5 7644416a217d2192abc71da9ac9e1eec files/digest-libezV24-0.1.1 65
+MD5 e2336d4fd9a49be746a71a9c2dee6f89 files/libezV24-0.1.1-Makefile.diff 442
+MD5 4dc7a37504cb2db417158a0800325914 files/libezV24-0.1.1-test-v24.c.diff 243
