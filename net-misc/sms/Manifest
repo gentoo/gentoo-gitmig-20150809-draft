@@ -2,17 +2,19 @@
 Hash: SHA1
 
 MD5 0f94dcf5e1efb75ff104c58dddc8800a sms-2.0.1.ebuild 705
+MD5 5e13f96f184f5b69aca334f63b67423e ChangeLog 1668
 MD5 53f9af53bd2ae23719be948338b95567 metadata.xml 756
-MD5 d11bf105d2e5f91c10bb176fed242837 ChangeLog 1441
+MD5 99afe3eb183d9273264b692adab78138 sms-2.0.2.ebuild 808
 MD5 5f3c2637bce2fa0c3debb237ffb1a708 sms-1.9.2m.ebuild 795
 MD5 22ecc56bb60ac1ea7954ad2d4cfc26cc sms-2.0.0_rc1.ebuild 727
 MD5 29b4816eadb9d9e01fab320dd2272883 files/digest-sms-2.0.1 60
+MD5 14365b5767d12d21ca1607f732b2a595 files/digest-sms-2.0.2 60
 MD5 d5c218a66c4b257f2c0b06daa234f78c files/digest-sms-1.9.2m 61
 MD5 80bee5ce797ad0b11888210980a1c56b files/digest-sms-2.0.0_rc1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBgM1KmdTrptrqvGERAiBAAJ4kslqSq8wSdqg9+el/or33kl/GsgCaAzxZ
-rNzb5Sc5RfBSDCRP0LJuItY=
-=oW2q
+iD8DBQFBpkotmdTrptrqvGERAvW+AJ9FMqOkfN+Mg8h7o/iNAaAhhCs7GwCgjMoY
+vQ41RSjLSgg1GobieAi+92o=
+=WAIk
 -----END PGP SIGNATURE-----
