@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.66.ebuild,v 1.6 2005/01/26 19:51:06 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.66.ebuild,v 1.7 2005/03/19 13:47:05 ka0ttic Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Flow-tools is a package for collecting and processing NetFlow data"
 HOMEPAGE="http://www.splintered.net/sw/flow-tools/"
@@ -17,6 +17,12 @@ IUSE=""
 DEPEND="virtual/libc
 	sys-apps/tcp-wrappers
 	sys-libs/zlib"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-0.67-gcc34.diff
+}
 
 src_compile() {
 	aclocal
