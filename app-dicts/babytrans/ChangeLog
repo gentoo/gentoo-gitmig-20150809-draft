@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/babytrans
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans/ChangeLog,v 1.9 2004/10/15 16:04:22 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans/ChangeLog,v 1.10 2004/11/22 18:59:51 angusyoung Exp $
+
+*babytrans-0.9.2-r3 (22 Nov 2004)
+
+  22 Nov 2004; Otavio Piske <angusyoung@gentoo.org>
+  +files/babytrans-0.9.2-nls.patch, +babytrans-0.9.2-r3.ebuild:
+  Added babytrans-0.9.2-r3 along with a patch which is supposed to solve bug
+  #72019
 
   15 Oct 2004; David Holm <dholm@gentoo.org> babytrans-0.9.2-r2.ebuild:
   Added to ~ppc.
