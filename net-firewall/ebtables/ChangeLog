@@ -1,0 +1,10 @@
+# ChangeLog for net-firewall/ebtables
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.1 2004/02/28 09:25:14 solar Exp $
+
+*ebtables-2.0.6 (28 Feb 2004)
+
+  28 Feb 2004; <solar@gentoo.org> ebtables-2.0.6.ebuild, metadata.xml:
+  initial import into portage of the ebtable utility that enables basic ethernet
+  frame filtering on a bridge, MAC NAT and brouting.
+
