@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c95238679c52e471b723c9462030cf6a ChangeLog 1701
+MD5 42043bba51bb3f4fe39000374a33b32e ChangeLog 1810
 MD5 b50d5011f1d3084357bc9ff3d2bb31b4 metadata.xml 608
 MD5 a2e45e5f38ce959b3e309193b7abc4b6 pekwm-0.1.3-r2.ebuild 1006
-MD5 6badd90611fa54674c139bbc5b62e0cc pekwm-20050129.2.ebuild 1858
+MD5 7193107c9a0ae476356557464b2e9a2e pekwm-20050129.2.ebuild 1365
 MD5 feb34a062104c0c28685fa05192dc7be files/digest-pekwm-0.1.3-r2 64
 MD5 4eb560893fc98dbaba9b461b71a9df98 files/pekwm-manpath-gentoo.diff 455
 MD5 2da0ad07eea8bd84cc170bb25bddc089 files/digest-pekwm-20050129.2 149
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCABC2xtZcznfol0URArKIAKDCx+6GPOTLFp1Vnbcwwj4PZmln/gCgtulT
-aQ/i7Jx13xM183WLJlLek58=
-=U2Pn
+iD8DBQFCAGdDxtZcznfol0URAlI2AJ4z+gQA8LT54WwijPjcrDRRX+k/hQCeIxwX
+HSHYzFatXJ0tVZ0SbJDlCLM=
+=G+gC
 -----END PGP SIGNATURE-----
