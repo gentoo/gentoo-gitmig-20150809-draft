@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.4 2005/02/25 20:39:10 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.5 2005/03/25 20:35:19 carlo Exp $
+
+  25 Mar 2005; Carsten Lohrke <carlo@gentoo.org> kdiff3-0.9.88.ebuild:
+  stable on x86
 
 *kdiff3-0.9.88 (25 Feb 2005)
 
