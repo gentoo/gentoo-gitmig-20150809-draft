@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0a9b09d54c5a95713aa934c66dc7b7db ChangeLog 2077
-MD5 941460ec96d381985ea143e6935266ec bc-1.06-r5.ebuild 1759
+MD5 faa9289dfc2ae37d4d0161952d216017 bc-1.06-r5.ebuild 1842
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 c6bc9e8c6698c429c778901b2d353c3f files/bc-1.06-info-fix.diff 3182
 MD5 40794acac9c09ee182af19387df613b4 files/bc-1.06-readline42.diff 430
 MD5 ab5dc8993a9b72c7a4f4160c6a6348ac files/digest-bc-1.06-r5 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBs/6IroRuSHgZdywRAoJoAKCQrwsX9VghYDUxL7n9qZYq+V+28ACeJdXK
+UlErPBK6cd6MrX706ZWMJdY=
+=PQWi
+-----END PGP SIGNATURE-----
