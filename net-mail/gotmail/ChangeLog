@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/gotmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.14 2003/12/03 16:30:21 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.15 2003/12/20 15:33:03 g2boojum Exp $
+
+*gotmail-0.8.0_beta1 (20 Dec 2003)
+
+  20 Dec 2003; Grant Goodyear <g2boojum@hotmail.com>
+  gotmail-0.8.0_beta1.ebuild:
+  New beta version that works for me but may still be incomplete.
+  Note, marking stable on x86 because all previous versions are broken.
 
   03 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> gotmail-0.7.10.ebuild:
   Moved to ~sparc for #34976
