@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.22_alpha5.ebuild,v 1.3 2002/10/29 06:26:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.22_alpha5.ebuild,v 1.4 2002/11/08 02:55:42 vapier Exp $
 
 MY_P="${P/_alpha/a}"
 DESCRIPTION="Winmodems with Lucent Apollo (ISA) and Mars (PCI) chipsets"
@@ -14,11 +14,9 @@ KEYWORDS="~x86"
 
 S="${WORKDIR}/${MY_P}"
 
-KERNV="`uname -r`"
-
 src_compile() {
 	#the installer has you press 'Enter' a whole lot
-	./build_module << EOF
+	./build_module ${KV} << EOF
 
 
 
@@ -35,8 +33,8 @@ src_compile() {
 
 
 EOF
-	[ -a drivers-${KERNV}/lt_modem.o ]	||	die "modem.o did not build"
-	[ -a drivers-${KERNV}/lt_serial.o ]	||	die "serial.o did not build"
+	[ -a drivers-${KV}/lt_modem.o ]  || die "modem.o did not build"
+	[ -a drivers-${KV}/lt_serial.o ] || die "serial.o did not build"
 }
 
 src_install() {
@@ -50,9 +48,9 @@ src_install() {
 	mv utils/unloading utils/ltunloading
 	dobin utils/lt*
 
-	insinto /lib/modules/${KERNV}/ltmodem
-	newins drivers-${KERNV}/lt_modem.o lt_modem.o
-	newins drivers-${KERNV}/lt_serial.o lt_serial.o
+	insinto /lib/modules/${KV}/ltmodem
+	newins drivers-${KV}/lt_modem.o lt_modem.o
+	newins drivers-${KV}/lt_serial.o lt_serial.o
 }
 
 pkg_postinst() {
