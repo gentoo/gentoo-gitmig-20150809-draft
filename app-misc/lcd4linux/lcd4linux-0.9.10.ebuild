@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.9.10.ebuild,v 1.7 2005/01/01 15:10:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.9.10.ebuild,v 1.8 2005/01/25 15:27:45 greg_g Exp $
 
 inherit eutils
 
@@ -53,9 +53,9 @@ src_install() {
 		insinto /etc/lcd4linux
 		insopts -o root -g root -m 0600
 		doins lcd4kde.conf
-		insinto ${KDEDIR}/share/applnk/apps/System
+		insinto /usr/share/applnk/apps/System
 		doins lcd4linux.kdelnk
-		insinto ${KDEDIR}/share/icons
+		insinto /usr/share/pixmaps
 		doins lcd4linux.xpm
 		touch ${D}/etc/lcd4linux/lcd4X11.conf
 	fi
