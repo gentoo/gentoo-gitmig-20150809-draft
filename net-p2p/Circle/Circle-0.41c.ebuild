@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/Circle-0.40e.ebuild,v 1.3 2004/07/22 04:17:32 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/Circle-0.41c.ebuild,v 1.1 2004/07/22 04:17:32 squinky86 Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ SRC_URI="http://thecircle.org.au/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="oggvorbis gnome"
 
 DEPEND="virtual/python
@@ -28,8 +28,6 @@ src_install() {
 	python_version
 	exeinto /usr/bin/
 	doexe circle
-	exeinto /usr/lib/apt/methods/
-	doexe cftp chttp
 	insinto /usr/lib/python${PYVER}/site-packages/circlelib/
 	doins circlelib/*.py
 	insinto /usr/lib/python${PYVER}/site-packages/circlelib/pixmaps/
