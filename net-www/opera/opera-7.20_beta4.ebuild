@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.20_beta4.ebuild,v 1.3 2003/08/26 16:54:32 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.20_beta4.ebuild,v 1.4 2003/08/27 15:50:33 lanius Exp $
 
 # Here, like in the other .ebuilds, the static version is
 # forced for simplicity's sake
@@ -21,7 +21,7 @@ RDEPEND="virtual/x11
 KEYWORDS="~x86 ~ppc ~sparc"
 SLOT="0"
 
-if [ `use x86`]; then
+if [ `use x86` ]; then
 	ARCH="intel"
 	ARCH2="i386"
 	OPERAVER="7.20-20030821"
