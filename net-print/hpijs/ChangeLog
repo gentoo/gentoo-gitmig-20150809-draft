@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hpijs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.28 2004/06/25 00:39:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.29 2004/08/04 16:18:38 lanius Exp $
+
+*hpijs-1.6.1 (4 Aug 2004)
+
+  04 Aug 2004; Heinrich Wendel <lanius@gentoo.org> hpijs-1.6.1.ebuild:
+  version bump, bug #48114
 
   16 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> hpijs-1.5.ebuild:
   Stable on hppa
