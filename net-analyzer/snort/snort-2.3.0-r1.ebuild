@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.0-r1.ebuild,v 1.2 2005/02/07 09:30:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.0-r1.ebuild,v 1.3 2005/02/10 00:50:52 ka0ttic Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -141,7 +141,7 @@ pkg_postinst() {
 		einfo "You will have to setup a database called snort first."
 		einfo ""
 		use mysql && \
-			einfo "  MySQL: zcat /usr/share/doc/${PF}/schema/create_mysql.gz | mysql -p snort"
+			einfo "  MySQL: zcat /usr/share/doc/${PF}/schemas/create_mysql.gz | mysql -p snort"
 		use postgres && \
 			einfo "  PostgreSQL: import /usr/share/doc/${PF}/schemas/create_postgresql.gz"
 		use odbc && einfo "SQL tables need to be created - look at /usr/share/doc/${PF}/schemas/"
