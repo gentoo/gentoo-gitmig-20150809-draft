@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libavc1394
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.14 2004/10/19 17:52:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.15 2004/12/18 20:54:04 corsair Exp $
+
+  18 Dec 2004; Markus Rothe <corsair@gentoo.org> libavc1394-0.4.1.ebuild:
+  added ~ppc64 to KEYWORDS
 
   19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> libavc1394-0.4.1.ebuild:
   Stable on alpha.
