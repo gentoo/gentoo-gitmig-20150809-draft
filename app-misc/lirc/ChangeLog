@@ -1,6 +1,10 @@
-# ChangeLog for app-misc/lirc
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.21 2004/03/08 14:56:09 lanius Exp $
+# ChangeLog for app-misc/lirc Copyright 2002-2004 Gentoo Technologies, Inc.;
+# Distributed under the GPL v2 $Header:
+# /home/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.21 2004/03/08 14:56:09
+# lanius Exp $
+
+  14 Mar 2004; Heinrich Wendel <lanius@gentoo.org> lirc-0.7.0_pre3.ebuild:
+  fix url to kernel 2.6 patch, remove irda warning, it's obsolete, bug #44395
 
 *lirc-0.7.0_pre3 (08 Mar 2004)
 
