@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.35 2004/05/25 13:22:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.36 2004/05/26 19:55:06 carlo Exp $
+
+*PyQt-3.12 (26 May 2004)
+
+  26 May 2004; Carsten Lohrke <carlo@gentoo.org> PyQt-3.11.ebuild,
+  PyQt-3.12.ebuild, PyQt-3.5.ebuild, PyQt-3.8.1.ebuild:
+  mirror://gentoo fixes, version bump
 
   25 May 2004; Carsten Lohrke <carlo@gentoo.org> PyQt-3.10.ebuild,
   PyQt-3.8.1.ebuild, files/PyQt-3.10-qt-3.3.patch:
