@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r1.ebuild,v 1.6 2003/02/13 07:15:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r1.ebuild,v 1.7 2003/03/31 09:32:58 george Exp $
 
 S=${WORKDIR}/Emulator_Src_3.5
 FLTK_PV=1.0.11
@@ -55,20 +55,20 @@ src_compile() {
 
 	make || die
 
-	cd ${S}/build-profile
-	LDFLAGS=-L${S}/static-libs ../BuildUnix/configure --prefix=/usr \
-		--with-fltk=${S}/install-fltk \
-		--disable-gl --enable-palm-profile || die
-
-	make || die
+#	cd ${S}/build-profile
+#	LDFLAGS=-L${S}/static-libs ../BuildUnix/configure --prefix=/usr \
+#		--with-fltk=${S}/install-fltk \
+#		--disable-gl --enable-palm-profile || die
+#
+#	make || die
 }
 
 src_install() {
 	cd ${S}/build-normal
 	dobin pose
 
-	cd ${S}/build-profile
-	newbin pose pose-profile
+#	cd ${S}/build-profile
+#	newbin pose pose-profile
 
 	cd ${S}/Docs
 	dodoc *.txt *.rtf
