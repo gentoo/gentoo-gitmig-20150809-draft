@@ -1,8 +1,13 @@
 # ChangeLog for dev-libs/uclibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.6 2003/09/10 04:31:14 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.7 2003/09/30 19:24:10 kumba Exp $
+
 
 *uclibc-0.9.21 (10 Sep 2003)
+
+  30 Sep 2003; Joshua Kinard <kumba@gentoo.org> uclibc-0.9.21.ebuild:
+  Added ~sparc & ~mips to KEYWORDS
+  Useful for building our netboot images with
 
   10 Sep 2003; <solar@gentoo.org> uclibc-0.9.21.ebuild:
   andersee is pleased to announce the immediate availability of uClibc 0.9.21.
