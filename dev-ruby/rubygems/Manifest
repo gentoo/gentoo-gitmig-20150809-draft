@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0ab306e22edafef7204cae0da8961047 rubygems-0.8.1.ebuild 711
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 c8f1021f4419d2c5a9d9b0bea6e0b2c6 ChangeLog 496
+MD5 ae6f2a1b494e82be3591407ca8a7827a files/digest-rubygems-0.8.1 63
+MD5 cb35efb385d388a1c8d666d07a118bbc files/rubygems-0.8.1-gentoo.diff 1510
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBnlyqVWNWqTUmv+0RAlimAJ4yPL6YWEUKrwdtpTa9tcJbNqCVPwCfd/fR
+FjiqweJx7dJod07jNaNYbuc=
+=idwe
+-----END PGP SIGNATURE-----

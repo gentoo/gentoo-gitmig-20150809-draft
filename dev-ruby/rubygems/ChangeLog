@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/rubygems
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.1 2004/11/19 20:50:48 usata Exp $
+
+*rubygems-0.8.1 (20 Nov 2004)
+
+  20 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +files/rubygems-0.8.1-gentoo.diff, +rubygems-0.8.1.ebuild:
+  Initial import. Thanks to Alexander Kellett <lypanov@kde.org> and
+  Thomas Kirchner <gentoo@halffull.org>. This closes bug #71757.
+

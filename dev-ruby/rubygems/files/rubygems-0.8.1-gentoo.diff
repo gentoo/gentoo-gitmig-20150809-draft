@@ -1,0 +1,46 @@
+--- install.rb.ORIG	2004-09-12 16:24:57.000000000 +0900
++++ install.rb	2004-11-20 02:46:54.000000000 +0900
+@@ -5,6 +5,10 @@
+ 
+ include Config
+ 
++CONFIG["bindir"].gsub!(/^/, ENV['D'])
++CONFIG["libdir"].gsub!(/^/, ENV['D'])
++CONFIG["sitedir"].gsub!(/^/, ENV['D'])
++
+ $srcdir = CONFIG["srcdir"]
+ $version = CONFIG["MAJOR"]+"."+CONFIG["MINOR"]
+ $libdir = File.join(CONFIG["libdir"], "ruby", $version)
+@@ -15,6 +19,7 @@
+ elsif $site_libdir !~ Regexp.new(Regexp.quote($version))
+   $site_libdir = File.join($site_libdir, $version)
+ end
++$site_libdir.gsub!(/^/, ENV['D'])
+ 
+ def remove_stubs
+   is_apparent_stub = lambda { |path|
+@@ -108,6 +113,7 @@
+   ## Install the 'bin' files.
+ 
+   bindir = CONFIG['bindir']
++  File::makedirs(bindir)
+   ruby_install_name = CONFIG['ruby_install_name']
+   is_windows_platform = CONFIG["arch"] =~ /dos|win32/i
+   Find.find('bin') do |f|
+@@ -120,7 +126,7 @@
+     target = File.join(bindir, File.basename(f))
+     File.open(target, "w", 0755) do |script|
+       sourcelines = File.read(source)
+-      sourcelines.gsub!(/\#!\/usr\/bin\/env ruby/, "\#!#{bindir}/#{ruby_install_name}")
++      #sourcelines.gsub!(/\#!\/usr\/bin\/env ruby/, "\#!#{bindir}/#{ruby_install_name}")
+       script.write sourcelines 
+     end
+     if is_windows_platform
+--- packages/sources/sources.gemspec	2003-11-23 03:58:46.000000000 +0900
++++ packages/sources/sources.gemspec	2004-08-25 01:26:12.165799264 +0900
+@@ -1,4 +1,4 @@
+-$:.unshift '../lib'
++$:.unshift '../../lib'
+ require 'rubygems'
+ 
+ module Gem
