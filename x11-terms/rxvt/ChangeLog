@@ -1,7 +1,15 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.4 2002/05/04 04:00:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.5 2002/06/06 19:34:39 naz Exp $
 
+*rxvt-2.7.8-r3 (3 May 2002)
+
+  6 Jun 2002; Michael Nazaroff <naz@gentoo.org> rxvt-2.7.8-r3.ebuild :
+  
+  Add a patch to rxvt that add a borderless option and fix's a small memory
+  leak.  Requires motif though so I set the patch as use variable against motif
+  for those people that don't want the patch.
+  
 *rxvt-2.7.8-r2 (3 May 2002)
 
   3 May 2002; Seemant Kulleen <seemant@gentoo.org> rxvt-2.7.8-r2.ebuild
