@@ -1,5 +1,6 @@
 MD5 8e47743a847562e852b970dbf1b1de43 mythtv-0.11.ebuild 2780
 MD5 94aa640a7ba5d41ed393b873f472d0d6 ChangeLog 3174
+MD5 20e2255501865de5b568424821abf69d metadata.xml 161
 MD5 b8fae8fa9619130ec1f3072a0c82e37d mythtv-0.10.ebuild 2843
 MD5 ce8c4dae21199ea11abd156b16cc3b8a files/mythbackend.conf 867
 MD5 897368570b822b7a42c9693e16f1f052 files/mythbackend.rc6 1670
