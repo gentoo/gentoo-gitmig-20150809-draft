@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.524 2004/08/04 19:12:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.525 2004/08/04 21:21:02 squinky86 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -324,6 +324,7 @@ media-video/vlc:faad - Enables faad2 support
 media-video/vlc:matroska - Enables support for the matroska video format
 media-video/vlc:v4l - Enables video4linux support
 media-video/vlc:dts - Enables DTS audio support
+net-analyzer/fprobe:messages - enable console messages
 net-analyzer/nagios-core:noweb - disable web interface
 net-analyzer/nagios-plugins:nagios-dns - installs deps for dns monitoring
 net-analyzer/nagios-plugins:nagios-ntp - installs deps for ntp monitoring
