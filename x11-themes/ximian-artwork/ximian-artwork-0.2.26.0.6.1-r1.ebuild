@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.26.0.6.1-r1.ebuild,v 1.6 2004/04/27 21:23:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.26.0.6.1-r1.ebuild,v 1.7 2004/06/24 02:25:47 agriffis Exp $
 
 inherit eutils rpm
 
@@ -65,7 +65,7 @@ src_install () {
 	mv ${D}/usr/share/icons/Industrial/cursors ${D}/usr/share/cursors/xfree/Industrial
 
 	# remove xmms skin if unneeded
-	[ -n "`use xmms`" ] || rm -rf ${D}/usr/share/xmms
+	use xmms || rm -rf ${D}/usr/share/xmms
 
 	cd ${S}
 	dodoc COPYING ChangeLog
