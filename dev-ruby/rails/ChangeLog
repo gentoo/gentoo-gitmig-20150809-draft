@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/rails
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.1 2005/02/16 05:48:13 pythonhead Exp $
+
+*rails-0.9.5 (15 Feb 2005)
+
+  15 Feb 2005; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +rails-0.9.5.ebuild:
+  Initial commit. bug# 80828
+
