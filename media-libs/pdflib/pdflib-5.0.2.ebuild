@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.13 2004/02/05 10:55:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.14 2004/02/22 21:21:59 agriffis Exp $
 
 IUSE="tcltk perl python java"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 SLOT="5"
 LICENSE="Aladdin"
-KEYWORDS="x86 ppc sparc alpha hppa ~mips ~arm amd64 ia64 ~ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa ~mips amd64 ia64 ~ppc64"
 
 DEPEND=">=sys-apps/sed-4
 	tcltk? ( >=dev-lang/tk-8.2 )
