@@ -1,6 +1,17 @@
 # ChangeLog for app-text/dvipdfmx
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.8 2003/12/05 17:59:28 usata Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.9 2004/03/11 19:47:42 usata Exp $
+
+*dvipdfmx-20031207 (12 Mar 2004)
+*dvipdfmx-20031116 (12 Mar 2004)
+
+  12 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> dvipdfmx-20030813.ebuild,
+  dvipdfmx-20031009.ebuild, dvipdfmx-20031110.ebuild,
+  dvipdfmx-20031116.ebuild, dvipdfmx-20031207.ebuild,
+  files/dvipdfmx-20030813-gentoo.diff, files/dvipdfmx-20031009-gentoo.diff,
+  files/dvipdfmx-20031110-gentoo.diff, files/dvipdfmx-config-gentoo.diff:
+  Version bumped and updated SRC_URI. Removed old snapshot and unified
+  config patch.
 
 *dvipdfmx-20031110 (16 Nov 2003)
 

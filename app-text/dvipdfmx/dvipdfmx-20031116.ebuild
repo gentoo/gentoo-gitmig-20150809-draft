@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20031009.ebuild,v 1.4 2004/03/11 19:47:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20031116.ebuild,v 1.1 2004/03/11 19:47:42 usata Exp $
 
 IUSE=""
 
 DESCRIPTION="DVI to PDF translator with multi-byte character support"
-SRC_URI="http://project.ktug.or.kr/dvipdfmx/snapshot/release/${P}.tar.gz"
+SRC_URI="http://project.ktug.or.kr/dvipdfmx/snapshot/release/${P}.tar.gz
+	http://project.ktug.or.kr/dvipdfmx/snapshot/patch/${P}.patch"
 HOMEPAGE="http://project.ktug.or.kr/dvipdfmx/"
 
-KEYWORDS="x86 alpha ppc sparc"
+KEYWORDS="~x86 ~alpha"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -24,7 +25,10 @@ S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/${PN}-config-gentoo.diff
+	cd src
+	epatch ${DISTDIR}/${P}.patch
 }
 
 src_install () {

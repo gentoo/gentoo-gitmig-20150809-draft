@@ -1,19 +1,20 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20030813.ebuild,v 1.4 2003/09/28 13:48:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20031207.ebuild,v 1.1 2004/03/11 19:47:42 usata Exp $
 
 IUSE=""
 
 DESCRIPTION="DVI to PDF translator with multi-byte character support"
-SRC_URI="http://project.ktug.or.kr/dvipdfmx/snapshot/${P}.tar.gz"
+SRC_URI="http://project.ktug.or.kr/dvipdfmx/snapshot/current/${P}.tar.gz"
 HOMEPAGE="http://project.ktug.or.kr/dvipdfmx/"
 
-KEYWORDS="x86 alpha ppc sparc"
+KEYWORDS="~x86 ~alpha"
 SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="app-text/ptex
 	!app-text/tetex
+	!app-text/cstetex
 	>=sys-apps/sed-4
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
@@ -23,7 +24,8 @@ S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-config-gentoo.diff
 }
 
 src_install () {
@@ -33,22 +35,6 @@ src_install () {
 }
 
 pkg_postinst () {
-	#einfo
-	#einfo "You need modify /usr/share/texmf/web2c/texmf.cnf"
-	#einfo "in order to convert DVI correctly."
-	#einfo "For example, if you have Acrobat Reader 5 and"
-	#einfo "Asian fonts installed, you may want to add"
-	#einfo
-	#einfo "CMAPINPUTS = .;/opt/Acrobat5/Resource/Font//"
-	#einfo
-	#einfo "If you have xpdf installed,"
-	#einfo
-	#einfo "you may want to add"
-	#einfo
-	#einfo "CMAPINPUTS = .;/usr/share/xpdf//"
-	#einfo
-	#einfo "respectively."
-	#einfo
 
 	einfo
 	einfo "Automatically adding CMAPINPUTS to /usr/share/texmf/web2c/texmf.cnf"
