@@ -1,0 +1,11 @@
+# ChangeLog for app-vim/dhcpd-syntax
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dhcpd-syntax/ChangeLog,v 1.1 2005/03/24 23:38:16 ciaranm Exp $
+
+*dhcpd-syntax-20030825 (24 Mar 2005)
+
+  24 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/dhcpd-syntax-20030825-multiple-addresses.patch, +metadata.xml,
+  +dhcpd-syntax-20030825.ebuild:
+  New package, requested by Bjarke Istrup Pedersen in bug #85808.
+
