@@ -3,6 +3,8 @@
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
 # /home/cvsroot/gentoo-x86/net-print/cups/cups-1.1.6.ebuild,v 1.1 2001/04/28 04:19:58 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.7.ebuild,v 1.5 2001/08/30 17:31:36 pm Exp $
+
 
 S=${WORKDIR}/${PN}-1.1.7
 DESCRIPTION="The Common Unix Printing System"

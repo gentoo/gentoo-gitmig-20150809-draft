@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Aaron Blew <moath@oddbox.org>
 # /home/cvsroot/gentoo-x86/x11-terms/aterm/,v 1.2 2001/02/15 18:17:31 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.0.ebuild,v 1.2 2001/08/30 17:31:36 pm Exp $
+
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

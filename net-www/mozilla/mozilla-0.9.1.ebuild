@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.ebuild,v 1.4 2001/06/07 01:45:52 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.1.ebuild,v 1.3 2001/08/30 17:31:36 pm Exp $
+
 
 A=mozilla-source-${PV}.tar.gz
 S=${WORKDIR}/mozilla

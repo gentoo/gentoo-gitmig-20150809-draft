@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
 # /home/cvsroot/gentoo-x86/net-print/xpp/xpp-0.7.ebuild,v 1.3 2001/06/03 09:54:22 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.0.ebuild,v 1.2 2001/08/30 17:31:36 pm Exp $
+
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X Printing Panel"

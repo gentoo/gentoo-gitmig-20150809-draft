@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
 # /home/cvsroot/gentoo-x86/berlin-base/omniORB/omniORB-303.ebuild,v 1.7 2001/05/28 05:24:13 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304.ebuild,v 1.4 2001/08/30 17:31:35 pm Exp $
+
 
 A="${PN}_${PV}.tar.gz omniORBpy_1_4.tar.gz omniNotify11b1.tar.gz"
 S=${WORKDIR}/omni

@@ -1,6 +1,8 @@
 # Copyright 2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Adam Manthei <manthei@sistina.com>
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.2.ebuild,v 1.5 2001/08/30 17:31:36 pm Exp $
+
 
 P=x11-ssh-askpass-1.2.2
 A=${P}.tar.gz
