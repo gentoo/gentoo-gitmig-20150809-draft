@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/pam
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.24 2003/02/09 16:59:50 gmsoft Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.25 2003/02/12 09:20:55 vapier Exp $
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> pam-0.75-r11.ebuild :
   Added hppa to keywords.

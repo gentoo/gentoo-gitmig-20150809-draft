@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/cracklib
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.12 2003/02/11 11:32:09 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.13 2003/02/12 09:18:56 vapier Exp $
 
 *cracklib-2.7-r6 (25 Oct 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/nss-db
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/ChangeLog,v 1.2 2002/07/21 03:08:37 gerk Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/ChangeLog,v 1.3 2003/02/12 09:20:42 vapier Exp $
 
 *nss-db-2.2-r1 (1 Feb 2002)
 
