@@ -1,16 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.4.ebuild,v 1.4 2004/05/04 20:18:36 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.6.ebuild,v 1.1 2004/05/04 20:18:37 brad Exp $
 
 inherit nsplugins eutils
-
-IUSE="gnome"
 
 MY_PN=${PN/-bin/}
 S=${WORKDIR}/thunderbird
 
 DESCRIPTION="The Mozilla Thunderbird Mail & News Reader"
-SRC_URI="http://ftp.mozilla.org/pub/thunderbird/releases/${PV}/thunderbird-${PV}-i686-pc-linux-gtk2-gnu.tar.bz2"
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/thunderbird-${PV}-i686-linux-gtk2+xft.tar.gz"
 
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird"
 RESTRICT="nostrip"
@@ -18,12 +16,11 @@ RESTRICT="nostrip"
 KEYWORDS="~x86 -ppc -sparc -alpha"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
-IUSE="gtk2 crypt"
+IUSE="gnome gtk2 crypt"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/x11
 	>=dev-libs/libIDL-0.8.0
-	>=gnome-base/ORBit-0.5.10-r1
 	>=x11-libs/gtk+-2.1.1
 	virtual/xft
 	>=media-libs/jpeg-6b
@@ -42,22 +39,17 @@ src_install() {
 	# Fixing permissions
 	chown -R root:root ${D}/opt/MozillaThunderbird
 
-	# Truetype fonts
-	cd ${D}/opt/MozillaThunderbird/defaults/pref
-	einfo "Enabling truetype fonts. Filesdir is ${FILESDIR}"
-	epatch ${FILESDIR}/thunderbird-0.3-antialiasing-patch
-
 	# Misc stuff
-	dobin ${FILESDIR}/MozillaThunderbird
+	dobin ${FILESDIR}/thunderbird
 
 	# Install icon and .desktop for menu entry
 	if [ "`use gnome`" ]
 	then
 		insinto /usr/share/pixmaps
-		doins ${FILESDIR}/icon/thunderbird-icon.png
+		doins ${FILESDIR}/${PV}/icon/thunderbird-icon.png
 
 		insinto /usr/share/gnome/apps/Internet
-		doins ${FILESDIR}/icon/mozillathunderbird.desktop
+		doins ${FILESDIR}/${PV}/icon/mozillathunderbird.desktop
 	fi
 }
 
@@ -68,5 +60,8 @@ pkg_postinst() {
 	einfo "Restart Thunderbird after having installed both extensions."
 	einfo ""
 	einfo "The extensions are located at http://enigmail.mozdev.org/."
+	einfo ""
+	einfo "Please note that the binary name has changed from MozillaThunderbird"
+	einfo "to simply 'thunderbird'."
 	einfo ""
 }
