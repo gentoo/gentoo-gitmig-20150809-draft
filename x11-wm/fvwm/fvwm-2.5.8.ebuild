@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.11 2003/11/11 22:10:43 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.12 2003/11/12 09:07:16 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -67,9 +67,10 @@ src_unpack() {
 	# moving it into ~/.fvwmtabs.state will do for now.
 	cd ${WORKDIR}; epatch ${FILESDIR}/fvwmtabs-insecure-tmp-handling.diff
 
-	# this patch was sent to the fvwm-workers mailing list in
-	# <20031111234845.A12314@deepblue.milkyway.com.au>, perllib applications
-	# were getting destroyed before the ON_EXIT handler could be invoked.
+	# this patch from cvs, regarding a message sent to the fvwm-workers 
+	# mailing list in <20031111234845.A12314@deepblue.milkyway.com.au>, 
+	# perllib applications were getting destroyed before the ON_EXIT 
+	# handler could be invoked.
 	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.8-perllib-disconnect.diff
 
 	# build fails on alpha with certain options without this.

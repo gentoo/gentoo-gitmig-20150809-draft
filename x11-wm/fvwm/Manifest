@@ -1,5 +1,5 @@
 MD5 e79bd2fa2e46e650aabaa16754e25583 fvwm-2.5.7-r5.ebuild 8757
-MD5 f8215c0c3acb295b45d8c44763e8d5f4 fvwm-2.5.8.ebuild 9081
+MD5 4cb963d46899b4e7b468135b2b8688d4 fvwm-2.5.8.ebuild 9113
 MD5 b893f78193652b275ce5d276ac38af29 fvwm-2.4.17.ebuild 3961
 MD5 8fa93269e89c39d61e797e46a91b2872 fvwm-2.5.7-r3.ebuild 8726
 MD5 a3663b67114af0af40f4bd9fb2cfe69c ChangeLog 9092
@@ -8,7 +8,7 @@ MD5 e2ceb5d855c5406a09d82442196efad8 files/README.transluceny.gz 5788
 MD5 e5701841190ad529d5577c8da69d5006 files/fvwmtabs-insecure-tmp-handling.diff 2350
 MD5 b2af3c1c8fe4f142e2b8debbb5c59a94 files/digest-fvwm-2.4.17 65
 MD5 38cb0131791d07053b5d90bf21d1993f files/fvwm-translucent-menus.diff.gz 3582
-MD5 f43ef0d2ee76f403eea9ead9c5e5a297 files/fvwm-2.5.8-perllib-disconnect.diff 475
+MD5 977c11b7ca7c17cff7a14d1d4a0136f4 files/fvwm-2.5.8-perllib-disconnect.diff 1179
 MD5 2bdb17132f9d7f352002a1fbace7fca1 files/acinclude.m4 61423
 MD5 df03a10a40a620ce8f1fab75f9758884 files/disable-debug-statements.diff 419
 MD5 719ab11e70adb34bdf0a3fa0541b3ca6 files/digest-fvwm-2.5.8 127
