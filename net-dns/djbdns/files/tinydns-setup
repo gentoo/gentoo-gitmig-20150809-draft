@@ -41,7 +41,7 @@ setup() {
 		mkdir $mypath
 	fi
 
-	# check for existance of users dnscache and dnslog:
+	# check for existance of users tinydns and dnslog:
 	echo
 	echo
 	einfo "Checking for tinydns and dnslog user accts ..."
@@ -56,9 +56,9 @@ setup() {
 	/usr/bin/grep tinydns /etc/passwd &> /dev/null
 	if [ $? -ne 0 ]
 	then
-		echo ">>> Adding user dnscache ..."
+		echo ">>> Adding user tinydns ..."
 		/usr/sbin/useradd -d /dev/null -s /bin/false -g nofiles \
-			dnscache &> /dev/null
+			tinydns &> /dev/null
 	fi
 
 	/usr/bin/grep dnslog /etc/passwd &> /dev/null
