@@ -1,17 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.1.ebuild,v 1.6 2004/07/04 02:44:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.2-r1.ebuild,v 1.1 2004/10/01 08:56:37 usata Exp $
 
 inherit gnome2
 
 DESCRIPTION="A Japanese input module for GTK2 and XIM"
 HOMEPAGE="http://im-ja.sourceforge.net/"
 SRC_URI="http://im-ja.sourceforge.net/${P}.tar.gz
-	http://im-ja.sourceforge.net/old/${P}.tar.gz"
+	http://im-ja.sourceforge.net/old/${P}.tar.gz
+	mirror://gentoo/${P}-20041001.diff.gz
+	http://dev.gentoo.org/~usata/distfiles/${P}-20041001.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE="gnome canna freewnn skk anthy"
 # --enable-debug causes build failure with gtk+-2.4
 #IUSE="${IUSE} debug"
@@ -20,12 +22,12 @@ DEPEND="dev-lang/perl
 	dev-perl/URI
 	${RDEPEND}"
 RDEPEND="virtual/libc
-	>=dev-libs/glib-2.2.1
-	>=dev-libs/atk-1.2.2
-	>=x11-libs/gtk+-2.2.1
+	>=dev-libs/glib-2.4
+	>=dev-libs/atk-1.6
+	>=x11-libs/gtk+-2.4
 	>=x11-libs/pango-1.2.1
-	>=gnome-base/gconf-2.2
-	>=gnome-base/libglade-2.0
+	>=gnome-base/gconf-2.4
+	>=gnome-base/libglade-2.4
 	gnome? ( >=gnome-base/gnome-panel-2.0 )
 	freewnn? ( app-i18n/freewnn )
 	canna? ( app-i18n/canna )
@@ -33,6 +35,12 @@ RDEPEND="virtual/libc
 	anthy? ( || ( app-i18n/anthy app-i18n/anthy-ss ) )"
 
 DOCS="AUTHORS README ChangeLog TODO"
+
+src_unpack() {
+	unpack ${P}.tar.gz
+	cd ${S}
+	epatch ${DISTDIR}/${P}-20041001.diff.gz
+}
 
 src_compile() {
 	local myconf
@@ -52,7 +60,9 @@ src_compile() {
 }
 
 pkg_postinst() {
-	gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+	if [ -x /usr/bin/gtk-query-immodules-2.0 ] ; then
+		gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+	fi
 	gnome2_pkg_postinst
 	einfo
 	einfo "This version of im-ja comes with experimental XIM support."
@@ -65,6 +75,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+	if [ -x /usr/bin/gtk-query-immodules-2.0 ] ; then
+		gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+	fi
 	gnome2_pkg_postrm
 }
