@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.13 2002/08/14 15:17:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.14 2002/10/27 07:43:12 woodchip Exp $
+
+*util-linux-2.11w (27 Oct 2002)
+
+  27 Oct 2002; Donny Davies <woodchip@gentoo.org> :
+  Chase latest release.  Fixes potential root exploit.
 
 *util-linux-2.11u (14 Aug 2002)
 
