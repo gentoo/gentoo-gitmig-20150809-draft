@@ -1,8 +1,12 @@
 # ChangeLog for net-libs/openslp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.2 2002/04/27 23:59:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.3 2002/10/19 21:07:54 cselkirk Exp $
 
 *openslp-1.0.8a (27 Apr 2002)
+
+  19 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> openslp-1.0.8a.ebuild :
+
+  Added ppc to KEYWORDS.
 
   27 Apr 2002; Seemant Kulleen <seemant@gentoo.org> openslp-1.0.8a.ebuild
   files/digest-openslp-1.0.8a :
