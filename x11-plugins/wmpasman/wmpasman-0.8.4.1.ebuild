@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/wmpasman-0.8.3.ebuild,v 1.5 2004/07/30 01:35:32 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/wmpasman-0.8.4.1.ebuild,v 1.1 2004/07/30 01:35:32 s4t4n Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/wmpasman/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 amd64"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND=">=x11-libs/gtk+-2.4.1
 	>=app-crypt/mhash-0.9.1
