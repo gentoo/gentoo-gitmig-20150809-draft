@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.13.ebuild,v 1.13 2004/12/28 19:10:27 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.13.ebuild,v 1.14 2004/12/29 02:39:19 ribosome Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="virtual/x11
 	>=sys-libs/zlib-1.0.3
 	>=media-libs/t1lib-1.3.1
 	>=media-libs/tiff-3.5
-	fftw? ( =dev-libs/fftw-2* )
+	fftw? ( =sci-libs/fftw-2* )
 	netcdf? ( >=sci-libs/netcdf-3.0 )
 	png? ( >=media-libs/libpng-0.9.6 )
 	jpeg? ( media-libs/jpeg )
