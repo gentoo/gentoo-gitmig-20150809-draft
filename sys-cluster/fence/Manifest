@@ -3,18 +3,18 @@ Hash: SHA1
 
 MD5 458a3f7bbb15b94860e31c6fa7bffb86 fence-1.1.ebuild 669
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 8da532883d746dbf3aeb81a6b06c9163 ChangeLog 1098
+MD5 b34d0a80377ba02ce2704c09ce779c72 ChangeLog 1193
 MD5 bda1aff0f0350c4b3022d7efa86c6978 fence-1.5.ebuild 751
 MD5 ce802be0009e02f19825a6ed0e5d99b9 fence-1.25.ebuild 810
 MD5 0525a754475de417bde039d1d5ea1b02 files/digest-fence-1.1 60
 MD5 ee20a5bcde14f8c6c135faed5114967c files/digest-fence-1.5 60
 MD5 f01eba53626c01082acd57e7a8caa414 files/digest-fence-1.25 61
-MD5 140213feb2c2d721775c8b95221b6c98 files/fenced.rc 1652
+MD5 3b35cc65e64d27600313f7eac0a7488f files/fenced.rc 1622
 MD5 847b16e549d8f4bf1f496454d7d653ad files/fenced.conf 263
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCQYdHgMUyd/cdjWsRAm/+AJ42doE+kgi1zxmdj2/UxQGs+HTZxQCePuJj
-pdJy3mmwwfjG6r7UIMu81sA=
-=xDmV
+iD8DBQFCQ3RPgMUyd/cdjWsRAoI5AJ9OydMzuNbfI6HOwUETX/8XIiDcNACfe6+I
+kM9NTuy41CThSt7vDIQSlUU=
+=nYmA
 -----END PGP SIGNATURE-----

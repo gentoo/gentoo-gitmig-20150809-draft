@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 675fab4d1d69ca915e877f00e423e5ce ChangeLog 696
+MD5 e26f8369d948eab5001d9b9299070e1c ChangeLog 817
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 MD5 c7ba717a3b75ff11e83930fab4188fa3 gnbd-1.0_pre13.ebuild 1042
-MD5 5d530927f23d00d306d2a1b27d59fd66 files/gnbd-client.rc 2370
-MD5 ac0809e436b7f6081623f9678a4cc449 files/gnbd-srv.rc 1947
+MD5 ba721cd9cf6ac2d3c91b2b18c4f67456 files/gnbd-client.rc 2723
+MD5 dcb5af2eba55a19193d93220f9fa3399 files/gnbd-srv.rc 1947
 MD5 a96ced2be5dbc837a2d23bd3fbecaa12 files/gnbd.devfs 332
 MD5 79b84f9fc4b7bdee59dd1211663aef8d files/gnbdtab 177
 MD5 59f3ca3db34191305528a95653f41692 files/digest-gnbd-1.0_pre13 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCQYf9gMUyd/cdjWsRAum2AJ9LsSaNUDWlXCf0Nq/Q9Domk5JPZQCfUNEV
-IQ9+oXq4pqwbAmiYQbM/Xmc=
-=+dvc
+iD8DBQFCQ3TLgMUyd/cdjWsRAv7OAJwPu4Rlrs09O0fpVN0QSkrvdUY3nQCfexkQ
+lumrkqSbbEgwFGioiZDxNUE=
+=dSDC
 -----END PGP SIGNATURE-----

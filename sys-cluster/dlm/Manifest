@@ -2,16 +2,16 @@
 Hash: SHA1
 
 MD5 8873d5690fcbecf8bc755fa56c6bcee5 dlm-1.0_pre6.ebuild 749
-MD5 6bd1048d5ac2b80db0ed5c5fb6f4bff6 ChangeLog 875
+MD5 29dd7b8d62d96287107be7079c5e723c ChangeLog 968
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 MD5 117028efcbca2cb3698323410d4600d5 dlm-1.0_pre21.ebuild 832
 MD5 1c4db8e258838bc60b994ca483cc195e files/digest-dlm-1.0_pre6 63
 MD5 3099250e07ba9a5dd37879bda665d41e files/digest-dlm-1.0_pre21 64
-MD5 044dafd246e8f59b78753dd4d6e863ef files/dlm.rc 771
+MD5 c5cecbfd0e67123a1e97a48291c7fde2 files/dlm.rc 995
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCQYeggMUyd/cdjWsRArM5AKCHEZjBr0eZ70uRp6RA1Xu3STRfiwCfZJaS
-cq/2zvYZ8YvMsouou8/r4SE=
-=1YbZ
+iD8DBQFCQ3P1gMUyd/cdjWsRAteXAJ9ttRrxqt49ObUZNVq8a+cEszCN+QCeKy43
+D0hSWSJmIDLmfcd1VDbvQZo=
+=qsKo
 -----END PGP SIGNATURE-----
