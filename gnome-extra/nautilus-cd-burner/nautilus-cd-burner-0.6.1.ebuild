@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-0.6.1.ebuild,v 1.7 2004/02/10 14:36:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-0.6.1.ebuild,v 1.8 2004/03/08 01:22:36 leonardop Exp $
 
 inherit gnome2
 
@@ -33,5 +33,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	intltoolize --force
+
+	epatch ${FILESDIR}/${P}-gcc2_fix.patch
 }
 DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS README TODO"

@@ -1,7 +1,12 @@
 # ChangeLog for gnome-extra/nautilus-cd-burner
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.22 2004/02/10 14:36:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.23 2004/03/08 01:22:36 leonardop Exp $
 
+  07 Mar 2004; L. Boshell <leonardop@gentoo.org>
+  nautilus-cd-burner-0.6.1.ebuild,
+  files/nautilus-cd-burner-0.6.1-gcc2_fix.patch:
+  Added patch to make it compile under gcc-2. Closes bug #42873.
+  
   10 Feb 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   nautilus-cd-burner-0.6.1.ebuild:
   stable on hppa

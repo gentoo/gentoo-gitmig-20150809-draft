@@ -1,0 +1,80 @@
+diff -NurB nautilus-cd-burner-0.6.1-orig/cd-recorder.c nautilus-cd-burner-0.6.1/cd-recorder.c
+--- nautilus-cd-burner-0.6.1-orig/cd-recorder.c	2004-03-07 19:49:43.000000000 -0500
++++ nautilus-cd-burner-0.6.1/cd-recorder.c	2004-03-07 19:59:05.000000000 -0500
+@@ -480,7 +480,7 @@
+ 
+ 	g_ptr_array_add (argv, "-Z");
+ 
+-	dev_str = g_strdup_printf ("%s=%s", recorder->device, t->data.filename);
++	dev_str = g_strdup_printf ("%s=%s", recorder->device, t->fields.data.filename);
+ 	g_ptr_array_add (argv, dev_str);
+ 
+ 	g_ptr_array_add (argv, NULL);
+@@ -634,12 +634,12 @@
+ 		case TRACK_TYPE_DATA:
+ 			g_ptr_array_add (argv, "-data");
+ 			g_ptr_array_add (argv, "-nopad"); /* TODO? */
+-			g_ptr_array_add (argv, track->data.filename);
++			g_ptr_array_add (argv, track->fields.data.filename);
+ 			break;
+ 		case TRACK_TYPE_AUDIO:
+ 			g_ptr_array_add (argv, "-audio");
+ 			g_ptr_array_add (argv, "-pad");
+-			g_ptr_array_add (argv, track->audio.filename);
++			g_ptr_array_add (argv, track->fields.audio.filename);
+ 			/* TODO: handle CD-TEXT somehow */
+ 			break;
+ 		default:
+diff -NurB nautilus-cd-burner-0.6.1-orig/cd-recorder.h nautilus-cd-burner-0.6.1/cd-recorder.h
+--- nautilus-cd-burner-0.6.1-orig/cd-recorder.h	2004-03-07 19:49:43.000000000 -0500
++++ nautilus-cd-burner-0.6.1/cd-recorder.h	2004-03-07 19:53:23.000000000 -0500
+@@ -31,7 +31,7 @@
+     struct {
+       char *filename;
+     } data;
+-  };
++  } fields;
+ };
+ 
+ #define CD_TYPE_RECORDER            (cd_recorder_get_type ())
+diff -NurB nautilus-cd-burner-0.6.1-orig/make-iso.c nautilus-cd-burner-0.6.1/make-iso.c
+--- nautilus-cd-burner-0.6.1-orig/make-iso.c	2004-03-07 19:49:43.000000000 -0500
++++ nautilus-cd-burner-0.6.1/make-iso.c	2004-03-07 19:58:19.000000000 -0500
+@@ -715,8 +715,8 @@
+ 			backing = get_backing_file (info->name);
+ 			track = g_new0 (Track, 1);
+ 			track->type = TRACK_TYPE_AUDIO;
+-			track->audio.filename = backing;
+-			track->audio.cdtext = NULL;
++			track->fields.audio.filename = backing;
++			track->fields.audio.cdtext = NULL;
+ 			list = g_list_prepend (list, track);
+ 		}
+ 	}
+diff -NurB nautilus-cd-burner-0.6.1-orig/nautilus-cd-burner.c nautilus-cd-burner-0.6.1/nautilus-cd-burner.c
+--- nautilus-cd-burner-0.6.1-orig/nautilus-cd-burner.c	2004-03-07 19:49:43.000000000 -0500
++++ nautilus-cd-burner-0.6.1/nautilus-cd-burner.c	2004-03-07 19:56:13.000000000 -0500
+@@ -558,11 +558,11 @@
+ {
+ 	switch (track->type) {
+ 	case TRACK_TYPE_DATA:
+-		g_free (track->data.filename);
++		g_free (track->fields.data.filename);
+ 		break;
+ 	case TRACK_TYPE_AUDIO:
+-		g_free (track->audio.filename);
+-		g_free (track->audio.cdtext);
++		g_free (track->fields.audio.filename);
++		g_free (track->fields.audio.cdtext);
+ 		break;
+ 	default:
+ 		g_warning ("Invalid track type %d", track->type);
+@@ -864,7 +864,7 @@
+ 			Track *track;
+ 			track = g_new0 (Track, 1);
+ 			track->type = TRACK_TYPE_DATA;
+-			track->data.filename = g_strdup (filename);
++			track->fields.data.filename = g_strdup (filename);
+ 			tracks = g_list_prepend (tracks, track);
+ 		}
+ 		res = cd_recorder_write_tracks (cdrecorder, rec, tracks, speed, eject_cd, blank_cd, dummy);
