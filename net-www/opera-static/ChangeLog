@@ -1,8 +1,15 @@
 # ChangeLog for net-www/opera-static
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/ChangeLog,v 1.4 2002/08/19 18:00:38 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/ChangeLog,v 1.5 2002/08/20 17:00:25 cybersystem Exp $
 
-*opera-static-6.02 (19 August 2002)
+*opera-static-6.03 (20 August 2002)
+
+  20 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> opera-static-6.03.ebuild :
+  
+  Bumped to version 6.03. SSL Security bug fixed.
+  Ebuild by Tobias Eichert <tobias@databoogie.net>.
+
+*opera-static-6.02 (20 August 2002)
 
   19 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, opera-static-6.02.ebuild :
 
