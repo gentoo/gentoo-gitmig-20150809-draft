@@ -22,6 +22,11 @@
 ##
 
 
+
+# <tantive@gentoo.org> (30 Sep 2002)
+# Now including XFS, masked due to freeze and for testing.
+=sys-kernel/openmosix-sources-2.4.19-r6
+
 # <agenkin@gentoo.org> (30 Sep 2002)
 # Masking pending unfreeze.
 >=app-cdr/cdrtools-1.11.35
