@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.1.ebuild,v 1.2 2004/08/14 21:58:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.1.ebuild,v 1.3 2004/08/20 12:22:22 dholm Exp $
 
 PHPSAPI="cgi"
 MY_P="php-${PV}"
@@ -9,7 +9,7 @@ inherit php5-sapi eutils
 
 DESCRIPTION="PHP CGI"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 # provides all base PHP extras (eg PEAR, extension building stuff)
 DEPEND_PHP=">=${PHP_PROVIDER_PKG}-5.0.1"
