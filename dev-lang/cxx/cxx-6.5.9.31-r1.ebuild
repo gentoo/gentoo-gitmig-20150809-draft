@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.2 2003/04/18 18:09:05 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.3 2003/06/15 11:43:33 taviso Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -27,11 +27,13 @@ DEPEND="sys-devel/gcc-config
 	app-crypt/gnupg
 	>=app-shells/bash-2.05b
 	>=dev-libs/libcpml-5.2.01-r2
-	dev-libs/libots"
+	dev-libs/libots
+	dev-lang/ccc"
 
 RDEPEND="virtual/glibc
 	dev-libs/libots
-	>=dev-libs/libcpml-5.2.01-r2"
+	>=dev-libs/libcpml-5.2.01-r2
+	dev-lang/ccc"
 
 # The variables below are not used by Portage, but are used by the functions
 # below.
