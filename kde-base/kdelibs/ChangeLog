@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.221 2005/03/16 20:25:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.222 2005/03/16 22:10:09 cryos Exp $
+
+  16 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org> kdelibs-3.2.3-r8.ebuild:
+  Marked stable on amd64, bug 83814, and fixed for 2005.0 profile symlink.
 
   16 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
   kdelibs-3.2.3-r8.ebuild, kdelibs-3.3.2-r7.ebuild:
@@ -58,7 +61,7 @@
   kdelibs-3.3.2-r5.ebuild:
   Marked stable on amd64, bug 81652.
 
-  05 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  05 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   kdelibs-3.2.3-r7.ebuild, kdelibs-3.3.2-r5.ebuild:
   Stable on alpha, bug 81652.
 
@@ -87,7 +90,7 @@
   kdelibs-3.2.3-r6.ebuild, kdelibs-3.3.2-r4.ebuild:
   Stable on ppc.
 
-  02 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  02 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   kdelibs-3.2.3-r6.ebuild, kdelibs-3.3.2-r4.ebuild:
   Stable on alpha, bug 81652.
 
@@ -192,7 +195,7 @@
   +kdelibs-3.3.2-r2.ebuild:
   Add a patch for security bug #73759
 
-  29 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  29 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   kdelibs-3.3.2-r1.ebuild:
   Stable on alpha, bug 72750.
 
@@ -245,7 +248,7 @@
   27 Nov 2004; Philip Walls <malverian@gentoo.org> kdelibs-3.3.1.ebuild:
   Migrate to virtual/fam
 
-  17 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> kdelibs-3.3.1.ebuild:
+  17 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org> kdelibs-3.3.1.ebuild:
   Stable on alpha.
 
   08 Nov 2004; Joseph Jezak <josejx@gentoo.org> kdelibs-3.3.1.ebuild:
@@ -254,7 +257,7 @@
   04 Nov 2004; Jason Wever <weeve@gentoo.org> kdelibs-3.3.1.ebuild:
   Stable on sparc wrt security bug #69936.
 
-  03 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> kdelibs-3.3.1.ebuild:
+  03 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org> kdelibs-3.3.1.ebuild:
   ~alpha keyword.
 
   03 Nov 2004; Caleb Tennis <caleb@gentoo.org> kdelibs-3.3.1.ebuild:
@@ -358,7 +361,7 @@
   +kdelibs-3.3.0_beta1.ebuild:
   New beta, remove alpha
 
-  07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> kdelibs-3.2.2-r1.ebuild:
+  07 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> kdelibs-3.2.2-r1.ebuild:
   Stable on alpha.
 
 *kdelibs-3.2.3 (10 Jun 2004)
