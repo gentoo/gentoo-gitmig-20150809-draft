@@ -1,20 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r1.ebuild,v 1.5 2004/10/31 00:57:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r2.ebuild,v 1.1 2004/10/31 01:19:34 vapier Exp $
 
 inherit eutils flag-o-matic
 
-STAMP=20041027
+STAMP1=20041027
+STAMP2=20041030
 DESCRIPTION="free implementation of Windows(tm) on Unix - CVS snapshot"
 HOMEPAGE="http://www.winehq.com/"
 SRC_URI="mirror://sourceforge/${PN}/Wine-${PV}.tar.gz
-	 mirror://gentoo/${PN}-${STAMP}-fake_windows.tar.bz2
-	 mirror://gentoo/${PN}-${STAMP}-misc.tar.bz2"
+	mirror://gentoo/${PN}-${STAMP1}-fake_windows.tar.bz2
+	mirror://gentoo/${PN}-${STAMP2}-misc.tar.bz2
+	http://dev.gentoo.org/~vapier/dist/${PN}-${STAMP2}-misc.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-*"
-IUSE="X jack alsa arts cups debug nas opengl tcltk ncurses"
+IUSE="X alsa arts cups debug nas opengl gif glut jack jpeg oss ncurses doc"
 
 DEPEND="sys-devel/gcc
 	sys-devel/flex
@@ -22,12 +24,15 @@ DEPEND="sys-devel/gcc
 	>=media-libs/freetype-2.0.0
 	jack? ( media-sound/jack-audio-connection-kit )
 	X? ( virtual/x11 )
-	tcltk? ( dev-lang/tcl dev-lang/tk )
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
 	nas? ( media-libs/nas )
 	cups? ( net-print/cups )
 	opengl? ( virtual/opengl )
+	gif? ( media-libs/libungif )
+	jpeg? ( media-libs/jpeg )
+	glut? ( virtual/glut )
+	doc? ( app-text/docbook-sgml-utils app-text/jadetex )
 	>=sys-apps/sed-4"
 
 src_unpack() {
@@ -56,11 +61,15 @@ config_cache() {
 
 src_compile() {
 	export LDCONFIG=/bin/true
-	config_cache jack jack_jack_h
-	config_cache cups cups_cups_h
-	config_cache alsa alsa_asoundlib_h sys_asoundlib_h
-	use arts || export ARTSCCONFIG="/bin/false"
-	config_cache nas audio_audiolib_h
+	config_cache jack header_jack_jack_h
+	config_cache cups header_cups_cups_h
+	config_cache alsa header_alsa_asoundlib_h header_sys_asoundlib_h lib_asound_snd_pcm_open
+	config_cache arts path_ARTSCCONFIG
+	config_cache nas header_audio_audiolib_h header_audio_soundlib_h
+	config_cache gif header_gif_lib_h
+	config_cache glut lib_glut_glutMainLoop
+	config_cache jpeg header_jpeglib_h
+	config_cache oss sys_soundcard_h header_machine_soundcard_h header_soundcard_h
 
 	strip-flags
 
@@ -75,22 +84,21 @@ src_compile() {
 
 	emake -j1 depend || die "depend"
 	emake all || die "all"
-	emake -C programs || die "programs"
+	if use doc ; then
+		emake -C documentation doc || die "docs"
+	fi
 }
 
 src_install() {
-	### Install wine to ${D}
-	local WINEMAKEOPTS="
-		prefix=${D}/usr
-		bindir=${D}/usr/bin
-		datadir=${D}/usr/share
-		mandir=${D}/usr/share/man
-		libdir=${D}/usr/lib
-		dlldir=${D}/usr/lib/wine
-		"
-	make ${WINEMAKEOPTS} install || die "install"
-	cd ${S}/programs
-	make ${WINEMAKEOPTS} install || die "install programs"
+	make \
+		prefix=${D}/usr \
+		bindir=${D}/usr/bin \
+		datadir=${D}/usr/share \
+		mandir=${D}/usr/share/man \
+		libdir=${D}/usr/lib \
+		dlldir=${D}/usr/lib/wine \
+		install || die
+	use doc && dodoc documentation/*.pdf
 
 	# Needed for later installation
 	dodir /usr/bin
