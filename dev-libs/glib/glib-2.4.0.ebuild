@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.0.ebuild,v 1.3 2004/03/22 17:18:24 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.0.ebuild,v 1.4 2004/03/22 22:21:28 foser Exp $
 
 inherit libtool
 
@@ -20,6 +20,8 @@ DEPEND=">=dev-util/pkgconfig-0.14
 RDEPEND="virtual/glibc"
 
 src_compile() {
+
+	elibtoolize
 
 	econf --with-threads=posix \
 		`use_enable doc gtk-doc` \
