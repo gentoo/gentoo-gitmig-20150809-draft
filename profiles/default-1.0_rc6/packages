@@ -154,3 +154,4 @@
 >=media-sound/alsa-utils-0.5.10-r6
 >=net-print/LPRng-3.7.8-r6
 >=net-nds/ypbind-1.7-r6
+>=net-nds/ypserv-1.3.9-r6
