@@ -1,0 +1,15 @@
+--- apcupsd.in	2002-09-14 14:03:18.000000000 +0200
++++ apcupsd.in.new	2003-11-06 16:34:28.000000000 +0100
+@@ -6,6 +6,12 @@
+ APCPID=@PIDDIR@/apcupsd.pid
+ APCUPSD=@sbindir@/apcupsd
+ 
++depend() {
++	after hotplug
++	after usb
++	after net
++}
++
+ start() {
+ 	rm -f /etc/apcupsd/powerfail
+ 	ebegin "Starting APC UPS daemon"

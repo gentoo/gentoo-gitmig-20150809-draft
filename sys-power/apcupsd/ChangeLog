@@ -1,0 +1,279 @@
+# ChangeLog for sys-apps/apcupsd
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.1 2005/03/14 23:27:27 ciaranm Exp $
+
+*apcupsd-3.10.16-r3 (14 Mar 2005)
+*apcupsd-3.10.15-r1 (14 Mar 2005)
+
+  14 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/3.10.15/apache.conf, +files/3.10.15/apcupsd.in.patch,
+  +files/3.10.15/smtp.patch, +files/3.10.16/apache.conf,
+  +files/3.10.16/apcupsd.in.patch, +files/3.10.16/smtp.patch, +metadata.xml,
+  +apcupsd-3.10.15-r1.ebuild, +apcupsd-3.10.16-r3.ebuild:
+  Moved from sys-apps/apcupsd to sys-power/apcupsd.
+
+  21 Feb 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/3.10.15/ucd-snmp.patch, -files/3.10.16/ucd-snmp.patch,
+  apcupsd-3.10.15-r1.ebuild, apcupsd-3.10.16-r3.ebuild:
+  removing ucd-snmp as per bug #69451
+
+*apcupsd-3.10.16-r3 (20 Dec 2004)
+
+  20 Dec 2004; Michael Imhof <tantive@gentoo.org> -apcupsd-3.10.16-r1.ebuild,
+  -apcupsd-3.10.16-r2.ebuild, +apcupsd-3.10.16-r3.ebuild:
+  Ebuild wasn't handling $myconf correct. Fixes #73604.
+
+*apcupsd-3.10.16-r2 (02 Dec 2004)
+
+  02 Dec 2004; Michael Imhof <tantive@gentoo.org> +apcupsd-3.10.16-r2.ebuild:
+  Proper use of the usb use flag. Closes #54925.
+
+  23 Nov 2004; Scott W Taylor <swtaylor@gentoo.org>
+  apcupsd-3.10.16-r1.ebuild:
+  missing trailing backslash on line 63
+
+*apcupsd-3.10.16-r1 (23 Nov 2004)
+
+  23 Nov 2004; Michael Imhof <tantive@gentoo.org> +apcupsd-3.10.16-r1.ebuild,
+  -apcupsd-3.10.16.ebuild:
+  New revision. Added support for the gd USE-flag. Closes #68935.
+
+*apcupsd-3.10.16 (12 Nov 2004)
+
+  12 Nov 2004; Michael Imhof <tantive@gentoo.org> +files/3.10.16/apache.conf,
+  +files/3.10.16/apcupsd.in.patch, +files/3.10.16/smtp.patch,
+  +files/3.10.16/ucd-snmp.patch, +apcupsd-3.10.16.ebuild:
+  Version bumped.
+
+  30 Oct 2004; Michael Imhof <tantive@gentoo.org> -files/3.10.13/apache.conf,
+  -files/3.10.13/apcupsd.in.patch, -files/3.10.13/smtp.patch,
+  -files/3.10.13/ucd-snmp.patch, -apcupsd-3.10.13.ebuild:
+  Cleaned out old version. Closes #69451.
+
+  30 Oct 2004; Lars Weiler <pylon@gentoo.org> apcupsd-3.10.15-r1.ebuild:
+  Compiles and should work according to users.
+
+  29 Oct 2004; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.15-r1.ebuild:
+  Stable on AMD64.
+
+  27 Oct 2004; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.15-r1.ebuild:
+  Fixed path to the hid devices. Closes #36162.
+
+  24 Oct 2004; Heinrich Wendel <lanius@gentoo.org> -files/3.10.10/apache.conf,
+  -files/3.10.10/apccontrol.diff, -files/3.10.10/apcupsd.in.patch,
+  -files/3.10.10/smtp.patch, -files/3.10.10/ucd-snmp.patch,
+  -files/3.10.8/apache.conf, -files/3.10.8/apcupsd.in.patch,
+  -files/3.10.8/smtp.patch, -files/3.10.8/ucd-snmp.patch,
+  -files/3.10.9/apache.conf, -files/3.10.9/apcupsd.in.patch,
+  -files/3.10.9/smtp.patch, -files/3.10.9/ucd-snmp.patch,
+  -apcupsd-3.10.10-r1.ebuild, -apcupsd-3.10.10-r2.ebuild,
+  -apcupsd-3.10.10.ebuild, apcupsd-3.10.15-r1.ebuild, -apcupsd-3.10.8.ebuild,
+  -apcupsd-3.10.9.ebuild:
+  remove old versions; mark 3.10.15 stable on x86
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  apcupsd-3.10.10-r1.ebuild:
+  Masked apcupsd-3.10.10-r1.ebuild stable for ppc
+
+  01 Sep 2004; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.15-r1.ebuild:
+  Missed the snmp USE-flag. Fixed now.
+
+*apcupsd-3.10.15-r1 (31 Aug 2004)
+
+  31 Aug 2004; Michael Imhof <tantive@gentoo.org> +apcupsd-3.10.15-r1.ebuild,
+  -apcupsd-3.10.15.ebuild:
+  Now depends on virtual/snmp and applies the ucd patch only if has_version
+  ucd-snmp. Closes #53210.
+
+  26 Aug 2004; Michael Imhof <tantive@gentoo.org> +files/3.10.15/apache.conf,
+  +files/3.10.15/apcupsd.in.patch, +files/3.10.15/smtp.patch,
+  +files/3.10.15/ucd-snmp.patch:
+  Forgot to add some files. Closes #61714.
+
+*apcupsd-3.10.15 (25 Aug 2004)
+
+  25 Aug 2004; Michael Imhof <tantive@gentoo.org> +apcupsd-3.10.15.ebuild:
+  Version bumped.
+
+  25 Aug 2004; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.13.ebuild:
+  Stable on x86.
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  apcupsd-3.10.13.ebuild:
+  Stable amd64.
+
+  14 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  apcupsd-3.10.10-r1.ebuild, apcupsd-3.10.10-r2.ebuild,
+  apcupsd-3.10.10.ebuild, apcupsd-3.10.13.ebuild, apcupsd-3.10.8.ebuild,
+  apcupsd-3.10.9.ebuild:
+  don't assign default to S
+
+  27 May 2004; Michael <tantive@gentoo.org> apcupsd-3.10.13.ebuild:
+  Adjusted config option.
+
+*apcupsd-3.10.13 (26 May 2004)
+
+  26 May 2004; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.13.ebuild,
+  files/3.10.13/apache.conf, files/3.10.13/apcupsd.in.patch,
+  files/3.10.13/smtp.patch, files/3.10.13/ucd-snmp.patch,
+  files/3.10.5/apache.conf, files/3.10.6/apache.conf,
+  files/3.10.6/apcupsd.in.patch, files/3.10.6/smtp.patch,
+  files/3.10.6/ucd-snmp.patch:
+  Version bumped. Cleaned out old files.
+
+*apcupsd-3.10.10-r2 (25 May 2004)
+
+  25 May 2004; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.10-r2.ebuild:
+  Fixed path to stylesheet. Closes 51452.
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> apcupsd-3.10.10-r1.ebuild,
+  apcupsd-3.10.10.ebuild, apcupsd-3.10.8.ebuild, apcupsd-3.10.9.ebuild:
+  Add inherit eutils
+
+*apcupsd-3.10.10-r1 (21 Apr 2004)
+
+  21 Apr 2004; Martin Holzer <mholzer@gentoo.org> apcupsd-3.10.10-r1.ebuild,
+  files/3.10.10/apccontrol.diff:
+  fixing bug in apccontrol. closes 46075
+
+*apcupsd-3.10.10 (24 Feb 2004)
+
+  24 Feb 2004; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.10.ebuild,
+  files/3.10.10/apache.conf, files/3.10.10/apcupsd.in.patch,
+  files/3.10.10/smtp.patch, files/3.10.10/ucd-snmp.patch:
+  Version bumped.
+
+  27 Jan 2004; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.9.ebuild:
+  Marked x86.
+
+*apcupsd-3.10.9 (14 Jan 2004)
+
+  14 Jan 2004; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.5-r4.ebuild,
+  apcupsd-3.10.9.ebuild, files/3.10.9/apache.conf,
+  files/3.10.9/apcupsd.in.patch, files/3.10.9/smtp.patch,
+  files/3.10.9/ucd-snmp.patch:
+  Added new version.
+
+  14 Jan 2004; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.5-r4.ebuild,
+  files/3.10.9/apache.conf, files/3.10.9/apcupsd.in.patch,
+  files/3.10.9/smtp.patch, files/3.10.9/ucd-snmp.patch:
+  More cleanups.
+
+  14 Jan 2004; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.5-r2.ebuild,
+  apcupsd-3.10.5-r3.ebuild, apcupsd-3.10.8.ebuild:
+  Marked stable and removed old ebuilds.
+
+*apcupsd-3.10.8 (03 Jan 2004)
+
+  03 Jan 2004; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.5-r2.ebuild,
+  apcupsd-3.10.5-r3.ebuild, apcupsd-3.10.5-r4.ebuild, apcupsd-3.10.6.ebuild,
+  apcupsd-3.10.8.ebuild, files/3.10.8/apache.conf,
+  files/3.10.8/apcupsd.in.patch, files/3.10.8/smtp.patch,
+  files/3.10.8/ucd-snmp.patch:
+  Version bumped, closes #36892. Changed copyright to 2004.
+
+  04 Dec 2003; Heinrich Wendel <lanius@gentoo.org> files/apccontrol,
+  files/apcupsd, files/halt:
+  removed unused files
+
+  04 Dec 2003; Heinrich Wendel <lanius@gentoo.org> apcupsd-3.10.6.ebuild,
+  files/3.10.6/ucd-snmp.patch:
+  added patch to compile with ucd-snmp
+
+  06 Nov 2003; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.6.ebuild:
+  Added a patch for the init-script. Makes sure apcupsd is started after
+  hotplug, usb  and net. Closes #32769.
+
+  01 Nov 2003; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.6.ebuild:
+  Changed various things. Corrected paths for apache2, added a patch for 
+  the scripts in /etc/apcupsd. Linked onbattery to powerout.
+  Closes #25379 and #32471.
+
+*apcupsd-3.10.6 (01 Nov 2003)
+
+  01 Nov 2003; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.6.ebuild:
+  Version bumped.
+
+  17 Oct 2003; Jason Wever <weeve@gentoo.org> apcupsd-3.10.5-r4.ebuild:
+  Added ~sparc keyword.
+
+  04 Sep 2003; Martin Holzer <mholzer@gentoo.org> apcupsd-3.10.5-r4.ebuild,
+  files/apcupsd:
+  adding usb support
+
+*apcupsd-3.10.5-r4 (04 Sep 2003)
+
+  04 Sep 2003; Martin Holzer <mholzer@gentoo.org> apcupsd-3.10.5-r4.ebuild:
+  Added snmp support. Submitted by Anders Bruun Olsen <anders@bruun-olsen.net>
+  in #23946.
+
+  03 Sep 2003; Martin Holzer <mholzer@gentoo.org> apcupsd-3.10.5-r3.ebuild:
+  Adding safe.apccontrol
+
+  30 Jun 2003; Martin Holzer <mholzer@gentoo.org> files/apcupsd:
+  Added depend into initscript. Closes #20771.
+
+*apcupsd-3.10.5-r3 (27 Feb 2003)
+
+  27 Feb 2003; Zach Welch <zwelch@gentoo.org> apcupsd-3.10.5-r3.ebuild:
+  fix bug 16476
+
+*apcupsd-3.10.5-r2 (27 Feb 2003)
+
+  27 Feb 2003; Zach Welch <zwelch@gentoo.org> apcupsd-3.10.5-r2.ebuild:
+  fix mail delivery
+
+*apcupsd-3.10.5-r1 (26 Feb 2003)
+
+  26 Feb 2003; Zach Welch <zwelch@gentoo.org> apcupsd-3.10.5-r1.ebuild,
+  files/3.10.5/apache.conf, files/3.10.5/init.patch,
+  files/3.10.5/restart.patch:
+  Add --enable-oldnet, fix restart race, add init script depend, add
+  apache add-on configuration file; fixes bugs 9942 and 16392
+
+*apcupsd-3.10.5 (23 Feb 2003)
+
+  24 Feb 2003; Zach Welch <zwelch@gentoo.org> apcupsd-3.10.5.ebuild :
+  Mark stable for arm
+
+  23 Feb 2003; Zach Welch <zwelch@gentoo.org> :
+  Update to latest version to address GLSA (see bug 16002)
+ 
+*apcupsd-3.10.1 (20 Oct 2002)
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+  15 Nov 2002; Zach Welch <zwelch@gentoo.org> :
+  Update ebuild to patch powerflute for gcc 3.2 compatibliity
+
+  25 Oct 2002; Zach Welch <zwelch@gentoo.org> :
+  Update ebuild to patch configure to use correct system version.
+  Sucessfully merged on ppc, added ~ppc
+
+  20 Oct 2002; Zach Welch <zwelch@gentoo.org> :
+  New version incorporating changes made by Superlucidity Services, LLC, to
+  support Gentoo without additional patching.  
+  First version (in portage) that supports USB UPSes, and the defaults for the
+  configuration file use these (as examples for serial are shown in comments).
+  This version also installs all the add ons for the package which were 
+  previously disabeld.  This includes multimon cgi support.
+  See bug 7778 for more information.
+
+*apcupsd-3.8.5 (14 Jul 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> apcupsd-3.8.1.ebuild, files/digest-apcupsd-3.8.1 :
+  Bumped to new version. 
+  Thanks to tantive <tantive@tantive.de> for the contribution.
+
+*apcupsd-3.8.1 (1 Feb 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> apcupsd-3.8.1.ebuild :
+  Added KEYWORDS, SLOT.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
