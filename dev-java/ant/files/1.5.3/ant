@@ -1,0 +1,89 @@
+#! /bin/sh
+
+#   Copyright (c) 2001-2003 The Apache Software Foundation.  All rights
+#   reserved.
+#   Edited for Gentoo Linux
+#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant/files/1.5.3/ant,v 1.1 2003/04/15 21:10:04 absinthe Exp $
+
+if [ -f $HOME/.gentoo/java-env ] ; then
+  source $HOME/.gentoo/java-env
+else
+  JAVA_HOME=`java-config --jdk-home`
+  if [ -z $JAVA_HOME ] ; then
+    JAVA_HOME=`java-config --jre-home`
+  fi
+  CLASSPATH=`java-config --classpath`:${CLASSPATH}
+fi
+
+if [ -z $JAVA_HOME ] ; then
+  echo "Error: No JDK/JRE found!"
+  exit 1
+fi
+
+# load system-wide ant configuration
+if [ -f "/etc/ant.conf" ] ; then 
+  . /etc/ant.conf
+fi
+
+# provide default values for people who don't use RPMs
+if [ -z "$rpm_mode" ] ; then
+  rpm_mode=false;
+fi
+if [ -z "$usejikes" ] ; then
+  usejikes=false;
+fi
+
+# load user ant configuration
+if [ -f "$HOME/.antrc" ] ; then 
+  . "$HOME/.antrc"
+fi
+
+ANT_HOME=/usr/share/ant
+
+# set ANT_LIB location
+ANT_LIB="${ANT_HOME}/lib"
+
+JAVACMD="`java-config --java`"
+ 
+if [ ! -x "$JAVACMD" ] ; then
+  echo "Error: JAVA_HOME is not defined correctly."
+  echo "  We cannot execute $JAVACMD"
+  exit 1
+fi
+
+if [ -n "$CLASSPATH" ] ; then
+  LOCALCLASSPATH="$CLASSPATH"
+fi
+
+# add in the dependency .jar files
+LOCALCLASSPATH="${LOCALCLASSPATH}:`java-config --classpath=ant`"
+
+if [ -n "$JAVA_HOME" ] ; then
+  if [ -f "$JAVA_HOME/lib/tools.jar" ] ; then
+    LOCALCLASSPATH="$LOCALCLASSPATH:$JAVA_HOME/lib/tools.jar"
+  fi
+
+  if [ -f "$JAVA_HOME/lib/classes.zip" ] ; then
+    LOCALCLASSPATH="$LOCALCLASSPATH:$JAVA_HOME/lib/classes.zip"
+  fi
+
+else
+  echo "Warning: JAVA_HOME environment variable is not set (or not exported)."
+  echo "  If build fails because sun.* classes could not be found"
+  echo "  you will need to set the JAVA_HOME environment variable"
+  echo "  to the installation directory of java."
+fi
+
+# Allow Jikes support (off by default)
+if $usejikes; then
+  ANT_OPTS="$ANT_OPTS -Dbuild.compiler=jikes"
+fi
+
+# 2002-11-02, karltk@gentoo.org:
+# The Blackdown JDK on PPC hiccups with native threads
+#
+if [ "`arch`" == "ppc" ] ; then
+	export THREADS_FLAG="green"
+fi
+
+"$JAVACMD" -classpath "$LOCALCLASSPATH" -Dant.home="${ANT_HOME}" $ANT_OPTS org.apache.tools.ant.Main $ANT_ARGS "$@"
