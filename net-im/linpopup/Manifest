@@ -1,3 +1,6 @@
 MD5 a9aaf7fe7f3c990f6d6b6abbab826ca9 ChangeLog 420
 MD5 f43d01c82f73619d1e883759dcb40bab linpopup-1.2.0.ebuild 1809
+MD5 5b5f2b1ed55e892a12618ac668462009 linpopup-2.0.2.ebuild 1443
 MD5 535a60b1905be6c3c0349c488220e30c files/digest-linpopup-1.2.0 70
+MD5 cc6067f86d972179bff61a52dbec66fa files/digest-linpopup-2.0.2 67
+MD5 64959795c47be33ab1bf172f96c02371 files/linpopup.desktop 188
