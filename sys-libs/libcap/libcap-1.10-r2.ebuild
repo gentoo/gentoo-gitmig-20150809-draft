@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r2.ebuild,v 1.9 2004/02/22 12:37:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r2.ebuild,v 1.10 2004/02/24 07:17:46 rajiv Exp $
 
 inherit base
 
 DESCRIPTION="POSIX 1003.1e capabilities"
-HOMEPAGE="http://linux.kernel.org/pub/linux/libs/security/linux-privs/"
+HOMEPAGE="http://www.kernel.org/pub/linux/libs/security/linux-privs/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/security/linux-privs/kernel-2.4/${P}.tar.bz2"
 LICENSE="GPL-2 BSD"
 SLOT="0"
