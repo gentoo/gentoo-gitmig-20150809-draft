@@ -1,6 +1,2 @@
-MD5 88386742f2a7dfa093a7f1cca1921548 ChangeLog 2647
-MD5 db29c5a27b280d4932bffce44e82b03d ardour-cvs-0.6.7.ebuild 2827
-MD5 cf2dcafea0840336d91ed7c5c537fd24 ardour-cvs-0.6.4.ebuild 3027
+MD5 a40cfae7299729143c8c4e519274c717 ChangeLog 2825
 MD5 5bfe23209b494a8d0e56b22917448e8b files/asoundrc 74
-MD5 dd3df3c6861244c6791c849acb00b7c9 files/digest-ardour-cvs-0.6.7 70
-MD5 dd3df3c6861244c6791c849acb00b7c9 files/digest-ardour-cvs-0.6.4 70

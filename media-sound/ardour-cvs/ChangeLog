@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ardour-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.16 2003/06/13 13:06:33 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.17 2003/11/07 15:29:35 tigger Exp $
+
+  07 Nov 2003; rob holland <tigger@gentoo.org> ardour-cvs-0.6.4.ebuild,
+  ardour-cvs-0.6.7.ebuild:
+  the cvs ebuilds are no longer supported now there a regular beta releases
 
 *ardour-cvs-0.6.7 (13 Jun 2003)
 
