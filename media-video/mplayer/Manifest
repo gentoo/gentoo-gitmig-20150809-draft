@@ -1,10 +1,13 @@
-MD5 5add0391f6c584410ffb9367a52fe044 ChangeLog 51734
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 17e289bd7fc3c6c8b51b88fa91ce64af ChangeLog 51892
 MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 6922dce70bbab5cbe8c21e003ffd5226 mplayer-1.0_pre4-r7.ebuild 12234
 MD5 c098282cf0148b2caac4682eceec5258 mplayer-1.0_pre5-r2.ebuild 14050
 MD5 a899c1b15e110f948f5eaba5746a7016 mplayer-1.0_pre5-r3.ebuild 14739
 MD5 8f9db270042c019287fc969f41ac8801 mplayer-1.0_pre5-r4.ebuild 16480
-MD5 253fb657d91f0d5ed886b80a20a8cd9b mplayer-1.0_pre5-r5.ebuild 16904
+MD5 a1ed43e3644e0eef95cd878a4bf2ead1 mplayer-1.0_pre5-r5.ebuild 16786
 MD5 b1cb446accee325414000badaec6ac23 mplayer-1.0_pre6-r1.ebuild 16542
 MD5 484c45fb52a157c6b056b4298f787f3d files/cachefill.patch 6053
 MD5 e4581f6934f66ccecc8c1682664623d0 files/digest-mplayer-1.0_pre4-r7 358
@@ -21,6 +24,7 @@ MD5 42733acde24d84c1482db03c777360ab files/mplayer-1.0_pre4-help_mp-ro.h.patch 3
 MD5 09766023054d07a5f795eda66f247c42 files/mplayer-1.0_pre4-mpst.patch 459
 MD5 1479661ba42d9647f03f2029efcc8565 files/mplayer-1.0_pre5-bio2jack.patch 2691
 MD5 5c931dfafbd010eab985c7f427e2cb8b files/mplayer-1.0_pre5-configure.patch 1281
+MD5 443b9526abb33e4e9f8786f764253b53 files/mplayer-1.0_pre5-gcc_detection.patch 445
 MD5 4be5ce1a1c93b8d40bc961468fcc1aa7 files/mplayer-1.0_pre5-live.patch 378
 MD5 5cc95d6b380dc27e5ceae0f53ab88f99 files/mplayer-1.0_pre5-mga-kernel-2.6.patch 15043
 MD5 1056be7554e42ba655fd7423fe6baad7 files/mplayer-1.0_pre5-mips64.patch 459
@@ -43,6 +47,12 @@ MD5 1f9260386b063367f192b6d5d65d6aea files/real_demux.patch 3107
 MD5 c39b2e0baa9cc24d22b62765776426ad files/str_undefined.patch 1845
 MD5 e614f6546020b77ced4ba12c36e5b51e files/strl.c 950
 MD5 34f948b8f242a2aadb53a1e2b00e3155 files/vuln02-fix.diff 467
-MD5 443b9526abb33e4e9f8786f764253b53 files/mplayer-1.0_pre5-gcc_detection.patch 445
 MD5 6db752d3b5857f1b7c5a9446bec070f7 files/digest-mplayer-1.0_pre6-r1 511
 MD5 6748b8218fbe9ff36efcec61c749a346 files/mplayer-1.0_pre6-codecs.patch 1264
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCPJ/gFdQwWVoAgN4RAiLtAJ9H3pO9v7pelt368S5LZFU9gK8vIACeOb77
+cWVbn93GamqFqoaBILAxSck=
+=4g4Y
+-----END PGP SIGNATURE-----

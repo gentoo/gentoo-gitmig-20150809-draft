@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.26 2005/03/18 21:23:54 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.27 2005/03/19 22:28:56 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -92,10 +92,6 @@ KEYWORDS="x86 ppc alpha amd64 ~hppa sparc ppc64"
 pkg_setup() {
 	if use real && use x86 && built_with_use win32codecs real; then
 			REALLIBDIR="/usr/$(get_libdir)/real"
-	else
-			eerror "You do not have win32codecs with real"
-			eerror "support builtin!"
-			die || "Real libs not found!"
 	fi
 }
 
