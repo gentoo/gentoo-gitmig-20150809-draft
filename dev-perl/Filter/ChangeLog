@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Filter
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filter/ChangeLog,v 1.9 2003/05/31 20:30:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filter/ChangeLog,v 1.10 2003/06/24 14:56:11 agriffis Exp $
+
+  24 Jun 2003; Aron Griffis <agriffis@gentoo.org> Filter-1.29.ebuild:
+  Mark stable on alpha
 
 *Filter-1.29 (31 May 2003)
 
