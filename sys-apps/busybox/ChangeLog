@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.57 2005/01/25 05:10:49 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.58 2005/02/10 19:51:09 solar Exp $
+
+  10 Feb 2005; <solar@gentoo.org> metadata.xml, -files/Config.h,
+  -files/Config.h-0.60.2-cd, -files/Config.h-0.60.3-cd,
+  -files/Config.h-0.60.5-cd, -files/busybox-0.60.5-dietlibc.diff,
+  -files/msh.diff, -busybox-0.60.3-r1.ebuild, -busybox-0.60.3-r2.ebuild,
+  busybox-1.00-r1.ebuild, -busybox-1.00_rc3.ebuild:
+  - cleanup busybox dir and updated metadata
 
   24 Jan 2005; Brian Jackson <iggy@gentoo.org> busybox-1.00.ebuild,
   busybox-1.00_rc3.ebuild:
