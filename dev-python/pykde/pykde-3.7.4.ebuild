@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.7.3.ebuild,v 1.1 2003/08/26 19:26:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.7.4.ebuild,v 1.1 2003/08/27 15:49:41 caleb Exp $
 
 inherit eutils
 
@@ -21,14 +21,14 @@ KEYWORDS="x86"
 DEPEND="virtual/glibc
 	sys-devel/libtool
 	>=dev-lang/python-2.2.1
-	>=dev-python/sip-3.6
-	>=dev-python/PyQt-3.6
+	=dev-python/sip-3.7
+	=dev-python/PyQt-3.7
 	>=kde-base/kdelibs-3.0.4"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-sandbox-patch.diff
+#	epatch ${FILESDIR}/${P}-sandbox-patch.diff
 }
 
 src_compile() {
@@ -37,7 +37,7 @@ src_compile() {
 	python build.py \
 		-d ${D}/usr/lib/python2.2/site-packages \
 		-s /usr/lib/python2.2/site-packages \
-		-u ${KDEDIR}/lib \
+		-o ${KDEDIR}/lib \
 		-c+ -l qt-mt -v /usr/share/sip/qt || die
 	make || die
 }
