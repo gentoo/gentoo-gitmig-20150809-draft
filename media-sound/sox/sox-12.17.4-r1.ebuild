@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.4-r1.ebuild,v 1.4 2004/03/31 19:37:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.4-r1.ebuild,v 1.5 2004/04/01 16:44:21 eradicator Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
 SRC_URI="mirror://sourceforge/sox/${P}.tar.gz"
