@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.5 2004/07/08 23:32:26 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.6 2004/07/13 07:35:52 hansmi Exp $
+
+  13 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> darkstat-2.6.ebuild:
+  Added to ~ppc.
 
   09 Jul 2004; Eldad Zack <eldad@gentoo.org> darkstat-2.5.ebuild,
   darkstat-2.6.ebuild:
