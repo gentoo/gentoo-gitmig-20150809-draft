@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.5 2002/04/12 16:47:32 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.6 2002/04/24 14:23:16 spider Exp $
+
+*glib-2.0.0-r2 (24 Apr 2002)
+  24 Apr 2002 ; Spider <spider@gentoo.org> glib-2.0.1-r2.ebuild:
+  Libtoolize 
 
 *glib-2.0.0-r1 (11 Apr 2002)
   11 Apr 2002 ; Spider <spider@gentoo.org> glib-2.0.1-r1.ebuild:
