@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3-r2.ebuild,v 1.9 2003/09/21 18:57:12 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3-r2.ebuild,v 1.10 2003/09/22 19:08:04 msterret Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -171,9 +171,8 @@ src_unpack() {
 		mv -f ${WORKDIR}/enigmail ${S}/extensions/
 	fi
 
-    # Fix build with Linux 2.6
-    cp ${S}/security/coreconf/Linux2.5.mk ${S}/security/coreconf/Linux2.6.mk
-			
+	# Fix build with Linux 2.6
+	cp ${S}/security/coreconf/Linux2.5.mk ${S}/security/coreconf/Linux2.6.mk
 }
 
 src_compile() {
