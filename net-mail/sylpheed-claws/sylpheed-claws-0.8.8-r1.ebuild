@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.8-r1.ebuild,v 1.2 2003/01/11 22:35:33 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.8-r1.ebuild,v 1.3 2003/01/13 03:34:24 bcowan Exp $
 
 IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda"
 
@@ -8,6 +8,7 @@ inherit eutils
 
 MY_P="sylpheed-${PV}claws"
 S="${WORKDIR}/${MY_P}"
+
 DESCRIPTION="Bleeding edge version of Sylpheed"
 SRC_URI="mirror://sourceforge/sylpheed-claws/${MY_P}.tar.bz2"
 HOMEPAGE="http://sylpheed-claws.sf.net"
@@ -26,15 +27,13 @@ DEPEND="=x11-libs/gtk+-1.2*
 	spell? ( app-text/aspell )
 	xface? ( >=media-libs/compface-1.4 )
 	gtkhtml? ( net-www/dillo )
-	x11-misc/shared-mime-info
-	"
+	x11-misc/shared-mime-info"
 	
 RDEPEND="nls? ( sys-devel/gettext )"
 
 PROVIDE="virtual/sylpheed"
 
 src_unpack() {
-
 	unpack ${A}
 
 	# This patch allows for dillo web browser to be embeedded
@@ -51,13 +50,13 @@ src_unpack() {
 		sed -e "s/PACKAGE\=sylpheed/PACKAGE\=sylpheed-claws/" \
 			${i}.orig > ${i}
 	done
+	
 	# use shared-mime-info
 	cd ${S}/src
-	patch -p0 <${FILESDIR}/procmime.patch
+	epatch ${FILESDIR}/procmime.patch
 }
 
 src_compile() {
-	
 	local myconf
 
 	use gnome \
@@ -94,7 +93,6 @@ src_compile() {
 }
 
 src_install() {
-	
 	make DESTDIR=${D} install || die
 
 	local menuentry="/usr/share/gnome/apps/Internet/sylpheed.desktop"
