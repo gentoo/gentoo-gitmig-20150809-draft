@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/piwi
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.6 2004/01/26 08:20:27 mboman Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.7 2004/02/28 20:48:03 mboman Exp $
+
+  29 Feb 2004; Michael Boman <mboman@gentoo.org> metadata.xml:
+  Moving the package to 'netmon' herd.
 
 *piwi-0.8.0.20031109-r1 (26 Jan 2004)
 
