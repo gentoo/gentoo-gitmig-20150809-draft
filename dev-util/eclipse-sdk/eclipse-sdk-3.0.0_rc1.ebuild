@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_rc1.ebuild,v 1.3 2004/06/17 15:24:32 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_rc1.ebuild,v 1.4 2004/06/22 18:55:37 karltk Exp $
 
 inherit eutils
 
@@ -44,10 +44,12 @@ pkg_setup() {
 	local patch=$(echo ${version} | sed -r "s/${ver_rx}/\3/")
 	local extra=$(echo ${version} | sed -r "s/${ver_rx}/\4/")
 
-	if [ ${major} -ge 1 ]  && [ ${minor} -ge 4 ] && [ ${patch} -ge 2 ] ; then
+	if [ ${major} -ge 1 ] && [ ${minor} -gt 4 ] ; then
+		einfo "Detected JDK is sufficient to compile Eclipse (${version} >= 1.4.2)"
+	elif [ ${major} -ge 1 ] && [ ${minor} -ge 4 ] && [ ${patch} -ge 2 ] ; then
 		einfo "Detected JDK is sufficient to compile Eclipse (${version} >= 1.4.2)"
 	else
-		die "Detected JDK is too old to compile Eclipse, need at least 1.4.2!"
+		die "Detected JDK (${version}) is too old to compile Eclipse, need at least 1.4.2!"
 	fi
 }
 
