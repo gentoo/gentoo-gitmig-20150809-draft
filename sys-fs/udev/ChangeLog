@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.84 2004/11/18 19:26:27 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.85 2004/11/18 22:03:35 gregkh Exp $
+
+*udev-046 (18 Nov 2004)
+
+  18 Nov 2004; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +files/udev.conf.post_046, +udev-046.ebuild:
+  046 release
+  
+  Note: If you rely on the output of udevinfo, please run udevstart
+  after upgrading, or just reboot.  This isn't really a big deal, as
+  I don't know of many tools that do rely on this (HAL might, don't
+  remember) but it's a good idea.
 
   18 Nov 2004; Greg Kroah-Hartman <gregkh@gentoo.org> udev-045.ebuild:
   mark 045 stable on x86
