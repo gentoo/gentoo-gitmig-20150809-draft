@@ -2,13 +2,16 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Craig Joly <joly@ee.ualberta.ca>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.29.ebuild,v 1.2 2001/08/30 02:15:44 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.29.ebuild,v 1.3 2001/08/30 04:30:55 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
 SRC_URI="http://prdownloads.sourceforge.net/pcmcia-cs/${P}.tar.gz"
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
-DEPEND="~sys-kernel/linux-headers-2.4.8.8 sys-devel/gcc X? ( virtual/x11 x11-libs/xforms )"
+DEPEND="sys-kernel/linux-headers X? ( virtual/x11 x11-libs/xforms )"
+
+# To use this ebuild, you should have the usr/src/linux symlink to the kernel directory
+# that pcmcia-cs should use for configuration.
 
 src_unpack() {
 	unpack ${A}
@@ -20,7 +23,7 @@ src_unpack() {
 
 src_compile() {
 	#use $CFLAGS for user tools, but standard kernel optimizations for the kernel modules (for compatibility)
-	./Configure -n --kernel=/usr/src/linux-2.4.8-ac8 --force --arch="$CHOST" --uflags="$CFLAGS" --kflags="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer" --cardbus --nopnp --noapm || die "failed configuring"
+	./Configure -n --kernel=/usr/src/linux --force --arch="$CHOST" --uflags="$CFLAGS" --kflags="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer" --cardbus --nopnp --noapm || die "failed configuring"
 	#nopnp and noapm are important, because without them the pcmcia-cs tools will require a kernel with ISA PnP and/or
 	#APM support, which cannot be guaranteed.  We need to make sure the tools work *all* the time, not just some of
 	#the time.
