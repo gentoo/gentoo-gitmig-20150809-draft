@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18-r1.ebuild,v 1.6 2004/07/07 22:34:11 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18-r2.ebuild,v 1.1 2004/07/08 02:12:57 merlin Exp $
 
 inherit eutils flag-o-matic gnuconfig
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.84 2004/07/07 22:34:11 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.85 2004/07/08 02:12:57 merlin Exp $
+
+*cyrus-sasl-2.1.18-r2 (07 Jul 2004)
+
+  07 Jul 2004; Cory Visi <merlin@gentoo.org> cyrus-sasl-2.1.18-r1.ebuild,
+  cyrus-sasl-2.1.18-r2.ebuild, files/cyrus-sasl-2.1.18-sasl-path-fix.patch:
+  Fixed patch to close Bug 56389, revision bump to make sure everyone get's the fix.
 
   08 Jul 2004; Christian Birchinger <joker@gentoo.org>
   cyrus-sasl-2.1.18-r1.ebuild:
