@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.1.ebuild,v 1.13 2004/12/07 22:05:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.1.ebuild,v 1.14 2004/12/08 19:51:20 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -12,10 +12,9 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc sh x86"
-IUSE="bootstrap nls"
+IUSE="nls"
 
 DEPEND="virtual/libc
-	!bootstrap? ( >=sys-devel/libtool-1.3.5-r2 )
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/libc"
 
