@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon+smp/wmmon+smp-1.0-r1.ebuild,v 1.4 2003/10/16 16:10:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon+smp/wmmon+smp-1.0-r1.ebuild,v 1.5 2003/11/16 22:36:08 pyrania Exp $
 
 S=${WORKDIR}/wmmon.app
 S2=${S}/wmmon
@@ -12,7 +12,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64"
 
-DEPEND="virtual/x11"
+DEPEND="virtual/x11
+	!x11-plugins/wmmon"
 
 src_compile() {
 	cd ${S2}
