@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.3.11.ebuild,v 1.1 2001/04/23 05:17:01 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.3.11.ebuild,v 1.2 2001/04/25 23:29:42 achim Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
@@ -115,8 +115,8 @@ src_unpack() {
     #sometimes we have icky kernel symbols; this seems to get rid of them
     try make mrproper
     #this is the configuration for the default kernel
-    try cp ${FILESDIR}/${KV}/config .config
-    yes "" | make oldconfig
+    try cp ${FILESDIR}/${KV}/config.bootcomp .config
+    try yes \"\" | make oldconfig
     try make include/linux/version.h
     #fix silly permissions in tarball
     cd ${WORKDIR}
@@ -143,9 +143,10 @@ src_compile() {
     if [ "`use alsa`" ]
     then
         cd ${S}
-        try make update-modverfile
+#        try make update-modverfile
         cd ${S}/extras/alsa-driver-${AV}
-        try CFLAGS=\""${CFLAGS} -I${S}/include"\" ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
+#        try CFLAGS=\""${CFLAGS} -I${S}/include"\" ./configure --with-kernel=\"${S}\" --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
+        try ./configure --with-kernel=\"${S}\" --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
         try make
     fi
 
@@ -229,7 +230,7 @@ src_install() {
 
 		install -d ${D}/lib/modules/`uname -r`
 		try make INSTALL_MOD_PATH=${D} modules_install
-		rm -r ${D}/lib/modules/`uname -r`		
+#		rm -r ${D}/lib/modules/`uname -r`		
 
 		#fix symlink
 		cd ${D}/lib/modules/${KV}
