@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/postal2mpdemo-1407.ebuild,v 1.8 2004/11/15 19:30:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/postal2mpdemo-1407.ebuild,v 1.9 2005/01/20 23:07:26 vapier Exp $
 
 inherit eutils games
 
 DESCRIPTION="You play the Postal Dude: POSTAL 2 is only as violent as you are."
 HOMEPAGE="http://www.gopostal.com/home/"
-SRC_URI="mirror://3dgamers/pub/3dgamers6/games/postal2/Missions/${PN}-lnx-${PV}.tar.bz2"
+SRC_URI="mirror://3dgamers/pub/3dgamers/games/postal2/Missions/${PN}-lnx-${PV}.tar.bz2"
 
 LICENSE="postal2"
 SLOT="0"
@@ -16,9 +16,11 @@ RESTRICT="nomirror"
 
 RDEPEND="virtual/x11
 	virtual/libc
-	amd64? ( app-emulation/emul-linux-x86-baselibs
-			 app-emulation/emul-linux-x86-xlibs
-			 app-emulation/emul-linux-x86-nvidia )"
+	amd64? (
+		app-emulation/emul-linux-x86-baselibs
+		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-nvidia
+	)"
 
 S="${WORKDIR}"
 dir="${GAMES_PREFIX_OPT}/${PN}"
