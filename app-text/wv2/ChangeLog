@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.8 2003/09/22 11:37:56 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.9 2003/09/23 12:25:04 dholm Exp $
+
+  23 Sep 2003; David Holm <dholm@gentoo.org> wv2-0.1.9.ebuild:
+  Added to ~ppc.
 
   22 Sep 2003; <paul@gentoo.org> metadata.xml:
   Fix metadata.xml
