@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.35 2005/01/11 13:05:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.36 2005/03/02 19:44:42 luckyduck Exp $
+
+  02 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> libsndfile-1.0.10.ebuild,
+  libsndfile-1.0.11.ebuild, libsndfile-1.0.5.ebuild, libsndfile-1.0.9.ebuild:
+  added dummy src_test to avoid compile errors with the maketest feature. fixes
+  #82805
 
   11 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   libsndfile-1.0.10.ebuild, libsndfile-1.0.11.ebuild,
