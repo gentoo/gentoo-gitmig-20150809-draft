@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.8.ebuild,v 1.1 2001/08/31 06:01:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.12.ebuild,v 1.1 2001/11/30 19:52:01 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard kernel module utilities"
