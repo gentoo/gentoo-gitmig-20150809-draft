@@ -1,7 +1,17 @@
-MD5 161dd1b2197f6e822a7977bd65c70d0d ChangeLog 864
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 893472a62c49d45114ec03e0c6b7fe6f vnstat-1.4.ebuild 1730
+MD5 43fb4c17f4703b90cb97e1b3d78d23a4 ChangeLog 1147
 MD5 432c6dc3dfd22b4c6657ddcc6c37979e metadata.xml 271
 MD5 eb0a408331b471c0ce66781c2cf44ada vnstat-1.1.ebuild 645
-MD5 dc5571b1cba3634d8db25e2077cfbea5 vnstat-1.4.ebuild 1335
+MD5 389e6b2723965358ef9876b4e78d3bfc files/vnstat.cron 220
 MD5 afdaa51d96e363c56fe7358b1c5814c5 files/digest-vnstat-1.1 61
 MD5 94dd735fdba2070fefd9f85480b1a2b9 files/digest-vnstat-1.4 61
-MD5 c902f7de560cb98f380cf3e6a00ec61f files/vnstat.cron 176
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB8VKBEZCkKN40op4RAl3iAJwLwA5VJHrN2jpwRVFF7ozb+tdROACfQt0i
+m9ea8NR3gD0MUwBqxfCZxyY=
+=TqR8
+-----END PGP SIGNATURE-----

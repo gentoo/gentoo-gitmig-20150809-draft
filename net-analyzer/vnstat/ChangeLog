@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/vnstat
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.7 2004/09/29 02:58:04 tgall Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.8 2005/01/21 19:05:26 ka0ttic Exp $
+
+  21 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> files/vnstat.cron,
+  vnstat-1.4.ebuild:
+  Install cron script in /etc/cron.hourly where it belongs, as /etc/cron.d 1)
+  is only supported by vixie, and 2) should contain system crontab entries,
+  not bash scripts. Fixes bug 60711.
 
   28 Sep 2004; Tom Gall <tgall@gentoo.org> vnstat-1.4.ebuild:
   added ~ppc64, bug #64107
