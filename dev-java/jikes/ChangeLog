@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jikes
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.17 2004/02/07 04:33:24 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.18 2004/02/17 22:03:32 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> jikes-1.19.ebuild:
+  add ~alpha and ~ia64
 
 *jikes-1.19 (07 Feb 2004)
 
