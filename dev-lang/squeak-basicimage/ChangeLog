@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/squeak-basicimage
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/ChangeLog,v 1.1 2004/04/28 16:20:03 jhhudso Exp $
+
+*squeak-basicimage-3.6_p5429 (28 Apr 2004)
+
+  28 Apr 2004; Jared Hudson <jhhudso@gentoo.org>
+  +squeak-basicimage-3.6_p5429.ebuild:
+  Initial import.
+
