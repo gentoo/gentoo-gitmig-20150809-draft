@@ -1,22 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.8.0-r1.ebuild,v 1.3 2004/06/24 21:57:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.8.0-r1.ebuild,v 1.4 2004/06/30 17:14:33 vapier Exp $
 
-
-S=${WORKDIR}/EMBOSS-${PV}
 DESCRIPTION="The European Molecular Biology Open Software Suite: EMBOSS is a package of high-quality FREE Open Source software for sequence analysis"
 HOMEPAGE="http://www.emboss.org/"
 SRC_URI="ftp://ftp.uk.embnet.org/pub/EMBOSS/EMBOSS-${PV}.tar.gz"
+
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="X png"
-DEPEND="X? ( virtual/x11
-		png? ( >=sys-libs/zlib-1.1.4
-		>=media-libs/libpng-1.2.4
-		>=media-libs/libgd-1.8.4 )
-		)"
 
+DEPEND="X? ( virtual/x11
+	png? ( >=sys-libs/zlib-1.1.4
+		>=media-libs/libpng-1.2.4
+		>=media-libs/gd-1.8.4 )
+	)"
+
+S=${WORKDIR}/EMBOSS-${PV}
 
 src_compile() {
 
