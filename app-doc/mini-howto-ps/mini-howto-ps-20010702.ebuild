@@ -3,7 +3,7 @@
 # Author Dan Armak <danarmak@gentoo.org>
 # $HEADER$
 
-P="Linux-ps-mini-HOWTOs"
+P="Linux-mini-ps-HOWTOs"
 S=${WORKDIR}/${P}
 
 DESCRIPTION="The LDP mini-howtos, ps format."

@@ -3,7 +3,7 @@
 # Author Dan Armak <danarmak@gentoo.org>
 # $HEADER$
 
-P="Linux-pdf-mini-HOWTOs"
+P="Linux-mini-pdf-HOWTOs"
 S=${WORKDIR}/${P}
 
 DESCRIPTION="The LDP mini-howtos, pdf format."

@@ -3,7 +3,7 @@
 # Author Dan Armak <danarmak@gentoo.org>
 # $HEADER$
 
-P="Linux-html-single-mini-HOWTOs"
+P="Linux-mini-html-single-HOWTOs"
 S=${WORKDIR}/${P}
 
 DESCRIPTION="The LDP mini-howtos, html-single format."

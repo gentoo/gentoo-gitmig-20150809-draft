@@ -3,12 +3,12 @@
 # Author Dan Armak <danarmak@gentoo.org>
 # $HEADER$
 
-P="Linux-text-mini-HOWTOs"
+P="Linux-mini-HOWTOs"
 S=${WORKDIR}/${P}
 
 DESCRIPTION="The LDP mini-howtos, text format."
 
-SRC_URI="http://www.ibiblio.org/pub/Linux/docs/HOWTO/mini/${P}-${PV}.tar.gz"
+SRC_URI="http://www.ibiblio.org/pub/linux/docs/HOWTO/mini/${P}-${PV}.tar.gz"
 
 HOMEPAGE="http://www.linuxdoc.org"
 
