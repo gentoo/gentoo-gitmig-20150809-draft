@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r3.ebuild,v 1.12 2002/10/23 19:35:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r3.ebuild,v 1.13 2002/10/30 22:23:31 jrray Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Your basic line editor"
@@ -24,6 +24,7 @@ src_compile() {
 }
 
 src_install() {                               
+	chmod 0644 ${S}/ed.info
 	make prefix=${D}/ \
 		mandir=${D}/usr/share/man/man1 \
 		infodir=${D}/usr/share/info \
