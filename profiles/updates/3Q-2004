@@ -147,3 +147,4 @@ move net-www/prozilla www-client/prozilla
 move net-www/davfs2 net-fs/davfs2
 move net-www/bookmarksync www-misc/bookmarksync
 move net-www/gurlchecker www-misc/gurlchecker
+move net-www/htdig www-misc/htdig
