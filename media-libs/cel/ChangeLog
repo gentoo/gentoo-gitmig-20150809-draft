@@ -1,0 +1,8 @@
+# ChangeLog for media-libs/cel
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cel/ChangeLog,v 1.1 2003/04/02 19:11:02 malverian Exp $
+
+*cel-0.96_p001 (02 Apr 2003)
+
+  02 Apr 2003; Philip Walls <malverian@gentoo.org> cel-0.96_p001.ebuild :
+  Initial import.
