@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.ebuild,v 1.4 2002/12/01 23:39:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.ebuild,v 1.5 2002/12/02 09:06:09 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
-IUSE="${IUSE} mozsvg mozcalendar mozaccess mozinterfaceinfo mozp3p mozxmlterm moznomail moznocompose"
+IUSE="${IUSE} mozsvg mozcalendar mozaccess mozinterfaceinfo mozp3p mozxmlterm moznoirc moznomail moznocompose"
 
 inherit flag-o-matic gcc makeedit eutils nsplugins
 
@@ -277,7 +277,7 @@ src_compile() {
 	#        is just here for completeness.  Please do not use if you 
 	#        do not know what you are doing!
 	#
-	# The defaults are (as of 1.0rc1, according to configure (line ~11445)):
+	# The defaults are (as of 1.2, according to configure (line ~11445)):
 	#     cookie, wallet, content-packs, xml-rpc, xmlextras, help, pref, transformiix,
 	#     venkman, inspector, irc, universalchardet, typeaheadfind
 	# Non-defaults are:
@@ -298,6 +298,10 @@ src_compile() {
 	if [ -n "`use mozinterfaceinfo`" ]
 	then
 		myext="${myext},interfaceinfo"
+	fi
+	if [ -n "`use moznoirc`" ]
+	then
+		myext="${myext},-irc"
 	fi
 
 	if [ -n "`use mozsvg`" ]
@@ -412,7 +416,7 @@ src_compile() {
 		--enable-crypto \
 		--with-java-supplement \
 		--with-pthreads \
-		--with-extensions="${myext}" \
+		--enable-extensions="${myext}" \
 		--enable-optimize="-O2" \
 		--with-default-mozilla-five-home=/usr/lib/mozilla \
 		${myconf} || die

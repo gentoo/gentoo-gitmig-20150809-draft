@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.55 2002/12/02 01:05:01 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.56 2002/12/02 09:06:09 azarah Exp $
+
+  02 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.ebuild :
+
+  Change --with-extensions to --enable-extensions.  Add "mznoirc"
+  USE flag.  This closes 11452.
 
   02 Dec 2002; Maik Schreiber <blizzy@gentoo.org> files/digest-mozilla-1.2:
   Fixed digest.
