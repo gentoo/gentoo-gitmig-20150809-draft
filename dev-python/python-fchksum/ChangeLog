@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-fchksum
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.6 2003/01/19 16:44:40 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.7 2003/02/07 20:37:18 gmsoft Exp $
+
+  07 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
