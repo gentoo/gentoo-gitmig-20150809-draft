@@ -1,0 +1,35 @@
+# ChangeLog for app-games/boson
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.1 2003/09/10 05:27:31 vapier Exp $
+
+  03 Sep 2003; Michael Sterrett <msterret@gentoo.org> boson-0.8.ebuild:
+  added Gentoo Technologies, Inc. to Copyright line
+
+  31 Aug 2003; Michael Sterrett <msterret@gentoo.org> boson-0.8.ebuild:
+  inherit kde-base -> inherit kde; error message for emake
+
+*boson-0.8 (21 Jun 2003)
+
+  21 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump for #18553.
+
+*boson-0.7 (23 Dec 2002)
+
+  23 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Update #12530 + enhancements
+ 
+*boson-0.6.1-r2 (1 Aug 2002)
+
+  1 Aug 2002; J.Alberto S.L. boson-0.6.1-r2:
+  Fix #5843 thanks to Thomas Capricelli <orzel@freehackers.org>
+
+*boson-0.6.1-r1 (21 Jul 2002)
+
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> boson-0.6.1-r1.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
+  21 Jul 2002; Ben Lutgens <lamer@gentoo.org> boson-0.6.1-r1: Some cleanups
+  and fixes.
+
+  14 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog: Initial Commit to the
+  tree.

@@ -1,0 +1,40 @@
+# ChangeLog for app-games/freecraft
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/ChangeLog,v 1.1 2003/09/10 05:27:31 vapier Exp $
+
+  12 Jul 2003; Michael Sterrett <msterret@gentoo.org>
+  freecraft-1.18-r1.ebuild:
+  fix DESCRIPTION
+
+*freecraft-1.18-r1 (20 Jun 2003)
+
+  20 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Cleaned up + add games.eclass support + rework runscript.
+
+*freecraft-1.18 (18 Mar 2003)
+
+  28 Mar 2003; Jose Alberto Suárez López <bass@gentoo.org> freecraft-1.18.ebuild:
+  Bump version.
+
+*freecraft-1.17.2 (31 Jul 2002)
+
+  22 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> freecraft-1.17.2.ebuild:
+  Bump version.
+
+*freecraft-1.17.1 (28 Jun 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> freecraft-1.17.1.ebuild :
+  Added KEYWORDS.
+
+  28 Jun 2002; Brandon Low <lostlogic@gentoo.org> freecraft-1.17.1.ebuild :
+  Ouch, that ebuild was a pain to update and make more reasonable...
+  Ahh, but now it is done... enjoy this updated version, now obeys
+  CFLAGS, and the setup is a bit more sane, plus uses the portage
+  functions for installation properly.  Oh and I also version bumped
+  in the process :)
+
+*freecraft-1.17-r1 (15 Jun 2002)
+
+  15 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> freecraft-1.17-r1.ebuild :
+  Initial release of a ebuild for the freecraft project.
+  Ebuild written by: Keith Gross <grossk@mail.tds.net>

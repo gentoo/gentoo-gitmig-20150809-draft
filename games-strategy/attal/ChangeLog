@@ -1,0 +1,11 @@
+# ChangeLog for app-games/attal
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/ChangeLog,v 1.1 2003/09/10 05:27:31 vapier Exp $
+
+  26 Aug 2003; Michael Sterrett <msterret@gentoo.org> attal-0.7.0.ebuild:
+  fix url. bug 27378
+
+*attal-0.7.0 (19 Jul 2003)
+
+  19 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.

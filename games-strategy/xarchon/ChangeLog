@@ -1,0 +1,13 @@
+# ChangeLog for app-games/xarchon
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xarchon/ChangeLog,v 1.1 2003/09/10 05:27:31 vapier Exp $
+
+*xarchon-0.60 (31 Jul 2003)
+
+  31 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Development version ... pretty messed up src but ppl want it ;)
+
+*xarchon-0.50 (29 Jul 2003)
+
+  29 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for Guru.

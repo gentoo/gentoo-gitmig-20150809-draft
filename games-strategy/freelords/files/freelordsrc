@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<freelordsrc version="1.0">
+	<d_datapath>GENTOO_DATADIR</d_datapath>
+	<d_savepath>GENTOO_SAVEDIR</d_savepath>
+</freelordsrc>

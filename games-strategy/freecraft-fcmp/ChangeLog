@@ -1,0 +1,34 @@
+# ChangeLog for app-games/freecraft-fcmp
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft-fcmp/ChangeLog,v 1.1 2003/09/10 05:27:31 vapier Exp $
+
+  12 Jul 2003; Michael Sterrett <msterret@gentoo.org>
+  freecraft-fcmp-1.18-r1.ebuild:
+  fix DESCRIPTION
+
+*freecraft-fcmp-1.18-r1 (20 Jun 2003)
+
+  20 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Reworked ebuild to cleanup, add games.eclass support, and add more music.
+
+*freecraft-fcmp-1.18 (18 Mar 2003)
+
+  18 Mar 2003; J. Alberto Suárez López <bass@gentoo.org> freecraft-fcmp-1.18.ebuild :
+  Bumped version.
+
+*freecraft-fcmp-1.17.2 (16 Aug 2002)
+
+  16 Aug 2002; J. Alberto Suárez López <bass@gentoo.org> freecraft-fcmp-1.17.2.ebuild :
+  New version
+
+*freecraft-fcmp-1.17 (20 Jun 2002)
+
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> freecraft-fcmp.1.17.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> freecraft-fcmp-1.17.ebuild :
+  Added KEYWORDS.
+
+  20 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> freecraft-fcmp-1.17.ebuild:
+  Initial release of a ebuild for the Freecraft Media Project project.
+  Ebuild author:  Keith Gross <grossk@mail.tds.net> 

@@ -1,0 +1,36 @@
+# ChangeLog for app-games/xscorch
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xscorch/ChangeLog,v 1.1 2003/09/10 05:27:31 vapier Exp $
+
+*xscorch-0.1.16_rc2 (05 Sep 2003)
+
+  05 Sep 2003; Michael Sterrett <msterret@gentoo.org>
+  xscorch-0.1.16_rc2.ebuild:
+  Added the development patched version for people to try out.
+  Some people are claiming that this version is more stable for them.
+
+*xscorch-0.1.15 (12 Jul 2002)
+
+  21 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added optional support for gtk/gnome/sound #18512.
+
+  04 May 2003; Graham Forest <vladimir@gentoo.org> xscorch-0.1.15.ebuild:
+  set ~ppc in keywords
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> xscorch-0.1.15.ebuild :
+  Added KEYWORDS.
+
+  12 Jul 2002; Ryan Phillips <rphillips@gentoo.org> xscorch-0.1.15.ebuild:
+
+  New version.
+  
+*xscorch-0.1.14 (15 Jun 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> xscorch-0.1.14.ebuild :
+  Added KEYWORDS.
+
+  15 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> ChangeLog:
+ 
+  Initial import. 
+  Ebuild Author M. Walker <mwalker@kydance.net> 
+

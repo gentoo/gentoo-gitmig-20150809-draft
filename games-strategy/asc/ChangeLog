@@ -1,0 +1,50 @@
+# ChangeLog for app-games/asc
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.1 2003/09/10 05:27:31 vapier Exp $
+
+*asc-1.13.8.0 (25 Aug 2003)
+
+  25 Aug 2003; Michael Sterrett <msterret@gentoo.org> asc-1.13.8.0.ebuild:
+  version bump; added the html docs to the install
+
+  13 Aug 2003; Michael Sterrett <msterret@gentoo.org> asc-1.13.7.ebuild:
+  Added --disable-paraguitest to configure line (another try at bugs 26402 and
+  4488) Removed --with-gnu-ld from configure line. No reason for it to be there.
+  Added mp3 files to SRC_URI and unpack. Nice quality music really adds to the
+  game. Doc cleanups. More error messages.
+
+*asc-1.13.7 (19 Jul 2003)
+
+  19 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*asc-1.13.5.1 (20 Jun 2003)
+
+  20 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to fix #16870
+
+*asc-1.11.0.2 (23 Dec 2002)
+
+  23 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to fix #8615
+
+*asc-1.10.2 (7 May 2002)
+
+  31 Jul 2002; J.Alberto S. L. <bass@gentoo.org> asc-1.10.2.ebuild-r1:
+  Fix #4488 adding '--disable-paraguitest' to configure.
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> asc-1.10.2.ebuild :
+  Added KEYWORDS.
+
+  7 May 2002; Spider <spider@gentoo.org> asc-1.10.2.ebuild :
+  fix sourceforge mirroring.
+    
+*asc-1.10.2 (28 Apr 2002)
+
+  28 Apr 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
+

@@ -1,0 +1,42 @@
+# ChangeLog for app-games/lgeneral
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.1 2003/09/10 05:27:31 vapier Exp $
+
+*lgeneral-1.1.1-r1 (12 Dec 2002)
+
+  12 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated to use games eclass and hopefully close #6341
+
+*lgeneral-1.1.1 (15 Aug 2002)
+
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> lgeneral-1.1.1.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
+  18 Aug 2002; Phil Bordelon <sunflare@gentoo.org> lgeneral-1.1.1.ebuild:
+  Noticed that the ebuild had the deprecated "*" keyword.  Changed to
+  x86.
+
+  15 Aug 2002; Phil Bordelon <sunflare@gentoo.org> lgeneral-1.1.1.ebuild:
+  Version bump.  Also updated the lgeneral-data due to some missing files
+  in the lgeneral-data-1.1.2 package, with the help of Michael Speck (the
+  author of LGeneral).
+
+*lgeneral-1.1 (14 Jul 2002)
+
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> lgeneral-1.1.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+	
+  18 Aug 2002; Phil Bordelon <sunflare@gentoo.org> lgeneral-1.1.ebuild:
+  Noticed that the ebuild had the deprecated "*" keyword.  Changed to
+  x86.
+  
+  14 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> lgeneral-1.1.ebuild:
+  version bump
+
+*lgeneral-1.0.3 (15 Jun 2002)
+  15 Jun 2002; Spider <spider@gentoo.org> lgeneral-1.0.3.ebuild: 
+  new version :)
+  
+*lgeneral-1.0.2 (10 Jun 2002)
+  10 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> ChangeLog :
+  New package. Ebuild author: Phil Bordelon <phil@lsu.edu>

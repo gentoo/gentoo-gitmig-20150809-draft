@@ -1,0 +1,10 @@
+# ChangeLog for app-games/uqm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.1 2003/09/10 05:27:31 vapier Exp $
+
+*uqm-0.2 (09 Jul 2003)
+
+  09 Jul 2003; Michael Sterrett <msterret@gentoo.org> uqm-0.2.ebuild:
+  initial commit.  ebuild based on the one provided by Regan Myers in bug 12153
+  and vapier's continued work on it as well.
+

@@ -1,0 +1,50 @@
+--- setup.orig	2003-06-20 13:07:06.000000000 -0400
++++ setup	2003-06-20 13:14:36.000000000 -0400
+@@ -31 +31 @@
+-EXTRA_CFLAGS="-DUNIT_ON_MAP -DNEW_AI -DUSE_LIBMODPLUG -DUSE_HP_FOR_XP -DNEW_FOW -DBUILDING_DESTROYED"
++EXTRA_CFLAGS="-DUNIT_ON_MAP -DNEW_AI -DUSE_LIBMODPLUG -DUSE_HP_FOR_XP -DNEW_FOW -DBUILDING_DESTROYED ${GENTOO_CFLAGS}"
+@@ -462 +462 @@
+-  read $N VIDSEL
++  VIDSEL=S
+@@ -554 +554 @@
+-read $N ANSWER
++ANSWER=y
+@@ -575 +575 @@
+-	  read $N ANSWERA
++	  ANSWERA=n
+@@ -598 +598 @@
+-	    read $N ANSWER2
++	    ANSWER2=y
+@@ -621 +621 @@
+-	read $N ANSWER
++	ANSWER=n
+@@ -641 +641 @@
+-	read $N ANSWER
++	ANSWER=n
+@@ -674 +674 @@
+-	read $N ANSWER
++	ANSWER=n
+@@ -696 +696 @@
+-	read $N CDMode
++	CDMode=s
+@@ -780 +780 @@
+-read $N COMPOPT
++COMPOPT=O
+@@ -830 +830 @@
+-    read $N DEBUGASK
++    DEBUGASK=n
+@@ -870 +870 @@
+-    read $N OPTASK
++    OPTASK=N
+@@ -897 +897 @@
+-	    read $N TYPEASK
++	    TYPEASK=
+@@ -913 +913 @@
+-		    read $N PROCASK
++		    PROCASK=
+@@ -952 +952 @@
+-		    read $N PROCASK
++		    PROCASK=
+@@ -1159 +1159 @@
+-read $N ANSWER
++ANSWER=n

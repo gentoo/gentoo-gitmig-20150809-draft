@@ -1,0 +1,58 @@
+diff -NurB dopewars-1.5.8/src/dopewars.c dopewars-1.5.8-patched/src/dopewars.c
+--- dopewars-1.5.8/src/dopewars.c	2002-10-19 15:44:27.000000000 -0500
++++ dopewars-1.5.8-patched/src/dopewars.c	2002-11-07 00:03:31.000000000 -0500
+@@ -2345,7 +2345,8 @@
+   path = g_strdup_printf("file://%s\\", bindir);
+   g_free(bindir);
+ #else
+-  path = g_strdup_printf("file://%s/doc/%s-%s/", DPDATADIR, PACKAGE, VERSION);
++  path = g_strdup_printf("file://%s/doc/%s-%s/html/",
++                         DPDATADIR, PACKAGE, VERSION);
+ #endif
+   return path;
+ }
+@@ -2887,7 +2888,7 @@
+  * Stub function to report an error if the Curses client is requested and
+  * it isn't compiled in.
+  */
+-void CursesLoop(void)
++void CursesLoop(struct CMDLINE *cmdline)
+ {
+   g_print(_("No curses client available - rebuild the binary passing the\n"
+             "--enable-curses-client option to configure, or use a windowed\n"
+@@ -2902,9 +2903,10 @@
+  */
+ #ifdef CYGWIN
+ gboolean GtkLoop(HINSTANCE hInstance, HINSTANCE hPrevInstance,
+-                 gboolean ReturnOnFail)
++                 struct CMDLINE *cmdline, gboolean ReturnOnFail)
+ #else
+-gboolean GtkLoop(int *argc, char **argv[], gboolean ReturnOnFail)
++gboolean GtkLoop(int *argc, char **argv[], struct CMDLINE *cmdline,
++                 gboolean ReturnOnFail)
+ #endif
+ {
+   if (!ReturnOnFail) {
+diff -NurB dopewars-1.5.8/src/dopewars.h dopewars-1.5.8-patched/src/dopewars.h
+--- dopewars-1.5.8/src/dopewars.h	2002-08-30 13:15:42.000000000 -0500
++++ dopewars-1.5.8-patched/src/dopewars.h	2002-11-07 00:01:51.000000000 -0500
+@@ -456,15 +456,16 @@
+ gchar *GetLocalConfigFile(void);
+ 
+ #ifndef CURSES_CLIENT
+-void CursesLoop(void);
++void CursesLoop(struct CMDLINE *cmdline);
+ #endif
+ 
+ #ifndef GUI_CLIENT
+ #ifdef CYGWIN
+ gboolean GtkLoop(HINSTANCE hInstance, HINSTANCE hPrevInstance,
+-                 gboolean ReturnOnFail);
++                 struct CMDLINE *cmdline, gboolean ReturnOnFail);
+ #else
+-gboolean GtkLoop(int *argc, char **argv[], gboolean ReturnOnFail);
++gboolean GtkLoop(int *argc, char **argv[], struct CMDLINE *cmdline,
++                 gboolean ReturnOnFail);
+ #endif
+ #endif
+ 
