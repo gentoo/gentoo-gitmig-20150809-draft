@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.7.ebuild,v 1.2 2003/10/29 00:35:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.7.ebuild,v 1.3 2004/01/04 18:21:23 plasmaroo Exp $
 
 inherit eutils
 
@@ -38,6 +38,9 @@ src_unpack() {
 	# http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/ffmpeg/ffmpeg/libavcodec/alpha/dsputil_alpha.c.diff?r1=1.19&r2=1.20
 	# so this patch should be removed with the next _pre build
 	#epatch ${FILESDIR}/alpha-idct.patch
+
+	epatch ${FILESDIR}/${P}-2.6.patch
+
 }
 
 src_compile() {

@@ -1,0 +1,17 @@
+--- ffmpeg-0.4.7/libavformat/grab.c	2003-08-24 23:29:50.000000000 +0100
++++ ffmpeg-0.4.7/libavformat/grab.c	2004-01-04 18:04:29.000000000 +0000
+@@ -17,13 +17,13 @@
+  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  */
+ #include "avformat.h"
+-#include <linux/videodev.h>
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+ #include <sys/mman.h>
+ #include <sys/time.h>
+ #include <time.h>
++#include <linux/videodev.h>
+ 
+ typedef struct {
+     int fd;
