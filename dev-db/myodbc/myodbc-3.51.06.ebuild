@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-3.51.06.ebuild,v 1.1 2003/10/27 01:59:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-3.51.06.ebuild,v 1.2 2003/12/07 16:34:20 mholzer Exp $
 
 MY_PN="MyODBC"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="ODBC driver for MySQL"
 HOMEPAGE="http://www.mysql.com/products/myodbc/"
 SRC_URI="mirror://mysql/Downloads/MyODBC3/${MY_P}.tar.gz"
+RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
