@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.9.ebuild,v 1.3 2003/08/07 04:06:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.9.ebuild,v 1.4 2003/09/12 16:44:48 agriffis Exp $
 
 inherit gcc
 
@@ -30,6 +30,10 @@ RDEPEND=">=dev-util/guile-1.4-r3
 	>=dev-lang/python-2.2.1-r2"
 
 src_compile() {
+	# Remove ccache from the PATH since it can break compilation of
+	# this package.  See bug 21305
+	PATH="$(echo ":${PATH}:" | sed 's/:[^:]*ccache[^:]*:/:/;s/^://;s/:$//;')"
+
 	# See http://lilypond.org/stable/Documentation/topdocs/out-www/INSTALL.html
 	if [ "`gcc-major-version`" -eq "2" ]; then
 		# Verified by agriffis 03 Dec 2002 using
@@ -49,23 +53,27 @@ src_compile() {
 		eerror "Unsupported GCC version, 2.95 and 3.2 are supported"
 		die
 	fi
-	use doc && (make prefix=${D}/usr \
+	
+	if use doc; then
+		make web-doc \
+			prefix=${D}/usr \
 			datadir=${D}/usr/share \
 			lilypond_data=${D}/usr/share/lilypond \
 			local_lilypond_datadir=${D}/usr/share/lilypond/${PV} \
 			topdir=${D}/usr \
-			web-doc || die "make web-doc failed")
+			|| die "make web-doc failed"
+	fi
 }
 
 src_install () {
-	make \
+	make install \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		datadir=${D}/usr/share \
 		lilypond_datadir=${D}/usr/share/lilypond \
 		local_lilypond_datadir=${D}/usr/share/lilypond/${PV} \
-		install || die "make install failed"
+		|| die "make install failed"
 	dodoc AUTHORS* COPYING ChangeLog DEDICATION NEWS README.txt \
 		ROADMAP THANKS VERSION *.el
 	insinto /usr/share/lilypond/${PV}/buildscripts/out
