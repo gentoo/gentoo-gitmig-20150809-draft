@@ -1,4 +1,5 @@
 USE="x86 berkdb crypt ncurses readline ssl tcpd zlib pic pie hardened uclibc"
+STAGE1_USE="uclibc hardened pic"
 GRP_STAGE23_USE="x86 berkdb crypt ncurses readline ssl tcpd zlib pic pie hardened uclibc"
 
 ARCH="x86"
