@@ -1,13 +1,14 @@
-# ChangeLog for sys-apps/sysklogd
+# ChangeLog for app-admin/sysklogd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.5 2002/12/16 16:55:47 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.6 2002/12/17 15:42:06 vapier Exp $
 
 *sysklogd-1.4.1-r3.ebuild (16 Dec 2002)
 
   16 Dec 2002; Donny Davies <woodchip@gentoo.org> syslog-cron : #11884.
   Added debianutils to RDEPEND since syslog-cron needs it.
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  changed sparc ~sparc keywords
  
 *sysklogd-1.4.1-r2.ebuild (14 July 2002)
 

@@ -1,13 +1,13 @@
-# ChangeLog for app-adminmsyslogChangeLog/
+# ChangeLog for app-admin/msyslog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.11 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.12 2002/12/17 15:39:36 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*msyslog-1.08e-r1 (27 Sep 2002)
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  changed sparc ~sparc keywords
  
-*-1.08e-r1 (27 Sep 2002)
-
   27 Sep 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
-
   fixed bad doins paths
 
 *msyslog-1.09a (20 Sep 2002)
