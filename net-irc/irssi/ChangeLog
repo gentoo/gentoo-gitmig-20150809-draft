@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.35 2003/11/23 20:12:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.36 2003/11/27 02:26:19 gregf Exp $
+
+*irssi-0.8.6-r6 (26 Nov 2003)
+
+  26 Nov 2003; Greg Fitzgerald <gregf@gentoo.org> irssi-0.8.6-r6.ebuild:
+  Removed --with-bot, no used anymore and it was broken. Forced usage of glib2.
+  This closes bug #33603.
 
   23 Nov 2003; Martin Holzer <mholzer@gentoo.org> irssi-0.8.8.ebuild,
   files/irssi-0.8.8-configure.patch:
