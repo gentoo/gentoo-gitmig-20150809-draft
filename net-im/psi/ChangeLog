@@ -1,6 +1,11 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.44 2004/12/28 12:48:29 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.45 2004/12/28 17:30:43 humpback Exp $
+
+  28 Dec 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  -psi-0.9.3_rc1.ebuild:
+  New test version that includes extra patches. Credits to Przemek Maciag for
+  the hard work in bug #75737 and extra work in RT mode.
 
 *psi-0.9.3_rc1 (27 Dec 2004)
 
