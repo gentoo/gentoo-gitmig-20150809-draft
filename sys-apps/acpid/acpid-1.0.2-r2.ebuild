@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/acpid-1.0.2-r2.ebuild,v 1.7 2004/06/28 15:57:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/acpid-1.0.2-r2.ebuild,v 1.8 2005/01/10 18:35:33 ciaranm Exp $
 
 inherit eutils
 
@@ -41,4 +41,12 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/acpid.rc6 acpid
+}
+
+pkg_postinst() {
+	echo
+	einfo "You may wish to read the Gentoo Linux Power Management Guide,"
+	einfo "which can be found online at:"
+	einfo "    http://www.gentoo.org/doc/en/power-management-guide.xml"
+	echo
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/acpid-1.0.4.ebuild,v 1.1 2004/10/19 08:07:45 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/acpid-1.0.4.ebuild,v 1.2 2005/01/10 18:35:33 ciaranm Exp $
 
 DESCRIPTION="Daemon for Advanced Configuration and Power Interface"
 HOMEPAGE="http://acpid.sourceforge.net"
@@ -48,4 +48,12 @@ src_install() {
 		docinto examples/panasonic
 		dodoc samples/panasonic/*
 	fi
+}
+
+pkg_postinst() {
+	echo
+	einfo "You may wish to read the Gentoo Linux Power Management Guide,"
+	einfo "which can be found online at:"
+	einfo "    http://www.gentoo.org/doc/en/power-management-guide.xml"
+	echo
 }
