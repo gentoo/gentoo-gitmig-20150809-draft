@@ -1,8 +1,19 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.28 2003/02/21 22:09:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.29 2003/02/23 16:20:10 azarah Exp $
 
-  19 Feb 2003; <gmsoft@gneoot.org> gcc-config-1.3.1.ebuild :
+  23 Feb 2003; Martin Schlemmer <azarah@gentoo.org> gcc-config-1.4,
+                                                    wrapper-1.4.c :
+  - Add gcc-config-1.4 with '--install-toolchain' support written by
+    Zach Welch <zwelch@gentoo.org>.  I am not 100% sure on the status
+    on this, so not adding a ebuild for now.
+  - Add wrapper-1.4.c that is borken up in functions.  This is also
+    thanks to Zach Welch <zwelch@gentoo.org>.  I also tweaked it to
+	modify PATH by appending gcc's bin path to it ... this should
+	speed up calls gcc does to its tools.  I also fixed a few possible
+	memory leaks.
+
+  19 Feb 2003; Guy Martin <gmsoft@gneoot.org> gcc-config-1.3.1.ebuild :
   Changed ~hppa to hppa.
 
 *gcc-config-1.3.1 (19 Jan 2003)
@@ -10,10 +21,10 @@
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> gcc-config-1.3.1.ebuild :
   Mark stable on alpha
 
-  18 Feb 2003;  <zwelch@gentoo.org> gcc-config-1.3.1.ebuild :
+  18 Feb 2003;  Zach Welch <zwelch@gentoo.org> gcc-config-1.3.1.ebuild :
   Add stable for arm
   
-  18 Feb 2003;  <seemant@gentoo.org> gcc-config-1.3.1.ebuild :
+  18 Feb 2003;  Seemant <seemant@gentoo.org> gcc-config-1.3.1.ebuild :
   moved to stable for x86
 
   19 Feb 2003; Martin Schlemmer <azarah@gentoo.org> gcc-config-1.3.1 :
