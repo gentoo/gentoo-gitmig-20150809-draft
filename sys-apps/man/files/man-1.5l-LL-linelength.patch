@@ -1,0 +1,10 @@
+--- man-1.5l/src/man.c.orig	2003-06-10 16:40:16.000000000 +0100
++++ man-1.5l/src/man.c	2003-06-10 16:40:57.000000000 +0100
+@@ -550,6 +550,7 @@
+ 	       /* however, a .lt command here fails, only
+ 		  .ev 1; .lt ...; .ev helps for my version of groff */
+ 	       sprintf(eos(bufh), "echo \".ll %d.%di\"; ", ll/10, ll%10);
++	       sprintf(eos(bufh), "echo \".nr LL %d.%di\"; ", ll/10, ll%10);
+ #if 0
+ 	       sprintf(eos(bufh), "echo \".lt %d.%di\"; ", ll/10, ll%10);
+ #endif
