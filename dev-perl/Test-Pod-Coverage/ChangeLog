@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Pod-Coverage
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod-Coverage/ChangeLog,v 1.5 2004/10/19 08:12:23 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod-Coverage/ChangeLog,v 1.6 2004/10/19 17:37:01 kloeri Exp $
+
+  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  Test-Pod-Coverage-1.06.ebuild:
+  Stable on alpha.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   Test-Pod-Coverage-1.06.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/Test-Pod-1.20.ebuild,v 1.4 2004/10/19 08:01:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/Test-Pod-1.20.ebuild,v 1.5 2004/10/19 17:34:26 kloeri Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://cpan/authors/id/P/PE/PETDANCE/${P}.tar.gz"
 SRC_TEST="do"
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc sparc ~alpha"
+KEYWORDS="x86 amd64 ~ppc sparc alpha"
 IUSE=""
 
 DEPEND="dev-perl/Pod-Simple

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-Symdump
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.7 2004/10/19 08:10:49 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.8 2004/10/19 17:32:57 kloeri Exp $
+
+  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  Devel-Symdump-2.03.ebuild:
+  Stable on alpha.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   Devel-Symdump-2.03.ebuild:

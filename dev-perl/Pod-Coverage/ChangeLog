@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Pod-Coverage
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.8 2004/10/19 08:11:56 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.9 2004/10/19 17:36:01 kloeri Exp $
+
+  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  Pod-Coverage-0.14.ebuild:
+  Stable on alpha.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> Pod-Coverage-0.14.ebuild:
   KEYWORDS ~amd64.
