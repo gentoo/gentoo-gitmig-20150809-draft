@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/packit-0.7.ebuild,v 1.6 2004/07/12 09:01:30 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/packit-0.7.ebuild,v 1.7 2005/01/29 01:09:20 dragonheart Exp $
 
 inherit eutils
 
@@ -14,14 +14,6 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND="=net-libs/libnet-1.1.1*"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	has_version '>=net-libs/libpcap-0.8.1' \
-		&& sed -i 's!^#include <net/bpf.h>$!#include <pcap-bpf.h>!' \
-		src/{globals,main}.h
-}
 
 src_install() {
 	make install DESTDIR=${D} || die
