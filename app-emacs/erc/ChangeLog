@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/erc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.3 2003/02/12 03:53:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.4 2003/05/02 18:37:58 mkennedy Exp $
+
+*erc-4.0_rc2 (02 May 2003)
+
+  02 May 2003; Matthew Kennedy <mkennedy@gentoo.org> erc-4.0_rc2.ebuild:
+  Version bump to latest release candidate
 
 *erc-3.0 (18 Nov 2002)
 
