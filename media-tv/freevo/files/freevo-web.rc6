@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/files/freevo-web.rc6,v 1.1 2003/09/10 18:57:14 max Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting Freevo web server"
+	start-stop-daemon --start --quiet --background --make-pidfile \
+		--pidfile /var/run/freevo_web.pid --exec /opt/freevo/freevo \
+		-- execute /opt/freevo/src/www/webserver.py &>/dev/null
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Freevo web server"
+	start-stop-daemon --stop --quiet --pidfile /var/run/freevo_record.pid
+	eend $?
+}
+

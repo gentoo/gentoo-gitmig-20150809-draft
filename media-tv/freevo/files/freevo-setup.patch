@@ -1,0 +1,30 @@
+*** freevo	Sun Aug  3 11:56:14 2003
+--- ../gentoo-freevo/freevo	Sun Aug  3 16:05:57 2003
+***************
+*** 69,74 ****
+--- 69,75 ----
+  if [ "$1" = "setup" ] ; then
+      shift 1
+      ./runapp python src/setup_freevo.py $@
++     mv freevo.conf /etc/freevo
+      exit 0
+  fi
+  
+*** src/setup_freevo.py	Sun Aug  3 11:56:15 2003
+--- ../gentoo-freevo/src/setup_freevo.py	Sun Aug  3 16:06:22 2003
+***************
+*** 276,288 ****
+      # Build everything
+      create_config(conf)
+  
+-     print
+-     print 'Now you can type "freevo" to run freevo if you have the full '
+-     print 'binary release.'
+-     print
+-     print 'Please read the manual on how to build the CVS/src Freevo version.'
+-     print
+-     print 'Do "make install" as root to install the binaries in /usr/local/freevo'
+-     print
+- 
+      sys.exit()
+--- 276,279 ----

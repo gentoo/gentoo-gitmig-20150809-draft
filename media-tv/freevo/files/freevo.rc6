@@ -1,0 +1,27 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/files/freevo.rc6,v 1.1 2003/09/10 18:57:14 max Exp $
+
+depend() {
+	use lircd
+}
+
+start() {
+	export DISPLAY=""
+	ebegin "Setting max-user-freq"
+	sysctl -w dev.rtc.max-user-freq=1024 &>/dev/null
+	eend $?
+
+	ebegin "Starting Freevo"
+	start-stop-server --start --quiet --background --make-pidfile \
+		--pidfile /var/run/freevo.pid --exec /opt/freevo/freevo \
+		-- &>/dev/null
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Freevo"
+	start-stop-server --stop --quiet --pidfile /var/run/freevo.pid
+	eend $?
+}
