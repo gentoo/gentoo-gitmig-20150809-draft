@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.47 2004/07/11 15:49:26 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.48 2004/07/11 19:57:44 pylon Exp $
+
+*cdrdao-1.1.9 (11 Jul 2004)
+
+  11 Jul 2004; Lars Weiler <pylon@gentoo.org> +cdrdao-1.1.9.ebuild:
+  Version bump, but currently package-masked, as the gnome dependencies for
+  gcdrmaster are not compiling with gcc-3.4.
 
   11 Jul 2004; Lars Weiler <pylon@gentoo.org> cdrdao-1.1.8-r1.ebuild:
   Change for Gnome dependencies.
