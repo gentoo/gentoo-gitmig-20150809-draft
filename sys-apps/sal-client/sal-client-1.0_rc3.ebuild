@@ -1,12 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/sal-client-1.0_rc3.ebuild,v 1.4 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/sal-client-1.0_rc3.ebuild,v 1.5 2003/06/22 05:25:36 seemant Exp $
 
 MY_P=${P/_/-}
-
 DESCRIPTION="Client side programs for SAL, the Secure Auditing for Linux project."
 HOMEPAGE="http://secureaudit.sourceforge.net/"
-
 SRC_URI="http://belnet.dl.sourceforge.net/sourceforge/secureaudit/${MY_P/rc3/RC3}.tar.gz"
 LICENSE="GPL-2"
 
@@ -14,11 +12,12 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE=""
 
-DEPEND="virtual/glibc \
-		>=dev-libs/openssl-0.9.6j"
+DEPEND="virtual/glibc
+	dev-libs/openssl"
 
-RDEPEND="${DEPEND} \
-		>=sys-kernel/hardened-sources-2.4.20-r2"
+RDEPEND="${DEPEND}"
+# put a depend on hardened sources -- repoman doesn't like it, and we've got
+# critical issues so blah
 
 S=${WORKDIR}/sal-client
 
