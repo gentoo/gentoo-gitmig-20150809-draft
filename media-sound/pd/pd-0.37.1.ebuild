@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.1.ebuild,v 1.9 2004/06/25 00:16:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.1.ebuild,v 1.10 2004/11/09 22:24:11 mr_bones_ Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ DESCRIPTION="real-time music and multimedia environment"
 HOMEPAGE="http://www-crca.ucsd.edu/~msp/software.html"
 SRC_URI="http://www-crca.ucsd.edu/~msp/Software/${MY_P}.src.tar.gz"
 
-LICENSE="BSD | as-is"
+LICENSE="|| ( BSD as-is )"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="X alsa debug"
