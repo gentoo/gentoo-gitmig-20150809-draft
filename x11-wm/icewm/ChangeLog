@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.69 2004/09/29 17:07:16 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.70 2004/09/29 23:05:31 rac Exp $
+
+  29 Sep 2004; Robert Coie <rac@gentoo.org> icewm-1.2.16-r1.ebuild:
+  Typo fix missing trailing whitespace in DEPEND
 
   29 Sep 2004; Daniel Goller <morfic@gentoo.org> icewm-1.2.16-r1.ebuild:
   adding depend to close bug #65706
