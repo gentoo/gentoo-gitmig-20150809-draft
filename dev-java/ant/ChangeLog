@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.73 2004/08/27 20:12:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.74 2004/08/30 20:15:10 karltk Exp $
+
+*ant-1.6.2-r4 (30 Aug 2004)
+
+  30 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  Fixed dependency on ant-optional to ant-tasks.
 
   27 Aug 2004; Thomas Matthijs <axxo@gentoo.org>
   -files/1.5.3/1_6_backport-jdk142.patch.gz, -files/1.5.3/ant,
