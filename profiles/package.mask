@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3252 2004/10/16 19:55:48 liquidx Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3253 2004/10/16 21:24:54 vapier Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -847,10 +847,6 @@ dev-libs/libiconv
 >=media-libs/mesa-3.0
 >=media-libs/mesa-glu-3.0
 >=media-libs/sgi-oss-glu-1.0
-
-# We are masking out the shadow snapshots now, to coincide
-# with the new pam rollout. ( Woodchip - Mar 20 2002)
->=sys-apps/shadow-5
 
 #untested, author mentions an error
 media-libs/id3lib-docs
