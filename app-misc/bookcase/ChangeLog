@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bookcase
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bookcase/ChangeLog,v 1.13 2004/09/13 19:11:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bookcase/ChangeLog,v 1.14 2004/10/03 21:02:28 weeve Exp $
+
+  03 Oct 2004; Jason Wever <weeve@gentoo.org> bookcase-0.11.ebuild:
+  Added ~spac keyword, since it was missed in the version bump.
 
 *bookcase-0.11 (13 Sep 2004)
 

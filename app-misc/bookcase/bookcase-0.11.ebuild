@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bookcase/bookcase-0.11.ebuild,v 1.1 2004/09/13 19:11:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bookcase/bookcase-0.11.ebuild,v 1.2 2004/10/03 21:02:28 weeve Exp $
 
 inherit kde eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="A book manager for the KDE environment"
 HOMEPAGE="http://www.periapsis.org/bookcase/"
 SRC_URI="http://www.periapsis.org/bookcase/download/${P}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 LICENSE="GPL-2"
 
 IUSE=""
