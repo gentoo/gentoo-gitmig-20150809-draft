@@ -1,12 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3bea640757c6791162949ac65fec1ef6 ipsec-tools-0.5.ebuild 1507
 MD5 8ab0f354384bf0af0ac5f036bf870678 ipsec-tools-0.3.1.ebuild 1601
 MD5 1e8b9993c9d4f8bc53955cf690469564 ipsec-tools-0.4.ebuild 1692
 MD5 a428291d8a22a606eda6e16845741e9a ipsec-tools-0.2.5.ebuild 1549
 MD5 eb035599c29bfdcf58d786410c56c6bc ipsec-tools-0.5-r1.ebuild 1580
 MD5 20913a445c3eac38edca0ae43e36b1de ipsec-tools-0.3.3.ebuild 1599
-MD5 ea137c0936a2c06cb6cdd6fae16853cb ChangeLog 4013
+MD5 98442686f6f44570ade75dde9ba2ed4f ChangeLog 4128
 MD5 c58d4bbba473ea6b78a0e815b29b2aa6 metadata.xml 286
-MD5 c7b563174d5c0747d84401694e7a1902 ipsec-tools-0.4-r1.ebuild 1746
+MD5 b022f5739bc6188d5e55d2d9dc2e4988 ipsec-tools-0.4-r1.ebuild 1747
 MD5 84cffb83a2579976f872a29d42767714 files/ipsec.conf.sample 260
 MD5 2060a9a972f7975e1fdc755eec1d7791 files/digest-ipsec-tools-0.4 67
 MD5 da6f1a46fe846d9a36c49865af536935 files/digest-ipsec-tools-0.5 68
@@ -19,3 +22,10 @@ MD5 788e3de82c1c6532dab0dc0c19c1bf40 files/racoon.conf.d 621
 MD5 0e62b8655b5b72cb0b312b710b28e471 files/ipsec-tools-0.4-gcc34.diff 1008
 MD5 fa8e82259951e612a6d684983daefc3d files/racoon.init.d 1274
 MD5 b847486c75c3d9d4a1bef744e05ae006 files/ipsec-tools-0.5-isakmp-underrun.diff 714
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCPZGg06ebR+OMO78RAj4wAJ0dI+SCwlNsEM49u8tgK5T3Gy2HkgCcDOHC
+1O29sDsBnEEm3EngyTWnteE=
+=Lb9h
+-----END PGP SIGNATURE-----
