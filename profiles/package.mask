@@ -114,10 +114,6 @@ sys-kernel/rsbac-sources
 sys-kernel/ac-sources
 
 # <genone@gentoo.org> (30 Nov 2003)
-# unmaintained package
-app-portage/kemerge
-
-# <genone@gentoo.org> (30 Nov 2003)
 # Service is down, current versions won't work with the new service
 <=app-portage/gentoo-stats-0.4
 
