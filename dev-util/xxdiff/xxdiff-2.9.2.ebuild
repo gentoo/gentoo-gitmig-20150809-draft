@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-2.9.2.ebuild,v 1.4 2004/01/25 19:10:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-2.9.2.ebuild,v 1.5 2004/02/11 18:15:47 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A graphical file and directories comparator and merge tool."
@@ -22,6 +22,15 @@ IUSE=""
 src_compile() {
 	cd src
 	tmake -o Makefile xxdiff.pro
+
+	REALHOME="$HOME"
+	mkdir -p $T/fakehome/.kde
+	mkdir -p $T/fakehome/.qt
+	export HOME="$T/fakehome"
+	addwrite "${QTDIR}/etc/settings"
+
+	# things that should access the real homedir
+	[ -d "$REALHOME/.ccache" ] && ln -sf "$REALHOME/.ccache" "$HOME/"
 
 	emake || die
 }
