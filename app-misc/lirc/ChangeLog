@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.44 2004/10/05 13:34:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.45 2004/10/19 09:45:57 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> lirc-0.7.0_pre7.ebuild:
+  Stable on amd64.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   lirc-0.6.6-r1.ebuild, lirc-0.7.0_pre4.ebuild, lirc-0.7.0_pre7.ebuild:

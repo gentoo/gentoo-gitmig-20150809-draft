@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bins
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.25 2004/10/05 13:34:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.26 2004/10/19 09:42:51 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> bins-1.1.26-r1.ebuild:
+  Stable on amd64.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   bins-1.1.23-r1.ebuild, bins-1.1.23-r2.ebuild, bins-1.1.26-r1.ebuild:

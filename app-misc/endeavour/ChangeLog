@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/endeavour
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.16 2004/10/05 13:34:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.17 2004/10/19 09:45:04 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> endeavour-2.3.3.ebuild,
+  endeavour-2.3.6.ebuild:
+  Stable on amd64.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   endeavour-2.3.0.ebuild, endeavour-2.3.3.ebuild, endeavour-2.3.6.ebuild:
