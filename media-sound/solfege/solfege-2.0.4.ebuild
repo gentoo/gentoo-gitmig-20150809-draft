@@ -1,18 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.4.ebuild,v 1.2 2004/02/10 09:58:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.4.ebuild,v 1.3 2004/03/21 04:53:14 eradicator Exp $
 
 inherit python
 
-IUSE="gtkhtml gnome oss"
+IUSE="gtkhtml gnome" # see bug #43889 oss"
 DESCRIPTION="GNU Solfege is a program written to help you practice ear training."
-HOMEPAGE="http://${PN}.sourceforge.net/"
+HOMEPAGE="http://solfege.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
+
 RDEPEND=">=dev-lang/python-2.2
 	>=x11-libs/gtk+-2.0
 	>=dev-python/pygtk-2.0
@@ -28,8 +29,6 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	sys-apps/sed
 	=app-text/docbook-xsl-stylesheets-1.62*"
-
-S=${WORKDIR}/${P}
 
 pkg_setup() {
 	# die if user wants gtkhtml but it is not enable in gnome-python
@@ -62,8 +61,12 @@ src_compile() {
 	econf --enable-docbook-stylesheet=${xslloc} \
 		`use_with gnome` \
 		`use_with gtkhtml` \
-		`use_enable oss oss-sound` \
+		--enable-oss-sound \
 		|| die "Configuration failed."
+
+		# See bug #43889
+		# `use_enable oss oss-sound` \
+
 
 	emake || die "Compilation failed."
 }
