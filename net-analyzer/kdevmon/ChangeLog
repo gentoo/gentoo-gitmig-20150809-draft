@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/kdevmon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/kdevmon/ChangeLog,v 1.6 2003/02/15 07:45:24 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/kdevmon/ChangeLog,v 1.7 2003/06/13 17:06:57 caleb Exp $
+
+#kdevmon-0.4.6.5 (13 Jun 2003)
+
+  13 Jun 2003; Caleb Tennis <caleb@gentoo.org> : kdevmon-0.4.6.5.ebuild:
+  Version bump, put ~sparc and ~alpha as unstable.  Closes bug #22595
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
