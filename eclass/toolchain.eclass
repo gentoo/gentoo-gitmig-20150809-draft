@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.3 2004/09/05 20:47:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.4 2004/09/06 01:46:15 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -681,7 +681,7 @@ gcc_do_make() {
 
 	# Only build it static if we are just building the C frontend, else
 	# a lot of things break because there are not libstdc++.so ....
-	if use static && [ "${gcc_lang}" = "c" ] ; then
+	if use static && [ "${GCC_LANG}" = "c" ] ; then
 		LDFLAGS="${LDFLAGS:="-static"}"
 	fi
 	
