@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.7.ebuild,v 1.1 2001/07/18 23:10:39 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.7.ebuild,v 1.2 2001/08/03 23:05:06 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -13,8 +13,7 @@ HOMEPAGE="http://www.gnome.org/"
 DEPEND="nls? ( sys-devel/gettext ) sys-devel/perl
         >=gnome-base/oaf-0.6.5
         >=dev-util/xml-i18n-tools-0.8.4
-	>=gnome-base/gnome-print-0.25
-	>=sys-devel/libtool-1.4"
+	>=gnome-base/gnome-print-0.25"
 
 RDEPEND=">=gnome-base/oaf-0.6.5
 	>=gnome-base/gnome-print-0.25"
