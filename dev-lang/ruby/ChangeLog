@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ruby
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.45 2003/12/25 01:29:25 usata Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.46 2004/01/30 08:03:38 usata Exp $
+
+*ruby-1.6.8-r6 (30 Jan 2004)
+
+  30 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-1.6.8-r6.ebuild,
+  ruby-1.8.0-r5.ebuild, ruby-1.8.1-r1.ebuild:
+  Moved ruby-config script out to dev-ruby/ruby-config. Removed ruby16
+  IUSE flag and let ruby-config take care of dead symlinks.
 
 *ruby-1.8.1 (25 Dec 2003)
 
