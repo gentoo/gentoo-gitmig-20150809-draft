@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-6.0-r1.ebuild,v 1.7 2003/03/29 04:37:29 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-6.0-r1.ebuild,v 1.8 2003/03/29 04:46:07 avenj Exp $
 
 S=${WORKDIR}
 
@@ -26,7 +26,7 @@ RDEPEND=">=virtual/linux-sources-2.4
 		>=sys-libs/glibc-2.2.2"
 
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc "
+KEYWORDS="-* x86"
 
 src_compile() {
 	# Keep disk space to a minimum

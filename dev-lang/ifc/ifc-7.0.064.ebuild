@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-7.0.064.ebuild,v 1.4 2003/03/19 15:58:55 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-7.0.064.ebuild,v 1.5 2003/03/29 04:47:44 avenj Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Intel Fortran Compiler - The Pentium optimized compiler for Linux"
@@ -15,7 +15,7 @@ HOMEPAGE="http://developer.intel.com/software/products/compilers/flin/"
   # Effectively the same license as icc
 LICENSE="icc-7.0"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="-* x86"
 
 
 DEPEND=">=virtual/linux-sources-2.4
