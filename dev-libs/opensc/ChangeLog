@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.2 2004/03/12 23:48:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.3 2004/03/21 06:37:04 mr_bones_ Exp $
+
+  20 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> opensc-0.8.1.ebuild:
+  stop using deprecated ?: use syntax
 
 *opensc-0.8.1 (22 Feb 2004)
 

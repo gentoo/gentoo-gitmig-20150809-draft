@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.8.1.ebuild,v 1.3 2004/03/12 23:48:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.8.1.ebuild,v 1.4 2004/03/21 06:37:04 mr_bones_ Exp $
 
 DESCRIPTION="SmartCard library and applications"
 HOMEPAGE="http://www.opensc.org/"
@@ -14,7 +14,8 @@ IUSE="ldap pam pcsc-lite"
 RDEPEND="ldap? ( net-nds/openldap )
 	pam? ( >=sys-libs/pam-0.77
 		>=sys-apps/shadow-4.0.3 )
-	pcsc-lite? ( sys-apps/pcsc-lite ) : ( >=dev-libs/openct-0.5.0 )"
+	pcsc-lite? ( sys-apps/pcsc-lite )
+	!pcsc-lite? ( >=dev-libs/openct-0.5.0 )"
 
 src_compile() {
 	local mycard=""
