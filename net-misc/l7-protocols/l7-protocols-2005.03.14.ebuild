@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2004.11.28.ebuild,v 1.2 2005/01/04 09:32:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2005.03.14.ebuild,v 1.1 2005/03/23 09:39:16 dragonheart Exp $
 
 inherit toolchain-funcs
 
 IUSE=""
 
-MY_P=${PN}-${PV//./_}
+MY_P=${PN}-${PV//./-}
 
 DESCRIPTION="Protocol definitions of l7-filter kernel modules"
 HOMEPAGE="http://l7-filter.sourceforge.net/protocols"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 S=${WORKDIR}/${MY_P}
 
 RDEPEND="net-misc/l7-filter"
@@ -27,8 +27,8 @@ src_compile() {
 	emake -C testing
 }
 
-# NOTE Testing mechanism is currently broken - it doesn't stop until it fails
-# This is bad when it works.
+# NOTE Testing mechanism is currently broken:
+#  stack smashing attack in function main()
 
 #src_test() {
 #	cd testing
@@ -45,14 +45,14 @@ src_install() {
 	cd ${S}
 
 	dodoc README CHANGELOG HOWTO WANTED
-	docinto weakpatterns/README README.weakpatterns
-	docinto extra/README README.extra
-	docinto file_types/README README.file_types
-	docinto malware/README README.malware
-	docinto testing/README README.testing
-
+	newdoc weakpatterns/README README.weakpatterns
+	newdoc extra/README README.extra
+	newdoc file_types/README README.file_types
+	newdoc malware/README README.malware
+	newdoc testing/README README.testing
 	rm -rf README CHANGELOG HOWTO LICENSE WANTED */README testing
 
 	make PREFIX=${D} install || die
 	rm ${D}/etc/${PN}/Makefile
+	chown -R root:root ${D}
 }
