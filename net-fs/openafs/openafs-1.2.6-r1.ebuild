@@ -41,6 +41,11 @@ src_compile() {
 	./configure \
 		--with-afs-sysname=i386_linux24 \
 		--enable-transarc-paths || die
+	cp src/pam/Makefile src/pam/Makefile.old
+	sed -e "s|-I/usr/include/sys| |g" \
+			src/pam/Makefile.old > src/pam/Makefile
+	rm src/pam/Makefile.old
+
 	make || die
 	make dest || die
 }

@@ -1,10 +1,15 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.12 2002/12/13 10:59:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.13 2002/12/26 21:05:06 rphillips Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *openafs-1.2.6-r1 (1 Oct 2002)
+
+  26 Dec 2002; Ryan Phillips <rphillips@gentoo.org> openafs-1.2.6-r1.ebuild :
+
+  Fixed compile issue. #12628
+
 
   14 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> openafs-1.2.6-r1.ebuild :
   Updated CONFIG_PROTECT_MASK.
