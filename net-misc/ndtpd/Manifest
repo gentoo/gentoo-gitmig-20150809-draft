@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d2c659941dfa966c0e4dc371cadd8073 ChangeLog 1224
+MD5 ce013d3060b258e1f51d2d72b48b8264 ndtpd-3.1.5.ebuild 1455
+MD5 06f1616107ee939fded0e2d887ffb307 ChangeLog 1316
 MD5 043e2d431237aeec1769801a5b0214df metadata.xml 251
-MD5 01c7fedb3258b6f3addd61b6f44e8e42 ndtpd-3.1.5.ebuild 1446
-MD5 c50d3bad7e4228c971eeb2507f0de06f files/digest-ndtpd-3.1.5 63
-MD5 55c0139b320c6367cf6b91e65d0511bc files/ndtpd.initd 663
 MD5 6b62661262cdfe606b598f57f9249a52 files/ndtpd-3.1.5-eb4-gentoo.diff 658
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB7NrWVWNWqTUmv+0RAsYRAJ9eahHMDFXbBvv3hRF+p8OBJJl7cwCeLoMQ
-uykcVxZmX4BbURinE8o10LU=
-=TPIN
------END PGP SIGNATURE-----
+MD5 55c0139b320c6367cf6b91e65d0511bc files/ndtpd.initd 663
+MD5 c50d3bad7e4228c971eeb2507f0de06f files/digest-ndtpd-3.1.5 63
