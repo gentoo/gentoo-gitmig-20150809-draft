@@ -1,18 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/pop3vscan-0.4.ebuild,v 1.10 2003/09/05 09:10:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/pop3vscan-0.4.ebuild,v 1.11 2003/12/07 03:02:57 wesolows Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A transparent POP3-Proxy with virus-scanning capabilities."
 SRC_URI="mirror://sourceforge/pop3vscan/${P}.tar.gz"
 HOMEPAGE="http://pop3vscan.sf.net/"
 
-DEPEND="net-mail/ripmime"
+DEPEND="net-mail/ripmime dev-libs/libpcre"
 RDEPEND="net-firewall/iptables"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
+
+src_unpack() {
+	unpack ${A}
+	rm -f ${S}/ripmime/ripmime.a
+}
 
 src_compile() {
 	make || die
