@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.20 2004/02/29 18:10:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.21 2004/03/07 19:31:20 psi29a Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gyve.org/dgs/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha amd64 hppa"
+KEYWORDS="x86 ppc sparc alpha amd64 hppa ~mips"
 
 RDEPEND="=dev-libs/glib-1.2*
 	virtual/x11"
