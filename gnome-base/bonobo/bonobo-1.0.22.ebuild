@@ -1,23 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.20 2004/11/05 22:41:12 corsair Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.21 2004/11/08 16:16:13 vapier Exp $
 
 inherit gnome.org libtool gnuconfig
 
 DESCRIPTION="A set of language and system independent CORBA interfaces"
 HOMEPAGE="http://www.gnome.org/"
 
-SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ~ppc64"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc64 sparc x86"
+IUSE="nls"
 
 RDEPEND=">=gnome-base/oaf-0.6.8
 	=gnome-base/orbit-0*
 	>=gnome-base/gnome-print-0.30
 	>=media-libs/gdk-pixbuf-0.6"
-
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	nls? ( sys-devel/gettext

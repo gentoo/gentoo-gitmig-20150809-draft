@@ -1,21 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.19-r1.ebuild,v 1.22 2004/08/21 15:19:33 obz Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.19-r1.ebuild,v 1.23 2004/11/08 16:16:13 vapier Exp $
 
 DESCRIPTION="A set of language and system independent CORBA interfaces"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
-SLOT="0"
-KEYWORDS="x86 ppc sparc"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="arm ppc sparc x86"
+IUSE="nls"
 
 RDEPEND=">=gnome-base/oaf-0.6.8
 	=gnome-base/orbit-0*
 	>=gnome-base/gnome-print-0.30
 	>=media-libs/gdk-pixbuf-0.6"
-
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	nls? ( sys-devel/gettext
