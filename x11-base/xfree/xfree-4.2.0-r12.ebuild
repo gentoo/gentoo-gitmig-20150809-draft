@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.10 2002/07/29 03:51:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.11 2002/08/08 17:30:42 verwilst Exp $
 
 inherit flag-o-matic
 
@@ -176,8 +176,8 @@ src_compile() {
 
 src_install() {
 
-	# fix compile for gcc-3.1
-	if [ "`gcc -dumpversion |cut -d. -f1,2`" = "3.1" ]
+	# fix compile for gcc-3.x
+	if [ "${COMPILER}" = "gcc3" ]
 	then
 		make CXXDEBUGFLAGS="${CXXDEBUGFLAGS} -mno-mmx" \
 		CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx" \

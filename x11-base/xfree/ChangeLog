@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.34 2002/07/29 19:56:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.35 2002/08/08 17:30:42 verwilst Exp $
+
+  8 aug 2002; Bart Verwilst <verwilst@gentoo.org> :
+
+  Fixed gcc 3.x based compilation error (with -mmmx)
 
   29 Jul 2002; Martin Schlemmer <azarah@gentoo.org> :
 
