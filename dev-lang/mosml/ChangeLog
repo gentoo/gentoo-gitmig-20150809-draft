@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mosml
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/ChangeLog,v 1.1 2003/11/13 21:31:40 plasmaroo Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/ChangeLog,v 1.2 2004/02/18 14:46:29 plasmaroo Exp $
+
+*mosml-2.01 (18 Feb 2004)
+
+  18 Feb 2004; <plasmaroo@gentoo.org> mosml-2.01.ebuild:
+  Version bump; closes bug #41560.
 
 *mosml-2.00 (13 Nov 2003)
 

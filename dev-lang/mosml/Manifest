@@ -1,4 +1,4 @@
-MD5 6e93ac9f6edb85b86bc28899efc33964 ChangeLog 423
+MD5 7390985e8f617c4d25f57a1af4bbb6c2 ChangeLog 543
+MD5 6c9ae07f2f19779ab69e5fe67e3e2fff mosml-2.01.ebuild 1085
 MD5 a5c50833bcc05f696a75e5dc8bb9eb4d metadata.xml 225
-MD5 909e4ec509a09777e06661a35c105e78 mosml-2.00.ebuild 1083
-MD5 24b9506ef99535afddca03ed36859920 files/digest-mosml-2.00 61
+MD5 2064226e85924cc665211f79661a204e files/digest-mosml-2.01 62
