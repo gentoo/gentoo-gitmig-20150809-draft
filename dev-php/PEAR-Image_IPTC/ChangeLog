@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Image_IPTC
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_IPTC/ChangeLog,v 1.5 2004/07/06 22:44:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_IPTC/ChangeLog,v 1.6 2004/08/03 17:05:45 agriffis Exp $
+
+  03 Aug 2004; <agriffis@gentoo.org> PEAR-Image_IPTC-1.0.2.ebuild:
+  add ia64 keywords #56295
 
   06 Jul 2004; Michael Hanselmann <hansmi@gentoo.org>
   PEAR-Image_IPTC-1.0.2.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-System_Command
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-System_Command/ChangeLog,v 1.12 2004/07/30 15:04:16 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-System_Command/ChangeLog,v 1.13 2004/08/03 17:09:54 agriffis Exp $
+
+  03 Aug 2004; <agriffis@gentoo.org> PEAR-System_Command-1.0-r1.ebuild,
+  PEAR-System_Command-1.0.1.ebuild:
+  add ia64 keywords #56295
 
 *PEAR-System_Command-1.0.1 (30 Jul 2004)
 

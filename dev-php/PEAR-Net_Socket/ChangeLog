@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_Socket
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/ChangeLog,v 1.15 2004/07/30 14:58:11 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/ChangeLog,v 1.16 2004/08/03 17:08:04 agriffis Exp $
+
+  03 Aug 2004; <agriffis@gentoo.org> PEAR-Net_Socket-1.0.1-r1.ebuild,
+  PEAR-Net_Socket-1.0.2.ebuild:
+  add ia64 keywords #56295
 
 *PEAR-Net_Socket-1.0.2 (30 Jul 2004)
 
