@@ -1,0 +1,8 @@
+# ChangeLog for dev-lang/squeak
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/ChangeLog,v 1.1 2002/12/30 01:56:14 jhhudso Exp $
+
+*squeak-3.2.5 (29 Dec 2002)
+
+  29 Dec 2002; Jared Hudson <jhhudso@gentoo.org> : Initial import. Ebuild
+  submitted by Ragnar Hojland Espinosa <ragnar@linalco.com>.
