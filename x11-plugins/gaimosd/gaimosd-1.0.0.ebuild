@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaimosd/gaimosd-1.0.0.ebuild,v 1.1 2004/09/20 15:52:10 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaimosd/gaimosd-1.0.0.ebuild,v 1.2 2004/12/08 16:13:43 rizzo Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND=">=net-im/gaim-1.0.0
 #S=${WORKDIR}/${P}
 
 src_compile() {
-	econf || die
+	econf --enable-customized-buddies --enable-customized-conversations || die
 	emake || die "emake failed"
 }
 
