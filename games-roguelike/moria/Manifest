@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6ff8e2721544d6290ad63feca8bfe6dd moria-5.5.2.ebuild 1883
 MD5 b310d24d3aea248b6ae08c56e6eb99b4 ChangeLog 679
-MD5 341193d02d90ef8e7f1e6e26fdf2e1c5 moria-5.5.2.ebuild 1925
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 b39d7c4a2dd55ea387aad81b73b91d6d files/5.5.2-gentoo-paths.patch 2363
-MD5 7474a4c2af916defe5d530cd97b8cfce files/5.5.2-glibc.patch 9137
 MD5 ce7e2d9e9dbd488130b49ae8fa9ab9b2 files/digest-moria-5.5.2 122
+MD5 7474a4c2af916defe5d530cd97b8cfce files/5.5.2-glibc.patch 9137
+MD5 b39d7c4a2dd55ea387aad81b73b91d6d files/5.5.2-gentoo-paths.patch 2363
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhHVbHTu7gpaalycRAuZIAKCS7D4828MGhVfTX0CPqAkUiVITSQCfZJv3
+Njy8nFe0HRADUuJZG7yXdMY=
+=G3qv
+-----END PGP SIGNATURE-----
