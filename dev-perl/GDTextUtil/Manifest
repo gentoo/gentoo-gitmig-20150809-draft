@@ -1,6 +1,4 @@
-MD5 6582e3dd41dcaea6921de3c62bd7f7ef ChangeLog 551
-MD5 b6553f4e89799a911a96d59bee64f599 GDTextUtil-0.83.ebuild 712
+MD5 04fd9b037520de86b23a51d63f066245 ChangeLog 658
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 52f5db6ff6c91dbb757e58399b9e1127 GDTextUtil-0.86.ebuild 716
-MD5 a463f2abe3be0aa0ca37363c09102a01 files/digest-GDTextUtil-0.83 66
 MD5 173449a146b0874e12649bb829ff7279 files/digest-GDTextUtil-0.86 66

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GDTextUtil
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/ChangeLog,v 1.4 2003/12/25 20:06:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/ChangeLog,v 1.5 2003/12/25 20:07:28 mcummings Exp $
+
+  25 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  GDTextUtil-0.83.ebuild:
+  No longer available
 
 *GDTextUtil-0.86 (25 Dec 2003)
 
