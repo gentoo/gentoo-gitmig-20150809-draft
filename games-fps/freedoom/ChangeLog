@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/freedoom
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/ChangeLog,v 1.7 2004/11/12 16:00:25 blubb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/ChangeLog,v 1.8 2005/01/03 21:39:59 vapier Exp $
+
+*freedoom-0.3 (03 Jan 2005)
+
+  03 Jan 2005; Mike Frysinger <vapier@gentoo.org> +freedoom-0.3.ebuild:
+  Version bump.
 
   11 Nov 2004; Simon Stelling <blubb@gentoo.org> freedoom-0.2.ebuild:
   added ~amd64 
