@@ -1,16 +1,20 @@
 # ChangeLog for dev-libs/liboil
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.6 2004/11/23 18:56:35 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.7 2004/11/27 17:34:18 lu_zero Exp $
 
-*liboil-0.2.1 (20 Nov 2004)
-
-  20 Nov 2004; Luca Barbato <lu_zero@gentoo.org> +liboil-0.2.1.ebuild:
-  New version, ppc issues are eventually fixed
+  27 Nov 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/liboil-0.2.2-clobber-list.patch, liboil-0.2.2.ebuild:
+  Another fix for ppc
 
 *liboil-0.2.2 (23 Nov 2004)
 
   23 Nov 2004; Don Seiler <rizzo@gentoo.org> +liboil-0.2.2.ebuild:
   Version bump, should work with gcc 3.4.x now
+
+*liboil-0.2.1 (20 Nov 2004)
+
+  20 Nov 2004; Luca Barbato <lu_zero@gentoo.org> +liboil-0.2.1.ebuild:
+  New version, ppc issues are eventually fixed
 
   20 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> liboil-0.2.0.ebuild:
   Keyworded ~amd64, bug #71270
