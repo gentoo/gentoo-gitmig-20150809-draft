@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r5.ebuild,v 1.7 2002/10/23 19:37:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r5.ebuild,v 1.8 2002/11/02 10:10:42 seemant Exp $
 
 IUSE="nls build"
 
@@ -8,9 +8,10 @@ S=${WORKDIR}/${P}
 DESCRIPTION="standard Linux network tools"
 SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2"
 HOMEPAGE="http://sites.inka.de/lina/linux/NetTools/"
-KEYWORDS="x86 alpha"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="~x86 ~alpha"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"
