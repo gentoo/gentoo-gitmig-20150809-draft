@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit-bin/avalon-logkit-bin-1.2.2.ebuild,v 1.1 2004/07/30 18:39:42 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit-bin/avalon-logkit-bin-1.2.2.ebuild,v 1.2 2004/07/31 11:48:14 axxo Exp $
 
 inherit java-pkg
 
@@ -14,13 +14,14 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 IUSE="doc"
 
-S=${WORKDIR}/${P/avalon-}-dev
+MY_P=${P/-bin}
+S=${WORKDIR}/${MY_P/avalon-}-dev
 
 src_compile() { :; }
 
 src_install() {
-	mv ${P/avalon-}.jar ${PN}.jar
-	java-pkg_dojar ${PN}.jar || die "Unable to Install"
+	mv ${MY_P/avalon-}.jar ${PN/-bin}.jar
+	java-pkg_dojar ${PN/-bin}.jar || die "Unable to Install"
 	dodoc README.txt
 	use doc && dohtml -r docs/*
 }
