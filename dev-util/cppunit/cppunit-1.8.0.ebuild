@@ -1,16 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.8.0.ebuild,v 1.2 2002/11/02 01:26:38 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.8.0.ebuild,v 1.3 2002/11/28 01:33:29 george Exp $
+
+IUSE=""
 
 DESCRIPTION="CppUnit is the C++ port of the famous JUnit framework for unit testing."
 HOMEPAGE="http://cppunit.sourceforge.net/"
 SRC_URI="http://unc.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz"
 
-LICENSE="LGPL"
+LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="x86 ~ppc ~sparc ~sparc64"
 
-DEPEND="app-doc/doxygen 
+DEPEND="app-doc/doxygen
 	media-gfx/graphviz"
 
 src_compile() {
