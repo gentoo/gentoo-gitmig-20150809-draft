@@ -1,21 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0.ebuild,v 1.1 2003/04/11 20:10:21 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0.ebuild,v 1.2 2003/04/25 15:15:04 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="A native java XML database"
 HOMEPAGE="http://xml.apache.org/xindice"
 SRC_URI="http://xml.apache.org/xindice/dist/xml-xindice-${PV}.tar.gz"
-LICENSE="Apache-1.1"
 
+LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc"
 
-DEPEND=">=sun-jdk-1.3"
+DEPEND=">=dev-java/sun-jdk-1.3"
 
-S="${WORKDIR}/xml-${P}"
-
-inherit eutils
+S=${WORKDIR}/xml-${P}
 
 pkg_preinst() {
 	enewgroup xindice || die "Adding group xindice failed"
