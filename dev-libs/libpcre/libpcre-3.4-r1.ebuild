@@ -1,32 +1,28 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-3.4-r1.ebuild,v 1.1 2001/03/06 06:20:41 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-3.4-r1.ebuild,v 1.2 2001/11/10 12:05:20 hallski Exp $
 
-A=pcre-${PV}.tar.gz
 S=${WORKDIR}/pcre-${PV}
 DESCRIPTION="Perl compatible regular expressions"
-SRC_URI="ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/"${A}
+SRC_URI="ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-${PV}.tar.gz"
 
 DEPEND="virtual/glibc"
 
 src_compile() {                           
+	./configure --host=${CHOST}					\
+		    --prefix=/usr					\
+		    --mandir=/usr/share/man
+	assert
 
-  try ./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man
-  try make
+	make || die
 }
 
 src_install() {                               
+	make DESTDIR=${D} install || die
 
-  try make DESTDIR=${D} install
-
-  dodoc AUTHORS COPYING ChangeLog LICENCE NEWS NON-UNIX-USE README
-  dodoc doc/*.txt doc/Tech.Notes
-  docinto html
-  dodoc doc/*.html
-  
+	dodoc AUTHORS COPYING ChangeLog LICENCE NEWS NON-UNIX-USE README
+	dodoc doc/*.txt doc/Tech.Notes
+	docinto html
+	dodoc doc/*.html
 }
-
-
-
-

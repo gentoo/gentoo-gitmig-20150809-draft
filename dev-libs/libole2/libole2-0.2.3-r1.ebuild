@@ -3,10 +3,9 @@
 # Author Achim Gottinger <achim@gentoo.org>
 # $Header
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="libole2"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=dev-libs/glib-1.2.8"

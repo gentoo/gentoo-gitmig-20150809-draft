@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.3.ebuild,v 1.1 2001/06/14 14:41:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.3.ebuild,v 1.2 2001/11/10 12:05:20 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="The GLib library of C routines"
-SRC_URI="http://prdownloads.sourceforge.net/libsigc/${A}"
+SRC_URI="http://prdownloads.sourceforge.net/libsigc/${P}.tar.gz"
 HOMEPAGE="http://libsigc.sourceforge.net/"
 
 DEPEND="virtual/glibc"
