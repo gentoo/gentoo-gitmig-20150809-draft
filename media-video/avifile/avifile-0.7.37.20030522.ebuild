@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.37.20030522.ebuild,v 1.1 2003/05/22 19:15:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.37.20030522.ebuild,v 1.2 2003/06/10 19:23:41 liquidx Exp $
 
 IUSE="static truetype xv sdl dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd"
 
@@ -26,6 +26,7 @@ DEPEND=">=media-libs/jpeg-6b
 	>=media-libs/xvid-0.9.0
 	>=media-sound/lame-3.90
 	>=media-libs/audiofile-0.2.3
+	>=sys-apps/sed-4
 	truetype? ( >=media-libs/freetype-2.1 )
 	xv? ( >=x11-base/xfree-4.2.1 )
 	sdl? ( >=media-libs/libsdl-1.2.2 )
@@ -36,6 +37,11 @@ DEPEND=">=media-libs/jpeg-6b
 	qt? ( >=x11-libs/qt-3.0.3 )
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
 	esd? ( >=media-sound/esound-0.2.28 )"
+
+src_unpack() {
+	unpack ${A}
+	use qt || sed -i 's/qt[a-z]*//g' ${S}/samples/Makefile.am
+}
 
 src_compile() {
 	local myconf="--enable-oss"

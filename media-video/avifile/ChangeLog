@@ -1,6 +1,11 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.48 2003/05/22 19:15:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.49 2003/06/10 19:23:41 liquidx Exp $
+
+  10 Jun 2003; Alastair Tse <liquidx@gentoo.org>
+  avifile-0.7.37.20030522.ebuild:
+  Added fix for qt compile errors. Thanks to Daniel Steinberger
+  <Daniel.Steinberger@gmx.de>. (#21804)
 
 *avifile-0.7.37.20030522 (22 May 2003)
 
