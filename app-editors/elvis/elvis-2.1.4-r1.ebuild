@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4-r1.ebuild,v 1.14 2003/06/12 14:34:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4-r1.ebuild,v 1.15 2003/07/18 19:53:43 tester Exp $
 
 IUSE="X"
 
@@ -12,7 +12,7 @@ HOMEPAGE="ftp://ftp.cs.pdx.edu/pub/elvis/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha amd64"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	X? ( virtual/x11 )"
