@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.1.6_p20040815.ebuild,v 1.2 2004/08/21 20:35:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.1.6_p20040821.ebuild,v 1.1 2004/08/21 20:35:31 usata Exp $
 
 MY_PN="quiminputcontextplugin"
 #MY_P="${MY_PN}-${PV}"
@@ -12,7 +12,8 @@ DESCRIPTION="Qt immodules input method framework plugin for UIM"
 HOMEPAGE="http://uim.freedesktop.org/"
 #SRC_URI="http://mover.cool.ne.jp/others/immodule/${MY_P}.tar.gz"
 #SRC_URI="http://freedesktop.org/~tkng/${MY_PN}/${MY_P}.tar.gz"
-SRC_URI="mirror://gentoo/${P/_p/-}.tar.gz"
+SRC_URI="mirror://gentoo/${P/_p/-}.tar.gz
+	http://dev.gentoo.org/~usata/distfiles/${P/_p/-}.tar.gz"
 
 LICENSE="GPL-2 | BSD"
 SLOT="0"
