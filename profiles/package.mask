@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# msterret@gentoo.org (20 Aug 2003)
+# New versioning scheme so hid the old one from portage
+=app-games/neverball-0805a
+
 # <jhhudso@gentoo.org> (21 Aug 2003)
 # Needs more testing before being marked as ~x86
 =net-misc/freeswan-2.01
