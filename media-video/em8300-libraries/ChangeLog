@@ -1,9 +1,14 @@
 # ChangeLog for media-video/em8300-libraries
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/ChangeLog,v 1.5 2002/12/15 09:05:07 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/ChangeLog,v 1.6 2003/01/06 04:03:32 agenkin Exp $
 
 *em8300-libraries-0.13.0 (12 Dec 2002)
 
+  05 Jan 2003; Arcady Genkin <agenkin@gentoo.org> em8300-libraries-0.13.0-r1 :
+  Disabled GTK dependency for users without gtk in their USE flags.
+  The patch came from Steven Brookes <stevenjb@mda.co.uk>.
+  Closes bug #10339.
+	
   15 Dec 2002; Brandon Low <lostlogic@gentoo.org> em8300-libraries-0.13.0 :
   oops, info wrong, and extra line in ebuild.
 
