@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.99.3.20041109.ebuild,v 1.1 2004/11/18 15:31:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.99.5.20041207.ebuild,v 1.1 2004/12/09 04:48:45 usata Exp $
 
 inherit tetex eutils flag-o-matic
 
@@ -24,11 +24,12 @@ SRC_URI="${SRC_PATH_TETEX}/${TETEX_SRC}
 	http://dev.gentoo.org/~usata/distfiles/${P}-gentoo.tar.gz"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
-IUSE="motif lesstif Xaw3d"
+IUSE="motif lesstif Xaw3d neXt"
 
 DEPEND="motif? ( lesstif? ( x11-libs/lesstif )
 		!lesstif? ( x11-libs/openmotif ) )
-	!motif? ( Xaw3d? ( x11-libs/Xaw3d ) )
+	!motif? ( neXt? ( x11-libs/neXtaw )
+		!neXt? ( Xaw3d? ( x11-libs/Xaw3d ) ) )
 	!dev-tex/memoir
 	!dev-tex/lineno
 	!dev-tex/SIunits
@@ -57,6 +58,8 @@ src_compile() {
 			export CPPFLAGS="${CPPFLAGS} -I/usr/X11R6/include/lesstif"
 		fi
 		toolkit="motif"
+	elif use neXt ; then
+		toolkit="neXtaw"
 	elif use Xaw3d ; then
 		toolkit="xaw3d"
 	else

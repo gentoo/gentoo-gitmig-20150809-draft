@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 94a7142bb83df18ae22ce0b0efd9369e ChangeLog 13241
+MD5 6e033e2f0dcfae655ef675150d111cc6 ChangeLog 13411
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 62354ce0bb5f4a7c75033a8e46328e29 tetex-1.0.7-r13.ebuild 4765
 MD5 30f9746ea490eccf98572af9add44fae tetex-2.0.2-r3.ebuild 488
-MD5 5321168070ba4ad7138455a6a23079ef tetex-2.99.3.20041109.ebuild 1945
+MD5 9c5ee108026caa13b440c289c9cd12f1 tetex-2.99.5.20041207.ebuild 2030
 MD5 9c55a59087a6baa7f6a603b013443191 tetex-2.99.3.20041109-r1.ebuild 2033
 MD5 101135a14a69ded149503edee6022368 tetex-2.0.2-r4.ebuild 607
 MD5 ed2101fe2206c296c09f0d2b67759841 files/digest-tetex-2.0.2-r3 282
 MD5 9179c455d1a594b0b06b670e0b051374 files/digest-tetex-1.0.7-r13 343
 MD5 6f48f0b987b7ea33b02aea8ba198eeed files/iso-8859-7.def 4419
-MD5 9955467b6e148544069fbbd4ad2e620f files/digest-tetex-2.99.3.20041109 248
+MD5 960fde783aaac8048090bad11254da92 files/digest-tetex-2.99.5.20041207 248
 MD5 ed2101fe2206c296c09f0d2b67759841 files/digest-tetex-2.0.2-r4 282
 MD5 41f87c91f8bb6ceeae3c1fb7ca0dce1c files/tetex-texdoctk-gentoo.patch 509
 MD5 9955467b6e148544069fbbd4ad2e620f files/digest-tetex-2.99.3.20041109-r1 248
@@ -19,7 +19,7 @@ MD5 1c3401dbbc9d478e94c98e44b9b68e38 files/tetex-no-readlink-manpage.diff 542
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBn58eVWNWqTUmv+0RAlaQAJ0a9Ks1sFhRfu2PKF9a9b3eIW13LQCeJXjj
-rw8NbRm842FKrtTiy2gnG90=
-=novl
+iD8DBQFBt9d/VWNWqTUmv+0RAhVmAKCdm9jMDt/06vBOF9uJ0H0RUAQLawCgolLy
+HXiDiu/Tx0+Qx8QZw/AeqHc=
+=iK9c
 -----END PGP SIGNATURE-----
