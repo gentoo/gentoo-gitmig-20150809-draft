@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8.ebuild,v 1.3 2003/08/14 20:31:48 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8.ebuild,v 1.4 2003/10/23 22:22:15 seemant Exp $
 
 DESCRIPTION="udhcp Server/Client Package"
 HOMEPAGE="http://udhcp.busybox.net/"
@@ -20,7 +20,15 @@ src_install() {
 	dodir /usr/sbin
 	dodir /usr/bin
 	dodir /sbin
-	dodir /etc
-	install -m644 samples/udhcpd.conf ${D}/etc
+
+	insinto /etc
+	doins samples/udhcpd.conf
+
 	make prefix=${D}/usr SBINDIR=${D}/sbin install || die
+
+	dodoc AUTHORS COPYING ChangeLog README* TODO
+
+	insinto /usr/share/udhcpc
+	doins samples/*
+
 }
