@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/opendchub-0.7.14.ebuild,v 1.3 2004/05/21 23:02:25 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/opendchub-0.7.14.ebuild,v 1.4 2004/06/15 02:33:40 agriffis Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 
 src_install() {
 	einstall || die "install failed"
-	if [ `use perl` ] ; then
+	if use perl ; then
 		exeinto /usr/bin
 		doexe ${FILESDIR}/opendchub_setup.sh
 		dodir /usr/share/opendchub/scripts
@@ -35,7 +35,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ `use perl` ] ; then
+	if use perl ; then
 		einfo
 		einfo "To set up perl scripts for opendchub to use, please run"
 		einfo "opendchub_setup.sh as the user you will be using opendchub as."
