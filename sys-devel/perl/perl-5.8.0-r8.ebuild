@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r8.ebuild,v 1.4 2003/01/08 20:43:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r8.ebuild,v 1.5 2003/01/08 20:53:16 lostlogic Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -302,10 +302,12 @@ wait.h
 EOF
 
 		# This is to fix a missing c flag for backwards compat
-		dosed "s:ccflags=':ccflags='-DPERL5 :" \
-			/usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm
-		dosed "s:cppflags=':cppflags='-DPERL5 :" \
-			/usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm
+		for i in `find ${D}/usr/lib/perl5 -iname "Config.pm"`;do
+			sed -e "s:ccflags=':ccflags='-DPERL5 :" \
+			    -e "s:cppflags=':cppflags='-DPERL5 :" \
+				${i} > ${i}.new &&\
+				mv ${i}.new ${i} || die "Sed failed"
+		done
 
 		# A poor fix for the miniperl issues
 		dosed 's:./miniperl:/usr/bin/perl:' /usr/lib/perl5/${PV}/ExtUtils/xsubpp
@@ -318,9 +320,12 @@ EOF
 			--man1dir="${D}/usr/share/man/man1" --man1ext='1' \
 			--man3dir="${D}/usr/share/man/man3" --man3ext='3'
 
-		# This removes ${D} from Config.pm
-		dosed /usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm
-		dosed /usr/lib/perl5/${PV}/${myarch}${mythreading}/.packlist
+		# This removes ${D} from Config.pm and .packlist
+		for i in `find ${D} -iname "Config.pm"` `find ${D} -iname ".packlist"`;do 
+			einfo "Removing ${D} from ${i}..."
+			sed -e "s:${D}::" ${i} > ${i}.new &&\
+				mv ${i}.new ${i} || die "Sed failed"
+		done
 	fi
 	
 	dodoc Changes* Artistic Copying README Todo* AUTHORS

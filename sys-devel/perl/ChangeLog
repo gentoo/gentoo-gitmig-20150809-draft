@@ -1,14 +1,20 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.41 2003/01/08 20:43:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.42 2003/01/08 20:53:16 lostlogic Exp $
+
+* perl-5.8.0-r8 (06 Jan 2003)
+
+  08 Jan 2003; Brandon Low <lostlogic@gentoo.org> perl-5.8.0-r8:
+  Later that day:  dosed smells funny, switch some of it
+  to use just sed and a for loop, this smells better
+  to me, and fixed the problems I was having with
+  ${D} staying in the files.
 
   08 Jan 2003; Martin Schlemmer <azarah@gentoo.org> perl-5.8.0-r8:
   Remove  a wild 'test' from comments =)
 
   08 Jan 2003; Michael Cummings <mcummings@gentoo.org> perl-5.8.0-r8:
   Unmasking for x86.
-
-* perl-5.8.0-r8 (06 Jan 2003)
 
   08 Jan 2003; Brandon Low <lostlogic@gentoo.org> perl-5.8.0-r8:
   Updated ewarn at the top so that it makes sense (was telling a user
