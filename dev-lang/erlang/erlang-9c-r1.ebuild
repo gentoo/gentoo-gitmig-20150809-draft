@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r1.ebuild,v 1.1 2003/07/02 02:53:52 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r1.ebuild,v 1.2 2003/07/04 01:50:27 george Exp $
 
 MY_P=otp_src_R9B-1
 DESCRIPTION="Erlang programming language, runtime environment, and large collection of libraries"
@@ -15,8 +15,8 @@ IUSE="X ssl"
 src_unpack(){
 	unpack ${A}
 	cd ${S}
-	#a conviniece fix, ||die is not necessary
-	gzcat ${FILESDIR}/${P}-nsswitch-2.patch.gz | patch -p0 lib/kernel/src/inet_config.erl
+	#combines nsswitch.conf parsing and a fix for strange install behaviour on some systems
+	gzcat ${FILESDIR}/${P}.patch.gz | patch -p1 || die
 }
 
 DEPEND=">=dev-lang/perl-5.6.1
