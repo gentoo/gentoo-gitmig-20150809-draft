@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0.ebuild,v 1.1 2002/08/12 15:31:17 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0.ebuild,v 1.2 2002/09/21 04:41:47 vapier Exp $
 
 DESCRIPTION="Japanese Kanji X Terminal"
 SRC_URI="ftp://ftp.x.org/contrib/applications/kterm-6.2.0.tar.gz"
-HOMEPAGE="???" # 一時配布元はどこなんだろう？
+# until someone who reads japanese can find a better place
+HOMEPAGE="http://www.asahi-net.or.jp/~hc3j-tkg/kterm/"
 LICENSE="X11"
 SLOT=0
 KEYWORDS="x86"
