@@ -1,6 +1,7 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2004.3/alsa/use.mask,v 1.1 2004/11/22 18:31:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2004.3/alsa/use.mask,v 1.2 2004/11/22 22:25:44 eradicator Exp $
 
 # Unmask alsa
 -alsa
+-ladcca
