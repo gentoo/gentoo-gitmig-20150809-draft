@@ -1,6 +1,16 @@
-MD5 6b281b3a7f8a0428178f08b6214ba452 libgringotts-1.2.1.ebuild 741
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e24c32a4532f1cc6b72c1f909a1b482e ChangeLog 872
+MD5 6aeaf29af8861cbfc478c157c97aa038 libgringotts-1.1.2.ebuild 709
+MD5 c1f40b10fed4a9ff218a2f7f3912eedc libgringotts-1.2.1.ebuild 716
 MD5 978ca7de1eb30365afc7555b471468a6 metadata.xml 219
-MD5 f0c445db55e7b6ddb73cc8cd3baf861e libgringotts-1.1.2.ebuild 734
 MD5 5a9124ad272c62b5efc959029718cfca files/digest-libgringotts-1.1.2 71
 MD5 d7df2cb04b19c13bb8323152bd77760c files/digest-libgringotts-1.2.1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4HlEHTu7gpaalycRAkoAAKDxH+JCqKyMa0pN3Tqsz70nfFISxwCgpUE5
+Yee0MrB2BBy5Ip3PEK5p7uU=
+=3CWI
+-----END PGP SIGNATURE-----
