@@ -1,6 +1,16 @@
-MD5 962ac0077f43509a232dfdcb3326eb24 ladcca-0.3.2.ebuild 663
-MD5 f171df403bb153aaf4086b81a7f25032 ladcca-0.4.0.ebuild 942
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 68d22685a30c84d0e6aa06acb29cf7ef ladcca-0.3.2.ebuild 653
+MD5 f65d2d9254d7040e722a20936ed1ceed ladcca-0.4.0.ebuild 933
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 de1724ff08447cc7ca94cb32da078b78 ChangeLog 1952
+MD5 fabe29a70af29a6d423433260b9a7cdb ChangeLog 2072
 MD5 77d4381b90cb0fe0444d1719764e76d4 files/digest-ladcca-0.3.2 64
 MD5 2c99d8df53e94e7be67d11fc9af00b0f files/digest-ladcca-0.4.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBomfwArHZZzCEUG0RAsrBAJ9XO+x667tqGvf/93SezCsrx/Z0QACbBbLc
+GksWhsyWmmN3k399c6FVVvA=
+=LbHW
+-----END PGP SIGNATURE-----

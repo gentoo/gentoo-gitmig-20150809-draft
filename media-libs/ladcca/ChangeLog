@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ladcca
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ChangeLog,v 1.19 2004/09/29 15:58:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ChangeLog,v 1.20 2004/11/22 22:27:49 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ladcca-0.3.2.ebuild, ladcca-0.4.0.ebuild:
+  Added to sparc.
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> ladcca-0.3.2.ebuild:
   Stable amd64.
