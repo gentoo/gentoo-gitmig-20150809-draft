@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/tar
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/ChangeLog,v 1.21 2003/11/02 07:33:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/ChangeLog,v 1.22 2003/11/02 14:40:46 weeve Exp $
+
+  02 Nov 2003; Jason Wever <weeve@gentoo.org> tar-1.13.25-r3.ebuild:
+  Added sparc keyword.
 
   01 Nov 2003; Seemant Kulleen <seemant@gentoo.org> tar-1.13.25-r1.ebuild,
   tar-1.13.25-r2.ebuild, tar-1.13.25-r3.ebuild:
