@@ -1,6 +1,6 @@
-# ChangeLog for app-misc/xnc
+# ChangeLog for x11-misc/xnc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnc/ChangeLog,v 1.1 2003/11/18 16:23:44 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnc/ChangeLog,v 1.2 2003/11/20 02:59:46 vapier Exp $
 
 *xnc-5.0.2 (18 Nov 2003)
 
