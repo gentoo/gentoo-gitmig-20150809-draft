@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.90 2003/09/24 22:23:47 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.91 2003/09/25 18:27:46 max Exp $
+
+*postfix-2.0.16-r1 (25 Sep 2003)
+
+  25 Sep 2003; Max Kalika <max@gentoo.org> postfix-2.0.16-r1.ebuild:
+  Add the Verisign patch from Wietse.
 
   24 Sep 2003; Max Kalika <max@gentoo.org> postfix-2.0.16.ebuild:
   Die if postfix-install or postconf fail.
