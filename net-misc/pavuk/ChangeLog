@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pavuk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.17 2005/03/23 16:18:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.18 2005/04/05 21:09:36 dsd Exp $
+
+*pavuk-0.9.32 (05 Apr 2005)
+
+  05 Apr 2005; Daniel Drake <dsd@gentoo.org> +pavuk-0.9.32.ebuild:
+  Version bump to fix bug 88028
 
   23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> pavuk-0.9.31.ebuild:
   change dep from net-www/mozilla to www-client/mozilla
