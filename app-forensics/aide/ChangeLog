@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/aide
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.6 2004/09/18 20:58:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.7 2004/12/28 21:48:37 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
@@ -33,7 +36,7 @@
   -aide-0.8.ebuild:
   Fix mhash segfault irt #62194, thanks Gianluca <g.insolvibile@cpr.it>.
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> aide-0.10.ebuild:
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> aide-0.10.ebuild:
   Stable on alpha.
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,

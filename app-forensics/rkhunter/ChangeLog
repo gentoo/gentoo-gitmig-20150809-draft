@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/rkhunter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.15 2004/12/14 13:57:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.16 2004/12/28 21:50:07 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   14 Dec 2004; Daniel Black <dragonheart@gentoo.org> rkhunter-1.1.8.ebuild:
   ppc keyword
@@ -20,7 +23,7 @@
   rkhunter-1.1.8.ebuild:
   Updated to use bash-completion.eclass
 
-  23 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> rkhunter-1.1.8.ebuild:
+  23 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> rkhunter-1.1.8.ebuild:
   Stable on alpha.
 
   19 Oct 2004; Jason Wever <weeve@gentoo.org> rkhunter-1.1.8.ebuild:
@@ -102,7 +105,7 @@
   07 Aug 2004; <solar@gentoo.org> rkhunter-1.1.4.ebuild:
   version bump
 
-  24 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> rkhunter-1.1.2.ebuild:
+  24 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> rkhunter-1.1.2.ebuild:
   Stable on alpha.
 
   24 Jul 2004; <solar@gentoo.org> rkhunter-1.1.3.ebuild, files/rkhunter.cron:
@@ -131,7 +134,7 @@
   30 May 2004; Danny van Dyk <kugelfang@gentoo.org> rkhunter-1.0.9.ebuild:
   Marked ~amd64.
 
-  30 May 2004; Bryan Østergaard <kloeri@gentoo.org> rkhunter-1.0.9.ebuild:
+  30 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> rkhunter-1.0.9.ebuild:
   Keyworded ~alpha.
 
 *rkhunter-1.0.9 (30 May 2004)
