@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r7.ebuild,v 1.2 2003/03/16 03:14:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r7.ebuild,v 1.3 2003/03/19 13:15:39 foser Exp $
 
 VIMPATCH="390"
 
@@ -21,7 +21,7 @@ DEPEND="dev-util/cscope
 	gnome?	( gnome-base/gnome-libs )
 	gtk?	( =x11-libs/gtk+-1.2* )
 	gtk2?	( >=x11-libs/gtk+-2.1
-				x11-libs/xft )
+				virtual/xft )
 	perl?	( dev-lang/perl )
 	python? ( dev-lang/python )
 	ruby?	( >=dev-lang/ruby-1.6.4 )"

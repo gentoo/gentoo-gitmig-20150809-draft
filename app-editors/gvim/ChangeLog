@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.22 2003/03/16 03:14:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.23 2003/03/19 13:15:39 foser Exp $
+
+  19 Mar 2003; foser <foser@gentoo.org> gvim-6.1.-r7.ebuild :
+  Fixed xft dep to be virtual (#15109)
 
   15 Mar 2003; Seemant Kulleen <seemant@gentoo.org> gvim-6.1-r7.ebuild :
 
