@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.8 2004/03/28 11:02:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.9 2004/04/18 13:57:04 lv Exp $
+
+  18 Apr 2004; Travis Tilley <lv@gentoo.org> kaffeine-0.4.2.ebuild:
+  marking stable on amd64 just a little bit earlier than usual
 
   28 Mar 2004; Martin Holzer <mholzer@gentoo.org> kaffeine-0.4.2.ebuild:
   updated depend. closes 45829
