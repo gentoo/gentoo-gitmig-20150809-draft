@@ -1,0 +1,5 @@
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sandboxshell-0.1 0
+MD5 540f05af4f7a2f11076c74fab84d6fae files/sandboxshell 1280
+MD5 594776a344f376d9c30276b17b12d42d files/sandboxshell.conf 1561
+MD5 e9b12ed968232649b988e6240b669d67 sandboxshell-0.1.ebuild 645
+MD5 13d32120b2140672efccbbdbba87e66e ChangeLog 356
