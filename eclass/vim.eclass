@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.21 2003/04/02 14:38:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.22 2003/04/23 22:05:16 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -12,110 +12,13 @@ EXPORT_FUNCTIONS src_unpack
 
 inherit eutils
 
-#==========================================================================
-# Please note:
-#
-# The SRC_URI is determined in the following code via bash
-# conditionals.  Normally this is not allowed, because SRC_URI (also
-# DEPEND/RDEPEND) are cached on Angel, and this cache is used by users
-# that get portage via rsync.  If bash conditionals can change the
-# output of SRC_URI/DEPEND/RDEPEND based on some variable (such as
-# USE), then the cache becomes invalid.
-#
-# So the reason the following code is valid is that the bash
-# conditionals aren't testing something *variable*.  I.e. the only
-# thing being tested is the version, which won't change from machine
-# to machine, so the cache remains valid.
-#
-# (21 Mar 2003 agriffis)
-#==========================================================================
-
-# Calculate the version based on the name of the ebuild, for example
-# (these examples are old but still applicable for the naming scheme)
-#   vim-6.0, when 6.0 is finally released
-#   vim-6.0_pre9, where 9 = (i), for vim-6.0i
-#   vim-6.0_pre47, where 47 = 26(a) + 21(u), for vim-6.0au
-#   vim-6.0_pre72, where 72 = 52(b) + 20(t), for vim-6.0bt
-vim_version="${PV%_pre*}"
-vim_pre="${PV##*_pre}"
-
-if [ "${vim_version}" = "${vim_pre}" ]; then
-	# Final releases prior to 6.0 include a dash and decimal point in
-	# the directory name
-	if [ "${vim_version%%.*}" -lt 6 ]; then
-		S="$WORKDIR/vim-${vim_version}"
-	else
-		S="$WORKDIR/vim${vim_version//.}"
-	fi
-	vim_letters=
-	MY_P="vim-${vim_version}"
-	SRC_URI="ftp://ftp.vim.org/pub/vim/unix/${MY_P}.tar.bz2
-		ftp://ftp.us.vim.org/pub/vim/unix/${MY_P}.tar.bz2"
-#		ftp://ftp.vim.org/pub/vim/extra/${MY_P}-extra.tar.gz"
-
-elif [ "${vim_pre}" -lt 27 ]; then
-	# Handle (prerelease) versions with one trailing letter
-	vim_letters=`echo ${vim_pre} | awk '{printf "%c", $0+96}'`
-	S="$WORKDIR/vim${vim_version//.}${vim_letters}"
-	MY_P="vim-${vim_version}${vim_letters}"
-	SRC_URI="ftp://ftp.vim.org/pub/vim/unreleased/unix/${MY_P}.tar.bz2
-		ftp://ftp.us.vim.org/pub/vim/unreleased/unix/${MY_P}.tar.bz2"
-#		ftp://ftp.vim.org/pub/vim/extra/${MY_P}-extra.tar.gz"
-
-elif [ "${vim_pre}" -lt 703 ]; then
-	# Handle (prerelease) versions with two trailing letters
-	vim_letters=`echo ${vim_pre} | awk '{printf "%c%c", $0/26+96, $0%26+96}'`
-	S="$WORKDIR/vim${vim_version//.}${vim_letters}"
-	MY_P="vim-${vim_version}${vim_letters}"
-	SRC_URI="ftp://ftp.vim.org/pub/vim/unreleased/unix/${MY_P}.tar.bz2
-		ftp://ftp.us.vim.org/pub/vim/unreleased/unix/${MY_P}.tar.bz2"
-#		ftp://ftp.vim.org/pub/vim/extra/${MY_P}-extra.tar.gz"
-
-else
-	die "Eek!  I don't know how to interpret the version!"
-fi
-
-# Add Vim NLS sources
-SRC_URI="${SRC_URI} 
-	nls? ( ftp://ftp.vim.org/pub/vim/extra/vim-${vim_version}-lang.tar.gz )"
-
-# VIMPATCH is set in the actual vim/gvim ebuild.  These are the
-# incremental patches released by Bram.
-[ -n "${VIMPATCH}" ] && \
-SRC_URI="${SRC_URI} mirror://gentoo/vim-${PV}-patches-001-${VIMPATCH}.tar.bz2"
-
-# Bug #18134 is interesting... All the ebuilds in the tree have
-# VIMPATCH=numeric.  However there are installed instances of vim that
-# will read the eclass when they uninstall, in which
-# VIMPATCH=full_patch_name.  So test for that here (in which case we
-# just skip the additon to SRC_URI because it really doesn't matter).
-case ${VIMPATCH} in
-	vim*) ;; # Unmerging an old ebuild ...
-	*)       # Normal operation
-
-	# Various patches from RH, etc.
-	# Started versioning this tarball when VIMPATCH hit 411
-	if [ "${VIMPATCH:-0}" -ge 411 ]; then
-		SRC_URI="${SRC_URI} 
-			mirror://gentoo/vim-${PV}-${VIMPATCH}-gentoo-patches.tar.bz2"
-	else
-		SRC_URI="${SRC_URI} mirror://gentoo/vim-${PV}-gentoo-patches.tar.bz2"
-	fi 
-	
-	;;
-esac
-
-# Add a patch to catch threaded Perl, which breaks Vim (see bug 18555)
-#SRC_URI="${SRC_URI}
-#	perl? ( mirror://gentoo/vim-${PV}-checkperl.patch.bz2 )"
-
-#=== End of SRC_URI setting ===============================================
+IUSE="gnome gpm gtk gtk2 ncurses nls perl python ruby X"
 
 HOMEPAGE="http://www.vim.org/"
 SLOT="0"
 LICENSE="vim"
 
-DEPEND="${DEPEND}
+DEPEND="
 	>=sys-apps/sed-4
 	sys-devel/autoconf
 	dev-util/cscope
@@ -123,23 +26,16 @@ DEPEND="${DEPEND}
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 ) : ( sys-libs/libtermcap-compat )
 	perl?    ( dev-lang/perl )
 	python?  ( dev-lang/python )
-	ruby?    ( >=dev-lang/ruby-1.6.4 )"
+	ruby?    ( =dev-lang/ruby-1.6* )"  # ruby-1.8 doesn't work yet with vim
 
 apply_vim_patches() {
 	local p
-
-	# Remove patches specifically excluded in the ebuild;
-	# note this approach is deprecated since now the patch scanner
-	# below does all the work.
-	for p in ${EXCLUDE_PATCH}; do
-		einfo "Excluding ${PV}.${p}"
-		rm -f ${WORKDIR}/vimpatches/${PV}.$p.gz
-	done
+	cd ${S}
 
 	# Scan the patches, applying them only to files that either
 	# already exist or that will be created by the patch
 	einfo "Filtering vim patches..."
-	p=${WORKDIR}/${PV}.001-${VIMPATCH}.patch
+	p=${WORKDIR}/${VIM_ORG_PATCHES%.tar*}.patch
 	ls ${WORKDIR}/vimpatches | sort | \
 	xargs -i gzip -dc ${WORKDIR}/vimpatches/{} | awk '
 		/^Subject: Patch/ {
@@ -189,14 +85,8 @@ apply_vim_patches() {
 vim_src_unpack() {
 	unpack ${A}
 
-	# Apply any patches available for this version
-	cd ${S}
-	apply_vim_patches
-
-	# Fixup a script to use awk instead of nawk
-	cd ${S}/runtime/tools
-	mv mve.awk mve.awk.old
-	( read l; echo "#!/usr/bin/awk -f"; cat ) <mve.awk.old >mve.awk || die
+	# Apply any patches available from vim.org for this version
+	[ -n "$VIM_ORG_PATCHES" ] && apply_vim_patches
 
 	# Another set of patch's borrowed from src rpm to fix syntax error's etc.
 	cd ${S}
@@ -204,10 +94,13 @@ vim_src_unpack() {
 		EPATCH_FORCE="yes" \
 		epatch ${WORKDIR}/gentoo/patches-all/
 
-	# Add threaded Perl check to configure.in (configure is remade in
-	# src_compile)
-	#cd ${S}
-	#use perl && epatch ${DISTDIR}/vim-6.1-checkperl.patch.bz2
+	# Fixup a script to use awk instead of nawk
+	sed -i '1s|.*|#!/usr/bin/awk -f|' ${S}/runtime/tools/mve.awk
+	assert "Error fixing mve.awk"
+
+	# Read vimrc and gvimrc from /etc/vim
+	echo '#define SYS_VIMRC_FILE "/etc/vim/vimrc"' >> src/feature.h
+	echo '#define SYS_GVIMRC_FILE "/etc/vim/gvimrc"' >> src/feature.h
 }
 
 src_compile() {
@@ -249,7 +142,8 @@ src_compile() {
 		#myconf="${myconf} `use_enable tcl tclinterp`"
 
 		if [ ${PN} = vim ]; then
-			myconf="${myconf} --enable-gui=no `use_with X x`"
+			# don't test USE=X here... see bug #19115
+			myconf="${myconf} --enable-gui=no --without-x"
 		elif [ ${PN} = gvim ]; then
 			myconf="${myconf} --with-vim-name=gvim --with-x"
 			if use gtk2; then
@@ -258,6 +152,8 @@ src_compile() {
 				myconf="${myconf} --enable-gui=gnome"
 			elif use gtk; then
 				myconf="${myconf} --enable-gui=gtk"
+			elif use motif; then
+				myconf="${myconf} --enable-gui=motif"
 			else
 				myconf="${myconf} --enable-gui=athena"
 			fi
@@ -276,20 +172,12 @@ src_compile() {
 	econf ${myconf} || die "vim configure failed"
 
 	# The following allows emake to be used
-	make -C src auto/osdef.h objects
+	make -C src auto/osdef.h objects || die "make failed"
 
 	if [ "${PN}" = "vim-core" ]; then
 		emake tools || die "emake tools failed"
-		cd ${S}
-		rm src/vim
+		rm -f src/vim
 	else
-		# move config files to /etc/vim/
-		echo "#define SYS_VIMRC_FILE \"/etc/vim/vimrc\"" \
-			>>${WORKDIR}/vim61/src/feature.h
-		echo "#define SYS_GVIMRC_FILE \"/etc/vim/gvimrc\"" \
-			>>${WORKDIR}/vim61/src/feature.h
-
-		# Parallel make does not work
 		emake || die "emake failed"
 	fi
 }
@@ -316,10 +204,10 @@ src_install() {
 		cd $D/usr/share/doc/$PF
 		ln -s ../../vim/*/doc $P
 
-		keepdir /usr/share/vim/vim${vim_version/.}/keymap
+		keepdir /usr/share/vim/vim${VIM_VERSION/.}/keymap
 
 		# fix problems with vim not finding its data files.
-		echo "VIMRUNTIME=/usr/share/vim/vim${vim_version/.}" > 40vim
+		echo "VIMRUNTIME=/usr/share/vim/vim${VIM_VERSION/.}" > 40vim
 		insinto /etc/env.d
 		doins 40vim
 

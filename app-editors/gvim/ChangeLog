@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.25 2003/04/02 14:43:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.26 2003/04/23 22:05:16 agriffis Exp $
+
+*gvim-6.2_pre1 (23 Apr 2003)
+
+  23 Apr 2003; Aron Griffis <agriffis@gentoo.org> gvim-6.1-r6.ebuild,
+  gvim-6.1-r7.ebuild, gvim-6.1-r8.ebuild, gvim-6.2_pre1.ebuild:
+  Update all ebuilds to work with new eclass. Add version 6.2a with support for
+  motif (bug 18919).
 
 *gvim-6.1-r8 (22 Mar 2003)
 

@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.51 2003/04/16 02:18:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.52 2003/04/23 22:05:16 agriffis Exp $
+
+*vim-6.2_pre1 (23 Apr 2003)
+
+  23 Apr 2003; Aron Griffis <agriffis@gentoo.org> vim-6.1-r19.ebuild,
+  vim-6.1-r20.ebuild, vim-6.1-r21.ebuild, vim-6.2_pre1.ebuild:
+  Update all ebuilds to work with new eclass. Add version 6.2a. Disable linking
+  against X libraries (see bug 19115).
 
 *vim-6.1-r21 (22 Mar 2003)
 

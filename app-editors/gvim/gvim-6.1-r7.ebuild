@@ -1,39 +1,29 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r7.ebuild,v 1.3 2003/03/19 13:15:39 foser Exp $
-
-VIMPATCH="390"
-
-EXCLUDE_PATCH="093 100 119 121 126 138 152 164 258 \
-304 314 322 334 335 340 346 352 353 354 355 356 374"
-
-use nls || EXCLUDE_PATCH="${EXCLUDE_PATCH} 295 301"
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r7.ebuild,v 1.4 2003/04/23 22:05:16 agriffis Exp $
 
 inherit vim
 
+VIM_VERSION="6.1"
+VIM_GENTOO_PATCHES="vim-6.1-gentoo-patches.tar.bz2"
+VIM_ORG_PATCHES="vim-6.1-patches-001-390.tar.bz2"
+
+S=${WORKDIR}/vim${VIM_VERSION/.}
+SRC_URI="${SRC_URI}
+	ftp://ftp.vim.org/pub/vim/unix/vim-6.1.tar.bz2
+	nls? ( ftp://ftp.vim.org/pub/vim/extra/vim-6.1-lang.tar.gz )
+	mirror://gentoo/${VIM_GENTOO_PATCHES}
+	mirror://gentoo/${VIM_ORG_PATCHES}"
+
 DESCRIPTION="Graphical Vim"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
-DEPEND="dev-util/cscope
-	>=sys-libs/ncurses-5.2-r2
-	app-editors/vim-core
+KEYWORDS="~alpha ~ppc ~sparc ~x86"
+PROVIDE="virtual/editor"
+DEPEND="${DEPEND}
+	~app-editors/vim-core-6.1
 	x11-base/xfree
-	gpm?	( >=sys-libs/gpm-1.19.3 )
-	gnome?	( gnome-base/gnome-libs )
-	gtk?	( =x11-libs/gtk+-1.2* )
-	gtk2?	( >=x11-libs/gtk+-2.1
-				virtual/xft )
-	perl?	( dev-lang/perl )
-	python? ( dev-lang/python )
-	ruby?	( >=dev-lang/ruby-1.6.4 )"
-#	tcltk?	( dev-lang/tcl )"
-# It appears that the tclinterp stuff in Vim is broken right now (at
-# least on Linux... it works on BSD).  When you --enable-tclinterp
-# flag, then the following command never returns:
-#
-#   VIMINIT='let OS = system("uname -s")' vim
-#
-# Please don't re-enable the tclinterp flag without verifying first
-# that the above works.  Thanks.  (08 Sep 2001 agriffis)
+	gtk2? ( >=x11-libs/gtk+-2.1 virtual/xft ) :
+		( gnome? ( gnome-base/gnome-libs ) : 
+			( gtk? ( =x11-libs/gtk+-1.2* ) ) )"
 
 src_unpack() {
 	vim_src_unpack
