@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.794 2004/12/13 23:56:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.795 2004/12/14 12:16:21 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -405,7 +405,7 @@ media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm
 media-sound/amarok:noamazon - Disable support for downloading covers from amazon.com
 media-sound/bpmdj:mp3 - Add support for reading mp3 files
 media-sound/daapd:howl - Enable howl support, enables DNS Service Discovery (DNS-SD)
-media-sound/daapd:mpeg4 - Add support for reading AAC metadata
+media-sound/daapd:faad - Add support for reading AAC metadata
 media-sound/gnusound:libsamplerate - Build gnusound with support for converting sample rates using libsamplerate
 media-sound/hydrogen:ladspa - Enables the ability to support ladspa plugins
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
@@ -430,14 +430,12 @@ media-tv/mythtv:nvidia - Enable nVidia XvMC decoding support
 media-tv/xawdecode:ffmpeg - Enable ffmpeg support
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
 media-video/avidemux:a52 - Enables support for decoding ATSC A/52 streams used in DVD
-media-video/avidemux:faac - Enables faac support
-media-video/avidemux:faad - Enables faad2 support
+media-video/avidemux:aac - Enables support for AAC Audio
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/chaplin:vcdimager - Enables optional support for GNU VCDimager
 media-video/cinelerra-cvs:ffmpeg - Enable ffmpeg support
 media-video/emovix:codecs - Enables use of the win32 dll codecs for playback
-media-video/ffmpeg:faac - Enables faac support
-media-video/ffmpeg:faad - Enables faad2 support
+media-video/ffmpeg:aac - Enables support for AAC Audio
 media-video/freej:v4l - Enables freej to pull from v4l sources
 media-video/kmplayer:koffice-plugin - Install KOffice part
 media-video/mjpegtools:dv - Enables support for a codec used by many camcorders
