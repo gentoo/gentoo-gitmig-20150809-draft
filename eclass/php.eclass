@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.80 2003/10/01 21:01:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.81 2003/10/10 19:57:04 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -505,7 +505,7 @@ php_pkg_preinst() {
 }
 
 php_pkg_postinst() {
-	einfo "The INI file for this build is ${PHPINIDIRECTORY}"
+	einfo "The INI file for this build is ${PHPINIDIRECTORY}/php.ini"
 }
 
 php_securityupgrade() {
