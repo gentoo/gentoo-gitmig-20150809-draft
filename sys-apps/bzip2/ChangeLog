@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/bzip2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/ChangeLog,v 1.16 2003/03/01 20:15:08 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/ChangeLog,v 1.17 2003/03/02 01:36:00 seemant Exp $
+  
+  02 Mar 2003; Seemant Kulleen <seemant@gentoo.org> bzip2-1.0.2-r2.ebuild :
+
+  changed the einstall back to make install, because it was causing sandbox
+  violations. Thanks to Jay Pfeifer in #-dev for the fix and rac00n in #gentoo for
+  finding it.
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> bzip2-1.0.2-r2.ebuild :
   Added arm to keywords.
