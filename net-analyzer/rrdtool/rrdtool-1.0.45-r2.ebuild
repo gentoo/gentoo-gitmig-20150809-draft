@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.45-r2.ebuild,v 1.8 2004/06/30 18:01:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.45-r2.ebuild,v 1.9 2004/07/14 22:33:24 agriffis Exp $
 
 inherit perl-module flag-o-matic gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="http://people.ee.ethz.ch/%7Eoetiker/webtools/${PN}/pub/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~amd64 alpha ia64 hppa"
-IUSE="tcltk perl"
+IUSE="perl tcltk"
 
 DEPEND="perl? ( dev-lang/perl )
 	sys-apps/gawk
@@ -39,7 +39,7 @@ src_compile() {
 		&& myconf="${myconf} --with-tcllib=/usr/lib" \
 		|| myconf="${myconf} --without-tcllib"
 
-	use amd64 && gnuconfig_update
+	gnuconfig_update
 
 	if use perl ; then
 	MMSIXELEVEN=`perl -e 'use ExtUtils::MakeMaker; print( $ExtUtils::MakeMaker::VERSION ge "6.11" )'`
