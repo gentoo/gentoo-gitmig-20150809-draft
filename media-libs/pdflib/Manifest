@@ -1,5 +1,15 @@
-MD5 11f7e98d56d79114ee43d611b3c8ce99 ChangeLog 6757
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8985b932fef9dc699e889b40b61da994 ChangeLog 6864
 MD5 75452e1aedeee7f89170aafac2969be4 pdflib-5.0.2.ebuild 3071
-MD5 44fca390a33a88632abc3df29ef91f40 pdflib-5.0.4_p1.ebuild 3144
+MD5 a015380f06fff7d3cf794899ec070670 pdflib-5.0.4_p1.ebuild 3144
 MD5 9892461f8babed0732b85ef46b5a163b files/digest-pdflib-5.0.2 79
 MD5 fefae1e15a7bef14346d8c73778d2717 files/digest-pdflib-5.0.4_p1 81
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsAWj0K3RJaeXx6cRAuowAJ9dNxlHsGdN0894vZ2jTL/otDruCgCgi5D3
+KwsIBrjlKvdQIozPkBlKKFo=
+=0KNa
+-----END PGP SIGNATURE-----
