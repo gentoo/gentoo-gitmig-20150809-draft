@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gqview/gqview-0.11.0.ebuild,v 1.2 2001/06/11 08:11:28 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gqview/gqview-0.11.0.ebuild,v 1.3 2001/07/29 10:39:39 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ SRC_URI="http://download.sourceforge.net/gqview/${A}"
 HOMEPAGE="http://gqview.sourceforge.net"
 
 DEPEND="virtual/glibc
-	gnome-base/gdk-pixbuf
+	media-libs/gdk-pixbuf
 	nls? ( sys-devel/gettext )"
 
 src_compile() {

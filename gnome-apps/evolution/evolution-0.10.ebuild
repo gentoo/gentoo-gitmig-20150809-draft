@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/evolution/evolution-0.10.ebuild,v 1.4 2001/06/07 21:10:33 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/evolution/evolution-0.10.ebuild,v 1.5 2001/07/29 10:39:39 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,7 +9,8 @@ DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.helixcode.com"
 
-DEPEND="=gnome-base/gal-0.7 nls? ( sys-devel/gettext )
+DEPEND="=gnome-base/gal-0.7 
+        nls? ( sys-devel/gettext )
 	>=gnome-base/gtkhtml-0.8.3
         >=dev-util/xml-i18n-tools-0.8.4"
         #mozilla? ( >=net-www/mozilla-0.9 )"

@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 DEPEND=">=gnome-base/gnome-core-1.4.0.4
         >=dev-util/guile-1.4
         >=gnome-base/scrollkeeper-0.2
-	>=gnome-base/gdk-pixbuf-0.9
+	>=media-libs/gdk-pixbuf-0.9
         nls? ( sys-devel/gettext )"
 
 RDEPEND=">=gnome-base/gnome-core-1.4.0.4 >=dev-util/guile-1.4"

@@ -13,7 +13,9 @@ DEPEND=">=gnome-base/gnome-core-1.4.0.4
         >=dev-util/guile-1.4
         nls? ( sys-devel/gettext )
         >=gnome-base/scrollkeeper-0.2"
-RDEPEND=">=gnome-base/gnome-core-1.4.0.4 >=dev-util/guile-1.4"
+
+RDEPEND=">=gnome-base/gnome-core-1.4.0.4 
+         >=dev-util/guile-1.4"
 
 src_compile() {
   local myconf

@@ -9,7 +9,7 @@ SRC_URI="http://jasta.gotlinux.org/files/${P}.tar.gz"
 HOMEPAGE="http://jasta.gotlinux.org/gnapster.html"
 
 DEPEND=">=gnome-base/gnome-libs-1.2.10
-        >=gnome-base/gdk-pixbuf-0.10.1"
+        >=media-libs/gdk-pixbuf-0.10.1"
 
 src_compile() {
 
