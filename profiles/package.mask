@@ -26,8 +26,8 @@
 # masked while licensing is sorted out
 app-games/halflife-server
 app-arch/unlzx
-# this one, just coz halflife-server is a dependency of it
 app-games/cstrike-server
+app-misc/ldapbrowser
 
 # <seemant@gentoo.org> 25 Jul 2002
 # masked for testing
