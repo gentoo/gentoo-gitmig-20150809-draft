@@ -30,3 +30,6 @@ move app-misc/xnc x11-misc/xnc
 move app-misc/xlockmore x11-misc/xlockmore
 move app-misc/xchm x11-misc/xchm
 move app-misc/xfm x11-misc/xfm
+move app-misc/xplore x11-misc/xplore
+move app-misc/xhkeys x11-misc/xhkeys
+move app-misc/xosview x11-misc/xosview
