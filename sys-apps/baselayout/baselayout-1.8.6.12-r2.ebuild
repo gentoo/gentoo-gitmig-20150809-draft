@@ -1,11 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r2.ebuild,v 1.8 2003/12/26 23:21:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r2.ebuild,v 1.9 2004/01/25 23:07:50 pebenito Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
 
-IUSE="bootstrap build static"
+IUSE="bootstrap build selinux static"
 
 SV="1.4.3.12"
 SVREV="p1"
@@ -57,6 +57,8 @@ src_unpack() {
 		sed -e 's:PROGS\t= init halt shutdown killall5 runlevel sulogin:PROGS\t= init halt shutdown killall5 runlevel:g' \
 			Makefile.orig > Makefile || die
 	fi
+	# Selinux
+	use selinux && epatch ${FILESDIR}/sysvinit-${SVIV}-selinux.patch
 
 	cd ${S}/etc
 
