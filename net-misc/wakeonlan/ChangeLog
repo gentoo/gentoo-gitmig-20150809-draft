@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wakeonlan
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> wakeonlan-0.40.ebuild:
+  Adding amd64 keyword. Closing #45591.
 
   12 Jun 2003; <msterret@gentoo.org> wakeonlan-0.40.ebuild:
   add Header
