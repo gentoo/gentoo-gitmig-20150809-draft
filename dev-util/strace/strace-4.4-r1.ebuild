@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4-r1.ebuild,v 1.3 2003/02/13 12:01:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4-r1.ebuild,v 1.4 2003/02/14 11:19:22 gmsoft Exp $
 
 # NOTE: For some reason, upstream has changed the naming scheme
 # for the tarballs to something quite lame:
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.wi.leidenuniv.nl/~wichert/strace/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc ~sparc alpha"
+KEYWORDS="x86 ~ppc ~sparc alpha hppa"
 IUSE="static"
 
 DEPEND="virtual/glibc
@@ -31,6 +31,13 @@ src_compile() {
 			CFLAGS=`echo ${CFLAGS} | sed -e 's:-O3:-O2:'`
 		fi
 	fi
+   
+    # -DHPPA need to be provided to gcc for compiling on hppa
+	if [ "${ARCH}" = "hppa" ]
+	then
+		CFLAGS="${CFLAGS} -DHPPA"
+	fi
+	
 
 	# configure is broken by default for sparc and possibly others, regen
 	# from configure.in
