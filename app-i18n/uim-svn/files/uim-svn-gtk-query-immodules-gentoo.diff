@@ -1,17 +1,23 @@
-diff -urN uim-0.2.1.ORIG/gtk/Makefile.in uim-0.2.1/gtk/Makefile.in
---- uim-0.2.1.ORIG/gtk/Makefile.in	2003-12-21 23:58:14.000000000 +0900
-+++ uim-0.2.1/gtk/Makefile.in	2003-12-22 02:24:26.000000000 +0900
-@@ -535,11 +535,11 @@
+diff -urN uim-0.3.3.ORIG/gtk/Makefile.am uim-0.3.3/gtk/Makefile.am
+--- uim-0.3.3.ORIG/gtk/Makefile.am	2004-03-20 05:29:48.000000000 +0900
++++ uim-0.3.3/gtk/Makefile.am	2004-03-22 03:08:58.709699312 +0900
+@@ -19,16 +19,12 @@
+ IM_UIM_SOURCES = gtk-im-uim.c
  
- @GTK2_TRUE@install-data-hook:
- @GTK2_TRUE@	if test -f $(GTK_IMMODULES); then \
--@GTK2_TRUE@	gtk-query-immodules-2.0 > $(GTK_IMMODULES); \
-+@GTK2_TRUE@	gtk-query-immodules-2.0 > ${DESTDIR}/$(GTK_IMMODULES); \
- @GTK2_TRUE@	fi
- @GTK2_TRUE@uninstall-hook:
- @GTK2_TRUE@	if test -f $(GTK_IMMODULES); then \
--@GTK2_TRUE@	gtk-query-immodules-2.0 > $(GTK_IMMODULES); \
-+@GTK2_TRUE@	gtk-query-immodules-2.0 > ${DESTDIR}/$(GTK_IMMODULES); \
- @GTK2_TRUE@	fi
- @GTK2_FALSE@install-data-hook:
+ install-data-hook:
+-	if test -f $(GTK_IMMODULES); then \
+-	gtk-query-immodules-2.0 > $(GTK_IMMODULES); \
+-	fi
++
+ uninstall-hook:
+-	if test -f $(GTK_IMMODULES); then \
+-	gtk-query-immodules-2.0 > $(GTK_IMMODULES); \
+-	fi
++
+ else
+ install-data-hook:
  
+- uninstall-hook:
++uninstall-hook:
+ 
+ endif
