@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.10 2002/08/29 15:44:13 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.11 2002/11/05 18:28:31 phoenix Exp $
+
+*zsh-4.0.6-r2 (05 Oct 2002)
+
+  05 Oct 2002; phoen][x <phoenixk@gentoo.org> zsh-4.0.6-r2.ebuild 
+  files/digest-zsh-4.0.6-r2 :
+ 
+  Incorporated the debian patch to work around a segfault.
+  See bug #9743 for further details.
 
 *zsh-4.0.6-r1 (29 Aug 2002)
 
@@ -8,7 +16,6 @@
   files/digest-zsh-4.0.6-r1 :
  
   Fixed a sandbox violation. Check bug 6780 for further details.
-
 
 *zsh-4.0.6 (19 Aug 2002)
 
