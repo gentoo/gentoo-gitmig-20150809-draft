@@ -1,6 +1,16 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.8 2004/10/08 13:38:08 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.9 2004/10/09 09:59:14 axxo Exp $
+
+*tomcat-5.0.28 (09 Oct 2004)
+
+  09 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
+  +files/5.0.28/build.xml-01.patch, +files/5.0.28/build.xml-02.patch,
+  +files/5.0.28/gentoo.diff, +files/5.0.28/jikes.diff,
+  +files/5.0.28/tomcat.conf, +files/5.0.28/tomcat.init,
+  +tomcat-5.0.28.ebuild:
+  Version bump + now builds from source, Thanks too Mark Wolfe
+  <mwolfe@netspace.net.au> for his work on this. #18352
 
   08 Oct 2004; Thomas Matthijs <axxo@gentoo.org> files/3.3.2/tomcat.init,
   files/4.1.30/tomcat.init, files/5.0.27/tomcat.init:
