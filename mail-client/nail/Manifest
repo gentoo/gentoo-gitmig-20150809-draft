@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e43ed11ef09ad1ac0de07e70ea90d4dc ChangeLog 3348
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 34c457fa03b122614546909b4958b230 nail-10.7.ebuild 2114
+MD5 16f3c237f1ff92cb90411df2a1e46251 nail-11.1-r1.ebuild 2295
 MD5 a3e6bd55ef2a413bb071aabe13775ce2 nail-10.8.ebuild 2231
 MD5 f00f6fb08247bf458c3027eb4adcf1dc nail-11.1.ebuild 2256
-MD5 880aecf069cfd681673bb9954991e84c nail-9.30.ebuild 2160
-MD5 16f3c237f1ff92cb90411df2a1e46251 nail-11.1-r1.ebuild 2295
+MD5 de332e5b1053d99a76f17c7b9b020936 nail-11.20.ebuild 2325
 MD5 01e5bfac0c6f6763dd257eeada71fa20 nail-11.18.ebuild 2296
-MD5 cd714f00afd923eb9f31062dc071a270 nail-11.20.ebuild 2326
+MD5 34c457fa03b122614546909b4958b230 nail-10.7.ebuild 2114
+MD5 880aecf069cfd681673bb9954991e84c nail-9.30.ebuild 2160
+MD5 705d7ec2c15ab5aca92a80cd539ed677 ChangeLog 3435
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 88106e1a1152bd2f9218464d3b2e7415 files/digest-nail-11.18 63
+MD5 1d08241dbf0e85e0fbd84acd2eee579e files/digest-nail-11.20 63
 MD5 27d928aaebf2ccd3a13caefad9648ff5 files/digest-nail-10.7 62
 MD5 2a3e927f0b51d9d835a50e8e9befdc4a files/digest-nail-10.8 62
 MD5 efacfb13ea41642bcc4d78c7c64357c1 files/digest-nail-11.1 62
 MD5 7e34958d8627a2cf4e1097009af12d90 files/digest-nail-9.30 61
-MD5 7382aa86560d45a33ff12f4a091a5cee files/nail-10.8-Makefile.patch 498
 MD5 efacfb13ea41642bcc4d78c7c64357c1 files/digest-nail-11.1-r1 62
-MD5 88106e1a1152bd2f9218464d3b2e7415 files/digest-nail-11.18 63
-MD5 1d08241dbf0e85e0fbd84acd2eee579e files/digest-nail-11.20 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCB7gxKRy60XGEcJIRAtv1AKCE+JE493jV36L7UkBaRt1IInq4vgCgrT+L
-WokXmMfehTPmZ/3Y6kZVtco=
-=umTd
------END PGP SIGNATURE-----
+MD5 7382aa86560d45a33ff12f4a091a5cee files/nail-10.8-Makefile.patch 498
