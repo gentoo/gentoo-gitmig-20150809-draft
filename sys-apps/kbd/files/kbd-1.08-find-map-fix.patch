@@ -1,0 +1,35 @@
+--- kbd-1.08/src/findfile.c.orig	2004-01-29 01:47:40.735190832 +0200
++++ kbd-1.08/src/findfile.c	2004-01-29 02:06:51.703217096 +0200
+@@ -167,6 +167,7 @@
+ 	FILE *fp;
+ 	int dl, recdepth;
+ 	struct decompressor *dc;
++	struct stat tstat;
+ 
+ 	if (strlen(fnam) >= sizeof(pathname))
+ 		return NULL;
+@@ -211,6 +212,7 @@
+ 
+ 	    /* delete trailing slashes; trailing stars denote recursion */
+ 	    dir = xstrdup(*dp);
++loop:
+ 	    dl = strlen(dir);
+ 	    recdepth = 0;
+ 	    while (dl && dir[dl-1] == '*') {
+@@ -224,8 +226,15 @@
+ 	    }
+ 
+ 	    fp = findfile_in_dir(fnam, dir, recdepth, suffixes);
+-	    if (fp)
++	    if (fp) {
++	    	    if ((lstat(pathname, &tstat) == 0)
++		    	&& (S_ISDIR(tstat.st_mode) != 0)) {
++			    dir = xstrdup(pathname);
++		    	    goto loop;
++		    }
++		    	    
+ 		    return fp;
++	    }
+ 	}
+ 
+ 	return NULL;
