@@ -51,6 +51,8 @@
 =sys-devel/bison-1.75
 
 # <carpaski@gentoo.org> (20 Oct 2002)
+# Quick testing for public release
+=sys-apps/portage-2.0.42
 # Testing! perfect_beta1 :) MANY MANY bugfixes.
 =sys-apps/portage-2.0.41
 # Testing! portage-2.0.40-Perfect_alpha1 :)
