@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/gps-bin-1.2.2.ebuild,v 1.3 2003/10/06 00:13:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/gps-bin-1.2.2.ebuild,v 1.4 2003/12/12 05:08:44 george Exp $
 
 IUSE=""
 
@@ -34,7 +34,7 @@ src_install () {
 	mv doc/gps/{examples,html,ps,txt} ${D}/usr/share/doc/${PF}
 
 	#gps was compiled against libpng.so.2 which in fact is libpng.so.3 on gentoo systems
-	dosym /usr/lib/libpng.so.2 /opt/${PN}/lib/libpng.so.3
+	dosym /usr/lib/libpng.so /opt/${PN}/lib/libpng.so.2
 
 	#now some env vars
 	insinto /etc/env.d
