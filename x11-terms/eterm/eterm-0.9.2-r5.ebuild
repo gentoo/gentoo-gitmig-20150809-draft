@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2-r5.ebuild,v 1.4 2004/01/02 21:49:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2-r5.ebuild,v 1.5 2004/02/27 03:55:00 vapier Exp $
 
 inherit eutils
 
@@ -15,13 +15,14 @@ SRC_URI="mirror://sourceforge/eterm/${MY_P}.tar.gz http://www.eterm.org/download
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
-IUSE="mmx etwin"
+IUSE="mmx etwin escreen"
 
 DEPEND="virtual/x11
 	>=x11-libs/libast-0.5
 	media-libs/imlib2
 	>=sys-devel/binutils-2.13*
-	etwin? ( app-misc/twin )"
+	etwin? ( app-misc/twin )
+	escreen? ( app-misc/screen )"
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
@@ -33,22 +34,23 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	myconf="--with-imlib \
-		--enable-trans \
-		--with-x \
-		--enable-multi-charset \
-		--with-delete=execute \
-		--with-backspace=auto \
-		--enable-escreen \
-		`use_enable etwin`"
-
+	myconf=""
 	if [ "${ARCH}" == "x86" ]; then
 		myconf="$myconf `use_enable mmx`"
 	else
 		myconf="$myconf --disable-mmx"
 	fi
 
-	econf $myconf || die "conf failed"
+	econf \
+		--with-imlib \
+		--enable-trans \
+		--with-x \
+		--enable-multi-charset \
+		--with-delete=execute \
+		--with-backspace=auto \
+		`use_enable escreen` \
+		`use_enable etwin` \
+		${myconf} || die "conf failed"
 	emake || die "make failed"
 }
 
