@@ -512,17 +512,18 @@ dyn_package() {
     echo ">>> Creating ${PNAME} in ${PKGDIR}/All..."
     if [ "$PACKAGE" = "tbz2" ]
     then
-	tar cvf ${PKGDIR}/All/${PF}.tar *
-	bzip2 ${PKGDIR}/All/${PF}.tar
-	mv ${PKGDIR}/All/${PF}.tar.bz2 ${PKGDIR}/All/${PNAME}	
+		tar cvf ${PKGDIR}/All/${PF}.tar *
+		bzip2 ${PKGDIR}/All/${PF}.tar
+		mv ${PKGDIR}/All/${PF}.tar.bz2 ${PKGDIR}/${CATEGORY}/${PNAME}	
     elif [ "$PACKAGE" = "tgz" ]
     then
- 	tar czvf ${PKGDIR}/All/${PNAME} *
+		tar czvf ${PKGDIR}/All/${PNAME} *
+		mv ${PKGDIR}/All/${PF}.tar.gz ${PKGDIR}/${CATEGORY}/${PNAME}	
     else
-	echo '!!! Package format '${PACKAGE}' not recognized.  Please correct /etc/make.conf'
-	exit 1
+		echo '!!! Package format '${PACKAGE}' not recognized.  Please correct /etc/make.conf'
+		exit 1
     fi
-    ln -sf ${PKGDIR}/All/${PNAME} ${PKGDIR}/${CATEGORY}/${PNAME}
+    ln -sf ${PKGDIR}/${CATEGORY}/${PNAME} ${PKGDIR}/All/${PNAME}
     echo ">>> Done."
     cd ${BUILDDIR}
     touch .packaged
