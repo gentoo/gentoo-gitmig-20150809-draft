@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/worker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.10 2003/12/25 02:38:46 hillster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.11 2003/12/29 15:10:42 weeve Exp $
+
+  29 Dec 2003; Jason Wever <weeve@gentoo.org> :
+  removed stray digest file.
 
 *worker-2.8.3 (24 Dec 2003)
 
