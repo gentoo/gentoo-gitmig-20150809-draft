@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r8.ebuild,v 1.2 2005/02/11 13:47:29 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r8.ebuild,v 1.3 2005/02/14 20:18:10 ferdy Exp $
 
 DESCRIPTION="MTA layout package"
 SRC_URI=""
@@ -69,10 +69,18 @@ src_install() {
 	if use pam;
 	then
 		insinto /etc/pam.d/
-		for i in pop pop3 pop3d pops imap imap4 imap4s imaps;
-		do
-			newins ${FILESDIR}/common-pamd ${i}
-		done
+
+		# pop file and its symlinks
+		newins ${FILESDIR}/common-pamd pop
+		dosym /etc/pam.d/pop /etc/pam.d/pop3
+		dosym /etc/pam.d/pop /etc/pam.d/pop3s
+		dosym /etc/pam.d/pop /etc/pam.d/pops
+
+		# imap file and its symlinks
+		newins ${FILESDIR}/common-pamd imap
+		dosym /etc/pam.d/imap /etc/pam.d/imap4
+		dosym /etc/pam.d/imap /etc/pam.d/imap4s
+		dosym /etc/pam.d/imap /etc/pam.d/imaps
 	fi
 }
 
