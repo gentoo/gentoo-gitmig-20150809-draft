@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-0.1.9.ebuild,v 1.7 2002/08/16 04:04:41 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-0.1.9.ebuild,v 1.8 2002/08/30 13:48:51 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A versatile Integrated Development Environment (IDE) for C and C++."
-SRC_URI="http://anjuta.sourceforge.net/packages/anjuta-${PV}.tar.gz"
+SRC_URI="http://anjuta.sourceforge.net/packages/${P}.tar.gz"
 HOMEPAGE="http://anjuta.sourceforge.net/"
 
 SLOT="0"
@@ -13,10 +13,10 @@ KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	=x11-libs/gtk+-1.2*
+	=gnome-base/libglade-0.17*
 	media-libs/audiofile
 	dev-libs/libxml
 	dev-util/pkgconfig
-	gnome-extra/libglademm
 	app-text/scrollkeeper"
 	
 RDEPEND="dev-util/glade
@@ -24,7 +24,6 @@ RDEPEND="dev-util/glade
 	 app-text/scrollkeeper
 	 =x11-libs/gtk+-1.2*
 	 media-libs/audiofile
-	 media-sound/esound
 	 dev-util/ctags
 	 sys-devel/gdb
 	 sys-apps/grep
@@ -38,13 +37,18 @@ src_compile() {
 	use nls || myconf="--disable-nls"
 
 	econf ${myconf} || die
-	emake || die
+	emake \
+		anjuta_docdir=/usr/share/doc/${PF} || die
 }
 
 src_install () {
 	
 	einstall \
-		anjutadocdir=${D}/usr/share/doc/${PF} || die
+		PACKAGE_DOC_DIR=${D}/usr/share/doc \
+		anjuta_docdir=${D}/usr/share/doc/${PF} || die
+
+
+	rm -rf ${D}/usr/doc
 
 	dodoc AUTHORS COPYING ChangeLog FUTURE NEWS README THANKS TODO
 }
