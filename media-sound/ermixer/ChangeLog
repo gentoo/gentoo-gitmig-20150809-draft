@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ermixer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.18 2004/07/19 09:45:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.19 2004/11/01 19:40:07 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  ermixer-0.8.ebuild:
+  Marked ~ppc64; bug #64633
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ermixer-0.8.ebuild:
   Added to ~amd64.
