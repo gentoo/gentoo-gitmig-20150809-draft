@@ -1,3 +1,6 @@
+MD5 c7e2929607668279f0700f9e51c14845 bbcd-0.3.1-r1.ebuild 729
 MD5 b35cfa021a507f0022252c72ea21d886 ChangeLog 459
 MD5 0ee476bef35494bcb9623de34474931e bbcd-0.3.1.ebuild 651
 MD5 b2d736f86e75b80b047b20f6a6a960af files/digest-bbcd-0.3.1 61
+MD5 b2d736f86e75b80b047b20f6a6a960af files/digest-bbcd-0.3.1-r1 61
+MD5 17e5480cfc711d70db4bd28885335bb0 files/bbcd-0.3.1_0.3.1a.diff.gz 624
