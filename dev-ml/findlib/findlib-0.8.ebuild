@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-0.8.ebuild,v 1.2 2003/02/13 10:54:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-0.8.ebuild,v 1.3 2004/02/16 00:53:14 weeve Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ocaml-programming.de/packages/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 
 DEPEND="dev-lang/ocaml"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/findlib
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/ChangeLog,v 1.2 2003/02/12 06:12:35 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/ChangeLog,v 1.3 2004/02/16 00:53:14 weeve Exp $
+
+  15 Feb 2004; Jason Wever <weeve@gentoo.org> findlib-0.8.ebuild:
+  Added ~sparc keyword to fix dev-ml/ocaml-make's broken deps.
 
 *findlib-0.8.ebuild (15 ‰≈À 2002)
 
