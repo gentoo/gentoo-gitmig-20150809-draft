@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/TermReadKey-2.21.ebuild,v 1.9 2005/01/04 13:53:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/TermReadKey-2.21.ebuild,v 1.10 2005/02/03 00:08:28 vapier Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/J/JS/JSTOWE/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 mymake="/usr"
