@@ -1,8 +1,12 @@
 # ChangeLog for dev-db/sqlgui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/ChangeLog,v 1.1 2002/05/11 13:49:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/ChangeLog,v 1.2 2002/07/23 02:53:12 rphillips Exp $
 
 *sqlgui-0.3.3 (11 May 2002)
+
+  22 Jul 2002; Ryan Phillips <rphillips@gentoo.org> sqlgui-0.3.3.ebuild :
+
+  Fixes for repoman
 
   11 May 2002; Dan Armak <danarmak@gentoo.org> changelog:
   Initial ebuild (user submission by Christophe Vanfleteren) - closes #1643.
