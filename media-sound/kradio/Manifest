@@ -1,14 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 167b2b9f6914c67327167e3e53e16493 ChangeLog 797
-MD5 ad2ee025e83a8fb2060ed8fbd868e6fa metadata.xml 226
 MD5 2bccbcbb722ba9578f4568bb7dbaebf8 kradio-0.3.0_alpha2.ebuild 600
+MD5 15abd064c0606f906925dc8b81232947 kradio-0.3.0_alpha20041207.ebuild 670
+MD5 59eaed7d7c0b57d76ed416c7f7d47f2d ChangeLog 1046
+MD5 ad2ee025e83a8fb2060ed8fbd868e6fa metadata.xml 226
+MD5 4c782588fc9a607d0ddbaced504a9ba8 files/0.3.0_alpha20041207-gcc.patch 556
+MD5 ae65eb1e2ac124f1898a6be7bcd4c376 files/digest-kradio-0.3.0_alpha20041207 79
 MD5 64227e42b8068964bd71a8ebf9741357 files/digest-kradio-0.3.0_alpha2 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBo5ZtArHZZzCEUG0RAlWjAJ4vd2X+K15ZKI8DInn/nk83+ENKxACfcE5a
-h3djgnQgZ6puQaEe/eg5ReE=
-=v5dh
------END PGP SIGNATURE-----

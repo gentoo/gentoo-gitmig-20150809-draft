@@ -1,0 +1,12 @@
+diff -ru kradio/interfaces.h kradio.new/interfaces.h
+--- kradio/interfaces.h	2004-02-22 23:00:43.000000000 +0100
++++ kradio.new/interfaces.h	2004-12-07 08:41:44.054688314 +0100
+@@ -325,7 +325,7 @@
+     typedef InterfaceBase<thisIF, cmplIF>  thisClass;
+     typedef InterfaceBase<cmplIF, thisIF>  cmplClass;
+ 
+-    friend class cmplClass; // necessary for connects (to keep number of different connect functions low)
++    friend class InterfaceBase<cmplIF, thisIF>; // necessary for connects (to keep number of different connect functions low)
+ 
+ public:
+ 
