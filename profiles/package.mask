@@ -8,7 +8,6 @@ sys-kernel/linux-sources-vanilla
 
 # in development
 >=sys-devel/gcc-2.96
->=net-www/mozilla-0.9.3
 
 # incompatible
 >=sys-apps/bash-2.05
@@ -80,8 +79,3 @@ app-editors/gtk-xemacs
 #=sys-kernel/linux-sources-2.4.5.5
 #=sys-kernel/linux-2.4.5.5
 #=sys-kernel/linux-extras-2.4.5.5
-
-
-# Until new Galon that works with 0.9.3
->=net-www/mozilla-0.9.3
-
