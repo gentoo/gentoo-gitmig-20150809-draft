@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2_beta1.ebuild,v 1.2 2001/08/06 20:57:20 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2_beta1.ebuild,v 1.3 2001/08/14 16:12:28 achim Exp $
 
 V="2.2beta1"
 A=${PN}-${V}.tar.bz2
@@ -18,7 +18,7 @@ DEPEND=">=kde-base/kdelibs-${PV}
 	ldap? ( >=net-nds/openldap-1.2 )
 	pam? ( >=sys-libs/pam-0.73 )
 	motif? ( >=x11-libs/openmotif-2.1.30 )
-	lame? ( >=media-sound/lame-3.88b-r1 )
+	lame? ( =media-sound/lame-3.88b-r1 )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta1 )
 	cups? ( net-print/cups )"
 
