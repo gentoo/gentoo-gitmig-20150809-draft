@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.21 2004/01/26 09:06:27 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.22 2004/01/26 15:30:59 lu_zero Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -28,7 +28,7 @@
 
 # UNIPATCH_LIST		- space delimetered list of patches to be applied to the kernel
 # UNIPATCH_EXCLUDE	- an addition var to support exlusion based completely on "<passedstring>*" and not "<passedno#>_*"
-			- this should _NOT_ be used from the ebuild as this is reserved for end users passing excludes from the cli
+#	- this should _NOT_ be used from the ebuild as this is reserved for end users passing excludes from the cli
 # UNIPATCH_DOCS		- space delimemeted list of docs to be installed to the doc dir
 # UNIPATCH_STRICTORDER	- if this is set places patches into directories of order, so they are applied in the order passed
 
