@@ -3,6 +3,7 @@ MD5 21823def31517a3466d2e92b0e13d09a gnome-utils-2.2.2.ebuild 870
 MD5 82b35cc36f6e4cdb7101f76fbd8530bc gnome-utils-2.2.0.3.ebuild 860
 MD5 ed18d5c4ade2231b7b2009926b5e4f1d gnome-utils-1.4.1.2.ebuild 1802
 MD5 0b1cab4b09bb5d9f6013e4c02057b5f5 gnome-utils-2.0.5.ebuild 1340
+MD5 61f28f99b7a70d3d9e98a76f59e90048 gnome-utils-2.4.0.ebuild 940
 MD5 6cc193872addc7a56823a1435d847342 gnome-utils-2.2.3.ebuild 809
 MD5 cc4605d99eda72684d20b99ec7c822f9 ChangeLog 4671
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
@@ -13,4 +14,5 @@ MD5 c653de52fba13a95223ca027cbee2603 files/digest-gnome-utils-2.0.5 71
 MD5 ae55b083bf0fd772eb0abeb3d35016fc files/digest-gnome-utils-2.0.6 71
 MD5 c58ab55bf3e0510ad6029e214e758382 files/digest-gnome-utils-2.2.2 71
 MD5 e66307be4fac29383091faf342f76e04 files/digest-gnome-utils-2.2.3 71
+MD5 940bd47ebdfab5d32d62d2af41759a99 files/digest-gnome-utils-2.4.0 71
 MD5 5ed644c587beafb4c4a1461bbe322a1d files/digest-gnome-utils-1.4.1.2 72
