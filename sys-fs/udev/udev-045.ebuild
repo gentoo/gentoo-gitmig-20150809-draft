@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-045.ebuild,v 1.4 2004/12/15 22:23:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-045.ebuild,v 1.5 2005/01/01 17:49:10 weeve Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~arm alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~arm alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86"
 IUSE="static selinux"
 
 DEPEND="virtual/libc
