@@ -1,3 +1,5 @@
-MD5 be7a6c9b1dd56238462cf9cc81e37f24 files/digest-amsn-0.71 61
-MD5 302879fab759e5173d8b9e5f4e330129 amsn-0.71.ebuild 874
 MD5 69ed7ac5515cb2a56632cd864c45e03c ChangeLog 1124
+MD5 302879fab759e5173d8b9e5f4e330129 amsn-0.71.ebuild 874
+MD5 36b4d437d4f1a419b0018b1783c5bd2f amsn-0.80.ebuild 1510
+MD5 beefc599eae966bbb7d7bdc89906ec0f files/digest-amsn-0.80 61
+MD5 be7a6c9b1dd56238462cf9cc81e37f24 files/digest-amsn-0.71 61
