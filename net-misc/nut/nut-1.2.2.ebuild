@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.2.ebuild,v 1.7 2004/03/16 00:05:03 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.2.ebuild,v 1.8 2004/04/07 22:20:04 robbat2 Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network-UPS Tools"
@@ -13,10 +13,13 @@ SLOT="0"
 DEPEND=""
 RDEPEND=">=sys-apps/baselayout-1.8.2"
 
-APACHE="`which apache`"
-if [ -z "${APACHE}" -a -x /usr/sbin/apache ]; then
-	APACHE=/usr/sbin/apache
-fi
+APACHE=""
+function setapache() {
+	APACHE="`which apache 2>/dev/null`"
+	if [ -z "${APACHE}" -a -x /usr/sbin/apache ]; then
+		APACHE=/usr/sbin/apache
+	fi
+}
 
 if [ -n "${APACHE}" ]; then
 	DEPEND="${DEPEND} =sys-libs/zlib-1* =media-libs/libgd-1* =media-libs/libpng-1.2*"
@@ -36,6 +39,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+	setapache
 	[ -n "${APACHE}" ] && myconf="--with-cgi --with-cgipath=/home/httpd/cgi-bin"
 	[ -n "${APACHE}" ] || myconf="--without-cgi"
 
@@ -72,6 +76,7 @@ src_compile() {
 }
 
 src_install() {
+	setapache
 	# Makefile: user/group nut might not exist until after
 	# pkg_preinst() runs; so use root for now, and fix it
 	# up in pkg_postinst().

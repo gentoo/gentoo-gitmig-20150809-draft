@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nut
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.30 2004/04/01 05:56:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.31 2004/04/07 22:20:04 robbat2 Exp $
+
+  07 Apr 2004; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
+  nut-1.0.0.ebuild, nut-1.2.1-r1.ebuild, nut-1.2.1.ebuild, nut-1.2.2.ebuild,
+  nut-1.3.6.ebuild, nut-1.4.0-r3.ebuild, nut-1.4.0.ebuild, nut-1.5.1.ebuild,
+  nut-1.5.6-r2.ebuild, nut-1.5.7.ebuild, nut-1.5.8-r1.ebuild,
+  nut-1.5.8.ebuild:
+  remove a pile of old ebuilds, keeping just the stable heads of recent trees.
 
 *nut-2.0.0 (31 Mar 2004)
 
