@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/pmud 
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Id: ChangeLog,v 1.5 2002/07/17 14:50:44 gerk Exp $
+# $Id: ChangeLog,v 1.6 2002/07/20 00:06:16 gerk Exp $
 
 *pmud-0.10.1-r2.ebuild (14 July 2002)
+
+  19 Jul 2002; Mark Guertin <gerk@gentoo.org> files/pmud.start
+  Added >/dev/null 2>&1 to surpress extra output of pmud at system startup
+  fixing bug #5218
 
   17 Jul 2002; Mark Guertin <gerk@gentoo.org> :
   Fixed keywords (please be sure you know what programs are before you set
