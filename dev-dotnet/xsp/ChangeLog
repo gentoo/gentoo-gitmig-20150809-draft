@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.17 2005/01/01 17:51:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.18 2005/02/09 03:01:39 latexer Exp $
+
+*xsp-1.0.5-r1 (08 Feb 2005)
+
+  08 Feb 2005; Peter Johanson <latexer@gentoo.org> +xsp-1.0.5-r1.ebuild:
+  Revision bump with small fix for mono-1.1.x compat.
 
 *xsp-1.0.5 (13 Dec 2004)
 
