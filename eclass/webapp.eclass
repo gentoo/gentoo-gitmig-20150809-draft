@@ -1,6 +1,5 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.5 2004/04/14 16:02:37 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -21,11 +20,6 @@ INHERITED="$INHERITED $ECLASS"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
 
-if [ -f /etc/vhosts/webapp-config ] ; then
-	. /etc/vhosts/webapp-config
-else
-	die "Unable to open /etc/vhosts/webapp-config file"
-fi
 
 EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install
 
@@ -237,6 +231,12 @@ function webapp_src_install ()
 
 function webapp_pkg_setup ()
 {
+	if [ -f /etc/vhosts/webapp-config ] ; then
+		. /etc/vhosts/webapp-config
+	else
+		die "Unable to find /etc/vhosts/webapp-config"
+	fi
+
 	# are we emerging something that is already installed?
 
 	if [ -d "${MY_APPROOT}/${MY_APPSUFFIX}" ]; then
