@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/qingy
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qingy/ChangeLog,v 1.1 2003/09/06 17:22:26 avenj Exp $
+
+*qingy-0.2.1 (06 Sep 2003)
+
+  06 Sep 2003; Jon Portnoy <avenj@gentoo.org> qingy-0.2.1.ebuild :
+  Initial import. Submitted in bug 23955 by Michele Noberasco
+  <michele.noberasco@tiscali.it>.
