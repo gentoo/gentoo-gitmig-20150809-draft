@@ -1,13 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.7 2005/02/10 11:06:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.8 2005/02/10 23:35:58 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
 BRANCH_UPDATE=""
+
+# From linuxthreads/man
 GLIBC_MANPAGE_VERSION="2.3.4-r1"
-#GLIBC_INFOPAGE_VERSION="2.3.4-r1"
-GLIBC_INFOPAGE_VERSION="none"
+
+# From manual
+GLIBC_INFOPAGE_VERSION="2.3.4-r1"
 
 PATCH_VER="1.1"
 
@@ -131,23 +134,26 @@ toolchain-glibc_src_unpack() {
 
 	if use !nptl || use !nptlonly; then
 		cd ${S}
-			unpack ${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
-		cd ${WORKDIR}
+		unpack ${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
 	fi
 
 	if [[ -n ${PATCH_VER} ]]; then
+		cd ${WORKDIR}
 		unpack ${PN}-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
 	fi
 
 	if [[ ${GLIBC_MANPAGE_VERSION} != "none" ]]; then
+		cd ${WORKDIR}
 		unpack ${PN}-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
 	fi
 
 	if [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]]; then
+		cd ${S}
 		unpack ${PN}-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
 	fi
 
 	if [[ -n "${BRANCH_UPDATE}" ]]; then
+		cd ${WORKDIR}
 		unpack ${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
 	fi
 
@@ -358,12 +364,12 @@ EOF
 	fi
 
 	if use pic && ! use amd64 ; then
-		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
-		find ${S}/${buildtarget}/ -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;
-		find ${S}/${buildtarget}/ -name "*_pic.a" -exec cp {} ${D}/lib \;
-		find ${S}/${buildtarget}/ -name "*.map" -exec cp {} ${D}/lib \;
+		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}/$(get_libdir)/soinit.o \;
+		find ${S}/${buildtarget}/ -name "sofini.os" -exec cp {} ${D}/$(get_libdir)/sofini.o \;
+		find ${S}/${buildtarget}/ -name "*_pic.a" -exec cp {} ${D}/$(get_libdir) \;
+		find ${S}/${buildtarget}/ -name "*.map" -exec cp {} ${D}/$(get_libdir) \;
 
-		for i in ${D}/lib/*.map; do
+		for i in ${D}/$(get_libdir)/*.map; do
 			mv ${i} ${i%.map}_pic.map
 		done
 	fi
@@ -389,8 +395,7 @@ EOF
 		if ! has noinfo ${FEATURES} && [[ "${GLIBC_INFOPAGE_VERSION}" != "none" ]]; then
 			einfo "Installing info pages..."
 
-			cd ${S}/info
-			make PARALLELMFLAGS="${MAKEOPTS}" \
+			make PARALLELMFLAGS="${MAKEOPTS} -j1" \
 				install_root=${D} \
 				info -i
 		fi
@@ -401,7 +406,7 @@ EOF
 			einfo "Installing man pages..."
 
 			# Install linuxthreads man pages even if nptl is enabled
-			cd ${S}/man
+			cd ${WORKDIR}/man
 			doman *.3thr
 		fi
 
@@ -421,7 +426,7 @@ EOF
 		done
 
 		einfo "Installing Timezone data..."
-		make PARALLELMFLAGS="${MAKEOPTS}" \
+		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
 			install_root=${D} \
 			timezone/install-others || die
 	fi
@@ -532,24 +537,6 @@ setup_flags() {
 		local new_target
 
 		case ${ABI} in
-			x86)
-				new_target="i686-pc-linux-gnu"
-			;;
-			amd64)
-				new_target="x86_64-pc-linux-gnu"
-			;;
-			o32)
-				new_target="mips-unknown-linux-gnu"
-			;;
-			n32|n64)
-				new_target="mips64-unknown-linux-gnu"
-			;;
-			ppc)
-				new_target="powerpc-unknown-linux-gnu"
-			;;
-			ppc64)
-				new_target="powerpc64-unknown-linux-gnu"
-			;;
 			sparc)
 				if is-flag "-mcpu=ultrasparc3"; then
 						new_target="sparcv9b-unknown-linux-gnu"
@@ -567,6 +554,9 @@ setup_flags() {
 				fi
 
 				filter-flags -Wa,-xarch -Wa,-A
+			;;
+			*)
+				new_target=$(get_abi_CHOST)
 			;;
 		esac
 
@@ -848,7 +838,27 @@ is_crosscompile() {
 
 use_multilib() {
 	case $(tc-arch) in
-		amd64|mips|sparc) # |ppc64
+		sparc)
+			case ${CTARGET} in
+				sparc64*)
+					is_crosscompile || has_multilib_profile || use multilib
+					;;
+				*)
+					false
+					;;
+			esac
+		;;
+		mips)
+			case ${CTARGET} in
+				mips64*)
+					is_crosscompile || has_multilib_profile || use multilib
+					;;
+				*)
+					false
+					;;
+			esac
+		;;
+		amd64|ppc64)
 			is_crosscompile || has_multilib_profile || use multilib
 		;;
 		*)
@@ -857,34 +867,44 @@ use_multilib() {
 	esac
 }
 
+# Setup toolchain variables that would be defined in the profiles for these archs.
 crosscompile_setup() {
 	if use_multilib; then
 		case $(tc-arch) in
 			amd64)
 				export CFLAGS_x86="${CFLAGS_x86--m32}"
+				export CHOST_x86="i686-pc-linux-gnu"
 				export CFLAGS_amd64="${CFLAGS_amd64--m64}"
+				export CHOST_amd64="x86_64-pc-linux-gnu"
 
 				export MULTILIB_ABIS="x86 amd64"
 				export DEFAULT_ABI="amd64"
 			;;
 			mips)
 				export CFLAGS_o32="${CFLAGS_o32--mabi=32}"
+				export CHOST_o32="mips-unknown-linux-gnu"
 				export CFLAGS_n32="${CFLAGS_n32--mabi=n32}"
+				export CHOST_n32="mips64-unknown-linux-gnu"
 				export CFLAGS_n64="${CFLAGS_n64--mabi=n64}"
+				export CHOST_n64="mips64-unknown-linux-gnu"
 
 				export MULTILIB_ABIS="n64 n32 o32"
 				export DEFAULT_ABI="o32"
 			;;
 			ppc64)
 				export CFLAGS_ppc="${CFLAGS_ppc--m32}"
+				export CHOST_ppc="powerpc-unknown-linux-gnu"
 				export CFLAGS_ppc64="${CFLAGS_ppc64--m64}"
+				export CHOST_ppc64="powerpc64-unknown-linux-gnu"
 
 				export MULTILIB_ABIS="ppc ppc64"
 				export DEFAULT_ABI="ppc64"
 			;;
 			sparc)
 				export CFLAGS_sparc="${CFLAGS_sparc--m32}"
+				export CHOST_sparc="sparc-unknown-linux-gnu"
 				export CFLAGS_sparc64="${CFLAGS_sparc64--m64}"
+				export CHOST_sparc64="sparc64-unknown-linux-gnu"
 
 				export MULTILIB_ABIS="sparc64 sparc"
 				export DEFAULT_ABI="sparc"
@@ -913,10 +933,13 @@ RESTRICT="nostrip multilib-pkg-force"
 # We also need linux26-headers if using NPTL. Including kernel headers is
 # incredibly unreliable, and this new linux-headers release from plasmaroo
 # should work with userspace apps, at least on amd64 and ppc64.
+#
+# The gcc-config dep is for the cross-compile multilib stuff
 DEPEND=">=sys-devel/gcc-3.2.3-r1
 	nptl? ( >=sys-devel/gcc-3.3.1-r1
 	        || ( >=sys-kernel/linux-headers-2.6.5 >=sys-kernel/linux26-headers-2.6.5 ) )
 	>=sys-devel/binutils-2.14.90.0.6-r1
+	>=sys-devel/gcc-config-1.3.9
 	virtual/os-headers
 	nls? ( sys-devel/gettext )"
 
@@ -1012,6 +1035,7 @@ src_compile() {
 	unset MLTEST
 
 	ABI=${ABI:-default}
+
 	toolchain-glibc_src_compile
 }
 
@@ -1055,7 +1079,7 @@ src_install() {
 
 	# Handle stupid lib32 BS
 	unset OLD_LIBDIR
-	if [ "$(tc-arch)" = "amd64" -a "${ABI}" = "x86" -a "$(get_libdir)" != "lib" ]; then
+	if [[ "$(tc-arch)" = "amd64" && "${ABI}" = "x86" && "$(get_libdir)" != "lib" ]] && ! is_crosscompile; then
 		OLD_LIBDIR="$(get_libdir)"
 		LIBDIR_x86="lib"
 	fi
@@ -1063,7 +1087,8 @@ src_install() {
 	toolchain-glibc_src_install
 
 	# Handle stupid lib32 BS on amd64
-	if [ -n "${OLD_LIBDIR}" ]; then
+	if [[ -n "${OLD_LIBDIR}" ]]; then
+		cd ${S}
 		LIBDIR_x86="${OLD_LIBDIR}"
 		unset OLD_LIBDIR
 
