@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/bbsload-0.2.8.ebuild,v 1.4 2004/05/06 17:03:45 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/bbsload-0.2.8.ebuild,v 1.5 2004/05/06 17:13:53 tseng Exp $
 
 DESCRIPTION="blackbox load monitor"
 SRC_URI="http://bbtools.windsofstorm.net/sources/${P}.tar.gz"
@@ -12,9 +12,6 @@ IUSE=""
 
 DEPEND="virtual/blackbox
 		>=sys-devel/automake-1.7*"
-
-RDEPEND="${DEPEND}"
-
 
 src_compile() {
 	econf || die
