@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r1.ebuild,v 1.3 2004/01/12 06:35:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r2.ebuild,v 1.1 2004/01/18 01:43:39 vapier Exp $
 
 inherit games eutils
 
@@ -41,9 +41,11 @@ src_compile() {
 }
 
 src_install() {
-	sed -e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" \
-		${FILESDIR}/freecraft > ${T}/freecraft
-	dogamesbin freecraft ${T}/playfreecraft
+	exeinto ${GAMES_LIBDIR}/${PN}
+	doexe freecraft
+	dogamesbin ${FILESDIR}/freecraft
+	dosed "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" ${GAMES_BINDIR}/freecraft
+	dosed "s:GENTOO_LIBDIR:${GAMES_LIBDIR}/${PN}:" ${GAMES_BINDIR}/freecraft
 
 	exeinto ${GAMES_DATADIR}/${PN}/tools
 	doexe tools/{build.sh,aledoc,startool,wartool}
