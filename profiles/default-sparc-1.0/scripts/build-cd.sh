@@ -60,12 +60,25 @@ COPYFILES="$@"
 : ${PORTAGE:=/usr/portage}
 : ${PROFILE_SPARC:=$PORTAGE/profiles/default-sparc-1.0}
 : ${PROFILE_SPARC64:=$PORTAGE/profiles/default-sparc64-1.0}
+: ${CDIMAGE_SPARC:=$PORTAGE/profiles/cdimage-sparc}
+: ${CDIMAGE_SPARC64:=$PORTAGE/profiles/cdimage-sparc64}
 : ${USE_RAMDISK:=/boot/ramdisk.gz}
-: ${PACKAGES:=packages.cd}
+: ${PACKAGES:=packages}
 : ${EBUILD_SPARC:=$PROFILE_SPARC/boot/ebuild}
 : ${EBUILD_SPARC64:=$PROFILE_SPARC64/boot/ebuild}
 : ${CONFIG_SPARC:=$PROFILE_SPARC/boot/kernel-config}
 : ${CONFIG_SPARC64:=$PROFILE_SPARC64/boot/kernel-config}
+: ${ARCH_SPARC:=sparc}
+: ${CHOST_SPARC:=sparc-unknown-linux-gnu}
+: ${CFLAGS_SPARC:="-O2 -pipe"}
+: ${CXXFLAGS_SPARC:="-O2 -pipe"}
+: ${PLATFORM_SPARC:=sparc-unknown-linux-gnu}
+: ${ARCH_SPARC64:=sparc64}
+: ${CHOST_SPARC64:=sparc-unknown-linux-gnu}
+: ${CFLAGS_SPARC64:="-O2 -pipe"}
+: ${CXXFLAGS_SPARC64:="-O2 -pipe"}
+: ${PLATFORM_SPARC64:=sparc64-unknown-linux-gnu}
+
 # Less likely to be used and still likely to be there
 : ${LOOPDEVICE:=/dev/loop2}
 : ${SILOCONFOUT:=/boot/silo.conf}
@@ -78,6 +91,22 @@ sanity_checks() {
 		echo the CDOUT envirnment variable.
 		exit 1
 	fi
+}
+
+emerge_root() {
+
+	TO=$1
+	FROM=$2
+
+	if [ ! -r $FROM ]
+	then
+		echo "$FROM does not exist, barfing"
+		exit 1
+	fi
+
+	ROOT=$TO USE="-* build" ARCH=$MYARCH CHOST=$MYCHOST PLATFORM=$MYPLATFORM \
+	CFLAGS=$MYCFLAGS CXXFLAGS=$MYCXXFLAGS \
+		emerge --noreplace `cat $FROM` || exit 1
 }
 
 baselayout() {
@@ -355,15 +384,20 @@ buildroot() {
 		sparc64)
 			MYROOT=$ROOT_SPARC64
 			MYCDROOT=${CDROOT}/boot/sparc64
+			MYCDIMAGE=${CDIMAGE_SPARC64}
 			;;
 		sparc)
 			MYROOT=$ROOT_SPARC
 			MYCDROOT=${CDROOT}/boot/sparc
+			MYCDIMAGE=${CDIMAGE_SPARC}
 			;;
 	esac
 
-	copy_files ${KARCH} ${MYROOT}
-	find ${MYROOT} -type f | xargs file| grep "not stripped" | cut -d: -f1| xargs strip
+	#copy_files ${KARCH} ${MYROOT}
+	mkdir -p ${MYROOT}
+	emerge_root ${MYROOT} ${MYCDIMAGE}/${PACKAGES}
+	find ${MYROOT}/bin ${MYROOT}/sbin ${MYROOT}/usr/bin ${MYROOT}/usr/sbin -type f | xargs file| grep "not stripped" | cut -d: -f1| xargs strip
+	find ${MYROOT}/lib ${MYROOT}/usr/lib -type f | xargs file| grep "not stripped" | cut -d: -f1| xargs strip --strip-debug
 	compile_kernel_arch ${KARCH}
 	mkdir -p ${MYCDROOT}
 	copy_kernel ${KARCH} ${MYCDROOT}
@@ -474,8 +508,13 @@ do_sparc() {
 	export PORTAGE_TMPDIR
 	DIR_NAME=`basename $MYEBUILD | sed 's/\.ebuild//'`
 	KERNEL_ROOT=${PORTAGE_TMPDIR}/portage/${DIR_NAME}/work/*
-	buildroot sparc
-	#create_ramdisk $ROOT_SPARC ${CDROOT}/boot/sparc
+	MYARCH=$ARCH_SPARC
+	MYCHOST=$CHOST_SPARC
+	MYPLATFORM=$PLATFORM_SPARC
+	MYCFLAGS=$CFLAGS_SPARC
+	MYCXXFLAGS=$CXXFLAGS_SPARC
+	buildroot $MYARCH
+	#create_ramdisk $ROOT_SPARC ${CDROOT}/boot/$MYARCH
 	SPARC_DISKSIZE=$DISKSIZE
 }
 
@@ -486,6 +525,10 @@ do_sparc64() {
 	export PORTAGE_TMPDIR
 	DIR_NAME=`basename $MYEBUILD | sed 's/\.ebuild//'`
 	KERNEL_ROOT=${PORTAGE_TMPDIR}/portage/${DIR_NAME}/work/*
+	MYARCH=$ARCH_SPARC64
+	MYCHOST=$CHOST_SPARC64
+	MYCFLAGS=$CFLAGS_SPARC64
+	MYCXXFLAGS=$CXXFLAGS_SPARC64
 	buildroot sparc64
 	#create_ramdisk $ROOT_SPARC64 ${CDROOT}/boot/sparc64
 	SPARC64_DISKSIZE=$DISKSIZE

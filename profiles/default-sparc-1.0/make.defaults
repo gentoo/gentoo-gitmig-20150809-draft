@@ -1,4 +1,4 @@
-# This file created automagically by scripts/generate-packages.sh on Wed May  8 02:53:09 CEST 2002
+# This file created automagically by scripts/generate-packages.sh on Wed May  8 23:38:16 CEST 2002
 
 # Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
 # System-wide defaults for the Portage system
@@ -12,19 +12,26 @@ slang spell ssl svga tcpd truetype X xml2 xmms xv"
 
 # These lines added by scripts/generate-packages.sh
 #
-# $Id: make.defaults,v 1.8 2002/05/08 21:08:49 drobbins Exp $
+# $Id: make.defaults,v 1.9 2002/05/08 22:08:20 murphy Exp $
 #
 # $Log: not supported by cvs2svn $
-# Revision 1.7  2002/05/08 01:23:04  murphy
-# Merging in changes from default-1.0.
-#
-# Fixes for generate-packages.sh and build-cd.sh.
-#
-# Fixes for packages.cd and kernel-config.
-#
 # Revision 1.2  2002/04/18 21:05:52  murphy
 # YMCA: Yet More Changes Ah-ha (tm)
 #
 #
 ARCH="sparc"
+CHOST=sparc-unknown-linux-gnu
+PLATFORM=$CHOST
+
+# Options passed to make during the build process
+# MAKEOPTS="-j2"
+
+# Fetching command (5 tries, passive ftp for firewall compatibility)
+FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
+# Global configure options
+
+# C Compiler flags
+CFLAGS="-O2 -pipe"
+# C++ Compiler flags
+CXXFLAGS=${CFLAGS}
 # End of lines added by scripts/generate-packages.sh
