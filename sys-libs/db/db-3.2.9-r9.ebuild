@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r9.ebuild,v 1.5 2003/09/06 23:11:11 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r9.ebuild,v 1.6 2003/09/07 14:15:46 pappy Exp $
 
 IUSE="doc"
 
@@ -54,7 +54,7 @@ src_unpack() {
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
 	if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
 	then
-		CFLAGS="-yet_exec ${CFLAGS}"
+		CC="${CC} -yet_exec"
 	fi
 
 	# Fix invalid .la files
