@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.0.6.ebuild,v 1.5 2004/10/04 23:07:18 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.0.6.ebuild,v 1.6 2005/02/07 12:01:47 eradicator Exp $
 
 IUSE="crypt"
 

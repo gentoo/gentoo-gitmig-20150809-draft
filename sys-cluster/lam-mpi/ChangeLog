@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/lam-mpi
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.26 2004/10/05 15:29:39 fmccor Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.27 2005/02/07 12:01:47 eradicator Exp $
+
+  07 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org> lam-mpi-7.1.ebuild:
+  Adding ~amd64 as it was mistakenly removed.
 
   05 Oct 2004; Ferris McCormick <fmccor@gentoo.org> lam-mpi-7.1.ebuild:
   Add ~sparc keyword. (Runs lamtests-7.1.1 (configured 2x3), pyMPI (2x2),
