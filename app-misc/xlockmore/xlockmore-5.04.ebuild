@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/xlockmore-5.04.ebuild,v 1.10 2003/03/02 12:39:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/xlockmore-5.04.ebuild,v 1.11 2003/03/17 18:02:37 weeve Exp $
 
 IUSE="nas esd motif opengl truetype gtk pam"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.tux.org/~bagleyd/xlockmore.html"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/x11 
 	media-libs/freetype
