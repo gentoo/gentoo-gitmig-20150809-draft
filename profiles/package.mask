@@ -22,6 +22,14 @@
 ##   End example
 ##
 
+# Spider <spider@gentoo.org> (04 Aug 2002)
+# seems that stroke got theese released before my changed ebuilds made it into the tree
+# theese remove debugging information from the builds, and change libtool behaviour.
+=dev-libs/glib-2.0.6-r1
+=x11-libs/gtk+-2.0.6-r1
+=x11-libs/pango-1.0.4-r1
+=dev-libs/atk-1.0.3-r1
+
 # Donny Davies <woodchip@gentoo.org> (03 Aug 2002)
 # Needs to wait for the next baselayout release.
 =net-misc/nut-0.50.1
@@ -88,7 +96,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1170 2002/08/04 02:52:11 woodchip Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1171 2002/08/04 07:07:19 spider Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
