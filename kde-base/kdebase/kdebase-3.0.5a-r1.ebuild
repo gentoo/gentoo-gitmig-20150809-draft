@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5a-r1.ebuild,v 1.1 2002/12/25 00:51:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5a-r1.ebuild,v 1.2 2002/12/25 04:40:19 azarah Exp $
 
 inherit eutils flag-o-matic kde-dist
 
@@ -182,7 +182,7 @@ src_install() {
 	cd ${D}/${KDEDIR}/bin
 	epatch ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff
 	dosed "s:_KDEDIR_:${KDEDIR}:" ${KDEDIR}/bin/startkde
-	chmod a+x ${KDEDIR}/bin/startkde
+	chmod a+x startkde
 
 	# x11 session script
 	cd ${T}
