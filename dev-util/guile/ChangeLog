@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.34 2004/10/10 17:22:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.35 2004/10/17 22:19:17 liquidx Exp $
+
+  17 Oct 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/guile-1.4-inet_aton.patch, -files/net_db.c, guile-1.4-r3.ebuild,
+  guile-1.4.1.ebuild:
+  fix inet_aton issue plus remove old net_db.c from FILESDIR
 
   11 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
   +files/guile-macos-posix.patch, +files/guile-macos-relink.patch,

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4-r3.ebuild,v 1.17 2004/07/14 23:44:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4-r3.ebuild,v 1.18 2004/10/17 22:19:17 liquidx Exp $
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 DESCRIPTION="Scheme interpreter"
 SRC_URI="mirror://gnu/guile/${P}.tar.gz"
@@ -18,7 +18,8 @@ DEPEND=">=sys-libs/ncurses-5.1
 
 src_unpack() {
 	unpack ${A}
-	cp ${FILESDIR}/net_db.c ${S}/libguile/
+	cd ${S}
+	epatch ${FILESDIR}/${P}-inet_aton.patch
 }
 
 src_compile() {

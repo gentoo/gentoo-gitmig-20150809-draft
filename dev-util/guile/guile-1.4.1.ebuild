@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4.1.ebuild,v 1.13 2004/08/19 20:44:57 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4.1.ebuild,v 1.14 2004/10/17 22:19:17 liquidx Exp $
 
 inherit flag-o-matic
 
@@ -18,11 +18,6 @@ DEPEND=">=sys-libs/ncurses-5.1
 
 # guile-config breaks with -O3
 [ "${ARCH}" == "ppc" ] && replace-flags -O3 -O2
-
-src_unpack() {
-	unpack ${A}
-	cp ${FILESDIR}/net_db.c ${S}/libguile/
-}
 
 src_compile() {
 	econf \
