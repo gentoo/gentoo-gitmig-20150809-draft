@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/chntpw
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/ChangeLog,v 1.1 2004/09/20 00:19:07 robbat2 Exp $
+
+*chntpw-0.99.3.20040818 (19 Sep 2004)
+
+  19 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +chntpw-0.99.3.20040818.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

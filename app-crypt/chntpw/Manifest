@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a87313bcc9e67de8e81384fc435187c5 chntpw-0.99.3.20040818.ebuild 673
+MD5 45001d01a5066916e716ec94055dbeea ChangeLog 415
+MD5 a5ab3618f9cd3d7433bdfa40ae257618 metadata.xml 222
+MD5 67f4823ebe707ddcadb41da795b88a5f files/digest-chntpw-0.99.3.20040818 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+Comment: .//Manifest 1095639552
+
+iD8DBQFBTiIqPpIsIjIzwiwRApxtAJwNAMu+HRMDFQO0DPRY3jNI8mndOACg6QxY
+/KUBGpE/XwFD7q1sR1NNu3U=
+=Yfhz
+-----END PGP SIGNATURE-----
