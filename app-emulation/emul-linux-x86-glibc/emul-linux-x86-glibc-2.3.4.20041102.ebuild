@@ -1,15 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/emul-linux-x86-glibc-1.2.ebuild,v 1.1 2005/02/02 06:41:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/emul-linux-x86-glibc-2.3.4.20041102.ebuild,v 1.1 2005/02/03 06:08:14 eradicator Exp $
 
 IUSE="nptl nptlonly"
+
+# Renamed 1.2 to 2.3.4.20041102 so the version number was more descript,
+# but use the old tarballs as they're still fine...
+MY_PV=1.2
 
 DESCRIPTION="GNU C Library for emulation of 32bit x86 on amd64"
 HOMEPAGE="http://www.gentoo.org/"
 BASE_URI="http://dev.gentoo.org/~eradicator/glibc"
-SRC_URI="!nptl? ( ${BASE_URI}/${PN}-${PV}-lt.tar.bz2 )
-	 nptl? ( !nptlonly? ( ${BASE_URI}/${PN}-${PV}-nptl.tar.bz2 ) )
-	 nptl? ( nptlonly? ( ${BASE_URI}/${PN}-${PV}-nptlonly.tar.bz2 ) )"
+SRC_URI="!nptl? ( ${BASE_URI}/${PN}-${MY_PV}-lt.tar.bz2 )
+	 nptl? ( !nptlonly? ( ${BASE_URI}/${PN}-${MY_PV}-nptl.tar.bz2 ) )
+	 nptl? ( nptlonly? ( ${BASE_URI}/${PN}-${MY_PV}-nptlonly.tar.bz2 ) )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,7 +21,7 @@ KEYWORDS="~amd64"
 
 DEPEND=""
 RDEPEND="!<app-emulation/emul-linux-x86-baselibs-1.2
-	 ~sys-libs/glibc-2.3.4.20041102"
+	 ~sys-libs/glibc-${PV}"
 
 S=${WORKDIR}
 

@@ -1,13 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/ChangeLog,v 1.8 2005/02/02 06:41:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/ChangeLog,v 1.9 2005/02/03 06:08:14 eradicator Exp $
 
-*emul-linux-x86-glibc-1.2 (01 Feb 2005)
+*emul-linux-x86-glibc-2.3.4.20041102 (01 Feb 2005)
 
   01 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
-  +emul-linux-x86-glibc-1.2.ebuild:
+  +emul-linux-x86-glibc-2.3.4.20041102.ebuild:
   Version bump to x86 glibc. This uses 2.3.4.20041102 with CFLAGS=-march="i686
-  -O2 -pipe -fomit-frame-pointer".
+  -O2 -pipe -fomit-frame-pointer" and gcc-3.4.3-r1.
 
 *emul-linux-x86-glibc-1000 (11 Jan 2005)
 
