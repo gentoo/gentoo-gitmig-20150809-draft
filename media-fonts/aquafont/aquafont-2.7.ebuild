@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/aquafont-2.7.ebuild,v 1.3 2003/08/14 21:13:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/aquafont-2.7.ebuild,v 1.4 2003/10/11 07:43:54 usata Exp $
 
 IUSE=""
 MY_P="${PN/font/}${PV/\./_}"
@@ -14,8 +14,8 @@ LICENSE="aquafont"
 SLOT=0
 
 S="${WORKDIR}/${MY_P}"
-DEPEND="app-arch/lha
-	virtual/x11"
+DEPEND="${RDEPEND}
+	app-arch/lha"
 RDEPEND="virtual/x11"
 
 FONTDIR="/usr/share/fonts/ttf/ja/aqua"
@@ -36,17 +36,19 @@ src_install(){
 }
 
 pkg_postinst() {
-	einfo "You need you add following line into 'Section \"Files\"' in"
+	einfo
+	einfo "You need to add following line into 'Section \"Files\"' in"
 	einfo "XF86Config and reboot X Window System, to use these fonts."
-	einfo ""
+	einfo
 	einfo "\t FontPath \"${FONTDIR}\""
-	einfo ""
+	einfo
 }
 
 pkg_postrm(){
-	einfo "You need you remove following line in 'Section \"Files\"' in"
+	einfo
+	einfo "You need to remove following line in 'Section \"Files\"' in"
 	einfo "XF86Config, to unmerge this package completely."
-	einfo ""
-	eifno "\t FontPath \"${FONTDIR}\""
-	einfo ""
+	einfo
+	einfo "\t FontPath \"${FONTDIR}\""
+	einfo
 }
