@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.9.ebuild,v 1.1 2004/10/15 06:32:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.9.ebuild,v 1.2 2004/10/16 04:12:12 mr_bones_ Exp $
 
 inherit flag-o-matic games
 
@@ -28,6 +28,10 @@ src_unpack() {
 	cd "${S}"
 	sed -i \
 		-e "s/defaultLanguage = 1/defaultLanguage = 0/" src/Settings.cpp \
+		|| die "sed failed"
+	# bug #67718
+	sed -i \
+		-e "s/nsamples == SAMPLE_COUNT_PER_SLICE/nsamples/" src/SoundMixer.cpp \
 		|| die "sed failed"
 }
 
