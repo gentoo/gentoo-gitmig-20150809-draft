@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <robbat2@gentoo.org> 29 May 2003
+# ebuild was previously masked only in the ebuild
+# This is the correct place for it.
+=sys-libs/db-3.3.11
+
 # <carpaski@gentoo.org> 29 May 2003
 # Dev testing of 2.0.48-r1
 =sys-apps/portage-2.0.48-r1
