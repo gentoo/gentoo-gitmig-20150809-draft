@@ -2,9 +2,9 @@ MD5 ec5d90c1c3c8ddee75b898e375da3458 tpctl-3.2.ebuild 1474
 MD5 d3c00f2bb36af286cfaabe33235271bb tpctl-4.4-r1.ebuild 1623
 MD5 0d1529169600581fc3902af3124f71ac tpctl-4.2.ebuild 1474
 MD5 b4ff2912e4761992757bc1a88671e1f6 tpctl-4.4.ebuild 1472
-MD5 3e03f801c8fc7863b39e37f4fbcaa52c ChangeLog 2039
+MD5 b27d5289efdbac99e109ee9e987e1fb7 ChangeLog 2127
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 d1ead2e13e88669565107d8b97716565 tpctl-4.8.ebuild 1613
+MD5 f62dcdc970c399a7d4223ce25637e293 tpctl-4.8.ebuild 1613
 MD5 4a6eccb7b79fc6b89897fa42a9d63835 files/digest-tpctl-3.2 60
 MD5 603d662e5051a7e33e5c3cb5cae78962 files/digest-tpctl-4.2 60
 MD5 07d45c78b0ee95cb84c2fcdca379afc6 files/digest-tpctl-4.4 60
