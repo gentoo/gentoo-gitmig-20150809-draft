@@ -1,9 +1,13 @@
 # ChangeLog for net-misc/clockspeed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.4 2002/07/09 11:57:18 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.5 2002/10/19 22:38:40 cselkirk Exp $
 
 
 *clockspeed-0.62-r1 (1 Feb 2002)
+ 
+  20 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> clockspeed-0.62-r1.ebuild :
+
+  Added ppc to KEYWORDS.
 
   09 Jul 2002; phoen][x <phoenix@gentoo.org> clockspeed-0.62-r1.ebuild
   Added KEYWORDS, LICENSE, SLOT.
