@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/perlsieve
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlsieve/ChangeLog,v 1.1 2003/07/20 14:01:30 mcummings Exp $
+
+*perlsieve-0.4.9b (20 Jul 2003)
+
+  20 Jul 2003; Michael Cummings <mcummings@gentoo.org>
+  perlsieve-0.4.9b.ebuild:
+  Ebuild submitted by Luke Graham <luke@trolltech.com> in bug 23893. perlsieve
+  adds IMAP::Sieve functionality.
+
