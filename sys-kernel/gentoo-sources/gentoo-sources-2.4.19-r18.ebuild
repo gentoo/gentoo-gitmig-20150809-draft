@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r18.ebuild,v 1.1 2004/07/09 15:03:35 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r18.ebuild,v 1.2 2004/07/15 03:49:23 agriffis Exp $
 
-IUSE="build crypt xfs acpi4linux"
+IUSE="acpi4linux crypt xfs"
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -44,7 +44,7 @@ src_unpack() {
 	mv linux-${OKV} linux-${KV} || die
 
 	cd ${KV/18/10}
-	# Kill patches we aren't suppposed to use, don't worry about 
+	# Kill patches we aren't suppposed to use, don't worry about
 	# failures, if they aren't there that is a good thing!
 
 	# This is the ratified crypt USE flag, enables IPSEC and patch-int
@@ -53,8 +53,8 @@ src_unpack() {
 	# This is the XFS filesystem from SGI, use at your own risk ;)
 	use xfs || rm *xfs*
 
-	# This is the latest release of ACPI from 
-	# http://www.sourceforge.net/projects/acpi	
+	# This is the latest release of ACPI from
+	# http://www.sourceforge.net/projects/acpi
 	use acpi4linux || rm 70*
 
 	kernel_src_unpack

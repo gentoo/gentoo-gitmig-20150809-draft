@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r9.ebuild,v 1.1 2004/07/09 14:13:59 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r9.ebuild,v 1.2 2004/07/15 03:45:55 agriffis Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
-IUSE="build crypt usagi"
+IUSE="crypt usagi"
 ETYPE="sources"
 inherit kernel eutils
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
@@ -37,7 +37,7 @@ src_unpack() {
 	fi
 
 	# This is the usagi USE flag, keeps USAGI, drops
-	# {superfreeswan/patch-int/loop-jari} 
+	# {superfreeswan/patch-int/loop-jari}
 	# Using USAGI will also cause you to drop all iptables ipv6
 	# patches.
 	if ! use usagi; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r13.ebuild,v 1.1 2004/07/09 15:03:35 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r13.ebuild,v 1.2 2004/07/15 03:49:23 agriffis Exp $
 
 ETYPE="sources"
 UNIPATCH_LIST="
@@ -30,6 +30,7 @@ DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	http://dev.gentoo.org/~iggy/gentoo-sources-${PVR/13/5}.patch.bz2"
 KEYWORDS="x86 -*"
+IUSE=""
 SLOT="${KV}"
 
 K_EXTRAEINFO="If there are issues with this kernel, search http://bugs.gentoo.org/ for an
