@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.5.ebuild,v 1.7 2004/07/14 19:14:13 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.5.ebuild,v 1.8 2004/08/10 12:57:50 eldad Exp $
 
 inherit libtool flag-o-matic gcc eutils
 
@@ -16,8 +16,10 @@ IUSE="adns gtk ipv6 snmp ssl gtk2"
 # if --disable-gtk2 is not passed to configure it will try to build with glib-2.0.
 # --disable-ethereal do not have an influence.
 
+# snmp support requires >=net-snmp-5.1.1. Taking virtual off: snmp? ( virtual/snmp )
+
 RDEPEND=">=sys-libs/zlib-1.1.4
-	snmp? ( virtual/snmp )
+	snmp? ( >=net-analyzer/net-snmp-5.1.1 )
 	>=dev-util/pkgconfig-0.15.0
 	gtk? (  gtk2? ( >=dev-libs/glib-2.0.4 =x11-libs/gtk+-2* )
 		!gtk2? ( =x11-libs/gtk+-1.2* ) )
