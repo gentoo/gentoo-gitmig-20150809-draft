@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r3.ebuild,v 1.1 2004/06/11 23:35:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r4.ebuild,v 1.1 2004/06/12 05:36:56 mr_bones_ Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -13,11 +13,13 @@ SRC_URI="http://ftp.club.cc.cmu.edu/pub/gnu/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
-IUSE="build nls perl static"
+IUSE="build nls pcre static"
 
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}
-	perl? ( dev-libs/libpcre )
+	pcre? (
+		>=sys-apps/sed-4
+		dev-libs/libpcre )
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
@@ -32,15 +34,20 @@ src_unpack() {
 }
 
 src_compile() {
-	if use static || use perl ; then
+	if use static ; then
 		append-flags -static
 		append-ldflags -static
 	fi
 	econf \
 		$(use_enable nls) \
-		$(use_enable perl perl-regexp) \
+		$(use_enable pcre perl-regexp) \
 		--bindir=/bin \
 		|| die "econf failed"
+	if use pcre ; then
+		sed -i \
+			-e 's:-lpcre:/usr/lib/libpcre.a:g' {lib,src}/Makefile \
+			|| die "sed Makefile failed"
+	fi
 	emake || die "emake failed"
 }
 

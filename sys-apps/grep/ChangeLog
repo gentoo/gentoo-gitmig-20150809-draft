@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/grep
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.26 2004/06/11 23:36:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.27 2004/06/12 05:36:56 mr_bones_ Exp $
+
+*grep-2.5.1-r4 (11 Jun 2004)
+
+  11 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> grep-2.5.1-r3.ebuild,
+  grep-2.5.1-r4.ebuild:
+  agriffis reminded me of the pcre use flag which is much more accurate.
+  Also, link only libpcre statically which should be much nicer for anyone
+  who wants to use pcre.
 
   11 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> grep-2.5.1-r2.ebuild:
   clean older ebuild
