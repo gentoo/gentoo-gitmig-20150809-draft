@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/less
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.18 2003/04/02 14:05:23 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.19 2003/04/16 00:39:58 gmsoft Exp $
 
 *less-381 (26 Mar 2003)
+
+  16 Apr 2003; Guy Martin <gmsoft@gentoo.org> less-381.ebuild :
+  Marked stable on hppa.
 
   02 Apr 2003; Christian Birchinger <joker@gentoo.org> less-381.ebuild:
   Added stable sparc keyword
