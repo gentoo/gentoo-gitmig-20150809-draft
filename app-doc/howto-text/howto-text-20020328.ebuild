@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-text/howto-text-20020328.ebuild,v 1.8 2002/12/09 04:17:38 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-text/howto-text-20020328.ebuild,v 1.9 2003/02/13 06:36:04 vapier Exp $
 
 MY_P="Linux-HOWTOs-${PV}"
 S=${WORKDIR}/${MY_P}

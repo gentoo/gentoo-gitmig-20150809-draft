@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/kdelibs-apidocs-3.1_rc6.ebuild,v 1.1 2003/01/05 21:22:39 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/kdelibs-apidocs-3.1_rc6.ebuild,v 1.2 2003/02/13 06:36:27 vapier Exp $
 
 PN=kdelibs P=$PN-$PVR inherit kde kde.org 
 
