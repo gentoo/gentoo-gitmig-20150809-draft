@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.21.0-r1.ebuild,v 1.1 2003/04/30 14:54:31 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.21.0-r1.ebuild,v 1.2 2003/05/06 09:57:05 pauldv Exp $
 
 inherit libtool
 
@@ -46,37 +46,41 @@ pkg_setup() {
 src_unpack() {
 	cd ${WORKDIR}
 	unpack ${P}.tar.gz
-	unpack db-4.0.14.tar.gz
+	has_version =db-4* || (
+		unpack db-4.0.14.tar.gz
+	)
 	cd ${S}
 }
 
 src_compile() {
 	elibtoolize
 
-	cd ${S_DB}
-	../dist/configure \
-                --prefix=/usr \
-                --mandir=/usr/share/man \
-                --infodir=/usr/share/info \
-                --datadir=/usr/share \
-                --sysconfdir=/etc \
-                --localstatedir=/var/lib \
-                --disable-compat185 \
-                --disable-cxx \
-		--disable-tcl \
-		--disable-java \
-		--disable-shared \
-		--with-uniquename
-	make || die "db make failed"
-	[ -e ${WORKDIR}/dbinst ] && rm -rf ${WORKDIR}/dbinst
-	mkdir -p ${WORKDIR}/dbinst/lib
-	make prefix=${WORKDIR}/dbinst install ||die
-	mkdir ${WORKDIR}/dbinst/include/db4
-	cp ${WORKDIR}/dbinst/include/*.h ${WORKDIR}/dbinst/include/db4
-	mv ${WORKDIR}/dbinst/lib/libdb.a ${WORKDIR}/dbinst/lib/libdb4.a
-	cat <<EOF >${WORKDIR}/dbinst/lib/libdb4.so
+	has_version =db-4* || (
+		cd ${S_DB}
+		../dist/configure \
+			--prefix=/usr \
+	                --mandir=/usr/share/man \
+			--infodir=/usr/share/info \
+			--datadir=/usr/share \
+			--sysconfdir=/etc \
+			--localstatedir=/var/lib \
+			--disable-compat185 \
+			--disable-cxx \
+			--disable-tcl \
+			--disable-java \
+			--disable-shared \
+			--with-uniquename
+		make || die "db make failed"
+		[ -e ${WORKDIR}/dbinst ] && rm -rf ${WORKDIR}/dbinst
+		mkdir -p ${WORKDIR}/dbinst/lib
+		make prefix=${WORKDIR}/dbinst install ||die
+		mkdir ${WORKDIR}/dbinst/include/db4
+		cp ${WORKDIR}/dbinst/include/*.h ${WORKDIR}/dbinst/include/db4
+		mv ${WORKDIR}/dbinst/lib/libdb.a ${WORKDIR}/dbinst/lib/libdb4.a
+		cat <<EOF >${WORKDIR}/dbinst/lib/libdb4.so
 GROUP( ${WORKDIR}/dbinst/lib/libdb4.a /usr/lib/libdb.so)
 EOF
+	) #no db4
 
 	cd ${S}
 	use ssl && myconf="${myconf} --with-ssl"
@@ -85,9 +89,9 @@ EOF
 	use apache2 && myconf="${myconf} --with-apxs=/usr/sbin/apxs2 \
 		--with-apr=/usr --with-apr-util=/usr"
 	use apache2 || myconf="${myconf} --without-apxs"
+	has_version =db-4* || myconf="${myconf} --with-berkely-db=${WORKDIR}/dbinst"
 
 	LDFLAGS=${LDFLAGS} econf ${myconf} \
-		--with-berkeley-db=${WORKDIR}/dbinst \
 		--with-neon=/usr \
 		--disable-mod-activation \
 		--with-python=/usr/bin/python \
@@ -108,8 +112,10 @@ src_install () {
 	mkdir -p ${D}/etc/apache2/conf
 	mkdir -p ${D}/etc/share
 
-	mkdir -p ${D}/usr/share/subversion/bin
-	cp ${WORKDIR}/dbinst/bin/* ${D}/usr/share/subversion/bin/
+	has_version =db-4* || (
+		mkdir -p ${D}/usr/share/subversion/bin
+		cp ${WORKDIR}/dbinst/bin/* ${D}/usr/share/subversion/bin/
+	)
 
 	make DESTDIR=${D} install || die "Installation of subversion failed"
 	make install-swig-py DESTDIR=${D} DISTUTIL_PARAM=--prefix=${D} || die "Installation of subversion python bindings failed"
