@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/tinytableplus
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/tinytableplus/ChangeLog,v 1.1 2004/02/09 13:32:01 lanius Exp $
+
+*tinytableplus-0.9 (09 Feb 2004)
+
+  09 Feb 2004; Heinrich Wendel <lanius@gentoo.org> metadata.xml,
+  tinytableplus-0.9.ebuild:
+  initial import, thx to jared@ninebelow.com, bug #40511
+
