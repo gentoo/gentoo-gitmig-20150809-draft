@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2.ebuild,v 1.2 2003/11/04 12:31:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2.ebuild,v 1.3 2003/11/05 14:24:22 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="An mpeg library for linux"
 HOMEPAGE="http://heroinewarrior.com/libmpeg3.php3"
@@ -16,7 +16,7 @@ RDEPEND="sys-libs/zlib
 	media-libs/jpeg
 	media-libs/a52dec"
 DEPEND="${RDEPEND}
-		x86? ( dev-lang/nasm ) "
+	x86? ( dev-lang/nasm ) "
 
 src_unpack() {
 	unpack ${A}
