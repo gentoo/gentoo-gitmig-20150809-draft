@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.5 2005/02/10 16:00:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.6 2005/03/02 23:44:57 azarah Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -9,6 +9,7 @@
 # (vapier, Aug 2004)
 # (compnerd, Nov 2004)
 # (wolf31o2, Jan 2005)
+# (azarah, Mar 2005)
 
 if [ -e /etc/init.d/functions.sh ] ; then
 	source /etc/init.d/functions.sh
@@ -26,7 +27,7 @@ fi
 show_status() {
 	local num=$1
 	shift
-	echo "  [[ ($num/4) $* ]]"
+	echo "  [[ ($num/3) $* ]]"
 }
 
 # Track progress of the bootstrap process to allow for
@@ -78,7 +79,7 @@ for opt in "$@" ; do
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
 		--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.5 2005/02/10 16:00:38 wolf31o2 Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-new.sh,v 1.6 2005/03/02 23:44:57 azarah Exp $"
 			cvsver=${cvsver##*,v }
 			einfo "Gentoo ${GENTOO_VERS} bootstrap ${cvsver%%Exp*}"
 			exit 0
@@ -92,7 +93,7 @@ done
 
 RESUME=0
 if [[ -n ${STRAP_RUN} ]]  ; then
-	if [ ${BOOTSTRAP_STAGE} -ge 4 ] ; then
+	if [ ${BOOTSTRAP_STAGE} -ge 3 ] ; then
 		echo
 		einfo "System has been bootstrapped already!"
 		einfo "If you re-bootstrap the system, you must complete the entire bootstrap process"
@@ -141,7 +142,7 @@ cleanup() {
 		if [[ -f /etc/make.conf.build ]] ; then
 			mv -f /etc/make.conf.build /etc/make.conf
 		fi
-		if [ ${BOOTSTRAP_STAGE} -le 3 ] ; then
+		if [ ${BOOTSTRAP_STAGE} -le 2 ] ; then
 			cp -f /var/cache/edb/mtimedb /var/run/bootstrap-mtimedb
 		else
 			rm -f /var/run/bootstrap-mtimedb
@@ -159,18 +160,26 @@ pycmd() {
 # not being restored.
 [[ -n ${STRAP_RUN} ]] && cp -f /etc/make.conf /etc/make.conf.build
 
-#TSTP messes ^Z of bootstrap up, so we don't trap it anymore.
+# TSTP messes ^Z of bootstrap up, so we don't trap it anymore.
 trap "cleanup" TERM KILL INT QUIT ABRT
+
+# Bug #50158 (don't use `which` in a bootstrap).
+if ! type -path portageq &>/dev/null ; then
+	echo -------------------------------------------------------------------------------
+	eerror "Your portage version is too old.  Please use a newer stage1 image."
+	echo
+	cleanup 1
+fi
 
 # USE may be set from the environment so we back it up for later.
 export ORIGUSE=$(portageq envvar USE)
 
 # Check for 'build' or 'bootstrap' in USE ...
-INVALID_USE="`gawk -v ORIGUSE="${ORIGUSE}" '
+INVALID_USE=$(gawk -v ORIGUSE="${ORIGUSE}" '
 	BEGIN { 
 		if (ORIGUSE ~ /[[:space:]]*(build|bootstrap)[[:space:]]*/)
 			print "yes"
-	}'`"
+	}')
 
 # Do not do the check for stage build scripts ...
 if [[ ${INVALID_USE} = "yes" ]] ; then
@@ -183,18 +192,11 @@ if [[ ${INVALID_USE} = "yes" ]] ; then
 	cleanup 1
 fi
 
-# bug #50158 (don't use `which` in a bootstrap).
-if ! type -path portageq &>/dev/null ; then
-	echo
-	eerror "Your portage version is too old.  Please use a newer stage1 image."
-	echo
-	cleanup 1
-fi
-
 # gettext should only be needed when used with nls
 for opt in ${ORIGUSE} ; do
 	case "${opt}" in
-		nls) myGETTEXT="gettext"
+		nls)
+			USE_NLS=1
 			STAGE1_USE="${STAGE1_USE} nls"
 			;;
 		nptl)
@@ -207,6 +209,9 @@ for opt in ${ORIGUSE} ; do
 				cleanup 1
 			fi
 			USE_NPTL=1
+			;;
+		nptlonly)
+			USE_NPTLONLY=1
 			;;
 		multilib)
 			STAGE1_USE="${STAGE1_USE} multilib"
@@ -224,21 +229,27 @@ eval $(pycmd 'import portage; print portage.settings.packages;' |
 sed 's/[][,]//g; s/ /\n/g; s/\*//g' | while read p; do n=${p##*/}; n=${n%\'};
 n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 
-# this stuff should never fail but will if not enough is installed.
+# This stuff should never fail but will if not enough is installed.
 [[ -z ${myBASELAYOUT} ]] && myBASELAYOUT="baselayout"
 [[ -z ${myPORTAGE}    ]] && myPORTAGE="portage"
 [[ -z ${myBINUTILS}   ]] && myBINUTILS="binutils"
 [[ -z ${myGCC}        ]] && myGCC="gcc"
+[[ -z ${myGETTEXT}    ]] && myGETTEXT="gettext"
 [[ -z ${myLIBC}       ]] && myLIBC="virtual/libc"
 [[ -z ${myTEXINFO}    ]] && myTEXINFO="sys-apps/texinfo"
 [[ -z ${myZLIB}       ]] && myZLIB="zlib"
 [[ -z ${myNCURSES}    ]] && myNCURSES="ncurses"
+
+# Do we really want gettext/nls?
+[[ ${USE_NLS} != 1 ]] && myGETTEXT=
 
 # Do we really have no 2.4.x nptl kernels in portage?
 if [[ ${USE_NPTL} = "1" ]] ; then
 	myOS_HEADERS="$(portageq best_visible / '>=sys-kernel/linux-headers-2.6.0')"
 	[[ -n ${myOS_HEADERS} ]] && myOS_HEADERS=">=${myOS_HEADERS}"
 	STAGE1_USE="${STAGE1_USE} nptl"
+	# Should we build with nptl only?
+	[[ ${USE_NPTLONLY} = "1" ]] && STAGE1_USE="${STAGE1_USE} nptlonly"
 fi
 [[ -z ${myOS_HEADERS} ]] && myOS_HEADERS="virtual/os-headers"
 
@@ -247,7 +258,7 @@ einfo "Using portage    : ${myPORTAGE}"
 einfo "Using os-headers : ${myOS_HEADERS}"
 einfo "Using binutils   : ${myBINUTILS}"
 einfo "Using gcc        : ${myGCC}"
-[[ -n ${myGETTEXT} ]] && einfo "Using gettext    : ${myGETTEXT}"
+[[ ${USE_NLS} = "1" ]] && einfo "Using gettext    : ${myGETTEXT}"
 einfo "Using libc       : ${myLIBC}"
 einfo "Using texinfo    : ${myTEXINFO}"
 einfo "Using zlib       : ${myZLIB}"
@@ -274,8 +285,9 @@ echo ---------------------------------------------------------------------------
 [[ -x /usr/sbin/gcc-config ]] && GCC_CONFIG="/usr/sbin/gcc-config"
 [[ -x /usr/bin/gcc-config  ]] && GCC_CONFIG="/usr/bin/gcc-config"
 
-# Disable autoclean, or it b0rks
-export AUTOCLEAN="no"
+# Make sure we automatically clean old instances, else we may run
+# into issues, bug #32140.
+export AUTOCLEAN="yes"
 
 # Allow portage to overwrite stuff
 export CONFIG_PROTECT="-*"
@@ -300,10 +312,13 @@ if [ ${BOOTSTRAP_STAGE} -le 2 ] ; then
 		STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --resume"
 		cp /var/run/bootstrap-mtimedb /var/cache/edb
 	else
-		STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -e"
+		# Why do we need this?  It will pull in python that needs g++
+		# among others, and add a few IMHO unneeded deps ...
+		#STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -e"
+		:
 	fi
 	${V_ECHO} emerge ${STRAP_EMERGE_OPTS} ${myOS_HEADERS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} \
-		${myGCC} ${myLIBC} ${myBASELAYOUT} ${myZLIB}|| cleanup 1
+		${myGCC} ${myLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
 	echo -------------------------------------------------------------------------------
 	set_bootstrap_stage 3
 fi
@@ -319,14 +334,12 @@ if [[ -n ${STRAP_RUN} ]] ; then
 	fi
 fi
 
-# ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
-export USE="${ORIGUSE}"
-if [ ${BOOTSTRAP_STAGE} -le 3 ] ; then
-	show_status 3 Re-Emerging C++ apps
-	STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS/-e//}"
-	${V_ECHO} emerge ${STRAP_EMERGE_OPTS} ${myNCURSES} || cleanup 1
+if [[ -n ${STRAP_RUN} ]] ; then
 	echo -------------------------------------------------------------------------------
-	set_bootstrap_stage 4
+	einfo "Please note that you should now add the '-e' option for emerge system:"
+	echo
+	einfo "  # emerge -e system"
+	echo
 fi
 
 # Restore original make.conf
