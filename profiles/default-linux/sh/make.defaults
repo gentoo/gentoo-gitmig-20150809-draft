@@ -1,0 +1,15 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sh/make.defaults,v 1.1 2004/10/22 21:45:00 vapier Exp $
+#
+# System-wide defaults for the Portage system
+# See portage(5) manpage
+
+USE="sh crypt ncurses readline ssl zlib"
+
+ARCH="sh"
+ACCEPT_KEYWORDS="sh"
+
+FEATURES="-sandbox sfperms"
+
+GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses"
