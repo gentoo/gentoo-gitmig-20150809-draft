@@ -1,9 +1,9 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.1_beta1.ebuild,v 1.5 2002/10/08 07:10:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.1_beta1.ebuild,v 1.6 2002/10/08 21:13:25 danarmak Exp $
 
 IUSE="sdl xmms svga"
-inherit kde-dist 
+inherit kde-dist flag-o-matic
 
 DESCRIPTION="KDE $PV: addons - applets, plugins..."
 KEYWORDS="x86 alpha"
