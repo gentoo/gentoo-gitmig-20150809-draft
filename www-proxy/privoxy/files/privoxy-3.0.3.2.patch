@@ -1,0 +1,250 @@
+diff -ur privoxy-3.0.3/GNUmakefile.in privoxy-3.0.3-stable/GNUmakefile.in
+--- privoxy-3.0.3/GNUmakefile.in	2004-01-31 02:15:33.000000000 +0100
++++ privoxy-3.0.3-stable/GNUmakefile.in	2004-02-17 15:13:27.000000000 +0100
+@@ -1,6 +1,6 @@
+ # Note:  Makefile is built automatically from Makefile.in
+ #
+-# $Id: privoxy-3.0.3.2.patch,v 1.1 2005/02/26 23:22:34 mrness Exp $
++# $Id: privoxy-3.0.3.2.patch,v 1.1 2005/02/26 23:22:34 mrness Exp $
+ #
+ # Written by and Copyright (C) 2001 - 2004 the SourceForge
+ # Privoxy team. http://www.privoxy.org/
+@@ -818,7 +818,9 @@
+ # (http://www.easysw.com/htmldoc/). Note: 1.8.20 has a TOC bug.
+ # PDF docs are uploaded to webserver as zip archive.
+ dok-pdf: dok-shtml
+-	@$(ECHO) -n "starting htmldoc version: "; htmldoc --version
++	@$(ECHO) -n "starting htmldoc version: ";
++	if htmldoc --version ; then : ; \
++	   else $(ECHO) "WARNING: could not get htmldoc version" ; fi
+ 	cd utils/ldp_print && $(RM) *html *bak *jpg *tmp *pdf *zip
+ 	cp -f doc/source/temp/*html doc/webserver/images/*jpg utils/ldp_print
+ 	cd utils/ldp_print ;\
+@@ -1019,6 +1021,7 @@
+ clobber: tidy
+ 	$(RM) GNUmakefile configure config.h.in config.h config.cache config.status config.log logfile \
+               privoxy.log core *.tar.gz *.tar privoxy-cl.spec doc/source/ldp.dsl
++	$(RM) -r autom4te.cache
+ 
+ #
+ # FIXME: What is all this? 
+@@ -1341,6 +1344,13 @@
+ ## end:
+ 
+ # $Log: not supported by cvs2svn $
++# Revision 1.104.2.27  2004/02/07 16:11:10  oes
++# Make clobber remove the autom4te.cache dir.
++# Closes BR #889300
++#
++# Revision 1.104.2.26  2004/01/31 16:32:25  oes
++# Adding a check for an htmldoc variant from the debian diff
++#
+ # Revision 1.104.2.25  2004/01/31 01:15:33  oes
+ # Fixed a typo; updated copyright notice
+ #
+Only in privoxy-3.0.3: autom4te.cache
+diff -ur privoxy-3.0.3/cgi.c privoxy-3.0.3-stable/cgi.c
+--- privoxy-3.0.3/cgi.c	2003-12-17 17:33:16.000000000 +0100
++++ privoxy-3.0.3-stable/cgi.c	2004-02-17 15:13:27.000000000 +0100
+@@ -1,4 +1,4 @@
+-const char cgi_rcs[] = "$Id: privoxy-3.0.3.2.patch,v 1.1 2005/02/26 23:22:34 mrness Exp $";
++const char cgi_rcs[] = "$Id: privoxy-3.0.3.2.patch,v 1.1 2005/02/26 23:22:34 mrness Exp $";
+ /*********************************************************************
+  *
+  * File        :  $Source: /var/cvsroot/gentoo-x86/www-proxy/privoxy/files/privoxy-3.0.3.2.patch,v $
+@@ -38,6 +38,12 @@
+  *
+  * Revisions   :
+  *    $Log: not supported by cvs2svn $
++ *    Revision 1.70.2.13  2004/02/17 13:30:23  oes
++ *    Moved cgi_error_disabled() from cgiedit.c to
++ *    cgi.c to re-enable build with --disable-editor.
++ *    Fixes Bug #892744. Thanks to Matthew Fischer
++ *    for spotting.
++ *
+  *    Revision 1.70.2.12  2003/12/17 16:33:16  oes
+  *     - Added new function cgi_redirect to handle creation of
+  *       HTTP redirect messages formerly repeated in the code.
+@@ -1244,6 +1250,42 @@
+ 
+ /*********************************************************************
+  *
++ * Function    :  cgi_error_disabled
++ *
++ * Description :  CGI function that is called to generate an error
++ *                response if the actions editor or toggle CGI are
++ *                accessed despite having being disabled at compile-
++ *                or run-time.
++ *
++ * Parameters  :
++ *          1  :  csp = Current client state (buffers, headers, etc...)
++ *          2  :  rsp = http_response data structure for output
++ *
++ * CGI Parameters : none
++ *
++ * Returns     :  JB_ERR_OK on success
++ *                JB_ERR_MEMORY on out-of-memory error.
++ *
++ *********************************************************************/
++jb_err cgi_error_disabled(struct client_state *csp,
++                          struct http_response *rsp)
++{
++   struct map *exports;
++
++   assert(csp);
++   assert(rsp);
++
++   if (NULL == (exports = default_exports(csp, NULL)))
++   {
++      return JB_ERR_MEMORY;
++   }
++
++   return template_fill_for_cgi(csp, "cgi-error-disabled", exports, rsp);
++}
++
++
++/*********************************************************************
++ *
+  * Function    :  cgi_init_error_messages
+  *
+  * Description :  Call at the start of the program to initialize
+diff -ur privoxy-3.0.3/cgi.h privoxy-3.0.3-stable/cgi.h
+--- privoxy-3.0.3/cgi.h	2003-12-17 17:33:28.000000000 +0100
++++ privoxy-3.0.3-stable/cgi.h	2004-02-17 15:13:27.000000000 +0100
+@@ -1,6 +1,6 @@
+ #ifndef CGI_H_INCLUDED
+ #define CGI_H_INCLUDED
+-#define CGI_H_VERSION "$Id: privoxy-3.0.3.2.patch,v 1.1 2005/02/26 23:22:34 mrness Exp $"
++#define CGI_H_VERSION "$Id: privoxy-3.0.3.2.patch,v 1.1 2005/02/26 23:22:34 mrness Exp $"
+ /*********************************************************************
+  *
+  * File        :  $Source: /var/cvsroot/gentoo-x86/www-proxy/privoxy/files/privoxy-3.0.3.2.patch,v $
+@@ -38,6 +38,12 @@
+  *
+  * Revisions   :
+  *    $Log: not supported by cvs2svn $
++ *    Revision 1.29.2.2  2004/02/17 13:30:23  oes
++ *    Moved cgi_error_disabled() from cgiedit.c to
++ *    cgi.c to re-enable build with --disable-editor.
++ *    Fixes Bug #892744. Thanks to Matthew Fischer
++ *    for spotting.
++ *
+  *    Revision 1.29.2.1  2003/12/17 16:33:28  oes
+  *    Added prototype of new function cgi_redirect
+  *
+@@ -215,7 +221,9 @@
+                                     const char *template_name);
+ extern jb_err cgi_error_bad_param(struct client_state *csp,
+                                   struct http_response *rsp);
+-jb_err cgi_error_unknown(struct client_state *csp,
++extern jb_err cgi_error_disabled(struct client_state *csp,
++                                 struct http_response *rsp);
++extern jb_err cgi_error_unknown(struct client_state *csp,
+                          struct http_response *rsp,
+                          jb_err error_to_report);
+ 
+diff -ur privoxy-3.0.3/cgiedit.c privoxy-3.0.3-stable/cgiedit.c
+--- privoxy-3.0.3/cgiedit.c	2003-12-18 09:13:48.000000000 +0100
++++ privoxy-3.0.3-stable/cgiedit.c	2004-02-17 15:13:27.000000000 +0100
+@@ -1,4 +1,4 @@
+-const char cgiedit_rcs[] = "$Id: privoxy-3.0.3.2.patch,v 1.1 2005/02/26 23:22:34 mrness Exp $";
++const char cgiedit_rcs[] = "$Id: privoxy-3.0.3.2.patch,v 1.1 2005/02/26 23:22:34 mrness Exp $";
+ /*********************************************************************
+  *
+  * File        :  $Source: /var/cvsroot/gentoo-x86/www-proxy/privoxy/files/privoxy-3.0.3.2.patch,v $
+@@ -42,6 +42,12 @@
+  *
+  * Revisions   :
+  *    $Log: not supported by cvs2svn $
++ *    Revision 1.41.2.7  2004/02/17 13:30:23  oes
++ *    Moved cgi_error_disabled() from cgiedit.c to
++ *    cgi.c to re-enable build with --disable-editor.
++ *    Fixes Bug #892744. Thanks to Matthew Fischer
++ *    for spotting.
++ *
+  *    Revision 1.41.2.6  2003/12/18 08:13:48  oes
+  *    One line lost in last commit
+  *
+@@ -469,8 +475,6 @@
+ jb_err cgi_error_file_read_only(struct client_state *csp,
+                                 struct http_response *rsp,
+                                 const char *filename);
+-jb_err cgi_error_disabled(struct client_state *csp,
+-                          struct http_response *rsp);
+ 
+ /* Internal arbitrary config file support functions */
+ static jb_err edit_read_file_lines(FILE *fp, struct file_line ** pfile, int *newline);
+@@ -2408,40 +2412,6 @@
+ 
+ /*********************************************************************
+  *
+- * Function    :  cgi_error_disabled
+- *
+- * Description :  CGI function that is called if the actions editor
+- *                is called although it's disabled in config
+- *
+- * Parameters  :
+- *          1  :  csp = Current client state (buffers, headers, etc...)
+- *          2  :  rsp = http_response data structure for output
+- *
+- * CGI Parameters : none
+- *
+- * Returns     :  JB_ERR_OK on success
+- *                JB_ERR_MEMORY on out-of-memory error.
+- *
+- *********************************************************************/
+-jb_err cgi_error_disabled(struct client_state *csp,
+-                          struct http_response *rsp)
+-{
+-   struct map *exports;
+-
+-   assert(csp);
+-   assert(rsp);
+-
+-   if (NULL == (exports = default_exports(csp, NULL)))
+-   {
+-      return JB_ERR_MEMORY;
+-   }
+-
+-   return template_fill_for_cgi(csp, "cgi-error-disabled", exports, rsp);
+-}
+-
+-
+-/*********************************************************************
+- *
+  * Function    :  cgi_edit_actions
+  *
+  * Description :  CGI function that allows the user to choose which
+diff -ur privoxy-3.0.3/cgiedit.h privoxy-3.0.3-stable/cgiedit.h
+--- privoxy-3.0.3/cgiedit.h	2002-11-28 19:15:17.000000000 +0100
++++ privoxy-3.0.3-stable/cgiedit.h	2004-02-17 15:13:27.000000000 +0100
+@@ -1,6 +1,6 @@
+ #ifndef CGIEDIT_H_INCLUDED
+ #define CGIEDIT_H_INCLUDED
+-#define CGIEDIT_H_VERSION "$Id: privoxy-3.0.3.2.patch,v 1.1 2005/02/26 23:22:34 mrness Exp $"
++#define CGIEDIT_H_VERSION "$Id: privoxy-3.0.3.2.patch,v 1.1 2005/02/26 23:22:34 mrness Exp $"
+ /*********************************************************************
+  *
+  * File        :  $Source: /var/cvsroot/gentoo-x86/www-proxy/privoxy/files/privoxy-3.0.3.2.patch,v $
+@@ -37,6 +37,12 @@
+  *
+  * Revisions   :
+  *    $Log: not supported by cvs2svn $
++ *    Revision 1.7.2.2  2004/02/17 13:30:23  oes
++ *    Moved cgi_error_disabled() from cgiedit.c to
++ *    cgi.c to re-enable build with --disable-editor.
++ *    Fixes Bug #892744. Thanks to Matthew Fischer
++ *    for spotting.
++ *
+  *    Revision 1.7.2.1  2002/11/28 18:15:17  oes
+  *    Added cgi_error_disabled
+  *
+@@ -140,8 +146,6 @@
+ extern jb_err cgi_toggle        (struct client_state *csp,
+                                  struct http_response *rsp,
+                                  const struct map *parameters);
+-extern jb_err cgi_error_disabled(struct client_state *csp,
+-                                 struct http_response *rsp);
+ #endif /* def FEATURE_CGI_EDIT_ACTIONS */
+ 
+ 

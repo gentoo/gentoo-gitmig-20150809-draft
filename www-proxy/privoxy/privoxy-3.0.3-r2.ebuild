@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/privoxy-3.0.3-r1.ebuild,v 1.2 2005/02/26 23:22:34 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/privoxy-3.0.3-r2.ebuild,v 1.1 2005/02/26 23:22:34 mrness Exp $
 
-inherit eutils
+inherit toolchain-funcs eutils
 
 HOMEPAGE="http://www.privoxy.org"
 DESCRIPTION="A web proxy with advanced filtering capabilities for protecting privacy against internet junk."
 SRC_URI="mirror://sourceforge/ijbswa/${P}-stable-src.tar.gz"
-RESTRICT="nomirror"
 
 IUSE="pcre selinux"
 SLOT="0"
@@ -15,7 +14,7 @@ KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
 LICENSE="GPL-2"
 
 DEPEND=">=sys-apps/sed-4
-	sys-devel/autoconf
+	=sys-devel/autoconf-2.1*
 	virtual/libc
 	pcre? ( dev-libs/libpcre )"
 
@@ -33,16 +32,28 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i -e 's:confdir .:confdir /etc/privoxy:' \
-		-e 's:logdir .:logdir /var/log/privoxy:' \
-		-e 's:logfile logfile:logfile privoxy.log:' ${S}/config
-	sed -i 's:^\+set-image-blocker{pattern}:+set-image-blocker{blank}:' ${S}/default.action.master
 
-	autoheader || die "autoheader failed"
-	autoconf || die "autoconf failed"
+	# update to privoxy 3.0.3-2
+	epatch ${FILESDIR}/privoxy-3.0.3.2.patch
+	# add gzip and zlib decompression
+	epatch ${FILESDIR}/privoxy-zlib.patch
+
+	rm ${S}/autom4te.cache/{output.0,requests,traces.0}
+
+	sed -e 's:confdir .:confdir /etc/privoxy:' \
+		-e 's:logdir .:logdir /var/log/privoxy:' \
+		-e 's:logfile logfile:logfile privoxy.log:' \
+		-i ${S}/config || die "sed failed."
+	sed -e 's:^\+set-image-blocker{pattern}:+set-image-blocker{blank}:' \
+		-i ${S}/default.action.master || die "sed 2 failed."
 }
 
 src_compile() {
+	export WANT_AUTOCONF=2.1
+	autoheader || die "autoheader failed"
+	autoconf || die "autoconf failed"
+
+	export CC=$(tc-getCC)
 	econf \
 		$(use_enable pcre dynamic-pcre) \
 		--sysconfdir=/etc/privoxy || die "econf failed"
