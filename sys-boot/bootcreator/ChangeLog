@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/bootcreator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/bootcreator/ChangeLog,v 1.1 2005/01/16 19:21:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/bootcreator/ChangeLog,v 1.2 2005/01/20 18:13:32 pylon Exp $
+
+  20 Jan 2005; Lars Weiler <pylon@gentoo.org> bootcreator-1.1.ebuild:
+  Stable now.
 
 *bootcreator-1.1 (16 Jan 2005)
 
