@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.3.ebuild,v 1.1 2003/09/21 02:23:34 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.3.ebuild,v 1.2 2003/12/06 23:09:42 lanius Exp $
 
 inherit flag-o-matic
 
@@ -18,9 +18,7 @@ IUSE="alsa ladcca jack sse"
 DEPEND="ladcca? ( media-libs/ladcca ) \
 	jack? ( virtual/jack ) \
 	media-libs/ladspa-sdk \
-	alsa? ( media-sound/alsa-driver \
-	media-libs/alsa-lib \
-	media-sound/alsa-utils )"
+	alsa? ( media-libs/alsa-lib )"
 
 src_compile() {
 	local myconf

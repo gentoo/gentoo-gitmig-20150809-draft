@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.2 2003/09/21 02:23:34 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.3 2003/12/06 23:09:42 lanius Exp $
+
+  07 Dec 2003; Heinrich Wendel <lanius@gentoo.org> fluidsynth-1.0.1.ebuild,
+  fluidsynth-1.0.3.ebuild:
+  removed unnecessary dep on alsa-driver, alsa-utils
 
 *fluidsynth-1.0.3 (21 Sep 2003)
 

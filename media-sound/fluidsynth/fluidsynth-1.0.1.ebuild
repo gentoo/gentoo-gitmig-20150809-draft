@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.1.ebuild,v 1.3 2003/09/08 07:09:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.1.ebuild,v 1.4 2003/12/06 23:09:42 lanius Exp $
 
 DESCRIPTION="IIWU Synth is a software real-time synthesizer based on the
 Soundfont 2 specifications."
@@ -15,9 +15,7 @@ IUSE="alsa ladcca"
 
 DEPEND="ladcca? ( media-libs/ladcca ) \
 	media-libs/ladspa-sdk \
-	alsa? ( media-sound/alsa-driver \
-		media-libs/alsa-lib \
-		media-sound/alsa-utils )"
+	alsa? ( media-libs/alsa-lib )"
 
 src_compile() {
 	local myconfig
