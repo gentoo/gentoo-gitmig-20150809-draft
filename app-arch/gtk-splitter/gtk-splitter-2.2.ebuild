@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/gtk-splitter-2.2.ebuild,v 1.1 2004/06/01 05:00:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/gtk-splitter-2.2.ebuild,v 1.2 2004/06/01 21:33:51 mr_bones_ Exp $
 
 DESCRIPTION="split/combine files !"
 HOMEPAGE="http://gtk-splitter.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="crypt"
@@ -16,6 +16,6 @@ DEPEND=">=x11-libs/gtk+-2
 RDEPEND=">=dev-util/pkgconfig-0.12"
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die "make install failed"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }
