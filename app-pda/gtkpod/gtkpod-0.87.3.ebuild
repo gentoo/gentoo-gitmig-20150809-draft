@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.87.3.ebuild,v 1.1 2005/03/04 05:40:47 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.87.3.ebuild,v 1.2 2005/03/04 15:48:34 mr_bones_ Exp $
 
 DESCRIPTION="GUI for iPod using GTK2"
 HOMEPAGE="http://gtkpod.sourceforge.net/"
@@ -17,7 +17,7 @@ DEPEND=">=x11-libs/gtk+-2.4.0
 
 src_unpack() {
 	unpack ${A}
-	
+
 	# Disable aac forcefully if not enabled
 	cd ${S}
 	use aac || sed -i -e s/MP4FileInfo/MP4FileInfoDisabled/g configure
