@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.224 2004/04/27 16:57:09 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.225 2004/04/27 18:24:05 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gcc-3.0.4-r6.ebuild:
+  Add flag-o-matic for bug 49179
 
 *gcc-3.3.3_pre20040426 (27 Apr 2004)
 
