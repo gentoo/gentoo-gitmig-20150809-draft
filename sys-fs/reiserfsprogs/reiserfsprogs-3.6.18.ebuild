@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.18.ebuild,v 1.8 2004/11/01 22:12:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.18.ebuild,v 1.9 2005/01/10 19:53:47 gustavoz Exp $
 
 inherit flag-o-matic eutils gnuconfig
 
