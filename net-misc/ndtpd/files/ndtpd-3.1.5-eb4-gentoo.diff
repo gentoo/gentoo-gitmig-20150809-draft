@@ -1,0 +1,35 @@
+diff -urN ndtpd-3.1.5.ORIG/configure.ac ndtpd-3.1.5/configure.ac
+--- ndtpd-3.1.5.ORIG/configure.ac	2003-05-24 12:44:12.000000000 +0900
++++ ndtpd-3.1.5/configure.ac	2004-01-04 01:09:44.131743536 +0900
+@@ -46,11 +46,6 @@
+ [logdir="${withval}"], [logdir='$(localstatedir)/ndtpd/log'])
+ AC_SUBST(logdir)
+ 
+-dnl *
+-dnl * EB Library 3.x.
+-dnl *
+-eb_LIB_EB3
+-
+ dnl * 
+ dnl * Alternative Programs.
+ dnl * 
+@@ -78,6 +73,7 @@
+ dnl * Compiler Characteristics.
+ dnl * 
+ AC_C_CONST
++AC_C_PROTOTYPES
+ 
+ dnl * 
+ dnl * Libraries.
+@@ -178,6 +174,11 @@
+ fi
+ AC_MSG_RESULT($ENABLE_IPV6)
+ 
++dnl *
++dnl * EB Library 3.x.
++dnl *
++eb_LIB_EB3
++
+ dnl * 
+ dnl * Output Files.
+ dnl * 

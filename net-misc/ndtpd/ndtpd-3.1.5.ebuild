@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ndtpd-3.1.5.ebuild,v 1.4 2003/09/18 12:32:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ndtpd-3.1.5.ebuild,v 1.5 2004/01/03 16:19:43 usata Exp $
 
 inherit eutils
 
@@ -14,12 +14,21 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND=">=dev-libs/eb-3
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.57"
+RDEPEND=">=dev-libs/eb-3
 	>=sys-libs/zlib-1.1.3-r2"
 
-S="${WORKDIR}/${P}"
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-eb4-gentoo.diff
+}
 
 src_compile() {
+
+	autoreconf || die
 
 	econf --with-eb-conf=/etc/eb.conf || die
 	emake || die
@@ -47,6 +56,7 @@ src_install() {
 		cat >>${T}/services<<-EOF
 		ndtp		2010/tcp			# Network Dictionary Transfer Protocol
 		EOF
+		insinto /etc
 		doins ${T}/services
 	fi
 
