@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/giftcurs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.21 2003/08/31 21:58:18 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.22 2004/01/07 01:24:38 spider Exp $
+
+*giftcurs-0.6.1-r1 (07 Jan 2004)
+
+  07 Jan 2004; <spider@gentoo.org> giftcurs-0.5.5.ebuild,
+  giftcurs-0.5.6.ebuild, giftcurs-0.5.7.ebuild, giftcurs-0.6.0.ebuild,
+  giftcurs-0.6.1-r1.ebuild, giftcurs-0.6.1.ebuild, metadata.xml:
+  added an RDEPEND for gift, removed stale packages and marked this one as
+  stable. Fixed Copyright years
 
 *giftcurs-0.6.1 (31 Aug 2003)
 
