@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_beta3.ebuild,v 1.3 2004/08/01 20:55:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_beta3.ebuild,v 1.4 2004/09/11 10:22:12 slarti Exp $
 
 inherit elisp
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://cedet.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cedet/${PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 DEPEND="virtual/emacs
 	!app-emacs/semantic
 	!app-emacs/eieio
