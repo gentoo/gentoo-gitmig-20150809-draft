@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 40e01ec956d720880d36aa6f1cc0a9ec newt-0.50.35-r3.ebuild 899
 MD5 cc19d21de0e9ae41c1c65a428c75557d newt-0.50.35-r2.ebuild 860
-MD5 4eb96288aa305600158e7ad0eae0652e newt-0.50.35-r4.ebuild 1508
-MD5 90e7a768febefd8fa051202ef3f342c7 ChangeLog 1776
+MD5 e4d05c5f9001296d1fb102bb9b0aa592 newt-0.50.35-r4.ebuild 1558
+MD5 8114770975094e5058bbf2af41074911 ChangeLog 1921
 MD5 6d5a67f6fae3839c22aa176ffbd96790 files/digest-newt-0.50.35-r2 64
 MD5 6d5a67f6fae3839c22aa176ffbd96790 files/digest-newt-0.50.35-r3 64
 MD5 6d5a67f6fae3839c22aa176ffbd96790 files/digest-newt-0.50.35-r4 64
@@ -12,7 +12,7 @@ MD5 6d5a67f6fae3839c22aa176ffbd96790 files/digest-newt-0.50.35-r4 64
 Version: GnuPG v1.2.6 (GNU/Linux)
 Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iD8DBQFBv+faPpIsIjIzwiwRAhP7AJ98dud6KBXYois/GULEpWWo8xe11gCgy5cR
-8vdfFhkCn2W4izJmffVE/60=
-=cri2
+iD8DBQFBxRmOPpIsIjIzwiwRAvasAKD+vB17uXhV/0HTnPl4e42NoQY2aQCfe/35
+rlnR34V6fsXB7ftDuNXJ3OU=
+=pm2v
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.14 2004/12/15 07:30:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.15 2004/12/19 06:04:03 robbat2 Exp $
+
+  18 Dec 2004; Robin H. Johnson <robbat2@gentoo.org> newt-0.50.35-r4.ebuild:
+  Bug #74508, not parallel-safe during make for high values of -j.
 
 *newt-0.50.35-r4 (14 Dec 2004)
 

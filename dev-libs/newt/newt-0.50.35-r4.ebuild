@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r4.ebuild,v 1.1 2004/12/15 07:30:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r4.ebuild,v 1.2 2004/12/19 06:04:03 robbat2 Exp $
 
 inherit python toolchain-funcs
 
@@ -35,14 +35,16 @@ src_unpack() {
 src_compile() {
 	python_version
 	econf || die
-	emake PYTHONVERS="python${PYVER}" RPM_OPT_FLAGS="${CFLAGS}" CC="$(tc-getCC)" || die "make failure"
+	# not parallel safe
+	emake -j1 PYTHONVERS="python${PYVER}" RPM_OPT_FLAGS="${CFLAGS}" CC="$(tc-getCC)" || die "make failure"
 }
 
 src_install () {
 	python_version
 	# the RPM_OPT_FLAGS="ERROR" is there to catch a build error
 	# if it fails, that means something in src_compile() didn't build properly
-	emake prefix="${D}/usr" PYTHONVERS="python${PYVER}" RPM_OPT_FLAGS="ERROR" install || die "make install failed"
+	# not parallel safe
+	emake -j1 prefix="${D}/usr" PYTHONVERS="python${PYVER}" RPM_OPT_FLAGS="ERROR" install || die "make install failed"
 	dodoc CHANGES COPYING peanuts.py popcorn.py tutorial.sgml
 	dosym libnewt.so.${PV} /usr/lib/libnewt.so.0.50
 }
