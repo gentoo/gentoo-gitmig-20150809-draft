@@ -1,11 +1,14 @@
 # ChangeLog for x11-plugins/docker
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/docker/ChangeLog,v 1.6 2004/10/02 15:45:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/docker/ChangeLog,v 1.7 2004/12/28 22:14:42 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   26 Jul 2004; <malc@gentoo.org> docker-1.5.ebuild:
   Add ~amd64 - closes bug #58438
 
-  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> docker-1.5.ebuild:
+  12 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> docker-1.5.ebuild:
   Stable on alpha.
 
 *docker-1.5 (07 Feb 2004)

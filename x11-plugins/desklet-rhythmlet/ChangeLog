@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-rhythmlet
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-rhythmlet/ChangeLog,v 1.5 2004/11/11 20:48:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-rhythmlet/ChangeLog,v 1.6 2004/12/28 22:14:13 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   11 Nov 2004; Simon Stelling <blubb@gentoo.org>
   desklet-rhythmlet-0.3g.ebuild:
@@ -10,7 +13,7 @@
   desklet-rhythmlet-0.3g.ebuild:
   Masked desklet-rhythmlet-0.3g.ebuild stable for ppc
 
-  20 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  20 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   desklet-rhythmlet-0.3g.ebuild:
   dev-python/Imaging is now dev-python/imaging - adjust dependencies accordingly.
 

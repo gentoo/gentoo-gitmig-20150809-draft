@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gaim-encryption
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/ChangeLog,v 1.49 2004/12/17 21:21:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/ChangeLog,v 1.50 2004/12/28 22:15:19 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   17 Dec 2004; Markus Rothe <corsair@gentoo.org>
   gaim-encryption-2.32-r1.ebuild:
@@ -43,7 +46,7 @@
   -gaim-encryption-2.31.ebuild:
   Pruning old versions
 
-  21 Oct 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  21 Oct 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   gaim-encryption-2.32.ebuild:
   Stable on alpha, bug 68271.
 
@@ -78,7 +81,7 @@
   05 Oct 2004; Guy Martin <gmsoft@gentoo.org> gaim-encryption-2.31.ebuild:
   Stable on hppa.
 
-  03 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  03 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gaim-encryption-2.31.ebuild:
   Stable on alpha.
 
@@ -128,7 +131,7 @@
   25 Aug 2004; Travis Tilley <lv@gentoo.org> gaim-encryption-2.29.ebuild:
   stable on amd64
 
-  25 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  25 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gaim-encryption-2.29.ebuild:
   Stable on alpha, bug 61457.
 
@@ -169,7 +172,7 @@
   27 Jul 2004; Don Seiler <rizzo@gentoo.org> gaim-encryption-2.28.ebuild:
   Stable on x86
 
-  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  19 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gaim-encryption-2.27.ebuild:
   Stable on alpha.
 
@@ -217,7 +220,7 @@
   24 May 2004; Travis Tilley <lv@gentoo.org> gaim-encryption-2.25.ebuild:
   stable on amd64
 
-  01 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  01 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gaim-encryption-2.25.ebuild:
   Stable on alpha.
 

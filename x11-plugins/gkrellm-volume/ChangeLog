@@ -1,8 +1,11 @@
 # ChangeLog for x11-plugins/gkrellm-volume
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/ChangeLog,v 1.19 2004/07/18 23:39:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/ChangeLog,v 1.20 2004/12/28 22:16:23 ciaranm Exp $
 
-  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  19 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gkrellm-volume-2.1.9.ebuild:
   Stable on alpha.
 

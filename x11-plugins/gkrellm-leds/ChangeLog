@@ -1,12 +1,15 @@
 # ChangeLog for x11-plugins/gkrellm-leds
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/ChangeLog,v 1.12 2004/11/14 20:00:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/ChangeLog,v 1.13 2004/12/28 22:15:51 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   14 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
   gkrellm-leds-0.8.1.ebuild:
   Stable on alpha.
 
-  19 Jul 2004; Bryan �stergaard <kloeri@gentoo.org> gkrellm-leds-0.8.1.ebuild:
+  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gkrellm-leds-0.8.1.ebuild:
   Added ~alpha keyword.
 
   29 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> gkrellm-leds-0.8.1.ebuild:
