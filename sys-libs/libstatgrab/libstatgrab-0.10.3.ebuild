@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/libstatgrab-0.10.3.ebuild,v 1.2 2004/10/04 21:26:03 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/libstatgrab-0.10.3.ebuild,v 1.3 2004/11/08 08:44:55 mr_bones_ Exp $
 
 DESCRIPTION="Provides cross platform access to statistics about the system on which it's run."
-SRC_URI="http://www.mirrorservice.org/sites/ftp.i-scream.org/pub/i-scream/libstatgrab/${P}.tar.gz"
 HOMEPAGE="http://www.i-scream.org/libstatgrab/"
+SRC_URI="http://www.mirrorservice.org/sites/ftp.i-scream.org/pub/i-scream/libstatgrab/${P}.tar.gz"
+
+LICENSE="|| ( GPL-2 LGPL-2.1 )"
 SLOT=0
-LICENSE="GPL-2 | LGPL-2.1"
 KEYWORDS="~x86 ppc"
 IUSE=""
 RDEPEND=">=sys-libs/ncurses-5.4-r1
