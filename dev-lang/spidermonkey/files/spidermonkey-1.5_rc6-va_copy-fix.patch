@@ -1,0 +1,38 @@
+--- config/Linux_All.mk.orig	2005-02-09 22:10:41.756776680 +0000
++++ config/Linux_All.mk	2005-02-09 22:17:12.809327656 +0000
+@@ -86,7 +86,7 @@
+ JS_EDITLINE = 1
+ 
+ ifeq ($(CPU_ARCH),x86_64)
+-# Use VA_COPY() standard macro on x86-64
++# Use va_copy() standard macro on x86-64
+ # FIXME: better use it everywhere
+ OS_CFLAGS += -DHAVE_VA_COPY
+ endif
+@@ -96,3 +96,15 @@
+ # FIXME: better patch rules.mk & fdlibm/Makefile*
+ OS_CFLAGS += -DPIC -fPIC
+ endif
++
++ifeq ($(CPU_ARCH),ppc)
++# Use va_copy() standard macro on ppc
++# FIXME: better use it everywhere
++OS_CFLAGS += -DHAVE_VA_COPY
++endif
++
++ifeq ($(CPU_ARCH),ppc)
++# We need PIC code for shared libraries
++# FIXME: better patch rules.mk & fdlibm/Makefile*
++OS_CFLAGS += -DPIC -fPIC
++endif
+--- jsprf.c.orig	2005-02-09 22:22:38.017888440 +0000
++++ jsprf.c	2005-02-09 22:16:53.509261712 +0000
+@@ -55,7 +55,7 @@
+ ** and requires array notation.
+ */
+ #ifdef HAVE_VA_COPY
+-#define VARARGS_ASSIGN(foo, bar)        VA_COPY(foo,bar)
++#define VARARGS_ASSIGN(foo, bar)        va_copy(foo,bar)
+ #elif defined(HAVE_VA_LIST_AS_ARRAY)
+ #define VARARGS_ASSIGN(foo, bar)        foo[0] = bar[0]
+ #else
