@@ -1,5 +1,5 @@
-MD5 a832c26a0d4ab4ce262d9acf5a54ba9d ChangeLog 551
+MD5 af688f037e83ae04786a93654d29b4b3 ChangeLog 773
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 79e58c9a3932e15b655658df9742d027 ncsa-httpd-1.5.2a.ebuild 2078
+MD5 3695edc8af619c1e95958b46a4367f61 ncsa-httpd-1.5.2a.ebuild 2080
 MD5 3c8fa7efedafecfd7c5c7a2bbdf2b988 files/ncsa-httpd-1.5.2a.patch 8410
 MD5 9f7c216b1e80dd1aa1521ae2a56df73a files/digest-ncsa-httpd-1.5.2a 77
