@@ -1,11 +1,14 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.6 2003/04/05 12:48:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.7 2003/05/13 19:15:25 mholzer Exp $
+
+*cacti-0.6.8a (23 Oct 2002)
+
+  13 May 2003; Martin Holzer <mholzer@gentoo.org> cacti-0.6.8a.ebuild:
+  Added net-analyzer/rrdtool to RDEPEND. Closes #20953
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*cacti-0.6.8a (23 Oct 2002)
-
   05 Apr 2003; Martin Holzer <mholzer@gentoo.org> cacti-0.6.8a.ebuild:
   Digest fix, marked as stable
 
