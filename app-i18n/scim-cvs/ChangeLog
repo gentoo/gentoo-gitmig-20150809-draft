@@ -1,0 +1,9 @@
+# ChangeLog for app-i18n/scim-cvs
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/ChangeLog,v 1.1 2004/06/27 06:28:51 usata Exp $
+
+*scim-cvs-0.99.1 (27 Jun 2004)
+
+  27 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +scim-cvs-0.99.1.ebuild:
+  Initial import.
+
