@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/atari800
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/ChangeLog,v 1.1 2002/05/21 20:54:18 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/ChangeLog,v 1.2 2002/07/23 13:21:20 stubear Exp $
+
+*atari800-1.2.2 (21 Jul 2002)
+
+  21 Jul 2002; Stuart Bouyer <stubear@gentoo.org> atari800-1.2.2.ebuild:
+
+  Added KEYWORDS and SLOT to meet lintool and repoman QA.
 
 *atari800-1.2.2 (24 Feb 2002)
 
