@@ -1,0 +1,10 @@
+--- libxml++-1.0.pc.in.orig	2005-03-07 00:44:23.000000000 -0500
++++ libxml++-1.0.pc.in	2005-03-07 00:44:37.000000000 -0500
+@@ -8,5 +8,5 @@
+ Requires: libxml-2.0
+ Version: @VERSION@
+ Libs: -L${libdir} -lxml++-1.0
+-Cflags: -I${includedir}/libxml++-1.0 -I${libdir}/libxml++-1.0/include
++Cflags: -I${includedir}/libxml++-1.0
+ 
+

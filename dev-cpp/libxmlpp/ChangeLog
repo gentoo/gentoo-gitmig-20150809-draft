@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.19 2005/03/08 04:52:40 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.20 2005/03/11 03:48:21 jnc Exp $
+
+*libxmlpp-1.0.4-r2 (10 Mar 2005)
+
+  10 Mar 2005; Eric Shattow <jnc@gentoo.org> +files/libxmlpp-1.0.4-pc.patch,
+  +libxmlpp-1.0.4-r2.ebuild:
+  modified patch from mrbones. closes #83794.
 
 *libxmlpp-1.0.4-r1 (07 Mar 2005)
 
