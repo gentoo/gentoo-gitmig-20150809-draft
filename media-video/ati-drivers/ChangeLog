@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ati-drivers
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.27 2003/12/30 21:37:28 azarah Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.28 2004/02/23 23:46:00 lu_zero Exp $
+
+*ati-drivers-3.2.8-r1 (24 Feb 2004)
+
+  24 Feb 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.8-r1.ebuild:
+  driver only ebuild, optional stuff in ati-drivers-extra
 
   30 Dec 2003; Martin Schlemmer <azarah@gentoo.org> ati-drivers-3.7.0.ebuild:
   Fix path to ATI control panel in .desktop files.
