@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.31 2003/01/26 22:01:50 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.32 2003/01/27 08:10:29 bcowan Exp $
 
 *sylpheed-claws-0.8.9 (26 Jan 2003)
 
@@ -8,9 +8,14 @@
   files/digest-sylpheed-claws-0.8.9:
   
   Version bump, with many bugfixes and feature enhancements including new plugin support,
-  with a built in spamassassin plugin :).
-
-
+  with a built in spamassassin plugin :). To use the plugins you will need to load 
+  them Go to '/Configuration/Plugins' and click 'Load plugin', then select the 
+  plugin SpamAssassin usr/lib/sylpheed-claws/plugins/spamassassin.so, SpamAssassin GTK
+  usr/lib/sylpheed/plugins/spamassassin_gtk.so To configure the SpamAssassin 
+  plugin go to the new Preferences window, '/Configuration/Other Preferences', 
+  and select /Filtering/SpamAssassin.
+  
+  
 *sylpheed-claws-0.8.8-r1 (10 Jan 2003)
 
   10 Jan 2003; Luca Barbato <lu_zero@gentoo.org> sylpheed-claws-0.8.8-r1.ebuild,
