@@ -2,12 +2,12 @@
 Hash: SHA1
 
 MD5 f8da25347a16c1f616c6d1555cd6ab4b ChangeLog 1240
-MD5 1ff4ca6fa52b937683dc3a22815e53aa jam-2.5.ebuild 752
+MD5 a5686e3c1ed6f476191f125c7589d421 jam-2.5.ebuild 788
 MD5 7301e635c156f9b803a27cf6aee186de files/digest-jam-2.5 56
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD4DBQFB2h4EroRuSHgZdywRAhC7AJMHCQwMqg5nViA0StFojyEi0ZPFAJ4k6eOX
-7rlpbWQ4rMZB98foVOuRVA==
-=+u34
+iD8DBQFB4pC9roRuSHgZdywRAsndAJ9d/EClPupOhXk+aI7gv7ciU2hzFQCdGvJ4
+dhILYG6Y96X0idkhPcvbLv8=
+=I7Vl
 -----END PGP SIGNATURE-----
