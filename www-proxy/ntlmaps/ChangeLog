@@ -1,0 +1,21 @@
+# ChangeLog for net-www/ntlmaps
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/ntlmaps/ChangeLog,v 1.1 2004/08/15 18:55:44 stuart Exp $
+
+*ntlmaps-0.9.8 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/ntlmaps-0.9.8.patch, +files/ntlmaps.init, +ntlmaps-0.9.8.ebuild:
+  Moved from net-www/ntlmaps to www-proxy/ntlmaps.
+
+  17 Jun 2004; Christian Andreetta <satya@gentoo.org> ntlmaps-0.9.8.ebuild:
+  added inherit eutils
+
+*ntlmaps-0.9.8 (11 Jun 2004)
+
+  11 Jun 2004; David Holm <dholm@gentoo.org> ntlmaps-0.9.8.ebuild:
+  Added to ~ppc.
+
+  10 Jun 2004; satya@gentoo.org :
+  New ebuild, as per bug #49958. Initscripts.
+
