@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r2.ebuild,v 1.1 2004/05/05 10:00:00 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r2.ebuild,v 1.2 2004/05/05 10:19:26 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -135,7 +135,8 @@ RDEPEND=">=sys-libs/glibc-2.1
 DEPEND="${RDEPEND}
 	app-shells/tcsh
 	!app-office/openoffice-bin
-	!app-arch/star"
+	!app-arch/star
+	!dev-util/dmake"
 
 # fix a bug with tcsh and dircolors
 #
