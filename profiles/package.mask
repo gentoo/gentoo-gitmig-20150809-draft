@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <blizzy@gentoo.org> (08 Aug 2002)
+# masked since it's beta
+=dev-java/sun-jdk-1.4.1_beta
+
 # <phoenix@gentoo.org> (07 Aug 2002)
 # I'll bump to winex2.1 today
 # Masked for testing
