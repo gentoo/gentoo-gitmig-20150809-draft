@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/xloadimage-4.1.ebuild,v 1.9 2002/12/16 22:48:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/xloadimage-4.1.ebuild,v 1.10 2003/01/19 16:13:04 bjb Exp $
 
 IUSE="tiff jpeg png"
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.x.org/R5contrib/${MY_P}.tar.gz"
 HOMEPAGE="http://gopher.std.com/homepages/jimf/xloadimage.html"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 sparc  ppc ~alpha"
+KEYWORDS="x86 sparc  ppc alpha"
 DEPEND="x11-base/xfree
 	tiff? ( media-libs/tiff )
 	png? ( media-libs/libpng )
