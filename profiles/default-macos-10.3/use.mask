@@ -3,15 +3,11 @@
 # alsa will more than likely never compile on os x
 alsa
 
-selinux
+# cap is for linux kernel
+cap
 
 # Skipping docs for now
-
 doc
-
-fbcon
-directfb
-svga
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
@@ -23,7 +19,6 @@ cpdflib
 db2
 dbmaker
 directfb
-doc
 empress
 empress-bcs
 esoob
