@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-themes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-themes/ChangeLog,v 1.24 2004/07/12 17:14:43 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-themes/ChangeLog,v 1.25 2004/08/06 08:52:23 gmsoft Exp $
+
+  06 Aug 2004; Guy Martin <gmsoft@gentoo.org> xfce4-themes-4.0.6.ebuild:
+  Stable on hppa.
 
 *xfce4-themes-4.0.6 (12 Jul 2004)
 
