@@ -471,3 +471,5 @@ move app-games/searchandrescue games-simulation/searchandrescue
 move app-games/senken games-simulation/senken
 move app-games/simutrans games-simulation/simutrans
 move app-games/stoned games-simulation/stoned
+move app-games/tornado games-strategy/tornado
+move app-games/supertux games-arcade/supertux
