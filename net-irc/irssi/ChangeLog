@@ -1,8 +1,11 @@
 # ChangeLog for homeblutgensgentoo-x86net-ircirssiChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.4 2002/07/15 18:50:27 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.5 2002/07/25 04:51:31 gerk Exp $
 
 irssi-0.8.5-r1 (15 Jul 2002)
+
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   15 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
 
