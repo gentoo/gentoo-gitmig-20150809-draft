@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.2.ebuild,v 1.10 2004/07/07 00:45:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.2-r1.ebuild,v 1.1 2004/07/07 01:46:55 vapier Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/1.3-nanopermsfix.patch
 	use nomac && epatch ${FILESDIR}/${PV}-nomac.patch
 	use wsconvert && epatch ${FILESDIR}/${PV}-wsconvert.patch
 }
