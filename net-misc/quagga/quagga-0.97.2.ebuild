@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.97.2.ebuild,v 1.1 2004/10/25 17:35:17 amir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.97.2.ebuild,v 1.2 2004/11/02 23:40:23 vapier Exp $
 
 inherit eutils
 
@@ -9,23 +9,24 @@ MD5_PATCH="ht-20040525-0.96.5-bgp-md5.patch"
 
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
 HOMEPAGE="http://quagga.net/"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
-SLOT="0"
-LICENSE="GPL-2"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz
 	tcpmd5? ( http://hasso.linux.ee/quagga/$MD5_PATCH )"
 
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc ~x86"
 IUSE="ipv6 snmp pam tcpmd5 ospfapi"
 
-DEPEND="virtual/libc
-	sys-devel/binutils
-	sys-apps/iproute2
+RDEPEND="sys-apps/iproute2
 	=sys-libs/libcap-1.10-r3
 	!sys-apps/zebra
 	!sys-apps/zebra-ag-svn
 	!sys-apps/zebra-pj-cvs
 	!sys-apps/quagga-ag-svn-HEAD
 	!sys-apps/quagga-svn-HEAD"
+DEPEND="${RDEPEND}
+	virtual/libc
+	sys-devel/binutils"
 
 [ -z "${QUAGGA_USER_NAME}" ] && QUAGGA_USER_NAME="quagga"
 [ -z "${QUAGGA_USER_UID}" ] && QUAGGA_USER_UID=441
