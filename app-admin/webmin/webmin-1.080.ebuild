@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.080.ebuild,v 1.1 2003/04/13 15:02:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.080.ebuild,v 1.2 2003/09/05 01:21:37 msterret Exp $
 
 IUSE="ssl"
 
@@ -29,7 +29,7 @@ src_install() {
 	cp -rp * ${D}/usr/libexec/webmin
 	mv ${D}/usr/libexec/webmin/openslp/config \
 		${D}/usr/libexec/webmin/openslp/config-gentoo-linux
-	
+
 	exeinto /etc/init.d
 	newexe webmin-gentoo-init webmin
 

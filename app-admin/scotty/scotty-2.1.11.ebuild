@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/scotty/scotty-2.1.11.ebuild,v 1.2 2003/06/29 15:24:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/scotty/scotty-2.1.11.ebuild,v 1.3 2003/09/05 01:25:18 msterret Exp $
 
 DESCRIPTION="tcl network management extension"
 HOMEPAGE="http://wwwhome.cs.utwente.nl/~schoenw/scotty"
@@ -32,14 +32,14 @@ src_install() {
 		MAN_INSTALL_DIR=${D}/usr/share/man install
 	make prefix=${D}/usr \
 		MAN_INSTALL_DIR=${D}/usr/share/man sinstall
-	cd ${D}/usr/bin 
-	perl -p -i -e 's|/.*/image||' ${D}/usr/lib/tnm2.1.11/pkgIndex.tcl 
-	perl -p -i -e 's|/.*/image||' ${D}/usr/lib/tkined1.4.11/pkgIndex.tcl 
+	cd ${D}/usr/bin
+	perl -p -i -e 's|/.*/image||' ${D}/usr/lib/tnm2.1.11/pkgIndex.tcl
+	perl -p -i -e 's|/.*/image||' ${D}/usr/lib/tkined1.4.11/pkgIndex.tcl
 	ln -s scotty2.1.11 scotty
 	ln -s tkined1.4.11 tkined
 #	mv ${D}/usr/share/man/mann ${D}/usr/share/man/man3
-#	cd ${D}/usr/share/man/man3 
-#	for f in `find ./ -name "*.n"`; do 
+#	cd ${D}/usr/share/man/man3
+#	for f in `find ./ -name "*.n"`; do
 #		echo ${f} `echo ${f}|cut -d. -f2|cut -d/ -f2`
 #		mv ${f} `echo ${f}|cut -d. -f2|cut -d/ -f2`.3tnm
 #	done

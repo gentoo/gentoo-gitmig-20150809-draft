@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.04-r1.ebuild,v 1.2 2003/06/11 20:51:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.04-r1.ebuild,v 1.3 2003/09/05 01:22:31 msterret Exp $
 
 inherit perl-module
 
@@ -37,11 +37,11 @@ use apache2 && HTTPD_ROOT="`grep '^DocumentRoot' /etc/apache2/conf/apache2.conf 
 [ -z "${HTTPD_GROUP}" ] && HTTPD_GROUP="apache"
 
 src_install() {
-	
+
 	perl-module_src_install
-	
+
 	dodoc ${DOCS}
-	
+
 	#Correct configfile
 	dodir /etc/${PN}
 	mv ${D}usr/etc/eidetic/* ${D}etc/${PN}
@@ -53,14 +53,14 @@ src_install() {
 		&& rm *.orig \
 		|| ewarn "Please check /etc/${PN}/${PN}.conf"
 	rm -fr ${D}usr/etc											#Remove trash
-	
+
 	einfo "Installing example in ${HTTPD_ROOT}/${PN}"
 	cd ${S}
 	dodir ${HTTPD_ROOT}/${PN}
 	mv example/* ${D}${HTTPD_ROOT}/${PN}
 	mv ${D}usr/var/www/html/* ${D}${HTTPD_ROOT}
 	rm -fr ${D}usr/var											#Remove trash
-	
+
 	#Install .cgi
 	dodir ${HTTPD_ROOT}/../cgi-bin
 	cp cgi-bin/rackview.cgi ${D}${HTTPD_ROOT}/../cgi-bin/${PN}.cgi.orig \
@@ -69,8 +69,8 @@ src_install() {
 		       -e "s:eidetic:${PN}:" ${PN}.cgi.orig > ${PN}.cgi \
 		&& chmod u+x ${PN}.cgi \
 		&& rm ${PN}.cgi.orig	\
-		|| ewarn "Please copy (& check) ${PN}.cgi manually." 
-	
+		|| ewarn "Please copy (& check) ${PN}.cgi manually."
+
 	#Script needs to change also
 	cd ${D}usr/bin
 	cp erackview erackview.orig \
@@ -78,7 +78,7 @@ src_install() {
 		&& chmod ugo+x e${PN} \
 		&& rm erackview.orig \
 		|| ewarn "Please check script 'e${PN}'."
-		
+
 	#Making sure HTTPD_USER owns all files
 	cd ${D}
 	chown -R ${HTTPD_USER}:${HTTPD_GROUP} * || ewarn "Check if ${HTTPD_USER} owns all files."

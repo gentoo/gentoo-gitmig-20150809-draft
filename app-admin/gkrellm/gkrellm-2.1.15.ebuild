@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.15.ebuild,v 1.2 2003/09/04 13:34:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.15.ebuild,v 1.3 2003/09/05 01:23:29 msterret Exp $
 
 IUSE="gtk gtk2 nls"
 
@@ -25,7 +25,7 @@ src_compile() {
 	fi
 
 	sed -i 's:INSTALLROOT ?= /usr/local:INSTALLROOT ?= ${D}/usr:' Makefile
-	
+
 	if use gtk2 || use gtk
 	then
 		emake || die
@@ -52,7 +52,7 @@ src_install() {
 
 		cd ${S}
 		mv gkrellm.1 gkrellm2.1
-		
+
 		mv src/gkrellm src/gkrellm2
 		dobin src/gkrellm2
 		rm -f ${D}/usr/bin/gkrellm
