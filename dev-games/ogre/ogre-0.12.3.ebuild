@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.12.3.ebuild,v 1.2 2004/02/08 04:36:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.12.3.ebuild,v 1.3 2004/02/11 08:10:03 mr_bones_ Exp $
 
 DESCRIPTION="Object-oriented Graphics Rendering Engine"
 HOMEPAGE="http://www.ogre3d.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/ogre/${PN}-v${PV//./-}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="doc gtk"
 
 RDEPEND="virtual/opengl

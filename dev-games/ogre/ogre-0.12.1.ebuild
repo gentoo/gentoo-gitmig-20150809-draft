@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.12.1.ebuild,v 1.2 2003/11/29 23:51:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.12.1.ebuild,v 1.3 2004/02/11 08:10:03 mr_bones_ Exp $
 
 S=${WORKDIR}/ogrenew
 DESCRIPTION="Object-oriented Graphics Rendering Engine"
