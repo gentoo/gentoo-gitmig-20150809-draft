@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-0.6.99.5.ebuild,v 1.1 2004/03/16 05:48:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-0.6.99.5.ebuild,v 1.2 2004/03/17 12:20:34 mr_bones_ Exp $
 
 inherit games
 
@@ -25,8 +25,9 @@ src_compile() {
 		`use_enable server` \
 		`use_enable editor` \
 		`use_enable tools` \
-		|| die "egamesconf failed"
-	emake || die "emake failed"
+			|| die "egamesconf failed"
+	# broken makefiles bug #44831
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
