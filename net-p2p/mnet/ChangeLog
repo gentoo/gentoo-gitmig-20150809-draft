@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/mnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mnet/ChangeLog,v 1.7 2003/03/03 16:59:32 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mnet/ChangeLog,v 1.8 2003/03/06 18:04:15 hannes Exp $
+
+*mnet-0.6.1.203 (06 Mar 2003)
+
+  06 Mar 2003; Hannes Mehnert <hannes@gentoo.org> mnet-0.6.1.203.ebuild:
+  version bump
 
 *mnet-0.6.1.201 (03 Mar 2003)
 
