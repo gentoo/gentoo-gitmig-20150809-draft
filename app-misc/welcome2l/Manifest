@@ -1,5 +1,5 @@
-MD5 aaedeed9e524a188b9d8d48a39ea9b8b ChangeLog 1121
-MD5 6b5c4a4fdcd238ed911ceaebb460cb67 welcome2l-3.04.ebuild 942
+MD5 ee60490bce84a8280689843de031ed88 ChangeLog 1209
+MD5 684468184ee42abe52abab45cb21e15d welcome2l-3.04.ebuild 950
 MD5 ae4608a48e118a1e480ae98cef669837 files/digest-welcome2l-3.04 70
 MD5 373376c0a3b1924d993e20675c66ec37 files/welcome2l-3.04-gentoo.patch 30692
 MD5 6741e21385b95a4f940c0c104566b385 files/welcome2l.initscript 159
