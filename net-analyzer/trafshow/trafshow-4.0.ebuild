@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-4.0.ebuild,v 1.3 2005/01/31 14:21:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-4.0.ebuild,v 1.4 2005/02/13 15:15:15 luckyduck Exp $
 
 inherit eutils gnuconfig
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://soft.risp.ru/trafshow/index_en.shtml"
 
 SLOT="3"
 LICENSE="as-is"
-KEYWORDS="~x86 ~sparc ~ppc ~ppc64"
+KEYWORDS="~x86 ~sparc ~ppc ~ppc64 ~amd64"
 
 DEPEND="virtual/libpcap
 	sys-libs/ncurses
