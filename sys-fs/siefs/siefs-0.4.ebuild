@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/siefs-0.4.ebuild,v 1.2 2005/01/21 20:54:39 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/siefs-0.4.ebuild,v 1.3 2005/03/25 14:39:41 blubb Exp $
 
 DESCRIPTION="Siemens FS"
 HOMEPAGE="http://weidner.in-bad-schmiedeberg.de/computer/linux/debian/siefs/"
@@ -8,7 +8,7 @@ SRC_URI="http://weidner.in-bad-schmiedeberg.de/computer/linux/debian/siefs/downl
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="<sys-fs/fuse-1.9"
