@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.19 2004/10/19 19:51:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.20 2004/10/23 16:08:31 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -197,6 +197,9 @@ tetex_src_install() {
 			#fix for conflicting readlink binary:
 			rm -f ${D}/bin/readlink
 			rm -f ${D}/usr/bin/readlink
+
+			#fix for conflicting XDvi file:
+			rm -f ${D}/usr/share/texmf/xdvi/XDvi
 
 			#fix for conflicting texi2html perl script:
 			local v
