@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.2 2003/02/13 14:37:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.3 2003/02/14 21:33:05 vapier Exp $
 
-IUSE=""
-DESCRIPTION="A modern replacement for sendmail which uses maildirs and
-includes mysql, and queue optimization"
+inherit eutils
+
+DESCRIPTION="A modern replacement for sendmail which uses maildirs and includes mysql, and queue optimization"
 HOMEPAGE="http://www.qmail.org/
 	http://lain.cx/unix/qmail/mysql.php
 	http://www.jedi.claranet.fr/qmail-tuning.html"
@@ -13,6 +13,14 @@ SRC_URI="http://cr.yp.to/software/qmail-1.03.tar.gz
 	http://www.qmail.org/big-concurrency.patch
 	http://www.suspectclass.com/~sgifford/qmail/qmail-0.0.0.0.patch
 	http://iain.cx/unix/qmail/download/qmail-mysql-1.1.8.patch"
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS=~"x86 ~ppc ~sparc"
+
+PROVIDE="virtual/mta
+	 virtual/mda"
+
 DEPEND="virtual/glibc
 	sys-apps/groff
 	>=sys-apps/ucspi-tcp-0.88
@@ -24,13 +32,8 @@ RDEPEND="!virtual/mta
 	>=sys-apps/daemontools-0.76-r1
 	>=net-mail/checkpassword-0.90
 	>=net-mail/dot-forward-0.71"
-PROVIDE="virtual/mta
-	 virtual/mda"
-SLOT="0"
-LICENSE="as-is"
-KEYWORDS=~"x86 ~ppc ~sparc"
+
 S=${WORKDIR}/${P/-mysql/}
-inherit eutils
 
 src_unpack() {
 

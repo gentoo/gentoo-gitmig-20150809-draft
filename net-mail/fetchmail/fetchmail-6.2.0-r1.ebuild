@@ -1,22 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.0-r1.ebuild,v 1.3 2003/02/13 14:31:27 vapier Exp $
-
-IUSE="ssl nls"
-
-S="${WORKDIR}/${P}"
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.0-r1.ebuild,v 1.4 2003/02/14 21:28:47 vapier Exp $
 
 DESCRIPTION="Fetchmail is a full-featured remote-mail retrieval and forwarding utility"
 HOMEPAGE="http://www.tuxedo.org/~esr/fetchmail/"
 SRC_URI="http://www.tuxedo.org/~esr/fetchmail/${P}.tar.gz"
         
-DEPEND="virtual/glibc
-	ssl? ( >=dev-libs/openssl-0.9.6 )
-	nls? ( sys-devel/gettext )"
-
 SLOT="0"
 LICENSE="GPL-2 public-domain"
 KEYWORDS="x86 ~alpha"
+IUSE="ssl nls"
+
+DEPEND="virtual/glibc
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 

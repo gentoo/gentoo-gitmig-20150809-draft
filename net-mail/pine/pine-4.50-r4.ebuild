@@ -1,13 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.50-r4.ebuild,v 1.4 2003/02/13 14:35:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.50-r4.ebuild,v 1.5 2003/02/14 21:31:01 vapier Exp $
 
-IUSE="ssl ldap"
-
-S=${WORKDIR}/${PN}${PV}
 DESCRIPTION="A tool for reading, sending and managing electronic messages."
 SRC_URI="ftp://ftp.cac.washington.edu/${PN}/${PN}${PV}.tar.gz"
 HOMEPAGE="http://www.washington.edu/pine/"
+
+SLOT="0"
+LICENSE="PICO"
+KEYWORDS="x86 ppc sparc "
+IUSE="ssl ldap"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
@@ -15,10 +17,7 @@ DEPEND="virtual/glibc
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )"
 
-SLOT="0"
-LICENSE="PICO"
-KEYWORDS="x86 ppc sparc "
-
+S=${WORKDIR}/${PN}${PV}
 
 src_unpack() {
 	unpack ${A}
