@@ -1,6 +1,13 @@
 # ChangeLog for app-text/lout
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.5 2003/02/12 05:32:36 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.6 2004/06/06 15:58:17 usata Exp $
+
+*lout-3.29 (07 Jun 2004)
+
+  07 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> lout-3.25-r1.ebuild,
+  +files/lout-3.29-makefile-gentoo.patch, +lout-3.29.ebuild:
+  Version bumped. Changed master site and added zlib, doc IUSE flags.
+  Ebuild contributed by Lalo Martins <lalo@laranja.org>, closing bug #34667
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
