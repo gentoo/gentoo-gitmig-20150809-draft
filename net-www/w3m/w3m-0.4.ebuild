@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.ebuild,v 1.3 2003/03/08 03:14:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.ebuild,v 1.4 2003/03/11 03:08:34 agriffis Exp $
 
 inherit eutils
 
@@ -17,8 +17,7 @@ KEYWORDS="x86 ~sparc alpha ~ppc"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
-	media-libs/compface
-	imlib? ( >=media-libs/imlib-1.9.8 )
+	imlib? ( >=media-libs/imlib-1.9.8 media-libs/compface )
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
 
@@ -124,10 +123,12 @@ src_compile() {
 		echo y
 		# Use mark operation [y]? 
 		echo y
-		# X-Face support (you need uncompface) [n]?
-		echo y
+		if use imlib &>/dev/null; then
+			# X-Face support (you need uncompface) [n]?
+			echo y
+		fi
 		# Input your favorite editor program.
-		echo /usr/bin/nano
+		echo ${EDITOR:-/usr/bin/nano}
 		# Input your favorite external browser program.
 		echo /usr/bin/mozilla
 		# Input your favorite C-compiler.
