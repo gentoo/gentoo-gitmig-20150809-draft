@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r3.ebuild,v 1.1 2003/09/07 18:04:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r3.ebuild,v 1.2 2003/09/08 00:35:41 msterret Exp $
 
 inherit gnuconfig
 
@@ -24,7 +24,7 @@ src_unpack() {
  	unpack ${A}
 	use amd64 && gnuconfig_update
 	use alpha && gnuconfig_update
-	
+
 	# replace usb.ids with an updated version
 	mv ${WORKDIR}/usb.ids-${USB_IDS_VER} ${S}/usb.ids || die "unable to replace usb.ids"
 }
@@ -38,8 +38,8 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	
-	# we don't need libusb.* from usbutils because it conflicts 
+
+	# we don't need libusb.* from usbutils because it conflicts
 	# with dev-libs/libusb
 	rm -rf ${D}/usr/lib
 	rm -rf ${D}/usr/include
