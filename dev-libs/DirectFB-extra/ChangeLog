@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/DirectFB-extra
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.5 2004/06/24 23:05:18 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.6 2005/01/23 03:18:25 mr_bones_ Exp $
+
+  22 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  DirectFB-extra-0.9.16.ebuild:
+  use virtual/quicktime (bug #78984); tidy
 
   02 Jan 2004; Sven Blumenstein <bazik@gentoo.org>
   DirectFB-extra-0.9.16.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/DirectFB-extra-0.9.16.ebuild,v 1.10 2004/07/13 21:09:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/DirectFB-extra-0.9.16.ebuild,v 1.11 2005/01/23 03:18:25 mr_bones_ Exp $
 
 inherit eutils
 
@@ -14,26 +14,26 @@ KEYWORDS="x86 ~ppc -sparc"
 IUSE="quicktime flash imlib"
 
 DEPEND=">=dev-libs/DirectFB-${PV}*
-	quicktime? ( media-libs/openquicktime )
+	quicktime? ( virtual/quicktime )
 	flash? ( media-libs/libflash )
 	imlib? ( media-libs/imlib2 )"
 #	avi? ( media-video/avifile )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-newdirectfb.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-newdirectfb.patch"
 }
 
 src_compile() {
 #		`use_enable avi avifile` \
 	econf \
-		`use_enable flash` \
+		$(use_enable flash) \
 		--disable-avifile \
 		 || die
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die "make install failed"
 }
