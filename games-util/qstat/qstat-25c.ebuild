@@ -1,13 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/qstat-25c.ebuild,v 1.1 2003/09/10 18:53:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/qstat-25c.ebuild,v 1.2 2004/01/06 02:43:40 avenj Exp $
 
 S=${WORKDIR}/${PN}${PV}
 DESCRIPTION="Server statics collector supporting many FPS games"
 SRC_URI="http://www.qstat.org/${PN}${PV}.tar.gz"
 HOMEPAGE="http://www.qstat.org/"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 LICENSE="Artistic"
 SLOT="0"
 
