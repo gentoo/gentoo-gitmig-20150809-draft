@@ -47,3 +47,4 @@ virtual/xft		x11-base/xfree
 x11-libs/xaw	    x11-libs/Xaw3d
 virtual/tftp			net-misc/tftp-hpa
 virtual/gzip			app-arch/gzip
+virtual/ghostscript		app-text/ghostscript

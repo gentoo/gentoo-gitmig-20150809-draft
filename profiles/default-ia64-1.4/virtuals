@@ -48,3 +48,4 @@ virtual/tftp			net-misc/tftp-hpa
 sys-apps/reiserfs-utils	sys-fs/reiserfsprogs
 x11-libs/xaw			x11-libs/Xaw3d
 virtual/gzip			app-arch/gzip
+virtual/ghostscript		app-text/ghostscript
