@@ -3,9 +3,9 @@ MD5 9a0d03adcb00d7a3a7adc6cf8e6b1781 slocate-2.7-r2.ebuild 2204
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 89178d2acbcd5d37b4e413a7a3b82745 slocate-2.7-r3.ebuild 2325
 MD5 1b0c887ad7c73129d5ef845d7c69fbe2 slocate-2.7-r4.ebuild 2321
-MD5 65a496761f711b404625d1fba170b3b9 slocate-2.7-r5.ebuild 2352
-MD5 499ae27ce66868e4332d334a32645a3c files/updatedb.conf 614
+MD5 11f3c5d2e421d105271f3db244ebfe8c slocate-2.7-r5.ebuild 2352
 MD5 f03ed3063ac796dbf26187038a928db8 files/digest-slocate-2.7-r2 62
-MD5 f03ed3063ac796dbf26187038a928db8 files/digest-slocate-2.7-r4 62
+MD5 499ae27ce66868e4332d334a32645a3c files/updatedb.conf 614
 MD5 f03ed3063ac796dbf26187038a928db8 files/digest-slocate-2.7-r3 62
+MD5 f03ed3063ac796dbf26187038a928db8 files/digest-slocate-2.7-r4 62
 MD5 f03ed3063ac796dbf26187038a928db8 files/digest-slocate-2.7-r5 62

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.3 2004/01/14 23:19:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.4 2004/01/15 06:59:15 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -61,7 +61,7 @@ pkg_postinst() {
 	# If nobody else minds I'd like to see 2711 become the system wide default.
 	# -solar
 	if has sfperms ${FEATURES}; then
-		chmod 2711 /usr/bin/slocate 
+		chmod 2711 /usr/bin/slocate
 	else
 		chmod 2755 /usr/bin/slocate
 	fi
