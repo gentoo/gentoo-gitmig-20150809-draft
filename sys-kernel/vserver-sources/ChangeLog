@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/vserver-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.21 2005/02/07 14:04:14 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.22 2005/02/12 13:14:55 hollow Exp $
+
+*vserver-sources-1.9.4 (12 Feb 2005)
+
+  12 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
+  vserver-sources-1.9.3.ebuild, +vserver-sources-1.9.4.ebuild,
+  vserver-sources-1.9.4_rc1.ebuild, vserver-sources-1.9.4_rc2.ebuild,
+  vserver-sources-1.9.4_rc4.ebuild, vserver-sources-1.9.4_rc5.ebuild:
+  fixed older ebuilds to use kernel-2.eclass correctly + version bumpt to 1.9.4
 
 *vserver-sources-1.9.4_rc5 (07 Feb 2005)
 
