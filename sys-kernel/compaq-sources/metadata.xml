@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>taviso@gentoo.org</email>
+  <name>Tavis Ormandy</name>
+</maintainer>
+<longdescription>
+This ebuild has installed the sources for the Linux kernel shipped with the
+latest version of Red Hat Linux Alpha, maintained by Compaq.
+
+Compaq lag behind releases from kernel.org, but their kernels are
+extensively tested, and used by many thousands. This kernel will include
+bugfixes and extended hardware support, and is probably the most widely
+used Linux kernel on the Alpha Platform today.
+</longdescription>
+</pkgmetadata>
