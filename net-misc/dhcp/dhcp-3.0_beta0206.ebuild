@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_beta0206.ebuild,v 1.2 2000/10/05 18:22:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_beta0206.ebuild,v 1.3 2000/11/01 04:44:21 achim Exp $
 
 P=dhcp-3.0b2pl6
 A="${P}.tar.gz"
@@ -10,6 +10,7 @@ DESCRIPTION="ISC Dynamic Host Configuration Protocol"
 SRC_URI="ftp://ftp.isc.org/isc/dhcp/${P}.tar.gz"
 HOMEPAGE="http://www.isc.org/products/DHCP/"
 
+DEPEND=">=sys-libs/glibc-2.1.3"
 
 src_compile() {
 

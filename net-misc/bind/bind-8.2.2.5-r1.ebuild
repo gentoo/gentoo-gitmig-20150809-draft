@@ -1,13 +1,16 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-8.2.2.5-r1.ebuild,v 1.3 2000/09/15 20:09:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-8.2.2.5-r1.ebuild,v 1.4 2000/11/01 04:44:21 achim Exp $
 
 A=bind-src.tar.gz
 S=${WORKDIR}/src
 DESCRIPTION="Name Server"
 SRC_URI="ftp://ftp.isc.org/isc/bind/src/8.2.2-P5/"${A}
 HOMEPAGE="http://www.isc.org/products/BIND"
+
+DEPEND=">=sys-apps/bash-2.04
+	>=sys-libs/glibc-2.1.3"
 
 src_compile() {                           
     try make clean
