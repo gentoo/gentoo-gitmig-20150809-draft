@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.14-r1.ebuild,v 1.1 2004/02/06 14:28:31 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.14-r1.ebuild,v 1.2 2004/02/17 09:43:42 aliz Exp $
 
 inherit flag-o-matic
 
@@ -51,9 +51,13 @@ src_unpack() {
 }
 
 src_compile() {
-	local cpu="`get-flag march || get-flag mcpu`"
-	if [ "${cpu}" ] ; then
-		sed -e "s:pentiumpro:${cpu}:g" -i "settings.pro" || die "sed failed"
+	if [ "${ARCH}" == "amd64" ]; then
+		sed -e "s:-march=pentiumpro::" -e "/DEFINES += MMX/d" -i settings.pro
+	else
+		local cpu="`get-flag march || get-flag mcpu`"
+		if [ "${cpu}" ] ; then
+			sed -e "s:pentiumpro:${cpu}:g" -i "settings.pro" || die "sed failed"
+		fi
 	fi
 
 	if [ "`use alsa`" ] ; then

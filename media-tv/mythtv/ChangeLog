@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.15 2004/02/06 14:28:31 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.16 2004/02/17 09:43:42 aliz Exp $
+
+  17 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> mythtv-0.14-r1.ebuild:
+  Fix CFLAGS and defines so that it can be compiled on amd64. Closing #37578.
 
 *mythtv-0.14-r1 (06 Feb 2004)
 
