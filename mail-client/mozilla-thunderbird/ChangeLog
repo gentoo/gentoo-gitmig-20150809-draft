@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.37 2004/11/18 14:05:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.38 2004/12/07 21:15:36 brad Exp $
+
+*mozilla-thunderbird-1.0 (07 Dec 2004)
+
+  07 Dec 2004; Brad Laue <brad@gentoo.org> +mozilla-thunderbird-1.0.ebuild:
+  Mozilla Thunderbird 1.0. Reclaim your inbox. Based on mozconfig eclass.
 
 *mozilla-thunderbird-0.9-r3 (18 Nov 2004)
 
