@@ -7,7 +7,7 @@ HOMEPAGE="http://cdimages.telemetrybox.org/gentoo/"
 SRC_URI="http://cdimages.telemetrybox.org/gentoo/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 
 DEPEND="sys-apps/syslinux"
 RDEPEND="app-misc/zisofs-tools app-cdr/cdrtools"
