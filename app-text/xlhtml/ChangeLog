@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xlhtml
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/ChangeLog,v 1.1 2003/04/17 21:00:32 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/ChangeLog,v 1.2 2003/10/11 07:07:48 robbat2 Exp $
+
+  11 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> xlhtml-0.5.ebuild:
+  fix package (bug #10980) and add for ~x86
 
 *xlhtml-0.5 (17 Apr 2003)
 
