@@ -1,5 +1,6 @@
 MD5 0630b7bf1a327ab0af00136fa952e93b kdbg-1.9.5.ebuild 493
 MD5 a19020d3213233c039e02360ab5fab37 kdbg-1.2.10.ebuild 490
-MD5 a18e7de873ef3e685119476a5677e91b ChangeLog 3379
+MD5 e38b440c2b83b93912240aef9e6d0feb ChangeLog 3466
+MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 07853fd027ce8cc6a2a27435364b65f8 files/digest-kdbg-1.9.5 62
 MD5 b51ddd8e289867ee79772a68a41f6a3d files/digest-kdbg-1.2.10 63
