@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.78.ebuild,v 1.1 2002/11/05 01:17:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.78.ebuild,v 1.2 2002/11/05 21:21:22 seemant Exp $
 
 IUSE="aalib motif alsa opengl"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://bytesex.org/xawtv/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="-x86"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/jpeg-6b
@@ -27,9 +27,9 @@ DEPEND=">=sys-libs/ncurses-5.1
 	opengl? ( virtual/opengl )
 	quicktime? ( media-libs/libquicktime )"
 
+fontdir=/usr/X11R6/lib/X11/fonts/misc
 
 src_unpack() {
-
 	unpack ${PN}_${PV}.tar.gz
 	cd ${S}
 	patch -p1 < ${DISTDIR}/xaw-deinterlace-3.76-0.1.0.diff || die
@@ -37,7 +37,6 @@ src_unpack() {
 	unpack ${MY_FONT}.tar.bz2
 	cd ${S}/${MY_FONT}
 	patch -p0 < ${FILESDIR}/${MY_FONT}-gentoo.diff || die
-
 }
 
 src_compile() {
@@ -74,15 +73,10 @@ src_compile() {
 
 	cd ${MY_FONT}
 	emake || die
-
 }
 
 src_install() {
-
 	cd ${S}
-
-	fontdir=/usr/X11R6/lib/X11/fonts/misc
-
 	einstall \
 		resdir=${D}/etc/X11 || die
 
@@ -98,9 +92,15 @@ src_install() {
 }
 
 src_postinst() {
-	mkfontdir /usr/X11R6/lib/X11/fonts/misc
+	mkfontdir ${fontdir}
+	xset fp- "${fontdir} :unscaled"
+	xset fp+ "${fontdir} :unscaled"
+	xset fp rehash
 }
 
 src_postrm() {
-	mkfontdir /usr/X11R6/lib/X11/fonts/misc
+	mkfontdir ${fontdir}
+	xset fp- "${fontdir} :unscaled"
+	xset fp+ "${fontdir} :unscaled"
+	xset fp rehash
 }
