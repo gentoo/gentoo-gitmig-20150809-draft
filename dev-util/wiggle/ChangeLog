@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/wiggle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.5 2004/06/28 07:07:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.6 2004/11/22 03:40:45 robbat2 Exp $
+
+  21 Nov 2004; Robin H. Johnson <robbat2@gentoo.org> wiggle-0.6-r1.ebuild:
+  Stable on x86.
 
 *wiggle-0.6-r1 (28 Jun 2004)
 
