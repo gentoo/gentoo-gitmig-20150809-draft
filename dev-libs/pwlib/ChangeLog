@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.77 2005/02/03 19:57:59 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.78 2005/02/18 21:46:13 stkn Exp $
+
+  18 Feb 2005; Stefan Knoblich <stkn@gentoo.org> pwlib-1.8.3-r1.ebuild:
+  Added support for v4l2 use-flag (bug #84239, thx to jcn@xtra.co.nz).
 
 *pwlib-1.8.3-r1 (03 Feb 2005)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.3-r1.ebuild,v 1.1 2005/02/03 19:57:59 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.3-r1.ebuild,v 1.2 2005/02/18 21:46:13 stkn Exp $
 
 inherit eutils flag-o-matic multilib
 
-IUSE="ssl sdl ieee1394 alsa esd"
+IUSE="ssl sdl ieee1394 alsa esd v4l2"
 
 MY_P="${PN}-v${PV//./_}"
 DESCRIPTION="Portable Multiplatform Class Libraries for OpenH323"
@@ -72,6 +72,11 @@ src_compile() {
 
 	use alsa \
 		&& plugins="${plugins} alsa"
+
+	if use v4l2; then
+		myconf="${myconf} --enable-v4l2"
+		plugins="${plugins} v4l2"
+	fi
 
 	if use esd; then
 		# fixes bug #45059
