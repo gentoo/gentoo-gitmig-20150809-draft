@@ -1,6 +1,6 @@
 # ChangeLog for net-nds/nis-utils
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/nis-utils/ChangeLog,v 1.3 2004/06/22 03:37:34 vapier Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/nis-utils/ChangeLog,v 1.4 2004/06/25 03:06:08 agriffis Exp $
 
 *nis-utils-1.4.1-r1 (21 Jun 2004)
 
