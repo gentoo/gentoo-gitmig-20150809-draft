@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <blizzy@gentoo.org> (28 Jul 2002)
+# new version, please test!
+=sys-devel/perl-5.8.0
+
 # <stubear@gentoo.org> (28 Jul 2002)
 # Testing CJK patch for Mutt.
 =net-mail/mutt-1.4-r2
