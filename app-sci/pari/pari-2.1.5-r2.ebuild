@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/pari-2.1.5-r2.ebuild,v 1.1 2004/03/15 14:05:07 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/pari-2.1.5-r2.ebuild,v 1.2 2004/05/04 23:26:31 kloeri Exp $
 
 DESCRIPTION="pari (or pari-gp) : a software package for computer-aided number theory"
 HOMEPAGE="http://www.parigp-home.de/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.gn-50uma.de/ftp/pari-2.1/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~mips ~hppa ~amd64"
 
 IUSE="doc"
 
