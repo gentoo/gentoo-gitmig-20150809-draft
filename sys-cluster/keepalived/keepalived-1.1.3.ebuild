@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.3.ebuild,v 1.2 2003/11/12 17:09:26 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.3.ebuild,v 1.3 2004/01/26 06:41:21 iggy Exp $
 
 DESCRIPTION="The main goal of the keepalived project is to add a strong & robust keepalive facility to the Linux Virtual Server project."
 HOMEPAGE="http://keepalived.sourceforge.net"
@@ -13,7 +13,7 @@ SRC_URI="http://keepalived.sourceforge.net/software/${P}.tar.gz"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 ~sparc ~amd64 ~ia64 ~ppc"
+KEYWORDS="x86 ~sparc ~amd64 ~ppc"
 S="${WORKDIR}/${P}"
 
 src_compile() {
