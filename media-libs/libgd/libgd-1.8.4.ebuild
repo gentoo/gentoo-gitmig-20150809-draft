@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4.ebuild,v 1.1 2003/02/19 00:57:32 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4.ebuild,v 1.2 2003/03/20 01:18:08 gmsoft Exp $
 
 IUSE="X"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.boutell.com/gd/"
 
 SLOT="0"
 LICENSE="as-is | BSD"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa"
 
 DEPEND="media-libs/libpng
 	X? ( virtual/x11 )

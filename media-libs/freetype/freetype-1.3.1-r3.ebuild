@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.14 2003/02/13 12:43:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.15 2003/03/20 01:17:24 gmsoft Exp $
 
 IUSE="nls"
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://www.freetype.org/"
 
 SLOT="1"
 LICENSE="FTL"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 DEPEND="virtual/glibc"
 RDEPEND="nls? ( sys-devel/gettext )"

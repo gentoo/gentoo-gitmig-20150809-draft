@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libgd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.20 2003/02/23 15:04:37 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.21 2003/03/20 01:18:08 gmsoft Exp $
 
 *libgd-2.0.11 (23 Feb 2003)
+
+  20 Mar 2003; Guy Martin <gmsoft@gentoo.org> libgd-2.0.11.ebuild, libgd-1.8.4.ebuild : 
+  Added ~hppa to KEYWORDS.
 
   23 Feb 2003; Nicholas Wourms <dragon@gentoo.org> libgd-2.0.11.ebuild files/gd-2.0.11-gif-support.patch.bz2 :
   Added patch for gif support when USE="gif".  Added ~arch keywords to
@@ -15,7 +18,10 @@
   Version bumpage.
 
 *libgd-1.8.3-r6 (18 Feb 2003)
-  
+
+  20 Mar 2003; Guy Martin <gmsoft@gentoo.org> libgd-1.8.3-r6.ebuild :
+  Added hppa to KEYWORDS.
+
   18 Feb 2003; Robert Coie <rac@gentoo.org>; libgd-1.8.4.ebuild :
   Based off of 1.8.3-r6, changed library defines HAVE_JPEG and
   HAVE_PNG to HAVE_LIBJPEG and HAVE_LIBPNG to reflect upstream name

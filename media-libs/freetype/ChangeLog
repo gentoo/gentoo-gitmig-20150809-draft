@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.22 2003/03/16 11:14:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.23 2003/03/20 01:17:24 gmsoft Exp $
+
+  23 Mar 2003; Guy Martin <gmsoft@gentoo.org> freetype-1.3.1-r3.ebuild :
+  Added hppa to KEYWORDS.
 
   10 Jan 2003; Aron Griffis <agriffis@gentoo.org> freetype-1.3.1-r3.ebuild :
   Add alpha to KEYWORDS
