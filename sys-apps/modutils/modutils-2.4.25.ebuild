@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.25.ebuild,v 1.17 2003/10/09 19:10:16 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.25.ebuild,v 1.18 2003/10/10 18:38:37 pappy Exp $
 
 inherit flag-o-matic
 
@@ -21,23 +21,6 @@ src_unpack() {
 
 src_compile() {
 	filter-flags -fPIC
-
-	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	# we disable etdyn because of assembler and extra add fstackprotector plus the necessary libs
-	if [ "${ARCH}" != "hppa" ] && [ "${ARCH}" != "hppa64" ] && has_version 'sys-devel/hardened-gcc'
-	then
-		append-flags "-yet_exec -fstack-protector"
-	fi
-
-	if [ "${ARCH}" == "hppa" ] && has_version 'sys-devel/hardened-gcc'
-	then
-		append-flags "-yet_exec"
-	fi
-
-	if [ "${ARCH}" == "hppa64" ] && has_version 'sys-devel/hardened-gcc'
-	then
-		append-flags "-yet_exec"
-	fi
 
 	myconf=""
 	# see bug #3897 ... we need insmod static, as libz.so is in /usr/lib
