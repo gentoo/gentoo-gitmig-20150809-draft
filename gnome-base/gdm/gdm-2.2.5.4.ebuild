@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.3.ebuild,v 1.1 2001/12/27 22:47:36 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4.ebuild,v 1.1 2002/01/03 08:32:28 hallski Exp $
 
 MY_V="`echo ${PV} |cut -b -5`"
 S=${WORKDIR}/${P}
