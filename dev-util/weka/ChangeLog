@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/weka
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.6 2004/11/03 11:49:42 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.7 2004/12/18 23:20:02 karltk Exp $
+
+*weka-3.4.3_p20041113 (19 Dec 2004)
+
+  19 Dec 2004; <karltk@gentoo.org> +files/weka-build_xml.patch,
+  +weka-3.4.3_p20041113.ebuild:
+  New upstream version. Ebuild submitted by the ever so industriuos Jan
+  Brinkmann <lucky@the-luckyduck.de>. Fixes #50414.
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> weka-3.4.1-r1.ebuild,
   weka-3.4.1.ebuild:
