@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.confd,v 1.3 2004/05/24 18:44:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.confd,v 1.4 2004/06/02 01:44:14 vapier Exp $
 
 # Command to run to set the clock initially
 # Most people should just leave this line alone ...
@@ -12,7 +12,7 @@ NTPCLIENT_CMD="ntpdate"
 # Most people should just uncomment this variable and
 # change 'someserver' to a valid hostname which you
 # can aquire from the URL's below
-#NTPCLIENT_OPTS="-b someserver -Q"
+#NTPCLIENT_OPTS="-Q -b someserver"
 
 ##
 # A list of available servers is available here:
