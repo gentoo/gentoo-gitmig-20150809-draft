@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.85.ebuild,v 1.5 2003/09/17 03:01:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.85.ebuild,v 1.6 2003/11/14 20:11:36 seemant Exp $
 
 DESCRIPTION="Mindi builds boot/root disk images using your existing kernel, modules, tools and libraries"
 HOMEPAGE="http://www.microwerks.net/~hugo/mindi/"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 RESTRICT="nouserpriv"
 
-DEPEND=">=sys-apps/bzip2-1.0.1
+DEPEND=">=app-arch/bzip2-1.0.1
 		>=app-cdr/cdrtools-1.11
 		>=sys-libs/ncurses-5
 		>=sys-devel/binutils-2

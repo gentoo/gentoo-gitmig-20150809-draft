@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/partimage-0.6.2.ebuild,v 1.9 2003/10/28 18:52:14 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/partimage-0.6.2.ebuild,v 1.10 2003/11/14 20:11:36 seemant Exp $
 
 inherit gnuconfig
 
@@ -17,7 +17,7 @@ RDEPEND="virtual/glibc
 	>=dev-libs/lzo-1.08
 	>=dev-libs/newt-0.50.35-r1
 	>=sys-libs/slang-1.4.5-r2
-	sys-apps/bzip2
+	app-arch/bzip2
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 DEPEND="${RDEPEND} sys-devel/autoconf"

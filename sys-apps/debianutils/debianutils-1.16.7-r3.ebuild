@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r3.ebuild,v 1.12 2003/09/26 18:54:11 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r3.ebuild,v 1.13 2003/11/14 20:11:36 seemant Exp $
 
 IUSE="static build"
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm ia64"
 
 DEPEND="virtual/glibc"
 
-RDEPEND="sys-apps/bzip2
+RDEPEND="app-arch/bzip2
 	sys-apps/coreutils"
 
 src_unpack() {

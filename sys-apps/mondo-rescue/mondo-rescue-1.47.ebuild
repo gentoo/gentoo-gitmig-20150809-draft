@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.47.ebuild,v 1.6 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.47.ebuild,v 1.7 2003/11/14 20:11:36 seemant Exp $
 
 DESCRIPTION="a nice backup tool"
 SRC_URI="http://www.microwerks.net/~hugo/download/daily/${PN/-rescue/}-${PV}_20021020.tgz"
@@ -12,7 +12,7 @@ KEYWORDS="x86 amd64"
 
 DEPEND=">=app-arch/afio-2.4.7
 	>=sys-apps/mindi-0.67
-	>=sys-apps/bzip2-1.0.1
+	>=app-arch/bzip2-1.0.1
 	>=app-cdr/cdrtools-1.10
 	>=sys-libs/ncurses-5.2
 	>=sys-libs/slang-1.4.4
