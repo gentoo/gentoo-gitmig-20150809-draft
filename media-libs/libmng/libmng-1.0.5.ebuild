@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.5.ebuild,v 1.11 2004/09/08 18:58:53 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.5.ebuild,v 1.12 2004/10/01 03:24:05 lv Exp $
 
 DESCRIPTION="Multiple Image Networkgraphics lib (animated png's)"
 HOMEPAGE="http://www.libmng.com/"
@@ -31,7 +31,7 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr install || die
+	make DESTDIR=${D} install || die
 
 	dodoc Changes README*
 	dodoc doc/doc.readme doc/libmng.txt
