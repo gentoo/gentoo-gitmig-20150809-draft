@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.115 2003/03/21 03:31:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.116 2003/03/24 15:01:17 azarah Exp $
+
+  24 Mar 2003; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild,
+                                                    xfree-4.3.0-r1.ebuild :
+  Update SiS driver to version 210303-1, bug #18069.
 
   20 Mar 2003; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild :
   Unset MAKE_OPTS here as well, closing bug #17102

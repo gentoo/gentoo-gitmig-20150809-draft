@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.27 2003/03/20 15:25:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.28 2003/03/24 15:01:17 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -42,7 +42,7 @@ strip-flags
 PATCH_VER="1.2"
 FT2_VER="2.1.2"
 FC2_VER="2.1"
-SISDRV_VER="271102-1"
+SISDRV_VER="210303-1"
 SAVDRV_VER="1.1.27t"
 
 BASE_PV="4.2.0"
