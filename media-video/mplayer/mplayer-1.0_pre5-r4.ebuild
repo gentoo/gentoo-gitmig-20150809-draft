@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.17 2004/11/06 00:46:30 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.18 2004/11/06 01:08:52 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -332,7 +332,8 @@ src_compile() {
 		then
 			REALLIBDIR="/usr/$(get_libdir)/real"
 		else
-			eerror "Real libs not found!  Install a stable version of win32codecs"
+			eerror "Real libs not found!  Install win32codecs"
+			eerror "And ensure that real USE flag is enabled!"
 			die "Real libs not found"
 		fi
 	fi

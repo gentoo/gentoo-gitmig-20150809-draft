@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.226 2004/11/06 00:46:30 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.227 2004/11/06 01:08:52 chriswhite Exp $
+
+  06 Nov 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r4.ebuild:
+  Added a real USE flag warning to -pre5-r4.
 
   06 Nov 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre4-r7.ebuild,
   mplayer-1.0_pre5-r4.ebuild:
