@@ -2,7 +2,6 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@cvs.gentoo.org>
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.5-r1.ebuild,v 1.2 2001/10/21 20:28:47 hallski Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla web browser"
@@ -22,7 +21,9 @@ RDEPEND=">=gnome-base/ORBit-0.5.10-r1
 DEPEND="${RDEPEND}
 	sys-devel/perl"
 
+
 src_compile() {
+
 	chown -R root.root *
 
 	if [ "`use mozqt`" ] ; then
@@ -56,7 +57,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 
 	dodir /usr/lib/mozilla/include
 	cd ${S}/dist/include
