@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.16 2004/03/31 19:37:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.17 2004/04/01 17:27:30 weeve Exp $
+
+  01 Apr 2004; Jason Wever <weeve@gentoo.org> sox-12.17.4-r1.ebuild:
+  Added ~sparc keyword.
 
   31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   sox-12.17.3-r1.ebuild, sox-12.17.4-r1.ebuild, sox-12.17.4.ebuild:
