@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.14 2005/02/21 05:23:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.15 2005/02/27 10:46:34 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -574,7 +574,7 @@ pkg_config() {
 	buildtcprules
 
 	if use ssl; then
-		${ROOT}etc/cron.daily/qmail-genrsacert.sh
+		${ROOT}etc/cron.hourly/qmail-genrsacert.sh
 		einfo "Creating a self-signed ssl-certificate:"
 		/var/qmail/bin/mkservercert
 		einfo "If you want to have a properly signed certificate "
