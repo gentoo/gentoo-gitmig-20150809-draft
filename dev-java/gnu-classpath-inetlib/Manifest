@@ -1,4 +1,6 @@
 MD5 3b4bfc769407df80c89829cdd14e4f19 gnu-classpath-inetlib-20040331.ebuild 1479
-MD5 5eb007744e2ff08f1cad5c0d25b1a0e2 ChangeLog 434
+MD5 0ff7fda2a69eec25845cab52c9c7de88 gnu-classpath-inetlib-1.0.ebuild 1430
+MD5 f3ea08101dce7dce4dd89aa2378c9056 ChangeLog 635
 MD5 cae9047aa616f454f13653091a077f60 metadata.xml 430
 MD5 24fa0e7795f54970b0dbc5486c210ef6 files/digest-gnu-classpath-inetlib-20040331 76
+MD5 a2a578355c1f554d3ae84752aaab1c19 files/digest-gnu-classpath-inetlib-1.0 63
