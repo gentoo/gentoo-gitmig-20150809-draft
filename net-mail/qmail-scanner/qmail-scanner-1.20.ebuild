@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.20.ebuild,v 1.2 2004/02/04 23:36:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.20.ebuild,v 1.3 2004/02/06 20:26:19 vapier Exp $
 
 inherit fixheadtails gcc eutils
 
@@ -127,6 +127,7 @@ pkg_postinst () {
 	# Setup perlscanner + Version Info
 	#/var/qmail/bin/qmail-scanner-queue.pl -z
 	#/var/qmail/bin/qmail-scanner-queue.pl -g
+	chmod -s ${ROOT}/var/qmail/bin/qmail-scanner-queue.pl
 	${ROOT}/var/qmail/bin/qmail-scanner-queue -z
 	${ROOT}/var/qmail/bin/qmail-scanner-queue -g
 
