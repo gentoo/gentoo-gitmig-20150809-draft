@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.102 2005/02/14 11:33:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.103 2005/02/21 16:24:14 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -283,6 +283,9 @@ install_headers() {
 		dodir ${ddir}/asm-generic
 		cp -ax ${S}/include/asm-generic/* ${D}/${ddir}/asm-generic
 	fi
+
+	# clean up
+	find "${D}" -name '*.orig' -exec rm -f {} \;
 
 	cd ${OLDPWD}
 }
