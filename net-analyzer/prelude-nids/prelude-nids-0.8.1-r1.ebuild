@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/prelude-nids-0.8.1-r1.ebuild,v 1.2 2003/06/30 14:12:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/prelude-nids-0.8.1-r1.ebuild,v 1.3 2003/07/31 18:21:18 solar Exp $
 
 DESCRIPTION="Prelude-IDS NIDS"
 HOMEPAGE="http://www.prelude-ids.org"
 SRC_URI="http://www.prelude-ids.org/download/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 IUSE="doc"
 DEPEND="virtual/glibc
 	!dev-libs/libprelude-cvs
