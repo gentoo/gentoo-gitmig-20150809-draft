@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.2.ebuild,v 1.2 2003/01/18 23:19:45 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.2.ebuild,v 1.3 2003/02/05 11:27:25 azarah Exp $
 
 IUSE="bootstrap build"
 
@@ -181,7 +181,7 @@ src_install() {
 	
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../X11R6/include/GL /usr/include/GL
-	dosym ../X11R6/lib /usr/lib/X11
+	dosym ../X11R6/lib/X11 /usr/lib/X11
 	
 	#dosym ../src/linux/include/linux /usr/include/linux
 	#dosym ../src/linux/include/asm-i386 /usr/include/asm
@@ -581,6 +581,6 @@ pkg_postrm() {
 	# Fix problematic links
 	ln -snf ../X11R6/include/X11 ${ROOT}/usr/include/X11
 	ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
-	ln -snf ../X11R6/lib ${ROOT}/usr/lib/X11
+	ln -snf ../X11R6/lib/X11 ${ROOT}/usr/lib/X11
 }
 
