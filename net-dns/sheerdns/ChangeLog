@@ -1,0 +1,9 @@
+# ChangeLog for net-dns/sheerdns
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/sheerdns/ChangeLog,v 1.1 2004/09/20 05:55:33 iggy Exp $
+
+*sheerdns-1.0.1 (19 Sep 2004)
+
+  19 Sep 2004; <iggy@gentoo.org> +metadata.xml, +sheerdns-1.0.1.ebuild:
+  Initial revision
+
