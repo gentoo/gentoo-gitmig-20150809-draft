@@ -1,6 +1,9 @@
 # ChangeLog for net-im/silc-toolkit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.36 2004/12/17 20:48:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.37 2004/12/29 03:12:23 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   17 Dec 2004; Markus Rothe <corsair@gentoo.org>
   silc-toolkit-0.9.12-r3.ebuild:
@@ -17,7 +20,7 @@
   05 Oct 2004; Guy Martin <gmsoft@gentoo.org> silc-toolkit-0.9.12-r3.ebuild:
   Stable on hppa.
 
-  03 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  03 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   silc-toolkit-0.9.12-r3.ebuild:
   Stable on alpha.
 
@@ -69,7 +72,7 @@
   28 Jul 2004; <agriffis@gentoo.org> silc-toolkit-0.9.12-r2.ebuild:
   stable on ia64
 
-  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  19 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   silc-toolkit-0.9.12-r2.ebuild:
   Stable on alpha.
 
