@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/fspanel
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fspanel/ChangeLog,v 1.1 2002/07/29 19:17:21 stroke Exp $
+
+*fspanel-0.8_beta1 (29 Jul 2002)
+
+  29 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> fspanel-0.8_beta1.ebuild:
+
+  Initial cvs import.
+  Ebuild submitted by <jjosegutierrez@terra.es> (bug #4150)
+  Added SLOT, LICENSE, KEYWORDS 
