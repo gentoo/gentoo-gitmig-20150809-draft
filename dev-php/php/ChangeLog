@@ -1,6 +1,22 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.50 2003/06/19 03:10:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.51 2003/06/30 10:05:10 robbat2 Exp $
+
+*php-4.3.2-r1 (30 Jun 2003)
+
+  30 Jun 2003; Robin H. Johnson <robbat2@gentoo.org> php-4.3.2-r1.ebuild
+  files/digest-php-4.3.2-r1:
+  Move java stuff to eclass.
+
+  30 Jun 2003; Robin H. Johnson <robbat2@gentoo.org> php-4.3.2-r1.ebuild
+  files/digest-php-4.3.2-r1, php-4.3.2.ebuild, files/digest-php-4.3.2:
+  Move to new PHPSAPI system, and new configuration system.
+ 
+  29 Jun 2003; Robin H. Johnson <robbat2@gentoo.org> php-4.3.0-r3.ebuild
+  php-4.3.0-r4.ebuild php-4.3.1-r1.ebuild php-4.3.1-r2.ebuild php-4.3.1.ebuild
+  files/digest-php-4.3.0-r3 files/digest-php-4.3.0-r4 files/digest-php-4.3.1
+  files/digest-php-4.3.1-r1 files/digest-php-4.3.1-r2:
+  Remove old versions due to GLSA release.
  
 *php-4.3.2 (31 May 2003)
 
