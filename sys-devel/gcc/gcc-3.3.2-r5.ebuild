@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r5.ebuild,v 1.7 2004/01/28 22:02:01 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r5.ebuild,v 1.8 2004/02/07 05:46:58 azarah Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -99,7 +99,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~alpha ~ia64 ppc64"
+KEYWORDS="x86 ~mips ~sparc ~amd64 -hppa ~alpha ~ia64 ppc64"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -175,9 +175,23 @@ version_patch() {
 
 check_glibc_ssp() {
 	# Check for the glibc to have the guard
-	if  [ "$(readelf -s /lib/libc.so.6 | grep GLOBAL | grep OBJECT | grep '__guard')" ] &&
-	    [ "$(readelf -s /lib/libc.so.6 | grep GLOBAL | grep FUNC | grep '__stack_smash_handler')" ]
+	if  [ "$(readelf -s /lib/libc.so.6 2>/dev/null | \
+	         grep GLOBAL | grep OBJECT | grep '__guard')" ] && \
+	    [ "$(readelf -s /lib/libc.so.6 2>/dev/null | \
+	         grep GLOBAL | grep FUNC | grep '__stack_smash_handler')" ]
 	then
+		if [ -n "${GLIBC_SSP_CHECKED}" ] && \
+		   [ -z "$(readelf -s  "$(gcc-config -L)/libgcc_s.so" 2>/dev/null | \
+		           grep GLOBAL | grep OBJECT | grep '__guard')" ]
+		then
+			sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -D_LIBC_PROVIDES_SSP_|' \
+				-i ${S}/gcc/Makefile.in
+
+			touch ${WORKDIR}/.glibc_ssp_checked
+
+			return 0
+		fi
+
 		echo
 		ewarn "This sys-libs/glibc has __guard object and __stack_smash_handler functions"
 		ewarn "scanning the system for binaries with __guard - this may take 5-10 minutes"
@@ -209,6 +223,8 @@ check_glibc_ssp() {
 			echo
 			sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -D_LIBC_PROVIDES_SSP_|' \
 				-i ${S}/gcc/Makefile.in
+
+			touch ${WORKDIR}/.glibc_ssp_checked
 		fi
 	fi
 }
@@ -257,6 +273,11 @@ src_unpack() {
 		fi
 
 		epatch ${WORKDIR}/patch
+	fi
+
+	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ]
+	then
+		epatch ${FILESDIR}/3.3.2/gcc332-altivec-fix.patch
 	fi
 
 	if [ -z "${PP_VER}" ]
@@ -470,6 +491,12 @@ src_install() {
 	# Also set CC and CXX
 	echo "CC=\"gcc\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "CXX=\"g++\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	# Make sure we do not check glibc for ssp again, as we did already
+	if [ -f "${WORKDIR}/.glibc_ssp_checked" -o \
+	     -f "${ROOT}/etc/env.d/99glibc_spp" ]
+	then
+		echo "GLIBC_SSP_CHECKED=1" > ${D}/etc/env.d/99glibc_spp
+	fi
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc

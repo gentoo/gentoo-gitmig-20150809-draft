@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.165 2004/02/03 23:59:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.166 2004/02/07 05:46:58 azarah Exp $
+
+  07 Feb 2004; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.2-r5.ebuild:
+  Bump to stable for x86.
 
   03 Feb 2004; Joshua Kinard <kumba@gentoo.org> gcc-3.3.2-r4.ebuild:
   Marked 3.3.2-r4 stable for mips. Stages are built for this, and no problems
