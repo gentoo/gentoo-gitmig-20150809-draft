@@ -142,7 +142,6 @@ app-admin/va-systemimager-client
 =net-ftp/lftp-2.4.3
 
 # untested
->=sys-devel/libtool-1.4
 >=net-fs/netatalk-1.5
 >=dev-db/unixODBC-2.0.8
 =app-editors/fte-20010819
