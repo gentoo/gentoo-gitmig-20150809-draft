@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/imcom-1.30_beta9.ebuild,v 1.1 2003/05/21 04:52:29 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/imcom-1.30_beta9.ebuild,v 1.2 2003/05/21 05:01:11 lordvan Exp $
 
 MYVER=1.30beta9
 S=${WORKDIR}/${PN}-${MYVER}
@@ -27,7 +27,7 @@ src_compile() {
     ./configure --prefix=/usr || die "configure failed"
     #make
     # fixing it ..
-    cp ${FILESDIR}/Makefile-1.30_beta8 ${S}/Makefile
+#   cp ${FILESDIR}/Makefile-1.30_beta8 ${S}/Makefile
     pwd
     make
 }
