@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.2.ebuild,v 1.1 2004/09/22 14:35:44 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.2.ebuild,v 1.2 2004/09/23 14:38:52 latexer Exp $
 
 inherit eutils mono flag-o-matic debug
 
@@ -31,7 +31,7 @@ src_compile() {
 		eerror "mono currently has bug in garbage collection when"
 		eerror "using a NPTL enabled glibc. Please see bug #54603"
 		eerror "on bugs.gentoo.org for details. You can use the"
-		eerror "package.masked mono-1.0.1-r2 release if you need NPTL"
+		eerror "package.masked mono-1.0.2-r1 release if you need NPTL"
 		eerror "but you have been warned of the problems."
 		die "NPTL glibc not support by this release"
 	fi
