@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.50 2004/10/18 22:50:46 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.51 2004/10/23 19:59:43 kloeri Exp $
+
+  23 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> xterm-196.ebuild:
+  Stable on alpha.
 
   18 Oct 2004; Stephen P. Becker <geoman@gentoo.org> xterm-196.ebuild:
   stable on mips wrt bug 67326
