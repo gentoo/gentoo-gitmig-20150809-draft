@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.45 2004/11/23 19:16:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.46 2004/12/07 02:43:53 caleb Exp $
+
+  06 Dec 2004; Caleb Tennis <caleb@gentoo.org> PyQt-3.11.ebuild,
+  PyQt-3.12.ebuild, PyQt-3.13.ebuild, PyQt-3.8.1.ebuild:
+  Moving sys-devel/libtool out of RDEPEND and into DDEPEND
 
   23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> PyQt-3.13.ebuild:
   stable on x86

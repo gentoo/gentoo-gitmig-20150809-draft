@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.12.ebuild,v 1.8 2004/09/22 22:57:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.12.ebuild,v 1.9 2004/12/07 02:43:53 caleb Exp $
 
 inherit distutils
 
@@ -17,12 +17,15 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc -alpha amd64"
 
-DEPEND="virtual/libc
-	sys-devel/libtool
+RDEPEND="virtual/libc
 	x11-libs/qt
 	dev-lang/python
 	>=dev-python/sip-3.10.2
 	<=dev-python/qscintilla-1.60"
+
+DEPEND="${RDEPEND}
+	sys-devel/libtool"
+
 
 src_compile() {
 	distutils_python_version

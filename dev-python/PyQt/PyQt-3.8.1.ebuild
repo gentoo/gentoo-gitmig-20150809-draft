@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.8.1.ebuild,v 1.11 2004/07/02 04:24:13 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.8.1.ebuild,v 1.12 2004/12/07 02:43:53 caleb Exp $
 
 inherit distutils eutils
 
@@ -19,12 +19,14 @@ PV_MAJOR=${PV/.*/}
 PV_MINOR=${PV#${PV_MAJOR}.}
 PV_MINOR=${PV_MINOR/.*}
 
-DEPEND="virtual/libc
-	sys-devel/libtool
+RDEPEND="virtual/libc
 	x11-libs/qt
 	dev-lang/python
 	=dev-python/sip-${PV_MAJOR}.${PV_MINOR}*
 	>=dev-python/qscintilla-1.53"
+
+DEPEND="${RDEPEND}
+	sys-devel/libtool"
 
 src_unpack() {
 	unpack PyQt-x11-gpl-${PV}.tar.gz
