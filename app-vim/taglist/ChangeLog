@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/taglist
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.5 2003/09/07 01:03:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.6 2003/09/07 01:22:51 agriffis Exp $
+
+  06 Sep 2003; Aron Griffis <agriffis@gentoo.org> taglist-2.8.ebuild:
+  Mark stable on sparc
 
 *taglist-2.8 (06 Sep 2003)
 
