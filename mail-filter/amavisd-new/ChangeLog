@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.10 2004/07/31 18:56:13 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.11 2004/08/15 22:12:18 weeve Exp $
+
+  15 Aug 2004; Jason Wever <weeve@gentoo.org> amavisd-new-20040701.ebuild:
+  Added ~sparc keyword wrt bug #59010.
 
   31 Jul 2004; Cory Visi <merlin@gentoo.org> amavisd-new-20040701.ebuild:
   sparc and amd64 keywords were removed last commit; add back amd64 keyword as
