@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.3.1.ebuild,v 1.2 2004/06/28 15:19:35 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.3.1.ebuild,v 1.3 2004/06/28 20:04:19 port001 Exp $
 
 DESCRIPTION="A GTK+-based frontend to Portage"
 HOMEPAGE="http://porthole.sourceforge.net"
@@ -18,7 +18,7 @@ pkg_setup() {
 	local gnome_flag=""
 
 	for pygtk_install in /var/db/pkg/dev-python/pygtk*; do
-		if grep 0 ${pygtk_install}/SLOT > /dev/null; then
+		if grep 2 ${pygtk_install}/SLOT > /dev/null; then
 			for flag in `cat ${pygtk_install}/USE`; do
 				if [ ${flag} == gnome ]; then
 					gnome_flag="found"
