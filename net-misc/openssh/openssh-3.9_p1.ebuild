@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1.ebuild,v 1.3 2004/08/19 23:19:09 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1.ebuild,v 1.4 2004/08/20 19:32:32 aliz Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -15,8 +15,8 @@ SELINUX_PATCH="openssh-3.9_p1-selinux.diff"
 S=${WORKDIR}/${PARCH}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
-SRC_URI="mirror://openssh/${PARCH}.tar.gz"
-#	X509? ( http://roumenpetrov.info/openssh/x509h/${X509_PATCH} )"
+SRC_URI="mirror://openssh/${PARCH}.tar.gz
+	X509? ( http://roumenpetrov.info/openssh/x509h/${X509_PATCH} )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -41,13 +41,6 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf"
 PROVIDE="virtual/ssh"
 
-pkg_setup() {
-	if use X509; then
-		eerror "No updated patch available for ${P}."
-		die
-	fi
-}
-
 src_unpack() {
 	unpack ${PARCH}.tar.gz ; cd ${S}
 
@@ -57,12 +50,16 @@ src_unpack() {
 	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch
 	use skey && epatch ${FILESDIR}/${P}-skey.patch
 	use chroot && epatch ${FILESDIR}/${P}-chroot.patch
-#	use X509 && epatch ${DISTDIR}/${X509_PATCH}
+	use X509 && epatch ${DISTDIR}/${X509_PATCH}
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
 	use smartcard && epatch ${FILESDIR}/${P}-opensc.patch
+
+	autoconf || die
 }
 
 src_compile() {
+	local myconf
+
 	addwrite /dev/ptmx
 	gnuconfig_update
 
@@ -70,10 +67,20 @@ src_compile() {
 	use skey && use alpha && append-ldflags -mlarge-data
 	use ldap && filter-flags -funroll-loops
 	use selinux && append-flags "-DWITH_SELINUX"
-	use static && append-ldflags -static
-	export LDFLAGS
 
-	local myconf=""
+	if use static; then
+		append-ldflags -static
+		export LDFLAGS
+		if use pam; then
+			ewarn "Disabling pam support becuse of static flag."
+			myconf="${myconf} --without-pam"
+		else
+			myconf="${myconf} --without-pam"
+		fi
+	else
+		myconf="${myconf} `use_with pam`"
+	fi
+
 	use ipv6 || myconf="${myconf} --with-ipv4-default"
 
 	econf \
@@ -86,7 +93,6 @@ src_compile() {
 		--with-md5-passwords \
 		`use_with kerberos kerberos5 /usr` \
 		`use_with tcpd tcp-wrappers` \
-		`use_with pam` \
 		`use_with skey` \
 		`use_with smartcard opensc` \
 		${myconf} \
