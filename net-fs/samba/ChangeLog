@@ -1,6 +1,8 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.25 2002/12/16 18:19:18 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.26 2003/01/28 04:12:20 woodchip Exp $
+
+  27 Jan 2003; Donny Davies <woodchip@gentoo.org> : #14644 adds reload().
 
 *samba-2.2.7a (16 Dec 2002)
 

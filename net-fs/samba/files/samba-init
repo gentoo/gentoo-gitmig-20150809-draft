@@ -1,7 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/samba-init,v 1.1 2002/05/06 19:57:08 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/samba-init,v 1.2 2003/01/28 04:12:20 woodchip Exp $
+
+opts="${opts} reload"
 
 depend() {
 	need net
@@ -22,6 +24,15 @@ stop() {
 	start-stop-daemon --stop --quiet --pidfile /var/run/samba/smbd.pid
 	result=$?
 	start-stop-daemon --stop --quiet --pidfile /var/run/samba/nmbd.pid
+	result=$(( $result + $? ))
+	eend $result
+}
+
+reload() {
+	ebegin "Reloading samba"
+	killall -HUP smbd &>/dev/null
+	result=$?
+	killall -HUP nmbd &>/dev/null
 	result=$(( $result + $? ))
 	eend $result
 }
