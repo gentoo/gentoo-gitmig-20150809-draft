@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ids/ids-0.82.ebuild,v 1.1 2003/12/08 19:32:39 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ids/ids-0.82.ebuild,v 1.2 2003/12/14 13:20:58 mholzer Exp $
 
 inherit webapp-apache
 
@@ -12,7 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 KEYWORDS="~x86"
-DEPEND=">=net-www/apache-1.3.27
+RDEPEND=">=net-www/apache-1.3.27
+	dev-perl/Archive-Zip
 	>=dev-php/mod_php-4.1.3
 	dev-perl/ImageInfo
 	>=media-gfx/imagemagick-5.4.9.1-r1"
