@@ -1,18 +1,17 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.22.32-r1.ebuild,v 1.5 2000/08/17 15:37:33 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.24.ebuild,v 1.1 2000/09/10 17:48:36 achim Exp $
 
-P=mysql-3.22.32
+P=mysql-3.23.24-beta
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="The MySQL Database"
-SRC_URI="http://www.mysql.com/Downloads/MySQL-3.22/${A}"
+SRC_URI="http://www.mysql.com/Downloads/MySQL-3.23/${A}"
 HOMEPAGE="http://www.mysql.com/"
 
 
 src_compile() {
-	#Achim -- is there a problem with pentiumpro/PII opts? vvv
         if [ "$PLATFORM" = "i686-pc-linux-gnu" ]
 	then
 	    export CFLAGS="-mpentium"
@@ -72,13 +71,11 @@ src_install() {
 	
 	cd ${S}
 	into /usr
-	dodoc INSTALL-SOURCE INSTALL-SOURCE-GENERIC README  PUBLIC MIRRORS
+	dodoc INSTALL-SOURCE README MIRRORS
 	cd ${S}/Docs 
 	dodoc INSTALL-BINARY manual.ps manual.txt
 	docinto html
 	dodoc manual.html manual_toc.html
-	docinto html/Img
-	dodoc Img/*.gif
 		
 }
 
@@ -88,5 +85,10 @@ pkg_config () {
   ${ROOT}/usr/sbin/rc-update add mysql
 
 }
+
+
+
+
+
 
 
