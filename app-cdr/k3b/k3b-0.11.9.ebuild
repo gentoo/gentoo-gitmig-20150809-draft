@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.9.ebuild,v 1.6 2004/04/26 15:38:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.9.ebuild,v 1.7 2004/04/26 20:05:12 agriffis Exp $
 
 inherit kde
 
@@ -86,7 +86,7 @@ src_compile() {
 	if [ `use monkey` ]; then
 		cd ../k3bmonkeyaudioplugin
 		econf || die "econf failed"
-		emake || die "econf failed"
+		emake || die "emake failed"
 	fi
 }
 
