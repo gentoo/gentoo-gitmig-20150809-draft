@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/fdupes
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.1 2003/03/16 21:48:52 sethbc Exp $
+
+*fdupes-1.40 (16 Mar 2003)
+
+  16 Mar 2003; Seth Chandler <sethbc@gentoo.org>; fdupes-1.40.ebuild:
+  initial import into portage, thanks to Torben Janssen <torben@teejot.net>
+
