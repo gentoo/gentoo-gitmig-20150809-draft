@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.33 2004/10/06 16:53:02 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.34 2004/10/20 03:06:13 squinky86 Exp $
+
+*amule-2.0.0_rc7 (19 Oct 2004)
+
+  19 Oct 2004; Jon Hood <squinky86@gentoo.org> +amule-2.0.0_rc7.ebuild:
+  Version bump, #68202.
 
   06 Oct 2004; Rob Cakebread <pythonhead@gentoo.org> amule-1.2.8.ebuild:
   Uses wxwidgets eclass now. bug# 63469
