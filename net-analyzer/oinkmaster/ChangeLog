@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/oinkmaster
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.1 2004/02/17 06:28:05 mboman Exp $
+
+*oinkmaster-0.9 (17 Feb 2004)
+
+  17 Feb 2004; Michael Boman <mboman@gentoo.org> oinkmaster-0.9.ebuild,
+  files/0.9-oinkmaster.conf.patch:
+  Initial ebuild. Closes #23499. Many thanks to Daniel Black
+  <dragonheart@gentoo.org> for his input.
+

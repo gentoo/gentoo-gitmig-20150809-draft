@@ -1,0 +1,24 @@
+--- oinkmaster-0.9/oinkmaster.conf	2003-12-01 04:01:57.000000000 +0800
++++ oinkmaster-0.9/oinkmaster.conf.new	2004-02-17 12:10:22.000000000 +0800
+@@ -13,13 +13,14 @@
+ # Must begin with http://, https://, ftp://, file:// or scp://
+ # and end with .tar.gz
+ 
+-# Use this one if you're running the latest release version of Snort
+-# (or following snort-STABLE):
+-url = http://www.snort.org/dl/rules/snortrules-stable.tar.gz
+-
+-# Use this one *only* if you're following snort-CURRENT.
+-# This ruleset may only work with recent develop snapshots of Snort!
+-# url = http://www.snort.org/dl/rules/snortrules-current.tar.gz
++# If you use a CVS snapshot of Snort, use this:
++#url = http://www.snort.org/dl/rules/snortrules-snapshot-CURRENT.tar.gz
++
++# If you use Snort 2.1.x, use this:
++url = http://www.snort.org/dl/rules/snortrules-snapshot-2_1.tar.gz
++
++# If you use Snort 2.0.x, use this:
++#url = http://www.snort.org/dl/rules/snortrules-snapshot-2_0.tar.gz
+ 
+ # Or if you prefer to download the rules archive from outside Oinkmaster,
+ # you can then point to the file on your local filesystem by using
