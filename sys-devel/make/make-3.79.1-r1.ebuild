@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r1.ebuild,v 1.2 2000/08/16 04:38:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r1.ebuild,v 1.3 2000/09/15 20:09:26 drobbins Exp $
 
 P=make-3.79.1
 A=${P}.tar.gz
@@ -11,8 +11,8 @@ SRC_URI="ftp://prep.ai.mit.edu/gnu/make/${P}"
 HOMEPAGE="http://www.gnu.org/software/make/make.html"
 
 src_compile() {                           
-	./configure --prefix=/usr --host=${CHOST}
-	sh ./build.sh
+	try ./configure --prefix=/usr --host=${CHOST}
+	try sh ./build.sh
 }
 
 src_unpack() {

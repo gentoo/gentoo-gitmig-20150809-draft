@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.15.1.ebuild,v 1.1 2000/08/25 15:10:25 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.15.1.ebuild,v 1.2 2000/09/15 20:09:25 drobbins Exp $
 
 P=bin86-0.15.1
 A=${P}.tar.gz
@@ -11,7 +11,7 @@ SRC_URI="http://www.cix.co.uk/~mayday/${A}"
 HOMEPAGE="http://www.cix.co.uk/~mayday/"
 
 src_compile() {                           
-	make
+	try make
 }
 
 src_unpack() {

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.0-r1.ebuild,v 1.2 2000/08/16 04:38:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.0-r1.ebuild,v 1.3 2000/09/15 20:09:26 drobbins Exp $
 
 P=perl-5.6.0
 A=${P}.tar.gz
@@ -40,19 +40,19 @@ EOF
     sed -e "s/optimize='-O2'/optimize=\'${CFLAGS}\'/" config.sh.orig > config.sh
     #THIS IS USED LATER:
     export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
-    make
-    make test
+    try make
+    try make test
 }
 
 src_install() {                               
-    make install
+    try make install
     install -m 755 utils/pl2pm $D/usr/bin/pl2pm
 export D
 # Generate *.ph files with a trick. Is this sick or what?
 # Yes it is, and thank you Christian for getting sick just so we can
 # run perl :)
 
-make all -f - <<EOF
+try make all -f - <<EOF
 STDH    =\$(wildcard /usr/include/linux/*.h) \$(wildcard /usr/include/asm/*.h) \
           \$(wildcard /usr/include/scsi/*.h)
 GCCDIR  = \$(shell gcc --print-file-name include)
@@ -80,7 +80,7 @@ cd modules
 for module in * ; do 
     eval $($MainDir/perl '-V:installarchlib')
     mkdir -p $D/$installarchlib
-    make -C $module install PREFIX=$D/usr \
+    try make -C $module install PREFIX=$D/usr \
         INSTALLMAN3DIR=$D/usr/man/man3
 done
 cd $MainDir

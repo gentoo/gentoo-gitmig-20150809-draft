@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r1.ebuild,v 1.5 2000/08/23 07:00:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r1.ebuild,v 1.6 2000/09/15 20:09:26 drobbins Exp $
 
 P=gcc-2.95.2
 A="gcc-2.95.2.tar.gz libg++-2.8.1.3.tar.gz libg++-2.8.1.3-20000816.diff.gz"
@@ -41,16 +41,16 @@ src_compile() {
 	  export CFLAGS="-mpentium"
 	  export CXXFLAGS="-mpentium"
 	fi
-	${S}/configure --prefix=${T} --enable-version-specific-runtime-libs \
+	try ${S}/configure --prefix=${T} --enable-version-specific-runtime-libs \
 		       --host=${CHOST} --enable-threads --enable-shared \
 		        --with-local-prefix=${T}/local --enable-nls \
 			--with-gxx-include-dir=${T}/include/g++ \
 					       
-	make bootstrap-lean
+	try make bootstrap-lean
 }
 
 src_install() {      
-	make install prefix=${D}${T} mandir=${D}${T}/man \
+	try make install prefix=${D}${T} mandir=${D}${T}/man \
 		gxx_include_dir=${D}${T}/include/g++ 
         FULLPATH=${D}${T}/lib/gcc-lib/i686-pc-linux-gnu/2.95.2
 	cd ${FULLPATH}
