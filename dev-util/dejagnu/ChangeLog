@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dejagnu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.8 2004/07/02 05:06:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.9 2004/10/30 03:59:33 agriffis Exp $
+
+  31 Oct 2004; Aron Griffis <agriffis@gentoo.org> dejagnu-1.4.4-r1.ebuild:
+  add ~alpha and ~ia64
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   dejagnu-1.4.4-r1.ebuild, dejagnu-1.4.4.ebuild:

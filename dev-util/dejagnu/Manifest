@@ -1,5 +1,5 @@
-MD5 9c33c519f663481b358c608ceadb8d5a ChangeLog 1195
-MD5 a74c2a469829a255c5b22b97688d7fdf dejagnu-1.4.4-r1.ebuild 998
+MD5 702cdad67558fb98a746246dfb065205 ChangeLog 1292
+MD5 acd81899a2828cca32722ba0416fb439 dejagnu-1.4.4-r1.ebuild 1009
 MD5 73d983bcb9220072411a11ce3c019b02 dejagnu-1.4.4.ebuild 875
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 413508443b9ee3853180b1e2b8ba5875 files/dejagnu-ignore-libwarning.patch 1129
