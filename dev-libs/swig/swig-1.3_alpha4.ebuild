@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/swig/swig-1.3_alpha4.ebuild,v 1.2 2000/11/01 06:27:09 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/swig/swig-1.3_alpha4.ebuild,v 1.3 2000/11/15 16:33:15 achim Exp $
 
 P=swig1.3a4
 A=${P}.tar.gz
@@ -14,8 +14,9 @@ DEPEND=">=sys-devel/gcc-2.95.2
 	>=sys-libs/glibc-2.1.3
 	|| ( >=sys-devel/python-basic-1.5.2 >=dev-lang/python-1.5.2 )
 	>=dev-lang/jdk-1.2.2
-	>=dev-lang/tcl-tk-8.1.1
 	>=dev-util/guile-1.4"
+
+# This does not work	>=dev-lang/tcl-tk-8.1.1
 
 src_compile() {
 
