@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r4.ebuild,v 1.4 2001/08/28 17:30:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r4.ebuild,v 1.5 2001/08/29 01:52:34 drobbins Exp $
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
 	ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3.tar.gz
@@ -149,7 +149,7 @@ pkg_postinst() {
 	#*real* version (4.0) isn't already installed.  Should allow us to use 3.12 until
 	#4.0 is available and not worry about having gcc overwrite our texinfo-4.0 stuff.
 	local x
-	cd ${D}/usr/bin
+	cd ${ROOT}usr/bin
 	for x in makeinfo texi2dvi install-info texindex
 	do
 		if [ ! -e $x ]
