@@ -1,7 +1,11 @@
 # ChangeLog for media-gfx/pfaedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/ChangeLog,v 1.6 2003/04/25 14:42:04 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/ChangeLog,v 1.7 2003/05/16 19:14:02 lordvan Exp $
 
+*pfaedit-030512 (16 May 2003)
+  16 May 2003; Thomas Raschbacher <lordvan@gentoo.org> pfaedit-030512.ebuild:
+  new version (old archive not downloadable anymore)
+	
 *pfaedit-030420 (25 Apr 2003)
 
   25 Apr 2003; Stanislav Brabec <utx@gentoo.org> pfaedit-030420.ebuild:
