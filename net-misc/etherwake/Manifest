@@ -1,4 +1,4 @@
-MD5 b9375a24cdd4231c410e2d4db3b0580f ChangeLog 703
-MD5 2ee38f7bd60b63dfe90392957b2ecb85 etherwake-1.08.ebuild 902
+MD5 3ec8280d950df56990fff9ec044d8ee2 etherwake-1.09.ebuild 837
+MD5 0dd26a652ed64663532dce8b136aff14 ChangeLog 927
 MD5 461d7957de8d488c83e8064169f92858 files/readme 1386
-MD5 10d0c2648c8e6cce51b16933e63232ca files/digest-etherwake-1.08 110
+MD5 3b738e9a58dc4ea9b754effd1f4f9adf files/digest-etherwake-1.09 65
