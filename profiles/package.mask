@@ -594,3 +594,8 @@ app-cdr/cddump
 # the old ebuild of puregui was mis-versioned to 1, when it was actually
 # 0.0.1
 =app-admin/puregui-1-r1
+
+# seemant@gentoo.org 27 Apr 2002
+# blender-static just seems silly.  It could have been accomplished with
+# the static flag on the blender ebuild. Masking for obsoleteness
+=media-gfx/blender-static
