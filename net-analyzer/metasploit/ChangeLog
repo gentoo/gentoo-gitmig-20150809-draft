@@ -1,9 +1,9 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.1 2005/02/13 13:59:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.2 2005/02/13 14:02:19 dragonheart Exp $
 
 *metasploit-2.3 (13 Feb 2005)
 
   13 Feb 2005; Daniel Black <dragonheart@gentoo.org> +metasploit-2.3.ebuild:
-  Initial ebuild as per bug #81826 thanks to Marco Morales <soulse@gmail.com>
+  Initial ebuild as per bug #75532 thanks to Marco Morales <soulse@gmail.com>
 
