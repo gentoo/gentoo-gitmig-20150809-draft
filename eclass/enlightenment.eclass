@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.36 2004/12/09 14:20:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.37 2004/12/09 16:05:47 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -58,7 +58,7 @@ enlightenment_warning_msg() {
 		ewarn "Only contact vapier@gentoo.org via e-mail or bugzilla."
 		ewarn "Remember, this stuff is CVS only code so dont cry when"
 		ewarn "I break you :)."
-	elif [[ ${PV/9999} != ${PV} ] ; then
+	elif [[ ${PV/9999} != ${PV} ]] ; then
 		eerror "This is a LIVE CVS ebuild."
 		eerror "That means there are NO promises it will work."
 		eerror "If it fails to build, FIX THE CODE YOURSELF"
