@@ -1,12 +1,18 @@
-MD5 2cb519ad63110274a3df8d4e523a72d7 ChangeLog 2918
-MD5 334bbc1918f0a7950fb319db0f1a80b4 fluxconf-0.6.ebuild 548
-MD5 fc7fcadeebf87e6e9863e6eef9310493 fluxconf-0.8.5.ebuild 731
-MD5 1ee73e9f448bc0ac09fcebaec9428a15 fluxconf-0.9.2-r1.ebuild 778
-MD5 a3596f828adaf84e313bbf625ad90be5 fluxconf-0.9.4.ebuild 779
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4714b986014c3d4bf59dd60f08a38172 fluxconf-0.9.8.ebuild 747
 MD5 f37accbdbef4b274aa557b5feb45960f fluxconf-0.9.7.ebuild 743
+MD5 a3596f828adaf84e313bbf625ad90be5 fluxconf-0.9.4.ebuild 779
+MD5 e71b9cd8baa446f2570f224b3adc10d4 ChangeLog 3146
 MD5 22e52109947a82d41fad666ffc135b75 metadata.xml 243
-MD5 266b9ab9b595639dfa17969f0fe4f414 files/digest-fluxconf-0.6 64
-MD5 301944d4da88140ee21a8c80f1cd65a9 files/digest-fluxconf-0.8.5 66
-MD5 f004a553da7ce3f5b5c6f6d4bb1635fb files/digest-fluxconf-0.9.2-r1 66
 MD5 d56bde29e40d1f281eaf6f5ce458798c files/digest-fluxconf-0.9.4 66
 MD5 c9e8e7a1e8bd21c5236b64a73137f74f files/digest-fluxconf-0.9.7 66
+MD5 bc9d203a583f0fabf48d27fb76ca615c files/digest-fluxconf-0.9.8 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCRAidEZCkKN40op4RAtVWAKCTia5Quia1jhe0MAYqRlO3mgXXLwCfdr4F
+HqWLzRJkU5Sf8W7isxmM+vA=
+=OWKb
+-----END PGP SIGNATURE-----
