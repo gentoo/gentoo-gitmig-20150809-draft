@@ -1,0 +1,12 @@
+--- Makefile.in	2004-08-15 01:11:43.000000000 +0200
++++ ../cxfe-modified/Makefile.in	2004-08-25 19:03:47.273757920 +0200
+@@ -34,8 +34,7 @@
+ install:
+ 	cp cxfe $(bindir)/cxfe
+ 	chmod 755 $(bindir)/cxfe
+-        if test ! -d $(prefix)/share/cxfe ; then mkdir -p $(prefix)/share/cxfe ; 
+-fi
++	if test ! -d $(prefix)/share/cxfe ; then mkdir -p $(prefix)/share/cxfe ; fi
+ 	cp lircrc-example $(prefix)/share/cxfe/lircrc
+ 
+ uninstall:

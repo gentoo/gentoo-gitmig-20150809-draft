@@ -1,0 +1,8 @@
+# ChangeLog for media-video/cxfe
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/ChangeLog,v 1.1 2004/08/25 20:10:51 arj Exp $
+
+*cxfe-0.7.5 (25 Aug 2004)
+
+  25 Aug 2004; Anders Rune Jensen <arj@gentoo.org> cxfe-0.7.5.ebuild:
+  Initial port.  Ebuild contributed by <anders@gentoo.org>
