@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/mpeg2vidcodec-12-r1.ebuild,v 1.12 2003/08/04 20:38:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/mpeg2vidcodec-12-r1.ebuild,v 1.13 2003/09/10 05:05:30 msterret Exp $
 
 MY_P=${PN}_v${PV}
 S=${WORKDIR}/mpeg2
@@ -14,27 +14,23 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc ~alpha ~sparc amd64 hppa"
 
-src_unpack () {
-
-  unpack ${A}
-  cd ${S}
-  cp Makefile Makefile.orig
-  sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	cp Makefile Makefile.orig
+	sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
 
 }
-src_compile() {
 
+src_compile() {
 	cd ${S}
 	make || die
-
 }
 
-src_install () {
-
+src_install() {
 	cd ${S}
 	into /usr
 	dobin src/mpeg2dec/mpeg2decode
 	dobin src/mpeg2enc/mpeg2encode
 	dodoc README doc/*
-
 }
