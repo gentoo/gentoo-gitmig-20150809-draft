@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 741a2c01c8d3655279c8742519a12b91 ChangeLog 7081
+MD5 0ca9dda03a0dd09687c56e449a60e60e ChangeLog 7129
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 2d788a7a7e886dc17e446d01aa5db134 uw-imap-2002e-r4.ebuild 3175
 MD5 e9a05288ecb9fada22fff84bf0c5962c uw-imap-2004a.ebuild 3292
@@ -17,7 +17,7 @@ MD5 f93adbc027c40ed405bbde4bb1330f2d files/uw-imaps.xinetd 486
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB2W2rQlM6RnzZP+IRAgFfAKC5FRiPvAWMNJz2FF6a4LSVMTSo9wCfVy+l
-yQS9O4pM4nxYMtJkGD/iUqs=
-=dlIC
+iD8DBQFB2cpIQlM6RnzZP+IRAul7AKCB62jxBP4hVp+81kxa/OggY3BCKwCfZcJd
+OmB9shcpJAxkTLywrSUccjg=
+=iFHi
 -----END PGP SIGNATURE-----
