@@ -1,59 +1,63 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.0-r1.ebuild,v 1.10 2004/02/23 16:56:38 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.6.1.ebuild,v 1.1 2004/04/21 13:53:19 foser Exp $
 
 inherit gnome2 eutils
 
-SLOT="0"
-
 DESCRIPTION="The Panel for Gnome2"
 HOMEPAGE="http://www.gnome.org/"
-
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
-KEYWORDS="x86 ppc ~alpha sparc ~hppa amd64"
 
-# IUSE="doc menu"
 IUSE="doc"
-MAKEOPTS="${MAKEOPTS} -j1"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips"
+SLOT="0"
 
-RDEPEND=">=x11-libs/gtk+-2.1
+RDEPEND=">=x11-libs/gtk+-2.3.2
 	>=x11-libs/libwnck-2.3
 	>=gnome-base/ORBit2-2.4
 	>=gnome-base/gnome-vfs-2.3
-	>=gnome-base/gnome-desktop-2.3
+	>=gnome-base/gnome-desktop-2.2
 	>=gnome-base/libbonoboui-2.1.1
-	>=gnome-base/libglade-2
+	>=gnome-base/libglade-2.3
 	>=gnome-base/libgnome-2.1.1
-	>=gnome-base/libgnomeui-2.1
-	>=gnome-base/gconf-2.3.1
+	>=gnome-base/libgnomeui-2.5.4
+	>=gnome-base/gconf-2.3.3
+	media-libs/libpng
 	!gnome-extra/system-tray-applet"
 
 DEPEND="${RDEPEND}
+	sys-devel/gettext
 	>=app-text/scrollkeeper-0.3.11
 	>=dev-util/pkgconfig-0.12.0
-	>=dev-util/intltool-0.21
-	doc? ( >=dev-util/gtk-doc-0.9 )"
+	>=dev-util/intltool-0.29
+	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS COPYING* ChangeLog HACKING INSTALL NEWS README"
 
 src_unpack() {
 
 	unpack ${A}
-
 	cd ${S}
-	# use menu && epatch ${FILESDIR}/menu-${PV}.patch
-	# fix initial menu size
-	epatch ${FILESDIR}/${PN}-2.4-panel_size.patch
 
-	sed -i 's:--load:-v:' gnome-panel/Makefile.am
-
-	WANT_AUTOMAKE=1.4 automake || die
-
-	# FIXME : uh yeah, this is nice
-	touch gnome-panel/blah
-	chmod +x gnome-panel/blah
+	# should fix parallel install #45315
+	epatch ${FILESDIR}/${PN}-2.6-parallel_install.patch
 
 }
+
+src_compile() {
+
+	gnome2_src_configure
+
+	# FIXME : uh yeah, this is nice
+	# We should patch in a switch here and send it upstream
+	sed -i 's:--load:-v:' gnome-panel/Makefile || die
+
+	emake || die
+
+}
+
+# hard disable eds support for now
+G2CONF="${G2CONF} --disable-eds"
 
 pkg_postinst() {
 
