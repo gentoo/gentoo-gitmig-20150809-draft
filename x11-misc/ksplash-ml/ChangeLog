@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ksplash-ml
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ksplash-ml/ChangeLog,v 1.8 2003/06/12 22:21:34 msterret Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ksplash-ml/ChangeLog,v 1.9 2004/02/17 23:06:16 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> ksplash-ml-0.95.3.ebuild:
+  stable on alpha and ia64
 
   12 Jun 2003; <msterret@gentoo.org> ksplash-ml-0.95.2-r1.ebuild,
   ksplash-ml-0.95.2.ebuild, ksplash-ml-0.95.3.ebuild:
