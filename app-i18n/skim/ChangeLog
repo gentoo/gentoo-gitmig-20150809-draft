@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.16 2005/02/07 19:05:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.17 2005/02/11 15:42:59 usata Exp $
+
+*skim-1.1.0 (12 Feb 2005)
+
+  12 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> +skim-1.1.0.ebuild:
+  Version bumped.
 
   07 Feb 2005; Simon Stelling <blubb@gentoo.org> skim-1.0.2.ebuild:
   added ~amd64
