@@ -1,0 +1,727 @@
+diff -uNr im-sdk.orig/iiimxcf/htt_xbe/lib/IMdkit/r6im/XInputContext.cpp.orig im-sdk/iiimxcf/htt_xbe/lib/IMdkit/r6im/XInputContext.cpp
+--- im-sdk.orig/iiimxcf/htt_xbe/lib/IMdkit/r6im/XInputContext.cpp.orig	2004-10-19 11:36:49.052501536 +1000
++++ im-sdk/iiimxcf/htt_xbe/lib/IMdkit/r6im/XInputContext.cpp	2004-10-19 11:37:39.065898344 +1000
+@@ -160,15 +160,15 @@
+ XInputContext::
+ SetPreeditCallbacks() {
+   if (xic) {
+-    XVaNestedList preedit_attr = XVaCreateNestedList(NULL,
++    XVaNestedList preedit_attr = XVaCreateNestedList(0,
+ 			     XNPreeditStartCallback, preedit_start_cb,
+ 			     XNPreeditDrawCallback, preedit_draw_cb,
+ 			     XNPreeditCaretCallback, preedit_caret_cb,
+ 			     XNPreeditDoneCallback, preedit_done_cb,
+-			     0);
++                             NULL);
+     XSetICValues(xic,
+ 		 XNPreeditAttributes, preedit_attr,
+-		 0);
++		 NULL);
+     XFree(preedit_attr);
+   }
+   return;
+@@ -178,14 +178,14 @@
+ XInputContext::
+ SetStatusCallbacks() {
+   if (xic) {
+-    XVaNestedList status_attr = XVaCreateNestedList(NULL,
++    XVaNestedList status_attr = XVaCreateNestedList(0,
+ 			    XNStatusStartCallback, status_start_cb,
+ 			    XNStatusDrawCallback, status_draw_cb,
+ 			    XNStatusDoneCallback, status_done_cb,
+-			    0);
++			    NULL);
+     XSetICValues(xic,
+ 		 XNStatusAttributes, status_attr,
+-		 0);
++		 NULL);
+     XFree(status_attr);
+   }
+ }
+@@ -199,7 +199,7 @@
+ 		 // private XIC attribute
+ 		 "commitStringCallback", commit_string_cb,
+ 		 "forwardEventCallback", forward_event_cb,
+-		 0);
++                 NULL);
+   return;
+ }
+ 
+@@ -216,7 +216,7 @@
+       // such cases, we allow to set client_win again.
+       XSetICValues(xic,
+ 		   XNClientWindow, client_win,
+-		   0);
++		   NULL);
+       filters &= ~FLT_DESTROY;
+       select_destroy_clientwin_emask();
+       register_clientwin_destroy_filter();
+@@ -273,7 +273,7 @@
+     if (xic)
+       XSetICValues(xic,
+ 		   XNFocusWindow, focus_win,
+-		   0);
++		   NULL);
+   }
+   return;
+ }
+@@ -361,7 +361,7 @@
+   if (reply_back && xic) {
+     XSetICValues(xic,
+ 		 XNPreeditState, XIMPreeditEnable,
+-		 0);
++		 NULL);
+   }
+   is_conv_on = 1;
+ }
+@@ -371,7 +371,7 @@
+   if (reply_back && xic) {
+     XSetICValues(xic,
+ 		 XNPreeditState, XIMPreeditDisable,
+-		 0);
++		 NULL);
+   }
+   is_conv_on = 0;
+ }
+@@ -387,13 +387,13 @@
+   XVaNestedList preedit_attr;
+   XPoint spot;
+   spot.x = x; spot.y = y;
+-  preedit_attr = XVaCreateNestedList(NULL,
++  preedit_attr = XVaCreateNestedList(0,
+ 				     XNSpotLocation, &spot,
+ 				     NULL);
+   if (xic)
+     XSetICValues(xic,
+ 		 XNPreeditAttributes, preedit_attr,
+-		 0);
++		 NULL);
+   XFree(preedit_attr);
+   return;
+ }
+@@ -411,13 +411,13 @@
+   XVaNestedList preedit_attr;
+   XRectangle area;
+   area.x = x; area.y = y; area.width = width; area.height = height;
+-  preedit_attr = XVaCreateNestedList(NULL,
++  preedit_attr = XVaCreateNestedList(0,
+ 				     XNArea, &area,
+ 				     NULL);
+   if (xic)
+     XSetICValues(xic,
+ 		 XNPreeditAttributes, preedit_attr,
+-		 0);
++		 NULL);
+   XFree(preedit_attr);
+   return;
+ }
+@@ -433,18 +433,18 @@
+   XVaNestedList preedit_attr;
+   XRectangle area;
+   area.x = 0; area.y = 0; area.width = width; area.height = height;
+-  preedit_attr = XVaCreateNestedList(NULL,
++  preedit_attr = XVaCreateNestedList(0,
+ 				     XNAreaNeeded, &area,
+ 				     NULL);
+   if (xic)
+     XSetICValues(xic,
+ 		 XNPreeditAttributes, preedit_attr,
+-		 0);
++		 NULL);
+   XFree(preedit_attr);
+   if (width == 0 || height == 0) {
+     // do geometry negotiation
+     XRectangle *area2 = (XRectangle*)0;
+-    preedit_attr = XVaCreateNestedList(NULL,
++    preedit_attr = XVaCreateNestedList(0,
+ 				       XNAreaNeeded, &area2,
+ 				       NULL);
+     if (xic)
+@@ -485,13 +485,13 @@
+ 
+   // as XIM client
+   XVaNestedList preedit_attr;
+-  preedit_attr = XVaCreateNestedList(NULL,
++  preedit_attr = XVaCreateNestedList(0,
+ 				     XNColormap, colormap,
+ 				     NULL);
+   if (xic)
+     XSetICValues(xic,
+ 		 XNPreeditAttributes, preedit_attr,
+-		 0);
++		 NULL);
+   XFree(preedit_attr);
+   return;
+ }
+@@ -503,13 +503,13 @@
+ 
+   // as XIM client
+   XVaNestedList preedit_attr;
+-  preedit_attr = XVaCreateNestedList(NULL,
++  preedit_attr = XVaCreateNestedList(0,
+ 				     XNBackgroundPixmap, bg_pixmap,
+ 				     NULL);
+   if (xic)
+     XSetICValues(xic,
+ 		 XNPreeditAttributes, preedit_attr,
+-		 0);
++		 NULL);
+   XFree(preedit_attr);
+ }
+ void
+@@ -520,13 +520,13 @@
+ 
+   // as XIM client
+   XVaNestedList preedit_attr;
+-  preedit_attr = XVaCreateNestedList(NULL,
++  preedit_attr = XVaCreateNestedList(0,
+ 				     XNLineSpace, line_spacing,
+ 				     NULL);
+   if (xic)
+     XSetICValues(xic,
+ 		 XNPreeditAttributes, preedit_attr,
+-		 0);
++		 NULL);
+   XFree(preedit_attr);
+ }
+ void
+@@ -537,13 +537,13 @@
+ 
+   // as XIM client
+   XVaNestedList preedit_attr;
+-  preedit_attr = XVaCreateNestedList(NULL,
++  preedit_attr = XVaCreateNestedList(0,
+ 				     XNCursor, cursor,
+ 				     NULL);
+   if (xic)
+     XSetICValues(xic,
+ 		 XNPreeditAttributes, preedit_attr,
+-		 0);
++		 NULL);
+   XFree(preedit_attr);
+ }
+ void
+@@ -554,13 +554,13 @@
+ 
+   // as XIM client
+   XVaNestedList preedit_attr;
+-  preedit_attr = XVaCreateNestedList(NULL,
++  preedit_attr = XVaCreateNestedList(0,
+ 				     XNBackground, bg,
+ 				     NULL);
+   if (xic)
+     XSetICValues(xic,
+ 		 XNPreeditAttributes, preedit_attr,
+-		 0);
++		 NULL);
+   XFree(preedit_attr);
+ }
+ void
+@@ -570,13 +570,13 @@
+   preedit_attr4.foreground = fg;
+ 
+   XVaNestedList preedit_attr;
+-  preedit_attr = XVaCreateNestedList(NULL,
++  preedit_attr = XVaCreateNestedList(0,
+ 				     XNForeground, fg,
+ 				     NULL);
+   if (xic)
+     XSetICValues(xic,
+ 		 XNPreeditAttributes, preedit_attr,
+-		 0);
++		 NULL);
+   XFree(preedit_attr);
+ }
+ void
+@@ -587,13 +587,12 @@
+ 
+   XVaNestedList preedit_attr;
+   XFontSet font_set = XFactory::create_fontset(dpy, preedit_fontname);
+-  preedit_attr = XVaCreateNestedList(NULL,
+-				     XNFontSet, font_set,
+-				     NULL);
++  preedit_attr = XVaCreateNestedList(0,
++				     XNFontSet, font_set, NULL);
+   if (xic)
+     XSetICValues(xic,
+ 		 XNPreeditAttributes, preedit_attr,
+-		 0);
++		 NULL);
+   XFree(preedit_attr);
+ }
+ 
+@@ -617,7 +616,7 @@
+   if (xic)
+     XSetICValues(xic,
+ 		 XNStatusAttributes, status_attr,
+-		 0);
++		 NULL);
+   XFree(status_attr);
+   return;
+ }
+@@ -639,7 +638,7 @@
+   if (xic)
+     XSetICValues(xic,
+ 		 XNStatusAttributes, status_attr,
+-		 0);
++		 NULL);
+   XFree(status_attr);
+   if (width == 0 || height == 0) {
+     // do geometry negotiation
+@@ -650,7 +649,7 @@
+     if (xic)
+       XGetICValues(xic,
+ 		   XNStatusAttributes, status_attr,
+-		   0);
++		   NULL);
+     XFree(status_attr);
+     if (area2) {
+       if (width == 0 ||
+@@ -693,7 +692,7 @@
+   if (xic)
+     XSetICValues(xic,
+ 		 XNStatusAttributes, status_attr,
+-		 0);
++		 NULL);
+   XFree(status_attr);
+   return;
+ }
+@@ -711,7 +710,7 @@
+   if (xic)
+     XSetICValues(xic,
+ 		 XNStatusAttributes, status_attr,
+-		 0);
++		 NULL);
+   XFree(status_attr);
+ }
+ void
+@@ -728,7 +727,7 @@
+   if (xic)
+     XSetICValues(xic,
+ 		 XNStatusAttributes, status_attr,
+-		 0);
++		 NULL);
+   XFree(status_attr);
+ }
+ void
+@@ -745,7 +744,7 @@
+   if (xic)
+     XSetICValues(xic,
+ 		 XNStatusAttributes, status_attr,
+-		 0);
++		 NULL);
+   XFree(status_attr);
+ }
+ void
+@@ -762,7 +761,7 @@
+   if (xic)
+     XSetICValues(xic,
+ 		 XNStatusAttributes, status_attr,
+-		 0);
++		 NULL);
+   XFree(status_attr);
+ }
+ void
+@@ -779,7 +778,7 @@
+   if (xic)
+     XSetICValues(xic,
+ 		 XNStatusAttributes, status_attr,
+-		 0);
++		 NULL);
+   XFree(status_attr);
+ }
+ void
+@@ -796,7 +795,7 @@
+   if (xic)
+     XSetICValues(xic,
+ 		 XNStatusAttributes, status_attr,
+-		 0);
++		 NULL);
+   XFree(status_attr);
+ }
+ 
+
+diff -uNr im-sdk.orig/iiimxcf/xiiimp.so/configure.ac im-sdk/iiimxcf/xiiimp.so/configure.ac
+--- im-sdk.orig/iiimxcf/xiiimp.so/configure.ac	2004-03-22 11:31:57.000000000 +1000
++++ im-sdk/iiimxcf/xiiimp.so/configure.ac	2004-03-22 11:36:20.000000000 +1000
+@@ -57,6 +57,7 @@
+ IM_CHECK_DLOPEN
+ IM_CHECK_X
+ IM_CHECK_XUTF8API
++PKG_CHECK_MODULES(XFT, xft >= 2.0.0, have_xft=true, :)
+ 
+ # Checks for library functions.
+ #AC_FUNC_MALLOC
+@@ -101,6 +102,8 @@
+ AC_SUBST(XIIIMP_MAJOR_VERSION)
+ AC_SUBST(XIIIMP_MINOR_VERSION)
+ AC_SUBST(XIIIMP_SOX18N_VERSION)
++AC_SUBST(XFT_LIBS)
++AC_SUBST(XFT_CFLAGS)
+ 
+ AC_OUTPUT(Makefile iiimp/Makefile)
+ 
+diff -uNr im-sdk.orig/iiimxcf/xiiimp.so/iiimp/guiIMLookup.c im-sdk/iiimxcf/xiiimp.so/iiimp/guiIMLookup.c
+--- im-sdk.orig/iiimxcf/xiiimp.so/iiimp/guiIMLookup.c	2004-03-22 11:31:57.000000000 +1000
++++ im-sdk/iiimxcf/xiiimp.so/iiimp/guiIMLookup.c	2004-03-22 11:41:08.000000000 +1000
+@@ -43,6 +43,7 @@
+ #include "iiimpIM.h"
+ #include "iiimpColor.h"
+ #include "composeIM.h"
++#include <X11/Xft/Xft.h>
+ #include "guiIMLookup.h"
+ #include "guiIMPre.h"
+ #include "lookup.h"
+@@ -60,16 +61,21 @@
+ 
+ static void
+ DrawLookupString(Display *display, Window win, XFontSet fontset,
++                 XftDraw *xftdraw, XftColor xftcolor, XftFont *xftfont,
+ 		 GC gc, GC rgc, XIMFeedback feedback,
+ 		 int x, int y, char *str, int len) {
+   if (fontset == NULL) return;
+ 
+   if (feedback & XIMReverse) {
+-    XmbDrawImageString(display, win, fontset, rgc, 
+-		       x, y, str, len);
++    if ((xftdraw != NULL) && (xftfont != NULL))
++      XftDrawStringUtf8(xftdraw, &xftcolor, xftfont, x, y, str, len);
++    else 
++      XmbDrawImageString(display, win, fontset, rgc, x, y, str, len);
+   } else {
+-    XmbDrawImageString(display, win, fontset, gc, 
+-		       x, y, str, len);
++    if ((xftdraw != NULL) && (xftfont != NULL))
++      XftDrawStringUtf8(xftdraw, &xftcolor, xftfont, x, y, str, len);
++     else 
++      XmbDrawImageString(display, win, fontset, gc, x, y, str, len);
+   }
+   return;
+ }
+@@ -362,6 +368,7 @@
+   int rows;
+   int x = xMargin;
+   int y = yMargin;
++ 
+ 
+   if (lookup->fontset) {
+     XFontSetExtents *fse;
+@@ -412,7 +419,11 @@
+       if (lookup->redraw == DRAW_NOTHING &&
+ 	  i == lookup->previous) {
+ 	DrawLookupString(ic->core.im->core.display, lookup->window,
+-			 lookup->fontset, lookup->gc, lookup->rgc, 0,
++			 lookup->fontset, 
++			 lookup->xftdraw, 
++			 lookup->xftcolor, 
++			 lookup->xftfont, 
++                         lookup->gc, lookup->rgc, 0,
+ 			 x, y, lookup->candidateArray[i],
+ 			 strlen(lookup->candidateArray[i]));
+ 	if (lookup->current != i) {
+@@ -421,7 +432,11 @@
+       }
+       if (i == lookup->current) {
+ 	DrawLookupString(ic->core.im->core.display, lookup->window,
+-			 lookup->fontset, lookup->gc, lookup->rgc,
++			 lookup->fontset, 
++			 lookup->xftdraw, 
++			 lookup->xftcolor, 
++			 lookup->xftfont, 
++                         lookup->gc, lookup->rgc,
+ 			 XIMReverse,
+ 			 x, y, lookup->candidateArray[i],
+ 			 strlen(lookup->candidateArray[i]));
+@@ -429,7 +444,11 @@
+       }
+       if (lookup->redraw & CONTENTS) {
+ 	DrawLookupString(ic->core.im->core.display, lookup->window,
+-			 lookup->fontset, lookup->gc, lookup->rgc, 0,
++			 lookup->fontset, 
++			 lookup->xftdraw, 
++			 lookup->xftcolor, 
++			 lookup->xftfont, 
++                         lookup->gc, lookup->rgc, 0,
+ 			 x, y, lookup->candidateArray[i],
+ 			 strlen(lookup->candidateArray[i]));
+       }
+@@ -607,6 +626,19 @@
+     lookup->fontset = XFactoryCreateDefaultFontSet(display);
+     lookup->need_free_fontset = True;
+   }
++  if (!lookup->xftdraw) {
++    lookup->xftdraw = XftDrawCreate(display,(Drawable) win,
++                              DefaultVisual(display, DefaultScreen(display)),
++                              DefaultColormap(display, DefaultScreen(display)));
++  }
++  if (!lookup->xftfont) {
++    lookup->xftfont = XFactoryCreateDefaultXftFont(display);
++  }
++
++  lookup->xftcolor.color.red = 0;
++  lookup->xftcolor.color.blue = 0;
++  lookup->xftcolor.color.green = 0;
++  lookup->xftcolor.color.alpha = 0xffff;
+ 
+   return True;
+ }
+@@ -848,6 +880,7 @@
+   XIMText *value;
+   XIMText *label;
+   IMFeedbackList **value_flist, **label_flist;
++  Display *display = ic->core.im->core.display;
+ 
+   if (lookup->array_size == 0) {
+     lookup->array_size = 26;	/* init size */
+@@ -941,10 +974,20 @@
+       strcpy(candidate, value_str);
+     }
+     len = strlen(candidate);
+-    if (lookup->maxWidth < (temp = XmbTextEscapement(lookup->fontset,
++
++    if ((lookup->xftdraw != NULL) && (lookup->xftfont != NULL)) {
++      XGlyphInfo extents;
++      XftTextExtentsUtf8(display,lookup->xftfont, candidate, len, &extents);
++      if (lookup->maxWidth < extents.xOff) {
++        lookup->maxWidth = extents.xOff;
++      }
++    } else {
++      if (lookup->maxWidth < (temp = XmbTextEscapement(lookup->fontset,
+ 						     candidate, len))) {
+-      lookup->maxWidth = temp;
++        lookup->maxWidth = temp;
++      }
+     }
++
+     lookup->candidateArray[i] = candidate;
+     lookup->labelArray[i] = (char*)strdup(label_str);
+     if (i % lookup->ncolumns == 0) {
+@@ -1071,6 +1114,14 @@
+     XFactoryFreeDefaultFontSet (ic->core.im->core.display);
+     lookup->need_free_fontset = False;
+   }
++  if (lookup->xftdraw != NULL) { 
++    XftDrawDestroy(lookup->xftdraw);
++    lookup->xftdraw = NULL;
++  }
++  if (lookup->xftfont != NULL) {
++    XFactoryFreeDefaultXftFont(ic->core.im->core.display);
++    lookup->xftfont = NULL;
++  }
+   XDestroyWindow(ic->core.im->core.display,
+ 		 lookup->window);
+   _XUnregisterFilter(ic->core.im->core.display, lookup->window,
+diff -uNr im-sdk.orig/iiimxcf/xiiimp.so/iiimp/guiIMLookup.h im-sdk/iiimxcf/xiiimp.so/iiimp/guiIMLookup.h
+--- im-sdk.orig/iiimxcf/xiiimp.so/iiimp/guiIMLookup.h	2004-03-22 11:31:57.000000000 +1000
++++ im-sdk/iiimxcf/xiiimp.so/iiimp/guiIMLookup.h	2004-03-22 11:37:23.000000000 +1000
+@@ -60,6 +60,9 @@
+   GC		gc;
+   GC		rgc;
+   XFontSet	fontset;
++  XftDraw	*xftdraw;
++  XftFont	*xftfont;
++  XftColor	xftcolor;
+   Bool		need_free_fontset;
+   int		nrows;
+   int		ncolumns;
+diff -uNr im-sdk.orig/iiimxcf/xiiimp.so/iiimp/guiIMSts.c im-sdk/iiimxcf/xiiimp.so/iiimp/guiIMSts.c
+--- im-sdk.orig/iiimxcf/xiiimp.so/iiimp/guiIMSts.c	2004-03-22 11:31:57.000000000 +1000
++++ im-sdk/iiimxcf/xiiimp.so/iiimp/guiIMSts.c	2004-03-22 11:40:41.000000000 +1000
+@@ -89,6 +89,7 @@
+ static void
+ DrawStatusString(XicCommon ic,
+ 		 Display *display, Window win, XFontSet fontset,
++                 XftDraw *xftdraw, XftColor xftcolor, XftFont *xftfont,
+ 		 GC gc, int x, int y, char *str, int str_len,
+ 		 IMFeedbackList *feedback_list, int feedback_length) {
+   if (fontset == NULL) return;
+@@ -122,7 +123,10 @@
+     return;
+   }
+  error:
+-  XmbDrawString(display, win, fontset, gc, x, y, str, str_len);
++  if ((xftdraw != NULL) && (xftfont != NULL))
++    XftDrawStringUtf8(xftdraw, &xftcolor, xftfont, x, y, str, str_len);
++  else
++    XmbDrawString(display, win, fontset, gc, x, y, str, str_len);
+ }
+ 
+ #if defined(USE_FILTER_KEY_PRESS_IN_STATUS)
+@@ -250,6 +254,9 @@
+   DrawStatusString(ic, ic->core.im->core.display,
+ 		   status->window,
+ 		   status->fontset,
++                   status->xftdraw,
++                   status->xftcolor,
++                   status->xftfont,
+ 		   status->gc, status->x, status->y,
+ 		   status_string, len,
+ 		   status->feedback, status->text.length);
+@@ -475,7 +482,7 @@
+   StatusWin status = (StatusWin)(ic->gui_icpart->status);
+ 
+   if (!status) return;  /* Let's do it later */
+-
++  
+   if (ic->core.status_attr.fontset) {
+     if (status->fontset && status->need_free_fontset) {
+       XFactoryFreeDefaultFontSet (ic->core.im->core.display);
+@@ -489,6 +496,22 @@
+     status->fontset = XFactoryCreateDefaultFontSet(ic->core.im->core.display);
+     status->need_free_fontset = True;
+   }
++  if (!status->xftdraw) {
++    status->xftdraw = XftDrawCreate(ic->core.im->core.display,
++                                    (Drawable) status->window,
++                                    DefaultVisual(ic->core.im->core.display, 
++                                    DefaultScreen(ic->core.im->core.display)),
++                                    DefaultColormap(ic->core.im->core.display, 
++                                    DefaultScreen(ic->core.im->core.display)));
++  }
++  if (!status->xftfont) {
++    status->xftfont = XFactoryCreateDefaultXftFont(ic->core.im->core.display);
++  }
++  status->xftcolor.color.red = 0;
++  status->xftcolor.color.blue = 0;
++  status->xftcolor.color.green = 0;
++  status->xftcolor.color.alpha = 0xffff;
++
+   return;
+ }
+ 
+@@ -581,6 +604,16 @@
+     XFactoryFreeDefaultFontSet (ic->core.im->core.display);
+     status->need_free_fontset = False;
+   }
++
++  if (status->xftdraw != NULL) {
++    XftDrawDestroy(status->xftdraw);
++    status->xftdraw = NULL;
++  }
++  if (status->xftfont != NULL) {
++    XFactoryFreeDefaultXftFont(ic->core.im->core.display);
++    status->xftfont = NULL;
++  }
++
+   _XUnregisterFilter(ic->core.im->core.display, status->window,
+ 		     RepaintStatus, (XPointer)ic);
+ #if defined(USE_FILTER_KEY_PRESS_IN_STATUS)
+diff -uNr im-sdk.orig/iiimxcf/xiiimp.so/iiimp/guiIMSts.h im-sdk/iiimxcf/xiiimp.so/iiimp/guiIMSts.h
+--- im-sdk.orig/iiimxcf/xiiimp.so/iiimp/guiIMSts.h	2004-03-22 11:31:57.000000000 +1000
++++ im-sdk/iiimxcf/xiiimp.so/iiimp/guiIMSts.h	2004-03-22 11:37:36.000000000 +1000
+@@ -43,6 +43,7 @@
+ #define _guiIM_STS_h
+ 
+ #include "guiIM.h"
++#include <X11/Xft/Xft.h>
+ 
+ typedef void (*StatusCB)(XicCommon, XPointer);
+ 
+@@ -53,6 +54,9 @@
+   GC		rgc;
+ #endif
+   XFontSet	fontset;
++  XftDraw       *xftdraw;
++  XftFont       *xftfont;
++  XftColor      xftcolor;
+   Bool		need_free_fontset;
+   XIMText	text;
+   IMFeedbackList  *feedback;
+diff -uNr im-sdk.orig/iiimxcf/xiiimp.so/iiimp/Makefile.am im-sdk/iiimxcf/xiiimp.so/iiimp/Makefile.am
+--- im-sdk.orig/iiimxcf/xiiimp.so/iiimp/Makefile.am	2004-03-22 11:31:57.000000000 +1000
++++ im-sdk/iiimxcf/xiiimp.so/iiimp/Makefile.am	2004-03-22 11:37:58.000000000 +1000
+@@ -1,7 +1,7 @@
+ moduledir = $(IMDIR)
+ xiiimp_la_CFLAGS = $(X_CFLAGS) -I$(X_PRIVATEINC) \
+                    $(SHLIBCFLAGS) $(THREAD_CXX_CFLAGS) \
+-                   -I$(CSCONV_DIR)
++                   -I$(CSCONV_DIR) $(XFT_CFLAGS)
+ xiiimp_la_LDFLAGS = -rpath $(moduledir) -version-info $(XIIIMP_SOX18N_VERSION) \
+                     -module -export-dynamic -no-undefined
+ # On GNU/Linux system, libtool does not take care of -no-undefined so that
+@@ -10,7 +10,7 @@
+ xiiimp_la_LIBADD = $(X_LIBS)  \
+ 		   $(IM_LIBDIR)/iiimcf/libiiimcf.la \
+ 		   $(IM_LIBDIR)/iiimp/libiiimp.la \
+-                   $(DLOPEN_LIBS) $(THREAD_LIBS)
++                   $(DLOPEN_LIBS) $(THREAD_LIBS) $(XFT_LIBS)
+ xiiimp_la_SOURCES = \
+ 	genutil.c \
+ 	KeyMap.c \
+diff -uNr im-sdk.orig/iiimxcf/xiiimp.so/iiimp/xfactory.c im-sdk/iiimxcf/xiiimp.so/iiimp/xfactory.c
+--- im-sdk.orig/iiimxcf/xiiimp.so/iiimp/xfactory.c	2004-03-22 11:31:57.000000000 +1000
++++ im-sdk/iiimxcf/xiiimp.so/iiimp/xfactory.c	2004-03-22 11:43:10.000000000 +1000
+@@ -46,6 +46,7 @@
+ #endif
+ #include "guiIM.h"
+ #include "xfactory.h"
++#include <X11/Xft/Xft.h>
+ 
+ #define PROP_WM_STATE_ELEMENTS 2
+ 
+@@ -459,6 +460,46 @@
+   return default_fontset;
+ }
+ 
++static XftFont *default_xftfont = NULL;
++static ref_xftfont_count = 0;
++
++XftFont*
++XFactoryCreateDefaultXftFont (Display *display)
++{
++  FcPattern *xfp, *match;
++  FcResult *result;
++
++  ref_xftfont_count ++ ;
++
++  if (default_xftfont != NULL){
++    return default_xftfont;
++  }
++
++  xfp = FcPatternCreate ();
++  FcPatternAddString(xfp, XFT_FAMILY, "serif");
++  match = XftFontMatch(display, DefaultScreen(display), xfp, result);
++
++  default_xftfont = XftFontOpenPattern(display, match);
++
++  if (default_xftfont == NULL) {
++     return NULL;
++  } 
++
++  return default_xftfont;
++}
++
++void 
++XFactoryFreeDefaultXftFont (Display *display)
++{
++  if (ref_xftfont_count-- == 0)
++    {
++      if (default_xftfont)
++	XftFontClose (display, default_xftfont);
++      default_xftfont = NULL;
++    }
++  return;
++}
++
+ void
+ XFactoryFreeDefaultFontSet(Display *display)
+ {
+diff -uNr im-sdk.orig/iiimxcf/xiiimp.so/iiimp/xfactory.h im-sdk/iiimxcf/xiiimp.so/iiimp/xfactory.h
+--- im-sdk.orig/iiimxcf/xiiimp.so/iiimp/xfactory.h     2004-10-19 11:49:40.251261504 +1000
++++ im-sdk/iiimxcf/xiiimp.so/iiimp/xfactory.h  2004-10-19 11:51:07.847944784 +1000
+@@ -49,6 +49,8 @@
+ 
+ #pragma ident	"@(#)xfactory.h 1.1	99/11/04 SMI"
+ 
++#include <X11/Xft/Xft.h>
++
+ extern void	XFactoryRemoveDecoration(Display *display, Window window);
+ extern void	XFactoryRemoveDecorationExceptTitle(Display *display,
+ 						    Window window);
+@@ -87,4 +89,5 @@
+ extern Bool     XFactoryCheckIMWindow(Display* display, Window window);
+ extern int      XFactoryValidateCoordinates(Display * display, Window w,
+ 					    int *x, int *y);
++extern XftFont *XFactoryCreateDefaultXftFont (Display *display);
+ #endif /* !_XFACTORY_H */
+

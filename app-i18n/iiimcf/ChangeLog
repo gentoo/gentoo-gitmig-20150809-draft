@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/iiimcf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimcf/ChangeLog,v 1.6 2005/01/01 14:28:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimcf/ChangeLog,v 1.7 2005/03/30 17:14:17 usata Exp $
+
+*iiimcf-12.1_p2002 (30 Mar 2005)
+
+  30 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> +iiimcf-12.1_p2002.ebuild:
+  Version bumped.
 
 *iiimcf-12.0.1_pre1891 (14 Sep 2004)
 *iiimcf-11.4_p1467 (14 Sep 2003)

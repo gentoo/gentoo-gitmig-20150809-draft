@@ -2,5 +2,7 @@ MD5 da2c6ef4c0bb92b1a8ef4fc308c1e099 ChangeLog 902
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 66c06f45cabfc5eafb0ba27a5b493064 iiimgcf-11.4_p1467.ebuild 893
 MD5 a47d5ac812df92eece815ad530b9525e iiimgcf-12.0.1_pre1891.ebuild 938
+MD5 524d916241c1e96525975c8dc08837ab iiimgcf-12.1_p2002.ebuild 1011
+MD5 be37bb244b3081121d1781e5118f2443 files/digest-iiimgcf-12.1_p2002 79
 MD5 de5dcfe76eb7086d4b90d73615622cd3 files/digest-iiimgcf-11.4_p1467 74
 MD5 e97031d3645096ad0e4fb680a228b9c0 files/digest-iiimgcf-12.0.1_pre1891 77
