@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-20040616.ebuild,v 1.2 2004/10/04 23:43:24 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-20040616.ebuild,v 1.3 2004/10/14 14:42:46 ribosome Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gcc
 
 DESCRIPTION="Development toolkit and applications (BLAST, entrez, ddv, udv, sequin...) for computational biology"
 LICENSE="public-domain"
@@ -77,15 +77,15 @@ src_unpack() {
 
 	# Set C compiler...
 	# ... on x86...
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = ${CC:gcc}/" linux-x86.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(gcc-getCC)/" linux-x86.ncbi.mk
 	# ... on alpha...
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = ${CC:gcc}/" linux-alpha.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(gcc-getCC)/" linux-alpha.ncbi.mk
 	# ... on hppa...
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = ${CC:gcc}/" hppalinux.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(gcc-getCC)/" hppalinux.ncbi.mk
 	# ... on ppc...
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = ${CC:gcc}/" ppclinux.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(gcc-getCC)/" ppclinux.ncbi.mk
 	# ... on generic Linux.
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = ${CC:gcc}/" linux.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(gcc-getCC)/" linux.ncbi.mk
 }
 
 src_compile() {
