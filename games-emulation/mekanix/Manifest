@@ -1,5 +1,15 @@
-MD5 f4e4b8d7a42c9fa8da6c2075c08bfb96 mekanix-065.ebuild 685
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2094e404c95b88887dd52d29f86d016f ChangeLog 490
+MD5 16f0f1190f8436927160c6967cbb3285 mekanix-065.ebuild 720
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 8fb2c78af2caf03fdf49f96c022cb70b files/digest-mekanix-065 59
 MD5 64cb21b55f208b73364dc7e57a1a995c files/mekanix 45
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCNsHTu7gpaalycRAi5PAJ9DyxJac+/ICu60eI6GUg6Ibl0zWgCdGNkk
+jqs0m2yxWWWZ8M3GCNEUG7g=
+=XJTS
+-----END PGP SIGNATURE-----

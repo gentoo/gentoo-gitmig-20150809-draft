@@ -1,5 +1,15 @@
-MD5 0a70d0c982ec198deff92ee63f53259e ps2emu-cddvdlinuz-0.3-r1.ebuild 863
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e1b0465968632627755ae4be6fca8b6e ChangeLog 704
+MD5 f3d27da53637564406400698cbd2bba0 ps2emu-cddvdlinuz-0.3-r1.ebuild 898
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 2a49d894ab7a68b412e8e692b57c30d4 files/digest-ps2emu-cddvdlinuz-0.3-r1 60
 MD5 ff9fe8eafc781375748f9b2a5e7204b5 files/0.3-makefile.patch 455
+MD5 2a49d894ab7a68b412e8e692b57c30d4 files/digest-ps2emu-cddvdlinuz-0.3-r1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCOcHTu7gpaalycRAhyZAKC/CiDhUP3f1nly0xHkVlFBA4qSRwCdHhFN
+p2qo04F88mt1uabOHQJdRpo=
+=5NRS
+-----END PGP SIGNATURE-----

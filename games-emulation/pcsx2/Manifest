@@ -1,8 +1,15 @@
-MD5 b3b4d98feb059d599e0a4e38b606cff6 pcsx2-0.5.ebuild 1288
-MD5 3ce277bbebaad7a7a932cabef6ecf9d5 pcsx2-0.6.ebuild 1353
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0995cd14cf702f0a9b1497305d212356 ChangeLog 606
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 e6ef9cc8c1d86fbf34aca81702e0a819 pcsx2-0.6.ebuild 1367
 MD5 b1e870f4d30a5f20f1597ea6c3cea2b3 files/pcsx2 1346
-MD5 273fb2140b184b4d3271fcbf3455ff0a files/digest-pcsx2-0.5 61
 MD5 7824dc74e2dffea379d9aa075d6dbecd files/digest-pcsx2-0.6 62
-MD5 ae83b13b8fd78cb3d081d50adb38c920 files/0.5-time-renames.patch 732
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCOGHTu7gpaalycRAiOdAJ9JHD6HGpDiGIOB5uQKW+1FyNa2OwCdFQES
+DZYbbA03/YcAn7H1IXi57Jo=
+=pMCN
+-----END PGP SIGNATURE-----

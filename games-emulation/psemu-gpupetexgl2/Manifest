@@ -1,6 +1,14 @@
-MD5 528863bf09613326d8055efe0b541187 psemu-gpupetexgl2-2.0.5-r2.ebuild 981
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d5cb10a4dd1024178f1dc382f9e0925f ChangeLog 516
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 8fd6f36a8cb5f476dffa1813d3abc9e8 psemu-gpupetexgl2-2.0.5-r1.ebuild 1003
-MD5 1a1bb419d86608d36ef6971cfe2b85d2 files/digest-psemu-gpupetexgl2-2.0.5-r1 210
+MD5 cea2f031ff52acfd031b2daf37ae053d psemu-gpupetexgl2-2.0.5-r2.ebuild 1016
 MD5 69a07a880a5feaf74d068eef433ca1f4 files/digest-psemu-gpupetexgl2-2.0.5-r2 213
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCQFHTu7gpaalycRApJjAJ4uv2ZRGtJuJ04x7S7yk3pVe0e1zACg2NX4
+Y6gdKrK6P7ZwW+TemI/Gjec=
+=4Ac5
+-----END PGP SIGNATURE-----

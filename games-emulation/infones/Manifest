@@ -1,4 +1,14 @@
-MD5 af51d4faddb481573d85d1dc7fc1bfd4 infones-0.92.ebuild 853
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5673aa6a7af68acc8da5a6acfd53117e ChangeLog 838
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 a60b4836d546a3528df7a92cd7b69512 infones-0.92.ebuild 865
 MD5 478ea5d48ecdb6fc18c00b2f85e39f88 files/digest-infones-0.92 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCM8HTu7gpaalycRAkL0AKDsDB97loLSDzXwPmvxCYKEhJMvsgCfZ/z3
+w3Kg4usyuckZXtStSsYXNDo=
+=7fl8
+-----END PGP SIGNATURE-----
