@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.183 2004/06/02 03:34:06 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.184 2004/06/02 14:52:35 kugelfang Exp $
+
+  02 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> apache-1.3.31-r1.ebuild,
+  apache-2.0.49-r3.ebuild:
+  Marked stable on amd64.
 
   01 Jun 2004; Tom Gall <tgall@gentoo.org> apache-2.0.49-r3.ebuild:
   marked stable on ppc64, bug #52719 
