@@ -6,22 +6,31 @@ IF AN ARCHITECTURE IS SPECIFIED IN THE FILENAME BE SURE IT IS
 THE CORRECT ONE FOR YOUR ARCH.
 
 **************************************************************
-NOTE: This WILL overwrite make.conf. Please copy your original
+NOTE: This may overwrite make.conf. Please copy your original
       somewhere safe if you wish to keep it for reference.
 **************************************************************
 
 If you are not in this directory, you need to change to:
 # cd /usr/portage/sys-apps/portage/files/
 
+# IT MIGHT BE NECESSARY TO DOWNLOAD a portage rescue tarball from one of the
+# following if one does not exist in this directory for your arch.
+# ===> http://dev.gentoo.org/~carpaski/portage_rescue/
+# ===> http://gentoo.twobit.net/portage_rescue/
+
 Run the following to extract the tarball (substitute your arch for 'x86')
-# tar xjpUvf portage-rescue-2.0.47-r10-x86.tbz2 -C /
+# tar xjpUvf portage-rescue-2.0.50-r1-x86.tbz2 -C /
 
 You'll see a warning about garbage at the end of the tarball/bzip2.  That's
 normal and not a problem.  That should get Portage up and running again.
 
 Immediately after that finishes do the following:
-# emerge rsync
+# emerge sync
 # emerge portage
+
+And for >=portage-2.0.50, this is optional, but will speed up
+interactions with portage from that point on.
+# emerge metadata
 
 Everything should be fine from then on.
 
