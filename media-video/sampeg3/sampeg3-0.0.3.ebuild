@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/sampeg3-0.0.3.ebuild,v 1.2 2004/03/18 09:54:42 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/sampeg3-0.0.3.ebuild,v 1.3 2004/06/14 00:53:28 spyderous Exp $
 
 DESCRIPTION="MPEG video encoder targeted for optimum picture quality"
 HOMEPAGE="http://rachmaninoff.informatik.uni-mannheim.de/sampeg/"
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 		>=media-libs/libvideogfx-1.0
 		media-libs/libpng
 		media-libs/jpeg
-		x11-base/xfree"
+		virtual/x11"
 
 src_compile() {
 	./configure \
