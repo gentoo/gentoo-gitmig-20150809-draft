@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4c173651a6eccdb4c7e0da86e96ce0c9 jad-bin-1.5.8e.ebuild 496
+MD5 4aa824d90785f0a76a12a2305c3cddf8 ChangeLog 1457
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 9ce9a5f4b1c990b6cc4a381936acb19d files/digest-jad-bin-1.5.8e 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCqi2/rLF9B432nYRAm23AJ4gIKg0g1HKuOvtyxwNhyk7XF/FHwCbB6oD
+9OmBpcvsZ67HdYKAkF2frhc=
+=IgKk
+-----END PGP SIGNATURE-----

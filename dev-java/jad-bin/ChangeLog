@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jad
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jad/ChangeLog,v 1.7 2004/07/18 15:09:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jad-bin/ChangeLog,v 1.1 2004/07/30 19:58:00 axxo Exp $
+
+*jad-bin-1.5.8e (30 Jul 2004)
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +jad-bin-1.5.8e.ebuild:
+  move dev-java/jad dev-java/jad-bin
 
   18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> jad-1.5.8e.ebuild:
   Adding amd64 keyword, closing #53875.
