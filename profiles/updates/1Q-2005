@@ -5,3 +5,4 @@ move dev-libs/memcached-api-perl dev-perl/Cache-Memcached
 move sci-calculators/qalculate-gtk sci-calculators/qalculate
 move games-emulation/blight-uhleaudio games-emulation/mupen-blight-uhleaudio
 move games-emulation/blight-tr64gl games-emulation/mupen64-blight-tr64gl
+move games-emulation/blight-glN64 games-emulation/mupen64-blight-glN64
