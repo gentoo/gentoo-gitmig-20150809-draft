@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/kedpm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.3 2004/04/27 19:10:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.4 2004/06/05 23:35:27 dragonheart Exp $
+
+  06 Jun 2004; Daniel Black <dragonheart@gentoo.org> kedpm-0.4.0.ebuild:
+  x86 keyword
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> kedpm-0.4.0.ebuild:
   Add inherit eutils
