@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.3.0.ebuild,v 1.5 2004/03/15 10:08:59 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.3.0.ebuild,v 1.6 2004/04/10 00:18:05 kumba Exp $
 
 inherit libtool
 
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc"
 
 LICENSE="as-is"
 SLOT="1.2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ia64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ia64 mips"
 
 src_compile() {
 	elibtoolize
