@@ -1,3 +1,6 @@
-MD5 cae3e152ff7d1ead59107d2193ad9df4 ChangeLog 322
 MD5 9cbedbc90e2a3567914fc00197f50a3b cl-ppcre-0.5.4b.ebuild 851
+MD5 2c4c7866321c0783986bde4d59c21326 cl-ppcre-0.5.7.ebuild 748
+MD5 cae3e152ff7d1ead59107d2193ad9df4 ChangeLog 322
+MD5 9cbedbc90e2a3567914fc00197f50a3b cl-ppcre-0.5.7.ebuild~ 851
+MD5 ce665068a9f3aceefa5e3f66a3231015 files/digest-cl-ppcre-0.5.7 66
 MD5 268c98c99a8bb05591b4395926158048 files/digest-cl-ppcre-0.5.4b 72
