@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.4.2.ebuild,v 1.4 2003/08/07 04:04:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.4.2.ebuild,v 1.5 2004/02/23 23:58:31 eradicator Exp $
 
 IUSE="qt"
 
@@ -16,7 +16,7 @@ SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND="media-sound/mpg123
+DEPEND="virtual/mpg123
 	media-libs/id3lib
 	media-sound/mad
 	qt?		( x11-libs/qt )"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.3.ebuild,v 1.1 2003/11/19 16:18:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.3.ebuild,v 1.2 2004/02/24 00:02:21 eradicator Exp $
 
 DESCRIPTION="Command line MP3 player."
 HOMEPAGE="http://konst.org.ua/en/orpheus"
@@ -13,7 +13,7 @@ IUSE="oggvorbis"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta1 )
-	media-sound/mpg123
+	virtual/mpg123
 	media-sound/vorbis-tools
 	gnome-base/libghttp"
 #	nas? ( >=media-libs/nas-1.4.1 )

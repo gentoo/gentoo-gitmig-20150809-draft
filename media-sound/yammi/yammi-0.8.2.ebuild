@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.8 2003/12/18 22:49:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.9 2004/02/23 23:55:59 eradicator Exp $
 
 inherit flag-o-matic
 
@@ -18,7 +18,7 @@ DEPEND=">=x11-libs/qt-3.1.0-r1
 	>=media-libs/id3lib-3.8.2
 	>=media-sound/cdparanoia-3.9.8
 	>=media-sound/lame-3.93.1
-	>=media-sound/mpg123-0.59r-r1
+	virtual/mpg123
 	>=media-sound/sox-12.17.3-r1
 	cdr? ( >=app-cdr/cdlabelgen-2.4.0
 	>=app-cdr/mp3burn-0.1 )
