@@ -1,0 +1,58 @@
+# ChangeLog for www-client/raggle
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/raggle/ChangeLog,v 1.1 2004/09/08 14:03:41 usata Exp $
+
+*raggle-0.3.0 (08 Sep 2004)
+
+  08 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +files/raggle-destdir-gentoo.diff, +raggle-0.3.0.ebuild,
+  +raggle-0.3.1.ebuild:
+  Moved net-www/raggle to www-client/raggle.
+
+*raggle-0.3.1 (04 Jul 2004)
+
+  04 Jul 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/raggle-destdir-gentoo.diff, -raggle-0.2.2.ebuild,
+  -raggle-0.2.4.ebuild, -raggle-0.2.5.ebuild, raggle-0.3.0.ebuild,
+  +raggle-0.3.1.ebuild:
+  Version bumped. Ebuild submitted by Michael Kohl <citizen428@cargal.org>,
+  closing bug #54924
+
+  12 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> raggle-0.2.2.ebuild,
+  raggle-0.2.4.ebuild, raggle-0.2.5.ebuild, raggle-0.3.0.ebuild:
+  virtual/ruby fix
+
+*raggle-0.3.0 (28 Feb 2004)
+
+  28 Feb 2004; Tom Payne <twp@gentoo.org> raggle-0.3.0.ebuild :
+  Version bump.
+
+*raggle-0.2.5 (28 Feb 2004)
+
+  28 Feb 2004; Tom Payne <twp@gentoo.org> raggle-0.2.5.ebuild :
+  Version bump (bug fix of 0.2.4). Removed ~ppc. Copyright years.
+
+  29 Dec 2003; Tom Payne <twp@gentoo.org> raggle-0.2.4.ebuild :
+  Marked back to unstable in other ARCHes in case of other problems.
+  Hey look, time zone effects in a ChangeLog ;-)
+
+  28 Dec 2003; Jason Wever <weeve@gentoo.org> raggle-0.2.4.ebuild:
+  Marked back to ~sparc since developer cannot do simple QA.
+
+  29 Dec 2003; Tom Payne <twp@gentoo.org> raggle-0.2.4.ebuild, metadata.xml :
+  Marked stable on all ARCHes (it's a script). Assign to ruby herd.
+
+*raggle-0.2.4 (07 Dec 2003)
+
+  07 Dec 2003; Tom Payne <twp@gentoo.org> raggle-0.2.4.ebuild :
+  Version bump.
+
+*raggle-0.2.2 (12 Sep 2003)
+
+  12 Sep 2003; Tom Payne <twp@gentoo.org> raggle-0.2.2.ebuild :
+  Version bump. Fixed syck and REXML dependencies.
+
+*raggle-0.1.3 (22 Jul 2003)
+
+  22 Jul 2003; Tom Payne <twp@gentoo.org> raggle-0.1.3.ebuild :
+  Initial version. Based on ebuild submitted by Robert Jorgenson. Bug # 23705.
