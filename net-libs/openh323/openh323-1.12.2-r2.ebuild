@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.2-r2.ebuild,v 1.6 2004/03/30 22:29:46 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.2-r2.ebuild,v 1.7 2004/04/20 23:21:56 stkn Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ LICENSE="MPL-1.1"
 KEYWORDS="x86 ppc sparc ~alpha"
 
 DEPEND=">=sys-apps/sed-4
-	>=dev-libs/pwlib-1.5.2-r3
+	~dev-libs/pwlib-1.5.2
 	>=media-video/ffmpeg-0.4.7
 	ssl? ( dev-libs/openssl )"
 

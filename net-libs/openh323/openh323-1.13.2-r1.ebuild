@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.6 2004/04/06 03:12:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.7 2004/04/20 23:21:56 stkn Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 IUSE="ssl"
 
 DEPEND=">=sys-apps/sed-4
-	>=dev-libs/pwlib-1.6.3-r1
+	~dev-libs/pwlib-1.6.3
 	>=media-video/ffmpeg-0.4.7
 	ssl? ( dev-libs/openssl )"
 

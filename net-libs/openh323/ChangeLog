@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.38 2004/04/11 19:35:52 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.39 2004/04/20 23:21:56 stkn Exp $
+
+  21 Apr 2004; Stefan Knoblich <stkn@gentoo.org> openh323-1.12.2-r2.ebuild,
+  openh323-1.13.2-r1.ebuild:
+  change dependencies to use only matching pwlib releases (#47929)
 
 *openh323-1.13.5 (11 Apr 2004)
 
