@@ -5,8 +5,9 @@ MD5 7ee185dd64b07fc153fb636accf19871 doxygen-1.2.18.ebuild 1210
 MD5 c9cc86ab10f37a2cc500a8860908a2a4 doxygen-1.3.2.ebuild 2146
 MD5 24ce37abe4cd4fc6063f22bf37c0c03a doxygen-1.3.3.ebuild 2148
 MD5 e72cb33fc428700dd69264335bc742c1 doxygen-1.3.ebuild 2139
-MD5 7baffd95cf05179ee908e91151aad1dc doxygen-1.3.4.ebuild 2160
+MD5 990117535495ff33f62148e602f6eff1 doxygen-1.3.4.ebuild 2159
 MD5 6566b6f7ce0ea73e6129f23b0ef7d0c0 metadata.xml 280
+MD5 7baffd95cf05179ee908e91151aad1dc doxygen-1.3.5.ebuild 2160
 MD5 92e72d97f936f9a548b20e2e20e3e385 files/digest-doxygen-1.2.15-r1 71
 MD5 5e330a062f712a4ec1212fdac4eb2ec4 files/digest-doxygen-1.2.16 71
 MD5 5f7d25c12b6cceb408f76864abbf1c28 files/digest-doxygen-1.2.18 71
@@ -16,3 +17,4 @@ MD5 282fe1e391c89b5f590758bf816160b5 files/digest-doxygen-1.3.3 70
 MD5 17d3c60cd075b3eff3cbe4a5bf00b81c files/doxygen-1.2.15-r1.diff 271
 MD5 17d3c60cd075b3eff3cbe4a5bf00b81c files/doxygen-1.2.16-gentoo.diff 271
 MD5 d160d86e5eae4bf2ed853e16fab32355 files/digest-doxygen-1.3.4 70
+MD5 6fbdec5b9c246aad6da7d0e897fc88c0 files/digest-doxygen-1.3.5 70
