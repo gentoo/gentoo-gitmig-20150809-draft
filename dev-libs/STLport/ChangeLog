@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.5 2002/08/15 20:36:20 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.6 2002/09/13 17:45:43 lostlogic Exp $
+
+*STLport-4.5.3-r2 (13 Sep 2002)
+
+  13 Sep 2002; Brandon Low <lostlogic@gentoo.org> STLport-4.5.3-r2.ebuild :
+
+  Fix for gcc-3.2, and follow make.conf optimizations.  Thanks to
+  nwourms@netscape.net (Nicholas Wourms) closes bug 6111.
 
   15 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
