@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtkballs/gtkballs-3.1.0.ebuild,v 1.1 2004/01/23 01:22:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtkballs/gtkballs-3.1.0.ebuild,v 1.2 2004/03/07 22:37:38 jhuebel Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ DESCRIPTION="An entertaining game based on the old DOS game lines"
 HOMEPAGE="http://gtkballs.antex.ru/"
 SRC_URI="http://gtkballs.antex.ru/dist/${P}.tar.gz"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc amd64"
 LICENSE="GPL-2"
 SLOT="0"
 
