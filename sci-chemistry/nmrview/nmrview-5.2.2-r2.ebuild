@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrview/nmrview-5.2.2-r1.ebuild,v 1.1 2004/12/24 16:52:49 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrview/nmrview-5.2.2-r2.ebuild,v 1.1 2005/02/03 21:00:53 ribosome Exp $
 
 DESCRIPTION="NMRView - Visualisation and analysis of processed NMR data"
 LICENSE="as-is"
@@ -40,8 +40,8 @@ src_compile() {
 src_install() {
 	exeinto /usr/bin
 	newexe ${FILESDIR}/${PN}.sh ${PN}
-	exeinto ${INSTDIR}/bin
-	newexe ${PN}${PV//./_}_01_linux ${PN}
+	exeinto ${INSTDIR}
+	doexe ${PN}${PV//./_}_01_linux
 	DIRS="help html images nvtcl nvtclC nvtclExt reslib star tcl8.4 tk8.4 tools"
 	cp -r ${DIRS} ${D}/${INSTDIR}
 	dodoc README
