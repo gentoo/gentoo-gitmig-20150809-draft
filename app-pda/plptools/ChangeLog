@@ -1,5 +1,6 @@
 # ChangeLog for app-pda/plptools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/ChangeLog,v 1.10 2004/09/29 23:42:33 swegener Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   plptools-0.11-r1.ebuild, plptools-0.11.ebuild:
