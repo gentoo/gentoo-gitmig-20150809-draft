@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.1-r1.ebuild,v 1.3 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.1-r1.ebuild,v 1.4 2003/12/05 21:13:14 robbat2 Exp $
 
 IUSE="png"
 
@@ -110,7 +110,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	install -m0700 -o nut -g nut -d ${ROOT}/var/state/nut
-	chown root.nut ${ROOT}/etc/nut/{upsd.conf,upsd.users,upsmon.conf}
+	chown root:nut ${ROOT}/etc/nut/{upsd.conf,upsd.users,upsmon.conf}
 	chmod 640 ${ROOT}/etc/nut/{upsd.conf,upsd.users,upsmon.conf}
 	ewarn "Dont forget to merge any changes in /etc/init.d/._cfgXXXX_halt.sh"
 }
