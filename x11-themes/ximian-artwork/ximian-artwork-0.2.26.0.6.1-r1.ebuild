@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.26.0.6.1-r1.ebuild,v 1.9 2004/10/04 05:58:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.26.0.6.1-r1.ebuild,v 1.10 2005/01/09 19:28:33 joem Exp $
 
 inherit eutils rpm
 

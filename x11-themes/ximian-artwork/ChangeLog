@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/ximian-artwork
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.18 2004/10/04 05:58:26 spyderous Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.19 2005/01/09 19:28:33 joem Exp $
+
+  09 Jan 2005; Joe McCann <joem@gentoo.org>
+  ximian-artwork-0.2.29.0.6.3.ebuild:
+  fix for libtool problem, closes 76043
 
   03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   ximian-artwork-0.2.26.0.6.1-r1.ebuild, ximian-artwork-0.2.29.0.6.2.ebuild:
