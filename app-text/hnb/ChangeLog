@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hnb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.4 2003/04/15 10:23:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.5 2003/06/12 20:25:27 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> hnb-1.9.17.ebuild, hnb-1.9.8.ebuild:
+  add Header
 
 *hnb-1.9.17 (15 Apr 2003)
 
