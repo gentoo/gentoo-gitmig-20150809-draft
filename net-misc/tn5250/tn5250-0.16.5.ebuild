@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/tn5250-0.16.5.ebuild,v 1.1 2002/12/12 02:00:24 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/tn5250-0.16.5.ebuild,v 1.2 2003/02/13 15:08:51 vapier Exp $
 
 DESCRIPTION="Telnet client for the IBM AS/400 that emulates 5250 terminals and printers."
 HOMEPAGE="http://tn5250.sourceforge.net/"

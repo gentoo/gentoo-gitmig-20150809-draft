@@ -1,6 +1,6 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.20.5.ebuild,v 1.1 2003/02/10 17:27:48 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.20.5.ebuild,v 1.2 2003/02/13 14:46:21 vapier Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="a command-line WebDAV client."

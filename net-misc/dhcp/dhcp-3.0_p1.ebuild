@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p1.ebuild,v 1.1 2002/12/29 23:55:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p1.ebuild,v 1.2 2003/02/13 14:47:56 vapier Exp $
 
 #This is only needed for a release with pl1 at the end.
 MYP="dhcp-3.0pl1"

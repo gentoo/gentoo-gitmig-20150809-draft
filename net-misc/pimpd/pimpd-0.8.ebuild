@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pimpd/pimpd-0.8.ebuild,v 1.7 2002/12/09 04:33:18 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pimpd/pimpd-0.8.ebuild,v 1.8 2003/02/13 15:04:38 vapier Exp $
 # Updated to version 0.8 by Olivier Reisch on Fri Apr 26 11:44:26 CEST 2002
 
 A=pimpd_0.8.tar.gz

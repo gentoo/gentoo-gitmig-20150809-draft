@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bidwatcher/bidwatcher-1.3.3.ebuild,v 1.7 2002/12/25 23:07:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bidwatcher/bidwatcher-1.3.3.ebuild,v 1.8 2003/02/13 14:45:40 vapier Exp $
 
 DESCRIPTION="eBay auction watcher and snipe agent"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"

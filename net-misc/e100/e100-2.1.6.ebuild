@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/e100/e100-2.1.6.ebuild,v 1.1 2002/08/21 01:17:19 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/e100/e100-2.1.6.ebuild,v 1.2 2003/02/13 14:49:33 vapier Exp $
 
 DESCRIPTION="Linux Base Driver for the Intel(R) PRO/100 Family of Adapters"
 HOMEPAGE="http://support.intel.com/support/network/adapter/index.htm"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rarpd/rarpd-1.1.ebuild,v 1.4 2002/12/09 04:33:18 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rarpd/rarpd-1.1.ebuild,v 1.5 2003/02/13 15:05:10 vapier Exp $
 DESCRIPTION="rarpd - reverse address resolution protocol daemon"
 HOMEPAGE="ftp://ftp.dementia.org/pub/net-tools"
 SRC_URI="ftp://ftp.dementia.org/pub/net-tools/${P}.tar.gz"
