@@ -1,6 +1,16 @@
 # ChangeLog for net-irc/dircproxy
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.7 2003/07/03 08:40:52 pauldv Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.8 2004/06/17 03:29:00 swegener Exp $
+
+*dircproxy-1.1.0 (17 Jun 2004)
+
+  17 Jun 2004; Sven Wegener <swegener@gentoo.org> dircproxy-1.0.5.ebuild,
+  +dircproxy-1.1.0.ebuild:
+  Updated SRC_URI and HOMEPAGE to new locations. Added unstable upstream version
+  1.1.0 which only includes small fixes over 1.0.5 and should be considered
+  stable. Thanks to Morten Lied Johansen <mortenjo@ifi.uio.no> for notifcation
+  and patch in bug #53887. Changed make target in src_install() from
+  install-strip to install, as stripping is controlled with FEATURES="nostrip".
 
   03 Jul 2003; Paul de Vrieze <pauldv@gentoo.org> dircproxy-1.0.5.ebuild:
   Add the INSTALL file to the documentation as it describes how to configure it
