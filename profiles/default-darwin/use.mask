@@ -48,6 +48,7 @@ kde
 mikmod
 mono
 mzscheme
+nas
 qdbm
 socks5
 xmms

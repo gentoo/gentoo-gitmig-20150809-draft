@@ -9,6 +9,4 @@ ACCEPT_KEYWORDS="ppc-macos"
 CHOST=powerpc-apple-darwin
 PLATFORM=$CHOST
 
-FEATURES=""
-
 USE="ppc-macos"
