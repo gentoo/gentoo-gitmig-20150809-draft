@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.2.ebuild,v 1.2 2005/02/06 14:14:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.3.ebuild,v 1.1 2005/02/06 14:14:39 mrness Exp $
 
 MY_P=radius-${PV}
 DESCRIPTION="GNU radius authentication server"
@@ -22,14 +22,6 @@ DEPEND="!net-dialup/freeradius
 		snmp? ( virtual/snmp )
 		pam? ( sys-libs/pam )"
 S=${WORKDIR}/${MY_P}
-
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	sed -i -e "1i\#ifndef RADIUS_H" -e "1i\# define RADIUS_H" include/radius.h
-	echo '#endif //RADIUS_H' >> include/radius.h
-}
 
 src_compile() {
 	local myconf=" \
