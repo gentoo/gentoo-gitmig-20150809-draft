@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.9 2004/11/17 22:13:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.10 2004/12/06 06:18:59 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -75,6 +75,14 @@ tc-getBUILD_CC() {
 	else
 		echo "gcc"
 	fi
+}
+
+# Quick way to export a bunch of vars at once
+tc-export() {
+	local var
+	for var in "$@" ; do
+		eval tc-get${var}
+	done
 }
 
 
