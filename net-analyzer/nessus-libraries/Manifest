@@ -2,10 +2,10 @@ MD5 9d70b0b521ca8e3562f504691ed7bd9f nessus-libraries-2.0.6a.ebuild 753
 MD5 f282fe7dc4e926f3760e5a563a01a03e nessus-libraries-1.2.6.ebuild 787
 MD5 fa5a0b37056c210364f4a46287a5574b nessus-libraries-2.0.5.ebuild 759
 MD5 47c104b375d3f07f9ff0c63357a266be nessus-libraries-2.0.0.ebuild 755
-MD5 c65cc45af26cc3b7e3026ba1d87fcf8c nessus-libraries-2.0.7.ebuild 756
+MD5 87f8ff5c258e6b4fec090e26ca39daa4 nessus-libraries-2.0.7.ebuild 759
 MD5 d405961a341b297dbbb83b1b5d962c65 nessus-libraries-2.0.4.ebuild 755
 MD5 df42845a832a09ed3c35ade0310c4030 nessus-libraries-1.2.7.ebuild 756
-MD5 9e93e88d510aab98c4a84a53e0c10692 ChangeLog 2090
+MD5 2b95e2164b4b1d735f0a7ff843f34630 ChangeLog 2232
 MD5 15ab3a48d0e778fcbc9faf03be914b2e nessus-libraries-1.2.4.ebuild 784
 MD5 62909689b204347bbdd0100c71c5902a files/digest-nessus-libraries-2.0.6a 75
 MD5 f43890739571c8bb301362e8c51fd360 files/digest-nessus-libraries-1.2.4 74
