@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp-bin/javahelp-bin-2.0.01.ebuild,v 1.4 2004/12/07 16:10:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp-bin/javahelp-bin-2.0.01.ebuild,v 1.5 2005/03/16 19:54:23 luckyduck Exp $
 
 inherit java-pkg
 
@@ -27,8 +27,8 @@ pkg_nofetch() {
 src_compile() { :; }
 
 src_install(){
-	java-pkg_dojar javahelp/lib/jh.jar
-	cp -R ${S}/javahelp/lib ${D}/usr/share/${PN}
+	java-pkg_dojar javahelp/lib/*.jar
+	cp -R ${S}/javahelp/lib/dtd ${D}/usr/share/${PN}/lib
 	cp -R ${S}/javahelp/bin ${D}/usr/share/${PN}/bin
 
 	use doc && cp -R ${S}/demos ${D}/usr/share/${PN} && java-pkg_dohtml -r doc
