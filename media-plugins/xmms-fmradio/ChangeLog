@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-fmradio
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fmradio/ChangeLog,v 1.8 2004/10/07 06:42:19 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fmradio/ChangeLog,v 1.9 2005/03/28 09:23:29 eradicator Exp $
+
+  28 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-fmradio-1.5.ebuild:
+  Use proper toolchain compiler.
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-fmradio-1.5.ebuild:
