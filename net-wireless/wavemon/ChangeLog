@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wavemon
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.9 2004/04/27 22:13:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.10 2004/06/13 19:52:59 hanno Exp $
+
+  13 Jun 2004; Hanno Boeck <hanno@gentoo.org> +files/wavemon_gcc34_fix.gz,
+  wavemon-0.4.0b.ebuild:
+  Fixes for gcc 3.4.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> wavemon-0.4.0b.ebuild:
   Add inherit eutils
