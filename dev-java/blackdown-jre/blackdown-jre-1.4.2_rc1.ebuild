@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2_rc1.ebuild,v 1.7 2004/06/07 21:50:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2_rc1.ebuild,v 1.8 2004/06/10 23:43:32 eradicator Exp $
 
 IUSE="doc"
 
@@ -59,7 +59,7 @@ src_unpack () {
 	fi
 
 	echo ">>> Unpacking ${A}..."
-	tail -n +${offset} ${A} | tar --no-same-owner -jxp
+	tail -n +${offset} ${DISTDIR}/${A} | tar --no-same-owner -jxp
 }
 
 unpack_jars() {
