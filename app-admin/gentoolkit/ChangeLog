@@ -1,7 +1,13 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.7 2002/03/17 02:04:51 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.8 2002/03/17 14:33:45 karltk Exp $
 
+
+*gentoolkit-0.1.5-r1 (17 Mar 2002)
+
+  17 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.5-r1.ebuild files/scripts/pkg-clean:
+
+  Fixed a bug whereby the full path to the ebuild was missing.
 
 *gentoolkit-0.1.5 (17 Mar 2002)
 

@@ -5,7 +5,7 @@
 # Author: Leo Lipelis <aeoo@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
-import commands as c
+import commands
 import re
 import sys
 import string
@@ -17,7 +17,7 @@ PKG_TIME = 0 # number of seconds for ctime function
 PKG = 1 # package full path as accepted by ebuild
 PKG_NAME = 2 # package name as accepted by emerge
 
-(status, pkg_files) = c.getstatusoutput(
+(status, pkg_files) = commands.getstatusoutput(
 		"find /var/db/pkg -iname '*.ebuild' -printf '%T@ %p\n' | sort -n")
 
 pkg_file_list = pkg_files.splitlines()
@@ -80,15 +80,17 @@ for pkg_core in pkg_hash.keys():
 		if idx == 0:
 			break
 
-		ebuild = string.replace(pkg_hash[pkg_core][idx-1][PKG], "/var/db/pkg/", "")
+		full_path = pkg_hash[pkg_core][idx-1][PKG]
+		ebuild = string.replace(full_path, "/var/db/pkg/", "")
 
 		params = "dialog --backtitle \"" + ebuild + "\" " + \
 			 "--yesno \"Are you sure you want to unmerge " + ebuild + " ?\" 20 70"
 		res = os.system(params)
 		if res == 0:
-			(status, unmerge_out) = c.getstatusoutput(
-				"ebuild %s unmerge" % (ebuild))
+			(status, unmerge_out) = commands.getstatusoutput(
+				"ebuild %s unmerge" % (full_path))
 			print unmerge_out
+			time.sleep(2)
 			if status != 0:
 				sys.exit(status)
 	ins.close()
