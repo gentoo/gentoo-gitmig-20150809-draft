@@ -7,7 +7,7 @@ MD5 603c1fc55db99c7d10adf2606412b4c3 ChangeLog 17528
 MD5 9c1e707e6fe4ef2698b71e3ca63b7fdc arts-1.2.0.ebuild 2577
 MD5 2397f14df73b06f4d1d899679481f3bc arts-1.3.0.ebuild 2977
 MD5 bab807d1a8aaeb6738fafd25d14dd63e arts-1.2.3.ebuild 2827
-MD5 ed7b8b3cac07b505803f7175b05b77fa arts-1.3.2.ebuild 3178
+MD5 f3457deea3de0371b2a9b6732bf016e3 arts-1.3.2.ebuild 3178
 MD5 c8a71a45bab32cfe74aaf03772e7e718 files/digest-arts-3.4.0_beta1 64
 MD5 e78db892e7b447f86fab2ea9503a3a3d files/arts-1.2.3-buffer.patch 745
 MD5 e78db892e7b447f86fab2ea9503a3a3d files/arts-1.2.2-buffer.patch 745
@@ -23,4 +23,5 @@ MD5 2d584d662a2b0b0e7a278bde6cd42e8f files/digest-arts-1.1.5 63
 MD5 64df5930253711053181dcdbba96f42b files/arts-1.3.2-mcopidl.patch 418
 MD5 22eaa23f91c114995e7b8ae286c3ac2c files/arts-1.3.2-alsa-bigendian.patch 571
 MD5 185a4720c0e94a1546ee383016fc3e3c files/arts-vorbis-fix.dif 1136
+MD5 196311c78bda3759d3d92a450fcf12ea files/arts-1.4-mcopidl.patch 448
 MD5 afbe195b431271c6ccfe51cc58aced5c files/digest-arts-1.3.0 63
