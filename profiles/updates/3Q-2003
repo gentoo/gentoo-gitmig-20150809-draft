@@ -40,3 +40,4 @@ move dev-lang/pnet dev-dotnet/pnet
 move dev-libs/pnetlib dev-dotnet/pnetlib
 move dev-libs/pnetc dev-dotnet/pnetc
 move dev-libs/ml-pnet dev-dotnet/ml-pnet
+move sys-apps/selinux-base-policy sec-policy/selinux-base-policy
