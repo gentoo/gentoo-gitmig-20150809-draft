@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20030617.ebuild,v 1.2 2003/09/24 19:42:21 mholzer Exp $
 
-
-S=${WORKDIR}/${P}
+MY_P=${PN}-${PV/1.0./}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="A lightweight window manager. It was the first window manager to implement tabbed frames or the back then unique feature allowing multiple client windows can be attached to the same frame or This feature helps keeping windows, especially the numerous xterms, organized. "
-SRC_URI="http://modeemi.fi/~tuomov/dl/${P}.tar.gz"
+SRC_URI="http://modeemi.fi/~tuomov/dl/${MY_P}.tar.gz"
 HOMEPAGE="http://modeemi.fi/~tuomov/pwm/"
 LICENSE="Artistic"
 SLOT="0"
