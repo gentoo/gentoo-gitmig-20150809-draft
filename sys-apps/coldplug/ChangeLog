@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/coldplug
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/ChangeLog,v 1.6 2005/01/21 21:07:53 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/ChangeLog,v 1.7 2005/01/28 12:20:20 wolf31o2 Exp $
+
+  28 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> files/coldplug.rc:
+  Updated coldplug.rc to unpack firmware tarball. This is used by the LiveCD
+  to allow /lib/firmware to be tmpfs without losing any firmwares that were
+  installed on the LiveCD and allows users to provdie their own firmwares.
 
   21 Jan 2005; Lars Weiler <pylon@gentoo.org> coldplug-20040920.ebuild:
   Stable on ppc.
