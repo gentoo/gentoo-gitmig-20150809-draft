@@ -1,14 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ldapbrowser/ldapbrowser-282_beta2.ebuild,v 1.3 2002/07/11 06:30:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ldapbrowser/ldapbrowser-282_beta2.ebuild,v 1.4 2002/07/25 17:57:51 seemant Exp $
 
 MY_P="Browser282b2"
 S=${WORKDIR}/ldapbrowser
 DESCRIPTION="Easy management of LDAP directories"
-SRC_URI="http://www-unix.mcs.anl.gov/%7Egawor/ldapcommon/bin/${MY_P}.tar.gz"
-HOMEPAGE="http://www-unix.mcs.anl.gov/~gawor/ldap/"
+SRC_URI="http://www-unix.mcs.anl.gov/~gawor/ldapcommon/bin/${MY_P}.tar.gz"
+HOMEPAGE="http://www.techtransfer.anl.gov/software/ldapbrowser.html"
 
-RDEPEND="x11-base/xfree virtual/jre"
+SLOT="0"
+LICENSE=""
+KEYWORDS="x86"
+
+RDEPEND="virtual/x11 
+	virtual/jre"
 
 src_unpack() {
 	unpack ${A}
