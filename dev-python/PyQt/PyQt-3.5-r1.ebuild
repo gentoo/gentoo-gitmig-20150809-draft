@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.5-r1.ebuild,v 1.1 2003/02/17 17:39:39 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.5-r1.ebuild,v 1.2 2003/02/26 18:33:36 danarmak Exp $
 
 S="${WORKDIR}/PyQt-x11-gpl-${PV}"
 DESCRIPTION="PyQt is a set of Python bindings for the QT 3.x Toolkit"
@@ -27,6 +27,8 @@ src_unpack() {
 
 
 src_compile() {
+	# standard qt sandbox problem workaround
+	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
 	dodir /usr/lib/python2.2/site-packages
 	dodir /usr/include/python2.2
 	python build.py \
