@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.2 2002/06/19 20:37:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.3 2002/09/05 07:06:50 satai Exp $
+
+*libwww-5.4.0-r1 (05 Sep 2002)
+  
+  05 Sep 2002; Matthew Turk <satai@gentoo.org> libwww-5.4.0-r1.ebuild
+  files/digest-libwww-5.4.0-r1 :
+  
+  Bumped revision to reflect *important* change in the ebuild - now the
+  prefixing works properly, which thus provides a proper libwww-config script.
+  This was broken previously.
 
 *libwww-5.4.0 (19 Jun 2002)
 
