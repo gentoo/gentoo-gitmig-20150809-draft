@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.2.ebuild,v 1.5 2004/04/15 03:09:39 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.2.ebuild,v 1.6 2004/06/07 23:54:26 agriffis Exp $
 
 inherit libtool gnuconfig
 
@@ -33,7 +33,7 @@ src_compile() {
 	econf || die "./configure failed"
 	emake || die "make failed"
 
-	if [ -n "`use jack`" ]
+	if use jack
 	then
 		cd ${S}/src/pcm/ext
 		make jack || die "make on jack plugin failed"
@@ -52,7 +52,7 @@ src_install() {
 	dosym /usr/lib/libasound.so.2 /usr/lib/libasound.so.1
 	dodoc ChangeLog COPYING TODO
 
-	if [ -n "`use jack`" ]
+	if use jack
 	then
 		cd ${S}/src/pcm/ext
 		make DESTDIR=${D} install-jack || die "make install on jack plugin failed"
