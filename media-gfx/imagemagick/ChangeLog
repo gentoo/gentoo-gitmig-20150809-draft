@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.53 2003/10/22 14:02:01 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.54 2003/11/29 19:08:48 brad_mssw Exp $
+
+  29 Nov 2003; Brad House <brad_mssw@gentoo.org> imagemagick-5.5.6-r1.ebuild:
+  -fPIC needed for compile on amd64 b/c koffice 1.3_rc1 links the .a into
+  a shared object, so it bugs out if not compiled with -fPIC
 
   22 Oct 2003; Christian Birchinger <joker@gentoo.org>
   imagemagick-5.5.6-r1.ebuild:
