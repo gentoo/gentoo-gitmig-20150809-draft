@@ -1,43 +1,41 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.80-r1.ebuild,v 1.6 2004/03/29 00:44:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.80-r1.ebuild,v 1.7 2004/04/07 19:04:30 vapier Exp $
 
+inherit eutils
+
+MY_P="${PF/r1/1}"
 DESCRIPTION="Client to sync apps with WinCE or mobile devices"
 HOMEPAGE="http://multisync.sourceforge.net/"
-# Point to any required sources; these will be automatically downloaded by
-# Portage.
-MY_P="${PF/r1/1}"
 SRC_URI="mirror://sourceforge/multisync/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE="evo irmc opie ldap"
 # evo   - evolution plugin
 # irmc  - bluetooth/irmc/irda plugin ( local )
 # opie  - opie plugin                ( local )
 # ldap  - ldap plugin - experimental
-IUSE="evo irmc opie ldap"
 
 DEPEND="virtual/glibc
-		>=gnome-base/libbonobo-2.2
-		>=gnome-base/libgnome-2.2
-		>=gnome-base/ORBit-0.5.17
-		>=dev-libs/openssl-0.9.6j
-		evo?  (
-			gtk2? (
-				=net-mail/evolution-1.4*
-				=x11-libs/gtk+-2* )
-			!gtk2? (
-				=net-mail/evolution-1.2*
-				=x11-libs/gtk+-1* )
-		)
-		irmc? ( >=sys-apps/irda-utils-0.9.15
-		         >=net-wireless/bluez-utils-2.3
-		         >=dev-libs/openobex-1.0.0 )
-		opie? ( >=net-misc/curl-7.10.5 )
-		ldap? ( >=net-nds/openldap-2.0.27 )"
-
-# Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
+	>=gnome-base/libbonobo-2.2
+	>=gnome-base/libgnome-2.2
+	>=gnome-base/ORBit-0.5.17
+	>=dev-libs/openssl-0.9.6j
+	evo?  (
+		gtk2? (
+			=net-mail/evolution-1.4*
+			=x11-libs/gtk+-2* )
+		!gtk2? (
+			=net-mail/evolution-1.2*
+			=x11-libs/gtk+-1* )
+	)
+	irmc? ( >=sys-apps/irda-utils-0.9.15
+         >=net-wireless/bluez-utils-2.3
+         >=dev-libs/openobex-1.0.0 )
+	opie? ( >=net-misc/curl-7.10.5 )
+	ldap? ( >=net-nds/openldap-2.0.27 )"
 
 S=${WORKDIR}/${PF/-r1/}
 
