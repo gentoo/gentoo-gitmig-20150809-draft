@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/java-getopt-1.0.9.ebuild,v 1.3 2003/07/11 21:41:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/java-getopt-1.0.9.ebuild,v 1.4 2004/03/06 23:11:19 zx Exp $
 
 DESCRIPTION="Java command line option parser"
 HOMEPAGE="http://www.urbanophile.com/arenn/hacking/download.html"
