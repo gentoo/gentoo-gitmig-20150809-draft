@@ -2,6 +2,8 @@ MD5 7af479d0b65cf7c85d297f81955ef950 ChangeLog 1127
 MD5 860ce0a834fe6e9dce341913d01b3f4c monopd-0.8.2-r1.ebuild 703
 MD5 b4a2df8199bebdcfd07a29fa59c17af0 monopd-0.8.2.ebuild 651
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 e0eeacc5c6bb09429179189c8e4e1e7d monopd-0.8.3.ebuild 753
 MD5 2f83e945aa59c6596bd310e92ad0e940 files/digest-monopd-0.8.2 65
 MD5 2f83e945aa59c6596bd310e92ad0e940 files/digest-monopd-0.8.2-r1 65
 MD5 99587f294891a4b5b95f93ecac090639 files/monopd 291
+MD5 5880b7dc89fa928c2d44ec98a6bb9df5 files/digest-monopd-0.8.3 65
