@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r2.ebuild,v 1.7 2004/09/17 09:28:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r2.ebuild,v 1.8 2004/09/20 01:01:29 vapier Exp $
 
 inherit fixheadtails eutils gnuconfig
 
@@ -72,6 +72,18 @@ src_compile() {
 		|| myconf="${myconf} --enable-video-dummy"
 	use nojoystick && myconf="${myconf} --disable-joystick"
 
+	local directfbconf="--disable-video-directfb"
+	if use directfb ; then
+		# since DirectFB can link against SDL and trigger a
+		# dependency loop, only link against DirectFB if it
+		# isn't broken #61592
+		echo 'int main(){}' > directfb-test.c
+		$(gcc-getCC) sdl-test.c -ldirectfb 2>/dev/null \
+			&& directfbconf="--enable-video-directfb" \
+			|| ewarn "Disabling DirectFB since libdirectfb.so is broken"
+	fi
+	myconf="${myconf} ${directfbconf}"
+
 	econf \
 		--enable-events \
 		--enable-cdrom \
@@ -91,7 +103,6 @@ src_compile() {
 		$(use_enable xinerama video-x11-xinerama) \
 		$(use_enable dga video-dga) \
 		$(use_enable fbcon video-fbcon) \
-		$(use_enable directfb video-directfb) \
 		$(use_enable ggi video-ggi) \
 		$(use_enable svga video-svga) \
 		$(use_enable aalib video-aalib) \
