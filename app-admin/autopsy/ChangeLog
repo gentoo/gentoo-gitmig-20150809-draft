@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/autopsy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/autopsy/ChangeLog,v 1.7 2004/06/25 14:58:27 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/autopsy/ChangeLog,v 1.8 2004/07/19 07:34:43 dragonheart Exp $
+
+*autopsy-2.01 (19 Jul 2004)
+
+  19 Jul 2004; Daniel Black <dragonheart@gentoo.org> +autopsy-2.01.ebuild:
+  version bump. Thank to Antek Grzymala <awaria@chopin.edu.pl> in bug #55270
 
   25 Jun 2004; Ferris McCormick <fmccor@gentoo.org> autopsy-2.00.ebuild:
   Marked stable for sparc.
