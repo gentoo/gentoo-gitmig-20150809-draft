@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.13 2002/11/25 22:50:56 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.14 2002/12/08 06:15:30 mkeadle Exp $
 
 # The commonbox eclass is designed to allow easier installation of the box
 # window managers such as blackbox and fluxbox and commonbox
@@ -24,6 +24,7 @@ PROVIDE="virtual/blackbox"
 myconf=""
 mydoc=""
 BOOTSTRAP=""
+FORCEXFT=""
 
 if [ -z "${MYBIN}" ]
 then
@@ -99,6 +100,8 @@ commonbox_src_compile() {
 		--sysconfdir=/etc/X11/${MYBIN} \
 		--datadir=/usr/share/commonbox \
 		${myconf} || die
+
+	[ ! -z "${FORCEXFT}" ] && echo "#define XFT 1" >> ${S}/config.h
 	
 	emake \
 		pkgdatadir=/usr/share/commonbox || die
