@@ -42,3 +42,4 @@ move dev-util/gnustep-make gnustep-base/gnustep-make
 move dev-util/gnustep-base gnustep-base/gnustep-base
 move dev-util/gnustep-gui gnustep-base/gnustep-gui
 move dev-util/gnustep-back gnustep-base/gnustep-back
+move dev-util/gnustep-guile gnustep-libs/gnustep-guile
