@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.12 2004/06/24 22:45:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.13 2004/06/28 22:04:04 solar Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc n32 n64"
 
-inherit eutils flag-o-matic libtool
+inherit eutils flag-o-matic libtool gnuconfig
 
 # Compile problems with these (bug #6641 among others)...
 #filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
@@ -159,8 +159,8 @@ fi
 # we need at least glibc 2.3.3 20040420-r1 in order for gcc 3.4 not to nuke
 # SSP in glibc.
 DEPEND="virtual/glibc
-	>=sys-libs/glibc-2.3.3_pre20040420-r1
-	hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
+	!uclibc? ( >=sys-libs/glibc-2.3.3_pre20040420-r1 )
+	!uclibc? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 ) )
 	( !sys-devel/hardened-gcc )
 	>=sys-devel/binutils-2.14.90.0.8-r1
 	>=sys-devel/bison-1.875
@@ -170,8 +170,8 @@ DEPEND="virtual/glibc
 	          nls? ( sys-devel/gettext ) )"
 
 RDEPEND="virtual/glibc
-	>=sys-libs/glibc-2.3.3_pre20040420-r1
-	hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
+	!uclibc? ( >=sys-libs/glibc-2.3.3_pre20040420-r1 )
+	!uclibc? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 ) )
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
@@ -237,8 +237,9 @@ check_option_validity() {
 }
 
 glibc_have_ssp() {
-	use uclibc || local my_libc="${ROOT}/lib/libc.so.6"
-	use uclibc && local my_libc="${ROOT}/lib/libc.so.0"
+	use uclibc \
+		&& local my_libc="${ROOT}/lib/libc.so.0" \
+		|| local my_libc="${ROOT}/lib/libc.so.6"
 
 # Not necessary. lib64 is a symlink to /lib. -- avenj@gentoo.org  3 Apr 04
 #	case "${ARCH}" in
@@ -255,6 +256,16 @@ glibc_have_ssp() {
 	then
 		return 0
 	else
+		return 1
+	fi
+}
+
+glibc_have_pie() {
+	if [ ! -f ${ROOT}/usr/lib/Scrt1.o ] ; then
+		echo
+		ewarn "Your glibc does not have support for pie, the file Scrt1.o is missing"
+		ewarn "Please update your glibc to a proper version or disable hardened"
+		echo
 		return 1
 	fi
 }
@@ -323,6 +334,8 @@ src_unpack() {
 		#check_glibc_ssp
 		:
 	fi
+
+	[ -n "${PIE_VER}" ] && use hardened && glibc_have_pie
 
 	if [ -z "${SNAPSHOT}" ]
 	then
@@ -394,7 +407,7 @@ src_unpack() {
 		# the uclibc patches need autoconf to be run
 		# for build stage we need the updated files though
 		use build || ( cd ${S}/libstdc++-v3; autoconf; cd ${S} )
-		use build && use uclibc && ewarn "uclibc in build stage is not supported yet" && exit 1
+		#use build && use uclibc && ewarn "uclibc in build stage is not supported yet" && exit 1
 
 		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-uclibc-3.3-loop.patch
 	elif use multilib && [ "${ARCH}" = "amd64" ]
@@ -409,10 +422,12 @@ src_unpack() {
 
 		# corrects startfile/endfile selection and shared/static/pie flag usage
 		epatch ${WORKDIR}/piepatch/upstream
-		# adds non-default pie support (for now only rs6000)
+		# adds non-default pie support (rs6000)
 		epatch ${WORKDIR}/piepatch/nondef
-		# adds default pie support for all archs less rs6000 if DEFAULT_PIE[_SSP] is defined
+		# adds default pie support (rs6000 too) if DEFAULT_PIE[_SSP] is defined
 		epatch ${WORKDIR}/piepatch/def
+		# disable relro/now
+		use uclibc && epatch ${FILESDIR}/gcc-3.3.3-norelro.patch
 	fi
 
 	# non-default SSP support.
@@ -430,8 +445,8 @@ src_unpack() {
 		# we apply only the needed parts of protectonly.dif
 		sed -e 's|^CRTSTUFF_CFLAGS = |CRTSTUFF_CFLAGS = -fno-stack-protector-all |' \
 			-i gcc/Makefile.in || die "Failed to update crtstuff!"
-		sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -fno-stack-protector-all|' \
-			-i ${S}/gcc/Makefile.in || die "Failed to update libgcc!"
+		#sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -fno-stack-protector-all|' \
+		#	-i ${S}/gcc/Makefile.in || die "Failed to update libgcc!"
 
 		# if gcc in a stage3 defaults to ssp, is version 3.4.0 and a stage1 is built
 		# the build fails building timevar.o w/:
@@ -477,6 +492,8 @@ src_unpack() {
 	# gcc 3.4.1 cvs has patches that need back porting.. 
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
 	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
+
+	use uclibc && gnuconfig_update
 
 	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
 }
