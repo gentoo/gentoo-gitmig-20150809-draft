@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.53-r1.ebuild,v 1.4 2003/07/28 15:57:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.53-r1.ebuild,v 1.5 2003/08/21 22:50:28 wwoods Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Excellent program which automatically configures your PPP session"
@@ -12,7 +12,7 @@ RDEPEND="${DEPEND} net-dialup/ppp"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 sparc amd64 hppa"
+KEYWORDS="x86 sparc amd64 hppa alpha"
 
 src_unpack() {
 
