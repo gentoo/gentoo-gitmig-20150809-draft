@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.29 2005/02/01 23:50:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.30 2005/02/13 21:17:24 eradicator Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -165,5 +165,5 @@ gcc-minor-version() {
 }
 # Returns the Micro version
 gcc-micro-version() {
-	echo "$(gcc-fullversion | cut -f3 -d.)"
+	echo "$(gcc-fullversion | cut -f3 -d. | cut -f1 -d-)"
 }
