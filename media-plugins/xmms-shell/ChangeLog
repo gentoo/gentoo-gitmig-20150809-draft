@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/xmms-shell
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/ChangeLog,v 1.15 2004/07/03 23:10:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/ChangeLog,v 1.16 2004/09/14 07:14:30 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -xmms-shell-0.99.3-r2.ebuild:
+  Added ~ppc to 0.99.3-r3 as it shouldn't have been removed. Removed old ebuild.
+  Stable amd64, sparc.
 
   03 Jul 2004; Jason Wever <weeve@gentoo.org> xmms-shell-0.99.3-r3.ebuild:
   Added ~sparc keyword.
