@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <blizzy@gentoo.org> (13 Aug 2002)
+# masked for testing, might pose security problems!
+sys-apps/fakeroot
+
 # <satai@gentoo.org> (13 Aug 2002)
 # masked for mirrors
 app-text/latex-foiltex
