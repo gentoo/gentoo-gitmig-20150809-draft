@@ -1,6 +1,14 @@
 # ChangeLog for gnustep-apps/gnumail
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.12 2005/01/09 10:57:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.13 2005/01/10 16:23:48 fafhrd Exp $
+
+*gnumail-1.2.0_pre20050106 (10 Jan 2005)
+
+  10 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -gnumail-1.2.0_pre20041030.ebuild, -gnumail-1.2.0_pre20041108.ebuild,
+  +gnumail-1.2.0_pre20050106.ebuild:
+  cvs snapshot version bumps; cleaned out old cvs versioned ebuilds; fixed
+  date spec on ebuild headers as repoman was complaining
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org>
   gnumail-1.2.0_pre20041030.ebuild, gnumail-1.2.0_pre20041108.ebuild,

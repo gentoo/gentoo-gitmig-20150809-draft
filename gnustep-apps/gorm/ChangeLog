@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-apps/gorm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.11 2005/01/09 10:53:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.12 2005/01/10 16:27:40 fafhrd Exp $
+
+*gorm-0.8.1_pre20050106 (10 Jan 2005)
+
+  10 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -gorm-0.8.1_pre20040927-r1.ebuild, +gorm-0.8.1_pre20050106.ebuild:
+  cvs snapshot version bumps; cleaned out old cvs versioned ebuilds; fixed
+  date spec on ebuild headers as repoman was complaining
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org>
   gorm-0.8.1_pre20040927-r1.ebuild, gorm-0.8.1_pre20041203.ebuild:

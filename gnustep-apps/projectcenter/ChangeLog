@@ -1,6 +1,14 @@
 # ChangeLog for gnustep-apps/projectcenter
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.7 2004/12/05 03:48:13 fafhrd Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.8 2005/01/10 16:28:36 fafhrd Exp $
+
+*projectcenter-0.4.1_pre20050106 (10 Jan 2005)
+
+  10 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -projectcenter-0.4.1_pre20040927.ebuild,
+  +projectcenter-0.4.1_pre20050106.ebuild:
+  cvs snapshot version bumps; cleaned out old cvs versioned ebuilds; fixed
+  date spec on ebuild headers as repoman was complaining
 
   04 Dec 2004; Armando Di Cianno <fafhrd@gentoo.org>
   projectcenter-0.4.1_pre20041203.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-0.8.1_pre20040927-r1.ebuild,v 1.4 2005/01/09 10:53:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-0.8.1_pre20050106.ebuild,v 1.1 2005/01/10 16:27:40 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"

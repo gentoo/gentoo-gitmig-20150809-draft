@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-apps/gwnet
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gwnet/ChangeLog,v 1.4 2004/12/04 20:23:19 fafhrd Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gwnet/ChangeLog,v 1.5 2005/01/10 16:28:01 fafhrd Exp $
+
+*gwnet-0.1_pre20050106 (10 Jan 2005)
+
+  10 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -gwnet-0.1_pre20040928.ebuild, +gwnet-0.1_pre20050106.ebuild:
+  cvs snapshot version bumps; cleaned out old cvs versioned ebuilds; fixed
+  date spec on ebuild headers as repoman was complaining
 
 *gwnet-0.1_pre20041203 (04 Dec 2004)
 

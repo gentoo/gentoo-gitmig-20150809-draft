@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-apps/stshell
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stshell/ChangeLog,v 1.4 2004/12/04 20:21:38 fafhrd Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stshell/ChangeLog,v 1.5 2005/01/10 16:26:31 fafhrd Exp $
+
+*stshell-0.8.3_pre20050106 (10 Jan 2005)
+
+  10 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -stshell-0.8.3_pre20040927.ebuild, +stshell-0.8.3_pre20050106.ebuild:
+  cvs snapshot version bumps; cleaned out old cvs versioned ebuilds; fixed
+  date spec on ebuild headers as repoman was complaining
 
 *stshell-0.8.3_pre20041203 (03 Dec 2004)
 
