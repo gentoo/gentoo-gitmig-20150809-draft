@@ -1,6 +1,15 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.43 2003/02/18 07:01:32 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.44 2003/02/20 07:08:24 raker Exp $
+
+*avifile-0.7.32.20030219 (20 Feb 2003)
+
+  20 Feb 2003; Nick Hadaway <raker@gentoo.org>
+  avifile-0.7.32.20030219.ebuild,
+  files/digest-avifile-0.7.32.20030219 :
+  Version bump.  Fixes for compatibility with the newest qt builds and
+  many other bug fixes.  This is possibly the last 0.7.x build
+  according to the upstream author. 
 
 *avifile-0.7.29.20030204 (04 Feb 2003)
 
