@@ -1,4 +1,5 @@
 MD5 ae8b3398ac108e38cedd3c0b835026c2 openssl-0.9.6i-r1.ebuild 2423
+MD5 383ae04c5b7371efa23ccdecb5c786a6 openssl-0.9.6j.ebuild 2784
 MD5 f9889068ffc2fc73a7a85ac5579e0f18 openssl-0.9.7a-r1.ebuild 2569
 MD5 7e42226d154e07d3ae1223cbc0a60f85 openssl-0.9.7a.ebuild 2517
 MD5 f1f7f7f88d2931001e73d0d9f33d499f openssl-0.9.6i.ebuild 2384
@@ -10,6 +11,7 @@ MD5 a5a379391dfaaef98e4fe4198ff2ed2c files/openssl-0.9.6i-blinding.patch 1717
 MD5 91c90424223d7c64fe20f960bcc48b25 files/openssl-0.9.6g-gentoo.diff 1592
 MD5 a5a379391dfaaef98e4fe4198ff2ed2c files/openssl-0.9.7a-blinding.patch 1717
 MD5 8c719455d9438ab2eb36279f5befe581 files/digest-openssl-0.9.6i 67
+MD5 6c1086cc2f14b7eee2c5a59f55a30811 files/digest-openssl-0.9.6j 67
 MD5 316d12ece21402d61deacf5bb8ecf4b3 files/digest-openssl-0.9.7a 67
 MD5 ec3ece282da08b6e27d213ee22c00208 files/digest-openssl-0.9.7b 67
 MD5 7483d6f0412e857e9063dce4aecf2991 files/openssl-0.9.7-gentoo.diff 936
