@@ -191,3 +191,4 @@ move sys-apps/di sys-block/di
 move sys-apps/noflushd sys-block/noflushd
 move media-libs/panotools media-libs/libpano12
 move dev-dotnet/nemerle dev-lang/nemerle
+move dev-dotnet/mono dev-lang/mono
