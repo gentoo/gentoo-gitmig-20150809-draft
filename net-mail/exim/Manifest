@@ -1,3 +1,4 @@
+MD5 618380413ebc743cfa3b711b54088056 exim-4.20-r2.ebuild 6326
 MD5 4d7cabe7d5b81708f2717fafd847ba2b exim-4.12.ebuild 5436
 MD5 b0ca08f26ccf5a73829c0169ad70c528 exim-4.14.ebuild 5483
 MD5 f37a9cb0060d8e3df038d704a933dcc9 exim-4.20-r1.ebuild 6234
@@ -11,6 +12,7 @@ MD5 0cb2ffe88c81fd7ac8429b5a19d58b35 files/configure 16346
 MD5 369b42cafcbe5631c2d03cbbfd4aeddd files/exim-4.10-gentoo.diff 1889
 MD5 f442b68d435598831bab8536ade071b8 files/exim.confd 62
 MD5 04ba8d65b73d23eb58c6d3e4accbed7f files/digest-exim-4.20-r1 198
+MD5 0cc15aecabaeace6ff4cdd1a462b9eb0 files/digest-exim-4.20-r2 62
 MD5 eb249c90af3ab11e5a4d307e184a75ac files/exiscan.conf 22113
 MD5 68fc403ba2c98ccba281939085cb9052 files/auth_conf.sub 775
 MD5 622b726ea7b32aae93a8fe9f3c2af9cd files/exim-4.20-maildir.patch 478

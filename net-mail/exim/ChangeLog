@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.35 2003/07/19 23:08:53 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.36 2003/08/16 19:58:03 g2boojum Exp $
+
+*exim-4.20-r2 (16 Aug 2003)
+
+  16 Aug 2003; Nick Hadaway <raker@gentoo.org> exim-4.20-r2.ebuild:
+  Added USE_DB=yes to ${S}/Local/Makefile so exim uses the "native"
+  dbm interface.  This Should resolve bug #25181.
 
   18 Jul 2003; Olivier Crete <tester@gentoo.org> exim-4.14.ebuild,
   exim-4.20-r1.ebuild, files/exim-4.14-tail.patch:
