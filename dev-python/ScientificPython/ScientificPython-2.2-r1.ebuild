@@ -1,7 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /home/cvsroot/gentoo-x86/dev-python/scientific--python/ScientificPython-2.2.ebuild,v 1.4 2001/06/04 21:57:52 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ScientificPython/ScientificPython-2.2.ebuild,v 1.6 2002/07/11 06:30:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ScientificPython/ScientificPython-2.2-r1.ebuild,v 1.1 2002/07/15 19:53:59 george Exp $
 
 
 S=${WORKDIR}/${P}
@@ -12,6 +11,11 @@ HOMEPAGE="http://starship.python.net/crew/hinsen/scientific.html"
 DEPEND=">=dev-lang/python-2.0-r4
         >=dev-python/Numeric-19.0
         >=app-sci/netcdf-3.0"
+RDEPEND="${DEPEND}"
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86"
 	
 src_compile() {
 	python setup.py build || die
@@ -19,5 +23,17 @@ src_compile() {
 
 src_install() {
 	python setup.py install --prefix=${D}/usr || die
+	
 	dodoc MANIFEST.in COPYRIGHT README*
+	cd Doc
+	dodoc CHANGELOG
+	dohtml HTML/*
+
+	dodir /usr/share/doc/${P}/pdf
+	insinto /usr/share/doc/${P}/pdf
+	doins PDF/*
+	#for p in PDF/*.pdf; do
+	#	dodoc $p
+	#done
+
 }
