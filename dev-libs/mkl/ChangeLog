@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mkl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mkl/ChangeLog,v 1.7 2004/01/30 19:54:56 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mkl/ChangeLog,v 1.8 2004/03/03 16:42:59 pbienst Exp $
+
+  03 Mar 2004; Peter Bienstman <pbienst@gentoo.org> mkl-5.2.ebuild :
+  mark stable on x86
 
 *mkl-5.2 (30 Jan 2004)
 
