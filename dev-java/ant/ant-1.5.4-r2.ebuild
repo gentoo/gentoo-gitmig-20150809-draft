@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.4-r2.ebuild,v 1.2 2003/10/18 22:39:42 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.4-r2.ebuild,v 1.3 2003/10/21 02:01:29 strider Exp $
 
 inherit apache-ant java-pkg
 
@@ -30,6 +30,8 @@ src_unpack() {
 }
 
 src_compile() {
+
+	addwrite "/proc/self/maps"
 	apache-ant_classpath
 	apache-ant_compile
 }
