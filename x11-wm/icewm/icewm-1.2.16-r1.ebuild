@@ -1,17 +1,27 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.16-r1.ebuild,v 1.4 2004/09/13 01:06:14 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.16-r1.ebuild,v 1.5 2004/09/23 04:33:57 morfic Exp $
 
 inherit eutils
 
-#this needs to use the theme for 1.2.14 probably all through pre phase
-SILVERXP_P="SilverXP-1.2.14-single-3"
-
 DESCRIPTION="Ice Window Manager"
-SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.gz
-	mirror://sourceforge/icewmsilverxp/${SILVERXP_P}.tar.bz2"
+
 HOMEPAGE="http://www.icewm.org/
 	http://sourceforge.net/projects/icewmsilverxp/"
+
+#this needs to use the theme for 1.2.14 probably all through pre phase
+SILVERXP_P="SilverXP-1.2.14-single-3"
+#fix for icewm preversion package names
+S=${WORKDIR}/${P/_}
+
+SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.gz
+	mirror://sourceforge/icewmsilverxp/${SILVERXP_P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+
+KEYWORDS="x86 ~ppc sparc ~amd64"
+
 IUSE="esd gnome imlib nls spell truetype xinerama silverxp"
 
 RDEPEND="virtual/x11
@@ -25,11 +35,6 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~amd64"
-S=${WORKDIR}/${P/_}
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}/src
@@ -37,42 +42,39 @@ src_unpack() {
 		epatch ${WORKDIR}/${PN}/themes/${SILVERXP_P}/Linux/ybutton.cc.patch
 	fi
 
-	echo "#!/bin/bash" > $T/icewm
+	echo "#!/bin/sh" > $T/icewm
 	echo "/usr/bin/icewm-session" >> $T/icewm
 
 }
 
 src_compile(){
-	use esd \
-		&& myconf="${myconf} --with-esd-config=/usr/bin/esd-config"
 
-	use nls \
-		&& myconf="${myconf} --enable-nls --enable-i18n" \
-		|| myconf="${myconf} --disable-nls --disable-i18n"
+	 local myconf="
+		$(use_with esd esd-config /usr/bin/esd-config)
 
-	use imlib \
-		&& myconf="${myconf} --with-imlib --without-xpm" \
-		|| myconf="${myconf} --without-imlib --with-xpm"
+		$(use_enable nls)
+		$(use_enable nls i18n)
 
-	use spell \
-		&& myconf="${myconf} --enable-GtkSpell" \
-		|| myconf="${myconf} --disable-GtkSpell"
+		$(use_with imlib)
 
-	( use silverxp || use truetype ) \
-		&& myconf="${myconf} --enable-gradients --enable-shape --enable-movesize-fx --enable-shaped-decorations" \
-		|| myconf="${myconf} --disable-xfreetype --enable-corefonts"
+		$(use_enable spell GtkSpell)
 
-	use x86 \
-		&& myconf="${myconf} --enable-x86-asm" \
-		|| myconf="${myconf} --disable-x86-asm"
+		$(use_enable x86 x86-asm)
 
-	use gnome \
-		&& myconf="${myconf} --enable-menus-gnome2 --enable-menus-gnome1" \
-		|| myconf="${myconf} --disable-menus-gnome2 --disable-menus-gnome1"
+		$(use_enable xinerama)
 
-	use xinerama \
-		&& myconf="${myconf} --enable-xinerama" \
-		|| myconf="${myconf} --disable-xinerama"
+		$(use_enable gnome menus-gnome1)
+		$(use_enable gnome menus-gnome2)"
+
+	if use silverxp || use truetype
+	then
+		myconf="${myconf} --enable-gradients --enable-shape --enable-movesize-fx --enable-shaped-decorations"
+	else
+		myconf="${myconf} --disable-xfreetype --enable-corefonts"
+	fi
+
+echo ${myconf}
+epause
 
 	CXXFLAGS="${CXXFLAGS}" econf \
 		--with-libdir=/usr/share/icewm \
@@ -101,6 +103,6 @@ src_install(){
 
 	if use silversp
 	then
-	einfo "Please use 1.2.14-3 of Silverxp theme"
+	einfo "Please use Version 1.2.14-3 of the Silverxp theme"
 	fi
 }
