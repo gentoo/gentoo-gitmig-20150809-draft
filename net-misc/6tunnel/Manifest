@@ -1,13 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7931fad80047a7f61927d28bb6e29980 ChangeLog 992
-MD5 f09d846619bbb3ce21a2b91a6c88bb6a 6tunnel-0.10.ebuild 577
+MD5 86c4415293a9df932afa87683aab0827 6tunnel-0.11_rc1.ebuild 586
+MD5 78bd53078c0f7d64c866fccf6e9d7807 ChangeLog 1175
+MD5 443d8ed961ea50b8557ad658d1c17b25 6tunnel-0.10.ebuild 553
+MD5 4a05bf43a8529501279f1b3afc45e835 files/digest-6tunnel-0.11_rc1 66
 MD5 44eb384b283c07b3a4336dd2d3ace579 files/digest-6tunnel-0.10 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBoQLJmdTrptrqvGERAvLbAJ0T/oqKc2QWMCNu87NdgHshlZoKfACeLSx6
-fhE3MwWBpIrHMX9ap0+ghmY=
-=VcF3
+iD8DBQFBoa8CmdTrptrqvGERAotxAJ9ctdtEZbwVQjCHc9dEAQxRrmBCagCeOlcy
+bJX3kquy/aQR0D7IwQSOkGE=
+=XiT2
 -----END PGP SIGNATURE-----
