@@ -1,8 +1,11 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.4 2002/09/03 15:47:46 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.5 2002/09/19 20:09:38 owen Exp $
 
 *octave-2.1.36 (15 Jul 2002)
+
+  19 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Added PPC to KEYWORDS.
 
   15 Jul 2002; Nick Hadaway <raker@gentoo.org> 
   octave-2.1.36.ebuild, files/digest-octave-2.1.36, files/filebuf.diff :
