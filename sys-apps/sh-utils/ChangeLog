@@ -1,10 +1,17 @@
 # ChangeLog for sys-apps/sh-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.2 2002/03/14 22:27:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.3 2002/03/18 13:53:41 seemant Exp $
+
+*sh-utils-2.0.11-r3 (18 Mar 2002)
+
+  18 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sh-utils-2.0.11-r3.ebuild :
+
+  Patch in ${FILESDIR} removes RMS's rant about su and the wheel group and
+  fascism.
 
 *sh-utils-2.0.11-r2 (12 Mar 2002)
 
-  12 Mar 2002 Seemant Kulleen <seemant@gentoo.org> ChangeLog :
+  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sh-utils-2.0.11-r2.ebuild :
 
   Added a patch to uname.c from the nuname package.  This allows display in the
   uname output of more kinds of processors (AuthenticAMD, Cyrix, and possibly

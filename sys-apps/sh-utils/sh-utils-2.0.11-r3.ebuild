@@ -1,15 +1,29 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.11.ebuild,v 1.1 2001/12/12 20:01:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.11-r3.ebuild,v 1.1 2002/03/18 13:53:41 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Your standard GNU shell utilities"
-SRC_URI="ftp://alpha.gnu.org/gnu/fetish/${P}.tar.gz"
+SRC_URI="ftp://alpha.gnu.org/gnu/fetish/${P}.tar.gz http://www2.cddc.vt.edu/linux/utils/shell/nuname-1.0.tar.gz"
 
 DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 
 RDEPEND="virtual/glibc"
+
+src_unpack() {
+	unpack ${P}.tar.gz
+
+	# patch to add Chipset info. in uname output
+	tar zxf ${DISTDIR}/nuname-1.0.tar.gz
+	cd ${S}
+	patch src/uname.c ../nuname/lin_uname_patch
+	mv ../nuname/README ../nuname/README.nuname
+
+	# patch to remove Stallman's rant about su and the wheel group
+	patch doc/sh-utils.texi ${FILESDIR}/${P}-gentoo.diff
+	rm doc/sh-utils.info
+}
 
 src_compile() {
 	local myconf
@@ -24,6 +38,8 @@ src_compile() {
 	else
 		emake LDFLAGS=-static || die
 	fi
+	cd doc
+	make
 }
 
 src_install() {
@@ -31,14 +47,15 @@ src_install() {
 	rm -rf ${D}/usr/lib
 	dodir /bin
 	cd ${D}/usr/bin
-	mv date echo false pwd stty su true uname ${D}/bin
+	mv date echo false pwd stty su true uname sleep ${D}/bin
 
 	if [ -z "`use build`" ]
 	then
 		# We must use hostname from net-base
 		rm ${D}/usr/bin/hostname
 		cd ${S}
-		dodoc AUTHORS COPYING ChangeLog ChangeLog.0 NEWS README THANKS TODO
+		dodoc AUTHORS COPYING ChangeLog ChangeLog.0 NEWS README THANKS TODO 
+		dodoc ../nuname/README.nuname
 	else
 		rm -rf ${D}/usr/share
 	fi
@@ -49,6 +66,3 @@ src_install() {
 	rm ${D}/usr/bin/uptime
 	rm ${D}/usr/share/man/man1/uptime.1.gz
 }
-
-
-

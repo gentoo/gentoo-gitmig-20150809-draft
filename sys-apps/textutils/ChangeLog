@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/textutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/ChangeLog,v 1.2 2002/03/18 13:53:41 seemant Exp $
+
+*textutils-2.0.19-r1 (18 Mar 2002)
+
+  18 Mar 2002; Seemant Kulleen <seemant@gentoo.org> textutils-2.0.19-r1 :
+
+  The patch in ${FILESDIR} is to remove RMS's rant about fascism and the
+  wheel group with regards to su.
 
 *textutils-2.0.19 (1 Feb 2002)
 
