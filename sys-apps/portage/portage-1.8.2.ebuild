@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.2.ebuild,v 1.3 2002/01/07 00:50:18 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.2.ebuild,v 1.4 2002/01/07 01:04:09 gbevin Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage ports system"
@@ -105,9 +105,11 @@ pkg_postinst() {
 	
 	#remove possible previous sandbox files that could cause conflicts
 	if [ -d /usr/lib/sandbox ]; then
-		mv /etc/ld.so.preload /etc/ld.so.preload_orig
-		grep -v libsandbox.so /etc/ld.so.preload_orig > /etc/ld.so.preload
-		rm /etc/ld.so.preload_orig
+		if [ -f /etc/ld.so.preload ]; then
+			mv /etc/ld.so.preload /etc/ld.so.preload_orig
+			grep -v libsandbox.so /etc/ld.so.preload_orig > /etc/ld.so.preload
+			rm /etc/ld.so.preload_orig
+		fi
 		
 		rm -f ${ROOT}/usr/lib/portage/bin/ebuild.sh.orig
 		rm -f ${ROOT}/usr/lib/portage/pym/portage.py.orig
