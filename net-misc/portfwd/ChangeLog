@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/portfwd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.1 2003/10/17 20:42:05 avenj Exp $
+
+*portfwd-0.26_rc6 (17 Oct 2003)
+
+    17 Oct 2003; Jon Portnoy <avenj@gentoo.org> portfwd-0.26_rc6.ebuild :
+    Initial import. Submitted in bug 29930 by Cory Visi 
+    <cory@visi.name>.
