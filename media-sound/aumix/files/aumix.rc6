@@ -1,11 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/files/aumix.rc6,v 1.1 2001/12/23 23:01:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/files/aumix.rc6,v 1.2 2003/01/26 01:59:01 agenkin Exp $
 
 depend() {
-	# User could have some wierd setup that uses /etc/init.d/local ?
-	need modules local
+	need modules
 	use alsa
 }
 
