@@ -1,45 +1,45 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-dev
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/ChangeLog,v 1.8 2004/02/10 18:22:45 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/ChangeLog,v 1.9 2004/03/19 09:20:18 aliz Exp $
 
-*fortune-mod-gentoo-dev-20040210.ebuild (10 Feb 2004)
+*fortune-mod-gentoo-dev-20040210 (10 Feb 2004)
 
   10 Feb 2004; Jon Portnoy <avenj@gentoo.org> fortune-mod-gentoo-dev-20040210.ebuild :
   Update.
 
-*fortune-mod-gentoo-dev-20040118.ebuild (18 Jan 2004)
+*fortune-mod-gentoo-dev-20040118 (18 Jan 2004)
 
   18 Jan 2004; Jon Portnoy <avenj@gentoo.org> fortune-mod-gentoo-dev-20040118.ebuild :
   Fairly big update.
 
-*fortune-mod-gentoo-dev-20031217.ebuild (17 Dec 2003)
+*fortune-mod-gentoo-dev-20031217 (17 Dec 2003)
 
   17 Dec 2003; Jon Portnoy <avenj@gentoo.org> fortune-mod-gentoo-dev-20031217.ebuild :
   The usual monthly release.
 
-*fortune-mod-gentoo-dev-20031122.ebuild (22 Nov 2003)
+*fortune-mod-gentoo-dev-20031122 (22 Nov 2003)
 
   22 Nov 2003; Jon Portnoy <avenj@gentoo.org> fortune-mod-gentoo-dev-20031122.ebuild :
   New quotes plus cleanups.
 
-*fortune-mod-gentoo-dev-20031101.ebuild (01 Nov 2003)
+*fortune-mod-gentoo-dev-20031101 (01 Nov 2003)
 
   01 Nov 2003; Jon Portnoy <avenj@gentoo.org> fortune-mod-gentoo-dev-20031101.ebuild :
   Tasty.
 
-*fortune-mod-gentoo-dev-20030930.ebuild (30 Sep 2003)
+*fortune-mod-gentoo-dev-20030930 (30 Sep 2003)
 
   30 Sep 2003; Jon Portnoy <avenj@gentoo.org> fortune-mod-gentoo-dev-20030930.ebuild :
   More of the same.
 
-*fortune-mod-gentoo-dev-20030903.ebuild (03 Sep 2003)
+*fortune-mod-gentoo-dev-20030903 (03 Sep 2003)
 
   03 Sep 2003; Jon Portnoy <avenj@gentoo.org> fortune-mod-gentoo-dev-20030903.ebuild :
   Version bump, added a few new quotes. Marked stable for all currently
   keyworded archs - because frankly, who cares about unstable keywording 
   on a small fortunes file? Really, now, be reasonable.
 
-*fortune-mod-gentoo-dev-20030809.ebuild (09 Aug 2003)
+*fortune-mod-gentoo-dev-20030809 (09 Aug 2003)
 
   26 Aug 2003; Joshua Kinard <kumba@gentoo.org> fortune-mod-gentoo-dev-20030809.ebuild:
   Added ~mips to KEYWORDS

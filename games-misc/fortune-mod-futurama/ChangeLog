@@ -1,9 +1,8 @@
 # ChangeLog for games-misc/fortune-mod-futurama
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-futurama/ChangeLog,v 1.2 2003/09/10 20:25:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-futurama/ChangeLog,v 1.3 2004/03/19 09:20:18 aliz Exp $
 
-
-*fortune-mod-futurama-0.2.ebuild (17 julio 2002)
+*fortune-mod-futurama-0.2 (17 Jul 2002)
 
   26 Aug 2003; Joshua Kinard <kumba@gentoo.org> fortune-mod-futurama-0.2.ebuild:
   Added ~mips & ~sparc to KEYWORDS
