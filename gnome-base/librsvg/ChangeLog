@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.38 2004/03/19 00:51:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.39 2004/03/21 19:06:30 foser Exp $
+
+*librsvg-2.6.3 (21 Mar 2004)
+
+  21 Mar 2004; foser <foser@gentoo.org> librsvg-2.6.3.ebuild :
+  New release
 
 *librsvg-2.6.2 (19 Mar 2004)
 
