@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cmdalias
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cmdalias/ChangeLog,v 1.4 2004/08/20 16:53:51 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cmdalias/ChangeLog,v 1.5 2004/09/03 00:28:34 ciaranm Exp $
+
+  03 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> cmdalias-1.0.ebuild:
+  Help text, bug #62559
 
   20 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> cmdalias-1.0.ebuild:
   Stable on x86

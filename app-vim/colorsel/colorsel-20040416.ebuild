@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorsel/colorsel-20040416.ebuild,v 1.7 2004/08/20 16:31:10 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorsel/colorsel-20040416.ebuild,v 1.8 2004/09/03 00:37:09 ciaranm Exp $
 
 inherit vim-plugin
 
@@ -23,3 +23,7 @@ function src_unpack() {
 		${S}/plugin/${PN}.vim \
 		|| die "d'oh! sed magic didn't work, call an ambulance"
 }
+
+VIM_PLUGIN_HELPTEXT=\
+"This plugin provides a color selector for vim. Use :ColorSel to start
+the selector. This command is only available when vim is run in GUI mode."
