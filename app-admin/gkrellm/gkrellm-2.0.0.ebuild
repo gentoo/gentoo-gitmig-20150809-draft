@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.0.0.ebuild,v 1.1 2002/08/23 13:34:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.0.0.ebuild,v 1.2 2002/09/12 04:17:52 owen Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Single process stack of various system monitors"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gkrellm.net/"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=dev-libs/glib-2.0.4
     >=x11-libs/gtk+-2.0.5"
