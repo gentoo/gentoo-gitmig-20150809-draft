@@ -1,6 +1,6 @@
---- beecrypt-3.1.0/configure.ac.jj	2004-04-12 19:26:45.564165896 +0100
-+++ beecrypt-3.1.0/configure.ac	2004-04-12 19:26:55.282688456 +0100
-@@ -654,7 +654,7 @@
+--- beecrypt-3.1.0/configure.jj	2004-04-15 10:48:27.527384248 +0100
++++ beecrypt-3.1.0/configure	2004-04-15 10:48:47.568337560 +0100
+@@ -12965,7 +12965,7 @@
      CPPFLAGS="$CPPFLAGS -DOPTIMIZE_ARM"
      ;;
    athlon*)

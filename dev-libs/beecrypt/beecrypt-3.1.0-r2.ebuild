@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r2.ebuild,v 1.3 2004/04/15 09:35:28 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r2.ebuild,v 1.4 2004/04/15 10:03:48 cretin Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sourceforge.net/projects/beecrypt"
 SRC_URI="mirror://sourceforge/beecrypt/${P}.tar.gz"
 
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc alpha amd64 ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
 SLOT="0"
 
 DEPEND="python? ( >=dev-lang/python-2.2 )
@@ -35,7 +35,6 @@ src_unpack() {
 
 	# Athlons are i686
 	epatch ${FILESDIR}/beecrypt-3.1.0-athlon.diff
-	./autogen.sh
 }
 
 src_compile() {
