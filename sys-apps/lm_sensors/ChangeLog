@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.11 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.12 2002/12/24 19:58:03 lostlogic Exp $
+
+*lm_sensors-2.7.0 (24 Dec 2002)
+
+  24 Dec 2002; Brandon Low <lostlogic@gentoo.org> lm_sensors-2.7.0.ebuild :
+  This version is going to be marked -arch until kernels have support for it.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,12 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.6.5.ebuild,v 1.3 2002/12/24 19:58:03 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.7.0.ebuild,v 1.1 2002/12/24 19:58:03 lostlogic Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Hardware Sensors Monitoring by lm_sensors"
 SRC_URI="http://www2.lm-sensors.nu/~lm78/archive/${P}.tar.gz"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
-KEYWORDS="x86 ppc sparc"
+
+# gentoo-sources-2.4.20-r1 and xfs-sources-2.4.20-r1 will
+# have support for this package, do not change these to ~ 
+# until your arch has i2c-2.7.0 in it's kernel.
+KEYWORDS="-x86 -ppc -sparc"
 LICENSE="GPL-2"
 
 SLOT="0"
@@ -18,8 +22,7 @@ src_compile()  {
 }
 
 src_install() {
-	emake DESTDIR=${D} PREFIX=/usr MANDIR=/usr/share/man install \
-		|| die "Install failed"
+	einstall DESTDIR=${D} PREFIX=/usr MANDIR=/usr/share/man || die "Install failed"
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/rc_lm_sensors lm_sensors
 }
