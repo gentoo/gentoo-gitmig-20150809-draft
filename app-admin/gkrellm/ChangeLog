@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.40 2003/05/17 11:58:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.41 2003/05/21 15:13:07 weeve Exp $
+
+  21 May 2003; Jason Wever <weeve@gentoo.org> gkrellm-2.1.10.ebuild:
+  Changed ~sparc keyword to sparc.
 
 *gkrellm-2.1.10 (28 Apr 2003)
 
