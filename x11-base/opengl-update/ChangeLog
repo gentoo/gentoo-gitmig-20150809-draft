@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.38 2004/07/19 05:39:21 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.39 2004/07/31 07:34:54 spyderous Exp $
+
+  31 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  opengl-update-1.8.1.ebuild:
+  Keyword ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~ia64 ~ppc64, since 1.7.x was
+  stabled on all these.
 
   19 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>; files/opengl-update-1.8.1:
   Slight check added to make amd64 stuff more sensical.
