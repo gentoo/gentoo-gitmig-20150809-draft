@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1047 2005/03/28 04:55:34 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1048 2005/03/28 07:08:13 chriswhite Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -438,6 +438,9 @@ media-video/avifile:sblive - Enable the AC3 passthrough plugin for SBlive soundc
 media-video/avifile:vidix - Build the vidix drivers
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/chaplin:vcdimager - Enables optional support for GNU VCDimager
+media-video/dvdrip:rar - Enables rar compression of VOB fiels
+media-video/dvdrip:mplayer - Enables video playback by mplayer
+media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/emovix:codecs - Enables use of the win32 dll codecs for playback
 media-video/kino:ffmpeg - Enable ffmpeg support
 media-video/kmplayer:koffice-plugin - Install KOffice part
