@@ -1,20 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.45-r2.ebuild,v 1.4 2004/02/17 22:37:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.45-r2.ebuild,v 1.5 2004/02/20 08:07:32 vapier Exp $
 
 inherit perl-module flag-o-matic gnuconfig
 
 DESCRIPTION="A system to store and display time-series data"
-SRC_URI="http://people.ee.ethz.ch/%7Eoetiker/webtools/${PN}/pub/${P}.tar.gz"
 HOMEPAGE="http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/"
+SRC_URI="http://people.ee.ethz.ch/%7Eoetiker/webtools/${PN}/pub/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~amd64 alpha ia64 hppa"
 IUSE="tcltk perl"
-
-filter-mfpmath "sse"
-filter-flags "-ffast-math"
 
 DEPEND="perl? ( dev-lang/perl )
 	sys-apps/gawk
@@ -23,16 +20,19 @@ RDEPEND="tcltk? ( dev-lang/tcl )"
 TCLVER=""
 
 pkg_setup() {
-	if [ "`use tcltk`" ]; then
+	if use tcltk ; then
 		TCLVER=`awk -F\' '/TCL_VERSION/ {print $2}' /usr/lib/tclConfig.sh`
 	fi
 
-	if [ "`use perl`" ]; then
+	if use perl ; then
 		perl-module_pkg_setup
 	fi
 }
 
 src_compile() {
+	filter-mfpmath sse
+	filter-flags -ffast-math
+
 	local myconf
 	use tcltk \
 		&& myconf="${myconf} --with-tcllib=/usr/lib" \
