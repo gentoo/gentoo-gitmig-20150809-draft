@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-commons.eclass,v 1.1 2003/03/17 20:56:21 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-commons.eclass,v 1.2 2003/03/18 01:47:59 absinthe Exp $
 
 inherit base
 ECLASS=java-commons
@@ -50,33 +50,41 @@ java-commons_src_compile() {
 				use junit && echo "junit.jar=`java-config --classpath=junit`" >> build.properties
 				debug-print "$FUNCNAME: myconf: set to ${myconf}"
 				;;
-            maketest)
+            		maketest)
 				debug-print-section maketest
-                if [ -n "`use junit`" ]; then
-                    if [ -n $(echo "$target" | grep "test") ]; then
-                        ANT_OPTS=${myconf} ant test || die "Building Testing Classes Failed"
-                    else
-                        ANT_OPTS=${myconf} ant || die "Building Testing Classes Failed"
-                    fi
-                fi
-                ;;
+                		if [ -n "`use junit`" ]; then
+                    			if [ -n $(echo "$target" | grep "test") ]; then
+                        			ANT_OPTS=${myconf} ant test || die "Building Testing Classes Failed"
+                    			else
+                        			ANT_OPTS=${myconf} ant || die "Building Testing Classes Failed"
+                    			fi
+                		fi
+                		;;
 			make)
 				debug-print-section make
-                ANT_OPTS=${myconf} ant jar || die "Compilation Failed"
+						for each in $ant_targetlist
+						do
+							if [ "${each}" == "jar" ] ; then
+								target=${each}
+							elif [ "${each}" == "dist-jar" ] ; then
+								target=${each}
+							fi
+						done
+                		ANT_OPTS=${myconf} ant ${target} || die "Compilation Failed"
 				;;
 			makedoc)
 				debug-print-section makedoc
 				ANT_OPTS="${myconf}"
-                target=`echo "${ant_targetlist}" | grep "^javadoc$"`
-                debug-print "Building ${target}"
-                if [ -n "${target}" ]; then
-                    ant "${target}" || die "Unable to create documents"
-                else
-                  target=`echo "${ant_targetlist}" | grep "^doc$"`
-                  if [ -n "${target}" ]; then
-                    ant "${target}" || die "Unable to create documents"
-                  fi
-                fi
+                		target=`echo "${ant_targetlist}" | grep "^javadoc$"`
+                		debug-print "Building ${target}"
+                		if [ -n "${target}" ]; then
+                    			ant "${target}" || die "Unable to create documents"
+                		else
+                  			target=`echo "${ant_targetlist}" | grep "^doc$"`
+                  			if [ -n "${target}" ]; then
+                    				ant "${target}" || die "Unable to create documents"
+                  			fi
+                		fi
 				;;
 			all)
 				debug-print-section all
