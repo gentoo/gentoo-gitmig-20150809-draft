@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-1.2-r7.ebuild,v 1.3 2005/03/10 01:13:57 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-1.2-r7.ebuild,v 1.4 2005/03/10 19:01:02 cryos Exp $
 
 inherit multilib
 
@@ -18,6 +18,13 @@ RDEPEND="virtual/libc
 	 >=app-emulation/emul-linux-x86-baselibs-1.2.2-r2"
 
 S=${WORKDIR}
+
+pkg_preinst() {
+	# Check for bad symlink before installing, bug 84441.
+	if [ -L /emul/linux/x86/usr/lib/X11 ]; then
+		rm -f /emul/linux/x86/usr/lib/X11
+	fi
+}
 
 src_install() {
 	mkdir -p ${D}/etc/env.d/
