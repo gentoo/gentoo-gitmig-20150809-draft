@@ -184,3 +184,4 @@ move app-sci/qcad sci-misc/qcad
 move app-sci/qcad-parts sci-misc/qcad-parts
 move app-sci/comedi sci-misc/comedi
 move app-sci/calc sci-mathematics/calc
+move app-sci/coq sci-mathematics/coq
