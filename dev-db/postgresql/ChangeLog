@@ -1,6 +1,19 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.110 2004/07/04 13:21:51 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.111 2004/07/18 08:42:36 nakano Exp $
+
+*postgresql-7.3.6-r2 (18 Jul 2004)
+
+  18 Jul 2004; Masatomo Nakano <nakano@gentoo.org>
+  -files/pg_autovacuum.conf-7.4.2, -files/pg_autovacuum.init-7.4.2,
+  -files/postgresql-7.4.1-hppa-testandset.patch,
+  -files/postgresql-7.4.2-gentoo.patch,
+  -files/postgresql-7.4.2-hppa-testandset.patch,
+  -files/postgresql-7.4.2-vacuum-delay.patch, -files/postgresql.conf-7.4.2,
+  -files/postgresql.init-7.4.2, +postgresql-7.3.6-r2.ebuild,
+  -postgresql-7.3.6.ebuild, -postgresql-7.4.2-r1.ebuild,
+  -postgresql-7.4.2-r2.ebuild, +postgresql-7.4.3-r1.ebuild:
+  Replaced sudo with su. Removed old ebuilds.
 
   04 Jul 2004; Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.6-r1.ebuild:
   Marked stable.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r2.ebuild,v 1.16 2004/07/14 01:23:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.3-r1.ebuild,v 1.1 2004/07/18 08:42:36 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${PV}.tar.bz2
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 s390 ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
 IUSE="ssl nls java python tcltk perl libg++ pam readline zlib doc pg-hier pg-vacuumdelay pg-intdatetime"
 
 DEPEND="virtual/libc
@@ -33,7 +33,6 @@ DEPEND="virtual/libc
 # java dep workaround for portage bug
 # x86? ( java? ( =dev-java/sun-jdk-1.3* >=dev-java/ant-1.3 ) )
 RDEPEND="virtual/libc
-	app-admin/sudo
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	tcltk? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
@@ -84,7 +83,7 @@ src_unpack() {
 	if [ "${ARCH}" = "hppa" ]
 	then
 		cd ${S}
-		epatch ${FILESDIR}/${PN}-7.4.1-hppa-testandset.patch
+		epatch ${FILESDIR}/${P}-hppa-testandset.patch
 	fi
 }
 
@@ -263,7 +262,7 @@ pkg_config() {
 			eerror "Temporary setting this value to ${SEMMNI_MIN} while creating the initial database."
 			echo ${SEM} ${SEMMNI_MIN} > /proc/sys/kernel/sem
 		fi
-		sudo -u postgres /usr/bin/initdb --pgdata ${PG_DIR}/data
+		su postgres -c "/usr/bin/initdb --pgdata ${PG_DIR}/data"
 
 		if [ ! `sysctl -n kernel.sem | cut -f4` -eq ${SEMMNI} ] ; then
 			echo ${SEM} ${SEMMNI} > /proc/sys/kernel/sem
