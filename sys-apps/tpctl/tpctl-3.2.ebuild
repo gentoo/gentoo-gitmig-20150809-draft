@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/tpctl-3.2.ebuild,v 1.8 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/tpctl-3.2.ebuild,v 1.9 2002/10/19 03:21:25 vapier Exp $
 
 IUSE="ncurses tpctlir perl"
 
@@ -20,7 +20,6 @@ DEPEND="$DEPEND sys-apps/thinkpad ncurses? ( sys-libs/ncurses )"
 RDEPEND="$RDEPEND sys-apps/thinkpad ncurses? ( sys-libs/ncurses ) perl? ( sys-devel/perl )"
 
 src_compile() {
-
 	emake -C lib || die "lib make failed"
 	emake -C tpctl || die "tpctl make failed"
 	if use ncurses > /dev/null; then
@@ -33,11 +32,9 @@ src_compile() {
 	if use tpctlir > /dev/null; then
 		emake -C tpctlir || die "tpctlir make failed"
 	fi
-
 }
 
-src_install () {
-	
+src_install() {
 	dodoc AUTHORS COPYING ChangeLog README SUPPORTED-MODELS TROUBLESHOOTING \
 		VGA-MODES
 	dolib lib/libsmapidev.so.1.0
@@ -52,8 +49,7 @@ src_install () {
 		mv apmiser/README README.apmiser
 		dodoc README.apmiser
 		dosbin apmiser/apmiser
-        exeinto /etc/init.d
+		exeinto /etc/init.d
 		newexe ${FILESDIR}/apmiser.rc apmiser
 	fi
-	
 }

@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11o-r3.ebuild,v 1.8 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11o-r3.ebuild,v 1.9 2002/10/19 03:21:25 vapier Exp $
 
 IUSE="nls"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Various useful Linux utilities"
 SRC_URI="http://www.kernel.org/pub/linux/utils/${PN}/${P}.tar.gz
-         http://www.kernel.org/pub/linux/kernel/people/hvr/util-linux-patch-int/${P}.patch.gz"
+	http://www.kernel.org/pub/linux/kernel/people/hvr/util-linux-patch-int/${P}.patch.gz"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="GPL-2"
@@ -15,8 +15,7 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r2
 	sys-apps/pam-login"
-
-RDEPEND="$DEPEND sys-devel/perl
+RDEPEND="${DEPEND} sys-devel/perl
 	nls? ( sys-devel/gettext )"
 
 SLOT="0"
@@ -27,18 +26,17 @@ src_unpack() {
 	cd ${S}
 	gunzip -c ${DISTDIR}/${P}.patch.gz | patch -p0
 	cp MCONFIG MCONFIG.orig
-	sed -e "s:-pipe -O2 \$(CPUOPT) -fomit-frame-pointer:${CFLAGS}:"	\
-		-e "s:CPU=.*:CPU=${CHOST%%-*}:"	\
-		-e "s:HAVE_PAM=no:HAVE_PAM=yes:"	\
-		-e "s:HAVE_SLN=no:HAVE_SLN=yes:"	\
-		-e "s:HAVE_TSORT=no:HAVE_TSORT=yes:"	\
-		-e "s:usr/man:usr/share/man:"	\
-		-e "s:usr/info:usr/share/info:"	\
+	sed -e "s:-pipe -O2 \$(CPUOPT) -fomit-frame-pointer:${CFLAGS}:" \
+		-e "s:CPU=.*:CPU=${CHOST%%-*}:" \
+		-e "s:HAVE_PAM=no:HAVE_PAM=yes:" \
+		-e "s:HAVE_SLN=no:HAVE_SLN=yes:" \
+		-e "s:HAVE_TSORT=no:HAVE_TSORT=yes:" \
+		-e "s:usr/man:usr/share/man:" \
+		-e "s:usr/info:usr/share/info:" \
 			MCONFIG.orig > MCONFIG
 }
 
 src_compile() {
-
 	./configure || die
 
 	if [ -z "`use nls`" ]
@@ -67,4 +65,3 @@ src_install() {
 	docinto examples
 	dodoc example.files/*
 }
-

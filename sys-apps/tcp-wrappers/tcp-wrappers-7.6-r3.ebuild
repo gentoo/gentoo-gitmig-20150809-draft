@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r3.ebuild,v 1.5 2002/10/04 06:31:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r3.ebuild,v 1.6 2002/10/19 03:21:25 vapier Exp $
 
 MY_P="tcp_wrappers_${PV}"
 PATCH0="${MY_P}.dif"
@@ -11,32 +11,29 @@ SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz"
 HOMEPAGE="ftp://ftp.porcupine.org/pub/security/index.html"
 KEYWORDS="x86 sparc sparc64"
 SLOT="0"
-LICENSE="Freeware"
+LICENSE="freedist"
 DEPEND="virtual/glibc"
-
+RDEPEND="${DEPEND}"
 
 src_unpack() {
-
 	unpack ${A}
-	
+
 	cd ${S}/
 	patch -p0 < ${FILESDIR}/${PATCH0} || die
 	gzip -dc ${FILESDIR}/${PATCH1} | patch -p2 || die
-	
+
 	cp Makefile Makefile.orig
 	sed -e "s/-O2/${CFLAGS}/" \
 		-e "s:AUX_OBJ=.*:AUX_OBJ= \\\:" Makefile.orig > Makefile
 }
 
 src_compile() {
-
 	make ${MAKEOPTS} \
 		REAL_DAEMON_DIR=/usr/sbin \
 		linux || die
 }
 
 src_install() {
-
 	dosbin tcpd tcpdchk tcpdmatch safe_finger try-from
 	doman *.[358]
 	dosym hosts_access.5.gz /usr/share/man/man5/hosts.allow.5.gz
@@ -47,4 +44,3 @@ src_install() {
 
 	dodoc BLURB CHANGES DISCLAIMER README*
 }
-

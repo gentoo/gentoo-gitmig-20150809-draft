@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/time/time-1.7-r1.ebuild,v 1.6 2002/10/04 06:31:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/time/time-1.7-r1.ebuild,v 1.7 2002/10/19 03:21:25 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A command that displays info about resources used by a program"
@@ -11,6 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	./configure --prefix=/usr \
@@ -26,9 +27,9 @@ END-INFO-DIR-ENTRY" > temp
 	sed -e '/^trans/r temp' < time.info > time.info.new
 	mv time.info.new time.info
 
-        make prefix=${D}/usr sysconfdir=${D}/etc mandir=${D}/usr/share/man install || die
+	make prefix=${D}/usr sysconfdir=${D}/etc mandir=${D}/usr/share/man install || die
 	gzip -9 ${D}/usr/info/time.info
-        dodoc ChangeLog COPYING README
-        dodoc AUTHORS NEWS
+	dodoc ChangeLog COPYING README
+	dodoc AUTHORS NEWS
 }
 

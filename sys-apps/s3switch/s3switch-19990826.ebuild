@@ -1,6 +1,6 @@
-#Copyright 2002 Gentoo Technologies, Inc.
-#Distributed under the terms of the GNU General Public License v2
-#$Header: /var/cvsroot/gentoo-x86/sys-apps/s3switch/s3switch-19990826.ebuild,v 1.6 2002/10/04 06:29:43 vapier Exp $
+# Copyright 2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s3switch/s3switch-19990826.ebuild,v 1.7 2002/10/19 03:21:24 vapier Exp $
 
 DESCRIPTION="S3 video chipset output selection utility"
 HOMEPAGE="http://www.probo.com/timr/savage40.html"
@@ -13,13 +13,13 @@ S=${WORKDIR}
 
 RDEPEND="virtual/glibc
 	app-arch/unzip"
-DEPEND="$RDEPEND"
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	dobin s3switch
 	doman s3switch.1x
 }

@@ -1,18 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r1.ebuild,v 1.7 2002/10/04 06:31:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r1.ebuild,v 1.8 2002/10/19 03:21:25 vapier Exp $
 
 DESCRIPTION="Collection of tools for managing UNIX services"
 SRC_URI="http://cr.yp.to/${PN}/${P}.tar.gz"
 HOMEPAGE="http://cr.yp.to/${PN}/"
 KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
-LICENSE="Freeware"
-S=${WORKDIR}/${P}
+LICENSE="freedist"
+S="${WORKDIR}/${P}"
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	echo "gcc ${CFLAGS}" > conf-cc
@@ -25,7 +25,6 @@ src_compile() {
 }
 
 src_install() {
-
 	for i in tcpserver tcprules tcprulescheck argv0 recordio tcpclient *\@ tcpcat mconnect mconnect-io addcr delcr fixcrio rblsmtpd
 	do
 		dobin ${i}

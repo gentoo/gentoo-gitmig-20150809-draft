@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/quik-2.0.1.0-r1.ebuild,v 1.8 2002/10/19 02:52:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/quik-2.0.1.0-r1.ebuild,v 1.9 2002/10/19 03:21:24 vapier Exp $
 
 inherit mount-boot
 
@@ -49,7 +49,7 @@ src_install() {
 	install -m 644 man/quik.8 man/bootstrap.8 \
 			${D}/usr/share/man/man8 || DIE
 
-	install -m 444 first/first.b second/second.b	\
+	install -m 444 first/first.b second/second.b \
 					second/second ${D}/boot || die
 	install -m 644 etc/quik.conf ${D}/etc || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r1.ebuild,v 1.10 2002/10/04 06:32:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/vcron-3.0.1-r1.ebuild,v 1.11 2002/10/19 03:21:25 vapier Exp $
 
 MY_P=${P/vcron/vixie-cron}
 S=${WORKDIR}/${MY_P}
@@ -19,7 +19,6 @@ RDEPEND="!virtual/cron
 PROVIDE="virtual/cron"
 
 src_unpack() {
-
 	unpack ${A}
 	
 	cd ${S}
@@ -30,12 +29,10 @@ src_unpack() {
 }
 
 src_compile() {
-
 	emake || die
 }
 
 src_install() {
-
 	#this does not work if the directory exists already
 	diropts -m0750 -o root -g cron
 	dodir /var/spool/cron/crontabs
@@ -55,10 +52,9 @@ src_install() {
 
 	dodoc ${FILESDIR}/crontab
 
-        insinto /usr/sbin
+	insinto /usr/sbin
 	insopts -o root -g root -m 0750 ; doins cron
 	
-        insinto /usr/bin
+	insinto /usr/bin
 	insopts -o root -g cron -m 4750 ; doins crontab
-
 }

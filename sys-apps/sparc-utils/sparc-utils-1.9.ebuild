@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9.ebuild,v 1.8 2002/10/19 03:21:24 vapier Exp $
 
 S=${WORKDIR}/${P}.orig
 DESCRIPTION="SPARC/UltraSPARC Improved Loader, a boot loader for sparc"
 SRC_URI=" http://http.us.debian.org/debian/pool/main/s/${PN}/${PN}_${PV}.orig.tar.gz"
-HOMEPAGE="http://www.debian.org"
+HOMEPAGE="http://www.debian.org/"
 KEYWORDS="sparc sparc64 -x86 -ppc"
 SLOT="0"
 LICENSE="GPL-2"
@@ -17,7 +18,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	CFLAGS="-O3"
 	cd ${S}
 	emake -C elftoaout-2.3 CFLAGS="$CFLAGS" || die
@@ -31,7 +31,6 @@ src_compile() {
 }
 
 src_install() {
-
 	mkdir -p ${D}/usr/bin ${D}/usr/sbin ${D}/etc/init.d ${D}/etc/default
 	dodir /usr/bin
 	install -s elftoaout-2.3/elftoaout ${D}/usr/bin
@@ -44,12 +43,12 @@ src_install() {
 	install -s audioctl-1.3/audioctl ${D}/usr/bin
 	# install /etc/init.d script & /etc/default scripts
 	install -d -m 755 ${D}/etc ${D}/etc/init.d ${D}/etc/default
-    #install -m 755 debian/audioctl ${D}/etc/init.d
-    install -m 755 debian/audioctl.def ${D}/etc/default/audioctl
+	#install -m 755 debian/audioctl ${D}/etc/init.d
+	install -m 755 debian/audioctl.def ${D}/etc/default/audioctl
 
 	# Todo: Somehow set this automatically
-    echo "=============================================================="
-    echo "WARNING - You should make sure /dev/openprom exists. If you're"
+	echo "=============================================================="
+	echo "WARNING - You should make sure /dev/openprom exists. If you're"
 	echo "not using devfs and /dev/openprom does not exist, then issue the"
 	echo "command:"
 	echo "cd /dev; mknod openprom c 10 139"
