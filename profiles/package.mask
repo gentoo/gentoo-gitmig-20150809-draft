@@ -27,7 +27,9 @@
 
 # <mcummings@gentoo.org> (16 Aug 2002)
 # Masked for testing
-dev-perl/ExtUtils-MakeMaker
+# got teters on all four platforms -
+# urgent for fix to perl eclass for 5.6.1 users
+#dev-perl/ExtUtils-MakeMaker
 
 # <styx@gentoo.org> /16 Aug 2002)
 # Masked for testing
