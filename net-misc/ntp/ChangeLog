@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.51 2004/11/09 15:46:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.52 2004/12/10 13:33:07 agriffis Exp $
+
+  12 Dec 2004; Aron Griffis <agriffis@gentoo.org> ntp-4.2.0-r2.ebuild,
+  ntp-4.2.0.20040617.ebuild:
+  add ia64 keywords
 
 *ntp-4.2.0.20040617 (09 Nov 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0-r2.ebuild,v 1.21 2004/11/09 05:44:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0-r2.ebuild,v 1.22 2004/12/10 13:33:07 agriffis Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa mips ppc ppc64 sparc x86 ia64"
 IUSE="parse-clocks nodroproot selinux ssl"
 
 RDEPEND=">=sys-libs/ncurses-5.2
