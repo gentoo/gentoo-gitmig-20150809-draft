@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta1.ebuild,v 1.2 2002/07/01 21:33:31 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta1.ebuild,v 1.3 2002/07/17 07:36:02 seemant Exp $
 inherit kde-base
 
 MYP=${P//_/-}
@@ -9,7 +9,10 @@ S=${WORKDIR}/${MYP}
 DESCRIPTION="An advanced IRC Client"
 SRC_URI="ftp://ftp.kvirc.net/kvirc/${MYPV}/source/${MYP}.tar.gz"
 HOMEPAGE="http://www.kvirc.net"
+
+SLOT="0"
 LICENSE="kvirc"
+KEYWORDS="x86"
 
 use kde && need-kde 3 || need-qt 3
 

@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Tom von Schwerdtner <tvon@etria.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.5-r1.ebuild,v 1.1 2002/07/15 18:50:27 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.5-r1.ebuild,v 1.2 2002/07/17 07:36:02 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A modular textUI IRC client with IPv6 support."
@@ -12,10 +11,13 @@ DEPEND="virtual/glibc
 	=dev-libs/glib-1.2*
 	sys-libs/ncurses
 	perl? ( sys-devel/perl ) 
-	nls? ( sys-devel/gettext )
-
-	# Needed for it's precious libsocks.so and socks.h
 	socks? ( >=net-misc/dante-1.1.13 )"
+
+RDEPEND="nls? ( sys-devel/gettext )"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 
 src_compile() {
@@ -27,21 +29,13 @@ src_compile() {
 	# Edit these if you like
 	myconf="--without-servertest --with-bot --with-proxy --with-ncurses"
 	
-	if [ -z "`use nls`" ]
-	then
-		myconf="${myconf} --disable-nls"
-	fi
-	if [ "`use perl`" ]
-	then
-		myconf="${myconf} --enable-perl=yes"
-	fi
-	if [ "`use ipv6`" ]
-	then
-		myconf="${myconf} --enable-ipv6"
-	fi
-	if [ "`use socks`" ] ; then
-		myconf="${myconf} --with-socks"
-	fi
+	use nls || myconf="${myconf} --disable-nls"
+
+	use perl || myconf="${myconf} --enable-perl=yes"
+
+	use ipv6 || myconf="${myconf} --enable-ipv6"
+
+	use socks || myconf="${myconf} --with-socks"
 
 	./configure \
 		--host=${CHOST} \
@@ -57,18 +51,27 @@ src_compile() {
 src_install () {
 
 	myflags=""
-	if [ "`use perl`" ]
-	then
-		R1="s/installsitearch='//"
-		R2="s/';//"
-		perl_sitearch="`perl -V:installsitearch | sed -e ${R1} -e ${R2}`"
-		myflags="${myflags} INSTALLPRIVLIB=${D}/usr"
-		myflags="${myflags} INSTALLARCHLIB=${D}/${perl_sitearch}"
-		myflags="${myflags} INSTALLSITELIB=${D}/${perl_sitearch}"
-		myflags="${myflags} INSTALLSITEARCH=${D}/${perl_sitearch}"
-	fi
+#	use perl && ( \
+#		R1="s/installsitearch='//"
+#		R2="s/';//"
+#		perl_sitearch="`perl -V:installsitearch | sed -e ${R1} -e ${R2}`"
+#		myflags="${myflags} PREFIX=${D}"
+#		myflags="${myflags} INSTALLPRIVLIB=${D}/usr"
+#		myflags="${myflags} INSTALLARCHLIB=${D}/${perl_sitearch}"
+#		myflags="${myflags} INSTALLSITELIB=${D}/${perl_sitearch}"
+#		myflags="${myflags} INSTALLSITEARCH=${D}/${perl_sitearch}"
+#	)
+
+	use perl && ( \
+		cd ${S}/src/perl/common
+		mv Makefile Makefile.orig
+		sed "s:^PREFIX:PREFIX = ${D}/usr:" \
+			Makefile.orig > Makefile
+		cd ${S}
+	)
 
 	make DESTDIR=${D} \
+		PREFIX=${D}/usr \
 		docdir=/usr/share/doc/${PF} \
 		gnulocaledir=${D}/usr/share/locale \
 		${myflags} \
