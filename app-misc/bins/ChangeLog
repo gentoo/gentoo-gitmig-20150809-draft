@@ -2,6 +2,9 @@
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # $Header:
 
+  28 Jun 2004; Michael Cummings <mcummings@gentoo.org> bins-1.1.26-r1.ebuild:
+  Typo - /use instead of /usr. Bug 52088 still.
+
   20 Jun 2004; Michael Cummings <mcummings@gentoo.org> bins-1.1.26-r1.ebuild:
   (Hopefully) the final fix for 1.26-r1, bug 52088, thanks Haroon!
 
