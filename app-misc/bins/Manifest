@@ -3,7 +3,7 @@ MD5 031bbc40165fee92a9dcc158a3030f03 bins-1.1.17.ebuild 1491
 MD5 305f75b4719bf976ddceeccdafdecad3 bins-1.1.19.ebuild 1492
 MD5 ea4f8389ade2542f9df4dc2891712f23 bins-1.1.20.ebuild 1485
 MD5 7a29b4a9e56eee64e8b53f8022b0aa08 bins-1.1.20-r1.ebuild 1519
-MD5 bce0f95c032a1fa553280b7a550ab0b1 bins-1.1.19-r1.ebuild 1523
+MD5 b30c7c02139498dd937e6390aebf43e7 bins-1.1.19-r1.ebuild 1526
 MD5 1c667e2444691d804fd3160886c8a373 files/digest-bins-1.1.17 63
 MD5 c890fc6b7f7827c86248121ac11b4c62 files/digest-bins-1.1.19 63
 MD5 666b73d727b66978cdf613cb65db33c3 files/digest-bins-1.1.20 63
