@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.88.ebuild,v 1.1 2004/11/16 11:47:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.88.ebuild,v 1.2 2004/11/17 23:23:24 mr_bones_ Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -137,8 +137,9 @@ src_compile() {
 		disp=1
 	fi
 	if use ggi ; then
-		emake DISPLAY_METHOD=ggi || die "emake failed (ggi)"
-		disp=1
+		#emake DISPLAY_METHOD=ggi || die "emake failed (ggi)"
+		#disp=1
+		ewarn "GGI support is currently (${PV}) broken :("
 	fi
 	if  [ ${disp} -eq 0 ] || use opengl || use X || use dga || use xv ; then
 		emake DISPLAY_METHOD=x11 || die "emake failed (x11)"
@@ -165,8 +166,9 @@ src_install() {
 		disp=1
 	fi
 	if use ggi ; then
-		make DISPLAY_METHOD=ggi install || die "install failed (ggi)"
-		disp=1
+		#make DISPLAY_METHOD=ggi install || die "install failed (ggi)"
+		#disp=1
+		ewarn "GGI support is currently (${PV}) broken :("
 	fi
 	if [ ${disp} -eq 0 ] || use opengl || use X || use dga || use xv ; then
 		make DISPLAY_METHOD=x11 install || die "install failed (x11)"
@@ -186,8 +188,8 @@ src_install() {
 		dosym "${TARGET}.SDL" "${GAMES_BINDIR}/${TARGET}"
 	elif use svga ; then
 		dosym ${TARGET}.svgalib "${GAMES_BINDIR}/${TARGET}"
-	elif use ggi ; then
-		dosym ${TARGET}.ggi "${GAMES_BINDIR}/${TARGET}"
+	#elif use ggi ; then
+		#dosym ${TARGET}.ggi "${GAMES_BINDIR}/${TARGET}"
 	fi
 	prepgamesdirs
 }
@@ -199,6 +201,6 @@ pkg_postinst() {
 		einfo " ${TARGET}.x11"
 	fi
 	useq sdl    && einfo " ${TARGET}.SDL"
-	useq ggi    && einfo " ${TARGET}.ggi"
+	#useq ggi    && einfo " ${TARGET}.ggi"
 	useq svga   && einfo " ${TARGET}.svgalib"
 }
