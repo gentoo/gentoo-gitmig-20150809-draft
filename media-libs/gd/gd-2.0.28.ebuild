@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.28.ebuild,v 1.1 2004/07/22 19:52:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.28.ebuild,v 1.2 2004/07/30 20:28:20 vapier Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="A graphics library for fast image creation"
 HOMEPAGE="http://www.boutell.com/gd/"
@@ -15,6 +17,12 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	png? ( >=media-libs/libpng-1.2.5 sys-libs/zlib )
 	truetype? ( >=media-libs/freetype-2.1.5 )
 	X? ( virtual/x11 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	gnuconfig_update
+}
 
 src_compile() {
 	econf \
