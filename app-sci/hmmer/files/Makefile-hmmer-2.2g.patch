@@ -1,0 +1,33 @@
+--- Makefile.in.orig	2003-05-05 15:21:41.000000000 +0100
++++ Makefile.in	2003-05-05 15:22:11.000000000 +0100
+@@ -84,6 +84,12 @@
+ 	sindex\
+ 	shuffle\
+ 	sreformat
++SQUIDMANS = afetch\
++	alistat\
++	seqstat\
++	sfetch\
++	shuffle\
++	sreformat
+ 
+ # all: Compile everything (except the testsuite),
+ #      and stick the supported programs in binaries/
+@@ -146,13 +152,14 @@
+ 	for file in $(PROGS) $(SQUIDPROGS) $(PVMPROGS); do\
+ 	   cp binaries/$$file $(BINDIR)/;\
+ 	done
+-	for file in hmmer $(PROGS) $(SQUIDPROGS); do\
++	for file in hmmer $(PROGS); do\
+ 	   $(INSTMAN) documentation/man/$$file.man $(MANDIR)/man$(MANSUFFIX)/$$file.$(MANSUFFIX);\
++	   chmod 0644 $(MANDIR)/man$(MANSUFFIX)/$$file.$(MANSUFFIX);\
+ 	done
+-	for file in $(SQUIDPROGS); do\
++	for file in $(SQUIDMANS); do\
+ 	   $(INSTMAN) squid/Man/$$file.man $(MANDIR)/man$(MANSUFFIX)/$$file.$(MANSUFFIX);\
++	   chmod 0644 $(MANDIR)/man$(MANSUFFIX)/$$file.$(MANSUFFIX);\
+ 	done
+-
+ # "make clean" removes almost everything except configuration files
+ #              and binaries.
+ clean:
