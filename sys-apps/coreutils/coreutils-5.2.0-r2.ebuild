@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0-r2.ebuild,v 1.8 2004/05/17 07:07:14 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0-r2.ebuild,v 1.9 2004/06/16 01:35:49 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,24 +16,25 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2
 	mirror://gentoo/${P}.tar.bz2
 	mirror://gentoo/${P}-${I18N_VER}.patch.gz
-	http://dev.gentoo.org/~seemant/distfiles/${P}-gentoo-${PATCH_VER}.tar.bz2"
+	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips ~alpha arm hppa amd64 ~ia64 ~ppc64 s390"
-IUSE="nls build acl selinux static"
+IUSE="nls build acl selinux static uclibc"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( !hppa? ( sys-apps/acl sys-apps/attr ) )
 	nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.3-r5"
+
 DEPEND="${RDEPEND}
 	virtual/glibc
 	>=sys-apps/portage-2.0.49
 	>=sys-devel/automake-1.8.2
 	>=sys-devel/autoconf-2.58
 	>=sys-devel/m4-1.4-r1
-	sys-apps/help2man"
+	!uclibc? ( sys-apps/help2man )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.96 2004/06/02 04:29:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.97 2004/06/16 01:35:49 dragonheart Exp $
+
+  16 Jun 2004; Daniel Black <dragonheart@gentoo.org> coreutils-5.0-r6.ebuild,
+  coreutils-5.0.91-r3.ebuild, coreutils-5.0.91-r4.ebuild,
+  coreutils-5.2.0-r2.ebuild, coreutils-5.2.1.ebuild:
+  uclibc not dependant on sys-apps/help2man thanks to Peter S. Mazinger
+  <ps.m@gmx.net>. Changed dev.gentoo.org SRC_URI to mirror://gentoo/.
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> coreutils-5.2.1.ebuild:
   stable on amd64

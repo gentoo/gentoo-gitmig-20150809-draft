@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1.ebuild,v 1.5 2004/06/02 04:29:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1.ebuild,v 1.6 2004/06/16 01:35:49 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,14 +15,14 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 	mirror://gentoo/${P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2
 	mirror://gentoo/${P}-${I18N_VER}.patch.gz
-	http://dev.gentoo.org/~seemant/distfiles/${P}-gentoo-${PATCH_VER}.tar.bz2
-	http://dev.gentoo.org/~seemant/distfiles/${P}-${I18N_VER}.patch.gz
-	http://dev.gentoo.org/~seemant/distfiles/${P}-gentoo-${PATCH_VER}.tar.bz2"
+	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2
+	mirror://gentoo/${P}-${I18N_VER}.patch.gz
+	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa amd64 ~ia64 ~ppc64 ~s390"
-IUSE="nls build acl selinux static"
+IUSE="nls build acl selinux static uclibc"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( !hppa? ( sys-apps/acl sys-apps/attr ) )
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.8.3
 	>=sys-devel/autoconf-2.58
 	>=sys-devel/m4-1.4-r1
-	sys-apps/help2man"
+	!uclibc? ( sys-apps/help2man )"
 
 src_unpack() {
 	unpack ${A}
