@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.20 2004/10/30 17:46:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.21 2004/11/12 08:42:52 lu_zero Exp $
+
+  12 Nov 2004; Luca Barbato <lu_zero@gentoo.org> fam-2.7.0-r2.ebuild:
+  Marked ppc
 
   30 Oct 2004; Jason Wever <weeve@gentoo.org> fam-2.7.0-r2.ebuild:
   Stable on sparc.
