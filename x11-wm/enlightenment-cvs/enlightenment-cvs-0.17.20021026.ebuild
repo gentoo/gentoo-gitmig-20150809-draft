@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021026.ebuild,v 1.2 2002/10/26 19:56:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021026.ebuild,v 1.3 2002/10/26 20:31:40 vapier Exp $
 
 IUSE="pic X mmx truetype opengl nls"
 
@@ -55,7 +55,7 @@ src_compile() {
 
 	local cflags
 	local ldflags
-	cflags="${CFLAGS} -I${S}/libs/e{bg,bits,core,db,style,tox,wd}/src"
+	cflags="${CFLAGS} -I${S}/libs/e{bg,bits,core,db,style,tox,vas,wd}/src"
 	cflags="${cflags} -I${S}/apps/efsd/efsd"
 
 	# the stupid gettextize script prevents non-interactive mode, so we hax it
@@ -74,7 +74,7 @@ src_compile() {
 	############
 	### libs ###
 	############
-	ldflags="${LDFLAGS} -L${S}/libs/e{bg,bits,core,db,style,tox,wd}/src"
+	ldflags="${LDFLAGS} -L${S}/libs/e{bg,bits,core,db,style,tox,vas,wd}/src"
 
 	### imlib2 ###
 	cd ${S}/libs/imlib2
