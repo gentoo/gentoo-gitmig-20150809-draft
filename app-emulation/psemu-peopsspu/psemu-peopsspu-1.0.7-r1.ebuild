@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopsspu/psemu-peopsspu-1.0.7-r1.ebuild,v 1.1 2003/08/14 06:28:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopsspu/psemu-peopsspu-1.0.7-r1.ebuild,v 1.2 2003/08/15 13:31:47 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -32,7 +32,7 @@ src_unpack() {
 
 src_compile() {
 	cd src
-	sed -i "/^CCFLAGS3/s:=:= ${CFLAGS} :" Makefile
+	sed -i -e "s/-mpentium//" -e "/^CCFLAGS3/s:=:= ${CFLAGS} :" Makefile
 	if [ `use oss` ] || [ -z "`use oss``use alsa`" ] ; then
 		emake clean || die
 		emake USEALSA=FALSE || die
