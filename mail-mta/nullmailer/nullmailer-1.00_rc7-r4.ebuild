@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7-r3.ebuild,v 1.1 2004/05/31 00:21:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7-r4.ebuild,v 1.1 2004/05/31 05:28:33 g2boojum Exp $
 
 inherit eutils
 
@@ -13,10 +13,12 @@ HOMEPAGE="http://untroubled.org/${PN}/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
+IUSE="mailwrapper"
 
 DEPEND="virtual/glibc
 		sys-apps/groff"
-RDEPEND="!virtual/mta
+RDEPEND="!mailwrapper? ( !virtual/mta )
+		mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 		virtual/glibc
 		>=sys-apps/supervise-scripts-3.2
 		>=sys-apps/daemontools-0.76-r1
@@ -48,8 +50,13 @@ src_compile() {
 
 src_install () {
 	einstall localstatedir=${D}/var/nullmailer || die "einstall failed"
-	mv ${D}/usr/sbin/sendmail ${D}/usr/sbin/sendmail.nullmailer
-	mv ${D}/usr/bin/mailq ${D}/usr/bin/mailq.nullmailer
+	if use mailwrapper; then
+		mv ${D}/usr/sbin/sendmail ${D}/usr/sbin/sendmail.nullmailer
+		mv ${D}/usr/bin/mailq ${D}/usr/bin/mailq.nullmailer
+		dosym /usr/sbin/sendmail /usr/bin/mailq
+		insinto /etc/mail
+		doins ${FILESDIR}/mailer.conf
+	fi
 	dodoc AUTHORS BUGS COPYING HOWTO INSTALL NEWS README YEAR2000 TODO ChangeLog
 	# A small bit of sample config
 	dodir /etc/nullmailer
@@ -57,7 +64,7 @@ src_install () {
 	newins ${FILESDIR}/remotes.sample remotes
 	# daemontools stuff
 	dodir /var/nullmailer/service{,/log}
-	insinto /var/nullmailer/service/run
+	insinto /var/nullmailer/service
 	newins scripts/nullmailer.run run
 	fperms 700 /var/nullmailer/service/run
 	insinto /var/nullmailer/service/log
@@ -73,15 +80,15 @@ src_install () {
 	fperms 4711 /usr/sbin/nullmailer-queue /usr/bin/mailq
 	fowners nullmail:nullmail /var/log/nullmailer /var/nullmailer/{tmp,queue,trigger}
 	fperms 660 /var/nullmailer/trigger
-	ewarn "Please ensure you have selected nullmailer in your /etc/mailer.conf"
-	insinto /etc
-	doins ${FILESDIR}/mailer.conf
+	use mailwrapper && \
+		ewarn "Please ensure you have selected nullmailer in your /etc/mailer.conf"
 }
 
 pkg_config() {
 	[ ! -s /etc/nullmailer/me ] && /bin/hostname --fqdn >/etc/nullmailer/me
 	[ ! -s /etc/nullmailer/defaultdomain ] && /bin/hostname --domain >/etc/nullmailer/defaultdomain
-	ewarn "Please ensure you have selected nullmailer in your /etc/mailer.conf"
+	use mailwrapper && \
+		ewarn "Please ensure you have selected nullmailer in your /etc/mailer.conf"
 }
 
 pkg_postinst() {
@@ -99,6 +106,7 @@ pkg_postinst() {
 	einfo "To start nullmailer at boot you have to enable the /etc/init.d/svscan rc file"
 	einfo "and create the following links :"
 	einfo "ln -fs /var/nullmailer/service /service/nullmailer"
-	ewarn "Please ensure you have selected nullmailer in your /etc/mailer.conf"
+	use mailwrapper && \
+		ewarn "Please ensure you have selected nullmailer in your /etc/mailer.conf"
 }
 
