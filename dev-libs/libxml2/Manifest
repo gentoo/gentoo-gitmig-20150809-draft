@@ -8,7 +8,7 @@ MD5 b40c981bc48af5d494d9903c64395e8b libxml2-2.6.12.ebuild 1670
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 0eededeaa59fa4582aa5176d034a9f19 libxml2-2.6.6.ebuild 1892
 MD5 5900215d6556e3e2aa098da214f3f302 libxml2-2.6.7.ebuild 1887
-MD5 9b6151ebbfb01f6ffda15a70007e31a6 libxml2-2.6.15-r1.ebuild 1813
+MD5 1b71560078faac3e6cf28a3f22cbd0fc libxml2-2.6.15-r1.ebuild 1810
 MD5 02c6697e95e4ac68f27f42bc47bd211b files/digest-libxml2-2.6.9 67
 MD5 58ae52ba5b2d6b7aed29f8a08b324d2c files/digest-libxml2-2.6.11 68
 MD5 fa747ea5704458d21c71742d5bd870d4 files/digest-libxml2-2.6.12 68
@@ -19,7 +19,7 @@ MD5 6f985801b3703cf758165d018cad9132 files/libxml2-2.6.15-reverse_error.patch 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhCD/HTu7gpaalycRAgAuAKD4hNFQr8VsPF4VHytzU4b1S9kteQCgknp1
-e2GmxJxgq7a+jIOhSOp7DOg=
-=JKue
+iD8DBQFBhGlvHTu7gpaalycRAgbIAJ0WUvDhz7NQ451n1sJC/t0EsqOh0wCdGvop
+1/Jm85V+uCtWejWF3Zt8E+k=
+=v6hO
 -----END PGP SIGNATURE-----
