@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.22 2005/01/11 14:49:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.23 2005/01/15 01:19:28 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -101,6 +101,7 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 		arm*)		echo arm;;
 		hppa*)		ninj parisc hppa;;
 		ia64*)		echo ia64;;
+		m68*)		echo m68k;;
 		mips*)		echo mips;;
 		powerpc64*)	echo ppc64;;
 		powerpc*)	echo ppc;;
@@ -130,7 +131,7 @@ tc-endian() {
 		arm*)		echo little;;
 		hppa*)		echo big;;
 		ia64*)		echo little;;
-		m68k*)		echo big;;
+		m68*)		echo big;;
 		mips*el-*)	echo little;;
 		mips*)		echo big;;
 		powerpc*)	echo big;;
