@@ -1,8 +1,18 @@
-MD5 0f5b9fedea623841e0cff9b60bb36c14 ChangeLog 4157
-MD5 f67638181b1bbd2f8b87fb4fa9bfe4d6 lcms-1.13.ebuild 1428
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 883c9f2b497345fa9c7db0be4f4e78f9 lcms-1.11.ebuild 1113
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c3af94167dca87a3792df4163f76c48d lcms-1.13.ebuild 1428
 MD5 97b2a833f29201681b248eb812f31ea1 lcms-1.12.ebuild 1258
+MD5 883c9f2b497345fa9c7db0be4f4e78f9 lcms-1.11.ebuild 1113
+MD5 338a1c008d998b448ebd376e09ce7dd5 ChangeLog 4243
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 ec46b226970ad1597b5be73ec187ef6e files/digest-lcms-1.11 61
-MD5 58a0f36993082241e2b970733b79087b files/digest-lcms-1.13 61
 MD5 a2d2635e95a30adc03a018d80e7697cf files/digest-lcms-1.12 61
+MD5 58a0f36993082241e2b970733b79087b files/digest-lcms-1.13 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCQ+ONM+I1L6GK/u4RAqMZAJ4nYAVoLvQg3vsKZM1KqRQYpwuR/ACdH9Gn
+vEXM7121bo3TFm9mMhz+mt8=
+=/tDf
+-----END PGP SIGNATURE-----
