@@ -1,0 +1,24 @@
+diff -ur muine-0.6.3.orig/libmuine/player-gst.c muine-0.6.3/libmuine/player-gst.c
+--- muine-0.6.3.orig/libmuine/player-gst.c      2005-03-14 19:55:50.000000000 -0500
++++ muine-0.6.3/libmuine/player-gst.c   2005-03-14 19:56:58.000000000 -0500
+@@ -26,7 +26,7 @@
+ #include <gst/gst.h>
+ #include <gst/gconf/gconf.h>
+ #include <gst/play/play.h>
+-#include <libgnome/gnome-i18n.h>
++#include <glib/gi18n.h>
+
+ #include "player.h"
+
+diff -ur muine-0.6.3.orig/libmuine/player-xine.c muine-0.6.3/libmuine/player-xine.c
+--- muine-0.6.3.orig/libmuine/player-xine.c     2004-05-15 05:51:22.000000000 -0400
++++ muine-0.6.3/libmuine/player-xine.c  2005-03-14 19:57:16.000000000 -0500
+@@ -23,7 +23,7 @@
+ #include <math.h>
+ #include <xine.h>
+ #include <libgnomevfs/gnome-vfs-utils.h>
+-#include <libgnome/gnome-i18n.h>
++#include <glib/gi18n.h>
+
+ #include "player.h"
+

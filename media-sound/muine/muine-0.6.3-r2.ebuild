@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.6.3-r2.ebuild,v 1.4 2005/03/11 03:19:55 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.6.3-r2.ebuild,v 1.5 2005/03/15 01:51:49 latexer Exp $
 
 inherit gnome2 mono eutils
 
@@ -17,6 +17,10 @@ RDEPEND=">=dev-lang/mono-1.0
 	>=dev-dotnet/gnome-sharp-1.0.4
 	>=dev-dotnet/glade-sharp-1.0.4
 	>=dev-dotnet/gconf-sharp-1.0.4
+	=dev-dotnet/gtk-sharp-1.0*
+	=dev-dotnet/gnome-sharp-1.0*
+	=dev-dotnet/glade-sharp-1.0*
+	=dev-dotnet/gconf-sharp-1.0*
 	xine? ( >=media-libs/xine-lib-1_rc4 )
 	!xine? (
 		>=media-libs/gstreamer-0.8.0
@@ -49,4 +53,5 @@ DOCS="AUTHORS COPYING ChangeLog INSTALL \
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-mono-1.1.1-compat.diff
+	epatch ${FILESDIR}/${P}-gnome-2.10-compat.diff
 }
