@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.5 2003/04/22 19:05:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.6 2003/05/18 21:56:50 mholzer Exp $
+
+*smartmontools-5.1.11 (19 May 2003)
+
+  19 May 2003; Martin Holzer <mholzer@gentoo.org> smartmontools-5.1.10.ebuild,
+  smartmontools-5.1.10.ebuild, smartmontools-5.1.11.ebuild,
+  smartmontools-5.1.9.ebuild, smartmontools-5.1.9.ebuild:
+  Version bumped & cleanup
 
 *smartmontools-5.1.10 (22 Apr 2003)
 
