@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.320 2004/09/07 14:44:18 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.321 2004/09/08 21:09:19 lv Exp $
+
+  08 Sep 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.2.ebuild:
+  made gcc default to using multilib on supported archs. add nomultilib to USE
+  to disable.
 
 *gcc-3.4.2 (07 Sep 2004)
 

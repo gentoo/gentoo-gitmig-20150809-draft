@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2.ebuild,v 1.1 2004/09/07 14:44:18 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2.ebuild,v 1.2 2004/09/08 21:09:19 lv Exp $
 
-IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
+IUSE="static nls bootstrap build nomultilib gcj gtk f77 objc hardened uclibc n32 n64"
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -28,7 +28,7 @@ DEPEND="virtual/libc
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
-	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
+	amd64? ( !nomultilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
 	!build? ( gcj? ( gtk? ( >=x11-libs/gtk+-2.2 ) ) )
 	!build? ( gcj? ( >=media-libs/libart_lgpl-2.1 ) )
 	!build? ( >=sys-libs/ncurses-5.2-r2
@@ -89,12 +89,13 @@ do_filter_flags() {
 			replace-flags -mcpu="${setting}" -mtune="${setting}" && \
 			ewarn "-mcpu is deprecated on your arch\a\a\a" && \
 			epause 5
-		strip-unsupported-flags
 	fi
+
+	strip-unsupported-flags
 
 	# If we use multilib on mips, we shouldn't pass -mabi flag - it breaks
 	# build of non-default-abi libraries.
-	use mips && use multilib && filter-flags "-mabi*"
+	use mips && use !nomultilib && filter-flags "-mabi*"
 
 	# Compile problems with these (bug #6641 among others)...
 	#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
@@ -134,8 +135,8 @@ check_option_validity() {
 	esac
 
 	#cannot have both n32 & n64 without multilib
-	if use n32 && use n64 && ! use multilib; then
-		eerror "Please enable multilib if you want to use both n32 & n64";
+	if use n32 && use n64 && use nomultilib; then
+		eerror "Please disable nomultilib if you want to use both n32 & n64";
 		die "Invalid USE flag combination";
 	fi
 }
@@ -169,12 +170,12 @@ src_unpack() {
 	# misc patches that havent made it into a patch tarball yet
 	epatch ${FILESDIR}/3.4.0/gcc34-reiser4-fix.patch
 
-	if use mips && use !multilib; then
+	if use mips && use nomultilib; then
 		use n32 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
 		use n64 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n64only.patch
 	fi
 
-	if use multilib ; then
+	if use amd64 && use !nomultilib ; then
 		# this should hack around the GCC_NO_EXECUTABLES bug
 		epatch ${FILESDIR}/3.4.1/gcc-3.4.1-glibc-is-native.patch
 		cd ${S}/libstdc++-v3
@@ -226,7 +227,7 @@ src_compile() {
 	# Add --with-abi flags to enable respective MIPS ABIs
 	case "${CCHOST}" in
 	    mips*)
-		use multilib && myconf="${myconf} --with-abi=32"
+		use !nomultilib && myconf="${myconf} --with-abi=32"
 		use n64 && myconf="${myconf} --with-abi=n64"
 		use n32 && myconf="${myconf} --with-abi=n32"
 	    ;;
@@ -295,6 +296,8 @@ src_install() {
 
 	[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
 
+	create_gcc_multilib_scripts
+
 	# Because GCC 3.4 installs into the gcc directory and not the gcc-lib
 	# directory, we will have to rename it in order to keep compatibility
 	# with our current libtool check and gcc-config (which would be a pain
@@ -310,7 +313,7 @@ src_install() {
 
 	# The LDPATH stuff is kinda iffy now that we need to provide compatibility
 	# with older versions of GCC for binary apps.
-	if use multilib && [ "${ARCH}" = "amd64" ]
+	if use !nomultilib && [ "${ARCH}" = "amd64" ]
 	then
 		# amd64 is a bit unique because of multilib.  Add some other paths
 		LDPATH="${LIBPATH}:${LIBPATH}/32"
@@ -487,19 +490,21 @@ src_install() {
 		ln -s ./emul/linux/x86/lib ${D}/lib32
 	fi
 
-	# we want libgcc_s.so in /lib{,32,64}, NOT some funky directory where
-	# it'll never be found.
-	for libgcc_dir in `ls -d ${D}/${LIBPATH}/../lib*` ; do
-		mkdir -p ${D}/$(basename ${libgcc_dir})
-		mv ${libgcc_dir}/* ${D}/$(basename ${libgcc_dir})/
-		rm -rf ${libgcc_dir}
-		add_version_to_shared ${D}/$(basename ${libgcc_dir})/
-	done
-	# it might be here too.
-	if [ -e ${D}/${LIBPATH}/libgcc_s.so ] ; then
-		mkdir -p ${D}/$(get_libdir)/
-		mv ${D}/${LIBPATH}/libgcc_s* ${D}/$(get_libdir)/
-		add_version_to_shared ${D}/$(get_libdir)/
+	if [ "$CHOST" == "$CCHOST" -o "$CCHOST" == "" ] ; then
+		# we want libgcc_s.so in /lib{,32,64}, NOT some funky directory where
+		# it'll never be found.
+		for libgcc_dir in `ls -d ${D}/${LIBPATH}/../lib*` ; do
+			mkdir -p ${D}/$(basename ${libgcc_dir})
+			mv ${libgcc_dir}/* ${D}/$(basename ${libgcc_dir})/
+			rm -rf ${libgcc_dir}
+			add_version_to_shared ${D}/$(basename ${libgcc_dir})/
+		done
+		# it might be here too.
+		if [ -e ${D}/${LIBPATH}/libgcc_s.so ] ; then
+			mkdir -p ${D}/$(get_libdir)/
+			mv ${D}/${LIBPATH}/libgcc_s* ${D}/$(get_libdir)/
+			add_version_to_shared ${D}/$(get_libdir)/
+		fi
 	fi
 }
 
@@ -512,7 +517,7 @@ pkg_preinst() {
 
 	# Make again sure that the linker "should" be able to locate
 	# libstdc++.so ...
-	if use multilib && [ "${ARCH}" = "amd64" ]
+	if use !nomultilib && [ "${ARCH}" = "amd64" ]
 	then
 		# Can't always find libgcc_s.so.1, make it find it
 		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
@@ -524,7 +529,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 
-	if use multilib && [ "${ARCH}" = "amd64" ]
+	if use !nomultilib && [ "${ARCH}" = "amd64" ]
 	then
 		# Can't always find libgcc_s.so.1, make it find it
 		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
