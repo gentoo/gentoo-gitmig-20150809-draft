@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi-init-20041006,v 1.1 2004/10/30 13:13:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi-init-20041006,v 1.2 2004/10/31 22:30:12 dragonheart Exp $
 
 depend() {
 	after isapnp
@@ -14,12 +14,12 @@ start() {
 		return 1
 	fi
 	ebegin "Starting CAPI"
-	/sbin/capiinit start
+	/usr/sbin/capiinit start
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping CAPI"
-	/sbin/capiinit stop
+	/usr/sbin/capiinit stop
 	eend $?
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.15 2004/10/30 13:13:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.16 2004/10/31 22:30:12 dragonheart Exp $
+
+  01 Nov 2004; Daniel Black <dragonheart@gentoo.org> files/capi-init-20041006:
+  Init script fix as per bug #69558. Thanks to Stefan Briesenick
+  <sbriesen@gmx.de>
 
 *capi4k-utils-20041006 (30 Oct 2004)
 
