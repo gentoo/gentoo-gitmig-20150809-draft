@@ -1,8 +1,12 @@
 # ChangeLog for app-benchmarks/dbench
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.3 2002/07/25 12:11:11 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.4 2002/08/14 08:43:07 pvdabeel Exp $
 
 *dbench-2.0 (25 Jul 2002)
+
+  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+
+  Added ppc keyword
 
   25 Jul 2002; Achim Gottinger <achim@gentoo.org> :
 
