@@ -1,0 +1,13 @@
+# ChangeLog for x11-libs/ecore
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ChangeLog,v 1.1 2002/04/20 18:26:23 sandymac Exp $
+
+*ecore-0.0.2 (20 Apr 2002)
+
+  20 Apr 2002; Leigh Dyer <lsd@linuxgamers.net> ecore-0.0.2.ebuild :
+
+  Ecore is the core event abstraction layer and X abstraction layer that makes
+  doing selections, Xdnd, general X stuff, and event loops, timeouts and idle
+  handlers fast, optimized, and convenient. it's a separate library so anyone
+  can make use of the work put into Ecore to make this job easy for
+  applications. 
