@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.81.ebuild,v 1.13 2004/09/24 23:51:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.81.ebuild,v 1.14 2004/10/16 01:31:06 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="puzzle game similar to Oxyd"
 HOMEPAGE="http://www.nongnu.org/enigma/"
@@ -25,7 +25,8 @@ DEPEND="${RDEOEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc34.patch"
 	sed -i \
 		-e 's:$(pkgdatadir):$(DESTDIR)$(pkgdatadir):' \
 		data/levels/Makefile.am \
@@ -43,8 +44,8 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	mv ${D}/${GAMES_PREFIX}/share/* ${D}/usr/share/
-	rm -r ${D}/${GAMES_PREFIX}/share
+	mv "${D}/${GAMES_PREFIX}/share/"* "${D}/usr/share/"
+	rm -r "${D}/${GAMES_PREFIX}/share"
 	dodoc NEWS README AUTHORS INSTALL ChangeLog
 	prepgamesdirs
 }
