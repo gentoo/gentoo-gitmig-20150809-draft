@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.25 2002/12/13 11:00:39 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.26 2002/12/15 18:30:34 mcummings Exp $
+
+* perl-5.8.0-r4 (15 Dec 2002)
+
+  15 Dec 2002; Michael Cummings <mcummings@gentoo.org>
+  perl-5.8.0-r4.ebuild:
+
+  Made threading an internal use flag. This is to be used with caution.
+  Added eerror messages to warn users of potential probs.
 
   13 Dec 2002; Martin Schlemmer <azarah@gentoo.org> perl-5.6.1-r9.ebuild :
 
