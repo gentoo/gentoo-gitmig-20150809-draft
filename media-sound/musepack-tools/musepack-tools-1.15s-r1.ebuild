@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15s-r1.ebuild,v 1.2 2004/12/04 21:49:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15s-r1.ebuild,v 1.3 2004/12/19 06:11:04 eradicator Exp $
 
 IUSE="static esd 16bit"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.saunalahti.fi/grimmel/musepack.net/source/mpcsv7-src-${PV}.t
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 RDEPEND="esd? ( media-sound/esound )
 	 media-libs/id3lib"
