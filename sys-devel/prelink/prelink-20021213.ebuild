@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20021213.ebuild,v 1.1 2003/01/02 02:56:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20021213.ebuild,v 1.2 2003/01/03 19:05:42 drobbins Exp $
 
 IUSE=""
 
@@ -8,9 +8,7 @@ inherit eutils
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="Modifies executables so runtime libraries load faster"
-SRC_URI="ftp://people.redhat.com/jakub/prelink/${P}.tar.bz2
-	mirror://gentoo/${P}.tar.bz2
-	http://cvs.gentoo.org/~azarah/${P}.tar.bz2"
+SRC_URI="ftp://people.redhat.com/jakub/prelink/${P}.tar.bz2 mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="ftp://people.redhat.com/jakub/prelink"
 
 SLOT="0"
