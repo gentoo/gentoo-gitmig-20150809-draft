@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.4.16-r1.ebuild,v 1.5 2003/03/11 21:55:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.4.16-r2.ebuild,v 1.1 2003/09/17 22:27:51 seemant Exp $
+
+IUSE="tcpd"
 
 DESCRIPTION="syslog replacement with advanced filtering features"
 SRC_URI="http://www.balabit.hu/downloads/syslog-ng/1.4/${P}.tar.gz"
@@ -9,11 +11,12 @@ HOMEPAGE="http://www.balabit.hu/en/products/syslog-ng/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc"
-IUSE="tcpd"
 
 DEPEND="=dev-libs/libol-0.2.23
 	sys-devel/flex
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+
+PROVIDE="virtual/logger"
 
 src_compile() {
 	local myconf

@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.0_rc3.ebuild,v 1.8 2003/09/04 04:33:59 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.0_rc3-r1.ebuild,v 1.1 2003/09/17 22:27:51 seemant Exp $
 
+IUSE="tcpd"
 # The release candidates are named syslog-ng-1.6.0rc1 for example
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -12,11 +13,12 @@ HOMEPAGE="http://www.balabit.com/products/syslog_ng/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~sparc ~alpha hppa mips"
-IUSE="tcpd"
 
 DEPEND=">=dev-libs/libol-0.3.9
 	sys-devel/flex
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+
+PROVIDE="virtual/logger"
 
 src_unpack() {
 
