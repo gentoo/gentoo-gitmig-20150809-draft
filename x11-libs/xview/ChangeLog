@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/xview
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.2 2004/03/15 00:27:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.3 2004/03/27 04:53:01 zx Exp $
+
+  30 Mar 2004; Chris Aniszczyk <zx@gentoo.org> metadata.xml, xview-3.2.ebuild:
+  Added metadata.xml
+
+  30 Mar 2004; Chris Aniszczyk <zx@gentoo.org> xview-3.2.ebuild:
+  Marking stable on hppa.
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> xview-3.2.ebuild:
   don't assign to PN; tidy
