@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.31 2003/11/25 10:03:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.32 2003/11/29 23:46:27 brad_mssw Exp $
+
+  29 Nov 2003; Brad House <brad_mssw@gentoo.org> pygtk-2.0.0.ebuild:
+  mark stable on amd64
 
   25 Nov 2003; Jason Wever <weeve@gentoo.org> pygtk-2.0.0.ebuild:
   Marked stable on sparc, resolves bug #31858.
