@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/turck-mmcache
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.22 2004/07/04 23:19:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.23 2004/07/06 23:02:38 hansmi Exp $
+
+  06 Jul 2004; Michael Hanselmann <hansmi@gentoo.org>
+  turck-mmcache-2.4.6.ebuild:
+  Unstable on ppc.
 
   04 Jul 2004; Robin H. Johnson <robbat2@gentoo.org>
   turck-mmcache-2.4.6.ebuild:
