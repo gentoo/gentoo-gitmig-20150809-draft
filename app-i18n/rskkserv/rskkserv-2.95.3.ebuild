@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.3.ebuild,v 1.1 2004/11/13 12:02:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.3.ebuild,v 1.2 2004/12/11 16:04:35 kloeri Exp $
 
 inherit ruby eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.unixuser.org/~ysjj/rskkserv/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~ppc"
+KEYWORDS="x86 alpha ~ppc"
 IUSE=""
 
 DEPEND="dev-ruby/ruby-tcpwrap"
