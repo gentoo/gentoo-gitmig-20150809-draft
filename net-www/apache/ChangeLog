@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.278 2004/10/14 10:10:54 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.279 2004/10/15 16:26:34 kugelfang Exp $
+
+  15 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> apache-2.0.52.ebuild:
+  Marked stable on amd64.
 
   14 Oct 2004; Hardave Riar <hardave@gentoo.org> apache-2.0.52.ebuild:
   stable on mips, bug #66807
