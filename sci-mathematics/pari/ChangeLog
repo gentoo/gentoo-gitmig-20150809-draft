@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.6 2005/04/03 15:09:07 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.7 2005/04/03 16:40:54 hansmi Exp $
+
+  03 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pari-2.1.6.ebuild:
+  Stable on ppc.
 
   03 Apr 2005; Danny van Dyk <kugelfang@gentoo.org> pari-2.1.6.ebuild:
   Fixed toolchain usage and added src_test() function.
