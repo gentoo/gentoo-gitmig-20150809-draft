@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.1.ebuild,v 1.3 2004/08/27 11:51:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.1.ebuild,v 1.4 2004/08/27 11:55:54 mr_bones_ Exp $
 
 DESCRIPTION="Minimum Profit: A text editor for programmers"
 HOMEPAGE="http://www.triptico.com/software/mp.html"
@@ -19,13 +19,15 @@ RDEPEND="${DEPEND}
 		dev-lang/perl"
 
 src_compile() {
+	local myconf
+
 	if use ncurses && use gtk ; then
 		sh config.sh ${myconf}|| die "Configure Failed"
 	elif use ncurses || ! use gtk ; then
-		myopts="${myopts} --without-gtk"
+		myconf="${myconf} --without-gtk"
 		sh config.sh ${myconf} || die "Configure Failed"
 	elif use gtk && ! use ncurses ; then
-		myopts="${myopts} --without-curses"
+		myconf="${myconf} --without-curses"
 		sh config.sh ${myconf} || die "Configure Failed"
 	fi
 	echo ${CFLAGS} >> config.cflags
@@ -35,8 +37,6 @@ src_compile() {
 src_install() {
 	dobin mp || die "Install Failed"
 	dosym mp ${DESTTREE}/bin/gmp
-
 	dodoc AUTHORS README Changelog mprc.sample
-
 	doman mp.1
 }
