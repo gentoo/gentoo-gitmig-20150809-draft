@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/smurf/smurf-0.52.6.ebuild,v 1.2 2004/03/01 05:37:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/smurf/smurf-0.52.6.ebuild,v 1.3 2004/04/01 08:13:42 eradicator Exp $
 
 DESCRIPTION="The Smurf Sound Font Editor"
 HOMEPAGE="http://smurf.sourceforge.net/"
 SRC_URI="mirror://sourceforge/smurf/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="nls debug alsa oss png"
 
