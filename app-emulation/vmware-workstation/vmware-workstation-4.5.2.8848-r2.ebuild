@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r2.ebuild,v 1.1 2004/11/04 02:18:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r2.ebuild,v 1.2 2004/11/04 21:42:23 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -56,14 +56,13 @@ src_unpack() {
 src_install() {
 	dodir /opt/vmware/bin
 	cp -a bin/* ${D}/opt/vmware/bin/
-	# I am commenting this because I do not beleive that it is necessary.
-	#chmod u+s ${D}/opt/vmware/bin/vmware || die
-	#chmod u+s ${D}/opt/vmware/bin/vmware-ping || die
+	chmod u+s ${D}/opt/vmware/bin/vmware || die
+	chmod u+s ${D}/opt/vmware/bin/vmware-ping || die
 
 	dodir /opt/vmware/lib
 	cp -dr lib/* ${D}/opt/vmware/lib/
 
-	#chmod u+s ${D}/opt/vmware/lib/bin/vmware-vmx || die
+	chmod u+s ${D}/opt/vmware/lib/bin/vmware-vmx || die
 
 	# Since with Gentoo we compile everthing it doesn't make sense to keep
 	# the precompiled modules arround. Saves about 4 megs of disk space too.

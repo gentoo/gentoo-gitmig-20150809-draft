@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.60 2004/11/04 02:18:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.61 2004/11/04 21:42:23 wolf31o2 Exp $
+
+  04 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-workstation-4.5.2.8848-r2.ebuild:
+  Uncommenting suid problems and closing bug #70021.
 
 *vmware-workstation-4.5.2.8848-r2 (03 Nov 2004)
 
