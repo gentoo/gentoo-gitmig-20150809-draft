@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.332 2004/04/28 21:55:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.333 2004/04/28 22:29:30 spyderous Exp $
+
+  28 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
+  PATCH_VER 2.1.26.18. Add
+  9375_all_4.3.0-keyboard-disable-ioport-access-v3.patch from Mike Harris to fix
+  a sub-issue reported in #46553 where the kernel log shows errors about
+  atkbd.c.
 
   28 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
   PATCH_VER 2.1.26.17. Add

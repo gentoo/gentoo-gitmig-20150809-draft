@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.30 2004/04/28 21:55:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.31 2004/04/28 22:29:30 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -28,7 +28,7 @@ RESTRICT="nostrip"
 IUSE="3dfx truetype nls cjk doc ipv6 debug static sdk gatos pam pie sse mmx 3dnow"
 IUSE_INPUT_DEVICES="synaptics wacom"
 
-PATCH_VER="2.1.26.17"
+PATCH_VER="2.1.26.18"
 FILES_VER="0.1.5"
 RENDER_VER="0.8"
 # Needed for xrender.pc in addition to external libs
