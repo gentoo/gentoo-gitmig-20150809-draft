@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vi
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/ChangeLog,v 1.20 2004/01/04 17:15:45 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/ChangeLog,v 1.21 2004/02/22 15:59:33 agriffis Exp $
+
+  22 Feb 2004; Aron Griffis <agriffis@gentoo.org> vi-3.7-r4.ebuild,
+  vi-3.7-r5.ebuild:
+  Remove arm keywords
 
 *vi-3.7-r5 (04 Jan 2004)
 
