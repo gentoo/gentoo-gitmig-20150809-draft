@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-DB_Table
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_Table/ChangeLog,v 1.3 2004/07/09 03:30:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_Table/ChangeLog,v 1.4 2004/07/30 15:16:31 coredumb Exp $
+
+*PEAR-DB_Table-0.21.2 (30 Jul 2004)
+
+  30 Jul 2004; Tal Peer <coredumb@gentoo.org> +PEAR-DB_Table-0.21.2.ebuild:
+  Version bump
 
 *PEAR-DB_Table-0.18 (08 Jul 2004)
 

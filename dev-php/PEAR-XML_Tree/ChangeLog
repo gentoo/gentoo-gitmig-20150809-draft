@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-XML_Tree
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Tree/ChangeLog,v 1.10 2004/07/06 22:58:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Tree/ChangeLog,v 1.11 2004/07/30 15:11:18 coredumb Exp $
+
+*PEAR-XML_Tree-2.0.0_rc2 (30 Jul 2004)
+
+  30 Jul 2004; Tal Peer <coredumb@gentoo.org> +PEAR-XML_Tree-2.0.0_rc2.ebuild:
+  Version bump
 
   06 Jul 2004; Michael Hanselmann <hansmi@gentoo.org>
   PEAR-XML_Tree-2.0_beta2.ebuild:
