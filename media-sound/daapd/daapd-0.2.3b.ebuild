@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.3b.ebuild,v 1.2 2004/08/19 08:32:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.3b.ebuild,v 1.3 2004/08/19 08:49:14 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,15 +10,16 @@ SRC_URI="http://www.deleet.de/projekte/daap/daapd/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~x86 ~amd64"
-KEYWORDS="-*"
+# howl-0.9.6 does not allow this to compile, so amd64 support will still need
+# to wait...
+KEYWORDS="~x86"
 IUSE="mpeg4"
 DEPEND="sys-libs/zlib
-	>=net-misc/howl-0.9.5
+	=net-misc/howl-0.9.5
 	>=media-libs/libid3tag-0.15.0b
 	mpeg4? media-libs/faad2
 	>=net-libs/libhttpd-persistent-1.3p-r8
 	>=media-libs/daaplib-0.1.1a"
-
 
 src_unpack() {
 	unpack ${A}
