@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 554a4ff5967664b128dee77ab126f87c ChangeLog 2501
-MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 b89d0f5db4e59e317d809c626b503a00 shared-mime-info-0.12.ebuild 614
+MD5 846632866e5cbc42ae70621f5f551204 shared-mime-info-0.14.ebuild 720
+MD5 3e4df3640a526ccbbb86655c6a401958 ChangeLog 2605
+MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 20dfb1ea925378f9f18630e447391f99 shared-mime-info-0.13.ebuild 641
-MD5 50798576b2e4d6f35b732178d7900e12 shared-mime-info-0.14.ebuild 721
-MD5 e22d66c3b0f0daaae096665812da282c files/digest-shared-mime-info-0.14 73
 MD5 b3db51dac3901aafb456d906112ec0f8 files/digest-shared-mime-info-0.12 73
 MD5 264ab01c148db5f6396544e959c2cc79 files/digest-shared-mime-info-0.13 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAvlVAHTu7gpaalycRAsJuAJ9C99BfTOExZEQxQl5/zLVu7tXICgCeNf+L
-+Z6520U90PbFx95NKba+ADo=
-=E2D/
------END PGP SIGNATURE-----
+MD5 e22d66c3b0f0daaae096665812da282c files/digest-shared-mime-info-0.14 73
