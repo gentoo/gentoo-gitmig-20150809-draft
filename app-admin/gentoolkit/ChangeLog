@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.40 2002/10/30 22:25:58 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.41 2002/11/11 14:40:12 mholzer Exp $
+
+*gentoolkit-0.1.17-r3 (11 Nov 2002)
+
+  11 Nov 2002; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.17-r3.ebuild files/digest-gentoolkit-0.1.17-r3 files/scripts/emerge-webrsync: 
+  fixed emerge-webrsync 0 byte bug
+  
 
 *gentoolkit-0.1.17-r2 (30 Oct 2002)
 

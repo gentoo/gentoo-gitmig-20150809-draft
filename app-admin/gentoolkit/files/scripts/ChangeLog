@@ -1,0 +1,3 @@
+2002-11-11 Martin Holzer <mholzer@gentoo.org>
+	* fix emerge-webrsync 0 byte bug  
+

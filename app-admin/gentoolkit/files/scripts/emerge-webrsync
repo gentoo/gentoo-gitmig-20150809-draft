@@ -58,7 +58,7 @@ while (( $attempts <  40 )) ; do
 		url="${i}/snapshots/$file"
 		rm -f $file
 		
-		if (wget $wgetops $url) ; then
+		if (wget $wgetops $url) && [ -s $file ] ; then
 			sync_local
 			exit 0
 		fi
