@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-4.9.10.20020430.ebuild,v 1.9 2003/09/06 22:29:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-4.9.10.20020430.ebuild,v 1.10 2004/02/18 14:26:52 agriffis Exp $
 
 
 MY_P=${P/.2002/-2002}
