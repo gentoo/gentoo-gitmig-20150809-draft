@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/imlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.22 2004/08/26 13:20:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.23 2004/09/06 18:17:10 chriswhite Exp $
+
+*imlib-1.9.14-r2 (06 Sep 2004)
+
+  06 Sep 2004; Chris White <chriswhite@gentoo.org>
+  +files/imlib-1.9.14-bound.patch, +imlib-1.9.14-r2.ebuild:
+  Security rev bump per Bug #62487.  x86 stable marked for security bug.
 
   26 Aug 2004; Hanno Boeck <hanno@gentoo.org> imlib-1.9.14-r1.ebuild:
   Re-indtroduced the hard-gtk-dep, because the "hack" to disable it didn't 
