@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1.ebuild,v 1.14 2003/05/31 21:41:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1.ebuild,v 1.15 2003/06/02 20:12:03 robbat2 Exp $
 
 inherit flag-o-matic 
 
@@ -116,7 +116,7 @@ src_unpack() {
 
 src_compile() {
 
-	php_check_java_config
+	use java && php_check_java_config
 
 	local myconf
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1.ebuild,v 1.9 2003/05/31 22:26:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1.ebuild,v 1.10 2003/06/02 20:12:18 robbat2 Exp $
 
 IUSE="truetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam spell"
 
@@ -104,7 +104,7 @@ src_unpack() {
 
 src_compile() {
 
-	php_check_java_config
+	use java && php_check_java_config
 
 	local myconf
 
