@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.1 2004/07/16 07:53:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.2 2004/07/16 08:04:48 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -8,27 +8,9 @@
 # libxkbfile.so, libxkbui.so
 
 # TODO
-# 15 July 2004 <spyderous@gentoo.org>
-#   TARGET: patchset 1.2 (6.7.0-r2)
-#		(DONE) spy: move USE=pie functionality to USE=dlloader and remove
-#			USE=hardened, as it did nothing
-#		(DONE) spy: Add ppc64 ebuild stuff (#56248)
-#		(DONE) spy: Check personal TODO cache in mailbox
-#		(DONE) spy: Check Fedora patches
-#		(DONE) spy: Check bugs fixed in Gentoo's xfree-4.3.0,4.3.99 lately
-#		(DONE) spy: Pull out the external drop-in driver code entirely
-#		(DONE) spy: Install glext.h to /usr/lib/opengl/xorg-x11 like the other
-#			GL includes (#54984)
-#		(DONE) spy: #49155 -- updated keymap for french-belgian azerty
-#		(DONE) cyfred: Make motif-allow-fhs-and-default-off.patch apply (4
-#			failures)
-#		(DONE) spy: #48095 -- add S3 support for laptop suspend
-#		(DONE) spy: Move 9000_all_4.3.0-lnx-evdev-core.patch (clean),
-#			9001_all_4.3.0-lnx-evdev-keyboard.patch (clean) and
-#			9002_all_4.3.0-lnx-evdev-mouse.patch (2 failures) over from
-#			xfree-4.3.0-r7
-#		(DONE) spy: Add fix-render-cplastbit-def.patch
-#		(DONE) spy: Add install-xrender-pkgconfig-file.patch, remove local hack
+# 16 July 2004 <spyderous@gentoo.org>
+#   TARGET: patchset 1.3
+#		Nothing yet =)
 
 inherit eutils flag-o-matic gcc xfree
 
