@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.7 2003/10/26 05:35:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.8 2003/10/26 06:46:53 robbat2 Exp $
+
+*c-client-2002e (25 Oct 2003)
+
+  25 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> c-client-2002e.ebuild:
+  version bump
 
   25 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> c-client-2002d-r1.ebuild:
   bump -r1 to stable
