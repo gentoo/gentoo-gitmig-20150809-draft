@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.13 2004/08/08 06:29:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.14 2004/12/17 05:23:30 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -15,7 +15,7 @@
 # This variable is just simply used to track whether the user is 
 # using a cvs version of a horde ebulid.
 
-inherit webapp
+inherit webapp eutils
 [ "${PN}" != "${PN/-cvs}" ] && inherit cvs
 
 ECLASS=horde
@@ -39,8 +39,8 @@ if [ "${PN}" != "${PN/-cvs}" ] ; then
 	S=${WORKDIR}/${ECVS_MODULES}
 else
 	EHORDE_CVS="false"
-	SRC_URI="http://ftp.horde.org/pub/${HORDE_PN}/${HORDE_PN}-${PV}.tar.gz"
-	S=${WORKDIR}/${HORDE_PN}-${PV}
+	SRC_URI="http://ftp.horde.org/pub/${HORDE_PN}/${HORDE_PN}-${PV/_/-}.tar.gz"
+	S=${WORKDIR}/${HORDE_PN}-${PV/_/-}
 fi
 HOMEPAGE="http://www.horde.org/${HORDE_PN}"
 
@@ -53,15 +53,8 @@ INSTALL_DIR="/horde"
 horde_pkg_setup() {
 	webapp_pkg_setup
 
-	if [ ! -z "${HORDE_PHP_FEATURES}" ] ; then
-		local phpver="`best_version mod_php`"
-		local phpuse=" $(<${ROOT}/var/db/pkg/${phpver}/USE) "
-		local found=0
-		local myu=
-		for myu in ${HORDE_PHP_FEATURES} ; do
-			[ "${phpuse/ ${myu} }" != "${phpuse}" ] && found=1
-		done
-		if [ ${found} -eq 0 ] ; then
+	if [[ ! -z ${HORDE_PHP_FEATURES} ]] ; then
+		if ! built_with_use mod_php ${HORDE_PHP_FEATURES} ; then
 			eerror "You MUST re-emerge ${phpver} with at least one of"
 			eerror "the following options in your USE:"
 			eerror " ${HORDE_PHP_FEATURES}"
