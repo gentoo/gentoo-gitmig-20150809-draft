@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.4 2004/12/13 09:24:34 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.5 2004/12/16 19:28:26 brix Exp $
+
+*wpa_supplicant-0.2.5-r1 (16 Dec 2004)
+
+  16 Dec 2004; Henrik Brix Andersen <brix@gentoo.org>
+  -files/wpa_supplicant-0.2.4-config, -wpa_supplicant-0.2.4.ebuild,
+  +wpa_supplicant-0.2.5-r1.ebuild:
+  Moved wpa_cli and wpa_passphrase to /usr/bin.
 
 *wpa_supplicant-0.3.1 (13 Dec 2004)
 
