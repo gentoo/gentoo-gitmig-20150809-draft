@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kid3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.10 2004/11/28 19:05:07 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.11 2004/11/28 19:08:02 motaboy Exp $
+
+  28 Nov 2004; Simone Gotti <motaboy@gentoo.org>
+  +files/kid3-0.4-configure.patch, kid3-0.4.ebuild:
+  Added a patch to the configure script to honor the arts USE flag. Fixes bug
+  #70703.
 
   28 Nov 2004; Simone Gotti <motaboy@gentoo.org>
   +files/kid3-0.5-configure.patch, kid3-0.5.ebuild:
