@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.02.ebuild,v 1.6 2003/07/06 14:12:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.02.ebuild,v 1.7 2003/08/11 18:24:23 pappy Exp $
+
+inherit flag-o-matic
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
@@ -15,6 +17,10 @@ LICENSE="as-is"
 DEPEND="virtual/glibc"
 
 src_compile() {
+
+	# file command segfaults on hppa -  reported by gustavo@zacarias.com.ar
+	[ ${ARCH} = "hppa" ] && filter-flags "-mschedule=8000"
+
 	./configure --prefix=/usr \
 		--mandir=/usr/share/man \
 		--datadir=/usr/share/misc \
