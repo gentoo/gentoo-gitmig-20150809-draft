@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cpint
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpint/ChangeLog,v 1.3 2004/06/24 22:00:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpint/ChangeLog,v 1.4 2004/06/30 14:43:30 agriffis Exp $
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> cpint-1.1.6.ebuild:
+  sync IUSE (missing), trim trailing whitespace
 
 *cpint-1.1.6 (20 Apr 2004)
 
