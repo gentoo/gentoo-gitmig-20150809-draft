@@ -2,6 +2,11 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp
 
+  22 Nov 2003; <spider@gentoo.org> xcdroast-0.98_alpha15-r1.ebuild,
+  xcdroast-0.98_alpha15-r2.ebuild, xcdroast-0.98_alpha15.ebuild:
+  removed bad gtk?() dependency (as the app doesn't build without gtk (some
+  version) it shouldnt have a gtk?( ) flag in the DEPEND statement)
+
 *xcdroast-0.98_alpha15-r2 (15 Nov 2003)
 
   15 Nov 2003; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha15-r2.ebuild:

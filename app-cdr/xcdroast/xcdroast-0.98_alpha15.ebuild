@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15.ebuild,v 1.2 2003/10/31 11:33:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15.ebuild,v 1.3 2003/11/21 23:38:35 spider Exp $
 
 inherit eutils
 
@@ -14,10 +14,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="nls dvdr gtk2"
 
-DEPEND="gtk? (
-		gtk2? ( >=x11-libs/gtk+-2.0.3 )
-		!gtk2? ( =x11-libs/gtk+-1.2.10* )
-	)
+DEPEND="gtk2? ( >=x11-libs/gtk+-2.0.3 )
+	!gtk2? ( =x11-libs/gtk+-1.2.10* )
 	=dev-libs/glib-1.2*
 	>=media-libs/gdk-pixbuf-0.16.0
 	>=media-libs/giflib-3.0
