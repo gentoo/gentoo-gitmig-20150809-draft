@@ -1,4 +1,14 @@
-MD5 8eec038dbc3509b6b869c8fddcf38bd1 cgikit-1.2.0.ebuild 741
-MD5 7fff48d1498b7efebc27042fe1188e52 ChangeLog 378
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a3e556a9363cea9919c388dacbc57874 cgikit-1.2.0.ebuild 735
+MD5 de9842dbc9dcdb5c927bb087c2f28064 ChangeLog 466
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 ace0f217ae08774e56119094ed4b28b4 files/digest-cgikit-1.2.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBly8HVWNWqTUmv+0RAlxUAJ0ep2HFMAnXFK1TSeU9oztnFVe/7gCfWVji
+iQLzoUrWY14EGQ/2SNaD8BM=
+=Y0eE
+-----END PGP SIGNATURE-----
