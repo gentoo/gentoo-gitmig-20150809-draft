@@ -2,3 +2,4 @@ MD5 c439d5c93d7fc9a1480a90842465bb97 linux-2.4.20.tar.bz2 27421046
 MD5 7ab3d945def110a2ee78ce88175c7abe linux-2.4.20-wolk4.10s.patch.bz2 12773140
 MD5 befb7511aa4075255bb7755fb961c0e5 linux-2.4.20-wolk4.10s-to-4.11s.patch.bz2 88660
 MD5 5483fa54161c0dd4b2762332a24c3b8a wolk-sources-4.11-CAN-2004-0415.patch 83257
+MD5 534bb4c1e4a2cc5cd11b2bd3a3a74a3a wolk-sources-4.9-CAN-2004-0814.patch 82272

@@ -1,11 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.15.ebuild,v 1.3 2004/11/03 06:56:46 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.15-r1.ebuild,v 1.1 2004/11/08 22:44:30 plasmaroo Exp $
 
 # Ramereth's contributed WOLK ebuild - thanks! (you didn't think you'd
 # go blameless, did you?)
 
-UNIPATCH_LIST="${DISTDIR}/${WOLK_SRC} ${FILESDIR}/binfmt_elf.patch"
+UNIPATCH_LIST="
+	${DISTDIR}/${WOLK_SRC}
+	${DISTDIR}/${P}-CAN-2004-0814.patch
+	${FILESDIR}/binfmt_elf.patch
+	${FILESDIR}/${PN}.XDRWrapFix.patch"
 UNIPATCH_STRICTORDER="yes"
 
 OKV="2.4.20"
@@ -23,8 +27,10 @@ KEYWORDS="~x86 -mips"
 
 K_NOSETEXTRAVERSION="don't_set_it"
 RESTRICT="nomirror"
-DESCRIPTION=" Marc-Christian Peterson's WOLK kernel. A stable and development kernel, containing many useful patches from many projects."
-SRC_URI="mirror://kernel/linux/kernel/${OKB}/linux-${OKV}.tar.bz2 mirror://kernel/linux/kernel/people/mcp/${OKB}-WOLK/${WOLK_SRC}"
+DESCRIPTION="Marc-Christian Peterson's WOLK kernel. A stable and development kernel, containing many useful patches from many projects."
+SRC_URI="mirror://kernel/linux/kernel/${OKB}/linux-${OKV}.tar.bz2
+	mirror://kernel/linux/kernel/people/mcp/${OKB}-WOLK/${WOLK_SRC}
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0814.patch"
 
 K_EXTRAEINFO="If there are issues with this kernel, search http://bugs.gentoo.org/ for an
 existing bug. Only create a new bug if you have not found one that matches

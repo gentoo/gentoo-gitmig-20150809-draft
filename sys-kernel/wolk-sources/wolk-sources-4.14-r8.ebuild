@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.14-r7.ebuild,v 1.3 2004/11/03 06:56:46 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.14-r8.ebuild,v 1.1 2004/11/08 22:44:30 plasmaroo Exp $
 
 OKV="2.4.20"
 OKB="2.4"
@@ -17,7 +17,8 @@ RESTRICT="nomirror"
 DESCRIPTION="Full sources for Marc-Christian Peterson's WOLK kernel, based on 2.4.20 vanilla with many popular patches and fixes"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/mcp/${OKB}-WOLK/"
 SRC_URI="mirror://kernel/linux/kernel/people/mcp/${OKB}-WOLK/${WOLK_SRC}
-	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${PN}-4.11-CAN-2004-0415.patch"
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${PN}-4.11-CAN-2004-0415.patch
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${PN}-4.9-CAN-2004-0814.patch"
 
 KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa -mips"
 
@@ -28,6 +29,7 @@ this file in the directory containing the sources."
 
 UNIPATCH_LIST="
 	${DISTDIR}/${PN}-4.11-CAN-2004-0415.patch
+	${DISTDIR}/${PN}-4.9-CAN-2004-0814.patch
 	${FILESDIR}/${PN}.CAN-2004-0133.patch
 	${FILESDIR}/${PN}.CAN-2004-0181.patch
 	${FILESDIR}/${PN}.CAN-2004-0394.patch
@@ -36,7 +38,8 @@ UNIPATCH_LIST="
 	${FILESDIR}/${PN}.CAN-2004-0535.patch
 	${FILESDIR}/${PN}.CAN-2004-0685.patch
 	${FILESDIR}/${PN}.FPULockup-53804.patch
-	${FILESDIR}/${PN}.cmdlineLeak.patch"
+	${FILESDIR}/${PN}.cmdlineLeak.patch
+	${FILESDIR}/${PN}.XDRWrapFix.patch"
 
 #============================================================================
 # We'll override the src_unpack() function from the eclass. This is necessary

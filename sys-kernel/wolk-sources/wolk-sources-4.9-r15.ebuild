@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r14.ebuild,v 1.2 2004/11/03 06:56:46 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r15.ebuild,v 1.1 2004/11/08 22:44:30 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -34,7 +34,8 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 			http://wolk.sourceforge.net/Workstation-Edition/1007_bootsplash-v3.0.8-2.4.20-update.patch)
 		wolk-supermount? ( http://wolk.sourceforge.net/Workstation-Edition/1008_supermount-1.2.9-2.4.20-OLDIDE.patch)
 		ipv6? ( http://wolk.sourceforge.net/Workstation-Edition/1009_mipv6-0.9.5.1-v2.4.20-wolk4.0s.patch )
-	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0415.patch"
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0415.patch
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0814.patch"
 
 SLOT="${KV}"
 HOMEPAGE="http://wolk.sourceforge.net http://www.kernel.org"
@@ -91,8 +92,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
 	epatch ${FILESDIR}/${PN}-4.9s.CAN-2004-0685.patch || die "Failed to add the CAN-2004-0685 patch!"
+	epatch ${DISTDIR}/${P}-CAN-2004-0814.patch || die "Failed to add the CAN-2004-0814 patch!"
 	epatch ${FILESDIR}/${PN}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 	epatch ${FILESDIR}/${PN}.cmdlineLeak.patch || die "Failed to apply the /proc/cmdline patch!"
+	epatch ${FILESDIR}/${PN}.XDRWrapFix.patch || die "Failed to apply the kNFSd XDR patch!"
 
 	kernel_universal_unpack
 }
