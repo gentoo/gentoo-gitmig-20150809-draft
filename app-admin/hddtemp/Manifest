@@ -8,7 +8,7 @@ MD5 fb10a6dcf20731e49bdd8a408702e27a files/digest-hddtemp-0.3_beta10 70
 MD5 f9c75dfa602045fbaff0c841ee327006 files/digest-hddtemp-0.3_beta11 70
 MD5 0a2d5f9cdc1a222625e215b2b4025bb5 files/digest-hddtemp-0.3_beta8 70
 MD5 f816512c3feee3cc9a92a9a8d27e9cff files/hddtemp.db 11325
-MD5 56aa381ff4978b9bb908d3d0ed00e8c7 files/hddtemp-conf.d 346
+MD5 92bf0d7e78de1bafcedee9c9042df8b2 files/hddtemp-conf.d 342
 MD5 06b275391f52469a2773a41b9ccc48d6 files/digest-hddtemp-0.2 115
-MD5 2e99ad727f6850469f5fcba9ace62ec6 files/hddtemp-init 542
+MD5 52e2d71a98fe1eabc27e90f889796a6a files/hddtemp-init 538
 MD5 a4e0540c259f86b5ed2c4af2a7ead160 files/hddtemp-0.2-db_location.patch 593

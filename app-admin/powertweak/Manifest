@@ -7,4 +7,4 @@ MD5 1905168a8b57ae19ab4a2dfe41fddbb4 files/powertweak-0.99.4-gentoo.diff 2417
 MD5 186537e6997431efc00728e2c4a24229 files/digest-powertweak-0.99.4 70
 MD5 1309a0411e6185c8d9ae7590d318c618 files/digest-powertweak-0.99.5 70
 MD5 0dd7674a9a70087adb391022f562b05d files/digest-powertweak-0.99.5-r1 153
-MD5 fae052d658f194a4dbcc494f0275d013 files/powertweakd.rc6 797
+MD5 c17ea68bdb81ed345dc0906ae3559c69 files/powertweakd.rc6 786

@@ -4,5 +4,5 @@ MD5 d5a3a383baf7c39f51ddffb1c5b95ec9 ChangeLog 2467
 MD5 6866ae7fe991fa80eed96fc6c6fbb339 metadata.xml 353
 MD5 5952693da32f1292a5b6013e8e755799 files/digest-bastille-2.1.1-r1 146
 MD5 5952693da32f1292a5b6013e8e755799 files/digest-bastille-2.1.1-r2 146
-MD5 166679c193a408b8ebf3e4acd9976dcb files/bastille-2.1.1-firewall.init 1347
+MD5 d04d71a1248455115ddc73e14c8d8ddd files/bastille-2.1.1-firewall.init 1340
 MD5 674111485907adeed35fee21192e18f8 files/bastille-firewall-imap.patch 8660

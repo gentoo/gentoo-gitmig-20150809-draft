@@ -3,8 +3,8 @@ MD5 d49ea900787238e2b39aac3027ddc702 fam-2.6.10-r1.ebuild 1405
 MD5 1cc0c5369347f0df74ace8c2a526e59a ChangeLog 6188
 MD5 68a04e23ccfb7971cff8ce012aee659c metadata.xml 221
 MD5 9bb6526ceb08b17f8335958bb1a8353b fam-2.7.0.ebuild 1872
-MD5 f92603705dc72be607e36de2b546d58f files/fam 498
-MD5 570f59cab928a001295ae62cccca1c8a files/famd 511
+MD5 b76d5ff60c49e8355b1e52913780739f files/fam 493
+MD5 894ce263618ad960c3d0874259cd1b54 files/famd 506
 MD5 0dba17f68005aa92b3903797dcc7c625 files/digest-fam-2.6.10-r1 62
 MD5 6d8076ab39e8b5432cf36468abe505b9 files/fam-2.6.7-cleanup.patch 1868
 MD5 747869c90d342f2f0e375df87a0cd3a6 files/fam-2.6.10-nostatvfs.patch 1813

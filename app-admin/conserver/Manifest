@@ -15,5 +15,5 @@ MD5 54b542817eb15a2e19b0bc479d0fcd44 files/digest-conserver-8.1.4 67
 MD5 f5a67a54ac210a8747b3790d28589f1d files/digest-conserver-8.1.5 67
 MD5 9531bd9f4a07b6be098ee3f90b7134c5 files/digest-conserver-8.1.7 67
 MD5 b61fccef29d9e2e5b35082791aef3fd5 files/digest-conserver-8.1.8 67
-MD5 c6ec56c617c6ffdefbe1244c952e2e60 files/conserver.confd 294
-MD5 0dd02e851bfbdbd4116fd9050ae95f2f files/conserver.initd 1178
+MD5 a42dde46eb6704092cf513ff732d8b43 files/conserver.confd 288
+MD5 bc6ee1aa7fdefaa6d2f54494deb7f920 files/conserver.initd 1172

@@ -7,7 +7,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-zope-config-0.3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-zope-config-0.4 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-zope-config-0.1-r1 0
 MD5 869ea2b3b621991445e019356cd423f5 files/0.1/zope-config 6874
-MD5 46ff537d4371d0068e10ef23894d88ab files/0.3/zope-config 7720
-MD5 f97ad9f3f32808c7ac203737d088f9cf files/0.3/zope-config.conf 1046
-MD5 e25b3d17047731d3002fadc461e96d0d files/0.4/zope-config 12303
-MD5 cde228592b2abb72156e613ff40c95ea files/0.4/zope-config.conf 1087
+MD5 ee33083be6a5df4425481f4212e94493 files/0.3/zope-config 7714
+MD5 091fc2dce258d3da117b7c1017bd5b9a files/0.3/zope-config.conf 1040
+MD5 e634da1b14d3ff327398a413ab3796fc files/0.4/zope-config 12296
+MD5 db1d2aa45d51bc9279b3be400a31c56a files/0.4/zope-config.conf 1080
