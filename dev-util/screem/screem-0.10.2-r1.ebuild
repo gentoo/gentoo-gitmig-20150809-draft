@@ -1,7 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.10.2-r1.ebuild,v 1.3 2004/11/12 20:33:39 blubb Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.10.2-r1.ebuild,v 1.4 2005/01/08 22:41:46 foser Exp $
 
 inherit gnome2 eutils
 
@@ -30,12 +29,12 @@ RDEPEND=">=gnome-base/libgnome-2.2.0
 	>=gnome-base/libgnomeprint-2.2.0
 	>=gnome-base/libgnomeprintui-2.2.0
 	>=x11-libs/gtksourceview-0.3.0
-	>=dev-libs/libcroco-0.5
-	app-text/scrollkeeper
+	=dev-libs/libcroco-0.5*
 	ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )"
 
 DEPEND="${RDEPEND}
+	app-text/scrollkeeper
 	dev-util/pkgconfig"
 
 
