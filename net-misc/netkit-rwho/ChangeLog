@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/netkit-talk
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.1 2003/05/22 21:06:17 mholzer Exp $
+
+*netkit-rwho-0.17 (22 May 2003)
+
+  22 May 2003; Martin Holzer <mholzer@gentoo.org> netkit-rwho-0.17.ebuild,
+  files/netkit-rwho-0.17-gentoo.diff, files/netkit-rwho-0.17-rc:
+  Initial Version. Ebuild submitted by Remi Broemeling
+  <remibrom@icqmail.com> in #4498.
