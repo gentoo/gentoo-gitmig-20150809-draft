@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.1 2002/02/01 21:53:01 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.2 2002/04/12 21:05:14 spider Exp $
+
+
+*emacs-21.1-r4 (11 Apr 2002)
+  11 Apr 2002; Spider <spider@gentoo.org> 
+  Update libpng dependency
 
 *emacs-21.1-r3 (1 Feb 2002)
 
