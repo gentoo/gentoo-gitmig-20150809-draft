@@ -1,19 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a482ee9b019e7eaec753d6e7b02c921 ChangeLog 1869
-MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
-MD5 8b152ce677f8a23bfb040da749f587f9 mod_dav-1.0.3-r1.ebuild 1473
-MD5 ec3ba0c56fa9cb73e5933ad80539d1d0 mod_dav-1.0.3-r2.ebuild 1536
+MD5 d1bde3c6e4f62385a65a238fc4ead789 ChangeLog 2048
+MD5 41d6c0ba999d7b4af929e07368693a3f metadata.xml 261
+MD5 c6f20308436219669643d328d4e6361f mod_dav-1.0.3-r1.ebuild 1472
+MD5 8c7b594be207d060da7d795b136120ac mod_dav-1.0.3-r2.ebuild 1536
+MD5 e529e8df6869746672ea2a1383bf59e5 mod_dav-1.0.3-r3.ebuild 1077
 MD5 48fd840765d593fa280f25c60f073e0c files/digest-mod_dav-1.0.3-r1 71
+MD5 48fd840765d593fa280f25c60f073e0c files/digest-mod_dav-1.0.3-r2 71
 MD5 9e45a81bd2b37f2eb70cb5190a60c8ff files/mod_dav-shared-expat.patch 5637
 MD5 336d5f4431aa83af65ea97a2bb8a8572 files/mod_dav.conf 186
-MD5 48fd840765d593fa280f25c60f073e0c files/digest-mod_dav-1.0.3-r2 71
 MD5 7d3db28f46542782bd0dc91504945f8e files/mod_dav_fs_lock.patch 942
+MD5 d398f370115854ee7e66cb3a6df3dd1f files/10_mod_dav.conf 530
+MD5 48fd840765d593fa280f25c60f073e0c files/digest-mod_dav-1.0.3-r3 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBirvsI1lqEGTUzyQRAtzkAJ97+2cctPNG0KwUzjRA3D28B4Hq2QCdG//W
-vHOJ5NKqS+wcY/p9WAExDzU=
-=nR4O
+iD8DBQFB4E4mmPFBzbX68WERAqPxAKCBJpQePJLOQ1EWRjEgXzsQiWJXyQCfdcha
+s4NLRUC8vfBTBC/k7u6bA/4=
+=J9If
 -----END PGP SIGNATURE-----
