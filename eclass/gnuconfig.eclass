@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.11 2003/07/12 09:29:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.12 2003/07/22 00:49:32 msterret Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
-# This eclass is used to automatically update files that typically come with 
+# This eclass is used to automatically update files that typically come with
 # automake to the newest version available on the system. The most common use
 # of this is to update config.guess and config.sub when configure dies from
 # misguessing your canonical system name (CHOST). It can also be used to update
@@ -13,23 +13,23 @@
 # usage: gnuconfig_update [file1 file2 ...]
 # if called without arguments, config.guess and config.sub will be updated.
 # All files in the source tree ($S) with the given name(s) will be replaced
-# with the newest available versions chosen from the list of locations in 
+# with the newest available versions chosen from the list of locations in
 # gnuconfig_findnewest(), below.
 
 ECLASS=gnuconfig
 INHERITED="$INHERITED $ECLASS"
 
-DEPEND="$DEPEND sys-devel/libtool
-                sys-devel/gnuconfig"
+newdepend "sys-devel/libtool
+	sys-devel/gnuconfig"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
 # Wrapper function for gnuconfig_do_update. If no arguments are given, update
 # config.sub and config.guess (old default behavior), otherwise update the
-# named files. 
+# named files.
 gnuconfig_update() {
-    if [ $# -gt 0 ] ; then 
-	gnuconfig_do_update $* 
+    if [ $# -gt 0 ] ; then
+	gnuconfig_do_update $*
     else
 	gnuconfig_do_update config.sub config.guess
     fi
@@ -41,7 +41,7 @@ gnuconfig_do_update() {
     local configsubs_dir="$(gnuconfig_findnewest)"
     local target targetlist file
     einfo "Using GNU config files from ${configsubs_dir}"
-    for file in $* ; do 
+    for file in $* ; do
 	if [ ! -r ${configsubs_dir}/${file} ] ; then
 	    eerror "Can't read ${configsubs_dir}/${file}, skipping.."
 	    continue
