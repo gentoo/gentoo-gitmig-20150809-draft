@@ -1,0 +1,37 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Sample init script for Gentoo Linux
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spamass-milter/files/spamass-milter.rc,v 1.1 2003/07/16 22:03:20 raker Exp $
+
+# NB: Config is in /etc/conf.d/spamass-milter
+#DAEMON=/usr/sbin/spamass-milter
+#SOCKET=/var/run/spamass-milter.sock
+#PIDFILE=/var/run/spamass-milter.pid
+#DESC="Sendmail milter plugin for SpamAssassin"
+
+depend() {
+    need net spamd
+    use logger
+    before sendmail
+}
+
+start() {
+    ebegin "Starting $DESC"
+    start-stop-daemon --start --quiet --make-pidfile --pidfile ${PIDFILE}\
+    	--exec ${DAEMON} -- -p ${SOCKET} -f
+    eend $? "Failed to start ${DAEMON}"
+}
+
+stop() {
+    ebegin "Stopping $DESC"
+    {
+	killall ${DAEMON}
+	/bin/sleep 5s
+	/bin/rm -f ${SOCKET}
+	/bin/rm -f ${PIDFILE}
+    } \
+    && kill -1 `head -1 /var/run/sendmail.pid`
+    eend $? "Failed to stop ${DAEMON}"
+}
+
