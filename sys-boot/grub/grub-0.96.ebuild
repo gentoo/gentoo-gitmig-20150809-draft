@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96.ebuild,v 1.1 2005/03/05 20:28:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96.ebuild,v 1.2 2005/03/05 21:05:43 azarah Exp $
 
 inherit mount-boot eutils flag-o-matic gcc gnuconfig toolchain-funcs
 
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
 SRC_URI="mirror://gentoo/${P}.tar.gz
-	ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz
+	ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.gz
 	mirror://gentoo/${PN}-0.95.20040823-splash.patch.bz2"
 
 LICENSE="GPL-2"
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="static netboot"
 
-DEPEND=">=sys-libs/ncurses-5.2-r5
+RDEPEND=">=sys-libs/ncurses-5.2-r5"
+DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.5"
 PROVIDE="virtual/bootloader"
@@ -54,11 +55,11 @@ src_compile() {
 
 	filter-ldflags -pie
 	append-flags -DNDEBUG
-	[[ $(gcc-major-versio) -eq 3 ]] && append-flags -minline-all-stringops
+	[[ $(gcc-major-version) -eq 3 ]] && append-flags -minline-all-stringops
 	use static && append-ldflags -static
 
-	has_pie && CC="$(tc-getCC) `test_flag -fno-pic` `test_flag -nopie`"
-	has_ssp && CC="$(tc-getCC) `test_flag -fno-stack-protector`"
+	has_pie && CFLAGS="${CFLAGS} $(test_flag -fno-pic) $(test_flag -nopie)"
+	has_ssp && CFLAGS="${CFLAGS} $(test_flag -fno-stack-protector)"
 
 	autoconf || die "autoconf failed"
 	aclocal || die "aclocal failed"
