@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Font-AFM
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-AFM/ChangeLog,v 1.1 2004/08/25 11:08:14 rl03 Exp $
+
+*Font-AFM-1.19 (25 Aug 2004)
+
+  25 Aug 2004; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
+  +Font-AFM-1.19.ebuild:
+  Initial ebuild. Dependency for RT. OK'd by mcummings.
+
