@@ -1,15 +1,19 @@
 # ChangeLog for net-p2p/qt-dcgui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/ChangeLog,v 1.15 2003/02/04 12:51:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/ChangeLog,v 1.16 2003/02/11 06:15:14 vapier Exp $
+
+*qt-dcgui-0.2.5 (11 Feb 2003)
+
+  11 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #15459.
+
+*qt-dcgui-0.2.4 (02 Feb 2003)
 
   04 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> qt-dcgui-0.2.4.ebuild :
   Marked stable becuse of security.
 
-*qt-dcgui-0.2.4 (02 Feb 2003)
-
   02 Feb 2003; Joachim Blaabjerg <styx@gentoo.org> qt-dcgui-0.2.4.ebuild 
   files/digest-qt-dcgui-0.2.4 ChangeLog :
-  
   Actual bump ;), and hopefully fixed bug #14893 by inheriting kde-functions.
   Removed old ebuilds.
 
@@ -20,7 +24,6 @@
 
   27 Jan 2003; Joachim Blaabjerg <styx@gentoo.org> qt-dcgui-0.2.3.ebuild
   files/digest-qt-dcgui-0.2.3 ChangeLog :
-
   Version bump to 0.2.3, fixes bug #14628
 
 *qt-dcgui-0.2.1 (20 Jan 2003)
