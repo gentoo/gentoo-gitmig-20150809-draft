@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <blocke@shivan.org> (8 Sep 2002)
+# Long waiting submitted ebuild added but masked due to freeze
+dev-util/ctmkit
+
 # <karltk@gentoo.org> (8 Sep 2002)
 # Waiting for renamed distfiles to propagate.
 =dev-lisp/mzscheme-201
