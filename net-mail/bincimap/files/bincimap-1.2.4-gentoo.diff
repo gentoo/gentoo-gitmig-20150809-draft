@@ -1,0 +1,110 @@
+diff -Naru bincimap-1.2.3.org/Makefile.in bincimap-1.2.3/Makefile.in
+--- bincimap-1.2.3.org/Makefile.in	2003-10-09 07:56:04.000000000 +0900
++++ bincimap-1.2.3/Makefile.in	2003-10-09 07:56:28.000000000 +0900
+@@ -131,7 +131,7 @@
+ target_alias = @target_alias@
+ 
+ #--------------------------------------------------------------------------
+-SUBDIRS = conf contrib doc man service src tests
++SUBDIRS = conf contrib man service src tests
+ 
+ #--------------------------------------------------------------------------
+ EXTRA_DIST = bincimap.spec config.h COPYING.OpenSSL config.h.in
+diff -Naru bincimap-1.2.3.org/conf/bincimap.conf.in bincimap-1.2.3/conf/bincimap.conf.in
+--- bincimap-1.2.3.org/conf/bincimap.conf.in	2003-10-09 07:56:04.000000000 +0900
++++ bincimap-1.2.3/conf/bincimap.conf.in	2003-10-09 08:06:34.000000000 +0900
+@@ -56,7 +56,7 @@
+     type = "Maildir",                              /* only Maildir
+ 						    * support */
+ 
+-    path = "Maildir",                              /* default path */
++    path = ".maildir",                              /* default path */
+ 
+     auto create inbox = "yes",                     /* create INBOX in
+ 						    * given format if
+diff -Naru bincimap-1.2.3.org/service/Makefile.in bincimap-1.2.3/service/Makefile.in
+--- bincimap-1.2.3.org/service/Makefile.in	2003-10-09 07:56:04.000000000 +0900
++++ bincimap-1.2.3/service/Makefile.in	2003-10-09 07:56:28.000000000 +0900
+@@ -425,10 +425,10 @@
+ 	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/service/imap
+ 
+ 	@if [ ! -e $(DESTDIR)$(sysconfdir)/service/imap/run ]; then $(INSTALL_DATA) -m 0755 $(srcdir)/run $(DESTDIR)$(sysconfdir)/service/imap/run;  else $(INSTALL_DATA) -m 0755 $(srcdir)/run $(DESTDIR)$(sysconfdir)/service/imap/run.new; echo "- New service/imap/run file saved as $(DESTDIR)$(sysconfdir)/service/imap/run.new" >> $(srcdir)/../install.log; fi;
+-	$(INSTALL_DATA) -m 0644 $(srcdir)/down $(DESTDIR)$(sysconfdir)/service/imap/down
++#	$(INSTALL_DATA) -m 0644 $(srcdir)/down $(DESTDIR)$(sysconfdir)/service/imap/down
+ 	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/service/imaps
+ 	@if [ ! -e $(DESTDIR)$(sysconfdir)/service/imaps/run ]; then $(INSTALL_DATA) -m 0755 $(srcdir)/run-ssl $(DESTDIR)$(sysconfdir)/service/imaps/run;  else $(INSTALL_DATA) -m 0755 $(srcdir)/run-ssl $(DESTDIR)$(sysconfdir)/service/imaps/run.new; echo "- New service/imaps/run file saved as $(DESTDIR)$(sysconfdir)/service/imaps/run.new" >> $(srcdir)/../install.log; fi;
+-	$(INSTALL_DATA) -m 0644 $(srcdir)/down $(DESTDIR)$(sysconfdir)/service/imaps/down
++#	$(INSTALL_DATA) -m 0644 $(srcdir)/down $(DESTDIR)$(sysconfdir)/service/imaps/down
+ 
+ #--------------------------------------------------------------------------
+ uninstall-hook:
+diff -Naru bincimap-1.2.3.org/service/log/Makefile.in bincimap-1.2.3/service/log/Makefile.in
+--- bincimap-1.2.3.org/service/log/Makefile.in	2003-10-09 07:56:04.000000000 +0900
++++ bincimap-1.2.3/service/log/Makefile.in	2003-10-09 07:56:28.000000000 +0900
+@@ -281,12 +281,12 @@
+ install-exec-hook:
+ 	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/service/imap/log
+ 	@if [ ! -e $(DESTDIR)$(sysconfdir)/service/imap/log/run ]; then $(INSTALL_SCRIPT) -m 0755 $(srcdir)/run $(DESTDIR)$(sysconfdir)/service/imap/log/run;  else $(INSTALL_SCRIPT) -m 0755 $(srcdir)/run $(DESTDIR)$(sysconfdir)/service/imap/log/run.new; echo "- New service/imap/run file saved as $(DESTDIR)$(sysconfdir)/service/imap/log/run.new" >> $(srcdir)/../../install.log; fi
+-	$(INSTALL_SCRIPT) -m 0644 $(srcdir)/down $(DESTDIR)$(sysconfdir)/service/imap/log/down
++#	$(INSTALL_SCRIPT) -m 0644 $(srcdir)/down $(DESTDIR)$(sysconfdir)/service/imap/log/down
+ 	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/service/imaps/log
+ 	@if [ ! -e $(DESTDIR)$(sysconfdir)/service/imaps/log/run ]; then $(INSTALL_SCRIPT) -m 0755 $(srcdir)/run-ssl $(DESTDIR)$(sysconfdir)/service/imaps/log/run;  else $(INSTALL_SCRIPT) -m 0755 $(srcdir)/run-ssl $(DESTDIR)$(sysconfdir)/service/imaps/log/run.new; echo "- New service/imaps/run file saved as $(DESTDIR)$(sysconfdir)/service/imaps/log/run.new" >> $(srcdir)/../../install.log; fi;
+-	$(INSTALL_SCRIPT) -m 0644 $(srcdir)/down $(DESTDIR)$(sysconfdir)/service/imaps/log/down
+-	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/log/bincimap
+-	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/log/bincimap-ssl
++#	$(INSTALL_SCRIPT) -m 0644 $(srcdir)/down $(DESTDIR)$(sysconfdir)/service/imaps/log/down
++#	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/log/bincimap
++#	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/log/bincimap-ssl
+ 
+ #--------------------------------------------------------------------------
+ uninstall-hook:
+diff -Naru bincimap-1.2.3.org/service/log/run-ssl.in bincimap-1.2.3/service/log/run-ssl.in
+--- bincimap-1.2.3.org/service/log/run-ssl.in	2003-10-09 07:56:04.000000000 +0900
++++ bincimap-1.2.3/service/log/run-ssl.in	2003-10-09 07:56:28.000000000 +0900
+@@ -14,5 +14,5 @@
+ 
+ exec 2>&1
+ 
+-exec multilog t n5 s1048576 @localstatedir@/log/bincimap-ssl
++exec multilog t n5 s1048576 /var/log/bincimap-ssl
+ 
+diff -Naru bincimap-1.2.3.org/service/log/run.in bincimap-1.2.3/service/log/run.in
+--- bincimap-1.2.3.org/service/log/run.in	2003-10-09 07:56:04.000000000 +0900
++++ bincimap-1.2.3/service/log/run.in	2003-10-09 07:56:28.000000000 +0900
+@@ -14,5 +14,5 @@
+ 
+ exec 2>&1
+ 
+-exec multilog t n5 s1048576 @localstatedir@/log/bincimap
++exec multilog t n5 s1048576 /var/log/bincimap
+ 
+diff -Naru bincimap-1.2.3.org/service/run-ssl.in bincimap-1.2.3/service/run-ssl.in
+--- bincimap-1.2.3.org/service/run-ssl.in	2003-10-09 07:56:04.000000000 +0900
++++ bincimap-1.2.3/service/run-ssl.in	2003-10-09 07:56:28.000000000 +0900
+@@ -7,8 +7,8 @@
+ exec	tcpserver -c 100 -u 0 -g 0			\
+     -l $(hostname) -HDRP				\
+     0 993						\
+-    @prefix@/bin/bincimap-up				\
++    /usr/bin/bincimap-up				\
+     --logtype=multilog					\
+     --conf=@sysconfdir@/bincimap.conf --ssl --     	\
+     /bin/checkpassword					\
+-    @prefix@/bin/bincimapd
++    /usr/bin/bincimapd
+diff -Naru bincimap-1.2.3.org/service/run.in bincimap-1.2.3/service/run.in
+--- bincimap-1.2.3.org/service/run.in	2003-10-09 07:56:04.000000000 +0900
++++ bincimap-1.2.3/service/run.in	2003-10-09 07:56:28.000000000 +0900
+@@ -7,10 +7,10 @@
+ exec	tcpserver -c 100 -u 0 -g 0		\
+     -l $(hostname) -HDRP			\
+     0 143					\
+-    @prefix@/bin/bincimap-up			\
++    /usr/bin/bincimap-up			\
+     --logtype=multilog				\
+     --conf=@sysconfdir@/bincimap.conf --	\
+     /bin/checkpassword				\
+-    @prefix@/bin/bincimapd
++    /usr/bin/bincimapd
+ 
+ 
