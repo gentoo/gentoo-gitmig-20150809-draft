@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/jal-20031117.ebuild,v 1.7 2004/12/04 12:49:34 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/jal-20031117.ebuild,v 1.8 2005/02/04 23:30:49 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="http://vigna.dsi.unimi.it/jal/${P}-src.tar.gz"
 HOMEPAGE="http://vigna.dsi.unimi.it/jal/"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
 	jikes?( >=dev-java/jikes-1.21 )"

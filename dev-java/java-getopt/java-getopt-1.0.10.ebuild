@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/java-getopt-1.0.10.ebuild,v 1.1 2004/10/20 08:40:43 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/java-getopt-1.0.10.ebuild,v 1.2 2005/02/04 23:33:05 luckyduck Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ LICENSE="LGPL-2.1"
 SLOT="1"
 DEPEND=">=virtual/jdk-1.2
 	>=dev-java/ant-1.4.1"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 IUSE=""
 
 S=${WORKDIR}
