@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.8 2004/03/27 20:12:16 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.9 2004/06/04 19:39:59 taviso Exp $
+
+*tripwire-2.3.1.2-r1 (04 Jun 2004)
+
+  04 Jun 2004; Tavis Ormandy <taviso@gentoo.org> tripwire-2.3.1.2-r1.ebuild,
+  files/tripwire-format-string-email-report.diff:
+  format string error in the email report code,
+  http://www.securityfocus.com/archive/1/365036/2004-05-31/2004-06-06/0 fixing
+  #52945
 
   27 Mar 2004; Tavis Ormandy <taviso@gentoo.org> tripwire-2.3.1.2.ebuild:
   use strip-flags
