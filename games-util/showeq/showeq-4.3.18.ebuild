@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-4.3.18.ebuild,v 1.1 2003/11/25 07:16:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-4.3.18.ebuild,v 1.2 2003/11/25 08:08:34 mr_bones_ Exp $
 
 inherit games
 
@@ -51,4 +51,5 @@ src_install() {
 	dodoc BUGS CHANGES FAQ INSTALL README* ROADMAP TODO doc/*.{doc,txt} || \
 				      die "dodoc failed"
 	dohtml doc/*   || die "dohtml failed"
+	prepgamesdirs
 }
