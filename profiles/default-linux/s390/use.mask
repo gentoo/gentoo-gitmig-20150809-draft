@@ -24,6 +24,7 @@ voodoo3
 wavelan
 java
 nptl
+hardened
 
 # don't quite know about this one, I'll need to revisit
 socks5
