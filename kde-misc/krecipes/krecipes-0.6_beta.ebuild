@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-0.6_beta.ebuild,v 1.1 2004/10/31 01:52:09 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-0.6_beta.ebuild,v 1.2 2005/01/10 18:37:22 greg_g Exp $
 
 inherit kde
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~sparc"
 
 S="${WORKDIR}/${PN}-0.6"
 IUSE="sqlite mysql"
-DEPEND="sqlite? ( =dev-db/sqlite-2* )
+DEPEND="sqlite? ( dev-db/sqlite )
 	mysql? ( dev-db/mysql )"
 
 need-kde 3
