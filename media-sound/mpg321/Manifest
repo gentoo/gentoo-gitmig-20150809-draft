@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d97f0c6a9988bf8741e1cec973d29122 mpg321-0.2.10-r2.ebuild 1497
+MD5 080bc623da4d4713ea347a7164c76f5f ChangeLog 3618
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 ebe10eb8f3a946cafacf08d70b1515a6 ChangeLog 3507
 MD5 c5bd906366b8075e1e082915c601a051 mpg321-0.2.10-r1.ebuild 1411
-MD5 9c3ad09d4cec15ee6053fb4eb0894ec3 mpg321-0.2.10-r2.ebuild 1498
-MD5 7f4e867ab9a86c4f3618228fdccc48f4 files/digest-mpg321-0.2.10-r1 65
-MD5 7f4e867ab9a86c4f3618228fdccc48f4 files/digest-mpg321-0.2.10-r2 65
 MD5 f69e111b891dc01d56fb394621897e0d files/mpg321-0.1.5-ao.diff 7909
+MD5 7f4e867ab9a86c4f3618228fdccc48f4 files/digest-mpg321-0.2.10-r1 65
 MD5 330f91ff24a94b674063b6fc2d0e04af files/mpg321-0.2.10.diff 1862
+MD5 7f4e867ab9a86c4f3618228fdccc48f4 files/digest-mpg321-0.2.10-r2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQtldugEuf3OQ0akRApJtAJwN0XxBGAAeEyUgTgunIZDVFrjjNACcCTeQ
+XzQux9LWu9FR+r0+QTX9kuc=
+=e7aI
+-----END PGP SIGNATURE-----

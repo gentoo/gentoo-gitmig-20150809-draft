@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.26 2005/03/23 19:54:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.27 2005/03/24 15:13:54 kloeri Exp $
+
+  24 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  mpg321-0.2.10-r2.ebuild:
+  Stable on alpha, bug 86033.
 
   23 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> mpg321-0.2.10-r2.ebuild:
   Stable on ppc.
