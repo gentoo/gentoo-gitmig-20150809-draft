@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.10 2004/03/29 13:29:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.11 2004/06/07 13:24:36 aliz Exp $
 
 inherit eutils flag-o-matic
 
@@ -28,6 +28,8 @@ src_unpack() {
 	[ "${PROFILE_ARCH}" = "sparc64" ] && epatch ${FILESDIR}/sparc64_limit_fix.patch.bz2
 
 	chmod +x extensions/.IMQ-test*
+	chmod +x extensions/.childlevel-test*
+	chmod +x extensions/.layer7-test*
 
 	sed -i -e "s:-O2:${CFLAGS} -Iinclude:g" -e "s:/usr/local::g" -e "s:-Iinclude/::" Makefile
 }
