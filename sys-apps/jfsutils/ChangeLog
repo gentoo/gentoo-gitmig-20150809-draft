@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/jfsutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/jfsutils/ChangeLog,v 1.5 2002/09/21 22:23:13 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/jfsutils/ChangeLog,v 1.6 2002/10/19 01:35:36 bcowan Exp $
+
+*jfsutils-1.0.24 (18 Oct 2002)
+
+  18 Oct 2002; Brad Cowan <bcowan@gentoo.org> jfsutils-1.0.24.ebuild,
+  files/digest-jfsutils-1.0.24 :
+  
+  Version bump.
 
 *jfsutils-1.0.22 (21 Sep 2002)
 
