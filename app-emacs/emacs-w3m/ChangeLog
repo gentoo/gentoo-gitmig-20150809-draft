@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/emacs-w3m
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.28 2005/01/01 13:44:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.29 2005/02/11 14:39:44 usata Exp $
+
+*emacs-w3m-1.4.3-r1 (11 Feb 2005)
+
+  11 Feb 2005; Mamoru KOMACHI <usata@gentoo.org>
+  +files/emacs-w3m-1.4.3-e22.diff, +emacs-w3m-1.4.3-r1.ebuild:
+  Added a patch for emacs-cvs. This closes bug #81406.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
