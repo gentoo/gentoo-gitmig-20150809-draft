@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.75 2004/03/17 04:32:41 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.76 2004/04/19 01:58:16 pylon Exp $
+
+*cdrtools-2.01_alpha27-r1 (19 Apr 2004)
+
+  19 Apr 2004; Lars Weiler <pylon@gentoo.org>
+  +cdrtools-2.01_alpha27-r1.ebuild:
+  I removed all dvdr-patches as they break some cdr-writing (see bug #45589).
+  Who wants to do dvd-writing should use cdrecord-prodvd or dvd+rw-tools (or a
+  GUI like k3b).
 
   17 Mar 2004; Lars Weiler <pylon@gentoo.org> cdrtools-2.01_alpha27.ebuild:
   The dvdr-patches are now available.  This ebuild could be used now.
