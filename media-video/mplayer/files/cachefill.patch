@@ -8,8 +8,8 @@ diff -Naur MPlayer-1.0pre4.orig/cfg-common.h MPlayer-1.0pre4/cfg-common.h
 -	{"cache", &stream_cache_size, CONF_TYPE_INT, CONF_RANGE, 4, 65536, NULL},
 +	{"cache", &stream_cache_size, CONF_TYPE_INT, CONF_RANGE, 32, 262144, NULL},
  	{"nocache", &stream_cache_size, CONF_TYPE_FLAG, 0, 1, 0, NULL},
-+	{"cache_min", &stream_cache_min_percent, CONF_TYPE_FLOAT, CONF_RANGE, 0, 99, NULL},
-+	{"cache_prefill", &stream_cache_prefill_percent, CONF_TYPE_FLOAT, CONF_RANGE, 0, 99, NULL},
++	{"cache-min", &stream_cache_min_percent, CONF_TYPE_FLOAT, CONF_RANGE, 0, 99, NULL},
++	{"cache-prefill", &stream_cache_prefill_percent, CONF_TYPE_FLOAT, CONF_RANGE, 0, 99, NULL},
  #else
  	{"cache", "MPlayer was compiled WITHOUT cache2 support\n", CONF_TYPE_PRINT, CONF_NOCFG, 0, 0, NULL},
  #endif
@@ -20,8 +20,8 @@ diff -Naur MPlayer-1.0pre4.orig/etc/example.conf MPlayer-1.0pre4/etc/example.con
  			# etc)
  
  cache		= 8192	# use 8Mb input cache by default
-+cache_min	= 20.0  # Prefill 20% of the cache before initially playing
-+cache_prefill	= 5.0   # Prefill 5% of the cache before restarting playback if it empties
++cache-min	= 20.0  # Prefill 20% of the cache before initially playing
++cache-prefill	= 5.0   # Prefill 5% of the cache before restarting playback if it empties
  
  # slang		= en	# DVD : display english subtitles if available
  # alang		= en	# DVD : play english audio tracks if available

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.174 2004/07/24 05:25:28 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.175 2004/07/24 07:58:36 eradicator Exp $
+
+  24 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  files/cachefill.patch:
+  Typo in the patch was in the conf file, not the source... fixing.
 
   24 Jul 2004; Chris White <chriswhite@gentoo.org> files/cachefill.patch,
   +files/mplayer-1.0_pre5-r1-conf_locale.patch, mplayer-1.0_pre4-r6.ebuild,
