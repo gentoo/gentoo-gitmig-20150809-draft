@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r7.ebuild,v 1.1 2003/09/11 21:10:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r7.ebuild,v 1.2 2003/09/14 12:05:25 plasmaroo Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -116,6 +116,7 @@ src_unpack() {
 	epatch ${FILESDIR}/security.patch3
 	epatch ${FILESDIR}/security.patch4
 	epatch ${FILESDIR}/gentoo-sources-2.4.20-gcc33.patch
+	epatch ${FILESDIR}/gentoo-sources-2.4.20-grsec-disabled.patch
 
 }
 
