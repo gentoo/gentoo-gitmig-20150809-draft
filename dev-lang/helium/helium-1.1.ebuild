@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.14 2005/02/19 18:55:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.15 2005/03/19 19:11:18 kosmikus Exp $
 
 inherit java-pkg
 
@@ -16,6 +16,7 @@ IUSE="readline"
 
 DEPEND="virtual/libc
 	virtual/ghc
+	!>=virtual/ghc-6.4
 	readline? ( sys-libs/readline )"
 RDEPEND="virtual/libc
 	virtual/jdk

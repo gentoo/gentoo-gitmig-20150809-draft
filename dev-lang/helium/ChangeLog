@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/helium
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.12 2005/02/19 18:55:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.13 2005/03/19 19:11:18 kosmikus Exp $
+
+  19 Mar 2005; Andres Loeh <kosmikus@gentoo.org> helium-1.1.ebuild,
+  helium-1.2-r1.ebuild:
+  Marked helium-1.2 stable on x86. Currently, helium cannot be compiled with
+  ghc-6.4 and is thus blocked by this version.
 
   19 Feb 2005; Jason Wever <weeve@gentoo.org> helium-1.1.ebuild,
   helium-1.2-r1.ebuild:

@@ -1,10 +1,20 @@
-MD5 ce49c814b675cb17f18d3576fe20b5f5 ChangeLog 1786
-MD5 5cb18406a043e775d2652f0e901bbb3d helium-1.1.ebuild 1846
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 18826571b355735065791f5ab25b9280 helium-1.2-r1.ebuild 2271
+MD5 ab968ded77adb49ae2fce48082f756e9 helium-1.1.ebuild 1869
+MD5 08de37889d7b070aca15c3b33c53dd08 ChangeLog 2006
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
-MD5 b075e02bbf69ee07a8cdc07148c9d597 helium-1.2-r1.ebuild 2249
-MD5 9383829eb1e80fc6be12c53d3162d58b files/digest-helium-1.1 119
-MD5 62f20b4dc3f4e34dd748b64d19dbb6c8 files/digest-helium-1.2-r1 120
-MD5 538379c81a9dfdc87a15ce0e6a504c8a files/helium-1.1-readline.patch 1710
 MD5 fb82aad0fbf3d3cb5071c5fef803a7ec files/helium-1.2-readline.patch 1661
 MD5 b52e9cf5c002e2c5ce007e523f7ec7b8 files/helium-wrapper 715
 MD5 24e12289b961bd308d3a79495d55952e files/helium-1.2-libraries.patch 1943
+MD5 538379c81a9dfdc87a15ce0e6a504c8a files/helium-1.1-readline.patch 1710
+MD5 9383829eb1e80fc6be12c53d3162d58b files/digest-helium-1.1 119
+MD5 62f20b4dc3f4e34dd748b64d19dbb6c8 files/digest-helium-1.2-r1 120
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCPHpoOKSBj1ObwosRAo+rAJ98ecT0nn9YqIe3U7UOnEaaMycf3wCfRLZR
+1T/CP+nXkNGtEUkYSV4ozmc=
+=4S3l
+-----END PGP SIGNATURE-----
