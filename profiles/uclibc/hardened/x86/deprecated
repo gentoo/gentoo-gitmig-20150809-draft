@@ -1,0 +1,3 @@
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/uclibc/x86/hardened make.profile
