@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.4 2002/10/28 02:40:08 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.5 2002/11/06 18:37:04 lostlogic Exp $
+
+*sed-4.0.1.ebuild (06 Nov 2002)
+
+  06 Nov 2002; Brandon Low <lostlogic@gentoo.org> sed-4.0.1.ebuild :
+
+  Minor bug fix release over 4.0.
 
 *sed-4.0.ebuild (27 Oct 2002)
 
