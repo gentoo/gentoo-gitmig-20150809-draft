@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.31.ebuild,v 1.1 2005/02/06 23:13:21 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.31.ebuild,v 1.2 2005/03/30 10:55:49 luckyduck Exp $
 
 inherit eutils
 
@@ -62,4 +62,6 @@ src_install() {
 	emake DESTDIR=${D} install || die "failed to install"
 	mv ${D}usr/share/docs ${D}usr/share/doc
 	mv ${D}usr/share/doc/${PN} ${D}usr/share/doc/${PF}
+
+	make_desktop_entry dvdstyler DVDStyler dvdstyler.png Application
 }

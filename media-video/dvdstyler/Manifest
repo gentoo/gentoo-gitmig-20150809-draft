@@ -1,12 +1,22 @@
-MD5 cf13e286df3b534a36d747ead5303f9d ChangeLog 1967
-MD5 064a5e97ebac33bbf82005fffee4e20f metadata.xml 346
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5b254b68dbe19cec90bc0256025bfea1 dvdstyler-1.1.ebuild 1748
+MD5 706e005d20c9ed8ad882589a44e86c74 dvdstyler-1.31.ebuild 1389
 MD5 512386b3a2454da3d54cff5839b69423 dvdstyler-1.3_beta.ebuild 1393
-MD5 1c33e801bade396f6130da6e7bb0ff80 dvdstyler-1.31.ebuild 1321
+MD5 24dad46e697c2b000e87889e6ce91e0f ChangeLog 2123
+MD5 064a5e97ebac33bbf82005fffee4e20f metadata.xml 346
 MD5 8c145449d787c3a629954f776193641b files/1.1-AutoMakefile.patch 4326
 MD5 9ce81eab104aea6c7e4e12cecbceaeee files/1.1-code.patch 3454
-MD5 b018800b008dca3d2cea1524d47ce7be files/digest-dvdstyler-1.1 66
-MD5 b29bee8b8faea8a0b45d34e6d35cea6e files/1.1-gcc34.patch 1478
 MD5 cf6a58ba273d670bca95ef3a956f11c8 files/1.3_beta-code.patch 2479
+MD5 b018800b008dca3d2cea1524d47ce7be files/digest-dvdstyler-1.1 66
 MD5 727730301ffb80c4919553979e944b02 files/digest-dvdstyler-1.3_beta 66
+MD5 b29bee8b8faea8a0b45d34e6d35cea6e files/1.1-gcc34.patch 1478
 MD5 adc5cb34c08a386902e03988e795ae18 files/digest-dvdstyler-1.31 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSoXL06ebR+OMO78RAkJIAJ0SsSw8e8ZfK2fCCcgB0Bq8DYVnBACePars
+q4RGspKPpBfkdKcH07q3kwg=
+=oTi0
+-----END PGP SIGNATURE-----

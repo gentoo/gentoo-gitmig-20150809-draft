@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdstyler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.9 2005/02/06 23:13:21 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.10 2005/03/30 10:55:49 luckyduck Exp $
+
+  30 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> dvdstyler-1.31.ebuild:
+  dvdstyler now generates desktop file using make_desktop_entry, fixes #82209
 
 *dvdstyler-1.31 (06 Feb 2005)
 
