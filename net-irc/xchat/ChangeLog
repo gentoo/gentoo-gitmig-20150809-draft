@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.85 2004/03/13 23:52:30 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.86 2004/03/29 12:31:32 zul Exp $
+
+*xchat-2.0.8 (29 Mar 2004)
+
+  29 Mar 2004; Chuck Short <zul@gentoo.org> xchat-2.0.8.ebuild:
+  Version bump, closes #45574.
 
   13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> xchat-2.0.7.ebuild:
   Added ~mips keyword.
