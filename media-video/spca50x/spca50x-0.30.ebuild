@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spca50x/spca50x-0.30.ebuild,v 1.2 2004/04/27 21:02:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca50x/spca50x-0.30.ebuild,v 1.3 2004/05/05 07:25:13 dragonheart Exp $
+
+inherit check-kernel eutils
 
 DESCRIPTION="Linux device driver for SPCA50X based USB cameras"
 HOMEPAGE="http://sourceforge.net/projects/spca50x/"
@@ -11,9 +13,7 @@ SLOT="0"
 KEYWORDS="-* ~x86"
 IUSE=""
 DEPEND="virtual/glibc
-		virtual/linux-sources"
-
-inherit check-kernel eutils
+	virtual/linux-sources"
 
 pkg_setup() {
 	get_KV_info
