@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20040503.ebuild,v 1.2 2004/06/08 21:33:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20040503.ebuild,v 1.3 2004/06/16 01:45:53 squinky86 Exp $
 
 DESCRIPTION="a collection of modules for the sword project"
 HOMEPAGE="http://www.crosswire.org/sword/"
@@ -27,7 +27,7 @@ offensive? (http://www.crosswire.org/ftpmirror/pub/sword/betamodules/raw/BoM.zip
 RESTRICT="nomirror"
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE="offensive"
 
 S=${WORKDIR}
