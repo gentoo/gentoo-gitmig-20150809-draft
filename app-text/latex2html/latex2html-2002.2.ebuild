@@ -1,21 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2002.2.ebuild,v 1.2 2002/12/09 04:17:44 manson Exp $
-
-IUSE="gif png"
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2002.2.ebuild,v 1.3 2002/12/18 15:51:16 vapier Exp $
 
 MY_P=${P/./-}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="LATEX2HTML is a convertor written in Perl that converts LATEX documents to HTML."
 SRC_URI="http://saftsack.fs.uni-bayreuth.de/~latex2ht/current/${MY_P}.tar.gz"
-HOMEPAGE="http://www.latex2html.org"
+HOMEPAGE="http://www.latex2html.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
+IUSE="gif png"
 
 DEPEND="sys-apps/supersed"
-
 RDEPEND="app-text/ghostscript
 	app-text/tetex
 	media-libs/netpbm
@@ -25,7 +23,6 @@ RDEPEND="app-text/ghostscript
 	png? ( media-libs/libpng )"
 
 src_compile() {
-
 	local myconf
 
 	use gif && myconf="${myconf} --enable-gif"
@@ -43,13 +40,12 @@ src_compile() {
 		--enable-paths \
 		--enable-wrapper"
 
-	econf ${myconf} || die
+	econf ${myconf}
 	make || die
 	make check || die
 }
 
-src_install () {
-
+src_install() {
 	dodir /usr/bin /usr/lib/latex2html /usr/share/latex2html 
 	dodir /usr/share/texmf/tex/latex/html
 	cp cfgcache.pm cfgcache.pm.bak
