@@ -1,18 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/cbqinit-0.7.2.ebuild,v 1.8 2004/01/23 17:46:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/cbqinit-0.7.2.ebuild,v 1.9 2004/04/21 16:20:46 vapier Exp $
 
 DESCRIPTION="Sets up class-based queue traffic control (QoS) with iproute2"
 HOMEPAGE="http://www.sourceforge.net/projects/cbqinit"
 SRC_URI="mirror://sourceforge/cbqinit/cbq.init-v${PV}"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~alpha hppa"
+IUSE=""
 
-RDEPEND="sys-apps/iproute"
+RDEPEND="sys-apps/iproute2"
 DEPEND=""
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_unpack() {
 	cp ${DISTDIR}/cbq.init-v${PV} ${S}
