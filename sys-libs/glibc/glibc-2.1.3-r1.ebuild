@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.3-r1.ebuild,v 1.3 2000/08/17 15:37:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.3-r1.ebuild,v 1.4 2000/09/15 20:09:27 drobbins Exp $
 
 P=glibc-2.1.3
 A="glibc-2.1.3.tar.gz glibc-crypt-2.1.tar.gz 
@@ -22,11 +22,11 @@ src_compile() {
         rm -rf buildhere
 	mkdir buildhere
 	cd buildhere
-	../configure --host=${CHOST} --without-cvs \
+	try ../configure --host=${CHOST} --without-cvs \
 		--enable-add-ons=linuxthreads,glibc-compat,crypt \
 		 --disable-profile --prefix=/usr
-	make 
-	make check
+	try make 
+	try make check
 }
 
 src_unpack() {
@@ -46,8 +46,8 @@ src_install() {
     rm -rf ${D}
     mkdir ${D}	
     dodir /etc/rc.d/init.d
-    make install_root=${D} install -C buildhere
-    make -C linuxthreads/man
+    try make install_root=${D} install -C buildhere
+    try make -C linuxthreads/man
     mkdir -p ${D}/usr/man/man3
     install -m 0644 linuxthreads/man/*.3thr ${D}/usr/man/man3
     chmod 755 ${D}/usr/libexec/pt_chown

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.72-r1.ebuild,v 1.3 2000/08/25 06:08:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.72-r1.ebuild,v 1.4 2000/09/15 20:09:28 drobbins Exp $
 
 P=pam-0.72
 A=Linux-PAM-0.72.tar.gz
@@ -26,14 +26,14 @@ src_unpack() {
   
 }
 src_compile() {
-  make
-  make
+  try make
+  try make
 }
 
 src_install() {                               
  cd ${S}
  touch conf/.ignore_age
- make install
+ try make install
  dosbin bin/pam_conv1
  dodoc CHANGELOG Copyright README 
  dodoc 

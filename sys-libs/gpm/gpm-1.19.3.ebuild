@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.3.ebuild,v 1.1 2000/08/25 15:10:25 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.3.ebuild,v 1.2 2000/09/15 20:09:27 drobbins Exp $
 
 P=gpm-1.19.3
 A=${P}.tar.gz
@@ -11,10 +11,10 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/mouse/${A}"
 
 src_compile() { 
     cd ${S}                          
-    ./configure --prefix=/usr
+    try ./configure --prefix=/usr
     cp Makefile Makefile.orig
     sed -e "s/doc//" Makefile.orig > Makefile
-    make 
+    try make 
 }
 
 src_install() {                               

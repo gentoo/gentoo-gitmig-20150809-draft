@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.92.ebuild,v 1.1 2000/08/19 15:54:56 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.92.ebuild,v 1.2 2000/09/15 20:09:27 drobbins Exp $
 
 P=glibc-2.1.92
 A="glibc-2.1.92.tar.bz2 glibc-linuxthreads-2.1.92.tar.gz"
@@ -19,11 +19,11 @@ src_compile() {
         rm -rf buildhere
 	mkdir buildhere
 	cd buildhere
-	../configure --host=${CHOST} --without-cvs \
+	try ../configure --host=${CHOST} --without-cvs \
 		--enable-add-ons=linuxthreads,crypt \
 		 --disable-profile --prefix=/usr
-	make 
-	make check
+	try make 
+	try make check
 }
 
 src_unpack() {
@@ -41,8 +41,8 @@ src_install() {
     rm -rf ${D}
     mkdir ${D}	
     dodir /etc/rc.d/init.d
-    make install_root=${D} install -C buildhere
-    make -C linuxthreads/man
+    try make install_root=${D} install -C buildhere
+    try make -C linuxthreads/man
     mkdir -p ${D}/usr/man/man3
     install -m 0644 linuxthreads/man/*.3thr ${D}/usr/man/man3
     chmod 755 ${D}/usr/libexec/pt_chown

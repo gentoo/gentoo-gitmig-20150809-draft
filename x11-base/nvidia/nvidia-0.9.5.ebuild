@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/nvidia/nvidia-0.9.5.ebuild,v 1.1 2000/09/10 15:54:39 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/nvidia/nvidia-0.9.5.ebuild,v 1.2 2000/09/15 20:09:29 drobbins Exp $
 
 A="NVIDIA_GLX-0.9-5.tar.gz NVIDIA_kernel-0.9-5.tar.gz"
 S=${WORKDIR}
@@ -15,7 +15,7 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}/NVIDIA_kernel-0.9-5
-  make NVdriver
+  try make NVdriver
 }
 
 src_install() {                               
@@ -26,7 +26,7 @@ src_install() {
   dodir /usr/X11R6/lib/modules/drivers
   dodir /usr/X11R6/lib/modules/extensions
   cd ${S}/NVIDIA_GLX-0.9-5
-  make ROOT=${D} install
+  try make ROOT=${D} install
   dodir /dev
   for i in 0 1 2 3 4; do
     mknod ${D}/dev/nvidia$i c 195 $i

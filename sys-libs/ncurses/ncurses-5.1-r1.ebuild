@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.1-r1.ebuild,v 1.2 2000/08/16 04:38:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.1-r1.ebuild,v 1.3 2000/09/15 20:09:28 drobbins Exp $
 
 P=ncurses-5.1
 A=${P}.tar.gz
@@ -11,13 +11,13 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/ncurses/${A}"
 HOMEPAGE="http://www.gnu.org/software/ncurses/ncurses.html"
 
 src_compile() {                           
-	./configure --prefix=/usr --enable-symlinks --disable-termcap \
+	try ./configure --prefix=/usr --enable-symlinks --disable-termcap \
 	--with-gpm --with-shared --without-debug --with-rcs-ids --host=${CHOST}
-	make
+	try make
 }
 
 src_install() {                               
-	make prefix=${D}/usr install
+	try make prefix=${D}/usr install
 
 	if [ -z "$DBUG" ]
 	then
