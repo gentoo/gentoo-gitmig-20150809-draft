@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcptraceroute
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.14 2004/07/08 23:02:06 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.15 2004/07/31 19:12:45 malc Exp $
+
+  31 Jul 2004; <malc@gentoo.org> tcptraceroute-1.5_beta5.ebuild:
+  ~amd64 - closes bug #57705
 
   09 Jul 2004; Eldad Zack <eldad@gentoo.org> tcptraceroute-1.4-r3.ebuild,
   tcptraceroute-1.5_beta5.ebuild:
