@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.8 2002/10/23 21:03:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.9 2002/12/03 01:29:48 hannes Exp $
+
+*nmap-3.10_alpha4 (02 Dec 2002)
+
+  02 Dec 2002; Hannes Mehnert <hannes@gentoo.org> nmap-3.10_alpha4.ebuild :
+  Version bump with ~ in KEYWORDS
 
 *nmap-3.10_alpha3 (23 Oct 2002)
 
