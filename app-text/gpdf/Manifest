@@ -4,8 +4,10 @@ MD5 d83106a774aeef4aefe7bd45496c9a7f gpdf-0.132.ebuild 844
 MD5 d0708df9ac3ee05a391bac4188855787 gpdf-0.131.ebuild 896
 MD5 4ca04f63e2d3589993f828137074f66f ChangeLog 4324
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 2e16209befbf278c65ac1a435c8094b0 gpdf-2.8.0.ebuild 922
 MD5 5eb7a7d4c21d5b8d0b5c4aaa6cf48497 files/digest-gpdf-0.112.1 65
 MD5 a257b05533ebd7ecff92c22511880be3 files/digest-gpdf-0.112 63
 MD5 cee45d187382024b10b02c4c577a7546 files/digest-gpdf-0.131 64
 MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132 64
+MD5 f61386d00d5674f3bbb80b181e8cea3a files/digest-gpdf-2.8.0 64
 MD5 9336bbbfbb54ba88fb5e4aba2da1833f files/gpdf-0.112-remove_gtk24_call.patch 607
