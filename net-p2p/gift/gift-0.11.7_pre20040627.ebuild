@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.7_pre20040627.ebuild,v 1.2 2004/06/27 21:14:42 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.7_pre20040627.ebuild,v 1.3 2004/07/07 19:32:01 lv Exp $
 
 inherit eutils libtool
 
@@ -12,7 +12,7 @@ IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 # this is ONLY to fix bug #45549 which is amd64-specific
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 
 RDEPEND=">=sys-libs/zlib-1.1.4"
 
