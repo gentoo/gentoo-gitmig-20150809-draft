@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.4.ebuild,v 1.3 2001/12/08 09:43:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.4.ebuild,v 1.4 2001/12/13 21:01:01 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
-use kde && inherit kde-base || die
+use kde && inherit kde-base
 
 SRC_URI="http://download.sourceforge.net/licq/${P}.tar.bz2"
 
