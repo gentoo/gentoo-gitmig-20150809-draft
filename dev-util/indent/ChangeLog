@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/indent
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.20 2004/09/26 21:08:38 solar Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.21 2005/01/04 03:21:26 vapier Exp $
+
+*indent-2.2.9-r2 (03 Jan 2005)
+
+  03 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/2.2.9-deb-gentoo.patch, -indent-2.2.9-r1.ebuild,
+  +indent-2.2.9-r2.ebuild:
+  Incorporate debian patches and fix usage segfault #71690.
 
   26 Sep 2004; <solar@gentoo.org> indent-2.2.9-r1.ebuild:
   added gnuconfig to to pick up canonicalize host names in uclibc environments

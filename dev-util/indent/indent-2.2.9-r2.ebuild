@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/indent-2.2.9-r1.ebuild,v 1.4 2004/10/27 16:26:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/indent-2.2.9-r2.ebuild,v 1.1 2005/01/04 03:21:26 vapier Exp $
 
-inherit gnuconfig
+inherit eutils
 
 DESCRIPTION="Indent program source files"
 HOMEPAGE="http://www.gnu.org/software/indent/indent.html"
@@ -17,20 +17,18 @@ DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	gnuconfig_update
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-deb-gentoo.patch
 }
 
 src_compile() {
-	econf \
-		--disable-dependency-tracking \
-		$(use_enable nls) \
-		|| die
+	econf $(use_enable nls) || die
 	emake || die "emake failed"
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS NEWS README*
-	dohtml "${D}/usr/doc/indent/"*
-	rm -rf "${D}/usr/doc"
+	dohtml "${D}"/usr/doc/indent/*
+	rm -r "${D}"/usr/doc
 }
