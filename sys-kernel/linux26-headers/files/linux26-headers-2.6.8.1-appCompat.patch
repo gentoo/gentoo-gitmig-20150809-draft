@@ -1749,3 +1749,56 @@ diff -ur linux-2.6.8.1/include/asm-ppc/bitops.h linux-2.6.8.1-gentoo/include/asm
  #endif /* __KERNEL__ */
 +#endif /* _PPC_BITOPS_H */
 +
+diff -ur linux-2.6.8.1/include/asm-alpha/signal.h linux-2.6.8.1-gentoo/include/asm-alpha/signal.h
+--- linux-2.6.8.1/include/asm-alpha/signal.h	2004-08-14 11:55:32.000000000 +0100
++++ linux-2.6.8.1-gentoo/include/asm-alpha/signal.h	2004-12-26 19:58:15.881705760 +0000
+@@ -24,7 +24,9 @@
+ /* Here we must cater to libcs that poke about in kernel headers.  */
+ 
+ #define NSIG		32
++#ifndef __sigset_t_defined
+ typedef unsigned long sigset_t;
++#endif
+ 
+ #endif /* __KERNEL__ */
+ 
+@@ -158,6 +160,7 @@
+ #else
+ /* Here we must cater to libcs that poke about in kernel headers.  */
+ 
++#ifndef _SIGNAL_H
+ struct sigaction {
+ 	union {
+ 	  __sighandler_t	_sa_handler;
+@@ -166,26 +169,31 @@
+ 	sigset_t	sa_mask;
+ 	int		sa_flags;
+ };
++#endif
+ 
+ #define sa_handler	_u._sa_handler
+ #define sa_sigaction	_u._sa_sigaction
+ 
+ #endif /* __KERNEL__ */
+ 
++#ifndef _SIGNAL_H
+ typedef struct sigaltstack {
+ 	void __user *ss_sp;
+ 	int ss_flags;
+ 	size_t ss_size;
+ } stack_t;
++#endif
+ 
+ /* sigstack(2) is deprecated, and will be withdrawn in a future version
+    of the X/Open CAE Specification.  Use sigaltstack instead.  It is only
+    implemented here for OSF/1 compatibility.  */
+ 
++#ifndef _SIGNAL_H
+ struct sigstack {
+ 	void __user *ss_sp;
+ 	int ss_onstack;
+ };
++#endif
+ 
+ #ifdef __KERNEL__
+ #include <asm/sigcontext.h>
