@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.27.20030122-r1.ebuild,v 1.2 2003/01/31 05:24:27 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.27.20030122-r1.ebuild,v 1.3 2003/01/31 16:34:13 raker Exp $
 
 IUSE="static freetype xv sdl oss dvd mmx sse 3dnow zlib oggvorbis X qt"
 
@@ -11,7 +11,8 @@ MY_S="${PN}0.7-0.7.27"
 S="${WORKDIR}/${MY_S}"
 
 DESCRIPTION="Library for AVI-Files"
-SRC_URI="http://avifile.sourceforge.net/${MY_P}.tgz"
+SRC_URI="http://avifile.sourceforge.net/${MY_P}.tgz
+	mirror://gentoo/20030130.diff.bz2"
 HOMEPAGE="http://avifile.sourceforge.net/"
 
 DEPEND=">=media-libs/divx4linux-20020418
