@@ -62,7 +62,7 @@ media-libs/libfame
 
 # azarah@gentoo.org (17 Jul 2002)
 # needs testing.
-# =sys-apps/baselayout-1.8.0
+=sys-apps/baselayout-1.8.0
 
 # cybersystem@gentoo.org (17 Jul 2002)
 # Masking knapster2 - this package is broken on gcc 3.1
@@ -180,14 +180,6 @@ media-libs/libfame
 # typo fix by drobbins:
 =net-p2p/mutella-0.4
 
-# lostlogic@gentoo.org (09 Jul 2002)
-# Masked for testing md5 support
-=net-misc/openssh-3.4_p1-r3
-
-# seemant@gentoo.org (09 Jul 2002)
-# Masked for testing.
-=app-shells/tcsh-6.11
-
 # sunflare@gentoo.org (08 Jul 2002)
 # Masked for testing.
 =app-admin/mon-0.99.2-r1
@@ -243,7 +235,7 @@ dev-java/jaxp
 #azarah@gentoo.org (03 Jul 2002)
 #this one moves a lot of stuff around, and have a search dir
 #order fix that is very experimental
-# =sys-devel/gcc-3.1-r8
+=sys-devel/gcc-3.1-r8
 
 #lostlogic@gentoo.org (03 Jul 2002)
 #new apache ebuild changes a bit how we are handling the group
