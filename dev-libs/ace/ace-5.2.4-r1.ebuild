@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.2.4-r1.ebuild,v 1.1 2002/10/14 23:40:47 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.2.4-r1.ebuild,v 1.2 2002/10/15 00:37:56 prez Exp $
 
 S=${WORKDIR}/ACE_wrappers
 DESCRIPTION="The Adaptive Communications Environment"
@@ -18,10 +18,10 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}/ace
-	cp config-linux.h config.h
+	use ipv6 && sed -e "s/#define ACE_HAS_PTHREADS/#define ACE_HAS_PTHREADS\n#define ACE_HAS_IPV6/" config-linux.h >config.h
+	use ipv6 || cp config-linux.h config.h
 	cd ${S}/include/makeinclude
 	sed -e "s:-O3:${CFLAGS}:" platform_linux.GNU >platform_macros.GNU
-	use ipv6 && echo "CPPFLAGS += -DACE_HAS_IPV6" >>platform_macros.GNU
 }
 
 src_compile() {
