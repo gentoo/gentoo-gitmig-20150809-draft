@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r5.ebuild,v 1.6 2004/05/08 08:52:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r5.ebuild,v 1.7 2004/06/02 18:06:09 usata Exp $
 
 inherit flag-o-matic eutils
 
@@ -58,7 +58,7 @@ src_unpack() {
 src_compile() {
 	replace-flags "-O2 -mcpu=k6" "-O2 -mcpu=pentium"
 
-	if [ -n "`use truetype`" ] ; then
+	if use truetype ; then
 		CPPFLAGS="${CPPFLAGS} -I/usr/include/freetype2"
 		LDFLAGS="${LDFLAGS} -L/usr/X11R6/lib -lXft"
 		export CPPFLAGS LDFLAGS
