@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.7-r1.ebuild,v 1.18 2004/11/12 15:45:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.7-r1.ebuild,v 1.19 2005/02/21 05:04:30 vapier Exp $
 
-inherit libtool gnuconfig eutils
+inherit libtool eutils
 
 DESCRIPTION="Parse Options - Command line parser"
 HOMEPAGE="http://www.rpm.org/"
@@ -17,9 +17,7 @@ DEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}/${P}-uclibc.patch"
-	cd ${S}
-	gnuconfig_update
+	cd "${S}"
 	elibtoolize
 	use nls || touch ../rpm.c
 }

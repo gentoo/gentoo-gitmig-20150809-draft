@@ -1,4 +1,3 @@
 MD5 c22a215cd22ae448ef9af6f546ab1ccb ChangeLog 2381
-MD5 ede949af079c47f3355f4753719dc41b popt-1.7-r1.ebuild 824
+MD5 260995c79e7d35257906d439fae1c44b popt-1.7-r1.ebuild 758
 MD5 0933441e77d0a43c85e3d1471bbc2633 files/digest-popt-1.7-r1 60
-MD5 3cbfe76b0e9e426cb66e203ece971ded files/popt-1.7-uclibc.patch 2974
