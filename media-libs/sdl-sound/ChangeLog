@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/sdl-sound
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.2 2002/04/12 13:44:11 seemant Exp $
+
+*sdl-sound-0.1.4-r1 (12 Apr 2002)
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> sdl-sound-0.1.4-r1.ebuild :
+
+  Changed ogg USE toggle to oggvorbis
 
 *sdl-sound-0.1.4 (1 Feb 2002)
 
