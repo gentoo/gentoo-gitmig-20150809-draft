@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.5.ebuild,v 1.14 2005/02/01 14:44:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.5.ebuild,v 1.15 2005/04/06 18:03:27 corsair Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 IUSE="odbc X"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64 hppa alpha ~ppc64"
+KEYWORDS="x86 ppc sparc amd64 hppa alpha ppc64"
 
 DEPEND=">=dev-libs/glib-2
 	sys-libs/ncurses
