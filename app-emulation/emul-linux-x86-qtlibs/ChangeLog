@@ -1,0 +1,11 @@
+# ChangeLog for app-emulation/emul-linux-x86-qtlibs
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.1 2004/04/13 17:45:26 kugelfang Exp $
+
+*emul-linux-x86-qtlibs-1.0 (13 Apr 2004)
+
+  13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> emul-linux-x86-qtlibs-1.0.ebuild:
+  Initial import of 32bit qt libraries, compiled with CFLAGS="-mcpu=athlon-xp -msse -msse2".
+  QT Version 3.3.0, all libraries used are stable on x86.
+
+
