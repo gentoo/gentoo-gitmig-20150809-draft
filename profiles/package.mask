@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <jhhudso@gentoo.org> (24 Dec 2002)
+# Testing xemacs without sandbox disable, since --pdump has been added
+=app-editors/xemacs-21.4.10-r2
+
 # <carpaski@gentoo.org> (24 Dec 2002)
 # Fixups testing.
 >=sys-apps/portage-2.0.46-r3
