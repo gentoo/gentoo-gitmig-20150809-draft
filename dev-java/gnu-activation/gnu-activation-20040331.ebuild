@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-activation/gnu-activation-20040331.ebuild,v 1.1 2004/04/28 00:07:29 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-activation/gnu-activation-20040331.ebuild,v 1.2 2004/04/28 23:09:14 karltk Exp $
 
 inherit java-pkg
 
@@ -13,6 +13,7 @@ KEYWORDS="~x86"
 IUSE="doc"
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4"
+S=${WORKDIR}/activation-${PV}
 
 src_compile() {
 	econf || die
