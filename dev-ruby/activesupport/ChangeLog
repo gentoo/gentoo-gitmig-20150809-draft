@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.5 2005/03/28 17:27:42 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.6 2005/04/01 18:10:43 caleb Exp $
+
+  01 Apr 2005; Caleb Tennis <caleb@gentoo.org> activesupport-1.0.3.ebuild:
+  x86 stable
 
 *activesupport-1.0.3 (28 Mar 2005)
 

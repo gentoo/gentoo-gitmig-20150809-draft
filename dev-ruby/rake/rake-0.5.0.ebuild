@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.5.0.ebuild,v 1.2 2005/03/30 16:16:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.5.0.ebuild,v 1.3 2005/04/01 18:09:44 caleb Exp $
 
 inherit ruby gems
 
@@ -13,7 +13,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/3648/${P}.gem
 	http://rubyforge.org/frs/download.php/3649/${P}.tgz"
 
 LICENSE="MIT"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 IUSE=""
 
