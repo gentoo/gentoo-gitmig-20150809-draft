@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/setimgr
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setimgr/ChangeLog,v 1.3 2003/07/02 12:33:39 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setimgr/ChangeLog,v 1.4 2004/03/21 15:02:50 mholzer Exp $
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org> setimgr-0.04e.ebuild:
+  adding categorie. see 45110 for details
 
 *setimgr-0.04e (24 May 2003)
 

@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/ncbi-tools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.8 2004/02/07 03:43:23 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.9 2004/03/21 15:07:00 mholzer Exp $
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org>
+  ncbi-tools-04222003-r2.ebuild, ncbi-tools-20030422.ebuild,
+  ncbi-tools-20031103.ebuild, ncbi-tools-20040202-r1.ebuild,
+  ncbi-tools-20040202.ebuild:
+  adding categorie. see 45110 for details
 
 *ncbi-tools-20040202-r1 (06 Feb 2004)
 
