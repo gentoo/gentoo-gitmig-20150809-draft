@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.5.0.ebuild,v 1.1 2005/01/08 01:00:03 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.5.0.ebuild,v 1.2 2005/01/08 10:18:06 stuart Exp $
 
 inherit eutils
 
 DESCRIPTION="View Your Mind -- a mindmap tool"
-HOMEPAGE="http://http://www.insilmaril.de/vym/"
-SRC_URI="http://www.insilmaril.de/vym/download/${P}.tar.gz"
+HOMEPAGE="http://www.insilmaril.de/vym/"
+SRC_URI="${HOMEPAGE}/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"

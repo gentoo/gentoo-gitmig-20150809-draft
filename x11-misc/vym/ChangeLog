@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/vym
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.1 2005/01/08 01:00:03 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.2 2005/01/08 10:18:06 stuart Exp $
+
+  08 Jan 2005; Stuart Herbert <stuart@gentoo.org> vym-1.5.0.ebuild:
+  Fixed bad HOMEPAGE. Thanks to Rob Cakebread <pythonhead@gentoo.org>. See bug
+  #77105
 
 *vym-1.5.0 (08 Jan 2005)
 
