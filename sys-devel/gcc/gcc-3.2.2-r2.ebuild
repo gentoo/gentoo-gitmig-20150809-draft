@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r2.ebuild,v 1.2 2003/03/24 19:49:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r2.ebuild,v 1.3 2003/03/24 21:31:26 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -500,6 +500,11 @@ pkg_preinst() {
 	then
 		chk_gcc_version
 	fi
+
+	# Make again sure that the linker "should" be able to locate
+	# libstdc++.so ...
+	export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
+	${ROOT}/sbin/ldconfig
 }
 
 pkg_postinst() {

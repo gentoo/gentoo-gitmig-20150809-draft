@@ -1,11 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.81 2003/03/24 19:49:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.82 2003/03/24 21:31:26 azarah Exp $
 
   24 Mar 2003; Martin Schlemmer <azarah@gentoo.org> :
-  Fix latest ebuild to only build static if we are just building the C
-  frontend, else some C++ packages fails when trying to link to libstdc++.so,
-  bug #18050.
+  - Fix latest ebuild to only build static if we are just building the C
+    frontend, else some C++ packages fails when trying to link to libstdc++.so,
+    bug #18050.
+  - One more effort to try and fix the corner cases where an upgrade borks
+    python, and thus portage, resulting in /etc/ld.so.conf not being updated.
 
 *gcc-3.2.2-r2 (21 Mar 2003)
 
