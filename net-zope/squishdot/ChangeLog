@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/squishdot
+# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/squishdot/ChangeLog,v 1.1 2003/03/03 21:55:52 kutsuya Exp $
+
+*squishdot-1.5.0 (16 Feb 2003)
+
+  03 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> : Moving from net-www to 
+  net-zope.
+
+  16 Feb 2003; Jason Shoemaker <kutsuya@gentoo.org> : Initial import.
