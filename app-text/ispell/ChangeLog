@@ -1,6 +1,17 @@
 # ChangeLog for app-text/ispell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.15 2003/07/31 20:44:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.16 2003/09/12 14:16:25 seemant Exp $
+
+*ispell-3.2.06-r6 (09 Sep 2003)
+
+  09 Sep 2003; Seemant Kulleen <seemant@gentoo.org> ispell-3.2.06-r4.ebuild,
+  ispell-3.2.06-r6.ebuild:
+  builds british dictionary properly -- finally closes bug #8992 by Arkadiusz
+  Mucha <arkmch@priv4.onet.pl>. Also, miscfiles is a depend, closing bug #25646
+  by Leon Brocard <acme@astray.com>, with the fix by: Bryan Østergaard
+  <kloeri@mailme.dk>. Additionally, changing from bison to byacc, because bison
+  >1.35 won't work with this, and added sed to the compile-time dependency
+  listing
 
   31 Jul 2003; Aron Griffis <agriffis@gentoo.org> ispell-3.2.06-r5.ebuild:
   Mark stable on alpha
