@@ -1,4 +1,6 @@
 MD5 09cbf11cbba2c13404d3007f65dc65a0 dar-2.0.0.ebuild 719
-MD5 b44f511f5496d6391cddc32d2a5dd982 ChangeLog 601
 MD5 ae8f2b13b9e79b5760aa8c08f84bebe8 metadata.xml 468
+MD5 4feaad2c3f3986f07f58e843cfe78f5c ChangeLog 716
+MD5 6c426a70613a33c41826686833e6cd21 dar-2.0.4.ebuild 696
 MD5 2e415cc76bdf16998a7c3bb48cbf8818 files/digest-dar-2.0.0 61
+MD5 23584b39c4cee28d92c138cb2fbb4b7d files/digest-dar-2.0.4 61
