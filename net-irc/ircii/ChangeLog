@@ -1,0 +1,9 @@
+# ChangeLog for net-irc/ircii
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.1 2003/07/22 06:02:06 gregf Exp $
+
+*ircii-20030709 (22 Jul 2003)
+
+  22 Jul 2003; Greg Fitzgerald <gregf@gentoo.org> ircii-20030709.ebuild:
+  Initial Release
+
