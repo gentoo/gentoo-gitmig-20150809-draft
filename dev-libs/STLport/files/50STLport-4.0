@@ -1,0 +1,6 @@
+LDPATH=/usr/lib/STLport-4.0/lib
+LIBRARY_PATH=/usr/lib/STLport-4.0/lib
+C_INCLUDE_PATH=/usr/lib/STLport-4.0/include
+CPLUS_INCLUDE_PATH=/usr/lib/STLport-4.0/include
+OBJC_INCLUDE_PATH=/usr/lib/STLport-4.0/include
+
