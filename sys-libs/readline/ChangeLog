@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.14 2002/12/25 23:05:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.15 2003/02/08 01:30:26 gmsoft Exp $
+
+  07 Feb 2003; Guy Martin <gmsoft@gentoo.org> readline-4.3-r4.ebuild :
+  Added hppa to keywords.
 
   12 Dec 2002; Jan Seidel <tuxus@gentoo.org> readline-4.2a-r1.ebuild :
   
