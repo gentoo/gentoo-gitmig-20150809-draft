@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.8 2004/03/16 04:42:20 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.9 2004/03/17 22:09:11 mholzer Exp $
+
+*libebml-0.6.5 (18 Mar 2004)
+
+  18 Mar 2004; Martin Holzer <mholzer@gentoo.org> libebml-0.6.5.ebuild:
+  Version bumped.
 
   15 Mar 2004; Stephen P. Becker <geoman@gentoo.org> libebml-0.6.4.ebuild:
   Added ~mips keyword.
