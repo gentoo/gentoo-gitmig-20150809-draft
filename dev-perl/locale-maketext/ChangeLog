@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/locale-maketext
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext/ChangeLog,v 1.1 2002/06/17 14:01:35 seemant Exp $
+
+
+*locale-maketext-1.03 (17 Jun 2002)
+
+  17 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
+  locale-maketext-1.03.ebuild ChangeLog files/digest-locale-maketext-1.03 :
+
+  New package submitted by rac@intrigue.com (Robert Coie) in bug #3731
