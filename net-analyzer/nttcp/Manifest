@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0e44bd0cb3410fe3b3587151967f1242 ChangeLog 421
-MD5 21d226209f0a737f8204a6299de29ae7 nttcp-1.47.ebuild 630
+MD5 4387c07a68e86bec6318df5a1abf8c2d nttcp-1.47.ebuild 632
 MD5 6c2697ebc2bd546421ac2cf4b06cff96 files/digest-nttcp-1.47 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA08m4HTu7gpaalycRAv5bAJoCIe150btLrp+Xe1vSNq58KKb4zgCg+0kt
+3xx8PSGU2P7mvM2lhgYtdVA=
+=VGVn
+-----END PGP SIGNATURE-----

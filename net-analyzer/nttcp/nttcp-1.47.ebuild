@@ -1,24 +1,25 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/nttcp-1.47.ebuild,v 1.2 2004/04/08 03:30:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/nttcp-1.47.ebuild,v 1.3 2004/06/19 05:05:47 vapier Exp $
 
 inherit gcc
 
-DESCRIPTION="New version of ttcp -- Tool to test TCP and UDP throughput"
+DESCRIPTION="tool to test TCP and UDP throughput"
 HOMEPAGE="http://www.leo.org/~elmar/nttcp/"
 SRC_URI="http://www.leo.org/~elmar/nttcp/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ia64 ~amd64"
+KEYWORDS="~x86 ~alpha ~amd64 ~ia64"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
 src_compile() {
-	emake ARCH= CC="${CC}" OPT="${CFLAGS}" || die "build failed"
+	emake ARCH= CC="$(gcc-getCC)" OPT="${CFLAGS}" || die "build failed"
 }
 
 src_install() {
-	dobin nttcp
+	dobin nttcp || die
 	doman nttcp.1
 }
