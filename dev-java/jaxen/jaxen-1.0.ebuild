@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.0.ebuild,v 1.5 2005/02/03 17:16:14 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.0.ebuild,v 1.6 2005/02/03 22:58:52 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -17,6 +17,7 @@ DEPEND=">=virtual/jdk-1.3
 	dev-java/xalan
 	>=dev-java/xerces-2.6.2-r1
 	=dev-java/dom4j-1*
+	~dev-java/jdom-1.0_beta9
 	dev-java/saxpath"
 RDEPEND=">=virtual/jre-1.3"
 
@@ -37,10 +38,7 @@ src_unpack() {
 	java-pkg_jar-from xerces-2
 	java-pkg_jar-from dom4j-1
 	use junit && java-pkg_jar-from junit
-
-	if has_version jdom; then
-		java-pkg_jar-from `best_version dev-java/jdom | sed -e s/"dev-java\/"// | sed -e s/-r.//`
-	fi
+	java-pkg_jar-from jdom-1.0_beta9
 }
 
 src_compile() {
@@ -56,12 +54,3 @@ src_install() {
 	use doc && java-pkg_dohtml -r build/doc/*
 }
 
-pkg_postinst() {
-	einfo ""
-	einfo "If you want jdom support for jaxen then "
-	einfo "please emerge dev-java/jdom first and"
-	einfo "re-emerge dev-java/jaxen.  Sorry for the"
-	einfo "inconvenience, this is to break out of the"
-	einfo "circular dependencies."
-	einfo ""
-}
