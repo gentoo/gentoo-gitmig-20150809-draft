@@ -1,5 +1,4 @@
-MD5 de018bb2fd24e756e6c0099965a88dea dhcp-3.0_p2-r3.ebuild 3753
-MD5 df6d550ad7ed8e4fc21ebb23ac9dbd97 ChangeLog 4460
+MD5 1d863cdf84fbeaa6930e7865183c2d08 ChangeLog 4658
 MD5 9384ae7ba3e9f56b8027ea92f607042d metadata.xml 215
 MD5 865d06459b5bc0ee9f900db047a51750 dhcp-3.0_p2-r2.ebuild 3702
 MD5 c165af1e7e63275ca6f5974e2d3048a3 dhcp-3.0_p2.ebuild 2747
@@ -8,8 +7,6 @@ MD5 498a3eb0e9deaf705f17fff3834f5b90 files/dhclient.c-3.0-dw-cli-fix.patch 734
 MD5 ff4bf18624d479599da15878fdef65fe files/conf.dhcpd 401
 MD5 d6ae01f5dcc87b11d4d96a34e7cc52a3 files/digest-dhcp-3.0_p2 63
 MD5 a941fa952582373e42b07b61bd66a168 files/digest-dhcp-3.0_p2-r2 129
-MD5 a941fa952582373e42b07b61bd66a168 files/digest-dhcp-3.0_p2-r3 129
 MD5 a973319ed7e30b763485f653896ff038 files/dhcp.rc6 1097
 MD5 be72fa691b23c9e82cc4567a1a035cfc files/dhcp.rc7 811
 MD5 28ebabb4ad513afb04314634ecd9db25 files/dhcp-3.0pl2-user-option-fix.patch 1519
-MD5 d909d81a4d4ea39ddfc9898d33488c73 files/dhcp-3.0pl2-fix-perms.patch 485

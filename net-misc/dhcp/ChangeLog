@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.26 2003/11/05 22:57:24 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.27 2003/11/07 17:04:22 max Exp $
+
+  07 Nov 2003; Max Kalika <max@gentoo.org> dhcp-3.0_p2-r3.ebuild,
+  files/dhcp-3.0pl2-fix-perms.patch:
+  Remove experimental version. The current stable works correctly.
+  Finally fixes bug 31840.
 
 *dhcp-3.0_p2-r3 (05 Nov 2003)
 
