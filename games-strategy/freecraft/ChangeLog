@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freecraft
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/ChangeLog,v 1.7 2004/09/06 18:38:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/ChangeLog,v 1.8 2004/12/28 23:41:25 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   06 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
   freecraft-1.18-r3.ebuild:
@@ -31,17 +34,17 @@
 
 *freecraft-1.18 (18 Mar 2003)
 
-  28 Mar 2003; Jose Alberto Suárez López <bass@gentoo.org> freecraft-1.18.ebuild:
+  28 Mar 2003; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> freecraft-1.18.ebuild:
   Bump version.
 
 *freecraft-1.17.2 (31 Jul 2002)
 
-  22 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> freecraft-1.17.2.ebuild:
+  22 Jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> freecraft-1.17.2.ebuild:
   Bump version.
 
 *freecraft-1.17.1 (28 Jun 2002)
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> freecraft-1.17.1.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> freecraft-1.17.1.ebuild :
   Added KEYWORDS.
 
   28 Jun 2002; Brandon Low <lostlogic@gentoo.org> freecraft-1.17.1.ebuild :
