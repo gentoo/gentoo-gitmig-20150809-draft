@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/horgand
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.7 2004/09/14 16:34:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.8 2004/11/23 05:33:09 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  horgand-1.06.ebuild:
+  Added to ~sparc.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> horgand-1.06.ebuild:
   Stable amd64.

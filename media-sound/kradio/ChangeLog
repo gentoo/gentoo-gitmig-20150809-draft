@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kradio
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.5 2004/06/29 12:12:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.6 2004/11/23 05:40:55 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  kradio-0.3.0_alpha2.ebuild:
+  Added to ~sparc.
 
   29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kradio-0.3.0_alpha2.ebuild:
   QA: inherit kde-base -> inherit kde, need-kde after R/DEPEND

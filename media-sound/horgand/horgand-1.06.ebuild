@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-1.06.ebuild,v 1.6 2004/09/14 16:34:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-1.06.ebuild,v 1.7 2004/11/23 05:33:09 eradicator Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/horgand/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 ~sparc x86"
 
 DEPEND=">=x11-libs/fltk-1.1.2
 	media-libs/libsndfile
@@ -18,6 +18,6 @@ DEPEND=">=x11-libs/fltk-1.1.2
 	media-sound/jack-audio-connection-kit"
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README
 }

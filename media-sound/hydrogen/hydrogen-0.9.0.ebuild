@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0.ebuild,v 1.2 2004/11/12 08:51:47 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0.ebuild,v 1.3 2004/11/23 05:37:39 eradicator Exp $
 
 IUSE="alsa jack ladspa"
 
@@ -14,8 +14,7 @@ SRC_URI="mirror://sourceforge/hydrogen/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
-
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND=">=media-libs/libsndfile-1.0.0
 	alsa? ( media-libs/alsa-lib )
@@ -26,15 +25,14 @@ DEPEND=">=media-libs/libsndfile-1.0.0
 
 src_compile() {
 	need-autoconf 2.5
-	econf \
-	$(use_enable jack jack-support) \
-	$(use_enable alsa alsa-seq) \
-	$(use_enable ladspa lrdf-support) \
-	|| die "Failed configuring hydrogen!"
+	econf $(use_enable jack jack-support) \
+	      $(use_enable alsa alsa-seq) \
+	      $(use_enable ladspa lrdf-support) \
+	      || die "Failed configuring hydrogen!"
 	emake || die "Failed making hydrogen!"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README TODO
 }
