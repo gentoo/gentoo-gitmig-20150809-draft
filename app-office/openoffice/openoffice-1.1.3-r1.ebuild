@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3-r1.ebuild,v 1.2 2004/11/15 15:20:26 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3-r1.ebuild,v 1.3 2004/11/16 09:26:17 suka Exp $
 
 # Notes:
 #
@@ -183,7 +183,7 @@ oo_setup() {
 			export GCC_PROFILE="$(/usr/sbin/gcc-config --get-current-profile)"
 
 			# Just recheck gcc version ...
-			if [ "$(gcc-version)" != "3.2" ] && [ "$(gcc-version)" != "3.3" && [ "$(gcc-version)" != "3.4" ]
+			if [ "$(gcc-version)" != "3.2" ] && [ "$(gcc-version)" != "3.3" ] && [ "$(gcc-version)" != "3.4" ]
 			then
 				# See if we can get a gcc profile we know is proper ...
 				if /usr/sbin/gcc-config --get-bin-path ${CHOST}-3.2.1 &> /dev/null

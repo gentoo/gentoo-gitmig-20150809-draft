@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.6.ebuild,v 1.2 2004/11/15 14:53:54 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.6.ebuild,v 1.3 2004/11/16 09:28:22 suka Exp $
 
 # Notes:
 #
@@ -200,11 +200,10 @@ oo_setup() {
 		# Do we have a gcc that use the new layout and gcc-config ?
 		if /usr/sbin/gcc-config --get-current-profile &> /dev/null
 		then
-			export NEW_GCC="1"
 			export GCC_PROFILE="$(/usr/sbin/gcc-config --get-current-profile)"
 
 			# Just recheck gcc version ...
-			if [ "$(gcc-version)" != "3.2" ] && [ "$(gcc-version)" != "3.3" && [ "$(gcc-version)" != "3.4" ]
+			if [ "$(gcc-version)" != "3.2" ] && [ "$(gcc-version)" != "3.3" ] && [ "$(gcc-version)" != "3.4" ]
 			then
 				# See if we can get a gcc profile we know is proper ...
 				if /usr/sbin/gcc-config --get-bin-path ${CHOST}-3.2.1 &> /dev/null
