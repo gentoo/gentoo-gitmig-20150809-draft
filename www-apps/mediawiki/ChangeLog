@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.9 2005/02/18 01:09:20 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.10 2005/02/21 19:28:09 trapni Exp $
+
+*mediawiki-1.3.11 (21 Feb 2005)
+
+  21 Feb 2005; Christian Parpart <trapni@gentoo.org>
+  +mediawiki-1.3.11.ebuild:
+  * version bump to 1.3.11 (security update)
+  * also make use of local math useflag as proposed in bug 82329.
 
   18 Feb 2005; Christian Parpart <trapni@gentoo.org> :
   fixed bug 82329: typo
