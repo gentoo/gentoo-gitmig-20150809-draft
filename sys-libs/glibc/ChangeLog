@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.75 2003/08/10 08:30:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.76 2003/08/12 16:17:47 pappy Exp $
+
+  12 Aug 2003; Alexander Gabert <pappy@gentoo.org> glibc-2.3.2-r1.ebuild:
+  hppa building fails, linuxthreads/sysdeps/hppa/pt-machine.h is missing proper
+  setup of pthread_descr
+
+  12 Aug 2003; Alexander Gabert <pappy@gentoo.org> glibc-2.3.2-r1.ebuild:
+  building fails, linuxthreads/sysdeps/hppa/pt-machine.h is missing proper setup
+  of pthread_descr
 
   10 Aug 2003; Joshua Kinard <kumba@gentoo.org> glibc-2.3.2-r1.ebuild:
   Moved to stable on mips.  Been using it for ages w/ no problems.
