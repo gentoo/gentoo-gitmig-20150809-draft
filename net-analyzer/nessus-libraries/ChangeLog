@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.43 2005/01/25 14:38:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.44 2005/01/28 02:01:52 dragonheart Exp $
+
+*nessus-libraries-2.2.2a (28 Jan 2005)
+
+  28 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  nessus-libraries-2.2.0.ebuild, +nessus-libraries-2.2.2a.ebuild,
+  nessus-libraries-2.3.0.ebuild:
+  Add latest stable version (bug #78789). 2.3.0 uses correct CC now. Added
+  dropped ~ppc64 keywords
 
   26 Jan 2005; Daniel Black <dragonheart@gentoo.org> +files/linux26.patch,
   nessus-libraries-2.3.0.ebuild:

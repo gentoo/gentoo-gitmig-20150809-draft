@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-2.2.0.ebuild,v 1.3 2005/01/28 02:01:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-2.2.2a.ebuild,v 1.1 2005/01/28 02:01:52 dragonheart Exp $
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A remote security scanner for Linux (nessus-libraries)"
 HOMEPAGE="http://www.nessus.org/"
@@ -14,15 +16,19 @@ IUSE=""
 DEPEND=">=dev-libs/openssl-0.9.6d"
 S=${WORKDIR}/${PN}
 
-src_compile() {
-	local myconf=""
-	myconf="--with-ssl=/usr/lib"
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/linux26.patch || die
+}
 
-	econf ${myconf} || die "econf failed"
+src_compile() {
+	export CC=$(tc-getCC)
+	econf --with-ssl=/usr/lib || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	einstall
+	emake DESTDIR=${D} install || die "failed to install"
 	dodoc README*
 }
