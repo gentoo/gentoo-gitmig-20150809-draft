@@ -3,10 +3,10 @@ MD5 a6aeb0d6265095fd3b10a75b90b1673b nautilus-2.0.7.ebuild 1549
 MD5 e671b9d62fdb33d2e7f2d5546d48c141 nautilus-1.0.6-r9.ebuild 3523
 MD5 5914423f4dcac1754f14edac047dd270 nautilus-2.2.3.ebuild 1298
 MD5 84e67b452e5ca30aa47d26ef3a7f9d93 nautilus-2.2.4.ebuild 1355
-MD5 3c8c4dab2246b641170aab4981958b0e ChangeLog 8956
+MD5 99b0af63c72c3dfbb7310693a344a288 ChangeLog 9049
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 a2b7b5e18819628371abb172530ff5c5 nautilus-2.2.4-r5.ebuild 1564
-MD5 02096982b3979fccb49baebdd770bd53 nautilus-2.4.0.ebuild 1674
+MD5 14066a595ebbb62b2fc7829fda7af1eb nautilus-2.4.0.ebuild 1673
 MD5 dbfcca25a47c67d13020371a1acbff7a files/nautilus-2-thumbnail_max_size.patch 1444
 MD5 b6616981e10e2a9725840198f3b29d15 files/nautilus-2-x-printers.patch 39941
 MD5 65769439a2d335132210b34a49905531 files/nautilus-2.4-startup-bonobo.patch 677
