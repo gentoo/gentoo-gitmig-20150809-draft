@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-2.01.ebuild,v 1.4 2003/09/19 07:46:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-2.02.ebuild,v 1.1 2003/09/19 07:46:46 aliz Exp $
 
 inherit eutils
 
 X509_PATCH=1.4.6
 S=${WORKDIR}/${P}
 DESCRIPTION="FreeS/WAN IPSec Userspace Utilities with X.509 Patches"
-SRC_URI="ftp://ftp.xs4all.nl/pub/crypto/freeswan/old/${P}.tar.gz
+SRC_URI="ftp://ftp.xs4all.nl/pub/crypto/freeswan/${P}.tar.gz
 	 http://www.strongsec.com/freeswan/x509-${X509_PATCH}-${P}.tar.gz"
 
 HOMEPAGE="http://www.freeswan.org"
@@ -34,7 +34,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/freeswan-2.01-gentoo.patch
+	epatch ${FILESDIR}/${P}-gentoo.patch
 	cp ${WORKDIR}/x509-${X509_PATCH}\-${P}/freeswan.diff \
 	   ${WORKDIR}/x509-${X509_PATCH}\-${P}/freeswan.diff.old
 	sed 's:/etc/ipsec.d:/etc/ipsec/ipsec.d:g' \
