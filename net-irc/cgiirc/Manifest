@@ -1,4 +1,6 @@
-MD5 4979bc00f5511d00b24a70efeaa80502 ChangeLog 628
+MD5 54553f338181ea36d78058a510e3bffd cgiirc-0.5.4.ebuild 842
 MD5 bcc3f7c01012bc25faea29fee8e741c2 cgiirc-0.5.3.ebuild 876
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
+MD5 3d4d974e92749e45dc44b5158f59ed0d ChangeLog 759
+MD5 0f901ebba5b3d8bbcb054639066b192a files/digest-cgiirc-0.5.4 64
 MD5 4ef89acf015aecb207da91dd00e60a9a files/digest-cgiirc-0.5.3 64
