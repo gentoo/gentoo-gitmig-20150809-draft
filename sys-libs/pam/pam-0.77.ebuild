@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.4 2003/11/13 20:46:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.5 2003/12/09 06:21:04 pebenito Exp $
 
-PATCH_LEVEL="1.0"
+PATCH_LEVEL="1.1"
 BDB_VER="4.1.25"
 PAM_REDHAT_VER="0.77-4"
 
