@@ -1,8 +1,12 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.26 2003/01/29 16:27:48 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.27 2003/02/02 04:04:29 nall Exp $
 
 *binutils-2.13.90.0.18 (26 Jan 2003)
+
+  01 Feb 2003; Jon Nall <nall@gentoo.org> binutils-2.13.90.0.18.ebuild :
+  made stable for ppc. this is to allow kde to compile happily and closes bug
+  #14776
 
   29 Jan 2003; Nicholas Wourms <dragon@gentoo.org> binutils-2.13.90.0.18.ebuild :
   Fixed Jakub's eh-frame-ro patch to apply and compile cleanly against
