@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.7 2003/12/28 03:37:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.8 2003/12/28 14:59:12 caleb Exp $
 inherit kde
 
 need-autoconf 2.5
@@ -24,6 +24,7 @@ DEPEND="app-arch/bzip2
 	dev-libs/libpcre
 	dev-libs/libxml2
 	ssl? ( dev-libs/openssl )
+	alsa? ( media-libs/alsa-lib virtual/alsa )
 	cups? ( net-print/cups )
 	ldap? ( net-nds/openldap )
 	media-libs/tiff
@@ -59,6 +60,8 @@ src_compile() {
 
 	use ipv6	|| myconf="$myconf --with-ipv6-lookup=no"
 	use ssl		&& myconf="$myconf --with-ssl-dir=/usr"	|| myconf="$myconf --without-ssl"
+	use alsa	&& myconf="$myconf --with-alsa" || myconf="$myconf --without-alsa"
+	use cups	&& myconf="$myconf --enable-cups" || myconf="$myconf --disable-cups"
 
 	use x86 && myconf="$myconf --enable-fast-malloc=full"
 
