@@ -1,0 +1,37 @@
+# ChangeLog for dev-dotnet/nemerle
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nemerle/ChangeLog,v 1.1 2005/03/11 02:36:03 latexer Exp $
+
+*nemerle-0.2.1-r2 (10 Mar 2005)
+
+  10 Mar 2005; Peter Johanson <latexer@gentoo.org> +metadata.xml,
+  +files/nemerle-0.2.1-ncc-fix.diff, +nemerle-0.2.1-r1.ebuild,
+  +nemerle-0.2.1-r2.ebuild:
+  Moved from dev-dotnet to dev-lang
+
+*nemerle-0.2.1-r2 (08 Feb 2005)
+
+  08 Feb 2005; Peter Johanson <latexer@gentoo.org> -nemerle-0.1.4.ebuild,
+  +nemerle-0.2.1-r2.ebuild, -nemerle-0.2.1.ebuild:
+  Revision bump to disable AOT compilation. AOT only works on x86, and is still
+  experimental with mono. Remove some older versions as well.
+
+*nemerle-0.2.1-r1 (10 Oct 2004)
+
+  10 Oct 2004; <peter@gentoo.org> +files/nemerle-0.2.1-ncc-fix.diff,
+  +nemerle-0.2.1-r1.ebuild:
+  Revision bump. Compiler fix that already got accepted upstream. Makes nemerle
+  now work with monodevelop. See bug #66497.
+
+*nemerle-0.2.1 (29 Sep 2004)
+
+  29 Sep 2004; <peter@gentoo.org> +nemerle-0.2.1.ebuild:
+  Bump. See bug #64003.
+
+*nemerle-0.1.4 (02 Jul 2004)
+
+  02 Jul 2004; Peter Johanson <latexer@gentoo.org> +metadata.xml,
+  +nemerle-0.1.4.ebuild:
+  Initial commit. Ebuilds based off version by Robert Prehn
+  <prehn@ece.utexas.edu>. See bug #42211.
+
