@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r2.ebuild,v 1.4 2004/03/02 16:34:09 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r2.ebuild,v 1.5 2004/04/24 08:02:31 vapier Exp $
 
 inherit eutils flag-o-matic
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Standard (de)compression library"
+HOMEPAGE="http://www.gzip.org/zlib/"
 SRC_URI="http://www.gzip.org/zlib/${P}.tar.bz2"
-HOMEPAGE="http://www.gzip.org/zlib"
 
 LICENSE="ZLIB"
-KEYWORDS="amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~ppc64 s390"
 SLOT="0"
+KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha arm ~hppa amd64 ~ia64 s390"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -63,5 +63,4 @@ src_install() {
 	dosym libz.so.${PV} /lib/libz.so.1
 	# with an extra symlink at /usr/lib
 	dosym /lib/libz.so.${PV} /usr/lib/libz.so
-
 }
