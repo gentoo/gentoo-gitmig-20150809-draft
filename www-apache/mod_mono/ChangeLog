@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.4 2004/09/22 20:27:41 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.5 2004/10/07 16:54:41 latexer Exp $
+
+  07 Oct 2004; <peter@gentoo.org> metadata.xml, mod_mono-1.0.1.ebuild,
+  mod_mono-1.0.2.ebuild, mod_mono-1.0.ebuild:
+  Remove dev-libs/apr dep, as this is (for now) provided by apache2. Added
+  dotnet to the herd as well.
 
 *mod_mono-1.0.2 (22 Sep 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-1.0.1.ebuild,v 1.1 2004/09/22 01:05:51 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-1.0.1.ebuild,v 1.2 2004/10/07 16:54:41 latexer Exp $
 
 DESCRIPTION="Apache module for Mono"
 HOMEPAGE="http://www.go-mono.com/"
@@ -10,7 +10,6 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND=">=dev-dotnet/mono-1.0.1
-	dev-libs/apr
 	=net-www/apache-2*
 	>=dev-dotnet/xsp-1.0.1"
 
