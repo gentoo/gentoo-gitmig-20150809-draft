@@ -1,35 +1,28 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tc2/tc2-0.5.4.ebuild,v 1.3 2004/02/28 14:26:35 zypher Exp $
+# $Header $
 
-IUSE="static debug"
+IUSE="static"
 
 S=${WORKDIR}/${P}
-DESCRIPTION="TC2 is a library to simplify writing of modular programs."
+DESCRIPTION="Modules for tc2."
 HOMEPAGE="http://tc2.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/tc2/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="OpenSoftware"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
 
-
-DEPEND=">=dev-libs/libtc-0.6.0"
+DEPEND=">=dev-libs/tc2-0.5.6"
 
 
 src_compile() {
-
 	local myconf
 	myconf="--with-gnu-ld"
-
-	use debug && myconf="${myconf} --enable-debug"
-
 	use static && myconf="${myconf} --enable-static"
 
 	econf ${myconf} || die "configure failed"
-
 	make || die
-
 }
 
 src_install() {
