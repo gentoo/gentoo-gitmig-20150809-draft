@@ -2,6 +2,11 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header:
 
+*gnomemeeting-0.98.0 (27 Jun 2003)
+
+  27 Jun 2003; Alastair Tse <liquidx@gentoo.org> gnomemeeting-0.98.0.ebuild:
+  version bump. using standard include paths rather than /usr/share/*/include
+
   17 May 2003; Alastair Tse <liquidx@gentoo.org>
   gnomemeeting-0.96.1-r1.ebuild:
   marked as x86 stable
