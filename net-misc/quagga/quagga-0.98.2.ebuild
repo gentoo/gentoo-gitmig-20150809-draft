@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.2.ebuild,v 1.1 2005/03/20 18:09:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.2.ebuild,v 1.2 2005/03/25 06:56:22 mrness Exp $
 
 inherit eutils
 
@@ -124,7 +124,7 @@ src_install() {
 pkg_postinst() {
 	# empty dir for pid files for the new priv separation auth
 	#set proper owner/group/perms even if dir already existed
-	install -d -m0700 -o ${QUAGGA_USER_NAME} -g ${QUAGGA_GROUP_NAME} ${ROOT}/etc/quagga
+	install -d -m0770 -o root -g ${QUAGGA_GROUP_NAME} ${ROOT}/etc/quagga
 	install -d -m0755 -o ${QUAGGA_USER_NAME} -g ${QUAGGA_GROUP_NAME} ${ROOT}/var/run/quagga
 
 	einfo "Sample configuration files can be found in /etc/quagga/sample."
