@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.6 2004/08/07 04:27:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.7 2004/08/08 19:05:11 agriffis Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
 
-IUSE="java gtk2 ldap debug xinerama xprint"
+IUSE="java gnome gtk2 ldap debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
-IUSE="${IUSE} mozsvg moznoxft"
+IUSE="${IUSE} mozsvg moznoxft mozdevelop mozplaintext mozxmlterm"
 
 RDEPEND="virtual/x11
 	!moznoxft ( virtual/xft )
@@ -29,13 +29,23 @@ RDEPEND="virtual/x11
 		=x11-libs/gtk+-1.2*
 		=dev-libs/glib-1.2*
 		>=gnome-base/ORBit-0.5.10-r1 )
+	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )
 	>=net-www/mozilla-launcher-1.15"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+# Set by configure (plus USE_AUTOCONF=1), but useful for NSPR
+export MOZILLA_CLIENT=1
+export BUILD_OPT=1
+export NO_STATIC_LIB=1
+export USE_PTHREADS=1
+
 mozilla_conf() {
-	declare enable_optimize
+	declare enable_optimize pango_version myext x
+	declare MOZ=$([[ ${PN} == mozilla ]] && echo true || echo false)
+	declare FF=$([[ ${PN} == *firefox ]] && echo true || echo false)
+	declare TB=$([[ ${PN} == *thunderbird ]] && echo true || echo false)
 
 	####################################
 	#
@@ -45,16 +55,14 @@ mozilla_conf() {
 
 	# Set optimization level based on CFLAGS
 	if is-flag -O0; then
-		enable_optimize=-O0
+		mozilla_annotate "from CFLAGS" --enable-optimize=-O0
 	elif [[ ${ARCH} == alpha || ${ARCH} == amd64 || ${ARCH} == ia64 ]]; then
-		# Anything more than this causes segfaults on startup on 64-bit
-		# (bug 33767)
-		enable_optimize=-O1
-		append-flags -fPIC
+		mozilla_annotate "more than -O1 causes segfaults on 64-bit (bug 33767)" \
+			--enable-optimize=-O1
 	elif is-flag -O1; then
-		enable_optimize=-O1
+		mozilla_annotate "from CFLAGS" --enable-optimize=-O1
 	else
-		enable_optimize=-O2
+		mozilla_annotate "mozilla fallback" --enable-optimize=-O2
 	fi
 
 	# Now strip optimization from CFLAGS so it doesn't end up in the
@@ -67,12 +75,13 @@ mozilla_conf() {
 	# -O -O1 and -O2
 	strip-flags
 
-	# This was in mozilla and thunderbird but not firefox.  I'm dropping it
-	# because I don't see the point in forcing it on (04 Aug 2004 agriffis)
-	#append-flags -fforce-addr
-
 	# Additional ARCH support
 	case "${ARCH}" in
+	alpha|amd64|ia64)
+		# Historically we have needed to add this manually for 64-bit
+		append-flags -fPIC
+		;;
+
 	ppc)
 		# Fix to avoid gcc-3.3.x micompilation issues.
 		if [[ $(gcc-major-version).$(gcc-minor-version) == 3.3 ]]; then
@@ -95,14 +104,17 @@ mozilla_conf() {
 				replace-flags -march=pentium4 -march=pentium3
 				filter-flags -msse2
 			fi
-			# Enable us to use flash, etc plugins compiled with gcc-2.95.3
-			myconf="${myconf} --enable-old-abi-compat-wrappers"
 		fi
 		;;
 	esac
 
-	# Needed to build without warnings on gcc-3
-	CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
+	if [[ $(gcc-major-version) -eq 3 ]]; then
+		# Enable us to use flash, etc plugins compiled with gcc-2.95.3
+		mozilla_annotate "building with >=gcc-3" --enable-old-abi-compat-wrappers
+
+		# Needed to build without warnings on gcc-3
+		CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
+	fi
 
 	####################################
 	#
@@ -110,106 +122,206 @@ mozilla_conf() {
 	#
 	####################################
 
-	# myconf should be declared local by the caller (src_compile)
-	myconf="\
+	# myconf should be declared local by the caller (src_compile).
+	myconf="${myconf} \
+		--disable-activex \
+		--disable-activex-scripting \
+		--disable-installer \
 		--disable-pedantic \
 		--enable-crypto \
 		--enable-mathml \
-		--enable-optimize=${enable_optimize} \
-		--enable-xsl \
 		--enable-xterm-updates \
 		--with-pthreads \
 		--with-system-jpeg \
-		--with-system-mng \
 		--with-system-png \
 		--with-system-zlib \
+		--with-x \
 		--without-system-nspr \
-		$(use_enable ipv6) \
-		$(use_enable java java-supplement) \
-		$(use_enable ldap) \
-		$(use_enable xinerama) \
-		$(use_enable xprint)"
+		$(mozilla_use_enable ipv6) \
+		$(mozilla_use_enable ldap) \
+		$(mozilla_use_enable ldap ldap-experimental) \
+		$(mozilla_use_enable xinerama) \
+		$(mozilla_use_enable xprint) \
+		$(mozilla_use_enable gnome gnomevfs)"
 
 	# NOTE: QT and XLIB toolkit seems very unstable, leave disabled until
 	#       tested ok -- azarah
 	if use gtk2; then
-		myconf="${myconf}
-			--enable-toolkit-gtk2 \
-			--enable-default-toolkit=gtk2 \
-			--disable-toolkit-qt \
-			--disable-toolkit-xlib \
-			--disable-toolkit-gtk"
+		mozilla_annotate +gtk2 --enable-default-toolkit=gtk2
 	else
-		myconf="${myconf}
-			--enable-toolkit-gtk \
-			--enable-default-toolkit=gtk \
-			--disable-toolkit-qt \
-			--disable-toolkit-xlib \
-			--disable-toolkit-gtk2"
+		mozilla_annotate -gtk2 --enable-default-toolkit=gtk
 	fi
 
-	if ! use debug; then
-		myconf="${myconf} \
-			--disable-dtd-debug \
+	if use debug; then
+		mozilla_annotate +debug \
+			--enable-debug \
+			--enable-tests \
+			--disable-reorder \
+			--disable-strip \
+			--disable-strip-libs \
+			--enable-debugger-info-modules=ALL_MODULES
+	else
+		mozilla_annotate -debug \
 			--disable-debug \
 			--disable-tests \
 			--enable-reorder \
 			--enable-strip \
-			--enable-strip-libs"
+			--enable-strip-libs
 
 		# Currently --enable-elf-dynstr-gc only works for x86 and ppc,
 		# thanks to Jason Wever <weeve@gentoo.org> for the fix.
-		if use x86 || use ppc; then
-			myconf="${myconf} --enable-elf-dynstr-gc"
+		if use x86 || use ppc && [[ ${enable_optimize} != -O0 ]]; then
+			mozilla_annotate "${ARCH} optimized build" --enable-elf-dynstr-gc
 		fi
 	fi
 
-	# Check if we should enable Xft support ...
-	if ! use moznoxft; then
-		if use gtk2; then
-			local pango_version=""
+	# Here is a strange one...
+	if is-flag '-mcpu=ultrasparc*'; then
+		mozilla_annotate "building on ultrasparc" --enable-js-ultrasparc
+	fi
 
-			# We need Xft2.0 localy installed
-			if [[ -x /usr/bin/pkg-config ]] && pkg-config xft; then
-				pango_version=$(pkg-config --modversion pango | cut -d. -f1,2)
-
-				# We also need pango-1.1, else Mozilla links to both
-				# Xft1.1 *and* Xft2.0, and segfault...
-				if [[ ${pango_version//.} -gt 10 ]]; then
-					einfo "Building with Xft2.0 (Gtk+-2.0) support"
-					myconf="${myconf} --enable-xft --disable-freetype2"
-					touch ${WORKDIR}/.xft
-				else
-					ewarn "Building without Xft2.0 support (bad pango)"
-					myconf="${myconf} --disable-xft $(use_enable truetype freetype2)"
-				fi
+	# Check if we should enable Xft support...
+	if use moznoxft; then
+		mozilla_annotate "disabling xft2 by request (+moznoxft)" --disable-xft
+	elif use gtk2; then
+		# We need Xft2.0 locally installed
+		if [[ -x /usr/bin/pkg-config ]] && pkg-config xft; then
+			# We also need pango-1.1, else Mozilla links to both
+			# Xft1.1 *and* Xft2.0, and segfault...
+			pango_version=$(pkg-config --modversion pango | cut -d. -f1,2)
+			if [[ ${pango_version//.} -gt 10 ]]; then
+				mozilla_annotate "gtk2 with xft2 (+gtk2 -moznoxft)" --enable-xft
 			else
-				ewarn "Building without Xft2.0 support (no pkg-config xft)"
-				myconf="${myconf} --disable-xft $(use_enable truetype freetype2)"
+				mozilla_annotate "gtk2 without xft2 (bad pango version <1.1)" --disable-xft
 			fi
 		else
-			einfo "Building with Xft2.0 (Gtk+-1.0) support"
-			myconf="${myconf} --enable-xft --disable-freetype2"
-			touch ${WORKDIR}/.xft
+			mozilla_annotate "gtk2 without xft2 (no pkg-config xft)" --disable-xft
 		fi
 	else
-		einfo "Building without Xft2.0 support (moznoxft)"
-		myconf="${myconf} --disable-xft $(use_enable truetype freetype2)"
+		mozilla_annotate "gtk1 with xft2 (-gtk2 -moznoxft)" --enable-xft
 	fi
 
-	if [[ ${myconf} == *--enable-xft* ]]; then
-		# This might just be an historical artifact...
-		export MOZ_ENABLE_XFT=1
+	# Freetype support used to be inversely tied to xft support.  Looking in the
+	# -bin versions it's apparent that mozilla.org builds with both enabled, so
+	# we'll allow that too.
+	myconf="${myconf} \
+		$(mozilla_use_enable truetype freetype2) \
+		$(mozilla_use_enable truetype freetypetest)"
+
+	# Support some development/debugging stuff for web developers
+	if ( ${MOZ} || ${FF} ) && use mozdevelop; then
+		mozilla_annotate "+mozdevelop on ${PN}" \
+			--enable-jsd \
+			--enable-xpctools
+	else
+		mozilla_annotate "n/a on ${PN}" \
+			--disable-jsd \
+			--disable-xpctools
 	fi
+
+	# Some browser-only flags
+	if ${MOZ} || ${FF}; then
+		myconf="${myconf} $(mozilla_use_enable java oji)"
+		# Re-enabled per bug 24522 (28 Apr 2004 agriffis)
+		if use mozsvg; then
+			export MOZ_INTERNAL_LIBART_LGPL=1
+			mozilla_annotate "+mozsvg on ${PN}" \
+				--enable-svg --enable-svg-renderer-libart
+		else
+			mozilla_annotate "-mozsvg" \
+				--disable-svg
+		fi
+	else
+		mozilla_annotate "n/a on ${PN}" \
+			--disable-oji \
+			--disable-svg
+	fi
+
+	# Some mailer-only flags
+	if ${MOZ} || ${TB}; then
+		if use mozplaintext; then
+			mozilla_annotate "+mozplaintext" \
+				--enable-plaintext-editor-only
+		fi
+	else
+		mozilla_annotate "n/a on ${PN}" \
+			--disable-mailnews
+	fi
+
+	# Some moz-only flags
+	if ${MOZ}; then
+		myconf="${myconf} $(mozilla_use_enable mozcalendar calendar)"
+		if use moznomail && ! use mozcalendar; then
+			mozilla_annotate "+moznomail -mozcalendar" --disable-mailnews
+		fi
+		if use moznocompose && use moznomail; then
+			mozilla_annotate "+moznocompose +moznomail" --disable-composer
+		fi
+	else
+		mozilla_annotate "n/a on ${PN}" --disable-calendar
+	fi
+
+	# Setup extensions.
+	# This is a little strange because "configure" is the same for moz/ff/tb but
+	# the extensions don't work everywhere.  In particular we don't want to
+	# start the ff/tb lists with "default"
+	if ${MOZ}; then
+		myext="default"
+		use mozdevelop && myext="${myext},venkman"
+		use gnome && myext="${myext},gnomevfs"
+		use moznoirc && myext="${myext},-irc"
+		use mozxmlterm && myext="${myext},xmlterm"
+	elif ${FF}; then
+		# note that help is broken, and irc doesn't work
+		myext="cookie,inspector,negotiateauth,pref,transformiix,typeaheadfind,universalchardet,webservices,xmlextras,xml-rpc"
+		use mozdevelop && myext="${myext},venkman"
+		use gnome && myext="${myext},gnomevfs"
+	else
+		myext="pref,spellcheck,universalchardet"
+	fi
+	myconf="${myconf} --enable-extensions=${myext}"
+
+	# Report!
+	echo
+	echo "=========================================================="
+	echo "Building ${PF} with the following configuration"
+	for x in $(echo ${myconf} | sed 's/ /\n/g' | sort); do
+		mozilla_explain "${x}"
+	done
+	echo "=========================================================="
+	echo
 }
 
 # Simulate the silly csh makemake script
 makemake() {
 	typeset m topdir
-
 	for m in $(find . -name Makefile.in); do
 		topdir=$(echo "$m" | sed -r 's:[^/]+:..:g')
 		sed -e "s:@srcdir@:.:g" -e "s:@top_srcdir@:${topdir}:g" \
 			< ${m} > ${m%.in} || die "sed ${m} failed"
 	done
+}
+
+#
+# The following functions are internal to mozilla.eclass
+#
+
+mozilla_use_enable() {
+	declare flag=$(use_enable "$@")
+	mozilla_annotate "$(useq ${1} && echo +${1} || echo -${1})" "${flag}"
+	echo "${flag}"
+}
+
+mozilla_annotate() {
+	declare reason=${1} x ; shift
+	[[ $# -gt 0 ]] || die "mozilla_annotate missing flags for ${reason}!"
+	mkdir -p ${T}/annotations
+	for x in ${*}; do
+		myconf="${myconf} ${x}"
+		echo "${reason}" > "${T}/annotations/${x%%=*}"
+	done
+}
+
+mozilla_explain() {
+	printf "    %-30s  %s\n" "${1}" "$(cat "${T}/annotations/${1%%=*}" 2>/dev/null)"
 }
