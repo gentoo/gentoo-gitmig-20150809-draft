@@ -1,23 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.25.ebuild,v 1.1 2004/01/22 19:10:05 mholzer Exp $
-
-IUSE="X nls ssl"
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.25.ebuild,v 1.2 2004/02/06 17:56:02 vapier Exp $
 
 S=${WORKDIR}/${P/a/}
 DESCRIPTION="Single process stack of various system monitors"
-SRC_URI="http://web.wt.net/~billw/gkrellm/${P}.tar.bz2"
 HOMEPAGE="http://www.gkrellm.net/"
+SRC_URI="http://web.wt.net/~billw/gkrellm/${P}.tar.bz2"
 
-SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa"
+SLOT="2"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
+IUSE="X nls ssl"
 
 DEPEND=">=sys-apps/sed-4
 	ssl? ( dev-libs/openssl )
 	X? (  >=x11-libs/gtk+-2.0.5 )"
-
-RDEPEND="${DEPEND} nls? ( sys-devel/gettext )"
+RDEPEND="${DEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
