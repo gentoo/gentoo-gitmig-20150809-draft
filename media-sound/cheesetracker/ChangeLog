@@ -1,0 +1,12 @@
+# ChangeLog for media-sound/cheesetracker
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/ChangeLog,v 1.1 2004/02/27 02:50:47 eradicator Exp $
+
+*cheesetracker-0.9.1 (26 Feb 2004)
+
+  26 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  cheesetracker-0.9.1.ebuild, metadata.xml:
+  Cheesetracker is a portable Impulse Tracker clone. It supports all Impulse
+  Tracker features except a few. Initial ebuild provided by Ben Davis
+  <entheh@users.sf.net> in bug #24057.
+
