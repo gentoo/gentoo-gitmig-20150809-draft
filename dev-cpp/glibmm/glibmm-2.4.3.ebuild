@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.4.3.ebuild,v 1.2 2004/06/24 21:48:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.4.3.ebuild,v 1.3 2004/08/04 12:45:28 lv Exp $
 
 inherit gnome2
 
@@ -17,15 +17,6 @@ DEPEND="${RDEPEND}
 
 RDEPEND=">=dev-libs/libsigc++-2.0
 		>=dev-libs/glib-2.4"
-
-src_compile () {
-	if [ "${ARCH}" = "amd64" ]; then
-		aclocal -I scripts
-		automake -c -f
-		autoconf
-	fi
-	gnome2_src_compile
-}
 
 DOCS="AUTHORS CHANGES ChangeLog HACKING PORTING NEWS README TODO"
 
