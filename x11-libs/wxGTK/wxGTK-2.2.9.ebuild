@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.2.9.ebuild,v 1.5 2002/07/11 06:30:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.2.9.ebuild,v 1.6 2002/07/16 03:12:03 gerk Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
 HOMEPAGE="http://www.wxwindows.org/"
 LICENSE="LGPL-2"
 SLOT="2.2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	dev-libs/libunicode

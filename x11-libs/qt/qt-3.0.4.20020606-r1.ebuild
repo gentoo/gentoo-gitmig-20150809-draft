@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.4.20020606-r1.ebuild,v 1.3 2002/07/11 06:30:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.4.20020606-r1.ebuild,v 1.4 2002/07/16 03:16:42 gerk Exp $
 
 PV=3.0.4
 S=${WORKDIR}/qt-copy-${PV}
@@ -8,7 +8,7 @@ S=${WORKDIR}/qt-copy-${PV}
 DESCRIPTION="QT version ${PV}"
 SLOT="3"
 LICENSE="QPL-1.0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 SRC_URI="ftp://ftp.kde.org/pub/kde/stable/3.0.1/src/qt-copy-${PV}.tar.bz2
 	 ftp://ftp.nnongae.com/pub/gentoo/qt-copy-${PV}-onthespot.patch

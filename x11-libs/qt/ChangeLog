@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.17 2002/06/08 10:56:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.18 2002/07/16 03:16:42 gerk Exp $
 
 *qt-3.0.4.20020606-r1 (8 Jun 2002)
+
+  15 Jul 2002; Mark Guertin <gerk@gentoo.org>
+  Added ppc to keywords
 
   8 Jun 2002; Mark Guertin <gerk@gentoo.org> (changelog written by Dan Armak <danarmak@gentoo.org):
 
