@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.10 2003/01/08 03:31:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.11 2003/01/16 11:44:46 seemant Exp $
+
+*webmin-1.050-r1 (16 Jan 2002)
+
+  16 Jan 2003; Seemant Kulleen <seemant@gentoo.org> webmin-1.050-r1.ebuild
+  files/digest-webmin-1.050-r1 :
+
+  postgresql config file moved to /var/lib/postgresql/data instad, closing
+  bug #13961 by peter.hermsdorf@web.de (peter hermsdorf)
 
 *webmin-1.050 (16 Dec 2002)
 
