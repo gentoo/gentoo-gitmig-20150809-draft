@@ -1,5 +1,5 @@
-MD5 5a83d0177fed8daaa10d6700ee86b1ac ChangeLog 494
+MD5 2af1ac7f009a2a52675e6dd6d3909e2e ChangeLog 597
+MD5 4ff9ce239e0b2fee433c21a474dd0e88 xconq-7.4.1.ebuild 977
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 686ad8227c8478858c9203fc8849e2ee xconq-7.4.1.ebuild 967
 MD5 11e6b9f0b9deabfd09b8d9282236896a files/digest-xconq-7.4.1 64
 MD5 678926da0bc080c8b9c755516e553ddb files/xconq-gcc-3.4.patch 223
