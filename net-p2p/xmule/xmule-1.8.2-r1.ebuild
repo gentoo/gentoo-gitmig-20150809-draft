@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.2-r1.ebuild,v 1.1 2004/05/15 18:07:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.2-r1.ebuild,v 1.2 2004/05/17 20:43:34 mholzer Exp $
 
 MY_P=${P}b
 S=${WORKDIR}/${MY_P}
@@ -39,13 +39,6 @@ src_unpack() {
 }
 
 src_compile () {
-	export WANT_AUTOCONF=2.5
-	WANT_AUTOMAKE=1.7
-	aclocal
-	autoconf
-	autoheader
-	automake
-
 	local myconf=
 
 	use nls \
