@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/skunkweb
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/ChangeLog,v 1.1 2003/10/25 03:31:05 pythonhead Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/ChangeLog,v 1.2 2004/03/25 08:16:07 mr_bones_ Exp $
+
+  25 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  skunkweb-3.4_beta5.ebuild:
+  don't use deprecated ? : use syntax
 
 *skunkweb-3.4_beta5 (24 Oct 2003)
 

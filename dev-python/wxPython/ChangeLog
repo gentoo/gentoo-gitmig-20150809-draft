@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxPython
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.38 2004/02/17 22:02:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.39 2004/03/25 08:17:19 mr_bones_ Exp $
+
+  25 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  wxPython-2.4.0.7.ebuild:
+  don't use deprecated ? : use syntax
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> wxPython-2.4.0.7.ebuild,
   wxPython-2.4.1.2.ebuild, wxPython-2.4.2.4.ebuild:

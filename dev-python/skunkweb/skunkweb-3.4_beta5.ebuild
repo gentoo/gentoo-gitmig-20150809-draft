@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/skunkweb-3.4_beta5.ebuild,v 1.1 2003/10/25 03:31:05 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/skunkweb-3.4_beta5.ebuild,v 1.2 2004/03/25 08:16:07 mr_bones_ Exp $
 
 
 DESCRIPTION="robust Python web application server"
@@ -14,7 +14,8 @@ KEYWORDS="~x86"
 IUSE="${IUSE} apache1 apache2"
 DEPEND=">=dev-lang/python-2.2
 		>=dev-python/egenix-mx-base-2.0.4
-		apache2? ( >=net-www/apache-2.0.47 ) : ( apache1? ( <=net-www/apache-2 ) )"
+		apache2? ( >=net-www/apache-2.0.47 )
+		!apache2? ( apache1? ( <=net-www/apache-2 ) )"
 
 
 pkg_setup() {

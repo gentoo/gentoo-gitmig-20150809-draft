@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.0.7.ebuild,v 1.9 2004/02/17 22:02:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.0.7.ebuild,v 1.10 2004/03/25 08:17:19 mr_bones_ Exp $
 
 IUSE="opengl gtk2"
 
@@ -16,7 +16,12 @@ KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND=">=dev-lang/python-2.1
 	=x11-libs/wxGTK-2.4.0*
-	gtk2? ( >=x11-libs/gtk+-2.0 >=dev-libs/glib-2.0 ) : ( =x11-libs/gtk+-1.2* =dev-libs/glib-1.2* )
+	gtk2? (
+		>=x11-libs/gtk+-2.0
+		>=dev-libs/glib-2.0 )
+	!gtk2? (
+		=x11-libs/gtk+-1.2*
+		=dev-libs/glib-1.2* )
 	opengl? ( >=dev-python/PyOpenGL-2.0.0.44 )"
 
 pkg_setup() {
