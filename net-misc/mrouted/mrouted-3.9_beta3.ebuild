@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/mrouted-3.9_beta3.ebuild,v 1.6 2004/07/15 03:05:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/mrouted-3.9_beta3.ebuild,v 1.7 2004/10/01 23:23:09 pyrania Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ DEB_PVER=3
 DESCRIPTION="IP multicast routing daemon"
 HOMEPAGE="http://freshmeat.net/projects/mrouted/?topic_id=87%2C150"
 SRC_URI="ftp://ftp.research.att.com/dist/fenner/mrouted/${MY_P}.tar.gz
-	http://ftp.debian.org/debian/pool/non-free/m/mrouted/mrouted_${PV/_/-}-${DEB_PVER}.diff.gz"
+	http://debian/pool/non-free/m/mrouted/mrouted_${PV/_/-}-${DEB_PVER}.diff.gz"
 
 LICENSE="Stanford"
 SLOT="0"

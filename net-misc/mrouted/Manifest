@@ -1,4 +1,14 @@
-MD5 2d7e60a621a4d489346d96389462d66e mrouted-3.9_beta3.ebuild 997
-MD5 42893e63ad25d7116c7eb64c7d5448f4 ChangeLog 471
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 55b418543d721a588a862fe717b6437e mrouted-3.9_beta3.ebuild 981
+MD5 896b8d148712b856311f88d68c2e9c9e ChangeLog 584
 MD5 b063cfdcd78a545936175411c2da590e files/mrouted.rc 712
 MD5 fef0562a211b6b834bfd82d55d548c4e files/digest-mrouted-3.9_beta3 144
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBXecmI7fK2cqeyXkRAq3WAJ4rn/vWC9HZv1qjNqlkLna+PHCDCwCfS88X
+LCQlQEM0uJHyuGz0F8k8jtg=
+=SVUd
+-----END PGP SIGNATURE-----
