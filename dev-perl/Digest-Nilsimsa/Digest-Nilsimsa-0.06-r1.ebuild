@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Nilsimsa/Digest-Nilsimsa-0.06-r1.ebuild,v 1.10 2004/10/16 23:57:21 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Nilsimsa/Digest-Nilsimsa-0.06-r1.ebuild,v 1.11 2004/12/23 09:42:00 nigoro Exp $
 
 inherit perl-module
 
@@ -11,5 +11,5 @@ SRC_URI="http://www.cpan.org/modules/by-module/Digest/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha ~ppc64"
 IUSE=""

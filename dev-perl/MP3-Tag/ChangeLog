@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MP3-Tag
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.3 2004/12/06 13:22:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.4 2004/12/23 09:45:20 nigoro Exp $
+
+  23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> MP3-Tag-0.94.ebuild:
+  added ~ppc64
 
   07 Dec 2004; Joseph Jezak <josejx@gentoo.org> MP3-Tag-0.94.ebuild:
   Marked ~ppc for bug #56199.
