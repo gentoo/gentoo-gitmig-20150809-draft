@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8-r3.ebuild,v 1.1 2004/05/08 17:18:12 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8-r3.ebuild,v 1.2 2004/05/09 14:48:41 dholm Exp $
 
 # This was originally contributed by Stephane Loeuillet, via
 # Gentoo bug: http://bugs.gentoo.org/show_bug.cgi?id=28574
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="hylafax"
-KEYWORDS="x86 ~sparc ~hppa ~alpha ~amd64"
+KEYWORDS="x86 ~sparc ~hppa ~alpha ~amd64 ~ppc"
 
 DEPEND="net-dialup/mgetty
 	>=sys-libs/zlib-1.1.4
