@@ -1,6 +1,14 @@
 # ChangeLog for net-www/htdig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/ChangeLog,v 1.2 2002/03/07 20:00:48 danarmak Exp $
+
+*htdig-3.1.5-r2 (7 Mar 2002)
+
+  7 Mar 2002; Dan Armak <danarmak@gentoo.org> Changelog:
+  
+  Added patches to make htdig work with kdevelop. This si only a temporary remedy and 
+  a big overhaul of the ebuild will come as soon as there's a new maintainer (not me!).
+  This closes bug #946.
 
 *htdig-3.1.5-r1 (1 Feb 2002)
 
