@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/quicktime4linux
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.23 2005/01/16 16:57:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.24 2005/01/23 03:15:07 luckyduck Exp $
+
+*quicktime4linux-2.0.4 (23 Jan 2005)
+
+  23 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/2.0.4-external-libs.patch, +quicktime4linux-2.0.4.ebuild:
+  new upstream version. fixes #63216.
 
   16 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   quicktime4linux-2.0.0-r1.ebuild:

@@ -1,0 +1,86 @@
+diff -uprN quicktime4linux-2.0.4.orig/Makefile quicktime4linux-2.0.4/Makefile
+--- quicktime4linux-2.0.4.orig/Makefile	2005-01-23 00:52:58.000000000 +0100
++++ quicktime4linux-2.0.4/Makefile	2005-01-23 04:05:38.568348256 +0100
+@@ -5,11 +5,7 @@ CC = gcc
+ 
+ 
+ 
+-ifeq ($(origin CFLAGS), environment)
+ HAVE_CFLAGS := y
+-else
+-HAVE_CFLAGS := n
+-endif
+ 
+ #ENCORE_DIR := encore2/src
+ #DECORE_DIR := decore2/src
+@@ -17,9 +13,10 @@ ENCORE_DIR := encore50
+ #DECORE_DIR := decore50
+ ENCORE_INCLUDE := $(ENCORE_DIR)/encore.h
+ #DECORE_INCLUDE := $(DECORE_DIR)/decore.h
+-MPEG3_DIR := $(shell expr ../libmpeg3* )
+-FAAD_DIR := faad2
+-FAAC_DIR := faac
++MPEG3_DIR := /usr/include/libmpeg3
++LAME_DIR := /usr/include/lame
++FAAD_DIR := /usr/include
++FAAC_DIR := /usr/include
+ OBJS := 
+ 
+ 
+@@ -52,26 +49,28 @@ DIRS = $(OBJDIR)
+ 
+ 
+ 
+-include Makefile.jpeg
+-include Makefile.vorbis
+-include Makefile.ffmpeg
+-include Makefile.lame
+-include Makefile.dv
++#include Makefile.jpeg
++#include Makefile.vorbis
++#include Makefile.ffmpeg
++#include Makefile.lame
++#include Makefile.dv
+ include Makefile.encore50
+-include Makefile.faad
+-include Makefile.faac
++#include Makefile.faad
++#include Makefile.faac
+ 
+ 
+ 
+ 
+ 
+ #CFLAGS += -g
++CFLAGS += $(MYCFLAGS)
+ CFLAGS += -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
+ CFLAGS += -DHAVE_FIREWIRE
+ CFLAGS += -I. \
+-	-I$(JPEG_DIR) \
++	-I/usr/include/ffmpeg \
+ 	-I$(MPEG3_DIR) \
+-	-I$(LAME_DIR)/include
++	-I$(LAME_DIR) \
++	-I$(FAAD_DIR)
+ 
+ 
+ #	$(OBJDIR)/div3.o \
+@@ -230,7 +229,9 @@ DIRS += \
+ 	$(OBJDIR)/$(ENCORE_DIR)/mbtransquant/intel_mmx
+ 
+ 
+-LIBS := $(OUTPUT) $(MPEG3_DIR)/$(OBJDIR)/libmpeg3.a -lpng -lz -lpthread -ldl -lm
++LIBS := $(OUTPUT) \
++	-logg -lmpeg3 -lmp3lame -ldv -ljpeg -lvorbis -lvorbisenc -lavcodec \
++	-lpng -lz -lpthread -lglib -ldl -lm -lfaad -lfaac
+ 
+ 
+ $(shell if ! test -d $(OBJDIR) \; then mkdir -p $(DIRS) \; fi )
+@@ -248,7 +249,6 @@ all: $(OBJDIR) $(OUTPUT)
+ $(OUTPUT): $(DV_OBJS) $(DVMMXOBJ) $(OBJS) $(DVMMXOBJS) $(ENCOREMMX_OBJS) $(JPEG_NASM) $(FFMPEG_OBJS) $(FFMPEGIA32_OBJS) $(LAME_OBJS) $(FAAD_OBJS) $(FAAC_OBJS) $(JPEG_FAIL) 
+ 	ar rcs $(OUTPUT) `cat $(OBJDIR)/objs`
+ 
+-
+ $(OBJDIR)/qtdump: $(OBJDIR)/dump.o $(OUTPUT)
+ 	$(CC) -o $(OBJDIR)/qtdump $(OBJDIR)/dump.o $(LIBS)
+ 
