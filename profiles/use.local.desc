@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.586 2004/08/31 18:50:21 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.587 2004/08/31 19:25:42 axxo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -139,6 +139,7 @@ dev-java/ant-optional:xerces - Enable Xerces support
 dev-java/ant-tasks:javamail - Enable JavaMail Ant task
 dev-java/ant-tasks:noantlr - Disable ANTLR Ant task
 dev-java/ant-tasks:nobcel - Disable bcel Ant task
+dev-java/ant-tasks:nobeanutils - Disable beanutils Ant task
 dev-java/ant-tasks:nobsh - Disable bsh Ant task
 dev-java/ant-tasks:nocommonslogging - Disable commons-logging Ant task
 dev-java/ant-tasks:nocommonsnet - Disable commons-net Ant task
