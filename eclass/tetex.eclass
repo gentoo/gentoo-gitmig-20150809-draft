@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.24 2004/10/29 15:14:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.25 2004/10/29 15:19:00 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -43,8 +43,7 @@ DEPEND="!app-text/tetex
 	X? ( virtual/x11 )
 	>=media-libs/libpng-1.2.1
 	sys-libs/ncurses
-	>=net-libs/libwww-5.3.2-r1
-	app-text/texi2html"
+	>=net-libs/libwww-5.3.2-r1"
 RDEPEND="${DEPEND}
 	!app-text/dvipdfm
 	!dev-tex/currvita
@@ -87,6 +86,10 @@ tetex_src_unpack() {
 			epatch ${FILESDIR}/../../tetex/files/tetex-${TETEX_PV}.diff
 			epatch ${FILESDIR}/../../tetex/files/tetex-texdoctk-gentoo.patch
 
+			if useq ppc-macos ; then
+				sed -i -e "/^HOMETEXMF/s:\$HOME/texmf:\$HOME/Library/texmf:" ${S}/texk/kpathsea/texmf.in || die "sed texmf.in failed."
+			fi
+
 			if [ "${TETEX_PV}" == "2.0.2" ] ; then
 				# fix up misplaced listings.sty in the 2.0.2 archive. 
 				# this should be fixed in the next release <obz@gentoo.org>
@@ -117,6 +120,7 @@ tetex_src_compile() {
 
 	if useq X ; then
 		xdvik="--with-xdvik --with-oxdvik"
+		#xdvik="$xdvik --with-system-t1lib"
 	else
 		xdvik="--without-xdvik --without-oxdvik"
 	fi
@@ -143,6 +147,12 @@ tetex_src_compile() {
 		$(use_with X x) \
 		${xdvik} \
 		${TETEX_ECONF} || die
+
+	if useq X && useq ppc-macos ; then
+		for f in $(find ${S} -name config.status) ; do
+			sed -i -e "s:-ldl::g" $f
+		done
+	fi
 
 	if [ "${TETEX_PV}" == "2.0.2" ] ; then
 		emake -j1 texmf=/usr/share/texmf || die "make teTeX failed"
@@ -207,7 +217,7 @@ tetex_src_install() {
 			#dodoc BUGS FAQ README*
 
 			# move docs to /usr/share/doc/${PF}
-			if use doc ; then
+			if useq doc ; then
 				dodir /usr/share/doc
 				mv ${D}/usr/share/texmf/doc/* \
 					${D}/usr/share/doc/${PF} \
@@ -313,7 +323,9 @@ tetex_pkg_preinst() {
 
 tetex_pkg_postinst() {
 
-	tetex_pkg_postinst all
+	if [ -z "$1" ]; then
+		tetex_pkg_postinst all
+	fi
 
 	while [ "$1" ]; do
 	case $1 in
