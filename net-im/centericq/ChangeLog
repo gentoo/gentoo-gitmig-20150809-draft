@@ -1,6 +1,11 @@
 # ChangeLog for net-im/centericq
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.23 2003/07/25 17:47:38 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.24 2003/08/23 14:07:52 coronalvr Exp $
+
+*centericq-4.9.6 (23 Aug 2003)
+
+  23 Aug 2003; Alex Veber <coronalvr@gentoo.org> centericq-4.9.6.ebuild:
+  version bump.
 
 *centericq-4.9.5-r1 (25 Jul 2003)
 
