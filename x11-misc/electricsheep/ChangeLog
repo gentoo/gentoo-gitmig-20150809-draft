@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/electricsheep
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.6 2003/08/01 08:00:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.7 2003/09/06 11:54:14 lanius Exp $
+
+  06 Sep 2003; Heinrich Wendel <lanius@gentoo.org>
+  electricsheep-2.3-r1.ebuild, electricsheep-2.4.ebuild:
+  bug #27604, 2.3 is not usable anymore -> remove
 
 *electricsheep-2.4 (01 Aug 2003)
 

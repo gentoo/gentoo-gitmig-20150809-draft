@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.4.ebuild,v 1.1 2003/08/01 08:00:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.4.ebuild,v 1.2 2003/09/06 11:54:14 lanius Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://electricsheep.org/"
 SRC_URI="http://electricsheep.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 
 DEPEND="virtual/x11
