@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/mplayer-skins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.9 2003/11/01 20:57:08 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.10 2003/12/13 17:48:48 brad_mssw Exp $
+
+  13 Dec 2003; Brad House <brad_mssw@gentoo.org> mplayer-skins-0.2-r3.ebuild:
+  mark stable on amd64
 
   01 Nov 2003; Douglas Russell <puggy@gentoo.org> mplayer-skins-0.2-r3.ebuild:
   Minor bugfix relating to the use of . as the user.group seperatr as POSIX
