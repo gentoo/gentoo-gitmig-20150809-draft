@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.1_rc4.ebuild,v 1.6 2002/10/04 06:27:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.1_rc4.ebuild,v 1.7 2002/10/19 02:26:44 vapier Exp $
 
 #our version, but with "eh" formatting
 NV=1.0.1-rc4
@@ -10,9 +10,7 @@ SRC_URI="ftp://ftp.sistina.com/pub/LVM/1.0/lvm_${NV}.tar.gz"
 HOMEPAGE="http://www.mosix.org"
 KEYWORDS="x86"
 SLOT="0"
-LICENSE="GPL-2"
-LICENSE="|"
-LICENSE="LGPL-2"
+LICENSE="GPL-2 | LGPL-2"
 
 DEPEND="virtual/glibc"
 
