@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/traffic-vis
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.3 2003/12/09 18:12:58 lanius Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.4 2004/02/06 15:16:46 aliz Exp $
+
+  06 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> traffic-vis-0.35.ebuild,
+  files/traffic-vis-0.35-libpcap-header-fix.patch:
+  Added patch for new libpcap headers.
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> traffic-vis-0.35.ebuild:
   changed app-text/ghostscript to virtual/ghostscript
