@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.15 2005/01/25 18:43:14 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.16 2005/02/07 11:42:55 brix Exp $
+
+*wpa_supplicant-0.3.7_pre (07 Feb 2005)
+
+  07 Feb 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/wpa_supplicant-0.3.7_pre-conf.d,
+  +files/wpa_supplicant-0.3.7_pre-init.d, +wpa_supplicant-0.3.7_pre.ebuild:
+  Added pre-release of 0.3.7 which is supposed to go stable soon, please test.
 
   25 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
   -files/wpa_supplicant-0.2.5-conf.d, -files/wpa_supplicant-0.2.5-config,
