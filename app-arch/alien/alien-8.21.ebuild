@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.21.ebuild,v 1.3 2003/03/11 21:11:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.21.ebuild,v 1.4 2003/07/01 20:36:34 aliz Exp $
 
 S=${WORKDIR}/${PN}
 IUSE=""
@@ -8,7 +8,7 @@ DESCRIPTION="Converts between the rpm, dpkg, stampede slp, and slackware tgz fil
 SRC_URI="http://kitenet.net/programs/code/alien/${PN}_${PV}.tar.gz"
 HOMEPAGE="http://kitenet.net/programs/alien/"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 SLOT="0"
 
