@@ -1,25 +1,25 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/1.03-r13/qmail-control,v 1.1 2003/10/27 09:42:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/1.03-r13/qmail-control,v 1.2 2004/02/28 23:13:12 robbat2 Exp $
 
 opts="start stop restart reload"
 
 start() {
     ebegin "Starting qmail mta ..."
-    svc -u /service/qmail-{smtpd,send,qmqp,qmtp}
+    svc -u /service/qmail-{smtpd,send,qmqpd,qmtpd}
     eend $?
     ebegin "Starting qmail mta logging ..."
-    svc -u /service/qmail-{smtpd,send,qmqp,qmtp}/log
+    svc -u /service/qmail-{smtpd,send,qmqpd,qmtpd}/log
     eend $?
 }
 
 stop() {
     ebegin "Stopping qmail mta ..."
-    svc -d /service/qmail-{smtpd,send,qmqp,qmtp}
+    svc -d /service/qmail-{smtpd,send,qmqpd,qmtpd}
     eend $?
     ebegin "Stopping qmail mta logging ..."
-    svc -d /service/qmail-{smtpd,send,qmqp,qmtp}/log
+    svc -d /service/qmail-{smtpd,send,qmqpd,qmtpd}/log
     eend $?
 }
 
