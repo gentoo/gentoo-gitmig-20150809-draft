@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r24.ebuild,v 1.1 2003/07/28 02:22:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r24.ebuild,v 1.2 2003/08/09 02:03:47 jje Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
@@ -9,7 +9,7 @@ filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 DESCRIPTION="X MultiMedia System"
 SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.gz
-	 mmx? ( http://members.jcom.home.ne.jp/jacobi/linux/etc/${P}-mmx.patch.gz )"
+	 ( mmx? || 3dnow? ) ( http://members.jcom.home.ne.jp/jacobi/linux/etc/${P}-mmx.patch.gz )"
 HOMEPAGE="http://www.xmms.org/"
 
 SLOT="0"
