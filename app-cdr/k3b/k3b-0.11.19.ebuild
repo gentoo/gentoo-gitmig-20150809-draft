@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.18-r1.ebuild,v 1.2 2005/01/14 23:28:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.19.ebuild,v 1.1 2005/01/29 11:39:34 greg_g Exp $
 
 inherit kde eutils
 
@@ -10,15 +10,16 @@ SRC_URI="mirror://sourceforge/k3b/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
-IUSE="arts dvdr kde oggvorbis mad flac encode"
+IUSE="arts dvdr encode flac kde mad oggvorbis"
 
-DEPEND="kde? ( || ( kde-base/kdebase-meta >=kde-base/kdebase-3.1 ) )
+DEPEND="arts? ( kde-base/arts )
+	kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
+	media-libs/libsamplerate
 	>=media-sound/cdparanoia-3.9.8
 	>=media-libs/id3lib-3.8.0_pre2
 	flac? ( media-libs/flac )
 	mad? ( media-libs/libmad )
-	oggvorbis? ( media-libs/libvorbis )
-	arts? ( kde-base/arts )"
+	oggvorbis? ( media-libs/libvorbis )"
 RDEPEND="${DEPEND}
 	virtual/cdrtools
 	>=app-cdr/cdrdao-1.1.7-r3
@@ -29,17 +30,12 @@ RDEPEND="${DEPEND}
 		  !amd64? ( <media-video/transcode-0.6.12 )
 		  media-video/vcdimager )"
 
-# for the configure.in.in patch
-DEPEND="${DEPEND}
-	sys-devel/autoconf
-	sys-devel/automake"
-
 need-kde 3.1
 
 I18N="${PN}-i18n-${PV%.*}"
 
-# These are the languages and translated documentation supported by k3b as of 
-# version 0.11.13. If you are using this ebuild as a model for another ebuild 
+# These are the languages and translated documentation supported by k3b for 
+# version 0.11.x. If you are using this ebuild as a model for another ebuild 
 # for another version of K3b, DO check whether these values are different.
 # Check the {po,doc}/Makefile.am files in k3b-i18n package.
 LANGS="ar bg bs ca cs da de el en_GB es et fi fo fr gl hu it ja nb nl nso pl pt pt_BR ro ru sk sl sr sv ta tr ven xh xx zh_CN zh_TW zu"
@@ -54,16 +50,15 @@ done
 
 src_unpack() {
 	kde_src_unpack
-	epatch ${FILESDIR}/${P/8/7}-noarts.patch
-	epatch ${FILESDIR}/${P}-configure-libsamplerate.patch
+	epatch ${FILESDIR}/k3b-0.11.17-noarts.patch
 
 	make -f admin/Makefile.common || die
 }
 
 src_compile() {
 	local _S=${S}
-	local myconf="--enable-libsuffix= $(use_with kde k3bsetup) $(use_with arts)"
-	myconf="${myconf} --without-external-libsamplerate"
+	local myconf="--enable-libsuffix= $(use_with kde k3bsetup) \
+		--with-external-libsamplerate"
 
 	# Build process of K3B
 	kde_src_compile
@@ -100,10 +95,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo ""
-	einfo "Note that k3b will report problems regarding the permissions of cdrecord"
-	einfo "and cdrdao, and will suggest some changes for your system. You are free"
-	einfo "to follow those advices, note nonetheless that on a default Gentoo install"
-	einfo "k3b should run fine when you are in the cdrom and cdrw group."
-	echo ""
+	echo
+	einfo "Make sure you have proper read/write permissions on the cdrom device(s)."
+	einfo "Usually, it is sufficient to be in the cdrom or cdrw group."
+	echo
 }
