@@ -8,7 +8,7 @@ MD5 76eee65ed9ee7babf51f46e167d82bc1 wvstreams-3.75.ebuild 1736
 MD5 4ac90373143f90a1bddea60711f40568 wvstreams-3.75-r1.ebuild 1808
 MD5 32456871fa203363eaa06cf51c12ada1 wvstreams-4.0.ebuild 1654
 MD5 7c8d69f73480b56621770449d11a2e17 metadata.xml 235
-MD5 cf234f97ef7c59b20613c4a508d2e681 wvstreams-4.0-r1.ebuild 1858
+MD5 8f849e28195d787356978ee7de4161ff wvstreams-4.0-r1.ebuild 1874
 MD5 dab468062cf36e0e81e72fb2a59299e0 files/3.70-gcc3.patch 3171
 MD5 5d649f23e7b31fb9224bace4c35bcf3e files/3.70-openssl.patch 470
 MD5 f2058097f693e07dadf248b1a3319db3 files/digest-wvstreams-3.70-r2 66
@@ -29,7 +29,7 @@ MD5 7c5ceff9d19db13318a9c8c6de08e7ef files/digest-wvstreams-4.0-r1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBtzbMjtv59x0+BrURArYtAJ97Wo5/eVctNjfvVQsWYblvdedfXwCfUQtG
-3KSVDA7JxIIqX1ez92VlSBA=
-=aNkY
+iD8DBQFBt0QMjtv59x0+BrURArc6AKD8jBU7ViCsPbXNAqvdBJO6iJ84TQCgoP+d
+IeuzqfMmcKFqWYFl9rWtZ/I=
+=Ej5d
 -----END PGP SIGNATURE-----

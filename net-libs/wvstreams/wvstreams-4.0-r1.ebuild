@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0-r1.ebuild,v 1.1 2004/12/08 17:15:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0-r1.ebuild,v 1.2 2004/12/08 18:12:18 mrness Exp $
 
 inherit eutils
 
@@ -60,6 +60,7 @@ src_compile() {
 		--with-bdb \
 		--with-openssl \
 		--with-zlib \
+		--with-xplc \
 		|| die "configure failed"
 	emake CXXOPTS="-fPIC -DPIC" COPTS="-fPIC -DPIC" || die "compile failed"
 	use doc && doxygen
