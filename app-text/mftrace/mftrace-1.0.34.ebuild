@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.34.ebuild,v 1.1 2004/08/28 15:50:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.34.ebuild,v 1.2 2004/09/02 08:50:11 usata Exp $
 
 IUSE="truetype"
 
@@ -17,7 +17,7 @@ DEPEND=">=dev-lang/python-2.2.2"
 RDEPEND=">=dev-lang/python-2.2.2
 	virtual/tetex
 	>=app-text/t1utils-1.25
-	>=media-gfx/autotrace-0.30
+	|| ( >=media-gfx/autotrace-0.30 media-gfx/potrace )
 	truetype? ( || ( media-gfx/fontforge >=media-gfx/pfaedit-030512 ) )"
 
 src_compile() {

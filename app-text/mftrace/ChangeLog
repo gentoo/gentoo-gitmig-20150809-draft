@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mftrace
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.15 2004/08/28 15:50:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.16 2004/09/02 08:50:11 usata Exp $
+
+  02 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> mftrace-1.0.31.ebuild,
+  mftrace-1.0.33.ebuild, mftrace-1.0.34.ebuild:
+  Added media-gfx/potrace to an alternative to media-gfx/autotrace.
 
 *mftrace-1.0.34 (29 Aug 2004)
 
@@ -12,7 +16,7 @@
   mftrace-1.0.33.ebuild:
   Added to ~sparc.
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mftrace-1.0.31.ebuild:
+  04 Jul 2004; Bryan ƒŠstergaard <kloeri@gentoo.org> mftrace-1.0.31.ebuild:
   Stable on alpha.
 
 *mftrace-1.0.33 (24 Jun 2004)
