@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.2 2003/05/09 10:33:46 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.3 2003/06/06 14:52:12 kosmikus Exp $
 
 DESCRIPTION="Helium (for learning Haskell)"
 SRC_URI="http://www.cs.uu.nl/~afie/helium/distr/${P}-src.tar.gz
@@ -28,6 +28,11 @@ src_unpack() {
 	if [ "`use readline`" ]; then
 		patch -p0 -i ${FILESDIR}/${P}-readline.patch || die
 	fi
+	# fix one file due to GHC 6.0's Template Haskell extension
+	einfo modifying ParsecPerm to ensure compatibility with GHC 6.0
+	cd ${S}/parsec
+	mv ParsecPerm.hs ParsecPerm.hs.orig
+	sed -e 's/(\$/(\$ /' ParsecPerm.hs.orig > ParsecPerm.hs
 }
       
 src_compile() {
