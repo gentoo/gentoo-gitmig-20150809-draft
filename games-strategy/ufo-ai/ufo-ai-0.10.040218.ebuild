@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.14 2004/09/03 08:40:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.15 2004/11/03 00:33:52 vapier Exp $
 
 inherit eutils games flag-o-matic
 
@@ -11,14 +11,16 @@ SRC_URI="http://n.ethz.ch/student/dbeyeler/download/ufoai_source_040218.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 	virtual/x11
 	media-libs/jpeg
 	media-libs/libvorbis
 	media-libs/libogg"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S="${WORKDIR}"
 

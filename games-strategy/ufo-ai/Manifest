@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4495fa75bf9fb8dae051c21df8886557 ChangeLog 1378
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 c30797704fc61b90e589898a5de68f88 ufo-ai-0.10.040218.ebuild 1410
+MD5 2fb86bb5b3bc76d9b4d9b896a386281a ufo-ai-0.10.040218.ebuild 1444
 MD5 6ca39990b18a4bf10c112bb43983024e files/0.10.040218-Makefile.patch 1759
 MD5 741c23ff1ac99c9aaf9ffead77cf26c4 files/digest-ufo-ai-0.10.040218 135
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCeWHTu7gpaalycRAuStAKCEN7ozbEIC1mtYxIw9AH5TCisP1wCgiyzH
+W7VwX69k+qpP+zRmKC0P+1s=
+=1qxc
+-----END PGP SIGNATURE-----
