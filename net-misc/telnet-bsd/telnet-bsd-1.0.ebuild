@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.0.ebuild,v 1.12 2004/02/05 23:41:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.0.ebuild,v 1.13 2004/04/18 14:02:40 lv Exp $
 
 inherit eutils
 EPATCH_SOURCE="${FILESDIR}"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.suse.com/pub/people/kukuk/ipv6/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa ~amd64"
+KEYWORDS="x86 ~ppc sparc alpha hppa amd64"
 
 DEPEND="virtual/glibc"
 
