@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r4.ebuild,v 1.11 2002/07/11 06:30:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r4.ebuild,v 1.12 2002/07/16 03:49:32 gerk Exp $
 
 S=${WORKDIR}/Linux-PAM-${PV}
 S2=${WORKDIR}/pam
@@ -8,7 +8,7 @@ DESCRIPTION="Pluggable Authentication Modules"
 SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.tar.gz"
 HOMEPAGE="http://www.redhat.com/linux-info/pam/"
 LICENSE="PAM"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SLOT="0"
 
 DEPEND=">=sys-libs/cracklib-2.7-r3

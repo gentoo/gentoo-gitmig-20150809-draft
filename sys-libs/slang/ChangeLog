@@ -1,8 +1,11 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.4 2002/03/21 11:04:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.5 2002/07/16 03:46:04 gerk Exp $
 
 *slang-1.4.5-r2 (21 Mar 2002)
+
+	15 Jul 2002; Mark Guertin <gerk@gentoo.org>
+	Added ppc to keywords
 
 	21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> slang-1.4.5-r2.ebuild :
 

@@ -1,7 +1,10 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.6 2002/04/12 18:56:05 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.7 2002/07/16 03:49:32 gerk Exp $
 
+
+  15 Jul 2002; Mark Guertin <gerk@gentoo.org>
+  Added ppc to keywords
 
   11 Apr 2002; Spider <spider@gentoo.org>
   Update all glib dependencies to use glib-1.2*  in preparation of unmasking the glib-2.0.1 packages
