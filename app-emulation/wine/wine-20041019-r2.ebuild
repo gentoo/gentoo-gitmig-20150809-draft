@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r2.ebuild,v 1.4 2004/11/01 03:44:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r2.ebuild,v 1.5 2004/11/01 03:47:54 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -78,8 +78,9 @@ src_compile() {
 	#	$(use_enable amd64 win64)
 	econf \
 		--sysconfdir=/etc/wine \
-		$(use_enable ncurses curses) \
-		$(use_enable opengl) \
+		$(use_with ncurses curses) \
+		$(use_with opengl) \
+		$(use_with X x) \
 		$(use_enable debug trace) \
 		$(use_enable debug) \
 		|| die "configure failed"
