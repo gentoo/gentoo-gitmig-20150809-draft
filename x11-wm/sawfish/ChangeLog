@@ -1,6 +1,16 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.5 2002/04/02 22:23:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.6 2002/05/22 18:28:42 spider Exp $
+
+
+*sawfish-1.0.1-r4 (21 May 2002) 
+  21 May 2002; Spider <spider@gentoo.org> sawfish-1.0.1-r4.ebuild ChangeLog :
+  fix broken changelog entry
+  move rep-gtk to x11-libs
+
+sawfish-1.0.1-r3 (9 Apr 2002)
+  9 Apr ; Spider <spider@gentoo.org> :
+  Fix >=x11-lib/gtk+-1.2.nn to =x11-lib/gtk+-1.2*
 
 *sawfish-1.0.1-r3 (2 April 2002)
 
