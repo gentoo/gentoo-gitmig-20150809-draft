@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.2 2004/11/16 02:30:16 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.3 2004/12/13 06:35:06 fafhrd Exp $
+
+inherit toolchain-funcs eutils
 
 ECLASS=gnustep-funcs
 INHERITED="$INHERITED $ECLASS"
@@ -221,5 +223,98 @@ egnustep_doc() {
 	cd ..
 	return 0
 }
+
+###########################################################################
+# Tests
+# -----
+
+objc_available() {
+	export OBJC_TEST="${TMP}/objc_test.m"
+	cat > "${OBJC_TEST}" << EOF
+/**
+ * This example taken from the tutorial at:
+ * http://gnustep.made-it.com/GSPT/xml/Tutorial_en.html
+ <quote>
+ A GNUstep Programming Tutorial
+ Time is on our side...
+ Yen-Ju Chen
+ Dennis Leeuw
+
+ Copyright © 2003 Yen-Ju Chen, Dennis Leeuw
+
+ Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+ </quote>
+ */
+#include <objc/Object.h>
+@interface Greeter:Object
+{
+	/* This is left empty on purpose:
+	 * Normally instance variables would be declared here,
+	 * but these are not used in our example.
+	 */
+}
+- (void)greet;
+@end
+
+#include <stdio.h>
+@implementation Greeter
+- (void)greet
+{
+	printf("Hello, World!\n");
+}
+@end
+
+#include <stdlib.h>
+int main(void)
+{
+	id myGreeter;
+	myGreeter=[Greeter new];
+	[myGreeter greet];
+	[myGreeter free];
+	return EXIT_SUCCESS;
+}
+EOF
+
+	local available
+	available="yes"
+	eval $(tc-getCC) ${OBJC_TEST} -o ${OBJC_TEST}-out -lobjc || available="no"
+
+	echo ${available}
+}
+
+objc_not_available_info() {
+	einfo "gcc must be compiled with Objective-C support! See the objc USE flag."
+	einfo "NOTE: if you have to recompile gcc anyway, now may be the time to also add the 'gcj' use flag, so that libffi will also be compiled.  Any gcc-3 version with 'gcj' should work, however, if you are testing >=gcc-3.4.3-r1 'objc' USE flag on should also install libffi."
+}
+
+ffi_available() {
+	export FFI_TEST="${TMP}/ffi_test.m"
+	cat > "${FFI_TEST}" << EOF
+#include <ffi.h>
+
+int main(int argc, char *argv[])
+{
+	int n = argc;
+
+	return 0;
+}
+EOF
+
+	local available
+	available="yes"
+	# XXX
+	# Support dev-libs/libffi until it is deprecate
+	# (not that these -I and -L really matter
+	eval $(tc-getCC) ${FFI_TEST} -o ${FFI_TEST}-out -lffi || available="no"
+
+	echo ${available}
+}
+
+ffi_not_available_info() {
+	einfo "Your FFI libraries and headers seem to be installed incorrectly."
+	einfo "This is not as bad as it sounds -- not many projects use libffi at the moment, and gcc may have installed the headers in an inavailable place.  Especially check for 'ffi.h' in your /usr/lib/gcc/\"\$CHOST\"/\"gcc-version\"/include directory, and that any other ffi related files it #include's (e.g. 'ffitarget.h') are in that directory as well; this can be solved by moving the files, or with a symlink.  This is a quick fix, and newer ebuilds of gcc should install the files in the correct places, but for now, it could save you a recompilation of gcc."
+	einfo "If this still fails for you, consider not using the 'gcc-libffi' USE flag and letting dev-libs/libffi build as a dependency.  It is important that either 'gcj' is a USE flag for gcc, or 'gcj' or 'objc' for >=gcc-3.4.3-r1."
+}
+
 ###########################################################################
 

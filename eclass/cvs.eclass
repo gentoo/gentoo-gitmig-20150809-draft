@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.53 2004/10/19 19:51:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.54 2004/12/13 06:35:06 fafhrd Exp $
 
 # Current Maintainer: Tal Peer <coredumb@gentoo.org>
 # Original Author:    Dan Armak <danarmak@gentoo.org>
@@ -345,7 +345,7 @@ cvs_fetch() {
 			einfo "Running $cmdcheckout" 
 			eval $cmdcheckout|| die "cvs checkout command failed"
 		fi
-	elif [ "${ECVS_AUTH}" == "ext" ]; then
+	elif [ "${ECVS_AUTH}" == "ext" ] || [ "${ECVS_AUTH}" == "no" ]; then
 
 		# Hack to support SSH password authentication
 
@@ -387,6 +387,13 @@ except:
 newarglist = sys.argv[:]
 EOF
 
+			# disable X11 forwarding which causes .xauth access violations
+			# - 20041205 Armando Di Cianno <fafhrd@gentoo.org>
+			echo "newarglist.insert(1, '-oClearAllForwardings=yes')" \
+				>> "${CVS_RSH}"
+			echo "newarglist.insert(1, '-oForwardX11=no')" \
+				>> "${CVS_RSH}"
+
 			# Handle SSH host key checking
 
 			local CVS_ECLASS_KNOWN_HOSTS="${T}/cvs_ssh_known_hosts"
@@ -398,8 +405,6 @@ EOF
 				einfo "A temporary known hosts list will be used."
 				local CVS_ECLASS_STRICT_HOST_CHECKING="no"
 				touch "${CVS_ECLASS_KNOWN_HOSTS}"
-				echo "newarglist.insert(1, '-oStrictHostKeyChecking=no')" \
-					>> "${CVS_RSH}"
 			else
 				local CVS_ECLASS_STRICT_HOST_CHECKING="yes"
 				echo "${ECVS_SSH_HOST_KEY}" > "${CVS_ECLASS_KNOWN_HOSTS}"
@@ -423,10 +428,14 @@ EOF
 			# Create a dummy executable to echo $ECVS_PASS
 
             export SSH_ASKPASS="${T}/cvs_sshechopass"
+			if [ "${ECVS_AUTH}" != "no" ]; then
+				echo -en "#!/bin/bash\necho \"$ECVS_PASS\"\n" \
+					> "${SSH_ASKPASS}"
+			else
+				echo -en "#!/bin/bash\nreturn\n" \
+					> "${SSH_ASKPASS}"
 
-			echo -en "#!/bin/bash\necho \"$ECVS_PASS\"\n" \
-				> "${SSH_ASKPASS}"
-
+			fi
 			chmod a+x "${SSH_ASKPASS}"
 		fi
             
@@ -450,14 +459,6 @@ EOF
 			export DISPLAY="${CVS_ECLASS_ORIG_DISPLAY}"
 		else
 			unset DISPLAY
-		fi
-	elif [ "${ECVS_AUTH}" == "no" ]; then
-		if [ "${mode}" == "update" ]; then
-			einfo "Running $cmdupdate"
-			eval $cmdupdate || die "cvs update command failed"
-		elif [ "${mode}" == "checkout" ]; then
-			einfo "Running $cmdcheckout" 
-			eval $cmdcheckout|| die "cvs checkout command failed"
 		fi
 	fi
 
