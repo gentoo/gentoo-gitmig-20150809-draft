@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/verynice-1.1.ebuild,v 1.6 2004/10/25 23:15:08 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/verynice-1.1.ebuild,v 1.7 2005/01/01 11:33:58 eradicator Exp $
 
 DESCRIPTION="A tool for dynamically adjusting the nice-level of processes"
 HOMEPAGE="http://www.tam.cornell.edu/~sdh4/verynice/"

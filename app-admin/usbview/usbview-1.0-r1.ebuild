@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-1.0-r1.ebuild,v 1.19 2004/07/12 22:25:41 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-1.0-r1.ebuild,v 1.20 2005/01/01 11:33:15 eradicator Exp $
 
 DESCRIPTION="Display the topology of devices on the USB bus"
 HOMEPAGE="http://www.kroah.com/linux-usb/"

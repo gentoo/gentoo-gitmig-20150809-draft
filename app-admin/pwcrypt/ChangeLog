@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/pwcrypt
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwcrypt/ChangeLog,v 1.6 2004/12/18 18:35:21 blubb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwcrypt/ChangeLog,v 1.7 2005/01/01 11:20:57 eradicator Exp $
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> pwcrypt-1.2.2.ebuild:
   was testing for more than half a year, marking stable on amd64

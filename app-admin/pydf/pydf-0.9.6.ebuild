@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/pydf-0.9.6.ebuild,v 1.8 2004/12/29 15:33:42 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/pydf-0.9.6.ebuild,v 1.9 2005/01/01 11:21:39 eradicator Exp $
 
 DESCRIPTION="Enhanced df with colors"
 HOMEPAGE="http://melkor.dnp.fmph.uniba.sk/~garabik/pydf"

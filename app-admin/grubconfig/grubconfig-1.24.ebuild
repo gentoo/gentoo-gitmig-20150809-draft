@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/grubconfig-1.24.ebuild,v 1.1 2004/12/31 03:09:27 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/grubconfig-1.24.ebuild,v 1.2 2005/01/01 11:04:14 eradicator Exp $
 
 DESCRIPTION="Simple Tool to configure Grub-Bootloader"
 HOMEPAGE="http://www.tux.org/pub/people/kent-robotti/looplinux/index.html"

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/profiler
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/profiler/ChangeLog,v 1.6 2004/10/16 23:06:48 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/profiler/ChangeLog,v 1.7 2005/01/01 11:19:59 eradicator Exp $
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> profiler-1.ebuild:
   dojar --> java-pkg_dojar

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta12.ebuild,v 1.1 2004/10/24 23:49:22 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta12.ebuild,v 1.2 2005/01/01 11:05:22 eradicator Exp $
 
 MY_P=${P/_beta/-beta}
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/usbview
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/ChangeLog,v 1.8 2004/07/12 22:25:41 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/ChangeLog,v 1.9 2005/01/01 11:33:15 eradicator Exp $
 
   12 Jul 2004; Tom Gall <tgall@gentoo.org> usbview-1.0-r1.ebuild:
   add ~ppc64, bug #56697

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/killproc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.11 2004/07/23 09:31:40 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.12 2005/01/01 11:07:21 eradicator Exp $
 
   23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   killproc-1.12-r2.ebuild:

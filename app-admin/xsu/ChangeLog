@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/xsu
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu/ChangeLog,v 1.7 2004/06/24 21:43:16 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu/ChangeLog,v 1.8 2005/01/01 11:36:33 eradicator Exp $
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> xsu-0.2.3.ebuild:
   Removed S=.

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/gnomesu
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/ChangeLog,v 1.11 2004/11/13 22:23:08 hardave Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/ChangeLog,v 1.12 2005/01/01 11:02:19 eradicator Exp $
 
   13 Nov 2004; Hardave Riar <hardave@gentoo.org> gnomesu-0.3.1.ebuild:
   Marked ~mips

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/whowatch
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.10 2004/06/24 21:43:00 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.11 2005/01/01 11:35:57 eradicator Exp $
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> whowatch-1.5.2.ebuild:
   Add die following econf for bug 48950

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.11.ebuild,v 1.1 2004/12/24 21:07:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.11.ebuild,v 1.2 2005/01/01 10:57:12 eradicator Exp $
 
 inherit ssl-cert
 

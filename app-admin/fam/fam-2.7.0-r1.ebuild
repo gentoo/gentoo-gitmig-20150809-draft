@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r1.ebuild,v 1.12 2004/11/22 02:51:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r1.ebuild,v 1.13 2005/01/01 10:58:49 eradicator Exp $
 
 inherit libtool eutils gnuconfig
 

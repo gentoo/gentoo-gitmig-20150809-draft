@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.12.ebuild,v 1.9 2004/11/16 07:00:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.12.ebuild,v 1.10 2005/01/01 10:55:06 eradicator Exp $
 
 DESCRIPTION="A realtime Apache log analyzer"
 HOMEPAGE="http://clueful.shagged.org/apachetop/"

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/systemconfigurator
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/systemconfigurator/ChangeLog,v 1.8 2004/10/05 02:58:11 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/systemconfigurator/ChangeLog,v 1.9 2005/01/01 11:30:54 eradicator Exp $
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   systemconfigurator-2.0.9.ebuild:

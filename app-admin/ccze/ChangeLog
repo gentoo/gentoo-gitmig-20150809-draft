@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/ccze
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.7 2004/12/18 17:21:58 blubb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.8 2005/01/01 10:56:28 eradicator Exp $
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> ccze-0.2.1.ebuild:
   was unstable for over a year without bug reports, marking stable on amd64

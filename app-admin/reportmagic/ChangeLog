@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/reportmagic
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/reportmagic/ChangeLog,v 1.6 2004/10/05 02:58:11 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/reportmagic/ChangeLog,v 1.7 2005/01/01 11:23:38 eradicator Exp $
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   reportmagic-2.21.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/pam_dotfile
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pam_dotfile/ChangeLog,v 1.6 2004/10/05 02:58:11 pvdabeel Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pam_dotfile/ChangeLog,v 1.7 2005/01/01 11:16:19 eradicator Exp $
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   pam_dotfile-0.7.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/tripwire
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.13 2004/12/18 13:44:10 taviso Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.14 2005/01/01 11:32:20 eradicator Exp $
 
   18 Dec 2004; Tavis Ormandy <taviso@gentoo.org> tripwire-2.3.1.2-r1.ebuild:
   die if no binaries were created.

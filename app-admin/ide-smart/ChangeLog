@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/ide-smart
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ChangeLog,v 1.10 2004/12/31 03:32:18 chriswhite Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ChangeLog,v 1.11 2005/01/01 11:06:05 eradicator Exp $
 
   31 Dec 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   I like this package so I choose to maintain it.

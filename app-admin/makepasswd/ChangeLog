@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/makepasswd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/makepasswd/ChangeLog,v 1.11 2004/06/24 21:31:24 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/makepasswd/ChangeLog,v 1.12 2005/01/01 11:10:29 eradicator Exp $
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> makepasswd-1.10.ebuild:
   adding s390 keywords

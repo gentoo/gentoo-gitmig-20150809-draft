@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/sudo
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.37 2004/12/18 11:22:28 taviso Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.38 2005/01/01 11:27:31 eradicator Exp $
 
   18 Dec 2004; Tavis Ormandy <taviso@gentoo.org> files/sudoers:
   add suoders warnings

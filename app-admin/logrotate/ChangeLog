@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/logrotate
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.31 2004/12/31 04:26:24 chriswhite Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.32 2005/01/01 11:08:57 eradicator Exp $
 
 *logrotate-3.7 (31 Dec 2004)
 

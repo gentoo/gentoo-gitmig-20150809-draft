@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/testdisk
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.6 2004/07/20 05:43:49 robbat2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.7 2005/01/01 11:31:34 eradicator Exp $
 
   19 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   add metadata.xml

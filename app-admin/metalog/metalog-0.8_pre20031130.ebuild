@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.8_pre20031130.ebuild,v 1.14 2004/09/21 22:30:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.8_pre20031130.ebuild,v 1.15 2005/01/01 11:11:21 eradicator Exp $
 
 DESCRIPTION="A highly configurable replacement for syslogd/klogd"
 HOMEPAGE="http://metalog.sourceforge.net/"

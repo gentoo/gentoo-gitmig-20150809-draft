@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-1.12-r2.ebuild,v 1.21 2004/07/23 09:31:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-1.12-r2.ebuild,v 1.22 2005/01/01 11:07:21 eradicator Exp $
 
 DESCRIPTION="killproc and assorted tools for boot scripts"
 HOMEPAGE="http://www.suse.de/"

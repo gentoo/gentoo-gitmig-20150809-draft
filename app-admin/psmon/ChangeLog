@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/psmon
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.5 2004/10/05 02:58:11 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.6 2005/01/01 11:20:20 eradicator Exp $
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> psmon-1.0.4.ebuild:
   Masked psmon-1.0.4.ebuild stable for ppc

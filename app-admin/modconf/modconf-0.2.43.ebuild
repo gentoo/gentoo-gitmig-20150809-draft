@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modconf/modconf-0.2.43.ebuild,v 1.8 2004/10/05 02:58:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modconf/modconf-0.2.43.ebuild,v 1.9 2005/01/01 11:11:43 eradicator Exp $
 
 # Some notes:  This should rather depend on dev-libs/newt, and use whiptail,
 #              not dev-util/dialog.

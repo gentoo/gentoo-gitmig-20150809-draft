@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/passook
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/ChangeLog,v 1.10 2004/06/24 21:33:42 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/ChangeLog,v 1.11 2005/01/01 11:16:59 eradicator Exp $
 
   29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> passook-1.0.0.ebuild:
   inherit eutils for epatch

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.10-r1.ebuild,v 1.9 2004/10/05 02:58:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.10-r1.ebuild,v 1.10 2005/01/01 11:12:42 eradicator Exp $
 
 MY_FILESDIR="${FILESDIR}/${PV%.*}"
 THEMES_VERSION="0.0.5"

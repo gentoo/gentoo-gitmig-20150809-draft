@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/sdsc-syslog-1.0.2.ebuild,v 1.5 2004/11/19 07:13:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/sdsc-syslog-1.0.2.ebuild,v 1.6 2005/01/01 11:24:48 eradicator Exp $
 
 DESCRIPTION="SDSC Secure Syslog provides RFC3080 and RFC3081 logging services"
 HOMEPAGE="http://security.sdsc.edu/software/sdsc-syslog/"

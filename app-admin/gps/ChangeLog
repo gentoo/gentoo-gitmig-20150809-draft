@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/gps
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/ChangeLog,v 1.10 2004/12/30 21:27:56 seemant Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/ChangeLog,v 1.11 2005/01/01 11:03:19 eradicator Exp $
 
   30 Dec 2004; Seemant Kulleen <seemant@gentoo.org>
   -files/gps-1.1.0-gentoo.bz2, gps-1.1.0-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-5.3.ebuild,v 1.2 2004/07/17 19:08:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-5.3.ebuild,v 1.3 2005/01/01 11:31:34 eradicator Exp $
 
 DESCRIPTION="Multi-platform tool to check and undelete partition, supports reiserfs, ntfs, fat32, ext2/3 and many others"
 HOMEPAGE="http://www.cgsecurity.org/index.html?testdisk.html"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.3.0b-r1.ebuild,v 1.1 2004/12/30 21:37:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.3.0b-r1.ebuild,v 1.2 2005/01/01 10:55:22 eradicator Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kiosktool/kiosktool-0.9.ebuild,v 1.5 2004/11/23 15:08:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kiosktool/kiosktool-0.9.ebuild,v 1.6 2005/01/01 11:07:43 eradicator Exp $
 
 inherit kde
 need-kde 3.2

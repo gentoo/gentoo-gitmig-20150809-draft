@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/procman
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/ChangeLog,v 1.11 2004/11/17 16:39:52 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/ChangeLog,v 1.12 2005/01/01 11:19:40 eradicator Exp $
 
   17 Nov 2004; Mike Frysinger <vapier@gentoo.org> -procman-0.99.0.ebuild,
   procman-1.0.ebuild:

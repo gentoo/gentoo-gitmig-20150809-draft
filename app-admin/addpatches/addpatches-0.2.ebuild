@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/addpatches/addpatches-0.2.ebuild,v 1.19 2004/06/24 21:22:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/addpatches/addpatches-0.2.ebuild,v 1.20 2005/01/01 10:53:48 eradicator Exp $
 
 DESCRIPTION="patch management script"
 HOMEPAGE="http://www.gentoo.org/"

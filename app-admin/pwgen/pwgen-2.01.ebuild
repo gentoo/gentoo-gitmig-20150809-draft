@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.01.ebuild,v 1.21 2004/06/25 20:38:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.01.ebuild,v 1.22 2005/01/01 11:21:22 eradicator Exp $
 
 DESCRIPTION="Password Generator"
 HOMEPAGE="http://sourceforge.net/projects/pwgen/"

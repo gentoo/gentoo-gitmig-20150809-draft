@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/xtail-2.1.ebuild,v 1.17 2004/06/25 23:07:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/xtail-2.1.ebuild,v 1.18 2005/01/01 11:37:12 eradicator Exp $
 
 DESCRIPTION="Tail multiple logfiles at once, even if rotated"
 HOMEPAGE="http://www.unicom.com/sw/xtail/"

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/bastille
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.12 2004/12/28 19:32:44 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.13 2005/01/01 10:56:15 eradicator Exp $
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   bastille-2.1.1-r1.ebuild, bastille-2.1.1-r2.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/cronolog
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.10 2004/12/31 02:16:13 chriswhite Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.11 2005/01/01 10:57:40 eradicator Exp $
 
   31 Dec 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Adding a metadata.xml file.  This should probably go to apache people.

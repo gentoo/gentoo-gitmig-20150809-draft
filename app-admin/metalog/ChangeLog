@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/metalog
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.35 2004/06/25 22:09:38 kugelfang Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.36 2005/01/01 11:11:21 eradicator Exp $
 
   26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
   metalog-0.8_pre20031130.ebuild:
