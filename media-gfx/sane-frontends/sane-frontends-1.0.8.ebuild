@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/sane-frontends-1.0.8.ebuild,v 1.6 2002/10/04 05:45:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/sane-frontends-1.0.8.ebuild,v 1.7 2002/10/04 06:43:12 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Scanner Access Now Easy"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.mostang.com/pub/sane/sane-${PV}/${P}.tar.gz"
 DEPEND=">=media-gfx/sane-backends-1.0.8"
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
 src_compile() {
