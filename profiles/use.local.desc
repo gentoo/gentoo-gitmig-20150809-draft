@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.659 2004/09/30 19:49:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.660 2004/09/30 23:08:51 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -333,7 +333,6 @@ media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transform
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
 media-libs/gd:freetype-version-1 - if for some reason you want to use freetype v1 instead of v2
 media-libs/libao:mmap - (experimental) Enable memory-mapped I/O
-media-libs/libsamplerate:sndfile - support for libsndfile is added
 media-libs/libsdl:libcaca - Add support for colored ASCII-art graphics
 media-libs/libsdl:noaudio - Allow users to disable audio support completely (at their own risk)
 media-libs/libsdl:nojoystick - Allow users to disable joystick support completely (at their own risk)
