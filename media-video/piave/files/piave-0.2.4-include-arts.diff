@@ -1,0 +1,24 @@
+diff -u piave-0.2.4/aclocal.m4 piave-0.2.4.sav/aclocal.m4
+--- piave-0.2.4/aclocal.m4	2004-03-07 12:17:26.000000000 +0100
++++ piave-0.2.4.sav/aclocal.m4	2004-03-20 17:42:47.000000000 +0100
+@@ -9254,7 +9254,7 @@
+     no_arts=yes
+   else
+     # FIXME : thomas added this sed to get arts path instead of artsc
+-    ARTS_CXXFLAGS=`$ARTS_CONFIG $artsconf_args --cflags | sed 's/artsc$/arts/'`
++    ARTS_CXXFLAGS=`$ARTS_CONFIG $artsconf_args --cflags | sed 's/artsc /arts /'`
+     ARTS_LIBS=`$ARTS_CONFIG $artsconf_args --libs | sed 's/artsc$/arts/'`
+ 
+     arts_major_version=`$ARTS_CONFIG $arts_args --version | \
+diff -u piave-0.2.4/configure piave-0.2.4.sav/configure
+--- piave-0.2.4/configure	2004-03-07 12:17:38.000000000 +0100
++++ piave-0.2.4.sav/configure	2004-03-20 17:42:54.000000000 +0100
+@@ -25947,7 +25947,7 @@
+     no_arts=yes
+   else
+     # FIXME : thomas added this sed to get arts path instead of artsc
+-    ARTS_CXXFLAGS=`$ARTS_CONFIG $artsconf_args --cflags | sed 's/artsc$/arts/'`
++    ARTS_CXXFLAGS=`$ARTS_CONFIG $artsconf_args --cflags | sed 's/artsc /arts /'`
+     ARTS_LIBS=`$ARTS_CONFIG $artsconf_args --libs | sed 's/artsc$/arts/'`
+ 
+     arts_major_version=`$ARTS_CONFIG $arts_args --version | \
