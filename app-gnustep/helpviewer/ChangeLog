@@ -1,6 +1,9 @@
 # ChangeLog for app-gnustep/helpviewer
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/helpviewer/ChangeLog,v 1.2 2003/10/18 20:22:53 raker Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/helpviewer/ChangeLog,v 1.3 2004/04/17 19:43:33 aliz Exp $
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> helpviewer-0.3.ebuild:
+  Added IUSE=
 
   18 Oct 2003; Nick Hadaway <raker@gentoo.org> helpviewer-0.3.ebuild:
   Fixed the policy violation of setting ${A}
