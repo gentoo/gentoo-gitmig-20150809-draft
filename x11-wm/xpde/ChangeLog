@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/xpde
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/ChangeLog,v 1.5 2003/06/23 11:56:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/ChangeLog,v 1.6 2003/08/15 08:06:02 seemant Exp $
+
+*xpde-0.4.0 (15 Aug 2003)
+
+  15 Aug 2003; Seemant Kulleen <seemant@gentoo.org> xpde-0.1.1.ebuild,
+  xpde-0.2.0.ebuild, xpde-0.3.0.ebuild, xpde-0.4.0.ebuild:
+  version bump
 
 *xpde-0.3.5 (23 Jun 2003)
 
