@@ -1,8 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.2-r2.ebuild,v 1.2 2003/03/26 14:30:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.2-r3.ebuild,v 1.1 2003/03/27 19:23:18 azarah Exp $
 
 IUSE="nls build"
+
+inherit eutils
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="GNU awk pattern-matching language"
@@ -21,6 +23,14 @@ src_unpack() {
 
 	# Copy filefuncs module's source over ...
 	cp -a ${FILESDIR}/filefuncs ${WORKDIR}/ || die
+
+	cd ${S}
+	# Special files like those in /proc, report themselves as regular files
+	# of length 0, when in fact they have data in them if you try to read them.
+	# The new record-reading code wasn't quite smart enough to deal with such
+	# a bizarre case.  The following patch fixes the problem, thanks to 
+	# Arnold D. Robbins (Maintainer of gawk).
+	epatch ${FILESDIR}/${P}-input-filesize.patch
 }
 
 src_compile() {

@@ -1,10 +1,19 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.17 2003/03/26 14:30:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.18 2003/03/27 19:23:18 azarah Exp $
+
+*gawk-3.1.2-r3 (27 Mar 2003)
+
+  27 Mar 2003; Martin Schlemmer <azarah@gentoo.org> gawk-3.1.2-r3.ebuild :
+  Special files like those in /proc, report themselves as regular files
+  of length 0, when in fact they have data in them if you try to read them.
+  The new record-reading code wasn't quite smart enough to deal with such
+  a bizarre case.  The following patch fixes the problem, thanks to 
+  Arnold D. Robbins (Maintainer of gawk).
 
 *gawk-3.1.1-r2 (26 Mar 2003)
 
-  26 Mar 2003; Martin Schlemmer <azarah@gentoo.org> gawk-3.1.2-r1.ebuild :
+  26 Mar 2003; Martin Schlemmer <azarah@gentoo.org> gawk-3.1.1-r2.ebuild :
   For some reason gawk-3.1.2 is more pain than worth.  Seems this release
   also borks the ability to specify input files as arguments:
 
