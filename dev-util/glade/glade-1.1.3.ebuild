@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-1.1.3.ebuild,v 1.3 2003/02/13 11:52:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-1.1.3.ebuild,v 1.4 2003/02/27 11:37:14 spider Exp $
 
 IUSE="nls gnome"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc "
 
 DEPEND="=x11-libs/gtk+-2*
-	=dev-libs/libxml2-2.4*
+	>=dev-libs/libxml2-2.4
 	gnome? ( >=gnome-base/libgnomeui-2.0.0
 		>=gnome-base/libgnomecanvas-2.0.0
 		>=gnome-base/libbonoboui-2.0.0
