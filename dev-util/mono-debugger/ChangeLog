@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mono-debugger
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.1 2003/07/19 22:18:57 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.2 2003/07/25 13:12:03 tberman Exp $
+
+  25 Jul 2003; Todd Berman <tberman@gentoo.org> mono-debugger-0.4.ebuild:
+  changing mono depend to reflect mono's new location
 
 *mono-debugger-0.4 (19 Jul 2003)
 
