@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/plt/plt-202.ebuild,v 1.7 2003/09/27 02:22:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/plt/plt-202.ebuild,v 1.8 2003/12/12 07:49:50 brandy Exp $
 
 DESCRIPTION="PLT Scheme, including DrScheme, mzscheme, mred, and mzc"
 HOMEPAGE="http://www.plt-scheme.org/software/drscheme/"
@@ -16,6 +16,12 @@ DEPEND="virtual/glibc
 	sys-devel/binutils"
 
 S=${WORKDIR}/${PN}/src
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc3.3.patch.tar.bz2
+}
 
 src_compile() {
 	./configure \
