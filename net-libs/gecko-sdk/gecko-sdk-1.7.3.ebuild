@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.3.ebuild,v 1.4 2004/12/28 20:33:00 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.3.ebuild,v 1.5 2005/01/29 08:34:22 vapier Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozilla makeedit
@@ -18,7 +18,7 @@ MY_PV=${MY_PV/_rc/rc}	# handle rc
 DESCRIPTION="Gecko SDK"
 HOMEPAGE="http://www.mozilla.org"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla${MY_PV}/src/mozilla-source-${MY_PV}.tar.bz2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc amd64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 RDEPEND=""
