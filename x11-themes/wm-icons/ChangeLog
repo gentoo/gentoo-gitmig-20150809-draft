@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/wm-icons
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.9 2004/06/28 22:55:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.10 2004/08/08 01:09:21 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> :
+  Typo in DESCRIPTION: beutiful -> beautiful. Bug 59717.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> wm-icons-0.3.0.ebuild:
   add sed-4 dep

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/qtpixmap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtpixmap/ChangeLog,v 1.10 2004/07/03 14:45:52 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtpixmap/ChangeLog,v 1.11 2004/08/08 01:08:28 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> qtpixmap-0.25.ebuild,
+  qtpixmap-0.26.ebuild, qtpixmap-0.27.ebuild, qtpixmap-0.28.ebuild:
+  Typo in DESCRIPTION: modifed -> modified. Bug 59717.
 
 *qtpixmap-0.28 (03 Jul 2004)
 
