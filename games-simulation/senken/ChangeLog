@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/senken
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/senken/ChangeLog,v 1.4 2004/06/24 23:23:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/senken/ChangeLog,v 1.5 2004/09/19 08:29:29 mr_bones_ Exp $
+
+  19 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> senken-0.3.0.ebuild:
+  fix deps for bug #64599; tidy
 
 *senken-0.3.0 (06 Mar 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/senken/senken-0.3.0.ebuild,v 1.2 2004/06/24 23:23:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/senken/senken-0.3.0.ebuild,v 1.3 2004/09/19 08:29:29 mr_bones_ Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 IUSE="nls"
 
 RDEPEND="virtual/x11
-	=x11-libs/gtk+-1*
+	>=x11-libs/gtk+-2
 	>=media-libs/libsdl-1.2.4
 	media-libs/sdl-image"
 DEPEND="${RDEPEND}
@@ -22,14 +22,15 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S} && \
+	cd "${S}"
 	sed -i \
 		-e "s:/usr/local/share:${GAMES_DATADIR}:" \
-		lib/utils.h || die "sed lib/utils.h failed"
+		lib/utils.h \
+		|| die "sed lib/utils.h failed"
 
 }
 src_compile() {
-	egamesconf `use_enable nls` || die
+	egamesconf $(use_enable nls) || die
 	emake || die "emake failed"
 }
 
@@ -38,12 +39,12 @@ src_install() {
 	dodoc AUTHORS README TODO
 
 	dodir "${GAMES_DATADIR}"
-	cd "${D}/${GAMES_PREFIX}"
-	mv share/senken "${D}/${GAMES_DATADIR}/"
-	rm -rf include lib man share
+	mv "${D}/${GAMES_PREFIX}/share/senken" "${D}/${GAMES_DATADIR}/" \
+		|| die "mv failed"
+	rm -rf "${D}/${GAMES_PREFIX}"/{include,lib,man,share}
 
-	insinto ${GAMES_DATADIR}/senken/img
-	doins ${S}/img/*.png
+	insinto "${GAMES_DATADIR}/senken/img"
+	doins img/*.png
 
 	find "${D}/${GAMES_DATADIR}/" -type f -exec chmod a-x \{\} \;
 	find "${D}/${GAMES_DATADIR}/" -name "Makefile.*" -exec rm -f \{\} \;
