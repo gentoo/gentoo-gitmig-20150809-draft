@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.53 2003/07/11 20:34:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.54 2003/07/18 19:19:15 tester Exp $
+
+  18 Jul 2003; Olivier Crete <tester@gentoo.org> cdrtools-2.01_alpha14.ebuild,
+  cdrtools-2.01_alpha16.ebuild:
+  Create config for amd64 by copying x86. Added amd64 keyword.
 
   08 Jul 2003; Will Woods <wwoods@gentoo.org> cdrtools-2.01_alpha16.ebuild:
   Added ~alpha to KEYWORDS for the same reason as below.

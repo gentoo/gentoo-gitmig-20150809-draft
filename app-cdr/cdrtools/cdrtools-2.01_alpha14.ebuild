@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha14.ebuild,v 1.2 2003/05/16 17:16:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha14.ebuild,v 1.3 2003/07/18 19:19:15 tester Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc hppa"
+KEYWORDS="x86 ppc hppa amd64"
 
 DEPEND="virtual/glibc"
 PROVIDE="virtual/cdrtools"
@@ -28,6 +28,10 @@ src_unpack() {
 	cd ${S}/DEFAULTS
 	sed -e "s:/opt/schily:/usr:g" < Defaults.linux > Defaults.linux.hacked
 	mv Defaults.linux.hacked Defaults.linux
+
+	cd ${S}/RULES
+	cp i386-linux-cc.rul x86_64-linux-cc.rul
+	cp i386-linux-gcc.rul x86_64-linux-gcc.rul
 }
 
 src_compile() {
