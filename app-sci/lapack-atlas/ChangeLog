@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/lapack-atlas
+# Copyright 2004 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/ChangeLog,v 1.1 2004/05/12 03:05:59 george Exp $
+
+*lapack-atlas-3.6.0.ebuild (11 May 2004)
+
+  11 May 2004; George Shapovalov <george@gentoo.org> lapack-atlas-3.6.0.ebuild, Manifest, files/{atlas3.6.0-shared-libs.patch.bz2,digest-lapack-atlas-3.6.0,f77-ATLAS,lapack-20020531-20021004.patch.bz2,lapack-gentoo.patch,war} :
+  initial release (#30459)
+  Full LAPACK implementation using available ATLAS routines
+  ebuild submitted by Derek Dolney <dolney@astro.upenn.edu>
