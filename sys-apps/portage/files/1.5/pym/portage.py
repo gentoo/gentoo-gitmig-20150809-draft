@@ -936,6 +936,9 @@ def dep_listcleanup(deplist):
 	
 def dep_frontend(mytype,depstring):
 	"""ebuild frontend for dependency system"""
+	global ebuild_intialized
+	if ebuild_initialized==0:
+		ebuild_init()
 	if depstring=="":
 		print ">>> No",mytype,"dependencies."
 		return 0
@@ -1798,7 +1801,7 @@ def pkgmerge(mytbz2):
 
 def ebuild_init():
 	"performs db/variable initialization for the ebuild system.  Not required for other scripts."
-	global configdefaults, configsettings, currtree, roottree, localtree, porttree
+	global configdefaults, configsettings, currtree, roottree, localtree, porttree, ebuild_initialized, root
 	configdefaults=getconfig("/etc/make.defaults")
 	configsettings=getconfig("/etc/make.conf")
 	localtree=vartree("/")	
@@ -1810,24 +1813,22 @@ def ebuild_init():
 		roottree=vartree(root)
 	porttree=portagetree(getsetting("PORTDIR"))
 	currtree=currenttree(getsetting("CURRENTFILE"))
+	ebuild_initialized=1
 
-def init():
-	global root 
-	root=getsetting("ROOT")
-	if len(root)==0:
-		root="/"
-	elif root[-1]!="/":
-		root=root+"/"
-	if root != "/":
-		if not os.path.exists(root[:-1]):
-			print "!!! Error: ROOT",root,"does not exist.  Please correct this."
-			print "!!! Exiting."
-			print
-			sys.exit(1)
-		elif not os.path.isdir(root[:-1]):
-			print "!!! Error: ROOT",root[:-1],"is not a directory.  Please correct this."
-			print "!!! Exiting."
-			print
-			sys.exit(1)
-
-init()
+root=getsetting("ROOT")
+if len(root)==0:
+	root="/"
+elif root[-1]!="/":
+	root=root+"/"
+if root != "/":
+	if not os.path.exists(root[:-1]):
+		print "!!! Error: ROOT",root,"does not exist.  Please correct this."
+		print "!!! Exiting."
+		print
+		sys.exit(1)
+	elif not os.path.isdir(root[:-1]):
+		print "!!! Error: ROOT",root[:-1],"is not a directory.  Please correct this."
+		print "!!! Exiting."
+		print
+		sys.exit(1)
+ebuild_initialized=0
