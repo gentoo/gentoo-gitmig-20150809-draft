@@ -1,0 +1,52 @@
+diff -ru DVDStyler-1.3b-orig/configure.in DVDStyler-1.3b/configure.in
+--- DVDStyler-1.3b-orig/configure.in	2004-11-05 00:46:59.000000000 +0930
++++ DVDStyler-1.3b/configure.in	2004-11-21 19:25:54.101644232 +0930
+@@ -39,7 +39,7 @@
+   DEBUG_FLAGS="-g -Wall -DDEBUG"
+   ;;    
+ *)
+-  DEBUG_FLAGS="-O3"
++  DEBUG_FLAGS=""
+   ;;
+ esac
+ 
+Only in DVDStyler-1.3b-orig/install.win32: Makefile.am
+diff -ru DVDStyler-1.3b-orig/src/Config.h DVDStyler-1.3b/src/Config.h
+--- DVDStyler-1.3b-orig/src/Config.h	2004-11-02 22:23:48.000000000 +0930
++++ DVDStyler-1.3b/src/Config.h	2004-11-21 19:41:57.788634728 +0930
+@@ -89,9 +89,9 @@
+ 	
+ 	CONFIG_PROP(Version,  _T("Version"), DEF_VERSION)
+ 	CONFIG_PROP(Language, _T("Interface/Language"), DEF_LANGUAGE)
+-	CONFIG_PROP_INT(DefMenuFormat, _T("Interface/DefMenuFormat"), DEF_MENU_FORMAT)
++	CONFIG_PROP_INT(DefMenuFormat, _T("Interface/DefMenuFormat"), (long)DEF_MENU_FORMAT)
+ 	CONFIG_PROP(TempDir, _T("Generate/TempDir"), DEF_GEN_TEMP_DIR)
+-	CONFIG_PROP_BOOL(RemoveTempFiles, _T("Generate/RemoveTempFiles"), DEF_REMOVE_TEMP)
++	CONFIG_PROP_BOOL(RemoveTempFiles, _T("Generate/RemoveTempFiles"), (long)DEF_REMOVE_TEMP)
+ 	CONFIG_PROP(Jpeg2MpegCmd, _T("Generate/Jpeg2MpegCmd"), DEF_JPEG2MPEG_CMD)
+ 	CONFIG_PROP(FrameRatePAL, _T("Generate/FrameRatePAL"), DEF_FRAMERATE_PAL)
+ 	CONFIG_PROP(FrameRateNTSC,_T("Generate/FrameRateNTSC"), DEF_FRAMERATE_NTSC)
+@@ -100,19 +100,19 @@
+ 	CONFIG_PROP(SpumuxCmd,  _T("Generate/SpumuxCmd"), DEF_SPUMUX_CMD)
+ 	CONFIG_PROP(DvdauthorCmd, _T("Generate/DvdauthorCmd"), DEF_DVDAUTHOR_CMD)
+ 	
+-	CONFIG_PROP_BOOL(PreviewDo, _T("Preview/Do"), DEF_PREVIEW_DO)
++	CONFIG_PROP_BOOL(PreviewDo, _T("Preview/Do"), (long)DEF_PREVIEW_DO)
+ 	CONFIG_PROP(PreviewCmd, _T("Preview/Cmd"), DEF_PREVIEW_CMD)
+ 	
+-	CONFIG_PROP_BOOL(IsoDo, _T("Iso/Do"), DEF_ISO_DO)
++	CONFIG_PROP_BOOL(IsoDo, _T("Iso/Do"), (long)DEF_ISO_DO)
+ 	CONFIG_PROP(IsoCmd, _T("Iso/Cmd"), DEF_ISO_CMD)
+ 	CONFIG_PROP(IsoSizeCmd, _T("Iso/SizeCmd"), DEF_ISO_SIZE_CMD)
+ 	CONFIG_PROP(IsoSaveTo,  _T("Iso/SaveTo"), DEF_ISO_SAVETO)
+ 	
+-	CONFIG_PROP_BOOL(BurnDo, _T("Burn/Do"), DEF_BURN_DO)
++	CONFIG_PROP_BOOL(BurnDo, _T("Burn/Do"), (long)DEF_BURN_DO)
+ 	CONFIG_PROP(BurnCmd, _T("Burn/Cmd"), DEF_BURN_CMD)
+ 	CONFIG_PROP(BurnDevice, _T("Burn/Device"), DEF_BURN_DEVICE)
+ 	
+-	CONFIG_PROP_BOOL(FormatDo, _T("Burn/FormatDo"), DEF_FORMAT_DO)
++	CONFIG_PROP_BOOL(FormatDo, _T("Burn/FormatDo"), (long)DEF_FORMAT_DO)
+ 	CONFIG_PROP(FormatCmd, _T("Burn/FormatCmd"), DEF_FORMAT_CMD)
+     
+   protected:
