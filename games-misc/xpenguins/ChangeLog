@@ -1,6 +1,12 @@
 # ChangeLog for games-misc/xpenguins
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/xpenguins/ChangeLog,v 1.3 2004/01/06 05:05:16 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/xpenguins/ChangeLog,v 1.4 2004/06/03 11:05:13 mr_bones_ Exp $
+
+*xpenguins-2.2-r1 (03 Jun 2004)
+
+  03 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  xpenguins-2.2-r1.ebuild:
+  added more themes (bug #49647)
 
   05 Jan 2004; Jon Portnoy <avenj@gentoo.org> xpenguins-2.2.ebuild :
   AMD64 keywords.
