@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fb2c39303ac269af15fa2d65f6c090d9 frameworks-0.3.4.ebuild 657
+MD5 90ab9fc3643aa1588bc59744d1968035 metadata.xml 374
+MD5 1b429e4a5c930a8b2fe9a86d7df2dcfa ChangeLog 448
+MD5 68b3cd3bd0383ae097a9225a85b997c7 files/digest-frameworks-0.3.4 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCR3EgFdQwWVoAgN4RAvOkAKCZo9qsjDjbPcaklpcyt4u3BNe4UQCfZmDb
+owdVvCARRv9U4MjnttaZUGQ=
+=7kd8
+-----END PGP SIGNATURE-----
