@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doc++
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.3 2004/06/24 21:39:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.4 2004/11/22 04:59:32 vapier Exp $
+
+  22 Nov 2004; Mike Frysinger <vapier@gentoo.org> doc++-3.4.10.ebuild:
+  Use standard econf/emake/install DESTDIR stuff.
 
   22 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> doc++-3.4.10.ebuild:
   Unmasking. Closing #35427.

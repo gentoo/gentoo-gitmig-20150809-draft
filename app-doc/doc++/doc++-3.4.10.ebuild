@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/doc++-3.4.10.ebuild,v 1.6 2004/06/28 13:06:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/doc++-3.4.10.ebuild,v 1.7 2004/11/22 04:59:32 vapier Exp $
 
 DESCRIPTION="Documentation system for C, C++, IDL and Java"
 HOMEPAGE="http://docpp.sourceforge.net/"
@@ -14,11 +14,11 @@ IUSE=""
 RDEPEND="virtual/libc"
 
 src_compile() {
-	./configure -prefix /usr || die
-	make all || die
+	econf || die
+	emake all || die
 }
 
 src_install() {
-	einstall || die
+	make install DESTDIR="${D}" || die
 	dodoc CREDITS INSTALL NEWS PLATFORMS REPORTING-BUGS
 }
