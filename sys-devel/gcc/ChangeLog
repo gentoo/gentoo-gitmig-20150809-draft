@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.23 2002/07/06 15:36:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.24 2002/07/07 00:08:23 azarah Exp $
+
+*gcc-3.1.1 (07 Jul 2002)
+
+  7 Jul 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.1.1 :
+
+  Add snapshot for gcc-3.1.1.  This fixes the internal compiler
+  errors with "-march=pentium4" for me at least (had with gcc-3.1).
 
 *gcc-3.1-r8 (03 Jul 2002)
 

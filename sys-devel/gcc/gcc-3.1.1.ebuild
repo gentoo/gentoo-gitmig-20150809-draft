@@ -10,26 +10,31 @@
 #             in src_install() ... Ill implement auto-version detection
 #             later on.
 
-GCC_SUFFIX=-3.1
+inherit libtool
+
+MY_PV="`echo ${PV} | cut -d. -f1,2`"
+GCC_SUFFIX=-${MY_PV}
 LOC=/usr
 # dont install in /usr/include/g++-v3/, as it will nuke gcc-3.0.x installs
-STDCXX_INCDIR="${LOC}/include/g++-v${PV/\./}"
-SLOT="3.1"
+STDCXX_INCDIR="${LOC}/include/g++-v${MY_PV/\./}"
+SLOT="${MY_PV}"
 S=${WORKDIR}/${P}
-SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
-	ftp://ftp.funet.fi/pub/mirrors/sourceware.cygnus.com/pub/gcc/releases/${P}/${P}.tar.bz2"
-DESCRIPTION="Modern GCC C/C++ compiler and an included, upgraded version of texinfo to boot"
+#SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
+#	ftp://ftp.funet.fi/pub/mirrors/sourceware.cygnus.com/pub/gcc/releases/${P}/${P}.tar.bz2"
+SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P}-20020701.tar.bz2"
+DESCRIPTION="Modern GCC C/C++ compiler"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc 
-	>=sys-libs/zlib-1.1.4"
+	>=sys-libs/zlib-1.1.4
+	>=sys-apps/texinfo-4.2-r4"
 if [ -z "`use build`" ]
 then
-	DEPEND="$DEPEND 
-		nls? ( sys-devel/gettext ) 
+	DEPEND="${DEPEND}
+		nls? ( sys-devel/gettext )
 		>=sys-libs/ncurses-5.2-r2"
-	RDEPEND="$RDEPEND 
+	RDEPEND="${RDEPEND}
 		>=sys-libs/ncurses-5.2-r2"
 fi
 
@@ -37,9 +42,13 @@ build_multiple() {
 	#try to make sure that we should build multiple
 	#versions of gcc (dual install of gcc2 and gcc3)
 	profile="`readlink /etc/make.profile`"
+	# [ "`gcc -dumpversion | cut -d. -f1,2`" != "`echo ${PV} | cut -d. -f1,2`" ]
+	#
+	# Check the major and minor versions only, and drop the micro version.
+	# This is done, as compadibility only differ when major and minor differ.
 	if [ -z "`use build`" ] && \
 	   [ -z "`use bootstrap`" ] && \
-	   [ "`gcc --version | cut -f1 -d.`" -ne 3 ] && \
+	   [ "`gcc -dumpversion | cut -d. -f1,2`" != "`echo ${MY_PV} | cut -d. -f1,2`" ] && \
 	   [ "${profile/gcc3}" = "${profile}" ] && \
 	   [ "${GCCBUILD}" != "default" ]
 	then
@@ -53,47 +62,52 @@ build_multiple() {
 FAKE_ROOT=""
 
 src_unpack() {
-	unpack ${P}.tar.bz2
+	unpack ${P}-20020701.tar.bz2
 	
-	#now we integrate texinfo-${TV} into gcc.  It comes with texinfo-3.12.
 	cd ${S}
-	#fixes the build system to properly do the transformation
-	#of the binaries (thanks to Mandrake)
-	#fixup libtool to correctly generate .la files with portage
-	patch <${FILESDIR}/libtool-1.4.1-portage.patch-v3 || die
+	# Fixup libtool to correctly generate .la files with portage
+	elibtoolize --portage --shallow
 
-	# Red Hat patches
-	for x in gcc31-boehm-gc-libs.patch.bz2 \
-		gcc31-fde-merge-compat.patch.bz2 \
-		gcc31-attr-visibility.patch.bz2 \
-		gcc31-attr-visibility2.patch.bz2 \
-		gcc31-trunc_int_for_mode.patch.bz2 \
-		gcc31-dwarf2-pr6381.patch.bz2 \
-		gcc31-dwarf2-pr6436-test.patch.bz2 \
-		gcc31-c++-null-pm-init.patch.bz2 \
-		gcc31-c++-tsubst-asm.patch.bz2 \
-		gcc31-fdata-sections.patch.bz2 \
-		gcc31-fold-const.patch.bz2 \
-		gcc31-fold-const2.patch.bz2 \
-		gcc31-i386-malign-double-doc.patch.bz2 \
-		gcc31-libstdc++-pr6594.patch.bz2 \
-		gcc31-libstdc++-pr6648.patch.bz2 \
-		gcc31-libstdc++-setrlim.patch.bz2 \
-		gcc31-pr6643.patch.bz2 \
-		gcc31-test-rotate.patch.bz2
+	# Red Hat and Suse patches
+	for x in ${MY_PV}/gcc31-boehm-gc-libs.patch.bz2 \
+	         ${MY_PV}/gcc31-fde-merge-compat.patch.bz2 \
+	         ${MY_PV}/gcc31-attr-visibility.patch.bz2 \
+	         ${PV}/gcc311-attr-visibility2.patch.bz2 \
+	         ${PV}/gcc311-trunc_int_for_mode.patch.bz2 \
+	         ${PV}/gcc311-x86_64-q_regs_operand.patch.bz2 \
+	         ${MY_PV}/gcc31-dwarf2-pr6436-test.patch.bz2 \
+	         ${PV}/gcc311-c++-pretty_function.patch.bz2 \
+	         ${PV}/gcc311-c++-tsubst-asm.patch.bz2 \
+	         ${PV}/gcc311-i386-memtest-test.patch.bz2 \
+	         ${MY_PV}/gcc31-fold-const2.patch.bz2 \
+	         ${PV}/gcc311-ada-addr2line.patch.bz2 \
+	         ${PV}/gcc311-ada-link.patch.bz2 \
+	         ${PV}/gcc311-java-no-rpath.patch.bz2 \
+	         ${MY_PV}/gcc31-test-rotate.patch.bz2 \
+	         ${PV}/gcc311-x86_64-libiberty-pic.patch.bz2 \
+	         ${PV}/gcc311-test-rh65771.patch.bz2 \
+	         ${PV}/gcc311-i386-default-momit-leaf-frame-pointer.patch.bz2 \
+	         ${PV}/gcc311-i386-profile-olfp.patch.bz2 \
+	         ${PV}/gcc311-i386-pic-label-thunk.patch.bz2 \
+	         ${PV}/gcc311-pr6842.patch.bz2 \
+			 ${PV}/gcc311-tree-code.patch.bz2 \
+			 ${PV}/gcc311-hard-reg-sharing.patch.bz2 \
+	         ${PV}/gcc311-x86_64-addr-diff.patch.bz2 \
+	         ${PV}/gcc311-x86_64-profile.patch.bz2 \
+	         ${PV}/gcc311-x86_64-biarch.patch.bz2
 	do
-		bzip2 -dc ${FILESDIR}/${PV}/${x} | \
+		bzip2 -dc ${FILESDIR}/${x} | \
 			patch -p0 || die "failed with patch ${x}"
+		echo &>${T}/foo
 	done
-	
-	# SuSE patches
-	bzip2 -dc ${FILESDIR}/${PV}/gcc31-i386-expand-clrstr.patch.bz2 | \
-		patch -p1 || die "failed with patch gcc31-i386-expand-clrstr"
+# Missing patches, should be after gcc31-pr6842.patch.bz2
+#
+#            gcc31-tls.patch.bz2 \
 
 	# Mandrake patches
 	# cp/lex.c (cxx_init_options): By default, don't wrap lines since the
 	# C front-end operates that way, already.
-	bzip2 -dc ${FILESDIR}/${PV}/gcc31-c++-diagnostic-no-line-wrapping.patch.bz2 | \
+	bzip2 -dc ${FILESDIR}/${MY_PV}/gcc31-c++-diagnostic-no-line-wrapping.patch.bz2 | \
 		patch -p1 || die "failed with patch gcc31-c++-diagnostic-no-line-wrapping"
 
 	# Currently if any path is changed via the configure script, it breaks
@@ -118,8 +132,6 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	# use the system zlib!!!
-	myconf="--with-system-zlib"
 	if [ -z "`use build`" ]
 	then
 		myconf="${myconf} --enable-shared"
@@ -149,9 +161,8 @@ src_compile() {
 	export CXXFLAGS="${CXXFLAGS/-O?/}"
 
 	#build in a separate build tree
-	cd ${WORKDIR}
-	mkdir build
-	cd build
+	mkdir -p ${WORKDIR}/build
+	cd ${WORKDIR}/build
 
 	addwrite "/dev/zero"
 	${S}/configure --prefix=${LOC} \
@@ -161,45 +172,34 @@ src_compile() {
 		--host=${CHOST} \
 		--build=${CHOST} \
 		--target=${CHOST} \
+		--with-system-zlib \
 		--enable-threads=posix \
 		--enable-long-long \
+		--disable-checking \
 		--enable-cstdio=stdio \
 		--enable-clocale=generic \
-		--disable-checking \
+		--enable-version-specific-runtime-libs \
 		--with-gxx-include-dir=${STDCXX_INCDIR} \
 		--with-local-prefix=${LOC}/local \
 		${myconf} || die
 
+	touch ${S}/gcc/c-gperf.h
+
 	if [ -z "`use static`" ]
 	then
+		#fix for our libtool-portage.patch
+		S="${WORKDIR}/build" \
 		emake bootstrap-lean || die
 	else
+		S="${WORKDIR}/build" \
 		emake LDFLAGS=-static bootstrap || die
-	fi
-}
-
-#thanks to mandrake for this function
-dispatch_libs() {
-	libname=$1 libversion=$2
-	rm -f $libname.so $libname.a
-
-	if build_multiple
-	then
-	# If we have multiple versions of GCC, leave libraries in $FULLPATH
-		chmod 0755 ../../../$libname.so.$libversion
-		ln -s ../../../$libname.so.$libversion $libname.so
-		rm -f ../../../$libname.so
-		cp -f ../../../$libname.a $libname.a
-		rm -f ../../../$libname.a
-	else
-		ln -sf ../../../$libname.so $libname.so
-		ln -sf ../../../$libname.a $libname.a
 	fi
 }
 
 src_install() {
 	#make install from the build directory
 	cd ${WORKDIR}/build
+	S="${WORKDIR}/build" \
 	make prefix=${D}${LOC} \
 		mandir=${D}${LOC}/share/man \
 		infodir=${D}${LOC}/share/info \
@@ -225,37 +225,37 @@ src_install() {
 		dosym gcc /usr/bin/cc
 	fi
 
+	# gcc-3.1 have a problem with the ordering of Search Directories.  For
+	# instance, if you have libreadline.so in /lib, and libreadline.a in
+	# /usr/lib, then it will link with libreadline.a instead of .so.  As far
+	# as I can see from the source, /lib should be searched before /usr/lib,
+	# and this also differs from gcc-2.95.3 and possibly 3.0.4, but ill have
+	# to check on 3.0.4.  Thanks to Daniel Robbins for noticing this oddity,
+	# bugzilla bug #4411
+	#
+	# Azarah - 3 Jul 2002
+	#
+	cd ${FULLPATH_D}
+	dosed -e "s:%{L\*} %(link_libgcc):%{L\*} -L/lib %(link_libgcc):" \
+		${FULLPATH}/specs
+
 	#make sure we dont have stuff lying around that
 	#can nuke multiple versions of gcc
 	if [ -z "`use build`" ]
 	then
 		cd ${FULLPATH_D}
-		#move symlinks to compiler-specific dir
-		dispatch_libs libstdc++  4.0.0
-		mv ../../../libsupc++.a libsupc++.a
-		
-		dispatch_libs libgcj     3.0.0
-		dispatch_libs libgcjgc   1.1.0
-		#do not always get created.
-		[ ! -e libgcjgc.so ] && rm -f libgcjgc.so
-		
-		dispatch_libs libg2c     0.0.0
-		mv ../../../libfrtbegin.a libfrtbegin.a
-		
-		mv libobjc* ../../../
-		dispatch_libs libobjc    1.0.0
-		dispatch_libs libobjc_gc 1.0.0
-		#do not always get created.
-		[ ! -e libobjc_gc.so ] && rm -f libobjc_gc.so
 
-		if build_multiple
-		then
-			#move libtool .la files to $FULLPATH till I figure
-			#what to do with them. This needs to be done with
-			#parallel installs, else gcc-2.95 tries to link with
-			#the wrong libs.
-			mv ${D}${LOC}/lib/*.la ${FULLPATH_D}
-		fi
+		#Tell libtool files where real libraries are
+		for LA in ${D}${LOC}/lib/*.la ${FULLPATH_D}/../*.la
+		do
+			sed -e "s:/usr/lib:${FULLPATH}:" ${LA} > ${LA}.hacked
+			mv ${LA}.hacked ${LA}
+			mv ${LA} ${FULLPATH_D}
+		done
+
+		#move all the libraries to version specific libdir.
+		mv ${D}${LOC}/lib/*.{so,a}* ${FULLPATH_D}/../*.{so,a}* \
+			${FULLPATH_D}
 
 		#move Java headers to compiler-specific dir
 		mv ${D}${LOC}/include/gc*.h ${FULLPATH_D}/include/
@@ -269,9 +269,6 @@ src_install() {
 
 		#move libgcj.spec to compiler-specific directories
 		mv ${D}${LOC}/lib/libgcj.spec ${FULLPATH_D}/libgcj.spec
-
-		#there is already one with binutils
-		mv ${D}${LOC}/lib/libiberty.a ${FULLPATH_D}/libiberty.a
 
 		#rename jar because it could clash with Kaffe's jar if this gcc is
 		#primary compiler (aka don't have the -<version> extension)
@@ -287,25 +284,23 @@ src_install() {
 		mv gcov.1 gcov${GCC_SUFFIX}.1
 	fi
 
-	#move libgcc_s.so.1 to /lib
-	cd ${D}/lib
-	chmod +x ${D}${LOC}/lib/libgcc_s.so.1
-	mv -f ${D}${LOC}/lib/libgcc_s.so.1 libgcc_s-${PV}.so.1
-	ln -sf libgcc_s-${PV}.so.1 libgcc_s.so.1
-	ln -sf libgcc_s.so.1 libgcc_s.so
-	rm -f ${D}${LOC}/lib/libgcc_s.so*
+	#this one comes with binutils
+	if [ -f ${D}${LOC}/lib/libiberty.a ]
+	then
+		rm -f ${D}${LOC}/lib/libiberty.a
+	fi
 
 	cd ${S}
     if [ -z "`use build`" ]
     then
 		cd ${S}
 		docinto /	
-		dodoc BUGS COPYING COPYING.LIB ChangeLog GNATS README* FAQ MAINTAINERS
-		docinto html
-		dodoc *.html
+		dodoc COPYING COPYING.LIB ChangeLog LAST_UPDATED README MAINTAINERS
 		cd ${S}/boehm-gc
 		docinto boehm-gc
-		dodoc ChangeLog README*
+		dodoc ChangeLog doc/{README*,barrett_diagram}
+		docinto boehm-gc/html
+		dohtml doc/*.html
 		cd ${S}/gcc
 		docinto gcc
 		dodoc ChangeLog* COPYING* FSFChangeLog* LANGUAGES NEWS ONEWS \
@@ -335,6 +330,9 @@ src_install() {
     else
         rm -rf ${D}/usr/share/{man,info}
 	fi
+
+    # Fix ncurses b0rking
+    find ${D}/ -name '*curses.h' -exec rm -f {} \;
 }
 
 pkg_postrm() {
@@ -346,5 +344,8 @@ pkg_postrm() {
 	then
 		ln -sf gcc ${ROOT}/usr/bin/cc
 	fi
+	
+	# Fix ncurses b0rking (if r5 isn't unmerged)
+	find ${ROOT}/usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
 }
 
