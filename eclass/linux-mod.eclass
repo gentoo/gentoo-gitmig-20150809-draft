@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.29 2005/02/06 20:36:42 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.30 2005/03/08 21:41:31 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -134,8 +134,8 @@ update_depmod() {
 }
 
 update_modules() {
-	if [ -x /sbin/modules-update ] && \
-		grep -v -e "^#" -e "^$" ${D}/etc/modules.d/* >/dev/null 2>&1; then
+	if [ -x /sbin/modules-update -a \
+		 -n "$(grep -v -e "^#" -e "^$" ${D}/etc/modules.d/*)" ] ; then
 		ebegin "Updating modules.conf"
 		/sbin/modules-update
 		eend $?
@@ -169,9 +169,9 @@ generate_modulesd() {
 
 		module_docs="$(eval echo \${MODULESD_${currm}_DOCS})"
 		module_enabled="$(eval echo \${MODULESD_${currm}_ENABLED})"
-		module_aliases="$(eval echo \${#MODULESD_${currm}_ALIASES[*]})"
-		module_additions="$(eval echo \${#MODULESD_${currm}_ADDITIONS[*]})"
-		module_examples="$(eval echo \${#MODULESD_${currm}_EXAMPLES[*]})"
+		module_aliases="$(eval echo \${#MODULESD_${currm/-/_}_ALIASES[*]})"
+		module_additions="$(eval echo \${#MODULESD_${currm/-/_}_ADDITIONS[*]})"
+		module_examples="$(eval echo \${#MODULESD_${currm/-/_}_EXAMPLES[*]})"
 
 		[[ ${module_aliases} -eq 0 ]] 	&& unset module_aliases
 		[[ ${module_additions} -eq 0 ]]	&& unset module_additions

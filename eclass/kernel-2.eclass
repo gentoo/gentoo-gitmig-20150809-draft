@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.107 2005/03/06 11:28:39 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.108 2005/03/08 21:40:45 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -34,8 +34,8 @@
 # K_EXTRAEWARN			- same as K_EXTRAEINFO except ewarn's instead of einfo's
 # K_SYMLINK				- if this is set, then forcably create symlink anyway
 #
-# K_DEFCONFIG			- Allow specifying a different defconfig target.  If length zero,
-#					defaults to "defconfig".
+# K_DEFCONFIG			- Allow specifying a different defconfig target.
+#						  If length zero, defaults to "defconfig".
 
 # H_SUPPORTEDARCH		- this should be a space separated list of ARCH's which
 #						  can be supported by the headers ebuild
@@ -430,7 +430,7 @@ setup_headers() {
 # unipatch
 #==============================================================
 unipatch() {
-	local i x extention PIPE_CMD UNIPATCH_DROP KPATCH_DIR PATCH_DEPTH ELINE
+	local i x y z extention PIPE_CMD UNIPATCH_DROP KPATCH_DIR PATCH_DEPTH ELINE
 	local STRICT_COUNT PATCH_LEVEL myLC_ALL
 	
 	# set to a standard locale to ensure sorts are ordered properly.
@@ -466,6 +466,11 @@ unipatch() {
 
 			if [ -n "${UNIPATCH_STRICTORDER}" ]; then
 				STRICT_COUNT=$((${STRICT_COUNT} + 1))
+				for((y=0; y<$((6 - ${#STRICT_COUNT})); y++));
+					do z="${z}0";
+				done
+				STRICT_COUNT="${z}${STRICT_COUNT}"
+
 				mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
 				${PIPE_CMD} ${i/:*/} -C ${KPATCH_DIR}/${STRICT_COUNT}/ 1>/dev/null
 			else
@@ -509,6 +514,11 @@ unipatch() {
 
 				if [ -n "${UNIPATCH_STRICTORDER}" ]; then
 					STRICT_COUNT=$((${STRICT_COUNT} + 1))
+					for((y=0; y<$((6 - ${#STRICT_COUNT})); y++));
+						do z="${z}0";
+					done
+					STRICT_COUNT="${z}${STRICT_COUNT}"
+
 					mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
 					$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${STRICT_COUNT}/${x}.patch${PATCH_LEVEL})
 				else
