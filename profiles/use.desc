@@ -99,7 +99,6 @@ pda - Adds support for portable devices.
 pdflib
 perl - Adds support/bindings for the Perl language.
 pic
-pixbuf
 plotutils
 png - Adds support for libpng (PNG images)
 pnp
