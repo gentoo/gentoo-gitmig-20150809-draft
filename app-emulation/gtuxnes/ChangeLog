@@ -1,0 +1,9 @@
+# ChangeLog for app-emulation/gtuxnes
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gtuxnes/ChangeLog,v 1.1 2003/08/28 05:09:18 msterret Exp $
+
+*gtuxnes-0.75 (27 Aug 2003)
+
+  27 Aug 2003; Michael Sterrett <msterret@gentoo.org> gtuxnes-0.75.ebuild:
+  initial commit.  ebuild based on one provided by Jeff Saucier via bug 27447
+
