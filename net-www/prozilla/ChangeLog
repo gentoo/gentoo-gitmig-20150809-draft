@@ -1,6 +1,10 @@
 # ChangeLog for net-www/prozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/prozilla/ChangeLog,v 1.13 2004/07/01 22:49:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/prozilla/ChangeLog,v 1.14 2004/07/14 05:27:48 mr_bones_ Exp $
+
+  13 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  prozilla-1.3.6-r1.ebuild, -prozilla-1.3.6.ebuild:
+  clean older version; IUSE; tidy
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   prozilla-1.3.6-r1.ebuild, prozilla-1.3.6.ebuild:
