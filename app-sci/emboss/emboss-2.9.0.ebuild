@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.9.0.ebuild,v 1.6 2004/12/23 19:14:52 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.9.0.ebuild,v 1.7 2004/12/23 21:29:30 ribosome Exp $
 
 DESCRIPTION="The European Molecular Biology Open Software Suite: a sequence analysis package."
 HOMEPAGE="http://emboss.sourceforge.net/"
@@ -21,12 +21,12 @@ DEPEND="X? ( virtual/x11 )
 	sci-biology/clustalw"
 
 PDEPEND="!no-biodata? (
-		app-sci/aaindex
-		app-sci/cutg
-		app-sci/prints
-		app-sci/prosite
-		app-sci/rebase
-		app-sci/transfac
+		sci-biology/aaindex
+		sci-biology/cutg
+		sci-biology/prints
+		sci-biology/prosite
+		sci-biology/rebase
+		sci-biology/transfac
 	)"
 
 S=${WORKDIR}/EMBOSS-${PV}
