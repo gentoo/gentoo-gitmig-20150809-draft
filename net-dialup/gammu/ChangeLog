@@ -1,6 +1,8 @@
 # ChangeLog for net-dialup/gammu
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/ChangeLog,v 1.6 2004/05/05 13:52:09 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/ChangeLog,v 1.7 2004/05/12 11:53:16 aliz Exp $
+
+*gammu-0.95.0 (05 May 2004)
 
   05 May 2004; Lim Swee Tat <st_lim@gentoo.org>
   files/gammu-0.94.4-LastCalendar.patch:
