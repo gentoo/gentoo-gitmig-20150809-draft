@@ -12,10 +12,8 @@ DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2"
 
 src_compile() {
-
     try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} --sysconfdir=/etc
     try make
-
 }
 
 src_install () {
