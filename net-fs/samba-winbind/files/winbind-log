@@ -1,3 +1,0 @@
-#!/bin/bash
-test -p logfifo || mknod logfifo p
-exec multilog t ./winbind-log < logfifo
