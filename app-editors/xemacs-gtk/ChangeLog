@@ -1,9 +1,8 @@
 # ChangeLog for app-editors/xemacs-gtk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/ChangeLog,v 1.10 2002/12/09 04:17:41 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/ChangeLog,v 1.11 2002/12/13 10:56:06 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *xemacs-gtk-21.4.8-r3 (28 Jul 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.9 2002/12/12 08:37:37 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.10 2002/12/13 10:56:05 blizzy Exp $
 
 *kile-1.31 (12 Dec 2002)
 
@@ -8,8 +8,7 @@
   version bump, thanks to absinthe@pobox.com (Dylan Carlson) for submission
   (bug #11967)
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   30 Nov 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
