@@ -1,6 +1,17 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.21 2002/12/21 21:20:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.22 2003/01/01 22:02:35 raker Exp $
+
+*openldap-2.0.27-r1 (01 Jan 2002)
+*openldap-2.1.10 (01 Jan 2002)
+
+  01 Jan 2002; Nick Hadaway <raker@gentoo.org> openldap-2.0.27-r1.ebuild,
+  openldap-2.1.10.ebuild, files/digest-openldap-2.0.27-r1,
+  files/digest-openldap-2.1.10, files/slapd-2.1.rc6,
+  files/slurpd-2.1.rc6 :
+  Version bump in the 2.1 series.  These latest ebuilds are now setup
+  so that ldap services drop root privileges on startup.  Please
+  comment on bug #8780.
 
 *openldap-2.1.9 (18 Dec 2002)
 
