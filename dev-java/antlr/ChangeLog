@@ -1,7 +1,15 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.6 2002/08/09 00:07:06 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.7 2003/01/12 19:12:51 mkennedy Exp $
 
+*antlr-2.7.2_alpha2-r1 (Jan 2003)
+
+  10 Jan 2003; Matthew Kennedy <mkennedy@gentoo.org>
+  antlr-2.7.2_alpha2-r1.ebuild, files/digest-antlr-2.7.2_alpha2-r1,
+  files/antrl-2.7.2_alpha2-r1-gcc3-gentoo.patch, ChangeLog :
+
+  Code fix for GCC 3.2.1. No oustanding bug out on this.
+	
 *antlr-2.7.2_alpha2 (25 Jun 2002)
 
   01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> antlr-2.7.2_alpha2.ebuild files/digest-antlr-2.7.2_alpha2 :
