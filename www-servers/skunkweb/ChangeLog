@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/skunkweb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.1 2004/11/06 12:35:34 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.2 2004/11/07 11:35:06 satya Exp $
+
+  07 Nov 2004; Christian Andreetta <satya@gentoo.org> +files/skunkweb-init,
+  skunkweb-3.4.0.ebuild:
+  initscript minor change. docs position in cvs note in ebuild
 
 *skunkweb-3.4_beta5-r1 (06 Nov 2004)
 
