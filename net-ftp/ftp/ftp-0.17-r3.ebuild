@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r3.ebuild,v 1.2 2003/07/13 11:55:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r3.ebuild,v 1.3 2003/07/15 09:19:19 joker Exp $
 
 IUSE="ssl"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.hcs.harvard.edu/~dholland/computers/netkit.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~mips ~arm"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	ssl? ( dev-libs/openssl )"
