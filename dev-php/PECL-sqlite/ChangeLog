@@ -1,8 +1,9 @@
 # ChangeLog for dev-php/PECL-sqlite
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-sqlite/ChangeLog,v 1.4 2004/01/24 17:14:34 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-sqlite/ChangeLog,v 1.5 2004/02/29 14:39:23 aliz Exp $
 
 *PECL-sqlite-1.0.2 (24 Jan 2004)
+*PECL-sqlite-1.0-r1 (24 Jan 2004)
 
   24 Jan 2004; Tal Peer <coredumb@gentoo.org> PECL-sqlite-1.0-r1.ebuild,
   PECL-sqlite-1.0.2.ebuild:
