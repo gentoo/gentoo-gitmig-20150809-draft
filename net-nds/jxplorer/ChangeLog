@@ -1,0 +1,11 @@
+# ChangeLog for net-nds/jxplorer
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.1 2004/05/22 15:23:11 zx Exp $
+
+*jxplorer-3.1_beta1 (22 May 2004)
+
+  22 May 2004; Chris Aniszczyk <zx@gentoo.org> +metadata.xml,
+  +jxplorer-3.1_beta1.ebuild:
+  Initial Import. Closes #50973
+  Thanks to dju` <dju@elegiac.net> for the initial ebuild.
+
