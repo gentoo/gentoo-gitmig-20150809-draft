@@ -1,0 +1,10 @@
+--- fs/nfsd/nfsfh.c~	Thu May  3 18:35:21 2001
++++ fs/nfsd/nfsfh.c	Thu May  3 18:46:42 2001
+@@ -264,6 +264,7 @@
+ 		list_for_each(le, head) {
+ 			struct dentry *dentry = list_entry(le, struct dentry, d_alias);
+ 			dget_locked(dentry);
++			result->d_vfs_flags |= DCACHE_REFERENCED;
+ 			spin_unlock(&dcache_lock);
+ 			if (toput)
+ 				dput(toput);

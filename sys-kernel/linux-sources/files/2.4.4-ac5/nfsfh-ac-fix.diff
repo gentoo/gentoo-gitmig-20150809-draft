@@ -1,0 +1,21 @@
+--- fs/nfsd/nfsfh.c.ac3	Thu May  3 17:48:31 2001
++++ fs/nfsd/nfsfh.c	Thu May  3 17:48:10 2001
+@@ -156,7 +156,6 @@
+ 		result = list_entry(lp,struct dentry, d_alias);
+ 		if (! (result->d_flags & DCACHE_NFSD_DISCONNECTED)) {
+ 			dget_locked(result);
+-			result->d_vfs_flags |= DCACHE_REFERENCED;
+ 			spin_unlock(&dcache_lock);
+ 			iput(inode);
+ 			return result;
+--- fs/nfsd/nfsfh.c.ac	Tue May  1 13:22:35 2001
++++ fs/nfsd/nfsfh.c	Tue May  1 13:21:23 2001
+@@ -407,7 +407,7 @@
+ 				d_drop(result);
+ 				dput(result);
+ 				result = tmp;
+-				/* If !found, then this is really weird, but it shouldn't hurt */
++				/* If !found, then this is really wierd, but it shouldn't hurt */
+ 			}
+ 		}
+ 	} else {
