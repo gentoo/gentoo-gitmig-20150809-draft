@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.50 2004/03/06 14:46:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.51 2004/03/06 15:41:36 lanius Exp $
+
+*ppp-2.4.2-r1 (06 Mar 2004)
+
+  06 Mar 2004; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.2-r1.ebuild:
+  add atm to IUSE=""
 
   06 Mar 2004; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.2.ebuild,
   files/2.4.2/killaddr-smarter.patch, files/2.4.2/killaddr-smarter.patch.gz,

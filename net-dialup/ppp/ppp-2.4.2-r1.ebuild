@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r1.ebuild,v 1.1 2004/03/06 14:46:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r1.ebuild,v 1.2 2004/03/06 15:41:36 lanius Exp $
 
 DESCRIPTION="Point-to-point protocol - patched for PPPOE"
 HOMEPAGE="http://www.samba.org/ppp"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa -amd64 ~ia64"
-IUSE="ipv6 activefilter pam"
+IUSE="ipv6 activefilter pam atm"
 
 RDEPEND="virtual/glibc
 	>=net-libs/libpcap-0.8
