@@ -1,11 +1,11 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.1 2004/07/25 07:43:23 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.2 2004/07/25 07:51:04 hattya Exp $
 
 *qdbm-1.8.13 (25 Jul 2004)
 
   25 Jul 2004; Akinori Hattori <hattya@gentoo.org> +metadata.xml,
   +qdbm-1.8.13.ebuild:
-  Initial revision. Based on the ebuild Atzm Watanabe <sitosito@p.chan.ne.jp>
-  in bug #55574, and modified by me.
+  Initial revision. Based on the ebuild from Atzm Watanabe
+  <sitosito@p.chan.ne.jp> in bug #55574, and modified by me.
 
