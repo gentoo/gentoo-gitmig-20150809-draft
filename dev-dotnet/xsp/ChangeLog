@@ -1,0 +1,10 @@
+# ChangeLog for dev-dotnet/xsp
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.1 2004/05/21 20:18:45 latexer Exp $
+
+*xsp-0.13 (21 May 2004)
+
+  21 May 2004; Peter Johanson <latexer@gentoo.org> metadata.xml,
+  xsp-0.13.ebuild, files/xsp.confd, files/xsp.initd:
+  Initial commit. Thanks to everyone in bug #41652 for the ebuilds, inits, etc.
+
