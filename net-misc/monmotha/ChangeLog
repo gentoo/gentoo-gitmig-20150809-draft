@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/monmotha
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-misc/monmotha/ChangeLog,v 1.1 2002/08/21 02:23:27 agenkin Exp $
+
+*monmotha-2.3.8_pre7 (20 Aug 2002)
+
+  20 Aug 2002; Arcady Genkin <agenkin@thpoon.com>
+  monmotha-2.3.8_pre7.ebuild :
+  
+  Initial version of the package, created by you@hanez.org (Johannes
+  Findeisen).

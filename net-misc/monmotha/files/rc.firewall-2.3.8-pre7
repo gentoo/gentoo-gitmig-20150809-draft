@@ -1,0 +1,1357 @@
+#!/bin/bash
+# ----------------------------------------------------------------------|
+#	      This is it...MonMotha's Firewall 2.3.8-pre7!		|
+#	     All your h4x0rZ are belong to Linux/Netfilter!		|
+# ----------------------------------------------------------------------|
+# 2.3 RELEASE NOTES: This is the 2.2 series with some extra stuff,	|
+# including MAC address matching, stateful matching, port forwarding,	|
+# per-proto accept behavior, and some other stuff that I might think	|
+# about adding later.							|
+# ----------------------------------------------------------------------|
+# COMMENTS from MonMotha:						|
+#									|
+# Please do not email me directly with usage questions.  I don't have	|
+# the time or resources to keep up.  Check the configuration help at	|
+# the URL posted below then post to the users list if you have any	|
+# further questions.							|
+#						--MonMotha		|
+#									|
+# When emailing me or the mailing lists, keep in mind that HTML email	|
+# may be silently rejected as an anti-spam measure. Configure your UA	|
+# to use plain text for mail.						|
+#						--MonMotha		|
+#									|
+# A list of known bugs can be found at:					|
+#	http://www.mplug.org/phpwiki/index.php?MonMothaKnownBugs	|
+# please check this list before reporting bugs.  Bugs can be reported	|
+# directly to me or to the devel mailing list.  Please ask to be CCed	|
+# if you mail the devel list and are not a member.			|
+#						--MonMotha		|
+#									|
+# Mailing lists are now available.  See the distribution website at	|
+# <http://monmotha.mplug.org> for more info.				|
+#						--MonMotha		|
+#									|
+# Note another change of my email address.  New address is:		|
+# <monmotha@indy.rr.com>.  Hopefully I can keep this one for a while.	|
+#						--MonMotha		|
+#									|
+# I will be entering "feature freeze" when 2.3.8 goes final. Please	|
+# make sure to have any patches or feature requests in by then.		|
+# I expect 2.3.7 to be closing in on deserving the "stable" marking.	|
+#						--MonMotha		|
+#									|
+# Please note the change of my e-mail address.  The new address is:	|
+# obi-wan@starwarsfan.com.  The old address (bvmopen@usa.net) will be	|
+# discontinued as of July 31, 2001.					|
+#						--MonMotha		|
+#									|
+# When e-mailing to report a bug, please check first that it has not	|
+# already been fixed in the next prerelease (which can be found at the	|
+# distribution site).							|
+#						--MonMotha		|
+#									|
+# Before e-mailing me, please check the distribution site (which can be	|
+# found at http://freshmeat.net/projects/mothafirewall as it changes	|
+# sometimes) for a new version.						|
+#						--MonMotha		|
+#									|
+# Please...PLEASE give me feedback on your experiences with this script	|
+# I would really like to know what everyone wants, what works, and	|
+# about the inevitable bugs present in anything.			|
+#									|
+# 		Direct all feedback to: monmotha@indy.rr.com		|
+# 						--MonMotha		|
+#									|
+# When e-mailing with problems, please include firewall script version,	|
+# iptables version, kernel version, and GNU BASH version.  If you think	|
+# your problem might be related to kernel configuration, please attach	|
+# the .config file for your kernel.					|
+#						--MonMotha		|
+#									|
+# ----------------------------------------------------------------------|
+# SYSTEM REQUIREMENTS: You must have either compiled the appropriate	|
+# iptables support into your 2.4 kernel or have loaded all the		|
+# applicable modules BEFORE you run this script.  This script will not	|
+# load modules for you.							|
+#									|
+# 	You will need (at least) the following kernel options to use	|
+# this firewall: CONFIG_NETFILTER, CONFIG_IP_NF_IPTABLES,		|
+# CONFIG_IP_NF_FILTER, CONFIG_IP_NF_MATCH_STATE and			|
+# CONFIG_IP_NF_TARGET_REJECT.						|
+# 	To use the masquerading you will also need (at least):		|
+# CONFIG_IP_NF_CONNTRACK, CONFIG_IP_NF_NAT, CONFIG_IP_NF_NAT_NEEDED	|
+# and CONFIG_IP_NF_TARGET_MASQUERADE.					|
+# 	Additional options may be needed to use other features.		|
+# 									|
+# You need iptables.  Get it at "http://netfilter.filewatcher.org".	|
+# Some of the features will need patches only present in the CVS	|
+#									|
+# This script was written (and partially tested) with iptables CVS	|
+# and kernel 2.4.x (non testing) in mind.				|
+# 									|
+# Also, this is a BASH shell script...any 2.x version of GNU BASH	|
+# should work.								|
+# ----------------------------------------------------------------------|
+#									|
+# ALL USERS, READ THE FOLLOWING:					|
+#									|
+# This is distributed under the BSD liscense sans advertising clause:	|
+#									|
+# Redistribution and use in source and binary forms, with or without 	|
+# modification, are permitted provided that the following conditions 	|
+# are met:								|
+#									|
+#    1.Redistributions of source code must retain the above copyright	|
+#      notice, this list of conditions and the following disclaimer.	|
+#    2.Redistributions in binary form must reproduce the above		|
+#      copyright notice, this list of conditions and the following	|
+#      disclaimer in the documentation and/or other materials provided	|
+#      with the distribution.						|
+#    3.The name of the author may not be used to endorse or promote	|
+#      products derived from this software without specific prior	|
+#      written permission.						|
+#									|
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR	|
+# IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED	|
+# WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE	|
+# ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY	|
+# DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL	|
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE	|
+# GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS		|
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER	| 
+# IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR	|
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN	|
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE				|
+#									|
+# While this may be used freely for commercial use, I do REQUEST that	|
+# any commercial users please tell me via e-mail at			|
+# monmotha@indy.rr.com that they are using it, why they chose it,	|
+# how well it works, etc.						|
+#									|
+# ----------------------------------------------------------------------|
+# IMPORTANT: This firewall is currently in beta! It may be too		|
+# restrictive or insecure.						|
+# ----------------------------------------------------------------------|
+# CHANGELOG: (Since 2.3.0-pre1a only)					|
+#	version 2.3.8-pre7: Fix syntax error in ALLOW_HOSTWISE_PROTO	|
+#	version 2.3.8-pre7b: More sanity checking			|
+#			     LOCIP option for DENY_HOSTWISE options	|
+#			     LOCIP option for DENY_ALL			|
+#	version 2.3.8-pre7a: Clarify liscense				|
+#			     Alias TCP_ALLOW and UDP_ALLOW to		|
+#				ALLOW_HOSTWISE_xxx as they contain	|
+#				redundant code				|
+#			     Move BAD_ICMP to non-experimental options	|
+#			     Changed exit status; review your scripts	|
+#			     Additional sanity checking			|
+#			     Add ALLOW_HOSTWISE_PROTO option		|
+#	version 2.3.8-pre6: Fix comment errors				|
+#			    Fix a bug in config checks			|
+#			    Add BRAINDEAD_ISP option			|
+#	version 2.3.8-pre5: More fixes for multiple LAN interfaces	|
+#			    Fix a syntax error in ALLOW_HOSTWISE_TCP	|
+#	version 2.3.8-pre5d: Intersubnet Routing should work again	|
+#			     TOS Mangles default to off			|
+#	version 2.3.8-pre5c: Port forwards apply to all interfaces only	|
+#				when LOCIP is used			|
+#			     Multiple LAN Interfaces (breaks DMZ)	|
+#	version 2.3.8-pre5b: Fix missing fi near line 1160		| 
+#	version 2.3.8-pre5a: Fix BAD_ICMP and echo-request		|
+#			     Fix port forwards				|
+#			     Add checks for limit and REJECT		|
+#			     Local IP options for TCP/UDP allows (and	|
+#				hostwise allows)			|
+#			     Port forwards now apply to all interfaces	|
+#			     Remove redundant disclaimer		|
+#	version 2.3.8-pre4: Fix typo in SUPER_EXEMPT			|
+#			    Fix reversal of DMZIN/OUT			|
+#			    Fix reversed logic in port forwards		|
+#	version 2.3.8-pre3: Fix DHCP server syntax error		|
+#			    Replace ALLOW_ALL with SUPER_EXEMPT		|
+#			    Fix ALLOW_OUT_TCP				|
+#			    Fix SNAT status reporting			|
+#			    Removed some obsoleted code			|
+#			    Move DHCP server to stable options		|
+#			    Add local IP to port forwards		|
+#	version 2.3.8-pre2: Don't create ULDROP unless used in case	|
+#				system doesn't have ULOG support	|
+#			    ALLOW_OUT_TCP now allows a destination port	|
+#			    Additional sanity checks			|
+#			    Add ULREJECT and ULTREJECT targets		|
+#			    BLACKHOLEs should now work			|
+#			    Fix status reporting in local traffic rules	|
+#			    DMZ Fixes (Hans Bieshaar)			|
+#			    Flush and delete SYSTEST (Hans)		|
+#			    Syncookies set off if not on (Hans)		|
+#			    Fix REJECT messages for ICMP (Hans)		|
+#			    Explicit denies are now global (Hans)	|
+#			    Remove FORWARD -d $INTERNAL_LAN; it is not	|
+#				needed for internet and can pose a	|
+#				security risk (this may break things)	|
+#				(Hans)					|
+#			    SYNCOOKIES default to off (Hans)		|
+#				We had a debate on this one, feel free	|
+#				to email me regarding it.		|
+#			    Config directives for RP_FILTER and		|
+#				accept strict source routed (Hans)	|
+#			    Add BAD_ICMP directive			|
+#	version 2.3.8-pre1: Add ULDROP (ULOG and DROP) target		|
+#			    Restructuring to allow the following:	|
+#			     BLACKHOLEs are now global (not just inet)	|
+#			     All explicit denies override TCP/UDP	|
+#				forwards.				|
+#			     All explicit denies ovrride ALLOW_HOSTWISE	|
+#			    BLACKHOLEs should now work for computers	|
+#				behind the firewall as well as the	|
+#				firewall itself.			|
+#			    Fix for iptables 1.2.3 log level info	|
+#	version 2.3.7: No changes from pre8				|
+#	version 2.3.7-pre8: Change email address on liscense		|
+#			    Revert to pre6 behavior of dropping ICMP	|
+#				echo-request (take global DROP= policy)	|
+#			    Allow everything from interface lo		|
+#			    Correct pre7 changelog			|
+#			    Special rules for DHCP servers		|
+#	version 2.3.7-pre7: Fix version number in changelog entry below	|
+#			    Fix 127.0.0.1 INPUT handling.		|
+#			    Only enable IP forwarding if it's needed	|
+#				(INTERNAL_LAN defined)			|
+#			    Tweak flood parameters			|
+#			    Hostwise allows now override explicit,	|
+#				denies but not blackholes		|
+#			    ICMP echo-request will no longer take the	|
+#				specified drop policy when it doesn't	|
+#				comply with limits, straight DROP will	|
+#				be used instead				|
+#			    Fix REJECT handling in TREJECT and LTREJECT	|
+#			    Add transparent proxy support (Joshua Link)	|
+#	version 2.3.7-pre6: Fix status reporting on SSR SysCtl loop	|
+#			    Fix the SSR SysCtl loop			|
+#			    Remove stateful match from forward chain	|
+#	version 2.3.7-pre5: Make the default policy actually be DROP	|
+#				instead of just saying it is		|
+#			    Add stateful matching to forward chain to	|
+#				prevent people from routing onto your	|
+#				internal network (please tell me if 	|
+#				breaks anything). Thanks to Martin	|
+#				Mosny for noticing this			|
+#			    Block Source Routed Packets to help with	|
+#				the above problem			|
+#			    Add option for TCP SynCookies on or off	|
+#			    Fix BLACKHOLE directive (was being applied	|
+#				to INPUT/OUTPUT after the jump for	| 
+#				INETIN/INETOUT so didn't apply for	|
+#				the internet).  Thanks to Gerry Doris	|
+#				for noticing this			|
+#			    Add DHCP client to default UDP port allows	|
+#			    Note email address change			|
+#			    Changed emphesis in comments		|
+#			    Forwarding of port ranges (Vinny and Eddie)	|
+#	version 2.3.7-pre4: Line 414, missing subnet match caused all	|
+#				packets from anywhere to be allowed.	|
+#				Fixed.					|
+#	version 2.3.7-pre3: Fix missing fi (fatal syntax error)		|
+#			    Fix logging in TCPACCEPT chain		|
+#	version 2.3.7-pre2: Add route verification (thanks to Jeremy	| 
+#				Frank)					|
+#			    Add blackhole directive			|
+#			    Updated configuration sanity checks		|
+#			    Ripped out SSH Stuff as it isn't needed	|
+#			    True default DROP on INPUT			|
+#			    Don't run the INTERNAL_LAN loop if no nets	|
+#			    Upped the default SYN limit as large	|
+#				numbers of small FTP transfers would	|
+#				overload it quickly			|
+#			    Form cleanups				|
+#	version 2.3.7-pre1: Maybe the FTP will work now (fixes for the	|
+#				RELATED state)				|
+#			    Now works with both LAN and DMZ iface null	|
+#			    Moved static NAT to stable options		|
+#			    Change parser to /bin/bash not /bin/sh	|
+#	version 2.3.6: Add TTL mangling					|
+#		       Added some more EFNet servers to the list	|
+#		       Fix in the DMZOUT chain				|
+#		       Fix FTP stuff					|
+#	version 2.3.5: Fixes to make port forwarding work again		|
+#	version 2.3.4: USE_MASQ has been changed to MASQ_LAN in port fw	|
+#		       Fix syntax error in TCP port forwards		|
+#		       General cleanup					|
+#		       Fixes in port forwarding				|
+#		       It's LTREJECT, not TLREJECT			|
+#		       More TOS mangling				|
+#	version 2.3.3: Fatal syntax error in IP forward detect fix	|
+#		       Don't bail on no IP forward for no LAN		|
+#	version 2.3.3-pre1: Reject with tcp-reset for TCP option	|
+#			    Removed the huge list of censorship		|
+#			    Moved the port forwards to stable options	|
+#			    Moved the TOS mangling to stable options	|
+#			    Check before enabling IP Forwarding and	|
+#				IP SynCookies				|
+#			    Don't run censorship loop if no rules	|
+#			    Request low latency TOS on UDP packets for	|
+#				games on ports 4000-7000 (Diablo II)	|
+#			    Fix bad syntax in the port forwarding loops	|
+#			    Reversed DMZIN and DMZOUT fixed		|
+#			    Various syntax fixes			|
+#			    Stateful inspection on forward chain	|
+#			    Other stateful matching changes		|
+#	version 2.3.2: Fixed bad syntax in DMZ_IFACE loop		|
+#	version 2.3.2-pre2: Put a real liscense on it (BSD liscense)	|
+#			    Changed format of ALLOW_HOSTWISE and	|
+#				DENY_HOSTWISE to be less confusing	|
+#				(the ":" was changed to ">")		|
+#			    Added LOG_FLOOD option to tweak log limit	|
+#			    Added SYN_FLOOD option to tweak SYN limit	|
+#			    Added PING_FLOOD option to tweak PING limit	|
+#	version 2.3.2-pre1: Stateful matching on active FTP and SSH	|
+#				rules (thanks to Len Padilla)		|
+#			    Fixed a minor bug in chain creation order	|
+#				(thanks to Peter Lindman)		|
+#			    TOS Optimizations (thanks to vesa alatalo)	|
+#			    Begin DMZ Support				|
+#			    Proofread comments and correct		|
+#			    Use BASH builtins instead of sed 		|
+#				(thanks to Craig Ludington)		|
+#			    Fixed "USE_SNAT" bug in port forwarding	|
+#				(has been changed to "SNAT_LAN")	|
+#				(thanks to Frédéric Marchand)		|
+#			    Tuned down default TCP allows (remove POP3)	|
+#	version 2.3.1: Option for 1:1 or subnet:1 static NAT		|
+#		       Internet censorship options			|
+#	version 2.3.1-pre2: Added option to deny specific ports from	|
+#				specific hosts				|
+#			    Added limiting to logging chains to prevent	|
+#				log DoSing				|
+#			    Spiffed up comments				|
+#			    Changed the "AUTH_ALLOW" and "DNS" options	|
+#				to be more generic and flexible		|
+#	version 2.3.1-pre1: Updated comments for new kernel version	|
+#			    Removed double drop setting			|
+#			    Updated for iptables-1.2			|
+#			    Began a kernel option list			|
+#	version 2.3.0: No changes from pre1g				|
+#	version 2.3.0-pre1g: Tuned down default TCP allows		|
+#			     Restructure to SSH loop			|
+#			     Status Reporting Fixes (newlines, etc.)	|
+#			     Fix log prefix length on accept loops	|
+#	version 2.3.0-pre1f: Moved the ICMP echo-request limit to where	|
+#				it should have been			|
+#			     Allows the rest of the ICMP like it should	|
+#			     Remove the interface matching from ICMP	|
+#				echo-request (not needed)		|
+#	version 2.3.0-pre1e: Fixed an issue in the invalid matching	|
+#	version 2.3.0-pre1d: Spiffed up comments			|
+#			     Port Forwarding				|
+#			     Moved the deny setting to normal options	|
+#	version 2.3.0-pre1c: Minor fixes that don't (currently) affect	|
+#				functionality				|
+#	version 2.3.0-pre1b: Security fix documented in 2.1.13		|
+#			     Slight logic change in TCP_ALLOW loop	|
+#			     Don't print allow messages if nothign is	|
+#				allowed by that loop			|
+#			     Changed IPTables download URL		|
+#       version 2.3.0-pre1a: Initial branch from 2.1.12                 |
+#                            Add stuff in release notes except port fw  |
+# ----------------------------------------------------------------------|
+# You NEED to set this!							|
+# Configuration follows:						|
+#									|
+# Notes about configuration: 						|
+# Some things take more than one option; separate with spaces.		|
+# You probably don't want all the ports I have under here open, portscan|
+#	yourself to find what you want open.				|
+# If you want to used host-based identd allowing, do NOT put 113 in	|
+#	TCP_ALLOW and DO set ALLOW_TCP_HOSTWISE (using 113 as the port).|
+#	Of course, you can also put 113 in TCP_ALLOW to allow anyone.	|
+# The same applies to DNS zone transfers (only use port 53 and UDP).	|
+# MAC_MASQ is ONLY used for the purposes of masquerading and it will	|
+#	override the MASQ_LAN setting for masquerading.	However, you	|
+#	must still define MASQ_LAN properly.				|
+# INTERNAL_LAN must always be properly defined.				|
+# You can use hostnames anywhere, but you'll need to have access to the	| 
+# DNS server when the script runs and you might not get the expected	|
+#	results since the DNS lookup is only done once.			|
+# You can mix and match hosts with public IPs and masqueraded hosts in	|
+# 	INTERNAL_LAN as long as you define the ones to use NAT later.	|
+# DMZ support can currently be considered (at best) PREALPHA.		|
+# It should work without a LAN, leave INTERNAL_LAN blank.		|
+
+
+# Main configuration, modify to suit your setup.  Help can be found at:
+#    http://www.mplug.org/phpwiki/index.php?MonMothaReferenceGuide
+
+
+IPTABLES="/usr/sbin/iptables"			# set to your iptables location, must be set
+TCP_ALLOW="22"					# TCP ports to allow (port<LOCIP)
+UDP_ALLOW="68 6112 6119 4000"			# UDP ports to allow (port<LOCIP)
+INET_IFACE="eth1"				# the interface your internet's on (one only), must be set
+LAN_IFACE="eth0"				# the interface(s) your LAN is on
+INTERNAL_LAN="192.168.0.0/24 192.168.1.0/24"	# The internal LAN (including DMZs but not censored hosts)
+MASQ_LAN="192.168.0.0/24 192.168.1.0/24"	# the internal network(s) to be masqueraded (this is overridden by MAC_MASQ)
+SNAT_LAN=""					# Internal networks/hosts to use static NAT (format is <internal ip or network>:<external ip>) (this is overridden by MAC_SNAT)
+DROP="TREJECT"					# What to do with packets we don't want: DROP, REJECT, TREJECT (Reject with tcp-reset for TCP), LDROP (log and drop), LREJECT (log and reject), LTREJECT (log and reject with tcp-reset), ULDROP (ULOG and DROP)
+DENY_ALL=""					# Internet hosts to explicitly deny from accessing your system at all; format is "IP<LOCIP"
+DENY_HOSTWISE_TCP=""				# Specific hosts to deny access to specific TCP ports; format is "IP>PORT<LOCIP"
+DENY_HOSTWISE_UDP=""				# Specific hosts to deny access to specific UDP ports; format is "IP>PORT<LOCIP"
+BLACKHOLE=""					# People you don't want to have anything to do with (equivlent of my old TK_DROP).  This is a bidirectional drop.
+BLACKHOLE_DROP="DROP"				# What to do for the blackholes (same options as DROP directive above)
+ALLOW_HOSTWISE_TCP=""				# Specific hosts allowed access to specific TCP ports; format is "IP>PORT<LOCIP"
+ALLOW_HOSTWISE_UDP=""				# Specific hosts allowed access to specific UDP ports; format is "IP>PORT<LOCIP"
+TCP_FW=""					# TCP port forwards, form is "SPORT:DPORT>DESTIP<LOCIP" <LOCIP may be omitted
+UDP_FW=""					# UDP port forwards, form is "SPORT:DPORT>DESTIP<LOCIP" <LOCIP may be omitted
+MANGLE_TOS_OPTIMIZE="FALSE"			# TOS "optimizations" on or off (TRUE/FALSE toggle)
+DHCP_SERVER="FALSE"				# Set to true if you run a DHCP server. DHCP clients do not need this. This allows broadcasts to the server from potential clients on the LAN to succeede.
+BAD_ICMP="5 9 10 15 16 17 18"			# ICMP messages to NOT allow in from internet
+ENABLE="N"					# Set to 'Y' when it's configured; this is for your own safety
+
+# Flood Params.  You will still recieve the packets and the bandwidth will be used, but this will cause floods to be ignored (useful against SYNFLOODS especially)
+LOG_FLOOD="2/s"					# Limit on logging (for LTREJECT, LREJECT and LDROP, the packet will always take the policy regardless of logging)
+SYN_FLOOD="20/s"				# GLOBAL limit on SYN packets (servers will probably need even higher sustained rates as this isn't on a per IP basis)
+PING_FLOOD="1/s"				# GLOBAL limit on ICMP echo-requests to reply to
+
+# Outbound filters
+ALLOW_OUT_TCP=""				# Internal hosts allowed to be forwarded out on TCP (do not put this/these host/s in INTERNAL_LAN, but do define their method of access [snat, masq] if not a public ip)
+PROXY=""					# Redirect for Squid or other TRANSPARENT proxy. Syntax to specify the proxy is "host:port".
+
+# Below here is experimental (please report your successes/failures)
+MAC_MASQ=""					# MAC addresses permitted to use masquerading, leave blank to not use
+MAC_SNAT=""					# MAC addresses permitted to use static NAT, leave blank to not use (format is <MAC Address>:<external ip>)
+TTL_SAFE=""					# How many hops packets need to make once they get on your LAN (null disables the mangling) (requires patch from patch-o-matic)
+USE_SYNCOOKIES="FALSE"				# TCP SynCookies on or off (TRUE/FALSE toggle)
+RP_FILTER="TRUE"				# Turns rp_filter on or off on all interfaces (TRUE/FALSE toggle)
+ACCEPT_SOURCE_ROUTE="FALSE"			# Turns accept_source_route on or off on all interfaces (TRUE/FALSE toggle)
+SUPER_EXEMPT=""					# Hosts which get to bypass the packet filter entirely (be REALLY careful with these)
+BRAINDEAD_ISP="FALSE"				# Force no fragments, useful if your ISP has a broken firewall or if you are on a tunneled connection (like PPPoE DSL)
+ALLOW_HOSTWISE_PROTO=""				# Specific hosts allowed access on specific IP protocols; format is "IP>PROTO<LOCIP"
+
+
+# Only touch these if you're daring (PREALPHA stuff, as in basically non-functional)
+DMZ_IFACE=""					# Interface your DMZ is on (leave blank if you don't have one)
+
+
+# ----------------------------------------------------------------------|
+# These control basic script behavior; there should be no need to	|
+#	change any of these settings for normal use.			|
+# ----------------------------------------------------------------------|
+FILTER_CHAINS="INETIN INETOUT DMZIN DMZOUT TCPACCEPT UDPACCEPT LDROP LREJECT TREJECT LTREJECT"
+UL_FILTER_CHAINS="ULDROP ULREJECT ULTREJECT"
+LOOP_IFACE="lo"
+
+# ----------------------------------------------------------------------|
+# You shouldn't need to modify anything below here			|
+# Main Script Starts							|
+# ----------------------------------------------------------------------|
+
+# Let's load it!
+echo "Loading iptables firewall:"
+
+# Configuration Sanity Checks
+echo -n "Checking configuration..."
+
+# It's hard to run an iptables script without iptables...
+if ! [ -x $IPTABLES ] ; then
+	echo
+	echo "ERROR IN CONFIGURATION: ${IPTABLES} doesn't exist or isn't executable!"
+	exit 4
+fi
+
+# Basic interface sanity
+for dev in ${LAN_IFACE} ; do
+	if [ "$dev" = "${DMZ_IFACE}" ] && [ "$dev" != "" ]; then
+		echo
+		echo "ERROR IN CONFIGURATION: DMZ_IFACE and LAN_IFACE can't have a duplicate interface!"
+		exit 1
+	fi
+done
+
+# Create a test chain to work with for system ablilities testing
+${IPTABLES} -N SYSTEST
+if [ "$?" != "0" ] ; then 
+	echo
+	echo "IPTABLES can't create new chains or the script was interrupted previously!"
+	echo "Flush IPTABLES rulesets or delete chain SYSTEST and try again."
+	exit 4
+fi
+
+# Check for ULOG support
+${IPTABLES} -A SYSTEST -j ULOG > /dev/null 2>&1
+if [ "$?" = "0" ] ; then 
+	HAVE_ULOG="true"
+else
+	HAVE_ULOG="false" 
+fi
+
+# Check for LOG support
+${IPTABLES} -A SYSTEST -j LOG > /dev/null 2>&1
+if [ "$?" != "0" ] ; then 
+	echo
+	echo "Your kernel lacks LOG support reqiored by this script. Aborting."
+	exit 3
+fi
+
+# Check for stateful matching
+${IPTABLES} -A SYSTEST -m state --state ESTABLISHED -j ACCEPT > /dev/null 2>&1
+if [ "$?" != "0" ] ; then 
+	echo
+	echo "Your kernel lacks stateful matching, this would break this script. Aborting."
+	exit 3
+fi
+
+# Check for the limit match
+${IPTABLES} -A SYSTEST -m limit -j ACCEPT > /dev/null 2>&1
+if [ "$?" != "0" ] ; then
+	echo
+	echo "Support not found for limiting needed by this script. Aborting."
+	exit 3
+fi
+
+# Check for REJECT
+${IPTABLES} -A SYSTEST -j REJECT > /dev/null 2>&1
+if [ "$?" != "0" ] ; then
+	echo
+	echo "Support not found for the REJECT target needed by this script. Aborting."
+	exit 3
+fi
+
+# Check DROP sanity
+if [ "$DROP" = "" ] ; then
+	echo
+	echo "There needs to be a DROP policy (try TREJECT)!"
+	exit 1
+fi
+if [ "$DROP" = "ACCEPT" ] ; then
+	echo
+	echo "The DROP policy is set to ACCEPT; there is no point in loading the firewall as there wouldn't be one."
+	exit 2
+fi
+if [ "$DROP" = "ULDROP" ] || [ "$DROP" = "ULREJECT" ] || [ "$DROP" = "ULTREJECT" ] ; then
+	if [ "$HAVE_ULOG" != "true" ] ; then
+		echo
+		echo "You have selected a ULOG policy, but your system lacks ULOG support."
+		echo "Please choose a policy that your system has support for."
+		exit 5
+	fi
+fi
+
+# Problems with blackholes?
+if [ "$BLACKHOLE" != "" ] && [ "$BLACKHOLE_DROP" = "" ] ; then
+	echo
+	echo "You can't use blackholes and not have a policy for them!"
+	exit 1
+fi
+
+# Has it been configured?
+if ! [ "$ENABLE" = "Y" ] ; then
+	echo
+	echo "You need to *EDIT YOUR CONFIGURATION* and set ENABLE to Y!"
+	exit 99
+fi
+
+# Flush and remove the chain SYSTEST
+${IPTABLES} -F SYSTEST
+${IPTABLES} -X SYSTEST
+
+# Seems ok...
+echo "passed"
+
+
+# ===============================================
+# ----------------Preprocessing------------------
+# ===============================================
+
+# Turn TCP_ALLOW and UDP_ALLOW into ALLOW_HOSTWISE
+echo -n "Performing TCP_ALLOW and UDP_ALLOW alias preprocessing..."
+if [ "$TCP_ALLOW" != "" ] ; then
+	for rule in ${TCP_ALLOW} ; do
+		ALLOW_HOSTWISE_TCP="${ALLOW_HOSTWISE_TCP} 0/0>$rule"
+	done
+fi
+if [ "$UDP_ALLOW" != "" ] ; then
+	for rule in ${UDP_ALLOW} ; do
+		ALLOW_HOSTWISE_UDP="${ALLOW_HOSTWISE_UDP} 0/0>$rule"
+	done
+fi
+echo "done"
+
+
+# ===============================================
+# -------Set some Kernel stuff via SysCTL--------
+# ===============================================
+
+# Turn on IP forwarding
+
+if [ "$INTERNAL_LAN" != "" ] ; then
+	echo -n "Checking IP Forwarding..."
+	if [ -e /proc/sys/net/ipv4/ip_forward ] ; then
+		echo 1 > /proc/sys/net/ipv4/ip_forward
+		echo "enabled."
+	else
+		echo "support not found! This will cause problems if you need to do any routing."
+	fi
+fi
+
+# Enable TCP Syncookies
+echo -n "Checking IP SynCookies..."
+if [ -e /proc/sys/net/ipv4/tcp_syncookies ] ; then
+	if [ "$USE_SYNCOOKIES" = "TRUE" ] ; then
+		echo 1 > /proc/sys/net/ipv4/tcp_syncookies
+		echo "enabled."
+	else
+		echo 0 > /proc/sys/net/ipv4/tcp_syncookies
+		echo "disabled."
+	fi
+else
+	echo "support not found, but that's OK."
+fi
+
+# Enable Route Verification to prevent martians and other such crud that
+# seems to be commonplace on the internet today
+echo -n "Checking Route Verification..."
+if [ "$INET_IFACE" != "" ] ; then
+	if [ -e /proc/sys/net/ipv4/conf/$INET_IFACE/rp_filter ] ; then
+		if [ "$RP_FILTER" = "TRUE" ] ; then
+			echo 1 > /proc/sys/net/ipv4/conf/$INET_IFACE/rp_filter
+			echo -n "activated:${INET_IFACE} "
+		else
+			echo 0 > /proc/sys/net/ipv4/conf/$INET_IFACE/rp_filter
+			echo -n "disabled:${INET_IFACE} "
+		fi
+	else
+		echo "not found:${INET_IFACE} "
+	fi		
+fi
+
+if [ "$LAN_IFACE" != "" ] ; then
+	for dev in ${LAN_IFACE} ; do
+		if [ -e /proc/sys/net/ipv4/conf/$dev/rp_filter ] ; then
+			if [ "$RP_FILTER" = "TRUE" ] ; then
+				echo 1 > /proc/sys/net/ipv4/conf/$dev/rp_filter
+				echo -n "activated:$dev "
+			else
+				echo 0 > /proc/sys/net/ipv4/conf/$dev/rp_filter
+				echo -n "disabled:$dev "
+			fi
+		else
+			echo "not found:$dev "
+		fi
+	done
+fi
+
+if [ "$DMZ_IFACE" != "" ] ; then
+	if [ -e /proc/sys/net/ipv4/conf/$DMZ_IFACE/rp_filter ] ; then
+		if [ "$RP_FILTER" = "TRUE" ] ; then
+			echo 1 > /proc/sys/net/ipv4/conf/$DMZ_IFACE/rp_filter
+			echo -n "activated:${DMZ_IFACE} "
+		else
+			echo 0 > /proc/sys/net/ipv4/conf/$DMZ_IFACE/rp_filter
+			echo -n "disabled:${DMZ_IFACE} "
+		fi
+	else
+		echo "not found:${DMZ_IFACE} "
+	fi		
+fi
+echo
+
+# Tell the Kernel to Ignore Source Routed Packets
+echo -n "Refusing SSR Packets via SysCtl..."
+if [ "$INET_IFACE" != "" ] ; then
+	if [ -e /proc/sys/net/ipv4/conf/$INET_IFACE/accept_source_route ] ; then
+		if [ "$ACCEPT_SOURCE_ROUTE" = "TRUE" ] ; then
+			echo "1" > /proc/sys/net/ipv4/conf/$INET_IFACE/accept_source_route
+			echo -n "disabled:${INET_IFACE} "
+		else
+			echo "0" > /proc/sys/net/ipv4/conf/$INET_IFACE/accept_source_route
+			echo -n "activated:${INET_IFACE} "
+		fi
+	else
+		echo "not found:${INET_IFACE} "
+	fi		
+fi
+
+if [ "$LAN_IFACE" != "" ] ; then
+	for dev in ${LAN_IFACE} ; do
+		if [ -e /proc/sys/net/ipv4/conf/$dev/accept_source_route ] ; then
+			if [ "$ACCEPT_SOURCE_ROUTE" = "TRUE" ] ; then
+				echo "1" > /proc/sys/net/ipv4/conf/$dev/accept_source_route
+				echo -n "disabled:$dev "
+			else
+				echo "0" > /proc/sys/net/ipv4/conf/$dev/accept_source_route
+				echo -n "activated:$dev "
+			fi
+		else
+			echo "not found:$dev "
+		fi		
+	done
+fi
+
+if [ "$DMZ_IFACE" != "" ] ; then
+	if [ -e /proc/sys/net/ipv4/conf/$DMZ_IFACE/accept_source_route ] ; then
+		if [ "$ACCEPT_SOURCE_ROUTE" = "TRUE" ] ; then
+			echo "1" > /proc/sys/net/ipv4/conf/$DMZ_IFACE/accept_source_route
+			echo -n "disabled:${DMZ_IFACE} "
+		else
+			echo "0" > /proc/sys/net/ipv4/conf/$DMZ_IFACE/accept_source_route
+			echo -n "activated:${DMZ_IFACE} "
+		fi
+	else
+		echo "not found:${DMZ_IFACE} "
+	fi		
+fi
+echo
+
+# ===============================================
+# --------Actual NetFilter Stuff Follows---------
+# ===============================================
+
+# Flush everything
+# If you need compatability, you can comment some or all of these out,
+# but remember, if you re-run it, it'll just add the new rules in, it
+# won't remove the old ones for you then, this is how it removes them.
+echo -n "Flush: "
+${IPTABLES} -t filter -F INPUT
+echo -n "INPUT "
+${IPTABLES} -t filter -F OUTPUT
+echo -n "OUTPUT1 "
+${IPTABLES} -t filter -F FORWARD
+echo -n "FORWARD "
+${IPTABLES} -t nat -F PREROUTING
+echo -n "PREROUTING1 "
+${IPTABLES} -t nat -F OUTPUT
+echo -n "OUTPUT2 "
+${IPTABLES} -t nat -F POSTROUTING
+echo -n "POSTROUTING "
+${IPTABLES} -t mangle -F PREROUTING
+echo -n "PREROUTING2 "
+${IPTABLES} -t mangle -F OUTPUT
+echo -n "OUTPUT3"
+echo
+
+# Create new chains
+# Output to /dev/null in case they don't exist from a previous invocation
+echo -n "Creating chains: "
+for chain in ${FILTER_CHAINS} ; do
+	${IPTABLES} -t filter -F ${chain} > /dev/null 2>&1
+	${IPTABLES} -t filter -X ${chain} > /dev/null 2>&1
+	${IPTABLES} -t filter -N ${chain}
+	echo -n "${chain} "
+done
+if [ ${HAVE_ULOG} = "true" ] ; then
+	for chain in ${UL_FILTER_CHAINS} ; do
+		${IPTABLES} -t filter -F ${chain} > /dev/null 2>&1
+		${IPTABLES} -t filter -X ${chain} > /dev/null 2>&1
+		${IPTABLES} -t filter -N ${chain}
+		echo -n "${chain} "
+	done	
+fi
+echo
+
+# Default Policies
+# INPUT policy is drop as of 2.3.7-pre5
+# Policy can't be reject because of kernel limitations
+echo -n "Default Policies: "
+${IPTABLES} -t filter -P INPUT DROP
+echo -n "INPUT:DROP "
+${IPTABLES} -t filter -P OUTPUT ACCEPT
+echo -n "OUTPUT:ACCEPT "
+${IPTABLES} -t filter -P FORWARD DROP
+echo -n "FORWARD:DROP "
+echo
+
+# ===============================================
+# -------Chain setup before jumping to them------
+# ===============================================
+
+#These logging chains are valid to specify in DROP= above
+#Set up LDROP
+echo -n "Setting up drop chains chains: "
+${IPTABLES} -t filter -A LDROP -p tcp -m limit --limit ${LOG_FLOOD} -j LOG --log-level 6 --log-prefix "TCP Dropped "
+${IPTABLES} -t filter -A LDROP -p udp -m limit --limit ${LOG_FLOOD} -j LOG --log-level 6 --log-prefix "UDP Dropped "
+${IPTABLES} -t filter -A LDROP -p icmp -m limit --limit ${LOG_FLOOD} -j LOG --log-level 6 --log-prefix "ICMP Dropped " 
+${IPTABLES} -t filter -A LDROP -f -m limit --limit ${LOG_FLOOD} -j LOG --log-level 4 --log-prefix "FRAGMENT Dropped "
+${IPTABLES} -t filter -A LDROP -j DROP
+echo -n "LDROP "
+        
+#And LREJECT too
+${IPTABLES} -t filter -A LREJECT -p tcp -m limit --limit ${LOG_FLOOD} -j LOG --log-level 6 --log-prefix "TCP Rejected "
+${IPTABLES} -t filter -A LREJECT -p udp -m limit --limit ${LOG_FLOOD} -j LOG --log-level 6 --log-prefix "UDP Rejected "
+${IPTABLES} -t filter -A LREJECT -p icmp -m limit --limit ${LOG_FLOOD} -j LOG --log-level 6 --log-prefix "ICMP Rejected "
+${IPTABLES} -t filter -A LREJECT -f -m limit --limit ${LOG_FLOOD} -j LOG --log-level 4 --log-prefix "FRAGMENT Rejected "
+${IPTABLES} -t filter -A LREJECT -j REJECT
+echo -n "LREJECT "
+
+#Don't forget TREJECT
+${IPTABLES} -t filter -A TREJECT -p tcp -j REJECT --reject-with tcp-reset
+${IPTABLES} -t filter -A TREJECT -p udp -j REJECT --reject-with icmp-port-unreachable
+${IPTABLES} -t filter -A TREJECT -p icmp -j DROP
+${IPTABLES} -t filter -A TREJECT -j REJECT 
+echo -n "TREJECT "
+
+#And LTREJECT
+${IPTABLES} -t filter -A LTREJECT -p tcp -m limit --limit ${LOG_FLOOD} -j LOG --log-level 6 --log-prefix "TCP Rejected "
+${IPTABLES} -t filter -A LTREJECT -p udp -m limit --limit ${LOG_FLOOD} -j LOG --log-level 6 --log-prefix "UDP Rejected "
+${IPTABLES} -t filter -A LTREJECT -p icmp -m limit --limit ${LOG_FLOOD} -j LOG --log-level 6 --log-prefix "ICMP Rejected "
+${IPTABLES} -t filter -A LTREJECT -f -m limit --limit ${LOG_FLOOD} -j LOG --log-level 4 --log-prefix "FRAGMENT Rejected "
+${IPTABLES} -t filter -A LTREJECT -p tcp -j REJECT --reject-with tcp-reset
+${IPTABLES} -t filter -A LTREJECT -p udp -j REJECT --reject-with icmp-port-unreachable
+${IPTABLES} -t filter -A LTREJECT -p icmp -j DROP
+${IPTABLES} -t filter -A LTREJECT -j REJECT
+echo -n "LTREJECT "
+
+#And ULOG stuff, same as above but ULOG instead of LOG
+if [ ${HAVE_ULOG} = "true" ] ; then
+	${IPTABLES} -t filter -A ULDROP -p tcp -m limit --limit ${LOG_FLOOD} -j ULOG --ulog-nlgroup 1 --ulog-prefix LDROP_TCP
+	${IPTABLES} -t filter -A ULDROP -p udp -m limit --limit ${LOG_FLOOD} -j ULOG --ulog-nlgroup 1 --ulog-prefix LDROP_UDP
+	${IPTABLES} -t filter -A ULDROP -p icmp -m limit --limit ${LOG_FLOOD} -j ULOG --ulog-nlgroup 1 --ulog-prefix LDROP_ICMP 
+	${IPTABLES} -t filter -A ULDROP -f -m limit --limit ${LOG_FLOOD} -j ULOG --ulog-nlgroup 1 --ulog-prefix LDROP_FRAG
+	${IPTABLES} -t filter -A ULDROP -j DROP
+	echo -n "ULDROP "
+
+	${IPTABLES} -t filter -A ULREJECT -p tcp -m limit --limit ${LOG_FLOOD} -j ULOG --ulog-nlgroup 1 --ulog-prefix LREJECT_TCP
+	${IPTABLES} -t filter -A ULREJECT -p udp -m limit --limit ${LOG_FLOOD} -j ULOG --ulog-nlgroup 1 --ulog-prefix LREJECT_UDP
+	${IPTABLES} -t filter -A ULREJECT -p icmp -m limit --limit ${LOG_FLOOD} -j ULOG --ulog-nlgroup 1 --ulog-prefix LREJECT_UDP
+	${IPTABLES} -t filter -A ULREJECT -f -m limit --limit ${LOG_FLOOD} -j ULOG --ulog-nlgroup 1 --ulog-prefix LREJECT_FRAG
+	${IPTABLES} -t filter -A ULREJECT -j REJECT
+	echo -n "LREJECT "
+
+	${IPTABLES} -t filter -A ULTREJECT -p tcp -m limit --limit ${LOG_FLOOD} -j ULOG --ulog-nlgroup 1 --ulog-prefix LTREJECT_TCP
+	${IPTABLES} -t filter -A ULTREJECT -p udp -m limit --limit ${LOG_FLOOD} -j ULOG --ulog-nlgroup 1 --ulog-prefix LTREJECT_UDP
+	${IPTABLES} -t filter -A ULTREJECT -p icmp -m limit --limit ${LOG_FLOOD} -j ULOG --ulog-nlgroup 1 --ulog-prefix LTREJECT_ICMP 
+	${IPTABLES} -t filter -A ULTREJECT -f -m limit --limit ${LOG_FLOOD} -j ULOG --ulog-nlgroup 1 --ulog-prefix LTREJECT_FRAG
+	${IPTABLES} -t filter -A ULTREJECT -p tcp -j REJECT --reject-with tcp-reset
+	${IPTABLES} -t filter -A ULTREJECT -p udp -j REJECT --reject-with icmp-port-unreachable
+	${IPTABLES} -t filter -A ULTREJECT -p icmp -j DROP
+	${IPTABLES} -t filter -A ULTREJECT -j REJECT
+	echo -n "ULTREJECT "
+fi
+#newline
+echo
+
+
+# Set up the per-proto ACCEPT chains
+echo -n "Setting up per-proto ACCEPT: "
+
+# TCPACCEPT
+# SYN Flood "Protection"
+${IPTABLES} -t filter -A TCPACCEPT -p tcp --syn -m limit --limit ${SYN_FLOOD} -j ACCEPT
+${IPTABLES} -t filter -A TCPACCEPT -p tcp --syn -m limit --limit ${LOG_FLOOD} -j LOG --log-prefix "Possible SynFlood "
+${IPTABLES} -t filter -A TCPACCEPT -p tcp --syn -j ${DROP}
+${IPTABLES} -t filter -A TCPACCEPT -p tcp ! --syn -j ACCEPT
+# Log anything that hasn't matched yet and ${DROP} it since it isn't TCP and shouldn't be here
+${IPTABLES} -t filter -A TCPACCEPT -m limit --limit ${LOG_FLOOD} -j LOG --log-prefix "Mismatch in TCPACCEPT "
+${IPTABLES} -t filter -A TCPACCEPT -j ${DROP}
+echo -n "TCPACCEPT "
+
+#UDPACCEPT
+${IPTABLES} -t filter -A UDPACCEPT -p udp -j ACCEPT
+# Log anything not UDP and ${DROP} it since it's not supposed to be here
+${IPTABLES} -t filter -A UDPACCEPT -m limit --limit ${LOG_FLOOD} -j LOG --log-prefix "Mismatch on UDPACCEPT "
+${IPTABLES} -t filter -A UDPACCEPT -j ${DROP}
+echo -n "UDPACCEPT "
+
+#Done
+echo
+
+# =================================================
+# -------------------Exemptions--------------------
+# =================================================
+if [ "$SUPER_EXEMPT" != "" ] ; then
+	echo -n "Super Exemptions: "
+	for host in ${SUPER_EXEMPT} ; do
+		${IPTABLES} -t filter -A INPUT -s ${host} -j ACCEPT
+		${IPTABLES} -t filter -A OUTPUT -d ${host} -j ACCEPT
+		${IPTABLES} -t filter -A FORWARD -s ${host} -j ACCEPT
+		${IPTABLES} -t filter -A FORWARD -d ${host} -j ACCEPT
+		echo -n "${host} "
+	done
+	echo
+fi
+
+
+# =================================================
+# ----------------Explicit Denies------------------
+# =================================================
+
+#Blackholes will not be overridden by hostwise allows
+if [ "$BLACKHOLE" != "" ] ; then
+	echo -n "Blackholes: "
+	for host in ${BLACKHOLE} ; do
+		${IPTABLES} -t filter -A INPUT -s ${host} -j ${BLACKHOLE_DROP}
+		${IPTABLES} -t filter -A OUTPUT -d ${host} -j ${BLACKHOLE_DROP}
+		${IPTABLES} -t filter -A FORWARD -s ${host} -j ${BLACKHOLE_DROP}
+		${IPTABLES} -t filter -A FORWARD -d ${host} -j ${BLACKHOLE_DROP}
+		echo -n "${host} "
+	done
+	echo
+fi
+
+if [ "$DENY_ALL" != "" ] ; then
+	echo -n "Denying hosts: "
+	for rule in ${DENY_ALL} ; do
+		echo "$rule" | {
+			IFS='<' read shost dhost
+				if [ "$dhost" == "" ] ; then
+					${IPTABLES} -t filter -A INPUT -s ${shost} -j ${DROP}
+					${IPTABLES} -t filter -A FORWARD -s ${shost} -j ${DROP}
+				else
+					${IPTABLES} -t filter -A INPUT -s ${shost} -d ${dhost} -j ${DROP}
+					${IPTABLES} -t filter -A FORWARD -s ${shost} -d ${dhost} -j ${DROP}
+				fi
+		}
+		echo -n "${rule} "					
+	done
+	echo
+fi
+
+
+
+if [ "$DENY_HOSTWISE_TCP" != "" ] ; then
+	echo -n "Hostwise TCP Denies: "
+	for rule in ${DENY_HOSTWISE_TCP} ; do
+		echo "$rule" | {
+			IFS='><' read shost port dhost
+				echo "$port" | {
+					IFS='-' read fsp lsp
+					if [ "$dhost" == "" ] ; then	
+						if [ "$lsp" != "" ] ; then
+ 							${IPTABLES} -t filter -A INPUT -p tcp -s ${shost} --dport ${fsp}:${lsp} -j ${DROP}
+							${IPTABLES} -t filter -A FORWARD -p tcp -s ${shost} --dport ${fsp}:${lsp} -j ${DROP}
+						else
+ 							${IPTABLES} -t filter -A INPUT -p tcp -s ${shost} --dport ${port} -j ${DROP}
+							${IPTABLES} -t filter -A FORWARD -p tcp -s ${shost} --dport ${port} -j ${DROP}
+						fi
+					else
+                                                if [ "$lsp" != "" ] ; then
+                                                        ${IPTABLES} -t filter -A INPUT -p tcp -s ${shost} -d ${dhost} --dport ${fsp}:${lsp} -j ${DROP}
+							${IPTABLES} -t filter -A FORWARD -p tcp -s ${shost} -d ${dhost} --dport ${fsp}:${lsp} -j ${DROP}
+                                                else
+                                                        ${IPTABLES} -t filter -A INPUT -p tcp -s ${shost} -d ${dhost} --dport ${port} -j ${DROP}
+							${IPTABLES} -t filter -A FORWARD -p tcp -s ${shost} -d ${dhost} --dport ${port} -j ${DROP}
+                                                fi
+					fi
+                       			echo -n "${rule} "
+				}
+		}
+	done
+	echo
+fi
+
+if [ "$DENY_HOSTWISE_UDP" != "" ] ; then
+	echo -n "Hostwise UDP Denies: "
+	for rule in ${DENY_HOSTWISE_UDP} ; do
+		echo "$rule" | {
+			IFS='><' read shost port dhost
+				echo "$port" | {
+					IFS='-' read fsp lsp
+					if [ "$dhost" == "" ] ; then	
+						if [ "$lsp" != "" ] ; then
+ 							${IPTABLES} -t filter -A INPUT -p udp -s ${shost} --dport ${fsp}:${lsp} -j ${DROP}
+							${IPTABLES} -t filter -A FORWARD -p udp -s ${shost} --dport ${fsp}:${lsp} -j ${DROP}
+						else
+ 							${IPTABLES} -t filter -A INPUT -p udp -s ${shost} --dport ${port} -j ${DROP}
+							${IPTABLES} -t filter -A FORWARD -p udp -s ${shost} --dport ${port} -j ${DROP}
+						fi
+					else
+                                                if [ "$lsp" != "" ] ; then
+                                                        ${IPTABLES} -t filter -A INPUT -p udp -s ${shost} -d ${dhost} --dport ${fsp}:${lsp} -j ${DROP}
+							${IPTABLES} -t filter -A FORWARD -p udp -s ${shost} -d ${dhost} --dport ${fsp}:${lsp} -j ${DROP}
+                                                else
+                                                        ${IPTABLES} -t filter -A INPUT -p udp -s ${shost} -d ${dhost} --dport ${port} -j ${DROP}
+							${IPTABLES} -t filter -A FORWARD -p udp -s ${shost} -d ${dhost} --dport ${port} -j ${DROP}
+                                                fi
+					fi
+                       			echo -n "${rule} "
+				}
+		}
+	done
+	echo
+fi
+
+
+
+#Invalid packets are always annoying
+echo -n "${DROP}ing invalid packets..."
+${IPTABLES} -t filter -A INETIN -m state --state INVALID -j ${DROP}
+echo "done"
+
+
+# ------------------------------------------------------------------------
+
+# Internet jumps to INET chains and DMZ
+# Set up INET chains
+echo -n "Setting up INET chains: "
+${IPTABLES} -t filter -A INPUT -i ${INET_IFACE} -j INETIN
+for dev in ${LAN_IFACE} ; do
+	${IPTABLES} -t filter -A FORWARD -i ${INET_IFACE} -o $dev -j INETIN
+done
+echo -n "INETIN "
+
+${IPTABLES} -t filter -A OUTPUT -o ${INET_IFACE} -j INETOUT
+for dev in ${LAN_IFACE} ; do
+	${IPTABLES} -t filter -A FORWARD -o ${INET_IFACE} -i $dev -j INETOUT
+done
+echo -n "INETOUT "
+echo
+
+if [ "$BRAINDEAD_ISP" = "TRUE" ] ; then
+	${IPTABLES} -t filter -A INETOUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+fi
+
+# For now we'll subject the DMZ to the same rules as the internet when going onto the trusted LAN
+# And we'll let it go anywhere on the internet
+if [ "$DMZ_IFACE" != "" ] ; then
+	echo -n "Setting up DMZ Chains: "
+	${IPTABLES} -A OUTPUT -o ${DMZ_IFACE} -j DMZOUT
+	${IPTABLES} -A FORWARD -i ${LAN_IFACE} -o ${DMZ_IFACE} -j DMZOUT
+	${IPTABLES} -A FORWARD -i ${INET_IFACE} -o ${DMZ_IFACE} -j ACCEPT
+
+	echo -n "DMZOUT "
+	echo -n "DMZ for Internet Forwarding to INETOUT..."
+	${IPTABLES} -A DMZOUT -j INETOUT
+
+	${IPTABLES} -A INPUT -i ${DMZ_IFACE} -j DMZIN
+
+	echo -n "DMZIN "
+	echo
+	echo -n "DMZ for LAN and localhost Forwarding to INETIN..."
+	${IPTABLES} -A FORWARD -i ${DMZ_IFACE} -o ${LAN_IFACE} -j DMZOUT
+	${IPTABLES} -A FORWARD -i ${DMZ_IFACE} -o ${INET_IFACE} -j ACCEPT
+	${IPTABLES} -A DMZOUT -o ${LAN_IFACE} -j INETIN
+	echo "done"
+	echo -n "done"
+fi
+
+# ------------------------------------------------------------------------
+
+
+# Local traffic to internet or crossing subnets 
+# This should cover what we need if we don't use masquerading
+# Unfortunately, MAC address matching isn't bidirectional (for
+#   obvious reasons), so IP based matching is done here
+echo -n "Local Traffic Rules: "
+if [ "$INTERNAL_LAN" != "" ] ; then
+	for subnet in ${INTERNAL_LAN} ; do
+		${IPTABLES} -t filter -A INPUT -s ${subnet} -j ACCEPT
+		${IPTABLES} -t filter -A FORWARD -s ${subnet} -o ! ${INET_IFACE} -i ! ${INET_IFACE} -j ACCEPT
+		echo -n "${subnet}:ACCEPT "
+	done
+fi
+
+# 127.0.0.0/8 used to need an entry in INTERNAL_LAN, but routing of that isn't needed
+# so an allow is placed on INPUT so that the computer can talk to itself :)
+${IPTABLES} -t filter -A INPUT -i ${LOOP_IFACE} -j ACCEPT
+echo -n "loopback:ACCEPT "
+
+# DHCP server magic
+# Allow broadcasts from LAN to UDP port 67 (DHCP server)
+if [ "$DHCP_SERVER" = "TRUE" ] ; then
+	for dev in ${LAN_IFACE} ; do
+		${IPTABLES} -t filter -A INPUT -i $dev -p udp --dport 67 -j ACCEPT
+	done
+	echo -n "dhcp:ACCEPT"
+fi
+echo #newline from local traffic rules
+
+
+
+if [ "$PROXY" != "" ] ; then
+	echo -n "Setting up Transparent Proxy to ${PROXY}: "
+	for subnet in ${INTERNAL_LAN} ; do
+			echo "$PROXY" | {
+                                IFS=':' read host port
+                                if [ "$host" = "localhost" ] || [ "$host" = "127.0.0.1" ] ; then
+                                        ${IPTABLES} -t nat -A PREROUTING -s ${subnet} -p tcp --dport 80 -j REDIRECT --to-port ${port}
+                                        echo -n "${subnet}:PROXY "
+                                else
+                                        ${IPTABLES} -t nat -A PREROUTING -s ${subnet} -p tcp --dport 80 -j DNAT --to ${host}:${port}
+                                        echo -n "${subnet}:PROXY "
+                                fi
+                        }
+        done
+        echo
+fi
+
+if [ "$ALLOW_OUT_TCP" != "" ] ; then
+	echo -n "Internet censorship TCP allows: "
+	for rule in ${ALLOW_OUT_TCP} ; do
+		echo "$rule" | {
+			IFS=':' read intip destip dport
+		        ${IPTABLES} -t filter -A FORWARD -s ${intip} -d ${destip} -p tcp --dport ${dport} -o ${INET_IFACE} -j ACCEPT
+			echo -n "${intip}:${destip} "
+		}
+	done
+	echo
+fi
+
+# Set up basic NAT if the user wants it
+if [ "$MASQ_LAN" != "" ] ; then
+	echo -n "Setting up masquerading: "
+	if [ "$MAC_MASQ" = "" ] ; then
+		for subnet in ${MASQ_LAN} ; do
+			${IPTABLES} -t nat -A POSTROUTING -s ${subnet} -o ${INET_IFACE} -j MASQUERADE
+			echo -n "${subnet}:MASQUERADE "
+		done
+	else	
+		for address in ${MAC_MASQ} ; do
+			${IPTABLES} -t nat -A POSTROUTING -m mac --mac-source ${address} -o ${INET_IFACE} -j MASQUERADE
+			echo -n "${address}:MASQUERADE "
+		done
+	fi
+	echo
+fi
+if [ "$SNAT_LAN" != "" ] ; then #Static NAT used
+	echo -n "Setting up static NAT: "
+        if [ "$MAC_SNAT" = "" ] ; then
+                for rule in ${SNAT_LAN} ; do
+			echo "$rule" | {
+				IFS=':' read host destip
+	                        ${IPTABLES} -t nat -A POSTROUTING -s ${host} -o ${INET_IFACE} -j SNAT --to-source ${destip}
+	                        echo -n "${host}:SNAT "
+			}
+                done
+        else
+                for rule in ${MAC_SNAT} ; do
+			echo "$rule" | {
+				IFS=':' read address destip	
+	                        ${IPTABLES} -t nat -A POSTROUTING -m mac --mac-source ${address} -o ${INET_IFACE} -j SNAT --to-source ${destip}
+	                        echo -n "${address}:SNAT "
+			}
+                done
+        fi  
+        echo
+fi
+
+#TCP Port-Forwards
+if [ "$TCP_FW" != "" ] ; then
+	echo -n "TCP Port Forwards: "
+	for rule in ${TCP_FW} ; do
+		echo "$rule" | {
+			IFS=':><' read srcport destport host shost
+				echo "$srcport" | {
+					IFS='-' read fsp lsp
+					if [ "$shost" = "" ] ; then
+						if [ "$lsp" != "" ] ; then
+							echo "$destport" | {
+								IFS='-' read fdp ldp
+								${IPTABLES} -t nat -A PREROUTING -i ${INET_IFACE} -p tcp --dport ${fsp}:${lsp} -j DNAT --to-destination ${host}:${destport}
+							}
+						else
+							${IPTABLES} -t nat -A PREROUTING -i ${INET_IFACE} -p tcp --dport ${srcport} -j DNAT --to-destination ${host}:${destport}
+						fi
+					else
+						if [ "$lsp" != "" ] ; then
+							echo "$destport" | {
+								IFS='-' read fdp ldp
+								${IPTABLES} -t nat -A PREROUTING -p tcp -d ${shost} --dport ${fsp}:${lsp} -j DNAT --to-destination ${host}:${destport}
+							}
+						else
+							${IPTABLES} -t nat -A PREROUTING -p tcp -d ${shost} --dport ${srcport} -j DNAT --to-destination ${host}:${destport}
+						fi
+					fi
+					echo -n "${rule} "
+				}
+		}
+	done
+	echo
+fi
+
+#UDP Port Forwards
+if [ "$UDP_FW" != "" ] ; then
+	echo -n "UDP Port Forwards: "
+	for rule in ${UDP_FW} ; do
+		echo "$rule" | {
+			IFS=':><' read srcport destport host shost
+				echo "$srcport" | {
+					IFS='-' read fsp lsp
+					if [ "$shost" = "" ] ; then
+						if [ "$lsp" != "" ] ; then
+							echo "$destport" | {
+								IFS='-' read fdp ldp
+								${IPTABLES} -t nat -A PREROUTING -i ${INET_IFACE} -p udp --dport ${fsp}:${lsp} -j DNAT --to-destination ${host}:${destport}
+							}
+						else
+							${IPTABLES} -t nat -A PREROUTING -i ${INET_IFACE} -p udp --dport ${srcport} -j DNAT --to-destination ${host}:${destport}
+						fi
+					else
+						if [ "$lsp" != "" ] ; then
+							echo "$destport" | {
+								IFS='-' read fdp ldp
+								${IPTABLES} -t nat -A PREROUTING -p udp -d ${shost} --dport ${fsp}:${lsp} -j DNAT --to-destination ${host}:${destport}
+							}
+						else
+							${IPTABLES} -t nat -A PREROUTING -p udp -d ${shost} --dport ${srcport} -j DNAT --to-destination ${host}:${destport}
+						fi
+					fi
+					echo -n "${rule} "
+				}
+		}
+	done
+	echo
+fi
+
+
+
+# =================================================
+# -------------------ICMP rules--------------------
+# =================================================
+
+if [ "$BAD_ICMP" != "" ] ; then
+	echo -n "${DROP}ing ICMP messages specified in BAD_ICMP..."
+	for message in ${BAD_ICMP} ; do
+		${IPTABLES} -t filter -A INETIN -p icmp --icmp-type ${message} -j ${DROP}
+		echo -n "${message} "
+	done
+	echo
+fi
+
+# Flood "security"
+# You'll still respond to these if they comply with the limits (set in config)
+# There is a more elegant way to set this using sysctl, however this has the
+# 	advantage that the kernel ICMP stack never has to process it, lessening
+#	the chance of a very serious flood overloading your kernel.
+# This is just a packet limit, you still get the packets on the interface and 
+#    still may experience lag if the flood is heavy enough
+echo -n "Flood limiting: "
+# Ping Floods (ICMP echo-request)
+${IPTABLES} -t filter -A INETIN -p icmp --icmp-type echo-request -m limit --limit ${PING_FLOOD} -j ACCEPT
+${IPTABLES} -t filter -A INETIN -p icmp --icmp-type echo-request -j ${DROP}
+echo -n "ICMP-PING "
+echo
+
+echo -n "Allowing the rest of the ICMP messages in..."
+${IPTABLES} -t filter -A INETIN -p icmp --icmp-type ! echo-request -j ACCEPT
+echo "done"
+
+
+
+# ================================================================
+# ------------Allow stuff we have chosen to allow in--------------
+# ================================================================
+
+
+# Hostwise allows
+if [ "$ALLOW_HOSTWISE_TCP" != "" ] ; then
+	echo -n "Hostwise TCP Allows: "
+	for rule in ${ALLOW_HOSTWISE_TCP} ; do
+		echo "$rule" | {
+			IFS='><' read shost port dhost
+				echo "$port" | {
+					IFS='-' read fsp lsp
+					if [ "$dhost" == "" ] ; then	
+						if [ "$lsp" != "" ] ; then
+ 							${IPTABLES} -t filter -A INETIN -p tcp -s ${shost} --dport ${fsp}:${lsp} -j TCPACCEPT
+						else
+ 							${IPTABLES} -t filter -A INETIN -p tcp -s ${shost} --dport ${port} -j TCPACCEPT
+						fi
+					else
+                                                if [ "$lsp" != "" ] ; then
+                                                        ${IPTABLES} -t filter -A INETIN -p tcp -s ${shost} -d ${dhost} --dport ${fsp}:${lsp} -j TCPACCEPT
+                                                else
+                                                        ${IPTABLES} -t filter -A INETIN -p tcp -s ${shost} -d ${dhost} --dport ${port} -j TCPACCEPT
+                                                fi
+					fi
+                       			echo -n "${rule} "
+				}
+		}
+	done
+	echo
+fi
+
+if [ "$ALLOW_HOSTWISE_UDP" != "" ] ; then
+	echo -n "Hostwise UDP Allows: "
+	for rule in ${ALLOW_HOSTWISE_UDP} ; do
+		echo "$rule" | {
+			IFS='><' read shost port dhost
+				echo "$port" | {
+					IFS='-' read fsp lsp
+					if [ "$dhost" == "" ] ; then	
+						if [ "$lsp" != "" ] ; then
+ 							${IPTABLES} -t filter -A INETIN -p udp -s ${shost} --dport ${fsp}:${lsp} -j UDPACCEPT
+						else
+ 							${IPTABLES} -t filter -A INETIN -p udp -s ${shost} --dport ${port} -j UDPACCEPT
+						fi
+					else
+                                                if [ "$lsp" != "" ] ; then
+                                                        ${IPTABLES} -t filter -A INETIN -p udp -s ${shost} -d ${dhost} --dport ${fsp}:${lsp} -j UDPACCEPT
+                                                else
+                                                        ${IPTABLES} -t filter -A INETIN -p udp -s ${shost} -d ${dhost} --dport ${port} -j UDPACCEPT
+                                                fi
+					fi
+                       			echo -n "${rule} "
+				}
+		}
+	done
+	echo
+fi
+
+if [ "$ALLOW_HOSTWISE_PROTO" != "" ] ; then
+	echo -n "Hostwise IP Protocol Allows: "
+	for rule in ${ALLOW_HOSTWISE_PROTO} ; do
+		echo "$rule" | {
+			IFS='><' read shost proto dhost
+				if [ "$dhost" == "" ] ; then	
+					${IPTABLES} -t filter -A INETIN -p ${proto} -s ${shost} -j ACCEPT
+				else
+					${IPTABLES} -t filter -A INETIN -p ${proto} -s ${shost} -d ${dhost} -j ACCEPT
+				fi
+				echo -n "${rule} "
+		}
+	done
+	echo
+fi
+
+echo -n "Allowing established outbound connections back in..."
+${IPTABLES} -t filter -A INETIN -m state --state ESTABLISHED -j ACCEPT
+echo "done"
+
+# RELATED on high ports only for security
+echo -n "Allowing related inbound connections..."
+${IPTABLES} -t filter -A INETIN -p tcp --dport 1024:65535 -m state --state RELATED -j TCPACCEPT
+${IPTABLES} -t filter -A INETIN -p udp --dport 1024:65535 -m state --state RELATED -j UDPACCEPT
+echo "done"
+
+
+# =================================================
+# ----------------Packet Mangling------------------
+# =================================================
+
+
+# TTL mangling
+# This is probably just for the paranoid, but hey, isn't that what 
+#	all security guys are? :)
+if [ "$TTL_SAFE" != "" ] ; then
+	${IPTABLES} -t mangle -A PREROUTING -i ${INET_IFACE} -j TTL --ttl-set ${TTL_SAFE}
+fi
+
+# Type of Service mangle optimizations (the ACTIVE FTP one will only work for uploads)
+# Most routers tend to ignore these, it's probably better to use
+#	QoS.  A packet scheduler like HTB is much more efficient
+#	at assuring bandwidth availability at the local end than
+#	ToS is.
+if [ "$MANGLE_TOS_OPTIMIZE" = "TRUE" ] ; then
+	echo -n "Optimizing traffic: "
+	${IPTABLES} -t mangle -A OUTPUT -p tcp --dport 23 -j TOS --set-tos Minimize-Delay
+	echo -n "telnet "
+	${IPTABLES} -t mangle -A OUTPUT -p tcp --dport 22 -j TOS --set-tos Minimize-Delay
+	echo -n "ssh "
+	${IPTABLES} -t mangle -A OUTPUT -p tcp --dport 20 -j TOS --set-tos Minimize-Cost
+	echo -n "ftp-data "
+	${IPTABLES} -t mangle -A OUTPUT -p tcp --dport 21 -j TOS --set-tos Minimize-Delay
+	echo -n "ftp-control "
+	${IPTABLES} -t mangle -A OUTPUT -p udp --dport 4000:7000 -j TOS --set-tos Minimize-Delay
+	echo -n "diablo2 "
+	echo
+fi
+
+# What to do on those INET chains when we hit the end
+echo -n "Setting up INET policies: "
+# Drop if we cant find a valid inbound rule.
+${IPTABLES} -t filter -A INETIN -j ${DROP}
+echo -n "INETIN:${DROP} "
+# We can send what we want to the internet
+${IPTABLES} -t filter -A INETOUT -j ACCEPT
+echo -n "INETOUT:ACCEPT "
+echo
+
+# All done!
+echo "Done loading the firewall!"
