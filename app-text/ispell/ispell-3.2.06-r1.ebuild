@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r1.ebuild,v 1.1 2002/04/02 23:42:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r1.ebuild,v 1.2 2002/04/04 15:52:53 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ispell is a fast screen-oriented spelling checker"
@@ -9,7 +9,7 @@ SRC_URI="http://fmg-www.cs.ucla.edu/geoff/tars/${P}.tar.gz"
 HOMEPAGE="http://fmg-www.cs.ucla.edu/geoff/ispell.html"
 
 DEPEND="virtual/glibc
-		>=sys-libs/ncurses-5.2"
+	>=sys-libs/ncurses-5.2"
 
 src_compile() {
 
@@ -17,10 +17,10 @@ src_compile() {
 	#Also allows user to edit local.h.gentoo for language preference
 	cp ${FILESDIR}/local.h.gentoo ${S}/local.h
 
-    make all || die "Compile failed"
+	make all || die "Compile failed"
 }
 
-src_install () {
+src_install() {
 
 	#Fix config.sh to install to ${D}
 	cp config.sh config.sh.orig
