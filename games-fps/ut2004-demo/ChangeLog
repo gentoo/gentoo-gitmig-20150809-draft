@@ -1,63 +1,12 @@
 # ChangeLog for games-fps/ut2004-demo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.14 2004/02/27 19:10:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.15 2004/03/03 16:40:07 wolf31o2 Exp $
 
-  27 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org>
-  ut2004-demo-3120-r1.ebuild, ut2004-demo-3120-r2.ebuild,
-  ut2004-demo-3120.ebuild:
-  Removing old version and fixing typo.  Closing bug #43108.
+*ut2004-demo-3120-r3 (03 Mar 2004)
 
-  27 Feb 2004; <augustus@gentoo.org> :
-  Fixed digest-ut2004-demo-3120-r2.
-
-  26 Feb 2004; <augustus@gentoo.org> ut2004-demo-3120-r2.ebuild:
-  Updated to new amd64 ut2004 patch.  Fixes crash at end of Onslaught.
-
-  25 Feb 2004; <augustus@gentoo.org> :
-  Fixed the -r1 digest for amd64.
-
-  24 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> :
-  Fixing digest for -r2.
-
-  24 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org>
-  ut2004-demo-3120-r2.ebuild:
-  Added openal-20040218 DEPEND.
-
-*ut2004-demo-3120-r2 (24 Feb 2004)
-
-  24 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org>
-  ut2004-demo-3120-r2.ebuild:
-  Added -r2 which includes DEPENDs and logic to fix ALSA and VoIP under the
-  game. THIS NEEDS TESTING. It worked for me under both x86 and AMD64, so I am
-  including it ~arch on both. This package is hard masked at the moment since it
-  needs more testing.
-
-  24 Feb 2004; root <root@gentoo.org> ut2004-demo-3120-r1.ebuild:
-  Added install of README-tts.txt and tts-festival.pl. Also added einfos on how
-  to get TTS working.
-
-  24 Feb 2004; <augustus@gentoo.org> ut2004-demo-3120-r1.ebuild:
-  Added AMD64 ping and tts patch.
-
-*ut2004-demo-3120-r2 (21 Feb 2004)
-
-  21 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org>
-  ut2004-demo-3120-r1.ebuild:
-  Fixing ping patch lines and closing bug #42096.
-
-*ut2004-demo-3120-r1 (20 Feb 2004)
-
-  20 Feb 2004; <augustus@gentoo.org> ut2004-demo-3120-r1.ebuild,
-  ut2004-demo-3120.ebuild:
-  Reverted ut2004-demo-3120.ebuild. The patch should have been in a new
-  release so that existing users would get it. I moved the changes to
-  ut2004-demo-3120-r1.ebuild and fixed it for AMD64. Please don't break other
-  ARCH with changes. -r1 is masked for now on AMD64 until icculus releases
-  an AMD64 patch.
-
-  19 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-demo-3120.ebuild:
-  Updated ebuild to include text-to-speech and server browser ping patches from
-  icculus.
+  03 Mar 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-demo-3120-r3.ebuild, ut2004-demo-3120.ebuild:
+  Revision bump to test new openal/libsdl from icculus.
 
   15 Feb 2004; Brad House <brad_mssw@gentoo.org> ut2004-demo-3120.ebuild:
   amd64 version has been released, should be on mirrors soon
