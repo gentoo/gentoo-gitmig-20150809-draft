@@ -1,3 +1,18 @@
+23/12
+v4.9
+This extends depend.eclass a lot, adds function select-version(). I will now work on eclasses
+that will support qt/kde 2/3/... equally well and that will be v5. I will also update and clarify
+the docs then.
+select-version() select the best version from a number of versions offered. In comparison
+with the former simplistic algorithm, it supports:
+- incompatible major versions (i.e. 2.2.1 resolves to 2.3.2 not 3.0.1)
+- release type support (alpha, beta, pre, rc) and portage-format version specification:
+$major.$minor.$revision_<type>$number.
+- version parts > 9. The old algorithm compared per-character and thus thought 12<2.
+There are many more misc small updates and changes.
+One of them is that $DEBUG_OUTPUT is now changed into $ECLASS_DEBUG_OUTPUT, and can
+be set before running emerge/ebuild. That is, you don't ahve to edit debug.eclass anymore.
+
 16/11
 v4
 Added multi-qt and multi-kdelibs functionality. See detailed explanation in eclass howto.

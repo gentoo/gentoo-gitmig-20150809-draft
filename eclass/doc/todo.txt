@@ -1,6 +1,7 @@
 - sort out docs/sgml, get link from site
 - have ebuilds/eclasses use newdepend()
 - sort debug.eclass msgs into levels, divide output
-- MAJOR AND COMPLETE REWRITE (?!)
-
+- eclasses that support kde/qt 2/3/... equally well, without a default major number.
+- cvs/cvsup support :-)
+- update docs
 
