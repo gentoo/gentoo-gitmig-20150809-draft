@@ -1,4 +1,6 @@
-MD5 569cda9f2e5ca242fc55372acaf964ea ChangeLog 620
 MD5 5d1f7a7595e7ad359c0d33caca543cd9 eventwatcher-0.2.1.ebuild 540
+MD5 5a688e558237f5a6beb9286663222979 ChangeLog 771
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 7547c31f2bca58504f0c03fd746a98f8 eventwatcher-0.3.ebuild 539
 MD5 68c180e53d95b0fda7077891c2fd614f files/digest-eventwatcher-0.2.1 71
+MD5 96da2f72d6cb643b4b67564d6cc94c68 files/digest-eventwatcher-0.3 69

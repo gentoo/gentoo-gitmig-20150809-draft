@@ -1,6 +1,11 @@
 # ChangeLog for net-news/eventwatcher
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/ChangeLog,v 1.4 2004/03/18 15:46:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/ChangeLog,v 1.5 2004/04/09 20:54:18 centic Exp $
+
+*eventwatcher-0.3 (09 Apr 2004)
+
+  09 Apr 2004; Dominik Stadler <centic@gentoo.org> eventwatcher-0.3.ebuild:
+  Bump to Version 0.3, closes Bug 47353
 
   18 Mar 2004; David Holm <dholm@gentoo.org> eventwatcher-0.2.1.ebuild:
   Added to ~ppc.
