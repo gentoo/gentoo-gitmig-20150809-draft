@@ -4,5 +4,5 @@ MD5 8411a52d54ebbb2038e2e08a9f43b238 files/qhacc-2.9-mysqlplugin-gcc-3.3.patch 9
 MD5 703c28cb8b7fdc28c19e990234c7eea6 files/digest-qhacc-2.9.8 63
 MD5 56fa492a8ac9c6cd43f156e78e450198 ChangeLog 1135
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
-MD5 1579031f58444a52dbc62801472ba7d7 qhacc-2.9.ebuild 1232
+MD5 b30aa3c9ea9214203f4d88e2e8078115 qhacc-2.9.ebuild 1231
 MD5 b639cf90b2f6b5b78c7a965a2d9860f3 qhacc-2.9.8.ebuild 1110
