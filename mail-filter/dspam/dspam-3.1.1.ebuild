@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.1.ebuild,v 1.1 2004/08/21 18:12:21 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.1.ebuild,v 1.2 2004/08/22 17:00:36 st_lim Exp $
 
 inherit eutils
 
@@ -369,7 +369,7 @@ pkg_config () {
 		PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${CONFIGDIR}/pgsql_virtual_users.sql 1>/dev/null 2>&1
 
 		einfo "Grant privileges to DSPAM PostgreSQL objects to \"${DSPAM_PgSQL_USER}\""
-		for foo in $(/usr/bin/psql -t -d ${DSPAM_PgSQL_DB} -c "SELECT tablename FROM pg_tables WHERE tablename LIKE 'dspam\%';")
+		for foo in $(/usr/bin/psql -t -d ${DSPAM_PgSQL_DB} -U postgres -c "SELECT tablename FROM pg_tables WHERE tablename LIKE 'dspam\%';")
 		do
 			/usr/bin/psql -d ${DSPAM_PgSQL_DB} -U postgres -c "GRANT ALL PRIVILEGES ON TABLE ${foo} TO ${DSPAM_PgSQL_USER};" 1>/dev/null 2>&1
 		done
