@@ -1,6 +1,10 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.42 2003/11/22 11:27:13 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.43 2003/12/19 18:58:34 lanius Exp $
+
+  19 Dec 2003; Heinrich Wendel <lanius@gentoo.org> files/opera.desktop,
+  opera-7.50_alpha1.ebuild:
+  bump, several cleanups in the ebuild
 
 *opera-7.23 (22 Nov 2003)
 
