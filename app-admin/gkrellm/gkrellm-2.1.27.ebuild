@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.27.ebuild,v 1.1 2004/03/01 07:34:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.27.ebuild,v 1.2 2004/03/01 18:43:31 mholzer Exp $
 
 S=${WORKDIR}/${P/a/}
 DESCRIPTION="Single process stack of various system monitors"
@@ -21,7 +21,6 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-dotkeep.patch
 }
 
 src_compile() {

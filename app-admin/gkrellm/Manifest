@@ -2,14 +2,13 @@ MD5 0fa42be870ad22b7ed515ec859cdb908 gkrellm-1.2.13.ebuild 917
 MD5 c323e31a15e8bca90d4e929e223f7538 gkrellm-2.1.25.ebuild 1781
 MD5 b3e3274ce3d0c6e4b6a5880194e89b15 gkrellm-2.1.24.ebuild 1813
 MD5 9ba1a7da42e95f7e34c61a63339cc432 gkrellm-2.1.21.ebuild 1657
-MD5 47e2ca9b6b40421b4045567fe0feed31 gkrellm-2.1.27.ebuild 1785
+MD5 b30b1062df152e08e2925fc52cc1e2e3 gkrellm-2.1.27.ebuild 1746
 MD5 fa6815c0c292037a32944c2d1707f9f2 gkrellm-2.1.23.ebuild 1658
 MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
 MD5 6eff2baa7184dce2ce7075b3af241b20 gkrellm-2.1.26.ebuild 1786
-MD5 ad25e3a945377fb8487dcfc0ccc3d290 ChangeLog 11278
+MD5 97568cf5daba0f7a1c9299a7c48609a7 ChangeLog 11422
 MD5 4f57be0fd7a887338b41e05de34e85ef files/digest-gkrellm-2.1.23 67
 MD5 ffec47c6c05079ab634bad98a623fec3 files/digest-gkrellm-2.1.26 67
-MD5 61e8ccfc661d71d0163b3d1583dde22e files/gkrellm-2.1.27-dotkeep.patch 402
 MD5 cafab2b9743941916312f01b8f64cffd files/gkrellmd 598
 MD5 6e41c75396a6b0df361a04657fd45ac3 files/digest-gkrellm-1.2.13 67
 MD5 64f896d97c7d4429a564181ec839578e files/digest-gkrellm-2.1.24 67
