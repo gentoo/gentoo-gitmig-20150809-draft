@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.8.3.ebuild,v 1.2 2004/02/21 19:30:16 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.8.3.ebuild,v 1.3 2004/03/18 06:53:40 zx Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc
 
 SLOT="0.8"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 IUSE=""
 
 S=${WORKDIR}/${P}
@@ -47,6 +47,6 @@ src_install() {
 	echo "DESCRIPTION=${DESCRIPTION}" \
 		> ${D}/usr/share/java-gnome/package.env
 
-	echo "/usr/share/java-gnome/lib/gtk${SLOT}.jar:/usr/share/java-gnome/lib/gnome${SLOT}.jar:/usr/share/java-gnome/lib/glade${SLOT}.jar:/usr/share/java-gnome/lib/gconf${SLOT}.jar:/usr/share/java-gnome/lib/gnomevte${SLOT}.jar:/usr/share/java-gnome/lib/gtkhtml${SLOT}.jar" \
+	echo "CLASSPATH=/usr/share/java-gnome/lib/gtk${SLOT}.jar:/usr/share/java-gnome/lib/gnome${SLOT}.jar:/usr/share/java-gnome/lib/glade${SLOT}.jar:/usr/share/java-gnome/lib/gconf${SLOT}.jar:/usr/share/java-gnome/lib/gnomevte${SLOT}.jar:/usr/share/java-gnome/lib/gtkhtml${SLOT}.jar" \
 		>> ${D}/usr/share/java-gnome/package.env
 }
