@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmium
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/ChangeLog,v 1.1 2004/02/07 04:27:40 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/ChangeLog,v 1.2 2004/03/04 18:33:20 dragonheart Exp $
+
+*wmium-1.0.8 (05 Mar 2004)
+
+  05 Mar 2004; Daniel Black <dragonheart@gentoo.org> wmium-1.0.7.ebuild,
+  wmium-1.0.8.ebuild:
+  Version bump. unmask for x86 and small documentation fix
 
 *wmium-1.0.7 (07 Feb 2004)
 

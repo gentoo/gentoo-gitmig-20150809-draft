@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.7.ebuild,v 1.2 2004/03/04 18:33:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.8.ebuild,v 1.1 2004/03/04 18:33:20 dragonheart Exp $
 
 DESCRIPTION="WindowMaker DockApp/Grellm2 pluggin that fetches the DSL usage information for Australian ISP Internode"
 
