@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/perltrash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/perltrash/ChangeLog,v 1.3 2002/12/07 18:26:22 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/perltrash/ChangeLog,v 1.4 2002/12/14 12:09:21 blizzy Exp $
+
+*perltrash-0.3 (14 Dec 2002)
+
+  14 Dec 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
 
 *perltrash-0.2 (07 Dec 2002)
 
