@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.96 2004/08/24 11:51:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.97 2004/08/31 09:05:24 lv Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -24,12 +24,33 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 #
 # Travis Tilley <lv@gentoo.org> (24 Aug 2004)
 get_libdir() {
-	# CONF_LIBDIR wasnt supported until 2.0.51_pre18, so for all versions of
-	# portage prior to that lib would need to be used even if CONF_LIBDIR is
-	# set. dolib and friends will ignore CONF_LIBDIR in <2.0.51_pre20
-	portageq has_version / '<sys-apps/portage-2.0.51_pre20' && CONF_LIBDIR="lib"
-	# and of course, we need to default to lib when CONF_LIBDIR isnt set
+	if [ ! -z "${CONF_LIBDIR_OVERRIDE}" ] ; then
+		# if there is an override, we want to use that... always.
+		CONF_LIBDIR="${CONF_LIBDIR_OVERRIDE}"
+	elif portageq has_version / '<sys-apps/portage-2.0.51_pre20' ; then
+		# and if there isnt an override, and we're using a version of
+		# portage without CONF_LIBDIR support, force the use of lib. dolib
+		# and friends from portage 2.0.50 wont be too happy otherwise.
+		CONF_LIBDIR="lib"
+	fi
+	# and of course, default to lib if CONF_LIBDIR isnt set
 	echo ${CONF_LIBDIR:=lib}
+}
+
+# Sometimes you need to override the value returned by get_libdir. A good
+# example of this is xorg-x11, where lib32 isnt a supported configuration,
+# and where lib64 -must- be used on amd64 (for applications that need lib
+# to be 32bit, such as adobe acrobat). Note that this override also bypasses
+# portage version sanity checking.
+# get_libdir_override expects one argument, the result get_libdir should
+# return:
+#
+#   get_libdir_override lib64
+#
+# Travis Tilley <lv@gentoo.org> (31 Aug 2004)
+get_libdir_override() {
+	CONF_LIBDIR="$1"
+	CONF_LIBDIR_OVERRIDE="$1"
 }
 
 # This function generate linker scripts in /usr/lib for dynamic
