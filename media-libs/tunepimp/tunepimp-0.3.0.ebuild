@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0.ebuild,v 1.2 2004/08/10 21:01:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0.ebuild,v 1.3 2004/08/10 21:22:40 caleb Exp $
 
 IUSE="flac mad oggvorbis readline"
 
@@ -19,7 +19,6 @@ DEPEND="${RDEPEND}
 	oggvorbis? ( media-libs/libvorbis )
 	readline? ( sys-libs/readline )
 	mad? ( media-libs/libmad )
-	media-libs/libid3tag
 	media-libs/musicbrainz
 	dev-util/pkgconfig"
 
