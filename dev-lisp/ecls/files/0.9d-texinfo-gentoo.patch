@@ -1,73 +1,55 @@
-diff -ur ecl-0.9d.orig/src/doc/user.txi ecl-0.9d/src/doc/user.txi
---- ecl-0.9d.orig/src/doc/user.txi	2004-11-02 05:26:16.000000000 -0600
-+++ ecl-0.9d/src/doc/user.txi	2004-11-02 20:38:49.642445608 -0600
-@@ -3394,11 +3394,11 @@
- @deffnx {Method} {(setf documentation)} {new-value (list list) @optional{} doc-type}
- @end deffn
+Only in ecl-0.9d: Makefile
+diff --exclude '*~' -ur ecl-0.9d.orig/Makefile.in ecl-0.9d/Makefile.in
+--- ecl-0.9d.orig/Makefile.in	2004-11-29 18:46:39.000000000 -0600
++++ ecl-0.9d/Makefile.in	2004-11-29 20:53:09.479364087 -0600
+@@ -80,13 +80,6 @@
+ uninstall:
+ 	cd build; $(MAKE) uninstall
  
--@defun {ensure-generic-function} {function-name @keys{} lambda-list @keys :argument-precedence-order :declare :documentation :generic-function-class|ekeys{:method-combination :method-class :environment}}
--@example
--function-name ::= symbol | (setf symbol)
--@end example
--@end defun
-+@c @defun {ensure-generic-function} {function-name @keys{} lambda-list @keys :argument-precedence-order :declare :documentation :generic-function-class|ekeys{:method-combination :method-class :environment}}
-+@c @example
-+@c function-name ::= symbol | (setf symbol)
-+@c @end example
-+@c @end defun
+-# ==================== Documentation ====================
+-
+-info:
+-	(cd ${srcdir}/doc; $(MAKE) info)
+-dvi:
+-	(cd ${srcdir}/doc; $(MAKE) dvi)
+-
+ # ==================== Cleaning up and miscellanea ====================
  
- @defun {find-class} {symbol @optional{} errorp environment}
+ #   `clean'
+Only in ecl-0.9d: build
+diff --exclude '*~' -ur ecl-0.9d.orig/src/Makefile.in ecl-0.9d/src/Makefile.in
+--- ecl-0.9d.orig/src/Makefile.in	2004-11-29 18:46:39.000000000 -0600
++++ ecl-0.9d/src/Makefile.in	2004-11-29 20:48:57.000000000 -0600
+@@ -40,7 +40,7 @@
+ LSP_LIBRARIES = @LSP_LIBRARIES@
+ TARGETS = @TARGETS@
  
-@@ -3417,29 +3417,29 @@
+-all:	$(TARGETS) ecl-config doc
++all:	$(TARGETS) ecl-config
+ .PHONY:	all
  
- The generic function function-keywords is used to return the keyword parameter specifiers for a given method.
+ %Makefile: $(srcdir)/%Makefile.in config.status
+@@ -94,7 +94,6 @@
+ 	head -8 config.status | tail -6 >> $@
+ install: BUILD-STAMP install-base
+ 	cd c; $(MAKE) prefix=$(prefix) install
+-	cd doc; $(MAKE) prefix=$(prefix) install
+ install-base:
+ 	$(mkinstalldirs) $(bindir) $(libdir)/h
+ 	for i in $(TARGETS); do \
+@@ -108,15 +107,10 @@
+ flatinstall: BUILD-STAMP
+ 	$(MAKE) bindir=$(prefix) libdir=$(prefix) install-base
+ 	cd c; $(MAKE) prefix=$(prefix) flatinstall
+-	cd doc; $(MAKE) prefix=$(prefix) flatinstall
  
--@defmac {generic-function} {lambda-list \mchoice{option | @{method-description@}*}}
-+@c @defmac {generic-function} {lambda-list \mchoice{option | @{method-description@}*}}
+ uninstall:
+ 	for i in $(TARGETS) ecl-config; do rm -rf $(bindir)/$$i; done
+ 	rm -rf $(libdir)
+-	cd doc; $(MAKE) uninstall
+-
+-doc: $(TARGETS)
+-	cd doc; $(MAKE)
  
--@example
--option ::= (:argument-precedence-order @{parameter-name@}+)
--        | (declare @{declaration@}+)
--        | (:documentation string)
--        | (:method-combination symbol @{arg@}*)
--        | (:generic-function-class class-name)
--        | (:method-class class-name)
--method-description ::= (:method @{method-qualifier@}*
--                                specialized-lambda-list
--                                @{declaration | @var{documentation}@}*
--                                @{form@}*)
--@end example
--The @code{generic-function} macro creates an anonymous generic function. The
--generic function is created with the set of methods specified by its method
--descriptions.  The @var{option}, @var{method-qualifier}, and
--@var{specialized-lambda-list} arguments are the same as for @code{defgeneric}.
--The generic function object is returned as the result.  If no method
--descriptions are specified, an anonymous generic function with no methods is
--created.  See @macref{defgeneric}, @macref{generic-flet},
--@macref{generic-labels}, @macref{defmethod}.
--@end defmac
-+@c @example
-+@c option ::= (:argument-precedence-order @{parameter-name@}+)
-+@c         | (declare @{declaration@}+)
-+@c         | (:documentation string)
-+@c         | (:method-combination symbol @{arg@}*)
-+@c         | (:generic-function-class class-name)
-+@c         | (:method-class class-name)
-+@c method-description ::= (:method @{method-qualifier@}*
-+@c                                 specialized-lambda-list
-+@c                                 @{declaration | @var{documentation}@}*
-+@c                                 @{form@}*)
-+@c @end example
-+@c The @code{generic-function} macro creates an anonymous generic function. The
-+@c generic function is created with the set of methods specified by its method
-+@c descriptions.  The @var{option}, @var{method-qualifier}, and
-+@c @var{specialized-lambda-list} arguments are the same as for @code{defgeneric}.
-+@c The generic function object is returned as the result.  If no method
-+@c descriptions are specified, an anonymous generic function with no methods is
-+@c created.  See @macref{defgeneric}, @macref{generic-flet},
-+@c @macref{generic-labels}, @macref{defmethod}.
-+@c @end defmac
- 
- @deffn {Generic} {initialize-instance}  instance @rest{} initargs
- @deffnx {Method} {initialize-instance} {(instance standard-object) @rest{} initargs}
-Only in ecl-0.9d/src/doc: user.txi~
+ clean: clean_lisp
+ 	for i in ${SUBDIR}; do (cd $$i; $(MAKE) clean); done

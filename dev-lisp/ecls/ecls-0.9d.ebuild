@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.9d.ebuild,v 1.2 2004/11/04 20:21:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.9d.ebuild,v 1.3 2004/11/30 16:32:40 mkennedy Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ S=${WORKDIR}/ecl-${PV}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${PV}-texinfo-gentoo.patch || die
+	epatch ${FILESDIR}/${PV}-headers-gentoo.patch || die
 }
 
 src_compile() {

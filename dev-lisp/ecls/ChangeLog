@@ -1,6 +1,14 @@
 # ChangeLog for dev-lisp/ecls
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.11 2004/11/04 20:21:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.12 2004/11/30 16:32:40 mkennedy Exp $
+
+  30 Nov 2004; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.9d-headers-gentoo.patch, files/0.9d-texinfo-gentoo.patch,
+  ecls-0.9d.ebuild:
+  Elide texinfo documentation build since it cannot be built for now; Guard
+  against ech.h being recursively included; Conditionally define TRUE and
+  FALSE in object.h to play nicely with other libraries which do the same (eg.
+  glib).
 
   04 Nov 2004; Matthew Kenendy <mkennedy@gentoo.org> ecls-0.9d.ebuild:
   --with-cmu-format should have been --with-cmuformat
