@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.93 2005/01/01 17:49:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.94 2005/01/18 13:18:39 kumba Exp $
+
+  18 Jan 2005; Joshua Kinard <kumba@gentoo.org> udev-045.ebuild:
+  Marked stable on mips.
 
   01 Jan 2005; Jason Wever <weeve@gentoo.org> udev-045.ebuild:
   Stable on sparc.
