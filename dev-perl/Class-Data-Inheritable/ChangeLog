@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Class-Data-Inheritable
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Data-Inheritable/ChangeLog,v 1.1 2002/11/17 05:54:09 mkennedy Exp $
+
+*Class-Data-Inheritable-0.02 (13 Nov 2002)
+
+  13 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  Class-Data-Inheritable-0.02.ebuild, ChangeLog,
+  files/digest-Class-Data-Inheritable-0.02 :
+
+  Initial import. Required dep by updated version of HTML::Mason.
