@@ -1,6 +1,16 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.126 2004/09/18 12:16:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.127 2004/09/22 09:06:40 spyderous Exp $
+
+  22 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r1.ebuild:
+  PATCH_VER 0.2.1. Add
+  0430_all_6.8.0-sparc-add-mach64-to-devel-dri-drivers.patch (#63994). This plus
+  other ebuild modifications from that bug should enable sparc guys to use
+  6.8.0-r1. Ebuild mods include adding hardened flag for sparc to append
+  -fno-PIE and -fno-pie as well as change the assembler command. Also build the
+  deprecated keyboard driver for sparc on kernels != 2.6 and a weird hack to
+  stop a sparc32-SMP compiler bug (#56593).
 
   18 Sep 2004; Guy Martin <gmsoft@gentoo.org> xorg-x11-6.7.0-r2.ebuild,
   xorg-x11-6.8.0-r1.ebuild:

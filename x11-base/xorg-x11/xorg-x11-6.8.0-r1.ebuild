@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.7 2004/09/22 00:22:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.8 2004/09/22 09:06:41 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -22,11 +22,12 @@ inherit eutils flag-o-matic gcc xfree
 RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
-IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc insecure-drivers ipv6 mmx nls pam sdk sse static xprint"
+IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc hardened
+	insecure-drivers ipv6 mmx nls pam sdk sse static xprint"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.2"
-PATCH_VER="0.2"
+PATCH_VER="0.2.1"
 XCUR_VER="0.3.1"
 #MGADRV_VER="1_3_0beta"
 #VIADRV_VER="0.1"
@@ -72,7 +73,7 @@ LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
 	nokia tektronix the-open-group todd-c-miller x-truetype xfree86-1.0
 	MIT SGI-B BSD FTL | GPL-2"
 SLOT="0"
-KEYWORDS="~arm ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~x86"
+KEYWORDS="~arm ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 
 # Need portage-2.0.50_pre9 for `use !foo`
 DEPEND=">=sys-apps/baselayout-1.8.3
@@ -124,7 +125,15 @@ cflag_setup() {
 		mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mtune -mips1 -mips2 -mips3 -mips4 -mabi" ;;
 		# -fomit-frame-pointer known to break things and is pointless
 		# according to ciaranm
-		sparc)	filter-flags "-fomit-frame-pointer" ;;
+		# And hardened compiler must be softened. -- fmccor, 20.viii.04
+		sparc)	filter-flags "-fomit-frame-pointer"
+			if use hardened
+			then
+				einfo "Softening gcc for sparc"
+				ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-pie -fno-PIE"
+				append-flags "-fno-pie -fno-PIE"
+			fi
+		;;
 		# gcc-3.3.2 causes invalid insn error
 		hppa ) replace-cpu-flags 1.0 2.0 ;;
 	esac
@@ -413,6 +422,22 @@ host_def_setup() {
 			suntcx sunbw2 glint mga tdfx ati savage vesa vga fbdev \
 			XF86OSCardDrivers XF86ExtraCardDrivers \
 			DevelDrivers" >> ${HOSTCONF}
+			if use hardened
+			then
+				einfo "Softening the assembler so cfb modules will play nice with sunffb"
+				echo "#define AsCmd CcCmd -c -x assembler -fno-pie -fno-PIE" >> ${HOSTCONF}
+				echo "#define ModuleAsCmd CcCmd -c -x assembler -fno-pie -fno-PIE" >> ${HOSTCONF}
+			fi
+			if ( [ -e "${ROOT}/usr/src/linux" ] && \
+			  !( `is_kernel "2" "6"` ) ) || \
+			  [ "`uname -r | cut -d. -f1,2`" != "2.6" ]
+			then
+				einfo "Building for kernels less than 2.6 requires special treatment"
+				echo "#define UseDeprecatedKeyboardDriver YES" >> ${HOSTCONF}
+				einfo "Avoid bug #46593 for sparc32-SMP with kernel 2.4.xx"
+				echo "/* Add a line to avoid bug #56593 on sparc32 */" >> \
+				  programs/Xserver/hw/xfree86/drivers/ati/r128_driver.c
+			fi
 		fi
 
 		# The definitions for fontconfig
