@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.87 2003/10/26 21:01:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.88 2003/10/26 21:11:13 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
@@ -173,8 +173,9 @@ php_check_java_config() {
 		die
 	fi
 
-	JDKVER="$(java-config --java-version | head -n1 | cut -d\" -f2)"
-	if [ -n "${JDKVER/1.4.*}" ]; then
+	JDKVER="$(java-config --java-version 2>&1 | head -n1 | cut -d\" -f2)"
+	einfo "JDK version: ${JDKVER}"
+	if [ -n "${JDKVER/1.4.*}" -o -z "${JDKVER}" ]; then
 		eerror "Please ensure that you have a JDK with a version of at least"
 		eerror "1.4 selected using java-config"
 		die
