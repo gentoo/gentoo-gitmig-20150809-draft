@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/cheesetracker-0.9.9.ebuild,v 1.4 2004/06/13 08:15:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/cheesetracker-0.9.9.ebuild,v 1.5 2004/06/24 07:34:35 eradicator Exp $
 
 IUSE="jack"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/cheesetronic/${P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 
 RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	=dev-libs/libsigc++-1.2*
