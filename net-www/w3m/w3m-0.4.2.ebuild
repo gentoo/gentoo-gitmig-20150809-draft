@@ -1,0 +1,69 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2.ebuild,v 1.1 2003/09/23 01:11:03 usata Exp $
+
+inherit eutils
+
+IUSE="gpm cjk gtk imlib xface ssl"
+
+DESCRIPTION="Text based WWW browser, supports tables and frames"
+SRC_URI="mirror://sourceforge/w3m/${P}.tar.gz"
+HOMEPAGE="http://w3m.sourceforge.net/"
+
+SLOT="0"
+LICENSE="w3m"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+
+DEPEND=">=sys-libs/ncurses-5.2-r3
+	>=sys-libs/zlib-1.1.3-r2
+	>=dev-libs/boehm-gc-6.2
+	gtk? ( =x11-libs/gtk+-1.2*
+		media-libs/gdk-pixbuf )
+	!gtk? ( imlib? ( >=media-libs/imlib-1.9.8
+			media-libs/libungif ) )
+	xface? ( media-libs/compface )
+	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
+	ssl? ( >=dev-libs/openssl-0.9.6b )"
+
+PROVIDE="virtual/textbrowser
+	virtual/w3m"
+
+src_compile() {
+
+	local myconf
+
+	use cjk && myconf="${myconf} --enable-japanese=E"
+
+	if [ -n "`use imlib`" -o -n "`use gtk`" ] ; then
+		myconf="${myconf} --enable-image=x11,fb `use_enable xface`"
+	else
+		myconf="${myconf} --enable-image=no"
+	fi
+
+	econf --enable-keymap=w3m \
+		--with-editor=/usr/bin/nano \
+		--with-mailer=/bin/mail \
+		--with-browser=/usr/bin/mozilla \
+		--with-termlib=ncurses \
+		`use_enable gpm mouse` \
+		`use_enable ssl digest-auth` \
+		`use_with ssl` \
+		${myconf} || die
+
+	emake MAN='env LC_MESSAGES=$${LC_MESSAGES:-$${LC_ALL:-$${LANG}}} LANG=C man'|| die "emake failed"
+}
+
+src_install() {
+
+	make DESTDIR=${D} install || die "make install failed"
+
+	insinto /usr/share/${PN}/Bonus
+	doins Bonus/*
+	dodoc README NEWS TODO ChangeLog
+	docinto doc-en ; dodoc doc/*
+	if [ -n "`use cjk`" ] ; then
+		docinto doc-jp ; dodoc doc-jp/*
+	else
+		rm -rf ${D}/usr/share/man/ja
+	fi
+}
