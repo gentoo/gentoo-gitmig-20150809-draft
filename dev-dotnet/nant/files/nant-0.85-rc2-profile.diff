@@ -1,0 +1,13 @@
+diff -aur nant-0.85-rc2-orig/src/NAnt.Console/App.config nant-0.85-rc2/src/NAnt.Console/App.config
+--- nant-0.85-rc2-orig/src/NAnt.Console/App.config	2005-02-06 10:00:12.000000000 -0500
++++ nant-0.85-rc2/src/NAnt.Console/App.config	2005-03-14 23:28:59.000000000 -0500
+@@ -845,8 +845,8 @@
+         </assemblyBinding>
+     </runtime>
+     <startup>
+-        <supportedRuntime version="v2.0.40607" />
+         <supportedRuntime version="v1.1.4322" />
++        <supportedRuntime version="v2.0.40607" />
+         <supportedRuntime version="v1.0.3705" />
+     </startup>
+ </configuration>
