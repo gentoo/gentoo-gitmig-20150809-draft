@@ -8,6 +8,7 @@ sys-kernel/linux-sources-vanilla
 
 # in development
 >=sys-devel/gcc-2.96
+>=net-www/mozilla-0.9.3
 
 # incompatible
 >=sys-apps/bash-2.05
