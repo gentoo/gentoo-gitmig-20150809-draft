@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.12 2004/11/21 22:53:44 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.13 2004/11/22 02:12:26 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -68,9 +68,9 @@ GENTOO_FILES="http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-files-
 	mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2"
 
 SRC_URI="!minimal? ( mirror://gentoo/eurofonts-X11.tar.bz2 )
-	( font-server? ( http://dev.gentoo.org/~cyfred/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 )
+	font-server? ( http://dev.gentoo.org/~cyfred/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 )
 	!minimal? ( mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2 )
-	( nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
+	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
 	${GENTOO_FILES}
 	${X_DRIVERS}
 	${X_PATCHES}
