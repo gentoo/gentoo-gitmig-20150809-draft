@@ -1,6 +1,14 @@
-# ChangeLog for net-mailfetchmailChangeLog/
+# ChangeLog for net-mail/fetchmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.16 2002/12/13 11:00:07 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.17 2002/12/14 18:32:57 avenj Exp $
+
+*fetchmail-6.2.0 (14 Dec 2002)
+
+  14 Dec 2002; Jon Portnoy <avenj@gentoo.org> fetchmail-6.2.0.ebuild :
+  Version bump, major security fix. In stable straight off due to the 
+  nature of the security hole (potential root compromise).
+  See http://security.e-matters.de/advisories/052002.html for more
+  information.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
