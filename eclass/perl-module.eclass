@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.46 2003/07/25 18:11:47 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.47 2003/07/25 18:27:31 rac Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -15,7 +15,7 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 	perlinfo updatepod
 
 eval `perl '-V:version'`
-newdepend ">=dev-lang/perl-5.8.0-r12"
+newdepend ">=dev-lang/perl-5.6.1-r12"
 SRC_PREP="no"
 
 SITE_LIB=""
@@ -26,9 +26,9 @@ perl-module_src_prep() {
 
 	SRC_PREP="yes"
 	if [ "${style}" == "builder" ]; then
-		perl ${S}/Build.PL installdirs=vendor destdir=${D}
+		perl ${S}/Build.PL destdir=${D}
 	else
-		perl Makefile.PL INSTALLDIRS=vendor ${myconf} \
+		perl Makefile.PL ${myconf} \
 		PREFIX=${D}/usr
 	fi
 
