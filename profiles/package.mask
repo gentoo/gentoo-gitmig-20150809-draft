@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3334 2004/11/19 11:55:56 lv Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3335 2004/11/19 12:24:16 wolf31o2 Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -59,10 +59,6 @@ dev-dotnet/vte-sharp
 # need to fix bug #71366
 =app-text/docbook-xml-simple-dtd-4.1.2.4-r1
 =app-text/docbook-xml-simple-dtd-1.0-r1
-
-# <wolf31o2@gentoo.org> (15 Nov 2004)
-# Masking since it is FUBAR with udev
-=app-emulation/vmware-workstation-4.5.2.8848-r2
 
 # <lucass@gentoo.org> (15 Nov 2004)
 # Masking due to dependency on wxpython-2.5
