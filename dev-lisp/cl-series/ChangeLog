@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/cl-series
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-series/ChangeLog,v 1.1 2004/07/24 18:44:42 mkennedy Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-series/ChangeLog,v 1.2 2005/02/03 05:31:20 mkennedy Exp $
+
+*cl-series-2.2.8 (02 Feb 2005)
+
+  02 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml,
+  +files/2.2.8-sbcl-gentoo.patch, cl-series-2.2.7.ebuild,
+  +cl-series-2.2.8.ebuild:
+  New upstream version
 
 *cl-series-2.2.7 (24 Jul 2004)
 
