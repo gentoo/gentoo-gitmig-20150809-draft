@@ -5,6 +5,9 @@
 *ftpcube-0.3.2 (13 Jun 2002)
 
   17 Jun 2002; J.Alberto S.L. <bass@gentoo.org> ftpcube-0.3.2-r1.ebuild:
+  	fixed a problem with icons.
+
+  17 Jun 2002; J.Alberto S.L. <bass@gentoo.org> ftpcube-0.3.2-r1.ebuild:
   	This only use an alternative installation mode for who have
 	problems with the distutils of python
 
