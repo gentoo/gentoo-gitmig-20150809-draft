@@ -1,0 +1,230 @@
+diff -urN cyrus-sasl-2.1.17.orig/configure.in cyrus-sasl-2.1.17/configure.in
+--- cyrus-sasl-2.1.17.orig/configure.in	Tue May  9 19:52:53 2000
++++ cyrus-sasl-2.1.17/configure.in	Thu Jun  1 13:48:11 2000
+@@ -710,6 +710,13 @@
+ AC_DEFINE_UNQUOTED(PLUGINDIR, "$plugindir", [Runtime plugin location])
+ AC_SUBST(plugindir)
+ 
++AC_ARG_WITH(configdir, [   --with-configdir=DIR    set the directory where config files will
++                          be found [/etc/sasl] ],
++  configdir=$withval,
++  configdir=/etc/sasl)
++AC_DEFINE_UNQUOTED(CONFIGDIR, "$configdir", [Runtime config file location])
++AC_SUBST(configdir)
++
+ dnl look for rc4 libraries. we accept the CMU one or one from openSSL
+ AC_ARG_WITH(rc4, [  --with-rc4              use internal rc4 routines [yes] ],
+ 	with_rc4=$withval,
+@@ -1006,6 +1013,7 @@
+ #endif
+ 
+ #define SASL_PATH_ENV_VAR "SASL_PATH"
++#define SASL_CONF_PATH_ENV_VAR "SASL_CONF_PATH"
+ 
+ #include <stdlib.h>
+ #include <sys/types.h>
+diff -urN cyrus-sasl-2.1.17.orig/include/sasl.h cyrus-sasl-2.1.17/include/sasl.h
+--- cyrus-sasl-2.1.17.orig/include/sasl.h	Tue May  9 19:52:53 2000
++++ cyrus-sasl-2.1.17/include/sasl.h	Thu Jun  1 13:04:48 2000
+@@ -25,6 +25,7 @@
+  *
+  * Server only Callbacks:
+  *  sasl_authorize_t             user authorization policy callback
++ *  sasl_getconfpath_t           get path to search for config file
+  *  sasl_server_userdb_checkpass check password and auxprops in userdb
+  *  sasl_server_userdb_setpass   set password in userdb
+  *  sasl_server_canon_user       canonicalize username routine
+@@ -439,6 +440,24 @@
+                               const char *file, sasl_verify_type_t type);
+ #define SASL_CB_VERIFYFILE  4
+ 
++/* getconfpath callback -- this allows applications to specify the
++ * colon-separated path to search for config files (by default,
++ * taken from the SASL_CONF_PATH environment variable).
++ * inputs:
++ *  context     -- getconfpath context from the callback record
++ * outputs:
++ *  path        -- colon seperated path (allocated on the heap; the
++ *                 library will free it using the sasl_free_t *
++ *                 passed to sasl_set_callback, or the standard free()
++ *                 library call).
++ * returns:
++ *  SASL_OK     -- no error
++ *  SASL_FAIL   -- error
++ */
++typedef int sasl_getconfpath_t(void *context,
++                               char **path);
++
++#define SASL_CB_GETCONFPATH  5
+ 
+ /* client/user interaction callbacks:
+  */
+diff -urN cyrus-sasl-2.1.17.orig/lib/common.c cyrus-sasl-2.1.17/lib/common.c
+--- cyrus-sasl-2.1.17.orig/lib/common.c	Fri May  5 14:41:42 2000
++++ cyrus-sasl-2.1.17/lib/common.c	Thu Jun  1 12:53:19 2000
+@@ -1047,6 +1047,20 @@
+ }
+ 
+ static int
++_sasl_getconfpath(void *context __attribute__((unused)),
++	      char ** path_dest)
++{
++  char *path;
++
++  if (! path_dest)
++    return SASL_BADPARAM;
++  path = getenv(SASL_CONF_PATH_ENV_VAR);
++  if (! path)
++    path = CONFIGDIR;
++  return _sasl_strdup(path, path_dest, NULL);
++}
++
++static int
+ _sasl_verifyfile(void *context __attribute__((unused)),
+ 		 char *file  __attribute__((unused)),
+ 		 int type  __attribute__((unused)))
+@@ -1154,6 +1168,10 @@
+     *pproc = (int (*)()) &_sasl_getpath;
+     *pcontext = NULL;
+     return SASL_OK;
++  case SASL_CB_GETCONFPATH:
++    *pproc = (int (*)()) &_sasl_getconfpath;
++    *pcontext = NULL;
++    return SASL_OK;
+   case SASL_CB_AUTHNAME:
+     *pproc = (int (*)()) &_sasl_getsimple;
+     *pcontext = conn;
+@@ -1498,6 +1516,30 @@
+   
+   return &default_getpath_cb;
+ }
++
++const sasl_callback_t *
++_sasl_find_getconfpath_callback(const sasl_callback_t *callbacks)
++{
++  static const sasl_callback_t default_getconfpath_cb = {
++    SASL_CB_GETCONFPATH,
++    &_sasl_getconfpath,
++    NULL
++  };
++
++  if (callbacks)
++    while (callbacks->id != SASL_CB_LIST_END)
++    {
++      if (callbacks->id == SASL_CB_GETCONFPATH)
++      {
++	return callbacks;
++      } else {
++	++callbacks;
++      }
++    }
++  
++  return &default_getconfpath_cb;
++}
++
+ 
+ const sasl_callback_t *
+ _sasl_find_verifyfile_callback(const sasl_callback_t *callbacks)
+diff -urN cyrus-sasl-2.1.17.orig/lib/saslint.h cyrus-sasl-2.1.17/lib/saslint.h
+--- cyrus-sasl-2.1.17.orig/lib/saslint.h	Wed Mar 29 06:45:21 2000
++++ cyrus-sasl-2.1.17/lib/saslint.h	Thu Jun  1 12:56:37 2000
+@@ -360,6 +360,9 @@
+ _sasl_find_getpath_callback(const sasl_callback_t *callbacks);
+ 
+ extern const sasl_callback_t *
++_sasl_find_getconfpath_callback(const sasl_callback_t *callbacks);
++
++extern const sasl_callback_t *
+ _sasl_find_verifyfile_callback(const sasl_callback_t *callbacks);
+ 
+ extern int _sasl_common_init(sasl_global_callbacks_t *global_callbacks);
+diff -urN cyrus-sasl-2.1.17.orig/lib/server.c cyrus-sasl-2.1.17/lib/server.c
+--- cyrus-sasl-2.1.17.orig/lib/server.c	Tue May  9 19:52:53 2000
++++ cyrus-sasl-2.1.17/lib/server.c	Thu Jun  1 12:59:03 2000
+@@ -436,15 +436,15 @@
+   size_t path_len;
+   char *config_filename=NULL;
+   size_t len;
+-  const sasl_callback_t *getpath_cb=NULL;
++  const sasl_callback_t *getconfpath_cb=NULL;
+ 
+   /* get the path to the plugins; for now the config file will reside there */
+-  getpath_cb=_sasl_find_getpath_callback( global_callbacks.callbacks );
+-  if (getpath_cb==NULL) return SASL_BADPARAM;
++  getconfpath_cb=_sasl_find_getconfpath_callback( global_callbacks.callbacks );
++  if (getconfpath_cb==NULL) return SASL_BADPARAM;
+ 
+-  /* getpath_cb->proc MUST be a sasl_getpath_t; if only c had a type
++  /* getconfpath_cb->proc MUST be a sasl_getconfpath_t; if only c had a type
+      system */
+-  result = ((sasl_getpath_t *)(getpath_cb->proc))(getpath_cb->context,
++  result = ((sasl_getconfpath_t *)(getconfpath_cb->proc))(getconfpath_cb->context,
+ 						  &path_to_config);
+   if (result!=SASL_OK) goto done;
+   if (path_to_config == NULL) path_to_config = "";
+diff -urN cyrus-sasl-2.1.17.orig/man/sasl_getconfpath_t.3 cyrus-sasl-2.1.17/man/sasl_getconfpath_t.3
+--- cyrus-sasl-2.1.17.orig/man/sasl_getconfpath_t.3	Thu Jan  1 01:00:00 1970
++++ cyrus-sasl-2.1.17/man/sasl_getconfpath_t.3	Thu Jun  1 13:54:07 2000
+@@ -0,0 +1,47 @@
++.\" Hey Emacs! This file is -*- nroff -*- source.
++.\"
++.\" This manpage is Copyright (C) 1999 Tim Martin
++.\"
++.\" Permission is granted to make and distribute verbatim copies of this
++.\" manual provided the copyright notice and this permission notice are
++.\" preserved on all copies.
++.\"
++.\" Permission is granted to copy and distribute modified versions of this
++.\" manual under the conditions for verbatim copying, provided that the
++.\" entire resulting derived work is distributed under the terms of a
++.\" permission notice identical to this one
++.\" 
++.\" Formatted or processed versions of this manual, if unaccompanied by
++.\" the source, must acknowledge the copyright and authors of this work.
++.\"
++.\"
++.TH sasl_getpath_t "26 March 2000" SASL "SASL man pages"
++.SH NAME
++sasl_getconfpath_t \- The SASL callback to indicate location of the config files
++
++
++.SH SYNOPSIS
++.nf
++.B #include <sasl.h>
++
++.sp
++.BI "int sasl_getconfpath_t(void " *context ", "
++.BI "		        char ** " path ")";
++
++.fi
++.SH DESCRIPTION
++
++.B sasl_getconfpath_t
++is used if the application wishes to use a different location for the SASL cofiguration files. If this callback is not used SASL will either use the location in the enviornment variable SASL_CONF_PATH or /etc/sasl by default.
++.PP
++
++.SH "RETURN VALUE"
++
++SASL callback functions should return SASL return codes. See sasl.h for a complete list. SASL_OK indicates success.
++
++.SH "CONFORMING TO"
++RFC 2222
++.SH "SEE ALSO"
++.BR other sasl stuff
++.BR 
++.BR 
+\ No newline at end of file
+diff -urN cyrus-sasl-2.1.17.orig/win32/include/config.h cyrus-sasl-2.1.17/win32/include/config.h
+--- cyrus-sasl-2.1.17.orig/win32/include/config.h	Tue May  9 19:52:53 2000
++++ cyrus-sasl-2.1.17/win32/include/config.h	Thu Jun  1 13:07:47 2000
+@@ -91,7 +91,9 @@
+ #define HAVE_MEMCPY 1
+ 
+ #define SASL_PATH_ENV_VAR "SASL_PATH"
++#define SASL_CONF_PATH_ENV_VAR "SASL_CONF_PATH"
+ #define PLUGINDIR "C:\\CMU\\bin\\sasl2"
++#define CONFIGDIR "C:\\CMU\\config\\sasl2"
+ 
+ /* Windows calls these functions something else
+  */
+

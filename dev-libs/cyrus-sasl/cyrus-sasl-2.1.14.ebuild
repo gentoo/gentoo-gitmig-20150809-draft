@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.14.ebuild,v 1.9 2003/12/08 06:25:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.14.ebuild,v 1.10 2004/01/14 19:42:47 max Exp $
 
 inherit eutils
 
@@ -125,7 +125,7 @@ src_install () {
 	chown root:mail ${D}etc/sasl2/sasldb2
 	chmod 0640 ${D}etc/sasl2/sasldb2
 
-	insinto /etc/conf.d ; newins ${FILESDIR}/saslauthd.confd-2.1 saslauthd
+	insinto /etc/conf.d ; newins ${FILESDIR}/saslauthd.conf saslauthd
 	exeinto /etc/init.d ; newexe ${FILESDIR}/saslauthd2.rc6 saslauthd
 	exeinto /etc/init.d ; newexe ${FILESDIR}/pwcheck.rc6 pwcheck
 }

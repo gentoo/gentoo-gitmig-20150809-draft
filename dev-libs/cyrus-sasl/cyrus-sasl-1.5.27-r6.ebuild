@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27-r6.ebuild,v 1.5 2003/07/16 14:22:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27-r6.ebuild,v 1.6 2004/01/14 19:42:47 max Exp $
 
 IUSE="kerberos"
 
@@ -93,7 +93,7 @@ src_install () {
 	newdoc pwcheck/README README.pwcheck
 	dohtml doc/*
 
-	insinto /etc/conf.d ; newins ${FILESDIR}/saslauthd.confd saslauthd
+	insinto /etc/conf.d ; newins ${FILESDIR}/saslauthd.conf saslauthd
 	exeinto /etc/init.d ; newexe ${FILESDIR}/saslauthd.rc6 saslauthd
 	exeinto /etc/init.d ; newexe ${FILESDIR}/pwcheck.rc6 pwcheck
 }
