@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.8 2003/03/13 22:18:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.9 2003/03/14 07:54:23 seemant Exp $
 #
 # Author Ryan Phillips <rphillips@gentoo.org>
 #
@@ -133,7 +133,7 @@ src_compile() {
 	done
 
 
-	if [ "${EGUI_ENABLE}" = "yes" ]
+	if [ "${PN}" = "gvim" ]
 	then
 		myconf="${myconf} --with-vim-name=gvim --with-x"
 		if use gnome; then
@@ -165,7 +165,7 @@ src_compile() {
 
 src_install() {
 
-	if [ "${EGUI_ENABLE}" = "yes" ]
+	if [ "${PN}" = "gvim" ]
 	then
 		dobin src/gvim
 		dosym gvim /usr/bin/gvimdiff
@@ -188,7 +188,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	if [ "${EGUI_ENABLE}" = "yes" ]
+	if [ "${PN}" = "gvim" ]
 	then
 		einfo "To enable UTF-8 viewing, set guifont and guifontwide: "
 		einfo ":set guifont=-misc-fixed-medium-r-normal-*-18-120-100-100-c-90-iso10646-1"
