@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/atlas
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/ChangeLog,v 1.10 2004/04/01 09:47:28 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/ChangeLog,v 1.11 2004/04/24 13:45:57 kugelfang Exp $
+
+  24 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> atlas-3.6.0.ebuild:
+  Marked atlas-3.6.0 -amd64. It can be replaced by app-sci/blas and
+  app-sci/lapack, which are updated to work properly on amd64.
 
   01 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> atlas-3.2.1-r1.ebuild,
   atlas-3.2.1.ebuild, atlas-3.4.1.ebuild, atlas-3.4.2.ebuild,
