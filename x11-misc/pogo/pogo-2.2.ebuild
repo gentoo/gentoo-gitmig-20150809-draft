@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/pogo-2.2.ebuild,v 1.6 2004/06/24 22:30:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/pogo-2.2.ebuild,v 1.7 2004/06/28 20:10:05 agriffis Exp $
 
 IUSE=""
 
@@ -14,7 +14,8 @@ KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	media-libs/imlib
-	media-libs/jpeg"
+	media-libs/jpeg
+	>=sys-apps/sed-4"
 
 src_compile() {
 	cp ${FILESDIR}/Makefile .
