@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-3.0.1-r3.ebuild,v 1.5 2004/01/29 04:42:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-3.0.1-r3.ebuild,v 1.6 2004/01/30 11:28:32 vapier Exp $
 
 inherit eutils
 
@@ -56,7 +56,7 @@ src_install() {
 	dodoc CHANGES CONVERSION FEATURES MAIL MANIFEST README THANKS
 
 	diropts -m0755 ; dodir /etc/cron.d
-	touch ${D}/etc/cron.d/.keep
+	keepdir /etc/cron.d
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/vixie-cron.rc6 vixie-cron

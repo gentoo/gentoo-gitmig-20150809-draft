@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r2.ebuild,v 1.9 2003/09/07 01:34:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r2.ebuild,v 1.10 2004/01/30 11:27:38 vapier Exp $
 
 IUSE="nls build afs"
 
@@ -60,6 +60,6 @@ src_install() {
 		rm -rf ${D}/usr/share
 	fi
 	dodir /var/spool/locate
-	touch ${D}/var/spool/locate/.keep
+	keepdir /var/spool/locate
 }
 
