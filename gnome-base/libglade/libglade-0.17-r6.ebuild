@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.22 2004/06/24 21:59:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.23 2004/07/14 15:13:06 agriffis Exp $
 
 IUSE="nls bonobo"
 
@@ -8,7 +8,6 @@ IUSE="nls bonobo"
 
 inherit libtool virtualx gnome.org
 
-S=${WORKDIR}/${P}
 DESCRIPTION="libglade allows programs to load their UIs from an XMLS description at tuntime."
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/${PV}/${P}.tar.gz"
 HOMEPAGE="http://developer.gnome.org/doc/API/libglade/libglade.html"
@@ -55,4 +54,3 @@ src_install() {
 	dodoc AUTHORS COPYING* ChangeLog NEWS
 	dodoc doc/*.txt
 }
-
