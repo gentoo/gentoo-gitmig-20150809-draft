@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.26-r13.ebuild,v 1.1 2005/03/07 23:10:16 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.26-r13.ebuild,v 1.2 2005/03/08 06:43:39 mr_bones_ Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -48,9 +48,9 @@ UNIPATCH_LIST="${DISTDIR}/${UML_PATCH}.bz2
 	${FILESDIR}/${PN}-2.4.CAN-2004-1137.patch
 	${FILESDIR}/${PN}-2.4.brk-locked.patch
 	${FILESDIR}/${PN}-2.4.77094.patch
-        ${FILESDIR}/${PN}-2.4.77666.patch
-        ${FILESDIR}/${PN}-2.4.78362.patch
-        ${FILESDIR}/${PN}-2.4.78363.patch"
+	${FILESDIR}/${PN}-2.4.77666.patch
+	${FILESDIR}/${PN}-2.4.78362.patch
+	${FILESDIR}/${PN}-2.4.78363.patch"
 
 src_install() {
 	kernel-2_src_install
