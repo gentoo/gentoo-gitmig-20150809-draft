@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.5.1.ebuild,v 1.1 2003/09/09 17:34:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.5.1.ebuild,v 1.2 2003/09/26 18:56:02 vapier Exp $
 
 inherit games
 
 DESCRIPTION="Reimplementation of the SCUMM game engine used in Lucasarts adventures"
 HOMEPAGE="http://scummvm.sourceforge.net/"
-SRC_URI="mirror://sourceforge/scummvm/${PN}-${PV}.tar.bz2"
+SRC_URI="mirror://sourceforge/scummvm/${P}.tar.bz2"
 
-KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 ppc"
 IUSE="alsa oggvorbis mad"
 
 DEPEND="media-libs/libsdl
@@ -18,8 +18,6 @@ DEPEND="media-libs/libsdl
 	oggvorbis? ( media-libs/libvorbis )
 	alsa? ( media-libs/alsa-lib )
 	mad? ( media-sound/mad )"
-
-S=${WORKDIR}/${PN}-${PV}
 
 src_compile() {
 	egamesconf \
