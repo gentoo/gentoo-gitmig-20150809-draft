@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/sdlroids
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlroids/ChangeLog,v 1.2 2003/09/10 20:34:31 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlroids/ChangeLog,v 1.3 2004/01/24 12:48:12 mr_bones_ Exp $
+
+  24 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  sdlroids-1.3.4-r1.ebuild, sdlroids-1.3.4-r2.ebuild:
+  tidy; switch to bz2 for source
 
 *sdlroids-1.3.4-r2 (7 May 2002)
 
