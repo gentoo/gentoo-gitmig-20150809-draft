@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/jpeg
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.29 2004/11/18 21:27:20 lu_zero Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.30 2005/01/04 18:03:21 sekretarz Exp $
+
+  04 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/jpeg-6b-gentoo.patch, -files/jpeg-6b-pic.patch, jpeg-6b-r4.ebuild:
+  Solved libtool problem on amd64 and combined with pic patch, bug #75092
 
   18 Nov 2004; Luca Barbato <lu_zero@gentoo.org> +files/jpeg-6b-pic.patch,
   jpeg-6b-r4.ebuild:
