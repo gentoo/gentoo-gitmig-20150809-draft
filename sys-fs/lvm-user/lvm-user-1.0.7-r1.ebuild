@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/lvm-user-1.0.7-r1.ebuild,v 1.7 2004/10/03 09:52:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/lvm-user-1.0.7-r1.ebuild,v 1.8 2004/11/09 22:30:51 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="User-land utilities for LVM (Logical Volume Manager) software"
 HOMEPAGE="http://www.sistina.com/products_lvm.htm"
 SRC_URI="ftp://ftp.sistina.com/pub/LVM/1.0/lvm_${PV}.tar.gz"
 
-LICENSE="GPL-2 | LGPL-2"
+LICENSE=" || ( GPL-2 LGPL-2 )"
 SLOT="0"
 KEYWORDS="~x86 -ppc ~sparc alpha ~hppa ~amd64"
 IUSE="static"

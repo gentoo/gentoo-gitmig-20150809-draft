@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 835ffbbfb0ddd5bef64a1f651aec397f ChangeLog 4456
-MD5 289c7040c4fd9ef66466c32303d91e01 lvm-user-1.0.7-r1.ebuild 1663
-MD5 2a7c8f476209fe179084d1585e753fa8 lvm-user-1.0.7.ebuild 1276
+MD5 340fc0882277938e469ba3417c62b972 lvm-user-1.0.7-r1.ebuild 1672
+MD5 b281cb689f2b79965365a5a824e4a3c1 lvm-user-1.0.7.ebuild 1285
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 b8c544acbd931e92ce7d68d1f54ef230 files/digest-lvm-user-1.0.7 61
 MD5 b8c544acbd931e92ce7d68d1f54ef230 files/digest-lvm-user-1.0.7-r1 61
 MD5 7484cb0ecb2a997be4910a8612e951cf files/lvm-user-1.0.7-statics.diff 1040
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBX8v8HTu7gpaalycRAtoZAJwJ7HE/CYj6Bw5SZYtp4+E57CdmJQCgpF9n
-sstZgWanVwzqFLmPAsGRoZ4=
-=iVqf
------END PGP SIGNATURE-----
