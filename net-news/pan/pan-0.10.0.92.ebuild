@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Erik Van Reeth <erik@vanreeth.org>
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.10.0.92.ebuild,v 1.1 2001/10/07 09:15:12 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.10.0.92.ebuild,v 1.2 2001/10/10 09:12:11 hallski Exp $
 
 
 S=${WORKDIR}/${P}
@@ -12,6 +12,8 @@ HOMEPAGE="http://pan.rebelbase.com/"
 DEPEND="virtual/x11 
         nls? ( sys-devel/gettext )
 	>=gnome-base/gnome-libs-1.4.1.2-r1
+	>=media-libs/gdk-pixbuf-0.11.0-r1
+	>=dev-libs/libxml-1.8.11
         gtkhtml? ( >=gnome-extra/gtkhtml-0.14.0-r1 )"
 
 src_compile() {
