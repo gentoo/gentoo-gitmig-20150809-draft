@@ -1,5 +1,5 @@
-MD5 f8fe4a27ce656019cccd753f1305c449 cdstatus-0.94a.ebuild 814
-MD5 7b2bc0ff72bf36ab35709e6e82b30e51 ChangeLog 530
+MD5 2f456aa9319c79d4e9edeeb08b54c2f3 cdstatus-0.94a.ebuild 803
+MD5 019c99ed00643b77a7b406512f02e570 ChangeLog 519
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 95dd0efca17c0f05af4c3ef97ba73161 files/digest-cdstatus-0.94a 64
 MD5 7d77c0a6fe47b0367208d789a05fd9a0 files/cdstatus-0.94a-gentoo.diff 388

@@ -1,5 +1,5 @@
-MD5 d8ed0824859f3d599b6a0fb08ffce139 litestream-1.2.ebuild 1004
-MD5 ae255231a834f2ac66b0e09825e5cd7f ChangeLog 835
+MD5 bec2a34a949fc4a7cabff1c370ca4797 litestream-1.2.ebuild 993
+MD5 b8ae6207b67bc0653cc30662fa8c5ca0 ChangeLog 824
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 7b22396a0ce85c0f2f7260047052237c files/digest-litestream-1.2 65
 MD5 75c1a84a3546138fc57472a7c9882e14 files/litestream-1.2-Makefile.patch 331

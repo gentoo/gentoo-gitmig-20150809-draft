@@ -1,5 +1,5 @@
-MD5 394dcda59d6317e91011dbd15926f057 musescore-0.0.6.ebuild 810
-MD5 cb0b50f43d901d3fcbcdc4bbecb5c62b ChangeLog 707
+MD5 fc11da3a51040f94c2af203566d826c1 musescore-0.0.6.ebuild 799
+MD5 87f57c7c877963b2b284401477288147 ChangeLog 696
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 56eb9287f3dd49624e640674d5c2ead2 files/musescore-0.0.6-assert.patch 1572
 MD5 727e72b54693e0734a6d0a66159140ea files/digest-musescore-0.0.6 65

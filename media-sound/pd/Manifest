@@ -1,5 +1,5 @@
-MD5 1d19382f2bd05eff75d8824a476524e6 pd-0.37.1.ebuild 1525
-MD5 4c28dbf02321d29f915536f40ea2f346 ChangeLog 3088
+MD5 a61e32fb1d07485baa55c11f3a400060 pd-0.37.1.ebuild 1514
+MD5 bcab32c0e4318f7cb61b80f1f7248130 ChangeLog 3077
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 ad45c004132cff28b26df08ed85a8dbb files/pd-0.35.0-r2.patch 3689
 MD5 3067c169bd141dd0850e7fa88fa72929 files/digest-pd-0.37.1 66
