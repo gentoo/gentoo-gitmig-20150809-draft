@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.2.3-r2.ebuild,v 1.2 2000/11/30 23:14:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.2.3-r2.ebuild,v 1.3 2000/12/19 00:38:01 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -35,7 +35,8 @@ src_compile() {
 src_install() {    
 	into /usr
 	cd ${S}
-	try make DESTDIR=${D} install
+	try make prefix=${D}/usr install
+	# DESTDIR does not work correct
 	dodoc BUGS COPYING* CREDITS ChangeLog NEWS README RELEASE TODO
 	docinto txt
 	dodoc doc/*.txt doc/README.*
