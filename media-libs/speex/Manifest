@@ -5,7 +5,7 @@ MD5 5ac13c5b23fd5790020fad61b62873b4 speex-1.0.2.ebuild 954
 MD5 ba03efd8ba15c06fb9964bad3b14ff64 speex-1.0.3.ebuild 961
 MD5 59d02d03dd12f6f5b3f4ceb9d539a881 speex-1.0.ebuild 693
 MD5 849850b7e6585c3f07f3a7e9defecf87 speex-1.1.5.ebuild 977
-MD5 1477dd9d7500902f4124e4653e4f4a5c speex-1.1.6.ebuild 985
+MD5 bb8f79b16c9630e3b755055128a4b423 speex-1.1.6.ebuild 991
 MD5 575a2cdf84ece7ca132c5168f81eb46a files/digest-speex-1.0 61
 MD5 fac73c03330ea5d784bf26a48eb6d984 files/digest-speex-1.0.1 63
 MD5 ba0dba31926ad8799962806a688b7594 files/digest-speex-1.0.2 63
