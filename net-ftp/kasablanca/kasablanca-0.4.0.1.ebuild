@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/kasablanca-0.4.0.1.ebuild,v 1.2 2004/08/29 22:44:08 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/kasablanca-0.4.0.1.ebuild,v 1.3 2004/09/11 15:39:57 dragonheart Exp $
 
 inherit kde 64-bit
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/kasablanca/kasablanca-${PV}.tar.gz"
 LICENSE="GPL-2"
 RESTRICT="nomirror"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 # commondpends based on (ldd /usr/bin/kasablanca ; ldd /usr/bin/kbftp ) |\

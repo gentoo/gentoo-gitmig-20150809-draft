@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/kasablanca
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.6 2004/08/29 22:44:08 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.7 2004/09/11 15:39:57 dragonheart Exp $
+
+  12 Sep 2004; Daniel Black <dragonheart@gentoo.org>
+  kasablanca-0.4.0.1.ebuild:
+  x86 keyword
 
   30 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> kasablanca-0.4.0.1.ebuild:
   Marked ~amd64 after adding 64bit patch. Fixed BUG #58911.
