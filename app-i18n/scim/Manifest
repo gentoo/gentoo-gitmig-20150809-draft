@@ -1,4 +1,6 @@
 MD5 25887e622a65c7267f291f6fd4d8fc76 scim-0.4.1.ebuild 1060
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 0f2ffbf21a19b3be3ef94d9a1ab03d5e ChangeLog 488
+MD5 8f27e999d4a8e44ea6321e59e5215ff5 scim-0.5.1.ebuild 1070
 MD5 8cd8761fc85ac6df2a99fb43620d2c8c files/digest-scim-0.4.1 63
+MD5 36da96a645983f2b0906e16a52c5ff6c files/digest-scim-0.5.1 63
