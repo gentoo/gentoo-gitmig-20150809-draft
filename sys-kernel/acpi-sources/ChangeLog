@@ -1,0 +1,11 @@
+# ChangeLog for sys-kernel/lolo-sources
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/acpi-sources/ChangeLog,v 1.1 2002/10/06 18:46:20 lostlogic Exp $
+
+*acpi-sources-2.4.20-r5 (06 Oct 2002)
+
+  06 Oct 2002; Brandon Low <lostlogic@gentoo.org> acpi-sources-2.4.20-r5.ebuild:
+
+  First release of the ACPI enabled sources thanks to
+  tprado@charter.net (Tom Prado) for doing all the leg
+  work on this one.  Closes bug 8441
