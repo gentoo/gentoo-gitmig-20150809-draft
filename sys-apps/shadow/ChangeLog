@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.91 2005/01/02 23:50:52 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.92 2005/01/04 12:58:04 corsair Exp $
+
+  04 Jan 2005; Markus Rothe <corsair@gentoo.org> shadow-4.0.5-r3.ebuild:
+  Stable on ppc64
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
