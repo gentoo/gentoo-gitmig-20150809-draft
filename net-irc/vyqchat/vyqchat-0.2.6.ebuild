@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/vyqchat-0.2.6.ebuild,v 1.1 2004/07/24 01:14:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/vyqchat-0.2.6.ebuild,v 1.2 2004/08/22 14:17:12 swegener Exp $
 
 DESCRIPTION="QT based Vypress Chat clone for X."
 HOMEPAGE="http://linux.bydg.org/~yogin/"
@@ -19,6 +19,10 @@ src_unpack() {
 	unpack ${A}
 
 	mv -f ${WORKDIR}/${PN}/* ${S}
+
+	# Package has borked timestamps, bug #60541
+	cd ${S}
+	touch aclocal.m4 configure Makefile.in config.h.in
 }
 
 src_compile() {
