@@ -1,6 +1,6 @@
 MD5 6d7475bbb8f42e23e37690f2f499c1b1 ChangeLog 688
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 51bde7540d7949395481642477d27d57 njam-0.96.ebuild 1000
+MD5 fffcf4f14c241a1cf17510d983d63b9e njam-0.96.ebuild 1008
 MD5 214dc735bfa597e82eebe8f8ee84875c njam-1.00.ebuild 1930
 MD5 39dee9ea7a61dbef098f3a7421758fef files/njam-1.00-conf.patch 3136
 MD5 959b0cda2752af90309b81d91e8984fb files/digest-njam-0.96 66
