@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.29 2004/03/01 19:57:03 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.30 2004/03/08 23:49:00 seemant Exp $
+
+*dhcpcd-1.3.22_p4-r5 (08 Mar 2004)
+
+  08 Mar 2004; Seemant Kulleen <seemant@gentoo.org>
+  dhcpcd-1.3.22_p4-r2.ebuild, dhcpcd-1.3.22_p4-r3.ebuild,
+  dhcpcd-1.3.22_p4-r4.ebuild, dhcpcd-1.3.22_p4-r5.ebuild:
+  Forced a version bump on these ebuilds. Basically, -r2 is now -r4 and -r3 is
+  now -r5. The reason for the revision bump was to make this package PROVIDE
+  virtual/dhcp. Closes a long-standing bloat-reduction request made on
+  gentoo-dev mailing list by: William Hubbs <kc5eiv@kc5eiv.homeip.net> at
+  http://article.gmane.org/gmane.linux.gentoo.devel/11579
 
   01 Mar 2004; Tom Gall <tgall@gentoo.org> dhcpcd-1.3.22_p4-r3.ebuild;
   for ppc64 call gnuconfig_update

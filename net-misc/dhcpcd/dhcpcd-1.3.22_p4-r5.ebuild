@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r3.ebuild,v 1.6 2004/03/02 16:44:08 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r5.ebuild,v 1.1 2004/03/08 23:49:00 seemant Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
+S=${WORKDIR}/${P/_p/-pl}
 DESCRIPTION="A dhcp client only"
 HOMEPAGE="http://www.phystech.com/download/"
 SRC_URI="ftp://ftp.phystech.com/pub/${P/_p/-pl}.tar.gz
@@ -17,7 +18,7 @@ IUSE="build static"
 
 DEPEND="virtual/glibc"
 
-S=${WORKDIR}/${P/_p/-pl}
+PROVIDE="virtual/dhcpc"
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
@@ -48,7 +49,11 @@ src_unpack() {
 src_compile() {
 	use static && append-flags -static
 
-	./configure --prefix="" --sysconfdir=/var/lib --mandir=/usr/share/man || die
+	./configure \
+		--prefix="" \
+		--sysconfdir=/var/lib \
+		--mandir=/usr/share/man || die
+
 	emake || die
 }
 
