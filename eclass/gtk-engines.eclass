@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.20 2003/02/23 19:25:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.21 2003/03/01 14:46:43 weeve Exp $
 #
 # The gtk-engines eclass is inherited by all gtk-engines-* ebuilds.
 #
@@ -28,7 +28,7 @@ INHERITED="$INHERITED $ECLASS"
 [ -z "$HOMEPAGE" ]    && HOMEPAGE="http://www.gnome.org/"
 [ -z "$LICENSE" ]     && LICENSE="GPL-2"
 
-KEYWORDS="x86 ppc alpha"
+KEYWORDS="x86 ppc alpha ~sparc"
 
 newdepend /c virtual/x11
 
