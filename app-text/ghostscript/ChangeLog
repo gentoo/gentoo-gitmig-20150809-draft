@@ -1,6 +1,12 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.7 2002/05/26 14:15:40 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.8 2002/06/28 20:47:54 g2boojum Exp $
+
+*ghostscript-7.0.5-r1 (28 Jun 2002)
+
+  28 Jun 2002; Grant Goodyear <g2boojum@gentoo.org> :
+
+  added cups pstoraster support
 
 *ghostscript-7.05 (26 May 2002
   26 May: Bart Verwilst: Upgraded to 7.05, added lexmark 3200 driver.. 
