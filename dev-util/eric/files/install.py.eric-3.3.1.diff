@@ -1,0 +1,36 @@
+--- install.py.eric-3.3.1	2003-12-12 23:31:57.000000000 +0100
++++ install.py	2003-12-12 23:33:45.000000000 +0100
+@@ -159,33 +159,6 @@
+         bindir = platBinDir
+         mdir = modDir
+     
+-    # Cleanup old stuff
+-    # Remove the wrapper scripts
+-    rem_ename = wrapperName(platBinDir,"eric3")
+-    rem_uname = wrapperName(platBinDir,"eric3-unittest")
+-    rem_hname = wrapperName(platBinDir,"eric3-helpviewer")
+-    rem_dname = wrapperName(platBinDir,"eric3-doc")
+-    rem_ouname = wrapperName(platBinDir,"qtunittest")
+-    rem_ohname = wrapperName(platBinDir,"helpviewer")
+-    if os.path.exists(rem_ename):
+-        os.remove(rem_ename)
+-    if os.path.exists(rem_uname):
+-        os.remove(rem_uname)
+-    if os.path.exists(rem_hname):
+-        os.remove(rem_hname)
+-    if os.path.exists(rem_dname):
+-        os.remove(rem_dname)
+-    if os.path.exists(rem_ouname):
+-        os.remove(rem_ouname)
+-    if os.path.exists(rem_ohname):
+-        os.remove(rem_ohname)
+-    
+-    # Cleanup the install directory
+-    try:
+-        shutil.rmtree(ericdir, 1)
+-    except:
+-        pass
+-
+     # Install the files
+     # make the install directory tree
+     os.makedirs(ericpixdir)
