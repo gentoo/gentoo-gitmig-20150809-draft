@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.29 2002/11/04 19:21:25 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.30 2002/11/04 21:45:33 gerk Exp $
+
+  04 Nov 2002; Mark Guertin <gerk@gentoo.org> kdebase-2.0.4-r2.ebuild :
+  set ~ppc in keywords, this is not required (yet) on ppc until xfree-4.2.1
+  is set to stable, no sense making users upgrade
 
   04 Nov 2002; Hannes Mehnert <hannes@gentoo.org> kdebase-3.0.4-r2.ebuild:
   uses kdebase-3.0.4-nspluginviewer-qt31.diff.gz by default. This fixes
