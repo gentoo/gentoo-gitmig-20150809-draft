@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.39 2003/09/27 22:30:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.40 2003/10/03 00:11:15 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -254,10 +254,6 @@ src_install() {
 			MANDIR=/usr/share/man \
 			DATADIR=/usr/share \
 			|| die "install failed"
-
-		dodoc README*
-		cd $D/usr/share/doc/$PF && \
-		ln -s ../../vim/*/doc $P || die "ln -s failed"
 
 		keepdir /usr/share/vim/vim${VIM_VERSION/.}/keymap
 
