@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-publicfile
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-publicfile/ChangeLog,v 1.5 2004/11/22 21:02:40 kaiowas Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-publicfile/ChangeLog,v 1.6 2005/01/20 09:35:26 kaiowas Exp $
+
+  20 Jan 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-publicfile-20031221.ebuild, -selinux-publicfile-20041016.ebuild,
+  selinux-publicfile-20041121.ebuild:
+  mark stable
 
 *selinux-publicfile-20041121 (22 Nov 2004)
 

@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-postgresql
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postgresql/ChangeLog,v 1.5 2004/12/12 17:36:17 kaiowas Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postgresql/ChangeLog,v 1.6 2005/01/20 09:32:29 kaiowas Exp $
+
+  20 Jan 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-postgresql-20041120.ebuild, selinux-postgresql-20041211.ebuild:
+  mark stable
 
 *selinux-postgresql-20041211 (12 Dec 2004)
 

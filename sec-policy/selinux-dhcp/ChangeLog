@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-dhcp
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dhcp/ChangeLog,v 1.10 2004/12/12 12:09:39 kaiowas Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dhcp/ChangeLog,v 1.11 2005/01/20 09:19:31 kaiowas Exp $
+
+  20 Jan 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-dhcp-20041120.ebuild, selinux-dhcp-20041125.ebuild:
+  mark stable
 
 *selinux-dhcp-20041125 (12 Dec 2004)
 
