@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.67 2004/04/26 19:09:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.68 2004/04/26 22:57:03 kloeri Exp $
+
+  27 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> samba-3.0.2a-r2.ebuild:
+  Keyworded alpha, see bug #41800.
 
 *samba-3.0.2a-r2 (26 Apr 2004)
 
