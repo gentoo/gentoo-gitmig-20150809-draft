@@ -4,4 +4,13 @@
 RPCNFSDCOUNT=8
 
 # Options to pass to rpc.mountd
+# ex. RPCMOUNTDOPTS="-p 32767
 RPCMOUNTDOPTS=""
+
+# Options to pass to rpc.statd
+# ex. RPCSTATDOPTS="-p 32765 -o 32766"
+RPCSTATDOPTS=""
+
+# OPTIONS to pass to rpc.rquotad
+# ex. RPCRQUOTADOPTS="-p 32764"
+RPCRQUOTADOPTS=""
