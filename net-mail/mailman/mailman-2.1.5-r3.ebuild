@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r2.ebuild,v 1.7 2005/01/16 03:21:11 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r3.ebuild,v 1.1 2005/01/16 03:21:11 langthang Exp $
 
-inherit eutils
+inherit eutils depend.apache
 IUSE="apache2"
 
 DESCRIPTION="A python-based mailing list server with an extensive web interface"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.list.org/"
 
 SLOT="O"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 
 DEPEND=">=dev-lang/python-2.3
 	virtual/mta
@@ -35,6 +35,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A} && cd "${S}"
 	epatch ${FILESDIR}/${P}-directory-check.patch || die "patch failed."
+	# Bug #77524. remove with version bump.
+	epatch ${FILESDIR}/${P}-driver.cvs.patch || die "patch failed."
 }
 
 src_compile() {
@@ -62,11 +64,15 @@ src_install () {
 
 	if use apache2; then
 		dodir /etc/apache2/conf/modules.d
+		#dodir ${APACHE2_MODULES_CONFDIR}
 		insinto /etc/apache2/conf/modules.d
+		#insinto ${APACHE2_MODULES_CONFDIR}
 		newins ${FILESDIR}/mailman.conf 50_mailman.conf
 	else
 		dodir /etc/apache/conf/addon-modules
+		#dodir ${APACHE1_MODULES_CONFDIR}
 		insinto /etc/apache/conf/addon-modules
+		#insinto ${APACHE1_MODULES_CONFDIR}
 		doins ${FILESDIR}/mailman.conf
 	fi
 
@@ -118,6 +124,10 @@ pkg_postinst() {
 	einfo "Setup information, mailman will NOT run unless you follow"
 	einfo "those instructions!"
 	einfo ""
+
+	# per vericgar's advise
+	# we dont need to do this anymore with the new apache revision.
+	# will remove these when the new apache unmasked.
 	if ! use apache2; then
 		einfo "It appears that you aren't running apache2..."
 		einfo "ebuild /var/db/pkg/net-mail/${PN}/${PF}.ebuild config"
