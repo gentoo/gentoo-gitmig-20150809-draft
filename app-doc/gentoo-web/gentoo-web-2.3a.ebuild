@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.7 2002/07/04 16:38:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.8 2002/07/11 06:30:11 drobbins Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl

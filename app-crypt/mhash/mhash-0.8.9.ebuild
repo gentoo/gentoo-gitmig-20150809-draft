@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Christian Rubbert <crubb@xrc.de>
 
 S=${WORKDIR}/${P}
 DESCRIPTION="mhash is a library providing a uniform interface to a large number of hash algorithms."

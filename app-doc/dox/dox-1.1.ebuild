@@ -1,7 +1,6 @@
 # Copyright 2001-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Enrico Morelli - 16/06/2002
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.1 2002/06/21 22:38:05 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.2 2002/07/11 06:30:11 drobbins Exp $
 
 DESCRIPTION="Dox is a graphical documentation browser for Unix/X11."
 SRC_URI="http://download.berlios.de/dox/${P}.tar.gz"

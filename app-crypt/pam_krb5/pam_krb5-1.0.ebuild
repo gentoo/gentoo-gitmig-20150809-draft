@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Grant Goodyear <grant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/pam_krb5-1.0.ebuild,v 1.4 2001/11/10 02:40:17 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/pam_krb5-1.0.ebuild,v 1.5 2002/07/11 06:30:11 drobbins Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Pam module for MIT Kerberos V"

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Maintainer Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/winex-doc/winex-doc-20020511.ebuild,v 1.1 2002/06/14 16:30:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/winex-doc/winex-doc-20020511.ebuild,v 1.2 2002/07/11 06:30:11 drobbins Exp $
 
 S=${WORKDIR}/wine
 DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/linuxfromscratch-html-3.3.ebuild,v 1.2 2002/04/27 04:48:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/linuxfromscratch-html-3.3.ebuild,v 1.3 2002/07/11 06:30:11 drobbins Exp $
 
 MY_P="LFS-BOOK-${PV}-HTML"
 S=${WORKDIR}/${MY_P}
