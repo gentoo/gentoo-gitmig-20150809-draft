@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.40 2003/07/06 11:29:41 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.41 2003/07/09 15:57:31 liquidx Exp $
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> gal-1.99.6.ebuild,
+  gal-1.99.7.ebuild, files/gal-1.99.4-sgml-fix2.patch,
+  files/gal-1.99.4-sgml-fix3.patch:
+  dep cleanup
 
   02 Jul 2003; Jason Wever <weeve@gentoo.org> gal-0.24.ebuild:
   Changed ~sparc keyword to sparc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.7.ebuild,v 1.3 2003/07/06 11:29:41 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.7.ebuild,v 1.4 2003/07/09 15:57:31 liquidx Exp $
 
 IUSE="doc"
 
@@ -18,12 +18,14 @@ RDEPEND=">=gnome-base/libgnomeprint-2.2.0
 	>=gnome-base/libgnomeprintui-2.2.1
     >=gnome-base/libglade-2.0
     >=gnome-base/libgnomeui-2.0
-    >=gnome-base/libgnomecanvas-2.0
-    >=dev-libs/libxml2-2.0"
+    >=gnome-base/libgnomecanvas-2.2.0.2
+    >=dev-libs/libxml2-2.0
+	app-text/scrollkeeper"
     
 DEPEND="sys-devel/gettext
-        doc? ( dev-util/gtk-doc )
-        ${RDEPEND}"
+	dev-util/pkgconfig
+	doc? ( dev-util/gtk-doc )
+	${RDEPEND}"
 
 MAKEOPTS="-j1"
 USE_DESTDIR="1"
