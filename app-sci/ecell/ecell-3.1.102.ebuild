@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ecell/ecell-3.1.102.ebuild,v 1.1 2004/07/26 12:06:15 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ecell/ecell-3.1.102.ebuild,v 1.2 2004/09/08 18:51:58 ribosome Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	if use doc; then 
+	if use doc; then
 		dohtml doc/refman/html
 	fi
 }
