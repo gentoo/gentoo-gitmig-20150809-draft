@@ -1,6 +1,20 @@
 # ChangeLog for x11-libs/lesstif
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.7 2003/01/06 15:38:16 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.8 2003/01/06 16:14:11 raker Exp $
+
+*lesstif-0.93.36-r3 (06 Jan 2002)
+
+  06 Jan 2002; Nick Hadaway <raker@gentoo.org>
+  lesstif-0.93.36-r3.ebuild, files/digest-lesstif-0.93.36-r3 :
+  New ebuild of lesstif which installs into /usr/X11R6 instead of /usr.
+  The next step I envision is the ability to install both lesstif and
+  openmotif and switch between motif implementations i.e. - for testing
+  application compatibility for the brand new wave of lesstif
+  developers with phat gentoo 1.4 systems. :).
+  It has milled in my head for a while now and it will be implemented
+  soon-like. For now, Gentoo 1.4 will be set for you to choose either
+  lesstif or openmotif, not both.  Openmotif will install by default if
+  virtual/motif is a dependancy.
 
 *lesstif-0.93.36-r2 (03 Dec 2002)
   
