@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xfce4-iconbox
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-iconbox/ChangeLog,v 1.1 2003/07/15 05:22:41 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-iconbox/ChangeLog,v 1.2 2003/07/22 07:49:03 bcowan Exp $
+
+*xfce4-iconbox-3.99.2 (22 Jul 2003)
+
+  22 Jul 2003; Brad Cowan <bcowan@gentoo.org> xfce4-iconbox-3.99.2.ebuild:
+  Version bump.
 
 *xfce4-iconbox-3.99.1 (15 Jul 2003)
 
