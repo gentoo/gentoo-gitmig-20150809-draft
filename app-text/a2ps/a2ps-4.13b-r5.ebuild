@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.5 2003/09/15 22:16:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.6 2003/09/24 21:35:40 drobbins Exp $
 
 inherit gnuconfig eutils
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www-inf.enst.fr/~demaille/a2ps/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="ia64 x86 ppc sparc alpha"
 IUSE="nls tetex cjk"
 
 DEPEND=">=app-text/ghostscript-6.23
