@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.35 2003/09/19 16:48:42 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.36 2003/09/19 23:23:18 max Exp $
+
+*mjpegtools-1.6.1.90-r1 (19 Sep 2003)
+
+  19 Sep 2003; Max Kalika <max@gentoo.org> mjpegtools-1.6.1.90-r1.ebuild,
+  files/no-x11-lib.patch:
+  Remove dangling -lX11. Fixes bug 29070. Thanks to Christian Jiresjö for the
+  patch
 
   19 Sep 2003; Max Kalika <max@gentoo.org> mjpegtools-1.6.1.90.ebuild:
   Less aggressive flag filtering.
