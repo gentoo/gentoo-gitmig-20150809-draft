@@ -43,7 +43,7 @@ perl		sys-devel/perl
 python		dev-lang/python
 esd		media-sound/esound
 imlib		media-libs/imlib
-ogg		media-libs/libvorbis
+oggvorbis	media-libs/libvorbis
 gnome		gnome-base/gnome
 gtk		x11-libs/gtk+
 qt		x11-libs/qt
