@@ -1,9 +1,10 @@
-MD5 77cf72cb889aa9ebc8ec0f37e564c26c ChangeLog 3101
+MD5 8b1ca5edcfed8d7cabbb717f16cde1c7 ChangeLog 3267
 MD5 a5903ae133b03b143b6318246bf951f7 tome-2.2.6.ebuild 1715
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 f40e2854fa9a50eaa79c132f3be6e1e7 tome-2.2.7-r1.ebuild 1920
 MD5 9cdf3ba666d2e7f552a71d67dc4ce5eb tome-2.2.5-r1.ebuild 1578
 MD5 0495de3106ee540fd528b145da4d5259 tome-2.2.7.ebuild 1783
+MD5 a65f7f33cc35af7d4f7b3584470403b5 tome-2.3.0.ebuild 2057
 MD5 23dd9f8f71868b8ab82d8bbbc79ad740 files/2.2.6-gentoo-paths.patch 1172
 MD5 23dd9f8f71868b8ab82d8bbbc79ad740 files/2.2.7-gentoo-paths.patch 1172
 MD5 a23d89bdd5d10666dd7030963ba64983 files/digest-tome-2.2.7-r1 66
@@ -11,3 +12,5 @@ MD5 23dd9f8f71868b8ab82d8bbbc79ad740 files/2.2.5-gentoo-paths.patch 1172
 MD5 44a615ff66d86ba4e6b431a73ed386bc files/digest-tome-2.2.5-r1 62
 MD5 5a001b935d01d828ea36c4f5b1c75419 files/digest-tome-2.2.6 65
 MD5 a23d89bdd5d10666dd7030963ba64983 files/digest-tome-2.2.7 66
+MD5 23dd9f8f71868b8ab82d8bbbc79ad740 files/2.3.0-gentoo-paths.patch 1172
+MD5 bc7421839b9c27fba54b183115f428f9 files/digest-tome-2.3.0 66
