@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/net-ping
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ping/ChangeLog,v 1.1 2003/08/11 10:05:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ping/ChangeLog,v 1.2 2003/12/30 18:42:23 mcummings Exp $
+
+  30 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  net-ping-2.31.ebuild:
+  Tested on x86 and sparc, all pod tests worked fine
 
 *net-ping-2.31 (11 Aug 2003)
 
