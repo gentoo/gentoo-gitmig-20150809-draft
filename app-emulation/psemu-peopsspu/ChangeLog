@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/psemu-peopsspu
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopsspu/ChangeLog,v 1.1 2002/06/03 02:53:20 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopsspu/ChangeLog,v 1.2 2002/07/27 15:19:41 stubear Exp $
+
+*psemu-peopsspu (2 June 2002)
+
+  27 Jul 2002; Stuart Bouyer <stubear@gentoo.org> psemu-peopsspu-1.0.1.ebuild:
+
+  Added SLOT, RDEPEND and KEYWORDS="x86"
 
 *psemu-peopsspu (2 June 2002)
 
