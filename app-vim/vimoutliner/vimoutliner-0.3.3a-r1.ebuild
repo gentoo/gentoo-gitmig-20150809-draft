@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/vimoutliner-0.3.3a.ebuild,v 1.2 2005/02/22 23:47:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/vimoutliner-0.3.3a-r1.ebuild,v 1.1 2005/02/24 18:22:54 ciaranm Exp $
 
 inherit vim-plugin
 
@@ -20,6 +20,8 @@ src_unpack() {
 	sed -i -e '/^if exists/,/endif/d' ftdetect/vo_base.vim
 	sed -i -e '/ru .vimoutlinerrc/aru vimoutlinerrc' ftplugin/vo_base.vim
 	sed -i -e '/hi spellErr,SpellErrors,BadWord/d' syntax/vo_base.vim
+	# weird tarball, bug #83200
+	find ${S} -type f | xargs chmod a+r
 }
 
 src_install() {
