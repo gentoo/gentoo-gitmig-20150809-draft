@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.120 2005/03/04 17:51:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.121 2005/03/06 00:00:41 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1084,7 +1084,7 @@ gcc_do_make() {
 	else
 		# we only want to use the system's CFLAGS if not building a
 		# cross-compiler.
-		BOOT_CFLAGS=${BOOT_CFLAGS-${CFLAGS}}
+		BOOT_CFLAGS=${BOOT_CFLAGS-"$(get_abi_CFLAGS) ${CFLAGS}"}
 	fi
 
 	# Fix for libtool-portage.patch
