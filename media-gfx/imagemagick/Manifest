@@ -6,7 +6,7 @@ MD5 c8679dc2f0dd912551550cd87104a8fd imagemagick-6.1.6.0.ebuild 2164
 MD5 21164aa03ef6b5d3b6e01b533dcb5cbb imagemagick-6.1.0.1.ebuild 2314
 MD5 4e0fa55531b0ab61c5acf57b2fb56a98 imagemagick-6.1.3.2.ebuild 2121
 MD5 f19af0ef30a8a2d0ce755af988260532 imagemagick-6.1.3.4.ebuild 2154
-MD5 a02eccce931bcc8cc03cf3627b4ad349 ChangeLog 15969
+MD5 50267fe6043c68168f38cd7fdf207858 ChangeLog 16055
 MD5 e1f6c302199a36c1be4ecf1654be9bac metadata.xml 224
 MD5 e062fa3ebd357a9601dd723f20fe1971 imagemagick-6.0.7.1.ebuild 2311
 MD5 220c2dac3f8b381c42fdb5e92085bdd8 files/digest-imagemagick-6.0.7.1 73
@@ -19,7 +19,7 @@ MD5 edbc2be86318f2676c55ce64e47ea2f6 files/perlpatch.diff 1598
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBsjtUZ/iYVBmujdURAg7YAJ9DYJf1r4AEBuJ3kYRBmIynoHhUmACfeEvm
-rHam9zllZN2pihPmWhniPiE=
-=OxV/
+iD8DBQFBsjuZZ/iYVBmujdURAlYpAKDoZ04ixnMAPUCKoRzYNo8Thte15wCfbNgY
+P26RKO6//CkCT+CRg6QpEZU=
+=cXbD
 -----END PGP SIGNATURE-----
