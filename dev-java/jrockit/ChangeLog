@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jrockit
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit/ChangeLog,v 1.3 2004/03/18 05:18:11 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit/ChangeLog,v 1.4 2004/03/18 14:49:38 st_lim Exp $
+
+  18 Mar 2004; Lim Swee Tat,,+65-9763-4381,+65-6314-3146 <st_lim@gentoo.org> :
+  Updated package.  BEA distributes SP2 from their website.
 
   18 Mar 2004; Chris Aniszczyk <zx@gentoo.org> jrockit-8.1.ebuild:
   Fixing digest issues... *yawn*
