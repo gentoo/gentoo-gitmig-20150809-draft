@@ -1,21 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 29cb6a9e4acff4f296f8af11d1f702f6 ChangeLog 13613
+MD5 029f82904b8c95b10e6cb733f38e8e1f ChangeLog 13638
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 e89210ddf781e36e04afce8d7108c65a ncurses-5.3-r5.ebuild 3863
 MD5 2d0cc2efb3441450e5d7a06b36a04d13 ncurses-5.4-r1.ebuild 4782
-MD5 b4aecd68587454301648cf0c2d81a149 ncurses-5.4-r5.ebuild 5921
+MD5 56119e8feb5337d1d5bc4125c6ddaf2a ncurses-5.4-r2.ebuild 5432
 MD5 42bb017699458eb0d24c630da5f79e5d ncurses-8.1.ebuild 413
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ncurses-8.1 0
-MD5 2167b54d7c96964183554e767e5f5376 files/xterm-debian.ti 342
+MD5 c0a47569107ff1bf2cc2bdfad2f9d864 ncurses-5.4-r3.ebuild 5383
+MD5 1ce139bb792e99a0810847bb3eec735f ncurses-5.4-r4.ebuild 5810
+MD5 b4aecd68587454301648cf0c2d81a149 ncurses-5.4-r5.ebuild 5921
+MD5 cd8a694247cfd64ce864e99246a8d87f files/digest-ncurses-5.3-r5 64
+MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r1 64
+MD5 143b9126206485a5faeb817fd94b1054 files/ncurses-5.3-coreutils.patch 1581
+MD5 c5b265c81eb2dea26b66cd656c61e99c files/ncurses-5.3-share-sed.patch 686
+MD5 f96d1b4b0bf94f1d38ce950df0efb37e files/ncurses-5.3-xterm.patch 1002
 MD5 1ecbf68a55269d2cebeb997f6973fc1d files/ncurses-5.4-share-sed.patch 686
 MD5 61ecd5aac5ddbd35cc4d4a00282eed01 files/ncurses-5.4-xterm.patch 495
-MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r1 64
+MD5 2167b54d7c96964183554e767e5f5376 files/xterm-debian.ti 342
+MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r2 64
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ncurses-8.1 0
+MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r3 64
+MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r4 64
 MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r5 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBeAJfHTu7gpaalycRAjTeAKCvxjwuhSMBm9fUK+fyRejRSUIpYACeM97F
-O+W0Trh7k3xH/hq+2zgDWGw=
-=/3tj
------END PGP SIGNATURE-----
