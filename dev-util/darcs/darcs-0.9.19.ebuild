@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-0.9.19.ebuild,v 1.1 2004/04/12 12:49:34 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-0.9.19.ebuild,v 1.2 2004/04/12 18:58:34 kosmikus Exp $
 
 DESCRIPTION="David's Advanced Revision Control System is yet another replacement for CVS"
 HOMEPAGE="http://abridgegame.org/darcs"
@@ -37,6 +37,7 @@ src_compile() {
 			| sed 's:^.*BUILDDOC.*yes.*$::' \
 			| sed 's/^.*TARGETS.*\(darcs\.ps\|manual\).*$/:/' \
 			> configure
+		chmod u+x configure
 	fi
 	econf ${myconf} || die
 	echo 'INSTALLWHAT=installbin' >> autoconf.mk
