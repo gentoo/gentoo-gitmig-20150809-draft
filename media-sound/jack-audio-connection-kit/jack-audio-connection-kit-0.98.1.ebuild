@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.98.0.ebuild,v 1.1 2004/05/05 03:27:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.98.1.ebuild,v 1.1 2004/05/05 04:10:17 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -28,7 +28,8 @@ PROVIDE="virtual/jack"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-doc-option.patch
+	# Add doc option and fix --march=pentium2 in caps test
+	epatch ${FILESDIR}/${P}-configure.patch
 	autoconf || die "Couldn't regenerate configure file, failing"
 }
 
