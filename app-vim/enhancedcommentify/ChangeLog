@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/enhancedcommentify
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/enhancedcommentify/ChangeLog,v 1.20 2005/02/12 18:38:52 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/enhancedcommentify/ChangeLog,v 1.21 2005/03/01 12:59:01 ka0ttic Exp $
+
+*enhancedcommentify-2.1-r4 (01 Mar 2005)
+
+  01 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
+  +files/enhancedcommentify-2.1-extra-ft-support.patch,
+  +enhancedcommentify-2.1-r4.ebuild:
+  Revision bump; added support for a sleu of filetypes.
 
   12 Feb 2005; Aaron Walker <ka0ttic@gentoo.org>
   enhancedcommentify-2.1-r3.ebuild:
