@@ -34,6 +34,6 @@ src_install () {
 }
 
 pkg_postinst () {
-	einfo "Make sure you create /etc/socks/socks.conf from on of the
+	einfo "Make sure you create /etc/socks/tsocks.conf from on of the
 	examples in that directory"
 }
