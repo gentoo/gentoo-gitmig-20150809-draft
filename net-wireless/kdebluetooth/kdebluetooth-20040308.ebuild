@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-20040308.ebuild,v 1.2 2004/06/25 00:45:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-20040308.ebuild,v 1.3 2004/07/03 14:01:18 centic Exp $
 
 inherit kde
 need-kde 3
@@ -12,6 +12,8 @@ SRC_URI="http://members.xoom.virgilio.it/motaboy/kdebluetooth-${PV}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 RESTRICT="nomirror"
+IUSE=""
+SLOT="0"
 
 DEPEND=">=dev-libs/openobex-1
 	>=net-wireless/bluez-libs-2
