@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/getdate-1.2.ebuild,v 1.1 2003/12/06 15:39:46 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/getdate-1.2.ebuild,v 1.2 2003/12/12 00:30:50 zul Exp $
 
 MY_PN=${PN}_rfc868
 MY_P=${MY_PN}-${PV}
@@ -22,7 +22,7 @@ src_unpack() {
 }
 
 src_compile() {
-	gcc ${CFLAGS} -s -o getdate getdate.c || die
+	gcc ${CFLAGS} -DHAVE_ADJTIME -s -o getdate getdate.c || die
 }
 
 src_install() {
