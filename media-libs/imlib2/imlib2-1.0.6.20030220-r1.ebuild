@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6.20030220-r1.ebuild,v 1.2 2003/03/27 09:10:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6.20030220-r1.ebuild,v 1.3 2003/03/27 10:06:45 seemant Exp $
 
 inherit flag-o-matic
 
-IUSE="mmx ungif gif png jpeg tiff static X"
+IUSE="mmx gif png jpeg tiff static X"
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
