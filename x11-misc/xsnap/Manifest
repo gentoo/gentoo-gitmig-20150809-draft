@@ -1,5 +1,7 @@
 MD5 165b6cfc968c2649ceb62d484a47ae74 xsnap-1.3.ebuild 753
+MD5 1589a22d9793d30a9489e6bfb1bdfa71 xsnap-1.4.3.ebuild 679
 MD5 907f1135aacedc237bcbda0eaa3c7707 ChangeLog 1685
 MD5 6b2f8ecd3ad0e55432fa394deb816e86 metadata.xml 174
 MD5 8935756ffcda63188f1df02d678f8cb5 files/digest-xsnap-1.3 57
+MD5 2b854d6f7e3f22c97c17b407603fa796 files/digest-xsnap-1.4.3 63
 MD5 bbc0ee7ce1ca06fc97a84d9769713c98 files/xsnap-1.3-gentoo.patch 406
