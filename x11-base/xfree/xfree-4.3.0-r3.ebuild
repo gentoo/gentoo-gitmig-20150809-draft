@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.61 2003/10/06 07:16:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.62 2003/10/06 08:44:43 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -37,7 +37,7 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="2.1.14"
+PATCH_VER="2.1.15"
 FT2_VER="2.1.3"
 XCUR_VER="0.3.1"
 SISDRV_VER="100803-1"
@@ -149,6 +149,7 @@ src_unpack() {
 	then
 		unpack X${MY_SV}src-{6,7}.tgz
 	fi
+
 	unpack XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 
 	# Unpack TaD's gentoo cursors

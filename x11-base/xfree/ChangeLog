@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.201 2003/10/06 07:16:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.202 2003/10/06 08:44:43 spyderous Exp $
+
+  06 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
+  New patchset 2.1.15, with CVS update from xf-4_3-branch including security
+  fixes. Pulled patch 9131 since it's included in 0100.
 
   06 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
   Remarking stable on x86...somehow got unmarked?
