@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/URI
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.11 2003/03/25 04:45:33 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.12 2003/04/04 01:21:25 zwelch Exp $
 
 *URI-1.23 (24 Mar 2003)
+
+  03 Apr 2003; Zach Welch <zwelch@gentoo.org> URI-1.23.ebuild:
+  add arm keyword
 
   24 Mar 2003; <rac@gentoo.org> URI-1.23.ebuild:
   Upstream version bump, thanks to Mike Javorski <mike_javorski@bigfoot.com>,
