@@ -1,0 +1,12 @@
+# ChangeLog for dev-util/monodevelop
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.1 2004/04/02 03:16:06 latexer Exp $
+
+*monodevelop-0.2 (01 Apr 2004)
+
+  01 Apr 2004; Peter Johanson <latexer@gentoo.org> metadata.xml,
+  monodevelop-0.2.ebuild:
+  Initial commit. Everyone rejoice, monodevelop is revealed unto the world.
+  Thanks to tberman and the whole mono crew. Thanks to everyone on bug #43816
+  as well.
+
