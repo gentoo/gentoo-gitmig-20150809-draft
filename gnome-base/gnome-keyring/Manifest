@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 965c85c3b858c354a30a822712cef30a ChangeLog 3056
-MD5 1f732f54a958f2c21baf9cda41b7dc50 gnome-keyring-0.2.0.ebuild 581
+MD5 30e19acd85266a1d945a02127f257bb4 gnome-keyring-0.4.0.ebuild 595
 MD5 6855bb106661f0eff50d5e3469b26e55 gnome-keyring-0.2.1.ebuild 585
-MD5 7a7760cac9d71c47c583dadfe5a7835b gnome-keyring-0.4.0.ebuild 595
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 77385c632f02be3ef60fb7c0567f18ec gnome-keyring-0.4.1.ebuild 593
 MD5 3712f32ddb3aed26e44a24280eb8ff9b gnome-keyring-0.4.2.ebuild 594
+MD5 1f732f54a958f2c21baf9cda41b7dc50 gnome-keyring-0.2.0.ebuild 581
+MD5 7b0c12ce6b0a7bb9205c79ef7ec906b8 ChangeLog 3159
+MD5 77385c632f02be3ef60fb7c0567f18ec gnome-keyring-0.4.1.ebuild 593
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 d2f8db71125e9a9479a3e4d562f68e57 files/digest-gnome-keyring-0.2.0 72
 MD5 db47dbc065b800bc39940efcfab16106 files/digest-gnome-keyring-0.2.1 72
 MD5 96bc3e985c5f1184e7892dc37d871d50 files/digest-gnome-keyring-0.4.0 72
 MD5 9bd1e399a08197630bbefc716b8b2bb2 files/digest-gnome-keyring-0.4.1 72
 MD5 7869b61dbb8436c4c525b9fc10b55c8d files/digest-gnome-keyring-0.4.2 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCPgUHXjcVihsel0ERAtoFAJ9JtHL5N3AFSrrJbHfJQuTHdgY60wCeNX9F
-B2AXGIZTLkNeb4SVd+IW5DU=
-=caTp
------END PGP SIGNATURE-----
