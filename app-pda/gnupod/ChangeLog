@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/gnupod
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/ChangeLog,v 1.6 2005/01/01 15:43:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/ChangeLog,v 1.7 2005/01/03 03:04:46 matsuu Exp $
+
+*gnupod-0.97 (03 Jan 2005)
+
+  03 Jan 2005; MATSUU Takuto <matsuu@gentoo.org> +gnupod-0.97.ebuild:
+  Version bumped.
 
 *gnupod-0.94 (23 Jun 2004)
 
