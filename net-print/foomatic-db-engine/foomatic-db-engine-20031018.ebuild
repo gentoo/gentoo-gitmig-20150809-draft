@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-20031018.ebuild,v 1.1 2003/10/18 10:25:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-20031018.ebuild,v 1.2 2003/12/10 18:31:04 lanius Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.linuxprinting.org/foomatic"
 SRC_URI="http://www.linuxprinting.org/download/foomatic/${PN}-3.0-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 IUSE=""
 
 S=${WORKDIR}/${PN}-3.0-${PV}

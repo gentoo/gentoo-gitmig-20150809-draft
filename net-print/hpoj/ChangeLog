@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hpoj
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.9 2003/11/09 13:24:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.10 2003/12/10 18:29:23 lanius Exp $
+
+  10 Dec 2003; Heinrich Wendel <lanius@gentoo.org> hpoj-0.91.ebuild:
+  stable
 
   09 Nov 2003; Heinrich Wendel <lanius@gentoo.org> hpoj-0.91.ebuild:
   added ptal-setup on upgrade notice
