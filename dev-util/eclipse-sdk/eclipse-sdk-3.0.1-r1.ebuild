@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.1-r1.ebuild,v 1.2 2004/10/09 21:39:58 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.1-r1.ebuild,v 1.3 2004/10/22 23:57:06 karltk Exp $
 
 inherit eutils java-utils
 
@@ -123,7 +123,7 @@ src_compile() {
 
 	# Install all Java code
 	${use_gtk} && build-gtk-java install
-	${use_motif} && motif-build-java install
+	${use_motif} && build-motif-java install
 
 	create-desktop-entry
 }

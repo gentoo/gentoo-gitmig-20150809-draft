@@ -2,9 +2,9 @@ MD5 72c647b7fb61acb5f2197480a18c3691 eclipse-sdk-3.0.1.ebuild 11876
 MD5 dd291d4c0877638b7b4d263444fab68f eclipse-sdk-3.0.0-r3.ebuild 12074
 MD5 0a5769650d0426952026be3b479480ed eclipse-sdk-2.1.3-r3.ebuild 9061
 MD5 59b1c127562221294c69eb2ac3f976ca eclipse-sdk-2.1.3-r5.ebuild 9686
-MD5 7763704e014832adc84579eb33786699 eclipse-sdk-3.0.1-r1.ebuild 13985
+MD5 66df293add24d03117d0cc9e7db7df3f eclipse-sdk-3.0.1-r1.ebuild 13985
 MD5 3b77ea6dd08b71b83872d31d9d79e1ab eclipse-sdk-3.1_pre1.ebuild 12127
-MD5 759312e151ae66405562733eb5b9bfcf ChangeLog 13359
+MD5 afc93da9f1b8c21f388857601b54a518 ChangeLog 13485
 MD5 9cc8d5162e981d7b7fc1ef9fa1ac0e65 metadata.xml 919
 MD5 ab0f6620b4767e065bd533b06245b0fc files/01-distribute_ant_target-2.1.patch 1103
 MD5 6c2995197ef0a038015ffff1dee7ac72 files/00-refactor_rename.patch 59577
