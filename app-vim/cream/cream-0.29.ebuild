@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.29.ebuild,v 1.1 2004/04/27 12:03:45 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.29.ebuild,v 1.2 2004/04/27 20:43:53 agriffis Exp $
 
-inherit vim-plugin
+inherit vim-plugin eutils
 
 DESCRIPTION="Cream is an easy-to-use configuration of the GVim text editor"
 HOMEPAGE="http://cream.sourceforge.net/"
