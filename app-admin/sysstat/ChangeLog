@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/sysstat
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.7 2003/01/12 13:36:15 mholzer Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.8 2003/02/12 02:27:22 vapier Exp $
 
 *sysstat-4.0.7 (16 Dec 2002)
 

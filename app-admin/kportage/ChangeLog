@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/kportage
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kportage/ChangeLog,v 1.7 2003/02/08 16:35:02 hannes Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kportage/ChangeLog,v 1.8 2003/02/12 02:24:13 vapier Exp $
 
 *kportage-0.6.1 (08 Feb 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/analog
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.12 2003/01/30 00:13:03 woodchip Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.13 2003/02/12 02:10:14 vapier Exp $
 
 *analog-5.31 (29 Jan 2003)
 
