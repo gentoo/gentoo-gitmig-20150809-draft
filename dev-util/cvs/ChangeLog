@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.23 2003/12/09 19:28:00 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.24 2003/12/19 23:49:12 scandium Exp $
+
+*cvs-1.11.11 (20 Dec 2003)
+
+  20 Dec 2003; Rainer Groesslinger <scandium@gentoo.org> cvs-1.11.11.ebuild:
+  security update
 
 *cvs-1.11.10-r1 (09 Dec 2003)
                                                                                                                              
