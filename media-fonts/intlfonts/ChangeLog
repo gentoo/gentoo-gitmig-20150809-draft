@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/intlfonts
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/ChangeLog,v 1.1 2004/07/10 08:19:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/ChangeLog,v 1.2 2004/07/17 09:23:35 dholm Exp $
+
+  17 Jul 2004; David Holm <dholm@gentoo.org> intlfonts-1.2.1.ebuild:
+  Added to ~ppc.
 
 *intlfonts-1.2.1 (10 Jul 2004)
 
