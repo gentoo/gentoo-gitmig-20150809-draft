@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.75 2005/02/25 21:02:09 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.76 2005/03/24 23:40:58 vapier Exp $
+
+  24 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/libsdl-1.2.8-gcc2.patch.bz2, libsdl-1.2.8-r1.ebuild:
+  Add patch to fix mmx stuff for gcc-2 #86481 by Matt Taylor.
 
   26 Feb 2005; Chris White <chriswhite@gentoo.org> libsdl-1.2.6-r3.ebuild,
   libsdl-1.2.7-r3.ebuild, libsdl-1.2.8-r1.ebuild:
