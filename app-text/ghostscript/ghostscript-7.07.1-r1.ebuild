@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r1.ebuild,v 1.16 2004/10/05 06:43:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r1.ebuild,v 1.17 2004/11/06 01:44:03 lu_zero Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/espgs/espgs-${PV}-source.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="ia64 x86 -ppc sparc alpha hppa amd64 mips"
+KEYWORDS="ia64 x86 ppc sparc alpha hppa amd64 mips"
 IUSE="X cups cjk"
 
 DEPEND="virtual/libc
@@ -53,6 +53,9 @@ src_unpack() {
 
 	# pxl dash patch
 	epatch ${FILESDIR}/gs7.05.6-gdevpx.patch
+
+	# Fix the garbage collector on ia64 and ppc
+	epatch ${FILESDIR}/gs-fix-gc.patch
 
 	# search path fix
 	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/7.07/$(get_libdir):" \

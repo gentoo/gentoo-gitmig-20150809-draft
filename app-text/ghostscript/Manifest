@@ -1,47 +1,37 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2bf0571eed148275b901105f4a1406d8 ChangeLog 14339
-MD5 2db7df35be7d9e0921a6ab5c72c02f67 ghostscript-7.07.1-r2.ebuild 3295
-MD5 e5f37353cc211a2f71cc8841bb8cc1ba ghostscript-7.07.1-r1.ebuild 3187
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 4c43a0cacba1f4a15e9578ed603257fd ghostscript-7.05.6.ebuild 2739
-MD5 0d1e785f83f28fcc649afaee1641be97 ghostscript-7.07.1-r3.ebuild 3443
-MD5 6319ff45453f1d6fb8e71caa8f40556a ghostscript-7.07.1-r4.ebuild 4028
-MD5 40cb9de588f9d7b84c71b45be2ff8d69 ghostscript-7.07.1-r5.ebuild 4028
-MD5 0eb21cd33b7646ed6bab341f994c6640 ghostscript-7.05.6-r1.ebuild 2749
-MD5 1f0374fe43952ae741d0cf174588a5fb ghostscript-7.07.1-r6.ebuild 4076
-MD5 7290582ad4d18b5ff7fd1db86a9eacfb ghostscript-7.07.1-r7.ebuild 4167
 MD5 a61c4af42b77a20abcd7330f20a70162 ghostscript-7.05.6-r2.ebuild 2806
-MD5 71a93bd09748f37be38b726b0530e497 files/digest-ghostscript-7.07.1-r2 291
-MD5 acda8ddfde1efeaf451cb28a67dcc773 files/gs7.07.1-krgb.patch.gz 5569
-MD5 71a93bd09748f37be38b726b0530e497 files/digest-ghostscript-7.07.1-r1 291
-MD5 fd34b2b7a029f19eab4ba3f69afe295e files/ghostscript-7.05.6.man.patch 1231
-MD5 343b6a60e15e35d0c5f825b4f361fd29 files/gs7.05.6-cjk.diff.bz2 3287
-MD5 68fa21d11a860c222c8ba89c39ce578e files/gs7.05.6-gdevpx.patch 402
-MD5 5f1b04ca58928a339b749703e067e2ba files/gs7.05.6-kochi-substitute.patch 3774
-MD5 291c8895063b8ecee12b68d45a705ab4 files/gs7.05-gdevhl12.c.bz2 7406
-MD5 ac6af6bf67095500ea043aea27062d62 files/gs7.07.1-ijs.patch 401
-MD5 7208aacbb4aa234ce1a6126e8f682c06 files/gs7.07.1-ps2epsi.patch 372
-MD5 c63f6d71a403dbc72265831386b84eb0 files/digest-ghostscript-7.05.6 359
-MD5 71a93bd09748f37be38b726b0530e497 files/digest-ghostscript-7.07.1-r3 291
-MD5 71a93bd09748f37be38b726b0530e497 files/digest-ghostscript-7.07.1-r4 291
-MD5 71a93bd09748f37be38b726b0530e497 files/digest-ghostscript-7.07.1-r5 291
-MD5 3d1cdf07dabc4a05bde9a2dc6f7da2de files/gs7.07.1-fontconfig-rh.patch.bz2 6121
-MD5 370d4bcd16d8acd03190ba84e2f61a41 files/gs7.07.1-ijsdestdir.patch 1418
-MD5 6807c3b6025d5b09e8eb6349769162d1 files/digest-ghostscript-7.05.6-r1 212
-MD5 b7ca313a24a8adf4c527c0a097354f60 files/digest-ghostscript-7.07.1-r6 212
-MD5 b7ca313a24a8adf4c527c0a097354f60 files/digest-ghostscript-7.07.1-r7 212
-MD5 8c6a3d7e8897b4297ef853dbd89e408b files/gs-fix-gc.patch 5627
+MD5 0eb21cd33b7646ed6bab341f994c6640 ghostscript-7.05.6-r1.ebuild 2749
+MD5 adb8f4a12eb1764922b5e13835ef60dc ghostscript-7.07.1-r1.ebuild 3270
+MD5 1f0374fe43952ae741d0cf174588a5fb ghostscript-7.07.1-r6.ebuild 4076
+MD5 2db7df35be7d9e0921a6ab5c72c02f67 ghostscript-7.07.1-r2.ebuild 3295
+MD5 40cb9de588f9d7b84c71b45be2ff8d69 ghostscript-7.07.1-r5.ebuild 4028
+MD5 d3eaef580b8dc8e7cd0cefe18ec43364 ChangeLog 14462
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 0d1e785f83f28fcc649afaee1641be97 ghostscript-7.07.1-r3.ebuild 3443
+MD5 4c43a0cacba1f4a15e9578ed603257fd ghostscript-7.05.6.ebuild 2739
+MD5 6319ff45453f1d6fb8e71caa8f40556a ghostscript-7.07.1-r4.ebuild 4028
+MD5 7290582ad4d18b5ff7fd1db86a9eacfb ghostscript-7.07.1-r7.ebuild 4167
 MD5 06fe485954243190f4f0f4d8e1542f92 files/gs7.07.1-cjk.diff.bz2 3055
-MD5 1d5618d793799f7247d624ced0dea493 files/gs7.07.1-tempfile.patch 3123
+MD5 6807c3b6025d5b09e8eb6349769162d1 files/digest-ghostscript-7.05.6-r1 212
+MD5 71a93bd09748f37be38b726b0530e497 files/digest-ghostscript-7.07.1-r2 291
+MD5 68fa21d11a860c222c8ba89c39ce578e files/gs7.05.6-gdevpx.patch 402
+MD5 8c6a3d7e8897b4297ef853dbd89e408b files/gs-fix-gc.patch 5627
+MD5 b7ca313a24a8adf4c527c0a097354f60 files/digest-ghostscript-7.07.1-r6 212
 MD5 6807c3b6025d5b09e8eb6349769162d1 files/digest-ghostscript-7.05.6-r2 212
 MD5 d3f26c93b9fb75b509c375cbf841da9a files/gs7.05.6-tempfile.patch 2763
+MD5 291c8895063b8ecee12b68d45a705ab4 files/gs7.05-gdevhl12.c.bz2 7406
+MD5 acda8ddfde1efeaf451cb28a67dcc773 files/gs7.07.1-krgb.patch.gz 5569
+MD5 1d5618d793799f7247d624ced0dea493 files/gs7.07.1-tempfile.patch 3123
+MD5 3d1cdf07dabc4a05bde9a2dc6f7da2de files/gs7.07.1-fontconfig-rh.patch.bz2 6121
+MD5 7208aacbb4aa234ce1a6126e8f682c06 files/gs7.07.1-ps2epsi.patch 372
+MD5 b7ca313a24a8adf4c527c0a097354f60 files/digest-ghostscript-7.07.1-r7 212
+MD5 5f1b04ca58928a339b749703e067e2ba files/gs7.05.6-kochi-substitute.patch 3774
+MD5 fd34b2b7a029f19eab4ba3f69afe295e files/ghostscript-7.05.6.man.patch 1231
+MD5 71a93bd09748f37be38b726b0530e497 files/digest-ghostscript-7.07.1-r5 291
+MD5 ac6af6bf67095500ea043aea27062d62 files/gs7.07.1-ijs.patch 401
+MD5 71a93bd09748f37be38b726b0530e497 files/digest-ghostscript-7.07.1-r1 291
+MD5 343b6a60e15e35d0c5f825b4f361fd29 files/gs7.05.6-cjk.diff.bz2 3287
+MD5 370d4bcd16d8acd03190ba84e2f61a41 files/gs7.07.1-ijsdestdir.patch 1418
+MD5 71a93bd09748f37be38b726b0530e497 files/digest-ghostscript-7.07.1-r3 291
 MD5 51736590c7ec64f9029fa9524e1ab50c files/gs7.07.1-destdir.patch 12261
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBiqsBHTu7gpaalycRAjwdAKCseMh3nurYXlrCZDcg0dWRD9GbWwCfR78L
-GTn5fMdIWLEadO7jH/EyXJQ=
-=nlQq
------END PGP SIGNATURE-----
+MD5 71a93bd09748f37be38b726b0530e497 files/digest-ghostscript-7.07.1-r4 291
+MD5 c63f6d71a403dbc72265831386b84eb0 files/digest-ghostscript-7.05.6 359

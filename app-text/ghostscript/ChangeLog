@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.88 2004/11/01 17:40:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.89 2004/11/06 01:44:03 lu_zero Exp $
+
+  06 Nov 2004; Luca Barbato <lu_zero@gentoo.org>
+  ghostscript-7.07.1-r1.ebuild:
+  Backported the gc patch just in case
 
   02 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
   +files/gs7.07.1-destdir.patch, ghostscript-7.07.1-r7.ebuild:
