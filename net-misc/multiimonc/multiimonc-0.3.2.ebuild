@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/multiimonc-0.3.2.ebuild,v 1.1 2004/06/02 21:00:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/multiimonc-0.3.2.ebuild,v 1.2 2004/06/17 10:58:41 kloeri Exp $
+
+inherit eutils
 
 DESCRIPTION="A wxWidgets-based client for fli4l"
 SRC_URI="http://www.fli4l.de/german/extern/multiimonc/MultiImonC-${PV}.tar.bz2"
@@ -16,7 +18,6 @@ IUSE=""
 DEPEND=">=x11-libs/wxGTK-2.4.1
 		virtual/glibc
 		virtual/x11"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	# Fix a divide-by-zero-error in UsagePlot.cpp
