@@ -1,0 +1,10 @@
+# ChangeLog for net-irc/irssi-charconv
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-charconv/ChangeLog,v 1.1 2003/11/18 15:23:22 zul Exp $
+
+*irssi-charconv-1.13 (18 Nov 2003)
+
+  18 Nov 2003; Chuck Short <zul@gentoo.org> irssi-charconv-1.13.ebuild,
+  files/README, files/charconv.c:
+  Initial release, ebuild submitted by me.
+
