@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.2-r2.ebuild,v 1.1 2001/02/10 11:24:50 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.2-r2.ebuild,v 1.2 2001/02/15 18:17:32 achim Exp $
 
 A="X402src-1.tgz X402src-2.tgz X402src-3.tgz truetype.tar.gz gatos.tar.gz"
 S=${WORKDIR}/xc
@@ -17,8 +17,10 @@ HOMEPAGE="http://www.xfree.org
           http://www.linuxvideo.org/gatos/"
 
 DEPEND=">=media-libs/freetype-2.0.1
-	    >=sys-libs/glibc-2.1.3
-	    >=sys-libs/ncurses-5.1"
+	    >=sys-libs/ncurses-5.1
+        >=sys-libs/zlib-1.1.3-r2
+        >=sys-devel/flex-2.5.4a-r2
+        sys-devel/perl"
 
 
 src_unpack () {

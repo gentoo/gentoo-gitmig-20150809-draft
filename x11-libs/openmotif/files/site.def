@@ -72,5 +72,6 @@ XCOMM site:  $TOG: site.def /main/12 1997/07/02 17:52:18 samborn $
 # define DefaultUserPath /bin:/usr/bin:$(BINDIR):/usr/ucb:/usr/local/bin:/usr/local/bin/mh:/site/local/scripts
 
 #endif /* AfterVendorCF */
+#define YaccCmd bison --yacc
 
 

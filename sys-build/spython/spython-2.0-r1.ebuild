@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-build/spython/spython-2.0-r1.ebuild,v 1.1 2001/01/25 18:00:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-build/spython/spython-2.0-r1.ebuild,v 1.2 2001/02/15 18:17:32 achim Exp $
 
 S=${WORKDIR}/Python-2.0
 S2=${WORKDIR}/python-fchksum-1.1
@@ -10,9 +10,6 @@ SRC_URI="http://www.python.org/ftp/python/src/BeOpen-Python-2.0.tar.bz2
 	 http://www.azstarnet.com/~donut/programs/fchksum/python-fchksum-1.1.tar.gz"
 
 HOMEPAGE="http://www.python.org http://www.azstarnet.com/~donut/programs/fchksum/"
-DEPEND=">=sys-libs/gpm-1.19.3"
-RDEPEND="$DEPEND >=sys-apps/bash-2.04"
-PROVIDE="virtual/python-2.0"
 
 src_unpack() {
     unpack BeOpen-Python-2.0.tar.bz2
