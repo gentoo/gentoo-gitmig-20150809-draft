@@ -1,19 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9f61f8198a0aeef14e5d0342e66d725a vanilla-sources-2.4.25.ebuild 568
+MD5 41cdc1501d7a087186e24fdd782af2eb vanilla-sources-2.4.25.ebuild 583
 MD5 1da0325b06bc74cdac4b552f69ef02ca vanilla-sources-2.4.20.ebuild 547
 MD5 13ea261e6311c7a4206175a3d4961bc4 vanilla-sources-2.2.26.ebuild 2743
-MD5 25e1b3e6906a93ba28502a589d79b58b vanilla-sources-2.4.27.ebuild 506
+MD5 c610bf4f32373dc8a8c6c90ce24957f4 vanilla-sources-2.4.27.ebuild 521
 MD5 19a83aded0f333176b03602ecf108587 vanilla-sources-2.0.40.ebuild 2744
-MD5 0b2351d71be989484b7d859eb4528d5f vanilla-sources-2.4.22.ebuild 553
-MD5 f6421b1aa35b77f4ca7b1bd165e09e17 vanilla-sources-2.4.26.ebuild 506
-MD5 af40fe1edde81981c5bf53c60377e5f1 vanilla-sources-2.4.21.ebuild 559
-MD5 f241bc7f55d4469f0cd970cc59d07610 ChangeLog 7968
+MD5 98065ebf7df24fa799c51ae78bd48689 vanilla-sources-2.4.22.ebuild 568
+MD5 0f18c8537ad8d11429eb99e0859b7823 vanilla-sources-2.4.26.ebuild 521
+MD5 4d8d9620e00ec7e0c52797b1232faf49 vanilla-sources-2.4.21.ebuild 574
+MD5 44ed9ebc6291be3373ca5f684b868d37 ChangeLog 8297
 MD5 17ded3e049cc5ea4571a590f031fd463 metadata.xml 449
-MD5 f3bf164598e7cdd3b87b3ca41a60492e vanilla-sources-2.4.28.ebuild 506
-MD5 80799c6540b3714f2e705387d6140a10 vanilla-sources-2.4.23.ebuild 506
-MD5 89cfc9893409da8fd8b4f2e7f67263c0 vanilla-sources-2.4.24-r1.ebuild 563
+MD5 b991485196c4ab90cb1fd523bc4c79ef vanilla-sources-2.4.28.ebuild 521
+MD5 7323853cd49780b7e9e7b6f54e918284 vanilla-sources-2.4.23.ebuild 521
+MD5 1e23e9c621692fd05e1284d49fc63709 vanilla-sources-2.4.24-r1.ebuild 578
 MD5 bf2b609e8cab6460d220b1267db09826 files/vanilla-sources-2.4.24.CAN-2004-0001.patch 982
 MD5 1d8193a0ded31699ec3b7bf85dd6cbfa files/digest-vanilla-sources-2.0.40 66
 MD5 fa8428c6171dc0e9548f0b722a5db1c2 files/digest-vanilla-sources-2.2.26 67
@@ -27,10 +24,3 @@ MD5 14e2a1ac85955957aae295a309749807 files/digest-vanilla-sources-2.4.27 67
 MD5 6228c1417a2403fb6ea20450802429b1 files/digest-vanilla-sources-2.4.28 67
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
 MD5 d8266c3fd31880277da566681a943098 files/digest-vanilla-sources-2.4.24-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBpnwtI1lqEGTUzyQRAkBJAJ4rxSf/c/664/seqFiiHMwW5RQnwACdGSCI
-9N1MGVGbkduZZCjJBeS2HKc=
-=+E6Z
------END PGP SIGNATURE-----
