@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.55 2004/02/21 12:17:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.56 2004/02/22 03:30:57 weeve Exp $
+
+  21 Feb 2004; Jason Wever <weeve@gentoo.org> tetex-2.0.2-r3.ebuild:
+  Marked stable on sparc, fixes bug #37110.
 
   21 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> tetex-1.0.7-r13.ebuild,
   tetex-2.0.2-r1.ebuild, tetex-2.0.2-r3.ebuild:
