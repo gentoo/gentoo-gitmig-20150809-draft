@@ -1,7 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.10 2002/06/04 10:10:03 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.11 2002/06/11 21:27:15 spider Exp $
 
+inherit libtool
+inherit debug
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
 # Spidler <spidler@gentoo.org>
@@ -9,29 +11,13 @@
 # Gnome 2 ECLASS
 ECLASS="gnome2"
 
-# DEBUG for Beta
-# Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
-DEBUG="yes"
-RESTRICT="nostrip"
-
-# Remove omit-frame-pointer as some useless folks define that all over the place. they should be shot with a 16 gauge slingshot at least :)
-# force debug information
-export CFLAGS="${CFLAGS/-fomit-frame-pointer/} -g"
-export CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer/} -g"
-
 G2CONF="--enable-debug=yes"
 SCROLLKEEPER_UPDATE="0"
 
 gnome2_src_configure() {
-
+	elibtoolize 
 	# doc keyword for gtk-doc
 	use doc && G2CONF="${G2CONF} --enable-gtk-doc" || G2CONF="${G2CONF} --disable-gtk-doc"
-	
-	# fix those .la files
-	if [ "${LIBTOOL_FIX}" = "1" ]
-	then
-		libtoolize --copy --force
-	fi
 
 	econf ${1} ${G2CONF} || die "./configure failure"
 
