@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libdnet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.10 2004/07/16 18:05:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.11 2004/08/05 20:04:53 rphillips Exp $
+
+*libdnet-1.8-r1 (05 Aug 2004)
+
+  05 Aug 2004; <rphillips@gentoo.org> libdnet-1.8-r1.ebuild:
+  added python support to ebuild
 
 *libdnet-1.8 (16 Jul 2004)
 
