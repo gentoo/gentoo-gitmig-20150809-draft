@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/nas
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.7 2003/02/12 07:14:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.8 2003/03/11 11:20:23 gmsoft Exp $
 
 *nas-1.6 (03 Feb 2003)
+
+  11 Mar 2003; Guy Martin <gmsoft@gentoo.org> nas-1.6.ebuild :
+  Added ~hppa to keywords.
 
   03 Feb 2003; Jared Hudson <jhhudso@gentoo.org> : Version bump. Credit goes
   to Nick Fish <ennui@alcatraz.triton.net> for the suggested ebuild.
@@ -10,6 +13,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *nas-1.5 (7 Jun 2002)
+
+  11 Mar 2003; Guy Martin <gmsoft@gentoo.org> nas-1.5.ebuild :
+  Added hppa to keywords.
 
   7 Jun 2002; Seemant Kulleen <seemant@gentoo.org> nas-1.5.ebuild
   files/digest-nas-1.5.ebuild :
