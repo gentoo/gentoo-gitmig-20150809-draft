@@ -2,6 +2,7 @@
   <!ENTITY author-drobbins SYSTEM "authors/drobbins.sgml">
   <!ENTITY author-achim SYSTEM "authors/achim.sgml">
   <!ENTITY author-pete SYSTEM "authors/pete.sgml">
+  <!ENTITY author-thomasfl SYSTEM "authors/thomasfl.sgml">
   <!ENTITY introduction SYSTEM "articles/introduction.sgml">
   <!ENTITY installation SYSTEM "articles/installation.sgml">
   <!ENTITY ebuild SYSTEM "articles/ebuild.sgml">
@@ -42,6 +43,7 @@
         &author-drobbins;
         &author-achim;
         &author-pete;
+        &author-thomasfl;
 
         </authorgroup>
 
