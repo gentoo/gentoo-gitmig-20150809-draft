@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-cdb
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/ChangeLog,v 1.5 2004/12/31 00:02:54 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/ChangeLog,v 1.6 2005/03/27 22:43:17 slarti Exp $
+
+  27 Mar 2005; Tom Martin <slarti@gentoo.org> python-cdb-0.32.ebuild:
+  Stable on amd64, testing on sparc.
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
