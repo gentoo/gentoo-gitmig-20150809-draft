@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/aterm-java
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aterm-java/ChangeLog,v 1.1 2004/07/20 00:30:23 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aterm-java/ChangeLog,v 1.2 2004/07/20 12:20:04 dholm Exp $
+
+  20 Jul 2004; David Holm <dholm@gentoo.org> aterm-java-1.6.ebuild:
+  Added to ~ppc.
 
 *aterm-java-1.6 (20 Jul 2004)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jjtraveler
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/ChangeLog,v 1.1 2004/07/20 00:23:11 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/ChangeLog,v 1.2 2004/07/20 12:14:31 dholm Exp $
+
+  20 Jul 2004; David Holm <dholm@gentoo.org> jjtraveler-0.4.3.ebuild:
+  Added to ~ppc.
 
 *jjtraveler-0.4.3 (20 Jul 2004)
 
