@@ -1,0 +1,22 @@
+--- pmake-1.45.orig/dir.c	1997-09-28 04:46:39.000000000 -0700
++++ pmake-1.45/dir.c	2004-03-28 07:03:27.000000000 -0800
+@@ -1170,13 +1170,13 @@
+ 	    p->refCount = 1;
+ 	    Hash_InitTable (&p->files, -1);
+ 
+-	    /*
+-	     * Skip the first two entries -- these will *always* be . and ..
+-	     */
+-	    (void)readdir(d);
+-	    (void)readdir(d);
+-
+ 	    while ((dp = readdir (d)) != (struct dirent *) NULL) {
++		/*
++		 * Skip "." and ".."
++		 */
++		if (!strcmp(dp->d_name, ".") || !strcmp(dp->d_name, "..")) {
++		    continue;
++		}
+ #if defined(sun) && defined(d_ino) /* d_ino is a sunos4 #define for d_fileno */
+ 		/*
+ 		 * The sun directory library doesn't check for a 0 inode

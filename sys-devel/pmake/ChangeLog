@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/pmake
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.9 2004/02/26 05:48:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.10 2004/04/05 04:20:55 agriffis Exp $
+
+*pmake-1.45-r4 (05 Apr 2004)
+
+  05 Apr 2004; Aron Griffis <agriffis@gentoo.org> pmake-1.45-r4.ebuild,
+  files/skipdots.patch:
+  Don't assume that . and .. are the first two entries returned by readdir.
+  Thanks to Bob Miller in bug 45998 for the patch
 
   25 Feb 2004; Jason Wever <weeve@gentoo.org> pmake-1.45-r3.ebuild:
   Added ~sparc keyword.
