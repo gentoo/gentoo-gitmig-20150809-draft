@@ -1,19 +1,22 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.5 2002/07/26 05:10:54 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.6 2002/10/29 04:58:42 vapier Exp $
+
+*freenet-0.5 (28 Oct 2002)
+
+  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Bumped freenet via #9830
+
+*freenet-20020621.ebuild (21 Jun 2002)
 
   24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
 
   26 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
-
   moved to net-p2p
 
-*freenet-20020621.ebuild ( 21 Jun 2002 )
-
   15 Jul 2002; J.Alberto Suárez L. <bass@gentoo.org> freenet-20020621.ebuild:
-  Added a note about unemerge problems with updated versions bug
-  #4744.
+  Added a note about unemerge problems with updated versions bug #4744.
   When you update, the files in /var/freenet are more recents
   that the ebuils files. The ebuild can remove it but I think that is
   more secure for the user do it manually.
@@ -21,10 +24,9 @@
   20 Jun 2002; J.Alberto Suárez L. <bass@gentoo.org> freenet-20020621.ebuild:
   Bumped version, and added note that explain how install the newest version.
 
-*freenet-20020214.ebuild ( 18 Feb 2002 )
+*freenet-20020214.ebuild (18 Feb 2002)
 
   18 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog files/digest-freenet-20020214 files/freenet files/update-freenet:
-
   Freenet is a large-scale peer-to-peer network which pools the power of 
   member computers around the world to create a massive virtual information 
   store open to anyone to freely publish or view information of all kinds. 
