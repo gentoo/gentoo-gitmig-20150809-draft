@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 58ca545f200324fc57faf7a7164e30d5 fnord-1.7.ebuild 1156
-MD5 0e0ffb934fe05ab02497892485ca3efc fnord-1.2.ebuild 805
-MD5 1c73c61388514c81a9b121c0ec601175 fnord-1.6.ebuild 1140
-MD5 a5b219e49997d059cccc42fe6e60756c fnord-1.8.ebuild 1363
 MD5 f8f5d39588b97bb2da996906c840231b ChangeLog 2347
+MD5 0e0ffb934fe05ab02497892485ca3efc fnord-1.2.ebuild 805
 MD5 5ffa5568f4830b40d99d7f3ce9aa1051 fnord-1.5.ebuild 1140
+MD5 1c73c61388514c81a9b121c0ec601175 fnord-1.6.ebuild 1140
+MD5 58ca545f200324fc57faf7a7164e30d5 fnord-1.7.ebuild 1156
+MD5 14a25dcc93a6d6b29400ef8c56d1f5e5 fnord-1.8.ebuild 1371
 MD5 cfe29c85fe244c226c7fb0447dc65f9a files/fnord-1.6-gentoo.diff 1067
 MD5 930bc8292c8284d9a03358ea9800ab5d files/fnord-1.2-gentoo.diff 566
 MD5 cfe29c85fe244c226c7fb0447dc65f9a files/fnord-1.7-gentoo.diff 1067
@@ -19,7 +19,7 @@ MD5 cfe29c85fe244c226c7fb0447dc65f9a files/fnord-1.5-gentoo.diff 1067
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB+IMEgMUyd/cdjWsRAs3fAJ4i6wLrBgJWvUcj2GcSfCgB03DqvQCggHw6
-DLL6WYm0KXRSl12ADhclpjE=
-=tjjo
+iD4DBQFB+bp5gMUyd/cdjWsRAi1TAJ9GArZo9KX21auvbaZMp7OeqRqdrwCVEKht
+CQamlscEnyqnS4DkKohheg==
+=4Dkc
 -----END PGP SIGNATURE-----
