@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-activation
 # Copyright 2000-2004 Gentoo Foundation; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-activation/ChangeLog,v 1.4 2004/06/24 22:26:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-activation/ChangeLog,v 1.5 2004/08/24 04:12:29 zx Exp $
+
+  24 Aug 2004; Chris Aniszczyk <zx@gentoo.org> gnu-activation-20040331.ebuild:
+  Marking x86
 
   29 Apr 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   activation-20040331.ebuild: Added proper S=, so that it compiles properly.
