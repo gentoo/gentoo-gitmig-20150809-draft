@@ -1,6 +1,6 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.30 2003/06/16 18:55:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.31 2003/06/16 22:33:18 raker Exp $
 
 *proftpd-1.2.9_rc1 (16 Jun 2003)
 
@@ -10,6 +10,7 @@
   commented code for the new mod_{radius,ifsession,rewrite} modules.
   A couple "New & Enhanced" configuration directives as well...
   AnonRejectPasswords, RootRevoke, SocketOptions, and ListOptions.
+  Increased postgres depend to >=7.3 (bug #19675)
 
 *proftpd-1.2.8 (02 June 2003)
 
