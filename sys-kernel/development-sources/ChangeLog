@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.17 2003/06/17 18:48:04 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.18 2003/06/18 14:28:50 latexer Exp $
+
+  18 Jun 2003; Peter Johanson <latexer@gentoo.org>
+  development-sources-2.5.70.ebuild, development-sources-2.5.71.ebuild,
+  development-sources-2.5.72.ebuild:
+  SRC_URI now uses mirror://kernel
 
 *development-sources-2.5.72 (17 Jun 2003)
 
