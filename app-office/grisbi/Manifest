@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 64bdf750c51dadb60d0acf4d3622cb36 grisbi-0.5.0-r1.ebuild 1664
+MD5 b30db36616c828d41024bd27d3874cbf grisbi-0.5.0-r1.ebuild 1657
 MD5 6a86d453217bdea48c2161b8405c23e4 ChangeLog 522
 MD5 7f2339dfaaf4083e7fe90f28ebde7399 metadata.xml 429
 MD5 ccc62cf2f2a9ecc58aebb729a2cca5c4 files/digest-grisbi-0.5.0-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA9Ev47aJl2DRYeA4RAsPuAJoCJymRPofh9vkSFqFA7c0b2NoI0QCgwpJo
-I5XEe8GrhkjXALsnu7WvV5s=
-=IlKD
------END PGP SIGNATURE-----
