@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.43 2004/03/14 16:48:40 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.44 2004/03/30 05:24:29 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; libsdl-1.2.5-r2.ebuild,
+  libsdl-1.2.6-r3.ebuild, libsdl-1.2.7.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   14 Mar 2004; Stephen P. Becker <geoman@gentoo.org> libsdl-1.2.6-r3.ebuild:
   Added ~mips keyword.

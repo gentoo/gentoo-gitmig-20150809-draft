@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r2.ebuild,v 1.11 2004/02/26 14:33:08 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r2.ebuild,v 1.12 2004/03/30 05:24:29 spyderous Exp $
 
 IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa"
 
@@ -14,7 +14,7 @@ LICENSE="LGPL-2"
 KEYWORDS="x86 ~alpha ~ppc -sparc hppa"
 
 RDEPEND=">=media-libs/audiofile-0.1.9
-	X? ( >=x11-base/xfree-4.3.0 )
+	X? ( virtual/x11 )
 	esd? ( >=media-sound/esound-0.2.19 )
 	ggi? ( >=media-libs/libggi-2.0_beta3 )
 	aalib? ( media-libs/aalib )

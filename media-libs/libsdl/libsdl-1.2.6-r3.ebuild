@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r3.ebuild,v 1.7 2004/03/14 16:48:40 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r3.ebuild,v 1.8 2004/03/30 05:24:29 spyderous Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=media-libs/audiofile-0.1.9
 	esd? ( >=media-sound/esound-0.2.19 )
 	arts? ( kde-base/arts )
 	nas? ( media-libs/nas virtual/x11 )
-	X? ( >=x11-base/xfree-4.3.0 )
+	X? ( virtual/x11 )
 	directfb? ( >=dev-libs/DirectFB-0.9.19 )
 	ggi? ( >=media-libs/libggi-2.0_beta3 )
 	svga? ( >=media-libs/svgalib-1.4.2 )
