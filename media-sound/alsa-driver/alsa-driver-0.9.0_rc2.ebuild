@@ -1,14 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc2.ebuild,v 1.6 2002/08/01 11:40:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc2.ebuild,v 1.7 2002/08/16 15:39:13 agenkin Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
 
 # By default, drivers for all supported cards will be compiled.
 # If you want to only compile for specific card(s), set ALSA_CARDS
-# environment variable accordingly
-[ x${ALSA_CARDS} = x ] && ALSA_CARDS=all
+# environment to a space-separated list of drivers that you want to build.
+# For example:
+#
+#   env ALSA_CARDS='emu10k1 intel8x0 ens1370' emerge alsa-driver
+#
+[ x"${ALSA_CARDS}" = x ] && ALSA_CARDS=all
 
 SRC_URI="ftp://ftp.alsa-project.org/pub/driver/${P/_rc/rc}.tar.bz2"
 S=${WORKDIR}/${P/_rc/rc}
@@ -51,7 +55,7 @@ src_compile() {
 		--with-isapnp=yes \
 		--with-sequencer=yes \
 		--with-oss=yes \
-		--with-cards=${ALSA_CARDS} \
+		--with-cards="${ALSA_CARDS}" \
 		|| die "./configure failed"
 	
 	emake || die "Parallel Make Failed"
