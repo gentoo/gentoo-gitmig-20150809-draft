@@ -1,23 +1,25 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.9-r1.ebuild,v 1.5 2005/01/12 13:45:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.10.ebuild,v 1.1 2005/01/12 13:45:16 ticho Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils mono
 
-IUSE="doc ipv6"
+IUSE="doc ipv6 mono"
 DESCRIPTION="Utilities for creating and parsing messages using MIME"
 SRC_URI="http://spruce.sourceforge.net/gmime/sources/v${PV%.*}/${P}.tar.gz"
 HOMEPAGE="http://spruce.sourceforge.net/gmime/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=dev-libs/glib-2
 	doc? ( >=dev-util/gtk-doc-1.0 )"
 
 DEPEND="dev-util/pkgconfig
 	doc? ( app-text/docbook-sgml-utils )
+	mono? ( dev-dotnet/mono
+			>=dev-dotnet/gtk-sharp-0.91.1 )
 	${RDEPEND}"
 
 src_unpack() {
@@ -32,7 +34,14 @@ src_unpack() {
 src_compile() {
 	econf \
 	    `use_enable ipv6` \
+	    `use_enable mono` \
 	    `use_enable doc gtk-doc` || die "configure failed"
+	MAKEOPTS="-j1" MONO_PATH=${S} emake || die
+}
+
+src_install() {
+	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package ${PN}" \
+		DESTDIR=${D} install || die
 }
 
 pkg_preinst() {

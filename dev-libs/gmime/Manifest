@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c25702458c14d5d4049f85194e39d401 ChangeLog 1415
+MD5 af14b772f4818cca902475e88bb0a97a ChangeLog 1688
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 b9e72bc601d11928953f5a739d5ad415 gmime-2.1.9-r1.ebuild 1252
+MD5 bae1fe23c648d95a2faf51414c3c8fc0 gmime-2.1.9-r1.ebuild 1252
+MD5 156280cf03b673429311d7c151693698 gmime-2.1.10.ebuild 1529
 MD5 6d73d42404a0463371ca8623b16a5869 files/digest-gmime-2.1.9-r1 63
+MD5 25cb04e57778701ea8706a1a9a8c0fc0 files/digest-gmime-2.1.10 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBp6aK10xuJSrg3/sRAmq2AJ0cUcUv4AdK51jiLSqT9zzDHAEnGwCdEjQS
-q9znzHqpu7kNTaHO4hWurXA=
-=skZ+
+iD8DBQFB5Sn5QlM6RnzZP+IRAqVhAJ9RVSi+goLcc0THL+fvSFQFrk6J2wCgmW+T
+6LnjHJlQkt6Ofksf3Iquk/k=
+=g+fo
 -----END PGP SIGNATURE-----
