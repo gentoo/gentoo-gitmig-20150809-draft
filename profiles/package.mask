@@ -515,7 +515,6 @@ media-libs/libfame
 # Added other deps that depend on baselayout
 =sys-apps/baselayout-1.8.0
 =sys-apps/baselayout-1.8.1
-app-arch/unarj
 app-emulation/zinc
 
 # cybersystem@gentoo.org (17 Jul 2002)
