@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.33 2004/06/01 23:07:54 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.34 2004/06/03 21:08:39 karltk Exp $
+
+  03 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  eclipse-sdk-2.1.3-r3.ebuild: Marked as stable on x86, as it improves
+  markedly on previous versions anyway.
 
   02 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-3.0.0_pre9.ebuild, eclipse-sdk-3.0.0_pre8-r3.ebuild: Added 
