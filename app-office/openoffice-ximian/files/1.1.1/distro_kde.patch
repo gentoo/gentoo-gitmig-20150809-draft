@@ -1,0 +1,10 @@
+--- ooo-build-1.1.54/patches/OOO_1_1_1/apply 2004-04-30 22:21:18.000000000 -0500
++++ ooo-build-1.1.54/patches/OOO_1_1_1/apply.new 2004-04-30 22:08:04.000000000 -0500
+@@ -21,7 +21,7 @@ RHFedora : RedHatBase, RHFedoraOnly
+ RHTaroon : RedHatBase, RHTaroonOnly, OldLibArt
+ RHShrike : RedHatBase, RHShrikeOnly, OldLibArt
+ KDE : LinuxCommon, NativeWidgets, StartupNotification, ODKFixes
+-SuSE : SuSEOnly, LinuxCommon, KDE, GlobalDesktopFiles, VBABits
++SuSE : SuSEOnly, LinuxCommon, NativeWidgets, StartupNotification ODKFixes, GlobalDesktopFiles, VBABits
+ # somewhat odder:
+ Win32 : Common, ODKFixes, VBABits, Win32Only
