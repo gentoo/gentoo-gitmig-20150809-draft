@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/win4lin-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.26 2004/06/29 16:50:45 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.27 2004/06/30 18:18:49 plasmaroo Exp $
+
+*win4lin-sources-2.6.6-r2 (30 Jun 2004)
+
+  30 Jun 2004; <plasmaroo@gentoo.org> -win4lin-sources-2.6.6-r1.ebuild,
+  +win4lin-sources-2.6.6-r2.ebuild,
+  +files/win4lin-sources-2.6.IPTables-RDoS.patch:
+  Version bump for the 2.6 IPTables RDoS vulnerability; bug #55694.
 
 *win4lin-sources-2.4.26-r2 (29 Jun 2004)
 
