@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.17 2003/08/01 16:46:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.18 2003/08/02 13:18:38 seemant Exp $
+
+  02 Aug 2003; Seemant Kulleen <seemant@gentoo.org> coreutils-5.0-r1.ebuild,
+  coreutils-5.0.ebuild:
+  Azarah's brilliance again :) sandbox is disabled for coreutils while
+  portage-2.0.49 has not come out
 
   01 Aug 2003; Aron Griffis <agriffis@gentoo.org> coreutils-5.0-r1.ebuild,
   files/coreutils-5.0-confdir3.patch:

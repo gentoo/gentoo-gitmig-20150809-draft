@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.ebuild,v 1.4 2003/07/20 07:39:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.ebuild,v 1.5 2003/08/02 13:18:38 seemant Exp $
 
 inherit eutils
 
@@ -21,6 +21,9 @@ DEPEND=">=sys-apps/portage-2.0.48-r3
 	virtual/glibc
 	nls? ( sys-devel/gettext )
 	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
+
+# for portage 2.0.48, sandbox breaks
+export SANDBOX_DISABLED="1"
 
 src_unpack() {
 	unpack ${A}
