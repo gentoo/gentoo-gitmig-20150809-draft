@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.0.ebuild,v 1.3 2004/04/27 20:56:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.0.ebuild,v 1.4 2004/05/23 21:10:17 plasmaroo Exp $
 
 inherit eutils
 
@@ -13,6 +13,7 @@ LICENSE="GPL-2 BSD"
 KEYWORDS="x86 ppc"
 
 DEPEND="virtual/x11"
+IUSE=""
 
 src_compile() {
 

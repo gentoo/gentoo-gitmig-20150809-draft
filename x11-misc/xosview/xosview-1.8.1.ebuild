@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.1.ebuild,v 1.7 2004/05/12 00:55:51 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.1.ebuild,v 1.8 2004/05/23 21:10:17 plasmaroo Exp $
 
 inherit eutils
 
@@ -13,9 +13,9 @@ LICENSE="GPL-2 BSD"
 KEYWORDS="x86 ~alpha ppc amd64 sparc"
 
 DEPEND="virtual/x11"
+IUSE=""
 
 src_compile() {
-
 	if [ `uname -r | cut -d. -f1` -eq 2 -a `uname -r | cut -d. -f2` -ge 5 -a `uname -r | cut -d. -f2` -le 6 ] ; then
 		einfo "You are running `uname -r`"
 		einfo "Using 2.5/2.6 kernel compatibility patch"

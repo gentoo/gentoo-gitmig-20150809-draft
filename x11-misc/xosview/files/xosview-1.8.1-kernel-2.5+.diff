@@ -1,16 +1,16 @@
-diff -ruN xosview-1.8.1-old/linux/diskmeter.cc xosview-1.8.1/linux/diskmeter.cc
---- xosview-1.8.1-old/linux/diskmeter.cc	2003-11-21 01:42:56.436894888 +0000
-+++ xosview-1.8.1/linux/diskmeter.cc	2003-11-21 01:56:46.750668008 +0000
-@@ -13,6 +13,8 @@
+diff -ruN xosview-1.8.1/linux/diskmeter.cc xosview-disk-2.6/linux/diskmeter.cc
+--- xosview-1.8.1/linux/diskmeter.cc	2003-10-20 10:59:25.000000000 +1000
++++ xosview-disk-2.6/linux/diskmeter.cc	2003-12-10 02:33:05.946203885 +1100
+@@ -12,6 +12,8 @@
+ #include <stdlib.h>
  
  static const char STATFILENAME[] = "/proc/stat";
- #define MAX_PROCSTAT_LENGTH 2048
 +// kernel >= 2.5 support
 +static const char VMSTATFILENAME[] = "/proc/vmstat";
+ #define MAX_PROCSTAT_LENGTH 2048
  
  DiskMeter::DiskMeter( XOSView *parent, float max ) : FieldMeterGraph(
-   parent, 3, "DISK", "READ/WRITE/IDLE")
-@@ -51,25 +53,55 @@
+@@ -51,27 +53,63 @@
      IntervalTimerStop();
      total_ = maxspeed_;
      char buf[MAX_PROCSTAT_LENGTH];
@@ -23,7 +23,7 @@ diff -ruN xosview-1.8.1-old/linux/diskmeter.cc xosview-1.8.1/linux/diskmeter.cc
          {
 -        std::cerr <<"Can not open file : " <<STATFILENAME << std::endl;
 -        exit( 1 );
-+        new_kernel = 0;
++	new_kernel = 0;
          }
  
 -    // Find the line with 'page'
@@ -33,11 +33,9 @@ diff -ruN xosview-1.8.1-old/linux/diskmeter.cc xosview-1.8.1/linux/diskmeter.cc
          {
 -        stats.ignore(MAX_PROCSTAT_LENGTH, '\n');
 -        stats >> buf;
--        }
-+        std::cerr <<"Can not open file : " <<STATFILENAME << std::endl;
-+	exit( 1 );
-+	}
-+
++        std::cerr <<"Can not open file : " <<STATFILENAME <<std::endl;
++        exit( 1 );
+         }
  
 -	// read values
      unsigned long one, two;
@@ -48,7 +46,7 @@ diff -ruN xosview-1.8.1-old/linux/diskmeter.cc xosview-1.8.1/linux/diskmeter.cc
 +        // kernel >= 2.5
 +        while (!vmstats.eof() && strncmp(buf, "pgpgin", 7))
 +            {
-+            vmstats.ignore(1024, '\n');
++            vmstats.ignore(MAX_PROCSTAT_LENGTH, '\n');
 +            vmstats >> buf;
 +            }
 +
@@ -57,40 +55,59 @@ diff -ruN xosview-1.8.1-old/linux/diskmeter.cc xosview-1.8.1/linux/diskmeter.cc
 +
 +        while (!vmstats.eof() && strncmp(buf, "pgpgout", 7))
 +            {
-+            vmstats.ignore(1024, '\n');
++            vmstats.ignore(MAX_PROCSTAT_LENGTH, '\n');
 +            vmstats >> buf;
 +            }
-+
 +       // read second value
 +        vmstats >> two;
 +    } else {
 +        stats >> buf;
-+        while (strncmp(buf, "page", 9))
++	while (strncmp(buf, "disk_io:", 8))
 +            {
-+            stats.ignore(1024, '\n');
++            stats.ignore(MAX_PROCSTAT_LENGTH, '\n');
 +            stats >> buf;
 +            }
 +
-+        // read values
-+        stats >> one >> two;
++    unsigned long one=0, two=0;
++    unsigned long junk,read1,write1;
++    stats >> buf;
++    while (7 == sscanf(buf,"(%lu,%lu):(%lu,%lu,%lu,%lu,%lu)",&junk,&junk,&junk,&junk,&read1,&junk,&write1))
++    {
++           one += read1;
++           two += write1;
++           stats >> buf;
++    }
 +    }
  
      // assume each "unit" is 1k.
++    // (As per the kernel docs...
      // This is true for ext2, but seems to be 512 bytes
-diff -ruN xosview-1.8.1-old/linux/pagemeter.cc xosview-1.8.1/linux/pagemeter.cc
---- xosview-1.8.1-old/linux/pagemeter.cc	2003-11-21 01:42:56.445893520 +0000
-+++ xosview-1.8.1/linux/pagemeter.cc	2003-11-21 01:59:45.867438120 +0000
-@@ -14,7 +14,8 @@
+     // for vfat and 2k for cdroms
+     // work in 512-byte blocks
+@@ -83,8 +121,8 @@
+     // So this is a FIXME - but how ???
+ 
+     float itim = IntervalTimeInMicrosecs();
+-    unsigned long read_curr = one * 2;  // FIXME!
+-    unsigned long write_curr = two * 2; // FIXME!
++    unsigned long read_curr = one;  // FIXME!
++    unsigned long write_curr = two; // FIXME!
+ 
+     // avoid strange values at first call
+     if(read_prev_ == 0) read_prev_ = read_curr;
+diff -ruN xosview-1.8.1/linux/pagemeter.cc xosview-disk-2.6/linux/pagemeter.cc
+--- xosview-1.8.1/linux/pagemeter.cc	2003-10-20 11:24:32.000000000 +1000
++++ xosview-disk-2.6/linux/pagemeter.cc	2003-12-10 02:29:41.259134595 +1100
+@@ -13,6 +13,8 @@
+ 
  
  static const char STATFILENAME[] = "/proc/stat";
- #define MAX_PROCSTAT_LENGTH 2048
--
 +// kernel >= 2.5 support
 +static const char VMSTATFILENAME[] = "/proc/vmstat";
+ #define MAX_PROCSTAT_LENGTH 2048
  
- PageMeter::PageMeter( XOSView *parent, float max )
-   : FieldMeterGraph( parent, 3, "PAGE", "IN/OUT/IDLE" ){
-@@ -50,18 +51,41 @@
+ 
+@@ -50,19 +52,41 @@
  void PageMeter::getpageinfo( void ){
    total_ = 0;
    char buf[MAX_PROCSTAT_LENGTH];
@@ -110,7 +127,7 @@ diff -ruN xosview-1.8.1-old/linux/pagemeter.cc xosview-1.8.1/linux/pagemeter.cc
 -    stats >>buf;
 -  } while (strncasecmp(buf, "swap", 5));
 +  if ( !new_kernel && !stats ) {
-+      std::cerr <<"Cannot open file : " <<STATFILENAME << std::endl;
++      std::cerr <<"Cannot open file : " <<STATFILENAME <<std::endl;
 +      exit( 1 );
 +  }
  
@@ -133,9 +150,9 @@ diff -ruN xosview-1.8.1-old/linux/pagemeter.cc xosview-1.8.1/linux/pagemeter.cc
 +      do {
 +        stats >>buf;
 +      } while (strncasecmp(buf, "swap", 5));
-+
+ 
 +      stats >>pageinfo_[pageindex_][0] >>pageinfo_[pageindex_][1];
 +  }
- 
    int oldindex = (pageindex_+1)%2;
  
+   for ( int i = 0; i < 2; i++ ) {
