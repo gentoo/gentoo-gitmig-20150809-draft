@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.38 2004/03/09 05:03:43 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.39 2004/03/09 23:18:59 agriffis Exp $
+
+  09 Mar 2004; <agriffis@gentoo.org> intltool-0.30.ebuild:
+  stable on alpha and ia64
 
   09 Mar 2004; Stephen P. Becker <geoman@gentoo.org> :
   Added ~mips keyword.
