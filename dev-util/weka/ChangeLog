@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/weka
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.3 2004/08/30 18:39:32 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.4 2004/10/07 16:57:37 axxo Exp $
+
+*weka-3.4.1-r1 (07 Oct 2004)
+
+  07 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +weka-3.4.1-r1.ebuild:
+  now builds from source, bug 63303
 
   30 Aug 2004; Chris Aniszczyk <zx@gentoo.org> weka-3.4.1.ebuild:
   Marking x86
