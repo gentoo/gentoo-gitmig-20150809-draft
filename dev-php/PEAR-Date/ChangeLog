@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Date
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.13 2004/11/29 10:52:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.14 2004/12/30 19:18:50 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   29 Nov 2004; Simon Stelling <blubb@gentoo.org> PEAR-Date-1.4.3.ebuild:
   added ~amd64
@@ -20,7 +23,7 @@
   06 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> PEAR-Date-1.4.ebuild:
   Stable on ppc.
 
-  30 May 2004; Bryan Østergaard <kloeri@gentoo.org> PEAR-Date-1.4.ebuild:
+  30 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> PEAR-Date-1.4.ebuild:
   Stable on alpha.
 
 *PEAR-Date-1.4 (23 Dec 2003)

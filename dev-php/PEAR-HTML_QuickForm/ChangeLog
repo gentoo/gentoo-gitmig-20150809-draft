@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-HTML_QuickForm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm/ChangeLog,v 1.16 2004/11/29 11:00:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm/ChangeLog,v 1.17 2004/12/30 19:21:08 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   29 Nov 2004; Simon Stelling <blubb@gentoo.org>
   PEAR-HTML_QuickForm-3.2.3.ebuild:
@@ -30,7 +33,7 @@
   PEAR-HTML_QuickForm-3.2.1.ebuild:
   Stable on ppc.
 
-  30 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  30 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   PEAR-HTML_QuickForm-3.2.1.ebuild:
   Stable on alpha.
 
