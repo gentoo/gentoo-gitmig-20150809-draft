@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.33 2004/02/23 16:18:11 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.34 2004/02/25 13:37:39 bazik Exp $
+
+  25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> cdrdao-1.1.7-r3.ebuild:
+  All your stable keywords are belong to sparc!
 
   23 Feb 2004; Lars Weiler <pylon@gentoo.org> cdrdao-1.1.8.ebuild:
   Let cdrdao build with it's own libscg as there seem to be issues with one of
