@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyOpenGL
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/ChangeLog,v 1.21 2004/04/07 01:08:25 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/ChangeLog,v 1.22 2004/04/10 04:35:11 mr_bones_ Exp $
+
+  09 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  PyOpenGL-2.0.0.44.ebuild:
+  don't assign default to S; inherit eutils for epatch
 
   07 Apr 2004; Bart Lauwers <blauwers@gentoo.org> PyOpenGL-2.0.0.44.ebuild:
   Fix for bug #45435: previous code broke non-nvidia opengl setups

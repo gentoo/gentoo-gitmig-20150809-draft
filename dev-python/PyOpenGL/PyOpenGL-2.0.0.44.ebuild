@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/PyOpenGL-2.0.0.44.ebuild,v 1.22 2004/04/07 01:08:25 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/PyOpenGL-2.0.0.44.ebuild,v 1.23 2004/04/10 04:35:11 mr_bones_ Exp $
 
-inherit distutils virtualx
-
-S="${WORKDIR}/${P}"
+inherit eutils distutils virtualx
 
 DESCRIPTION="Python OpenGL bindings"
 HOMEPAGE="http://pyopengl.sourceforge.net/"
