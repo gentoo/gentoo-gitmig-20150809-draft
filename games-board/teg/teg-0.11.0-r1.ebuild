@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/teg/teg-0.11.0-r1.ebuild,v 1.5 2004/07/01 11:12:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/teg/teg-0.11.0-r1.ebuild,v 1.6 2004/07/14 14:31:47 agriffis Exp $
 
 inherit games gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/teg/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc"
-IUSE="nls"
+IUSE="nls readline"
 
 DEPEND="virtual/libc
 	virtual/x11
