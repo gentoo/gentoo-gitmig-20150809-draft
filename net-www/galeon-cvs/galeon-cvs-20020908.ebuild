@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.8 2002/09/26 18:41:06 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.9 2002/10/10 16:08:47 foser Exp $
 
 
 # ECVS_TOP_DIR="${PORTAGE_TMPDIR}"
@@ -15,7 +15,7 @@ inherit debug libtool
 
 S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="Galeon is a Web Browser for the Gnome Desktop.  The web, only the web."
-HOMEPAGE="http://www.galeon.org/"
+HOMEPAGE="http://galeon.sf.net/"
 SRC_URI=""
 
 SLOT="0"
