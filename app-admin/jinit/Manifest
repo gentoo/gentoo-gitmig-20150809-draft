@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 372dd7aa9dd0994455c25aa53a2255af ChangeLog 1192
-MD5 3d7ce7d3d7996b98f9ceb3a47100084e jinit-0.1.11.ebuild 936
-MD5 e454b042e9bd78613991be3d11900f11 jinit-0.1.12.ebuild 943
+MD5 43f9bb014454a05dc140145559eb3fd8 ChangeLog 1192
+MD5 be9b6ddfcf8245c3c4369bf064a93fd2 jinit-0.1.11.ebuild 940
+MD5 b48e0cac4146ce7b99f92ee546f0e0f0 jinit-0.1.12.ebuild 943
 MD5 36f3868207e982d53335b6d9aa2c68f5 metadata.xml 305
 MD5 196df975a9a83e67a8733fa8e2f57024 files/digest-jinit-0.1.11 63
 MD5 f46cb1f0d7f544aa0e25379d6d330ba0 files/digest-jinit-0.1.12 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB1NCgFdQwWVoAgN4RAp7xAJwPUU0gJ1cK39AwZ/RTxNuI2exWZwCgp6T2
-oYJPDP6YxJWOVqkotFsVPaM=
-=rqqX
------END PGP SIGNATURE-----

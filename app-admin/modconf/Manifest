@@ -1,4 +1,4 @@
-MD5 bc23a0922b02616e50eba1979b24b3cb ChangeLog 1043
-MD5 4690af96e1b004fd124fb60b7929e45a modconf-0.2.43.ebuild 1074
+MD5 f45b35db5d6db674cf9e9cff2faeb23d ChangeLog 1045
+MD5 c8224fe2b6b8d852a834616255ae394e modconf-0.2.43.ebuild 1076
 MD5 835eb4a6691bff9e97ae7f72962c1f6a files/digest-modconf-0.2.43 66
 MD5 2980e0a4bc14b2b992027feee59c47d0 files/modconf-0.2.43-gentoo.patch 1067

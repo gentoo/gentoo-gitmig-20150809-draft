@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 14692b3409a90bed1dc5c15e920c1d54 ChangeLog 1300
-MD5 c447ba6b1d10a5d8028fe41e014e5b3b longrun-0.9-r1.ebuild 743
+MD5 f5afad4c7a372fcc3841c5c09c9f7fb0 ChangeLog 1302
+MD5 d9386ce54e3f6f124a6eb6cd1bf756fd longrun-0.9-r1.ebuild 748
 MD5 04159b8a163c87979fbe52e9fef78f21 files/digest-longrun-0.9-r1 63
 MD5 b924563938144473dbfc5be5e8f8f025 files/longrun-0.9-r1-debian-gcc-3.diff 32094
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3GcMHTu7gpaalycRAjWQAKDvd3lZx8g5DYtEg/gZ11pwiRLVlgCg6faF
-3cekWOzb4Ow5AbAR2H8d6OI=
-=uxG5
------END PGP SIGNATURE-----

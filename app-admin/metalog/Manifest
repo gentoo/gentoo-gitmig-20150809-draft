@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4cda4a5de968d03bcf197984fb2742aa ChangeLog 4343
-MD5 2a74fd225cfa2605cc1caf6553ac3e3d metalog-0.7-r1.ebuild 1267
-MD5 cf197bd0e9d0d41c174067c97f9558cc metalog-0.8_pre20031130.ebuild 1449
+MD5 5f69605b91333a8eeb4f49cf68d13304 ChangeLog 4344
+MD5 30a64f82834b4e5880316bde9432a57e metalog-0.7-r1.ebuild 1271
+MD5 50d1dd817d7034c47499d28d22146efa metalog-0.8_pre20031130.ebuild 1453
 MD5 2a4834a861e0ed954124316c2a0ad8e9 files/consolelog.sh 191
 MD5 ab769042aa4721d0ac745943e00c70e4 files/digest-metalog-0.7-r1 63
 MD5 d16762a967c2f400ba4876a942d16d08 files/digest-metalog-0.8_pre20031130 74
 MD5 11665b7995cc4ca104d7d8c1c94db226 files/metalog.conf 1715
 MD5 d34f8927d9b4943572de23e6300a189a files/metalog.confd 503
 MD5 1340f1bb658ce93a963a7a833a05919a files/metalog.rc6 661
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBUK1eHTu7gpaalycRAhqUAKDlAi3DkN/saMYFjxA/rE7vZLopLQCgoTKL
-CqPfDc0HLH0JBk+ELuQLahI=
-=lqAM
------END PGP SIGNATURE-----

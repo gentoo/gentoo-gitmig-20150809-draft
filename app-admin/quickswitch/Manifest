@@ -1,4 +1,4 @@
-MD5 e006a6ff467ca865177a9ee474bef785 ChangeLog 2564
-MD5 fc9de5a7bc0fa5f7be9d66378cdf8c22 quickswitch-1.05.ebuild 1188
-MD5 e632f3bfe60c93d82dbcd78161309465 files/net.eth0-switchto.rc6 620
+MD5 d1dc06e11ae400b82ffb2c46b9d4295b ChangeLog 2565
+MD5 f2231e8b02087427c525ccfeda7cc745 quickswitch-1.05.ebuild 1193
 MD5 2a9372939dce4cf5314e3603f925758b files/digest-quickswitch-1.05 67
+MD5 e632f3bfe60c93d82dbcd78161309465 files/net.eth0-switchto.rc6 620

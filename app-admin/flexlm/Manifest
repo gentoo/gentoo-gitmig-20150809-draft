@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 71536932944f0757ea4b9d84111a78a1 ChangeLog 677
-MD5 e5964f66420083eae74abcb10ee5dc28 flexlm-9.2.1.ebuild 1409
+MD5 bf5cdd3832bbac61494ab1822800d6cf ChangeLog 679
+MD5 a99dbcae30c5f25fe3ba5dbc07f27110 flexlm-9.2.1.ebuild 1411
 MD5 5c7d7d954668e2395e1aa050f2c646fb metadata.xml 333
 MD5 1cd702ac8282f4716d4dcaa7bacf0f79 files/90flexlm 70
 MD5 ef848515f7535e89d36b4a423bdb8c5f files/digest-flexlm-9.2.1 162
 MD5 ae792e337eb16321016d96484127d9c8 files/flexlm-conf 396
 MD5 0b69af044c14448bd26e26aa153a4edd files/flexlm-init 463
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBWK2QI1lqEGTUzyQRAkyrAJ9N7ZR5K02JH7b/s+kFYf4+yOckyACgvQcv
-foWEpRSdBo81xm1yGzIuUKs=
-=Abp2
------END PGP SIGNATURE-----

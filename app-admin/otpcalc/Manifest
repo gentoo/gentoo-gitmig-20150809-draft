@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e7ce0b2c3e04e1c61030f49e11d72326 ChangeLog 625
+MD5 a2832cb6e35a424fb16c423e41e0716c ChangeLog 627
 MD5 78714bd1cdeb6709df0a6dcc4c5347ce metadata.xml 410
-MD5 0c4c6bcb3af9d742339276d50ed2dec5 otpcalc-0.96.ebuild 724
+MD5 c20cb97177a9b779db5ea3ddb252bdb1 otpcalc-0.96.ebuild 729
 MD5 1ce297d1a90353ea4e3ee49a9d21be6d files/digest-otpcalc-0.96 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3Hx/HTu7gpaalycRAsxVAKCt2mYXVvglFdBLf9Oi+ks3ijoVwwCeO3aP
-JwyxO3ybj8Rtkax6740QnSY=
-=XkVV
------END PGP SIGNATURE-----

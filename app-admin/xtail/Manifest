@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 868ade3011835cf5ea5a95af49f06761 ChangeLog 865
-MD5 f3b094f26337f814474a4e39aa13ffab xtail-2.1.ebuild 524
+MD5 a0c63a03ce799db03c7ed47ccbedfd7d ChangeLog 867
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 ada762768d8249ce7a4862e04a43c74f xtail-2.1.ebuild 528
 MD5 aaaf4c83a2fe72f08a14f7657e2e5923 files/digest-xtail-2.1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3LBAHTu7gpaalycRAqclAJ4i9pJCFue5USW849JPlyzy2uIRIQCeNbAm
-MZiReAWqHZiAn3oZrEzVRa0=
-=EQiv
------END PGP SIGNATURE-----

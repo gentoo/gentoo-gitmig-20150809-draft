@@ -1,4 +1,4 @@
-MD5 1d5579a6f884e6d4d66ed72880a37b99 ChangeLog 1702
-MD5 483d3bfa11e609b8a212fdacb452d390 gtkdiskfree-1.9.3.ebuild 818
+MD5 071ffd2b15d14936c9bfdf16774005f2 ChangeLog 1705
+MD5 4bf1031863a3f7e498693d52c0aaba5f gtkdiskfree-1.9.3.ebuild 821
 MD5 46985ea76022b80753931414d58952cc files/digest-gtkdiskfree-1.9.3 69
 MD5 fa185ac6a7e624389b664674be9ca275 files/1.9.3-makefile-DESTDIR.patch 663

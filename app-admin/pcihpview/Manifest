@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a9713e61741b8e94fa3a470799a76d90 ChangeLog 307
+MD5 1235717718f0789431bceb2e894b2f5f ChangeLog 309
 MD5 95c4f731059c166507222c80252d7be0 metadata.xml 256
-MD5 2f20011c40de13bc7dda8cf9db178aee pcihpview-0.5.ebuild 640
+MD5 152a7bbd39890131776eb5320829ac7b pcihpview-0.5.ebuild 642
 MD5 81ed81f692e9d34d6e050c8f279d21db files/digest-pcihpview-0.5 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXFNkI1lqEGTUzyQRApGEAJ9NW2+ltt9kZYrXtlgnJSitm//lDgCg0QKj
-AxTt/FB6Ua2wdoPgM2ekiiY=
-=htxz
------END PGP SIGNATURE-----

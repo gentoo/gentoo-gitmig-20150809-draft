@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8d0e600d0ce169515c339743e98d6719 ChangeLog 801
-MD5 caefd8d73341020b3457bfc6f5df5205 lcap-0.0.6-r1.ebuild 831
-MD5 c923163d3ec0ab5af1262996270fcd0c lcap-0.0.6.ebuild 794
+MD5 62c3cf08f229f82b7ee1d2ba7164632b ChangeLog 803
+MD5 f6868b5b4a1d7b30aeac13be5fc479b6 lcap-0.0.6-r1.ebuild 835
+MD5 50e994f0c43f08e956a7717430f6e8ab lcap-0.0.6.ebuild 798
 MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
 MD5 bf12167d46f239f3aa2b87d3686b6a36 files/README.gentoo 185
 MD5 b147ed00fa64b3b0be0b78cf2617ce98 files/digest-lcap-0.0.6 66
 MD5 b147ed00fa64b3b0be0b78cf2617ce98 files/digest-lcap-0.0.6-r1 66
 MD5 7dd1c423588fc70ca3060a912fc32aab files/lcap-0.0.6-r1.patch 385
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3GbEHTu7gpaalycRAkJuAJ4nQgwGmtgqn5WjgXATF3zi60yRdwCg1cmH
-+nKF6STMgB/D8ercpFCtxTw=
-=m2mC
------END PGP SIGNATURE-----

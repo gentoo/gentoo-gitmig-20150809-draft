@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 05c7dab3f1483f0df6110f7252803f38 ChangeLog 1134
-MD5 ddf2db73fc043213153d70aec5874f9b ctcs-1.3.0_pre4.ebuild 2598
+MD5 2d91fd8ffe3e98ce7ea1d4da93b8f61a ChangeLog 1134
+MD5 77fcb3a9d71c36cddd20dcc7771e1e53 ctcs-1.3.0_pre4.ebuild 2602
 MD5 a0d53845467d1d56e0598cd9ced7ee33 metadata.xml 328
 MD5 1e9469f2b4df92301040d3bd20494d1c files/digest-ctcs-1.3.0_pre4 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB1LdCFdQwWVoAgN4RAsrpAKDmyJeH1Lk0XdVf5wW8ICf270nIKQCdHwT6
-tt0Xu6JJiuIJqXBTx1EcWls=
-=5Xpa
------END PGP SIGNATURE-----

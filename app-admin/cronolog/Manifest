@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9e6cfc1822d78d7615ec27b390719932 ChangeLog 1394
-MD5 d602bf7b6c9f19aac06d22dddd845e39 cronolog-1.6.2-r1.ebuild 741
-MD5 3fdf68629d77e3d7a7fe7f207ba82bc5 cronolog-1.6.2.ebuild 576
+MD5 cf928ce1c9abf7007e1f6c274239c740 ChangeLog 1394
+MD5 c32456a828fa4fce155acf15f108a86e cronolog-1.6.2-r1.ebuild 743
+MD5 deea6e88a09864ed0fbc6f8f516e40e1 cronolog-1.6.2.ebuild 578
 MD5 c3c9aa835e56c0df70ea9af69e29df0c metadata.xml 336
 MD5 5e264c6bb03335a86c800e45dd133305 files/digest-cronolog-1.6.2 66
 MD5 5e264c6bb03335a86c800e45dd133305 files/digest-cronolog-1.6.2-r1 66
@@ -12,10 +9,3 @@ MD5 e7f35aecaec790a630abcc28e7d6cb99 files/1.6.2-patches/cronolog-missing-symlin
 MD5 97a9c592017c453f2e579909e5027e87 files/1.6.2-patches/cronolog-setugid-patch.txt 12375
 MD5 3bb527ff2ddb625b77e3ec16b33c60ec files/1.6.2-patches/cronolog-sigusr1-patch.txt 1150
 MD5 9b8c142d13843a88256261e7adb07402 files/1.6.2-patches/cronolog-strftime-patch.txt 465
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB1LWtFdQwWVoAgN4RAhh3AKDZ2wWf3njztbqsGD0/e9zB14hGegCggbet
-0tYYrH+fLURe1vRYnGB9vEI=
-=N4TE
------END PGP SIGNATURE-----

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 138e7773e6fc87bcb97610bc36ba8407 yaala-0.7.2.ebuild 494
-MD5 f30feb875dd2347c5603d8f5933a6605 yaala-0.4.2.ebuild 487
-MD5 e4fd1ff9d6ffd113ffe88dbb985b999a ChangeLog 957
-MD5 1f5da5bc3782aa4caac4149e6b50f012 yaala-0.6.3.ebuild 486
+MD5 936f45e5d625dee9e123f8fbd14abe16 ChangeLog 959
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 d5a2847bebc69530dcac5c1e9e932e1c yaala-0.4.2.ebuild 489
+MD5 f6440f189eca6602a7230fa290931bd4 yaala-0.6.3.ebuild 488
+MD5 62960c4e3e1b88cb4ca534eeb7c44f20 yaala-0.7.2.ebuild 498
 MD5 b881d864bfecedf6f8dd76051a0ed515 files/digest-yaala-0.4.2 63
 MD5 4f153d2fde47e0b93e74015e260058fb files/digest-yaala-0.6.3 63
 MD5 70b5808757730a555aae96e0c901c182 files/digest-yaala-0.7.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBomtjI1lqEGTUzyQRAkIlAJwNRz4zxfSlWuAn3ROx9heqsrn1cgCggw26
-ZnzWNsL97l+VNjIcplEoxAA=
-=U97W
------END PGP SIGNATURE-----
