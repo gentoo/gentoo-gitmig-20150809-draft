@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2-movie/mpeg2-movie-1.2.1.ebuild,v 1.3 2000/08/16 15:08:41 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2-movie/mpeg2-movie-1.2.1.ebuild,v 1.4 2000/09/15 20:09:06 drobbins Exp $
 
 P=mpeg2-movie-1.2.1
 A=mpeg2_movie-1.2.1.tar.gz
@@ -14,8 +14,8 @@ HOMEPAGE="http://heroine.linuxave.net/mpeg2movie.html"
 src_compile() {
 
     cd ${S}
-    ./configure
-    make
+    try ./configure
+    try make
 
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/xmovie-1.5.1.ebuild,v 1.1 2000/08/30 10:57:43 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/xmovie-1.5.1.ebuild,v 1.2 2000/09/15 20:09:06 drobbins Exp $
 
 P=xmovie-1.5.1
 A=${P}.tar.gz
@@ -14,8 +14,8 @@ HOMEPAGE="http://heroine.linuxave.net/xmovie.html"
 src_compile() {
 
     cd ${S}
-    ./configure
-    make
+    try ./configure
+    try make
 
 }
 

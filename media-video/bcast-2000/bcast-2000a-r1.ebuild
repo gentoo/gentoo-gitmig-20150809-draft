@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/bcast-2000/bcast-2000a-r1.ebuild,v 1.2 2000/08/16 04:38:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bcast-2000/bcast-2000a-r1.ebuild,v 1.3 2000/09/15 20:09:05 drobbins Exp $
 
 P=bcast-2000a
 A=${P}-src.tar.gz
@@ -22,8 +22,8 @@ src_unpack() {
 src_compile() {
 
     cd ${S}
-    ./configure
-    make
+    try ./configure
+    try make
 
 }
 

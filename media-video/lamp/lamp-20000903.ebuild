@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/lamp/lamp-20000903.ebuild,v 1.2 2000/09/13 14:07:49 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lamp/lamp-20000903.ebuild,v 1.3 2000/09/15 20:09:05 drobbins Exp $
 
 P=lamp-2000.09.03
 A=${P}.tar.gz
@@ -57,15 +57,15 @@ src_compile() {
 
     cd ${S}
     unset CFLAGS
-    make depend
-    make world
+    try make depend
+    try make world
 
 }
 
 src_install () {
 
     cd ${S}
-    make installroot=${D} install
+    try make installroot=${D} install
     rmdir ${D}/usr/libexec/lamp/avifile_codecs
     cp ${FILESDIR}/config ${D}/usr/libexec/lamp
     dodoc ANNOUNCE ChangeLog COPYING CREDITS README* TODO USAGE FAQ docs/Xv.txt

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1.ebuild,v 1.2 2000/09/08 20:44:21 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1.ebuild,v 1.3 2000/09/15 20:09:06 drobbins Exp $
 
 A="xanim_exporting_edition.tar.gz xa1.0_cyuv_linuxELFg21.o.gz xa2.0_cvid_linuxELFg21.o.gz
    xa2.1_iv32_linuxELFg21.o.gz"
@@ -31,9 +31,9 @@ src_unpack() {
 src_compile() {
 
     cd ${S}/quicktime
-    make
+    try make
     cd ..
-    make
+    try make
 
 }
 

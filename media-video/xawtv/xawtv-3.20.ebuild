@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.20.ebuild,v 1.1 2000/09/10 17:04:53 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.20.ebuild,v 1.2 2000/09/15 20:09:06 drobbins Exp $
 
 A=xawtv_3.20.tar.gz
 S=${WORKDIR}/${P}
@@ -15,14 +15,14 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  ./configure --host=${CHOST} --prefix=/usr \
+  try ./configure --host=${CHOST} --prefix=/usr \
 	--enable-jpeg --enable-xfree-ext --enable-xvideo --with-x
-  make
+  try make
 }
 
 src_install() {                               
   cd ${S}
-  make prefix=${D}/usr install
+  try make prefix=${D}/usr install
   prepman
   dodoc COPYING Changes KNOWN_PROBLEMS Miro_gpio.txt Programming-FAQ
   dodoc README* Sound-FAQ TODO Trouble-Shooting UPDATE_TO_v3.0
