@@ -1,6 +1,14 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.2 2002/09/30 15:01:32 stubear Exp $
+# ChangeLog for app-i18n/skk-jisyo
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.3 2002/10/25 15:43:12 stubear Exp $
+
+*skk-jisyo-200210 (26 Oct 2002)
+
+  26 Oct 2002; Stuart Bouyer <stubear@gentoo.org> skk-jisyo-200210.ebuild,
+  files/digest-skk-jisyo-200210, ChangeLog :
+
+  Version bump. Submitted by MATSUU Takuto <matsuu@7501.net>. New ebuild
+  fixes the digest change problem with the earlier version.
 
 *skk-jisyo-200207 (30 Jul 2002)
 
