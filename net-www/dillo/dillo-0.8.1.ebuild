@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.8.0-r2.ebuild,v 1.4 2004/06/01 22:02:49 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.8.1.ebuild,v 1.1 2004/06/16 16:24:43 usata Exp $
 
 inherit flag-o-matic eutils
 
 S2=${WORKDIR}/dillo-gentoo-extras-patch4
-DILLO_I18N_P="${P}-i18n-misc-20040329"
+DILLO_I18N_P="${P}-i18n-20040616"
 
 DESCRIPTION="Lean GTK+-based web browser"
 HOMEPAGE="http://www.dillo.org/"
@@ -15,20 +15,21 @@ SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa amd64"
-IUSE="ipv6 kde gnome mozilla nls ssl truetype"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+MISC_IUSE="nls ssl truetype ssl"
+#IUSE="${MISC_IUSE} ipv6 kde gnome mozilla"
+IUSE="ipv6 kde gnome mozilla"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/jpeg-6b
 	>=sys-libs/zlib-1.1.3
-	>=media-libs/libpng-1.2.1
-	ssl? ( dev-libs/openssl )"
+	>=media-libs/libpng-1.2.1"
+#	ssl? ( dev-libs/openssl )
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ../${DILLO_I18N_P}.diff
-	epatch ${FILESDIR}/${PV}-gcc34.patch
 
 	if [ "${DILLO_ICONSET}" = "kde" ]
 	then
@@ -66,14 +67,18 @@ src_unpack() {
 src_compile() {
 	replace-flags "-O2 -mcpu=k6" "-O2 -mcpu=pentium"
 
-	econf `use_enable ipv6` \
-		`use_enable nls` \
-		`use_enable ssl` \
-		`use_enable truetype anti-alias` \
-		--enable-tabs \
-		--enable-meta-refresh \
-		--enable-user-agent \
-		|| die
+	local myconf
+	myconf="`use_enable nls`
+		`use_enable ssl`
+		`use_enable truetype anti-alias`
+		--enable-tabs
+		--enable-meta-refresh
+		--enable-user-agent"
+
+	#myconf="${myconf} `use_enable ipv6`"
+	myconf="`use_enable ipv6`"
+
+	econf ${myconf} || die
 	emake || make || die
 }
 

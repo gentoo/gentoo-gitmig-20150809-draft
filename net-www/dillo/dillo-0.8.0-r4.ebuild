@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.8.0-r3.ebuild,v 1.1 2004/06/02 18:06:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.8.0-r4.ebuild,v 1.1 2004/06/16 16:24:43 usata Exp $
 
 inherit flag-o-matic eutils
 
 S2=${WORKDIR}/dillo-gentoo-extras-patch4
-DILLO_I18N_P="${P}-i18n-misc-20040602"
+DILLO_I18N_P="${P}-i18n-misc-20040616"
 
 DESCRIPTION="Lean GTK+-based web browser"
 HOMEPAGE="http://www.dillo.org/"
