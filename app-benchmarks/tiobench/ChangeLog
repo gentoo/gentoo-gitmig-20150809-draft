@@ -1,6 +1,13 @@
 # ChangeLog for app-benchmarks/tiobench
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.10 2005/01/01 12:06:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.11 2005/03/22 12:51:46 swegener Exp $
+
+*tiobench-0.3.3-r2 (22 Mar 2005)
+
+  22 Mar 2005; Sven Wegener <swegener@gentoo.org>
+  +files/0.3.3-column-description-fix.patch, +tiobench-0.3.3-r2.ebuild:
+  Fixed column description to be displayed for every table. Thanks to
+  Christian <evilninja@gmx.net> in bug #85362.
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> tiobench-0.3.3-r1.ebuild:
   was testing for a long time, marking stable on amd64
