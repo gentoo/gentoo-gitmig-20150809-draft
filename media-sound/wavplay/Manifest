@@ -1,6 +1,16 @@
-MD5 7adc4f786feb20bd84e070d819bc84c6 ChangeLog 1245
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 10e1f1997aa6f6b66c6863b3de11193f ChangeLog 1247
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 40afc9124670dff548f05f1b916bd0c9 wavplay-1.4.ebuild 857
+MD5 5ff396adc1eef3c683fc942d400d203a wavplay-1.4.ebuild 869
 MD5 6a522fc93d39d266dc8af0bb866e3ad5 files/digest-wavplay-1.4 62
-MD5 2bcfce9c0864454c212a84f15453b5f8 files/wavplay-1.4-gcc34.patch 706
 MD5 44fc5510eb5718683fe5336af9c22acd files/wavplay-1.4.patch 25215
+MD5 2bcfce9c0864454c212a84f15453b5f8 files/wavplay-1.4-gcc34.patch 706
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBxTL9ArHZZzCEUG0RAuj3AJ4gYZwvPolZ2JWPlCaMyySUiu+AxQCeOjRQ
+sZ2RexMvxCaI8AvQxIii3bU=
+=JfFd
+-----END PGP SIGNATURE-----
