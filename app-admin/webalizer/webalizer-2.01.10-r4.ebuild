@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r4.ebuild,v 1.6 2004/01/05 13:17:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r4.ebuild,v 1.7 2004/01/11 10:59:19 mholzer Exp $
 
 MY_P=${P/.10/-10}
 S=${WORKDIR}/${MY_P}
@@ -61,9 +61,11 @@ src_install() {
 }
 
 pkg_postinst(){
+	if [ -n "`use apache2`" ]; then
 	einfo "to update your apache.conf just type"
 	einfo "echo \"Include  conf/addon-modules/webalizer.conf\" \
 		>> /etc/apache/conf/apache.conf"
+	fi
 	einfo
 	einfo "Just type webalizer to generate your stats."
 	einfo "You can also use cron to generate them e.g. every day."
