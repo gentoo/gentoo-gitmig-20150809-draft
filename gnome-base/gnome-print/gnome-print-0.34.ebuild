@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.34.ebuild,v 1.1 2001/12/12 17:44:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.34.ebuild,v 1.2 2001/12/17 16:53:48 azarah Exp $
 
 
 S=${WORKDIR}/${P}
@@ -30,7 +30,9 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} 						\
+		sysconfdir=${D}/etc					\
+		install || die
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 }
