@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.ebuild,v 1.3 2003/05/19 19:45:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.ebuild,v 1.4 2003/06/22 05:30:30 drobbins Exp $
 
 IUSE="static nls bootstrap java build X"
 
@@ -98,7 +98,7 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips"
+KEYWORDS="-* amd64"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -234,6 +234,7 @@ src_unpack() {
 }
 
 src_compile() {
+
 	local myconf=
 	local gcc_lang=
 	
@@ -266,7 +267,11 @@ src_compile() {
 		myconf="${myconf} --x-includes=/usr/X11R6/include --x-libraries=/usr/X11R6/lib"
 		myconf="${myconf} --enable-interpreter --enable-java-awt=xlib --with-x"
 	fi
- 
+
+	#multilib not yet supported
+	#multilib allows dynamic support for 32-bit or 64-bit on amd64, s390, sparc, mips, ppc systems
+	myconf="$myconf --disable-multilib"
+
 	# In general gcc does not like optimization, and add -O2 where
 	# it is safe.  This is especially true for gcc-3.3 ...
 	export CFLAGS="${CFLAGS/-O?/-O2}"
@@ -328,8 +333,9 @@ src_compile() {
 		# Fix for our libtool-portage.patch
 		S="${WORKDIR}/build" \
 		emake bootstrap-lean \
-			LIBPATH="${LIBPATH}" \
 			BOOT_CFLAGS="${CFLAGS}" STAGE1_CFLAGS="-O" || die
+#			LIBPATH="${LIBPATH}" \
+
 	fi
 }
 
@@ -354,17 +360,22 @@ src_install() {
 		datadir=${DATAPATH} \
 		mandir=${DATAPATH}/man \
 		infodir=${DATAPATH}/info \
-		LIBPATH="${LIBPATH}" \
 		DESTDIR="${D}" \
 		install || die
+		#LIBPATH="${LIBPATH}" \
 	
 	[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
-	
+
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
 	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	if [ "$ARCH" = "amd64" ]
+	then
+	echo "LDPATH=\"${LIBPATH}:${LOC}/lib/gcc-lib/${CCHOST}/lib:${LOC}/lib/gcc-lib/${CCHOST}/lib64\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	else
 	echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	fi
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
@@ -372,6 +383,7 @@ src_install() {
 	echo "CC=\"gcc\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "CXX=\"g++\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	
+
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
 	if [ -z "`use build`" ]
@@ -513,6 +525,13 @@ src_install() {
 
 	# Fix ncurses b0rking
 	find ${D}/ -name '*curses.h' -exec rm -f {} \;
+
+	#interim hack to disable multilib on amd64
+	if [ "$ARCH" = "amd64" ]
+	then
+		cp ${FILESDIR}/specs-3.3-amd64-unilib ${D}/usr/lib/gcc-lib/x86_64-pc-linux-gnu/3.3/specs
+	fi
+
 }
 
 pkg_preinst() {
