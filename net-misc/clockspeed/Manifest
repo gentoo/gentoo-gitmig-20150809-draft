@@ -1,5 +1,5 @@
 MD5 d8cc5b5d92f5aa4e5452d240164a81a1 ChangeLog 1820
-MD5 650ceb7298a6dce6b96c5ef7827a9108 clockspeed-0.62-r3.ebuild 1071
+MD5 d4b8d7f55838a77e1550add206771d09 clockspeed-0.62-r3.ebuild 1079
 MD5 3975c437b3f912ec31e530bdddbc5040 files/0.62-gentoo.patch 8617
 MD5 bd5f134502d1578af69ff3dc01cd0591 files/digest-clockspeed-0.62-r3 66
 MD5 eb2ef95b17c040984c486ecdd075fb12 files/ntpclockset 641
