@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/acctail
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acctail/ChangeLog,v 1.1 2005/01/07 03:24:59 robbat2 Exp $
+
+*acctail-1.3 (06 Jan 2005)
+
+  06 Jan 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +acctail-1.3.ebuild:
+  Initial ebuild, bug #61624, submitted by Michael Krelin <gentoodoo@klever.net>.
+
