@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman/xfce4-clipman-0.4.1.ebuild,v 1.4 2005/01/06 23:41:11 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman/xfce4-clipman-0.4.1.ebuild,v 1.5 2005/01/29 15:39:26 bcowan Exp $
 
 MY_P="${PN}-plugin-${PV}"
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="Xfce4 panel command line plugin"
+DESCRIPTION="Xfce4 panel clipboard manager plugin"
 HOMEPAGE="http://www.xfce.org/"
 SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}.tar.gz"
 
