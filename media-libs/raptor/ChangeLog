@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/raptor
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.9 2004/03/25 07:10:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.10 2004/03/26 20:56:55 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> raptor-0.9.12.ebuild,
+  raptor-0.9.8.ebuild, raptor-1.2.0.ebuild:
+  Cleaned up USE flags.
 
   24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> raptor-1.2.0.ebuild:
   don't use deprecated ? : use syntax
