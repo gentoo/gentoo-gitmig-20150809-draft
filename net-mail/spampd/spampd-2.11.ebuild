@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spampd/spampd-2.11.ebuild,v 1.1 2003/10/28 21:01:43 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spampd/spampd-2.11.ebuild,v 1.2 2004/01/05 11:34:52 robbat2 Exp $
 
 DESCRIPTION="spampd is a program used within an e-mail delivery system to scan messages for possible Unsolicited Commercial E-mail content."
 HOMEPAGE="http://www.worlddesign.com/index.cfm/rd/mta/spampd.htm"
-SRC_URI="mirrors://gentoo/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
