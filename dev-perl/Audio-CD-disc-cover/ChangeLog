@@ -1,6 +1,6 @@
-# ChangeLog for dev-perlAppConfigChangeLog/dev-perlAudio-CD-disc-coverChangeLog
+# ChangeLog for dev-perl/Audio-CD-disc-cover
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/ChangeLog,v 1.6 2002/12/13 10:56:33 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/ChangeLog,v 1.7 2002/12/17 19:20:04 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
