@@ -12,4 +12,5 @@ move gnome-extra/gok app-accessibility/gok
 move gnome-extra/gnopernicus app-accessibility/gnopernicus
 move gnome-extra/gnome-mag app-accessibility/gnome-mag
 move gnome-extra/gnome-speech app-accessibility/gnome-speech
+move gnome-extra/at-poke app-accessibility/at-poke
 move app-text/dasher app-accessibility/dasher
