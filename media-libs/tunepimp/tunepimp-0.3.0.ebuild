@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0.ebuild,v 1.4 2004/08/10 23:35:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0.ebuild,v 1.5 2004/08/11 12:38:04 caleb Exp $
 
 inherit eutils
 
 IUSE="flac mad oggvorbis readline"
 
-DESCRIPTION="Client library to access metadata of mp3/vorbis/CD media"
-HOMEPAGE="http://www.musicbrainz.org/"
+DESCRIPTION="Client library to create MusicBrainz enabled tagging applications"
+HOMEPAGE="http://www.musicbrainz.org/products/tunepimp"
 SRC_URI="http://ftp.musicbrainz.org/pub/musicbrainz/lib${P}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
@@ -21,8 +21,9 @@ DEPEND="${RDEPEND}
 	oggvorbis? ( media-libs/libvorbis )
 	readline? ( sys-libs/readline )
 	mad? ( media-libs/libmad )
-	media-libs/musicbrainz
-	dev-util/pkgconfig"
+	>=media-libs/musicbrainz-2.1.0
+	dev-util/pkgconfig
+	!media-sound/trm"
 
 S=${WORKDIR}/lib${P}
 
