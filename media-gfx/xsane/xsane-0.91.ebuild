@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.91.ebuild,v 1.6 2003/10/08 14:06:35 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.91.ebuild,v 1.7 2004/04/30 14:47:04 lu_zero Exp $
 
 DESCRIPTION="graphical scanning frontend"
 SRC_URI="http://www.xsane.org/download/${P}.tar.gz"
