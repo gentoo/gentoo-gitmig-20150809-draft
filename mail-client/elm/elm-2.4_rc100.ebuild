@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/elm-2.4_rc100.ebuild,v 1.4 2004/07/01 19:48:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/elm-2.4_rc100.ebuild,v 1.5 2005/01/03 08:13:23 josejx Exp $
 
 # HORRIBLY SORRY FOR THIS!  BUT I WANT THE EBUILD AND IT DOESN'T
 # HURT ANYTHING!  I PROMISE! :) - raker@gentoo.org
