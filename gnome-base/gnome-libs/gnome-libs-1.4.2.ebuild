@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.14 2003/10/17 04:26:12 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.15 2003/11/13 02:30:44 agriffis Exp $
 
 IUSE="doc nls kde"
 
@@ -35,6 +35,17 @@ src_unpack() {
 
 src_compile() {
 	CFLAGS="$CFLAGS -I/usr/include/db1"
+
+	# On alpha with 3.3.2 compilers we need to restrict options to
+	# make this actually build.  I don't know what the upper limit is
+	# but the following works (and who really cares about
+	# gnome-libs-1.4.x performance)
+	# (12 Nov 2003 agriffis)
+	if use alpha; then
+		# hopefully this overrides whatever is earlier on the line
+		# since working out the replacements would be a pain
+		CFLAGS="${CFLAGS} -O0 -mcpu=ev4"
+	fi
 
 	local myconf
 
