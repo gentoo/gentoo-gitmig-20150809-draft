@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/w3cam-0.7.2.ebuild,v 1.1 2002/10/24 07:10:09 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/w3cam-0.7.2.ebuild,v 1.2 2002/10/28 01:36:32 zwelch Exp $
 
 #
 # You can set the default device that vidcat and w3camd use by setting
@@ -10,6 +10,8 @@
 # W3CAM_DEVICE="/dev/video0" emerge w3cam
 #
 
+IUSE="truetype"
+
 S=${WORKDIR}/${P}
 DESCRIPTION="w3cam - a set of small programs to grab images and videos from video4linux devices"
 HOMEPAGE="http://mpx.freeshell.org/"
@@ -18,19 +20,19 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 DEPEND="virtual/glibc \
-		zlib? sys-libs/zlib \
-		jpeg? media-libs/jpeg \
-		png? media-libs/libpng \
-		truetype? media-libs/freetype"
+	sys-libs/zlib \
+	media-libs/jpeg \
+	media-libs/libpng \
+	truetype? ( media-libs/freetype )"
 
 src_compile() {
 	local myconf
 
-	test -z ${W3CAM_DEVICE} \
-	    || myconf="${myconf} --with-device=${W3CAM_DEVICE}"
+	test -n "${W3CAM_DEVICE}" && \
+		myconf="${myconf} --with-device=${W3CAM_DEVICE}"
 
-	use truetype \
-	    || myconf="${myconf} --with-ttf-inc=/usr/include/freetype"
+	use truetype && \
+		myconf="${myconf} --with-ttf-inc=/usr/include/freetype"
 	
 	./configure \
 	    --host=${CHOST} \
