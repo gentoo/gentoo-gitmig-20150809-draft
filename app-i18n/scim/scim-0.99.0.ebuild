@@ -1,14 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.99.0_pre20040614.ebuild,v 1.1 2004/06/14 17:45:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.99.0.ebuild,v 1.1 2004/06/20 17:53:49 usata Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Smart Common Input Method (SCIM) is a Input Method (IM) development platform"
 HOMEPAGE="http://freedesktop.org/~suzhe/"
-#SRC_URI="http://freedesktop.org/~suzhe/sources/${P}.tar.gz"
-SRC_URI="mirror://gentoo/${P/_pre/-}.tar.gz"
-S="${WORKDIR}/scim-lib-${PV#*_pre}"
+SRC_URI="http://freedesktop.org/~suzhe/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,11 +20,15 @@ RDEPEND="virtual/x11
 	>=x11-libs/gtk+-2
 	>=dev-libs/atk-1
 	>=x11-libs/pango-1
-	>=dev-libs/glib-2"
+	>=dev-libs/glib-2
+	!<app-i18n/scim-chinese-0.4.0"
 DEPEND="${RDEPEND}
-	dev-lang/perl"
-PDEPEND="app-i18n/scim-uim
-	app-i18n/scim-m17n"
+	dev-lang/perl
+	sys-devel/autoconf
+	sys-devel/automake"
+PDEPEND="|| ( app-i18n/scim-m17n
+		app-i18n/scim-uim
+		app-i18n/scim-tables )"
 
 ELTCONF="--reverse-deps"
 SCROLLKEEPER_UPDATE="0"
@@ -36,12 +38,20 @@ src_unpack() {
 	unpack ${A}
 	# use scim gtk2 IM module only for chinese/japanese/korean
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-0.6.1-gtk2immodule.patch
+
+	#cd ${S}
+	#./bootstrap || die "bootstrap failed"
+
 	# workaround for problematic makefile
-	sed -i -e "s:^\(scim_LDFLAGS.*\):\1 -ldl:" ${S}/src/Makefile.in
-	sed -i -e "s:^\(scim_config_agent_LDFLAGS = .*\):\1 -ldl:" ${S}/src/Makefile.in
-	sed -i -e "s:^\(scim_make_table_LDFLAGS.*\):\1 -ldl:" ${S}/modules/IMEngine/Makefile.in
-	sed -i -e "s:^LDFLAGS = :LDFLAGS = -ldl :" ${S}/tests/Makefile.in
-	sed -i -e "s:GTK_VERSION=2.3.5:GTK_VERSION=2.4.0:" ${S}/configure
+	sed -i -e "s:^\(scim.*LDFLAGS.*\):\1 -ldl:g" \
+		${S}/src/Makefile.* || die
+	sed -i -e "s:^\(scim_make_table_LDFLAGS.*\):\1 -ldl:" \
+		${S}/modules/IMEngine/Makefile.* || die
+	sed -i -e "s:^LDFLAGS = :LDFLAGS = -ldl :g" \
+		-e "s:^\(test.*LDFLAGS.*\):\1 -ldl:g" \
+		${S}/tests/Makefile.* || die
+	sed -i -e "s:GTK_VERSION=2.3.5:GTK_VERSION=2.4.0:" \
+		${S}/configure || die
 }
 
 src_compile() {
@@ -60,7 +70,7 @@ pkg_postinst() {
 	einfo "To use SCIM with both GTK2 and XIM, you should use the following"
 	einfo "in your user startup scripts such as .gnomerc or .xinitrc:"
 	einfo
-	einfo "LANG='your_language' scim -f socket -e uim,m17n -c simple -d"
+	einfo "LANG='your_language' scim -f socket -ne socket -d"
 	einfo "LANG='your_language' scim -f x11 -e socket -c socket -d"
 	einfo "export XMODIFIERS=@im=SCIM"
 	einfo
