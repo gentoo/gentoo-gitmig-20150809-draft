@@ -10,7 +10,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 SLOT="0"
 
-DEPEND=">=x11-wm/openbox-3.0_beta4"
+DEPEND=">=x11-wm/openbox-3.0_beta6"
 
 src_install() {
 	dodir /usr/share/themes
