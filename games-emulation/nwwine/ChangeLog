@@ -1,12 +1,18 @@
 # ChangeLog for games-emulation/nwwine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nwwine/ChangeLog,v 1.3 2003/10/11 07:46:52 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nwwine/ChangeLog,v 1.4 2004/03/04 09:58:18 vapier Exp $
+
+*nwwine-20030911 (04 Mar 2004)
+
+  04 Mar 2004; Mike Frsyinger <vapier@gentoo.org> :
+  Version bump #33076 which also fixes alsa #39137 and kde #39968 and to
+  make ferringb shut up.
+
+*nwwine-20030709 (08 Sep 2003)
 
   11 Oct 2003; Alex Veber <coronalvr@gentoo.org> nwwine-20030618.ebuild,
   nwwine-20030709.ebuild:
-  bump to sable
-
-*nwwine-20030709 (08 Sep 2003)
+  bump to stable
 
   08 Sep 2003; Alex Veber <coronalvr@gentoo.org> nwwine-20030709.ebuild:
   version bump
