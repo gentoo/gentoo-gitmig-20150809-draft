@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.39 2004/06/16 14:32:01 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.40 2004/06/16 19:14:19 agriffis Exp $
+
+*mozilla-firefox-0.9-r1 (16 Jun 2004)
+
+  16 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/firefox-0.9-init.tar.bz2, +mozilla-firefox-0.9-r1.ebuild:
+  Add initialization files for firefox-0.9 to defeat the need to run as root the
+  first time.
 
 *mozilla-firefox-0.9 (16 Jun 2004)
 
