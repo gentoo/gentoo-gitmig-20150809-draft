@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/xcircuit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/ChangeLog,v 1.15 2004/04/26 16:13:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/ChangeLog,v 1.16 2004/06/02 13:53:09 agriffis Exp $
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> xcircuit-3.1.31.ebuild:
+  Fix use invocation
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> xcircuit-3.1.31.ebuild:
   Add die following econf for bug 48950

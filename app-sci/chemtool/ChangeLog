@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/chemtool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/ChangeLog,v 1.11 2004/05/24 08:05:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/ChangeLog,v 1.12 2004/06/02 13:53:38 agriffis Exp $
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> chemtool-1.6-r1.ebuild,
+  chemtool-1.6.3.ebuild:
+  Fix use invocation
 
 *chemtool-1.6.3 (24 May 2004)
 

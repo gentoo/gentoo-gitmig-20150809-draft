@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.6-r1.ebuild,v 1.2 2004/03/15 13:34:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.6-r1.ebuild,v 1.3 2004/06/02 13:53:38 agriffis Exp $
 
-[ -n "`use kde`" ] && inherit kde-functions
+use kde && inherit kde-functions
 inherit eutils
 
 DESCRIPTION="program for drawing organic molecules"
@@ -30,13 +30,13 @@ src_compile() {
 	local config_opts
 	config_opts="--enable-emf"
 
-	if [ "`use kde`" ]; then
+	if use kde; then
 		config_opts="${config_opts} --with-kdedir=${mykdedir}" ;
 	else
 		config_opts="${config_opts} --without-kdedir"
 	fi
 
-	if [ "`use gnome`" ] ; then
+	if use gnome ; then
 		config_opts="${config_opts} --with-gnomedir=/usr" ;
 	else
 		config_opts="${config_opts} --without-gnomedir" ;

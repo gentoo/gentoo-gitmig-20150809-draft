@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/blas-reference-19940131.ebuild,v 1.4 2004/05/17 00:30:02 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/blas-reference-19940131.ebuild,v 1.5 2004/06/02 13:52:37 agriffis Exp $
 
 Name="blas"
 DESCRIPTION="FORTRAN reference implementation of the BLAS (linear algebra lib)"
@@ -62,7 +62,7 @@ src_compile() {
 	# Libraries will be installed in RPATH:
 	RPATH=${TOP_PATH}/reference
 
-	if [ "`use ifc`" ]
+	if use ifc
 	then
 		ifc_info
 		make static FC="ifc" FFLAGS="${IFCFLAGS}"
@@ -79,7 +79,7 @@ src_compile() {
 }
 
 src_install() {
-	if [ "`use ifc`" ]
+	if use ifc
 	then
 		strip --strip-unneeded libblas.so.0.0.0
 		strip --strip-debug libblas.a
