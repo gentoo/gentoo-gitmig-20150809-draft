@@ -1,4 +1,5 @@
 MD5 64bf477646087eebe46e8acd9e3c3dac fetchmail-6.2.1-r1.ebuild 1789
+MD5 7da3bc24ec9cc013bf8ad8e21eefcf3b fetchmail-6.2.4.ebuild 2188
 MD5 d7a2a5454208f393dcfbf0c9ebad98c9 fetchmail-5.9.14.ebuild 1941
 MD5 71e6bdc8a05311118f8c32cdecf2e64a fetchmail-6.2.2-r2.ebuild 2053
 MD5 26cb42b7561ecc18c8a3b3f580bf19b8 fetchmail-6.2.3.ebuild 1972
@@ -14,3 +15,4 @@ MD5 f6bb533591550f2f5978892a3e0a6fc6 files/conf.d-fetchmail 359
 MD5 c162c209d65c11b6cbdd7c33fd411b90 files/fetchmail-6.2.0-gentoo.diff 1544
 MD5 c9baecd4bea485a075f696462c9ab6cc files/fetchmail 581
 MD5 b8f3ceb78e16e9c26c34908229893659 files/digest-fetchmail-6.2.3 68
+MD5 c1c69ebb34b0848d22249ae32b770061 files/digest-fetchmail-6.2.4 68
