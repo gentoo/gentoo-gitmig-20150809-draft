@@ -1,0 +1,9 @@
+# ChangeLog for x11-terms/multi-aterm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.1 2003/06/18 20:14:02 nakano Exp $
+
+*multi-aterm-0.0.4 (18 Jun 2003)
+
+  18 Jun 2003; Masatomo Nakano <nakano@gentoo.org> multi-aterm-0.0.4.ebuild:
+  Initial import. Thanks to Stefano Lucidi. #22156
+
