@@ -1,8 +1,11 @@
 # ChangeLog for gnome-extra/libgtkhtml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.18 2003/02/25 16:29:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.19 2003/03/01 14:45:24 weeve Exp $
 
 *libgtkhtml-2.2.0-r1 (25 Feb 2003)
+
+  01 Mar 2003; Jason Wever <weeve@gentoo.org> libgtkhtml-2.2.0-r1.ebuild:
+  Added ~sparc to keywords.
 
   25 Feb 2003; Aron Griffis <agriffis@gentoo.org> libgtkhtml-2.2.0-r1.ebuild,
   files/libgtkhtml-2.2.0-alpha.patch:

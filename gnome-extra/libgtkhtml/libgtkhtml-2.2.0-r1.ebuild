@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-2.2.0-r1.ebuild,v 1.1 2003/02/25 16:29:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-2.2.0-r1.ebuild,v 1.2 2003/03/01 14:45:24 weeve Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ DESCRIPTION="a Gtk+ based HTML rendering library"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="1"
 LICENSE="LGPL-2.1 GPL-2"
-KEYWORDS="~x86 ~ppc alpha"
+KEYWORDS="~x86 ~ppc alpha ~sparc"
 
 RDEPEND=">=x11-libs/gtk+-2.1
 	>=dev-libs/libxml2-2.4.16
