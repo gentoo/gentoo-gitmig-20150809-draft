@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # This ebuild by Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.4-r2.ebuild,v 1.4 2002/07/16 03:15:50 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.4-r2.ebuild,v 1.5 2002/07/25 15:39:00 aliz Exp $
 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.gz"
 HOMEPAGE="www.zsh.org/"
+SLOT="0"
 LICENSE="ZSH"
 
 DEPEND="virtual/glibc

@@ -1,8 +1,11 @@
 # ChangeLog for app-shells/esh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/ChangeLog,v 1.2 2002/04/27 08:09:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/ChangeLog,v 1.3 2002/07/25 15:39:00 aliz Exp $
 
 *esh-0.8.5 (26 Apr 2002)
+
+  25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> esh-0.8.5.ebuild :
+  Added KEYWORDS, SLOT.
 
   26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> esh-0.8.5.ebuild
   files/digest-esh-0.8.5 :
@@ -10,6 +13,9 @@
   Version bump
 
 *esh-0.8-r2 (1 Feb 2002)
+
+  25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> esh-0.8-r2.ebuild :
+  Added KEYWORDS, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
