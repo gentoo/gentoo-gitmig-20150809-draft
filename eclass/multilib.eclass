@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.19 2005/02/09 03:22:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.20 2005/02/10 23:13:11 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -90,6 +90,8 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 
 # Defaults:
 CFLAGS_default=""
+LDFLAGS_default=""
+CHOST_default="${CHOST}"
 LIBDIR_default="${CONF_LIBDIR:-lib}"
 CDEFINE_default="__unix__"
 
@@ -181,9 +183,11 @@ get_abi_var() {
 	echo ${!var}
 }
 
-get_abi_CFLAGS() { get_abi_var CFLAGS ${@}; }
-get_abi_CDEFINE() { get_abi_var CDEFINE ${@}; }
-get_abi_LIBDIR() { get_abi_var LIBDIR ${@}; }
+get_abi_CFLAGS() { get_abi_var CFLAGS "${@}"; }
+get_abi_LDFLAGS() { get_abi_var LDFLAGS "${@}"; }
+get_abi_CHOST() { get_abi_var CHOST "${@}"; }
+get_abi_CDEFINE() { get_abi_var CDEFINE "${@}"; }
+get_abi_LIBDIR() { get_abi_var LIBDIR "${@}"; }
 
 # Return a list of the ABIs we want to install for with 
 # the last one in the list being the default.
