@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.24-r1.ebuild,v 1.1 2005/03/13 05:54:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.24-r1.ebuild,v 1.2 2005/03/13 20:25:16 robbat2 Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -294,6 +294,7 @@ src_test() {
 	make check || die "make check failed"
 	if ! useq minimal; then
 		einfo ">>> Test phase [test]: ${CATEGORY}/${PF}"
+		addpredict /this-dir-does-not-exist/t9.MYI
 		make test || die "make test failed"
 	else
 		einfo "Skipping server tests due to minimal build."

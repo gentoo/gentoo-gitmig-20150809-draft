@@ -1,11 +1,16 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.186 2005/03/13 20:10:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.187 2005/03/13 20:25:16 robbat2 Exp $
 
   13 Mar 2005; Robin H. Johnson <robbat2@gentoo.org>
   files/mysql-4.0.24-r1.rc6:
   Bug #85095, remember to commit the correct final copy of an init.d script
   instead of an older one!
+
+  13 Mar 2005; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.24-r1.ebuild,
+  mysql-4.0.24.ebuild:
+  There is one test case that tries to write outside the sandbox, so we need
+  to catch it better.
 
   13 Mar 2005; Jason Wever <weeve@gentoo.org> mysql-4.0.24.ebuild:
   Stable on SPARC wrt security bug #84819.

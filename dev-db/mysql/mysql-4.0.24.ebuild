@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.24.ebuild,v 1.3 2005/03/13 19:50:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.24.ebuild,v 1.4 2005/03/13 20:25:16 robbat2 Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -248,6 +248,7 @@ src_test() {
 	echo ">>> Test phase [check]: ${CATEGORY}/${PF}"
 	make check || die "make check failed"
 	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"
+	addpredict /this-dir-does-not-exist/t9.MYI
 	make test || die "make test failed"
 }
 
