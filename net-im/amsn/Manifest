@@ -1,9 +1,17 @@
-MD5 03564f42dd9c654842ff803866b53cf6 ChangeLog 4499
-MD5 7256ecf0a82fb6b7be96c03a1d9cef13 amsn-0.90.ebuild 2196
-MD5 21c99e05c494115e9ff16093cb9e92e1 amsn-0.92.ebuild 2202
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f70e1154208a1c41e842d65e9bc37dc3 amsn-0.93.ebuild 2403
-MD5 44ce0c035de27a04849efc79eb485971 metadata.xml 325
+MD5 63127f4f2a79302ffbfa183dd347c03a amsn-0.94.ebuild 2411
+MD5 03e0c7413dac11ce21db1b54211447a8 ChangeLog 4695
+MD5 2b3b0837d29c67ec7714a3a901a619c0 metadata.xml 233
 MD5 70919744c42f27e436339d14c678f731 files/amsn.desktop 273
-MD5 01860d85395002b293bbdb265bb4a6f6 files/digest-amsn-0.90 62
-MD5 249a656c8d46348d0bc25e70b86ea115 files/digest-amsn-0.92 62
+MD5 34cdd985d3d7a0cf5f84a79cca1c728f files/digest-amsn-0.94 62
 MD5 092065dac17f94efcb8225a9cb52f46f files/digest-amsn-0.93 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPMVwDHaUUJ0mYMRAu/nAJ9e+tVA4QaTGRH2xouOpoIo0i4a1ACdGXTD
+CMPlTKtM3P4ViouyWNj60bQ=
+=EVPt
+-----END PGP SIGNATURE-----
