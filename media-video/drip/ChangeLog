@@ -1,6 +1,15 @@
 # ChangeLog for media-video/drip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.10 2003/02/25 22:17:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.11 2003/04/27 14:27:36 azarah Exp $
+
+*drip-0.9.0_alpha3 (27 Apr 2003)
+
+  27 Apr 2003; Martin Schlemmer <azarah@gentoo.org> drip-0.9.0_alpha3.ebuild,
+  dripgetdvd.sh :
+  Update version.  Also fix dripgetdvd.sh to be a bit smarter, and a few
+  bugs while we are at it.  This closes bug #19690, although the ebuild
+  supplied there had a few DEPEND and form issues.  Also, it dropped the
+  dripgetdvd.sh stuff.
 
 *drip-0.8.2_pre1 (13 Aug 2002)
 
