@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r2.ebuild,v 1.1 2003/04/15 00:10:23 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r2.ebuild,v 1.2 2003/04/18 16:13:10 taviso Exp $
 
 S=${WORKDIR}/usr
 SRC_URI=""
 DESCRIPTION="Compaq Linux optimized math library for Alpha/Linux/GNU"
-HOMEPAGE="http://h18000.www1.hp.com/math/index.html"
+HOMEPAGE="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/downloads.html"
 DEPEND="virtual/glibc
 	app-arch/rpm2targz "
 RDEPEND="$DEPEND"

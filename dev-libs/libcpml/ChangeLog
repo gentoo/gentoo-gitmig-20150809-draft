@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/libcpml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/ChangeLog,v 1.7 2003/04/15 00:10:23 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/ChangeLog,v 1.8 2003/04/18 16:13:10 taviso Exp $
 
 *libcpml-5.2.01-r2 (15 Apr 2003)
+
+  18 Apr 2003; Tavis Ormandy <taviso@gentoo.org> libcpml-5.2.01-r2.ebuild:
+  HOMEPAGE updated.
 
   15 Apr 2003; Tavis Ormandy <taviso@gentoo.org> libcpml-5.2.01-r2.ebuild:
   modified ebuild to install libcpml where dev/lang ccc expects, fully backward
