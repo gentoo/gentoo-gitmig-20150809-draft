@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.25 2005/02/14 11:39:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.26 2005/02/14 20:18:59 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -954,13 +954,15 @@ if [[ ${CATEGORY/cross-} != ${CATEGORY} ]]; then
 	DEPEND="${DEPEND}
 	        >=${CATEGORY}/gcc-3.3.5-r1"
 
-	if [[ ${CATEGORY/mips} != ${CATEGORY} ]]; then
-		DEPEND="${DEPEND}
-		        >=${CATEGORY}/mips-headers-2.6.8.1"
-	else
+# Set this if mips converts mips-headers to kernel-2.eclass rather than using
+# linux-headers.
+#	if [[ ${CATEGORY/mips} != ${CATEGORY} ]]; then
+#		DEPEND="${DEPEND}
+#		        || ( >=${CATEGORY}/mips-headers-2.6.8.1 )"
+#	else
 		DEPEND="${DEPEND}
 		        >=${CATEGORY}/linux-headers-2.6.8"
-	fi
+#	fi
 fi
 
 RDEPEND="virtual/os-headers
@@ -1041,9 +1043,14 @@ src_unpack() {
 
 	# nptl/sysdeps/pthread/configure isn't x-compile friendly
 	# http://sourceware.org/ml/libc-alpha/2005-02/msg00042.html
-	if tc-is-cross-compiler; then
-		rm ${S}/nptl/sysdeps/pthread/configure.in
-		rm ${S}/nptl/sysdeps/pthread/configure
+	if tc-is-cross-compiler && ! has_version "${CATEGORY}/${PN}"; then
+		ewarn "This is your first install of ${CATEGORY}/${PN}, so we"
+		ewarn "must disable some configure checks to get glibc to compile.  You should"
+		ewarn "re-emerge ${CATEGORY}/${PN} after this one installs to"
+		ewarn "be safe."
+		rm ${S}/sysdeps/sparc/sparc64/elf/configure{,.in}
+		rm ${S}/nptl/sysdeps/pthread/configure{,.in}
+		epause 5
 	fi
 
 	find . -type f -size 0 -o -name "*.orig" -exec rm -f {} \;
