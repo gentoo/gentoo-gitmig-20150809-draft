@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/bogofilter
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/ChangeLog,v 1.10 2003/05/29 19:06:14 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/ChangeLog,v 1.11 2003/06/02 22:53:39 joker Exp $
+
+  03 Jun 2003; Christian Birchinger <joker@gentoo.org>
+  bogofilter-0.11.2.ebuild:
+  Added sparc stable keyword
 
 *bogofilter-0.13.3 (29 May 2003)
 

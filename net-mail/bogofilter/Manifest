@@ -1,5 +1,5 @@
-MD5 85bbaf1b9784429197c4056c353af2de bogofilter-0.11.2.ebuild 1300
+MD5 3de71e394710ec279969861575b7b1d9 ChangeLog 1824
+MD5 3c2992749377c1bf1beb439f43b55c03 bogofilter-0.11.2.ebuild 1296
 MD5 371da997112e483904086125258937e3 bogofilter-0.13.3.ebuild 1885
-MD5 656830c628f62276da8a5fe0bcd4cecd ChangeLog 1714
 MD5 c32343db7444ec70462f26b49fdee65f files/digest-bogofilter-0.11.2 69
 MD5 1ec9835c10fd7a1f02715652f1bac91e files/digest-bogofilter-0.13.3 69
