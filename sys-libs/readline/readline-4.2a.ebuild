@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2a.ebuild,v 1.8 2002/08/14 04:04:40 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2a.ebuild,v 1.9 2002/09/14 15:51:26 bjb Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Another cute console display library"
 SRC_URI="ftp://ftp.gnu.org/gnu/readline/${P}.tar.gz
 	 ftp://gatekeeper.dec.com/pub/GNU/readline/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 SLOT="0"
 HOMEPAGE="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"
 

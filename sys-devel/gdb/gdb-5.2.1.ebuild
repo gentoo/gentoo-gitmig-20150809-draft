@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.2.1.ebuild,v 1.1 2002/08/21 13:56:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.2.1.ebuild,v 1.2 2002/09/14 15:51:25 bjb Exp $
 
 S=${WORKDIR}/${P}
 
@@ -10,7 +10,7 @@ SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r2
