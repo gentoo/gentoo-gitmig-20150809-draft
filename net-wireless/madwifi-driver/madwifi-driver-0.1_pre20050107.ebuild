@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20050107.ebuild,v 1.1 2005/01/08 00:36:47 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20050107.ebuild,v 1.2 2005/01/08 07:09:28 genstef Exp $
 
 inherit linux-mod
 
@@ -12,7 +12,7 @@ KEYWORDS="-*"
 IUSE=""
 DEPEND="app-arch/sharutils"
 RDEPEND=""
-S=${WORKDIR}
+S=${WORKDIR}/madwifi
 
 pkg_setup() {
 	linux-mod_pkg_setup
@@ -31,7 +31,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	for dir in ath ath_hal net80211; do
+	for dir in ath ath_hal ath_rate/amrr ath_rate/onoe net80211; do
 		convert_to_m ${S}/${dir}/Makefile
 	done
 }
