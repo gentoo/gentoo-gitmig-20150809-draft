@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.31 2004/07/17 22:16:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.32 2004/07/31 02:33:21 squinky86 Exp $
+
+  30 Jul 2004; Jon Hood <squinky86@gentoo.org> gtk-gnutella-0.93.4.ebuild:
+  Stable on x86.
 
 *gtk-gnutella-0.94 (15 Jul 2004)
 
