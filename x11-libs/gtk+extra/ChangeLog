@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+extra
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.8 2004/09/03 15:35:19 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.9 2005/01/05 00:20:36 kingtaco Exp $
+
+  04 Jan 2005; Mike Doty <kingtaco@gentoo.org> gtk+extra-0.99.17.ebuild:
+  fixed bug #71630 using gnuconfig_update and fixed dodoc(NEWS TODO) missing
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gtk+extra-0.99.17.ebuild:
