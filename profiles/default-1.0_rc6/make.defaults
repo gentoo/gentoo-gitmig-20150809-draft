@@ -1,10 +1,4 @@
 # Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
 # System-wide defaults for the Portage system
 
-USE="slang readline gpm berkdb gdbm tcpd pam libwww ssl
-     lm_sensors lvm pcmcia-cs alsa
-     nls mmx mitshm
-     esd lcms gif sdl vorbis ogg
-     gnome gtk X qt kde motif opengl mozilla"
-
-#inheriting nearly everything from make.globals at the moment :)
+USE="slang readline gpm berkdb gdbm tcpd pam libwww ssl nls mitshm perl python esd gif imlib sdl vorbis ogg gnome gtk X qt kde motif opengl mozilla"
