@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.16 2004/12/16 01:03:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.17 2004/12/30 21:27:27 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -15,25 +15,20 @@ INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
 tc-getPROG() {
-	local var="$1"
-	local prog="$2"
-	local search=""
+	local var=$1
+	local prog=$2
 
-	if [ -n "${!var}" ] ; then
+	if [[ -n ${!var} ]] ; then
 		echo "${!var}"
 		return 0
 	fi
 
-	if [ -n "${CTARGET}" ] ; then
-		search="$(type -p "${CTARGET}-${prog}")"
-	elif [ -n "${CHOST}" ] ; then
-		search="$(type -p "${CHOST}-${prog}")"
+	if [[ -n ${CHOST} ]] ; then
+		local search=$(type -p "${CHOST}-${prog}")
+		prog=${search##*/}
 	fi
 
-	if [ -n "${search}" ] ; then
-		prog="${search##*/}"
-	fi
-	export ${var}="${prog}"
+	export ${var}=${prog}
 	echo "${!var}"
 }
 
@@ -58,24 +53,21 @@ tc-getGCJ() { tc-getPROG GCJ gcj; }
 
 # Returns the name of the C compiler for build
 tc-getBUILD_CC() {
-	if [ -n "${CC_FOR_BUILD}" ] ; then
-		export BUILD_CC="${CC_FOR_BUILD}"
+	if [[ -n ${CC_FOR_BUILD} ]] ; then
+		export BUILD_CC=${CC_FOR_BUILD}
 		echo "${CC_FOR_BUILD}"
 		return 0
 	fi
 
 	local search=
-	if [ -n "${CBUILD}" ] ; then
-		search="$(type -p "${CBUILD}-gcc")"
-	fi
-
-	if [ -n "${search}" ] ; then
-		search="${search##*/}"
+	if [[ -n ${CBUILD} ]] ; then
+		search=$(type -p "${CBUILD}-gcc")
+		search=${search##*/}
 	else
-		search="gcc"
+		search=gcc
 	fi
 
-	export BUILD_CC="${search}"
+	export BUILD_CC=${search}
 	echo "${search}"
 }
 
