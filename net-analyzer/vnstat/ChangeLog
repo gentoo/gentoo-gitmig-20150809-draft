@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/vnstat
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.1 2003/09/22 16:20:02 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.2 2004/06/14 00:02:26 vapier Exp $
+
+*vnstat-1.4 (13 Jun 2004)
+
+  13 Jun 2004; Mike Frysinger <vapier@gentoo.org> +files/vnstat.cron,
+  +vnstat-1.4.ebuild:
+  Version bump #44679.
 
 *vnstat-1.1 (22 Sep 2003)
 
