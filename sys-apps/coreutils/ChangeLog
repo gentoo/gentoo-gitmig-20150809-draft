@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.103 2004/07/13 04:52:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.104 2004/07/13 07:09:18 seemant Exp $
+
+  13 Jul 2004; Seemant Kulleen <seemant@gentoo.org> coreutils-5.2.1-r1.ebuild:
+  fix b0rked uname patch, closes bug #56866 by Doug Goldstein <cardoe@cardoe.com>
 
 *coreutils-5.2.1-r1 (12 Jul 2004)
 
