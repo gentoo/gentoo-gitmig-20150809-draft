@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/GD-Graph3d
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Graph3d/ChangeLog,v 1.1 2004/04/28 10:53:32 aliz Exp $
+
+*GD-Graph3d-0.63 (28 Apr 2004)
+
+  28 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> GD-Graph3d-0.63.ebuild:
+  Initial import.
+
