@@ -1,9 +1,19 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.28 2003/11/16 18:26:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.29 2003/11/16 23:31:11 kumba Exp $
 
 
 *linux-headers-2.4.21-r1 (16 Nov 2003)
+
+  16 Nov 2003; Joshua Kinard <kumba@gentoo.org>
+  linux-headers-2.4.21-r1.ebuild, linux-headers-2.4.21.ebuild,
+  linux-headers-2.4.22.ebuild:
+  Sparc Fix: For the generation of asm_offsets.h for sparc systems, changed the
+  "make ARCH=sparc dep" line to "make ARCH=${ARCH} dep" because the system
+  compiler at the present time will fail to complete a make dep stage. This is a
+  temp-fix for sparc64 systems (make dep will invoke the gcc64 compiler), but sparc32
+  systems may continue to be affected until either the kernel gets a fix, or a new
+  gcc branch update hopefully corrects the problem.
 
   16 Nov 2003; Joshua Kinard <kumba@gentoo.org>
   linux-headers-2.4.21-r1.ebuild, linux-headers-2.4.21.ebuild,
