@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.35 2004/10/27 14:35:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.36 2004/10/28 03:09:19 tgall Exp $
+
+  27 Oct 2004; Tom Gall <tgall@gentoo.org> java-sdk-docs-1.4.2.ebuild:
+  stable on ppc64
 
   25 Oct 2004; Thomas Matthijs <axxo@gentoo.org> java-sdk-docs-1.4.2.ebuild:
   keyword ~ppc
