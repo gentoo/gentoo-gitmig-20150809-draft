@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.3 2003/02/12 09:05:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.4 2003/08/03 04:37:47 iggy Exp $
+
+  02 Aug 2003; <iggy@gentoo.org> pcsc-lite-1.1.1.ebuild, files/pcscd-init:
+  Gentoo style init script fixes bug # 15524
 
 *pcsc-lite-1.1.1 (16 Nov 2002)
 

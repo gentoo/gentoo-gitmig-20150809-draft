@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.1.1.ebuild,v 1.4 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.1.1.ebuild,v 1.5 2003/08/03 04:37:47 iggy Exp $
 
 inherit eutils
 
@@ -35,6 +35,9 @@ src_install() {
 	insinto /usr/share/doc/${P} 
 	doins doc/*.pdf doc/README.DAEMON
 
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/pcscd-init pcscd
+
 	insinto /usr/share/pcsc-lite/utils
 	insopts -m755
 	doins src/utils/bundleTool src/utils/formaticc src/utils/installifd
@@ -43,8 +46,4 @@ src_install() {
 
 	insinto /etc
 	doins etc/reader.conf
-
-	insinto /etc/init.d
-	insopts -m755
-	newins doc/pcscd.startup pcscd
 }

@@ -1,4 +1,5 @@
-MD5 67b63bd5b0deebde2ca544efefca6842 ChangeLog 456
-MD5 52d6eb9cd61d5079af2ef17525a4e308 pcsc-lite-1.1.1.ebuild 1205
+MD5 0e0297a02398891d6a23470c3182d0aa pcsc-lite-1.1.1.ebuild 1191
+MD5 aaa49977a638eb414a507725466e1e88 ChangeLog 575
+MD5 80a6cb5c8874f62f7d1c18913df74c70 files/pcscd-init 473
 MD5 ee85abea70b6baf8ca660f3793ac27eb files/digest-pcsc-lite-1.1.1 67
 MD5 e3c00796256d8370fdf64ad258686427 files/pcsc-lite-1.1.1-gentoo.patch 1076
