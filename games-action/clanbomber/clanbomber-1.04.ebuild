@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/clanbomber-1.04.ebuild,v 1.2 2004/01/10 21:28:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/clanbomber-1.04.ebuild,v 1.3 2004/01/29 09:41:21 vapier Exp $
 
-inherit games flag-o-matic
+inherit games flag-o-matic eutils
 
 DESCRIPTION="free (GPL) Bomberman-like multiplayer game"
 HOMEPAGE="http://clanbomber.sourceforge.net/"
@@ -26,11 +26,11 @@ src_unpack() {
 	sed -i \
 		's:\(@datadir@/clanbomber/\):$(DESTDIR)\1:' \
 		clanbomber/{,*/}Makefile.in
+	epatch ${FILESDIR}/${PV}-no-display.patch
 }
 
 src_compile() {
 	egamesconf || die
-	addpredict /dev/dsp
 	emake -j1 || die
 }
 

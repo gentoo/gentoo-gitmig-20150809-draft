@@ -1,0 +1,38 @@
+--- clanbomber/ClanBomber.h.orig	2004-01-29 04:31:28.968498024 -0500
++++ clanbomber/ClanBomber.h	2004-01-29 04:32:38.798882192 -0500
+@@ -154,13 +154,13 @@
+ 	static CL_String get_local_map_path();
+ 
+ 
+-	virtual void init_modules()
++	virtual void init_modules(bool register_resources_only = false)
+     {
+-		        CL_SetupCore::init();
+-	        CL_SetupDisplay::init();
+-	        CL_SetupSound::init();
++		        CL_SetupCore::init(register_resources_only);
++	        CL_SetupDisplay::init(register_resources_only);
++	        CL_SetupSound::init(register_resources_only);
+ #ifdef MUSIC	
+-			CL_SetupMikMod::init();
++			CL_SetupMikMod::init(register_resources_only);
+ #endif
+ 	}
+ 
+--- clanbomber/ClanBomber.cpp.orig	2004-01-29 04:31:32.321988216 -0500
++++ clanbomber/ClanBomber.cpp	2004-01-29 04:33:03.503126576 -0500
+@@ -82,12 +82,13 @@
+ 
+ 	try
+ 	{
+-		init_modules();
+ 
+ 	        if (argc > 1  &&  strcmp (argv[1], "-datafile") == 0) {
++		init_modules(true);
+ 		        CL_DatafileCompiler::write("clanbomber.scr", "clanbomber.dat");
+ 			quit_app(0);
+ 	        }
++		init_modules();
+ 
+      	srand( (long)time(NULL) );
+ 
