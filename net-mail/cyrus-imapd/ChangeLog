@@ -1,8 +1,13 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.22 2003/02/07 20:06:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.23 2003/02/11 11:01:16 raker Exp $
 
 *cyrus-imapd-2.1.12 (07 Feb 2003)
+
+  11 Feb 2003; Nick Hadaway <raker@gentoo.org> cyrus-imapd-2.1.12.ebuild,
+  files/cyrus-imapd-2.1.12-includepath.patch :
+  Added a patch to remove spurious -I/usr/include statements so users
+  configure runs will detect things such as sasl properly.
 
   07 Feb 2003; Nick Hadaway <raker@gentoo.org> cyrus-imapd-2.1.12.ebuild,
   files/digest-cyrus-imapd-2.1.12, files/cyrus-imapd-2.1.12-libwrap.patch :

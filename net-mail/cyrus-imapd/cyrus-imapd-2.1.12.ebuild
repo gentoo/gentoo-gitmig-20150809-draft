@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.12.ebuild,v 1.2 2003/02/07 20:08:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.12.ebuild,v 1.3 2003/02/11 11:01:16 raker Exp $
 
 inherit eutils
 
@@ -32,6 +32,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	# remove spurious -I/usr/includes
+	epatch ${FILESDIR}/${P}-includepath.patch
 	# add libwrap defines as we don't have a dynamicly linked library.
 	epatch ${FILESDIR}/${P}-libwrap.patch
 	# when linking with rpm, you need to link with more libraries.
