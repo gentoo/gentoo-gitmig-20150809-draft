@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-0.90-r2.ebuild,v 1.7 2002/07/14 19:20:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-0.90-r2.ebuild,v 1.8 2002/07/16 05:51:04 seemant Exp $
 
 S=${WORKDIR}/raidtools-0.90
 DESCRIPTION="Linux RAID 0/1/4/5 utilities"
 SRC_URI="http://people.redhat.com/mingo/raid-patches/raidtools-dangerous-0.90-20000116.tar.gz"
 DEPEND="virtual/glibc"
 HOMEPAGE="http://people.redhat.com/mingo/raidtools/"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="GPL-2"
 

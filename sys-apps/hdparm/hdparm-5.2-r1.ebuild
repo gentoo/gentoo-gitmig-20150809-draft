@@ -8,7 +8,7 @@ SRC_URI="http://metalab.unc.edu/pub/Linux/system/hardware/${P}.tar.gz"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/system/hardware/"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r3.ebuild,v 1.4 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r3.ebuild,v 1.5 2002/07/16 05:50:59 seemant Exp $
 
 NV=1.5i2
 S=${WORKDIR}/${PN}-${NV}
@@ -15,7 +15,7 @@ RDEPEND="virtual/glibc
 
 
 SLOT="0"
-KEYWORDS="*"
+KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 
 src_unpack() {

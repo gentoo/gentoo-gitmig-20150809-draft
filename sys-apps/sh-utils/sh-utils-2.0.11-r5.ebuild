@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.11-r5.ebuild,v 1.2 2002/07/09 23:10:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.11-r5.ebuild,v 1.3 2002/07/16 05:51:07 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Your standard GNU shell utilities"
@@ -11,9 +11,9 @@ DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 
 RDEPEND="virtual/glibc"
 
-SLOT=""
+SLOT="0"
 LICENSE="GPL"
-KEYWORDS="*"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${P}.tar.gz

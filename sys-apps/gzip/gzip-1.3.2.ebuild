@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.3.2.ebuild,v 1.5 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.3.2.ebuild,v 1.6 2002/07/16 05:50:57 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU compressor"
 SRC_URI="ftp://alpha.gnu.org/gnu/gzip/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gzip/gzip.html"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="GPL-2"
 

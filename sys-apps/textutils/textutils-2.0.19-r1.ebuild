@@ -1,12 +1,12 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.0.19-r1.ebuild,v 1.3 2002/07/14 19:20:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.0.19-r1.ebuild,v 1.4 2002/07/16 05:51:09 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU text utilities"
 SRC_URI="http://fetish.sf.net/${P}.tar.gz"
 HOMEPAGE"http://www.gnu.org/software/textutils/"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="virtual/glibc nls? ( sys-devel/gettext )"

@@ -1,12 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r6.ebuild,v 1.3 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r6.ebuild,v 1.4 2002/07/16 05:51:02 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard linux net thingees -- inetd, ping"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
 HOMEPAGE=""
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="BSD"
 DEPEND="virtual/glibc"

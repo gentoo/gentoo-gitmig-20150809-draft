@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r3.ebuild,v 1.7 2002/07/14 19:20:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r3.ebuild,v 1.8 2002/07/16 05:50:55 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Your basic line editor"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/ed/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/ed/"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
