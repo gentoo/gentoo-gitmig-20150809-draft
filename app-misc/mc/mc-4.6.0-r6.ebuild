@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r6.ebuild,v 1.1 2004/04/13 12:06:16 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r6.ebuild,v 1.2 2004/05/08 09:48:37 lanius Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/managers/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ia64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
+KEYWORDS="~ia64 x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
 IUSE="gpm nls samba ncurses X slang"
 
 DEPEND=">=sys-fs/e2fsprogs-1.19
@@ -28,10 +28,10 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 
-	has_version '>=net-fs/samba-3.0.0' &&
-		epatch ${DISTDIR}/${P}-sambalib-3.0.0.patch.bz2
-	has_version '<net-fs/samba-3.0.0' &&
-		epatch ${DISTDIR}/${P}-sambalib.patch.bz2
+	has_version '>=net-fs/samba-3.0.0' \
+		&& epatch ${DISTDIR}/${P}-sambalib-3.0.0.patch.bz2
+	has_version '<net-fs/samba-3.0.0' \
+		&& epatch ${DISTDIR}/${P}-sambalib.patch.bz2
 
 	epatch ${FILESDIR}/${P}-find.patch
 	epatch ${FILESDIR}/${P}-cpan-2003-1023.patch

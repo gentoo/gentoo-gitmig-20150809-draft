@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r5.ebuild,v 1.2 2004/04/06 04:22:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r5.ebuild,v 1.3 2004/05/08 09:48:37 lanius Exp $
 
 inherit flag-o-matic eutils
 
@@ -28,10 +28,10 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 
-	has_version '>=net-fs/samba-3.0.0' &&
-		epatch ${DISTDIR}/${P}-sambalib-3.0.0.patch.bz2
-	has_version '<net-fs/samba-3.0.0' &&
-		epatch ${DISTDIR}/${P}-sambalib.patch.bz2
+	has_version '>=net-fs/samba-3.0.0' \
+		&& epatch ${DISTDIR}/${P}-sambalib-3.0.0.patch.bz2
+	has_version '<net-fs/samba-3.0.0' \
+		&& epatch ${DISTDIR}/${P}-sambalib.patch.bz2
 
 	epatch ${FILESDIR}/${P}-find.patch
 	epatch ${FILESDIR}/${P}-cpan-2003-1023.patch
