@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.3-r1.ebuild,v 1.2 2004/07/21 19:11:10 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.3-r1.ebuild,v 1.3 2004/07/26 15:13:36 matsuu Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -258,7 +258,7 @@ pkg_config() {
 		local SEMMNI=`sysctl -n kernel.sem | cut -f4`
 		local SEMMNI_MIN=`expr \( ${MAX_CONNECTIONS} + 15 \) / 16`
 		local SHMMAX=`sysctl -n kernel.shmmax`
-		local SHMMAX_MIN=134217728 # 128M
+		local SHMMAX_MIN=`expr 250000 + 30600 \* ${MAX_CONNECTIONS}`
 
 		if [ ${SEMMNI} -lt ${SEMMNI_MIN} ]; then
 			eerror "The current value of SEMMNI is too low"

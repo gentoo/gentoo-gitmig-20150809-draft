@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.112 2004/07/21 19:11:10 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.113 2004/07/26 15:13:36 matsuu Exp $
+
+  27 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> postgresql-7.4.3-r1.ebuild:
+  Fixed SHMMAX_MIN to calculate from MAX_CONNECTIONS.
 
   21 Jul 2004; Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.6-r2.ebuild,
   postgresql-7.4.3-r1.ebuild:
