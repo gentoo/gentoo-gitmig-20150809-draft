@@ -1,0 +1,62 @@
+--- optipng-0.4.5.orig/src/scripts/Makefile.gcc	2004-05-31 10:38:00.000000000 +0100
++++ optipng-0.4.5/src/scripts/Makefile.gcc	2004-06-02 23:49:49.134972424 +0100
+@@ -3,22 +3,40 @@
+ 
+ all: optipng
+ 
++optipng: CFLAGS += -I../lib-cos/zlib -I../lib-cos/libpng
+ optipng: optipng.o opngio.o opngreduc.o cbitset.o osys.o \
+   wildargs.o libpng.a libz.a
+-	gcc -s -o optipng optipng.o opngio.o opngreduc.o cbitset.o osys.o \
+-	  wildargs.o libpng.a libz.a
++	${CC} ${LDFLAGS} -o optipng optipng.o opngio.o \
++	opngreduc.o cbitset.o osys.o wildargs.o libpng.a libz.a
++
++optipng-extpng: CFLAGS += -I../lib-cos/zlib
++optipng-extpng: optipng.o opngio.o opngreduc.o cbitset.o osys.o \
++  wildargs.o libz.a
++	${CC} ${LDFLAGS} -lpng -o optipng optipng.o opngio.o \
++	opngreduc.o cbitset.o osys.o wildargs.o libz.a
++
++optipng-extzlib: CFLAGS += -I../lib-cos/libpng
++optipng-extzlib: optipng.o opngio.o opngreduc.o cbitset.o osys.o \
++  wildargs.o libpng.a
++	${CC} ${LDFLAGS} -lz -o optipng optipng.o opngio.o \
++	opngreduc.o cbitset.o osys.o wildargs.o libpng.a
++
++optipng-allext: optipng.o opngio.o opngreduc.o cbitset.o osys.o \
++  wildargs.o
++	${CC} ${LDFLAGS} -lpng -lz -o optipng optipng.o opngio.o \
++	opngreduc.o cbitset.o osys.o wildargs.o
+ 
+ .c.o: #png.h opng.h
+-	gcc -c -O2 -I../lib-cos/zlib -I../lib-cos/libpng -Wall $*.c
++	${CC} ${CFLAGS} -c -Wall $*.c
+ 
+ cbitset.o: cbitset.c cbitset.h
+-	gcc -c -O2 -Wall $*.c
++	${CC} ${CFLAGS} -c -Wall $*.c
+ 
+ osys.o: osys.c osys.h
+-	gcc -c -O2 -Wall $*.c
++	${CC} ${CFLAGS} -c -Wall $*.c
+ 
+ wildargs.o: xtra/wildargs.c
+-	gcc -c -O2 xtra/wildargs.c
++	${CC} ${CFLAGS} -c xtra/wildargs.c
+ 
+ libpng.a: ../lib-cos/libpng/libpng.a
+ 	cp ../lib-cos/libpng/libpng.a libpng.a
+@@ -28,10 +46,10 @@
+ 
+ ../lib-cos/libpng/libpng.a: ../lib-cos/zlib/libz.a
+ 	cd ../lib-cos/libpng; \
+-	${MAKE} -f scripts/makefile.gcc; \
++	${MAKE} -f scripts/${pngmake}; \
+ 	cd ../../src
+ 
+ ../lib-cos/zlib/libz.a:
+ 	cd ../lib-cos/zlib; \
+-	${MAKE} CC="gcc" CFLAGS="-O3 -DNO_GZCOMPRESS -DNO_GZIO" libz.a; \
++	${MAKE} CC="${CC}" CFLAGS="${CFLAGS} -DNO_GZCOMPRESS -DNO_GZIO" libz.a; \
+ 	cd ../../src

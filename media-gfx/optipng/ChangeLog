@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/optipng
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.6 2004/04/27 21:47:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.7 2004/06/02 22:54:30 taviso Exp $
+
+*optipng-0.4.5 (02 Jun 2004)
+
+  02 Jun 2004; Tavis Ormandy <taviso@gentoo.org> optipng-0.4.5.ebuild:
+  bump
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> optipng-0.4.3.ebuild:
   Add inherit eutils
