@@ -1,11 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.3.20020419.ebuild,v 1.2 2002/04/30 09:49:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.4.20020426.ebuild,v 1.1 2002/04/30 09:49:50 seemant Exp $
 
 MY_P=${P/.200/-200}
-MY_S=${P/avifile-/avifile}
-MY_S=${MY_S/.3.200/-200}
+MY_S=${PN}0.7-0.7.4
 S=${WORKDIR}/${MY_S}
 DESCRIPTION="Library for AVI-Files"
 SRC_URI="http://avifile.sourceforge.net/${MY_P}.tgz"
@@ -27,14 +26,14 @@ src_compile() {
 
 	local myconf
 	local kdepre 
-
-	use mmx && myconf="--enable-x86opt"
-	use sse && myconf="--enable-x86opt"
-	use 3dnow && myconf="--enable-x86opt"
+	
+	myconf="--program-suffix=0.7"
+	
+	( use mmx || use sse || use 3dnow ) && myconf="${myconf} --enable-x86opt"
 
 	use qt \
 		&& myconf="${myconf} --with-qt-dir=${QTDIR}" \
-		|| myconf="${myconf} --disable-qt"
+		|| myconf="${myconf} --without-qt"
 	
 	use kde \
 		&& myconf="${myconf} --enable-kde" \
@@ -61,6 +60,9 @@ src_compile() {
 		)
 
 	
+	# this version has b0rked a52 support -- author recommends disabling it
+	myconf="${myconf} --disable-a52"
+	
 	export CFLAGS=${CFLAGS/-O?/-O2}
 	export LDFLAGS
 	./configure --prefix=/usr \
@@ -85,4 +87,3 @@ src_install () {
 	dodoc CREDITS EXCEPTIONS FreeBSD LICENSING TODO
 	dodoc VIDEO-PERFORMANCE WARNINGS
 }
-

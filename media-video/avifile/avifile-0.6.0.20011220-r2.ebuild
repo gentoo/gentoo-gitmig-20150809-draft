@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011220-r2.ebuild,v 1.6 2002/04/29 22:05:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011220-r2.ebuild,v 1.7 2002/04/30 09:49:50 seemant Exp $
 
 MY_P=${P/.200/-200}
 MY_S=${MY_P/avifile-/avifile}
@@ -19,32 +19,33 @@ DEPEND="=media-libs/divx4linux-20011025*
 	sdl? ( >=media-libs/libsdl-1.2.2 )
 	oggvorbis? ( media-libs/libvorbis )"
 
+SLOT="0.6"
 
 src_compile() {
 
 	local myconf
 	local kdepre 
 
-	use mmx && myconf="--enable-x86opt"
-	use sse && myconf="--enable-x86opt"
-	use 3dnow && myconf="--enable-x86opt"
+	( use mmx || use sse || use 3dnow ) && myconf="--enable-x86opt"
+	#use sse && myconf="--enable-x86opt"
+	#use 3dnow && myconf="--enable-x86opt"
 
-	use qt	\
-		&& myconf="${myconf} --with-qt-dir=${QTDIR}"	\
+	use qt \
+		&& myconf="${myconf} --with-qt-dir=${QTDIR}" \
 		|| myconf="${myconf} --disable-qt"
 	
-	use kde	\
-		&& myconf="${myconf} --enable-kde"	\
+	use kde \
+		&& myconf="${myconf} --enable-kde" \
 		|| myconf="${myconf} --disable-kde"
 	
-	use sdl	\
-		&& myconf="${myconf} --enable-sdl"	\
+	use sdl \
+		&& myconf="${myconf} --enable-sdl" \
 		|| myconf="${myconf} --disable-sdl --disable-sdltest"
 	
 	use nas && LDFLAGS="-L/usr/X11R6/lib -lXt"
 
-	use oggvorbis	\
-		&& myconf="${myconf} --enable-vorbis"	\
+	use oggvorbis \
+		&& myconf="${myconf} --enable-vorbis" \
 		|| myconf="${myconf} --disable-vorbis --disable-oggtest --disable-vorbistest"
 	
 	use kde \

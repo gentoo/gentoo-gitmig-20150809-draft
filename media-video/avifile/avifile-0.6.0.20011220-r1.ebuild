@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011220-r1.ebuild,v 1.2 2002/04/13 17:22:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011220-r1.ebuild,v 1.3 2002/04/30 09:49:50 seemant Exp $
 
 MY_P=${P/.200/-200}
 MY_S=${MY_P/avifile-/avifile}
@@ -11,7 +11,7 @@ DESCRIPTION="Library for AVI-Files"
 SRC_URI="http://avifile.sourceforge.net/${MY_P}admin.tgz"
 HOMEPAGE="http://divx.euro.ru/"
 
-DEPEND=">=media-libs/divx4linux-20011025
+DEPEND="=media-libs/divx4linux-20011025*
 	media-libs/jpeg
 	media-libs/win32codecs
 	sdl? ( >=media-libs/libsdl-1.2.2 )
@@ -19,6 +19,7 @@ DEPEND=">=media-libs/divx4linux-20011025
 	nas? ( >=media-libs/nas-1.4.2 )
 	oggvorbis? ( media-libs/libvorbis )"
 
+SLOT="0.6"
 
 src_compile() {
 
@@ -28,22 +29,22 @@ src_compile() {
 	use sse && myconf="--enable-x86opt"
 	use 3dnow && myconf="--enable-x86opt"
 
-	use qt	\
-		&& myconf="${myconf} --with-qt-dir=/usr/qt/2"	\
+	use qt \
+		&& myconf="${myconf} --with-qt-dir=/usr/qt/2" \
 		|| myconf="${myconf} --disable-qt"
 	
-	use kde	\
-		&& myconf="${myconf} --enable-kde"	\
+	use kde \
+		&& myconf="${myconf} --enable-kde" \
 		|| myconf="${myconf} --disable-kde"
 	
-	use sdl	\
-		&& myconf="${myconf} --enable-sdl"	\
+	use sdl \
+		&& myconf="${myconf} --enable-sdl" \
 		|| myconf="${myconf} --disable-sdl --disable-sdltest"
 	
 	use nas && LDFLAGS="-L/usr/X11R6/lib -lXt"
 
-	use oggvorbis	\
-		&& myconf="${myconf} --enable-vorbis"	\
+	use oggvorbis \
+		&& myconf="${myconf} --enable-vorbis" \
 		|| myconf="${myconf} --disable-vorbis --disable-oggtest --disable-vorbistest"
 
 	export CFLAGS=${CFLAGS/-O?/-O2}
