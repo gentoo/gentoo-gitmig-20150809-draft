@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.0.ebuild,v 1.2 2005/03/05 02:48:01 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.0.ebuild,v 1.3 2005/03/07 00:29:17 pebenito Exp $
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
@@ -35,7 +35,6 @@ src_unpack() {
 
 	# fix the Makefile to listen to portage CFLAGS
 	sed -i -e "/^CFLAGS/s/-O2/${CFLAGS}/g" ${S}/Makefile
-	sed -i -e "/^CFLAGS/s/-g/${CFLAGS} -g/" ${S}/Makefile
 
 	# enable debug if requested
 	useq debug && sed -i -e '/^DEBUG/s/0/1/' ${S}/Makefile
