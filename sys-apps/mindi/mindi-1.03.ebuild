@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-1.03.ebuild,v 1.3 2004/09/12 06:32:56 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-1.03.ebuild,v 1.4 2005/01/22 10:24:42 wschlich Exp $
 
 DESCRIPTION="A program that creates emergency boot disks/CDs using your kernel, tools and modules."
 HOMEPAGE="http://www.mondorescue.org/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.85.ebuild,v 1.10 2004/06/30 20:58:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.85.ebuild,v 1.11 2005/01/22 10:24:42 wschlich Exp $
 
 DESCRIPTION="Mindi builds boot/root disk images using your existing kernel, modules, tools and libraries"
 HOMEPAGE="http://www.microwerks.net/~hugo/mindi/"
