@@ -1,6 +1,9 @@
 # ChangeLog for app-text/c2ps
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/c2ps/ChangeLog,v 1.2 2003/07/15 19:20:02 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/c2ps/ChangeLog,v 1.3 2003/07/29 13:52:52 lanius Exp $
+
+  29 Jul 2003; lanius@gentoo.org c2ps-4.0.ebuild:
+  stable bump
 
 *c2ps-4.0 (15 Jul 2003)
 
