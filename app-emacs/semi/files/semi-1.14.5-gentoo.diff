@@ -1,0 +1,236 @@
+diff -u -r1.2.2.4 -r1.2.2.8
+--- pgg-gpg.el	25 Dec 2000 04:58:07 -0000	1.2.2.4
++++ pgg-gpg.el	9 Jun 2003 14:41:04 -0000	1.2.2.8
+@@ -60,16 +60,17 @@
+ 	    (luna-make-entity 'pgg-scheme-gpg))))
+ 
+ (defun pgg-gpg-process-region (start end passphrase program args)
+-  (let* ((output-file-name
+-	  (concat temporary-file-directory (make-temp-name "pgg-output")))
++  (let* ((output-file-name (make-temp-file
++			    (expand-file-name "pgg-output"
++					      temporary-file-directory)))
+ 	 (args
+ 	  `("--status-fd" "2"
+ 	    ,@(if passphrase '("--passphrase-fd" "0"))
++	    "--yes" ; overwrite
+ 	    "--output" ,output-file-name
+ 	    ,@pgg-gpg-extra-args ,@args))
+ 	 (output-buffer pgg-output-buffer)
+ 	 (errors-buffer pgg-errors-buffer)
+-	 (orig-mode (default-file-modes))
+ 	 (process-connection-type nil)
+ 	 process status exit-status)
+     (with-current-buffer (get-buffer-create errors-buffer)
+@@ -77,7 +78,6 @@
+       (erase-buffer))
+     (unwind-protect
+ 	(progn
+-	  (set-default-file-modes 448)
+ 	  (setq process
+ 		(apply #'binary-to-text-funcall
+ 		       pgg-gpg-messages-coding-system
+@@ -107,8 +107,7 @@
+       (if (and process (eq 'run (process-status process)))
+ 	  (interrupt-process process))
+       (if (file-exists-p output-file-name)
+-	  (delete-file output-file-name))
+-      (set-default-file-modes orig-mode))))
++	  (delete-file output-file-name)))))
+ 
+ (defun pgg-gpg-possibly-cache-passphrase (passphrase)
+   (if (and pgg-cache-passphrase
+diff -u -r1.2.2.4 -r1.2.2.5
+--- pgg-pgp5.el	26 Dec 2000 10:23:01 -0000	1.2.2.4
++++ pgg-pgp5.el	15 May 2003 14:44:43 -0000	1.2.2.5
+@@ -83,9 +83,7 @@
+ 	    (luna-make-entity 'pgg-scheme-pgp5))))
+ 
+ (defun pgg-pgp5-process-region (start end passphrase program args)
+-  (let* ((errors-file-name
+-	  (concat temporary-file-directory
+-		  (make-temp-name "pgg-errors")))
++  (let* ((errors-file-name (make-temp-file "pgg-errors"))
+ 	 (args
+ 	  (append args
+ 		  pgg-pgp5-extra-args
+@@ -204,8 +202,7 @@
+ 
+ (luna-define-method pgg-scheme-verify-region ((scheme pgg-scheme-pgp5)
+ 					      start end &optional signature)
+-  (let* ((basename (expand-file-name "pgg" temporary-file-directory))
+-	 (orig-file (make-temp-name basename))
++  (let* ((orig-file (make-temp-file "pgg"))
+ 	 (args '("+verbose=1" "+batchmode=1" "+language=us"))
+ 	 (orig-mode (default-file-modes)))
+     (unwind-protect
+@@ -239,8 +236,7 @@
+ (luna-define-method pgg-scheme-snarf-keys-region ((scheme pgg-scheme-pgp5)
+ 						  start end)
+   (let* ((pgg-pgp5-user-id (or pgg-pgp5-user-id pgg-default-user-id))
+-	 (basename (expand-file-name "pgg" temporary-file-directory))
+-	 (key-file (make-temp-name basename))
++	 (key-file (make-temp-file "pgg"))
+ 	 (args
+ 	  (list "+verbose=1" "+batchmode=1" "+language=us" "-a"
+ 		key-file)))
+diff -u -r1.2.2.3 -r1.2.2.4
+--- smime.el	25 Dec 2000 05:03:48 -0000	1.2.2.3
++++ smime.el	15 May 2003 14:44:43 -0000	1.2.2.4
+@@ -193,9 +193,7 @@
+ 	(pop files)))))
+ 
+ (defun smime-process-region (start end program args)
+-  (let* ((errors-file-name
+-	  (concat temporary-file-directory 
+-		  (make-temp-name "smime-errors")))
++  (let* ((errors-file-name (make-temp-file "smime-errors"))
+ 	 (args (append args (list (concat "2>" errors-file-name))))
+ 	 (shell-file-name smime-shell-file-name)
+ 	 (shell-command-switch smime-shell-command-switch)
+@@ -297,8 +295,7 @@
+   "Verify the current region between START and END.
+ If the optional 3rd argument SIGNATURE is non-nil, it is treated as
+ the detached signature of the current region."
+-  (let* ((basename (expand-file-name "smime" temporary-file-directory))
+-	 (orig-file (make-temp-name basename))
++  (let* ((orig-file (make-temp-file "smime"))
+ 	 (orig-mode (default-file-modes)))
+     (unwind-protect
+ 	(progn
+diff -u -r1.47 -r1.47.2.1
+--- mime-pgp.el	24 Nov 2000 12:32:57 -0000	1.47
++++ mime-pgp.el	15 May 2003 14:44:43 -0000	1.47.2.1
+@@ -141,8 +141,7 @@
+ 		   (1- knum)
+ 		 (1+ knum)))
+ 	 (orig-entity (nth onum (mime-entity-children mother)))
+-	 (basename (expand-file-name "tm" temporary-file-directory))
+-	 (sig-file (concat (make-temp-name basename) ".asc"))
++	 (sig-file (make-temp-file "tm" nil ".asc"))
+ 	 status)
+     (save-excursion 
+       (mime-show-echo-buffer)
+@@ -219,8 +218,7 @@
+ 		   (1- knum)
+ 		 (1+ knum)))
+ 	 (orig-entity (nth onum (mime-entity-children mother)))
+-	 (basename (expand-file-name "tm" temporary-file-directory))
+-	 (sig-file (concat (make-temp-name basename) ".asc"))
++	 (sig-file (make-temp-file "tm" nil ".asc"))
+ 	 status)
+     (save-excursion 
+       (mime-show-echo-buffer)
+diff -u -r1.85.2.8 -r1.85.2.11
+--- mime-play.el	11 Nov 2002 04:39:54 -0000	1.85.2.8
++++ mime-play.el	15 May 2003 14:44:43 -0000	1.85.2.11
+@@ -141,11 +141,10 @@
+ (defun mime-activate-mailcap-method (entity situation)
+   (let ((method (cdr (assoc 'method situation)))
+ 	(name (mime-entity-safe-filename entity)))
+-    (setq name
+-	  (if (and name (not (string= name "")))
+-	      (expand-file-name name temporary-file-directory)
+-	    (make-temp-name
+-	     (expand-file-name "EMI" temporary-file-directory))))
++    (setq name (expand-file-name (if (and name (not (string= name "")))
++				     name
++				   (make-temp-name "EMI"))
++				 (make-temp-file "EMI" 'directory)))
+     (mime-write-entity-content entity name)
+     (message "External method is starting...")
+     (let ((process
+@@ -162,11 +161,12 @@
+ 
+ (defun mime-mailcap-method-sentinel (process event)
+   (let ((file (cdr (assq process mime-mailcap-method-filename-alist))))
+-    (if (file-exists-p file)
++    (when (file-exists-p file)
++      (ignore-errors
+ 	(delete-file file)
+-      ))
++	(delete-directory (file-name-directory file)))))
+   (remove-alist 'mime-mailcap-method-filename-alist process)
+-  (message (format "%s %s" process event)))
++  (message "%s %s" process event))
+ 
+ (defvar mime-echo-window-is-shared-with-bbdb
+   (module-installed-p 'bbdb)
+@@ -354,13 +354,24 @@
+ 	 (number (cdr (assoc "number" cal)))
+ 	 (total (cdr (assoc "total" cal)))
+ 	 file
+-	 (mother (current-buffer)))
++	 (mother (current-buffer))
++	 orig-modes (default-file-modes))
+     (or (file-exists-p root-dir)
+-	(make-directory root-dir))
++	(unwind-protect
++	    (progn
++	      (set-default-file-modes 448)
++	      (make-directory root-dir))
++	  (set-default-file-modes orig-modes)))
+     (setq id (replace-as-filename id))
+     (setq root-dir (concat root-dir "/" id))
++
+     (or (file-exists-p root-dir)
+-	(make-directory root-dir))
++	(unwind-protect
++	    (progn
++	      (set-default-file-modes 448)
++	      (make-directory root-dir))
++	  (set-default-file-modes orig-modes)))
++
+     (setq file (concat root-dir "/FULL"))
+     (if (file-exists-p file)
+ 	(let ((full-buf (get-buffer-create "FULL"))
+diff -u -r1.2.2.4 -r1.2.2.5
+--- pgg-pgp.el	26 Dec 2000 10:23:01 -0000	1.2.2.4
++++ pgg-pgp.el	15 May 2003 14:44:43 -0000	1.2.2.5
+@@ -68,9 +68,7 @@
+ 	    (luna-make-entity 'pgg-scheme-pgp))))
+ 
+ (defun pgg-pgp-process-region (start end passphrase program args)
+-  (let* ((errors-file-name
+-	  (concat temporary-file-directory
+-		  (make-temp-name "pgg-errors")))
++  (let* ((errors-file-name (make-temp-file "pgg-errors"))
+ 	 (args
+ 	  (append args
+ 		  pgg-pgp-extra-args
+@@ -192,8 +190,7 @@
+ 
+ (luna-define-method pgg-scheme-verify-region ((scheme pgg-scheme-pgp)
+ 					      start end &optional signature)
+-  (let* ((basename (expand-file-name "pgg" temporary-file-directory))
+-	 (orig-file (make-temp-name basename))
++  (let* ((orig-file (make-temp-file "pgg"))
+ 	 (args '("+verbose=1" "+batchmode" "+language=us"))
+ 	 (orig-mode (default-file-modes)))
+     (unwind-protect
+@@ -230,8 +227,7 @@
+ (luna-define-method pgg-scheme-snarf-keys-region ((scheme pgg-scheme-pgp)
+ 						  start end)
+   (let* ((pgg-pgp-user-id (or pgg-pgp-user-id pgg-default-user-id))
+-	 (basename (expand-file-name "pgg" temporary-file-directory))
+-	 (key-file (make-temp-name basename))
++	 (key-file (make-temp-file "pgg"))
+ 	 (args
+ 	  (list "+verbose=1" "+batchmode" "+language=us" "-kaf"
+ 		key-file)))
+diff -u -r1.37.2.9 -r1.37.2.11
+--- mime-edit.el	11 Nov 2002 05:15:10 -0000	1.37.2.9
++++ mime-edit.el	15 May 2003 14:44:42 -0000	1.37.2.11
+@@ -2605,11 +2606,7 @@
+ 	    (or (cdr (assq major-mode mime-edit-message-max-lines-alist))
+ 		mime-edit-message-default-max-lines))
+       )
+-  (let* ((mime-edit-draft-file-name
+-	  (or (buffer-file-name)
+-	      (make-temp-name
+-	       (expand-file-name "mime-draft" temporary-file-directory))))
+-	 (separator mail-header-separator)
++  (let* ((separator mail-header-separator)
+ 	 (id (concat "\""
+ 		     (replace-space-with-underline (current-time-string))
+ 		     "@" (system-name) "\"")))
