@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.0.ebuild,v 1.3 2004/11/10 15:13:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.0.ebuild,v 1.4 2004/12/04 17:58:55 slarti Exp $
 
 inherit eutils gnuconfig
 
@@ -17,7 +17,7 @@ RDEPEND=">=media-libs/id3lib-3.8.2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~amd64 ~ppc64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa amd64 ~ppc64"
 
 src_unpack() {
 	unpack ${A}
