@@ -1,0 +1,14 @@
+diff -rcN eggdrop-1.6.15.orig/src/misc.c eggdrop-1.6.15/src/misc.c
+*** eggdrop-1.6.15.orig/src/misc.c	Sun May  4 18:05:32 2003
+--- eggdrop-1.6.15/src/misc.c	Sat Jun 28 00:37:08 2003
+***************
+*** 509,514 ****
+--- 509,516 ----
+    egg_vsnprintf(out, LOGLINEMAX - tsl, format, va);
+    out[LOGLINEMAX - tsl] = 0;
+    if (keep_all_logs) {
++     /* GENTOO: this needs to be here in case shtime is false */
++     t = localtime(&now2);
+      if (!logfile_suffix[0])
+        egg_strftime(ct, 12, ".%d%b%Y", t);
+      else {

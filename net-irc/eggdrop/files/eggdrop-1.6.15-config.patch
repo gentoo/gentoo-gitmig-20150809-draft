@@ -1,0 +1,167 @@
+diff -rcN eggdrop-1.6.15.orig/eggdrop.conf eggdrop1.6.15/eggdrop.conf
+*** eggdrop-1.6.15.orig/eggdrop.conf	Sun May  4 18:05:32 2003
+--- eggdrop-1.6.15/eggdrop.conf	Sat Jun 28 00:20:01 2003
+***************
+*** 1,4 ****
+! #! /path/to/executable/eggdrop
+  # ^- This should contain a fully qualified path to your Eggdrop executable.
+  #
+  # $Id: eggdrop-1.6.15-config.patch,v 1.1 2003/08/01 00:29:39 gregf Exp $
+--- 1,4 ----
+! #!/opt/eggdrop/bin/eggdrop
+  # ^- This should contain a fully qualified path to your Eggdrop executable.
+  #
+  # $Id: eggdrop-1.6.15-config.patch,v 1.1 2003/08/01 00:29:39 gregf Exp $
+***************
+*** 22,28 ****
+  
+  # This setting defines the username the bot uses on IRC. This setting has
+  # no effect if an ident daemon is running on your bot's machine.
+! set username "lamest"
+  
+  # This setting defines which contact person should be shown in .status,
+  # /msg help, and other places. You really should include this information.
+--- 22,28 ----
+  
+  # This setting defines the username the bot uses on IRC. This setting has
+  # no effect if an ident daemon is running on your bot's machine.
+! set username "eggdrop"
+  
+  # This setting defines which contact person should be shown in .status,
+  # /msg help, and other places. You really should include this information.
+***************
+*** 129,140 ****
+  
+  # This creates a logfile named eggdrop.log containing private msgs/ctcps,
+  # commands, errors, and misc. info from any channel.
+! logfile mco * "logs/eggdrop.log"
+  
+  # This creates a logfile named lamest.log containing joins, parts,
+  # netsplits, kicks, bans, mode changes, and public chat on the
+  # channel #lamest.
+! logfile jpk #lamest "logs/lamest.log"
+  
+  # Use this feature to timestamp entries in the log file.
+  set log-time 1
+--- 129,140 ----
+  
+  # This creates a logfile named eggdrop.log containing private msgs/ctcps,
+  # commands, errors, and misc. info from any channel.
+! logfile mco * "log/eggdrop.log"
+  
+  # This creates a logfile named lamest.log containing joins, parts,
+  # netsplits, kicks, bans, mode changes, and public chat on the
+  # channel #lamest.
+! logfile jpk #lamest "log/lamest.log"
+  
+  # Use this feature to timestamp entries in the log file.
+  set log-time 1
+***************
+*** 175,185 ****
+  ##### FILES AND DIRECTORIES #####
+  
+  # Specify here the filename your userfile should be saved as.
+! set userfile "LamestBot.user"
+  
+  # Specify here the filename Eggdrop will save its pid to. If no pidfile is
+  # specified, pid.(botnet-nick) will be used.
+! #set pidfile "pid.LamestBot"
+  
+  # If you want your userfile to be sorted upon saving, enable this setting.
+  # This causes the bot to use bit more CPU when saving the usefile.
+--- 175,185 ----
+  ##### FILES AND DIRECTORIES #####
+  
+  # Specify here the filename your userfile should be saved as.
+! set userfile "var/eggdrop.users"
+  
+  # Specify here the filename Eggdrop will save its pid to. If no pidfile is
+  # specified, pid.(botnet-nick) will be used.
+! set pidfile "var/eggdrop.pid"
+  
+  # If you want your userfile to be sorted upon saving, enable this setting.
+  # This causes the bot to use bit more CPU when saving the usefile.
+***************
+*** 228,234 ****
+  # If you want to use a different nickname on the botnet than you use on
+  # IRC (i.e. if you're on an un-trusted botnet), un-comment the next line
+  # and set it to the nick you would like to use.
+! #set botnet-nick "LlamaBot"
+  
+  # This opens a telnet port by which you and other bots can interact with the
+  # Eggdrop by telneting in.
+--- 228,234 ----
+  # If you want to use a different nickname on the botnet than you use on
+  # IRC (i.e. if you're on an un-trusted botnet), un-comment the next line
+  # and set it to the nick you would like to use.
+! set botnet-nick "eggdrop"
+  
+  # This opens a telnet port by which you and other bots can interact with the
+  # Eggdrop by telneting in.
+***************
+*** 441,447 ****
+  loadmodule channels
+  
+  # Enter here the filename where dynamic channel settings are stored.
+! set chanfile "LamestBot.chan"
+  
+  # Set this setting to 1 if you want your bot to expire bans/exempts/invites set
+  # by other opped bots on the channel.
+--- 441,447 ----
+  loadmodule channels
+  
+  # Enter here the filename where dynamic channel settings are stored.
+! set chanfile "var/eggdrop.chan"
+  
+  # Set this setting to 1 if you want your bot to expire bans/exempts/invites set
+  # by other opped bots on the channel.
+***************
+*** 778,792 ****
+  
+  # Set the nick the bot uses on IRC, and on the botnet unless you specify a
+  # separate botnet-nick, here.
+! set nick "Lamestbot"
+  
+  # Set the alternative nick which the bot uses on IRC if the nick specified
+  # by 'set nick' is unavailable. All '?' characters will be replaced by random
+  # numbers.
+! set altnick "Llamab?t"
+  
+  # Set what should be displayed in the real-name field for the bot on IRC.
+! set realname "/msg LamestBot hello"
+  
+  # This is a Tcl script to be run immediately after connecting to a server.
+  bind evnt - init-server evnt:init_server
+--- 778,792 ----
+  
+  # Set the nick the bot uses on IRC, and on the botnet unless you specify a
+  # separate botnet-nick, here.
+! set nick "eggdrop"
+  
+  # Set the alternative nick which the bot uses on IRC if the nick specified
+  # by 'set nick' is unavailable. All '?' characters will be replaced by random
+  # numbers.
+! set altnick "birddrop"
+  
+  # Set what should be displayed in the real-name field for the bot on IRC.
+! set realname "/msg eggdrop hello"
+  
+  # This is a Tcl script to be run immediately after connecting to a server.
+  bind evnt - init-server evnt:init_server
+***************
+*** 1213,1219 ****
+  loadmodule notes
+  
+  # Set here the filename where private notes between users are stored.
+! set notefile "LamestBot.notes"
+  
+  # Set here the maximum number of notes to allow to be stored for each user
+  # (to prevent flooding).
+--- 1213,1219 ----
+  loadmodule notes
+  
+  # Set here the filename where private notes between users are stored.
+! set notefile "var/eggdrop.notes"
+  
+  # Set here the maximum number of notes to allow to be stored for each user
+  # (to prevent flooding).

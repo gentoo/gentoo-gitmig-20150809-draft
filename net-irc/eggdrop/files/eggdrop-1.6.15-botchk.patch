@@ -1,0 +1,78 @@
+diff -rcN eggdrop-1.6.15.orig/scripts/botchk eggdrop-1.6.15/scripts/botchk
+*** eggdrop-1.6.15.orig/scripts/botchk	Sun May  4 18:05:32 2003
+--- eggdrop-1.6.15/scripts/botchk	Sat Jun 28 00:22:21 2003
+***************
+*** 4,37 ****
+  #
+  # $Id: eggdrop-1.6.15-botchk.patch,v 1.1 2003/08/01 00:29:39 gregf Exp $
+  #
+! # This is a script suitable for use in a crontab.  It checks to make sure
+! # your bot is running.  YOU NEED A SEPARATE CRON JOB FOR EACH BOT.  If your
+! # bot isn't found, it'll try to start it back up.
+  #
+! # You'll need to edit this script for your bot.
+! #
+! # To check for your bot every 10 minutes, put the following line in your
+! # crontab:
+! #    0,10,20,30,40,50 * * * *   /home/mydir/mybot/botchk
+! # And if you don't want to get email from crontab when it checks you bot,
+! # put the following in your crontab:
+! #    0,10,20,30,40,50 * * * *   /home/mydir/mybot/botchk >/dev/null 2>&1
+  #
+  
+  # change this to the directory you run your bot from (capitalization COUNTS):
+! botdir="/home/mydir/mybot"
+  
+  # change this to the name of your bot's config file (capitalization COUNTS):
+! botscript="mybot"
+  
+  # change this to the botnet-nick of your bot (capitalization COUNTS):
+! botname="LamestBot"
+  
+  # change this to the name of your bot's userfile (capitalization COUNTS):
+! userfile="LamestBot.user"
+  
+  # change this to the name of your bot's pidfile (capitalization COUNTS):
+! pidfile="pid.LamestBot"
+  
+  ########## you probably don't need to change anything below here ##########
+  
+--- 4,41 ----
+  #
+  # $Id: eggdrop-1.6.15-botchk.patch,v 1.1 2003/08/01 00:29:39 gregf Exp $
+  #
+! # This script is responsible for actually activating your Eggdrop
+! # bot on a Gentoo Linux system. It is derived directly from eggdrop's
+! # own botchk script.
+  #
+! # It is called from a unified '/opt/eggdrop/bin/crontick' script, which
+! # runs anything identified in /opt/eggdrop/etc/bots.conf.
+  #
+  
+  # change this to the directory you run your bot from (capitalization COUNTS):
+! # GENTOO CONFIG: autodetected from /etc/env.d
+! botdir="${EGGDIR}"
+! echo "botdir is $botdir"
+  
+  # change this to the name of your bot's config file (capitalization COUNTS):
+! # GENTOO CONFIG: autodetected from ${EGGDIR}/etc/bots.conf
+! botscript="etc/${BOTNAME}.conf"
+! echo "botscript is $botscript"
+  
+  # change this to the botnet-nick of your bot (capitalization COUNTS):
+! # GENTOO CONFIG: autodetected from bot script
+! botname="${BOTNICK}"
+! echo "botname is $botname"
+  
+  # change this to the name of your bot's userfile (capitalization COUNTS):
+! # GENTOO CONFIG: autodetected from bot script
+! userfile="${BOTUSER}"
+! echo "userfile is $userfile"
+  
+  # change this to the name of your bot's pidfile (capitalization COUNTS):
+! # GENTOO CONFIG: autodetected from bot script
+! pidfile="${BOTPID}"
+! echo "pidfile is $pidfile"
+  
+  ########## you probably don't need to change anything below here ##########
+  
