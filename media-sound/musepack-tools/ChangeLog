@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.16 2005/02/07 15:10:21 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.17 2005/02/07 21:18:25 luckyduck Exp $
+
+  07 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  musepack-tools-1.15s-r2.ebuild, musepack-tools-1.15t.ebuild:
+  removed wrong homepage urls, fixes #81157
 
 *musepack-tools-1.15t (07 Feb 2005)
 

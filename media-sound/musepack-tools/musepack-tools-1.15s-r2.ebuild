@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15s-r2.ebuild,v 1.1 2005/01/17 20:52:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15s-r2.ebuild,v 1.2 2005/02/07 21:18:25 luckyduck Exp $
 
 IUSE="static esd 16bit"
 
@@ -9,7 +9,7 @@ inherit eutils flag-o-matic
 S="${WORKDIR}/sv7"
 
 DESCRIPTION="Musepack audio compression tools"
-HOMEPAGE="http://www.uni-jena.de/~pfk/mpp/ http://corecodec.org/projects/mpc/ http://www.musepack.net"
+HOMEPAGE="http://www.musepack.net"
 SRC_URI="http://www.saunalahti.fi/grimmel/musepack.net/source/mpcsv7-src-${PV}.tar.gz"
 
 SLOT="0"
