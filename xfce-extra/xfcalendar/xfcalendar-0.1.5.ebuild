@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfcalendar/xfcalendar-0.1.5.ebuild,v 1.4 2004/03/03 01:18:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfcalendar/xfcalendar-0.1.5.ebuild,v 1.5 2004/03/03 14:58:43 bcowan Exp $
 
 S=${WORKDIR}/${P}
 
@@ -20,6 +20,7 @@ DEPEND=">=x11-libs/gtk+-2.0.6
 	>=xfce-base/libxfcegui4-4.0.3
 	>=xfce-base/libxfce4mcs-4.0.3
 	>=xfce-base/xfce-mcs-manager-4.0.3"
+RDEPEND=">=dev-libs/dbh-1.0.14"
 
 src_install() {
 	make DESTDIR=${D} install || die
