@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.11.1.ebuild,v 1.1 2002/01/13 20:22:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.11.1.ebuild,v 1.2 2002/01/15 00:32:54 gbevin Exp $
 
 PN=TiMidity++-${PV}
 S=${WORKDIR}/${PN}
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.goice.co.jp/member/mo/timidity/"
 DEPEND=">=sys-libs/ncurses-5.0
 	X? ( >=x11-base/xfree-4.0 )
 	motif? ( >=x11-libs/openmotif-2.1 )
-	tcltk? ( >=dev-lang/tcl-tk-8.1 )
+	tcltk? ( >=dev-lang/tk-8.1 )
 	nas? ( >=media-libs/nas-1.4 )
 	alsa? ( >=media-libs/alsa-lib-0.5.10 )
 	esd? ( >=media-sound/esound-0.2.22 )

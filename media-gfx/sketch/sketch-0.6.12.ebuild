@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Chouser <chouser@gentoo.com> 
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sketch/sketch-0.6.12.ebuild,v 1.2 2002/01/11 23:01:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sketch/sketch-0.6.12.ebuild,v 1.3 2002/01/15 00:32:54 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="interactive X11 vector drawing program"
@@ -9,7 +9,7 @@ SRC_URI="http://prdownloads.sourceforge.net/${PN}/${P}.tar.gz"
 HOMEPAGE="http://sketch.sourceforge.net/"
 
 DEPEND=">=dev-python/Imaging-1.1.2-r1
-	dev-lang/tcl-tk
+	dev-lang/tk
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {

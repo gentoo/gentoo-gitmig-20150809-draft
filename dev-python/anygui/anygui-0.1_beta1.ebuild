@@ -13,8 +13,7 @@ DEPEND=">=dev-lang/python-2.0
 	sys-libs/ncurses
         qt? ( dev-python/PyQt ) 
         gtk? ( dev-python/pygtk )
-        tcltk? ( dev-lang/tcl-tk-8.3.3 )"
-        #tcltk? ( dev-tcltk/tk-8.3.3 ) if my tcl and tk ebuilds are commited
+        tcltk? ( dev-lang/tk-8.3.3 )"
 #future: 
 #       might need a wxw use variable for wxGTK for wxw? ( dev-python/wxPython )
 #       also use variable fltk for fltk? ( dev-python/PyFLTK ) no ebuild for PyFLTK yet

@@ -303,10 +303,9 @@ net-misc/gkrellmwireless
 # Needs to be tested under KDE env. with sandbox
 dev-util/poedit
 
-# packages dependent on dev-lang/tcl-tk should be updated for the new scheme
-# and then tcl-tk should be removed, have two schemes present is too confusing
-dev-lang/tcl
-dev-lang/tk
+# the packages dependent on tcl-tk have been updated to
+# support the seperation of both
+dev-lang/tcl-tk
 
 # seems to be incompatible with autoconf 2.13, / Hallski
 >=sys-devel/libtool-1.4.2

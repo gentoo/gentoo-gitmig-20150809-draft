@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2.ebuild,v 1.6 2002/01/04 16:02:03 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2.ebuild,v 1.7 2002/01/15 00:32:54 gbevin Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
@@ -17,7 +17,6 @@ newdepend ">=sys-libs/ncurses-5.2
 	motif? ( >=x11-libs/openmotif-2.1.30 )
 	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
 	slang? ( >=sys-libs/slang-1.4.4 )"
-#	tcltk? ( =dev-lang/tcl-tk.8.0.5-r2 )
 
 src_unpack() {
 
@@ -40,7 +39,7 @@ src_compile() {
 	use motif	&& myinterface="$myinterface,motif"
 	use gtk		&& myinterface="$myinterface,gtk"
 	use slang	&& myinterface="$myinterface,slang"
-# tcl tk does not work: use tcltk	&& myinterface="$myinterface,tcltk"
+# tcl tk does not work
 
 	myconf="$myconf $myaudio $myinterface"
 

@@ -13,8 +13,7 @@ DEPEND=">=sys-libs/zlib-1.1.3
 	>=media-libs/libpng-1.0.6
 	>=media-libs/jpeg-6b
 	media-libs/freetype
-	tcltk? ( =dev-lang/tcltk-8.3* )"
-#	tcltk? ( =dev-tcltk/tk-8.3* )" If my tcltk fixes are accepted.
+	tcltk? ( =dev-lang/tk-8.3* )"
 
 src_compile() {
 

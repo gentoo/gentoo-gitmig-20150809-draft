@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r3.ebuild,v 1.1 2002/01/14 22:06:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r3.ebuild,v 1.2 2002/01/15 00:32:54 gbevin Exp $
 
 PYVER="`echo ${PV} | cut -d '.' -f 1,2`"
 S=${WORKDIR}/Python-${PV}
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.python.org http://www.azstarnet.com/~donut/programs/fchksum
 DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
 	berkdb? ( >=sys-libs/db-3 )
-	tcltk? ( >=dev-lang/tcl-tk-8.0 )"
+	tcltk? ( >=dev-lang/tk-8.0 )"
 
 RDEPEND="$DEPEND"
 PROVIDE="virtual/python-${PYVER}"

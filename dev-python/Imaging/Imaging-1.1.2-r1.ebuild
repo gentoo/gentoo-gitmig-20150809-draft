@@ -14,11 +14,8 @@ HOMEPAGE="http://www.pythonware.com/downloads/#pil"
 DEPEND=">=dev-lang/python-2.0
 	>=media-libs/jpeg-6a
 	>=sys-libs/zlib-0.95
-	tcltk? ( dev-lang/tcl-tk )"
+	tcltk? ( dev-lang/tk )"
 	
-#Change tcltk dependency to: tcltk? ( dev-tcltk/tk ),
-#if my separated tcl and tk ebuilds ever make it in portage tree.
-
 RDEPEND="${DEPEND}"
 
 src_compile() {

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20010418.ebuild,v 1.5 2001/11/10 02:58:38 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20010418.ebuild,v 1.6 2002/01/15 00:32:54 gbevin Exp $
 
 WSV=0.5.1b
 S=${WORKDIR}/${P}
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
         opengl? ( virtual/opengl )"
 
 RDEPEND="${DEPEND}
-	 >=dev-lang/tcl-tk-8.4.2
+	 >=dev-lang/tk-8.4.2
 	 >=dev-tcltk/itcl-3.2"
 
 src_compile() {
