@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Attribute-Handlers
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Attribute-Handlers/ChangeLog,v 1.9 2004/12/24 14:12:49 nigoro Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Attribute-Handlers/ChangeLog,v 1.10 2005/03/12 11:01:56 corsair Exp $
+
+  12 Mar 2005; Markus Rothe <corsair@gentoo.org>
+  Attribute-Handlers-0.78-r1.ebuild:
+  Stable on ppc64
 
   24 Dec 2004; Yuta SATOH <nigoro@gentoo.org>
   Attribute-Handlers-0.78-r1.ebuild:

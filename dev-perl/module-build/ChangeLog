@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/module-build
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/ChangeLog,v 1.19 2005/03/11 17:32:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/ChangeLog,v 1.20 2005/03/12 11:00:15 corsair Exp $
+
+  12 Mar 2005; Markus Rothe <corsair@gentoo.org> module-build-0.25.ebuild:
+  Stable on ppc64
 
 *module-build-0.26.08 (11 Mar 2005)
 

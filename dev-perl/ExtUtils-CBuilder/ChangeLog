@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ExtUtils-CBuilder
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-CBuilder/ChangeLog,v 1.9 2004/12/29 23:35:20 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-CBuilder/ChangeLog,v 1.10 2005/03/12 10:50:36 corsair Exp $
+
+  12 Mar 2005; Markus Rothe <corsair@gentoo.org>
+  ExtUtils-CBuilder-0.05.ebuild:
+  Stable on ppc64
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
