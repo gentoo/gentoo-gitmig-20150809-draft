@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.111 2003/12/08 22:36:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.112 2003/12/14 14:22:02 azarah Exp $
+
+*glibc-2.3.3_pre20031212 (14 Dec 2003)
+
+  14 Dec 2003; Martin Schlemmer <azarah@gentoo.org>
+  glibc-2.3.3_pre20031212.ebuild,
+  files/2.3.3/glibc-2.3.3-dl_execstack-PaX-support.patch:
+  Update snapshot to 20031212, pre-release of 2.3.3.
 
   29 Nov 2003; Brad House <brad_mssw@gentoo.org> glibc-2.3.2-r9.ebuild:
   mark stable on amd64
