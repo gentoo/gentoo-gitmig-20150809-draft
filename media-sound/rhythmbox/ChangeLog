@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.40 2004/04/22 06:26:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.41 2004/04/25 14:42:32 foser Exp $
+
+*rhythmbox-0.8.1 (25 Apr 2004)
+
+  25 Apr 2004; foser <foser@gentoo.org> rhythmbox-0.8.1.ebuild :
+  New release
+  Drop xine backend support, because it is not maintained in gentoo
+  Add faad support
 
   21 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   rhythmbox-0.6.8.ebuild:
