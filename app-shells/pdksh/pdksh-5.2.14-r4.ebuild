@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.1 2002/04/14 04:22:18 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.2 2002/04/14 04:41:57 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Public Domain Korn Shell"
@@ -18,22 +18,23 @@ src_unpack() {
 }
  
 src_compile() {
+
 	echo 'ksh_cv_dev_fd=${ksh_cv_dev_fd=yes}' > config.cache
-	try ./configure --prefix=/usr --host=${CHOST}
-	try make
+
+	./configure \
+		--prefix=/usr \
+		|| die
+
+	emake || die
 }
 
 src_install() {
+
 	dobin ksh
 	into usr
 	doman ksh.1
 	dodoc BUG-REPORTS ChangeLog* CONTRIBUTORS LEGAL NEWS NOTES PROJECTS README
 	docinto etc
 	dodoc etc/*
+
 }
-
-
-
-
-
-
