@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.1.ebuild,v 1.3 2005/01/01 23:00:13 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.1.ebuild,v 1.4 2005/01/03 08:00:45 genstef Exp $
 
-inherit linux-mod
+inherit linux-mod eutils
 
 MY_P=${P/_/-}
 DESCRIPTION="An interface for filesystems implemented in userspace."
@@ -17,6 +17,11 @@ BUILD_PARAMS="majver=${KV_MAJOR}.${KV_MINOR}
 	fusemoduledir=${ROOT}/lib/modules/${KV_FULL}/fs"
 BUILD_TARGETS="all"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/fuse-fix-lazy-binding.patch
+}
 
 src_compile() {
 	econf --disable-kernel-module --disable-example || die "econf failed"

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-1.4.ebuild,v 1.4 2005/01/02 16:26:32 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-1.4.ebuild,v 1.5 2005/01/03 08:00:45 genstef Exp $
 
-inherit kernel-mod
+inherit kernel-mod eutils
 
 MY_P=${P/_/-}
 DESCRIPTION="An interface for filesystems implemented in userspace."
@@ -18,6 +18,13 @@ DEPEND="virtual/linux-sources"
 
 pkg_setup() {
 	kernel-mod_check_modules_supported
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-kernel-2.6.10.patch
+	epatch ${FILESDIR}/fuse-fix-lazy-binding.patch
 }
 
 src_compile() {
@@ -38,7 +45,7 @@ src_compile() {
 
 src_install() {
 	unset ARCH
-	make DESTDIR="${D}" install || die "make install failed"
+	make DESTDIR="${D}" fusemoduledir=${ROOT}/lib/modules/${KV}/fs install || die "make install failed"
 
 	dodoc AUTHORS BUGS ChangeLog Filesystems README README-2.4 \
 		README-2.6 README.NFS NEWS doc/how-fuse-works
