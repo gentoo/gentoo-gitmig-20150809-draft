@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBI
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.15 2003/06/02 23:07:32 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.16 2003/06/08 07:17:29 rac Exp $
+
+*DBI-1.30-r1 (08 Jun 2003)
+
+  08 Jun 2003; <rac@gentoo.org> DBI-1.30-r1.ebuild, DBI-1.30.ebuild:
+  Fix ebuild headers, add IUSE
 
   03 Jun 2003; Christian Birchinger <joker@gentoo.org> DBI-1.37.ebuild:
   Added sparc stable keyword
