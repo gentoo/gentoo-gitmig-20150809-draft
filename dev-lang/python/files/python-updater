@@ -184,7 +184,7 @@ done
 COUNT=1
 PKGS_FAILED=""
 if [ "${PRETEND}" != "1" ]; then
-	for pkg in ${PKGS_OK}; do
+	for pkg in ${PKGS_OK_SORTED}; do
 		eloginfo "Starting to merge ($COUNT/$PKGS_COUNT_REMERGE) $pkg .."
 		if ! emerge --oneshot --nodeps =$pkg; then
 			PKGS_FAILED="${PKGS_FAILED} $pkg"
