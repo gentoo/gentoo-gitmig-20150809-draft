@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gscmxx/gscmxx-0.4.1.ebuild,v 1.2 2003/09/05 12:14:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gscmxx/gscmxx-0.4.1-r1.ebuild,v 1.1 2004/01/30 02:39:05 pylon Exp $
 
 inherit perl-module
 
@@ -22,3 +22,9 @@ RDEPEND=">=app-misc/scmxx-0.6
 	>=x11-libs/gtk+-1.2.8
 	>=dev-perl/ImageSize-2.92
 	media-gfx/imagemagick"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-destdir.diff
+}
