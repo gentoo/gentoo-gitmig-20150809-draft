@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r7.ebuild,v 1.11 2003/12/17 04:27:31 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r7.ebuild,v 1.12 2004/02/23 00:18:24 agriffis Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="ftp://ftp.porcupine.org/pub/security/index.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64 ppc64"
 
 DEPEND="virtual/glibc
 	sys-apps/tcp-wrappers"
