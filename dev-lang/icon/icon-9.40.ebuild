@@ -1,12 +1,12 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.40.ebuild,v 1.1 2001/07/31 22:51:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.40.ebuild,v 1.2 2001/08/02 20:09:17 danarmak Exp $
 
 S=${WORKDIR}/icon.v940src
-SRC_URI="http://www.cs.arisona.edu/icon/ftp/packages/unix/icon.v940src.tgz"
+SRC_URI="http://www.cs.arizona.edu/icon/ftp/packages/unix/icon.v940src.tgz"
 
-HOMEPAGE="http://www.cs.arisona.edu/icon/"
+HOMEPAGE="http://www.cs.arizona.edu/icon/"
 DESCRIPTION="icon is a v. high level language"
 
 DEPEND="X? ( virtual/x11 )
