@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.37 2004/10/05 15:30:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.38 2004/12/18 16:47:13 carlo Exp $
+
+*libfwbuilder-2.0.4 (18 Dec 2004)
+
+  18 Dec 2004; Carsten Lohrke <carlo@gentoo.org> +libfwbuilder-2.0.4.ebuild:
+  version bump
 
 *libfwbuilder-2.0.3 (05 Oct 2004)
 
