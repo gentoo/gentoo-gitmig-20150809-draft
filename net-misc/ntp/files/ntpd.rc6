@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc6,v 1.4 2002/05/04 05:03:14 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc6,v 1.5 2002/07/03 21:03:08 nitro Exp $
 
 #NB: Config is in /etc/conf.d/ntpd
 
@@ -30,7 +30,7 @@ start() {
 	if [ -n "${NTPDATESERVER}" ]
 	then
 		ebegin "Running ntpdate"
-		ntpdate ${NTPDATESERVER} > /dev/null
+		ntpdate -b ${NTPDATESERVER} > /dev/null
 		eend $? "Failed to run ntpdate"
 	fi
 	ebegin "Starting ntpd"
