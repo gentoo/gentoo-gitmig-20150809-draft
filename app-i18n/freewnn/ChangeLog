@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/freewnn
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.11 2004/05/10 23:04:40 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.12 2004/05/23 08:57:47 usata Exp $
+
+  23 May 2004; Mamoru KOMACHI <usata@gentoo.org> freewnn-1.1.1_alpha20.ebuild:
+  Stable on ppc
 
 *freewnn-1.1.1_alpha17 (10 May 2004)
 
