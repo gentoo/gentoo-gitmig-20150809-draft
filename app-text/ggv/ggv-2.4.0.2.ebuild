@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.4.0.2.ebuild,v 1.7 2004/01/09 18:29:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.4.0.2.ebuild,v 1.8 2004/01/14 03:25:59 avenj Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2 FDL-1.1"
-KEYWORDS="x86 ~ppc alpha sparc hppa ~amd64 ia64"
+KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ia64"
 
 RDEPEND=">=gnome-base/libgnomeui-2
 	>=gnome-base/ORBit2-2.4.1
