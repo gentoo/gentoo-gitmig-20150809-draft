@@ -1,7 +1,11 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.8 2003/05/02 00:00:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.9 2003/05/11 01:45:41 lu_zero Exp $
 
+  11 May 2003; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-2.5.1-r1.ebuild, ati-2.5.1.diff: Added a patch to solve 
+  bug #20104, backported drobbins' tweaks.
+   
   01 May 2003; Daniel Robbins <drobbins@gentoo.org>
   ati-drivers-2.9.8.ebuild: Tweaked compile process to work even with NVIDIA
   headers (defined USE_GLU,) moved unpack stuff to src_unpack, and removed
