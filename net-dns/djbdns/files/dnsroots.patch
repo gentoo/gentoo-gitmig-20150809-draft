@@ -1,5 +1,5 @@
---- /etc/dnsroots.global.old	Fri May 31 19:42:37 2002
-+++ /etc/dnsroots.global	Thu Jan 29 21:41:56 2004
+--- djbdns-1.05.old/dnsroots.global.old	Fri May 31 19:42:37 2002
++++ djbdns-1.05/dnsroots.global	Thu Jan 29 21:41:56 2004
 @@ -1,5 +1,5 @@
  198.41.0.4
 -128.9.0.107
