@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.21.2.ebuild,v 1.1 2003/09/14 10:01:26 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.21.2.ebuild,v 1.2 2003/09/14 11:59:51 obz Exp $
 
 inherit gnome2
 
@@ -25,7 +25,11 @@ RDEPEND=">=dev-lang/python-2.2
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	dev-util/intltool"
+	dev-util/intltool
+	!x11-plugins/desklet-external"
+
+# the external desklet is included in this version, we don't
+# use the one from x11-plugins anymore
 
 USE_DESTDIR="1"
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README TODO"
@@ -34,10 +38,10 @@ src_unpack( ) {
 
 	unpack ${A}
 	cd ${S}
-	# patch to prevent building the External and FontSelector
-	# sensors included here, because we're using the ones
+	# patch to prevent building the FontSelector (it's broken)
+	# sensor included here, because we'll use the one
 	# from x11-plugins/
-	epatch ${FILESDIR}/gdesklets-core-0.21-Sensors.patch
+	sed -i -e "/SUBDIRS/s/FontSelector//" Sensors/Makefile.in
 
 }
 
