@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.20 2004/10/15 21:03:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.21 2004/11/13 19:18:21 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -66,20 +66,6 @@ src_compile() {
 		--with-sys-screenrc=/etc/screenrc \
 		--enable-rxvt_osc ${myconf} || die "econf failed"
 
-#	# Fix bug 12683 by fixing up term.h (remove dups and add missing).
-#	# This is really an upstream problem in screen, I think.
-#	# (15 Jan 2003 agriffis)
-#	mv term.h term.h.old
-#	awk '/^#define/ { if (defs[$2]) next; defs[$2] = $3 }
-#                    { print }
-#                END { for (d in defs) {
-#						if (d !~ /_C../) continue;
-#						d2 = gensub(/C/, "", 1, d);
-#						if (d2 in defs) continue;
-#                        print "#define " d2 " " defs[d]
-#                      }
-#                    }' term.h.old > term.h || die "Failed to fix term.h"
-
 	# Second try to fix bug 12683, this time without changing term.h
 	# The last try seemed to break screen at run-time.
 	# (16 Jan 2003 agriffis)
@@ -91,21 +77,25 @@ src_compile() {
 src_install() {
 	dobin screen || die "dobin failed"
 	keepdir /var/run/screen
-	fowners root:utmp /{usr/bin,var/run}/screen
-	fperms 2755 /usr/bin/screen
+	fowners root:utmp /{usr/bin,var/run}/screen || die "fowners failed"
+	fperms 2755 /usr/bin/screen || die "fperms failed"
 
-	insinto /usr/share/terminfo ; doins terminfo/screencap
-	insinto /usr/share/screen/utf8encodings ; doins utf8encodings/??
-	insopts -m 644 ; insinto /etc ; doins ${FILESDIR}/screenrc
+	insinto /usr/share/terminfo
+	doins terminfo/screencap || die "doins failed"
+	insinto /usr/share/screen/utf8encodings
+	doins utf8encodings/?? || die "doins failed"
+	insinto /etc
+	doins ${FILESDIR}/screenrc || die "doins failed"
 
 	use pam && {
 		insinto /etc/pam.d
-		newins ${FILESDIR}/screen.pam.system-auth screen
+		newins ${FILESDIR}/screen.pam.system-auth screen \
+			|| die "newins failed"
 	}
 
 	dodoc README ChangeLog INSTALL TODO NEWS* patchlevel.h \
-		doc/{FAQ,README.DOTSCREEN,fdpat.ps,window_to_display.ps} || \
-			die "dodoc failed"
+		doc/{FAQ,README.DOTSCREEN,fdpat.ps,window_to_display.ps} \
+		|| die "dodoc failed"
 
 	doman doc/screen.1 || die "doman failed"
 	doinfo doc/screen.info* || die "doinfo failed"
@@ -116,7 +106,7 @@ pkg_postinst() {
 
 	einfo "Some dangerous key bindings have been removed or changed to more safe values."
 	einfo "For more info, please check /etc/screenrc"
-	echo
+	einfo
 	einfo "screen is not installed as setuid root, which effectively disables multi-user"
 	einfo "mode. To enable it, run:"
 	einfo ""
