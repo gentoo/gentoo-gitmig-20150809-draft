@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/lesstif
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.29 2004/08/02 01:41:28 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.30 2004/10/06 11:41:01 gmsoft Exp $
+
+  06 Oct 2004; Guy Martin <gmsoft@gentoo.org> lesstif-0.93.94.ebuild:
+  Stable on hppa.
 
   01 Aug 2004; Tom Gall <tgall@gentoo.org> lesstif-0.93.94.ebuild:
   stable on ppc64, bug #57582
