@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.2.ebuild,v 1.1 2004/12/09 02:17:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.2.ebuild,v 1.2 2004/12/18 14:51:09 corsair Exp $
 
 inherit kde-dist flag-o-matic eutils
 
@@ -24,6 +24,7 @@ DEPEND="~kde-base/kdebase-${PV}
 
 src_unpack() {
 	kde_src_unpack
+	epatch ${FILESDIR}/${P}-64bit.patch
 }
 
 src_compile() {

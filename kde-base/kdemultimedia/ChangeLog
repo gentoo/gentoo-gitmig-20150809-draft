@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.135 2004/12/09 02:17:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.136 2004/12/18 14:51:09 corsair Exp $
+
+  18 Dec 2004; Markus Rothe <corsair@gentoo.org>
+  +files/kdemultimedia-3.3.2-64bit.patch, kdemultimedia-3.3.2.ebuild:
+  Added patch to let this package compile on ppc64
 
 *kdemultimedia-3.3.2 (08 Dec 2004)
 
