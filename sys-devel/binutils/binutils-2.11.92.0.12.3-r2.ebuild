@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.92.0.12.3-r2.ebuild,v 1.17 2004/06/24 22:43:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.92.0.12.3-r2.ebuild,v 1.18 2004/07/02 09:31:17 eradicator Exp $
 
 IUSE="nls static build"
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86 sparc"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		nls? ( sys-devel/gettext )"
 
 src_unpack() {

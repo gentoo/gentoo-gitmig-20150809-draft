@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r5.ebuild,v 1.5 2004/06/24 22:45:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r5.ebuild,v 1.6 2004/07/02 09:32:03 eradicator Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc debug"
 
@@ -134,7 +134,7 @@ fi
 # else bootstap will break.
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
 	( !sys-devel/hardened-gcc )
 	>=sys-devel/binutils-2.14.90.0.6-r1
@@ -144,7 +144,7 @@ DEPEND="virtual/glibc
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4

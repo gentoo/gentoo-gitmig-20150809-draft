@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.14 2004/06/29 14:05:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.15 2004/07/02 09:32:03 eradicator Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc n32 n64"
 
@@ -158,7 +158,7 @@ fi
 
 # we need at least glibc 2.3.3 20040420-r1 in order for gcc 3.4 not to nuke
 # SSP in glibc.
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	!uclibc? ( >=sys-libs/glibc-2.3.3_pre20040420-r1 )
 	!uclibc? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 ) )
 	( !sys-devel/hardened-gcc )
@@ -169,7 +169,7 @@ DEPEND="virtual/glibc
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	!uclibc? ( >=sys-libs/glibc-2.3.3_pre20040420-r1 )
 	!uclibc? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 ) )
 	>=sys-devel/gcc-config-1.3.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3-r1.ebuild,v 1.15 2004/06/24 22:45:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3-r1.ebuild,v 1.16 2004/07/02 09:32:03 eradicator Exp $
 
 IUSE="static nls bootstrap java build X f77 objc"
 
@@ -113,13 +113,13 @@ else
 fi
 
 # We need the later binutils for support of the new cleanup attribute
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-devel/binutils-2.14.90.0.4.1-r1
 	>=sys-devel/gcc-config-1.3.1
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.3.3.ebuild,v 1.3 2004/06/24 22:46:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.3.3.ebuild,v 1.4 2004/07/02 09:32:53 eradicator Exp $
 
 
 # Variables 
@@ -21,11 +21,11 @@ SLOT="0"
 
 KEYWORDS="~mips"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-devel/binutils-2.14.90.0.7
 	>=sys-devel/gcc-config-1.3.1"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.5-r1.ebuild,v 1.5 2004/06/24 22:45:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.5-r1.ebuild,v 1.6 2004/07/02 09:32:25 eradicator Exp $
 
 W_VER="1.4.2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips alpha ~arm ~hppa amd64 ~ia64 ~ppc64 s390"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/portage-2.0.47-r10" # We need portageq ...
 
 src_install() {

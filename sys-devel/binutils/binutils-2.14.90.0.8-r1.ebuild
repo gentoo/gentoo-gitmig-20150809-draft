@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.16 2004/06/24 22:43:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.17 2004/07/02 09:31:17 eradicator Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc mips ~alpha arm ~hppa amd64 ~ia64 ~ppc64 s390"
 IUSE="nls bootstrap build multitarget"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )
 	!build? ( !bootstrap? ( dev-lang/perl ) )"
 

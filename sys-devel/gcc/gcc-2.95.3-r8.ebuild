@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.29 2004/06/24 22:45:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.30 2004/07/02 09:32:02 eradicator Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -72,11 +72,11 @@ else
 	SLOT="${CCHOST}-${MY_PV}"
 fi
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-devel/gcc-config-1.2
 	!build? ( >=sys-libs/ncurses-5.2-r2
 		nls? ( sys-devel/gettext ) )"
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=sys-devel/gcc-config-1.2.3
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4

@@ -1,6 +1,21 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.138 2004/06/27 04:55:47 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.139 2004/07/02 09:31:17 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  binutils-2.11.92.0.12.3-r2.ebuild, binutils-2.11.92.0.7.ebuild,
+  binutils-2.12.90.0.15.ebuild, binutils-2.13.90.0.16-r1.ebuild,
+  binutils-2.13.90.0.18-r1.ebuild, binutils-2.13.90.0.18.ebuild,
+  binutils-2.14.90.0.2.ebuild, binutils-2.14.90.0.4.1-r1.ebuild,
+  binutils-2.14.90.0.5-r1.ebuild, binutils-2.14.90.0.6-r2.ebuild,
+  binutils-2.14.90.0.6-r3.ebuild, binutils-2.14.90.0.6-r6.ebuild,
+  binutils-2.14.90.0.6-r7.ebuild, binutils-2.14.90.0.7-r4.ebuild,
+  binutils-2.14.90.0.7.ebuild, binutils-2.14.90.0.8-r1.ebuild,
+  binutils-2.14.90.0.8-r2.ebuild, binutils-2.14.90.0.8.ebuild,
+  binutils-2.15.90.0.1.1-r1.ebuild, binutils-2.15.90.0.1.1-r3.ebuild,
+  binutils-2.15.90.0.3-r3.ebuild, binutils-2.15.91.0.1-r1.ebuild,
+  binutils-2.15.91.0.1-r2.ebuild, binutils-2.15.91.0.1.ebuild:
+  virtual/glibc -> virtual/libc
 
   27 Jun 2004; <solar@gentoo.org> binutils-2.15.91.0.1-r2.ebuild:
   remove unused patches from tarball an no_rel_ro patches

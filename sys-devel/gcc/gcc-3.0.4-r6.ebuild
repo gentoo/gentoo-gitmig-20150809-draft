@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.22 2004/06/24 22:45:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.23 2004/07/02 09:32:03 eradicator Exp $
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
@@ -23,10 +23,10 @@ SLOT="3.0"
 KEYWORDS="x86 sparc -ppc"
 IUSE="nls bootstrap static build"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	!build? ( >=sys-libs/ncurses-5.2-r2
 		nls? ( sys-devel/gettext ) )"
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc-mips64
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.5 2004/06/24 22:46:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.6 2004/07/02 09:32:53 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gcc-mips64-3.3.1.ebuild, gcc-mips64-3.3.2.ebuild, gcc-mips64-3.3.3.ebuild:
+  virtual/glibc -> virtual/libc
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gcc-mips64-3.3.1.ebuild,
   gcc-mips64-3.3.2.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc-hppa64
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/ChangeLog,v 1.7 2004/06/24 22:45:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/ChangeLog,v 1.8 2004/07/02 09:32:39 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gcc-hppa64-3.3.2-r1.ebuild, gcc-hppa64-3.3.2.ebuild,
+  gcc-hppa64-3.4.0.ebuild:
+  virtual/glibc -> virtual/libc
 
 *gcc-hppa64-3.3.2-r1 (23 Jun 2004)
 

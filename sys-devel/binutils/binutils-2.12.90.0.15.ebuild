@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.15.ebuild,v 1.16 2004/06/24 22:43:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.15.ebuild,v 1.17 2004/07/02 09:31:17 eradicator Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -18,7 +18,7 @@ SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
 KEYWORDS="x86 ppc sparc "
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )
 	|| ( dev-lang/perl
 	     ( !build?     ( dev-lang/perl ) )

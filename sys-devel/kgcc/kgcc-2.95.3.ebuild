@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc/kgcc-2.95.3.ebuild,v 1.8 2004/06/24 22:47:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc/kgcc-2.95.3.ebuild,v 1.9 2004/07/02 09:33:21 eradicator Exp $
 
 IUSE="static"
 
@@ -16,8 +16,8 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="-x86 -ppc sparc"
 
-DEPEND="virtual/glibc"
-RDEPEND="virtual/glibc"
+DEPEND="virtual/libc"
+RDEPEND="virtual/libc"
 DEPEND="${DEPEND}
 	>=sys-libs/ncurses-5.2-r2
 	>=sys-apps/texinfo-4.2-r4"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/kgcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc/ChangeLog,v 1.7 2004/06/24 22:47:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc/ChangeLog,v 1.8 2004/07/02 09:33:21 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> kgcc-2.95.3.ebuild:
+  virtual/glibc -> virtual/libc
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org> kgcc-2.95.3.ebuild:
   QA - fix use invocation
