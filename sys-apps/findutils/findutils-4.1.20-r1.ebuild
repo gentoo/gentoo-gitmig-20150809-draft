@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.12 2004/03/23 10:09:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.13 2004/03/24 01:16:22 kumba Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic gnuconfig
 
 SELINUX_PATCH="findutils-4.1.20-selinux.diff.bz2"
 
@@ -50,6 +50,10 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# Detect mips systems properly
+	use mips && gnuconfig_update
+
 	if use afs ; then
 		append-flags -I/usr/afsws/include
 		append-ldflags -lpam
