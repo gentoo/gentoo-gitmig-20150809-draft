@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/cdb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.12 2005/03/27 22:39:42 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.13 2005/04/01 02:05:29 josejx Exp $
+
+  01 Apr 2005; Joseph Jezak <josejx@gentoo.org> cdb-0.75.ebuild:
+  Marked ~ppc for bug #87349.
 
   27 Mar 2005; Tom Martin <slarti@gentoo.org> cdb-0.75.ebuild:
   Stable on amd64, testing on sparc.
