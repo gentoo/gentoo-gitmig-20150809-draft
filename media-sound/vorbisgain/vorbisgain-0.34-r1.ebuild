@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/vorbisgain-0.34-r1.ebuild,v 1.4 2004/04/20 17:39:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/vorbisgain-0.34-r1.ebuild,v 1.5 2004/05/10 13:27:35 dholm Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://sjeng.org/ftp/vorbis/${P}.zip"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86 amd64 ~sparc"
+KEYWORDS="x86 amd64 ~sparc ~ppc"
 
 DEPEND=">=media-libs/libvorbis-1.0
 	app-arch/unzip"
