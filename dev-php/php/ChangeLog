@@ -1,7 +1,14 @@
 # ChangeLog for dev-lang/phpcgi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.1 2002/07/03 17:38:45 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.2 2002/07/09 19:20:50 rphillips Exp $
 
+*php-4.2.1-r2 (09 Jul 2002) php-4.2.1-r2.ebuild :
+
+  09 Jul 2002; Roman Weber <gentoo@gonzo.ch>
+
+  added oci8 use variable to support Oracle databases
+  Fixed syntax errors in use vars freetype, jpeg, tiff, png, and gd
+	  
 *php-4.2.1-r1 (26 June 2002)
 
   26 June 2002; Roman Weber <gentoo@gonzo.ch> php-4.2.1-r1.ebuild :
