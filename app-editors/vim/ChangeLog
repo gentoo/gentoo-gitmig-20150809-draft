@@ -1,7 +1,16 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.7 2002/04/09 00:57:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.8 2002/04/15 21:41:07 jhhudso Exp $
 
+*vim-6.1-r4 (15 Apr 2002)
+
+	15 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> vim-6.1-r4.ebuild :
+
+	Replaced --enable-max-features with --with-features=huge
+	--enable-max-features was the old, 5.0 way to enable all features.
+	6.0+ uses --with-features=tiny,small,normal,big or huge
+	This fixes bug #1597
+	
 *vim-6.1-r3 (9 Apr 2002)
 
 	9 Apr 2002; M.Schlemmer <azarah@gentoo.org> :
