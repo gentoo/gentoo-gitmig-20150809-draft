@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.65.ebuild,v 1.2 2003/02/22 17:37:16 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.65.ebuild,v 1.3 2003/02/22 18:11:45 blocke Exp $
 
 RH_EXTRAVERSION="1"
 
@@ -52,9 +52,6 @@ src_compile() {
 
 	export WANT_AUTOCONF_2_5=1
 
-	# disable qt and kde support if kde use keyword is not set
-	# note: qt and kde support seem to be tied together... maybe someone with
-	# autoconf experience can seperate the two
 	use kde || (
 
 	rm configure
@@ -124,7 +121,9 @@ src_compile() {
 }
 
 src_install () {
-	make prefix=${D}/usr kde_moduledir=${D}/usr/kde/3.1/lib install || die
+	make prefix=${D}/usr kde_moduledir=${D}/${KDEDIR}/lib \
+	styledir=${D}/${KDEDIR}/lib/kde3/plugins/styles \
+	settingsdir=${D}/${KDEDIR}/etc/settings install || die
 
 	use kde && (
 		dodir ${KDEDIR}/share/apps
