@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/flawfinder/flawfinder-1.23.ebuild,v 1.2 2004/06/25 02:32:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/flawfinder/flawfinder-1.23.ebuild,v 1.3 2004/07/14 23:27:40 agriffis Exp $
 
 DESCRIPTION="Examines C/C++ source code for security flaws"
 HOMEPAGE="http://www.dwheeler.com/flawfinder/"
@@ -13,8 +13,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="dev-lang/python"
-
-S=${WORKDIR}/${P}
 
 src_install() {
 	dobin ${PN}
