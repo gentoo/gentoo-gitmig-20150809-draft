@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.39 2004/04/14 17:59:00 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.40 2004/05/17 14:50:20 mboman Exp $
+
+  17 May 2004; Michael Boman <mboman@gentoo.org> snort-2.1.2.ebuild:
+  Mark 2.1.2 stable on x86
 
   14 Apr 2004; Jon Hood <squinky86@gentoo.org> files/2.1.2-libnet-1.0.patch:
   added patch, fixes #47229
