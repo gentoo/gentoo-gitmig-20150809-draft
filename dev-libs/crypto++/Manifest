@@ -1,4 +1,6 @@
+MD5 cee5ff2e2374fa34803627b7e569ead4 crypto++-5.1-r1.ebuild 1223
 MD5 96313ae46ebc87c866c609b51bc4d5f2 crypto++-5.1.ebuild 751
 MD5 05490b8a327abd67f0a9c9624591a814 ChangeLog 362
 MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
 MD5 3dcbaaecd6190695d3a148ad81f08e30 files/digest-crypto++-5.1 57
+MD5 3dcbaaecd6190695d3a148ad81f08e30 files/digest-crypto++-5.1-r1 57

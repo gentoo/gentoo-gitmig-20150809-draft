@@ -1,9 +1,15 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.1 2003/11/25 00:30:38 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.2 2004/03/29 02:57:13 rphillips Exp $
+
+*crypto++-5.1-r1 (28 Mar 2004)
+
+  28 Mar 2004; Ryan Phillips <rphillips@gentoo.org> crypto++-5.1-r1.ebuild:
+  Added fixes from Jernej Simoncic (bug #45821) to execute the crypto tests
+  after compilation and force cflags from -O3 to -O2
 
 *crypto++-5.1 (24 Nov 2003)
 
-  24 Nov 2003; <rphillips@gentoo.org> crypto++-5.1.ebuild:
+  24 Nov 2003; Ryan Phillips <rphillips@gentoo.org> crypto++-5.1.ebuild:
   Initial Import. Thanks to Marc Bevand. Fixes #33685
 
