@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.1.ebuild,v 1.3 2003/03/19 14:43:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.1.ebuild,v 1.4 2003/03/21 16:22:46 liquidx Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos"
 
@@ -17,7 +17,7 @@ SLOT="2" # can co-exist with evolution <= 1.2
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
 
-RDEPEND=">=gnome-extra/gtkhtml-3.0.1
+RDEPEND=">=gnome-extra/libgtkhtml-3.0.1
 	>=gnome-base/ORBit2-2.6.0
     >=gnome-base/libbonoboui-2.0
     >=gnome-base/gnome-vfs-2.0
