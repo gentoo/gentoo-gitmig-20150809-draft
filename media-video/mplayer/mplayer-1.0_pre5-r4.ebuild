@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.10 2004/10/20 00:03:01 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.11 2004/10/20 23:23:28 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -259,7 +259,14 @@ src_compile() {
 	fi
 	myconf="${myconf} $(use_enable opengl gl)"
 	myconf="${myconf} $(use_enable sdl)"
-	myconf="${myconf} $(use_enable svga)"
+
+	if use svga
+	then
+		myconf="${myconf} --enable-svga"
+	else
+		myconf="${myconf} --disable-svga --disable-vidix"
+	fi
+
 	myconf="${myconf} $(use_enable tga)"
 
 	( use xvmc && use nvidia ) \

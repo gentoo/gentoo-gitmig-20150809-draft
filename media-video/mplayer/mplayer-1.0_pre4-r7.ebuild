@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.15 2004/10/17 00:21:47 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.16 2004/10/20 23:23:28 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -199,6 +199,13 @@ src_compile() {
 		myconf="${myconf} $(use_enable matrox xmga)"
 	fi
 
+	if use svga
+	then
+		myconf="${myconf} --enable-svga"
+	else
+		myconf="${myconf} --disable-svga --disable-vidix"
+	fi
+
 	myconf="${myconf} $(use_enable 3dnow)"
 	myconf="${myconf} $(use_enable 3dnowex)"
 	myconf="${myconf} $(use_enable sse)"
@@ -274,7 +281,6 @@ src_compile() {
 		$(use_enable libcaca caca) 	\
 		$(use_enable opengl gl) 	\
 		$(use_enable sdl) 		\
-		$(use_enable svga) 		\
 		$(use_enable tga) 		\
 		$(use_enable alsa) 		\
 		$(use_enable arts) 		\

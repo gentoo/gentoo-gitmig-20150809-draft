@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.214 2004/10/20 00:03:01 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.215 2004/10/20 23:23:28 chriswhite Exp $
+
+  20 Oct 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre4-r7.ebuild,
+  mplayer-1.0_pre5-r4.ebuild:
+  Fixed some xvidix logic as per bug #28865.
 
   19 Oct 2004; Chris White <chriswhite@gentoo.org> :
   Did filter flags on a few problematic flags as per Bug #67903.
