@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ ! -d ${HOME}/.kigb ] ; then
+	mkdir -p ${HOME}/.kigb
+	cd ${HOME}/.kigb
+
+	ln -s /opt/kigb/doc doc
+	ln -s /opt/kigb/kigb kigb
+fi
+
+cd ${HOME}/.kigb
+mkdir -p cfg inp rom save snap state
+
+exec ./kigb "$@"
