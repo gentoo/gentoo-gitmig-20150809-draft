@@ -1,8 +1,58 @@
-MD5 c4506ce017167279e1994665138ca3af ChangeLog 3737
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+- -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+- - -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+- - - -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+- - - - -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9cf7b9739129ae0d0714b03faf338e27 daemontools-0.76-r4.ebuild 1577
+MD5 b7d99047580dbd07a40e932f4fbfcaef ChangeLog 4027
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 9f167cfb5a757bac3805dddbf3f1f15e daemontools-0.76-r4.ebuild 1574
-MD5 c75438b1c3b9d9f67691bd10cf3c8e52 files/0.76-errno.patch 246
-MD5 6ce7442b288dd69b4e456d00690a8344 files/0.76-head-1.patch 791
-MD5 7a9635c4207b2bfd8afc7468b0fa0d28 files/svscan 859
 MD5 3f0f5c5f8ae8169640d4dff02605d25e files/digest-daemontools-0.76-r4 67
-MD5 282b1da21e9ea8ba89d5e3e3a4f35e8f files/svscan-0.76-r4 890
+MD5 6ce7442b288dd69b4e456d00690a8344 files/0.76-head-1.patch 791
+MD5 c75438b1c3b9d9f67691bd10cf3c8e52 files/0.76-errno.patch 246
+MD5 ebe8e01b96d328e46020d8a9a8542640 files/svscan 860
+MD5 2156c0b53f38607b84affd0013c0a642 files/svscan-0.76-r4 892
+- - - - -----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJ1NDLLFUmVNQ7rkRAsG4AJ9ZewloBN10XuOpkRiGyt6qJ+umUQCgh82h
+EgasoDwIhrhAig9pwmGiDTw=
+=3Z1X
+- - - - -----END PGP SIGNATURE-----
+- - - -----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJ1OfLLFUmVNQ7rkRAkv2AJ40F+Pxr6wzOTSd3zXRE6ev2MieBQCfd7E4
+PNN3uN5ZdaT7NEhhnPGV6nw=
+=LVY/
+- - - -----END PGP SIGNATURE-----
+- - -----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJ1PVLLFUmVNQ7rkRAle3AKC21FyPBdevTrt01LZBMGgEMYwN9ACeKoWw
+LwBRvVSN/8U3ZJvuk+l60to=
+=/N5J
+- - -----END PGP SIGNATURE-----
+- -----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJ1QiLLFUmVNQ7rkRAtchAKCidvNCKZaqxOMbdycHAuCkdAii8wCffa4P
+YQQ4VtkrpCX5YLmDoMCFBK0=
+=N7oy
+- -----END PGP SIGNATURE-----
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJ1RfLLFUmVNQ7rkRAopaAKCfpVea+nqj+Lllwd48YvSncODNoACgzJWa
+Dbxek4qGo46fhh4tuIM+Cxc=
+=sEnT
+-----END PGP SIGNATURE-----
