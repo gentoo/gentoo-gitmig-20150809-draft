@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.2.1.ebuild,v 1.5 2003/02/22 23:34:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.2.1.ebuild,v 1.6 2003/03/01 14:45:10 weeve Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="A filemanager for the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 IUSE="oggvorbis"
 
 RDEPEND="app-admin/fam-oss

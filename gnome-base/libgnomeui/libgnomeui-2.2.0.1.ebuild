@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.2.0.1.ebuild,v 1.5 2003/02/22 03:35:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.2.0.1.ebuild,v 1.6 2003/03/01 14:45:10 weeve Exp $
 
 IUSE="doc"
 
@@ -11,7 +11,7 @@ DESCRIPTION="User interface part of libgnome"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha"
+KEYWORDS="x86 ~ppc alpha ~sparc"
 LICENSE="GPL-2 LGPL-2" 
 
 RDEPEND=">=x11-libs/pango-1.1.2

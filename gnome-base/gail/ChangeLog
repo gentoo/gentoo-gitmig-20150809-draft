@@ -1,11 +1,14 @@
 # ChangeLog for gnome-base/gail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/ChangeLog,v 1.13 2003/02/22 04:37:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/ChangeLog,v 1.14 2003/03/01 14:45:09 weeve Exp $
 
   07 Feb 2003; Aron Griffis <agriffis@gentoo.org> gail-1.2.0.ebuild :
   Add ~alpha to KEYWORDS
 
 *gail-1.2.0 (21 Jan 2003)
+
+  01 Mar 2003; Jason Wever <weeve@gentoo.org> gail-1.2.0.ebuild:
+  Added ~sparc to keywords.
 
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> gail-1.2.0.ebuild :
   Mark stable on Alpha

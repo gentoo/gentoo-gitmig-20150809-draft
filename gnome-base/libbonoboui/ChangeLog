@@ -1,11 +1,14 @@
 # ChangeLog for gnome-base/libbonoboui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.22 2003/02/22 00:15:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.23 2003/03/01 14:45:09 weeve Exp $
 
   07 Feb 2003; Aron Griffis <agriffis@gentoo.org> libbonoboui-2.2.0.ebuild :
   Add ~alpha to KEYWORDS
 
 *libbonoboui-2.2.0 (30 Jan 2003)
+
+  01 Mar 2003; Jason Wever <weeve@gentoo.org> libbonoboui-2.2.0.ebuild:
+  Added ~sparc to keywords.
 
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> libbonoboui-2.2.0.ebuild :
   Mark stable on alpha
