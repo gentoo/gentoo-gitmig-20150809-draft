@@ -5,12 +5,12 @@
  	KActionCollection* actionCollection = new KActionCollection(this);
  
 +	stat = new KProcess;
-+	*stat << "ifconfig" << "ppp0";
++	*stat << "/sbin/ifconfig" << "ppp0";
 +	stat->start(KProcess::Block, KProcess::Stdout);	
-+	if (stat->exitStatus() == 0) {
-+		setPixmap(Icon("connect_established"));
-+	} else {
++	if (stat->exitStatus()) {
 +		setPixmap(Icon("connect_no"));
++	} else {
++		setPixmap(Icon("connect_established"));
 +	}
 +	
  	start = new KProcess;
