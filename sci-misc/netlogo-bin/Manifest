@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e88c084f28614a1b117133de31aedaa6 ChangeLog 466
+MD5 bf8ec66e917b8bccfe45e72ca7950197 metadata.xml 722
+MD5 41a0330052d691600799247547b8dd01 netlogo-bin-2.1.ebuild 1134
+MD5 e80f3b27fc5a19efdc56f316c957dd48 files/digest-netlogo-bin-2.1 65
+MD5 5c160f47ddbc4d03ef13ad2fb904bf9c files/netlogo.gif 93
+MD5 07afb3302de3a59cf3b8c29f64b1d918 files/netlogo.sh 149
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCOFjB8zY1VwezZiERApktAKCO8p//xm54R8Nd9jSmnwxjA7vC+QCghkYz
+wFYlwFKWEQ3Dc/SFOaENE00=
+=ZhUB
+-----END PGP SIGNATURE-----

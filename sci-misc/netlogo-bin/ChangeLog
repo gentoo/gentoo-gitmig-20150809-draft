@@ -1,0 +1,10 @@
+# ChangeLog for sci-misc/netlogo-bin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/ChangeLog,v 1.1 2005/03/16 16:02:44 humpback Exp $
+
+*netlogo-bin-2.1 (16 Mar 2005)
+
+  16 Mar 2005; Gustavo Felisberto <humpback@gentoo.org>; +metadata.xml,
+  +files/netlogo.gif, +files/netlogo.sh, +netlogo-bin-2.1.ebuild:
+  Inittial import. Thanks to axxo for the help with the deps and java eclasses.
+
