@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/seaview/seaview-1-r1.ebuild,v 1.3 2004/11/01 02:54:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/seaview/seaview-1-r1.ebuild,v 1.4 2004/11/22 19:38:18 sekretarz Exp $
 
 DESCRIPTION="A graphical multiple sequence alignment editor"
 HOMEPAGE="http://pbil.univ-lyon1.fr/software/${PN}.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://pbil.univ-lyon1.fr/pub/mol_phylogeny/${PN}/${PN}.tar"
 LICENSE="public-domain"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="x11-libs/fltk

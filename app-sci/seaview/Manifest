@@ -1,5 +1,15 @@
-MD5 408254592e45ca7204d3135692ff5304 ChangeLog 852
-MD5 91f48900317594b2057303a439a67806 seaview-1-r1.ebuild 905
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8d176cb069d21ce4a4cac1fc2fb727f9 ChangeLog 959
+MD5 ec4ed6e232845cd9c5b9031b0ff56922 seaview-1-r1.ebuild 913
 MD5 7b87a6c33de5295e356b67218bd4fba9 metadata.xml 614
 MD5 81acca7fe3c919d7be4ef27307d9ce7d files/29seaview 26
 MD5 ee3d2374f6b28744f1b282577c0dcb38 files/digest-seaview-1-r1 56
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBokA6Z/iYVBmujdURAtUrAKDwNSqez+XB+lkvMYDEiQRZy0s1hgCfYFvi
+oi1eaeiEm8bTYK0bxMsccvQ=
+=oH5f
+-----END PGP SIGNATURE-----

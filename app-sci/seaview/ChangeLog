@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/seaview
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/seaview/ChangeLog,v 1.5 2004/11/01 02:54:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/seaview/ChangeLog,v 1.6 2004/11/22 19:38:18 sekretarz Exp $
+
+  22 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> seaview-1-r1.ebuild:
+  Added to ~amd64, bug #72078
 
   31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> seaview-1-r1.ebuild:
   Added to x86.
