@@ -1,24 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10-r1.ebuild,v 1.4 2003/01/07 17:46:30 rendhalver Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.11.ebuild,v 1.1 2003/01/07 17:46:30 rendhalver Exp $
 
-IUSE="gpm postgres xface nas dnd X jpeg tiff png mule motif canna freewnn lucid athena neXt Xaw3d"
+IUSE="gpm postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna lucid athena neXt Xaw3d"
 
 # this is just TEMPORARY until we can get to the core of the problem
-SANDBOX_DISABLED="1"
+#SANDBOX_DISABLED="1"
 
 LICENSE="GPL-2"
-
-S="${WORKDIR}/${P}"
+# handle _rc versions
+MY_PV="${PV/_}"
+MY_PN="${PN}-${MY_PV}"
+MY_PV2="${MY_PV/rc1}"
+S="${WORKDIR}/${PN}-${MY_PV2}"
 DESCRIPTION="XEmacs is a highly customizable open source text editor and application development system."
-EFS=1.29
-BASE=1.71
-MULE=1.42
 
-SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${P}.tar.gz
-	http://ftp.xemacs.org/packages/efs-${EFS}-pkg.tar.gz
-	http://ftp.xemacs.org/packages/xemacs-base-${BASE}-pkg.tar.gz
-	mule? ( http://ftp.xemacs.org/packages/mule-base-${MULE}-pkg.tar.gz )"
+SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${PN}-${MY_PV}.tar.gz"
 
 HOMEPAGE="http://www.xemacs.org"
 
@@ -36,6 +33,7 @@ RDEPEND="virtual/glibc
 	gpm? ( >=sys-libs/gpm-1.19.6 )
 
 	postgres? ( >=dev-db/postgresql-7.2 )
+	ldap? ( net-nds/openldap )
 
 	nas? ( media-libs/nas )
 
@@ -51,25 +49,28 @@ RDEPEND="virtual/glibc
 	png? ( =media-libs/libpng-1.2* )
 	jpeg? ( media-libs/jpeg )
 
-	canna? ( app-i18n/canna )
+    canna? ( app-i18n/canna )
 	freewnn? ( app-i18n/freewnn )"
 
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2"
 
+PDEPEND="app-xemacs/efs
+		 app-xemacs/xemacs-base
+		 mule? app-xemacs/mule-base"
+
 PROVIDE="virtual/xemacs virtual/editor"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc sparc"
-
+KEYWORDS="~x86 -ppc ~sparc"
 
 src_unpack() {
-	unpack ${P}.tar.gz
-
+	unpack ${PN}-${MY_PV}.tar.gz
+	
 	cd ${S}
 	patch -p0 <${FILESDIR}/emodules.info-21.4.8-gentoo.patch || die
-
+	
 	if [ ${ARCH} = "ppc" ] ; then
 		patch -p0 < ${FILESDIR}/${P}-ppc.diff || die
 	fi
@@ -101,7 +102,7 @@ src_compile() {
 				myconf="${myconf} --with-athena=3d"
 			fi
 			myconf="${myconf} --with-dialogs=athena"
-			myconf="${myconf} --with-scrollbars=athena"
+			myconf="${myconf} --with-scrollbars=lucid"
 			myconf="${myconf} --with-menubars=lucid"
 		fi
 
@@ -110,9 +111,9 @@ src_compile() {
 
 		use dnd && myconf="${myconf} --with-dragndrop --with-offix"
 
-		use tiff && myconf="${myconf} --with-tiff" ||
+		use tiff && myconf="${myconf} --with-tiff" || 
 			myconf="${myconf} --without-tiff"
-		use png && mconf="${myconf} --with-png" ||
+		use png && mconf="${myconf} --with-png" || 
 			myconf="${myconf} --without-png"
 		use jpeg && myconf="${myconf} --with-jpeg" ||
 			myconf="${myconf} --without-jpeg"
@@ -120,10 +121,10 @@ src_compile() {
 			myconf="${myconf} --without-xface"
 
 	else
-		myconf="${myconf}
-			--without-x
-			--without-xpm
-			--without-dragndrop
+		myconf="${myconf} 
+			--without-x 
+			--without-xpm 
+			--without-dragndrop 
 			--with-gif=no"
 	fi
 
@@ -131,8 +132,10 @@ src_compile() {
 		myconf="${myconf} --without-gpm"
 	use postgres && myconf="${myconf} --with-postgresql" ||
 		myconf="${myconf} --without-postgresql"
+	use ldap && myconf="${myconf} --with-ldap" ||
+		myconf="${myconf} --without-ldap"
 
-	if [ "`use mule`" ] ; then
+	if [ "`use mule`" ] ; then 
 		myconf="${myconf} --with-mule"
 		use motif && myconf="${myconf} --with-xim=motif" ||
 			myconf="${myconf} --with-xim=xlib"
@@ -155,7 +158,6 @@ src_compile() {
 		--with-msw=no \
 		--mail-locking=flock \
 		--with-database=gnudbm \
-		--pdump \
 		--with-site-lisp=yes \
 		|| die
 
@@ -164,25 +166,21 @@ src_compile() {
 	make || die
 }
 
-src_install() {
+src_install() {                               
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man/man1 \
 		infodir=${D}/usr/share/info \
 		install gzip-el || die
-
+	
 	# install base packages
 	dodir /usr/lib/xemacs/xemacs-packages/
-	cd ${D}/usr/lib/xemacs/xemacs-packages/
-	unpack efs-${EFS}-pkg.tar.gz
-	unpack xemacs-base-${BASE}-pkg.tar.gz
-	# (optionally) install mule base package
+	dodir /usr/lib/xemacs/site-packages/
+	
 	if use mule;
 	then
 		dodir /usr/lib/xemacs/mule-packages
-		cd ${D}/usr/lib/xemacs/mule-packages/
-		unpack mule-base-${MULE}-pkg.tar.gz
 	fi
-
+	
 	# remove extraneous files
 	cd ${D}/usr/share/info
 	rm -f dir info.info texinfo* termcap*

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.9.ebuild,v 1.5 2002/12/09 04:17:41 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.9.ebuild,v 1.6 2003/01/07 17:46:30 rendhalver Exp $
 
 IUSE="gpm esd postgres xface nas X jpeg tiff png mule"
 
@@ -46,7 +46,7 @@ RDEPEND="virtual/glibc
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2"
 
-PROVIDE="virtual/xemacs"
+PROVIDE="virtual/xemacs virtual/editor"
 
 SLOT="0"
 LICENSE="GPL-2"

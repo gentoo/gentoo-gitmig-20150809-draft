@@ -1,12 +1,20 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.29 2003/01/01 11:32:46 rendhalver Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.30 2003/01/07 17:46:30 rendhalver Exp $
 
+  *xemacs-21.4.11 (03 Jan 2003)
+  03 Jan 2003: Rendhalver <rendhalver@gentoo.org> :
+  new ebuild without sandbox disabling
+
+
+  03 Jan 2003: Rendhalver <rendhalver@gentoo.org> : 
+  added virtual/editor to PROVIDE for all xemacs ebuilds
+	
 *xemacs-21.4.10-r2 (01 Jan 2003)
-  01 Jan 2002: Rendhalver <rendhalver@gentoo.org> : fixed use flags
+  01 Jan 2003: Rendhalver <rendhalver@gentoo.org> : fixed use flags
 
 *xemacs-21.4.10-r1 (01 Jan 2003)
-  01 Jan 2002: Rendhalver <rendhalver@gentoo.org> : fixed use flags
+  01 Jan 2003: Rendhalver <rendhalver@gentoo.org> : fixed use flags
   removed ~arch mask
 	
 *xemacs-21.4.10-r2 (24 Dec 2002)
