@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.77.ebuild,v 1.14 2004/06/01 13:36:02 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.77.ebuild,v 1.15 2004/06/03 23:47:06 agriffis Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64 ppc alpha ~ia64 mips hppa"
+KEYWORDS="x86 sparc amd64 ppc alpha ia64 mips hppa"
 
 DEPEND=">=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
