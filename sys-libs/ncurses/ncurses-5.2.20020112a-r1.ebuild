@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.20020112a-r1.ebuild,v 1.3 2002/07/11 06:30:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.20020112a-r1.ebuild,v 1.4 2002/08/14 04:08:01 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Linux console display library"
 SRC_URI="ftp://ftp.debian.org/debian/pool/main/n/${PN}/${PN}_${PV}.orig.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/ncurses/ncurses.html"
 DEPEND="virtual/glibc"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 LICENSE="MIT"
 SLOT="5"
 
