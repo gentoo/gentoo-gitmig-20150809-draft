@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.7-r1.ebuild,v 1.3 2004/01/29 04:38:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.7-r1.ebuild,v 1.4 2004/01/30 16:08:01 agriffis Exp $
 
 DESCRIPTION="Userspace access to USB devices"
 HOMEPAGE="http://libusb.sourceforge.net/"
@@ -22,15 +22,13 @@ src_compile() {
 		&& myconf="${myconf} --enable-debug=all" \
 		|| myconf="${myconf} --disable-debug"
 	econf ${myconf} || die
-
 	make || die
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
-
-	dodoc AUTHORS NEWS README
-
-	cd doc/html
-	use doc && dohtml *.html
+	dodoc AUTHORS NEWS README || die
+	if use doc; then
+		dohtml doc/html/*.html || die
+	fi
 }

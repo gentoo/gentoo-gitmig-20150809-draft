@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.15 2004/01/29 04:38:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.16 2004/01/30 16:08:01 agriffis Exp $
+
+  30 Jan 2004; Aron Griffis <agriffis@gentoo.org> libusb-0.1.7-r1.ebuild:
+  Add some more error-checking to this ebuild
 
   28 Jan 2004; Aron Griffis <agriffis@gentoo.org> libusb-0.1.7-r1.ebuild:
   stable on ia64
