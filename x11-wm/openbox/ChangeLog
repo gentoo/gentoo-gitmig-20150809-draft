@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.92 2005/02/06 06:56:55 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.93 2005/03/28 17:42:02 lostlogic Exp $
+
+*openbox-3.3_rc1 (28 Mar 2005)
+
+  28 Mar 2005; Brandon Low <lostlogic@gentoo.org> openbox-3.2-r2.ebuild,
+  +openbox-3.3_rc1.ebuild:
+  Bump for new _rc release (yay), and mark the previous ebuild stable
 
   06 Feb 2005; Aaron Kulbe <superlag@gentoo.org> openbox-3.2-r2.ebuild:
   Keyworded on all arches for -r2

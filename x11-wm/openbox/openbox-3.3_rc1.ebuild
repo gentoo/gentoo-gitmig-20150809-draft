@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.2-r2.ebuild,v 1.3 2005/03/28 17:42:02 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.3_rc1.ebuild,v 1.1 2005/03/28 17:42:02 lostlogic Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://icculus.org/openbox/releases/${P/_/-}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 IUSE="nls startup-notification"
 
 RDEPEND="virtual/xft
@@ -28,7 +28,7 @@ S=${WORKDIR}/${P/_/-}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-makefile.patch
+	epatch ${FILESDIR}/${PN}-3.2-makefile.patch
 }
 
 src_compile() {
@@ -46,7 +46,7 @@ src_install() {
 	doins ${FILESDIR}/${PN}.desktop
 
 	make DESTDIR=${D} install || die
-	dodoc README AUTHORS ChangeLog TODO
+	dodoc ABOUT-NLS AUTHORS CHANGELOG COMPLIANCE COPYING README
 
 	# Extra styles from http://home.clara.co.uk/dpb/openbox.htm
 	# These are included due to the poor usability of the default themes
