@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/qt-dcgui-0.2.12.ebuild,v 1.1 2003/04/29 06:39:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/qt-dcgui-0.2.12.ebuild,v 1.2 2003/04/30 06:26:38 aliz Exp $
 
 inherit kde-functions
 need-qt 3
@@ -23,6 +23,15 @@ newdepend ">=dev-libs/libxml2-2.4.22
 	ssl? ( dev-libs/openssl )"
 
 src_compile() {
+	#workaround
+
+	econf \
+		--with-gnu-ld \
+		`use_with ssl` \
+		--with-libdc=/usr \
+		--with-qt-dir=/usr/qt/3 \
+		|| die
+	make distclean
 	econf \
 		--with-gnu-ld \
 		`use_with ssl` \

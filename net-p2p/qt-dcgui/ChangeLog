@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/qt-dcgui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/ChangeLog,v 1.24 2003/04/29 06:39:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/ChangeLog,v 1.25 2003/04/30 06:26:37 aliz Exp $
+
+  30 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> qt-dcgui-0.2.12.ebuild :
+  Added workaround for compilation error. Closes #20177.
 
 *qt-dcgui-0.2.12 (29 Apr 2003)
 
