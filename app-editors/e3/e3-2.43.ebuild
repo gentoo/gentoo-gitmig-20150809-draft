@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-2.43.ebuild,v 1.5 2004/06/24 21:52:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-2.43.ebuild,v 1.6 2004/06/30 02:29:31 agriffis Exp $
 
 DESCRIPTION="Very tiny editor in x86 ASM with emacs, pico, and vi keybindings"
 HOMEPAGE="http://www.sax.de/~adlibit/"
@@ -9,7 +9,7 @@ SRC_URI="http://www.sax.de/~adlibit/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* x86"
-IUSE=""
+IUSE="build"
 RESTRICT="nostrip"
 
 DEPEND="dev-lang/nasm"
