@@ -1,8 +1,12 @@
 # ChangeLog for x11-themes/gaim-smileys
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/ChangeLog,v 1.1 2003/04/13 19:15:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/ChangeLog,v 1.2 2003/04/17 17:11:41 lostlogic Exp $
 
 *gaim-smileys-20030413 (13 Apr 2003)
+
+  17 Apr 2003; Brandon Low <lostlogic@gentoo.org>
+  gaim-smileys-20030413.ebuild:
+  Move to stable, this is just a theming package
 
   13 Apr 2003; Alastair Tse <liquidx@gentoo.org> Manifest,
   gaim-smileys-20030413.ebuild:
