@@ -1,20 +1,22 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r3.ebuild,v 1.6 2002/10/18 23:57:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r3.ebuild,v 1.7 2002/11/12 06:55:48 vapier Exp $
 
-IUSE="X"
 
 DESCRIPTION="Advanced Power Management Daemon"
 HOMEPAGE="http://www.worldvisions.ca/~apenwarr/apmd/"
-KEYWORDS="x86 -ppc"
 SRC_URI="http://www.worldvisions.ca/~apenwarr/apmd/${P}.tar.gz"
-S=${WORKDIR}/${PN}
 
-DEPEND="virtual/glibc >=sys-apps/debianutils-1.16 X? ( virtual/x11 )"
-RDEPEND=${DEPEND}
 LICENSE="GPL-2"
 SLOT=0
-KEYWORD="x86"
+KEYWORD="x86 -ppc"
+IUSE="X"
+
+DEPEND="virtual/glibc
+	>=sys-apps/debianutils-1.16
+	X? ( virtual/x11 )"
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -26,12 +28,9 @@ src_unpack() {
 		-e "s:\(MANDIR\=\${PREFIX}\)\(/man\):\1/share\2:" \
 		Makefile.orig > Makefile
 
-	if [ "`use X`" ] 
-	then
+	if [ `use X` ] ; then
 		echo -e "xinstall:\n\tinstall\txapm\t\${PREFIX}/bin" >> Makefile
-		
 	else
-
 		cp Makefile Makefile.orig
 		sed -e "/^EXES=/s/xapm//" \
 			-e "/install.*xapm/d" \
@@ -43,13 +42,11 @@ src_unpack() {
 }
 
 src_compile() {
-
 	make CFLAGS="${CFLAGS}" || die "compile problem"
 }
 
-src_install () {
-
-	make DESTDIR=${D} install || die
+src_install() {
+	make DESTDIR=${D} install || die "install failed"
 
 	dodir /etc/apm/{event.d,suspend.d,resume.d}
 	exeinto /etc/apm ; doexe debian/apmd_proxy
@@ -58,8 +55,7 @@ src_install () {
 	insinto /etc/conf.d ; newins ${FILESDIR}/apmd.confd apmd
 	exeinto /etc/init.d ; newexe ${FILESDIR}/apmd.rc6 apmd
 
-	if [ "`use X`" ]
-	then
-		make DESTDIR=${D} xinstall || die
+	if [ `use X` ] ; then
+		make DESTDIR=${D} xinstall || die "xinstall failed"
 	fi
 }
