@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.77.1.ebuild,v 1.3 2003/12/31 15:39:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.77.1.ebuild,v 1.4 2004/01/01 23:41:18 vapier Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -18,8 +18,9 @@ IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts joystick icc net"
 RDEPEND="sys-libs/zlib
 	sdl? ( >=media-libs/libsdl-1.2.0 )
 	alsa? ( media-libs/alsa-lib )
-	xv? ( >=x11-base/xfree-4.1.0 )
-	dga? ( >=x11-base/xfree-4.1.0 )
+	xv? ( virtual/x11 )
+	dga? ( virtual/x11 )
+	X? ( virtual/x11 )
 	esd? ( >=media-sound/esound-0.2.29 )
 	svga? ( media-libs/svgalib )
 	ggi? ( media-libs/libggi )
