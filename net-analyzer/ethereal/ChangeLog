@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.22 2003/02/15 07:39:40 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.23 2003/02/19 06:17:33 bcowan Exp $
+
+*ethereal-0.9.9 (19 Feb 2003) 
+
+  19 Feb 2003; Brad Cowan <bcowan@gentoo.org> ethereal-0.9.9.ebuild,
+  files/digest-ethereal-0.9.9:
+  
+  Bumped version. Added gtk+2 support back as it now seems to compile.
 
 *ethereal-0.9.8-r1 (29 Dec 2002)
 
