@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.63.ebuild,v 1.1 2003/05/20 22:50:58 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.63.ebuild,v 1.2 2003/05/20 23:04:41 lostlogic Exp $
 
 IUSE="nls perl spell ssl nas"
 
@@ -39,6 +39,11 @@ DEPEND="=sys-libs/db-1*
 #}
 
 src_compile() {
+	ewarn "This ebuild doesn't have gaim-encryption support, because"
+	ewarn "gaim-encryption isn't updated to gaim's new API yet."
+	ewarn
+	sleep 5
+
 	local myconf
         use perl || myconf="${myconf} --disable-perl"
         use spell || myconf="${myconf} --disable-gtkspell"
