@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.14 2004/10/31 12:02:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.15 2004/11/02 17:31:00 blubb Exp $
+
+  02 Nov 2004; Simon Stelling <blubb@gentoo.org> gnustep-gui-0.9.4.ebuild:
+  added ~amd64
 
   31 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   gnustep-gui-0.9.5_pre20040928.ebuild:

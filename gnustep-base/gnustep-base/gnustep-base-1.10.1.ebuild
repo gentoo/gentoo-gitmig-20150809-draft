@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.1.ebuild,v 1.1 2004/10/31 05:39:52 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.1.ebuild,v 1.2 2004/11/02 17:27:30 blubb Exp $
 
 inherit gnustep
 
@@ -8,7 +8,7 @@ DESCRIPTION="The GNUstep Base Library is a library of general-purpose, non-graph
 
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~amd64"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 
