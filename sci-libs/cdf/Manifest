@@ -1,4 +1,14 @@
-MD5 1d2e3a7f2b736cc9d0d3481d34beb10e ChangeLog 403
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cac7bf2e93dba20a0f47955a815e14ae ChangeLog 559
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 5c464645a3b240573ab262bec0ee9c5e cdf-2.7.ebuild 1572
+MD5 509381b6cd8a140af58ed5edb9f373c3 cdf-2.7.ebuild 1573
 MD5 5b499d4b4c0682ebecd2e795aa95bc04 files/digest-cdf-2.7 133
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0bp8I1lqEGTUzyQRAkziAJ9Uad5+c1anV+YRvhGIRSngoV6TDgCgvfKM
+roEkx8z5dU7dEdWHLbXu2CE=
+=S4G4
+-----END PGP SIGNATURE-----
