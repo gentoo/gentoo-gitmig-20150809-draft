@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ndoc/ndoc-1.3.1.ebuild,v 1.1 2005/04/02 18:36:42 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ndoc/ndoc-1.3.1.ebuild,v 1.2 2005/04/02 18:47:30 urilith Exp $
 
 inherit mono
 
@@ -45,7 +45,7 @@ src_install() {
 		mono $DEBUG_VAR /usr/share/ndoc/NDocConsole.exe "\$@"
 	EOF
 
-	insinto ${D}/usr/share/ndoc/
+	insinto /usr/share/ndoc/
 	doins NDocConsole.exe
 	dobin ndoc
 }
