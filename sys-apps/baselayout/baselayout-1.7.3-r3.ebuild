@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.3-r3.ebuild,v 1.2 2002/03/07 00:10:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.3-r3.ebuild,v 1.3 2002/03/07 00:11:43 azarah Exp $
 
 SV="1.2.9"
 SVREV=""
@@ -32,7 +32,8 @@ pkg_setup() {
 		then
 			echo
 		   	einfo "!!! With the current version of baselayout installed (1.7.3-r1), merging"
-			einfo "    this version of baselayout will cause X to die !!!!"
+			einfo "    this version of baselayout will cause X to die if you started it"
+			einfo "    with the /etc/init.d/xdm script!!!!"
 			echo
 			einfo "Please quit X and then merge this again."
 			die
