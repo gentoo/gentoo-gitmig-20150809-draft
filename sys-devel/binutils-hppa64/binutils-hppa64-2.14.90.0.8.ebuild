@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/binutils-hppa64-2.14.90.0.8.ebuild,v 1.2 2004/03/28 02:00:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/binutils-hppa64-2.14.90.0.8.ebuild,v 1.3 2004/05/13 11:34:32 gmsoft Exp $
 
 IUSE="nls bootstrap build"
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://sources.redhat.com/binutils/"
 
 SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
-KEYWORDS="-* ~hppa"
+KEYWORDS="-* hppa"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )
