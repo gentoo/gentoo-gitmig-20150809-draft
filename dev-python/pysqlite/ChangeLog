@@ -1,11 +1,15 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.7 2003/02/12 06:34:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.8 2003/04/04 12:46:45 liquidx Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*pysqlite-0.3.1 (23 Nov 2002) Bart Verwilst <verwilst@gentoo.org>
+*pysqlite-0.3.1 (23 Nov 2002)
 
+  04 Apr 2003; Alastair Tse <liquidx@gentoo.org> pysqlite-0.3.1.ebuild:
+  distutil-ize
+
+  23 Nov 2003; Bart Verwilst <verwilst@gentoo.org> :
   New version
 
 *pysqlite-0.2.0-r1 (03 Nov 2002)
