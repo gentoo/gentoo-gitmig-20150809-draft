@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.8.ebuild,v 1.5 2004/04/05 02:35:55 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.8.ebuild,v 1.6 2004/04/16 05:31:46 vapier Exp $
+
+inherit eutils gnuconfig
 
 DESCRIPTION="ODBC Interface for Linux"
 HOMEPAGE="http://www.unixodbc.org/"
@@ -10,7 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~hppa ~alpha ~amd64 ~sparc mips"
 IUSE="qt gnome"
-inherit eutils gnuconfig
 
 DEPEND="virtual/glibc
 	>=sys-libs/readline-4.1
@@ -25,7 +26,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 
-# braindead check in configure fails - hack approach
+	# braindead check in configure fails - hack approach
 	epatch ${FILESDIR}/unixODBC-2.2.6-configure.in.patch
 
 	autoconf || die "autoconf failed"
@@ -34,7 +35,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if [ "`use qt`" ] && [ -z "`use mips`" ]
+	if use qt && ! use mips
 	then
 		myconf="--enable-gui=yes"
 	else
@@ -51,7 +52,7 @@ src_compile() {
 
 	make || die
 
-	if [ "`use gnome`" ]
+	if use gnome
 	then
 		# Symlink for configure
 		ln -s ${S}/odbcinst/.libs ./lib
@@ -75,7 +76,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	if [ "`use gnome`" ]
+	if use gnome
 	then
 		cd gODBCConfig
 		make DESTDIR=${D} install || die
