@@ -1,11 +1,16 @@
 # ChangeLog for games-board/crafty
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.3 2003/12/13 18:02:04 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.4 2003/12/31 06:54:35 vapier Exp $
+
+*crafty-19.8 (31 Dec 2003)
+
+  31 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Update to 19.8 and clean up #34789.
+
+*crafty-19.1 (25 Oct 2002)
 
   13 Dec 2003; Brad House <brad_mssw@gentoo.org> crafty-19.1.ebuild:
   mark stable on amd64
-
-*crafty-19.1.ebuild (25 Oct 2002)
 
   25 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   Update to 19.1 per #9657.
