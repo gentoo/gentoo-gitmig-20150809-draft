@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.6.2.ebuild,v 1.6 2004/12/03 03:54:37 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.6.2.ebuild,v 1.7 2005/01/04 22:12:13 carlo Exp $
 
 inherit kde
 
