@@ -70,12 +70,9 @@ use the eclasses.
  As a minimum, inherit kde-dirs to get the set-qtdir(), set-kdedir() functions.
 \layout Standard
 
-Section two explains how eclasses work; section three explains how to write
- inheriting ebuilds.
- If you just want to write an eubild for a kde app, section 3 is a good
- concise introduction.
- Section 2 makes for deeper understanding but is probably not worth the
- time if you're just making an ebuild or two.
+Section two explains how eclasses work; section three gives an example of
+ a typical inheriting ebuild, and another of an ebuild for an app with optional
+ kde functionality.
 \layout Section
 
 The eclasses
@@ -138,93 +135,133 @@ This function simply sources files from a hard-coded location.
  any name-to-file resolution code will go in here.
 \layout Subsection
 
-Generic eclass features
-\layout Subsubsection
-
-Debug output
-\layout Subsection
-
 virtual.eclass
 \layout Standard
 
-Defines empty variables and functions; defines EXPORT_FUNCTIONS().
- Also inherits debug.eclass so that everyone gets that.
+This is sourced from inherit.eclass, and thus should always be present before
+ all other eclasses.
+ It defines EXPORT_FUNCTIONS().
 \layout Standard
 
-This eclass is inherited by most other eclasses e.g.
- base, kde*.
- As a rule, any eclass that defines some of the base functions needs it.
- Therefore the only ebuilds which don't get it are the ones that only inherit
- one of the smaller eclasses e.g.
- c, autoconf.
+Explanation: suppose A.eclass and B.eclass both define src_compile.
+ If you inherit both A and B you'll get a different src_compile depending
+ on the order in which you inherit them.
+ That's ok, you're supposed to keep track of your inheritance order.
+ But you may want to call either of the two src_compile's explicitly.
 \layout Standard
 
-It defines all ebuild vars and funcs to be empty.
+So, every eclass adds to the functions that it defines a prefix.
+ For example, A.eclass will define A_src_compile(), and B.eclass will define
+ a B_src_compile().
+ That way, the ebuild can call either function and know what it'll get.
 \layout Standard
 
-It also defines the EXPORT_FUNCTIONS() function which looks like this:
+This raises a new problem: we need a function called src_compile so that
+ the ebuild doesn't need to explicitly call something_src_comiple.
+ This is where EXPORT_FUNCTIONS() comes into play:
 \layout Code
 
 EXPORT_FUNCTIONS() {
 \layout Code
 
-    while [ "$1" ]; do
+\SpecialChar ~
+
 \layout Code
 
-        eval "$1() { ${ECLASS}_$1 ; }" > /dev/null
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+while [ "$1" ]; do
 \layout Code
 
-    shift
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ eval "$1() { ${ECLASS}_$1 ; }" > /dev/null
 \layout Code
 
-    done
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+shift
+\layout Code
+
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+done
+\layout Code
+
+\SpecialChar ~
+
 \layout Code
 
 }
 \layout Standard
 
-This means that after foo.eclass has defined e.g.
- src_unpack() and src_install(), it says:
-\layout Standard
+Every eclass at its beginning sets $ECLASS to its name (e.g.
+ 
+\begin_inset Quotes eld
+\end_inset 
+
+A
+\begin_inset Quotes erd
+\end_inset 
+
+ or 
+\begin_inset Quotes eld
+\end_inset 
+
+B
+\begin_inset Quotes erd
+\end_inset 
+
+).
+ Then it calls EXPORT_FUNCTIONS with the list of functions it provides.
+ For example, if you call
+\layout Code
 
 ECLASS=foo
+\layout Code
+
+EXPORT_FUNCTIONS src_unpack
 \layout Standard
 
-EXPORT_FUNCTIONS src_unpack src_install
+The EXPORT_FUNCTIONS will call eval on the followin string:
+\layout Code
+
+src_unpack() { foo_src_unpack() ; }
 \layout Standard
 
-Actually, the ECLASS setting is put at the beginning of the eclass, directly
- after the inherit statements.
- It will in the future be used by other functions as well.
- Someday we will (I hope) adapt the portage ebuild filename->name algorithm
- and get the ECLASS setting the same way we do $P and $PN.
-\layout Standard
+virtual.eclass defines all the ebuild functions (src_unpack, src_compile,
+ src_install, src_preinst, src_postinst, src_prerm, src_postrm) as empty
+ functions that do nothing (except call debug_print_function, see debug.eclass).
+\layout Subsection
 
-EXPORT_FUNCTIONS() creates stub functions called ${ECLASS}_blah for every
- parameter blah passed to it.
- The stub function does nothing but call blah.
-\layout Standard
-
-When you inherit more than one eclass (almost always), your ebuild functions
- are those defined by the 1st eclass inherited.
- Since eclasses usually inherit other eclasses, you do not want to keep
- track of that.
- Instead, you prefix all your functions from foo.eclass with foo_, or ${ECLASS}_.
- This way, people can call a specific function from a specific eclass and
- know what they are going to get.
-\layout Standard
-
-Because you still want default functions to be defined with the original
- ebuild names, you call EXPORT_FUNCTIONS() at the end of every eclass.
- This makes sure that the default functions you passed as parameters are
- stubs calling the ones you just defined.
-\layout Standard
-
-I looked at adding ${EBUILD}_ instead of literal strings to the actual function
- definitions, but the bash syntax for that is too ugly.
-\layout Subsubsection
-
-ebuild function sections
+Function sections
 \layout Standard
 
 Although this is not an integral part of eclasses, this is a good place
@@ -247,10 +284,10 @@ The implementation is simple.
 base_src_compile() {
 \layout Code
 
-./configure || die
+    ./configure || die
 \layout Code
 
-make || die
+    make || die
 \layout Code
 
 }
@@ -396,6 +433,9 @@ src_compile() {
 }
 \layout Standard
 
+Where myfunc{1,2} is any code you want to execute btween the sections.
+\layout Standard
+
 The only way to know what functions contain what sections is to read the
  eclasses.
 \layout Standard
@@ -407,21 +447,123 @@ all
 \emph default 
  or without parameters.
  Some sections may be non-standard and must be called explicitly.
- Current examples include base_src_unpack
+ The only such section right now is 
 \emph on 
- patch.
+base_src_compile patch
+\emph default 
+.
+\layout Subsection
+
+debug.eclass
 \layout Standard
 
-A more final note: the eclasses also include some debug statements, which
- are not part of the function/section structure.
- More on this at the debug.eclass section.
+Adds verbose output debugging functions.
+ Is inherited by virtual.eclass.
+ All eclasses call these functions a lot, which makes them look ugky but
+ helps a geat deal in tracing stuff, snice there is no bash script debugger/ide/
+step-by-step interpreter AFAIK (if you know of one, tell me!).
+\layout Standard
+
+Look at it to see the functions it provides, they are simplistic.
+\layout Standard
+
+You can export ECLASS_DEBUG_OUTPUT=
+\begin_inset Quotes erd
+\end_inset 
+
+/dev/stdout
+\begin_inset Quotes erd
+\end_inset 
+
+ to get the output with your other msgs while megring.
+ Unfortunately opening /dev/stdout for writing violates the sandbox.
+ I'm not sure how to bypass this (FIXME!).
+\layout Standard
+
+Let's add typical debug output statements to our sample function from the
+ function sections explanation:
+\layout Code
+
+base_src_compile() {
+\layout Code
+
+ 
+\layout Code
+
+    debug-print function $FUNCNAME $*
+\layout Code
+
+    [ -z "$1" ] && base_src_compile all
+\layout Code
+
+ 
+\layout Code
+
+    while [ "$1" ]; do
+\layout Code
+
+\layout Code
+
+        case $1 in
+\layout Code
+
+            configure)
+\layout Code
+
+                debug-print-section configure
+\layout Code
+
+                ./configure || die;;
+\layout Code
+
+            make)
+\layout Code
+
+                debug-print-section make
+\layout Code
+
+                make || die;;
+\layout Code
+
+            all)
+\layout Code
+
+                debug-print-section all
+\layout Code
+
+                base_src_compile configure make;;
+\layout Code
+
+        esac
+\layout Code
+
+\layout Code
+
+    shift
+\layout Code
+
+    done
+\layout Code
+
+ 
+\layout Code
+
+    debug-print "$FUNCNAME: result is $RESULT" #yes I know there is no $RESULT
+ in this sample function
+\layout Code
+
+\layout Code
+
+}
 \layout Subsection
 
 base.eclass
 \layout Standard
 
 This eclass defines some default variables and functions, similar to those
- you'd get by default in a non-inheriting ebuild.
+ you'd get by default in a non-inheriting ebuild (starting with a recent
+ portage), e.g.
+ src_unpack() { unpack ${A}; }.
 \layout Standard
 
 It is inherited by higher-level eclasses like the kde ones.
@@ -451,50 +593,46 @@ There is also a helper function provided by base.eclass, called newdepend().
  trouble of writing and maintaining two lists of dependencies.
 \layout Subsection
 
-depend.eclass
+c.eclass
 \layout Standard
 
-Added in v4.
- This provides two pairs of functions: need-kdelibs(), need-qt() and set-kdedir(
-), set-qtdir().
- These functions handle the details of the multi-qt and multi-kdelibs schemes.
- These schemes set rules for having multiple versions of qt and/or of kdelibs
- installed side-by-side.
+Adds gcc and glibc to DEPEND and RDEPEND.
+\layout Subsection
+
+autoconf.eclass
 \layout Standard
 
-The need-* functions are called with a parameter which is the version number
- required.
- They then add the corresponding dependencies to DEPEND and RDEPEND, and
- set the variables kde_version and qt_version which are used by the set-*dir
- functions.
- If no parameter is passed, a version number of 0 (zero) is used.
+Adds make/automake/autoconf to DEPEND.
+\layout Subsection
+
+autotools.eclass
 \layout Standard
 
-It is important to call these functions from the main part of the ebuild,
- so that any changes to DEPEND and RDEPEND affect emerge.
+This is made and maintained by Azarah.
+ To quote his comments:
 \layout Standard
 
-The set-* dir functions are both called from the beginning of the configure
- section of the kde_src_compile() function.
- They read the qt_version and kde_version variables set by need-*, check
- which multi-*-scheme conforming libs are installed, and set KDEDIR and
- QTDIR to the location of the latest version installed that fulfills the
- requirements.
- When the new portage dependency functionality is released, this is where
- the changes needed for kde/qt-3 support will go.
+This eclass was made to bridge the incompadibility problem of autoconf-2.13,
+ autoconf-2.5x and automake-1.4x, automake-1.5x.
+ Most packages needs autoconf-2.13 and automake-1.4x, but cannot work with
+ the latest versions of these packages due to incompatibility, thus when
+ we have a package that needs the latest versions of automake and autoconf,
+ it begins to get a problem.
 \layout Standard
 
-If no multi-*-scheme-compatible3 installation is found, KDEDIR and QTDIR
- are left untouched, assuming that the machine is an older one which sets
- hardcoded QTDIR and KDEDIR values from /etc/env.d.
+Read the eclass for more info.
+ AFAIK it has no relatinship whatsoever to an of the other eclasses.
+ Contact Azarah for any further info.
+ (Azarah, you're welcome to feel in here).
 \layout Subsection
 
 kde.eclass
 \layout Standard
 
 Used by all kde apps, whether directly or indirectly.
- This is a med-level eclass, which is intended to provide not only sensible
- defaults but functions which can be used as-is more often then not.
+ (Not by apps with optional kde functionality though.) This is a higher-level
+ eclass, which is intended to provide not only sensible defaults but functions
+ which can be used as-is more often then not.
  In fact, none of the high-level kde-* eclasses which inherit from here
  change the functions in any way, and the ebuilds rarely do so.
  This eclass contains the meat of the kde eclass system, while virtual and
@@ -521,19 +659,75 @@ Note: some kde apps, like widget styles and i18n packages, do not need to
  These packages can then inherit straight from here.
  All other packages, which need to compile c code, should inherit from kde-base.e
 class.
+\layout Subsection
+
+kde-dirs.eclass
 \layout Standard
 
-As of v3.3, kde-objprelink was merged with kde, which now provides the objprelink
- deps (>=objprelink-0-r1), the options passed to configure and a function
- kde-objprelink-patch() that applies the kde-admin-acinclude patch.
- Call it at the end of your src_unpack if you need it.
+A short explanation about the current multi-kdedir scheme:
+\layout Standard
+
+$KDE{2,3}DIR and $KDELIBS{2,3}DIR are set in make.globals (and can be overriden
+ in make.conf).
+ Their default values are /usr/kde/{2,3}.
+\layout Standard
+
+A package that identifies itself as a kde2 package (see below) will use
+ the kdelibs installed in $KDELIBS2DIR and install itself into $KDE2DIR.
+ Same goes for kde3.
+ NOTE: separating kdelibs from kde apps and any other non-default KDEDIR
+ stuff is untested and unsupported.
+\layout Standard
+
+As for qt, the latest 2.x, 3.x version lives in /usr/qt/2,3 respectively.
+\layout Standard
+
+The inner works of the sytem needn't be described here.
+ A few weeks ago all this scheme was changed out of recognition, but no
+ ebulds needed to be changed, only eclasses.
+ That speaks for their success.
+\layout Standard
+
+This eclass provides two pairs of functions: need-kde(), need-qt() and set-kdedi
+r(), set-qtdir().
+ These functions handle the details of the multi-qt and multi-kdelibs schemes.
+\layout Standard
+
+The need-* functions are called with a parameter which is the version number
+ required.
+ They then add the corresponding dependencies to DEPEND and RDEPEND, and
+ set the variables kde_version and qt_version which are used by the set-*dir
+ functions.
+ If no parameter is passed, a version number of 0 (zero) is used, meaning
+ that any version will satisfy the dependency.
+\layout Standard
+
+It is important to call these functions from the main part of the ebuild
+ (i.e.
+ not from a function), so that any changes to DEPEND and RDEPEND affect
+ emerge.
+\layout Standard
+
+The set-* dir functions are both called from the beginning of the configure
+ section of the kde_src_compile() function.
+ They set KDEDIR and QTDIR appropriately.
+ That's all your ebuild should need.
+\layout Standard
+
+In a euild with optional kde support, you inherit kde-dirs directly (and
+ no other eclass).
+ You should then call both need-* and set-* yourself.
+\layout Standard
+
+kde-dirs.eclass also contains several helper functions you shouldn't need
+ to use directly.
 \layout Subsection
 
 kde-base.eclass
 \layout Standard
 
-Meant for standard kde apps, of both 2.1 and 2.2 architectures.
- Inherits c,kde and adds qt deps.
+Meant for standard kde apps; nearly all ebuilds use it.
+ Inherits c, kde.
  Sets HOMEPAGE=apps.kde.com.
 \layout Subsection
 
@@ -546,9 +740,10 @@ Meant for the kde-i18n-* packages.
 
 In fact, all kde-i18n ebuilds are completely identical and so all they have
  to do is inherit from this eclass.
+ Their ${P} does the rest.
 \layout Standard
 
-Inherits from kde,kde.org.
+Inherits kde, kde.org.
  Makes a few differences, such as PROVIDE virtual/kde-i18n, correct $S,
  HOMEPAGE and DESCRIPTION.
 \layout Subsection
@@ -569,209 +764,172 @@ kde-dist.eclass
 \layout Standard
 
 Meant for the base kde distribution packages in kde-base/*.
- Inherits kde-base, kde.org and kde-objprelink.
+ Inherits kde-base, kde.org.
  Adds the correct DESCRIPTION and HOMEPAGE and kdelibs-${PV} deps.
  The simpler/smaller kde-base/ packages (e.g.
  kdetoys) make no changes at all; most of those that do only add deps.
 \layout Subsection
 
-c.eclass
+kde-cvs
 \layout Standard
 
-Adds gcc and glibc to DEPEND and RDEPEND.
-\layout Subsection
+This is only included with the kde3-pre ebuilds, and doesn't live in portage.
+ See 
+\begin_inset LatexCommand \url[http://www.gentoo.org/~danarmak/kde3-pre.html]{http://www.gentoo.org/~danarmak/kde3-pre.html}
 
-autoconf.eclass
-\layout Standard
-
-Adds make/automake/autoconf to DEPEND.
-\layout Subsection
-
-debug.eclass
-\layout Standard
-
-Adds verbose output debugging functions.
- Is inherited by virtual.eclass.
-\layout Standard
-
-A function with debugging looks like this:
-\layout Code
-
-base_src_install() {
-\layout Code
-
- 
-\layout Code
-
-        debug-print-function base_src_install $*
-\layout Code
-
-        [ -z "$1" ] && base_src_install all
-\layout Code
-
- 
-\layout Code
-
-        while [ "$1" ]; do
-\layout Code
-
- 
-\layout Code
-
-        case $1 in
-\layout Code
-
-                make)
-\layout Code
-
-                        debug-print-section make
-\layout Code
-
-                        make DESTDIR=${D} install || die
-\layout Code
-
-                        ;;
-\layout Code
-
-            all)
-\layout Code
-
-                        debug-prnit-section all
-\layout Code
-
-                        base_src_install make
-\layout Code
-
-                        ;;
-\layout Code
-
-        esac
-\layout Code
-
- 
-\layout Code
-
-        shift
-\layout Code
-
-        done
-\layout Code
-
- 
-\layout Code
-
-}
-\layout Standard
-
-debug-print-function() prints 
-\begin_inset Quotes eld
-\end_inset 
-
-now in function $1
-\begin_inset Quotes erd
-\end_inset 
-
-, 
-\begin_inset Quotes eld
-\end_inset 
-
-parameters are $2...
-\begin_inset Quotes erd
-\end_inset 
-
- (all following parameters to the function).
-\layout Standard
-
-debug-print-section() prints 
-\begin_inset Quotes eld
-\end_inset 
-
-now in section $1
-\begin_inset Quotes erd
 \end_inset 
 
 .
 \layout Standard
 
-debug-print() prints raw 
-\begin_inset Quotes eld
+It provides a new src_unpack which sets SRC_URI=
+\begin_inset Quotes erd
 \end_inset 
 
-$1
+
 \begin_inset Quotes erd
+\end_inset 
+
+ and copies the sources from a location hardcoded in the eclass.
+ Useful if you have a local copy of the kde cvs modules.
+\layout Subsection
+
+kde-pre
+\layout Standard
+
+This is only included with the kde3-pre ebuilds, and doesn't live in portage.
+ See 
+\begin_inset LatexCommand \url[http://www.gentoo.org/~danarmak/kde3-pre.html]{http://www.gentoo.org/~danarmak/kde3-pre.html}
+
 \end_inset 
 
 .
 \layout Standard
 
-Inside debug.eclass are several settings, which can later be moved to some
- external config file.
- They include turning debug on or off and redirecting its output.
+For prerelease ebuilds, which have underscores in their portage names (3.0_beta1)
+ but not in their source archives' names (3.0beta1.tar.gz).
+ Removes any underscores from $SRC_URI and $S.
 \layout Standard
 
-The functions are used in all ebuild functions/sections of all eclasses,
- and in the helper functions inherit() and EXPORT_FUNCTIONS().
-\layout Standard
-
-Note that all debugging output is off by default.
- You can change this setting in debug.eclass (for now), but be careful not
- to commit the new setting to cvs.
- In addition, debug output is further disabled in inherit() in inherit.eclass
- to avoid extra-inheriting.
- You can enable it there by uncommenting the appropriate lines.
-\layout Subsection
-
-kde-objprelink.eclass
-\layout Standard
-
-This eclass has been removed in v3.3 Its contents were merged into kde.eclass.
+I'll probably add this to portage if there'll be a reason to do it (i.e.
+ a prrelease kde ebuild in portage).
 \layout Section
 
 The inheriting ebuilds
 \layout Standard
 
-Not much here as yet.
- Look at the kde*-2.2.1-r1 ebuilds for examples.
- As a rule, read the eclass you are inheriting from and put any necessary
- changes in your ebuild.
- For now, a collection of tips:
-\layout Itemize
+When in doubt, look at other inheriting ebuilds, or ask.
+\layout Subsection
 
-Always extend variables and functions.
- You should almost never need to replace them.
- In particular, always remember to use DEPEND=
+A typical kde app ebuild
+\layout Code
+
+<header lines>
+\layout Code
+
+.
+ /usr/portage/eclass/inherit.eclass || die
+\layout Code
+
+inherit kde-base
+\layout Code
+
+# Some ebuilds end right here.
+ Others need some customization.
+\newline 
+
+\layout Code
+
+# Add any extra deps.
+ Remember: *always* extend variables, never override!
+\layout Code
+
+DEPEND="$DEPEND foo/bar"
+\layout Code
+
+RDEPEND="$RDEPEND bar/foo"
+\layout Code
+
+# This will add a dep to both DEPEND and RDEPEND
+\layout Code
+
+newdepend "foo? ( bar )"
+\layout Code
+
+\layout Code
+
+# This adds extra arguments to $myconf, which is passed to configure
+\layout Code
+
+myconf="$myconf --with-foobar"
+\layout Code
+
+\layout Code
+
+# extend src_unpack
+\layout Code
+
+src_unpack() {
+\layout Code
+
+    base_src_unpack all patch   # Patch from ${FILESDIR}/${P}-gentoo.diff
+\layout Code
+
+    # some more changes
+\layout Code
+
+    dosed -e 's:1:2:' ${S}/foobar
+\layout Code
+
+}
+\layout Code
+
+\layout Subsection
+
+A typical optional-kde-functionality app ebuild
+\layout Standard
+
+To your normal ebuild, add the following lines.
+ Prefix each line with 
+\begin_inset Quotes eld
+\end_inset 
+
+use kde &&
 \begin_inset Quotes erd
 \end_inset 
 
-$DEPEND...
+, or create whole 
+\begin_inset Quotes eld
+\end_inset 
+
+if [ 
+\begin_inset Quotes eld
+\end_inset 
+
+`use kde`
 \begin_inset Quotes erd
 \end_inset 
 
- and the same for RDEPEND.
-\layout Itemize
-
-The eclasses have DESCRIPTION=
+ ]; then; fi
 \begin_inset Quotes erd
 \end_inset 
 
-Derived from $ECLASS
-\begin_inset Quotes erd
-\end_inset 
+ blocks.
+ To the general section, add:
+\layout Code
 
- set.
- This is to remind you to write a description of your own for your ebuilds.
- Otherwise the inherited one will show through as a reminder.
-\layout Itemize
+.
+ /usr/prtage/eclass/inherit.eclass
+\layout Code
 
-Remember to always call need-kdelibs().
- need-qt(0 is more optional, since you can depend on kdelibs to make sure
- qt is installed.
- There's no harm in explicitly calling need-qt, though.
-\layout Itemize
+inherit kde-dirs
+\layout Code
 
-If you override kde_src_compile, section configure, remember that you 
-\emph on 
-must
-\emph default 
- call set-kdedir and set-qtdir somewhere before calling configure.
+need-kde $version # minimal version of kde your app needs
+\layout Standard
+
+If you only need (optional) qt support, do the same, but call need-qt.
+\layout Standard
+
+Have fun! :-) - danarmak
 \the_end
