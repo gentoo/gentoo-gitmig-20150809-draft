@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/museseq
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.4 2003/12/06 23:25:38 lanius Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.5 2004/02/01 23:38:42 mholzer Exp $
+
+  02 Feb 2004; Martin Holzer <mholzer@gentoo.org> museseq-0.6.2.ebuild:
+  fixing sandbox.
 
   07 Dec 2003; Heinrich Wendel <lanius@gentoo.org> museseq-0.6.0.ebuild,
   museseq-0.6.2.ebuild:

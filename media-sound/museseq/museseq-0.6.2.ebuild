@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2.ebuild,v 1.3 2003/12/06 23:25:38 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2.ebuild,v 1.4 2004/02/01 23:38:42 mholzer Exp $
 
 inherit virtualx
 
@@ -8,6 +8,7 @@ MY_P=muse-${PV}
 DESCRIPTION="The Linux (midi) MUSic Editor (a sequencer)"
 HOMEPAGE="http://muse.seh.de"
 SRC_URI="mirror://sourceforge/lmuse/${MY_P}.tar.bz2"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -38,6 +39,21 @@ src_compile() {
 	use jack || myconf="${myconf} --disable-jack"
 	use fluidsynth || myconf="${myconf} --disable-fluidsynth"
 	Xeconf ${myconf} || die "configure failed"
+
+	### borrowed from kde.eclass #
+	#
+	# fix the sandbox errors "can't writ to .kde or .qt" problems.
+	# this is a fake homedir that is writeable under the sandbox,
+	# so that the build process can do anything it wants with it.
+	REALHOME="$HOME"
+	mkdir -p $T/fakehome/.kde
+	mkdir -p $T/fakehome/.qt
+	export HOME="$T/fakehome"
+	addwrite "${QTDIR}/etc/settings"
+
+	# things that should access the real homedir
+	[ -d "$REALHOME/.ccache" ] && ln -sf "$REALHOME/.ccache" "$HOME/"
+
 	emake || die
 }
 
@@ -57,4 +73,3 @@ pkg_postinst() {
 	einfo "to your kernel, or available as a module."
 	einfo ""
 }
-
