@@ -1,0 +1,10 @@
+# ChangeLog for games-simulation/qct
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/qct/ChangeLog,v 1.1 2004/04/01 22:09:55 mr_bones_ Exp $
+
+*qct-0.7 (01 Apr 2004)
+
+  01 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  qct-0.7.ebuild:
+  initial commit; ebuild submitted by Alexandru Toma via bug #46472
+
