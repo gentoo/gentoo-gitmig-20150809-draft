@@ -1,6 +1,16 @@
-MD5 6e62a97c35c2bbd2e28af7e11ac01e36 ChangeLog 1226
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5557d7c5e210f1dcee1176282faa5584 ChangeLog 1312
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
 MD5 f4d092dfebacb0a81b338b4ec32098e0 tre-0.6.6.ebuild 965
-MD5 d13d6333ba4c4216a515973aa8fb8f03 tre-0.6.8.ebuild 1192
-MD5 b60e1dc7ab6d96f81c2428eb26320ac1 files/digest-tre-0.6.6 62
+MD5 094fdf3870f4bcf39fbf4a6c643222bf tre-0.6.8.ebuild 1192
 MD5 50afdfdea1dbb2f1cbf0fedb7d127e4a files/digest-tre-0.6.8 62
+MD5 b60e1dc7ab6d96f81c2428eb26320ac1 files/digest-tre-0.6.6 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+hOrmdTrptrqvGERAmkNAJ4/qsZUB9+cpec+H0Ytzka6vpXHIACaA47t
+G0w4o3bkx2QshDYwZD25UgM=
+=huHm
+-----END PGP SIGNATURE-----
