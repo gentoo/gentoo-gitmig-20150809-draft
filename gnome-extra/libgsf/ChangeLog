@@ -1,6 +1,6 @@
 # ChangeLog for gnome-extra/libgsf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.22 2003/11/15 03:11:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.23 2003/11/16 00:12:12 gmsoft Exp $
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> libgsf-1.6.0.ebuild:
   Stable on ia64
@@ -9,6 +9,9 @@
   Marked stable on sparc, helps resolve bug #32405.
 
 *libgsf-1.8.2 (17 Sep 2003)
+
+  16 Nov 2003; Guy Martin <gmsoft@gentoo.org> libgsf-1.8.2.ebuild :
+  Marked stable on hppa.
 
   17 Sep 2003; Alastair Tse <liquidx@gentoo.org> libgsf-1.8.2.ebuild:
   version bump for gnumeric 1.2.0
