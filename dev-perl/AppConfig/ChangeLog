@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AppConfig
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.15 2004/12/29 22:48:52 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.16 2005/03/09 18:20:48 corsair Exp $
+
+  09 Mar 2005; Markus Rothe <corsair@gentoo.org> AppConfig-1.56-r2.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #84525
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
