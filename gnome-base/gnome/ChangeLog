@@ -1,11 +1,14 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.65 2003/06/29 22:11:50 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.66 2003/07/02 16:25:47 gmsoft Exp $
 
   30 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> gnome-2.2.1.ebuild:
   set ppc in keywords
 
 *gnome-2.2.1 (16 Mar 2003)
+
+  02 Jul 2003; Guy Martin <gmsoft@gentoo.org> gnome-2.2.1.ebuild :
+  Added hppa to KEYWORDS and a RDEPEND fix for hppa.
 
   24 Mar 2003; foser <foser@gentoo.org> gnome-2.2.1.ebuild :
   upped gnome-panel dep to the correct version (#18087)

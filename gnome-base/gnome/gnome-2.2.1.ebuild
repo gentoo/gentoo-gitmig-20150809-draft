@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2.1.ebuild,v 1.4 2003/06/29 22:11:50 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2.1.ebuild,v 1.5 2003/07/02 16:25:47 gmsoft Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop, merge this package to install"
@@ -10,7 +10,7 @@ SLOT="2.0"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="x86 ppc ~alpha ~sparc"
+KEYWORDS="x86 ppc ~alpha ~sparc hppa"
 
 #  Note to developers:
 #  This is a wrapper for the complete Gnome2 desktop, 
@@ -79,11 +79,11 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/acme-2.0.2
 	>=app-text/ggv-1.99.98
 
-	!alpha? ( 
+	!hppa? ( !alpha? ( 
 		>=gnome-extra/gnome-media-2.2.1.1
 		>=gnome-extra/nautilus-media-0.2.1
 		>=media-libs/gst-plugins-0.6.0-r1
-		>=media-libs/gstreamer-0.6.0-r2 )"
+		>=media-libs/gstreamer-0.6.0-r2 ) )"
 
 # The packages marked !alpha above don't build yet on alpha.  We
 # haven't given up, but there's no reason for them to hold up Gnome
