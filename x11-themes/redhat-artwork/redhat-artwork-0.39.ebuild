@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.39.ebuild,v 1.7 2002/10/22 15:45:01 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.39.ebuild,v 1.8 2002/11/04 17:30:55 seemant Exp $
 
 IUSE="kde"
 
@@ -102,7 +102,7 @@ src_install () {
 	make DESTDIR=${D} install || die
 
 	use kde && (
-		mkdir -p ${D}/${KDEDIR}/share
+		dodir ${KDEDIR}/share
 		mv ${D}/usr/share/apps ${D}/${KDEDIR}/share/apps
 		mv ${D}/usr/share/icons ${D}/${KDEDIR}/share/icons
 	
