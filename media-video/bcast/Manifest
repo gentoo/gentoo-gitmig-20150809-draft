@@ -1,5 +1,5 @@
 MD5 018962fa2361d1849ebe9defe9dc3b2c ChangeLog 1203
-MD5 4f8221b6c9054858bce46531152de9be bcast-2000c-r2.ebuild 942
+MD5 329b8b03f99225a66761228936147494 bcast-2000c-r2.ebuild 932
 MD5 a8d235df0046b1032d27e9bdaf5a59b3 files/digest-bcast-2000c-r2 68
 MD5 8f05c272ff57d86407e97b1748c023c1 files/bcast-2000c-gcc3-gentoo.patch 21620
 MD5 4cd8df5643257fe056eef9cbe3249155 files/bcast-2000c-r1-gentoo.diff 702
