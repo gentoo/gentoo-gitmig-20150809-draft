@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2880-r1.ebuild,v 1.16 2003/09/07 00:08:13 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2880-r1.ebuild,v 1.17 2003/12/08 15:32:12 spider Exp $
 
 NV_V=${PV/1.0./1.0-}
 NV_PACKAGE=NVIDIA_kernel-${NV_V}
@@ -17,6 +17,7 @@ KEYWORDS="-* x86"
 RESTRICT="nostrip"
 
 DEPEND="virtual/linux-sources"
+export _POSIX2_VERSION="199209"
 
 src_compile() {
 	# Portage should determine the version of the kernel sources

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4363-r3.ebuild,v 1.5 2003/09/07 21:22:22 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4363-r3.ebuild,v 1.6 2003/12/08 15:32:12 spider Exp $
 
 NV_V="${PV/1.0./1.0-}"
 NV_PACKAGE="NVIDIA_kernel-${NV_V}"
@@ -16,6 +16,7 @@ KEYWORDS="-* x86"
 RESTRICT="nostrip"
 
 DEPEND="virtual/linux-sources"
+export _POSIX2_VERSION="199209"
 
 pkg_setup() {
 	if [ ! -f /proc/mtrr ]

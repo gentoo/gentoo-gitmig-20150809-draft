@@ -1,6 +1,15 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.53 2003/11/02 15:48:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.54 2003/12/08 15:32:12 spider Exp $
+
+  08 Dec 2003; <spider@gentoo.org> nvidia-kernel-1.0.2880-r1.ebuild,
+  nvidia-kernel-1.0.2960-r1.ebuild, nvidia-kernel-1.0.3123-r2.ebuild,
+  nvidia-kernel-1.0.4180.ebuild, nvidia-kernel-1.0.4191-r2.ebuild,
+  nvidia-kernel-1.0.4349-r2.ebuild, nvidia-kernel-1.0.4363-r3.ebuild,
+  nvidia-kernel-1.0.4496-r3.ebuild, nvidia-kernel-1.0.4496-r4.ebuild,
+  nvidia-kernel-1.0.4499.ebuild:
+  exporting _POSIX2_VERSION in the ebuilds to work around weird scripts that use
+  chown foo.foo instead of foo:foo.
 
   02 Nov 2003; Martin Schlemmer <azarah@gentoo.org>
   nvidia-kernel-1.0.4496-r4.ebuild:
