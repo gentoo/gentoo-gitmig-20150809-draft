@@ -1,10 +1,16 @@
-MD5 1a43bfac2fc543a70b5f9e9d68882586 ChangeLog 1864
-MD5 f8e7a31aced0c9f217d9afa8fb3d2d39 wdiff-0.5.ebuild 956
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ce9b7f33c786a667bc3976be796134db ChangeLog 2017
 MD5 64ed5942489fe8d8672fabf259c4412a metadata.xml 255
-MD5 18c0b6b89fed06daaef39a316889b1f8 wdiff-0.5-r1.ebuild 1023
-MD5 7e8cf795f81edcc5ce4c1a329c394e8c wdiff-0.5-r2.ebuild 1071
-MD5 d6f2ef7713b8a0187fd684b0d8010347 files/digest-wdiff-0.5 128
-MD5 d6f2ef7713b8a0187fd684b0d8010347 files/digest-wdiff-0.5-r1 128
+MD5 8aec0da0c445a6da6630a8acb27b7649 wdiff-0.5-r2.ebuild 1078
 MD5 9857b4daaad6db84f5c7dd600a7e7b4c files/wdiff-0.5-segfault-fix.diff 487
-MD5 c0daaa4f7a7f181a9900d082fe2f5a7a files/wdiff-0.5-avoid-wraps.diff 401
 MD5 d6f2ef7713b8a0187fd684b0d8010347 files/digest-wdiff-0.5-r2 128
+MD5 c0daaa4f7a7f181a9900d082fe2f5a7a files/wdiff-0.5-avoid-wraps.diff 401
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBcX5/HTu7gpaalycRAlXNAKD7v8G//nFNuZidZVsR9AikiXPUNwCgrVJ3
+jOC/p4/jZxdUgFp3t8udZ4o=
+=dhCW
+-----END PGP SIGNATURE-----
