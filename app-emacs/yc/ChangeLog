@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/yc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/ChangeLog,v 1.5 2003/03/31 04:50:09 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/ChangeLog,v 1.6 2003/05/11 17:29:26 nakano Exp $
+
+*yc-3.5.7 (11 May 2003)
+
+  11 May 2003; Masatomo Nakano <nakano@gentoo.org> ChangeLog, yc-3.5.7.ebuild,
+  files/sample.hosts.canna:
+
+  Version bump.
 
 *yc-3.5.2 (31 Mar 2003)
 
