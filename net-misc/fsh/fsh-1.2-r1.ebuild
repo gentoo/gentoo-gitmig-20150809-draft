@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fsh/fsh-1.2-r1.ebuild,v 1.3 2004/07/13 21:19:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fsh/fsh-1.2-r1.ebuild,v 1.4 2004/09/16 15:27:44 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lysator.liu.se/fsh/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND="net-misc/openssh
