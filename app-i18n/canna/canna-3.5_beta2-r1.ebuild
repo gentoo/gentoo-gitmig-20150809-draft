@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.5_beta2-r1.ebuild,v 1.1 2002/06/02 23:03:24 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.5_beta2-r1.ebuild,v 1.2 2002/07/09 14:00:20 stubear Exp $
+
+KEYWORDS="x86"
 
 DESCRIPTION="A client-server based Kana-Kanji conversion system"
 HOMEPAGE="http://www.nec.co.jp/canna/"
