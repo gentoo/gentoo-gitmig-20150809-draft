@@ -1,0 +1,26 @@
+--- slrn/src/ranges.c.orig	2004-02-12 22:38:53.000000000 +0100
++++ slrn/src/ranges.c	2004-02-12 23:02:33.000000000 +0100
+@@ -136,7 +136,22 @@
+ 	r->next = n;
+ 	
+ 	return head;
+-     }	
++     }
++   
++   /* Do we need to insert a new range? */
++   if (max+1 < r->min)
++     {
++        Slrn_Range_Type *n;
++        n = (Slrn_Range_Type *) slrn_safe_malloc (sizeof(Slrn_Range_Type));
++        n->min = min;
++        n->max = max;
++        n->next = r;
++        n->prev = r->prev;
++        n->prev->next = n;
++        r->prev = n;
++
++        return head;
++     }
+ 
+    /* Update min / max values */
+    if (min < r->min)
