@@ -15,4 +15,4 @@ newdepend ">=kde-base/kdebase-3.0"
 
 LICENSE="ksplash-ml"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
