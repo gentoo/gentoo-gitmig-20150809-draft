@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.187 2005/01/05 11:35:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.188 2005/01/06 00:54:11 eradicator Exp $
+
+  05 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  xine-lib-1_rc6-r1.ebuild:
+  Stable sparc for security fix.
 
 *xine-lib-1_rc8 (05 Jan 2005)
 
