@@ -1,0 +1,19 @@
+# ChangeLog for app-sci/otter
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/otter/ChangeLog,v 1.1 2003/05/16 09:54:21 george Exp $
+
+*otter-3.2.ebuild (16 May 2003)
+
+  16 May 2003; George Shapovalov <george@gentoo.org> Manifest, otter-3.2.ebuild, files/{digest-otter-3.2} :
+  initial release (#19036)
+  
+  Otter is designed to prove theorems
+  stated in first-order logic with equality. Otter's inference rules are based on
+  resolution and paramodulation, and it includes facilities for term rewriting,
+  term orderings, Knuth-Bendix completion, weighting, and strategies for directing
+  and restricting searches for proofs. Otter can also be used as a symbolic
+  calculator and has an embedded equational programming system. Otter is a
+  fourth-generation Argonne National Laboratory deduction system whose ancestors
+  (dating from the early 1960s) include the TP series, NIUTP, AURA, and ITP.
+  
+  ebuild submitted by Meghan Claire Pike <s0199782@sms.ed.ac.uk>
