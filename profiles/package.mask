@@ -211,6 +211,7 @@ x11-misc/med
 =x11-libs/openmotif-2.1.30-r2
 =x11-libs/openmotif-2.1.30-r3
 =x11-libs/lesstif-0.93.91
+=x11-libs/lesstif-0.93.94
 
 # <hanno@gentoo.org> (7 Oct 2003)
 # Old and broken cvs-releases of sidplay, to be removed soon.
