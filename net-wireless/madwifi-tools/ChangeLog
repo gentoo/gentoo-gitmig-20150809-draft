@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/madwifi-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-tools/ChangeLog,v 1.4 2005/01/08 01:04:21 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-tools/ChangeLog,v 1.5 2005/01/19 13:24:09 solar Exp $
+
+  19 Jan 2005; <solar@gentoo.org> madwifi-tools-0.1_pre20050106.ebuild,
+  madwifi-tools-0.1_pre20050107.ebuild:
+  - added a sed expression to a src_unpack as per bug #78586
 
 *madwifi-tools-0.1_pre20050107 (07 Jan 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-tools/madwifi-tools-0.1_pre20050106.ebuild,v 1.1 2005/01/06 21:26:50 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-tools/madwifi-tools-0.1_pre20050106.ebuild,v 1.2 2005/01/19 13:24:09 solar Exp $
 
 # cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/madwifi co madwifi
 
@@ -22,6 +22,11 @@ pkg_setup() {
 	use x86 && TARGET=i386-elf
 	use amd64 && TARGET=x86_64-elf
 	export TARGET
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	sed -i -e 's/err(1, ifr.ifr_name);/err(1, "%s", ifr.ifr_name);'/g tools/athstats.c
 }
 
