@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/qcad
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.11 2003/10/21 03:09:28 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.12 2003/11/04 10:18:07 phosphan Exp $
 
   21 Oct 2003; Brandy Westcott brandy@gentoo.org qcad-2.0.1.0.ebuild:
   Added patch to allow qcad to compile using CXXFLAGS
@@ -16,13 +16,6 @@
 
   02 Oct 2003; Markus Nigbur <pyrania@gentoo.org> qcad-2.0.0.8.ebuild:
   Bump
-
-*qcad-2.0.1.0 (10 Oct 2003)
-
-  10 Oct 2003; Patrick Kursawe <phosphan@gentoo.org> qcad-2.0.1.0.ebuild:
-  Version bump. Moved some stuff from compile to unpack where it belongs, had to
-  remove the line setting QTDIR from build.sh, looks like an upstream mistake.
-  Tried to report, but the developer's mailbox was full.
 
 *qcad-2.0.0.1 (24 Sep 2003)
 
