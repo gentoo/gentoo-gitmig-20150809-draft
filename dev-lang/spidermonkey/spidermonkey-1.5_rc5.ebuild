@@ -1,6 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5_rc5.ebuild,v 1.1 2003/02/24 01:59:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5_rc5.ebuild,v 1.2 2003/06/23 19:53:34 vapier Exp $
+
+inherit gcc flag-o-matic
+[ "`gcc-fullversion`" == "3.2.2" ] && replace-flags -march=pentium4 -march=pentium3
 
 MY_PV="${PV/_/-}"
 DESCRIPTION="Stand-alone JavaScript C library"
