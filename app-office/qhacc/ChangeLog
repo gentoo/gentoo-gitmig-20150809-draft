@@ -1,6 +1,10 @@
 # ChangeLog for app-office/qhacc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.15 2004/10/11 23:01:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.16 2004/10/14 00:21:47 carlo Exp $
+
+  14 Oct 2004; Carsten Lohrke <carlo@gentoo.org>
+  +files/qhacc-3.2.1-sandbox.patch, qhacc-3.2.1.ebuild:
+  lovely sandbox access violations
 
   12 Oct 2004; Carsten Lohrke <carlo@gentoo.org> qhacc-3.2.1.ebuild:
   removed stale xml use flag
