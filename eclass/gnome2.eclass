@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.43 2004/07/11 13:50:52 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.44 2004/07/23 04:52:37 obz Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
 # Spidler <spider@gentoo.org>
 
-inherit libtool gnome.org
-inherit debug
+inherit libtool gnome.org debug
 
 # Gnome 2 ECLASS
 ECLASS="gnome2"
