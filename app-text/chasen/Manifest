@@ -1,3 +1,5 @@
-MD5 503d486df25d35d7a94d120fef540102 chasen-2.3.1.ebuild 885
 MD5 bfab4c262ab39f881c5bbee57877f60c ChangeLog 433
+MD5 503d486df25d35d7a94d120fef540102 chasen-2.3.1.ebuild 885
+MD5 42f1c2a2d6e1296c487b7cc208ba28a1 chasen-2.3.2.ebuild 802
 MD5 11066d49d1667caec48a7aa7d6e3ee68 files/digest-chasen-2.3.1 64
+MD5 4aa3b5067500496ae232c11150b1d446 files/digest-chasen-2.3.2 64
