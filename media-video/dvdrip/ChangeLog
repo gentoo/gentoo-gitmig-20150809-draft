@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.17 2003/05/11 02:29:44 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.18 2003/05/17 11:34:42 mholzer Exp $
+
+*dvdrip-0.50.12 (17 May 2003)
+
+  17 May 2003; Martin Holzer <mholzer@gentoo.org> dvdrip-0.50.12.ebuild:
+  Version bumped. Closes #20269
 
   10 May 2003; <jrray@gentoo.org> dvdrip-0.50.10.ebuild:
   Adding runtime dependency on sys-apps/eject.

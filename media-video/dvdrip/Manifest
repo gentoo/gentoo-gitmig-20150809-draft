@@ -1,5 +1,7 @@
 MD5 9fa7c1518046c870254bcb488ddbc08c ChangeLog 3653
 MD5 298c717ac9976e641daac670d080af0f dvdrip-0.50.10.ebuild 1395
+MD5 298c717ac9976e641daac670d080af0f dvdrip-0.50.12.ebuild 1395
 MD5 73893764cda64cadc12e3a5ec2939a3e dvdrip-0.50.4.ebuild 1193
 MD5 e12f4df5bd1ec3bc82b7c01ae4242434 files/digest-dvdrip-0.50.10 72
+MD5 61198703c7e173468190a49aff3009e5 files/digest-dvdrip-0.50.12 72
 MD5 304ecfdbbd87ef70b19bfbb8e64deb62 files/digest-dvdrip-0.50.4 71
