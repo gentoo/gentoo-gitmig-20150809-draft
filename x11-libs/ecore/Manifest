@@ -1,4 +1,14 @@
-MD5 87ef7d3b731c1077c629c9204f52c28f ecore-1.0.0.20040529_pre7.ebuild 859
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 be58682a4825e0125c0eadfa8b2f2c28 ChangeLog 704
+MD5 ab374394f274f2566a580a32e8a92bd7 ecore-1.0.0.20040710_pre7.ebuild 857
 MD5 f37911494b2f19fda2bf5b9d9a17f1e4 metadata.xml 611
-MD5 95cadcb4c3dd0355efc5f00c8ddb216f files/digest-ecore-1.0.0.20040529_pre7 79
+MD5 13e7269dff3d2db07e71a48b56f69328 files/digest-ecore-1.0.0.20040710_pre7 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA8iFIHTu7gpaalycRAk3ZAJ0Zu1LAqXyb2ludCX6u1Y0l0IlCngCeLRsO
+cMeXUv+xWetLx37dVDKqTek=
+=M9Rd
+-----END PGP SIGNATURE-----
