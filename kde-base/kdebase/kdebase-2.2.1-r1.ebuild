@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.1-r1.ebuild,v 1.5 2001/11/04 19:01:40 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.1-r1.ebuild,v 1.6 2001/11/13 17:02:46 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
@@ -61,5 +61,7 @@ src_install() {
     mv kdmrc kdmrc.orig
     sed -e 's/SessionTypes=/SessionTypes=xsession,/' kdmrc.orig > kdmrc
     rm kdmrc.orig
+    
+    dodir ${KDEDIR}/share/templates/.source/emptydir
   
 }
