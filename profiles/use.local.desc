@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.694 2004/10/23 15:19:48 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.695 2004/10/24 00:44:50 langthang Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -481,6 +481,7 @@ net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support
 net-libs/libvncserver:no24bpp - disable 24bpp support
 net-libs/libvncserver:nobackchannel - disable backchannel support
 net-mail/cyrus-imapd:drac - Enable dynamic relay support in the cyrus imap server
+net-mail/cyrus-imapd:idled - Enable idled vs poll IMAP IDLE method
 net-mail/dovecot:nopop3d - Do not build pop3d support
 net-mail/dovecot:vpopmail - Add vpopmail support
 net-mail/qpopper:mailbox - Enables mail spool file is in home directory ~/Mailbox
