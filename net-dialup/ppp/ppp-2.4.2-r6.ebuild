@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r5.ebuild,v 1.1 2004/09/27 11:49:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r6.ebuild,v 1.1 2004/10/14 08:08:21 dragonheart Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="ipv6 activefilter pam atm mppe-mppc dhcp"
 
 RDEPEND="virtual/libc
-	activefilter? ( <=net-libs/libpcap-0.7.2-r1 )
+	activefilter? ( >=net-libs/libpcap-0.8.3-r1 )
 	atm? ( net-dialup/linux-atm )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
@@ -71,6 +71,8 @@ src_unpack() {
 		sed -i -e 's/SUBDIRS := rp-pppoe/SUBDIRS := rp-pppoe dhcp/' pppd/plugins/Makefile.linux || die
 		sed -i -e "s/-O2/${CFLAGS}/" pppd/plugins/dhcp/Makefile.linux
 	}
+
+	sed -i -e "s:net/bpf.h:pcap-bpf.h:" pppd/sys-linux.c pppd/demand.c pppd/plugins/rp-pppoe/if.c
 }
 
 src_compile() {
