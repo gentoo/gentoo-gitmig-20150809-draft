@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/net-www/apache/apache-1.3.24-r2.ebuild,v 1.4 2002/06/03 02:58:05 lamer Exp
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.24-r6.ebuild,v 1.2 2002/06/19 05:16:21 seemant Exp $
 
 mod_ssl_ver=2.8.8-${PV}
 HARD_SERVER_LIMIT=512
