@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.1 2004/08/08 07:46:48 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.2 2004/08/14 01:36:02 weeve Exp $
 
 IUSE="debug doc glade gnome opengl svg"
 
@@ -21,7 +21,7 @@ DEPEND=">=x11-libs/gtk+-2.4*
 		>=x11-libs/gtkglarea-1.9* )"
 
 SLOT="2"
-KEYWORDS="-amd64 ~x86 ~ppc ~alpha ~ia64"
+KEYWORDS="-amd64 ~x86 ~ppc ~alpha ~ia64 ~sparc"
 
 src_compile() {
 	use gnome || myconf="$myconf
