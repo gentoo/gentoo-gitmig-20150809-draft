@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.13 2003/07/29 02:42:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.14 2003/08/05 09:45:13 usata Exp $
 
 *mew-3.3 (29 Jul 2003)
 
@@ -57,6 +57,11 @@
   mew-3.1.ebuild, files/digest-mew-3.1:
 
   Version bump.
+
+*mew-2.3 (05 Aug 2003)
+
+  05 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> mew-2.3.ebuild:
+  Stable version bump
 
 *mew-2.2 (31 Oct 2002)
 
