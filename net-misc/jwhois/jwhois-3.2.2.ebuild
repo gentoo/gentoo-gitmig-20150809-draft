@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/jwhois-3.2.2.ebuild,v 1.14 2004/07/17 16:54:05 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/jwhois-3.2.2.ebuild,v 1.15 2004/07/30 04:06:18 vapier Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="Advanced Internet Whois client capable of recursive queries"
 HOMEPAGE="http://www.gnu.org/software/jwhois/"
@@ -13,6 +15,12 @@ KEYWORDS="x86 ppc sparc ~mips alpha arm hppa amd64 ia64 ppc64"
 IUSE="nls"
 
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	gnuconfig_update
+}
 
 src_compile() {
 	econf \
