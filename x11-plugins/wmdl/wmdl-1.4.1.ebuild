@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdl/wmdl-1.4.1.ebuild,v 1.4 2003/10/16 16:10:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdl/wmdl-1.4.1.ebuild,v 1.5 2004/01/04 12:54:55 aliz Exp $
 
 S="${WORKDIR}/${P}"
 
@@ -16,22 +16,15 @@ DEPEND="virtual/glibc
 	virtual/x11"
 
 src_unpack() {
-
-	unpack ${A}
-	cd ${S}
-	patch -p1 < ${FILESDIR}/makefile.diff || die "patch failed"
+	unpack ${A} ; cd ${S}
+	epatch ${FILESDIR}/makefile.diff
 
 }
 
 src_compile() {
-
 	make || die "parallel make failed"
-
 }
 
 src_install() {
-
-	cd ${S}
 	dobin wmdl
-
 }
