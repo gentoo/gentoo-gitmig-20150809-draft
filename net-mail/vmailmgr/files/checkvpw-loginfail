@@ -1,0 +1,3 @@
+#!/bin/sh
+#rate limit password fails
+sleep 2
