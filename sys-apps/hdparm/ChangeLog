@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.28 2003/08/26 18:05:41 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.29 2003/08/28 11:03:57 joker Exp $
+
+  28 Aug 2003; Christian Birchinger <joker@gentoo.org> hdparm-5.4.ebuild:
+  Added sparc stable keyword
 
   26 Aug 2003; Heinrich Wendel <lanius@gentoo.org> files/hdparm-new-init:
   bug #27282
