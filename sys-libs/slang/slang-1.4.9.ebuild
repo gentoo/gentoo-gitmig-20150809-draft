@@ -1,19 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9.ebuild,v 1.6 2003/09/17 22:47:01 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9.ebuild,v 1.7 2003/10/08 20:43:46 liquidx Exp $
 
 inherit gcc
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console display library used by most text viewer"
-SRC_URI="ftp://ftp.jedsoft.org/pub/davis/slang/v1.4/${P}.tar.bz2"
-LICENSE="GPL-2 | Artistic"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64 ia64"
-SLOT="0"
 HOMEPAGE="http://space.mit.edu/~davis/slang/"
+SRC_URI="ftp://ftp.jedsoft.org/pub/davis/slang/v1.4/${P}.tar.bz2"
+
+LICENSE="GPL-2 | Artistic"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64 ia64"
+SLOT="0"
+IUSE="cjk"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
-IUSE="cjk"
 
 src_compile() {
 	if [ -n "`use cjk`" ]
