@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.10 2001/06/11 03:40:20 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.11 2001/06/11 03:41:55 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -35,8 +35,6 @@ src_install()
 	dodir /usr/lib
 	dodir /usr/sbin
 	dosbin ${FILESDIR}/MAKEDEV ${FILESDIR}/run-crons
-	dodir /dev
-  	dodir /dev-state
 	dodir /usr/share/man /usr/share/info /usr/share/doc /usr/share/misc /usr/bin/
 
 #FHS 2.1 stuff
@@ -113,17 +111,20 @@ src_install()
 	insinto /usr/bin
 	insopts -m0755
 	doins colors
-	#dodir /dev
+  	dodir /dev
+	dodir /dev-state
+	#dodir /dev/pts /dev/shm
+	#dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
 	#cd ${D}/dev
 	#MAKEDEV generic-i386
-    #    MAKEDEV sg
-    #    MAKEDEV scd
-    #    MAKEDEV rtc 
-	#	MAKEDEV audio
-	#	MAKEDEV hde
-	#	MAKEDEV hdf
-	#	MAKEDEV hdg
-	#	MAKEDEV hdh
+    #MAKEDEV sg
+    #MAKEDEV scd
+    #MAKEDEV rtc 
+	#MAKEDEV audio
+	#MAKEDEV hde
+	#MAKEDEV hdf
+	#MAKEDEV hdg
+	#MAKEDEV hdh
 	cd ${D}/etc/rc.d/config
 	cp runlevels runlevels.orig
 	sed -e 's:##OSNAME##:Gentoo Linux:g' -e "s:##ARCH##:${CHOST%%-*}:g" runlevels.orig > runlevels
