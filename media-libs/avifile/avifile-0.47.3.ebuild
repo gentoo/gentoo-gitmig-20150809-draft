@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avifile/avifile-0.47.3.ebuild,v 1.1 2000/09/19 01:19:46 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avifile/avifile-0.47.3.ebuild,v 1.2 2000/10/05 20:45:06 achim Exp $
 
 A="${P}.tar.gz binaries.zip"
 S=${WORKDIR}/${P}
@@ -21,6 +21,7 @@ src_unpack () {
 
     cp configure configure.orig
     sed -e "s:/usr/lib/win32:$WIN32:" configure.orig > configure
+
 
     cd ${S}/lib/loader
 
@@ -45,6 +46,9 @@ src_compile() {
 
     cd ${S}
     try ./configure --prefix=/usr/X11R6 --host=${CHOST} 
+    cp Makefile Makefile.orig
+    sed -e "s:/usr/libexec/avifile/win32:${D}/usr/libexec/avifile/win32:" \
+	Makefile.orig > Makefile
     try make
     cd xmps-avi-plugin
     try make
@@ -55,14 +59,16 @@ src_install () {
 
     cd ${S}
     dodir /usr/X11R6/lib /usr/X11R6/bin
-    try make prefix=${D}/usr/X11R6 install
+    dodir /usr/libexec/avifile/win32
+
+    make prefix=${D}/usr/X11R6 install
 
     cd xmps-avi-plugin
     insinto /usr/X11R6/lib/xmps/Codecs
     insopts -m755
     doins libavi.so
 
-    dodir /usr/libexec/avifile/win32
+
     cd ${D}/usr/libexec/avifile/win32
     unzip ${DISTDIR}/binaries.zip
     cd ${S}
