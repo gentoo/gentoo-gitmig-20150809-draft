@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.1_beta2.ebuild,v 1.1 2004/09/15 21:20:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.1_beta2.ebuild,v 1.2 2004/09/22 17:54:06 eradicator Exp $
+
+IUSE="cjk gstreamer xmms opengl xine arts"
 
 inherit kde eutils
 
@@ -16,7 +18,6 @@ SLOT="0"
 
 # ppc: please test out libvisual!
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="cjk gstreamer xmms opengl xine"
 
 DEPEND="!ppc? ( >=media-libs/libvisual-0.1.6 )
 	arts? ( >=kde-base/kdemultimedia-3.2 )
