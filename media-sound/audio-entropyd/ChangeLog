@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audio-entropyd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.4 2004/04/02 22:42:38 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.5 2004/04/08 00:39:58 pebenito Exp $
+
+  07 Apr 2004; Chris PeBenito <pebenito@gentoo.org>
+  audio-entropyd-0.0.6.ebuild:
+  Add SELinux policy RDEP
 
   02 Apr 2004; Joshua Brindle <method@gentoo.org> audio-entropyd-0.0.6.ebuild,
   files/audio-entropyd.init:
