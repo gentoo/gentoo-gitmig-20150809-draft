@@ -1,7 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gupsc/gupsc-0.3.1-r1.ebuild,v 1.7 2002/10/04 06:11:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gupsc/gupsc-0.3.1-r1.ebuild,v 1.8 2002/11/07 16:36:47 foser Exp $
 
+IUSE=""
 S=${WORKDIR}/${P}
 DESCRIPTION="A Gnome client for the Network UPS Tools (nut)"
 SRC_URI="http://www.stud.ifi.uio.no/~hennikul/gupsc/download/${P}.tar.bz2"
@@ -12,16 +13,16 @@ SLOT="0"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1"
 
+src_compile() {             
+	# nls sandboxes              
+	econf --disable-nls || die
 
-src_compile() {                           
-  ./configure --host=${CHOST} --prefix=/usr || die
-  emake || die
+	emake || die
 }
 
 src_install() {                               
-  make DESTDIR=${D} install || die
-
-  dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	make DESTDIR=${D} install || die
+	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
 
 
