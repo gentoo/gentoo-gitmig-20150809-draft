@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.3.0_rc1.ebuild,v 1.3 2003/07/19 20:50:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.3.0_rc1.ebuild,v 1.4 2003/07/24 21:32:19 george Exp $
 
 inherit base flag-o-matic
 
 DESCRIPTION="Orbital Reconstruction, Simulation and Analysis"
 HOMEPAGE="http://orsa.sourceforge.net/"
-SRC_URI="mirror://sourceforge/orsa/${PN}_${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/orsa/${PN}-${PV/_/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 	x11-libs/qt
 	sys-libs/readline"
 
-S=${WORKDIR}/${PN}_${PV}
+S=${WORKDIR}/${PN}-${PV/_/-}
 
 replace-flags k6-3 i586
 replace-flags k6-2 i586
