@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-2.20-r1.ebuild,v 1.3 2004/08/19 02:08:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-2.20-r1.ebuild,v 1.4 2004/10/13 23:25:30 usata Exp $
 
 inherit latex-package
 
@@ -14,8 +14,7 @@ KEYWORDS="x86 alpha ppc ~amd64 ~sparc"
 
 IUSE=""
 
-DEPEND="virtual/tetex
-	>=dev-tex/pgf-0.61
+DEPEND=">=dev-tex/pgf-0.61
 	>=dev-tex/xcolor-1.10"
 S="${WORKDIR}/beamer"
 
