@@ -1,10 +1,18 @@
 # ChangeLog for net-www/netscape
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/ChangeLog,v 1.1 2002/04/10 01:20:10 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/ChangeLog,v 1.2 2002/04/29 03:36:35 jnelson Exp $
 
+*netscape-communicator-4.79-r1 (28 Apr 2002)
+
+  28 Apr 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog, 
+   netscape-communicator-4.79-r1.ebuild  :
+   
+  When unpacking .nif files, make sure to use --no-same-owner
+  so they are unpacked as root.
+  
 *netscape-communicator-4.79 (9 Apr 2002)
 
-  1 Feb 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog, 
+  9 Apr 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog, 
    netscape-communicator-4.79.ebuild  :
    
   The grand re-naming of netscape to netscape-communicator
