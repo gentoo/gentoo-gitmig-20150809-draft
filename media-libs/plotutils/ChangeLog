@@ -1,6 +1,12 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.1 2002/02/11 20:48:45 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.2 2002/04/12 23:53:11 seemant Exp $
+
+*plotutils-2.4.1-r1 (12 Apr 2002)
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> plotutils-2.4.1-r1.ebuild :
+
+  Compile against newest libpng
 
 *plotutils-2.4.1 (11 Feb 2002)
 
