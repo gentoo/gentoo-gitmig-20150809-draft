@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.16 2004/10/22 17:43:54 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.17 2004/10/23 13:29:46 kloeri Exp $
+
+  23 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> fxruby-1.2.2.ebuild:
+  ~alpha keyword.
 
 *fxruby-1.2.2 (22 Oct 2004)
 
