@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3-r1.ebuild,v 1.5 2005/02/27 11:52:39 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3-r1.ebuild,v 1.6 2005/02/28 23:20:35 mr_bones_ Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache
 
@@ -141,7 +141,7 @@ src_install () {
 	PYTHON_DIR=/usr/lib/python${PYVER}
 
 	make DESTDIR=${D} install || die "Installation of subversion failed"
-	
+
 #	This might not be necessary with the new install
 #	if [[ -e ${D}/usr/lib/apache2 ]]; then
 #		if [ "${APACHE2_MODULESDIR}" != "/usr/lib/apache2/modules" ]; then
