@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.0.ebuild,v 1.3 2003/12/09 00:21:12 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.1-r1.ebuild,v 1.1 2003/12/24 22:45:35 woodchip Exp $
 
 inherit eutils
 
@@ -11,28 +11,34 @@ DESCRIPTION="SAMBA is a suite of SMB and CIFS client/server programs for UNIX"
 HOMEPAGE="http://www.samba.org/
 	http://www.openantivirus.org/projects.php"
 
+SMBLDAP_TOOLS_VER=0.8.2
 VSCAN_VER=0.3.4
-VSCAN_MODS=${VSCAN_MODS:=fprot mks openantivirus sophos trend icap} #kapersky
+VSCAN_MODS=${VSCAN_MODS:=fprot mks openantivirus sophos trend icap clamav} #kapersky
 # To build the "kapersky" plugin, the kapersky lib must be installed.
 
-S=${WORKDIR}/${P}
+_CVS="-${PV/_/}"
+S=${WORKDIR}/${PN}${_CVS}
 
-SRC_URI="mirror://samba/${P}.tar.bz2
-	oav? mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.bz2"
-#	oav? http://www.openantivirus.org/snapshots/${PN}-vscan-${VSCAN_VER}.tar.gz"
+SRC_URI="mirror://samba/${PN}${_CVS}.tar.bz2
+	oav? mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.bz2
+	ldap? http://samba.idealx.org/dist/smbldap-tools-${SMBLDAP_TOOLS_VER}.tgz"
 
-DEPEND="sys-devel/autoconf dev-libs/popt
+_COMMON_DEPS="dev-libs/popt
 	readline? sys-libs/readline
-	kerberos? app-crypt/mit-krb5
+	amd64? ( ) : ( kerberos? ( app-crypt/mit-krb5 ) )
 	mysql? ( dev-db/mysql sys-libs/zlib )
-	xml? ( dev-libs/libxml2 sys-libs/zlib )
 	acl? sys-apps/acl
 	cups? net-print/cups
 	ldap? net-nds/openldap
 	pam? sys-libs/pam
 	python? dev-lang/python"
+DEPEND="sys-devel/autoconf
+	>=sys-apps/sed-4
+	${_COMMON_DEPS}"
+#IDEALX scripts are now using Net::LDAP
+RDEPEND="ldap? dev-perl/perl-ldap ${_COMMON_DEPS}"
 
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~hppa ~amd64 ~ppc64"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -41,26 +47,37 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 
+	# Clean up CVS
+	find . -name .cvsignore | xargs rm -f
+	find . -name CVS | xargs rm -rf
+
 	# Add patch(es)
 	#Next one is from eger@cc.gatech.edu :)
-	epatch ${FILESDIR}/samba-3.0.0-python-setup.patch || die
+	patch -p1 <${FILESDIR}/samba-3.0.0-python-setup.patch || die
 	#Fix for bug #27858
 	if [ "${ARCH}" = "sparc" ]
 	then
 		cd ${S}/source/include
 		epatch ${FILESDIR}/samba-2.2.8-statfs.patch
 	fi
+	#Bug #36200; sys-kernel/linux-headers dependent
+	sed -i -e 's:#define LINUX_QUOTAS_2:#define LINUX_QUOTAS_1:' \
+		${S}/source/smbd/quotas.c
 
 	# For clean docs packaging sake.
-	rm -rf ${S}/examples.bin ; cp -a ${S}/examples ${S}/examples.bin
+	rm -rf ${S}/examples.bin
+	cp -a ${S}/examples ${S}/examples.bin
 
 	# Prep samba-vscan source.
-	if use oav; then
-		cp -a ${WORKDIR}/${PN}-vscan-${VSCAN_VER} ${S}/examples.bin/VFS
+	if use oav
+	then
+		cp -a ${WORKDIR}/${PN}-vscan-${VSCAN_VER} \
+			${S}/examples.bin/VFS
 	fi
 
 	cd ${S}/source
-	./autogen.sh || die
+	echo "Running autoconf ..."
+	autoconf || die
 }
 
 src_compile() {
@@ -94,9 +111,14 @@ src_compile() {
 		#myconf="${myconf} --with-ldapsam" 
 		myconf="${myconf} --without-ldapsam"
 
-	use kerberos \
-		&& myconf="${myconf} --with-ads" \
-		|| myconf="${myconf} --without-ads"
+	if [ "${ARCH}" != "amd64" ]
+	then
+		use kerberos \
+			&& myconf="${myconf} --with-ads" \
+			|| myconf="${myconf} --without-ads"
+	else
+		myconf="${myconf} --without-ads"
+	fi
 
 	use python \
 		&& myconf="${myconf} --with-python=yes" \
@@ -145,12 +167,15 @@ src_compile() {
 
 	# Compile main SAMBA pieces.
 	make everything || die "SAMBA pieces"
-	#make rpctorture
+	make rpctorture || ewarn "rpctorture didnt build"
 
 	# Build selected samba-vscan plugins.
-	if use oav; then
+	if use oav
+	then
 		cd ${S}/examples.bin/VFS/${PN}-vscan-${VSCAN_VER}
-		./configure || die "bad ${PN}-vscan-${VSCAN_VER} ./configure"
+		./configure
+		assert "bad ${PN}-vscan-${VSCAN_VER} ./configure"
+
 		for i in ${VSCAN_MODS}
 		do
 			cd ${S}/examples.bin/VFS/${PN}-vscan-${VSCAN_VER}/$i
@@ -158,20 +183,34 @@ src_compile() {
 			assert "problem building $i vscan module"
 		done
 	fi
+
+	# Build mkntpasswd from the smbldap-tools.
+	if use ldap
+	then
+		cd ${WORKDIR}/smbldap-tools-${SMBLDAP_TOOLS_VER}
+		tar --no-same-owner -zxf mkntpwd.tar.gz
+		cd mkntpwd
+		VISUAL="" make || die "mkntpwd compile problem"
+	fi
+
+	# Build mount.cifs
+	cd ${S}/source
+	gcc ${CFLAGS} client/mount.cifs.c -o bin/mount.cifs
+	assert "mount.cifs compile problem"
 }
 
 src_install() {
 # For testing brokeness of make install
 #	cd source
 #	make DESTDIR=${D} install installmodules install_python
-#	assert "It would be nice if that worked. REALLY worked."
+#	assert "It would be nice if that just worked."
 
 	# Install standard binary files.
 	for i in smbclient net smbspool testparm testprns smbstatus \
 		smbcontrol smbtree tdbbackup nmblookup pdbedit \
 		smbpasswd rpcclient smbcacls profiles ntlm_auth \
 		smbcquotas smbmount smbmnt smbumount wbinfo \
-		debug2html smbfilter talloctort #smbsh editreg
+		debug2html smbfilter talloctort mount.cifs #smbsh editreg
 	do
 		exeinto /usr/bin
 		doexe source/bin/${i}
@@ -189,9 +228,10 @@ src_install() {
 		fi
 	done
 
-	# Installing these two setuid-root allows users to (un)mount smbfs.
+	# Installing these setuid-root allows users to (un)mount smbfs/cifs.
 	fperms 4111 /usr/bin/smbumount
 	fperms 4111 /usr/bin/smbmnt
+	fperms 4111 /usr/bin/mount.cifs
 
 	# Install server binaries.
 	for i in smbd nmbd swat winbindd # wrepld
@@ -224,7 +264,8 @@ src_install() {
 	( cd ${D}/lib ; ln -s libnss_winbind.so libnss_winbind.so.2 )
 
 	# Python extensions.
-	if use python; then
+	if use python
+	then
 		cd source
 		python python/setup.py install --root=${D} || die
 		cd ..
@@ -232,8 +273,12 @@ src_install() {
 
 	# VFS plugin modules.
 	exeinto /usr/lib/samba/vfs
-	use oav && doexe examples.bin/VFS/${PN}-vscan-${VSCAN_VER}/*/vscan-*.so
-	for i in audit extd_audit fake_perms netatalk recycle
+	if use oav
+	then
+		doexe examples.bin/VFS/${PN}-vscan-${VSCAN_VER}/*/vscan-*.so
+	fi
+	for i in audit cap default_quota extd_audit fake_perms \
+		netatalk readonly recycle
 	do
 		if [ -x source/bin/${i}.so ]
 		then
@@ -267,6 +312,22 @@ src_install() {
 		doins ${i}
 	done
 
+	# Install IDEALX scripts for LDAP backend administration.
+	if use ldap; then
+		cd ${WORKDIR}/smbldap-tools-${SMBLDAP_TOOLS_VER}
+		exeinto /usr/share/samba/scripts ; doexe smbldap-*.pl
+		exeinto /usr/sbin ; doexe mkntpwd/mkntpwd
+		insinto /etc/samba ; doins smbldap_conf.pm
+		exeinto /etc/samba ; doexe smbldap_tools.pm
+		eval `perl '-V:installarchlib'`
+		dodir ${installarchlib}
+		dosym /etc/samba/smbldap_conf.pm ${installarchlib}
+		dosym /etc/samba/smbldap_conf.pm /usr/share/samba/scripts
+		dosym /etc/samba/smbldap_tools.pm ${installarchlib}
+		dosym /etc/samba/smbldap_tools.pm /usr/share/samba/scripts
+		cd ${S}
+	fi
+
 	# Install man pages.
 	doman docs/manpages/*
 
@@ -274,11 +335,12 @@ src_install() {
 	# installs them all!  We don't want two copies of
 	# the book or manpages though, so:
 	rm -rf docs/htmldocs/using_samba docs/manpages
-
+	#
 	dodoc COPYING Manifest README Roadmap WHATSNEW.txt
 	docinto full_docs
 	cp -a docs/* ${D}/usr/share/doc/${PF}/full_docs
 	docinto examples
+	dodoc ${FILESDIR}/nsswitch.conf-{wins,winbind}
 	cp -a examples/* ${D}/usr/share/doc/${PF}/examples
 	prepalldocs
 	# and we should unzip the html docs..
@@ -289,6 +351,12 @@ src_install() {
 		cd ${WORKDIR}/${PN}-vscan-${VSCAN_VER}
 		dodoc AUTHORS COPYING ChangeLog FAQ INSTALL NEWS README TODO
 		dodoc */*.conf
+		cd ${S}
+	fi
+	if use ldap; then
+		docinto smbldap-tools-${SMBLDAP_TOOLS_VER}
+		cd ${WORKDIR}/smbldap-tools-${SMBLDAP_TOOLS_VER}
+		dodoc CONTRIBUTORS COPYING ChangeLog FILES INFRA INSTALL README TODO
 		cd ${S}
 	fi
 	chown -R root:root ${D}/usr/share/doc/${PF}
@@ -305,20 +373,10 @@ src_install() {
 	fi
 
 	# Now the config files.
-	if use ldap; then
-		insinto /etc/openldap/schema
-		doins examples/LDAP/samba.schema
-	fi
-
 	insinto /etc
-	dodoc ${FILESDIR}/nsswitch.conf-winbind
-	doins ${FILESDIR}/nsswitch.conf-wins
-
 	insinto /etc/samba
 	doins ${FILESDIR}/smbusers
-
-	# need to update this one!!
-	doins ${FILESDIR}/smb.conf.example
+	newins ${FILESDIR}/smb.conf.example-samba3 smb.conf.example
 	doins ${FILESDIR}/lmhosts
 	doins ${FILESDIR}/recycle.conf
 
@@ -328,11 +386,15 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/samba-init samba
-	# hmmm
 	newexe ${FILESDIR}/winbind-init winbind
 
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/swat.xinetd swat
+
+	if use ldap; then
+		insinto /etc/openldap/schema
+		doins examples/LDAP/samba.schema
+	fi
 }
 
 pkg_postinst() {
@@ -346,6 +408,7 @@ pkg_postinst() {
 	install -m0700 -o root -g root -d ${ROOT}/etc/samba/private
 	install -m1777 -o root -g root -d ${ROOT}/var/spool/samba
 	install -m0755 -o root -g root -d ${ROOT}/var/log/samba
+	install -m0755 -o root -g root -d ${ROOT}/var/log/samba3
 	install -m0755 -o root -g root -d ${ROOT}/var/run/samba
 	install -m0755 -o root -g root -d ${ROOT}/var/cache/samba
 	install -m0755 -o root -g root -d ${ROOT}/var/lib/samba/{netlogon,profiles}
