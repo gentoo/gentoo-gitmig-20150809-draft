@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/ChangeLog,v 1.1 2002/04/26 20:03:43 tod Exp $
+
+*hercules-2.15 ( 26 Apr 2002 )
+
+  26 Apr 2002; Tod Neidt <tod@gentoo.org> hercules-2.15.ebuild :
+ 
+  Initial commit. Ebuild submitted by Todd Wright.
