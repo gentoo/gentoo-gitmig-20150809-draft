@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.39 2003/12/02 17:17:27 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.40 2003/12/04 12:58:04 joker Exp $
+
+  04 Dec 2003; Christian Birchinger <joker@gentoo.org>
+  sparc-sources-2.4.23.ebuild:
+  Marked stable
+
+  04 Dec 2003; Christian Birchinger <joker@gentoo.org>
+  sparc-sources-2.4.22.ebuild:
+  Moved do_brk patch below kernel_src_unpack because kernel_src_unpack needs the
+  patchdir as current dir and not the kernel source tree. This made epatch fail.
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org> sparc-sources-2.4.22.ebuild:
   fix do_brk vuln... again ;)

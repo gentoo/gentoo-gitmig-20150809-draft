@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.22.ebuild,v 1.7 2003/12/02 17:17:27 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.22.ebuild,v 1.8 2003/12/04 12:58:04 joker Exp $
 
 IUSE="build ultra1"
 
@@ -39,9 +39,10 @@ src_unpack() {
 	mv linux-${OKV} linux-${KV} || die "Error moving kernel source tree to linux-${KV}"
 	cd ${KV} || die "Unable to cd into ${KV}"
 
-	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
-
 	kernel_src_unpack
+
+	# Security FIX
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 
 	# Patch the HME driver only on Ultra1 machines.
 	use ultra1 && epatch ${FILESDIR}/U1-hme-lockup.patch

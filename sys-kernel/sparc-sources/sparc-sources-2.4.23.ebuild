@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.23.ebuild,v 1.2 2003/12/01 20:03:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.23.ebuild,v 1.3 2003/12/04 12:58:04 joker Exp $
 
 IUSE="build ultra1"
 
@@ -31,7 +31,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	mirror://gentoo/patches-${KV}.tar.bz2"
 
 S=${WORKDIR}/linux-${KV}
-KEYWORDS="~x86 -ppc ~sparc"
+KEYWORDS="~x86 -ppc sparc"
 SLOT="${KV}"
 
 src_unpack() {
