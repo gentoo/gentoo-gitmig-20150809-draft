@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.10.0.ebuild,v 1.2 2005/03/11 20:45:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.10.0.ebuild,v 1.3 2005/03/16 19:38:03 joem Exp $
 
 inherit gnome2 eutils
 
@@ -14,7 +14,7 @@ IUSE="alsa gstreamer"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
-RDEPEND=">=x11-libs/gtk+-2.4
+RDEPEND=">=x11-libs/gtk+-2.6
 	>=dev-libs/glib-2.5
 	virtual/xft
 	media-libs/fontconfig
