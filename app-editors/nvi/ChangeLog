@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.11 2003/08/18 07:38:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.12 2003/08/28 23:05:36 robbat2 Exp $
+
+  28 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> nvi-1.81.5-r1.ebuild:
+  db issues fixed thanks to patch from yakina, on bug #23575
 
 *nvi-1.81.5-r1 (18 Aug 2003)
 
