@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedutils/schedutils-1.1.0.ebuild,v 1.7 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedutils/schedutils-1.1.0.ebuild,v 1.8 2003/09/29 07:44:36 genone Exp $
 
 DESCRIPTION="Utilities for manipulating kernel schedular parameters"
 HOMEPAGE="http://tech9.net/rml/schedutils"
@@ -12,7 +12,8 @@ DEPEND="$RDEPEND
 	>=sys-apps/sed-4"
 SLOT="0"
 
-SRC_URI="http://tech9.net/rml/${PN}/${P}.tar.gz"
+SRC_URI="http://tech9.net/rml/${PN}/packages/${PV}/${P}.tar.gz"
+#SRC_URI="http://tech9.net/rml/${PN}/${P}.tar.gz"
 S=${WORKDIR}/${P}
 
 src_unpack() {
