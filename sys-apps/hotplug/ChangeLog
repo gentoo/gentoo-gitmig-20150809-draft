@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/hotplug
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.1 2002/02/25 02:13:12 blocke Exp $
+
+*hotplug-20020114 (24 Feb 2002)
+
+  24 Feb 2002; Bruce A. Locke <blocke@shivan.org> hotplug-20020114.ebuild :
+
+  Hotplug ebuild contributed by folokai@earthlink.net (Scott Worley)
+
