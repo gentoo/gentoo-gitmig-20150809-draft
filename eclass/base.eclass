@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.18 2002/10/25 19:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.19 2003/01/30 17:25:00 danarmak Exp $
 # The base eclass defines some default functions and variables. Nearly everything
 # else inherits from here.
 
@@ -22,9 +22,6 @@ base_src_unpack() {
 	case $1 in
 		unpack)
 			debug-print-section unpack
-			# rather ugly fix - check for usage of kde-patch.eclass
-			[ -n "$PATCH" -a -n "$ORIGPV" -a -n "$DATE" -a -n "$OLDIFS" ] && \
-				A="`echo $A | sed -e s:${PATCH}::g --`"
 			unpack ${A}
 			;;
 		patch)
@@ -41,7 +38,7 @@ base_src_unpack() {
 				patch -p0 < ${x}
 			done
 			;;
-	    all)
+	        all)
 			debug-print-section all
 			base_src_unpack unpack autopatch
 			;;
