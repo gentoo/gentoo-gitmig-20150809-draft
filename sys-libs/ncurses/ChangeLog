@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.30 2003/08/01 13:17:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.31 2003/08/04 19:15:15 agriffis Exp $
+
+*ncurses-5.3-r4 (04 Aug 2003)
+
+  04 Aug 2003; Aron Griffis <agriffis@gentoo.org> ncurses-5.3-r4.ebuild:
+  Need to inherit eutils for gen_usr_ldscript
 
 *ncurses-5.3-r3 (01 Aug 2003)
 
