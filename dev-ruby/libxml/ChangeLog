@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/libxml
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.1 2004/09/02 09:17:56 usata Exp $
+
+*libxml-0.3.4 (02 Sep 2004)
+
+  02 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +libxml-0.3.4.ebuild:
+  Initial import. Ebuild submitted by <evanm@frap.net>, closing bug #56298.
+
