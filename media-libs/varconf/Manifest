@@ -1,7 +1,17 @@
-MD5 2d2067e515f3aecb5d3ed494a8874dfe ChangeLog 949
-MD5 d5f4bb3e93f528767f8a531025aa01e3 varconf-0.5.0.ebuild 649
-MD5 59c476cda4d2cbc00143ced5fceee320 varconf-0.5.4.ebuild 647
-MD5 d5a16bd1d10cee8ceca954b8c6f015ce varconf-0.6.2.ebuild 595
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 363598a5a930c74ce327be999ec06220 varconf-0.5.0.ebuild 653
+MD5 31192d4ede7ef20f7c520de39d6fff6b varconf-0.5.4.ebuild 652
+MD5 6c20422a3b43c670a8ab561ab31cca60 varconf-0.6.2.ebuild 599
+MD5 ce1d027dae3e29a4918a3c2b79745b13 ChangeLog 1103
 MD5 660db26baf676986869aa173c0811512 files/digest-varconf-0.5.0 66
 MD5 be8125d632622f14f5d1a1b6233bf711 files/digest-varconf-0.5.4 66
 MD5 728347745ec5b55123cbe8de60dfc36a files/digest-varconf-0.6.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCA7X0I1lqEGTUzyQRAtngAJ4oLI5KsSwU5CELN0Chod46KfWiuQCfTQmQ
+e6sXEc6C23kqmzt3ddDkfdM=
+=o25Y
+-----END PGP SIGNATURE-----
