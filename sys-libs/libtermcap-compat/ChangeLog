@@ -1,10 +1,12 @@
 # ChangeLog for sys-libs/libtermcap-compat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.1 2002/09/05 06:39:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.2 2002/09/12 10:53:55 murphy Exp $
 
-*libtermcap-compat-1.2.3 (5 Sep 2002)
+*libtermcap-compat-1.2.3 (05 Sep 2002)
 
-  5 Sep 2002; Martin Schlemmer <azarah@gentoo.org> libtermcap-compat-1.2.3.ebuild :
+  12 Sep 2002; Maarten Thibaut <murphy@gentoo.org> libtermcap-compat-1.2.3.ebuild :
+  Added description to ebuild. Added sparc/sparc64 keywords.
 
+  05 Sep 2002; Martin Schlemmer <azarah@gentoo.org> libtermcap-compat-1.2.3.ebuild :
   Initial version.  This is based on Debian's termcap-compat package.
 
