@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.4 2002/05/15 20:30:54 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.5 2002/08/14 19:55:04 stroke Exp $
+
+*gnet-1.1.5 (14 Aug 2002)
+  14 Aug 2002; Gabriele Giorgetti <stroke@gentoo.org> gnet-1.1.5.ebuild :
+  Version bump.
 
 *gnet-1.1.4 (15 May 2002)
   15 MAy 2002; Spider <spider@gentoo.org> gnet-1.1.4.ebuild :
