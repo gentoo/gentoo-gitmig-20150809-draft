@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/skkinput
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/ChangeLog,v 1.3 2002/12/09 04:17:42 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/ChangeLog,v 1.4 2002/12/12 17:10:07 nakano Exp $
+
+*skkinput-2.05.ebuild (13 Dec 2002)
+
+  13 Dec 2002; Masatomo Nakano <nakano@gentoo.org> skkinput-2.06.3.ebuild, files/digest-skkinput-2.05, ChangeLog :
+
+  Version bump.
+	Thanks to matsuu@7501.net (MATSUU Takuto). bugs #12026
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
