@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3527 2005/01/24 18:52:19 ciaranm Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3528 2005/01/24 20:31:09 dragonheart Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,7 +23,7 @@
 
 # <dragonheart@gentoo.org>/<slarti@gbentoo.org> (22 Jan 2005)
 # Masked as it links to the previous version of gnutls installed
-=net-libs/gnutls-1.1.23
+>=net-libs/gnutls-1.1.23
 
 # <motaboy@gentoo.org> (22 Jan 2005)
 # Mask kdebluetooth version as it depends on kitchensync-3.4 that is masked.
