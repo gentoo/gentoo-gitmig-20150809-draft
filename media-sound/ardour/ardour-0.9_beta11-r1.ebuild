@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta11-r1.ebuild,v 1.1 2004/04/02 19:15:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta11-r1.ebuild,v 1.2 2004/04/06 03:06:34 vapier Exp $
 
-IUSE="nls ardour-ksi"
+inherit flag-o-matic
 
 MY_P="${P}.2"
 MY_PV="${PV}.2"
@@ -14,8 +14,7 @@ SRC_URI="http://ardour.org/releases/${MY_P/_/}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-
-S="${WORKDIR}/${MY_P/_/}"
+IUSE="nls ardour-ksi"
 
 DEPEND="dev-util/pkgconfig
 	>=media-libs/liblrdf-0.3.1
@@ -29,11 +28,11 @@ DEPEND="dev-util/pkgconfig
 	>=media-libs/liblrdf-0.3.1
 	>=dev-libs/libxml2-2.5.7
 	=media-libs/libart_lgpl-2.3*"
-
 RDEPEND="nls? ( sys-devel/gettext )"
 
-src_compile() {
+S="${WORKDIR}/${MY_P/_/}"
 
+src_compile() {
 	local myconf="--disable-dependency-tracking --enable-optimize"
 	local myarch
 
@@ -46,6 +45,5 @@ src_compile() {
 
 src_install() {
 	einstall || die "make install failed"
-
 	dodoc DOCUMENTATION/*
 }
