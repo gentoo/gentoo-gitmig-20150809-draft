@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r2.ebuild,v 1.2 2004/06/06 03:48:49 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r2.ebuild,v 1.3 2004/06/15 07:19:35 solar Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~mips ~hppa amd64 ~ia64 ~ppc64 ~s390"
-IUSE="pam selinux nls"
+IUSE="pam selinux nls uclibc"
 
 DEPEND=">=sys-libs/cracklib-2.7-r3
 	pam? ( >=sys-libs/pam-0.75-r4 )
@@ -35,6 +35,9 @@ src_unpack() {
 	cd ${S}
 
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
+
+	# uclibc support, corrects NIS usage
+	use uclibc && epatch ${FILESDIR}/shadow-4.0.4.1-nonis.patch
 
 	# Get su to call pam_open_session(), and also set DISPLAY and XAUTHORITY,
 	# else the session entries in /etc/pam.d/su never get executed, and
