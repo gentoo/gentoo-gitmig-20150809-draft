@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3e1bab88c8f6ecece9ed648e84a3fc99 gift-fasttrack-0.8.8.ebuild 1281
-MD5 45db07b90c5c4620f0b089d3571aa2cf ChangeLog 2860
+MD5 83a6b9de556fec521ada052304e56982 gift-fasttrack-0.8.8.ebuild 1312
+MD5 974125d59b389a526c8f4bbebbd0032f ChangeLog 2968
 MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
-MD5 c8669b29ff171da6d4636103b78f7bd5 gift-fasttrack-0.8.7.ebuild 1278
+MD5 0d5695b3ddc0430e12000c8bdc69e8f5 gift-fasttrack-0.8.7.ebuild 1278
 MD5 7fe83e65e816922369040e11bb27639d files/digest-gift-fasttrack-0.8.7 72
 MD5 5e2f3bebd89dba72788f40546793fed6 files/digest-gift-fasttrack-0.8.8 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBuecRcAgAdbxYsnERAhtmAJ4wpYDAMy/HshulWENyUfSInW5r9wCggjTs
-iXpZu985gTWph2sKsArfv/c=
-=32Xj
+iD8DBQFCAQZ9cAgAdbxYsnERArM8AJ9MWnS+J+oI1BjSAvaFVUTGRjS1XwCfS+UT
+DXdQsSLyzbBeJUQJoFNxm6Y=
+=KCrE
 -----END PGP SIGNATURE-----
