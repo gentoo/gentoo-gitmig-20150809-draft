@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/xcdroast
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.6 2002/04/25 01:42:15 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp $
+
+*xcdroast-0.98_alpha10 (23 Apr 2002)
+
+  4 Jun 2002; Brandon Low <lostlogic@gentoo.org>  xcdroast-0.98_alpha10-r1.ebuild:
+
+  Changed dependency for new version, it don't b0rk now.
 
 *xcdroast-0.98_alpha10 (23 Apr 2002)
 
