@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.15 2003/12/29 00:52:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.16 2004/01/01 03:41:24 azarah Exp $
+
+*udev-012 (01 Jan 2004)
+
+  01 Jan 2004; Martin Schlemmer <azarah@gentoo.org> udev-012.ebuild,
+  files/udev.permissions:
+  Update version. Update udev.permissions (According to changes to Debian config
+  file). Closes bug #36925.
 
   27 Dec 2003; Martin Schlemmer <azarah@gentoo.org> udev-011.ebuild,
   files/udev-011-namedev_c-gcc295-compat.patch:
