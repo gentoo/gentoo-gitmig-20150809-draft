@@ -1,0 +1,11 @@
+# ChangeLog for net-im/gnugadu
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.1 2004/02/07 11:30:46 spock Exp $
+
+*gnugadu-2.0_pre6 (07 Feb 2004)
+
+  07 Feb 2004; Michal Januszewski <spock@gentoo.org> gnugadu-2.0_pre6.ebuild,
+  metadata.xml:
+  Initial commit, closes #39908. Thanks to Andreas Pokorny for submitting the
+  original ebuild.
+
