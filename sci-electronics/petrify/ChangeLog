@@ -1,0 +1,16 @@
+# ChangeLog for app-sci/petrify
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/petrify/ChangeLog,v 1.1 2004/12/27 20:18:22 ribosome Exp $
+
+*petrify-4.2 (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +petrify-4.2.ebuild:
+  Moved from app-sci/petrify to sci-electronics/petrify.
+
+*petrify-4.2 (23 Jul 2004)
+
+  23 Jul 2004; Chris Bainbridge <chrb@gentoo.org> +metadata.xml,
+  +petrify-4.2.ebuild:
+  Submitted by Chris Bainbridge, bug #35465
+
