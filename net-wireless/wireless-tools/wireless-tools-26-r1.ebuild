@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-26-r1.ebuild,v 1.3 2004/07/01 22:41:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-26-r1.ebuild,v 1.4 2004/08/23 02:43:39 tgall Exp $
 
 MY_P=wireless_tools.${PV/_/\.}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A collection of tools to configure wireless lan cards."
 SRC_URI="http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/${MY_P}.tar.gz"
 HOMEPAGE="http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="x86 ppc amd64 ppc64"
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="virtual/libc"
