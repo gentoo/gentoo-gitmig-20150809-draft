@@ -1,0 +1,7 @@
+# ChangeLog for net-zope/coreblog
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/coreblog/ChangeLog,v 1.1 2004/04/18 20:40:55 batlogg Exp $
+
+  18 Apr 2004; Jodok Batlogg <batlogg@gentoo.org>; :
+  user contributed ebuild, thanks to Thomas Geiger <tg@wahuu.at>
+
