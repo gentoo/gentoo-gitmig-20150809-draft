@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r6.ebuild,v 1.2 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r6.ebuild,v 1.3 2003/06/30 02:26:43 pebenito Exp $
 
-IUSE="selinux"
+IUSE=""
 
 inherit eutils libtool gnuconfig
 
@@ -11,8 +11,7 @@ FORCE_SYSTEMAUTH_UPDATE="yes"
 S="${WORKDIR}/${P}"
 HOMEPAGE="http://shadow.pld.org.pl/"
 DESCRIPTION="Utilities to deal with user accounts"
-SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz
-	selinux? mirror://gentoo/${P}-selinux.patch.bz2"
+SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -20,8 +19,7 @@ KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm"
 
 DEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3
-	sys-devel/gettext
-	selinux? ( sys-apps/selinux-small )"
+	sys-devel/gettext"
 	
 RDEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3"
@@ -40,8 +38,7 @@ src_unpack() {
 	# pam_xauth for one, is then never used.  This should close bug #8831.
 	#
 	# <azarah@gentoo.org> (19 Oct 2002)
-	use selinux || epatch ${FILESDIR}/${P}-su-pam_open_session.patch-v2
-	# (selinux doesn't like this patch. may fix later.)
+	epatch ${FILESDIR}/${P}-su-pam_open_session.patch-v2
 
 	# If su should not simulate a login shell, use '/bin/sh' as shell to enable
 	# running of commands as user with /bin/false as shell, closing bug #15015.
@@ -53,9 +50,6 @@ src_unpack() {
 	# Patch the useradd manpage to be a bit more clear, closing bug #13203.
 	# Thanks to Guy <guycad@mindspring.com>.
 	epatch ${FILESDIR}/${P}-useradd-manpage-update.patch
-
-	# Necessary selinux patch
-	use selinux && epatch ${DISTDIR}/${P}-selinux.patch.bz2
 }
 
 src_compile() {
@@ -91,8 +85,7 @@ src_install() {
 	# Do not install this login, but rather the one from
 	# pam-login, as this one have a serious root exploit
 	# with pam_limits in use.
-	# (selinux will use this login for now at least)
-	use selinux || rm ${D}/bin/login
+	rm ${D}/bin/login
 
 	mv ${D}/lib ${D}/usr
 	dosed "s:/lib':/usr/lib':g" /usr/lib/libshadow.la
@@ -144,8 +137,7 @@ src_install() {
 	
 	# Dont install the manpage, since we dont use
 	# login with shadow
-	# (selinux does, so we install the man pages in that case)
-	use selinux || rm -f ${D}/usr/share/man/man1/login.*
+	rm -f ${D}/usr/share/man/man1/login.*
 	# We use pam, so this is not applicable.
 	rm -f ${D}/usr/share/man/man5/suauth.*
 	
