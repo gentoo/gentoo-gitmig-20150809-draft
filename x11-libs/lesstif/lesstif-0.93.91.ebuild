@@ -53,13 +53,13 @@ src_install() {
 	einfo "Fixing libraries"
 	dodir /usr/X11R6/lib/lesstif
 	mv ${D}/usr/lib/lib* ${D}/usr/X11R6/lib/lesstif
+	cd ${D}/usr/X11R6/lib
 
 	for lib in libMrm.so.1 libMrm.so.1.0.2 \
 		libUil.so.1 libUil.so.1.0.2 \
 		libXm.so.1  libXm.so.1.0.2
 	do
-		dosym "/usr/X11R6/lib/lesstif/${lib}"\
-			"/usr/X11R6/lib/${lib}"
+		ln -s "lesstif/${lib}" .
 	done
 	rm -fR ${D}/usr/lib
 
