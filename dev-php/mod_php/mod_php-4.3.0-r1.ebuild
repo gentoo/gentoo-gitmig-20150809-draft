@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0-r1.ebuild,v 1.1 2003/01/06 18:19:16 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0-r1.ebuild,v 1.2 2003/01/08 16:58:37 rphillips Exp $
 
 IUSE="apache2 freetype postgres tiff libwww nls jpeg ssl gd oci8 mysql X gdbm curl imap png xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Apache module for PHP"
 SRC_URI="http://us3.php.net/distributions/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.php.net/"
 LICENSE="PHP"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 sparc"
 SLOT="0"
 PROVIDE="virtual/php"
 
@@ -30,9 +30,9 @@ DEPEND="
 	qt? ( x11-libs/qt )
 	nls? ( sys-devel/gettext )
 	pam? ( >=sys-libs/pam-0.75 )
-	xml? ( >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.95-r1 )
+	xml? ( >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.96 )
 	ssl? ( >=dev-libs/openssl-0.9.5 )
-	curl? ( >=net-ftp/curl-7.8.1 )
+	curl? ( >=net-ftp/curl-7.10.2 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
 	imap? ( >=net-mail/uw-imap-2001a-r1 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
