@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.46 2003/03/08 20:46:19 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.47 2003/03/23 22:05:42 agenkin Exp $
+
+*xine-lib-1_beta9 (23 Mar 2003)
+
+  23 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump.
+
+*xine-lib-0.9.13-r3 (23 Mar 2003)
+
+  23 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Fixed installation problem for portage >=2.0.47 (bug #16841).
 
 *xine-lib-1_beta8 (08 Mar 2003)
 
