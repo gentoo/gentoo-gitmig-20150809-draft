@@ -1,10 +1,16 @@
-MD5 dee38b0bca68f33be5f2e3d19d74b3e2 mythweather-0.14.ebuild 997
-MD5 d2a306002050d184d36163d083539c57 mythweather-0.16.ebuild 555
-MD5 0b8fe25eba8010822d3422d17b63ef4e mythweather-0.13.ebuild 983
-MD5 d3497fd47330d12420589ec1e6145dd7 mythweather-0.15.ebuild 998
-MD5 82101297601c9bee92360c36224f3984 ChangeLog 3016
-MD5 20e2255501865de5b568424821abf69d metadata.xml 161
-MD5 ea775d05013e97dd4c419804de2ed3b6 files/digest-mythweather-0.13 69
-MD5 1ab52ed2da7b97e38a6f31621371a400 files/digest-mythweather-0.14 69
-MD5 acf4a287fc12a8d0a64dc92ac04c4522 files/digest-mythweather-0.15 69
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
+MD5 38fa1900a95e6acc60b890180415fe26 mythweather-0.16.20050119.ebuild 592
+MD5 7f07fb65afb42930c51b01aa2ab0a2d2 ChangeLog 3316
+MD5 c2b08b63ffd5c2cf43d7c2c6b1908dde mythweather-0.16.ebuild 557
+MD5 87a09b93794c2ace4b5cfaec78934fee files/digest-mythweather-0.16.20050119 78
 MD5 282988e8e7273758479d38c84587cab5 files/digest-mythweather-0.16 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB72sC5+pdB4IBr0URAiXPAKCyj6+Yl9L84+sQnQF8IH5iNBqcNwCgiRPn
+XZ6htM9oXRlO/K3yXB5ggfM=
+=BSsY
+-----END PGP SIGNATURE-----
