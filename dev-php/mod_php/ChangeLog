@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.144 2004/05/13 16:40:52 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.145 2004/05/18 22:15:01 stuart Exp $
+
+  18 May 2004; Stuart Herbert <stuart@gentoo.org> :
+  Added digest for hardened-php patch
 
   13 May 2004; Michael McCabe <randy@gentoo.org> mod_php-4.3.6-r1.ebuild:
   Added s390 keywords
