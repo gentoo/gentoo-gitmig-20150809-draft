@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ode/ode-0.035-r1.ebuild,v 1.1 2003/06/24 05:02:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ode/ode-0.035-r1.ebuild,v 1.2 2003/06/24 08:20:55 george Exp $
 
 inherit flag-o-matic
 
@@ -19,6 +19,7 @@ DEPEND="virtual/opengl"
 
 #this package has to be compiled strictly with -O1
 replace-flags -O? -O
+#this is necessary here because of the way Makefile is composed
 append-flags -c
 
 src_unpack() {
@@ -53,6 +54,5 @@ pkg_postinst() {
 	einfo "The package Makfile has been modified to honor user-set CFLAGS"
 	einfo "- they were ignored previously"
 	einfo "the package defined FLAGS were: "
-	einfo "-c -Wall -fno-rtti -fno-exceptions -fomit-frame-pointer -ffast-math"
-	einfo "(the -c is essential because of the way Makefile is constructed)"
+	einfo "-Wall -fno-rtti -fno-exceptions -fomit-frame-pointer -ffast-math"
 }
