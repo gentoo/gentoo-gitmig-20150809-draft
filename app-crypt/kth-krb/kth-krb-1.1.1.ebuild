@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.1.1.ebuild,v 1.5 2002/12/09 04:17:37 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.1.1.ebuild,v 1.6 2003/01/06 15:19:59 jmorgan Exp $
 
 DESCRIPTION="Kerberos 4 implementation from KTH"
 SRC_URI="ftp://ftp.pdc.kth.se/pub/krb/src/krb4-${PV}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.pdc.kth.se/kth-krb/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86"
 IUSE="ssl afs"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )
