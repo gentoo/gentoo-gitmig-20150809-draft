@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.17 2004/10/06 22:18:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.18 2004/10/23 00:30:03 vapier Exp $
 
 inherit eutils flag-o-matic libtool versionator
 
@@ -130,7 +130,6 @@ DEPEND="virtual/libc
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
-
 RDEPEND="virtual/libc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
 	hardened? ( !amd64? ( >=sys-libs/glibc-2.3.3_pre20040207 ) )
