@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/gtk2mp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtk2mp/ChangeLog,v 1.1 2003/12/26 00:17:01 pyrania Exp $
+
+*gtk2mp-0.8.0 (26 Dec 2003)
+
+  26 Dec 2003; Markus Nigbur <pyrania@gentoo.org> gtk2mp-0.8.0.ebuild,
+  metadata.xml:
+  Initial import.
+
