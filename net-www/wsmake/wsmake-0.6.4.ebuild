@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/wsmake/wsmake-0.6.4.ebuild,v 1.1 2003/02/10 08:41:03 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wsmake/wsmake-0.6.4.ebuild,v 1.2 2003/07/13 21:44:10 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Website Pre-processor"
@@ -10,7 +10,7 @@ http://ftp.wsmake.org/pub/wsmake6/docs/user-manual.pdf
 http://ftp.wsmake.org/pub/wsmake6/docs/user-manual.ps 
 http://ftp.wsmake.org/pub/wsmake6/docs/user-manual-html.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squidguard/squidguard-1.2.0.ebuild,v 1.4 2003/05/28 08:05:25 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squidguard/squidguard-1.2.0.ebuild,v 1.5 2003/07/13 21:44:10 aliz Exp $
 
 DESCRIPTION="Combined filter, redirector and access controller plugin for Squid."
 HOMEPAGE="http://www.squidguard.org"
 SRC_URI="http://ftp.teledanmark.no/pub/www/proxy/squidGuard/squidGuard-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="net-www/squid

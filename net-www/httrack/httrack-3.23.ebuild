@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/httrack/httrack-3.23.ebuild,v 1.1 2003/03/18 16:48:38 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/httrack/httrack-3.23.ebuild,v 1.2 2003/07/13 21:44:10 aliz Exp $
 
 DESCRIPTION="HTTrack Website Copier, Open Source Offline Browser"
 HOMEPAGE="http://www.httrack.com/"
 SRC_URI="http://www.httrack.com/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/glibc"

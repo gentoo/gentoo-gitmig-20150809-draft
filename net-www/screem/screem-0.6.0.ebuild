@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.6.0.ebuild,v 1.4 2003/07/09 17:40:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.6.0.ebuild,v 1.5 2003/07/13 21:44:10 aliz Exp $
 
 IUSE="ssl zlib"
 
@@ -10,7 +10,7 @@ integrated environment of the creation and maintenance of websites and
 pages"
 SRC_URI="http://ftp1.sourceforge.net/screem/${P}.tar.gz"
 HOMEPAGE="http://www.screem.org"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="x86 ~sparc "
 SLOT="0"
 LICENSE="GPL-2"
 

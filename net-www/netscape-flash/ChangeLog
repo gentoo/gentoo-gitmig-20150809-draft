@@ -1,6 +1,6 @@
 # ChangeLog for net-www/netscape-flash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.17 2003/03/09 00:15:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.18 2003/07/13 21:44:10 aliz Exp $
 
 *netscape-flash-6.0.79 (09 Mar 2003)
 
@@ -12,6 +12,11 @@
   07 Dec 2003; J Robert Ray <jrray@gentoo.org> netscape-flash-6.0.69-r2 :
   Changed the ebuild to not strip the binaries, stripping causes the
   gflashplayer program to segfault.  Fixes bug 12672.
+
+*netscape-flash-6.0.69-r1 (13 Feb 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *netscape-flash-6.0.68 (18 Dec 2002)
 

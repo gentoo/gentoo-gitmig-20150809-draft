@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bookmarksync/bookmarksync-0.3.1.ebuild,v 1.2 2003/02/13 15:32:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/bookmarksync/bookmarksync-0.3.1.ebuild,v 1.3 2003/07/13 21:44:10 aliz Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://osdn.dl.sourceforge.net/sourceforge/booksync/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/booksync/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 DEPEND="virtual/glibc"
 
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-www/cvsweb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cvsweb/ChangeLog,v 1.6 2003/02/12 08:47:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cvsweb/ChangeLog,v 1.7 2003/07/13 21:44:10 aliz Exp $
+
+*cvsweb-1.112 (11 Mar 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

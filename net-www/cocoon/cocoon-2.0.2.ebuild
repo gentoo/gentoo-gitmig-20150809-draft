@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-2.0.2.ebuild,v 1.9 2003/02/13 15:32:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-2.0.2.ebuild,v 1.10 2003/07/13 21:44:10 aliz Exp $
 
 A=cocoon-${PV}-src.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A Web Publishing Framework for Apache"
 SRC_URI="http://xml.apache.org/cocoon/dist/${A}"
 HOMEPAGE="http://xml.apache.org/cocoon/"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 LICENSE="Apache-1.1"
 

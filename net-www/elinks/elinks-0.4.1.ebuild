@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.4.1.ebuild,v 1.5 2003/03/16 20:33:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.4.1.ebuild,v 1.6 2003/07/13 21:44:10 aliz Exp $
 
 DESCRIPTION="Advanced and well-established text-mode web browser"
 HOMEPAGE="http://elinks.or.cz"
@@ -9,7 +9,7 @@ SRC_URI="http://elinks.or.cz/download/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 ~ppc ~alpha ~sparc"
 
 DEPEND="virtual/glibc
 	>=sys-apps/bzip2-1.0.2*

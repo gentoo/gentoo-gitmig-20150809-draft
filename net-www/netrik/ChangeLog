@@ -1,11 +1,16 @@
 # ChangeLog for net-www/netrik
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netrik/ChangeLog,v 1.3 2003/07/11 15:54:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netrik/ChangeLog,v 1.4 2003/07/13 21:44:10 aliz Exp $
 
-*netrik (19 JUN 2003)
+*netrik-1.10.2 (19 JUN 2003)
 
   19 JUN 2003; Carl Perry <edolnx@gentoo.org> netrik-1.10.2.ebuild:
   Version bumped, works for me.  Bug #18503
+
+*netrik-1.6.0 (19 Jun 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   29 Mar 2003; Chuck Short <chuck_short@rogers.com> netrik-1.6.0.ebuild:
   Initial Release.

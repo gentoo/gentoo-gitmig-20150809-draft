@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-20030510.ebuild,v 1.1 2003/05/25 08:31:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-20030510.ebuild,v 1.2 2003/07/13 21:44:10 aliz Exp $
 
 DESCRIPTION="Basic authentication for Apache using a MySQL database"
 HOMEPAGE="http://modauthmysql.sourceforge.net/"
@@ -9,7 +9,7 @@ S=${WORKDIR}/${PN}
 SRC_URI="mirror://sourceforge/modauthmysql/${PN}.tgz"
 DEPEND="dev-db/mysql =net-www/apache-2*"
 LICENSE="Apache-1.1"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 SLOT="0"
 
