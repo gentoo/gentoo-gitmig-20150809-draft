@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/gfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.1 2005/03/19 17:32:19 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.2 2005/03/19 22:04:36 xmerlin Exp $
+
+  19 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> files/gfs,
+  gfs-6.1_pre21.ebuild:
+  new init
+
+  19 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> files/gfs,
+  gfs-6.1_pre21.ebuild:
+  fixed some deps, changed fence option
 
 *gfs-6.1_pre3 (19 Mar 2005)
 

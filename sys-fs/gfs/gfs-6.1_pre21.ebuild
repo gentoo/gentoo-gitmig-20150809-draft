@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-6.1_pre21.ebuild,v 1.1 2005/03/19 17:32:19 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-6.1_pre21.ebuild,v 1.2 2005/03/19 22:04:36 xmerlin Exp $
 
 inherit linux-mod
 
@@ -21,9 +21,16 @@ IUSE=""
 
 DEPEND=">=sys-cluster/gfs-kernel-2.6.9-r1
 	>=sys-cluster/iddev-1.9
-	sys-fs/e2fsprogs"
+	sys-fs/e2fsprogs
+	"
 
-RDEPEND="sys-fs/e2fsprogs"
+RDEPEND="sys-fs/e2fsprogs
+	>=sys-cluster/ccs-0.24
+	>=sys-cluster/cman-1.0_pre3
+	>=sys-cluster/magma-1.0_pre21
+	>=sys-cluster/magma-plugins-1.0_pre18
+	>=sys-cluster/fence-1.25
+	"
 
 S="${WORKDIR}/${MY_P}"
 

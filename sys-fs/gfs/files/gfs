@@ -1,11 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/files/gfs,v 1.1 2005/03/19 17:32:19 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/files/gfs,v 1.2 2005/03/19 22:04:36 xmerlin Exp $
 
 depend() {
 	provide cluster
 	need net
+	need ccs fenced
+	after cman
 	use dns logger
 }
 
@@ -22,45 +24,22 @@ start() {
 	checkconfig || return $?
 
 	einfo "Starting gfs cluster:"
+        ebegin "Loading needed kernel modules"
 
-	ebegin "Loading needed kernel modules"
-
-	if [ ! -f /proc/cluster/lock_dlm ]; then
-		modprobe lock_dlm
-	fi
+        if [ ! -f /proc/cluster/lock_dlm ]; then
+                modprobe lock_dlm
+        fi
 	if [ ! -f /proc/fs/gfs ]; then
 		modprobe gfs
 	fi
 	eend $? "Failed to load needed kernel modules"
 
-	ebegin "Starting ccsd"
-	start-stop-daemon --start --quiet --pidfile /var/run/ccsd.pid \
-		--startas /sbin/ccsd
-	sleep 2
-	eend $? "Failed to start ccsd"
-
-	ebegin "Joining the cluster"
-	/sbin/cman_tool join
-	eend $? "Failed to join the cluster"
-
-	ebegin "Joining the fence domain (in 120 seconds)"
-	/sbin/fence_tool join -t 120
-	eend $? "Failed to join the fence domain"
 }
 
 stop() {
 	einfo "Stopping gfs cluster:"
-
-	ebegin "Leaving the fence domain"
-	/sbin/fence_tool leave
-	eend $? "Failed to leave the fence domain"
-
-	ebegin "Leaving the cluster"
-	sleep 2
-	/sbin/cman_tool leave
-	eend $? "Failed to leave the cluster"
-
-	ebegin "Stopping ccsd"
-	killall -9 ccsd
-	eend $? "Failed to stop ccsd"
+	ebegin "Removing gfs module"
+	modprobe -r gfs &>/dev/null
+	eend $?
+	
 }
