@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord/cdrecord-1.9-r1.ebuild,v 1.4 2000/10/04 16:04:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord/cdrecord-1.9-r1.ebuild,v 1.5 2000/11/01 04:44:11 achim Exp $
 
 P=cdrecord-1.9
 A=${P}.tar.gz
@@ -9,6 +9,8 @@ S=${WORKDIR}/${P}
 DESCRIPTION="cdrecord"
 SRC_URI="ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/"${A}
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
+
+DEPEND=">=sys-libs/glibc-2.1.3"
 
 src_unpack() {
   unpack ${A}
