@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/reiserfsprogs-3.6.4-r1.ebuild,v 1.1 2002/11/02 21:07:33 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/reiserfsprogs-3.6.4-r1.ebuild,v 1.2 2002/11/03 18:30:38 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Reiserfs Utilities"
 SRC_URI="ftp://ftp.namesys.com/pub/reiserfsprogs/${P}.tar.gz"
 HOMEPAGE="http://www.namesys.com"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~sparc64 ~alpha"
 SLOT="0"
 LICENSE="GPL-2"
 
