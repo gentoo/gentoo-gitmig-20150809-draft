@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.86 2005/02/16 20:40:20 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.87 2005/02/18 19:55:15 plasmaroo Exp $
+
+  18 Feb 2005; <plasmaroo@gentoo.org> ck-sources-2.4.28-r3.ebuild,
+  +files/ck-sources-2.4.28.81106.patch:
+  Fix #81106 patch for 2.4; bug #82479.
 
 *ck-sources-2.4.28-r3 (15 Feb 2005)
 
