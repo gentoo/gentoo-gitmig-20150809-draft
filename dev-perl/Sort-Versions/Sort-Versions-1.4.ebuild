@@ -1,18 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sort-Versions/Sort-Versions-1.4.ebuild,v 1.2 2003/06/21 21:36:37 drobbins Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sort-Versions/Sort-Versions-1.4.ebuild,v 1.3 2004/02/21 10:31:07 vapier Exp $
 
 inherit perl-module
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A perl 5 module for sorting of revision-like numbers"
-SRC_URI="http://search.cpan.org/CPAN/authors/id/E/ED/EDAVIS/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/author/EDAVIS/${P}/"
+SRC_URI="http://search.cpan.org/CPAN/authors/id/E/ED/EDAVIS/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
-
-DEPEND="${DEPEND}"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~sparc ~alpha hppa amd64"
