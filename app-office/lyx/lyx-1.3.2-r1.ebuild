@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2-r1.ebuild,v 1.6 2003/09/26 08:26:53 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2-r1.ebuild,v 1.7 2003/09/29 15:21:15 obz Exp $
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
@@ -57,8 +57,7 @@ src_compile() {
 	# <obz@gentoo.org>
 	einfo "Checking for local Aiksaurus.h"
 	[ -d /usr/include/Aiksaurus ] \
-		&& myconf="${myconf} --with-extra-inc=/usr/include/Aiksaurus" \
-		|| die "Missing Aiksaurus.h, please remerge app-text/aiksaurus"
+		&& myconf="${myconf} --with-extra-inc=/usr/include/Aiksaurus"
 
 	local flags="${CFLAGS}"
 	unset CFLAGS
