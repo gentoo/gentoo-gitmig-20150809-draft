@@ -1,0 +1,24 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-www/pound/files/pound.init,v 1.1 2003/08/01 22:59:20 tantive Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting pound"
+	if [ ! -f "/etc/pound.cfg" ]; then
+		eend 1 "configfile /etc/pound.cfg not found."
+	fi
+	start-stop-daemon --quiet --start --startas /usr/sbin/pound \
+		--pidfile /var/run/pound.pid -- -f /etc/pound.cfg
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping pound"
+	start-stop-daemon --quiet --stop --pidfile /var/run/pound.pid
+	eend $?
+}
