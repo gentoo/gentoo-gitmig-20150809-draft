@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/xmovie-1.8-r4.ebuild,v 1.7 2004/06/25 00:53:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/xmovie-1.8-r4.ebuild,v 1.8 2004/07/14 22:29:11 agriffis Exp $
 
 inherit gcc eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A Player for MPEG and Quicktime movies"
 SRC_URI="http://heroinewarrior.com/${P}.tar.gz"
 HOMEPAGE="http://heroines.sourceforge.net/"
@@ -15,7 +14,7 @@ RDEPEND="virtual/x11
 
 DEPEND="${RDEPEND}
 	>=dev-lang/nasm-0.98"
-IUSE=""
+IUSE="mmx"
 
 SLOT="0"
 LICENSE="GPL-2"
