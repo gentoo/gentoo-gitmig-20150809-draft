@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.77 2005/01/01 14:42:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.78 2005/01/03 02:38:02 matsuu Exp $
+
+  03 Jan 2005; MATSUU Takuto <matsuu@gentoo.org> uim-0.4.5.ebuild:
+  Marked as stable on amd64 and sparc.
 
 *uim-0.4.5-r1 (14 Dec 2004)
 
