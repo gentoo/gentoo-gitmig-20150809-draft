@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Released under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.12.2.ebuild,v 1.1 2003/08/04 00:33:41 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.12.2.ebuild,v 1.2 2003/08/04 01:21:56 stuart Exp $
 #
 # Based on the ebuild submitted by ??
 
@@ -29,7 +29,18 @@ inherit php-lib
 HTTPD_USER=root
 HTTPD_GROUP=root
 
-has_version "net-www/apache" && inherit webapp-apache
+has_version "net-www/apache" && USE_APACHE=1 && inherit webapp-apache
+[ -n $"{USE_APACHE}" ] && webapp-detect || NO_WEBSERVER=1
+
+pkg_setup ()
+{
+	if [ "${NO_WEBSERVER}" = "1" ]; then
+		ewarn "No webserver detected - ${JPGRAPH_CACHE_DIR} will be"
+		ewarn "owned by ${HTTPD_USER} instead"
+	else
+		einfo "Configuring cache dir ${JPGRAPH_CACHE_DIR} for ${WEBAPP_SERVER}"
+	fi
+}
 
 src_install ()
 {
