@@ -1,8 +1,12 @@
 # ChangeLog for app-misc/xclip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xclip/ChangeLog,v 1.2 2002/04/27 07:41:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xclip/ChangeLog,v 1.3 2002/08/07 21:09:03 cselkirk Exp $
 
 *xclip-0.08 (26 Apr 2002)
+  
+  07 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> xclip-0.08.ebuild :
+
+  Added ppc to KEYWORDS.
 
   26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> xclip-0.08.ebuild
   files/digest-xclip-0.08 :

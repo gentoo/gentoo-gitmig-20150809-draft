@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/beep-1.2.2.ebuild,v 1.2 2002/07/25 16:55:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/beep-1.2.2.ebuild,v 1.3 2002/08/07 21:12:35 cselkirk Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Beep, the advanced PC speaker beeper"
@@ -9,7 +9,7 @@ SRC_URI="http://www.johnath.com/beep/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND=""
 RDEPEND=""

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xclip/xclip-0.08.ebuild,v 1.2 2002/07/25 19:18:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xclip/xclip-0.08.ebuild,v 1.3 2002/08/07 21:09:03 cselkirk Exp $
 
 S=${WORKDIR}/xclip
 DESCRIPTION="Command-line utility to read data from standard in and
@@ -10,7 +10,7 @@ HOMEPAGE="http://people.debian.org/~kims/xclip"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/x11"
 
