@@ -1,6 +1,14 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.12 2003/02/12 08:53:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.13 2003/03/17 02:56:46 absinthe Exp $
+
+*tomcat-4.1.18 (16 Mar 2003)
+
+  16 Mar 2003; Dylan Carlson <absinthe@gentoo.org> tomcat-4.1.18.ebuild:
+  New ebuild started from submission in bug # 11796. minor fixes; added
+  servlet.jar as a shared library for packages that might require it at build
+  time. Thanks to Mark Mealman <mmealman@tarsis.org> and gtonic <tom@wahuu.at>
+  for their contributions.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
