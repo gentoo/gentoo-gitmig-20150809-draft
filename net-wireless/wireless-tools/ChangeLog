@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.35 2004/08/30 12:34:07 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.36 2004/09/07 15:39:50 brix Exp $
+
+*wireless-tools-27_pre26 (07 Sep 2004)
+
+  07 Sep 2004; Henrik Brix Andersen <brix@gentoo.org>
+  +wireless-tools-27_pre26.ebuild:
+  Version Bump + RDEPEND/DEPEND fix.
 
   30 Aug 2004; David Holm <dholm@gentoo.org> wireless-tools-27_pre23.ebuild:
   Added to ~ppc.
