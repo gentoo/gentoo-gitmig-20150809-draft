@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.6.2.ebuild,v 1.5 2004/08/05 16:09:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.6.2.ebuild,v 1.6 2004/12/03 03:54:37 kingtaco Exp $
 
 inherit kde
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/digikam/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 IUSE=""
 
 # kdesdk dependency, because of xml2pot usage, this is a
