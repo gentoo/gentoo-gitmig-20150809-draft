@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.9-r5.ebuild,v 1.1 2004/12/01 11:15:23 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.9-r6.ebuild,v 1.1 2004/12/02 04:29:47 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
 CVSDATE="20041022"			# Date of diff between kernel.org and lmo CVS
 COBALTPATCHVER="1.8"			# Tarball version for cobalt patches
-SECPATCHVER="1.6"			# Tarball version for security patches
+SECPATCHVER="1.7"			# Tarball version for security patches
 GENPATCHVER="1.4"			# Tarball version for generic patches
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
@@ -144,6 +144,7 @@ src_unpack() {
 		epatch ${WORKDIR}/security/CAN-2004-0883-2.6.9-smbfs_remote_overflows.patch
 		epatch ${WORKDIR}/security/security-2.6.9-binfmt_elf-fixes.patch
 		epatch ${WORKDIR}/security/security-2.6.9-mips-ptrace.patch
+		epatch ${WORKDIR}/security/security-2.6-af_unix-kern-mem.patch
 	eend
 
 

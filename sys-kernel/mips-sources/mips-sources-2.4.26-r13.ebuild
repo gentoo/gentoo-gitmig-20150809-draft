@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.27-r4.ebuild,v 1.1 2004/12/01 11:15:23 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.26-r13.ebuild,v 1.1 2004/12/02 04:29:47 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20040814"			# Date of diff between kernel.org and lmo CVS
+CVSDATE="20040712"			# Date of diff between kernel.org and lmo CVS
 COBALTPATCHVER="1.4"			# Tarball version for cobalt patches
-SECPATCHVER="1.6"			# Tarball version for security patches
+SECPATCHVER="1.7"			# Tarball version for security patches
 GENPATCHVER="1.0"			# Tarball version for generic patches
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
@@ -60,12 +60,18 @@ src_unpack() {
 	echo -e ""
 	ebegin ">>> Applying Security Fixes"
 		epatch ${WORKDIR}/security/CAN-2004-0394-panic.patch
+		epatch ${WORKDIR}/security/CAN-2004-0415-2.4-file_offset_pointers.patch
+		epatch ${WORKDIR}/security/CAN-2004-0495-2.4-sparse.patch
+		epatch ${WORKDIR}/security/CAN-2004-0497-attr_gid.patch
+		epatch ${WORKDIR}/security/CAN-2004-0535-2.4-e1000.patch
+		epatch ${WORKDIR}/security/CAN-2004-0685-2.4-conectiva_usb.patch
 		epatch ${WORKDIR}/security/CAN-2004-0814-2.4.26-tty_race_conditions.patch
 		epatch ${WORKDIR}/security/CAN-2004-0883-2.4-smbfs_remote_overflows.patch
 		epatch ${WORKDIR}/security/security-2.4-proc_race.patch
 		epatch ${WORKDIR}/security/security-2.4-binfmt_elf-fixes.patch
 		epatch ${WORKDIR}/security/security-2.4-remote_ddos.patch
 		epatch ${WORKDIR}/security/security-2.4-mips-ptrace.patch
+		epatch ${WORKDIR}/security/security-2.4-af_unix-kern-mem.patch
 	eend
 
 
