@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.13 2003/09/09 17:04:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.14 2003/12/14 22:21:45 pylon Exp $
+
+  14 Dec 2003; Lars Weiler <pylon@gentoo.org> egenix-mx-base-2.0.5.ebuild:
+  Make stable on ppc
 
 *egenix-mx-base-2.0.5 (06 Sep 2003)
 
