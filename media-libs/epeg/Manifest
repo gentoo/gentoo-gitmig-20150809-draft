@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 29015fe01ccee445536a81e2fd49ecb8 ChangeLog 330
-MD5 1399d572c249c8185c5776815e011d34 epeg-0.9.0.20040710.ebuild 325
+MD5 8bb571ede56589258df342c96d60da29 ChangeLog 327
+MD5 1a4737f28afd6cdc411f9d1cdc24167e epeg-0.9.0.ebuild 316
 MD5 edfdfec4e93ebb0d10eb86b8a8594eba metadata.xml 324
-MD5 7f1276f488bfbc66d71d9b0bfdcb4021 files/digest-epeg-0.9.0.20040710 73
+MD5 ec6db47e042f01aab3935df4a61db99c files/digest-epeg-0.9.0 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA8oU5HTu7gpaalycRAlUWAJ40gG/fjJV6wl1xGpL2oSr2WMwUiQCfUVh/
-L8lhrqIAZyBDPDDrd4yX0/Q=
-=CTM8
+iD8DBQFBGEIIHTu7gpaalycRAhMlAJ4xLhqL79qV3sYrvAefz9mEu4WSswCg42J8
+ORWltO1KseYthG3kjvLHhLo=
+=flEZ
 -----END PGP SIGNATURE-----
