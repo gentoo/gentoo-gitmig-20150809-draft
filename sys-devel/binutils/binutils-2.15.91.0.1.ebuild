@@ -1,23 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.3-r3.ebuild,v 1.4 2004/05/28 07:34:00 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.91.0.1.ebuild,v 1.1 2004/05/28 07:34:01 kumba Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
 
 inherit eutils libtool flag-o-matic
 
-PATCHVER="1.3"
+PATCHVER="1.0"
 
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2
-	mirror://gentoo/${PN}-2.15.90.0.3-patches-${PATCHVER}.tar.bz2"
+	mirror://gentoo/${PN}-2.15.91.0.1-patches-${PATCHVER}.tar.bz2"
 
 LICENSE="GPL-2 | LGPL-2"
 SLOT="0"
-KEYWORDS="-* arm"
+KEYWORDS="-*"
 IUSE="nls bootstrap build multitarget"
 
 DEPEND="virtual/glibc
@@ -33,8 +33,6 @@ src_unpack() {
 	mkdir ${WORKDIR}/patch/skip
 	mv ${WORKDIR}/patch/05* ${WORKDIR}/patch/skip/
 
-	# w/ relro, move 20_* (replaced by 64_*), and 90_* (replaced by 63_*)
-	mv ${WORKDIR}/patch/{20,90}_* ${WORKDIR}/patch/skip/
 	# w/o relro, move 35_*, 64_* and 63_*
 	#mv ${WORKDIR}/patch/{35,63,64}_* ${WORKDIR}/patch/skip/
 
