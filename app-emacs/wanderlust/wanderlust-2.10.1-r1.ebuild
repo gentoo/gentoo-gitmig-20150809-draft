@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.10.1-r1.ebuild,v 1.2 2004/06/01 14:09:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.10.1-r1.ebuild,v 1.3 2004/06/02 13:37:16 agriffis Exp $
 
 inherit elisp
 
@@ -26,7 +26,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
-	if [ -n "`use ssl`" ] ; then
+	if use ssl ; then
 		cd ${S}
 		echo "(setq wl-install-utils t)" >> WL-CFG
 	fi

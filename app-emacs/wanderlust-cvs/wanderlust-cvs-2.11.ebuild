@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust-cvs/wanderlust-cvs-2.11.ebuild,v 1.2 2004/06/01 14:09:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust-cvs/wanderlust-cvs-2.11.ebuild,v 1.3 2004/06/02 13:41:25 agriffis Exp $
 
 ECVS_SERVER="cvs.m17n.org:/cvs/root"
 ECVS_MODULE="wanderlust"
@@ -30,7 +30,7 @@ SITEFILE="70wl-gentoo.el"
 
 src_compile() {
 
-	if [ "`use ssl`" ] ; then
+	if use ssl ; then
 		echo "(setq wl-install-utils t)" >> WL-CFG
 	fi
 
