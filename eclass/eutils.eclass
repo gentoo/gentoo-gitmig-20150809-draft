@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.91 2004/07/23 11:11:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.92 2004/08/03 17:24:52 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1247,4 +1247,58 @@ cdrom_locate_file_on_cd() {
 			read
 		fi
 	done
+}
+
+# Make sure that LINGUAS only contains languages that 
+# a package can support
+#
+# usage: strip-linguas <allow LINGUAS>
+#        strip-linguas -i <directories of .po files>
+#        strip-linguas -u <directories of .po files>
+#
+# The first form allows you to specify a list of LINGUAS.
+# The -i builds a list of po files found in all the 
+#   directories and uses the intersection of the lists.
+# The -u builds a list of po files found in all the 
+#   directories and uses the union of the lists.
+strip-linguas() {
+	local ls newls
+	if [ "$1" == "-i" ] || [ "$1" == "-u" ] ; then
+		local op="$1"; shift
+		ls=" $(find "$1" -name '*.po' -printf '%f ') "; shift
+		local d f
+		for d in "$@" ; do
+			if [ "${op}" == "-u" ] ; then
+				newls="${ls}"
+			else
+				newls=""
+			fi
+			for f in $(find "$d" -name '*.po' -printf '%f ') ; do
+				if [ "${op}" == "-i" ] ; then
+					[ "${ls/ ${f} /}" != "${ls}" ] && newls="${newls} ${f}"
+				else
+					[ "${ls/ ${f} /}" == "${ls}" ] && newls="${newls} ${f}"
+				fi
+			done
+			ls="${newls}"
+		done
+		ls="${ls//.po}"
+	else
+		ls="$@"
+	fi
+
+	ls=" ${ls} "
+	newls=""
+	for f in ${LINGUAS} ; do
+		if [ "${ls/ ${f} /}" != "${ls}" ] ; then
+			nl="${newls} ${f}"
+		else
+			ewarn "Sorry, but ${PN} does not support the ${f} LINGUA"
+		fi
+	done
+	if [ -z "${newls}" ] ; then
+		unset LINGUAS
+	else
+		export LINGUAS="${newls}"
+	fi
 }
