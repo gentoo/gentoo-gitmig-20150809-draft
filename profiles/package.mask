@@ -350,3 +350,8 @@ dev-lang/tcl-tk
 =media-sound/alsa-driver-0.9.0_beta10
 =media-sound/alsa-utils-0.9.0.1_beta10
 =media-libs/alsa-lib-0.9.0.1_beta10
+
+#moving xmame to app-emulation with other emulators
+#old location is deprecated.  Additional game packages
+#for xmame should still go into app-games
+>=app-games/xmame-0.53.1
