@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.15 2003/04/15 10:15:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.16 2003/06/07 17:45:27 foser Exp $
+
+*anjuta-1.1.1 (07 Jun 2003)
+
+  07 Jun 2003; foser <foser@gentoo.org> anjuta-1.1.1.ebuild :
+  New development version as requested in #21134
 
 *anjuta-1.0.2 (05 Apr 2003)
 
