@@ -1,26 +1,30 @@
 # ChangeLog for net-fsautofsChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.9 2002/07/18 02:46:08 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.10 2002/10/27 05:21:15 bcowan Exp $
 
-*autofs-3.1.7-r4 (17 Jul 2002)
-
-  17 Jul 2002; Nick Hadaway <raker@gentoo.org>
-  autofs-3.1.7-r4, files/digest-autofs-3.1.7-r4 :
-
-  Patched autofs to correctly pull OPEN_MAX from linux/limits.h instead
-  of a manual setting of OPEN_MAX.  Also patched for ldap 2.x support
-  setting ldap related variables that configure fails to do.
-
+*autofs-3.1.7-r4 (27 Oct 2002)
+  
+  20 Sep 2002; Brad Cowan <bradlyatc@cowancomputers.com> autofs-3.1.7-r4.ebuild :
+  files/digest-autofs-3.1.7-r4, files/nisyp.patch, files/autofs1.confd, 
+  files/autofs.rc7, files/automount.diff.
+  
+  Added net-nds/portmap and net-nds/ypbind as RDEPEND, updated init scripts 
+  remove old files, and Updated ChangeLog. Init script now has a working
+  stats option to display current autofs state (as status seems to be a 
+  predefined function that only displays the whether the daemon is running or 
+  stopped). Added einfo to ebuild noting to start portmap for NFS support without 
+  NFS started on current setup. Hopefully fixed some library compile problems.
+  
+*autofs-3.1.7-r3 (16 Apr 2002)  
+  
   16 Jul 2002; Ben Lutgens <lamer@gentoo.org> files/autofs.rc6  :
 
   made the initscript depend on ypbind
-# ChangeLog for net-fs/autofs
 
   30 Apr 2002; William McArthur <sandymac@gentoo.org> autofs-3.1.7-r3.ebuild :
 
   Added HOMEPAGE, LICENSE and made the DESCRIPTION a little more so.
 
-*autfofs-3.1.7-r3 (16 Apr 2002)
 
   21 Jun 2002; Ryan Phillips <rphillips@gentoo.org> files/autofs.rc6 :
 
