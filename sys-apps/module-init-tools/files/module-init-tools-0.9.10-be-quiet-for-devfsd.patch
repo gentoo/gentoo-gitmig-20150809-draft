@@ -1,5 +1,5 @@
 --- module-init-tools-0.9.10/modprobe.c.orig	2003-03-15 06:51:14.000000000 +0200
-+++ module-init-tools-0.9.10/modprobe.c	2003-03-15 07:24:21.000000000 +0200
++++ module-init-tools-0.9.10/modprobe.c	2003-03-15 07:57:58.000000000 +0200
 @@ -50,6 +50,8 @@
  
  /* Do we use syslog or stderr for messages? */
@@ -28,21 +28,37 @@
  
  static void grammar(const char *cmd, const char *filename, unsigned int line)
  {
-@@ -1175,6 +1180,13 @@
+@@ -1161,10 +1166,6 @@
+ 		if (0 == strcmp(getenv("MODPROBE_VERBOSE"), "1"))
+ 			verbose = 1;
+ 
+-	/* Check MODPROBE_CONFIG */
+-	if ((getenv("MODPROBE_CONFIG")) && (NULL == config))
+-		config = NOFAIL(strdup(getenv("MODPROBE_CONFIG")));
+-
+ 	/* Check MODPROBE_QUIET */
+ 	if ((getenv("MODPROBE_QUIET")) && (0 != fail_if_already))
+ 		if (0 == strcmp(getenv("MODPROBE_QUIET"), "1"))
+@@ -1175,6 +1176,18 @@
  		if (0 == strcmp(getenv("MODPROBE_LOG"), "1"))
  			log = 1;
  
 +	/* If no logging, and we have 'MODPROBE_CONFIG=/etc/modprobe.devfs', then
 +	 * be totally quiet.  Note that this catches recursive calls, so it should
-+	 * not be a first call to modprobe ... */
++	 * not be a first call to modprobe, and we should check it *before* we
++	 * check MODPROBE_CONFIG ... */
 +	if ((!log) && (!config) && (getenv("MODPROBE_CONFIG")))
 +		if (0 == strcmp(getenv("MODPROBE_CONFIG"), "/etc/modprobe.devfs"))
 +			quiet = 1;
 +
++	/* Check MODPROBE_CONFIG */
++	if ((getenv("MODPROBE_CONFIG")) && (NULL == config))
++		config = NOFAIL(strdup(getenv("MODPROBE_CONFIG")));
++
  	/* If logging was requested, do not output to stdout */
  	if (log) {
  		openlog("modprobe", 0, LOG_DAEMON);
-@@ -1226,6 +1238,35 @@
+@@ -1226,6 +1239,35 @@
  		}
  	}
  
