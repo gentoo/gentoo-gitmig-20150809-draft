@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c5337f1d240016a7fe5ecd67a5fb415f ChangeLog 3648
-MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 d6d9d1e6b2a8b4f6975b9391d91d81ee egroupware-1.0.00.005.ebuild 1267
 MD5 18099a54598338d6cc2ad900f02417fd egroupware-1.0.00.004.ebuild 1265
-MD5 cf3a2f10249bbe6a2ac08bfa654dab34 egroupware-1.0.00.006.ebuild 1264
-MD5 069ee268f689a4d2a950cf6dc25b5469 files/digest-egroupware-1.0.00.006 78
-MD5 f2b390845d9c85ef9775ba6e5e61bcfb files/digest-egroupware-1.0.00.005 78
-MD5 e0047e98b51190ad962261fad73df6b9 files/digest-egroupware-1.0.00.004 78
+MD5 74be02c8d3771d9aacca4be4d1c37172 egroupware-1.0.00.006.ebuild 1266
+MD5 fe7b385bfef65c4793783160b657bfbf ChangeLog 3768
+MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 5acfe8f4f634af8faac95b6411b410e5 files/postinstall-en.txt 397
+MD5 e0047e98b51190ad962261fad73df6b9 files/digest-egroupware-1.0.00.004 78
+MD5 f2b390845d9c85ef9775ba6e5e61bcfb files/digest-egroupware-1.0.00.005 78
+MD5 069ee268f689a4d2a950cf6dc25b5469 files/digest-egroupware-1.0.00.006 78
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBswglugEuf3OQ0akRAgQuAJ9nlUa+qxqP2eeddGhDZKEcKxp/0ACgh4Cq
-K+ggZN8/udDh9ZVD18B1VVs=
-=+Do4
+iD8DBQFBt3gAZ/iYVBmujdURAmEPAJ9V1UqDbJSQ1/+y3484UEj8uJcPsQCg0gmr
+5BXN7DL9UCN6dH80/1jv1i0=
+=Vigv
 -----END PGP SIGNATURE-----
