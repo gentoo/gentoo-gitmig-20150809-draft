@@ -1,28 +1,11 @@
-# Copyright 2000 Daniel Robbins, Gentoo Foundation.
-# System-wide defaults for the Portage system
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2004.2/make.defaults,v 1.2 2004/09/23 13:46:46 vapier Exp $
 
 ARCH="mips"
 
-# Host-type
-
-CHOST=mips-unknown-linux-gnu
-PLATFORM=$CHOST
-
-# Options passed to make during the build process
-MAKEOPTS="-j1"
-
-# Fetching command (5 tries, passive ftp for firewall compatibility)
-FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
-# Global configure options
 FEATURES="ccache"
-# C Compiler flags
-CFLAGS="-O2 -pipe"
-# C++ Compiler flags
-CXXFLAGS=${CFLAGS}
 
 USE="slang readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips"
 
 ACCEPT_KEYWORDS="mips"
-
-COMPILER="gcc3"
-
