@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/grubconfig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/ChangeLog,v 1.10 2004/06/24 21:28:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/ChangeLog,v 1.11 2004/12/31 03:09:27 chriswhite Exp $
+
+*grubconfig-1.24 (31 Dec 2004)
+
+  31 Dec 2004; Chris White <chriswhite@gentoo.org> +grubconfig-1.24.ebuild:
+  Bumping to 1.24 because it's outdated.
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> grubconfig-1.22.ebuild:
   QA fix - IUSE. x86 keyword too
