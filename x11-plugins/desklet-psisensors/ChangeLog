@@ -1,0 +1,13 @@
+# ChangeLog for x11-plugins/desklet-psisensors
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/ChangeLog,v 1.1 2003/10/26 12:17:37 obz Exp $
+
+*desklet-psisensors-20031024 (26 Oct 2003)
+
+  26 Oct 2003; Mike Gardiner <obz@gentoo.org>
+  desklet-psisensors-20031024.ebuild, metadata.xml:
+  First version of the desklet-psisensors package. Psi (the author) is now
+  distributing all of cpuinfo,networkinfo etc in a single package, and has
+  stopped updating them individually. For this reason, this package should
+  replace the *info desklets
+
