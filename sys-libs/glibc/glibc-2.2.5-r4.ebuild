@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r4.ebuild,v 1.2 2002/06/05 16:27:24 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r4.ebuild,v 1.3 2002/06/05 17:52:35 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -64,11 +64,13 @@ src_unpack() {
 	# cd ${S}
 	# patch -p1 < ${FILESDIR}/glibc-2.2.4-glob-overflow.diff || die
 
+	if [ ${ARCH} == "x86" ]; then
 	# This patch fixes the nvidia-glx probs, openoffice and vmware probs and such..
         # http://sources.redhat.com/ml/libc-hacker/2002-02/msg00152.html
         cd ${S}
         patch -p1 < ${FILESDIR}/glibc-divdi3.diff || die
-
+	fi
+	
 }
 
 src_compile() {
