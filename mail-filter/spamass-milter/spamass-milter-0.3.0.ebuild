@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/spamass-milter-0.2.0.ebuild,v 1.7 2005/02/09 18:34:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/spamass-milter-0.3.0.ebuild,v 1.1 2005/02/09 18:34:33 gustavoz Exp $
 
 IUSE=""
 
 DESCRIPTION="A Sendmail milter for SpamAssassin"
 HOMEPAGE="http://savannah.nongnu.org/projects/spamass-milt/"
-SRC_URI="http://savannah.nongnu.org/download/spamass-milt/${P}.tar.gz"
+SRC_URI="http://savannah.nongnu.org/download/spamass-milt/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND=">=sys-devel/autoconf-2.57
 	>=sys-devel/automake-1.7.2"
@@ -33,7 +33,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo ""
-	einfo "less /usr/share/doc/spamass-milter-0.2.0/README.gentoo.gz"
-	einfo "Very concise and simple install instructions. :)"
+	einfo "Documentation is in /usr/share/doc/${P}"
+	einfo "Check README.gentoo.gz there for some basic gentoo installation instructions"
 	einfo ""
 }
