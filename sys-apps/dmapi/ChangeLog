@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmapi
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.15 2003/12/15 21:24:42 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.16 2004/01/16 20:59:47 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> dmapi-2.0.5-r1.ebuild:
+  set ppc in keywords
 
   15 Dec 2003; Jason Wever <weeve@gentoo.org> dmapi-2.0.5-r1.ebuild:
   Added ~sparc keyword.

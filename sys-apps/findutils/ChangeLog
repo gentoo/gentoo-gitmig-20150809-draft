@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/findutils
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.25 2003/12/29 09:19:59 kumba Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.26 2004/01/16 20:59:47 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org>
+  findutils-4.1.20-r1.ebuild:
+  set ppc in keywords
 
   29 Dec 2003; Joshua Kinard <kumba@gentoo.org> findutils-4.1.7-r5.ebuild:
   Added gnuconfig support to detect mips machines properly

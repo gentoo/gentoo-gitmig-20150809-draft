@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.0.5-r1.ebuild,v 1.11 2003/12/15 21:24:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.0.5-r1.ebuild,v 1.12 2004/01/16 20:59:47 darkspecter Exp $
 
 S=${WORKDIR}/${P}
 
@@ -9,7 +9,7 @@ DESCRIPTION="XFS data management API library"
 SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
 
-KEYWORDS="x86 amd64 ~mips ia64 ~ppc ~sparc"
+KEYWORDS="x86 amd64 ~mips ia64 ppc ~sparc"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
