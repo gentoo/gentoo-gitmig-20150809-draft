@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31.ebuild,v 1.1 2004/06/02 19:26:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31.ebuild,v 1.2 2004/06/05 14:23:16 agriffis Exp $
 
 inherit eutils
 
@@ -44,10 +44,10 @@ src_compile() {
 	local myconf
 
 	econf \
-	`use_enable oggvorbis ogg` \
-	`use_enable nls` \
-	`use_enable flac` \
-	${myconf} || die "econf failed"
+		$(use_enable oggvorbis ogg) \
+		$(use_enable nls) \
+		$(use_enable flac) \
+		${myconf} || die "econf failed"
 	emake || die
 }
 
