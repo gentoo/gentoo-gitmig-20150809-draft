@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.20 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.21 2004/09/04 04:21:49 seemant Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -137,3 +137,27 @@ archq() {
 		return 1
 	fi
 }
+
+# Function to ease the host.def editing and save lines in the ebuild
+use_build() {
+	if [ -z "$1" ]; then
+		echo "!!! use_build() called without a parameter." >&2
+		echo "!!! use_build <USEFLAG> [<flagname> [value]]" >&2
+		return
+	fi
+
+	local UWORD="$2"
+	if [ -z "${UWORD}" ]; then
+		UWORD="$1"
+		echo $UWORD
+	fi
+
+	if useq $1; then
+		echo "#define ${UWORD} YES" >> ${HOSTCONF}
+		return 0
+	else
+		echo "#define ${UWORD} NO" >> ${HOSTCONF}
+		return 1
+	fi
+}
+
