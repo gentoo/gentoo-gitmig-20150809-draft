@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta6.ebuild,v 1.4 2004/11/12 08:28:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta6.ebuild,v 1.5 2004/12/29 02:53:35 ribosome Exp $
 
 IUSE="oggvorbis alsa opengl esd jack"
 
@@ -23,7 +23,7 @@ DEPEND=">=x11-libs/gtk+-2.0
 	media-libs/ladspa-sdk
 	media-libs/audiofile
 	media-libs/libsndfile
-	=dev-libs/fftw-2*"
+	=sci-libs/fftw-2*"
 
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.2.1.ebuild,v 1.6 2004/07/01 07:53:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.2.1.ebuild,v 1.7 2004/12/29 02:56:49 ribosome Exp $
 
 IUSE="jack"
 
@@ -16,7 +16,7 @@ SLOT="0"
 DEPEND="virtual/libc
 	>=x11-libs/qt-3.1.0
 	media-sound/madplay
-	=dev-libs/fftw-2*
+	=sci-libs/fftw-2*
 	media-libs/libogg
 	media-libs/libvorbis
 	dev-lang/perl

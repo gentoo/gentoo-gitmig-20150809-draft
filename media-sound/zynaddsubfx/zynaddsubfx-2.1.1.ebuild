@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.1.1.ebuild,v 1.3 2004/12/19 06:58:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.1.1.ebuild,v 1.4 2004/12/29 02:57:43 ribosome Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 x86"
 IUSE="oss alsa jack"
 
 DEPEND=">=x11-libs/fltk-1.1.2
-	=dev-libs/fftw-2*
+	=sci-libs/fftw-2*
 	media-sound/jack-audio-connection-kit
 	>=dev-libs/mini-xml-2.0"
 #	portaudio? ( media-libs/portaudio )"

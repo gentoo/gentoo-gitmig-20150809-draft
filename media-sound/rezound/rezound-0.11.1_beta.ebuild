@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.11.1_beta.ebuild,v 1.3 2004/12/28 11:28:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.11.1_beta.ebuild,v 1.4 2004/12/29 02:52:40 ribosome Exp $
 
 IUSE="alsa oggvorbis jack nls oss portaudio flac soundtouch"
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="virtual/x11
-	=dev-libs/fftw-2*
+	=sci-libs/fftw-2*
 	>=x11-libs/fox-1.2.4
 	>=media-libs/audiofile-0.2.3
 	>=media-libs/ladspa-sdk-1.12

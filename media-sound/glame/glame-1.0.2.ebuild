@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.11 2004/10/15 08:59:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.12 2004/12/29 02:54:32 ribosome Exp $
 
 IUSE="nls gnome oggvorbis debug alsa"
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-util/guile-1.4-r3
 	>=dev-libs/libxml2-2.0.0
 	>=media-sound/esound-0.2
 	>=media-libs/audiofile-0.2.2
-	=dev-libs/fftw-2*
+	=sci-libs/fftw-2*
 	media-sound/madplay
 	media-libs/ladspa-sdk
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6.ebuild,v 1.14 2004/09/14 16:32:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6.ebuild,v 1.15 2004/12/29 03:00:20 ribosome Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="x86 sparc amd64"
 IUSE=""
 
 DEPEND="sys-libs/ncurses \
-	=dev-libs/fftw-2*"
+	=sci-libs/fftw-2*"
 
 src_unpack() {
 	unpack ${P}.tar.gz
