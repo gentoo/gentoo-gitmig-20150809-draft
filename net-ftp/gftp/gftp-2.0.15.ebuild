@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.15.ebuild,v 1.4 2004/01/08 02:45:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.15.ebuild,v 1.5 2004/02/25 12:20:20 aliz Exp $
 
 IUSE="nls gtk gtk2 ssl"
 S=${WORKDIR}/${P}
@@ -21,6 +21,14 @@ DEPEND="virtual/x11
 		=dev-libs/glib-1.2* )"
 
 RDEPEND="nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A} ; cd ${S}
+
+	if [ "${ARCH}" == "amd64" ]; then
+		epatch ${FILESDIR}/${P}-64bit_fixes.patch
+	fi
+}
 
 src_compile() {
 	local myconf
