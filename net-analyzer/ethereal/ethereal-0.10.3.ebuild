@@ -1,21 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.3.ebuild,v 1.5 2004/03/28 12:15:41 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.3.ebuild,v 1.6 2004/04/06 03:08:44 vapier Exp $
 
-IUSE="adns gtk ipv6 snmp ssl gtk2"
-
-inherit libtool
+inherit libtool flag-o-matic
 
 DESCRIPTION="A commercial-quality network protocol analyzer"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-RESTRICT="nomirror"
 HOMEPAGE="http://www.ethereal.com/"
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc ~alpha amd64 ~ia64"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-replace-flags '-O3' '-O'
-replace-flags '-O2' '-O'
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 sparc ppc ~alpha amd64 ~ia64"
+IUSE="adns gtk ipv6 snmp ssl gtk2"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	snmp? ( virtual/snmp )
@@ -29,14 +25,17 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	>=net-libs/libpcap-0.7.1
 	>=dev-libs/libpcre-4.2
 	adns? ( net-libs/adns )"
-
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-devel/bison
 	sys-devel/flex"
 
 src_unpack() {
-	unpack ${A} && cd ${S} || die
+	unpack ${A}
+	cd ${S}
+
+	replace-flags -O3 -O
+	replace-flags -O2 -O
 
 	# running a full elibtoolize seems to break things in this
 	# package... see bug 41831 (17 Feb 2004 agriffis)
@@ -78,8 +77,9 @@ src_compile() {
 src_install() {
 	addwrite "/usr/share/snmp/mibs/.index"
 	dodir /usr/lib/ethereal/plugins/${PV}
-	make DESTDIR=${D} install
-	dodoc AUTHORS COPYING ChangeLog INSTALL.* NEWS README* TODO
+	make DESTDIR=${D} install || die
+
+	dodoc AUTHORS ChangeLog INSTALL.* NEWS README* TODO
 	insinto "/usr/share/pixmaps/"
 	doins "image/hi48-app-ethereal.png"
 }
