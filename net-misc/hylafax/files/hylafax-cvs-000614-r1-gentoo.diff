@@ -1,5 +1,265 @@
---- hylafax/port.h~	Sun Apr 29 23:47:49 2001
-+++ hylafax/port.h	Sun Apr 29 23:52:15 2001
+diff -ur hylafax.orig/config.h hylafax/config.h
+--- hylafax.orig/config.h	Tue May 29 15:12:50 2001
++++ hylafax/config.h	Tue May 29 15:14:45 2001
+@@ -44,7 +44,7 @@
+ 
+ #define	FAX_SPOOLDIR	"/var/spool/fax"	/* pathname to top of spooling area */
+ #define FAX_CLIENTBIN	"/usr/bin"		/* place for client apps */
+-#define FAX_LIBEXEC	"/usr/libexec"	/* place for lib executables */
++#define FAX_LIBEXEC	"/usr/lib/hylafax"	/* place for lib executables */
+ #define	FAX_LIBDATA	"/usr/lib/fax"	/* place for lib data files */
+ 
+ /*
+diff -ur hylafax.orig/defs hylafax/defs
+--- hylafax.orig/defs	Tue May 29 15:12:50 2001
++++ hylafax/defs	Tue May 29 15:15:36 2001
+@@ -49,7 +49,7 @@
+ SBIN		= $(BASEDIR)/usr/sbin
+ BIN		= $(BASEDIR)/usr/bin
+ LIBDATA		= $(BASEDIR)/usr/lib/fax
+-LIBEXEC		= $(BASEDIR)/usr/libexec
++LIBEXEC		= $(BASEDIR)/usr/lib/hylafax
+ HTMLDIR		= $(BASEDIR)/usr/doc/hylafax-cvs/html
+ FONTMAP		= /usr/share/ghostscript/6.01/lib:/usr/share/ghostscript/6.01/fonts:/usrshare/ghostscript/6.01/examples:/usr/share/ghostscript/fonts:/usr/share/sys/fonts/postscript:/usr/lib/tex/fonts/lucida:/usr/lib/tex/fonts/mathtime:/usr/lib/tex/fonts/postscript/bakoma/pfb:/usr/lib/tex/fonts/vf
+ FONTPATH	= /usr/share/ghostscript/6.01/lib:/usr/share/ghostscript/6.01/fonts:/usr/share/ghostscript/6.01/examples:/usr/share/ghostscript/fonts:/usr/share/sys/fonts/postscript:/usr/lib/tex/fonts/lucida:/usr/lib/tex/fonts/mathtime:/usr/lib/tex/fonts/postscript/bakoma/pfb:/usrlib/tex/fonts/vf
+@@ -317,7 +317,7 @@
+ # MANSYS	subdirectory for server & server-related apps
+ # MANFILES	subdirectory for file format info 
+ #
+-MAN		= $(BASEDIR)/usr/man
++MAN		= $(BASEDIR)/usr/share/man
+ MANAPPS		= man1
+ MANSYS		= man8
+ MANFILES	= man5
+diff -ur hylafax.orig/etc/faxsetup.sh hylafax/etc/faxsetup.sh
+--- hylafax.orig/etc/faxsetup.sh	Tue May 29 15:12:50 2001
++++ hylafax/etc/faxsetup.sh	Tue May 29 15:16:15 2001
+@@ -82,7 +82,7 @@
+ PATH_AFM=/usr/share/ghostscript/6.01/lib:/usr/share/ghostscript/6.01/fonts:/usr/share/ghostscript/6.01/examples:/usr/share/ghostscript/fonts:/usr/share/sys/fonts/postscript:/usr/lib/tex/fonts/lucida:/usr/lib/tex/fonts/mathtime:/usr/lib/tex/fonts/postscript/bakoma/pfb:/usr/lib/tex/fonts/vf		# directory for Adobe Font Metric files
+ DIR_BIN=/usr/bin			# directory for client applications
+ DIR_LIBDATA=/usr/lib/fax		# directory for client data files
+-DIR_LIBEXEC=/usr/libexec		# directory where servers are located
++DIR_LIBEXEC=/usr/lib/hylafax		# directory where servers are located
+ DIR_LOCKS=/var/lock	# UUCP locking directory
+ DIR_MAN=/usr/man		# directory for manual pages
+ DIR_SBIN=/usr/sbin			# directory for server applications
+diff -ur hylafax.orig/pkg/cproto.stub hylafax/pkg/cproto.stub
+--- hylafax.orig/pkg/cproto.stub	Tue May 29 15:12:50 2001
++++ hylafax/pkg/cproto.stub	Tue May 29 15:19:51 2001
+@@ -11,28 +11,28 @@
+ f none /usr/lib/fax/faxmail.ps=.././faxmail/faxmail.ps 0444 bin bin
+ f none /usr/lib/fax/pagesizes=../util/pagesizes 0444 bin bin
+ f none /usr/lib/fax/typerules=.././util/typerules 0444 bin bin
+-d none /usr/libexec ? ? ?
+-f none /usr/libexec/textfmt=../util/textfmt 0755 bin bin
++d none /usr/lib/hylafax ? ? ?
++f none /usr/lib/hylafax/textfmt=../util/textfmt 0755 bin bin
+ d none /usr/sbin ? ? ?
+ f none /usr/sbin/faxsetup=../etc/faxsetup.sh 0755 bin bin
+ f none /usr/sbin/faxsetup.bsdi=.././etc/faxsetup.bsdi 0755 bin bin
+ f none /usr/sbin/faxsetup.irix=.././etc/faxsetup.irix 0755 bin bin
+ f none /usr/sbin/faxsetup.linux=.././etc/faxsetup.linux 0755 bin bin
+-d man /usr/man ? ? ?
+-d man /usr/man/man1 ? ? ?
+-f man /usr/man/man1/faxalter.1=../man/cman.apps/faxalter.1 0444 bin bin
+-f man /usr/man/man1/faxcover.1=../man/cman.apps/faxcover.1 0444 bin bin
+-f man /usr/man/man1/faxmail.1=../man/cman.apps/faxmail.1 0444 bin bin
+-f man /usr/man/man1/faxrm.1=../man/cman.apps/faxrm.1 0444 bin bin
+-f man /usr/man/man1/faxstat.1=../man/cman.apps/faxstat.1 0444 bin bin
+-f man /usr/man/man1/hylafax.1=../man/cman.apps/hylafax.1 0444 bin bin
+-f man /usr/man/man1/sendfax.1=../man/cman.apps/sendfax.1 0444 bin bin
+-f man /usr/man/man1/sendpage.1=../man/cman.apps/sendpage.1 0444 bin bin
+-f man /usr/man/man1/sgi2fax.1=../man/cman.apps/sgi2fax.1 0444 bin bin
+-f man /usr/man/man1/textfmt.1=../man/cman.apps/textfmt.1 0444 bin bin
+-d man /usr/man/man4 ? ? ?
+-f man /usr/man/man4/pagesizes.4=../man/cman.files/pagesizes.4f 0444 bin bin
+-f man /usr/man/man4/typerules.4=../man/cman.files/typerules.4f 0444 bin bin
++d man /usr/share/man ? ? ?
++d man /usr/share/man/man1 ? ? ?
++f man /usr/share/man/man1/faxalter.1=../man/cman.apps/faxalter.1 0444 bin bin
++f man /usr/share/man/man1/faxcover.1=../man/cman.apps/faxcover.1 0444 bin bin
++f man /usr/share/man/man1/faxmail.1=../man/cman.apps/faxmail.1 0444 bin bin
++f man /usr/share/man/man1/faxrm.1=../man/cman.apps/faxrm.1 0444 bin bin
++f man /usr/share/man/man1/faxstat.1=../man/cman.apps/faxstat.1 0444 bin bin
++f man /usr/share/man/man1/hylafax.1=../man/cman.apps/hylafax.1 0444 bin bin
++f man /usr/share/man/man1/sendfax.1=../man/cman.apps/sendfax.1 0444 bin bin
++f man /usr/share/man/man1/sendpage.1=../man/cman.apps/sendpage.1 0444 bin bin
++f man /usr/share/man/man1/sgi2fax.1=../man/cman.apps/sgi2fax.1 0444 bin bin
++f man /usr/share/man/man1/textfmt.1=../man/cman.apps/textfmt.1 0444 bin bin
++d man /usr/share/man/man4 ? ? ?
++f man /usr/share/man/man4/pagesizes.4=../man/cman.files/pagesizes.4f 0444 bin bin
++f man /usr/share/man/man4/typerules.4=../man/cman.files/typerules.4f 0444 bin bin
+ d fonts @AFMDIR@ ? ? ?
+ f fonts @AFMDIR@/AvantGarde-Book=.././afm/AvantGarde-Book.afm 0444 bin bin
+ f fonts @AFMDIR@/AvantGarde-BookOblique=.././afm/AvantGarde-BookOblique.afm 0444 bin bin
+diff -ur hylafax.orig/pkg/make_proto.sh hylafax/pkg/make_proto.sh
+--- hylafax.orig/pkg/make_proto.sh	Tue May 29 15:12:50 2001
++++ hylafax/pkg/make_proto.sh	Tue May 29 15:18:59 2001
+@@ -10,8 +10,8 @@
+ LANG=C export LANG
+ DIR_BIN=/usr/bin
+ DIR_LIB=/usr/lib/fax
+-DIR_SLIB=/usr/libexec
+-DIR_MAN=/usr/man
++DIR_SLIB=/usr/lib/hylafay
++DIR_MAN=/usr/share/man
+ DIR_SBIN=/usr/sbin
+ DIR_SPOOL=/var/spool/fax
+ DIR_FONTS=@AFMDIR@
+diff -ur hylafax.orig/pkg/sproto.stub hylafax/pkg/sproto.stub
+--- hylafax.orig/pkg/sproto.stub	Tue May 29 15:12:50 2001
++++ hylafax/pkg/sproto.stub	Tue May 29 15:18:18 2001
+@@ -21,76 +21,77 @@
+ f none /usr/lib/fax/faxcover.ps=.././faxcover/faxcover.ps 0644 bin bin
+ f none /usr/lib/fax/faxmail.ps=.././faxmail/faxmail.ps 0444 bin bin
+ f none /usr/lib/fax/hfaxd.conf=.././hfaxd/hfaxd.conf 0644 bin bin
+-d none /usr/libexec ? ? ?
+-f none /usr/libexec/textfmt=../util/textfmt 0755 bin bin
+-f none /usr/libexec/faxgetty=../faxd/faxgetty 0755 bin bin
+-f none /usr/libexec/faxsend=../faxd/faxsend 0755 bin bin
+-f none /usr/libexec/pagesend=../faxd/pagesend 0755 bin bin
+-f none /usr/libexec/hfaxd=../hfaxd/hfaxd 4755 root bin
+-f none /usr/libexec/lockname=../etc/lockname 0755 bin bin
+-f none /usr/libexec/ondelay=../etc/ondelay 0755 bin bin
+-d man /usr/man ? ? ?
+-d man /usr/man/man1 ? ? ?
+-f man /usr/man/man1/faxalter.1=../man/cman.apps/faxalter.1 0444 bin bin
+-f man /usr/man/man1/faxcover.1=../man/cman.apps/faxcover.1 0444 bin bin
+-f man /usr/man/man1/faxmail.1=../man/cman.apps/faxmail.1 0444 bin bin
+-f man /usr/man/man1/faxrm.1=../man/cman.apps/faxrm.1 0444 bin bin
+-f man /usr/man/man1/faxstat.1=../man/cman.apps/faxstat.1 0444 bin bin
+-f man /usr/man/man1/hylafax-client.1=../man/cman.apps/hylafax-client.1 0444 bin bin
+-f man /usr/man/man1/sendfax.1=../man/cman.apps/sendfax.1 0444 bin bin
+-f man /usr/man/man1/sendpage.1=../man/cman.apps/sendpage.1 0444 bin bin
+-f man /usr/man/man1/sgi2fax.1=../man/cman.apps/sgi2fax.1 0444 bin bin
+-f man /usr/man/man1/textfmt.1=../man/cman.apps/textfmt.1 0444 bin bin
+-f man /usr/man/man1/choptest.1=../man/sman.apps/choptest.1m 0444 bin bin
+-f man /usr/man/man1/cqtest.1=../man/sman.apps/cqtest.1m 0444 bin bin
+-f man /usr/man/man1/dialtest.1=../man/sman.apps/dialtest.1m 0444 bin bin
+-f man /usr/man/man1/faxabort.1=../man/sman.apps/faxabort.1m 0444 bin bin
+-f man /usr/man/man1/faxaddmodem.1=../man/sman.apps/faxaddmodem.1m 0444 bin bin
+-f man /usr/man/man1/faxanswer.1=../man/sman.apps/faxanswer.1m 0444 bin bin
+-f man /usr/man/man1/faxconfig.1=../man/sman.apps/faxconfig.1m 0444 bin bin
+-f man /usr/man/man1/faxcron.1=../man/sman.apps/faxcron.1m 0444 bin bin
+-f man /usr/man/man1/faxgetty.1=../man/sman.apps/faxgetty.1m 0444 bin bin
+-f man /usr/man/man1/faxinfo.1=../man/sman.apps/faxinfo.1m 0444 bin bin
+-f man /usr/man/man1/faxmodem.1=../man/sman.apps/faxmodem.1m 0444 bin bin
+-f man /usr/man/man1/faxq.1=../man/sman.apps/faxq.1m 0444 bin bin
+-f man /usr/man/man1/faxqclean.1=../man/sman.apps/faxqclean.1m 0444 bin bin
+-f man /usr/man/man1/faxquit.1=../man/sman.apps/faxquit.1m 0444 bin bin
+-f man /usr/man/man1/faxrcvd.1=../man/sman.apps/faxrcvd.1m 0444 bin bin
+-f man /usr/man/man1/faxsend.1=../man/sman.apps/faxsend.1m 0444 bin bin
+-f man /usr/man/man1/faxsetup.1=../man/sman.apps/faxsetup.1m 0444 bin bin
+-f man /usr/man/man1/faxstate.1=../man/sman.apps/faxstate.1m 0444 bin bin
+-f man /usr/man/man1/faxwatch.1=../man/sman.apps/faxwatch.1m 0444 bin bin
+-f man /usr/man/man1/hfaxd.1=../man/sman.apps/hfaxd.1m 0444 bin bin
+-f man /usr/man/man1/mkcover.1=../man/sman.apps/mkcover.1m 0444 bin bin
+-f man /usr/man/man1/notify.1=../man/sman.apps/notify.1m 0444 bin bin
+-f man /usr/man/man1/pagesend.1=../man/sman.apps/pagesend.1m 0444 bin bin
+-f man /usr/man/man1/pollrcvd.1=../man/sman.apps/pollrcvd.1m 0444 bin bin
+-f man /usr/man/man1/ps2fax.1=../man/sman.apps/ps2fax.1m 0444 bin bin
+-f man /usr/man/man1/recvstats.1=../man/sman.apps/recvstats.1m 0444 bin bin
+-f man /usr/man/man1/tagtest.1=../man/sman.apps/tagtest.1m 0444 bin bin
+-f man /usr/man/man1/tiff2fax.1=../man/sman.apps/tiff2fax.1m 0444 bin bin
+-f man /usr/man/man1/tiffcheck.1=../man/sman.apps/tiffcheck.1m 0444 bin bin
+-f man /usr/man/man1/tsitest.1=../man/sman.apps/tsitest.1m 0444 bin bin
+-f man /usr/man/man1/wedged.1=../man/sman.apps/wedged.1m 0444 bin bin
+-f man /usr/man/man1/xferfaxstats.1=../man/sman.apps/xferfaxstats.1m 0444 bin bin
+-d man /usr/man/man4 ? ? ?
+-f man /usr/man/man4/pagesizes.4=../man/cman.files/pagesizes.4f 0444 bin bin
+-f man /usr/man/man4/typerules.4=../man/cman.files/typerules.4f 0444 bin bin
+-f man /usr/man/man4/cid.4=../man/sman.files/cid.4f 0444 bin bin
+-f man /usr/man/man4/config.4=../man/sman.files/config.4f 0444 bin bin
+-f man /usr/man/man4/destctrls.4=../man/sman.files/destctrls.4f 0444 bin bin
+-f man /usr/man/man4/dialrules.4=../man/sman.files/dialrules.4f 0444 bin bin
+-f man /usr/man/man4/hosts.hfaxd.4=../man/sman.files/hosts.hfaxd.4f 0444 bin bin
+-f man /usr/man/man4/hylafax-server.4=../man/sman.files/hylafax-server.4f 0444 bin bin
+-f man /usr/man/man4/info.4=../man/sman.files/info.4f 0444 bin bin
+-f man /usr/man/man4/log.4=../man/sman.files/log.4f 0444 bin bin
+-f man /usr/man/man4/pagermap.4=../man/sman.files/pagermap.4f 0444 bin bin
+-f man /usr/man/man4/recvq.4=../man/sman.files/recvq.4f 0444 bin bin
+-f man /usr/man/man4/sendq.4=../man/sman.files/sendq.4f 0444 bin bin
+-f man /usr/man/man4/shutdown.4=../man/sman.files/shutdown.4f 0444 bin bin
+-f man /usr/man/man4/status.4=../man/sman.files/status.4f 0444 bin bin
+-f man /usr/man/man4/tsi.4=../man/sman.files/tsi.4f 0444 bin bin
+-f man /usr/man/man4/xferfaxlog.4=../man/sman.files/xferfaxlog.4f 0444 bin bin
++d none /usr/lib/hylafax ? ? ?
++f none /usr/lib/hylafax/textfmt=../util/textfmt 0755 bin bin
++f none /usr/lib/hylafax/faxgetty=../faxd/faxgetty 0755 bin bin
++f none /usr/lib/hylafax/faxsend=../faxd/faxsend 0755 bin bin
++f none /usr/lib/hylafax/pagesend=../faxd/pagesend 0755 bin bin
++f none /usr/lib/hylafax/hfaxd=../hfaxd/hfaxd 4755 root bin
++f none /usr/lib/hylafax/lockname=../etc/lockname 0755 bin bin
++f none /usr/lib/hylafax/ondelay=../etc/ondelay 0755 bin bin
++d man /usr/share ? ? ?
++d man /usr/share/man ? ? ?
++d man /usr/share/man/man1 ? ? ?
++f man /usr/share/man/man1/faxalter.1=../man/cman.apps/faxalter.1 0444 bin bin
++f man /usr/share/man/man1/faxcover.1=../man/cman.apps/faxcover.1 0444 bin bin
++f man /usr/share/man/man1/faxmail.1=../man/cman.apps/faxmail.1 0444 bin bin
++f man /usr/share/man/man1/faxrm.1=../man/cman.apps/faxrm.1 0444 bin bin
++f man /usr/share/man/man1/faxstat.1=../man/cman.apps/faxstat.1 0444 bin bin
++f man /usr/share/man/man1/hylafax-client.1=../man/cman.apps/hylafax-client.1 0444 bin bin
++f man /usr/share/man/man1/sendfax.1=../man/cman.apps/sendfax.1 0444 bin bin
++f man /usr/share/man/man1/sendpage.1=../man/cman.apps/sendpage.1 0444 bin bin
++f man /usr/share/man/man1/sgi2fax.1=../man/cman.apps/sgi2fax.1 0444 bin bin
++f man /usr/share/man/man1/textfmt.1=../man/cman.apps/textfmt.1 0444 bin bin
++f man /usr/share/man/man1/choptest.1=../man/sman.apps/choptest.1m 0444 bin bin
++f man /usr/share/man/man1/cqtest.1=../man/sman.apps/cqtest.1m 0444 bin bin
++f man /usr/share/man/man1/dialtest.1=../man/sman.apps/dialtest.1m 0444 bin bin
++f man /usr/share/man/man1/faxabort.1=../man/sman.apps/faxabort.1m 0444 bin bin
++f man /usr/share/man/man1/faxaddmodem.1=../man/sman.apps/faxaddmodem.1m 0444 bin bin
++f man /usr/share/man/man1/faxanswer.1=../man/sman.apps/faxanswer.1m 0444 bin bin
++f man /usr/share/man/man1/faxconfig.1=../man/sman.apps/faxconfig.1m 0444 bin bin
++f man /usr/share/man/man1/faxcron.1=../man/sman.apps/faxcron.1m 0444 bin bin
++f man /usr/share/man/man1/faxgetty.1=../man/sman.apps/faxgetty.1m 0444 bin bin
++f man /usr/share/man/man1/faxinfo.1=../man/sman.apps/faxinfo.1m 0444 bin bin
++f man /usr/share/man/man1/faxmodem.1=../man/sman.apps/faxmodem.1m 0444 bin bin
++f man /usr/share/man/man1/faxq.1=../man/sman.apps/faxq.1m 0444 bin bin
++f man /usr/share/man/man1/faxqclean.1=../man/sman.apps/faxqclean.1m 0444 bin bin
++f man /usr/share/man/man1/faxquit.1=../man/sman.apps/faxquit.1m 0444 bin bin
++f man /usr/share/man/man1/faxrcvd.1=../man/sman.apps/faxrcvd.1m 0444 bin bin
++f man /usr/share/man/man1/faxsend.1=../man/sman.apps/faxsend.1m 0444 bin bin
++f man /usr/share/man/man1/faxsetup.1=../man/sman.apps/faxsetup.1m 0444 bin bin
++f man /usr/share/man/man1/faxstate.1=../man/sman.apps/faxstate.1m 0444 bin bin
++f man /usr/share/man/man1/faxwatch.1=../man/sman.apps/faxwatch.1m 0444 bin bin
++f man /usr/share/man/man1/hfaxd.1=../man/sman.apps/hfaxd.1m 0444 bin bin
++f man /usr/share/man/man1/mkcover.1=../man/sman.apps/mkcover.1m 0444 bin bin
++f man /usr/share/man/man1/notify.1=../man/sman.apps/notify.1m 0444 bin bin
++f man /usr/share/man/man1/pagesend.1=../man/sman.apps/pagesend.1m 0444 bin bin
++f man /usr/share/man/man1/pollrcvd.1=../man/sman.apps/pollrcvd.1m 0444 bin bin
++f man /usr/share/man/man1/ps2fax.1=../man/sman.apps/ps2fax.1m 0444 bin bin
++f man /usr/share/man/man1/recvstats.1=../man/sman.apps/recvstats.1m 0444 bin bin
++f man /usr/share/man/man1/tagtest.1=../man/sman.apps/tagtest.1m 0444 bin bin
++f man /usr/share/man/man1/tiff2fax.1=../man/sman.apps/tiff2fax.1m 0444 bin bin
++f man /usr/share/man/man1/tiffcheck.1=../man/sman.apps/tiffcheck.1m 0444 bin bin
++f man /usr/share/man/man1/tsitest.1=../man/sman.apps/tsitest.1m 0444 bin bin
++f man /usr/share/man/man1/wedged.1=../man/sman.apps/wedged.1m 0444 bin bin
++f man /usr/share/man/man1/xferfaxstats.1=../man/sman.apps/xferfaxstats.1m 0444 bin bin
++d man /usr/share/man/man4 ? ? ?
++f man /usr/share/man/man4/pagesizes.4=../man/cman.files/pagesizes.4f 0444 bin bin
++f man /usr/share/man/man4/typerules.4=../man/cman.files/typerules.4f 0444 bin bin
++f man /usr/share/man/man4/cid.4=../man/sman.files/cid.4f 0444 bin bin
++f man /usr/share/man/man4/config.4=../man/sman.files/config.4f 0444 bin bin
++f man /usr/share/man/man4/destctrls.4=../man/sman.files/destctrls.4f 0444 bin bin
++f man /usr/share/man/man4/dialrules.4=../man/sman.files/dialrules.4f 0444 bin bin
++f man /usr/share/man/man4/hosts.hfaxd.4=../man/sman.files/hosts.hfaxd.4f 0444 bin bin
++f man /usr/share/man/man4/hylafax-server.4=../man/sman.files/hylafax-server.4f 0444 bin bin
++f man /usr/share/man/man4/info.4=../man/sman.files/info.4f 0444 bin bin
++f man /usr/share/man/man4/log.4=../man/sman.files/log.4f 0444 bin bin
++f man /usr/share/man/man4/pagermap.4=../man/sman.files/pagermap.4f 0444 bin bin
++f man /usr/share/man/man4/recvq.4=../man/sman.files/recvq.4f 0444 bin bin
++f man /usr/share/man/man4/sendq.4=../man/sman.files/sendq.4f 0444 bin bin
++f man /usr/share/man/man4/shutdown.4=../man/sman.files/shutdown.4f 0444 bin bin
++f man /usr/share/man/man4/status.4=../man/sman.files/status.4f 0444 bin bin
++f man /usr/share/man/man4/tsi.4=../man/sman.files/tsi.4f 0444 bin bin
++f man /usr/share/man/man4/xferfaxlog.4=../man/sman.files/xferfaxlog.4f 0444 bin bin
+ d none /usr/sbin ? ? ?
+ f none /usr/sbin/faxmsg=../util/faxmsg 0755 bin bin
+ f none /usr/sbin/faxconfig=../util/faxconfig 0755 bin bin
+diff -ur hylafax.orig/port.h hylafax/port.h
+--- hylafax.orig/port.h	Tue May 29 15:12:50 2001
++++ hylafax/port.h	Tue May 29 15:21:13 2001
 @@ -16,7 +16,7 @@
  #define CONFIG_TIOCMBISBYREF yes
  #define CONFIG_MAXGID 60002
