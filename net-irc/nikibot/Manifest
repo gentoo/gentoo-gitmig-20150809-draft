@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ec482ba6329492eee341280bd94e2cb7 nikibot-0.8.ebuild 717
+MD5 7746cd3edf228132b09388bc2bfb2475 ChangeLog 495
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 80171349750a4c0a1b9914bdac986b67 ChangeLog 408
-MD5 09b16226667a32e820a6b039baad50e8 files/digest-nikibot-0.8 64
+MD5 a5ceecbc546e0d58e5aa72795a9d1046 nikibot-0.8.ebuild 762
+MD5 358bf978000b3461815e6843498f3bf2 files/digest-nikibot-0.8 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBAZo9AXomK8S72HoRAhg8AJ9PuaUBHZO1fzT/gG8AlLNcbIW2fQCfckyW
-1stYjVEophs2QYbbPNKKvho=
-=4FOR
+iD8DBQFBl5ROI1lqEGTUzyQRAhvOAKCDa++a/3v2I2Uho++u0eRuOn4iqwCggXX1
+a17YnTMN/BEdeiwxUWn0cLI=
+=+jkf
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/nikibot
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/nikibot/ChangeLog,v 1.1 2004/07/23 23:06:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/nikibot/ChangeLog,v 1.2 2004/11/14 17:22:13 swegener Exp $
+
+  14 Nov 2004; Sven Wegener <swegener@gentoo.org> nikibot-0.8.ebuild:
+  Fixed digest.
 
 *nikibot-0.8 (24 Jul 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/nikibot/nikibot-0.8.ebuild,v 1.1 2004/07/23 23:06:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/nikibot/nikibot-0.8.ebuild,v 1.2 2004/11/14 17:22:13 swegener Exp $
 
 DESCRIPTION="An IRC-Bot with lua script interface"
 HOMEPAGE="http://sourceforge.net/projects/nikibot/"
@@ -25,6 +25,6 @@ src_unpack() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	dodoc README test.lua
-	dohtml html/*
+	dodoc README test.lua || die "dodoc failed"
+	dohtml html/* || die "dohtml failed"
 }
