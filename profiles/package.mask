@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3766 2005/03/25 21:38:30 latexer Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3767 2005/03/25 23:14:50 voxus Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Konstantin Arkhipov <voxus@gentoo.org> (26 Mar 2005)
+# masked for heavy testing
+>=net-dns/bind-9.3
+>=net-dns/bind-tools-9.3
 
 # Peter Johanson <latexer@gentoo.org> (25 Mar 2005)
 # Masking the 1.1.5 release. Mainly in portage for advanced users
