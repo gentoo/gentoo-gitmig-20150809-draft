@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2_p1.ebuild,v 1.5 2004/03/24 04:53:44 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2_p1.ebuild,v 1.6 2004/03/28 23:25:06 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -38,7 +38,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/ORBit2-2.8.3
 
 	>=media-libs/audiofile-0.2.6
-	>=media-sound/esound-0.2.33
+	>=media-sound/esound-0.2.34
 	>=gnome-base/gail-1.4.1
 	>=gnome-base/gnome-mime-data-2.4.1
 	>=gnome-base/gnome-vfs-2.4.2-r1
@@ -69,7 +69,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=app-arch/file-roller-2.4.4-r2
 	>=gnome-extra/gcalctool-4.3.44
 	>=gnome-extra/gconf-editor-2.4
-	>=gnome-base/gdm-2.4.1.7-r1
+	>=gnome-base/gdm-2.4.4.7
 	>=app-editors/gedit-2.4.1
 	>=app-text/ggv-2.4.1
 	>=app-text/gpdf-0.112.1
