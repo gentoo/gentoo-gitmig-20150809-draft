@@ -1,8 +1,15 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.3 2002/05/11 15:58:09 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.4 2002/06/02 22:41:06 wmertens Exp $
 
 *doxygen-1.2.15-r1 (11 May 2002)
+
+  02 Jun 2002; Wout Mertens <wmertens@gentoo.org>:
+  Changed ebuild to depend on graphvis as per bug #3320.
+  While I was at it, changed it so lintool was happy. Therefore, the Author
+  field was removed, and copied to here:
+  Author Sean Mitchell <sean@arawak.on.ca>, updated Tom von Schwerdtner
+  <tvon@etria.org>
 
   11 May 2002; pvdabeel <pvdabeel@gentoo.org> ChangeLog :
   Doxygen compiles and runs perfectly with qt3 too. Both qt2 and qt3
