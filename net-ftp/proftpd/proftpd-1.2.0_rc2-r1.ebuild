@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.0_rc2-r1.ebuild,v 1.2 2000/09/15 20:09:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.0_rc2-r1.ebuild,v 1.3 2000/09/20 20:04:53 achim Exp $
 
 P=proftpd-1.2.0rc2
 A="${P}.tar.gz"
@@ -15,7 +15,7 @@ src_unpack() {
 }
 
 src_compile() {                           
-    CFLAGS="$CFLAGS -I/usr/include/mysql" try ./configure --host=${CHOST} --prefix=/usr --sbindir=/usr/sbin \
+    LDFLAGS="-Lssl" CFLAGS="$CFLAGS -I/usr/include/mysql" try ./configure --host=${CHOST} --prefix=/usr --sbindir=/usr/sbin \
 		--sysconfdir=/etc --localstatedir=/var/run --mandir=/usr/man \
 		--with-modules=mod_ldap:mod_ratio:mod_readme:mod_linuxprivs:mod_mysql:mod_sqlpw:mod_pam \
 		--disable-sendfile --enable-shadow --enable-autoshadow

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-1.94.ebuild,v 1.1 2000/09/17 12:15:08 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-1.94.ebuild,v 1.2 2000/09/20 20:04:52 achim Exp $
 
 A=kde-i18n.tar.bz2
 S=${WORKDIR}/kde-i18n
@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-  try make install prefix=${D}/opt/kde bindir=${D}/opt/kde/bin
+  try make install DESTDIR=${D}
   dodoc COPYING highscore
   docinto html
   dodoc highscore.html
