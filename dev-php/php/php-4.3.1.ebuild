@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1.ebuild,v 1.1 2003/02/18 20:30:22 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1.ebuild,v 1.2 2003/02/24 20:55:12 rphillips Exp $
 
 IUSE="truetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -122,10 +122,10 @@ src_compile() {
 			fi 
 	fi 
 					
-	use qt && ( \
+	use qt && { 
 		export QTDIR=/usr/qt/2 #hope this helps - danarmak
 		myconf="${myconf} --with-qtdom" 
-	)
+	}
 
 	if [ "`use imap`" ] ; then
 		if [ "`use ssl`" ] && [ "`strings ${ROOT}/usr/lib/c-client.a \
