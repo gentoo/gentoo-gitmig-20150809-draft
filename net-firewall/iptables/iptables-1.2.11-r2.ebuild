@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r2.ebuild,v 1.10 2004/08/30 02:14:01 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r2.ebuild,v 1.11 2004/09/05 14:02:18 gmsoft Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.iptables.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips alpha ~arm ~hppa amd64 ~ia64 ppc64"
+KEYWORDS="x86 ~ppc sparc ~mips alpha ~arm hppa amd64 ~ia64 ppc64"
 IUSE="ipv6 static extensions"
 
 DEPEND="virtual/os-headers
@@ -38,7 +38,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-files/grsecurity-1.2.8-iptables.patch.bz2
 	epatch ${FILESDIR}/${PV}-files/install_ipv6_apps.patch.bz2
 	epatch ${FILESDIR}/${PV}-files/install_all_dev_files.patch.bz2
-	use hppa && epatch ${FILESDIR}/${PV}-files/hppa.patch.bz2
 
 	sed -i "s/PF_EXT_SLIB:=/PF_EXT_SLIB:=stealth /g" extensions/Makefile
 

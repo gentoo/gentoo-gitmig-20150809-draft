@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.45 2004/08/30 02:14:01 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.46 2004/09/05 14:02:18 gmsoft Exp $
+
+  05 Sep 2004; Guy Martin <gmsoft@gentoo.org>
+  -files/1.2.11-files/hppa.patch.bz2, iptables-1.2.11-r2.ebuild:
+  Stable on hppa. Removed no more needed hppa patch.
 
   29 Aug 2004; Tom Gall <tgall@gentoo.org> iptables-1.2.11-r2.ebuild:
   stable on ppc64, bug #60780
