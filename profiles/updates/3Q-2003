@@ -157,6 +157,7 @@ move app-games/enemy-territory games-fps/enemy-territory
 move app-games/freedoom games-fps/freedoom
 move app-games/lsdldoom games-fps/lsdldoom
 move app-games/mtavc games-fps/mtavc
+move games-fps/mtavc games-server/mtavc
 move app-games/nprquake-sdl games-fps/nprquake-sdl
 move app-games/prboom games-fps/prboom
 move app-games/quake1 games-fps/quake1
