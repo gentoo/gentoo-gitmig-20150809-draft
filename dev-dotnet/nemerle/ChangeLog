@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/nemerle
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nemerle/ChangeLog,v 1.2 2004/09/29 23:09:03 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nemerle/ChangeLog,v 1.3 2004/10/10 17:01:58 latexer Exp $
+
+*nemerle-0.2.1-r1 (10 Oct 2004)
+
+  10 Oct 2004; <peter@gentoo.org> +files/nemerle-0.2.1-ncc-fix.diff,
+  +nemerle-0.2.1-r1.ebuild:
+  Revision bump. Compiler fix that already got accepted upstream. Makes nemerle
+  now work with monodevelop. See bug #66497.
 
 *nemerle-0.2.1 (29 Sep 2004)
 
