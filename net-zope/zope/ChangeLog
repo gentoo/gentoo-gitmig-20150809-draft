@@ -1,0 +1,60 @@
+# ChangeLog for net-zope/zope
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: 
+
+06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords 
+
+*zope-2.6.1 (26 Feb 2003)
+
+  03 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> : Moving from net-www to     net-zope.
+
+  26 Feb 2003; Jason Shoemaker <kutsuya@gentoo.org> : Version bump.	
+
+*zope-2.6.0-r3 (25 Feb 2003)
+
+  25 Feb 2003; Jason Shoemaker <kutsuya@gentoo.org> zope-r2.initd : A bug fix 
+  revision mostly. Fixed dependencies. Changed SLOT back to 0, hopefully this 
+  won't cause too much trouble. Changed 'zope' user abit in pkg_seup().Added
+  RCNAME as a global varibale to ease revising the rcscripts. Fixed 'example
+  zope applications,' which was mention by Macros73 to be missing. Also added 
+  the option, for developers, of using virtual/python with 
+  PYTHON_SLOT_VERSION=VIRTUAL. 
+
+*zope-2.6.0-r2 (16 Feb 2003)
+
+  16 Feb 2003; Jason Shoemaker <kutsuya@gentoo.org> : A major revision.
+  New rcscript (along with zope-config) makes it possible to have several zope
+  instances runing at the same time. Also has better PID management fixing 
+  #14173. /etc/env.d/zope and /etc/conf.d/zope are now placed in 
+  /etc/conf.d/zope-2_6_0. Also added a DateTime patch. Improved security.
+  
+*zope-2.6.0-r1 (23 Nov 2002)
+
+  23 Nov 2002; Grant Goodyear <g2boojum@gentoo.org> zope-2.6.0-r1.ebuild :
+  Added ebuild from Bug #10758 (thanks to Maurizio Disimino!) which should
+  ensure that python 2.1.3* is used, the init script is now properly 
+  located in /etc/init.d, and probably one or two other fixes.
+
+*zope-2.6.0 (24 Oct 2002)
+
+  24 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> zope-2.6.0.ebuild :
+  Security update. Ebuild contributed by Jason S <kutsuya1@yahoo.com> in #9474.
+
+*zope-2.5.1 (2 Jul 2002)
+	
+  2 Jul 2002; Jon Nelson <jnelson@gentoo.org> zope-2.5.1.ebuild:
+  Use python 2.1.3 ebuild explicitly  
+  Thanks for Matt Behrens <matt@zigg.com>
+  Hopefully closes #468
+  
+*unreleased-as-yet-still-using-masked-zope-2.4.0-r6
+
+  1 Jul 2002; Jon Nelson <jnelson@gentoo.org> zope-2.4.0-r6:
+  Use new python2.1 ebuild explicitly
+  Will probably update to zope 2.5.0 when I get some time, but
+  2.4.0-r6 will build.
+
+*zope-2.4.0-r6 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog : Initial import.
+  
