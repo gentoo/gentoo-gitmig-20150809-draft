@@ -1,4 +1,5 @@
 MD5 2eae0880d6725acaf0724db1b8b1758a kdeartwork-3.1.5.ebuild 586
+MD5 28a5befdbcd78c8577110e62bec7ae31 kdeartwork-3.2.3.ebuild 507
 MD5 4156baaae305601de07f26f191dbc416 kdeartwork-3.2.0.ebuild 500
 MD5 e0756ec0db478f23e7a909f789199ac4 kdeartwork-3.2.2.ebuild 502
 MD5 830aeb7a1f1fa44565d622ebf1c749d8 kdeartwork-3.3.0_alpha1.ebuild 473
@@ -9,5 +10,6 @@ MD5 4affe90f3e8d7a728eb0089811b613fc files/digest-kdeartwork-3.1.5 71
 MD5 c34d3074ca608e62d2de9eba80a3cb2c files/digest-kdeartwork-3.2.0 71
 MD5 ca4fa121a8a9bf75bddf426a2374fcc4 files/digest-kdeartwork-3.2.1 71
 MD5 b1917d58e026721bef996f7238f91fd0 files/digest-kdeartwork-3.2.2 71
+MD5 750b31061cf39ebc204bbc9b012da76a files/digest-kdeartwork-3.2.3 71
 MD5 1579545755bc63505fd6c670f9e70bdc files/xsaver-conflicting-typedefs.diff 510
 MD5 874bc3899ae7794547a3757f584518d0 files/digest-kdeartwork-3.3.0_alpha1 72

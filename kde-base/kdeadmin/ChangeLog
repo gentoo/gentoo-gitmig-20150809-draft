@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.81 2004/06/03 23:50:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.82 2004/06/10 22:42:58 caleb Exp $
+
+*kdeadmin-3.2.3 (10 Jun 2004)
+
+  10 Jun 2004; Caleb Tennis <caleb@gentoo.org> +kdeadmin-3.2.3.ebuild:
+  Version bump
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> kdeadmin-3.1.5.ebuild:
   Fix use invocation

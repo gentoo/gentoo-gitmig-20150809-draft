@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.77 2004/06/01 21:33:44 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.78 2004/06/10 22:42:45 caleb Exp $
+
+*kdeartwork-3.2.3 (10 Jun 2004)
+
+  10 Jun 2004; Caleb Tennis <caleb@gentoo.org> +kdeartwork-3.2.3.ebuild:
+  Version bump
 
   01 Jun 2004; Travis Tilley <lv@gentoo.org> kdeartwork-3.2.2.ebuild:
   stable on amd64
