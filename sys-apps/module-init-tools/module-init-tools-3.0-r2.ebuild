@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0-r2.ebuild,v 1.8 2004/09/02 13:27:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0-r2.ebuild,v 1.9 2004/10/03 06:40:46 vapier Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://kernel/linux/kernel/people/rusty/modules/${MYP}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -59,49 +59,43 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=
-
 	filter-flags -fPIC
 
 	einfo "Building modutils..."
 	cd ${WORKDIR}/modutils-${MODUTILS_PV}
-
 	econf \
 		--disable-strip \
 		--prefix=/ \
 		--enable-insmod-static \
 		--disable-zlib \
-		${myconf} || die "econf failed"
-
+		|| die "econf failed"
+	local mymake=""
 	if [ "${ARCH}" = "hppa" ]
 	then
 		mymake="ARCH=hppa"
 	fi
-
 	emake ${mymake} || die "emake modutils failed"
+
 	einfo "Building module-init-tools..."
 	cd ${S}
-
 	econf \
 		--prefix=/ \
 		--enable-zlib \
-		${myconf} || die "econf failed"
-
+		|| die "econf failed"
 	emake || die "emake module-init-tools failed"
 }
 
-src_install () {
-
+src_install() {
+	local mymake=""
 	if [ "${ARCH}" = "hppa" ]
 	then
 		mymake="ARCH=hppa"
 	fi
-
 	cd ${WORKDIR}/modutils-${MODUTILS_PV}
 	einstall prefix="${D}" ${mymake}
 
 	docinto modutils-${MODUTILS_PV}
-	dodoc COPYING CREDITS ChangeLog NEWS README TODO
+	dodoc CREDITS ChangeLog NEWS README TODO
 
 	cd ${S}
 	# This copies the old version of modutils to *.old so it still works
@@ -131,6 +125,11 @@ src_install () {
 	do
 		mv -f ${f} ${f%\.*}.old.${f##*\.}
 	done
+	# Fix the ksyms links #35601
+	for f in ksyms kallsyms ; do
+		dosym insmod.old /sbin/${f}
+		dosym insmod.static.old /sbin/${f}.static
+	done
 
 	einstall prefix=${D}
 
@@ -158,7 +157,7 @@ src_install () {
 
 	doman *.[1-8]
 	docinto /
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }
 
 pkg_postinst() {
