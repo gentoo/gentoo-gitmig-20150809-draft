@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kemerge/kemerge-0.3.ebuild,v 1.3 2002/04/11 18:21:36 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kemerge/kemerge-0.3-r1.ebuild,v 1.1 2002/04/11 18:56:49 verwilst Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
