@@ -1,0 +1,12 @@
+# ChangeLog for net-www/mozilla-firefox-bin
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/ChangeLog,v 1.1 2004/02/12 08:24:49 brad Exp $
+
+*mozilla-firefox-bin-0.8 (12 Feb 2004)
+
+  12 Feb 2004; Brad Laue <brad@gentoo.org> mozilla-firefox-bin-0.8.ebuild,
+  files/firebird-0.7-antialiasing-patch, files/firefox,
+  files/icon/firefox-icon.png, files/icon/mozillafirefox.desktop:
+  mozilla-firefox-bin, soon to replace firebird. This ebuild features the GTK+2
+  binary with antialiased fonts, and that groovy groovy icon.
+

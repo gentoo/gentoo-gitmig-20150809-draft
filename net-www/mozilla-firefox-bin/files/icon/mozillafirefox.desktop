@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Mozilla Firefox
+Comment=Web Browser
+Exec=/usr/bin/firefox
+Icon=firefox-icon.png
+Terminal=0
+Type=Application
