@@ -1,6 +1,12 @@
 # ChangeLog for media-lib/libdvdnav
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.1 2002/05/01 03:07:14 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.2 2002/06/16 19:22:15 lostlogic Exp $
+
+*libdvdnav-0.1.1 (16 Jun 2002)
+
+  16 Jun  2002; Brandon Low <lostlogic@gentoo.org> libdvdnav-0.1.1.ebuild:
+
+  Update to new version for xine-0.9.10
 
 *libdvdnav-0.1.0 (30 Apr 2002)
 

@@ -1,6 +1,13 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.11 2002/06/16 17:36:21 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.12 2002/06/16 19:22:15 lostlogic Exp $
+
+*xine-ui-0.9.10-r1 (16 Jun 2002)
+
+  16 Jun 2002; Brandon Low <lostlogic@gentoo.org> xine-ui-0.9.10-r1.ebuild
+
+  Added gcc-3.1 support, ensure that DirectFB really gets diabled, again,
+  gcc-3.1 users will not be able to use DirectFB.
 
 *xine-ui-0.9.9-r2 (16 Jun 2002)
 

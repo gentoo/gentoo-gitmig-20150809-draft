@@ -1,8 +1,17 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.8 2002/06/08 13:52:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.9 2002/06/16 19:22:15 lostlogic Exp $
 
-*xine-lib-0.9.9-r2 (r87 Jun 2002)
+*xine-lib-0.9.10-r1 (16 Jun 2002)
+
+  16 Jun 2002; Brandon Low <lostlogic@gentoo.org> xine-lib-0.9.10-r1.ebuild
+
+  Put dxr3 compilation back in, it works fine with xine-lib-0.9.10.  
+  
+  A note, gcc-3.1 users will not be able to compile xine-lib-0.9.10 if they
+  have DirectFB installed.  Still working on this.
+
+*xine-lib-0.9.9-r2 (8 Jun 2002)
 
   8 Jun 2002; Seemant Kulleen <seemant@gentoo.org> xine-lib-0.9.9-r2.ebuild
   files/digest-xine-lib-0.9.9-r2 :
