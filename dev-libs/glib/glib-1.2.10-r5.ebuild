@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.28 2004/08/31 18:52:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.29 2004/09/01 10:33:52 lv Exp $
 
 inherit libtool gnuconfig flag-o-matic eutils
 
@@ -69,7 +69,8 @@ src_compile() {
 src_install() {
 	einstall || die
 
-	( cd ${D}/usr/lib ; chmod 755 libgmodule-1.2.so.* )
+	( cd ${D}/usr/$(get_libdir) || die
+		chmod 755 libgmodule-1.2.so.* )
 
 	dodoc AUTHORS ChangeLog README* INSTALL NEWS
 	dohtml -r docs
