@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/gtkpbbuttons/gtkpbbuttons-0.6.3.ebuild,v 1.6 2004/09/15 09:46:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/gtkpbbuttons/gtkpbbuttons-0.6.4.ebuild,v 1.1 2004/09/15 09:46:32 lu_zero Exp $
 
 DESCRIPTION="program to monitor special Powerbook/iBook keys"
 HOMEPAGE="http://pbbuttons.sf.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/pbbuttons/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ppc"
+KEYWORDS="-* ~ppc"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.0
