@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.63 2004/04/01 12:02:51 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.64 2004/04/09 12:25:51 pauldv Exp $
+
+  09 Apr 2004; Paul de Vrieze <pauldv@gentoo.org> openoffice-1.1.1.ebuild:
+  Change the source file. As the only change in the source file concerns
+  building under windows we will not bump the version
 
   01 Apr 2004; suka@gentoo.org openoffice-1.1.1.ebuild,
   files/1.1.1/ooffice-wrapper-1.3:
