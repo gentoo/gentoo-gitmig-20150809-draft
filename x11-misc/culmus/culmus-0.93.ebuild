@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/culmus/culmus-0.93.ebuild,v 1.3 2004/04/14 09:09:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/culmus/culmus-0.93.ebuild,v 1.4 2004/05/09 11:17:02 sejo Exp $
 
 DESCRIPTION="Hebrew Type1 fonts"
 SRC_URI="mirror://sourceforge/culmus/${P}.tar.gz \
@@ -9,7 +9,7 @@ http://culmus.sourceforge.net/fancy/gladia.tar.gz \
 http://culmus.sourceforge.net/fancy/ozrad.tar.gz \
 http://culmus.sourceforge.net/fancy/gan.tar.gz"
 HOMEPAGE="http://culmus.sourceforge.net/"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 LICENSE="GPL-2 | LICENSE-BITSTREAM"
 IUSE=""
