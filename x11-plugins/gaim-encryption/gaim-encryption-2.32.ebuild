@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/gaim-encryption-2.32.ebuild,v 1.13 2004/11/27 02:07:26 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/gaim-encryption-2.32.ebuild,v 1.14 2004/12/07 20:25:19 rizzo Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -35,6 +35,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "Install failed"
+	make install DESTDIR=${D} || die "Install failed"
 	dodoc CHANGELOG INSTALL NOTES README TODO VERSION WISHLIST
 }
