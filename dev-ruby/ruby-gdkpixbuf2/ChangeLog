@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gdkpixbuf2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.5 2004/01/23 08:05:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.6 2004/02/24 01:52:34 pylon Exp $
+
+  23 Feb 2004; Lars Weiler <pylon@gentoo.org> ruby-gdkpixbuf2-0.8.1.ebuild:
+  Added ~ppc to keywords
 
   23 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-gdkpixbuf2-0.5.0.ebuild,
   ruby-gdkpixbuf2-0.7.0.ebuild, ruby-gdkpixbuf2-0.8.0.ebuild,

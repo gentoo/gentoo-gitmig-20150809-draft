@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gnomecanvas2
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.4 2003/11/24 19:01:12 agriffis Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.5 2004/02/24 01:52:34 pylon Exp $
+
+  23 Feb 2004; Lars Weiler <pylon@gentoo.org> ruby-gnomecanvas2-0.8.1.ebuild:
+  Added ~ppc to keywords
 
 *ruby-gnomecanvas2-0.8.1 (24 Nov 2003)
 
