@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/lfpfonts-fix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-fix/ChangeLog,v 1.6 2004/08/17 21:26:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-fix/ChangeLog,v 1.7 2004/09/29 07:45:11 usata Exp $
+
+  29 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> lfpfonts-fix-0.82-r1.ebuild,
+  lfpfonts-fix-0.83-r1.ebuild:
+  Changed HOMEPAGE to sf.net and fixed segmentation fault during compilation.
 
   17 Aug 2004; Aron Griffis <agriffis@gentoo.org> lfpfonts-fix-0.83-r1.ebuild:
   mark stable everywhere
