@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/faad2
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.41 2004/12/29 00:40:52 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.42 2005/01/18 16:44:48 foser Exp $
+
+*faad2-2.0-r4 (18 Jan 2005)
+
+  18 Jan 2005; foser <foser@gentoo.org> faad2-2.0-r4.ebuild :
+  Fix up another include file (this time for latexers hax)
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
