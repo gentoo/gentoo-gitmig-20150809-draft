@@ -1,3 +1,4 @@
+MD5 bb9888bcaee0c37159b0dcbbb3e84aca ipw2100-0.50.ebuild 2349
 MD5 af2bd708c29ad112cea5def61fd8727d ipw2100-0.46.ebuild 2308
 MD5 2f891ac2012d4e7de0bfe1ff02b4ffd5 ipw2100-0.41.ebuild 2221
 MD5 c1821412a8df6f808806fcfed23b9558 ipw2100-0.48.ebuild 2134
@@ -19,5 +20,6 @@ MD5 3d2b283cc098381a32b94d472e5b11dc files/digest-ipw2100-0.45 124
 MD5 a508f0e5b0fb4fda0c68b61cfb7112cb files/digest-ipw2100-0.46 126
 MD5 d4161d49b448578ab1305bd933485404 files/digest-ipw2100-0.48 124
 MD5 f706839d579ba7b981d0c96407e1cfdd files/digest-ipw2100-0.49 124
+MD5 d553cf666c0072c4d33abb3b80a03c44 files/digest-ipw2100-0.50 124
 MD5 1939e18b58d29ee8ec02ce6777ebaa4e files/ipw2100-0.33-makefile-fix.diff 2275
 MD5 99cced47568e9cb3fd2e3ceaed896c88 files/hostap_crypt.h 1344
