@@ -1,3 +1,8 @@
+MD5 9354b97393f46d3f0a0f5c576b664889 ChangeLog 5255
+MD5 d5cf67873286bdee0ce6f388674f35a9 proftpd-1.2.5-r1.ebuild 2522
+MD5 6f8fd8a98f1c0ffdc337fb781b83a57d proftpd-1.2.7.ebuild 3674
+MD5 a94ecef0e1c980f5f7fee13c1a28e78f proftpd-1.2.8.ebuild 2734
+MD5 4ffba064321e3f9d8228c828a8c9491f proftpd-1.2.9_rc1.ebuild 2914
 MD5 6236a589ef01778d118911281b20be51 files/digest-proftpd-1.2.5-r1 66
 MD5 c1dc1d9278d5b77f53ea44ee848dafc6 files/digest-proftpd-1.2.7 211
 MD5 cb6cd6133728449d0da092b1d6147b9d files/digest-proftpd-1.2.8 66
@@ -6,8 +11,3 @@ MD5 0cf02f8c82f22e714b8299e7b7907d8f files/mod_sql_postgres.c.patch 275
 MD5 b338504ed873219e368abab7df6c276d files/proftpd.conf 1704
 MD5 305b9ec34f3caa3722cf5a7dc1a59880 files/proftpd.rc6 743
 MD5 313cde04e0ea4cd747e6b905e6c982b4 files/proftpd.xinetd 302
-MD5 d5cf67873286bdee0ce6f388674f35a9 proftpd-1.2.5-r1.ebuild 2522
-MD5 6f8fd8a98f1c0ffdc337fb781b83a57d proftpd-1.2.7.ebuild 3674
-MD5 a94ecef0e1c980f5f7fee13c1a28e78f proftpd-1.2.8.ebuild 2734
-MD5 9354b97393f46d3f0a0f5c576b664889 ChangeLog 5255
-MD5 25c127b03641ebdf3d85a271acf45a88 proftpd-1.2.9_rc1.ebuild 2919
