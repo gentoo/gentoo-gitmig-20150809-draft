@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.9 2004/10/11 13:39:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.10 2004/10/21 01:01:13 spyderous Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -13,7 +13,7 @@ IUSE="ipv6 xinerama fbdev speedo type1 cjk truetype freetype fs xv"
 
 # VIDEO_CARDS="savage trident sis530 trio ts300 mach64 i810 igs"
 
-inherit eutils flag-o-matic gcc xfree kmod
+inherit eutils flag-o-matic toolchain-funcs x11 kmod
 
 filter-flags "-funroll-loops"
 
