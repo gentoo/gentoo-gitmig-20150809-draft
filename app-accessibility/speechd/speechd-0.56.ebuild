@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/speechd-0.56.ebuild,v 1.2 2004/03/17 04:04:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/speechd-0.56.ebuild,v 1.3 2004/03/19 03:11:16 eradicator Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Implements /dev/speech (any text written to /dev/speech will be spoken aloud)"
@@ -45,7 +45,9 @@ pkg_config () {
 	einfo "they must be added to the 'speech' group."
 }
 
-pkg_postrm () {
-	einfo "Removing FIFO at /dev/speech ..."
-	rm -f /dev/speech
-}
+# Bad... this will happen during an upgrade
+#pkg_postrm () {
+#	einfo "Removing FIFO at /dev/speech ..."
+#	rm -f /dev/speech
+#}
+
