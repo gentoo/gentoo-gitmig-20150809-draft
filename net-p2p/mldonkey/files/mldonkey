@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ ! -d ${HOME}/.mldonkey ] ; then
+	echo "Creating subdirectory \".mldonkey\" in your home"
+	echo "to store config files and downloaded files..."
+	
+	if ! mkdir ${HOME}/.mldonkey ; then
+		echo "Creation of subdirectory failed! Exiting..."
+		exit 1
+	fi
+fi
+
+cd ${HOME}/.mldonkey && /usr/bin/mlnet
