@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.89 2004/03/20 14:33:45 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.90 2004/03/22 01:59:30 lu_zero Exp $
+
+  22 Mar 2004; Luca Barbato <lu_zero@gentoo.org>
+  development-sources-2.6.4.ebuild:
+  Marked ~ppc, should work fine on most of the apple ppc systems
 
 *development-sources-2.6.5_rc2 (20 Mar 2004)
 
