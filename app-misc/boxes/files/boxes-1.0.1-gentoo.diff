@@ -1,0 +1,24 @@
+diff -ru boxes-1.0.1.orig/Makefile boxes-1.0.1/Makefile
+--- boxes-1.0.1.orig/Makefile	Sun May 20 16:19:18 2001
++++ boxes-1.0.1/Makefile	Sun May 20 16:19:39 2001
+@@ -51,7 +51,7 @@
+ 
+ 
+ # The following line (GLOBALCONF) is the only line you should need to edit!
+-GLOBALCONF = /usr/local/share/boxes
++GLOBALCONF = /usr/share/boxes/boxes-config
+ BVERSION   = 1.0.1
+ 
+ SNAPFILE   = boxes-SNAP-$(shell date +%Y%m%d)
+diff -ru boxes-1.0.1.orig/src/regexp/Makefile boxes-1.0.1/src/regexp/Makefile
+--- boxes-1.0.1.orig/src/regexp/Makefile	Sun May 20 16:19:18 2001
++++ boxes-1.0.1/src/regexp/Makefile	Sun May 20 16:21:01 2001
+@@ -32,7 +32,7 @@
+ #============================================================================
+ 
+ 
+-CFLAGS   = -traditional -O -I. $(CFLAGS_ADDTL)
++CFLAGS   = -O -I. $(CFLAGS_ADDTL)
+ 
+ ALL_CL   = regexp/regexp.c regexp/regsub.c
+ C_SRC    = $(notdir $(ALL_CL))
