@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.6 2001/02/06 00:17:08 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.7 2001/02/06 00:42:08 pete Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac11
@@ -51,7 +51,14 @@ src_unpack() {
     echo "Unpacking and applying LVM patch..."
     unpack lvm_${LVMV}.tar.gz
     cd LVM/${LVMV}
-    try ./configure --prefix=/ --mandir=/usr/man --with-kernel_dir="${S}"
+    
+    # I had to hack this in so that LVM will look in the current linux
+    # source directory instead of /usr/src/linux for stuff - pete
+    CFLAGS_save="${CFLAGS}"
+    CFLAGS="${CFLAGS} -I${S}/include"
+    try ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
+    CFLAGS="${CFLAGS_save}"
+
     cd PATCHES
     	try make KERNEL_VERSION=2.4.0-ac11 KERNEL_DIR=${S}
 	cd ${S}
@@ -98,21 +105,30 @@ src_unpack() {
 }
 
 src_compile() {
+    
+    # moved this up here cause it looks like LVM depends on the symlinks
+    cd ${S}
+    try make symlinks
 
     #LVM tools are included even in the linux-sources package
     cd ${S}/extras/LVM/${LVMV}
+    
+    # I had to hack this in so that LVM will look in the current linux
+    # source directory instead of /usr/src/linux for stuff - pete
+    CFLAGS_save="${CFLAGS}"
+    CFLAGS="${CFLAGS} -I${S}/include"
     try ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
+    CFLAGS="${CFLAGS_save}"
     try make
-
-    cd ${S}
-    try make symlinks
-    try make dep
 
     if [ "$PN" != "linux" ]
     then
 	return
     fi
 
+    cd ${S}
+    try make dep
+    
     cd ${S}/extras/lm_sensors-2.5.5
     try make
 
