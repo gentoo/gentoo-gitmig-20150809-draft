@@ -37,7 +37,7 @@ MD5 700dfcb704ed5987434f84006e39787e files/digest-linux-headers-2.4.17-r4 144
 MD5 679eec2a96d0951ce7ea0603d9b76c21 files/linux-headers-2.6.3-strict-ansi-fix.patch 1855
 MD5 1a3b49dce5bc80827496967e767a4a04 files/digest-linux-headers-2.6.3-r1 66
 MD5 537c756a05fe1a6819277938d570b70a files/linux-headers-2.6.0-strict-ansi-fix.patch 1484
-MD5 a5f48f011d445c551b69a0aba69840dd files/linux-headers-2.6.3-appCompat.patch 17106
+MD5 472b4fc39c7c2855c7e86606927bc2a2 files/linux-headers-2.6.3-appCompat.patch 17484
 MD5 e300a3e148a7dcc38a0e099494fb6cb3 files/bigendian-byteorder-fix.patch 1557
 MD5 79ee1ad9f4629595cd8d0cd20ca56dc1 files/digest-linux-headers-2.4.23 67
 MD5 4bb39400b782c620a61abff4b8abd627 files/digest-linux-headers-2.4.16-r1 348

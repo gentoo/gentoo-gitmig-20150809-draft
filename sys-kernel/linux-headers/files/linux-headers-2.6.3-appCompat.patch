@@ -585,3 +585,13 @@ diff -ur linux-2.6.0/include/linux/i2c.h linux-2.6.0/include/linux.gentoo/i2c.h
 +#endif
  
  #endif /* _LINUX_I2C_H */
+--- linux-2.6.3/include/linux/usbdevice_fs.h	2004-02-22 16:52:07.000000000 +0000
++++ linux-2.6.3/include/linux/usbdevice_fs.h	2004-02-22 22:10:45.000000000 +0000
+@@ -31,6 +31,7 @@
+ #ifndef _LINUX_USBDEVICE_FS_H
+ #define _LINUX_USBDEVICE_FS_H
+ 
++#include <linux/compiler.h>
+ #include <linux/types.h>
+ 
+ /* --------------------------------------------------------------------- */
