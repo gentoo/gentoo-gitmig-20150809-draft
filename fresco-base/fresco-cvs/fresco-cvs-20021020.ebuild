@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/fresco-base/fresco-cvs/fresco-cvs-20021020.ebuild,v 1.2 2002/10/24 23:23:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/fresco-base/fresco-cvs/fresco-cvs-20021020.ebuild,v 1.3 2003/02/13 12:03:31 vapier Exp $
 
 ECVS_SERVER="cvs.fresco.org:/cvs/fresco"
 ECVS_MODULE="Fresco"
