@@ -446,10 +446,6 @@ dyn_compile() {
     cd ${S}
     fi
     src_compile 
-    if [ $? -ne 0 ]
-	then
-		return $? 
-	fi
 	cd ${BUILDDIR}
     touch .compiled
 	if [ ! -e "build-info" ]
