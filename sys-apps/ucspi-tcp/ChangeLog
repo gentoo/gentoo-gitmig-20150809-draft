@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.19 2004/03/25 09:29:06 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.20 2004/04/06 11:03:21 method Exp $
+
+  06 Apr 2004; Joshua Brindle <method@gentoo.org> ucspi-tcp-0.88-r5.ebuild,
+  ucspi-tcp-0.88-r8.ebuild:
+  added selinux policy to rdepend
 
   25 Mar 2004; Joshua Kinard <kumba@gentoo.org> ucspi-tcp-0.88-r5.ebuild,
   ucspi-tcp-0.88-r6.ebuild, ucspi-tcp-0.88-r7.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r8.ebuild,v 1.4 2004/03/25 09:29:06 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r8.ebuild,v 1.5 2004/04/06 11:03:21 method Exp $
 
 inherit eutils gcc
 
@@ -15,10 +15,11 @@ SRC_URI="http://cr.yp.to/${PN}/${P}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha hppa ~amd64 ~ia64 ~mips"
-IUSE="ssl ipv6"
+IUSE="ssl ipv6 selinux"
 
 DEPEND="virtual/glibc
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
+RDEPEND="selinux? ( sec-policy/selinux-ucspi-tcp )"
 
 src_unpack() {
 	unpack ${A}
