@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/shmux
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.10 2004/11/06 13:37:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.11 2004/12/16 02:36:15 swegener Exp $
+
+*shmux-1.0_beta6 (16 Dec 2004)
+
+  16 Dec 2004; Sven Wegener <swegener@gentoo.org> +shmux-1.0_beta6.ebuild:
+  Version bump.
 
   06 Nov 2004; Sven Wegener <swegener@gentoo.org> -shmux-1.0_beta4.ebuild,
   shmux-1.0_beta5.ebuild:
