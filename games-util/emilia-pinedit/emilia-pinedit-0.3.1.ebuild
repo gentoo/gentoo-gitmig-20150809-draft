@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header:
 
-inherit games
+inherit eutils games
 
 MY_P=${PN/emilia-/}-${PV}
 S=${WORKDIR}/${MY_P}
