@@ -1,12 +1,11 @@
 # ChangeLog for app-admin/msyslog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.7 2002/09/21 02:57:34 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.8 2002/09/21 03:08:05 woodchip Exp $
 
 *msyslog-1.09a (20 Sep 2002)
 
   20 Sep 2002; Donny Davies <woodchip@gentoo.org> :
-  Update to latest release + fix severe b0rkage inflicted by other
-  devels upon this package.  Please assign all issues to me.
+  Update to latest release + fix #8170.
 
 *msyslog-1.08e (25 Jul 2002)
 
