@@ -1,0 +1,10 @@
+# ChangeLog for sys-cluster/xmlsysd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xmlsysd/ChangeLog,v 1.1 2003/08/28 23:37:47 zul Exp $
+
+*xmlsysd-0.1.5 (28 Aug 2003)
+
+  28 Aug 2003; Chuck Short <zul@gentoo.org> xmlsysd-0.1.5.ebuild,
+  files/xmlsysd.xinetd:
+  Initial Version.
+
