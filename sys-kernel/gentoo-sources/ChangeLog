@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.13 2003/01/12 19:20:36 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.14 2003/01/12 19:51:45 lostlogic Exp $
 
 *gentoo-sources-2.4.20-r1 (12 Jan 2003)
 
@@ -8,6 +8,7 @@
   * Drop gcc-3.1 patch if not on gcc3
   * Also make prettier output for the USE var controlled
     patches
+  * Add a warning about maybe needing to rebuild iptables
 
   Features of this kernel:
   * Based heavily on ck-sources-2.4.20-r2 (linux-2.4.20-ck2)

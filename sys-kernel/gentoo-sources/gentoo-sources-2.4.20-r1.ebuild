@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r1.ebuild,v 1.1 2003/01/12 19:20:36 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r1.ebuild,v 1.2 2003/01/12 19:51:45 lostlogic Exp $
 
 IUSE="build crypt xfs"
 
@@ -80,12 +80,18 @@ pkg_postinst() {
 
 	kernel_pkg_postinst
 
+	einfo
 	einfo "You have just installed a specialized, "
 	einfo "high performance patchset of the linux kernel."
 	einfo "If there are problems with it, please report them"
 	einfo "by assigning bugs on bugs.gentoo.org to"
 	einfo "lostlogic@gentoo.org"
+	ewarn
+	ewarn "If you use iptables, and get an invalid argument error, you"
+	ewarn "simply need to rebuild iptables to solve the problem"
+	ewarn
 	[ `use xfs` ] && ewarn "XFS patches enabled, this may cause JFS problems" || \
 		einfo "XFS not enabled, is that on purpose?  JFS users beware of XFS."
+	ewarn
 
 }
