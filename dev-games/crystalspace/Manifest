@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 c414510a08d70a98c9d95f57e7038e9f ChangeLog 1672
 MD5 e4c7a49ca08eb200cfa0a9f9246e2257 metadata.xml 959
-MD5 e8c0913ae96f6fe21005f9ffab6a8cf8 crystalspace-0.98.4.ebuild 1706
+MD5 6aa863c44869ad9e85ebde9c78335aa4 crystalspace-0.98.4.ebuild 1701
 MD5 bec0edb0863c282510494dc014bbf750 files/digest-crystalspace-0.98.4 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBzSLGroRuSHgZdywRApprAKCL0Keoi0I+4ez7O/mz+ou0K9/+dgCfYypK
-hAgQ4iKux/Fk5PYj7yzb+kU=
-=ZtRM
+iD8DBQFBzl1zroRuSHgZdywRAgDaAKCGMJ1Dj27jLyO5qWN5abTr99R/8ACeKL6f
+OASqYDB7lTnc8C/ReH/ycJw=
+=Uw6A
 -----END PGP SIGNATURE-----
