@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.65.ebuild,v 1.1 2003/02/22 02:16:16 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.65.ebuild,v 1.2 2003/02/22 17:37:16 blocke Exp $
 
 RH_EXTRAVERSION="1"
 
@@ -124,7 +124,7 @@ src_compile() {
 }
 
 src_install () {
-	make prefix=${D}/usr install || die
+	make prefix=${D}/usr kde_moduledir=${D}/usr/kde/3.1/lib install || die
 
 	use kde && (
 		dodir ${KDEDIR}/share/apps
