@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.7.ebuild,v 1.9 2005/03/14 23:16:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.7.ebuild,v 1.10 2005/03/16 01:01:43 dostrow Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://pax.grsecurity.net/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 mips ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
