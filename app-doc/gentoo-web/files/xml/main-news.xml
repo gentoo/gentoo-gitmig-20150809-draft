@@ -4,10 +4,27 @@
 <author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
 
 <version>1.0.3</version>
-<date>21 Sep 2001</date>
+<date>12 Oct 2001</date>
 
 <newsitems>
-	<news align="left" graphic="/images/icon-clock.png">
+	<news align="left" graphic="/images/icon-linux.png">
+		<poster>drobbins</poster>
+		<date>12 Oct 2001</date>
+		<title>October Gentoo Linux Update</title>
+		<body>
+		<p>
+		<b>We are currently putting the finishing touches on Gentoo Linux 1.0_rc6.</b>  In fact, things are looking so good that the release <i>after</i>
+		1.0_rc6 will likely be 1.0 final!  Until 1.0 final, we won't be building any binary packages except build images, and will only support the "build from scratch" install method.  This makes things a lot easier for us and allows us to focus our efforts on working towards the 1.0 final release.
+		</p>
+		<p>
+		<b>On another note, I'm currently looking for new and exciting contracts/employment.</b>  If you're working on a challenging 
+		Linux, Unix or Web development project and would like my help, please be sure to <uri link="/resume.html">check out my resume</uri>
+		and <mail link="drobbins@gentoo.org">email me</mail> directly.  Thanks!
+		</p>
+		<p>My new articles on <uri link="http://www.ibm.com/developerworks/linux">IBM developerWorks</uri>: Advanced Filesystem Implementor's Guide <uri link="http://www-106.ibm.com/developerworks/linux/library/l-fs3.html?dwzone=linux">part 3</uri> (tmpfs and bind mounts), <uri link="http://www-106.ibm.com/developerworks/linux/library/l-fs4.html?dwzone=linux">part 4</uri> (devfs, part 1) and <uri link="http://www-106.ibm.com/developerworks/linux/library/l-fs5.html?dwzone=linux">part 5</uri> (devfs, part 2).  Also be sure to check out my articles on OpenSSH RSA/DSA key management: <uri link="http://www-106.ibm.com/developerworks/linux/library/l-keyc.html?dwzone=linux">part 1</uri> and <uri link="http://www-106.ibm.com/developerworks/linux/library/l-keyc2/?dwzone=linux">part 2</uri>.  Part three (covering OpenSSH authentication agent forwarding) will be appearing shortly.  If you haven't done so already, try out <uri link="/projects/keychain">keychain</uri>, my OpenSSH RSA/DSA key management application.</p>
+		</body>
+	</news>
+<news align="right" graphic="/images/icon-clock.png">
 		<poster>drobbins</poster>
 		<date>29 Aug 2001</date>
 		<title>Gentoo Linux 1.0_rc6 status update redux</title>
@@ -21,7 +38,7 @@ In it, I show you how to configure and use ReiserFS in a production environment.
 		</body>
 	</news>
 	
-	<news align="right" graphic="/images/icon-linux.png">
+	<news align="left" graphic="/images/icon-linux.png">
 		<poster>drobbins</poster>
 		<date>21 Aug 2001</date>
 		<title>Keychain, Hackfest/Development update</title>
@@ -47,43 +64,6 @@ In it, I show you how to configure and use ReiserFS in a production environment.
 		</p>
 		<p><b>Lamer (also known as Ben Lutgens of <uri link="http://www.sistina.com">Sistina Software, Inc.</uri>) asked me to announce the semi-official Gentoo Linux Hackfest</b>, this weekend (Aug 17-19) in the <c>#gentoo</c> IRC channel on the <uri link="http://www.openprojects.net">Open Projects IRC Network</uri>.  The goal of this Hackfest is to allow Gentoo Linux users to report bugs and have Gentoo Linux developers fix them on CVS/rsync in real time!  Great idea, lamer!</p>
 		<p>And third, <b>a new issue of <uri link="http://www.lwn.net">the Linux Weekly News</uri> is now online</b>.  I'm a big fan of LWN, and if you want to keep up with what is going on in the Linux world, it's always a good idea to head over to <uri>http://www.lwn.net</uri> every Thursday and give it a read.</p>
-		</body>
-	</news>
-<news align="right" graphic="/images/icon-stick1.png">
-		<poster>drobbins</poster>
-		<date>14 Aug 2001</date>
-		<title>Web site updates</title>
-		<body>
-		<p>
-		<b>Welcome to the new gentoo.org!</b>  Yes, we <e>finally</e> have news on the site; I hope
-		you like the new look and functionality.  Now that we have a news page, we can keep everyone
-		up-to-date with the latest Gentoo Linux developments much more easily.
-		</p>
-		<p>
-		
-Right now, the XML component of the news system is complete, and Thread (dev-wiki coder) is working
-		on a news database backend.  When finished, you'll be able to post comments relating to the
-		news items.  Should be pretty neat.  
-		</p><p>
-		<e>I'm sure that you've also noticed the recent addition
-		of advertising to the site</e>.  The purpose of these ads is (as you might guess) to help offset
-		costs involved with Gentoo Linux development.  <e>I should also mention that <b>I actually use</b> and have very high opinions of all the
-		products that you see advertised here.</e>  Both <c>cvs.gentoo.org</c>
-		and <c>inventor.gentoo.org</c> use Crucial RAM; I (and the Gentoo Linux development team) rely on it daily. 
-		</p><p>
-		And while you may be surprised to see an ad for an online auto loan company on gentoo.org, I absolutely <e>love</e>
-		PeopleFirst.com.  Thanks to PeopleFirst, I was able to get a car loan with an APR <e>2%
-		lower</e> than what I could get from local credit unions, saving me hundreds of dollars.  And they have
-		always been great to deal with, from the moment I first contacted them.  If you have any questions
-		about our advertisers, please feel free to <mail link="drobbins@gentoo.org">email me</mail> or chat with
-		me on <c>#gentoo</c>.  <e>I want <b>you</b> (and myself!) to feel comfortable with the advertising
-		on the site, so I will only advertise top-quality products.</e> 
-		</p>
-		<p>
-		Special thanks to Thread for his work on the dev-wiki and his current work on the News database
-		backend, and much thanks to Jano for providing us with the cool stickman graphic that you see on
-		the left. :)
-		</p>
 		</body>
 	</news>
 </newsitems>

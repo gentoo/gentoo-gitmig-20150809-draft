@@ -8,8 +8,8 @@ This page contains information about Keychain, an OpenSSH-compatible RSA/DSA key
 application for bash.
 </abstract>
 
-<version>1.5</version>
-<date>21 Sep 2001</date>
+<version>1.6</version>
+<date>15 Oct 2001</date>
 
 <chapter>
 <title>Keychain Intro</title>
@@ -61,10 +61,10 @@ time you really need to reinitialize the long-running <c>ssh-agent</c> process.
 
 <p>
 The most recent release of <c>keychain</c> can be found here:<br/><br/>
-<uri>http://www.ibiblio.org/gentoo/distfiles/keychain-1.5.tar.bz2</uri>
+<uri>http://www.ibiblio.org/gentoo/distfiles/keychain-1.6.tar.bz2</uri>
 </p>
 <pre caption="md5sum">
-11747092170b1a4df3ae8afc0a672987  keychain-1.5.tar.bz2
+fba9bf2207c2f37322f0afead330dbef  keychain-1.6.tar.bz2
 </pre>
 </body>
 </section>
@@ -83,7 +83,8 @@ authentication, while the <b><uri link="http://www-106.ibm.com/developerworks/li
 use <c>keychain</c> to set up secure, <e>passwordless</e> <c>ssh</c> access in an
 extremely convenient way.  <c>keychain</c> also provides a clean, secure way for
 <c>cron</c> jobs to take advantage of RSA/DSA keys without having to use insecure
-unencrypted private keys.
+unencrypted private keys.  <e>A third <c>keychain</c> article will be appearing
+shortly, which will cover <c>ssh-agent</c> authentication forwarding.</e>
 </p>
 </body>
 </section>
@@ -97,6 +98,15 @@ unencrypted private keys.
 # Copyright 2001 Gentoo Technologies, Inc.; Distributed under the GPL
 # Written by Daniel Robbins (drobbins@gentoo.org)
 
+* keychain 1.6 (15 Oct 2001)
+
+  13 Oct 2001; Ralf Horstmann (ralf.horstmann@webwasher.com)
+  Add /usr/ucb to path for Solaris systems.
+  
+  11 Oct 2001; Idea from Joe Reid (jreid@vnet.net):
+  Try to add multiple keys using ssh-add; avoid typing in identical
+  passphrases more than once.  Good idea!
+
 *keychain 1.5 (21 Sep 2001)
 
   21 Sep 2001; David Hull (hull@paracel.com):
@@ -106,7 +116,7 @@ unencrypted private keys.
   "ps" test to find the right one for your OS.
 
   20 Sep 2001; Marko Myllynen (myllynen@lut.fi):
-  grep [s]sh-agent to grep "[s]sh-agent" (zsh fix)
+  "grep [s]sh-agent" to "grep [s]sh-agent" (zsh fix)
 
 *keychain 1.4 (20 Sep 2001)
 
