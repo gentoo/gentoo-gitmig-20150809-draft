@@ -1,12 +1,18 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.13 2002/07/26 04:06:34 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.14 2002/07/29 02:24:36 jnelson Exp $
+
+*mysql-3.23.51-r4 (28 Jul 2002)
+
+  28 Jul 2002; Jon Nelson <jnelson@gentoo.org> mysql-3.23.51-r4.ebuild:
+  
+  Add back in the tcpd patch -- seems to cause compile failure  
+
+*mysql-3.23.51-r3 (25 Jul 2002)
 
   25 Jul 2002; Donny Davies <woodchip@gentoo.org> mysql-3.23.51-r3.ebuild :
 
   Fix initscript install.  s/mysql.rc6/mysql.init/
-
-*mysql-3.23.51-r3 (25 Jul 2002)
 
   25 Jul 2002; Jon Nelson <jnelson@gentoo.org> mysql-3.23.51-r3.ebuild files/digest-mysql-3.23.51-r3 files/mysql.init:
 
