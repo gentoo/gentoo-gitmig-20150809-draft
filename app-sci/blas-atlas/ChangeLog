@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/blas-atlas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.13 2004/09/29 15:07:07 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.14 2004/09/30 12:02:15 fmccor Exp $
+
+  30 Sep 2004; Ferris McCormick <fmccor@gentoo.org> blas-atlas-3.6.0.ebuild:
+  Stable for sparc (tested both hardened and not).
 
   29 Sep 2004; Ferris McCormick <fmccor@gentoo.org> files/c-ATLAS:
   Correct trivial typo: setup() {... needs closing '}'.
