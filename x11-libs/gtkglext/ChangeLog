@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.30 2004/08/08 00:52:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.31 2004/09/28 19:37:47 eradicator Exp $
+
+  28 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gtkglext-1.0.6.ebuild:
+  Stable on amd64 ahead off maintainer arch as it's the only one keyworded for
+  amd64 and it's been working good for me with no bugs in bugzilla.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> gtkglext-1.0.3.ebuild,
   gtkglext-1.0.4.ebuild, gtkglext-1.0.5.ebuild, gtkglext-1.0.6.ebuild:
