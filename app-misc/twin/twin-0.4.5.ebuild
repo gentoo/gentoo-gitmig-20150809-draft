@@ -1,10 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.5.ebuild,v 1.1 2002/10/27 09:55:27 bcowan Exp $
-
-IUSE="X gtk ggi"
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.5.ebuild,v 1.2 2002/11/30 21:35:06 vapier Exp $
 
 DESCRIPTION="A text-mode window environment"
 SRC_URI="mirror://sourceforge/twin/${P}.tar.gz"
@@ -13,6 +9,7 @@ HOMEPAGE="http://twin.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~x86"
+IUSE="X gtk ggi"
 
 DEPEND="X? ( virtual/x11 )
 	ggi? ( >=media-libs/libggi-1.9 )
@@ -44,19 +41,18 @@ src_compile() {
 		--enable-socket-alien=yes \
 		--enable-h2-tty-termcap=yes \
 		--enable-term=yes \
-		${myconf} || die
+		${myconf}
 
 	make || die
 }
 
 src_install() {
-	
-	einstall || die
+	einstall
 
-	use X && ( \
+	if [ `use X` ] ; then
 		insinto /usr/X11R6/lib/X11/fonts/misc
 		doins fonts/vga.pcf.gz
-	)
+	fi
 
 	rm -rf ${D}/usr/share/twin/{BUGS,docs,COP*,READ*,Change*,INSTALL*} 
 
@@ -66,16 +62,16 @@ src_install() {
 	
 }
 
-pkg_postinst() {	
-	use X && ( \
+pkg_postinst() {
+	if [ `use X` ] ; then
 		/usr/X11R6/bin/mkfontdir /usr/X11R6/lib/X11/fonts/misc
 		/usr/X11R6/bin/xset fp rehash
-	)
+	fi
 }
 
 pkg_postrm() {
-	use X && ( \
+	if [ `use X` ] ; then
 		/usr/X11R6/bin/mkfontdir /usr/X11R6/lib/X11/fonts/misc
 		/usr/X11R6/bin/xset fp rehash
-	)
+	fi
 }
