@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9740a48307e453f7348c25dc741fca8e lib-compat-loki-0.1.ebuild 995
+MD5 ac62c51118ff82d1f45ebec359ad67f9 ChangeLog 457
+MD5 11a7e1491b1ac042ac7216b26b4ad1fb metadata.xml 254
+MD5 87382f8b0cc430a42a23c0dcdd7e6688 files/digest-lib-compat-loki-0.1 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCHEyjI1lqEGTUzyQRAhAlAJ9H8o0OvtiEx8EAB1iGPKwXMsde2gCfdgQz
+ohbP6Pw0Cux+nMuVQHCPEzY=
+=4/3B
+-----END PGP SIGNATURE-----
