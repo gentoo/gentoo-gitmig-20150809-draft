@@ -1,6 +1,11 @@
 # ChangeLog for media-video/xawtv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.26 2003/04/07 19:49:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.27 2003/04/19 03:03:45 drobbins Exp $
+
+*xawtv-3.88 (18 Apr 2003)
+
+  18 Apr 2003; Daniel Robbins <drobbins@gentoo.org> A new upstream version
+  of xawtv.
 
 *xawtv-3.86-r1 (06 Apr 2003)
 
