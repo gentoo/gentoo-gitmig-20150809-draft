@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.10 2003/02/12 13:53:01 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.11 2003/02/13 06:55:35 gerk Exp $
+
+  13 Feb 2003; Mark Guertin <gerk@gentoo.org> k3b-0.7.5.ebuild :
+  set -ppc in keywords, can't meet the deps
 
 *k3b-0.8 (12 Feb 2003)
 
