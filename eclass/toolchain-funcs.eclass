@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.4 2004/10/15 20:10:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.5 2004/10/19 13:23:46 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -33,7 +33,7 @@ tc-getPROG() {
 		fi
 	fi
 
-	if [ -z "${search}" ] ; then
+	if [ -n "${search}" ] ; then
 		prog="${search##*/}"
 	fi
 	export ${var}="${prog}"
