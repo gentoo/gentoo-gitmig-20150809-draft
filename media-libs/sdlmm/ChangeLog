@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/sdlmm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdlmm/ChangeLog,v 1.1 2002/04/29 04:54:07 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdlmm/ChangeLog,v 1.2 2002/09/08 00:13:59 mkennedy Exp $
+
+*sdlmm-0.1.8-r1 (7 Sep 2002)
+
+  7 Sep 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  sdlmm-0.1.8-r1.ebuild, files/digest-sdlmm-0.1.8-r1 :
+
+  Resolves bug #7574 for gcc3.2.
 
 *sdlmm-0.1.8 (28 Apr 2002)
 
