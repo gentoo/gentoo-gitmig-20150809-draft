@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7f646a1c4d15fae1877d8332eb9a8b34 ChangeLog 50751
+MD5 1ca8d9a5e74add6eacc60c67697ebab4 ChangeLog 51008
 MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 e59af451f7a05b0044a687f413bf4720 mplayer-1.0_pre4-r7.ebuild 12225
 MD5 c098282cf0148b2caac4682eceec5258 mplayer-1.0_pre5-r2.ebuild 14050
-MD5 5927b5b4cca27317ed19c8a1e93f74bd mplayer-1.0_pre5-r3.ebuild 14648
+MD5 12b254eb074910e75fabafc2edf13ab1 mplayer-1.0_pre5-r3.ebuild 14730
 MD5 db18f76ee40620f5142febc063834345 mplayer-1.0_pre5-r4.ebuild 16471
 MD5 e8a88febcbbee42c370346d5bc1306d6 mplayer-1.0_pre5-r5.ebuild 16832
 MD5 167307046febb1c16efa074b4883b535 mplayer-1.0_pre6.ebuild 16829
@@ -47,10 +47,11 @@ MD5 1f9260386b063367f192b6d5d65d6aea files/real_demux.patch 3107
 MD5 c39b2e0baa9cc24d22b62765776426ad files/str_undefined.patch 1845
 MD5 e614f6546020b77ced4ba12c36e5b51e files/strl.c 950
 MD5 34f948b8f242a2aadb53a1e2b00e3155 files/vuln02-fix.diff 467
+MD5 443b9526abb33e4e9f8786f764253b53 files/mplayer-1.0_pre5-gcc_detection.patch 445
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCN2ZNFdQwWVoAgN4RAj7zAKDH7VeBEJfQv0biSzDSuJyj9e46dwCgj8pq
-aGDmD9I8zUm6tK0tT8/Dez0=
-=Mv6I
+iD8DBQFCN2/bFdQwWVoAgN4RAiECAJ45/8KTqNVIU2ArxXcvVJrigofdNQCfWf85
+0l1DJr35IjdYQ23v+kLx7RI=
+=qUTc
 -----END PGP SIGNATURE-----

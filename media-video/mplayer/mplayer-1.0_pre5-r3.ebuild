@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r3.ebuild,v 1.17 2005/03/15 23:22:17 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r3.ebuild,v 1.18 2005/03/16 00:03:03 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -165,6 +165,8 @@ src_unpack() {
 
 	# Doesn't break if bio2jack is in
 	epatch ${FILESDIR}/${P}-bio2jack.patch
+
+	epatch ${FILESDIR}/${P}-gcc_detection.patch
 }
 
 src_compile() {
@@ -172,6 +174,8 @@ src_compile() {
 	filter-flags -fPIE -fPIC
 
 	strip-flags
+
+	use mips && replace-flags -O? -O1
 
 	local myconf=
 	################

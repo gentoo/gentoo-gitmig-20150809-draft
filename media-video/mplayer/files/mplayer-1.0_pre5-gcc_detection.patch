@@ -1,0 +1,11 @@
+--- configure.old	2005-03-16 08:19:07.000000000 +0900
++++ configure	2005-03-16 08:19:43.000000000 +0900
+@@ -514,7 +514,7 @@
+  for _cc in "$_cc" gcc gcc-3.3 gcc-3.2 gcc-3.1 gcc3 gcc-3.0 cc ; do
+   echocheck "$_cc version"
+   cc_name=`( $_cc -v ) 2>&1 | tail -n 1 | cut -d ' ' -f 1`
+-  cc_version=`( $_cc -dumpversion ) 2>&1`
++  cc_version=`( $_cc -dumpversion ) 2>&1 | cut -f1,2 -d.`
+   if test "$?" -gt 0; then
+     cc_version="not found"
+   fi

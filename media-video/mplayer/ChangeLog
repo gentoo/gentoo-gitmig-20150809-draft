@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.276 2005/03/15 23:22:17 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.277 2005/03/16 00:03:03 chriswhite Exp $
+
+  16 Mar 2005; Chris White <chriswhite@gentoo.org>
+  +files/mplayer-1.0_pre5-gcc_detection.patch, mplayer-1.0_pre5-r3.ebuild:
+  Fixed optimization logics for mips, hopefully solving bug #83633. Added gcc
+  detection patch to make mplayer actually compile.
 
   16 Mar 2005; Chris White <chriswhite@gentoo.org>
   mplayer-1.0_pre5-r3.ebuild:
