@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.0.ebuild,v 1.7 2004/09/02 14:38:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.0.ebuild,v 1.8 2004/09/03 14:06:50 caleb Exp $
 
 inherit kde-dist eutils
 
@@ -20,6 +20,7 @@ DEPEND="~kde-base/kdebase-${PV}
 src_unpack() {
 	kde_src_unpack
 	epatch ${FILESDIR}/3.3.0-kget.diff
+	epatch ${FILESDIR}/3.3.0-kopete.diff
 }
 
 src_compile() {
