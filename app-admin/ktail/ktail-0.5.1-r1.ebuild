@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ktail/ktail-0.5.1-r1.ebuild,v 1.16 2003/02/13 05:25:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ktail/ktail-0.5.1-r1.ebuild,v 1.17 2003/02/13 06:37:32 gerk Exp $
 
 inherit kde-base || die
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.franken.de/users/duffy1/rjakob/"
 
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc "
+KEYWORDS="x86 -ppc sparc "
 
 src_unpack() {
 	kde_src_unpack

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ktail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ktail/ChangeLog,v 1.7 2003/02/12 02:24:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ktail/ChangeLog,v 1.8 2003/02/13 06:37:32 gerk Exp $
+
+  13 Feb 2003; Mark Guertin <gerk@gentoo.org> ktail-0.5.1-r1.ebuild :
+  set as -ppc, ppc cannot meet the older kde deps.
 
   30 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
