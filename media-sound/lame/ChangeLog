@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.40 2004/06/25 00:08:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.41 2004/06/26 20:22:06 kugelfang Exp $
+
+  26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> -files/intcast.spider,
+  lame-3.96.ebuild:
+  Removed bogus patch (intcast.spider). This one broke libmp3lame.so on 64bit
+  archs and has been unnecessary.
 
   16 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> lame-3.96.ebuild:
   Stable on hppa
