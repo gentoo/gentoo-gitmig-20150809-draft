@@ -2,15 +2,17 @@
 Hash: SHA1
 
 MD5 0210ad1a79d8a6dfb13165ba07c5ae82 gsasl-0.1.1.ebuild 1174
-MD5 6995582a6844dae128c3ed7a6ad7c8ac ChangeLog 805
-MD5 86c229fe394877d2c6a26aa5367bc697 metadata.xml 253
-MD5 56cdbf437dee99d4c1ec75ad26dc1619 gsasl-0.1.4.ebuild 1175
+MD5 5f794375011806bfd2de4da48665b2b7 gsasl-0.2.0.ebuild 1216
+MD5 fa798787efb0eb767c410eee701979eb ChangeLog 1126
+MD5 9a3024665c04c1eb6ef0f20c66b451dc metadata.xml 252
+MD5 028fc806a54eff2eef1ecea56651f8c6 gsasl-0.1.4.ebuild 1174
 MD5 6f459b6dcf5ae7b72eeab7e098d7ce95 files/digest-gsasl-0.1.1 64
 MD5 c7e9afdbaed8d21536ef08e05e95e59e files/digest-gsasl-0.1.4 64
+MD5 82045137f4572bd6d9dc2cd30bad8990 files/digest-gsasl-0.2.0 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBargxCHk4+ZoBpvsRAucfAJ0Z4bSqrQHPA4vC1V4C3TxbZQ89WACdEZW0
-JwzAZiHnvp4HCmSIOkKrdDk=
-=SWwP
+iD8DBQFBlgvKCHk4+ZoBpvsRAhVAAKDC7fuQTVZpWL8jTIH6kUAVj/WM2ACcCE0h
+KUUCxr3jDo0ZTHzY/RvPvCA=
+=hEj+
 -----END PGP SIGNATURE-----
