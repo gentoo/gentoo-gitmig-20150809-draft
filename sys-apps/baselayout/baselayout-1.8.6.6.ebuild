@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.4-r1.ebuild,v 1.3 2003/03/25 04:39:21 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.6.ebuild,v 1.1 2003/04/27 19:28:48 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
 
 IUSE="bootstrap build"
 
-SV="1.4.3.4"
+SV="1.4.3.6"
 SVREV=""
 # SysvInit version
 SVIV="2.84"
@@ -29,34 +29,14 @@ DEPEND="virtual/os-headers
 # We need at least portage-2.0.23 to handle these DEPEND's properly.
 
 RDEPEND="${DEPEND}
-	|| ( >=sys-apps/gawk-3.1.1-r1
-	     ( !build? ( >=sys-apps/gawk-3.1.1-r1 ) )
-	     ( !bootstrap? ( >=sys-apps/gawk-3.1.1-r1 ) )
+	|| ( >=sys-apps/gawk-3.1.1-r2
+	     ( !build? ( >=sys-apps/gawk-3.1.1-r2 ) )
+	     ( !bootstrap? ( >=sys-apps/gawk-3.1.1-r2 ) )
 	   )"
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
 	   
-pkg_setup() {
-
-	if [ "${ROOT}" = "/" ]
-	then
-		# Make sure we do not kill X because of the earlier bad /etc/inittab we used.
-		if [ -L ${svcdir}/started/xdm ] && \
-		   [ -n "`egrep 'x:3:respawn:/etc/X11/startDM.sh' /etc/inittab`" ] && \
-		   [ -n "`ps -A | egrep "X"`" ]
-		then
-			echo
-		   	einfo "!!! With the current version of baselayout installed (1.7.3-r1), merging"
-			einfo "    this version of baselayout will cause X to die if you started it"
-			einfo "    with the /etc/init.d/xdm script!!!!"
-			echo
-			einfo "Please quit X and then merge this again."
-			die
-		fi
-	fi
-}
-
 src_unpack() {
 
 	unpack sysvinit-${SVIV}.tar.gz
@@ -76,9 +56,10 @@ src_unpack() {
 		sed -e 's:PROGS\t= init halt shutdown killall5 runlevel sulogin:PROGS\t= init halt shutdown killall5 runlevel:g' \
 			Makefile.orig > Makefile || die
 	fi
+
+	cd ${S}/etc
 	
 	# Fix Sparc specific stuff
-	cd ${S}/etc
 	if [ "${ARCH}" = "sparc" ]
 	then
 		cp rc.conf rc.conf.orig
@@ -113,32 +94,29 @@ src_unpack() {
 
 src_compile() {
 
-	[ -z "${CC}" ] && CC="gcc"
+	echo "${ROOT}" > ${T}/ROOT
 
-	cp ${S}/sbin/runscript.c ${T}
-	cp ${S}/sbin/start-stop-daemon.c ${T}
-
-	cd ${T}
-	${CC} ${CFLAGS} runscript.c -o runscript || die "cant compile runscript.c"
-	${CC} ${CFLAGS} start-stop-daemon.c -o start-stop-daemon || die "cant compile start-stop-daemon.c"
-	echo ${ROOT} > ${T}/ROOT
+	cd ${S}/src
+	einfo "Building utilities..."
+	make CC="${CC:-gcc}" LD="${CC:-gcc}" \
+		CFLAGS="${CFLAGS}" || die "problem compiling utilities"
 
 	if [ -z "`use build`" ]
 	then
 		# Build sysvinit stuff
 		cd ${S2}
 		einfo "Building sysvinit..."
-		emake CC="${CC}" \
-			LD="${CC}" \
+		emake CC="${CC:-gcc}" LD="${CC:-gcc}" \
 			LDFLAGS="" || die "problem compiling sysvinit"
 
-		if [ -f /usr/include/awk/awk.h ]
+		# We let gawk now install filefuncs.so, and that is as a symlink to a 
+		# versioned .so ...
+		if [ -f /usr/include/awk/awk.h -a ! -L ${ROOT}/lib/rcscripts/filefuncs.so ]
 		then
 			# Build gawk module
-			cd ${S}/src
+			cd ${S}/src/filefuncs
 			einfo "Building awk module..."
-			make CC="${CC}" \
-				LD="${CC}" || {
+			make CC="${CC:-gcc}" LD="${CC:-gcc}" || {
 				eerror "Failed to build gawk module.  Make sure you have"
 				eerror "sys-apps/gawk-3.1.1-r1 or later installed"
 				die "problem compiling gawk module"
@@ -166,41 +144,31 @@ defaltmerge() {
 
 src_install() {
 
-	local foo=""
+	local bar=
+	local foo=
+
 	defaltmerge
 	keepdir /sbin /usr/sbin
-	exeinto /sbin
-	doexe ${T}/runscript
-	doexe ${T}/start-stop-daemon
-	# Need this in /sbin, as it could be run before
-	# /usr is mounted.
-	doexe ${S}/sbin/modules-update
-	# Compat symlinks until I can get things synced.
-	dosym modules-update /sbin/update-modules
-	dosym ../../sbin/modules-update /usr/sbin/update-modules
 
 	keepdir /usr
 	keepdir /usr/bin
 	keepdir /usr/lib
-	# Dont install run-crons anymore, as sys-apps/cronbase installs it now
-	#dosbin ${S}/sbin/MAKEDEV ${S}/sbin/run-crons
-	dosbin ${S}/sbin/MAKEDEV
 	keepdir /var /var/run /var/lock/subsys /var/state
+	keepdir /var/spool /var/tmp /var/lib/misc
+	keepdir /var/log/news
 	dosym ../var/tmp /usr/tmp
 	
 	keepdir /home
 	keepdir /usr/include /usr/src
 	keepdir /usr/X11R6/include/{X11,GL} /usr/X11R6/lib
+	keepdir /usr/X11R6/lib /usr/X11R6/man /usr/X11R6/share
+	
 	# If it already exist, do not recreate, else we get
 	# problems when /usr/portage mounted as ro NFS, etc.
 	if [ ! -d "${ROOT}/usr/portage" ]
 	then
 		keepdir /usr/portage
 	fi
-	
-	dosym ../X11R6/include/X11 /usr/include/X11
-	dosym ../X11R6/include/GL /usr/include/GL
-	dosym ../X11R6/lib/X11 /usr/lib/X11
 	
 	#dosym ../src/linux/include/linux /usr/include/linux
 	#dosym ../src/linux/include/asm-i386 /usr/include/asm
@@ -224,30 +192,14 @@ src_install() {
 	dosym share/man /usr/man
 	dosym share/doc /usr/doc
 	dosym share/info /usr/info
-	keepdir /usr/X11R6/share
 	dosym ../../share/info	/usr/X11R6/share/info
+    dosym ../X11R6/include/X11 /usr/include/X11
+    dosym ../X11R6/include/GL /usr/include/GL
+    dosym ../X11R6/lib/X11 /usr/lib/X11
 	# End FHS compatibility symlinks stuff
-		
-	for foo in ${S}/man/*
-	do
-		[ -f ${foo} ] && doman ${foo}
-	done
-	dodoc ${FILESDIR}/copyright
-	dodoc ${S}/ChangeLog
-	keepdir /usr/X11R6/lib /usr/X11R6/man
-	keepdir /var/log/news
-
-	# Supervise stuff depreciated
-	#dodir /var/lib/supervise
-	#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/control
-	#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/services
-	# End supervise stuff
-	
-	keepdir /opt
 
 	# The .keep file messes up Portage when looking in /var/db/pkg
 	dodir /var/db/pkg 
-	keepdir /var/spool /var/tmp /var/lib/misc
 	chmod 1777 ${D}/var/tmp
 	keepdir /root
 	
@@ -262,8 +214,7 @@ src_install() {
 	chmod 775 ${D}/var/lock
 	insopts -m0644
 
-	# Bug #5359 (FHS complience)
-	keepdir /etc/opt
+	keepdir /opt /etc/opt
 
 	insinto /etc
 	ln -s ../proc/filesystems ${D}/etc/filesystems
@@ -280,28 +231,86 @@ src_install() {
 	keepdir /lib /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
 
+	into /
+	dosbin ${S}/sbin/MAKEDEV
 	keepdir /lib/dev-state
 	if [ "${altmerge}" -eq "1" ]
 	then
 		# rootfs and devfs
-		dosym /usr/sbin/MAKEDEV /lib/dev-state/MAKEDEV
+		dosym ../../sbin/MAKEDEV /lib/dev-state/MAKEDEV
 		# This is not needed anymore...
 		#keepdir /lib/dev-state/pts /lib/dev-state/shm
 	else
 		# Normal
 		keepdir /dev
 		keepdir /dev/pts /dev/shm
-		dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
+		dosym ../sbin/MAKEDEV /dev/MAKEDEV
 	fi	
 
 	cd ${S}/sbin
 	into /
 	dosbin rc rc-update
+	# Need this in /sbin, as it could be run before
+	# /usr is mounted.
+	dosbin modules-update
+	# Compat symlinks until I can get things synced.
+	dosym modules-update /sbin/update-modules
+	dosym ../../sbin/modules-update /usr/sbin/update-modules
+	# These moved from /etc/init.d/ to /sbin to help newb systems
+	# from breaking
+	dosbin runscript.sh functions.sh rc-daemon.sh rc-help.sh
+
+	dodir /etc/init.d
+	exeinto /etc/init.d
+	for foo in ${S}/init.d/*
+	do
+		[ -f ${foo} ] && doexe ${foo}
+	done
+
+	cd ${S}/sbin
+	# We can only install new, fast awk versions of scripts
+	# if 'build' or 'bootstrap' is not in USE.  This will
+	# change if we have sys-apps/gawk-3.1.1-r1 or later in
+	# the build image ...
+	if [ -z "`use build`" -a -z "`use bootstrap`" ]
+	then
+		# This is for new depscan and rc-envupdate.sh
+		# written in awk
+		into /
+		dosbin depscan.sh
+		dosbin rc-envupdate.sh
+		insinto /lib/rcscripts/awk
+		for foo in ${S}/src/awk/*.awk
+		do
+			[ -f ${foo} ] && doins ${foo}
+		done
+
+		if [ ! -L ${ROOT}/lib/rcscripts/filefuncs.so ]
+		then
+			exeinto /lib/rcscripts
+			doexe ${S}/src/filefuncs/filefuncs.so
+		fi
+	else
+		# This is the old bash ones
+		into /
+		newsbin depscan.sh.bash depscan.sh
+		newsbin rc-envupdate.sh.bash rc-envupdate.sh
+	fi
+
+	# Compat symlinks (some stuff have hardcoded paths)
+	dosym ../../sbin/depscan.sh /etc/init.d/depscan.sh
+	dosym ../../sbin/runscript.sh /etc/init.d/runscript.sh
+	dosym ../../sbin/functions.sh /etc/init.d/functions.sh
+
+	cd ${S}/src
+	einfo "Installing utilities..."
+	make DESTDIR="${D}" install || die "problem installing utilities"
 
 	if [ -z "`use build`" ]
 	then
 		# Install sysvinit stuff
 		cd ${S2}
+		einfo "Installing sysvinit..."
 		into /
 		dosbin init halt killall5 runlevel shutdown sulogin
 		dosym init /sbin/telinit
@@ -312,10 +321,20 @@ src_install() {
 
 		# SysvInit docs
 		cd ${S2}/../
-		doman man/*.[1-9]
+		for foo in ${S2}/../man/*.[1-9]
+		do
+			[ -f ${foo} ] && doman ${foo}
+		done
 		docinto sysvinit-${SVIV}
 		dodoc COPYRIGHT README doc/*
 	fi
+	
+	for foo in ${S}/man/*
+	do
+		[ -f ${foo} ] && doman ${foo}
+    done
+	dodoc ${FILESDIR}/copyright
+	dodoc ${S}/ChangeLog
 
 	# env-update stuff
 	keepdir /etc/env.d
@@ -350,49 +369,6 @@ src_install() {
 	insinto /etc/ppp
 	doins ${S}/etc/ppp/chat-default
 
-	dodir /etc/init.d
-	exeinto /etc/init.d
-	for foo in ${S}/init.d/*
-	do
-		[ -f ${foo} ] && doexe ${foo}
-	done
-	# /etc/init.d/net.ppp* should only be readible by root
-	#chmod 0600 ${D}/etc/init.d/net.ppp*
-
-	# These moved from /etc/init.d/ to /sbin to help newb systems
-	# from breaking
-	exeinto /sbin
-	doexe ${S}/sbin/runscript.sh
-	doexe ${S}/sbin/functions.sh
-	doexe ${S}/sbin/rc-daemon.sh
-	doexe ${S}/sbin/rc-help.sh
-	# Compat symlinks (some stuff have hardcoded paths)
-	dosym ../../sbin/depscan.sh /etc/init.d/depscan.sh
-	dosym ../../sbin/runscript.sh /etc/init.d/runscript.sh
-	dosym ../../sbin/functions.sh /etc/init.d/functions.sh
-
-	# We can only install new, fast awk versions of scripts
-	# if 'build' or 'bootstrap' is not in USE.  This will
-	# change if we have sys-apps/gawk-3.1.1-r1 or later in
-	# the build image ...
-	if [ -z "`use build`" -a -z "`use bootstrap`" ]
-	then
-		# This is for new depscan and rc-envupdate.sh
-		# written in awk
-		exeinto /sbin
-		doexe ${S}/sbin/depscan.sh
-		doexe ${S}/sbin/rc-envupdate.sh
-		exeinto /lib/rcscripts
-		doexe ${S}/src/filefuncs.so
-		insinto /lib/rcscripts/awk
-		doins ${S}/src/awk/*.awk
-	else
-		# This is the old bash ones
-		exeinto /sbin
-		newexe ${S}/sbin/depscan.sh.bash depscan.sh
-		newexe ${S}/sbin/rc-envupdate.sh.bash rc-envupdate.sh
-	fi
-
 	dodir /etc/skel
 	insinto /etc/skel
 	for foo in $(find ${S}/etc/skel -type f -maxdepth 1)
@@ -406,7 +382,6 @@ src_install() {
 	[ "${ROOT}" = "/" ] && return 0
 	
 	# Set up default runlevel symlinks
-	local bar=""
 	for foo in default boot nonetwork single
 	do
 		keepdir /etc/runlevels/${foo}
@@ -533,6 +508,7 @@ pkg_postinst() {
 	# We create the /boot directory here so that /boot doesn't get deleted when a previous
 	# baselayout is unmerged with /boot unmounted.
 	install -d ${ROOT}/boot
+	touch ${ROOT}/boot/.keep
 	if [ ! -L ${ROOT}/boot/boot ]
 	then
 		ln -snf . ${ROOT}/boot/boot
