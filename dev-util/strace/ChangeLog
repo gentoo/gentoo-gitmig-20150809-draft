@@ -1,8 +1,13 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.44 2004/09/22 03:15:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.45 2004/09/22 17:17:48 kugelfang Exp $
 
 *strace-4.5.7 (21 Sep 2004)
+
+  22 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> +strace-4.5.2.ebuild,
+  +files/strace-4.5.2-s390-april2004.diff:
+  Added strace-4.5.2 with s390 patches. This is the recommended version
+  in s390 acc. to Stream April 2004 and has been marked s390.
 
   21 Sep 2004; Mike Frysinger <vapier@gentoo.org> +strace-4.5.7.ebuild:
   Version bump.
