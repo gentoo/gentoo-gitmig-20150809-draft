@@ -1,36 +1,31 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r6.ebuild,v 1.4 2003/09/18 18:31:14 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r6.ebuild,v 1.5 2004/01/06 00:38:16 robbat2 Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
 SRC_URI="http://www.procmail.org/${P}.tar.gz"
 HOMEPAGE="http://www.procmail.org/"
-
 IUSE=""
-
 DEPEND="virtual/glibc
 	virtual/mta"
-
 RDEPEND="virtual/glibc"
-
 PROVIDE="virtual/mda"
-
 SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 ppc sparc alpha arm hppa amd64 ia64"
 
 src_compile() {
 
-	cp Makefile Makefile.orig
-# Added a -O2 at the end of CFLAGS to overcome what seems to be a
-# gcc-3.1 strstr() bug with more aggressive optimization flags
-# The order of the flags matters as the last flag passed clobbers
-# the first flag.  i.e. if -O2 was placed before ${CFLAGS},
-# whatever optimization that is in ${CFLAGS} would clobber -O2
-	sed -e "s:CFLAGS0 = -O:CFLAGS0 = ${CFLAGS} -O2:" \
+# With gcc-3.1 and newer, there is a bug with aggressive optimization caused by
+# -finline-functions (implied by -O3) that leaves strstr() is an infinite loop.
+# To work around this, we append -fno-inline-functions to CFLAGS disable just
+# that optimization and avoid the bug.
+	CFLAGS="${CFLAGS} -fno-inline-functions"
+	sed -e "s:CFLAGS0 = -O:CFLAGS0 = ${CFLAGS}:" \
 		-e "s:LOCKINGTEST=__defaults__:#LOCKINGTEST=__defaults__:" \
-		-e "s:#LOCKINGTEST=/tmp:LOCKINGTEST=/tmp:" Makefile.orig > Makefile
+		-e "s:#LOCKINGTEST=/tmp:LOCKINGTEST=/tmp:" \
+		-i Makefile
 
 	if [ -z "`use mbox`" ];
 	then
@@ -38,7 +33,6 @@ src_compile() {
 		echo 'DEFAULT=$HOME/.maildir/' >> ${S}/procmailrc
 		cd ${S}
 		patch -p1 <${FILESDIR}/gentoo-maildir2.diff
-
 	else
 		echo '# Use mbox-style mailbox in /var/spool/mail' > ${S}/procmail
 		echo 'DEFAULT=/var/spool/mail/$LOGNAME' >> ${S}/procmailrc

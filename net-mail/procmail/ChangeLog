@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/procmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.20 2003/06/21 18:57:10 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.21 2004/01/06 00:38:16 robbat2 Exp $
+
+  05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> procmail-3.22-r5.ebuild,
+  procmail-3.22-r6.ebuild:
+  fix copyright headers, fix bug #35949 properly as opposed to the old broken
+  -O2 fix.
 
 *procmail-3.22-r6 (21 Jun 2003)
 
