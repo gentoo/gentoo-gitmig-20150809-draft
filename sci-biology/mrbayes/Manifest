@@ -1,4 +1,4 @@
-MD5 58cc8c2a5fedf97283750a769bd3917d ChangeLog 584
+MD5 0af3bfc05ff39b91ae49a38584acfdce ChangeLog 724
 MD5 e0542c9d79cfbdd0eae93f879da46a13 metadata.xml 784
-MD5 5893a45b76cb9f8880abf53501986b9a mrbayes-3.0.ebuild 846
-MD5 98b5d381ba0621a27ffce26bf40da031 files/digest-mrbayes-3.0 64
+MD5 ee56e7c31d87663c2cb819c69d743db7 mrbayes-3.0.ebuild 1051
+MD5 fa11d965ac0a1c1230c1e4628a2765d0 files/digest-mrbayes-3.0 66

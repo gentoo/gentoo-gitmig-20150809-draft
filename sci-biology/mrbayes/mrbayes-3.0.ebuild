@@ -1,17 +1,28 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/mrbayes-3.0.ebuild,v 1.1 2005/02/03 02:20:37 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/mrbayes-3.0.ebuild,v 1.2 2005/02/09 18:39:42 j4rg0n Exp $
 
 inherit eutils toolchain-funcs
 
+SRC_PACKAGE="MrBayes_V3.0_src"
+
 DESCRIPTION="Bayesian Inference of Phylogeny"
 HOMEPAGE="http://morphbank.ebc.uu.se/mrbayes/"
-SRC_URI="mirror://gentoo/MrBayes-3.0.tar.bz2"
+SRC_URI="${SRC_PACKAGE}.tar"
+RESTRICT="fetch"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc-macos"
 IUSE=""
+
+S="${WORKDIR}/${SRC_PACKAGE}/"
+
+pkg_nofetch() {
+	einfo "Please download"
+	einfo " - ${SRC_URI}"
+	einfo "from ${HOMEPAGE}/download.php and place them in ${DISTDIR}"
+}
 
 src_unpack() {
 	unpack ${A}
@@ -22,7 +33,7 @@ src_unpack() {
 	# Fix the non-standard Makefile.
 	sed -i \
 		-e "s:-O4:${CFLAGS}:" \
-		-e "s:gcc:${CC}:" \
+		-e "s:gcc:$(tc-getCC):" \
 		Makefile || die
 }
 
