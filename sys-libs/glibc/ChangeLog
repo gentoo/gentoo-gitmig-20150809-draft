@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.307 2005/02/02 10:32:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.308 2005/02/05 23:53:36 eradicator Exp $
+
+*glibc-2.3.4.20050125 (05 Feb 2005)
+
+  05 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +glibc-2.3.4.20050125.ebuild:
+  Version bump to upstream's 2.3.4 final release. Now using a patch tarball
+  instead of ${FILESDIR}. -* for testing. Patchset is subject to change while
+  masked -*, so if you test it out during that time, you might want to
+  re-emerge it once it goes into ~arch.
 
   02 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20041102.ebuild:
