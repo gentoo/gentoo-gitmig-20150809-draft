@@ -1,5 +1,5 @@
-MD5 918f61bfb3484675bf437d1b26ce108b wmacpimon-0.2.1.ebuild 1278
-MD5 43d2618572348890ed65ac66d025101d ChangeLog 340
+MD5 ef698add28719a006e6eb2811b1c0216 wmacpimon-0.2.1.ebuild 1277
+MD5 46f778d77a5a5467bcb4042301557cd6 ChangeLog 435
 MD5 e0610fd0e64292e0ea4a9c297dc47d65 metadata.xml 404
 MD5 b6e42cf0c97a55a676c4b711c24f3779 files/wmacpimon.initscript 406
 MD5 ea6be2a74e2041eff879cc7239852aa3 files/digest-wmacpimon-0.2.1 66
