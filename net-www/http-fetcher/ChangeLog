@@ -1,6 +1,12 @@
 # ChangeLog for net-www/http-fetcher
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/http-fetcher/ChangeLog,v 1.4 2003/03/24 17:46:42 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/http-fetcher/ChangeLog,v 1.5 2003/06/18 14:26:19 phosphan Exp $
+
+*http-fetcher-1.0.2 (18 Jun 2003)
+
+  18 Jun 2003; Patrick Kursawe <phosphan@gentoo.org>
+  http-fetcher-1.0.2.ebuild:
+  Bump to 1.0.2 - request by package author in bug 20075
 
 *http-fetcher-1.0.1-r1 (06 Jan 2003)
 
