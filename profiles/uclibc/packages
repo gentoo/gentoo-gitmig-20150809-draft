@@ -44,3 +44,6 @@
 
 # this needs to be package.masked all together.
 -*sys-libs/glibc
+
+#no idea why this is in base system
+-*sys-apps/ed
