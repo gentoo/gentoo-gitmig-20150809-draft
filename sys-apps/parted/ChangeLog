@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.62 2004/12/22 17:56:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.63 2004/12/24 14:47:55 lu_zero Exp $
+
+*parted-1.6.20 (24 Dec 2004)
+
+  24 Dec 2004; Luca Barbato <lu_zero@gentoo.org> +parted-1.6.20.ebuild:
+  New version, patchset updates by Andrew Gaffney <agaffney@gentoo.org>
 
   22 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> parted-1.6.15.ebuild,
   parted-1.6.18.ebuild:
