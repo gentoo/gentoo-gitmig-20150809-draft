@@ -15,26 +15,20 @@ LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86"
 
-inherit libtool
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	elibtoolize
-
-#	./autogen.sh
-#	patch Makefile < ${FILESDIR}/Makefile-gentoo.diff
-#	patch src/xmms_osc.c < ${FILESDIR}/xmms_osd.c-gentoo.diff
 }
+
 src_compile() {
 	econf || die
 	make || die
 }
+
 src_install () {
 	cd ${S}
 	insinto /usr/lib/xmms/General
-	doins src/.libs/libxmms_osd.so src/.libs/libxmms_osd.so.0 src/.libs/libxmms_osd.so.0.0.0 
+	doins src/xmms_plugin/.libs/libxmms_osd.so src/xmms_plugin/.libs/libxmms_osd.so.0 src/xmms_plugin/.libs/libxmms_osd.so.0.0.0 
 	fperms 0755 /usr/lib/xmms/General/libxmms_osd.so
 	fperms 0755 /usr/lib/xmms/General/libxmms_osd.so.0
 	fperms 0755 /usr/lib/xmms/General/libxmms_osd.so.0.0.0
