@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261-r2.ebuild,v 1.6 2004/07/15 03:09:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261-r2.ebuild,v 1.7 2004/08/26 09:44:47 lanius Exp $
 
 inherit gcc kernel-mod eutils
 
@@ -26,6 +26,9 @@ src_compile() {
 	then
 		EPATCH_SINGLE_MSG="Applying 2.5/6 patch ..." \
 		epatch ${FILESDIR}/nforce-net-1.0.0261-kernel-2.6.patch.gz
+		if [ "$KV_PATCH" -ge 8 ]; then
+			sed -i -e "s:modpost:mod/modpost:" Makefile
+		fi
 	fi
 
 	make KERNSRC="/usr/src/linux" || die

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nforce-net
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/ChangeLog,v 1.13 2004/06/25 00:00:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/ChangeLog,v 1.14 2004/08/26 09:44:47 lanius Exp $
+
+  26 Aug 2004; Heinrich Wendel <lanius@gentoo.org>
+  nforce-net-1.0.0261-r2.ebuild:
+  make it compile on kernel 2.6.8 and higher, bug #61203
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   nforce-net-1.0.0261-r2.ebuild:
