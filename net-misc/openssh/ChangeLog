@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.5 2002/04/04 05:05:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.6 2002/05/18 14:25:23 woodchip Exp $
+
+*openssh-3.2.2_p1 (18 May 2002)
+
+  18 May 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Chase latest release + update openssl dependency.
 
 *openssh-3.1_p1-r2 (03 Apr 2002)
 
