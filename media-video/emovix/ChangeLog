@@ -1,0 +1,10 @@
+# ChangeLog for media-video/emovix
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/ChangeLog,v 1.4 2004/07/27 07:51:36 chriswhite Exp $
+
+*emovix-0.9.0_pre1 (27 Jul 2004)
+
+  27 Jul 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +emovix-0.9.0_pre1.ebuild:
+  Initial submission to the tree.  Closes bug #51315.
+
