@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/circlemud/circlemud-3.1.ebuild,v 1.1 2004/01/29 08:18:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/circlemud/circlemud-3.1.ebuild,v 1.2 2004/01/30 10:11:46 vapier Exp $
 
 inherit games
 
@@ -29,7 +29,7 @@ src_unpack() {
 	sed -i "s:etc/:${GAMES_SYSCONFDIR}/${PN}/:g" db.h || die
 
 	# now lets rename binaries (too many are very generic)
-	sed -i "s:\.\./bin/autowiz:${PN}-autowiz:" src/limits.c
+	sed -i "s:\.\./bin/autowiz:${PN}-autowiz:" limits.c || die
 }
 
 src_compile() {
