@@ -199,9 +199,9 @@ net-misc/rsync
 
 # These are ebuilds installing precompiled stuff:
 
-~net-www/netscape-communicator
+~www-client/netscape-communicator
 ~net-www/netscape-flash
-~net-www/netscape-navigator
+~www-client/netscape-navigator
 ~net-www/netscape-plugger
 
 # more precompiled and/or x86 only ebuilds
