@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.6.1.ebuild,v 1.1 2004/11/18 16:57:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.6.1.ebuild,v 1.2 2004/12/17 14:31:02 chainsaw Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -19,7 +19,7 @@ SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="BSD GPL-2"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 
 RDEPEND=">=sys-apps/sed-4
 	devmap? ( >=sys-libs/device-mapper-1.00.08 )"
@@ -29,10 +29,8 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/bootloader"
 
 src_unpack() {
-	einfo
 	einfo "If you want to use lilo with device mapper, please enable the"
 	einfo "\"devmap\" USE flag."
-	einfo
 
 	unpack ${MY_P}.tar.gz
 
