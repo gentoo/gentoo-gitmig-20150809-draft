@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-wizard-kde/aqhbci-wizard-kde-0.9.13_beta.ebuild,v 1.1 2004/12/21 17:27:32 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-wizard-kde/aqhbci-wizard-kde-0.9.13_beta.ebuild,v 1.2 2004/12/21 19:02:44 hanno Exp $
 
 inherit eutils kde-functions
 need-qt 3
 
 MY_P=${PN/aqhbci-/}-${PV/_/}
 DESCRIPTION="KDE wizard for aqhbci"
-HOMEPAGE="http://www.aqmaniacs.de/aqbanking/"
+HOMEPAGE="http://www.aquamaniacs.de/aqbanking/"
 SRC_URI="mirror://sourceforge/aqhbci/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
