@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/netselect-0.3.ebuild,v 1.13 2004/03/07 17:16:01 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/netselect-0.3.ebuild,v 1.14 2004/03/25 08:12:33 kumba Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Ultrafast implementation of ping."
@@ -9,7 +9,7 @@ SRC_URI="http://www.worldvisions.ca/~apenwarr/netselect/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc alpha hppa ~mips amd64 ia64 ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa mips amd64 ia64 ppc64"
 
 src_compile() {
 	mv Makefile Makefile.orig

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netselect
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.9 2004/03/07 17:16:01 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.10 2004/03/25 08:12:33 kumba Exp $
+
+  25 Mar 2004; Joshua Kinard <kumba@gentoo.org> netselect-0.3.ebuild:
+  Marked stable on mips.
 
   07 Mar 2004; Tom Gall <tgall@gentoo.org> netselect-0.3.ebuild:
   stable on ppc64
