@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-1.4.1.ebuild,v 1.10 2004/08/07 23:09:00 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-1.4.1.ebuild,v 1.11 2004/11/08 20:54:34 vapier Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gucharmap.sourceforge.net/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ~ia64 mips"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
 IUSE="gnome cjk"
 
 RDEPEND=">=dev-libs/glib-2.3
@@ -27,4 +27,4 @@ DEPEND="${RDEPEND}
 
 G2CONF="${G2CONF} $(use_enable gnome) $(use_enable cjk unihan)"
 
-DOCS="COPYING* ChangeLog INSTALL README TODO"
+DOCS="ChangeLog INSTALL README TODO"
