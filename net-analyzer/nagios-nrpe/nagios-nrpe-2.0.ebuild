@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.0.ebuild,v 1.6 2004/10/25 12:59:33 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.0.ebuild,v 1.7 2004/11/30 22:18:55 swegener Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 ~ppc sparc ~amd64"
 
 IUSE="ssl"
 DEPEND=">=net-analyzer/nagios-plugins-1.3.0
-	ssl? ( >=dev-libs/openssl )"
+	ssl? ( dev-libs/openssl )"
 S="${WORKDIR}/nrpe-${PV}"
 
 pkg_setup() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.15 2004/10/25 13:01:19 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.16 2004/11/30 22:18:55 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> nagios-nrpe-2.0.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   25 Oct 2004; Eldad Zack <eldad@gentoo.org> nagios-nrpe-2.0.ebuild:
   Now featuring SSL useflag, as suggested by Christian Theune <ct@gocept.com>.
