@@ -11,14 +11,14 @@ MD5 945716f64217a05679e2c6b2aed60ec7 gcc-3.3.2.ebuild 16874
 MD5 a943d9f94070bc73ecd9de0b86409950 gcc-3.3.3-r3.ebuild 23584
 MD5 408498f57a110d34dfee70582c1a73d9 gcc-3.3.3-r6.ebuild 24974
 MD5 38cb71754b2a3a10da0a08142f53ec56 gcc-3.3.4-r1.ebuild 24865
-MD5 3b8190e42fb60b560ca3ed02ce157435 gcc-3.3.4-r2.ebuild 24670
-MD5 ca40943a149855a74b5ef556178b0c13 gcc-3.3.5-r1.ebuild 3639
-MD5 8fc9f61cc5d0a59bfb6eb01586622875 gcc-3.4.1-r3.ebuild 31454
+MD5 e1f8405aafd99def34418f4f452e03db gcc-3.3.4-r2.ebuild 24654
+MD5 a8a2cd97ee2229282ef677235598287a gcc-3.3.5-r1.ebuild 3550
+MD5 ddc92bd911660740f95d4c3b4ab74bb9 gcc-3.4.1-r3.ebuild 31438
 MD5 18dba9636dd0cd8108ff6215b7c71883 gcc-3.4.2-r2.ebuild 13514
-MD5 9f7c181be38a2e8221c3f0a23e577568 gcc-3.4.3-r1.ebuild 5373
-MD5 af1b17906c158d1ef46b409fccd01fed gcc-3.4.3.ebuild 13282
+MD5 fabfbb3bdfb99cf686def2905a64f5c9 gcc-3.4.3-r1.ebuild 5278
+MD5 fe3f308127c6015f32c5a126d73b4fcb gcc-3.4.3.ebuild 13236
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 b875bfd735086852d83882709de48986 gcc-3.4.3.20050110.ebuild 5385
+MD5 87ff3720447f20ff12321c1fed5ea2d8 gcc-3.4.3.20050110.ebuild 5290
 MD5 f7e7042c2ddf66e344b30cbc66ebaf73 files/cc 24
 MD5 80d122265d3062847a4a1b161abe1d26 files/cpp 24
 MD5 3213bd50acdbbd71ce7dd3e40710e30e files/digest-gcc-2.95.3-r8 64
@@ -31,8 +31,8 @@ MD5 e7e6f6800c5b2e5840cf837e4bd6e1a6 files/digest-gcc-3.4.3.20050110 536
 MD5 69687aac826654ad375b7eae45a01e0b files/digest-gcc-3.4.2-r2 443
 MD5 6df16eb92245a931ecfc4cbcc73c84cf files/digest-gcc-3.3.4-r1 442
 MD5 cf81ae4b2da79c34a005da1182c40134 files/digest-gcc-3.3.2 130
-MD5 f48105f24e5c714530e66a94aa56d615 files/digest-gcc-3.3.2-r2 361
 MD5 9bb4a999eb75c9e3eadab9aa71e91879 files/fix_libtool_files.sh 1731
+MD5 f48105f24e5c714530e66a94aa56d615 files/digest-gcc-3.3.2-r2 361
 MD5 60e02a7ee2f579ac72ab223679d81e7a files/gcc-spec-env.patch 819
 MD5 ea2cf3df0d89a26d5fdc1a531176e395 files/pro-police-docs.patch 3287
 MD5 8baffb486c75efe253bd2daa88daa7d6 files/gcc331_use_multilib.amd64.patch 352
@@ -46,7 +46,6 @@ MD5 c6ea8a92bac6d2638c54c011f98bc5b8 files/digest-gcc-3.4.1-r3 442
 MD5 b1a242694f56184cbcdd40ba25800d50 files/2.95.3/gcc-2.95.3-alpha.diff 14345
 MD5 523970c128b929fe7c7cf36508ebd1d5 files/2.95.3/gcc-2.95.3-new-atexit.diff 13604
 MD5 27120401d2355e5d959b8d2d55eba310 files/3.3.4/gcc334-gentoo-branding.patch 876
-MD5 8c779f2dca6ab1b5b95e2ee211d26c8c files/3.3.4/gcc-3.3.4-spec-env.patch 786
 MD5 5fb5b49f3f16cc9e7e27e582c92ffa2f files/3.3.4/libffi-without-libgcj.patch 890
 MD5 86ae592deb82c4564eb61f770fe5f8a7 files/3.4.1/gcc-3.4.1-gentoo-branding.patch 759
 MD5 df06b1cf70425c78e2e59136ed372ab4 files/3.4.1/gcc341-ppc64-mozilla-ICE-fix.patch 729
@@ -54,7 +53,6 @@ MD5 14fec2000fc63536d4cf22195e88e14f files/3.4.1/gcc-3.4.1-r2-gentoo-branding.pa
 MD5 cd770c23ece7458db5e6c5067f262ce0 files/3.4.1/gcc-3.4.1-glibc-is-native.patch 760
 MD5 7cb2138ac2df6f8674d19974e966a45b files/3.4.1/gcc-3.4.1-mips-n32only.patch 614
 MD5 aa8e15a63d797df37bbd4e489ed0267f files/3.4.1/gcc-3.4.1-mips-n64only.patch 614
-MD5 97d7409ba5038bea85f9cabe023e28a6 files/3.4.1/gcc-3.4.1-spec-env.patch 755
 MD5 3f6d070c2a4a899e7d879fdb55eecba4 files/3.4.3/libffi-nogcj-lib-path-fix.patch 1691
 MD5 007c62d92efd70fd44c4d2e6a326036b files/3.4.3/libffi-without-libgcj.patch 1658
 MD5 7434140298091f759eba5e9706264130 files/3.4.3/libssp.patch 2029
@@ -118,7 +116,7 @@ MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4+rTroRuSHgZdywRAmtdAJ9K+vkexMVvLyUu0vAY6AkAG3pgkgCggVSm
-OjEbY6HNPysOL6QaAwdUcII=
-=8dzb
+iD8DBQFB6HSRroRuSHgZdywRAkDpAJ4uemhcptnSVEpDlF1W3d6FAQc7BQCeJbVO
+aSsIPr+M2PHMS9QZ5WRrYDI=
+=DrZM
 -----END PGP SIGNATURE-----
