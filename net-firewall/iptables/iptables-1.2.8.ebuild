@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.8.ebuild,v 1.1 2003/04/19 12:18:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.8.ebuild,v 1.2 2003/05/02 09:45:56 aliz Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 IUSE=""
 
@@ -19,6 +19,11 @@ LICENSE="GPL-2"
 DEPEND="virtual/os-headers"
 
 src_unpack() {
+
+	if [ -z $( get-flag O ) ]; then
+		append-flags -O2
+ 	fi
+
 	unpack ${A}
 	cd ${S}
 
