@@ -1,6 +1,21 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.112 2005/02/07 03:53:04 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.113 2005/02/11 15:34:49 robbat2 Exp $
+
+*courier-imap-4.0.1-r1 (11 Feb 2005)
+
+  11 Feb 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/courier-imap-4.0.1-r1-courier-imapd.indirect,
+  +files/courier-imap-4.0.1-r1-courier-pop3d.indirect,
+  +files/courier-imap-4.0.1-r1-gentoo-imapd-ssl.rc,
+  +files/courier-imap-4.0.1-r1-gentoo-imapd.rc,
+  +files/courier-imap-4.0.1-r1-gentoo-pop3d-ssl.rc,
+  +files/courier-imap-4.0.1-r1-gentoo-pop3d.rc,
+  +courier-imap-4.0.1-r1.ebuild:
+  Bug #81540, implemented a workaround for upstream removing functionality
+  that is still widely used. For all users wanting to use relay-ctrl-allow,
+  remove it from your courier-authlib config, and put it in
+  /etc/courier-imap/{pop3d,imapd} as LOGINRUN="relay-ctrl-allow" at the end.
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> courier-imap-4.0.1.ebuild:
   Marked stable on mips.
