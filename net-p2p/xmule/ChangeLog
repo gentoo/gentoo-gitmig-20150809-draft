@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.15 2003/09/20 18:59:18 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.16 2003/10/11 19:01:53 scandium Exp $
+
+*xmule-1.6.1 (11 Oct 2003)
+
+  11 Oct 2003; Rainer Groesslinger <scandium@gentoo.org> xmule-1.6.1.ebuild:
+  new version
 
 *xmule-1.6.0a-r1 (20 Sep 2003)
 

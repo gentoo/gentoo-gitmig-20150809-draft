@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.1 2003/10/04 16:41:39 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.2 2003/10/11 19:01:53 scandium Exp $
+
+*amule-1.0.8 (11 Oct 2003)
+
+  11 Oct 2003; Rainer Groesslinger <scandium@gentoo.org> amule-1.0.8.ebuild:
+  new version
 
 *amule-1.0.7 (04 Oct 2003)
 
