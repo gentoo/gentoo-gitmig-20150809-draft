@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <jayskwak@gentoo.org> 25 Jul 2002
+# masked for korean input testing
+=x11-libs/qt-3.0.5-r1
+
 # <azarah@gentoo.org> (25 Jul 2002)
 # gawk is very flexible and can be used instead
 # of cut, etc that is not in /bin, and also much
