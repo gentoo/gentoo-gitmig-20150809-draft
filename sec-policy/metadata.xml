@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<catmetadata>
+	<longdescription lang="en">
+		The sec-policy category contains security policies for
+		access control systems such as SELinux.
+	</longdescription>
+</catmetadata>
+
