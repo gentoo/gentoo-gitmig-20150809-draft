@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a7151e6f32f533a32dfa166b9d7deb9 glut-3.7-r2.ebuild 1233
-MD5 9d2099f608b3dd3ba93d863073a81ce7 glut-3.7.1.ebuild 1192
 MD5 dfa56ed74d000a39f3d2178646feabde ChangeLog 2155
+MD5 5e945d3fac1d6f55eb0adb7f14013872 glut-3.7-r2.ebuild 1237
+MD5 e3e19f36c8bdfb11eac5c21f0a942dba glut-3.7.1.ebuild 1196
 MD5 18422995bf2dc2a319cb0d41a6af2542 files/digest-glut-3.7-r2 135
 MD5 a0cb6a15efc7e677e7ce9d58b66417a8 files/digest-glut-3.7.1 131
 MD5 e721299e4a30ba46f1edcd8b8510bcb6 files/glutscript.sh 978
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBYnaBArHZZzCEUG0RAmj4AJ4sZmDovWgeajr8XOkUyuWTXlySDgCfSiuV
-RDxY0eK205PH23URLONLB2A=
-=5Gxn
------END PGP SIGNATURE-----
