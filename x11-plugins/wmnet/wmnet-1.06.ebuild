@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/wmnet-1.06.ebuild,v 1.5 2003/02/13 17:31:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/wmnet-1.06.ebuild,v 1.6 2003/05/17 00:46:32 wwoods Exp $
 
 S=${WORKDIR}/${P}
 
@@ -12,13 +12,19 @@ DEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ~alpha"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-nonx86.patch
+}
 
 src_compile() {
 
 	xmkmf || die "xmkmf failed"
-
-	emake || die "parallel make failed"
+	
+	emake CDEBUGFLAGS="${CFLAGS}" || die "parallel make failed"
 
 }
 

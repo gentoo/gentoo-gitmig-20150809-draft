@@ -1,0 +1,11 @@
+--- wmnet-1.06/wmnet.c	2000-05-04 21:01:14.000000000 -0400
++++ wmnet-1.06-ww/wmnet.c	2003-05-16 18:43:02.000000000 -0400
+@@ -342,7 +342,7 @@
+ 	signal_action.sa_handler = got_signal;
+ 	sigemptyset(&signal_action.sa_mask);
+ 	signal_action.sa_flags = (SA_NOCLDSTOP|SA_RESTART);
+-#ifdef linux
++#if defined(linux) && !defined(__alpha__) && !defined(__hppa__) && !defined(__ia64__)
+ 	signal_action.sa_restorer = NULL;
+ #endif
+ 	if ((sigaction(SIGCHLD, &signal_action, NULL) == -1) ||
