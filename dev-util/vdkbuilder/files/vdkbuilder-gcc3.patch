@@ -1,6 +1,19 @@
-diff -Naur vdkbuilder2-2.0.3.old/vdkbuilder/vdkb_templates.cc vdkbuilder2-2.0.3/vdkbuilder/vdkb_templates.cc
---- vdkbuilder2-2.0.3.old/vdkbuilder/vdkb_templates.cc	2002-06-04 07:56:35.000000000 +0000
-+++ vdkbuilder2-2.0.3/vdkbuilder/vdkb_templates.cc	2003-12-14 18:07:08.557890952 +0000
+diff -Naur vdkbuilder2-2.0.3/vdkbuilder/vdkb_templates.cc vdkbuilder2-2.0.3-gentoo/vdkbuilder/vdkb_templates.cc
+--- vdkbuilder2-2.0.3/vdkbuilder/vdkb_templates.cc	2002-06-04 07:56:35.000000000 +0000
++++ vdkbuilder2-2.0.3-gentoo/vdkbuilder/vdkb_templates.cc	2004-03-11 18:41:25.000000000 +0000
+@@ -796,10 +796,10 @@
+ 	  {
+ 	    namepath =  get_path(complete_name);
+ 	    if(namepath && !strcmp(namepath,(char*) path))
+-	      fprintf(fp,"\t$(PRJ_DIR)/%s_gui.o\\\n",
++	      fprintf(fp,"\t$(PRJ_DIR)/%s_gui.o\n",
+ 		      get_shortfilename(complete_name));
+ 	    else
+-	      fprintf(fp,"\t%s_gui.o\\\n",li.current()->Name());
++	      fprintf(fp,"\t%s_gui.o\n",li.current()->Name());
+ 	  }
+ 	if(namepath)
+ 	  delete[] namepath;
 @@ -856,34 +856,34 @@
   char* pw = getcwd(NULL,MAXPATHLEN);
   if(pw)
@@ -21,7 +34,6 @@ diff -Naur vdkbuilder2-2.0.3.old/vdkbuilder/vdkb_templates.cc vdkbuilder2-2.0.3/
 -\n\
 -\n$(TARGET): $(OBJECTS)\
 -\n\t$(LINK)  -o $(TARGET) $(OBJECTS) $(OTHERS_OBJECTS) $(LIBS)\
--\n\
 + fprintf(fp,"
 +\n####### Implicit rules
 +\n.SUFFIXES: .%s .%s
@@ -35,7 +47,7 @@ diff -Naur vdkbuilder2-2.0.3.old/vdkbuilder/vdkb_templates.cc vdkbuilder2-2.0.3/
 +\n####### Build rules
 +\n
 +\nall: $(TARGET)
-+\n\
+ \n\
 +\n$(TARGET): $(OBJECTS)
 +\n\t$(LINK)  -o $(TARGET) $(OBJECTS) $(OTHERS_OBJECTS) $(LIBS)
 +\n

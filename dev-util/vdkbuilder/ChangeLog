@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/vdkbuilder
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.10 2004/03/04 16:00:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.11 2004/03/11 22:12:07 zul Exp $
+
+  11 Mar 2004; Chuck Short <zul@gentoo.org> files/vdkbuilder-gcc3.patch:
+  More gcc3 fixes. Closes #41687.
 
   04 Mar 2004; Seemant Kulleen <seemant@gentoo.org> vdkbuilder-2.0.2.ebuild,
   vdkbuilder-2.0.3.ebuild, vdkbuilder-2.0.5.ebuild:
