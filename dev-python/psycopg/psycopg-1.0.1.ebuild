@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.0.1.ebuild,v 1.16 2003/06/22 12:15:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.0.1.ebuild,v 1.17 2004/03/28 12:32:24 kloeri Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="PostgreSQL database adapter for the Python" # best one
 
-SRC_URI="http://initd.org/pub/software/psycopg/${P}.tar.gz"
+SRC_URI="http://initd.org/pub/software/psycopg/PSYCOPG-1-0/${P}.tar.gz"
 
 HOMEPAGE="http://www.initd.org/software/psycopg.py"
 

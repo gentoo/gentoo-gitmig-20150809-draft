@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/psycopg
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.10 2004/02/26 19:11:39 bazik Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.11 2004/03/28 12:32:24 kloeri Exp $
+
+  28 Mar 2004; Bryan Østergaard <kloeri@gentoo.org> psycopg-1.0.1.ebuild,
+  psycopg-1.0.12.ebuild, psycopg-1.0.13.ebuild, psycopg-1.1.2.ebuild,
+  psycopg-1.1.5.1.ebuild, psycopg-1.1.9.ebuild:
+  Update SRC_URI.
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> psycopg-1.1.5.1.ebuild:
   Stable on sparc.
