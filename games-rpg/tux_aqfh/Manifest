@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 40ccb65dd4ffd84275cd6ff1ce90274b tux_aqfh-1.0.14.ebuild 840
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 20059b493a0809a67692abd589528864 ChangeLog 355
+MD5 d7312654531d476da25eb8494cf4c397 files/digest-tux_aqfh-1.0.14 68
+MD5 55e00842bfacd631d3d525bfe36af3ae files/1.0.14-fix-paths.patch 5925
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA90+EHTu7gpaalycRAi/6AJ0Yqp80bIPaNewcVgUuG2D8UeLH2gCeMOO2
++LMcMIBokezUI1W9DxELrYg=
+=zr7q
+-----END PGP SIGNATURE-----
