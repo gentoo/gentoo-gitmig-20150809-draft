@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r1.ebuild,v 1.6 2004/09/09 16:32:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r1.ebuild,v 1.7 2004/09/22 19:09:06 vapier Exp $
 
-inherit gnuconfig flag-o-matic eutils
+inherit gnuconfig flag-o-matic eutils libtool
 
 DESCRIPTION="Standard GNU database libraries included for compatibility with Perl"
 HOMEPAGE="http://www.gnu.org/software/gdbm/gdbm.html"
@@ -21,10 +21,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	gnuconfig_update
+	append-flags -fomit-frame-pointer
+	uclibctoolize
 }
 
 src_compile() {
-	append-flags -fomit-frame-pointer
 	econf || die
 	use berkdb || sed -i '/HAVE_LIBNDBM/s:.*::' autoconf.h
 	emake || die

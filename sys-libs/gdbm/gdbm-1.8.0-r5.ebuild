@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.37 2004/09/16 02:26:18 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.38 2004/09/22 19:09:06 vapier Exp $
 
-inherit gnuconfig eutils flag-o-matic
+inherit gnuconfig eutils flag-o-matic libtool
 
 DESCRIPTION="Standard GNU database libraries included for compatibility with Perl"
 HOMEPAGE="http://www.gnu.org/software/gdbm/gdbm.html"
@@ -20,7 +20,6 @@ DEPEND="virtual/libc
 RDEPEND="virtual/libc"
 
 pkg_setup() {
-	einfo "This package needs bin:bin."
 	enewuser bin
 }
 
@@ -29,11 +28,11 @@ src_unpack() {
 	cd ${WORKDIR}
 	epatch ${FILESDIR}/${PF}-gentoo.diff
 	gnuconfig_update
+	append-flags -fomit-frame-pointer
+	uclibctoolize
 }
 
 src_compile() {
-	! is-flag "-fomit-frame-pointer" && append-flags "-fomit-frame-pointer"
-
 	local myconf
 
 	use static && myconf="${myconf} --enable-static"
