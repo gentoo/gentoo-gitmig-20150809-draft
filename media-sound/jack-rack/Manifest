@@ -1,19 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0dd05d3955b76447868974cda485efeb ChangeLog 2084
-MD5 ebb790d0a8b2c41a7591df368c7e5541 jack-rack-1.4.1.ebuild 978
-MD5 cf30a8eaf2b706c354b87262b87a882d jack-rack-1.4.2.ebuild 978
-MD5 2af86c0edc8fa3e409d0ce29da0bdf59 jack-rack-1.4.3.ebuild 920
+MD5 21e2054b536e8dc2a89dda0fc79f7751 ChangeLog 2234
+MD5 002833e5e5fe8c09899c673593e7802e jack-rack-1.4.3.ebuild 919
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 b80c62d380c2ecf51796b5bc76860f84 files/digest-jack-rack-1.4.1 67
-MD5 7f3aa93ff0ef517f09663442ce795ac2 files/digest-jack-rack-1.4.2 67
 MD5 8b7cce360d598905bd5ec710481f6d51 files/digest-jack-rack-1.4.3 67
 MD5 243499f60b0a83ef519784e6fd3b8ddf files/jack-rack-1.4.3-gtkdep.patch 1165
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBW2P2ArHZZzCEUG0RAk+3AJ92XEbWLDXTYqQYaxthX0pmITKMMwCdHw2S
-CaVXY9rT82DxmUIBZ5T3Mck=
-=+k/5
+iD8DBQFBlHiyArHZZzCEUG0RApQVAJ9oSFnFRTTffpYoPeY3QtB2GsNEhwCfd1vH
+lXN52Pd3s6dA4PIMazrM1aE=
+=bQIM
 -----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 53f27ce28106e517cda7445ee6447186 ChangeLog 466
-MD5 d3e85a25ee8fdec8edb87eece489935f icecream-0.8.ebuild 589
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6ba5e1ae342add47be5343fe9454bd2b icecream-0.8.ebuild 568
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 fcc673159eb85fc4cf59ec01da7f904a ChangeLog 591
 MD5 b658c59f4fd9c2a3f1ac545c636410ef files/digest-icecream-0.8 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBlHkUArHZZzCEUG0RAtwLAJ0cRye+5nMdWF44D/Z0Z9faOfImqgCfYPdq
+H83AQHAVbIyxTUz5T141l1o=
+=shK0
+-----END PGP SIGNATURE-----
