@@ -39,3 +39,7 @@ move net-news/ubh net-nntp/ubh
 move net-news/xrn net-nntp/xrn
 move dev-lang/fpc dev-lang/fpc-bin
 move dev-lang/fpc-source dev-lang/fpc
+move net-im/kopete kde-base/kdenetwork
+move app-editors/quanta kde-base/kdewebdev
+move app-text/kfilereplace kde-base/kdewebdev
+move media-gfx/kimagemapeditor kde-base/kdewebdev
