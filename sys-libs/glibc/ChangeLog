@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.57 2003/04/19 19:37:34 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.58 2003/05/14 20:30:20 azarah Exp $
+
+  14 May 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r{0,1}.ebuild :
+
+  Some MIPS updates from Kumba <kumba@gentoo.org>:
+    A few patches only for the MIPS platform.  Descriptions of what they
+    do can be found in the patch headers.
+    <tuxus@gentoo.org> thx <dragon@gentoo.org> (11 Jan 2003)
+    <kumba@gentoo.org> remove tst-rndseek-mips & ulps-mips patches
 
   06 Apr 2003; Martin Schlemmer <azarah@gentoo.org> :
   Fix all 2.3 ebuild to install timezone data if 'build' in USE, bug #16530.

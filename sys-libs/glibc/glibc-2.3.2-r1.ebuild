@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.4 2003/04/22 19:25:59 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.5 2003/05/14 20:30:20 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -62,7 +62,7 @@ LICENSE="GPL-2"
 # Drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
 DEPEND=">=sys-devel/gcc-3.2.2
 	nptl? ( >=sys-devel/gcc-3.2.2-r1 )
-	>=sys-devel/binutils-2.13.90.0.18
+	mips? >=sys-devel/binutils-2.13.90.0.16 : >=sys-devel/binutils-2.13.90.0.18
 	virtual/os-headers
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/os-headers
@@ -293,6 +293,21 @@ src_unpack() {
 	#
 	# <azarah@gentoo.org> (6 Apr 2003).
 	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-dl-reloc-calc-fix.patch
+
+	# A few patches only for the MIPS platform.  Descriptions of what they
+	# do can be found in the patch headers.
+	# <tuxus@gentoo.org> thx <dragon@gentoo.org> (11 Jan 2003)
+	# <kumba@gentoo.org> remove tst-rndseek-mips & ulps-mips patches
+	if [ "${ARCH}" = "mips" ]
+	then
+		cd ${S}
+		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-elf-machine-rela-mips.patch
+		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-exit-syscall-mips.patch
+		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-fpu-cw-mips.patch
+		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-inline-syscall-mips.patch
+		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-libgcc-compat-mips.patch
+		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
+	fi
 }
 
 setup_flags() {
