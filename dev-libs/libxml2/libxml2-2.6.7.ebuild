@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.7.ebuild,v 1.9 2004/06/24 23:26:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.7.ebuild,v 1.10 2004/07/27 05:48:43 solar Exp $
 
-inherit libtool gnome.org flag-o-matic
+inherit libtool gnome.org flag-o-matic gnuconfig
 
 DESCRIPTION="Version 2 of the library to manipulate XML files"
 HOMEPAGE="http://www.xmlsoft.org/"
@@ -15,6 +15,11 @@ IUSE="python readline ipv6"
 DEPEND="sys-libs/zlib
 	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )"
+
+src_unpack() {
+	unpack ${A}
+	gnuconfig_update ${S}
+}
 
 src_compile() {
 

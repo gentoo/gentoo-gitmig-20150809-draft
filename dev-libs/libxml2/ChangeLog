@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.84 2004/07/13 10:49:00 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.85 2004/07/27 05:48:43 solar Exp $
+
+  27 Jul 2004; <solar@gentoo.org> libxml2-2.6.11.ebuild, libxml2-2.6.6.ebuild,
+  libxml2-2.6.7.ebuild, libxml2-2.6.9.ebuild:
+  use gnuconfig_update, needed for uclibc and probably others likes mips/mips64
+  etc..
 
 *libxml2-2.6.11 (13 Jul 2004)
 
