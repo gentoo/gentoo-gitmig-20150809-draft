@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.15 2004/12/27 07:30:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.16 2004/12/28 17:02:06 cardoe Exp $
+
+*ndiswrapper-0.12-r3 (28 Dec 2004)
+
+  28 Dec 2004; Doug Goldstein <cardoe@gentoo.org>
+  +ndiswrapper-0.12-r3.ebuild:
+  typo in the 4K Stacks checking option
 
   27 Dec 2004; Doug Goldstein <cardoe@gentoo.org>
   ndiswrapper-0.12-r2.ebuild:
