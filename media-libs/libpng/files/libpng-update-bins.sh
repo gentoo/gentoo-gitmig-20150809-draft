@@ -1,12 +1,21 @@
 #!/bin/bash
 if [ ! -f /usr/sbin/qpkg ]; then
-	echo "qpkg not found, will emerge gentoolkit"
-	emerge gentoolkit
+	if [ ! -f /usr/bin/qpkg ]; then
+		echo "qpkg not found, will emerge gentoolkit"
+		emerge gentoolkit
+	fi
 fi
+if [ -f /usr/sbin/qpkg ]; then
+	QPKG=/usr/sbin/qpkg
+fi
+if [ -f /usr/bin/qpkg ]; then
+	QPKG=/usr/bin/qpkg
+fi
+
 rm -f /tmp/pngstuff.*
 echo "scanning /usr do not be alarmed of error messages"
 find /usr -type f -perm +u+x | while read FOO; do
-	ldd "${FOO}" | grep libpng.so.2  && /usr/sbin/qpkg -nc -f ${FOO} >>/tmp/pngstuff.bins
+	ldd "${FOO}" | grep libpng.so.2  && ${QPKG} -nc -f ${FOO} >>/tmp/pngstuff.bins
 done
 
 
