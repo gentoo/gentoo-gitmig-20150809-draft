@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/guifications
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/ChangeLog,v 1.18 2004/10/08 14:31:45 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/ChangeLog,v 1.19 2004/10/16 23:08:11 rizzo Exp $
+
+*guifications-2.4 (16 Oct 2004)
+
+  16 Oct 2004; Don Seiler <rizzo@gentoo.org> +guifications-2.4.ebuild:
+  Versino bump, closes bug #67755
 
 *guifications-2.3 (08 Oct 2004)
 
