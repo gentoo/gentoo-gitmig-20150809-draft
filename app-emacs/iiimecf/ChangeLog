@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/iiimecf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/iiimecf/ChangeLog,v 1.5 2005/01/01 13:49:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/iiimecf/ChangeLog,v 1.6 2005/03/30 17:13:15 usata Exp $
+
+*iiimecf-12.1_p2002 (30 Mar 2005)
+
+  30 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> +iiimecf-12.1_p2002.ebuild:
+  Version bumped.
 
   05 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> iiimecf-11.4_p1467.ebuild,
   iiimecf-12.0.1_pre1891.ebuild:
