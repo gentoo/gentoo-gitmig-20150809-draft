@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.1 2004/03/19 16:52:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.2 2004/03/24 17:45:43 mholzer Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -48,7 +48,6 @@ BASE_PV="${PV}"
 MY_SV="${BASE_PV//\.}"
 S="${WORKDIR}/xc"
 SRC_PATH="mirror://xfree/${BASE_PV}/source"
-DESCRIPTION="Xfree86: famous and free X server. Tiny version (KDrive)"
 HOMEPAGE="http://www.xfree.org"
 SRC_URI="${SRC_PATH}/X${MY_SV}src-1.tgz
 	${SRC_PATH}/X${MY_SV}src-2.tgz
@@ -71,6 +70,8 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 #inherit needs to happen *after* DEPEND has been defined to have "newdepend"
 #do the right thing. Otherwise RDEPEND doesn't get set properly.
 inherit eutils flag-o-matic gcc xfree
+
+DESCRIPTION="Xfree86: famous and free X server. Tiny version (KDrive)"
 
 src_unpack() {
 	unpack ${A}

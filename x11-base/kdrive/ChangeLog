@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/kdrive
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.15 2004/03/19 16:54:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.16 2004/03/24 17:45:43 mholzer Exp $
+
+  24 Mar 2004; Martin Holzer <mholzer@gentoo.org> kdrive-4.3.0-r5.ebuild:
+  now shows description. closes 45530
 
   19 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r1.ebuild,
   kdrive-4.3.0-r4.ebuild:
