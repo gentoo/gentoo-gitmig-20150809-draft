@@ -1,0 +1,16 @@
+--- Makefile.orig	2004-08-23 17:25:43.471717952 +0000
++++ Makefile	2004-08-23 17:27:37.009457592 +0000
+@@ -2,10 +2,11 @@
+ LIBDIR	=	-L/usr/X11R6/lib
+ LIBS	=	-lXpm -lXext -lX11 -lXxf86vm
+ OBJS	=	wmxres/wmxres.o \
+-		wmgeneral/wmgeneral.o \
++		wmgeneral/wmgeneral.o
++GCFLAGS =
+ 
+ .c.o:
+-	cc -g -c -O2 -Wall -D$(shell echo `uname -s`) $< -o $*.o $(INCDIR)
++	cc -g -c -Wall -D$(shell echo `uname -s`) $(GCFLAGS) $< -o $*.o $(INCDIR)
+ 
+ all: wmxres
+ 

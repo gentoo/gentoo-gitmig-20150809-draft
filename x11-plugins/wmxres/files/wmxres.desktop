@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=WmXres
+Comment=Change resolution
+Comment[pl]=Zmiana rozdzielczości
+Exec=wmxres
+Terminal=false
+Type=Application
+Categories=Applet;
+NotShowIn=GNOME;KDE;
+Encoding=UTF-8
+# vi: encoding=utf-8
