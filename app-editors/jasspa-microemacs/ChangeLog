@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/jasspa-microemacs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.9 2005/02/14 02:54:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.10 2005/03/21 17:08:57 usata Exp $
+
+  21 Mar 2005; Mamoru KOMACHI <usata@gentoo.org>
+  -jasspa-microemacs-20040301-r1.ebuild,
+  jasspa-microemacs-20040301-r2.ebuild:
+  Stable on x86.
 
 *jasspa-microemacs-20040301-r2 (14 Feb 2005)
 
