@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/resid
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/ChangeLog,v 1.9 2004/08/25 02:24:46 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/ChangeLog,v 1.10 2005/03/11 13:37:23 dholm Exp $
+
+  11 Mar 2005; David Holm <dholm@gentoo.org> resid-0.13-r1.ebuild:
+  Added to ~ppc.
 
   25 Aug 2004; Sven Wegener <swegener@gentoo.org> resid-0.13-r1.ebuild,
   resid-0.13.ebuild:
