@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.27 2004/11/26 10:18:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.28 2004/11/30 01:16:10 ticho Exp $
+
+*pine-4.61-r4 (30 Nov 2004)
+
+  30 Nov 2004; Andrej Kacian <ticho@gentoo.org>
+  +files/pine-4.61-subjectlength.patch, +pine-4.61-r4.ebuild:
+  Apply patch to relax length condition on subject field. Patch submitted by
+  Kolbjorn Barmen <kolla@uninett.no>. Closes bug #72861.
 
   26 Nov 2004; Andrej Kacian <ticho@gentoo.org>
   -files/pine-4.33-whitespace.patch, -files/pine-4.40-boguswarning.patch,
