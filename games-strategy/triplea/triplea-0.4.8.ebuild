@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.4.8.ebuild,v 1.2 2004/07/24 10:34:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.4.8.ebuild,v 1.3 2004/12/10 03:17:17 mr_bones_ Exp $
 
 inherit games
 
@@ -19,9 +19,8 @@ RDEPEND="|| (
 	>=virtual/jdk-1.4
 	>=virtual/jre-1.4 )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	app-arch/unzip
-	>=dev-java/ant-1.4.1
+	>=dev-java/ant-core-1.4.1
 	dev-java/junit
 	jikes? ( >=dev-java/jikes-1.17 )"
 
@@ -29,7 +28,7 @@ S="${WORKDIR}/${PN}_${MY_PV}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# The sourcecode currently assumes the game is being run from a directory
 	# one level below the installation root.
@@ -37,7 +36,7 @@ src_unpack() {
 		#!/bin/sh
 
 		cd "${GAMES_DATADIR}/${PN}/lib"
-		java -mx96M -cp \\
+		java -cp \\
 			../data:../lib/plastic-1.2.0.jar:../lib/${P}.jar \\
 			games.strategy.engine.framework.GameRunner
 	EOF
