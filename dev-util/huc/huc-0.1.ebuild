@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Mike Jones <ashmodai@gentoo.org>
-# Author: Hanno Boeck <hanno@gmx.de>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/huc/huc-0.1.ebuild,v 1.2 2002/05/23 00:13:53 ashmodai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/huc/huc-0.1.ebuild,v 1.3 2002/07/11 06:30:25 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML umlaut conversion tool"

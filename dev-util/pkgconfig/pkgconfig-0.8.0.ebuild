@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.8.0.ebuild,v 1.2 2001/11/10 12:45:09 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.8.0.ebuild,v 1.3 2002/07/11 06:30:25 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Package Config system that manages compile/link flags for libraries"

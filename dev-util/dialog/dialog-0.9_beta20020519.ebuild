@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Prakash Shetty (Crux) <ps@gnuos.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-0.9_beta20020519.ebuild,v 1.2 2002/06/03 06:23:16 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-0.9_beta20020519.ebuild,v 1.3 2002/07/11 06:30:25 drobbins Exp $
 
 MY_PV="0.9b-20020519"
 S=${WORKDIR}/dialog-${MY_PV}

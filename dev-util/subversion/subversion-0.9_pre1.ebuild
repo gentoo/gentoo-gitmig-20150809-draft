@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.9_pre1.ebuild,v 1.2 2002/02/08 22:37:07 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.9_pre1.ebuild,v 1.3 2002/07/11 06:30:25 drobbins Exp $
 
 S=${WORKDIR}/svn
 S_APACHE=${WORKDIR}/httpd-2.0

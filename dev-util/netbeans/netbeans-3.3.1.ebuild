@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Tools Team <tools@gentoo.org>
-# Author: Matthew Kennedy <mbkennedy@ieee.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.3.1.ebuild,v 1.2 2002/04/28 04:35:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.3.1.ebuild,v 1.3 2002/07/11 06:30:25 drobbins Exp $
 
 MY_P=NetBeansIDE-release331
 S=${WORKDIR}/${PN}

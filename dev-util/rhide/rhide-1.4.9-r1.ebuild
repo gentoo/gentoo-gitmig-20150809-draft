@@ -1,8 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer:  Desktop Team <desktop@cvs.gentoo.org>
-# Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.4.9-r1.ebuild,v 1.2 2001/12/06 20:17:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.4.9-r1.ebuild,v 1.3 2002/07/11 06:30:25 drobbins Exp $
 
 TVISIONVER="1.1.3b"
 SETEDITVER="0.4.41"

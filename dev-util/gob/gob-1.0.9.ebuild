@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-1.0.9.ebuild,v 1.5 2002/06/19 23:48:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-1.0.9.ebuild,v 1.6 2002/07/11 06:30:25 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GOB is a preprocessor for making GTK+ objects with inline C code"
