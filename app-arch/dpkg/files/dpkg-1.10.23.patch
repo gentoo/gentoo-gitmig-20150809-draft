@@ -10,8 +10,8 @@
  include ../Makefile.conf
 +top_srcdir	= @top_srcdir@
  
- CXX_SOURCES	= basecmds.cc baselist.cc basetop.cc bindings.cc curkeys.cc \
- 		  main.cc methkeys.cc methlist.cc method.cc methparse.cc \
+ SOURCES	= main.c enquiry.c filesdb.c archives.c processarc.c \
+ 		 cleanup.c select.c packages.c configure.c remove.c \
 --- dselect/curkeys.cc	2003-05-11 18:44:26.000000000 +0200
 +++ dselect/curkeys.cc.1	2003-05-11 18:43:57.000000000 +0200
 @@ -19,6 +19,8 @@
@@ -66,7 +66,7 @@
  srcdir		= @srcdir@
 -top_srcdir	= @top_srcdir@
  
- SUBDIRS		= de en fr ja pt_BR ru sv
+ SUBDIRS		= de en es fr ja pt_BR ru sv
  
  default: all
  include ../Makefile.conf
@@ -74,3 +74,13 @@
  
  clean: clean-recursive
  
+--- archtable	2004-07-19 20:56:49.000000000 +0200
++++ archtable.new	2004-08-24 12:45:37.877058458 +0200
+@@ -11,6 +11,7 @@
+ i486-linux-gnu			i386		i486
+ i586-linux-gnu			i386		i486
+ i686-linux-gnu			i386		i486
++i686-pc-linux-gnu		i386		i486
+ pentium-linux-gnu		i386		i486
+ sparc-linux-gnu			sparc		sparc
+ sparc64-linux-gnu		sparc		sparc

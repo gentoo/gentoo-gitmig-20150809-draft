@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.19 2004/06/24 21:29:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.20 2004/08/24 10:54:11 lanius Exp $
+
+*dpkg-1.10.23 (24 Aug 2004)
+
+  24 Aug 2004; Heinrich Wendel <lanius@gentoo.org> -files/dpkg-1.10.10.patch,
+  +files/dpkg-1.10.23.patch, -dpkg-1.10.15.ebuild, -dpkg-1.10.18.ebuild,
+  dpkg-1.10.20.ebuild, +dpkg-1.10.23.ebuild:
+  mark 1.10.20 stable, add 1.10.23
 
   02 May 2004; Mike Frysinger <vapier@gentoo.org> :
   Make sure we don't install files into /usr/etc.
