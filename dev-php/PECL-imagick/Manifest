@@ -1,6 +1,18 @@
-MD5 553f58929af9e31532619c20c47a4c20 PECL-imagick-0.9.8-r1.ebuild 551
-MD5 06fa27e467dc2632fde155104497d764 ChangeLog 897
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bc09d602e1c98df1d80a6b468dd8e829 ChangeLog 1058
+MD5 ddafe47308b3345cdae8699476861d51 PECL-imagick-0.9.8-r1.ebuild 554
+MD5 12b44d6d711bc79518bbccfea9d34796 PECL-imagick-0.9.8.ebuild 686
 MD5 90addd9e0cd39bebc1ca9eef0185f6fd metadata.xml 268
-MD5 248db0f30745a0a38c7624bd007866cd PECL-imagick-0.9.8.ebuild 685
-MD5 5dbec8793047a1ce2951965f2b9e71bd files/digest-PECL-imagick-0.9.8-r1 61
+MD5 825747f322ec6082028cc15a3896bc2b PECL-imagick-0.9.11.ebuild 566
 MD5 5dbec8793047a1ce2951965f2b9e71bd files/digest-PECL-imagick-0.9.8 61
+MD5 5dbec8793047a1ce2951965f2b9e71bd files/digest-PECL-imagick-0.9.8-r1 61
+MD5 ed2047d765f8569bef894def860bc3be files/digest-PECL-imagick-0.9.11 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCEJOIaGfFFLhbXWkRAgUnAKCFKP41pcwTvljz6QTjXZF8qOEsJACaA//d
+v593hOwHC/4fBGmp1di0FpM=
+=t+tL
+-----END PGP SIGNATURE-----
