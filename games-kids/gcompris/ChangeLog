@@ -1,6 +1,11 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.3 2003/11/07 16:32:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.4 2003/12/08 16:14:59 vapier Exp $
+
+*gcompris-4.2 (08 Dec 2003)
+
+  08 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
 
 *gcompris-4.1 (07 Nov 2003)
 
