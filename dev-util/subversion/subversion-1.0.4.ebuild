@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.4.ebuild,v 1.1 2004/05/25 09:01:04 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.4.ebuild,v 1.2 2004/06/07 11:35:33 pauldv Exp $
 
 inherit elisp-common libtool python eutils
 
@@ -236,7 +236,7 @@ src_install () {
 
 
 	#Install apache module config
-	if use apache2; then
+	if useq apache2 && useq berkdb; then
 		mkdir -p ${D}/etc/apache2/conf/modules.d
 		cat <<EOF >${D}/etc/apache2/conf/modules.d/47_mod_dav_svn.conf
 <IfDefine SVN>
