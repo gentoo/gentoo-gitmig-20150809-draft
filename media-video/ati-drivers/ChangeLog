@@ -1,6 +1,22 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.57 2005/01/08 08:26:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.58 2005/01/18 08:28:04 lu_zero Exp $
+
+  18 Jan 2005; Luca Barbato <lu_zero@gentoo.org>
+  -files/fglrx-3.7.0-fix-fglrx_panel-includes.patch,
+  -ati-drivers-2.9.12.ebuild, -ati-drivers-2.9.13-r1.ebuild,
+  -ati-drivers-2.9.13.ebuild, -ati-drivers-3.2.0.ebuild,
+  -ati-drivers-3.2.4.ebuild, -ati-drivers-3.2.5-r1.ebuild,
+  -ati-drivers-3.2.5.ebuild, -ati-drivers-3.2.8-r1.ebuild,
+  -ati-drivers-3.2.8-r2.ebuild, -ati-drivers-3.2.8.ebuild,
+  -ati-drivers-3.7.0.ebuild, -ati-drivers-3.7.6-r1.ebuild,
+  -ati-drivers-3.7.6.ebuild:
+  Cleanup
+
+*ati-drivers-8.8.25 (18 Jan 2005)
+
+  18 Jan 2005; Luca Barbato <lu_zero@gentoo.org> +ati-drivers-8.8.25.ebuild:
+  New version, the amd64 support will come later
 
   08 Jan 2005; Luca Barbato <lu_zero@gentoo.org>
   +files/8.08-kernel-2.6.10.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.7.6-r1.ebuild,v 1.10 2005/01/08 08:26:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25.ebuild,v 1.1 2005/01/18 08:28:04 lu_zero Exp $
 
 IUSE=""
 
@@ -8,16 +8,16 @@ inherit eutils rpm
 
 DESCRIPTION="Ati precompiled drivers for r350, r300, r250 and r200 chipsets"
 HOMEPAGE="http://www.ati.com"
-SRC_URI="http://www2.ati.com/drivers/linux/fglrx-4.3.0-${PV}.i386.rpm"
+SRC_URI="http://www2.ati.com/drivers/linux/fglrx_6_8_0-${PV}-1.i386.rpm"
 SLOT="${KV}"
 LICENSE="ATI"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 
 DEPEND=">=virtual/linux-sources-2.4
 	app-arch/rpm2targz
-	virtual/x11"
+	>=x11-base/xorg-x11-6.8.0"
 
-RDEPEND="virtual/x11"
+RDEPEND=">=x11-base/xorg-x11-6.8.0"
 PROVIDE="virtual/opengl"
 
 ATIBIN="${D}/opt/ati/bin"
@@ -26,14 +26,6 @@ RESTRICT="nostrip"
 pkg_setup(){
 	check_KV || \
 		die "Please ensure /usr/src/linux points to your kernel symlink!"
-
-	if has_version "x11-base/xfree"
-	then
-		if ! has_version ">=x11-base/xfree-4.3.0"
-		then
-			die "You must upgrade to xfree-4.3.0 or greater to use this."
-		fi
-	fi
 
 	# Set up X11 implementation
 	X11_IMPLEM_P="$(best_version virtual/x11)"
@@ -50,10 +42,12 @@ src_unpack() {
 
 	cd ${WORKDIR}/lib/modules/fglrx/build_mod
 
+	#epatch ${FILESDIR}/fglrx-3.9.0-allocation.patch
+
 	if [ "`echo ${KV}|grep 2.6`" ]
 	then
-		epatch ${FILESDIR}/fglrx-2.6-vmalloc-vmaddr.patch
-		epatch ${FILESDIR}/fglrx-2.6-get-page.patch
+		#epatch ${FILESDIR}/fglrx-2.6.10-pci_get_class.patch
+		epatch ${FILESDIR}/8.08-kernel-2.6.10.patch
 	fi
 }
 
@@ -69,8 +63,14 @@ src_compile() {
 	    addwrite "/usr/src/${FK}"
 	    cp 2.6.x/Makefile .
 		export _POSIX2_VERSION="199209"
-		make -C ${ROOT}/usr/src/linux SUBDIRS="`pwd`" modules || \
-			ewarn "DRM module not built"
+		if [ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -gt 5 -a ${KV_PATCH} -gt 5 ] ;
+		then
+			make -C /usr/src/linux M="`pwd`" modules || \
+				ewarn "DRM module not built"
+		else
+			make -C /usr/src/linux SUBDIRS="`pwd`" modules || \
+				ewarn "DRM module not built"
+		fi
 	    ARCH=${GENTOO_ARCH}
 	else
 		export _POSIX2_VERSION="199209"
@@ -132,7 +132,7 @@ src_install() {
 	dosym ../${X11_IMPLEM}/extensions ${ATI_ROOT}/extensions
 	rm -f ${WORKDIR}/usr/X11R6/lib/libGL.so.1.2
 
-	dodoc ${WORKDIR}/usr/share/doc/fglrx/LICENSE.*
+	# Not necessary dodoc ${WORKDIR}/usr/share/doc/fglrx/LICENSE.
 
 	#apps
 	insinto /etc/env.d
@@ -158,7 +158,12 @@ pkg_postinst() {
 	einfo "To switch to ATI OpenGL, run \"opengl-update ati\""
 	einfo "To change your XF86Config you can use the bundled \"fglrxconfig\""
 	echo
-
+	ewarn "***"
+	ewarn "If you are experiencing problems with memory allocation try to add"
+	ewarn "this line to in your X11 configuration file:"
+	ewarn "		Option \"KernelModuleParm\"  \"agplock=0\" "
+	ewarn "That should solve the hangups you could have with Neverwinter Nights"
+	ewarn "***"
 	# DRM module
 	update-modules
 }
