@@ -1,7 +1,13 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.3 2002/03/21 22:10:28 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.4 2002/04/05 07:27:35 gbevin Exp $
 
+*ncurses-5.2.20020112a-r1 (205 Apr 2002)
+
+  05 Apr 2002; Geert Bevin <gbevin@gentoo.org> :
+
+  Small header file fix to make apps that use ncurses compile correctly with gcc3.
+	
 *ncurses-5.2.20020112a (21 Mar 2002)
 
   21 Mar 2002; Grant Goodyear <g2boojum@gentoo.org> :
