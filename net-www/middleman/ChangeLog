@@ -1,6 +1,12 @@
 # ChangeLog for net-www/middleman
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/ChangeLog,v 1.6 2003/11/10 02:05:08 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/ChangeLog,v 1.7 2003/11/11 09:38:37 solar Exp $
+
+*middleman-1.9.1 (11 Nov 2003)
+
+  11 Nov 2003; <solar@gentoo.org> middleman-1.8.1.ebuild,
+  middleman-1.8.2.ebuild, middleman-1.9.1.ebuild:
+  version bump
 
   09 Nov 2003; zhen <zhen@gentoo.org> middleman-1.9.ebuild:
   changed sanbox to sandbox in patch msg
