@@ -2,10 +2,9 @@ MD5 3361d9253913ec03c5201373eb12c115 glibc-2.3.4.20040808.ebuild 21044
 MD5 e929e89d8a94ba13805c79afef1a23e7 glibc-2.3.2-r11.ebuild 20307
 MD5 cdff0e2d789aa0bda20dbe3771c107c3 glibc-2.3.3.20040420-r1.ebuild 21481
 MD5 d76c190c324bd78acdd50153b087d0aa glibc-2.3.2-r10.ebuild 20217
-MD5 1d6c38dbd7ccc25b49a5b3c835d7542a glibc-2.3.4.20040605.ebuild 17579
 MD5 268ba3daca8dd48227a8433667ba6499 glibc-2.3.4.20040619-r1.ebuild 20673
 MD5 b7f41b64d13ebb13463afe77a0fab815 glibc-2.3.2-r2.ebuild 18863
-MD5 23245b9bb15cc2d04b302061f687bd69 ChangeLog 50386
+MD5 b2013d991c28310b8cc1ee0fffb3b147 ChangeLog 50483
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 8413392cd26f51d0d0be2ac3493c0687 glibc-2.2.5-r9.ebuild 10874
 MD5 a286fb7deff9b927e5bb9e6e69f98663 glibc-2.3.2-r9.ebuild 19572
@@ -17,7 +16,6 @@ MD5 9cc1e6b6f749dba7c8759bd07266f7d9 files/digest-glibc-2.2.5-r9 143
 MD5 de6744f3ba45c52573febfa91a3d1d1d files/digest-glibc-2.3.2-r2 296
 MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r9 312
 MD5 2013443f5192d4b999953ba4248d288c files/nscd.conf 1158
-MD5 e6e5134e81215f7c200930cf04f10b50 files/digest-glibc-2.3.4.20040605 150
 MD5 96c4c915e773ca312b14a53ae6ce91cf files/digest-glibc-2.3.4.20040808 382
 MD5 52cfc7627fc62dfb26d8d163aac361f6 files/glibc-2.2.2-test-lfs-timeout.patch 320
 MD5 b712a49b5113fccb4c8b0ada2a30d390 files/glibc-manpages-2.2.5.tar.bz2 14610
