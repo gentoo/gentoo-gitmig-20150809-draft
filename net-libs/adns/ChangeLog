@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/adns
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.13 2004/07/21 02:35:03 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.14 2004/10/02 19:27:06 kloeri Exp $
+
+  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> +files/adns-gcc34.patch,
+  adns-1.0.ebuild:
+  Add gcc-3.4 patch from bug 66034.
 
   20 Jul 2004; Tom Gall <tgall@gentoo.org> adns-1.1.ebuild:
   stable on ppc64, bug #57164

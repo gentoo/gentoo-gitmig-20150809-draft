@@ -1,0 +1,11 @@
+--- src/parse.c.orig	2000-09-17 02:24:24.000000000 +0200
++++ src/parse.c	2004-10-02 20:22:33.081002552 +0200
+@@ -111,7 +111,7 @@ adns_status adns__findlabel_next(findlab
+ }
+ 
+ adns_status adns__parse_domain(adns_state ads, int serv, adns_query qu,
+-			       vbuf *vb, adns_queryflags flags,
++			       vbuf *vb, parsedomain_flags flags,
+ 			       const byte *dgram, int dglen, int *cbyte_io, int max) {
+   findlabel_state fls;
+   
