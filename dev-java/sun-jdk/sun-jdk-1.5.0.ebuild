@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.ebuild,v 1.1 2004/09/30 14:34:05 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.ebuild,v 1.2 2004/10/09 17:06:53 axxo Exp $
 
 inherit java eutils
 
@@ -104,7 +104,7 @@ src_install() {
 	dodir /opt/${P}
 
 	for i in $dirs ; do
-		cp -a $i ${D}/opt/${P}/
+		cp -a $i ${D}/opt/${P}/ || die "failed to copy"
 	done
 	dodoc COPYRIGHT LICENSE README.html
 	dohtml README.html
@@ -116,7 +116,7 @@ src_install() {
 
 	if use jce ; then
 		cd ${D}/opt/${P}/jre/lib/security
-		unzip ${DISTDIR}/${jcefile}
+		unzip ${DISTDIR}/${jcefile} || die "failed to unzip jce"
 		mv jce unlimited-jce
 		dodir /opt/${P}/jre/lib/security/strong-jce
 		mv ${D}/opt/${P}/jre/lib/security/US_export_policy.jar ${D}/opt/${P}/jre/lib/security/strong-jce
