@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/razor
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/ChangeLog,v 1.13 2004/01/24 07:46:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/ChangeLog,v 1.14 2004/01/25 21:30:08 gustavoz Exp $
+
+  25 Jan 2004; <gustavoz@gentoo.org> razor-2.36-r1.ebuild:
+  stable on sparc
 
   23 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> razor-2.36-r1.ebuild:
   bump 2.36-r1 to x86 stable to solve #31248
