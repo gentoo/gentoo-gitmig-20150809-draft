@@ -1,18 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.8.1-r2.ebuild,v 1.1 2004/11/03 00:11:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.8.1-r2.ebuild,v 1.2 2004/11/08 15:06:47 vapier Exp $
 
 inherit gnome2 eutils
-
-IUSE="doc ssl gnutls samba ipv6 hal howl"
-
-SLOT="2"
 
 DESCRIPTION="Gnome Virtual Filesystem"
 HOMEPAGE="http://www.gnome.org/"
 
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~mips ~ia64 ~ppc64"
 LICENSE="GPL-2 LGPL-2"
+SLOT="2"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~mips ~ia64 ~ppc64 ~arm"
+IUSE="doc ssl gnutls samba ipv6 hal howl"
 
 RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/gconf-1.2
@@ -61,7 +59,7 @@ G2CONF="${G2CONF} \
 # foser <foser@gentoo.org 19 Apr 2004
 use gnutls && use ssl && G2CONF="${G2CONF} --disable-gnutls"
 
-DOCS="AUTHORS COPYING* ChangeLog HACKING INSTALL NEWS README TODO"
+DOCS="AUTHORS ChangeLog HACKING INSTALL NEWS README TODO"
 
 src_unpack() {
 

@@ -1,20 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.16 2004/11/05 22:58:49 corsair Exp $
-
-IUSE="doc ssl nls"
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.17 2004/11/08 15:06:47 vapier Exp $
 
 inherit eutils libtool gcc
 
-DESCRIPTION="GNOME Virtual File System."
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/1.0/${P}.tar.gz"
+DESCRIPTION="GNOME Virtual File System"
 HOMEPAGE="http://www.gnome.org/"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/1.0/${P}.tar.gz"
 
-SLOT="1"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ~ppc64"
+SLOT="1"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ~ppc64 arm"
+IUSE="doc ssl nls"
 
-RDEPEND="( =gnome-base/gconf-1.0* )
+RDEPEND="=gnome-base/gconf-1.0*
 	>=gnome-base/gnome-libs-1.4.1.2
 	>=gnome-base/gnome-mime-data-1.0.1
 	>=app-arch/bzip2-1.0.2
