@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/palmos-sdk-3.5.ebuild,v 1.3 2004/06/01 11:17:06 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/palmos-sdk-3.5.ebuild,v 1.4 2004/06/07 20:34:54 agriffis Exp $
 
 DESCRIPTION="The static libraries and header files needed for developing PalmOS applications."
 HOMEPAGE="http://www.palmos.com/"
@@ -9,63 +9,37 @@ LICENSE="Palm-SDK"
 SLOT="3.5"
 KEYWORDS="~x86"
 DEPEND="dev-lang/prc-tools"
-
-A1="sdk35.tar.gz"
-A2="sdk35-update1.tar.gz"
-AD1="sdk35-docs.tar.gz"
-AD2="sdk35-examples.tar.gz"
-AX="${A1} ${A2}"
-
+SRC_URI="sdk35.tar.gz sdk35-update1.tar.gz
+	doc? ( sdk35-docs.tar.gz sdk35-examples.tar.gz )"
 IUSE="doc"
-BASE="/opt/palmdev/sdk-${SLOT}"
-RESTRICT="nostrip"
+RESTRICT="nostrip fetch"
 S=${WORKDIR}
 
-pkg_setup() {
+pkg_nofetch() {
+	typeset a
 
-	if ! ( [ -f ${DISTDIR}/${A1} ] && [ -f ${DISTDIR}/${A2} ] ); then
-		echo
-		eerror "Please go to http://www.palmos.com/cgi-bin/sdk35.cgi"; \
-		eerror "and download ${A1} and ${A2} and place them"; \
-		eerror "in ${DISTDIR} and emerge this package again."
-		die
-	fi
-
-	if ( ( [ ! -f ${DISTDIR}/${AD1} ] || [ ! -f ${DISTDIR}/${AD2} ] ) && [ `use doc` ] ); then
-		echo
-		eerror "Please go to http://www.palmos.com/cgi-bin/sdk35.cgi"
-		eerror "and download ${AD1} and ${AD2} and place them in"
-		eerror "${DISTDIR} and emerge this package again or disable the \`doc'"
-		eerror "USE flag."
-		die
-	fi
-
-}
-
-src_unpack() {
-
-	unpack ${AX}
-	if use doc; then
-		unpack ${AD1}
-		unpack ${AD2}
-	fi
-
+	einfo "Please download the following files from"
+	einfo "http://www.palmos.com/cgi-bin/sdk35.cgi"
+	einfo "and put them in ${DISTDIR}, then emerge this package again."
+	for a in ${A}; do
+		einfo "  ${a}"
+	done
 }
 
 src_install() {
+	typeset base=/opt/palmdev/sdk-${SLOT}
 
-	dodir ${BASE}
-	mv Palm\ OS\ 3.5\ Support/GCC\ Libraries ${D}/${BASE}/lib
-	mv Palm\ OS\ 3.5\ Support/Incs ${D}/${BASE}/include
+	dodir ${base} || die
+	mv Palm\ OS\ 3.5\ Support/GCC\ Libraries ${D}/${base}/lib || die
+	mv Palm\ OS\ 3.5\ Support/Incs ${D}/${base}/include || die
 
 	if use doc; then
-		mv docs ${D}/${BASE}/Documentation
-		mv Examples ${D}/${BASE}/Documentation
+		mv docs ${D}/${base}/Documentation || die
+		mv Examples ${D}/${base}/Documentation || die
 	fi
 
 }
 
-pkg_postinst()
-{
-	palmdev-prep || eerror "Could not run \`palmdev-prep'!"
+pkg_postinst() {
+	palmdev-prep || eerror "Error running palmdev-prep :-("
 }
