@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-030512.ebuild,v 1.6 2003/09/16 22:21:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-030512.ebuild,v 1.7 2004/02/18 15:44:22 lordvan Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="postscript font editor and converter"
 HOMEPAGE="http://pfaedit.sourceforge.net/"
-SRC_URI="http://pfaedit.sourceforge.net/pfaedit_full-${PV}.tgz"
+SRC_URI="mirror://sourceforge/${PN}/pfaedit_full-${PV}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
