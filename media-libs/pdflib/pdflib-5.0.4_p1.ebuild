@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.4_p1.ebuild,v 1.7 2004/12/05 11:24:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.4_p1.ebuild,v 1.8 2005/01/02 06:41:23 j4rg0n Exp $
 
 inherit java-pkg
 
