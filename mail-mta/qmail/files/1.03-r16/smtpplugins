@@ -1,0 +1,27 @@
+# smtpplugins sample file
+# none of these plugins is installed by default
+# Paths are relative to the qmail home dir.
+# #f you want your plugin to be executed by system shell, add ':' just before
+# plugin path. this is slightly slower than normal mode.
+#
+# you may disable qmail-spp by setting NOSPP environmental variable - for
+# example using tcprules
+#
+# see http://qmail-spp.sourceforge.net/doc/
+
+[auth]
+#plugins/onlycrammd5
+
+[helo]
+#:plugins/badhelo example.com spammers.com
+
+[mail]
+#:plugins/rbl relays.ordb.org
+#plugins/blacklisted
+#plugins/spf
+#plugins/dnsmx-check
+
+[rcpt]
+#plugins/exists
+#plugins/tarpit
+

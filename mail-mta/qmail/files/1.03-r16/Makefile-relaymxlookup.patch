@@ -1,0 +1,38 @@
+--- qmail-1.03/Makefile.orig	2005-01-02 22:50:46.939208400 +0100
++++ qmail-1.03/Makefile	2005-01-02 22:54:48.066551472 +0100
+@@ -1454,7 +1454,8 @@
+ 	./load qmail-qmtpd rcpthosts.o control.o constmap.o \
+ 	received.o date822fmt.o now.o qmail.o cdb.a fd.a wait.a \
+ 	datetime.a open.a getln.a sig.a case.a env.a stralloc.a \
+-	alloc.a substdio.a error.a str.a fs.a auto_qmail.o 
++	alloc.a substdio.a error.a fs.a auto_qmail.o dns.o \
++	`cat dns.lib` ip.o ipalloc.o ipme.o byte_diff.o str.a
+ 
+ qmail-qmtpd.0: \
+ qmail-qmtpd.8
+@@ -1617,13 +1618,13 @@
+ timeoutwrite.o ip.o ipme.o ipalloc.o control.o constmap.o received.o \
+ date822fmt.o now.o qmail.o cdb.a fd.a wait.a datetime.a getln.a \
+ open.a sig.a case.a env.a stralloc.a alloc.a strerr.a substdio.a error.a str.a \
+-fs.a auto_qmail.o base64.o socket.lib dns.lib
++fs.a auto_qmail.o base64.o socket.lib dns.lib dns.o ip.h ipalloc.h
+ 	./load qmail-smtpd qregex.o rcpthosts.o commands.o timeoutread.o \
+ 	timeoutwrite.o ip.o ipme.o ipalloc.o control.o constmap.o \
+ 	received.o date822fmt.o now.o qmail.o cdb.a fd.a wait.a \
+ 	datetime.a getln.a open.a sig.a case.a env.a stralloc.a \
+-	alloc.a strerr.a substdio.a error.a str.a fs.a auto_qmail.o base64.o  `cat \
+-	socket.lib` dns.o `cat dns.lib` -lssl -lcrypto
++	alloc.a strerr.a substdio.a error.a fs.a auto_qmail.o base64.o  `cat \
++	socket.lib` -lssl -lcrypto dns.o str.a `cat dns.lib`
+ 
+ qmail-smtpd.0: \
+ qmail-smtpd.8
+@@ -1760,7 +1761,7 @@
+ 
+ rcpthosts.o: \
+ compile rcpthosts.c cdb.h uint32.h byte.h open.h error.h control.h \
+-constmap.h stralloc.h gen_alloc.h rcpthosts.h
++constmap.h stralloc.h gen_alloc.h rcpthosts.h dns.h ipalloc.h ipme.h
+ 	./compile rcpthosts.c
+ 
+ qregex.o: \

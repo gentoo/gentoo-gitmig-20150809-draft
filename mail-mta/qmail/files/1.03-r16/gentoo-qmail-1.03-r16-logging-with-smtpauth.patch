@@ -1,0 +1,18 @@
+--- qmail-1.03.orig/qmail-smtpd.c       2004-11-19 09:00:53.000000000 +0100
++++ qmail-1.03/qmail-smtpd.c    2004-12-11 19:06:23.185045688 +0100
+@@ -1006,7 +1006,6 @@
+   if (!stralloc_0(&pass)) die_nomem();
+   if (!stralloc_0(&resp)) die_nomem();
+
+-  if (fd_copy(2,1) == -1) return err_pipe();
+   //close(3);
+   if (pipe(pi) == -1) return err_pipe();
+   //if (pi[0] != 3) return err_pipe();
+@@ -1014,6 +1013,7 @@
+     case -1:
+       return err_fork();
+     case 0:
++      if (fd_copy(2,1) == -1) _exit(1);
+       close(pi[1]);
+       if (pi[0] != 3) {
+         close(3);

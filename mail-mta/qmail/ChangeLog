@@ -1,6 +1,15 @@
 # ChangeLog for mail-mta/qmail
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.15 2004/12/29 00:25:44 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.16 2005/01/02 22:16:06 hansmi Exp $
+
+*qmail-1.03-r16 (02 Jan 2005)
+
+  02 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
+  +files/1.03-r16/Makefile-relaymxlookup.patch,
+  +files/1.03-r16/gentoo-qmail-1.03-r16-logging-with-smtpauth.patch,
+  +files/1.03-r16/gentoo-qmail-1.03-r16-logrelay.patch,
+  +files/1.03-r16/smtpplugins, +qmail-1.03-r16.ebuild:
+  New, hardmasked ebuild derived from bug #40486.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

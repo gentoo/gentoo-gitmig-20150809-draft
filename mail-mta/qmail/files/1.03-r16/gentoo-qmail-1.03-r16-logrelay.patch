@@ -1,0 +1,15 @@
+--- qmail-1.03.orig/qmail-smtpd.c	2004-11-14 00:55:37.069913288 +0100
++++ qmail-1.03/qmail-smtpd.c	2004-11-14 00:55:37.072912832 +0100
+@@ -728,7 +728,11 @@
+   }
+   else
+ #ifndef TLS
+-    if (!addrallowed()) { err_nogateway(); return; }
++    if (!addrallowed()) { 
++      strerr_warn6("qmail-smtpd: Attempted relay from ",mailfrom.s," at ",remoteip," to ",addr.s,0);
++      err_nogateway(); 
++      return; 
++    }
+ #else
+     if (!addrallowed())
+      {
