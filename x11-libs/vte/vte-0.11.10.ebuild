@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.10.ebuild,v 1.10 2004/05/15 23:09:38 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.10.ebuild,v 1.11 2004/06/24 22:08:33 agriffis Exp $
 
 inherit gnome2 flag-o-matic
 

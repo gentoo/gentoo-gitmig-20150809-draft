@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0_rc1-r1.ebuild,v 1.1 2004/05/24 06:38:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0_rc1-r1.ebuild,v 1.2 2004/06/24 22:07:39 agriffis Exp $
 
 MY_PV="${PV/_r/r}"
 

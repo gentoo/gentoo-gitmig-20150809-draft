@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.ebuild,v 1.6 2004/02/29 15:04:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.ebuild,v 1.7 2004/06/24 22:09:27 agriffis Exp $
 
 S=${WORKDIR}/${P}-release
 DESCRIPTION="A graphical user interface toolkit for X"

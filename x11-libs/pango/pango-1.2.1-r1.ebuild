@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.2.1-r1.ebuild,v 1.12 2004/06/01 21:50:10 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.2.1-r1.ebuild,v 1.13 2004/06/24 22:07:05 agriffis Exp $
 
 inherit eutils libtool
 

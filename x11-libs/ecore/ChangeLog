@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/ecore
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ChangeLog,v 1.11 2003/12/13 16:12:21 vapier Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ChangeLog,v 1.12 2004/06/24 21:59:42 agriffis Exp $
 
 *ecore-1.0.0.* (18 Oct 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/xclass
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.10 2004/06/19 14:32:19 pyrania Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.11 2004/06/24 22:09:11 agriffis Exp $
 
   19 Jun 2004; <pyrania@gentoo.org> xclass-0.8.2-r1.ebuild:
   Added static to IUSE.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.5.ebuild,v 1.8 2004/06/24 00:14:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.5.ebuild,v 1.9 2004/06/24 22:09:49 agriffis Exp $
 
 inherit eutils
 

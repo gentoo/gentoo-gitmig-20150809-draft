@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm-addons/gtkmm-addons-0.5.3.ebuild,v 1.16 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm-addons/gtkmm-addons-0.5.3.ebuild,v 1.17 2004/06/24 22:02:44 agriffis Exp $
 
 MY_P="`echo ${P} |sed -e 's/-//' -e 's/g/G/' -e 's/a/A/'`"
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/gtk+
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.99 2004/06/24 00:13:20 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.100 2004/06/24 22:01:25 agriffis Exp $
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org> gtk+-1.2.10-r10.ebuild:
   QA - fix use invocation

@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/docklib
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/docklib/ChangeLog,v 1.6 2004/05/01 00:41:15 port001 Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/docklib/ChangeLog,v 1.7 2004/06/24 21:59:32 agriffis Exp $
 
   01 May 2004; Ian Leitch <port001@gentoo.org> docklib-0.2.ebuild:
   x11-base/xfree -> virtual/x11

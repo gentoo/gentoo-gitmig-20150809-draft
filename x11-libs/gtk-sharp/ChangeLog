@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/gtk-sharp
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/ChangeLog,v 1.24 2004/06/16 05:49:54 latexer Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/ChangeLog,v 1.25 2004/06/24 22:03:11 agriffis Exp $
 
 *gtk-sharp-0.98 (16 Jun 2004)
 

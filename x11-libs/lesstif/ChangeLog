@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/lesstif
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.26 2004/04/17 23:02:17 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.27 2004/06/24 22:03:59 agriffis Exp $
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> lesstif-0.93.94.ebuild:
   Added IUSE=
