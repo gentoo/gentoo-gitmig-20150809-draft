@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.0.ebuild,v 1.1 2004/12/28 15:14:41 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.0.ebuild,v 1.2 2004/12/28 22:08:15 ribosome Exp $
 
 DESCRIPTION="Scientific software package for numerical computations (Matlab lookalike)"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Scilab/distributions/${P}.src.tar.gz"
@@ -13,7 +13,7 @@ IUSE="ifc tcltk atlas gtk gtk2 Xaw3d"
 
 RDEPEND="virtual/x11
 	sys-libs/ncurses
-	atlas? ( dev-libs/atlas )
+	atlas? ( sci-libs/atlas )
 	gtk? (
 		>=gnome-base/gnome-libs-1.4.2
 		>=dev-libs/glib-2.2
