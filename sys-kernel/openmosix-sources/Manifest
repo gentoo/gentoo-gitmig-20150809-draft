@@ -7,8 +7,8 @@ MD5 3eec695f0481b07db403de0e580062eb openmosix-sources-2.4.20-r5.ebuild 3197
 MD5 2baf3a70602d45cf08b466989175cb5a openmosix-sources-2.4.20-r6.ebuild 3198
 MD5 433f31a4ff1b72a6eabe1ccbd40a3e86 openmosix-sources-2.4.21.ebuild 3199
 MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
-MD5 159cc0fecdad086403a719bfb42e56ca openmosix-sources-2.4.22_rc2.ebuild 1487
-MD5 00efa667e1f149564f98fe754d0bbb75 openmosix-sources-2.6.0_beta3.ebuild 3523
+MD5 e0f222318183bd127875a072f80b1721 openmosix-sources-2.4.22_rc2.ebuild 1491
+MD5 4931aa289d1d7a25dc59a1d33a2da647 openmosix-sources-2.6.0_beta3.ebuild 3748
 MD5 41b8fa1f0e2e59514496f8f5d52bcd75 files/digest-openmosix-sources-2.4.20-r1 154
 MD5 4843f8c1a5a7d5a7f0f2b37038cab7b6 files/digest-openmosix-sources-2.4.20-r2 154
 MD5 32f9a2d3d0d7c57a50c7a055031a72f4 files/digest-openmosix-sources-2.4.20-r3 133
