@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: ppc-sources-dev-2.4.19.ebuild,v 1.1 2002/08/17 20:51:20 trance Exp $ 
+# $Id: ppc-sources-dev-2.4.19.ebuild,v 1.2 2002/08/17 21:01:55 trance Exp $ 
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -58,5 +58,11 @@ src_install() {
 		cp -ax ${S}/include/linux/* ${D}/usr/include/linux
 		dodir /usr/include/asm
 		cp -ax ${S}/include/asm-ppc/* ${D}/usr/include/asm
+	fi
+}
+pkg_preinst() {
+	fi
+}
+plg_postinst() {
 	fi
 }
