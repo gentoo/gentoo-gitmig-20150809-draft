@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3659 2005/02/25 03:01:28 latexer Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3660 2005/02/25 12:14:11 hollow Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Benedikt Boehm <hollow@gentoo.org> (17 Feb 2005)
+# Apache herd package refresh
+# Masked for user testing. Meta-bug #76457
+=net-www/mod_ldap_userdir-1.1.5
 
 # Elfyn McBratney <beu@gentoo.org> (24 Feb 2005)
 # Masked as it's completely broken with the current Apache 2.x line.
