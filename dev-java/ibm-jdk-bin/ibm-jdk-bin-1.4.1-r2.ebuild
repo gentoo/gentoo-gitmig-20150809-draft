@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.1-r2.ebuild,v 1.2 2004/06/24 22:28:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.1-r2.ebuild,v 1.3 2004/07/01 03:28:11 tgall Exp $
 
 IUSE="doc javacomm"
 
@@ -8,26 +8,32 @@ inherit java nsplugins
 
 if use ppc; then
 	S="${WORKDIR}/IBMJava2-ppc-141"
+elif use ppc64; then
+	S="${WORKDIR}/IBMJava2-ppc64-141"
 else
 	S="${WORKDIR}/IBMJava2-141"
 fi
 
 DESCRIPTION="IBM Java Development Kit ${PV}"
 SRC_URI="ppc? ( mirror://IBMJava2-SDK-141.ppc.tgz )
+	ppc64? ( mirror://IBMJava2-SDK-141.ppc64.tgz )
 	x86? ( mirror://IBMJava2-SDK-141.tgz )
-	javacomm? ( mirror://IBMJava2-JAVACOMM-141.tgz )"
+	javacomm? (
+		x86? ( mirror://IBMJava2-JAVACOMM-141.tgz )
+		ppc64? ( mirror://IBMJava2-JAVACOMM-141.tgz )
+		)"
 PROVIDE="virtual/jdk-1.4.1
 	virtual/jre-1.4.1
 	virtual/java-scheme-2"
 SLOT="1.4"
 LICENSE="IBM-J1.4"
-KEYWORDS="ppc ~x86"
+KEYWORDS="ppc ~x86 ppc64"
 
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.5
 	doc? ( =dev-java/java-sdk-docs-1.4.1* )
 	X? ( virtual/x11 )"
-RDEPEND="sys-libs/lib-compat"
+RDEPEND=" !ppc64? sys-libs/lib-compat"
 
 # No compilation needed!
 src_compile() { :; }

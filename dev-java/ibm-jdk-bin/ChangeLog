@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.6 2004/06/24 22:28:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.7 2004/07/01 03:28:11 tgall Exp $
+
+  30 Jun 2004; Tom Gall <tgall@gentoo.org> ibm-jdk-bin-1.4.1-r2.ebuild:
+  stable on ppc64, bug #55597
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> ibm-jdk-bin-1.4.1-r1.ebuild,
   ibm-jdk-bin-1.4.1.ebuild:
