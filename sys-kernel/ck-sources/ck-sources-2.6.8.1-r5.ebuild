@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.8.1-r4.ebuild,v 1.1 2004/08/24 20:13:21 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.8.1-r5.ebuild,v 1.1 2004/08/31 11:01:40 dsd Exp $
 
 UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2
 	${FILESDIR}/${PN}-2.6.7.cmdlineLeak.patch"
