@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.15 2004/06/24 23:34:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.16 2004/07/14 13:29:30 aliz Exp $
+
+  14 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> mythvideo-0.15.1.ebuild:
+  Added some perl depenedencies for imdb perl scripts.
 
 *mythvideo-0.15.1 (01 Jun 2004)
 

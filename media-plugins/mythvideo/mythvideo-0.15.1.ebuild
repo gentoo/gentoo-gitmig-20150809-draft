@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.15.1.ebuild,v 1.2 2004/06/24 23:34:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.15.1.ebuild,v 1.3 2004/07/14 13:29:30 aliz Exp $
 
 IUSE=""
 
@@ -15,6 +15,9 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND=">=sys-apps/sed-4
+	dev-perl/libwww-perl
+	dev-perl/HTML-Parser
+	dev-perl/URI
 	|| ( media-video/mplayer media-video/xine-ui )
 	|| ( >=media-tv/mythtv-${PV}* >=media-tv/mythfrontend-${PV}* )"
 
