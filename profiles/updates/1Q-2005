@@ -17,3 +17,4 @@ move sys-kernel/hppa-headers sys-kernel/linux-headers
 move dev-libs/uclibc sys-libs/uclibc
 move net-libs/aqhbci-wizard-kde net-libs/aqhbci-qt-wizard
 move app-text/itext dev-java/itext
+move net-news/bnr2 net-nntp/bnr2
