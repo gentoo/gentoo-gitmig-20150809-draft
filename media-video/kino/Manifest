@@ -1,4 +1,4 @@
-MD5 edd1297fd85cfc76f8510e5b7b032307 ChangeLog 1856
+MD5 9cf88378716124108e0917e181252a1e ChangeLog 1941
 MD5 b9f840fd26267e5f5f0c10b75335db57 kino-0.6.4.ebuild 1157
 MD5 6b7e8a80f427b820fb31d36569674cb5 kino-0.6.5.ebuild 1112
 MD5 912d97ebd2c44731bcba44d21c11107d kino-0.7.0.ebuild 1037
@@ -8,4 +8,4 @@ MD5 6f060bac87a882af3e8b288aa9992cad files/digest-kino-0.6.4 62
 MD5 fa29fab322ca2ccd7fb46b1bb3cae292 files/digest-kino-0.6.5 63
 MD5 b2f31fc5dee7c9c3bb0896e17d940d75 files/kino_gcc33_fix 1384
 MD5 9d1233df7fff2bc53395d1b0c0da0453 files/digest-kino-0.7.0 63
-MD5 3ba5f58158f87df44ba1bc0e1307ccac files/digest-kino-0.7.1 62
+MD5 ce19651a229f27c1ca127df75dab851a files/digest-kino-0.7.1 62
