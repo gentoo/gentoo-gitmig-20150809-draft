@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/packit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.14 2005/01/29 01:09:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.15 2005/03/09 07:05:43 mr_bones_ Exp $
+
+  09 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> -packit-0.7.ebuild:
+  clean old broken ebuild
 
   29 Jan 2005; Daniel Black <dragonheart@gentoo.org> packit-0.7.ebuild,
   packit-1.0.ebuild:
