@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.34-r2.ebuild,v 1.1 2002/07/02 13:11:14 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.34-r3.ebuild,v 1.1 2002/07/03 14:51:54 chadh Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
@@ -24,7 +24,7 @@ fi
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	patch -p0 < ${FILESDIR}/gentoo-${P}.patch
+#	patch -p0 < ${FILESDIR}/gentoo-${P}.patch
 
 	cd ${S}
 	cp Configure Configure.orig
