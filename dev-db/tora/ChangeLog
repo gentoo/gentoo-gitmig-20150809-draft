@@ -1,7 +1,10 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.21 2004/01/23 22:54:11 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.22 2004/04/04 03:07:08 rizzo Exp $
+
+  03 Apr 2004; Don Seiler <rizzo@gentoo.org>; tora-1.3.13.ebuild:
+  Marking stable in x86
 
   23 Jan 2004; Don Seiler <rizzo@gentoo.org>; tora-1.3.13.ebuild:
   Fixes borrowed from KDE to avoid Qt errors.  Thanks to Volker Goetz
