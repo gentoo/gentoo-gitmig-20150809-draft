@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ne
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.16 2005/01/03 14:26:08 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.17 2005/01/21 19:18:30 pylon Exp $
+
+  21 Jan 2005; Lars Weiler <pylon@gentoo.org> ne-1.39.ebuild:
+  Stable on ppc.
 
   03 Jan 2005; Tom Martin <slarti@gentoo.org> ne-1.39.ebuild:
   Marked ~amd64

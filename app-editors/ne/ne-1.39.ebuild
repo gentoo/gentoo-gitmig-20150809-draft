@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.39.ebuild,v 1.5 2005/01/21 00:19:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.39.ebuild,v 1.6 2005/01/21 19:18:30 pylon Exp $
 
 DESCRIPTION="the nice editor, easy to use for the beginner and powerful for the wizard"
 HOMEPAGE="http://ne.dsi.unimi.it/"
@@ -8,7 +8,7 @@ SRC_URI="http://ne.dsi.unimi.it/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~ppc64 ~amd64"
+KEYWORDS="x86 ppc ~ppc64 ~amd64"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.2"
