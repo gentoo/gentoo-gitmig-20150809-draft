@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/udunits
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.2 2004/12/28 20:01:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.3 2004/12/29 21:35:20 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *udunits-1.12.0 (28 Dec 2004)
 
@@ -28,7 +31,7 @@
   06 Jun 2004; Steve Arnold <nerdboy@gentoo.org> udunits-1.12.1.ebuild:
   bump to x86, corrected depend, added einfo
 
-  12 May 2004; Bryan Østergaard <kloeri@gentoo.org> udunits-1.12.0.ebuild:
+  12 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> udunits-1.12.0.ebuild:
   Stable on alpha.
 
   08 May 2004; Steve Arnold <nerdboy@gentoo.org> udunits-1.12.0.ebuild:
