@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-3.99.2.ebuild,v 1.1 2003/07/22 07:29:59 bcowan Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-3.99.2.ebuild,v 1.2 2003/07/22 08:23:29 bcowan Exp $ 
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -22,7 +22,7 @@ DEPEND="=xfce-base/libxfce4util-${PV}
 	=xfce-base/xffm-${PV}
 	=xfce-base/xfdesktop-${PV}
 	=xfce-base/xfprint-${PV}
-	>=x11-themes/gtk-engines-xfce-2.1.1
+	>x11-themes/gtk-engines-xfce-2.1.1
 	=xfce-base/xfce4-panel-${PV}"
 	#=xfce-extra/xfce4-systray-${PV}
 	#=xfce-extra/xfce4-iconbox-${PV}
