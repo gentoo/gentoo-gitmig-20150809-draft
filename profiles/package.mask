@@ -703,6 +703,8 @@ gnome-extra/at-poke
 >=x11-wm/sawfish-20020419
 
 >=x11-libs/rep-gtk-0.16
+
+# LEAVE THIS ONE MASKED, EVEN GNOME2 USERS!!!
 >=dev-libs/librep-20020201
 
 >=x11-libs/gtk-engines-1.9.0
@@ -722,8 +724,11 @@ dev-libs/libmrproject
 >=app-office/mrproject-0.5.91
 >=app-office/gnumeric-1.1.3
 
+# LEAVE THESE MASKED, or GNUCash will break!!!
 >=dev-util/guile-1.5
 >=dev-libs/g-wrap-1.3
+
+
 >=dev-libs/libsigc++-1.1.0
 >=dev-python/pygtk-1.99.0
 >=app-arch/file-roller-1.106
