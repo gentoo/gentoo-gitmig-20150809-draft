@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.15.ebuild,v 1.6 2003/10/26 10:35:30 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.15.ebuild,v 1.7 2003/11/17 04:31:02 obz Exp $
 
 DESCRIPTION="A bash script for converting XML and DocBook formatted documents to a variety of output formats"
 HOMEPAGE="http://cyberelk.net/tim/xmlto/"
@@ -17,6 +17,9 @@ DEPEND="app-shells/bash
 #	tetex? ( >=app-text/passivetex-1.4 )"
 # Passivetex/xmltex need some sorting out, we'll include pdf/dvi/tex 
 # support in the first revision to xmlto <obz@gentoo.org>
+
+# not parrallel safe, thanks <agriffis@gentoo.org>, bug #33151
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 
@@ -36,7 +39,7 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} prefix="/usr" install || die
-	dodoc AUTHORS COPYING ChangeLog INSTAL NEWS README
+	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
 	docinto xml
 	dodoc doc/*.xml
 
