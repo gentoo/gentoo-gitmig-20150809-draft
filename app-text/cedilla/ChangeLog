@@ -1,0 +1,7 @@
+# ChangeLog for app-text/cedilla
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/ChangeLog,v 1.1 2003/08/23 00:57:00 zul Exp $
+
+  22 Aug 2003; Chuck Short <zul@gentoo.org> files/cedilla-gentoo.patch:
+  Initial Version. Closes #22067.
+
