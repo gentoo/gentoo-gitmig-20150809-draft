@@ -170,6 +170,11 @@ net-www/zope
 #
 >=net-www/opera-6.0
 
+# Xine-0.9.10 has a new API, so none of the plugins work for now.
+# May 26, Arcady Genkin <agenkin@gentoo.org>
+>=media-libs/xine-lib-0.9.10
+>=media-video/xine-ui-0.9.10
+
 # New orinoco_cs 0.11a driver -- karltk (01/05/2002)
 #
 # Only tested with the SMC2632W card, should unmask
