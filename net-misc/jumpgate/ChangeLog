@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/jumpgate
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/ChangeLog,v 1.1 2002/12/17 20:00:22 aliz Exp $
+
+*jumpgate-0.7 (17 Dec 2002)
+
+  17 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Initial import. Ebuild contributed by Jon Portnoy <avenj@gentoo.org> in #11412.
