@@ -1,8 +1,0 @@
-# ChangeLog for net-fs/idmapd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/idmapd/ChangeLog,v 1.2 2004/06/25 03:10:01 agriffis Exp $
-
-*idmapd-1.5 (08 Jun 2004)
-
-  08 Jun 2004; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by me.
