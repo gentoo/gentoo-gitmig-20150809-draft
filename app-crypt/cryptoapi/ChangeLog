@@ -1,9 +1,14 @@
 # ChangeLog for app-crypt/cryptoapi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.3 2002/05/01 01:03:02 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.4 2002/05/08 05:52:52 rphillips Exp $
 
 *cryptoapi-2.4.7.0 (25 Apr 2002)
 
+  7 May 2002; Ryan Phillips <rphillips@gentoo.org> cryptoapi-2.4.7.0.ebuild :
+
+  Added support for option --enable-iv-mode-sector, and tweaked to include
+  support for check_KV - a new portage 1.9.10 feature.
+  
   30 Apr 2002; Ryan Phillips <rphillips@gentoo.org> cryptoapi-2.4.7.0.ebuild :
 
   modified trailing text to tell users to make sure loopback is installed
