@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/asr-manpages/asr-manpages-1.3_rc5.ebuild,v 1.5 2004/04/06 01:00:18 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/asr-manpages/asr-manpages-1.3_rc5.ebuild,v 1.6 2004/06/03 10:56:41 gmsoft Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/a/asr-manpages/${MY_P}.orig.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc hppa"
 IUSE=""
 
 RDEPEND="sys-apps/man"

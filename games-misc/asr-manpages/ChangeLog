@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/asr-manpages
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/asr-manpages/ChangeLog,v 1.5 2004/04/06 01:00:18 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/asr-manpages/ChangeLog,v 1.6 2004/06/03 10:56:41 gmsoft Exp $
+
+  03 Jun 2004; Guy Martin <gmsoft@gentoo.org> asr-manpages-1.3_rc5.ebuild:
+  Marked stable on hppa.
 
   06 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   asr-manpages-1.3_rc5.ebuild:
