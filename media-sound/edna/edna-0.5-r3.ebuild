@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r3.ebuild,v 1.1 2003/12/15 01:43:23 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r3.ebuild,v 1.2 2004/02/22 22:28:54 agriffis Exp $
 
 # This is Greg Stein's streaming audio server
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/edna/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa "
 
 DEPEND="dev-lang/python"
 
