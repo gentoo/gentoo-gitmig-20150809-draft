@@ -1,0 +1,19 @@
+# ChangeLog for dev-libs/torch
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/ChangeLog,v 1.1 2004/12/29 00:44:27 ribosome Exp $
+
+*torch-3 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +torch-3.ebuild:
+  Moved from dev-libs/torch to sci-libs/torch.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> torch-3.ebuild:
+  virtual/glibc -> virtual/libc
+
+*torch-3 (17 Jun 2004)
+
+  17 Jun 2004; Patrick Kursawe <phosphan@gentoo.org> metadata.xml,
+  torch-3.ebuild:
+  Initial version.
+
