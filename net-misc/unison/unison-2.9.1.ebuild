@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.9.1.ebuild,v 1.16 2004/07/14 01:10:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.9.1.ebuild,v 1.17 2004/07/15 03:41:53 agriffis Exp $
 
 IUSE="gtk"
 
@@ -15,8 +15,6 @@ DEPEND=">=dev-lang/ocaml-3.04
 RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )"
 
 SRC_URI="mirror://${P}.tar.gz"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${P}.tar.gz
