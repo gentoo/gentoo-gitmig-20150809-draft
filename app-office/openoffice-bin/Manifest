@@ -1,7 +1,7 @@
-MD5 5f51c534950d6335529dd78c3895a08f openoffice-bin-1.0.2.ebuild 6149
+MD5 9d0208444a365199faae6e912dbbdc70 openoffice-bin-1.0.2.ebuild 6149
 MD5 b221cf945d38e9e31215107f8d084063 openoffice-bin-1.0.1.ebuild 5603
-MD5 386b573b3398aaa0d6022495a21c6bd2 openoffice-bin-1.1_beta.ebuild 5937
-MD5 5f51c534950d6335529dd78c3895a08f openoffice-bin-1.0.3.ebuild 6149
+MD5 92a9eb4ca28dee96e018fc99c3d91e76 openoffice-bin-1.1_beta.ebuild 5937
+MD5 7608dbb9299785655db58acea001aa60 openoffice-bin-1.0.3.ebuild 6148
 MD5 583bb2a3fcf66696f1c3c389874b82c9 openoffice-bin-1.0.0-r3.ebuild 2912
 MD5 d67186fbafba4cb628127208f37e9a92 ChangeLog 2852
 MD5 9f6fa2caffbec422160157fb68966b37 files/digest-openoffice-bin-1.0.0-r3 82
@@ -16,3 +16,4 @@ MD5 92e731a066e45536e55b07894f18096c files/1.0.1/ooffice-wrapper-1.1 7460
 MD5 9d58d18cf68c1b88732eeae0c52767da files/1.0.1/ooffice-wrapper 7406
 MD5 92e731a066e45536e55b07894f18096c files/1.0.2/ooffice-wrapper-1.1 7460
 MD5 271539dafab707398e9b806eef8f250a files/1.0.2/ooffice-wrapper-1.2 8220
+MD5 bf4e4bc72e0f7d31e2b00ac33a875411 files/1.0.3/ooffice-wrapper-1.3 8237
