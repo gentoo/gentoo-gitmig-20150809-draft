@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/extra-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/ChangeLog,v 1.3 2005/02/18 20:55:52 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/ChangeLog,v 1.4 2005/02/27 20:59:16 ciaranm Exp $
+
+*extra-syntax-2 (27 Feb 2005)
+
+  27 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org> +extra-syntax-2.ebuild:
+  New version, new syntax files
 
   18 Feb 2005; Tom Martin <slarti@gentoo.org> extra-syntax-1.ebuild:
   Marked ~amd64.
