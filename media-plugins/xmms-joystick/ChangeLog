@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/xmms-joystick
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-joystick/ChangeLog,v 1.1 2005/02/12 03:44:12 eradicator Exp $
+
+*xmms-joystick-1.2.10-r1 (11 Feb 2005)
+
+  11 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +xmms-joystick-1.2.10-r1.ebuild, +xmms-joystick-1.2.10.ebuild:
+  Initial import.  Stripped out of media-sound/xmms.
+
