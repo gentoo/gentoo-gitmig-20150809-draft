@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc., Emil Skoldberg (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.28-r1.ebuild,v 1.2 2003/10/27 13:24:31 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.28-r1.ebuild,v 1.3 2003/10/27 13:26:35 scandium Exp $
 
 inherit flag-o-matic
 
@@ -42,8 +42,8 @@ DEPEND="dev-libs/gmp
 src_compile() {
 
 	if use gtk2; then
-		einfo 'building pike with GTK+ 2.x support may break'
-		einfo 'try USE="-gtk2"'
+		einfo 'If building pike with GTK+ 2.x support breaks try'
+		einfo 'USE="-gtk2" emerge pike'
 		sleep 3
 	fi
 
