@@ -6,7 +6,7 @@
  		}
 +
 +		$l_aTags = explode(".", $url);
-+		if (!acceptableFormat($l_aTags[count($l_aTags) -1])
++		if (!acceptableFormat($l_aTags[count($l_aTags) -1]))
 +		{
 +			processingMsg(sprintf(_("URL %s doesn't contain a supported image"), $url));
 +			continue;

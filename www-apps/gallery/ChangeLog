@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gallery
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.4 2004/08/20 02:16:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.5 2004/08/23 19:36:27 stuart Exp $
+
+  23 Aug 2004; Stuart Herbert <stuart@gentoo.org> files/vuln-20040817.diff,
+  gallery-1.4.4-r1.ebuild:
+  Fix syntax error in the patch, and mark stable on x86
 
   20 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gallery-1.4.4-r1.ebuild:
   Stable on alpha, bug 60742.
