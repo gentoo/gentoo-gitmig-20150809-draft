@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.4.5.ebuild,v 1.5 2004/06/27 13:55:47 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.4.5.ebuild,v 1.6 2004/07/01 10:49:34 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,7 +17,7 @@ IUSE="ext-png ext-zlib mmx"
 
 DEPEND="ext-png? ( media-libs/libpng )
 	ext-zlib? ( sys-libs/zlib )
-	virtual/glibc"
+	virtual/libc"
 
 S=${WORKDIR}/${P}
 

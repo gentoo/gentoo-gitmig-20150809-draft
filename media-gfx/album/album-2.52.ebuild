@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="dev-lang/perl
 	media-gfx/imagemagick
 	media-gfx/jhead"

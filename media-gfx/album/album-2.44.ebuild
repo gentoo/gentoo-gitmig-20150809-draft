@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/album-2.44.ebuild,v 1.5 2004/06/24 22:32:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/album-2.44.ebuild,v 1.6 2004/07/01 10:48:39 eradicator Exp $
 
 DESCRIPTION="HTML photo album generator"
 HOMEPAGE="http://MarginalHacks.com/Hacks/album/"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	media-gfx/imagemagick
 	media-video/mpeg2vidcodec"

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pngcrush
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.8 2004/06/24 22:47:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.9 2004/07/01 10:50:00 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  pngcrush-1.5.10.ebuild:
+  virtual/glibc -> virtual/libc
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> pngcrush-1.5.10.ebuild:
   added amd64 keyword.
