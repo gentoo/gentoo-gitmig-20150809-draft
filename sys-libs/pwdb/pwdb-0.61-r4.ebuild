@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.14 2003/08/08 23:09:30 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.15 2003/08/11 16:07:37 luke-jr Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -10,7 +10,7 @@ DESCRIPTION="Password database"
 SRC_URI="ftp://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${P}.tar.gz"
 HOMEPAGE="http://www.firstlinux.com/cgi-bin/package/content.cgi?ID=6886"
 
-LICENSE="PWDB"
+LICENSE="BSD | GPL-2"
 KEYWORDS="amd64 x86 ppc sparc alpha mips hppa arm"
 SLOT="0"
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pwdb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.15 2003/08/08 23:09:30 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.16 2003/08/11 16:07:33 luke-jr Exp $
+
+  11 Aug 2003; Luke-Jr <luke-jr@gentoo.org> pwdb-0.61-r3.ebuild,
+  pwdb-0.61-r4.ebuild:
+  Changed LICENSE to "BSD | GPL-2"
 
   08 Aug 2003; Matthew Rickard <frogger@gentoo.org> pwdb-0.61-r3.ebuild,
   pwdb-0.61-r4.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.29 2003/07/18 22:01:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.30 2003/08/11 16:08:15 luke-jr Exp $
+
+  11 Aug 2003; Luke-Jr <luke-jr@gentoo.org> pam-0.75-r10.ebuild,
+  pam-0.75-r11.ebuild, pam-0.75-r7.ebuild, pam-0.75-r8.ebuild,
+  pam-0.75-r9.ebuild:
+  Changed LICENSE to "BSD | GPL-2"
 
   01 Jul 2003; Olivier Crete <tester@tester.ca> pam-0.75-r11.ebuild:
   Configure finds db4
