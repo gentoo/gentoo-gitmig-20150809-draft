@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~ppc ~x86 ~sparc"
+KEYWORDS="~ppc x86 ~sparc"
 IUSE=""
 
 DEPEND="virtual/glibc
