@@ -14,9 +14,6 @@
 # drobbins, 16 Mar 2002: This kernel sucks :)
 =sys-kernel/linux-sources-2.4.18
 
-# rsync-2.5.4 needs to be tested by whoever runs chiba
-=net-misc/rsync-2.5.4
-
 # cvs 1.11.1p1 needs to be tested
 =dev-util/cvs-1.11.1_p1
 
