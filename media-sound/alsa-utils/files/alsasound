@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.17 2004/10/30 01:42:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.18 2004/11/16 22:28:09 eradicator Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -50,7 +50,7 @@ depend() {
 
 load_modules() {
 	# List of drivers for each card.
-	DRIVERS="$(modprobe -c | grep -E "^[[:space:]]*alias[[:space:]]+snd-card-[[:digit:]]" | awk '{print $3}')"
+	DRIVERS="$(modprobe -c | grep -E "^[[:space:]]*alias[[:space:]]+snd-card-[[:digit:]]" | awk '{print $2}')"
 
 	# Fall back on the automated aliases if we don't have ALSA configured properly...
 	if [ -z "${DRIVERS}" ] && ! ([ -d /proc/asound ] && [ -z "$(grep ' no soundcards ' /proc/asound/cards)" ]); then

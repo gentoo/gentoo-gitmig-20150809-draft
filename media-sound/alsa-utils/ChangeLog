@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.75 2004/11/12 11:11:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.76 2004/11/16 22:28:09 eradicator Exp $
+
+  16 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
+  Module list uses aliases instead of driver name to close bug #71230.
 
 *alsa-utils-1.0.7 (12 Nov 2004)
 
