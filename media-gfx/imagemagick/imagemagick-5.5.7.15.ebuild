@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.7.15.ebuild,v 1.8 2004/06/24 22:42:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.7.15.ebuild,v 1.9 2004/07/17 21:47:56 tgall Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -20,7 +20,7 @@ RESTRICT="nomirror"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips ppc64"
 IUSE="X cups jpeg lcms mpeg png truetype tiff xml2 wmf jbig"
 
 DEPEND=">=sys-apps/sed-4
@@ -57,6 +57,7 @@ src_compile() {
 	use truetype || myconf="${myconf} --without-ttf"
 	use wmf || myconf="${myconf} --without-wmf"
 	use jbig || myconf="${myconf} --without-jbig"
+	use ppc64 && replace-flags "-O[2-9]" "-O1"
 
 	# Netscape is still used ?  More people should have Mozilla
 	sed -i 's:netscape:mozilla:g' configure
