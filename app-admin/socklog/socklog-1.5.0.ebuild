@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/socklog/socklog-1.5.0.ebuild,v 1.2 2005/01/01 11:26:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/socklog/socklog-1.5.0.ebuild,v 1.3 2005/03/03 16:09:06 ciaranm Exp $
 
 inherit gcc flag-o-matic
 
@@ -15,7 +15,7 @@ IUSE="static"
 
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
-	>=sys-apps/runit-0.13.1"
+	>=sys-process/runit-0.13.1"
 
 PROVIDE="virtual/logger"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/socklog
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/socklog/ChangeLog,v 1.2 2005/01/01 11:26:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/socklog/ChangeLog,v 1.3 2005/03/03 16:09:06 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> socklog-1.5.0.ebuild:
+  Dependency update: sys-apps/runit -> sys-process/runit.
 
 *socklog-1.5.0 (09 Oct 2004)
 
