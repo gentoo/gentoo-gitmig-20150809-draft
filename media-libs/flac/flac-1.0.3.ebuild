@@ -1,20 +1,21 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.0.1.ebuild,v 1.3 2002/05/27 17:27:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.0.3.ebuild,v 1.1 2002/07/08 22:58:10 drobbins Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A free lossless audio encoder"
-SRC_URI="mirror://sourceforge/flac/${P}-src.tar.gz"
+SRC_URI="mirror://sourceforge/flac/${P}.tar.gz"
 HOMEPAGE="http://flac.sourceforge.net/"
 #flac has an optional xmms plugin.  For now, we just depend on xmms.  We can optimize this later.
 RDEPEND="virtual/glibc X? ( >=media-sound/xmms-1.2.5-r2 ) >=media-libs/libogg-1.0_rc2"
 DEPEND="virtual/glibc dev-lang/nasm sys-apps/gawk $RDEPEND"
+KEYWORDS="*"
+LICENSE="GPL-2 LGPL-2"
+SLOT="0"
 
 src_compile() {
 	cd ${S}
 	local myflags
-	[ `use sse` ] && myflags="--sse-os"
+	[ `use sse` ] && myflags="--enable-sse"
 	#--use-3dnow is documented but apparently not yet enabled.
 	#[ `use 3dnow` ] && myflags="$myflags --use-3dnow"
 	./configure --prefix=/usr $myflags --host=$CHOST || die 
