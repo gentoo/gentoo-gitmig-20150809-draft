@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.49.2.ebuild,v 1.4 2004/01/19 15:29:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.49.2.ebuild,v 1.5 2004/01/23 15:54:51 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -250,6 +250,10 @@ src_unpack() {
 	if [ ${ARCH} = "sparc" ]; then
 		epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-sparc64-fix.patch
 	fi
+
+	#recent-files causes problems again, so removing
+	cd ${PATCHDIR}/patches/${PATCHLEVEL}
+	epatch ${FILESDIR}/${OO_VER}/norecent.patch
 
 	einfo "Applying Ximian OO.org Patches"
 	${PATCHDIR}/patches/apply.pl ${PATCHDIR}/patches/${PATCHLEVEL} ${S} -f --distro=Ximian || die "Ximian patches failed"

@@ -1,0 +1,11 @@
+--- apply 2004-01-08 12:54:42.880898904 +0100
++++ apply 2004-01-08 12:54:42.881898752 +0100
+@@ -278,9 +278,6 @@
+ user-desktop-install.diff
+ 
+ [ Misc ]
+-# Add support for the freedesktop.org ~/.recently-used spec. #24253
+-recent-files.diff
+-
+ # stop the user having to fight ooimpress constantly
+ capitalization.diff
