@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4fe55b55a98cb36854ad5f535651b2cb bbweather-0.6.2.ebuild 893
-MD5 601c01e56779e088cce767525b4849c5 ChangeLog 2745
-MD5 3a6513acf184afb395d3ab0538655fa4 metadata.xml 326
+MD5 fb1f00e10c843d6728d0832430507a27 ChangeLog 2834
 MD5 c3dc9dbdd965eea183142cdcc6ddb3f3 bbweather-0.5.ebuild 868
+MD5 8b496d53b6bf6f8cb57db93d297c3eca bbweather-0.6.2.ebuild 892
 MD5 2f76019740dd0705740f89345af4c0a9 bbweather-0.6.ebuild 867
-MD5 b8e54bde91d64d409470a0dd0aa43dc1 files/digest-bbweather-0.6.2 67
+MD5 3a6513acf184afb395d3ab0538655fa4 metadata.xml 326
 MD5 f50a3c6e984bae7de34913d1008e9c94 files/digest-bbweather-0.5 65
 MD5 8a91d26f53d2a72eec9fc9c7390cd9ea files/digest-bbweather-0.6 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCPASgugEuf3OQ0akRAt46AJ0W/F8vmDxMTK8vEMYvm/Iq9n+73wCeJPmE
-uNEKthVQmgY5wjsw5DmqNjQ=
-=vXvI
------END PGP SIGNATURE-----
+MD5 b8e54bde91d64d409470a0dd0aa43dc1 files/digest-bbweather-0.6.2 67
