@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/gnome-office/gnumeric/gnumeric-0.66.ebuild,v 1.1 2001/06/28 09:47:57 hallski Exp
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-0.75.ebuild,v 1.2 2001/11/10 03:03:57 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-0.75-r1.ebuild,v 1.1 2001/11/11 23:27:04 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
@@ -19,6 +19,7 @@ RDEPEND=">=x11-libs/gtk+-1.2.10-r3
          >=gnome-extra/gal-0.14
          >=dev-libs/libxml-1.8.16
 	 >=dev-libs/libole2-0.2.4
+	 ~media-libs/freetype-1.3.1
          perl?	 ( >=sys-devel/perl-5 )
 	 python? ( >=dev-lang/python-2.0 )
          gb?	 ( >=gnome-extra/gb-0.0.20-r1 )
