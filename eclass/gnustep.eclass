@@ -32,8 +32,8 @@ need-gnustep-gui() {
 egnustepmake() {
 	getsourcedir
 
-	addwrite ~/GNUstep/Defaults/.GNUstepDefaults.lck
-	addpredict ~/GNUstep	
+	addwrite /root/GNUstep/Defaults/.GNUstepDefaults.lck
+	addpredict /root/GNUstep	
 
 	cd ${S}
 
@@ -62,7 +62,7 @@ egnustepmake() {
 		fi
 	fi
 
-	if [ ! "${GNUSTEPBACK_XFT}" -eq 2 ] ; then
+	if [ "${GNUSTEPBACK_XFT}" != "2" ] ; then
 		if [ "${PN}" = "gnustep-back" ] ; then
 			if [ ! -f "/usr/X11R6/include/X11/Xft1/Xft.h" ]; then
 				sed "s,^#define HAVE_XFT.*,#undef HAVE_XFT,g" config.h > config.h.new
@@ -87,8 +87,8 @@ egnustepmake() {
 egnustepinstall() {
 	getsourcedir
 
-	addwrite ~/GNUstep/Defaults/.GNUstepDefaults.lck
-	addpredict ~/GNUstep	
+	addwrite /root/GNUstep/Defaults/.GNUstepDefaults.lck
+	addpredict /root/GNUstep	
 
 	cd ${S}
 	
