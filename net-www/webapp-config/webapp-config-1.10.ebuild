@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10.ebuild,v 1.1 2004/06/11 21:54:28 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10.ebuild,v 1.2 2004/06/11 21:58:56 stuart Exp $
 
 DESCRIPTION="Gentoo's installer for web-based applications"
 HOMEPAGE="http://www.gentoo.org/"
@@ -43,5 +43,4 @@ pkg_postinst () {
 	einfo "packages that use webapp-config."
 	echo
 	sleep 5
-	exit 1
 }
