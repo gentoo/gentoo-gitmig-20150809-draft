@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.903.ebuild,v 1.4 2004/08/30 23:36:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.903.ebuild,v 1.5 2004/08/31 09:20:01 lv Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -183,6 +183,13 @@ pkg_setup() {
 			die "The static and dlloader USE flags are currently incompatible with the sdk USE flag."
 		fi
 	fi
+
+	# on amd64 we need /usr/X11R6/lib64/X11/locale/lib to be a symlink
+	# created by the emul lib ebuild in order for adobe acrobat, staroffice,
+	# and a few other apps to work.
+	use amd64 && get_libdir_override lib64
+	# lib32 isnt a supported configuration (yet?)
+	[ "${CONF_LIBDIR}" == "lib32" ] && get_libdir_override lib
 }
 
 host_def_setup() {
