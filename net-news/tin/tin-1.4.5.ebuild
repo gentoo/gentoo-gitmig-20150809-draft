@@ -1,7 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/net-news/tin/tin-1.4.5.ebuild,v 1.5 2002/10/04 06:16:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/tin/tin-1.4.5.ebuild,v 1.6 2002/10/05 05:39:24 drobbins Exp $
+
+IUSE="ncurses"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A threaded NNTP and spool based UseNet newsreader"

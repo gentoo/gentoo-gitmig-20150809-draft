@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r3.ebuild,v 1.2 2002/10/04 06:16:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r3.ebuild,v 1.3 2002/10/05 05:39:23 drobbins Exp $
+
+IUSE="ssl tcpd sasl readline ipv6 berkdb gdbm ldap"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LDAP suite of application and development tools"

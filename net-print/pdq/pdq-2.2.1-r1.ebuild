@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pdq/pdq-2.2.1-r1.ebuild,v 1.7 2002/10/04 06:18:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pdq/pdq-2.2.1-r1.ebuild,v 1.8 2002/10/05 05:39:24 drobbins Exp $
+
+IUSE="gtk"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A non-daemon-centric print system which has a built-in, and sensible, driver configuration syntax."

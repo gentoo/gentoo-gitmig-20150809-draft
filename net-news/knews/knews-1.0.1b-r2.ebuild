@@ -1,7 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/net-news/knews/knews-1.0.1b-r2.ebuild,v 1.2 2002/10/04 06:16:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/knews/knews-1.0.1b-r2.ebuild,v 1.3 2002/10/05 05:39:24 drobbins Exp $
+
+IUSE="xface png jpeg"
 
 MY_P=${PN}-1.0b.1
 S=${WORKDIR}/${MY_P}

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # Added ssl support and new patches
 # $Header $
+
+IUSE="ssl nls"
  
 S=${WORKDIR}/${P}
 DESCRIPTION="s-lang Newsreader"

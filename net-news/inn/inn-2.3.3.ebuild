@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.0-r1.ebuild,v 1.1 2002/03/12 13:42:56 seemant Exp
 
+IUSE="ssl tcltk"
+
 S=${WORKDIR}/${P}
 DESCRIPTION="The Internet News daemon, fully featured NNTP server"
 SRC_URI="ftp://ftp.isc.org/isc/inn/${P}.tar.gz"
