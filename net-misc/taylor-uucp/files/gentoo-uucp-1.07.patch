@@ -6,7 +6,7 @@ diff -Naur uucp-1.07.old/policy.h uucp-1.07/policy.h
  /* #define LOCKDIR "/var/spool/lock" */
  /* #define LOCKDIR "/var/lock" */
 -
-+#define LOCKDIR "/var/log/subsys"
++#define LOCKDIR "/var/lock/uucp"
  /* You must also specify the format of the lock files by setting
     exactly one of the following macros to 1.  Check an existing lock
     file to decide which of these choices is more appropriate.

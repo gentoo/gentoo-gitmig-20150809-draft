@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/taylor-uucp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/ChangeLog,v 1.9 2003/10/20 22:07:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/ChangeLog,v 1.10 2003/10/24 12:02:13 zul Exp $
+
+  24 Oct 2003; Chuck Short <zul@gentoo.org> taylor-uucp-1.07.ebuild,
+  files/gentoo-uucp-1.07.patch:
+  Ebuild improvements, closes #31817.
 
   30 Sep 2003; Aron Griffis <agriffis@gentoo.org> taylor-uucp-1.07.ebuild:
   Stable on alpha
