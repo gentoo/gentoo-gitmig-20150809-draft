@@ -1,7 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4.ebuild,v 
-1.3 2003$
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r1.ebuild,v 1.4 2003/07/20 10:56:29 tantive Exp $
 
 S=${WORKDIR}/pvm-${PV}
 DESCRIPTION="PVM: Parallel Virtual Machine"
@@ -19,7 +18,7 @@ KEYWORDS="~x86 ~alpha"
 src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
-	patch -p0 ${FILESDIR}/pvm-3.4.4-gentoo.diff || die
+	patch -p0 <${FILESDIR}/pvm-3.4.4-gentoo.diff || die
 }
 
 src_compile() {
