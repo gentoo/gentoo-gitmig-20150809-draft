@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-desertcombat/bf1942-desertcombat-0.6.ebuild,v 1.4 2004/02/29 10:45:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-desertcombat/bf1942-desertcombat-0.6.ebuild,v 1.5 2004/06/03 20:53:48 mr_bones_ Exp $
 
 inherit games
 
@@ -12,11 +12,12 @@ SRC_URI="desertcombat_0.5l-beta_full_install.tar.bz2
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 RESTRICT="fetch"
 
 DEPEND="games-server/bf1942-lnxded"
 
-S=${WORKDIR}/Mods
+S="${WORKDIR}/Mods"
 
 pkg_nofetch() {
 	einfo "Please visit download ${A} from:"

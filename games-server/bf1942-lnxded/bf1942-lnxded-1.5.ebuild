@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-lnxded/bf1942-lnxded-1.5.ebuild,v 1.2 2004/02/20 07:31:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-lnxded/bf1942-lnxded-1.5.ebuild,v 1.3 2004/06/03 20:54:15 mr_bones_ Exp $
 
 inherit games
 
@@ -11,12 +11,13 @@ SRC_URI="bf1942_lnxded-${PV}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 RESTRICT="fetch"
 
 RDEPEND="virtual/glibc
 	sys-devel/gcc"
 
-S=${WORKDIR}/bf1942
+S="${WORKDIR}/bf1942"
 
 pkg_nofetch() {
 	einfo "Please download ${A} from"
