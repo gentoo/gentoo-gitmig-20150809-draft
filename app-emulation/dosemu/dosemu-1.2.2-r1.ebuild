@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.2.2-r1.ebuild,v 1.4 2005/02/20 00:43:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.2.2-r1.ebuild,v 1.5 2005/04/05 05:22:02 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,15 +15,22 @@ SLOT="0"
 KEYWORDS="-* ~x86"
 IUSE="X svga gpm debug"
 
-DEPEND="X? ( virtual/x11 )
+RDEPEND="X? ( virtual/x11 )
 	svga? ( media-libs/svgalib )
 	gpm? ( sys-libs/gpm )
 	sys-libs/slang"
 
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.57"
+
 src_unpack() {
 	unpack ${P}.tgz
 	cd ${S}
-	epatch ${FILESDIR}/dosemu-broken-links.diff
+	epatch ${FILESDIR}/${PN}-broken-links.diff
+	epatch ${FILESDIR}/${P}-cflags.patch
+
+	WANT_AUTOCONF=2.5
+	autoconf || die "autoconf failed"
 }
 
 src_compile() {
@@ -37,7 +44,10 @@ src_compile() {
 
 	# Has problems with -O3 on some systems
 	replace-flags -O[3-9] -O2
-	append-flags -fno-pic
+
+	# Fix compilation on hardened.  filter -fPIC rather than appending
+	# -fno-pic
+	filter-flage -fPIC
 
 	econf ${myflags} || die "DOSemu Base Configuration Failed"
 

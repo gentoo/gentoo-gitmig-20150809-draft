@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.25 2005/02/18 15:11:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.26 2005/04/05 05:22:02 eradicator Exp $
+
+  05 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/dosemu-1.2.2-cflags.patch, dosemu-1.2.2-r1.ebuild:
+  Respect user CFLAGS.
 
   18 Feb 2005; Hanno Boeck <hanno@gentoo.org> dosemu-1.2.2-r1.ebuild:
   Fixed compilation on hardened profile.
