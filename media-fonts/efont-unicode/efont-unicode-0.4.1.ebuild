@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/efont-unicode-0.4.1.ebuild,v 1.2 2003/09/25 07:26:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/efont-unicode-0.4.1.ebuild,v 1.3 2004/01/15 22:13:47 usata Exp $
 
 IUSE="X"
 
@@ -15,38 +15,31 @@ LICENSE="public-domain BAEKMUK X11 as-is"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~sparc ~ppc"
 
-DEPEND="virtual/glibc
-	X? ( virtual/x11 )"
+DEPEND="virtual/x11"
+RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 FONTDIR="/usr/share/fonts/efont-unicode"
 
 src_compile () {
 
-	if [ -n "`use X`" ] ; then
-		for i in *.bdf ; do
-			echo "Converting $i into ${i/bdf/pcf} ..."
-			/usr/X11R6/bin/bdftopcf -o ${i/bdf/pcf} ${i} || die
-			echo "Compressing ${i/bdf/pcf} ..."
-			gzip -9 ${i/bdf/pcf} || die
-		done
-	fi
+	for i in *.bdf ; do
+		echo "Converting $i into ${i/bdf/pcf} ..."
+		/usr/X11R6/bin/bdftopcf -o ${i/bdf/pcf} ${i} || die
+		echo "Compressing ${i/bdf/pcf} ..."
+		gzip -9 ${i/bdf/pcf} || die
+	done
 }
 
 src_install () {
 
 	insinto ${FONTDIR}
-	doins *.bdf || die
-	if [ -n "`use X`" ] ; then
-		doins *.pcf.gz || die
-	fi
+	doins *.pcf.gz || die
 
 	dodoc README* COPYRIGHT ChangeLog INSTALL
 	dohtml List.html
 
-	if [ -n "`use X`" ] ; then
-		/usr/X11R6/bin/mkfontdir ${D}${FONTDIR}
-	fi
+	/usr/X11R6/bin/mkfontdir ${D}${FONTDIR}
 }
 
 pkg_postinst() {
