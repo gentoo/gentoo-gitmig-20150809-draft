@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.0_pre5.ebuild,v 1.1 2005/02/01 19:39:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.0_pre5.ebuild,v 1.2 2005/02/06 16:31:27 lu_zero Exp $
 
 DESCRIPTION="Utility to change the OpenGL interface being used"
 HOMEPAGE="http://www.gentoo.org/"
@@ -9,7 +9,7 @@ SRC_URI="http://dev.gentoo.org/~cyfred/distfiles/glext.h-${GLEXT}.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 mips ~ppc ~ppc64 ~s390 ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
