@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5b8e879d3ddb28d953edf812d4c7582e ChangeLog 52445
+MD5 9a2f2119d756c25de71707b354fe6718 ChangeLog 52577
 MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 6922dce70bbab5cbe8c21e003ffd5226 mplayer-1.0_pre4-r7.ebuild 12234
 MD5 c098282cf0148b2caac4682eceec5258 mplayer-1.0_pre5-r2.ebuild 14050
@@ -51,11 +51,11 @@ MD5 34f948b8f242a2aadb53a1e2b00e3155 files/vuln02-fix.diff 467
 MD5 13bcf07a21789edf9b2f7b7935828b5b files/digest-mplayer-1.0_pre6-r1 429
 MD5 6748b8218fbe9ff36efcec61c749a346 files/mplayer-1.0_pre6-codecs.patch 1264
 MD5 13bcf07a21789edf9b2f7b7935828b5b files/digest-mplayer-1.0_pre6-r2 429
-MD5 82ae144accfb650883d3a7121d4df473 files/mplayer-1.0_pre6-pic.patch 8544
+MD5 c2e82dbe0e7b780adcbe9bfb902b8654 files/mplayer-1.0_pre6-pic.patch 18233
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCPjXNFdQwWVoAgN4RAsQ1AJ4okQYFj7qYzRqoRnXaFKDLILv6UACfYdhi
-MGL4hO81kYYXeFLlVuUBBnM=
-=wUIO
+iD8DBQFCP0uyFdQwWVoAgN4RAiifAKD5im+FffIExhvKX3Ol74fOEjQiaQCgmjub
+bChPjez23HE7r1bD/r/6MUs=
+=mwV+
 -----END PGP SIGNATURE-----
