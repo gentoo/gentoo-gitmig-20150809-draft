@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Added ssl support and new patches
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.0.ebuild,v 1.7 2004/02/20 17:02:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.0.ebuild,v 1.8 2004/02/29 00:24:33 weeve Exp $
 
 IUSE="ssl nls"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/slrn/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc alpha ia64"
+KEYWORDS="x86 ~ppc sparc alpha ia64"
 
 HOMEPAGE="http://slrn.sourceforge.net/"
 DEPEND="virtual/glibc

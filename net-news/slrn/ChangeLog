@@ -1,6 +1,9 @@
 # ChangeLog for net-news/slrn
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.14 2004/02/20 17:02:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.15 2004/02/29 00:24:33 weeve Exp $
+
+  28 Feb 2004; Jason Wever <weeve@gentoo.org> slrn-0.9.8.0.ebuild:
+  Stable for sparcenstein.
 
   20 Feb 2004; Aron Griffis <agriffis@gentoo.org> slrn-0.9.8.0.ebuild:
   stable on alpha
