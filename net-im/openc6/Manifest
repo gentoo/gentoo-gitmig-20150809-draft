@@ -1,4 +1,5 @@
-MD5 c3f68760547e55f3e1594d133d46f476 openc6-0.9.2.ebuild 485
-MD5 38d5c52c5f183ab88f88e1645e85f92a openc6-0.9.3_beta1.ebuild 521
+MD5 c77e291478fc0c455a61931ed377dc23 openc6-0.9.2.ebuild 533
+MD5 eec5bfb4424d7d06a536cffa45592430 openc6-0.9.3_beta1.ebuild 604
+MD5 e9037ed2f575169996d8cbbeb9090c65 ChangeLog 352
 MD5 9470439cb27679aefc0f08019700981c files/digest-openc6-0.9.2 65
 MD5 6997651366ce6c97593bec8e4bb9b6f2 files/digest-openc6-0.9.3_beta1 72
