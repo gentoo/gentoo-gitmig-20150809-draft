@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.6 2005/03/01 14:57:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.7 2005/03/01 23:25:14 azarah Exp $
+
+*cryptsetup-0.1-r1 (02 Mar 2005)
+
+  02 Mar 2005; Martin Schlemmer <azarah@gentoo.org> +files/cryptfs.confd,
+  +files/dm-crypt-start.sh, +files/dm-crypt-stop.sh,
+  +cryptsetup-0.1-r1.ebuild:
+  Add cryptfs conf.d file and addon scripts.
 
   01 Mar 2005; Lars Weiler <pylon@gentoo.org> cryptsetup-0.1.ebuild:
   Stable on ppc.
