@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/elogin/elogin-0.0.2.20030220.ebuild,v 1.2 2003/03/13 23:51:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/elogin/elogin-0.0.2.20030220.ebuild,v 1.3 2003/03/22 08:22:03 vladimir Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="~x86 ~alpha ~ppc"
 
 DEPEND="virtual/x11
 	virtual/glibc
