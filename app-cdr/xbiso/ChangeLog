@@ -1,0 +1,8 @@
+# ChangeLog for app-cdr/xbiso
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xbiso/ChangeLog,v 1.1 2004/05/27 03:38:20 vapier Exp $
+
+*xbiso-0.6.0 (26 May 2004)
+
+  26 May 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Arun Sen #45801.
