@@ -1,9 +1,0 @@
-# ChangeLog for app-sci/libnova
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/libnova/ChangeLog,v 1.2 2004/06/24 22:08:31 agriffis Exp $
-
-*libnova-0.7.0 (21 May 2003)
-
-  21 May 2003; Matthew Kennedy <mkennedy@gentoo.org> libnova-0.7.0.ebuild:
-  initial import
-
