@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ecasound
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.13 2004/01/22 12:26:31 torbenh Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.14 2004/02/28 18:19:39 eradicator Exp $
+
+  28 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ecasound-2.2.3.ebuild, ecasound-2.3.0.ebuild, ecasound-2.3.2.ebuild:
+  Added audiofile local USE flag for audiofile support checking.
 
 *ecasound-2.3.2 (22 Jan 2004)
 
