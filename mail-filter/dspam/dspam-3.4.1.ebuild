@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.1.ebuild,v 1.1 2005/03/23 10:22:48 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.1.ebuild,v 1.2 2005/03/28 14:33:00 st_lim Exp $
 
 inherit eutils
 
@@ -85,12 +85,13 @@ src_compile() {
 	use large-domain && myconf="${myconf} --enable-large-scale" ||\
 	    myconf="${myconf} --enable-domain-scale"
 
+	myconf="${myconf} --with-dspam-home=${HOMEDIR}"
 	myconf="${myconf} --with-dspam-mode=4755"
 	myconf="${myconf} --with-dspam-owner=dspam"
 	myconf="${myconf} --with-dspam-group=dspam"
 	myconf="${myconf} --sysconfdir=${HOMEDIR}"
 	myconf="${myconf} --with-logdir=${LOGDIR}"
-	use virtual-users || myconf="${myconf} --with-dspam-home=${HOMEDIR}"
+	use virtual-users || myconf="${myconf} --enable-homedir"
 
 	# enables support for debugging (touch /etc/dspam/.debug to turn on)
 	# optional: even MORE debugging output, use with extreme caution!
@@ -169,6 +170,7 @@ src_install () {
 	diropts -m0775 -o dspam -g dspam
 	dodir ${LOGDIR}
 	keepdir ${LOGDIR}
+	insinto ${LOGDIR}
 	touch ${T}/empty.file
 	newins ${T}/empty.file system.log
 	dosym ${LOGDIR}/system.log ${HOMEDIR}/system.log
@@ -177,15 +179,16 @@ src_install () {
 	dosym ${DATADIR} ${HOMEDIR}/data
 
 	# make install
-	sed -e 's/rm -f ..mandir.\(.*\)/rm -f ${D}${mandir}\1/g' \
-		-e 's/ln -s ..mandir.\(.*\) ..mandir.\(.*3\)/ln -s ${mandir}\1.gz ${D}${mandir}\2.gz/g' \
-		-i Makefile
 	make DESTDIR=${D} install || die
 	chmod 4755 ${D}/usr/bin/dspam
 	chmod 4755 ${D}/usr/bin/dspam_stats
 
 	# documentation
 	dodoc CHANGELOG LICENSE README* RELEASE.NOTES UPGRADING
+	dodoc ${DISTDIR}/dspam_sa_trainer.tar.gz
+	docinto doc
+	dodoc doc/*.txt
+	docinto gentoo
 	dodoc ${FILESDIR}/README.postfix ${FILESDIR}/README.qmail
 	if use mysql; then
 		dodoc src/tools.mysql_drv/README
@@ -205,20 +208,25 @@ src_install () {
 		|| cp src/dspam.conf ${T}/dspam.conf
 
 	if use cyrus; then
-		sed -i 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/lib/cyrus/deliver %u\":gI' ${T}/dspam.conf
-		sed -i 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/lib/cyrus/deliver\":gI' ${T}/dspam.conf
+		sed -e 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/lib/cyrus/deliver %u\":gI' \
+			-e 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/lib/cyrus/deliver\":gI' \
+			-i ${T}/dspam.conf
 	elif use exim; then
-		sed -i 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/sbin/exim -oMr spam-scanned %u\":gI' ${T}/dspam.conf
-		sed -i 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/sbin/exim -oMr spam-scanned %u\":gI' ${T}/dspam.conf
+		sed -e 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/sbin/exim -oMr spam-scanned %u\":gI' \
+			-e 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/sbin/exim -oMr spam-scanned %u\":gI' \
+			-i ${T}/dspam.conf
 	elif use maildrop; then
-		sed -i 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/bin/maildrop -d %u\":gI' ${T}/dspam.conf
-		sed -i 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/bin/maildrop\":gI' ${T}/dspam.conf
+		sed -e 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/bin/maildrop -d %u\":gI' \
+			-e 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/bin/maildrop\":gI' \
+			-i ${T}/dspam.conf
 	elif use procmail; then
-		sed -i 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/bin/procmail -d %u\":gI' ${T}/dspam.conf
-		sed -i 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/bin/procmail":gI' ${T}/dspam.conf
+		sed -e 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/bin/procmail -d %u\":gI' \
+			-e 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/bin/procmail":gI' \
+			-i ${T}/dspam.conf
 	else
-		sed -i 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/sbin/sendmail\":gI' ${T}/dspam.conf
-		sed -i 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/sbin/sendmail\":gI' ${T}/dspam.conf
+		sed -e 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/sbin/sendmail\":gI' \
+			-e 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/sbin/sendmail\":gI' \
+			-i ${T}/dspam.conf
 	fi
 	if use mysql || use postgres; then
 		if has_version sys-kernel/linux26-headers; then
@@ -228,8 +236,9 @@ src_install () {
 			keepdir /var/run/dspam
 
 			# We use sockets for the deamon instead of tcp port 24
-			sed -i 's:^#*\(ServerDomainSocketPath[\t ]\{1,\}\).*:\1\"/var/run/dspam/dspam.sock\":gI' ${T}/dspam.conf
-			sed -i 's:^#*\(ServerPID[\t ]\{1,\}\).*:\1/var/run/dspam/dspam.pid:gI' ${T}/dspam.conf
+			sed -e 's:^#*\(ServerDomainSocketPath[\t ]\{1,\}\).*:\1\"/var/run/dspam/dspam.sock\":gI' \
+				-e 's:^#*\(ServerPID[\t ]\{1,\}\).*:\1/var/run/dspam/dspam.pid:gI' \
+				-i ${T}/dspam.conf
 
 			# dspam init script
 			exeinto /etc/init.d
@@ -265,7 +274,7 @@ src_install () {
 			-e "s:^#*\(MySQLPass[\t ]\{1,\}\).*:\1${DSPAM_DB_DATA[3]}:gI" \
 			-e "s:^#*\(MySQLDb[\t ]\{1,\}\).*:\1${DSPAM_DB_DATA[4]}:gI" \
 			-e "s:^#*\(MySQLCompress[\t ]\{1,\}\).*:\1${DSPAM_DB_DATA[5]}:gI" \
-			${T}/dspam.conf
+			-i ${T}/dspam.conf
 		for DB_DATA_INDEX in $(seq 0 $((${#DSPAM_DB_DATA[@]} - 1))); do
 			echo "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" >> ${T}/mysql.data
 		done
@@ -275,7 +284,7 @@ src_install () {
 		newins src/tools.mysql_drv/mysql_objects-space.sql mysql_objects-space.sql
 		newins src/tools.mysql_drv/mysql_objects-speed.sql mysql_objects-speed.sql
 		newins src/tools.mysql_drv/mysql_objects-4.1.sql mysql_objects-4.1.sql
-		newins src/tools.mysql_drv/virtual-users.sql mysql_virtual-users.sql
+		newins src/tools.mysql_drv/virtual_users.sql mysql_virtual_users.sql
 		newins src/tools.mysql_drv/neural.sql mysql_neural.sql
 		newins src/tools.mysql_drv/purge.sql mysql_purge.sql
 		newins src/tools.mysql_drv/purge-4.1.sql mysql_purge-4.1.sql
@@ -311,7 +320,7 @@ src_install () {
 		insopts -m644 -o dspam -g dspam
 		doins ${T}/pgsql.data
 		newins src/tools.pgsql_drv/pgsql_objects.sql pgsql_objects.sql
-		newins src/tools.pgsql_drv/virtual-users.sql pgsql_virtual-users.sql
+		newins src/tools.pgsql_drv/virtual_users.sql pgsql_virtual_users.sql
 		newins src/tools.pgsql_drv/purge.sql pgsql_purge.sql
 
 	elif use oci8 ; then
@@ -342,7 +351,7 @@ src_install () {
 		insopts -m644 -o dspam -g dspam
 		doins ${T}/oracle.data
 		newins src/tools.ora_drv/oral_objects.sql ora_objects.sql
-		newins src/tools.ora_drv/virtual-users.sql ora_virtual-users.sql
+		newins src/tools.ora_drv/virtual_users.sql ora_virtual_users.sql
 		newins src/tools.ora_drv/purge.sql ora_purge.sql
 	elif use sqlite || sqlite3 ; then
 		insinto ${HOMEDIR}
@@ -350,9 +359,10 @@ src_install () {
 		newins src/tools.sqlite_drv/purge.sql sqlite_purge.sql
 	fi
 
-	sed -i "s:^\(Purge.*\):###\1:g" ${T}/dspam.conf
-	sed -i "s:^#\(Purge.*\):\1:g" ${T}/dspam.conf
-	sed -i "s:^###\(Purge.*\):#\1:g" ${T}/dspam.conf
+	sed -e "s:^\(Purge.*\):###\1:g" \
+		-e "s:^#\(Purge.*\):\1:g" \
+		-e "s:^###\(Purge.*\):#\1:g" \
+		-i ${T}/dspam.conf
 	insinto ${HOMEDIR}
 	insopts -m644 -o dspam -g dspam
 	doins ${T}/dspam.conf
@@ -417,15 +427,13 @@ pkg_postinst() {
 
 pkg_config () {
 	if use mysql ; then
-		[[ -f ${HOMEDIR}/mysql.data ]] && mv -f ${HOMEDIR}/mysql.data ${HOMEDIR}
-
 		DSPAM_DB_DATA=( $(sed "s:^[\t ]*$:###:gI" "${ROOT}${HOMEDIR}/mysql.data") )
 		for DB_DATA_INDEX in $(seq 0 $((${#DSPAM_DB_DATA[@]} - 1))); do
 			[[ "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" = "###" ]] && DSPAM_DB_DATA[$DB_DATA_INDEX]=""
 		done
-		DSPAM_MySQL_USER="$DSPAM_DB_DATA[2]"
-		DSPAM_MySQL_PWD="$DSPAM_DB_DATA[3]"
-		DSPAM_MySQL_DB="$DSPAM_DB_DATA[4]"
+		DSPAM_MySQL_USER="${DSPAM_DB_DATA[2]}"
+		DSPAM_MySQL_PWD="${DSPAM_DB_DATA[3]}"
+		DSPAM_MySQL_DB="${DSPAM_DB_DATA[4]}"
 
 		ewarn "When prompted for a password, please enter your MySQL root password"
 		ewarn ""
@@ -451,8 +459,10 @@ pkg_config () {
 			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_objects-speed.sql
 		fi
 
-		einfo "Creating DSPAM MySQL database for virtual-users users"
-		/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_virtual-users.sql
+		if use virtual-users ; then
+			einfo "Creating DSPAM MySQL database for virtual-users users"
+			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_virtual_users.sql
+		fi
 
 		if use neural ; then
 			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_neural.sql
@@ -461,8 +471,6 @@ pkg_config () {
 		einfo "Creating DSPAM MySQL user \"${DSPAM_MySQL_USER}\""
 		/usr/bin/mysql -u root -p -e "GRANT SELECT,INSERT,UPDATE,DELETE ON ${DSPAM_MySQL_DB}.* TO ${DSPAM_MySQL_USER}@localhost IDENTIFIED BY '${DSPAM_MySQL_PWD}';FLUSH PRIVILEGES;" -D mysql
 	elif use postgres ; then
-		[[ -f ${HOMEDIR}/pgsql.data ]] && mv -f ${HOMEDIR}/pgsql.data ${HOMEDIR}
-
 		DSPAM_DB_DATA=( $(sed "s:^[\t ]*$:###:gI" "${ROOT}${HOMEDIR}/pgsql.data") )
 		for DB_DATA_INDEX in $(seq 0 $((${#DSPAM_DB_DATA[@]} - 1))); do
 			[[ "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" = "###" ]] && DSPAM_DB_DATA[$DB_DATA_INDEX]=""
@@ -479,10 +487,12 @@ pkg_config () {
 
 		einfo "Creating DSPAM PostgreSQL tables"
 		PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${HOMEDIR}/pgsql_objects.sql 1>/dev/null 2>&1
-		PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${HOMEDIR}/pgsql_virtual-users.sql 1>/dev/null 2>&1
 
+		if use virtual-users ; then
+			einfo "Creating DSPAM MySQL database for virtual-users users"
+			PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${HOMEDIR}/pgsql_virtual-users.sql 1>/dev/null 2>&1
+		fi
 	elif use oci8 ; then
-		[[ -f ${HOMEDIR}/oracle.data ]] && mv -f ${HOMEDIR}/oracle.data ${HOMEDIR}
 		einfo "We have not enought Oracle knowledge to configure Oracle"
 		einfo "automatically. If you know how, please post a message in"
 		einfo "Gentoo Bugzilla."
@@ -492,7 +502,7 @@ pkg_config () {
 		einfo "But the DSPAM configuration file dspam.conf and oracle.data"
 		einfo "was already configured with the necessary information to"
 		einfo "access the database."
-		einfo "Pleae read your dspam.conf, oracle.data and the README for"
+		einfo "Please read your dspam.conf, oracle.data and the README for"
 		einfo "more info on how to setup DSPAM with Oracle."
 	elif use sqlite3 ; then
 		einfo "sqlite3_drv will automatically create the necessary database"
