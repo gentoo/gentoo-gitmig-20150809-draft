@@ -1,0 +1,30 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+
+depend() {
+	use logger
+	need net
+}
+
+checkconfig() {
+	if [ ! -e /etc/keepalived/keepalived.conf ] ; then
+		eerror "You need an /etc/keepalived/keepalived.conf file to run keepalived"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting Keepalived"
+	start-stop-daemon --start --quiet --pidfile /var/run/keepalived.pid \
+		--startas /usr/sbin/keepalived
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Keepalived"
+	start-stop-daemon --stop --quiet --pidfile /var/run/keepalived.pid
+	eend $?
+}

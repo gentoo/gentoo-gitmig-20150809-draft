@@ -1,18 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.0.0.ebuild,v 1.1 2003/02/25 03:30:37 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.0.0.ebuild,v 1.2 2003/07/01 16:48:35 iggy Exp $
 
 DESCRIPTION="The main goal of the keepalived project is to add a strong & robust keepalive facility to the Linux Virtual Server project."
 HOMEPAGE="http://keepalived.sourceforge.net"
 LICENSE="GPL-2"
-DEPEND="virtual/linux-sources
-	popt"
+DEPEND="popt"
 
 SRC_URI="http://keepalived.sourceforge.net/software/${P}.tar.gz"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 S="${WORKDIR}/${P}"
 
 src_compile() {
@@ -30,7 +29,7 @@ src_install() {
 	dobin bin/genhash
 
 	exeinto /etc/init.d
-	doexe keepalived/etc/init.d/keepalived.init
+	newexe ${FILESDIR}/init-keepalived keepalived
 
 	insinto /etc/keepalived
 	doins keepalived/etc/keepalived/keepalived.conf
