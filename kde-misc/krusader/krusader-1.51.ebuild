@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.51.ebuild,v 1.5 2005/03/07 15:49:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.51.ebuild,v 1.6 2005/03/30 16:36:25 hansmi Exp $
 
 inherit flag-o-matic kde
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/krusader/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc amd64"
+KEYWORDS="x86 sparc ppc amd64"
 
 # Adds support for Konqueror's right-click actions
 IUSE="kde"
