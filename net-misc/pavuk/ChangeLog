@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/pavuk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.4 2004/06/25 00:04:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.5 2004/06/30 00:06:18 solar Exp $
+
+*pavuk-0.9.28-r2 (29 Jun 2004)
+
+  29 Jun 2004; <solar@gentoo.org> metadata.xml, pavuk-0.9.28-r2.ebuild,
+  files/pavuk-0.9.28-http.patch:
+  Security update. When pavuk connects to a web server and the server sends back
+  the HTTP status code 305 (Use Proxy), pavuk copies data from the HTTP Location
+  header in an unsafe manner. This leads to a stack-based buffer overflow with
+  control over EIP.
 
 *pavuk-0.9.28-r1 (28 Nov 2003)
 
