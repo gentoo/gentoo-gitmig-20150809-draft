@@ -1,0 +1,19 @@
+# ChangeLog for net-analyzer/cheops-ng
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cheops-ng/ChangeLog,v 1.1 2005/03/31 21:52:56 vanquirius Exp $
+
+*cheops-ng-0.1.13 (31 Mar 2005)
+
+  31 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> +files/adns-gcc34.patch:
+  Oh, there is also a patch borrowed from adns :-).
+
+*cheops-ng-0.1.13 (31 Mar 2005)
+
+  31 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> +cheops-ng-0.1.13.ebuild:
+  Initial commit. This fixes bug 9666. Thanks to Daniel Seyffer
+  <gentoo-bugs@seyffer.de>, Dean Bailey <alron@bloodmagic.com>, Hans-Henry
+  Jakobsen <hanshj@fagmed.uit.no>, Andres Mujica <linux@seaq.com.co> and
+  everyone who participated in the bug. Special thanks to Michael Zanetta
+  <grimmlin@pentoo.ch> whose aid was essential to make it compile with recent
+  versions of gcc.
+
