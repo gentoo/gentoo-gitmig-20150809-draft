@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3-r3.ebuild,v 1.2 2003/11/24 15:54:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3-r3.ebuild,v 1.3 2003/12/01 19:08:08 agriffis Exp $
 
 inherit base eutils gnuconfig
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 alpha ia64"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=x11-libs/rep-gtk-0.17
-	=dev-libs/librep-0.16*
+	>=dev-libs/librep-0.16
 	>=media-libs/imlib-1.9.10-r1
 	media-libs/audiofile
 	>=x11-libs/gtk+-2.0.8

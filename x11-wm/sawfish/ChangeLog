@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.37 2003/11/25 04:08:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.38 2003/12/01 19:08:08 agriffis Exp $
+
+  01 Dec 2003; Aron Griffis <agriffis@gentoo.org> sawfish-1.3-r3.ebuild:
+  Fix bad DEPEND which would downgrade librep from 0.17 to 0.16.2
 
   24 Nov 2003; Aron Griffis <agriffis@gentoo.org> :
   Note that the two sawfish-1.3 patches in files/ have been submitted upstream
