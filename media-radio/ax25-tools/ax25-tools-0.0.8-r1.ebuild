@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/ax25-tools-0.0.8-r1.ebuild,v 1.3 2003/09/11 01:39:53 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/ax25-tools-0.0.8-r1.ebuild,v 1.4 2004/06/24 23:47:33 agriffis Exp $
 
 DESCRIPTION="Basic AX.25 (Amateur Radio) administrative tools and daemons"
 HOMEPAGE="http://ax25.sourceforge.net/"
