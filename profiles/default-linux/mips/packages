@@ -1,11 +1,8 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/packages,v 1.6 2004/11/10 11:13:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/packages,v 1.7 2004/11/16 05:14:21 vapier Exp $
 
 # Top-level mips profile
-
-# We rely on this package *so* much
-*>=sys-devel/gnuconfig-20030708
 
 # Not ready for general consumption (except n32)
 *<sys-kernel/mips-headers-2.6.6
