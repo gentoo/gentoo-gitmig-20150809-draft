@@ -5,9 +5,11 @@ MD5 5b34a93b937a1173bf2c93e0f6c17ed0 Net-DNS-0.37.ebuild 682
 MD5 7e5bb62c2a6fd9e424a771688c6f189b Net-DNS-0.37-r1.ebuild 709
 MD5 479988c7134864bb222a2da7947631e0 Net-DNS-0.38.ebuild 707
 MD5 28d941d054b9a4c53d94a5ff760372df Net-DNS-0.39.ebuild 708
+MD5 28d941d054b9a4c53d94a5ff760372df Net-DNS-0.40.ebuild 708
 MD5 643eb58f6da7f4557fda68d273e681b6 files/digest-Net-DNS-0.22 63
 MD5 643eb58f6da7f4557fda68d273e681b6 files/digest-Net-DNS-0.22-r1 63
 MD5 9c6aecd6a8a52abe98a8f08cf7fa7d5f files/digest-Net-DNS-0.37 63
 MD5 9c6aecd6a8a52abe98a8f08cf7fa7d5f files/digest-Net-DNS-0.37-r1 63
 MD5 a07001dc60cc3db07fabb9838eb9f247 files/digest-Net-DNS-0.38 63
 MD5 f5006c73a21912a3cb2cdc4f1f3e2100 files/digest-Net-DNS-0.39 63
+MD5 e619c1fd3e468fba677cd8bd8d2a9245 files/digest-Net-DNS-0.40 63
