@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.96.ebuild,v 1.13 2005/03/30 16:35:58 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.96.ebuild,v 1.14 2005/03/31 04:18:28 rajiv Exp $
 
 inherit eutils rpm kde-functions
 
@@ -121,6 +121,7 @@ src_compile() {
 		art/gtk/make-iconrc.pl.broken >  art/gtk/make-iconrc.pl
 	chmod +x art/gtk/make-iconrc.pl
 
+	libtoolize --copy --force
 	./configure || die
 	emake || die
 }
