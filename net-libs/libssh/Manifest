@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 59104a499f1c043835dfaf3c907faf72 libssh-0.1.ebuild 826
-MD5 730a70ac7b3b39920a36f768e5600a18 libssh-0.11.ebuild 601
 MD5 142ca8759845e547d38b28c96f3a9027 ChangeLog 872
+MD5 59104a499f1c043835dfaf3c907faf72 libssh-0.1.ebuild 826
 MD5 67176a673d5f792bc9cf28e4c632e49b metadata.xml 252
+MD5 f2de24b253e7f13c3fab7c1a2c892615 libssh-0.11.ebuild 609
 MD5 f3008419ae3b4a4b4f9e0781459a4510 files/digest-libssh-0.1 59
 MD5 9c7a7f99638231c3b559910de8c1b897 files/digest-libssh-0.11 60
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCKWPOEZCkKN40op4RAifjAJ40ax6bo7Cap1C9I/dcJMXpGbbruQCeMXT0
-4Cx2Eo3Zcye6qpmyrU+WVgc=
-=ZrF1
+iD8DBQFCKfYc0K3RJaeXx6cRAn6gAJ0bFy7G86KT4d99mMzkJBEhy4FVcwCg00hb
+VHSwYLuVopUAwcMtLYCTxhE=
+=xWIV
 -----END PGP SIGNATURE-----
