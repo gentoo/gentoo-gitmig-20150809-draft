@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.121 2003/11/09 22:30:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.122 2003/11/20 18:59:14 solar Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -35,6 +35,7 @@ doc - Adds extra documentation (API, Javadoc, etc)
 dvb - Adds support for DVB (Digital Video Broadcasting)
 dvd - Adds support for DVDs
 dvdr - Adds support for DVD writer hardware (e.g. in xcdroast)
+#embedded - Reserved flag for the embedded herd
 emacs - Adds support for GNU Emacs
 emacs-w3 - Add support for Emacs/W3 where applicable
 encode - Adds support for MEncoder or LaME encoder, wherever applicable
@@ -168,7 +169,6 @@ xmms - Check/Support for XMMS (X MultiMedia System) player.
 xv - Adds in optional support for the Xvideo extension (an X API for video playback)
 zeo - Adds support for Zope Enterprise Objects
 zlib - Adds support for zlib (de)compression
-
 
 # The following flags are NOT to be set or unset by users
 x86 - indicates that architecture is x86

@@ -2,7 +2,11 @@
 
 # uClibc defaults for the gcc portage
 
-USE="x86 embedded uclibc"
+USE="x86 uclibc"
+
+# the embedded USE flag is not currently valid but the
+# embedded herd has reserved it for future use.
+#USE="x86 embedded uclibc"
 
 ARCH="x86"
 COMPILER="gcc3"
