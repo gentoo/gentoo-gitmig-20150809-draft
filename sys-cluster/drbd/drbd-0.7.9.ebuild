@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.9.ebuild,v 1.1 2005/01/25 16:46:55 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.9.ebuild,v 1.2 2005/01/26 01:43:28 xmerlin Exp $
 
 inherit eutils versionator linux-mod
 
@@ -32,6 +32,8 @@ src_compile() {
 	einfo "Your kernel-sources in /usr/src/linux-${KV} must be properly configured"
 	#einfo "and match the currently running kernel version ${KV}"
 	einfo "If otherwise -> build will fail."
+	einfo ""
+	einfo "Please don't use XFS with drbd (see drbd mailing list archives)"
 	einfo ""
 
 	emake KDIR=${KERNEL_DIR} || die "compile problem"
