@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r6.ebuild,v 1.5 2003/10/14 14:29:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r6.ebuild,v 1.6 2003/11/22 21:49:59 plasmaroo Exp $
 
 inherit flag-o-matic eutils
 
@@ -110,7 +110,7 @@ src_install () {
 	fperms a-x /usr/lib/bx/plugins/BitchX.hints
 
 	cd ${S}
-	dodoc Changelog README* IPv6-support COPYING
+	dodoc Changelog README* IPv6-support
 	cd doc
 	insinto /usr/X11R6/include/bitmaps
 	doins BitchX.xpm
