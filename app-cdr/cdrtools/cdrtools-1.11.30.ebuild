@@ -1,24 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-1.11.30.ebuild,v 1.2 2002/08/23 11:15:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-1.11.30.ebuild,v 1.3 2002/08/23 17:15:36 agenkin Exp $
+
+DESCRIPTION="A set of tools for CDR drives, including cdrecord."
+HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
+LICENSE="GPL-2"
+DEPEND="virtual/glibc"
+
+SLOT="0"
+KEYWORDS="x86 ppc sparc sparc64"
 
 MY_P=${PN}-${PV%.*}a${PV##*.}
 S=${WORKDIR}/${PN}-1.11
-DESCRIPTION="cdrtools - A set of tools for CDR drives, including cdrecord"
-HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
 SRC_URI="ftp://ftp.fokus.gmd.de:21/pub/unix/cdrecord/alpha/${MY_P}.tar.bz2"
-
-DEPEND="sys-apps/supersed"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}/DEFAULTS
-	ssed -i "s:/opt/schily:/usr:g" Defaults.linux
-}
 
 src_compile() {
 	emake || die
