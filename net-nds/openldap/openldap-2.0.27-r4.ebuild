@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.3 2003/06/11 00:49:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.4 2003/07/09 01:26:12 raker Exp $
 
 inherit eutils
 
@@ -154,7 +154,7 @@ src_install() {
 	newexe ${FILESDIR}/2.0/slapd slapd
 	newexe ${FILESDIR}/2.0/slurpd slurpd
 	insinto /etc/conf.d
-	newins ${FILESDIR}/2.0/slapd.conf slapd.conf
+	newins ${FILESDIR}/2.0/slapd.conf slapd
 
 	# install MDK's ssl cert script
 	dodir /etc/openldap/ssl
@@ -164,11 +164,20 @@ src_install() {
 
 pkg_postinst() {
 	# make a self-signed ssl cert (if there isn't one there already)
-	if [ ! -e /etc/openldap/ssl/ldap.pem ]
-	then
+	if [ ! -e /etc/openldap/ssl/ldap.pem ]; then
 		cd /etc/openldap/ssl
 		yes "" | sh gencert.sh
 		chmod 640 ldap.pem
 		chown root.ldap ldap.pem
 	fi
+
+	# Since moving to running openldap as user ldap there are some
+	# permissions problems with directories and files. 
+	# Let's make sure these permissions are correct.
+	chown ldap:ldap /var/run/openldap
+	chmod 0755 /var/run/openldap
+	chown root:ldap /etc/openldap/slapd.conf
+	chmod 0640 /etc/openldap/slapd.conf
+	chown root:ldap /etc/openldap/slapd.conf.default
+	chmod 0640 /etc/openldap/slapd.conf.default
 }

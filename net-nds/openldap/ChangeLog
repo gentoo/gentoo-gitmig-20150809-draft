@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.38 2003/06/22 11:33:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.39 2003/07/09 01:26:12 raker Exp $
+
+  08 Jul 2003; Nick Hadaway <raker@gentoo.org> openldap-2.0.27-r4:
+  Fixed the conf.d slapd filename and added some code to pkg_postinst
+  so correct permissions are passed to directories/files affected by the 
+  upgrade from running as root to running as user/group ldap.
 
 *openldap-2.0.25-r2 (22 Jun 2003)
 
