@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r2.ebuild,v 1.7 2005/01/29 05:12:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r3.ebuild,v 1.1 2005/03/07 10:55:58 ka0ttic Exp $
 
 inherit eutils
 
-# dsniff needs to build it's own version of sys-libs/db, since the one 
+# dsniff needs to build it's own version of sys-libs/db, since the one
 # normally installed is for some reason unusable for dsniffs configure script.
 # The version is chosen as being the standard one around at the time i wrote
-# this ebuild, it's not set in stone. 
+# this ebuild, it's not set in stone.
 
 DB_VER="3.2.9"
 
@@ -69,6 +69,6 @@ src_compile() {
 src_install() {
 	make install install_prefix=${D} || die
 	dodir /etc/dsniff
-	mv ${D}/usr/{dnsspoof.hosts,dsniff.{magic,services}} ${D}/etc/dsniff/
+	mv ${D}/usr/lib/{dnsspoof.hosts,dsniff.{magic,services}} ${D}/etc/dsniff/
 	dodoc CHANGES README TODO
 }
