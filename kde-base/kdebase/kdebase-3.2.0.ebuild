@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0.ebuild,v 1.11 2004/03/03 03:11:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0.ebuild,v 1.12 2004/03/12 20:44:20 caleb Exp $
 
 inherit kde-dist
 
@@ -35,12 +35,19 @@ src_compile() {
 	myconf="$myconf `use_with encode lame` `use_with cups`"
 	myconf="$myconf `use_with opengl gl` `use_with ssl`"
 
+	if [[ `use java` ]]; then
+		if [[ `has_version virtual/jdk` ]]; then
+			myconf="$myconf --with-java=$(java-config --jdk-home)"
+		else
+			myconf="$myconf --with-java=$(java-config --jre-home)"
+		fi
+	else
+		myconf="$myconf --without-java"
+	fi
+
 	use pam \
 		&& myconf="$myconf --with-pam=yes" \
 		|| myconf="$myconf --with-pam=no --with-shadow"
-	use java \
-		&& myconf="$myconf --with-java=$(java-config --jdk-home)" \
-		|| myconf="$myconf --without-java"
 
 	kde_src_compile myconf configure
 	kde_remove_flag kdm/kfrontend -fomit-frame-pointer
