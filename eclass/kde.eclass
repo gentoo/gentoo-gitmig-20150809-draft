@@ -1,9 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.85 2003/12/30 22:54:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.86 2004/01/05 03:24:34 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
+# Revisions Caleb Tennis <caleb@gentoo.org>
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 
 inherit base kde-functions
@@ -13,13 +14,11 @@ INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
 
-# deps on the build tools
-if [ -n "$KDEBASE" -a -n "`use ppc`" -a "${PV//3.1}" != "$PV" ]; then
-	DEPEND="$DEPEND >=sys-devel/automake-1.7.0"
-else
-	DEPEND="$DEPEND sys-devel/automake"
-fi
-DEPEND="$DEPEND sys-devel/autoconf sys-devel/make dev-lang/perl" # perl is used for makefile generation
+DEPEND=">=sys-devel/automake-1.7.0
+	sys-devel/autoconf
+	sys-devel/make
+	dev-util/pkgconfig
+	dev-lang/perl" # perl is used for makefile generation
 
 # all kde apps need this one
 newdepend "~kde-base/kde-env-3"
@@ -71,6 +70,7 @@ kde_src_compile() {
 	mkdir -p $T/fakehome/.kde
 	mkdir -p $T/fakehome/.qt
 	export HOME="$T/fakehome"
+	addwrite "${QTDIR}/etc/settings"
 	# things that should access the real homedir
 	[ -d "$REALHOME/.ccache" ] && ln -sf "$REALHOME/.ccache" "$HOME/"	
 	
