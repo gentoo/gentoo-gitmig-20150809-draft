@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.20 2003/01/13 05:38:14 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.21 2003/01/18 00:35:04 raker Exp $
+
+*pine-4.53 (17 Jan 2003)
+
+  17 Jan 2003; Nick Hadaway <raker@gentoo.org> pine-4.53.ebuild,
+  files/digest-pine-4.53 :
+  Version bump.  Minor cleanups.
 
 *pine-4.52 (12 Jan 2003)
 
