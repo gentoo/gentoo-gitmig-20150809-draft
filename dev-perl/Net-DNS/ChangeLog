@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.12 2003/07/12 10:49:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.13 2003/07/19 08:16:46 rac Exp $
+
+*Net-DNS-0.37-r1 (19 Jul 2003)
+
+  19 Jul 2003; <rac@gentoo.org> Net-DNS-0.37-r1.ebuild:
+  Allow Test-Simple depend to be provided by perl 5.8.0-r12
 
 *Net-DNS-0.37 (16 Jun 2003)
 
