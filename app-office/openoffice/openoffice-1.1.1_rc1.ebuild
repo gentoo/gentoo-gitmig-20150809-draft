@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1_rc1.ebuild,v 1.1 2004/03/07 12:15:04 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1_rc1.ebuild,v 1.2 2004/03/28 11:50:59 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -76,9 +76,11 @@ RDEPEND=">=sys-libs/glibc-2.1
 	>=sys-devel/gcc-3.2 )" # needed for sqrtl patch recently introduced
 
 DEPEND="${RDEPEND}
+	app-shells/tcsh
 	!app-office/openoffice-bin
 	>=virtual/jdk-1.4.1
-	sys-apps/findutils"
+	sys-apps/findutils
+	dev-util/pkgconfig"
 
 pkg_setup() {
 
