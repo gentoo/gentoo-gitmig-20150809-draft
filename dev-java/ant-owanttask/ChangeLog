@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-owanttask
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.7 2004/09/29 23:57:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.8 2004/10/17 07:22:56 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  ant-owanttask-1.1-r1.ebuild:
+  keywords ~amd64
 
 *ant-owanttask-1.1-r1 (10 Sep 2004)
 

@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c7f399d648b0af20eed56e149e9814ce commons-httpclient-2.0-r1.ebuild 1282
-MD5 553af19721ec40d5c3b9c87f65346eae commons-httpclient-2.0.2.ebuild 1566
-MD5 848d0930160fa58c5c7b014c19198ce2 commons-httpclient-2.0.1.ebuild 1566
-MD5 f6cbea5f025f4df40dddc99bdcbbca22 ChangeLog 1709
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 bcfc32c14af82dda33f83ef45d1a33e8 commons-httpclient-2.0.1.ebuild 1577
+MD5 553af19721ec40d5c3b9c87f65346eae commons-httpclient-2.0.2.ebuild 1566
+MD5 61b4a182aca6188882fa28226cec80bf ChangeLog 1834
+MD5 70dbd7a345c0a9f6a17998de0191f13e files/digest-commons-httpclient-2.0-r1 79
+MD5 35bcb566781a909ae25bac9979bf497c files/gentoo.diff 444
 MD5 22c430c6bf50bc578f8095df5fd64cc4 files/digest-commons-httpclient-2.0.1 81
 MD5 63acee983ed2a9669cd20bc47743b8d3 files/digest-commons-httpclient-2.0.2 81
-MD5 35bcb566781a909ae25bac9979bf497c files/gentoo.diff 444
-MD5 70dbd7a345c0a9f6a17998de0191f13e files/digest-commons-httpclient-2.0-r1 79
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVU0/rLF9B432nYRAl6qAJ95Xq2Eg1E1Eqb9ClUFE5d5nNkcXgCfVUH+
-Z1aGxIwMI9q9m6Y1Pj9+jvg=
-=Uavx
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 48656913642fb9ca4194c279d6abd0e7 commons-launcher-0.9.ebuild 982
-MD5 0e3c2be57420a83e98e5237ce89d75aa ChangeLog 902
+MD5 e7c90993695574f80ac6a78430528209 ChangeLog 1023
+MD5 9bfd41a7f33789693e2d9d670fcd750e commons-launcher-0.9.ebuild 993
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 33bc3067274274baba8317c2d8f89d39 files/digest-commons-launcher-0.9 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVVv/rLF9B432nYRAvadAKCFyPaLrJkGuSAakNaTd5SGbU2a3QCfctzH
-g1cpVBkOzCED26W+5lBN3AE=
-=Lv0p
------END PGP SIGNATURE-----

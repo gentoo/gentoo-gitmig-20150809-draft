@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b11c164484479e61c7c9fa233cebbaf3 asm-1.4.3-r1.ebuild 952
-MD5 2f286fd967fcb0ba1e08fa25e8527683 ChangeLog 1060
 MD5 b7f9b7d59df453c8c330bff15bf5508b metadata.xml 888
+MD5 d1a50e8c1394f500e6e679e2a94ae0d3 asm-1.4.3-r1.ebuild 963
+MD5 20d6a593c31cc97a7bc0f6b93e90cd38 ChangeLog 1171
 MD5 bab3b96826160bc8cf16cdce85e62adc files/digest-asm-1.4.3-r1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVM3/rLF9B432nYRAn5oAJ43EA/Px5JpTSaEHoAfIqSyOeguEACcCk/r
-cT1iaitHGpO2Q66+m2FtDi4=
-=8EG+
------END PGP SIGNATURE-----
