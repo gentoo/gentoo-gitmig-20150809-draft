@@ -1,14 +1,18 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-1.5.2-r2.ebuild,v 1.1 2000/10/19 20:17:33 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-1.5.2-r2.ebuild,v 1.2 2000/10/20 09:19:41 achim Exp $
 
 P=python-1.5.2      
 A="py152.tgz python-fchksum-1.1.tar.gz"
 S=${WORKDIR}/Python-1.5.2
 S2=${WORKDIR}/python-fchksum-1.1
 DESCRIPTION="A really great language"
-SRC_URI="http://www.python.org/ftp/python/src/${A} http://www.azstarnet.com/~donut/programs/fchksum/python-fchksum-1.1.tar.gz"
+SRC_URI="http://www.python.org/ftp/python/src/py152.tgz
+	 http://www.azstarnet.com/~donut/programs/fchksum/python-fchksum-1.1.tar.gz"
+
+HOMEPAGE="http://www.python.org
+	  http://www.azstarnet.com/~donut/programs/fchksum/"
 
 
 src_compile() {                           
