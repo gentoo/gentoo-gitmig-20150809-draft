@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.24 2004/09/16 01:40:33 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.25 2004/09/17 02:06:14 mr_bones_ Exp $
 
 DESCRIPTION="Base ISO character entities and utilities for SGML"
 HOMEPAGE="http://www.iso.ch/cate/3524030.html"
@@ -20,7 +20,7 @@ src_unpack() {
 	# variable, and puts quotes around the CATALOG files.
 	cp ${FILESDIR}/${PF}-install-catalog.in ${S}/bin/install-catalog.in
 
-    use macos && ln -sf /usr/share/automake-1.6/{COPYING,INSTALL,install-sh,missing,mkinstalldirs} ${S}
+	use macos && ln -sf /usr/share/automake-1.6/{COPYING,INSTALL,install-sh,missing,mkinstalldirs} ${S}
 	use ppc-macos && ln -sf /usr/share/automake-1.6/{COPYING,INSTALL,install-sh,missing,mkinstalldirs} ${S}
 }
 
