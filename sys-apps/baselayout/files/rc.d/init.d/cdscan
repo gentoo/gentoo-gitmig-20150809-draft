@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#CD Detection
+for x in /dev/cdroms/* 
+do
+	mount $x /mnt/cdrom -o iso9660,ro
+	if [ $? -ne 0 ]
+	then
+		continue
+	fi
+	if [ ! -e /mnt/cdrom/.id-gentoo-linux ]
+	then
+		umount /mnt/cdrom
+		continue
+	fi
+done
+if [ ! -e /mnt/cdrom/.id-gentoo-linux* ]
+then
+	echo "!!! Couldn't find and mount Gentoo Linux CD."
+	echo "!!! You may need to load some SCSI modules."
+fi
+
+#mount compressed loopback fs
+/bin/mknod /dev/cloop b 240 0 
+/sbin/insmod /lib/cloop.o file=/mnt/cdrom/usr.iso /usr
+/bin/mount -o ro /dev/cloop /usr
+if [ -d /mnt/cdrom/gentoo/packages ]
+then
+	mount --bind /mnt/cdrom/gentoo/packages /usr/portage/packages
+fi
+if [ -d /mnt/cdrom/gentoo/distfiles ]
+then
+	mount --bind /mnt/cdrom/gentoo/distfiles /usr/portage/distfiles
+fi
+#LVM init
+/sbin/vgscan
+/sbin/vgchange -ay
+#general init
+/usr/sbin/env-update
+. /etc/profile

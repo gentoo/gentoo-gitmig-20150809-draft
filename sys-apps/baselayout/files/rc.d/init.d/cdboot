@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ "$1" != "start" ]
+then
+	exit
+fi
+umask 022
+mount / -o remount,rw
+: > /etc/mtab
+mount /proc
+/bin/hostname cdimage
+

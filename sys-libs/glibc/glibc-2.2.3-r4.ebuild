@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.3-r4.ebuild,v 1.2 2001/08/04 18:22:45 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.3-r4.ebuild,v 1.3 2001/08/05 22:58:06 pete Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -103,13 +103,13 @@ src_install() {
 		dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE NEWS NOTES \
 			PROJECTS README*
     else
-		rm -rf ${D}/usr/share/{man,info,zoneinfo}
+		rm -rf ${D}/usr/share ${D}/usr/lib/gconv
 		if [ "`use bootcd`" ]
 		then
 			rm -rf ${D}/usr/include
 			rm -f ${D}/usr/bin/{lddlibc4,iconv,sprof,glibcbug,tzselect,getconf,gencat,getent,locale,mtrace,pcprofiledump,rpcgen,localedef,catchsegv,xtrace}
-			rm -rf ${D}/usr/sbin/{zic,nscd,nscd_nischeck,zdump,rpcinfo}
-			rm -f ${D}/usr/lib/lib*.a
+			rm -rf ${D}/usr/sbin
+			rm -f ${D}/usr/lib/lib*.a ${D}/usr/lib/*.o
 		fi
     fi
 
