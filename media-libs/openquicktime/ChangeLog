@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openquicktime
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.8 2003/04/14 18:29:18 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.9 2003/06/10 16:00:09 phosphan Exp $
+
+  10 Jun 2003; Patrick Kursawe <phosphan@gentoo.org>
+  openquicktime-1.0-r1.ebuild:
+  Fixed bug 22186 - missing dependency
 
 *openquicktime-1.0-r1 (14 Apr 2003)
 
