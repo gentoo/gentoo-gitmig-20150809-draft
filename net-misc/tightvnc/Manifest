@@ -1,6 +1,7 @@
 MD5 4da94dff5ba93bb47826ce3f578f1cca tightvnc-1.2.8.ebuild 1605
 MD5 fdc7480acff3391ab1a511dda2774d78 tightvnc-1.2.9-r1.ebuild 1716
 MD5 778524cf028a58d7a58572b693d953df tightvnc-4.0_beta20031113.ebuild 2656
+MD5 84efa6b78ac8c9f7b57dc5bd949c324c tightvnc-1.3_alpha5.ebuild 2033
 MD5 3b72b5d529cf5558e7915c9bafa9aed8 ChangeLog 5106
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 8a5968ab6bd3fdd835fe13c589e1cc4d files/digest-tightvnc-4.0_beta20031113 367
@@ -10,6 +11,7 @@ MD5 1ddf3e5ec0121aaca487686a7bb6dd55 files/x86.patch 1613
 MD5 b801cfcb63f9c7c9299dd4919ba332b9 files/tightvnc-1.2.9-imake-tmpdir.patch 956
 MD5 fba34335858b6b6b681a660c7c74273f files/tightvnc-gentoo.diff 636
 MD5 57e1cd8ec91d0e8abbea5b267a6f1fb6 files/tightvnc-1.2.8-gentoo.security.patch 771
+MD5 4e84efe3429797daa190b7d29e9b5857 files/digest-tightvnc-1.3_alpha5 78
 MD5 70b94ceb3134edc412d70768b55661aa files/tightvnc-1.3_alpha5-gcc34.patch 1540
 MD5 eb14fedcc3608a1384ef1cba6dbbf103 files/tightvnc-1.2.7-gentoo.diff 657
 MD5 57e1cd8ec91d0e8abbea5b267a6f1fb6 files/tightvnc-1.2.9-gentoo.security.patch 771
