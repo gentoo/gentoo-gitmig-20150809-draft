@@ -1,4 +1,4 @@
-MD5 bd20358d14087cf721fe844e4d91278f licq-1.2.7.ebuild 3523
-MD5 23c0d550f3b147754737160bfa28bea8 ChangeLog 5160
-MD5 3795e526fdf015e985be17fca698e2d1 files/digest-licq-1.2.7 64
+MD5 730fa026d7b6ea01c0598e39757e6497 ChangeLog 5259
+MD5 9b94ed29a877d04f9279621cf181e809 licq-1.2.7.ebuild 3537
 MD5 c18e90be9c36c7efb06211733ad765ff files/1.2.7-debugflag.patch 396
+MD5 3795e526fdf015e985be17fca698e2d1 files/digest-licq-1.2.7 64
