@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swidgets
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/ChangeLog,v 1.1 2005/03/29 06:10:39 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/ChangeLog,v 1.2 2005/03/29 06:13:28 compnerd Exp $
+
+  29 Mar 2005; Saleem Abdulrasool <compnerd@gentoo.org> swidgets-0.1.ebuild:
+  Resolving QA issues :-)
 
 *swidgets-0.1 (29 Mar 2005)
 

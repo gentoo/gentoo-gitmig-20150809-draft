@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.ebuild,v 1.1 2005/03/29 06:10:39 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.ebuild,v 1.2 2005/03/29 06:13:28 compnerd Exp $
 
 inherit java-pkg
 
@@ -44,7 +44,7 @@ src_compile() {
 	echo "classpath=$(java-config -p toolbar)" >> build.properties
 
 	local antflags=""
-	$(use jikes) && antflags="${antflags} -Dbuild.compiler=jikes"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 
 	ant ${antflags} -f build.xml || die "Compile failed!"
 }
