@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.6 2002/05/21 09:26:42 agenkin Exp $
+# /space/gentoo/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.6 2002/05/21 09:26:42 agenkin Exp
+
+*cdrtools-1.11.24 (16 Jun 2002)
+  
+  16 Jun 2002; Doug Goldstein (Cardoe) <dougg@ufl.edu> cdrtools-1.11.24.ebuild :
+ 
+  Update to version 1.11a24 to fix some bugs found between 1.11a23 and xcdroast
+  And fixed the ebuild to 100% specs with lintool :)
 
 *cdrtools-1.11.23 (21 May 2002)
 
