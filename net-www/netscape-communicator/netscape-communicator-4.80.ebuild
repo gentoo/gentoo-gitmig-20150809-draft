@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/netscape-communicator-4.80.ebuild,v 1.1 2004/07/04 13:04:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/netscape-communicator-4.80.ebuild,v 1.2 2004/07/04 23:37:55 mr_bones_ Exp $
 
 IUSE=""
 
@@ -36,13 +36,13 @@ src_install() {
 	rm ${D}/opt/netscape/netscape-dynMotif
 	rm ${D}/opt/netscape/libnullplugin-dynMotif.so
 
-        # if flashplayer.xpt is installed assume a newer flash plugin exists and remove the Netscape bundled plugin
-        if [ -e ${ROOT}/opt/netscape/plugins/flashplayer.xpt ]
-        then
-             rm ${D}/opt/netscape/plugins/libflashplayer.so
-             rm ${D}/opt/netscape/plugins/ShockwaveFlash.class
-        fi
+	# if flashplayer.xpt is installed assume a newer flash plugin exists and remove the Netscape bundled plugin
+	if [ -e ${ROOT}/opt/netscape/plugins/flashplayer.xpt ]
+	then
+		rm ${D}/opt/netscape/plugins/libflashplayer.so
+		rm ${D}/opt/netscape/plugins/ShockwaveFlash.class
+	fi
 
 	exeinto /usr/X11R6/bin
-	doexe ${FILESDIR}/netscape 
+	doexe ${FILESDIR}/netscape
 }
