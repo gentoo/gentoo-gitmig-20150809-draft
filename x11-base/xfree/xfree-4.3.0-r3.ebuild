@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.31 2003/07/12 06:02:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.32 2003/07/13 09:23:19 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -59,8 +59,8 @@ X_PATCHES="mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
-	http://www.winischhofer.net/sis/sis_drv_src_${SISDRV_VER}.tar.gz
-	mirror://gentoo/XFree86-4.3.0-drivers-via-${VIADRV_VER}.tar.bz2"
+	http://www.winischhofer.net/sis/sis_drv_src_${SISDRV_VER}.tar.gz"
+#	mirror://gentoo/XFree86-4.3.0-drivers-via-${VIADRV_VER}.tar.bz2"
 #	ftp://ftp.matrox.com/pub/mga/archive/linux/2001/beta_1_3_0/mga-${MGADRV_VER}.tgz"
 #	3dfx? ( mirror://gentoo/glide3-headers.tar.bz2 )"
 # Updated Wacom driver:  http://people.mandrakesoft.com/~flepied/projects/wacom/
@@ -193,7 +193,7 @@ src_unpack() {
     
 	ebegin "Adding VIA driver"
 	cd ${WORKDIR}
-	unpack XFree86-${PV}-drivers-via-${VIADRV_VER}.tar.bz2
+#	unpack XFree86-${PV}-drivers-via-${VIADRV_VER}.tar.bz2
 	cd ${S}
 	eend 0
 	
@@ -385,7 +385,7 @@ src_unpack() {
 		fi
 
 		# Compile the VIA driver
-		echo "#define XF86ExtraCardDrivers via" >> config/cf/host.def
+#		echo "#define XF86ExtraCardDrivers via" >> config/cf/host.def
 	fi
 
 	if [ "${ARCH}" = "hppa" ]
