@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_pcgi2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/ChangeLog,v 1.12 2005/02/17 15:28:50 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/ChangeLog,v 1.13 2005/02/25 12:27:33 hollow Exp $
+
+  25 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
+  files/2.0.2/20_mod_pcgi.conf, mod_pcgi2-2.0.2.ebuild:
+  fixed module config + added MOD_DEFINE
 
   17 Feb 2005; Benedikt Boehm <hollow@gentoo.org> mod_pcgi2-2.0.2.ebuild:
   cleanup

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.2.ebuild,v 1.2 2005/02/17 15:28:50 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.2.ebuild,v 1.3 2005/02/25 12:27:33 hollow Exp $
 
 inherit eutils apache-module
 
@@ -20,7 +20,10 @@ APXS1_ARGS="-Wc,-DMOD_PCGI2 -Wc,-DUNIX -I./ -o mod_pcgi2.so -c mod_pcgi2.c parse
 APXS2_ARGS="-n pcgi2 -DUNIX -DAPACHE2 -DMOD_PCGI2 -c mod_pcgi2.c pcgi-wrapper.c parseinfo.c "
 
 APACHE1_MOD_CONF="${PVR}/20_mod_pcgi"
+APACHE1_MOD_DEFINE="PCGI"
+
 APACHE2_MOD_CONF="${PVR}/20_mod_pcgi"
+APACHE2_MOD_DEFINE="PCGI"
 
 DOCFILES="NEWS README TODO ChangeLog"
 
