@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpgtx/mpgtx-1.3.ebuild,v 1.7 2004/09/29 22:07:16 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpgtx/mpgtx-1.3.ebuild,v 1.8 2004/09/29 22:24:02 pkdawson Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
 
 src_compile() {
 	./configure --parachute --prefix=/usr
-	sed -i "s:O3:O1:" Makefile
+	sed -i "s:-O3:-O3 -fno-unit-at-a-time:" Makefile
 	emake || die "emake failed"
 }
 
