@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/pathological-1.1.3.ebuild,v 1.3 2004/05/12 09:02:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/pathological-1.1.3.ebuild,v 1.4 2004/06/04 19:43:40 jhuebel Exp $
 
 inherit games
 
 DESCRIPTION="An enriched clone of the game 'Logical' by Rainbow Arts"
 HOMEPAGE="http://pathological.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pathological/${P}.tar.gz"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc"
