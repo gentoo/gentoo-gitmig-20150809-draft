@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c40ed5d0b5bd59957990a12d37fc78d2 detox-1.1.0.ebuild 1053
+MD5 c606001a83e8e321038d9f6eaf97fa3c ChangeLog 336
+MD5 59a60cdc8808a819079d812201932f0a metadata.xml 262
+MD5 1d0744431cb2efc1a65dd1e56b11d41c files/digest-detox-1.1.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCKirhLLFUmVNQ7rkRAjYIAJ9uUNlriEdlKU7nPDXzNyeg+2xYvACg0Yjq
+AfXXsh5cC8TTZ+ecukBhUzI=
+=kQpr
+-----END PGP SIGNATURE-----
