@@ -1,11 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d0faff01cd587001fab9990efd3ae3c3 gnome-cups-manager-0.30.ebuild 702
+MD5 28ee7d76a88a5a81e63e2fd944865555 gnome-cups-manager-0.30.ebuild 822
 MD5 112f3c4c3da156b141c8f9b4198c0264 gnome-cups-manager-0.17.ebuild 869
-MD5 c3075afdbf8d1e9c58425cac3885b3aa ChangeLog 4967
+MD5 d337ab6e75bf342d97907256f4838296 ChangeLog 5170
 MD5 574309004015c52c39e2f4e8122c18a3 metadata.xml 180
-MD5 abb22158f67eed95f63a1726369bf043 gnome-cups-manager-0.28.ebuild 694
+MD5 a47650f6a69fce659262cbacca088397 gnome-cups-manager-0.28.ebuild 814
+MD5 0c0cb642ffb64f6fb6374990ed754088 files/gnome-cups-manager.desktop 312
 MD5 6dae95b443777de3b98de444d36134ec files/digest-gnome-cups-manager-0.17 76
 MD5 07a029b527bbc920b1174bd5dff0f048 files/digest-gnome-cups-manager-0.28 76
 MD5 998708b9d087d7d8f34f8dcf319fb4b3 files/digest-gnome-cups-manager-0.30 76
@@ -14,7 +15,7 @@ MD5 1772dd481b0fa6e38d67b284f73df4bf files/gnome-cups-manager-0.18-paren.patch 4
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCL4AAevY57Fted3ERAsKBAKC9eaZqBIIAS8esQ1W80fzekRHKlQCdFoGg
-y/227cVLCcRvsCY5ejsGD50=
-=B+N4
+iD8DBQFCL4MhevY57Fted3ERAiG5AJ4kYkvu2J1+L1+VMZdRDjA7NmnmbgCgtvVS
+s0swHvbJ/lqqIHCuzIs7ie0=
+=dpRn
 -----END PGP SIGNATURE-----
