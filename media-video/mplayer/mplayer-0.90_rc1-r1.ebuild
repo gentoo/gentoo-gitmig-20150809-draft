@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc1.ebuild,v 1.1 2002/12/08 22:08:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc1-r1.ebuild,v 1.1 2002/12/13 02:48:50 azarah Exp $
 
 IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts"
 
@@ -27,11 +27,15 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 # 'encode' in USE for MEncoder.
 # If 'dvd' in USE, only DEPEND on libdvdnav, as
 # we use libdvdkit that comes with.
-RDEPEND=">=media-libs/xvid-0.9.0
-	x86? ( >=media-libs/win32codecs-0.60 )
+RDEPEND="!x86? ( >=media-libs/xvid-0.9.0 )
+	x86? ( >=media-libs/divx4linux-20020418
+	       >=media-libs/win32codecs-0.60 )
 	dvd? ( media-libs/libdvdnav )
-	gtk? ( =x11-libs/gtk+-1.2*
-	       media-libs/libpng ) 
+	gtk? ( !gtk2 ( =x11-libs/gtk+-1.2*
+	               =dev-libs/glib-1.2* )
+	       media-libs/libpng )
+	gtk2? ( >=x11-libs/gtk+-2.0.6
+	        >=dev-libs/glib-2.0.6 )
 	jpeg? ( media-libs/jpeg )
 	gif? ( media-libs/giflib
 	       media-libs/libungif )
@@ -76,6 +80,8 @@ src_unpack() {
 		cd ${WORKDIR}/default
 		epatch ${FILESDIR}/default-skin.diff
 	fi
+
+	cd ${S}; epatch ${FILESDIR}/${P}-gtk2.patch
 }
 
 src_compile() {
@@ -112,6 +118,9 @@ src_compile() {
 	use gtk \
 		&& myconf="${myconf} --enable-gui --enable-x11 \
 		                     --enable-xv --enable-vm --enable-png"
+
+	( use gtk && use gtk2 ) \
+		&& myconf="${myconf} --enable-gtk2"
 
 	use truetype \
 		&& myconf="${myconf} --enable-freetype" \
