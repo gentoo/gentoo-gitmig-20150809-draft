@@ -12,7 +12,7 @@ HOMEPAGE="http://www.kde.org/"
 DEPEND=">=media-libs/libpng-1.0.9
 	>=media-libs/libmng-1.0.0
 	>=media-libs/jpeg-6b
-	opengl? ( >=media-libs/mesa-3.4 )
+	opengl? ( >=media-libs/mesa-glu-3.4 )
 	nas? ( >=media-sound/nas-1.4.1 )
 	>=x11-base/xfree-4.0.2"
 
