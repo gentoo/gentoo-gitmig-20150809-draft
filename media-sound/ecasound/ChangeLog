@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ecasound
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.21 2004/06/24 23:58:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.22 2004/06/28 08:02:38 eradicator Exp $
+
+  28 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ecasound-2.3.3.ebuild:
+  --with-pic for amd64.  Marking ~amd64.
 
   15 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -ecasound-2.2.3.ebuild, -ecasound-2.3.0.ebuild:
