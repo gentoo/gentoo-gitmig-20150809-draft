@@ -1,0 +1,34 @@
+#
+# inittab	This file describes how the INIT process should set up
+#		the system in a certain run-level.
+#
+# Author:	Miquel van Smoorenburg, <miquels@cistron.nl>
+# Modified by:	Patrick J. Volkerding, <volkerdi@ftp.cdrom.com>
+# Modified by:	Daniel Robbins, <drobbins@agapesystems.com>
+
+#
+# Default runlevel.
+
+id:2:initdefault:
+
+l0:0:wait:/sbin/reboot -nfi
+l6:6:wait:/sbin/halt  -nfip
+
+# System initialization (runs when system boots).
+si:S:sysinit:/etc/rc
+
+# TERMINALS
+1:12345:respawn:/sbin/agetty 38400 tty1 linux
+2:23:respawn:/sbin/agetty 38400 tty2 linux
+
+ca:12345:ctrlaltdel:/sbin/shutdown -t1 -r now
+
+# End of /etc/inittab
+
+
+
+
+
+
+
+

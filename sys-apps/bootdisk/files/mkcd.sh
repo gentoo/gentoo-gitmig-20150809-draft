@@ -6,6 +6,15 @@ then
    exit 1
 fi
 
+export PORTDIR=/usr/portage
+
+if [ ! -d "${PORTDIR}/gentoo-x86/sys-apps/bootdisk" ]
+then
+  echo "Sorry no bootdisk in the cvs tree !"
+  exit 1
+fi
+
+
 dodirs() {
   for i in $@
   do
@@ -21,7 +30,6 @@ doexes() {
   done
 }
 
-
 cd ${ROOT}
 
 echo "Creating basic dirs"
@@ -29,17 +37,39 @@ echo "Creating basic dirs"
 dodirs bin dev initrd lib mnt proc sbin usr 
 
 
+echo "Creating initdisk stuff in initrd first"
 
-echo "Populating /initrd"
+echo "Creating /initrd dirs"
 cd ${ROOT}/initrd
 
-dodirs dev etc root tmp var
+dodirs dev distcd lib etc root tmp var
 
 touch distcd
 
+echo "Creating /inird devices"
+
+cd ${ROOT}/initrd/dev
+for i in console fd0 fd0u1440 hd[abcd] initctl loop0 ram0 scd[01] tty[01]
+do
+  cp -a /dev/$i .
+done
+
 mkdir pts
-mknod dev/tty1 c 4 1 
-mknod dev/tty2 c 4 2
+
+echo "Populating /initrd/etc"
+cd ${ROOT}/initrd/etc
+cp -af ${PORTDIR}/gentoo-x86/sys-apps/bootdisk/files/etc/* .
+find . -type d -name "CVS" -exec rm -r {} \;
+
+echo "Creating linuxrc"
+cd ${ROOT}/initrd
+gcc -s -o linuxrc ${PORTDIR}/gentoo-x86/sys-apps/bootdisk/files/linuxrc.c
+
+cd ${ROOT}/initrd/var
+dodirs log run
+touch log/wtmp
+touch run/utmp
+
 
 
 echo "Creating links to initrd"

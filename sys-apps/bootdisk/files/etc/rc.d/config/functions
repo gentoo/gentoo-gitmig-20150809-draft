@@ -1,0 +1,108 @@
+CM="32;01"
+CE="31;01"
+NORMAL="\033[0m"
+ENOCH_GOOD=$'\e[32m'
+ENOCH_BAD=$'\e[34;01m'
+ENOCH_NORMAL=$'\e[0m'
+ENOCH_HILITE=$'\e[36;01m'
+ENOCH_ENDCOL=$'\e[A\e[73G'
+
+export PATH="/bin:/sbin:/usr/bin:/usr/sbin"
+
+function eecho() {
+	echo "${*}"
+	if [ -n "$BOOTING" ]
+	then
+		echo "${*}" >&2
+	fi
+}
+
+function ebegin() {
+    eecho "${*}..."
+    }
+
+function eerror() {
+    eecho ">>$ENOCH_BAD ${*}$ENOCH_NORMAL"
+    }
+
+function eend() {
+    if [ $1 -eq 0 ]; then
+        eecho "$ENOCH_ENDCOL$ENOCH_NORMAL[$ENOCH_GOOD  ok  $ENOCH_NORMAL]"
+    else
+        if [ $# -ge 2 ]; then
+            shift
+            eerror $*
+            fi
+        eecho "$ENOCH_ENDCOL$ENOCH_NORMAL[$ENOCH_BAD oops $ENOCH_NORMAL]"
+    fi
+    }
+    
+function doservice() {
+    WHOISME=`/usr/bin/whoami`
+    if [ -x "$WHOISME" ]
+    then
+    if [ "${WHOISME}" != "root" ]; then
+        eerror "You must be root to do this."
+        exit 2
+        fi
+    fi
+    if [ $# -ne 1 ]; then
+        doservice usage
+        exit 1          
+        fi
+    for arf in $opts; do
+        eval do_${arf}=1
+    done
+    
+    case $1 in
+        start)
+            if [ ! $do_start ]; then
+                doservice usage
+            else
+                start
+            fi
+            ;;
+        stop)
+            if [ ! $do_stop ]; then
+                doservice usage
+            else
+                stop
+            fi
+            ;;
+        reconfig)
+            if [ ! $do_reconfig ]; then
+                doservice usage
+            else
+                reconfig
+            fi
+            ;;
+       restart)
+            if  ! (( $do_start && $do_stop )); then
+                doservice usage
+            else
+                stop
+                sleep 3
+                start
+            fi
+            ;;
+        *)
+            foof="Usage: ${SERVICE} {"
+            for moof in $opts; do
+                foof="${foof}${moof}|"
+                done
+            if (( $do_start && $do_stop )); then
+                foof="${foof}restart"
+    fi
+            eecho "${foof}" 
+            ;;
+    esac
+    }
+
+function einfo() {
+    eecho "$ENOCH_HILITE$1$ENOCH_NORMAL"
+    }
+
+function einfon() {
+    eecho -n "$ENOCH_HILITE$1$ENOCH_NORMAL"
+    }
+

@@ -1,0 +1,15 @@
+#Text names for runlevels
+
+desc0="gentoolinux"
+desc1="i686-pc-linux-gnu"
+desc2="K"`uname -r`        
+rlboot="  Boot  "
+rlhalt="Shutdown Complete -- Ready to Power Down"
+rl[0]="Shutdown"
+rl[1]=" Single "
+rl[2]=" No Net "
+rl[3]="Standard"
+rl[4]="XWindows"
+rl[5]=" Custom "
+rl[6]=" Reboot "
+
