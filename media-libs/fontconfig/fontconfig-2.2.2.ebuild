@@ -1,16 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.2.ebuild,v 1.1 2004/03/10 23:52:39 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.2.ebuild,v 1.2 2004/03/12 11:16:03 vapier Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A library for configuring and customizing font access."
 HOMEPAGE="http://freedesktop.org/Software/fontconfig"
 #SRC_URI="http://pdx.freedesktop.org/software/fontconfig/releases/${P}.tar.gz"
 SRC_URI="http://freedesktop.org/~fontconfig/release/${P}.tar.gz"
 
-IUSE=""
 LICENSE="fontconfig"
 SLOT="1.0"
 
@@ -19,14 +17,12 @@ SLOT="1.0"
 # so don't mark this ebuild stable on archs where kde 3.1.2 is only ~.
 # this of course doesn't apply to archs where kde has no keywords at all :-)
 # -- danarmak@gentoo.org
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~mips ~hppa ~ia64 ~amd64 ~ppc64"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~mips hppa ~ia64 ~amd64 ~ppc64"
 
 DEPEND=">=sys-apps/sed-4
 	>=media-libs/freetype-2.1.4
 	>=dev-libs/expat-1.95.3
 	>=sys-apps/ed-0.2"
-
-MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
@@ -48,7 +44,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	[ "${ARCH}" == "alpha" -a "${CC}" == "ccc" ] && \
 		die "Dont compile fontconfig with ccc, it doesnt work very well"
 
@@ -62,7 +57,7 @@ src_compile() {
 	# this triggers sandbox, we do this ourselves
 	sed -i "s:fc-cache/fc-cache -f -v:sleep 0:" Makefile
 
-	emake || die
+	emake -j1 || die
 
 	# remove Luxi TTF fonts from the list, the Type1 are much better
 	sed -i "s:<dir>/usr/X11R6/lib/X11/fonts/TTF</dir>::" fonts.conf
