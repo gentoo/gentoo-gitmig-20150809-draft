@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7195200b3f2077c24a9a02b6ca7da48f bsh-2.0_beta1-r1.ebuild 1161
+MD5 d0b6d00648a1e7c9e0c5580fab55195f ChangeLog 2129
 MD5 3743b22de88f3491d1e8b8a4da49e146 bsh-1.3.0.ebuild 858
-MD5 d95a3fcf0d0c7602b4960618f8870b71 ChangeLog 2032
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 5ec33004601026e3f5206a441853b1ed files/digest-bsh-1.3.0 58
+MD5 c2a669adc5bc23337f20459b0a555a0f bsh-2.0_beta1-r1.ebuild 1169
 MD5 ccab3d00e6269efa375e2896eaa2f96f files/bsh.Console 818
 MD5 fc2cfd9fd2724563f8979d2e8b4cbc20 files/bsh.Interpreter 833
+MD5 5ec33004601026e3f5206a441853b1ed files/digest-bsh-1.3.0 58
 MD5 0321e1ba45e1f4f328eae0eecf037105 files/digest-bsh-2.0_beta1-r1 120
 MD5 32448cba89ef5394ffab7a7cdb399ded files/beanshell.desktop 266
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBe+54/rLF9B432nYRAvmDAJ9NB4t4zw1bNNH1RP3xWjuzSaCGfwCeM0IN
-8d9m+acnd/zLhPMnpmgDujQ=
-=Vw2+
------END PGP SIGNATURE-----
