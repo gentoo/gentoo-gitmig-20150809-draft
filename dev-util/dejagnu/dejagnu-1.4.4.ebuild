@@ -1,17 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/dejagnu-1.4.4.ebuild,v 1.2 2004/03/01 11:27:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/dejagnu-1.4.4.ebuild,v 1.3 2004/04/19 06:47:35 vapier Exp $
 
-IUSE="doc"
-
-S="${WORKDIR}/${P}"
-DESCRIPTION="DejaGnu is a framework for testing other programs."
-SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
+DESCRIPTION="DejaGnu is a framework for testing other programs"
 HOMEPAGE="http://www.gnu.org/software/dejagnu/"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~mips ~ppc"
+IUSE="doc"
 
 DEPEND="virtual/glibc
 	dev-lang/tcl
@@ -34,7 +32,6 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		install || die
 
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 	use doc && dohtml -r doc/html/
 }
-
