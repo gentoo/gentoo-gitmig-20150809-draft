@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/mkdoxy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/mkdoxy/ChangeLog,v 1.7 2005/01/01 13:17:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/mkdoxy/ChangeLog,v 1.8 2005/01/02 21:00:45 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   25 Jul 2004; Josh Glover <jmglov@gentoo.org> metadata.xml:
   Taking over maintainership of this ebuild
@@ -8,7 +11,7 @@
   05 Jun 2004; Steve Arnold <nerdboy@gentoo.org> mkdoxy-1.0.0.ebuild:
   marked stable on x86 and hppa, fixed metadata
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> mkdoxy-1.0.0.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mkdoxy-1.0.0.ebuild:
   Stable on alpha.
 
   25 Mar 2004; Martin Holzer <mholzer@gentoo.org> mkdoxy-1.0.0.ebuild:
