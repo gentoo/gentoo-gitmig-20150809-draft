@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-1.2.3.ebuild,v 1.1 2002/09/05 06:39:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-1.2.3.ebuild,v 1.2 2002/09/05 07:08:22 azarah Exp $
 
 MY_PN="termcap-compat"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -12,7 +12,8 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	sys-libs/ncurses"
 
 src_unpack() {
 	unpack ${A}
@@ -21,15 +22,19 @@ src_unpack() {
 }
 
 src_compile() {
-	emake prefix="/usr" \
-		CFLAGS="${CFLAGS}" || die
+	emake prefix="/" \
+		CFLAGS="${CFLAGS} -I." || die
 }
 
 src_install () {
-	dodir /usr/{include,lib}
-	make prefix="${D}/usr" install || die
+	dodir /lib /include /usr/lib
+	make prefix="${D}" install || die
 
-	dosym libtermcap.so.2.0.8 /usr/lib/libtermcap.so
+	# Conflicts with ncurses.
+	rm -rf ${D}/include
+
+	cd ${D}/lib; mv libtermcap.a ../usr/lib
+	dosym libtermcap.so.2.0.8 /lib/libtermcap.so
 
 	insinto /etc
 	newins ${S}/termtypes.tc termcap
