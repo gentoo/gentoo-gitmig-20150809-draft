@@ -1,0 +1,4 @@
+MD5 61e2d4909a91d3d67e5601fcabca9c9b ChangeLog 836
+MD5 b45728607e6e26dc77a34b436d074e87 pam_krb5-1.0.ebuild 752
+MD5 d4efdcb4a1be749ff6dde010e9dd9dc4 files/digest-pam_krb5-1.0 63
+MD5 9d71d4c20b07cdd282e489cb8cd045d8 files/pam_krb5-1.0-gentoo.diff 695
