@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.2-r1.ebuild,v 1.1 2002/08/06 06:15:00 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.2-r1.ebuild,v 1.2 2002/08/26 21:06:33 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X-Chat is a graphical IRC client for UNIX operating systems."
@@ -39,13 +39,15 @@ src_compile() {
 
 	local myopts myflags
 
-	use gnome \
-		&& myopts="${myopts} --enable-gnome --enable-panel" \
-		|| myopts="${myopts} --enable-gtkfe --disable-gnome --disable-zvt"
-	
-	use gnome \
-		&& CFLAGS="${CFLAGS} -I/usr/include/orbit-2.0" \
-		|| myopts="${myopts} --disable-gnome"
+	if [ ! `use perl` ] ; then
+		use gnome \
+			&& myopts="${myopts} --enable-gnome --enable-panel" \
+			|| myopts="${myopts} --enable-gtkfe --disable-gnome --disable-zvt"
+		
+		use gnome \
+			&& CFLAGS="${CFLAGS} -I/usr/include/orbit-2.0" \
+			|| myopts="${myopts} --disable-gnome"
+	fi
 
 	use gtk \
 		|| myopts="${myopts} --disable-gtkfe"
