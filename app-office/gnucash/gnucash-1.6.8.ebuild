@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.8.ebuild,v 1.5 2003/02/13 09:16:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.8.ebuild,v 1.6 2003/03/04 00:38:07 foser Exp $
 
 inherit flag-o-matic
 
@@ -33,6 +33,9 @@ DEPEND="${RDEPEND}
 
 # won't configure with this
 filter-flags -fomit-frame-pointer
+# gnucash seems to have problems with opts (#14808)
+strip-flags
+filter-flag "-O3" "-O2"
 
 src_unpack() {
 	unpack ${A}

@@ -1,8 +1,11 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.10 2003/02/12 05:12:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.11 2003/03/04 00:38:07 foser Exp $
 
 *gnucash-1.6.8 (05 Sep 2002)
+
+  03 Mar 2003; foser <foser@gentoo.org> gnucash-1.6.8.ebuild :
+  Added some more flag-o-matic stuff (#14808)
 
   06 Nov 2002: L. Boshell <leonardop@gentoo.org> : Remove the
   `--enable-profile' argument for ./configure. Fixes bug #6769.
