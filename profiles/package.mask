@@ -200,10 +200,6 @@ sys-apps/utempter
 # Unmasking this for now - should be masked shortly
 =x11-wm/sawfish-2.0
 
-# <cretin@gentoo.org> (15 Nov 2002)
-# This will kill everyting without glibc 2.3.1
-sys-devel/prelink
-
 # <verwilst@gentoo.org> (13 Nov 2002)
 # B0rks jabber-server, using 1.4.0 instead
 ~dev-libs/pth-1.4.1
