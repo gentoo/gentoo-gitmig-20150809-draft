@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.24 2002/10/20 22:51:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.25 2002/11/02 20:11:47 foser Exp $
+
+*xchat-1.9.3-r3.ebuild (02 Nov 2002)
+
+  02 Nov 2002; foser <foser@gentoo.org> xchat-1.9.3-r3.ebuild :
+  Fixed launcher
+  Added tint transparancy patch
+  Added option for disabling xft (bug #9973)
 
 *xchat-1.9.3-r2.ebuild (20 Oct 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.3-r2.ebuild,v 1.2 2002/11/02 20:11:47 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.3-r3.ebuild,v 1.1 2002/11/02 20:11:47 foser Exp $
 
 IUSE="perl gnome ssl gtk python mmx ipv6 nls" 
 
@@ -77,7 +77,9 @@ src_compile() {
 	
 	use ipv6 \
 		&& myopts="${myopts} --enable-ipv6"
-	
+
+
+	[ -n "${DISABLE_XFT}" ] && myopts="${myopts} --disable-xft"
 	
 	econf \
 		--program-suffix=-2 \
@@ -87,15 +89,28 @@ src_compile() {
 }
 
 src_install() {
+	# some magic to create a menu entry for xchat 2	
+	sed -e "s:Exec=xchat:Exec=xchat-2:" -e "s:Name=X-Chat:Name=X-Chat 2:" xchat.desktop > xchat-2.desktop
 
-	einstall utildir=${D}${KDEDIR}/share/applnk/Internet install || die "Install failed"
+	use kde && insinto ${KDEDIR}/share/applnk/Internet \
+		|| insinto /usr/share/gnome/apps/Internet 
+	doins xchat-2.desktop	
 
-	use gnome && 
-	(	insinto /usr/share/gnome/apps/Internet
-		doins xchat.desktop  )
+	einstall install || die "Install failed"
+
+	# we prefer our own launcher
+	rm ${D}/etc/X11/applnk/Internet/xchat.desktop
+	rmdir -p ${D}/etc/X11/applnk/Internet
+
 	use python &&
 	(	dosym /usr/lib/xchat/plugins/python.so-2 /usr/lib/xchat/plugins/python.so )
 	use perl &&
 	(	dosym /usr/lib/xchat/plugins/perl.so-2 /usr/lib/xchat/plugins/perl.so  )
+
 	dodoc AUTHORS COPYING ChangeLog README
+}
+
+pkg_postinst() {
+	einfo "If you want X-Chat to correctly display Hebrew (bidi) do "
+	einfo "'export DISABLE_XFT=1' and re-emerge xchat"
 }
