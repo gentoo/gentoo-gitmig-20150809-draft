@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/lsat
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/ChangeLog,v 1.4 2003/11/02 00:35:34 matsuu Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/ChangeLog,v 1.5 2004/01/11 01:10:28 matsuu Exp $
+
+*lsat-0.9.0 (11 Jan 2004)
+
+  11 Jan 2004; MATSUU Takuto <matsuu@gentoo.org> lsat-0.9.0.ebuild:
+  Version bumped. Added ~amd64 to KEYWORDS.
 
 *lsat-0.8.8 (02 Nov 2003)
 

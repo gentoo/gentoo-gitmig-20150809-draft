@@ -2,5 +2,7 @@ MD5 b6bb1e038290b8c2fefa82bd7ef646ca ChangeLog 765
 MD5 281d68f9a2d64dc220d451ca194b4bd6 lsat-0.8.1.ebuild 691
 MD5 24ab4b927637b8cf4881de695d1d355b metadata.xml 505
 MD5 ed575d0cdd43ba63b47a2abeabd8dbaf lsat-0.8.8.ebuild 732
+MD5 a9078e6737b0355e2386420eb6d71d2e lsat-0.9.0.ebuild 739
 MD5 dddbb8931b8f0694e9fc18660ee32957 files/digest-lsat-0.8.1 58
 MD5 1ece52d641717216919734cc2d14ae21 files/digest-lsat-0.8.8 58
+MD5 fd6ed97b538ace9614ec49bb7862ee3e files/digest-lsat-0.9.0 58
