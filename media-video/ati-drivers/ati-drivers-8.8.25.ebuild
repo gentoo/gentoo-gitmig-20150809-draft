@@ -1,21 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25.ebuild,v 1.2 2005/01/18 09:36:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25.ebuild,v 1.3 2005/01/18 22:23:15 lu_zero Exp $
 
-IUSE=""
+IUSE="multilib" #doc
 
-inherit eutils rpm
+inherit eutils rpm multilib linux-info linux-mod
 
 DESCRIPTION="Ati precompiled drivers for r350, r300, r250 and r200 chipsets"
 HOMEPAGE="http://www.ati.com"
-SRC_URI="http://www2.ati.com/drivers/linux/fglrx_6_8_0-${PV}-1.i386.rpm"
-SLOT="${KV}"
+SRC_URI="x86? ( http://www2.ati.com/drivers/linux/fglrx_6_8_0-${PV}-1.i386.rpm )
+		 amd64?
+		 ( http://www2.ati.com/drivers/linux/fglrx64_6_8_0-${PV}-1.x86_64.rpm )"
+
 LICENSE="ATI"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~x86 ~amd64"
 
 DEPEND=">=virtual/linux-sources-2.4
-	app-arch/rpm2targz
-	>=x11-base/xorg-x11-6.8.0"
+		>=x11-base/xorg-x11-6.8.0"
 
 RDEPEND=">=x11-base/xorg-x11-6.8.0"
 PROVIDE="virtual/opengl"
@@ -24,9 +25,8 @@ ATIBIN="${D}/opt/ati/bin"
 RESTRICT="nostrip"
 
 pkg_setup(){
-	check_KV || \
-		die "Please ensure /usr/src/linux points to your kernel symlink!"
-
+	#check kernel and sets up KV_OBJ
+	linux-mod_pkg_setup
 	# Set up X11 implementation
 	X11_IMPLEM_P="$(best_version virtual/x11)"
 	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
@@ -44,46 +44,42 @@ src_unpack() {
 
 	#epatch ${FILESDIR}/fglrx-3.9.0-allocation.patch
 
-	if [ "`echo ${KV}|grep 2.6`" ]
+	if kernel_is 2 6
 	then
 		#epatch ${FILESDIR}/fglrx-2.6.10-pci_get_class.patch
 		epatch ${FILESDIR}/8.08-kernel-2.6.10.patch
 	fi
+
+	rm -rf ${WORKDIR}/usr/X11R6/bin/fgl_glxgears
 }
 
 src_compile() {
-	local GENTOO_ARCH=
-
 	einfo "Building the DRM module..."
 	cd ${WORKDIR}/lib/modules/fglrx/build_mod
-	if [ "${KV}" != "${KV/2\.6}" ]
+	if kernel_is 2 6
 	then
-		GENTOO_ARCH=${ARCH}
-		unset ARCH
-	    addwrite "/usr/src/${FK}"
+		set_arch_to_kernel
+		addwrite "/usr/src/${FK}"
 	    cp 2.6.x/Makefile .
 		export _POSIX2_VERSION="199209"
-		if [ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -gt 5 -a ${KV_PATCH} -gt 5 ] ;
+		if use_m ;
 		then
-			make -C /usr/src/linux M="`pwd`" modules || \
+			make -C ${KV_DIR} M="`pwd`" modules || \
 				ewarn "DRM module not built"
 		else
-			make -C /usr/src/linux SUBDIRS="`pwd`" modules || \
+			make -C ${KV_DIR} SUBDIRS="`pwd`" modules || \
 				ewarn "DRM module not built"
 		fi
-	    ARCH=${GENTOO_ARCH}
+	    set_arch_to_portage
 	else
 		export _POSIX2_VERSION="199209"
 		# That is the dirty way to avoid the id -u check
 		sed -e 's:`id -u`:0:' \
-			-e 's:`uname -r`:${KV}:' \
+			-e 's:`uname -r`:${KV_FULL}:' \
 			-i make.sh
 		chmod +x make.sh
 		./make.sh || die "DRM module not built"
 	fi
-
-	# Removing unused stuff
-	rm -rf ${WORKDIR}/usr/X11R6/bin/{*.bz2,fgl_glxgears}
 }
 
 pkg_preinst() {
@@ -101,49 +97,74 @@ src_install() {
 	cd ${WORKDIR}
 
 	# DRM module
-	insinto /lib/modules/${KV}/video
-	if [ "${KV}" != "${KV/2\.6}" ]
-	then
-		doins ${WORKDIR}/lib/modules/fglrx/build_mod/fglrx.ko
-	else
-		doins ${WORKDIR}/lib/modules/fglrx/build_mod/fglrx.o
-	fi
+	insinto /lib/modules/${KV_FULL}/video
+	# set_kvobj
+	doins ${WORKDIR}/lib/modules/fglrx/build_mod/fglrx.${KV_OBJ}
+
+	local native_dir
+	use x86 && native_dir="lib"
+	use amd64 && native_dir="lib64"
 
 	# OpenGL libs
-	exeinto ${ATI_ROOT}/lib
-	doexe ${WORKDIR}/usr/X11R6/lib/libGL.so.1.2
-	dosym libGL.so.1.2 ${ATI_ROOT}/lib/libGL.so.1
-	dosym libGL.so.1.2 ${ATI_ROOT}/lib/libGL.so
-	dosym libGL.so.1.2 ${ATI_ROOT}/lib/libMesaGL.so
-	# This is the same as that of the X11 implementation ...
-	dosym ../../${X11_IMPLEM}/lib/libGL.la ${ATI_ROOT}/lib/libGL.la
+	ATI_LIBS="${ATI_ROOT}/lib"
+	exeinto ${ATI_LIBS}
+	doexe ${WORKDIR}/usr/X11R6/${native_dir}/libGL.so.1.2
+	dosym libGL.so.1.2 ${ATI_LIBS}/libGL.so.1
+	dosym libGL.so.1.2 ${ATI_LIBS}/libGL.so
+	dosym libGL.so.1.2 ${ATI_LIBS}/libMesaGL.so
 
 	# X and DRI driver
-	exeinto /usr/X11R6/lib/modules/drivers
-	doexe ${WORKDIR}/usr/X11R6/lib/modules/drivers/fglrx_drv.o
-	exeinto /usr/X11R6/lib/modules/dri
-	doexe ${WORKDIR}/usr/X11R6/lib/modules/dri/fglrx_dri.so
-	rm -f ${WORKDIR}/usr/X11R6/lib/modules/drivers/fglrx_drv.o \
-		${WORKDIR}/usr/X11R6/lib/modules/dri/fglrx_dri.so
+	if has_version ">=x11-base/xorg-x11-6.8.0-r4"
+	then
+		local X11_DIR="/usr/"
+	else
+		local X11_DIR="/usr/X11R6/"
+	fi
 
-	# Same as in the X11 implementation
-	exeinto ${ATI_ROOT}/
-	dosym ../${X11_IMPLEM}/include ${ATI_ROOT}/include
+	local X11_LIB_DIR="${X11_DIR}$(get_libdir)"
+
+
+	exeinto ${X11_LIB_DIR}/modules/drivers
+	doexe ${WORKDIR}/usr/X11R6/${native_dir}/modules/drivers/fglrx_drv.o
+	exeinto ${X11_LIB_DIR}/modules/dri
+	doexe ${WORKDIR}/usr/X11R6/${native_dir}/modules/dri/fglrx_dri.so
+	exeinto ${X11_LIB_DIR}/modules/linux
+	doexe ${WORKDIR}/usr/X11R6/${native_dir}/modules/linux/libfglrxdrm.a
+	# same as the xorg implementation
 	dosym ../${X11_IMPLEM}/extensions ${ATI_ROOT}/extensions
-	rm -f ${WORKDIR}/usr/X11R6/lib/libGL.so.1.2
-
-	# Not necessary dodoc ${WORKDIR}/usr/share/doc/fglrx/LICENSE.
+	dosym ../../${X11_IMPLEM}/lib/libGL.la ${ATI_ROOT}/lib/libGL.la
 
 	#apps
 	insinto /etc/env.d
 	doins ${FILESDIR}/09ati
 	exeinto /opt/ati/bin
 	doexe usr/X11R6/bin/*
-	rm usr/X11R6/bin/*
 
-	# Removing unused stuff
-	rm -rf ${WORKDIR}/usr/{src,share}
-	cp -R ${WORKDIR}/usr ${D}/
+	#ati custom stuff
+	cp -a ${WORKDIR}/usr/include ${D}/usr/include
+	insinto /usr/X11R6/include/X11/extensions
+	doins ${WORKDIR}/${X11_DIR}/include/X11/extensions/fglrx_gamma.h
+	cp -a ${WORKDIR}/usr/X11R6/${native_dir}/libfglrx_gamma.* \
+			${D}/${X11_LIB_DIR}
+
+	if use multilib ; then
+	einfo "Installing multilib support"
+	X11_LIB_DIR="${X11_DIR}$(get_multilibdir)"
+
+	insinto ${ATI_ROOT}/lib32
+	doexe ${WORKDIR}/usr/X11R6/lib/libGL.so.1.2
+	dosym libGL.so.1.2 ${ATI_ROOT}/lib32/libGL.so.1
+	dosym libGL.so.1.2 ${ATI_ROOT}/lib32/libGL.so
+	dosym libGL.so.1.2 ${ATI_ROOT}/lib32/libMesaGL.so
+
+	exeinto ${X11_LIB_DIR}/modules/dri
+	doexe ${WORKDIR}/usr/X11R6/lib/modules/dri/fglrx_dri.so
+	fi
+
+	#docs
+#	if [ "`use doc`" ]
+#	then
+#	fi
 }
 
 pkg_postinst() {
