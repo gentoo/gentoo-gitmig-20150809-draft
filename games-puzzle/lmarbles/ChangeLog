@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/lmarbles
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lmarbles/ChangeLog,v 1.1 2004/06/09 02:11:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lmarbles/ChangeLog,v 1.2 2004/06/09 02:15:15 mr_bones_ Exp $
+
+  08 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> lmarbles-1.0.6.ebuild:
+  fix HOMEPAGE
 
 *lmarbles-1.0.6 (08 Jun 2004)
 
