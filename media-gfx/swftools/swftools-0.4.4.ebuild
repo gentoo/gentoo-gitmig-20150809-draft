@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.4.4.ebuild,v 1.1 2003/11/18 17:15:04 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.4.4.ebuild,v 1.2 2003/11/18 17:30:29 rizzo Exp $
 
 DESCRIPTION="SWF Tools is a collection of SWF manipulation and generation utilities"
 HOMEPAGE="http://www.quiss.org/swftools/"
@@ -11,8 +11,11 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=">=media-libs/t1lib-1.3.1
-		media-libs/jpeg"
-#RDEPEND=""
+		media-libs/jpeg
+		media-libs/libpng"
+RDEPEND="app-text/xpdf
+		 app-text/ttf2pt1
+		 media-sound/lame"
 
 src_compile() {
 	econf || die "Configure failed."

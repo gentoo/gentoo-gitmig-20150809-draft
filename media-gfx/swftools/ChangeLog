@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/swftools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.1 2003/11/18 17:15:04 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.2 2003/11/18 17:30:25 rizzo Exp $
+
+  18 Nov 2003; Don Seiler <rizzo@gentoo.org>; swftools-0.4.4.ebuild:
+  Added missing RDEPEND apps
 
 *swftools-0.4.4 (18 Nov 2003)
 
