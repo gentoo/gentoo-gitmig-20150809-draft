@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/muse
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.4 2004/03/03 11:58:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.5 2004/03/03 18:50:03 eradicator Exp $
+
+  03 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> muse-0.8.1-r1.ebuild:
+  Stable on x86
 
 *muse-0.8.1-r1 (03 Mar 2004)
 
