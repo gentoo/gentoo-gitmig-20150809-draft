@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.9 2005/01/08 00:19:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.10 2005/01/10 18:43:54 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -520,6 +520,12 @@ pkg_postinst() {
 	einfo "Additionally, if you wish to run qmail right now, you should "
 	einfo "run this before anything else:"
 	einfo "source /etc/profile"
+	echo
+	einfo "If you are looking for documentation, check those links:"
+	einfo "http://www.gentoo.org/doc/en/qmail-howto.xml"
+	einfo "  -- qmail/vpopmail Virtual Mail Hosting System Guide"
+	einfo "http://www.lifewithqmail.com/"
+	einfo "  -- Life with qmail"
 }
 
 pkg_preinst() {
