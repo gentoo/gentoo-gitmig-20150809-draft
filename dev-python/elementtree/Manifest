@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fc28fc1bb203777df21bc05407dddafa elementtree-1.2_beta3.ebuild 771
-MD5 9f310da8421c4a3c3441532910f50175 elementtree-1.2.1.ebuild 718
+MD5 f1bb898785d68a9574bdf0affff27d4c ChangeLog 1225
 MD5 7577f739161c924fe13cf2d99dba8984 elementtree-1.2.ebuild 644
-MD5 ab3cf463dd2316f50a6027144868e6bb ChangeLog 1091
+MD5 fc28fc1bb203777df21bc05407dddafa elementtree-1.2_beta3.ebuild 771
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 87a325ce2f886b6a3cac526d2ab7d5e9 files/digest-elementtree-1.2.1 74
-MD5 3e81ceee64db0c68cde60663ba5b1b4c files/digest-elementtree-1.2_beta3 74
+MD5 9f310da8421c4a3c3441532910f50175 elementtree-1.2.1.ebuild 718
+MD5 528f219cb88a8e851171b8cfc11976af elementtree-1.2.4.ebuild 719
 MD5 2773be6c3b2bb091bb24acd52338513e files/digest-elementtree-1.2 72
+MD5 3e81ceee64db0c68cde60663ba5b1b4c files/digest-elementtree-1.2_beta3 74
+MD5 87a325ce2f886b6a3cac526d2ab7d5e9 files/digest-elementtree-1.2.1 74
+MD5 2eeaafbc22e2eac1b22a9bed785ca2ce files/digest-elementtree-1.2.4 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB2wEmZ/iYVBmujdURAqdHAJ9pjmZ+2WEcImgIS6vfK9Bo8WMmcQCfdxv5
-3eEWTVdaVG1Gk2KEqgtKUUc=
-=kusE
+iD8DBQFB9JPoz2gxt1z4IGYRAhhAAJ4iZHp/bplbzgmz8x9HgHbMUPgbpgCaA7og
+rg9pXDdB2JUJC+qGu2hUsvw=
+=hy44
 -----END PGP SIGNATURE-----
