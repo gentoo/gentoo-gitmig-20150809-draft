@@ -1,7 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-jargon/dictd-jargon-4.2.3-r1.ebuild,v 1.5 2003/09/07 23:47:37 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-jargon/dictd-jargon-4.2.3-r1.ebuild,v 1.6 2004/02/09 07:18:59 absinthe Exp $
 
 MY_P=${PN/dictd-/}_${PV}
 S=${WORKDIR}
@@ -13,7 +13,7 @@ DEPEND=">=app-text/dictd-1.5.5"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="x86 sparc ppc amd64 "
 
 src_install () {
 	dodoc README

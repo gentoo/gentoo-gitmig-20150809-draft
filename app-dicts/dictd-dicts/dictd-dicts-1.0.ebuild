@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-dicts/dictd-dicts-1.0.ebuild,v 1.6 2003/07/16 15:05:47 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-dicts/dictd-dicts-1.0.ebuild,v 1.7 2004/02/09 07:22:13 absinthe Exp $
 
 DESCRIPTION="A package to simplify installation of all dictd dictionaries"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc amd64 "
 
 DEPEND=""
 

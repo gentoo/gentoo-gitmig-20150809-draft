@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/dictd-wn
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.5 2003/02/12 03:33:16 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.6 2004/02/09 07:21:29 absinthe Exp $
+
+  09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> dictd-wn-1.5-r1.ebuild:
+  added amd64 keyword.
 
   19 Jan 2003; Olivier Reisch <doctomoe@gentoo.org> :
   Added ~ppc keyword
