@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.3.ebuild,v 1.7 2001/09/03 10:30:34 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.3-r6.ebuild,v 1.1 2001/09/03 10:30:34 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Replacement for inetd."
@@ -25,8 +25,8 @@ src_compile() {
 src_install() {
 	make prefix=${D}/usr MANDIR=${D}/usr/share/man install
 	dodoc AUDIT CHANGELOG README COPYRIGHT xinetd/sample.conf
-	exeinto /etc/rc.d/init.d
-	newexe ${FILESDIR}/xinetd.rc5 xinetd
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/xinetd.rc6 xinetd
 	exeinto /usr/sbin
 	doexe ${FILESDIR}/xconv.pl
 }

@@ -8,15 +8,12 @@ autoconfig() {
 if [ ! -e /etc/xinetd.conf ] ; then
 	if [ ! -e /etc/inetd.conf ] ; then
 		eerror "You need an /etc/xinetd.conf file to run xinetd"
-		eerror "There are samples in docs/xinetd, docs/netkit-base"
+		eerror "There is a sample one in /usr/share/docs/xinetd"
 		return 1
 	else
-		einfo "Auto-creating xinetd.conf from your inetd.conf.."
+		einfo "Auto-creating xinetd.conf from your inetd.conf"
 		/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
-		return 0
 	fi
-else
-	return 0
 fi
 }
 
@@ -30,46 +27,11 @@ start() {
 stop() {
 	ebegin "Stopping xinetd"
 	start-stop-daemon --stop --quiet -u root -n xinetd 1>&2
-
-	#
-	# This will gracefully handle the case where the dependency
-	# engine thinks xinetd is running, when in fact it isn't.
-	# Under those circumstances the above command will fail.
-	# This will jam us into a situation where "xinetd stop"
-	# will never work and "xinetd start" will always think
-	# xinetd is running. We _want_ to protect integrity of
-	# the dependency init system.
-	#
-	# This phenomenon can happen a couple of ways:
-	# 1. The /etc/xinetd.conf exists, but it doesnt have any
-	#    service xxxx { ... } sections configured.
-	#    This is _exactly_ what will happen if for some reason
-	#    /etc/inetd.conf is either void of configured services
-	#    (everything commented) or it is 0-bytes long, and xconv.pl
-	#    is run against it (see autoconfig() above)
-	# 2. if xinetd is terminated behind the dependency engines
-	#    back. ie, killall xinetd.
-	#
-	# It might be better to just patch xinetd so that it exits
-	# with a specific error code when starting with an "only
-	# defaults section" config file. Then we can check that and
-	# delete the mess in here. It might already do this, but I
-	# havn't actually checked ;) ~woodchip
-	#
+	# long explanation removed; basically: keep things sane
 	if [ $? -ne 0 ] ; then
 		if [ -e /dev/shm/.init.d/started/xinetd ] ; then
-		# this will basically reset the depencency engine
-		# into a working state.  i am doing this in order
-		# to maintain some sanity. if you are finding the
-		# need to change this initscript, i would like to
-		# know about it, and will incorporate your fixes.
 			eend 0
-		else
-		# im not sure how we can arrive here, so keep an
-		# eye out and report if you discover such a case
-			eend 1
 		fi
-	else
-		eend 0
 	fi
+	eend $?
 }

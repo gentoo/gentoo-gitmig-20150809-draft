@@ -8,20 +8,20 @@ EXE="/usr/sbin/xinetd"
 opts="start stop"
 
 autoconfig() {
-	if [ ! -e /etc/xinetd.conf ] ; then
-		if [ ! -e /etc/inetd.conf ] ; then
-			eerror "You need an /etc/xinetd.conf file to run xinetd"
-			eerror "There are samples in docs/xinetd, docs/netkit-base"
-			exit 1
-		else
-			einfo "Auto-creating xinetd.conf from your inetd.conf.."
-			/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
-		fi
+if [ ! -e /etc/xinetd.conf ] ; then
+	if [ ! -e /etc/inetd.conf ] ; then
+		eerror "You need an /etc/xinetd.conf file to run xinetd"
+		eerror "There is a sample one in /usr/share/docs/xinetd"
+		return 1
+	else
+		einfo "Auto-creating xinetd.conf from your inetd.conf"
+		/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
 	fi
+fi
 }
 
 start() {
-	autoconfig
+	autoconfig || return 1
 	ebegin "Starting ${SERVICE}"
 	start-stop-daemon --start --quiet --exec $EXE 1>&2
 	eend $? 
