@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3306 2004/11/08 20:29:03 agriffis Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3307 2004/11/09 12:38:11 genone Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -716,11 +716,6 @@ media-plugins/avi-xmms
 # <lu_zero@gentoo.org> (16 Mar 2003)
 # to be tested, seems unstable
 net-dialup/hcfusbmodem
-
-# <azarah@gentoo.org> (09 Mar 2003)
-# Beta versions of m4 we have been using up to date borks
-# autoconf-2.13, bug #15573
->=sys-devel/m4-1.4a
 
 # <liquidx@gentoo.org> (13 Mar 2003)
 # evolution beta and friends. may cause breakage!
