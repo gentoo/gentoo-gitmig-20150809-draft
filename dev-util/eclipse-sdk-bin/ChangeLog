@@ -1,0 +1,60 @@
+# ChangeLog for dev-util/eclipse-SDK
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk-bin/ChangeLog,v 1.1 2003/06/30 19:36:55 karltk Exp $
+
+*eclipse-sdk-bin-2.1 (30 Jun 2003)
+
+  30 Jun 2003; <karltk@gentoo.org> eclipse-sdk-bin-2.1.ebuild,
+  files/eclipse.desktop:
+  Renamed from eclipse-SDK, as this package does not build all of Eclipse
+  from sources (it only builds SWT on PPC, as the rest if provided
+  precompiled in the upstream drop).
+
+*eclipse-SDK-2.1 (12 Apr 2003)
+
+  27 Apr 2003; <tberman@gentoo.org> eclipse-SDK-2.1.ebuild,
+  files/eclipse.desktop:
+  Added an eclipse.desktop file to show eclipse in gnome applications menu.
+  Closed bug #17141
+
+  23 Apr 2003; foser <foser@gentoo.org> eclipse-SDK-2.1.ebuild :
+  Fix gtk dep to be 2.2.1-r1+ (#19084)
+
+  12 Apr 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> eclipse-SDK-2.1.ebuild:
+  new version. -pre and _rc versions removed
+
+*eclipse-SDK-20030307_rc2 (17 Mar 2003)
+
+  17 Mar 2003; Mark Guertin <gerk@gentoo.org> eclipse-SDK-20030307_rc2.ebuild:
+  Revision bump and initial PPC support
+
+*eclipse-SDK-20030207 (07 Feb 2003)
+
+  07 Feb 2003; eclipse-SDK-20030203_pre4.ebuild,
+  files/digest-eclipse-SDK-20030203_pre4, ChangeLog: 
+
+  Patch contributed by Moritz Angermann <moritz.angermann@gmx.net> of bug
+  #15172 fame. Resolves bugs 15172, 13894.
+
+*eclipse-SDK-20021016 (05 Jan 2003)
+  05 Jan 2003; Rodney Rees <manson@gentoo.org>l;
+  added ~sparc
+
+*eclipse-SDK-20021016 (13 Dec 2002)
+
+  13 Dec 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog :
+
+  Added -ppc to keywords.
+
+*eclipse-SDK-20021016 (23 Oct 2002)
+
+  23 Oct 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog:
+  
+  Version bump. Again thanks to Lim Swee Tat <st_lim@stlim.net>..
+
+*eclipse-SDK-20020920 (21 Oct 2002)
+
+  21 Oct 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog:
+
+  Initial version in portage now.
+  Thanks to Lim Swee Tat <st_lim@stlim.net>.. 
