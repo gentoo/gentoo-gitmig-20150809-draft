@@ -1,0 +1,21 @@
+diff -urN src/modules/rlm_x99_token/x99_rlm.c src.mod/modules/rlm_x99_token/x99_rlm.c
+--- src/modules/rlm_x99_token/x99_rlm.c	2004-02-27 04:04:37.000000000 +0900
++++ src.mod/modules/rlm_x99_token/x99_rlm.c	2004-09-22 03:32:09.292337984 +0900
+@@ -544,8 +544,6 @@
+ 			"auth: bad state for [%s]: expired", username);
+ 		return RLM_MODULE_REJECT;
+ 	    }
+-good_state:
+-	    /* State is good! */
+ 
+ 	} else {
+ 	    /* This should only happen if the authorize code didn't run. */
+@@ -556,6 +554,8 @@
+ 	}
+     } /* if (!fast_sync) */
+ 
++    /* State is good! */
++good_state:
+     /* Get the time of the last authentication. */
+     if (x99_get_last_auth(inst->syncdir, username, &last_auth) != 0) {
+ 	x99_log(X99_LOG_ERR,

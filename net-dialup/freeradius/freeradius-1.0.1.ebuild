@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.1.ebuild,v 1.2 2004/09/20 18:00:24 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.1.ebuild,v 1.3 2004/09/23 20:52:09 sekretarz Exp $
 
 inherit eutils
 
@@ -29,6 +29,9 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
+
+	# gcc-3.4 fix
+	epatch ${FILESDIR}/${P}-gcc34.patch
 
 	export WANT_AUTOCONF=2.1
 	autoconf
