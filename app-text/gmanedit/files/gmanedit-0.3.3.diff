@@ -1,0 +1,11 @@
+--- configure.old	Mon Jun 25 01:09:32 2001
++++ configure	Mon Jun 25 01:10:05 2001
+@@ -2170,7 +2170,7 @@
+   ;;
+ esac
+ fi
+-GTK_CONFIG="$ac_cv_path_GTK_CONFIG"
++GTK_CONFIG="/usr/X11R6/bin/gtk-config"
+ if test -n "$GTK_CONFIG"; then
+   echo "$ac_t""$GTK_CONFIG" 1>&6
+ else
