@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/gmetadom-0.1.8.ebuild,v 1.2 2004/06/24 23:11:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/gmetadom-0.1.8.ebuild,v 1.3 2005/01/03 07:27:40 matsuu Exp $
 
 DESCRIPTION="A library providing bindings for multiple languages of multiple C DOM implementations"
 HOMEPAGE="http://gmetadom.sourceforge.net/"
