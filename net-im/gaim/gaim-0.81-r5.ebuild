@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.81-r5.ebuild,v 1.12 2004/09/06 00:17:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.81-r5.ebuild,v 1.13 2004/09/13 15:08:03 rizzo Exp $
 
 inherit flag-o-matic eutils gcc debug
 
@@ -16,6 +16,7 @@ IUSE="nls perl spell nas crypt cjk gnutls silc evo"
 DEPEND=">=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
 	nas? ( >=media-libs/nas-1.4.1-r1 )
+	dev-util/pkgconfig
 	sys-devel/gettext
 	media-libs/libao
 	>=media-libs/audiofile-0.2.0
