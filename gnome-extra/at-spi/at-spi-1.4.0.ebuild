@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.4.0.ebuild,v 1.6 2004/05/29 03:46:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.4.0.ebuild,v 1.7 2004/06/06 10:54:35 lv Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://developer.gnome.org/projects/gap/"
 
 SLOT="1"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc ~alpha ~amd64 sparc hppa ~ia64 ~mips"
+KEYWORDS="x86 ppc ~alpha amd64 sparc hppa ~ia64 ~mips"
 IUSE=""
 
 RDEPEND=">=gnome-base/gail-1.3

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.6.1.ebuild,v 1.1 2004/04/20 15:33:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.6.1.ebuild,v 1.2 2004/06/06 10:54:34 lv Exp $
 
 # FIXME : double check all the acme stuff
 inherit gnome2 eutils
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa amd64 ~ia64 ~mips"
 IUSE="alsa gstreamer"
 
 MAKEOPTS="${MAKEOPTS} -j1"

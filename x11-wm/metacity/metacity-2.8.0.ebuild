@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.8.0.ebuild,v 1.7 2004/06/04 04:47:46 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.8.0.ebuild,v 1.8 2004/06/06 10:54:35 lv Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ppc ~alpha ~sparc hppa ~amd64 ~ia64 mips"
+KEYWORDS="x86 ppc ~alpha ~sparc hppa amd64 ~ia64 mips"
 IUSE="xinerama"
 
 # not parallel-safe; see bug #14405
