@@ -14,13 +14,15 @@ HOMEPAGE="http://divx.euro.ru/"
 DEPEND="media-libs/win32codecs
 	>=media-libs/libsdl-1.2.2
 	>=media-libs/divx4linux-20011025
-	qt? ( >=x11-libs/qt-x11-2.2.2 )
+	qt? ( >=x11-libs/qt-2.2.2 )
 	nas? ( >=media-libs/nas-1.4.2 )"
 
 src_compile() {
     local myconf
     if [ -z "`use qt`" ] ; then
       myconf="$myconf --disable-qt"
+    else
+      myconf="$myconf --with-qt-dir=/usr/qt/2"
     fi
     if [ "`use nas`" ] ; then
 	LDFLAGS="-L/usr/X11R6/lib -lXt"

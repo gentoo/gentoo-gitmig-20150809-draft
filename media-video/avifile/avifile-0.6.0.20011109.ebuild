@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011109.ebuild,v 1.4 2001/11/15 14:30:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011109.ebuild,v 1.5 2001/12/29 17:41:37 danarmak Exp $
 
 P0=${PN}-0.6.0-20011109
 S=${WORKDIR}/${P0}
@@ -12,7 +12,7 @@ SRC_URI="http://avifile.sourceforge.net/${P0}.tgz
 
 HOMEPAGE="http://divx.euro.ru/"
 
-RDEPEND="virtual/glibc qt? ( >=x11-libs/qt-x11-2.2.2 ) >=media-libs/libsdl-1.2.2 >=media-libs/divx4linux-20011025 >=media-sound/mad-0.14"
+RDEPEND="virtual/glibc qt? ( >=x11-libs/qt-2.2.2 ) >=media-libs/libsdl-1.2.2 >=media-libs/divx4linux-20011025 >=media-sound/mad-0.14"
 DEPEND="$RDEPEND app-arch/unzip"
 
 src_unpack() {
@@ -23,6 +23,8 @@ src_compile() {
     local myconf
     if [ -z "`use qt`" ] ; then
       myconf="$myconf --disable-qt"
+    else
+      myconf="$myconf --with-qt-dir=/usr/qt/2"
     fi
     if [ "`use nas`" ] ; then
 	LDFLAGS="-L/usr/X11R6/lib -lXt"

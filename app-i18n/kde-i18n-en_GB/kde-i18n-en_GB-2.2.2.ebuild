@@ -1,0 +1,12 @@
+# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author Dan Armak <danarmak@gentoo.ogr>
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-en_GB/kde-i18n-en_GB-2.2.2.ebuild,v 1.1 2001/12/29 17:41:36 danarmak Exp $
+. /usr/portage/eclass/inherit.eclass || die
+inherit kde-i18n || die
+
+# override the kde-i18n.eclass function, which adds a patch needed
+# for all kde-i18n ebuilds but this
+src_unpack() {
+    base_src_unpack
+}

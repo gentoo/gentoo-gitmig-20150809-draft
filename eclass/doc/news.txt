@@ -1,4 +1,33 @@
-14/12
+28/12
+v5.1
+Really big changes. Most of what has been added in the last versions has been deleted. Summary of changes:
+- There is now only one 2.x and one 3.x version of qt and kdelibs installed at any given time, should be the latest.
+They go into /usr/qt/{2,3} and /usr/kde/{2,3} respectively. Also the actual qt libs live in /usr/lib, while /usr/qt/{2,3}/lib
+is a symlink to /usr/lib.
+- The qt ebuild is now called x11-libs/qt (not qt-x11). It contains only the actual library, developer tools like the qt designer,
+the headers and moc. There is also an app-doc/qt-docs which installs the manpages, documentation, examples and tutorials.
+- An ebuild now calls need-kde $ver. This does:
+	a. add kdelibs $ver to DEPEND/RDEPEND
+	b. call set-kdedir, which sets KDEDIR to /usr/kde/2 or /usr/kde/3 based on the first char of $ver.
+	c. call need-qt $qtver, where qtver is derived from kdever via qtver-from-kdever().
+	d. need-qt adds $ver to DEPEND, RDEPEND and calls set-qtdir $ver.
+	e. set-qtdir acts like set-kdedir wrt. QTDIR.
+- An ebuild that needs a special version of qt, or qt without kde, can call need-qt directly.
+- select-version() and separate-string() have been removed.
+- objprelink support has been removed since it doesn't work with the latest binutils; we are promised generic system-wide
+prelinking support Real Soon Now. All objprelink functions, calls, refs, deps etc. have been deleted, and the ebuilds
+will shortly be removed as well.
+
+27/12
+KDEVER[] renamed to KDEVERPARTS[] because it turns out if you have a KDEVER[]
+array in bash, you can't have a separate KDEVER variable but will access
+KDEVER[0] instead.
+Also many small misc fixes in kde.eclass.
+In particular to support versions like 3.0_beta1 which avtually have a source
+tarball/dir name of 3.0beta1 we now have kde.org.eclass and kde.eclass use 
+${P//_} for SRC_URI and S.
+
+24/12
 fix for emerging a new kdelibs
 
 23/12

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6-r4.ebuild,v 1.2 2001/12/15 02:19:52 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6-r4.ebuild,v 1.3 2001/12/29 17:41:37 danarmak Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -18,7 +18,7 @@ RDEPEND=">=gnome-base/ORBit-0.5.10-r1
 	app-arch/unzip
 	x11-libs/gtk+"
 #	gtk?   ( x11-libs/gtk+ )
-#	mozqt? ( x11-libs/qt-x11 )
+#	mozqt? ( x11-libs/qt )
 #	java?  ( virtual/jdk )"
 
 DEPEND="${RDEPEND}
@@ -45,6 +45,7 @@ src_compile() {
 	# NOTE: QT and XLIB toolkit seems very unstable, leave disabled until
 	#       tested ok -- azarah
 #       if [ "`use mozqt`" ] ; then
+		# when you enable this again, remember the qt dir is now /usr/qt/2 - danarmak
 #               myconf="--enable-toolkit-qt --enable-default-toolkit=qt"
 #               myconf="${myconf} --disable-toolkit-gtk --disable-toolkit-xlib"
 #	elif [ "`use gtk`" ] ; then

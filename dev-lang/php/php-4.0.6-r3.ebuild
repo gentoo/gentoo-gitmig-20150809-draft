@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r3.ebuild,v 1.4 2001/12/15 02:19:52 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r3.ebuild,v 1.5 2001/12/29 17:41:37 danarmak Exp $
 
 A=${PN}-4.0.6.tar.gz
 S=${WORKDIR}/${PN}-4.0.6
@@ -29,7 +29,7 @@ DEPEND="virtual/glibc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	X? ( virtual/x11 )
-	qt? ( >=x11-libs/qt-x11-2.3.0 )
+	qt? ( >=x11-libs/qt-2.3.0 )
 	xml? ( >=app-text/sablotron-0.44 )
 	libwww? ( >=net-libs/libwww-5.3.2 )
 	imap? ( virtual/imap )
@@ -52,7 +52,7 @@ RDEPEND="virtual/glibc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	X? ( virtual/x11 )
-	qt? ( >=x11-libs/qt-x11-2.3.0 )
+	qt? ( >=x11-libs/qt-2.3.0 )
 	xml? ( >=app-text/sablotron-0.44 )
 	libwww? ( >=net-libs/libwww-5.3.2 )
 	xml2? ( dev-libs/libxml2 )
@@ -90,6 +90,7 @@ src_compile() {
       myconf="$myconf --with-ldap" 
     fi
     if [ "`use qt`" ] ; then
+      EXPORT QTDIR=/usr/qt/2 #hope this helps - danarmak
       myconf="$myconf --with-qtdom" 
     fi
     if [ "`use imap`" ] ; then

@@ -2,10 +2,10 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
 # Maintainer: Desktop Team <desktop@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.2 2001/11/09 22:54:50 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.3 2001/12/29 17:41:37 danarmak Exp $
 
 S=${WORKDIR}/${PN}
-DESCRIPTION="A Qt Interface for coin"
+DESCRIPTION="A Gtk Interface for coin"
 SRC_URI="ftp://ftp.coin3d.org/pub/snapshots/${P}.tar.gz"
 HOMEPAGE="http://www.coin3d.org"
 
