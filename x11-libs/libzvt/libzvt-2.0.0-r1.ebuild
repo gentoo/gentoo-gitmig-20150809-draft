@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.0-r1.ebuild,v 1.6 2003/02/13 16:59:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.0-r1.ebuild,v 1.7 2003/09/07 00:23:27 msterret Exp $
 
 inherit debug
 inherit libtool
@@ -41,8 +41,8 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		mandir=${D}/usr/share/man \
 		install || die
-    
-	dodoc ABOUT* AUTHORS COPY* ChangeLog INSTALL NEWS README 
+
+	dodoc ABOUT* AUTHORS COPY* ChangeLog INSTALL NEWS README
 	docinto libzvt
 	dodoc libzvt/AUTHORS libzvt/BUGS libzvt/README libzvt/TODO
 }

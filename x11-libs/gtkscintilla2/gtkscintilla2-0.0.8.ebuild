@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/gtkscintilla2-0.0.8.ebuild,v 1.2 2003/08/20 14:25:06 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/gtkscintilla2-0.0.8.ebuild,v 1.3 2003/09/07 00:23:27 msterret Exp $
 
 MY_P="GtkScintilla2-${PV}"
 DESCRIPTION="Gtk-2 wrappers for the Scintilla source editing components."
@@ -12,14 +12,14 @@ SLOT="0"
 KEYWORDS="~x86"
 LICENSE="GPL-2"
 
-RDEPEND=">=x11-libs/gtk+-2.0"	
+RDEPEND=">=x11-libs/gtk+-2.0"
 
-DEPEND=">=dev-util/pkgconfig-0.12.0 
+DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=dev-lang/python-2.2
 	${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
-		
+
 src_unpack() {
 
 	unpack ${A}
@@ -30,7 +30,7 @@ src_unpack() {
 	cp Makefile Makefile.orig
 	sed -e "/VERSION/s/0.0.3/${PV}/" \
 		-e "/CFLAGS/s/-g/${CFLAGS}/" < Makefile.orig > Makefile
-	
+
 	# and again, in the scintilla part
 	cd ${S}/scintilla/gtk
 	cp makefile makefile.orig
@@ -41,11 +41,11 @@ src_unpack() {
 src_compile() {
 
 	emake || die
-	
+
 }
 
 src_install() {
-	
+
 	make DESTDIR=${D} install || die
 	dodoc COPYING README
 

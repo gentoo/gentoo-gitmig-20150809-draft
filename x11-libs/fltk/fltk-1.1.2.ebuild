@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.2.ebuild,v 1.4 2003/02/13 16:55:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.2.ebuild,v 1.5 2003/09/07 00:23:27 msterret Exp $
 
 IUSE="opengl"
 
@@ -52,11 +52,11 @@ src_install () {
 		includedir=${D}/usr/include/fltk-1.1 \
 		libdir=${D}/usr/lib/fltk-1.1 || die "Installation
 Failed"
-		
+
 	ranlib ${D}/usr/lib/fltk-1.1/*.a
 
 	dodoc CHANGES COPYING README
-	
+
 	echo "LDPATH=/usr/lib/fltk-1.1" > 99fltk-1.1
 
 	insinto /etc/env.d

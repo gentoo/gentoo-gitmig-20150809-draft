@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/buffy/buffy-0.2-r1.ebuild,v 1.10 2003/02/13 16:54:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/buffy/buffy-0.2-r1.ebuild,v 1.11 2003/09/07 00:23:27 msterret Exp $
 
 inherit libtool
 
@@ -22,6 +22,6 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die 
+	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING INSTALL NEWS README ChangeLog
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.1.ebuild,v 1.16 2003/08/03 04:49:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.1.ebuild,v 1.17 2003/09/07 00:23:27 msterret Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -47,13 +47,13 @@ src_compile() {
 	replace-flags "-O3" "-O2"
 
 	elibtoolize
-	
+
 	local myconf=""
 	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --disable-gtk-doc"
 	use jpeg ||  myconf="${myconf} --without-libjpeg"
 	use tiff ||  myconf="${myconf} --without-libtiff"
 	use debug && myconf="${myconf}  --enable-debug"
-		
+
 	econf --with-gdktarget=x11 ${myconf} || die
 
 	# gtk+ isn't multithread friendly due to some obscure code generation bug
@@ -77,7 +77,7 @@ pkg_postinst() {
 	gtk-query-immodules-2.0 >	/etc/gtk-2.0/gtk.immodules
 	gdk-pixbuf-query-loaders >	/etc/gtk-2.0/gdk-pixbuf.loaders
 
-	einfo "For your gtk themes to work correctly after an update," 
+	einfo "For your gtk themes to work correctly after an update,"
 	einfo "you might have to rebuild your theme engines."
 	einfo "Executing 'qpkg -I -nc gtk-engines | xargs emerge' should do the trick (requires gentoolkit)"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r3.ebuild,v 1.10 2003/08/03 05:20:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r3.ebuild,v 1.11 2003/09/07 00:23:28 msterret Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -31,10 +31,10 @@ DEPEND="virtual/x11
 	!=kde-base/kdebase-3.1
 	!=kde-base/kdebase-3.1-r1
 	!=kde-base/kdebase-3.1.1"
-# WARNING: the versions blocked above are known to be buggy. DO NOT use them with this qt	
+# WARNING: the versions blocked above are known to be buggy. DO NOT use them with this qt
 RDEPEND="${DEPEND}
 	doc? ( ~app-doc/qt-docs-$PV )"
-	
+
 S=${WORKDIR}/qt-x11-free-${PV}
 
 QTBASE=/usr/qt/3
@@ -44,16 +44,16 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	
+
 	epatch ${FILESDIR}/designer.diff
 	epatch ${FILESDIR}/${P}-qmlined.diff
 	epatch ${FILESDIR}/${P}-r3-qsocket.diff
 	# Fix issues with coreutils's head and tail commands
 	epatch ${FILESDIR}/${P}-coreutils-fixup.patch
-	
+
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
-	
+
 	cd mkspecs/linux-g++
 	# use env's $CC, $CXX
 	if [ -n "$CXX" ]; then
@@ -66,9 +66,9 @@ src_unpack() {
 		cp qmake.conf qmake.conf.orig
 		sed -e "s:= gcc:= ${CC}:" qmake.conf.orig > qmake.conf
 	fi
-	
+
 	# hppa people, please review the following
-	
+
 	# hppa need some additional flags
 	if [ "${ARCH}" = "hppa" ]; then
 		echo "QMAKE_CFLAGS += -fPIC -ffunction-sections" >> qmake.conf
@@ -91,12 +91,12 @@ src_compile() {
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
 	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
-	
+
 	# avoid wasting time building things we won't install
 	rm -rf tutorial examples
 
 	export YACC='byacc -d'
-	
+
 	./configure -sm -thread -stl -system-zlib -system-libjpeg -verbose \
 		-qt-imgfmt-{jpeg,mng,png} -tablet -system-libmng \
 		-system-libpng -ldl -lpthread -xft -platform linux-g++ -xplatform \
@@ -119,7 +119,7 @@ src_install() {
 		ln -s $x.1.0 $x.1
 		ln -s $x.1 $x
 	done
-	
+
 	# version symlinks - 3.1.2->3.1->3->.so
 	ln -s libqt-mt.so.3.1.2 libqt-mt.so.3.1
 	ln -s libqt-mt.so.3.1 libqt-mt.so.3

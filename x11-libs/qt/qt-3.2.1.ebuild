@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1.ebuild,v 1.3 2003/08/28 13:30:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1.ebuild,v 1.4 2003/09/07 00:23:28 msterret Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -28,7 +28,7 @@ RDEPEND="${DEPEND}"
 	#doc? ( ~app-doc/qt-docs- )"
 
 S=${WORKDIR}/qt-x11-free-${PV}
-	
+
 QTBASE=/usr/qt/3
 export QTDIR=${S}
 
@@ -37,10 +37,10 @@ src_unpack() {
 
 	export QTDIR=${S}
 	cd ${S}
-	
+
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
-	
+
 	cd mkspecs/linux-g++
 	# use env's $CC, $CXX
 	if [ -n "$CXX" ]; then
@@ -53,16 +53,16 @@ src_unpack() {
 		cp qmake.conf qmake.conf.orig
 		sed -e "s:= gcc:= ${CC}:" qmake.conf.orig > qmake.conf
 	fi
-	
+
 	# hppa and alpha people, please review the following
-	
+
 	# hppa need some additional flags
 	if [ "${ARCH}" = "hppa" ]; then
 		echo "QMAKE_CFLAGS += -fPIC -ffunction-sections" >> qmake.conf
 		echo "QMAKE_CXXFLAGS += -fPIC -ffunction-sections" >> qmake.conf
 		echo "QMAKE_LFLAGS += -ffunction-sections -Wl,--stub-group-size=25000" >> qmake.conf
 	fi
-	
+
 	# on alpha we need to compile everything with -fPIC
 	if [ ${ARCH} == "alpha" ]; then
 		cp qmake.conf qmake.conf.orig
@@ -91,12 +91,12 @@ src_compile() {
 	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
 	use xinerama    && mycong="${myconf} -xinerama"
-	
+
 	# avoid wasting time building things we won't install
 	rm -rf tutorial examples
 
 	export YACC='byacc -d'
-	
+
 	./configure -sm -thread -stl -system-zlib -system-libjpeg -verbose \
 		-qt-imgfmt-{jpeg,mng,png} -tablet -system-libmng \
 		-system-libpng -ldl -lpthread -xft -platform linux-g++ -xplatform \
@@ -121,7 +121,7 @@ src_install() {
 		ln -s $x.1.0 $x.1
 		ln -s $x.1 $x
 	done
-	
+
 	# version symlinks - 3.2.0->3.2->3->.so
 	ln -s libqt-mt.so.3.2.0 libqt-mt.so.3.2
 	ln -s libqt-mt.so.3.2 libqt-mt.so.3

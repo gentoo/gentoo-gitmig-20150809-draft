@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.ebuild,v 1.3 2003/02/13 17:03:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.ebuild,v 1.4 2003/09/07 00:23:28 msterret Exp $
 
 S=${WORKDIR}/${P}-release
 DESCRIPTION="A graphical user interface toolkit for X"
@@ -19,7 +19,7 @@ PROVIDE="virtual/xforms"
 src_unpack() {
 	unpack $A
 	cd ${WORKDIR}/${P}-release
-	
+
 	# use custom CFLAGS
 	cp Imakefile Imakefile.orig
 	sed -e "s:CDEBUGFLAGS =:CDEBUGFLAGS = ${CFLAGS} #:" \
@@ -30,7 +30,7 @@ src_compile() {
 	xmkmf -a
 	cp Makefile Makefile.orig
 	sed -e s/'demos$'// Makefile.orig > Makefile
-	
+
 	# use custom CFLAGS
 	cp Makefile Makefile.orig
 	sed -e "s:CDEBUGFLAGS =:CDEBUGFLAGS = ${CFLAGS} #:" \

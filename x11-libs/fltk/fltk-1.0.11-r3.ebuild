@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.0.11-r3.ebuild,v 1.9 2003/02/13 16:55:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.0.11-r3.ebuild,v 1.10 2003/09/07 00:23:27 msterret Exp $
 
 IUSE="opengl"
 
@@ -13,7 +13,7 @@ SLOT="1.0"
 LICENSE="FLTK | GPL-2"
 KEYWORDS="x86 sparc"
 
-DEPEND="virtual/x11 
+DEPEND="virtual/x11
 	opengl? ( virtual/opengl )"
 
 
@@ -23,7 +23,7 @@ src_compile() {
 	myconf="--enable-shared"
 
 	use opengl || myconf="${myconf} --disable-gl" #default enabled
-	
+
 	econf \
 		--includedir=/usr/include/fltk-1.0 \
 		--libdir=/usr/lib/fltk-1.0 \
@@ -39,9 +39,9 @@ src_install () {
 	einstall \
 		includedir=${D}/usr/include/fltk-1.0 \
 		libdir=${D}/usr/lib/fltk-1.0 || die "Installation Failed"
-		
+
 	dodoc CHANGES COPYING README
-	
+
 	dodir /usr/share/doc/${PF}/html
 	mv ${D}/usr/share/doc/fltk/* ${D}/usr/share/doc/${PF}/html
 	rmdir ${D}/usr/share/doc/fltk

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libPropList/libPropList-0.10.1-r3.ebuild,v 1.6 2003/02/13 16:58:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libPropList/libPropList-0.10.1-r3.ebuild,v 1.7 2003/09/07 00:23:27 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libPropList"
@@ -12,7 +12,7 @@ KEYWORDS="x86 ppc sparc "
 
 DEPEND="virtual/glibc"
 
-src_compile() {													 
+src_compile() {
 
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
@@ -27,7 +27,7 @@ src_compile() {
 
 }
 
-src_install() {															 
+src_install() {
 
 	make prefix=${D}/usr install || die
 

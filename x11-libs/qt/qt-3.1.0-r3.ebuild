@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0-r3.ebuild,v 1.10 2003/08/03 05:20:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0-r3.ebuild,v 1.11 2003/09/07 00:23:28 msterret Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -23,7 +23,7 @@ DEPEND="virtual/x11
 	mysql? ( >=dev-db/mysql-3.2.10 )
 	opengl? ( virtual/opengl virtual/glu )
 	postgres? ( >=dev-db/postgresql-7.2 )"
-	
+
 S=${WORKDIR}/qt-x11-free-${PV}
 
 QTBASE=/usr/qt/3
@@ -37,10 +37,10 @@ src_unpack() {
 	# this patch fixes child windows being hidden randomly.
 	epatch ${FILESDIR}/${P}-minimized.diff
 	epatch ${FILESDIR}/designer.diff
-	
+
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
-	
+
 	cd mkspecs/linux-g++
 	# use env's $CC, $CXX
 	if [ -n "$CXX" ]; then
@@ -60,7 +60,7 @@ src_unpack() {
 		echo "QMAKE_CXXFLAGS += -fPIC -ffunction-sections" >> qmake.conf
 		echo "QMAKE_LFLAGS += -ffunction-sections -Wl,--stub-group-size=25000" >> qmake.conf
 	fi
-	
+
 	# on alpha we need to compile everything with -fPIC
 	if [ ${ARCH} == "alpha" ]; then
 		cp qmake.conf qmake.conf.orig
@@ -115,7 +115,7 @@ src_install() {
 		ln -s $x.1.0 $x.1
 		ln -s $x.1 $x
 	done
-	
+
 	# version symlinks - 3.0.3->3.0->3->.so
 	ln -s libqt-mt.so.3.1.0 libqt-mt.so.3.1
 	ln -s libqt-mt.so.3.1 libqt-mt.so.3

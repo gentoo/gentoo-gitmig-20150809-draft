@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.1.2.ebuild,v 1.3 2003/08/03 05:38:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.1.2.ebuild,v 1.4 2003/09/07 00:23:28 msterret Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -51,7 +51,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export YACC='byacc -d'	
+	export YACC='byacc -d'
 	export LDFLAGS="-ldl"
 
 	if [ -z "`use build`" ]; then
@@ -68,9 +68,9 @@ src_compile() {
 			# and i've no idea if it'll work
 			myconf="$myconf -xplatform generic -embedded generic"
 		fi
-	
+
 		# -accel-{voodoo3,mach64,matrox} -vnc -depths v,4,8,16,24,32 # this stuff miscompiles :-(
-	
+
     		./configure $myconf -depths 8,16 -system-zlib -thread -stl -freetype -qvfb \
     			-plugin-imgfmt-{jpeg,mng,png} -system-lib{png,jpeg,mng} || die
 	else
@@ -122,7 +122,7 @@ src_install() {
 	ln -s libqte-mt.so.3.1 libqte.so.3.1
 	ln -s libqte-mt.so.3 libqte.so.3
 	ln -s libqte-mt.so libqte.so
-	
+
 	# fonts
 	cp -r ${S}/lib/fonts ${D}/$QTBASE/lib
 

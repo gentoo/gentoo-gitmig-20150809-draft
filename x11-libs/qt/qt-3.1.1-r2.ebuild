@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.1-r2.ebuild,v 1.6 2003/08/03 05:20:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.1-r2.ebuild,v 1.7 2003/09/07 00:23:28 msterret Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -23,7 +23,7 @@ DEPEND="virtual/x11
 	mysql? ( >=dev-db/mysql-3.2.10 )
 	opengl? ( virtual/opengl virtual/glu )
 	postgres? ( >=dev-db/postgresql-7.2 )"
-	
+
 S=${WORKDIR}/qt-x11-free-${PV}
 
 QTBASE=/usr/qt/3
@@ -33,12 +33,12 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	
+
 	epatch ${FILESDIR}/designer.diff
-	
+
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
-	
+
 	cd mkspecs/linux-g++
 	# use env's $CC, $CXX
 	if [ -n "$CXX" ]; then
@@ -70,7 +70,7 @@ src_unpack() {
 src_compile() {
 	# fix #11144; qt wants to create lock files etc. in that directory
 	[ -d "$QTBASE/etc/settings" ] && addwrite "$QTBASE/etc/settings"
-	
+
 	export LDFLAGS="-ldl"
 
 	use cups	|| myconf="${myconf} -no-cups"
@@ -81,12 +81,12 @@ src_compile() {
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
 	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
-	
+
 	# avoid wasting time building things we won't install
 	rm -rf tutorial examples
 
 	export YACC='byacc -d'
-	
+
 	./configure -sm -thread -stl -system-zlib -system-libjpeg -verbose \
 		-qt-imgfmt-{jpeg,mng,png} -tablet -system-libmng \
 		-system-libpng -ldl -lpthread -xft -platform linux-g++ -xplatform \
@@ -109,7 +109,7 @@ src_install() {
 		ln -s $x.1.0 $x.1
 		ln -s $x.1 $x
 	done
-	
+
 	# version symlinks - 3.1.1->3.1->3->.so
 	ln -s libqt-mt.so.3.1.1 libqt-mt.so.3.1
 	ln -s libqt-mt.so.3.1 libqt-mt.so.3

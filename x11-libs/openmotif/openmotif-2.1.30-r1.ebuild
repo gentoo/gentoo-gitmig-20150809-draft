@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r1.ebuild,v 1.17 2003/05/15 15:51:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r1.ebuild,v 1.18 2003/09/07 00:23:28 msterret Exp $
 
 MY_P=${P}-4_MLI.src
 S=${WORKDIR}/motif
@@ -18,7 +18,7 @@ src_unpack() {
 	cp ${FILESDIR}/site.def ${S}/config/cf/
 }
 
-src_compile() { 
+src_compile() {
 
 	mkdir -p imports/x11
 	cd imports/x11
@@ -29,7 +29,7 @@ src_compile() {
 	make World || die
 }
 
-src_install() {                                                                 
+src_install() {
 
 	make DESTDIR=${D} VARDIR=${D}/var/X11/ install || die
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.0.43.ebuild,v 1.1 2003/08/01 18:45:44 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.0.43.ebuild,v 1.2 2003/09/07 00:23:27 msterret Exp $
 
 IUSE="cups opengl"
 
@@ -24,16 +24,16 @@ DEPEND="virtual/glibc
 src_compile() {
 
 	local myconf
-	
+
 	use opengl || myconf="$myconf --with-opengl=no" #default enabled
 	use cups && myconf="$myconf --enable-cups"      #default disabled
-       
+
 	./configure \
 		--prefix=/usr \
 		--mandir='${prefix}'/share/man \
 		--host=${CHOST} \
 		${myconf} || die "Configuration Failed"
-	
+
 	emake || die "Parallel Make Failed"
 }
 
@@ -41,7 +41,7 @@ src_install () {
 
 	make prefix=${D}/usr/ \
 		install || die "Installation Failed"
-       
+
 	dodoc README INSTALL LICENSE ADDITIONS AUTHORS TRACING
 
 	dodir /usr/share/doc/${PF}/html

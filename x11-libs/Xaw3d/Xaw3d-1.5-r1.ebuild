@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.11 2003/03/10 22:39:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.12 2003/09/07 00:23:27 msterret Exp $
 
 # Ok, hopefully this will resolv the problem with the version of libXaw3d that
 # gets created.
@@ -35,7 +35,7 @@ DEPEND="virtual/x11"
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
-    
+
 	# For some reason it isn't automatically patched.
 	# That's why I manually override the source_unpack function.
 	patch -p0 <${FILESDIR}/Xaw3d-xfree86.diff || die
@@ -51,7 +51,7 @@ src_compile() {
 	# convoluted process for out-of-tree building
 	mkdir ./X11
 	cd ./X11 ; ln -sf ../../Xaw3d . ; cd ..
-    
+
 	xmkmf || die
 	make includes || die
 	make depend || die

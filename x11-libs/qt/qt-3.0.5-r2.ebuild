@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r2.ebuild,v 1.11 2003/08/03 05:20:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r2.ebuild,v 1.12 2003/09/07 00:23:28 msterret Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -31,14 +31,14 @@ export QTDIR=${S}
 src_unpack() {
 	unpack qt-x11-free-${PV}.tar.gz
 
-	# qt patch - for ami, fixed on the spot bug. 
+	# qt patch - for ami, fixed on the spot bug.
 	cd ${S}
 	use nls && epatch ${FILESDIR}/qt-x11-free-3.0.5-ko_input.patch
-	
+
 	cd ${S}
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
-	
+
 	cd $S/mkspecs/linux-g++
 	# use env's $CC, $CXX
 	if [ -n "$CXX" ]; then
@@ -63,12 +63,12 @@ src_compile() {
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
 	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
-	
+
 	# avoid wasting time building things we won't install
 	rm -rf tutorial examples
 
 	export YACC='byacc -d'
-	
+
 	./configure -sm -thread -stl -system-zlib -system-libjpeg -tablet \
 		-system-libmng -system-libpng -ldl -lpthread -xft -platform linux-g++ \
 		-qt-imgfmt-{jpeg,mng,png} -xplatform linux-g++ -prefix ${QTBASE} \

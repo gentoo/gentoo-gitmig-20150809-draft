@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r2.ebuild,v 1.4 2003/07/17 16:53:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r2.ebuild,v 1.5 2003/09/07 00:23:28 msterret Exp $
 
 inherit libtool
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~ppc ~sparc hppa"
 
 PROVIDE="virtual/motif"
 
-RDEPEND="virtual/x11"  
+RDEPEND="virtual/x11"
 DEPEND=">=sys-apps/sed-4"
 
 src_unpack() {
@@ -25,22 +25,22 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-  
+
 	#
 	# Don't compile/install demo programs.
-	#   They're meant to demonstrate programming techniques and features 
-	#   of motif, but are of limited to no use for end users.  Further, 
-	#   those progs that demonstrate Uil/Mrm functionality won't even work 
-	#   because their data(.uid) files are installed in nonstandard places, 
-	#   /usr/X11R6/share/Xm/<progname> (see `man MrmOpenHierarchy' for 
-	#   locations Mrm expects them to be).  Most of the demos also don't 
-	#   have compiled in fallback resources and will not work correctly 
+	#   They're meant to demonstrate programming techniques and features
+	#   of motif, but are of limited to no use for end users.  Further,
+	#   those progs that demonstrate Uil/Mrm functionality won't even work
+	#   because their data(.uid) files are installed in nonstandard places,
+	#   /usr/X11R6/share/Xm/<progname> (see `man MrmOpenHierarchy' for
+	#   locations Mrm expects them to be).  Most of the demos also don't
+	#   have compiled in fallback resources and will not work correctly
 	#   without their app-defaults files installed.
 	#
 	#   So there a basically 4 choices:
 	#	a) add wrappers that set XAPPLRESDIR and UIDPATH,
 	#	b) clutter two more system directories with demo related files,
-	#	c) put sources, data, binaries AND wrappers in 
+	#	c) put sources, data, binaries AND wrappers in
         #	   /usr/X11R6/share/Xm/ (move this to X11R6/lib/X11/Xm/demos ?),
 	#	OR
 	#	D) don't install them at all.
@@ -56,9 +56,9 @@ src_unpack() {
 
 	#
 	# fix include order (#6536):
-	#   This replaces `include-order.diff'.  Had to change this patch so 
-	#   it modifies Makefile.am instead of Makefile.in because rerunning 
-	#   autotools below would undo any changes made to Makefile.in. 
+	#   This replaces `include-order.diff'.  Had to change this patch so
+	#   it modifies Makefile.am instead of Makefile.in because rerunning
+	#   autotools below would undo any changes made to Makefile.in.
 	#   Added `clients/mwm/WmWsmLib/' to the list.
 	#
 	ebegin "fixing include order..."
@@ -72,14 +72,14 @@ src_unpack() {
 
 	#
 	# move `system.mwmrc' from /usr/X11R6/lib/X11 to /etc/X11/mwm (FHS).
-	#   Just symlinking `system.mwmrc' isn't enough here because mwm 
-	#   also looks for localized verions in `$LANG/system.mwmrc'. 
-	#   Instead, this patch changes the default location from 
-	#   `/usr/X11R6/lib/X11/' to `/usr/X11R6/lib/X11/mwm/', which will 
+	#   Just symlinking `system.mwmrc' isn't enough here because mwm
+	#   also looks for localized verions in `$LANG/system.mwmrc'.
+	#   Instead, this patch changes the default location from
+	#   `/usr/X11R6/lib/X11/' to `/usr/X11R6/lib/X11/mwm/', which will
 	#   be symlinked to /etc/X11/mwm/ in src_install().
 	#
 	epatch "$FILESDIR/mwm-configdir.patch"
-        
+
 	#
 	# missing srcfile in demos/programs/animate
 	#
@@ -139,7 +139,7 @@ src_install() {
 	unset f list
 
 	#
-	# prepallman looks for manpages in /usr/X11R6/share/man while X11 uses 
+	# prepallman looks for manpages in /usr/X11R6/share/man while X11 uses
 	# /usr/X11R6/man, so we'll have to compress them ourselves...
 	#
 	einfo "gzipping manpages..."

@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.10.ebuild,v 1.4 2003/07/25 13:14:11 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.10.ebuild,v 1.5 2003/09/07 00:23:27 msterret Exp $
 
-# WARNING 
+# WARNING
 # All gst-sharp hacks done in this build are nonfunctional
 # Do not try to use them, they don't work. Not for me, not for anybody.
 # They're just here for future reference
@@ -28,7 +28,7 @@ RDEPEND=">=dev-dotnet/mono-0.24
 	gnomedb? ( >=gnome-extra/libgnomedb-0.11 )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"	
+	dev-util/pkgconfig"
 
 KEYWORDS="~x86 -ppc"
 
@@ -62,7 +62,7 @@ src_compile() {
 }
 
 src_install () {
-	# Path for the installation of the libs is hardcoded in the Makefile, 
+	# Path for the installation of the libs is hardcoded in the Makefile,
 	# so we need to change it - Is being changed, check every release
 	for i in $(find . -iname Makefile); do cp $i ${i}.orig; sed "s:${DESTDIR}/usr:${D}/usr:" $i.orig > $i; done
 

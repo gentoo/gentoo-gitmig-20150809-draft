@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r4.ebuild,v 1.6 2003/08/28 03:20:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r4.ebuild,v 1.7 2003/09/07 00:23:28 msterret Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -31,12 +31,12 @@ DEPEND="virtual/x11
 	!=kde-base/kdebase-3.1
 	!=kde-base/kdebase-3.1-r1
 	!=kde-base/kdebase-3.1.1"
-# WARNING: the versions blocked above are known to be buggy. DO NOT use them with this qt	
+# WARNING: the versions blocked above are known to be buggy. DO NOT use them with this qt
 RDEPEND="${DEPEND}
 	doc? ( ~app-doc/qt-docs-$PV )"
 
 S=${WORKDIR}/qt-x11-free-${PV}
-	
+
 QTBASE=/usr/qt/3
 export QTDIR=${S}
 
@@ -44,7 +44,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	
+
 	epatch ${FILESDIR}/designer.diff
 	epatch ${FILESDIR}/${P}-qmlined.diff
 	epatch ${FILESDIR}/${P}-r3-qsocket.diff
@@ -54,10 +54,10 @@ src_unpack() {
 
 	use cjk && epatch ${FILESDIR}/${P}-korean-xim.patch
 	epatch ${FILESDIR}/${P}-thai-complextext.patch
-	
+
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
-	
+
 	cd mkspecs/linux-g++
 	# use env's $CC, $CXX
 	if [ -n "$CXX" ]; then
@@ -95,12 +95,12 @@ src_compile() {
 	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
 	use xinerama    && myconf="${myconf} -xinerama"
-	
+
 	# avoid wasting time building things we won't install
 	rm -rf tutorial examples
 
 	export YACC='byacc -d'
-	
+
 	./configure -sm -thread -stl -system-zlib -system-libjpeg -verbose \
 		-qt-imgfmt-{jpeg,mng,png} -tablet -system-libmng \
 		-system-libpng -ldl -lpthread -xft -platform linux-g++ -xplatform \
@@ -123,7 +123,7 @@ src_install() {
 		ln -s $x.1.0 $x.1
 		ln -s $x.1 $x
 	done
-	
+
 	# version symlinks - 3.1.2->3.1->3->.so
 	ln -s libqt-mt.so.3.1.2 libqt-mt.so.3.1
 	ln -s libqt-mt.so.3.1 libqt-mt.so.3
