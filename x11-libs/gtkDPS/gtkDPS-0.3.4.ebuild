@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.6 2004/05/18 20:13:19 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.7 2004/05/18 20:37:51 kugelfang Exp $
 
 inherit gnuconfig
 
@@ -20,7 +20,7 @@ DEPEND="virtual/glibc
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
-	if use alpha; then
+	if [ "`use alpha`" ] || [ "`use amd64`" ]; then
 		gnuconfig_update || die "gnuconfig_update failed"
 	fi
 
