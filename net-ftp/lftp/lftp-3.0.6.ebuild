@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.6.ebuild,v 1.3 2004/06/24 22:46:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.6.ebuild,v 1.4 2004/07/01 22:16:04 eradicator Exp $
 
 IUSE="ssl socks5 nls"
 
@@ -19,7 +19,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	nls? ( sys-devel/gettext )
 	alpha? ( dev-lang/perl )
 	alpha? ( >=sys-apps/sed-4 )
-	virtual/glibc
+	virtual/libc
 	sys-libs/readline
 	socks5? ( sys-libs/pam )
 	sys-apps/gawk
@@ -29,7 +29,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 RDEPEND="nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	virtual/glibc
+	virtual/libc
 	sys-libs/readline
 	socks5? ( sys-libs/pam )
 	socks5? ( >=net-misc/dante-1.1.12 )"

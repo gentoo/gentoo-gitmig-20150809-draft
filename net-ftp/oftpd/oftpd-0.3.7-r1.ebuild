@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r1.ebuild,v 1.4 2004/06/24 22:47:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r1.ebuild,v 1.5 2004/07/01 22:16:21 eradicator Exp $
 
 DESCRIPTION="Secure, small, anonymous only ftpd"
 HOMEPAGE="http://www.time-travellers.org/oftpd"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc arm ~ppc64"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	# local myconf

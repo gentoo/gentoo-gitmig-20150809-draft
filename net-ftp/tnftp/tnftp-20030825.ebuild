@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/tnftp-20030825.ebuild,v 1.7 2004/06/24 22:48:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/tnftp-20030825.ebuild,v 1.8 2004/07/01 22:16:59 eradicator Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NetBSD FTP client with several advanced features"
 SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/misc/${PN}/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.netbsd.org/pub/NetBSD/misc/${PN}/"
-DEPEND="virtual/glibc >=sys-libs/ncurses-5.1"
+DEPEND="virtual/libc >=sys-libs/ncurses-5.1"
 
 SLOT="0"
 LICENSE="as-is"
