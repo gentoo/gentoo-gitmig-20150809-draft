@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.35 2002/11/23 20:19:48 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.36 2002/11/30 19:40:34 danarmak Exp $
+
+  30 Nov 2002; Dan Armak <danarmak@gentoo.org> qt-3.1.0-r1.ebuild  :
+
+  Fix bug #11144 - allow write access to $QTBASE/etc/settings because qt
+  wants to create a lock file for qtrc in that directory.
 
 *qt-3.1.0-r1 (23 Nov 2002)
 
