@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hpasm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/ChangeLog,v 1.5 2004/05/30 07:17:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/ChangeLog,v 1.6 2004/06/06 11:05:10 dragonheart Exp $
+
+  06 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  hpasm-6.30.0.12-r1.ebuild:
+  QA - IUSE fix
 
   30 May 2004; Robin H. Johnson <robbat2@gentoo.org>
   hpasm-6.30.0.12-r1.ebuild:
