@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/e-fancylauncher
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e-fancylauncher/ChangeLog,v 1.1 2002/12/16 05:41:16 lostlogic Exp $
+
+*e-fancylauncher-0.7 ( 15 Dec 2002 )
+
+  15 Dec 2002; Brandon Low <lostlogic@gentoo.org> e-fancylauncher-0.7.ebuild :
+ 
+  Initial ebuild thanks to ME because this is the one epplet outside of
+  epplet-base that I use.
