@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.2.1.ebuild,v 1.1 2004/09/08 19:08:32 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.2.1.ebuild,v 1.2 2004/09/08 19:54:03 stuart Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="net-misc/nx-x11
 S=${WORKDIR}/freenx-0.2-1
 
 pkg_setup () {
-	enewuser nx -1 /usr/NX/bin/nxserver /usr/NX/home/nx
+	enewuser nx -1 /bin/false /usr/NX/home/nx
 }
 
 src_unpack() {
@@ -80,4 +80,9 @@ EOF
 	echo -n "127.0.0.1" ${D}${NX_SSH_DIR}/known_hosts
 
 	chown -R nx:root ${D}/usr/NX
+
+}
+
+pkg_postinst () {
+	usermod -s /usr/NX/bin/nxserver nx || die "Unable to set login shell of nx user!!"
 }
