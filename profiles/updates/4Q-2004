@@ -220,3 +220,4 @@ move app-sci/libgdgeda sci-libs/libgdgeda
 move app-sci/libgeda sci-libs/libgeda
 move app-sci/libnova sci-libs/libnova
 move app-sci/primegen sci-libs/primegen
+move app-sci/udunits sci-libs/udunits
