@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.19.ebuild,v 1.1 2003/10/01 17:39:52 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.19.ebuild,v 1.2 2003/10/12 15:50:41 max Exp $
 
 inherit perl-module
 
@@ -129,6 +129,13 @@ make_config() {
 	[ "`has tv_check ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
 	# Enable CGI support
 	[ "`has tv_pick_cgi ${XMLTV_OPTS}`" ] && echo "yes" || echo "no"
+}
+
+src_unpack() {
+	unpack ${A} && cd "${S}"
+	if [ "`best_version '>=dev-perl/ExtUtils-MakeMaker-6.11'`" -o "`best_version '>=dev-lang/perl-5.8.1_pre'`" ] ; then
+		epatch "${FILESDIR}/${P}-newer-MM.patch"
+	fi
 }
 
 src_compile() {

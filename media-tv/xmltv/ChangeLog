@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.6 2003/10/01 17:39:52 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.7 2003/10/12 15:50:41 max Exp $
+
+  12 Oct 2003; Max Kalika <max@gentoo.org> xmltv-0.5.19.ebuild,
+  files/xmltv-0.5.19-newer-MM.patch:
+  Fix sandbox problems with newer perl/MakeMaker
 
 *xmltv-0.5.19 (01 Oct 2003)
 
