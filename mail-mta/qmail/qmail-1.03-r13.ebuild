@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r13.ebuild,v 1.3 2004/07/01 19:53:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r13.ebuild,v 1.4 2004/07/14 16:53:59 agriffis Exp $
 
 inherit gcc eutils fixheadtails
 
@@ -53,8 +53,6 @@ RDEPEND="!virtual/mta
 
 PROVIDE="virtual/mta
 	 virtual/mda"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 
@@ -423,4 +421,3 @@ pkg_config() {
 		einfo "cat signed_req.pem >> /var/qmail/control/servercert.pem"
 	fi
 }
-

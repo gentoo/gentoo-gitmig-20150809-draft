@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r8.ebuild,v 1.3 2004/07/01 19:53:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r8.ebuild,v 1.4 2004/07/14 16:53:59 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A modern replacement for sendmail which uses maildirs"
 HOMEPAGE="http://www.qmail.org/
 	http://www.jedi.claranet.fr/qmail-tuning.html
@@ -32,6 +31,7 @@ PROVIDE="virtual/mta"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc alpha"
+IUSE=""
 
 src_unpack() {
 
