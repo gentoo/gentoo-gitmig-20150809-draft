@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1.ebuild,v 1.11 2003/09/10 01:49:07 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1.ebuild,v 1.12 2003/11/15 03:21:54 seemant Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -38,7 +38,7 @@ RDEPEND="virtual/glibc
 	virtual/x11
 	>=dev-java/java-config-0.1.3"
 DEPEND="${RDEPEND}
-	sys-apps/cpio
+	app-arch/cpio
 	app-arch/zip
 	app-arch/unzip
 	>=virtual/jdk-1.4"
