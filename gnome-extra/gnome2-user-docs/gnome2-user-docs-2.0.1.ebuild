@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/gnome2-user-docs-2.0.1.ebuild,v 1.4 2002/12/15 10:44:20 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/gnome2-user-docs-2.0.1.ebuild,v 1.5 2003/02/13 12:20:21 vapier Exp $
 
 
 DESCRIPTION="end user documentation for Gnome2 "
