@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.18 2005/02/03 05:53:05 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.19 2005/03/24 22:05:57 luckyduck Exp $
+
+  24 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -sun-jre-bin-1.4.2.06.ebuild:
+  removed vulnerable version, GLSA 200503-28
 
   02 Feb 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   sun-jre-bin-1.4.2.07.ebuild:
