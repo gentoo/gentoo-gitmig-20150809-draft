@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# solar@gentoo.org (Aug 21 2003)
+# uses old libnet and may contain secuirty hole.
+<=net-analyzer/hogwash-0.4
+
 # scandium@gentoo.org (20 Aug 2003)
 # Final testing prior to stable.
 >=sys-apps/portage-2.0.49_pre19
@@ -693,3 +697,4 @@ app-misc/todo-manager-bronze
 # agriffis@gentoo.org 29 Jul 2003
 # mask nforce-net-1.0.0261 for bug 24815
 =net-misc/nforce-net-1.0.0261*
+
