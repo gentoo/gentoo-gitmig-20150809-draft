@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/TwistedDocs
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/TwistedDocs/ChangeLog,v 1.1 2003/10/27 08:21:54 lordvan Exp $
+
+*Twisted-1.1.0 (27 Oct 2003)
+  27 Oct 2003; Thomas Raschbacher <lordvan@gentoo.org> TwistedDocs-1.1.0.ebuild:
+  initial Import
+  (docs were in dev-python/twisted before)
