@@ -458,7 +458,8 @@ def merge(mycategory,mypackage,mystart):
 			myvirtual.write(mycategory+"/"+mypackage+"\n")
 			myvirtual.close()
 	#end provides/virtual package code
-	
+	#update environment settings, library paths
+	env_update()	
 	print
 	print ">>>",mypackage,"merged."
 	print
