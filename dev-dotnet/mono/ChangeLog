@@ -1,18 +1,25 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.35 2004/11/04 02:29:27 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.36 2004/12/13 19:46:34 latexer Exp $
 
-  03 Nov 2004; <peter@gentoo.org> -mono-0.30.1.ebuild, -mono-0.30.ebuild,
-  -mono-0.31.ebuild, -mono-0.91.ebuild, -mono-0.95.ebuild, -mono-0.96.ebuild,
-  -mono-0.97.ebuild, -mono-1.0.ebuild:
+*mono-1.0.5 (13 Dec 2004)
+
+  13 Dec 2004; Peter Johanson <latexer@gentoo.org> +mono-1.0.5-r1.ebuild,
+  +mono-1.0.5.ebuild:
+  Bump.
+
+  03 Nov 2004; Peter Johanson <latexer@gentoo.org> -mono-0.30.1.ebuild,
+  -mono-0.30.ebuild, -mono-0.31.ebuild, -mono-0.91.ebuild, -mono-0.95.ebuild,
+  -mono-0.96.ebuild, -mono-0.97.ebuild, -mono-1.0.ebuild:
   Long needed house cleaning.
 
 *mono-1.0.4 (03 Nov 2004)
 
-  03 Nov 2004; <peter@gentoo.org> +mono-1.0.4-r1.ebuild, +mono-1.0.4.ebuild:
+  03 Nov 2004; Peter Johanson <latexer@gentoo.org> +mono-1.0.4-r1.ebuild,
+  +mono-1.0.4.ebuild:
   Bump.
 
-  29 Oct 2004; <peter@gentoo.org> mono-0.28.ebuild, mono-0.30.1.ebuild,
+  29 Oct 2004; Peter Johanson <latexer@gentoo.org> mono-0.28.ebuild, mono-0.30.1.ebuild,
   mono-0.30.ebuild, mono-0.31.ebuild, mono-0.91.ebuild, mono-0.95.ebuild,
   mono-0.96.ebuild, mono-0.97.ebuild, mono-1.0.1-r1.ebuild,
   mono-1.0.1-r2.ebuild, mono-1.0.1.ebuild, mono-1.0.2-r1.ebuild,
@@ -20,12 +27,13 @@
   Change the masked mono to include a fix for NPTL systems available for
   gcc-3.4. Please test. Also fixed the LICENSE syntax.
 
-  23 Sep 2004; <peter@gentoo.org> mono-1.0.2.ebuild:
+  23 Sep 2004; Peter Johanson <latexer@gentoo.org> mono-1.0.2.ebuild:
   Fix a small typo.
 
 *mono-1.0.2 (22 Sep 2004)
 
-  22 Sep 2004; <peter@gentoo.org> +mono-1.0.2-r1.ebuild, +mono-1.0.2.ebuild:
+  22 Sep 2004; Peter Johanson <latexer@gentoo.org> +mono-1.0.2-r1.ebuild,
+  +mono-1.0.2.ebuild:
   Bump. Includes both a non-NPTL enabled and NPTL version. NPTL version masked
   pending a resolution to issues in GC.
 
