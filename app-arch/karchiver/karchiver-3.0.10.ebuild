@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/karchiver-3.0.10.ebuild,v 1.5 2005/02/05 20:50:08 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/karchiver-3.0.10.ebuild,v 1.6 2005/02/07 18:27:26 gustavoz Exp $
 
 inherit kde eutils
 need-kde 3.1
@@ -10,7 +10,7 @@ HOMEPAGE="http://perso.wanadoo.fr/coquelle/karchiver/"
 SRC_URI="http://perso.wanadoo.fr/coquelle/karchiver/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 SLOT="0"
 IUSE=""
 
