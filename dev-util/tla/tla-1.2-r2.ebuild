@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.2-r2.ebuild,v 1.3 2004/06/25 02:48:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.2-r2.ebuild,v 1.4 2004/07/15 00:13:08 agriffis Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ HOMEPAGE="http://arch.quackerhead.com/~lord/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 alpha ppc hppa sparc ~amd64"
+IUSE=""
 
 DEPEND="sys-apps/coreutils
 	>=net-misc/neon-0.24.6

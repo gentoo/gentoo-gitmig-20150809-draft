@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-6.4-r2.ebuild,v 1.11 2004/06/25 02:48:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-6.4-r2.ebuild,v 1.12 2004/07/15 00:12:28 agriffis Exp $
 
 
-S=${WORKDIR}/${P}
 DESCRIPTION="TkCVS"
 SRC_URI="http://www.twobarleycorns.net/${P}.tar.gz"
 HOMEPAGE="http://www.twobarleycorns.net/tkcvs.html"
@@ -11,6 +10,7 @@ HOMEPAGE="http://www.twobarleycorns.net/tkcvs.html"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
+IUSE=""
 
 RDEPEND=">=dev-lang/tk-8.1.1"
 
