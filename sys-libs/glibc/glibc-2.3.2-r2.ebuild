@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r2.ebuild,v 1.9 2003/07/31 20:19:23 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r2.ebuild,v 1.10 2003/08/09 23:02:32 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -200,10 +200,10 @@ pkg_setup() {
 		die "GCC too old"
 	fi
 
+	echo
+
 	if use_nptl
 	then
-		echo
-
 		# The use_nptl should have already taken care of kernel version,
 		# arch and CHOST, so now just check if we can find suitable kernel
 		# source tree or headers ....
@@ -219,9 +219,38 @@ pkg_setup() {
 		else
 			echo "yes"
 		fi
-		
+	fi
+
+	if [ "$(KV_to_int $(uname -r))" -gt "`KV_to_int '2.5.68'`" ]
+	then
+		local KERNEL_HEADERS="$(get_KHV "`KV_to_int ${MIN_NPTL_KV}`")"
+
+		einfon "Checking kernel headers for broken sysctl.h ... "
+		if ! gcc -I"${KERNEL_HEADERS}" \
+		         -c ${FILESDIR}/test-sysctl_h.c -o ${T}/test1.o &> /dev/null 
+		then
+			echo "yes"
+			echo
+			eerror "Your version of:"
+			echo
+			eerror "  ${KERNEL_HEADERS}/linux/sysctl.h"
+			echo
+			eerror "is broken (from a user space perspective).  Please apply"
+			eerror "the following patch:"
+			echo
+			eerror "*******************************************************"
+			cat ${FILESDIR}/fix-sysctl_h.patch
+			eerror "*******************************************************"
+			die "Broken linux/sysctl.h header included in kernel sources!"
+		else
+			echo "no"
+		fi
+	fi
+	
+	if use_nptl
+	then
 		einfon "Checking gcc for __thread support ... "
-		if ! gcc -c ${FILESDIR}/test-__thread.c -o ${T}/test.o &> /dev/null
+		if ! gcc -c ${FILESDIR}/test-__thread.c -o ${T}/test2.o &> /dev/null
 		then
 			echo "no"
 			echo
