@@ -1,0 +1,18 @@
+# ChangeLog for dev-java/maven
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven/ChangeLog,v 1.1 2003/03/17 10:13:05 absinthe Exp $
+
+*maven-1.0_beta8 (17 Mar 2003)
+
+  17 Mar 2003; root <root@gentoo.org> maven-1.0_beta8.ebuild, files/25maven:
+  Initial import.
+  
+  Thanks to Stéphane Mor <stephanemor@yahoo.fr> in bug # 15669 for the
+  submission.
+  
+  Maven is a Java project management and project comprehension tool. Maven is
+  based on the concept of a project object model (POM) in that all the artifacts
+  produced by Maven are a result of consulting a well defined model for your
+  project. Builds, documentation, source metrics, and source cross-references
+  are all controlled by your POM.
+
