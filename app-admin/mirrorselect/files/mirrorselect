@@ -8,6 +8,7 @@
 # dynamic setup once the lists are in place to pull from
 
 MIRROR_LIST='
+ftp://ftp.ibiblio.org/pub/linux/distributions/gentoo (USA)
 ftp://ftp.gtlib.cc.gatech.edu/pub/gentoo (USA)
 http://gentoo.oregonstate.edu (USA)
 ftp://ftp.oregonstate.edu/pub/gentoo (USA/ftp)
@@ -61,6 +62,13 @@ $MIRROR_LIST 2>&1 | sed "s:\"::g"`
 if [ ! "`echo $MIRRORS`" ] ; then
 	echo "no mirrors selected, exiting"
 	exit 1
+fi
+
+# sanity check if screen is too small, thanks SpanKY
+
+if [ "`echo $MIRRORS | grep \"Can't make\"`" ] ; then
+        echo "Error, screen too small.  Please use at least 80x24 terminal"
+        exit 1
 fi
 
 echo "Selected: $MIRRORS"

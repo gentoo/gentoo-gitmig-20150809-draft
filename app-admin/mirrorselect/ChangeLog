@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/mirrorselect
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mirrorselect/ChangeLog,v 1.4 2003/02/12 02:25:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mirrorselect/ChangeLog,v 1.5 2003/02/12 03:04:03 gerk Exp $
+
+*mirrorselect-0.1-r2 (10 Feb 2003)
+  10 Feb 2003; Mark Guertin <gerk@gentoo.org> mirrorselect-0.1-r2.ebuild:
+  Rev bump.  Added a santify check for small screens.  Older version would 
+  cause garbage to be added to make.conf.  Thanks SpanKY.
 
   02 Feb 2003; Mark Guertin <gerk@gentoo.org> mirrorselect-0.1-r1.ebuild:
   updated to stable for ppc + x86 (have tested quite a bit).
