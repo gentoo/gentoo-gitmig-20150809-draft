@@ -4,8 +4,8 @@ MD5 72ea857aaf8d13b3acb6b9fb1f122788 eel-2.2.1.ebuild 848
 MD5 6f956881a2a70337b54667a6244789c1 eel-2.0.7.ebuild 1066
 MD5 837e5eadd0b1fa6844bbee44795ae4c3 eel-2.2.3.ebuild 819
 MD5 eb75d8084e2fc6f5197efdf04dbe7822 eel-1.0.2-r3.ebuild 1080
-MD5 17763d99914d4263c405455bc9133d2e ChangeLog 4734
-MD5 979c475334c99f0ff8a04ad8c0f5045b eel-2.4.1.ebuild 820
+MD5 7216c9198c20f71108f825eb3f0a13bc ChangeLog 4839
+MD5 fa595ddb32abecefb9eaccc907d3099e eel-2.4.1.ebuild 821
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 dfb3561d6f64db4ba7da384d2166b01a files/digest-eel-2.0.7 62
 MD5 c4c547b9e2e5bf4867e8df946faff813 files/digest-eel-2.2.1 62
