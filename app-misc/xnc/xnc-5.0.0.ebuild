@@ -1,27 +1,28 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xnc/xnc-5.0.0.ebuild,v 1.1 2003/01/08 21:33:21 bass Exp $
+# Distributed under the terms of the GNU General Public Licensev2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xnc/xnc-5.0.0.ebuild,v 1.2 2003/08/05 18:26:44 vapier Exp $
 
-S="${WORKDIR}/${P}"
-DESCRIPTION="A ile manager for X Window system very similar to Norton Commander, with a lot of features."
-SRC_URI="http://xnc.dubna.su/src-5/${P}.src.tar.gz"
+DESCRIPTION="file manager for X Window system very similar to Norton Commander"
 HOMEPAGE="http://xnc.dubna.su/"
-LICENSE="GPL-2"
-DEPEND="x11-base/xfree"
+SRC_URI="http://xnc.dubna.su/src-5/${P}.src.tar.gz"
 
-KEYWORDS="x86"
+LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
+
+DEPEND="x11-base/xfree"
 
 src_compile() {
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+		--mandir=/usr/share/man \
+		|| die "./configure failed"
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog INSTALL LICENSE README TODO
 }
