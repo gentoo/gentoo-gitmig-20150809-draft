@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kxmleditor
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/ChangeLog,v 1.8 2004/03/10 23:06:04 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/ChangeLog,v 1.9 2004/03/21 18:03:25 weeve Exp $
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> kxmleditor-1.0.0.ebuild:
+  Added ~sparc keyword.
 
   11 Mar 2004; Dominik Stadler <centic@gentoo.org> kxmleditor-1.0.0.ebuild,
   metadata.xml:
