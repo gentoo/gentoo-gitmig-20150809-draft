@@ -1,6 +1,24 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.51 2003/11/13 09:01:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.52 2003/11/22 15:13:12 liquidx Exp $
+
+*python-2.3.2-r2 (22 Nov 2003)
+
+  22 Nov 2003; Alastair Tse <liquidx@gentoo.org> python-2.3.2-r2.ebuild,
+  files/python-updater:
+  ucs4 is now default. if you previously had python-2.3 merged, you'll need to
+  update your packages again. (sorry, that is the price for running p.mask'ed
+  versions). to update your python packages if you had python-2.3 installed, 
+  run :
+  
+  /usr/portage/dev-lang/python/files/python-updater -o 2.3
+  
+  if you are upgrading from python-2.2, then you will need to run:
+  
+  /usr/portage/dev-lang/python/files/python-updater
+  
+  python-updater script also modified to have more robust command-line
+  parsing. hopefully this will be the last revision till we can go ~x86.
 
   13 Nov 2003; Alastair Tse <liquidx@gentoo.org> python-2.3.2-r1.ebuild:
   fix python-config install for python-2.3
