@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/eq-xmms-0.6-r1.ebuild,v 1.1 2004/07/14 11:07:48 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/eq-xmms-0.6-r1.ebuild,v 1.2 2004/09/01 17:34:43 eradicator Exp $
 
 IUSE=""
 
@@ -9,11 +9,10 @@ inherit eutils
 DESCRIPTION="EQU is a realtime graphical equalizer effect plugin that will equalize almost everything that you play through XMMS, not just the MP3s"
 HOMEPAGE="http://equ.sourceforge.net/"
 SRC_URI="mirror://sourceforge/equ/${P}.tar.gz"
-RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="x86 amd64 sparc ~ppc"
 
 RDEPEND="media-sound/xmms"
 DEPEND="${RDEPEND}
