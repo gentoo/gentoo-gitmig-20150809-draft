@@ -1,14 +1,24 @@
-MD5 954483ff71f4f7dd6993ebab4f105f74 ChangeLog 12329
-MD5 0c7e1c065d3ff356793aa700b36c3380 metadata.xml 309
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9134b52f7472d021ba966b661f01b655 xscreensaver-4.14-r2.ebuild 4663
+MD5 ddbc3b2867e92a27835c18e4d64e42c6 xscreensaver-4.16.ebuild 4689
+MD5 ac729adfdc927776adc9ce8759f4b84a ChangeLog 12420
+MD5 0c7e1c065d3ff356793aa700b36c3380 metadata.xml 309
 MD5 b3e8140cca9c83f25c0d2642ebcfa5ac xscreensaver-4.15.ebuild 4509
-MD5 61afba9edeba531fde9f34ffe3cf7e0c xscreensaver-4.16.ebuild 4691
-MD5 a7b4dde4c87b97301e1a02c7ddc2dfc9 files/digest-xscreensaver-4.14-r2 70
 MD5 f6238a0e5ee2c4c61bbec5441e439750 files/digest-xscreensaver-4.15 70
 MD5 0722c17c948e57fa839a1c5acbdc5f22 files/digest-xscreensaver-4.16 70
-MD5 dc4579312065187f296cd6fdeba96664 files/xscreensaver-4.10-norpm.patch 1266
 MD5 8bd9730fb1f84b69efac29fab28d0db2 files/xscreensaver-4.14-analogtv_tmp.patch 419
-MD5 23c5d8085eb70d6dc6168857a31cc284 files/xscreensaver-4.14-fortune.patch 348
+MD5 dc4579312065187f296cd6fdeba96664 files/xscreensaver-4.10-norpm.patch 1266
 MD5 18988e2c62fe964e00bc98c251dba3ee files/xscreensaver-4.14-icc.patch 8126
+MD5 a7b4dde4c87b97301e1a02c7ddc2dfc9 files/digest-xscreensaver-4.14-r2 70
+MD5 23c5d8085eb70d6dc6168857a31cc284 files/xscreensaver-4.14-fortune.patch 348
 MD5 cd227d954dff63ea80266d1db213b15f files/xscreensaver-4.16-nsfw.patch 1586
 MD5 6eb40b28a36f889d0f1919cdbf160ef7 files/pam.d/xscreensaver 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjoLiCHk4+ZoBpvsRAvbMAKCaC7OrCQLm4wyYsRg31VdpBrPSOgCeNJdZ
+A0hRqnM0o9M2B8XzcW4ioCo=
+=qaKD
+-----END PGP SIGNATURE-----
