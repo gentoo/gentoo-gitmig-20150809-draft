@@ -1,6 +1,24 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.82 2004/08/12 21:42:49 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.83 2004/08/15 02:15:47 gregkh Exp $
+
+*gentoo-dev-sources-2.6.8 (14 Aug 2004)
+
+  14 Aug 2004; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +gentoo-dev-sources-2.6.8.ebuild:
+  initial 2.6.8 release - contains the 2.6.8.1 patch, so don't worry. - had to
+  remove the x86-64 patchset, am waiting for an updated one of these to
+  
+  mark this stable on x86-64. - had to remove some sparc Kconfig patches. If any
+  sparc developer wants to
+  
+  add the proper ones back to the release, feel free to. - Removed bootsplash
+  patch, am waiting for bootsplash-nextgen release to add
+  
+  this back. - Removed supermount patch, am told that udev makes this obsolete
+  now. Also,
+  
+  it didn't apply to 2.6.8 anymore, so that made for a good reason to drop it :)
 
 *gentoo-dev-sources-2.6.7-r14 (12 Aug 2004)
 
