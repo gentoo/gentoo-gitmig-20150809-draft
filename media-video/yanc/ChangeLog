@@ -1,0 +1,10 @@
+# ChangeLog for media-video/yanc
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/yanc/ChangeLog,v 1.1 2003/06/15 05:58:25 seemant Exp $
+
+*yanc-0.2.0 (14 Jun 2003)
+
+  14 Jun 2003; Seemant Kulleen <seemant@gentoo.org> yanc-0.2.0.ebuild:
+  Yet Another Nv Configurator. Ebuild submission by: Baptiste SIMON
+  <beta@e-glop.net> in bug #14226
+
