@@ -1,8 +1,14 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.21 2003/10/16 20:40:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.22 2003/10/18 00:50:21 kumba Exp $
+
 
 *file-4.06 (17 Oct 2003)
+
+  17 Oct 2003; Joshua Kinard <kumba@gentoo.org> file-4.05.ebuild,
+  file-4.06.ebuild:
+  Added "cd ${S}" lines to file-4.05 and file-4.06, as well as removed the
+  uneeded sed statement from file-4.06, as the patch level is properly set now.
 
   17 Oct 2003; Martin Holzer <mholzer@gentoo.org> file-4.06.ebuild:
   Version bumped.
