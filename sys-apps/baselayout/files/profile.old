@@ -37,7 +37,7 @@ fi
 # Set Var for GNOME
 
 if [ -d /opt/gnome ] ; then
-  export GNOMEDIR="/opt/gnome"
+  export GNOME_PATH="/opt/gnome"
   PATH=$PATH:/opt/gnome/bin:/opt/gnome/sbin
   MANPATH=$MANPATH:/opt/gnome/man
   INFODIR=$INFODIR:/opt/gnome/info
