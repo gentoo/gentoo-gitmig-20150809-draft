@@ -1,0 +1,11 @@
+--- pam_login-3.17/src/login.c	2005-02-25 13:11:35.000000000 +0200
++++ pam_login-3.17.az/src/login.c	2005-02-25 13:13:27.000000000 +0200
+@@ -930,7 +930,7 @@
+       int num_contexts = get_ordered_context_list (username, 0, &contextlist);
+       if (num_contexts > 0)
+ 	{
+-#if 1
++#if 0
+ 	  /* Allow the user to select the context, if more than
+ 	     one exist.  */
+ 	  ret = query_user_context (contextlist, &user_context);

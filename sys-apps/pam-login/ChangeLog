@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/pam-login
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.43 2004/11/30 01:16:09 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.44 2005/02/25 15:05:16 azarah Exp $
+
+*pam-login-3.17 (25 Feb 2005)
+
+  25 Feb 2005; Martin Schlemmer <azarah@gentoo.org> +files/login.pamd,
+  +files/pam-login-3.17-query_user_context.patch, +pam-login-3.17.ebuild:
+  Update version. Add pam.d login file. Add pam_console comments to login
+  pam.d file. DEPEND on shadow-4.0.7-r1, as that do no longer install the
+  login pam.d file.
 
   29 Nov 2004; Mike Frysinger <vapier@gentoo.org> pam-login-3.14.ebuild:
   Doesnt actually require shadow #67815.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.14.ebuild,v 1.21 2005/02/25 15:05:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.17.ebuild,v 1.1 2005/02/25 15:05:16 azarah Exp $
 
 inherit gnuconfig eutils
 
@@ -16,12 +16,14 @@ SRC_URI="ftp://ftp.suse.com/pub/people/kukuk/pam/${MY_PN}/${MY_PN}-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="livecd nls selinux"
 
 DEPEND="virtual/libc
 	sys-libs/pam
+	>=sys-apps/shadow-4.0.7-r1
 	selinux? ( sys-libs/libselinux )"
+# We need sys-apps/shadow-4.0.7-r1, as that no longer installs login.pamd
 
 src_unpack() {
 	unpack ${A}
@@ -30,14 +32,14 @@ src_unpack() {
 
 	# Do not warn on inlining for gcc-3.3, bug #21213
 	epatch ${FILESDIR}/${PN}-3.11-gcc33.patch
-	epatch ${FILESDIR}/pam-login-3.11-lastlog-fix.patch
+	epatch ${FILESDIR}/${PN}-3.11-lastlog-fix.patch
 
 	# enable query_user_context selinux code (only affects selinux)
 	# but we dont want it on the selinux livecd, since it can
 	# cause the login to timeout if the user isnt ready
-	use livecd || epatch ${FILESDIR}/pam-login-3.14-query_user_context.diff
+	use livecd && epatch ${FILESDIR}/${PN}-3.17-query_user_context.patch
 
-	use ppc64 && epatch ${FILESDIR}/pam_login-Werror-off-ppc64.patch
+	use ppc64 && epatch ${FILESDIR}/${PN/-/_}-Werror-off-ppc64.patch
 	# Fix configure scripts to recognize linux-mips
 	# (imports updated config.sub and config.guess)
 	gnuconfig_update
@@ -56,8 +58,7 @@ src_compile() {
 src_install() {
 	einstall rootexecbindir=${D}/bin || die
 
-	# We use the one from shadow
-	rm -rf ${D}/etc/pam.d
+	newpamd ${FILESDIR}/login.pamd login
 
 	insinto /etc
 	insopts -m0644
