@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.17 2005/01/26 14:58:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.18 2005/01/29 15:42:05 luckyduck Exp $
+
+  29 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> dmalloc-5.4.2.ebuild:
+  added ~amd64 to KEYWORDS.
 
   26 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> dmalloc-5.4.2.ebuild:
   Stable on sparc
