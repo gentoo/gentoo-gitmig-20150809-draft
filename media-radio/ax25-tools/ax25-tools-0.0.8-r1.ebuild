@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/ax25-tools-0.0.8-r1.ebuild,v 1.6 2004/10/18 12:28:25 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/ax25-tools-0.0.8-r1.ebuild,v 1.7 2005/03/12 19:51:29 rphillips Exp $
+
+inherit eutils check-kernel
 
 DESCRIPTION="Basic AX.25 (Amateur Radio) administrative tools and daemons"
 HOMEPAGE="http://ax25.sourceforge.net/"
@@ -19,6 +21,11 @@ DEPEND="virtual/libc
 src_compile() {
 	# If X is disabled, do not build smdiag
 	local COMPFLAGS=""
+
+	if is_2_6_kernel ; then
+		epatch ${FILESDIR}/ax25-tools-soundmodem.patch
+	fi
+
 	use X || COMPFLAGS="--without-x"
 	econf ${COMPFLAGS} || die
 	emake || die
