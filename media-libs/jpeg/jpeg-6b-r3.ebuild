@@ -1,20 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.23 2004/05/07 19:21:03 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.24 2004/05/28 02:45:21 vapier Exp $
 
 inherit gnuconfig flag-o-matic
 
 MY_P=${PN}src.v${PV}
 DESCRIPTION="Library to load, handle and manipulate images in the JPEG format"
-SRC_URI="ftp://ftp.uu.net/graphics/jpeg/${MY_P}.tar.gz"
 HOMEPAGE="http://www.ijg.org/"
+SRC_URI="ftp://ftp.uu.net/graphics/jpeg/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ppc64 s390"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+IUSE=""
 
 RDEPEND="virtual/glibc"
-
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
@@ -24,18 +24,11 @@ src_unpack() {
 	# allow /etc/make.conf's HOST setting to apply
 	cd ${S}
 	sed -i 's/ltconfig.*/& $CHOST/' configure
-	use alpha && gnuconfig_update
-	use hppa && gnuconfig_update
-	use amd64 && gnuconfig_update
-	use ia64 && gnuconfig_update
-	use ppc64 && gnuconfig_update
-	use s390 && gnuconfig_update
+	gnuconfig_update
 }
 
 src_compile() {
-	replace-flags k6-3 i586
-	replace-flags k6-2 i586
-	replace-flags k6 i586
+	replace-cpu-flags i586 k6 k6-2 k6-3
 
 	econf --enable-shared --enable-static || die "econf failed"
 
