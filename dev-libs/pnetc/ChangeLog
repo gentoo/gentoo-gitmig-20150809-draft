@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/pnetc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pnetc/ChangeLog,v 1.1 2003/02/24 19:50:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pnetc/ChangeLog,v 1.2 2003/04/19 21:34:58 scandium Exp $
+
+*pnetc-0.5.4 (19 Apr 2003)
+
+  19 Apr 2003; Rainer Groesslinger <scandium@gentoo.org> pnetc-0.5.4.ebuild:
+  Version bump to version 0.5.4, please see bug #18635
 
 *pnetc-0.5.0 (24 Feb 2003)
 
