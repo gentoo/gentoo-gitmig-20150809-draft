@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.5a.ebuild,v 1.3 2004/07/19 19:14:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.5a.ebuild,v 1.4 2004/07/21 16:24:05 mholzer Exp $
 
 inherit kernel-mod flag-o-matic eutils
 
@@ -34,7 +34,7 @@ KEYWORDS="x86 ~ppc -sparc amd64 ~alpha ~ia64"
 
 MY_P=${P/_rc/rc}
 SRC_URI="mirror://alsaproject/driver/${P}.tar.bz2"
-RESTRICT="nomirror" # nouserpriv is neccessary for 2.6.x kernels... Hopefully the ALSA guys will figure out another way to do this...
+# nouserpriv is neccessary for 2.6.x kernels... Hopefully the ALSA guys will figure out another way to do this...
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
