@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.79 2003/12/05 21:07:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.80 2003/12/16 21:25:42 robbat2 Exp $
+
+  16 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.15.ebuild,
+  mysql-4.0.16.ebuild:
+  move 4.0.16 and 4.0.15 to stable x86
 
   05 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> mysql-3.23.52-r1.ebuild,
   mysql-3.23.56.ebuild, mysql-3.23.57-r1.ebuild, mysql-3.23.57.ebuild,
