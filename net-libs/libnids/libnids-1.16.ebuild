@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.16.ebuild,v 1.15 2004/06/24 23:13:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.16.ebuild,v 1.16 2004/07/15 00:56:11 agriffis Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ DEPEND="net-libs/libpcap
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ~ppc sparc ~alpha"
+IUSE=""
 
 src_unpack () {
 	unpack ${A}
