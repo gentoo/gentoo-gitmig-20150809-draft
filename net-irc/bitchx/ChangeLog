@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.23 2003/07/05 21:39:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.24 2003/07/16 10:12:36 lu_zero Exp $
+
+  16 Jun 2003; Luca Barbato <lu_zero@gentoo.org> :
+  Applied the fix as suggested by Martin Lesser 
+  <gentoo@better-com.de> to make sure that the zvt
+  workaround works everywhere.
 
   05 Jun 2003; Luca Barbato <lu_zero@gentoo.org> :
   State clearly that you can have either gtkBitchX or 
