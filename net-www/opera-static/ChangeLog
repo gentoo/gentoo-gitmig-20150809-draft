@@ -1,9 +1,11 @@
 # ChangeLog for net-www/opera-static
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/ChangeLog,v 1.10 2003/02/12 08:52:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/ChangeLog,v 1.11 2003/05/28 23:18:09 agenkin Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+28 May 2003; Arcady Genkin <agenkin@gentoo.org> :
+opera-static is removed in favor of the unified opera ebuild 
+(net-www/opera).
+
 *opera-static-6.1 (31 Oct 2002)
 
   31 Oct 2002; Arcady Genkin <agenkin@gentoo.org> opera-static-6.1.ebuild :
