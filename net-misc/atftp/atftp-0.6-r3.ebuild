@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/atftp-0.6-r3.ebuild,v 1.2 2003/10/31 13:10:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/atftp-0.6-r3.ebuild,v 1.3 2004/01/27 00:33:43 zul Exp $
 
 inherit eutils
 
