@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.12 2003/03/03 10:21:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.13 2003/03/20 09:06:54 aliz Exp $
+
+*rxvt-2.7.8-r6 (20 Mar 2003)
+
+  20 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update. Added Redhat patch.
 
 *rxvt-2.7.9 (03 Mar 2003)
 
