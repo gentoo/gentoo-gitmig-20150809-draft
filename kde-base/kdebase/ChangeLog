@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.182 2005/02/22 02:36:41 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.183 2005/02/27 12:30:27 brix Exp $
+
+  27 Feb 2005; Henrik Brix Andersen <brix@gentoo.org>
+  kdebase-3.4.0_beta1.ebuild:
+  Dependency update: sys-apps/lm-sensors -> sys-apps/lm_sensors.
 
   21 Feb 2005; Hardave Riar <hardave@gentoo.org> kdebase-3.3.2-r1.ebuild:
   Stable on mips.
