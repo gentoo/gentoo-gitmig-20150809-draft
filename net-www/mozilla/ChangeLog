@@ -1,13 +1,23 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.80 2003/01/09 12:45:34 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.81 2003/01/19 14:28:54 azarah Exp $
 
+*mozilla-1.2.1-r5 (19 Jan 2003)
+
+  19 Jan 2003; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r5.ebuild :
+  Fix a memory leak when reloading images:
+ 
+    http://bugs.gentoo.org/show_bug.cgi?id=13667
+    http://bugzilla.mozilla.org/show_bug.cgi?id=179498
+  
   09 Jan 2003; Jack Morgan <jmorgan@gentoo.org> mozilla-1.2.1-r4.ebuild :
   Added sparc support with replace-flags (bug #13554 - thanks to Kumba)
 
   09 Jan 2003; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r4.ebuild :
   We set -O in ./configure to -O1, as -O2 cause crashes on startup ...
   (bug #13287)
+
+*mozilla-1.2.1-r4 (26 Dec 2002)
 
   26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r4.ebuild :
   Same as last -r3, just created to make sure we have all the fixes, and

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r3.ebuild,v 1.7 2002/12/26 01:41:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r5.ebuild,v 1.1 2003/01/19 14:28:54 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -11,6 +11,10 @@ inherit flag-o-matic gcc makeedit eutils nsplugins
 
 # Crashes on start when compiled with -fomit-frame-pointer
 filter-flags "-fomit-frame-pointer"
+
+# Sparc support ...
+replace-flags "-mcpu=ultrasparc" "-mcpu=v8 -mtune=v9"
+replace-flags "-mcpu=v9" "-mcpu=v8 -mtune=v9"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -34,6 +38,11 @@ filter-flags "-fomit-frame-pointer"
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
 
+# We set -O in ./configure to -O1, as -O2 cause crashes on startup ...
+# (bug #13287)
+export CFLAGS="${CFLAGS//-O?}"
+export CXXFLAGS="${CFLAGS//-O?}"
+
 EMVER="0.71.0"
 IPCVER="1.0.1"
 
@@ -54,7 +63,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-sou
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -178,6 +187,14 @@ src_unpack() {
 	# <azarah@gentoo.org> (30 Nov 2002)
 # Seem to cause lockups/segfaults - <azarah@gentoo.org> (8 Dec 2002)
 #	epatch ${FILESDIR}/${PV%\.*}/${P%\.*}-cutnpaste-limit-fix.patch.bz2
+
+	# Fix a memory leak when reloading images:
+	#
+	#   http://bugs.gentoo.org/show_bug.cgi?id=13667
+	#   http://bugzilla.mozilla.org/show_bug.cgi?id=179498
+	#
+	# <azarah@gentoo.org> (19 Jan 2003)
+	epatch ${FILESDIR}/${PV%\.*}/${P%\.*}-image-reload-memleak.patch
 
 	if [ -z "`use gtk2`" ]
 	then
@@ -457,7 +474,7 @@ src_compile() {
 		--with-java-supplement \
 		--with-pthreads \
 		--enable-extensions="${myext}" \
-		--enable-optimize="-O2" \
+		--enable-optimize="-O1" \
 		--with-default-mozilla-five-home=/usr/lib/mozilla \
 		${myconf} || die
 
@@ -734,3 +751,6 @@ pkg_postrm() {
 	fi
 }
 
+# Sparc support ...
+replace-flags "-mcpu=ultrasparc" "-mcpu=v8"
+replace-flags "-mcpu=v9" "-mcpu=v8"
