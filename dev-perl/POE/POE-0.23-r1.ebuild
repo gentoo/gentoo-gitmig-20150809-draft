@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.23-r1.ebuild,v 1.4 2003/02/13 11:17:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.23-r1.ebuild,v 1.5 2003/03/25 22:07:35 seemant Exp $
 
-IUSE="gtk tcltk libwww curses"
+IUSE="gtk tcltk libwww ncurses"
 
 inherit perl-module
 
@@ -26,12 +26,10 @@ DEPEND="${DEPEND}
 	tcltk? ( dev-perl/perl-tk )
 	gtk? ( dev-perl/gtk-perl )
 	libwww? ( dev-perl/libwww-perl )
-	curses? ( dev-perl/Curses )"
+	ncurses? ( dev-perl/Curses )"
 
 mymake="/usr"
 
 src_compile() {
-
-        echo "n" | perl-module_src_compile 
-				}
-
+	echo "n" | perl-module_src_compile 
+}
