@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/nabi
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.6 2004/02/26 06:19:24 jayskwak Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.7 2004/03/14 02:11:32 mr_bones_ Exp $
+
+  13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> nabi-0.10.ebuild,
+  nabi-0.12.ebuild, nabi-0.9.ebuild:
+  Don't assign default to S; header fix
 
 *nabi-0.12 (26 Feb 2004)
   26 Feb 2004: Jay Kwak <jayskwak@gentoo.org> nabi-0.12.ebuild:

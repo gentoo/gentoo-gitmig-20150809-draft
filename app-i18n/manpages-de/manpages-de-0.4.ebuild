@@ -1,8 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-de/manpages-de-0.4.ebuild,v 1.5 2003/09/06 22:19:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-de/manpages-de-0.4.ebuild,v 1.6 2004/03/14 02:11:21 mr_bones_ Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A somewhat comprehensive collection of Linux german man page translations"
 echo ${MY_PN}/${P} >/tmp/manpages-de.txt
 SRC_URI="http://www.infodrom.org/projects/manpages-de/download/manpages-de-0.4.tar.gz"
