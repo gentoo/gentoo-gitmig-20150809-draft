@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/pam_krb5
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/ChangeLog,v 1.12 2005/01/01 12:36:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/ChangeLog,v 1.13 2005/01/28 20:13:13 rphillips Exp $
+
+*pam_krb5-20030601-r1 (28 Jan 2005)
+
+  28 Jan 2005; <rphillips@gentoo.org> pam_krb5-20030601-r1.ebuild:
+  Added Anthony Gorecki ebuild to fix compatibility with mit-krb5 and heimdal.
+  Tha package now supports both. See bug #75396
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Gentoo Technologies, Inc. -> Gentoo Foundation
