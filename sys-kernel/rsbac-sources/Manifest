@@ -2,8 +2,9 @@ MD5 fee9abc7797fef753c42454679bae9a7 metadata.xml 456
 MD5 2e6430f6994c795880314318b8ba02fb rsbac-sources-2.6.7-r11.ebuild 1918
 MD5 d4dcd5536cc304096310e85f410f20f2 rsbac-sources-2.6.9.ebuild 1473
 MD5 a5d5c29376a400066cc93be67f10e753 rsbac-sources-2.6.10.ebuild 1376
+MD5 0384a84f6faaaff306dbe18a59daa1b0 rsbac-sources-2.4.28-r2.ebuild 1221
+MD5 5fe05d7b8a3fe814c462fa47949bc639 ChangeLog 3772
 MD5 328797650996e7330596351c56cb059e rsbac-sources-2.4.28-r1.ebuild 1452
-MD5 69d45ed4c85fc2ffc43b9271f221f97f ChangeLog 3607
 MD5 a869ab037c7e264df5f8e899864f08e9 files/rsbac-sources-v1.2.3-3.patch 557
 MD5 b9a94233e1457787352e5f85e3e3582d files/rsbac-sources-2.4.28-dos_mem_disc.patch 2009
 MD5 305a7a9407bd311f3b58d0b7ae505506 files/rsbac-sources-v1.2.3-1.patch 1784
@@ -29,3 +30,4 @@ MD5 263a9f529a3b80e2c91340a73c0c5920 files/rsbac-sources-CAN-2004-0816.patch 144
 MD5 4d656fa3f3a47df751c0d78b64ed8353 files/rsbac-sources-CAN-2004-1069.patch 1761
 MD5 6451bd210935a3978fd3a3edac673591 files/rsbac-sources-iptables-dos.patch 389
 MD5 7f64a7f380b366f73204b42679f4bb2d files/digest-rsbac-sources-2.6.10 142
+MD5 ec2ece59690dfeadf50fc0b726137b60 files/digest-rsbac-sources-2.4.28-r2 207
