@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.4-r2.ebuild,v 1.3 2005/02/27 17:42:59 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.4-r3.ebuild,v 1.1 2005/02/27 17:42:59 kumba Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -10,8 +10,8 @@ SRC_URI="http://${PN}.sf.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 -mips ppc ~ppc64 s390 sh sparc x86"
-IUSE=""
+KEYWORDS="mips"
+IUSE="n32"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
 
@@ -34,10 +34,20 @@ src_unpack() {
 		Makefile || die "sed Makefile"
 	use ppc && sed -i -e 's:-m64::g' Makefile
 
-	# mips 2.4.23 headers (and 2.6.x) don't allow PAGE_SIZE to be defined in
-	# userspace anymore, so this patch instructs procps to get the
-	# value from sysconf().
-	use mips && epatch ${FILESDIR}/${PN}-mips-define-pagesize.patch
+	# mips patches
+	if use mips; then
+		# mips 2.4.23+ headers (and 2.6.x) don't allow PAGE_SIZE to be defined in
+		# userspace anymore, so this patch instructs procps to get the
+		# value from sysconf().
+		epatch ${FILESDIR}/${PN}-mips-define-pagesize.patch
+
+		# n32 isn't completly reliable of an ABI on mips64 at the current
+		# time.  Eventually, it will be, but for now, we need to make sure
+		# procps doesn't try to force it on us.
+		if ! use n32; then
+			epatch ${FILESDIR}/${PN}-mips-n32_isnt_usable_on_mips64_yet.patch
+		fi
+	fi
 }
 
 src_compile() {

@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.100 2005/02/01 23:27:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.101 2005/02/27 17:42:59 kumba Exp $
+
+*procps-3.2.4-r3 (27 Feb 2005)
+
+  27 Feb 2005; Joshua Kinard <kumba@gentoo.org>
+  +files/procps-mips-n32_isnt_usable_on_mips64_yet.patch,
+  procps-3.2.4-r2.ebuild, +procps-3.2.4-r3.ebuild, +procps-3.2.5-r1.ebuild,
+  procps-3.2.5.ebuild:
+  Added a patch to disable a check in proc/procps.h for n32 ABI on mips64
+  systems. This check set KLONG=8, and broke several mips64 systems running o32
+  userland. This is needed until n32 userland becomes a fully-functional
+  userland replacement for o32. Those on the n32 profile won't have this patch
+  applied. Revbumped to force an upgrade on affected mips systems.
 
 *procps-3.2.5 (01 Feb 2005)
 
