@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.18 2002/07/08 18:41:55 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.19 2002/07/09 14:07:21 blizzy Exp $
+
+*postfix-1.1.11-r1 (09 Jul 2002)
+
+  09 Jul 2002; Maik Schreiber <blizzy@gentoo.org> postfix-1.1.11-r1.ebuild:
+
+  Added post-installation note about /etc/mail/aliases. No need to update
+  if your Postfix installation works correctly. This closes bug #4652.
 
 *postfix-1.1.11 (08 Jul 2002)
 
