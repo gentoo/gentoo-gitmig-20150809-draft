@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.3.3.ebuild,v 1.1 2003/09/07 23:31:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.3.3.ebuild,v 1.2 2003/09/08 02:29:57 msterret Exp $
 
 PN=GConf
 P=${PN}-${PV}
@@ -28,8 +28,8 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 src_install() {
 
-	gnome2_src_install 
-    
+	gnome2_src_install
+
 	# hack hack
 	dodir /etc/gconf/gconf.xml.mandatory
 	dodir /etc/gconf/gconf.xml.defaults
@@ -42,7 +42,7 @@ kill_gconf () {
 	# this function will kill all running gconfd that could be causing troubles
 	if [ -x /usr/bin/gconftool ]
 	then
-		/usr/bin/gconftool --shutdown 
+		/usr/bin/gconftool --shutdown
 	fi
 	if [ -x /usr/bin/gconftool-1 ]
 	then
@@ -62,7 +62,7 @@ pkg_setup () {
 }
 
 pkg_preinst () {
-	kill_gconf 
+	kill_gconf
 
 	dodir /etc/env.d
 	echo 'CONFIG_PROTECT_MASK="/etc/gconf"' > ${D}/../../etc/env.d/50gconf
@@ -80,7 +80,7 @@ pkg_postinst () {
 	find  /etc/gconf/ -type d -exec chmod ugo+rx "{}" \;
 	einfo "changing permissions for gconf files"
 	find  /etc/gconf/ -type f -exec chmod ugo+r "{}" \;
-	
+
 }
 
 DOCS="ABOUT-NLS AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
