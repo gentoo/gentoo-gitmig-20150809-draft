@@ -1,5 +1,13 @@
 # ChangeLog for app-editors/ted
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+
+  11 Jan 2004; Heinrich Wendel <lanius@gentoo.org> ted-2.11.ebuild,
+  ted-2.12.ebuild:
+  fixed motif dep
+
+  11 Jan 2004; Heinrich Wendel <lanius@gentoo.org> ted-2.11.ebuild,
+  ted-2.12.ebuild:
+  fixed motif dep
 
 *ted-2.12 (24 Dec 2002)
 
