@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.ebuild,v 1.8 2004/07/22 14:22:46 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.ebuild,v 1.9 2004/07/22 14:24:50 lv Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
@@ -30,7 +30,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV}/s
 # changing the filename.  (17 Jun 2004 agriffis)
 #		http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha amd64 ~ia64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 

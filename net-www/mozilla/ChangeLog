@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.181 2004/07/22 14:22:46 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.182 2004/07/22 14:24:50 lv Exp $
+
+  22 Jul 2004; Travis Tilley <lv@gentoo.org> mozilla-1.7.ebuild:
+  stable on amd64
 
   22 Jul 2004; Brad Laue <brad@gentoo.org> mozilla-1.7.ebuild:
   Stable on x86.
