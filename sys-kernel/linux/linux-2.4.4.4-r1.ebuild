@@ -223,6 +223,7 @@ src_compile() {
 }
 
 src_install() {
+    echo $USE
     if [ "${PN}" = "linux" ] || [ "${PN}" = "linux-extras" ]
     then
 	dodir /usr/lib
@@ -239,6 +240,7 @@ src_install() {
 	
 	if [ "`use lm_sensors`" ]
 	then
+	    echo "Install sensor tools..."
 	    #install sensors tools
 	    cd ${S}/extras/lm_sensors-${SENV}
 	    make install
@@ -294,8 +296,8 @@ src_install() {
 		cd ${S}/extras/pcmcia-cs-${PCV}
 		try make PREFIX=${D} install  
 		rm -rf ${D}/etc/rc.d
-		insinto /etc/rc.d/init.d
-		doins ${FILESDIR}/${KV}/pcmcia
+		exeinto /etc/rc.d/init.d
+		doexe ${FILESDIR}/${KV}/pcmcia
 	    fi	    
 	    #fix symlink
 	    cd ${D}/lib/modules/${KV}
