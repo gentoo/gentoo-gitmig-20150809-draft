@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.83 2004/12/25 07:59:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.84 2004/12/26 09:52:07 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -106,8 +106,8 @@ prepgamesdirs() {
 			gamesowners -R "${D}/${dir}"
 			find "${D}/${dir}" -type d -print0 | xargs --null chmod 750
 			find "${D}/${dir}" -type f -print0 | xargs --null chmod o-rwx,g+r
-		) &> /dev/null
-		f=$(find "${D}/${dir}" -perm +4000 -a -uid 0)
+		) &>/dev/null
+		f=$(find "${D}/${dir}" -perm +4000 -a -uid 0 2>/dev/null)
 		if [[ -n ${f} ]] ; then
 			eerror "A game was detected that is setuid root!"
 			eerror "${f}"
