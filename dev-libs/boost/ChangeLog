@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.34 2004/12/23 13:59:20 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.35 2004/12/31 16:07:46 morfic Exp $
+
+  31 Dec 2004; Daniel Goller <morfic@gentoo.org> boost-1.32.0.ebuild:
+  Changing to --layout=system
 
   23 Dec 2004; Daniel Goller <morfic@gentoo.org> boost-1.32.0.ebuild:
   Minor cleanup
