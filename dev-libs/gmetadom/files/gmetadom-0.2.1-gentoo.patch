@@ -1,0 +1,48 @@
+diff -Naur gmetadom-0.2.1.orig/configure gmetadom-0.2.1/configure
+--- gmetadom-0.2.1.orig/configure	2003-10-08 06:50:30.000000000 +0900
++++ gmetadom-0.2.1/configure	2004-07-14 08:37:13.000000000 +0900
+@@ -21780,7 +21780,7 @@
+ 	HAVE_OCAMLC=no
+ else
+ 	HAVE_OCAMLC=yes
+-	OCAML_LIB=`$OCAMLC -v | tail -1 | cut -d ':' -f2 | tr -d ' '`
++	OCAML_LIB=`$OCAMLC -v | tail -n 1 | cut -d ':' -f2 | tr -d ' '`
+ 
+ 	if test $OCAML_INCLUDE_PREFIX = no; then
+ 		OCAML_CFLAGS=-I$OCAML_LIB
+diff -Naur gmetadom-0.2.1.orig/configure.ac gmetadom-0.2.1/configure.ac
+--- gmetadom-0.2.1.orig/configure.ac	2003-10-08 06:49:32.000000000 +0900
++++ gmetadom-0.2.1/configure.ac	2004-07-14 08:37:25.000000000 +0900
+@@ -312,7 +312,7 @@
+ 	HAVE_OCAMLC=no
+ else
+ 	HAVE_OCAMLC=yes
+-	OCAML_LIB=`$OCAMLC -v | tail -1 | cut -d ':' -f2 | tr -d ' '`
++	OCAML_LIB=`$OCAMLC -v | tail -n 1 | cut -d ':' -f2 | tr -d ' '`
+ 
+ 	if test $OCAML_INCLUDE_PREFIX = no; then
+ 		OCAML_CFLAGS=-I$OCAML_LIB
+diff -Naur gmetadom-0.2.1.orig/src/gdome_caml/Makefile.am gmetadom-0.2.1/src/gdome_caml/Makefile.am
+--- gmetadom-0.2.1.orig/src/gdome_caml/Makefile.am	2003-10-08 15:00:50.000000000 +0900
++++ gmetadom-0.2.1/src/gdome_caml/Makefile.am	2004-07-14 09:09:26.028761996 +0900
+@@ -81,7 +81,7 @@
+ 	done
+ 	if [ "x$(OCAMLFIND)" != "x" ]; then \
+ 		mv $(OCAMLINSTALLDIR) $(OCAMLINSTALLDIR).saved;	\
+-		$(OCAMLFIND) install -destdir $(DESTDIR)$(OCAML_LIB_PREFIX)/ $(PKGNAME) META $(DLL); \
++		$(OCAMLFIND) install -destdir $(DESTDIR)$(OCAML_LIB_PREFIX)/site-packages $(PKGNAME) META $(DLL); \
+ 		$(INSTALL_DATA) $(OCAMLINSTALLDIR).saved/* $(OCAMLINSTALLDIR)/;	\
+ 		rm -rf $(OCAMLINSTALLDIR).saved/;	\
+ 	else	\
+diff -Naur gmetadom-0.2.1.orig/src/gdome_caml/Makefile.in gmetadom-0.2.1/src/gdome_caml/Makefile.in
+--- gmetadom-0.2.1.orig/src/gdome_caml/Makefile.in	2003-10-08 15:00:55.000000000 +0900
++++ gmetadom-0.2.1/src/gdome_caml/Makefile.in	2004-07-14 09:09:58.739215644 +0900
+@@ -630,7 +630,7 @@
+ 	done
+ 	if [ "x$(OCAMLFIND)" != "x" ]; then \
+ 		mv $(OCAMLINSTALLDIR) $(OCAMLINSTALLDIR).saved;	\
+-		$(OCAMLFIND) install -destdir $(DESTDIR)$(OCAML_LIB_PREFIX)/ $(PKGNAME) META $(DLL); \
++		$(OCAMLFIND) install -destdir $(DESTDIR)$(OCAML_LIB_PREFIX)/site-packages $(PKGNAME) META $(DLL); \
+ 		$(INSTALL_DATA) $(OCAMLINSTALLDIR).saved/* $(OCAMLINSTALLDIR)/;	\
+ 		rm -rf $(OCAMLINSTALLDIR).saved/;	\
+ 	else	\

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gmetadom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.6 2004/06/24 23:11:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.7 2004/07/29 21:57:47 matsuu Exp $
+
+*gmetadom-0.2.1-r1 (30 Jul 2004)
+
+  30 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> +gmetadom-0.2.1-r1.ebuild:
+  Fixed ocaml bindings problem. Bug#56682.
 
 *gmetadom-0.2.1 (21 Jan 2004)
 
