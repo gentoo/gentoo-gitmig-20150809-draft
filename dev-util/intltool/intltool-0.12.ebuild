@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.12.ebuild,v 1.1 2001/11/11 21:58:12 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.12.ebuild,v 1.2 2001/11/14 06:02:15 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Scripts for extracting translatable strings from various sourcefiles"
@@ -9,6 +9,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="virtual/glibc
+	>=dev-libs/popt-1.5
 	>=sys-devel/perl-5.6.0"
 
 src_compile() {                           
