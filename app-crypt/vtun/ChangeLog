@@ -1,9 +1,0 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/vtun/ChangeLog,v 1.1 2002/05/23 21:53:27 prez Exp $
-
-*vtun-2.5 (23 May 2002)
-
-  23 May 2002; Preston A. Elder <prez@gentoo.org> vtun-2.5.ebuild:
-    Initial revision.
- 
