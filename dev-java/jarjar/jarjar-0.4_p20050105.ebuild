@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.4_p20050105.ebuild,v 1.1 2005/01/05 20:54:11 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.4_p20050105.ebuild,v 1.2 2005/01/05 21:03:00 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -31,7 +31,7 @@ src_unpack() {
 
 src_compile() {
 	local antflags="jar"
-	use doc && antflags="${antflags} docs"
+	use doc && antflags="${antflags} javadoc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "failed to build"
 }
@@ -41,6 +41,6 @@ src_install() {
 
 	dodoc COPYING
 	if use doc; then
-		java-pkg_dohtml -r doc/*
+		java-pkg_dohtml -r dist/javadoc/*
 	fi
 }
