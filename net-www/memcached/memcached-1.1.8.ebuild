@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/memcached/memcached-1.1.7.ebuild,v 1.1 2003/07/30 01:43:40 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/memcached/memcached-1.1.8.ebuild,v 1.1 2003/07/30 12:45:34 lisa Exp $
 
 DESCRIPTION="memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load."
 
