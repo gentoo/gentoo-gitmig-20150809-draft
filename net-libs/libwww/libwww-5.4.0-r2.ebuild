@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.13 2004/05/09 16:41:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.14 2004/05/26 14:43:19 vapier Exp $
 
 inherit eutils
 
@@ -12,12 +12,12 @@ SRC_URI="http://www.w3.org/Library/Distribution/${MY_P}.tgz
 
 LICENSE="W3C"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE="ssl mysql"
 
 RDEPEND="dev-lang/perl
 	>=sys-libs/zlib-1.1.4
-	mysql? ( >=dev-db/mysql-3.23.26 )
+	!arm? ( mysql? ( >=dev-db/mysql-3.23.26 ) )
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 DEPEND="!dev-libs/9libs
 	>=sys-devel/autoconf-2.13
@@ -54,6 +54,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc COPYRIGH ChangeLog
+	dodoc ChangeLog
 	dohtml -r .
 }
