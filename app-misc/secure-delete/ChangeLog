@@ -1,8 +1,12 @@
 # ChangeLog for app-misc/secure-delete
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.1 2002/10/29 18:26:09 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.2 2002/11/29 20:57:31 aliz Exp $
 
 *secure-delete-2.3 (29 Oct 2002)
+
+  29 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> secure-delete-2.3.ebuild :
+  Added support for large partitions. Fix by Alexander Holler <aholler@gentoo.de> in #11158.
+  Also unmasking.
 
   29 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : Initial import. ebuild
   submitted by Cory Visi <cory@visi.name>
