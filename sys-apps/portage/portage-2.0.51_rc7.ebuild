@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_rc7.ebuild,v 1.1 2004/09/30 03:02:10 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_rc7.ebuild,v 1.2 2004/10/10 05:02:53 carpaski Exp $
 
 IUSE="build selinux"
 inherit flag-o-matic
@@ -117,7 +117,6 @@ src_install() {
 	cd ${S}/bin
 	exeinto /usr/lib/portage/bin
 	doexe *
-	dosym emake /usr/lib/portage/bin/pmake
 	doexe ${S}/src/tbz2tool
 
 	if use macos || use ppc-macos || use x86-fbsd; then
@@ -293,8 +292,8 @@ pkg_postinst() {
 
 	# we gotta re-compile these modules and deal with systems with clock skew (stale compiled files)
 	einfo "Compiling python modules..."
-	python -c 'import compileall; compile_path()' &> /dev/null
-	python -c "import compileall; compile_dir('${ROOT}usr/lib/portage/pym')" &> /dev/null
+	python -c 'import compileall; compileall.compile_path()' &> /dev/null
+	python -c "import compileall; compileall.compile_dir('${ROOT}usr/lib/portage/pym')" &> /dev/null
 
 	if has ccache $FEATURES && has userpriv $FEATURES; then
 		chown -R portage:portage /var/tmp/ccache &> /dev/null

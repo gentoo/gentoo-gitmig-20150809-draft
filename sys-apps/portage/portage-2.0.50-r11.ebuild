@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r11.ebuild,v 1.5 2004/09/27 19:26:10 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r11.ebuild,v 1.6 2004/10/10 05:02:53 carpaski Exp $
 
 IUSE="build selinux"
 inherit eutils flag-o-matic
@@ -132,7 +132,6 @@ src_install() {
 	cd ${S}/bin
 	exeinto /usr/lib/portage/bin
 	doexe *
-	dosym emake /usr/lib/portage/bin/pmake
 	doexe ${S}/src/tbz2tool
 
 	#install sandbox
