@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/Geo-IP-1.21.ebuild,v 1.7 2004/11/28 16:00:56 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/Geo-IP-1.21.ebuild,v 1.8 2005/04/02 19:07:47 vanquirius Exp $
 
 inherit perl-module
 

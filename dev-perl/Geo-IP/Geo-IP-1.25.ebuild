@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/Geo-IP-1.15.ebuild,v 1.6 2004/11/28 16:00:56 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/Geo-IP-1.25.ebuild,v 1.1 2005/04/02 19:07:47 vanquirius Exp $
 
 inherit perl-module
 
@@ -10,5 +10,5 @@ SRC_URI="mirror://cpan/authors/id/T/TJ/TJMATHER/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-authors/id/T/TJ/TJMATHER/${P}.readme"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 DEPEND="dev-libs/geoip"
