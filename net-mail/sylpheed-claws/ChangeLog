@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.46 2003/09/06 15:05:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.47 2003/09/06 15:45:12 seemant Exp $
+
+  06 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.9.4-r1.ebuild, sylpheed-claws-0.9.4.ebuild:
+  gettext-0.12 is required
 
 *sylpheed-claws-0.9.4-r1 (06 Sep 2003)
 
