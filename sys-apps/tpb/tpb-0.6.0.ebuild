@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpb/tpb-0.6.0.ebuild,v 1.1 2003/12/02 20:56:27 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpb/tpb-0.6.0.ebuild,v 1.2 2004/02/20 23:36:51 mr_bones_ Exp $
 
 DESCRIPTION="Thinkpad button utility"
 HOMEPAGE="http://savannah.nongnu.org/projects/tpb/"
