@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.14 2004/11/26 18:58:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.15 2004/11/29 00:19:03 eradicator Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -74,4 +74,28 @@ uclibc
 # Mono doesn't work on sparc
 # eradicator@gentoo.org
 mono
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+adabas
+birdstep
+cpdflib
+db2
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave-api
+informix
+ingres
+oracle7
+oci8
+pfpro
+solid
+sybase
+sybase-ct
 
