@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r1.ebuild,v 1.1 2004/05/01 04:16:50 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r1.ebuild,v 1.2 2004/05/02 23:53:59 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.postgresql.org/"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64 ~hppa ~ia64 ~mips"
+KEYWORDS="x86 ppc sparc alpha amd64 hppa ia64 mips"
 IUSE="ssl nls java python tcltk perl libg++ pam readline zlib doc pg-hier pg-vacuumdelay pg-intdatetime"
 
 DEPEND="virtual/glibc
