@@ -1,5 +1,15 @@
-MD5 6550a9d0302b0b15a964c67ec12a6e19 ChangeLog 6001
-MD5 48dffa9afcc8b71955d5cde01ec6fac0 musicbrainz-2.1.1.ebuild 1398
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c57f56e0f64eba5076859b5fba8a935c musicbrainz-2.1.1.ebuild 1404
+MD5 37856e9069ede0b4e84fdc939ae1e684 ChangeLog 6092
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 0b5843a63c6212b3a427b45939e1e2ae files/digest-musicbrainz-2.1.1 72
 MD5 77f2ae9381e5795af632a134e2211c8a files/musicbrainz-2.1.1-gcc2.patch 811
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCGvE3M+I1L6GK/u4RAgvwAJ0ZHhmnq+ELM1IEeXZKPesqoMLvxACfc7vO
+9tIe5/Mi1U99xNeSg9sMK/M=
+=/fwJ
+-----END PGP SIGNATURE-----
