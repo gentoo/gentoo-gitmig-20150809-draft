@@ -1,6 +1,13 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.193 2004/06/28 19:02:42 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.194 2004/06/29 16:45:37 rizzo Exp $
+
+  29 Jun 2004; Don Seiler <rizzo@gentoo.org> gaim-0.79-r1.ebuild:
+  Making evolution support flaggable. Although the current versions of evolution
+  in portage aren't supported by gaim's gevolution, some users are using
+  breakmygentoo versions and this will make things a little easier for them.
+  Normally I would tell them 'tough cookies' but I thought I'd play nice, plus
+  this positions us for when newer versions of evolution _are_ in portage.
 
   28 Jun 2004; Don Seiler <rizzo@gentoo.org>
   -files/gaim-0.74-gnome-url-handler.patch,
