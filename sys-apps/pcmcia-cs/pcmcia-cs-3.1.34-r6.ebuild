@@ -1,17 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.34-r6.ebuild,v 1.2 2002/10/04 06:28:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.34-r6.ebuild,v 1.3 2002/10/19 02:52:22 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
 SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz
 	http://ozlabs.org/people/dgibson/dldwd/orinoco-0.12b.tar.gz"
-
-HOMEPAGE="http://pcmcia-cs.sourceforge.net"
+HOMEPAGE="http://pcmcia-cs.sourceforge.net/"
 DEPEND="sys-kernel/linux-headers"
 RDEPEND=""
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86"
 
 # check arch for configure
@@ -40,11 +39,9 @@ src_unpack() {
 	cd ${S}
         ### As per the SourceForge web site reqs and bug #3400
         # We'll replace all ide_cs with ide-cs
-        cp etc/config etc/config.orig
-        sed -e 's:ide_cs:ide-cs:g' etc/config.orig > etc/config
-        rm -f etc/config.orig
-
-
+	cp etc/config etc/config.orig
+	sed -e 's:ide_cs:ide-cs:g' etc/config.orig > etc/config
+	rm -f etc/config.orig
 }
 
 src_compile() {
@@ -93,7 +90,7 @@ src_compile() {
 	emake all || die "failed compiling"
 }
 
-src_install () {
+src_install() {
 	make PREFIX=${D} install || die "failed installing"
 	cd ${D}
 	rm -rf etc/rc*.d

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r6.ebuild,v 1.9 2002/10/04 06:28:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r6.ebuild,v 1.10 2002/10/19 02:52:22 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard linux net thingees -- inetd, ping"
@@ -13,14 +13,12 @@ DEPEND="virtual/glibc"
 
 
 src_unpack() {
+	unpack ${A}
 
-    unpack ${A}
-
-    if [ ${ARCH} == "alpha" ]; then
+	if [ ${ARCH} == "alpha" ]; then
 		cd ${S}
-        patch -p1 < ${FILESDIR}/netkit-base-0.17-alpha-ping-fix.patch
-    fi
-
+		patch -p1 < ${FILESDIR}/netkit-base-0.17-alpha-ping-fix.patch
+	fi
 }
 
 src_compile() {

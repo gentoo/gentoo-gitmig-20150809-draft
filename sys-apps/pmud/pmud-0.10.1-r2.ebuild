@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: pmud-0.10.1-r2.ebuild,v 1.9 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmud/pmud-0.10.1-r2.ebuild,v 1.10 2002/10/19 02:52:22 vapier Exp $
 
 IUSE="X"
 
@@ -29,7 +29,7 @@ src_compile() {
 	emake CFLAGS="${CFLAGS}" || die
 }
 
-src_install () {
+src_install() {
 	doman pmud.8 snooze.8 fblevel.8
 	exeinto /sbin
 	doexe pmud wakebay snooze fblevel 
@@ -45,6 +45,4 @@ src_install () {
 	doexe Batmon 
 	exeinto /usr/X11R6/bin
 	doexe xmouse )
-	
-
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.8.0.ebuild,v 1.2 2002/10/13 21:39:19 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.8.0.ebuild,v 1.3 2002/10/19 02:52:22 vapier Exp $
 
 S=${WORKDIR}/user
 DESCRIPTION="User-land utilities for MOSIX process migration (clustering) software"
@@ -12,13 +12,13 @@ LICENSE="as-is"
 DEPEND=">=sys-libs/ncurses-5.2"
 
 pkg_setup() {
-    if [ -z "`readlink /usr/src/linux|grep mosix`" ]; then
-    eerror
-    eerror "Your linux kernel sources do not appear to be mosix,"
-    eerror "please check your /usr/src/linux symlink."
-    eerror
-    die
-    fi
+	if [ -z "`readlink /usr/src/linux|grep mosix`" ]; then
+		eerror
+		eerror "Your linux kernel sources do not appear to be mosix,"
+		eerror "please check your /usr/src/linux symlink."
+		eerror
+    		die
+	fi
 }
 
 src_unpack() {

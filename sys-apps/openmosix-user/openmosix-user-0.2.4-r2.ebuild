@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openmosix-user/openmosix-user-0.2.4-r2.ebuild,v 1.2 2002/10/13 22:27:01 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openmosix-user/openmosix-user-0.2.4-r2.ebuild,v 1.3 2002/10/19 02:52:22 vapier Exp $
 
 S=${WORKDIR}/openMosixUserland-${PV}
 DESCRIPTION="User-land utilities for openMosix process migration (clustering) software"
 SRC_URI="mirror://sourceforge/openmosix/openMosixUserland-${PV}.tgz"
-HOMEPAGE="http://www.openmosix.com"
+HOMEPAGE="http://www.openmosix.com/"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
 	>=sys-kernel/openmosix-sources-2.4.18"
@@ -18,13 +18,13 @@ KEYWORDS="x86 -ppc -sparc -sparc64 -alpha"
 
 
 pkg_setup() {
-    if [ -z "`readlink /usr/src/linux|grep openmosix`" ]; then 
-    eerror
-    eerror "Your linux kernel sources do not appear to be openmosix,"
-    eerror "please check your /usr/src/linux symlink."
-    eerror
-    die
-    fi
+	if [ -z "`readlink /usr/src/linux|grep openmosix`" ]; then 
+		eerror
+		eerror "Your linux kernel sources do not appear to be openmosix,"
+		eerror "please check your /usr/src/linux symlink."
+		eerror
+		die
+	fi
 }
 
 src_unpack() {
@@ -41,8 +41,6 @@ INSTALLDIR=/usr
 CFLAGS=-I/m/include -I./ -I/usr/include -I\$(OPENMOSIX)/include ${CFLAGS}
 INSTALL=/usr/bin/install
 EOF
-
-
 }
 
 src_compile() {
@@ -50,7 +48,7 @@ src_compile() {
 	make clean build
 }
 
-src_install () {
+src_install() {
 	dodir /usr/lib
 	dodir /usr/sbin
 	dodir /usr/include

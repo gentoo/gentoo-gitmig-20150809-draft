@@ -1,13 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.4-r3.ebuild,v 1.5 2002/10/04 06:28:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.4-r3.ebuild,v 1.6 2002/10/19 02:52:22 vapier Exp $
 # Note: the daemon's current 2.4 version has nothing to do with kernel versions
 
-A=noflushd_2.4.orig.tar.gz
+MY_P="${P/-/_}"
 S=${WORKDIR}/${P}.orig
-SRC_URI="http://download.sourceforge.net/noflushd/${A}"
-
-HOMEPAGE="http://noflushd.sourceforge.net"
+SRC_URI="http://download.sourceforge.net/noflushd/${MY_P}.orig.tar.gz"
+HOMEPAGE="http://noflushd.sourceforge.net/"
 KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
@@ -17,15 +16,13 @@ DEPEND="virtual/glibc
 	sys-devel/ld.so"
 
 src_compile() {
-
 	./configure --prefix=/usr --host=${CHOST} --mandir=/usr/share/man \
-	--infodir=/usr/share/info --with-docdir=/usr/share/doc/${PF} || die
+		--infodir=/usr/share/info --with-docdir=/usr/share/doc/${PF} || die
 
 	emake || die
 }
 
-src_install () {
-
+src_install() {
 	dosbin src/noflushd
 	doman man/noflushd.8
 	dodoc README NEWS
@@ -36,7 +33,6 @@ src_install () {
 }
 
 pkg_postinst() {
-    
 	echo "
 	Run 'rc-update add noflushd' to add it to runlevels 2 3 4.
 

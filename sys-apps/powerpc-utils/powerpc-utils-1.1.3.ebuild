@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: powerpc-utils-1.1.3.ebuild,v 1.7 2002/10/04 06:29:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerpc-utils/powerpc-utils-1.1.3.ebuild,v 1.8 2002/10/19 02:52:22 vapier Exp $
 
 S=${WORKDIR}/${P}
 DEBRV=3
@@ -12,7 +12,7 @@ KEYWORDS="ppc -x86 -sparc -sparc64"
 DEPEND="virtual/glibc"
 RDEPEND=""
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 
 src_unpack() {
 	cd ${WORKDIR}
@@ -29,8 +29,7 @@ src_compile() {
 	emake nvsetenv || die
 }
 
-src_install () {
+src_install() {
 	into /usr
 	dosbin nvsetenv || die
-
 }
