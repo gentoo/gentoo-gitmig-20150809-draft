@@ -15,9 +15,11 @@ then
 fi
 
 #allow any envvars to be set like QTDIR, even if Qt was just installed
-source /etc/profile
+eval `/usr/sbin/env-update echo`
 export PATH=/usr/lib/portage/bin:${PATH}
-eval `import-settings PROXY HTTP_PROXY FTP_PROXY FETCHCOMMAND PACKAGE DEBUG MAKEOPTS USE MAINTAINER CHOST CFLAGS CXXFLAGS PORTDIR DISTDIR BUILD_PREFIX PKGDIR RPMDIR PLATFORM ROOT GENTOO_MIRRORS`
+eval `import-settings PROXY HTTP_PROXY FTP_PROXY DEBUG MAKEOPTS MAINTAINER CHOST CFLAGS CXXFLAGS PORTDIR DISTDIR BUILD_PREFIX PKGDIR RPMDIR PLATFORM ROOT`
+eval `import-configsettings FETCHCOMMAND PACKAGE USE GENTOO_MIRRORS PLATFORM`
+source /etc/rc.d/config/functions
 
 initvars() {
 	export DESTTREE=/usr
@@ -27,7 +29,6 @@ initvars() {
 	export INSOPTIONS="-m0644"
 	export EXEOPTIONS="-m0755"	
 	export LIBOPTIONS="-m0644"
-	export DIROPTIONS="-m0755"
 	export MOPREFIX=${PN}
 	export KVERS=`uname -r`
 }
@@ -273,7 +274,10 @@ dyn_fetch() {
 			    		if [ $y == ${x##*/} ]
 			    		then
 						echo ">>> Trying site ${x}..."
-						eval ${FETCHCOMMAND}
+						echo x: ${x}
+						echo distdir: ${DISTDIR}
+						echo fetchcommand: ${FETCHCOMMAND}
+						eval "${FETCHCOMMAND}"
 						if [ $? -ne 0 ]
 		        			then
 			    				echo '!!!'" Couldn't download ${y}."
@@ -406,15 +410,6 @@ insopts() {
         fi
     done
     export INSOPTIONS
-}
-
-diropts() {
-    DIROPTIONS=""
-    for x in $*
-    do
-	DIROPTIONS="${DIROPTIONS} $x"
-    done
-    export DIROPTIONS
 }
 
 doins() {
@@ -592,7 +587,7 @@ dyn_install() {
     src_install
     prepall
     install -d -m0700 ${D}var/db/pkg/${CATEGORY}/${PF}
-    cp ${STARTDIR}/${EBUILD} ${D}var/db/pkg/${CATEGORY}/${PF}
+    cp ${EBUILD} ${D}var/db/pkg/${CATEGORY}/${PF}
     local x
 	#create provides database
 	for x in $PROVIDE
@@ -903,7 +898,7 @@ else
 fi
 tmpfoo=`(cd ${O}/..;pwd)`
 export CATEGORY=`/usr/bin/basename $tmpfoo`
-export EBUILD=${1}
+export EBUILD=${O}/`basename ${1}`
 export PEBUILD=${O}/files/${PLATFORM}.ebuild
 export FILESDIR=${O}/files
 
