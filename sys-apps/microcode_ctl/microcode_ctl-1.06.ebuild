@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode_ctl/microcode_ctl-1.06.ebuild,v 1.3 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode_ctl/microcode_ctl-1.06.ebuild,v 1.4 2002/07/21 20:16:48 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Intel IA32 microcode update utility"
 HOMEPAGE="http://www.urbanmyth.org/microcode"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 SRC_URI="http://www.urbanmyth.org/microcode/${P}.tar.gz"
