@@ -33,9 +33,6 @@
 
 # PPC PROFILE
 
-# new MOL asked for testing
-<app-emulation/mol-0.9.64
-
 # gstreamer uses x86 asm :(
 # Gerk - July 4, 2002
 ~media-libs/gstreamer
