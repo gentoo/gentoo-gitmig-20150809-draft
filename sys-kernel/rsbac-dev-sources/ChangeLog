@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/rsbac-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.13 2004/11/13 16:45:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.14 2004/11/28 22:46:15 kang Exp $
+
+  28 Nov 2004; Guillaume Destuynder <kang@gentoo.org>
+  files/rsbac-dev-sources-2.6.7-70681-binfmt.patch,
+  -rsbac-dev-sources-2.6.7-r7.ebuild:
+  reupdated #79681, fixes CAN 0883
 
   13 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Removed stray digest.

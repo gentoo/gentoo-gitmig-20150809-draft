@@ -1,6 +1,7 @@
---- linux-2.6.7-uc0-r8/fs/binfmt_elf.c	2004-11-12 11:50:08 -08:00
-+++ linux-2.6.7-uc0-r8-plasmaroo/fs/binfmt_elf.c	2004-11-12 11:50:08 -08:00
-@@ -335,9 +335,12 @@
+diff -X /usr/src/dontdiff -urNp linux-2.6.7-gentoo-r16/fs/binfmt_elf.c linux-dsd/fs/binfmt_elf.c
+--- linux-2.6.7-gentoo-r16/fs/binfmt_elf.c	2004-06-16 06:19:22.000000000 +0100
++++ linux-dsd/fs/binfmt_elf.c	2004-11-24 16:24:00.301979976 +0000
+@@ -332,9 +332,12 @@ static unsigned long load_elf_interp(str
  		goto out;
  
  	retval = kernel_read(interpreter,interp_elf_ex->e_phoff,(char *)elf_phdata,size);
@@ -15,20 +16,30 @@
  
  	eppnt = elf_phdata;
  	for (i=0; i<interp_elf_ex->e_phnum; i++, eppnt++) {
-@@ -532,8 +535,11 @@
+@@ -520,8 +523,11 @@ static int load_elf_binary(struct linux_
  		goto out;
  
  	retval = kernel_read(bprm->file, elf_ex.e_phoff, (char *) elf_phdata, size);
 -	if (retval < 0)
 +	if (retval != size) {
-+		if (retval >= 0)
++		if (retval < 0)
 +			retval = -EIO;
  		goto out_free_ph;
 +	}
  
  	files = current->files;		/* Refcounted so ok */
  	retval = unshare_files();
-@@ -580,8 +586,14 @@
+@@ -558,7 +564,8 @@ static int load_elf_binary(struct linux_
+ 			 */
+ 
+ 			retval = -ENOMEM;
+-			if (elf_ppnt->p_filesz > PATH_MAX)
++			if (elf_ppnt->p_filesz > PATH_MAX || 
++			    elf_ppnt->p_filesz == 0)
+ 				goto out_free_file;
+ 			elf_interpreter = (char *) kmalloc(elf_ppnt->p_filesz,
+ 							   GFP_KERNEL);
+@@ -568,8 +575,16 @@ static int load_elf_binary(struct linux_
  			retval = kernel_read(bprm->file, elf_ppnt->p_offset,
  					   elf_interpreter,
  					   elf_ppnt->p_filesz);
@@ -39,12 +50,14 @@
  				goto out_free_interp;
 +			}
 +			/* make sure path is NULL terminated */
-+			elf_interpreter[elf_ppnt->p_filesz - 1] = '\0';
++			retval = -EINVAL;
++			if (elf_interpreter[elf_ppnt->p_filesz - 1] != '\0')
++				goto out_free_interp;
 +
  			/* If the program interpreter is one of these two,
  			 * then assume an iBCS2 image. Otherwise assume
  			 * a native linux image.
-@@ -616,8 +628,11 @@
+@@ -604,8 +619,11 @@ static int load_elf_binary(struct linux_
  			if (IS_ERR(interpreter))
  				goto out_free_interp;
  			retval = kernel_read(interpreter, 0, bprm->buf, BINPRM_BUF_SIZE);
@@ -56,8 +69,8 @@
 +			}
  
  			/* Get the exec headers */
- 			loc->interp_ex = *((struct exec *) bprm->buf);
-@@ -776,8 +791,10 @@
+ 			interp_ex = *((struct exec *) bprm->buf);
+@@ -757,8 +775,10 @@ static int load_elf_binary(struct linux_
  		}
  
  		error = elf_map(bprm->file, load_bias + vaddr, elf_ppnt, elf_prot, elf_flags);
