@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.18 2003/08/22 16:11:19 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.19 2003/08/24 09:46:05 azarah Exp $
+
+  24 Aug 2003; Martin Schlemmer <azarah@gentoo.org> gtkglext-1.0.3.ebuild:
+  Fix RDEPEND to include >=dev-libs/glib-2 and not >=x11-libs/glib-2.
 
   23 Aug 2003; Mike Gardiner <obz@gentoo.org> gtkglext-1.0.0.ebuild,
   gtkglext-1.0.2.ebuild, gtkglext-1.0.3.ebuild:

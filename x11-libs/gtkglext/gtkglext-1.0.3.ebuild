@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.0.3.ebuild,v 1.2 2003/08/22 16:11:19 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.0.3.ebuild,v 1.3 2003/08/24 09:46:05 azarah Exp $
 
 inherit gnome2
 
@@ -13,8 +13,8 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~sparc"
 
-RDEPEND=">=x11-libs/gtk+-2
-	>=x11-libs/glib-2
+RDEPEND=">=dev-libs/glib-2
+	>=x11-libs/gtk+-2
 	>=x11-libs/pango-1
 	virtual/glu
 	virtual/opengl"
@@ -46,3 +46,4 @@ pkg_postinst () {
 		opengl-update nvidia
 	fi
 }
+
