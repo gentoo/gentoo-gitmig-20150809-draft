@@ -2,7 +2,8 @@ app-admin
 app-benchmarks
 app-arch 
 app-cdr 
-app-crypt 
+app-crypt
+app-dicts
 app-doc
 app-editors 
 app-emacs
