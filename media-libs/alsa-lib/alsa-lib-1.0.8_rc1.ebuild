@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.8_rc1.ebuild,v 1.1 2005/01/02 06:24:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.8_rc1.ebuild,v 1.2 2005/01/03 20:40:03 eradicator Exp $
 
 IUSE="static jack doc"
 
-inherit libtool eutils
+inherit eutils
 
 MY_P="${P/_rc/rc}"
 S="${WORKDIR}/${MY_P}"
@@ -25,23 +25,6 @@ DEPEND="${RDEPEND}
 
 PDEPEND="jack? ( =media-plugins/alsa-jack-${PV}* )"
 
-#src_unpack() {
-#	unpack ${A}
-#
-#	if use static; then
-#		mv ${S} ${S}.static
-#		unpack ${A}
-#
-#		cd ${S}.static
-#		epatch ${FILESDIR}/${P}-pcm_wait.patch
-#		elibtoolize
-#	fi
-#
-#	cd ${S}
-#	epatch ${FILESDIR}/${P}-pcm_wait.patch
-#	elibtoolize
-#}
-
 src_compile() {
 	local myconf=""
 
@@ -54,13 +37,6 @@ src_compile() {
 	if use doc; then
 		emake doc || die
 	fi
-
-	# Can't do both according to alsa docs and bug #48233
-#	if use static; then
-#		cd ${S}.static
-#		econf --enable-static=yes --enable-shared=no || die
-#		emake || die
-#	fi
 }
 
 src_install() {
@@ -70,11 +46,6 @@ src_install() {
 
 	dodoc ChangeLog COPYING TODO
 	use doc && dohtml -r doc/doxygen/html/*
-
-#	if use static; then
-#		cd ${S}.static
-#		make DESTDIR="${D}" install || die "make install failed"
-#	fi
 }
 
 pkg_postinst() {
