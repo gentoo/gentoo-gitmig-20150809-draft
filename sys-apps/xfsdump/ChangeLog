@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/xfsdump
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsdump/ChangeLog,v 1.4 2002/09/27 20:01:06 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsdump/ChangeLog,v 1.5 2002/10/05 08:25:36 bcowan Exp $
 
 *xfsdump-2.1.5 (27 Sep 2002)
 
@@ -8,6 +8,10 @@
   files/digest-xfsdump-2.1.5 :
   
   version bump thanks to Hanno Boeck <hanno@gentoo.org>
+
+  05 Oct 2002; Brad Cowan <bcowan@gentoo.org> xfsdump-2.1.5.ebuild :
+  
+  "Modernized" ebuild.
 
 *xfsdump-20020330.ebuild (14 July 2002)
 
