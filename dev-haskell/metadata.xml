@@ -5,5 +5,9 @@
 		The dev-haskell category contains libraries and utilities relevant to the
 		Haskell programming language.
 	</longdescription>
+	<longdescription lang="es">
+		La categoria dev-haskell contiene librerias y utilidades referentes
+		al lenguaje de programacion Haskell.
+	</longdescription>
 </catmetadata>
 
