@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/thinkpad
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/ChangeLog,v 1.9 2003/11/28 13:22:39 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/ChangeLog,v 1.10 2003/12/25 10:36:55 robbat2 Exp $
+
+*thinkpad-4.8 (25 Dec 2003)
+
+  25 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> thinkpad-4.8.ebuild:
+  version bump
 
   28 Nov 2003; Karl Trygve Kalleberg <karltk@gentoo.org> 
   thinkpad-4.3-r1.ebuild :
