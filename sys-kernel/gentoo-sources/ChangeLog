@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.27 2003/09/11 21:10:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.28 2003/09/13 12:07:43 plasmaroo Exp $
+
+  13 Sep 2003; <plasmaroo@gentoo.org> files/gentoo-sources-2.4.20-gcc33.patch:
+  Added more GCC3.3 fixes
 
 *gentoo-sources-2.4.20-r7 (11 Sep 2003)
 

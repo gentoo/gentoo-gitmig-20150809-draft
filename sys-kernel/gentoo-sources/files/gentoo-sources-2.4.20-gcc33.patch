@@ -172,3 +172,92 @@ diff -u -r linux-2.4.20-gentoo-r6/net/decnet/dn_table.c linux-2.4.20-gentoo-r7/n
                  return NULL;
          }
          if ((t = kmalloc(sizeof(struct dn_fib_table), GFP_KERNEL)) == NULL)
+
+diff -u -r linux-2.4.20-gentoo-r6/drivers/net/fealnx.c linux-2.4.20-gentoo-r7/drivers/net/fealnx.c
+--- linux-2.4.20-gentoo-r6/drivers/net/fealnx.c	2003-09-08 19:50:27.000000000 -0700
++++ linux-2.4.20-gentoo-r7/drivers/net/fealnx.c	2003-06-13 07:51:34.000000000 -0700
+@@ -937,7 +937,7 @@
+ // 89/9/1 modify,
+ //   np->bcrvalue=0x38;
+ 	np->bcrvalue = 0x10;
+-	np->cralue = 0xe00;	/* rx 128 burst length */
++	np->crvalue = 0xe00;	/* rx 128 burst length */
+ #warning Processor architecture undefined!
+ #endif
+ // 89/12/29 add,
+@@ -1198,7 +1198,6 @@
+ 		printk("\n");
+ 	}
+ 
+-	   + dev->if_port = np->default_port;
+ 	/* Reinit. Gross */
+ 
+ 	/* Reset the chip's Tx and Rx processes. */
+diff -u -r linux-2.4.20-gentoo-r6/drivers/net/irda/ma600.c linux-2.4.20-gentoo-r7/drivers/net/irda/ma600.c
+--- linux-2.4.20-gentoo-r6/drivers/net/irda/ma600.c	2003-09-08 19:50:27.000000000 -0700
++++ linux-2.4.20-gentoo-r7/drivers/net/irda/ma600.c	2003-08-25 04:44:42.000000000 -0700
+@@ -51,9 +51,9 @@
+ 	#undef ASSERT(expr, func)
+ 	#define ASSERT(expr, func) \
+ 	if(!(expr)) { \
+-	        printk( "Assertion failed! %s,%s,%s,line=%d\n",\
+-        	#expr,__FILE__,__FUNCTION__,__LINE__); \
+-	        ##func}
++		printk( "Assertion failed! %s,%s,%s,line=%d\n",\
++		#expr,__FILE__,__FUNCTION__,__LINE__); \
++		func}
+ #endif
+ 
+ /* convert hex value to ascii hex */
+diff -u -r linux-2.4.20-gentoo-r6/arch/i386/math-emu/poly.h linux-2.4.20-gentoo-r7/arch/i386/math-emu/poly.h
+--- linux-2.4.20-gentoo-r6/arch/i386/math-emu/poly.h	2003-09-08 19:52:14.000000000 -0700
++++ linux-2.4.20-gentoo-r7/arch/i386/math-emu/poly.h	2003-09-08 19:45:38.000000000 -0700
+@@ -75,11 +75,11 @@
+ /* Add the 12 byte Xsig x2 to Xsig dest, with no checks for overflow. */
+ static inline void add_Xsig_Xsig(Xsig *dest, const Xsig *x2)
+ {
+-  asm volatile ("movl %1,%%edi; movl %2,%%esi;
+-                 movl (%%esi),%%eax; addl %%eax,(%%edi);
+-                 movl 4(%%esi),%%eax; adcl %%eax,4(%%edi);
+-                 movl 8(%%esi),%%eax; adcl %%eax,8(%%edi);"
+-                 :"=g" (*dest):"g" (dest), "g" (x2)
++  asm volatile ("movl %1,%%edi; movl %2,%%esi; " \
++                  "movl (%%esi),%%eax; addl %%eax,(%%edi); " \
++                  "movl 4(%%esi),%%eax; adcl %%eax,4(%%edi); " \
++                  "movl 8(%%esi),%%eax; adcl %%eax,8(%%edi); " \ 
++                 :"=g" (*dest):"g" (dest), "g" (x2) \
+                  :"ax","si","di");
+ }
+ 
+@@ -90,18 +90,18 @@
+    problem, but keep fingers crossed! */
+ static inline void add_two_Xsig(Xsig *dest, const Xsig *x2, long int *exp)
+ {
+-  asm volatile ("movl %2,%%ecx; movl %3,%%esi;
+-                 movl (%%esi),%%eax; addl %%eax,(%%ecx);
+-                 movl 4(%%esi),%%eax; adcl %%eax,4(%%ecx);
+-                 movl 8(%%esi),%%eax; adcl %%eax,8(%%ecx);
+-                 jnc 0f;
+-		 rcrl 8(%%ecx); rcrl 4(%%ecx); rcrl (%%ecx)
+-                 movl %4,%%ecx; incl (%%ecx)
+-                 movl $1,%%eax; jmp 1f;
+-                 0: xorl %%eax,%%eax;
+-                 1:"
+-		:"=g" (*exp), "=g" (*dest)
+-		:"g" (dest), "g" (x2), "g" (exp)
++  asm volatile ("movl %2,%%ecx; movl %3,%%esi; " \
++                  "movl (%%esi),%%eax; addl %%eax,(%%ecx); " \
++                  "movl 4(%%esi),%%eax; adcl %%eax,4(%%ecx); " \
++                  "movl 8(%%esi),%%eax; adcl %%eax,8(%%ecx); " \
++                  "jnc 0f; " \
++		  "rcrl 8(%%ecx); rcrl 4(%%ecx); rcrl (%%ecx); " \
++                  "movl %4,%%ecx; incl (%%ecx); " \
++                  "movl $1,%%eax; jmp 1f; " \
++                  "0: xorl %%eax,%%eax; " \
++                  "1: " \
++		:"=g" (*exp), "=g" (*dest) \
++		:"g" (dest), "g" (x2), "g" (exp) \
+ 		:"cx","si","ax");
+ }
+ 
+
