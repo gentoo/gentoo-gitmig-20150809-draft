@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.12 2004/10/05 21:09:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.13 2004/10/09 02:55:52 weeve Exp $
+
+  08 Oct 2004; Jason Wever <weeve@gentoo.org> chkrootkit-0.43-r4.ebuild:
+  Stable on sparc.
 
   05 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> chkrootkit-0.43-r4.ebuild:
   Stable on alpha.
