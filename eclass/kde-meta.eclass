@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.17 2005/02/04 22:05:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.18 2005/02/05 17:34:09 motaboy Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -271,8 +271,8 @@ function kde-meta_src_unpack() {
 		
 		# Create final list of stuff to extract
 		extractlist=""
-		for item in admin Makefile.am Makefile.am.in configure.in.in configure.in.bot acinclude.m4 aclocal.m4 \
-					AUTHORS COPYING INSTALL README NEWS ChangeLog \
+		for item in admin Makefile.am Makefile.am.in configure.in.in configure.in.mid configure.in.bot \
+					acinclude.m4 aclocal.m4 AUTHORS COPYING INSTALL README NEWS ChangeLog \
 					$KMMODULE $KMEXTRA $KMCOMPILEONLY $KMEXTRACTONLY $DOCS
 		do
 			extractlist="$extractlist $myP/$item"
