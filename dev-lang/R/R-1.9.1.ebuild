@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0.ebuild,v 1.11 2004/08/21 15:54:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.1.ebuild,v 1.1 2004/08/22 20:07:49 kugelfang Exp $
 
-IUSE="blas X tcltk gnome f2c"
+IUSE="blas X tcltk gnome zlib bzlib pcre f2c"
 
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
 
@@ -16,13 +16,16 @@ HOMEPAGE="http://www.r-project.org/"
 DEPEND="virtual/libc
 		>=dev-lang/perl-5.6.1-r3
 		>=sys-libs/readline-4.1-r3
-		>=sys-libs/zlib-1.1.3-r2
+		zlib? ( >=sys-libs/zlib-1.1.3-r2 )
 		>=media-libs/jpeg-6b-r2
 		>=media-libs/libpng-1.2.1
 		blas? ( virtual/blas )
+		lapack? ( virtual/lapack )
 		f2c? ( dev-lang/f2c >=dev-libs/libf2c-20021004-r1 )
 		X? ( virtual/x11 )
 		tcltk? ( dev-lang/tk )
+		pcre? ( dev-libs/libpcre )
+		bzlib? ( app-arch/bzip2 )
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.4
 			>=gnome-base/libglade-0.17
 			>=dev-libs/libxml-1.8.16
@@ -59,12 +62,17 @@ src_unpack() {
 
 src_compile() {
 	addwrite "/var/cache/fonts"
-	local myconf="--enable-R-profiling --enable-R-shlib --with-readline"
+	local myconf="--enable-static --enable-R-profiling --enable-R-shlib --with-readline"
+
+	use zlib || myconf="${myconf} --with-zlib"   #default disabled
+	use bzlib || myconf="${myconf} --with-bzlib"   #default disabled
+	use pcre || myconf="${myconf} --with-pcre"   #default disabled
 
 	# Using the blas USE flag now instead atlas, as atlas now
 	# has been broken into blas-atlas and lapack-atlas.
 	# Danny van Dyk <kugelfang@gentoo.org> 2004/07/11
-	use blas  || myconf="${myconf} --without-blas" #default enabled
+	use blas || myconf="${myconf} --without-blas" #default enabled
+	use lapack && myconf="${myconf} --with-lapack" #default disabled
 
 	use X || myconf="${myconf} --without-x" #default enabled
 
@@ -84,7 +92,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		${myconf} || die "./configure failed"
 
-	make || die
+	emake || die
 
 }
 
