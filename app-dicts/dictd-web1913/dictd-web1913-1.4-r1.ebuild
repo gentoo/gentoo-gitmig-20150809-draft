@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-web1913/dictd-web1913-1.4-r1.ebuild,v 1.8 2004/03/06 05:30:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-web1913/dictd-web1913-1.4-r1.ebuild,v 1.9 2004/06/06 15:40:27 dragonheart Exp $
 
 MY_P=${P/td/t}-pre
 DESCRIPTION="Webster's Revised Unabridged Dictionary (1913) for dict"
@@ -9,6 +9,7 @@ SRC_URI="ftp://ftp.dict.org/pub/dict/pre/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 KEYWORDS="x86 ppc sparc amd64"
 
 DEPEND=">=app-text/dictd-1.5.5"

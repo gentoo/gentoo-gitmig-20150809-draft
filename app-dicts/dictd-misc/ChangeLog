@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/dictd-misc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-misc/ChangeLog,v 1.6 2004/02/09 07:19:45 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-misc/ChangeLog,v 1.7 2004/06/06 15:39:27 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  dictd-misc-1.5b-r1.ebuild:
+  QA - IUSE fix
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> dictd-misc-1.5b-r1.ebuild:
   added amd64 keyword.

@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/dictd-elements
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-elements/ChangeLog,v 1.6 2004/02/09 07:17:14 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-elements/ChangeLog,v 1.7 2004/06/06 15:35:21 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  dictd-elements-2000.22.07-r1.ebuild:
+  QA - IUSE fix
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org>
   dictd-elements-2000.22.07-r1.ebuild:
