@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3-r2.ebuild,v 1.1 2003/06/09 18:53:27 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3-r2.ebuild,v 1.2 2003/06/09 19:26:02 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -318,10 +318,11 @@ src_compile() {
 	then
 		# Currently gcc-3.2 or older do not work well if we specify "-march"
 		# and other optimizations for pentium4.
-		export CFLAGS="${CFLAGS/-march=pentium4/-march=pentium3}"
-		export CXXFLAGS="${CXXFLAGS/-march=pentium4/-march=pentium3}"
-		filter-flags -msse2
-
+      if [ "$(gcc-minor-version)" -lt "3" ]; then
+          replace-flags -march=pentium4 -march=pentium3
+          filter-flags -msse2
+      fi
+								
 		# Enable us to use flash, etc plugins compiled with gcc-2.95.3
 		if [ "${ARCH}" = "x86" ]
 		then
