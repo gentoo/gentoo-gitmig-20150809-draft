@@ -22,7 +22,6 @@ start() {
 			for i in 0 1 2 3 4 5 6 7 8 9
 			do
 				ypwhich &>/dev/null && { notfound=0; break; };
-				echo -n " ."
 				sleep 1;
 				eend 0 
 			done
