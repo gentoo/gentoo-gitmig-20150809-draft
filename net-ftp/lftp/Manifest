@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 74c6445bdee18d14e5c522bbc6db6aa5 ChangeLog 8307
+MD5 01ed31bdc4cc77e113a4a15d8a631538 ChangeLog 8389
 MD5 12b9a2c28624e5232b2e8016de89ef77 lftp-2.6.10.ebuild 1356
 MD5 08697d1f660f48d0b1d4e9737dc05c9f lftp-2.6.11.ebuild 1361
 MD5 bd30469259dd912781df916084edcacd metadata.xml 430
-MD5 e44ec29304652a8bd082391d8f320ff8 lftp-3.0.7-r1.ebuild 1943
 MD5 4d3bdb3a88810b6157f5ecd8ea7d6ea8 lftp-3.0.6.ebuild 1629
+MD5 7e058edad7cd4b4a42a3372ca31fc3d4 lftp-3.0.7-r1.ebuild 1937
 MD5 0000187694fd92f30e8669216ab2d7a4 files/digest-lftp-2.6.10 65
 MD5 d640fa2520c5748b7ebfba9feeae8f91 files/digest-lftp-2.6.11 65
-MD5 7b66f57f1380f19e455c42358b43ed54 files/digest-lftp-3.0.7-r1 64
 MD5 eceb1084634c247eeee6cc05ce894f4e files/digest-lftp-3.0.6 64
+MD5 7b66f57f1380f19e455c42358b43ed54 files/digest-lftp-3.0.7-r1 64
 MD5 de08110867637b5ad75b721453671510 files/lftp-3.0.7-memleak.patch 2161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBRYJEmdTrptrqvGERAoxHAJ9YtPjv3r0VTe2WP2hOaOviiMQQDQCgimT2
-mhJJW7BRG4EOBjAraUE+rCo=
-=dg9d
------END PGP SIGNATURE-----
