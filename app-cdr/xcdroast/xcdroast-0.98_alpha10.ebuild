@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <blutgens@sistina.com> 
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha10.ebuild,v 1.3 2002/04/25 01:41:33 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha10.ebuild,v 1.4 2002/04/30 12:08:39 seemant Exp $
 
 S=${WORKDIR}/xcdroast-0.98alpha10
 DESCRIPTION="Menu based front-end to mkisofs and cdrecord"
@@ -37,8 +37,11 @@ src_compile () {
 src_install () {
 	
 	make PREFIX=/usr DESTDIR=${D} install || die
-        chown root.wheel ${D}/usr/bin/xcdrgtk
-        dodoc CHANGELOG COPYING DOCUMENTATION FAQ README* TRANSLATION.HOWTO
+	chown root.wheel ${D}/usr/bin/xcdrgtk
+	dodoc CHANGELOG COPYING DOCUMENTATION FAQ README* TRANSLATION.HOWTO
+
+	# move man pages to /usr/share/man to be LFH compliant
+	mv ${D}/usr/man ${D}/usr/share
 }
 
 pkg_postinst () {
