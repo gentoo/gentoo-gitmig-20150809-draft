@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta2.ebuild,v 1.2 2003/01/07 00:17:53 raker Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta2.ebuild,v 1.3 2003/01/08 08:02:09 raker Exp $ 
 
 DESCRIPTION="Core libraries for Xine movie player."
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 S=${WORKDIR}/${PN}-${PV/_/-}
 SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}.tar.gz"
