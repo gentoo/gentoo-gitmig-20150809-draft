@@ -90,6 +90,13 @@ net-www/netscape-plugger
 ~app-games/quake3
 ~app-games/quake3-cpma
 ~app-games/quake3-osp
+~app-emulation/psemu-cdr
+~app-emulation/psemu-cdriso
+~app-emulation/psemu-gpupetemesagl
+~app-emulation/psemu-padjoy
+~app-emulation/psemu-padxwin
+~app-emulation/psemu-peopssoftgpu
+~app-emulation/psemu-peopsspu
 
 
 # temp (to fix) currently x86 only builds 
