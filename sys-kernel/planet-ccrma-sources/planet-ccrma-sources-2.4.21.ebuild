@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/planet-ccrma-sources-2.4.21.ebuild,v 1.3 2003/09/21 01:24:32 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/planet-ccrma-sources-2.4.21.ebuild,v 1.4 2003/10/18 19:58:54 nerdboy Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
-inherit kernel
+inherit kernel || die
+
 OKV=2.4.21
-KV=2.4.21-1.ll.acpi
-EXTRAVERSION="-1.ll.acpicustom"
+EXTRAVERSION="-1.ll.acpi"
+KV=${OKV}${EXTRAVERSION}
 S=${WORKDIR}/linux-${KV}
 
 # This package contains the Linux Kernel source for the version of the
@@ -36,7 +37,7 @@ DESCRIPTION="Kernel source used in Planet CCRMA custom audio upgrade (based on R
 SRC_URI="http://ccrma-www.stanford.edu/planetccrma/mirror/redhat/linux/planetcore/9/en/os/i386/kernel-source-${KV}.i386.rpm
 mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://ccrma-www.stanford.edu/ http://www.kernel.org/ http://www.redhat.com/"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="${KV}"
 
 src_unpack() {
@@ -60,8 +61,8 @@ src_unpack() {
 
 pkg_postinst() {
 
-	ewarn "This kernel currently has an unresolved symbol error"
-	ewarn "with alsa, however, it works with the OSS drivers."
+	ewarn "This kernel should now work with ALSA 0.9.6 or better."
+	ewarn "You'll need ~x86 for ALSA greater than 0.9.2"
 
 	einfo "A default kernel config has been provided in"
 	einfo "distfiles/planet-ccrma-sources-2.4.21.tar.gz."
@@ -70,4 +71,3 @@ pkg_postinst() {
 	einfo "Just make sure to enable the devfs support."
 	einfo "And never run with scissors..."
 }
-
