@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.51-r1.ebuild,v 1.1 2002/07/02 17:59:29 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.51-r1.ebuild,v 1.2 2002/07/16 08:41:59 rphillips Exp $
 
 SVER=${PV%.*}
 #normal releases:
@@ -70,16 +70,11 @@ src_unpack() {
 src_compile() {
 	local myconf
 	# use the bundled db on gentoo 1.3+
-	if [ "${COMPILER}" != "gcc3" ]
-	then
-		use berkdb && myconf="${myconf} \
-			--with-berkeley-db \
-			--with-berkeley-db-includes=/usr/include/db3 \
-			--with-berkeley-db-libs=/usr/lib"
+	if use berkdb; then
+		myconf="${myconf} --with-berkeley-db=./bdb"
 	else
-		use berkdb && myconf="${myconf} --with-berkeley-db"
+		myconf="${myconf} --without-berkeley-db"
 	fi
-	use berkdb || myconf="${myconf} --without-berkeley-db"
 	# first one means use the system readline
 	use readline && myconf="${myconf} --without-readline"
 	use readline || myconf="${myconf} --with-readline"
