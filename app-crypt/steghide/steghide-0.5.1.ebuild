@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/steghide-0.5.1.ebuild,v 1.3 2004/06/24 21:38:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/steghide-0.5.1.ebuild,v 1.4 2004/07/30 17:54:55 chainsaw Exp $
+
+inherit eutils
 
 DESCRIPTION="A steganography program which hides data in various media files"
 HOMEPAGE="http://steghide.sourceforge.net/"
@@ -17,6 +19,7 @@ DEPEND=">=app-crypt/mhash-0.8.18-r1
 
 src_compile() {
 	econf || die "configure failed"
+	epatch ${FILESDIR}/fix-libtool-invocation.patch
 	emake || die "make failed"
 }
 

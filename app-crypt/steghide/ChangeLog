@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/steghide
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/ChangeLog,v 1.4 2004/06/24 21:38:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/ChangeLog,v 1.5 2004/07/30 17:54:55 chainsaw Exp $
+
+  30 Jul 2004; Tony Vroon <chainsaw@gentoo.org>
+  +files/fix-libtool-invocation.patch, steghide-0.5.1.ebuild:
+  Fix libtool invocation. Closes bug #52470.
 
   16 Feb 2004; John Davis <zhen@gentoo.org> steghide-0.5.1.ebuild:
   marking stable for x86
