@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ec4d28b20d2c588cb0ecc24ef462bf74 cecutil-3.ebuild 565
-MD5 ebc3dc70bc9392193ab10faadfea712c ChangeLog 1086
-MD5 1383f904e0d26bd5e20c7524143769d0 cecutil-4.ebuild 974
-MD5 c1660d59774e95b0b3eac18de67fff50 cecutil-6.ebuild 970
+MD5 154680129acc29598405d6f6f660f1cd ChangeLog 1177
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 e31de25dad603b6273c12659a50cae41 files/digest-cecutil-6 60
+MD5 a7bf280a30b9c25c47c2b600818b8c06 cecutil-6.ebuild 968
+MD5 1383f904e0d26bd5e20c7524143769d0 cecutil-4.ebuild 974
+MD5 ec4d28b20d2c588cb0ecc24ef462bf74 cecutil-3.ebuild 565
 MD5 8840159f3e78e32a0a4715e6546ca0b7 files/digest-cecutil-3 60
+MD5 e31de25dad603b6273c12659a50cae41 files/digest-cecutil-6 60
 MD5 4e2527502d264bfb0e8aa278c10c9687 files/digest-cecutil-4 60
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCKzWsLLFUmVNQ7rkRAqLhAKCCWg9ja7GMrMigLylZROtwHkfbAgCdFq4P
-eBz9ac1DKQvFiTkTPmAgDoI=
-=fJ47
+iD8DBQFCRqN6ugEuf3OQ0akRAmvoAJ9X7wgyPQkot6Mo3DzClG6ALCMcQgCfYy8+
+bC8IY41se6X4jGpBVZ20osA=
+=F0q1
 -----END PGP SIGNATURE-----
