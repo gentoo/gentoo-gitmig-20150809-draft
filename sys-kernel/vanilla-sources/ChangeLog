@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.59 2005/04/05 19:37:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.60 2005/04/05 19:47:07 seemant Exp $
+
+*vanilla-sources-2.6.12_rc2 (05 Apr 2005)
+
+  05 Apr 2005; Seemant Kulleen <seemant@gentoo.org>
+  +vanilla-sources-2.6.12_rc2.ebuild:
+  version bump for 2.6.12 -- finally with elo touchscreen support! yay!
 
   05 Apr 2005; Seemant Kulleen <seemant@gentoo.org>
   -vanilla-sources-2.4.20.ebuild, -vanilla-sources-2.4.22.ebuild,
@@ -87,13 +93,13 @@
 
 *vanilla-sources-2.6.11_rc4 (13 Feb 2005)
 
-  13 Feb 2005; Michał Januszewski <spock@gentoo.org>
+  13 Feb 2005; MichaÅ Januszewski <spock@gentoo.org>
   +vanilla-sources-2.6.11_rc4.ebuild:
   Version bump.
 
 *vanilla-sources-2.6.11_rc3 (04 Feb 2005)
 
-  04 Feb 2005; Michał Januszewski <spock@gentoo.org>
+  04 Feb 2005; MichaÅ Januszewski <spock@gentoo.org>
   +vanilla-sources-2.6.11_rc3.ebuild:
   Version bump.
 
