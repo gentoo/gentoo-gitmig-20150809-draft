@@ -1,0 +1,9 @@
+# ChangeLog for app-crypt/hashsum
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashsum/ChangeLog,v 1.1 2004/08/25 11:52:09 hanno Exp $
+
+*hashsum-1.6 (25 Aug 2004)
+
+  25 Aug 2004; Hanno Boeck <hanno@gentoo.org> +hashsum-1.6.ebuild:
+  User submitted ebuild by Lars Strojny <lars@strojny.net>.
+
