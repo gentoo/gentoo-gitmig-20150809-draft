@@ -1,6 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Craig Joly <joly@ee.ualberta.ca>
+# Author Ben Lutgens <lamer@gentoo.org> 
+# Submitted by Craig Joly <joly@ee.ualberta.ca>
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Power Management Daemon"
@@ -10,8 +11,9 @@ HOMEPAGE="http://www.worldvisions.ca/~apenwarr/apmd/"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -e "s:PREFIX=\/usr:PREFIX=\$\{DESTDIR\}\/usr:" Makefile | cat > Makefile
-	sed -e "s:install\ \-b \-Vt:\#install\ \-b \-Vt:" Makefile | cat > Makefile
+	sed -e "s:PREFIX=\/usr:PREFIX=\$\{DESTDIR\}\/usr:" Makefile | \
+	sed -e "s:APMD_PROXY_DIR\=\/etc:APMD_PROXY_DIR\=\$\{DESTDIR\}\/etc\/apm:" | \
+	sed -e "97d" | cat > Makefile
 }
 
 src_compile() {
@@ -23,7 +25,7 @@ src_compile() {
 src_install () {
 
 	try make DESTDIR=${D} install
-
+	dodir /etc/apm/{event.d,suspend.d,resume.d}
 	insinto /etc/apm
 	insopts -m 0755
 	doins ${S}/debian/apmd_proxy
