@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3mir/w3mir-1.0.10.ebuild,v 1.4 2003/09/06 02:05:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3mir/w3mir-1.0.10.ebuild,v 1.5 2004/06/11 12:06:51 kloeri Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc alpha"
 
 DEPEND="${DEPEND}
 	>=dev-perl/URI-1.0.9

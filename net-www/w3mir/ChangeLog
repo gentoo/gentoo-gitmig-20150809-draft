@@ -1,6 +1,9 @@
 # ChangeLog for net-www/w3mir
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3mir/ChangeLog,v 1.1 2003/05/07 22:04:57 rac Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3mir/ChangeLog,v 1.2 2004/06/11 12:06:51 kloeri Exp $
+
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> w3mir-1.0.10.ebuild:
+  Stable on alpha.
 
 *w3mir-1.0.10 (07 May 2003)
 
