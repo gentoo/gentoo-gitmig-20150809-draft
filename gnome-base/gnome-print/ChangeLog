@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-print
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.9 2002/04/13 08:26:31 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.10 2002/07/23 21:07:48 gerk Exp $
+
+  23 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gnome-print-0.35-r3.ebuild :
 
