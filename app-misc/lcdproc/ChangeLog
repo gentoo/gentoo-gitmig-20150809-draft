@@ -1,13 +1,19 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.2 2002/11/05 19:29:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.3 2002/11/12 15:40:38 aliz Exp $
 
 *lcdproc-0.4.3 (05 Nov 2002)
+
+  12 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> lcdproc-0.4.3.ebuild :
+  Removed autostarting of initscript.
 
   05 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump.
 
 *lcdproc-0.4.1-r1 (1 Feb 2002)
+
+  12 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> lcdproc-0.4.1-r1.ebuild :
+  Removed autostarting of initscript.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

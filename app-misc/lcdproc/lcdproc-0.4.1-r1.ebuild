@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.1-r1.ebuild,v 1.10 2002/10/20 18:40:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.1-r1.ebuild,v 1.11 2002/11/12 15:40:38 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="lcdproc - displays system status on Matrix-Orbital 20x4 LCD on a serial port."
@@ -36,12 +36,4 @@ src_install() {
 	doexe ${FILESDIR}/lcdproc
 	insinto /etc/conf.d
 	newins ${FILESDIR}/lcdproc.confd lcdproc
-}
-
-pkg_postinst () {
-	rc-update add lcdproc default
-}
-
-pkg_postrm () {
-	rc-update del lcdproc
 }
