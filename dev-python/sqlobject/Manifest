@@ -3,14 +3,17 @@ Hash: SHA1
 
 MD5 1436c0c2e931c2d0ca9aa610b5a34a38 sqlobject-0.6.ebuild 887
 MD5 4f1a2e57adc3709e1eb06286ce386e62 metadata.xml 373
-MD5 c4ce49788ecadb13cafad9e040a84738 ChangeLog 584
+MD5 be2c62c4382ca4613a6f4c0e030ab3d4 ChangeLog 787
 MD5 4e367ed18e4e4b3460613985ff2d342d sqlobject-0.6.1.ebuild 888
+MD5 d7839f55ba5e2c3a2ad8dbe35acfaa2e sqlobject-0.6.1-r1.ebuild 1077
 MD5 d0031ecb2e25667b84c0f038fbfd9824 files/digest-sqlobject-0.6 65
 MD5 1f977e1d1bdca5117fa468d6d620ca80 files/digest-sqlobject-0.6.1 67
+MD5 5b2d75adc12e9723956e5f5bc0d6dbcf files/converters-0.6.1-gentoo.diff 894
+MD5 1f977e1d1bdca5117fa468d6d620ca80 files/digest-sqlobject-0.6.1-r1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCJpLcz2gxt1z4IGYRAmEeAKCuQJZi9wvz1Cf2DeL7QhPh9XZdUwCgjlxu
-kY+Jn++JMJr+VxYtxuDF980=
-=FoCZ
+iD8DBQFCOxzCz2gxt1z4IGYRAr8LAJoC1VnG/s19vniuN052VCheACSMMgCgo1zX
+t9Q6ora3prf373mWnlGD3Mk=
+=Tlkl
 -----END PGP SIGNATURE-----

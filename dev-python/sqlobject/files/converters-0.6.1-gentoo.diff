@@ -1,0 +1,29 @@
+--- sqlobject/converters.py.orig	2005-03-17 23:38:50.135566808 -0800
++++ sqlobject/converters.py	2005-03-17 23:41:39.244858288 -0800
+@@ -1,3 +1,5 @@
++from array import array
++
+ try:
+     import mx.DateTime.ISO
+     origISOStr = mx.DateTime.ISO.strGMT
+@@ -89,6 +91,12 @@
+ lookupConverter = converters.lookupConverter
+ 
+ def StringLikeConverter(value, db):
++    if type(value) == type(array('c','')):
++        try:
++            value = value.tounicode()
++        except ValueError:
++            value = value.tostring()
++
+     if db in ('mysql', 'postgres'):
+         for orig, repl in sqlStringReplace:
+             value = value.replace(orig, repl)
+@@ -100,6 +108,7 @@
+ 
+ registerConverter(type(""), StringLikeConverter)
+ registerConverter(type(u""), StringLikeConverter)
++registerConverter(type(array('c','')), StringLikeConverter)
+ 
+ def IntConverter(value, db):
+     return repr(int(value))
