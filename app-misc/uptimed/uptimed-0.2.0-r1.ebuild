@@ -1,17 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.2.0-r1.ebuild,v 1.6 2002/10/20 18:40:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.2.0-r1.ebuild,v 1.7 2002/11/30 21:37:19 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools"
 SRC_URI="mirror://sourceforge/uptimed/${P}.tar.bz2"
-HOMEPAGE="http://unixcode.org/uptimed"
+HOMEPAGE="http://unixcode.org/uptimed/"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
-
-DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
@@ -20,7 +17,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die
+	econf
 	emake || die
 }
 
@@ -36,8 +33,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo -e "\e[32;01m To start uptimed, you must enable the /etc/init.d/uptimed rc file \033[0m"
-	echo -e "\e[32;01m You may start uptimed now with: \033[0m"
-	echo -e "\e[32;01m /etc/init.d/uptimed start \033[0m"
-	echo -e "\e[32;01m To view your uptimes, use the command 'uprecords'.\033[0m"
+	einfo "To start uptimed, you must enable the /etc/init.d/uptimed rc file"
+	einfo "You may start uptimed now with:"
+	einfo "/etc/init.d/uptimed start"
+	einfo "To view your uptimes, use the command 'uprecords'."
 }

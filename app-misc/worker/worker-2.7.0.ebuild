@@ -1,11 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.7.0.ebuild,v 1.1 2002/10/27 01:11:51 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.7.0.ebuild,v 1.2 2002/11/30 21:41:19 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Worker Filemanager: Amiga Directory Opus 4 clone."
 SRC_URI="http://www.boomerangsworld.de/worker/downloads/${P}.tar.bz2"
-HOMEPAGE="http://www.boomerangsworld.de/worker"
+HOMEPAGE="http://www.boomerangsworld.de/worker/"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -14,12 +13,11 @@ KEYWORDS="~x86"
 DEPEND="virtual/x11"
 
 src_compile() {
-	econf || die "configure problem"
+	econf
 	emake || die "compile problem"
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die "install problem"
-
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS
 }
