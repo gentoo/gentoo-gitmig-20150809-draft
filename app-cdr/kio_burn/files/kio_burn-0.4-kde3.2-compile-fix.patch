@@ -1,0 +1,20 @@
+--- burn-0.4/src/playlistdialog.cpp~	2004-09-07 19:18:05.000000000 -0400
++++ burn-0.4/src/playlistdialog.cpp	2004-09-09 06:39:39.917703544 -0400
+@@ -179,7 +179,7 @@
+     
+     listItem = new KListViewItem( trackListView, numberToQString(trackListView->childCount()+1), 
+                                   *string, 
+-                                  locale.formatTime( timeFromSeconds( length ) , true, true ),
++                                  locale.formatTime( timeFromSeconds( length ) , true),
+                                   mediaType ) ;
+     i++;
+   }
+@@ -189,7 +189,7 @@
+   trackListView->setSorting( -1 );
+   
+   totalPlayingTimeLabel->setText( QString( "<p align=\"right\">" )
+-      += i18n( "Total playing time: %1").arg( locale.formatTime( timeFromSeconds( totalTime ), true, true ) )
++      += i18n( "Total playing time: %1").arg( locale.formatTime( timeFromSeconds( totalTime ), true) )
+                                   += QString("</p>"));
+ }
+ 
