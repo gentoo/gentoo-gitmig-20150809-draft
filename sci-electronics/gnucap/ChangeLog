@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gnucap
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.2 2004/12/27 20:55:57 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.3 2005/01/04 23:50:19 cryos Exp $
+
+  04 Jan 2005; Marcus Hanwell <cryos@gentoo.org> gnucap-0.34.ebuild:
+  Marked ~amd64.
 
 *gnucap-0.34 (27 Dec 2004)
 
