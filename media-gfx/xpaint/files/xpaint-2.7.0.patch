@@ -1,0 +1,101 @@
+diff -ur xpaint-2.7.0/rw/libpnmrw.c xpaint-2.7.0new/rw/libpnmrw.c
+--- xpaint-2.7.0/rw/libpnmrw.c	2003-07-23 11:35:54.000000000 +0200
++++ xpaint-2.7.0new/rw/libpnmrw.c	2003-07-23 11:36:19.000000000 +0200
+@@ -49,7 +49,7 @@
+ 
+ void *malloc(int);
+ void free(void *);
+-#if defined(__EMX__) || defined(__CYGWIN__)
++#if defined(__EMX__) || defined(__STDC__) || defined(__CYGWIN__)
+ #include <errno.h>
+ #endif
+ 
+@@ -147,12 +147,12 @@
+ #endif
+ #endif
+ #endif
+-#if !defined(__EMX__) || defined(__CYGWIN__)
++#if (!defined(__EMX__) && !defined(__STDC__)) || defined(__CYGWIN__) 
+     extern int errno;
+ #endif
+     char *e;
+ 
+-    e = (char *)sys_errlist[errno];
++    e = (char *)strerror(errno);
+ 
+     if (reason != 0 && reason[0] != '\0')
+ 	fprintf(stderr, "%s: %s - %s\n", progname, reason, e);
+diff -ur xpaint-2.7.0/rw/writeGIF.c xpaint-2.7.0new/rw/writeGIF.c
+--- xpaint-2.7.0/rw/writeGIF.c	2003-07-23 11:35:54.000000000 +0200
++++ xpaint-2.7.0new/rw/writeGIF.c	2003-07-23 11:40:59.000000000 +0200
+@@ -40,7 +40,7 @@
+ #include <stdio.h>
+ #include "image.h"
+ #include "rwTable.h"
+-#ifdef __EMX__
++#if defined(__EMX__) || defined(__STDC__)
+ #include <errno.h>
+ #endif
+ 
+@@ -84,7 +84,7 @@
+ int
+ WriteGIF(char *file, Image * outImage)
+ {
+-#ifndef __EMX__
++#if defined(__EMX__) && !defined(__STDC__)
+     extern int errno;
+ #endif
+     int r[MAXCOLORS], g[MAXCOLORS], b[MAXCOLORS];
+diff -ur xpaint-2.7.0/xaw95-1.1.4/AsciiSrc.c xpaint-2.7.0new/xaw95-1.1.4/AsciiSrc.c
+--- xpaint-2.7.0/xaw95-1.1.4/AsciiSrc.c	2003-07-23 11:35:54.000000000 +0200
++++ xpaint-2.7.0new/xaw95-1.1.4/AsciiSrc.c	2003-07-23 11:36:19.000000000 +0200
+@@ -984,6 +984,7 @@
+ {
+     char * open_mode = NULL;
+     FILE * file;
++    int tmpfd;
+     char fileName[TMPSIZ];
+ 
+     if (src->ascii_src.type == XawAsciiString) {
+@@ -1030,7 +1031,8 @@
+     case XawtextEdit:
+ 	if (src->ascii_src.string == NULL) {
+ 	    src->ascii_src.string = fileName;
+-	    (void) tmpnam(src->ascii_src.string);
++	    tmpfd=mkstemp(src->ascii_src.string);
++            if(tmpfd == -1) perror("mkstemp failed");
+ 	    src->ascii_src.is_tempfile = TRUE;
+ 	    open_mode = "w";
+ 	} else
+diff -ur xpaint-2.7.0/xaw95-1.1.4/MultiSrc.c xpaint-2.7.0new/xaw95-1.1.4/MultiSrc.c
+--- xpaint-2.7.0/xaw95-1.1.4/MultiSrc.c	2003-07-23 11:35:54.000000000 +0200
++++ xpaint-2.7.0new/xaw95-1.1.4/MultiSrc.c	2003-07-23 11:36:19.000000000 +0200
+@@ -122,7 +122,7 @@
+ static void (MyWStrncpy)();
+ #endif
+ 
+-extern char *tmpnam();
++#include <stdlib.h>
+ #ifdef X_NOT_STDC_ENV
+ extern int errno; 
+ #endif
+@@ -1077,7 +1077,8 @@
+ {
+     char * open_mode = NULL;
+     FILE * file;
+-    char fileName[TMPSIZ];
++    int tmpfd;
++    char fileName[TMPSIZ]="xpaintXXXXXX";
+     Display *d = XtDisplayOfObject((Widget)src);
+ 
+     if (src->multi_src.type == XawAsciiString) {
+@@ -1137,7 +1138,8 @@
+             src->multi_src.allocated_string = False;
+ 	    src->multi_src.string = fileName;
+ 
+-	    (void) tmpnam(src->multi_src.string);
++	    tmpfd=mkstemp(src->multi_src.string);
++            if(tmpfd == -1) perror("mkstemp failed");
+ 	    src->multi_src.is_tempfile = TRUE;
+ 	    open_mode = "w";
+ 	} else
