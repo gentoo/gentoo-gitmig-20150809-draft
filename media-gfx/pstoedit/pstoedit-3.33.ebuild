@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.33.ebuild,v 1.7 2004/02/16 10:46:57 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.33.ebuild,v 1.8 2004/04/26 02:40:42 agriffis Exp $
 
 inherit libtool
 
@@ -44,7 +44,7 @@ src_compile() {
 		&& myconf="${myconf} --with-libemf-include=/usr/include/libEMF"
 
 	elibtoolize
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	make || die
 
 }

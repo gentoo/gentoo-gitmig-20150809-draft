@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.32.ebuild,v 1.10 2004/02/02 21:07:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.32.ebuild,v 1.11 2004/04/26 02:40:42 agriffis Exp $
 
 inherit libtool
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 src_compile() {
 	elibtoolize
-	econf
+	econf || die "econf failed"
 	make || die
 }
 
