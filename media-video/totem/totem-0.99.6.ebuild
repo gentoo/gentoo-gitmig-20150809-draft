@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.6.ebuild,v 1.1 2003/10/13 06:25:13 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.6.ebuild,v 1.2 2003/10/14 20:11:51 foser Exp $
 
 inherit gnome2
 
@@ -21,9 +21,9 @@ RDEPEND=">=dev-libs/glib-2.1
 	>=gnome-base/gnome-desktop-2.2
 	curl? ( >=net-ftp/curl-7.9.8 )
 	lirc? ( app-misc/lirc )
-	!gstreamer? ( >=media-libs/xine-lib-1_beta12 )
-	gstreamer? ( >=media-libs/gstreamer-0.6.1
-		>=media-libs/gst-plugins-0.6.1
+	!gstreamer? ( >=media-libs/xine-lib-1_rc0 )
+	gstreamer? ( >=media-libs/gstreamer-0.6.3
+		>=media-libs/gst-plugins-0.6.3
 		>=media-plugins/gst-plugins-gnomevfs-0.6.3
 		>=media-plugins/gst-plugins-colorspace-0.6.3
 		>=media-plugins/gst-plugins-xvideo-0.6.3
