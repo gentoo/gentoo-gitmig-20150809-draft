@@ -1,13 +1,16 @@
 #!/sbin/runscript
 
+#you can put this in your rc.conf file if you wish
+#HTTPD_OPTS="-D SSL -D PHP4
+
 depend() {
     need net
 }
 
 checkconfig() {
     if [ ! -e /etc/httpd/httpd.conf ] ; then
-        eerror "You need an /etc/httpd/httpd.conf  to run Apache"
-        eerror "There is a sample file in /usr/share/docs/apache"
+        eerror "You need an /etc/httpd/httpd.conf to run apache"
+        eerror "There is a sample file in /usr/share/doc/apache"
         return 1
     fi
 }
@@ -15,7 +18,7 @@ checkconfig() {
 start() {
     checkconfig || return 1
     ebegin "Starting Apache"
-    start-stop-daemon --quiet --start --exec /usr/sbin/httpd
+    start-stop-daemon --quiet --start --exec /usr/sbin/httpd -- $HTTPD_OPTS
     eend $?
 }
 
