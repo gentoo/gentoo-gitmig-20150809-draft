@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.41 2004/09/28 17:28:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.42 2004/09/29 03:57:15 robbat2 Exp $
+
+*php-cgi-4.3.9-r1 (28 Sep 2004)
+
+  28 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> +php-cgi-4.3.9-r1.ebuild:
+  Fix for bug #60247 is needed again, I'll submit a proper fix upstream later.
 
   28 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> php-cgi-4.3.9.ebuild:
   Stable on x86.
