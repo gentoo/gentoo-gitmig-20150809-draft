@@ -6,7 +6,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Active OS fingerprinting tool"
 SRC_URI="http://www.sys-security.com/archive/tools/X/${P}.tar.gz"
 HOMEPAGE="http://www.sys-security.com/html/projects/X.html"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
 
