@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r1.ebuild,v 1.1 2002/10/12 21:16:25 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r1.ebuild,v 1.2 2002/10/20 18:52:43 vapier Exp $
 
 mod_ssl_ver=2.8.11-${PV}
 
@@ -18,7 +18,6 @@ DEPEND="sys-devel/perl sys-libs/db
 	>=dev-libs/mm-1.1.3
 	>=sys-libs/gdbm-1.8
 	>=dev-libs/expat-1.95.2"
-RDEPEND="${DEPEND}"
 LICENSE="Apache-1.1"
 SLOT="1"
 

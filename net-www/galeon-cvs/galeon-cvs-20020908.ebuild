@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.9 2002/10/10 16:08:47 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.10 2002/10/20 18:52:43 vapier Exp $
 
 
 # ECVS_TOP_DIR="${PORTAGE_TMPDIR}"
@@ -28,7 +28,6 @@ DEPEND="virtual/x11
 	>=gnome-base/gnome-common-1.2.4
 	dev-util/cvs"
 
-RDEPEND="${DEPEND}"
 
 pkg_setup () {
 	if [ ! -f ${ROOT}/usr/lib/mozilla/components/libwidget_gtk2.so ]
