@@ -40,6 +40,9 @@ net-www/netscape-flash
 net-www/netscape-navigator
 net-www/netscape-plugger
 
+# more precompiled x86 stuff (gerk)
+app-text/acroread
+
 # makes no sense on ppc
 ~sys-apps/lilo
 ~sys-apps/grub 
