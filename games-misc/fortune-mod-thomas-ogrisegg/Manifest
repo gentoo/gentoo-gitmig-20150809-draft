@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 38e8b71a16afab36a3621961128fd446 ChangeLog 523
-MD5 bd8e98550a246dc7dca1da0b107ad3b4 fortune-mod-thomas-ogrisegg-20030120.ebuild 658
+MD5 627f511c680abadf249afdab50d7116b ChangeLog 633
+MD5 e7ab2a5fd04efd4d977aa2a4d39e2d16 fortune-mod-thomas-ogrisegg-20030120.ebuild 663
 MD5 959fc7abb397bb88b9eeb99c8553e5ba metadata.xml 257
 MD5 4545de61d6fd31694241083fd1bcee51 files/digest-fortune-mod-thomas-ogrisegg-20030120 87
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBZwNZI1lqEGTUzyQRAt4UAKCk1znjsTc4YfsY9aQC6DYQDfmI4gCgnLn+
-THkePHynl8vLsTqBwnATN/8=
-=Kyff
------END PGP SIGNATURE-----
