@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20031028.ebuild,v 1.2 2003/11/20 06:55:26 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20031028.ebuild,v 1.3 2003/12/26 19:52:12 blkdeath Exp $
 
 DESCRIPTION="leafnode - A USENET software package designed for small sites"
 SRC_URI="http://www-dt.e-technik.uni-dortmund.de/~ma/leafnode/beta/leafnode-2.0.0.alpha20031028a.tar.bz2"
@@ -11,6 +11,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="ipv6"
+S="${WORKDIR}/leafnode-2.0.0.alpha20031028a"
 
 src_compile() {
 	local myconf
