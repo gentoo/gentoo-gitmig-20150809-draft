@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libprelude
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.7 2003/12/17 07:06:53 mboman Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.8 2004/02/17 21:57:33 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> libprelude-0.8.10.ebuild:
+  stable on alpha and ia64
 
 *libprelude-0.8.10 (17 Dec 2003)
 
