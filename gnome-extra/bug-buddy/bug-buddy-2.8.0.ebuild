@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.8.0.ebuild,v 1.7 2005/01/08 23:37:03 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.8.0.ebuild,v 1.8 2005/01/22 06:55:21 vapier Exp $
 
 inherit gnome2
 
 DESCRIPTION="Bug Report helper for Gnome"
 HOMEPAGE="http://www.gnome.org/"
-LICENSE="Ximian-logos GPL-2"
 
+LICENSE="Ximian-logos GPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ia64 ~mips"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/libglade-2
@@ -30,4 +30,4 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29
 	>=app-text/scrollkeeper-0.3.8"
 
-DOCS="AUTHORS ChangeLog COPY* README INSTALL NEWS TODO"
+DOCS="AUTHORS ChangeLog README INSTALL NEWS TODO"
