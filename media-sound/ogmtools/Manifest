@@ -1,18 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7bc2d5ac2b0f9c59dc15f35777abdfce ChangeLog 2778
-MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 ecc522a3c339ebf582a4b39cc755f336 ogmtools-1.4.ebuild 1014
 MD5 fd266b183ab7c000bbfb8eb349acba47 ogmtools-1.4.1.ebuild 1023
-MD5 1d3c84770e67882725503e7237fe56d5 files/digest-ogmtools-1.4 65
-MD5 23dedffee5d4028d0336292bf046fb7a files/ogmtools-1.3-endian-fix.patch 509
-MD5 9138778818ef5ac3688b89f874798b29 files/ogmtools-1.4-endian-fix.patch 406
+MD5 41ed42fc535d3761bc879557164a924e ogmtools-1.5.ebuild 1016
+MD5 bdd386d91b6329b40072ce53f8f0858e ChangeLog 2951
+MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 1d1619956bd0f7029e7450c0ec898626 files/digest-ogmtools-1.4.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBdfmKArHZZzCEUG0RAvnVAKCDSKfjUHJsa70B+IQZ3YRAAL9GNACcC70s
-z+QmYeUAAek2JRRSgPqKUjs=
-=DREn
------END PGP SIGNATURE-----
+MD5 9138778818ef5ac3688b89f874798b29 files/ogmtools-1.4-endian-fix.patch 406
+MD5 8926ba6de9fcdedf970cd572020fb4de files/ogmtools-1.5-endian-fix.patch 406
+MD5 1d3c84770e67882725503e7237fe56d5 files/digest-ogmtools-1.4 65
+MD5 b761ed0428ae14a6836e25964a36e5f0 files/digest-ogmtools-1.5 65
+MD5 23dedffee5d4028d0336292bf046fb7a files/ogmtools-1.3-endian-fix.patch 509
