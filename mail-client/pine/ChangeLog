@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.20 2004/09/02 21:29:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.21 2004/10/04 20:48:07 robbat2 Exp $
+
+  04 Oct 2004; Robin H. Johnson <robbat2@gentoo.org> pine-4.50-r4.ebuild,
+  pine-4.58-r3.ebuild, pine-4.60.ebuild, pine-4.61-r1.ebuild,
+  pine-4.61-r2.ebuild:
+  Bug #66333 - better RDEPEND.
 
   02 Sep 2004; Andrej Kacian <ticho@gentoo.org> pine-4.50-r4.ebuild,
   pine-4.58-r3.ebuild, pine-4.60.ebuild, pine-4.61-r1.ebuild,

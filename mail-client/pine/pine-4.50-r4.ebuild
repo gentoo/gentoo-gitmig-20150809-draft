@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.50-r4.ebuild,v 1.9 2004/09/02 21:29:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.50-r4.ebuild,v 1.10 2004/10/04 20:48:07 robbat2 Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="virtual/libc
 	>=sys-libs/pam-0.72
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )"
-RDEPEND="app-misc/mime-types"
+RDEPEND="${DEPEND} app-misc/mime-types"
 
 S="${WORKDIR}/${P/-/}"
 
