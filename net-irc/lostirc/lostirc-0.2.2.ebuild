@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.2.2.ebuild,v 1.2 2002/12/01 13:28:21 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.2.2.ebuild,v 1.3 2002/12/01 19:08:59 phoenix Exp $
 
 inherit base
 
@@ -17,5 +17,5 @@ DEPEND="=x11-libs/gtkmm-2.0*
 
 src_install() {
 	base_src_install
-	dodoc AUTHORS ChangeLog COPYING INSTALL README TODO
+	dodoc AUTHORS ChangeLog COPYING INSTALL README TODO NEWS
 }
