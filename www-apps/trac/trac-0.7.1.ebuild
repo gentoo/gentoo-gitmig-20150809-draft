@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.7.1.ebuild,v 1.3 2004/10/24 02:04:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.7.1.ebuild,v 1.4 2004/11/30 22:32:54 swegener Exp $
 
 inherit distutils webapp
 
@@ -14,10 +14,10 @@ IUSE=""
 
 DEPEND="$DEPEND
 	>=dev-lang/python-2.3
-	>=dev-python/docutils
+	dev-python/docutils
 	>=dev-python/pysqlite-0.4.3
 	>=dev-libs/clearsilver-0.9.3
-	>=app-text/silvercity
+	app-text/silvercity
 	>=dev-util/subversion-1.0.3"
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL PKG-INFO README RELEASE THANKS UPGRADE"
