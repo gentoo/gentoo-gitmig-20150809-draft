@@ -1,0 +1,25 @@
+diff -ur clockspeed-0.62.orig/conf-cc clockspeed-0.62/conf-cc
+--- clockspeed-0.62.orig/conf-cc	Tue Oct 13 13:37:49 1998
++++ clockspeed-0.62/conf-cc	Thu Apr 19 19:55:16 2001
+@@ -1,3 +1,3 @@
+-gcc -O2
++gcc @CFLAGS@
+ 
+ This will be used to compile .c files.
+diff -ur clockspeed-0.62.orig/conf-home clockspeed-0.62/conf-home
+--- clockspeed-0.62.orig/conf-home	Tue Oct 13 13:37:49 1998
++++ clockspeed-0.62/conf-home	Thu Apr 19 19:55:00 2001
+@@ -1,4 +1,4 @@
+-/usr/local/clockspeed
++/usr
+ 
+ This is the clockspeed home directory. Programs will be installed in
+ .../bin.
+diff -ur clockspeed-0.62.orig/conf-ld clockspeed-0.62/conf-ld
+--- clockspeed-0.62.orig/conf-ld	Tue Oct 13 13:37:49 1998
++++ clockspeed-0.62/conf-ld	Thu Apr 19 19:54:54 2001
+@@ -1,3 +1,3 @@
+-gcc -s
++gcc
+ 
+ This will be used to link .o files into an executable.
