@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r1.ebuild,v 1.7 2004/05/11 20:04:18 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r1.ebuild,v 1.8 2004/05/25 20:40:58 kugelfang Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -57,7 +57,10 @@ src_compile() {
 	filter-mfpmath sse
 	filter-flags -maltivec -mabi=altivec -fforce-addr -momit-leaf-frame-pointer
 	# BREG error with -fPIC
-	filter-flags -fPIC
+	# ---
+	# really ? no on amd64, and we need -fPIC.
+	# Danny van Dyk <kugelfang@gentoo.org> 2004/05/25
+	use !amd64 && filter-flags -fPIC
 
 	local myconf="--with-dvdread"
 
