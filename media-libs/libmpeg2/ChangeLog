@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libmpeg2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.10 2003/05/30 00:06:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.11 2003/06/26 18:40:00 raker Exp $
+
+*libmpeg2-0.3.2_pre20030625
+
+  26 Jun 2003; Nick Hadaway <raker@gentoo.org> 
+  libmpeg2-0.3.2_pre20030625.ebuild:
+  New 0.3.x series build to support vlc-0.6.0.  The tarball is only
+  mirrored by gentoo as the snapshot will not be on upstream servers
+  long.
 
   30 May 2003; Luca Barbato <lu_zero@gentoo.org> libmpeg2-0.3.1.ebuild:
   Added ppc in KEYWORDS
