@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.7 2004/10/03 14:35:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.8 2004/11/06 07:20:16 usata Exp $
+
+*ruby-gettext-0.8.0 (06 Nov 2004)
+
+  06 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> -ruby-gettext-0.5.3.ebuild,
+  +ruby-gettext-0.8.0.ebuild:
+  Version bumped.
 
   03 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-gettext-0.5.5.ebuild,
   ruby-gettext-0.6.1.ebuild:
