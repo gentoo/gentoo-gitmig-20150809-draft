@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xosview/xosview-1.8.0.ebuild,v 1.8 2003/10/11 11:55:33 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xosview/xosview-1.8.0.ebuild,v 1.9 2003/10/15 12:42:03 plasmaroo Exp $
 
 DESCRIPTION="X11 operating system viewer"
 SRC_URI="http://www.ibiblio.org/pub/Linux/system/status/xstatus/${P}.tar.gz"
@@ -23,6 +23,9 @@ src_compile() {
 	if [ ${ARCH} = "ppc" ] ; then
 		patch -p0 < ${FILESDIR}/xosview-1.8.0-ppc.diff || die "patch failed"
 	fi
+
+	epatch ${FILESDIR}/xosview-gcc-3.3.1.patch
+
 	econf
 	emake || die
 

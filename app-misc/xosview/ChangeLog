@@ -1,8 +1,13 @@
 # ChangeLog for app-misc/xosview
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xosview/ChangeLog,v 1.6 2003/10/11 11:55:33 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xosview/ChangeLog,v 1.7 2003/10/15 12:42:03 plasmaroo Exp $
 
 xosview-1.8.0 (28 Aug 2003)
+
+  15 Oct 2003; <plasmaroo@gentoo.org> xosview-1.8.0.ebuild,
+  files/xosview-gcc-3.3.1.patch:
+  Added a GCC 3.3 patch, thanks to Max Valdex <maxvaldez@yahoo.com> for sending
+  this in.
 
   12 Oct 2003; Brandy Westcott brandy@gentoo.org xosview-1.8.0.ebuild:
   Fixed ebuild to install documention.
