@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.2 2004/01/26 00:42:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.3 2004/01/30 06:39:18 drobbins Exp $
 
 DESCRIPTION="an audio file editing utility"
 HOMEPAGE="http://glame.sourceforge.net/"
@@ -16,6 +16,7 @@ DEPEND=">=dev-util/guile-1.4-r3
 	>=dev-libs/libxml2-2.0.0
 	>=media-sound/esound-0.2
 	>=media-libs/audiofile-0.2.2
+	>=sys-devel/autoconf-2.58
 	=dev-libs/fftw-2*
 	media-sound/mad
 	media-libs/ladspa-sdk

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.1.ebuild,v 1.5 2004/01/26 00:42:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.1.ebuild,v 1.6 2004/01/30 06:39:18 drobbins Exp $
 
 IUSE="nls gnome"
 
@@ -16,6 +16,7 @@ KEYWORDS="~x86 ~sparc"
 DEPEND=">=dev-util/guile-1.4-r3
 	dev-libs/libxml2
 	>=media-sound/esound-0.2
+	>=sys-devel/autoconf-2.58
 	media-libs/audiofile
 	media-sound/mad
 	oggvorbis? ( media-sound/vorbis-tools )
