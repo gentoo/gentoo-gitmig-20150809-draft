@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/zthread
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.10 2004/06/03 16:39:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.11 2004/06/19 13:31:36 zul Exp $
+
+  19 Jun 2004; Chuck Short <zul@gentoo.org> zthread-2.2.10-r1.ebuild,
+  files/zthread-gcc34.patch:
+  Added patch to compile with gcc34. Closes #53742.
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> zthread-1.5.3.ebuild:
   Fix use invocation

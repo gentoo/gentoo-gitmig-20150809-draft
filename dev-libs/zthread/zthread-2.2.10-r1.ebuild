@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.2.10-r1.ebuild,v 1.4 2004/03/14 12:28:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.2.10-r1.ebuild,v 1.5 2004/06/19 13:31:36 zul Exp $
 
 DESCRIPTION="a platform-independent object-oriented threading architecture"
 HOMEPAGE="http://www.cs.buffalo.edu/~crahen/projects/zthread/"
@@ -15,6 +15,8 @@ DEPEND="virtual/glibc"
 S=${WORKDIR}/ZThread-${PV}
 
 src_compile() {
+	epatch ${FILESDIR}/zthread-gcc34.patch || die "patch failed."
+
 	local myconf=""
 	use debug \
 		&& myconf="--enable-debug=yes" \

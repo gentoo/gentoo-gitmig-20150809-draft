@@ -1,0 +1,22 @@
+diff -Naur ZThread-2.2.10/src/posix/FastLock.h ZThread-2.2.10-gentoo/src/posix/FastLock.h
+--- ZThread-2.2.10/src/posix/FastLock.h	2002-07-02 20:23:05.000000000 +0000
++++ ZThread-2.2.10-gentoo/src/posix/FastLock.h	2004-06-18 11:20:01.038016496 +0000
+@@ -28,6 +28,7 @@
+ #include "zthread/Exceptions.h"
+ #include "zthread/NonCopyable.h"
+ #include <pthread.h>
++#include <assert.h>
+ 
+ namespace ZThread {
+ 
+diff -Naur ZThread-2.2.10/tests/ReadWriteTests.cxx ZThread-2.2.10-gentoo/tests/ReadWriteTests.cxx
+--- ZThread-2.2.10/tests/ReadWriteTests.cxx	2002-06-29 14:31:17.000000000 +0000
++++ ZThread-2.2.10-gentoo/tests/ReadWriteTests.cxx	2004-06-18 11:20:19.312238392 +0000
+@@ -3,6 +3,7 @@
+ #include "zthread/BiasedReadWriteLock.h"
+ 
+ #include <iostream>
++#include <assert.h>
+ using namespace std;
+ using namespace ZThread;
+ 
