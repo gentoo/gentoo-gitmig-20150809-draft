@@ -1,29 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20030209.ebuild,v 1.5 2004/03/14 02:40:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20030209.ebuild,v 1.6 2004/04/19 19:11:29 vapier Exp $
 
-#inherit flag-o-matic libtool
 inherit flag-o-matic
-
-IUSE="nls"
 
 #need to check what gcc version we are running
 GCC_PV=$(gcc -dumpversion)
 
-S="${WORKDIR}/gcc-${GCC_PV}"
 DESCRIPTION="Gnu Pascal Compiler"
+HOMEPAGE="http://gnu-pascal.de"
 SRC_URI="http://gnu-pascal.de/alpha/${P}.tar.gz
-		ftp://gcc.gnu.org/pub/gcc/releases/gcc-${GCC_PV}/gcc-${GCC_PV}.tar.bz2"
+	ftp://gcc.gnu.org/pub/gcc/releases/gcc-${GCC_PV}/gcc-${GCC_PV}.tar.bz2"
 #only need gcc-core (smaller download), but user will likely have this one already
 
-HOMEPAGE="http://gnu-pascal.de"
-
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc"
-LICENSE="GPL-2"
+IUSE="nls"
 
 DEPEND="virtual/glibc
 		>=sys-devel/gcc-2.95.3"
+
+S="${WORKDIR}/gcc-${GCC_PV}"
 
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
@@ -36,7 +34,6 @@ DATAPATH="${LOC}/share"
 # Dont install in /usr/include/g++-v3/, but in gcc internal directory.
 # We will handle /usr/include/g++-v3/ with gcc-config ...
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
-
 
 src_unpack() {
 	unpack "${P}.tar.gz"

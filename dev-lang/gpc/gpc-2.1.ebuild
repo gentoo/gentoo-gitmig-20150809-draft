@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-2.1.ebuild,v 1.14 2004/03/14 02:40:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-2.1.ebuild,v 1.15 2004/04/19 19:11:29 vapier Exp $
 
 DESCRIPTION="Gnu Pascal Compiler"
+HOMEPAGE="http://gnu-pascal.de/"
 SRC_URI="http://gnu-pascal.de/current/${P}.tar.gz
 	ftp://gcc.gnu.org/pub/gcc/releases/gcc-2.95.3/gcc-2.95.3.tar.gz"
 #only need gcc-core (smaller download), but user will likely have this one already
-HOMEPAGE="http://gnu-pascal.de"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc"
-LICENSE="GPL-2"
+IUSE=""
 
 DEPEND="virtual/glibc
 	~sys-devel/gcc-2.95.3"
