@@ -76,3 +76,5 @@ djbfft
 mono
 # aqua USE flag is only valid on Mac OS X
 aqua
+
+multilib
