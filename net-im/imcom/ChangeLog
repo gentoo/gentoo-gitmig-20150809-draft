@@ -1,6 +1,12 @@
 # ChangeLog for net-im/imcom
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/ChangeLog,v 1.1 2002/02/01 21:53:32 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/ChangeLog,v 1.2 2002/11/03 15:42:27 roughneck Exp $
+
+*imcom-0.93 (3 Nov 2002)
+
+  3 Nov 2002; Nicholas Henke <roughneck@gentoo.org> imcom-0.93.ebuild :
+
+  Added PPC to keywords. Bump version to 0.93
 
 *imcom-0.92 (1 Feb 2002)
 
