@@ -5,14 +5,12 @@ MD5 8bb571ede56589258df342c96d60da29 ChangeLog 327
 MD5 656b81f4172d47e2eff3c9d93c823c30 epeg-9999.ebuild 315
 MD5 edfdfec4e93ebb0d10eb86b8a8594eba metadata.xml 324
 MD5 a2f3923f7d9340d8a05af4fa3a24eb94 epeg-0.9.0.20041016.ebuild 325
-MD5 b9037061969ffc795b6a152f5e9c391d epeg-0.9.0.ebuild 364
 MD5 2ed96e44bc40529ce053283861c2772e files/digest-epeg-0.9.0.20041016 73
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-epeg-9999 0
-MD5 ec6db47e042f01aab3935df4a61db99c files/digest-epeg-0.9.0 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBeBr7HTu7gpaalycRArDAAJ9ma4641AS8ZyikF/gftkaGwbBIJACfdDd5
-V12pYKEuc2iNlVyOAF9cJXA=
-=r6lL
+iD8DBQFBeBpJHTu7gpaalycRAhzFAKCgzHTKUMFZYZKSCJTMYkFVn7mp/wCeJDRi
+4liwJ24zdl5shk0tTDdtUQU=
+=zCfw
 -----END PGP SIGNATURE-----
