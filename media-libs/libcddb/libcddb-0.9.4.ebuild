@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/libcddb-0.9.4.ebuild,v 1.2 2004/01/13 20:23:34 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/libcddb-0.9.4.ebuild,v 1.3 2004/01/13 20:25:55 mholzer Exp $
 
 IUSE="doc"
 
@@ -14,7 +14,7 @@ DEPEND=">=dev-libs/libcdio-0.5
 	    doc? ( app-doc/doxygen )"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 src_compile() {
 	econf || die
