@@ -1,8 +1,11 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.30 2003/06/03 10:52:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.31 2003/07/01 22:12:28 gmsoft Exp $
 
 *gnome-terminal-2.2.2 (03 Jun 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> gnome-terminal-2.2.2.ebuild :
+  Added ~hppa to KEYWORDS.
 
   03 Jun 2003; foser <foser@gentoo.org> gnome-terminal-2.2.2.ebuild :
   New version
@@ -20,6 +23,9 @@
   Add ~alpha to KEYWORDS
 
 *gnome-terminal-2.2.1 (06 Feb 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> gnome-terminal-2.2.1.ebuild :
+  Added hppa to KEYWORDS.
 
   01 Mar 2003; Jason Wever <weeve@gentoo.org> gnome-terminal-2.2.1.ebuild:
   Added ~sparc to keywords.
