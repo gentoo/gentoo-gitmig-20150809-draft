@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.10 2003/10/13 19:44:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.11 2003/11/01 09:46:40 seemant Exp $
+
+  01 Nov 2003; Seemant Kulleen <seemant@gentoo.org> audiofile-0.2.3-r1.ebuild:
+  SRC_URI and HOMEPAGE fix, thanks to: Stony Yakovac <stonyy@tek.com> in bug
+  #32425
 
 *audiofile-0.2.4 (14 Oct 2003)
 
