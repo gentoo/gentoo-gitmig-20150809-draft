@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.2.4.ebuild,v 1.7 2000/11/03 09:11:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.2.4.ebuild,v 1.8 2000/11/17 11:15:51 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -15,7 +15,7 @@ DEPEND=">=media-libs/imlib-1.9.8.1
 
 src_compile() {                           
   cd ${S}
-  try ./configure --host=${CHOST} --prefix=/opt/gnome 
+  try ./configure --host=${CHOST} --prefix=/opt/gnome --enable-prefer-db1
   try make
 }
 

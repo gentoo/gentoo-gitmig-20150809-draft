@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.23.ebuild,v 1.1 2000/11/15 16:33:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.23.ebuild,v 1.2 2000/11/17 11:15:51 achim Exp $
 
 A=xawtv_${PV}.tar.gz
 S=${WORKDIR}/${P}
@@ -21,7 +21,7 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  unset ROOT BUILDDIR
+  unset DEPEND
   try ./configure --host=${CHOST} --prefix=/usr \
 	--enable-jpeg --enable-xfree-ext --enable-xvideo --with-x
   try make

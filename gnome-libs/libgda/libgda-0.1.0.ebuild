@@ -12,6 +12,7 @@ HOMEPAGE="http://www.gnome.org/gnome-db"
 DEPEND=">=gnome-base/gconf-0.8
 	>=gnome-base/gnome-libs-1.2.4
 	>=dev-db/mysql-3.23.26
+	>=dev-db/unixODBC-1.8.13
 	>=net-nds/openldap-1.2.11"
 
 src_unpack() {
@@ -21,7 +22,7 @@ src_unpack() {
 src_compile() {                           
   cd ${S}
   try ./configure --host=${CHOST} --prefix=/opt/gnome \
-	--with-mysql=/usr --with-ldap=/usr --with-catgets
+	--with-mysql=/usr --with-ldap=/usr --with-odbc --with-catgets
   try make
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php-4/php-4.0.3_p1.ebuild,v 1.3 2000/11/02 02:17:12 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php-4/php-4.0.3_p1.ebuild,v 1.4 2000/11/17 11:15:51 achim Exp $
 
 P=php-4.0.3pl1
 A="${P}.tar.gz number4.tar.gz"
@@ -22,13 +22,15 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	>=media-libs/t1lib-1.0.1
 	>=net-www/apache-ssl-1.3
 	>=dev-db/mysql-3.23.26
+	>=dev-db/unixODBC-1.8.13
 	>=net-nds/openldap-1.2.11
 	>=x11-base/xfree-4.0.1"
 
 src_compile() {
 
     export LD_FLAGS="$LD_FLAGS -ltiff -ljpeg -L/usr/X11R6/lib"
-    ./configure --with-mysql=/usr --enable-safe-mode \
+    ./configure --with-mysql=/usr --enable-safe-mode --enable-ftp \
+	--enable-dbase  --with-unixODBC=/usr --with-gdbm=/usr --with-db3=/usr \
 	--enable-sysvsem --enable-sysvshm --with-zlib=yes --enable-bcmath \
 	--with-readline --with-gettext --enable-calendar --with-ldap\
 	--with-gd --with-ttf --with-t1lib --with-jpeg-dir=/usr/lib \
