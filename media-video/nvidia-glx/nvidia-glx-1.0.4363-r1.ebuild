@@ -1,46 +1,34 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.4496-r1.ebuild,v 1.10 2004/07/14 22:09:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.4363-r1.ebuild,v 1.1 2004/07/19 10:24:49 cyfred Exp $
 
 inherit eutils
 
 NV_V="${PV/1.0./1.0-}"
-NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
-S="${WORKDIR}/${NV_PACKAGE}-pkg0"
+NV_PACKAGE="NVIDIA_GLX-${NV_V}"
+S="${WORKDIR}/NVIDIA_GLX-${NV_V}"
 DESCRIPTION="XFree86 GLX libraries for the NVIDIA's X driver"
 HOMEPAGE="http://www.nvidia.com/"
-SRC_URI="http://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${NV_PACKAGE}-pkg0.run"
+SRC_URI="http://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${NV_PACKAGE}.tar.gz"
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE=""
 RESTRICT="nostrip"
 
 # We need xfree-4.2.0-r9 to support the dynamic libGL* stuff
 DEPEND="virtual/libc
-	virtual/x11
+	>=x11-base/xfree-4.2.0-r9
 	>=x11-base/opengl-update-1.3
 	~media-video/nvidia-kernel-${PV}"
 PROVIDE="virtual/opengl"
 export _POSIX2_VERSION="199209"
 
-pkg_setup() {
-	# We need xfree-4.2.0-r9 to support the dynamic libGL* stuff
-	if has_version "x11-base/xfree"
-	then
-		if has_version "<x11-base/xfree-4.2.0-r9"
-		then
-			die "Upgrade to xfree 4.2.0-r9 or greater."
-		fi
-	fi
-}
-
 src_unpack() {
-	cd ${WORKDIR}
-	bash ${DISTDIR}/${NV_PACKAGE}-pkg0.run --extract-only
+	unpack ${A}
 
-	# Use the correct defines to make gtkglext build work
+	# correct defines to make gtkglext build work
 	cd ${S}; epatch ${FILESDIR}/${P}-defines.patch
 }
 
@@ -79,9 +67,6 @@ src_install() {
 	exeinto /usr/X11R6/lib
 	doexe usr/X11R6/lib/libXvMCNVIDIA.so.${PV}
 
-	# Closing bug #37517 by letting virtual/x11 provide system wide glext.h
-	rm -f usr/include/GL/glext.h
-
 	# Includes
 	insinto ${NV_ROOT}/include
 	doins usr/include/GL/*.h
@@ -98,7 +83,7 @@ src_install() {
 		-e "s:\${ver1}:${ver1}:" \
 		-e "s:\${ver2}:${ver2}:" \
 		-e "s:\${ver3}:${ver3}:" \
-		${FILESDIR}/libGL.la.1 > ${D}/${NV_ROOT}/lib/libGL.la
+		${FILESDIR}/libGL.la.2 > ${D}/${NV_ROOT}/lib/libGL.la
 }
 
 pkg_preinst() {

@@ -1,6 +1,18 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.56 2004/07/18 19:18:54 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.57 2004/07/19 10:24:49 cyfred Exp $
+
+*nvidia-glx-1.0.4499-r1 (19 Jul 2004)
+
+  19 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>; -files/libGL.la.1,
+  +nvidia-glx-1.0.4363-r1.ebuild, -nvidia-glx-1.0.4363.ebuild,
+  -nvidia-glx-1.0.4496-r1.ebuild, +nvidia-glx-1.0.4496-r2.ebuild,
+  -nvidia-glx-1.0.4496.ebuild, +nvidia-glx-1.0.4499-r1.ebuild,
+  -nvidia-glx-1.0.4499.ebuild, -nvidia-glx-1.0.5328-r1.ebuild,
+  +nvidia-glx-1.0.5328-r2.ebuild:
+  Moving all versions over to use proper libGL.la file, removing all versions
+  that do not use the correct file, and removing the incorrect file; this should
+  fix pygtk et al bugs.
 
   18 Jul 2004; Travis Tilley <lv@gentoo.org> nvidia-glx-1.0.6106-r3.ebuild:
   marking stable since our last stable nvidia-glx was just deleted

@@ -1,19 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.4363.ebuild,v 1.10 2004/07/14 22:09:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5328-r2.ebuild,v 1.1 2004/07/19 10:24:49 cyfred Exp $
 
 inherit eutils
 
+PKG_V="pkg1"
 NV_V="${PV/1.0./1.0-}"
-NV_PACKAGE="NVIDIA_GLX-${NV_V}"
-S="${WORKDIR}/NVIDIA_GLX-${NV_V}"
+NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
+S="${WORKDIR}/${NV_PACKAGE}-${PKG_V}"
 DESCRIPTION="XFree86 GLX libraries for the NVIDIA's X driver"
 HOMEPAGE="http://www.nvidia.com/"
-SRC_URI="http://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${NV_PACKAGE}.tar.gz"
+SRC_URI="http://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${NV_PACKAGE}-${PKG_V}.run"
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~x86"
 IUSE=""
 RESTRICT="nostrip"
 
@@ -26,10 +27,13 @@ PROVIDE="virtual/opengl"
 export _POSIX2_VERSION="199209"
 
 src_unpack() {
-	unpack ${A}
+	cd ${WORKDIR}
+	bash ${DISTDIR}/${NV_PACKAGE}-${PKG_V}.run --extract-only
 
-	# correct defines to make gtkglext build work
+	# Use the correct defines to make gtkglext build work
 	cd ${S}; epatch ${FILESDIR}/${P}-defines.patch
+	# Correct API for gl.h
+	epatch ${FILESDIR}/${P}-glheader.patch
 }
 
 src_install() {
@@ -37,7 +41,7 @@ src_install() {
 	local TLS=
 
 	# Check if we should install TLS versions of the libraries
-	${S}/usr/bin/tls_test 2> /dev/null
+	${S}/usr/bin/tls_test ${S}/usr/bin/tls_test_dso.so 2> /dev/null
 	# Only trust this if we are merging to /
 	if [ "$?" = "0" -a "${ROOT}" = "/" ]
 	then
@@ -67,6 +71,9 @@ src_install() {
 	exeinto /usr/X11R6/lib
 	doexe usr/X11R6/lib/libXvMCNVIDIA.so.${PV}
 
+	# Closing bug #37517
+	rm -f usr/include/GL/glext.h
+
 	# Includes
 	insinto ${NV_ROOT}/include
 	doins usr/include/GL/*.h
@@ -83,7 +90,7 @@ src_install() {
 		-e "s:\${ver1}:${ver1}:" \
 		-e "s:\${ver2}:${ver2}:" \
 		-e "s:\${ver3}:${ver3}:" \
-		${FILESDIR}/libGL.la.1 > ${D}/${NV_ROOT}/lib/libGL.la
+		${FILESDIR}/libGL.la.2 > ${D}/${NV_ROOT}/lib/libGL.la
 }
 
 pkg_preinst() {
