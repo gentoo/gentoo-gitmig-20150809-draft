@@ -1,28 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1-r5.ebuild,v 1.4 2004/03/27 17:18:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1-r5.ebuild,v 1.5 2004/04/07 20:31:59 vapier Exp $
 
-IUSE="cjk maildir ncurses static doc"
-
-DESCRIPTION="UNIX Shell similar to the Korn shell"
-HOMEPAGE="http://www.zsh.org/"
+inherit flag-o-matic eutils
 
 MYDATE="20040204"
-
+DESCRIPTION="UNIX Shell similar to the Korn shell"
+HOMEPAGE="http://www.zsh.org/"
 SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
 	cjk? ( http://www.ono.org/software/dist/${P}-euc-0.2.patch.gz )
 	doc? ( ftp://ftp.zsh.org/pub/${P}-doc.tar.bz2 )"
 
-SLOT="0"
 LICENSE="ZSH"
+SLOT="0"
 KEYWORDS="x86 alpha ~ppc sparc ~amd64 hppa"
+IUSE="cjk maildir ncurses static doc"
 
-DEPEND="sys-apps/groff
-	>=sys-apps/sed-4
-	${RDEPEND}"
 RDEPEND=">=dev-libs/libpcre-3.9
 	sys-libs/libcap
 	ncurses? ( >=sys-libs/ncurses-5.1 )"
+DEPEND="sys-apps/groff
+	>=sys-apps/sed-4
+	${RDEPEND}"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
@@ -44,7 +43,7 @@ src_compile() {
 	use ncurses && myconf="--with-curses-terminfo"
 	use maildir && myconf="${myconf} --enable-maildir-support"
 	use static && myconf="${myconf} --disable-dynamic" \
-		&& LDFLAGS="${LDFLAGS} -static"
+		&& append-ldflags -static
 
 	econf \
 		--bindir=/bin \
@@ -61,7 +60,7 @@ src_compile() {
 		--enable-ldflags="${LDFLAGS}" \
 		${myconf} || die "configure failed"
 
-	if [ -n "`use static`" ] ; then
+	if use static ; then
 		# compile all modules statically, see Bug #27392
 		sed -i -e "s/link=no/link=static/g" \
 			-e "s/load=no/load=yes/g" \
@@ -95,7 +94,7 @@ src_install() {
 
 	dodoc ChangeLog* META-FAQ README INSTALL LICENCE config.modules
 
-	if [ "`use doc`" ] ; then
+	if use doc ; then
 		dohtml Doc/*
 		insinto /usr/share/doc/${PF}
 		doins Doc/zsh{.dvi,_us.ps,_a4.ps}
@@ -109,13 +108,12 @@ pkg_preinst() {
 	# Our zprofile file does the job of the old zshenv file
 	# Move the old version into a zprofile script so the normal
 	# etc-update process will handle any changes.
-	if [ -f /etc/zsh/zshenv -a ! -f /etc/zsh/zprofile ]; then
-		mv /etc/zsh/zshenv /etc/zsh/zprofile
+	if [ -f ${ROOT}/etc/zsh/zshenv -a ! -f ${ROOT}/etc/zsh/zprofile ]; then
+		mv ${ROOT}/etc/zsh/zshenv ${ROOT}/etc/zsh/zprofile
 	fi
 }
 
 pkg_postinst() {
-
 	# see Bug 26776
 	ewarn
 	ewarn "If you are upgrading from zsh-4.0.x you may need to"
