@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/navi2ch
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.13 2004/06/24 22:19:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.14 2004/08/20 06:11:59 usata Exp $
+
+*navi2ch-1.7.4 (20 Aug 2004)
+
+  20 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +navi2ch-1.7.4.ebuild:
+  Version bumped. Added to macos.
 
   23 May 2004; Mamoru KOMACHI <usata@gentoo.org> navi2ch-1.7.2.ebuild,
   navi2ch-1.7.3.ebuild:
