@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.6 2003/08/03 04:45:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.7 2003/08/12 05:51:01 spyderous Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -18,7 +18,7 @@ inherit eutils xfree
 RESTRICT="nostrip"
 
 SNAPSHOT="20030714"
-PATCHVER="0.3"
+PATCHVER="0.4"
 
 S="${WORKDIR}/drm"
 DESCRIPTION="Xfree86 Kernel DRM modules"
@@ -71,7 +71,7 @@ if [ `use sis || vcards sis` ]
 then
 	VIDCARDS="${VIDCARDS} sis.o"
 fi
-if use i8x0 &>/dev/null
+if use i8x0
 then
 	VIDCARDS="${VIDCARDS} i810.o i830.o"
 fi
@@ -80,8 +80,8 @@ then
 	VIDCARDS="${VIDCARDS} gamma.o"
 fi
 
-vcards i810 &>/dev/null && VIDCARDS="${VIDCARDS} i810.o"
-vcards i830 &>/dev/null && VIDCARDS="${VIDCARDS} i830.o"
+vcards i810 && VIDCARDS="${VIDCARDS} i810.o"
+vcards i830 && VIDCARDS="${VIDCARDS} i830.o"
 
 src_unpack() {
 # Is this necessary with the fixed Makefile?
@@ -105,6 +105,10 @@ src_unpack() {
 	#direct CPU access to the AGP aperture.
 	[ "${ARCH}" = "ppc" ] && \
 		epatch ${PATCHDIR}/${PF}-drm-ioremap.patch
+
+	# Fix for bug #25598
+	[ "${ARCH}" = "ppc" ] && \
+		epatch ${PATCHDIR}/${PF}-rage128-timeout.patch
 
 # Pfeifer said this patch is ok for any kernel >= 2.4 <spyderous>
 #	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 4 ] && \
@@ -145,6 +149,25 @@ src_install() {
 	dodoc README*
 	exeinto /usr/X11R6/bin
 	doexe dristat
+
+	einfo "Stripping binaries..."
+	# This bit I got from Redhat ... strip binaries and drivers ..
+	# NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
+	for x in $(find ${D}/ -type f -perm +0111 -exec file {} \; | \
+		grep -v ' shared object,' | \
+		sed -n -e 's/^\(.*\):[  ]*ELF.*, not stripped/\1/p')
+	do
+	if [ -f ${x} ]
+		then
+			# Dont do the modules ...
+			if [ "${x/\/lib\/modules}" = "${x}" ]
+			then
+				echo "`echo ${x} | sed -e "s|${D}||"`"
+				strip ${x} || :
+			fi
+		fi
+	done
+
 }
 
 pkg_postinst() {
