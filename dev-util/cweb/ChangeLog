@@ -1,0 +1,13 @@
+# ChangeLog for dev-util/cweb
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/ChangeLog,v 1.1 2002/04/24 19:13:36 karltk Exp $
+
+*cweb-3.63 (24 Apr 2002)
+
+  24 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> cweb-3.63.ebuild files/digest-cweb-3.63 :
+
+  CWEB is a version of WEB for documenting C, C++, and Java programs. WEB was
+  adapted to C by Silvio Levy in 1987, and since then both Knuth and Levy have
+  revised and enhanced the system in many ways, notably to support C++ and 
+  ANSI C. Thus CWEB combines TeX with today's most widely used professional 
+  programming languages.
