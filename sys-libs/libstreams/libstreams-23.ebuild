@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstreams/libstreams-23.ebuild,v 1.2 2004/11/07 21:03:59 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstreams/libstreams-23.ebuild,v 1.3 2005/03/04 05:14:28 kito Exp $
 
 DESCRIPTION="NeXT/Darwin Streams routines."
 HOMEPAGE="http://darwinsource.opendarwin.org/10.3.6/"
@@ -9,7 +9,7 @@ SRC_URI="http://darwinsource.opendarwin.org/tarballs/apsl/Libstreams-${PV}.tar.g
 LICENSE="APSL-2"
 
 SLOT="0"
-KEYWORDS="~ppc-macos"
+KEYWORDS="ppc-macos"
 IUSE="debug"
 
 DEPEND="virtual/libc"
