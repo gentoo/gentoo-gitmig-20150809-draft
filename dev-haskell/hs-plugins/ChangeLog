@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/hs-plugins
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/ChangeLog,v 1.1 2004/10/20 23:00:52 mattam Exp $
+
+*hs-plugins-0.9.6 (21 Oct 2004)
+
+  21 Oct 2004; Matthieu Sozeau <mattam@gentoo.org> +hs-plugins-0.9.6.ebuild:
+  New ebuild, Dynamic loading for haskell.
+
