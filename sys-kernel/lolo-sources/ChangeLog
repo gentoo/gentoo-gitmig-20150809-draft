@@ -1,9 +1,25 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.38 2003/02/12 09:17:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.39 2003/02/17 00:00:23 lostlogic Exp $
 
-  TODO before gentoo-sources-2.4.20-r1:
-  * Documentation
+*lolo-sources-2.4.20.2_pre1 (16 Feb 2003)
+
+  This patchset should resolve a bunch of random stuff,
+  including some supermount issues, some hardware support
+  issues, problems related to rmapvm, and some of the
+  problems related to iptables.  Test it hard, and let
+  me know what you find.  
+
+  Changes from 2.4.20.1:
+  * Update base to the latest from -ck
+  * Switch to aavm from rmap
+  * Drop XFS for the moment
+  * Add a collection of patches from xfs-sources
+  * Update grsecurity
+  * Update iptables patches (this may require 
+    recompiling of iptables again)
+  * Renumber things... may need to go to 3 digits
+  * Not in this set, but started working on merge of win4lin
 
 *lolo-sources-2.4.20.1 (10 Jan 2003)
   Doing things a littl different this time... people can just
