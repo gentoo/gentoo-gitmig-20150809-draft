@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.32 2002/09/17 21:52:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.33 2002/09/17 21:58:27 seemant Exp $
 
 *fluxbox-0.1.12-r1 (17 Sep 2002)
 
@@ -23,10 +23,13 @@
 
   will cause the fluxbox menu to open when the "windows logo" key is pressed
   (x86 machine).  Use xmodmap etc to flavour as you like it.  Seemant is on
-  an x86 and has these entries in his local keys file:
+  an x86 and has these entries in his local keys file (the left windows key
+  opens the root menu, the right side windows key closes it).  The windows
+  menu key (right click menu in windows) opens up flux's window menu
 
   None Super_L :RootMenu
-  None Super_L :Close
+  None Super_R :CloseMenu
+  None Menu :WindowMenu
   Shift Right :OpenSubMenu
   Shift Return :SelectMenuItem
   Shift Up :PrevMenuItem
