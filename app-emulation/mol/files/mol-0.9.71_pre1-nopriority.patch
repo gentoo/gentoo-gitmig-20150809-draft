@@ -1,0 +1,63 @@
+diff -Naur src/drivers/disk/ablk.c src/drivers/disk/ablk.c
+--- src/drivers/disk/ablk.c	2005-01-07 16:25:34.540100128 +1100
++++ src/drivers/disk/ablk.c	2005-01-07 16:28:05.243189776 +1100
+@@ -216,7 +216,7 @@
+ io_thread( void *dummy ) 
+ {
+ 	char ch;
+-	setpriority( PRIO_PROCESS, getpid(), -19 );
++	/* setpriority( PRIO_PROCESS, getpid(), -19 ); */
+ 
+ 	for( ;; ) {
+ 		read( ablk.ctrl_pipe[0], &ch, 1 );
+diff -Naur src/drivers/sound/sound.c src/drivers/sound/sound.c
+--- src/drivers/sound/sound.c	2005-01-07 16:25:34.491107576 +1100
++++ src/drivers/sound/sound.c	2005-01-07 16:27:30.586458400 +1100
+@@ -248,7 +248,7 @@
+ static void
+ audio_thread( void *dummy )
+ {
+-	setpriority( PRIO_PROCESS, getpid(), -20 );
++	/* setpriority( PRIO_PROCESS, getpid(), -20 ); */
+ 
+ 	LOCK;
+ 	if( ss.ringbuf )
+@@ -267,7 +267,7 @@
+ 		ss.startboingbuf = NULL;
+ 	}
+ 	UNLOCK;
+-	setpriority( PRIO_PROCESS, getpid(), 0 );
++	/* setpriority( PRIO_PROCESS, getpid(), 0 ); */
+ }
+ 
+ 
+@@ -341,7 +341,7 @@
+ 	ss.started = 0;
+ 
+ 	LOCK;
+-	setpriority( PRIO_PROCESS, getpid(), ss.save_priority );
++	/* setpriority( PRIO_PROCESS, getpid(), ss.save_priority ); */
+ 
+ 	ss.thread_running = -1;
+ 	irq_line_low( ss.irq );
+@@ -366,7 +366,7 @@
+ 	ss.dbuf_go = 0;
+ 
+ 	ss.save_priority = getpriority( PRIO_PROCESS, pid );
+-	setpriority( PRIO_PROCESS, pid, -12 );
++	/* setpriority( PRIO_PROCESS, pid, -12 ); */
+ 
+ 	if( ss.thread_running ) {
+ 		/* jump start already running thread */
+diff -Naur src/main/async.c src/main/async.c
+--- src/main/async.c	2005-01-07 16:25:34.661081736 +1100
++++ src/main/async.c	2005-01-07 16:26:15.242912360 +1100
+@@ -195,7 +195,7 @@
+ 	char ack_char;
+ 
+ 	/* Increase priority to reduce latency */
+-	setpriority( PRIO_PROCESS, getpid(), -17 );
++	/* setpriority( PRIO_PROCESS, getpid(), -17 ); */
+ 
+ 	while( !cancel_poll_thread ) {
+ 		if( (num_pending=poll(ufds, num_poll, -1)) < 0 ) {
