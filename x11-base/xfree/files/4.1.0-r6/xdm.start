@@ -11,8 +11,8 @@ depend() {
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin:$ROOTPATH
 
 case "$DISPLAYMANAGER" in
-    kdm|kde|KDM|KDE)	 
-	EXE=$KDEDIR/bin/kdm   
+    kdm|kde|KDM|KDE|kde2|KDE2|kde3|KDE3)	 
+	EXE=`which kdm`   
 	;;
     gdm|GDM|Gnome|GNOME) 
 	EXE=/usr/bin/gdm
