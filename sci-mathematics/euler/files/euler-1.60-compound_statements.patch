@@ -1,0 +1,39 @@
+diff -ru euler-1.60.orig/source/term.c euler-1.60/source/term.c
+--- euler-1.60.orig/source/term.c	2002-06-02 15:40:30.000000000 +0200
++++ euler-1.60/source/term.c	2004-06-23 22:59:05.172479232 +0200
+@@ -2163,7 +2163,7 @@
+ 								case 'U':
+ 									ch = 'Û';
+ 									break;
+-								default:
++								default:;
+ 							}
+ 							deadkey=0;
+ 							break;
+@@ -2206,7 +2206,7 @@
+ 								case 'U':
+ 									ch = 'Ü';
+ 									break;
+-								default:
++								default:;
+ 							}
+ 							deadkey=0;
+ 							break;
+@@ -2586,7 +2586,7 @@
+ 									case 'U':
+ 										ch = 'Û';
+ 										break;
+-									default:
++									default:;
+ 								}
+ 								deadkey=0;
+ 								break;
+@@ -2629,7 +2629,7 @@
+ 									case 'U':
+ 										ch = 'Ü';
+ 										break;
+-									default:
++									default:;
+ 								}
+ 								deadkey=0;
+ 								break;

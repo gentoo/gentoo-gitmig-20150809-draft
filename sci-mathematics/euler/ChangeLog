@@ -1,0 +1,74 @@
+# ChangeLog for app-sci/euler
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/ChangeLog,v 1.1 2004/12/28 05:20:30 ribosome Exp $
+
+*euler-1.60.6 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/euler-1.60-compound_statements.patch, +files/euler-1.60.6.patch,
+  +euler-1.60.6-r1.ebuild, +euler-1.60.6.ebuild:
+  Moved from "app-sci" to "sci-mathematics".
+
+  13 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> euler-1.60.6-r1.ebuild:
+  Stable for x86
+
+  02 Jul 2004; Patrick Kursawe <phosphan@gentoo.org> euler-1.59.1.ebuild,
+  euler-1.60.6-r1.ebuild, euler-1.60.6.ebuild,
+  files/euler-1.60-compound_statements.patch:
+  Adding patch for bug #54931, removing old version.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> euler-1.59.1.ebuild,
+  euler-1.60.6-r1.ebuild, euler-1.60.6.ebuild:
+  virtual/glibc -> virtual/libc
+
+  15 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> euler-1.59.1.ebuild,
+  euler-1.60.6.ebuild:
+  PROVIDE is for virtuals
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> euler-1.60.6-r1.ebuild:
+  Marked stable on amd64.
+
+  22 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> euler-1.60.6-r1.ebuild:
+  marked ~amd64
+
+  26 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> euler-1.60.6-r1.ebuild,
+  euler-1.60.6.ebuild:
+  Adding "inherit eutils" and IUSE=""
+
+*euler-1.60.6-r1 (15 Mar 2004)
+
+  15 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> euler-1.60.6-r1.ebuild,
+  euler-1.60.6.ebuild, files/euler-1.60.6.patch:
+  Fixing bug #41638, adding usage of CFLAGS in -r1
+
+*euler-1.60.6 (14 Dec 2002)
+  
+  14 Dec 2002; Matthew Kennedy <mkennedy@gentoo.org> euler-1.60.6.ebuild,
+  ChangeLog : 
+
+  Move to stable profile on account of bug #1162, comment #3.
+
+*euler-1.60.6 (07 Nov 2002)
+  
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> euler-1.60.6.ebuild:
+  Removed ~sparc64 keyword
+
+  07 Nov 2002; George Shapovalov <george@gentoo.org> euler-1.60.6.ebuild :
+
+  new version
+  also removed PROVIDE="app-misc/euler" statment as it was moved over 6 month ago.
+  slightly updated ebuild submitted by James R. Webb <jrwebb@qwest.net>
+
+*euler-1.59.1 (06 May 2002)
+  
+  Moved into app-sci category
+
+*euler-1.59.1 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
