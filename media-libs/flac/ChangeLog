@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.46 2005/02/19 15:10:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.47 2005/02/19 22:38:37 chainsaw Exp $
+
+  19 Feb 2005; Tony Vroon <chainsaw@gentoo.org> flac-1.1.2.ebuild:
+  Undo slotting, fails to work correctly.
 
   19 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
   +files/flac-1.1.2-gas.patch, +files/flac-1.1.2-makefile.patch,
