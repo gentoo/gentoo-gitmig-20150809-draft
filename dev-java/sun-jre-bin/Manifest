@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2fbe937bcd6f100b6c6006430b1373dd sun-jre-bin-1.4.2.05-r1.ebuild 4807
-MD5 002a11680b4272876278db70b1bfe2a6 sun-jre-bin-1.5.0.ebuild 5233
 MD5 ef2b4480a4a06937e71bc962cadcabb5 ChangeLog 2454
 MD5 ca35f917561afc166491d77810b71095 metadata.xml 242
+MD5 02bb0fec57bb548e2c469dafeda1bf24 sun-jre-bin-1.5.0.ebuild 5236
 MD5 7d17587f01ed6c441db2b7c0e754a144 sun-jre-bin-1.4.2.06.ebuild 4848
-MD5 e769eaeb7ddf420cace1a83890d42703 files/digest-sun-jre-bin-1.4.2.06 75
+MD5 2fbe937bcd6f100b6c6006430b1373dd sun-jre-bin-1.4.2.05-r1.ebuild 4807
 MD5 ea64994bb63f18d8c29ce57e4f5d80ea files/digest-sun-jre-bin-1.4.2.05-r1 75
-MD5 4a0f05a5dd8f5357dec66ae47dce0ebf files/sun-jre-bin-1.5.0 436
 MD5 acb452269bc2a3897ba121b5ebfd7524 files/digest-sun-jre-bin-1.5.0 143
+MD5 4a0f05a5dd8f5357dec66ae47dce0ebf files/sun-jre-bin-1.5.0 436
 MD5 65240bd8b9977fbe20b35c7f5201c10d files/sun-jre-bin-1.4.2.05 439
+MD5 e769eaeb7ddf420cace1a83890d42703 files/digest-sun-jre-bin-1.4.2.06 75
 MD5 6ec9cb0d5657017ab82a1e42f6e677b1 files/sun-jre-bin-1.4.2.06 439
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBc3i1/rLF9B432nYRAqYMAKCANAQV2JP7ol0kwfQF4lXMMwIrxACfd+pP
-eiSAZ/EHLQZlAgGlQd3RvtI=
-=OFdn
------END PGP SIGNATURE-----
