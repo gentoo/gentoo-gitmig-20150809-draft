@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/arson
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.24 2004/03/16 16:59:35 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.25 2004/03/29 23:26:07 mr_bones_ Exp $
+
+  29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> arson-0.9.7-r1.ebuild:
+  inherit eutils for epatch
 
   16 Mar 2004; <augustus@gentoo.org> arson-0.9.7-r3.ebuild:
   Marked ~amd64.
