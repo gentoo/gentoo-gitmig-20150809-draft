@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/awka
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/awka/ChangeLog,v 1.3 2004/07/02 05:03:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/awka/ChangeLog,v 1.4 2004/08/07 22:29:06 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> awka-0.7.5.ebuild:
+  Typo in DESCRIPTION: tranlator -> translator. Bug 59717.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> awka-0.7.5.ebuild:
   virtual/glibc -> virtual/libc

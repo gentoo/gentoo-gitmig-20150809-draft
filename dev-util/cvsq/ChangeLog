@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cvsq
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsq/ChangeLog,v 1.5 2004/06/25 02:26:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsq/ChangeLog,v 1.6 2004/08/07 22:31:45 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> cvsq-0.4.3.ebuild,
+  cvsq-0.4.4.ebuild:
+  Typo in DESCRIPTION: queueing -> queuing. Bug 59717.
 
   03 Jun 2004; David Holm <dholm@gentoo.org> cvsq-0.4.4.ebuild:
   Added to ~ppc.
