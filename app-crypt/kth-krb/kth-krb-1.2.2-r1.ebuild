@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r1.ebuild,v 1.10 2004/05/01 19:35:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r1.ebuild,v 1.11 2004/05/12 02:52:36 randy Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.pdc.kth.se/pub/krb/src/krb4-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ia64 amd64"
+KEYWORDS="x86 ppc sparc alpha ia64 amd64 s390"
 IUSE="ssl afs"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )

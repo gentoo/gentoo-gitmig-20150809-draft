@@ -1,12 +1,15 @@
 # ChangeLog for app-crypt/kth-krb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.22 2004/05/10 11:43:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.23 2004/05/12 02:52:36 randy Exp $
 
 *kth-krb-1.2.2-r2 (10 May 2004)
 
   10 May 2004; Daniel Ahlberg <aliz@gentoo.org> kth-krb-1.2.2-r2.ebuild:
   + Added fPIC patch to allow heimdal to link to kth-krb libs.
   + Added berkdb patch for newer versions of berkdb.  
+
+  11 May 2004; Michael McCabe <randy@gentoo.org> kth-krb-1.2.2-r1.ebuild:
+  Added s390 keywords
 
   30 Apr 2004; Ryan Phillips <rphillips@gentoo.org> kth-krb-1.2.2-r1.ebuild:
   Added Weeve's patch for a sandbox violation
