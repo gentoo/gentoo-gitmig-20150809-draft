@@ -1,0 +1,444 @@
+# ChangeLog for net-mail/evolution
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.1 2004/05/30 02:43:48 seemant Exp $
+
+*evolution-1.4.5 (29 May 2004)
+
+  29 May 2004; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +files/evolution-1.1.90-kde.patch, +files/evolution-1.1.90-sharedldap.patch,
+  +files/evolution-1.1.90-subversion.patch,
+  +files/evolution-1.4.4-alpha.patch, +files/evolution-1.4.5-gtk-2.4.patch,
+  +files/evolution-1.4.5-nztimezone.patch, +evolution-1.2.4.ebuild,
+  +evolution-1.4.5.ebuild, +evolution-1.4.6.ebuild:
+  Moved from net-mail/evolution to mail-client/evolution.
+
+  26 May 2004; Guy Martin <gmsoft@gentoo.org> evolution-1.4.6.ebuild:
+  Marked stable on hppa.
+
+  14 May 2004; Lars Weiler <pylon@gentoo.org> evolution-1.4.6.ebuild:
+  Stable on ppc
+
+  29 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> evolution-1.4.6.ebuild:
+  Stable on sparc in preparation for gtk 2.4
+
+  28 Apr 2004; foser <foser@gentoo.org> evolution-1.4.5.ebuild :
+  Add gtk-2.4 build patch, provided by gmsoft in #49265
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> evolution-1.4.5.ebuild,
+  evolution-1.4.6.ebuild:
+  Add inherit eutils
+
+  25 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> evolution-1.2.3.ebuild,
+  evolution-1.2.4.ebuild:
+  don't use deprecated ? : use syntax
+
+  24 Mar 2004; Jon Portnoy <avenj@gentoo.org> evolution-1.4.5.ebuild,
+  evolution-1.4.6.ebuild :
+  Fixed screwy AMD64 deps in 1.4.5 and modified both ebuilds to recognize
+  kerberos properly on AMD64.
+
+  23 Mar 2004; Alastair Tse <liquidx@gentoo.org> evolution-1.4.6.ebuild:
+  fix amd64 dep and also fix configure flag passing in src_compile for amd64
+
+*evolution-1.4.6 (22 Mar 2004)
+
+  22 Mar 2004; Alastair Tse <liquidx@gentoo.org> evolution-1.4.6.ebuild:
+  version bump
+
+  07 Mar 2004; Alastair Tse <liquidx@gentoo.org> evolution-1.4.5.ebuild:
+  reinstate gnome2_pkg_postinst
+
+  18 Feb 2004; Alastair Tse <liquidx@gentoo.org> evolution-1.4.5.ebuild,
+  files/evolution-1.4.5-nztimezone.patch:
+  add CVS backported patch to deal with NZDT (UTC+13) (#41817)
+
+  07 Feb 2004; Alastair Tse <liquidx@gentoo.org> evolution-1.4.3.ebuild,
+  evolution-1.4.4.ebuild, evolution-1.4.5.ebuild:
+  reorder eclass inherits to prevent kde overriding gnome2_src_install
+
+  14 Jan 2004; Aron Griffis <agriffis@gentoo.org> evolution-1.4.5.ebuild:
+  stable on alpha
+
+  14 Dec 2003; Lars Weiler <pylon@gentoo.org> evolution-1.4.5.ebuild:
+  Make stable on ppc
+
+  13 Dec 2003; Brad House <brad_mssw@gentoo.org> evolution-1.4.5.ebuild:
+  mark stable on amd64
+
+  11 Dec 2003; <agriffis@gentoo.org> evolution-1.4.5.ebuild,
+  files/evolution-1.4.4-alpha.patch:
+  Modify 64-bit patch according to response on evolution-patches mailing list.
+  Apply it regardless of ARCH because it is necessary for all 64-bit (and
+  doesn't hurt other arches). Mark stable on ia64
+
+  28 Nov 2003; Jason Wever <weeve@gentoo.org> evolution-1.4.5.ebuild:
+  Marked stable on sparc, fixes bug #32744.
+
+  22 Oct 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.3.ebuild,
+  evolution-1.2.4.ebuild, evolution-1.4.3.ebuild, evolution-1.4.4.ebuild,
+  evolution-1.4.5.ebuild:
+  add app-crypt/gnupg dep (#31719)
+
+  12 Oct 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.5.ebuild:
+  updated ORBit dep to 2.8.2 to get around gnome-2.4 bugs (#29453)
+
+  24 Sep 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.5.ebuild:
+  made inherit kde optional again. comment on why there's a replace flags.
+
+*evolution-1.4.5 (24 Sep 2003)
+
+  24 Sep 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.4.ebuild:
+  version bump. should fix some gnome 2.4 problems. added protection against
+  over-optimisation with gcc-3.3.1.
+
+  09 Sep 2003; Mike Gardiner <obz@gentoo.org> evolution-1.4.0.ebuild,
+  evolution-1.4.3.ebuild, evolution-1.4.4.ebuild:
+  Removed bonobo-activation dependency
+
+  30 Aug 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.3.ebuild,
+  evolution-1.2.4.ebuild, evolution-1.4.0.ebuild, evolution-1.4.3.ebuild,
+  evolution-1.4.4.ebuild:
+  moved dev-libs/pilot-link to app-pda/pilot-link
+
+  30 Aug 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.3.ebuild,
+  evolution-1.2.4.ebuild, evolution-1.4.0.ebuild, evolution-1.4.3.ebuild,
+  evolution-1.4.4.ebuild:
+  moving gnome-extra/gnome-pilot* to app-pda/gnome-pilot*
+
+  29 Aug 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.4.ebuild:
+  added yelp dependency
+
+  20 Aug 2003; Aron Griffis <agriffis@gentoo.org> evolution-1.4.4.ebuild:
+  Add ~alpha now that I think most of the 64-bit problems are patched
+
+  19 Aug 2003; Aron Griffis <agriffis@gentoo.org> evolution-1.4.4.ebuild,
+  files/evolution-1.4.4-alpha.patch:
+  Add some alpha fixes --- not complete yet
+
+  14 Aug 2003; Aron Griffis <agriffis@gentoo.org> evolution-1.4.4.ebuild:
+  Add ~alpha to KEYWORDS
+
+*evolution-1.4.4 (11 Aug 2003)
+
+  11 Aug 2003; Martin Schlemmer <azarah@gentoo.org> evolution-1.4.4.ebuild:
+  New version.
+
+  18 Jul 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.3.ebuild:
+  forced to bump 1.4.3 to stable because someone has put a imperfect 1.4.0 to
+  stable
+
+*evolution-1.4.3 (11 Jul 2003)
+
+  05 Aug 2003; Guy Martin <gmsoft@gentoo.org> evolution-1.4.3.ebuild :
+  Added hppa to KEYWORDS. Added some flags for hppa to make it compile.
+
+  11 Jul 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.3.ebuild:
+  replaced mozilla dependency with dev-libs/nss dev-libs/nspr (#23730). SSL
+  support is still provided by either nspr/nss or openssl, use the 'mozilla' USE
+  flag to select. by default, it will use nss/nspr as ximian also packages with
+  that as default (#24185). also removed 1.4.0 release hacks.
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.3.92.ebuild,
+  evolution-1.4.0.ebuild:
+  dep clean
+
+  07 Jul 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.0.ebuild:
+  add scrolllkeeper dep
+
+  12 Jun 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.0.ebuild:
+  added fix for scrollkeeper_docs sandbox violations (#22600)
+
+  10 Jun 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.0.ebuild:
+  removed debug, cleaned up src_install
+
+*evolution-1.4.0 (10 Jun 2003)
+
+  10 Jun 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.3.ebuild,
+  evolution-1.2.4.ebuild, evolution-1.4.0.ebuild:
+  new evolution 1.4. ebuild revamped and moved back to SLOT 0.
+  You must uninstall any 1.3 versions before installing 1.4!
+  Also added 1.3 version fixes thanks to Stanislav Brabec <utx@gentoo.org>
+
+  07 Jun 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.4.ebuild,
+  evolution-1.3.2.ebuild, evolution-1.3.3.ebuild, evolution-1.3.92.ebuild:
+  added sed-4 deps
+
+*evolution-1.3.92 (03 Jun 2003)
+
+  03 Jun 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.3.92.ebuild:
+  version bump to evolution 1.4 rc1. this continues to be slotted 2 because we
+  find that it is still usable in parallel with evolution-1.2.
+
+  27 May 2003; Jason Wever <weeve@gentoo.org> evolution-1.2.4.ebuild:
+  Added ~sparc to keywords.
+
+  16 May 2003; Lars Weiler <pylon@gentoo.org> evolution-1.2.4.ebuild:
+  Set ppc in KEYWORDS
+
+*evolution-1.3.3 (07 May 2003)
+
+  09 May 2003; foser <foser@gentoo.org> evolution-1.3.3 :
+  Add inherit debug, is a devel pack
+
+  07 May 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.4.ebuild,
+  evolution-1.3.2.ebuild, evolution-1.3.3.ebuild:
+  version bump. also removed -ldb1 from mozilla nss cflags.
+
+  29 Apr 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.4.ebuild:
+  bumped 1.2.4 to stable for x86
+
+*evolution-1.3.2 (21 Apr 2003)
+
+  23 Apr 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.3.2.ebuild:
+  use gnome2_src_install for things scrollkeeper
+
+  21 Apr 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.3.2.ebuild:
+  Second preview release from Ximian. Please read the below page carefully
+  before merging:
+  http://developer.ximian.com/projects/evolution/release_notes/1.3.2.html
+
+*evolution-1.2.4 (05 Apr 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> evolution-1.2.4.ebuild :
+  Added hppa to KEYWORDS.
+
+  22 Apr 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.4.ebuild:
+  marked ~ppc
+
+  07 Apr 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.4.ebuild,
+  evolution-1.3.1.ebuild:
+  remove kde link for non-kde users
+
+  05 Apr 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.4.ebuild:
+  version bump
+
+*evolution-1.2.3 (21 Mar 2003)
+
+  09 Apr 2003; Graham Forest <vladimir@gentoo.org> evolution-1.2.3.ebuild:
+  Downgraded to ~ppc, excessive dep problems
+
+  21 Mar 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.3.ebuild:
+  version bump. fixes security advisory (#17856). marked as x86 stable.
+
+*evolution-1.3.1 (14 Mar 2003)
+
+  21 Mar 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.3.1.ebuild:
+  move from gtkhtml to libgtkhtml
+
+  19 Mar 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.3.1.ebuild:
+  sourcing evo from gnome.org rather than ximian.com
+
+  19 Mar 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.3.1.ebuild:
+  Add massive warning about the danger of using evo-1.3.1
+
+  14 Mar 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.3.1.ebuild:
+  version bump to gtk2 _beta_ evolution. this version can co-exist with
+  evolution 1.2.x, but you must NOT run them at the same time. currently masked
+  because not everyone wants to break their mail clients ;)
+  Remember, this is an unstable release!
+
+  17 Feb 2003; foser <foser@gentoo.org> evolution-1.[2.0-r1,0.8,2.1,2.2].ebuild :
+  Fixed db source uri (#15839)
+
+*evolution-1.2.2 (16 Feb 2003)
+
+  09 Mar 2003; foser <foser@gentoo.org> evolution-1.2.2.ebuild :
+  Fixed glade dep
+
+  03 Mar 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.2.ebuild :
+  marking as stable.
+
+  02 Mar 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.2.ebuild :
+  USE="-mozilla" will actually remove mozilla from dependencies (#12821)
+
+  16 Feb 2003; Daniel Robbins <drobbins@gentoo.org> evolution-1.2.2.ebuild:
+  added latest version ~masked for all arches previously in KEYWORDS. "It works
+  for me..." and your mileage may vary. Needs testing.
+
+  08 Jan 2003; Martin Schlemmer <azarah@gentoo.org> evolution-1.0.8-r2.ebuild, evolution-1.2.1.ebuild :
+  Mark 1.2.1 stable for x86.  Do not install 1.0.8 if gnome-spell-0.5 or
+  gtkhtml-1.1 installed.
+
+  10 Dec 2002; foser <foser@gentoo.org> evolution-1.0.7.ebuild evolution-1.0.8-r2.ebuild evolution-1.2.0.ebuild evolution-1.2.0-r1.ebuild :
+  Fixed gob deps (bug #11633)
+
+*evolution-1.2.1 (17 Dec 2002) 
+
+  17 Dec 2002; Stefan Jones <cretin@gentoo.org> :
+  New version, removed old patches and updated deps.
+  
+*evolution-1.2.0-r1 (09 Dec 2002)
+
+  09 Dec 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.2.0-r1.ebuild :
+  Add sharedldap.patch and settingscrash.patch from Mandrake to:
+  - Fix LDAP support (hopefully enable searching, but compiles fine).
+  - Fix a crash in settings if some variables not initialized.
+
+* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+  02 Dec 2002; foser <foser@gentoo.org> evolution-1.2.0.ebuild :
+  Updated pda deps (bug #10307)
+
+  29 Nov 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.2.0.ebuild :
+  Update DEPEND to include the required versions needed.
+
+*evolution-1.2.0 (16 Nov 2002)
+
+  16 Nov 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.2.0.ebuild :
+  Update version.
+
+  10 Nov 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.1.90.ebuild :
+  Update some USE flags.  Add patches from Mandrake.  Add utf8 patch.  Fix
+  screwup with enabling NSS support.
+
+*evolution-1.1.90 (9 Nov 2002)
+
+  9 Nov 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.1.90.ebuild :
+  Added RC1.
+
+*evolution-1.0.8-r2 (16 Oct 2002)
+
+  16 Oct 2002; foser <foser@gentoo.org> evolution-1.0.8-r2.ebuild :
+  Added a patch which fixes bug #5373
+ 
+*evolution-1.0.8-r1 (20 Jul 2002)
+
+  28 Aug 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.0.8-r1.ebuild :
+  Add scrollkeeper to DEPEND.
+
+  20 Aug 2002; Mark Guertin <gerk@gentoo.org> evolution-1.0.8-r1.ebuild :
+  Put scrollkepper within doc?() in DEPEND to prevent it from trying to pull
+  All the doc stuff, even with USE="-doc" (also a nasty bug in docbook-sgml-utils
+  is stopping people from using because of this)
+
+  20 Jul 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Fix $D being hardcoded into the binary in some cases (ccache ??).
+
+*evolution-1.0.8 (17 Jul 2002)
+
+  17 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> evolution-1.0.8.ebuild:
+
+  New version and updated dependencies.
+
+
+*evolution-1.0.7 (15 Jun 2002)
+
+  15 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> evolution-1.0.7.ebuild:
+
+  New version
+
+*evolution-1.0.5-r3 (12 Jun 2002)
+
+  12 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> evolution-1.0.5-r3.ebuild :
+
+  Updated dep to the new gtkhtml revision. Bug #3659 related.
+
+
+*evolution-1.0.5-r2 (09 Jun 2002)
+
+  09 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Use the new "elibtoolize" function from libtool.eclass.  Hopefully this
+  will fix the pda and libtoolize problems.
+
+*evolution-1.0.5-r1 (09 Jun 2002)
+  
+  09 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> evolution-1.0.5-1.ebuild :
+
+  Updated dependencies. Changed deps to work even if gnome2 is unmasked.
+  Also this should Close/Fixe bug #3444
+ 
+*evolution-1.0.5 (13 May 2002)
+
+  13 May 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.0.5.ebuild :
+
+  Updated version.
+
+*evolution-1.0.3-r7 (03 May 2002) 
+  03 May 2002; Spider <spider@gentoo.org> evolution-1.0.3-r7.ebuild :
+  Adding an important security fix
+
+  as reported on the mailing list yesterday, Evolution 1.0.3 has a serious
+  bug that can make it eat all the memory on your system and then crash
+  when downloading certain messages with invalid headers.
+  
+  29 Apr 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.0.3-r6.ebuild :
+
+  Replaced the "perl" use flag with "doc".
+
+*evolution-1.0.3-r6 (23 Apr 2002)
+
+  23 Apr 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.0.3-r6.ebuild :
+
+  Resolve bug #334.  Note: libtoolize is run only if "pda" is not in USE.
+
+*evolution-1.0.3-r5 (22 Apr 2002)
+
+  22 Apr 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.0.3-r6.ebuild :
+
+  Resolve bug #334.
+
+*evolution-1.0.3-r4 (13 Apr 2002)
+  13 Apr 2002; Spider <spider@gentoo.org> evolution-1.0.3-r4.ebuild :
+  Adding a dependency on gob in a futile attempt to solve bug #1674
+  
+
+*evolution-1.0.3-r3 (9 April 2002)
+
+  09 Apr 2002; M.Schlemmer <azarah@gentoo.org> evolution-1.0.3-r3.ebuild :
+
+  Update to use the virtualx eclass for enabling build in console.
+
+  03 Apr 2002; M.Schlemmer <azarah@gentoo.org> evolution-1.0.3-r2.ebuild :
+
+  Add 'spell' DEPEND.
+
+*evolution-1.0.3-r2 (2 April 2002)
+
+  02 Apr 2002; Seemant Kulleen <seemant@gentoo.org> evolution-1.0.3-r2.ebuild :
+
+  Trying Mandrake's fix to avoid having to compile it in X.  Masked for now.
+
+*evolution-1.0.3-r1 (2 April 2002)
+
+  02 Apr 2002; M.Schlemmer <azarah@gentoo.org> evolution-1.0.3-r1.ebuild :
+
+  Finally fix the filter crash bug, resolving bug #886.  Resolve bug 1355, which
+  is the imap literal sting issue.  Add ftp.gnome.org back into SRC_URI ... it is
+  in the stable branch now ...
+
+*evolution-1.0.3 (29 Mar 2002)
+
+  29 Mar 2002; Spider <spider@gentoo.org> evolution-1.0.3.ebuild :
+  
+  Update to latest evolution, keep 2 patches
+  Add optional perl dependency in order to use gtk-doc
+
+  29 Mar 2002; Bruce A. Locke <blocke@shivan.org> evolution-1.0.3.ebuild :
+
+  Removed an invalid mirror from the SRC_URI.
+
+
+*evolution-1.0.2-r1 (21 Mar 2002)
+
+  21 Mar 2002; G. Goodyear <g2boojum@gentoo.org> :
+
+  Added Mandrake patches.  Hey, they're commented for a change.
+  Doesn't seem to fix the eaddress-conduit instantiation problem, though.
+
+*evolution-1.0.1-r2 (1 Feb 2002)
+
+  4 Feb 2002; G. Goodyear <g2boojum@gentoo.org> ChangeLog :
+
+  I added back in an evo-1.0 ebuild.  Annoyingly, the address conduit
+  crashes in 1.0.1 and 1.0.2, so Palm users should emerge the 1.0
+  version for the time being.
+  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
