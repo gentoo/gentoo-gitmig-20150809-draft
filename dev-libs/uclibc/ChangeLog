@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/uclibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.39 2004/10/13 14:40:10 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.40 2004/10/28 05:55:32 solar Exp $
+
+  28 Oct 2004; <solar@gentoo.org> uclibc-0.9.26-r7.ebuild:
+  uclibc-0.9.26-r7 marked stable for x86/arm/ppc/mips. 30 days in ~arch,
+  security changes only which mark unsecvars stable
 
   13 Oct 2004; <solar@gentoo.org> files/0.9.26/ssp.c:
   more updates to ssp.c
