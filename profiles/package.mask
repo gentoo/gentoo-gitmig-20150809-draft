@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2884 2004/05/29 16:17:51 tgall Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2885 2004/05/29 19:01:11 squinky86 Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -547,11 +547,6 @@ dev-lisp/cmucl-bin
 # Mask for the under development gtk-sharp split
 dev-dotnet/gtk-sharp-base
 dev-dotnet/glib-sharp
-
-# <scandium@gentoo.org> (18 July 2003)
-# package is obsolete and unsupported
-# use net-p2p/xmule instead
-net-p2p/lmule
 
 # <coredumb@gentoo.org> (14 July 2003)
 # Finally a php5 beta :)
