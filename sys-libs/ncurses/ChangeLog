@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.49 2004/02/21 21:42:42 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.50 2004/02/29 19:12:41 azarah Exp $
+
+  29 Feb 2004; Martin Schlemmer <azarah@gentoo.org> ncurses-5.3-r5.ebuild,
+  files/ncurses-5.3-share-sed.patch:
+  Sed replaces all 'share' in patch with 'lib', which causes sandbox errors with
+  a PORTAGE_TMPDIR with 'share' in it, bug #42336.
+  Patch by gna <gnagent2@yahoo.com.au>.
 
   21 Feb 2004; Brad House <brad_mssw@gentoo.org> ncurses-5.3-r5.ebuild:
   mark stable on amd64 and ppc64

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r5.ebuild,v 1.9 2004/02/22 12:34:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r5.ebuild,v 1.10 2004/02/29 19:12:41 azarah Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 filter-flags -fno-exceptions
@@ -22,6 +22,8 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-xterm.patch
 	epatch ${FILESDIR}/${P}-coreutils.patch
+	# Bug #42336.
+	epatch ${FILESDIR}/${P}-share-sed.patch
 }
 
 src_compile() {
