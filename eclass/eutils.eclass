@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.79 2004/02/12 02:00:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.80 2004/02/21 07:48:12 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -458,7 +458,7 @@ get_number_of_jobs() {
 }
 
 # Cheap replacement for when debianutils (and thus mktemp)
-# do not exist on the users system
+# does not exist on the users system
 # vapier@gentoo.org
 #
 # Takes just 1 parameter (the directory to create tmpfile in)
