@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.1.ebuild,v 1.1 2002/10/31 20:52:38 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.1.ebuild,v 1.2 2002/10/31 21:12:28 rphillips Exp $
 
-IUSE="zlib ldap nls"
+IUSE="X zlib ldap nls"
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
@@ -11,9 +11,10 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="x86 ~ppc ~sparc ~sparc64"
 
 DEPEND="sys-devel/perl
+	X? ( x11-misc/xloadimage )
 	zlib? ( sys-libs/zlib )
 	ldap? ( net-nds/openldap )"
 RDEPEND="nls? ( sys-devel/gettext )"
@@ -23,6 +24,7 @@ src_compile() {
 	use nls || myconf="${myconf} --disable-nls"
 	use ldap || myconf="${myconf} --disable-ldap"
 	use zlib || myconf="${myconf} --with-included-zlib"
+	use X && 
 
 	#Still needed?
 	# Bug #6387, --enable-m-guard causes bus error on sparcs
