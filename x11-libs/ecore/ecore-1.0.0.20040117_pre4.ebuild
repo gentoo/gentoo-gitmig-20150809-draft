@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-1.0.0.20040110_pre4.ebuild,v 1.1 2004/01/11 22:34:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-1.0.0.20040117_pre4.ebuild,v 1.1 2004/01/20 02:38:18 vapier Exp $
 
-inherit enlightenment flag-o-matic
+inherit enlightenment
 
 DESCRIPTION="core event abstraction layer and X abstraction layer (nice convenience library)"
 HOMEPAGE="http://www.enlightenment.org/pages/ecore.html"
@@ -10,13 +10,11 @@ HOMEPAGE="http://www.enlightenment.org/pages/ecore.html"
 IUSE="${IUSE} opengl fbcon X"
 
 DEPEND="${DEPEND}
-	>=x11-libs/evas-1.0.0.20031013_pre12
+	>=x11-libs/evas-1.0.0.20040117_pre12
 	virtual/x11
 	opengl? ( virtual/opengl )"
 
 src_compile() {
-	use alpha && append-flags -fPIC
-	# X and fb have to be enabled otherwise it fails right now ;)
 	export MY_ECONF="
 		`use_enable X ecore-x` \
 		--enable-ecore-job \
