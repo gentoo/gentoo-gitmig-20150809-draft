@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5.ebuild,v 1.5 2001/08/18 14:08:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5.ebuild,v 1.6 2001/09/17 17:11:42 danarmak Exp $
 
 # !! IMPORTANT NOTE !!
 # The Xaw3d widget set is meant to be built as part of the X Consortium's
@@ -70,12 +70,10 @@ src_install () {
     # function so I switched back to manual installation for now.
     
     into /usr/X11R6
-    dolib.so libXaw3d.so.6.1
-    dolib.a libXaw3d.a
-    
+    dolib.so libXaw3d.so.7.0
     cd ${D}/usr/X11R6/lib
-    ln -s libXaw3d.so.6.1 libXaw3d.so.6
-    ln -s libXaw3d.so.6 libXaw3d.so
+    ln -s libXaw3d.so.7.0 libXaw3d.so.7
+    ln -s libXaw3d.so.7.0 libXaw3d.so
     
     # headers
     cd ${S}
