@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/ksh
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.3 2003/09/06 11:11:05 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.4 2003/09/10 17:57:30 taviso Exp $
+
+*ksh-93.20030724 (10 Sep 2003)
+
+  10 Sep 2003; Tavis Ormandy <taviso@gentoo.org> ksh-93.20030724.ebuild:
+  --> stable
 
   06 Sep 2003; Tavis Ormandy <taviso@gentoo.org> :
   New version of ast-ksh and INIT, testing a patch that seems to 
