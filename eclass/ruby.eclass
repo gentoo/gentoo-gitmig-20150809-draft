@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.38 2004/08/03 19:48:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.39 2004/09/16 14:09:20 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -189,7 +189,7 @@ prepall() {
 
 	local ruby_slots=$(echo "${USE_RUBY}" | wc -w)
 
-	if [ "$ruby_slots" -ge 2 ] || ( use macos && [ "$ruby_slots" -ge 1 ] )
+	if [ "$ruby_slots" -ge 2 ] || ((use macos || use ppc-macos) && [ "$ruby_slots" -ge 1 ])
 	then
 		einfo "Now we are building the package for ${USE_RUBY}"
 		for rb in ${USE_RUBY} ruby ; do
