@@ -1,4 +1,5 @@
 MD5 12a99349f51ace3e6b5fd7b890eeaee7 gaim-0.62.ebuild 1849
+MD5 96025d3668bb08d0132fbc559c872a11 gaim-0.63-r1.ebuild 1740
 MD5 d528dcaebdb49a6e3e6b062b5023a37a gaim-0.61.ebuild 1437
 MD5 c312c7f2f86088e2cbae1c306fb009ee gaim-0.59.9-r1.ebuild 2173
 MD5 5595ecee5df10f1cfa16a675fcc5cf06 gaim-0.63.ebuild 2133
@@ -7,3 +8,4 @@ MD5 07beb4e67f5dd8cafed146e45b919144 files/digest-gaim-0.59.9-r1 128
 MD5 9bed88f159974c776176e6ba02d778c2 files/digest-gaim-0.61 126
 MD5 9f365202815e1944216b14ce27f288dd files/digest-gaim-0.62 126
 MD5 72bff86e305d876aba4df576f2501f15 files/digest-gaim-0.63 63
+MD5 908f7feabba8c8b1d74510f1f2b7706d files/digest-gaim-0.63-r1 126
