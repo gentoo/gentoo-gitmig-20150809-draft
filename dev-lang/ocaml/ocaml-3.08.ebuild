@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.ebuild,v 1.1 2004/08/08 07:53:44 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.ebuild,v 1.2 2004/08/08 09:06:00 mattam Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://caml.inria.fr/distrib/ocaml-3.08/${P}.0.tar.gz"
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~ia64 ~amd64 ~hppa ~macos"
-IUSE="tcltk"
+IUSE="tcltk latex"
 
 DEPEND="virtual/libc
 	tcltk? ( >=dev-lang/tk-3.3.3 )"
@@ -59,6 +59,10 @@ src_install() {
 
 pkg_postinst() {
 	ranlib /usr/lib/ocaml/*.a
+
+	if use latex; then
+		echo "TEXINPUTS=/usr/lib/ocaml/ocamldoc:" > /etc/env.d/99ocamldoc
+	fi
 
 	echo
 	einfo "OCaml is not binary compatible from version to version,"
