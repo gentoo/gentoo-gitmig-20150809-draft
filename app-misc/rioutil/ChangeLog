@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/rioutil
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.14 2004/06/24 22:30:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.15 2004/07/20 17:08:52 plasmaroo Exp $
+
+  20 Jul 2004; <plasmaroo@gentoo.org> rioutil-1.4.4.ebuild,
+  +files/rioutil-1.4.4-26headers.patch:
+  Added a patch for users with 2.6 headers; bug #44609.
 
   20 Jun 2004; Daniel Black <dragonheart@gentoo.org> rioutil-1.4.4.ebuild:
   added depend on linuxheaders-2.4. It fails against linuxheaders-2.6. Bug

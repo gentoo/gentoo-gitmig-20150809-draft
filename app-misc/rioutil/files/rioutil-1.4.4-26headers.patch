@@ -1,0 +1,51 @@
+diff -ur rioutil-1.4.2b/include/usbdrv.h rioutil-1.4.2b.plasmaroo/include/usbdrv.h
+--- rioutil-1.4.2b/include/usbdrv.h	2003-08-06 16:56:25.000000000 +0100
++++ rioutil-1.4.2b.plasmaroo/include/usbdrv.h	2004-04-02 22:22:51.802629528 +0100
+@@ -63,6 +63,7 @@
+ 
+ /* --------------------------------------------------------------------- */
+ 
++#ifndef __LINUX_USB_CH9_H
+ struct usb_device_descriptor {
+         u_int8_t  bLength;
+         u_int8_t  bDescriptorType;
+@@ -79,8 +80,7 @@
+         u_int8_t  iSerialNumber;
+         u_int8_t  bNumConfigurations;
+ };
+-
+-//#define USB_DT_DEVICE_SIZE sizeof(struct usb_device_descriptor)
++#endif /* __LINUX_USB_CH9_H */
+ 
+ /* --------------------------------------------------------------------- */
+ 
+diff -ur rioutil-1.4.2b/librioutil/usbdrvlinux.c rioutil-1.4.2b.plasmaroo/librioutil/usbdrvlinux.c
+--- rioutil-1.4.2b/librioutil/usbdrvlinux.c	2003-08-06 16:56:25.000000000 +0100
++++ rioutil-1.4.2b.plasmaroo/librioutil/usbdrvlinux.c	2004-04-02 22:25:26.820063296 +0100
+@@ -84,14 +84,26 @@
+         fprintf(f, "  Length              = %2d%s\n", desc->bLength,
+ 		desc->bLength == USB_DT_DEVICE_SIZE ? "" : " (!!!)");
+         fprintf(f, "  DescriptorType      = %02x\n", desc->bDescriptorType);
++	#ifdef __LINUX_USB_CH9_H
++        fprintf(f, "  USB version         = %x\n",
++	       desc->bcdUSB);
++        fprintf(f, "  Vendor:Product      = %04x:%04x\n",
++	       desc->idVendor, desc->idProduct);
++	#else
+         fprintf(f, "  USB version         = %x.%02x\n",
+ 	       desc->bcdUSB[1], desc->bcdUSB[0]);
+         fprintf(f, "  Vendor:Product      = %02x%02x:%02x%02x\n",
+ 	       desc->idVendor[1], desc->idVendor[0], desc->idProduct[1], desc->idProduct[0]);
++	#endif
+         fprintf(f, "  MaxPacketSize0      = %d\n", desc->bMaxPacketSize0);
+         fprintf(f, "  NumConfigurations   = %d\n", desc->bNumConfigurations);
++	#ifdef __LINUX_USB_CH9_H
++        fprintf(f, "  Device version      = %x\n",
++		desc->bcdDevice);	
++	#else
+         fprintf(f, "  Device version      = %x.%02x\n",
+ 		desc->bcdDevice[1], desc->bcdDevice[0]);
++	#endif
+         fprintf(f, "  Device Class:SubClass:Protocol = %02x:%02x:%02x\n",
+ 		desc->bDeviceClass, desc->bDeviceSubClass, desc->bDeviceProtocol);
+         switch (desc->bDeviceClass) {
