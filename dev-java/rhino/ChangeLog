@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.27 2005/01/31 22:44:55 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.28 2005/02/01 13:01:10 luckyduck Exp $
+
+  01 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> files/1.5.5_jdk15.patch:
+  modified the recently added patch
 
   31 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +files/1.5.5_jdk15.patch,
   rhino-1.5.5-r1.ebuild:
