@@ -1,0 +1,6 @@
+phpLDAPadmin is installed.  You will need to
+configure it by creating/editing the config.php at
+
+${HTTPD_ROOT}/phpldapadmin/config.php
+
+There is a config.php.example for your reference.
