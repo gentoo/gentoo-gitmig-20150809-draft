@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/biblestudy/biblestudy-1.0.ebuild,v 1.1 2004/05/03 20:27:51 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/biblestudy/biblestudy-1.0.ebuild,v 1.2 2004/05/03 22:20:11 squinky86 Exp $
 
 IUSE="unicode"
-DESCRIPTION="biblestudy software based on the "
+DESCRIPTION="biblestudy software based on the sword library"
 HOMEPAGE="http://www.whensdinner.com/"
 SRC_URI="mirror://sourceforge/christiangame/${P}.tar.bz2"
 RESTRICT="nomirror"
