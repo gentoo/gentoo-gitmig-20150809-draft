@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Error
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.13 2004/06/25 00:25:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.14 2004/12/23 09:30:40 nigoro Exp $
+
+  23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Error-0.15-r2.ebuild:
+  added ~ppc64
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> Error-0.15-r2.ebuild:
   adding s390 to keywords

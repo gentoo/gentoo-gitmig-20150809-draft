@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pod-Coverage
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.10 2004/10/28 15:12:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.11 2004/12/23 09:26:41 nigoro Exp $
+
+  23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Pod-Coverage-0.16.ebuild:
+  added ~ppc64
 
 *Pod-Coverage-0.16 (28 Oct 2004)
 
