@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.2.ebuild,v 1.2 2003/06/05 17:41:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.2.ebuild,v 1.3 2003/06/19 03:10:32 robbat2 Exp $
 
 inherit php eutils
 
@@ -25,8 +25,7 @@ src_compile() {
 
 	myconf="${myconf} \
 		--disable-cgi \
-		--enable-cli \
-		--enable-pcntl"
+		--enable-cli"
 	
 	php_src_compile
 
