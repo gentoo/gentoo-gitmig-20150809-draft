@@ -823,12 +823,12 @@ diff -ruN dtd-old/xmms/main.h dtd-new/xmms/main.h
 --- dtd-old/xmms/main.h	2003-09-08 13:31:40.000000000 +0200
 +++ dtd-new/xmms/main.h	2003-09-08 13:51:48.000000000 +0200
 @@ -64,6 +64,7 @@
- 	gchar *charset_id3, *charset_output, *charset_fs, *charset_pl;
- 	gint autocharset;
- 	gchar *shade_font;
+ 	gint pause_between_songs_time;
+ 	gboolean pause_between_songs, show_wm_decorations;
+ 	gint mouse_change;
 +	gboolean dynamic_taste_detection;
- }
- Config;
+	gboolean playlist_transparent;
+	gchar *gentitle_format;
  
 diff -ruN dtd-old/xmms/playlist.c dtd-new/xmms/playlist.c
 --- dtd-old/xmms/playlist.c	2003-09-08 13:31:40.000000000 +0200

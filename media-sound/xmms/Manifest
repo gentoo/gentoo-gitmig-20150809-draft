@@ -4,11 +4,11 @@ MD5 1f4fb5fbbf7591ead0b68071825b2de3 xmms-1.2.7-r25.ebuild 5652
 MD5 5013cb7f0010b3daa8efd1548cbe83b4 xmms-1.2.7-r20.ebuild 4923
 MD5 0ee64fc05669ecd516d7239e2a575e8d xmms-1.2.8.ebuild 4350
 MD5 092d1ae9348717c6e29072cbc747275e xmms-1.2.8-r1.ebuild 3813
-MD5 ed84808c74e1eaee0d3538fdd0caf353 ChangeLog 13090
+MD5 cedba99167e210acf6bd9041557ef382 ChangeLog 13324
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 e7e0c91780b115aaad1a1ed534bf7ae8 files/xmms-ipv6-20020408-mmx.patch 9210
 MD5 2ef620caed6093dff90ace3118832937 files/xmms-1.2.8-sid-songpos.patch 8959
-MD5 a095e427745739d9b2555b64fa14029b files/xmms-1.2.8-dtd.patch 53079
+MD5 5e35d857885c8fed228428dab6f57ab7 files/xmms-1.2.8-dtd.patch 53125
 MD5 7ab233f0953be4760d3e5b784cc0bba4 files/xmms-fhs-skinsdir.patch 372
 MD5 66549f879e2d904a11e8e139b7dc0447 files/xmms-nptl.patch 1163
 MD5 3268d7f38e954fd7ab541fa9e6f385ca files/digest-xmms-1.2.7-r20 130

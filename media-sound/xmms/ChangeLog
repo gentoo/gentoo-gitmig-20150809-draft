@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.69 2003/09/15 11:26:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.70 2003/09/15 13:46:19 seemant Exp $
+
+  15 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
+  files/xmms-1.2.8-dtd.patch:
+  Adjusted the dtd patch to not be dependent on the changes made by the russian
+  charset patch. Closes bug #28768 by IPGlider <ipglider@ipglider.org>
 
   15 Sep 2003; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.8-r2.ebuild,
   files/xmms-1.2.8-sid-songpos.patch:
