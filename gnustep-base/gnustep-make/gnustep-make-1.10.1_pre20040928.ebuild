@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.1_pre20040928.ebuild,v 1.3 2004/10/09 12:14:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.1_pre20040928.ebuild,v 1.4 2004/10/21 19:09:32 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -58,7 +58,7 @@ src_install() {
 	. ${S}/GNUstep.sh
 
 	if [ -f ./[mM]akefile -o -f ./GNUmakefile ] ; then
-		if [ `use debug` ]; then
+		if use debug ; then
 			emake -j1 INSTALL_ROOT=${D} \
 				GNUSTEP_SYSTEM_ROOT=${D}${GNUSTEP_SYSTEM_ROOT} \
 				GNUSTEP_NETWORK_ROOT=${D}${GNUSTEP_NETWORK_ROOT} \
@@ -77,7 +77,7 @@ src_install() {
 
 	. ${D}${GENTOO_GNUSTEP_ROOT}/System/Library/Makefiles/GNUstep.sh
 
-	if [ `use doc` ]; then
+	if use doc ; then
 		cd Documentation
 		make INSTALL_ROOT=${D} \
 			GNUSTEP_SYSTEM_ROOT=${D}${GNUSTEP_SYSTEM_ROOT} \

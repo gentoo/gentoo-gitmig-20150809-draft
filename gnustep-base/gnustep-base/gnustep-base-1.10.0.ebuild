@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.0.ebuild,v 1.3 2004/10/09 21:51:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.0.ebuild,v 1.4 2004/10/21 19:09:11 fafhrd Exp $
 
 inherit gnustep
 
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
 	egnustep_env
 	egnustep_install || die
-	if [ `use doc` ]; then
+	if use doc ; then
 		cd ${S}/Documentation
 		make HOME=${TMP} \
 			GNUSTEP_USER_ROOT=${TMP}/GNUstep \
