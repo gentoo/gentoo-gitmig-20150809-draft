@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.4 2004/06/04 02:12:21 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.5 2004/06/04 02:30:37 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck"
 
@@ -210,6 +210,11 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
+	# version patch
+	cd ${S}
+	sed -i -e "s/stable/2004-06-02/" -e "s/2\.3\.3/2.3.4/" version.h
+
 	# Extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir -p ${S}/man; cd ${S}/man
 	want_nptl || tar xjf ${FILESDIR}/glibc-manpages-2.3.2.tar.bz2
