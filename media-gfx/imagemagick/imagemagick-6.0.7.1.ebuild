@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.0.7.1.ebuild,v 1.6 2004/09/08 01:05:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.0.7.1.ebuild,v 1.7 2004/09/08 03:57:41 vapier Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -15,8 +15,7 @@ SRC_URI="http://www.imagemagick.net/download/${MY_P2}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ~mips ~ppc64 ~ia64"
-
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips ~ppc64 ia64"
 IUSE="X cups jpeg lcms mpeg png truetype tiff xml2 wmf jbig perl graphviz"
 
 DEPEND=">=sys-apps/sed-4
