@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.15 2003/02/19 21:46:47 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.16 2003/03/31 20:51:58 tuxus Exp $
  
 *gettext-0.11.5-r1 (24 Nov 2002)
   18 Feb 2003; Zach Welch <zwelch@gentoo.org> gettext-0.11.5-r1.ebuild : 
@@ -28,6 +28,9 @@
   very rare instances, bug #7682.
 
 *gettext-0.11.5 (16 Aug 2002)
+
+  31 Mar 2003; Jan Seidel <tuxus@gentoo.org> gettext-0.11.5.ebuild :
+  Added mips to KEYWORDS
 
   16 Aug 2002; Seemant Kulleen <seemant@gentoo.org> gettext-0.11.5.ebuild
   files/digest-gettext-0.11.5 :
