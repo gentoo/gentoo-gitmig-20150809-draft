@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.0.0.ebuild,v 1.1 2002/06/10 14:03:10 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.0.0.ebuild,v 1.2 2002/06/11 21:13:23 azarah Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -25,9 +25,11 @@ RDEPEND=">=dev-libs/glib-2.0.0
 	>=sys-devel/gettext-0.10.40
 	>=sys-apps/tcp-wrappers-7.6"
 
-DEPEND=">=dev-util/pkgconfig-0.12.0
+DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.17
-	${RDEPEND}"
+	!gnome-base/gnome-core"
+# gnome-base/gnome-core overwrite /usr/bin/gnome-session
 
 src_compile() {
         # heh, we are a bit quick here.. timezones
