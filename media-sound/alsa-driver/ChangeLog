@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.36 2003/05/20 22:15:33 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.37 2003/05/24 16:03:10 agenkin Exp $
+
+*alsa-driver-0.9.3c-r1 (05 May 2003)
+
+  05 May 2003; Arcady Genkin <agenkin@gentoo.org> :
+  0.9.3c removes /proc/asound/dev directory, to which /dev/snd used to be
+  a symlink.  This doesn't mean much to us, since we use devfs, but
+  the "make install" now may attempt to create real /dev/snd directory,
+  causing a Portage sandbox violation error.  This revision fixes this
+  problem (Gentoo bug #21410).
 
 *alsa-driver-0.9.3c (05 May 2003)
 
