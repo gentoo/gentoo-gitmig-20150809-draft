@@ -1,6 +1,9 @@
 # ChangeLog for net-www/viewcvs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.5 2004/09/01 10:56:15 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.6 2004/09/03 07:32:40 rl03 Exp $
+
+  03 Sep 2004; Renat Lumpau <rl03@gentoo.org> files/reconfig:
+  The reconfig hook now cleans up after itself.
 
 *viewcvs-0.9.2_p20040831 (01 Sep 2004)
 
