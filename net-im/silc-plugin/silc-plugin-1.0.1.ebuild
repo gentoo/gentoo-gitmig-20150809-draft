@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.2 2004/08/31 16:59:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.3 2004/09/01 20:14:40 ticho Exp $
 
 IRSSI_PV=0.8.9
 
@@ -24,68 +24,68 @@ S_IRSSI="${S}/../irssi-${IRSSI_PV}"
 
 src_compile() {
 
-    echo
-    einfo "Preparing silc-client\n"
-    cd ${S_SILC}
-    econf --with-helpdir=${D}/usr/share/irssi/help/silc/ \
-	--without-libtoolfix \
-	--enable-static \
-	`use_with pic` \
-	`use_enable debug` || die "silc-client configure failed"
-    make -C lib || die "silc-client's lib compilation failed"
+	echo
+	einfo "Preparing silc-client\n"
+	cd ${S_SILC}
+	econf --with-helpdir=${D}/usr/share/irssi/help/silc/ \
+	    --without-libtoolfix \
+	    --enable-static \
+	    `use_with pic` \
+	    `use_enable debug` || die "silc-client configure failed"
+	emake -C lib || die "silc-client's lib compilation failed"
 
-    echo
-    einfo "Patching irssi source for silc-plugin\n"
-    cd ${S}
-    make patch IRSSI=${S_IRSSI} SILC=${S_SILC} || die "patching irssi sources failed"
+	echo
+	einfo "Patching irssi source for silc-plugin\n"
+	cd ${S}
+	emake patch IRSSI=${S_IRSSI} SILC=${S_SILC} || die "patching irssi sources failed"
 
-    echo
-    einfo "Configuring irssi\n"
-    cd ${S_IRSSI}
-    econf --sysconfdir=/etc || die "irssi configure failed"
-    echo
-    einfo "Compiling silc-plugin\n"
-    make -C src/perl || die "irssi's src/perl compilation failed"
-    make -C src/fe-common/silc || die "irssi's src/fe-common/silc compilation failed"
-    make -C src/silc/core || die "irssi's src/silc/core compilation failed"
+	echo
+	einfo "Configuring irssi\n"
+	cd ${S_IRSSI}
+	econf --sysconfdir=/etc || die "irssi configure failed"
+	echo
+	einfo "Compiling silc-plugin\n"
+	emake -C src/perl || die "irssi's src/perl compilation failed"
+	emake -C src/fe-common/silc || die "irssi's src/fe-common/silc compilation failed"
+	emake -C src/silc/core || die "irssi's src/silc/core compilation failed"
 }
 
 src_install() {
-    cd ${S_IRSSI}
-    make -C src/perl/silc DESTDIR=${D} install || die "irssi's src/perl/silc installation failed"
-    make -C src/fe-common/silc DESTDIR=${D} install || die "irssi's src/fe-common/silc installation failed"
-    make -C src/silc/core install DESTDIR=${D} install ||  die "irssi's src/silc/core installation failed"
+	cd ${S_IRSSI}
+	make -C src/perl/silc DESTDIR=${D} install || die "irssi's src/perl/silc installation failed"
+	make -C src/fe-common/silc DESTDIR=${D} install || die "irssi's src/fe-common/silc installation failed"
+	make -C src/silc/core install DESTDIR=${D} install ||  die "irssi's src/silc/core installation failed"
 
-    cd ${S_SILC}
-    make -C irssi/docs/help install || die "silc-client's helpfiles installation failed"
+	cd ${S_SILC}
+	make -C irssi/docs/help install || die "silc-client's helpfiles installation failed"
 
-    cd ${S}
-    insinto /usr/share/irssi/scripts
-    doins scripts/*
+	cd ${S}
+	insinto /usr/share/irssi/scripts
+	doins scripts/*
 
-    insinto /usr/share/irssi
-    doins default.theme
+	insinto /usr/share/irssi
+	doins default.theme
 
-    dodoc AUTHORS COPYING README USAGE
+	dodoc AUTHORS COPYING README USAGE
 }
 
 pkg_postinst() {
-    einfo "You can load the plugin with following command in Irssi:"
-    einfo
-    einfo "\t/LOAD silc"
-    einfo
-    einfo "It will automatically generate a new key pair for you. You will be asked to"
-    einfo "enter a passphrase for this keypair twice. If you leave the passphrase"
-    einfo "empty, your key will not be stored encrypted."
-    einfo
-    einfo "You should also load the perl scripts:"
-    einfo
-    einfo "\t/SCRIPT LOAD silc"
-    einfo "\t/SCRIPT LOAD silc-mime"
-    einfo
-    einfo "To connect to the SILCNet, you can use following command in Irssi:"
-    einfo
-    einfo "\t/CONNECT -silcnet SILCNet silc.silcnet.org"
-    einfo
-    einfo "Have fun."
+	einfo "You can load the plugin with following command in Irssi:"
+	einfo
+	einfo "\t/LOAD silc"
+	einfo
+	einfo "It will automatically generate a new key pair for you. You will be asked to"
+	einfo "enter a passphrase for this keypair twice. If you leave the passphrase"
+	einfo "empty, your key will not be stored encrypted."
+	einfo
+	einfo "You should also load the perl scripts:"
+	einfo
+	einfo "\t/SCRIPT LOAD silc"
+	einfo "\t/SCRIPT LOAD silc-mime"
+	einfo
+	einfo "To connect to the SILCNet, you can use following command in Irssi:"
+	einfo
+	einfo "\t/CONNECT -silcnet SILCNet silc.silcnet.org"
+	einfo
+	einfo "Have fun."
 }
