@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.5 2004/09/12 16:59:34 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.6 2004/11/22 21:19:08 robmoss Exp $
 
-inherit mount-boot eutils flag-o-matic gcc gnuconfig
+inherit mount-boot eutils flag-o-matic gcc gnuconfig toolchain-funcs
 
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
@@ -11,8 +11,8 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE="static"
+KEYWORDS="~x86 ~amd64"
+IUSE="static netboot"
 
 DEPEND=">=sys-libs/ncurses-5.2-r5
 	>=sys-devel/automake-1.7
@@ -20,7 +20,7 @@ DEPEND=">=sys-libs/ncurses-5.2-r5
 PROVIDE="virtual/bootloader"
 
 src_unpack() {
-	has_m32 || die "your compiler seems to be unable to compile 32bit code. if you are on amd64, make sure you compile gcc with USE=multilib FEATURES=-sandbox"
+	has_m32 || die "Your compiler seems to be unable to compile 32-bit code. If you are on amd64, make sure you compile gcc with USE=multilib FEATURES=-sandbox"
 
 	unpack ${A}
 	cd ${S}
@@ -37,6 +37,9 @@ src_unpack() {
 	# And should add some boot prettification
 	# epatch ${WORKDIR}/${PF}-gentoo.diff
 	# epatch ${FILESDIR}/${P}-test.patch
+
+	# -fwritable-strings is deprecated; testing to see if we need it any more
+	epatch ${FILESDIR}/${P}-warnings.patch
 }
 
 src_compile() {
@@ -50,16 +53,17 @@ src_compile() {
 	[ `gcc-major-version` -eq 3 ] && append-flags -minline-all-stringops
 	use static && append-ldflags -static
 
-	has_pie && CC="${CC} `test_flag -fno-pic` `test_flag -nopie`"
-	has_ssp && CC="${CC} `test_flag -fno-stack-protector`"
+	has_pie && CC="${tc-getCC} `test_flag -fno-pic` `test_flag -nopie`"
+	has_ssp && CC="${tc-getCC} `test_flag -fno-stack-protector`"
 
-	autoconf || die
-	aclocal || die
-	WANT_AUTOMAKE=1.7 automake || die
+	autoconf || die "autoconf failed"
+	aclocal || die "aclocal failed"
+	WANT_AUTOMAKE=1.7 automake || die "automake failed"
 
-	# build the net-bootable grub first
-	CFLAGS="" \
-	econf \
+	# build the net-bootable grub first, but only if "netboot" is set
+	if [ -n "$(use netboot)" ]
+		then CFLAGS="" \
+		econf \
 		--datadir=/usr/lib/grub \
 		--exec-prefix=/ \
 		--disable-auto-linux-mem-opt \
@@ -67,28 +71,31 @@ src_compile() {
 		--enable-{3c{5{03,07,09,29,95},90x},cs89x0,davicom,depca,eepro{,100}} \
 		--enable-{epic100,exos205,ni5210,lance,ne2100,ni{50,65}10,natsemi} \
 		--enable-{ne,ns8390,wd,otulip,rtl8139,sis900,sk-g16,smc9000,tiara} \
-		--enable-{tulip,via-rhine,w89c840} || die
+		--enable-{tulip,via-rhine,w89c840} || die "netboot econf failed"
 
-	emake w89c840_o_CFLAGS="-O" || die "making netboot stuff"
+		emake w89c840_o_CFLAGS="-O" || die "making netboot stuff"
 
-	mv stage2/{nbgrub,pxegrub} ${S}
-	mv stage2/stage2 stage2/stage2.netboot
+		mv stage2/{nbgrub,pxegrub} ${S}
+		mv stage2/stage2 stage2/stage2.netboot
 
-	make clean || die
+		make clean || die "make clean failed"
+	fi
 
-	# now build the regular grub
+	# Now build the regular grub
+	# Note that FFS and UFS2 support are broken for now - stage1_5 files too big
 	CFLAGS="${CFLAGS}" \
 	econf \
 			--datadir=/usr/lib/grub \
 			--exec-prefix=/ \
-			--disable-auto-linux-mem-opt || die
+			--disable-auto-linux-mem-opt || die "econf failed"
 	emake || die "making regular stuff"
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
 	exeinto /usr/lib/grub
-	doexe nbgrub pxegrub stage2/stage2 stage2/stage2.netboot
+	doexe stage2/stage2
+	use netboot && doexe nbgrub pxegrub stage2/stage2.netboot
 
 	insinto /boot/grub
 	doins ${FILESDIR}/splash.xpm.gz
@@ -117,6 +124,7 @@ pkg_postinst() {
 	einfo "Copying files from /usr/lib/grub to /boot"
 	cp -p /usr/lib/grub/* /boot/grub
 	cp -p /lib/grub/*/* /boot/grub
+	cp -p /usr/lib/grub/*/* /boot/grub
 
 	[ -e /boot/grub/grub.conf ] \
 		&& /sbin/grub \

@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.26 2004/10/13 20:56:53 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.27 2004/11/22 21:19:08 robmoss Exp $
+
+  22 Nov 2004; <robmoss@gentoo.org>
+  +files/grub-0.95.20040823-warnings.patch, grub-0.95.20040823.ebuild:
+  USE flagging the network booting stuff with a new local "netboot" USE flag.
+  Adding ~amd64. General tidying up of the ebuild. Adding a patch to prevent
+  use of -fwritable-strings, which doesn't do anything but throw up warnings.
+  Adding a comment to explain that FFS and UFS2 support is broken still.
+  Fixing the amd64 installation procedure.
 
   13 Oct 2004; Travis Tilley <lv@gentoo.org> grub-0.94-r1.ebuild:
   stable on amd64
