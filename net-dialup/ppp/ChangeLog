@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.93 2004/11/27 10:48:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.94 2004/11/29 21:31:55 mrness Exp $
+
+  29 Nov 2004; Alin Nastac <mrness@gentoo.org>
+  -files/ppp-2.4.1-MSCHAPv2-fix.patch, -ppp-2.4.2-r1.ebuild,
+  -ppp-2.4.2-r2.ebuild, -ppp-2.4.2-r6.ebuild, -ppp-2.4.2-r7.ebuild,
+  -ppp-2.4.2-r8.ebuild, -ppp-2.4.2.ebuild:
+  Remove old ebuilds.
 
 *ppp-2.4.3 (27 Nov 2004)
 
