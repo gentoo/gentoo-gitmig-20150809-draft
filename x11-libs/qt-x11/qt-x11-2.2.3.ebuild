@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.2.3.ebuild,v 1.3 2000/12/25 16:17:42 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.2.3.ebuild,v 1.4 2001/01/04 08:16:02 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/qt-${PV}
@@ -68,7 +68,7 @@ src_install() {
 	dodoc PORTING README*
         cp -af ${S}/doc/html ${D}/usr/doc/${P}
         insinto /etc/env.d
-        doins ${FILESDIR}/15qt
+        doins ${FILESDIR}/90qt
 
 }
 
