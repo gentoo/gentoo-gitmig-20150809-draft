@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5badaa9244ffce750b4c2a58d5a07645 ChangeLog 948
 MD5 c727b60bfe795ea299da0f851f0d1985 metadata.xml 579
-MD5 efa59b905d71fdedee39b2aae5fefae8 rplay-3.3.2.ebuild 970
+MD5 e1b860b2d336ae0c30c1d544739a3b30 rplay-3.3.2.ebuild 977
 MD5 3b52329416a18c3974362573d2c4241f files/digest-rplay-3.3.2 128
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBibrUHTu7gpaalycRAkHhAJ9iRr1JnFnDHCnCm2g6Vh9vD9Of7wCgwTeG
+55WdYRHS5fFvj9/AspSwBUg=
+=uH9k
+-----END PGP SIGNATURE-----
