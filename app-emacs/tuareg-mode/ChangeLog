@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/tuareg-mode
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.1 2003/10/28 07:36:39 usata Exp $
+
+*tuareg-mode-1.40.5 (28 Oct 2003)
+
+  28 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> tuareg-mode-1.40.5.ebuild,
+  files/50tuareg-mode.el:
+  Initial import. Thanks to Matthieu Sozeau <mattam@altern.org> and
+  Pierre-Loi:c Garoche for submitting the ebuild. This closes Bug #30397
+
