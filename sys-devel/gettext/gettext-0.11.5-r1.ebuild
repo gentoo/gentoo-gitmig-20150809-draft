@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.5-r1.ebuild,v 1.17 2003/12/17 04:15:38 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.5-r1.ebuild,v 1.18 2004/02/09 04:08:18 brad_mssw Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
@@ -31,6 +31,9 @@ src_compile() {
 	# stuff, so... remove compaq-jdk/jre from the PATH
 	if use alpha && [[ $JAVAC == *compaq* ]]; then
 		PATH=$(echo ":${PATH}" | sed 's|:/opt/compaq-j[^:]*||g; s/^://')
+		unset JAVA_HOME CLASSPATH JDK_HOME JAVAC
+	fi
+	if use ppc64 ; then
 		unset JAVA_HOME CLASSPATH JDK_HOME JAVAC
 	fi
 
