@@ -2,7 +2,9 @@ MD5 1399487e1e278bb6458c41e7cd53973d fenice-1.7.ebuild 672
 MD5 a410c19dfae7b9b1948abd3c64b51970 metadata.xml 291
 MD5 eb5f9794c86bb2e721dceaac3f05aeab fenice-1.8.ebuild 672
 MD5 5250c600bda9563ad37ec8e576b4f581 fenice-1.6.ebuild 531
-MD5 4ad0207e7d07a2b57b05c760083a7439 ChangeLog 727
+MD5 05322e89402ee3588081bfeefdb509d8 fenice-1.9.ebuild 672
+MD5 f23ce49df4c0ebb5128313f2053df5ee ChangeLog 838
 MD5 17a0b9f65221ff4aa90ddd3a16d9abe0 files/digest-fenice-1.6 63
 MD5 cecc025c9f7f5ae46df82a1ab2145b2f files/digest-fenice-1.7 63
 MD5 70d6a92bff330ffa1813cb3d2565194d files/digest-fenice-1.8 63
+MD5 13aa29cc19fb485c527f21888bc21e43 files/digest-fenice-1.9 63
