@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4.ebuild,v 1.8 2004/07/20 18:33:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4.ebuild,v 1.9 2004/08/08 00:45:48 slarti Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -88,7 +88,7 @@ fi
 SRC_URI="${SRC_URI}
 	mirror://gentoo/${P}-manpages.tar.bz2"
 
-DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie and ssp extentions"
+DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie and ssp extensions"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r4.ebuild,v 1.12 2004/07/20 18:33:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r4.ebuild,v 1.13 2004/08/08 00:45:48 slarti Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -89,7 +89,7 @@ PIE_CORE="gcc-3.3.3-piepatches-v${PIE_VER}.tar.bz2"
 SSP_EXCLUSION_PATCH="gcc-3.3.3-v8.7.0-gcc-ssp-exclusion.patch.bz2"
 SRC_URI="${SRC_URI} ${PIE_BASE_URI}${PIE_CORE} ${PIE_BASE_URI}${SSP_EXCLUSION_PATCH}"
 
-DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie and ssp extentions"
+DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie and ssp extensions"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"

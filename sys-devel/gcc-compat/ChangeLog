@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-compat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-compat/ChangeLog,v 1.6 2004/06/24 22:45:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-compat/ChangeLog,v 1.7 2004/08/08 00:42:18 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> gcc-compat-1.4.ebuild:
+  Typo in DESCRIPTION: compatability -> compatibility. Bug 59717.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

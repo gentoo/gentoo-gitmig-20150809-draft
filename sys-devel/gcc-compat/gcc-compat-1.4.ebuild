@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-compat/gcc-compat-1.4.ebuild,v 1.7 2004/07/15 03:17:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-compat/gcc-compat-1.4.ebuild,v 1.8 2004/08/08 00:42:18 slarti Exp $
 
-DESCRIPTION="This is a compatability layer for use when upgrading to profile $PV"
+DESCRIPTION="This is a compatibility layer for use when upgrading to profile $PV"
 HOMEPAGE="http://www.gentoo.org"
 SRC_URI=""
 LICENSE="GPL-2"
