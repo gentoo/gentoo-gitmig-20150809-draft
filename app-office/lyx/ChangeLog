@@ -1,6 +1,11 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.25 2003/05/13 02:28:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.26 2003/06/09 17:38:03 satai Exp $
+
+  09 Jun 2003; satai <satai@gentoo.org> lyx-1.2.0.20020705.ebuild,
+  lyx-1.2.1.ebuild, lyx-1.2.3.ebuild, lyx-1.3.0.ebuild, lyx-1.3.1.ebuild,
+  lyx-1.3.2.ebuild:
+  Fixed to reflect app-text entries that were moved to dev-tex
 
 *lyx-1.3.2 (12 May 2003)
 
@@ -100,7 +105,7 @@
 
   7 Jun 2002; Dan Armak <danarmak@gentoo.org> changelog:
   
-  Add app-text/chktex dep since that ebuild now works.
+  Add dev-tex/chktex dep since that ebuild now works.
 
 *lyx-1.2.0 (1 Jun 2002)
 

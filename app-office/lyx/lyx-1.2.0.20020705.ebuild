@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.0.20020705.ebuild,v 1.13 2003/03/11 21:11:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.0.20020705.ebuild,v 1.14 2003/06/09 17:38:03 satai Exp $
 
 S=${WORKDIR}/lyx-devel
 DESCRIPTION="WYSIWYM frontend for LaTeX"
@@ -26,14 +26,14 @@ RDEPEND="${DEPEND}
 	app-text/xpdf
 	app-text/ispell
 	app-text/gv
-	app-text/latex2html
+	dev-tex/latex2html
 	media-gfx/imagemagick
 	cups? ( virtual/lpr )
 	app-text/rcs
 	dev-util/cvs
 	app-text/sgmltools-lite
 	app-text/noweb
-	app-text/chktex"
+	dev-tex/chktex"
 
 src_compile() {
 	use nls || myconf="${myconf} --disable-nls"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.0.ebuild,v 1.9 2003/04/23 00:34:15 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.0.ebuild,v 1.10 2003/06/09 17:38:03 satai Exp $
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.gz"
@@ -22,14 +22,14 @@ RDEPEND="${DEPEND}
 	app-text/xpdf
 	virtual/aspell-dict
 	app-text/gv
-	app-text/latex2html
+	dev-tex/latex2html
 	media-gfx/imagemagick
 	cups? ( virtual/lpr )
 	app-text/rcs
 	dev-util/cvs
 	app-text/sgmltools-lite
 	app-text/noweb
-	app-text/chktex"
+	dev-tex/chktex"
 
 src_unpack() {
 	unpack ${A}
