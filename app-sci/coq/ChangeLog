@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/coq
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/ChangeLog,v 1.1 2004/01/21 23:05:55 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/ChangeLog,v 1.2 2004/04/02 21:02:45 mattam Exp $
+
+*coq-8.0_beta (02 Apr 2004)
+
+  02 Apr 2004; Matthieu Sozeau <mattam@gentoo.org> coq-7.4.ebuild,
+  coq-8.0_beta.ebuild:
+  Added coq-8.0_beta ebuild, tested on x86. Make coq-7.4 stable,
+  as there were no bug reports for some time now.
 
 *coq-7.4 (22 Jan 2004)
 

@@ -1,18 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/coq-7.4.ebuild,v 1.2 2004/04/02 21:02:45 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/coq-8.0_beta.ebuild,v 1.1 2004/04/02 21:02:45 mattam Exp $
 
-IUSE="norealanalysis"
+IUSE="norealanalysis debug"
 
 DESCRIPTION="Coq is a proof assistant written in O'Caml"
 HOMEPAGE="http://coq.inria.fr/"
-SRC_URI="ftp://ftp.inria.fr/INRIA/${PN}/V${PV}/${P}.tar.gz"
+SRC_URI="ftp://ftp.inria.fr/INRIA/${PN}/V${PV/_/}/${P/_/}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=dev-lang/ocaml-3.06"
+
+S="${WORKDIR}/${P/_/}"
 
 src_compile() {
 	local myconf="--prefix /usr \
@@ -21,12 +23,9 @@ src_compile() {
 		--mandir /usr/man \
 		--emacslib /usr/share/emacs/site-lisp"
 
+	use debug && myconf="--debug $myconf"
 	use norealanalysis && myconf="$myconf --reals"
 	use norealanalysis || myconf="$myconf --reals all"
-
-	has_version ">=dev-lang/ocaml-3.07" && epatch ${FILESDIR}/ocaml-3.07.patch
-
-	echo $myconf
 
 	./configure $myconf || die
 
