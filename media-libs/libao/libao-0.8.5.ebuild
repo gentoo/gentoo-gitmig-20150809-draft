@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.5.ebuild,v 1.10 2004/07/30 02:24:24 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.5.ebuild,v 1.11 2004/09/28 05:09:48 eradicator Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.xiph.org/ao/src/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ~mips ppc64"
-IUSE="alsa arts esd nas mmap"
+IUSE="alsa arts esd nas mmap static"
 
 DEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )
@@ -34,7 +34,7 @@ src_compile() {
 		`use_enable esd` \
 		`use_enable nas` \
 		--enable-shared \
-		--enable-static || die
+		`use_enable static` || die
 
 	# See bug #37218.  Build problems with parallel make.
 	emake -j1 || die
