@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.75 2004/10/29 02:59:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.76 2004/11/02 02:21:28 vapier Exp $
+
+  01 Nov 2004; Mike Frysinger <vapier@gentoo.org> shadow-4.0.5.ebuild, 
+  +files/shadow-4.0.5-skey.patch:
+  Add patch by Mark Wagner to fix skey support #69741 by Thomas Matthijs.
 
   28 Oct 2004; Mike Frysinger <vapier@gentoo.org> shadow-4.0.4.1-r4.ebuild,
   shadow-4.0.5.ebuild, +files/shadow-4.0.4.1-passwd-typo.patch:
