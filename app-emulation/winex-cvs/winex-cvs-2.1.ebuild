@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-2.1.ebuild,v 1.1 2002/09/08 20:09:35 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-2.1.ebuild,v 1.2 2002/09/13 11:46:55 danarmak Exp $
 
 # Dont modify the ECVS_BRANCH setting yourself.
 # Instead, make a backup of this ebuild and rename it to
@@ -30,7 +30,7 @@ SLOT="0"
 KEYWORDS="x86 -ppc"
 LICENSE="Aladdin"
 
-DEPEND="virtual/x11
+newdepend "virtual/x11
 	sys-devel/gcc
 	sys-devel/flex
 	dev-util/yacc
@@ -38,8 +38,6 @@ DEPEND="virtual/x11
 	dev-lang/tcl dev-lang/tk
 	opengl? ( virtual/opengl )
 	cups? ( net-print/cups )"
-
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	cd ${S}

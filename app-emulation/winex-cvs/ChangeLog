@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/winex-cvs
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.3 2002/09/08 20:18:32 phoenix Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.4 2002/09/13 11:46:55 danarmak Exp $
+
+  13 Sep 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix issue discussed in comments of bug #7319 where dev-util/cvs was missing
+  from the dep list.
 
 
 *winex-cvs-2.1 (08 September 20002)
