@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.52 2005/01/10 14:33:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.53 2005/01/11 11:11:33 dragonheart Exp $
+
+  11 Jan 2005; Daniel Black <dragonheart@gentoo.org> snort-2.3.0_rc2.ebuild:
+  unmasked and x86 stable
 
 *snort-2.3.0_rc2 (11 Jan 2005)
 
