@@ -1,6 +1,6 @@
 MD5 583d1231467069d0fc17df5cd604f903 keepalived-1.0.3.ebuild 918
 MD5 7020f28a3694c10f366f5c74699aec64 keepalived-1.1.1.ebuild 1215
-MD5 7c7f0f185d059c3fbfe365c4d7c7aa27 ChangeLog 1137
+MD5 4a420e7e6b8b1c9035439e0c08ee70d1 ChangeLog 1137
 MD5 b1f8668a9a7c709a3e0ae627712ceaf3 metadata.xml 426
 MD5 69cff859ea4eb0354fd80bd3c799c7c0 files/init-keepalived 644
 MD5 693b1c8d6d57207baada85b995210ee2 files/digest-keepalived-1.0.3 68
