@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20030111-r1.ebuild,v 1.2 2003/01/12 20:05:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20030111-r1.ebuild,v 1.3 2003/01/12 21:18:09 vapier Exp $
 
 ECVS_SERVER="cvs.enlightenment.sourceforge.net:/cvsroot/enlightenment"
 ECVS_MODULE="e17"
@@ -158,7 +158,7 @@ src_install() {
 		--enable-convert-32-bgrx-8888 \
 		--enable-convert-32-rgb-rot-0"
 	use X		&& addconf="${addconf} --enable-software-x11"
-	use opengl	&& addconf="${addconf} --enable-gl-x11"
+#	use opengl	&& addconf="${addconf} --enable-gl-x11"
 #	use directfb	&& addconf="${addconf} --enable-directfb"
 	use fbcon	&& addconf="${addconf} --enable-fb"
 	use png		&& addconf="${addconf} --enable-image-loader-png"
