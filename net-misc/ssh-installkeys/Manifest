@@ -1,4 +1,4 @@
-MD5 480d1d7f6675c350c36099cf414bee1d ssh-installkeys-1.3.ebuild 749
+MD5 ce4b852008865697552f9c38487ecb9f ssh-installkeys-1.3.ebuild 729
 MD5 c43fa88084625a4dd045b898e9971ad8 metadata.xml 557
-MD5 266e0fe7fe79057cc10ad3e5dcdae84c ChangeLog 399
+MD5 8429596a0b5363d1c87a1003938cefee ChangeLog 585
 MD5 3d1de513382fa874706922e521e4e4ec files/digest-ssh-installkeys-1.3 70
