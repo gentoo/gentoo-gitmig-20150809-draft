@@ -1,5 +1,5 @@
 --- build.xml	2002-11-06 00:10:24.000000000 -0500
-+++ build.xml.patched	2004-05-13 22:46:32.819126973 -0400
++++ build.xml.patched	2004-05-14 16:22:54.196814648 -0400
 @@ -1,15 +1,23 @@
  <?xml version="1.0" encoding="UTF-8"?>
  
@@ -64,7 +64,19 @@
          <pathelement location="target/${final.name}.jar"></pathelement>
          <pathelement path="${testclassesdir}"></pathelement>
        </classpath>
-@@ -115,39 +113,17 @@
+@@ -79,10 +77,8 @@
+       <src>
+         <pathelement location="src/test"></pathelement>
+       </src>
++      <classpath refid="compile.classpath"/>
+       <classpath>
+-        <fileset dir="lib">
+-          <include name="*.jar"></include>
+-        </fileset>
+         <pathelement location="target/${final.name}.jar"></pathelement>
+       </classpath>
+     </javac>
+@@ -115,39 +111,17 @@
      <property name="title" value="CLI 1.0-beta-2-dev API"></property>
   
      <javadoc use="true" private="true" destdir="${javadocdir}" author="true" version="true" sourcepath="src/java" packagenames="org.apache.commons.cli.*">
@@ -106,7 +118,7 @@
      <get dest="${user.home}/maven-install-latest.jar" usetimestamp="true" src="${maven.repo.remote}/maven/maven-install-latest.jar"></get>
      
      <unjar dest="${maven.home}" src="${user.home}/maven-install-latest.jar"></unjar>
-@@ -155,4 +131,4 @@
+@@ -155,4 +129,4 @@
    </target>
  
  </project>
