@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.901-r1.ebuild,v 1.11 2005/01/21 19:54:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.901-r1.ebuild,v 1.12 2005/01/21 21:26:46 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1195,7 +1195,7 @@ etc_files_install() {
 setup_dynamic_libgl() {
 	# next section is to setup the dynamic libGL stuff
 	ebegin "Moving libGL and friends for dynamic switching"
-		dodir /usr/$(get_libdir)/opengl/${PN}/{$(get_libdir),extensions,include}
+		dodir /usr/$(get_libdir)/opengl/${PN}/{lib,extensions,include}
 		local x=""
 		for x in ${D}/usr/$(get_libdir)/libGL.so* \
 			${D}/usr/$(get_libdir)/libGL.la \
@@ -1203,7 +1203,7 @@ setup_dynamic_libgl() {
 			${D}/usr/$(get_libdir)/libMesaGL.so; do
 			if [ -f ${x} -o -L ${x} ]; then
 				# libGL.a cause problems with tuxracer, etc
-				mv -f ${x} ${D}/usr/$(get_libdir)/opengl/${PN}/$(get_libdir)
+				mv -f ${x} ${D}/usr/$(get_libdir)/opengl/${PN}/lib
 			fi
 		done
 			for x in ${D}/usr/$(get_libdir)/modules/extensions/libglx*; do
@@ -1220,11 +1220,6 @@ setup_dynamic_libgl() {
 		# Since we added glext.h and don't have new opengl-update yet, do this
 		# Avoids circular opengl-update/xorg-x11 dependency
 		dosym ../../../$(get_libdir)/opengl/${PN}/include/glext.h /usr/X11R6/include/GL/
-		# Even if libdir isnt lib, we need a lib symlink for opengl-update and
-		# friends. See bug 62990 for more info.
-		if [ "$(get_libdir)" != "lib" ]; then
-			dosym $(get_libdir) /usr/$(get_libdir)/opengl/${PN}/lib
-		fi
 	eend 0
 }
 
@@ -1255,7 +1250,7 @@ strip_execs() {
 			fi
 		done
 		# Now do the libraries ...
-		for x in ${D}/usr/{$(get_libdir),$(get_libdir)/opengl/${PN}/$(get_libdir)}/*.so.* \
+		for x in ${D}/usr/{$(get_libdir),$(get_libdir)/opengl/${PN}/lib}/*.so.* \
 			$(get_libdir)/X11/locale/$(get_libdir)/common}/*.so.*; do
 			if [ -f ${x} ]; then
 				echo "$(echo ${x/${D}})"

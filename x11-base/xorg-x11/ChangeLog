@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.292 2005/01/21 19:54:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.293 2005/01/21 21:26:46 spyderous Exp $
+
+  21 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild, xorg-x11-6.8.1.901-r1.ebuild,
+  xorg-x11-6.8.1.902.ebuild:
+  Install OpenGL stuff to /usr/libdir/opengl/$PN/lib, not
+  /usr/libdir/opengl/$PN/libdir. Again thanks to eradicator for the libdir
+  advice.
 
   21 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild, xorg-x11-6.8.1.901-r1.ebuild,
