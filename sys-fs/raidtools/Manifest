@@ -1,6 +1,6 @@
 MD5 7ae7155267da2b60269edf2e4099be51 ChangeLog 2130
 MD5 daac5b57c4ccb813ed23b149127437c2 raidtools-0.90-r2.ebuild 1212
-MD5 410ac0d619a1ca8db1368989fa0baf55 raidtools-1.00.3-r1.ebuild 1064
+MD5 6ceb4ce928f4cda34c4649f8467bc940 raidtools-1.00.3-r1.ebuild 1140
 MD5 b71f5a7d7befa267454ef03173daedfe files/digest-raidtools-0.90-r2 85
 MD5 54b6277ec8d8f24e23ece051ea2e8680 files/digest-raidtools-1.00.3-r1 68
 MD5 9193117eae2cca6725886db3d163e227 files/mkraid.c-gcc33.patch 3042
