@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r14.ebuild,v 1.1 2005/01/19 17:48:19 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r14.ebuild,v 1.2 2005/01/21 05:26:17 carpaski Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -15,8 +15,8 @@ SRC_URI="http://zarquon.twobit.net/gentoo/portage/${PF}.tar.bz2 http://gentoo.tw
 RESTRICT="nosandbox sandbox multilib-pkg-force"
 
 # Contact carpaski with a reason before you modify any of these please.
-#KEYWORDS="  alpha  amd64  arm  hppa  ia64  mips  ppc  ppc-macos  ppc64  s390  sh  sparc  x86"
-KEYWORDS="  ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="  alpha  amd64  arm  hppa  ia64  mips  ppc  ppc-macos  ppc64  s390  sh  sparc  x86"
+#KEYWORDS="  ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -53,6 +53,27 @@ check_multilib() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	sed -i 's:hasq maketest:hasq test:g' bin/ebuild.sh
+	patch pym/portage.py <<END_OF_PATCH_END_OF_PATCH_END_OF_PATCH
+--- portage.py	17 Jan 2005 16:38:22 -0000	1.524.2.33
++++ portage.py	21 Jan 2005 05:19:30 -0000
+@@ -1170,9 +1170,11 @@
+ 				self["FEATURES"] = string.join(self.features, " ")
+ 				self.backup_changes("FEATURES")
+ 
+-		if "maketest" in features:
+-			features.append("test")
+-			features.sort()
++		if "maketest" in self.features:
++			self.features.append("test")
++			self.features.sort()
++			self["FEATURES"] = string.join(self.features, " ")
++			self.backup_changes("FEATURES")
+ 
+ 		if mycpv:
+ 			self.setcpv(mycpv)
+END_OF_PATCH_END_OF_PATCH_END_OF_PATCH
+	true
 }
 
 src_compile() {
@@ -383,3 +404,4 @@ pkg_postinst() {
 	einfo "speedup. Alternatively, you may 'emerge sync' if it has been more"
 	einfo "than 30 minutes since your last sync."
 }
+
