@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/oracle-instantclient-basic
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.1 2004/03/22 21:24:54 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.2 2004/06/21 18:04:18 rizzo Exp $
+
+*oracle-instantclient-basic-10.1.0.2_p1 (21 Jun 2004)
+
+  21 Jun 2004; Don Seiler <rizzo@gentoo.org>
+  -oracle-instantclient-basic-10.1.0.2.ebuild,
+  +oracle-instantclient-basic-10.1.0.2_p1.ebuild:
+  New an improved version, using insinto to fix permissions problem from bug
+  #46338, and using proper patch numbering. Thanks to Chris Mayo for reporting
+  the bug.
 
 *oracle-instantclient-basic-10.1.0.2 (22 Mar 2004)
 

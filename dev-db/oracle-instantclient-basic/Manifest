@@ -1,4 +1,4 @@
-MD5 5908f593d99765b96c49b34eb1bb7ba0 oracle-instantclient-basic-10.1.0.2.ebuild 1222
-MD5 663a61fbdf4eb247a9b3f871024455fc ChangeLog 476
+MD5 157db1f88320123e17f6f64442be4b0d ChangeLog 840
 MD5 be21f1b8658247ec78eba9d3e7c37537 metadata.xml 422
-MD5 8531dff3174726242a9e9de77be6b595 files/digest-oracle-instantclient-basic-10.1.0.2 93
+MD5 a6d6d1a3d80644c682b2028dcb513820 oracle-instantclient-basic-10.1.0.2_p1.ebuild 1431
+MD5 8531dff3174726242a9e9de77be6b595 files/digest-oracle-instantclient-basic-10.1.0.2_p1 93
