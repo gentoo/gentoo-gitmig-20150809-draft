@@ -683,14 +683,16 @@ app-admin/va-systemimager-client
 # this is the gnome2 mask!
 # (gnome-2 that is ;)
 # dependencies for theese arent fixed yet:
-gnome-extra/libgnomemm
-gnome-extra/libgnomeuimm
+# liquidx@gentoo.org ; 26 Apr 2003;
+# about time these are unmasked
+# gnome-extra/libgnomemm
+# gnome-extra/libgnomeuimm
 
 ## Non gnome-core packages, applications, extra libraries and so on
-
 >=media-gfx/gimp-1.3
 gnome-extra/gal2
 >=app-office/gnumeric-1.1.3
+# glademm-1.x has been renamed to libglademm.
 >=dev-util/glademm-1.1.0
 
 # LEAVE THESE MASKED, or GNUCash will break!!!
