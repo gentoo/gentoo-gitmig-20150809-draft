@@ -4,13 +4,13 @@ Hash: SHA1
 MD5 391d1c41ee6b5d303e83bcc112c1c187 ChangeLog 3010
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 aa97a77d1b04d62c6ffb3f19375bf056 dmapi-2.2.0.ebuild 1335
-MD5 d50443fd888235b157eb623d1e8f7b95 dmapi-2.2.1.ebuild 1072
+MD5 834a9170094a96ea8a885936f471981b dmapi-2.2.1.ebuild 1070
 MD5 b6bfbe8bb8ef997f32aa53f211ab8651 files/digest-dmapi-2.2.0 66
 MD5 c38b511afc9ceb131628d5d903ee3834 files/digest-dmapi-2.2.1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBaIQpHTu7gpaalycRAki9AKDgaO0lYBFY2bir3ClRhXeHTRVC7gCfdyT+
-DZ4O2r7E1jlrJ325YC05YaM=
-=iUU0
+iD8DBQFBsQ0vroRuSHgZdywRAnleAJ9ZkADpIxXhYGSfkWHp09Q+DRDfnwCaAwfH
+mOPrJhfQUPJsngjMCjPJjeE=
+=ZgHh
 -----END PGP SIGNATURE-----
