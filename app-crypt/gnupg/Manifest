@@ -3,9 +3,9 @@ Hash: SHA1
 
 MD5 bf8f03fb22b2f44fd5f6a4395ab001dd metadata.xml 483
 MD5 2c44c220e31fbf382e0094be5abacab5 gnupg-1.9.10.ebuild 2770
-MD5 46d8e77cb7149a401706353aeba1791f gnupg-1.2.6.ebuild 3547
+MD5 eb9ebba37d8c4b0b05f7ff0961b1a38d gnupg-1.2.6.ebuild 3546
 MD5 485bf77e7ad59068be00b8aa682a9723 gnupg-1.2.4.ebuild 4176
-MD5 acb3cfb2c307c8bf84db413f5100e698 ChangeLog 12623
+MD5 25ded39fb174a7830ed8ade9fc357407 ChangeLog 12715
 MD5 7f0e728ae9c6810cb9c61500fdc39fc9 files/digest-gnupg-1.2.4 117
 MD5 cdb57d67164c7a63a167c33426c0a7a3 files/gnupg-1.2.4.ppc64.patch 471
 MD5 8c88d9fdef69bdda173170c5a8abd59e files/digest-gnupg-1.9.10 65
@@ -14,7 +14,7 @@ MD5 c3a43a1e5da266ef33222f721e05fd63 files/digest-gnupg-1.2.6 117
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBbcngugEuf3OQ0akRArGyAJ4rPZ8harBvRjtipm8cdl898BZa9gCeNtXR
-axMC/aSFlmQvWqE3vbxbSKs=
-=xIc8
+iD8DBQFBdVGsugEuf3OQ0akRAsfsAKCR9qRRiBepvhD5nOe5llsHyF6oygCfaeM5
+JFIxGhy/OadiDpe7YIuHixE=
+=cmcs
 -----END PGP SIGNATURE-----
