@@ -1,14 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9ada7f15e501ba9bf8b3143b07e08de2 celementtree-0.9.2.ebuild 726
+MD5 628cedf5b2206b6adea15db238ae0f77 celementtree-0.9.2.ebuild 756
 MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
-MD5 73e9037e77dd93d88153146148443b11 ChangeLog 375
+MD5 bb21b843dce018ef679fb765d9f4464a ChangeLog 539
+MD5 f5c52275c6dcda0af0b718bcd9b1ebe4 celementtree-0.9.3.ebuild 756
+MD5 dbad3498824a933e5abb84f6d1390602 celementtree-0.9.8.ebuild 756
 MD5 c06f18827c4096ca2e52b39ef9d1059a files/digest-celementtree-0.9.2 75
+MD5 f1fd5aab66b8ac1dd00e50931216e6fc files/digest-celementtree-0.9.3 75
+MD5 e2e14ff5f052c0b0622325f6a7b2b63b files/digest-celementtree-0.9.8 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB7ApGz2gxt1z4IGYRAvTPAKCbMDQRv1pAgtYEBoqYA7AS/d2juwCbBnHM
-N8sFs4q+dr3VgXCUBGANIVQ=
-=5klr
+iD8DBQFB9Jfjz2gxt1z4IGYRAveZAJ93uzuQpqzgTD71X5jEvN3wcgOPqACgmvOe
+yfqD14EIxc6cNb5tsSacubk=
+=fOOR
 -----END PGP SIGNATURE-----
