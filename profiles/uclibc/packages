@@ -3,8 +3,12 @@
 *>=sys-apps/baselayout-1.9.4-r2
 
 # toolchain
-*>=sys-devel/binutils-2.15.91.0.1-r2
-*>=sys-devel/gcc-3.3.3-r6
+# lock uclibc at current *known stable* toolchain
+# vapier@gentoo.org
+#*>=sys-devel/binutils-2.15.91.0.1-r2
+#*>=sys-devel/gcc-3.3.3-r6
+*<sys-devel/binutils-2.14.90.0.7
+*<sys-devel/gcc-3.4
 
 # minimal versions
 -*>=net-misc/iputils-021109-r3
