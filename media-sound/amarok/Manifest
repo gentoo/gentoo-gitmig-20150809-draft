@@ -1,14 +1,26 @@
-MD5 15a028c1f8fff178682119240f0189be metadata.xml 181
-MD5 018c1cd00abeacfdc4f2d648b78efd21 amarok-1.2.ebuild 1681
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 87a75e16933d92c4cfccef6fedf4d000 amarok-1.2.2.ebuild 2471
-MD5 8dec94b33db41952f96628c1948fa301 amarok-1.0.2.ebuild 1199
-MD5 db453390dada8fd5702d414c9c816405 ChangeLog 7608
-MD5 9268dc260dfdb28a5930a2803c4ba0f4 amarok-1.2.1.ebuild 1682
 MD5 8ab1d316a1506fe1ecff05ba7f6cf8cb amarok-1.1.1.ebuild 1578
-MD5 33697f318e63c60a1ec8082330eece7f files/digest-amarok-1.1.1 66
-MD5 167a3a9a42477903579be25096b8eaab files/digest-amarok-1.0.2 66
-MD5 29fa546c14f7d1c0498727a37e1468c0 files/digest-amarok-1.2 64
-MD5 2a078f136cadb54f32bd6531ef66e218 files/digest-amarok-1.2.1 66
+MD5 018c1cd00abeacfdc4f2d648b78efd21 amarok-1.2.ebuild 1681
+MD5 9268dc260dfdb28a5930a2803c4ba0f4 amarok-1.2.1.ebuild 1682
+MD5 8dec94b33db41952f96628c1948fa301 amarok-1.0.2.ebuild 1199
+MD5 f280097d1563539018588ecf5b98de15 amarok-1.2.3.ebuild 2344
+MD5 10bdf20ecaa9d0268dab70de789814a2 ChangeLog 7794
+MD5 15a028c1f8fff178682119240f0189be metadata.xml 181
 MD5 13f06732c7435e60cc160fdd9bdc293a files/amarok-1.2.2-contextbrowser-cpu-fix.patch 5191
+MD5 29fa546c14f7d1c0498727a37e1468c0 files/digest-amarok-1.2 64
 MD5 8af9e3314d69ebb6341e75b5a1ead176 files/amarok-1.0-cjk-a.diff 1532
+MD5 167a3a9a42477903579be25096b8eaab files/digest-amarok-1.0.2 66
+MD5 33697f318e63c60a1ec8082330eece7f files/digest-amarok-1.1.1 66
+MD5 2a078f136cadb54f32bd6531ef66e218 files/digest-amarok-1.2.1 66
 MD5 b9f7fa7da92d9361c1effc82b09ebe07 files/digest-amarok-1.2.2 66
+MD5 55c15fa0003bd71db5f7e23d750c0b16 files/digest-amarok-1.2.3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSVkb06ebR+OMO78RAszwAJ9KPoQ3dzPWAtNRb7bBf1YLNc7zeQCfXixS
+RxPB0/2zTMtQZy8rHaN/SrI=
+=sqTi
+-----END PGP SIGNATURE-----
