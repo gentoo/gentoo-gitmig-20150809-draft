@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.0.0.ebuild,v 1.2 2002/12/18 14:17:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.0.0.ebuild,v 1.3 2003/02/13 09:13:09 vapier Exp $
 
 DESCRIPTION="assists in the recovery and prevention of Repetitive Strain Injury (RSI)"
 HOMEPAGE="http://workrave.sourceforge.net/"

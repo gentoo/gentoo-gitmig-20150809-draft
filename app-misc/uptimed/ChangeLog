@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/uptimed
-# Distributed under the terms of GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.4 2002/12/17 19:16:44 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.5 2003/02/13 09:12:30 vapier Exp $
 
 *uptimed-0.2.0 (21 Jun 2002)
 

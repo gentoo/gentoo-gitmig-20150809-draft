@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/krename-2.4.1.ebuild,v 1.2 2002/11/02 10:11:46 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/krename-2.4.1.ebuild,v 1.3 2003/02/13 09:03:32 vapier Exp $
 
 IUSE=""
 

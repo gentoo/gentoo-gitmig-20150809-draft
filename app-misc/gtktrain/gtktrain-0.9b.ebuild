@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktrain/gtktrain-0.9b.ebuild,v 1.6 2002/11/30 20:47:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktrain/gtktrain-0.9b.ebuild,v 1.7 2003/02/13 09:01:33 vapier Exp $
 
 DESCRIPTION="GUI app for calculating fastest train routes"
 SRC_URI="http://www.on.rim.or.jp/~katamuki/software/train/${P}.tar.gz"

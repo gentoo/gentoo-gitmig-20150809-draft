@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.11-r3.ebuild,v 1.14 2002/12/15 10:44:11 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.11-r3.ebuild,v 1.15 2003/02/13 09:08:36 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION=" Screen is a full-screen window manager that multiplexes a

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/perltrash/perltrash-0.2.ebuild,v 1.1 2002/12/07 18:26:22 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/perltrash/perltrash-0.2.ebuild,v 1.2 2003/02/13 09:07:34 vapier Exp $
 
 DESCRIPTION="Command-line trash can emulation"
 HOMEPAGE="http://www.iq-computing.de/perltrash"

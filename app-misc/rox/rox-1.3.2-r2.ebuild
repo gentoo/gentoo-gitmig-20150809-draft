@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.3.2-r2.ebuild,v 1.4 2002/10/20 18:40:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.3.2-r2.ebuild,v 1.5 2003/02/13 09:08:06 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ROX-Filer is a fast and powerful graphical file manager"

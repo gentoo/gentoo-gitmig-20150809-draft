@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/read-edid/read-edid-1.4.1.ebuild,v 1.6 2002/11/30 21:30:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/read-edid/read-edid-1.4.1.ebuild,v 1.7 2003/02/13 09:07:45 vapier Exp $
 
 DESCRIPTION="Read edid is a program that can get information from a pnp monitor."
 HOMEPAGE="http://john.fremlin.de/programs/linux/read-edid/index.html"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.5.55-r6.ebuild,v 1.1 2002/12/13 03:03:24 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.5.55-r6.ebuild,v 1.2 2003/02/13 09:06:01 vapier Exp $
 
 IUSE="gpm nls samba ncurses X pam slang"
 

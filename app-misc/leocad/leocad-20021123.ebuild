@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/leocad/leocad-20021123.ebuild,v 1.1 2002/12/15 21:47:34 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/leocad/leocad-20021123.ebuild,v 1.2 2003/02/13 09:04:56 vapier Exp $
 
 DESCRIPTION="LeoCAD is a CAD program that uses bricks similar to those found in many toys"
 HOMEPAGE="http://www.leocad.org/"
