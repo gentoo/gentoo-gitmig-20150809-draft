@@ -1,5 +1,5 @@
-MD5 60e03066026aab84bafe5c3a2905a3c4 ChangeLog 919
+MD5 3258ae643d374b3b773888208201a503 ChangeLog 1023
+MD5 438b2db438e284b56a59751a0e431522 gkrellm-console-0.1.2.ebuild 744
 MD5 e9bab89e9fd1aaec508630d29e7ee09a gkrellm-console-0.1.ebuild 732
-MD5 1d51816236b3a7af5efa6b433cfdf8b1 gkrellm-console-0.1.2.ebuild 745
 MD5 8fcc7b7e17ede1f047ef5867cb64d235 files/digest-gkrellm-console-0.1 66
 MD5 92eec38ce3738c45221d4d3cf4e93bdf files/digest-gkrellm-console-0.1.2 68
