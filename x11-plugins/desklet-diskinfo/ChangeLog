@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-diskinfo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-diskinfo/ChangeLog,v 1.1 2003/09/10 12:05:47 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-diskinfo/ChangeLog,v 1.2 2003/09/24 19:55:42 todd Exp $
+
+  24 Sep 2003; Todd Sunderlin <todd@gentoo.org> desklet-diskinfo-0.1.4.ebuild:
+  added ~sparc keyword
 
 *desklet-diskinfo-0.1.4 (10 Sep 2003)
 
