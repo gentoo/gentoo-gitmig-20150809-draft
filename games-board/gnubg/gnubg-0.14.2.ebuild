@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.2.ebuild,v 1.9 2004/12/27 06:41:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.2.ebuild,v 1.10 2004/12/28 00:03:06 vapier Exp $
 
 inherit gnuconfig flag-o-matic games
 
@@ -30,7 +30,7 @@ RDEPEND="guile? ( dev-util/guile )
 			=x11-libs/gtk+-1.2*
 			=dev-libs/glib-1*
 		)
-		opengl? ( x11-libs/gtkglext )
+		opengl? ( x11-libs/gtkglext media-libs/ftgl )
 	)
 	readline? ( sys-libs/readline )
 	X? ( virtual/x11 )

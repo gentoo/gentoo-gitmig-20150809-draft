@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnubg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.15 2004/12/27 06:41:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.16 2004/12/28 00:03:06 vapier Exp $
+
+  27 Dec 2004; Mike Frysinger <vapier@gentoo.org> gnubg-0.14.2.ebuild:
+  Stick ftgl into the opengl?() portion of DEPEND #75768.
 
   27 Dec 2004; Mike Frysinger <vapier@gentoo.org> gnubg-0.14.2.ebuild:
   Add support for USE=opengl to track glgtkext support #47039 by Nicolai
