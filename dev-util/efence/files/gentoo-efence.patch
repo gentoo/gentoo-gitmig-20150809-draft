@@ -1,0 +1,11 @@
+--- page.c.orig	Sun Aug 26 01:28:36 2001
++++ page.c	Sun Aug 26 01:28:45 2001
+@@ -31,7 +31,7 @@
+ 
+ #if ( !defined(sgi) && !defined(_AIX) )
+ extern int	sys_nerr;
+-extern char *	sys_errlist[];
++/* extern char *	sys_errlist[]; */
+ #endif
+ 
+ static const char *
