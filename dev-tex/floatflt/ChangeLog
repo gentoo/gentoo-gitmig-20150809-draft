@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/floatflt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/floatflt/ChangeLog,v 1.9 2004/10/16 16:06:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/floatflt/ChangeLog,v 1.10 2004/12/28 20:35:13 absinthe Exp $
+
+  28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> floatflt-1.31a.ebuild:
+  Stable on amd64.
 
   17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> floatflt-1.31a.ebuild:
   Blocks >=tetex-2.96.

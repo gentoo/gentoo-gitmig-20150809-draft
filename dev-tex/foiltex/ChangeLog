@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/foiltex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/foiltex/ChangeLog,v 1.10 2004/10/30 19:49:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/foiltex/ChangeLog,v 1.11 2004/12/28 20:34:27 absinthe Exp $
+
+  28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> foiltex-2.1.4a.ebuild:
+  Stable on amd64.
 
   30 Oct 2004; Jason Wever <weeve@gentoo.org> foiltex-2.1.4a.ebuild:
   Stable on sparc.

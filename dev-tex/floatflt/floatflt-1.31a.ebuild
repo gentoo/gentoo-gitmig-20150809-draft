@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/floatflt/floatflt-1.31a.ebuild,v 1.8 2004/11/07 05:53:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/floatflt/floatflt-1.31a.ebuild,v 1.9 2004/12/28 20:35:13 absinthe Exp $
 
 inherit latex-package
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.ctan.org/tex-archive/help/Catalogue/entries/floatflt.html?a
 LICENSE="LPPL-1.2"
 SLOT="0"
 
-KEYWORDS="x86 ppc sparc ~amd64 ~alpha"
+KEYWORDS="x86 ppc sparc amd64 ~alpha"
 IUSE=""
 
 # >=tetex-2.96 contains floatflt package
