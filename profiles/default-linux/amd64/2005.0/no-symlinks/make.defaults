@@ -1,6 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/make.defaults,v 1.1 2005/01/15 13:03:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/make.defaults,v 1.2 2005/01/23 11:15:47 eradicator Exp $
 
 # Hack to tell baselayout NOT to use symlinks for /lib, /usr/lib, and /usr/local/lib
 SYMLINK_LIB="no"
+
+# Make people test using multilib-strict
+FEATURES="multilib-strict"
