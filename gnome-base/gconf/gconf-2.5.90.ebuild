@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.2.0.ebuild,v 1.15 2004/03/15 01:33:45 spider Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.5.90.ebuild,v 1.1 2004/03/19 16:12:46 foser Exp $
 
 inherit gnome2
 
@@ -17,19 +16,23 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 IUSE="doc"
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc alpha sparc hppa amd64"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips"
 
 RDEPEND=">=dev-libs/glib-2.0.1
 	>=gnome-base/ORBit2-2.4
-	>=dev-libs/libxml2-2.4.17
-	>=net-libs/linc-0.5
+	>=dev-libs/libxml2-2
+	dev-libs/popt
 	>=x11-libs/gtk+-2"
+
+# FIXME : gtk dep only for tests (?)
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	doc? ( dev-util/gtk-doc )"
 
-MAKEOPTS="-j1"
+# FIXME : consider merging the tree (?)
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_install() {
 
@@ -44,6 +47,7 @@ src_install() {
 }
 
 kill_gconf () {
+
 	# this function will kill all running gconfd that could be causing troubles
 	if [ -x /usr/bin/gconftool ]
 	then
@@ -60,24 +64,29 @@ kill_gconf () {
 		/usr/bin/gconftool-2 --shutdown
 	fi
 	return 0
+
 }
 
 pkg_setup () {
+
 	kill_gconf
+
 }
 
 pkg_preinst () {
+
 	kill_gconf
 
 	dodir /etc/env.d
-	echo 'CONFIG_PROTECT_MASK="/etc/gconf"' >${D}/etc/env.d/50gconf
+	echo 'CONFIG_PROTECT_MASK="/etc/gconf"' > ${D}/etc/env.d/50gconf
 
 	dodir /root/.gconfd
+
 }
 
 pkg_postinst () {
+
 	kill_gconf
-	gnome2_pkg_postinst
 
 	#change the permissions to avoid some gconf bugs
 	einfo "changing permissions for gconf dirs"
@@ -88,3 +97,5 @@ pkg_postinst () {
 }
 
 DOCS="ABOUT-NLS AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
+
+USE_DESTDIR="1"

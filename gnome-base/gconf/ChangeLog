@@ -1,7 +1,12 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.61 2004/03/15 01:33:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.62 2004/03/19 16:12:46 foser Exp $
 
+*gconf-2.5.90 (19 Mar 2004)
+
+  19 Mar 2004; foser <foser@gentoo.org> gconf-2.5.90.ebuild :
+  Gnome 2.6 commit
+  
   15 Mar 2004; <spider@gentoo.org> gconf-2.2.0.ebuild, gconf-2.2.1.ebuild:
   fixing bug #44712 , assignment to P and PN
 
