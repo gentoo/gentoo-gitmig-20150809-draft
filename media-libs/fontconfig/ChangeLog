@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.15 2003/02/03 20:10:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.16 2003/02/04 18:08:33 doctomoe Exp $
+
+  04 Feb 2003; Olivier Reisch <doctomoe@gentoo.org> fontconfig-2.1-r1.ebuild :
+  Putting back to ~ppc. Warn ppl to recompile qt and kdelibs after install...
 
   03 Feb 2003; Aron Griffis <agriffis@gentoo.org> fontconfig-2.1-r1.ebuild :
   Mark stable on alpha (needed for gnome)
