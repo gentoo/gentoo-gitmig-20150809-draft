@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.4-r1.ebuild,v 1.3 2003/11/29 22:07:02 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.4-r1.ebuild,v 1.4 2004/02/17 23:05:35 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa amd64"
+KEYWORDS="~x86 ~sparc ~ppc alpha ~hppa amd64 ia64"
 IUSE="doc"
 
 DEPEND=">=x11-libs/gtk+-2
