@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Cache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.5 2003/10/14 03:41:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.6 2004/01/10 00:26:18 coredumb Exp $
+
+*PEAR-Cache-1.5.3 (10 Jan 2004)
+
+  10 Jan 2004; Tal Peer <coredumb@gentoo.org> PEAR-Cache-1.5.3.ebuild:
+  Version bump, uses new eclass (though i was quite sure i already converted
+  it... weird).
 
   13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   add metadata.xml
