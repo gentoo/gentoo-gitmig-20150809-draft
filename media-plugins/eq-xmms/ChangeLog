@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/eq-xmms
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.1 2004/02/17 12:14:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.2 2004/03/26 20:59:24 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> eq-xmms-0.5.ebuild:
+  Cleaned up to make aliz's script happy.  Stable x86.
 
 *eq-xmms-0.5 (17 Feb 2004)
 
