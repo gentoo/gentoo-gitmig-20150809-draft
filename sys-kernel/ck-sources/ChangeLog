@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.72 2004/12/03 20:19:55 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.73 2004/12/19 18:50:09 plasmaroo Exp $
+
+  19 Dec 2004; <plasmaroo@gentoo.org> ck-sources-2.6.9-r3.ebuild,
+  +files/ck-sources-2.6.9.AF_UNIX.SELinux.patch:
+  Adding patch for CAN-2004-1069; bug #72317.
 
   03 Dec 2004; <plasmaroo@gentoo.org> ck-sources-2.6.9-r3.ebuild,
   +files/ck-sources-2.6.9.vma.patch:
