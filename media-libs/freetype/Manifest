@@ -1,13 +1,23 @@
-MD5 379e5ae3ed187fb8dfa2a4affc466c36 ChangeLog 10465
-MD5 83876af503362fea42fa81def8e9bf04 freetype-1.3.1-r3.ebuild 2741
-MD5 68a04e23ccfb7971cff8ce012aee659c metadata.xml 221
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6094d16c6ac736615e432667ba320389 freetype-2.1.5-r1.ebuild 1479
-MD5 a0bb611e699050ddfc1fd62c71b7851e freetype-2.1.9-r1.ebuild 2158
 MD5 ef45da57bf17e8188dabd437b6cba47c freetype-1.3.1-r4.ebuild 3091
+MD5 83876af503362fea42fa81def8e9bf04 freetype-1.3.1-r3.ebuild 2741
+MD5 c513c3f92d71c92b16fbdc4a062f1edc ChangeLog 10620
+MD5 68a04e23ccfb7971cff8ce012aee659c metadata.xml 221
+MD5 b531a5367741a27510b3f4ecae8d5f49 freetype-2.1.9-r1.ebuild 2162
+MD5 6c404648e3cb8f86b329f7dac5d70cc8 files/freetype-2.1.9-fix_bci.patch 643
 MD5 10bd432787c1a182edece351dbf82809 files/config.mk 1240
 MD5 d42207bb27a2046e454b706339adaa25 files/digest-freetype-1.3.1-r3 136
+MD5 d42207bb27a2046e454b706339adaa25 files/digest-freetype-1.3.1-r4 136
 MD5 4889d3ad3f18d1c357b3d707c7b71f1c files/digest-freetype-2.1.5-r1 67
 MD5 29bbc2c883bf52623f42dd235cd23fd6 files/digest-freetype-2.1.9-r1 132
-MD5 d42207bb27a2046e454b706339adaa25 files/digest-freetype-1.3.1-r4 136
-MD5 6c404648e3cb8f86b329f7dac5d70cc8 files/freetype-2.1.9-fix_bci.patch 643
 MD5 eea0ebe9b39158ab0fa0b131c284930f files/2.1/freetype-2.1.5-autohint-cjkfonts-20031105.patch 65828
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCOz8gI1lqEGTUzyQRAuuzAKDX5k6DIq+MOkyWVuwexQ3ARej2YQCeMhAH
+PzegYdSZ8U+REPh0mAuhrXA=
+=mLKt
+-----END PGP SIGNATURE-----
