@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.61.ebuild,v 1.5 2004/09/04 12:19:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.61.ebuild,v 1.6 2004/09/04 13:20:08 gustavoz Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -244,9 +244,10 @@ src_unpack() {
 	rm stlport/STLport-4.5.3.patch
 	epatch ${FILESDIR}/${OO_VER}/newstlportfix.patch
 
-	if [ ${ARCH} = "sparc" ]; then
-		epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-sparc64-fix.patch
-	fi
+#	Ximian includes the sparc patch (gustavoz)
+#	if [ ${ARCH} = "sparc" ]; then
+#		epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-sparc64-fix.patch
+#	fi
 
 	if use ooo-kde; then
 		DISTRO=KDE
