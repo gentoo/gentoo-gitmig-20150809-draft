@@ -115,7 +115,7 @@ start() {
 
 	# start pop3d-ssl if so written
 	[ -f ${sysconfdir}/pop3d-ssl ] && source ${sysconfdir}/pop3d-ssl
-	case x$POP3DSTART in
+	case x$POP3DSSLSTART in
 	x[yY]*)
 		ebegin " courier-pop3d-ssl"
 		${sbindir}/courier-pop3d-ssl start
