@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.5.ebuild,v 1.4 2002/08/25 06:20:24 jmorgan Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.5.ebuild,v 1.5 2002/10/04 06:03:51 vapier Exp $
 
 DESCRIPTION="SAMBA is a suite of SMB and CIFS client/server programs for UNIX"
 HOMEPAGE="http://www.samba.org"
