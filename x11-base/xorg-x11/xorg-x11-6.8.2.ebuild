@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2.ebuild,v 1.3 2005/02/11 20:07:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2.ebuild,v 1.4 2005/02/12 05:35:50 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1229,14 +1229,11 @@ dynamic_libgl_install() {
 			fi
 		done
 		# glext.h added for #54984
-		for x in ${D}/usr/include/GL/{gl.h,glx.h,glxtokens.h,glext.h}; do
+		for x in ${D}/usr/include/GL/{gl.h,glx.h,glxtokens.h,glext.h,glxext.h,glxmd.h,glxproto.h}; do
 			if [ -f ${x} -o -L ${x} ]; then
 				mv -f ${x} ${D}/usr/$(get_libdir)/opengl/${PN}/include
 			fi
 		done
-		# Since we added glext.h and don't have new opengl-update yet, do this
-		# Avoids circular opengl-update/xorg-x11 dependency
-		dosym ../../../$(get_libdir)/opengl/${PN}/include/glext.h /usr/include/GL/
 	eend 0
 }
 

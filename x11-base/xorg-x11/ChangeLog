@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.333 2005/02/11 20:07:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.334 2005/02/12 05:35:50 spyderous Exp $
+
+  11 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2.ebuild:
+  Install glxext.h, glxmd.h and glxproto.h to /usr/lib/opengl. Stop symlinking
+  glext.h manually because we depend on new enough opengl-update now.
 
   11 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   xorg-x11-6.8.2.ebuild:
