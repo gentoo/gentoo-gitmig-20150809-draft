@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.25 2004/03/31 00:44:38 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.26 2004/04/13 12:55:13 aliz Exp $
+
+*libfwbuilder-1.0.2-r2 (13 Apr 2004)
+
+  13 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> libfwbuilder-1.0.2-r1.ebuild,
+  libfwbuilder-1.0.2-r2.ebuild:
+  Upstream released a new revision of 1.0.2, but didn't rename source tarball.
+  Change -r1 SRC_URI to point to original release and add -r2 to use the new
+  revision. Closing #47298.
 
   31 Mar 2004; Lars Weiler <pylon@gentoo.org> libfwbuilder-1.0.2-r1.ebuild:
   stable on ppc
