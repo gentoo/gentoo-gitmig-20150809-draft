@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/gputils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.9 2004/03/09 13:03:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.10 2004/03/23 18:33:03 dragonheart Exp $
+
+  24 Mar 2004; Daniel Black <dragonheart@gentoo.org> gputils-0.10.6.ebuild,
+  gputils-0.11.4.ebuild, gputils-0.11.6.ebuild, gputils-0.11.7.ebuild,
+  gputils-0.11.8.ebuild, gputils-0.12.0.ebuild:
+  Added sparc to stable versions 0.10.*-0.11*. QA Removed surperflous S. QA
+  Added IUSE.
 
   05 Mar 2004; David Holm <dholm@gentoo.org> gputils-0.12.0.ebuild:
   Added to ~ppc.
