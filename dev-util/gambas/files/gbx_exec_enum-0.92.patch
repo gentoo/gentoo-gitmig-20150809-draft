@@ -1,0 +1,27 @@
+--- src/exec/gbx_exec_enum.c.org	2004-02-28 11:46:15.000000000 +0100
++++ src/exec/gbx_exec_enum.c	2004-04-10 04:19:03.479686056 +0200
+@@ -41,8 +41,8 @@
+   local = &BP[code & 0xFF];
+ 
+   EXEC_object(local, &class, &object, &defined);
+-  EXEC_enum_data = (void *)(local[1]._void.value);
+-  memset(EXEC_enum_data, 0, 8);
++  EXEC_enum_data = (void *)(&local[1]._void.ptype);
++  memset(EXEC_enum_data, 0, 12);
+ 
+   EXEC_special(SPEC_FIRST, class, object, 0, TRUE);
+ }
+@@ -58,7 +58,7 @@
+   local = &BP[PC[-1] & 0xFF];
+ 
+   EXEC_object(local, &class, &object, &defined);
+-  EXEC_enum_data = (void *)(local[1]._void.value);
++  EXEC_enum_data = (void *)(&local[1]._void.ptype);
+ 
+   EXEC_enum_stop = FALSE;
+ 
+@@ -70,3 +70,4 @@
+ 
+   return EXEC_enum_stop;
+ }
++

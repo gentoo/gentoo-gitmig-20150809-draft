@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/gambas
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.10 2004/04/03 13:22:28 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.11 2004/04/10 02:33:03 genone Exp $
+
+*gambas-0.92-r1 (10 Apr 2004)
+
+  10 Apr 2004; Marius Mauch <genone@gentoo.org> gambas-0.92-r1.ebuild,
+  files/gbx_exec_enum-0.92.patch:
+  Adding a patch from Benoit Minisini to fix tabstrip corruptions when saving
+  forms.
 
 *gambas-0.92 (03 Apr 2004)
 
