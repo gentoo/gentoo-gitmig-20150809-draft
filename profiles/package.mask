@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (27 Aug 2002)
+# Masked for freeze
+=dev-libs/DirectFB-0.9.13
+
 # <raker@gentoo.org> (27 Aug 2002)
 # Masked for the freeze.
 # Adding to portage to address problems experienced in bug #4885
