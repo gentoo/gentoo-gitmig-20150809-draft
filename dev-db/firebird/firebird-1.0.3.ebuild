@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.0.3.ebuild,v 1.1 2003/06/15 14:32:12 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.0.3.ebuild,v 1.2 2003/06/22 16:07:19 mksoft Exp $
 
 S=${WORKDIR}/interbase
 DESCRIPTION="A relational database offering many ANSI SQL-92 features"
@@ -55,6 +55,13 @@ src_install () {
 	mv ${D}/opt/interbase/{isc4.gdb,isc_config} ${D}/etc/firebird
 	dosym /etc/firebird/isc4.gdb /opt/interbase/isc4.gdb
 	dosym /etc/firebird/isc_config /opt/interbase/isc_config
+
+	# check for old isc4.gdb from old 1.0 firebird installation. We need it
+	# so it installation won't overwrite original
+	if [ ! -L /opt/interbase/isc4.gdb ]
+	then
+	  cp /opt/interbase/isc4.gdb ${D}/etc/firebird/isc4.gdb
+	fi
 }
 
 pkg_postinst() {

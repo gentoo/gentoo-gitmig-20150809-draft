@@ -1,8 +1,12 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.6 2003/06/15 14:32:12 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.7 2003/06/22 16:07:19 mksoft Exp $
 
 *firebird-1.0.3 (15 Jun 2003)
+  22 Jun 2003; Meir Kriheli <mksoft@gentoo.org> firebird-1.0.3.ebuild:
+  added a check for isc4.gdb for prev 1.0-r1 install. If exists and not
+  a symlink copy to /etc/firebird/isc4.gdb
+  
   15 Jun 2003; Meir Kriheli <mksoft@gentoo.org> firebird-1.0.3.ebuild:
   Added firebird to /etc/xinetd.d, 70firebird to /etc/env.d
   Kill lingering gds_lock_mgr processes. Closes #15071
