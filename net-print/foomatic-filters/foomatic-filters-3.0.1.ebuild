@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.1.ebuild,v 1.5 2004/04/11 13:04:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.1.ebuild,v 1.6 2004/04/19 19:40:09 gmsoft Exp $
 
 DESCRIPTION="Foomatic wrapper scripts"
 HOMEPAGE="http://www.linuxprinting.org/foomatic"
 SRC_URI="http://www.linuxprinting.org/download/foomatic/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="x86 ~ppc sparc ~alpha hppa ~amd64 ~ia64 ~mips"
 IUSE="cups samba"
 
 DEPEND="samba? ( net-fs/samba )
