@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <mjc@gentoo.org> (25 Sep 2002)
+# new upstream, fixes gxx_personality_v0
+# bug (distcc incorrectly used gcc instead
+# of g++ in some cases)
+=sys-devel/distcc-0.11
+
 # <mcummings@gentoo.org> (24 Sep 2002)
 # addresses bug 8299 - please test!
 =media-gfx/imagemagick-5.4.7-r2
