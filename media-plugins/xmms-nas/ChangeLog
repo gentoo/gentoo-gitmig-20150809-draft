@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-nas
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/ChangeLog,v 1.3 2003/02/12 07:22:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/ChangeLog,v 1.4 2003/02/19 04:01:32 nall Exp $
+
+  18 Feb 2003; Jon Nall <nall@gentoo.org> xmms-nas-0.2-r1.ebuild :
+  marking as ~ppc. it seems any endian issues were on the nas end.
+  this works fine with nas-1.6
 
   Nov 28 2002; Mark Guertin <gerk@gentoo.org> xmms-nas-0.2-r1.ebuild:
   set -ppc in keywords, outputs nothing but static, seems like
