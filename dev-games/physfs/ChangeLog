@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/physfs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.7 2004/02/26 05:26:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.8 2004/04/03 08:15:40 mr_bones_ Exp $
+
+*physfs-1.0.0 (03 Apr 2004)
+
+  03 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> physfs-1.0.0.ebuild:
+  version bump - ebuild submitted by Alexander Bussman via bug #46477
 
   25 Feb 2004; Jason Wever <weeve@gentoo.org> physfs-0.1.9.ebuild:
   Marked stable on sparc. Fixes sdl-sound's broken deps and helps fix bug
