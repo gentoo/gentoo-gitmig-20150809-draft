@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.3 2004/12/28 20:56:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.4 2004/12/28 21:12:56 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -47,11 +47,7 @@ export QTDIR=${S}
 export PLATFORM=linux-g++
 
 qt_use() {
-	if useq $1; then
-		echo "-${1}"
-	else
-		echo "-no-${1}"
-	fi
+	useq ${1} && echo "-${1}" || echo "-no-${1}"
 	return 0
 }
 
@@ -63,8 +59,6 @@ src_unpack() {
 
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
-
-#	epatch ${FILESDIR}/qt-no-rpath-uic.patch
 
 	cd mkspecs/linux-g++
 	# set c/xxflags and ldflags
