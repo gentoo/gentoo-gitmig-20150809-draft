@@ -3,8 +3,10 @@ MD5 e2dfffd1e6d5c42c0a5c56626428793f cvs-1.11.1_p1.ebuild 1213
 MD5 fdfc2b5dd0e80f34a71ed512f7e18f24 cvs-1.11.2.ebuild 864
 MD5 a40138d1bec97c5d4cdbfb99ac2f25f4 cvs-1.11.5-r1.ebuild 978
 MD5 c1454b743f1240c8a30083dc3b0d7729 cvs-1.11.5.ebuild 872
-MD5 e26992c938e0f0b12a882167a73ed271 files/cvspserver.xinetd.d 300
+MD5 2812a78ca0425bcaf3206994b5c4906f cvs-1.11.6.ebuild 986
 MD5 a674bd3614d96decb1d0290f0f363099 files/digest-cvs-1.11.1_p1 139
 MD5 34a2a3785f0f4850ec457c3e51002c9c files/digest-cvs-1.11.2 63
 MD5 5b8a0b4c358fe27803c5b6d0a461743b files/digest-cvs-1.11.5 64
 MD5 5b8a0b4c358fe27803c5b6d0a461743b files/digest-cvs-1.11.5-r1 64
+MD5 e26992c938e0f0b12a882167a73ed271 files/cvspserver.xinetd.d 300
+MD5 e3c512ff757174542b10d0953db0446b files/digest-cvs-1.11.6 64

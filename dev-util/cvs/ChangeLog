@@ -1,7 +1,11 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.14 2003/05/27 05:24:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.15 2003/05/28 13:13:13 aliz Exp $
 
+*cvs-1.11.6 (27 May 2003)
+
+  27 May 2003; Daniel Ahlberg <aliz@gentoo.org> cvs-1.11.6.ebuild :
+  Version bump.
 
 *cvs-1.11.5-r1 (21 Jan 2003)
 
