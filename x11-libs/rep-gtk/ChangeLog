@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.16 2003/02/12 09:24:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.17 2003/02/12 15:24:20 agriffis Exp $
+
+  12 Feb 2003; Aron Griffis <agriffis@gentoo.org> files/rep-gtk-0.17-64bit.patch :
+  Update patch with help from John Harper
+
+*rep-gtk-0.17-r1 (11 Feb 2003)
 
   11 Feb 2003; Aron Griffis <agriffis@gentoo.org> rep-gtk-0.17-r1.ebuild files/digest-rep-gtk-0.17-r1 files/rep-gtk-0.17-64bit.patch :
   Add patch to prevent segfaults on 64-bit machines such as Alpha.

@@ -6,8 +6,8 @@
  
 -int
 -sgtk_is_a_gobj (guint type, repv obj)
-+GtkType
-+sgtk_is_a_gobj (GtkType type, repv obj)
++int
++sgtk_is_a_gobj (GType type, repv obj)
  {
    if (!GOBJP (obj) || !G_IS_OBJECT (GOBJ_PROXY(obj)->obj))
      {
@@ -18,7 +18,7 @@
  
  repv sgtk_wrap_gobj (GObject *obj);
 -int sgtk_is_a_gobj (guint type, repv obj);
-+GtkType sgtk_is_a_gobj (GtkType type, repv obj);
++int sgtk_is_a_gobj (GType type, repv obj);
  GObject *sgtk_get_gobj (repv obj);
  
  /* compatibility */
