@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.23 2002/05/08 07:01:25 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.24 2002/05/13 01:24:34 rphillips Exp $
 
   27 Apr 2002; Ryan Phillips <rphillips@gentoo.org> :
 
@@ -19,8 +19,13 @@
   Hmm, and I did not edit the ChangeLog for some reason to say that the mhash
   and mcrypt flags are encapsulated by the crypt flag now.
 
-*php-4.2.0 (8 May 2002)
+*php-4.2.0 (12 May 2002)
 
+  12 May 2002; Ryan Phillips <rphillips@gentoo.org> php-4.2.0.ebuild :
+
+  Added a message to warn the user that setting the register_globals
+  option to off may break compatibility with some scripts.
+  
   8 May 2002; Ryan Phillips <rphillips@gentoo.org> php-4.2.0.ebuild :
 
   New release

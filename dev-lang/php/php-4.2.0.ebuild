@@ -181,7 +181,8 @@ pkg_postinst() {
 	einfo "Please remeber:"
 	einfo "This version of PHP has set register_globals = Off (Security)"
 	einfo "Please read http://www.php.net/release_4_1_0.php (SECURITY: NEW INPUT MECHANISM)"
-	einfo "for further informations."
+	einfo "for further information.  Setting this option to off sometimes causes"
+	einfo "incompatibilities with some scripts."
 }
 
 pkg_config() {
