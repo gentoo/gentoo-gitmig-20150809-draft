@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.21-r2.ebuild,v 1.3 2003/09/25 19:25:49 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r2.ebuild,v 1.1 2003/09/25 19:25:49 kumba Exp $
 
 
 ETYPE="sources"
 inherit kernel
 OKV=${PV/_/-}
-CVSDATE=20030803
+CVSDATE=20030925
 S=${WORKDIR}/linux-${OKV}
 PROVIDE="virtual/linux-sources"
 EXTRAVERSION=-mipscvs-${CVSDATE}
@@ -15,14 +15,15 @@ EXTRAVERSION=-mipscvs-${CVSDATE}
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 03 Aug 2003
-# 3) patch to fix arch/mips/Makefile to pass appropriate CFLAGS
+# 2) linux-mips.org CVS snapshot diff from 25 Sep 2003
+# 3) patch to fix arch/mips[64]/Makefile to pass appropriate CFLAGS
+# 4) patch to fix the SGI wd scsi driver (Broken in CVS)
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 		mirror://gentoo/mipscvs-${OKV}-${CVSDATE}.diff.bz2"
 HOMEPAGE="http://www.linux-mips.org/"
-KEYWORDS="-* mips"
+KEYWORDS="-* ~mips"
 SLOT="${OKV}"
 
 src_unpack() {
@@ -32,7 +33,10 @@ src_unpack() {
 	# Update the vanilla sources with linux-mips CVS changes
 	cat ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff | patch -p1
 
-	# Big Endian Fix
+	# Patch the SGI WD scsi driver so the kernel can boot
+	cat ${FILESDIR}/mipscvs-${OKV}-sgiwd-fix.patch | patch -p0
+
+	# Big Endian Fix (Fixed in 2.4.23)
 	cat ${FILESDIR}/bigendian-byteorder-fix.patch | patch -p1
 
 	# Patch arch/mips/Makefile for gcc
