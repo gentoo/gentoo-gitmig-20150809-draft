@@ -1,5 +1,6 @@
 MD5 140a9f1d98e69e0789e621fac6c102dc xfce4-systemload-0.3.0.ebuild 689
 MD5 f73fe02f64dae8e2fbed6f0e7869a9a4 xfce4-systemload-0.3.2.ebuild 695
 MD5 5ca216640bc3a017ece8f2b297caf87d ChangeLog 504
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 628c814c988a403f8b777cd367d3ec54 files/digest-xfce4-systemload-0.3.0 82
 MD5 57ce2ee2659430f412ef024cd54e567f files/digest-xfce4-systemload-0.3.2 81
