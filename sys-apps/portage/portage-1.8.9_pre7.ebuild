@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.9_pre6.ebuild,v 1.1 2002/02/10 20:09:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.9_pre7.ebuild,v 1.1 2002/02/11 23:19:21 gbevin Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage ports system"

@@ -1,8 +1,36 @@
 # ChangeLog for sys-apps/portage
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.8 2002/02/10 20:09:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.9 2002/02/11 23:19:21 gbevin Exp $
 
-*portage-1.8.9_pre5 (6 Feb 2002) 
+*portage-1.8.9_pre7 (11 Feb 2002) 
+
+  11 Feb 2002; G.Bevin <gbevin@gentoo.org> portage-1.8.9_pre7.ebuild,
+  files/digest-portage-1.8.9_pre7, files/portage-1.8.9_pre7.tar.bz2 :
+  
+  - internal bugfixes
+  - sandbox related security fixes
+  - removed support for --all and world in 'emerge --unmerge', by default now
+    all matching packages are removed since with the new slots functionality
+    old package versions should not exists anymore
+  - colored package name red too when a blocking package is found during
+    pretend operation
+  - changed emerge invocation arguments to be in a new universal interface
+    format this has been decided to be :
+	'emerge --action --option --option [packageset]'
+	some features however don't respect this, but that's since they are not
+	package installation related and are easier to use as straight commands
+	eg: emerge rsync
+  - added UNMERGE_DELAY var to make.globals and support it in emerge to obtain
+    the number of seconds to wait
+  - support for NOCOLOR="yes" as wel as NOCOLOR="true"
+  - major speedups for emerge -search
+  - added formatted package descriptions of the matches from emerge --search
+    that nicely wrap at 80 chars
+  - rewrote retrieval of package descriptions to support descriptions that are
+    specified on multiple lines
+  - added support for 'noslot' to --zap, --update and --rebuild
+  
+*portage-1.8.9_pre6 (10 Feb 2002) 
 
   10 Feb 2002; G.Bevin <gbevin@gentoo.org> portage-1.8.9_pre6.ebuild,
   files/digest-portage-1.8.9_pre6, files/portage-1.8.9_pre6.tar.bz2 :
