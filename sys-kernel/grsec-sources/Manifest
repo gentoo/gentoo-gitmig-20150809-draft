@@ -4,13 +4,15 @@ Hash: SHA1
 MD5 14e92bfd64bcdc6704d67c60641a9896 grsec-sources-2.4.28.2.0.2-r1.ebuild 1253
 MD5 24764b94c52b15c33321df855d74ef1a grsec-sources-2.4.28.2.0.2-r3.ebuild 1353
 MD5 28f7057c915a09df4936882fd7088f05 grsec-sources-2.4.28.2.0.2-r2.ebuild 1281
-MD5 af528b54f8973d7add36f9760af7ae6d grsec-sources-2.4.28.2.1.0.ebuild 1607
-MD5 d251d310c6298c6446df71a6f1bd6961 ChangeLog 9353
+MD5 bb15b16d01dbecf547fd9086b2e90a03 grsec-sources-2.4.28.2.1.0.ebuild 1739
+MD5 090bc17c360948e415cb042df8d03494 ChangeLog 9659
 MD5 0b2ea9b53b5d526e39afbdc5040ff07a metadata.xml 487
 MD5 0adbefda5e0d752b23dd2f930e6f6bbf files/linux-2.4.28-random-poolsize.patch 452
+MD5 8c35751caf824a9dacb02e80d6189b2e files/gentoo-sources-2.4.CAN-2004-1137.patch 1764
 MD5 4263daf594b58ea0c0b59e87afe3a7c9 files/CAN-2004-1074.patch 11121
 MD5 757ee1239c3f14645ccea3640d551e11 files/CAN-2004-1056.patch 11249
 MD5 3dac23b6e285462a7cda41505cc698e1 files/2.4.26-CAN-2004-0394.patch 319
+MD5 29e531cdd3f2effce5e31a1f2afb5b5d files/2.4.28-uselib4pax.patch 8912
 MD5 b293289df61d6f42ff54e4e0ceae53cf files/2.4.24-x86.config 2397
 MD5 8c7a1adf3e5ca3b4cfd6a75f5704d2fc files/digest-grsec-sources-2.4.28.2.1.0 231
 MD5 4a0215139f9aebfe2cc2747743763f08 files/2.4.28-binfmt_a.out.patch 1887
@@ -22,9 +24,9 @@ MD5 d1ccc2047be533c992f67270a150a210 files/2.4.27-cmdline-race.patch 388
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iQCVAwUBQeALQJ4WFLgrx1GWAQK3jAP/bWr0WlQov1423InyNCq2UG1vKzcDKDAX
-GCnSpzth5BQs5qZfOi5V/U+6pCTKyLYbotkDR0m26dSdPFv/oxrSlcPLakl8HbeR
-fonUwlISF0PA/nuIzwmsjpsq70FwDt9oEpvp5Q0UTICqxR+W6A7igRSYNNfyK8h0
-RcYvE6G5Q+E=
-=4Mt8
+iQCVAwUBQeAzTp4WFLgrx1GWAQLFwwP/YryG2VUPH9IDCtJLu9aS+W0ptrgrU2aa
+xLy6CAx+ESZP3Nj5IZG8tWNS93KcPZp7XOyaSdORabqF88mK2gk8rxtnvhIkSbW+
+c4XY4EcCuGcNlByH08JrW43Cf79n8Pm34VFlfzKGLIbV63ru/2056s7mrXY5Cw9D
+etapTbG/q9A=
+=534e
 -----END PGP SIGNATURE-----

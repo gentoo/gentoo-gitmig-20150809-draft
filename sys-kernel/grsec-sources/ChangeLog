@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.42 2005/01/08 16:35:44 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.43 2005/01/08 19:26:33 solar Exp $
+
+  08 Jan 2005; <solar@gentoo.org> +files/2.4.28-uselib4pax.patch,
+  +files/gentoo-sources-2.4.CAN-2004-1137.patch,
+  grsec-sources-2.4.28.2.1.0.ebuild:
+  - Adds CAN-2004-1137.patch.
+  - Adds 2.4.x uselib patch with extra semaphore locking for PaX enabled kernels.
+  - Adds back 2.4.27-cmdline-race.patch.
 
   08 Jan 2005; <solar@gentoo.org> :
   - digest update from plasmaroo for new CAN-2004-0814 patch
