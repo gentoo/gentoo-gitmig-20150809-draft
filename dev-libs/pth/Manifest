@@ -1,5 +1,5 @@
-MD5 d4f3c6fdf7998ec1a8a673a92c64c750 pth-1.4.0.ebuild 613
+MD5 67b4e9c61ae6623aea1219474cfbf76b pth-1.4.0.ebuild 606
 MD5 72df7fbfc3d0be867c73857df9b38d03 pth-1.4.1.ebuild 643
-MD5 1347f35c6e8729cb861651fbed5965f3 ChangeLog 1825
+MD5 5a180983a462a74f2d20a9ea3ed38612 ChangeLog 1825
 MD5 5a8d84760fa717b03ba0a74fdcda84a2 files/digest-pth-1.4.0 61
 MD5 1bfd642d99d813a259564df018c7f6dd files/digest-pth-1.4.1 61
