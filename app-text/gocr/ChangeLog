@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gocr
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.17 2004/05/03 14:47:36 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.18 2004/05/10 16:58:14 fmccor Exp $
+
+  10 May 2004; Ferris McCormick <fmccor@gentoo.org> gocr-0.39.ebuild:
+  Marked stable for sparc.
 
   03 May 2004; Ferris McCormick <fmccor@gentoo.org> gocr-0.39.ebuild:
   Add ~sparc keyword.
