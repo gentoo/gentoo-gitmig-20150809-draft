@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.5.8.ebuild,v 1.6 2004/10/05 12:19:44 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.5.8.ebuild,v 1.7 2004/10/27 05:00:36 pythonhead Exp $
 
+inherit toolchain-funcs
 
 MY_PV=${PV//./}
 
@@ -26,7 +27,7 @@ src_unpack() {
 	sed -i makefile \
 		-e "s#^CXXFLAGS=#CXXFLAGS=${CXXFLAGS} #" \
 		-e "s#^\(CXXFLAGS=.*\)-Os#\1#" \
-		-e "s#^CC =\(.*\)#CC = ${CXX:-g++}#" \
+		-e "s#^CC =\(.*\)#CC = $(tc-getCXX)#" \
 		|| die "error patching makefile"
 
 	cd ${S}
@@ -35,7 +36,7 @@ src_unpack() {
 		-e 's#/gnome/apps/Applications#/applications#' \
 		-e "s#^CXXFLAGS=#CXXFLAGS=${CXXFLAGS} #" \
 		-e "s#^\(CXXFLAGS=.*\)-Os#\1#" \
-		-e "s#^CC =\(.*\)#CC = ${CXX:-g++}#" \
+		-e "s#^CC =\(.*\)#CC = $(tc-getCXX)#" \
 		-e 's#${D}##' \
 		|| die "error patching makefile"
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.29 2004/10/05 12:19:44 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.30 2004/10/27 05:00:36 pythonhead Exp $
+
+  26 Oct 2004; Rob Cakebread <pythonhead@gentoo.org> -scite-1.4.9.ebuild,
+  scite-1.5.6.ebuild, scite-1.5.7.ebuild, scite-1.5.8.ebuild,
+  scite-1.5.9.ebuild, scite-1.6.0.ebuild, scite-1.6.1.ebuild:
+  Use toolchain-funcs eclass to get ${CXX}, removed ancient version. Closes bug# 68979
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> scite-1.5.6.ebuild,
   scite-1.5.7.ebuild, scite-1.5.8.ebuild, scite-1.5.9.ebuild,
