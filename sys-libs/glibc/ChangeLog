@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.217 2004/08/04 15:53:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.218 2004/08/04 19:30:25 tseng Exp $
+
+*glibc-2.3.4.20040619-r1 (04 Aug 2004)
+
+  04 Aug 2004; Brandon Hale <tseng@gentoo.org>
+  +files/glibc-sec-hotfix-20040804.patch, +glibc-2.3.4.20040619-r1.ebuild:
+  Add hotfix for security issue relating to LD_DEBUG and suid binaries.
 
   03 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
   glibc-2.3.4.20040605.ebuild:
