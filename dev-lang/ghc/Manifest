@@ -5,10 +5,10 @@ MD5 2852eaf66fdd3a9ae5fcf1082bb014b3 ghc-6.2.1-r1.ebuild 5794
 MD5 ea84406fb33d27987c0f7d51ece23975 ghc-6.2.ebuild 5007
 MD5 6b0575f665b30bd942f60a152f52dca8 ghc-6.0.1.ebuild 4709
 MD5 86839964ffb83a00d5b485ddc61f4f50 ghc-6.2.2.ebuild 5415
-MD5 b5d265f93c023bf10bf2ba81a5b92727 ChangeLog 9918
+MD5 a826c3d271af6c36ca76d554355cddde ChangeLog 10084
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 80f9ac24762d1342df58d731a756956d ghc-6.2-r1.ebuild 5190
-MD5 61b0807a205ec7c1f03ebd5375505e8b ghc-6.4_pre20050308.ebuild 5755
+MD5 003538f4d26823e204e35298b067a1cf ghc-6.4_pre20050308.ebuild 5762
 MD5 ee4e4b2265839fca7a4c06d565a51334 files/ghc-updater 8068
 MD5 627087e51858d514520531cedbd372f8 files/ghc-6.2.1-linker.patch.bz2 658
 MD5 1ae8c6b539b6706ba0e8b988a918a944 files/ghc-6.2.hardened.patch 525
@@ -26,7 +26,7 @@ MD5 9c15b50bf0b73b7d70a06fd47510a3ef files/ghc-6.0.1.haddock.patch 380
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCLvW2OKSBj1ObwosRAliwAKCUbDZq9IqjPeFsIfp9XsO1Xf5zmgCeNKzR
-IYom28c4J2CQzIbAXvrmNVM=
-=UqNe
+iD8DBQFCLvbUOKSBj1ObwosRAvqIAJ499gcq3gVea1nVSsMYSvs7EWuwDQCeNyqt
+1SUp8AmSQCtcDWKDl8LeHDQ=
+=m2JP
 -----END PGP SIGNATURE-----
