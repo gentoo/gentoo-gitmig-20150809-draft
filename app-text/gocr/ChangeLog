@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gocr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.21 2004/07/04 08:44:36 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.22 2004/10/19 09:56:56 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> gocr-0.39.ebuild:
+  Stable on amd64.
 
   04 Jul 2004; David Holm <dholm@gentoo.org> gocr-0.39.ebuild:
   Added to ~ppc.
