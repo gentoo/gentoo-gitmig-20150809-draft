@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pariguide/pariguide-0.43a.ebuild,v 1.2 2002/12/18 14:44:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pariguide/pariguide-0.43a.ebuild,v 1.3 2003/01/08 08:20:07 george Exp $
+
+IUSE=""
 
 DESCRIPTION="PariGUIde, a GUI for the math. program Pari-GP"
 HOMEPAGE="http://www.skalatan.de/pariguide/"
@@ -8,7 +10,7 @@ SRC_URI="mirror://sourceforge/pariguide/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=x11-libs/qt-2.2.0
 	virtual/x11"
