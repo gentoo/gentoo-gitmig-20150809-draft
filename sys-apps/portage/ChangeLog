@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/portage
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.24 2003/07/25 22:26:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.25 2003/08/04 23:50:51 vapier Exp $
 
 # See the gentoo-src Portage ChangeLog for up-to-date release information:
-# http://www.gentoo.org/cgi-bin/viewcvs.cgi/gentoo-src/portage/ChangeLog?rev=HEAD&content-type=text/vnd.viewcvs-markup
+# http://www.gentoo.org/cgi-bin/viewcvs.cgi/portage/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
