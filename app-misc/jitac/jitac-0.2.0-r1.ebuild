@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/jitac-0.2.0-r1.ebuild,v 1.1 2004/09/21 18:05:24 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/jitac-0.2.0-r1.ebuild,v 1.2 2004/10/03 21:28:16 weeve Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.roqe.org/jitac/"
 SRC_URI="http://www.roqe.org/jitac/${P}.src.jar"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 IUSE="doc"
 DEPEND="virtual/jdk
 		dev-java/jimi"
