@@ -1,5 +1,7 @@
 MD5 3f19f66d9dfd54fc50430518c12157bd ChangeLog 1354
 MD5 f64dc9f80444e1c484eef7233f5f0e38 simutrans-0.82.10.ebuild 1145
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 7131a61eeffc7123053a9c1c6a3501b6 simutrans-0.82.15.7.ebuild 959
 MD5 795020606265cd2b7c8fc6f33b919a2c files/digest-simutrans-0.82.10 140
 MD5 9449a5568bb4e525cca3b46bcfa1b152 files/simutrans 46
+MD5 00990e52a605b61718c49d0ffe8d04b3 files/digest-simutrans-0.82.15.7 145
