@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/nss_ldap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.21 2004/03/30 01:11:02 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.22 2004/04/27 20:41:04 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> nss_ldap-215-r1.ebuild:
+  Add inherit eutils
 
   30 Mar 2004; Lars Weiler <pylon@gentoo.org> nss_ldap-215-r1.ebuild:
   Masked ~ppc on user report

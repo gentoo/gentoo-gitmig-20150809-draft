@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-0.14.1.ebuild,v 1.2 2003/12/07 15:41:25 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-0.14.1.ebuild,v 1.3 2004/04/27 20:39:39 agriffis Exp $
 
 inherit gnome2
 

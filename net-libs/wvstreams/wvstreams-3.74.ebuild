@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 
+inherit eutils
+
 DESCRIPTION="A network programming library in C++"
 HOMEPAGE="http://open.nit.ca/wiki/?page=WvStreams"
 SRC_URI="http://open.nit.ca/download/${P}.0.tar.gz"
