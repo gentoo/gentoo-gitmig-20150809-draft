@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.ebuild,v 1.2 2003/07/30 05:31:03 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.ebuild,v 1.3 2003/08/11 16:26:52 strider Exp $
 
 # Since This Ebuild Has FETCH restrictions:
 # You need to download this file from 
@@ -23,7 +23,7 @@ PROVIDE="virtual/jre-1.4.2
 	virtual/java-scheme-2"
 LICENSE="sun-bcla-java-vm"
 SLOT="1.4"
-KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa -arm"
+KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa -arm"
 IUSE="doc gnome kde mozilla"
 RESTRICT="fetch"
 
