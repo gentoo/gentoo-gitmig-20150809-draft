@@ -1,9 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ac7e0fbbe79330a8f71034e213c1bdd1 gnugadu-2.0.4.ebuild 1574
+MD5 414bd0688eb80cd101b7a03e4912f94c gnugadu-2.0.6.ebuild 1602
 MD5 fc76c64344343902fa4c6b2fd9cac62a gnugadu-2.0.5.ebuild 1602
-MD5 844e25f786dbbcd3ab085f5c5d4c685c ChangeLog 3182
+MD5 47574473507169515c09d2bcf0e366d7 ChangeLog 3305
 MD5 3d820a9a36e5fa341fd72407b57930fc gnugadu-2.0.3-r1.ebuild 1521
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 89ac4ddd8ca3f172a71d2c2990283016 files/digest-gnugadu-2.0.4 63
 MD5 8785333b8cac4f85424dd57b133ff275 files/digest-gnugadu-2.0.5 62
+MD5 fe366f7737ad55e66f707209f6617a08 files/digest-gnugadu-2.0.6 62
 MD5 809be9b8c7bb4f364d0c9306a4c7059e files/digest-gnugadu-2.0.3-r1 63
 MD5 1115f3a47254294c2ed68b483d6802c4 files/gnugadu-2.0.3-aspell-link.patch 1301
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBPzzWchej4aZK9/cRAnhOAJ98CTSBDUJbruDjC/tx4CCzc8jEYgCfXi4T
+Sc9zrIMeXb+8cpUst7+0wA0=
+=cTGH
+-----END PGP SIGNATURE-----
