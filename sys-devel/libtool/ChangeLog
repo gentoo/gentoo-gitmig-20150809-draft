@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.27 2003/11/17 04:21:52 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.28 2003/12/23 04:06:44 kumba Exp $
+
+  22 Dec 2003; Joshua Kinard <kumba@gentoo.org> libtool-1.4.3-r3.ebuild:
+  Added gnuconfig bits to detect systems running mips64 kernels
 
   16 Nov 2003; Brad House <brad_mssw@gentoo.org> libtool-1.4.3-r3.ebuild:
   the amd64 _required_ patch was reverted between -r2 and -r3 
