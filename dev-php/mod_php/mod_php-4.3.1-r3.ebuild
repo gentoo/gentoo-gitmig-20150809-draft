@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r3.ebuild,v 1.8 2003/05/14 20:08:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r3.ebuild,v 1.9 2003/05/26 23:22:20 robbat2 Exp $
 
 inherit php eutils
 
@@ -67,26 +67,26 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
 	einfo "To have Apache run php programs, please do the following:"
 	if [ "`use apache2`" ] ; then
 		einfo "Edit /etc/conf.d/apache2 and add \"-D PHP4\""
-		einfo
-		einfo "Please note Apache 2 support in php is currently experimental"
 	else
 		einfo "1. Execute the command:"
 		einfo " \"ebuild /var/db/pkg/dev-php/${PF}/${PF}.ebuild config\""
 		einfo "2. Edit /etc/conf.d/apache and add \"-D PHP4\""
-		einfo
 		einfo "That will include the php mime types in your configuration"
 		einfo "automagically and setup Apache to load php when it starts."
 	fi
 }
 
 pkg_config() {
-	${ROOT}/usr/sbin/apacheaddmod \
-		${ROOT}/etc/apache/conf/apache.conf \
-		extramodules/libphp4.so mod_php4.c php4_module \
-		before=perl define=PHP4 addconf=conf/addon-modules/mod_php.conf
-	:;
+	if [ "`use apache2`" ] ; then
+		einfo "Edit /etc/conf.d/apache2 and add \"-D PHP4\""
+	else
+		${ROOT}/usr/sbin/apacheaddmod \
+			${ROOT}/etc/apache/conf/apache.conf \
+			extramodules/libphp4.so mod_php4.c php4_module \
+			before=perl define=PHP4 addconf=conf/addon-modules/mod_php.conf 
+			:;
+	fi
 }
