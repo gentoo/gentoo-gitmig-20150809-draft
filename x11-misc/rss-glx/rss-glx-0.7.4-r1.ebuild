@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.4-r1.ebuild,v 1.8 2004/02/01 23:40:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.4-r1.ebuild,v 1.9 2004/03/10 14:40:41 malverian Exp $
 
 inherit flag-o-matic
 use kde && inherit kde
