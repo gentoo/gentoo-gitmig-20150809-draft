@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/php-docs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.8 2004/06/24 21:49:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.9 2004/08/02 03:37:35 tgall Exp $
+
+  01 Aug 2004; Tom Gall <tgall@gentoo.org> php-docs-4.2.3.ebuild:
+  stable on ppc64, bug #57583
 
   11 May 2004; Michael McCabe <randy@gentoo.org> php-docs-200403.ebuild:
   Added s390 keywords
