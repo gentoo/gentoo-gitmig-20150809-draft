@@ -1,6 +1,23 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.32 2003/08/06 08:44:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.33 2003/08/11 07:35:15 robbat2 Exp $
+
+*qmail-1.03-r12 (11 Aug 2003)
+
+  11 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild,
+  files/1.03-r12/99qmail, files/1.03-r12/conf-common,
+  files/1.03-r12/conf-qmqpd, files/1.03-r12/conf-qmtpd,
+  files/1.03-r12/conf-smtpd, files/1.03-r12/defaultdelivery,
+  files/1.03-r12/dot_qmail, files/1.03-r12/errno.patch,
+  files/1.03-r12/qmail-control, files/1.03-r12/rc,
+  files/1.03-r12/run-qmailpop3d, files/1.03-r12/run-qmailpop3dlog,
+  files/1.03-r12/run-qmailqmqpd, files/1.03-r12/run-qmailqmqpdlog,
+  files/1.03-r12/run-qmailqmtpd, files/1.03-r12/run-qmailqmtpdlog,
+  files/1.03-r12/run-qmailsend, files/1.03-r12/run-qmailsendlog,
+  files/1.03-r12/run-qmailsmtpd, files/1.03-r12/run-qmailsmtpdlog,
+  files/1.03-r12/smtp-auth-close3.patch:
+  Use queue-fix for building the queue, and remove default use of rblsmtpd.
+  Add an example for relay-ctrl in conf-smtpd.
 
   06 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r11.ebuild,
   files/1.03-r11/conf-common:
