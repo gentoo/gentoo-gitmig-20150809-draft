@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/nbd
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbd/ChangeLog,v 1.1 2002/02/19 00:48:34 chouser Exp $
+
+*nbd-14 (18 Feb 2002)
+
+  18 Feb 2002; Chris Houser <chouser@gentoo.org> :
+  
+  This is the first ebuild for nbd, the Linux Network Block Device client and
+  server userland utilities.  To use these, you will need to have NBD compiled
+  into your kernel.
