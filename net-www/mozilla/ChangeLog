@@ -1,14 +1,13 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.28 2002/07/25 00:35:01 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.29 2002/07/25 15:39:55 azarah Exp $
 
 *mozilla-1.0-r4 (25 Jul 2002)
   25 Jul 2002; Spider <spider@gentoo.org> mozilla-1.0-r4.ebuild:
   minor changes to the build process, uses experimental makeedit.eclass
-  this version shouldn't be unmasked except for testing, as it doesn't do anything constructive except make the build a bit leaner and smaller in RAM requirements. 
-
-  
-  
+  this version shouldn't be unmasked except for testing, as it doesn't do
+  anything constructive except make the build a bit leaner and smaller in
+  RAM requirements. 
 
   13 Jul 2002; Martin Schlemmer <azarah@gentoo.org> mozilla.sh :
   Update to fix a bug with gtk2 (mozilla-xremote-client are not created).

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1_beta.ebuild,v 1.1 2002/07/25 10:36:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1_beta.ebuild,v 1.2 2002/07/25 15:39:55 azarah Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 inherit makeedit
@@ -47,13 +47,6 @@ export BUILD_OFFICIAL=1
 [ "${DISABLE_XFT}" != "1" ] && [ -z "`use gtk2`" ] && \
 	export MOZ_ENABLE_XFT=1
 
-# enable GTK+-2.0 support
-if [ "`use gtk2`" ] ; then
-	export MOZ_ENABLE_GTK2=1
-	export MOZ_WIDGET_GTK2=1
-	export MOZ_WIDGET_TOOLKIT=gtk2
-fi
-
 # make sure the nss module gets build (for NSS support)
 [ -n "`use ssl`" ] && export MOZ_PSM=1
 
@@ -84,7 +77,7 @@ src_unpack() {
 		# http://bugzilla.mozilla.org/show_bug.cgi?id=116444
 		#
 		if [ "${ARCH}" = "x86" ] ; then
-			patch -p0 < ${FILESDIR}/mozilla-1.0-abi-compat-wrappers.patch
+			patch -p0 < ${FILESDIR}/mozilla-1.0-abi-compat-wrappers.patch || die
 		fi
 	fi
 
@@ -113,13 +106,13 @@ src_compile() {
 			--enable-default-toolkit=gtk2 \
 			--disable-toolkit-qt \
 			--disable-toolkit-xlib \
-			--disable-gtk"
+			--disable-toolkit-gtk"
 	else
 		myconf="${myconf} --enable-toolkit-gtk \
 			--enable-default-toolkit=gtk \
 			--disable-toolkit-qt \
 			--disable-toolkit-xlib \
-			--disable-gtk2"
+			--disable-toolkit-gtk2"
 	fi
 
 	if [ -z "`use ldap`" ] ; then
