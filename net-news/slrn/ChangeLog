@@ -1,6 +1,15 @@
 # ChangeLog for usr/slrn
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.4 2002/07/28 04:40:09 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.5 2002/08/05 02:25:08 cselkirk Exp $
+
+*slrn-slrn-0.7.7.4-r1 (04 Jul 2002)
+
+  04 Aug 2002; Calum Selkirk <cselkirk@gentoo.org>
+  *slrn-slrn-0.7.7.4-r1.ebuild:
+
+  Added a patch to fix broken nls translations (patch Author Thomas Schultz).
+  Also added a test for nls.
+  This fixes #6019
 
 *slrn-slrn-0.7.7.4 (23 Jun 2002)
 
