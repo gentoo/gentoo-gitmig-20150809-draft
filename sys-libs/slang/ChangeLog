@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.24 2004/04/27 23:27:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.25 2004/06/06 16:52:12 usata Exp $
+
+*slang-1.4.9-r1 (07 Jun 2004)
+
+  07 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  +slang-1.4.9-r1.ebuild:
+  Added unicode patches. Thanks to Alexander Darovsky <adarovsky@users.sf.net>
+  and Stanislav Karchebny <berk@inbox.ru>, see bug #47675 and #52846.
 
   27 Apr 2004; Mike Frysinger <vapier@gentoo.org> slang-1.4.9.ebuild :
   Mark arm stable and remove the trimming of the gcc/slang.h stuff since
