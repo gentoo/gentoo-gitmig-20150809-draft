@@ -1,48 +1,74 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.10 2004/09/15 04:54:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.11 2004/10/03 08:07:28 vapier Exp $
 
 aalib				media-libs/aalib
+adns				net-libs/adns
+afs					net-fs/openafs
 alsa				media-libs/alsa-lib
 arts				kde-base/arts
 berkdb				sys-libs/db
 bonobo				gnome-base/bonobo
+canna				app-i18n/canna
 cdr					app-cdr/cdrtools
+cscope				dev-util/cscope
+cups				net-print/cups
+curl				net-ftp/curl
 directfb			dev-libs/DirectFB
 esd					media-sound/esound
+fam					app-admin/fam
+firebird			dev-db/firebird
+flac				media-libs/flac
+foomaticdb			net-print/foomatic-db
+freetds				dev-db/freetds
+gd					media-libs/libgd
 gdbm				sys-libs/gdbm
 ggi					media-libs/libggi
 gif					media-libs/giflib
 gnome				gnome-base/gnome
 gphoto2				media-gfx/gphoto2
 gpm					sys-libs/gpm
+gstreamer			media-libs/gstreamer
 gtk					x11-libs/gtk+
 gtkhtml				gnome-extra/gtkhtml
 guile				dev-util/guile
+imagemagick			media-gfx/imagemagick
 imlib				media-libs/imlib
+jack				media-sound/jack-audio-connection-kit
 java				virtual/jre
+junit				dev-java/junit
 kde					kde-base/kdebase
 ldap				net-nds/openldap
 libwww				net-libs/libwww
+mad					media-libs/libmad
+mcal				dev-libs/libmcal
+mikmod				media-libs/libmikmod
 motif				x11-libs/openmotif
 mozilla				net-www/mozilla
 mysql				dev-db/mysql
 nas					media-libs/nas
+ncurses				sys-libs/ncurses
 nls					sys-devel/gettext
+odbc				dev-db/unixODBC
 oggvorbis			media-libs/libvorbis
 opengl				virtual/opengl
 pam					sys-libs/pam
+pdflib				media-libs/pdflib
 perl				dev-lang/perl
+plotutils			media-libs/plotutils
 png					media-libs/libpng
 postgres			dev-db/postgresql
 python				dev-lang/python
 qt					x11-libs/qt
 readline			sys-libs/readline
 ruby				dev-lang/ruby
+samba				net-fs/samba
 scanner				media-gfx/sane-backends
 sdl					media-libs/libsdl
 slang				sys-libs/slang
 snmp				net-analyzer/ucd-snmp
+speex				media-libs/speex
+sqlite				dev-db/sqlite
 ssl					dev-libs/openssl
 svga				media-libs/svgalib
 tcltk				dev-lang/tcl dev-lang/tk
@@ -51,3 +77,7 @@ tetex				app-text/tetex
 tiff				media-libs/tiff
 ungif				media-libs/ungif
 X					virtual/x11
+xml					dev-libs/libxml
+xml2				dev-libs/libxml2
+xmms				media-sound/xmms
+zlib				sys-libs/zlib
