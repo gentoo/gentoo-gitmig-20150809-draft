@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.717 2004/11/05 23:20:05 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.718 2004/11/06 07:24:54 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -675,6 +675,7 @@ x11-base/xorg-x11:dlloader - USE WITH CARE: Enable dynamic module loader (result
 x11-base/xorg-x11:dmx - Build the DMX extension for Xorg
 x11-base/xorg-x11:font-server - Build XFS, the X Font Server
 x11-base/xorg-x11:insecure-drivers - Builds insecure DRI stuff for via, mach64 and savage
+x11-base/xorg-x11:minimal - Build without fonts, clients and some other things
 x11-base/xorg-x11:sdk - Builds the software development kit
 x11-base/xorg-x11:truetype-fonts - Build TrueType fonts
 x11-base/xorg-x11:type1-fonts - Build Type1 fonts
