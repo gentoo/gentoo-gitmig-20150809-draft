@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Spider  <spider@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-1.121.1.ebuild,v 1.1 2002/05/31 20:41:33 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-1.121.1.ebuild,v 1.2 2002/06/03 19:58:51 spider Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -28,7 +28,7 @@ RDEPEND=">=x11-libs/pango-1.0.2
 	>=gnome-base/libgnomeui-1.117.2
 	>=gnome-base/libbonoboui-1.117.1
 	>=gnome-base/ORBit2-2.4.0
-	>=gnome-extra/libgnomeprintui-1.114.0"
+	>=gnome-base/libgnomeprintui-1.114.0"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
