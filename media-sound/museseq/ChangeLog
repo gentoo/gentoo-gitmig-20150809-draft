@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/museseq
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.19 2004/09/28 19:57:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.20 2004/10/19 06:14:42 eradicator Exp $
+
+  18 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  museseq-0.7.0.20040925.ebuild:
+  Removed explicit RDEPEND=DEPEND statement.
 
   28 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   museseq-0.6.2-r1.ebuild, museseq-0.7.0-r1.ebuild:

@@ -1,18 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.0.20040925.ebuild,v 1.1 2004/09/28 05:12:38 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.0.20040925.ebuild,v 1.2 2004/10/19 06:14:42 eradicator Exp $
+
+IUSE="fluidsynth ladcca debug"
 
 inherit eutils kde-functions
+
 need-qt 3
 
 MY_P=${P/museseq/muse}
+
 DESCRIPTION="The Linux (midi) MUSic Editor (a sequencer)"
 HOMEPAGE="http://lmuse.sourceforge.net/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="fluidsynth ladcca debug"
 
 S=${WORKDIR}/${MY_P}
 
@@ -26,7 +30,6 @@ DEPEND=">=x11-libs/qt-3.2.0
 	>=media-libs/libsndfile-1.0.0
 	>=media-sound/jack-audio-connection-kit-0.90.0
 	ladcca?		( >=media-libs/ladcca-0.4.0 )"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -55,4 +58,3 @@ pkg_postinst() {
 	einfo "User must have read/write access to /dev/misc/rtc device."
 	einfo "Realtime LSM: http://sourceforge.net/projects/realtime-lsm/"
 }
-
