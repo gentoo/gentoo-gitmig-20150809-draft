@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 493f87a625324272825c074d90fe5b57 ChangeLog 26753
+MD5 eb305a8a78fc1d637b7a5980c49b5ac4 gentoolkit-0.2.0_pre10-r1.ebuild 1109
+MD5 fd59e3538a6596d9c2dee488a59b910c gentoolkit-0.2.0_pre8-r1.ebuild 1223
+MD5 b7756d08f8f9c9fa484b60081faf34c3 gentoolkit-0.2.0.ebuild 986
 MD5 c36d3e9465a96d7220228d2ef5457bd3 metadata.xml 451
-MD5 b7afc3f5c646a2f321d6b1b993bc51cc ChangeLog 26749
-MD5 61889d3e51c07fdba1dd805a3584785f gentoolkit-0.2.0.ebuild 982
-MD5 33f9f9c82b94b327238c4346dff17f16 gentoolkit-0.2.0_pre10-r1.ebuild 1105
-MD5 0127bed996ccfd70c67bba08db48222b gentoolkit-0.2.0_pre8-r1.ebuild 1219
-MD5 7477f55f57944ada10de613a9a6bb42b gentoolkit-0.2.0_rc1.ebuild 1027
-MD5 4f2c30fe1945c0a06d9d9c8f6dd88259 gentoolkit-0.2.0_rc1-r1.ebuild 1072
-MD5 1b132e20e9de1c5163594b2cbd950d34 files/digest-gentoolkit-0.2.0_pre8-r1 72
+MD5 2d40c40543200dee1a769cfb2822f0bd gentoolkit-0.2.0_rc1-r1.ebuild 1076
+MD5 70ac7ae15d84fcedc3ed58591f611903 gentoolkit-0.2.0_rc1.ebuild 1031
 MD5 096ea293c35570bd708ebd8cde10ca6b files/digest-gentoolkit-0.2.0_pre10-r1 73
+MD5 1b132e20e9de1c5163594b2cbd950d34 files/digest-gentoolkit-0.2.0_pre8-r1 72
 MD5 2a64dd5b5e7e57ffc34102eca6b936b3 files/qpkg-security-fix-68846.diff 645
 MD5 20b8b5a62b58a621014f1e0922675564 files/digest-gentoolkit-0.2.0_rc1 71
 MD5 20b8b5a62b58a621014f1e0922675564 files/digest-gentoolkit-0.2.0_rc1-r1 71
 MD5 c5f0ee94504ceba66944b93e3db772d3 files/glsa.py-revmatch.diff 796
 MD5 99dee3ece4f06bd49f471db77a5cea21 files/digest-gentoolkit-0.2.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBvjqW6J2i8a8J4okRAtpsAJ97nJsx6XWXWkICOhpo8VQMveKbJQCdGfbH
-oCMfzYRDkh1mRlwTG85kYiI=
-=42UZ
------END PGP SIGNATURE-----

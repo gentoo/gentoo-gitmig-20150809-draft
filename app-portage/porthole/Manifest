@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f9577f02285b26b4f29a84818ae9f016 ChangeLog 1920
 MD5 fbb6fe345e65c9b7fa51b2ae10f85067 metadata.xml 166
-MD5 6c2ddb9df991c0ad1ee1915f840ed9ee ChangeLog 1916
-MD5 9a7b00a053c8875e3790124811d9bc8d porthole-0.4.1.ebuild 1367
+MD5 8810f9e413354a7f383a65b9c9c50213 porthole-0.4.1.ebuild 1371
 MD5 020e00bc7ddedcea314608001c01c1c5 files/digest-porthole-0.4.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBtvzq6J2i8a8J4okRAuQcAKDDDg144ua2acy79RDlMtbxj3WJZgCeOy1Z
-51uSr7FQyFWqU1aATpytriI=
-=63de
------END PGP SIGNATURE-----

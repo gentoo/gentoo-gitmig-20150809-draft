@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8835579031fb7ad6c238f4d2ffbeea25 ChangeLog 2421
-MD5 1b1416ee50b8dd10cc5d0486339bffba genlop-0.16.3.ebuild 573
-MD5 49af4b706ffb0053cd135cb585bc9dce genlop-0.20.2.ebuild 688
+MD5 d6d185e77861749b70d1e85e743b846c ChangeLog 2424
+MD5 e7eb7c5dd71db52a3f66882578bb3890 genlop-0.16.3.ebuild 578
+MD5 72532cdb9e29e616623cfe3c70aaaab8 genlop-0.20.2.ebuild 691
+MD5 082dd8294425f3f0a2ff8558c77aa7b5 genlop-0.30.1.ebuild 696
 MD5 fbb6fe345e65c9b7fa51b2ae10f85067 metadata.xml 166
-MD5 40fc318ca0e9498d0e6a9057954d09a1 genlop-0.30.1.ebuild 693
-MD5 b1772b59e5343f217099ea63388aa8a1 genlop-0.30.2.ebuild 708
+MD5 56f58d96d9c894faf3d9e6b559573a81 genlop-0.30.2.ebuild 712
 MD5 a2fa699153e411145b7de5eb3f610aab files/digest-genlop-0.16.3 64
 MD5 d6a5da97935b5f14bb32b621da3bcc45 files/digest-genlop-0.20.2 64
 MD5 759ac69546eb70f72abdd6e6004acc6a files/digest-genlop-0.30.1 64
 MD5 8871845dc6189a9507ffe72c38d15178 files/digest-genlop-0.30.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBvcbYroRuSHgZdywRAm2LAJwKl94cxstFWcU1xyyZQXYUszXvygCfZw2a
-vuecG//f3HoG6y8IxONXUbA=
-=wIOY
------END PGP SIGNATURE-----
