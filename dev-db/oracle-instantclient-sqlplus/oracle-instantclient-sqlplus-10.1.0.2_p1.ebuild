@@ -1,10 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.1.0.2.ebuild,v 1.2 2004/03/22 21:38:56 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.1.0.2_p1.ebuild,v 1.1 2004/06/21 18:27:18 rizzo Exp $
 
 inherit eutils
 
-MY_P="${P}-1.i386"
+MY_PV=${PV/_p/-}
+MY_P="${PN}-${MY_PV}.i386"
+
 
 S=${WORKDIR}
 DESCRIPTION="Oracle 10g client installation for Linux: SQL*Plus"
@@ -18,7 +20,7 @@ RESTRICT="fetch"
 IUSE=""
 
 DEPEND="app-arch/rpm2targz
-		=dev-db/oracle-instantclient-basic-10.1.0.2"
+		>=dev-db/oracle-instantclient-basic-10.1.0.2"
 
 pkg_nofetch() {
 	eerror "Please go to:"
@@ -34,8 +36,18 @@ src_unpack() {
 }
 
 src_install() {
-	mv ${S}/usr ${D}
-	dosym /usr/lib/oracle/${PV}/client/bin/sqlplus /usr/bin/sqlplus
+	dodir /usr/lib/oracle/10.1.0.2/client/lib
+	cd ${S}/usr/lib/oracle/10.1.0.2/client/lib
+	insinto /usr/lib/oracle/10.1.0.2/client/lib
+	doins glogin.sql libsqlplus.so
+
+	dodir /usr/lib/oracle/10.1.0.2/client/bin
+	cd ${S}/usr/lib/oracle/10.1.0.2/client/bin
+	exeinto /usr/lib/oracle/10.1.0.2/client/bin
+	doexe sqlplus
+
+	dodir /usr/bin
+	dosym ${D}/usr/lib/oracle/10.1.0.2/client/bin/sqlplus /usr/bin/sqlplus
 }
 
 pkg_postinst() {
