@@ -1,9 +1,9 @@
 # ChangeLog for x11-misc/fxred
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fxred/ChangeLog,v 1.3 2004/03/22 19:23:06 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fxred/ChangeLog,v 1.4 2004/03/23 18:48:18 mholzer Exp $
 
   22 Mar 2004; Brandon Hale <tseng@gentoo.org> fxred-0.7.ebuild, metadata.xml:
-  Fix DEPEND-ness, bug #27778
+  Fix DEPEND-ness, bug #45343
 
 *fxred-0.7 (07 Sep 2002)
 
