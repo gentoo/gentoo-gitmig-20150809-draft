@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.57.ebuild,v 1.2 2004/03/30 12:17:26 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.57.ebuild,v 1.3 2004/05/04 23:34:15 kloeri Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.octave.org/pub/octave/bleeding-edge/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc alpha ~sparc ~amd64"
 IUSE="static readline zlib tetex hdf5 mpi"
 
 DEPEND="virtual/glibc
