@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.17 2004/02/21 23:33:07 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.18 2004/02/23 04:45:39 spyderous Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -107,5 +107,33 @@ strip_bins() {
 }
 
 arch() {
-	[ "${ARCH}" = "${1}" ]
+	if archq ${1}; then
+		echo "${1}"
+		return 0
+	fi
+	return 1
+}
+
+archq() {
+	local u="${1}"
+	local neg=0
+	if [ "${u:0:1}" == "!" ]; then
+		u="${u:1}"
+		neg=1
+	fi
+	local x
+	for x in ${ARCH}; do
+		if [ "${x}" == "${u}" ]; then
+			if [ ${neg} -eq 1 ]; then
+				return 1
+			else
+				return 0
+			fi
+		fi
+	done
+	if [ ${neg} -eq 1 ]; then
+		return 0
+	else
+		return 1
+	fi
 }
