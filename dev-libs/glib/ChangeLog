@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.62 2004/03/18 17:52:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.63 2004/03/22 17:18:24 foser Exp $
+
+  22 Mar 2004; foser <foser@gentoo.org> glib-2.4.0.ebuild :
+  Fix a very dumb mistake by mixing up src_compile & src_install
+  Thnx to joem on IRC for the notificiation
+  Probably fixes #45205 & #45348
 
 *glib-2.4.0 (18 Mar 2004)
 
