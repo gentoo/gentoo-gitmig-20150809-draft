@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/qkc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/qkc/ChangeLog,v 1.7 2004/06/24 21:52:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/qkc/ChangeLog,v 1.8 2004/10/27 03:12:21 tgall Exp $
+
+  26 Oct 2004; Tom Gall <tgall@gentoo.org> qkc-1.00.ebuild:
+  stable on ppc64 bug #66880
 
 *qkc-1.00 (27 Nov 2002)
 
