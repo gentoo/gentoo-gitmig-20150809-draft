@@ -1,37 +1,39 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.8 2004/07/01 22:22:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.9 2004/07/24 01:48:22 swegener Exp $
 
-IUSE=""
-
-DESCRIPTION="This script connects to the specified IRC server and creates a
-diagram of the network performing LINKS command."
+DESCRIPTION="This script connects to the specified IRC server and creates a diagram of the network performing LINKS command."
 HOMEPAGE="http://pasky.ji.cz/~pasky/irc/"
 SRC_URI="http://pasky.ji.cz/~pasky/irc/${PN}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-DEPEND="virtual/libc
-	media-gfx/graphviz"
+IUSE=""
+
+RDEPEND="virtual/libc
+	media-gfx/graphviz
+	dev-lang/perl"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
+
 S=${WORKDIR}/${PN}
 
 src_compile() {
-	for myfile in ircmapC ircmapR-aa ircmapR-gvdot ircmapR-ircnet ircmapS
-	do
-		mv ${myfile}.pl ${myfile}.unpatched
-			sed -e 's!/home/pasky/ircmap!/usr/lib/perl5/site_perl/5.6.1/ircmap!' \
-			${myfile}.unpatched > ${myfile}.pl
-		rm ${myfile}.unpatched
-	done
-}
+	eval `perl -V:installprivlib`
 
+	sed -i \
+		-e "s:/home/pasky/ircmap:${installprivlib}/ircmap:" \
+		{ircmapC,ircmapR-aa,ircmapR-gvdot,ircmapR-ircnet,ircmapS}.pl
+}
 
 src_install () {
 	dodoc README
 	dobin ircmapS.pl ircmapC.pl ircmapR-aa.pl ircmapR-gvdot.pl ircmapR-ircnet.pl
 
-	mkdir -p ${D}/usr/lib/perl5/site_perl/5.6.1/ircmap
-	cp IHash.pm ${D}/usr/lib/perl5/site_perl/5.6.1/ircmap/
+	eval `perl -V:installprivlib`
+
+	insinto ${D}/${installprivlib}/ircmap
+	doins IHash.pm
 }
 
 pkg_postinst() {

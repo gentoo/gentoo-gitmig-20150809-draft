@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircmap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ChangeLog,v 1.6 2004/07/01 22:22:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ChangeLog,v 1.7 2004/07/24 01:48:22 swegener Exp $
+
+  24 Jul 2004; Sven Wegener <swegener@gentoo.org> ircmap-0.99.ebuild:
+  Tidied the ebuild.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ircmap-0.99.ebuild:
   virtual/glibc -> virtual/libc
