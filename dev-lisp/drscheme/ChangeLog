@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/drscheme
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/ChangeLog,v 1.4 2003/03/05 04:40:15 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/ChangeLog,v 1.5 2003/05/26 13:47:16 darkspecter Exp $
+
+*drscheme-204 (26 May 2003)
+
+  26 May 2003; Bartosch Pixa <darkspecter@gentoo.org> drscheme-204.ebuild:
+  version bump, and changed SRC_URI to not use hardcoded PV
 
 *drscheme-202 (05 Mar 2003)
 
