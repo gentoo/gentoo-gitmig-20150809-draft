@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/libgnomeuimm-2.6.0.ebuild,v 1.3 2004/05/25 17:56:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/libgnomeuimm-2.6.0.ebuild,v 1.4 2004/05/30 16:45:48 kugelfang Exp $
 
 inherit gnome2 eutils
 
@@ -24,8 +24,10 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 DOCS="AUTHORS ChangeLog NEWS INSTALL TODO"
 
 src_compile() {
-	aclocal -I scripts
-	automake -c -f
-	autoconf
+	if [ "${ARCH}" = "amd64" ]; then
+		aclocal -I scripts
+		automake -c -f
+		autoconf
+	fi
 	gnome2_src_compile
 }
