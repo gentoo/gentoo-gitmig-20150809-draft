@@ -1,0 +1,7 @@
+# ChangeLog for net-zope/silvadocument
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/silvadocument/ChangeLog,v 1.1 2004/10/11 17:59:16 radek Exp $
+
+  11 Oct 2004; Radoslaw Stachowiak <radek@gentoo.org>:
+  Initial insert into portage.
+
