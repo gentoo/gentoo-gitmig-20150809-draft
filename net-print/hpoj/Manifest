@@ -1,9 +1,19 @@
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 843fffbfe11373ade625b47bb80c9bd5 hpoj-0.91-r3.ebuild 3101
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dd9bef9abeb9c3cbe84ff2ae42f540d6 ChangeLog 2685
-MD5 dd2bd47e91462ea536974275111e4b60 hpoj-0.91-r2.ebuild 3052
-MD5 7b10c1855f92a1d1551de2c65128176f files/digest-hpoj-0.91-r2 58
-MD5 e78c4ef74538d9b47f113f580ce4bf28 files/hpoj-0.91-kernel26.patch.bz2 1191
+MD5 ff71614d6d0fa8048363a0ba2e425b53 hpoj-0.91-r2.ebuild 3066
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 d4285ff8462dc5edc5ce36fc6b1ca806 hpoj-0.91-r3.ebuild 3115
 MD5 7b10c1855f92a1d1551de2c65128176f files/digest-hpoj-0.91-r3 58
-MD5 4f722c5c6fcc7d16dcf56c5c52db9874 files/udev.patch 349
+MD5 7b10c1855f92a1d1551de2c65128176f files/digest-hpoj-0.91-r2 58
 MD5 2b8258745c95cdde3dc7d0293aaaf0c4 files/hpoj.init 210
+MD5 4f722c5c6fcc7d16dcf56c5c52db9874 files/udev.patch 349
+MD5 e78c4ef74538d9b47f113f580ce4bf28 files/hpoj-0.91-kernel26.patch.bz2 1191
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCGUrDmdTrptrqvGERArWZAJ40dJJpjfiYgQsOkqwxBDUxEUAKDgCeIhXn
+o33z1zlkyoJMI24J9X/7BBs=
+=DRrc
+-----END PGP SIGNATURE-----
