@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ode/ode-0.035-r1.ebuild,v 1.2 2003/06/24 08:20:55 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ode/ode-0.035-r1.ebuild,v 1.3 2003/07/01 00:49:30 george Exp $
 
 inherit flag-o-matic
 
@@ -50,7 +50,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	eifno "Please note:"
+	einfo "Please note:"
 	einfo "The package Makfile has been modified to honor user-set CFLAGS"
 	einfo "- they were ignored previously"
 	einfo "the package defined FLAGS were: "
