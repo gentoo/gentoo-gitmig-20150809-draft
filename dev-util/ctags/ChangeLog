@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ctags
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.15 2004/03/14 19:32:47 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.16 2004/03/24 07:51:44 mr_bones_ Exp $
+
+  23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> ctags-5.2.3.ebuild,
+  ctags-5.5-r1.ebuild, ctags-5.5.ebuild:
+  don't set DEPEND=RDEPEND (bug #45343); tidy
 
   14 Mar 2004; Tom Gall <tgall@gentoo.org> ctags-5.5-r1.ebuild:
   mark ppc64 stable
