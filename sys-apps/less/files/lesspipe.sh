@@ -1,41 +1,44 @@
-#!/bin/sh
-
+#!/bin/bash
+# 
 # Preprocessor for 'less'. Used when this environment variable is set:
 # LESSOPEN="|lesspipe.sh %s"
 
-lesspipe() {
+trap 'exit 0' PIPE
 
-  case "$1" in
+F=$1	# so we can use "set" later to play with positional params
 
-  *.bz2) bzip2 -dc $1 2>/dev/null ;;
-  *.tar) tar tvvf $1 2>/dev/null ;;
-  *.tar.bz2) tar tjvvf $1 2>/dev/null ;;
-  *.tbz2) tar tjvvf $1 2>/dev/null ;;
-  *.tbz) tar tjvvf $1 2>/dev/null ;;
-  *.tar.gz) tar tzvvf $1 2>/dev/null ;;
-  *.tgz) tar tzvvf $1 2>/dev/null ;;
-  *.z) gzip -dc $1  2>/dev/null ;;
-  *.Z) gzip -dc $1  2>/dev/null ;;
-  *.tar.z) tar tzvvf $1 2>/dev/null ;;
-  *.tar.Z) tar tzvvf $1 2>/dev/null ;;
-  *.zip) unzip -l $1 2>/dev/null ;;
-  *.rpm) rpm -qilp "$1" 2>/dev/null ;;
+case "$F" in
+  *.tar.bz2) tar tjvvf "$F" 2>/dev/null ;;
+  *.tar.gz) tar tzvvf "$F" 2>/dev/null ;;
+  *.tar.z) tar tzvvf "$F" 2>/dev/null ;;
+  *.tar.Z) tar tzvvf "$F" 2>/dev/null ;;
+  *.tar) tar tvvf "$F" 2>/dev/null ;;
+  *.tbz2) tar tjvvf "$F" 2>/dev/null ;;
+  *.tbz) tar tjvvf "$F" 2>/dev/null ;;
+  *.tgz) tar tzvvf "$F" 2>/dev/null ;;
+  *.bz2) bzip2 -dc "$F" 2>/dev/null ;;
+  *.z) gzip -dc "$F"  2>/dev/null ;;
+  *.Z) gzip -dc "$F"  2>/dev/null ;;
+  *.zip) unzip -l "$F" 2>/dev/null ;;
+  *.rpm) rpm -qilp --changelog "$F" 2>/dev/null ;;
+  *.rar) unrar l "$F" 2>/dev/null ;;
+
   *.[1-9] | *.n | *.man)
-    [ "$(file -L $1 | cut -d ' ' -f 2)" = "troff" -o \
-    "$(file -L $1 | cut -d ' ' -f 2)" = "ASCII" ] &&
-    groff -S -s -p -t -e -Tascii -mandoc "$1" 2>/dev/null ;;
+  	[[ $(file -L "$F") == *troff* ]] && \
+    groff -S -s -p -t -e -Tascii -mandoc "$F" 2>/dev/null ;;
+
   *.[1-9].gz | *.n.gz | *.man.gz)
-    [ "$(gzip -dc $1 2>/dev/null|file -|tr -s ' '|cut -d ' ' -f3)" = "troff" -o \
-    "$(gzip -dc $1 2>/dev/null|file -|tr -s ' '|cut -d ' ' -f3)" = "ASCII" ] &&
-    gzip -dc $1 2>/dev/null | groff -S -s -p -t -e -Tascii -mandoc ;;
-  *.gz) gzip -dc $1  2>/dev/null ;; # keep this after the above statement :)
-  *) FILE="$(file -L $1)"
-    FILE1="$(echo $FILE | cut -d ' ' -f 2)"
-    FILE2="$(echo $FILE | cut -d ' ' -f 3)"
-    [ "$FILE1" = "Linux/i386" -o "$FILE2" = "Linux/i386" -o \
-      "$FILE1" = "ELF" -o "$FILE2" = "ELF" ] && strings $1 ;;
+  	[[ $(gzip -dc "$F" 2>/dev/null | file -) == *troff* ]] && \
+    gzip -dc "$F" 2>/dev/null | groff -S -s -p -t -e -Tascii -mandoc ||
+    gzip -dc "$F" 2>/dev/null ;;
 
-  esac
-}
+  # keep this *after* testing for gzipped troff
+  *.gz) gzip -dc "$F"  2>/dev/null ;;
 
-lesspipe $1
+  *)
+	set -- $(file -L "$F")
+	if [[ $2 == Linux/* || $3 == Linux/* || $2 == ELF || $3 == ELF ]]; then
+		strings "$F"
+	fi
+	;;
+esac
