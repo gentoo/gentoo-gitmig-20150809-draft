@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0_pre.ebuild,v 1.1 2004/08/20 13:47:37 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0_pre-r1.ebuild,v 1.1 2004/08/20 15:10:33 voxus Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64"
-IUSE="ssl socks5 qt kde ncurses"
+IUSE="ssl socks5 qt kde ncurses crypt"
 
 # we can't have conditional dependencies so "use kde && inherit kde"
 # won't work -- messes up dep caching.
@@ -24,8 +24,8 @@ RDEPEND="kde? ( >=kde-base/kdelibs-3.0 )"
 DEPEND="kde? ( >=kde-base/kdelibs-3.0 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	qt? ( >=x11-libs/qt-3.0.0 )
-	ncurses? ( sys-libs/ncurses )"
-#	crypt? ( >=app-crypt/gpgme-0.9.0 )"
+	ncurses? ( sys-libs/ncurses )
+	crypt? ( =app-crypt/gpgme-0.3.14-r1 )"
 
 S=${WORKDIR}/${PN}-${PV/_pre/-PRE}
 
@@ -59,8 +59,7 @@ src_compile() {
 	local first_conf
 	use ssl		|| myconf="${myconf} --disable-openssl"
 	use socks5	&& myconf="${myconf} --enable-socks5"
-#	use crypt	|| support for gpgme-0.9.0 is totally b0rked
-	myconf="${myconf} --disable-gpgme"
+	use crypt	|| myconf="${myconf} --disable-gpgme"
 
 	econf ${myconf} || die
 	emake || die
