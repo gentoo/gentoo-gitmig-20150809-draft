@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.26 2004/10/01 21:45:27 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.27 2004/10/06 22:23:29 lv Exp $
 
-inherit eutils flag-o-matic libtool gnuconfig
+inherit eutils flag-o-matic libtool gnuconfig versionator
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -52,8 +52,10 @@ do_filter_flags() {
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
 
 LOC="/usr"
-MY_PV="`echo ${PV} | awk -F. '{ gsub(/_pre.*|_alpha.*/, ""); print $1 "." $2 }'`"
-MY_PV_FULL="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
+#MY_PV="`echo ${PV} | awk -F. '{ gsub(/_pre.*|_alpha.*/, ""); print $1 "." $2 }'`"
+#MY_PV_FULL="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
+MY_PV="$(get_version_component_range 1-2)"
+MY_PV_FULL="$(get_version_component_range 1-3)"
 
 # GCC 3.4 no longer uses gcc-lib. we'll rename this later for compatibility
 # reasons, as a few things would break without gcc-lib.
