@@ -175,3 +175,4 @@ move app-sci/lightspeed sci-misc/lightspeed
 move app-sci/oww sci-misc/oww
 move app-sci/xfoil sci-misc/xfoil
 move app-sci/zetagrid sci-misc/zetagrid
+move app-sci/gato sci-misc/gato
