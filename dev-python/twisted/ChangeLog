@@ -1,0 +1,76 @@
+# ChangeLog for dev-python/twisted
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.1 2002/06/03 22:25:11 karltk Exp $
+
+*twisted-0.18.0 (03 Jun 2002)
+
+  03 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> twisted-0.18.0.ebuild files/digest-twisted-0.18.0 :
+  
+  From the web page:
+  
+  What Is Twisted?
+  An Application Suite
+
+  Twisted is a collection of servers and clients, which can be used
+  either by developers of new applications or directly. Instance Messenger
+  and Twisted Web are both available out of the box as applications for
+  the desktop user. 
+
+  A Development Tool
+
+  Twisted is a framework, written in Python, for writing networked
+  applications. It includes implementations of a number of commonly used
+  network services such as a web server, an IRC chat server, a mail
+  server, a relational database interface and an object broker. Developers
+  can build applications using all of these services as well as custom
+  services that they write themselves. Twisted also includes a user
+  authentication system that controls access to services and provides
+  services with user context information to implement their own security
+  models. 
+
+  An Integrated Environment
+
+  Twisted is an integration point for network services that were
+  previously unable to interoperate. Services within a Twisted server can
+  communicate with each other and share information providing a very
+  integrated programming environment that can re-use large amounts of
+  infrastructure across multiple network mediums (such as chat, web, and
+  mail).
+
+  As well as servers, Twisted supports several different kinds of
+  clients and GUIs. This means that the client can re-use large portions
+  of the server's code, improving test coverage and reliability while
+  reducing code size. 
+
+  All at Once?
+
+  A common reaction to this amount of functionality all in one box is that
+  it's overwhelming. Why are chat and web in the same server? Why network
+  your client with the same infrastructure that you're using on the
+  server? Why give programmers and users the same tool? And how do you
+  achieve that while remaining lightweight and minimal-impact?
+
+  At first glance, these are really different problems requiring different
+  solutions -- at least, in the traditional way of thinking about them.
+  However, the traditional approach to network software development has
+  erected artificial barriers between applications. Those barriers prevent
+  developers from easily adding useful functionality. As an example,
+  putting a web administration interface on your IRC server can be
+  difficult, if it's even possible. Once you've done it, chances are you
+  can't use that same web server you set up to serve your filesystem.
+
+  Unless you're using Twisted. In that case, your chat server's web
+  interface is running with the same industrial strength application
+  server that runs your whole web site. The connections are automatic,
+  since servers that need to talk to each other already have a robust
+  client in them. As a user, you don't need to learn much programming in
+  order to enhance your Twisted environment; your favorite new feature is
+  just a Python script away.
+
+  And strangely enough, integrating all this functionality reduces bloat.
+  Apache, the industry-standard HTTP daemon, weighs in at 3.7 megabytes;
+  Twisted is a mere 0.5 megabytes.
+
+
+  Ebuild submitted by Gontran Zepeda <gontran@gontran.net>.
+
