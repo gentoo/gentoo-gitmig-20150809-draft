@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.74 2003/09/24 00:46:02 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.75 2003/09/24 16:43:05 lisa Exp $
+
+*distcc-2.11-r1 (24 Sep 2003)
+
+  24 Sep 2003; Lisa Seelye <lisa@gentoo.org distcc-2.11-r1.ebuild:
+  -m Fix bug 29511.  Seems as if the depends were silently changed.
 
 *distcc-2.11 (23 Sep 2003)
 
