@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.13 2003/01/17 08:08:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.14 2003/01/19 20:23:28 azarah Exp $
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
 #
@@ -326,6 +326,14 @@ get_number_of_jobs() {
 		return 1
 	fi
 
+	# This bit is from H?kan Wessberg <nacka-gentoo@refug.org>, bug #13565.
+	if [ "`egrep "^[[:space:]]*MAKEOPTS=" /etc/make.conf | wc -l`" -gt 0 ]
+	then
+		ADMINOPTS="`egrep "^[[:space:]]*MAKEOPTS=" /etc/make.conf | cut -d= -f2 | sed 's/\"//g'`"
+		ADMINPARAM="${ADMINOPTS##*-j}"
+		ADMINPARAM="${ADMINPARAM%% -*}"
+	fi
+
 	export MAKEOPTS="`echo ${MAKEOPTS} | sed -e 's:-j[0-9]*::g'`"
 	
 	if [ "${ARCH}" = "x86" ]
@@ -372,7 +380,14 @@ get_number_of_jobs() {
 	then
 		jobs=1
 	fi
-
-	export MAKEOPTS="${MAKEOPTS} -j${jobs}"
+	
+	if [ -n "${ADMINPARAM}" -a "${jobs}" -gt "${ADMINPARAM}" ]
+	then
+		einfo "Setting make jobs to \"-j${ADMINPARAM}\" to ensure successful merge..."
+		export MAKEOPTS="${MAKEOPTS} -j${ADMINPARAM}"
+	else
+		einfo "Setting make jobs to \"-j${jobs}\" to ensure successful merge..."
+		export MAKEOPTS="${MAKEOPTS} -j${jobs}"
+	fi
 }
 
