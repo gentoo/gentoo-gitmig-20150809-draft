@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4.ebuild,v 1.1 2003/06/26 19:47:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4.ebuild,v 1.2 2003/06/26 22:01:49 robbat2 Exp $
 
 inherit eutils 
 DESCRIPTION="The Advanced Maryland Automatic Network Disk Archiver"
@@ -136,6 +136,8 @@ src_install() {
 	docinto docs
 	dodoc ${S}/docs/*
 	prepalldocs
+
+	use xfs && mkdir -p ${D}/var/xfsdump/inventory
 
     # einfo "Installing Amandahosts File for ${AMANDA_SERVER}"
     insinto ${AMANDA_USER_HOMEDIR}
