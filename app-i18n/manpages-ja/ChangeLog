@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/manpages-ja
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/ChangeLog,v 1.9 2004/01/18 17:16:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/ChangeLog,v 1.10 2004/02/17 15:57:31 usata Exp $
+
+*manpages-ja-20040215 (18 Feb 2004)
+
+  18 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> manpages-ja-20040215.ebuild:
+  Version bumped. Thanks to Hattya <hattya@gentoo.org> and TAKEDA Hiroyuki
+  <diapar@mizar.freemail.ne.jp> for contributing qpkg.1 and portage.5
 
   18 Jan 2004; <gustavoz@gentoo.org> manpages-ja-20031215.ebuild:
   marked stable on hppa and sparc
