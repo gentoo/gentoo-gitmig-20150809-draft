@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/defendguin
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/ChangeLog,v 1.1 2004/09/16 06:58:20 mr_bones_ Exp $
+
+*defendguin-0.0.10 (15 Sep 2004)
+
+  15 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +defendguin-0.0.10.ebuild:
+  initial commit - ebuild submitted by eGore via bug #63499
+
