@@ -1,0 +1,13 @@
+diff -urN liece-1.4.10.ORIG/lisp/liece.el liece-1.4.10/lisp/liece.el
+--- liece-1.4.10.ORIG/lisp/liece.el	2002-08-27 07:49:21.000000000 +0900
++++ liece-1.4.10/lisp/liece.el	2003-08-18 00:54:23.000000000 +0900
+@@ -505,8 +505,7 @@
+        (file-exists-p liece-directory)
+        (yes-or-no-p "Upgrade the location of the data files? ")
+        (let ((file
+-	      (expand-file-name
+-	       (make-temp-name "liece") temporary-file-directory)))
++	      (make-temp-file "liece")))
+ 	 (unwind-protect
+ 	     (progn
+ 	       (rename-file liece-directory file 'ok-if-exists)
