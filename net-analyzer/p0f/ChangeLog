@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/geotrace
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+
+*p0f-1.8.2 (21 Feb 2002)
+
+	21 Feb 2002; F.Meyndert <m0rpheus@gentoo.org> p0f-1.8.2.ebuild
+	Added  ebuild for p0f, p0f performs passive OS detection based
+	on SYN packets.
+
+

@@ -1,0 +1,46 @@
+#!/sbin/runscript
+# Based upon a script copyrighted under LGPL
+# Modified by Ilian Zarov <coder@descom.com>
+# description: p0f - the p0f monitoring program.
+# processname: p0f
+# pidfile: /var/run/p0f.pid
+
+PATH=/usr/bin:/sbin:/bin:/usr/sbin
+export PATH
+export P0FLOGFILE=/var/log/p0f
+
+# Source function library.
+source /etc/init.d/functions.sh
+
+start() {
+	ebegin "Starting p0f"
+	# The 'tcp and tcp[13] & 2 = 2' requires at least syn set.
+	# An alternative would be 'tcp and tcp[13] & 0x3f = 2', which
+	# is syn and no other major flags (but ECN enabled packets are OK)
+	if [ -z "$BpfFilter" ]; then
+		BpfFilter='tcp and tcp[13] & 2 = 2'
+	else
+		BpfFilter="$BpfFilter and tcp and tcp[13] & 2 = 2"
+	fi
+
+	# The command in backticks returns all the local IP addresses on this machine.
+	for OneIP in `/sbin/ifconfig 2>/dev/null | grep 'inet addr' | sed -e 's/.*addr://' -e 's/ .*//'` ; do
+		BpfFilter="$BpfFilter and not src host $OneIP"
+	done
+	
+	# Create a lock file.
+	mkdir -p /var/lock/subsys
+	touch /var/lock/subsys/p0f
+	
+	# Start up p0f and filter out all packets originating from any of this machines IP's.
+	einfo "Logfile: ${P0FLOGFILE}"
+	start-stop-daemon --start --quiet --exec /usr/sbin/p0f -- -v "$BpfFilter" >>"$P0FLOGFILE" 2>&1 &
+	eend ${?}
+}
+
+stop() {
+	ebegin "Stopping p0f"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/p0f
+	rm -f /var/lock/subsys/p0f
+	eend ${?}
+}
