@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.4 2002/12/16 03:50:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.5 2002/12/16 21:34:53 azarah Exp $
+
+*win32codecs-0.90.1-r1 (16 Dec 2002)
+
+  16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Install QuickTime 6 dlls if 'quicktime' in USE.
 
 *win32codecs-0.90.1 (16 Dec 2002)
 
