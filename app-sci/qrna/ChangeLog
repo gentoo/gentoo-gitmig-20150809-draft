@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/qrna
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qrna/ChangeLog,v 1.1 2004/07/20 21:09:56 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qrna/ChangeLog,v 1.2 2004/07/21 18:31:13 dholm Exp $
+
+  21 Jul 2004; David Holm <dholm@gentoo.org> qrna-2.0.2c.ebuild:
+  Added to ~ppc.
 
 *qrna-2.0.2c (20 Jul 2004)
 
