@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/rfksay/rfksay-0.1.ebuild,v 1.6 2004/06/24 22:57:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/rfksay/rfksay-0.1.ebuild,v 1.7 2004/09/23 08:56:40 mr_bones_ Exp $
 
 inherit games
 
@@ -16,8 +16,9 @@ IUSE=""
 
 DEPEND="dev-lang/perl"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_install() {
-	dogamesbin kittensay rfksay robotsay || die
+	dogamesbin kittensay rfksay robotsay || die "dogamesbin failed"
+	prepgamesdirs
 }
