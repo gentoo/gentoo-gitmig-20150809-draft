@@ -1,9 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-2.9.ebuild,v 1.5 2003/09/17 09:29:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-2.9.ebuild,v 1.6 2004/01/04 01:57:00 caleb Exp $
 
-inherit kde-base libtool
-need-qt 3
+inherit libtool
 
 IUSE="mysql xml"
 
@@ -16,7 +15,8 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
 
 DEPEND="mysql? ( dev-db/mysql++ )
-	xml? ( dev-libs/libxml sys-libs/zlib )"
+	xml? ( dev-libs/libxml sys-libs/zlib )
+	>=x11-libs/qt-3"
 
 src_unpack() {
 
