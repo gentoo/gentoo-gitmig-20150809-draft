@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r2.ebuild,v 1.4 2004/01/14 22:28:54 wolf31o2 Exp $.
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r2.ebuild,v 1.5 2004/01/15 03:25:23 wolf31o2 Exp $.
 
 inherit games
 
@@ -58,9 +58,9 @@ src_install() {
 	doexe ${FILESDIR}/{benchmark,results.sh}
 
 	# Security patch
-	cd ${D}/opt/ut2003-demo/System
-	cp ${DISTDIR}/IpDrv.so.bz2 .
-	bunzip2 --force IpDrv.so.bz2
+	#cd ${D}/opt/ut2003-demo/System
+	#cp ${DISTDIR}/IpDrv.so.bz2 .
+	#bunzip2 --force IpDrv.so.bz2
 
 	# create menu entry (closes bug #27594)
 	insinto /usr/share/applications
