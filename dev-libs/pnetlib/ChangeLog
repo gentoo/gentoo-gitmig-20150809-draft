@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/pnetlib
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pnetlib/ChangeLog,v 1.1 2003/02/24 19:41:44 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pnetlib/ChangeLog,v 1.2 2003/04/19 21:19:27 cybersystem Exp $
+
+*pnetlib-0.5.4 (19 Apr 2003)
+
+  19 Apr 2003; Sascha Schwabbauer <cybersystem@gentoo.org>
+  pnetlib-0.5.4.ebuild:
+  Version bump to version 0.5.4, see bug #18634
 
 *pnetlib-0.5.2 (24 Feb 2003)
 
