@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/zgv-5.6.ebuild,v 1.4 2002/10/04 05:46:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/zgv-5.6.ebuild,v 1.5 2002/10/18 20:59:13 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A svgalib console image viewer."
@@ -16,9 +16,9 @@ DEPEND=">=media-libs/svgalib-1.4.2
 	media-libs/libpng
 	>=media-libs/tiff-3.5.5
 	>=sys-libs/zlib-1.1.4"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
-
 	unpack ${A}
 	
 	cd ${S}/src
@@ -28,12 +28,10 @@ src_unpack() {
 }
 
 src_compile() {
-
 	emake || die
 }
 
 src_install() {
-
 	dodir /usr/bin /usr/share/info /usr/share/man/man1
 	make PREFIX=${D}/usr \
 		INFODIR=${D}/usr/share/info \
@@ -52,4 +50,3 @@ src_install() {
 	
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README* SECURITY TODO
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.7-r1.ebuild,v 1.4 2002/10/05 05:39:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.7-r1.ebuild,v 1.5 2002/10/18 20:59:13 vapier Exp $
 
 IUSE="perl X cups xml2 lcms"
 
@@ -19,7 +19,6 @@ LICENSE="as-is"
 KEYWORDS="x86 ppc"
 
 DEPEND="media-libs/libpng
-	
 	>=sys-apps/bzip2-1
 	>=sys-libs/zlib-1.1.3
 	>=media-libs/freetype-2.0
@@ -31,6 +30,7 @@ DEPEND="media-libs/libpng
 	lcms? ( >=media-libs/lcms-1.06 )
 	perl? ( >=sys-devel/perl-5 )
 	xml2? ( >=dev-libs/libxml2-2.4.10 )"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	elibtoolize
@@ -67,7 +67,6 @@ src_compile() {
 }
 
 src_install() {
-	
 	myinst="prefix=${D}/usr PREFIX=${D}/usr"
 	myinst="${myinst} MagickSharePath=${D}/usr/share/ImageMagick/"
 	myinst="${myinst} pkgdocdir=${D}/usr/share/doc/${PF}/html"
@@ -83,5 +82,4 @@ src_install() {
 	perl-module_src_install
 	
 	rm -f ${D}/usr/share/ImageMagick/*.txt
-
 }

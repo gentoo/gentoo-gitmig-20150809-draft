@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.0-r1.ebuild,v 1.6 2002/10/04 05:44:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.0-r1.ebuild,v 1.7 2002/10/18 20:59:13 vapier Exp $
 
 inherit libtool
 
@@ -17,9 +17,9 @@ KEYWORDS="x86"
 DEPEND=">=dev-libs/libusb-0.1.5
 	=dev-libs/glib-1.2*
 	>=sys-libs/zlib-1.1.4"
+RDEPEND="${DEPEND}"
 
 src_compile() {
-
 	elibtoolize
 	aclocal
 
@@ -37,7 +37,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make prefix=${D}/usr \
 		sysconfdir=${D}/etc \
 		gphotodocdir=${D}/usr/share/doc/${PF} \

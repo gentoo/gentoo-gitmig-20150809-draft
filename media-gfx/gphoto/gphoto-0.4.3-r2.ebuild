@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto/gphoto-0.4.3-r2.ebuild,v 1.4 2002/10/04 05:44:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto/gphoto-0.4.3-r2.ebuild,v 1.5 2002/10/18 20:59:13 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="free, redistributable digital camera software application"
 SRC_URI="http://www.gphoto.net/dist/${P}.tar.gz"
-HOMEPAGE="http://www.gphoto.org"
+HOMEPAGE="http://www.gphoto.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -13,6 +13,7 @@ KEYWORDS="x86"
 
 DEPEND="media-libs/imlib
 	>=media-gfx/imagemagick-4.1"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -21,7 +22,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	# -pipe does no work
 	CFLAGS="${CFLAGS/-pipe}"
 	./configure --prefix=/usr --sysconfdir=/etc/gnome || die
