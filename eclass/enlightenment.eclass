@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.5 2003/11/15 21:48:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.6 2003/12/02 02:51:11 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -17,9 +17,10 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64"
-IUSE="nls"
+IUSE="nls doc"
 
-DEPEND="nls? ( sys-devel/gettext )"
+DEPEND="doc? ( app-doc/doxygen )
+	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}
 
@@ -68,14 +69,15 @@ enlightenment_src_compile() {
 	fi
 	econf ${MY_ECONF} || die "econf failed"
 	emake || die "emake failed"
+	[ `use doc` ] && [ -x ./gendoc ] && { ./gendoc || die "gendoc failed" ; }
 }
 
 enlightenment_src_install() {
 	make install DESTDIR=${D} || die
-	find ${D} -name CVS -type d -exec rm -rf '{}' \;
+	find ${D} -name CVS -type d -exec rm -rf '{}' \; 2>/dev/null
 	[ -z "${EDOCS}" ] && EDOCS="AUTHORS ChangeLog NEWS README TODO"
 	dodoc ${EDOCS}
-	[ -d doc ] && dohtml -r doc/*
+	[ `use doc` ] && [ -d doc ] && dohtml -r doc/*
 }
 
 enlightenment_pkg_postinst() {
