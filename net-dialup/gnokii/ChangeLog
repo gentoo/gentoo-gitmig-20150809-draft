@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gnokii
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.17 2004/10/13 03:44:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.18 2004/10/17 09:37:47 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> gnokii-0.6.3.ebuild:
+  Added to ~ppc.
 
   12 Oct 2004; Jason Wever <weeve@gentoo.org> gnokii-0.6.3.ebuild:
   Added ~sparc keyword wrt bug #67291.
