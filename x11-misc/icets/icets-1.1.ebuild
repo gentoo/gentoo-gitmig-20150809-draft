@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/icets-1.1.ebuild,v 1.5 2004/03/21 09:51:13 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/icets-1.1.ebuild,v 1.6 2004/03/24 11:29:07 phosphan Exp $
 
 DESCRIPTION="IceWM Theme Editor"
 SRC_URI="mirror://sourceforge/icecc/${P}.tar.bz2"
@@ -8,6 +8,7 @@ HOMEPAGE="http://icecc.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 RDEPEND=">=x11-libs/qt-3.0.0"
 DEPEND="${RDEPEND}

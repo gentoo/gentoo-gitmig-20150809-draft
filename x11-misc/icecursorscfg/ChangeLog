@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icecursorscfg
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecursorscfg/ChangeLog,v 1.5 2003/06/23 13:35:38 phosphan Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecursorscfg/ChangeLog,v 1.6 2004/03/24 11:21:21 phosphan Exp $
+
+  24 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> icecursorscfg-0.6.ebuild:
+  Adding IUSE
 
   23 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> icecursorscfg-0.6.ebuild:
   Dependency was missing category

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icecc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/ChangeLog,v 1.14 2003/10/21 08:26:51 phosphan Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/ChangeLog,v 1.15 2004/03/24 11:19:51 phosphan Exp $
+
+  24 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> icecc-2.6.ebuild:
+  Adding IUSE
 
 *icecc-2.6 (21 Oct 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icewoed
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewoed/ChangeLog,v 1.7 2004/03/21 09:43:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewoed/ChangeLog,v 1.8 2004/03/24 11:35:38 phosphan Exp $
+
+  24 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> icewoed-1.5.ebuild:
+  Adding IUSE
 
   21 Mar 2004; Martin Holzer <mholzer@gentoo.org> icewoed-1.5.ebuild:
   adding categorie. see 45110 for details
