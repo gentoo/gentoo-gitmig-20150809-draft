@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/vlnx-432e-r1.ebuild,v 1.1 2004/06/29 17:01:36 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/vlnx-432e-r2.ebuild,v 1.1 2004/07/27 01:22:51 merlin Exp $
 
 MY_P="${P/-/}"
 S="${WORKDIR}"
@@ -19,7 +19,7 @@ DEPEND=""
 RDEPEND="net-misc/wget
 	dev-lang/perl"
 PROVIDE="virtual/antivirus"
-RESTRICT="nostrip"
+RESTRICT="nostrip nomirror"
 
 src_install() {
 	insinto /opt/vlnx
