@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.16 2003/08/04 21:56:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.17 2003/10/06 11:41:49 leonardop Exp $
+
+  06 Oct 2003; L. Boshell <leonardop@gentoo.org> gnet-2.0.4.ebuild:
+  Change --with-html-dir value so gnet's documentation goes to the same place
+  every gtk-doc-generated library docs go.
 
   14 Jul 2003; Alastair Tse <liquidx@gentoo.org> gnet-1.1.9.ebuild:
   set 1.1.9 back to SLOT=1

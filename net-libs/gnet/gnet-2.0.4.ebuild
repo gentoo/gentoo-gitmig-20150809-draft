@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.4.ebuild,v 1.3 2003/09/06 22:04:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.4.ebuild,v 1.4 2003/10/06 11:41:49 leonardop Exp $
 
 inherit gnome2
 
@@ -17,6 +17,6 @@ RDEPEND=">=dev-libs/glib-1.2.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-G2CONF=" --with-html-dir=${D}/usr/share/doc/${PF}"
+G2CONF=" --with-html-dir=${D}/usr/share/gtk-doc/html"
 
-DOCS="AUTHORS BUGS ChangeLog COPYING NEWS README TODO"
+DOCS="AUTHORS BUGS ChangeLog COPYING HACKING NEWS README TODO"
