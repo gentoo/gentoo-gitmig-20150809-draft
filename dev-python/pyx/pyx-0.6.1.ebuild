@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.6.1.ebuild,v 1.1 2004/04/06 22:03:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.6.1.ebuild,v 1.2 2004/04/07 12:09:50 dholm Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ DEPEND=">=dev-lang/python-2.2
 		>=app-text/tetex-1"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 
 src_install() {
