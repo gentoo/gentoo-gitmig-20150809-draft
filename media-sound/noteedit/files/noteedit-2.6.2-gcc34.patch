@@ -1,0 +1,49 @@
+diff -Naur noteedit-2.6.2.orig/noteedit/mainframewidget.cpp noteedit-2.6.2/noteedit/mainframewidget.cpp
+--- noteedit-2.6.2.orig/noteedit/mainframewidget.cpp	2004-06-18 07:27:32.000000000 -0700
++++ noteedit-2.6.2/noteedit/mainframewidget.cpp	2004-07-19 14:02:18.000000000 -0700
+@@ -3683,9 +3683,9 @@
+ void NMainFrameWidget::exportMusiXTeX() { this->exportManager( MUSIX_PAGE ); }
+ void NMainFrameWidget::exportPMX() {	this->exportManager( PMX_PAGE ); }
+ void NMainFrameWidget::exportABC() {	this->exportManager( ABC_PAGE ); }
+-void NMainFrameWidget::exportLilyPond() {	this->exportManager( LILY_PAGE ); };
+-void NMainFrameWidget::setOutputParam() {	this->exportManager( PARAM_PAGE ); };
+-void NMainFrameWidget::exportMusicXML() {	this->exportManager( MUSICXML_PAGE ); };
++void NMainFrameWidget::exportLilyPond() {	this->exportManager( LILY_PAGE ); }
++void NMainFrameWidget::setOutputParam() {	this->exportManager( PARAM_PAGE ); }
++void NMainFrameWidget::exportMusicXML() {	this->exportManager( MUSICXML_PAGE ); }
+ 
+ void NMainFrameWidget::importMidi() {
+ 	KMessageBox::sorry(this, i18n("MIDI import is performed by the TSE3 library!\nSee MIDI import section in documentation or read\n\
+diff -Naur noteedit-2.6.2.orig/noteedit/noteedit_part.cpp noteedit-2.6.2/noteedit/noteedit_part.cpp
+--- noteedit-2.6.2.orig/noteedit/noteedit_part.cpp	2003-09-21 03:49:47.000000000 -0700
++++ noteedit-2.6.2/noteedit/noteedit_part.cpp	2004-07-19 14:02:36.000000000 -0700
+@@ -20,7 +20,7 @@
+   void *init_libnoteedit() {
+     return new NoteeditFactory;
+   }
+-};
++}
+ 
+ /**
+  * We need one static instance of the factory for our C 'main'
+diff -Naur noteedit-2.6.2.orig/noteedit/voicedialog.cpp noteedit-2.6.2/noteedit/voicedialog.cpp
+--- noteedit-2.6.2.orig/noteedit/voicedialog.cpp	2004-03-10 08:10:05.000000000 -0800
++++ noteedit-2.6.2/noteedit/voicedialog.cpp	2004-07-19 14:08:17.000000000 -0700
+@@ -90,7 +90,7 @@
+ 
+ 	renumber(VoiceNumber);
+ 
+-};
++}
+ 
+ VoiceBox::~VoiceBox() {
+ 	delete stemDirection_;
+@@ -155,7 +155,7 @@
+ 
+ void VoiceBox::destroy() {
+ 	if (voiceDialog_->destroyVoice(this, theVoice_)) this->close(true);
+-};
++}
+ 
+ 
+ VoiceDialog::VoiceDialog

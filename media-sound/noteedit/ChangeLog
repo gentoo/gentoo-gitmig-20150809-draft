@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/noteedit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.9 2004/07/13 06:12:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.10 2004/07/19 22:25:13 eradicator Exp $
+
+  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/noteedit-2.6.2-gcc34.patch:
+  Gcc-3.4 fixes.  Added to ~amd64.
 
   12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   noteedit-2.6.2.ebuild:
