@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.3 2002/09/10 21:02:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.4 2002/09/11 18:00:13 azarah Exp $
 
 inherit flag-o-matic gcc
 # Compile problems with these ...
@@ -220,10 +220,9 @@ src_install() {
 	# whole build will not be compiled without mmx instructions.
 	if [ "`gcc-version`" != "2.95" ] && [ "${ARCH}" = "x86" ]
 	then
-		make install \
-			CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx"
-			CXXDEBUGFLAGS="${CXXDEBUGFLAGS} -mno-mmx"
-			DESTDIR=${D} || die
+		make CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx" \
+			CXXDEBUGFLAGS="${CXXDEBUGFLAGS} -mno-mmx" \
+			install DESTDIR=${D} || die
 	else
 		make install DESTDIR=${D} || die
 	fi
