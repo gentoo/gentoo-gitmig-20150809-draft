@@ -1,13 +1,19 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.29 2003/02/18 10:05:00 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.30 2003/02/19 21:52:43 azarah Exp $
 
 *blackdown-jdk-1.4.1 (18 Feb 2003)
-  18 Feb 2003; Stefan Jones <cretin@gentoo.org> : blackdown-jdk-1.4.1.ebuild
+
+  19 Feb 2003; Martin Schlemmer <azarah@gentoo.org> blackdown-jdk-1.4.1.ebuild :
+  Do a few form fixes.  Make it easier to bump revision with JREV, etc
+  variables.  Add get_offset() to calc tarball offset in .bin.
+
+  18 Feb 2003; Stefan Jones <cretin@gentoo.org> : blackdown-jdk-1.4.1.ebuild :
   New stable version, now java plugin works without a java recompile!
   Recomended upgrade!
 
 *blackdown-jdk-1.3.1-r9 (27 Jan 2003)
+
   27 Jan 2003; Mark Guertin <gerk@gentoo.org> : blackdown-jdk-1.3.1-r9.ebuild,
   files/digest-blackdown-jdk-1.3.1-r9 :
   new version, set only as ~ppc for now (there are no other arches supported yet
@@ -19,7 +25,7 @@
  
 *blackdown-jdk-1.4.1_beta-1 (21 Nov 2002)
 
-  15 Dec 2002; Adrian Almenar <strider@gentoo.org> blackdown-jdk-1.4.1_beta-r1.ebuild:
+  15 Dec 2002; Adrian Almenar <strider@gentoo.org> blackdown-jdk-1.4.1_beta-r1.ebuild :
   Fixes bug #12082.
 
   21 Nov 2002; phoen][x <phoenix@gentoo.org> blackdown-jdk-1.4.1_beta-r1.ebuild,
@@ -34,7 +40,7 @@
 
 *blackdown-jdk-1.4.1_beta (18 Oct 2002)
 
-  15 Dec 2002; Adrian Almenar <strider@gentoo.org> blackdown-jdk-1.4.1_beta.ebuild:
+  15 Dec 2002; Adrian Almenar <strider@gentoo.org> blackdown-jdk-1.4.1_beta.ebuild :
   Fixes bug #12082.	
 	
   24 Oct 2002; Martin Schlemmer <azarah@gentoo.org> blackdown-jdk-1.4.1_beta.ebuild :

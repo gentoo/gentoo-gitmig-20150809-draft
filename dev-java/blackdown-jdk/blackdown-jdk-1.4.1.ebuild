@@ -1,41 +1,69 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.1 2003/02/18 10:05:00 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.2 2003/02/19 21:52:43 azarah Exp $
 
-inherit java nsplugins gcc
+IUSE="doc"
 
-S="${WORKDIR}/j2sdk1.4.1"
-DESCRIPTION="Blackdown Java Development Kit 1.4.1"
+inherit gcc java nsplugins
 
-if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -ge "2" ]
-then
-	SRC_URI="x86? http://www.mirror.ac.uk/sites/ftp.blackdown.org/java-linux/JDK-1.4.1/i386/01/j2sdk-1.4.1-01-linux-i586-gcc3.2.bin
-	 sparc? http://www.mirror.ac.uk/sites/ftp.blackdown.org/java-linux/JDK-1.4.1/sparc/01/j2sdk-1.4.1-01-linux-sparc-gcc3.2.bin"
+JREV="01"
+
+S="${WORKDIR}/j2sdk${PV}"
+DESCRIPTION="Blackdown Java Development Kit ${PV}"
+J_URI="ftp://ftp.gwdg.de/pub/languages/java/linux/JDK-${PV}"
+if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -ge "2" ] ; then
+	SRC_URI="x86? ( ${J_URI}/i386/${JREV}/j2sdk-${PV}-${JREV}-linux-i586-gcc3.2.bin )"
 else
-	SRC_URI="x86? http://www.mirror.ac.uk/sites/ftp.blackdown.org/java-linux/JDK-1.4.1/i386/01/j2sdk-1.4.1-01-linux-i586-gcc2.95.bin
-	sparc? http://www.mirror.ac.uk/sites/ftp.blackdown.org/java-linux/JDK-1.4.1/sparc/01/j2sdk-1.4.1-01-linux-sparc-gcc3.2.bin"
-	use sparc && RDEPEND=">=sys-devel/gcc-3.2"
+	SRC_URI="x86? ( ${J_URI}/i386/${JREV}/j2sdk-${PV}-${JREV}-linux-i586-gcc2.95.bin )"
 fi
+SRC_URI="${SRC_URI} sparc? ( ${J_URI}/sparc/${JREV}/j2sdk-${PV}-${JREV}-linux-sparc-gcc3.2.bin )"
 
 HOMEPAGE="http://www.blackdown.org"
-DEPEND="virtual/glibc
-	>=dev-java/java-config-0.2.6
-	doc? ( =dev-java/java-sdk-docs-1.4.1* )"
-RDEPEND="$RDEPEND $DEPEND"
-PROVIDE="virtual/jdk-1.4.1
-	virtual/jre-1.4.1
-	virtual/java-scheme-2"
+
 SLOT="1.4.1"
 LICENSE="sun-bcla"
 KEYWORDS="~x86 -ppc ~sparc"
-IUSE="doc"
+
+DEPEND="virtual/glibc
+	>=dev-java/java-config-0.2.6
+	doc? ( =dev-java/java-sdk-docs-1.4.1* )"
+
+PROVIDE="virtual/jdk-1.4.1
+	virtual/jre-1.4.1
+	virtual/java-scheme-2"
+
+# Extract the 'skip' value (offset of tarball) we should pass to tail
+get_offset() {
+	[ ! -f "$1" ] && return
+        
+	local offset="`gawk '
+		/^[[:space:]]*skip[[:space:]]*=/ {
+
+			sub(/^[[:space:]]*skip[[:space:]]*=/, "")
+			SKIP = $0
+		}
+                
+		END { print SKIP }
+	' $1`"
+
+	eval echo $offset
+}
 
 src_unpack () {
-	tail +522 ${DISTDIR}/${A} | tar --no-same-owner -jxp || die "Corrupted file ${A}"
+	local offset="`get_offset ${DISTDIR}/${A}`"
+
+	if [ -z "${offset}" ] ; then
+		eerror "Failed to get offset of tarball!"
+		die "Failed to get offset of tarball!"
+	fi
+
+	echo ">>> Unpacking ${A}..."
+	tail +${offset} ${DISTDIR}/${A} | tar --no-same-owner -jxp
 }
 
 
 src_install () {
+	local PLATFORM=
 
 	dodir /opt/${P}
 
@@ -48,7 +76,7 @@ src_install () {
 	dohtml README.html
 
 	# Install mozilla plugin
-	if [ "${ARCH}" == "x86" ] ; then
+	if [ "${ARCH}" = "x86" ] ; then
 		PLATFORM="i386"
 	fi
 
@@ -56,11 +84,8 @@ src_install () {
 
 	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
 
-	mv ${D}/opt/${P}/jre/lib/font.properties ${D}/opt/${P}/jre/lib/font.properties.orig
-	sed "s/standard symbols l/symbol/g" \
-		< ${D}/opt/${P}/jre/lib/font.properties.orig \
-		> ${D}/opt/${P}/jre/lib/font.properties
-	rm ${D}/opt/${P}/jre/lib/font.properties.orig
+	dosed "s/standard symbols l/symbol/g" \
+		/opt/${P}/jre/lib/font.properties
 	
 	# install env into /etc/env.d
 	set_java_env ${FILESDIR}/${VMHANDLE} || die
