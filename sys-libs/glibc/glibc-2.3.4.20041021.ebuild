@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041021.ebuild,v 1.3 2004/10/28 23:30:24 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041021.ebuild,v 1.4 2004/10/29 05:12:05 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -228,7 +228,7 @@ do_makecheck() {
 	ATIME=`mount | awk '{ print $3,$6 }' | grep ^\/\  | grep noatime`
 	if [ "$ATIME" = "" ]; then
 		cd ${WORKDIR}/${MYMAINBUILDDIR}
-		make check || die 
+		make check || die
 	else
 		ewarn "remounting / without noatime option so that make check"
 		ewarn "does not fail!"
@@ -553,7 +553,8 @@ src_unpack() {
 	epatch ${FILESDIR}/2.3.4/glibc-sec-hotfix-20040916.patch
 
 	# multicast DNS aka rendezvous support
-	epatch ${FILESDIR}/2.3.4/glibc-2.3.3-mdns-resolver.diff
+	# ...patch updated to make mdns optional
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.3-mdns-resolver2.diff
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh
@@ -803,9 +804,11 @@ EOF
 	# Some things want this, notably ash.
 	dosym /usr/lib/libbsd-compat.a /usr/lib/libbsd.a
 
-	# This is our new config file for building locales
 	insinto /etc
+	# This is our new config file for building locales
 	doins ${FILESDIR}/locales.build
+	# example host.conf with multicast dns disabled by default
+	doins ${FILESDIR}/2.3.4/host.conf
 
 	must_exist /$(get_libdir)/ libpthread.so.0
 }
@@ -892,4 +895,13 @@ pkg_postinst() {
 	if [ "${ROOT}" = "/" ]; then
 		/sbin/init U &> /dev/null
 	fi
+
+	# warn the few multicast-dns-by-default users we've had about the change
+	# in behavior...
+	echo
+	einfo "Gentoo's glibc now disables multicast dns by default in our"
+	einfo "example host.conf. To re-enable this functionality, simply"
+	einfo "remove the line that disables it (mdns off)."
+	echo
 }
+

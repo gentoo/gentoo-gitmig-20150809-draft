@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.283 2004/10/28 23:30:24 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.284 2004/10/29 05:12:05 lv Exp $
+
+  29 Oct 2004; Travis Tilley <lv@gentoo.org>
+  -files/2.3.4/glibc-2.3.3-mdns-resolver.diff,
+  +files/2.3.4/glibc-2.3.3-mdns-resolver2.diff, +files/2.3.4/host.conf,
+  glibc-2.3.4.20041021.ebuild:
+  updated the multicast dns patch from suse and added an example host.conf that
+  disables it by default. see bug 67385 for more info
 
   29 Oct 2004; Daniel Drake <dsd@gentoo.org> glibc-2.3.4.20041021.ebuild:
   Add exit condition to prevent more people running into bug 69258
