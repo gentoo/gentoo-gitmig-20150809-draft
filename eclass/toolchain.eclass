@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.33 2004/10/25 06:00:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.34 2004/10/25 17:35:52 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -499,7 +499,13 @@ create_hardened_specs_file() {
 create_hardenednossp_specs_file() {
 	pushd ${WORKDIR}/build/gcc > /dev/null
 	cp Makefile Makefile.orig
-	sed -i -e 's#ALL_CFLAGS = #ALL_CFLAGS = -DEFAULT_PIE #' Makefile
+
+	if use hardened ; then
+		sed -i -e 's#ALL_CFLAGS = -DEFAULT_PIE_SSP#ALL_CFLAGS = -DEFAULT_PIE#' Makefile
+	else
+		sed -i -e 's#ALL_CFLAGS = #ALL_CFLAGS = -DEFAULT_PIE #' Makefile
+	fi
+	
 	mv xgcc xgcc.moo
 	mv gcc.o gcc.o.moo
 	make xgcc
@@ -1179,7 +1185,11 @@ create_gcc_env_entry() {
 
 	if [ "$1" == "" ] ; then
 		gcc_envd_file="${D}${gcc_envd_base}"
-		gcc_specs_file="${LIBPATH}/specs"
+		# I'm leaving the following commented out to remind me that it
+		# was an insanely -bad- idea. Stuff broke. GCC_SPECS isnt unset
+		# on chroot or in non-toolchain.eclass gcc ebuilds!
+		#gcc_specs_file="${LIBPATH}/specs"
+		gcc_specs_file=""
 	else
 		gcc_envd_file="${D}${gcc_envd_base}-$1"
 		gcc_specs_file="${LIBPATH}/$1.specs"
@@ -1213,7 +1223,7 @@ create_gcc_env_entry() {
 	echo "CC=\"gcc\"" >> ${gcc_envd_file}
 	echo "CXX=\"g++\"" >> ${gcc_envd_file}
 	# Set which specs file to use
-	echo "GCC_SPECS=\"${gcc_specs_file}\"" >> ${gcc_envd_file}
+	[ -n "${gcc_specs_file}" ] && echo "GCC_SPECS=\"${gcc_specs_file}\"" >> ${gcc_envd_file}
 }
 
 toolchain_src_install() {
