@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0a.ebuild,v 1.1 2004/01/21 17:56:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0a.ebuild,v 1.2 2004/01/21 21:24:57 agriffis Exp $
 
 DESCRIPTION="Library for build EFI Applications"
 SRC_URI="ftp://ftp.hpl.hp.com/pub/linux-ia64/gnu-efi-3.0a.tar.gz"
@@ -30,6 +30,6 @@ src_compile() {
 }
 
 src_install() {
-	make install INSTALLROOT=${D} || die "einstall failed"
+	make install INSTALLROOT=${D}/usr || die "einstall failed"
 	dodoc README* ChangeLog
 }
