@@ -5,3 +5,10 @@
 #MOUSE=ps2
 #MOUSEDEV=/dev/psaux
 
+
+# Extra settings
+
+#RESPONSIVENESS=
+#REPEAT_TYPE=raw
+#APPEND="-g 1 -A 60"
+
