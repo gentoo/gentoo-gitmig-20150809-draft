@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/opendchub
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/ChangeLog,v 1.10 2004/10/18 12:31:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/ChangeLog,v 1.11 2004/11/27 15:59:34 squinky86 Exp $
+
+*opendchub-0.7.14-r2 (27 Nov 2004)
+
+  27 Nov 2004; Jon Hood <squinky86@gentoo.org> +files/0.7.14-overflow.patch,
+  -opendchub-0.7.14-r1.ebuild, +opendchub-0.7.14-r2.ebuild:
+  Fix buffer overflow, #72371. Thanks JG <jg@cms.ac> and lewk.
 
   18 Oct 2004; Jason Wever <weeve@gentoo.org> opendchub-0.7.14-r1.ebuild:
   Added ~sparc keyword, resolves bug #66923.
