@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.9.0.20040529.ebuild,v 1.3 2004/06/24 22:17:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.9.0.20040529.ebuild,v 1.4 2004/06/28 19:54:59 agriffis Exp $
 
 inherit enlightenment eutils
 
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 	http://wh0rd.de/gentoo/distfiles/extraicons-1.tar.bz2"
 #	http://www.atmos.org/files/gentooed-src.tar.gz"
 
-IUSE="${IUSE} pam"
+IUSE="pam"
 
 DEPEND="virtual/x11
 	pam? ( sys-libs/pam )
@@ -19,7 +19,8 @@ DEPEND="virtual/x11
 	>=x11-libs/evas-1.0.0.20040501_pre13
 	>=x11-libs/ecore-1.0.0.20040501_pre7
 	>=media-libs/edje-0.5.0.20040501
-	>=x11-libs/esmart-0.0.2.20040501"
+	>=x11-libs/esmart-0.0.2.20040501
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	enlightenment_src_unpack
