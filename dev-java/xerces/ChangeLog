@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.9 2003/04/06 08:19:27 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.10 2003/05/26 09:36:45 absinthe Exp $
+
+*xerces-2.3.0-r1 (26 May 2003)
+
+  26 May 2003; Dylan Carlson <absinthe@gentoo.org> xerces-2.3.0-r1.ebuild,
+  files/xerces-2.3.0-gentoo.diff:
+  Update to include fix for Blackdown compile bug, addressed by Voicu Liviu
+  <pacman@huji.ac.il> in #20712 (thank you). Also closes #17765.
 
 *xerces-2.3.0 (09 Mar 2003)
 
