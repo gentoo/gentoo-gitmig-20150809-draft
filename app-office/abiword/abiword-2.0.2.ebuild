@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.2.ebuild,v 1.6 2004/06/24 22:38:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.2.ebuild,v 1.7 2004/07/01 13:08:16 agriffis Exp $
 
 inherit eutils
 
-IUSE="spell jpeg xml2 gnome"
+IUSE="debug gnome jpeg spell xml2"
 
 S=${WORKDIR}/${P}/abi
 S_P=${WORKDIR}/${P}/${PN}-plugins
