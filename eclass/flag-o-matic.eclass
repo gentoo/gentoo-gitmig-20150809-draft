@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.12 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.13 2003/03/04 22:07:17 verwilst Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -28,6 +28,9 @@ INHERITED="$INHERITED $ECLASS"
 #### get-flag <flag> ####
 # Find and echo the value for a particular flag
 #
+
+ALLOWED_FLAGS="-O -mcpu -march -pipe -g"
+
 
 filter-flags () {
 
@@ -70,8 +73,6 @@ strip-flags() {
 
 	local NEW_CFLAGS=""
 	local NEW_CXXFLAGS=""
-
-	local ALLOWED_FLAGS="-O -mcpu -march -pipe -g"
 
 	set -f
 
