@@ -11,7 +11,7 @@ MD5 b7b3e490432793c593c9694f882a2163 files/digest-jswat-1.7.1-r1 64
 MD5 5fb69786d5458d626f0c04fd59d7be5b files/jswat 1411
 MD5 bb970d9369dc57864ae0ae76592073fe files/digest-jswat-2.25 67
 MD5 5cbb19f7d395ac847f9ab66bfc86262c files/build.xml.patch 677
-MD5 3be563eb063dd525ba47a212c354c047 files/jswat2 1215
+MD5 56036ddb69a86ea3ef40cb26fd444257 files/jswat2 1225
 MD5 52d53eb4cc81c586df4ba5b11dc5a682 files/digest-jswat-2.21-r1 67
 MD5 bb970d9369dc57864ae0ae76592073fe files/digest-jswat-2.25-r1 67
 MD5 dfdb6d1b85d8fbb055bd57e6bc30aab2 files/2.21/jswat2 1220
@@ -19,7 +19,7 @@ MD5 070f409edc50e7b85e80227e51af7a5f files/2.21/build.xml.diff 730
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBTcuP/rLF9B432nYRAgGZAJ0Q1jWzcNuON9eiwIJTcbl0NgQ39wCgxhbz
-v0d9lb5dkSv7tQvsnHXLG2k=
-=JMBY
+iD8DBQFBTc10/rLF9B432nYRAgY8AJ9Y8qLB9iYxYJAbN2KFLfZ4lU+P2QCgjesP
+aVc/BqF9nf9s7bRVsS6MVvw=
+=MID4
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 #!/bin/sh
 # jswat Launch Script
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/files/jswat2,v 1.4 2004/08/27 10:12:52 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/files/jswat2,v 1.5 2004/09/19 18:18:12 axxo Exp $
 
 JSWAT_VER="2"
 
@@ -8,7 +8,7 @@ JAVA_HOME=`/usr/bin/java-config --jdk-home`
 if [ -z "${JAVA_HOME}" ] ; then
 	JAVA_HOME=`/usr/bin/java-config --jre-home`
 fi
-CLASSPATH="${JAVA_HOME}/lib/tools.jar:`/usr/bin/java-config --classpath=jswat-${JSWAT_VER}`:${CLASSPATH}"
+CLASSPATH="${JAVA_HOME}/lib/tools.jar:`/usr/bin/java-config --classpath=jswat-${JSWAT_VER},jclasslib`:${CLASSPATH}"
 
 if [ ! -f ${JAVA_HOME}/bin/java ] ; then
 	echo " "
