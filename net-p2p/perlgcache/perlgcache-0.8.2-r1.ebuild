@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/perlgcache/perlgcache-0.8.2.ebuild,v 1.1 2004/10/08 04:46:09 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/perlgcache/perlgcache-0.8.2-r1.ebuild,v 1.1 2004/10/11 19:43:31 squinky86 Exp $
 
 inherit webapp
 
@@ -29,7 +29,7 @@ pkg_preinst() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i -e 's:\"data\":\"data/data\":g' perlgcache.cgi
+	sed -i -e 's:\#\$config{prefix} = \"data\":\$config{prefix} = \"data/data\":g' perlgcache.conf
 }
 
 src_install() {
@@ -37,6 +37,7 @@ src_install() {
 	dodir ${MY_CGIBINDIR}/${PN}
 	dodir ${MY_CGIBINDIR}/${PN}/data
 	cp ./perlgcache.cgi ${D}/${MY_CGIBINDIR}/${PN}
+	cp ./perlgcache.conf ${D}/${MY_CGIBINDIR}/${PN}
 	chmod +x ${D}/${MY_CGIBINDIR}/${PN}/perlgcache.cgi
 	keepdir ${D}/${MY_CGIBINDIR}/${PN}/data
 	webapp_hook_script ${FILESDIR}/reconfig
