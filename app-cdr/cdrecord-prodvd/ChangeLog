@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/cdrecord-prodvd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.8 2004/08/24 02:56:51 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.9 2004/08/24 03:02:40 pylon Exp $
+
+*cdrecord-prodvd-2.01_alpha27-r1 (24 Aug 2004)
+
+  24 Aug 2004; Lars Weiler <pylon@gentoo.org>
+  +cdrecord-prodvd-2.01_alpha27-r1.ebuild,
+  -cdrecord-prodvd-2.01_alpha27.ebuild:
+  It's better to automatically reemerge, so that the current cdrecord-wrapper.sh
+  gets installed.
 
 *cdrecord-prodvd-2.01_beta31 (24 Aug 2004)
 

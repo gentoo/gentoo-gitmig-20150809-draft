@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/cdrecord-prodvd-2.01_alpha27.ebuild,v 1.4 2004/08/20 09:13:28 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/cdrecord-prodvd-2.01_alpha27-r1.ebuild,v 1.1 2004/08/24 03:02:40 pylon Exp $
 
 X86_FILENAME="cdrecord-prodvd-2.01a27-i686-pc-linux-gnu"
 
