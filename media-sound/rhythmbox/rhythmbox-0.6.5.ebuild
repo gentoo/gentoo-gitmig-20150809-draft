@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.5.ebuild,v 1.3 2004/02/25 18:43:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.5.ebuild,v 1.4 2004/03/18 16:03:36 leonardop Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://web.rhythmbox.org/"

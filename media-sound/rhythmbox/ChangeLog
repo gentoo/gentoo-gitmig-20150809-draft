@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.33 2004/03/06 17:30:29 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.34 2004/03/18 16:03:36 leonardop Exp $
+
+  18 Mar 2004; L. Boshell <leonardop@gentoo.org> rhythmbox-0.6.5.ebuild:
+  Inherit from eutils.
 
   06 Mar 2004; foser <foser@gentoo.org> rhythmbox-0.6.8.ebuild :
   Fixed flac switch, so it now actually works the way it should
