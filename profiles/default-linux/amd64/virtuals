@@ -1,4 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/virtuals,v 1.4 2004/06/26 23:29:25 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/virtuals,v 1.5 2004/07/27 00:06:08 malc Exp $
 virtual/ruby		dev-lang/ruby
+virtual/mailx		mail-client/mailx
+

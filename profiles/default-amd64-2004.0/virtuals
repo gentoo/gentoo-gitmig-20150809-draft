@@ -64,3 +64,4 @@ virtual/dev-manager	sys-fs/devfsd
 virtual/blas		app-sci/blas-atlas
 virtual/lapack		app-sci/lapack-atlas
 virtual/gsasl		net-libs/libgsasl
+virtual/mailx		mail-client/mailx

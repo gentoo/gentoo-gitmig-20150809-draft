@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.1/virtuals,v 1.7 2004/07/10 00:33:10 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.1/virtuals,v 1.8 2004/07/27 00:06:08 malc Exp $
 
 # Virtuals specific to the Gentoo/amd64 2004.0 release
 
@@ -15,6 +15,8 @@ virtual/logger			app-admin/sysklogd
 virtual/modutils		sys-apps/module-init-tools
 virtual/os-headers		sys-kernel/linux26-headers
 virtual/winkernel		sys-kernel/win4lin-sources
+virtual/mailx			mail-client/mailx
+
 
 # Package Remapping
 sys-apps/reiserfs-utils		sys-fs/reiserfsprogs
