@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.55 2004/05/13 15:49:40 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.56 2004/05/13 16:08:15 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -305,6 +305,7 @@ src_install() {
 		dobin src/gvim
 		dosym gvim /usr/bin/gvimdiff
 		dosym gvim /usr/bin/evim
+		dosym gvim /usr/bin/eview
 		insinto /etc/vim
 		doins ${FILESDIR}/gvimrc
 	else
