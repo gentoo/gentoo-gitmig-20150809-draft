@@ -1,0 +1,12 @@
+# ChangeLog for x11-plugins/gkrellm-pmu
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-pmu/ChangeLog,v 1.1 2003/12/05 03:48:02 pylon Exp $
+
+*gkrellm-pmu-2.0 (05 Dec 2003)
+
+  05 Dec 2003; Lars Weiler <pylon@gentoo.org> gkrellm-pmu-2.0.ebuild:
+  Initial import.
+  
+  This GKrellm2-plugin is currently only for Apple-laptop users. This allows
+  you to control your battery without apm-emulation enabled.
+
