@@ -20,9 +20,3 @@ MD5 0bb65304895dd012bebfc692fbd48af1 files/1.4.2/j2sdk-1.4.2-pthread.patch 1624
 MD5 276f4ce091acd44428e36c15de66f7d1 files/1.4.2/j2sdk-1.4.2-gcc3.3-fixes.patch 4176
 MD5 df6db4b858ad836d290f1862857622d9 files/1.4.2/j2sdk-1.4.2-remove-fixed-paths.patch 4525
 MD5 7c7b6039ae92a59953775ddb8d8b93c8 files/1.4.2/j2sdk-1.4.2-force-motif.patch 3137
-MD5 cfe7807401a123893c6bc78aa3ffd170 files/patches/j2sdk-1.4.0-fix-intl-files.patch.bz2 826
-MD5 553a29526471461a8dd0b889ec0ee7d1 files/patches/j2sdk-1.4.0-remove-fixed-paths.patch.bz2 1455
-MD5 70c3f7f9a5a49d7d52283541da221e1f files/patches/j2sdk-1.4.0-gcc3-syntax.patch.bz2 1582
-MD5 2133d3d4a54ea1db1ce04d72beecb031 files/patches/j2sdk-1.4.0-link-jpda-2-libjvm.patch.bz2 337
-MD5 266d66824fd48d8590da4aaae84bcd60 files/patches/j2sdk-1.4.0-glibc-2.3.1-fixes.patch.bz2 863
-MD5 061f6c0bace8a70fb12b69a2e18ea1b1 files/patches/j2sdk-1.4.0-disable-sanity-check.patch.bz2 450
