@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.96.0.ebuild,v 1.1 2003/01/28 19:21:07 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.96.0.ebuild,v 1.2 2003/02/02 03:26:01 raker Exp $
 
 IUSE="sdl ssl"
 inherit gnome2
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnomemeeting.org"
 DESCRIPTION="Gnome NetMeeting client"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc -sparc "
+KEYWORDS="x86 ~ppc -sparc "
 DEPEND="=dev-libs/pwlib-1.4.7*
 	=net-libs/openh323-1.11.2*
 	>=net-nds/openldap-2.0.25

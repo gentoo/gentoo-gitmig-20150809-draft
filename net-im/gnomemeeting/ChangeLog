@@ -4,6 +4,9 @@
 
 *gnomemeeting-0.96.0 (28 Jan 2003)
 
+  01 Feb 2003; Nick Hadaway <raker@gentoo.org> gnomemeeting-0.96.0.ebuild :
+  Marked stable.
+
   28 Jan 2003; Nick Hadaway <raker@gentoo.org> gnomemeeting-0.96.0.ebuild,
   files/digest-gnomemeeting-0.96.0 :
   Version bump. :)
