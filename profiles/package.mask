@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3346 2004/11/25 23:34:44 lv Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3347 2004/11/25 23:47:51 swegener Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <swegener@gentoo.org> (25 Nov 2004)
+# xchatosd currently breaks xchat
+net-irc/xchatosd
 
 # <chriswhite@gentoo.org> (25 Nov 2004)
 # media-video/bcast who commited this!?
