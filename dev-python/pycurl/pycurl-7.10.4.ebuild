@@ -1,21 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.10.4.ebuild,v 1.7 2004/03/28 11:31:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.10.4.ebuild,v 1.8 2004/03/29 00:46:44 vapier Exp $
 
 inherit distutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="python binding for curl/libcurl"
+HOMEPAGE="http://pycurl.sourceforge.net/"
 SRC_URI="http://pycurl.sourceforge.net/download/00-OLD-VERSIONS/${P}.tar.gz"
-HOMEPAGE="http://pycurl.sourceforge.net"
 
-IUSE=""
-SLOT="0"
 LICENSE="LGPL-2.1"
+SLOT="0"
 KEYWORDS="x86 sparc"
 
 DEPEND=">=dev-lang/python-2.1.1
-		>=net-ftp/curl-${PV}"
+	>=net-misc/curl-${PV}"
 
 src_install(){
 	mydoc="TODO"
