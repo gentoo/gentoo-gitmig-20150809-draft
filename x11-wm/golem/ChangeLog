@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/golem
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/golem/ChangeLog,v 1.7 2004/03/02 08:32:38 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/golem/ChangeLog,v 1.8 2004/06/19 05:55:06 weeve Exp $
+
+  18 Jun 2004; Jason Wever <weeve@gentoo.org> golem-0.0.5-r1.ebuild:
+  Stable on sparc.
 
   04 Nov 2003; Brandon Hale <tseng@gentoo.org> golem-0.0.5-r1.ebuild,
   metadata.xml:
