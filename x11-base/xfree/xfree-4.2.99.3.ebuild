@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.3 2002/11/14 09:43:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.4 2002/12/07 08:25:59 seemant Exp $
 
 IUSE="3dfx"
 
-FT2_VER=2.0.9
+FT2_VER=2.1.2
 MY_V=${PV}
 S=${WORKDIR}/xc
 DESCRIPTION="Xfree86: famous and free X server"
@@ -53,10 +53,10 @@ src_unpack () {
 	# Deploy our custom freetype2.  We want it static for stability,
 	# and because some things in Gentoo depends the freetype2 that
 	# is distributed with XFree86.
-#	unpack freetype-${FT2_VER}.tar.bz2
-#	cd ${S}/extras/freetype2
-#	rm -rf *
-#	mv ${WORKDIR}/freetype-${FT2_VER}/* .
+	unpack freetype-${FT2_VER}.tar.bz2
+	cd ${S}/extras/freetype2
+	rm -rf *
+	mv ${WORKDIR}/freetype-${FT2_VER}/* .
 	# Enable hinting for truetype fonts
 	cd ${S}/extras/freetype2/include/freetype/config
 	cp ftoption.h ftoption.h.orig
@@ -77,6 +77,7 @@ src_unpack () {
 	# Various patches from all over
 	for x in ${FILESDIR}/${PV}-patches/*.patch.bz2
 	do
+		einfo "applying ${X}"
 		bzcat ${x} | patch -p2 || die "Failed to apply ${x}!"
 	done
 
@@ -117,8 +118,22 @@ src_unpack () {
 		> ${S}/programs/Xserver/Imakefile
 
 	# Apply Xft quality patch from http://www.cs.mcgill.ca/~dchest/xfthack/
-#	cd ${S}/lib/Xft
-#	cat ${FILESDIR}/${PVR}/xft-quality.diff | patch -p1 || die
+	cd ${S}/lib/Xft
+	cat ${FILESDIR}/${PVR}/xft-quality.diff | patch -p1 || die
+
+	# LibPNG fixes
+	cd ${S}
+	cp xmakefile xmakefile.orig
+	sed "s:-lpng:-lpng -lz -lm:" \
+		xmakefile.orig > xmakefile
+
+	cd ${S}/config/cf
+	cp X11.tmpl X11.tmpl.orig
+	sed "s:-lpng:-lpng -lz -lm:" \
+		X11.tmpl.orig > X11.tmpl
+	
+	cd ${S}
+
 }
 
 src_compile() {
