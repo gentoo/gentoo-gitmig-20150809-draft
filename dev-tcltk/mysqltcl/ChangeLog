@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/mysqltcl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/ChangeLog,v 1.1 2003/06/05 06:51:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/ChangeLog,v 1.2 2003/11/27 21:33:40 robbat2 Exp $
+
+*mysqltcl-2.14-r1 (27 Nov 2003)
+
+  27 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> mysqltcl-2.14-r1.ebuild:
+  remove unneeded tk depend
 
 *mysqltcl-2.14 (04 Jun 2003)
 
