@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-6.5.6-r1.ebuild,v 1.7 2004/07/01 21:47:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-6.5.6-r1.ebuild,v 1.8 2004/07/15 03:03:10 agriffis Exp $
 
 Name="lam"
 S=${WORKDIR}/${Name}-${PV}
@@ -15,6 +15,7 @@ RDEPEND="net-misc/openssh"
 
 SLOT="6"
 KEYWORDS="x86 sparc "
+IUSE=""
 LICENSE="as-is"
 
 
@@ -53,4 +54,3 @@ src_install () {
 
 	dodoc README HISTORY LICENSE RELEASE_NOTES VERSION
 }
-
