@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r1.ebuild,v 1.2 2003/12/12 15:30:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r1.ebuild,v 1.3 2003/12/13 16:37:01 brad_mssw Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ inherit gnome.org gnome2 libtool
 DESCRIPTION="Gnome spellchecking component"
 HOMEPAGE="http://www.gnome.org/"
 
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa amd64"
 SLOT="1"
 LICENSE="GPL-2"
 
