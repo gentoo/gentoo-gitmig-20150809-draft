@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/bio2jack
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bio2jack/ChangeLog,v 1.1 2004/08/26 00:50:01 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bio2jack/ChangeLog,v 1.2 2004/08/29 20:43:30 lu_zero Exp $
+
+  29 Aug 2004; Luca Barbato <lu_zero@gentoo.org> bio2jack-0.2.ebuild:
+  marked ~ppc
 
 *bio2jack-0.2 (25 Aug 2004)
 

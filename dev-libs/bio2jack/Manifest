@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7064991b628bad6965c3ca8271a5a9a4 ChangeLog 409
+MD5 58e13bd64d61b5a5c805cfb1fa85c636 ChangeLog 493
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 d10bf6a9c813a8cfef4667322cbdd837 bio2jack-0.2.ebuild 627
+MD5 594defb00af74a3f9555b4c58c5b75a4 bio2jack-0.2.ebuild 631
 MD5 a33518480caf490fee84bd035b33fe8d files/digest-bio2jack-0.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBLTO+E67gNkjlZFIRAim5AKCycDauHXxR/kVJ0VOfMwGl3FjGeACgymrc
-IXLEQ85k5hMbD3+PmR9VUGE=
-=jokt
------END PGP SIGNATURE-----
