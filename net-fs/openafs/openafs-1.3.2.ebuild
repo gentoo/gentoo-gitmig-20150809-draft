@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /home/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.1.1.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.3.2.ebuild,v 1.13 2003/06/12 21:21:55 msterret Exp $
 
 
 S=${WORKDIR}/${P}
