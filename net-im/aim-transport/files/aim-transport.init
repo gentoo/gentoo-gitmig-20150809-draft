@@ -15,7 +15,7 @@ stop() {
 	ebegin "Stoping AIM Jabber Transport"
 	kill `cat /var/log/jabber/aim.pid`
 	sleep 2
-	if ( -f /var/log/jabber/aim.pid ); then
+	if [ -f /var/log/jabber/aim.pid ]; then
 		kill -9 `cat /var/log/jabber/aim.pid`
 		rm -f /var/log/jabber/aim.pid
 	fi
