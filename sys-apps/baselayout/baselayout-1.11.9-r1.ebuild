@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.9-r1.ebuild,v 1.2 2005/02/03 21:00:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.9-r1.ebuild,v 1.3 2005/02/06 19:53:48 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -257,15 +257,18 @@ src_install() {
 		libdirs_env="${libdirs_env}:/lib32:/usr/lib32:/usr/local/lib32"
 	fi
 
-	# List all the multilib libdirs in /etc/env/04multilib
-	echo "LDPATH=\"${libdirs_env}\"" > ${D}/etc/env.d/04multilib
+	# List all the multilib libdirs in /etc/env/04multilib (only if they're 
+	# actually different from the normal
+	if [[ $(get_libdir) != "lib" ]] ; then
+		echo "LDPATH=\"${libdirs_env}\"" > ${D}/etc/env.d/04multilib
+	fi
 
 	# As of baselayout-1.10-1-r1, sysvinit is its own package again, and
 	# provides the inittab itself
-	rm -f ${D}/etc/inittab
+	rm -f "${D}"/etc/inittab
 
 	# Stash the rc-lists for use during pkg_postinst
-	cp -r ${S}/rc-lists ${D}/usr/share/baselayout
+	cp -r "${S}"/rc-lists "${D}"/usr/share/baselayout
 
 	# uclibc doesn't need nsswitch.conf... added by solar
 	use uclibc && rm -f ${D}/etc/nsswitch.conf
