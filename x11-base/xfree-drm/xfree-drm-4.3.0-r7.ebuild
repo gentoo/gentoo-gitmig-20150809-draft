@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.12 2004/02/21 23:21:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.13 2004/02/21 23:32:51 spyderous Exp $
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
@@ -226,15 +226,21 @@ patch_prepare() {
 	then
 		einfo "Updating for mach64 build..."
 		# Exclude all non-mach64 patches
-		patch_exclude 040 1* 3*
+		einfo "Excluding patches..."
+			patch_exclude 040 1* 3*
+		einfo "Done excluding patches"
 	elif use gatos
 	then
 		einfo "Updating for gatos build..."
 		# Exclude all non-gatos patches
-		patch_exclude 010 040 1* 2*
+		einfo "Excluding patches..."
+			patch_exclude 010 040 1* 2*
+		einfo "Done excluding patches"
 	else # standard case
 		einfo "Updating for standard build..."
 		# Exclude all gatos or mach64 patches
-		patch_exclude 2* 3*
+		einfo "Excluding patches..."
+			patch_exclude 2* 3*
+		einfo "Done excluding patches"
 	fi
 }
