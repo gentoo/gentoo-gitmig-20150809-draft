@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.13-r1.ebuild,v 1.1 2004/11/05 08:33:57 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.13-r1.ebuild,v 1.2 2004/11/05 15:22:43 zypher Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -64,9 +64,9 @@ src_compile() {
 #			--with-pvm3-include=${PVM_ROOT}/include"
 
 	# Use the MPlayer libpostproc if present
-	[ -f ${ROOT}/usr/lib/libpostproc.a ] && \
+	[ -f ${ROOT}/usr/$(get_libdir)/libpostproc.a ] && \
 	[ -f ${ROOT}/usr/include/postproc/postprocess.h ] && \
-		myconf="${myconf} --with-libpostproc-builddir=${ROOT}/usr/lib"
+		myconf="${myconf} --with-libpostproc-builddir=${ROOT}/usr/$(get_libdir)"
 
 	append-flags -DDCT_YUV_PRECISION=1
 	econf \
