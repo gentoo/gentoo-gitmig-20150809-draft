@@ -5,7 +5,8 @@ MD5 48f617ae36eb2bc358dc677449b06305 dnsmasq-1.12.ebuild 815
 MD5 1eb1bb00781c19d5f1ae43b6a9304977 dnsmasq-1.13.ebuild 814
 MD5 43e94090ea26a3beec40b4882d9fa935 dnsmasq-1.14.ebuild 845
 MD5 aeb2263167262bb94874a51da5499427 dnsmasq-1.15.ebuild 851
-MD5 bcf95833373d7cf409265aac8bed7fd8 dnsmasq-1.16.ebuild 852
+MD5 e4ae96e0307eaf8265d1d251f35a9fc5 dnsmasq-1.16.ebuild 850
+MD5 75ed528e33e83ac57ce987793d740b5c metadata.xml 245
 MD5 7a7086a6c14210c8004d788ee28aca82 files/digest-dnsmasq-1.6 62
 MD5 a701fe51a3e2262f6a465d050b60b464 files/digest-dnsmasq-1.9 62
 MD5 1e594453fe8d7f266eeb174392c343f5 files/dnsmasq-init 546
