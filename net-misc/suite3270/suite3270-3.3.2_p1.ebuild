@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.2_p1.ebuild,v 1.1 2003/12/23 02:48:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.2_p1.ebuild,v 1.2 2004/03/10 13:40:55 aliz Exp $
 
 IUSE="tcltk X cjk ssl"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.geocities.com/SiliconValley/Peaks/7814/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~amd64"
 
 RDEPEND="X? ( virtual/x11 )
 		tcltk? ( dev-lang/tcl )
