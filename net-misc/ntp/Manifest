@@ -12,6 +12,6 @@ MD5 7641feb9a3c472abc04bb2f57a071d4e files/ntp-client.confd 889
 MD5 d1f80ccad5a0187312f522c8477df32a files/ntp-client.rc 837
 MD5 77b8a8aadd740fcf2818dbac8322d40f files/ntpd.confd 396
 MD5 41689b81c25f5b79ae2d5e52a18016b0 files/ntpd.rc 898
-MD5 0ef04552adc2cf9043b67a555101349e ntp-4.1.2.ebuild 2732
+MD5 9656e5d79b0b3bd743d9ff04015aeb10 ntp-4.1.2.ebuild 2830
 MD5 dbaec4ada2da67ece2df2a15079f9506 ChangeLog 4844
 MD5 c4c6d2a49d5a0cbe91dbaaf63a88f0e8 ntp-4.1.1b-r6.ebuild 1736
