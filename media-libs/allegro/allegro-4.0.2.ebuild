@@ -1,35 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.2.ebuild,v 1.7 2003/02/13 12:39:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.2.ebuild,v 1.8 2003/04/25 13:08:16 vapier Exp $
 
 inherit flag-o-matic
 
-IUSE="mmx esd static tetex X fbcon oss svga alsa"
-
-LICENSE="Allegro"
-
-S=${WORKDIR}/${P}
-DESCRIPTION="Allegro is a cross-platform multimedia library"
+DESCRIPTION="cross-platform multimedia library"
 SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 HOMEPAGE="http://alleg.sourceforge.net/"
 
-
+LICENSE="Allegro"
 SLOT="0"
-KEYWORDS="x86 sparc "
-
+KEYWORDS="x86 sparc"
+IUSE="mmx esd static tetex X fbcon oss svga alsa"
 
 RDEPEND="X? ( virtual/x11 )
 	alsa? ( media-libs/alsa-lib )
 	esd? ( media-sound/esound )
 	svga? ( media-libs/svgalib )"
-
 DEPEND="${RDEPEND}
 	tetex? ( app-text/tetex )"
 
 src_compile() {
-	
-	use tetex
-	
 	# Always enable Linux console support and accompanying drivers
 	confopts="${confopts} --enable-linux --enable-vga"
 	
@@ -106,8 +97,7 @@ src_compile() {
 	
 }
 
-src_install () {
-	
+src_install() {
 	make \
 		prefix=${D}/usr \
 		infodir=${D}/usr/share/info \
