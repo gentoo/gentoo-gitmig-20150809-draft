@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docbook-sgml
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml/ChangeLog,v 1.13 2004/07/30 03:08:29 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml/ChangeLog,v 1.14 2004/10/18 16:35:49 usata Exp $
+
+  19 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> docbook-sgml-1.0.ebuild:
+  Fixed missing dependencies; bug #60821.
 
   29 Jul 2004; Tom Gall <tgall@gentoo.org> docbook-sgml-1.0.ebuild:
   stable on ppc64, bug #55676

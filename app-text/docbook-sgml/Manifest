@@ -1,4 +1,14 @@
-MD5 ee55dcd5c42e9e5cd03587e382bda0d5 ChangeLog 1514
-MD5 186497b0176276880e24e8e2ca40b831 docbook-sgml-1.0.ebuild 638
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 76568cc1eda92bc363262ababff4fa52 ChangeLog 1631
+MD5 e4573e1b020b7de59d276b06828a67e9 docbook-sgml-1.0.ebuild 626
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-docbook-sgml-1.0 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBc++TVWNWqTUmv+0RAvIdAJkBaOreDwK0+vq9ZOZdCDn7nQV39gCfSKSQ
+IHj/Hg7Z/h9tJZpNq4WU+0M=
+=8MNs
+-----END PGP SIGNATURE-----
