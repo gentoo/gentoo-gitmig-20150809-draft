@@ -1,19 +1,30 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.4 2002/04/17 04:27:38 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.5 2002/05/04 03:16:38 woodchip Exp $
+
+*ethereal-0.9.3-r1 (3 May 2002)
+  
+  3 May 2002; Donny Davies <woodchip@gentoo.org> :
+  
+  Added LICENSE, SLOT.
 
 *ethereal-0.9.3 (16 Apr 2002)
-  16 Apr 2002; Ryan Phillips <rphillips@gentoo.org>
+
+  16 Apr 2002; Ryan Phillips <rphillips@gentoo.org> :
+
   Change URLs to point to correct web address. (#1851)
 
 *ethereal-0.9.3 (11 Apr 2002)
-  11 Apr 2002; Spider <spider@gentoo.org>
+
+  11 Apr 2002; Spider <spider@gentoo.org> :
+
   Update all glib dependencies to use glib-1.2*  in preparation of unmasking the glib-2.0.1 packages
   
 *ethereal-0.9.3 (04 Feb 2002)
-  04 Feb 2002; Spider <spider@gentoo.org>
-  Update to the latest version, closing bug 1439
 
+  04 Feb 2002; Spider <spider@gentoo.org> :
+
+  Update to the latest version, closing bug 1439
 
 *ethereal-0.9.0 (1 Feb 2002)
 
