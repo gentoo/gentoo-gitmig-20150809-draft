@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsmtp
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsmtp/ChangeLog,v 1.1 2004/12/22 14:23:51 ka0ttic Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsmtp/ChangeLog,v 1.2 2005/01/25 11:43:22 ka0ttic Exp $
+
+  25 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> libsmtp-0.8.ebuild:
+  Marked stable on x86.
 
 *libsmtp-0.8 (22 Dec 2004)
 
