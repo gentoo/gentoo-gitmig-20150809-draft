@@ -1,6 +1,11 @@
 # ChangeLog for net-im/kmess
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.16 2004/06/28 20:36:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.17 2004/11/24 23:35:59 motaboy Exp $
+
+  25 Nov 2004; Simone Gotti <motaboy@gentoo.org> +metadata.xml,
+  +files/kmess-1.3-compilation-fix.patch, kmess-1.3.ebuild:
+  Added a patch to fix various compilation problems. Fixes bug #62793. Also
+  added missing metadata.xml.
 
   28 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kmess-1.2.1.ebuild,
   kmess-1.3.ebuild:
