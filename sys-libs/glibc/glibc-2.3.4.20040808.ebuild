@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.7 2004/08/11 21:39:24 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.8 2004/08/12 17:19:27 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -31,6 +31,7 @@ HPPA_PATCHES=2004-06-04
 
 SRC_URI="http://dev.gentoo.org/~lv/${PN}-${BASE_PV}.tar.bz2
 	http://dev.gentoo.org/~lv/${PN}-manpages-${NEW_PV}.tar.bz2
+	http://dev.gentoo.org/~lv/glibc-infopages-${NEW_PV}.tar.bz2
 	hppa? ( http://parisc-linux.org/~carlos/glibc-work/glibc-hppa-patches-${HPPA_PATCHES}.tar.gz )"
 
 [ ! -z "${BRANCH_UPDATE}" ] && SRC_URI="${SRC_URI}
@@ -468,10 +469,6 @@ src_unpack() {
 	cd ${S}/man
 	unpack ${PN}-manpages-${NEW_PV}.tar.bz2
 	cd ${S}
-	# Remove all info files, as newer versions have about 10 libc info pages,
-	# but older release tarballs have about 50, giving us a lot of unneeded
-	# crap laying around ...
-	rm -f ${S}/manual/*.info*
 
 	if [ -n "${BRANCH_UPDATE}" ]; then
 		epatch ${DISTDIR}/${PN}-${NEW_PV}-branch-update-${BRANCH_UPDATE}.patch.bz2
@@ -482,6 +479,9 @@ src_unpack() {
 	fi
 	# Version patch
 	sed -i -e "s:\(#define VERSION\).*:\1 \"${NEW_PV}\":" version.h
+
+	# pre-generated info pages
+	unpack glibc-infopages-2.3.4.tar.bz2
 
 	epatch ${FILESDIR}/glibc-sec-hotfix-20040804.patch
 
