@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-shn/xmms-shn-2.2.3.ebuild,v 1.1 2001/02/03 04:15:51 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-shn/xmms-shn-2.2.3.ebuild,v 1.2 2001/02/03 04:58:56 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="This input plugin allows xmms to play .shn compressed (lossless) files"
@@ -14,19 +14,18 @@ src_unpack() {
 }
 
 src_compile() {     
-	local myconf
 	if [ "`use gnome`" ]
 	then
-	  myconf="--prefix=/opt/gnome"
+	  echo /opt/gnome > ${T}/mydest
 	else
-	  myconf="--prefix=/usr/X11R6"
+	  echo /usr/X11R6 > ${T}/mydest
 	fi
-	try ./configure $myconf --host=${CHOST}
+	try ./configure --prefix=`cat ${T}/mydest` --host=${CHOST}
 	try make
 }
 
 src_install() {                               
-	try make DESTDIR=${D} install
+	try make DESTDIR=${D} libdir=`cat ${T}/mydest`/lib/xmms/Input install
 	dodoc AUTHORS COPYING NEWS README
 }
 
