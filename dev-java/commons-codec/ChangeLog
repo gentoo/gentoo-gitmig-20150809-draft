@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/commons-codec
-# Copyright 2000-2004 Gentoo Foundation; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.8 2004/08/13 21:30:18 zx Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributedr unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.9 2004/09/29 23:59:23 swegener Exp $
 
   13 Aug 2004; Chris Aniszczyk <zx@gentoo.org> -commons-codec-1.2.ebuild:
   Clean up

@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/commons-primitives
-# Copyright 2000-2004 Gentoo Foundation; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.4 2004/06/27 16:56:03 zx Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.5 2004/09/29 23:53:01 swegener Exp $
 
   27 Jun 2004; Chris Aniszczyk <zx@gentoo.org> commons-primitives-1.0.ebuild:
   Marking stable on x86
