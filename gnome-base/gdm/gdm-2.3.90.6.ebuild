@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.3.90.6.ebuild,v 1.1 2002/06/05 10:50:43 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.3.90.6.ebuild,v 1.2 2002/06/05 16:59:35 spider Exp $
 
 DESCRIPTION="GNOME2 Display Manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -111,6 +111,7 @@ src_install() {
 	    -e "s:GtkRC=/opt/gnome/share/themes/Default/gtk/gtkrc:GtkRC=/usr/share/themes/Default/gtk/gtkrc:g" \
 	    -e "s:BackgroundColor=#007777:BackgroundColor=#2a3f5b:g" \
 	    -e "s:TitleBar=true:TitleBar=false:g" \
+		-e "s:Greeter=/usr/bin/gdmlogin:Greeter=/usr/bin/gdmgreeter:g" \
 		gdm.conf.orig > gdm.conf
 
 	rm gdm.conf.orig

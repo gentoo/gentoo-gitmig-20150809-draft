@@ -1,10 +1,12 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.7 2002/06/05 10:50:43 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.8 2002/06/05 16:59:35 spider Exp $
 
 *gdm-2.3.90.6 (5 June 2002)
   5 June 2002; Gabriele Giorgetti <stroke@gentoo.org> gdm-2.3.90.6.ebuild :
-  New version
+  New version.
+    This time we install the cute greeter as default
+
 
 *gdm-2.3.90.4 (29 May 2002)
   29 May 2002; Spider <spider@gentoo.org> gdm-2.3.90.4.ebuild :
