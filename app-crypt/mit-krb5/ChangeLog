@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.55 2004/10/20 11:55:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.56 2004/10/25 12:07:49 klieber Exp $
+
+  25 Oct 2004; Kurt Lieber <klieber@gentoo.org> mit-krb5-1.3.4-r1.ebuild:
+  x86 bumpage, #66359
 
   20 Oct 2004; Guy Martin <gmsoft@gentoo.org> mit-krb5-1.3.4-r1.ebuild:
   Stable on hppa.
