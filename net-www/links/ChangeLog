@@ -1,7 +1,13 @@
 # ChangeLog for net-www/links
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.11 2002/07/21 15:54:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.12 2002/07/22 18:08:48 naz Exp $
 
+  22 Jul 2002; Michael Nazaroff <naz@gentoo.org> links-0.96-r2.ebuild :
+
+  Added a patch to fix links 0.96 compiling against gpm, since the previous
+  version still did even with -gpm set in USE.  Thanx to Christopher Horler for
+  the excellent patch and ebuild. This fix's bug 5351.
+  
   21 Jul 2002; Seemant Kulleen <seemant@gentoo.org> links-2.1_pre2-r1.ebuild
 
   changed --disable-graphics to --without-graphics.  Fix submitted by:
