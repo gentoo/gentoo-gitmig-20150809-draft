@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/xvkbd-2.6.ebuild,v 1.1 2004/06/13 04:34:52 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/xvkbd-2.6.ebuild,v 1.2 2004/06/13 06:59:52 dholm Exp $
 
 DESCRIPTION="virtual keyboard for X window system"
 HOMEPAGE="http://homepage3.nifty.com/tsato/xvkbd/"
@@ -8,7 +8,7 @@ SRC_URI="http://homepage3.nifty.com/tsato/xvkbd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/x11
