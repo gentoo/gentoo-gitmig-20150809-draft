@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.31 2004/09/22 17:07:29 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.32 2004/11/04 01:41:03 geoman Exp $
+
+  03 Nov 2004; Stephen P. Becker <geoman@gentoo.org>
+  libsndfile-1.0.10.ebuild:
+  added ~mips keyword
 
   22 Sep 2004; kito@gentoo.org libsndfile-1.0.10.ebuild:
   ~ppc-macos keyword
