@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1011 2005/03/15 22:10:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1012 2005/03/16 12:52:58 ka0ttic Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -494,6 +494,7 @@ net-analyzer/snort:flexresp - Enable connection tearing (not recommended)
 net-analyzer/snort:inline - Enable snort-inline for accepting packets from iptables, via libipq, rather than libpcap.
 net-analyzer/snort:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/snort:snortsam - patches snort for use with snortsam
+net-analyzer/tcpreplay:pcapnav - Enable if you want the jump to byte offset feature via libpcapnav
 net-dialup/freeradius:frascend - Enable ascend binary mode
 net-dialup/freeradius:frlargefiles - Enable large file support
 net-dialup/freeradius:frnothreads - Disable thread support
