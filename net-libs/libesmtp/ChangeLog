@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libesmtp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.18 2004/09/03 01:14:59 ticho Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.19 2005/01/14 20:12:01 ticho Exp $
+
+  14 Jan 2005; Andrej Kacian <ticho@gentoo.org> libesmtp-1.0.1.ebuild,
+  libesmtp-1.0.3.ebuild:
+  Stable on x86.
 
 *libesmtp-1.0.3 (03 Sep 2004)
 
