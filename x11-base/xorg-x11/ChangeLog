@@ -1,6 +1,23 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.204 2004/11/15 19:46:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.205 2004/11/17 06:01:29 spyderous Exp $
+
+  16 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r2.ebuild:
+  PATCH_VER 0.2.7. Update Newport acceleration patch to
+  5200_all_6.8.0-newport-accel-v2.patch. This fixes an error "structure has no
+  member named `PUToScreenTextureDstFormats'," which should start with CPU,
+  not PU. It also moves the autoloading of the xaa module around (#38549).
+  Newport acceleration patch is by Dominik Behr, with mods by Adam Jackson.
+  Drop 0155_all_4.3.0-Xi-Xinitthreads-locking-bug.patch. It was fixed in an
+  alternate way in the release, and this was causing problems with totem and
+  kaffeine (#64929, #59746, maybe #60131). Add
+  6100_all_6.8.0-xnest-uninitialized-GetWindowPixmap.patch (#70431). Alexander
+  Gottwald says on fd.o #1404: "pScreen->GetWindowPixmap is never initialized
+  in Xnest startup and contains random data. After some server resets it
+  crashes with segfault because pScreen->GetWindowPixmap is called but is not
+  a valid function. A quick fix was to set the complete ScreenRec structure to
+  null after allocating it in dix/main.c (AddScreen)."
 
   15 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r1.ebuild, xorg-x11-6.8.0-r2.ebuild:
