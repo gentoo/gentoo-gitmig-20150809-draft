@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3512 2005/01/21 14:38:12 nakano Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3513 2005/01/21 17:23:29 ciaranm Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -958,10 +958,6 @@ dev-lisp/cl-rsm-genetic-alg
 # <axxo@gentoo.org> (Aug 1 2004)
 # Untill 1.5 jdk is unmasked
 =x11-misc/lookingglass-bin-0.5
-
-# <ciaranm@gentoo.org> (Jul 26 2004)
-# Mask kvim until vim7 is out. See bug #56992 for details.
-=app-editors/kvim-6*
 
 # <robbat2@gentoo.org> (19 July 2004)
 # Mask because it seems broken.
