@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.5 2004/11/07 01:42:54 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.6 2004/12/29 10:26:33 ka0ttic Exp $
 #
 # Simple eclass that provides an interface for installing
 # contributed (ie not included in bash-completion proper)
@@ -19,16 +19,20 @@ IUSE="${IUSE} bash-completion"
 #RDEPEND="${RDEPEND}
 #	bash-completion? ( app-shells/bash-completion-config )"
 
+##### VARIABLES #####
+[[ -z "${BASH_COMPLETION_NAME}" ]] && BASH_COMPLETION_NAME="${PN}"
+
 # dobashcompletion <file> <new file>
 #	First arg, <file>, is required and is the location of the bash-completion
 # script to install.  Second arg, <new file>, is optional and specifies an
 # alternate filename to install as.
 
 dobashcompletion() {
-	[ -z "$1" ] && die "usage: dobashcompletion <file> <new file>"
+	[[ -z "$1" ]] && die "usage: dobashcompletion <file> <new file>"
+	[[ -n "$2" ]] && export BASH_COMPLETION_NAME="$2"
 	if useq bash-completion ; then
 		insinto /usr/share/bash-completion
-		newins "$1" "${2:-${1##*/}}" || die "Failed to install $1"
+		newins "$1" "${BASH_COMPLETION_NAME}" || die "Failed to install $1"
 	fi
 }
 
@@ -41,16 +45,16 @@ bash-completion_pkg_postinst() {
 		# once it goes stable and can be used as a dependency.
 		if has_version 'app-shells/bash-completion-config' ; then
 			einfo
-			einfo "  bash-completion-config --install ${PN}"
+			einfo "  bash-completion-config --install ${BASH_COMPLETION_NAME}"
 			einfo
 			einfo "to install locally, or"
 			einfo
-			einfo "  bash-completion-config --global --install ${PN}"
+			einfo "  bash-completion-config --global --install ${BASH_COMPLETION_NAME}"
 			einfo
 			einfo "to install system-wide."
 			einfo "Read bash-completion-config(1) for more information."
 		else
-			einfo "  ln -s /usr/share/bash-completion/${PN} \\ "
+			einfo "  ln -s /usr/share/bash-completion/${BASH_COMPLETION_NAME} \\ "
 			einfo "    /etc/bash_completion.d/"
 		fi
 		echo
