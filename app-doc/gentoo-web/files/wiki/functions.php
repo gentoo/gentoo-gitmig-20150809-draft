@@ -141,7 +141,7 @@ global $uid, $dbusername, $show_privates, $list, $teams; ?>
 				<?php
 				reset( $teams );
 				while ( $each = each($teams) ) {
-					if ($each==0||$each==1) continue; ?>
+					if ($each['key']==0||$each['key']==1) continue; ?>
 				<li><a href="teams.php?team=<?=$each['key'];?>"><?=$each['value'];?></a>
 				<?php } ?>
 			</ul>
