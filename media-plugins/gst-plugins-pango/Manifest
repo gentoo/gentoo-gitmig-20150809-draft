@@ -1,4 +1,14 @@
-MD5 8302e0895b7a6f14025b38a8058914f1 ChangeLog 529
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 eb1369c96091501c39546b49a7a01a23 ChangeLog 642
+MD5 6f59ae92dbb0b81b182584e892ba7501 gst-plugins-pango-0.8.8.ebuild 336
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
-MD5 b1776fba4903e839008a0645049e1418 gst-plugins-pango-0.8.8.ebuild 328
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-pango-0.8.8 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCTFjUKRy60XGEcJIRAlhRAJ9TJ4t7i4bYr854/+yFTmOiXjxEwQCghJpB
+6X9p2YcQ1y2sulybP1GYzrM=
+=XWgG
+-----END PGP SIGNATURE-----
