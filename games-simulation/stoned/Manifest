@@ -1,3 +1,4 @@
-MD5 c675ce3f928d14fe559a5fd3fcaf2f4c files/digest-stoned-1.0.4 63
-MD5 e6da0a4d7f903d2436e493c56aeb0a23 stoned-1.0.4.ebuild 583
 MD5 18238bd675dbc92f3499c38b264c2f30 ChangeLog 352
+MD5 e6da0a4d7f903d2436e493c56aeb0a23 stoned-1.0.4.ebuild 583
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 c675ce3f928d14fe559a5fd3fcaf2f4c files/digest-stoned-1.0.4 63
