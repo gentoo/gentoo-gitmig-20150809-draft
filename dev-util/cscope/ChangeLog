@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.34 2004/11/28 21:26:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.35 2004/11/28 21:50:20 lu_zero Exp $
+
+  28 Nov 2004; Luca Barbato <lu_zero@gentoo.org> cscope-15.5-r2.ebuild:
+  Marked ppc
 
   28 Nov 2004; Markus Rothe <corsair@gentoo.org> cscope-15.5-r2.ebuild:
   Stable on ppc64; bug #71595
