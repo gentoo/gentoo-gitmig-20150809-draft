@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/karamba
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.12 2004/07/06 11:42:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.13 2004/08/08 14:06:53 dragonheart Exp $
+
+  08 Aug 2004; Daniel Black <dragonheart@gentoo.org> karamba-0.17-r1.ebuild:
+  QA fix - change .keep creation to keepdir
 
   06 Jul 2004; Carsten Lohrke <carlo@gentoo.org> karamba-0.17-r1.ebuild:
   dump newdepend() usage
