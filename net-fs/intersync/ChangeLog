@@ -1,0 +1,11 @@
+# ChangeLog for net-fs/intersync	
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-fs/intersync/ChangeLog,v 1.1 2002/12/17 17:46:53 bcowan Exp $
+
+*intersync-0.9.5 (17 Dec 2002)
+
+  17 Dec 2002; Brad Cowan <bcowan@gentoo.org> intersync-0.9.5.ebuild,
+  ChangeLog, files/digest-intersync-0.9.5:
+
+  Initial import, closes bug #12259.
+
