@@ -3,12 +3,14 @@
 #
 # NOTE: this is an x86-only ebuild!!!
 #
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-1.7-r1.ebuild,v 1.3 2002/07/11 06:30:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-1.7-r1.ebuild,v 1.4 2002/07/25 03:43:02 kabau Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Super Tiny Editor with wordstar, vi, and emacs key bindings"
 SRC_URI="http://www.sax.de/~adlibit/${P}.tar.gz"
 HOMEPAGE="http://www.sax.de/~adlibit"
+KEYWORDS="x86"
+LICENSE="GPL"
 DEPEND="dev-lang/nasm
 	>=sys-apps/gzip-1.2.4a-r6"
 RDEPEND="sys-apps/sed"
