@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7a3c9c16025c5595e83740e223e8387e automake-wrapper-1.ebuild 748
+MD5 cb9eb7b03089e2dffedc3c7d837ac669 ChangeLog 382
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 b2616b03dfd3516a4cc52c4b769e6b96 files/am-wrapper-1.pl 5721
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-automake-wrapper-1 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBeZu0HTu7gpaalycRAvi4AKD29WT5sJ4VIwytiNpLi6Hfn1tlswCgjWiW
+XEkfEtp82Ui8xsmOHC7Eewk=
+=J7GK
+-----END PGP SIGNATURE-----
