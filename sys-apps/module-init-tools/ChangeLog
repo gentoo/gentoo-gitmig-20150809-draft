@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.16 2003/03/10 20:34:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.17 2003/03/15 05:58:45 azarah Exp $
+
+*module-init-tools-0.9.10-r4 (15 March 2003)
+
+  15 March 2003; Martin Schlemmer <azarah@gentoo.org> module-init-tools-0.9.10-r4 :
+  - Fix modprobe to handle calls from devfsd more like modprobe from modutils ...
+    it basically do not output and do not fail for invalid modules if:
+    1) It was called with '-C /etc/modprobe.devfs'
+    2) The module starts with '/dev'
+  - Redo the /sbin/modprobe.conf stuff to not build both modutils-2.4.22 and
+	2.4.21.
 
 *module-init-tools-0.9.10-r3 (10 March 2003)
 

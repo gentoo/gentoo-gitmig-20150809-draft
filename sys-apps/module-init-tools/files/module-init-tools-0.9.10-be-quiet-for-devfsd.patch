@@ -1,0 +1,80 @@
+--- module-init-tools-0.9.10/modprobe.c.orig	2003-03-15 06:51:14.000000000 +0200
++++ module-init-tools-0.9.10/modprobe.c	2003-03-15 07:24:21.000000000 +0200
+@@ -50,6 +50,8 @@
+ 
+ /* Do we use syslog or stderr for messages? */
+ static int log;
++/* Should we be totally quiet? */
++static int quiet = 0;
+ 
+ static int getlen(const char *fmt, va_list ap)
+ {
+@@ -68,6 +70,9 @@
+ 	va_list arglist;
+ 	int len;
+ 
++	if (quiet)
++		return;
++
+ 	va_start(arglist, fmt);
+ 	len = strlen(prefix) + getlen(fmt, arglist) + 1;
+ 	buf = malloc(len);
+@@ -85,7 +90,7 @@
+ 
+ #define warn(fmt, ...) message("WARNING: ", fmt , ## __VA_ARGS__)
+ #define fatal(fmt, ...) \
+-	do { message("FATAL: ", fmt , ## __VA_ARGS__); exit(1); } while(0)
++	do { message("FATAL: ", fmt , ## __VA_ARGS__); if (quiet) exit(0); else exit(1); } while(0)
+ 
+ static void grammar(const char *cmd, const char *filename, unsigned int line)
+ {
+@@ -1175,6 +1180,13 @@
+ 		if (0 == strcmp(getenv("MODPROBE_LOG"), "1"))
+ 			log = 1;
+ 
++	/* If no logging, and we have 'MODPROBE_CONFIG=/etc/modprobe.devfs', then
++	 * be totally quiet.  Note that this catches recursive calls, so it should
++	 * not be a first call to modprobe ... */
++	if ((!log) && (!config) && (getenv("MODPROBE_CONFIG")))
++		if (0 == strcmp(getenv("MODPROBE_CONFIG"), "/etc/modprobe.devfs"))
++			quiet = 1;
++
+ 	/* If logging was requested, do not output to stdout */
+ 	if (log) {
+ 		openlog("modprobe", 0, LOG_DAEMON);
+@@ -1226,6 +1238,35 @@
+ 		}
+ 	}
+ 
++	/* Another 'not so horrible' hack to have absolutely no output if we
++	 * have no logging enabled, and our config file is /etc/modprobe.devfs
++	 *
++	 * Rasionale:  This is what modprobe from modutils-2.4.22 does:
++	 *
++	 *   gateway root # modprobe /dev/sd1   
++	 *   modprobe: Can't locate module /dev/sd1
++	 *   gateway root # modprobe -C /etc/modules.conf /dev/sd1
++	 *   modprobe: Can't locate module /dev/sd1
++	 *   gateway root # modprobe -C /etc/modules.devfs /dev/sd1
++	 *   gateway root # modprobe foo     
++	 *   modprobe: Can't locate module foo
++	 *   gateway root # modprobe -C /etc/modules.conf foo     
++	 *   modprobe: Can't locate module foo
++	 *   gateway root # modprobe -C /etc/modules.devfs foo     
++	 *   modprobe: Can't locate module foo
++	 *   gateway root # 
++	 *   gateway root # modprobe -C /etc/modules.devfs /dev/sd1 && echo yes
++	 *   yes
++	 *   gateway root # modprobe -C /etc/modules.devfs foo && echo yes
++	 *   modprobe: Can't locate module foo
++	 *   gateway root # 
++	 */
++	if ((!log) && (!quiet) && (!dump_only) &&
++		(strncmp(argv[optind], "/dev/", 5) == 0) &&
++		((config) && (0 == strcmp(config, "/etc/modprobe.devfs"))))
++		quiet = 1;
++
++
+ 	/* -r only allows certain restricted options */
+ 	if (remove) {
+ 		if (strcmp(optstring, "") != 0)
