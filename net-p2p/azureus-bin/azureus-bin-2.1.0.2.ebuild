@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.1.0.2.ebuild,v 1.3 2004/07/01 22:40:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.1.0.2.ebuild,v 1.4 2004/11/06 17:23:53 squinky86 Exp $
 
 inherit eutils
 
@@ -113,16 +113,16 @@ pkg_postinst() {
 	einfo "View->Configuration->Interface->Start"
 	echo
 	einfo "After running azureus for the first time, configuration"
-	einfo "options will be placed in ~/.azureus/gentoo.config"
+	einfo "options will be placed in ~/.Azureus/gentoo.config"
 	einfo "It is recommended that you modify this file rather than"
 	einfo "the azureus startup script directly."
 	echo
 	einfo "Currently, only the swt interface is available (ie, the setting"
-	einfo "in ~/.azureus/gentoo.config is ignored).  If you want to use"
+	einfo "in ~/.Azureus/gentoo.config is ignored).  If you want to use"
 	einfo "any of the other interfaces, you will need to get a CVS version"
 	einfo "of the Azureus2.jar from http://azureus.sourceforge.net/index_CVS.php"
 	einfo "and replace ${PROGRAM_DIR}/Azureus2.jar with it.  If you do this,"
-	einfo "the setting in ~/.azureus/gentoo.config will be properly used, but"
+	einfo "the setting in ~/.Azureus/gentoo.config will be properly used, but"
 	einfo "you should report all bugs pertaining to the CVS release to the"
 	einfo "azureus developers and not Gentoo."
 	echo

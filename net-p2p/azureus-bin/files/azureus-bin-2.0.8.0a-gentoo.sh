@@ -2,13 +2,13 @@
 
 PROGRAM_DIR=##PROGRAM_DIR##		# directory where all the files were extracted
 
-AZ_CONFIG="${HOME}/.azureus/gentoo.config"
-if [ -f ~/.azureus/gentoo.config ]; then
-	. ~/.azureus/gentoo.config
+AZ_CONFIG="${HOME}/.Azureus/gentoo.config"
+if [ -f ~/.Azureus/gentoo.config ]; then
+	. ~/.Azureus/gentoo.config
 else
-	if [ ! -e ~/.azureus ]; then
-		mkdir ~/.azureus
-		echo "Creating ~/.azureus..."
+	if [ ! -e ~/.Azureus ]; then
+		mkdir ~/.Azureus
+		echo "Creating ~/.Azureus..."
 	fi
 
 	# Setup defaults

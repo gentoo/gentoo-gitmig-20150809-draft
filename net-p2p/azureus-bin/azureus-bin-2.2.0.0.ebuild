@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.2.0.0.ebuild,v 1.1 2004/11/01 23:20:26 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.2.0.0.ebuild,v 1.2 2004/11/06 17:23:53 squinky86 Exp $
 
 inherit eutils
 
@@ -106,15 +106,15 @@ pkg_postinst() {
 	einfo "View->Configuration->Interface->Start"
 	echo
 	einfo "After running azureus for the first time, configuration"
-	einfo "options will be placed in ~/.azureus/gentoo.config"
+	einfo "options will be placed in ~/.Azureus/gentoo.config"
 	einfo "It is recommended that you modify this file rather than"
 	einfo "the azureus startup script directly."
 	echo
 	einfo "As of this version, the new ui type 'console' is supported,"
-	einfo "and this may be set in ~/.azureus/gentoo.config."
+	einfo "and this may be set in ~/.Azureus/gentoo.config."
 	echo
 	ewarn "If you are upgrading, and the menu in azurues has entries like"
 	ewarn "\"!MainWindow.menu.transfers!\" then you have a stray MessageBundle.properties file,"
-	ewarn "and you may safely delete ~/.azureus/MessagesBundle.properties"
+	ewarn "and you may safely delete ~/.Azureus/MessagesBundle.properties"
 	echo
 }
