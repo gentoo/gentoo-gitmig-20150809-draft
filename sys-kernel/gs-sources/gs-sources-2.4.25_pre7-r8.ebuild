@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r7.ebuild,v 1.5 2004/06/29 22:12:57 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r8.ebuild,v 1.1 2004/07/09 15:27:32 plasmaroo Exp $
 
 IUSE="build crypt"
 
@@ -19,9 +19,9 @@ ETYPE="sources"
 
 inherit kernel eutils
 PROVIDE="virtual/linux-sources virtual/winkernel"
-OKV=2.4.24
-EXTRAVERSION=_pre7-gss-r7
-KV=2.4.25_pre7-gss-r7
+OKV='2.4.24'
+EXTRAVERSION="_pre7-gss-${PR}"
+KV="2.4.25_pre7-gss-${PR}"
 S=${WORKDIR}/linux-${KV}
 
 # Documentation on the patches contained in this kernel will be installed
@@ -30,14 +30,14 @@ S=${WORKDIR}/linux-${KV}
 DESCRIPTION="This kernel stays up to date with current kernel -pre's, with recent ACPI,
 	EVMS, Win4Lin, aic79xx, Super FreeS/WAN, preempt, and various hardware fixes."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 mirror://gentoo/patches-${KV/r7/r1}.tar.bz2"
+	 mirror://gentoo/patches-${KV/r8/r1}.tar.bz2"
 KEYWORDS="x86 -ppc -sparc"
 SLOT="${KV}"
 
 src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
-	cd ${KV/r7/r1} || die
+	cd ${KV/r8/r1} || die
 	# Kill patches we aren't suppposed to use, don't worry about
 	# failures, if they aren't there that is a good thing!
 	# This is the ratified crypt USE flag, enables IPSEC and patch-int
@@ -61,6 +61,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0427.patch || die "Failed to add the CAN-2004-0427 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
 	epatch ${FILESDIR}/${PN}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 	epatch ${FILESDIR}/${PN}.MKI.CompileFix.patch || die "Failed to apply MKI compilefix patch!"
