@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.1 2002/04/27 13:18:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.2 2002/07/04 02:47:58 lostlogic Exp $
+
+*wvstreams-3.70 (03 Jul 2002)
+
+  03 Jul 2002; Brandon Low <lostlogic@gentoo.org> wvstreams-3.70-r1.ebuild
+
+  Just an update for gcc-3.1 compatiblity don't get excited.
 
 *wvstreams-3.70 (27 Apr 2002)
 
