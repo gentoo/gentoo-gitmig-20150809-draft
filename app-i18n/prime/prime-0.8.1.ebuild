@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.8.1.ebuild,v 1.1 2004/04/10 16:31:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.8.1.ebuild,v 1.2 2004/04/11 16:38:03 usata Exp $
 
 inherit ruby
 
@@ -16,7 +16,7 @@ SLOT="0"
 
 S="${WORKDIR}/${P}"
 
-DEPEND="dev-lang/ruby
+DEPEND="virtual/ruby
 	app-dicts/prime-dict
 	>=dev-ruby/sary-ruby-0.5_pre20030507-r1
 	>=dev-libs/suikyo-1.3.0
