@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/Macaulay2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.4 2005/03/23 15:14:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.5 2005/03/23 16:19:35 seemant Exp $
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> Macaulay2-0.9.2.ebuild:
+  change dep from net-www/mozilla to www-client/mozilla
 
   23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> :
   change dep from net-www/epiphany to www-client/epiphany
