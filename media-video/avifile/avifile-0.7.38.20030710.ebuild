@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.38.20030710.ebuild,v 1.15 2004/04/28 18:16:15 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.38.20030710.ebuild,v 1.16 2004/05/04 03:58:51 eradicator Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ DEPEND=">=media-libs/jpeg-6b
 	>=media-sound/lame-3.90
 	>=media-libs/audiofile-0.2.3
 	>=sys-apps/sed-4
-	>=media-sound/mad-0.14.2b
+	>=media-sound/madplay-0.14.2b
 	>=sys-devel/patch-2.5.9
 	truetype? ( >=media-libs/freetype-2.1 )
 	xv? ( virtual/x11 )

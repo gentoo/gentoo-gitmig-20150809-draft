@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.18.ebuild,v 1.10 2004/05/01 15:09:13 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.18.ebuild,v 1.11 2004/05/04 03:54:58 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~ppc"
 IUSE="debug nls oggvorbis arts truetype alsa"
 
 RDEPEND="virtual/x11
-	media-sound/mad
+	media-sound/madplay
 	>=media-libs/a52dec-0.7.4
 	>=media-sound/lame-3.93
 	>=media-video/mjpegtools-1.6
