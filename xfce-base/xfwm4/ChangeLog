@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.5 2003/09/12 04:38:16 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.6 2003/09/25 21:13:58 bcowan Exp $
+
+*xfwm4-4.0.0 (25 Sep 2003)
+
+  25 Sep 2003; Brad Cowan <bcowan@gentoo.org> xfwm4-4.0.0.ebuild:
+  First official release of xfce4.
 
 *xfwm4-3.99.4 (12 Sep 2003)
 
