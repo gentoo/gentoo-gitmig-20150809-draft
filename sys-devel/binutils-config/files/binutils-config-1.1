@@ -1,0 +1,253 @@
+#!/bin/bash
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.1,v 1.1 2004/12/09 02:23:22 vapier Exp $
+
+# Format of /etc/env.d/binutils/:
+#  config-TARGET:	CURRENT=version for TARGET
+#  TARGET-VER:		has a TARGET and VER variable
+
+trap ":" INT QUIT TSTP
+
+source /etc/init.d/functions.sh || {
+	echo "$0: Could not source /etc/init.d/functions.sh!"
+	exit 1
+}
+umask 022
+
+usage() {
+cat << "USAGE_END"
+Usage: binutils-config [options] [binutils profile]
+Change the current binutils profile, or give info about profiles.
+
+Options:
+  -c, --get-current-profile  Print current profile
+  -l, --list-profiles        Print a list of available profiles
+  -u, --uninstall            Remove all signs of specified target
+
+Profile names are of the form:  <CHOST>-<binutils version>
+For example:                    x86_64-pc-linux-gnu-2.15.92.0.2
+USAGE_END
+}
+
+[[ $# -lt 1 ]] && usage && exit 1
+
+switch_profile() {
+	source "${ENV_D}/${PROFILE}"
+
+	ebegin "Switching to ${PROFILE}"
+
+	#
+	# Generate binary symlinks
+	#
+	BINPATH="/usr/${TARGET}/binutils-bin/${VER}"
+	cd "${ROOT}/${BINPATH}" || exit 1
+	mkdir -p "${ROOT}"/usr/${TARGET}/bin
+	for x in * ; do
+		ln -sf "${BINPATH}/${x}" "${ROOT}"/usr/${TARGET}/bin/${x}
+		ln -sf ../${TARGET}/bin/${x} "${ROOT}"/usr/bin/${TARGET}-${x}
+		if [[ ${TARGET} == ${HOST} ]] ; then
+			ln -sf ${TARGET}-${x} "${ROOT}"/usr/bin/${x}
+		fi
+	done
+
+	#
+	# Generate library / ldscripts symlinks
+	#
+	LIBPATH="/usr/lib/binutils/${TARGET}/${VER}"
+	cd "${ROOT}/${LIBPATH}" || exit 1
+	mkdir -p "${ROOT}"/usr/${TARGET}/lib
+	rm -f "${ROOT}"/usr/${TARGET}/lib/ldscripts
+	ln -sf "${LIBPATH}/ldscripts" "${ROOT}"/usr/${TARGET}/lib/ldscripts
+	if [[ ${TARGET} = ${HOST} ]] ; then
+		dstlib="${ROOT}"/usr/${HOST}/lib
+	else
+		dstlib="${ROOT}"/usr/${HOST}/${TARGET}/lib
+	fi
+	mkdir -p "${dstlib}"
+	for x in lib* ; do
+		ln -sf "${LIBPATH}/${x}" "${dstlib}/${x}"
+	done
+
+	#
+	# Generate include symlinks
+	#
+	INCPATH="${LIBPATH}/include"
+	cd "${ROOT}/${INCPATH}" || exit 1
+	if [[ ${TARGET} = ${HOST} ]] ; then
+		dstinc="${ROOT}"/usr/include
+	else
+		dstinc="${ROOT}"/usr/${TARGET}/include
+	fi
+	mkdir -p "${dstinc}"
+	for x in * ; do
+		ln -sf "${INCPATH}/${x}" "${dstinc}/${x}"
+	done
+
+	eend 0
+
+	echo "CURRENT=${VER}" > "${ENV_D}/config-${TARGET}"
+
+	return 0
+}
+
+uninstall_target() {
+	if [[ ${TARGET} = ${HOST} ]] ; then
+		eerror "$0: Refusing to uninstall native binutils"
+		exit 1
+	fi
+
+	shopt -s nullglob
+	PROFILE=""
+
+	for PROFILE in "${ENV_D}"/${TARGET}-* ; do
+		ewarn "Removing all signs of ${PROFILE##*/}"
+		rm -f "${ENV_D}"/${PROFILE}
+	done
+	if [[ -z ${PROFILE} ]] ; then
+		eerror "$0: No profiles exist for '${TARGET}'"
+		exit 1
+	fi
+
+	rm -f "${ENV_D}"/config-${TARGET}
+
+	for x in addr2line ar as c++filt ld nm objcopy \
+	         objdump ranlib readelf size strings strip ; do
+		rm -f "${ROOT}"/usr/bin/${TARGET}-${x}
+		rm -f "${ROOT}"/usr/${TARGET}/bin/${x}
+	done
+	for x in ansidecl.h bfd.h bfdlink.h dis-asm.h symcat.h ; do
+		rm -f "${ROOT}"/usr/${TARGET}/include/${x}
+	done
+	rm -f "${ROOT}"/usr/${TARGET}/lib/ldscripts
+}
+
+get_current_profile() {
+	if [[ ! -f ${ENV_D}/config-${PROFILE} ]] ; then
+		eerror "$0: No binutils profile is active!"
+		return 1
+	fi
+
+	source "${ENV_D}/config-${PROFILE}"
+
+	if [[ -z ${CURRENT} ]] ; then
+		eerror "$0: No binutils profile is active!"
+		return 1
+	fi
+
+	echo "${PROFILE}-${CURRENT}"
+
+	return 0
+}
+
+list_profiles() {
+	local i=1
+
+	if [[ ${ROOT} != / ]] ; then
+		echo "Using binutils-config info in ${ROOT}"
+	fi
+	target=
+	for x in "${ENV_D}"/* ; do
+		if [[ -f ${x} ]] && [[ ${x/\/config-} = ${x} ]] ; then
+			source "${x}"
+			if [[ ${target} != ${TARGET} ]] ; then
+				[[ -n ${target} ]] && echo
+				target="${TARGET}"
+			fi
+
+			x="${x##*/}"
+			if [[ -e ${ENV_D}/config-${TARGET} ]] ; then
+				source "${ENV_D}/config-${TARGET}"
+				[ "${VER}" == "${CURRENT}" ] && x="${x} *"
+			fi
+			echo " [${i}] ${x}"
+			i=$((i + 1))
+		fi
+	done
+}
+
+[[ -z ${ROOT} ]] && ROOT="/"
+ENV_D="${ROOT}etc/env.d/binutils"
+
+NEED_ACTION="yes"
+DOIT="switch_profile"
+PROFILE=""
+
+while [[ $# -gt 0 ]] ; do
+	x=$1
+	shift
+	case "${x}" in
+		-c|--get-current-profile)
+			if [[ ${NEED_ACTION} = "yes" ]] ; then
+				NEED_ACTION="no"
+				DOIT="get_current_profile"
+			fi
+			;;
+		-l|--list-profiles)
+			if [[ ${NEED_ACTION} = "yes" ]] ; then
+				NEED_ACTION="no"
+				DOIT="list_profiles"
+			fi
+			;;
+		-u|--uninstall)
+			if [[ ${NEED_ACTION} = "yes" ]] ; then
+				NEED_ACTION="no"
+				DOIT="uninstall_target"
+				TARGET="$1"
+				shift
+			fi
+			;;
+		-h|--help)
+			usage
+			exit 0
+			;;
+		-v|--version)
+			echo "binutils-config-1.0"
+			exit 0
+			;;
+		-*)
+			eerror "$0: Invalid switch!  Run $0 without parameters for help."
+			exit 1
+			;;
+		*)
+			if [[ -n ${PROFILE} ]] ; then
+				eerror "$0: Too many arguments!  Run $0 without parameters for help."
+				exit 1
+			fi
+
+			if [[ -z $(echo ${x} | tr -d '[:digit:]') ]] ; then
+				# User gave us a # representing the profile
+				i=1
+				for y in "${ENV_D}"/* ; do
+					[[ ${y/config-} != ${y} ]] && continue
+
+					if [[ -f ${y} ]] && [[ ${x} -eq ${i} ]] ; then
+						PROFILE="${y##*/}"
+						break
+					fi
+					i=$((i + 1))
+				done
+			else
+				# User gave us a full HOST-ver
+				x="${x##*/}"
+				if [[ ! -f ${ENV_D}/${x} ]] && [[ ! -f ${ENV_D}/config-${x} ]] ; then
+					eerror "$0: Could not locate '$x' in '${ENV_D}/'!"
+					exit 1
+				fi
+				PROFILE="${x}"
+			fi
+			;;
+	esac
+done
+
+if [[ ${DOIT} != "list_profiles" ]] ; then
+	if [[ -z ${CHOST} ]] ; then
+		HOST="$(portageq envvar CHOST)"
+	else
+		HOST="${CHOST}"
+	fi
+fi
+[ -z "${PROFILE}" ] && PROFILE="${HOST}"
+eval ${DOIT}
+
+# vim:ts=4
