@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+
+# <spider@gentoo.org> (05 Sep 2002)
+# masked for testing and recheck of ebuild by rphillips
+=net-irc/xchat-1.8.10
+
 # <aliz@gentoo.org> (05 Sep 2002)
 # Masked for testing
 =sys-apps/console-data-1999.08.29-r3
