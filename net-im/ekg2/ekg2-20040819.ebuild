@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20040819.ebuild,v 1.1 2004/08/22 18:37:56 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20040819.ebuild,v 1.2 2004/08/22 21:05:25 sekretarz Exp $
 
 DESCRIPTION="This is a sample skeleton ebuild file"
 HOMEPAGE="http://www.ekg2.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://dev.gentoo.org/~sekretarz/distfiles/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 IUSE="gpm ssl spell jpeg"
 
