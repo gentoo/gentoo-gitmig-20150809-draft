@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.6 2003/03/06 02:29:53 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.7 2003/03/06 02:47:50 kutsuya Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 #
@@ -38,8 +38,8 @@ distutils_src_install() {
 distutils_python_version()
 {
 	local tmpstr="$(${python} -V 2>&1 )"
-	tmpstr="${tstr#Python }"
-	tstr=${tstr%.*}
+	tmpstr="${tmpstr#Python }"
+	tmpstr=${tmpstr%.*}
 
 	PYVER_MAJOR="${tmpstr%.[0-9]*}"
 	PYVER_MINOR="${tmpstr#[0-9]*.}"
