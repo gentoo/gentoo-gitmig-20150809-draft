@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.7 2004/07/24 21:51:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.8 2004/07/27 15:36:10 axxo Exp $
 
 IUSE="X doc javacomm"
 
@@ -65,8 +65,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	#Thanks to Douglas Pollock <douglas.pollock@magma.ca> for this
-	#comment found on the sun-jdk 1.2.2 ebuild that he sent.
+	java_pkg_postinst
 	if ! use X; then
 		einfo "********************************************************"
 		eerror "You're not using X so its possible that you dont have"
