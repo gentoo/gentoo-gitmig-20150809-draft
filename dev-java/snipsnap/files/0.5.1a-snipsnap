@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap/files/0.5.1a-snipsnap,v 1.1 2004/02/16 07:02:44 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap/files/0.5.1a-snipsnap,v 1.2 2004/07/14 21:51:33 agriffis Exp $
 
 depend() {
 	need net
