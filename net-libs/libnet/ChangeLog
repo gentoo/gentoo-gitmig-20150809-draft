@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.24 2003/11/30 05:25:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.25 2003/12/16 18:52:26 weeve Exp $
+
+*libnet-1.0.2a-r2 (16 Dec 2003)
+
+  16 Dec 2003; Jason Wever <weeve@gentoo.org> libnet-1.0.2a-r2.ebuild,
+  libnet-1.0.2a-r3.ebuild:
+  Marked libnet-1.0.2a-r3.ebuild BACK to unstable and brought
+  libnet-1.0.2a-r2.ebuild back to compensate for the fact that newer versions of
+  snort have issues on sparc.
 
 *libnet-1.1.1 (30 Nov 2003)
 
