@@ -1,8 +1,13 @@
 # ChangeLog for net-mail/balsa
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.23 2002/12/09 04:33:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.24 2002/12/13 01:36:29 foser Exp $
 
-\* Autoupdate keywords (12-6-02)
+*balsa-2.0.3 (11 Dec 2002)
+
+  11 Dec 2002; foser <foser@gentoo.org> balsa-2.0.3.ebuild :
+  New version with input from Edy <edybsd@yahoo.com.ar> (LDAP) and Evan Read <eread@freeshell.org> (aspell/general) (bug #9931)
+
+* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
 *balsa-1.4.0-r1 (03 Sep 2002)
