@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-1.0.12.ebuild,v 1.14 2004/02/25 17:23:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-1.0.12.ebuild,v 1.15 2004/04/23 10:26:03 aliz Exp $
 
 DESCRIPTION="preprocessor for making GTK+ objects with inline C code"
 SRC_URI="http://ftp.5z.com/pub/gob/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.5z.com/jirka/gob.html"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
 RDEPEND="=dev-libs/glib-1.2*"
 DEPEND="${RDEPEND}
