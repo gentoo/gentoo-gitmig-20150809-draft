@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.50 2003/08/22 09:17:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.51 2003/09/24 20:28:11 rac Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -22,14 +22,22 @@ SITE_LIB=""
 ARCH_LIB=""
 POD_DIR=""
 
+# handling of DESTDIR changed in makemaker 6.11
+MMSIXELEVEN=`perl -e 'use ExtUtils::MakeMaker; print( $ExtUtils::MakeMaker::VERSION gt "6.11" )'`
+
 perl-module_src_prep() {
 
 	SRC_PREP="yes"
 	if [ "${style}" == "builder" ]; then
 		perl ${S}/Build.PL installdirs=vendor destdir=${D}
 	else
-		perl Makefile.PL ${myconf} \
-		PREFIX=${D}/usr INSTALLDIRS=vendor 
+		if [ "${MMSIXELEVEN}" ]; then
+			perl Makefile.PL ${myconf} \
+			PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
+		else
+			perl Makefile.PL ${myconf} \
+			PREFIX=/usr INSTALLDIRS=vendor
+		fi
 	fi
 
 }
@@ -66,29 +74,33 @@ perl-module_src_install() {
 	if [ "${style}" == "builder" ]; then
 		perl ${S}/Build install
 	else
-	make \
-		PREFIX=${D}/usr \
-		INSTALLMAN1DIR=${D}/usr/share/man/man1 \
-		INSTALLMAN2DIR=${D}/usr/share/man/man2 \
-		INSTALLMAN3DIR=${D}/usr/share/man/man3 \
-		INSTALLMAN4DIR=${D}/usr/share/man/man4 \
-		INSTALLMAN5DIR=${D}/usr/share/man/man5 \
-		INSTALLMAN6DIR=${D}/usr/share/man/man6 \
-		INSTALLMAN7DIR=${D}/usr/share/man/man7 \
-		INSTALLMAN8DIR=${D}/usr/share/man/man8 \
-		INSTALLSITEMAN1DIR=${D}/usr/share/man/man1 \
-		INSTALLSITEMAN2DIR=${D}/usr/share/man/man2 \
-		INSTALLSITEMAN3DIR=${D}/usr/share/man/man3 \
-		INSTALLSITEMAN4DIR=${D}/usr/share/man/man4 \
-		INSTALLSITEMAN5DIR=${D}/usr/share/man/man5 \
-		INSTALLSITEMAN6DIR=${D}/usr/share/man/man6 \
-		INSTALLSITEMAN7DIR=${D}/usr/share/man/man7 \
-		INSTALLSITEMAN8DIR=${D}/usr/share/man/man8 \
-		INSTALLVENDORMAN3DIR=${D}/usr/share/man/man3 \
-		INSTALLSITEARCH=${D}/${SITE_ARCH} \
-		INSTALLSCRIPT=${D}/usr/bin \
-		${myinst} \
-		${mytargets} || die
+	if [ "${MMSIXELEVEN}" ]; then
+		make ${myinst} ${mytargets} || die
+	else
+		make \
+			PREFIX=${D}/usr \
+			INSTALLMAN1DIR=${D}/usr/share/man/man1 \
+			INSTALLMAN2DIR=${D}/usr/share/man/man2 \
+			INSTALLMAN3DIR=${D}/usr/share/man/man3 \
+			INSTALLMAN4DIR=${D}/usr/share/man/man4 \
+			INSTALLMAN5DIR=${D}/usr/share/man/man5 \
+			INSTALLMAN6DIR=${D}/usr/share/man/man6 \
+			INSTALLMAN7DIR=${D}/usr/share/man/man7 \
+			INSTALLMAN8DIR=${D}/usr/share/man/man8 \
+			INSTALLSITEMAN1DIR=${D}/usr/share/man/man1 \
+			INSTALLSITEMAN2DIR=${D}/usr/share/man/man2 \
+			INSTALLSITEMAN3DIR=${D}/usr/share/man/man3 \
+			INSTALLSITEMAN4DIR=${D}/usr/share/man/man4 \
+			INSTALLSITEMAN5DIR=${D}/usr/share/man/man5 \
+			INSTALLSITEMAN6DIR=${D}/usr/share/man/man6 \
+			INSTALLSITEMAN7DIR=${D}/usr/share/man/man7 \
+			INSTALLSITEMAN8DIR=${D}/usr/share/man/man8 \
+			INSTALLVENDORMAN3DIR=${D}/usr/share/man/man3 \
+			INSTALLSITEARCH=${D}/${SITE_ARCH} \
+			INSTALLSCRIPT=${D}/usr/bin \
+			${myinst} \
+			${mytargets} || die
+		fi
 	fi
 
 	if [ -f ${D}${ARCH_LIB}/perllocal.pod ];
