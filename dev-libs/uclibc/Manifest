@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 0a6070c57b01965a7dbbe970dfff5803 ChangeLog 6831
 MD5 f694d40cf09e6c5511ae52f755a5ffe5 metadata.xml 998
 MD5 7fde305dfd21aeac12e0eb721e0f6a17 uclibc-0.9.21.ebuild 1096
-MD5 22523f6c10ebb44725e81ca63dd6dd73 uclibc-9999.ebuild 5463
+MD5 110cc2eb32d60dbfc428811e696cdd77 uclibc-9999.ebuild 5442
 MD5 e00c5423073ca5b75f6b38f03cc9c46e uclibc-0.9.26-r1.ebuild 2565
 MD5 08c3bf145cb5142ef315926eb321176f uclibc-0.9.26-r2.ebuild 6198
 MD5 080f9a8858084d3e68380042c9b5800f uclibc-0.9.26-r3.ebuild 6346
@@ -46,7 +46,7 @@ MD5 7157f784ba7672c9904d289712131a52 files/0.9.26/uclibc-0.9.26-ldso-cache.patch
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBLSnDHTu7gpaalycRAui3AKDo4M/xs706/RHQB+I9Ihy2XGO4CwCfcRgu
-GswkPS+7pkjLLuwPdiGOEO0=
-=NZBZ
+iD8DBQFBLUsSHTu7gpaalycRAvyAAJ4scxf/+/teyFO+V0EV2SHuzd2OogCg7lDO
+niJJr4oUna0R7HUiawFmNiY=
+=wAxs
 -----END PGP SIGNATURE-----

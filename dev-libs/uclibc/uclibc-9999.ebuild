@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-9999.ebuild,v 1.1 2004/08/25 22:47:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-9999.ebuild,v 1.2 2004/08/26 02:29:30 vapier Exp $
 
 ECVS_SERVER="uclibc.org:/var/cvs"
 ECVS_MODULE="uClibc"
@@ -24,7 +24,7 @@ PROVIDE="virtual/glibc virtual/libc"
 S=${WORKDIR}/${ECVS_MODULE}
 
 src_unpack() {
-ECVS_SERVER="offline"	cvs_src_unpack
+	cvs_src_unpack
 	unpack ${A}
 	cd ${S}
 
