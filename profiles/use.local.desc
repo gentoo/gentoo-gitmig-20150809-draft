@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1008 2005/03/13 22:15:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1009 2005/03/13 22:19:24 mcummings Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -208,6 +208,8 @@ dev-lisp/sbcl:nosource - don't include source code for SBCL in the installation
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/ocamlsdl:noimage - Disable sdl-image support
 dev-ml/ocamlsdl:nomixer - Disable sdl-mixer support
+dev-perl/perlmagick:fpx - enable libfpx support compat with installed imagemagick
+dev-perl/perlmagick:graphviz - enable graphviz support compat with installed imagemagick
 dev-perl/perlmagick:jbig - enable jbig support to be compat with installed imagemagick
 dev-php/PEAR-Log:pear-db - Use the PEAR-DB package
 dev-python/bicyclerepair:vim - enable vim with bicyclerepair support
