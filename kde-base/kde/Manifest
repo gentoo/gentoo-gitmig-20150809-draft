@@ -3,7 +3,7 @@ MD5 b01b23f93afb9df95bcd9477b82cf1ef kde-2.2.2-r1.ebuild 608
 MD5 cdbbac4ad107f5f9bd885918b1a585ad kde-3.0.4.ebuild 594
 MD5 517228b72c36990d84aaaec5beba35b0 kde-3.0.5b.ebuild 604
 MD5 6fd31fa85d8d638c506c34290d29a2b6 kde-3.1.1a.ebuild 624
-MD5 6229dc41a2fdba274073668ce8518d72 kde-3.1.2.ebuild 605
+MD5 f71cef84544741221023480fdecaf1be kde-3.1.2.ebuild 608
 MD5 8a6302de0a3c80df7e0c1d205df1c265 metadata.xml 323
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-2.2.2-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-3.0.4 0
