@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eafd1a5411016e6e2a1d5c46c58cfd15 weechat-0.0.9.ebuild 930
+MD5 8602873f9c7bdbfb45e530ef9ef8416a weechat-0.0.9.ebuild 929
 MD5 232aac98301df1b4b34644bbda351aab weechat-0.0.6.ebuild 1233
-MD5 5f03c5a5ccdfd1449e0e4ab6aaf0c802 ChangeLog 2104
+MD5 6d08819dee806cac1a53f97be0e3fb0b ChangeLog 2201
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 ea0eac7be9fdc8ff8cb7efe77e38eb46 files/digest-weechat-0.0.6 66
 MD5 c49d4a50372df7f1c2f35ee7424ab6ca files/digest-weechat-0.0.9 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB1/UZI1lqEGTUzyQRAtUNAJ9nh03JJ0pZoF1KNxqqbVS77EXbwgCgwvBC
-DNr6JD+DL3b9ILQCNXg8qZk=
-=wbX9
+iD8DBQFCB9KuI1lqEGTUzyQRApIqAKCEdqk912eANp5Zx7e/8SLe1Zh87ACeMb6f
+GBAJYsaBCnh/v97NXtqXSOc=
+=ejg+
 -----END PGP SIGNATURE-----
