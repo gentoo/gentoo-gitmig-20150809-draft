@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/jack-cvs-0.44.ebuild,v 1.4 2003/02/13 13:14:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/jack-cvs-0.44.ebuild,v 1.5 2003/03/06 13:23:52 jje Exp $
 
 IUSE="doc"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://jackit.sourceforge.net/"
 
 ECVS_SERVER="cvs.jackit.sourceforge.net:/cvsroot/jackit"
 ECVS_MODULE="jack"
-ECVS_TOP_DIR="${DISTDIR}/cvs-src/ardour" 
+ECVS_TOP_DIR="${DISTDIR}/cvs-src/jackit" 
 
 SRC_URI=""
 
