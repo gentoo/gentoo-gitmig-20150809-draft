@@ -1,7 +1,15 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.22 2002/06/06 20:41:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.23 2002/06/08 15:19:36 spider Exp $
 
+
+
+
+mozilla-1.0-r2 (7 Jun 2002)
+  7 Jun 2002; Spider <spider@gentoo.org> :
+  modify the gtk+ dependencies. we dont want gtk2 deps just yet.
+
+   
 *mozilla-1.0-r2 (6 Jun 2002)
   6 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
   Add xfree-4.2.0-r11 suppport.

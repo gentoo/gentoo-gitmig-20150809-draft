@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r2.ebuild,v 1.1 2002/06/06 20:41:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r2.ebuild,v 1.2 2002/06/08 15:19:36 spider Exp $
 
 # handle _rc versions
 MY_PV1=${PV/_}
@@ -22,7 +22,8 @@ RDEPEND=">=x11-base/xfree-4.2.0-r11
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
-	x11-libs/gtk+
+	( >=x11-libs/gtk+-1.2.10 
+	  <x11-libs/gtk+-1.3.0 )
 	java?  ( virtual/jre )"
 #	gtk?   ( x11-libs/gtk+ )
 #	mozqt? ( x11-libs/qt )"
