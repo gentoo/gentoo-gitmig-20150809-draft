@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-0.9.ebuild,v 1.2 2004/04/11 17:32:49 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-0.9.ebuild,v 1.3 2004/04/20 19:32:22 kugelfang Exp $
 
 DESCRIPTION="Utility for viewing Microsoft .chm files."
 HOMEPAGE="http://xchm.sf.net"
@@ -10,7 +10,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 
 IUSE="doc"
 DEPEND=">=app-doc/chmlib-0.31
