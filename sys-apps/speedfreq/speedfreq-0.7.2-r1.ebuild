@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/speedfreq-0.7.2-r1.ebuild,v 1.1 2004/03/28 08:33:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/speedfreq-0.7.2-r1.ebuild,v 1.2 2004/05/10 14:45:17 aliz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.goop.org/~jeremy/speedfreq/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE="acpi"
 
 DEPEND="!ppc? ( acpi? ( sys-apps/acpid ) )"
