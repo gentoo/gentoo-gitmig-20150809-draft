@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.30 2005/03/04 09:44:01 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.31 2005/03/16 00:26:31 swtaylor Exp $
+
+  15 Mar 2005; Scott W Taylor <swtaylor@gentoo.org>
+  -courier-authlib-0.52-r1.ebuild, courier-authlib-0.53.ebuild,
+  courier-authlib-0.54.ebuild, courier-authlib-0.54.20050224.ebuild,
+  courier-authlib-0.55.ebuild:
+  change vpopmail detection for #85391
 
 *courier-authlib-0.55 (04 Mar 2005)
 
