@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>dev-tools</herd>
+<maintainer>
+  <email>phosphan@gentoo.org</email>
+  <name>Patrick Kursawe</name>
+  <description>Primary Maintainer</description>
+</maintainer>
+<longdescription>Doxygen is a tool for analyzing, documenting, and reverse-engineering source code.</longdescription>
+</pkgmetadata>
