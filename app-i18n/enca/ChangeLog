@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/enca
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.1 2003/11/14 10:13:41 sergey Exp $
+
+*enca-1.0 (14 Nov 2003)
+
+  14 Nov 2003; Sergey Kuleshov <svyatogor@gentoo.org> enca-1.0.ebuild:
+  Initial commit of enca. Thanks to Radek Podgorny <radek@podgorny.cz> for
+  providing the ebuild. Closing bug #33091.
+
