@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20040719p.ebuild,v 1.2 2004/07/21 18:33:46 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20040719p.ebuild,v 1.3 2004/08/21 04:03:18 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND="virtual/libc
+	!net-misc/ntp"
 
 src_unpack() {
 	unpack ${A}
@@ -31,7 +32,7 @@ src_install() {
 	dodoc ChangeLog CREDITS README
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/openntpd.rc openntpd
+	newexe ${FILESDIR}/openntpd.rc ntpd
 	insinto /etc/conf.d
-	newins ${FILESDIR}/openntpd.conf.d openntpd
+	newins ${FILESDIR}/openntpd.conf.d ntpd
 }
