@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.5 2003/10/22 20:38:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.6 2003/10/22 20:53:20 lanius Exp $
 
 # This eclass provides help for compiling external kernel modules from
 # source.
@@ -159,7 +159,7 @@ kernel-mod_src_compile ()
 kernel-mod_is_2_4_kernel() {
 	kernel-mod_getversion
 
-    if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 4 ]
+    if [ "${KV_MAJOR}" -eq 2 -a "${KV_MINOR}" -eq 4 ]
     then
         return 0
     else
@@ -170,7 +170,7 @@ kernel-mod_is_2_4_kernel() {
 kernel-mod_is_2_5_kernel() {
 	kernel-mod_getversion
 
-    if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 5 ]
+    if [ "${KV_MAJOR}" -eq 2 -a "${KV_MINOR}" -eq 5 ]
     then
         return 0
     else
@@ -181,7 +181,7 @@ kernel-mod_is_2_5_kernel() {
 kernel-mod_is_2_6_kernel() {
 	kernel-mod_getversion
 
-    if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 6 ]
+    if [ "${KV_MAJOR}" -eq 2 -a "${KV_MINOR}" -eq 6 ]
     then
         return 0
     else
