@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <azarah@gentoo.org> (28 Oct 2002)
+# Initial version that support alpha version of new multi version/arch
+# scheme.  Very ALPHA, so use at your own risk!!
+=sys-devel/gcc-3.2-r3
+
 # <foser@gentoo.org> (27 Oct 2002)
 # Unstable GNOME2 tree mask (2.1)
 # Expect things to break if you unmask this !
