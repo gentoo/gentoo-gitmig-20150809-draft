@@ -1,0 +1,27 @@
+--- sys_linux.c.orig	2003-10-04 15:56:40.000000000 -0400
++++ sys_linux.c	2003-10-09 21:06:06.000000000 -0400
+@@ -448,6 +448,7 @@
+ 
+   if (TMX_SetFrequency(scaled_freq, required_tick) < 0) {
+     char buffer[1024];
++      perror("failed");
+     sprintf(buffer, "adjtimex failed for set_frequency, freq_ppm=%10.4e scaled_freq=%10.4e required_tick=%ld",
+             freq_ppm, scaled_freq, required_tick);
+     CROAK(buffer);
+@@ -600,6 +601,16 @@
+     *shift_hz = 7;
+     return;
+   }
++  /* GENTOO: Gentoo Linux has hz=200
++   * tick_nominal: 5000
++   * tick_lo: 3333
++   * tick_hi: 6667 */
++  if (tick >= 3333 && tick <= 6667) {
++    *hz = 200;
++    *shift_hz = 8;
++    return;
++  }
++  /* END GENTOO */
+ 
+   for (i=4; i<16; i++) { /* surely 16 .. 32768 is a wide enough range? */
+     ihz = 1 << i;
