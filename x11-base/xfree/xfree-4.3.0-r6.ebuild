@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.16 2004/04/02 00:11:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.17 2004/04/05 01:38:11 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -167,7 +167,7 @@ pkg_setup() {
 	strip-flags
 
 	# See bug #35468, circular pam-xfree dep
-	if [ "`use pam`" -a "`has_version x11-base/xfree`" ]
+	if [ "`use pam`" -a "`best_version x11-base/xfree`" ]
 	then
 		einfo "Previous XFree86 installation detected"
 		einfo "Enabling PAM features in XFree86..."
@@ -438,7 +438,7 @@ src_unpack() {
 
 	# Remove circular dep between pam and xfree, bug #35468
 	# If no-pam isn't in USE and we have xfree, then we can enable PAM
-	if [ "`use pam`" -a "`has_version x11-base/xfree`" ]
+	if [ "`use pam`" -a "`best_version x11-base/xfree`" ]
 	then
 		# If you want to have optional pam support, do it properly ...
 		echo "#define HasPam YES" >> config/cf/host.def
