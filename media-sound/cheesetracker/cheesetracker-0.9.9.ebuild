@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/cheesetracker-0.9.9.ebuild,v 1.6 2004/06/24 23:54:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/cheesetracker-0.9.9.ebuild,v 1.7 2004/10/08 04:41:06 eradicator Exp $
 
 IUSE="jack"
 
@@ -9,10 +9,9 @@ inherit 64-bit eutils
 DESCRIPTION="A clone of Impulse Tracker with some extensions and a built-in sample editor; uses QT"
 HOMEPAGE="http://cheesetronic.sf.net/"
 SRC_URI="mirror://sourceforge/cheesetronic/${P}.tar.gz"
-RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ~ppc amd64 ~sparc"
 
 RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	=dev-libs/libsigc++-1.2*
