@@ -1,0 +1,55 @@
+--- src/qcommon/files.c.orig	2004-01-02 01:55:47.219787792 -0500
++++ src/qcommon/files.c	2004-01-02 01:55:55.622510384 -0500
+@@ -0,0 +1 @@
++#include "../linux/gentoo-libdir.h"
+@@ -60,6 +60,7 @@
+ 
+ char	fs_gamedir[MAX_OSPATH];
+ cvar_t	*fs_basedir;
++cvar_t	*fs_libdir;
+ cvar_t	*fs_cddir;
+ cvar_t	*fs_gamedirvar;
+ 
+@@ -898,7 +899,8 @@
+ 	// basedir <path>
+ 	// allows the game to run from outside the data tree
+ 	//
+-	fs_basedir = Cvar_Get ("basedir", ".", CVAR_NOSET);
++	fs_basedir = Cvar_Get ("basedir", "GENTOO_DATADIR", CVAR_NOSET);
++	fs_libdir = Cvar_Get ("libdir", GENTOO_LIBDIR, CVAR_NOSET);
+ 
+ 	//
+ 	// cddir <path>
+@@ -913,6 +915,7 @@
+ 	// add baseq2 to search path
+ 	//
+ 	FS_AddGameDirectory (va("%s/"BASEDIRNAME, fs_basedir->string) );
++	FS_AddGameDirectory (va("%s/"BASEDIRNAME, fs_libdir->string) );
+ 
+ 	//
+ 	// then add a '.quake2/baseq2' directory in home directory by default
+--- src/linux/vid_so.c.orig	2004-01-02 10:37:46.527355832 -0500
++++ src/linux/vid_so.c	2004-01-02 10:39:23.890554376 -0500
+@@ -0,0 +1 @@
++#include "../linux/gentoo-libdir.h"
+@@ -231,13 +232,17 @@
+ 	//regain root
+ 	seteuid(saved_euid);
+ 
+-	path = Cvar_Get ("basedir", ".", CVAR_NOSET)->string;
++	path = Cvar_Get ("libdir", GENTOO_LIBDIR, CVAR_NOSET)->string;
+ 
+ 	snprintf (fn, MAX_OSPATH, "%s/%s", path, name );
+ 	
+ 	if (stat(fn, &st) == -1) {
+-		Com_Printf( "LoadLibrary(\"%s\") failed: %s\n", name, strerror(errno));
+-		return false;
++		path = Cvar_Get ("basedir", ".", CVAR_NOSET)->string;
++		snprintf (fn, MAX_OSPATH, "%s/%s", path, name );
++		if (stat(fn, &st) == -1) {
++			Com_Printf( "LoadLibrary(\"%s\") failed: %s\n", name, strerror(errno));
++			return false;
++		}
+ 	}
+ 	
+ 	// permission checking

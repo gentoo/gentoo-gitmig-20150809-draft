@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15.ebuild,v 1.3 2003/12/30 04:01:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.1 2004/01/08 05:56:20 vapier Exp $
 
 inherit games eutils gcc
 
@@ -16,7 +16,7 @@ SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc alpha"
 IUSE="svga X sdl aalib opengl noqmax rogue xatrix"
 
 # default to X11 if svga/X/sdl/aalib are not in USE
@@ -33,8 +33,11 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd ${S}
-	[ `gcc-major-version` == 3 ] && epatch ${FILESDIR}/${PV}-Makefile-gcc3.patch
+	epatch ${FILESDIR}/${PV}-Makefile-noopts.patch
 	epatch ${FILESDIR}/${PV}-Makefile-optflags.patch
+	epatch ${FILESDIR}/${PV}-gentoo-path.patch
+	sed -i "s:GENTOO_DATADIR:${GAMES_DATADIR}/quake2-data:" src/qcommon/files.c
+
 	ln -s `which echo` ${T}/more
 	for g in `use rogue` `use xatrix` ; do
 		mkdir -p ${S}/src/${g}
@@ -63,6 +66,9 @@ src_compile() {
 	# rogue fails to build
 	for BUILD_QMAX in YES NO ; do
 		[ `use noqmax` ] && [ "${BUILD_QMAX}" == "YES" ] && continue
+		[ "${BUILD_QMAX}" == "YES" ] \
+			&& echo "#define GENTOO_LIBDIR \"${GAMES_LIBDIR}/${PN}-qmax\"" > src/linux/gentoo-libdir.h \
+			|| echo "#define GENTOO_LIBDIR \"${GAMES_LIBDIR}/${PN}\"" > src/linux/gentoo-libdir.h
 		make clean || die "cleaning failed"
 		make build_release \
 			BUILD_SDLQUAKE2=`yesno sdl` \
@@ -105,32 +111,18 @@ src_install() {
 	# regular q2 files
 	dodir ${q2dir}
 	cp -rf my-rel-NO/* ${D}/${q2dir}/
-#	strip my-rel-NO/{*,*/*}
-
-	into ${GAMES_PREFIX}
-	newbin ${FILESDIR}/quake2.start quake2
-	newbin ${FILESDIR}/q2ded.start q2ded
-	if [ `use sdl` ] ; then
-		newbin ${FILESDIR}/sdlquake2.start sdlquake2
-		dosed "s:GENTOO_LIBDIR:${q2dir}:" ${GAMES_BINDIR}/sdlquake2
-	fi
-	dosed "s:GENTOO_LIBDIR:${q2dir}:" ${GAMES_BINDIR}/quake2
-	dosed "s:GENTOO_LIBDIR:${q2dir}:" ${GAMES_BINDIR}/q2ded
+	dogamesbin ${D}/${q2dir}/{quake2,q2ded}
+	rm ${D}/${q2dir}/{quake2,q2ded}
+	use sdl && dogamesbin ${D}/${q2dir}/sdlquake2 && rm ${D}/${q2dir}/sdlquake2
 
 	# q2max files
 	if [ ! `use noqmax` ] ; then
 		dodir ${q2maxdir}
 		cp -rf my-rel-YES/* ${D}/${q2maxdir}/
-
-		into ${GAMES_PREFIX}
-		newbin ${FILESDIR}/quake2.start quake2-qmax
-		newbin ${FILESDIR}/q2ded.start q2ded-qmax
-		if [ `use sdl` ] ; then
-			newbin ${FILESDIR}/sdlquake2.start sdlquake2-qmax
-			dosed "s:GENTOO_LIBDIR:${q2maxdir}:" ${GAMES_BINDIR}/sdlquake2-qmax
-		fi
-		dosed "s:GENTOO_LIBDIR:${q2maxdir}:" ${GAMES_BINDIR}/quake2-qmax
-		dosed "s:GENTOO_LIBDIR:${q2maxdir}:" ${GAMES_BINDIR}/q2ded-qmax
+		newgamesbin ${D}/${q2maxdir}/quake2 quake2-qmax
+		newgamesbin ${D}/${q2maxdir}/q2ded q2ded-qmax
+		rm ${D}/${q2maxdir}/{quake2,q2ded}
+		use sdl && newgamesbin ${D}/${q2maxdir}/sdlquake2 sdlquake2-qmax && rm ${D}/${q2maxdir}/sdlquake2
 
 		insinto ${q2maxdir}/baseq2
 		doins ${DISTDIR}/maxpak.pak
