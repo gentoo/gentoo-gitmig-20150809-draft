@@ -1,5 +1,7 @@
 MD5 10597b3a9ccf6616f870edc9b3eb3942 ChangeLog 1031
 MD5 f701c78fd8ec5d3707e0c6a1f2c7cba0 slib-2.4.2.ebuild 870
 MD5 4ad8613514582d1f7b6abdaad1ae8ac6 slib-2.4.3.ebuild 881
+MD5 e6c1adc547bc761ddfec0d9bd6290d8d slib-2.4.6.ebuild 883
 MD5 b03f0974d61facc6baf55cd7c52c4d00 files/digest-slib-2.4.2 56
 MD5 3569b91b0a2d855c5b8b93cb260d7b7f files/digest-slib-2.4.3 56
+MD5 07775759a1d54122529dab8a6b8e74d6 files/digest-slib-2.4.6 56

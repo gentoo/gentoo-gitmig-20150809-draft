@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/slib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/ChangeLog,v 1.7 2003/07/24 18:39:39 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/ChangeLog,v 1.8 2003/09/07 22:06:00 weeve Exp $
+
+*slib-2.4.6 (07 Sep 2003)
+
+  07 Sep 2003; Jason Wever <weeve@gentoo.org> slib-2.4.6.ebuild:
+  Version bump.  Fixes bug #26482.
 
   24 Jul 2003; Tavis Ormandy <taviso@gentoo.org> slib-2.4.3.ebuild:
   marking ~alpha
