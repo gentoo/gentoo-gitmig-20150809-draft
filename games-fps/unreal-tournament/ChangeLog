@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/unreal-tournament
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.2 2003/09/10 16:06:04 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.3 2004/03/28 06:21:58 mr_bones_ Exp $
+
+  27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  unreal-tournament-451.ebuild:
+  add missing opengl to IUSE
 
   29 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
   unreal-tournament-436.ebuild, unreal-tournament-451.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.8 2004/02/28 09:49:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.9 2004/03/28 06:21:21 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="Futuristic FPS (a hack that runs on top of Unreal Tournament)"
 HOMEPAGE="http://www.unreal.com/ http://icculus.org/~chunky/ut/unreal/"
@@ -13,13 +13,13 @@ SRC_URI="http://www.icculus.org/%7Echunky/ut/unreal/unreali-install.run
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
-IUSE="X"
+IUSE="X opengl"
 
 DEPEND="sys-libs/lib-compat"
 RDEPEND="X? ( virtual/x11 )
 	opengl? ( virtual/opengl )"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 pkg_setup() {
 	export CDROM_NAME_1="Unreal CD"

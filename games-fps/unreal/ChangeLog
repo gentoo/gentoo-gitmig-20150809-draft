@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/unreal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.4 2004/02/28 17:06:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.5 2004/03/28 06:21:21 mr_bones_ Exp $
+
+  27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> unreal-226.ebuild:
+  add missing opengl to IUSE
 
   28 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> :
   Fixing digest and closing bug #43206.
