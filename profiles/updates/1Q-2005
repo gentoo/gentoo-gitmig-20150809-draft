@@ -154,3 +154,4 @@ move sys-apps/mdadm sys-fs/mdadm
 move net-analyzer/snort_inline net-analyzer/snort
 slotmove x11-libs/lesstif 2.1 0
 move sys-apps/lsof sys-process/lsof
+move sys-apps/htop sys-process/htop
