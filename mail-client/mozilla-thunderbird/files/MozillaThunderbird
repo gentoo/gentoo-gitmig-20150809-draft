@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# This is the Gentoo Thunderbird startup script
+# Additions, suggestions?
+# contact astralstorm <astralstorm@gorzow.mm.pl>
+
+export MOZILLA_FIVE_HOME="/usr/lib/MozillaThunderbird"
+THUNDERBIRD_PATH="/usr/lib/MozillaThunderbird"
+
+# No MozillaFirebird running
+${THUNDERBIRD_PATH}/thunderbird $@

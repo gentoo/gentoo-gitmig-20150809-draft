@@ -1,0 +1,32 @@
+# ChangeLog for net-mail/mozilla-thunderbird-bin
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.1 2004/05/30 19:41:09 seemant Exp $
+
+*mozilla-thunderbird-bin-0.6 (04 May 2004)
+
+  04 May 2004; Brad Laue <brad@gentoo.org>
+  +files/0.6/icon/mozillathunderbird.desktop,
+  +files/0.6/icon/thunderbird-icon.png, +mozilla-thunderbird-bin-0.6.ebuild:
+  Version bump.
+
+  14 Feb 2004; Brad Laue <brad@gentoo.org> mozilla-thunderbird-bin-0.5.ebuild:
+  Stable on x86
+
+*mozilla-thunderbird-bin-0.5 (12 Feb 2004)
+
+  12 Feb 2004; Brad Laue <brad@gentoo.org> mozilla-thunderbird-bin-0.5.ebuild,
+  files/thunderbird, files/0.5/icon/mozillathunderbird.desktop,
+  files/0.5/icon/thunderbird-icon.png:
+  Bump to 0.5
+
+  08 Dec 2003; Brad Laue <brad@gentoo.org> mozilla-thunderbird-bin-0.4.ebuild:
+  Remove spurious dependency on gnupg.
+
+*mozilla-thunderbird-bin-0.4 (06 Dec 2003)
+
+  06 Dec 2003; Brad Laue <brad@gentoo.org> metadata.xml,
+  mozilla-thunderbird-bin-0.4.ebuild, files/MozillaThunderbird,
+  files/thunderbird-0.3-antialiasing-patch,
+  files/icon/mozillathunderbird.desktop, files/icon/thunderbird-icon.png:
+  Import of mozilla-thunderbird-bin to the tree, starting with 0.4.
+
