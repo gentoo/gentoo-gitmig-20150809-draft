@@ -1,6 +1,6 @@
 # ChangeLog for app-text/psutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.6 2003/05/23 23:10:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.7 2003/11/15 23:30:53 gmsoft Exp $
 
   23 May 2003; Aron Griffis <agriffis@gentoo.org> psutils-1.17.ebuild:
   Mark stable on alpha
@@ -8,6 +8,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *psutils-1.17 (1 Feb 2002)
+
+  15 Nov 2003; Guy Martin <gmsoft@gentoo.org> psutils-1.17.ebuild :
+  Added hppa to KEYWORDS.
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> psutils-1.17.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
