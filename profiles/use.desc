@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.105 2003/07/14 03:26:29 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.106 2003/07/16 02:10:59 vapier Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -130,7 +130,7 @@ socks5 - Adds support for the socks5 proxy
 spell - Adds dictionary support
 sse - fast floating point optimisation for Pentium class chips
 ssl - Adds support for Secure Socket Layer connections
-static - Causes things to be statically linked instead of dynamically.
+static - !!do not set this during bootstrap!! Causes things to be statically linked instead of dynamically
 svga - Adds support for SVGAlib (graphics library)
 tcltk - Support for Tcl and/or Tk
 tcpd - Adds support for TCP wrappers
