@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sun-one-studio-me/sun-one-studio-me-4.1.ebuild,v 1.2 2004/03/22 20:08:46 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sun-one-studio-me/sun-one-studio-me-4.1.ebuild,v 1.3 2004/03/23 21:02:27 dholm Exp $
 
 DESCRIPTION="Sun ONE Studio Mobile Edition"
 HOMEPAGE="http://wwws.sun.com/software/sundev/jde/studio_me/index.html"
 SRC_URI="ffj_me_linux.bin"
 LICENSE="sun-bcla-sos"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86"
 RESTRICT="fetch"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4.1"
