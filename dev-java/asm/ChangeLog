@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.11 2004/10/17 07:23:41 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.12 2004/11/24 22:24:50 karltk Exp $
+
+*asm-1.5.2 (24 Nov 2004)
+
+  24 Nov 2004; <karltk@gentoo.org> +asm-1.5.2.ebuild:
+  New upstream version.
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> asm-1.4.3-r1.ebuild:
   keywords ~amd64. closes #67377.
