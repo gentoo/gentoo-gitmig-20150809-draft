@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.2.2_p1.ebuild,v 1.3 2004/06/07 04:10:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.2.2_p1.ebuild,v 1.4 2004/06/07 20:44:03 mr_bones_ Exp $
 
 DESCRIPTION="Ximian Connector (An Evolution Plugin to talk to Exchange Servers)"
 HOMEPAGE="http://www.ximian.com"
@@ -59,7 +59,7 @@ src_install() {
 	dosym /usr/lib/libcrypto.so /usr/lib/libcrypto.so.2
 }
 
-post_install(){
+pkg_postinst() {
 	einfo "NOTE: Ximian connector requires the purchase of a"
 	einfo "key from Ximian to function properly."
 }
