@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.101 2004/10/28 00:54:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.102 2004/10/31 06:13:48 langthang Exp $
+
+  30 Oct 2004; Tuan Van <langthang@gentoo.org> +files/saslauthd-2.1.20.conf,
+  -cyrus-sasl-1.5.27-r5.ebuild, -cyrus-sasl-1.5.27-r6.ebuild,
+  -cyrus-sasl-2.1.14.ebuild, -cyrus-sasl-2.1.17.ebuild,
+  -cyrus-sasl-2.1.18.ebuild, cyrus-sasl-2.1.20.ebuild:
+  add die, add missing file, remove old ebuilds.
 
   27 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/cyrus-sasl-2.1.20-gcc4.patch, cyrus-sasl-2.1.20.ebuild:
