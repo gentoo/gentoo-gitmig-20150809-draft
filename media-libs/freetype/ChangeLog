@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.70 2005/03/11 15:36:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.71 2005/03/13 08:55:27 spyderous Exp $
+
+  13 Mar 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  freetype-2.1.9-r1.ebuild:
+  Stable x86 so xorg-x11-6.8.2 can go stable.
 
   11 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   freetype-2.1.9-r1.ebuild:
