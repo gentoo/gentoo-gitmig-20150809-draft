@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/anubis-3.6.2.ebuild,v 1.2 2004/06/24 22:20:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/anubis-3.6.2.ebuild,v 1.3 2004/07/14 16:37:37 agriffis Exp $
 
 DESCRIPTION="GNU Anubis is an outgoing mail processor."
 HOMEPAGE="http://www.gnu.org/software/anubis/"
@@ -16,8 +16,6 @@ DEPEND="crypt? ( >=app-crypt/gpgme-0.3.13 )
 	pam?   ( >=sys-libs/pam-0.75 )
 	tcpd?  ( >=sys-apps/tcp-wrappers-7.6 )
 	         >=dev-libs/libpcre-3.9"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	local myconf
@@ -36,4 +34,3 @@ src_compile() {
 src_install() {
 	einstall
 }
-

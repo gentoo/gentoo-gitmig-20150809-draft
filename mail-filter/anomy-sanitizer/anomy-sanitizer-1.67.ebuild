@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/anomy-sanitizer-1.67.ebuild,v 1.3 2004/06/24 22:19:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/anomy-sanitizer-1.67.ebuild,v 1.4 2004/07/14 16:37:17 agriffis Exp $
 
 DESCRIPTION="Perl based e-mail filtering tool, sensitive to html tags, mime types and attachments"
 HOMEPAGE="http://mailtools.anomy.net/"
@@ -16,8 +16,6 @@ RDEPEND=">=dev-lang/perl
 		>=dev-perl/Mail-Audit-2.1-r1
 		virtual/mta"
 DEPEND="${RDEPEND}"
-
-S=${WORKDIR}/${P}
 
 
 DEST="/usr/share/${PN}"
@@ -107,5 +105,3 @@ pkg_postrm() {
 		userdel -r sanitizer
 	fi
 }
-
-
