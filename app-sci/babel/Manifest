@@ -1,5 +1,5 @@
-MD5 c2cece666502cac1cd441284d4d93b03 babel-1.6.ebuild 905
-MD5 4c13d334edaf73726e9ead8e8f6740c9 ChangeLog 1145
+MD5 3332c73913edbf13e7a8da6cd9330e8b babel-1.6.ebuild 921
+MD5 81e61a53066da2377cf8b001881e38b8 ChangeLog 1246
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 444ffe6f4986e1fb199a0f2a31cccd7d files/babel-1.6-gcc32.diff 549
 MD5 45d9ad9dceace9db87c213339d35e10d files/digest-babel-1.6 60
