@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.7.ebuild,v 1.3 2002/11/04 17:52:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.7.ebuild,v 1.4 2002/12/06 14:11:05 verwilst Exp $
 
 IUSE="ssl"
 
@@ -17,6 +17,15 @@ KEYWORDS="x86 ppc"
 
 DEPEND=">=x11-libs/qt-3
 	ssl? ( >=dev-libs/openssl-0.9.6c )"
+
+src_unpack() {
+
+	unpack ${P}.tar.bz2
+	unpack qssl-${QV}.tar.bz2
+	cd ${S}/src
+	patch -p0 < ${FILESDIR}/gen2-branding-0.8.7.patch
+
+}
 
 src_compile() {
 	
