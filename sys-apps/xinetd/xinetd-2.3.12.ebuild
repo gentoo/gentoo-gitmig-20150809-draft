@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.12.ebuild,v 1.2 2003/08/12 04:38:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.12.ebuild,v 1.3 2003/08/23 17:37:45 mholzer Exp $
 
 DESCRIPTION="Xinetd is a powerful replacement for inetd, with advanced features"
 HOMEPAGE="http://www.xinetd.org"
@@ -8,7 +8,7 @@ SRC_URI="http://www.xinetd.org/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~mips ~alpha ~arm ~hppa"
+KEYWORDS="x86 ~amd64 ~ppc ~sparc ~mips ~alpha ~arm ~hppa"
 
 DEPEND="virtual/glibc 
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
