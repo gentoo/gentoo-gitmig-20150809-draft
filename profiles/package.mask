@@ -28,7 +28,10 @@
 =net-www/apache-1.3.26-r4
 
 #drobbins@gentoo.org (03 jul 2002)
-#needs some testing on gcc 2.95.3 systems and with gnomemeeting
+#this stuff is ready for the new gnomemeeting in testing:
+=net-libs/openh323-1.8.11
+=dev-libs/pwlib-1.2.20
+#this is still experimental....
 =net-libs/openh323-1.9.1
 =dev-libs/pwlib-1.3.1
 
