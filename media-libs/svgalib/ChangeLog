@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.13 2003/02/12 07:17:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.14 2003/03/16 15:13:49 liquidx Exp $
 
   31 Dec 2002; Martin Schlemmer <azarah@gentoo.org> svgalib-1.9.17-r1.ebuild :
   Ok, I should not be lazy, patch Makefile in svga_helper module, as my
@@ -17,6 +17,10 @@
   Update version.
 
 *svgalib-1.4.3-r4 (26 Dec 2002)
+
+  16 Mar 2003; Alastair Tse <liquidx@gentoo.org> svgalib-1.4.3-r4.ebuild,
+  files/svgalib-1.4.3-userpriv.patch:
+  fix userpriv problem with makefile
 
   26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> svgalib-1.4.3-r4.ebuild :
   Update r128 driver, bug #10987.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.3 2003/02/13 12:56:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.4 2003/03/16 15:13:49 liquidx Exp $
 
 IUSE=""
 
@@ -25,6 +25,7 @@ src_unpack() {
 	
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-userpriv.patch
 
 	# Update r128 driver, bug #10987.
 	cp -f ${DISTDIR}/r128.c ${S}/src
@@ -79,3 +80,10 @@ src_install() {
 	dodoc  Driver-programming-HOWTO README.* add_driver svgalib.lsm
 }
 
+pkg_postinst() {
+    # we chown/chmod outside userpriv
+    for x in /usr/lib/svgalib/demos/* /usr/lib/svgalib/theeDKit/*; do
+       chown root ${x}
+       chmod u+s ${x}
+    done       
+}
