@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/oidentd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.12 2003/03/30 19:19:53 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.13 2003/04/28 18:30:30 avenj Exp $
+
+*oidentd-2.0.6 (28 Apr 2003)
+
+  28 Apr 2003; Jon Portnoy <avenj@gentoo.org> oidentd-2.0.6.ebuild :
+  Version bump. No serious ebuild changes.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
