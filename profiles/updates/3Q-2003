@@ -67,4 +67,4 @@ move app-misc/Welcome2L app-misc/welcome2l
 move media-gfx/sane-plustek media-gfx/plustek-parallel
 move app-admin/tftp-hpa net-misc/tftp-hpa
 move net-ftp/atftp net-misc/atftp
-
+move dev-python/PyXML dev-python/pyxml
