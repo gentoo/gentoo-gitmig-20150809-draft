@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/rootstrap-0.3.18.ebuild,v 1.2 2004/04/09 13:09:52 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/rootstrap-0.3.19.ebuild,v 1.1 2004/04/09 13:09:52 lanius Exp $
 
 DESCRIPTION="A tool for building complete Linux filesystem images"
 HOMEPAGE="http://packages.qa.debian.org/rootstrap"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 SRC_URI="mirror://debian/pool/main/r/rootstrap/rootstrap_${PV}.orig.tar.gz
 	mirror://debian/pool/main/r/rootstrap/rootstrap_${PV}-1.diff.gz"
 
