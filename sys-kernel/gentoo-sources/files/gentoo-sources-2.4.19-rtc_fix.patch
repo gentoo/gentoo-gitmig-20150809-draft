@@ -1,0 +1,115 @@
+diff -ur linux-2.4.20-wolk4.9s/arch/cris/drivers/ds1302.c linux-2.4.20-wolk4.9s.plasmaroo/arch/cris/drivers/ds1302.c
+--- linux-2.4.20-wolk4.9s/arch/cris/drivers/ds1302.c	2004-01-05 23:33:45.000000000 +0000
++++ linux-2.4.20-wolk4.9s.plasmaroo/arch/cris/drivers/ds1302.c	2004-01-05 23:41:44.000000000 +0000
+@@ -315,6 +315,7 @@
+ 		{
+ 			struct rtc_time rtc_tm;
+ 						
++			memset(&rtc_tm, 0, sizeof (struct rtc_time));
+ 			get_rtc_time(&rtc_tm);						
+ 			if (copy_to_user((struct rtc_time*)arg, &rtc_tm, sizeof(struct rtc_time)))
+ 				return -EFAULT;	
+diff -ur linux-2.4.20-wolk4.9s/arch/m68k/bvme6000/rtc.c linux-2.4.20-wolk4.9s.plasmaroo/arch/m68k/bvme6000/rtc.c
+--- linux-2.4.20-wolk4.9s/arch/m68k/bvme6000/rtc.c	2004-01-05 23:33:45.000000000 +0000
++++ linux-2.4.20-wolk4.9s.plasmaroo/arch/m68k/bvme6000/rtc.c	2004-01-05 23:43:15.000000000 +0000
+@@ -54,6 +54,7 @@
+ 		/* Ensure clock and real-time-mode-register are accessible */
+ 		msr = rtc->msr & 0xc0;
+ 		rtc->msr = 0x40;
++		memset(&wtime, 0, sizeof (struct rtc_time));
+ 		do {
+ 			wtime.tm_sec =  BCD2BIN(rtc->bcd_sec);
+ 			wtime.tm_min =  BCD2BIN(rtc->bcd_min);
+diff -ur linux-2.4.20-wolk4.9s/arch/m68k/mvme16x/rtc.c linux-2.4.20-wolk4.9s.plasmaroo/arch/m68k/mvme16x/rtc.c
+--- linux-2.4.20-wolk4.9s/arch/m68k/mvme16x/rtc.c	2004-01-05 23:33:45.000000000 +0000
++++ linux-2.4.20-wolk4.9s.plasmaroo/arch/m68k/mvme16x/rtc.c	2004-01-05 23:44:02.000000000 +0000
+@@ -52,6 +52,7 @@
+ 		cli();
+ 		/* Ensure clock and real-time-mode-register are accessible */
+ 		rtc->ctrl = RTC_READ;
++		memset(&wtime, 0, sizeof (struct rtc_time));
+ 		wtime.tm_sec =  BCD2BIN(rtc->bcd_sec);
+ 		wtime.tm_min =  BCD2BIN(rtc->bcd_min);
+ 		wtime.tm_hour = BCD2BIN(rtc->bcd_hr);
+diff -ur linux-2.4.20-wolk4.9s/arch/ppc64/kernel/rtc.c linux-2.4.20-wolk4.9s.plasmaroo/arch/ppc64/kernel/rtc.c
+--- linux-2.4.20-wolk4.9s/arch/ppc64/kernel/rtc.c	2004-01-05 23:33:45.000000000 +0000
++++ linux-2.4.20-wolk4.9s.plasmaroo/arch/ppc64/kernel/rtc.c	2004-01-05 23:44:34.000000000 +0000
+@@ -96,6 +96,7 @@
+ 	switch (cmd) {
+ 	case RTC_RD_TIME:	/* Read the time/date from RTC	*/
+ 	{
++		memset(&wtime, 0, sizeof(struct rtc_time));
+ 		ppc_md.get_rtc_time(&wtime);
+ 		break;
+ 	}
+diff -ur linux-2.4.20-wolk4.9s/drivers/char/efirtc.c linux-2.4.20-wolk4.9s.plasmaroo/drivers/char/efirtc.c
+--- linux-2.4.20-wolk4.9s/drivers/char/efirtc.c	2004-01-05 23:33:45.000000000 +0000
++++ linux-2.4.20-wolk4.9s.plasmaroo/drivers/char/efirtc.c	2004-01-05 23:47:53.000000000 +0000
+@@ -118,6 +118,7 @@
+ static void
+ convert_from_efi_time(efi_time_t *eft, struct rtc_time *wtime)
+ {
++	memset(wtime, 0, sizeof(struct rtc_time));
+ 	wtime->tm_sec  = eft->second;
+ 	wtime->tm_min  = eft->minute;
+ 	wtime->tm_hour = eft->hour;
+diff -ur linux-2.4.20-wolk4.9s/drivers/char/rtc.c linux-2.4.20-wolk4.9s.plasmaroo/drivers/char/rtc.c
+--- linux-2.4.20-wolk4.9s/drivers/char/rtc.c	2004-01-05 23:33:45.000000000 +0000
++++ linux-2.4.20-wolk4.9s.plasmaroo/drivers/char/rtc.c	2004-01-05 23:52:43.000000000 +0000
+@@ -370,6 +370,7 @@
+ 		 * tm_min, and tm_sec values are filled in.
+ 		 */
+ 
++		memset(&wtime, 0, sizeof(struct rtc_time));
+ 		get_rtc_alm_time(&wtime);
+ 		break; 
+ 	}
+@@ -417,6 +418,7 @@
+ 	}
+ 	case RTC_RD_TIME:	/* Read the time/date from RTC	*/
+ 	{
++		memset(&wtime, 0, sizeof(struct rtc_time));
+ 		get_rtc_time(&wtime);
+ 		break;
+ 	}
+diff -ur linux-2.4.20-wolk4.9s/drivers/macintosh/rtc.c linux-2.4.20-wolk4.9s.plasmaroo/drivers/macintosh/rtc.c
+--- linux-2.4.20-wolk4.9s/drivers/macintosh/rtc.c	2004-01-05 23:33:45.000000000 +0000
++++ linux-2.4.20-wolk4.9s.plasmaroo/drivers/macintosh/rtc.c	2004-01-05 23:54:15.000000000 +0000
+@@ -64,6 +64,7 @@
+ 	case RTC_RD_TIME:
+ 		if (ppc_md.get_rtc_time)
+ 		{
++			memset(&rtc_tm, 0, sizeof(struct rtc_time));
+ 			get_rtc_time(&rtc_tm);
+ 
+ 			if (copy_to_user((struct rtc_time*)arg, &rtc_tm, sizeof(struct rtc_time)))
+diff -ur linux-2.4.20-wolk4.9s/drivers/sbus/char/rtc.c linux-2.4.20-wolk4.9s.plasmaroo/drivers/sbus/char/rtc.c
+--- linux-2.4.20-wolk4.9s/drivers/sbus/char/rtc.c	2004-01-05 23:33:45.000000000 +0000
++++ linux-2.4.20-wolk4.9s.plasmaroo/drivers/sbus/char/rtc.c	2004-01-05 23:54:43.000000000 +0000
+@@ -89,6 +89,7 @@
+ 	switch (cmd)
+ 	{
+ 	case RTCGET:
++		memset(&rtc_tm, 0, sizeof(struct rtc_time));
+ 		get_rtc_time(&rtc_tm);
+ 
+ 		if (copy_to_user((struct rtc_time*)arg, &rtc_tm, sizeof(struct rtc_time)))
+diff -ur linux-2.4.20-wolk4.9s/drivers/sgi/char/ds1286.c linux-2.4.20-wolk4.9s.plasmaroo/drivers/sgi/char/ds1286.c
+--- linux-2.4.20-wolk4.9s/drivers/sgi/char/ds1286.c	2004-01-05 23:33:45.000000000 +0000
++++ linux-2.4.20-wolk4.9s.plasmaroo/drivers/sgi/char/ds1286.c	2004-01-05 23:47:25.000000000 +0000
+@@ -174,6 +174,7 @@
+ 		 * tm_min, and tm_sec values are filled in.
+ 		 */
+ 
++		memset(&wtime, 0, sizeof(struct rtc_time));
+ 		ds1286_get_alm_time(&wtime);
+ 		break;
+ 	}
+@@ -216,6 +217,7 @@
+ 	}
+ 	case RTC_RD_TIME:	/* Read the time/date from RTC	*/
+ 	{
++		memset(&wtime, 0, sizeof(struct rtc_time));
+ 		ds1286_get_time(&wtime);
+ 		break;
+ 	}
