@@ -288,7 +288,11 @@ class config:
 		self.origenv=os.environ.copy()
 		self.populated=0
 	def populate(self):
-		self.configlist=[self.origenv.copy(),getconfig("/etc/make.conf"),getconfig("/etc/make.profile/make.defaults"),getconfig("/etc/make.globals")]
+		if os.path.exists("/etc/make.profile/make.defaults"):
+			self.configlist=[self.origenv.copy(),getconfig("/etc/make.conf"),getconfig("/etc/make.profile/make.defaults"),getconfig("/etc/make.globals")]
+		else:
+			print ">>> /etc/make.profile/make.defaults not found, continuing anyway..."
+			self.configlist=[self.origenv.copy(),getconfig("/etc/make.conf"),getconfig("/etc/make.globals")]
 		self.populated=1
 	def __getitem__(self,mykey):
 		if not self.populated:
@@ -1002,6 +1006,9 @@ def dep_frontend(mytype,depstring):
 
 # gets virtual package settings
 def getvirtuals(myroot):
+	if not os.path.exists(myroot+"/etc/make.profile/virtuals"):
+		print ">>>",os.path.normpath(myroot+"/etc/make.profile/virtuals"),"does not exist.  Continuing anyway..."
+		return {}
 	myfile=open(myroot+"/etc/make.profile/virtuals")
 	mylines=myfile.readlines()
 	myvirts={}

@@ -185,6 +185,9 @@ if len(sys.argv)>=2:
 			updmode=1
 	#system profile mode
 	if sysmode: 
+		if not os.path.exists(portage.root+"etc/make.profile/packages"):
+			print "!!!",portage.root+"etc/make.profile/packages does not exist.  \"system\" mode unavailable."
+			sys.exit(1)
 		myfile=open(portage.root+"etc/make.profile/packages","r")
 		mylines=myfile.readlines()
 		myfile.close()
