@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.16 2004/03/07 15:54:14 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.17 2004/04/15 02:41:25 geoman Exp $
+
+  14 Apr 2004; Stephen P. Becker <geoman@gentoo.org> Inline-0.44-r1.ebuild:
+  Marked stable on mips.
 
   07 Mar 2004; Stephen P. Becker <geoman@gentoo.org> Inline-0.44-r1.ebuild:
   Added ~mips keyword.

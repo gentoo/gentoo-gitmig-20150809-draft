@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ExtUtils-F77-1.14-r1.ebuild,v 1.8 2004/03/14 13:22:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ExtUtils-F77-1.14-r1.ebuild,v 1.9 2004/04/15 02:45:24 geoman Exp $
 
 inherit perl-module
 
@@ -10,4 +10,4 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-module/ExtUtils/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 ppc alpha hppa sparc ~mips"
+KEYWORDS="x86 amd64 ppc alpha hppa sparc mips"
