@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/angst-0.4b.ebuild,v 1.1 2003/02/12 10:45:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/angst-0.4b.ebuild,v 1.2 2003/03/07 22:20:24 mholzer Exp $
 
 IUSE=""
 DESCRIPTION="Angst is an active sniffer. It provides methods for aggressive sniffing on switched LANs."
@@ -10,7 +10,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
 DEPEND=">=net-libs/libpcap-0.7.1 
-	>=net-libs/libnet-1.0.2a-r2"
+	=net-libs/libnet-1.0.*"
 RDEPEND="${DEPEND}"
 S="${WORKDIR}/${P}"
 
