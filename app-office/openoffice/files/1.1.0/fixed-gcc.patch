@@ -1,0 +1,16 @@
+--- config_office/configure.orig	2003-08-13 15:03:11.000000000 +0200
++++ config_office/configure	2003-08-13 15:03:46.000000000 +0200
+@@ -2895,13 +2895,6 @@
+ 
+    if test "$_gcc_major" = "3"; then
+       USE_GCC3="TRUE"
+-      if test "$_gcc_longver"  -eq "030203"; then
+-         { { echo "$as_me:$LINENO: error: found version \"$_gcc_version\"
+-		 	gives internal error, use another version please." >&5
+-echo "$as_me: error: found version \"$_gcc_version\"
+-		 	gives internal error, use another version please." >&2;}
+-   { (exit 1); exit 1; }; }
+-      fi
+    else
+       USE_GCC3="FALSE"
+       if test "$_gcc_longver"  -lt "029502"; then

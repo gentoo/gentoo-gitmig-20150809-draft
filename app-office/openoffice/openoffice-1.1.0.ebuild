@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_rc1.ebuild,v 1.5 2003/09/06 22:21:02 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0.ebuild,v 1.1 2003/10/03 11:39:26 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -51,9 +51,9 @@ inherit virtualx
 LOC="/opt"
 FT_VER="2.1.4"
 STLP_VER="4.5.3"
-MY_PV="${PV/_rc1/rc}"
+MY_PV="${PV/_rc/rc}"
 INSTDIR="${LOC}/OpenOffice.org${PV}"
-S="${WORKDIR}/oo_${MY_PV}_src"
+S="${WORKDIR}/oo_${MY_PV/1.1.0/1.1}_src"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
 SRC_URI="mirror://openoffice/stable/${MY_PV}/OOo_${MY_PV}_source.tar.bz2
 	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/gpc231.tar.Z
@@ -62,7 +62,7 @@ HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="-x86 -ppc"
+KEYWORDS="~x86"
 IUSE="gnome kde"
 
 RDEPEND=">=sys-libs/glibc-2.1
@@ -72,7 +72,6 @@ RDEPEND=">=sys-libs/glibc-2.1
 	app-arch/zip
 	app-arch/unzip
 	dev-libs/expat
-	>=x11-libs/gtk+-2.0
 	>=virtual/jdk-1.3.1
 	virtual/lpr
 	ppc? ( >=sys-libs/glibc-2.2.5-r7
@@ -146,6 +145,68 @@ pkg_setup() {
 	ewarn " package and use agressive CFLAGS, lower the CFLAGS and try to  "
 	ewarn " merge again.					               "
 	ewarn "****************************************************************"
+
+
+}
+
+set_languages () {
+	case "$LANGUAGE" in
+		03 | PORT ) LANGNO=03; LANGNAME=PORT; LFULLNAME=Portuguese
+			;;
+		07 | RUSS ) LANGNO=07; LANGNAME=RUSS; LFULLNAME=Russian
+			;;
+		30 | GREEK ) LANGNO=30; LANGNAME=GREEK; LFULLNAME=Greek
+			;;
+		31 | DTCH ) LANGNO=03; LANGNAME=DTCH; LFULLNAME=Dutch
+			;;
+		33 | FREN ) LANGNO=33; LANGNAME=FREN; LFULLNAME=French
+			;;
+		34 | SPAN ) LANGNO=34; LANGNAME=SPAN; LFULLNAME=Spanish
+			;;
+		35 | FINN ) LANGNO=35; LANGNAME=FINN; LFULLNAME=Finnish
+			;;
+		37 | CAT ) LANGNO=37; LANGNAME=CAT; LFULLNAME=Catalan
+			;;
+		39 | ITAL ) LANGNO=39; LANGNAME=ITAL; LFULLNAME=Italian
+			;;
+		42 | CZECH ) LANGNO=42; LANGNAME=CZECH; LFULLNAME=Czech
+			;;
+		43 | SLOVAK ) LANGNO=43; LANGNAME=SLOVAK; LFULLNAME=Slovak
+			;;
+		45 | DAN ) LANGNO=45; LANGNAME=DAN; LFULLNAME=Danish
+			;;
+		46 | SWED ) LANGNO=46; LANGNAME=SWED; LFULLNAME=Swedish
+			;;
+		48 | POL ) LANGNO=48; LANGNAME=POL; LFULLNAME=Polish
+			;;
+		49 | GER ) LANGNO=49; LANGNAME=GER; LFULLNAME=German
+			;;
+		55 | PORTBR ) LANGNO=55; LANGNAME=PORTBR; LFULLNAME="Portuguese brazilian"
+			;;
+		66 | THAI ) LANGNO=66; LANGNAME=THAI; LFULLNAME=Thai
+			;;
+		77 | ESTONIAN ) LANGNO=77; LANGNAME=ESTONIAN; LFULLNAME=Estonian
+			;;
+		81 | JAPN ) LANGNO=81; LANGNAME=JAPN; LFULLNAME="Japanese"
+			;;
+		82 | KOREAN ) LANGNO=82; LANGNAME=KOREAN; LFULLNAME=Korean
+			;;
+		86 | CHINSIM ) LANGNO=86; LANGNAME=CHINSIM; LFULLNAME="Simplified Chinese (PRC)"
+			;;
+		88 | CHINTRAD ) LANGNO=88; LANGNAME=CHINTRAD; LFULLNAME="Traditional Chinese (taiwan)"
+			;;
+		90 | TURK ) LANGNO=90; LANGNAME=TURK; LFULLNAME=Turkish
+			;;
+		91 | HINDI ) LANGNO=91; LANGNAME=HINDI; LFULLNAME=Hindi
+			;;
+		96 | ARAB ) LANGNO=96; LANGNAME=ARAB; LFULLNAME=Arabic
+			;;
+		97 | HEBREW ) LANGNO=97; LANGNAME=HEBREW; LFULLNAME=Hebrew
+			;;
+		* )
+			LANGNO=01; LANGNAME=ENUS; LFULLNAME="US English (default)"
+			;;
+	esac
 }
 
 oo_setup() {
@@ -164,7 +225,7 @@ oo_setup() {
 			export GCC_PROFILE="$(/usr/sbin/gcc-config --get-current-profile)"
 
 			# Just recheck gcc version ...
-			if [ "$(gcc-version)" != "3.2" ]
+			if [ "$(gcc-version)" != "3.2" ] && [ "$(gcc-version)" != "3.3" ]
 			then
 				# See if we can get a gcc profile we know is proper ...
 				if /usr/sbin/gcc-config --get-bin-path ${CHOST}-3.2.1 &> /dev/null
@@ -172,7 +233,7 @@ oo_setup() {
 					export PATH="$(/usr/sbin/gcc-config --get-bin-path ${CHOST}-3.2.1):${PATH}"
 					export GCC_PROFILE="${CHOST}-3.2.1"
 				else
-					eerror "This build needs gcc-3.2 or later!"
+					eerror "This build needs gcc-3.2 or gcc-3.3!"
 					eerror
 					eerror "Use gcc-config to change your gcc profile:"
 					eerror
@@ -207,6 +268,18 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/no-mozab.patch
 
+	#The gcc-3.2.3 version in gentoo is fixed for the internal error that
+	#blocks compilation with it, so remove the check from the configure script
+#	epatch ${FILESDIR}/${PV}/fixed-gcc.patch
+
+#	epatch ${FILESDIR}/${PV}/no-crashrep.patch
+
+#	einfo "Fixing up crashrep/source/unx/makefile.mk"
+#	sed -i -e "s,\(PRODUCT[^a-zA-Z]*\)\(FULL\),\1full," ${S}/crashrep/source/unx/makefile.mk||die
+#	einfo "Removing crashrep from the installed set"
+#	sed -i -e "s,\(crashrep \),," ${S}/instsetoo/prj/build.lst
+
+
 
 	# Now for our optimization flags ...
 	perl -pi -e "s|^CFLAGSOPT=.*|CFLAGSOPT=${CFLAGS}|g" \
@@ -222,6 +295,9 @@ src_unpack() {
 	do
 		perl -pi -e "s/^(PRJNAME)/MAXPROCESS=1\n\1/" ${x}/makefile.mk
 	done
+
+	#Do our own branding by setting gentoo linux as the vendor
+	sed -i -e "s,\(//\)\(.*\)\(my company\),\2Gentoo Linux Inc.," ${S}/offmgr/source/offapp/intro/ooo.src
 }
 
 get_EnvSet() {
@@ -241,6 +317,8 @@ get_EnvSet() {
 src_compile() {
 	addpredict /bin
 	local buildcmd=""
+
+	set_languages
 
 	oo_setup
 
@@ -287,12 +365,12 @@ src_compile() {
 	# Do NOT compile with a external STLport, as gcc-2.95.3 users will
 	# get linker errors due to the ABI being different (STLport will be
 	# compiled with 2.95.3, while OO is compiled with 3.x). (Az)
-	einfo "Configuring OpenOffice.org..."
+	einfo "Configuring OpenOffice.org with language support for ${LFULLNAME}..."
 	cd ${S}/config_office
 	rm -f config.cache
 	./configure --enable-gcc3 \
 		--with-jdk-home=${JAVA_HOME} \
-		--with-lang=ALL\
+		--with-lang=${LANGNAME}\
 		--with-x || die
 
 	cd ${S}
@@ -319,9 +397,9 @@ src_compile() {
 	# We use build.pl directly, as dmake tends to segfault. (Az)
 	if [ "${ECPUS}" -gt 1 ]
 	then
-		buildcmd="${S}/solenv/bin/build.pl -all -PP${ECPUS} product=full"
+		buildcmd="${S}/solenv/bin/build.pl --all -P ${ECPUS} product=full"
 	else
-		buildcmd="${S}/solenv/bin/build.pl -all product=full"
+		buildcmd="${S}/solenv/bin/build.pl --all product=full"
 	fi
 
 	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
@@ -390,7 +468,7 @@ src_install() {
 	#
 	#   helplangs="ENUS,FREN,GERM,SPAN,ITAL,SWED"
 	#
-	[ -z "${LANGUAGE}" ] && LANGUAGE=01
+	set_languages
 
 	get_EnvSet
 
@@ -434,11 +512,11 @@ src_install() {
 
 	einfo "Installing OpenOffice.org into build root..."
 	dodir ${INSTDIR}
-	cd ${S}/instsetoo/${SOLPATH}/${LANGUAGE}/normal
+	cd ${S}/instsetoo/${SOLPATH}/${LANGNO}/normal
 	# Setup virtualmake
 	export maketype="./setup"
 	# We need X to install...
-	virtualmake "-v -r:${T}/autoresponse"
+	virtualmake "-v -r:${T}/autoresponse" ||die
 
 	echo
 	einfo "Removing build root from registy..."
@@ -464,7 +542,7 @@ src_install() {
 
 	# Install user autoresponse file
 	insinto /etc/openoffice
-	sed -e "s|<pv>|${PV//_beta2}|g" ${T}/rsfile-local > ${T}/autoresponse-${PV}.conf
+	sed -e "s|<pv>|${PV//_rc3/.0}|g" ${T}/rsfile-local > ${T}/autoresponse-${PV}.conf
 	doins ${T}/autoresponse-${PV}.conf
 
 	# Install wrapper script
@@ -507,7 +585,6 @@ src_install() {
 		insinto /usr/share/applnk/OpenOffice.org\ 1.1
 		# Install the files needed for the catagory
 		doins ${kdeloc}/.directory
-		doins ${kdeloc}/.order
 		dodir /usr/share
 		# Install the icons and mime info
 		cp -a ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
