@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ots
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.4 2004/03/08 20:02:17 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.5 2004/04/29 00:15:14 avenj Exp $
+
+  28 Apr 2004; Jon Portnoy <avenj@gentoo.org> ots-0.4.1.ebuild :
+  Stable on AMD64 and x86.
 
   08 Mar 2004; <augustus@gentoo.org> ots-0.4.1.ebuild:
   Added ~amd64 keyword.
