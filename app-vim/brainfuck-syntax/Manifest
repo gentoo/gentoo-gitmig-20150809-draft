@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6402b14d8cf541f80aa7e642f9963655 ChangeLog 487
-MD5 25f3b9fa323e2c61d4331b0fbe52a53f brainfuck-syntax-1.0.1.ebuild 561
+MD5 49b5e9b08e3622380804d2900a809199 brainfuck-syntax-1.0.1.ebuild 561
+MD5 5f9dfd692901716238d56406f7fe82c7 ChangeLog 589
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 6d556ac6714e50ebc49ccebbcbf56209 files/digest-brainfuck-syntax-1.0.1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCKzXvLLFUmVNQ7rkRAnPmAJ4skwOxn40Th5i/t2hAm9a3i5usAQCghXXH
-gvHKWBOwc4O9EQcAbn1DwKI=
-=G4v2
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2b54a4725d369eda293a4d58c051d22b ChangeLog 466
-MD5 9341cb506a2bdf616b1d356d188b3ffa ntp-syntax-20031001.ebuild 531
+MD5 c9942e7e0d23766f0534ff68c9380ca7 ntp-syntax-20031001.ebuild 531
+MD5 c5f219eeb5ee940fe275f2bed42be2af ChangeLog 563
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 336c21ce9b2fa8879204ec8577a6372a files/digest-ntp-syntax-20031001 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCKzT/LLFUmVNQ7rkRAshOAJ0XInLmipILuqTXV3jGcW/MS11hpgCfWF4i
-ycsh4QV4lgCU1hs8ex1zF4g=
-=kws5
------END PGP SIGNATURE-----
