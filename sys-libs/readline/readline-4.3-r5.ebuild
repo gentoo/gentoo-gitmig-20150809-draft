@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.15 2004/08/24 04:36:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.16 2004/08/26 11:51:25 lv Exp $
 
 inherit eutils gnuconfig
 
@@ -34,16 +34,11 @@ src_unpack() {
 	gnuconfig_update
 }
 
-pkg_setup() {
-	# this adds support for installing to lib64/lib32. since only portage
-	# 2.0.51 will have this functionality supported in dolib and friends,
-	# and since it isnt expected that many profiles will define it, we need
-	# to make this variable default to lib.
-	[ -z "${CONF_LIBDIR}" ] && export CONF_LIBDIR="lib"
-}
-
 src_compile() {
-	econf --with-curses || die
+	# the --libdir= is needed because if lib64 is a directory, it will default
+	# to using that... even if CONF_LIBDIR isnt set or we're using a version
+	# of portage without CONF_LIBDIR support.
+	econf --with-curses --libdir=/usr/$(get_libdir) || die
 
 	emake || die
 	cd shlib
@@ -52,25 +47,27 @@ src_compile() {
 
 
 src_install() {
-	einstall || die
+	# portage 2.0.50's einstall causes sandbox violations if lib64 is a
+	# directory, since readline's configure automatically sets libdir for you.
+	make DESTDIR="${D}" install || die
 	cd ${S}/shlib
-	einstall || die
+	make DESTDIR="${D}" install || die
 
 	cd ${S}
 
-	dodir /${CONF_LIBDIR}
-	mv ${D}/usr/${CONF_LIBDIR}/*.so* ${D}/${CONF_LIBDIR}
-	rm -f ${D}/${CONF_LIBDIR}/*.old
+	dodir /$(get_libdir)
+	mv ${D}/usr/$(get_libdir)/*.so* ${D}/$(get_libdir)
+	rm -f ${D}/$(get_libdir)/*.old
 	# bug #4411
 	gen_usr_ldscript libreadline.so
 	gen_usr_ldscript libhistory.so
 	# end bug #4411
-	dosym libhistory.so.${PV/a/} /${CONF_LIBDIR}/libhistory.so
-	dosym libreadline.so.${PV/a/} /${CONF_LIBDIR}/libreadline.so
+	dosym libhistory.so.${PV/a/} /$(get_libdir)/libhistory.so
+	dosym libreadline.so.${PV/a/} /$(get_libdir)/libreadline.so
 	# Needed because make install uses ${D} for the link
-	dosym libhistory.so.${PV/a/} /${CONF_LIBDIR}/libhistory.so.4
-	dosym libreadline.so.${PV/a/} /${CONF_LIBDIR}/libreadline.so.4
-	chmod 755 ${D}/${CONF_LIBDIR}/*.${PV/a/}
+	dosym libhistory.so.${PV/a/} /$(get_libdir)/libhistory.so.4
+	dosym libreadline.so.${PV/a/} /$(get_libdir)/libreadline.so.4
+	chmod 755 ${D}/$(get_libdir)/*.${PV/a/}
 
 	dodoc CHANGELOG CHANGES README USAGE
 	docinto ps
@@ -79,7 +76,7 @@ src_install() {
 
 	# Backwards compatibility #29865
 	if [ -e ${ROOT}/lib/libreadline.so.4.1 ] ; then
-		[ "${CONF_LIBDIR}" != "lib" ] && dodir /lib
+		[ "$(get_libdir)" != "lib" ] && dodir /lib
 		cp -a ${ROOT}/lib/libreadline.so.4.1 ${D}/lib/
 		touch ${D}/lib/libreadline.so.4.1
 	fi

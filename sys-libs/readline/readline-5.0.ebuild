@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0.ebuild,v 1.3 2004/08/24 04:36:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0.ebuild,v 1.4 2004/08/26 11:51:25 lv Exp $
 
 inherit eutils gnuconfig
 
@@ -34,23 +34,20 @@ src_unpack() {
 	gnuconfig_update
 }
 
-pkg_setup() {
-	# this adds support for installing to lib64/lib32. since only portage
-	# 2.0.51 will have this functionality supported in dolib and friends,
-	# and since it isnt expected that many profiles will define it, we need
-	# to make this variable default to lib.
-	[ -z "${CONF_LIBDIR}" ] && export CONF_LIBDIR="lib"
-}
-
 src_compile() {
-	econf --with-curses || die
+	# the --libdir= is needed because if lib64 is a directory, it will default
+	# to using that... even if CONF_LIBDIR isnt set or we're using a version
+	# of portage without CONF_LIBDIR support.
+	econf --with-curses --libdir=/usr/$(get_libdir) || die
 	emake || die
 }
 
 src_install() {
-	einstall || die
-	dodir /${CONF_LIBDIR}
-	mv ${D}/usr/${CONF_LIBDIR}/*.so* ${D}/${CONF_LIBDIR}
+	# portage 2.0.50's einstall causes sandbox violations if lib64 is a
+	# directory, since readline's configure automatically sets libdir for you.
+	make DESTDIR="${D}" install || die
+	dodir /$(get_libdir)
+	mv ${D}/usr/$(get_libdir)/*.so* ${D}/$(get_libdir)
 
 	# Bug #4411
 	gen_usr_ldscript libreadline.so
