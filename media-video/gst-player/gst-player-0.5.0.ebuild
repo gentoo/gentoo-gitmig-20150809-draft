@@ -16,6 +16,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=">=media-libs/gstreamer-0.5.2
+	>=media-libs/gst-plugins-0.5.2
 	>=x11-libs/gtk+-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/gconf-1.2
