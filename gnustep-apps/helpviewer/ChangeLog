@@ -1,6 +1,6 @@
-# ChangeLog for app-gnustep/helpviewer
+# ChangeLog for gnustep-apps/helpviewer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/helpviewer/ChangeLog,v 1.2 2004/07/23 14:58:59 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/helpviewer/ChangeLog,v 1.3 2004/07/27 17:21:54 aliz Exp $
 
   23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
   helpviewer-0.3.ebuild:

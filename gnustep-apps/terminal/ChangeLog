@@ -1,6 +1,6 @@
-# ChangeLog for app-gnustep/terminal
+# ChangeLog for gnustep-apps/terminal
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.2 2004/07/23 14:59:59 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.3 2004/07/27 17:21:54 aliz Exp $
 
   23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
   terminal-0.9.4.ebuild:
