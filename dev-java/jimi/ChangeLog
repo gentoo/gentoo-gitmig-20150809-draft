@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jimi
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jimi/ChangeLog,v 1.1 2004/09/21 18:04:46 axxo Exp $
+
+*jimi-1.0 (21 Sep 2004)
+
+  21 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +jimi-1.0.ebuild:
+  initial import, ebuild created by me, as a dep
+
