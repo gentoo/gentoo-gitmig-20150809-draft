@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.77.1.ebuild,v 1.5 2004/01/11 01:24:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.77.1.ebuild,v 1.6 2004/02/11 08:08:37 mr_bones_ Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 
 LICENSE="xmame"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~ia64 ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
 IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts joystick icc net"
 
 RDEPEND="sys-libs/zlib
