@@ -1,4 +1,14 @@
-MD5 27fd642085e6c5abd706b7c6f074315b pylirc-0.0.4.ebuild 473
-MD5 78946c3bcc4eabb7d811f958ab0d4a0c ChangeLog 598
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b32aa423849c603de1ab67e41a39b236 pylirc-0.0.4.ebuild 471
+MD5 df171a2796ccac5c1a3571faf270f0ee ChangeLog 691
 MD5 ae750297e34c9a0c4929184c72684260 metadata.xml 181
 MD5 277f7e64610bf8dc60e7132e06f7b36d files/digest-pylirc-0.0.4 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhRooMSkoRwEucGERAgEEAKCWF0RtacvzElZqnPHusI9yhgafDACaAp02
+euKyDKHhA1eN5oZOksZWkwA=
+=Ql3h
+-----END PGP SIGNATURE-----
