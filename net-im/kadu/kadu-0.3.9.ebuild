@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.3.9.ebuild,v 1.4 2005/03/18 15:11:32 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.3.9.ebuild,v 1.5 2005/03/20 23:34:40 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -26,6 +26,11 @@ DEPEND=">=x11-libs/qt-3.0.1
 
 S=${WORKDIR}/${PN}
 
+spec_config() {
+		sed -i -r "s/(^${2}\\s*=\\s*).*//" modules/${1}/spec
+		echo "${2}=${3}" >> modules/${1}/spec
+}
+
 module_config() {
 	sed -i -r "s/(^module_${1}\\s*=\\s*).*/\\1${2}/" .config
 }
@@ -42,8 +47,14 @@ src_compile() {
 
 	# dynamic modules
 	use alsa || use oss || module_config dsp_sound n
-	use arts && module_config arts_sound m
 	use esd && module_config esd_sound m
+	if use arts; then
+	    module_config arts_sound m
+	    # Fix kde libs paths
+		spec_config arts_sound MODULE_INCLUDES_PATH "\"$(kde-config --prefix)/include $(kde-config --prefix)/include/arts\""
+		spec_config arts_sound MODULE_LIBS_PATH $(kde-config --prefix)/lib
+	fi
+
 	if use nas; then
 		module_config nas_sound m
 		epatch "${FILESDIR}/${P}-nas-gentoo.diff"
