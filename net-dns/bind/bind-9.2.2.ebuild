@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2.ebuild,v 1.5 2003/04/15 14:44:57 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2.ebuild,v 1.6 2003/06/08 05:15:12 seemant Exp $
 
 IUSE="ssl ipv6 doc"
 
@@ -12,7 +12,8 @@ KEYWORDS="x86 ~ppc sparc ~alpha arm"
 LICENSE="as-is"
 SLOT="0"
 
-DEPEND="sys-apps/groff
+DEPEND=">=sys-apps/sed-4
+	sys-apps/groff
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 

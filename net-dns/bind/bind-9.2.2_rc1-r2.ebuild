@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2_rc1-r2.ebuild,v 1.1 2003/02/15 05:43:14 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2_rc1-r2.ebuild,v 1.2 2003/06/08 05:15:12 seemant Exp $
 
 IUSE="ssl ipv6 doc"
 
@@ -15,6 +15,7 @@ LICENSE="as-is"
 SLOT="0"
 
 DEPEND="sys-apps/groff
+	>=sys-apps/sed-4
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 
@@ -23,9 +24,11 @@ src_unpack() {
 
 	# Adjusting PATHs in manpages
 	for i in `echo bin/{named/named.8,check/named-checkconf.8,nsupdate/nsupdate.8,rndc/rndc.8}`; do
-	sed -e 's:/etc/named.conf:/etc/bind/named.conf:g' -e 's:/etc/rndc.conf:/etc/bind/rndc.conf:g' \
-	-e 's:/etc/rndc.key:/etc/bind/rndc.key:g' < ${i} > ${i}.new
-	mv --force ${i}.new ${i} ; done
+	sed -i \
+		-e 's:/etc/named.conf:/etc/bind/named.conf:g' \
+		-e 's:/etc/rndc.conf:/etc/bind/rndc.conf:g' \
+		-e 's:/etc/rndc.key:/etc/bind/rndc.key:g' ${i}
+	done
 }
 
 src_compile() {
