@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/files/generate-asm-sparc,v 1.4 2003/03/24 02:18:27 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/files/generate-asm-sparc,v 1.5 2004/07/18 04:48:52 dragonheart Exp $
 #
 # This script generates the files in /usr/include/asm for sparc systems
 # during installation of sys-kernel/linux-headers.
