@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4363-r3.ebuild,v 1.4 2003/09/07 00:08:13 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4363-r3.ebuild,v 1.5 2003/09/07 21:22:22 gmsoft Exp $
 
 NV_V="${PV/1.0./1.0-}"
 NV_PACKAGE="NVIDIA_kernel-${NV_V}"
@@ -12,7 +12,7 @@ SRC_URI="ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${NV_PACKAGE}.tar.g
 # The slow needs to be set to $KV to prevent unmerges of modules for other kernels.
 LICENSE="NVIDIA"
 SLOT="${KV}"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 RESTRICT="nostrip"
 
 DEPEND="virtual/linux-sources"
