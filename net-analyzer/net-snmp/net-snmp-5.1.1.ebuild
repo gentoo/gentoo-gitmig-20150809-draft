@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1.ebuild,v 1.20 2005/01/28 11:19:25 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1.ebuild,v 1.21 2005/02/03 00:19:20 ka0ttic Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ DEPEND="virtual/libc
 		>=dev-perl/ExtUtils-MakeMaker-6.11-r1
 	)"
 RDEPEND="${DEPEND}
+	dev-perl/TermReadKey
 	perl? ( X? ( dev-perl/perl-tk ) )
 	selinux? ( sec-policy/selinux-snmpd )
 	!virtual/snmp"
