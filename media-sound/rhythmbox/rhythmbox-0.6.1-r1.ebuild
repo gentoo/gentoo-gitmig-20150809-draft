@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.1.ebuild,v 1.1 2003/11/22 13:50:10 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.1-r1.ebuild,v 1.1 2003/11/25 14:25:51 foser Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="oggvorbis mad xine flac"
+IUSE="oggvorbis mad xine flac faad"
 
 RDEPEND=">=x11-libs/gtk+-2.2.2
 	>=gnome-base/libgnomeui-2
@@ -18,6 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2.2.2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libbonobo-2
 	>=media-libs/musicbrainz-2
+	faad? ( >=media-libs/faad2-2.0_rc3 )
 	flac? ( >=media-libs/flac-1 )
 	oggvorbis? ( >=media-libs/libvorbis-1 )
 	mad? ( >=media-libs/libid3tag-0.15 )
@@ -47,6 +48,7 @@ use flac && G2CONF="${G2CONF} --enable-flac"
 G2CONF="${G2CONF} \
 	$(use_enable oggvorbis vorbis) \
 	$(use_enable mad mp3) \
+	$(use_enable faad mp4 ) \
 	--disable-schemas-install"
 
 src_unpack( ) {
