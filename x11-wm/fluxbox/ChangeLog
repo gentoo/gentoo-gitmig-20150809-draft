@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.47 2002/12/09 23:33:15 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.48 2002/12/10 19:02:31 mkeadle Exp $
+
+*fluxbox-0.1.14-r1 (10 Dec 2002)
+
+  10 Dec 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.14-r1.ebuild
+  files/digest-fluxbox-0.1.14-r1
+
+  Menukey, vano, (menudestroy), and a toggledecor patch are now applied.
+  Should still be working fine with Xft1 or Xft2.
 
 *fluxbox-0.1.14 (09 Dec 2002)
 
