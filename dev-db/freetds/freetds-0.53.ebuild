@@ -1,6 +1,6 @@
-#Copyright 2002 Gentoo Technologies, Inc.
-#Distributed under the terms of the GNU General Public License v2
-#Author <root@station-1.internal.feedbackplusinc.com>
+# Copyright 2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.53.ebuild,v 1.5 2002/10/17 14:47:35 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tabular Datastream Library"
@@ -12,15 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-src_unpack() {
-
-	unpack ${P}.tgz
-	cd ${S}
-
-}
-
 src_compile() {
-
 	./configure \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
@@ -30,16 +22,12 @@ src_compile() {
 
 	emake || die
 
-	 mv ${S}/Makefile ${S}/Makefile.orig
-	 sed -e 's/^DEFDIR = /DEFDIR = $(DESTDIR)/' \
+	mv ${S}/Makefile ${S}/Makefile.orig
+	sed -e 's/^DEFDIR = /DEFDIR = $(DESTDIR)/' \
 		 -e 's/^ETC = /ETC = $(DESTDIR)/' \
 		 ${S}/Makefile.orig > ${S}/Makefile
 }
 
-src_install () {
-
+src_install() {
 	make DESTDIR=${D} install || die
 }
-
-
-

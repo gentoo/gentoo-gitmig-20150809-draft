@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/freetds
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.4 2002/09/20 20:43:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.5 2002/10/17 14:47:35 vapier Exp $
 
 *freetds-0.53-r1 (30 Aug 2002)
 
@@ -24,7 +24,7 @@
 
   15 Jul 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   
-  Submitted by Jerry Haltom
+  Submitted by Jerry Haltom root@station-1.internal.feedbackplusinc.com
   
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
