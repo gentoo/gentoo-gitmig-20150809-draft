@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-12.2.0-r1.ebuild,v 1.2 2004/06/24 22:08:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-12.2.0-r1.ebuild,v 1.3 2004/11/10 03:40:23 usata Exp $
 
 inherit elisp
 
@@ -13,15 +13,13 @@ SRC_URI="http://openlab.ring.gr.jp/skk/maintrunk/${MY_P}.tar.bz2"
 HOMEPAGE="http://openlab.ring.gr.jp/skk/"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 alpha sparc ppc"
+KEYWORDS="x86 alpha sparc ppc ~ppc-macos"
 SLOT="0"
 
 DEPEND=">=sys-apps/sed-4
-	>=app-emacs/apel-10.6
-	virtual/emacs"
-RDEPEND="virtual/emacs
-	>=app-emacs/apel-10.6
-	virtual/skkserv"
+	>=app-emacs/apel-10.6"
+RDEPEND=">=app-emacs/apel-10.6
+	|| ( virtual/skkserv app-i18n/skk-jisyo )"
 
 SITEFILE=50ddskk-gentoo.el
 

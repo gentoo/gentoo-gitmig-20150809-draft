@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ddskk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.13 2004/08/26 22:56:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.14 2004/11/10 03:40:23 usata Exp $
+
+  10 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> ddskk-12.2.0-r1.ebuild,
+  ddskk-12.2.1_pre20040822.ebuild:
+  Added to ~ppc-macos; bug #70566.
 
 *ddskk-12.2.1_pre20040822 (27 Aug 2004)
 
