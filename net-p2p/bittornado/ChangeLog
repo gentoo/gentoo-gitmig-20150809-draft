@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/bittornado
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.16 2004/07/03 12:19:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.17 2004/07/04 00:14:24 mholzer Exp $
+
+*bittornado-0.3.4 (04 Jul 2004)
+
+  04 Jul 2004; Martin Holzer <mholzer@gentoo.org> +bittornado-0.3.4.ebuild:
+  Version bumped.
 
   03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> bittornado-0.3.1.ebuild,
   bittornado-0.3.2.ebuild, bittornado-0.3.3.ebuild:
