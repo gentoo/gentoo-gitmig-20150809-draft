@@ -53,3 +53,4 @@ GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurs
 ARCH="hppa"
 ACCEPT_KEYWORDS="hppa"
 
+FEATURES="sfperms sandbox strict"
