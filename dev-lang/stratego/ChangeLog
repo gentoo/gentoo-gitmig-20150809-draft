@@ -1,0 +1,24 @@
+# ChangeLog for dev-lang/stratego
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/ChangeLog,v 1.1 2002/04/12 13:56:04 karltk Exp $
+
+*stratego-0.7 (11 Apr 2002)
+
+  11 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> stratego-0.7.ebuild files/digest-stratego-0.7:
+
+  Stratego is a modular language for the specification of fully automatic 
+  program transformation systems based on the paradigm of RewritingStrategies.
+
+  In Stratego, basic transformation rules are expressed by means of labeled 
+  conditional rewrite rules. Exhaustively applying all rewrite rules in a 
+  collection of valid rules is often not desirable; a system of rules can be 
+  non-terminating, or, more frequently, non-confluent. The latter means that 
+  different outcomes of the normalization process are possible depending on 
+  the position of application and the selection of rules. Therefore, it is
+  necessary to have more control over the application of rules. In standard 
+  systems based on rewriting, normalization is controlled by a fixed default 
+  RewritingStrategy. In such systems more control is achieved by encoding the 
+  desired strategy with additional rewrite rules that spell out a traversal 
+  over the abstract syntax tree and apply the transformations in the desired 
+  order.
+
