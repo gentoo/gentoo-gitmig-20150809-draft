@@ -1,25 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.16 2004/10/24 12:05:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.17 2004/10/27 16:24:09 vapier Exp $
 
 inherit eutils flag-o-matic
 
 MY_P=${P}-4_MLI.src
 S=${WORKDIR}/motif
 DESCRIPTION="Open Motif (Metrolink Bug Fix Release)"
-SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz"
 HOMEPAGE="http://www.metrolink.com/openmotif/"
+SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz"
+
 LICENSE="MOTIF"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ppc64 ~mips ppc-macos"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ppc-macos sparc x86"
 IUSE=""
+
 DEPEND="virtual/libc
 	virtual/x11
 	>=sys-apps/sed-4"
-
-SLOT="0"
-
-# parallel compile sometimes failes
-MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	local cfg="${S}/config/cf/site.def"
