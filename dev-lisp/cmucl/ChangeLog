@@ -1,6 +1,16 @@
 # ChangeLog for dev-lisp/cmucl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.1 2003/09/24 00:27:43 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.2 2003/11/25 07:20:13 mkennedy Exp $
+
+*cmucl-18e-r1 (25 Nov 2003)
+
+  25 Nov 2003; <mkennedy@gentoo.org> cmucl-18e-r1.ebuild:
+  minor changes to work with the new clc code
+
+*cmucl-18e-r1 (21 Nov 2003)
+
+  21 Nov 2003; <mkennedy@gentoo.org> cmucl-18e-r1.ebuild:
+  preserve file mtimes. changes for new controller
 
 *cmucl-18e (23 Sep 2003)
 
