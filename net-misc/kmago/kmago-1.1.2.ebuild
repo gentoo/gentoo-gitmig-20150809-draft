@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kmago/kmago-1.1.2.ebuild,v 1.5 2001/09/29 21:03:26 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kmago/kmago-1.1.2.ebuild,v 1.6 2002/07/08 17:56:40 phoenix Exp $
 
 
 A=${P}.tar.gz
@@ -9,6 +9,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A Download Apllication for KDE2 based on wget"
 SRC_URI="http://download.sourceforge.net/kmago/${A}"
 HOMEPAGE="http://kmago.sourceforge.net"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND=">=kde-base/kdelibs-2.1.1"
 

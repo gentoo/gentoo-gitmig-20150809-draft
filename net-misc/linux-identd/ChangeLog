@@ -1,9 +1,11 @@
 # ChangeLog for media-gfx/scrot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/ChangeLog,v 1.1 2002/04/26 18:22:56 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/ChangeLog,v 1.2 2002/07/08 18:20:57 phoenix Exp $
 
 *linux-identd-1.1 (26 April 2002)
 
-  26 April 2002; Preston A. Elder <prez@gentoo.org> ChangeLog :
-  
+  08 Jul 2002; phoen][x <phoenix@gentoo.org> linux-identd-1.1.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
+
+  26 April 2002; Preston A. Elder <prez@gentoo.org> ChangeLog :  
   Initial ebuild... Enjoy..

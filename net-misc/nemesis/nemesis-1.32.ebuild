@@ -1,12 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Alexander Gretencord <arutha@gmx.de>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/nemesis-1.32.ebuild,v 1.1 2002/04/23 19:43:58 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/nemesis-1.32.ebuild,v 1.2 2002/07/08 18:29:17 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A commandline-based, portable human IP stack for UNIX/Linux"
 SRC_URI="http://jeff.wwti.com/nemesis/${P}.tar.gz"
 HOMEPAGE="http://jeff.wwti.com/nemesis/"
+KEYWORDS="x86"
+LICENSE="as-is"
+SLOT="0"
 
 RDEPEND="virtual/glibc >=net-libs/libpcap-0.6.2-r1"
 DEPEND="${RDEPEND} >=net-libs/libnet-1.0.2a"

@@ -1,12 +1,15 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Chad Huneycutt <chad.huneycutt@acm.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/lrzsz-0.12.20.ebuild,v 1.2 2001/08/12 18:32:42 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/lrzsz-0.12.20.ebuild,v 1.3 2002/07/08 18:24:26 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="communication package providing the X, Y, and ZMODEM file transfer protocols"
 SRC_URI="http://www.ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz"
 HOMEPAGE="http://www.ohse.de/uwe/software/lrzsz.html"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND=""
 

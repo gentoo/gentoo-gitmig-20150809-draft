@@ -1,17 +1,21 @@
 # ChangeLog for net-misc/knetfilter
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetfilter/ChangeLog,v 1.3 2002/05/17 11:52:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetfilter/ChangeLog,v 1.4 2002/07/08 18:03:30 phoenix Exp $
 
 *knbetfilter-3.0.1 (17 May 2002)
 
-  17 May 2002; Dan Armak <danarmak@gentoo.org> changelog:
-  
+  08 Jun 2002; phoen][x <phoen][x@gentoo.org> knetfilter-3.0.1.ebuild :
+  Added KEYWORDS.
+
+  17 May 2002; Dan Armak <danarmak@gentoo.org> changelog:  
   Forgot to put 3.0.0 in here; that was the kde3 version. This is a bugfix release.
 
 *knetfilter-2.2.5 (1 Feb 2002)
 
-  14 Mar 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
+  08 Jun 2002; phoen][x <phoen][x@gentoo.org> knetfilter-2.2.5.ebuild :
+  Added KEYWORDS, LICENSE.
   
+  14 Mar 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :  
   New upstream release. Upstream changelog is too long to paste here.
 
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Preston A. Elder <prez@goth.net>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.1.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.1.ebuild,v 1.3 2002/07/08 18:20:57 phoenix Exp $
 
 # This identd is nearly perfect for a NAT box. It runs in one
 # process (doesn't fork()) and isnt very susceptible to DOS attack.
@@ -10,6 +10,9 @@ DESCRIPTION="A real IDENT daemon for linux."
 HOMEPAGE="http://www.fukt.bth.se/~per/identd"
 S=${WORKDIR}/${P}
 SRC_URI="http://www.fukt.bth.se/~per/identd/linux-identd-1.1.tar.gz"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND="virtual/glibc"
 

@@ -1,17 +1,21 @@
 # ChangeLog for net-misc/knetload
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.2 2002/04/13 11:54:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.3 2002/07/08 18:06:37 phoenix Exp $
 
 *knetload-1.94 (13 Apr 2002)
 
-  13 Apr 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
-  
+  08 Jul 2002; phoen][x <phoenix@gentoo.org> knetload-1.94.ebuild :  
+  Added KEYWORDS.  
+
+  13 Apr 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :  
   New (KDE3) version.  
 
 *knetload-1.91-r2 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  08 Jul 2002; phoen][x <phoenix@gentoo.org> knetload-1.94.ebuild :  
+  Added KEYWORDS, LICENSE.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-3.0.4-r1.ebuild,v 1.1 2002/05/31 04:53:11 edolnx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-3.0.4-r1.ebuild,v 1.2 2002/07/08 18:22:04 phoenix Exp $
 
 # NOTE: The comments in this file are for instruction and documentation.
 # They're not meant to appear with your final, production ebuild.  Please
@@ -9,7 +9,9 @@
 
 DESCRIPTION="A GTK+ LiveJournal Client"
 HOMEPAGE="http://logjam.danga.com"
+KEYWORDS="x86"
 LICENSE="GPL-2"
+SLOT="0"
 DEPEND=">=net-ftp/curl-7.9.3
         >=x11-libs/gtk+-1.2.10-r7
         gnome? ( >=gnome-base/gnome-libs-1.4.1.6 )
