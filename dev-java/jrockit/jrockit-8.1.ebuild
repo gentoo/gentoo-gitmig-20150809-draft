@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit/jrockit-8.1.ebuild,v 1.6 2004/01/08 20:31:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit/jrockit-8.1.ebuild,v 1.7 2004/01/09 02:17:32 mr_bones_ Exp $
 
 IUSE=""
 
@@ -36,7 +36,7 @@ src_unpack() {
 
 	if [ ! -f ${DISTDIR}/${At} ] ; then
 		eerror "Please download ${At} from ${HOMEPAGE}"
-		eerror "(select the \"Linux ($b bit)\" package format of \"WebLogic JRockit 8.1\")" 
+		eerror "(select the \"Linux ($b bit)\" package format of \"WebLogic JRockit 8.1\")"
 		eerror "and move it to ${DISTDIR}."
 		eerror "NOTE: This download REQUIRES a fairly extensive registration process."
 		die "Download ${At} and put it into ${DISTDIR}."
