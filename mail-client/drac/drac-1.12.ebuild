@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12.ebuild,v 1.2 2004/05/30 09:22:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12.ebuild,v 1.3 2004/06/09 13:51:17 agriffis Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_compile() {
 		-e "s:RPCGENFLAGS =:RPCGENFLAGS = -C -I:" \
 		-e "s:MANADM = 1m:MANADM = 8:" \
 		< Makefile.orig > Makefile
-	if [ `use debug` ]; then
+	if use debug; then
 		cp Makefile Makefile.posthacked
 		sed -e "s:CFLAGS = \$(DEFS) -g -I/usr/local/src/db/db-4.1.25/build_unix:CFLAGS = \$(DEFS) -g ${CFLAGS}:" \
 			< Makefile.posthacked > Makefile
