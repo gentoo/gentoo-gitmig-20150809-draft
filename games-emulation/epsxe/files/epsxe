@@ -3,8 +3,6 @@
 # $Header: /usr/games/bin/epsxe, v ?.?? 2003/08/17 21:22:07 
 #!/bin/sh
 
-source /sbin/functions.sh
-
 PSEMUDIR=/usr/games/lib/psemu
 EPSXEDIR=/opt/epsxe
 
@@ -24,7 +22,7 @@ if [ -d "${PSEMUDIR}" ] ; then
 	if [ -d "${PSEMUDIR}/plugins" ]; then
 		for plugin in `find "${PSEMUDIR}/plugins"  -maxdepth 1 -type f -printf '%f '` ; do
 			if [ ! -e "plugins/${plugin}" ]; then
-				einfo "Loading new plugin: ${plugin}"
+				echo "Loading new plugin: ${plugin}"
 				ln -s "${PSEMUDIR}/plugins/${plugin}" "plugins/${plugin}"
 			fi
 		done
@@ -33,14 +31,14 @@ if [ -d "${PSEMUDIR}" ] ; then
 	if [ -d "${PSEMUDIR}/cfg" ]; then
 		for configlib in `find "${PSEMUDIR}/cfg"  -maxdepth 1 -iname '*.cfg' -prune -o -type f -printf '%f '`; do 
 			if [ ! -e "cfg/${configlib}" ]; then
-				einfo "Loading config utility: ${configlib}"
+				echo "Loading config utility: ${configlib}"
 				ln -s "${PSEMUDIR}/cfg/${configlib}" "cfg/${configlib}"
 			fi
 		done
 
 		for config in `find "${PSEMUDIR}/cfg"  -maxdepth 1 -iname '*.cfg' -type f -printf '%f '`; do 
 			if [ ! -e "cfg/${config}" ]; then
-				einfo "Loading default config: ${config}"
+				echo "Loading default config: ${config}"
 					cp "${PSEMUDIR}/cfg/${config}" "cfg/${config}"
 			fi
 		done
@@ -67,8 +65,8 @@ fi
 if [ -z "`cd bios && ls`" ] ; then
 	# if the bios directory is empty, then ... well ...
 	echo
-	ewarn "*** Put your BIOS file into ~/.epsxe/bios/"
-	ewarn "    or ePSXe may not work!"
+	echo "*** Put your BIOS file into ~/.epsxe/bios/"
+	echo "    or ePSXe may not work!"
 	echo
 fi
 
