@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.23.1.9.13.ebuild,v 1.3 2004/01/05 22:10:53 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.23.1.9.13.ebuild,v 1.4 2004/01/05 23:06:16 plasmaroo Exp $
 
 # Documentation on the patch contained in this kernel will be installed someday
 
@@ -25,8 +25,7 @@ SRC_URI="
 	hppa? ( http://dev.gentoo.org/~pappy/gentoo-x86/sys-kernel/grsec-sources/parisc-linux-${OKV}-${PARISC_KERNEL_VERSION}${EXTRAVERSION}.gz ) \
 	http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 \
 	http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch \
-	http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch.sign
-"
+	http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch.sign"
 
 HOMEPAGE="http://www.kernel.org/ http://www.grsecurity.net"
 
@@ -71,10 +70,10 @@ src_unpack() {
 		kernel_universal_unpack
 	fi
 
+	epatch ${FILESDIR}/${PN}-${OKV}.CAN-2003-0985.patch
+	epatch ${FILESDIR}/${PN}-${OKV}.rtc_fix.patch
+
 	# kernel_universal_unpack
 	# kernel_src_unpack
 }
 
-#src_install() {
-#	kernel_src_install
-#}
