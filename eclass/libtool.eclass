@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.37 2004/10/19 19:51:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.38 2004/10/20 14:25:02 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -274,6 +274,8 @@ elibtoolize() {
 }
 
 uclibctoolize() {
+	[ -e "${WORKDIR}/.uclibcpatched" ] && return 0
+
 	local targets=""
 	local x
 
