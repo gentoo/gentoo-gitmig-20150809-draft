@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.34 2003/05/20 23:25:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.35 2003/06/10 23:38:27 wwoods Exp $
+
+  10 Jun 2003; Will Woods <wwoods@gentoo.org> kdegames-3.1.2.ebuild:
+  Changed the way we avoid building kmines on alpha.
 
   20 May 2003; Jason Wever <weeve@gentoo.org> kdegames-3.1.2.ebuild:
   Changed ~sparc keyword to sparc.
