@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.22 2004/06/21 21:52:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.23 2004/06/22 19:57:31 ferringb Exp $
+
+  22 Jun 2004; Brian Harring <ferringb@gentoo.org> devhelp-0.8.1.ebuild,
+  devhelp-0.9.ebuild:
+  adding a temporary fix for bug #52680, to be removed once portage 2.0.51 is
+  stabled.
 
 *devhelp-0.9 (21 Jun 2004)
 

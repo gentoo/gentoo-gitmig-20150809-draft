@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.9.ebuild,v 1.1 2004/06/21 21:52:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.9.ebuild,v 1.2 2004/06/22 19:57:31 ferringb Exp $
 
 inherit gnome2
 
@@ -25,3 +25,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS COPYING ChangeLog README NEWS TODO"
 
 G2CONF="${G2CONF} $(use_with zlib)"
+#see bug #52680; when USE="-zlib" emerge devhelp, portage implodes due 
+#to use_with fooling w/ return values.  this is a bandaid so users don't 
+#run into it- it should be removed as soon as a portage .51 is stabled
+[ 0 == 0 ]
