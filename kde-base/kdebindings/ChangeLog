@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebindings
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.45 2003/12/10 01:14:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.46 2004/01/04 15:31:10 weeve Exp $
+
+  04 Jan 2004; Jason Wever <weeve@gentoo.org> kdebindings-3.2.0_beta2.ebuild:
+  Added ~sparc keyword.
 
 *kdebindings-3.2.0_beta2 (09 Dec 2003)
 

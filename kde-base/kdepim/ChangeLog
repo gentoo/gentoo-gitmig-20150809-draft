@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.60 2003/12/24 20:04:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.61 2004/01/04 15:38:03 weeve Exp $
+
+  04 Jan 2004; Jason Wever <weeve@gentoo.org> kdepim-3.2.0_beta2.ebuild:
+  Added ~sparc keyword.
 
   24 Dec 2003; Caleb Tennis <caleb@gentoo.org> kdepim-3.2.0_beta2.ebuild:
   minor dependency fixes
