@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.2.4.ebuild,v 1.4 2004/03/10 17:31:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.2.4.ebuild,v 1.5 2004/06/01 04:48:21 vapier Exp $
 
 inherit games eutils gcc
 
@@ -24,6 +24,7 @@ DEPEND="virtual/x11
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc34.patch
 	ebegin "Detecting NVidia GL/prboom bug"
 	$(gcc-getCC) ${FILESDIR}/${PV}-nvidia-test.c 2> /dev/null
 	local ret=$?
@@ -41,7 +42,7 @@ src_compile() {
 		--disable-cpu-opt \
 		|| die
 	# configure script doesnt do opengl properly
-	[ `use opengl` ] || sed -i '/GL_DOOM/s:.*::' config.h
+	use opengl || sed -i '/GL_DOOM/s:.*::' config.h
 	emake || die
 }
 
