@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_rc1.ebuild,v 1.1 2003/07/20 09:29:16 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_rc1.ebuild,v 1.2 2003/07/27 07:45:42 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -74,6 +74,7 @@ RDEPEND=">=sys-libs/glibc-2.1
 	app-arch/zip
 	app-arch/unzip
 	dev-libs/expat
+	>=x11-libs/gtk+-2.0
 	>=virtual/jdk-1.3.1
 	virtual/lpr
 	ppc? ( >=sys-libs/glibc-2.2.5-r7
