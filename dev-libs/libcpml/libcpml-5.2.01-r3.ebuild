@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r3.ebuild,v 1.1 2004/02/19 14:32:29 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r3.ebuild,v 1.2 2004/02/19 14:54:24 taviso Exp $
 
 IUSE="ev6"
 
@@ -14,7 +14,7 @@ RDEPEND="virtual/glibc dev-libs/libots"
 LICENSE="compaq-sdla"
 SLOT="5.2.01"
 
-KEYWORDS="-* -alpha"
+KEYWORDS="-* ~alpha"
 
 RESTRICT="fetch nostrip nomirror"
 
