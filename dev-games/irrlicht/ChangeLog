@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.1 2004/01/02 06:02:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.2 2004/02/23 04:35:06 vapier Exp $
+
+*irrlicht-0.5 (22 Feb 2004)
+
+  22 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump by Alexander Arlt.
 
 *irrlicht-0.4 (02 Jan 2003)
 
