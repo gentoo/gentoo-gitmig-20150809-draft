@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.4.ebuild,v 1.3 2003/04/03 22:17:48 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.4.ebuild,v 1.4 2003/07/21 15:16:51 tester Exp $
 
 S=${WORKDIR}/${P}
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.zipworld.com.au/~erikd/libsndfile/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="x86 sparc ~ppc amd64"
 
 DEPEND="virtual/glibc"
 
