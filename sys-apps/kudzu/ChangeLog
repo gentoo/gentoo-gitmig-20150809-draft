@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/bash
+# ChangeLog for sys-apps/kudzu
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.1 2003/03/03 05:05:31 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.2 2003/04/22 10:26:14 vapier Exp $
 
 *kudzu-0.99.66 (02 March 2003)
 
