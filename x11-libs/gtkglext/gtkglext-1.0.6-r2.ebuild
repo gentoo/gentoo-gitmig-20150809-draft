@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.0.6-r2.ebuild,v 1.1 2005/02/01 11:23:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.0.6-r2.ebuild,v 1.2 2005/04/04 22:17:53 foser Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc ~ia64 ~amd64"
+KEYWORDS="x86 ~sparc ~alpha ~ppc ~ia64 ~amd64"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
