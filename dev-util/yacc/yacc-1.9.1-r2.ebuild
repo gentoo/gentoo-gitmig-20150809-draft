@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r2.ebuild,v 1.1 2004/04/05 04:09:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r2.ebuild,v 1.2 2004/05/26 01:00:32 vapier Exp $
 
 inherit eutils
 
@@ -10,12 +10,14 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/devel/compiler-tools/${P}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc ppc64 sparc alpha mips hppa amd64 ia64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+IUSE=""
 
 RDEPEND="virtual/glibc"
-DEPEND="${RDEPEND} >=sys-apps/sed-4"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
-src_unpack () {
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 
