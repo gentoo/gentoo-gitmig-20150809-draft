@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.14 2004/11/07 18:06:20 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.15 2004/12/27 22:03:53 weeve Exp $
+
+  27 Dec 2004; Jason Wever <weeve@gentoo.org> fakeroot-1.1.5.ebuild:
+  Added ~sparc keyword.
 
 *fakeroot-1.1.5 (07 Nov 2004)
 
