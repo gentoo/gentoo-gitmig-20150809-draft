@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.2-r1.ebuild,v 1.1 2003/10/11 17:39:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.2-r1.ebuild,v 1.2 2003/10/26 18:30:59 azarah Exp $
 
 IUSE=
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="virtual/glibc"
 
