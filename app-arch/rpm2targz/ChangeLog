@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.7 2003/03/28 18:03:10 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.8 2003/05/21 16:17:33 taviso Exp $
+
+  21 May 2003; Tavis Ormandy <taviso@gentoo.org> rpm2targz-8.0.ebuild:
+  removing gcc hardcode.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
