@@ -1,5 +1,5 @@
-MD5 ea4d4be75552a463c663b220896ac4da ChangeLog 1930
-MD5 97fca64fbc9704be0307985051029c31 duke3d-20030817-r1.ebuild 2864
+MD5 251be701f9e47f1fec40b46b4c62ecb4 ChangeLog 2036
+MD5 d286d16307c04c5452ff7e779cec2d53 duke3d-20030817-r1.ebuild 2797
 MD5 3a1f336e4cfd9b74bc9bacb21ea0b300 metadata.xml 2684
 MD5 f61d663b18e338844d9bdab8cd8a113d files/20030817-buildengine-makefile-cflags.patch 523
 MD5 7c4ac6336d128a410fc4fb603ad8b8c7 files/20030817-duke3d-makefile-opts.patch 864

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20030817-r1.ebuild,v 1.14 2004/04/20 10:28:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20030817-r1.ebuild,v 1.15 2004/06/07 21:03:49 mr_bones_ Exp $
 
 ECVS_PASS="anonymous"
 ECVS_SERVER="icculus.org:/cvs/cvsroot"
@@ -30,7 +30,6 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${ECVS_MODULE}"
 
 use_tf() { use ${1} > /dev/null && echo "true" || echo "false"; }
-use_ft() { use ${1} > /dev/null && echo "false" || echo "true"; }
 
 src_unpack() {
 	local fromcvs=0
