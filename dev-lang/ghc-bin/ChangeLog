@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.13 2004/03/31 09:20:12 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.14 2004/03/31 09:31:24 kosmikus Exp $
+
+*ghc-bin-5.04.3 (31 Mar 2004)
+
+  31 Mar 2004; Andres Loeh <kosmikus@gentoo.org> ghc-bin-5.04.3.ebuild:
+  Re-added ghc-bin-5.04.3 because of ppc.
 
   31 Mar 2004; Andres Loeh <kosmikus@gentoo.org> ghc-bin-5.04.2-r1.ebuild,
   ghc-bin-5.04.2.ebuild, ghc-bin-5.04.3.ebuild, ghc-bin-6.2.ebuild:
