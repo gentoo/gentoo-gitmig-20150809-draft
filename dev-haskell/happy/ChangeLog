@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/happy
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.1 2003/04/22 08:23:02 kosmikus Exp $
+
+*happy-1.13 (22 Apr 2003)
+
+  22 Apr 2003; Andres Loeh <kosmikus@gentoo.org> all :
+
+  Initial import. Thanks to Peter Simons <simons+gentoo@cryp.to> for
+  submitting an ebuild. happy is a yacc-like parser generator for Haskell.
+  This should close bug #12836.
