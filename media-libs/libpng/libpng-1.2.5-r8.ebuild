@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r8.ebuild,v 1.6 2004/08/13 01:34:13 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r8.ebuild,v 1.7 2004/09/22 05:29:12 usata Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="1.2"
-KEYWORDS="x86 ppc sparc arm hppa amd64 alpha mips"
+KEYWORDS="x86 ppc sparc arm hppa amd64 alpha mips ~macos ~ppc-macos"
 IUSE=""
 
 DEPEND="sys-libs/zlib"
@@ -21,7 +21,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/${P}-security.diff
-	use macos && epatch ${FILESDIR}/macos.patch # implements strnlen
+	( use macos || use ppc-macos ) && epatch ${FILESDIR}/macos.patch # implements strnlen
 
 	[ "`gcc-version`" == "3.2" ] && replace-cpu-flags i586 k6 k6-2 k6-3
 	[ "`gcc-version`" == "3.3" ] && replace-cpu-flags i586 k6 k6-2 k6-3
@@ -34,7 +34,7 @@ src_unpack() {
 		-e "s:OBJSDLL = :OBJSDLL = -lz -lm :" \
 		scripts/makefile.linux > Makefile
 
-	if use macos; then
+	if use macos || use ppc-macos ; then
 		einfo "Patching the source for Mac OS X / Darwin compatibility"
 		sed \
 			-e "s:ZLIBLIB=.*:ZLIBLIB=/usr/lib:" \

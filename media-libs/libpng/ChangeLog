@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.49 2004/09/12 06:48:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.50 2004/09/22 05:29:12 usata Exp $
+
+  22 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> libpng-1.2.5-r7.ebuild,
+  libpng-1.2.5-r8.ebuild, libpng-1.2.7.ebuild:
+  Added to ~ppc-macos. Fixed use invocation wrt macos/ppc-macos.
 
 *libpng-1.2.7 (11 Sep 2004)
 

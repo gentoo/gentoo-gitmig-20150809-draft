@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r7.ebuild,v 1.5 2004/09/16 02:06:16 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r7.ebuild,v 1.6 2004/09/22 05:29:12 usata Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -22,8 +22,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-gentoo.diff
 
-	use macos && epatch ${FILESDIR}/macos.patch # implements strnlen
-	use ppc-macos && epatch ${FILESDIR}/macos.patch # implements strnlen
+	( use macos || use ppc-macos ) && epatch ${FILESDIR}/macos.patch # implements strnlen
 
 	[ "`gcc-version`" == "3.2" ] && replace-cpu-flags i586 k6 k6-2 k6-3
 	[ "`gcc-version`" == "3.3" ] && replace-cpu-flags i586 k6 k6-2 k6-3
@@ -36,7 +35,7 @@ src_unpack() {
 		-e "s:OBJSDLL = :OBJSDLL = -lz -lm :" \
 		scripts/makefile.linux > Makefile
 
-	if use macos; then
+	if use macos || use ppc-macos ; then
 		einfo "Patching the source for Mac OS X / Darwin compatibility"
 		sed \
 			-e "s:ZLIBLIB=.*:ZLIBLIB=/usr/lib:" \
@@ -45,17 +44,6 @@ src_unpack() {
 			-e "s:prefix=/usr/local:prefix=/usr:" \
 			scripts/makefile.darwin > Makefile
 	fi
-
-	if use ppc-macos; then
-		einfo "Patching the source for Mac OS X / Darwin compatibility"
-		sed \
-			-e "s:ZLIBLIB=.*:ZLIBLIB=/usr/lib:" \
-			-e "s:ZLIBINC=.*:ZLIBINC=/usr/include:" \
-			-e "s:-O3:${CFLAGS}:" \
-			-e "s:prefix=/usr/local:prefix=/usr:" \
-			scripts/makefile.darwin > Makefile
-	fi
-
 }
 
 src_compile() {
