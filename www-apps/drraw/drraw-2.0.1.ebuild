@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drraw/drraw-2.0.1.ebuild,v 1.2 2004/08/30 19:12:27 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drraw/drraw-2.0.1.ebuild,v 1.3 2004/09/03 00:35:16 dholm Exp $
 
 inherit webapp
 
@@ -10,7 +10,7 @@ DESCRIPTION="drraw is a simple web based presentation front-end for RRDtool that
 HOMEPAGE="http://web.taranis.org/drraw"
 SRC_URI="http://web.taranis.org/${PN}/dist/${P}.tgz"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND="
 	>=dev-lang/perl-5.6
