@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.39 2005/02/20 13:00:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.40 2005/03/20 22:56:36 lu_zero Exp $
+
+*graphviz-2.2 (20 Mar 2005)
+
+  20 Mar 2005; Luca Barbato <lu_zero@gentoo.org> +graphviz-2.2.ebuild:
+  New version
 
   20 Feb 2005; Sven Wegener <swegener@gentoo.org> graphviz-1.16.ebuild:
   Added missing digest entries. Made the graphviz-1.16-panic.patch.tar.bz2
