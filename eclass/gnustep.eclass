@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.15 2004/09/28 01:17:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.16 2004/10/04 00:57:02 fafhrd Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,6 +30,8 @@ GS_RDEPEND="${GS_DEPEND}
 	${DOC_RDEPEND}
 	virtual/gnustep-back
 	gnustep-base/gnustep-env"
+
+GENTOO_GNUSTEP_ROOT="/usr/GNUstep"
 
 egnustep_env() {
 	if [ -f /usr/GNUstep/System/Makefiles/GNUstep.sh ] ; then
