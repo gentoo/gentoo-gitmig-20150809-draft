@@ -1,0 +1,11 @@
+# ChangeLog for media-video/replex
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/replex/ChangeLog,v 1.1 2005/03/29 02:34:00 luckyduck Exp $
+
+*replex-0.1.4 (29 Mar 2005)
+
+  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +replex-0.1.4.ebuild:
+  Inital import. Ebuild contributed by Scott Alfter <gentoo@salfter.dyndns.org>
+  and Ryan Dalzell <ryan@tullyroan.com>. Fixes #76728
+

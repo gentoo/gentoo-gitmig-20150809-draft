@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5bc870d5b8b1068ec0fb3213347fd55d ChangeLog 467
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 08a78d682dff93ab30cff913baf290a9 replex-0.1.4.ebuild 660
+MD5 0429847bf769f333776f71856db1302b files/digest-replex-0.1.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSL6h06ebR+OMO78RAl7hAJ4/daoJot2ioYDlm+gwOZun3lWLLwCfaOet
+QzWLahpcirw65FrvN0pTBwE=
+=6i2s
+-----END PGP SIGNATURE-----
