@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/poedit-1.2.1.ebuild,v 1.5 2003/05/07 15:01:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/poedit-1.2.1.ebuild,v 1.6 2003/07/03 23:10:55 liquidx Exp $
 
 inherit eutils kde
 
@@ -13,11 +13,10 @@ LICENSE="as-is"
 KEYWORDS="x86 ~sparc"
 
 DEPEND=">=x11-libs/wxGTK-2.3.4
-	>=sys-libs/db-3"
+	=sys-libs/db-3*"
 
 src_compile() {
-	# db4 confuses the hell out of this
-	econf "--disable-transmem" || die
+	econf 
 	emake || die
 }
 
