@@ -1,6 +1,25 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.13 2004/01/17 07:44:07 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.14 2004/01/17 16:52:50 suka Exp $
+
+  17 Jan 2004; <suka@gentoo.org> openoffice-ximian-1.1.46.ebuild,
+  openoffice-ximian-1.1.47.3.ebuild, openoffice-ximian-1.1.49.2.ebuild,
+  files/1.1.0/fixed-gcc.patch, files/1.1.0/norecent.patch,
+  files/1.1.0/oo_1.1-nptl.patch,
+  files/1.1.0/openoffice-1.1.0-sparc64-fix.patch,
+  files/1.1.0/recent-files.diff:
+  Part 2 of the big clean up work:
+  
+  *) Fixed some dependencies
+  *) Filter another flag to combat compile breakage
+  *) Correct pentium4 replacement
+  *) Further cleanups
+  
+  openoffice-ximian-1.1.49.2 got some additional love:
+  
+  *) Major cleanup of build process
+  *) Remove need for virtualmake
+  *) Fix for PPC compile breakage. Closes bug #38411
 
   17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org>
   openoffice-ximian-1.1.46.ebuild:

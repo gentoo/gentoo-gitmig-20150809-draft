@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.49.2.ebuild,v 1.2 2004/01/14 10:48:46 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.49.2.ebuild,v 1.3 2004/01/17 16:52:50 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -26,7 +26,7 @@
 #   Get support going for installing a custom language pack.  Also
 #   need to be able to install more than one language pack.
 
-inherit flag-o-matic eutils gcc virtualx
+inherit flag-o-matic eutils gcc
 
 # Compile problems with these ...
 filter-flags "-funroll-loops"
@@ -262,6 +262,14 @@ src_unpack() {
 	${PATCHDIR}/bin/font-munge ${S}/officecfg/registry/data/org/openoffice/VCL.xcu
 	echo "done munging fonts."
 
+	# Fixing recent-files for PPC
+	sed -i -e '/#include "recent-files.hxx"/a\#include <assert.h>' ${S}/svtools/source/config/recent-files.cxx || die
+
+	if [ "$(gcc-version)" == "3.2" ]; then
+		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
+		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
+	fi
+
 	# Now for our optimization flags ...
 	perl -pi -e "s|^CFLAGSOPT=.*|CFLAGSOPT=${CFLAGS}|g" \
 		${S}/solenv/inc/unxlngi3.mk
@@ -297,11 +305,6 @@ get_EnvSet() {
 }
 
 src_compile() {
-
-	if [ "$(gcc-version)" == "3.2" ]; then
-		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
-		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
-	fi
 
 	addpredict /bin
 	addpredict /root/.gconfd
@@ -372,23 +375,6 @@ src_compile() {
 	# Build as minimal as possible
 	export BUILD_MINIMAL="${LANGNO}"
 
-	# Do not include /usr/include in header search path, and
-	# same thing for internal gcc include dir, as gcc3 handles
-	# it correctly by default! (Az)
-	perl -pi -e "s| -I/usr/include||g" ${LinuxEnvSet}
-#	perl -pi -e "s| -I$(gcc-libpath)/include||g" ${LinuxEnvSet}
-
-	if [ "${NEW_GCC}" -eq "1" ]
-	then
-		local gcc_path="$(/usr/sbin/gcc-config --get-bin-path ${GCC_PROFILE})"
-
-		# Setup path for new gcc layout in $LinuxEnvSet, else the build
-		# environment will not find gcc ... (Az)
-		perl -pi -e "s|PATH \.:\$SOLARVER|PATH \.:${gcc_path}:\$SOLARVER|" ${LinuxEnvSet}
-		# New builds start quoting stuff ...
-		perl -pi -e "s|PATH \"\.:\$SOLARVER|PATH \"\.:${gcc_path}:\$SOLARVER|" ${LinuxEnvSet}
-	fi
-
 	# Should the build use multiprocessing?
 	if [ "${ECPUS}" -gt 1 ]
 	then
@@ -404,50 +390,15 @@ src_compile() {
 		export CXXCOMP=${CXX}
 	fi
 
-	if [ "$(gcc-major-version)" -eq 3 ]
-	then
-		mkdir -p ${S}/solver/${SOLVER}/${SOLPATH}/{lib,inc}
-
-		einfo "Installing GCC related libs..."
-		# Workaround for missing libs with GCC3 (thanks to Debian) (Az)
-		cd ${S}/solver/${SOLVER}/${SOLPATH}/lib
-		cp $(gcc-libpath)/libstdc++.so.$(gcc-libstdcxx-major-version)* . || \
-			die "Could not copy gcc-libs!"
-		cp $(gcc-libpath)/libgcc_s.so* . || die "Could not copy gcc-libs!"
-		cd ${S}
-	fi
-
 	einfo "Bootstrapping OpenOffice.org..."
 	# Get things ready for bootstrap (Az)
 	chmod 0755 ${S}/solenv/bin/*.pl
-	mkdir -p ${S}/solver/${SOLVER}/${SOLPATH}/inc
-	touch ${S}/solver/${SOLVER}/${SOLPATH}/inc/minormkchanged.flg
 	# Bootstrap ...
 	./bootstrap
 
-	if [ "$(gcc-major-version)" -eq 3 ]
-	then
-		local LIBFILE="$(readlink `gcc-libpath`/libstdc++.so.`gcc-libstdcxx-major-version`)"
-		local LIBVERSION="$(echo ${LIBFILE} | sed -e 's|libstdc++\.so\.||g')"
-		# Get this beast to use the right version of libstdc++ ... (Az)
-		echo "LIBSTDCPP3:=${LIBVERSION}" >> \
-			${S}/solver/${SOLVER}/${SOLPATH}/inc/comp_ver.mk
-		cd ${S}
-	fi
-
 	einfo "Building OpenOffice.org..."
-	# Setup virtualmake
-	export maketype="sh"
 	echo "source ${S}/${LinuxEnvSet} && cd ${S}/instsetoo && ${buildcmd}" > build.sh
-	# Build needs X to compile! (Az)
-	virtualmake build.sh || die "Build failed!"
-
-#	einfo "Building Language Pack"
-	# Setup virtualmake
-#	export maketype="sh"
-#	echo "source ${S}/${LinuxEnvSet} && cd ${S}/instsetoo && ${buildcmd} --from instsetoo -- instsetext=${LANGNO}" > buildlang.sh
-	# Build needs X to compile! (Az)
-#	virtualmake buildlang.sh || die "Build failed!"
+	sh build.sh || die "Build failed!"
 
 	[ -d ${S}/instsetoo/${SOLPATH} ] || die "Cannot find build directory!"
 }
@@ -461,22 +412,13 @@ src_install() {
 	addpredict "/usr/bin/soffice"
 	addpredict "/pspfontcache"
 
-	# This allows us to change languages without editing the ebuild.
-	#
-	#   languages1="ENUS,FREN,GERM,SPAN,ITAL,DTCH,PORT,SWED,POL,RUSS"
-	#   languages2="DAN,GREEK,TURK,CHINSIM,CHINTRAD,JAPN,KOREAN,CZECH,CAT"
-	#
-	# Supported languages for localized help files
-	#
-	#   helplangs="ENUS,FREN,GERM,SPAN,ITAL,SWED"
-	#
 	set_languages
 
 	get_EnvSet
 
 	# The install part should now be relatively OK compared to
 	# what it was.  Basically we use autoresponse files to install
-	# unattended, running under a Xvfb if needed.  Afterwards we
+	# unattended.  Afterwards we
 	# just cleanout ${D} from the registry, etc.  This way we
 	# do not need pre-generated registry, and also fixes some weird
 	# bugs related to the old way we did things.
@@ -515,10 +457,7 @@ src_install() {
 	einfo "Installing OpenOffice.org into build root..."
 	dodir ${INSTDIR}
 	cd ${S}/instsetoo/${SOLPATH}/${LANGNO}/normal
-	# Setup virtualmake
-	export maketype="./setup"
-	# We need X to install...
-	virtualmake "-v -noexit -r:${T}/autoresponse" || die "virtualmake failed"
+	./setup -v -noexit -nogui -r:${T}/autoresponse || die "Setup failed"
 
 	echo
 	einfo "Removing build root from registry..."

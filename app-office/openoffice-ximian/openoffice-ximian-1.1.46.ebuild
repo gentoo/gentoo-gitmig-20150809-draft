@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.46.ebuild,v 1.6 2004/01/17 07:44:07 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.46.ebuild,v 1.7 2004/01/17 16:52:50 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -26,10 +26,12 @@
 #   Get support going for installing a custom language pack.  Also
 #   need to be able to install more than one language pack.
 
-inherit flag-o-matic eutils kernel-mod
+inherit flag-o-matic eutils
+
 # Compile problems with these ...
 filter-flags "-funroll-loops"
 filter-flags "-fomit-frame-pointer"
+filter-flags "-fprefetch-loop-arrays"
 append-flags "-fno-strict-aliasing"
 replace-flags "-O3" "-O2"
 replace-flags "-Os" "-O2"
@@ -100,13 +102,8 @@ DEPEND="${RDEPEND}
 	!app-office/openoffice-bin
 	!app-office/openoffice
 	>=sys-apps/findutils-4.1.20-r1
-	!app-arch/star"
-
-# fix a bug with tcsh and dircolors
-#
-# Azarah -- 10 April 2002
-export LS_COLORS=""
-
+	dev-libs/libxslt
+	!dev-util/dmake"
 
 pkg_setup() {
 
@@ -256,12 +253,21 @@ src_unpack() {
 	#Additional patch for Kernel 2.6
 	epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-linux-2.6-fix.patch
 
+	if [ ${ARCH} = "sparc" ]; then
+		epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-sparc64-fix.patch
+	fi
+
 	einfo "Applying Ximian OO.org Patches"
 	${PATCHDIR}/patches/apply.pl ${PATCHDIR}/patches/${PATCHLEVEL} ${S} -f --distro=Ximian || die "Ximian patches failed"
 
 	einfo "Installing / Scaling Icons"
 	${PATCHDIR}/bin/scale-icons ${S}
 	cp -avf ${ICONDIR}/* ${S}
+
+	if [ "$(gcc-version)" == "3.2" ]; then
+		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
+		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
+	fi
 
 	# Now for our optimization flags ...
 	perl -pi -e "s|^CFLAGSOPT=.*|CFLAGSOPT=${CFLAGS}|g" \
@@ -298,10 +304,6 @@ get_EnvSet() {
 }
 
 src_compile() {
-
-	if [ "$(gcc-version)" == "3.2" ]; then
-		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
-	fi
 
 	addpredict /bin
 	addpredict /root/.gconfd
@@ -554,14 +556,11 @@ src_install() {
 	sed -e "s|<pv>|${OO_VER}|g" \
 		${FILESDIR}/${OO_VER}/ooffice-wrapper-1.3 > ${T}/ooffice
 	doexe ${T}/ooffice
+
 	# Component symlinks
-	dosym ooffice /usr/bin/oocalc
-	dosym ooffice /usr/bin/oodraw
-	dosym ooffice /usr/bin/ooimpress
-	dosym ooffice /usr/bin/oomath
-	dosym ooffice /usr/bin/oowriter
-	dosym ooffice /usr/bin/ooweb
-	dosym ooffice /usr/bin/oosetup
+	for app in calc draw impress html math writer setup; do
+		dosym ooffice /usr/bin/oo${app}
+	done
 
 	# Install ximian icons
 	cd ${PATCHDIR}/desktop/
@@ -569,22 +568,20 @@ src_install() {
 	doins *.png
 
 	einfo "Installing Menu shortcuts (need \"gnome\" or \"kde\" in USE)..."
-	cd ${PATCHDIR}/desktop
-	rm -f *1.1*
 	if [ -n "`use gnome`" ]
 	then
-		insinto /usr/share/gnome/apps/OpenOffice.org
-		doins *.desktop
+		insinto /usr/share/applications
+		doins ${FILESDIR}/*.desktop
 	fi
 
-	# Unneeded, as they get installed into /usr/share...
-	# They are needed else user installation fails.
-#	rm -rf ${D}${INSTDIR}/share/{cde,gnome,kde}
+	if [ -n "`use kde`" ]
+	then
+		insinto /usr/share/applnk/Office
+		doins ${FILESDIR}/*.desktop
+	fi
+
+	# Remove unneeded stuff
 	rm -rf ${D}${INSTDIR}/share/cde
-#
-#	for f in ${D}/usr/share/gnome/apps/OpenOffice.org/* ; do
-#		echo 'Categories=Application;Office;' >> ${f}
-#	done
 
 	# Make sure these do not get nuked.
 	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb}
@@ -602,9 +599,6 @@ pkg_postinst() {
 	einfo " Also, for individual components, you can use any of:"
 	einfo
 	einfo "   oocalc, oodraw, ooimpress, oomath, ooweb or oowriter"
-	einfo
-	einfo " If the fonts appear garbled in the user interface refer to "
-	einfo " Bug 8539, or http://www.openoffice.org/FAQs/fontguide.html#8"
 	einfo
 	einfo "******************************************************************"
 }
