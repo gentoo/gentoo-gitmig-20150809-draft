@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/am-utils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/ChangeLog,v 1.9 2004/07/01 22:15:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/ChangeLog,v 1.10 2004/11/05 10:24:09 mr_bones_ Exp $
+
+  05 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  am-utils-6.0.9-r1.ebuild:
+  inherit eutils for epatch; tidy
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   am-utils-6.0.9-r1.ebuild, am-utils-6.0.9.ebuild:
