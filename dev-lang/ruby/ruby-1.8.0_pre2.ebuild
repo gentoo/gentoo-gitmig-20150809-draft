@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0_pre2.ebuild,v 1.1 2003/04/10 20:14:42 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0_pre2.ebuild,v 1.2 2003/04/10 22:24:17 drobbins Exp $
 
 S=${WORKDIR}/${PN}-`echo ${PV} | sed 's/_pre[0-9]*//'`
 DESCRIPTION="An object-oriented scripting language"
-SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/${PN}-`echo ${PV} | sed 's/_pre/-preview/'`.tar.gz"
+SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/1.8/${PN}-`echo ${PV} | sed 's/_pre/-preview/'`.tar.gz"
 HOMEPAGE="http://www.ruby-lang.org/"
 LICENSE="Ruby"
 KEYWORDS="~x86"
