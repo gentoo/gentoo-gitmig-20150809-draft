@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.44 2004/11/23 23:12:58 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.45 2004/11/24 19:42:28 method Exp $
+
+  24 Nov 2004; Joshua Brindle <method@gentoo.org>
+  hardened-dev-sources-2.6.7-r10.ebuild,
+  hardened-dev-sources-2.6.7-r13.ebuild,
+  hardened-dev-sources-2.6.7-r14.ebuild, hardened-dev-sources-2.6.7-r7.ebuild,
+  hardened-dev-sources-2.6.7-r8.ebuild,
+  files/hardened-dev-sources-2.6.7-CAN-2004-0814.patch,
+  files/hardened-dev-sources-2.6.7-CAN-2004-0883.patch:
+  added patches for 65877, 68421
 
 *hardened-dev-sources-2.6.7-r14 (23 Nov 2004)
 
@@ -9,6 +18,12 @@
   +hardened-dev-sources-2.6.7-r14.ebuild:
   Fixed ptmx (#62524) issue (remote DoS)
   Fixed wrong digests for hds-r7 and r8
+
+  24 Nov 2004; Joshua Brindle <method@gentoo.org>
+  hardened-dev-sources-2.6.7-r13.ebuild,
+  files/hardened-dev-sources-2.6.7-CAN-2004-0814.patch,
+  files/hardened-dev-sources-2.6.7-CAN-2004-0883.patch:
+  added patches for 65877, 68421
 
 *hardened-dev-sources-2.6.7-r12 (18 Nov 2004)
 

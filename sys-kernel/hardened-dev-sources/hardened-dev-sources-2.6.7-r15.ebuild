@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/hardened-dev-sources-2.6.7-r14.ebuild,v 1.1 2004/11/23 23:12:58 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/hardened-dev-sources-2.6.7-r15.ebuild,v 1.1 2004/11/24 19:42:28 method Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -12,7 +12,8 @@ GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2"
 
 HGPV=7.8
 #HGPV_SRC="mirror://gentoo/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}.tar.bz2"
-HGPV_SRC="http://dev.gentoo.org/~tseng/kernel/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}.tar.bz2"
+HGPV_SRC="http://dev.gentoo.org/~tseng/kernel/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}.tar.bz2
+		  http://tocharian.ath.cx/hardened/hardened-dev-sources-r15/hardened-dev-sources-2.6.7-CAN-2004-0814.patch"
 
 UNIPATCH_STRICTORDER="yes"
 UNIPATCH_EXCLUDE="1315_alpha"
@@ -22,7 +23,9 @@ UNIPATCH_LIST="${DISTDIR}/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}.tar.b
 			   ${FILESDIR}/h-d-s-2.6.7-amd64-kill-vm_force_exec32.patch
 			   ${FILESDIR}/hardened-2.6.7-binfmt_elf.patch
 			   ${FILESDIR}/hardened-2.6.7-binfmt_aout.patch
-			   ${FILESDIR}/hardened-dev-sources-2.6.7-ptmx.patch"
+			   ${FILESDIR}/hardened-dev-sources-2.6.7-ptmx.patch
+			   ${DISTDIR}/hardened-dev-sources-2.6.7-CAN-2004-0814.patch
+			   ${FILESDIR}/hardened-dev-sources-2.6.7-CAN-2004-0883.patch"
 UNIPATCH_DOCS="${WORKDIR}/patches/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}/0000_README"
 
 DESCRIPTION="Hardened sources for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
