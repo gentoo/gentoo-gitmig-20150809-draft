@@ -1,8 +1,8 @@
 #!/bin/bash
 #we need this next line for "die" and "assert"
 shopt -s expand_aliases
-source /etc/profile > /dev/null 2>&1
-export PATH="/usr/lib/portage/bin:${PATH}"
+source /etc/profile.env > /dev/null 2>&1
+export PATH="/usr/lib/portage/bin:${ROOTPATH}"
 if [ -e /etc/rc.d/config/functions ]
 then
 	source /etc/rc.d/config/functions > /dev/null 2>&1
