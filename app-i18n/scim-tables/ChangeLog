@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/scim-tables
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.24 2005/01/01 14:39:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.25 2005/02/11 07:04:02 usata Exp $
+
+*scim-tables-0.5.0 (11 Feb 2005)
+
+  11 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> -scim-tables-0.3.5.ebuild,
+  +scim-tables-0.5.0.ebuild:
+  Version bumped.
 
   30 Dec 2004; Jason Wever <weeve@gentoo.org> scim-tables-0.4.3.ebuild:
   Added ~sparc keyword wrt bug #76100.
