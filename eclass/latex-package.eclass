@@ -44,7 +44,8 @@
 inherit base
 INHERITED="$INHERITED $ECLASS"
 
-newdepend ">=app-text/tetex-1.0.7"
+newdepend ">=app-text/tetex-1.0.7
+	   >=sys-apps/texinfo-4.2-r5"
 ECLASS=latex-package
 HOMEPAGE="http://www.tug.org/"
 SRC_URI="ftp://tug.ctan.org/macros/latex/"
@@ -73,12 +74,18 @@ latex-package_src_doinstall() {
                     doins $i
                 done
                 ;;
-            "dvi" | "ps" | "pdf" | "tex" | "dtx")
+            "dvi" | "ps" | "pdf")
                 for i in `find . -maxdepth 1 -type f -name "*.${1}"`
                 do
                     dodoc $i
                 done
                 ;;
+	    "tex" | "dtx")
+	    	for i in `find . -maxdepth 1 -type f -name "*.${1}"`
+		do
+		    texi2dvi -q -c --language=latex $i
+		done
+	        ;;
             "tfm" | "vf" | "afm" | "pfb")
                 for i in `find . -maxdepth 1 -type f -name "*.${1}"`
                 do
@@ -97,7 +104,7 @@ latex-package_src_doinstall() {
                 latex-package_src_doinstall sty cls fd clo def
                 ;;
             "doc")
-                latex-package_src_doinstall dvi ps pdf tex dtx
+                latex-package_src_doinstall tex dtx dvi ps pdf
                 ;;
             "fonts")
                 latex-package_src_doinstall tfm vg afm pfb ttf
@@ -132,9 +139,6 @@ latex-package_src_install() {
 latex-package_pkg_postinst() {
     debug-print function $FUNCNAME $*
     latex-package_rehash
-    if [ ! -e /usr/doc/latex/${PN} ] ; then return ; fi
-    cd /usr/share/doc/${PN}
-    latex-package_make_documentation
 }
 
 latex-package_pkg_postrm() {
@@ -145,21 +149,6 @@ latex-package_pkg_postrm() {
 latex-package_rehash() {
     debug-print function $FUNCNAME $*
     texconfig rehash
-}
-
-latex-package_make_documentation() {
-    debug-print function $FUNCNAME $*
-    for i in `find \`pwd\` -maxdepth 1 -type f -name "*.[dt]tex"`
-    do
-        echo "Making Documentation: $i"
-        latex --interaction=batchmode $i > /dev/null
-        # And we don't want any leftovers...
-        for ext in aux toc log
-        do
-            rm ${i}.${ext}
-        done
-    done
-    echo "Completed."
 }
 
 EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
