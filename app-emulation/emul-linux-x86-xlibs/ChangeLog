@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.8 2004/06/24 22:31:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.9 2004/07/17 03:31:11 cyfred Exp $
+
+*emul-linux-x86-xlibs-1.1-r1 (17 Jul 2004)
+
+  17 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>;
+  +emul-linux-x86-xlibs-1.1-r1.ebuild:
+  Fixing LDPATH for new opengl-update; it will now handle 32bit GL libs
 
   14 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> emul-linux-x86-xlibs-1.1.ebuild:
   Ebuild now adds /etc/env.d/75emul-linux-x86-xlibs "on the fly", I forgot to
