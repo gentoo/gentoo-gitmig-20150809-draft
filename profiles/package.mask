@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2711 2004/02/19 11:31:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2712 2004/02/19 15:38:22 battousai Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,10 @@
 ##
 ##   End example
 ##
+
+# <battousai@gentoo.org> (19 Feb 2004)
+# New driver, needs testing
+x11-misc/linuxwacom
 
 # <liquidx@gentoo.org> (19 Feb 2004)
 # possible symlink vunerability (#41253)
