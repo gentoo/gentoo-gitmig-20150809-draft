@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.31 2004/07/02 04:29:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.32 2004/07/06 20:40:57 mattam Exp $
+
+  06 Jul 2004; Matthieu Sozeau <mattam@gentoo.org> +files/ocaml-rebuild.sh,
+  ocaml-3.07-r1.ebuild:
+  Move to stable on x86, adding a rebuilding script.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ocaml-3.06-r1.ebuild,
   ocaml-3.06-r2.ebuild, ocaml-3.06.ebuild, ocaml-3.07-r1.ebuild,

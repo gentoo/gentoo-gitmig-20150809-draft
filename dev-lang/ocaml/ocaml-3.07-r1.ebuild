@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.12 2004/07/02 04:29:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.13 2004/07/06 20:40:57 mattam Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://caml.inria.fr/distrib/${P}/${P}.tar.gz
 
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc alpha ~ia64 -amd64 hppa"
+KEYWORDS="x86 ~sparc ~ppc alpha ~ia64 -amd64 hppa"
 IUSE="tcltk"
 
 DEPEND="virtual/libc
@@ -62,4 +62,15 @@ src_install() {
 
 	# documentation
 	dodoc Changes INSTALL LICENSE README Upgrading
+}
+
+pkg_postinst() {
+	echo
+	einfo "OCaml is not binary compatible from version to version,"
+	einfo "so you (may) need to rebuild all packages depending on it that"
+	einfo "are actually installed on your system."
+	einfo "To do so, you can run: "
+	einfo "sh ${FILESDIR}/ocaml-rebuild.sh [emerge options]"
+	einfo "Which will call emerge on all old packages with the given options"
+	echo
 }
