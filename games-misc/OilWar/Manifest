@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b7da826f2a17bed4065b33ef8de47e17 OilWar-1.2.1.ebuild 848
+MD5 628f1ea46a72945b7c84e140c2b5450f ChangeLog 766
+MD5 afd743df5f5d9a69be417a59c3e5cbc4 OilWar-1.2.1.ebuild 848
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 f1010feb42edbe477c3427f6f403af6c ChangeLog 677
 MD5 e36f0134bb9892538627f54493ebbbb9 files/digest-OilWar-1.2.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBWLSBI1lqEGTUzyQRAtneAJ4rs9KiiFoVOIc2Vuz9Aaz4XRXurwCcCBX8
-emFj7xNeVLDcbavbKRF6+cc=
-=EX/1
------END PGP SIGNATURE-----
