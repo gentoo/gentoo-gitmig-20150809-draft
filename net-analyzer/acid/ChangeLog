@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/acid
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.5 2004/10/14 11:31:09 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.6 2004/10/25 17:48:46 hansmi Exp $
+
+  25 Oct 2004; Michael Hanselmann <hansmi@gentoo.org>
+  acid-0.9.6_beta23.ebuild:
+  Added to ~ppc.
 
   14 Oct 2004; Eldad Zack <eldad@gentoo.org> acid-0.9.6_beta23.ebuild:
   Fixed pkg_setup.

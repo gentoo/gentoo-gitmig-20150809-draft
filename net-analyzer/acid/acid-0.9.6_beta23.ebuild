@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.6 2004/10/14 11:31:09 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.7 2004/10/25 17:48:46 hansmi Exp $
 
 inherit webapp
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://acidlab.sourceforge.net"
 SRC_URI="http://acidlab.sourceforge.net/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="apache2"
 S=${WORKDIR}/${PN}
