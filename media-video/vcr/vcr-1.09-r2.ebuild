@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcr/vcr-1.09-r2.ebuild,v 1.3 2003/02/13 13:36:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcr/vcr-1.09-r2.ebuild,v 1.4 2003/02/21 18:11:22 mholzer Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND="media-video/avifile"
+DEPEND="=media-video/avifile-0.7.15*"
 
 src_unpack () {
 
@@ -33,7 +33,7 @@ src_compile () {
 
 	econf ${myconf} || die "econf died"
 
-	emake || die "emake died"
+	make || die "emake died"
 
 }
 
