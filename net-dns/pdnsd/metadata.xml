@@ -7,5 +7,5 @@
   <name>Daniel Black</name>
   <description>I'm maintaining this one package for net-dialup</description>
 </maintainer>
-  <longdescription>Proxy DNS server designed to server dialup workstations/networks</longdescription>
+  <longdescription>Proxy DNS server designed to serve dialup workstations/networks</longdescription>
 </pkgmetadata>
