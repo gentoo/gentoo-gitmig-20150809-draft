@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r8.ebuild,v 1.1 2004/11/06 07:07:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r8.ebuild,v 1.2 2004/11/11 01:06:15 solar Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -11,8 +11,8 @@ inherit eutils flag-o-matic gcc
 # rm -rf uClibc-0.9.26-cvs-update-`date +%Y%m%d`.patch.bz2  uClibc uClibc-0.9.26
 
 MY_P="${P/ucl/uCl}"
-CVS_VER="20040808"
-PATCH_VER="1.1"
+CVS_VER="20041110"
+PATCH_VER="1.2"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
@@ -104,37 +104,20 @@ src_unpack() {
 
 	if [ -n "${PATCH_VER}" ] ; then
 		unpack ${MY_P}-patches-${PATCH_VER}.tar.bz2
-		# for now we remove relro/now, no support for relro in ldso
-		rm -f ${WORKDIR}/patch/*relro*
-		rm -f ${WORKDIR}/patch/*now*
-		rm -f ${WORKDIR}/patch/11_all_uClibc-0.9.26-socket.patch.bz2
-		# remove default ssp build
-		use hardened || rm -f ${WORKDIR}/patch/*enable-ssp*
+		mv ${WORKDIR}/patch/*frandom* ${WORKDIR}/patch/exclude/
+		# zdefs/main patches, not yet properly tested
+		mv ${WORKDIR}/patch/*{zdefs,main}* ${WORKDIR}/patch/exclude/
+		# needed for gcc-3.4 after frandom
+		mv ${WORKDIR}/patch/*attribute* ${WORKDIR}/patch/exclude/
 		epatch ${WORKDIR}/patch
+		# for math functions (j2sdk/xorg-x11)
+		#epatch ${WORKDIR}/patch/math
 	fi
 
 	# support archs which dont implement all syscalls
 	[ -z "${CVS_VER}" ] \
 		&& epatch ${FILESDIR}/${PV}/arm-fix-missing-syscalls.patch \
 		|| epatch ${FILESDIR}/${PV}/uclibc-0.9.26-arm-dl-sysdep.patch
-	epatch ${FILESDIR}/${PV}/arm-ucontext.patch
-
-	# build all .S files w/ -Wa,--noexecstack
-	if [ "0${CVS_VER}" -ge "20040730" ] ; then
-		einfo "Skipping noexecstack patch. (need update)"
-	else
-		epatch ${FILESDIR}/${PV}/${PN}-${PV}-noexecstack.patch
-	fi
-
-	# fix segfaults when running things like `emerge sync`
-	epatch ${FILESDIR}/${PV}/${PN}-${PV}-resolve-segfault.patch
-
-	# allow libs tagged as ELF_LIBC0 in the cache to be loaded
-	epatch ${FILESDIR}/${PV}/${PN}-${PV}-ldso-cache.patch
-
-	# Take extra security precaution's for suid handling with environment variables
-	epatch ${FILESDIR}/${PV}/uClibc-20040921-ldso-unsecvars.patch
-	cp ${FILESDIR}/${PV}/unsecvars.h ${S}/ldso/include/ || die
 
 	# fixup for install perms
 	sed -i -e "s:-fa:-dRf:g" Makefile
@@ -146,7 +129,7 @@ src_unpack() {
 		arm)	target="arm";		config_target="GENERIC_ARM";;
 		mips)	target="mips";		config_target="MIPS_ISA_1";;
 		ppc)	target="powerpc";	config_target="no cpu-specific options";;
-		sh)		target="sh";		config_target="SH4";;
+		sh)	target="sh";		config_target="SH4";;
 		x86)	target="i386";		config_target="GENERIC_386";;
 		*)		die "${ARCH} lists no defaults :/";;
 	esac
@@ -182,6 +165,7 @@ src_unpack() {
 	#	echo "UCLIBC_HAS_XLOCALE=n" >> .config
 	#	echo "UCLIBC_HAS_GLIBC_DIGIT_GROUPING=y" >> .config
 	#	echo "UCLIBC_HAS_SCANF_LENIENT_DIGIT_GROUPING=y" >> .config
+	#	# removed on 20040907 by mjn3
 	#	echo "UCLIBC_HAS_GETTEXT_AWARENESS=y" >> .config
 	#	# on pax enabled kernels the locale files can't be built
 	#	echo "UCLIBC_PREGENERATED_LOCALE_DATA=n" >> .config
@@ -192,17 +176,26 @@ src_unpack() {
 	use ipv6 && sed -i -e "s:# UCLIBC_HAS_IPV6 is not set:UCLIBC_HAS_IPV6=y:" .config
 
 	if use hardened ; then
-		if use x86
-		then
+		sed -i -e "s:# UCLIBC_SECURITY.*:UCLIBC_SECURITY=y:" .config
+		if has ${ARCH} x86 ppc mips; then
 			einfo "Enable Position Independent Executable support in ${P}"
-			sed -i -e "s:# UCLIBC_PIE_SUPPORT.*:UCLIBC_PIE_SUPPORT=y:" .config
+			echo "UCLIBC_BUILD_PIE=y" >> .config
 		fi
 
 		einfo "Enable Stack Smashing Protections support in ${P}"
-		sed -i -e "s:# UCLIBC_PROPOLICE.*:UCLIBC_PROPOLICE=y:" .config
+		echo "UCLIBC_HAS_SSP=y:" >> .config
 		echo "PROPOLICE_BLOCK_ABRT=n" >> .config
-		echo "PROPOLICE_BLOCK_SEGV=n" >> .config
-		echo "PROPOLICE_BLOCK_KILL=y" >> .config
+		if use debug ; then
+			echo "PROPOLICE_BLOCK_SEGV=y" >> .config
+			echo "PROPOLICE_BLOCK_KILL=n" >> .config
+		else
+			echo "PROPOLICE_BLOCK_SEGV=n" >> .config
+			echo "PROPOLICE_BLOCK_KILL=y" >> .config
+		fi
+		echo "UCLIBC_BUILD_SSP=y" >> .config
+		echo "UCLIBC_BUILD_RELRO=y" >> .config
+		echo "UCLIBC_BUILD_NOW=y" >> .config
+		echo "UCLIBC_BUILD_NOEXECSTACK=y" >> .config
 	fi
 
 	# we are building against system installed kernel headers
@@ -215,7 +208,6 @@ src_unpack() {
 			-e 's:DEVEL_PREFIX=.*:DEVEL_PREFIX="/usr":' \
 			-e 's:RUNTIME_PREFIX=.*:RUNTIME_PREFIX="/":' \
 			.config
-		sed -i '/LIBRARY_CACHE:=/s:#::' Rules.mak
 	fi
 
 	yes "" | make -s oldconfig > /dev/null || die "could not make oldconfig"
@@ -225,11 +217,6 @@ src_unpack() {
 	cp .config myconfig
 
 	emake clean >/dev/null || die "could not clean"
-
-	sed -i 's:-DUCLIBC:$(LIBRARY_CACHE) -DUCLIBC:' ldso/{ldso,libdl}/Makefile
-	sed -i 's:\$(R_PREFIX):\\"$(RUNTIME_PREFIX)\\" $(LIBRARY_CACHE):' utils/Makefile
-	sed -i 's: I\.: -I.:' ldso/libdl/Makefile
-	sed -i 's:sys/user\.h:asm/page.h:' libc/misc/internals/__uClibc_main.c
 }
 
 src_compile() {
@@ -280,12 +267,8 @@ src_install() {
 		emake PREFIX=${D} install_utils || die "install-utils failed"
 		dodir /usr/bin
 		exeinto /usr/bin
-		doexe ${FILESDIR}/getent
+		doexe docs/getent
 	fi
-
-	# shameless plug for mjn3 who gives us so much...
-	# please give back if you can. -solar
-	f=DEDICATION.mjn3 ; [ -e "$f" ] && ( cat $f ; epause 2 )
 
 	if ! use build
 	then
@@ -298,6 +281,8 @@ src_install() {
 #check_main_libc
 #if [ "${SYS_LIBC}" = "uClibc" ] ; then
 #	if [ "${ROOT}" = "/" ] ; then
+#		# should we create ld.so.conf and/or preload?
+#		# currently the option is not enabled
 #		/sbin/ldconfig
 #		[ ! -e /etc/TZ ] && echo UTC > /etc/TZ
 #		# reload init?

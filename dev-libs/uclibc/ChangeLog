@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/uclibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.41 2004/11/06 07:07:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.42 2004/11/11 01:06:15 solar Exp $
+
+  10 Nov 2004; <solar@gentoo.org> uclibc-0.9.26-r8.ebuild:
+  uclibc updates
 
 *uclibc-0.9.26-r8 (06 Nov 2004)
 
