@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmsmixer
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.5 2003/12/10 23:26:52 pyrania Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.6 2004/03/19 10:04:28 aliz Exp $
+
+  19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> wmsmixer-0.5.ebuild:
+  Inherit eutils.
 
   11 Dec 2003; Markus Nigbur <pyrania@gentoo.org> wmsmixer-0.5.ebuild:
   Fixed permission problem. Thanks to Minati jean michel (bug 22983)

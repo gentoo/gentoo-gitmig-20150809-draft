@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmitime
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmitime/ChangeLog,v 1.2 2003/02/12 09:41:39 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmitime/ChangeLog,v 1.3 2004/03/19 10:04:28 aliz Exp $
+
+  19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> wmitime-0.3.ebuild:
+  Inherit eutils.
 
 *wmitime-0.3 (04 Oct 2002)
 

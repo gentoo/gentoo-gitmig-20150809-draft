@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/wmsmixer-0.5.ebuild,v 1.6 2003/12/10 23:26:52 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/wmsmixer-0.5.ebuild,v 1.7 2004/03/19 10:04:28 aliz Exp $
+
+inherit eutils
 
 DESCRIPTION="fork of wmmixer adding scrollwheel support and other features"
 HOMEPAGE="http://www.hibernaculum.net/wmsmixer.html"

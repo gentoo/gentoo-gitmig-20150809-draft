@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbiff
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.8 2004/02/11 09:39:35 phosphan Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.9 2004/03/19 10:04:28 aliz Exp $
+
+  19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> wmbiff-0.4.20.ebuild:
+  Inherit eutils.
 
 *wmbiff-0.4.20 (11 Feb 2004)
 

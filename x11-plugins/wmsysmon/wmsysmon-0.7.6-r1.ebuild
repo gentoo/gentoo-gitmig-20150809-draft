@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/wmsysmon-0.7.6-r1.ebuild,v 1.10 2003/10/20 11:00:42 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/wmsysmon-0.7.6-r1.ebuild,v 1.11 2004/03/19 10:04:28 aliz Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="WMaker DockUp to monitor: Memory usage, Swap usage, I/O
