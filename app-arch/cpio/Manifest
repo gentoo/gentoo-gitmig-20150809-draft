@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 14df03ea0231828c8e54f9100a214236 ChangeLog 3194
-MD5 f3b60c10f97f35a28763f640628deca3 cpio-2.5.ebuild 801
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 5367fddbe98fa0cad819922216bbb666 ChangeLog 3272
+MD5 ca553fdcf418df4fac0aa9000c76b9d1 cpio-2.5.ebuild 797
 MD5 d58f1c341c15df1983c45b0ba94586db cpio-2.6.ebuild 921
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 a0838e9d5ff0463ecb8758db81652ff1 files/digest-cpio-2.5 60
-MD5 898f15e2e1a554916e69e9397f130e81 files/digest-cpio-2.6 61
 MD5 76f4688893a4a9b394442da68fbf0d5e files/2.6-rili-big-files.patch 2566
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB2f7XroRuSHgZdywRAuJVAKCQgnxD16Vm7dYTLdacXAxbI145dwCgji7r
-4l/j2hPRr8XCCVUqXUwaEjE=
-=2tje
------END PGP SIGNATURE-----
+MD5 898f15e2e1a554916e69e9397f130e81 files/digest-cpio-2.6 61

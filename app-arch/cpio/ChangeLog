@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.8 2005/01/04 02:26:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.9 2005/01/20 00:03:31 gongloo Exp $
+
+  19 Jan 2005; <gongloo@gentoo.org> cpio-2.5.ebuild:
+  Stable on ppc-macos.
 
 *cpio-2.6 (03 Jan 2005)
 
