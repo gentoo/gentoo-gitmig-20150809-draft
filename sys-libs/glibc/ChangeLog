@@ -1,9 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.193 2004/06/19 13:19:29 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.194 2004/06/19 13:34:40 malc Exp $
 
   19 Jun 2004; <malc@gentoo.org> glibc-2.3.4.20040605.ebuild:
-  Mark stable for release on amd64. Complaints to lv@gentoo.org, he made me do it ;-)
+  Mark stable for release on amd64. Complaints to lv@gentoo.org, he made me do it ;-) 
 
   17 Jun 2004; Luca Barbato <lu_zero@gentoo.org>
   glibc-2.3.4.20040605-r1.ebuild:
