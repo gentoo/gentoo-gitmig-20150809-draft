@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 730f40c57d531360888dfd587b1a1674 ChangeLog 2093
-MD5 a5af67e1b46adb6c41ebae8e3cc17ac1 aquapfont-2.5-r1.ebuild 663
+MD5 907f369027887dcf7af85be5f8b5b776 ChangeLog 2191
+MD5 597ebd8795fd76c2f7ffa552f541404e aquapfont-2.5-r1.ebuild 661
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
 MD5 8f4b1edb37bec48cdb80117c89a618cc files/digest-aquapfont-2.5-r1 58
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
-
-iD8DBQFBY/r0VWNWqTUmv+0RAsvLAJ43stmVAgHTiMkZmLDeYnc6bgeyOQCfYWXH
-LF7BKRhbkYnWRWRg/K0U4hI=
-=J1qE
------END PGP SIGNATURE-----
