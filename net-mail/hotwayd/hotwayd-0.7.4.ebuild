@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.7.4.ebuild,v 1.2 2004/08/08 00:13:18 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.7.4.ebuild,v 1.3 2004/10/11 18:11:01 ticho Exp $
 
 DESCRIPTION="Hotmail to pop3 daemon"
 HOMEPAGE="http://hotwayd.sourceforge.net/"
@@ -12,7 +12,7 @@ KEYWORDS="x86"
 
 IUSE=""
 
-DEPEND="sys-apps/xinetd
+DEPEND="virtual/inetd
 	dev-libs/libxml2"
 
 src_compile() {

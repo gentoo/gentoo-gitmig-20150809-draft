@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/hotwayd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.9 2004/10/04 12:22:53 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.10 2004/10/11 18:11:01 ticho Exp $
+
+  11 Oct 2004; Andrej Kacian <ticho@gentoo.org> hotwayd-0.7.4.ebuild,
+  hotwayd-0.8-r1.ebuild, hotwayd-0.8.ebuild:
+  Changed sys-apps/xinetd -> virtual/inetd in DEPEND. Closes #67074, reported
+  by Georgi Georgiev <chutz@gg3.net>.
 
 *hotwayd-0.8-r1 (04 Oct 2004)
 
