@@ -29,6 +29,9 @@
 # seemant@gentoo.org (10 Jul 2002)
 # Masked, coz it's b0rked!
 =net-analyzer/ntop-2.0.99_rc2-r1
+# blizzy@gentoo.org (11 Jul 2002)
+# Masked out for testing, please check!
+=net-analyzer/ntop-2.0.99_rc2-r2
 
 # seemant@gentoo.org (09 Jul 2002)
 # masked for gcc-3.1 breakages with galeon, per blocke and mkennedy's
