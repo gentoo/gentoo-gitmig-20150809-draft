@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/gai-album
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gai-album/ChangeLog,v 1.1 2004/05/09 20:20:16 lordvan Exp $
+
+*gai-album-0.6 (09 May 2004)
+
+  09 May 2004; Thomas Raschbacher <lordvan@gentoo.org> +metadata.xml,
+  +gai-album-0.6.ebuild:
+  initial import
+
