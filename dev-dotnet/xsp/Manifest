@@ -11,4 +11,4 @@ MD5 5788140ef902e673f760b875b5f4c1c0 files/xsp.confd 301
 MD5 4c6ea487a7fa33ca219f4d49803f1e25 files/xsp.initd 669
 MD5 381f7e295bbcb9c85dab4f34f046174f files/digest-xsp-1.0.5-r1 61
 MD5 37f33b5c18732f3cac64ad248324b108 files/mod-mono-server.confd 1226
-MD5 450519001366538543908513012237be files/mod-mono-server.initd 1700
+MD5 ee8d87decca378e35ec9ac0268967580 files/mod-mono-server.initd 1682

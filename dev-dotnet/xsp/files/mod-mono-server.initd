@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/files/mod-mono-server.initd,v 1.1 2005/02/17 05:30:33 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/files/mod-mono-server.initd,v 1.2 2005/02/17 06:06:09 trapni Exp $
 
 depend() {
 	use net
@@ -54,7 +54,7 @@ start() {
 		--make-pidfile \
 		--pidfile /var/run/aspnet/mod-mono-server.pid \
 		--chuid apache \
-		--exec /usr/bin/mono /usr/bin/mod-mono-server.exe \
+		--exec /usr/bin/mod-mono-server \
 		-- $MONO_SERVER_OPTS
 
 	eend $?
