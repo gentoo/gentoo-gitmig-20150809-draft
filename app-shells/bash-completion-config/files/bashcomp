@@ -1,0 +1,111 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Id: bashcomp,v 1.1 2005/04/06 14:15:21 ka0ttic Exp $
+#
+# Author: Aaron Walker <ka0ttic%gentoo.org>
+#
+# completion for bash-completion-config 
+
+# echo all completions in BASHCOMP_DIR
+complete_avail()
+{
+    local bashcomp BASHCOMP_DIR="/usr/share/bash-completion"
+    for bashcomp in $BASHCOMP_DIR/* ; do
+        echo -n "${bashcomp##*/} "
+    done
+}
+
+# echo all installed completions in $1
+complete_installed()
+{
+    local bashcomp
+    for bashcomp in $1/* ; do
+        echo -n "${bashcomp##*/} "
+    done
+}
+
+# show completions for $1
+complete_on()
+{
+    local cur="$1"
+
+    case "$2" in
+        install)
+            COMPREPLY=($(compgen -f -X '*~' -W "$(complete_avail)" -- "${cur}"))
+            ;;
+        uninstall)
+            if [ -z "$3" ] ; then
+                COMPREPLY=($(compgen -X '*~' -W "$(complete_installed \
+                    ${HOME}/.bash_completion.d)" -- "${cur}"))
+            else
+                COMPREPLY=($(compgen -X '*~' -W "$(complete_installed \
+                /etc/bash_completion.d)" -- "${cur}"))
+            fi
+            ;;
+    esac
+}
+
+_bash_completion_config()
+{
+    local cur prev opts i a=0
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts="-g --global -l --list -i --install -u --uninstall -h --help -d --debug -V --version -nc --nocolor"
+    
+    if [[ "${cur}" == -* || ${COMP_CWORD} -eq 1 ]] ; then
+        COMPREPLY=($(compgen -W "${opts}" -- "${cur}"))
+        return 0
+    fi
+
+    case "${prev}" in
+        -nc|--nocolor|--nocolour)
+            COMPREPLY=($(compgen -W "${opts/-nc --nocolor/}" -- "${cur}"))
+            ;;
+        -d|--debug)
+            COMPREPLY=($(compgen -W "${opts/-d --debug/}" -- "${cur}"))
+            ;;
+        -g|--global)
+            for i in ${COMP_WORDS[@]} ; do
+                [[ "${i}" == "-i" || "${i}" == "--install" ||
+                   "${i}" == "-u" || "${i}" == "--uninstall" ]] && a=1
+                [[ "${i}" == "-nc" || "${i}" == "--nocolor" ||
+                   "${i}" == "--nocolour" ]] && a=1
+            done
+            
+            if [ ${a} -gt 0 ] ; then
+                action=install
+                complete_on "${cur}" "${action}"
+            else
+                COMPREPLY=($(compgen -W "-i --install -u --uninstall" -- "${cur}"))
+            fi
+            ;;
+        -i|--install)
+            action=install
+            complete_on "${cur}" "${action}"
+            ;;
+        -u|--uninstall)
+            action=uninstall
+
+            for i in ${COMP_WORDS[@]} ; do
+                if [[ "${i}" == "-g" || "${i}" == "--global" ]] ; then
+                    global=1
+                fi
+            done
+
+            if [ -z "${global}" ] ; then
+                complete_on "${cur}" "${action}"
+            else
+                complete_on "${cur}" "${action}" glob
+            fi
+            ;;
+        *)
+            [ -n "${action}" ] && complete_on "${cur}" "${action}"
+            ;;
+    esac
+    
+    unset global
+}
+complete -F _bash_completion_config bash-completion-config
+
+# vim: set ft=sh tw=80 sw=4 et :
