@@ -1,0 +1,11 @@
+# ChangeLog for games-mud/trebuchet
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/trebuchet/ChangeLog,v 1.1 2004/03/20 06:56:49 mr_bones_ Exp $
+
+*trebuchet-1.052 (19 Mar 2004)
+
+  19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  trebuchet-1.052.ebuild:
+  Initial commit; ebuild based on the one supplied by Martti Rannanjarvi via bug
+  40642
+
