@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r7.ebuild,v 1.3 2003/07/21 11:15:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r7.ebuild,v 1.4 2003/08/05 02:51:19 kumba Exp $
 
 IUSE="crypt nls static pam"
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic
 
 ## see below for details on pic.patch
 case ${ARCH} in
-	"x86"|"hppa"|"sparc64"|"ppc")
+	"x86"|"hppa"|"sparc64"|"ppc"|"mips")
 		;;
 	*)
 		filter-flags -fPIC
@@ -22,7 +22,7 @@ SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.bz2
 	crypt? ( mirror://gentoo/${CRYPT_PATCH_P}.patch.bz2 )"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~arm ~mips ~hppa"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~arm mips ~hppa"
 SLOT="0"
 LICENSE="GPL-2"
 
