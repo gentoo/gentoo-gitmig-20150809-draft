@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/dvd+rw-tools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.1 2003/06/30 04:39:51 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.2 2003/09/27 20:51:26 weeve Exp $
+
+*dvd+rw-tools-5.12.4.7.4 (27 Sep 2003)
+
+  27 Sep 2003; Jason Wever <weeve@gentoo.org> dvd+rw-tools-5.12.4.7.4.ebuild:
+  Version bump. Ebuild submitted by Tim Radish <tim.raedisch@udo.edu>. Fixes bug
+  #25376.
 
 *dvd+rw-tools-5.9.4.4.4 (29 Jun 2003)
 
