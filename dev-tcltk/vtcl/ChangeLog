@@ -1,0 +1,11 @@
+# ChangeLog for dev-tcltk/vtcl
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/vtcl/ChangeLog,v 1.1 2004/08/08 01:09:29 cardoe Exp $
+
+*vtcl-1.6.0 (07 Aug 2004)
+
+  07 Aug 2004; Doug Goldstein <cardoe@gentoo.org> +metadata.xml,
+  +vtcl-1.6.0.ebuild:
+  added new ebuild as per bug # 42324
+  ebuild written by Minati jean michel
+
