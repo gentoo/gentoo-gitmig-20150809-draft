@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/commonc++
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/ChangeLog,v 1.9 2003/05/09 03:12:49 heim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/ChangeLog,v 1.10 2003/06/30 07:20:27 lu_zero Exp $
+
+  30 Jun 2003; Luca Barbato <lu_zero@gentoo.org> commonc++-1.9.7-r3.ebuild:
+  fix patch location.
 
 *commonc++-1.9.7-r3 (08 May 2003)
 
