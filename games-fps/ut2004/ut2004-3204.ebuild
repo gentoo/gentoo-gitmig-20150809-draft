@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.7 2004/05/27 23:37:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.8 2004/06/03 11:31:58 mr_bones_ Exp $
 
 inherit games
 
@@ -65,18 +65,16 @@ src_unpack() {
 }
 
 src_install() {
-	dodir ${dir}
-	dodir ${dir}/System
 	dodir ${dir}/System/editorres
 
 	# Disk 1
 	einfo "Copying files from Disk 1..."
 	cp -r ${CDROM_ROOT}/${DISK1}/{Animations,ForceFeedback,Help,KarmaData,Maps,Sounds,Web} ${Ddir} || die "copying files"
 	cp -r ${CDROM_ROOT}/${DISK1}/System/{editorres,*.{bat,bmp,dat,det,est,frt,ini,int,itt,kot,md5,smt,tmt,u,ucl,upl,url}} ${Ddir}/System || die "copying files"
-	mkdir -p ${Ddir}/Manual || dir "creating manual folder"
+	mkdir -p ${Ddir}/Manual || die "creating manual folder"
 	cp ${CDROM_ROOT}/${DISK1}/Manual/Manual.pdf ${Ddir}/Manual \
 		|| die "copying manual"
-	mkdir -p ${Ddir}/Benchmark/Stuff || dir "creating benchmark folders"
+	mkdir -p ${Ddir}/Benchmark/Stuff || die "creating benchmark folders"
 	cp -r ${CDROM_ROOT}/${DISK1}/Benchmark/Stuff/* ${Ddir}/Benchmark/Stuff \
 		|| die "copying benchmark files"
 	cdrom_load_next_cd
@@ -157,7 +155,6 @@ src_install() {
 	doins ${S}/README.linux ${S}/ut2004.xpm || die "copying readme/icon"
 
 	# creating .manifest files
-	dodir ${dir}/.manifest
 	insinto ${dir}/.manifest
 	doins ${FILESDIR}/${PN}.xml
 
