@@ -1,0 +1,30 @@
+#!/bin/sh
+#RCUPDATE:3 4:80:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE="tinydns"
+opts="start stop"
+
+#this service is designed to *only* run supervised
+
+
+start() {
+    ebegin "Starting svc-${SERVICE}"
+	ln -sf ../services/${SERVICE} ${SVCDIR}/control/${SERVICE}
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping svc-${SERVICE}"
+   	if [ -e ${SVCDIR}/control/${SERVICE} ]
+	then
+		/usr/bin/svc -dx ${SVCDIR}/control/${SERVICE}/log
+		/usr/bin/svc -dx ${SVCDIR}/control/${SERVICE}
+		rm ${SVCDIR}/control/${SERVICE}
+	fi
+	eend $?
+}
+
+doservice ${@}
+
