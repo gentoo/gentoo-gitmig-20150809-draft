@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r3.ebuild,v 1.6 2003/02/13 16:48:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r3.ebuild,v 1.7 2003/03/09 03:37:06 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -121,6 +121,9 @@ src_unpack() {
 	# Fix 'locale -a' not listing all locales.  This to Stefan Jones
 	# <cretin@gentoo.org> for this fix, bug #13240.
 	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-locale.patch
+
+	# Fix problems with ORACLE, bug #16504
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-typeo_dl-runtime_c.patch
 
 	# A few patches only for the MIPS platform.  Descriptions of what they
 	# do can be found in the patch headers.

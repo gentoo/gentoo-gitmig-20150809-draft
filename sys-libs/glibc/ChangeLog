@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.46 2003/03/05 20:37:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.47 2003/03/09 03:37:06 azarah Exp $
+
+  09 March 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.1*.ebuild :
+  Add patch glibc-2.3.1-typeo_dl-runtime_c.patch to fix issues with Oracle,
+  bug #16504, thanks to Tri D. Hoang <tdhoang@ultramain.com> for reporting.
 
 *glibc-2.3.2 (05 March 2003)
 
