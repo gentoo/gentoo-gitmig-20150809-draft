@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa-glu/mesa-glu-3.5.ebuild,v 1.2 2002/01/13 21:26:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa-glu/mesa-glu-3.5.ebuild,v 1.3 2002/01/13 21:33:42 drobbins Exp $
 
 S=${WORKDIR}/Mesa-${PV}
 DESCRIPTION="OpenGL like graphic library for Linux, this package only contains the glu and glut parts"
@@ -32,6 +32,7 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-sse"
 	fi
+	#--without-glut means that no glut is available on the system, so mesa should build its own
 	myconf="${myconf} --with-x --without-glut --disable-ggi-fbdev --without-ggi"
 	./configure --prefix=/usr --sysconfdir=/etc/mesa --host=${CHOST} $myconf || die
 	emake || die
