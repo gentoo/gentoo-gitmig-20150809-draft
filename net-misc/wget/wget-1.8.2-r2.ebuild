@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r2.ebuild,v 1.7 2003/06/22 08:01:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r2.ebuild,v 1.8 2003/07/06 09:13:30 kumba Exp $
 
 
 IUSE="ssl nls static ipv6"
@@ -20,7 +20,7 @@ DEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86 ppc sparc alpha hppa arm ~mips"
+KEYWORDS="amd64 x86 ppc sparc alpha hppa arm mips"
 
 src_unpack() {
 	unpack ${A}
