@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.14 2003/02/13 12:37:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.15 2003/03/02 22:25:28 avenj Exp $
 
 IUSE="icc X svga"
 
@@ -61,6 +61,7 @@ src_compile() {
 		#This is optimized for Pentium 4 (untested, I don't own one):
 		#echo "s/^CPPFLAGS =/CPPFLAGS = -O3 -xW -ip -tpp7 /" >> makefile.sed
 
+	else
 		# GCC CPPFLAGS
 		echo "s/^CPPFLAGS =/CPPFLAGS = -finline-functions -ffast-math /" >> makefile.sed
 		echo "s/^CPPFLAGS =/CPPFLAGS = ${CFLAGS} /" >> makefile.sed
