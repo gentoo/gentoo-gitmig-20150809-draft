@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.51 2003/10/14 01:27:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.52 2003/10/27 21:27:56 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,msterret}@gentoo.org
 #
@@ -68,23 +68,24 @@ gameswrapper() {
 	local oldtree=${DESTTREE}
 	into ${GAMES_PREFIX}
 	local cmd=$1; shift
-	${cmd} $@
+	${cmd} "$@"
 	into ${oldtree}
 }
 
-dogamesbin() { gameswrapper ${FUNCNAME/games} $@; }
-dogamessbin() { gameswrapper ${FUNCNAME/games} $@; }
-dogameslib() { gameswrapper ${FUNCNAME/games} $@; }
-dogameslib.a() { gameswrapper ${FUNCNAME/games} $@; }
-dogameslib.so() { gameswrapper ${FUNCNAME/games} $@; }
-newgamesbin() { gameswrapper ${FUNCNAME/games} $@; }
-newgamessbin() { gameswrapper ${FUNCNAME/games} $@; }
+dogamesbin() { gameswrapper ${FUNCNAME/games} "$@"; }
+dogamessbin() { gameswrapper ${FUNCNAME/games} "$@"; }
+dogameslib() { gameswrapper ${FUNCNAME/games} "$@"; }
+dogameslib.a() { gameswrapper ${FUNCNAME/games} "$@"; }
+dogameslib.so() { gameswrapper ${FUNCNAME/games} "$@"; }
+newgamesbin() { gameswrapper ${FUNCNAME/games} "$@"; }
+newgamessbin() { gameswrapper ${FUNCNAME/games} "$@"; }
 
-gamesowners() { chown ${GAMES_USER}:${GAMES_GROUP} $@; }
-gamesperms() { chmod u+rw,g+r-w,o-rwx $@; }
+gamesowners() { chown ${GAMES_USER}:${GAMES_GROUP} "$@"; }
+gamesperms() { chmod u+rw,g+r-w,o-rwx "$@"; }
 prepgamesdirs() {
+	local dir=""
 	for dir in ${GAMES_PREFIX} ${GAMES_PREFIX_OPT} ${GAMES_DATADIR} ${GAMES_SYSCONFDIR} \
-			${GAMES_STATEDIR} ${GAMES_LIBDIR} ${GAMES_BINDIR} $@ ; do
+			${GAMES_STATEDIR} ${GAMES_LIBDIR} ${GAMES_BINDIR} "$@" ; do
 		(
 			gamesowners -R ${D}/${dir}
 			find ${D}/${dir} -type d -print0 | xargs --null chmod 750
@@ -95,8 +96,10 @@ prepgamesdirs() {
 }
 
 gamesenv() {
-	echo "LDPATH=\"${GAMES_LIBDIR}\"" > /etc/env.d/${GAMES_ENVD}
-	echo "PATH=\"${GAMES_BINDIR}\"" >> /etc/env.d/${GAMES_ENVD}
+	cat << EOF > /etc/env.d/${GAMES_ENVD}
+LDPATH="${GAMES_LIBDIR}"
+PATH="${GAMES_BINDIR}"
+EOF
 }
 
 games_pkg_setup() {
@@ -126,6 +129,7 @@ games_pkg_postinst() {
 games_get_cd() {
 	export GAMES_CD=${GAMES_CDROM}
 	if [ -z "${GAMES_CD}" ] ; then
+		local mline=""
 		for mline in `mount | egrep -e '(iso|cdrom)' | awk '{print $3}'` ; do
 			find ${mline} -iname ${1} -maxdepth 1 -printf '' && GAMES_CD=${mline}
 		done
