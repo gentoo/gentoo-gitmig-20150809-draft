@@ -232,3 +232,4 @@ move dev-libs/hdf sci-libs/hdf
 move dev-libs/hdf5 sci-libs/hdf5
 move dev-libs/io_lib sci-libs/io_lib
 move dev-libs/libctl sci-libs/libctl
+move dev-libs/libtifiles sci-libs/libtifiles
