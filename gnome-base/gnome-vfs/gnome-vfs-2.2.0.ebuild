@@ -1,27 +1,27 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.0.4.1.ebuild,v 1.7 2003/01/31 01:40:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.2.0.ebuild,v 1.1 2003/01/31 01:40:23 foser Exp $
 
-IUSE="doc"
+IUSE="doc ssl"
 
-inherit gnome2 libtool
+inherit gnome2 eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome Virtual Filesystem"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
-KEYWORDS="x86 ~ppc ~sparc alpha"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2 LGPL-2.1"
 
-RDEPEND=">=dev-libs/glib-2.0.6
+RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/gconf-1.2.1
-	>=gnome-base/ORBit2-2.4.1
-	>=gnome-base/gnome-mime-data-2.0.1
-	>=gnome-base/libbonobo-2.0.0
-	>=gnome-base/bonobo-activation-1.0.3
+	>=gnome-base/ORBit2-2.4
+	>=gnome-base/libbonobo-2
+	>=gnome-base/bonobo-activation-1
+	>=dev-libs/libxml2-2.2.8
 	>=sys-devel/gettext-0.10.40
-	>=dev-libs/openssl-0.9.5
-	>=sys-apps/bzip2-1.0"
+	app-admin/fam-oss
+	ssl? ( >=dev-libs/openssl-0.9.5 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.22
@@ -30,10 +30,22 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS COPYING* ChangeLog HACKING INSTALL NEWS README TODO"
 
-src_compile() {
-	elibtoolize 
+src_unpack() {
+	unpack ${A}
 
+	# fixes oggs with id3 tags detection
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-2-oggdetect.diff
+}
+
+src_compile() {
 	gnome2_src_compile DESTDIR=${D}
+}
+
+src_install() {
+	gnome2_src_install
+	# FIXME: there are bettere ways
+	echo "trash:    libvfolder-desktop.so">>${D}/etc/gnome-vfs-2.0/modules/default-modules.conf
 }
 
 pkg_preinst () {
@@ -43,4 +55,3 @@ pkg_preinst () {
 		rm -f ${REMOVE}
 	fi
 }
-
