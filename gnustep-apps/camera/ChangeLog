@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/camera
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/camera/ChangeLog,v 1.1 2005/01/12 22:41:07 fafhrd Exp $
+
+*camera-0.8 (12 Jan 2005)
+
+  12 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
+  +camera-0.8.ebuild:
+  Original package import
+
