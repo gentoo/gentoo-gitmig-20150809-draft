@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/piozone
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/piozone/ChangeLog,v 1.7 2005/01/01 12:05:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/piozone/ChangeLog,v 1.8 2005/03/31 04:43:18 hparker Exp $
+
+  30 Mar 2005; Homer Parker <hparker@gentoo.org> piozone-1.0-r2.ebuild:
+  add ~amd64 to close #85039
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   piozone-1.0-r2.ebuild:
@@ -19,5 +22,5 @@
 
   12 Aug 2003; Martin Holzer <mholzer@gentoo.org> piozone-1.0-r2.ebuild,
   files/piozone-1.0-gentoo.diff:
-  Initial version. Submitted by Marcelo Góes <blueboard@terra.com.br> in #24250
+  Initial version. Submitted by Marcelo GÃ³es <blueboard@terra.com.br> in #24250
 
