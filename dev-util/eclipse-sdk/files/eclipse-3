@@ -1,50 +1,36 @@
-#!/bin/bash
+#! /bin/sh
 #
-# tiny eclipse wrapper script to allow per user workbenches
-# under each user's home.
+# Tiny startup wrapper for the Eclipse 3.0.x series
 #
-# (c) March 2003 D. Seyffer <uid0@getroot.de>
+# Copyright (c) 2004, Karl Trygve Kalleberg <karltk@gentoo.org>
+# Copyright (c) 2004, Gentoo Technologies, Inc.
+#
+# Licensed under the GNU General Public License, version 2
 #
 
-ECLIPSE_DIR="/usr/lib/eclipse"
-if [ "`basename $0`" = "eclipse-motif" ] ; then
-	ECLIPSE="${ECLIPSE_DIR}/eclipse-motif";
+if [ -f $HOME/.eclipserc ] ; then
+	. $HOME/.eclipserc
+fi
+
+if [ -z "${ECLIPSE_HOME}" ] ; then
+	ECLIPSE_HOME=/usr/lib/eclipse-3
+fi
+
+if [ "${PREFERRED_FRONTEND}" == "gtk" ] && [ -x ${ECLIPSE_HOME}/eclipse-gtk ] ; then
+	ECLIPSE_BIN=${ECLIPSE_HOME}/eclipse-gtk
+elif [ "${PREFERRED_FRONTEND}" == "motif" ] && [ -x ${ECLIPSE_HOME}/eclipse-motif ] ; then
+	ECLIPSE_BIN=${ECLIPSE_HOME}/eclipse-motif
 else
-	ECLIPSE="${ECLIPSE_DIR}/eclipse";
-fi
-WORKBENCH="${HOME}/.eclipse/"
-
-###################################################
-
-if [ ! -d ${ECLIPSE_DIR} ] ; then
-	echo " Eclipse directory not found.";
-	exit 1;
-else 
-	echo " Eclipse found.";
-fi
-
-
-if [ ! -x ${ECLIPSE} ] ; then
-	echo " Eclipse executable not found or not executable.";
-	exit 1;
-else
-	echo " Executable found and is executable.";
-fi
-
-
-if [ ! -d ${WORKBENCH} ] ; then
-	echo " No existing workbench for current user!";
-	echo " First time startup? Will prepare and have eclipse create one...";
-	mkdir -p ${WORKBENCH}
-	if [ ! -d ${WORKBENCH} ] ; then
-		echo " Error creating workbench env!"; 
-		exit 1;
+	if [ -x ${ECLIPSE_HOME}/eclipse-gtk ] ; then
+		ECLIPSE_BIN=${ECLIPSE_HOME}/eclipse-gtk
+	elif [ -x ${ECLIPSE_HOME}/eclipse-motif ] ; then
+		ECLIPSE_BIN=${ECLIPSE_HOME}/eclipse-motif
 	fi
-else
-	echo " Found existing workbench directory for current user.";
 fi
 
-echo " Starting Eclipse...";
-cd ${WORKBENCH}
-${ECLIPSE}	
+if [ ! -x ${ECLIPSE_BIN} ] ; then
+	echo "Failed to find executable '${ECLIPSE_BIN}'" > /dev/stderr
+	exit -1
+fi
 
+${ECLIPSE_BIN} $*
