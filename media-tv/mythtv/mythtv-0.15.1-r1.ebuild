@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.15.1-r1.ebuild,v 1.1 2004/07/04 17:11:42 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.15.1-r1.ebuild,v 1.2 2004/07/07 10:14:54 chrb Exp $
 
 inherit flag-o-matic eutils
 
@@ -62,6 +62,11 @@ src_unpack() {
 	done
 
 	use directfb && epatch ${FILESDIR}/mythtv-0.15-directfb.patch
+
+	# Applies patch for gcc-3.4.0 closing bug #52819
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
+		epatch ${FILESDIR}/gcc-3.4-fix.patch
+	fi
 }
 
 src_compile() {
