@@ -1,0 +1,34 @@
+# ChangeLog for media-libs/gstreamer
+
+* gstreamer-0.3.4 (26 Apr 2002)
+  26 Apr 2002; Spider <spider@gentoo.org> gstreamer-0.3.4.ebuild
+  libtoolize
+  version bump
+  add sysconfdir  
+  fix use lines and documentation
+
+
+* gstreamer-0.3.3-r3 (3 Apr 2002)
+  
+  3 Apr 2002; A. Baguinski <artm@v2.nl> gstreamer-0.3.3-r3.ebuild
+
+  added gtk-doc dependancy if USE contains "perl", need some more work on 
+  that (some more dependancies and different USE word).
+
+  fixed gtkdoc-fixxref issue (was trying to write outside DESTDIR), added
+  installation of documentation (not everything, dunno what to do with
+  examples and  docs/random, they contain the whole trees of files and dodoc
+  doesnt do recursive, neither does doins). some docs are gzipped, others -
+  not.
+
+* gstreamer-0.3.3-r2 (28 Mar 2002)
+
+  28 Mar 2002; A. Baguinski <artm@v2.nl> gstreamer-0.3.3-r2.ebuild
+
+  Added gst-register to pkg_postinst
+
+* gstreamer-0.3.3-r1 (28 Mar 2002)
+  
+  28 Mar 2002; A. Baguinski <artm@v2.nl> gstreamer-0.3.3-r1.ebuild ChangeLog
+
+  Just started
