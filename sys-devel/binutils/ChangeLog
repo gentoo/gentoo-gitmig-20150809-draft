@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.84 2003/11/03 23:30:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.85 2003/11/05 00:50:16 brad_mssw Exp $
+
+  04 Nov 2003; Brad House <brad_mssw@gentoo.org>
+  binutils-2.14.90.0.6-r7.ebuild:
+  mark as stable on amd64
 
   04 Nov 2003; Martin Schlemmer <azarah@gentoo.org>
   binutils-2.14.90.0.2.ebuild, binutils-2.14.90.0.4.1-r1.ebuild,

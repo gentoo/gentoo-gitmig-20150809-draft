@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.143 2003/11/02 10:44:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.144 2003/11/05 00:48:24 brad_mssw Exp $
+
+  04 Nov 2003; Brad House <brad_mssw@gentoo.org> gcc-3.3.1-r5.ebuild:
+  mark as stable on amd64
 
   01 Nov 2003; Aron Griffis <agriffis@gentoo.org> gcc-3.3.2-r2.ebuild:
   Add ~alpha to KEYWORDS
