@@ -1,10 +1,20 @@
-MD5 872a844afccb9fd692dc5565ce337eed ChangeLog 3216
-MD5 11bc5c75abd0fc568cf28345f5d36d3a gtk-theme-switch-1.0.1-r1.ebuild 876
-MD5 a13d7eb7b860eb4a4c1a97a33c7f39c4 gtk-theme-switch-1.0.1.ebuild 733
-MD5 87021ffe401d721203260999d6f908d5 gtk-theme-switch-2.0.0_rc2-r1.ebuild 874
-MD5 81c40406ca9ca6d1a48852b6594a9076 gtk-theme-switch-2.0.0_rc2.ebuild 771
-MD5 1b4111aafbbc138e60a3b6b069d324a5 files/digest-gtk-theme-switch-1.0.1 73
-MD5 1c38d179252effd8ef3279ab20bf8181 files/digest-gtk-theme-switch-1.0.1-r1 147
-MD5 9c27caf3c3476d904e92231295d81214 files/digest-gtk-theme-switch-2.0.0_rc2 76
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 53d0ab0560b7c567640b91bb268d65a6 gtk-theme-switch-2.0.0_rc2-r1.ebuild 874
+MD5 85bbd976e4127939634153a9fd86616c ChangeLog 3341
+MD5 cc8372a184a6abedddd8bba47b8e651e gtk-theme-switch-1.0.1-r1.ebuild 875
+MD5 f342062e23eefe3f9f5342a984526724 gtk-theme-switch-1.0.1.ebuild 733
+MD5 c12c7fc119db6e2717ae865def21e83a gtk-theme-switch-2.0.0_rc2.ebuild 771
 MD5 a1e3741e017380e41ad84136abea9284 files/digest-gtk-theme-switch-2.0.0_rc2-r1 153
 MD5 2fd14f20a592a23b3cba7552d0c74490 files/gtk-theme-switch-2.0.0_rc2-gtk+-2.4_fix.patch 360
+MD5 9c27caf3c3476d904e92231295d81214 files/digest-gtk-theme-switch-2.0.0_rc2 76
+MD5 1b4111aafbbc138e60a3b6b069d324a5 files/digest-gtk-theme-switch-1.0.1 73
+MD5 1c38d179252effd8ef3279ab20bf8181 files/digest-gtk-theme-switch-1.0.1-r1 147
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQDsLKRy60XGEcJIRAgzvAJ0WQAzsVuf2d0jo7O2QjKI4S2NdTQCfeb8p
+vQbIx7qtyQ5+mg0CsPXMox4=
+=lw/1
+-----END PGP SIGNATURE-----

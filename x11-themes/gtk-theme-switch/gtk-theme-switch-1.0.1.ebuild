@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-1.0.1.ebuild,v 1.13 2004/06/24 23:33:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-1.0.1.ebuild,v 1.14 2005/03/22 15:34:28 gustavoz Exp $
 
 DESCRIPTION="Application for easy change of GTK-Themes"
 SRC_URI="http://www.muhri.net/${P}.tar.gz"
