@@ -643,11 +643,8 @@ app-admin/va-systemimager-client
 # Seems we are back to square 1.  libtool-1.4.2 needs autoconf-2.5
 # or later .. masking 1.4.2 again and adding 1.4.1-r2 with the
 # "relink bug" fixed.
-<<<<<<< package.mask
 #>=sys-devel/libtool-1.4.2
-=======
 =sys-devel/libtool-1.4.2-r2
->>>>>>> 1.2178
 <sys-devel/libtool-1.4.1-r4
 
 # We are masking out the older pams now, in order to get the
