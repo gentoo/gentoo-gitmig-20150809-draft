@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.18 2004/09/15 13:39:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.19 2004/11/17 18:59:38 wolf31o2 Exp $
+
+  17 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3323.ebuild:
+  Removed calls to specific 3dgamers mirrors and changed to use
+  mirror://3dgamers instead.
 
   15 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3323.ebuild:
   Fixing patch and closing bug #64094.

@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake3-demo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/ChangeLog,v 1.6 2004/06/24 22:44:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/ChangeLog,v 1.7 2004/11/17 18:58:17 wolf31o2 Exp $
+
+  17 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake3-demo-1.11.ebuild:
+  Removed calls to specific 3dgamers mirrors and changed to use
+  mirror://3dgamers instead.
 
   12 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> quake3-demo-1.11.ebuild:
   Removing redundant inherit eutils.

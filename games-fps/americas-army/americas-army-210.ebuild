@@ -1,17 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-210.ebuild,v 1.8 2004/09/14 22:40:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-210.ebuild,v 1.9 2004/11/17 18:55:02 wolf31o2 Exp $
 
 inherit games
 
 MY_P="armyops210-linux.bin"
 DESCRIPTION="America's Army: Operations - military simulations by the U.S. Army to provide civilians with insights on soldiering"
 HOMEPAGE="http://www.americasarmy.com/"
-SRC_URI="ftp://3dgamers.in-span.net/pub/3dgamers5/games/${PN/-/}/${MY_P}
-	http://3dgamers.intelenet.net/pub/3dgamers/games/${PN/-/}/${MY_P}
-	http://ftp4.3dgamers.com/pub/3dgamers/games/${PN/-/}/${MY_P}
-	http://3dgamers.gameservers.net/pub/3dgamers/games/${PN/-/}/${MY_P}
-	http://3dgamers.planetmirror.com/pub/3dgamers/games/${PN/-/}/${MY_P}"
+SRC_URI="mirror://3dgamers/pub/3dgamers5/games/${PN/-/}/${MY_P}
+	mirror://3dgamers/pub/3dgamers/games/${PN/-/}/${MY_P}"
 
 LICENSE="Army-EULA"
 SLOT="0"
