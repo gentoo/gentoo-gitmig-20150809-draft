@@ -8,7 +8,7 @@
 </maintainer>
 <longdescription>
 Blassic is a classic Basic interpreter. The line numbers are mandatory,
-and it has PEEK & POKE. The main goal is to execute programs written in
+and it has PEEK &amp; POKE. The main goal is to execute programs written in
 old interpreters, but it can be used as a scripting language.  Many examples
 are included in /usr/share/blassic/examples/.
 </longdescription>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/blassic
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.5 2003/09/22 06:39:34 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.6 2003/09/22 11:39:17 pauldv Exp $
+
+  22 Sep 2003; <paul@gentoo.org> metadata.xml:
+  Fix metadata.xml
 
 *blassic-0.7.2 (21 Sep 2003)
 
