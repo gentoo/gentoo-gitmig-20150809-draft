@@ -1,8 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r1.ebuild,v 1.12 2004/02/22 20:05:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r1.ebuild,v 1.13 2004/03/12 08:48:32 mr_bones_ Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Revision Control System"
 SRC_URI="ftp://ftp.gnu.org/gnu/rcs/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/rcs/"
@@ -16,7 +15,6 @@ RDEPEND="sys-apps/diffutils"
 KEYWORDS="x86 ppc sparc"
 
 src_compile() {
-
 	./configure \
 		--prefix=/usr \
 		--host=${CHOST} \
@@ -25,11 +23,9 @@ src_compile() {
 	cp ${FILESDIR}/conf.sh src/conf.sh
 
 	emake || die
-
 }
 
 src_install () {
-
 	make \
 		prefix=${D}/usr \
 		man1dir=${D}/usr/share/man/man1 \

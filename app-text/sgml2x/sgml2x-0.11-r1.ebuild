@@ -1,8 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml2x/sgml2x-0.11-r1.ebuild,v 1.18 2004/02/22 20:06:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml2x/sgml2x-0.11-r1.ebuild,v 1.19 2004/03/12 08:49:49 mr_bones_ Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Frontend for jade and jadetex"
 SRC_URI="ftp://sgml2x.sourceforge.net/pub/sgml2x/${P}.tar.gz"
 HOMEPAGE="http://sgml2x.sourceforge.net/"
