@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.68-r2.ebuild,v 1.2 2004/05/05 08:34:01 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.68-r2.ebuild,v 1.3 2004/05/10 06:54:08 phosphan Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ DEPEND=">=dev-libs/libticables-3.7.7
 		>=dev-libs/libticalcs-4.4.4
 		>=dev-libs/libtifiles-0.5.5
 		app-text/dos2unix
-		>=x11-libs/gtk+-2"
+		>=x11-libs/gtk+-2
+		>=gnome-base/libglade-2"
 
 src_unpack() {
 	unpack ${A}
