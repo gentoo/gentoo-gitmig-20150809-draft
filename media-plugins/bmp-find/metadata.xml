@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>sound</herd>
+<maintainer>
+  <email>marineam@gentoo.org</email>
+  <name>Michael Marineau</name>
+  <description>Beepfind Developer</description>
+</maintainer>
+</pkgmetadata>

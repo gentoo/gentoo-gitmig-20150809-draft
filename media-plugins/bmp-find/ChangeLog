@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/bmp-find
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-find/ChangeLog,v 1.1 2005/01/03 07:33:34 marineam Exp $
+
+*bmp-find-0.5.2 (02 Jan 2005)
+
+  02 Jan 2005; Michael Marineau <marineam@gentoo.org> +metadata.xml,
+  +bmp-find-0.5.2.ebuild:
+  Initial commit of beepfind (called bmp-find in portage)
+
