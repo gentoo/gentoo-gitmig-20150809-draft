@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.5 2005/01/02 00:40:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.6 2005/01/28 18:56:34 luckyduck Exp $
+
+  28 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> texmaker-1.11.ebuild:
+  added ~amd64 to KEYWORDS. fixes #71354
 
   02 Jan 2005; Joseph Jezak <josejx@gentoo.org> texmaker-1.11.ebuild:
   Marked ~ppc.
