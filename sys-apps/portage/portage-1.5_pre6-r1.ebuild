@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5_pre6-r1.ebuild,v 1.1 2001/02/27 19:40:56 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5_pre6-r1.ebuild,v 1.2 2001/02/27 23:03:15 achim Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage autobuild system"
@@ -49,11 +49,14 @@ src_install() {
 	dosym /usr/lib/portage/bin/tbz2tool /usr/bin/tbz2tool
 	dosym newins /usr/lib/portage/bin/donewins
 
-	#man pages
-	doman ${FILESDIR}/${PPV}/man/*.[15]
+    if [ -z "`use build`" ]
+    then
+	  #man pages
+	  doman ${FILESDIR}/${PPV}/man/*.[15]
 
-	#docs
-	dodoc ${FILESDIR}/${PPV}/doc/*
+	  #docs
+	  dodoc ${FILESDIR}/${PPV}/doc/*
+   fi
 }
 
 pkg_postinst() {
@@ -62,9 +65,9 @@ pkg_postinst() {
 		cp ${ROOT}/etc/make.conf.eg ${ROOT}/etc/make.conf
 	fi
     sed -e "s:^CHOST.*:CHOST=${CHOST}:" \
-        -e "s:CFLAGS=${CFLAGS}:" \
-        -e "s:CXXFLAGS=${CXXFLAGS}:" \
-        ${ROOT}make.defaults.eg > ${ROOT}make.defaults
+        -e "s:^CFLAGS.*:CFLAGS=\"${CFLAGS}\":" \
+        -e "s:^CXXFLAGS.*:CXXFLAGS=\"${CXXFLAGS}\":" \
+        ${ROOT}/etc/make.defaults.eg > ${ROOT}/etc/make.defaults
 }
 
 

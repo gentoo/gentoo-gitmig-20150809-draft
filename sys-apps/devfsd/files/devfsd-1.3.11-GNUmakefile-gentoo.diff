@@ -1,0 +1,44 @@
+--- GNUmakefile.orig	Tue Feb 27 16:53:23 2001
++++ GNUmakefile	Tue Feb 27 16:53:43 2001
+@@ -1,4 +1,5 @@
+ SBINDIR =     /sbin
++MANDIR = /usr/share/man/man8
+ CONFIG_FILE = /etc/devfsd.conf
+ 
+ nsl_libs := $(wildcard /lib/libnsl.*)
+@@ -12,25 +13,23 @@
+ OBJECTS = devfsd.o expression.o compat_name.o
+ 
+ ifdef KERNEL_DIR
+-CFLAGS = -O2 -I. -I$(KERNEL_DIR)/include -Wall $(CEXTRAS)
++CFLAGS += -I. -I$(KERNEL_DIR)/include -Wall $(CEXTRAS)
+ else
+-CFLAGS = -O2 -I. -Wall $(CEXTRAS)
++CFLAGS += -I. -Wall $(CEXTRAS)
+ endif
+ 
+ devfsd:	$(OBJECTS)
+-	cc -O2 -o devfsd $(OBJECTS) $(CFLAGS) -export-dynamic -ldl $(LIBS)
++	cc -o devfsd $(OBJECTS) $(CFLAGS) -export-dynamic -ldl $(LIBS)
+ 
+ install: devfsd
+-	@if fgrep -q "Generic section: do not change" /etc/modules.conf ; then\
+-		echo "First remove the generic devfs entries from /etc/modules.conf"; exit 1; \
+-	fi
+-	rm -f $(SBINDIR)/devfsd
+-	install -s devfsd $(SBINDIR)/devfsd
+-	-rm -f /usr/man/*/devfsd.*
+-	cp -p devfsd.8 /usr/man/man8
+-	if [ ! -e $(CONFIG_FILE) ]; then cp -p devfsd.conf $(CONFIG_FILE); fi
++	install -d $(DESTDIR)$(SBINDIR)
++	install -d $(DESTDIR)$(MANDIR)
++	install -d $(DESTDIR)/etc
++	install -s devfsd $(DESTDIR)$(SBINDIR)/devfsd
++	cp -p devfsd.8 $(DESTDIR)$(MANDIR)
++	cp -p devfsd.conf $(DESTDIR)$(CONFIG_FILE)
+ 	@echo "Installing /etc/modules.devfs"
+-	@sed "s/DEVFSD-VERSION/`grep '#define DEVFSD_VERSION' version.h | cut -d'"' -f 2`/" modules.devfs > /etc/modules.devfs
++	@sed "s/DEVFSD-VERSION/`grep '#define DEVFSD_VERSION' version.h | cut -d'"' -f 2`/" modules.devfs > $(DESTDIR)etc/modules.devfs
+ 
+ clean:
+ 	-rm -f *~ *.o *.orig
