@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.0.3.ebuild,v 1.1 2003/10/06 05:23:14 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.0.3.ebuild,v 1.2 2003/10/27 22:32:49 kloeri Exp $
 
 
 DESCRIPTION="An Apache2 DSO providing an embedded Python interpreter"
@@ -17,6 +17,11 @@ src_unpack() {
 	cd ${S} || die
 	epatch ${FILESDIR}/${P}-dest1.diff
 	epatch ${FILESDIR}/${P}-dest2.diff
+
+	# Fix compilation when using python-2.3
+	has_version ">=dev-lang/python-2.3" && \
+		sed -i -e 's:LONG_LONG:PY_LONG_LONG:g' \
+		"${S}/src/requestobject.c"
 }
 
 src_compile() {
