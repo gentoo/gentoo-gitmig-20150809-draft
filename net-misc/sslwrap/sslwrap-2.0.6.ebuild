@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.6.ebuild,v 1.9 2004/06/25 00:13:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.6.ebuild,v 1.10 2004/07/15 03:37:29 agriffis Exp $
 
 inherit eutils
 
@@ -12,6 +12,7 @@ SRC_URI="http://quiltaholic.com/rickk/sslwrap/${PN}${PV/.0./0}.tar.gz
 LICENSE="sslwrap"
 SLOT="0"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.6"
 
