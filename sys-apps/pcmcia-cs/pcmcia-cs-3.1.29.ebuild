@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Craig Joly <joly@ee.ualberta.ca>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.29.ebuild,v 1.4 2001/09/23 20:12:24 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.29.ebuild,v 1.5 2001/10/06 15:30:16 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
@@ -42,6 +42,7 @@ src_install () {
 	#this is simply much easier than patching configure or the makefiles
 	#not to build them in the first place
 	use X || rm -rf usr/X11R6
+	# todo: if they are nstalled, move them to /usr
 		
 	#install our own init script
 	exeinto /etc/init.d

@@ -13,7 +13,7 @@ DEPEND=">=x11-wm/enlightenment-0.16"
 src_compile() {
 
     cd ${S}
-    try ./configure --prefix=/usr/X11R6 --host=${CHOST} 
+    try ./configure --prefix=/usr --host=${CHOST} 
     try make
 
 }

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Grant Goodyear <g2boojum@hotmail.com>
 # /home/cvsroot/gentoo-x86/skel.build,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.3-r2.ebuild,v 1.4 2001/09/03 23:58:33 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.3-r2.ebuild,v 1.5 2001/10/06 15:30:16 danarmak Exp $
 
 
 #P=
@@ -43,8 +43,8 @@ src_compile() {
 src_install () {
 
     cd ${S}
-    mkdir -p ${D}/usr/X11R6/bin
-    try ./vncinstall ${D}/usr/X11R6/bin
+    mkdir -p ${D}/usr/bin
+    try ./vncinstall ${D}/usr/bin
 
 }
 
