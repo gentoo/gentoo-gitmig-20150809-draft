@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.3-r2.ebuild,v 1.3 2003/03/04 21:55:41 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.3-r2.ebuild,v 1.4 2003/03/05 17:53:34 latexer Exp $
 
 inherit eutils
 
@@ -13,6 +13,7 @@ SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz
 	http://ozlabs.org/people/dgibson/dldwd/${OV}.tar.gz"
 
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
+IUSE="trusted build apm pnp nocardbus wavelan"
 DEPEND="sys-kernel/linux-headers"
 RDEPEND=""
 SLOT="0"
