@@ -6,8 +6,12 @@
 		Python programming language.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-python enthält Bibliotheken und Werkzeuge für die
+		Die Kategorie dev-python enthÃ¤lt Bibliotheken und Werkzeuge fÃ¼r die
 		Programmiersprache Python.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría dev-python contiene librerias y utilidades referentes al
+		lenguaje de programación Python.
 	</longdescription>
 </catmetadata>
 
