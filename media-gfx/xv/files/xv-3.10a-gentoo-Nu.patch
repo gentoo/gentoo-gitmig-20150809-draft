@@ -1,0 +1,869 @@
+diff -Nur xv-3.10a.enhanced/Imakefile xv-3.10a.gentoo/Imakefile
+--- xv-3.10a.enhanced/Imakefile	2003-04-27 17:09:29.000000000 -0700
++++ xv-3.10a.gentoo/Imakefile	2003-04-27 22:12:28.000000000 -0700
+@@ -15,6 +15,12 @@
+ #define HaveTiff
+ 
+ 
++/* if, for whatever reason, you're unable to get the PNG library to compile
++ * on your machine, *COMMENT OUT* the following line
++ */
++#define HavePng
++
++
+ /* if, for whatever reason, you're unable to get the PDS/VICAR support
+  * to compile (xvpds.c, and vdcomp.c), *COMMENT OUT* the following line
+  */
+@@ -35,7 +41,7 @@
+ /* If your machine has the 'usleep()' function, uncomment the following
+  * line.  If it doesn't, or you're not sure, don't uncomment the line
+  */
+-/* TIMERS = -DUSLEEP */
++TIMERS = -DUSLEEP
+ 
+ /* if XV locks up whenever you click any button in the controls window,
+  * the Timer() function in xvmisc.c is going out-to-lunch.  A simple
+@@ -57,7 +63,7 @@
+ /* if your system doesn't have u_long, u_short ... typedefined  
+  * uncomment the following line:
+  */
+-/* BSDTYPES = -DBSDTYPES */
++BSDTYPES = -DBSDTYPES
+ 
+ 
+ 
+@@ -116,17 +122,15 @@
+ 
+ 
+ #ifdef HaveJpeg
+-JPEG = -DDOJPEG
+-JPEGDIR = jpeg
+-LIBJPEG = $(JPEGDIR)/libjpeg.a
+-JPEGINCLUDE = -I$(JPEGDIR)
++LIBJPEG = -ljpeg
+ #endif
+ 
+ #ifdef HaveTiff
+-TIFF = -DDOTIFF
+-TIFFDIR = tiff
+-LIBTIFF = $(TIFFDIR)/libtiff.a
+-TIFFINCLUDE = -I$(TIFFDIR)
++LIBTIFF = -ltiff
++#endif
++
++#ifdef HavePng
++LIBPNG = -lpng
+ #endif
+ 
+ #ifdef HavePDS
+@@ -157,7 +161,7 @@
+ 	xvdial.c xvgraf.c xvsunras.c xvjpeg.c xvps.c xvpopup.c xvdflt.c \
+ 	xvtiff.c xvtiffwr.c xvpds.c xvrle.c xviris.c xvgrab.c vprintf.c \
+ 	xvbrowse.c xvtext.c xvpcx.c xviff.c xvtarga.c xvxpm.c xvcut.c \
+-	xvxwd.c xvfits.c xvpcd.c
++	xvxwd.c xvfits.c xvpcd.c xvpng.c
+ 
+ OBJS1 =	xv.o xvevent.o xvroot.o xvmisc.o xvimage.o xvcolor.o xvsmooth.o \
+ 	xv24to8.o xvgif.o xvpm.o xvinfo.o xvctrl.o xvscrl.o xvalg.o \
+@@ -165,7 +169,7 @@
+ 	xvdial.o xvgraf.o xvsunras.o xvjpeg.o xvps.o xvpopup.o xvdflt.o \
+ 	xvtiff.o xvtiffwr.o xvpds.o xvrle.o xviris.o xvgrab.o vprintf.o \
+ 	xvbrowse.o xvtext.o xvpcx.o xviff.o xvtarga.o xvxpm.o xvcut.o \
+-	xvxwd.o xvfits.o xvpcd.o
++	xvxwd.o xvfits.o xvpcd.o xvpng.c
+ 
+ SRCS2=	bggen.c
+ OBJS2=	bggen.o
+@@ -209,6 +213,7 @@
+ 	@echo ""
+ 
+ 
++/*
+ #ifdef HaveJpeg
+ $(LIBJPEG):
+ 	cd $(JPEGDIR); $(MAKE) libjpeg.a
+@@ -231,7 +236,7 @@
+ 	( cd $(TIFFDIR) ; $(MAKE) clean )
+ 	@echo ""
+ #endif
+-
++ */
+ 
+ 
+ SRCS = $(SRCS1) $(SRCS2) $(SRCS3) $(SRCS4)
+diff -Nur xv-3.10a.enhanced/Makefile xv-3.10a.gentoo/Makefile
+--- xv-3.10a.enhanced/Makefile	2003-04-27 21:18:58.000000000 -0700
++++ xv-3.10a.gentoo/Makefile	2003-04-27 22:12:17.000000000 -0700
+@@ -1,8 +1,8 @@
+ # Makefile for xv
+ 
+ # your C compiler (and options) of choice
+-CC = cc
+-# CC = gcc -ansi
++# CC = cc
++CC = gcc -ansi
+ 
+ # use this if you're using 'cc' on a DEC Alpha (OSF/1) or MIPS (Ultrix) system:
+ # CC = cc -std1 -Olimit 750
+@@ -28,11 +28,11 @@
+ 
+ 
+ ### Installation locations
+-BINDIR = /usr/local/bin
+-MANDIR = /usr/local/man/man1
++BINDIR = /usr/bin
++MANDIR = /usr/share/man/man1
+ MANSUF = 1
+-LIBDIR = /usr/local/lib
+-
++LIBDIR = /usr/lib
++DOCDIR = /usr/share/doc/xv-3.10a
+ 
+ buildit: all
+ 
+@@ -45,46 +45,48 @@
+ ### if, for whatever reason, you're unable to get the JPEG library to compile
+ ### on your machine, *COMMENT OUT* the following lines
+ ###
+-JPEG    = -DDOJPEG
+-JPEGDIR = jpeg
+-JPEGINC = -I$(JPEGDIR)
+-JPEGLIB = $(JPEGDIR)/libjpeg.a
+-$(JPEGDIR)/jconfig.h:
+-	cd $(JPEGDIR) ; ./configure CC='$(CC)'
+-$(JPEGLIB):  $(JPEGDIR)/jconfig.h
+-	cd $(JPEGDIR) ; make
++# JPEG    = -DDOJPEG
++# JPEGDIR = jpeg
++# JPEGINC = -I$(JPEGDIR)
++# JPEGLIB = $(JPEGDIR)/libjpeg.a
++JPEGLIB = -ljpeg
++# $(JPEGDIR)/jconfig.h:
++# 	cd $(JPEGDIR) ; ./configure CC='$(CC)'
++# $(JPEGLIB):  $(JPEGDIR)/jconfig.h
++# 	cd $(JPEGDIR) ; make
+ 
+ 
+ ###
+ ### if, for whatever reason, you're unable to get the PNG library to compile
+ ### on your machine, *COMMENT OUT* the following lines
+ ###
+-PNG    = -DDOPNG
+-PNGDIR = /usr/local/src/libpng
+-PNGINC = -I$(PNGDIR)
+-PNGLIB = -L$(PNGDIR) -lpng
+-
++# PNG    = -DDOPNG
++# PNGDIR = /usr/local/src/libpng
++# PNGINC = -I$(PNGDIR)
++# PNGLIB = -L$(PNGDIR) -lpng
++PNGLIB = -lpng
+ 
+ ###
+-### if, for whatever reason, you're unable to get the PNG library to compile
++### if, for whatever reason, you're unable to get the ZLIB library to compile
+ ### on your machine, *COMMENT OUT* the following lines
+ ###
+-ZLIBDIR = /usr/local/src/zlib
+-ZLIBINC = -I$(ZLIBDIR)
+-ZLIBLIB = -L$(ZLIBDIR) -lz
++# ZLIBDIR = /usr/local/src/zlib
++# ZLIBINC = -I$(ZLIBDIR)
++# ZLIBLIB = -L$(ZLIBDIR) -lz
++ZLIBLIB = -lz
+ 
+ 
+ ###
+ ### if, for whatever reason, you're unable to get the TIFF library to compile
+ ### on your machine, *COMMENT OUT* the following lines
+ ###
+-TIFF    = -DDOTIFF
+-TIFFDIR = tiff
+-TIFFINC = -I$(TIFFDIR)
+-TIFFLIB = $(TIFFDIR)/libtiff.a
+-$(TIFFLIB):
+-	( cd $(TIFFDIR) ; make CC='$(CC)' )
+-
++# TIFF    = -DDOTIFF
++# TIFFDIR = tiff
++# TIFFINC = -I$(TIFFDIR)
++# TIFFLIB = $(TIFFDIR)/libtiff.a
++# $(TIFFLIB):
++# 	( cd $(TIFFDIR) ; make CC='$(CC)' )
++TIFFLIB = -ltiff
+ 
+ ###
+ ### if, for whatever reason, you're unable to get the PDS/VICAR support
+@@ -121,7 +123,7 @@
+ 
+ 
+ ### for LINUX, uncomment the following line
+-#MCHN = -DLINUX
++MCHN = -DLINUX
+ 
+ 
+ # For SCO 1.1 (UNIX 3.2v2) machines, uncomment the following:
+@@ -163,7 +165,7 @@
+ 
+ # if your machine has the usleep() function, uncomment the following line:
+ # if it doesn't, or you're not sure, leave this line alone.
+-#TIMERS = -DUSLEEP
++TIMERS = -DUSLEEP
+ 
+ 
+ # if XV locks up whenever you click on *any* of the buttons, the Timer() 
+@@ -182,7 +184,7 @@
+ # if, during compilation, your system complains about the types 
+ # 'u_long', 'u_short', 'u_int', etc. as being undefined, uncomment the
+ # following line:
+-#BSDTYPES = -DBSDTYPES
++BSDTYPES = -DBSDTYPES
+ 
+ 
+ # if your machine doesn't have 'vprintf()' or 'vsprintf()'
+@@ -207,7 +209,7 @@
+ 	$(NODIRENT) $(VPRINTF) $(TIMERS) $(UNIX) $(BSDTYPES) $(RAND) \
+ 	$(DXWM) $(MCHN) $(PNG) $(PNGINC) $(ZLIBINC)
+ 
+-LIBS = -lX11 $(JPEGLIB) $(TIFFLIB) $(PNGLIB) $(ZLIBLIB) -lm
++LIBS = -L/usr/X11R6/lib -lX11 $(JPEGLIB) $(TIFFLIB) $(PNGLIB) $(ZLIBLIB) -lm
+ 
+ OBJS = 	xv.o xvevent.o xvroot.o xvmisc.o xvimage.o xvcolor.o xvsmooth.o \
+ 	xv24to8.o xvgif.o xvpm.o xvinfo.o xvctrl.o xvscrl.o xvalg.o \
+@@ -215,7 +217,7 @@
+ 	xvdial.o xvgraf.o xvsunras.o xvjpeg.o xvps.o xvpopup.o xvdflt.o \
+ 	xvtiff.o xvtiffwr.o xvpds.o xvrle.o xviris.o xvgrab.o vprintf.o \
+ 	xvbrowse.o xvtext.o xvpcx.o xviff.o xvtarga.o xvxpm.o xvcut.o \
+-	xvxwd.o xvfits.o xvpng.o xvpcd.o
++	xvxwd.o xvfits.o xvpcd.o xvpng.o
+ 
+ MISC = README INSTALL CHANGELOG IDEAS
+ 
+@@ -256,13 +258,14 @@
+ 
+ 
+ install: all
+-	cp xv bggen vdcomp xcmap xvpictoppm $(BINDIR)
+-	cp docs/xv.man     $(MANDIR)/xv.$(MANSUF)
+-	cp docs/bggen.man  $(MANDIR)/bggen.$(MANSUF)
+-	cp docs/xcmap.man  $(MANDIR)/xcmap.$(MANSUF)
+-	cp docs/xvp2p.man  $(MANDIR)/xvpictoppm.$(MANSUF)
+-	cp docs/vdcomp.man $(MANDIR)/vdcomp.$(MANSUF)
+-	cp docs/xvdocs.ps* $(LIBDIR)
++	 mkdir -p ${DESTDIR}/{${BINDIR},$(MANDIR),$(LIBDIR),${DOCDIR}}
++	cp xv bggen vdcomp xcmap xvpictoppm ${DESTDIR}/$(BINDIR)
++	cp docs/xv.man     ${DESTDIR}/$(MANDIR)/xv.$(MANSUF)
++	cp docs/bggen.man  ${DESTDIR}/$(MANDIR)/bggen.$(MANSUF)
++	cp docs/xcmap.man  ${DESTDIR}/$(MANDIR)/xcmap.$(MANSUF)
++	cp docs/xvp2p.man  ${DESTDIR}/$(MANDIR)/xvpictoppm.$(MANSUF)
++	cp docs/vdcomp.man ${DESTDIR}/$(MANDIR)/vdcomp.$(MANSUF)
++	cp docs/xvdocs.ps* ${DESTDIR}/$(DOCDIR)
+ 
+ tar:
+ 	tar cvf xv.tar Makefile* Imakefile *.c *.h bits \
+diff -Nur xv-3.10a.enhanced/Makefile.std xv-3.10a.gentoo/Makefile.std
+--- xv-3.10a.enhanced/Makefile.std	2003-04-27 17:10:54.000000000 -0700
++++ xv-3.10a.gentoo/Makefile.std	2003-04-27 22:12:24.000000000 -0700
+@@ -215,7 +215,7 @@
+ 	xvdial.o xvgraf.o xvsunras.o xvjpeg.o xvps.o xvpopup.o xvdflt.o \
+ 	xvtiff.o xvtiffwr.o xvpds.o xvrle.o xviris.o xvgrab.o vprintf.o \
+ 	xvbrowse.o xvtext.o xvpcx.o xviff.o xvtarga.o xvxpm.o xvcut.o \
+-	xvxwd.o xvfits.o xvpng.o xvpcd.o
++	xvxwd.o xvfits.o xvpcd.o xvpng.o
+ 
+ MISC = README INSTALL CHANGELOG IDEAS
+ 
+Files xv-3.10a.enhanced/bggen and xv-3.10a.gentoo/bggen differ
+diff -Nur xv-3.10a.enhanced/jpeg/Makefile xv-3.10a.gentoo/jpeg/Makefile
+--- xv-3.10a.enhanced/jpeg/Makefile	1969-12-31 16:00:00.000000000 -0800
++++ xv-3.10a.gentoo/jpeg/Makefile	2003-04-27 22:11:23.000000000 -0700
+@@ -0,0 +1,239 @@
++# Generated automatically from makefile.cfg by configure.
++# Makefile for Independent JPEG Group's software
++
++# makefile.cfg is edited by configure to produce a custom Makefile.
++
++# Read installation instructions before saying "make" !!
++
++# For compiling with source and object files in different directories.
++srcdir = .
++
++# Where to install the programs and man pages.
++prefix = /usr/local
++exec_prefix = ${prefix}
++bindir = $(exec_prefix)/bin
++libdir = $(exec_prefix)/lib
++includedir = $(prefix)/include
++binprefix =
++manprefix =
++manext = 1
++mandir = $(prefix)/man/man$(manext)
++
++# The name of your C compiler:
++CC= cc
++
++# You may need to adjust these cc options:
++CFLAGS= -O  -I$(srcdir)
++# Generally, we recommend defining any configuration symbols in jconfig.h,
++# NOT via -D switches here.
++# However, any special defines for ansi2knr.c may be included here:
++ANSI2KNRFLAGS= 
++
++# Link-time cc options:
++LDFLAGS= 
++
++# To link any special libraries, add the necessary -l commands here.
++LDLIBS= 
++
++# Put here the object file name for the correct system-dependent memory
++# manager file.  For Unix this is usually jmemnobs.o, but you may want
++# to use jmemansi.o or jmemname.o if you have limited swap space.
++SYSDEPMEM= jmemnobs.o
++
++# miscellaneous OS-dependent stuff
++SHELL= /bin/sh
++# linker
++LN= $(CC)
++# file deletion command
++RM= rm -f
++# file rename command
++MV= mv
++# library (.a) file creation command
++AR= ar rc
++# second step in .a creation (use "touch" if not needed)
++AR2= ranlib
++# installation program
++INSTALL= /bin/install -c
++INSTALL_PROGRAM= $(INSTALL)
++INSTALL_DATA= $(INSTALL) -m 644
++
++# End of configurable options.
++
++
++# source files: JPEG library proper
++LIBSOURCES= jcapi.c jccoefct.c jccolor.c jcdctmgr.c jchuff.c jcmainct.c \
++        jcmarker.c jcmaster.c jcomapi.c jcparam.c jcprepct.c jcsample.c \
++        jdapi.c jdatasrc.c jdatadst.c jdcoefct.c jdcolor.c jddctmgr.c \
++        jdhuff.c jdmainct.c jdmarker.c jdmaster.c jdpostct.c jdsample.c \
++        jerror.c jutils.c jfdctfst.c jfdctflt.c jfdctint.c jidctfst.c \
++        jidctflt.c jidctint.c jidctred.c jquant1.c jquant2.c jdmerge.c \
++        jmemmgr.c jmemansi.c jmemname.c jmemnobs.c jmemdos.c
++# source files: cjpeg/djpeg applications, also rdjpgcom/wrjpgcom
++APPSOURCES= cjpeg.c djpeg.c rdcolmap.c rdppm.c wrppm.c rdgif.c wrgif.c \
++        rdtarga.c wrtarga.c rdbmp.c wrbmp.c rdrle.c wrrle.c rdjpgcom.c \
++        wrjpgcom.c
++SOURCES= $(LIBSOURCES) $(APPSOURCES)
++# files included by source files
++INCLUDES= jdct.h jerror.h jinclude.h jmemsys.h jmorecfg.h jpegint.h \
++        jpeglib.h jversion.h cdjpeg.h cderror.h
++# documentation, test, and support files
++DOCS= README install.doc usage.doc cjpeg.1 djpeg.1 rdjpgcom.1 wrjpgcom.1 \
++        example.c libjpeg.doc structure.doc coderules.doc filelist.doc \
++        change.log
++MKFILES= configure makefile.cfg makefile.ansi makefile.unix makefile.manx \
++        makefile.sas makcjpeg.st makdjpeg.st makljpeg.st makefile.bcc \
++        makefile.mc6 makefile.dj makefile.mms makefile.vms makvms.opt
++CONFIGFILES= jconfig.cfg jconfig.manx jconfig.sas jconfig.st jconfig.bcc \
++        jconfig.mc6 jconfig.dj jconfig.vms
++OTHERFILES= jconfig.doc ckconfig.c ansi2knr.c ansi2knr.1 jmemdosa.asm
++TESTFILES= testorig.jpg testimg.ppm testimg.gif testimg.jpg
++DISTFILES= $(DOCS) $(MKFILES) $(CONFIGFILES) $(SOURCES) $(INCLUDES) \
++        $(OTHERFILES) $(TESTFILES)
++# library object files common to compression and decompression
++COMOBJECTS= jcomapi.o jutils.o jerror.o jmemmgr.o $(SYSDEPMEM)
++# compression library object files
++CLIBOBJECTS= jcapi.o jcparam.o jdatadst.o jcmaster.o jcmarker.o jcmainct.o \
++        jcprepct.o jccoefct.o jccolor.o jcsample.o jchuff.o jcdctmgr.o \
++        jfdctfst.o jfdctflt.o jfdctint.o
++# decompression library object files
++DLIBOBJECTS= jdapi.o jdatasrc.o jdmaster.o jdmarker.o jdmainct.o jdcoefct.o \
++        jdpostct.o jddctmgr.o jidctfst.o jidctflt.o jidctint.o jidctred.o \
++        jdhuff.o jdsample.o jdcolor.o jquant1.o jquant2.o jdmerge.o
++# These objectfiles are included in libjpeg.a
++LIBOBJECTS= $(CLIBOBJECTS) $(DLIBOBJECTS) $(COMOBJECTS)
++# object files for cjpeg and djpeg applications (excluding library files)
++COBJECTS= cjpeg.o rdppm.o rdgif.o rdtarga.o rdrle.o rdbmp.o
++DOBJECTS= djpeg.o wrppm.o wrgif.o wrtarga.o wrrle.o wrbmp.o rdcolmap.o
++
++
++all:  libjpeg.a cjpeg djpeg rdjpgcom wrjpgcom
++
++# This rule causes ansi2knr to be invoked.
++# .c.o:
++# 	./ansi2knr $(srcdir)/$*.c T$*.c
++# 	$(CC) $(CFLAGS) -c T$*.c
++# 	$(RM) T$*.c $*.o
++# 	$(MV) T$*.o $*.o
++
++ansi2knr: ansi2knr.c
++	$(CC) $(CFLAGS) $(ANSI2KNRFLAGS) -o ansi2knr ansi2knr.c
++
++libjpeg.a:  $(LIBOBJECTS)
++	$(RM) libjpeg.a
++	$(AR) libjpeg.a  $(LIBOBJECTS)
++	$(AR2) libjpeg.a
++
++cjpeg: $(COBJECTS) libjpeg.a
++	$(LN) $(LDFLAGS) -o cjpeg $(COBJECTS) libjpeg.a $(LDLIBS)
++
++djpeg: $(DOBJECTS) libjpeg.a
++	$(LN) $(LDFLAGS) -o djpeg $(DOBJECTS) libjpeg.a $(LDLIBS)
++
++rdjpgcom: rdjpgcom.o
++	$(LN) $(LDFLAGS) -o rdjpgcom rdjpgcom.o $(LDLIBS)
++
++wrjpgcom: wrjpgcom.o
++	$(LN) $(LDFLAGS) -o wrjpgcom wrjpgcom.o $(LDLIBS)
++
++jconfig.h: jconfig.doc
++	echo You must prepare a system-dependent jconfig.h file.
++	echo Please read the installation directions in install.doc.
++	exit 1
++
++install: cjpeg djpeg rdjpgcom wrjpgcom
++	$(INSTALL_PROGRAM) cjpeg $(bindir)/$(binprefix)cjpeg
++	$(INSTALL_PROGRAM) djpeg $(bindir)/$(binprefix)djpeg
++	$(INSTALL_PROGRAM) rdjpgcom $(bindir)/$(binprefix)rdjpgcom
++	$(INSTALL_PROGRAM) wrjpgcom $(bindir)/$(binprefix)wrjpgcom
++	$(INSTALL_DATA) $(srcdir)/cjpeg.1 $(mandir)/$(manprefix)cjpeg.$(manext)
++	$(INSTALL_DATA) $(srcdir)/djpeg.1 $(mandir)/$(manprefix)djpeg.$(manext)
++	$(INSTALL_DATA) $(srcdir)/rdjpgcom.1 $(mandir)/$(manprefix)rdjpgcom.$(manext)
++	$(INSTALL_DATA) $(srcdir)/wrjpgcom.1 $(mandir)/$(manprefix)wrjpgcom.$(manext)
++
++install-lib: libjpeg.a jconfig.h
++	$(INSTALL_DATA) libjpeg.a $(libdir)/$(binprefix)libjpeg.a
++	$(INSTALL_DATA) jconfig.h $(includedir)/jconfig.h
++	$(INSTALL_DATA) $(srcdir)/jpeglib.h $(includedir)/jpeglib.h
++	$(INSTALL_DATA) $(srcdir)/jmorecfg.h $(includedir)/jmorecfg.h
++	$(INSTALL_DATA) $(srcdir)/jerror.h $(includedir)/jerror.h
++
++clean:
++	$(RM) *.o cjpeg djpeg libjpeg.a rdjpgcom wrjpgcom ansi2knr
++	$(RM) core testout.* config.log config.status
++
++distribute:
++	$(RM) jpegsrc.tar*
++	tar cvf jpegsrc.tar $(DISTFILES)
++	compress -v jpegsrc.tar
++
++test: cjpeg djpeg
++	$(RM) testout.ppm testout.gif testout.jpg
++	./djpeg -dct int -ppm -outfile testout.ppm  testorig.jpg
++	./djpeg -dct int -gif -outfile testout.gif  testorig.jpg
++	./cjpeg -dct int -outfile testout.jpg  testimg.ppm
++	cmp testimg.ppm testout.ppm
++	cmp testimg.gif testout.gif
++	cmp testimg.jpg testout.jpg
++
++check: test
++
++# GNU Make likes to know which target names are not really files to be made:
++.PHONY: all install install-lib clean distribute test check
++
++
++jcapi.o : jcapi.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jccoefct.o : jccoefct.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jccolor.o : jccolor.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jcdctmgr.o : jcdctmgr.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h jdct.h
++jchuff.o : jchuff.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jcmainct.o : jcmainct.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jcmarker.o : jcmarker.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jcmaster.o : jcmaster.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jcomapi.o : jcomapi.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jcparam.o : jcparam.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jcprepct.o : jcprepct.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jcsample.o : jcsample.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jdapi.o : jdapi.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jdatasrc.o : jdatasrc.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h
++jdatadst.o : jdatadst.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h
++jdcoefct.o : jdcoefct.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jdcolor.o : jdcolor.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jddctmgr.o : jddctmgr.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h jdct.h
++jdhuff.o : jdhuff.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jdmainct.o : jdmainct.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jdmarker.o : jdmarker.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jdmaster.o : jdmaster.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jdpostct.o : jdpostct.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jdsample.o : jdsample.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jerror.o : jerror.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jversion.h jerror.h
++jutils.o : jutils.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jfdctfst.o : jfdctfst.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h jdct.h
++jfdctflt.o : jfdctflt.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h jdct.h
++jfdctint.o : jfdctint.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h jdct.h
++jidctfst.o : jidctfst.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h jdct.h
++jidctflt.o : jidctflt.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h jdct.h
++jidctint.o : jidctint.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h jdct.h
++jidctred.o : jidctred.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h jdct.h
++jquant1.o : jquant1.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jquant2.o : jquant2.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jdmerge.o : jdmerge.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h
++jmemmgr.o : jmemmgr.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h jmemsys.h
++jmemansi.o : jmemansi.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h jmemsys.h
++jmemname.o : jmemname.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h jmemsys.h
++jmemnobs.o : jmemnobs.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h jmemsys.h
++jmemdos.o : jmemdos.c jinclude.h jconfig.h jpeglib.h jmorecfg.h jpegint.h jerror.h jmemsys.h
++cjpeg.o : cjpeg.c cdjpeg.h jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h cderror.h jversion.h
++djpeg.o : djpeg.c cdjpeg.h jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h cderror.h jversion.h
++rdcolmap.o : rdcolmap.c cdjpeg.h jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h cderror.h
++rdppm.o : rdppm.c cdjpeg.h jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h cderror.h
++wrppm.o : wrppm.c cdjpeg.h jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h cderror.h
++rdgif.o : rdgif.c cdjpeg.h jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h cderror.h
++wrgif.o : wrgif.c cdjpeg.h jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h cderror.h
++rdtarga.o : rdtarga.c cdjpeg.h jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h cderror.h
++wrtarga.o : wrtarga.c cdjpeg.h jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h cderror.h
++rdbmp.o : rdbmp.c cdjpeg.h jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h cderror.h
++wrbmp.o : wrbmp.c cdjpeg.h jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h cderror.h
++rdrle.o : rdrle.c cdjpeg.h jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h cderror.h
++wrrle.o : wrrle.c cdjpeg.h jinclude.h jconfig.h jpeglib.h jmorecfg.h jerror.h cderror.h
++rdjpgcom.o : rdjpgcom.c jinclude.h jconfig.h
++wrjpgcom.o : wrjpgcom.c jinclude.h jconfig.h
+Files xv-3.10a.enhanced/jpeg/cjpeg.o and xv-3.10a.gentoo/jpeg/cjpeg.o differ
+diff -Nur xv-3.10a.enhanced/jpeg/config.log xv-3.10a.gentoo/jpeg/config.log
+--- xv-3.10a.enhanced/jpeg/config.log	1969-12-31 16:00:00.000000000 -0800
++++ xv-3.10a.gentoo/jpeg/config.log	2003-04-27 22:11:20.000000000 -0700
+@@ -0,0 +1,3 @@
++This file contains any messages produced by compilers while
++running configure, to aid debugging if configure makes a mistake.
++
+diff -Nur xv-3.10a.enhanced/jpeg/config.status xv-3.10a.gentoo/jpeg/config.status
+--- xv-3.10a.enhanced/jpeg/config.status	1969-12-31 16:00:00.000000000 -0800
++++ xv-3.10a.gentoo/jpeg/config.status	2003-04-27 22:11:23.000000000 -0700
+@@ -0,0 +1,186 @@
++#!/bin/sh
++# Generated automatically by configure.
++# Run this file to recreate the current configuration.
++# This directory was configured as follows,
++# on host opus.baender.dcb:
++#
++# ./configure  CC=cc
++#
++# Compiler output produced by configure, useful for debugging
++# configure, is in ./config.log if it exists.
++
++ac_cs_usage="Usage: ./config.status [--recheck] [--version] [--help]"
++for ac_option
++do
++  case "$ac_option" in
++  -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++    echo "running ${CONFIG_SHELL-/bin/sh} ./configure  CC=cc --no-create --no-recursion"
++    exec ${CONFIG_SHELL-/bin/sh} ./configure  CC=cc --no-create --no-recursion ;;
++  -version | --version | --versio | --versi | --vers | --ver | --ve | --v)
++    echo "./config.status generated by autoconf version 2.1"
++    exit 0 ;;
++  -help | --help | --hel | --he | --h)
++    echo "$ac_cs_usage"; exit 0 ;;
++  *) echo "$ac_cs_usage"; exit 1 ;;
++  esac
++done
++
++ac_given_srcdir=.
++
++trap 'rm -fr Makefile:makefile.cfg jconfig.h:jconfig.cfg conftest*; exit 1' 1 2 15
++
++# Protect against being on the right side of a sed subst in config.status. 
++sed 's/%@/@@/; s/@%/@@/; s/%g$/@g/; /@g$/s/[\\&%]/\\&/g; 
++ s/@@/%@/; s/@@/@%/; s/@g$/%g/' > conftest.subs <<\CEOF
++/^[ 	]*VPATH[ 	]*=[^:]*$/d
++
++s%@CFLAGS@%-O%g
++s%@CPPFLAGS@%%g
++s%@CXXFLAGS@%%g
++s%@DEFS@%-DHAVE_CONFIG_H%g
++s%@LDFLAGS@%%g
++s%@LIBS@%%g
++s%@exec_prefix@%${prefix}%g
++s%@prefix@%/usr/local%g
++s%@program_transform_name@%s,x,x,%g
++s%@CC@%cc%g
++s%@CPP@%cc -E%g
++s%@INSTALL@%/bin/install -c%g
++s%@INSTALL_PROGRAM@%$(INSTALL)%g
++s%@INSTALL_DATA@%$(INSTALL) -m 644%g
++s%@RANLIB@%ranlib%g
++s%@MEMORYMGR@%jmemnobs.o%g
++s%@ANSI2KNR@%%g
++s%@ISANSICOM@%# %g
++s%@ANSI2KNRFLAGS@%%g
++
++CEOF
++
++CONFIG_FILES=${CONFIG_FILES-"Makefile:makefile.cfg"}
++for ac_file in .. $CONFIG_FILES; do if test "x$ac_file" != x..; then
++  # Support "outfile[:infile]", defaulting infile="outfile.in".
++  case "$ac_file" in
++  *:*) ac_file_in=`echo "$ac_file"|sed 's%.*:%%'`
++       ac_file=`echo "$ac_file"|sed 's%:.*%%'` ;;
++  *) ac_file_in="${ac_file}.in" ;;
++  esac
++
++  # Adjust relative srcdir, etc. for subdirectories.
++
++  # Remove last slash and all that follows it.  Not all systems have dirname.
++  ac_dir=`echo $ac_file|sed 's%/[^/][^/]*$%%'`
++  if test "$ac_dir" != "$ac_file" && test "$ac_dir" != .; then
++    # The file is in a subdirectory.
++    test ! -d "$ac_dir" && mkdir "$ac_dir"
++    ac_dir_suffix="/$ac_dir"
++    # A "../" for each directory in $ac_dir_suffix.
++    ac_dots=`echo $ac_dir_suffix|sed 's%/[^/]*%../%g'`
++  else
++    ac_dir_suffix= ac_dots=
++  fi
++
++  case "$ac_given_srcdir" in
++  .)  srcdir=.
++      if test -z "$ac_dots"; then top_srcdir=.
++      else top_srcdir=`echo $ac_dots|sed 's%/$%%'`; fi ;;
++  /*) srcdir="$ac_given_srcdir$ac_dir_suffix"; top_srcdir="$ac_given_srcdir" ;;
++  *) # Relative path.
++    srcdir="$ac_dots$ac_given_srcdir$ac_dir_suffix"
++    top_srcdir="$ac_dots$ac_given_srcdir" ;;
++  esac
++
++  echo creating "$ac_file"
++  rm -f "$ac_file"
++  configure_input="Generated automatically from `echo $ac_file_in|sed 's%.*/%%'` by configure."
++  case "$ac_file" in
++  *Makefile*) ac_comsub="1i\\
++# $configure_input" ;;
++  *) ac_comsub= ;;
++  esac
++  sed -e "$ac_comsub
++s%@configure_input@%$configure_input%g
++s%@srcdir@%$srcdir%g
++s%@top_srcdir@%$top_srcdir%g
++" -f conftest.subs $ac_given_srcdir/$ac_file_in > $ac_file
++fi; done
++rm -f conftest.subs
++
++# These sed commands are passed to sed as "A NAME B NAME C VALUE D", where
++# NAME is the cpp macro being defined and VALUE is the value it is being given.
++#
++# ac_d sets the value in "#define NAME VALUE" lines.
++ac_dA='s%^\([ 	]*\)#\([ 	]*define[ 	][ 	]*\)'
++ac_dB='\([ 	][ 	]*\)[^ 	]*%\1#\2'
++ac_dC='\3'
++ac_dD='%g'
++# ac_u turns "#undef NAME" with trailing blanks into "#define NAME VALUE".
++ac_uA='s%^\([ 	]*\)#\([ 	]*\)undef\([ 	][ 	]*\)'
++ac_uB='\([ 	]\)%\1#\2define\3'
++ac_uC=' '
++ac_uD='\4%g'
++# ac_e turns "#undef NAME" without trailing blanks into "#define NAME VALUE".
++ac_eA='s%^\([ 	]*\)#\([ 	]*\)undef\([ 	][ 	]*\)'
++ac_eB='$%\1#\2define\3'
++ac_eC=' '
++ac_eD='%g'
++
++CONFIG_HEADERS=${CONFIG_HEADERS-"jconfig.h:jconfig.cfg"}
++for ac_file in .. $CONFIG_HEADERS; do if test "x$ac_file" != x..; then
++  # Support "outfile[:infile]", defaulting infile="outfile.in".
++  case "$ac_file" in
++  *:*) ac_file_in=`echo "$ac_file"|sed 's%.*:%%'`
++       ac_file=`echo "$ac_file"|sed 's%:.*%%'` ;;
++  *) ac_file_in="${ac_file}.in" ;;
++  esac
++
++  echo creating $ac_file
++
++  rm -f conftest.frag conftest.in conftest.out
++  cp $ac_given_srcdir/$ac_file_in conftest.in
++
++  cat > conftest.frag <<CEOF
++${ac_dA}HAVE_PROTOTYPES${ac_dB}HAVE_PROTOTYPES${ac_dC}${ac_dD}
++${ac_uA}HAVE_PROTOTYPES${ac_uB}HAVE_PROTOTYPES${ac_uC}${ac_uD}
++${ac_eA}HAVE_PROTOTYPES${ac_eB}HAVE_PROTOTYPES${ac_eC}${ac_eD}
++${ac_dA}HAVE_STDDEF_H${ac_dB}HAVE_STDDEF_H${ac_dC}${ac_dD}
++${ac_uA}HAVE_STDDEF_H${ac_uB}HAVE_STDDEF_H${ac_uC}${ac_uD}
++${ac_eA}HAVE_STDDEF_H${ac_eB}HAVE_STDDEF_H${ac_eC}${ac_eD}
++${ac_dA}HAVE_STDLIB_H${ac_dB}HAVE_STDLIB_H${ac_dC}${ac_dD}
++${ac_uA}HAVE_STDLIB_H${ac_uB}HAVE_STDLIB_H${ac_uC}${ac_uD}
++${ac_eA}HAVE_STDLIB_H${ac_eB}HAVE_STDLIB_H${ac_eC}${ac_eD}
++${ac_dA}HAVE_UNSIGNED_CHAR${ac_dB}HAVE_UNSIGNED_CHAR${ac_dC}${ac_dD}
++${ac_uA}HAVE_UNSIGNED_CHAR${ac_uB}HAVE_UNSIGNED_CHAR${ac_uC}${ac_uD}
++${ac_eA}HAVE_UNSIGNED_CHAR${ac_eB}HAVE_UNSIGNED_CHAR${ac_eC}${ac_eD}
++CEOF
++  sed -f conftest.frag conftest.in > conftest.out
++  rm -f conftest.in
++  mv conftest.out conftest.in
++
++  cat > conftest.frag <<CEOF
++${ac_dA}HAVE_UNSIGNED_SHORT${ac_dB}HAVE_UNSIGNED_SHORT${ac_dC}${ac_dD}
++${ac_uA}HAVE_UNSIGNED_SHORT${ac_uB}HAVE_UNSIGNED_SHORT${ac_uC}${ac_uD}
++${ac_eA}HAVE_UNSIGNED_SHORT${ac_eB}HAVE_UNSIGNED_SHORT${ac_eC}${ac_eD}
++${ac_dA}INLINE${ac_dB}INLINE${ac_dC}inline${ac_dD}
++${ac_uA}INLINE${ac_uB}INLINE${ac_uC}inline${ac_uD}
++${ac_eA}INLINE${ac_eB}INLINE${ac_eC}inline${ac_eD}
++CEOF
++  sed -f conftest.frag conftest.in > conftest.out
++  rm -f conftest.in
++  mv conftest.out conftest.in
++
++  rm -f conftest.frag conftest.h
++  echo "/* $ac_file.  Generated automatically by configure.  */" > conftest.h
++  cat conftest.in >> conftest.h
++  rm -f conftest.in
++  if cmp -s $ac_file conftest.h 2>/dev/null; then
++    echo "$ac_file is unchanged"
++    rm -f conftest.h
++  else
++    rm -f $ac_file
++    mv conftest.h $ac_file
++  fi
++fi; done
++
++
++
++exit 0
+Files xv-3.10a.enhanced/jpeg/jcapi.o and xv-3.10a.gentoo/jpeg/jcapi.o differ
+Files xv-3.10a.enhanced/jpeg/jccoefct.o and xv-3.10a.gentoo/jpeg/jccoefct.o differ
+Files xv-3.10a.enhanced/jpeg/jccolor.o and xv-3.10a.gentoo/jpeg/jccolor.o differ
+Files xv-3.10a.enhanced/jpeg/jcdctmgr.o and xv-3.10a.gentoo/jpeg/jcdctmgr.o differ
+Files xv-3.10a.enhanced/jpeg/jchuff.o and xv-3.10a.gentoo/jpeg/jchuff.o differ
+Files xv-3.10a.enhanced/jpeg/jcmainct.o and xv-3.10a.gentoo/jpeg/jcmainct.o differ
+Files xv-3.10a.enhanced/jpeg/jcmarker.o and xv-3.10a.gentoo/jpeg/jcmarker.o differ
+Files xv-3.10a.enhanced/jpeg/jcmaster.o and xv-3.10a.gentoo/jpeg/jcmaster.o differ
+Files xv-3.10a.enhanced/jpeg/jcomapi.o and xv-3.10a.gentoo/jpeg/jcomapi.o differ
+diff -Nur xv-3.10a.enhanced/jpeg/jconfig.h xv-3.10a.gentoo/jpeg/jconfig.h
+--- xv-3.10a.enhanced/jpeg/jconfig.h	1969-12-31 16:00:00.000000000 -0800
++++ xv-3.10a.gentoo/jpeg/jconfig.h	2003-04-27 22:11:23.000000000 -0700
+@@ -0,0 +1,45 @@
++/* jconfig.h.  Generated automatically by configure.  */
++/* jconfig.cfg --- source file edited by configure script */
++/* see jconfig.doc for explanations */
++
++#define HAVE_PROTOTYPES 
++#define HAVE_UNSIGNED_CHAR 
++#define HAVE_UNSIGNED_SHORT 
++#undef void
++#undef const
++#undef CHAR_IS_UNSIGNED
++#define HAVE_STDDEF_H 
++#define HAVE_STDLIB_H 
++#undef NEED_BSD_STRINGS
++#undef NEED_SYS_TYPES_H
++#undef NEED_FAR_POINTERS
++#undef NEED_SHORT_EXTERNAL_NAMES
++/* Define this if you get warnings about undefined structures. */
++#undef INCOMPLETE_TYPES_BROKEN
++
++#ifdef JPEG_INTERNALS
++
++#undef RIGHT_SHIFT_IS_UNSIGNED
++#define INLINE inline
++/* These are for configuring the JPEG memory manager. */
++#undef DEFAULT_MAX_MEM
++#undef NO_MKTEMP
++
++#endif /* JPEG_INTERNALS */
++
++#ifdef JPEG_CJPEG_DJPEG
++
++#define BMP_SUPPORTED		/* BMP image file format */
++#define GIF_SUPPORTED		/* GIF image file format */
++#define PPM_SUPPORTED		/* PBMPLUS PPM/PGM image file format */
++#undef RLE_SUPPORTED		/* Utah RLE image file format */
++#define TARGA_SUPPORTED		/* Targa image file format */
++
++#undef TWO_FILE_COMMANDLINE
++#undef NEED_SIGNAL_CATCHER
++#undef DONT_USE_B_MODE
++
++/* Define this if you want percent-done progress reports from cjpeg/djpeg. */
++#undef PROGRESS_REPORT
++
++#endif /* JPEG_CJPEG_DJPEG */
+Files xv-3.10a.enhanced/jpeg/jcparam.o and xv-3.10a.gentoo/jpeg/jcparam.o differ
+Files xv-3.10a.enhanced/jpeg/jcprepct.o and xv-3.10a.gentoo/jpeg/jcprepct.o differ
+Files xv-3.10a.enhanced/jpeg/jcsample.o and xv-3.10a.gentoo/jpeg/jcsample.o differ
+Files xv-3.10a.enhanced/jpeg/jdapi.o and xv-3.10a.gentoo/jpeg/jdapi.o differ
+Files xv-3.10a.enhanced/jpeg/jdatadst.o and xv-3.10a.gentoo/jpeg/jdatadst.o differ
+Files xv-3.10a.enhanced/jpeg/jdatasrc.o and xv-3.10a.gentoo/jpeg/jdatasrc.o differ
+Files xv-3.10a.enhanced/jpeg/jdcoefct.o and xv-3.10a.gentoo/jpeg/jdcoefct.o differ
+Files xv-3.10a.enhanced/jpeg/jdcolor.o and xv-3.10a.gentoo/jpeg/jdcolor.o differ
+Files xv-3.10a.enhanced/jpeg/jddctmgr.o and xv-3.10a.gentoo/jpeg/jddctmgr.o differ
+Files xv-3.10a.enhanced/jpeg/jdhuff.o and xv-3.10a.gentoo/jpeg/jdhuff.o differ
+Files xv-3.10a.enhanced/jpeg/jdmainct.o and xv-3.10a.gentoo/jpeg/jdmainct.o differ
+Files xv-3.10a.enhanced/jpeg/jdmarker.o and xv-3.10a.gentoo/jpeg/jdmarker.o differ
+Files xv-3.10a.enhanced/jpeg/jdmaster.o and xv-3.10a.gentoo/jpeg/jdmaster.o differ
+Files xv-3.10a.enhanced/jpeg/jdmerge.o and xv-3.10a.gentoo/jpeg/jdmerge.o differ
+Files xv-3.10a.enhanced/jpeg/jdpostct.o and xv-3.10a.gentoo/jpeg/jdpostct.o differ
+Files xv-3.10a.enhanced/jpeg/jdsample.o and xv-3.10a.gentoo/jpeg/jdsample.o differ
+Files xv-3.10a.enhanced/jpeg/jerror.o and xv-3.10a.gentoo/jpeg/jerror.o differ
+Files xv-3.10a.enhanced/jpeg/jfdctflt.o and xv-3.10a.gentoo/jpeg/jfdctflt.o differ
+Files xv-3.10a.enhanced/jpeg/jfdctfst.o and xv-3.10a.gentoo/jpeg/jfdctfst.o differ
+Files xv-3.10a.enhanced/jpeg/jfdctint.o and xv-3.10a.gentoo/jpeg/jfdctint.o differ
+Files xv-3.10a.enhanced/jpeg/jidctflt.o and xv-3.10a.gentoo/jpeg/jidctflt.o differ
+Files xv-3.10a.enhanced/jpeg/jidctfst.o and xv-3.10a.gentoo/jpeg/jidctfst.o differ
+Files xv-3.10a.enhanced/jpeg/jidctint.o and xv-3.10a.gentoo/jpeg/jidctint.o differ
+Files xv-3.10a.enhanced/jpeg/jidctred.o and xv-3.10a.gentoo/jpeg/jidctred.o differ
+Files xv-3.10a.enhanced/jpeg/jmemmgr.o and xv-3.10a.gentoo/jpeg/jmemmgr.o differ
+Files xv-3.10a.enhanced/jpeg/jmemnobs.o and xv-3.10a.gentoo/jpeg/jmemnobs.o differ
+Files xv-3.10a.enhanced/jpeg/jquant1.o and xv-3.10a.gentoo/jpeg/jquant1.o differ
+Files xv-3.10a.enhanced/jpeg/jquant2.o and xv-3.10a.gentoo/jpeg/jquant2.o differ
+Files xv-3.10a.enhanced/jpeg/jutils.o and xv-3.10a.gentoo/jpeg/jutils.o differ
+Files xv-3.10a.enhanced/jpeg/rdgif.o and xv-3.10a.gentoo/jpeg/rdgif.o differ
+Files xv-3.10a.enhanced/jpeg/rdppm.o and xv-3.10a.gentoo/jpeg/rdppm.o differ
+Files xv-3.10a.enhanced/jpeg/rdrle.o and xv-3.10a.gentoo/jpeg/rdrle.o differ
+Files xv-3.10a.enhanced/jpeg/rdtarga.o and xv-3.10a.gentoo/jpeg/rdtarga.o differ
+Files xv-3.10a.enhanced/vdcomp and xv-3.10a.gentoo/vdcomp differ
+Files xv-3.10a.enhanced/vprintf.o and xv-3.10a.gentoo/vprintf.o differ
+Files xv-3.10a.enhanced/xcmap and xv-3.10a.gentoo/xcmap differ
+Files xv-3.10a.enhanced/xv and xv-3.10a.gentoo/xv differ
+Files xv-3.10a.enhanced/xv.o and xv-3.10a.gentoo/xv.o differ
+Files xv-3.10a.enhanced/xv24to8.o and xv-3.10a.gentoo/xv24to8.o differ
+Files xv-3.10a.enhanced/xvalg.o and xv-3.10a.gentoo/xvalg.o differ
+Files xv-3.10a.enhanced/xvbmp.o and xv-3.10a.gentoo/xvbmp.o differ
+Files xv-3.10a.enhanced/xvbrowse.o and xv-3.10a.gentoo/xvbrowse.o differ
+Files xv-3.10a.enhanced/xvbutt.o and xv-3.10a.gentoo/xvbutt.o differ
+Files xv-3.10a.enhanced/xvcolor.o and xv-3.10a.gentoo/xvcolor.o differ
+Files xv-3.10a.enhanced/xvctrl.o and xv-3.10a.gentoo/xvctrl.o differ
+Files xv-3.10a.enhanced/xvcut.o and xv-3.10a.gentoo/xvcut.o differ
+Files xv-3.10a.enhanced/xvdflt.o and xv-3.10a.gentoo/xvdflt.o differ
+Files xv-3.10a.enhanced/xvdial.o and xv-3.10a.gentoo/xvdial.o differ
+Files xv-3.10a.enhanced/xvdir.o and xv-3.10a.gentoo/xvdir.o differ
+Files xv-3.10a.enhanced/xvevent.o and xv-3.10a.gentoo/xvevent.o differ
+Files xv-3.10a.enhanced/xvfits.o and xv-3.10a.gentoo/xvfits.o differ
+Files xv-3.10a.enhanced/xvgam.o and xv-3.10a.gentoo/xvgam.o differ
+Files xv-3.10a.enhanced/xvgif.o and xv-3.10a.gentoo/xvgif.o differ
+Files xv-3.10a.enhanced/xvgifwr.o and xv-3.10a.gentoo/xvgifwr.o differ
+Files xv-3.10a.enhanced/xvgrab.o and xv-3.10a.gentoo/xvgrab.o differ
+Files xv-3.10a.enhanced/xvgraf.o and xv-3.10a.gentoo/xvgraf.o differ
+Files xv-3.10a.enhanced/xviff.o and xv-3.10a.gentoo/xviff.o differ
+Files xv-3.10a.enhanced/xvimage.o and xv-3.10a.gentoo/xvimage.o differ
+Files xv-3.10a.enhanced/xvinfo.o and xv-3.10a.gentoo/xvinfo.o differ
+Files xv-3.10a.enhanced/xviris.o and xv-3.10a.gentoo/xviris.o differ
+Files xv-3.10a.enhanced/xvjpeg.o and xv-3.10a.gentoo/xvjpeg.o differ
+Files xv-3.10a.enhanced/xvmisc.o and xv-3.10a.gentoo/xvmisc.o differ
+Files xv-3.10a.enhanced/xvpbm.o and xv-3.10a.gentoo/xvpbm.o differ
+diff -Nur xv-3.10a.enhanced/xvpcd.c xv-3.10a.gentoo/xvpcd.c
+--- xv-3.10a.enhanced/xvpcd.c	2003-04-27 17:09:30.000000000 -0700
++++ xv-3.10a.gentoo/xvpcd.c	2003-04-27 21:38:49.000000000 -0700
+@@ -33,6 +33,7 @@
+ 
+ #include "xv.h"
+ #include <memory.h>
++#include <alloca.h>
+ 
+ /* comments on error handling:
+    a truncated file is not considered a Major Error.  The file is loaded, the
+Files xv-3.10a.enhanced/xvpcd.o and xv-3.10a.gentoo/xvpcd.o differ
+Files xv-3.10a.enhanced/xvpcx.o and xv-3.10a.gentoo/xvpcx.o differ
+Files xv-3.10a.enhanced/xvpds.o and xv-3.10a.gentoo/xvpds.o differ
+Files xv-3.10a.enhanced/xvpictoppm and xv-3.10a.gentoo/xvpictoppm differ
+Files xv-3.10a.enhanced/xvpm.o and xv-3.10a.gentoo/xvpm.o differ
+Files xv-3.10a.enhanced/xvpng.o and xv-3.10a.gentoo/xvpng.o differ
+Files xv-3.10a.enhanced/xvpopup.o and xv-3.10a.gentoo/xvpopup.o differ
+Files xv-3.10a.enhanced/xvps.o and xv-3.10a.gentoo/xvps.o differ
+Files xv-3.10a.enhanced/xvrle.o and xv-3.10a.gentoo/xvrle.o differ
+Files xv-3.10a.enhanced/xvroot.o and xv-3.10a.gentoo/xvroot.o differ
+Files xv-3.10a.enhanced/xvscrl.o and xv-3.10a.gentoo/xvscrl.o differ
+Files xv-3.10a.enhanced/xvsmooth.o and xv-3.10a.gentoo/xvsmooth.o differ
+Files xv-3.10a.enhanced/xvsunras.o and xv-3.10a.gentoo/xvsunras.o differ
+Files xv-3.10a.enhanced/xvtarga.o and xv-3.10a.gentoo/xvtarga.o differ
+Files xv-3.10a.enhanced/xvtext.o and xv-3.10a.gentoo/xvtext.o differ
+Files xv-3.10a.enhanced/xvtiff.o and xv-3.10a.gentoo/xvtiff.o differ
+Files xv-3.10a.enhanced/xvtiffwr.o and xv-3.10a.gentoo/xvtiffwr.o differ
+Files xv-3.10a.enhanced/xvxbm.o and xv-3.10a.gentoo/xvxbm.o differ
+Files xv-3.10a.enhanced/xvxpm.o and xv-3.10a.gentoo/xvxpm.o differ
+Files xv-3.10a.enhanced/xvxwd.o and xv-3.10a.gentoo/xvxwd.o differ
