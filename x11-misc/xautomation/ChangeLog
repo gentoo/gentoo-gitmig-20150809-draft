@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/xautomation
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautomation/ChangeLog,v 1.1 2004/01/08 21:25:53 agriffis Exp $
+
+*xautomation-0.93 (08 Jan 2004)
+
+  08 Jan 2004; Aron Griffis <agriffis@gentoo.org> xautomation-0.93.ebuild:
+  New ebuild for xautomation, thanks to Joel Martin in bug 35085
+
