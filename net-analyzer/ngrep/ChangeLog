@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ngrep
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.16 2004/07/05 10:03:38 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.17 2004/07/08 22:54:37 eldad Exp $
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> ngrep-1.41.ebuild:
+  Tidy up.
 
 *ngrep-1.42 (05 Jul 2004)
 

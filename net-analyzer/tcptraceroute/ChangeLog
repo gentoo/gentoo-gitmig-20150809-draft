@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcptraceroute
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.13 2004/06/24 22:21:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.14 2004/07/08 23:02:06 eldad Exp $
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> tcptraceroute-1.4-r3.ebuild,
+  tcptraceroute-1.5_beta5.ebuild:
+  added missing IUSE
 
 *tcptraceroute-1.5_beta5 (08 Jun 2004)
 

@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dnstracer/dnstracer-1.6.ebuild,v 1.7 2004/07/01 17:29:49 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dnstracer/dnstracer-1.6.ebuild,v 1.8 2004/07/08 22:49:14 eldad Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Determines where a given nameserver gets its information from"
 SRC_URI="http://www.mavetju.org/download/${P}.tar.gz"
 HOMEPAGE="http://www.mavetju.org/unix/general.php"

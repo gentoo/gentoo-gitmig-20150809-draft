@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/dnstracer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dnstracer/ChangeLog,v 1.9 2004/07/05 09:40:45 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dnstracer/ChangeLog,v 1.10 2004/07/08 22:49:14 eldad Exp $
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> dnstracer-1.6.ebuild,
+  dnstracer-1.7.ebuild:
+  Tidy up, added missing ipv6 to IUSE
 
   05 Jul 2004; Eldad Zack <eldad@gentoo.org> dnstracer-1.7.ebuild:
   Added IUSE ipv6, Closes #54192. Thanks to Jonathan Stewart <reaper@fudo.org>
