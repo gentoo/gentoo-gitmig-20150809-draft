@@ -1,5 +1,15 @@
-MD5 5952dc1a4538053aaa1e643f4777d593 psemu-peopssoftgpu-1.15.ebuild 1347
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a66a3367bcff359e36719aa202e51cc3 ChangeLog 1608
+MD5 028eec32450010b355fad9013b7c7a93 psemu-peopssoftgpu-1.15.ebuild 1375
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 d7d6d0e073fab50e7fc57d7efe5dcf31 files/1.15-makefile-cflags.patch 971
 MD5 2bb8283c0041934b8dcf50003f408ea0 files/digest-psemu-peopssoftgpu-1.15 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBHwELHTu7gpaalycRAtdCAKC9E0qD9heTZcNn581j1LnB+M7juACeJu8U
+gIWanz0Fvt3hbeiwmY+GOQE=
+=z2Op
+-----END PGP SIGNATURE-----
