@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r1.ebuild,v 1.14 2005/04/06 05:57:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r1.ebuild,v 1.15 2005/04/06 18:54:05 mr_bones_ Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -699,7 +699,7 @@ host_def_setup() {
 			echo "#define BuildXvExt YES" >> config/cf/host.def
 		fi
 
-		
+
 		if use alpha; then
 			echo "#define XF86CardDrivers mga nv tga s3virge sis rendition \
 				i740 tdfx cirrus tseng fbdev \
