@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/groff
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.4 2002/07/29 16:23:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.5 2002/10/19 17:40:43 aliz Exp $
+
+*grpff-1.17.2-r3 (19 Oct 2002)
+
+  19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
 *groff-1.18-r1 (29 Jul 2002)
 *groff-1.17.2-r2 (29 Jul 2002)
