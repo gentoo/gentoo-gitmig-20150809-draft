@@ -1,7 +1,13 @@
 # ChangeLog for net-firewall/guarddog
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/ChangeLog,v 1.7 2004/01/09 20:21:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/ChangeLog,v 1.8 2004/03/08 22:20:03 centic Exp $
+
+*guarddog-2.3.1 (08 Mar 2004)
+
+  08 Mar 2004; Dominik Stadler <centic@gentoo.org> guarddog-2.3.1.ebuild:
+  Version bumped, more protocols and more fixes for 2.6. Also add rdepend to
+  gawk based on information in README.
 
   09 Jan 2004; Jason Wever <weeve@gentoo.org> guarddog-2.0.0.ebuild:
   Marked stable on sparc.
