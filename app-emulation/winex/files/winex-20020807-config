@@ -52,6 +52,12 @@ WINE REGISTRY Version 2
 "Label" = "Home"
 "Filesystem" = "win95"
 
+[Drive H]
+"Path" = "/usr/lib/winex/bin"
+"Type" = "hd"
+"Label" = "WineX"
+"Filesystem" = "win95"
+
 [wine]
 "Windows" = "c:\\Windows"
 "System" = "c:\\Windows\\System"
