@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3.ebuild,v 1.12 2004/10/05 10:33:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r2.ebuild,v 1.1 2004/10/20 06:36:43 eradicator Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ SRC_URI="${SITE}/${P}-release.tar.gz
 
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc amd64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="asterisk doc"
 
 RDEPEND=">=app-accessibility/speech-tools-1.2.3"
@@ -45,59 +45,30 @@ src_unpack() {
 	unpack festvox_us1.tar.gz
 	unpack festvox_us2.tar.gz
 	unpack festvox_us3.tar.gz
+
+	cd ${S}
+
+	use doc && unpack festdoc-1.4.2.tar.gz && mv festdoc-1.4.2 festdoc
+
 	epatch ${FILESDIR}/${PN}-gcc3.3.diff
 
 	use asterisk && epatch ${FILESDIR}/${P}-asterisk.patch
+
+	sed -i "s@EST=\$(TOP)/../speech_tools@EST=/usr/$(get_libdir)/speech-tools@" config/config.in
+
+	# testsuite still fails to build under gcc-3.2
+	# sed -i '/^BUILD_DIRS =/s/testsuite//' Makefile || die
+
+	sed -i "/^const char \*festival_libdir/s:FTLIBDIR:\"/usr/$(get_libdir)/festival\":" src/arch/festival/festival.cc
+	sed -i '/^MODULE_LIBS/s/-ltermcap/-lncurses/' config/modules/editline.mak || die
 }
 
 src_compile() {
-
-	mv config/config.in config/config.in.org
-	cat config/config.in.org | sed 's@EST=$(TOP)/../speech_tools@EST=/usr/lib/speech-tools@' > config/config.in
-
-	econf || die "econf failed"
-
-	# testsuite still fails to build under gcc-3.2
-	mv Makefile Makefile.orig
-	sed -e '/^BUILD_DIRS =/s/testsuite//' Makefile.orig > Makefile
-
-	pushd config/modules/
-	cp editline.mak editline.mak.orig
-	sed -e '/^MODULE_LIBS/s/-ltermcap/-lncurses/' editline.mak.orig \
-		> editline.mak
-	popd
-
-	# emake worked for me on SMP
-	#emake did not work for me because I had -j5. If there is anything greater than
-	#-j2, emake dies.
-	#zhen@gentoo.org
-	make || die
-
-	cd ${S}
-	econf || die "econf failed"
-	pushd src/arch/festival/
-	cp festival.cc festival.cc.orig
-	sed -e '/^const char \*festival_libdir/s:FTLIBDIR:"/usr/lib/festival":' \
-		festival.cc.orig  > festival.cc
-	pushd
-	pushd config/modules/
-	cp editline.mak editline.mak.orig
-	sed -e '/^MODULE_LIBS/s/-ltermcap/-lncurses/' editline.mak.orig \
-		> editline.mak
-	pushd
-
-	# emake failed for me on SMP
-	make || die
-
-	# Need to fix saytime to look for festival in the correct spot
-	cp examples/saytime examples/saytime.orig
-	sed "s:${WORKDIR}/festival/bin/festival:/usr/bin/festival:" \
-		examples/saytime.orig > examples/saytime
-
-	# And do the same thing for text2wave
-	cp bin/text2wave bin/text2wave.orig
-	sed "s:${WORKDIR}/festival/bin/festival:/usr/bin/festival:" \
-		bin/text2wave.orig > bin/text2wave
+	econf || die
+	emake -j1 \
+		OPTIMISE_CXXFLAGS="${CXXFLAGS}" \
+		OPTIMISE_CCFLAGS="${CFLAGS}" \
+		|| die
 }
 
 src_install() {
@@ -116,12 +87,16 @@ src_install() {
 	einfo ""
 
 	# Install the main libraries
-	insinto /usr/lib/festival
+	insinto /usr/$(get_libdir)/festival
 	doins ${WORKDIR}/festival/lib/*
+
+	# Install the header files
+	insinto /usr/include/festival
+	doins ${WORKDIR}/festival/src/include/*.h
 
 	# Install the dicts and vioces
 	FESTLIB=${WORKDIR}/festival/lib
-	DESTLIB=/usr/lib/festival
+	DESTLIB=/usr/$(get_libdir)/festival
 	insinto ${DESTLIB}/dicts
 	doins ${FESTLIB}/dicts/COPYING.poslex \
 		${FESTLIB}/dicts/wsj.wp39.poslexR ${FESTLIB}/dicts/wsj.wp39.tri.ngrambin
@@ -131,14 +106,14 @@ src_install() {
 	doins ${FESTLIB}/dicts/oald/*
 
 	FESTLIB=${WORKDIR}/festival/lib/voices/spanish/el_diphone
-	DESTLIB=/usr/lib/festival/voices/spanish/el_diphone
+	DESTLIB=/usr/$(get_libdir)/festival/voices/spanish/el_diphone
 	insinto ${DESTLIB}/festvox
 	doins ${FESTLIB}/festvox/*
 	insinto ${DESTLIB}/group
 	doins ${FESTLIB}/group/*
 
 	FESTLIB=${WORKDIR}/festival/lib/voices/english
-	DESTLIB=/usr/lib/festival/voices/english
+	DESTLIB=/usr/$(get_libdir)/festival/voices/english
 	insinto ${DESTLIB}/don_diphone
 	doins ${FESTLIB}/don_diphone/*
 	insinto ${DESTLIB}/don_diphone/festvox
@@ -164,8 +139,8 @@ src_install() {
 	doins ${FESTLIB}/rab_diphone/festvox/*
 	insinto ${DESTLIB}/rab_diphone/group
 	doins ${FESTLIB}/rab_diphone/group/*
-	insinto ${DESTLIB}/us1_mbrola
 
+	insinto ${DESTLIB}/us1_mbrola
 	doins ${FESTLIB}/us1_mbrola/*
 	insinto ${DESTLIB}/us1_mbrola/festvox
 	doins ${FESTLIB}/us1_mbrola/festvox/*
@@ -180,40 +155,49 @@ src_install() {
 	insinto ${DESTLIB}/us3_mbrola/festvox
 	doins ${FESTLIB}/us3_mbrola/festvox/*
 
+	# Sample server.scm configuration for the server
+	dodir /etc/festival
+	insinto /etc/festival
+	doins ${FILESDIR}/server.scm
+
+	# Install the init script
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/festival.rc festival
+
+	# Need to fix saytime to look for festival in the correct spot
+	dosed "s:${WORKDIR}/festival/bin/festival:/usr/bin/festival:" /usr/bin/saytime
+	dosed "s:${WORKDIR}/festival/bin/festival:/usr/bin/festival:" /usr/bin/text2wave
+
 	# Install the docs
 	cd ${S} # needed
 	into /usr
-	dodoc ACKNOWLEDGMENTS COPYING NEWS README
+	dodoc ACKNOWLEDGMENTS NEWS README
 	doman doc/festival.1 doc/festival_client.1
 
-	cd ${WORKDIR}/festdoc-1.4.2/festival/html
-	dohtml *.html
-
-	# Sample .festivalrc
-	cd ${D}/usr/lib/festival
-	cat << EOF > festivalrc
-(Parameter.set 'Audio_Method 'linux16audio)
-;(Parameter.set 'Audio_Method 'esdaudio)
-;(Parameter.set 'Audio_Method 'mplayeraudio)
-;(Parameter.set 'Audio_Method 'sunaudio)
-
-; American female
-;(set! voice_default 'voice_us1_mbrola)
-EOF
+	if use doc; then
+		cd ${S}/festdoc/festival/html
+		dohtml *.html
+		cd ${S}/festdoc/festival
+		dodoc festival.ps
+		cd ${S}/festdoc/festival/info
+		doinfo *
+	fi
 }
 
 pkg_postinst() {
 	einfo
-	einfo '    To test festival, simply type:'
+	einfo "    To test festival, simply type:"
 	einfo '        "saytime"'
 	einfo
-	einfo '    Or for something more fun:'
+	einfo "    Or for something more fun:"
 	einfo '        "echo "Gentoo can speak" | festival --tts"'
 	einfo
-	einfo '    A sample ~/.festivalrc is provided in'
-	einfo '        /usr/lib/festival/festivalrc'
+	einfo "    To enable the festival server at boot, run"
+	einfo "       rc-update add festival default"
 	einfo
-	einfo '    Emerge mbrola to enable some additional voices'
+	einfo "    You must setup the server's port, access list, etc in this file:"
+	einfo "       /etc/festival/server.scm"
+	einfo
+	einfo "    Emerge mbrola to enable some additional voices."
 	einfo
 }
-

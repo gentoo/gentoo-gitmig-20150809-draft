@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.14 2004/10/05 10:33:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.15 2004/10/20 06:36:43 eradicator Exp $
+
+*festival-1.4.3-r2 (19 Oct 2004)
+
+  19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +festival-1.4.3-r2.ebuild, -festival-1.4.3.ebuild:
+  get_libdir updates.  Now installs header files to close bug #64504.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   festival-1.4.3-r1.ebuild, festival-1.4.3.ebuild:
