@@ -1,5 +1,0 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/multilib-dev/package.mask,v 1.1 2005/01/02 03:21:55 eradicator Exp $
-
-# Jeremy Huddleston <eradicator@dev.gentoo.org>
-# Use CFLAGS_${ABI} compatible distcc
--=sys-devel/distcc-2.18.3-r1
