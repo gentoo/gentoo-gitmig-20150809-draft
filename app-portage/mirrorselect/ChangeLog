@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.14 2004/05/03 03:02:09 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.15 2004/05/13 14:20:59 randy Exp $
+
+  13 May 2004; Michael McCabe <randy@gentoo.org> mirrorselect-0.83.ebuild:
+  Added s390 keywords
 
   02 May 2004; Tom Gall <tgall@gentoo.org> mirrorselect-0.83.ebuild:
   stable on ppc64
