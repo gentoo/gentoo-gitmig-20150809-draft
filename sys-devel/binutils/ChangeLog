@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.103 2004/02/10 07:32:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.104 2004/02/17 20:53:19 azarah Exp $
+
+  17 Feb 2004; Martin Schlemmer <azarah@gentoo.org>
+  binutils-2.14.90.0.8-r1.ebuild:
+  Move to unstable to give the PAX_FLAGS stuff a test run.
 
   10 Feb 2004; Joshua Kinard <kumba@gentoo.org> binutils-2.14.90.0.8.ebuild:
   Masked on mips because this version of binutils won't produce bootable kernel
