@@ -1,6 +1,8 @@
 # ChangeLog for x11-misc/mosfet-liquid-widgets
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ksplash-ml/ChangeLog,v 1.1 2002/05/14 15:08:46 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ksplash-ml/ChangeLog,v 1.2 2002/06/17 22:06:23 verwilst Exp $
+
+*ksplash-ml-0.95.1 (17 June 2002) <verwilst@gentoo.org>
 
 *ksplash-ml-0.93.1 (14 May 2002)
 
