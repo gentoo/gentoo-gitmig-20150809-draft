@@ -1,6 +1,13 @@
 # ChangeLog for games-server/halflife-adminmod
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-adminmod/ChangeLog,v 1.4 2004/04/16 18:30:09 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-adminmod/ChangeLog,v 1.5 2004/06/22 04:07:43 vapier Exp $
+
+*halflife-adminmod-2.50.59-r1 (22 Jun 2004)
+
+  22 Jun 2004; Mike Frysinger <vapier@gentoo.org> -files/2.50.58-adminmod.cfg,
+  halflife-adminmod-2.50.58.ebuild, +halflife-adminmod-2.50.59-r1.ebuild,
+  -halflife-adminmod-2.50.59.ebuild:
+  Version bump to fix install #53715 by James Le Cuirot.
 
 *halflife-adminmod-2.50.59 (16 Apr 2004)
 
