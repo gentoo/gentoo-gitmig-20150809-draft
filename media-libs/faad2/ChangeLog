@@ -1,8 +1,12 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.1 2003/04/11 14:59:52 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.2 2003/04/12 15:04:50 hannes Exp $
 
 *faad2-1.1 (11 Apr 2003)
+
+  12 Apr 2003; Hannes Mehnert <hannes@gentoo.org> faad2-1.1.ebuild:
+  merged faad2-ebuild from bug #17342. thanks to Anders Bruun Olsen and Jason
+  Andryuk
 
   11 Apr 2003; Hannes Mehnert <hannes@gentoo.org> faad2-1.1.ebuild,
   files/faad2-1.1-gentoo.diff:
