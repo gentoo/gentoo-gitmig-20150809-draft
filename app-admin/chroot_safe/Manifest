@@ -1,4 +1,14 @@
-MD5 4c4de6fecb2d5e980a1034b7bd92090d ChangeLog 511
-MD5 06d1b8ea3b632e64c85b42f182c6bdc3 chroot_safe-1.3.ebuild 949
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e4e4ba4c1d6a31c7ba37255378995f82 ChangeLog 608
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 3e577bc48fa5779d13c62022eeef4e47 chroot_safe-1.3.ebuild 947
 MD5 25232ac0b573af6c6bc853ce35190437 files/digest-chroot_safe-1.3 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpJbZEZCkKN40op4RAjRwAJ4lqmar3mH+UuF2W5pVMVA/peeRMwCeKXBC
+1mw15bkL5il9HmNc3iG2hq0=
+=fWKe
+-----END PGP SIGNATURE-----
