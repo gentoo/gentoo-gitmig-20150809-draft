@@ -1,27 +1,37 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.5 2002/07/10 01:41:49 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.1.ebuild,v 1.1 2002/07/10 01:41:49 spider Exp $
 
-DESCRIPTION="GNOME Display Manager"
+DESCRIPTION="GNOME2 Display Manager"
 HOMEPAGE="http://www.gnome.org/"
 KEYWORDS="x86 ppc"
-LICENSE="GPL-2"
 
 MY_V="`echo ${PV} |cut -b -5`"
 S=${WORKDIR}/${P}
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
+LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND=">=sys-libs/pam-0.72
-	>=sys-apps/tcp-wrappers-7.6
-	>=gnome-base/gnome-libs-1.4.1.2-r1
-	>=gnome-base/libglade-0.17-r1
-	>=media-libs/gdk-pixbuf-0.11.0-r1"
+DEBUG="yes"
+RESTRICT="nostrip"
+# force debug information
+CFLAGS="${CFLAGS} -g"
+CXXFLAGS="${CXXFLAGS} -g"
 
-RDEPEND="${DEPEND}
-	>=x11-base/xfree-4.2.0-r3
-	gnome? ( >=gnome-base/gnome-core-1.4.0.6 )"
+
+
+RDEPEND=">=sys-libs/pam-0.72
+	>=sys-apps/tcp-wrappers-7.6
+	>=app-text/scrollkeeper-0.1.4
+	>=gnome-base/libglade-2.0.0
+	>=gnome-base/librsvg-1.1.1
+	>=dev-libs/libxml2-2.4.12
+	>=gnome-base/libgnome-2.0.0
+	>=gnome-base/libgnomeui-2.0.0
+	>=gnome-base/libgnomecanvas-2.0.0"
+
+DEPEND="${RDEPEND}
+	>=x11-base/xfree-4.2.0-r3"
 
 
 src_unpack() {
@@ -42,27 +52,27 @@ src_unpack() {
 src_compile() {
         local myconf
         use nls || myconf="${myconf} --disable-nls"
-	./configure --host="${CHOST}" 					\
-		    --prefix=/usr					\
-		    --sysconfdir=/etc/X11				\
-		    --localstatedir=/var/lib				\
-		    --with-pam-prefix=/etc                              \
-                    ${myconf} || die
+	./configure --host="${CHOST}" \
+		--prefix=/usr \
+		--sysconfdir=/etc/X11 \
+		--localstatedir=/var/lib \
+		--with-pam-prefix=/etc \
+		${myconf} || die
 	emake || die
 }
 
 src_install() {
-        cd omf-install
-        cp Makefile Makefile.old
-        sed -e "s:scrollkeeper-update.*::g" Makefile.old > Makefile
-        rm Makefile.old
-        cd "${S}"
+	cd omf-install
+	cp Makefile Makefile.old
+	sed -e "s:scrollkeeper-update.*::g" Makefile.old > Makefile
+	rm Makefile.old
+	cd "${S}"
 
-	make prefix="${D}/usr"						\
-	     sysconfdir="${D}/etc/X11"					\
-	     localstatedir="${D}/var/lib"				\
-	     PAM_PREFIX="${D}/etc"					\
-	     install || die
+	make prefix="${D}/usr" \
+		sysconfdir="${D}/etc/X11" \
+		localstatedir="${D}/var/lib" \
+		PAM_PREFIX="${D}/etc" \
+		install || die
 
 	rm -f "${D}/etc/pam.d/gdm"
 
@@ -102,6 +112,7 @@ src_install() {
 	    -e "s:GtkRC=/opt/gnome/share/themes/Default/gtk/gtkrc:GtkRC=/usr/share/themes/Default/gtk/gtkrc:g" \
 	    -e "s:BackgroundColor=#007777:BackgroundColor=#2a3f5b:g" \
 	    -e "s:TitleBar=true:TitleBar=false:g" \
+		-e "s:Greeter=/usr/bin/gdmlogin:Greeter=/usr/bin/gdmgreeter:g" \
 		gdm.conf.orig > gdm.conf
 
 	rm gdm.conf.orig
@@ -167,8 +178,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-        echo ">>> Updating Scrollkeeper database..."
-        scrollkeeper-update >/dev/null 2>&1
+	echo ">>> Updating Scrollkeeper database..."
+	scrollkeeper-update >/dev/null 2>&1
 
 	echo
 	echo "**********************************************"
