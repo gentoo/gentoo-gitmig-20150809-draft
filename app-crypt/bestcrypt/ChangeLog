@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.5 2003/06/25 15:49:46 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.6 2003/09/10 22:45:23 lostlogic Exp $
+
+*bestcrypt-1.2_p6 (10 Sep 2003)
+
+  10 Sep 2003; Brandon Low <lostlogic@gentoo.org> bestcrypt-1.2_p6.ebuild:
+  Bump
 
   25 Jun 2003; Brandon Low <lostlogic@gentoo.org> bestcrypt-1.2_p5.ebuild:
   Make it install documentation too
