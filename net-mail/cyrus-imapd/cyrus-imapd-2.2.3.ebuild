@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.3.ebuild,v 1.2 2004/01/30 07:00:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.3.ebuild,v 1.3 2004/01/30 08:12:55 mr_bones_ Exp $
 
 inherit eutils ssl-cert
 
@@ -29,7 +29,7 @@ DEPEND="$RDEPEND
 	>=sys-devel/autoconf-2.58
 	sys-devel/automake
 	>=sys-apps/sed-4"
-	
+
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
