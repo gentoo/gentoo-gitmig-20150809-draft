@@ -1,6 +1,9 @@
 # ChangeLog for www-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.45 2005/03/03 22:42:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.46 2005/03/04 20:04:49 gustavoz Exp $
+
+  04 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> squid-2.5.9.ebuild:
+  Stable on sparc wrt #83955
 
   03 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> squid-2.5.9.ebuild:
   stable on amd64 wrt to #83955
