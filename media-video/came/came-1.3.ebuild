@@ -1,18 +1,19 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/came/came-1.3.ebuild,v 1.3 2003/07/12 21:12:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/came/came-1.3.ebuild,v 1.4 2004/03/29 01:04:12 vapier Exp $
 
-S=${WORKDIR}/camE-${PV}
 DESCRIPTION="camE is a rewrite of the xawtv webcam app, which adds imlib2 support and a lot of new features"
-SRC_URI="http://linuxbrit.co.uk/downloads/camE-${PV}.tar.gz"
 HOMEPAGE="http://linuxbrit.co.uk/camE/"
+SRC_URI="http://linuxbrit.co.uk/downloads/camE-${PV}.tar.gz"
 
-DEPEND=">=net-ftp/curl-7.9.1
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
+
+DEPEND=">=net-misc/curl-7.9.1
 	>=media-libs/giblib-1.2.1"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86"
+S=${WORKDIR}/camE-${PV}
 
 src_compile() {
 	mv Makefile Makefile_old
@@ -20,9 +21,9 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	insinto /usr
-	dobin camE
+	dobin camE || die
 	dodoc AUTHORS
 	dodoc camE_text.style
 	dodoc camE_title.style

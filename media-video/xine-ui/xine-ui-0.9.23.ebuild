@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.23.ebuild,v 1.6 2004/03/21 17:44:49 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.23.ebuild,v 1.7 2004/03/29 01:05:22 vapier Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="X gnome nls directfb lirc"
 
 DEPEND="media-libs/libpng
 	>=media-libs/xine-lib-1_rc3
-	>=net-ftp/curl-7.10.2
+	>=net-misc/curl-7.10.2
 	lirc? ( app-misc/lirc )
 	X? ( virtual/x11 )
 	media-libs/aalib
@@ -48,5 +48,5 @@ src_install() {
 		docsdir=/usr/share/doc/${PF} \
 		install || die
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
