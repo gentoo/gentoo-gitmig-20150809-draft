@@ -570,10 +570,6 @@ net-misc/fakeidentd
 # only changes the buildprocess
 =net-www/mozilla-1.0-r4
 
-# <g2boojum@gentoo.org> (24 Jul 2002)
-# waiting on copyright
-net-misc/radvd
-
 # <azarah@gentoo.org> (29 Jul 2002)
 # I have major formatting problems with this one .. even
 # just viewing manpages it do not handle properly, so
