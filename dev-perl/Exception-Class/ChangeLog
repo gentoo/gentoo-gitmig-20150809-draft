@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Exception-Class
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/ChangeLog,v 1.7 2003/07/15 10:54:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/ChangeLog,v 1.8 2003/07/18 21:51:47 rac Exp $
+
+*Exception-Class-1.14-r1 (18 Jul 2003)
+
+  18 Jul 2003; <rac@gentoo.org> Exception-Class-1.14-r1.ebuild:
+  Install into vendordir instead of overwriting core
 
 *Exception-Class-1.14 (15 Jul 2003)
 
