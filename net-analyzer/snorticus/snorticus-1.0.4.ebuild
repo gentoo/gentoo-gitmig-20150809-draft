@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snorticus/snorticus-1.0.4.ebuild,v 1.3 2003/09/05 23:40:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snorticus/snorticus-1.0.4.ebuild,v 1.4 2004/03/22 12:20:59 mboman Exp $
 
-DESCRIPTION="Snorticus is a collection of shell scripts designed to allow easy
-managment of Snort sensors."
+inherit eutils
 
+DESCRIPTION="Snorticus is a collection of shell scripts designed to allow easy managment of Snort sensors."
 HOMEPAGE="http://snorticus.baysoft.net/"
 SRC_URI="http://snorticus.baysoft.net/snorticus/${P}.tar.gz"
 LICENSE="GPL-2"
@@ -12,23 +12,24 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/glibc
+DEPEND=""
+RDEPEND="
+	app-shells/tcsh
 	net-analyzer/snort
 	net-analyzer/snortsnarf
 	sys-apps/sh-utils
 	net-misc/openssh"
 
-DEPEND="${RDEPEND}"
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	patch -p0 < ${FILESDIR}/${P}-gentoo.patch || die
-}
+	epatch ${FILESDIR}/${P}-gentoo.patch
 
-src_compile() {
-	return 0
+	for file in hourly_wrapup.sh push_rules.sh retrieve_wrapup.sh
+	do
+		sed -i s:/usr/bin/csh:/bin/csh: $file
+	done
 }
 
 src_install () {

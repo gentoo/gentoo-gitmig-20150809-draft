@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/snorticus
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snorticus/ChangeLog,v 1.1 2003/02/13 10:19:02 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snorticus/ChangeLog,v 1.2 2004/03/22 12:20:59 mboman Exp $
+
+  22 Mar 2004; Michael Boman <mboman@gentoo.org> snorticus-1.0.4.ebuild:
+  QA: DEPEND/RDEPEND (see bug 45343). Noticed that it used plain patch instead
+  of epatch, which also got fixed. The installed shell scripts depends on
+  csh/tcsh which was not listed as a dependency, and the search path for the
+  interpreter was wrong as well. All these issues fixed.
 
 *snorticus-1.0.4 (13 Feb 2003)
 
