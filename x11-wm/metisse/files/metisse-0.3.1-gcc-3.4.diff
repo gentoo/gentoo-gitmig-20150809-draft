@@ -1,0 +1,12 @@
+diff -urdN metisse-0.3.1-old/FvwmAmetista/main/ametista.cxx metisse-0.3.1/FvwmAmetista/main/ametista.cxx
+--- metisse-0.3.1-old/FvwmAmetista/main/ametista.cxx	2004-07-19 06:56:02.380572352 +0200
++++ metisse-0.3.1/FvwmAmetista/main/ametista.cxx	2004-07-19 06:57:37.795067144 +0200
+@@ -85,7 +85,7 @@
+ #endif
+ 
+   int user_argc = argc-5 ;
+-  char **user_argv = new (char *) [user_argc] ;
++  char **user_argv = new char* [user_argc] ;
+   user_argv[0] = strdup(argv[0]) ;
+   for (int uia=1; uia<user_argc; ++uia) user_argv[uia] = strdup(argv[5+uia]) ;
+ #if VERBOSE

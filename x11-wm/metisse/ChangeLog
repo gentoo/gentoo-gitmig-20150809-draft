@@ -1,0 +1,13 @@
+# ChangeLog for x11-wm/metisse
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metisse/ChangeLog,v 1.1 2004/07/26 08:02:46 usata Exp $
+
+*metisse-0.3.1 (26 Jul 2004)
+
+  26 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +files/metisse-0.3.1-FvwmGtk.1-DESTDIR.diff,
+  +files/metisse-0.3.1-gcc-3.4.diff, +metisse-0.3.1.ebuild:
+  Initial import. Thanks to Joseph Booker <joe@neoturbine.net>,
+  Leander <leander256@ifrance.com>, and Bel Zebute
+  <technojunky@technojunky.com>. This closed bug #55660.
+

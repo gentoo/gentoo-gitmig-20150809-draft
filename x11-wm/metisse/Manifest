@@ -1,0 +1,6 @@
+MD5 20b545f67b40db5095a7b0b41be384ff metisse-0.3.1.ebuild 945
+MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
+MD5 69187a555b349b3a9a1c3ac47bc44da1 ChangeLog 574
+MD5 4cf49b0a64c86d0ec1fc6a3c7ba660c9 files/digest-metisse-0.3.1 67
+MD5 8ea4e9e1bbbc76708d3076dc47a161aa files/metisse-0.3.1-FvwmGtk.1-DESTDIR.diff 1325
+MD5 6228c6495cd763a83275dd24a4f79031 files/metisse-0.3.1-gcc-3.4.diff 559

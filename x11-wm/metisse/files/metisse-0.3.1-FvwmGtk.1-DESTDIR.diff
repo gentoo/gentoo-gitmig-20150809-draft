@@ -1,0 +1,24 @@
+diff -urN metisse-0.3.1.ORIG/fvwm-insitu/modules/FvwmGtk/Makefile.am metisse-0.3.1/fvwm-insitu/modules/FvwmGtk/Makefile.am
+--- metisse-0.3.1.ORIG/fvwm-insitu/modules/FvwmGtk/Makefile.am	2004-06-14 20:32:14.000000000 +0900
++++ metisse-0.3.1/fvwm-insitu/modules/FvwmGtk/Makefile.am	2004-07-07 14:32:49.424026376 +0900
+@@ -9,7 +9,7 @@
+ # generate an install rule for man pages unless one of them is an existing file
+ # name.  Use a hand made rule to install the man page instead.
+ #man_MANS = @MANFVWMGTK@
+-man_onedir = $(DESTDIR)$(mandir)/man1
++man_onedir = $(mandir)/man1
+ man_one_DATA = @MANFVWMGTK@
+ EXTRA_DIST = FvwmGtk.1
+ 
+diff -urN metisse-0.3.1.ORIG/fvwm-insitu/modules/FvwmGtk/Makefile.in metisse-0.3.1/fvwm-insitu/modules/FvwmGtk/Makefile.in
+--- metisse-0.3.1.ORIG/fvwm-insitu/modules/FvwmGtk/Makefile.in	2004-07-05 18:52:08.000000000 +0900
++++ metisse-0.3.1/fvwm-insitu/modules/FvwmGtk/Makefile.in	2004-07-07 14:32:33.087509904 +0900
+@@ -282,7 +282,7 @@
+ # generate an install rule for man pages unless one of them is an existing file
+ # name.  Use a hand made rule to install the man page instead.
+ #man_MANS = @MANFVWMGTK@
+-man_onedir = $(DESTDIR)$(mandir)/man1
++man_onedir = $(mandir)/man1
+ man_one_DATA = @MANFVWMGTK@
+ EXTRA_DIST = FvwmGtk.1
+ FvwmGtk_SOURCES = FvwmGtk.c gtkpixmapmenuitem.c gtkpixmapmenuitem.h \
