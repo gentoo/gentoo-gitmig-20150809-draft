@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.6-r3.ebuild,v 1.5 2005/03/23 14:03:58 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.6-r3.ebuild,v 1.6 2005/03/24 14:54:39 kosmikus Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -20,7 +20,6 @@ KEYWORDS="x86 ~ppc ~amd64"
 LICENSE="as-is"
 
 DEPEND="virtual/ghc
-	!>=virtual/ghc-6.4
 	doc? ( >=app-text/openjade-1.3.1
 		>=app-text/sgml-common-0.6.3
 		~app-text/docbook-sgml-dtd-3.1
@@ -30,9 +29,6 @@ DEPEND="virtual/ghc
 
 RDEPEND=""
 
-# extend path to /opt/ghc/bin to guarantee that ghc-bin is found
-GHCPATH="${PATH}:/opt/ghc/bin"
-
 src_unpack() {
 	base_src_unpack
 	epatch ${FILESDIR}/${P}-gcc3.4.patch
@@ -41,7 +37,12 @@ src_unpack() {
 src_compile() {
 	# unset SGML_CATALOG_FILES because documentation installation
 	# breaks otherwise ...
-	PATH="${GHCPATH}" SGML_CATALOG_FILES="" econf || die "econf failed"
+	SGML_CATALOG_FILES="" econf || die "econf failed"
+
+	if $(ghc-cabal); then
+		echo "SRC_HC_OPTS += -package mtl" >> mk/build.mk
+	fi
+
 	# using -j1 because -j2 behaved strangely on my machine
 	emake -j1 || die "make failed"
 

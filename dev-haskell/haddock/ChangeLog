@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.20 2005/03/23 14:03:58 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.21 2005/03/24 14:54:39 kosmikus Exp $
+
+  24 Mar 2005; Andres Loeh <kosmikus@gentoo.org> haddock-0.6-r3.ebuild:
+  haddock-0.6-r3 works with ghc-6.4 now.
 
   23 Mar 2005; Andres Loeh <kosmikus@gentoo.org> haddock-0.6-r2.ebuild,
   haddock-0.6-r3.ebuild:
