@@ -1,8 +1,19 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.2 2002/09/03 17:46:02 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.3 2002/10/25 09:38:36 george Exp $
 
 *lablgl-0.98.ebuild (03 Sep 2002)
+
+  24 Oct 2002; George Shapovalov <george@gentoo.org> lablgl-0.98.ebuild :
+
+  lablgl requires ocaml compiled with tk support. Ocaml has tk as an optional dependency.
+  Added some code to pkg_setup to detect if the tcltk USE var is set and abort if not with the message
+  asking user to emerge ocaml with tk support.
+  See bug #8126 for details. Thanks to Sami Nieminen <sami.nieminen@iki.fi> for report and 
+  Jeffrey Palmer <jeffrey.palmer.acm.org>  for dependency tracing and diagnostics.
+
+  The above hack is goinmg to only catch 95% of situations. The real fix involves modifications to portage
+  to make it correctly process optional dependencies of dependencies. See bug #2272 for details.
 
   03 Sep 2002; G Shapovalov <george@gentoo.org> lablgl-0.98.ebuild, files/{LablGL-0.98-Makefile-destdir.patch,LablGL-0.98-Makefile.config,digest-lablgl-0.98} :
 
