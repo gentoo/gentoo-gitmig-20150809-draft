@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.05.ebuild,v 1.4 2002/09/03 20:13:26 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.05.ebuild,v 1.5 2002/09/11 20:35:33 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 		ssl? ( >=dev-libs/openssl-0.9.6 )
 		ldap? ( >=net-nds/openldap-2.0.7 )
 		mysql? ( >=dev-db/mysql-3.23.28 )
-		pgsql? ( >=dev-db/postgresql-7 )"
+		postgres? ( >=dev-db/postgresql-7 )"
 RDEPEND="${DEPEND}
 		!virtual/mta
 		>=net-mail/mailbase-0.00"
@@ -97,7 +97,7 @@ src_unpack() {
 		LOOKUP_LIBS="$LOOKUP_LIBS -L/usr/lib -lmysqlclient"
 	fi
 
-	if use pgsql; then
+	if use postgres; then
 		cp Local/Makefile Local/Makefile.tmp
 		sed -e "s:# LOOKUP_PGSQL=yes:LOOKUP_PGSQL=yes:" \
 			Local/Makefile.tmp >| Local/Makefile
@@ -150,11 +150,12 @@ src_install () {
 
 	exeinto /usr/sbin
 	for i in exicyclog exim_dbmbuild exim_dumpdb exim_fixdb exim_lock \
-		exim_tidydb exinext exiwhat exigrep eximstats exiqsumm
+		exim_tidydb exinext exiwhat exigrep eximstats exiqsumm \
+		convert4r3 convert4r4
 	do
 		doexe $i
 	done
-	
+
 	dodir /etc/exim
 	
 	cd ${S}/src
