@@ -1,6 +1,10 @@
 # ChangeLog for media-video/quickrip
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/ChangeLog,v 1.7 2003/10/14 23:39:16 pythonhead Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/ChangeLog,v 1.8 2004/05/04 12:42:25 kloeri Exp $
+
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> quickrip-0.4.ebuild,
+  quickrip-0.5.ebuild, quickrip-0.6.ebuild, quickrip-0.7.ebuild:
+  Add missing IUSE.
 
 *quickrip-0.8 (14 Oct 2003)
 
