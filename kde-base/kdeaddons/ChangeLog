@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.25 2003/02/01 18:48:33 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.26 2003/02/02 17:44:04 hannes Exp $
+
+  02 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdeaddons-3.0.2.ebuild:
+  fixed typo, bug #14948
 
 *kdeaddons-3.1_rc6 (05 Jan 2003)
 
