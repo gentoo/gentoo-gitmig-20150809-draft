@@ -1,7 +1,12 @@
 # ChangeLog for net-irc/dircproxy
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.1 2002/04/13 23:04:52 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.2 2002/07/28 12:36:14 aliz Exp $
 
+*evilwm-0.99.4 (28 Jul 2002)
+
+  28 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> evilwm-0.99.4.ebuild :
+
+  Version bump.
 
 *evilwm-0.3.11 (14 April 2002)
 
