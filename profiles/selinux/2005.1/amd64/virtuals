@@ -1,0 +1,9 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/amd64/virtuals,v 1.1 2005/04/02 15:48:25 pebenito Exp $
+
+virtual/os-headers		sys-kernel/linux-headers
+virtual/alsa			sys-kernel/gentoo-sources
+virtual/kernel			sys-kernel/linux-headers
+virtual/linux-sources		sys-kernel/gentoo-sources
+virtual/bootloader		sys-boot/grub

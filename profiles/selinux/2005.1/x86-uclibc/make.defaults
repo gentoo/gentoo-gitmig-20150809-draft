@@ -1,0 +1,10 @@
+# Copyright 1999-2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/x86-uclibc/make.defaults,v 1.1 2005/04/02 15:48:25 pebenito Exp $
+
+USE="x86 uclibc"
+GRP_STAGE23_USE="x86 uclibc"
+
+ARCH="x86"
+ACCEPT_KEYWORDS="x86"
+FEATURES=""

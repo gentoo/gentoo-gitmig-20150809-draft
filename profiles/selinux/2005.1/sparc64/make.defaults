@@ -1,0 +1,10 @@
+# Copyright 1999-2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/sparc64/make.defaults,v 1.1 2005/04/02 15:48:25 pebenito Exp $
+
+USE="sparc"
+GRP_STAGE23_USE="sparc"
+
+ARCH="sparc"
+PROFILE_ARCH="sparc64"
+ACCEPT_KEYWORDS="sparc"

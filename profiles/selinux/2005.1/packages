@@ -1,0 +1,19 @@
+# Copyright 1999-2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/packages,v 1.1 2005/04/02 15:48:25 pebenito Exp $
+
+##############################################################################
+# SELinux required versionings
+
+# Core Packages
+*>=sys-apps/baselayout-1.11
+*>=sys-apps/sysvinit-2.86
+
+# Base SELinux packages
+*>=sys-libs/libselinux-1.22
+*>=sys-libs/libsepol-1.4
+*>=sys-apps/checkpolicy-1.22
+*>=sys-apps/policycoreutils-1.22
+*>=sec-policy/selinux-base-policy-20050322
+*>=dev-python/python-selinux-2.15
+##############################################################################

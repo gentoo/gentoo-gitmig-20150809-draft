@@ -1,0 +1,5 @@
+These are experimental profiles.  Use at your own peril.  AMD64 will need to
+do the 2004.3 to 2005.0 upgrade as specified in the main Gentoo AMD64 docs.
+This also adds udev to the system.
+
+pebenito@gentoo.org

@@ -1,0 +1,33 @@
+# Copyright 1999-2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/amd64/make.defaults,v 1.1 2005/04/02 15:48:25 pebenito Exp $
+
+USE="amd64 emul-linux-x86 multilib"
+STAGE1_USE="amd64 multilib"
+GRP_STAGE23_USE="amd64 multilib"
+
+ARCH="amd64"
+ACCEPT_KEYWORDS="amd64"
+#FEATURES="sandbox"
+
+MULTILIB_ABIS="x86 amd64"
+DEFAULT_ABI="amd64"
+
+CFLAGS_amd64="-m64"
+LDFLAGS_amd64="-m elf_x86_64"
+CHOST_amd64="x86_64-pc-linux-gnu"
+CDEFINE_amd64="__x86_64__"
+LIBDIR_amd64="lib64"
+
+CFLAGS_x86="-m32"
+LDFLAGS_x86="-m elf_i386"
+CHOST_x86="i686-pc-linux-gnu"
+CDEFINE_x86="__i386__"
+LIBDIR_x86="lib32"
+
+# In case someone wants to help out by setting FEATURES="multilib-strict"
+MULTILIB_STRICT_DIRS="/lib /usr/lib /usr/kde/*/lib /usr/qt/*/lib /usr/X11R6/lib"
+MULTILIB_STRICT_DENY="64-bit.*shared object"
+
+# Hack to tell baselayout to use symlinks for /lib, /usr/lib, and /usr/local/lib
+SYMLINK_LIB="yes"

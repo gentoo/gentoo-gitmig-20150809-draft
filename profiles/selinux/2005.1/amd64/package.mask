@@ -1,0 +1,5 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/amd64/package.mask,v 1.1 2005/04/02 15:48:25 pebenito Exp $
+
+# 2005.0 Jeremy Huddleston <eradicator@gentoo.org>
+# This is a stub file 'cause glibc provides 32bit libs on newer profiles
+=app-emulation/emul-linux-x86-glibc-1000
