@@ -37,10 +37,6 @@
 #-*sys-libs/cracklib
 # 
 
-# tar ~arch is faulty on uclibc (tar jtf does not work on the created
-# tbz2 files), only the stable one (1.13.92-r3) works.
-<=app-arch/tar-1.13.92-r3
-
 # this needs to be package.masked all together.
 -*sys-libs/glibc
 
