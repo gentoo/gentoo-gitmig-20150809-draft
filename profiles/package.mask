@@ -21,6 +21,14 @@
 ##   End example
 ##
 
+# <pauldv@gentoo.org> 24 May 2003
+# Masking these db versions to make sure that absolutely noone will install them
+# without knowing the repercussions. There is no good upgrade path yet and these
+# ebuilds are still under development. Installing these CAN break things and the
+# interfaces are not guaranteed to be stable either.
+>=sys-libs/db-4.0
+=sys-libs/db-3.2.9-r5
+
 # <seemant@gentoo.org> 21 May, 2003
 # Masked while it's still under development.  I need revision control on the
 # thing, which is why it's in portage at all.  Do NOT install this.
