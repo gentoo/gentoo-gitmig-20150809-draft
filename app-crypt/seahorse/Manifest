@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dc8dc039f66c58bee0c7dd119afb8717 ChangeLog 3932
+MD5 fbe67c169b3dfe46c0ac5e75962ca07e ChangeLog 4119
 MD5 887271fc00711d11fb72536de7b1f7ec metadata.xml 1073
 MD5 d590f30824faa32ba65691531d2d1e7a seahorse-0.6.3-r1.ebuild 807
-MD5 266ea984bd8439bc6676e1cbc9fd8775 seahorse-0.7.5.ebuild 1177
+MD5 61d80374f9e6c008a561a6640b91731e seahorse-0.7.5.ebuild 1284
 MD5 052f1fee75fc120426817f6e7c0726f6 files/digest-seahorse-0.6.3-r1 66
 MD5 ddd1af247311013096cded4265d69eaf files/digest-seahorse-0.7.5 67
+MD5 e1227c1335c22fcf8db3af76856b8053 files/seahorse-0.7.5-gpg1.4.patch 2576
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBxL35mdTrptrqvGERAr7HAJ9LfktjBn3rXQIXqvCZH/cumWVCTgCgkoTl
-E4MCSnatGHZnqrpEN+FLD0I=
-=KAod
+iD8DBQFBxX6OmdTrptrqvGERAohEAJ4kh2yoTJStIxwE2sDWeMkgF4y1UACfZHMA
+vWOG/UznqVDbjO5aw7Ekp5s=
+=6Qn6
 -----END PGP SIGNATURE-----

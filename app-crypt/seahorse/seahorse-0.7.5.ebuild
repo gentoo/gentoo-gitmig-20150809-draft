@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.5.ebuild,v 1.5 2004/12/18 23:32:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.5.ebuild,v 1.6 2004/12/19 13:13:44 dragonheart Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="gnome front end to gnupg"
 HOMEPAGE="http://seahorse.sourceforge.net/"
@@ -36,6 +36,12 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO THANKS"
 IUSE="doc"
 
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gpg1.4.patch || die "patch failed"
+}
 
 src_install() {
 	gnome2_src_install

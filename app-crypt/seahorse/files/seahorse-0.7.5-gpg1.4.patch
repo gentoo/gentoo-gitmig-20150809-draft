@@ -1,0 +1,82 @@
+--- configure.in.orig	2004-11-01 03:24:04.000000000 +0930
++++ configure.in	2004-12-19 21:11:35.832207728 +0930
+@@ -52,13 +52,17 @@
+ 	micro=`echo $gnupg_version | \
+ 		sed 's/^gpg (GnuPG) \([[0-9]]*\)\.\([[0-9]]*\)\.\([[0-9]]*\).*/\3/'`
+ 
+-	  if test "$major" -eq "$req_major"; then
+-	     if test "$minor" -eq "$req_minor"; then
+-	  	if test "$micro" -ge "$req_micro"; then
+-		       ok="yes"
+-	        fi
++	if test "$major" -gt "$req_major"; then
++           ok="yes"
++        elif test "$major" -eq "$req_major"; then
++	   if test "$minor" -gt "$req_minor"; then
++               ok="yes"
++	   elif test "$minor" -eq "$req_minor"; then
++	     if test "$micro" -ge "$req_micro"; then
++	       ok="yes"
+ 	     fi
+-	  fi
++	   fi
++	fi
+   fi
+   
+   if test "$ok" = "yes"; then
+@@ -93,8 +97,12 @@
+       micro=`echo $gpgme_config_version | \
+ 		 sed 's/\([[0-9]]*\)\.\([[0-9]]*\)\.\([[0-9]]*\).*/\3/'`
+ 
+-	if test "$major" -eq "$req_major"; then
+-	   if test "$minor" -eq "$req_minor"; then
++	if test "$major" -gt "$req_major"; then
++           ok="yes"
++        elif test "$major" -eq "$req_major"; then
++	   if test "$minor" -gt "$req_minor"; then
++               ok="yes"
++	   elif test "$minor" -eq "$req_minor"; then
+ 	     if test "$micro" -ge "$req_micro"; then
+ 	       ok="yes"
+ 	     fi
+--- configure.orig	2004-12-19 22:17:26.301178104 +0930
++++ configure	2004-12-19 22:17:42.260751880 +0930
+@@ -19341,13 +19341,17 @@
+ 	micro=`echo $gnupg_version | \
+ 		sed 's/^gpg (GnuPG) \([0-9]*\)\.\([0-9]*\)\.\([0-9]*\).*/\3/'`
+ 
+-	  if test "$major" -eq "$req_major"; then
+-	     if test "$minor" -eq "$req_minor"; then
+-	  	if test "$micro" -ge "$req_micro"; then
+-		       ok="yes"
+-	        fi
++	if test "$major" -gt "$req_major"; then
++           ok="yes"
++        elif test "$major" -eq "$req_major"; then
++	   if test "$minor" -gt "$req_minor"; then
++               ok="yes"
++	   elif test "$minor" -eq "$req_minor"; then
++	     if test "$micro" -ge "$req_micro"; then
++	       ok="yes"
+ 	     fi
+-	  fi
++	   fi
++	fi
+   fi
+ 
+   if test "$ok" = "yes"; then
+@@ -19422,8 +19426,12 @@
+       micro=`echo $gpgme_config_version | \
+ 		 sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\).*/\3/'`
+ 
+-	if test "$major" -eq "$req_major"; then
+-	   if test "$minor" -eq "$req_minor"; then
++	if test "$major" -gt "$req_major"; then
++           ok="yes"
++        elif test "$major" -eq "$req_major"; then
++	   if test "$minor" -gt "$req_minor"; then
++               ok="yes"
++	   elif test "$minor" -eq "$req_minor"; then
+ 	     if test "$micro" -ge "$req_micro"; then
+ 	       ok="yes"
+ 	     fi

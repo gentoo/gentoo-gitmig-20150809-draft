@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.28 2004/12/18 23:32:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.29 2004/12/19 13:13:44 dragonheart Exp $
+
+  19 Dec 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/seahorse-0.7.5-gpg1.4.patch, seahorse-0.6.3-r1.ebuild,
+  seahorse-0.7.5.ebuild:
+  Add patch to correctly detect gnupg-1.4.0
 
   19 Dec 2004; Daniel Black <dragonheart@gentoo.org> seahorse-0.7.5.ebuild:
   Elimitate package conflict with x11-misc/shared-mime-info as per bug #74793.
