@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/gromacs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/ChangeLog,v 1.9 2004/04/02 23:53:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/ChangeLog,v 1.10 2004/04/22 21:10:52 kugelfang Exp $
+
+  22 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> gromacs-3.2.1.ebuild:
+  marked ~amd64
 
 *gromacs-3.2.1 (02 Apr 2004)
 
