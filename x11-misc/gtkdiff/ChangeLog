@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gtkdiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdiff/ChangeLog,v 1.9 2004/06/24 22:21:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdiff/ChangeLog,v 1.10 2004/09/01 02:07:58 tgall Exp $
+
+  31 Aug 2004; Tom Gall <tgall@gentoo.org> gtkdiff-1.8.0-r2.ebuild:
+  stable on ppc64, bug #61757
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> gtkdiff-1.8.0-r2.ebuild:
   Stable on sparc.
