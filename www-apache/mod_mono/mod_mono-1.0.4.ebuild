@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-1.0.4.ebuild,v 1.1 2004/11/04 01:56:11 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-1.0.4.ebuild,v 1.2 2004/11/13 00:14:11 latexer Exp $
 
 DESCRIPTION="Apache module for Mono"
 HOMEPAGE="http://www.go-mono.com/"
@@ -34,7 +34,7 @@ src_install() {
 		/usr/lib/apache2-extramodules/mod_mono.so.0
 
 	insinto /etc/apache2/conf/modules.d
-	newins ${FILESDIR}/${P}-70_mod_mono.conf 70_mod_mono.conf
+	newins ${FILESDIR}/${PN}-1.0.2-70_mod_mono.conf 70_mod_mono.conf
 
 	doman man/mod_mono.8
 

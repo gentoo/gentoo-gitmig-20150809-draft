@@ -1,37 +1,40 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.8 2004/11/04 02:01:35 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.9 2004/11/13 00:14:11 latexer Exp $
 
-  03 Nov 2004; <peter@gentoo.org> -mod_mono-0.10.ebuild,
+  12 Nov 2004; Peter Johanson <latexer@gentoo.org> mod_mono-1.0.4.ebuild:
+  Actually install mod_mono.conf. See bug #70922
+
+  03 Nov 2004; Peter Johanson <latexer@gentoo.org> -mod_mono-0.10.ebuild,
   -mod_mono-0.11.ebuild, -mod_mono-0.13.ebuild, -mod_mono-0.8.ebuild,
   -mod_mono-1.0.1.ebuild, -mod_mono-1.0.ebuild:
   Clean out some old ebuilds.
 
 *mod_mono-1.0.4 (03 Nov 2004)
 
-  03 Nov 2004; <peter@gentoo.org> +mod_mono-1.0.4.ebuild:
+  03 Nov 2004; Peter Johanson <latexer@gentoo.org> +mod_mono-1.0.4.ebuild:
   Bump.
 
 *mod_mono-1.0.2-r1 (11 Oct 2004)
 
-  11 Oct 2004; <peter@gentoo.org> +mod_mono-1.0.2-r1.ebuild:
+  11 Oct 2004; Peter Johanson <latexer@gentoo.org> +mod_mono-1.0.2-r1.ebuild:
   Fix for missing symlinks, and permissions. Thanks to Scott
   <nzgreen@operamail.com> on bug #66948
 
-  07 Oct 2004; <peter@gentoo.org> metadata.xml, mod_mono-1.0.1.ebuild,
-  mod_mono-1.0.2.ebuild, mod_mono-1.0.ebuild:
+  07 Oct 2004; Peter Johanson <latexer@gentoo.org> metadata.xml,
+  mod_mono-1.0.1.ebuild, mod_mono-1.0.2.ebuild, mod_mono-1.0.ebuild:
   Remove dev-libs/apr dep, as this is (for now) provided by apache2. Added
   dotnet to the herd as well.
 
 *mod_mono-1.0.2 (22 Sep 2004)
 
-  22 Sep 2004; <peter@gentoo.org> +files/mod_mono-1.0.2-70_mod_mono.conf,
-  +mod_mono-1.0.2.ebuild:
+  22 Sep 2004; Peter Johanson <latexer@gentoo.org>
+  +files/mod_mono-1.0.2-70_mod_mono.conf, +mod_mono-1.0.2.ebuild:
   Bump.
 
 *mod_mono-1.0.1 (21 Sep 2004)
 
-  21 Sep 2004; <peter@gentoo.org> +mod_mono-1.0.1.ebuild:
+  21 Sep 2004; Peter Johanson <latexer@gentoo.org> +mod_mono-1.0.1.ebuild:
   Bump.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
