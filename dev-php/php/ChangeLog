@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.79 2004/03/30 19:28:58 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.80 2004/04/01 06:33:36 robbat2 Exp $
+
+  31 Mar 2004; Robin H. Johnson <robbat2@gentoo.org> php-4.3.2-r1.ebuild,
+  php-4.3.2-r2.ebuild, php-4.3.2-r3.ebuild, php-4.3.2.ebuild,
+  php-4.3.3-r1.ebuild, php-4.3.3-r2.ebuild, php-4.3.3-r3.ebuild,
+  php-4.3.3.ebuild, php-4.3.4-r1.ebuild, php-4.3.4-r2.ebuild,
+  php-4.3.4-r3.ebuild, php-4.3.4.ebuild:
+  remove all old php ebuilds before 4.3.4-r4.
 
   30 Mar 2004; Jon Portnoy <avenj@gentoo.org> php-4.3.5.ebuild :
   Fixed path for amd64 patch. Bug #46260.
