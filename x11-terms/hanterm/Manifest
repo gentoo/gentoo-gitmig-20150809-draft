@@ -1,5 +1,15 @@
-MD5 1824894b0ca344b2463754e613b116ea ChangeLog 1498
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9d247680b751e11c01c99662cc88eea7 ChangeLog 1594
+MD5 01327d886ff735dc011febde5044db4b hanterm-3.1.6-r2.ebuild 1401
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 3e2582e523abb539542e8215f4479ba2 hanterm-3.1.6-r2.ebuild 1266
 MD5 f82b4f8ecb9c59922d758eeaaa314fe4 files/digest-hanterm-3.1.6-r2 65
 MD5 875999b9db77b35f3c81ecb8aa3c9711 files/Hanterm.gentoo 5693
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (Darwin)
+
+iD8DBQFBegrZVWNWqTUmv+0RAikzAJ9qSP+77qJjb3CbO2BgU6966xsdiACglslw
+4OaD9wcJmv9qzEErVQg8e4M=
+=hj9k
+-----END PGP SIGNATURE-----
