@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.1.ebuild,v 1.4 2003/12/08 07:55:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.1.ebuild,v 1.5 2003/12/09 17:30:36 lanius Exp $
 
 MY_P=${P/./-}
 S=${WORKDIR}/${MY_P}
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc sparc"
 IUSE="gif png"
 
 DEPEND="=sys-apps/sed-4*"
-RDEPEND="app-text/ghostscript
+RDEPEND="virtual/ghostscript
 	virtual/tetex
 	media-libs/netpbm
 	dev-lang/perl
