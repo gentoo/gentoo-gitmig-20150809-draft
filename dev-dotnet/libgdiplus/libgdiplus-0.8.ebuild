@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-0.8.ebuild,v 1.1 2004/06/08 16:17:21 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-0.8.ebuild,v 1.2 2004/06/09 09:22:21 dholm Exp $
 
 DESCRIPTION="Library for using System.Drawing with Mono"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.go-mono.com/archive/beta2/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="tiff gif jpeg png"
 
@@ -30,6 +30,8 @@ src_compile() {
 	use png ||  myconf="--without-libpng ${myconf}"
 
 	econf ${myconf} || die
+	# attribute((__stdcall__)) generate warnings on ppc
+	use ppc && sed -i -e 's:-Werror::g' src/Makefile
 	emake || die
 }
 
