@@ -3,6 +3,8 @@
 <pkgmetadata>
 <herd>gnustep</herd>
 <longdescription>
-GWorkspace is the official GNUstep workspace manager. It is a clone of the NeXT workspace manager. GWorkspace is becoming more and more stable every day and it is already ready for daily usage.
+TextEdit
+
+This directory contains the source code for the TextEdit demo, which is a simple text editor.
 </longdescription>
 </pkgmetadata>

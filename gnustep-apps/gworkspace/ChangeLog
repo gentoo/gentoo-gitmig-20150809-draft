@@ -1,22 +1,24 @@
 # ChangeLog for gnustep-apps/gworkspace
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/ChangeLog,v 1.3 2004/07/27 17:21:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/ChangeLog,v 1.4 2004/09/24 01:06:48 fafhrd Exp $
 
-  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+*gworkspace-0.6.6_pre20040908 (10 Sep 2004)
+
+  10 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org> metadata.xml,
+  +gworkspace-0.6.6_pre20040908.ebuild:
+  Version bump; keyworded for ~x86.
+
+  23 Jul 2004; Armando Di Cianno <fafhrd@gentoo.org>
   gworkspace-0.5.3.ebuild:
   Changed referenced categories in ebuilds to reflect recent epkgmove changes.
 
 *gworkspace-0.5.3 (23 Jul 2004)
 
-  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> +metadata.xml,
+  23 Jul 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
   +gworkspace-0.5.3.ebuild:
   Moved from app-gnustep/gworkspace to gnustep-apps/gworkspace.
 
-  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
-  gworkspace-0.5.3.ebuild:
-  Changing the eclass to gnustep-old
-
-  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  22 Jul 2004; Armando Di Cianno <fafhrd@gentoo.org>
   gworkspace-0.5.3.ebuild:
   Changing the eclass to gnustep-old
 

@@ -1,0 +1,7 @@
+# ChangeLog for gnustep-apps/addresses
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/ChangeLog,v 1.1 2004/09/24 01:06:14 fafhrd Exp $
+
+  09 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org> :
+  Added package
+

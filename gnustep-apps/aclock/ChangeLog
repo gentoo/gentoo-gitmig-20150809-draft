@@ -1,0 +1,16 @@
+# ChangeLog for gnustep-apps/aclock
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/aclock/ChangeLog,v 1.1 2004/09/24 01:07:05 fafhrd Exp $
+
+*aclock-0.1.0 (31 Aug 2004)
+
+  31 Aug 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  +files/config-aclock.sh, +aclock-0.1.0.ebuild, +aclock-0.2.ebuild:
+  Added aclock-2.0.ebuild
+
+*aclock-0.1.0 (31 Aug 2004)
+
+  31 Aug 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  +files/config-aclock.sh, +aclock-0.1.0.ebuild:
+  First import.
+
