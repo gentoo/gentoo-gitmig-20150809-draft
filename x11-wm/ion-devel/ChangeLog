@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/ion-devel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ChangeLog,v 1.16 2003/09/09 20:55:56 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ChangeLog,v 1.17 2003/09/27 15:39:18 twp Exp $
+
+  27 Sep 2003; Tom Payne <twp@gentoo.org> ion-devel-20030814-r3.ebuild :
+  Remove UTF-8 support. Tidy ebuild. Changes submitted by Martin Guy.
+  Added metadata.xml.
 
   9 Sep 2003; Tom Payne <twp@gentoo.org> ion-devel-20030814-r2.ebuild :
   Added tabdrag patch.
