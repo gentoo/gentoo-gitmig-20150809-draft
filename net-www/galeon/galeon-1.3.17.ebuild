@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.17.ebuild,v 1.4 2004/08/28 23:30:16 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.17.ebuild,v 1.5 2004/09/02 19:57:31 kugelfang Exp $
 
 inherit gnome2 debug libtool eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/galeon/${P}.tar.bz2"
 
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc alpha sparc ~ia64 ~amd64"
+KEYWORDS="x86 ppc alpha sparc ~ia64 amd64"
 SLOT="0"
 
 S=${WORKDIR}/${P%%a}
