@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.6 2003/01/15 08:36:59 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.7 2003/01/18 18:01:25 lostlogic Exp $
+
+*development-sources-2.5.59-r2 (18 Jan 2003)
+
+  18 Jan 2003; Brandon Low <lostlogic@gentoo.org> development-sources-2.5.59*.ebuild:
+  Make development-sources-2.5.##.ebuild plain development-sources and
+  development-sources-2.5.##-r#.ebuild be the corresponding -mm patch.
 
 *development-sources-2.5.58 (15 Jan 2003)
 
