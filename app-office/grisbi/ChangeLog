@@ -1,6 +1,9 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.4 2004/08/07 21:14:48 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.5 2004/08/14 15:00:46 swegener Exp $
+
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
+  Corrected metadata.xml to match DTD.
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> grisbi-0.5.0-r1.ebuild:
   Typo in DESCRIPTION: personnal -> personal. Bug 59717.
