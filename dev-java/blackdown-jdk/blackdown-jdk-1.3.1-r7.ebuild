@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r7.ebuild,v 1.23 2003/12/06 17:51:50 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r7.ebuild,v 1.24 2004/01/25 08:13:12 strider Exp $
 
 IUSE="doc"
 
@@ -26,7 +26,7 @@ KEYWORDS="x86 ppc sparc"
 
 src_unpack () {
 	if (use ppc) || (use sparc) ; then
-		tail -n +400 ${DISTDIR}/${A} | tar xjf -
+		tail -n +400 ${DISTDIR}/${A} | tar jxpf -
 	else
 		unpack ${A}
 	fi
