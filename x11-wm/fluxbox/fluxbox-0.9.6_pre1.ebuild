@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.6_pre1.ebuild,v 1.2 2003/09/04 06:58:27 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.6_pre1.ebuild,v 1.3 2003/09/06 11:03:41 seemant Exp $
 
 IUSE="gnome kde nls xinerama truetype"
 
