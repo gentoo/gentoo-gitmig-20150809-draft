@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libwmf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.4 2002/11/27 11:09:33 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.5 2002/12/05 21:07:19 nall Exp $
 
 *libwmf-0.2.7 (27 Nov 2002)
 
@@ -10,6 +10,9 @@
   Version bump.
 
 *libwmf-0.2.6 (10 July 2002)
+
+  05 Dec 2002; Jon Nall <nall@gentoo.org> libwmf-0.2.6.ebuild :
+  keyworded ~ppc
 
   10 July 2002; G shapovalov <georges@gentoo.org> libwmf-0.2.6.ebuild, files/digest-0.2.6 :
   new version.
