@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20040615-r1.ebuild,v 1.1 2004/07/13 06:25:10 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20040615-r1.ebuild,v 1.2 2004/07/18 19:39:55 mholzer Exp $
 
 inherit eutils base
 
@@ -82,7 +82,7 @@ src_install() {
 	chown root:root fake_windows/ -R
 
 	# Unpacking the miscellaneous files
-	tar jxvf ${DISTDIR}/${PF}-misc.tar.bz2
+	tar jxvf ${DISTDIR}/${P}-misc.tar.bz2
 	chown root:root config
 
 	# moving the wrappers to bin/
