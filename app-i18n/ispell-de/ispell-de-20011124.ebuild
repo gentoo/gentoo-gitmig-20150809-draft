@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Achime Gottinger <achim@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-de/ispell-de-20011124.ebuild,v 1.4 2002/07/10 15:08:19 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-de/ispell-de-20011124.ebuild,v 1.5 2002/07/11 06:30:15 drobbins Exp $
 
 KEYWORDS="x86"
 

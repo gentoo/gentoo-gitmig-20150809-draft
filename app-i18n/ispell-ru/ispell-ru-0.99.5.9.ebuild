@@ -1,7 +1,6 @@
 # Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License, v2
-# Author: Arcady Genkin <agenkin@thpoon.com>
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-ru/ispell-ru-0.99.5.9.ebuild,v 1.1 2002/04/26 10:25:02 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-ru/ispell-ru-0.99.5.9.ebuild,v 1.2 2002/07/11 06:30:15 drobbins Exp $
 
 DESCRIPTION="Alexander I. Lebedev's Russian dictionary for ispell."
 HOMEPAGE="http://fmg-www.cs.ucla.edu/geoff/ispell-dictionaries.html#Russian-dicts"
