@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3387 2004/12/11 03:31:38 obz Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3388 2004/12/11 12:57:55 danarmak Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,12 @@
 ##
 ##   End example
 ##
+
+# <danarmak@gentoo.org> (11 Dec 2004)
+# Considered broken by upstream; future to be decided
+kde-base/qtsharp
+kde-base/xparts
+kde-base/dcopjava
 
 # <phosphan@gentoo.org> (10 Dec 2004)
 # testing a patch, no need to let everyone upgrade if it doesn't help
