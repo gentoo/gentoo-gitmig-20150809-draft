@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.69 2003/12/15 23:13:32 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.70 2004/01/05 17:15:19 gustavoz Exp $
+
+  05 Jan 2004; <gustavoz@gentoo.org> nautilus-2.4.1-r2.ebuild:
+  marked stable for sparc and hppa
 
   16 Dec 2003; <spider@gentoo.org> nautilus-2.4.1-r2.ebuild:
   KEYWORDS="x86", motivated by the fix of a bad crasher bug on file management
