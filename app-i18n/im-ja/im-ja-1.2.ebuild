@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.0-r2.ebuild,v 1.6 2004/06/28 13:07:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.2.ebuild,v 1.1 2004/07/02 08:36:31 usata Exp $
 
 inherit gnome2
 
@@ -11,26 +11,26 @@ SRC_URI="http://im-ja.sourceforge.net/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha"
-IUSE="${IUSE} gnome canna freewnn skk anthy"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+IUSE="gnome canna freewnn skk anthy"
 # --enable-debug causes build failure with gtk+-2.4
 #IUSE="${IUSE} debug"
 
+DEPEND="dev-lang/perl
+	dev-perl/URI
+	${RDEPEND}"
 RDEPEND="virtual/libc
-	>=dev-libs/glib-2.2.1
-	>=dev-libs/atk-1.2.2
-	>=x11-libs/gtk+-2.2.1
+	>=dev-libs/glib-2.4
+	>=dev-libs/atk-1.6
+	>=x11-libs/gtk+-2.4
 	>=x11-libs/pango-1.2.1
-	>=gnome-base/gconf-2.2
-	>=gnome-base/libglade-2.0
+	>=gnome-base/gconf-2.4
+	>=gnome-base/libglade-2.4
 	gnome? ( >=gnome-base/gnome-panel-2.0 )
 	freewnn? ( app-i18n/freewnn )
 	canna? ( app-i18n/canna )
 	skk? ( virtual/skkserv )
 	anthy? ( || ( app-i18n/anthy app-i18n/anthy-ss ) )"
-DEPEND="dev-lang/perl
-	dev-perl/URI
-	${RDEPEND}"
 
 DOCS="AUTHORS README ChangeLog TODO"
 
@@ -45,10 +45,7 @@ src_compile() {
 	use anthy || myconf="$myconf --disable-anthy"
 	use skk || myconf="$myconf --disable-skk"
 	#use debug && myconf="$myconf --enable-debug"
-
-	# gnome2_src_compile automatically sets debug IUSE flag
-	econf $myconf || die "econf im-ja failed"
-	emake || die "emake im-ja failed"
+	gnome2_src_compile $myconf || die
 }
 
 pkg_postinst() {

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 982c480b98f480e45afed73db057fee2 ChangeLog 4133
-MD5 b70a5a5842552ba6f1a53675d99c3303 im-ja-1.0-r2.ebuild 2217
 MD5 ab00ac17b6f4930c92052d5063675dba im-ja-0.8.ebuild 1157
-MD5 671f19c098650f48f938aba3ce96efd5 metadata.xml 522
 MD5 9262c361e3b5a0b44b9ad73e4b0a0d83 im-ja-1.1.ebuild 2105
-MD5 5c1d08c4d11cc41e8d8eca1909f38e09 files/digest-im-ja-1.1 61
+MD5 6ecfed4a3bcf2266363e7dbd4c02699d im-ja-1.2.ebuild 2101
+MD5 9514f1ba39bdfd07ff4b6aab481e602c ChangeLog 4268
+MD5 671f19c098650f48f938aba3ce96efd5 metadata.xml 522
 MD5 1a5a47abfb65885d8a267ee51b76bb91 files/digest-im-ja-0.8 61
-MD5 11de023a5b832cf863b4da9d9e1a4ad7 files/digest-im-ja-1.0-r2 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4BgiHTu7gpaalycRAuCbAKCAbqavmuJf/YuEtF99XFSG00s8cwCgsRdH
-FDpLIsjZSh3LyfhOfyDlL7k=
-=c4S9
------END PGP SIGNATURE-----
+MD5 5c1d08c4d11cc41e8d8eca1909f38e09 files/digest-im-ja-1.1 61
+MD5 d30a8eb5243225cdcf281d93311194dc files/digest-im-ja-1.2 61
