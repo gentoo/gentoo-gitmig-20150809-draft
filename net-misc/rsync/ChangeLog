@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.36 2004/01/03 18:00:58 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.37 2004/04/12 00:07:05 mr_bones_ Exp $
+
+  11 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> rsync-2.6.0.ebuild:
+  add IUSE (bug #47358); don't rdepend on sed; error check sed; tidy
 
 *rsync-2.6.0 (03 Jan 2004)
 
