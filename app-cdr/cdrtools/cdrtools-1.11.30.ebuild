@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-1.11.30.ebuild,v 1.4 2002/08/23 17:52:48 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-1.11.30.ebuild,v 1.5 2002/09/16 16:50:52 bjb Exp $
 
 DESCRIPTION="A set of tools for CDR drives, including cdrecord."
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
@@ -8,7 +8,7 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 MY_P=${PN}-${PV%.*}a${PV##*.}
 S=${WORKDIR}/${PN}-1.11
