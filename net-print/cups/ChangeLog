@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.38 2003/04/07 11:58:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.39 2003/05/30 09:28:04 aliz Exp $
+
+*cups-1.1.18-r5 (30 May 2003)
+
+  30 May 2003; Daniel Ahlberg <aliz@gentoo.org> cups-1.1.18.ebuild :
+  Security update.
 
 *cups-1.1.18-r4 (28 Jan 2003)
   
