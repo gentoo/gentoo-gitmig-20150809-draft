@@ -1,10 +1,14 @@
 # ChangeLog for sys-apps/sparc-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/ChangeLog,v 1.7 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/ChangeLog,v 1.8 2003/03/11 05:58:58 seemant Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *sparc-utils-1.9 (15 Feb 2002)
+
+  10 Mar 2003; Seemant Kulleen <seemant@gentoo.org> sparc-utils-1.9.ebuild,
+  files/sparc-utils_1.9-2.diff:
+  moved patch to mirrors, and use epatch instead
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> sparc-utils-1.9.ebuild :
   This is definitely not for mips.
