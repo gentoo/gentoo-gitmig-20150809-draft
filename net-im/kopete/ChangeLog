@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kopete
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.39 2004/04/24 21:04:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.40 2004/06/04 15:45:17 carlo Exp $
+
+  04 Jun 2004; Carsten Lohrke <carlo@gentoo.org> metadata.xml:
+  wrong herd name: kde -> kde-other
 
   24 Apr 2004; Jason Wever <weeve@gentoo.org> kopete-0.8.0.ebuild:
   Adjusted the kdelibs depend in 0.8.0 to correctly pull in the right version of
