@@ -1,0 +1,41 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/files/rklogd.init,v 1.1 2004/06/15 20:03:45 kang Exp $
+
+opts="depend checkconfig start stop reload"
+
+depend() {
+	need clock hostname
+}
+
+checkconfig() {
+   if [ ! -d /secoff/log ]; then
+   	eerror "Please first create /secoff/log directory"
+	return 1
+   fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting rklogd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/rklogd
+	eend $? "Failed to start rklogd"
+}
+
+stop() {
+	ebegin "Stopping rklogd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/rklogd.pid
+	eend $? "Failed to stop rklogd"
+	sleep 1 # needed for rklogd to stop in case we're restarting
+}
+
+reload() {
+	if [ ! -f /var/run/rklogd.pid ]; then
+		eerror "rklogd isn't running"
+		return 1
+	fi
+	ebegin "Reloading configuration and re-opening log files"
+	kill -HUP `cat /var/run/rklogd.pid` &>/dev/null
+	eend $?
+}
