@@ -1,0 +1,6 @@
+#!/bin/bash
+cd /usr/portage
+cvs update -dP
+cd /usr/local/httpd/htdocs
+/usr/sbin/pytext index.pyhtml > index.html
+echo "Web site regenerated."

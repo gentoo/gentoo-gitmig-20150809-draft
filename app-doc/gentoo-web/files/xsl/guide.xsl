@@ -15,7 +15,8 @@
 	<td>&amp;nbsp;</td></tr>
 	<tr>
 		<td colspan="2" class="doclink">
-			<a href="/doc" style="color: #33ff00">documentation</a> :: <xsl:value-of select="title"/>
+			<!-- <a href="/doc" style="color: #33ff00">documentation</a> :: <xsl:value-of select="title"/> -->
+			documentation :: <xsl:value-of select="title"/>
 		</td>
 	</tr>
 </table>

@@ -1,0 +1,15 @@
+BODY 	{ background: white; color: black; font-size: 0.9em; font-family: Georgia, Verdana, Arial, Helvetica; }
+.main	{ margin-top: 0.2in; margin-bottom: 0.2in; margin-left: 1.0in; margin-right: 0.5in; font-size: 0.9em; font-weight: normal; }
+.tab	{ margin-top: 0.0in; margin-bottom: 0.0in; margin-left: 1.0in; margin-right: 0.5in; font-size: 0.9em; font-weight: normal; }
+.title	{ margin-left: 0.5in; margin-top: 0.4in; font-size: 1.5em; font-weight: bold; }
+.copy { font-size: 0.8em; font-style: italic; color: #b0b0b0; text-align: right;}
+.bgimage { background-repeat: no-repeat; background-position: center; }
+.outabit { margin-left: 0.5in; margin-top: 0.1in; font-size:0.8em; color: #808080; margin-bottom: 0.1in; margin-right: 0.5in;}
+.navbar { background: #e0e0ff; }
+.navtitle { margin-left: 0.2in; margin-right: 0.2in; margin-top: 0.25in; margin-bottom: 0.05in; font-size: 0.8em; font-weight: bold; }
+.navitem { margin-left: 0.25in; margin-right: 0.2in; margin-top: 0.0in; margin-bottom: 0.0in; font-size: 0.8em; }
+.itemdesc { margin-left: 0.25in; margin-right: 0.2in; margin-top: 0.0in; margin-bottom: 0.1em; font-size: 0.7em; }
+.ibm { font-weight: bold; color: #0000ff; }
+.navarticle { font-style: italic; }
+.infobox { margin: 0.5em; background: #e0e0ff; }
+.info { font-size: 0.6em; margin: 0.5em; color: #505080; text-align: center; background: #e0e0ff; }

@@ -1,0 +1,91 @@
+<DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <title>Gentoo Technologies, Inc.</title>
+   
+  </head>
+  
+  <body bgcolor=ffffff color=000000 topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+ <html>
+<table width="100%" border=0><td width="99%" valign="top"><p><center><img src="gentoolinux.gif">
+<h2>Gentoo Linux Development Guide</h2></center></p>
+<p class="main">
+<font size=+2><b>Getting Started</b></font><br>
+After you get Gentoo Linux installed and you play around a bit, you may find some bugs or quirks in some packages,
+or maybe you'd like to install the latest Gentoo Linux software packages or update your current packages.  To do
+this, you'll need to download our Portage ports tree.  We have provided an anonymous rsync server that you can 
+use to get our latest Portage tree.  Here's how you use it.<br><br>
+
+First, make a directory called /usr/portage.  Then, make sure rsync is
+installed.  If it isn't, download it from our ibiblio mirror and
+install it by typing "pkgmerge rsync-x.y.z.tbz2".  Then, use the
+following command to synchronize your Portage directory:
+<pre>
+# rsync -avz rsync://cvs.gentoo.org/gentoo-x86-portage/* /usr/portage
+</pre>
+
+Periodically, you'll want to run this next form of the rsync command,
+which will delete any old ebuild scripts.  <font
+color="#ff0000">Please note that it will delete any of your personal
+changes or additions to the /usr/portage tree, so use this command
+with caution.  If you are making regular changes to your /usr/portage
+tree, you may want to contact Daniel for CVS access so that you can
+commit some or all of them to our official CVS tree.  With that being said, here's the rsync update command with
+deletion:</font>
+
+<pre>
+# rsync -avz --delete --exclude=distfiles/* --exclude=packages/* rsync://cvs.gentoo.org/gentoo-x86-portage/* /usr/portage
+</pre>
+</p><p>
+<font size=+2><b>Updating Portage</b></font><br>
+Before using our Portage tree, it's important that you update Portage.  To do this, do the following:
+<pre>
+# cd /usr/portage/sys-apps/portage
+# ebuild portage-x.y.z.ebuild merge
+</pre>
+Now you'll be using the most recent version of portage, and you can start to use our ebuild system to update your installed software.
+</p><p>
+<font size=+2><b>Important Commands</b></font><br>
+To see how up-to-date your system is, type "portage-maintain | more".  Portage will display a list of those
+packages which could be updated to the most recent version.<br><br>
+To install a package, enter its directory in /usr/portage, i.e:
+<pre>
+# cd /usr/portage/net-irc/xchat
+</pre>
+Then, run "ebuild merge":
+<pre>
+# ebuild xchat-1.4.2.ebuild merge
+</pre>
+The xchat sources will be downloaded (and stored in /usr/portage/distfiles), verified, unpacked, compiled and installed to a temporary directory.  Then, they will be merged into the local filesystem and a package database will be created at /var/db/pkg/net-irc/xchat/CONTENTS, containing the files installed and the md5sums for all files.
+</p>
+
+<p> <font size=+2><b>Upgrading packages</b></font><br> The standard
+way to upgrade packages under Gentoo Linux is to merge the new
+package, and then unmerge the old package.  This is safe (and fun!) to
+do.  First, merge the new package as per the above instructions.
+Then, uninstall the old package by typing something like:
+<pre>
+# portage-unmerge net-irc/xchat-1.0.0-r1
+</pre>
+
+It's important to specify the category and exact package version in
+the above format.  Then, this particular package will be unmerged.
+Portage uses what is called a "safe" unmerge; it's only going to
+unlink original files.  If a file has been overwritten or modified in
+some way, it will be left on the filesystem (presumably, you've
+installed a newer version of the package).  So, if you unmerge an old
+version of xchat after merging a newer version, the xchat executable
+will not be deleted off your filesystem, since it has a newer
+timestamp and different md5sum.  Safe unmerges are really great
+because they ensure that some version of the application is available
+at all times.  If you had to unmerge first, then xchat wouldn't be
+available for a few minutes while the new version was being merged.
+</p>
+<p><font color="#ff0000">That's all for now -- more instructions will
+follow as I have time.  I hope this helps.</font></p>
+
+
+</td></tr></table>
+
+</body>
+</html>
