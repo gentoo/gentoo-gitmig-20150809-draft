@@ -1,5 +1,4 @@
 move net-p2p/dcgui-qt net-p2p/valknut
-move dev-java/jython dev-java/jython-bin
 move net-p2p/bittorrent-theshadow net-p2p/bittornado
 slotmove <=app-editors/emacs-cvs-21.3.50 0 21.3.50
 move media-libs/sidplay-libs media-libs/libsidplay
@@ -69,7 +68,6 @@ move dev-java/jump dev-java/jump-bin
 move dev-java/maven dev-java/maven-bin
 move dev-java/mg4j dev-java/mg4j-bin
 move dev-java/qat dev-java/qat-bin
-move dev-java/regexp dev-java/regexp-bin
 move dev-java/saxon dev-java/saxon-bin
 move dev-java/snipsnap dev-java/snipsnap-bin
 move dev-java/webgraph dev-java/webgraph-bin
@@ -176,8 +174,9 @@ slotmove gnome-base/ORBit2 0 2
 move gnome-base/ORBit gnome-base/orbit
 move gnome-base/ORBit2 gnome-base/orbit
 move net-misc/gwget2 net-misc/gwget
-
 move net-www/dspam-web www-apps/dspam-web
 move dev-tcltk/mmucl games-mud/mmucl
 move app-editors/xemacs-packages-sumo app-xemacs/xemacs-packages-sumo
 move x11-base/xfree-drm x11-base/x11-drm
+move dev-java/jython-bin dev-java/jython
+move dev-java/regexp-bin dev-java/regexp
