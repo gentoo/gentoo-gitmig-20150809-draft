@@ -43,7 +43,7 @@ SLOT="0"
 # instead of relying on an external package.mask file. Right now, you
 # should set the KEYWORDS variable for every ebuild so that it contains
 # the names of all the architectures with which the ebuild works. We have
-# 5 official architecture names right now: "~x86", "~ppc", "~sparc", "~sparc64"
+# 5 official architecture names right now: "~x86", "~ppc", "~sparc", "~sparc"
 # and "~alpha".  The ~ in front of the architecture indicates that the
 # package is new and should be considered unstable until testing proves its
 # stability.  Once packages go stable the ~ prefix is removed.
@@ -51,13 +51,16 @@ SLOT="0"
 # you'd specify: KEYWORDS="~x86 ~ppc"
 # For packages that are platform-independent (like Java, PHP or Perl
 # applications) specify all keywords.
+# For binary packages, use -* and then list the archs the bin package
+# exists for.  If the package was for an x86 binary package, then
+# KEYWORDS would be set like this: KEYWORDS="-* x86"
 # DO NOT USE KEYWORDS="*". This is deprecated and only for backward
 # compatibility reasons.
 KEYWORDS="~x86"
 
 # Comprehensive list of any and all USE flags leveraged in the ebuild,
 # with the exception of any ARCH specific flags, i.e. "ppc", "sparc",
-# "sparc64", "x86" and "alpha". This is a required variable. If the
+# "sparc", "x86" and "alpha". This is a required variable. If the
 # ebuild doesn't use any USE flags, set to "".
 IUSE="X gnome"
 
