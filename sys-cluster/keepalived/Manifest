@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 819d015d0df73f25685a7ae89bf20867 keepalived-1.1.6.ebuild 1326
+MD5 c53a742890d5d37588b3bc0eac43d610 ChangeLog 3192
+MD5 809f94f0f77e80ee92b389de54e5ca13 keepalived-1.1.5.ebuild 1426
+MD5 e0bda0fecab2722ed34dfddf945d7447 keepalived-1.1.6.ebuild 1327
+MD5 af2791a93593adaedfb5041b2ae2ef1f keepalived-1.1.7.ebuild 1326
 MD5 b7c2458da13debeaf134003b8448fdf4 metadata.xml 347
-MD5 f209b7255c5ce0a8a26486f0b8aef7f0 keepalived-1.1.7.ebuild 1326
-MD5 1f135a099f2368a464604b5802a63bba keepalived-1.1.5.ebuild 1425
-MD5 3913399c93d7aa965bb32f4613a22cb9 ChangeLog 3084
-MD5 f74c89e703a83cc81224e7abd0b084ef files/digest-keepalived-1.1.7 68
-MD5 5f5fe4377fe13ed4b83bd4ad10496428 files/digest-keepalived-1.1.6 68
 MD5 f3304b4ccd8b7876ffc599ca9e5b37ce files/digest-keepalived-1.1.5 68
+MD5 5f5fe4377fe13ed4b83bd4ad10496428 files/digest-keepalived-1.1.6 68
+MD5 f74c89e703a83cc81224e7abd0b084ef files/digest-keepalived-1.1.7 68
 MD5 eb44784c8591fa108fa55b5cacd29745 files/init-keepalived 746
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBTdfLKtJO8LeSoosRAqkPAJ4+g61HzeXCO3CBq8IHdMUfSy+ghQCffgn2
-YqdvtSesJIO2j61Iz0uqYOA=
-=cKFP
------END PGP SIGNATURE-----
