@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.56 2003/10/09 19:14:41 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.57 2003/10/10 18:41:23 pappy Exp $
+
+  10 Oct 2003; Alexander Gabert <pappy@gentoo.org> db-3.2.9-r7.ebuild,
+  db-3.2.9-r9.ebuild, db-4.0.14-r2.ebuild:
+  removed hardened-gcc comment fields
 
   09 Oct 2003; Alexander Gabert <pappy@gentoo.org> db-4.0.14-r2.ebuild:
   commented out hardened-gcc flags
