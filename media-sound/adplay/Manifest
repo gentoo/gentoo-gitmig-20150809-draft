@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 55b6a05cdf20106b95986d0952756d74 adplay-1.4.ebuild 772
+MD5 97b71894a9471f510bcd1a7bf4d4b520 ChangeLog 756
 MD5 1ff0163501210a2517291b1a4bb2a003 adplay-1.3.ebuild 777
-MD5 2cbdc4ec8c64ff099f4c813cfd4766fb ChangeLog 646
 MD5 71b09a1721c4dd0557be0abe8dd46315 metadata.xml 219
+MD5 dff70996418557861f82ef7832f13893 adplay-1.4.ebuild 779
 MD5 a37117ac2a2cf7dcde5ec34efe68e121 files/digest-adplay-1.3 63
 MD5 fe853638700b2be12a84c6d2f804bae8 files/digest-adplay-1.4 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBXYtEchej4aZK9/cRAtuTAJ9wt6fHZnAywZm6A5vgDthoT23F1wCfedL2
-kR0X8vzS0GfpO2zXF+Z1Uvs=
-=uzVl
+iD8DBQFBkzqVArHZZzCEUG0RAoLVAJ9TKByJgIr0PSi2m9WcqsX3pnH1hgCcCmT7
+dLxH6tNg1MuGBhAs/6mj88o=
+=HmvD
 -----END PGP SIGNATURE-----
