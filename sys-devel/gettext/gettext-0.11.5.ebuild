@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.3.ebuild,v 1.3 2002/08/14 03:48:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.5.ebuild,v 1.1 2002/08/16 18:35:37 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
@@ -13,6 +13,7 @@ KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack() {
 	unpack ${A}
+	
 	cd ${S}/misc
 	cp Makefile.in Makefile.in.orig
 	#This fix stops gettext from invoking emacs to install the po mode
@@ -21,7 +22,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
+	local myconf=""
 	use nls || myconf="--disable-nls"
 
 	econf \
@@ -35,13 +36,15 @@ src_compile() {
 src_install() {
 	einstall \
 		lispdir=${D}/usr/share/emacs/site-lisp \
-		docdir=${D}/usr/share/doc \
+		docdir=${D}/usr/share/doc/${PF}/html \
 		|| die
 
-	dodoc AUTHORS BUGS COPYING ChangeLog DISCLAIM NEWS README* THANKS TODO
+	exeopts -m0755
+	exeinto /usr/bin
+	doexe misc/gettextize
 	
 	#glibc includes gettext; this isn't needed anymore
-	rm -rf ${D}/usr/lib/*
+	rm -rf ${D}/usr/{include,lib}/*
 
 	#again, installed by glibc
 	rm -rf ${D}/usr/share/locale/locale.alias
@@ -51,7 +54,7 @@ src_install() {
 		mv ${D}/usr/doc/gettext ${D}/usr/share/doc/${PF}/html
 		rm -rf ${D}/usr/doc
    	fi
-	exeopts -m0755
-	exeinto /usr/bin
-	doexe misc/gettextize
+
+	dodoc AUTHORS BUGS COPYING ChangeLog DISCLAIM NEWS README* THANKS TODO
 }
+
