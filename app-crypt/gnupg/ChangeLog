@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.69 2004/07/31 17:00:22 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.70 2004/07/31 22:44:51 taviso Exp $
+
+  31 Jul 2004; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.5.ebuild:
+  installation fails with nls enabled, using sed to make the
+  access to `mkinstalldirs` consistent. #59012
 
 *gnupg-1.2.5 (31 Jul 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.5.ebuild,v 1.1 2004/07/31 17:00:22 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.5.ebuild,v 1.2 2004/07/31 22:44:51 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -46,6 +46,12 @@ src_unpack() {
 	fi
 
 	use ppc64 && epatch ${FILESDIR}/gnupg-1.2.4.ppc64.patch
+
+	# trying to fix the install logic that breaks when nls
+	# is enabled. #59012
+	sed -i \
+	 's#\(\(mkinstalldirs\) = \).*#\1\$(SHELL) \$(top_srcdir)/scripts/\2#g' \
+	 ${S}/po/Makefile.in.in ${S}/intl/Makefile.in
 }
 
 src_compile() {
@@ -94,7 +100,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall libexecdir="${D}/usr/lib/gnupg"
+	einstall libexecdir="${D}/usr/lib/gnupg" || die
 
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
@@ -118,7 +124,7 @@ pkg_postinst() {
 	einfo "passphrases, etc. at runtime but may make some sysadmins nervous."
 	echo
 	if use idea; then
-		einfo "you have compiled ${PN} with support for the IDEA algorithm, this code"
+		einfo "you've compiled ${PN} with support for the IDEA algorithm, this code"
 		einfo "is distributed under the GPL in countries where it is permitted to do so"
 		einfo "by law."
 		einfo
