@@ -1,6 +1,15 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.3 2002/06/18 17:50:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.4 2002/07/04 03:58:05 naz Exp $
+
+*eterm-0.9.1-r4 (18 Jun 2002)
+
+  18 Jun 2002; Michael Nazaroff <naz@gentoo.org> eterm-0.9.1-r5.ebuild:
+
+      #4051 eterm needs imlib other wise it will not compile, I'm not sure why
+      there is --with-imlib option in ./configure, other then now in the cvs
+      version that option does work, maybe they where added it in the future?
+      Thanx to the guys on #e for helping me out on this :o).
 
 *eterm-0.9.1-r4 (18 Jun 2002)
 
