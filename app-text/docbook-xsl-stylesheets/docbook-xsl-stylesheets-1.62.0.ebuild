@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.62.0.ebuild,v 1.2 2003/09/24 22:02:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.62.0.ebuild,v 1.3 2003/09/30 02:45:36 obz Exp $
 
 S=${WORKDIR}/docbook-xsl-${PV}
 DESCRIPTION="XSL Stylesheets for Docbook"
@@ -21,8 +21,7 @@ src_install() {
 	cp -af doc ${D}/usr/share/doc/${P}/html
 	cp VERSION ${D}/${DEST}
 
-	# manpages are excluded here because they arent fully supported
-	for i in common extensions fo html htmlhelp images javahelp lib template xhtml
+	for i in common extensions fo html htmlhelp images javahelp lib manpages template xhtml
 	do
 		cd ${S}
 		cp -af ${i} ${D}/${DEST}
