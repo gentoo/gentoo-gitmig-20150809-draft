@@ -1,8 +1,24 @@
 # ChangeLog for net-irc/lostirc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.6 2002/12/21 15:59:33 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.7 2003/02/07 20:11:15 phoenix Exp $
+
+*lostirc-0.2.5 (07 Feb 2003)
+
+  07 Feb 2003; phoen][x <phoenix@gentoo.org> lostirc-0.2.5.ebuild,
+  files/digest-lostirc-0.2.5 :
+  Bumped to new version. This closes bug #14896.
+
+*lostirc-0.2.4 (07 Feb 2003)
+
+  07 Feb 2003; phoen][x <phoenix@gentoo.org> lostirc-0.2.4.ebuild,
+  files/digest-lostirc-0.2.4 :
+  Bumped to new version. This closes bug #12857.
 
 *lostirc-0.2.3 (21 Dec 2002)
+
+  07 Feb 2003; phoen][x <phoenix@gentoo.org> lostirc-0.2.3.ebuild,
+  files/digest-lostirc-0.2.3 :
+  Put this ebuild into the stable x86 profile.
 
   21 Dec 2002; phoen][x <phoenix@gentoo.org> lostirc-0.2.3.ebuild,
   files/digest-lostirc-0.2.3 :
