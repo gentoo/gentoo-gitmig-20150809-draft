@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/rtgraph
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtgraph/ChangeLog,v 1.1 2004/04/02 22:02:29 kloeri Exp $
+
+*rtgraph-0.70 (03 Apr 2004)
+
+  03 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> metadata.xml,
+  rtgraph-0.70.ebuild:
+  Initial import, ebuild by Lukasz Strzygowski <lucass@gentoo.pl>.
+
