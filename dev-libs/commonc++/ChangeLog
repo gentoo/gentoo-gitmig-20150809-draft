@@ -1,10 +1,17 @@
 # ChangeLog for dev-libs/commonc++
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/ChangeLog,v 1.8 2003/02/12 06:02:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/ChangeLog,v 1.9 2003/05/09 03:12:49 heim Exp $
+
+*commonc++-1.9.7-r3 (08 May 2003)
+
+  08 May 2003; Todd Heim <heim@gentoo.org> commonc++-1.9.7-r3.ebuild:
+  patched to compile on ppc. cleaned up hard-coded version number in ${S}. uses
+  epatch now.
+
+*commonc++-1.9.7-r2 (03 Oct 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*commonc++-1.9.7-r1 (03 Oct 2002)
+
   03 Oct 2002; Matt Keadle <mkeadle@gentoo.org> commonc++-1.9.7-r2:
   Updated to resolv Bug #6115
 
