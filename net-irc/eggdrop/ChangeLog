@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.17 2004/06/07 04:13:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.18 2004/06/10 01:42:44 zul Exp $
+
+  09 Jun 2004; Chuck Short <zul@gentoo.org> eggdrop-1.6.15-r1.ebuild,
+  eggdrop-1.6.15-r2.ebuild, eggdrop-1.6.15.ebuild:
+  Changed pre_pkg to pkg_setup. Closes #53275.
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> eggdrop-1.6.15-r1.ebuild,
   eggdrop-1.6.15-r2.ebuild, eggdrop-1.6.15.ebuild:

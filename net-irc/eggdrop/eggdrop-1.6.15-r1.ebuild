@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15-r1.ebuild,v 1.9 2004/06/07 04:13:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15-r1.ebuild,v 1.10 2004/06/10 01:42:44 zul Exp $
 
 inherit fixheadtails eutils
 
@@ -16,7 +16,7 @@ IUSE="debug static ipv6 mysql"
 DEPEND="dev-lang/tcl
 	mysql? ( dev-db/mysql )"
 
-pre_pkg() {
+pkg_setup() {
 	use ipv6 && \
 		ewarn "Note: If eggdrop is built with ipv6 support, the dns.so module is"
 		ewarn "not built."
