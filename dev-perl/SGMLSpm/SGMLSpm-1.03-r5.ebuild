@@ -1,18 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r5.ebuild,v 1.13 2004/10/08 14:56:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r5.ebuild,v 1.14 2004/11/08 14:43:41 vapier Exp $
 
 MY_P="${P}ii"
-S=${WORKDIR}/${PN}
 DESCRIPTION="Perl library for parsing the output of nsgmls"
-SRC_URI="http://search.cpan.org/CPAN/authors/id/D/DM/DMEGG/${MY_P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/author/DMEGG/SGMLSpm-1.03ii/"
-IUSE=""
-SLOT="0"
+SRC_URI="http://search.cpan.org/CPAN/authors/id/D/DM/DMEGG/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 sparc alpha ~ppc hppa ia64 mips ppc64"
-DEPEND=">=dev-lang/perl-5.8.0-r12
-		>=sys-apps/sed-4"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ~ppc ppc64 s390 sparc x86"
+IUSE=""
+
+RDEPEND=">=dev-lang/perl-5.8.0-r12"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
@@ -32,7 +36,7 @@ src_install () {
 	dodir /usr/bin
 	dodir /usr/lib/${package}/vendor_perl/${version}
 	dodir /usr/share/SGMLS
-	dodoc BUGS COPYING ChangeLog README TODO
+	dodoc BUGS ChangeLog README TODO
 	make install -f ${S}/Makefile || die
 	make docs -f ${S}/Makefile || die
 #	cd ${D}/usr/lib/${package}/vendor_perl/${version}
