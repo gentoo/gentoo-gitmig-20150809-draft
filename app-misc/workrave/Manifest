@@ -2,7 +2,7 @@ MD5 b4985c9cdc448c81a24b64bd0b21d2ba ChangeLog 1459
 MD5 80c52743a9a0fa5e38fff1e7463fc9dd workrave-1.0.0.ebuild 1013
 MD5 cc5c432bc40bd47f5ae7f5fb15fc4380 workrave-1.2.2.ebuild 1324
 MD5 ffcad1d8e958149e36b9d2c454ed008f workrave-1.4.0.ebuild 1686
-MD5 0e5292cea917a34049c946dfccefc35c workrave-1.4.0-r1.ebuild 2141
+MD5 e21b761e9608e48690d845f3ecd264c6 workrave-1.4.0-r1.ebuild 2275
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 eee2df47107a2d3cb227075415706c59 files/digest-workrave-1.0.0 66
 MD5 bc9d7939a5ed8b03c2c327360e7b1c43 files/digest-workrave-1.4.0-r1 66
