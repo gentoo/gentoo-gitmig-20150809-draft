@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1.ebuild,v 1.14 2004/07/14 01:45:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1.ebuild,v 1.15 2004/07/30 23:36:52 dragonheart Exp $
 
 inherit java nsplugins gcc
 
@@ -9,14 +9,14 @@ DESCRIPTION="Blackdown Java Runtime Environment 1.4.1"
 
 SRC_URI="
 	x86? (
-		http://www.mirror.ac.uk/sites/ftp.blackdown.org/java-linux/JDK-1.4.1/i386/01/j2re-1.4.1-01-linux-i586-gcc3.2.bin
-		http://www.mirror.ac.uk/sites/ftp.blackdown.org/java-linux/JDK-1.4.1/i386/01/j2re-1.4.1-01-linux-i586-gcc2.95.bin
+		ftp://ftp.uk.linux.org/pub/linux/java//JDK-1.4.1/i386/01/j2re-1.4.1-01-linux-i586-gcc3.2.bin
+		ftp://ftp.uk.linux.org/pub/linux/java/JDK-1.4.1/i386/01/j2re-1.4.1-01-linux-i586-gcc2.95.bin
 	)
 	amd64? (
-		http://www.mirror.ac.uk/sites/ftp.blackdown.org/java-linux/JDK-1.4.1/i386/01/j2re-1.4.1-01-linux-i586-gcc3.2.bin
+		ftp://ftp.uk.linux.org/pub/linux/java/JDK-1.4.1/i386/01/j2re-1.4.1-01-linux-i586-gcc3.2.bin
 	)
 	sparc? (
-		http://www.mirror.ac.uk/sites/ftp.blackdown.org/java-linux/JDK-1.4.1/sparc/01/j2re-1.4.1-01-linux-sparc-gcc3.2.bin
+		ftp://ftp.uk.linux.org/pub/linux/java/JDK-1.4.1/sparc/01/j2re-1.4.1-01-linux-sparc-gcc3.2.bin
 	)"
 
 HOMEPAGE="http://www.blackdown.org"
