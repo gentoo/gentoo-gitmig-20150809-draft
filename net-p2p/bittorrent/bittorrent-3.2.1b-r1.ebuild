@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.2.1b-r1.ebuild,v 1.2 2003/07/13 20:28:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.2.1b-r1.ebuild,v 1.3 2003/09/08 07:06:22 msterret Exp $
 
 inherit distutils
 
@@ -32,13 +32,13 @@ src_unpack() {
 pkg_postinst() {
 	MAILCAP_STRING="application/x-bittorrent; /usr/bin/btdownloadgui.py '%s'; test=test -n \"\$DISPLAY\""
 
-    if [ -n "`grep 'application/x-bittorrent' /etc/mailcap`" ]; then
-    	# replace bittorrent entry if it already exists
+	if [ -n "`grep 'application/x-bittorrent' /etc/mailcap`" ]; then
+		# replace bittorrent entry if it already exists
 		einfo "updating bittorrent mime info"
-        sed -i "s,application/x-bittorrent;.*,${MAILCAP_STRING}," /etc/mailcap
-    else
-    	# add bittorrent entry if it doesn't exist
-        einfo "adding bittorrent mime info"
+		sed -i "s,application/x-bittorrent;.*,${MAILCAP_STRING}," /etc/mailcap
+	else
+		# add bittorrent entry if it doesn't exist
+		einfo "adding bittorrent mime info"
 		echo "${MAILCAP_STRING}" >> /etc/mailcap
 	fi
 }
