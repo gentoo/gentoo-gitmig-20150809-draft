@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.6 2004/04/18 08:14:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.7 2004/04/22 06:12:24 eradicator Exp $
 
 inherit eutils fixheadtails
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc amd64"
 
 RDEPEND="virtual/glibc"
-IUSE=""
+IUSE="doc"
 S="${WORKDIR}/speech_tools"
 
 src_unpack() {
