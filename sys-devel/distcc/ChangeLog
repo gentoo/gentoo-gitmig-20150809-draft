@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.112 2004/08/22 19:14:09 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.113 2004/08/24 02:18:14 tgall Exp $
+
+  22 Aug 2004; Tom Gall <tgall@gentoo.org> distcc-2.16.ebuild:
+  added ~ppc64, bug #59224
 
 *distcc-2.17-r1 (22 Aug 2004)
 
