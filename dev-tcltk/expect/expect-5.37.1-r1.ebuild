@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r1.ebuild,v 1.16 2004/02/22 08:43:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r1.ebuild,v 1.17 2004/03/10 12:06:40 aliz Exp $
+
+inherit gnuconfig
 
 #remove the trailing ".0" from the tarball version
 S=${WORKDIR}/${P%.1}
@@ -18,6 +20,10 @@ DEPEND=">=dev-lang/tcl-8.2
 	X? ( >=dev-lang/tk-8.2 )"
 
 src_compile() {
+	if [ "${ARCH}" == "amd64" ]; then
+		gnuconfig_update
+	fi
+
 	local myconf
 	local tclv
 	local tkv
