@@ -2,7 +2,9 @@ MD5 47bdd51da4e1dfff5aa7dfd8c4035d9a ChangeLog 3984
 MD5 c0632bb68ca1eff470863f29fc0b8016 shorewall-1.4.5-r1.ebuild 853
 MD5 a493d451eb6c2305dfc4790467ed53a4 shorewall-1.4.6-r3.ebuild 929
 MD5 4dbbfa6e83beb6af953e5cb46b56d474 shorewall-1.4.7c.ebuild 937
+MD5 7ab0d349092b87b29d9f13d366b1f532 shorewall-1.4.8.ebuild 928
 MD5 7c8660b2d2395b8c9b6cc7f5902170f4 files/digest-shorewall-1.4.5-r1 65
 MD5 7aff60ae2f567399852afcf3c06f7003 files/shorewall 460
 MD5 0a6e85e5774c719f79ae8d25205e5e61 files/digest-shorewall-1.4.6-r3 66
+MD5 f0e9d43d7f5e6fda651cb08cccb77367 files/digest-shorewall-1.4.8 65
 MD5 09e883bdb12cdb9fcb434a9678062796 files/digest-shorewall-1.4.7c 66
