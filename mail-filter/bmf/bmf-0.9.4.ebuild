@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/bmf-0.9.4.ebuild,v 1.4 2004/07/14 16:38:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/bmf-0.9.4.ebuild,v 1.5 2004/11/30 21:57:55 swegener Exp $
 
 IUSE="mysql berkdb"
 
@@ -12,8 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 
-DEPEND="mysql? ( >=mysql-3.23.56 )
-	berkdb? ( >=db-3.2.9 )"
+DEPEND="mysql? ( >=dev-db/mysql-3.23.56 )
+	berkdb? ( >=sys-libs/db-3.2.9 )"
 
 src_compile() {
 	local myconf

@@ -1,4 +1,14 @@
-MD5 0f41c2c0ac93d75940e5287299f71e89 bmf-0.9.4.ebuild 949
-MD5 d40f0b969812bbbd7db7520c1fdd2a2d ChangeLog 608
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 38d972e18b2513852616ccb38b642437 bmf-0.9.4.ebuild 965
+MD5 90b0d3c63ec148f45b2c891f9ae19fb9 ChangeLog 715
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 1288bea62a320ffa52af6c5e4fa16100 files/digest-bmf-0.9.4 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrOzvI1lqEGTUzyQRAgg7AJ9/n51l+9IdSKuSsk0SMtIn1ec4JACfUG+7
+dIoqlySUlpp0ncZTvv522Gg=
+=NOus
+-----END PGP SIGNATURE-----
