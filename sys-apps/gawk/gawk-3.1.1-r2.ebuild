@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.1-r2.ebuild,v 1.3 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.1-r2.ebuild,v 1.4 2003/07/22 14:59:31 azarah Exp $
 
 IUSE="nls build"
 
@@ -20,7 +20,7 @@ src_unpack() {
 	unpack ${A}
 
 	# Copy filefuncs module's source over ...
-	cp -a ${FILESDIR}/filefuncs ${WORKDIR}/ || die
+	cp -dR ${FILESDIR}/filefuncs ${WORKDIR}/ || die
 }
 
 src_compile() {
