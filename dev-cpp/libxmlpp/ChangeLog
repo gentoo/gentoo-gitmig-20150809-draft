@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.17 2005/02/25 02:12:29 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.18 2005/03/05 17:28:14 gustavoz Exp $
+
+  05 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> libxmlpp-1.0.4.ebuild:
+  Stable on sparc
 
   24 Feb 2005; Joe McCann <joem@gentoo.org> libxmlpp-2.8.0.ebuild:
   Build api docs if use=doc. Thanks to ka0ttic@gentoo.org on bug 82797

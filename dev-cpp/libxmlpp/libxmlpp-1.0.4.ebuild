@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-1.0.4.ebuild,v 1.3 2005/02/25 02:03:40 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-1.0.4.ebuild,v 1.4 2005/03/05 17:28:14 gustavoz Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnome/sources/libxml++/${PV%.*}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 
 RDEPEND=">=dev-libs/libxml2-2.5.8"
 

@@ -1,10 +1,20 @@
-MD5 376feee9b9b72a5c25dc2106ed61572a ChangeLog 2810
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 30287c3796e796211c16ff91dd30d5d2 ChangeLog 2910
 MD5 9efdd4c9885894848e8dad5b9faf3f3e libxmlpp-0.27.0.ebuild 891
 MD5 36d14f254de09f7793e51b0e7cd0c106 libxmlpp-1.0.2.ebuild 793
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 69cf0f676ae74b1351e4d0a794cbc78f libxmlpp-1.0.4.ebuild 831
+MD5 f70948b98f74dfaccd385cbb233e6976 libxmlpp-1.0.4.ebuild 834
 MD5 a2eb0b7f9203d156b9be90d1d76006dd libxmlpp-2.8.0.ebuild 934
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 ababb33432c4d45282fa2fe2c0a2b0d5 files/digest-libxmlpp-0.27.0 67
 MD5 d8908feca35d34dbd88eab2dc2eaa621 files/digest-libxmlpp-1.0.2 67
 MD5 ddefcfb1e4627340a979fe347b62745e files/digest-libxmlpp-1.0.4 67
 MD5 5ec1396a583e911f6878f55a92c91d91 files/digest-libxmlpp-2.8.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCKew2KRy60XGEcJIRAuGNAKCK9BX7s12xLRMkQY8iFNYGHyBRWgCfQ+su
+5RVDt2fKgfCzjoKnkq7Ncjg=
+=pwtH
+-----END PGP SIGNATURE-----
