@@ -4,8 +4,8 @@ MD5 cd6802a85de5be366c09a42cd5542773 kdeartwork-3.3.1.ebuild 675
 MD5 8ca410cf2ad980f70f163c70840e3630 kdeartwork-3.2.0.ebuild 492
 MD5 ebc4fb1b9774f1ce5154a56b5af43fb9 kdeartwork-3.2.2.ebuild 496
 MD5 8f0cb485ecbd54f88bbdf5fe14ca590e kdeartwork-3.3.0.ebuild 850
-MD5 04c2a720d360091fa79510227bf5d772 kdeartwork-3.3.2.ebuild 680
-MD5 b510920b6a02787bd26f644702d2cbd7 ChangeLog 12366
+MD5 fbd8c1c0dce040ac9e68b79a4005f456 kdeartwork-3.3.2.ebuild 678
+MD5 9b78df74be96798b0bea872c3489ec89 ChangeLog 12486
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 667743a96cce7b95f425585895883e4f files/3.3.0-kfiresaver-configure.in.in.patch 499
 MD5 4affe90f3e8d7a728eb0089811b613fc files/digest-kdeartwork-3.1.5 71
