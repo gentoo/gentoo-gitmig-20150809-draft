@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.24 2004/02/22 13:30:33 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.25 2004/03/05 23:12:31 suka Exp $
+
+*openoffice-ximian-1.1.51 (06 Mar 2004)
+
+  06 Mar 2004; <suka@gentoo.org> openoffice-ximian-1.1.51.ebuild:
+  New version of the Ximian patchset, provides some font rendering speedups,
+  lots of bug fixes and other goodies
 
   22 Feb 2004; <suka@gentoo.org> openoffice-ximian-1.1.50.ebuild:
   Now uses newest icon package, .desktop file installation simplified
