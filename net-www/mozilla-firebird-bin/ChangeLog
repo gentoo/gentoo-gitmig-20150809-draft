@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla-firebird-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/ChangeLog,v 1.6 2003/08/01 04:36:20 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/ChangeLog,v 1.7 2003/08/13 13:20:14 brad Exp $
+
+  13 Aug 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-bin-0.6-r1.ebuild,
+  mozilla-firebird-bin-0.6.1.ebuild:
+  Correct a typo in the mozilla-firebird blocker items. Thanks to
+  markus.rippl@iconparc.de.
 
   01 Aug 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-bin-0.6-r1.ebuild,
   mozilla-firebird-bin-0.6.1.ebuild:
