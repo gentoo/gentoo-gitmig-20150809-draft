@@ -1,8 +1,11 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.14 2003/07/13 11:55:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.15 2003/07/29 13:48:42 gmsoft Exp $
 
 *pure-ftpd-1.0.15 (21 Jun 2003)
+
+  29 Jul 2003; Guy Martin <gmsoft@gentoo.org> pure-ftpd-1.0.15.ebuild :
+  Added hppa to KEYWORDS.
 
   21 Jun 2003; Nick Hadaway <raker@gentoo.org> pure-ftpd-1.0.15.ebuild:
   Bug fixes. :)  Just a bump is all that's needed.
