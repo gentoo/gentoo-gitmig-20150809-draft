@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-0.3.1.ebuild,v 1.1 2002/11/23 18:45:12 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-0.3.1.ebuild,v 1.2 2002/12/09 04:21:13 manson Exp $
 
 DESCRIPTION="Python wrapper for the local database Sqlite"
 SRC_URI="mirror://sourceforge/pysqlite/pysqlite-${PV}.tar.gz"
 HOMEPAGE="http://www.hwaci.com/sw/sqlite/"
 
-KEYWORDS="ppc x86 sparc sparc64 alpha"
+KEYWORDS="ppc x86 sparc  alpha"
 LICENSE="pysqlite"
 SLOT="0"
 

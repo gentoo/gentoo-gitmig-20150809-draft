@@ -10,7 +10,7 @@ HOMEPAGE="http://pyxml.sourceforge.net/"
 DEPEND="virtual/python"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="x86 ppc sparc  alpha"
 LICENSE="PYTHON"
 
 

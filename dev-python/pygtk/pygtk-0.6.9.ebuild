@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-0.6.9.ebuild,v 1.7 2002/10/23 23:27:27 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-0.6.9.ebuild,v 1.8 2002/12/09 04:21:13 manson Exp $
 
 S=${WORKDIR}/${P}
 
@@ -17,7 +17,7 @@ DEPEND="virtual/python
         ( >=x11-libs/gtk+-1.2.10
 	<x11-libs/gtk+-2.0.0 )"
 
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="x86 ppc sparc  alpha"
 LICENSE="LGPL-2.1"
 SLOT="1.2"
 

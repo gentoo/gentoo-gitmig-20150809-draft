@@ -1,7 +1,10 @@
 # ChangeLog for dev-python/Numeric
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/ChangeLog,v 1.4 2002/09/07 18:13:32 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/ChangeLog,v 1.5 2002/12/09 04:21:12 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *Numeric-21.0 (14 Mar 2002)
 
   7 Sep 2002; Owen Stampflee <owen@gentoo.org> :

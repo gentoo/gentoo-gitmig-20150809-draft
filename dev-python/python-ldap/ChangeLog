@@ -1,7 +1,10 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.4 2002/09/24 20:39:01 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.5 2002/12/09 04:21:13 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *python-ldap-2.0.0pre05-r1 (24 Sep 2002)
   24 Sep 2002; Jon Nelson <jnelson@gentoo.org> python-ldap-2.0.0_pre05-r1.ebuild:
   Fix for bug 8275

@@ -1,7 +1,10 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.7 2002/12/05 13:08:40 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.8 2002/12/09 04:21:13 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *twisted-1.0.1-r1 (05 Dec 2002) Thomas Raschbacher <lordvan@gentoo.org>
   Added dep for dev-python/pycrypto
   Added IUSE

@@ -1,7 +1,10 @@
 # ChangeLog for dev-python/mysql-python
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.1 2002/11/03 23:32:33 roughneck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.2 2002/12/09 04:21:12 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
   03 Nov 2002; Nicholas Henke <roughneck@gentoo.org> mysql-python-0.9.2.ebuild,Changelog  :
 
   Initial import. Thanks to Thomas Raschbacher <lordvan@lordvan.com> for

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ReportLab/ReportLab-1.11.ebuild,v 1.7 2002/11/12 06:32:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ReportLab/ReportLab-1.11.ebuild,v 1.8 2002/12/09 04:21:12 manson Exp $
 
 #goofy tarball versioning
 vmaj=${PV%%.*}
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.reportlab.com/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc sparc64 alpha"
+KEYWORDS="x86 sparc  alpha"
 
 DEPEND=">=dev-lang/python-2.0
 	>=sys-libs/zlib-0.95

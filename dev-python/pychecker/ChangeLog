@@ -1,7 +1,10 @@
 # ChangeLog for dev-python/pychecker
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.6 2002/09/24 20:44:02 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.7 2002/12/09 04:21:13 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *pychecker-0.8.11 (24 Sep 2002)
   24 Sep 2002; Jon Nelson <jnelson@gentoo.org> pychecker-0.8.11.ebuild:
 

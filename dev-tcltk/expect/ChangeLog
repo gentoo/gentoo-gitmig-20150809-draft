@@ -1,7 +1,10 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.6 2002/10/28 08:31:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.7 2002/12/09 04:21:13 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *expect-5.37.1 (08 July 2002)
 
   27 Oct 2002; George Shapovalov <george@gentoo.org> epect-5.37.1-r1.ebuild, epect-5.37.1-r2.ebuild :

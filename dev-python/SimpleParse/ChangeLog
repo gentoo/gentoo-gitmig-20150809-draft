@@ -1,7 +1,10 @@
 # ChangeLog for dev-python/SimpleParse
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/SimpleParse/ChangeLog,v 1.1 2002/05/25 16:05:07 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/SimpleParse/ChangeLog,v 1.2 2002/12/09 04:21:12 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *SimpleParse-1.0 (25 May 2002)
 
   25 May 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog SimpleParse-1.0.ebuild :
