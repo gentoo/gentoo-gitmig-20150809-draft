@@ -1,0 +1,11 @@
+--- src/Makefile.in.orig	2004-11-29 21:51:25.907314248 +0000
++++ src/Makefile.in	2004-11-29 21:51:45.210379736 +0000
+@@ -185,7 +185,7 @@
+ target_alias = @target_alias@
+ AUTOMAKE_OPTIONS = foreign
+ lib_LTLIBRARIES = libmpc.la
+-INCLUDES = @GLIB_2_0_CFLAGS@ @GTK_CFLAGS@ -DVERSION=\"@VERSION@\"
++INCLUDES = @BEEP_CFLAGS@ -DVERSION=\"@VERSION@\"
+ libmpc_la_LIBADD = @PTHREAD_LIBS@ @GLIB_2_0_LIBS@ @GTK_LIBS@
+ libmpc_la_SOURCES = equalizer.cpp tags.cpp libmpc.cpp
+ libmpc_la_LDFLAGS = -lmusepack -avoid-version
