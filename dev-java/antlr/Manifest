@@ -1,4 +1,6 @@
 MD5 1c09d5eccb18ae95821a2abd2eaf23e6 antlr-2.7.3.ebuild 734
-MD5 ae2c2bd87c40cb8137ba27e8a0e1a385 ChangeLog 3163
+MD5 4a731c8e1ba2afa9e3e3027a4e935904 antlr-2.7.4.ebuild 714
+MD5 e2b467c7c68b46654d6449c786951eb0 ChangeLog 3226
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 021b7855447990ffc37500ffb64fb834 files/digest-antlr-2.7.3 64
+MD5 a2da49e52406fae792c6d38bdf980d0f files/digest-antlr-2.7.4 64
