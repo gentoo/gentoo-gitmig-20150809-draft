@@ -1,8 +1,14 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.14 2002/10/13 11:57:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.15 2002/11/22 19:03:38 mcummings Exp $
 
 *perl-5.6.1-r8 (13 Oct 2002)
+
+  22 Nov 2002; <mcummings@gentoo.org>
+
+  Second incantation of -r8. This time, it is for LC_ALL=C being added to 
+  the ebuild itself. Perl won't compile correctly otherwise and handles
+  internationaliztion post install.
 
   13 Oct 2002; Seemant Kulleen <seemant@gentoo.org> perl-5.6.1-r8.ebuild
   files/digest-perl-5.6.1-r8 :
