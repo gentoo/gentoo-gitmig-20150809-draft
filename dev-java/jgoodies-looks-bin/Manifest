@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 b2c57e91db2eb513438135ffbd09dcf0 ChangeLog 717
 MD5 3ac7109da9ec2d98ced92fb955e596f6 jgoodies-looks-bin-1.2.1.ebuild 757
-MD5 6658b5fa1d504ecdbcf61fe5f229ff58 jgoodies-looks-bin-1.2.1-r2.ebuild 762
-MD5 1bbc9cc0b2381a5c7b603a1644fd9a4b ChangeLog 615
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 7f9ca3c59d02ffdb7675ab12269c0411 files/digest-jgoodies-looks-bin-1.2.1-r2 61
+MD5 5fef1fc8519f1cb98ee84e96c836507b jgoodies-looks-bin-1.2.1-r2.ebuild 768
 MD5 7f9ca3c59d02ffdb7675ab12269c0411 files/digest-jgoodies-looks-bin-1.2.1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBJzSS/rLF9B432nYRAqdIAJ0e+HZPsydBlwo6+OstStFvSekTKwCdEJDg
-6+opO8wye7VninWfcKg3xqk=
-=ytHl
------END PGP SIGNATURE-----
+MD5 7f9ca3c59d02ffdb7675ab12269c0411 files/digest-jgoodies-looks-bin-1.2.1-r2 61
