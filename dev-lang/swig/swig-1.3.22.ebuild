@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.22.ebuild,v 1.2 2004/09/28 04:17:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.22.ebuild,v 1.3 2004/09/29 11:57:28 lanius Exp $
 
 inherit flag-o-matic mono #48511
 
@@ -27,7 +27,7 @@ S=${WORKDIR}/SWIG-${PV}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i 's:$(M4_INSTALL_DIR):$(DESTDIR)$(M4_INSTALL_DIR):g' Makefile.in
+	sed -i -e 's:-name jni_md.h -print:-xtype f -name jni_md.h -print:g' configure
 }
 
 src_compile() {
