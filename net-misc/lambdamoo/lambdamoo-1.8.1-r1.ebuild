@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/lambdamoo-1.8.1-r1.ebuild,v 1.3 2003/08/10 01:34:55 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/lambdamoo-1.8.1-r1.ebuild,v 1.4 2003/09/05 22:01:49 msterret Exp $
 
 inherit eutils
 
@@ -33,5 +33,5 @@ src_install() {
 	dodoc *.txt README*
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/lambdamoo.rc lambdamoo
-        insinto /etc/conf.d ; newins ${FILESDIR}/lambdamoo.conf lambdamoo
+	insinto /etc/conf.d ; newins ${FILESDIR}/lambdamoo.conf lambdamoo
 }

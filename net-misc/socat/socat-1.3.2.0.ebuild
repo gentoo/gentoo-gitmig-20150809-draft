@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.3.2.0.ebuild,v 1.2 2003/08/02 13:27:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.3.2.0.ebuild,v 1.3 2003/09/05 22:01:49 msterret Exp $
 
 DESCRIPTION="Multipurpose relay (SOcket CAT)"
 HOMEPAGE="http://www.dest-unreach.org/socat/"
@@ -25,8 +25,8 @@ src_compile() {
 	local myconf
 	use ssl || myconf="--disable-openssl"
 	use readline || myconf="${myconf} --disable-readline"
-	use ipv6 || myconf="${myconf} --disable-ip6"	
-	
+	use ipv6 || myconf="${myconf} --disable-ip6"
+
 	sed -i "s:-Wall:${CFLAGS} -Wall:" Makefile.in
 	econf ${myconf}
 

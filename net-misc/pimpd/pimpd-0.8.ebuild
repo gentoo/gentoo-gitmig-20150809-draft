@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pimpd/pimpd-0.8.ebuild,v 1.9 2003/02/28 16:55:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pimpd/pimpd-0.8.ebuild,v 1.10 2003/09/05 22:01:49 msterret Exp $
 # Updated to version 0.8 by Olivier Reisch on Fri Apr 26 11:44:26 CEST 2002
 
 A=pimpd_0.8.tar.gz
@@ -13,13 +13,10 @@ LICENSE="GPL-2"
 SLOT="0"
 
 src_compile() {
-    make CFLAGS="$CFLAGS" || die
+	make CFLAGS="$CFLAGS" || die
 }
 
 src_install () {
-
-   dosbin pimpd
-   dodoc README
-
+	dosbin pimpd
+	dodoc README
 }
-

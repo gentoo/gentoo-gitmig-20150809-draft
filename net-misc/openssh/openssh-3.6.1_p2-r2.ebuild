@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.6.1_p2-r2.ebuild,v 1.1 2003/08/07 13:26:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.6.1_p2-r2.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
 
 inherit eutils flag-o-matic
 
@@ -65,8 +65,8 @@ src_compile() {
 		myconf="${myconf} --with-afs"
 		myconf="${myconf} --with-kerberos4=/usr/athena"
 	fi
-	
-	use selinux && append-flags "-DWITH_SELINUX" 
+
+	use selinux && append-flags "-DWITH_SELINUX"
 
 	./configure \
 		--prefix=/usr \
@@ -95,7 +95,7 @@ src_compile() {
 	emake || die "compile problem"
 }
 
-src_install() {                               
+src_install() {
 	make install-files DESTDIR=${D} || die
 	chmod 600 ${D}/etc/ssh/sshd_config
 	dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config

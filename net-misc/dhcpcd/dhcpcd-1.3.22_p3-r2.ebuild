@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p3-r2.ebuild,v 1.7 2003/07/16 14:26:15 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p3-r2.ebuild,v 1.8 2003/09/05 22:01:48 msterret Exp $
 
 inherit gnuconfig
 
@@ -14,8 +14,8 @@ KEYWORDS="x86 ppc ~sparc ~alpha mips"
 LICENSE="GPL-2"
 
 src_unpack() {
-        unpack ${A} || die "unpack failed"
-        use alpha && gnuconfig_update
+	unpack ${A} || die "unpack failed"
+	use alpha && gnuconfig_update
 
 	#make the pidfile always goto /var/run (woodchip Dec 4 2002)
 	cd ${S}
@@ -36,7 +36,7 @@ src_install () {
 	einstall sbindir=${D}/sbin || die "Install failed"
 	if [ -z "`use build`" ]
 	then
-		dodoc AUTHORS COPYING ChangeLog NEWS README 
+		dodoc AUTHORS COPYING ChangeLog NEWS README
 	else
 		rm -rf ${D}/usr/share
 	fi

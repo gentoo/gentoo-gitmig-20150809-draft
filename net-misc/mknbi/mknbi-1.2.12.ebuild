@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.2.12.ebuild,v 1.1 2003/07/19 20:04:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.2.12.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
 
 DESCRIPTION="Utility for making tagged kernel images useful for netbooting"
 HOMEPAGE="http://etherboot.sourceforge.net"
@@ -21,16 +21,15 @@ DEPEND=">=perl-5.6.1
 
 S="${WORKDIR}/mknbi-1.2"
 
-src_unpack() { 
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 	echo "test" > __abcdir
-        mv Makefile Makefile.org
-        cat Makefile.org | sed s/"\/usr\/local"/"\/usr"/ > Makefile
-
+	mv Makefile Makefile.org
+	cat Makefile.org | sed s/"\/usr\/local"/"\/usr"/ > Makefile
 }
 
-src_compile() 
+src_compile()
 {
 	make all || die
 }

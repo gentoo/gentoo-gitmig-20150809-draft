@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r1.ebuild,v 1.5 2003/09/05 04:27:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r1.ebuild,v 1.6 2003/09/05 22:01:50 msterret Exp $
 
 S=${WORKDIR}/${P}
 IUSE="pam snmp ipv6 ospfapi"
@@ -34,9 +34,9 @@ src_unpack() {
 	##################################
 	# This fix is for zebra-0.93b only
 	##################################
-        cd ${S}/ospfd || die
-        epatch ${FILESDIR}/${P}/ospfd-assert-fix.patch
-        epatch ${FILESDIR}/${P}/ospfd-nbr-fix.patch
+	cd ${S}/ospfd || die
+	epatch ${FILESDIR}/${P}/ospfd-assert-fix.patch
+	epatch ${FILESDIR}/${P}/ospfd-nbr-fix.patch
 	##################################
 }
 

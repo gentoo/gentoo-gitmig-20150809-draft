@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/tn5250-0.16.5.ebuild,v 1.3 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/tn5250-0.16.5.ebuild,v 1.4 2003/09/05 22:01:49 msterret Exp $
 
 DESCRIPTION="Telnet client for the IBM AS/400 that emulates 5250 terminals and printers."
 HOMEPAGE="http://tn5250.sourceforge.net/"
@@ -12,9 +12,9 @@ KEYWORDS="x86"
 IUSE="X ssl slang"
 
 DEPEND="sys-libs/ncurses
-        X? ( virtual/x11 )
-        ssl? ( dev-libs/openssl )
-		slang? ( sys-libs/slang )"
+	X? ( virtual/x11 )
+	ssl? ( dev-libs/openssl )
+	slang? ( sys-libs/slang )"
 
 S="${WORKDIR}/${P}"
 
@@ -31,7 +31,7 @@ src_unpack() {
 	# Next, the Makefile for the terminfo settings tries to remove
 	# some files it doesn't have access to.  We can just remove those
 	# lines.
-    cd ${S}/linux
+	cd ${S}/linux
 	cp Makefile.in Makefile.in.orig
 	sed -e "/rm -f \/usr\/.*\/terminfo.*5250/d" \
 	    Makefile.in.orig > Makefile.in

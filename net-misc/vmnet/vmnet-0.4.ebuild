@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vmnet/vmnet-0.4.ebuild,v 1.1 2003/07/28 01:51:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vmnet/vmnet-0.4.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
 
 DESCRIPTION="A simple virtual networking program"
 HOMEPAGE="ftp://ftp.xos.nl/pub/linux/${PN}/"
@@ -8,7 +8,7 @@ HOMEPAGE="ftp://ftp.xos.nl/pub/linux/${PN}/"
 # So this might be better but it's a different filename
 # http://ftp.debian.org/debian/pool/main/${PN:0:1}/${PN}/${P/-/_}.orig.tar.gz
 # We use the debian patch anyway
-SRC_URI="ftp://ftp.xos.nl/pub/linux/${PN}/${P}.tar.gz 
+SRC_URI="ftp://ftp.xos.nl/pub/linux/${PN}/${P}.tar.gz
 	http://ftp.debian.org/debian/pool/main/${PN:0:1}/${PN}/${P/-/_}-1.diff.gz"
 LICENSE="GPL-2"
 SLOT="0"
@@ -33,11 +33,11 @@ src_install() {
 	# This line doesn't seem to work?
 	# fperms 4755 ${PN}
 	chmod 4755 ${D}/usr/bin/${PN}
-	
+
 	# Docs
 	doman ${PN}.1
 	dodoc COPYING README debian/${PN}.sgml
-	
+
 	# Config file
 	into /etc
 	doins debian/${PN}.conf

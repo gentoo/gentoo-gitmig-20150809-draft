@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.11.ebuild,v 1.10 2003/02/13 15:04:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.11.ebuild,v 1.11 2003/09/05 22:01:49 msterret Exp $
 
 DESCRIPTION="This is the DHCP/BOOTP client written by RedHat"
 SRC_URI="http://ftp.debian.org/debian/pool/main/p/${PN}/${PN}_${PV}.orig.tar.gz"
@@ -24,5 +24,5 @@ src_install () {
 	doins ${FILESDIR}/pump.conf
 
 	doman pump.8
-	dodoc COPYING CREDITS 
+	dodoc COPYING CREDITS
 }

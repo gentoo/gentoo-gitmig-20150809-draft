@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-3.0.4-r1.ebuild,v 1.6 2003/02/13 14:59:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-3.0.4-r1.ebuild,v 1.7 2003/09/05 22:01:49 msterret Exp $
 
 IUSE="xmms gnome"
 
@@ -15,9 +15,9 @@ KEYWORDS="x86 sparc "
 LICENSE="GPL-2"
 SLOT="0"
 DEPEND=">=net-ftp/curl-7.9.3
-        >=x11-libs/gtk+-1.2.10-r7
-        gnome? ( >=gnome-base/gnome-libs-1.4.1.6 )
-        xmms? ( >=media-sound/xmms-1.2.7-r4 )"
+	>=x11-libs/gtk+-1.2.10-r7
+	gnome? ( >=gnome-base/gnome-libs-1.4.1.6 )
+	xmms? ( >=media-sound/xmms-1.2.7-r4 )"
 SRC_URI="http://logjam.danga.com/download/${P}.tar.gz"
 
 # Source directory; the dir where the sources can be found (automatically
@@ -29,10 +29,10 @@ S=${WORKDIR}/${P}
 src_compile() {
 
 	local myconf
-	
+
 	use gnome && myconf="--with-gnome "
 	use xmms && myconf="$myconf --with-xmms "
-	
+
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \

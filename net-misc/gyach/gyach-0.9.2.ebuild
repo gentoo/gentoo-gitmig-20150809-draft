@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/gyach-0.9.2.ebuild,v 1.1 2003/03/16 08:07:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/gyach-0.9.2.ebuild,v 1.2 2003/09/05 22:01:48 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+-based Yahoo! chat client"
@@ -20,7 +20,7 @@ src_compile() {
 }
 
 src_install() {
-  	make prefix=${D}/usr install || die
+	make prefix=${D}/usr install || die
 	dodoc AUTHORS BUGS COPYING ChangeLog INSTALL NEWS README* TODO
 	dodoc sample.*
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.5-r1.ebuild,v 1.11 2003/02/24 00:58:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.5-r1.ebuild,v 1.12 2003/09/05 22:01:49 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="File transfer program to keep remote files into sync"
@@ -11,13 +11,13 @@ LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND="virtual/glibc
-        !build? ( >=dev-libs/popt-1.5 )"
+	!build? ( >=dev-libs/popt-1.5 )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# change confdir to /etc/rsync rather than just /etc (the --sysconfdir 
+	# change confdir to /etc/rsync rather than just /etc (the --sysconfdir
 	# configure option doesn't work
 	cp rsync.h rsync.h.orig
 	sed -e 's:RSYNCD_CONF "/etc/rsyncd.conf":RSYNCD_CONF "/etc/rsync/rsyncd.conf":g' rsync.h.orig > rsync.h
@@ -25,7 +25,7 @@ src_unpack() {
 	# yes, updating the man page is very important.
 	cp rsyncd.conf.5 rsyncd.conf.5.orig
 	sed -e 's:/etc/rsyncd:/etc/rsync/rsyncd:g' rsyncd.conf.5.orig > rsyncd.conf.5
-} 
+}
 
 src_compile() {
 	if [ -n "$(use build)" ]; then

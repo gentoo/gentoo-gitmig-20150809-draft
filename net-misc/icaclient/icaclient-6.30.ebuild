@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-6.30.ebuild,v 1.6 2003/02/13 14:53:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-6.30.ebuild,v 1.7 2003/09/05 22:01:48 msterret Exp $
 
 S=${WORKDIR}/usr
 DESCRIPTION="ICA Client"
@@ -14,7 +14,7 @@ RESTRICT="fetch"
 KEYWORDS="x86 sparc "
 
 dyn_fetch() {
-	for y in ${A} 
+	for y in ${A}
 	do
 		digest_check ${y}
 			if [ $? -ne 0 ]; then
@@ -63,5 +63,5 @@ src_install () {
 	doexe lib/ICAClient/wfcmgr.bin
 	doexe lib/ICAClient/wfica
 	insinto /etc/env.d
-	doins ${FILESDIR}/10ICAClient	
+	doins ${FILESDIR}/10ICAClient
 }

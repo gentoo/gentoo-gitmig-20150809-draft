@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.3.6.ebuild,v 1.2 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.3.6.ebuild,v 1.3 2003/09/05 22:01:49 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network-UPS Tools"
@@ -22,12 +22,12 @@ fi
 
 APACHE="`which ${APACHEBIN}`"
 if [ -z "${APACHE}" -a -x /usr/sbin/${APACHEBIN} ]; then
-  APACHE=/usr/sbin/${APACHEBIN}
+	APACHE=/usr/sbin/${APACHEBIN}
 fi
 
 if [ -n "${APACHE}" ]; then
-  DEPEND="${DEPEND} =sys-libs/zlib-1* =media-libs/libgd-1* =media-libs/libpng-1.2*"
-  RDEPEND="${RDEPEND} net-www/apache"
+	DEPEND="${DEPEND} =sys-libs/zlib-1* =media-libs/libgd-1* =media-libs/libpng-1.2*"
+	RDEPEND="${RDEPEND} net-www/apache"
 fi
 RDEPEND="${RDEPEND} ${DEPEND}"
 

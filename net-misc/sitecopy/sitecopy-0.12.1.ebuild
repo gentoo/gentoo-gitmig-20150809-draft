@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.12.1.ebuild,v 1.2 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.12.1.ebuild,v 1.3 2003/09/05 22:01:49 msterret Exp $
 
 IUSE="ssl xml xml2"
 
@@ -22,7 +22,7 @@ src_compile() {
 	local myconf=""
 	if [ "`use xml`" ] && [ "`use xml2`" ] ; then
 		myconf="${myconf} --with-libxml2 --without-libxml1"
-	else	
+	else
 	use xml \
 		&& myconf="${myconf} --with-libxml1" \
 		|| myconf="${myconf} --without-libxml1"

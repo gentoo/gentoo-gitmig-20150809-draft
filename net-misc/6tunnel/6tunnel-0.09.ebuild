@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/6tunnel/6tunnel-0.09.ebuild,v 1.4 2003/02/28 16:55:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/6tunnel/6tunnel-0.09.ebuild,v 1.5 2003/09/05 22:01:48 msterret Exp $
 
 IUSE=""
 S=${WORKDIR}/${PN}
@@ -21,7 +21,7 @@ src_compile() {
 	emake
 }
 
-src_install() {                               
+src_install() {
 	dobin 6tunnel
 	doman 6tunnel.1
 	dodoc README CHANGELOG

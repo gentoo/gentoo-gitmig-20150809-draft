@@ -15,7 +15,7 @@ DEPEND="net-misc/ltsp-core
 		media-libs/libaudiooss
 		media-libs/nas
 		gnome? ( media-sound/esound )"
-		
+
 RDEPEND="${DEPEND}"
 
 src_install() {
@@ -25,7 +25,7 @@ src_install() {
 	# no need to nit pick
 	insinto /opt/ltsp
 	cp -r i386 ${D}/opt/ltsp
-	
+
 	dodoc README COPYING
-	
+
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkesms/gtkesms-0.0.4.ebuild,v 1.10 2003/02/28 16:55:00 liquidx Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkesms/gtkesms-0.0.4.ebuild,v 1.11 2003/09/05 22:01:48 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gtk gui for esms."
@@ -19,11 +19,10 @@ src_unpack() {
 }
 
 src_compile() {
-    econf
-    make || die "make failed"
+	econf
+	make || die "make failed"
 }
 
 src_install () {
-    make DESTDIR=${D} install || die "install failed"
+	make DESTDIR=${D} install || die "install failed"
 }
-	

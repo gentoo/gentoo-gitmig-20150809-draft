@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.9.ebuild,v 1.1 2003/08/07 12:35:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.9.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
 
 inherit eutils
 
@@ -51,7 +51,7 @@ src_install() {
 	dodir /usr/share/man/man1 /usr/bin
 	./vncinstall ${D}/usr/bin ${D}/usr/share/man || die "vncinstall failed"
 
-	dodoc ChangeLog README WhatsNew 
+	dodoc ChangeLog README WhatsNew
 	use java && dodoc ${FILESDIR}/README.JavaViewer
 	newdoc vncviewer/README README.vncviewer
 }

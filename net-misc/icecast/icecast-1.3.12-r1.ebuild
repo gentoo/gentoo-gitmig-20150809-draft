@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-1.3.12-r1.ebuild,v 1.6 2003/02/27 02:36:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-1.3.12-r1.ebuild,v 1.7 2003/09/05 22:01:48 msterret Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ src_install() {
 		ICECAST_SBINDIR=/usr/sbin \
 		ICECAST_STATICDIR=/usr/share/icecast/static \
 		ICECAST_STATICDIR_INST=/usr/share/icecast/static \
-        	ICECAST_TEMPLATEDIR=/usr/share/icecast/templates \
+		ICECAST_TEMPLATEDIR=/usr/share/icecast/templates \
 		ICECAST_TEMPLATEDIR_INST=/usr/share/icecast/templates \
 		install || die "make install failed"
 	dodoc AUTHORS BUGS CHANGES COPYING FAQ INSTALL README TESTED TODO

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nc6/nc6-0.5.ebuild,v 1.2 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nc6/nc6-0.5.ebuild,v 1.3 2003/09/05 22:01:49 msterret Exp $
 
 DESCRIPTION="Version of netcat that supports both IPv6 and IPv4"
 HOMEPAGE="http://netcat6.sourceforge.net"
@@ -20,6 +20,6 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	
+
 	dodoc AUTHORS BUGS README NEWS TODO CREDITS ChangeLog
 }

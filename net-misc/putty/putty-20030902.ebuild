@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-20030902.ebuild,v 1.1 2003/09/02 12:11:28 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-20030902.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
 
 DESCRIPTION="UNIX port of the famous Windows Telnet and SSH client"
 
@@ -37,15 +37,15 @@ src_compile() {
 }
 
 src_install() {
-	
+
 	cd ${S}/unix
-	
+
 	# man pages...
 	doman plink.1 pterm.1 putty.1 puttytel.1
-	
+
 	# binaries...
 	dobin plink pterm putty puttytel
-	
+
 	cd ${S}
 
 	# docs...

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.4-r1.ebuild,v 1.7 2003/03/30 19:19:53 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.4-r1.ebuild,v 1.8 2003/09/05 22:01:49 msterret Exp $
 
 IUSE="ipv6"
 
@@ -13,12 +13,12 @@ SLOT="0"
 
 DEPEND="virtual/glibc"
 
-src_compile() {	
+src_compile() {
 	local myconf=""
 
 	use ipv6 && \
 		myconf="${myconf} --enable-ipv6" || \
-		myconf="${myconf} --disable-ipv6"	
+		myconf="${myconf} --disable-ipv6"
 
 
 	./configure \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.0_alpha2.ebuild,v 1.1 2003/08/15 10:16:18 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.0_alpha2.ebuild,v 1.2 2003/09/05 22:01:48 msterret Exp $
 
 IUSE="oggvorbis curl"
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 	dev-libs/libxml2
 	dev-libs/libxslt
 	oggvorbis? ( >=media-libs/libvorbis-1.0
-                     >=media-libs/libogg-1.0 )
+		>=media-libs/libogg-1.0 )
 	curl? ( net-ftp/curl )"
 
 S=${WORKDIR}/icecast-2.0-alpha-2
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"	
+	make DESTDIR=${D} install || die "make install failed"
 
 	dodoc AUTHORS README TODO HACKING NEWS
 

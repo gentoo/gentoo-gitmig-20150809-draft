@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.19.ebuild,v 1.2 2003/06/16 16:08:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.19.ebuild,v 1.3 2003/09/05 22:01:48 msterret Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_install() {
 
 	dodoc chrony.txt README examples/chrony.{conf,keys}.example
 	dohtml chrony.html
-	doman *.{1,5,8}	
+	doman *.{1,5,8}
 	doinfo chrony.info*
 
 	dodir /etc/chrony

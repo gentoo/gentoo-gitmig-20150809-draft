@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-3.0.9-r3.ebuild,v 1.2 2003/08/28 22:55:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-3.0.9-r3.ebuild,v 1.3 2003/09/05 22:01:49 msterret Exp $
 
 
 IUSE="gnome kde"
@@ -65,7 +65,7 @@ modify_exports()
 
 	# get the file
 	ltsp_strip_config /etc/exports
-	
+
 	# insert new data
 	cat >> ${D}/etc/exports <<EOF
 
@@ -156,7 +156,7 @@ EOF
 	fi
 }
 
-modify_xdm_kdmrc() 
+modify_xdm_kdmrc()
 {
 	local file=/usr/kde/3/share/config/kdm/kdmrc
 
@@ -168,7 +168,7 @@ modify_xdm_kdmrc()
 
 		# make temp file
 		mv ${D}$file ${D}$file.temp
-	
+
 		# run custom perl script to modify the kdmrc
 		${FILESDIR}/kdmrc.pl < ${D}/$file.temp >> ${D}/$file
 
@@ -192,7 +192,7 @@ modify_gdm_gdm_conf()
 
 		# make temp file
 		mv ${D}$file ${D}$file.temp
-	
+
 		# run custom perl script to modify the gdm.conf
 		${FILESDIR}/gdm.conf.pl < ${D}/$file.temp >> ${D}/$file
 
@@ -250,7 +250,7 @@ src_install() {
 	# make config dirs
 	dodir /usr/kde/3/share/config/kdm
 	dodir /etc/X11/gdm
-	
+
 	ebegin "Copy the ltsp.conf file ..."
 	insinto /etc
 	doins ${FILESDIR}/ltsp.conf
@@ -278,7 +278,7 @@ src_install() {
 	if [ -n `use kde` ]; then
 		modify_xdm_kdmrc
 	fi
-	
+
 	# gdm requires a custom config
 	if [ -n `use gnome` ]; then
 		modify_gdm_gdm_conf
@@ -287,7 +287,7 @@ src_install() {
 		if test -f ${D}/etc/X11/gdm/Default -o -L ${D}/etc/X11/gdm/Default; then
 			mv ${D}/etc/X11/gdm/Default ${D}/etc/X11/gdm/\:0
 		fi
-		
+
 		dosym /etc/X11/xdm/Xsetup_workstation /etc/X11/gdm/Default
 	fi
 
@@ -338,6 +338,6 @@ pkg_postinst() {
 	einfo " |---------------------------------------------------------------------------------------| "
 	einfo "*******************************************************************************************"
 	einfo " | FOR MORE INFORMATION AND COMPLETE SET OF DOCUMENTATION GO TO WWW.LTSP.ORG  ***********| "
-	einfo "*******************************************************************************************"	
+	einfo "*******************************************************************************************"
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.14 2003/07/16 14:28:46 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.15 2003/09/05 22:01:49 msterret Exp $
 
 inherit eutils
 
@@ -61,8 +61,8 @@ src_compile() {
 	if [ ! -z $KTH_KRB ]; then
 		myconf="${myconf} --with-kerberos4=/usr/athena"
 	fi
-	
-	use selinux && CFLAGS="${CFLAGS} -DWITH_SELINUX" 
+
+	use selinux && CFLAGS="${CFLAGS} -DWITH_SELINUX"
 
 	./configure \
 		--prefix=/usr \
@@ -88,11 +88,11 @@ src_compile() {
 		sed "s:LIBS=\(.*\):LIBS=\1 -lsecure:" < Makefile > Makefile.new
 		mv Makefile.new Makefile
 	fi
-	
+
 	emake || die "compile problem"
 }
 
-src_install() {                               
+src_install() {
 	make install-files DESTDIR=${D} || die
 	chmod 600 ${D}/etc/ssh/sshd_config
 	dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config

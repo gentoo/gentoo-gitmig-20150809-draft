@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.12.ebuild,v 1.4 2003/02/13 14:51:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.12.ebuild,v 1.5 2003/09/05 22:01:48 msterret Exp $
 
 IUSE="ssl nls gnome"
 
@@ -35,11 +35,11 @@ src_unpack() {
 		sed -e 's: \$(gtm_helpdir): \$(DESTDIR)$(gtm_helpdir):g' \
 			${S}/doc/${lang}/Makefile.in.orig \
 			>${S}/doc/${lang}/Makefile.in
-	done			
+	done
 }
 
 src_compile() {
-        
+
 	local myconf
 	use nls   || myconf="--disable-nls"
 	use gnome || myconf="${myconf} --disable-applet"
@@ -55,11 +55,11 @@ src_compile() {
 		--sysconfdir=/etc \
 		--without-debug \
 		$myconf || die
-			
+
 	emake || die
 }
 
 src_install() {
-	
+
 	make DESTDIR=${D} install || die
 }

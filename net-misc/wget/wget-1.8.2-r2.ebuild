@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r2.ebuild,v 1.9 2003/08/03 04:08:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r2.ebuild,v 1.10 2003/09/05 22:01:49 msterret Exp $
 
 inherit gnuconfig
 
@@ -54,14 +54,14 @@ src_compile() {
 	fi
 }
 
-src_install() {   
+src_install() {
 	if use build; then
 		insinto /usr
-		dobin ${S}/src/wget	
+		dobin ${S}/src/wget
 		return
-	fi                      
+	fi
 	make prefix=${D}/usr sysconfdir=${D}/etc/wget \
 		mandir=${D}/usr/share/man infodir=${D}/usr/share/info install || die
-	dodoc AUTHORS COPYING ChangeLog MACHINES MAILING-LIST NEWS README TODO 
+	dodoc AUTHORS COPYING ChangeLog MACHINES MAILING-LIST NEWS README TODO
 	dodoc doc/sample.wgetrc
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.20_p0-r1.ebuild,v 1.19 2003/02/24 19:42:04 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.20_p0-r1.ebuild,v 1.20 2003/09/05 22:01:48 msterret Exp $
 
 MYV=1.3.20-pl0
 S=${WORKDIR}/${PN}-${MYV}
@@ -21,7 +21,7 @@ src_install () {
 	make DESTDIR=${D} install || die
 	if [ -z "`use build`" ]
 	then
-		dodoc AUTHORS COPYING ChangeLog NEWS README 
+		dodoc AUTHORS COPYING ChangeLog NEWS README
 	else
 		rm -rf ${D}/usr/share
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-0.9.6.ebuild,v 1.2 2003/04/24 13:24:17 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-0.9.6.ebuild,v 1.3 2003/09/05 22:01:48 msterret Exp $
 
 # I think you want CONFIG_BRIDGE in your kernel to use this ;)
 
@@ -17,7 +17,7 @@ KEYWORDS="x86"
 
 src_compile() {
 	econf --prefix=/ --libdir=/usr/lib --includedir=/usr/include
-	emake || die "make failed"	
+	emake || die "make failed"
 }
 
 src_install () {
@@ -29,4 +29,4 @@ src_install () {
 pkg_postinst () {
 	ewarn "brctl has been moved to /sbin - "
 	ewarn "if you use it in your startup scripts, update them accordingly!"
-}		
+}

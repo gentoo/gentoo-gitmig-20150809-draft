@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/jwhois-3.2.2.ebuild,v 1.2 2003/08/17 14:04:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/jwhois-3.2.2.ebuild,v 1.3 2003/09/05 22:01:48 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Internet Whois client capable of recursive queries"
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 	local myconf
-	
+
 	use nls \
 		&& myconf="--enable-nls" \
 		|| myconf="--disable-nls"

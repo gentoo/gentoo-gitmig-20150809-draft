@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dyndnsupdate/dyndnsupdate-0.6.14.ebuild,v 1.8 2003/07/19 20:48:32 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dyndnsupdate/dyndnsupdate-0.6.14.ebuild,v 1.9 2003/09/05 22:01:48 msterret Exp $
 
 inherit ccc
 
@@ -20,7 +20,7 @@ src_compile() {
 	emake || die "Failed to compile."
 }
 
-src_install() {                               
+src_install() {
 	dobin dyndnsupdate
 	dodir /var/dyndnsupdate
 	doman man/dyndnsupdate.8.gz

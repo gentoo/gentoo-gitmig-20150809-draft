@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.8.10.ebuild,v 1.4 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.8.10.ebuild,v 1.5 2003/09/05 22:01:49 msterret Exp $
 
 DESCRIPTION="SIP Express Router"
 
@@ -22,7 +22,7 @@ S="${WORKDIR}/${P}"
 
 src_compile() {
 	if [ ! "`use ipv6`" ]; then
-		cp Makefile.defs Makefile.defs.orig 
+		cp Makefile.defs Makefile.defs.orig
 		sed -e "s/-DUSE_IPV6//g" Makefile.defs.orig > Makefile.defs;
 	fi
 	local exclude="CVS radius_acc radius_auth snmp"

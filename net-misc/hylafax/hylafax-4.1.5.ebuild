@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.5.ebuild,v 1.5 2003/03/20 13:40:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.5.ebuild,v 1.6 2003/09/05 22:01:48 msterret Exp $
 
 IUSE="jpeg"
 
@@ -20,7 +20,7 @@ DEPEND="net-dialup/mgetty
 	jpeg? ( media-libs/jpeg )"
 
 src_compile() {
-	
+
 	./configure	\
 		--with-DIR_BIN=/usr/bin \
 		--with-DIR_SBIN=/usr/sbin \
@@ -39,7 +39,7 @@ src_compile() {
 		--with-PATH_IMPRIP=/usr/share/fax/psrip \
 		--with-SYSVINIT=/etc/init.d \
 		--with-INTERACTIVE=no || die
-	
+
 	make OPTIMIZER="${CFLAGS}" || die
 }
 
@@ -59,7 +59,7 @@ src_install() {
 		MAN=${D}/usr/share/man \
 		SPOOL=${D}/var/spool/fax \
 		install || die
-	
+
 	insinto /etc/init.d
 	insopts -m 755
 	doins etc/hylafax

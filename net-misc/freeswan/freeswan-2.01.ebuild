@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-2.01.ebuild,v 1.1 2003/08/21 14:17:04 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-2.01.ebuild,v 1.2 2003/09/05 22:01:48 msterret Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.xs4all.nl/pub/crypto/freeswan/${P}.tar.gz
 
 HOMEPAGE="http://www.freeswan.org"
 DEPEND="virtual/glibc
-        virtual/linux-sources
+	virtual/linux-sources
 	>=dev-libs/gmp-3.1.1
 	net-misc/host"
 LICENSE="GPL-2"
@@ -21,12 +21,12 @@ SLOT="0"
 KEYWORDS="~x86 -sparc"
 
 pkg_setup() {
-    [ -d /usr/src/linux/net/ipsec ] || {
-	echo You need to have the crypto-enabled version of Gentoo Sources
-	echo with a symlink to it in /usr/src/linux in order to have IPSec
-	echo kernel compatibility.  Please emerge sys-kernel/crypto-sources, 
-	echo compile an IPSec-enabled kernel and attempt this ebuild again.
-	exit 1
+	[ -d /usr/src/linux/net/ipsec ] || {
+		echo You need to have the crypto-enabled version of Gentoo Sources
+		echo with a symlink to it in /usr/src/linux in order to have IPSec
+		echo kernel compatibility.  Please emerge sys-kernel/crypto-sources,
+		echo compile an IPSec-enabled kernel and attempt this ebuild again.
+		exit 1
 	}
 }
 
@@ -56,7 +56,7 @@ src_compile() {
 }
 
 src_install () {
-	
+
 	# try make prefix=${D}/usr install
 
 	make 						\

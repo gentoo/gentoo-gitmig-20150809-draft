@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/zssh-1.5a.ebuild,v 1.3 2003/02/13 15:13:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/zssh-1.5a.ebuild,v 1.4 2003/09/05 22:01:50 msterret Exp $
 
 inherit eutils
 
@@ -14,8 +14,8 @@ LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND="virtual/glibc"
-RDEPEND="virtual/glibc 
-	 net-misc/openssh 
+RDEPEND="virtual/glibc
+	 net-misc/openssh
 	 net-misc/lrzsz"
 
 src_unpack() {
@@ -35,7 +35,7 @@ src_compile() {
 		--prefix=/usr	\
 		--host=${CHOST}	\
 		${options} || die
-	
+
 	emake || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.0.ebuild,v 1.1 2003/07/30 00:08:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.0.ebuild,v 1.2 2003/09/05 22:01:48 msterret Exp $
 
 inherit eutils
 
@@ -22,13 +22,13 @@ src_compile() {
 local myconf
 
 	use nls || myconf="--disable-nls"
-	use gtk || myconf="--without-libdb --without-gui"	
+	use gtk || myconf="--without-libdb --without-gui"
 
 	./configure \
-                --host=${CHOST} \
-                --prefix=/usr \
-                --infodir=/usr/share/info \
-                --mandir=/usr/share/man $myconf \
+		--host=${CHOST} \
+		--prefix=/usr \
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man $myconf \
 		--datadir=/usr/share || die "./configure failed"
 
 	# Patch the Makefile so that when jidgo is installed, jigdo-lite has

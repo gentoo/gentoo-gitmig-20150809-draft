@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.5.ebuild,v 1.6 2003/07/16 07:31:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.5.ebuild,v 1.7 2003/09/05 22:01:49 msterret Exp $
 
 IUSE="java tcpd"
 
@@ -21,13 +21,13 @@ RDEPEND="java? ( virtual/jre )"
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	
+
 	export CXX="g++"
 
 	econf || die "./configure failed"
 
-	make 
-	
+	make
+
 	cd Xvnc
 	if use tcpd
 	then
@@ -44,7 +44,7 @@ src_compile() {
 }
 
 src_install () {
-	
+
 	dodir /usr/bin /usr/share/man/man1
 
 	./vncinstall ${D}/usr/bin ${D}/usr/share/man || die
@@ -54,7 +54,7 @@ src_install () {
 		cd ${S}/classes
 		insinto /usr/share/vnc/classes
 		doins *.class *.jar *.vnc
-	fi	
+	fi
 
 	cd ${S}
 	dodoc LICENCE.TXT README

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.5-r2.ebuild,v 1.7 2003/03/06 21:30:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.5-r2.ebuild,v 1.8 2003/09/05 22:01:49 msterret Exp $
 
 IUSE="ssl"
 
@@ -22,7 +22,7 @@ src_compile() {
 	then
 		use_opts="--disable-ssl"
 	fi
-	
+
 	cat ${FILESDIR}/vtun-2.5-r2-gentoo-gcc3.1.patch | patch -p1 || die "couldn't patch for gcc3.1";
 
 	./configure \
@@ -50,7 +50,7 @@ src_compile() {
 		VAR_DIR=/var || FAILED=1
 
 	# OK, we're done, rename the cyrus one back to what it was.
-	if [ -f /usr/include/md5.h.vtun_compile -a 
+	if [ -f /usr/include/md5.h.vtun_compile -a
 		! -f /usr/include/md5.h ]; then
 	    mv /usr/include/md5.h.vtun_compile /usr/include/md5.h
 	fi

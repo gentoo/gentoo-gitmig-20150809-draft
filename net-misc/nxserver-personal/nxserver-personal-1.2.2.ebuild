@@ -5,8 +5,8 @@
 inherit nxserver
 
 DEPEND="$DEPEND
-        !net-misc/nxserver-business
-		!net-misc/nxserver-enterprise"
+	!net-misc/nxserver-business
+	!net-misc/nxserver-enterprise"
 
 pkg_nofetch ()
 {

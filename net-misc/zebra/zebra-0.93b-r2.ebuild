@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r2.ebuild,v 1.1 2003/09/05 04:27:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r2.ebuild,v 1.2 2003/09/05 22:01:50 msterret Exp $
 
 inherit eutils
 S=${WORKDIR}/${P}
@@ -103,8 +103,8 @@ pkg_postinst() {
 	einfo "You have to create config files in /etc/zebra before"
 	einfo "starting any one of the daemons."
 	echo
-	einfo "Please note this is the last planned zebra release that Gentoo should support"        
+	einfo "Please note this is the last planned zebra release that Gentoo should support"
 	einfo "GNU Zebra almost does not qualify as GNU Software, read the zebra mailing list for more info."
 	einfo "Gentoo will continue it's support of routing software using Quagga a GNU Zebra fork"
- 
+
 }

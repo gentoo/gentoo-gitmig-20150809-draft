@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.7.2.ebuild,v 1.4 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.7.2.ebuild,v 1.5 2003/09/05 22:01:49 msterret Exp $
 
 DESCRIPTION="Linux IPv6 Router Advertisement Daemon (radvd)"
 HOMEPAGE="http://v6web.litech.org/radvd/"
@@ -35,13 +35,13 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc CHANGES COPYRIGHT INTRO.html README TODO
-	
+
 	insinto /etc/radvd
 	doins radvd.conf.example
-	
+
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/radvd
-	
+
 	dodir /var/run/radvd
 	fowners radvd.radvd /var/run/radvd
 	fperms 755 /var/run/radvd

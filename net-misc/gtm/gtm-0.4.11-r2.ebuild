@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11-r2.ebuild,v 1.8 2003/02/13 14:51:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11-r2.ebuild,v 1.9 2003/09/05 22:01:48 msterret Exp $
 
 IUSE="ssl nls gnome"
 
@@ -41,11 +41,11 @@ src_unpack() {
 			>${S}/doc/${lang}/Makefile.in
 	done
 
-	patch -p0 < ${FILESDIR}/wget-log.c.patch						
+	patch -p0 < ${FILESDIR}/wget-log.c.patch
 }
 
 src_compile() {
-        
+
 	local myconf
 	use nls   || myconf="--disable-nls"
 	use gnome || myconf="${myconf} --disable-applet"
@@ -61,12 +61,12 @@ src_compile() {
 		--sysconfdir=/etc \
 		--without-debug \
 		$myconf || die
-			
+
 	emake || die
 }
 
 src_install() {
-	
+
 	make DESTDIR=${D} install || die
 }
 

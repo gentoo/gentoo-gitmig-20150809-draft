@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.28.ebuild,v 1.4 2003/03/27 02:45:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.28.ebuild,v 1.5 2003/09/05 22:01:49 msterret Exp $
 
 IUSE="ssl X gtk gnome mozilla socks5 nls"
 
@@ -31,14 +31,14 @@ src_compile() {
 	use X \
 		&& myconf="${myconf} --with-x" \
 		|| myconf="${myconf} --without-x"
-	
+
 	use ssl \
 		&& myconf="${myconf} --enable-ssl" \
 		|| myconf="${myconf} --disable-ssl"
 
 	use gtk \
 		&& myconf="${myconf} --enable-gtk" \
-		|| myconf="${myconf} --disable-gtk" 
+		|| myconf="${myconf} --disable-gtk"
 
 	use gnome \
 		&& myconf="${myconf} --enable-gnome" \
@@ -51,7 +51,7 @@ src_compile() {
 	use socks5 \
 		&& myconf="${myconf} --enable-socks" \
 		|| myconf="${myconf} --disable-socks"
-	
+
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"

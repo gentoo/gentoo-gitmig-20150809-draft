@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ndtpd-3.1.5.ebuild,v 1.1 2003/09/01 12:26:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ndtpd-3.1.5.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
 
 inherit eutils
 
 IUSE=""
 
-DESCRIPTION="A server for accessing CD-ROM books with NDTP(Network Directory Transfer Protocol)" 
+DESCRIPTION="A server for accessing CD-ROM books with NDTP(Network Directory Transfer Protocol)"
 HOMEPAGE="http://www.sra.co.jp/people/m-kasahr/ndtpd/"
 SRC_URI="ftp://ftp.sra.co.jp/pub/net/ndtp/ndtpd/${P}.tar.gz"
 

@@ -27,7 +27,7 @@ src_install() {
 	dosbin powerd
 	dobin detectups
 	dodoc powerd.conf.monitor powerd.conf.peer README FAQ INSTALL
-	
+
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/powerd-init powerd
 }

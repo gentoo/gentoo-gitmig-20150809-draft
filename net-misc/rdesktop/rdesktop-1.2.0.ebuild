@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.2.0.ebuild,v 1.4 2003/08/03 04:01:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.2.0.ebuild,v 1.5 2003/09/05 22:01:49 msterret Exp $
 
 DESCRIPTION="A Remote Desktop Protocol Client"
 HOMEPAGE="http://rdesktop.sourceforge.net/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 alpha ~sparc"
 IUSE="ssl debug"
 
-DEPEND="x11-base/xfree 
+DEPEND="x11-base/xfree
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
 
 src_compile() {
@@ -19,11 +19,11 @@ src_compile() {
 	use ssl \
 		&& myconf="--with-openssl=/usr/include/openssl" \
 		|| myconf="--without-openssl"
-	
+
 	sed -e "s:-O2:${CFLAGS}:g" Makefile > Makefile.tmp
 	mv Makefile.tmp Makefile
 	echo "CFLAGS += ${CXXFLAGS}" >> Makeconf
-	
+
 	./configure \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
@@ -31,7 +31,7 @@ src_compile() {
 		`use_with debug` \
 		${myconf} || die
 
-	emake || die 
+	emake || die
 }
 
 src_install() {

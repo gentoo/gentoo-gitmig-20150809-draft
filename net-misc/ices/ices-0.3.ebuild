@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-0.3.ebuild,v 1.3 2003/08/15 10:09:44 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-0.3.ebuild,v 1.4 2003/09/05 22:01:48 msterret Exp $
 
 IUSE="oggvorbis perl python"
 
@@ -16,7 +16,7 @@ DEPEND="media-sound/lame
 	dev-libs/libxml2
 	>=media-libs/libshout-2.0
 	oggvorbis? ( >=media-libs/libogg-1.0
-                     >=media-libs/libvorbis-1.0 )"
+		>=media-libs/libvorbis-1.0 )"
 
 src_compile ()
 {

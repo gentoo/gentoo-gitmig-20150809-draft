@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/lrzsz-0.12.20.ebuild,v 1.9 2003/02/13 14:59:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/lrzsz-0.12.20.ebuild,v 1.10 2003/09/05 22:01:49 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="communication package providing the X, Y, and ZMODEM file transfer protocols"
@@ -20,7 +20,7 @@ src_compile() {
 		options=${options} --disable-nls
 	fi
 	CFLAGS="${CFLAGS} -Wstrict-prototypes" try ./configure --infodir=/usr/share/info --mandir=/usr/share/man --prefix=/usr --host=${CHOST} ${options}
-	
+
 	CFLAGS=${CFLAGS} -Wstrict-prototypes try emake
 }
 

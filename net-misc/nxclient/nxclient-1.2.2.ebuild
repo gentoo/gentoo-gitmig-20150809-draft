@@ -18,15 +18,15 @@ MY_PV="${PV}-31"
 SRC_URI="http://www.nomachine.com/download/nxclient/RedHat-9.0/nxclient-${MY_PV}.i386.rpm"
 
 DEPEND=">=media-libs/jpeg-6b-r3
-        >=sys-libs/glibc-2.3.2-r1
-		>=sys-libs/zlib-1.1.4-r1
-		>=x11-base/xfree-4.3.0-r2
-		>=net-misc/nxssh-1.2.2
-		>=net-misc/nxproxy-1.2.2
-		>=dev-libs/expat-1.95.6-r1
-		>=media-libs/fontconfig-2.2.0-r2
-		>=media-libs/freetype-2.1.4
-		>=media-libs/jpeg-6b-r3"
+	>=sys-libs/glibc-2.3.2-r1
+	>=sys-libs/zlib-1.1.4-r1
+	>=x11-base/xfree-4.3.0-r2
+	>=net-misc/nxssh-1.2.2
+	>=net-misc/nxproxy-1.2.2
+	>=dev-libs/expat-1.95.6-r1
+	>=media-libs/fontconfig-2.2.0-r2
+	>=media-libs/freetype-2.1.4
+	>=media-libs/jpeg-6b-r3"
 
 S="${WORKDIR}"
 
@@ -44,7 +44,7 @@ src_install() {
 #	insinto /usr/NX/lib
 #	dolib usr/NX/lib/libXcomp.so.1.2.2
 
-    insinto /usr/NX/share
+	insinto /usr/NX/share
 	doins usr/NX/share/client.id_dsa.key
 	insinto /usr/NX/share/icons
 	doins usr/NX/share/icons/*

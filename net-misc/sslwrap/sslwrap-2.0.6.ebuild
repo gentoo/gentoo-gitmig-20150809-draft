@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.6.ebuild,v 1.5 2003/02/10 10:32:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.6.ebuild,v 1.6 2003/09/05 22:01:49 msterret Exp $
 
 S=${WORKDIR}/${PN}${PV/.0./0}
 DESCRIPTION="TSL/SSL - Port Wrapper"
@@ -31,11 +31,11 @@ src_unpack () {
 	done
 }
 
-src_compile() {													 
+src_compile() {
 	emake || die
 }
 
-src_install() {															 
+src_install() {
 	cd ${S}
 	into /usr
 	dosbin sslwrap

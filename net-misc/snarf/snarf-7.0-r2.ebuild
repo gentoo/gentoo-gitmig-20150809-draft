@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/snarf-7.0-r2.ebuild,v 1.1 2003/08/01 15:50:57 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/snarf-7.0-r2.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A full featured small web-spider"
@@ -18,12 +18,12 @@ src_unpack() {
 	epatch ${FILESDIR}/snarf-unlink-empty.diff
 }
 
-src_compile() {													 
+src_compile() {
 	econf || die
 	make || die
 }
 
-src_install() {															 
+src_install() {
 	into /usr
 	dobin snarf
 	doman snarf.1

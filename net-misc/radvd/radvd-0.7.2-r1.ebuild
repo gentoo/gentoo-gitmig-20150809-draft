@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.7.2-r1.ebuild,v 1.1 2003/04/21 15:11:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.7.2-r1.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
 
 DESCRIPTION="Linux IPv6 Router Advertisement Daemon (radvd)"
 HOMEPAGE="http://v6web.litech.org/radvd/"
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc
 pkg_preinst() {
 	# Force ownership of radvd user and group. fix #19647
 	[ -d "/var/run/radvd" ] && chown 75.75 /var/run/radvd
-	
+
 	if ! groupmod radvd; then
 		groupadd -g 75 radvd || die "problem adding group radvd"
 	fi
@@ -38,10 +38,10 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc CHANGES COPYRIGHT INTRO.html README TODO
-	
+
 	insinto /etc/radvd
 	doins radvd.conf.example
-	
+
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/radvd
 
@@ -49,5 +49,5 @@ src_install() {
 	touch ${D}/var/run/radvd/.keep
 	chown -R 75.75 ${D}/var/run/radvd
 	chmod 755 ${D}/var/run/radvd
-			
+
 }

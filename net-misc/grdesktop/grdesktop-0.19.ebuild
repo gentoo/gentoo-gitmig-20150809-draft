@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.19.ebuild,v 1.3 2003/08/22 15:09:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.19.ebuild,v 1.4 2003/09/05 22:01:48 msterret Exp $
 
 DESCRIPTION="Gtk2 frontend for rdesktop"
 HOMEPAGE="http://www.nongnu.org/grdesktop"
@@ -23,12 +23,12 @@ S="${WORKDIR}/${P}"
 src_compile() {
 	econf \
 	    --with-keymap-path=/usr/share/rdesktop/keymaps || die "./configure failed"
-	    
+
 	emake || die
 }
 
 src_install() {
 	einstall
 
-	dodoc AUTHORS ABOUT-NLS COPYING ChangeLog INSTALL NEWS README TODO    
+	dodoc AUTHORS ABOUT-NLS COPYING ChangeLog INSTALL NEWS README TODO
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sendfile/sendfile-2.1a.ebuild,v 1.5 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sendfile/sendfile-2.1a.ebuild,v 1.6 2003/09/05 22:01:49 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Sendfile is a SAFT implementation for UNIX and serves as a tool for asynchronous sending of files in the Internet"
@@ -20,7 +20,7 @@ src_compile() {
 src_install() {
 	into /usr
 	dosbin src/sendfiled
-	dobin etc/check_sendfile src/sendfile src/sendmsg src/receive src/fetchfile 
+	dobin etc/check_sendfile src/sendfile src/sendmsg src/receive src/fetchfile
 	dobin src/utf7encode src/wlock etc/sfconf etc/sfdconf
 	dosym /usr/bin/utf7encode /usr/bin/utf7decode
 
@@ -33,7 +33,7 @@ src_install() {
 
 	insinto /etc/sendfile
 	doins etc/sendfile.deny etc/sendfile.cf
-	
+
 	doman doc/sendmsg.1 doc/sendfile.1 doc/receive.1 doc/fetchfile.1
 
 	dodoc doc/AUTHORS doc/COPYING doc/ChangeLog doc/README* doc/THANKS

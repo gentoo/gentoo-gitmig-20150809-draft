@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/snarf-7.0-r1.ebuild,v 1.13 2003/04/15 23:10:33 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/snarf-7.0-r1.ebuild,v 1.14 2003/09/05 22:01:49 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A full featured small web-spider"
@@ -12,12 +12,12 @@ SLOT="0"
 
 DEPEND=">=sys-libs/glibc-2.1.3"
 
-src_compile() {													 
+src_compile() {
 	econf || die
 	make || die
 }
 
-src_install() {															 
+src_install() {
 	into /usr
 	dobin snarf
 	doman snarf.1

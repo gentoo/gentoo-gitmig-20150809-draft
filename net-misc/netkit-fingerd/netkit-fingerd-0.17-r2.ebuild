@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/netkit-fingerd-0.17-r2.ebuild,v 1.15 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/netkit-fingerd-0.17-r2.ebuild,v 1.16 2003/09/05 22:01:49 msterret Exp $
 
 MY_PN=${PN/netkit/bsd}
 MY_PN=${MY_PN/rd/r}
@@ -18,12 +18,12 @@ src_unpack() {
 	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
 }
 
-src_compile() {	 
+src_compile() {
 	./configure || die
 	make || die
 }
 
-src_install() {							   
+src_install() {
 	into /usr
 	dobin  finger/finger
 	dosbin fingerd/fingerd

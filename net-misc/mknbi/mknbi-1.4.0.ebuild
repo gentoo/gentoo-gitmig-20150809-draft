@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.0.ebuild,v 1.1 2003/03/01 23:28:34 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.0.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
 
 DESCRIPTION="Utility for making tagged kernel images useful for netbooting"
 SRC_URI="mirror://sourceforge/etherboot/${P}.tar.gz"
@@ -15,7 +15,7 @@ DEPEND=">=perl-5.6.1
 
 S="${WORKDIR}/${P}"
 
-src_compile() 
+src_compile()
 {
 	mv Makefile Makefile.org
 	cat Makefile.org | sed s/"\/usr\/local"/"\/usr"/ > Makefile

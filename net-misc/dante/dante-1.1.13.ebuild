@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.16 2003/08/14 19:34:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.17 2003/09/05 22:01:48 msterret Exp $
 
 inherit gcc
 
@@ -43,7 +43,7 @@ src_install() {
 	# bor: comment libdl.so out it seems to work just fine without it
 	perl -pe 's/(libdl\.so)//' -i ${D}/usr/bin/socksify
 	dodir /etc/socks
-	dodoc BUGS CREDITS LICENSE NEWS README SUPPORT TODO VERSION 
+	dodoc BUGS CREDITS LICENSE NEWS README SUPPORT TODO VERSION
 	docinto txt
 	cd doc
 	dodoc README* *.txt SOCKS4.*

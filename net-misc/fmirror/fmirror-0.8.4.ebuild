@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fmirror/fmirror-0.8.4.ebuild,v 1.6 2003/02/13 14:50:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fmirror/fmirror-0.8.4.ebuild,v 1.7 2003/09/05 22:01:48 msterret Exp $
 
 DESCRIPTION="FTP mirror utility"
 HOMEPAGE="http://freshmeat.net/projects/fmirror"
@@ -25,7 +25,7 @@ src_compile() {
 	emake || die "compile problem"
 }
 
-src_install() {   
+src_install() {
 	into /usr
 	dobin fmirror
 	dodoc COPYING ChangeLog README

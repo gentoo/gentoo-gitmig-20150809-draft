@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/vncsnapshot-1.1.ebuild,v 1.2 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/vncsnapshot-1.1.ebuild,v 1.3 2003/09/05 22:01:49 msterret Exp $
 
 LICENSE="GPL-2"
 DESCRIPTION="A command-line tool for taking JPEG snapshots of VNC servers"
@@ -14,16 +14,15 @@ DEPEND=">=media-libs/jpeg-6b
 
 # no configure for this puppy
 src_compile() {
-    #note: We override CDEBUGFLAGS instead of CFLAGS because otherwise
+	#note: We override CDEBUGFLAGS instead of CFLAGS because otherwise
 	#      we lost the INCLUDES in the makefile.
-    make CDEBUGFLAGS="${CFLAGS}" || die "make failed"
+	make CDEBUGFLAGS="${CFLAGS}" || die "make failed"
 }
 
 
 # likewise, no make install (we're real Unix hackers, we are)
 src_install() {
-    dobin vncsnapshot || die
-    cp vncsnapshot.man1 vncsnapshot.1
-    doman vncsnapshot.1
+	dobin vncsnapshot || die
+	cp vncsnapshot.man1 vncsnapshot.1
+	doman vncsnapshot.1
 }
-

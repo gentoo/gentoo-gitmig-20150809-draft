@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bk2site/bk2site-1.1.8-r1.ebuild,v 1.9 2003/02/13 14:45:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bk2site/bk2site-1.1.8-r1.ebuild,v 1.10 2003/09/05 22:01:48 msterret Exp $
 
 S=${WORKDIR}/${P}
 
@@ -17,19 +17,19 @@ DEPEND=""
 
 src_unpack() {
 	unpack $A
-        # Apply any patches available for this version
-        local patches=`echo ${FILESDIR}/${PV}.[0-9][0-9][0-9]`
-        case "$patches" in
-                *\]) 
-                        ;; # globbing didn't work; no patches available
-                *)
-                        cd $S
-                        for a in $patches; do
-                                patch -p0 < $a
-                        done
-                        ;;
-        esac
-        patch -f -p0 < ${FILESDIR}/ebuild.patch
+	# Apply any patches available for this version
+	local patches=`echo ${FILESDIR}/${PV}.[0-9][0-9][0-9]`
+	case "$patches" in
+			*\])
+					;; # globbing didn't work; no patches available
+			*)
+					cd $S
+					for a in $patches; do
+							patch -p0 < $a
+					done
+					;;
+	esac
+	patch -f -p0 < ${FILESDIR}/ebuild.patch
 }
 
 src_compile() {
@@ -46,7 +46,7 @@ src_install () {
 	make DESTDIR=${D} install || die
 	insinto /etc/bk2site
 	doins indexbase.html newbase.html otherbase.html searchbase.html
-	dodoc bk2site.html *.gif 
+	dodoc bk2site.html *.gif
 	dodoc README COPYING AUTHORS ChangeLog INSTALL NEWS TODO
 	exeinto /home/httpd/cgi-bin/bk2site
 	doexe *.pl

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.15 2003/06/28 22:17:36 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.16 2003/09/05 22:01:48 msterret Exp $
 
 S="${WORKDIR}"
 
@@ -45,5 +45,5 @@ src_install () {
 	mv host.1 hostx.1
 	dobin hostx
 	doman hostx.1
-	dodoc RE* 
+	dodoc RE*
 }

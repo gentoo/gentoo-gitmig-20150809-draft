@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Alexander Papaspyrou <alexander.papaspyrou@udo.edu
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetmonapplet/knetmonapplet-0.9.ebuild,v 1.1 2003/05/28 15:37:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetmonapplet/knetmonapplet-0.9.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
 inherit kde-base
 need-kde 3
 
@@ -13,9 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 src_unpack() {
+	kde_src_unpack
 
-    kde_src_unpack
-    
-    rm -f $S/knetmon/uiconfig.{h,cpp,moc}
-
+	rm -f $S/knetmon/uiconfig.{h,cpp,moc}
 }

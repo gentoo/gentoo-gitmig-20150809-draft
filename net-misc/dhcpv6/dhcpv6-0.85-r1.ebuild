@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.85-r1.ebuild,v 1.1 2003/08/05 04:58:29 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.85-r1.ebuild,v 1.2 2003/09/05 22:01:48 msterret Exp $
 
 DESCRIPTION="Server and client for DHCPv6"
 
@@ -28,7 +28,7 @@ src_install() {
 		docs/draft-ietf-dhc-dhcpv6-opt-dnsconfig-03.txt \
 		docs/draft-ietf-dhc-dhcpv6-opt-prefix-delegation-{02,03}.txt \
 		dhcp6c.conf dhcp6s.conf
-	
+
 	dodir /var/lib/dhcpv6
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/dhcp6s.rc dhcp6s

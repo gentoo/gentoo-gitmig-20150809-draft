@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-0.2.3.ebuild,v 1.6 2003/02/13 14:54:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-0.2.3.ebuild,v 1.7 2003/09/05 22:01:48 msterret Exp $
 
 IUSE="oggvorbis perl"
 
@@ -17,7 +17,7 @@ DEPEND="net-misc/icecast
 	media-sound/lame
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )"
 
-src_unpack () 
+src_unpack ()
 {
 	unpack ${A}
 	cd ${S}
@@ -43,7 +43,7 @@ src_compile ()
 
 src_install ()
 {
-	
+
 	make DESTDIR=${D} install || die "make install failed"
 
 }

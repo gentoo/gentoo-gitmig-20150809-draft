@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/htbinit-0.8.4.ebuild,v 1.2 2003/08/25 09:07:19 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/htbinit-0.8.4.ebuild,v 1.3 2003/09/05 22:01:48 msterret Exp $
 
 DESCRIPTION="Sets up Hierachical Token Bucket based traffic control (QoS) with iproute2"
 HOMEPAGE="http://www.sourceforge.net/projects/htbinit"
@@ -22,7 +22,7 @@ src_compile() {
 	mv htb.init-v${PV} htb.init-v${PV}.orig
 	sed <htb.init-v${PV}.orig >htb.init-v${PV} \
 		-e 's|HTB_PATH=${HTB_PATH:-/etc/sysconfig/htb}|HTB_PATH=/etc/htbinit|' \
-		-e 's|HTB_CACHE=${HTB_CACHE:-/var/cache/htb.init}|HTB_CACHE=/var/cache/htbinit|' 
+		-e 's|HTB_CACHE=${HTB_CACHE:-/var/cache/htb.init}|HTB_CACHE=/var/cache/htbinit|'
 }
 
 src_install() {

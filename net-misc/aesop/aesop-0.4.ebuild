@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aesop/aesop-0.4.ebuild,v 1.6 2003/03/03 13:01:28 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aesop/aesop-0.4.ebuild,v 1.7 2003/09/05 22:01:48 msterret Exp $
 
 
 S=${WORKDIR}/${P}
@@ -14,29 +14,24 @@ KEYWORDS="x86 ppc"
 DEPEND="sys-devel/gcc"
 
 src_compile() {
+	./configure --enable-ipv6 --enable-libaesop --prefix=/usr
 
-  ./configure --enable-ipv6 --enable-libaesop --prefix=/usr
+	mv ${S}/src/Rules.make ${S}/src/Rules.make.old
+	sed "s/CFLAG=-O2/CFLAG=${CFLAGS}/" ${S}/src/Rules.make.old > ${S}/src/Rules.make
+	cat ${S}/src/Rules.make
 
-  mv ${S}/src/Rules.make ${S}/src/Rules.make.old
-  sed "s/CFLAG=-O2/CFLAG=${CFLAGS}/" ${S}/src/Rules.make.old > ${S}/src/Rules.make 
-  cat ${S}/src/Rules.make
-
-  make aesopd aesoptunnel libaesop keygen  || die
-	
+	make aesopd aesoptunnel libaesop keygen  || die
 }
 
 src_install() {
+	# name is too generic... might be used by a more common package
+	mv ${S}/keygen ${S}/aesopkeygen
 
-  # name is too generic... might be used by a more common package
-  mv ${S}/keygen ${S}/aesopkeygen
+	dobin aesopd
+	dobin aesoptunnel
+	dobin aesopkeygen
 
-  dobin aesopd
-  dobin aesoptunnel
-  dobin aesopkeygen
+	dolib libaesop.so.0
 
-  dolib libaesop.so.0
-
-  dodoc BUILDING Changelog LICENSE README routes.example runaesop.sh
-
+	dodoc BUILDING Changelog LICENSE README routes.example runaesop.sh
 }
-

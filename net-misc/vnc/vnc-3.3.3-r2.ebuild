@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # /home/cvsroot/gentoo-x86/skel.build,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.3-r2.ebuild,v 1.18 2003/07/16 07:31:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.3-r2.ebuild,v 1.19 2003/09/05 22:01:49 msterret Exp $
 
 IUSE="java"
 
@@ -34,7 +34,7 @@ src_compile() {
 	make Makefiles || die
 	make depend || die
 	#cp ${FILESDIR}/vncviewer-makefile-3.3.3r2 ${S}/vncviewer/Makefile
-	
+
 	touch ${S}/vncviewer/vncviewer.man
 	make World || die
 

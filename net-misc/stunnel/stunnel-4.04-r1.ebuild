@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.04-r1.ebuild,v 1.3 2003/07/22 12:50:17 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.04-r1.ebuild,v 1.4 2003/09/05 22:01:49 msterret Exp $
 
 inherit eutils
 
@@ -47,7 +47,7 @@ src_install() {
 	use static || dosym /usr/lib/libstunnel.so.${PV} /usr/lib/libstunnel.so
 
 	insinto /etc/stunnel
-	doins ${FILESDIR}/stunnel.conf	
+	doins ${FILESDIR}/stunnel.conf
 
 	dosed "s:/usr/etc/stunnel:/etc/stunnel:" /etc/stunnel/stunnel.conf
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r3.ebuild,v 1.5 2003/02/24 19:42:04 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r3.ebuild,v 1.6 2003/09/05 22:01:49 msterret Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_compile() {
 	make || die
 }
 
-src_install() {							   
+src_install() {
 	into /usr
 	dobin  rcp/rcp
 	fperms 4755 /usr/bin/rcp

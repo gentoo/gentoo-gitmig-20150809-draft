@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r3.ebuild,v 1.19 2003/07/22 16:17:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r3.ebuild,v 1.20 2003/09/05 22:01:49 msterret Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 	epatch ${FILESDIR}/netkit-telnetd-0.17-gentoo.patch
 }
 
-src_compile() {			   
+src_compile() {
 	./configure --prefix=/usr || die
 
 	cp MCONFIG MCONFIG.orig
@@ -43,7 +43,7 @@ src_install() {
 	dobin telnet/telnet
 	#that's it if we're going on a build image
 	use build && return
-	
+
 	dosbin telnetd/telnetd
 	dosym telnetd /usr/sbin/in.telnetd
 	dosbin telnetlogin/telnetlogin

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.21.3.ebuild,v 1.9 2003/05/31 09:01:32 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.21.3.ebuild,v 1.10 2003/09/05 22:01:49 msterret Exp $
 
 IUSE="ssl"
 
@@ -22,8 +22,8 @@ src_compile() {
 	myconf='--enable-shared'
 
 	use ssl && myconf="$myconf --with-ssl"
-	
-	econf $myconf || die 
+
+	econf $myconf || die
 	emake || die
 }
 

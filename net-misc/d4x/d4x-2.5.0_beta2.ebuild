@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.0_beta2.ebuild,v 1.1 2003/08/31 14:54:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.0_beta2.ebuild,v 1.2 2003/09/05 22:01:48 msterret Exp $
 
 IUSE="nls esd gnome oss kde"
 
@@ -17,7 +17,7 @@ LICENSE="Artistic"
 
 DEPEND=">=x11-libs/gtk+-2.0.6
 	>=dev-libs/glib-2.0.6
-	>=sys-devel/gettext-0.11.2    
+	>=sys-devel/gettext-0.11.2
 	esd? ( >=media-sound/esound-0.2.7 )"
 
 src_unpack() {
@@ -38,22 +38,22 @@ src_unpack() {
 src_compile() {
 
 	myconf=""
-	
+
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"
-	
+
 	use esd \
 		&& myconf="${myconf} --enable-esd" \
 		|| myconf="${myconf} --disable-esd"
-	
+
 	use oss \
 		&& myconf="${myconf} --enable-oss" \
 		|| myconf="${myconf} --disable-oss"
 
 	econf --enable-release \
 		${myconf} || die
-		
+
 	emake || die
 }
 
@@ -75,7 +75,7 @@ src_install () {
 
 	if [ -n "`use gnome`" ]
 	then
-        echo "Categories=Application;Network;" >> ${S}/share/nt.desktop
+		echo "Categories=Application;Network;" >> ${S}/share/nt.desktop
 		insinto /usr/share/applications
 		newins share/nt.desktop d4x.desktop
 	fi

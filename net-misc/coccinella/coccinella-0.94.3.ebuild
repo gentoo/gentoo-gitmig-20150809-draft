@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/coccinella/coccinella-0.94.3.ebuild,v 1.2 2003/07/13 14:31:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/coccinella/coccinella-0.94.3.ebuild,v 1.3 2003/09/05 22:01:48 msterret Exp $
 
 NAME=Whiteboard
 S="${WORKDIR}/${NAME}-${PV}"
@@ -21,7 +21,7 @@ src_install () {
 	cp -r ${WORKDIR}/${NAME}-${PV}/* ${D}/opt/coccinella/
 	dosym /opt/coccinella/Whiteboard.tcl /opt/coccinella/coccinella
 	insinto /etc/env.d
-    doins ${FILESDIR}/97coccinella 
+	doins ${FILESDIR}/97coccinella
 	dodoc CHANGES README README-jabber README-smileys TechNotes
 }
 

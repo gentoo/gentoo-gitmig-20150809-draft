@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0256.ebuild,v 1.6 2003/08/04 13:12:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0256.ebuild,v 1.7 2003/09/05 22:01:49 msterret Exp $
 
 inherit gcc
 
@@ -29,7 +29,7 @@ src_install() {
 	# The driver goes into the standard modules location
 	insinto /lib/modules/${KV}/kernel/drivers/net
 	doins nvnet/nvnet.o
-    
+
 	# Docs
 	dodoc ${S}/ReleaseNotes.html
 }

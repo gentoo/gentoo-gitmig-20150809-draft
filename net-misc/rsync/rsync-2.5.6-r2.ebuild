@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.6-r2.ebuild,v 1.10 2003/08/26 03:45:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.6-r2.ebuild,v 1.11 2003/09/05 22:01:49 msterret Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 	sed	-i 's|/etc/rsyncd.conf|/etc/rsync/rsyncd.conf|g' rsync.h
 	# yes, updating the man page is very important.
 	sed -i 's|/etc/rsyncd|/etc/rsync/rsyncd|g' rsyncd.conf.5
-} 
+}
 
 src_compile() {
 	[ -n "$(use build)" ] \

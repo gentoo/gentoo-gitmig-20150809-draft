@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ipx-utils-1.1.ebuild,v 1.5 2003/02/13 14:54:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ipx-utils-1.1.ebuild,v 1.6 2003/09/05 22:01:48 msterret Exp $
 
 S=${WORKDIR}/${P/-utils}
 DESCRIPTION="The IPX Utilities"
@@ -21,7 +21,7 @@ src_unpack() {
 	cp Makefile Makefile.orig
 	sed -e "s:-O2 -Wall:${CFLAGS}:" \
 		Makefile.orig > Makefile
-	
+
 	# Fix install locations
 	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
 }

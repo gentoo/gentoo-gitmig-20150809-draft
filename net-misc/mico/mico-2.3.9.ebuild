@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.9.ebuild,v 1.2 2003/04/03 22:45:20 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.9.ebuild,v 1.3 2003/09/05 22:01:49 msterret Exp $
 
 IUSE="ssl tcltk"
 
@@ -20,8 +20,8 @@ DEPEND="virtual/glibc
 S="${WORKDIR}/${PN}"
 
 src_compile() {
-	local myopts="--enable-final 
-		--disable-mini-stl 
+	local myopts="--enable-final
+		--disable-mini-stl
 		--enable-except
 		--enable-dynamic
 		--enable-repo

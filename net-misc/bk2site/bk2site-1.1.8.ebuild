@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bk2site/bk2site-1.1.8.ebuild,v 1.10 2003/02/13 14:46:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bk2site/bk2site-1.1.8.ebuild,v 1.11 2003/09/05 22:01:48 msterret Exp $
 
 S=${WORKDIR}/${P}
 
@@ -28,7 +28,7 @@ src_install () {
 	make DESTDIR=${D} install || die
 	insinto /etc/bk2site
 	doins indexbase.html newbase.html otherbase.html searchbase.html
-	dodoc bk2site.html *.gif 
+	dodoc bk2site.html *.gif
 	dodoc README COPYING AUTHORS ChangeLog INSTALL NEWS TODO
 	exeinto /home/httpd/cgi-bin/bk2site
 	doexe *.pl

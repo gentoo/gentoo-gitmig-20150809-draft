@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/directvnc-0.6.1.ebuild,v 1.7 2003/02/13 14:48:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/directvnc-0.6.1.ebuild,v 1.8 2003/09/05 22:01:48 msterret Exp $
 
 inherit eutils
 
@@ -20,10 +20,10 @@ DEPEND="dev-libs/DirectFB
 src_unpack() {
 	unpack ${A}
 	cd ${S}/src
-	
+
 	# fix src/dfb.c to handle the new API changes in DirectFB
 	epatch ${FILESDIR}/${P}-api-fix.patch
-	
+
 	#fix broken Makefile.am
 	mv Makefile.am Makefile.am.orig
 	sed -e 's/-$(DIRECTFB_LIBS)/$(DIRECTFB_LIBS)/' Makefile.am.orig > Makefile.am

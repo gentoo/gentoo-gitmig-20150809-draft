@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/LinNeighborhood/LinNeighborhood-0.6.4.ebuild,v 1.12 2003/02/13 14:44:48 vapier Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/net-misc/LinNeighborhood/LinNeighborhood-0.6.4.ebuild,v 1.13 2003/09/05 22:01:48 msterret Exp $
 
 IUSE="nls"
 
@@ -26,7 +26,7 @@ src_compile() {
 		--host=${CHOST} \
 		--enable-ipv6 \
 		${myopts} || die
-	
+
 	emake || die
 }
 

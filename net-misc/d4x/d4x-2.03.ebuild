@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.03.ebuild,v 1.7 2003/02/28 16:55:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.03.ebuild,v 1.8 2003/09/05 22:01:48 msterret Exp $
 
 IUSE="nls esd gnome oss"
 
@@ -43,7 +43,7 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--enable-release \
 		${myconf} || die
-		
+
 	emake || die
 }
 
@@ -51,12 +51,12 @@ src_install () {
 
 	dodir /usr/bin
 	dodir /usr/share/d4x
-	
+
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die
-   
+
 	dodoc AUTHORS COPYING ChangeLog* NEWS PLANS README TODO
 	cd ${S}/DOC
 	dodoc FAQ* LICENSE NAMES TROUBLES THANKS

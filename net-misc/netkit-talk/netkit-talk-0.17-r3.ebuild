@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/netkit-talk-0.17-r3.ebuild,v 1.1 2003/04/03 18:20:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/netkit-talk-0.17-r3.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
 
 MY_P=netkit-ntalk-${PV}
 S=${WORKDIR}/netkit-ntalk-${PV}
@@ -15,20 +15,20 @@ DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2"
 
 src_unpack() {
-    unpack ${A}
-    patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	unpack ${A}
+	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {
-    try ./configure
-    cp MCONFIG MCONFIG.orig
-    sed -e "s:-O2 -Wall:-Wall:" -e "s:-Wpointer-arith::" MCONFIG.orig > MCONFIG
-    try make
+	try ./configure
+	cp MCONFIG MCONFIG.orig
+	sed -e "s:-O2 -Wall:-Wall:" -e "s:-Wpointer-arith::" MCONFIG.orig > MCONFIG
+	try make
 }
 
-src_install() {                               
+src_install() {
 	insinto /etc/xinetd.d
-	newins ${FILESDIR}/talk.xinetd talk 
+	newins ${FILESDIR}/talk.xinetd talk
 	into /usr
 	dobin  talk/talk
 	doman  talk/talk.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/netkit-routed-0.17-r3.ebuild,v 1.1 2003/06/06 11:59:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/netkit-routed-0.17-r3.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
 
 DESCRIPTION="Netkit - routed"
 SRC_URI="http://ftp.debian.org/debian/pool/main/n/netkit-routed/${PN}_${PV}.orig.tar.gz"
@@ -10,12 +10,12 @@ KEYWORDS="x86 sparc ppc mips alpha"
 LICENSE="BSD"
 SLOT="0"
 
-src_compile() {  
+src_compile() {
 	./configure || die
 	make || die
 }
 
-src_install() {							   
+src_install() {
 	into /usr
 
 	# ripquery

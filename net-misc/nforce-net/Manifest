@@ -1,3 +1,5 @@
-MD5 c94d06d6f883700d21e346d79589b307 files/digest-nforce-net-1.0.0261-r1 73
 MD5 1b2704a702234e5257cb5285a3e5cebe ChangeLog 1284
-MD5 cade52ee571f41e9b71665f9c46a0202 nforce-net-1.0.0261-r1.ebuild 2643
+MD5 5d9fce994c578cc57c75bb647113c164 nforce-net-1.0.0256.ebuild 1407
+MD5 7f75d213c4b20e943677e8f700fd9b7d nforce-net-1.0.0261-r1.ebuild 2634
+MD5 03580a26c5b10797541c68e7473510bf files/digest-nforce-net-1.0.0256 73
+MD5 c94d06d6f883700d21e346d79589b307 files/digest-nforce-net-1.0.0261-r1 73

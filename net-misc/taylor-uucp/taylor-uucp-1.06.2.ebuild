@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.06.2.ebuild,v 1.10 2003/07/31 19:19:39 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.06.2.ebuild,v 1.11 2003/09/05 22:01:49 msterret Exp $
 
 S=${WORKDIR}/uucp-1.06.1	# This should be a .2 bug the package is messed
 DESCRIPTION="Taylor UUCP"
@@ -16,8 +16,8 @@ DEPEND="virtual/glibc"
 src_compile() {
 	epatch ${FILESDIR}/gentoo-uucp.diff
 
-    sh configure
-    make || die
+	sh configure
+	make || die
 }
 
 src_install() {
@@ -40,7 +40,6 @@ src_install() {
 	dodoc COPYING ChangeLog MANIFEST NEWS README TODO
 }
 
-pkg_preinst()
-{
-    usermod -s /bin/bash uucp
+pkg_preinst() {
+	usermod -s /bin/bash uucp
 }

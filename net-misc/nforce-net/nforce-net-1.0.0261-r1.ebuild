@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261-r1.ebuild,v 1.3 2003/08/03 03:57:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261-r1.ebuild,v 1.4 2003/09/05 22:01:49 msterret Exp $
 
 inherit gcc
 
@@ -29,7 +29,7 @@ src_install() {
 	# The driver goes into the standard modules location
 	insinto /lib/modules/${KV}/kernel/drivers/net
 	doins nvnet/nvnet.o
-    
+
 	# Docs
 	dohtml ${S}/ReleaseNotes.html
 
@@ -38,21 +38,21 @@ src_install() {
 #  The nForce network driver supports two optimization modes:
 #   optimization=1 ; CPU optimization
 #   optimization=2 ; Throughput optimization
-#  CPU optimization mode ruduces the CPU utilization by using 
-#  interrupt moderation. Throughput optimization mode maximizes 
+#  CPU optimization mode ruduces the CPU utilization by using
+#  interrupt moderation. Throughput optimization mode maximizes
 #  the throughput.  This mode has higher CPU consumption.
 #  By default, the driver runs in throughput optimization mode.
 
-#  The "speed" module parameter can be used set the interface 
-#  speed of the ethernet controller.  By default the controller 
-#  will autosense the interface speed, but also supports the 
+#  The "speed" module parameter can be used set the interface
+#  speed of the ethernet controller.  By default the controller
+#  will autosense the interface speed, but also supports the
 #  following values:
 #     speed=0 ; auto
 #     speed=1 ; 10Mbps
 #     speed=2 ; 100Mpbs
 
-#  The "duplex" module parameter can be used to specify the 
-#  interface duplex.  By default the controller will autoselect 
+#  The "duplex" module parameter can be used to specify the
+#  interface duplex.  By default the controller will autoselect
 #  duplex, but also supports the following values:
 #     duplex=0 ; auto
 #     duplex=1 ; half duplex

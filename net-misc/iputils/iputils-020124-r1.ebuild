@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-020124-r1.ebuild,v 1.11 2003/07/16 14:27:38 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-020124-r1.ebuild,v 1.12 2003/09/05 22:01:48 msterret Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="Network monitoring tools including ping and ping6"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86 sparc alpha ppc hppa mips"
 
 DEPEND="virtual/glibc
-	virtual/os-headers	
+	virtual/os-headers
 	app-text/openjade
 	dev-perl/SGMLSpm
 	app-text/docbook-sgml-dtd
@@ -27,7 +27,7 @@ src_compile() {
 src_install () {
 	into /
 	dobin ping ping6
-	dosbin arping 
+	dosbin arping
 	into /usr
 	dobin tracepath tracepath6 traceroute6
 	dosbin clockdiff rarpd rdisc ipg tftpd

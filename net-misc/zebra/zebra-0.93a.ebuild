@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93a.ebuild,v 1.4 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93a.ebuild,v 1.5 2003/09/05 22:01:50 msterret Exp $
 
 S=${WORKDIR}/${P}
 IUSE="pam snmp ipv6"
@@ -30,10 +30,10 @@ src_compile() {
 		--mandir=/usr/share/man \
 		${myconf} || die "./configure failed"
 
-	emake || die "Parallel Make Failed"	
+	emake || die "Parallel Make Failed"
 }
 
-src_install() {                               
+src_install() {
 	make \
 		prefix=${D}/usr \
 		sysconfdir=${D}/etc/zebra \
@@ -46,6 +46,6 @@ src_install() {
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/zebra.initd zebra
 	insinto /etc/conf.d ; newins ${FILESDIR}/zebra.confd zebra
-	
+
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README REPORTING-BUGS SERVICES TODO
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsproxyd/tlsproxyd-0.0.2.ebuild,v 1.3 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsproxyd/tlsproxyd-0.0.2.ebuild,v 1.4 2003/09/05 22:01:49 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An TLS Tunneling Tool."
@@ -26,5 +26,5 @@ pkg_postinst() {
 	einfo "Read the tlsproxyd MAN-Page"
 	einfo "Please create /etc/tlsproxyd/tlsproxyd.conf to fit your Configuration"
 	einfo "init Script not included in this distribution. Shouldnt be to hard to create one on your own!"
-}				
+}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rol/rol-0.2.2.ebuild,v 1.3 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rol/rol-0.2.2.ebuild,v 1.4 2003/09/05 22:01:49 msterret Exp $
 
 inherit eutils
 
@@ -30,5 +30,5 @@ src_install() {
 	cd ${S}/src
 	dobin rol
 	cd ${S}
-    	dodoc AUTHORS ChangeLog README SITES
+	dodoc AUTHORS ChangeLog README SITES
 }

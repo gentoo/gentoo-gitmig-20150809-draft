@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/gyach-0.7.5-r1.ebuild,v 1.8 2003/02/13 14:52:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/gyach-0.7.5-r1.ebuild,v 1.9 2003/09/05 22:01:48 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+-based Yahoo! chat client"
@@ -18,7 +18,7 @@ src_compile() {
 }
 
 src_install() {
-  	make prefix=${D}/usr install || die
+	make prefix=${D}/usr install || die
 	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README* TODO
 
 	# install icon and desktop entry for gnome

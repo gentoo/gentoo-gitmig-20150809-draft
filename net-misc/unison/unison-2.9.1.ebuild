@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.9.1.ebuild,v 1.5 2003/02/13 15:09:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.9.1.ebuild,v 1.6 2003/09/05 22:01:49 msterret Exp $
 
 IUSE="gtk"
 
@@ -19,15 +19,15 @@ SRC_URI="http://www.cis.upenn.edu/~bcpierce/unison/download/stable/${P}/src.tar.
 S=${WORKDIR}/${P}
 
 src_compile() {
-	
+
 	local myconf
-	
+
 	if [ `use gtk` ]; then
 		myconf="$myconf UISTYLE=gtk"
 	else
 		myconf="$myconf UISTYLE=text"
 	fi
-	
+
 	make $myconf CFLAGS="" || die
 }
 
