@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ppc-development-sources-2.6.2-r1.ebuild,v 1.1 2004/02/04 19:30:13 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ppc-development-sources-2.6.2-r1.ebuild,v 1.2 2004/02/04 19:45:15 darkspecter Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -17,6 +17,8 @@ S=${WORKDIR}/linux-${KV}
 
 inherit eutils
 
+IUSE="extlib"
+
 # What's in this kernel?
 
 # INCLUDED: 2.6 vanilla + benh bk snapshot
@@ -25,6 +27,7 @@ DESCRIPTION="Full sources for the linux kernel 2.6 with benh's patchset"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
 		mirror://gentoo/patches-${KV}.bz2"
 KEYWORDS="~ppc ~ppc64"
+DEPEND=" extlib? ( dev-libs/ucl )"
 RDEPEND="sys-apps/module-init-tools"
 SLOT=${KV}
 PROVIDE="virtual/linux-sources
