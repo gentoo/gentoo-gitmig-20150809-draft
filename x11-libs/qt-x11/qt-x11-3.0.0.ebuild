@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-3.0.0.ebuild,v 1.3 2001/11/19 05:09:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-3.0.0.ebuild,v 1.4 2001/11/19 14:33:58 danarmak Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
@@ -49,7 +49,7 @@ src_compile() {
 	[ "$DEBUG" ]	&& myconf="${myconf} -debug" 			|| myconf="${myconf} -release -no-g++-exceptions"
 
 	./configure -sm -thread -stl -system-zlib -system-libjpeg ${myconf} \
-	-system-libmng -system-libpng -ldl -lpthread || die # -prefix ${D}/${QTBASE}
+	-system-libmng -system-libpng -ldl -lpthread -no-xft || die # -prefix ${D}/${QTBASE}
 
 	make || die
 
