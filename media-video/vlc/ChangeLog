@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.57 2004/09/01 16:23:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.58 2004/10/23 23:34:18 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> vlc-0.7.2-r1.ebuild:
+  Added ~sparc keyword.
 
   01 Sep 2004; Martin Holzer <mholzer@gentoo.org> vlc-0.7.2-r1.ebuild,
   vlc-0.7.2.ebuild:
