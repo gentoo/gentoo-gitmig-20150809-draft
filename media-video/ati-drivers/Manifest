@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 591ad7242a48c4e0fff82ca007dcf177 ChangeLog 11824
+MD5 80c11646ef75d4ede2251d4de05f1673 ChangeLog 11995
 MD5 375a467b7a4e36edf6514421f8f64694 ati-drivers-3.11.1.ebuild 4772
 MD5 2ace02f46d6c58b2d2031932f81af225 ati-drivers-3.12.0.ebuild 4860
 MD5 a6f870cc41fb1a75a94e93539a8b8ff4 ati-drivers-3.14.1.ebuild 4346
@@ -9,7 +9,7 @@ MD5 7d92c5a2ea96597e36804d1de46c831d ati-drivers-3.14.6.ebuild 4523
 MD5 d73ae47566be08fd04b3c11deba4261c ati-drivers-3.9.0-r1.ebuild 4511
 MD5 897d558fbabf5f0fb60c833a326eea6b ati-drivers-3.9.0.ebuild 4123
 MD5 a2a9c4ddd4562efd9ca3b290459e7196 metadata.xml 219
-MD5 b77a72cb81e82618597e095b114641f4 ati-drivers-8.8.25-r3.ebuild 5603
+MD5 f8113586d0116154eb066ee6a968fe31 ati-drivers-8.8.25-r3.ebuild 5639
 MD5 e61309d064f12cc623e4d6e78aa82b36 files/09ati 39
 MD5 2a93df06be0a03b771e0e980b37f7d7a files/3.2.5-linux-2.6.0-test6-mm.patch 309
 MD5 7a1a2040181cf4d2d3b0e820da5a8576 files/8.08-kernel-2.6.10.patch 4492
@@ -33,7 +33,7 @@ MD5 f62d7815852919948deb06c864841953 files/digest-ati-drivers-8.8.25-r3 154
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB9Y3dArHZZzCEUG0RAq4gAJ4iPWFFktPLg/Zvf6fws4gX5Yh2qgCcD93+
-J0hXg1lAhxM5oAOUCDD+APo=
-=xmG7
+iD4DBQFB9aWpArHZZzCEUG0RArBGAJwNWFQoMmsMhIhj9Mm3LpVBds/xXQCYr9pk
+vrLSmPN0lxd09q88QoL95g==
+=2MVk
 -----END PGP SIGNATURE-----
