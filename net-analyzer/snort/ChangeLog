@@ -1,13 +1,27 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.18 2003/08/11 05:58:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.19 2003/08/21 05:17:06 vapier Exp $
+
+*snort-2.0.1-r1 (21 Aug 2003)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Patch to compile against SLOT-ed libnet-1.0.x #17772.
+  Also fix user adding to enewuser/enewgroup and switch use
+  flags over to `use_enable`.
+
+*snort-1.9.1-r3 (21 Aug 2003)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Patch to compile against SLOT-ed libnet-1.0.x #17772.
+  Also fix user adding to enewuser/enewgroup and switch use
+  flags over to `use_enable`.
+
+*snort-2.0.1 (09 Aug 2003)
 
   11 Aug 2003; <solar@gentoo.org> snort-2.0.1.ebuild,
   files/snort-2.0.1+prelude.patch:
   Snort 2.0.x does not support snmp bug #26310, Moved large prelude patch to
   mirror://
-
-*snort-2.0.1 (09 Aug 2003)
 
   09 Aug 2003; <mboman@gentoo.org> snort-2.0.1.ebuild,
   files/snort-2.0.1+prelude.patch:
