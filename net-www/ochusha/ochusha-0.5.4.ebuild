@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.5.2.ebuild,v 1.1 2004/05/05 08:16:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.5.4.ebuild,v 1.1 2004/05/07 16:39:10 usata Exp $
 
 IUSE="nls ssl"
 
 DESCRIPTION="Ochusha - 2ch viewer for GTK+"
 HOMEPAGE="http://ochusha.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/${PN}/9332/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge.jp/${PN}/9372/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
