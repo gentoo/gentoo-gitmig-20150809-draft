@@ -117,7 +117,7 @@
 # Removed since it's really no need for this to be default, and it together 
 # with defaulting to db in /etc/nsswitch.conf breaks evolution >= 0.11.
 # sys-libs/nss-db 
-*sys-libs/pam     
+*>=sys-libs/pam-0.75-r9
 *sys-libs/pwdb      
 *sys-libs/readline  
 *sys-libs/slang

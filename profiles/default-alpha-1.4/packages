@@ -99,7 +99,7 @@
 *<sys-libs/db-3.2.10
 *sys-libs/gdbm  
 *>=sys-libs/ncurses-5.2.20020511-r2
-*sys-libs/pam     
+*>=sys-libs/pam-0.75-r9
 *sys-libs/pwdb      
 *sys-libs/readline  
 *sys-libs/slang

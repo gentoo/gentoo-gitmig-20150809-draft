@@ -187,7 +187,7 @@ sys-apps/reiserfsprogs
 *sys-libs/db
 *sys-libs/gdbm  
 *sys-libs/ncurses     
-*sys-libs/pam     
+*>=sys-libs/pam-0.75-r9
 *sys-libs/pwdb      
 *sys-libs/readline  
 *sys-libs/slang
