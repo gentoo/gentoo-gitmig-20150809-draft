@@ -1,5 +1,4 @@
-MD5 9ff7e8a1cbb19650290f7b786ef40b4b ChangeLog 316
-MD5 5985deda4e5737c8124436cdd975ec38 cl-unit-1.3.ebuild~ 639
-MD5 e7a08105a45e9e0b1e12ae200510203e cl-unit-1.3.ebuild 687
+MD5 6fd6b71ad833c95e52a508a267917cbe ChangeLog 316
+MD5 44d58f8398097db49b2757ee2aa5c76d cl-unit-1.3.ebuild 788
 MD5 8aed1893ca66c8baf780fabd4dc15c26 files/clunit.asd 193
 MD5 bbe5803788514526e500c86ac52b63c6 files/digest-cl-unit-1.3 67
