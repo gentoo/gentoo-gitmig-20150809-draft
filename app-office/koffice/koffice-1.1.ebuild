@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.ebuild,v 1.5 2001/10/05 13:34:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.ebuild,v 1.6 2001/10/19 14:51:09 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
@@ -26,6 +26,24 @@ RDEPEND="$RDEPEND
 	>=kde-base/kdelibs-2.2"
 
 src_unpack() {
+	checkpython || exit 1
 	base_src_unpack all patch
 	kde-objprelink-patch
+}
+
+checkpython() {
+    #libs=`python-config --libs`
+    if [ -z "`echo $libs | grep -- -ltk`" ]; then
+	echo "
+	ERROR: koffice requires a python built against tcl-tk.
+Please add tcltk to your USE flag list, remerge dev-lang/python,
+and try emerging koffice again.
+You can remove tcltk from USE again after remerging python.
+
+I got: python-config --libs =
+$libs
+and was expecting the output to contain -ltk, but it didn't.
+"
+	return 1
+    fi
 }
