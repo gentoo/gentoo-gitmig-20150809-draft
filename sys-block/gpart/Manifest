@@ -1,8 +1,18 @@
-MD5 3ef34ad8da62fc50ce23cda965e69f14 ChangeLog 878
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d7efde9955d0d25321793ecbb90b59b4 ChangeLog 1175
+MD5 6142526a70bd42351643b63f476488d1 gpart-0.1h-r1.ebuild 965
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 dd19900b4954b76ab313c3c63c33b875 gpart-0.1h-r1.ebuild 963
 MD5 1d99cacbe74a8d1d559fdeb0d843359e files/gpart-0.1h-PIC.patch 394
+MD5 8161c02116ee4575906587eb09e35bde files/gpart-0.1h-ntfs.patch 2430
 MD5 1ed269d6c15522200092b17a53c7a90c files/digest-gpart-0.1h-r1 136
 MD5 81eee5d9985df9bf9c23624e46cf945f files/gpart-0.1h-errno.patch 384
 MD5 ae6d86b0268618d34e618824dcd82754 files/gpart-0.1h-vfat.patch 515
-MD5 8161c02116ee4575906587eb09e35bde files/gpart-0.1h-ntfs.patch 2430
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCK0GqLLFUmVNQ7rkRAqhyAJ4jWnUs5FQQSF8WkmMgdqAcZekWXwCeKIYl
+juadTXzNKN4Miop/nEIbLM4=
+=xi3+
+-----END PGP SIGNATURE-----
