@@ -1,0 +1,31 @@
+#!/sbin/runscript
+
+depend() {
+	need localmount
+}
+
+start() {
+	ebegin "Starting Quota"
+	if [ -x /sbin/quotacheck ]
+	then
+		echo "Checking quotas. This make take some time."
+		/sbin/quotacheck -avug
+		echo "Done."
+	fi
+	if [ -x /sbin/quotaon ]
+	then
+		echo "Turning on quota"
+		/sbin/quotaon -avug
+	fi
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping quota"
+	if [ -x /sbin/quotaoff ]
+	then
+		echo "Turning quota off"
+		/sbin/quotaoff -avug
+	fi
+	eend $?
+}
