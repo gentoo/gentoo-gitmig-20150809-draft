@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.4.1.ebuild,v 1.2 2004/06/27 10:29:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.4.1.ebuild,v 1.3 2004/07/04 15:22:32 latexer Exp $
 
-inherit gnome2
+inherit gnome2 mono
 
 DESCRIPTION="A GObject wrapper for Bluetooth functionality"
 HOMEPAGE="http://usefulinc.com/software/gnome-bluetooth/"
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 
 MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="README NEWS ChangeLog AUTHORS COPYING"
+USE_DESTDIR="yes"
 
 src_compile() {
 	use sparc || G2CONF="`use_enable mono`"

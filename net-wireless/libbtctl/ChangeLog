@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/libbtctl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.9 2004/06/27 19:07:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.10 2004/07/04 15:22:32 latexer Exp $
+
+  04 Jul 2004; Peter Johanson <latexer@gentoo.org> libbtctl-0.4.1.ebuild:
+  Fixes for the mono support. See bug #56019.
 
   27 Jun 2004; Alastair Tse <liquidx@gentoo.org> libbtctl-0.3.ebuild:
   make this work for both x86 and ~x86 by creative use of || dependencies
