@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/xvkbd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.1 2003/08/24 15:19:11 matsuu Exp $
+
+*xvkbd-2.5a (25 Aug 2003)
+
+  25 Aug 2003; MATSUU Takuto <matsuu@gentoo.org> xvkbd-2.5a.ebuild:
+  Initial import. #26520
+
