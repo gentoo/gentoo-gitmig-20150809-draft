@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoproject
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/autoproject/ChangeLog,v 1.1 2003/12/11 19:15:06 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/autoproject/ChangeLog,v 1.2 2003/12/11 19:16:04 lanius Exp $
+
+  11 Dec 2003; Heinrich Wendel <lanius@gentoo.org> autoproject-0.17.ebuild:
+  x86
 
 *autoproject-0.17 (11 Dec 2003)
 
