@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/SGMLSpm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.1 2002/02/01 21:53:27 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.2 2002/05/06 15:39:26 seemant Exp $
+
+*SGMLSpm-1.03-r1 (6 May 2002)
+
+  6 May 2002; Seemant Kulleen <seemant@gentoo.org> SGMLSpm-1.03-r1.ebuild
+  files/digest-SGMLSpm-1.03-r1 :
+
+  Updated formatting
 
 *SGMLSpm-1.03 (1 Feb 2002)
 
