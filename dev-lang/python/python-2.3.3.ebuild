@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.8 2004/01/24 22:31:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.9 2004/01/26 12:04:53 liquidx Exp $
 
 inherit flag-o-matic python
 
@@ -11,7 +11,7 @@ PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 
 S="${WORKDIR}/Python-${MY_PV}"
 DESCRIPTION="A really great language"
-SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${MY_PV}.tgz"
+SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${MY_PV}.tar.bz2"
 HOMEPAGE="http://www.python.org"
 
 IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc"
@@ -43,7 +43,7 @@ PROVIDE="virtual/python"
 # add portage to DEPENDS otherwise it'll create a circular dependency
 # NOTE: we don't need this any more as sys-apps/portage-2.0.49-r18 is 
 #       already stable
-pkg_setup_disabled() {
+pkg_setup() {
 	if ! has_version ">=sys-apps/portage-2.0.49-r16"; then
 		eerror "Dependency Failed! Requires >=sys-apps/portage-2.0.49-r16"
 		eerror "Please run: emerge portage"
@@ -54,12 +54,14 @@ pkg_setup_disabled() {
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	# adds /usr/lib/portage/pym to sys.path - liquidx (08 Oct 03)
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.3-add_portage_search_path.patch
+	epatch ${FILESDIR}/${PN}-2.3-add_portage_search_path.patch
 	# adds support for PYTHON_DONTCOMPILE shell environment to
 	# supress automatic generation of .pyc and .pyo files - liquidx (08 Oct 03)
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.3-gentoo_py_dontcompile.patch
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.3.2-disable_modules_and_ssl.patch
+	epatch ${FILESDIR}/${PN}-2.3-gentoo_py_dontcompile.patch
+	epatch ${FILESDIR}/${PN}-2.3.2-disable_modules_and_ssl.patch
+	epatch ${FILESDIR}/${PN}-2.3-mimetypes_apache.patch
 }
 
 src_configure() {

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.73 2004/01/24 22:31:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.74 2004/01/26 12:04:53 liquidx Exp $
+
+  26 Jan 2004; Alastair Tse <liquidx@gentoo.org> python-2.3.3.ebuild:
+  re-instating pkg_setup() warning/abort message. added apache mime.types to
+  mime type search list. modified to use tar.bz2 (saves 1MB of downloads)
 
   24 Jan 2004; Guy Martin <gmsoft@gentoo.org> python-2.3.3.ebuild:
   Added ~hppa to KEYWORDS.
