@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.8.ebuild,v 1.6 2004/06/24 23:11:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.8.ebuild,v 1.7 2004/06/28 20:48:07 agriffis Exp $
 
 IUSE="gtk"
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11
 	media-libs/xpm
 	dev-libs/openssl
@@ -21,7 +21,7 @@ DEPEND="virtual/glibc
 		dev-util/pkgconfig
 	)"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	virtual/x11
 	media-libs/xpm
 	dev-libs/openssl

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/wmmemmon-0.7.0.ebuild,v 1.9 2004/06/24 23:13:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/wmmemmon-0.7.0.ebuild,v 1.10 2004/06/28 20:51:39 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="A program to monitor memory/swap usages."
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc amd64"
 SLOT="0"
 
-DEPEND="virtual/glibc virtual/x11"
+DEPEND="virtual/libc virtual/x11"
 
 src_compile() {
 
