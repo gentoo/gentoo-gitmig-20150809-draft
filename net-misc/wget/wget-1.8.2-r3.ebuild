@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r3.ebuild,v 1.8 2003/11/19 09:40:02 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r3.ebuild,v 1.9 2003/12/06 06:53:12 drobbins Exp $
 
 inherit gnuconfig
 
@@ -17,7 +17,7 @@ KEYWORDS="x86 ppc sparc alpha hppa arm mips amd64 ia64"
 IUSE="ssl nls static ipv6 debug"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
-DEPEND="nls? ( sys-devel/autoconf sys-devel/gettext )"
+DEPEND="sys-devel/autoconf nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
