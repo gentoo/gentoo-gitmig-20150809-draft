@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.0.1.ebuild,v 1.1 2003/10/04 15:39:38 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.0.1.ebuild,v 1.2 2003/10/07 21:03:12 liquidx Exp $
 
 inherit gnome2
 
@@ -42,6 +42,13 @@ pkg_setup () {
 		eerror "export USE=\"gtk2\" ;emerge mozilla -p "
 		die "Need Mozilla compiled with gtk+-2.0!!"
 	fi
-
 }
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# fixing --server related session_get_windows(session) problems
+	# http://bugzilla.gnome.org/show_bug.cgi?id=124042
+	epatch ${FILESDIR}/${P}-session_get_windows-session.patch
+}

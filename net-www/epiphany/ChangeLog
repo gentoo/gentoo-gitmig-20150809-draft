@@ -1,6 +1,10 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.24 2003/10/05 13:30:52 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.25 2003/10/07 21:03:12 liquidx Exp $
+
+  07 Oct 2003; Alastair Tse <liquidx@gentoo.org> epiphany-1.0.1.ebuild,
+  files/epiphany-1.0.1-session_get_windows-session.patch:
+  added patch to fix --server issues
 
   05 Oct 2003; Mike Gardiner <obz@gentoo.org> epiphany-1.0.ebuild:
   Marked stable on x86
