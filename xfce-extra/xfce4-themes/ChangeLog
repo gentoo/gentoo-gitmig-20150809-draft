@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-themes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-themes/ChangeLog,v 1.29 2004/09/18 21:25:01 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-themes/ChangeLog,v 1.30 2004/10/19 09:22:07 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  xfce4-themes-4.0.6.ebuild:
+  Stable on amd64.
 
   18 Sep 2004; Tom Gall <tgall@gentoo.org> xfce4-themes-4.0.6.ebuild:
   stable on ppc64, bug #57744
