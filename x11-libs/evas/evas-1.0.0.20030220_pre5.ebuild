@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20030220_pre5.ebuild,v 1.1 2003/02/20 11:52:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20030220_pre5.ebuild,v 1.2 2003/02/22 08:04:39 vapier Exp $
 
 DESCRIPTION="hardware-accelerated canvas API"
 HOMEPAGE="http://www.enlightenment.org/pages/evas.html"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="X mmx opengl jpeg png pic directfb fbcon"
 
 DEPEND="virtual/x11
