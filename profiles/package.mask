@@ -4,6 +4,7 @@
 # kde 3.0.1 - not available for fetching yet, but we lucky packagers have it
 >=kde-base/arts-1.0.1 # Tested, and re-digested [ OK ]
 >=x11-libs/qt-3.0.4.1 # Tested, digested [ OK ]
+>=app-doc/qt-docs-3.0.4.1
 >=kde-base/kde-3.0.1
 >=kde-base/kdeaddons-3.0.1
 >=kde-base/kdeadmin-3.0.1
