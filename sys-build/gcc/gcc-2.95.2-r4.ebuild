@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-build/gcc/gcc-2.95.2-r4.ebuild,v 1.1 2001/01/25 18:00:26 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-build/gcc/gcc-2.95.2-r4.ebuild,v 1.2 2001/01/27 08:38:36 achim Exp $
 
 P=gcc-2.95.2
 A="gcc-2.95.2.tar.gz 
@@ -42,7 +42,7 @@ src_unpack() {
     gzip -dc ${DISTDIR}/libg++-2.8.1.3-20000914.diff.gz | patch -p1
     einfo "Moving trees"
     cd ${S}
-    rm -rf texinfo
+    #rm -rf texinfo
     mv ../libg++-2.8.1.3/* .
     rmdir ../libg++-2.8.1.3
     zcat ${FILESDIR}/${A0} | patch -p0
@@ -54,17 +54,21 @@ src_unpack() {
 src_compile() {
 	cd ${S}
 	#i586a doesn't like optimization?
-	try ${S}/configure --prefix=${T}  \
-		       --host=${CHOST} \
-                        --disable-nls \
+	try ${S}/configure --prefix=${T}  --enable-version-specific-runtime-libs \
+		       --host=${CHOST} --with-local-prefix=${T}/local \
+                        --disable-nls --enable-threads \
 		        --enable-languages=c,c++
 	# Parallel build does not work
-	try make ${MAKEOPTS} LDFLAGS=-static bootstrap
+	try make LDFLAGS=-static bootstrap
+        cd ${§}/texinfo/util
+        make texindex install-info
 }
 
 src_install() {
 
 	try make install prefix=${D}${T} mandir=${D}${T}/man
+        cd texinfo
+        dobin makeinfo/makeinfo util/texi2dvi util/install-info util/texindex
         FULLPATH=${D}${T}/lib/gcc-lib/${THOST}/${PV}
 	cd ${FULLPATH}
 	dodir /lib

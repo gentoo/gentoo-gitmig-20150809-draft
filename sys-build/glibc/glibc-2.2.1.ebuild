@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-build/glibc/glibc-2.2.1.ebuild,v 1.1 2001/01/25 18:00:26 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-build/glibc/glibc-2.2.1.ebuild,v 1.2 2001/01/27 08:38:36 achim Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -26,8 +26,12 @@ src_compile() {
 	try ../configure --host=${CHOST} --without-cvs \
 		--enable-add-ons=linuxthreads \
 		--disable-profile --prefix=/usr \
-		--enable-kernel=2.4.0
+		--enable-kernel=2.4.0 \
+                --with-headers=${ROOT}/usr/include
+	cp config.make config.orig
+	sed -e "s:^LIBGD =.*:LIBGD = no:" config.orig > config.make
 	try make PARALLELMFLAGS=${MAKEOPTS}
+	
 }
 
 src_unpack() {
@@ -39,8 +43,8 @@ src_unpack() {
 
 src_install() {
     cd ${S}
-    try make PARALELLMFLAGS=${MAKEOPTS} install_root=${D} install -C buildhere
-    #try make PARALELLMFLAGS=${MAKEOPTS} install_root=${D} localedata/install-locales -C buildhere
+    try make install_root=${D} install -C buildhere
+#    try make install_root=${D} localedata/install-locales -C buildhere
     chmod 755 ${D}/usr/libexec/pt_chown
     rm -rf ${D}/usr/info
 }
