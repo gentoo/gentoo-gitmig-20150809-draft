@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/py-xmlrpc-0.8.8.2.ebuild,v 1.12 2003/06/22 12:15:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/py-xmlrpc-0.8.8.2.ebuild,v 1.13 2004/05/04 13:03:05 kloeri Exp $
 
 inherit distutils
 
 IUSE=""
 DESCRIPTION="Fast xml-rpc implementation for Python"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/py-xmlrpc/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/py-xmlrpc/"
 
 DEPEND="virtual/python"
