@@ -31,6 +31,9 @@
 *>=sys-apps/util-linux-2.12
 *>=sys-libs/pam-0.77
 
+# critical xattr fixes
+*>=sys-fs/e2fsprogs-1.34-r1
+
 # must use coreutils (these RDEP on it):
 >=sys-apps/fileutils-4.1.11-r2
 >=sys-apps/textutils-2.1-r1
@@ -98,7 +101,6 @@
 *sys-devel/m4
 *sys-devel/make
 *sys-devel/patch
-*sys-fs/e2fsprogs
 *sys-fs/hfsutils
 *sys-libs/cracklib  
 *sys-libs/db
