@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmufo
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmufo/ChangeLog,v 1.1 2004/06/22 19:57:59 s4t4n Exp $
+
+*wmufo-1.2.0 (22 Jun 2004)
+
+  02 Jun 2004; Michele Noberasco <s4t4n@gentoo.org> wmufo-1.2.0.ebuild:
+  Initial import. Closes bug #44610.
+
