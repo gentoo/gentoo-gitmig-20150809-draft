@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.7 2004/01/09 22:03:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.8 2004/01/18 22:55:43 tuxus Exp $
+
+  18 Jan 2004; <tuxus@gentoo.org> reiserfsprogs-3.6.9.ebuild:
+  Added ~mips to KEYWORDS.
 
   09 Jan 2004; Jason Wever <weeve@gentoo.org> reiserfsprogs-3.6.11.ebuild:
   Marked stable on sparc.
