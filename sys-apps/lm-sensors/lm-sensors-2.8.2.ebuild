@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.2.ebuild,v 1.1 2003/12/13 23:22:27 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.2.ebuild,v 1.2 2003/12/14 17:04:10 plasmaroo Exp $
 
 inherit flag-o-matic
 
@@ -93,12 +93,12 @@ src_install() {
 	mkdir -p ${D}/usr/bin
 	mkdir -p ${D}/usr/sbin
 	if [ ${UserModeOnly} == true ]; then
-		emake PREFIX=${D}/usr MANDIR=${D}/usr/share/man user_install || die "Install failed!"
+		emake DESTDIR=${D} PREFIX=${D}/usr MANDIR=${D}/usr/share/man user_install || die "Install failed!"
 	else
 		emake LINUX=$LINUX DESTDIR=${D} PREFIX=${D}/usr MANDIR=${D}/usr/share/man install || die "Install failed!"
-		mv ${D}/${D}* ${D}
-		rm ${D}/var -Rf
 	fi
+	mv ${D}/${D}* ${D}
+	rm ${D}/var -Rf
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/rc lm_sensors
