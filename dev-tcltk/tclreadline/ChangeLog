@@ -1,0 +1,14 @@
+# ChangeLog for dev-tcltk/tclreadline
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.1 2002/11/07 22:39:17 george Exp $
+
+*tclreadline-2.1.0 (07 Nov 2002)
+
+  07 Nov 2002; George Shapovalov <george@gentoo.org> tclreadline-2.1.0.ebuild :
+
+  new package: 
+  a Tcl extension that adds readline support
+  to tclsh.  It can also be used to add readline support
+  to your Tcl apps.
+
+  ebuild submitted by Jeremy Collins <jeremy.collins@phpsource.net>
