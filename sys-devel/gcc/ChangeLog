@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.43 2002/11/25 22:09:38 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.44 2002/12/01 14:41:16 doctomoe Exp $
+
+  01 Dec 2002; Olivier Reisch <doctomoe@gentoo.org> gcc-3.2-r4.ebuild :
+  Definitely fine now, marking it ppc stable. Moving on to 3.2.1 :)
 
   25 Nov 2002; Olivier Reisch <doctomoe@gentoo.org> gcc-3.2-r4.ebuild :
   Changed -ppc to ~ppc, we have been able to make it compile fine on a few
