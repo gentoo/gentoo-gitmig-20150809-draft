@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/gens
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.9 2004/07/01 11:14:31 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.10 2005/01/02 02:41:59 vapier Exp $
+
+*gens-2.12b (01 Jan 2005)
+
+  01 Jan 2005; Mike Frysinger <vapier@gentoo.org> +gens-2.12b.ebuild:
+  Version bump #57423 by Vanquirius.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gens-2.12a.ebuild:
   virtual/glibc -> virtual/libc
