@@ -1,21 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9.ebuild,v 1.6 2002/10/18 13:31:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9.ebuild,v 1.7 2002/10/20 10:01:25 azarah Exp $
+
+IUSE=""
 
 inherit libtool
 
-MY_P=${P/-oss/}
-S=${WORKDIR}/${MY_P}
+MY_P="${P/-oss/}"
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="FAM, the File Alteration Monitor."
-SRC_URI=ftp://oss.sgi.com/projects/fam/download/${MY_P}.tar.gz"
+SRC_URI="ftp://oss.sgi.com/projects/fam/download/${MY_P}.tar.gz
 	ftp://oss.sgi.com/projects/fam/download/contrib/dnotify.patch"
 HOMEPAGE="http://oss.sgi.com/projects/fam/"
+
 KEYWORDS="x86 alpha"
 SLOT="0"
-IUSE=""
 LICENSE="GPL-2 LGPL-2.1"
-DEPEND=">=sys-devel/perl-5.6.1"
 
+DEPEND=">=sys-devel/perl-5.6.1"
 RDEPEND=">=net-nds/portmap-5b-r6"
 
 src_unpack() {
@@ -26,12 +28,14 @@ src_unpack() {
 	patch -p1 < ${DISTDIR}/dnotify.patch || die
 	patch -p1 < ${FILESDIR}/${PF}-gcc3.patch || die
 
-	cp ${FILESDIR}/${PF}-aclocal.m4 aclocal.m4
 	elibtoolize
+	
+	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOMAKE_1_5=1
+	automake --add-missing
 	aclocal
 	autoconf
 	autoheader
-	automake --add-missing
 }
 
 src_install() {
@@ -46,3 +50,4 @@ src_install() {
 	
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS TODO README*
 }
+
