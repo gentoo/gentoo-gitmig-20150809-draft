@@ -1,5 +1,7 @@
+MD5 ae77d1bbc4bc81e603fde0aad9ca5327 preferences-1.3.0_pre20040927.ebuild 985
 MD5 5b3f36d4c66784e10d86c7391afa0015 preferences-1.3.0_pre20040909.ebuild 803
 MD5 c4c1b4e58831620dd3c6efe9febfca0d ChangeLog 426
 MD5 205bf7503c7223e7915354f26ba3ecf3 metadata.xml 250
 MD5 cd4414200232647c1f3402bbc6ec2e5d files/Preferences-nocreate-extra-dirs.patch 834
 MD5 9dda3e46a1414641b5b327cc8be44455 files/digest-preferences-1.3.0_pre20040909 73
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-preferences-1.3.0_pre20040927 0
