@@ -1,3 +1,6 @@
 MD5 17ee618bb24b1c8d2838fe24bb17c3e6 ChangeLog 645
+MD5 3dc5479f41f63151f95dfc8c476920c2 phpBB-2.0.6-r1.ebuild 1404
 MD5 11faf79a85f5c4dab07936eee4afa1f8 phpBB-2.0.6.ebuild 1333
+MD5 4539885d206181df53c6e0db1ff33217 files/phpBB-2.0.6-security.patch 3985
+MD5 d8c04c96ab7db9b65effac516a92b8ae files/digest-phpBB-2.0.6-r1 63
 MD5 d8c04c96ab7db9b65effac516a92b8ae files/digest-phpBB-2.0.6 63
