@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.12.1.ebuild,v 1.3 2004/03/14 21:10:44 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.12.1.ebuild,v 1.4 2004/04/11 22:35:12 kugelfang Exp $
 
 IUSE="doc gnome nls xv alsa ipv6"
 
@@ -10,7 +10,7 @@ SRC_URI="http://simon.morlat.free.fr/download/${PV}/source/${P}.tar.gz"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND="dev-libs/glib
 	<net-libs/libosip-2.0.0

@@ -1,6 +1,9 @@
 # ChangeLog for net-im/linphone
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/ChangeLog,v 1.12 2004/03/14 21:10:44 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/ChangeLog,v 1.13 2004/04/11 22:35:12 kugelfang Exp $
+
+  12 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> linphone-0.12.1.ebuild:
+  marked ~amd64
 
   14 Mar 2004; Stefan Knoblich <stkn@gentoo.org> linphone-0.10.2.ebuild,
   linphone-0.12.0.ebuild, linphone-0.12.1.ebuild:
