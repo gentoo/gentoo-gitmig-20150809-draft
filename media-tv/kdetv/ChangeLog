@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/kdetv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.10 2005/01/12 22:00:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.11 2005/01/30 16:31:58 carlo Exp $
+
+*kdetv-0.8.5 (30 Jan 2005)
+
+  30 Jan 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/kdetv-0.8.5-lirc.patch, -kdetv-0.8.0.ebuild, -kdetv-0.8.2.ebuild,
+  -kdetv-0.8.3.ebuild, +kdetv-0.8.5.ebuild:
+  version bump, clean up
 
   12 Jan 2005; Carsten Lohrke <carlo@gentoo.org> kdetv-0.8.4.ebuild:
   stable on x86
