@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.3.ebuild,v 1.2 2002/10/05 05:39:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.3.ebuild,v 1.3 2002/11/18 16:37:34 foser Exp $
 
 IUSE="nls gnome"
 
@@ -33,10 +33,13 @@ src_compile() {
 	
 	local myconf=""
 
-	use nls   || myconf="--disable-nls"
+	use nls	&& myconf="--enable-nls" \
+		|| myconf="--disable-nls"
 	use gnome || myconf="$myconf --disable-gui"
-	
-	econf --with-included-gettext $myconf || die "Configuration failed"
+
+	# needed to not break configure
+	unset CFLAGS	
+	econf --with-included-gettext ${myconf} || die "Configuration failed"
 	
 	emake || die "Compilation failed"
 }
