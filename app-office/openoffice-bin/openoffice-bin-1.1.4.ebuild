@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4.ebuild,v 1.3 2005/01/12 14:02:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4.ebuild,v 1.4 2005/01/12 20:53:43 luckyduck Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -22,7 +22,7 @@ SRC_URI="x86? ( mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.ta
 LICENSE="|| ( LGPL-2  SISSL-1.1 )"
 SLOT="0"
 KEYWORDS="x86 ~amd64"
-IUSE="kde gnome"
+IUSE="emul-linux-x86 kde gnome"
 
 DEPEND="sys-apps/findutils
 	virtual/libc
@@ -32,7 +32,7 @@ DEPEND="sys-apps/findutils
 	app-arch/unzip
 	|| ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 )
 	!app-office/openoffice
-	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
+	emul-linux-x86? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 RDEPEND="virtual/libc
 	>=dev-lang/perl-5.0
 	virtual/x11
@@ -40,7 +40,7 @@ RDEPEND="virtual/libc
 	app-arch/unzip
 	|| ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 )
 	!app-office/openoffice
-	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
+	emul-linux-x86? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 
 src_install() {
 	# Sandbox issues; bug #8587
