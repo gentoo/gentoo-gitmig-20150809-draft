@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+# danarmak@gentoo.org (18 Jul 2002)
+# new qt-3.0.5 isn't binary compatible with previous versions, kdelibs etc.
+# have to be recompiled when upgrading. masked for now
+>=x11-libs/qt-3.0.5
+
 # raker@gentoo.org (17 Jul 2002)
 # lateset stable version of OpenLDAP w/SASL support - pleast test and
 # report back your experience on bug #5104
