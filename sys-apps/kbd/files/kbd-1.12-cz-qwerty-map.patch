@@ -1,3 +1,16 @@
+kavol@email.cz writes:
+
+I wanted to use the keymap file /usr/share/keymaps/i386/qwerty/cz.map.gz, 
+but I have found this to be qwertz so I think it should be placed in 
+/usr/share/keymaps/i386/qwertz/ (or, much better, converted to qwerty - 
+I don't understand the masochists who use us-qwerty and cz-qwertz together :-)
+
+http://bugs.gentoo.org/show_bug.cgi?id=19010
+
+Gentoo notes:
+We copy the qwerty/cz.map to qwertz/cz.map and then apply this patch ... 
+that way we end up with both a qwerty and qwertz version of the cz.map
+
 --- data/keymaps/i386/qwerty/cz.map.old	2004-06-21 00:03:22.000000000 +0200
 +++ data/keymaps/i386/qwerty/cz.map	2004-10-24 16:04:44.471056808 +0200
 @@ -1,6 +1,9 @@

@@ -1,3 +1,5 @@
+Linux is nice and changes around core structures :)
+
 --- kbd-1.12/src/kbdrate.c	Fri Jan 16 20:45:31 2004
 +++ kbd-1.12.kbdrate/src/kbdrate.c	Sun Feb  8 14:52:04 2004
 @@ -164,10 +169,10 @@
