@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.321 2004/04/27 09:45:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.322 2004/04/27 14:15:48 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -263,6 +263,7 @@ net-www/monkeyd:php - Include support for php scripts
 net-www/mozilla-firefox:mozdomi - Enable DOM inspector in firefox
 net-www/mozilla-firefox:moznoxft - Disable XFT support in and/or firefox
 net-www/mozilla-firefox:mozsvg - Enable SVG support in Mozilla and/or Firefox
+net-www/mozilla-firefox:xprint - Enable xprint support in Mozilla and/or Firefox, http://www.mozilla.org/projects/xprint/
 net-www/mozilla:mozaccess - Enable text-to-speech (and eventually to braille), http://mozilla.org/projects/ui/accessibility/
 net-www/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
 net-www/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
@@ -273,6 +274,7 @@ net-www/mozilla:moznoxft - Disable XFT support in mozilla and/or firefox
 net-www/mozilla:mozp3p - Enable mozilla's Platform for Privacy Preferences, http://mozilla.org/projects/p3p/
 net-www/mozilla:mozsvg - Enable SVG support in mozilla and/or firefox, http://mozilla.org/projects/svg/
 net-www/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
+net-www/mozilla-firefox:xprint - Enable xprint support in Mozilla and/or Firefox, http://www.mozilla.org/projects/xprint/
 net-www/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
 net-www/pound:msdav - if you want the Microsoft DAV extensions enabled
 net-www/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
