@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.3 2004/04/13 09:44:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.4 2004/04/14 20:04:53 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Japanese version of chess (commandline + X-Version)"
 HOMEPAGE="http://www.gnu.org/directory/games/gnushogi.html"
