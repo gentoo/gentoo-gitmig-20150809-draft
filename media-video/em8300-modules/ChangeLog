@@ -1,6 +1,13 @@
 # ChangeLog for media-video/em8300-modules
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.13 2004/10/04 03:43:25 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.14 2004/10/07 16:58:06 lostlogic Exp $
+
+*em8300-modules-0.15.0_pre20040906-r1 (07 Oct 2004)
+
+  07 Oct 2004; Brandon Low <lostlogic@gentoo.org>
+  +em8300-modules-0.15.0_pre20040906-r1.ebuild:
+  Make sure we are using the right KV throughout. This is _not_ elegantly
+  done, and uses sed instead of a patch, feel free to fix it.
 
   03 Oct 2004; <iggy@gentoo.org> em8300-modules-0.15.0_pre20040525.ebuild,
   em8300-modules-0.15.0_pre20040906.ebuild:
