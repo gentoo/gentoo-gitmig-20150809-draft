@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.1 2003/06/04 13:49:57 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.2 2003/06/05 00:32:11 robh Exp $
+
+*windowmaker-0.80.2-r1
+
+  05 Jun 2003; robh <robh@gentoo.org> windowmaker-0.80.1-r2.ebuild,
+  windowmaker-0.80.2.ebuild, files/windowmaker-0.80.1-gentoo.patch:
+  moved /usr/share/GNUstep sillyness to /usr/lib/GNUstep. closes #10870.
+  removed old versions.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
