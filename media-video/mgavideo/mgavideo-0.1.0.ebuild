@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mgavideo/mgavideo-0.1.0.ebuild,v 1.10 2004/07/14 21:59:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mgavideo/mgavideo-0.1.0.ebuild,v 1.11 2005/01/02 19:46:28 dsd Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://marvel.sourceforge.net"
 SRC_URI="mirror://sourceforge/marvel/${P}.tar.gz"
 
 DEPEND="virtual/libc"
-RDEPEND="virtual/kernel"
+RDEPEND="virtual/linux-sources"
 
 SLOT="0"
 LICENSE="GPL-2"

@@ -1,5 +1,15 @@
-MD5 fe511e0a75e7208516dbb9ed348b18a4 ChangeLog 1449
-MD5 56d67ceced035dba4393a656f1d94a40 mgavideo-0.1.0.ebuild 1785
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0b032851170c3d1e1106b68f180b8a15 ChangeLog 1561
+MD5 8d2f2950a74b68006dcaa01ef7c8c4e4 mgavideo-0.1.0.ebuild 1787
 MD5 284a70da1011bec7eafebb5d5e4b0fb5 metadata.xml 247
 MD5 134be36fbdc71740c294e9c6d30dab27 files/digest-mgavideo-0.1.0 66
 MD5 219dbcbe61f9163c297fe87e38b93273 files/mgavideo-0.1.0-rmap_fix.patch 484
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2FbviJcSIUGNthERAkwvAKDGKmWPODonPgI+mjKl9lih+aLasgCdGBP4
+3Pmt5PcC9C9RGHULCKxc8ak=
+=kxAq
+-----END PGP SIGNATURE-----
