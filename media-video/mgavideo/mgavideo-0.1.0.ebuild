@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mgavideo/mgavideo-0.1.0.ebuild,v 1.5 2003/02/13 13:29:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mgavideo/mgavideo-0.1.0.ebuild,v 1.6 2003/07/13 02:39:37 pebenito Exp $
 
 S=${WORKDIR}/${P}/driver
 DESCRIPTION="Matrox Marvel G200/G400/Rainbow Runner G-series V4L I and II
@@ -18,6 +18,7 @@ KEYWORDS="x86"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	[ -f /usr/src/linux/mm/rmap.c ] && epatch ${FILESDIR}/${P}-rmap_fix.patch
 
 	# This allows us to compile the i2c-algo-ks.o module even if the user doesn't have
 	# the i2c-core.o module, incase they want to compile that later.  At the end of this

@@ -1,0 +1,12 @@
+diff -urN mgavideo-0.1.0.orig/driver/mgacore.h mgavideo-0.1.0/driver/mgacore.h
+--- mgavideo-0.1.0.orig/driver/mgacore.h	2001-12-01 03:38:42.000000000 -0600
++++ mgavideo-0.1.0/driver/mgacore.h	2003-04-24 13:57:42.000000000 -0500
+@@ -498,7 +498,7 @@
+ 	if (!pgd_none(*pgd)) {
+ 		pmd = pmd_offset(pgd, adr);
+ 		if (!pmd_none(*pmd)) {
+-			ptep = pte_offset(pmd, adr);
++			ptep = pte_offset_kernel(pmd, adr);
+ 			pte = *ptep;
+ 			if (pte_present(pte))
+ #if (LINUX_VERSION_CODE >= 0x020300)

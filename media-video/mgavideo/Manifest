@@ -1,3 +1,4 @@
-MD5 dad42d412191466bf1f5fa2a1a166187 ChangeLog 979
-MD5 c4d75ccf315e3a9b8e13c4ca7707dc9f mgavideo-0.1.0.ebuild 1693
+MD5 7d6a180a6214a2ba88282d287fb1503a ChangeLog 1148
+MD5 08d7d931d5b3bce000ac24542b914677 mgavideo-0.1.0.ebuild 1770
 MD5 134be36fbdc71740c294e9c6d30dab27 files/digest-mgavideo-0.1.0 66
+MD5 219dbcbe61f9163c297fe87e38b93273 files/mgavideo-0.1.0-rmap_fix.patch 484
