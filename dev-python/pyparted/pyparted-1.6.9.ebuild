@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-1.6.9.ebuild,v 1.3 2005/01/04 18:28:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-1.6.9.ebuild,v 1.4 2005/01/21 20:55:53 cryos Exp $
 
 RH_EXTRAVERSION="2"
 
-inherit eutils rpm
+inherit eutils rpm flag-o-matic
 
 DESCRIPTION="Python bindings for parted"
 HOMEPAGE="http://fedora.redhat.com"
@@ -23,6 +23,10 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}
+
+	# -fPIC needed for compilation on amd64, applied globally as only one shared
+	# lib is produced by this package.
+	append-flags -fPIC
 
 	# This is needed otherwise it won't build
 	# If anyone wants to figure out why... go ahead!
