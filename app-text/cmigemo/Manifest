@@ -1,7 +1,17 @@
-MD5 36aa58074532f72e07019b3ca33bcbea cmigemo-1.3c.ebuild 1632
-MD5 9f0c8db022bca93c0c26704fc4d76226 cmigemo-1.2.ebuild 1610
-MD5 ee559e054bd7b01ca7312e0ea516a401 ChangeLog 1811
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 935a06dc8a41187106b130d8cc75bbd0 ChangeLog 1902
 MD5 212b6ec56b7acb3a4cc0bb8ddd2f95ef metadata.xml 247
-MD5 998191bb1e7202c3d76b8ceaf7712b0a files/digest-cmigemo-1.2 63
+MD5 9f0c8db022bca93c0c26704fc4d76226 cmigemo-1.2.ebuild 1610
+MD5 30a4b5de7bf9c2af693a1f68de365af8 cmigemo-1.3c.ebuild 1650
 MD5 2efe9116f4f35c4ef2ad2f058e5b6f50 files/digest-cmigemo-1.3c 64
 MD5 69ae2d9a49180d21368cf225c2ab54a2 files/cmigemo-1.2-migemo-dict.diff 825
+MD5 998191bb1e7202c3d76b8ceaf7712b0a files/digest-cmigemo-1.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBeizIVWNWqTUmv+0RAn5qAJ9FxrG3FWGnRwAPPY0B+mAPKEf5EQCePGH5
+xT/KoEvj5dWrEQPaE+ZYWhw=
+=B/ah
+-----END PGP SIGNATURE-----
