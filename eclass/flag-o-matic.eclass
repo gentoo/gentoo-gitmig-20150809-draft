@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.36 2004/02/21 07:07:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.37 2004/02/21 07:19:29 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -17,6 +17,10 @@ INHERITED="$INHERITED $ECLASS"
 #
 #### replace-flags <orig.flag> <new.flag> ###
 # Replace a flag by another one
+#
+#### replace-cpu-flags <new.cpu> <old.cpus> ###
+# Replace march/mcpu flags that specify <old.cpus>
+# with flags that specify <new.cpu>
 #
 #### is-flag <flag> ####
 # Returns "true" if flag is set in C[XX]FLAGS
@@ -86,8 +90,8 @@ filter-flags() {
 	CFLAGS=" ${CFLAGS} "
 	CXXFLAGS=" ${CXXFLAGS} "
 	for x in "$@" ; do
-		CFLAGS="${CFLAGS/ ${x} / }"
-		CXXFLAGS="${CXXFLAGS/ ${x} / }"
+		CFLAGS="${CFLAGS// ${x} / }"
+		CXXFLAGS="${CXXFLAGS// ${x} / }"
 	done
 	CFLAGS="${CFLAGS:1:${#CFLAGS}-2}"
 	CXXFLAGS="${CXXFLAGS:1:${#CXXFLAGS}-2}"
@@ -106,10 +110,20 @@ replace-flags() {
 	# out part of a flag ... we want flag atoms ! :D
 	CFLAGS=" ${CFLAGS} "
 	CXXFLAGS=" ${CXXFLAGS} "
-	CFLAGS="${CFLAGS/ ${1} / ${2} }"
-	CXXFLAGS="${CXXFLAGS/ ${1} / ${2} }"
+	CFLAGS="${CFLAGS// ${1} / ${2} }"
+	CXXFLAGS="${CXXFLAGS// ${1} / ${2} }"
 	CFLAGS="${CFLAGS:1:${#CFLAGS}-2}"
 	CXXFLAGS="${CXXFLAGS:1:${#CXXFLAGS}-2}"
+	return 0
+}
+
+replace-cpu-flags() {
+	local newcpu="$1" ; shift
+	local oldcpu=""
+	for oldcpu in "$@" ; do
+		replace-flags -march=${oldcpu} -march=${newcpu}
+		replace-flags -mcpu=${oldcpu} -mcpu=${newcpu}
+	done
 	return 0
 }
 
