@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-bitstream-vera/ttf-bitstream-vera-1.10-r2.ebuild,v 1.9 2004/02/22 21:15:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-bitstream-vera/ttf-bitstream-vera-1.10-r2.ebuild,v 1.10 2004/06/07 21:29:54 agriffis Exp $
 
 inherit gnome.org
 
@@ -18,7 +18,7 @@ src_install() {
 	insinto /usr/share/fonts/${PN}
 	doins *.ttf
 
-	if [ -n "`use X`" ] ;
+	if use X ;
 	then
 		mkfontscale
 		mkfontdir

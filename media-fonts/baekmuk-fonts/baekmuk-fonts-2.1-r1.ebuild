@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.1-r1.ebuild,v 1.9 2004/05/14 01:51:48 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.1-r1.ebuild,v 1.10 2004/06/07 21:28:53 agriffis Exp $
 
 IUSE="X truetype"
 
@@ -33,9 +33,9 @@ src_install () {
 	insinto ${FONTDIR}
 	doins pcf/* || die
 
-	if [ -n "`use X`" ] ; then
+	if use X ; then
 		mkfontdir ${D}${FONTDIR}
-		if [ -n "`use truetype`" ] ; then
+		if use truetype ; then
 			insinto ${TTFONTDIR}
 			doins ttf/* || die
 			mkfontscale ${D}${TTFONTDIR}
@@ -48,7 +48,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	if [ -n "`use X`" ] ; then
+	if use X ; then
 		einfo
 		einfo "You MUST add the path of Baekmuk fonts in /etc/X11/XF86Config"
 		einfo ""
