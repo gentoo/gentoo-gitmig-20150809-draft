@@ -1,19 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.5.0-r1.ebuild,v 1.1 2002/12/27 18:14:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.0.ebuild,v 1.1 2003/02/04 15:36:34 foser Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
+
+# Create a major/minor combo for our SLOT and executables suffix
+PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
+PV_MAJ_MIN=${PVP[0]}.${PVP[1]}
 
 IUSE="encode quicktime mpeg oggvorbis jpeg esd gnome mikmod avi sdl png alsa arts dvd aalib"
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Additional plugins for gstreamer - streaming media framework"
-# bz2 gives 404 right now 
-#SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.bz2"
-SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.gz"
 HOMEPAGE="http://gstreamer.sourceforge.net"
 
-SLOT="0"
+SLOT=${PV_MAJ_MIN}
 LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~sparc ~ppc"
 
@@ -29,7 +30,7 @@ DEPEND="=media-libs/gstreamer-${PV}*
 	>=media-libs/libdv-0.9.5
 	encode? ( media-sound/lame )
 	quicktime? ( media-libs/openquicktime )
-	mpeg? (	=media-libs/libmpeg2-0.2* )
+	mpeg? (	>=media-libs/libmpeg2-0.3.1 )
 	oggvorbis? ( media-libs/libvorbis 
 	             media-libs/libogg )
 	jpeg? (	media-video/mjpegtools 
@@ -46,35 +47,20 @@ DEPEND="=media-libs/gstreamer-${PV}*
 	aalib? ( media-libs/aalib )
 	media-libs/ladspa-sdk" 
 
-# disable avi for now, it doesnt work
-#	avi? ( media-video/avifile )
-
 src_unpack() {
 	unpack ${A}
 
-# Already fixed
-#	# fix for gst-launch-ext
-#	cd ${S}; epatch ${FILESDIR}/gentoo-gst-0.4.2-launch.patch
+	# fix the scripts
+	cd ${S}/tools
+	mv gst-launch-ext gst-launch-ext.old
+	sed -e "s:gst-launch :gst-launch-${PV_MAJ_MIN} :" \
+		-e "s:gst-launch-ext:gst-launch-ext-${PV_MAJ_MIN}:" gst-launch-ext.old > gst-launch-ext
+	chmod +x gst-launch-ext
 
-# Already applied ...
-#	if [ "${ARCH}" = "ppc" ]
-#	then
-#		cd ${S}
-#		EPATCH_SINGLE_MSG="Patching makefile to fix parallel build bug" \
-#		epatch ${FILESDIR}/${PN}-0.4.2-parallel-make-depfix.patch
-#		EPATCH_SINGLE_MSG="Patching wav support in gst-plugins to be big-endian friendly" \
-#		epatch ${FILESDIR}/${PN}-0.4.2-wavparse-bigendian.patch || die
-#	fi
-
-	# If the sound device for OSS was already open when gstreamer are started,
-	# libgstossaudio.so never returns, as opening the device without the
-	# O_NONBLOCK flag in Linux do not return if the device was busy.  Gnome
-	# bug at:
-	#
-	#   http://bugzilla.gnome.org/show_bug.cgi?id=102025
-	#
-	# <azarah@gentoo.org> (27 Dec 2002).
-	cd ${S}; epatch ${FILESDIR}/${P}-never-return-on-oss-busy.patch
+	mv gst-visualise gst-visualise.old
+	sed -e "s:gst-launch :gst-launch-${PV_MAJ_MIN} :" \
+		-e "s:gst-visualise:gst-visualise-${PV_MAJ_MIN}:" gst-visualise.old > gst-visualise
+	chmod +x gst-visualise
 }
 
 src_compile() {
@@ -83,9 +69,6 @@ src_compile() {
 	# gst doesnt handle optimisations well
 	strip-flags
 	replace-flags "-O3" "-O2"
-
-	# this is an ugly patch to remove -I/usr/include from some CFLAGS
-	# patch -p0 < ${FILESDIR}/${P}-configure.patch
 
 	local myconf=""
 
@@ -120,11 +103,11 @@ src_compile() {
 		&& myconf="${myconf} --enable-vorbis --enable-vorbistest" \
 		|| myconf="${myconf} --disable-vorbis --disable-vorbistest"		
  
-    # qcam doesn't work on PPC
+	# qcam doesn't work on PPC
 	use ppc && myconf="${myconf} --disable-qcam"
-	# not testing for much here, since if its in USE we want it, but its autodetected by configure
 	
 	econf ${myconf} \
+		--program-suffix=-${PV_MAJ_MIN} \
 		|| die "./configure failed"
 		
 	emake || make || die
@@ -140,6 +123,5 @@ src_install () {
 
 pkg_postinst () {
 	gnome2_gconf_install
-	gst-register
+	gst-register-${PV_MAJ_MIN}
 }
-
