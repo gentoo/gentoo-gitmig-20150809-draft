@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.3-r1.ebuild,v 1.1 2001/01/21 04:08:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.3-r1.ebuild,v 1.2 2001/01/31 20:49:07 achim Exp $
 
 P=gpm-1.19.3
 A="${P}.tar.gz devfs.patch"
@@ -10,7 +10,7 @@ DESCRIPTION="Console-based mouse driver"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/mouse/${A}
 	 ftp://ftp.prosa.it/pub/gpm/patches/devfs.patch"
 
-DEPEND=">=sys-libs/glibc-2.1.3
+DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1"
 
 RDEPEND=$DEPEND

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r1.ebuild,v 1.7 2000/12/01 21:58:45 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r1.ebuild,v 1.8 2001/01/31 20:49:06 achim Exp $
 
 A="${P}.tar.bz2 ${P}.dif"
 S=${WORKDIR}/${P}
@@ -10,7 +10,8 @@ SRC_URI="ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.tar.bz2
 	 ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.dif"
 
 
-DEPEND=">=sys-libs/glibc-2.1.3"
+DEPEND=">=sys-libs/glibc-2.1.3
+	sys-devel/flex"
 RDEPEND="$DEPEND
 	 >=sys-apps/bash-2.04"
 

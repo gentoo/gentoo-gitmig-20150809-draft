@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.73.ebuild,v 1.2 2001/01/20 01:13:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.73.ebuild,v 1.3 2001/01/31 20:49:07 achim Exp $
 
 P=pam-${PV}
 A=Linux-PAM-${PV}.tar.gz
@@ -27,7 +27,11 @@ src_compile() {
 	--sbindir=/usr/sbin \
 	--enable-fakeroot=${D} \
 	--enable-read-both-confs
-  try make ${MAKEOPTS}
+ # try make ${MAKEOPTS}
+  cp Makefile Makefile.orig
+  sed -e "s:libpam_misc doc examples:libpam_misc doc:" \
+	Makefile.orig > Makefile
+  try make
 }
 
 src_install() {                               

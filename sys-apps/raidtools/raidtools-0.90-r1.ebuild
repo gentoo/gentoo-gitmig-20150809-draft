@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-0.90-r1.ebuild,v 1.6 2000/11/30 23:14:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-0.90-r1.ebuild,v 1.7 2001/01/31 20:49:07 achim Exp $
 
 P=raidtools-0.90-1
 A=raidtools-dangerous-0.90-20000116.tar.gz
@@ -20,7 +20,7 @@ src_compile() {
 src_install() {                               
     into /
     dosbin mkraid raidstart mkpv 
-    for x in raidstop raidhotadd raidhotremove
+    for x in raidstop raidhotadd raidhotremove raidsetfaulty
     do
 	dosym raidstart /sbin/${x}
     done

@@ -2,16 +2,16 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0j-r1.ebuild,v 1.8 2001/01/27 14:41:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0j-r1.ebuild,v 1.9 2001/01/31 20:49:07 achim Exp $
 
 P=sh-utils-2.0j
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Your standard GNU shell utilities"
 SRC_URI="ftp://alpha.gnu.org/gnu/fetish/${A}"
-DEPEND=">=sys-libs/glibc-2.1.3"
-RDEPEND="$DEPEND
-	 >=sys-apps/bash-2.04"
+DEPEND="virtual/glibc"
+RDEPEND="virtual/glibc
+	 sys-apps/bash"
 
 src_unpack() {
   unpack ${A}
@@ -32,7 +32,9 @@ src_install() {
 	rm -rf ${D}/usr/lib    
 	dodir /bin
         cd ${D}/usr/bin
-        mv date echo false pwd stty su true uname hostname ${D}/bin
+	# We must use hostname from net-base
+	rm hostname
+        mv date echo false pwd stty su true uname ${D}/bin
 	dodoc AUTHORS COPYING ChangeLog ChangeLog.0 \
 	      NEWS README THANKS TODO
 }

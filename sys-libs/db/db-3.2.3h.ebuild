@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h.ebuild,v 1.2 2001/01/20 01:13:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h.ebuild,v 1.3 2001/01/31 20:49:07 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}/build_unix
@@ -9,7 +9,7 @@ DESCRIPTION="Berkeley DB for transaction support in MySQL"
 SRC_URI="ftp://mysql.valueclick.com/mysql/Downloads/db/${A}
 	 http://download.sourceforge.net/pub/mirrors/mysql/Downloads/db/${A}"
 HOMEPAGE="http://www.mysql.com"
-RDEPEND=">=sys-libs/glibc-2.2 !sys-libs/glibc-2.1.3"
+RDEPEND="virtual/glibc"
 DEPEND="$RDEPEND
 	=sys-libs/db-1.85"
 src_compile() {

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.1.ebuild,v 1.8 2000/12/24 09:55:16 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/bzip2-1.0.1.ebuild,v 1.9 2001/01/31 20:49:06 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,7 +11,7 @@ SRC_URI="ftp://sourceware.cygnus.com/pub/bzip2/v100/${A}
 
 HOMEPAGE="http://sourceware.cygnus.com/bzip2/"
 
-DEPEND=">=sys-libs/glibc-2.1.3"
+DEPEND="virtual/glibc"
 
 src_unpack() {
     unpack ${A}

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r4.ebuild,v 1.4 2001/01/27 14:41:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r4.ebuild,v 1.5 2001/01/31 20:49:07 achim Exp $
 
 P=gcc-2.95.2
 A="gcc-2.95.2.tar.gz 
@@ -20,7 +20,7 @@ T=/usr
 
 DESCRIPTION="modern gcc c/c++ compiler"
 
-SRC_URI="ftp://prep.ai.mit.edu/gnu/gcc/gcc-2.95.2.tar.gz 
+SRC_URI="ftp://prep.ai.mit.edu/gnu/gcc/gcc-2.95.2.tar.gz
 	 ftp://gatekeeper.dec.com/pub/GNU/gcc/gcc-2.95.2.tar.gz 
 	 ftp://sourceware.cygnus.com/pub/gcc/infrastructure/libg++-2.8.1.3.tar.gz
 	 ftp://sourceware.cygnus.com/pub/gcc/infrastructure/libg++-2.8.1.3-20000816.diff.gz
@@ -31,9 +31,12 @@ SRC_URI="ftp://prep.ai.mit.edu/gnu/gcc/gcc-2.95.2.tar.gz
          ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000914.diff.gz"
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
-DEPEND=">=sys-libs/glibc-2.1.3"
-RDEPEND="$DEPEND
-	 >=sys-apps/bash-2.04"
+DEPEND="virtual/glibc
+        >=sys-devel/gettext-0.10.35-r1
+        || ( sys-devel/flex sys-build/flex )"
+
+RDEPEND="virtual/glibc
+	 sys-apps/bash"
 
 src_unpack() {
     unpack gcc-2.95.2.tar.gz
@@ -54,7 +57,7 @@ src_unpack() {
     patch -p0 < ${FILESDIR}/${A3}
 }
 
-src_compile() {                           
+src_compile() {
 	cd ${S}
 	#i586a doesn't like optimization?
 	if [ "$PLATFORM" == "i686-pc-linux-gnu" ]
@@ -65,12 +68,12 @@ src_compile() {
 	try ${S}/configure --prefix=${T} --enable-version-specific-runtime-libs \
 		       --host=${CHOST} --enable-threads --enable-shared \
 		        --with-local-prefix=${T}/local --enable-nls
-	# Parallel build does not work				       
+	# Parallel build does not work
 	try make ${MAKEOPTS} bootstrap-lean
 }
 
-src_install() { 
-  
+src_install() {
+
 	try make install prefix=${D}${T} mandir=${D}${T}/man
         FULLPATH=${D}${T}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH}
