@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.7 2005/01/11 20:38:50 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.8 2005/01/14 21:57:02 radek Exp $
+
+*p7zip-4.14 (14 Jan 2005)
+
+  14 Jan 2005; Radoslaw Stachowiak <radek@gentoo.org> +p7zip-4.14.ebuild:
+  new version, static patch fixed.
 
   11 Jan 2005; Malcolm Lashley <malc@gentoo.org> p7zip-4.13.ebuild:
   Add ~amd64 closes bug #70206

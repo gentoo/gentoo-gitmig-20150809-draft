@@ -1,0 +1,9 @@
+--- makefile.machine.orig       2005-01-14 22:07:49.314274448 +0100
++++ makefile.machine    2005-01-14 22:07:58.214921344 +0100
+@@ -12,5 +12,5 @@
+ LOCAL_LIBS=-lpthread
+ LOCAL_LIBS_DLL=$(LOCAL_LIBS) -ldl
+ # static linkage
+-# LOCAL_LIBS=-static -lpthread
++LOCAL_LIBS=-static -lpthread
+
