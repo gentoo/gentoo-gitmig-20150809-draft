@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plruby/plruby-0.4.2.ebuild,v 1.1 2004/07/04 21:58:37 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plruby/plruby-0.4.2.ebuild,v 1.2 2004/07/05 16:41:13 dholm Exp $
 
 inherit ruby
 
 SLOT="0"
 LICENSE="Ruby"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 DESCRIPTION="plruby language for PostgreSQL"
 SRC_URI="ftp://moulon.inra.fr/pub/ruby/${P}.tar.gz"
 HOMEPAGE="http://moulon.inra.fr/ruby/plruby.html"

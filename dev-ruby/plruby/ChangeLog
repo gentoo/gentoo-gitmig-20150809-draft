@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/plruby
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plruby/ChangeLog,v 1.1 2004/07/04 21:58:37 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plruby/ChangeLog,v 1.2 2004/07/05 16:41:13 dholm Exp $
+
+*plruby-0.4.2 (05 Jul 2004)
+
+  05 Jul 2004; David Holm <dholm@gentoo.org> plruby-0.4.2.ebuild:
+  Added to ~ppc.
 
   04 Jul 2004; Masatomo Nakano <nakano@gentoo.org> :
   Initial import. Ebuild submitted by David Mitchell
