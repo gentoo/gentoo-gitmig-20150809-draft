@@ -1,18 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.5.17.ebuild,v 1.6 2002/08/16 02:21:27 murphy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.5.19.ebuild,v 1.1 2002/08/18 02:44:20 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Syslog-ng is a syslog replacement with advanced filtering features"
 SRC_URI="http://www.balabit.hu/downloads/syslog-ng/1.5/${P}.tar.gz"
 HOMEPAGE="http://www.balabit.hu/en/products/syslog-ng/"
-
-SLOT="0"
+DEPEND="virtual/glibc
+		>=dev-libs/libol-0.3.3
+		tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc sparc sparc64"
-
-DEPEND=">=dev-libs/libol-0.3.2
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+KEYWORDS="x86"
+SLOT="0"
 
 src_compile() {
 
@@ -21,8 +20,13 @@ src_compile() {
 	use tcpd && myconf="--enable-tcp-wrapper"
 
 	econf ${myconf} || die
-	emake CFLAGS="${CFLAGS} -I/usr/include/libol -D_GNU_SOURCE" \
-		prefix=${D}/usr all || die "compile problem"
+
+	# configure script braindamage?
+    cd ${S}/src
+	mv Makefile Makefile.orig
+	sed -e "s|-lnsl|-lwrap|" Makefile.orig > Makefile  || die
+
+	emake prefix=${D}/usr all || die "compile problem"
 }
 
 src_install() {
