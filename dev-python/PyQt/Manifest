@@ -1,0 +1,7 @@
+MD5 44eb7dbfe57434fb51f55a032492fdb8 ChangeLog 2067
+MD5 fbcf9e940591872c0e217613db07a2d9 PyQt-3.5.ebuild 1179
+MD5 391f28d02fadbc5276d09fec5c28798c PyQt-3.5-r1.ebuild 1377
+MD5 cfa5b5c9a44fc587bc3937b2d1335bb9 files/digest-PyQt-3.5 68
+MD5 ac2fc9d166ddfb0637781545e6d168c0 files/license-3.5.diff 972
+MD5 cfa5b5c9a44fc587bc3937b2d1335bb9 files/digest-PyQt-3.5-r1 68
+MD5 94164eef52f16b805d3c252c02100d11 files/qt3.1.2-compilation-fix-3.5.diff 2151
