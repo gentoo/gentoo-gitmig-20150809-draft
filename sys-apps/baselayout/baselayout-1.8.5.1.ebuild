@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.4.1.ebuild,v 1.2 2002/10/30 18:33:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.1.ebuild,v 1.1 2002/11/18 09:13:26 azarah Exp $
 
 IUSE="bootstrap build"
 
-SV="1.4.1.1"
+SV="1.4.2.1"
 SVREV=""
 # SysvInit version
 SVIV="2.84"
@@ -26,9 +26,9 @@ DEPEND="sys-kernel/linux-headers
 # We need at least portage-2.0.23 to handle these DEPEND's properly.
 
 RDEPEND="${DEPEND}
-	|| ( >=sys-apps/gawk-3.1.0-r3
-	     ( !build? ( >=sys-apps/gawk-3.1.0-r3 ) )
-	     ( !bootstrap? ( >=sys-apps/gawk-3.1.0-r3 ) )
+	|| ( >=sys-apps/gawk-3.1.1-r1
+	     ( !build? ( >=sys-apps/gawk-3.1.1-r1 ) )
+	     ( !bootstrap? ( >=sys-apps/gawk-3.1.1-r1 ) )
 	   )"
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
@@ -107,7 +107,20 @@ src_compile() {
 	then
 		# Build sysvinit stuff
 		cd ${S2}
+		einfo "Building sysvinit..."
 		emake LDFLAGS="" || die "problem compiling sysvinit"
+
+		if [ -z "`use bootstrap`" ]
+		then
+			# Build gawk module
+			cd ${S}/src
+			einfo "Building awk module..."
+			make || {
+				eerror "Failed to build gawk module.  Make sure you have"
+				eerror "sys-apps/gawk-3.1.1-r1 or later installed"
+				die "problem compiling gawk module"
+			}
+		fi
 	fi
 }
 
@@ -308,7 +321,6 @@ src_install() {
 	# These moved from /etc/init.d/ to /sbin to help newb systems
 	# from breaking
 	exeinto /sbin
-	doexe ${S}/sbin/depscan.sh
 	doexe ${S}/sbin/runscript.sh
 	doexe ${S}/sbin/functions.sh
 	doexe ${S}/sbin/rc-envupdate.sh
@@ -317,6 +329,25 @@ src_install() {
 	dosym /sbin/depscan.sh /etc/init.d/depscan.sh
 	dosym /sbin/runscript.sh /etc/init.d/runscript.sh
 	dosym /sbin/functions.sh /etc/init.d/functions.sh
+
+	# We can only install new, fast depscan.sh if
+	# 'build' or 'bootstrap' is not in USE.  This will
+	# change if we have sys-apps/gawk-3.1.1-r1 or later
+	# in the build image ...
+	if [ -z "`use build`" -a -z "`use bootstrap`" ]
+	then
+		# This is for new depscan written in awk
+		exeinto /sbin
+		doexe ${S}/sbin/depscan.sh
+		exeinto /lib/rcscripts
+		doexe ${S}/src/filefuncs.so
+		insinto /lib/rcscripts/awk
+		doins ${S}/src/awk/*.awk
+	else
+		# This is the old bash one
+		exeinto /sbin
+		newexe ${S}/sbin/depscan.sh.bash depscan.sh
+	fi
 
 	dodir /etc/skel
 	insinto /etc/skel
