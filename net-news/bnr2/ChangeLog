@@ -1,6 +1,11 @@
 # ChangeLog for net-news/bnr2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/ChangeLog,v 1.5 2003/12/25 20:07:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/ChangeLog,v 1.6 2004/02/14 05:02:21 vapier Exp $
+
+*bnr2-0.12.7 (14 Feb 2004)
+
+  ; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #41474 by Sven Wegener.
 
 *bnr2-0.12.5 (25 Dec 2003)
 
