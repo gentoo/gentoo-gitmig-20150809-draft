@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/skey
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.29 2005/02/07 18:02:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.30 2005/03/03 15:43:47 taviso Exp $
+
+*skey-1.1.5-r5 (03 Mar 2005)
+
+  03 Mar 2005; Tavis Ormandy <taviso@gentoo.org> +files/skey-1.1.5-otp.diff,
+  +skey-1.1.5-r5.ebuild:
+  fixing #71015, add convienience links for skey invokation, otp-xxx.
+  Thanks to Ulrich Mueller for the patch.
 
   07 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> skey-1.1.5-r4.ebuild:
   Stable on sparc
