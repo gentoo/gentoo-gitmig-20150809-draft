@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/chrony
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.9 2003/08/08 01:47:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.10 2003/10/06 21:40:54 weeve Exp $
+
+  06 Oct 2003; Jason Wever <weeve@gentoo.org> chrony-1.19.99.2.ebuild,
+  chrony-1.19.ebuild:
+  Marked 1.19.99.2 to stable and masked 1.19 to fix bug #30499.
 
 *chrony-1.19.99.2 (07 Aug 2003)
 
