@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlpq/wmlpq-0.2.1.ebuild,v 1.1 2004/07/17 16:17:37 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlpq/wmlpq-0.2.1.ebuild,v 1.2 2004/07/18 00:44:40 dholm Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ RDEPEND=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 src_unpack()
 {
