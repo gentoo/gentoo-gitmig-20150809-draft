@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.14 2003/01/27 19:25:43 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.15 2003/02/03 20:10:06 agriffis Exp $
+
+  03 Feb 2003; Aron Griffis <agriffis@gentoo.org> fontconfig-2.1-r1.ebuild :
+  Mark stable on alpha (needed for gnome)
 
   27 Jan 2002; Olivier Reisch <doctomoe@gentoo.org> fontconfig-2.1-r1.ebuild :
   Masked -ppc  Breaks fonts on PPC platform.
