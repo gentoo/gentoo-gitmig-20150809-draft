@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.17.ebuild,v 1.1 2004/12/13 06:20:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.17.ebuild,v 1.2 2004/12/13 12:25:30 swegener Exp $
 
 inherit common-lisp-common eutils
 
@@ -26,7 +26,7 @@ KEYWORDS="-*" # due to sb-unicode problems
 IUSE="threads doc nosource nounicode ldb nosbcl-af"
 
 DEPEND=">=dev-lisp/common-lisp-controller-3.91
-	>=cl-defsystem3-3.3i-r3
+	>=dev-lisp/cl-defsystem3-3.3i-r3
 	>=dev-lisp/cl-asdf-1.84
 	sys-apps/texinfo
 	doc? ( virtual/tetex )"
