@@ -1,13 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.10 2002/08/01 11:40:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.11 2002/08/01 14:02:43 seemant Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
 DESCRIPTION="www.gentoo.org website"
 SRC_URI="http://www.red-bean.com/cvs2cl/cvs2cl.pl"
 HOMEPAGE="http://www.gentoo.org"
-RDEPEND="virtual/python dev-libs/libxslt"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc sparc64"
+
+RDEPEND="virtual/python
+	dev-libs/libxslt"
+
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	local myhost

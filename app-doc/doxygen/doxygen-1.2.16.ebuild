@@ -1,6 +1,6 @@
 # Copyright 2001-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.2.16.ebuild,v 1.1 2002/07/08 15:08:29 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.2.16.ebuild,v 1.2 2002/08/01 14:02:43 seemant Exp $
 
 DESCRIPTION="Doxygen is a documentation system for C++, Java, IDL (Corba, Microsoft and KDE-DCOP flavors) and C"
 HOMEPAGE="http://www.doxygen.org"
@@ -17,10 +17,10 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 
 src_unpack() {
 
-    unpack ${A}
-    cd ${S}/addon/doxywizard
-    patch -p0 < ${FILESDIR}/${P}-gentoo.diff
-    
+	unpack ${A}
+	cd ${S}/addon/doxywizard
+	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
+	
 }
 
 src_compile()
