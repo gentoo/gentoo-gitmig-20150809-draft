@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.6 2002/06/15 15:03:07 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.7 2002/06/24 00:05:24 spider Exp $
+
+ggv-1.99.7-r1 (22 Jun 2002)
+  22 Jun 2002; Spider <spider@gentoo.org> ggv-1.99.7-r1.ebuild :
+  missed a libgnomeui dependency
 
 *ggv-1.99.7 (15 Jun 2002)
   15 Jun 2002; Spider <spider@gentoo.org> ggv-1.99.7.ebuild:
