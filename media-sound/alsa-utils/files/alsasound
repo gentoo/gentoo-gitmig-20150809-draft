@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.9 2004/02/12 12:20:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.10 2004/02/19 08:53:01 eradicator Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -49,28 +49,27 @@ start() {
 	else
 		ebegin "Loading ALSA drivers"
 		
-		# I really dislike this and would like to tidy it up.
-		# Anyone running 2.4 + alsa-driver willing to help me?
-		
-		DRIVERS="$(modprobe -c | grep snd.* | grep pci: | awk '{ print $3 }' | uniq)"
-		if [ -z "${DRIVERS}" ] ; then
-			# Fallback on older modprobe syntax
-			DRIVERS="$(/sbin/modprobe -c | grep -E "^[[:space:]]*alias[[:space:]]+snd-card-[[:digit:]]" | awk '{print $3}')"
-		fi
-		
-		[ -z "${DRIVERS}" ] && eerror "Unable to find any ALSA drivers. Have you compiled alsa-drivers correctly?"
-		# Test for use of OSS
+		DRIVERS="$(modprobe -c | grep -E "^[[:space:]]*alias[[:space:]]+snd-card-[[:digit:]]" | awk '{print $3}')"
 
 		if modprobe -c | grep -q "snd.*oss$" ; then
-		  einfo "Using ALSA OSS emulation"
-		  OSS="$(modprobe -l | grep "snd.*oss" | sed -e "s:\/.*\/::" -e "s:\..*::")"
-		  # Add oss modules to list
-		  for i in ${OSS}
-		  do
-		    DRIVERS="${i} ${DRIVERS}"
-		  done
+			# Test for use of OSS
+			einfo "Using ALSA OSS emulation"
+			OSS="$(modprobe -l | grep "snd.*oss" | sed -e "s:\/.*\/::" -e "s:\..*::")"
+			# Add oss modules to list
+			for i in ${OSS}
+			do
+				DRIVERS="${i} ${DRIVERS}"
+			done
 		fi
 		
+		# Fall back on the automated aliases if we don't have ALSA configured properly...
+		if [ -z "${DRIVERS}" ]; then
+			ewarn "Could not detect custom ALSA settings.  Loading all detected alsa drivers."
+			DRIVERS="$(modprobe -c | grep pci: |  awk '{ print $3 }' | grep snd.* | sort | uniq)"
+		fi
+
+		[ -z "${DRIVERS}" ] && eerror "Unable to find any ALSA drivers. Have you compiled alsa-drivers correctly?"
+
 		for DRIVER in ${DRIVERS}
 		do
 			if [ ! "${DRIVER}" = off ] &&

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.43 2004/02/12 12:20:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.44 2004/02/19 08:53:01 eradicator Exp $
+
+  19 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
+  Updated alsasound initscript to fix 'loading unneccessary modules on 2.6
+  kernels' bug #41600.
 
   12 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-utils-0.9.8.ebuild, alsa-utils-1.0.0_rc2.ebuild,
