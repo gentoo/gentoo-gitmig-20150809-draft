@@ -1,9 +1,10 @@
-MD5 1cf9d5ffe7d8a46dc0308f970c9daba0 ChangeLog 2955
+MD5 0165d6482e41229cf7e246aff6b80bcd ChangeLog 3065
 MD5 7f0003124e00757db7465b129cee584e libsoup-1.99.22.ebuild 839
 MD5 cb38a31ea94df068496383a513c0a733 libsoup-1.99.23.ebuild 844
 MD5 cc0ca5e05816c725ef4f46711ce36d82 libsoup-1.99.26-r1.ebuild 1330
 MD5 cc950df064048b1533218d504d3e3907 libsoup-1.99.26.ebuild 1158
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 0837960e46950e7ce7b91f8cbb622f71 libsoup-1.99.28.ebuild 1401
 MD5 4ed2ee4ad5a6e2b7041129cabbcb78d2 files/digest-libsoup-1.99.22 68
 MD5 f45a9e30ed0c538e279fc46a19c88bbf files/digest-libsoup-1.99.23 68
 MD5 ceb6a90e8f49bead5b674b989de37ad7 files/digest-libsoup-1.99.26 68
@@ -11,3 +12,4 @@ MD5 ceb6a90e8f49bead5b674b989de37ad7 files/digest-libsoup-1.99.26-r1 68
 MD5 4cf83ac1dc09f7d21c0a29bf231bfe94 files/libsoup-1.99.26-gnutls_1.0.patch 414
 MD5 6128cc7bbf088e07b4040e8296a7c57b files/libsoup-1.99.26-msn.patch 627
 MD5 09a0c3f27613d90ffeb8abb875598ace files/libsoup-1.99.26-with_ssl.patch 2861
+MD5 6c44713499ec52c81ca81ed58a6286bf files/digest-libsoup-1.99.28 68
