@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.17 2004/04/17 07:56:08 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.18 2004/05/01 22:04:07 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ~hppa mips amd64 ia64 ppc64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE="nls debug"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
@@ -19,7 +19,6 @@ DEPEND=">=sys-apps/portage-2.0.47-r10
 	virtual/glibc
 	nls? ( sys-devel/gettext )
 	>=sys-devel/gcc-3*"
-
 RDEPEND="virtual/glibc"
 
 src_unpack() {
@@ -45,16 +44,15 @@ src_compile() {
 		export DEBUG OPTIMIZER
 	fi
 
-	local myconf="`use_enable nls gettext`"
-	[ `use sparc` ] && unset PLATFORM
-	[ `use ppc` ] && unset PLATFORM
-	[ `use ppc64` ] && unset PLATFORM
-	econf ${myconf} || die
-
+	use sparc && unset PLATFORM
+	use ppc && unset PLATFORM
+	use ppc64 && unset PLATFORM
+	econf `use_enable nls gettext` || die
 
 	sed -i \
 		-e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' \
-		-e 's:-O1::' -e 's:../$(INSTALL) -S \(.*\) $(PKG_.*_DIR)/\(.*$\)::' \
+		-e 's:-O1::' \
+		-e 's:../$(INSTALL) -S \(.*\) $(PKG_.*_DIR)/\(.*$\)::' \
 		include/builddefs
 
 	make || die
