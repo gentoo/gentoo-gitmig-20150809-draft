@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 c78688958c993e4d97efd0aaaffd4f9c sylpheed-claws-0.9.5-r1.ebuild 4654
 MD5 799733f5421ef60964d6df8062dfc7b3 metadata.xml 345
-MD5 0c3875dbbf24769f41112c81884dd167 sylpheed-claws-0.9.5-r1.ebuild 4653
-MD5 a3de6ffc8b84e8a73c4d05d36cca26fc sylpheed-claws-0.9.7.ebuild 4671
-MD5 c202d606b7849eb66051fde72ab80fbd sylpheed-claws-0.9.8.ebuild 4660
-MD5 9c0d5251ea553c93eeaeb0fae7698261 sylpheed-claws-0.9.9.ebuild 3755
-MD5 09c90cfcb7a6491061d9f54c822746fe sylpheed-claws-0.9.10.ebuild 3762
-MD5 8a198a81b4da5c47f3dd59f72a8a969a ChangeLog 13907
-MD5 d27812c24d1f3f3e95a95c5b9a0306fd sylpheed-claws-0.9.11.ebuild 3764
-MD5 e5a1953a555e8060722cada98b9d55fb files/digest-sylpheed-claws-0.9.10 149
+MD5 0c7276ffd60f6461945f8f5c21a42a02 sylpheed-claws-0.9.7.ebuild 4672
+MD5 4c6083f24aab2348b35f2f9888dc331b sylpheed-claws-0.9.11.ebuild 3765
+MD5 62ea3710d3f37ba54b8a9cb876ee5dfc ChangeLog 14012
+MD5 f3c5a77fef4ab19c5d68ef95e49aa059 sylpheed-claws-0.9.10.ebuild 3762
+MD5 52b5c76d299140a27ffd5d0d4c42f7a3 sylpheed-claws-0.9.9.ebuild 3756
+MD5 d8be8e11c9eb8bf11a0aff4e33f81ede sylpheed-claws-0.9.8.ebuild 4661
 MD5 1e7e11ae4e8aba685f25aa113e70e1b5 files/digest-sylpheed-claws-0.9.5-r1 234
+MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
+MD5 8ca534b232f6988e9df8e9fd48563e43 files/digest-sylpheed-claws-0.9.11 149
 MD5 a44580928f3fa901eb944e739c070d44 files/digest-sylpheed-claws-0.9.7 148
+MD5 82d3d3968bf15e87b2fc7b5b53c42277 files/gv-procmime-Makefile.in.patch 930
+MD5 e5a1953a555e8060722cada98b9d55fb files/digest-sylpheed-claws-0.9.10 149
+MD5 debd84fa61847ff672e179bcb7845e2b files/sylpheed-0.8.3claws32-dillo.patch 9123
 MD5 7e4997657b4184182e39ad72ff9d1a01 files/digest-sylpheed-claws-0.9.8 148
 MD5 0c86a50615c61f5a6d26d90b598e898e files/digest-sylpheed-claws-0.9.9 148
-MD5 82d3d3968bf15e87b2fc7b5b53c42277 files/gv-procmime-Makefile.in.patch 930
-MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
-MD5 debd84fa61847ff672e179bcb7845e2b files/sylpheed-0.8.3claws32-dillo.patch 9123
-MD5 8ca534b232f6988e9df8e9fd48563e43 files/digest-sylpheed-claws-0.9.11 149
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFAu6xZ6J2i8a8J4okRArpMAJ9bRIdeLyU7iGAAGns3vxwbPLSAlQCfTeKQ
-V9VQnJ61ZwXTNxJJeQAWQoI=
-=HUh6
------END PGP SIGNATURE-----
