@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.4 2005/03/02 00:51:36 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.5 2005/03/06 18:19:51 weeve Exp $
+
+  06 Mar 2005; Jason Wever <weeve@gentoo.org> kwin-3.4.0_rc1.ebuild:
+  Added ~sparc keyword to satisfy deps wrt bug #84197.
 
 *kwin-3.4.0_rc1 (02 Mar 2005)
 
