@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.5.ebuild,v 1.1 2005/03/25 21:42:47 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.5.ebuild,v 1.2 2005/03/28 02:58:19 latexer Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -34,6 +34,9 @@ src_unpack() {
 	# Fix munging of Unix paths
 	epatch ${FILESDIR}/${P}-pathfix.diff || die
 
+	# Fix for linking to ICU
+	epatch ${FILESDIR}/${P}-icu-linking.diff || die
+
 	# Various fixes from SVN.
 	epatch ${FILESDIR}/${P}-r42108.diff || die
 	epatch ${FILESDIR}/${P}-r42122.diff || die
@@ -48,6 +51,11 @@ src_unpack() {
 	sed -i \
 		"s:^\t\(MONO_PATH.*)\):\tMONO_CFG_DIR='${D}/etc/' \1:" \
 		${S}/mcs/build/library.make || die
+
+	libtoolize --copy --force || die "libtoolize failed"
+	aclocal || die "aclocal failed"
+	autoconf || die "autoconf failed"
+	automake || die "automake failed"
 }
 
 src_compile() {

@@ -1,0 +1,11 @@
+diff -aur mono-1.1.5-orig/mono/metadata/Makefile.am mono-1.1.5/mono/metadata/Makefile.am
+--- mono-1.1.5-orig/mono/metadata/Makefile.am	2005-03-16 11:18:25.000000000 -0500
++++ mono-1.1.5/mono/metadata/Makefile.am	2005-03-26 18:08:34.000000000 -0500
+@@ -29,6 +29,7 @@
+ 
+ CLEANFILES = mono-bundle.stamp
+ 
++libmonoruntime_la_LIBADD = $(ICU_LIBS)
+ libmonoruntime_static_la_LIBADD = $(bundle_obj) $(PLATFORM_LIB) $(libmonoruntime_la_LIBADD)
+ 
+ libmonoruntime_la_SOURCES = \
