@@ -1,0 +1,186 @@
+# ChangeLog for net-misc/ltsp-core
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.1 2004/09/25 07:53:51 lanius Exp $
+
+*ltsp-3.0.9-r3 (25 Sep 2004)
+
+  25 Sep 2004; Heinrich Wendel <lanius@gentoo.org> +metadata.xml,
+  +files/INSTALL.Gentoo, +files/Xaccess, +files/Xsetup_workstation,
+  +files/dhcpd.conf, +files/eb-5.0.9-3c905c-tpo.lzpxe,
+  +files/eb-5.0.9-eepro100.lzpxe, +files/eb-5.0.9-rtl8139.lzpxe,
+  +files/gdm.conf.pl, +files/install.sh, +files/kdmrc.pl, +files/ltsp.conf,
+  +files/ltsp.gif, +files/tftp, +ltsp-3.0.9-r3.ebuild, +ltsp-4.0.ebuild,
+  +ltsp-4.1-r1.ebuild:
+  Moved from net-misc/ltsp-core to net-misc/ltsp.
+
+*ltsp-core-4.1-r1 (08 Sep 2004)
+
+  08 Sep 2004; Heinrich Wendel <lanius@gentoo.org> +ltsp-core-4.1-r1.ebuild,
+  -ltsp-core-4.1.ebuild:
+  version bump
+
+  19 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> ltsp-core-4.1.ebuild:
+  fix use invocation
+
+*ltsp-core-4.1 (19 Aug 2004)
+
+  19 Aug 2004; Heinrich Wendel <lanius@gentoo.org> ltsp-core-3.0.9-r1.ebuild,
+  ltsp-core-3.0.9-r3.ebuild, ltsp-core-4.1.ebuild:
+  version bump, bug #58876
+
+  14 Jun 2004; Aron Griffis <agriffis@gentoo.org> ltsp-core-3.0.9-r1.ebuild,
+  ltsp-core-3.0.9-r3.ebuild, ltsp-core-4.0.ebuild:
+  Fix use invocation
+
+  12 May 2004; Heinrich Wendel <lanius@gentoo.org> ltsp-core-3.0.9-r1.ebuild,
+  ltsp-core-3.0.9-r3.ebuild, ltsp-core-4.0.ebuild:
+  change xfree dep to virtual/x11
+
+  23 Mar 2004; Martin Holzer <mholzer@gentoo.org> ltsp-core-3.0.9-r1.ebuild,
+  ltsp-core-3.0.9-r3.ebuild:
+  fixing depend qa issue. see 45343.
+
+  27 Feb 2004; Heinrich Wendel <lanius@gentoo.org> ltsp-core-4.0.ebuild:
+  update kernel image to 2.4.24, mark stable
+
+  31 Jan 2004; Heinrich Wendel <lanius@gentoo.org> ltsp-core-4.0.ebuild:
+  added block on ltsp, see bug #39809, fixed depend
+
+*ltsp-core-4.0 (17 Jan 2004)
+
+  17 Jan 2004; Heinrich Wendel <lanius@gentoo.org> ltsp-core-4.0.ebuild,
+  ltsp-core-4.0_beta1.ebuild:
+  version bump
+
+  30 Oct 2003; Heinrich Wendel <lanius@gentoo.org> ltsp-core-3.0.9-r1.ebuild,
+  ltsp-core-3.0.9-r2.ebuild, ltsp-core-3.0.9-r3.ebuild,
+  ltsp-core-4.0_beta1.ebuild:
+  changed tftp-hpa to virtual/tftp
+
+*ltsp-core-4.0_beta1 (29 Aug 2003)
+
+  29 Aug 2003; Martin Holzer <mholzer@gentoo.org> ltsp-core-3.0.9-r1.ebuild,
+  ltsp-core-3.0.9-r2.ebuild, ltsp-core-3.0.9-r3.ebuild,
+  ltsp-core-4.0_beta1.ebuild:
+  move app-admin/tftp-hpa net-misc/tftp-hpa
+
+  15 Aug 2003; Heinrich Wendel <lanius@gentoo.org> :
+  initial ltsp-4 release
+
+*ltsp-core-3.0.9-r3 (01 Aug 2003)
+
+  01 Aug 2003; Heinrich Wendel <lanius@gentoo.org> ltsp-core-3.0.7-r1.ebuild,
+  ltsp-core-3.0.9-r1.ebuild, ltsp-core-3.0.9-r2.ebuild,
+  ltsp-core-3.0.9-r3.ebuild, files/INSTALL.Gentoo:
+  - added sandbox info
+  - workaround for config overwrite n update
+  - added -r3 with new kernel image
+
+*ltsp-core-3.0.9-r2 (26 June 2003)
+
+  26 June 2003; Andres Toomsalu <frame@gentoo.org>:
+  ltsp_x_core bumped to 3.0.4 (XFree 4.2.99)
+      
+*ltsp-core-3.0.9-r1 (25 June 2003)
+
+  25 June 2003; Andres Toomsalu <frame@pfm.ee>:
+  fixed typo in subnet declaration with dhcpd.conf and unmasked ltsp-core-3.0.9-r1.ebuild
+
+*ltsp-core-3.0.9-r1 (26 May 2003)
+
+  26 May 2003; Andres Toomsalu <frame@pfm.ee>:
+  Recomputed 3.0.9 digest - closes bug #20814, bad digest for ltsp_x_fonts
+
+*ltsp-core-3.0.9-r1 (16 Apr 2003)
+
+  16 Apr 2003; Andres Toomsalu <frame@pfm.ee>:
+  ltsp-core version bump to 3.0.9 - currently masked
+  I guess there are no major changes besides some new linux distros support added to original package, so upgrading from ltsp-core 3.0.7 is probably pointless...
+
+*ltsp-core-3.0.7-r1 (24 Mar 2003)
+
+  24 Mar 2003; Andres Toomsalu <frame@pfm.ee>:
+  Updated etherboot pxe loadable roms to 5.0.9 which has dos booting fixed :O)
+
+*ltsp-core-3.0.7-r1 (19 Mar 2003)
+
+  19 Mar 2003; Martin Holzer <mholzer@gentoo.org> ltsp-core-3.0.7-r1.ebuild:
+  corrected kde and gnome dependencies.
+
+*ltsp-core-3.0.7-r1 (11-02-2003)
+
+  Small fixes and improvements:
+  1) No need to create kdmrc symlink anymore
+  2) Added sample dhcpd.conf with multiboot menu and password protection
+  3) Added 3 bootroms for pxe booting out of the box with rtl8139, eepro100 and 3c905c cards 
+
+*ltsp-core-3.0.7 (10-10-2002)
+
+  17 Oct 2002; Andres Toomsalu <frame@pfm.ee>:
+  
+  Added missing digest-ltsp-core-3.0.7 file.    
+
+  10 Oct 2002; Andres Toomsalu <frame@pfm.ee>:
+  
+  Updated ltsp-core-3.0.5.ebuild to reflect ltsp-core-3.0.7.
+
+*ltsp-core-3.0.5 (10-10-2002)
+
+  10 Oct 2002; Andres Toomsalu <frame@pfm.ee>:
+  
+  Updated original ltsp-core-3.0.0.ebuild made by David Snopek 
+  to reflect ltsp-core-3.0.5.
+  
+  Corrected some dependency package names from original 3.0.0 ebuild.
+  
+  !!! ATTENTION KDM USERS !!! BEFORE emerging 3.0.5 ebuild make an symlink 'ln -sf /usr/kde/3/share/config/kdm/kdmrc /etc/X11/xdm/kdmrc'
+  OR edit /usr/kde/3/share/config/kdm/kdmrc manually afterwards (just set 'Enable=true' in [Xdmcp] section).
+  Tryed to rewrite 'modify_xdm_kdmrc()' function from original 3.0.0 ebuild to 'local file=/usr/kde/3/share/config/kdm/kdmrc'
+  - but that didn't work - error message from build process informed always that 'can't find the damn file...'.
+  Grrrhh..well I really don't know portage so well to understand why it fails on this case. So make an symlink or fix kdmrc manually.
+  
+
+  09 May 2002; David Snopek <xevol@newtonave.net>:
+  
+  Initial ltsp-core-3.0.0.ebuild.
+  ----- FROM INSTALL.Gentoo --------------------------
+  
+        Finishing the LTSP install under Gentoo Linux
+	By David Snopek
+
+	There are a couple things that the Gentoo package didn't do because I don't feel right changing these things on someone elses system.
+
+	* Starting LTSP ...
+
+	Run these sciprts as root in no particular order:
+
+	/etc/init.d/dhcp start
+	/etc/init.d/xdm start
+	/etc/init.d/xinetd start
+    
+	* Display Manager
+
+	In order for the display manager to be started on boot, run this command:
+
+	rc-update add xdm default
+
+	To set which display manager is started, set the DISPLAY_MANAGER variable in /etc/rc.conf.  Possible values include xdm, gdm, and kdm.
+
+	Modify /etc/X11/xdm/Xaccess to grant the X-Terminals access to the display manager.
+
+	* DHCP	
+
+	In order for dhcp to be started on boot, run this command:
+
+	rc-update add dhcp default
+
+	To change which network card connects to the X-Terminal's, change the value of the IF variable at the top of /etc/init.d/dhcp.
+
+	* xinetd
+
+	If xinetd doesn't already start on boot, and you desire it to, run this command:
+
+	rc-update add xinetd default
+    -------------------------------------------------
+
+
