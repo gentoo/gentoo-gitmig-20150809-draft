@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/files/esound.init.d,v 1.3 2004/02/01 20:32:42 vapier Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/files/esound.init.d,v 1.4 2004/03/04 18:50:29 vapier Exp $
 
 # Note: You need to start esound on boot, only if you want to use it over network.
 

@@ -1,14 +1,14 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/files/teamspeak2-server.rc6,v 1.1 2003/09/27 11:27:47 jje Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/files/teamspeak2-server.rc6,v 1.2 2004/03/04 18:50:29 vapier Exp $
 
 depend() {
-        need net
+	need net
 }
 
 start() {
-        ebegin "Starting TeamSpeak Server"
+	ebegin "Starting TeamSpeak Server"
 	start-stop-daemon --start --quiet --chuid teamspeak2 \
 		--exec /opt/teamspeak2-server/server_linux -- \
 		-db=/var/lib/teamspeak2-server/server.dbs \
@@ -17,13 +17,12 @@ start() {
 		-pid=/var/run/teamspeak2-server/server.pid \
 		-sql=/opt/teamspeak2-server/sql/ \
 		-httpdocs=/opt/teamspeak2-server/http/ &>/dev/null
-        eend $?
+	eend $?
 }
 
 stop() {
-        ebegin "Stopping TeamSpeak Server"
-        start-stop-daemon --stop --quiet \
+	ebegin "Stopping TeamSpeak Server"
+	start-stop-daemon --stop --quiet \
 		--pidfile /var/run/teamspeak2-server/server.pid
-        eend $?
+	eend $?
 }
-
