@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r6.ebuild,v 1.3 2005/03/25 07:09:27 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r6.ebuild,v 1.4 2005/03/25 07:27:22 lanius Exp $
 
 # disable sandbox, needed for motif-config
 SANDBOX_DISABLED="1"
@@ -35,7 +35,7 @@ pkg_setup() {
 	[ -n "${ABI}" ] && append-flags "-I/usr/include/gentoo-multilib/${ABI}"
 
 	# profile stuff
-	if has_version =x11-libs/openmotif-2.2*; then touch $T/upgrade; fi
+	if has_version =x11-libs/openmotif-2.2*; then touch /tmp/openmotif-2.2; fi
 }
 
 src_unpack() {
@@ -146,5 +146,5 @@ pkg_postinst() {
 }
 
 pkg_prerm() {
-	[ -f $T/upgrade ] || motif-config --uninstall openmotif-2.2
+	[ -f /tmp/openmotif-2.2 ] && rm -f /tmp/openmotif-2.2 || motif-config --uninstall openmotif-2.2
 }

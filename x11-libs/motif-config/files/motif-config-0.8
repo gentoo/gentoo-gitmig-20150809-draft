@@ -68,6 +68,10 @@ _check_root() {
 _activate_profile() {
 	_check_root
 
+	if [ -z "${1}" ]; then
+		return 0
+	fi
+
 	new=${1}
 	# libs
 	for file in `ls /usr/@@LIBDIR@@/${new}/ | grep lib`; do
@@ -357,7 +361,7 @@ for x in "$@"; do
 		;;
 
 		-v|--version)
-			echo "motif-config-0.7"
+			echo "motif-config-0.8"
 			exit 0
 		;;
 
