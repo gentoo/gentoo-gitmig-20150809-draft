@@ -1,0 +1,9 @@
+# ChangeLog for sys-libs/ldetect-lst
+# Copyright 2002 Damien Krotkine; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect-lst/ChangeLog,v 1.1 2002/12/07 18:30:54 dams Exp $
+
+*ldetect-lst-0.1.4 (1 Dec 2002)
+
+  1 Dec 2002; <dams@gentoo.org> ldetect-lst-0.1.4.ebuild:
+
+  Initial version.
