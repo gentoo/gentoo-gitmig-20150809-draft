@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.65-r1.ebuild,v 1.1 2005/01/03 02:48:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.65-r1.ebuild,v 1.2 2005/01/30 04:22:09 vapier Exp $
 
 inherit games eutils
 
@@ -23,7 +23,7 @@ SRC_URI="http://nwdownloads.bioware.com/neverwinternights/linux/129/nwclient129.
 LICENSE="NWN-EULA"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="nowin nocd"
+IUSE="nowin" # nocd"
 RESTRICT="nostrip nomirror"
 
 RDEPEND="virtual/x11
@@ -34,12 +34,12 @@ RDEPEND="virtual/x11
 S="${WORKDIR}/nwn"
 
 pkg_setup() {
-	use nocd && \
-	cdrom_get_cds \
-		Data_Shared.zip \
-		disk2.zip \
-		disk3.zip \
-		disk4.zip
+#	use nocd && \
+#	cdrom_get_cds \
+#		Data_Shared.zip \
+#		disk2.zip \
+#		disk3.zip \
+#		disk4.zip
 	games_pkg_setup
 }
 
