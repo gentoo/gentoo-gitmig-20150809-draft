@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.3-r1.ebuild,v 1.3 2004/03/21 06:25:59 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.3-r1.ebuild,v 1.4 2004/04/06 17:48:22 vapier Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -27,14 +27,6 @@ KEYWORDS="-*"
 ARCH="$(uname -m)"
 ARCH=`echo $ARCH | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/  -e s/i386_64/x86_64/`
 [ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH=sparc64
-
-# Archs which have their own separate header packages, add a check here
-# and redirect the user to them
-if [ "${ARCH}" = "mips" ] || [ "${ARCH}" = "mips64" ]; then
-	eerror "These headers are not appropriate for your architecture."
-	eerror "Please use sys-kernel/${ARCH/64/}-headers instead."
-	die
-fi
 
 src_unpack() {
 
