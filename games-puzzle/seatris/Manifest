@@ -1,4 +1,14 @@
-MD5 8690bba40fc97b2d04b932fde65f4a6a seatris-0.0.14.ebuild 897
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 263970f665fab9286181334d3ddd3458 ChangeLog 577
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 2b6be61646bda0fa7317ed94a2e5ed4d ChangeLog 492
+MD5 4c2be80c58c2288cdcc943d2b284ca41 seatris-0.0.14.ebuild 904
 MD5 4ddbf34f20b210b6d51233ce38743e30 files/digest-seatris-0.0.14 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFByDQH60LfUIagIAkRAkulAJ9s1IhwyR1GtBUr7Ngq0skjS5tlKwCcDqC0
+HDADd2pg+oGJbQTCA7y9sLw=
+=LnRT
+-----END PGP SIGNATURE-----
