@@ -1,0 +1,14 @@
+# ChangeLog for app-misc/Welcome2L
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/Welcome2L/ChangeLog,v 1.1 2002/11/07 21:03:02 seemant Exp $
+
+*Welcome2L-3.04 (07 Nov 2002)
+
+  07 Nov 2002; Seemant Kulleen <seemant@gentoo.org> Welcome2L-3.04.ebuild
+  files/Welcome2L-3.04-gentoo.patch files/Welcome2L.initscript ChangeLog
+  files/digest-Welcome2L-3.04 :
+
+  New package, which shows a nice console login, along the lines of
+  linux_logo, but much spiffier looking.  Package (ebuild, patches,
+  initscript) submitted by: webmaster@refstart.nl (Niek van der Maas) in bug
+  #9963.
