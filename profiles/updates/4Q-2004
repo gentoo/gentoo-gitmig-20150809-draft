@@ -161,3 +161,4 @@ move app-sci/magic sci-electronics/magic
 move app-sci/modelsim sci-electronics/modelsim
 move app-sci/ng-spice-rework sci-electronics/ng-spice-rework
 move app-sci/oregano sci-electronics/oregano
+move app-sci/pcb sci-electronics/pcb
