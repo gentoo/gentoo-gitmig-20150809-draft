@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r3.ebuild,v 1.6 2004/05/31 18:12:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r3.ebuild,v 1.7 2004/06/01 18:24:05 mr_bones_ Exp $
 
 inherit eutils
 
@@ -107,7 +107,7 @@ src_compile() {
 			# use alsa && styles="${styles} -mips-alsa"
 
 			[ -z "${styles}" ] && styles="-generic"
-			;;		
+			;;
 		*)
 			eerror "No support has been added for your architecture."
 			exit 1
