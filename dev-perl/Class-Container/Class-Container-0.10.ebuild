@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Container/Class-Container-0.10.ebuild,v 1.9 2005/01/21 20:28:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Container/Class-Container-0.10.ebuild,v 1.10 2005/03/15 23:57:42 mcummings Exp $
 
 inherit perl-module
 
@@ -15,4 +15,5 @@ IUSE=""
 
 DEPEND="${DEPEND}
 	>=dev-perl/Params-Validate-0.24-r1
+	dev-perl/module-build
 	>=dev-perl/Scalar-List-Utils-1.08"

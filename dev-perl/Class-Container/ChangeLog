@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Container
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Container/ChangeLog,v 1.14 2005/01/22 12:49:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Container/ChangeLog,v 1.15 2005/03/15 23:57:42 mcummings Exp $
+
+  15 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  Class-Container-0.10.ebuild, Class-Container-0.11.ebuild:
+  Missing dep on module-build
 
   22 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   Class-Container-0.11.ebuild:
