@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/Time-HiRes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-HiRes/ChangeLog,v 1.10 2003/02/12 06:25:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-HiRes/ChangeLog,v 1.11 2003/05/25 01:59:16 seemant Exp $
+
+*Time-HiRes-01.20-r2 (24 May 2003)
+
+  24 May 2003; Seemant Kulleen <seemant@gentoo.org>
+  Time-HiRes-01.20-r1.ebuild, Time-HiRes-01.20-r1.ebuild,
+  Time-HiRes-01.20-r2.ebuild, Time-HiRes-01.20-r2.ebuild,
+  Time-HiRes-1.38.ebuild, Time-HiRes-1.38.ebuild, Time-HiRes-1.47.ebuild:
+  version bump, because none of the current ones in portage are even available
+  at CPAN
 
 *Time-HiRes-1.42 (08 Jan 2003)
 
