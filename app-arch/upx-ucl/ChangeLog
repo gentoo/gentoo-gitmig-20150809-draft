@@ -1,0 +1,10 @@
+# ChangeLog for app-arch/upx-ucl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.1 2003/11/01 05:43:49 brandy Exp $
+
+*upx-ucl-1.24 (01 Nov 2003)
+
+  01 Nov 2003; Brandy Westcott brandy@gentoo.org upx-ucl-1.24.ebuild:
+  Initial import. Thanks to Daniel Black <dragonheart@tpg.com.au> for the
+  ebuild. Closes bug #31493.
+
