@@ -39,8 +39,8 @@ move app-text/latex2html dev-tex/latex2html
 move app-text/chktex dev-tex/chktex
 move app-text/ivritex dev-tex/ivritex
 move app-xemacs/ispell app-xemacs/xemacs-ispell
-move app-xemacs/eterm app-xemacs/xemacs-eterm
 move app-dicts/ispell-br app-dicts/ispell-pt-br
 move net-ftp/pycurl dev-python/pycurl
 move media-libs/pyogg dev-python/pyogg
 move media-libs/pyvorbis dev-python/pyvorbis
+move app-xemacs/xemacs-eterm app-xemacs/eterm
