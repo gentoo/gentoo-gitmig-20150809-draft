@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/tin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.4 2005/02/20 23:16:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.5 2005/04/01 16:46:30 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> tin-1.6.2.ebuild:
+  stable on ia64
 
 *tin-1.7.7-r1 (20 Feb 2005)
 
