@@ -6,6 +6,7 @@ MD5 29dee4edd0c2fb733172132682f41ecd mozilla-1.4.ebuild 16520
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 6af0766cc26a4c9a8474517e2e90e5d9 mozilla-1.4-r2.ebuild 16452
 MD5 c6059713f805a2068777f152c505cea1 ChangeLog 19551
+MD5 06815eeb4e5cfd06cfb24c5874e17a01 mozilla-1.4-r1.ebuild 16452
 MD5 2245cc4f37902e2c6dd188f72874fbb3 files/10mozilla 60
 MD5 cf872ecce56e05c488ae7f41b50dec31 files/digest-mozilla-1.0.1-r3 281
 MD5 eccaf421f7e91faad5f835cadca4263e files/digest-mozilla-1.1-r1 202
@@ -28,6 +29,7 @@ MD5 d2a2c551fe8991a27d4abe4e3bbedbe3 files/mozilla-xft-unix-prefs.patch 1320
 MD5 5b01d0425f9ef7bbe0765985e6041c6b files/mozilla.sh 6684
 MD5 7d244b888dbd302c14414cbfc1f62501 files/xft.js 135
 MD5 e4c4acbf8fe930f659118fbdc3cc92d1 files/digest-mozilla-1.4-r2 73
+MD5 22abc05aa3adaba490148f6040e0500a files/digest-mozilla-1.4-r1 201
 MD5 8803e1d528f2f49a3f3fa98ba14d9ff0 files/1.2/mozilla-1.2-branch-update.patch.bz2 8240
 MD5 83da5242120c74b0ca6cceae9d6cf237 files/1.2/mozilla-1.2-cutnpaste-limit-fix.patch.bz2 2838
 MD5 4877db25d49b916e55a5d11238c63d8c files/1.2/mozilla-1.2-image-reload-memleak.patch 1489
