@@ -5,7 +5,7 @@ MD5 45ae682dfaaf5fe69a86542cf117fea9 ChangeLog 11298
 MD5 3d739d8898abbd33680c2b5ef990eac3 libsdl-1.2.6-r3.ebuild 2908
 MD5 600292a19b154118feaa18b5281b5d51 libsdl-1.2.7-r3.ebuild 3857
 MD5 baaaa69f33ef9027dac84ee4ff02773b metadata.xml 974
-MD5 9dbd35eeb938ee50f16789d7a9556634 libsdl-1.2.8-r1.ebuild 4157
+MD5 ae7b648ab2951b2764579fd7d03f222f libsdl-1.2.8-r1.ebuild 4158
 MD5 0c2020ec3ce37ea0612064c52d1014b1 files/1.2.6-alsa-1.0.0.patch 557
 MD5 60ecfde6cc7b734ef03b93357c537674 files/1.2.8-keyrepeat.patch 598
 MD5 803844293dc7df2bb7d2323c03977b71 files/1.2.7-libcaca.patch 23266
@@ -29,7 +29,7 @@ MD5 e6471a33cb0d62a807640ef3eccffb5f files/1.2.8-direct-8bit-color.patch 7414
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB5ymHroRuSHgZdywRAnQAAJ9cHzgSLoxJiT3Mxxgw30kaXCNAtgCfST49
-8wB7lcTvMhwyAYzYTeSZ62I=
-=HvUq
+iD8DBQFB8eeoroRuSHgZdywRAkcOAJ4nxaqiiCDo0hQRbK/aSKaYPaWg1wCeLVjk
+nIxAIIbFekue8N+WsbQDG24=
+=imFP
 -----END PGP SIGNATURE-----
