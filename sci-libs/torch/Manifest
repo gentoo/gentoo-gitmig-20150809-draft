@@ -1,4 +1,14 @@
-MD5 aeb33ff76fa695d712221e2a5d6fca8d ChangeLog 597
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2f0660761deb097e79387ace1d5b0346 ChangeLog 597
 MD5 e9b62c17ec2d94d1639353563f5b9183 torch-3.ebuild 1933
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 b783f0f266b5452761370caf0b78e7f3 files/digest-torch-3 117
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0oK5I1lqEGTUzyQRAlknAKDSYrgMhwJf/E8hzUNBCwQ4hzWT6gCgrJRC
+sjzhrmiYTpqwbL+eeY7rQg8=
+=PjzA
+-----END PGP SIGNATURE-----
