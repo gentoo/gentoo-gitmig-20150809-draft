@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vmpsd/vmpsd-1.3.ebuild,v 1.1 2004/12/08 00:38:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vmpsd/vmpsd-1.3.ebuild,v 1.2 2004/12/08 08:20:45 mr_bones_ Exp $
 
-inherit eutils 
+inherit eutils
 
 DESCRIPTION="An open-source VLAN management system"
 HOMEPAGE="http://vmps.sourceforge.net"
