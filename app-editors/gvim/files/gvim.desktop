@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=gVim
+Comment=A highly configurable text editor
+Exec=gvim
+Icon=gvim
+Terminal=false
+Type=Application
+Categories=Application;Development;
