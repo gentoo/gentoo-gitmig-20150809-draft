@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre1-r1.ebuild,v 1.1 2003/09/27 22:50:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre1-r1.ebuild,v 1.2 2003/10/05 20:41:09 mholzer Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba"
 
@@ -43,6 +43,7 @@ RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	nas? ( media-libs/nas )
+	aalib? ( media-libs/aalib )
 	svga? ( media-libs/svgalib )
 	encode? ( media-sound/lame
 	          >=media-libs/libdv-0.9.5 )
@@ -149,6 +150,8 @@ src_compile() {
 	use truetype \
 		&& myconf="${myconf} --enable-freetype" \
 		|| myconf="${myconf} --disable-freetype"
+
+	use aalib && myconf="${myconf} --enable-aa"
 
 	use oss \
 		|| myconf="${myconf} --disable-ossaudio"
