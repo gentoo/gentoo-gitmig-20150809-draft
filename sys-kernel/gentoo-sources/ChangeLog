@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.91 2004/11/09 22:23:54 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.92 2004/11/12 19:33:54 plasmaroo Exp $
+
+*gentoo-sources-2.4.22-r18 (12 Nov 2004)
+
+  12 Nov 2004; <plasmaroo@gentoo.org> -gentoo-sources-2.4.20-r26.ebuild,
+  +gentoo-sources-2.4.20-r27.ebuild, -gentoo-sources-2.4.22-r17.ebuild,
+  +gentoo-sources-2.4.22-r18.ebuild, -gentoo-sources-2.4.25-r10.ebuild,
+  +gentoo-sources-2.4.25-r11.ebuild, -gentoo-sources-2.4.26-r10.ebuild,
+  +gentoo-sources-2.4.26-r11.ebuild, -gentoo-sources-2.4.27-r2.ebuild,
+  +gentoo-sources-2.4.27-r3.ebuild,
+  +files/gentoo-sources-2.4.binfmt_elf.patch:
+  Version bump for the binfmt_elf security vulnerability, bug #70681.
 
 *gentoo-sources-2.4.26-r10 (09 Nov 2004)
 
