@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/ebview
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.17 2004/11/22 12:54:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.18 2004/11/23 10:53:44 usata Exp $
+
+  23 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/ebview-0.3.6-destdir.diff, -files/ebview-eb4-gentoo.diff,
+  -files/ebview-gtk24.diff, -ebview-0.3.5.ebuild, ebview-0.3.6.ebuild:
+  Changed einstall to make DESTDIR=${D} install; bug #72015.
 
   22 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> ebview-0.3.5.ebuild,
   ebview-0.3.6.ebuild:
