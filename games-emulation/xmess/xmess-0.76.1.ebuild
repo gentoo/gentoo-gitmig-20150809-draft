@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.72.1.ebuild,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.76.1.ebuild,v 1.1 2003/10/26 01:26:23 vapier Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -99,6 +99,7 @@ src_install() {
 	[ `use ggi` ]				&& { make DISPLAY_METHOD=ggi install || die; }
 	[ `use opengl` ]			&& { make DISPLAY_METHOD=xgl install || die; }
 
+	cp -r ctrlr ${D}/${GAMES_DATADIR}/${PN}/
 	dodoc doc/{changes.*,*.txt,mame/*,${TARGET}rc.dist} README todo
 	dohtml -r doc/*
 
