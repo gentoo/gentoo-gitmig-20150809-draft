@@ -1,11 +1,64 @@
-[KDE Desktop Entry]
-Encoding=UTF-8
-Type=Application
-Exec=kbedic
-Icon=/usr/share/kbedic/kbedic_icon_mini.xpm
-Name=KBEDic
-GenericName=English - Bulgarian Dictionary
-GenericName[bg]=Българско-Английски Речник
-Comment=An English - Bulgarian Dictionary
-Comment[bg]=Българско-Английски Речник
-Categories=Qt;KDE;Utility
+#!/sbin/runscript
+
+opts="start stop restart slow fast"
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting mldonkey"
+	if [ ! -d ${MLHOME}/${MLDIR} ]
+	then
+		einfo "Directory ${MLHOME}/${MLDIR} not existing, trying to create..."
+		su ${MLUSER} -c "mkdir ${MLHOME}/${MLDIR}" 
+		if [ ! -d ${MLHOME}/${MLDIR} ]
+		then
+			eerror "Directory ${MLHOME}/${MLDIR} could not be created!"
+			return 1
+		fi
+		einfo "...ok!"
+	fi
+	cd ${MLHOME}/${MLDIR}/
+	start-stop-daemon --quiet --start -c ${MLUSER}  \
+	-x /usr/bin/mlnet &>${MLLOG} &
+	sleep 5
+	renice ${MLNICE} -u ${MLUSER} >/dev/null
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping mldonkey - please wait"
+	wget --spider http://$DONKSRV:4080/submit?q=close_fds -q 
+	wget --spider http://$DONKSRV:4080/submit?q=save -q 
+	wget --spider http://$DONKSRV:4080/submit?q=kill -q 
+	sleep 10
+	start-stop-daemon --oknodo --stop -x /usr/bin/mlnet 
+	eend $?
+}
+
+restart() {
+	svc_stop
+	sleep 5
+	svc_start
+}
+
+slow() {
+	ebegin "Reducing bandwidth to ${MLLOWDOWN}k/${MLLOWUP}k"
+
+	wget --spider http://localhost:${MLPORT}/submit?q=set+max_hard_download_rate+${MLLOWDOWN} -q 
+
+	wget --spider http://localhost:${MLPORT}/submit?q=set+max_hard_upload_rate+${MLLOWUP} -q 
+
+	eend $?
+}
+
+fast() {
+	ebegin "Increasing bandwidth to ${MLHIGHDOWN}k/${MLHIGHUP}k"
+
+	wget --spider http://localhost:${MLPORT}/submit?q=set+max_hard_download_rate+${MLHIGHDOWN} -q 
+
+	wget --spider http://localhost:${MLPORT}/submit?q=set+max_hard_upload_rate+${MLHIGHUP} -q 
+
+	eend $?
+}
