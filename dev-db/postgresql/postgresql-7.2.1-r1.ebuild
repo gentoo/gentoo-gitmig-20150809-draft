@@ -35,7 +35,7 @@ pkg_setup() {
 	if [ "`use java`" ] ; then
 		foo=`java-config --java-version 2>&1 | grep "1.4.0"`
 		if [ ! -z "$foo" ] ; then
-			einfo "Cannot build with Sun JDK 1.4.0, use an 1.3.x JDK instead."
+			einfo "Cannot build with Sun JDK 1.4.0, use any of the 1.3.x JDKs instead."
 			exit 1
 		fi
 	fi
