@@ -1,0 +1,8 @@
+# ChangeLog for media-sound/tagtool
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.1 2004/08/19 21:38:25 chriswhite Exp $
+
+  20 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
+  Initial import into the tree. Thanks to Justin <yoosty69@netzero.net> for
+  reporting. Closes Bug #59423.
+
