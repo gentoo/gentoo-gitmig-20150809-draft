@@ -1,7 +1,15 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.2 2002/10/23 21:28:01 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.3 2002/11/14 10:51:51 jhhudso Exp $
 
+*pptpclient-1.1.0-r1 (14 Nov 2002)
+
+  14 Nov 2002; Jared Hudson <jhhudso@gentoo.org> : Fixed bug #6956. xpptp_fe.pl
+  only installs now if tcltk is a use flag. Credit goes to Michael Sterrett
+  <michael.sterrett@coat.com> for the bug fix. Also, xpptp_fe.pl was modified
+  because it tried to run pptp_fe instead of pptp_fe.pl as the backend for its
+  frontend.
+	
 *pptpclient-1.1.0 (2 July 2002)
 
   23 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> pptpclient-1.1.0.ebuild :
