@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/twclone
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/twclone/ChangeLog,v 1.1 2003/10/25 10:21:09 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/twclone/ChangeLog,v 1.2 2004/03/26 11:58:07 mr_bones_ Exp $
+
+*twclone-0.14 (26 Mar 2004)
+
+  26 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> twclone-0.14.ebuild:
+  version bump (bug #45310)
 
 *twclone-0.12 (25 Oct 2003)
 
