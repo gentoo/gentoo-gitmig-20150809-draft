@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/poedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/ChangeLog,v 1.8 2003/03/26 00:56:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/ChangeLog,v 1.9 2003/05/07 15:01:49 liquidx Exp $
+
+  07 May 2003; Alastair Tse <liquidx@gentoo.org> poedit-1.2.1.ebuild:
+  workaround db4 problem until we get a real fix
 
 *poedit-1.2.1 (08 Mar 2003)
 
