@@ -1,3 +1,5 @@
-MD5 50229ac3e8d82b30315ce448271208ea mydns-0.10.0.ebuild 1787
+MD5 9e5dafe6b14c4b044a66920be69c1d5d mydns-0.10.0.ebuild 2007
+MD5 c50346bf0fb8b39c521dca42b145f6ee metadata.xml 230
+MD5 047be10a136103e91aa048b0996cef5a ChangeLog 345
 MD5 610f498bbd7c9fdabdcd42e5694530e3 files/digest-mydns-0.10.0 65
-MD5 ac2ecd262598a412e9e245432ecf5ebf files/mydns.rc6 740
+MD5 bae8bbd8f268a4da83a5cc5df25d3d1d files/mydns.rc6 751
