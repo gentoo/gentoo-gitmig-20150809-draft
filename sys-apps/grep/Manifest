@@ -1,5 +1,5 @@
-MD5 16374f5468a43ae310e485cf5e67eab4 grep-2.5.1-r1.ebuild 1323
-MD5 68cb296372994618c9e8381a0062567b ChangeLog 3090
+MD5 544eb4b5a13d55520dc1349c70cc8c2d grep-2.5.1-r1.ebuild 1324
+MD5 9d3e54785cd4253c085cb1f25e27bfeb ChangeLog 3187
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 5dcaa51f88b364134a43d60b661870ee files/digest-grep-2.5.1-r1 62
 MD5 9b382fe04d2e5d86aea020215ceca879 files/gentoo-sparc32-dfa.patch 383

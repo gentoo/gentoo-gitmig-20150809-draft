@@ -2,9 +2,9 @@ MD5 c88b2af24128f95c032ef9c0b072b5f5 less-378-r2.ebuild 940
 MD5 32515bb3d8abcee28377e08f76ff9392 less-381.ebuild 947
 MD5 907df6f820abbe76616869a31fb49400 less-378-r1.ebuild 941
 MD5 c3e213fdc475477f1bbc045b28e1af76 less-376.ebuild 810
-MD5 c098a406c75e909300e18d33fc9f821a less-382.ebuild 955
+MD5 bc1cbc6aacaf1ec378b7836c4810f3d1 less-382.ebuild 956
 MD5 b752a9382bbaec40376072003df61812 less-378.ebuild 815
-MD5 6acb1bf29b2b0149da15f091f74db6b5 ChangeLog 3042
+MD5 2aaba2b36b6c04936e30622638be9e5f ChangeLog 3132
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 0cc555c44c02b9b457e98ed39a63f1a2 files/lesspipe.sh-r1 1429
 MD5 24c3d68ec84e1fcd23ef6d95b0105a76 files/lesspipe.sh 1429
