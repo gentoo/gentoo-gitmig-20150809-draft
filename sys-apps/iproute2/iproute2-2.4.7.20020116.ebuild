@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.20020116.ebuild,v 1.4 2004/06/22 03:00:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.20020116.ebuild,v 1.5 2004/06/22 03:04:19 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.iasi.roedu.net/mirrors/ftp.inr.ac.ru/ip-routing/${SRCFILE}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips ~alpha arm hppa ~amd64 ia64"
+KEYWORDS="x86 ppc sparc mips ~alpha arm hppa ~amd64 ia64"
 IUSE="atm doc"
 
 RDEPEND="virtual/glibc
