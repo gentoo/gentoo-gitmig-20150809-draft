@@ -1,0 +1,127 @@
+diff -ur config/application.xml config.new/application.xml
+--- config/application.xml	2002-03-14 07:52:08.000000000 -0500
++++ config.new/application.xml	2003-03-21 20:06:16.000000000 -0500
+@@ -4,16 +4,16 @@
+ <!-- The global application config that is the parent of all the other
+ 	applications in this server. -->
+ <orion-application>
+-	<web-module id="defaultWebApp" path="../default-web-app" />
++	<web-module id="defaultWebApp" path="/opt/orion/default-web-app" />
+ 
+-	<persistence path="../persistence" />
++	<persistence path="/opt/orion/persistence" />
+ 	
+         <!-- Path to the libraries that are installed on this server.
+ 	These will accesible for the servlets, EJBs etc -->
+-	<library path="../lib" />		<principals path="./principals.xml" />
++	<library path="/opt/orion/lib" />		<principals path="/opt/orion/config/principals.xml" />
+ 
+ 	<log>
+-		<file path="../log/global-application.log" />
++		<file path="/var/log/orion/global-application.log" />
+ 	</log>
+ 
+ 	<data-sources path="data-sources.xml" />
+diff -ur config/data-sources.xml config.new/data-sources.xml
+--- config/data-sources.xml	2003-02-25 17:31:38.000000000 -0500
++++ config.new/data-sources.xml	2003-03-21 19:58:51.000000000 -0500
+@@ -19,7 +19,7 @@
+ 		connection-driver="org.hsqldb.jdbcDriver"
+ 		username="sa"
+ 		password=""
+-		url="jdbc:hsqldb:./database/defaultdb"
++		url="jdbc:hsqldb:/opt/orion/database/defaultdb"
+ 		inactivity-timeout="30"
+ 	/>
+ </data-sources>
+Only in config: database-schemas
+diff -ur config/default-web-site.xml config.new/default-web-site.xml
+--- config/default-web-site.xml	2002-03-14 07:52:10.000000000 -0500
++++ config.new/default-web-site.xml	2003-03-21 19:59:35.000000000 -0500
+@@ -1,12 +1,12 @@
+ <?xml version="1.0"?>
+ <!DOCTYPE web-site PUBLIC "Orion Web-site" "http://www.orionserver.com/dtds/web-site.dtd">
+ 
+-<web-site host="[ALL]" port="80" display-name="Default Orion WebSite">
++<web-site host="[ALL]" port="8080" display-name="Default Orion WebSite">
+ 	<!-- The default web-app for this site, bound to the root -->
+ 	<default-web-app application="default" name="defaultWebApp" />
+ 
+ 	<!-- Uncomment this to activate the news app -->
+ 	<!-- <web-app application="news" name="news-web" root="/news" /> -->
+ 	<!-- Access Log, where requests are logged to -->
+-	<access-log path="../log/default-web-access.log" />
++	<access-log path="/var/log/orion/default-web-access.log" />
+ </web-site>
+diff -ur config/global-web-application.xml config.new/global-web-application.xml
+--- config/global-web-application.xml	2003-03-17 21:04:44.000000000 -0500
++++ config.new/global-web-application.xml	2003-03-21 20:01:11.000000000 -0500
+@@ -5,13 +5,13 @@
+ want to debug JSP sources etc -->
+ 
+ <orion-web-app
+-	jsp-cache-directory="./persistence"
++	jsp-cache-directory="/opt/orion/persistence"
+ 	servlet-webdir="/servlet"
+-	development="false"	persistence-path="./persistence/state.ser"
++	development="false"	persistence-path="/opt/orion/persistence/state.ser"
+ >
+ 
+ 	<!-- The mime-mappings for this server -->
+-	<mime-mappings path="./mime.types" />
++	<mime-mappings path="/opt/orion/config/mime.types" />
+ <!-- Enable the below entry for automatic XSLT processing of XML docs (docs without an XSLT tag will pass through untouched but access will be slower -->
+ <!--	<servlet-chaining servlet-name="xsl" mime-type="text/xml" /> -->
+ 
+diff -ur config/jms.xml config.new/jms.xml
+--- config/jms.xml	2002-03-14 07:52:12.000000000 -0500
++++ config.new/jms.xml	2003-03-21 20:01:27.000000000 -0500
+@@ -16,6 +16,6 @@
+ 
+ 	<!-- path to the log-file where JMS-events/errors are stored -->
+ 	<log>
+-		<file path="../log/jms.log" />
++		<file path="/opt/orion/log/jms.log" />
+ 	</log>
+ </jms-server>
+diff -ur config/rmi.xml config.new/rmi.xml
+--- config/rmi.xml	2002-03-14 07:52:12.000000000 -0500
++++ config.new/rmi.xml	2003-03-21 20:04:36.000000000 -0500
+@@ -7,6 +7,6 @@
+ 
+ 	<!-- path to the log-file where RMI-events/errors are stored -->
+ 	<log>
+-		<file path="../log/rmi.log" />
++		<file path="/var/log/orion/rmi.log" />
+ 	</log>
+ </rmi-server>
+diff -ur config/server.xml config.new/server.xml
+--- config/server.xml	2002-03-14 07:52:14.000000000 -0500
++++ config.new/server.xml	2003-03-21 20:05:52.000000000 -0500
+@@ -2,20 +2,20 @@
+ <!DOCTYPE application-server PUBLIC "Orion Application Server Config" "http://www.orionserver.com/dtds/application-server.dtd">
+ 
+ <application-server
+-	application-directory="../applications"
+-	deployment-directory="../application-deployments"
++	application-directory="/opt/orion/applications"
++	deployment-directory="/opt/orion/application-deployments"
+ >
+-	<rmi-config path="./rmi.xml" />
++	<rmi-config path="/opt/orion/config/rmi.xml" />
+ 	<!-- JMS-server config link, uncomment to activate the JMS service -->
+-	<!-- <jms-config path="./jms.xml" /> -->
++	<!-- <jms-config path="/opt/orion/config/jms.xml" /> -->
+ 	<log>
+-		<file path="../log/server.log" />
++		<file path="/var/log/orion/server.log" />
+ 	</log>
+ 	
+ 	<global-application name="default" path="application.xml" />
+ 
+ 	<global-web-app-config path="global-web-application.xml" />
+-	<web-site path="./default-web-site.xml" />
++	<web-site path="/opt/orion/config/default-web-site.xml" />
+ 
+ 	<!-- Compiler, activate this to specify an alternative compiler such
+ 		as jikes for EJB/JSP compiling. -->
