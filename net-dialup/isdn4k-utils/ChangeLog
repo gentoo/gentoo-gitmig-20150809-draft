@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.12 2003/12/14 19:03:35 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.13 2003/12/23 12:58:41 lanius Exp $
+
+*isdn4k-utils-3.2_p1-r4 (23 Dec 2003)
+
+  23 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
+  isdn4k-utils-3.2_p1-r3.ebuild, isdn4k-utils-3.2_p1-r4.ebuild,
+  files/3.2_p1-r4/config:
+  added avmcapicontrol build
 
   14 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
   isdn4k-utils-3.2_p1-r2.ebuild, isdn4k-utils-3.2_p1-r3.ebuild:
