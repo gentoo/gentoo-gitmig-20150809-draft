@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r1.ebuild,v 1.6 2003/11/24 22:53:06 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r1.ebuild,v 1.7 2003/11/26 01:12:23 rphillips Exp $
 
 inherit check-kernel fixheadtails
 
@@ -35,9 +35,13 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	ht_fix_all
-
 	cd ${S}
+	ht_fix_file "acinclude.m4"
+	ht_fix_file "config.guess"
+	ht_fix_file "src/afsd/afs.rc.linux"
+	ht_fix_file "aclocal.m4"
+	ht_fix_file "configure"
+	ht_fix_file "configure-libafs"
 	epatch ${FILESDIR}/openafs-pinstall-execve-1.2.10.patch
 }
 
