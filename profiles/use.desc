@@ -115,7 +115,7 @@ slp
 snmp
 socks5
 spell - Adds dictionary support
-sse
+sse - fast floating point optimisation for Pentium class chips
 ssl - Adds support for Secure Socket Layer connections
 static
 svga
