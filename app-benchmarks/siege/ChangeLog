@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/siege
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.19 2004/11/20 16:40:04 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.20 2004/11/21 10:00:20 ka0ttic Exp $
+
+  21 Nov 2004; Aaron Walker <ka0ttic@gentoo.org>
+  +files/siege.bash-completion, siege-2.60.ebuild, siege-2.61.ebuild:
+  Added command-line completion for siege.
 
 *siege-2.61 (20 Nov 2004)
 

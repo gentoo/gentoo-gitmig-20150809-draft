@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.61.ebuild,v 1.1 2004/11/20 16:40:04 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.61.ebuild,v 1.2 2004/11/21 10:00:20 ka0ttic Exp $
 
-inherit eutils
+inherit eutils bash-completion
 
 DESCRIPTION="A HTTP regression testing and benchmarking utility"
 HOMEPAGE="http://www.joedog.org/siege/"
@@ -35,11 +35,12 @@ src_install() {
 	dodoc AUTHORS ChangeLog INSTALL MACHINES README KNOWNBUGS \
 		siegerc-example urls.txt || die "dodoc failed"
 	use ssl && dodoc README.https
+	dobashcompletion ${FILESDIR}/${PN}.bash-completion ${PN}
 }
 
 pkg_postinst() {
 	echo
 	einfo "An example ~/.siegerc file has been installed as"
 	einfo "/usr/share/doc/${PF}/siegerc-example.gz"
-	echo
+	bash-completion_pkg_postinst
 }
