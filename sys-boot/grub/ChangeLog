@@ -1,6 +1,28 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.2 2003/12/09 08:55:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.3 2003/12/16 02:34:31 seemant Exp $
+
+  15 Dec 2003; Seemant Kulleen <seemant@gentoo.org> grub-0.92-r1.ebuild,
+  grub-0.93.20030118.ebuild,
+  files/grub-0.92/grub-0.5.96.1-special-raid-devices.patch,
+  files/grub-0.92/grub-0.90-addsyncs.patch,
+  files/grub-0.92/grub-0.90-append.patch,
+  files/grub-0.92/grub-0.90-configfile.patch,
+  files/grub-0.92/grub-0.90-install.in.patch,
+  files/grub-0.92/grub-0.90-installcopyonly.patch,
+  files/grub-0.92/grub-0.90-passwordprompt.patch,
+  files/grub-0.92/grub-0.90-staticcurses.patch,
+  files/grub-0.92/grub-0.90-symlinkmenulst.patch,
+  files/grub-0.92/grub-0.90-vga16-keypressclear.patch,
+  files/grub-0.92/grub-0.91-bootonce.patch,
+  files/grub-0.92/grub-0.91-splashimagehelp.patch,
+  files/grub-0.92/grub-0.91-vga16-serial.patch,
+  files/grub-0.92/grub-0.92-automake16.patch,
+  files/grub-0.92/grub-0.92-nodeprecatedflags.patch,
+  files/grub-0.92/grub-0.92-usbfix.patch,
+  files/grub-0.92/grub-0.92-vga16.patch:
+  move the patches to the mirrors isntead, and add the gcc3.3 patch to 0.92 as
+  well
 
 *grub-0.93.20030118 (08 Dec 2003)
 
