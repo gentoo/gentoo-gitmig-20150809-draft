@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>tools-portage</herd>
-<maintainer>
-  <email>karltk@gentoo.org</email>
-  <name>Karl Trygve Kalleberg</name>
-  <description>Release manager, patch manager</description>
-</maintainer> 
 
 <longdescription>
 Gentoolkit is a collection of useful adminstration scripts particular to
