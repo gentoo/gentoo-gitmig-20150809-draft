@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/ruby-gdchart
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdchart/ChangeLog,v 1.1 2004/02/21 10:51:57 usata Exp $
+
+*ruby-gdchart-0.0.9_beta (21 Feb 2004)
+
+  21 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  ruby-gdchart-0.0.9_beta.ebuild:
+  Initial import. Ebuild submitted by Mathias Gumz <gumz@cs.uni-magdeburg.de>,
+  closing bug #23100
+
