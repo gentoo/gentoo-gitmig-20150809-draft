@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/pvm-povray-3.1g.ebuild,v 1.6 2004/08/08 00:40:37 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/pvm-povray-3.1g.ebuild,v 1.7 2004/10/01 23:55:42 pyrania Exp $
+
+inherit eutils
 
 S=${WORKDIR}/povray31
 DESCRIPTION="The Persistence Of Vision Ray Tracer - PVM version"
@@ -30,7 +32,7 @@ src_unpack() {
 	cp -R ${WORKDIR}/pvmpov3_1g_2/povray31/source ${S}
 
 	# The PVM Patch
-	patch -p1 < ${WORKDIR}/pvmpov3_1g_2/pvmpov.patch
+	epatch ${WORKDIR}/pvmpov3_1g_2/pvmpov.patch || die "epatch failed."
 
 	cd ${S}/source/pvm
 
