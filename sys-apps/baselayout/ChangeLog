@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.78 2003/05/20 20:49:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.79 2003/05/21 09:01:14 azarah Exp $
+
+*baselayout-1.8.6.8-r1 (21 May 2003)
+
+  21 May 2003; Martin Schlemmer <azaraht@gentoo.org> Manifest, baselayout-1.8.6.8-r1.ebuild,
+  files/rc-scripts-1.4.3.8p1.tar.bz2:
+  Fix a bad bug that I missed, bug #21376.
 
 *baselayout-1.8.6.8 (20 May 2003)
 
