@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.15 2004/02/17 16:13:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.16 2004/02/17 22:09:15 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> heimdal-0.6.ebuild:
+  stable on alpha and ia64
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> heimdal-0.6.ebuild:
   According to lanius in bug 21781, Heimdal 0.6 conflicts with
