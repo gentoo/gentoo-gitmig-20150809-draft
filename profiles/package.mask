@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <azarah@gentoo.org> (28 July 2003)
+# These are depriciated
+sys-apps/console-tools
+sys-apps/console-data
+
 # <tberman@gentoo.org> (24 July 2003)
 # Mask for the under development gtk-sharp split
 dev-dotnet/gtk-sharp-base

@@ -22,8 +22,7 @@
 *net-misc/wget
 *app-shells/bash
 *sys-apps/bzip2
-*sys-apps/console-data
-*sys-apps/console-tools
+sys-apps/kbd
 *sys-apps/cpio
 *sys-apps/daemontools
 *sys-apps/debianutils
