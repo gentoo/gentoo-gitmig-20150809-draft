@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/cl-uffi-1.3.6.ebuild,v 1.1 2003/09/24 01:13:08 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/cl-uffi-1.3.6.ebuild,v 1.2 2003/10/17 17:17:02 mkennedy Exp $
 
 inherit common-lisp
 
@@ -13,6 +13,11 @@ KEYWORDS="~x86"
 IUSE=""
 
 S=${WORKDIR}/uffi-${PV}
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${PV}-gentoo.patch
+}
 
 src_compile() {
 	make -C tests linux
@@ -55,3 +60,10 @@ pkg_prerm() {
 	/usr/sbin/unregister-common-lisp-source uffi-tests
 }
 
+pkg_preinst() {
+	rm -rf /usr/lib/common-lisp/*/{uffi,uffi-tests} || true
+}
+
+pkg_postrm() {
+	rm -rf /usr/lib/common-lisp/*/{uffi,uffi-tests} || true
+}
