@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20030919-r1.ebuild,v 1.2 2004/06/24 22:28:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20030919-r1.ebuild,v 1.3 2004/07/29 19:12:55 kugelfang Exp $
 
 inherit rpm font
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.info.gov.hk/digital21/chi/hkscs/download/linux_redhat/setup.
 
 LICENSE="HKSCS"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND=""

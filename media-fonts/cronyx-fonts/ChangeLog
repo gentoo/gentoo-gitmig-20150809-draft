@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/cronyx-fonts
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cronyx-fonts/ChangeLog,v 1.3 2004/07/08 06:54:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cronyx-fonts/ChangeLog,v 1.4 2004/07/29 18:59:53 kugelfang Exp $
+
+  29 Jul 2004; Danny van Dyk <kugelfang@gentoo.org>
+  cronyx-fonts-2.3.1-r1.ebuild:
+  Marked ~amd64.
 
 *cronyx-fonts-2.3.1-r1 (08 Jul 2004)
 

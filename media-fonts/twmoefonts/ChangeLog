@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/twmoefonts
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/ChangeLog,v 1.5 2004/07/01 10:49:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/ChangeLog,v 1.6 2004/07/29 19:03:28 kugelfang Exp $
+
+  29 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> twmoefonts-0.1-r1.ebuild:
+  Marked ~amd64.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   twmoefonts-0.1.ebuild:

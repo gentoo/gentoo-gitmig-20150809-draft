@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/unfonts
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts/ChangeLog,v 1.1 2004/07/05 05:49:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts/ChangeLog,v 1.2 2004/07/29 19:05:13 kugelfang Exp $
+
+  29 Jul 2004; Danny van Dyk <kugelfang@gentoo.org>
+  unfonts-0.0.20040526.ebuild:
+  Marked ~amd64.
 
 *unfonts-0.0.20040526 (05 Jul 2004)
 

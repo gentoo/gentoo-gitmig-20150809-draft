@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/hkscs-ming
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/ChangeLog,v 1.4 2004/06/24 22:28:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/ChangeLog,v 1.5 2004/07/29 19:12:55 kugelfang Exp $
+
+  29 Jul 2004; Danny van Dyk <kugelfang@gentoo.org>
+  hkscs-ming-1.0_pre20030919-r1.ebuild:
+  Marked ~amd64.
 
 *hkscs-ming-1.0_pre20030919-r1 (21 Jun 2004)
 
