@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19.ebuild,v 1.9 2004/07/26 22:01:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19.ebuild,v 1.10 2004/08/08 13:30:11 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -66,7 +66,7 @@ src_compile() {
 		|| die "Failed to build libvga.so.${PV}!"
 	cp -a src/libvga.so.${PV} sharedlib/
 	# Build threeDKit ...
-	make OPTIMIZE="${CFLAFS}" LDFLAGS='-L../sharedlib' \
+	make OPTIMIZE="${CFLAGS}" LDFLAGS='-L../sharedlib' \
 		-C threeDKit lib3dkit.a || die "Failed to build threeDKit!"
 	# Build demo's ...
 	make OPTIMIZE="${CFLAGS} -I../gl" LDFLAGS='-L../sharedlib' \
@@ -148,6 +148,7 @@ src_install() {
 	dodoc  Driver-programming-HOWTO README.* add_driver svgalib.lsm
 
 	mv ${D}/usr/man/* ${D}/usr/share/man
+	rmdir ${D}/usr/man
 }
 
 pkg_postinst() {
