@@ -1,7 +1,20 @@
-MD5 9fb5c3d48dddf5c9b43afca89570d93e ChangeLog 10308
-MD5 fbd714d15c6cf1e49f8784e7007a86b3 file-4.12.ebuild 2081
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 fbf0a97e1b6bdc8a0436bd737bee446c file-4.13.ebuild 2094
+MD5 5173afd9d8a51dd24b27504105b70f19 ChangeLog 10479
+MD5 b8eda3fa30d242f1adf76f171eee4e2e file-4.12.ebuild 2083
+MD5 f856a50dada76a4ca5cee58fbd04e76b files/file-4.13-cross-compile.patch 964
 MD5 f0f2d2181cac822f0c4d4675fb1ff38c files/cracklib.magic 360
-MD5 d336b3490362624aec2e30679c44a198 files/digest-file-4.12 61
+MD5 407c20e1fb3186144d6c7d2788714163 files/digest-file-4.13 61
 MD5 f856a50dada76a4ca5cee58fbd04e76b files/file-4.12-cross-compile.patch 964
+MD5 d336b3490362624aec2e30679c44a198 files/digest-file-4.12 61
 MD5 04e04c973cb0c88d19b0028d8ed05007 files/file-4.xx-mips-gentoo.diff 4694
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCTaEJp5vW4rUFj5oRAnkNAKC+dd9wTLDDnxIV1U7L4FC7r5TiJQCdG/nL
+dya5tYpViIe0yMKXZz0Npz4=
+=KfVE
+-----END PGP SIGNATURE-----
