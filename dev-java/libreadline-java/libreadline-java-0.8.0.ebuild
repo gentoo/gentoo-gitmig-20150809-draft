@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/libreadline-java-0.8.0.ebuild,v 1.9 2004/09/04 13:00:56 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/libreadline-java-0.8.0.ebuild,v 1.10 2004/09/07 09:52:01 axxo Exp $
 
 inherit java-pkg
 
@@ -20,6 +20,9 @@ src_compile() {
 	make
 	use doc && make apidoc
 }
+
+#bug 63102
+src_test() { :; }
 
 src_install() {
 	dolib.so *.so
