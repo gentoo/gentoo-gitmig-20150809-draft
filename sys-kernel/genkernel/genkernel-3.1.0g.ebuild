@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.1.0a.ebuild,v 1.1 2004/10/23 20:07:38 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.1.0g.ebuild,v 1.1 2005/01/27 19:46:01 plasmaroo Exp $
 
 DESCRIPTION="Gentoo autokernel script"
 HOMEPAGE="http://www.gentoo.org"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE="bootsplash"
 
-DEPEND="x86? ( bootsplash? ( media-gfx/bootsplash ) )
+DEPEND="sys-fs/e2fsprogs
+	x86? ( bootsplash? ( media-gfx/bootsplash ) )
 	amd64? ( bootsplash? ( media-gfx/bootsplash ) )"
 
 src_install() {
@@ -26,4 +27,7 @@ src_install() {
 
 	rm ${D}/usr/share/genkernel/genkernel.conf
 	dodoc README
+
+	doman genkernel.8
+	rm genkernel.8
 }
