@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 43690d3488e7ab93703e44042d3d83c1 ChangeLog 6798
-MD5 2a7f57d892474d14e4e077e4b1f49d57 gd-2.0.23.ebuild 1540
-MD5 a70147eadfe98ecf8802b56b3215e3b4 gd-2.0.28.ebuild 887
-MD5 312563b7288a2111976b24b0865d9df8 metadata.xml 1227
-MD5 8cc7c2b7624c5418802e184a560b9183 gd-2.0.26.ebuild 1371
 MD5 38d2090dfc2c201d4ae077164fb40e2c gd-1.8.4-r2.ebuild 2208
-MD5 09cc9995071652c954638c7ed2590dee files/1.8.4-jpeg-inc.patch 419
+MD5 8cc7c2b7624c5418802e184a560b9183 gd-2.0.26.ebuild 1371
+MD5 4a7cdd6c42555db564d4f694e13bef31 ChangeLog 6823
+MD5 a70147eadfe98ecf8802b56b3215e3b4 gd-2.0.28.ebuild 887
+MD5 2a7f57d892474d14e4e077e4b1f49d57 gd-2.0.23.ebuild 1540
+MD5 312563b7288a2111976b24b0865d9df8 metadata.xml 1227
 MD5 0ec35953b2aff28b9684345befc9dc13 files/digest-gd-2.0.23 133
-MD5 7f1d011b6f09a5125c3c5151abbb2f56 files/digest-gd-2.0.28 133
-MD5 1b0c2bb216ba3a29f024514a934ca995 files/digest-gd-1.8.4-r2 60
-MD5 c700ef06f9532087e4f27487633179a9 files/1.8.4-dec-alpha-compiler.diff 725
 MD5 e170e167d4c3799d6a5acba599bdc9f2 files/digest-gd-2.0.26 133
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFBAB72HTu7gpaalycRAuJTAJ9ck0cevHgKnLFghUTx09Q7kMs24ACgy3I7
-Jcc+IXisrAykkKbNV1fa/EI=
-=Z5E9
------END PGP SIGNATURE-----
+MD5 7f1d011b6f09a5125c3c5151abbb2f56 files/digest-gd-2.0.28 133
+MD5 c700ef06f9532087e4f27487633179a9 files/1.8.4-dec-alpha-compiler.diff 725
+MD5 09cc9995071652c954638c7ed2590dee files/1.8.4-jpeg-inc.patch 419
+MD5 1b0c2bb216ba3a29f024514a934ca995 files/digest-gd-1.8.4-r2 60

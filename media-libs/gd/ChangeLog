@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/gd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.5 2004/07/22 19:52:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.6 2004/07/27 17:17:22 aliz Exp $
 
 *gd-2.0.28 (22 Jul 2004)
 
@@ -11,6 +11,7 @@
   stable on ppc64, bug #55549
 
 *gd-2.0.26 (30 Jun 2004)
+*gd-1.8.4-r2 (30 Jun 2004)
 
   30 Jun 2004; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
   +files/1.8.4-dec-alpha-compiler.diff, +files/1.8.4-jpeg-inc.patch,
