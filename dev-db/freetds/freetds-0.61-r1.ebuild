@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.61-r1.ebuild,v 1.7 2004/04/25 23:26:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.61-r1.ebuild,v 1.8 2004/05/27 21:11:34 stuart Exp $
 
 DESCRIPTION="Tabular Datastream Library"
 SRC_URI="http://ibiblio.org/pub/Linux/ALPHA/freetds/stable/${P}.tgz"
@@ -11,6 +11,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc ppc ~mips hppa alpha amd64 ia64"
 
 DEPEND="virtual/glibc"
+IUSE=""
 
 src_compile() {
 	econf --with-tdsver=7.0 || die "econf failed"
