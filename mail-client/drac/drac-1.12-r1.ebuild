@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12-r1.ebuild,v 1.8 2004/11/24 18:32:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12-r1.ebuild,v 1.9 2005/02/19 11:25:39 hansmi Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.cc.umanitoba.ca/src/${PN}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc hppa ~amd64"
+KEYWORDS="x86 sparc ppc hppa ~amd64"
 IUSE="debug"
 
 DEPEND="virtual/libc
