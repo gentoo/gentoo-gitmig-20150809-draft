@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/singular
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/ChangeLog,v 1.10 2004/03/26 12:02:42 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/ChangeLog,v 1.11 2004/04/01 08:47:22 phosphan Exp $
+
+  01 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.4-r1.ebuild:
+  Inheriting eutils, removed S=...
 
 *singular-2.0.5-r4 (26 Mar 2004)
 
