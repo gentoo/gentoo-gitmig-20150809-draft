@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.2.ebuild,v 1.2 2004/03/20 06:54:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.2.ebuild,v 1.3 2004/03/31 18:57:22 mr_bones_ Exp $
 
 IUSE="adns gtk ipv6 snmp ssl gtk2"
 
-inherit libtool
+inherit flag-o-matic libtool
 
 DESCRIPTION="A commercial-quality network protocol analyzer"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -13,9 +13,6 @@ HOMEPAGE="http://www.ethereal.com/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 ~ia64"
-
-replace-flags '-O3' '-O'
-replace-flags '-O2' '-O'
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	snmp? ( virtual/snmp )
@@ -41,6 +38,9 @@ src_unpack() {
 	# running a full elibtoolize seems to break things in this
 	# package... see bug 41831 (17 Feb 2004 agriffis)
 	elibtoolize --patch-only
+
+	replace-flags '-O3' '-O'
+	replace-flags '-O2' '-O'
 }
 
 src_compile() {

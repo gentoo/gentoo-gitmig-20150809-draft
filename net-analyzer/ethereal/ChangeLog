@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.58 2004/03/29 17:57:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.59 2004/03/31 18:57:22 mr_bones_ Exp $
+
+  31 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> ethereal-0.10.2.ebuild:
+  inherit flag-o-matic for replace-flags; move replace-flags into function
 
   29 Mar 2004; Aron Griffis <agriffis@gentoo.org> ethereal-0.9.16-r1.ebuild:
   Stable on alpha and ia64
