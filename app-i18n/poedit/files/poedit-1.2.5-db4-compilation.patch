@@ -1,0 +1,1370 @@
+diff -ruP poedit-1.2.5.orig/acinclude.m4 poedit-1.2.5/acinclude.m4
+--- poedit-1.2.5.orig/acinclude.m4	2003-10-31 12:12:40.000000000 +0100
++++ poedit-1.2.5/acinclude.m4	2004-07-14 23:47:04.000000000 +0200
+@@ -56,50 +56,67 @@
+ 
+ AC_DEFUN(FIND_BERKELEY_DB,
+ [
+-  USE_TRANSMEM=1
++  USE_TRANSMEM=yes
+ 
+-  DB_VERSION=0
+   dnl NB: can't look for db_create function because some builds of db-4.x
+   dnl     have safe function names such as db_create_4000
+-  AC_SEARCH_LIBS(db_create, db db-4.5 db-4.4 db-4.3 db-4.2 db-4.1 db-4.0 db-3.6 db-3.5 db-3.4 db-3.3 db-3.2 db-3.1,
+-         [
+-             if echo $LIBS | grep -q '\-ldb-4\.' ; then
+-                 DB_HEADER_DIR="db4/"
+-             elif echo $LIBS | grep -q '\-ldb-3\.' ; then
+-                 DB_HEADER_DIR="db3/"
+-             fi
+-         ],
+-         [
+-             USE_TRANSMEM=0
+-             AC_MSG_WARN([
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** 
+-Cannot find Berkeley DB >= 3.1, poEdit will build w/o translation memory feature!
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** 
+-             ])
+-         ])
+-
+-  if test x$USE_TRANSMEM != x0 ; then
+-      AC_CHECK_HEADER(${DB_HEADER_DIR}db.h,
+-            [DB_HEADER="${DB_HEADER_DIR}db.h"],
+-            [
+-              AC_CHECK_HEADER(db.h, [DB_HEADER=db.h],
+-              [
+-                  USE_TRANSMEM=0
+-                  AC_MSG_RESULT(not found)
+-                  AC_MSG_WARN([
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** 
+-Cannot find Berkeley DB >= 3.1, poEdit will build w/o translation memory feature!
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** 
+-                  ])
+-              ])
+-            ])
+-
+-      if test x$USE_TRANSMEM != x0 ; then
+-          CXXFLAGS="$CXXFLAGS -DUSE_TRANSMEM -DDB_HEADER=\\\"$DB_HEADER\\\""
+-      fi
+-   fi
+ 
+-   if test x$USE_TRANSMEM != x0 ; then
++  old_LIBS="$LIBS"
++                
++  DB_HEADER=""
++  DB_LIBS=""
++
++  AC_MSG_CHECKING([for Berkeley DB])
++
++  for version in "" 5.0 4.9 4.8 4.7 4.6 4.5 4.4 4.3 4.2 4.1 4.0 3.6 3.5 3.4 3.3 3.2 3.1 ; do
++
++    if test -z $version ; then
++        db_lib="-ldb"
++        try_headers="db.h"
++    else
++        db_lib="-ldb-$version"
++        try_headers="db$version/db.h db`echo $version | sed -e 's,\..*,,g'`/db.h"
++    fi
++        
++    LIBS="$old_LIBS $db_lib"
++ 
++    for db_hdr in $try_headers ; do
++        if test -z $DB_HEADER ; then
++            AC_LINK_IFELSE(
++                [AC_LANG_PROGRAM(
++                    [
++                        #include <${db_hdr}>
++                    ],
++                    [
++                        DB *db;
++                        db_create(&db, NULL, 0);
++                    ])],
++                [
++                    DB_HEADER="$db_hdr"
++                    DB_LIBS="$db_lib"
++                    AC_MSG_RESULT([header $DB_HEADER, library $DB_LIBS])
++                ])
++        fi
++    done
++  done
++
++  LIBS="$old_LIBS"
++
++  if test -z $DB_HEADER ; then
++    AC_MSG_RESULT([not found])
++    
++    USE_TRANSMEM=no
++    AC_MSG_WARN([cannot find Berkeley DB >= 3.1, poEdit will build w/o translation memory feature])
++  fi
++  
++  if test x$USE_TRANSMEM != xno ; then
++      #CXXFLAGS="$CXXFLAGS -DUSE_TRANSMEM -DDB_HEADER=\\\"$DB_HEADER\\\""
++      AC_DEFINE(USE_TRANSMEM)
++      AC_DEFINE_UNQUOTED(DB_HEADER, ["$DB_HEADER"])
++      LIBS="$LIBS $DB_LIBS"
++  fi
++
++   if test x$USE_TRANSMEM != xno ; then
+       AC_MSG_CHECKING([if db_open requires transaction argument])
+       AC_TRY_COMPILE([#include "$DB_HEADER"],
+         [
+diff -ruP poedit-1.2.5.orig/aclocal.m4 poedit-1.2.5/aclocal.m4
+--- poedit-1.2.5.orig/aclocal.m4	2004-01-25 23:17:51.000000000 +0100
++++ poedit-1.2.5/aclocal.m4	2004-07-14 23:51:50.000000000 +0200
+@@ -1,4 +1,4 @@
+-# generated automatically by aclocal 1.7.8 -*- Autoconf -*-
++# generated automatically by aclocal 1.7.9 -*- Autoconf -*-
+ 
+ # Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2002
+ # Free Software Foundation, Inc.
+@@ -69,50 +69,67 @@
+ 
+ AC_DEFUN(FIND_BERKELEY_DB,
+ [
+-  USE_TRANSMEM=1
++  USE_TRANSMEM=yes
+ 
+-  DB_VERSION=0
+   dnl NB: can't look for db_create function because some builds of db-4.x
+   dnl     have safe function names such as db_create_4000
+-  AC_SEARCH_LIBS(db_create, db db-4.5 db-4.4 db-4.3 db-4.2 db-4.1 db-4.0 db-3.6 db-3.5 db-3.4 db-3.3 db-3.2 db-3.1,
+-         [
+-             if echo $LIBS | grep -q '\-ldb-4\.' ; then
+-                 DB_HEADER_DIR="db4/"
+-             elif echo $LIBS | grep -q '\-ldb-3\.' ; then
+-                 DB_HEADER_DIR="db3/"
+-             fi
+-         ],
+-         [
+-             USE_TRANSMEM=0
+-             AC_MSG_WARN([
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** 
+-Cannot find Berkeley DB >= 3.1, poEdit will build w/o translation memory feature!
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** 
+-             ])
+-         ])
+-
+-  if test x$USE_TRANSMEM != x0 ; then
+-      AC_CHECK_HEADER(${DB_HEADER_DIR}db.h,
+-            [DB_HEADER="${DB_HEADER_DIR}db.h"],
+-            [
+-              AC_CHECK_HEADER(db.h, [DB_HEADER=db.h],
+-              [
+-                  USE_TRANSMEM=0
+-                  AC_MSG_RESULT(not found)
+-                  AC_MSG_WARN([
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** 
+-Cannot find Berkeley DB >= 3.1, poEdit will build w/o translation memory feature!
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** 
+-                  ])
+-              ])
+-            ])
+ 
+-      if test x$USE_TRANSMEM != x0 ; then
+-          CXXFLAGS="$CXXFLAGS -DUSE_TRANSMEM -DDB_HEADER=\\\"$DB_HEADER\\\""
+-      fi
+-   fi
++  old_LIBS="$LIBS"
++                
++  DB_HEADER=""
++  DB_LIBS=""
++
++  AC_MSG_CHECKING([for Berkeley DB])
++
++  for version in "" 5.0 4.9 4.8 4.7 4.6 4.5 4.4 4.3 4.2 4.1 4.0 3.6 3.5 3.4 3.3 3.2 3.1 ; do
++
++    if test -z $version ; then
++        db_lib="-ldb"
++        try_headers="db.h"
++    else
++        db_lib="-ldb-$version"
++        try_headers="db$version/db.h db`echo $version | sed -e 's,\..*,,g'`/db.h"
++    fi
++        
++    LIBS="$old_LIBS $db_lib"
++ 
++    for db_hdr in $try_headers ; do
++        if test -z $DB_HEADER ; then
++            AC_LINK_IFELSE(
++                [AC_LANG_PROGRAM(
++                    [
++                        #include <${db_hdr}>
++                    ],
++                    [
++                        DB *db;
++                        db_create(&db, NULL, 0);
++                    ])],
++                [
++                    DB_HEADER="$db_hdr"
++                    DB_LIBS="$db_lib"
++                    AC_MSG_RESULT([header $DB_HEADER, library $DB_LIBS])
++                ])
++        fi
++    done
++  done
++
++  LIBS="$old_LIBS"
++
++  if test -z $DB_HEADER ; then
++    AC_MSG_RESULT([not found])
++    
++    USE_TRANSMEM=no
++    AC_MSG_WARN([cannot find Berkeley DB >= 3.1, poEdit will build w/o translation memory feature])
++  fi
++  
++  if test x$USE_TRANSMEM != xno ; then
++      #CXXFLAGS="$CXXFLAGS -DUSE_TRANSMEM -DDB_HEADER=\\\"$DB_HEADER\\\""
++      AC_DEFINE(USE_TRANSMEM)
++      AC_DEFINE_UNQUOTED(DB_HEADER, ["$DB_HEADER"])
++      LIBS="$LIBS $DB_LIBS"
++  fi
+ 
+-   if test x$USE_TRANSMEM != x0 ; then
++   if test x$USE_TRANSMEM != xno ; then
+       AC_MSG_CHECKING([if db_open requires transaction argument])
+       AC_TRY_COMPILE([#include "$DB_HEADER"],
+         [
+@@ -327,7 +344,7 @@
+ # Call AM_AUTOMAKE_VERSION so it can be traced.
+ # This function is AC_REQUIREd by AC_INIT_AUTOMAKE.
+ AC_DEFUN([AM_SET_CURRENT_AUTOMAKE_VERSION],
+-	 [AM_AUTOMAKE_VERSION([1.7.8])])
++	 [AM_AUTOMAKE_VERSION([1.7.9])])
+ 
+ # Helper functions for option handling.                    -*- Autoconf -*-
+ 
+@@ -1027,7 +1044,7 @@
+ dnl --wx-config command line options
+ dnl ---------------------------------------------------------------------------
+ 
+-AC_DEFUN(AM_OPTIONS_WXCONFIG,
++AC_DEFUN([AM_OPTIONS_WXCONFIG],
+ [
+     AC_ARG_WITH(wxdir,
+                 [  --with-wxdir=PATH       Use uninstalled version of wxWindows in PATH],
+@@ -1067,7 +1084,7 @@
+ dnl
+ dnl Get the cflags and libraries from the wx-config script
+ dnl
+-AC_DEFUN(AM_PATH_WXCONFIG,
++AC_DEFUN([AM_PATH_WXCONFIG],
+ [
+   dnl do we have wx-config name: it can be wx-config or wxd-config or ...
+   if test x${WX_CONFIG_NAME+set} != xset ; then
+diff -ruP poedit-1.2.5.orig/configure poedit-1.2.5/configure
+--- poedit-1.2.5.orig/configure	2004-01-25 23:17:58.000000000 +0100
++++ poedit-1.2.5/configure	2004-07-14 23:51:53.000000000 +0200
+@@ -274,44 +274,7 @@
+ PACKAGE_BUGREPORT='vaclav.slavik@matfyz.cz'
+ 
+ ac_unique_file="README"
+-# Factoring default headers for most tests.
+-ac_includes_default="\
+-#include <stdio.h>
+-#if HAVE_SYS_TYPES_H
+-# include <sys/types.h>
+-#endif
+-#if HAVE_SYS_STAT_H
+-# include <sys/stat.h>
+-#endif
+-#if STDC_HEADERS
+-# include <stdlib.h>
+-# include <stddef.h>
+-#else
+-# if HAVE_STDLIB_H
+-#  include <stdlib.h>
+-# endif
+-#endif
+-#if HAVE_STRING_H
+-# if !STDC_HEADERS && HAVE_MEMORY_H
+-#  include <memory.h>
+-# endif
+-# include <string.h>
+-#endif
+-#if HAVE_STRINGS_H
+-# include <strings.h>
+-#endif
+-#if HAVE_INTTYPES_H
+-# include <inttypes.h>
+-#else
+-# if HAVE_STDINT_H
+-#  include <stdint.h>
+-# endif
+-#endif
+-#if HAVE_UNISTD_H
+-# include <unistd.h>
+-#endif"
+-
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM AWK SET_MAKE am__leading_dot MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT LN_S RANLIB ac_ct_RANLIB CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE CXXCPP ZIP WX_CONFIG_PATH WX_CPPFLAGS WX_CFLAGS WX_CXXFLAGS WX_CFLAGS_ONLY WX_CXXFLAGS_ONLY WX_LIBS WX_LIBS_STATIC WX_VERSION USE_KDE_TRUE USE_KDE_FALSE USE_GNOME_TRUE USE_GNOME_FALSE KDE_CONFIG KDE_DATA_DIR GNOME_DATA_DIR CPP EGREP USE_WINDOWS_TRUE USE_WINDOWS_FALSE RESCOMP WX_CONFIG_NAME POEDIT_WX_LIBS RC_WX_INCLUDES CATALOGS_TO_INSTALL LIBOBJS LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM AWK SET_MAKE am__leading_dot MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT LN_S RANLIB ac_ct_RANLIB CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE CXXCPP ZIP WX_CONFIG_PATH WX_CPPFLAGS WX_CFLAGS WX_CXXFLAGS WX_CFLAGS_ONLY WX_CXXFLAGS_ONLY WX_LIBS WX_LIBS_STATIC WX_VERSION USE_KDE_TRUE USE_KDE_FALSE USE_GNOME_TRUE USE_GNOME_FALSE KDE_CONFIG KDE_DATA_DIR GNOME_DATA_DIR USE_WINDOWS_TRUE USE_WINDOWS_FALSE RESCOMP WX_CONFIG_NAME POEDIT_WX_LIBS RC_WX_INCLUDES CATALOGS_TO_INSTALL LIBOBJS LTLIBOBJS'
+ ac_subst_files=''
+ 
+ # Initialize some variables set by options.
+@@ -784,10 +747,6 @@
+ ac_env_ZIP_value=$ZIP
+ ac_cv_env_ZIP_set=${ZIP+set}
+ ac_cv_env_ZIP_value=$ZIP
+-ac_env_CPP_set=${CPP+set}
+-ac_env_CPP_value=$CPP
+-ac_cv_env_CPP_set=${CPP+set}
+-ac_cv_env_CPP_value=$CPP
+ 
+ #
+ # Report the --help message.
+@@ -898,7 +857,6 @@
+   CXXFLAGS    C++ compiler flags
+   CXXCPP      C++ preprocessor
+   ZIP         Path to zip executable
+-  CPP         C preprocessor
+ 
+ Use these variables to override the choices made by `configure' or to help
+ it to find libraries and programs with nonstandard names/locations.
+@@ -4209,7 +4167,15 @@
+ if $WX_CONFIG_NAME --cxxflags | grep -q WXMSW; then
+     use_windows=yes
+     if test x$USE_TRANSMEM != xno ; then
+-        CXXFLAGS="$CXXFLAGS -DUSE_TRANSMEM -DDB_HEADER=\\\"db.h\\\" -I\$(top_srcdir)/extras/win32-db3"
++        cat >>confdefs.h <<\_ACEOF
++#define USE_TRANSMEM 1
++_ACEOF
++
++        cat >>confdefs.h <<_ACEOF
++#define DB_HEADER "db.h"
++_ACEOF
++
++        CXXFLAGS="$CXXFLAGS -I\$(top_srcdir)/extras/win32-db3"
+     fi
+ 
+ 
+@@ -4331,283 +4297,55 @@
+ 
+     if test x$USE_TRANSMEM != xno ; then
+ 
+-ac_ext=c
+-ac_cpp='$CPP $CPPFLAGS'
+-ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
+-ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
+-ac_compiler_gnu=$ac_cv_c_compiler_gnu
+-echo "$as_me:$LINENO: checking how to run the C preprocessor" >&5
+-echo $ECHO_N "checking how to run the C preprocessor... $ECHO_C" >&6
+-# On Suns, sometimes $CPP names a directory.
+-if test -n "$CPP" && test -d "$CPP"; then
+-  CPP=
+-fi
+-if test -z "$CPP"; then
+-  if test "${ac_cv_prog_CPP+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-      # Double quotes because CPP needs to be expanded
+-    for CPP in "$CC -E" "$CC -E -traditional-cpp" "/lib/cpp"
+-    do
+-      ac_preproc_ok=false
+-for ac_c_preproc_warn_flag in '' yes
+-do
+-  # Use a header file that comes with gcc, so configuring glibc
+-  # with a fresh cross-compiler works.
+-  # Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+-  # <limits.h> exists even on freestanding compilers.
+-  # On the NeXT, cc -E runs the code through the compiler's parser,
+-  # not just through cpp. "Syntax error" is here to catch this case.
+-  cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-#ifdef __STDC__
+-# include <limits.h>
+-#else
+-# include <assert.h>
+-#endif
+-		     Syntax error
+-_ACEOF
+-if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
+-  (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } >/dev/null; then
+-  if test -s conftest.err; then
+-    ac_cpp_err=$ac_c_preproc_warn_flag
+-    ac_cpp_err=$ac_cpp_err$ac_c_werror_flag
+-  else
+-    ac_cpp_err=
+-  fi
+-else
+-  ac_cpp_err=yes
+-fi
+-if test -z "$ac_cpp_err"; then
+-  :
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-  # Broken: fails on valid input.
+-continue
+-fi
+-rm -f conftest.err conftest.$ac_ext
+-
+-  # OK, works on sane cases.  Now check whether non-existent headers
+-  # can be detected and how.
+-  cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-#include <ac_nonexistent.h>
+-_ACEOF
+-if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
+-  (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } >/dev/null; then
+-  if test -s conftest.err; then
+-    ac_cpp_err=$ac_c_preproc_warn_flag
+-    ac_cpp_err=$ac_cpp_err$ac_c_werror_flag
+-  else
+-    ac_cpp_err=
+-  fi
+-else
+-  ac_cpp_err=yes
+-fi
+-if test -z "$ac_cpp_err"; then
+-  # Broken: success on invalid input.
+-continue
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-  # Passes both tests.
+-ac_preproc_ok=:
+-break
+-fi
+-rm -f conftest.err conftest.$ac_ext
+-
+-done
+-# Because of `break', _AC_PREPROC_IFELSE's cleaning code was skipped.
+-rm -f conftest.err conftest.$ac_ext
+-if $ac_preproc_ok; then
+-  break
+-fi
+-
+-    done
+-    ac_cv_prog_CPP=$CPP
+-
+-fi
+-  CPP=$ac_cv_prog_CPP
+-else
+-  ac_cv_prog_CPP=$CPP
+-fi
+-echo "$as_me:$LINENO: result: $CPP" >&5
+-echo "${ECHO_T}$CPP" >&6
+-ac_preproc_ok=false
+-for ac_c_preproc_warn_flag in '' yes
+-do
+-  # Use a header file that comes with gcc, so configuring glibc
+-  # with a fresh cross-compiler works.
+-  # Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+-  # <limits.h> exists even on freestanding compilers.
+-  # On the NeXT, cc -E runs the code through the compiler's parser,
+-  # not just through cpp. "Syntax error" is here to catch this case.
+-  cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-#ifdef __STDC__
+-# include <limits.h>
+-#else
+-# include <assert.h>
+-#endif
+-		     Syntax error
+-_ACEOF
+-if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
+-  (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } >/dev/null; then
+-  if test -s conftest.err; then
+-    ac_cpp_err=$ac_c_preproc_warn_flag
+-    ac_cpp_err=$ac_cpp_err$ac_c_werror_flag
+-  else
+-    ac_cpp_err=
+-  fi
+-else
+-  ac_cpp_err=yes
+-fi
+-if test -z "$ac_cpp_err"; then
+-  :
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-  # Broken: fails on valid input.
+-continue
+-fi
+-rm -f conftest.err conftest.$ac_ext
++  USE_TRANSMEM=yes
+ 
+-  # OK, works on sane cases.  Now check whether non-existent headers
+-  # can be detected and how.
+-  cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-#include <ac_nonexistent.h>
+-_ACEOF
+-if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
+-  (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } >/dev/null; then
+-  if test -s conftest.err; then
+-    ac_cpp_err=$ac_c_preproc_warn_flag
+-    ac_cpp_err=$ac_cpp_err$ac_c_werror_flag
+-  else
+-    ac_cpp_err=
+-  fi
+-else
+-  ac_cpp_err=yes
+-fi
+-if test -z "$ac_cpp_err"; then
+-  # Broken: success on invalid input.
+-continue
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-  # Passes both tests.
+-ac_preproc_ok=:
+-break
+-fi
+-rm -f conftest.err conftest.$ac_ext
++  old_LIBS="$LIBS"
+ 
+-done
+-# Because of `break', _AC_PREPROC_IFELSE's cleaning code was skipped.
+-rm -f conftest.err conftest.$ac_ext
+-if $ac_preproc_ok; then
+-  :
+-else
+-  { { echo "$as_me:$LINENO: error: C preprocessor \"$CPP\" fails sanity check
+-See \`config.log' for more details." >&5
+-echo "$as_me: error: C preprocessor \"$CPP\" fails sanity check
+-See \`config.log' for more details." >&2;}
+-   { (exit 1); exit 1; }; }
+-fi
++  DB_HEADER=""
++  DB_LIBS=""
+ 
+-ac_ext=c
+-ac_cpp='$CPP $CPPFLAGS'
+-ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
+-ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
+-ac_compiler_gnu=$ac_cv_c_compiler_gnu
++  echo "$as_me:$LINENO: checking for Berkeley DB" >&5
++echo $ECHO_N "checking for Berkeley DB... $ECHO_C" >&6
+ 
++  for version in "" 5.0 4.9 4.8 4.7 4.6 4.5 4.4 4.3 4.2 4.1 4.0 3.6 3.5 3.4 3.3 3.2 3.1 ; do
+ 
+-echo "$as_me:$LINENO: checking for egrep" >&5
+-echo $ECHO_N "checking for egrep... $ECHO_C" >&6
+-if test "${ac_cv_prog_egrep+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  if echo a | (grep -E '(a|b)') >/dev/null 2>&1
+-    then ac_cv_prog_egrep='grep -E'
+-    else ac_cv_prog_egrep='egrep'
++    if test -z $version ; then
++        db_lib="-ldb"
++        try_headers="db.h"
++    else
++        db_lib="-ldb-$version"
++        try_headers="db$version/db.h db`echo $version | sed -e 's,\..*,,g'`/db.h"
+     fi
+-fi
+-echo "$as_me:$LINENO: result: $ac_cv_prog_egrep" >&5
+-echo "${ECHO_T}$ac_cv_prog_egrep" >&6
+- EGREP=$ac_cv_prog_egrep
+ 
++    LIBS="$old_LIBS $db_lib"
+ 
+-echo "$as_me:$LINENO: checking for ANSI C header files" >&5
+-echo $ECHO_N "checking for ANSI C header files... $ECHO_C" >&6
+-if test "${ac_cv_header_stdc+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  cat >conftest.$ac_ext <<_ACEOF
++    for db_hdr in $try_headers ; do
++        if test -z $DB_HEADER ; then
++            cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-#include <stdlib.h>
+-#include <stdarg.h>
+-#include <string.h>
+-#include <float.h>
++
++                        #include <${db_hdr}>
+ 
+ int
+ main ()
+ {
+ 
++                        DB *db;
++                        db_create(&db, NULL, 0);
++
+   ;
+   return 0;
+ }
+ _ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>conftest.er1
+   ac_status=$?
+   grep -v '^ *+' conftest.er1 >conftest.err
+   rm -f conftest.er1
+@@ -4621,667 +4359,54 @@
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest.$ac_objext'
++	 { ac_try='test -s conftest$ac_exeext'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_header_stdc=yes
++
++                    DB_HEADER="$db_hdr"
++                    DB_LIBS="$db_lib"
++                    echo "$as_me:$LINENO: result: header $DB_HEADER, library $DB_LIBS" >&5
++echo "${ECHO_T}header $DB_HEADER, library $DB_LIBS" >&6
++
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-ac_cv_header_stdc=no
+ fi
+-rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
++rm -f conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
++        fi
++    done
++  done
+ 
+-if test $ac_cv_header_stdc = yes; then
+-  # SunOS 4.x string.h does not declare mem*, contrary to ANSI.
+-  cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
++  LIBS="$old_LIBS"
++
++  if test -z $DB_HEADER ; then
++    echo "$as_me:$LINENO: result: not found" >&5
++echo "${ECHO_T}not found" >&6
++
++    USE_TRANSMEM=no
++    { echo "$as_me:$LINENO: WARNING: cannot find Berkeley DB >= 3.1, poEdit will build w/o translation memory feature" >&5
++echo "$as_me: WARNING: cannot find Berkeley DB >= 3.1, poEdit will build w/o translation memory feature" >&2;}
++  fi
++
++  if test x$USE_TRANSMEM != xno ; then
++      #CXXFLAGS="$CXXFLAGS -DUSE_TRANSMEM -DDB_HEADER=\\\"$DB_HEADER\\\""
++      cat >>confdefs.h <<\_ACEOF
++#define USE_TRANSMEM 1
+ _ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-#include <string.h>
+ 
++      cat >>confdefs.h <<_ACEOF
++#define DB_HEADER "$DB_HEADER"
+ _ACEOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "memchr" >/dev/null 2>&1; then
+-  :
+-else
+-  ac_cv_header_stdc=no
+-fi
+-rm -f conftest*
+-
+-fi
+-
+-if test $ac_cv_header_stdc = yes; then
+-  # ISC 2.0.2 stdlib.h does not declare free, contrary to ANSI.
+-  cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-#include <stdlib.h>
+-
+-_ACEOF
+-if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "free" >/dev/null 2>&1; then
+-  :
+-else
+-  ac_cv_header_stdc=no
+-fi
+-rm -f conftest*
+-
+-fi
+-
+-if test $ac_cv_header_stdc = yes; then
+-  # /bin/cc in Irix-4.0.5 gets non-ANSI ctype macros unless using -ansi.
+-  if test "$cross_compiling" = yes; then
+-  :
+-else
+-  cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-#include <ctype.h>
+-#if ((' ' & 0x0FF) == 0x020)
+-# define ISLOWER(c) ('a' <= (c) && (c) <= 'z')
+-# define TOUPPER(c) (ISLOWER(c) ? 'A' + ((c) - 'a') : (c))
+-#else
+-# define ISLOWER(c) \
+-		   (('a' <= (c) && (c) <= 'i') \
+-		     || ('j' <= (c) && (c) <= 'r') \
+-		     || ('s' <= (c) && (c) <= 'z'))
+-# define TOUPPER(c) (ISLOWER(c) ? ((c) | 0x40) : (c))
+-#endif
+-
+-#define XOR(e, f) (((e) && !(f)) || (!(e) && (f)))
+-int
+-main ()
+-{
+-  int i;
+-  for (i = 0; i < 256; i++)
+-    if (XOR (islower (i), ISLOWER (i))
+-	|| toupper (i) != TOUPPER (i))
+-      exit(2);
+-  exit (0);
+-}
+-_ACEOF
+-rm -f conftest$ac_exeext
+-if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
+-  (eval $ac_link) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } && { ac_try='./conftest$ac_exeext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  :
+-else
+-  echo "$as_me: program exited with status $ac_status" >&5
+-echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-( exit $ac_status )
+-ac_cv_header_stdc=no
+-fi
+-rm -f core *.core gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
+-fi
+-fi
+-fi
+-echo "$as_me:$LINENO: result: $ac_cv_header_stdc" >&5
+-echo "${ECHO_T}$ac_cv_header_stdc" >&6
+-if test $ac_cv_header_stdc = yes; then
+-
+-cat >>confdefs.h <<\_ACEOF
+-#define STDC_HEADERS 1
+-_ACEOF
+-
+-fi
+-
+-# On IRIX 5.3, sys/types and inttypes.h are conflicting.
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-for ac_header in sys/types.h sys/stat.h stdlib.h string.h memory.h strings.h \
+-		  inttypes.h stdint.h unistd.h
+-do
+-as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+-echo "$as_me:$LINENO: checking for $ac_header" >&5
+-echo $ECHO_N "checking for $ac_header... $ECHO_C" >&6
+-if eval "test \"\${$as_ac_Header+set}\" = set"; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-$ac_includes_default
+-
+-#include <$ac_header>
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  eval "$as_ac_Header=yes"
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-eval "$as_ac_Header=no"
+-fi
+-rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+-fi
+-echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_Header'}'`" >&5
+-echo "${ECHO_T}`eval echo '${'$as_ac_Header'}'`" >&6
+-if test `eval echo '${'$as_ac_Header'}'` = yes; then
+-  cat >>confdefs.h <<_ACEOF
+-#define `echo "HAVE_$ac_header" | $as_tr_cpp` 1
+-_ACEOF
+-
+-fi
+-
+-done
+-
+-
+-
+-  USE_TRANSMEM=1
+-
+-  DB_VERSION=0
+-      echo "$as_me:$LINENO: checking for library containing db_create" >&5
+-echo $ECHO_N "checking for library containing db_create... $ECHO_C" >&6
+-if test "${ac_cv_search_db_create+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  ac_func_search_save_LIBS=$LIBS
+-ac_cv_search_db_create=no
+-cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-
+-/* Override any gcc2 internal prototype to avoid an error.  */
+-#ifdef __cplusplus
+-extern "C"
+-#endif
+-/* We use char because int might match the return type of a gcc2
+-   builtin and then its argument prototype would still apply.  */
+-char db_create ();
+-int
+-main ()
+-{
+-db_create ();
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext conftest$ac_exeext
+-if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
+-  (eval $ac_link) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest$ac_exeext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_search_db_create="none required"
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-fi
+-rm -f conftest.err conftest.$ac_objext \
+-      conftest$ac_exeext conftest.$ac_ext
+-if test "$ac_cv_search_db_create" = no; then
+-  for ac_lib in db db-4.5 db-4.4 db-4.3 db-4.2 db-4.1 db-4.0 db-3.6 db-3.5 db-3.4 db-3.3 db-3.2 db-3.1; do
+-    LIBS="-l$ac_lib  $ac_func_search_save_LIBS"
+-    cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-
+-/* Override any gcc2 internal prototype to avoid an error.  */
+-#ifdef __cplusplus
+-extern "C"
+-#endif
+-/* We use char because int might match the return type of a gcc2
+-   builtin and then its argument prototype would still apply.  */
+-char db_create ();
+-int
+-main ()
+-{
+-db_create ();
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext conftest$ac_exeext
+-if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
+-  (eval $ac_link) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest$ac_exeext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_search_db_create="-l$ac_lib"
+-break
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-fi
+-rm -f conftest.err conftest.$ac_objext \
+-      conftest$ac_exeext conftest.$ac_ext
+-  done
+-fi
+-LIBS=$ac_func_search_save_LIBS
+-fi
+-echo "$as_me:$LINENO: result: $ac_cv_search_db_create" >&5
+-echo "${ECHO_T}$ac_cv_search_db_create" >&6
+-if test "$ac_cv_search_db_create" != no; then
+-  test "$ac_cv_search_db_create" = "none required" || LIBS="$ac_cv_search_db_create $LIBS"
+-
+-             if echo $LIBS | grep -q '\-ldb-4\.' ; then
+-                 DB_HEADER_DIR="db4/"
+-             elif echo $LIBS | grep -q '\-ldb-3\.' ; then
+-                 DB_HEADER_DIR="db3/"
+-             fi
+-
+-else
+-
+-             USE_TRANSMEM=0
+-             { echo "$as_me:$LINENO: WARNING:
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+-Cannot find Berkeley DB >= 3.1, poEdit will build w/o translation memory feature!
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+-             " >&5
+-echo "$as_me: WARNING:
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+-Cannot find Berkeley DB >= 3.1, poEdit will build w/o translation memory feature!
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+-             " >&2;}
+-
+-fi
+-
+-
+-  if test x$USE_TRANSMEM != x0 ; then
+-      as_ac_Header=`echo "ac_cv_header_${DB_HEADER_DIR}db.h" | $as_tr_sh`
+-if eval "test \"\${$as_ac_Header+set}\" = set"; then
+-  echo "$as_me:$LINENO: checking for ${DB_HEADER_DIR}db.h" >&5
+-echo $ECHO_N "checking for ${DB_HEADER_DIR}db.h... $ECHO_C" >&6
+-if eval "test \"\${$as_ac_Header+set}\" = set"; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-fi
+-echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_Header'}'`" >&5
+-echo "${ECHO_T}`eval echo '${'$as_ac_Header'}'`" >&6
+-else
+-  # Is the header compilable?
+-echo "$as_me:$LINENO: checking ${DB_HEADER_DIR}db.h usability" >&5
+-echo $ECHO_N "checking ${DB_HEADER_DIR}db.h usability... $ECHO_C" >&6
+-cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-$ac_includes_default
+-#include <${DB_HEADER_DIR}db.h>
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_header_compiler=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-ac_header_compiler=no
+-fi
+-rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+-echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
+-echo "${ECHO_T}$ac_header_compiler" >&6
+-
+-# Is the header present?
+-echo "$as_me:$LINENO: checking ${DB_HEADER_DIR}db.h presence" >&5
+-echo $ECHO_N "checking ${DB_HEADER_DIR}db.h presence... $ECHO_C" >&6
+-cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-#include <${DB_HEADER_DIR}db.h>
+-_ACEOF
+-if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
+-  (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } >/dev/null; then
+-  if test -s conftest.err; then
+-    ac_cpp_err=$ac_c_preproc_warn_flag
+-    ac_cpp_err=$ac_cpp_err$ac_c_werror_flag
+-  else
+-    ac_cpp_err=
+-  fi
+-else
+-  ac_cpp_err=yes
+-fi
+-if test -z "$ac_cpp_err"; then
+-  ac_header_preproc=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-  ac_header_preproc=no
+-fi
+-rm -f conftest.err conftest.$ac_ext
+-echo "$as_me:$LINENO: result: $ac_header_preproc" >&5
+-echo "${ECHO_T}$ac_header_preproc" >&6
+-
+-# So?  What about this header?
+-case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
+-  yes:no: )
+-    { echo "$as_me:$LINENO: WARNING: ${DB_HEADER_DIR}db.h: accepted by the compiler, rejected by the preprocessor!" >&5
+-echo "$as_me: WARNING: ${DB_HEADER_DIR}db.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ${DB_HEADER_DIR}db.h: proceeding with the compiler's result" >&5
+-echo "$as_me: WARNING: ${DB_HEADER_DIR}db.h: proceeding with the compiler's result" >&2;}
+-    ac_header_preproc=yes
+-    ;;
+-  no:yes:* )
+-    { echo "$as_me:$LINENO: WARNING: ${DB_HEADER_DIR}db.h: present but cannot be compiled" >&5
+-echo "$as_me: WARNING: ${DB_HEADER_DIR}db.h: present but cannot be compiled" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ${DB_HEADER_DIR}db.h:     check for missing prerequisite headers?" >&5
+-echo "$as_me: WARNING: ${DB_HEADER_DIR}db.h:     check for missing prerequisite headers?" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ${DB_HEADER_DIR}db.h: see the Autoconf documentation" >&5
+-echo "$as_me: WARNING: ${DB_HEADER_DIR}db.h: see the Autoconf documentation" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ${DB_HEADER_DIR}db.h:     section \"Present But Cannot Be Compiled\"" >&5
+-echo "$as_me: WARNING: ${DB_HEADER_DIR}db.h:     section \"Present But Cannot Be Compiled\"" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ${DB_HEADER_DIR}db.h: proceeding with the preprocessor's result" >&5
+-echo "$as_me: WARNING: ${DB_HEADER_DIR}db.h: proceeding with the preprocessor's result" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ${DB_HEADER_DIR}db.h: in the future, the compiler will take precedence" >&5
+-echo "$as_me: WARNING: ${DB_HEADER_DIR}db.h: in the future, the compiler will take precedence" >&2;}
+-    (
+-      cat <<\_ASBOX
+-## -------------------------------------- ##
+-## Report this to vaclav.slavik@matfyz.cz ##
+-## -------------------------------------- ##
+-_ASBOX
+-    ) |
+-      sed "s/^/$as_me: WARNING:     /" >&2
+-    ;;
+-esac
+-echo "$as_me:$LINENO: checking for ${DB_HEADER_DIR}db.h" >&5
+-echo $ECHO_N "checking for ${DB_HEADER_DIR}db.h... $ECHO_C" >&6
+-if eval "test \"\${$as_ac_Header+set}\" = set"; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  eval "$as_ac_Header=\$ac_header_preproc"
+-fi
+-echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_Header'}'`" >&5
+-echo "${ECHO_T}`eval echo '${'$as_ac_Header'}'`" >&6
+ 
+-fi
+-if test `eval echo '${'$as_ac_Header'}'` = yes; then
+-  DB_HEADER="${DB_HEADER_DIR}db.h"
+-else
+-
+-              if test "${ac_cv_header_db_h+set}" = set; then
+-  echo "$as_me:$LINENO: checking for db.h" >&5
+-echo $ECHO_N "checking for db.h... $ECHO_C" >&6
+-if test "${ac_cv_header_db_h+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-fi
+-echo "$as_me:$LINENO: result: $ac_cv_header_db_h" >&5
+-echo "${ECHO_T}$ac_cv_header_db_h" >&6
+-else
+-  # Is the header compilable?
+-echo "$as_me:$LINENO: checking db.h usability" >&5
+-echo $ECHO_N "checking db.h usability... $ECHO_C" >&6
+-cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-$ac_includes_default
+-#include <db.h>
+-_ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest.$ac_objext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_header_compiler=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-ac_header_compiler=no
+-fi
+-rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+-echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
+-echo "${ECHO_T}$ac_header_compiler" >&6
+-
+-# Is the header present?
+-echo "$as_me:$LINENO: checking db.h presence" >&5
+-echo $ECHO_N "checking db.h presence... $ECHO_C" >&6
+-cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-#include <db.h>
+-_ACEOF
+-if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
+-  (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } >/dev/null; then
+-  if test -s conftest.err; then
+-    ac_cpp_err=$ac_c_preproc_warn_flag
+-    ac_cpp_err=$ac_cpp_err$ac_c_werror_flag
+-  else
+-    ac_cpp_err=
++      LIBS="$LIBS $DB_LIBS"
+   fi
+-else
+-  ac_cpp_err=yes
+-fi
+-if test -z "$ac_cpp_err"; then
+-  ac_header_preproc=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-  ac_header_preproc=no
+-fi
+-rm -f conftest.err conftest.$ac_ext
+-echo "$as_me:$LINENO: result: $ac_header_preproc" >&5
+-echo "${ECHO_T}$ac_header_preproc" >&6
+-
+-# So?  What about this header?
+-case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
+-  yes:no: )
+-    { echo "$as_me:$LINENO: WARNING: db.h: accepted by the compiler, rejected by the preprocessor!" >&5
+-echo "$as_me: WARNING: db.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: db.h: proceeding with the compiler's result" >&5
+-echo "$as_me: WARNING: db.h: proceeding with the compiler's result" >&2;}
+-    ac_header_preproc=yes
+-    ;;
+-  no:yes:* )
+-    { echo "$as_me:$LINENO: WARNING: db.h: present but cannot be compiled" >&5
+-echo "$as_me: WARNING: db.h: present but cannot be compiled" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: db.h:     check for missing prerequisite headers?" >&5
+-echo "$as_me: WARNING: db.h:     check for missing prerequisite headers?" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: db.h: see the Autoconf documentation" >&5
+-echo "$as_me: WARNING: db.h: see the Autoconf documentation" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: db.h:     section \"Present But Cannot Be Compiled\"" >&5
+-echo "$as_me: WARNING: db.h:     section \"Present But Cannot Be Compiled\"" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: db.h: proceeding with the preprocessor's result" >&5
+-echo "$as_me: WARNING: db.h: proceeding with the preprocessor's result" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: db.h: in the future, the compiler will take precedence" >&5
+-echo "$as_me: WARNING: db.h: in the future, the compiler will take precedence" >&2;}
+-    (
+-      cat <<\_ASBOX
+-## -------------------------------------- ##
+-## Report this to vaclav.slavik@matfyz.cz ##
+-## -------------------------------------- ##
+-_ASBOX
+-    ) |
+-      sed "s/^/$as_me: WARNING:     /" >&2
+-    ;;
+-esac
+-echo "$as_me:$LINENO: checking for db.h" >&5
+-echo $ECHO_N "checking for db.h... $ECHO_C" >&6
+-if test "${ac_cv_header_db_h+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  ac_cv_header_db_h=$ac_header_preproc
+-fi
+-echo "$as_me:$LINENO: result: $ac_cv_header_db_h" >&5
+-echo "${ECHO_T}$ac_cv_header_db_h" >&6
+-
+-fi
+-if test $ac_cv_header_db_h = yes; then
+-  DB_HEADER=db.h
+-else
+-
+-                  USE_TRANSMEM=0
+-                  echo "$as_me:$LINENO: result: not found" >&5
+-echo "${ECHO_T}not found" >&6
+-                  { echo "$as_me:$LINENO: WARNING:
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+-Cannot find Berkeley DB >= 3.1, poEdit will build w/o translation memory feature!
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+-                  " >&5
+-echo "$as_me: WARNING:
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+-Cannot find Berkeley DB >= 3.1, poEdit will build w/o translation memory feature!
+-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+-                  " >&2;}
+-
+-fi
+-
+-
+-
+-fi
+-
+-
+-
+-      if test x$USE_TRANSMEM != x0 ; then
+-          CXXFLAGS="$CXXFLAGS -DUSE_TRANSMEM -DDB_HEADER=\\\"$DB_HEADER\\\""
+-      fi
+-   fi
+ 
+-   if test x$USE_TRANSMEM != x0 ; then
++   if test x$USE_TRANSMEM != xno ; then
+       echo "$as_me:$LINENO: checking if db_open requires transaction argument" >&5
+ echo $ECHO_N "checking if db_open requires transaction argument... $ECHO_C" >&6
+       cat >conftest.$ac_ext <<_ACEOF
+@@ -6186,8 +5311,6 @@
+ s,@KDE_CONFIG@,$KDE_CONFIG,;t t
+ s,@KDE_DATA_DIR@,$KDE_DATA_DIR,;t t
+ s,@GNOME_DATA_DIR@,$GNOME_DATA_DIR,;t t
+-s,@CPP@,$CPP,;t t
+-s,@EGREP@,$EGREP,;t t
+ s,@USE_WINDOWS_TRUE@,$USE_WINDOWS_TRUE,;t t
+ s,@USE_WINDOWS_FALSE@,$USE_WINDOWS_FALSE,;t t
+ s,@RESCOMP@,$RESCOMP,;t t
+diff -ruP poedit-1.2.5.orig/configure.in poedit-1.2.5/configure.in
+--- poedit-1.2.5.orig/configure.in	2004-01-25 23:16:53.000000000 +0100
++++ poedit-1.2.5/configure.in	2004-07-14 23:51:31.000000000 +0200
+@@ -92,7 +92,9 @@
+ if $WX_CONFIG_NAME --cxxflags | grep -q WXMSW; then
+     use_windows=yes
+     if test x$USE_TRANSMEM != xno ; then
+-        CXXFLAGS="$CXXFLAGS -DUSE_TRANSMEM -DDB_HEADER=\\\"db.h\\\" -I\$(top_srcdir)/extras/win32-db3"
++        AC_DEFINE(USE_TRANSMEM)
++        AC_DEFINE_UNQUOTED(DB_HEADER, ["db.h"])
++        CXXFLAGS="$CXXFLAGS -I\$(top_srcdir)/extras/win32-db3"
+     fi
+     
+     changequote(<<,>>)
