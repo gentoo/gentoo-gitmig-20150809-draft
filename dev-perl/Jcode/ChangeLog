@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Jcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.7 2003/02/12 06:20:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.8 2003/05/31 21:08:01 mcummings Exp $
+
+*Jcode-0.83 (31 May 2003)
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org> Jcode-0.83.ebuild:
+  New version on CPAN
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
