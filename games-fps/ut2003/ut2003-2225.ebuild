@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.11 2004/01/24 15:07:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.12 2004/02/05 20:23:10 wolf31o2 Exp $
 
 inherit games
 
@@ -103,10 +103,9 @@ src_install() {
 	cp -r ${S}/{extras,updater} ${Ddir} || die "copying extras/updater"
 
 	# install benchmarks
-	# I am removing this for now to close bug #35603. I realize this breaks
-	# benchmarking, but until I can get time to figure it out, I consider it
-	# the best course of action.
-	#cp -r ${S}/Benchmark/botmatch-* ${S}/Benchmark/flyby-* ${Ddir}/Benchmark || die "copying benchmark files"
+	# Fix provided by Matthis Grimm (Bug #40376)
+	cp -r ${S}/Benchmark/botmatch-* ${Ddir}/Benchmark || die "copying benchmark files"
+	cp -r ${S}/Benchmark/flyby-* ${Ddir}/Benchmark || die "copying benchmark files"
 
 	# copy ut2003/ucc
 	exeinto ${dir}
