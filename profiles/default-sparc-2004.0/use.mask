@@ -41,6 +41,11 @@ mips
 hppa
 arm
 
+# Asterisk use flag masking
+resperl
+softfax
+zaptel
+
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
