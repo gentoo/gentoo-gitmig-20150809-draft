@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.19 2004/01/13 11:03:11 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.20 2004/01/16 20:50:57 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> :
+  set ppc in keywords
 
   13 Jan 2004; Ned Ludd <solar@gentoo.org> iputils-021109-r1.ebuild:
   Make ipv6 traceroute6, tracepath6 and ping6 made optional based on 
