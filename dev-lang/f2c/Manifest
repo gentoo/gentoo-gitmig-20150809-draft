@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 aea762d33bc29087e9fe81144fd26b64 ChangeLog 1502
-MD5 0be2692c334a5b3f66cff66ba19092fb f2c-20030320.ebuild 629
 MD5 c6f7a8787d42cd9b9972bc66250d942a metadata.xml 224
-MD5 d15af7e8b03bc0d1287d98bef1b7a339 f2c-20030320-r1.ebuild 731
-MD5 1e6410fad56afd14c53e1efeb94fe240 files/digest-f2c-20030320 64
-MD5 1e6410fad56afd14c53e1efeb94fe240 files/digest-f2c-20030320-r1 64
+MD5 0be2692c334a5b3f66cff66ba19092fb f2c-20030320.ebuild 629
+MD5 6cfa0eceec3bbeb9de67b2204cc6e2c9 f2c-20030320-r1.ebuild 738
+MD5 0d8a0223332aaa76907f57626e9a66a7 ChangeLog 1598
 MD5 9b85cfecd938c408c4c07f437308ba43 files/f2c-20030320-CAN-2005-0017.patch 1933
+MD5 1e6410fad56afd14c53e1efeb94fe240 files/digest-f2c-20030320-r1 64
+MD5 1e6410fad56afd14c53e1efeb94fe240 files/digest-f2c-20030320 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB+2cl60LfUIagIAkRAvoEAJ4tWrkrCnLV/cFgYETgHc3NkyMJnACg6ylM
-G/s6KoqzHLAD0dRhQcDkjpE=
-=Zt+k
+iD8DBQFCFRNwugEuf3OQ0akRAjz/AKCda9U2Ci+gOXf8oyuG3wqIqyQnwACeIWLQ
+UBaNfkjp9f7GStXDlOo3+BU=
+=wAcU
 -----END PGP SIGNATURE-----
