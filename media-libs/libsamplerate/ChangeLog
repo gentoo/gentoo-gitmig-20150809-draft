@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libsamplerate
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.21 2004/09/14 07:01:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.22 2004/10/01 22:56:21 kito Exp $
+
+*libsamplerate-0.1.2 (01 Oct 2004)
+
+  01 Oct 2004; kito@gentoo.org libsamplerate-0.1.1-r1.ebuild,
+  +libsamplerate-0.1.2.ebuild:
+  version bump, ~ppc-macos keyword, fixed misleading description
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -libsamplerate-0.0.15.ebuild, -libsamplerate-0.1.0-r1.ebuild,
