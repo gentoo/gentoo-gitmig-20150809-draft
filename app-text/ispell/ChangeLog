@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ispell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.16 2003/09/12 14:16:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.17 2003/10/02 02:42:04 brandy Exp $
+
+  02 Oct 2003; Brandy Westcott brandy@gentoo.org ispell-3.2.06-r6.ebuild:
+  Removed byacc dependency in favour of bison
 
 *ispell-3.2.06-r6 (09 Sep 2003)
 
