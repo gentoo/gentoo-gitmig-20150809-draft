@@ -1,3 +1,13 @@
-MD5 8e86cd693748ee7851464c23591e5096 duhdraw-2.8.12.ebuild 620
-MD5 acf172b930d6f203efffb332a3ae9bd4 ChangeLog 407
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9c73805ef5f2d4d3e1624e313553fd63 ChangeLog 576
+MD5 09cd96793b6772dace415a58e1c9b5e8 duhdraw-2.8.12.ebuild 619
 MD5 f5c613c6ba0e95bfbc2e828b96191f50 files/digest-duhdraw-2.8.12 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpJfQmdTrptrqvGERAjXoAJ4zLRERfWIGKFTwYVK9Et/OotEdZACfX6go
+cZrpSLdas4wdIjuhIe6FvUI=
+=YFtp
+-----END PGP SIGNATURE-----
