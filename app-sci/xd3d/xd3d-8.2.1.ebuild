@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xd3d/xd3d-8.2.1.ebuild,v 1.1 2004/05/20 12:48:10 xtv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xd3d/xd3d-8.2.1.ebuild,v 1.2 2004/05/24 21:56:31 xtv Exp $
 
 DESCRIPTION="scientific visualization tool"
 
@@ -15,8 +15,10 @@ KEYWORDS="~x86"
 
 IUSE="icc"
 
-DEPEND="virtual/x11 \
+RDEPEND="virtual/x11 \
 	icc? ( dev-lang/icc dev-lang/ifc )"
+
+DEPEND="${RDEPEND} sys-apps/which"
 
 src_unpack() {
 	unpack ${A}
@@ -28,16 +30,17 @@ src_compile() {
 	if use icc; then
 		sed "s:##D##:${D}:g" < RULES.icc > RULES.gentoo
 	else
+		which g77 2> /dev/null || die "No GNU Fortran compiler found!"
 		sed "s:##CFLAGS##:${CFLAGS}:g" < RULES.gentoo > RULES.linux
 		sed "s:##D##:${D}:g" < RULES.linux > RULES.gentoo
 	fi
-	./configure -arch=gentoo
+	./configure -arch=gentoo || die
 
-	make
+	make || die
 }
 
 src_install() {
-	make install
+	make install || die
 
 	dodoc BUGS CHANGELOG FAQ FORMATS INSTALL LICENSE README
 	insinto /usr/share/doc/${PF}
