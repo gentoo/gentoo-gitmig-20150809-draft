@@ -134,3 +134,4 @@ move net-www/tikiwiki www-apps/tikiwiki
 move net-www/trac www-apps/trac
 move net-www/twiki www-apps/twiki
 move net-www/viewcvs www-apps/viewcvs
+move net-www/wordpress www-apps/wordpress
