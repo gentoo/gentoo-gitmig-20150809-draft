@@ -1,9 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.4-r1.ebuild,v 1.2 2002/12/09 04:33:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.7.ebuild,v 1.1 2002/12/13 13:29:00 foser Exp $
+
+inherit eutils
 
 IUSE="perl gnome ssl gtk python mmx ipv6 nls kde" 
-
 S=${WORKDIR}/${P}
 DESCRIPTION="X-Chat is a graphical IRC client for UNIX operating systems."
 SRC_URI="http://www.xchat.org/files/source/1.9/${P}.tar.bz2"
@@ -11,7 +12,7 @@ HOMEPAGE="http://www.xchat.org/"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND=">=dev-libs/glib-2.0.4
 	>=x11-libs/gtk+-2.0.5
@@ -20,23 +21,18 @@ RDEPEND=">=dev-libs/glib-2.0.4
 		 >=gnome-base/libgnome-2.0.1
 		 >=gnome-base/gnome-applets-2.0.0
 		 >=gnome-base/gnome-panel-2.0.1 )
-	ssl?	( >=dev-libs/openssl-0.9.6d )" 
-               
+	ssl?	( >=dev-libs/openssl-0.9.6d ) 
+	python? ( dev-lang/python )"               
+
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.10.38 )"
 
 src_unpack() {
-	unpack ${A}
-	patch -d ${S} -p1 < ${FILESDIR}/gentoo-${P}-scrolled-tabs.patch
+	unpack ${A}	
+	epatch ${FILESDIR}/${P}-serverlist-corruption-fix.patch
 }
 
-# From the xchat 1.9.3 README_FIRST file:
-# (one of the) REMAINING PROBLEMS:
-# * can't compile with gnome, panel and zvt support *
-# stroke 
-
 src_compile() {
-
 	local myopts myflags
 
 	if [ ! `use perl` ] ; then
@@ -44,34 +40,33 @@ src_compile() {
 			&& myopts="${myopts} --enable-gnome --enable-panel" \
 			|| myopts="${myopts} --enable-gtkfe --disable-gnome --disable-zvt"
 		
-		use gnome \
-			&& CFLAGS="${CFLAGS} -I/usr/include/orbit-2.0" \
-			|| myopts="${myopts} --disable-gnome"
+	#	use gnome \
+	#		&& CFLAGS="${CFLAGS} -I/usr/include/orbit-2.0" \
+	#		|| myopts="${myopts} --disable-gnome"
 	fi
 
 	use gtk \
+		&& myopts="${myopts} --enable-gtkfe" \
 		|| myopts="${myopts} --disable-gtkfe"
-	
 	use ssl \
-		&& myopts="${myopts} --enable-openssl"
-
+		&& myopts="${myopts} --enable-openssl" \
+		|| myopts="${myopts} --disable-openssl"
 	use perl \
+		&& myopts="${myopts} --enable-perl" \
 		|| myopts="${myopts} --disable-perl"
-
 	use python \
+		&& myopts="${myopts} --enable-python" \
                 || myopts="${myopts} --disable-python"
-
 	use nls \
-		&& myopts="${myopts} --enable-hebrew --enable-japanese-conv" \
-		|| myopts="${myopts} --disable-nls"
-
+		&& myopts="${myopts} --enable-nls --enable-hebrew" \
+		|| myopts="${myopts} --disable-nls --disable-hebrew"
+	# --enable-japanese-conv  is broken
 	use mmx	\
 		&& myopts="${myopts} --enable-mmx"	\
 		|| myopts="${myopts} --disable-mmx"
-	
 	use ipv6 \
-		&& myopts="${myopts} --enable-ipv6"
-
+		&& myopts="${myopts} --enable-ipv6" \
+		|| myopts="${myopts} --disable-ipv6"
 
 	[ -n "${DISABLE_XFT}" ] && myopts="${myopts} --disable-xft"
 	
@@ -84,22 +79,10 @@ src_compile() {
 
 src_install() {
 	# some magic to create a menu entry for xchat 2	
-	sed -e "s:Exec=xchat:Exec=xchat-2:" -e "s:Name=X-Chat:Name=X-Chat 2:" xchat.desktop > xchat-2.desktop
-
-	use kde && insinto ${KDEDIR}/share/applnk/Internet \
-		|| insinto /usr/share/gnome/apps/Internet
-	doins xchat-2.desktop	
+	mv xchat.desktop xchat.desktop.old
+	sed -e "s:Exec=xchat:Exec=xchat-2:" -e "s:Name=XChat IRC:Name=XChat 2 IRC:" xchat.desktop.old > xchat.desktop
 
 	einstall install || die "Install failed"
-
-	# we prefer our own launcher
-	rm ${D}/etc/X11/applnk/Internet/xchat.desktop
-	rmdir -p ${D}/etc/X11/applnk/Internet
-
-	use python &&
-	(	dosym /usr/lib/xchat/plugins/python.so-2 /usr/lib/xchat/plugins/python.so )
-	use perl &&
-	(	dosym /usr/lib/xchat/plugins/perl.so-2 /usr/lib/xchat/plugins/perl.so  )
 
 	dodoc AUTHORS COPYING ChangeLog README
 }
