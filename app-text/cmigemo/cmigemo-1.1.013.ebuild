@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.1.013.ebuild,v 1.2 2003/09/30 18:28:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.1.013.ebuild,v 1.3 2003/10/13 15:04:09 usata Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.kaoriya.net/#CMIGEMO"
 SRC_URI="http://www.kaoriya.net/dist/var/${P}.tar.bz2"
 
 LICENSE="BSD | LGPL-2.1"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~alpha ~sparc ~ppc"
 SLOT="0"
 S="${WORKDIR}/${P}"
 
@@ -27,6 +27,8 @@ src_unpack() {
 	unpack ${A}
 
 	has_version 'app-editors/vim-core' && epatch ${FILESDIR}/${P}-migemo-dict.diff
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-fflush-gentoo.patch
 
 	touch ${S}/dict/SKK-JISYO.L
 
