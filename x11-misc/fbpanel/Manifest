@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9885fe9f50271d7925c4db35330deff6 fbpanel-3.8-r1.ebuild 917
 MD5 3061965e9cdac2ce09457a36c15f3fb0 fbpanel-3.16.ebuild 732
-MD5 a302207472588f1efd7b949d731ce75a fbpanel-4.1.ebuild 732
-MD5 45ece8d0f0ac2ad6016e24a65b1e655f ChangeLog 2572
+MD5 83f3b3eea55513bd91b7335f54f77567 fbpanel-4.1.ebuild 732
+MD5 5e1aec37e642d0950354d9195b27763c ChangeLog 2572
 MD5 ac2bb493f03fce89ad86d22e7d749631 metadata.xml 349
 MD5 aa7afad959893ae665e84f884d4cf046 files/digest-fbpanel-3.8-r1 59
 MD5 b2c98a3d8865f13dee3d5375e695d596 files/digest-fbpanel-4.1 59
 MD5 e5637a25270c6dc7b42fedf55adb37cb files/digest-fbpanel-3.16 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCCLR6EZCkKN40op4RAiQbAKC8iLs3+qeYTdelOE2anWey5o6PFQCgoieR
+sZwLDBjID8uo0RqqcVmNrdQ=
+=MDte
+-----END PGP SIGNATURE-----
