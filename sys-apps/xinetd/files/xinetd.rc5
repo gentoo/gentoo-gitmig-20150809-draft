@@ -7,24 +7,20 @@ SERVICE=xinetd
 EXE="/usr/sbin/xinetd"
 opts="start stop"
 
-prepconfig() {
+autoconfig() {
 	if [ ! -e /etc/xinetd.conf ] ; then
-		einfo "Creating new config from inetd..."
-		/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
-	fi
-	if [ /etc/inetd.conf -nt /etc/xinetd.conf ] ; then
-		einfo "Creating new config from inetd..."
-		/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
-	fi
-	if [ ! -e /etc/xinetd.conf ]
-	then
-		eerror "Xinetd not started.  Config file not found."
-		exit 1
+		if [ ! -e /etc/inetd.conf ] ; then
+			eerror "You need an /etc/xinetd.conf file to run xinetd!"
+			exit 1
+		else
+			einfo "Auto-creating xinetd.conf from your inetd.conf.."
+			/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
+		fi
 	fi
 }
 
 start() {
-	prepconfig
+	autoconfig
 	ebegin "Starting ${SERVICE}"
 	start-stop-daemon --start --quiet --exec $EXE 1>&2
 	eend $? 
@@ -37,4 +33,3 @@ stop() {
 }
 
 doservice ${@}
-

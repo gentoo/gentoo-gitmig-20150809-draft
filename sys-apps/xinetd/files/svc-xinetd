@@ -6,32 +6,28 @@
 SERVICE=xinetd
 opts="start stop"
 
-prepconfig() {
+autoconfig() {
 	if [ ! -e /etc/xinetd.conf ] ; then
-		einfo "Creating new config from inetd..."
-	  	/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
-	fi
-	if [ /etc/inetd.conf -nt /etc/xinetd.conf ] ; then
-		einfo "Creating new config from inetd..."
-		/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
-	fi
-	if [ ! -e /etc/xinetd.conf ]
-	then
-		eerror "xinetd not started.  Config file not found."
-		exit 1
+		if [ ! -e /etc/inetd.conf ] ; then
+			eerror "You need an /etc/xinetd.conf file to run xinetd!"
+			exit 1
+		else
+			einfo "Auto-creating xinetd.conf from your inetd.conf.."
+			/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
+		fi
 	fi
 }
 
 start() {
-    prepconfig
-    ebegin "Starting supervised ${SERVICE}"
+	autoconfig
+	ebegin "Starting supervised ${SERVICE}"
 	ln -sf ../services/${SERVICE} ${SVCDIR}/control/${SERVICE}
-    eend $?
+	eend $?
 }
 
 stop() {
-    ebegin "Stopping supervised ${SERVICE}"
-   	if [ -e ${SVCDIR}/control/${SERVICE} ]
+	ebegin "Stopping supervised ${SERVICE}"
+	if [ -e ${SVCDIR}/control/${SERVICE} ]
 	then
 		/usr/bin/svc -dx ${SVCDIR}/control/${SERVICE}
 		rm ${SVCDIR}/control/${SERVICE}
@@ -40,4 +36,3 @@ stop() {
 }
 
 doservice ${@}
-
