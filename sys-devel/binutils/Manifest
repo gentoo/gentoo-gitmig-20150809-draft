@@ -1,4 +1,4 @@
-MD5 f419f341a3f8b6d84ce9163e6bec04bd ChangeLog 35220
+MD5 40e45a9b42f792517ab4cf54238fed86 ChangeLog 35326
 MD5 b60efe46b3d022ade1a74c6fa2c09d7f binutils-2.11.92.0.12.3-r2.ebuild 2980
 MD5 1872c47d3b04308a4237ea2dbcc47bc5 binutils-2.11.92.0.7.ebuild 2290
 MD5 a7b48133d78b1efde98f85bea80d6ea5 binutils-2.12.90.0.15.ebuild 3257
@@ -22,7 +22,7 @@ MD5 4d0a72aba32b9e42b08b5204719ae1a1 binutils-2.15.90.0.3-r3.ebuild 4801
 MD5 5705246a4fb89bf4ef2da82e9ee5e713 binutils-2.15.91.0.1-r1.ebuild 4654
 MD5 50ca49430b20bc9727ceece6289c7dad binutils-2.15.91.0.1-r2.ebuild 4994
 MD5 5af514431a384af812da84665ea8612a binutils-2.15.91.0.1.ebuild 4668
-MD5 cb622c4ec10d5459bd84d8eca11bf9b8 binutils-2.15.91.0.2.ebuild 5113
+MD5 722667759a5cd99eef79be263a5f4834 binutils-2.15.91.0.2.ebuild 5120
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 fe5fb935b171a472f5eb1a8bca63c136 files/binutils-2.12.90.0.14-glibc21.patch 7936
 MD5 f453b3f208b17cd18380bc3653936487 files/binutils-2.12.90.0.14-x86_64-libpic.patch 1184
@@ -132,5 +132,5 @@ MD5 8a0fb0b91441ffa6bd3bbea118d4fad8 files/2.14/binutils-2.14.90.0.7-ppc-reloc.p
 MD5 769e30e09537d7bd8539e404cc3958aa files/2.14/binutils-2.14.90.0.7-tls-section-alignment.patch 37977
 MD5 03d6c934577cf40ec75b41bfc38b48a0 files/2.14/binutils-mips-openssl-got-fix.patch 540
 MD5 8f619fc0c409a5ba768f126f172ee6bc files/2.15/05_all_binutils-2.15-elf32-arm-textrel.patch 2009
-MD5 bad6ba9f63eb3a86d7006191848a47b8 files/2.15/52_all_binutils-20040527-uclibc-100-conf.patch 21576
 MD5 907ce8c972e2a984590d4bfc04181c1d files/2.15/40_all_binutils-uclibc-linker.patch 530
+MD5 bad6ba9f63eb3a86d7006191848a47b8 files/2.15/52_all_binutils-20040527-uclibc-100-conf.patch 21576

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.157 2004/10/01 23:21:36 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.158 2004/10/02 00:31:44 kumba Exp $
+
+  01 Oct 2004; Joshua Kinard <kumba@gentoo.org> binutils-2.15.91.0.2.ebuild:
+  Added ~sparc to KEYWORDS.
 
   01 Oct 2004; Joshua Kinard <kumba@gentoo.org> binutils-2.15.91.0.2.ebuild:
   Marked ~mips. Works great for o32, n32 has problems, and is thus masked in
