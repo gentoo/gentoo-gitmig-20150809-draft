@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.35 2004/10/05 15:30:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.36 2004/12/18 16:49:04 carlo Exp $
+
+*fwbuilder-2.0.4 (18 Dec 2004)
+
+  18 Dec 2004; Carsten Lohrke <carlo@gentoo.org> +fwbuilder-2.0.4.ebuild:
+  version bump
 
 *fwbuilder-2.0.3 (05 Oct 2004)
 
