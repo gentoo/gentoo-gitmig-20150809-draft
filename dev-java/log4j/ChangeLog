@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.22 2004/10/22 11:27:00 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.23 2004/12/07 15:16:02 axxo Exp $
+
+*log4j-1.2.9 (07 Dec 2004)
+
+  07 Dec 2004; Thomas Matthijs <axxo@gentoo.org> +log4j-1.2.9.ebuild:
+  version bump
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> log4j-1.2.8-r2.ebuild:
   Keywords ~amd64.
