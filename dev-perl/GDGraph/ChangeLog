@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GDGraph
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.5 2003/12/25 20:03:25 mcummings Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.6 2004/02/21 03:27:42 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> GDGraph-1.43.ebuild:
+  stable on alpha and ia64
 
   25 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org> GDGraph-1.35.ebuild:
   No longer on CPAN
