@@ -1,21 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/xloadimage-4.1-r1.ebuild,v 1.8 2003/07/20 00:27:06 tester Exp $
-
-IUSE="tiff jpeg png"
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/xloadimage-4.1-r1.ebuild,v 1.9 2003/07/28 11:29:02 vapier Exp $
 
 inherit eutils
 
 MY_P="${P/-/.}"
-S="${WORKDIR}/${MY_P}"
-DESCRIPTION="Xloadimage is a utility which will view many different types of images under X11"
+S=${WORKDIR}/${MY_P}
+DESCRIPTION="utility to view many different types of images under X11"
 HOMEPAGE="http://gopher.std.com/homepages/jimf/xloadimage.html"
 SRC_URI="ftp://ftp.x.org/R5contrib/${MY_P}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2"
 
-SLOT="0"
 LICENSE="MIT"
-KEYWORDS="x86 ~sparc ~ppc alpha arm hppa amd64"
+SLOT="0"
+KEYWORDS="x86 sparc ppc alpha arm hppa amd64"
+IUSE="tiff jpeg png"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	x11-base/xfree
@@ -38,7 +37,7 @@ src_unpack() {
 	sed -i "s:^#include <varargs.h>:#include <stdarg.h>:" ${S}/rlelib.c
 }
 
-src_install () {
+src_install() {
 	dobin xloadimage
 	dosym /usr/bin/xloadimage /usr/bin/xsetbg
 	dosym /usr/bin/xloadimage /usr/bin/xview
