@@ -1,7 +1,15 @@
 # ChangeLog for app-crypt/krb5
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/ChangeLog,v 1.1 2002/02/01 21:53:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/ChangeLog,v 1.2 2002/02/22 01:36:38 g2boojum Exp $
 
+*krb5-1.2.2-r1 (21 Feb 2002)
+
+  21 Feb 2002; Grant Goodyear <g2boojum@gentoo.org> :
+
+  Thanks to Michael Kaufman, we now have a working ebuild.  Previous ebuild
+  failed to build klist, kvno, kpasswd, kinit, and kdestroy.  There was
+  also a linker problem which has been fixed.
+  
 *krb5-1.2.2 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :

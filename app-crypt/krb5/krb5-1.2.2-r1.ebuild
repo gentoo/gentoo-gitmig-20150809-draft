@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Grant Goodyear <grant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/krb5-1.2.2.ebuild,v 1.4 2001/11/10 02:40:17 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/krb5-1.2.2-r1.ebuild,v 1.1 2002/02/22 01:36:38 g2boojum Exp $
 
 S=${WORKDIR}/${P}/src
 SRC_URI="http://www.crypto-publish.org/dist/mit-kerberos5/${P}.tar.gz"
@@ -13,17 +13,21 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 
-    try ./configure --with-krb4 --enable-shared --prefix=/usr --mandir=/usr/share/man --host=${CHOST}
+	patch -p0 < ${FILESDIR}/${P}-gentoo.diff
+
+    ./configure --with-krb4 --enable-shared --prefix=/usr \
+		--mandir=/usr/share/man --host=${CHOST} \
+		|| die
     mv Makefile Makefile.orig
     #Don't install the ftp, telnet, r* apps; use pam instead
-    sed -e 's/ appl //' Makefile.orig > Makefile
-    try make
+    sed -e 's/ appl / /' Makefile.orig > Makefile
+    emake || die
 
 }
 
 src_install () {
 
-    try make DESTDIR=${D} install
+    make DESTDIR=${D} install || die
     cd ..
     dodoc README
     echo 'NOTE: ftp, telnet, r* apps not installed.  Install pam-krb5!'
