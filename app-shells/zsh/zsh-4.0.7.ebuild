@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.7.ebuild,v 1.3 2003/07/24 13:06:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.7.ebuild,v 1.4 2003/08/14 08:59:43 usata Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.gz
 
 SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 alpha ppc sparc"
 
 DEPEND="sys-apps/groff
 	ncurses? ( >=sys-libs/ncurses-5.1 )"

@@ -1,8 +1,11 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.22 2003/07/24 13:06:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.23 2003/08/14 08:59:43 usata Exp $
 
 *zsh-4.1.1 (24 Jul 2003)
+
+  14 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> zsh-4.1.1.ebuild:
+  Marked stable on x86
 
   24 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> zsh-4.1.1.ebuild:
   New development version. Added cjk support, based on the ebuild
@@ -12,6 +15,9 @@
   Added static USE flag and removed zshall.1 patch
 
 *zsh-4.0.7 (24 Jul 2003)
+
+  14 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> zsh-4.0.7.ebuild:
+  Marked stable on x86, alpha, ppc and sparc
 
   24 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> zsh-4.0.7.ebuild,
   files/zprofile:
@@ -29,6 +35,9 @@
   Forgot to version bump on last commit
 
 *zsh-4.1.0_pre7 (17 Apr 2003)
+
+  14 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> zsh-4.1.0_pre7.ebuild:
+  Marked x86 ~x86, since it is not stable (pre) version
 
   17 Apr 2003; Graham Forest <vladimir@gentoo.org> zsh-4.0.6-r3.ebuild,
   zsh-4.1.0_pre7.ebuild:
