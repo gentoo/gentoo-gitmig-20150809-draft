@@ -1,25 +1,27 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.3.1.ebuild,v 1.1 2003/10/19 07:07:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.3.1.ebuild,v 1.2 2004/03/31 07:59:57 mr_bones_ Exp $
 
 DESCRIPTION="A Window Matching utility similar to Sawfish's Matched Windows feature"
 HOMEPAGE="http://www.burtonini.com/blog/computers/devilspie"
 SRC_URI="http://www.burtonini.com/computing/${P}.tar.gz"
 
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 ~ppc ~alpha ~sparc"
+IUSE=""
 
-DEPEND="dev-lang/perl
+RDEPEND="dev-lang/perl
 	sys-libs/zlib
 	x11-libs/pango
 	dev-libs/libxml2
 	>=dev-util/gob-2.0.3
 	>=x11-libs/gtk+-2.0.0
 	>=x11-libs/libwnck-0.17
-	>=dev-util/pkgconfig-0.12.0
 	>=gnome-base/libglade-2.0.1
 	>=x11-libs/startup-notification-0.5"
+DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.12.0"
 
 IUSE=""
 
