@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r5.ebuild,v 1.2 2004/11/11 10:10:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r5.ebuild,v 1.3 2004/11/20 06:40:08 dragonheart Exp $
 
 inherit eutils gnuconfig
 
@@ -13,7 +13,7 @@ SRC_URI="http://usb.cs.tum.edu/download/usbutils/${P}.tar.gz
 	mirror://gentoo/usb.ids-${USB_IDS_VER}.gz"
 HOMEPAGE="http://usb.cs.tum.edu/"
 
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~hppa ~alpha ~ia64 ~ppc64 mips"
+KEYWORDS="~x86 ~amd64 ppc ~sparc ~hppa ~alpha ~ia64 ~ppc64 mips"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
