@@ -1,36 +1,33 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-110802.ebuild,v 1.2 2003/02/13 13:24:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-110802.ebuild,v 1.3 2003/02/14 08:53:48 vapier Exp $
 
-S=${WORKDIR}/hvirtual-${PV}
+inherit gcc                                                                     
+export WANT_GCC_3="yes"
 
 DESCRIPTION="Cinelerra - Professional Video Editor"
 HOMEPAGE="http://heroinewarrior.com/cinelerra.php3"
 SRC_URI="mirror://sourceforge/heroines/hvirtual-${PV}-src.tar.bz2"
 
-DEPEND="virtual/x11
-	virtual/glibc
-	=sys-devel/gcc-3*"
-
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-x86"
 
-inherit gcc                                                                     
-export WANT_GCC_3="yes"
+DEPEND="virtual/x11
+	virtual/glibc
+	=sys-devel/gcc-3*"
+
+S=${WORKDIR}/hvirtual-${PV}
 
 src_compile() {
-
 	echo ${CFLAGS} > i686/c_flags
 	cp i686/c_flags i686/a52_flags
 	cp i686/c_flags libavc/i686/c_flags
 
 	make || die "make failed"
-
 }
 
 src_install() {
-
 	cd ${S}/${PN}/i686
 
 	dobin ${PN} 
@@ -57,8 +54,5 @@ src_install() {
 
 	cd ${S} 
 	dodoc CVS COPYING 
-	dohtml -a png,html,texi,sdw -r doc/*	
-
+	dohtml -a png,html,texi,sdw -r doc/*
 }
-
-
