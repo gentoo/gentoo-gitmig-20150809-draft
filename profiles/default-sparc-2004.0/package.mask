@@ -1,0 +1,5 @@
+# Still needing 2.4
+sys-kernel/linux26-headers
+sys-kernel/gentoo-dev-sources
+sys-kernel/development-sources
+
