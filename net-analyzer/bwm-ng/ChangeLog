@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/bwm-ng
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.1 2005/01/22 20:14:00 hollow Exp $
+
+*bwm-ng-0.4 (22 Jan 2005)
+
+  22 Jan 2005; Benedikt Boehm <hollow@gentoo.org> +metadata.xml,
+  +bwm-ng-0.4.ebuild:
+  Initial version. Thanks to Adrian van Buttlar. fixes #79122
+
