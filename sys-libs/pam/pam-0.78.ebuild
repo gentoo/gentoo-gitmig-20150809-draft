@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78.ebuild,v 1.1 2005/02/25 20:31:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78.ebuild,v 1.2 2005/02/26 01:02:47 azarah Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -264,7 +264,6 @@ src_install() {
 			local mod_name=$(basename "${x}")
 			local sec_dir="${D}/$(get_libdir)/security"
 
-			# Its OK if the module failed when we didnt ask for it anyway
 			if ! ls -1 "${sec_dir}/${mod_name}"*.so &> /dev/null
 			then
 				echo
