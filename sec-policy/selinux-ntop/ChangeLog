@@ -1,26 +1,15 @@
 # ChangeLog for sec-policy/selinux-ntop
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ntop/ChangeLog,v 1.4 2004/10/24 16:10:02 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ntop/ChangeLog,v 1.5 2004/11/13 19:59:26 kaiowas Exp $
+
+*selinux-ntop-20041113 (13 Nov 2004)
+
+  13 Nov 2004; petre rodan <kaiowas@gentoo.org>
+  -selinux-ntop-20040901.ebuild, -selinux-ntop-20041016.ebuild,
+  +selinux-ntop-20041113.ebuild:
+  network-related policy fixes
 
   24 Oct 2004; petre rodan <kaiowas@gentoo.org>
   selinux-ntop-20041016.ebuild:
   mark stable
-
-*selinux-ntop-20041016 (23 Oct 2004)
-
-  23 Oct 2004; petre rodan <kaiowas@gentoo.org> metadata.xml,
-  +selinux-ntop-20041016.ebuild:
-  minor fix. updated primary maintainer
-
-*selinux-ntop-20040901 (01 Sep 2004)
-
-  01 Sep 2004; Chris PeBenito <pebenito@gentoo.org>
-  +selinux-ntop-20040901.ebuild:
-  Add missing rule from #51899
-
-*selinux-ntop-20040703 (03 Jul 2004)
-
-  03 Jul 2004; Chris PeBenito <pebenito@gentoo.org> +metadata.xml,
-  +selinux-ntop-20040703.ebuild:
-  Initial commit.  Submitted by Petre Rodan.
 
