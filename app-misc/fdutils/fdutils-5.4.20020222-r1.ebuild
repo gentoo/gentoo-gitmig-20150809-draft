@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222-r1.ebuild,v 1.13 2004/06/14 09:14:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222-r1.ebuild,v 1.14 2004/06/19 03:15:58 mr_bones_ Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://fdutils.linux.lu/${PN}-5.4.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE=""
+IUSE="tetex"
 
 DEPEND=">=sys-fs/mtools-3
 	tetex? ( virtual/tetex )"
@@ -39,8 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin
-	dodir /usr/share/man/man1
+	dodir /usr/bin /usr/share/man/man1
 
 	einstall || die
 
