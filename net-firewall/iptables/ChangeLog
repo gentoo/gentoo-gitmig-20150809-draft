@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.7 2003/04/19 12:18:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.8 2003/04/19 12:45:59 aliz Exp $
+
+  19 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Removed 03_all_mac_fix.patch.bz2 becuse it was fixed in 1.2.8.
 
 *iptables-1.2.8 (19 Apr 2003)
 
