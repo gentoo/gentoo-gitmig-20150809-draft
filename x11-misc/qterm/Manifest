@@ -1,6 +1,16 @@
-MD5 6cbe5eba004f76c04aeb66a620b6d6ea ChangeLog 1335
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 4874b07f7be4bb1c5010216731f385f2 qterm-0.3.8.ebuild 811
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 39978349ea9ec864908980950ad2b3a7 ChangeLog 1436
 MD5 3ff90c022d91cc34fd0f46b7826378dc qterm-0.4.0_pre1.ebuild 843
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 ca43e5835d07e1d13a9d21f1b4a54de2 qterm-0.3.8.ebuild 859
 MD5 a745822f07baaf5f7d4a5b55eb659077 files/digest-qterm-0.3.8 63
 MD5 faa34a753ead4d075b3c4735f781b345 files/digest-qterm-0.4.0_pre1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjgHSI7fK2cqeyXkRAtx8AJwN7iml2Lr4B87co0a2aOzty2WBNQCgnbJv
+RzHw3OXOdfjB8tVefhIA1Aw=
+=S3+A
+-----END PGP SIGNATURE-----

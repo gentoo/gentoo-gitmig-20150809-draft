@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.7 2004/10/03 14:22:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.8 2004/11/07 11:04:34 pyrania Exp $
+
+  07 Nov 2004; <pyrania@gentoo.org> qterm-0.3.8.ebuild:
+  Added arts useflag. Closing bug #62802.
 
 *qterm-0.4.0_pre1 (03 Oct 2004)
 
