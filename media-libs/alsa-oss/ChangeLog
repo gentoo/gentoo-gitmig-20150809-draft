@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-oss
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.30 2004/04/20 16:40:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.31 2004/05/14 17:06:49 eradicator Exp $
+
+  14 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-oss-1.0.2.ebuild, alsa-oss-1.0.3a.ebuild, alsa-oss-1.0.4.ebuild:
+  Fixed alsa-lib dep to close bug #51052.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-oss-0.9.0_rc1.ebuild, alsa-oss-0.9.8.ebuild:
