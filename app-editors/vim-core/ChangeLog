@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/vim-core
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.56 2004/01/28 23:21:01 rphillips Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.57 2004/02/16 00:54:40 agriffis Exp $
+
+*vim-core-6.2-r7 (15 Feb 2004)
+
+  15 Feb 2004; Aron Griffis <agriffis@gentoo.org> vim-core-6.2-r7.ebuild:
+  new vim-core which uses a runtime snapshot since Bram doesn't publish patches
+  for every runtime fix
 
 *vim-core-6.2-r6 (28 Jan 2004)
 
