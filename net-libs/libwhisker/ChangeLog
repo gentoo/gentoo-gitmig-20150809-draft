@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libwhisker
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/ChangeLog,v 1.9 2004/11/20 04:36:49 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/ChangeLog,v 1.10 2005/01/31 12:17:50 mcummings Exp $
+
+*libwhisker-2.2 (31 Jan 2005)
+
+  31 Jan 2005; Michael Cummings <mcummings@gentoo.org> +libwhisker-2.2.ebuild:
+  New version of library, upstream bump in -current's version
 
   19 Nov 2004; Jason Wever <weeve@gentoo.org> libwhisker-1.8.ebuild:
   Stable on sparc.

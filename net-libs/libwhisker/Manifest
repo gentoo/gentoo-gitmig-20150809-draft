@@ -1,6 +1,18 @@
-MD5 0ef07c5130bb00dfb5c9c48fbb708bb7 ChangeLog 1586
-MD5 bbf385e56f7ffff06c86b11580d7449e libwhisker-1.8.ebuild 1141
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 000edb2421305cb7d52af5eacb1c5f3e ChangeLog 1764
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 e7c46f85ab2b0e97f687f485990964fe libwhisker-2.1.ebuild 1186
+MD5 648b3dad7accb76668e5a9ed2c8e405b libwhisker-1.8.ebuild 1145
+MD5 7ef202cacc78d42c5184ccf4959550f6 libwhisker-2.1.ebuild 1186
+MD5 629915a2f0f831c794dd1a6b9ffff79b libwhisker-2.2.ebuild 1174
+MD5 6c96245f6336855a3b683743f59f95f9 files/digest-libwhisker-2.2 70
 MD5 f63e053b501504093ce61c3e47eb1bc1 files/digest-libwhisker-1.8 70
 MD5 19ada4dfbd379f470d672180b55865f2 files/digest-libwhisker-2.1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB/iH6tG5z4I8BtQoRAvrVAJoDqmTS9vYd4Hlb0XKP2MBDPUxfMACfXV2k
+KFo5vgFPoXNoYjVxerYtBLA=
+=PBJU
+-----END PGP SIGNATURE-----
