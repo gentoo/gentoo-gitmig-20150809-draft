@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x3270/x3270-3.2.19.ebuild,v 1.1 2002/08/23 11:38:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x3270/x3270-3.2.19.ebuild,v 1.2 2002/08/23 11:40:51 seemant Exp $
 
 S="${WORKDIR}/${PN}-3.2"
 DESCRIPTION="Telnet 3270 client for X"
@@ -25,6 +25,11 @@ src_install () {
 }
 
 pkg_postinst() {
+	einfo ">>> Running mkfontdir on /usr/X11R6/lib/X11/fonts/misc"
+	mkfontdir /usr/lib/X11/fonts/misc
+}
+
+pkg_postrm() {
 	einfo ">>> Running mkfontdir on /usr/X11R6/lib/X11/fonts/misc"
 	mkfontdir /usr/lib/X11/fonts/misc
 }
