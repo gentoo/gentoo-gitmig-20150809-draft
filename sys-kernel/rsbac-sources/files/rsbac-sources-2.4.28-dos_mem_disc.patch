@@ -1,0 +1,63 @@
+diff -Nru linux-2.4.28/fs/exec.c linux-2.4.28.plasmaroo/fs/exec.c
+--- linux-2.4.28/fs/exec.c	2004-04-15 10:44:45 -07:00
++++ linux-2.4.28.plasmaroo/fs/exec.c	2004-11-12 12:02:40 -08:00
+@@ -342,6 +342,7 @@ int setup_arg_pages(struct linux_binprm 
+ 	
+ 	down_write(&current->mm->mmap_sem);
+ 	{
++		struct vm_area_struct *vma;
+ 		mpnt->vm_mm = current->mm;
+ 		mpnt->vm_start = PAGE_MASK & (unsigned long) bprm->p;
+ 		mpnt->vm_end = STACK_TOP;
+@@ -351,6 +352,12 @@ int setup_arg_pages(struct linux_binprm 
+ 		mpnt->vm_pgoff = 0;
+ 		mpnt->vm_file = NULL;
+ 		mpnt->vm_private_data = (void *) 0;
++		vma = find_vma(current->mm, mpnt->vm_start);
++		if (vma) {
++			up_write(&current->mm->mmap_sem);
++			kmem_cache_free(vm_area_cachep, mpnt);
++			return -ENOMEM;
++		}
+ 		insert_vm_struct(current->mm, mpnt);
+ 		current->mm->total_vm = (mpnt->vm_end - mpnt->vm_start) >> PAGE_SHIFT;
+ 	} 
+diff -Nru linux-2.4.28/fs/exec.c linux-2.4.28.plasmaroo/fs/exec.c
+--- linux-2.4.28/fs/binfmt_aout.c	2002-02-04 23:54:04 -08:00
++++ linux-2.4.28.plasmaroo/fs/binfmt_aout.c	2004-11-12 11:55:14 -08:00
+@@ -39,13 +39,18 @@ static struct linux_binfmt aout_format =
+ 	NULL, THIS_MODULE, load_aout_binary, load_aout_library, aout_core_dump, PAGE_SIZE
+ };
+ 
+-static void set_brk(unsigned long start, unsigned long end)
++#define BAD_ADDR(x)	((unsigned long)(x) >= TASK_SIZE)
++
++static int set_brk(unsigned long start, unsigned long end)
+ {
+ 	start = PAGE_ALIGN(start);
+ 	end = PAGE_ALIGN(end);
+-	if (end <= start)
+-		return;
+-	do_brk(start, end - start);
++	if (end > start) {
++		unsigned long addr = do_brk(start, end - start);
++		if (BAD_ADDR(addr))
++			return addr;
++	}
++	return 0;
+ }
+ 
+ /*
+@@ -405,7 +410,11 @@ static int load_aout_binary(struct linux
+ beyond_if:
+ 	set_binfmt(&aout_format);
+ 
+-	set_brk(current->mm->start_brk, current->mm->brk);
++	retval = set_brk(current->mm->start_brk, current->mm->brk);
++	if (retval < 0) {
++		send_sig(SIGKILL, current, 0);
++		return retval;
++	}
+ 
+ 	retval = setup_arg_pages(bprm); 
+ 	if (retval < 0) { 

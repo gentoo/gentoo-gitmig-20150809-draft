@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.26-r5.ebuild,v 1.1 2004/08/10 09:37:58 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.28-r1.ebuild,v 1.1 2004/12/08 20:17:09 kang Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -10,20 +10,21 @@ detect_version
 # rsbac 
 RSBACV=1.2.3
 RSBAC_SRC="http://rsbac.org/download/code/v${RSBACV}/rsbac-v${RSBACV}.tar.bz2"
-CAN_SRC="http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-2.4.26-CAN-2004-0415.patch"
+CAN_SRC=""
 
 # rsbac kernel patches
-RGPV=26.7
-RGPV_SRC="mirror://rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2 http://dev.gentoo.org/~zhware/rsbac/v${RSBACV}/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2"
+RGPV=28.1
+RGPV_SRC="http://dev.gentoo.org/~kang/rsbac/patches/${RSBACV}/${KV_MAJOR}.${KV_MINOR}/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2"
 
 UNIPATCH_STRICTORDER="yes"
-UNIPATCH_LIST="	${FILESDIR}/${PN}-2.4.CAN-2004-0495.patch
-	${FILESDIR}/${PN}-2.4.CAN-2004-0535.patch
-	${FILESDIR}/${PN}-CAN-2004-0497.patch
-	${FILESDIR}/${OKV}-*.patch
-	${DISTDIR}/linux-2.4.26-CAN-2004-0415.patch
-	${DISTDIR}/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2
-	${FILESDIR}/${PN}-v1.2.3-3.patch"
+UNIPATCH_LIST="
+			${DISTDIR}/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2
+			${FILESDIR}/${PN}-v1.2.3-1.patch
+			${FILESDIR}/${PN}-v1.2.3-2.patch
+			${FILESDIR}/${PN}-v1.2.3-3.patch
+			${FILESDIR}/${PN}-v1.2.3-4.patch
+			${FILESDIR}/${PN}-v1.2.3-6.patch
+			${FILESDIR}/${PN}-${OKV}-dos_mem_disc.patch"
 UNIPATCH_DOCS="${WORKDIR}/patches/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}/0000_README"
 
 HOMEPAGE="http://hardened.gentoo.org/rsbac"

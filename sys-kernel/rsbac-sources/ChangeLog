@@ -1,10 +1,18 @@
 # ChangeLog for sys-kernel/rsbac-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.17 2004/12/02 18:43:52 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.18 2004/12/08 20:17:09 kang Exp $
 
-  02 Dec 2004; Guillaume Destuynder <kang@gentoo.org>
-  rsbac-sources-2.4.28.ebuild:
-  marked 2.4.28 stable, 2.4.26 to be orphaned soon.
+*rsbac-sources-2.4.28-r1 (08 Dec 2004)
+
+  08 Dec 2004; Guillaume Destuynder <kang@gentoo.org>
+  +files/rsbac-sources-2.4.28-dos_mem_disc.patch,
+  -files/rsbac-sources-CAN-2004-0497.patch,
+  +files/rsbac-sources-v1.2.3-1.patch, +files/rsbac-sources-v1.2.3-2.patch,
+  +files/rsbac-sources-v1.2.3-4.patch, +files/rsbac-sources-v1.2.3-5.patch,
+  +files/rsbac-sources-v1.2.3-6.patch, -rsbac-sources-2.4.26-r5.ebuild,
+  +rsbac-sources-2.4.28-r1.ebuild, -rsbac-sources-2.4.28.ebuild:
+  Security fix bug #72452: Linux Kernel Local DoS and Memory Content
+  Disclosure Vulnerabilities
 
 *rsbac-sources-2.4.28 (29 Nov 2004)
 

@@ -1,0 +1,30 @@
+--- linux-2.4.26-rsbac-v1.2.3/include/asm-x86_64/unistd.h~	2004-07-21 09:07:21.000000000 +0200
++++ linux-2.4.26-rsbac-v1.2.3/include/asm-x86_64/unistd.h	2004-07-21 09:07:21.000000000 +0200
+@@ -427,7 +427,13 @@
+ __SYSCALL(__NR_tuxcall, sys_ni_syscall)
+ 
+ #define __NR_security			185 /* reserved for security */
++/* RSBAC */
++#ifdef CONFIG_RSBAC
++#define __NR_rsbac			185 /* reserved for security */
++__SYSCALL(__NR_rsbac, sys_rsbac)
++#else
+ __SYSCALL(__NR_security, sys_ni_syscall)
++#endif
+ 
+ #define __NR_gettid		186
+ __SYSCALL(__NR_gettid, sys_gettid)
+--- linux-2.4.26-rsbac-v1.2.3/include/asm-x86_64/ia32_unistd.h~	2004-07-21 09:08:41.000000000 +0200
++++ linux-2.4.26-rsbac-v1.2.3/include/asm-x86_64/ia32_unistd.h	2004-07-21 09:08:41.000000000 +0200
+@@ -250,6 +250,11 @@
+ #define __NR_ia32_sched_setaffinity	241
+ #define __NR_ia32_sched_getaffinity	242
+ 
++/* RSBAC */
++#ifdef CONFIG_RSBAC
++#define __NR_ia32_rsbac __NR_ia32_security
++#endif
++
+ #define IA32_NR_syscalls 245
+ 
+ #endif /* _ASM_X86_64_IA32_UNISTD_H_ */

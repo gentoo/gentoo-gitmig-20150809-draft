@@ -1,0 +1,35 @@
+--- linux-2.6.7-rsbac-v1.2.3/rsbac/adf/ff/ff_main.c~	2004-06-24 12:48:07.000000000 +0200
++++ linux-2.6.7-rsbac-v1.2.3/rsbac/adf/ff/ff_main.c	2004-06-24 12:48:07.000000000 +0200
+@@ -396,6 +396,9 @@
+                      #ifdef CONFIG_RSBAC_SOFTMODE
+                      && (attr_val.switch_target != SOFTMODE)
+                      #endif
++                     #ifdef CONFIG_RSBAC_FF_AUTH_PROT
++                     && (attr_val.switch_target != AUTH)
++                     #endif
+                     )
+                     return(DO_NOT_CARE);
+                   /* test owner's ff_role */
+--- linux-2.6.7-rsbac-v1.2.3/rsbac/adf/rc/rc_main.c~	2004-06-24 12:45:06.000000000 +0200
++++ linux-2.6.7-rsbac-v1.2.3/rsbac/adf/rc/rc_main.c	2004-06-24 12:45:06.000000000 +0200
+@@ -1366,6 +1366,9 @@
+                      #ifdef CONFIG_RSBAC_SOFTMODE
+                      && (attr_val.switch_target != SOFTMODE)
+                      #endif
++                     #ifdef CONFIG_RSBAC_RC_AUTH_PROT
++                     && (attr_val.switch_target != AUTH)
++                     #endif
+                     )
+                     return(DO_NOT_CARE);
+                   return(check_comp_rc_scd(ST_other, request, caller_pid));
+--- linux-2.6.7-rsbac-v1.2.3/rsbac/adf/acl/acl_main.c~	2004-06-24 12:49:01.000000000 +0200
++++ linux-2.6.7-rsbac-v1.2.3/rsbac/adf/acl/acl_main.c	2004-06-24 12:49:01.000000000 +0200
+@@ -510,6 +510,9 @@
+                        #ifdef CONFIG_RSBAC_SOFTMODE
+                        && (attr_val.switch_target != SOFTMODE)
+                        #endif
++                       #ifdef CONFIG_RSBAC_ACL_AUTH_PROT
++                       && (attr_val.switch_target != AUTH)
++                       #endif
+                       )
+                       return(DO_NOT_CARE);
