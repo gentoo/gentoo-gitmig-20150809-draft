@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.3.0.ebuild,v 1.1 2003/01/13 17:34:33 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.3.0.ebuild,v 1.2 2003/01/13 17:35:34 lostlogic Exp $
 
 IUSE=""
 
@@ -27,5 +27,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please read /usr/share/doc/${PN}-${PVR} for quickstart info."
+	einfo "Please read /usr/share/doc/${PN}-${PVR}/README.gentoo-${PV} for quickstart
+info."
 }
