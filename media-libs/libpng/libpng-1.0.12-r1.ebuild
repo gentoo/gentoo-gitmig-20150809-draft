@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.0.12-r1.ebuild,v 1.4 2002/07/09 08:14:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.0.12-r1.ebuild,v 1.5 2002/07/16 05:15:27 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libpng"
@@ -8,7 +8,7 @@ SRC_URI="ftp://swrinde.nde.swri.edu/pub/png/src/${P}.tar.gz"
 HOMEPAGE="http://www.libpng.org/"
 SLOT="1.0"
 LICENSE="as-is"
-KEYWORDS="all"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=sys-libs/zlib-1.1.3-r2"
 
