@@ -7,11 +7,10 @@ MD5 47574473507169515c09d2bcf0e366d7 ChangeLog 3305
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 8785333b8cac4f85424dd57b133ff275 files/digest-gnugadu-2.0.5 62
 MD5 fe366f7737ad55e66f707209f6617a08 files/digest-gnugadu-2.0.6 62
-MD5 1115f3a47254294c2ed68b483d6802c4 files/gnugadu-2.0.3-aspell-link.patch 1301
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBPz0lchej4aZK9/cRAue+AJ9+nlI+N2kXw6hHagZNxxpJDPv+WwCfTjwK
-l0tsJbRxjadJV5xg70oazXs=
-=+etM
+iD8DBQFBPz16chej4aZK9/cRAsw1AJ9SSUhicfG/96b90yExO1E4xCE/zwCfS4FZ
+4oaE8NGw3ufJl7JdAvq4ols=
+=YFE/
 -----END PGP SIGNATURE-----
