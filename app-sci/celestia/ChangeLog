@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/celestia
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/ChangeLog,v 1.18 2004/09/25 06:45:16 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/ChangeLog,v 1.19 2004/09/28 04:28:26 morfic Exp $
+
+  27 Sep 2004; Daniel Goller <morfic@gentoo.org> celestia-1.3.2.ebuild:
+  added ~ppc keyword
 
   25 Sep 2004; Daniel Goller <morfic@gentoo.org> metadata.xml:
   added maintainers to metadata.xml
