@@ -1,12 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 06d8305150035c79ee36b8f61184de04 ChangeLog 1344
+MD5 f17c483cfcc1efe580afd0b737d3f2c3 metadata.xml 264
 MD5 7c1ab1f3c0cbabce260e88ac1f4f0d42 omnibook-20021016.ebuild 675
 MD5 119e306294acbb77e07f3048b453fedc omnibook-20030403.ebuild 922
 MD5 023790f1a2e80f750444cb65e747e085 omnibook-20030828.ebuild 922
 MD5 2f0cc4019a8a78b8ddb29fc9573519d7 omnibook-20040701.ebuild 974
-MD5 243e181abccb7280e74606546e14cbc6 ChangeLog 1341
 MD5 6f28c86a5fbe8c5bb1e4180ecab60055 omnibook-20040916.ebuild 1591
-MD5 f17c483cfcc1efe580afd0b737d3f2c3 metadata.xml 264
 MD5 a3344458094ddcd21372db887e7613a4 files/digest-omnibook-20021016 70
 MD5 54b0cd349e32bc6df3e21fb8fc875d1b files/digest-omnibook-20030403 70
 MD5 19837ebc974717403728fff87f49488d files/digest-omnibook-20030828 70
 MD5 b5bf4d8a278c1e3d08ff2dbdba4868e2 files/digest-omnibook-20040701 70
 MD5 e35908816aae2b9d8c6753e0a34bc5fc files/digest-omnibook-20040916 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBmRjyI1lqEGTUzyQRAjDwAJ9cw08NA5K1pHO9I2bdD3FT3okaFQCg0ZTq
+387j+l0lRKV+/yWwMo4/ghc=
+=uEgR
+-----END PGP SIGNATURE-----
