@@ -1,10 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.23_pre20040129.ebuild,v 1.2 2004/02/09 10:55:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.23_pre20040129.ebuild,v 1.3 2004/02/11 21:04:54 dholm Exp $
+
+inherit flag-o-matic
 
 MY_PV="0.8.23-20040129"
 S="${WORKDIR}/${PN}-${MY_PV}"
-DESCRIPTION="An amiga emulator"
+DESCRIPTION="The Umiquious Amiga Emulator"
 HOMEPAGE="http://www.rcdrummond.net/uae/"
 SRC_URI="http://www.rcdrummond.net/uae/uae-${MY_PV}/uae-${MY_PV}.tar.bz2"
 
@@ -21,7 +23,13 @@ src_compile() {
 	ewarn "Compiling the CPU-core requires a substantial amount of RAM."
 	ewarn "Make sure that you have at least 512MB of RAM+SWAP available."
 
-	econf || die "./configure failed"
+	replace-flags "-O3" "-O2"
+	use sdl && myconf="--with-sdl-sound --with-sdl-gfx"
+
+	econf ${myconf} \
+		--enable-threads \
+		--enable-scsi-device \
+		|| die "./configure failed"
 
 	emake -j1 || die "emake failed"
 }
