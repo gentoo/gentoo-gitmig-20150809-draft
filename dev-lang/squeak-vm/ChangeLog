@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/squeak-vm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-vm/ChangeLog,v 1.4 2003/05/21 14:35:19 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-vm/ChangeLog,v 1.5 2003/10/11 09:38:19 tantive Exp $
+
+*squeak-vm-3.6.5424 (11 Oct 2003)
+
+  11 Oct 2003; Michael Imhof <tantive@gentoo.org>:
+  Version bump.  Ebuild submitted by Christopher Verges
+  <squirrel@headnut.org>. Closes #30530
 
 *squeak-vm-3.5.5180 (21 May 2003)
 
