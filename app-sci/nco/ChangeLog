@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/nco
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/nco/ChangeLog,v 1.3 2003/03/11 06:29:26 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/nco/ChangeLog,v 1.4 2004/03/05 10:10:18 phosphan Exp $
+
+*nco-2.9.1 (05 Mar 2004)
+
+  05 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> nco-2.9.1.ebuild:
+  New version, tarball packaged from CVS.
 
 *nco-2.7.1 (10 mar 2003)
 
