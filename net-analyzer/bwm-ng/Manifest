@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 cc999c8419ce36485b042254eb49a1f1 ChangeLog 501
 MD5 e4865e89eff93a4083c1cf30c80cbc3f bwm-ng-0.4.ebuild 590
 MD5 3d4dfb4356f56ee83e0f426163e3b6cf metadata.xml 231
-MD5 c2da28542ff05e839b3cde07cf51916f ChangeLog 388
+MD5 343642902bb0c2d87e04e468b0f8bf24 bwm-ng-0.5.ebuild 779
 MD5 2da56395dd76e61e1f673c5ee57f071f files/digest-bwm-ng-0.4 61
+MD5 235b736d7fc5e72871a9a4c6b98ce828 files/digest-bwm-ng-0.5 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB8rP2mPFBzbX68WERAmocAJ4g1m541Tcymy1Nc7orGhtcZUO4rACfQWn9
-h2Wh336ly3KUyUPGy3+pV/0=
-=9XEI
+iD8DBQFCHJ8GmPFBzbX68WERAu1iAJ9SWtaWdvxNaJ9XL/EA2x6mUEJgzgCdG3x2
+/MccBEdFgPfU8w+w6wO02lE=
+=En2g
 -----END PGP SIGNATURE-----
