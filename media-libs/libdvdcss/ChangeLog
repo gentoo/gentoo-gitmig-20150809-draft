@@ -1,10 +1,13 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.14 2003/02/12 07:09:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.15 2003/03/10 22:36:59 agriffis Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *libdvdcss-1.2.5 (01 Feb 2003)
+
+  10 Mar 2003; Aron Griffis <agriffis@gentoo.org> libdvdcss-1.2.5.ebuild:
+  Mark stable on alpha
 
   01 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.  Fixed homepage and download URLs.

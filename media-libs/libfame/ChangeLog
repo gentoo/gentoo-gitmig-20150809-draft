@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libfame
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.9 2003/03/10 21:44:07 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.10 2003/03/10 22:35:07 agriffis Exp $
 
 *libfame-0.9.0 (30 Sep 2002)
+
+  10 Mar 2003; Aron Griffis <agriffis@gentoo.org> libfame-0.9.0.ebuild:
+  Add ~alpha to KEYWORDS
 
   10 Mar 2003; Martin Holzer <mholzer@gentoo.org> libfame-0.9.0.ebuild :
   Filtering out -fprefetch-loop-arrays. Closes #17032.
