@@ -9,7 +9,6 @@ ACCEPT_KEYWORDS="amd64"
 ARCH="amd64"
 CHOST="x86_64-pc-linux-gnu"
 
-COMPILER="gcc3"
 CFLAGS="-O2 -ftracer"
 CXXFLAGS="${CFLAGS}"
 

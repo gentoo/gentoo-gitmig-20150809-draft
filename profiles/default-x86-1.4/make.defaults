@@ -17,5 +17,4 @@ opengl pam pdflib png python qt quicktime readline sdl slang spell ssl
 svga tcpd truetype X xml2 xmms xv zlib"
 
 ARCH="x86"
-COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"

@@ -5,7 +5,6 @@ USE="x86 berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
 GRP_STAGE23_USE="x86 berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
 
 ARCH="x86"
-COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"
 FEATURES="strict sfperms"
 POLICYDIR="/etc/security/selinux/src/policy"

@@ -9,5 +9,4 @@ pam png perl python readline spell ssl
 tcpd truetype zlib"
 
 ARCH="arm"
-COMPILER="gcc3"
 ACCEPT_KEYWORDS="arm"

@@ -28,8 +28,6 @@ USE="arts apm avi berkdb crypt cups encode esd fbcon foomaticdb gdbm gif gtk gno
 # The following USE flags are NOT recommended for sparc64 and might cause breakage...
 # mmx, 3dnow, sse, svga
 
-COMPILER="gcc3"
-
 ACCEPT_KEYWORDS="sparc"
 FEATURES="sandbox ccache"
 

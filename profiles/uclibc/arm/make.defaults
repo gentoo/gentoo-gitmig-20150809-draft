@@ -4,7 +4,6 @@ STAGE1_USE="uclibc"
 
 ARCH="arm"
 PORTAGE_LIBC="uclibc"
-COMPILER="gcc3"
 ACCEPT_KEYWORDS="arm"
 
 # 

@@ -14,7 +14,6 @@ GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurs
 USE="x86 oss apm arts avi berkdb crypt cups encode foomaticdb gdbm gif gpm imlib jpeg libg++ libwww mad mikmod motif mpeg ncurses nls oggvorbis opengl pam pdflib png python quicktime readline sdl slang spell ssl svga tcpd truetype X xml2 xmms xv zlib"
 
 ARCH="x86"
-COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"
 CFLAGS="-O2 -pipe"
 CXXFLAGS="${CFLAGS}"

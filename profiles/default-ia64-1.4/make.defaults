@@ -47,5 +47,4 @@ zlib
 "
 
 ARCH="ia64"
-COMPILER="gcc3"
 ACCEPT_KEYWORDS="ia64"

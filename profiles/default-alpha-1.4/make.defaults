@@ -47,5 +47,4 @@ zlib
 "
 
 ARCH="alpha"
-COMPILER="gcc3"
 ACCEPT_KEYWORDS="alpha"

@@ -13,7 +13,6 @@ opengl pam pdflib png python -qt quicktime readline sdl slang spell sse ssl
 tcpd truetype X xml2 xmms xv zlib"
 
 ARCH="amd64"
-COMPILER="gcc3"
 ACCEPT_KEYWORDS="amd64"
 CFLAGS="-O2 -pipe"
 CHOST="x86_64-pc-linux-gnu"

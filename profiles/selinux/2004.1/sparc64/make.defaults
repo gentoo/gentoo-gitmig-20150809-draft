@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/sparc64/make.defaults,v 1.6 2004/06/26 23:29:26 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/sparc64/make.defaults,v 1.7 2004/08/25 14:03:24 vapier Exp $
 
 ARCH="sparc"
 
@@ -9,7 +9,6 @@ CHOST=sparc-unknown-linux-gnu
 PLATFORM=sparc64-unknown-linux-gnu
 PROFILE_ARCH="sparc64"
 
-COMPILER="gcc3"
 CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
 

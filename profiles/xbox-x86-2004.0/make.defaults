@@ -18,5 +18,4 @@ svga tcpd truetype X xml2 xmms xv zlib"
 
 ARCH="x86"
 PROFILE_ARCH="xbox"
-COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"

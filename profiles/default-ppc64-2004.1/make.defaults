@@ -31,6 +31,3 @@ motif opengl mozilla png truetype ppc64 cups foomaticdb"
 # 3dfx 3dnow avi icc icc-pgo mmx svga sse
 
 ACCEPT_KEYWORDS="ppc64"
-
-COMPILER="gcc3"
-

@@ -29,7 +29,5 @@ USE="berkdb crypt cups fbcon foomaticdb gdbm imlib jpeg libwww mikmod motif mad 
 # The following USE flags are NOT recommended for sparc32 and might cause breakage...
 # mmx, 3dnow, sse, svga, gpm,  
 
-COMPILER="gcc3"
-
 ACCEPT_KEYWORDS="s390"
 

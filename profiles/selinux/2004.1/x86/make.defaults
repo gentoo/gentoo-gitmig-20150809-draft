@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86/make.defaults,v 1.5 2004/06/26 23:29:26 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86/make.defaults,v 1.6 2004/08/25 14:03:24 vapier Exp $
 
 USE="x86 berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
 GRP_STAGE23_USE="x86 berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
 
 ARCH="x86"
-COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"
 FEATURES="strict sfperms"
 POLICYDIR="/etc/security/selinux/src/policy"

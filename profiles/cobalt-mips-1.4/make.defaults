@@ -27,6 +27,3 @@ CXXFLAGS=${CFLAGS}
 USE="slang readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips"
 
 ACCEPT_KEYWORDS="mips"
-
-COMPILER="gcc3"
-

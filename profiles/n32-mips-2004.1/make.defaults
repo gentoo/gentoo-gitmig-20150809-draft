@@ -26,8 +26,6 @@ USE="slang readline gpm berkdb gdbm tcpd pam crypt libwww ssl nls perl python sd
 
 ACCEPT_KEYWORDS="mips ~mips"
 
-COMPILER="gcc3"
-
 #Make sure everything is compiled as N32
 #export LDEMULATION=elf32btsmipn32
 #export GNUTARGET=elf32-ntradbigmips

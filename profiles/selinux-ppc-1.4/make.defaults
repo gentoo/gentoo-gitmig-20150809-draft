@@ -29,7 +29,5 @@ GRP_STAGE23_USE="ppc berkdb crypt ncurses pam python readline selinux ssl tcpd z
 
 ACCEPT_KEYWORDS="ppc"
 
-COMPILER="gcc3"
-
 POLICYDIR="/etc/security/selinux/src/policy"
 FEATURES="strict sfperms"

@@ -4,7 +4,6 @@ STAGE1_USE="uclibc"
 
 ARCH="x86"
 PORTAGE_LIBC="uclibc"
-COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"
 
 # 

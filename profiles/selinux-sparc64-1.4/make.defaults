@@ -16,8 +16,6 @@ CXXFLAGS=${CFLAGS}
 USE="sparc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
 GRP_STAGE23_USE="x86 berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
 
-COMPILER="gcc3"
-
 ACCEPT_KEYWORDS="sparc"
 FEATURES="sandbox ccache strict sfperms"
 
