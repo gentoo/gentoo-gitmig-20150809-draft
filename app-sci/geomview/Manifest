@@ -1,6 +1,0 @@
-MD5 dafaee6979042fbea5d26761057f9c35 ChangeLog 1012
-MD5 7c7ab93b69e1701c89c2c69a091dc678 geomview-1.8.1-r3.ebuild 829
-MD5 3fbaa47f9b0997b5153ab4c51e2543e8 metadata.xml 418
-MD5 3d18ce933a28b57ce8532b5855eb4c18 files/geomview-1.8.1-configure.diff 345
-MD5 516cbbb8f525f64c20a456811b93c9fc files/geomview-1.8.1-stdiostream.diff 3679
-MD5 4a24ace30f19b0c7d510c15d67f60ee2 files/digest-geomview-1.8.1-r3 67
