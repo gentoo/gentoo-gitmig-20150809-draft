@@ -1,14 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.0.ebuild,v 1.1 2003/09/08 03:35:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.0.ebuild,v 1.2 2003/10/15 20:31:08 vapier Exp $
 
 inherit enlightenment flag-o-matic gcc
 
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
 HOMEPAGE="http://www.enlightenment.org/pages/imlib2.html"
 SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
-#mirror://gentoo/${P}.tar.bz2
-#http://wh0rd.tk/gentoo/distfiles/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
@@ -24,20 +22,22 @@ DEPEND="${DEPEND}
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	virtual/x11"
 
-#S=${WORKDIR}/${PN}
-
-replace-flags k6-3 i586
-replace-flags k6-2 i586
-replace-flags k6 i586
-[ ${ARCH} = alpha ] && append-flags -fPIC
+#S=${WORKDIR}/${PN}		# cvs
+S=${WORKDIR}/${P}		# release
 
 src_compile() {
+	# cvs only stuff
 #	cp autogen.sh{,.old}
 #	sed -e 's:.*configure.*::' autogen.sh.old > autogen.sh
 #	env USER=blah WANT_AUTOCONF_2_5=1 ./autogen.sh || die "could not autogen"
 #	cd libltdl
 #	env WANT_AUTOCONF_2_5=1 autoconf || die
 #	cd ${S}
+
+	replace-flags k6-3 i586
+	replace-flags k6-2 i586
+	replace-flags k6 i586
+	[ ${ARCH} = alpha ] && append-flags -fPIC
 
 	econf \
 		`use_enable mmx` \
