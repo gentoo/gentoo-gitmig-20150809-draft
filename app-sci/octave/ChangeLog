@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/octave
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.13 2003/02/24 01:38:35 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.14 2003/03/30 06:42:38 george Exp $
+
+  29 Mar 2003; George Shapovalov <george@gentoo.org> octave-2.0.17-r2.ebuild :
+  some clean-ups:
+  removed virtual/glibc from DEPEND, as it is quite populated anyway,
+  removed PROVIDE, as nothing depends on octave and its been quite some time since it was moved from dev-lang
+  Also corrected default-1.0/packages profile entry, to pick up latest release in 2.0* series.
 
   23 Feb 2003; George Shapovalov <george@gentoo.org> octave-2.0.17-r2.ebuild :
   looks like tetex is not an optional but required dependency for 2.0.17, 
