@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.82 2004/11/01 14:00:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.83 2004/11/09 16:12:13 vapier Exp $
+
+  09 Nov 2004; Mike Frysinger <vapier@gentoo.org> wine-20041019-r3.ebuild:
+  USE=lcms support #70520.
 
 *wine-20041019-r3 (01 Nov 2004)
 

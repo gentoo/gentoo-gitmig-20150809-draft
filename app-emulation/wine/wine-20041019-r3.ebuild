@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r3.ebuild,v 1.3 2004/11/02 23:45:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r3.ebuild,v 1.4 2004/11/09 16:12:13 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/Wine-${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-*"
-IUSE="X alsa arts cups debug nas opengl gif glut jack jpeg oss ncurses doc"
+IUSE="X alsa arts cups debug nas opengl gif glut jack jpeg oss ncurses doc lcms"
 
 RDEPEND=">=media-libs/freetype-2.0.0
 	ncurses? ( >=sys-libs/ncurses-5.2 )
@@ -24,7 +24,8 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	opengl? ( virtual/opengl )
 	gif? ( media-libs/libungif )
 	jpeg? ( media-libs/jpeg )
-	glut? ( virtual/glut )"
+	glut? ( virtual/glut )
+	lcms? ( media-libs/lcms )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	sys-devel/bison
@@ -61,9 +62,11 @@ src_compile() {
 	config_cache gif header_gif_lib_h
 	config_cache glut lib_glut_glutMainLoop
 	config_cache jpeg header_jpeglib_h
-	config_cache oss sys_soundcard_h header_machine_soundcard_h header_soundcard_h
+	config_cache oss header_sys_soundcard_h header_machine_soundcard_h header_soundcard_h
+	config_cache lcms header_lcms_h
 
 	strip-flags
+	use lcms && append-flags -I${ROOT}/usr/include/lcms
 
 	#	$(use_enable amd64 win64)
 	# USE=debug is broken in this release
