@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r3.ebuild,v 1.1 2001/07/21 18:35:45 tadpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r3.ebuild,v 1.2 2001/07/21 18:59:53 tadpol Exp $
 
 A="${P}.tar.bz2 ${P}.dif"
 S=${WORKDIR}/${P}
@@ -54,8 +54,8 @@ src_install() {
 	  dodir /var/cron/${i}
  	  fperms 700 /var/cron/${i}
 	  fowners at.at /var/cron/${i}
+	  touch ${D}/var/cron/${i}/.SEQ
 	done
-	touch ${D}/var/cron/atjobs/.SEQ
 
 	dodir /etc/rc.d/init.d
 	cp ${FILESDIR}/atd ${D}/etc/rc.d/init.d/
