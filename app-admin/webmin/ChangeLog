@@ -1,15 +1,19 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.51 2004/06/16 13:42:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.52 2004/06/16 17:16:11 eradicator Exp $
 
-    12 Jun 2004; Jason Wever <weeve@gentoo.org> webmin-1.150.ebuild:
-  Stable on sparc wrt to bug #53375.
+  16 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> -webmin-1.080.ebuild,
+  -webmin-1.140-r1.ebuild:
+  Removing insecure versions.  Strandens s390 without a stable version... sorry.
 
   16 Jun 2004; Guy Martin <gmsoft@gentoo.org> webmin-1.150.ebuild:
   Marked stable on hppa.
 
   13 Jun 2004; Luca Barbato <lu_zero@gentoo.org> webmin-1.150.ebuild:
   Marked ppc
+
+  12 Jun 2004; Jason Wever <weeve@gentoo.org> webmin-1.150.ebuild:
+  Stable on sparc wrt to bug #53375.
 
   12 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> -webmin-1.110.ebuild,
   -webmin-1.130-r1.ebuild, -webmin-1.140.ebuild:
