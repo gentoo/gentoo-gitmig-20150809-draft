@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.6.ebuild,v 1.15 2004/10/05 19:32:41 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.6.ebuild,v 1.16 2004/11/11 14:57:52 liquidx Exp $
 
 inherit flag-o-matic virtualx gnome2 eutils alternatives
 
@@ -143,20 +143,24 @@ src_compile() {
 	# Use Mozilla NSS/NSPR libs if 'mozilla' *and* 'ssl' in USE
 	if use ssl && use mozilla; then
 		if has_version "dev-libs/nspr"; then
-			NSS_LIB=/usr/lib
-			NSS_INC=/usr/include
+			NSS_LIB=/usr/lib/nss
+			NSPR_LIB=/usr/lib/nspr
+			NSS_INC=/usr/include/nss
+			NSPR_INC=/usr/include/nspr
 		elif has_version "net-www/mozilla"; then
 			NSS_LIB=/usr/lib/mozilla
-			NSS_INC=/usr/lib/mozilla/include
+			NSPR_LIB=/usr/lib/mozilla
+			NSS_INC=/usr/lib/mozilla/include/nss
+			NSPR_INC=/usr/lib/mozilla/include/nspr
 		else
 			eerror "Neither net-www/mozilla nor dev-libs/nspr found."
 			die "unexpected error. unable to find nss/nspr"
 		fi
 
 		myconf="${myconf} --enable-nss=yes \
-			--with-nspr-includes=${NSS_INC}/nspr \
-			--with-nspr-libs=${NSS_LIB} \
-			--with-nss-includes=${NSS_INC}/nss \
+			--with-nspr-includes=${NSPR_INC} \
+			--with-nspr-libs=${NSPR_LIB} \
+			--with-nss-includes=${NSS_INC} \
 			--with-nss-libs=${NSS_LIB}"
 	else
 		myconf="${myconf} --without-nspr-libs --without-nspr-includes \
