@@ -1,0 +1,10 @@
+# ChangeLog for media-video/konverter
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/ChangeLog,v 1.1 2004/03/18 20:14:47 centic Exp $
+
+*konverter-0.5 (18 Mar 2004)
+
+  18 Mar 2004; Dominik Stadler <centic@gentoo.org> konverter-0.5.ebuild:
+  New ebuild, thanks to Corey Quilliam <cquilliam@thegoodtimes.ca>, see Bug
+  44298.
+
