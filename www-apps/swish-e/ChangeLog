@@ -1,0 +1,20 @@
+# ChangeLog for net-www/swish-e
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/ChangeLog,v 1.1 2004/08/15 15:41:43 stuart Exp $
+
+*swish-e-2.2.2-r1 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +swish-e-2.2.2-r1.ebuild:
+  Moved from net-www/swish-e to www-apps/swish-e.
+
+*swish-e-2.2.2-r1 (20 Jul 2003)
+
+  20 Jul 2003; Michael Cummings <mcummings@gentoo.org>
+  swish-e-2.2.2-r1.ebuild:
+  Perl friendlier version submitted by Rigo Ketelings <rigo@home.nl> in bug
+  23910. Thanks rigo!
+
+*swish-e-2.2.2 (16 Mar 2003)
+  16 Mar 2003; J.Alberto Suárez López <bass@gentoo.org> swish-e-2.2.2.ebuild:
+  initial ebuild
+
