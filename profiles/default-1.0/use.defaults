@@ -1,6 +1,5 @@
 3dnow
 #fbcon		
-#ldap
 #libg++
 #mitshm
 mmx
@@ -9,7 +8,6 @@ mmx
 #oss
 #qtmt
 #sse
-gnome-libs	gnome-base/gnome-libs
 aalib		media-libs/aalib	
 alsa		media-libs/alsa-lib
 arts		kde-base/kdelibs
@@ -21,6 +19,7 @@ gdbm		sys-libs/gdbm
 ggi		media-libs/libggi
 gif		media-libs/giflib
 gnome		gnome-base/gnome
+gnome-libs	gnome-base/gnome-libs
 gpm		sys-libs/gpm
 gphoto2		media-gfx/gphoto2
 gtk		x11-libs/gtk+
@@ -29,6 +28,7 @@ guile		dev-util/guile
 imlib		media-libs/imlib
 java		virtual/jre
 kde		kde-base/kde
+ldap		net-nds/openldap
 libwww		net-libs/libwww
 motif		x11-libs/openmotif
 mozilla		net-www/mozilla

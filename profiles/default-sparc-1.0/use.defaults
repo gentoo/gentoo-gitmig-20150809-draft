@@ -1,6 +1,5 @@
 3dnow
 #fbcon		
-#ldap
 #libg++
 #mitshm
 mmx
@@ -29,6 +28,7 @@ guile		dev-util/guile
 imlib		media-libs/imlib
 java		virtual/jre
 kde		kde-base/kde
+ldap		net-nds/openldap
 libwww		net-libs/libwww
 motif		x11-libs/openmotif
 mozilla		net-www/mozilla
@@ -54,3 +54,4 @@ tcpd		sys-apps/tcp-wrappers
 tetex		app-text/tetex
 tiff		media-libs/tiff
 X		x11-base/xfree
+

@@ -1,7 +1,6 @@
 #gif
 #mmx
 #3dnow
-#ldap
 #odbc
 #fbcon		
 #qtmt
@@ -52,3 +51,4 @@ motif		x11-libs/openmotif
 opengl		virtual/opengl
 mozilla		net-www/mozilla
 gphoto2		media-gfx/gphoto2
+ldap		net-nds/openldap

@@ -1,7 +1,6 @@
 #gif
 #mmx
 #3dnow
-#ldap
 #odbc
 #fbcon		
 #qtmt
@@ -52,4 +51,5 @@ kde			kde-base/kde
 motif		x11-libs/openmotif
 opengl		virtual/opengl
 mozilla		net-www/mozilla
+ldap		net-nds/openldap
 
