@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.9.ebuild,v 1.3 2003/06/13 22:49:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.9.ebuild,v 1.4 2003/06/14 07:18:45 lostlogic Exp $
 
 inherit eutils
 
@@ -67,11 +67,10 @@ pkg_setup() {
 			# system
 			if [ -f ${ROOT}/etc/sasl2/smtpd.conf ]
 			then
-				mv ${ROOT}/usr/lib/sasl2/smtpd.conf \
+				mv ${ROOT}/etc/sasl2/smtpd.conf \
 					${ROOT}/etc/sasl2/._cfg0000_smtpd.conf
-			else
-				mv ${ROOT}/usr/lib/sasl2/smtpd.conf ${ROOT}/etc/sasl2
 			fi
+			mv ${ROOT}/usr/lib/sasl2/smtpd.conf ${ROOT}/etc/sasl2
 			eend
 		fi
 	fi

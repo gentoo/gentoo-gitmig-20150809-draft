@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.72 2003/06/13 22:49:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.73 2003/06/14 07:18:45 lostlogic Exp $
+
+  14 Jun 2003; Brandon Low <lostlogic@gentoo.org> postfix-2.0.10-r1.ebuild,
+  postfix-2.0.11.ebuild, postfix-2.0.12.ebuild, postfix-2.0.9.ebuild:
+  Ok, so apparently putting the user's original config file from the wrong
+  location in a ._cfg file was a Bad Thing (TM) because too many people don't
+  merge their config files. I therefore have changed it so that the OTHER file
+  (the blank original config file, if it existed) is saved in a ._cfg which the
+  user can ignore as seems to be standard proceedure.
 
   13 Jun 2003; Brandon Low <lostlogic@gentoo.org> postfix-2.0.10-r1.ebuild,
   postfix-2.0.9.ebuild:
