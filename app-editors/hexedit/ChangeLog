@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/hexedit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.15 2004/08/05 23:40:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.16 2004/08/11 16:18:52 gongloo Exp $
 
 *hexedit-1.2.10 (06 Aug 2004)
+
+  11 Aug 2004; Hasan Khalil <gongloo@gentoo.org> hexedit-1.2.10.ebuild:
+  Stable on macos.
 
   06 Aug 2004; Sven Wegener <swegener@gentoo.org> +hexedit-1.2.10.ebuild,
   hexedit-1.2.2.ebuild, hexedit-1.2.9.ebuild:
