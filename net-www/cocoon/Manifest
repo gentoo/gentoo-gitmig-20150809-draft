@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9e38c0f4279d792be1087c438c497fc4 cocoon-2.1.4.ebuild 1864
-MD5 85e494ef83d5a47087bb795cb864e14e ChangeLog 1985
+MD5 33b813b12c67e146877568d28f5b9856 ChangeLog 2066
+MD5 beebb1bd6835211b1f05b3b1746ebd2e cocoon-2.1.4.ebuild 1866
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 4d2b324e1a75765047279e1f1ab664d0 files/cocoon.properties 15046
 MD5 feb46c8882b1927440e2f11e132eb22b files/digest-cocoon-2.1.4 70
 MD5 54c9c8347c6bf0f8d996be4c4a6144bf files/web.xml 826
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBBsCq/rLF9B432nYRAhTzAJ9ApmznccPh9OvzDBVw1y2FBihNGwCdHnT+
-gz/6Fx+4EBQ/tnSrEb4pdsU=
-=VrN4
------END PGP SIGNATURE-----
