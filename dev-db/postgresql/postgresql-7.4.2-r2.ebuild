@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r2.ebuild,v 1.11 2004/06/13 00:08:06 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r2.ebuild,v 1.12 2004/06/16 16:18:26 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
 DESCRIPTION="sophisticated Object-Relational DBMS."
 HOMEPAGE="http://www.postgresql.org/"
 P_HIERPG="hier-Pg7.4-0.5.2"
-SRC_URI="mirror://postgresql/v${PV}/${PN}-base-${PV}.tar.bz2
-	mirror://postgresql/v${PV}/${PN}-opt-${PV}.tar.bz2
-	doc? ( mirror://postgresql/v${PV}/${PN}-docs-${PV}.tar.bz2 )
+SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${PV}.tar.bz2
+	mirror://postgresql/source/v${PV}/${PN}-opt-${PV}.tar.bz2
+	doc? ( mirror://postgresql/source/v${PV}/${PN}-docs-${PV}.tar.bz2 )
 	pg-hier? ( http://gppl.terminal.ru/${P_HIERPG}.tar.gz )"
 
 LICENSE="POSTGRESQL"
