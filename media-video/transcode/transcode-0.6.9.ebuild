@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.9.ebuild,v 1.1 2003/08/28 22:27:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.9.ebuild,v 1.2 2003/08/28 22:28:49 mholzer Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -43,7 +43,7 @@ src_unpack() {
 	unpack ${A}
 
 	# does not remove installed xvidcore export filter
-	patch -p0 <${FILESDIR}/${P}-makefile.patch || die
+	epatch ${FILESDIR}/${P}-makefile.patch
 
 	if has_version  '>=media-libs/netpbm-9.13'
 	then
