@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.ebuild,v 1.9 2004/01/09 17:00:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.ebuild,v 1.10 2004/02/29 15:16:53 aliz Exp $
 
 inherit flag-o-matic
 
@@ -25,9 +25,9 @@ S=${WORKDIR}/${PN}${PV}
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-makecfg.patch || die
-	patch -p1 < ${FILESDIR}/${P}-argv.patch || die
-	patch -p1 < ${FILESDIR}/${P}-varinit.patch || die
+	epatch ${FILESDIR}/${P}-makecfg.patch
+	epatch ${FILESDIR}/${P}-argv.patch
+	epatch ${FILESDIR}/${P}-varinit.patch
 }
 
 src_compile() {
