@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.4.ebuild,v 1.2 2003/12/08 06:33:08 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.4.ebuild,v 1.3 2003/12/08 17:13:39 brad Exp $
 
 inherit nsplugins eutils
 
@@ -32,7 +32,6 @@ RDEPEND="virtual/x11
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
-	crypt? ( >=app-crypt/gnupg-1.2.1 )
 	!net-mail/mozilla-thunderbird"
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mozilla-thunderbird-bin
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird-bin/ChangeLog,v 1.1 2003/12/06 17:06:25 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird-bin/ChangeLog,v 1.2 2003/12/08 17:13:39 brad Exp $
+
+  08 Dec 2003; Brad Laue <brad@gentoo.org> mozilla-thunderbird-bin-0.4.ebuild:
+  Remove spurious dependency on gnupg.
 
 *mozilla-thunderbird-bin-0.4 (06 Dec 2003)
 
