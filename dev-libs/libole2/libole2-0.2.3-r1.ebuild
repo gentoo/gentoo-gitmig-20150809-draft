@@ -8,7 +8,7 @@ DESCRIPTION="libole2"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=dev-libs/glib-1.2.8"
+DEPEND="=dev-libs/glib-1.2*"
 
 src_compile() {
 	./configure --host=${CHOST} 					\

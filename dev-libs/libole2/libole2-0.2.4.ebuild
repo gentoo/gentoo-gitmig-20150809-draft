@@ -1,14 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/libole2-0.2.4.ebuild,v 1.2 2001/11/10 12:05:20 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/libole2-0.2.4.ebuild,v 1.3 2002/04/12 17:48:26 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libole2"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=dev-libs/glib-1.2.10-r1"
+DEPEND="=dev-libs/glib-1.2*"
 
 src_compile() {
 

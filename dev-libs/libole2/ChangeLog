@@ -1,7 +1,12 @@
 # ChangeLog for dev-libs/libole2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/ChangeLog,v 1.2 2002/04/12 17:48:26 spider Exp $
 
+
+*libole2-0.2.4 (1 Feb 2002)
+  11 Apr 2002; Spider <spider@gentoo.org>
+  Update all glib dependencies to use glib-1.2*  in preparation of unmasking the glib-2.0.1 packages
+    
 *libole2-0.2.4 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
