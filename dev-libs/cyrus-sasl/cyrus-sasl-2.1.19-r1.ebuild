@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.19-r1.ebuild,v 1.2 2004/08/30 23:39:42 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.19-r1.ebuild,v 1.3 2004/09/06 00:12:16 ciaranm Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
@@ -46,7 +46,7 @@ pkg_setup() {
 		echo
 		ewarn "Waiting 10 seconds before starting..."
 		ewarn "(Control-C to abort)..."
-		sleep 10
+		epause 10
 	fi
 
 	echo
@@ -59,7 +59,7 @@ pkg_setup() {
 	einfo "Don't forget to restart the service: \`/etc/init.d/saslauthd restart\`."
 	echo
 	einfo "Pause 10 seconds before continuing."
-	sleep 10
+	epause 10
 }
 
 src_unpack() {
