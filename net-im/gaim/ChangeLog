@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.209 2004/07/28 17:08:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.210 2004/07/29 18:56:03 geoman Exp $
+
+  29 Jul 2004; Stephen P. Becker <geoman@gentoo.org> gaim-0.80.ebuild:
+  Stable on mips.
 
   28 Jul 2004; <agriffis@gentoo.org> gaim-0.80.ebuild:
   stable on alpha and ia64
