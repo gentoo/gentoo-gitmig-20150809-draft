@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.24 2003/07/30 16:08:10 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.25 2003/08/01 15:20:22 lostlogic Exp $
+
+*freenet-0.5.2.1-r4 (01 Aug 2003)
+
+  01 Aug 2003; Brandon Low <lostlogic@gentoo.org> freenet-0.5.2.1-r4.ebuild,
+  files/rc.freenet3, files/start-freenet.sh:
+  Add support for logging of stderr and stdout from the init script. Required
+  giving the freenet user a shell :-(
 
   30 Jul 2003; Brandon Low <lostlogic@gentoo.org> freenet-0.5.2.1-r3.ebuild:
   Minor change to where unstable snaps are grabbed from
