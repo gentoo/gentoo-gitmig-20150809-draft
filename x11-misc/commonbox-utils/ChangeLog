@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/commonbox-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/commonbox-utils/ChangeLog,v 1.12 2003/06/23 18:42:49 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/commonbox-utils/ChangeLog,v 1.13 2003/09/28 17:23:22 pyrania Exp $
+
+  28 Sep 2003; Markus Nigbur <pyrania@gentoo.org> commonbox-utils-0.4.ebuild:
+  Added ~amd64 keyword. request by brad@mainstreetsoftworks.com in bug #29806.
 
 *commonbox-utils-0.4 (23 Jun 2003)
 
