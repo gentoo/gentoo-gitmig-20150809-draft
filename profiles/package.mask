@@ -305,7 +305,6 @@ dev-libs/libiconv
 
 # Fails with new Java scheme (karltk) 
 =net-www/tomcat-3.2.2
-=net-www/tomcat-4.0.1
 
 # Moved all of gkrellm stuff to x11-misc
 app-admin/gkrellm-gnome
