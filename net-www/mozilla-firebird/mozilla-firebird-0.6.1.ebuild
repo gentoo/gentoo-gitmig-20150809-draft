@@ -1,11 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6.1.ebuild,v 1.13 2003/09/06 02:05:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6.1.ebuild,v 1.14 2003/09/12 23:11:09 lu_zero Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
 # Added to get MozillaFirebird to compile on sparc.
 replace-sparc64-flags
+if [ "`use ppc`" -a "$(gcc-major-version)" -eq "3" -a "$(gcc-minor-version)" -eq "3" ]
+then
+
+append-flags -fno-strict-aliasing
+
+fi
+
 
 S=${WORKDIR}/mozilla
 
@@ -13,7 +20,7 @@ DESCRIPTION="The Mozilla Firebird Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firebird/"
 SRC_URI="http://ftp.mozilla.org/pub/firebird/releases/${PV}/MozillaFirebird-source-${PV}.tar.bz2"
 
-KEYWORDS="x86 ~ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
 IUSE="java gtk2 ipv6 gnome moznoxft"
