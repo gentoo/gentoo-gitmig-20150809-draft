@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.2.3.ebuild,v 1.4 2004/06/24 22:11:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.2.3.ebuild,v 1.5 2004/07/14 16:01:57 agriffis Exp $
 
 DESCRIPTION="KDE 3.2 - merge this to pull in all non-developer kde-base/* packages"
 HOMEPAGE="http://www.kde.org/"
@@ -8,6 +8,7 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="3.2"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+IUSE=""
 
 # removed: kdebindings, kdesdk, kdoc since these are developer-only packages
 RDEPEND="~kde-base/kdelibs-${PV}
