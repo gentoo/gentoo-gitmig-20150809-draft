@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.6 2004/11/23 16:54:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.7 2004/11/23 20:07:52 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -23,8 +23,8 @@ SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 	SRC_URI="${SRC_URI} mirror://gentoo/${P}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
-IUSE="nls bootstrap build multitarget uclibc cross"
-use cross \
+IUSE="nls bootstrap build multitarget uclibc multislot"
+use multislot \
 	&& SLOT="${CTARGET}-${PV}" \
 	|| SLOT="${CTARGET}"
 
