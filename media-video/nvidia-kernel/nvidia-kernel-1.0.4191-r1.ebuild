@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191-r1.ebuild,v 1.6 2003/02/17 21:24:29 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191-r1.ebuild,v 1.7 2003/02/17 23:19:03 azarah Exp $
 
 inherit eutils
 
@@ -66,6 +66,12 @@ src_unpack() {
 		then
 			EPATCH_SINGLE_MSG="Applying module loader no common sections..." \
 			epatch ${FILESDIR}/${NV_PACKAGE}-2.5.54.diff
+		fi
+
+		if [ "${KV_micro}" -gt 60 ]
+		then
+			EPATCH_SINGLE_MSG="Applying include patch for 2.5.61+..." \
+		    epatch ${FILESDIR}/${NV_PACKAGE}-2.5.61.diff
 		fi
 	else
 		# This is a minor patch to make it work with rmap enabled kernels
