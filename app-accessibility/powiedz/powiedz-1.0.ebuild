@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/powiedz-1.0.ebuild,v 1.2 2004/07/17 09:59:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/powiedz-1.0.ebuild,v 1.3 2004/07/20 14:23:11 spock Exp $
 
 inherit eutils
 
 IUSE="arts esd"
 
-DESCRIPTION="Polish speak synthesizer based on rsynth"
+DESCRIPTION="Polish speech synthesizer based on rsynth"
 HOMEPAGE="http://kadu.net/index.php?page=download&lang=en"
 SRC_URI="http://kadu.net/download/additions/powiedz-1.0.tgz"
 
