@@ -1,12 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.21 2002/11/20 17:16:33 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.22 2002/11/20 20:58:05 woodchip Exp $
 
 *samba-2.2.7 (Nov 20 2002)
 
   20 Nov 2002; Donny Davies <woodchip@gentoo.org> : Chase latest.  This release
   fixes a security problem.  --with-lockdir is changed to /var/cache/samba;
-  thanks Achim for #10819.
+  thanks Achim for #10819.  Marked as latest stable.  Fix problem with USE=ldap
+  and export VISUAL.
 
 *samba-2.2.6-r2 (Nov 07 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.6-r2.ebuild,v 1.1 2002/11/07 06:32:42 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.6-r2.ebuild,v 1.2 2002/11/20 20:58:05 woodchip Exp $
 
 IUSE="pam acl cups ldap ssl tcpd vscan"
 
@@ -128,7 +128,7 @@ src_compile() {
 	# compile mkntpasswd in examples/LDAP/ for smbldaptools..
 	if use ldap; then
 		cd ${S}/examples.bin/LDAP/smbldap-tools/mkntpwd
-		make || die "mkntpwd compile problem"
+		VISUAL="" make || die "mkntpwd compile problem"
 	fi
 
 	# compile the selected antivirus vfs plugins..
