@@ -1,19 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.99.3.ebuild,v 1.1 2003/07/28 17:57:40 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.99.5.ebuild,v 1.1 2003/08/27 16:25:02 foser Exp $
 
 inherit eutils debug
 
 IUSE="spell jpeg xml2 gnome"
 
 S=${WORKDIR}/${P}/abi
-S_P=${WORKDIR}/${PN}-plugins-${PV}
+# REMIND : usually -${PV} needs to be added 
+S_P=${WORKDIR}/${PN}-plugins
 
 DESCRIPTION="Fully featured yet light and fast cross platform word processor"
 HOMEPAGE="http://www.abisource.com"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
-	mirror://sourceforge/${PN}/${PN}-plugins-${PV}.tar.gz"
+	mirror://sourceforge/${PN}/${PN}-plugins-${PV}.tar.bz2"
 
 KEYWORDS="~x86 ~sparc ~alpha ~ppc"
 LICENSE="GPL-2"
@@ -36,24 +37,29 @@ RDEPEND="virtual/x11
 		>=gnome-extra/gal-1.99 )"
 
 DEPEND="${RDEPEND}
+	sys-devel/automake
 	dev-util/pkgconfig"
 
 #	>=dev-libs/libole2-0.2.4-r1
 #	perl?  ( >=dev-lang/perl-5.6 )
 # perl seems broken
 
-# FIXME : do 'real' use switching, add gucharmap support
-# switches do not work by the looks of it
-
 src_compile() {
-
 	./autogen.sh
+
+	# this is a hack since I don't want to go hack in the gnome-vfs headerfiles.
+	# The issue is about gnome-vfs containing "long long" which makes gcc 3.3.1 balk
+	cp configure configure.old
+	cat configure.old |sed s:-pedantic::g >configure	
+	rm -f configure.old 
 
 	econf \
 		`use_enable gnome` \
 		`use_with xml2 libxml2` \
 		`use_enable spell enchant` \
 		--enable-bidi \
+		--without-ImageMagick \
+		--disable-scripting \
 		--with-sys-wv || die  
 
 	emake all-recursive || die
