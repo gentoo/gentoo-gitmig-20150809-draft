@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/hap/hap-3.7.ebuild,v 1.2 2004/10/17 09:42:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/hap/hap-3.7.ebuild,v 1.3 2004/11/02 14:58:03 agriffis Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ DEPEND="sys-libs/libtermcap-compat"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 
 # untars to 'hap/'
 S="${WORKDIR}/${PN}"
