@@ -1,6 +1,15 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.31 2003/01/23 18:55:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.32 2003/01/31 05:12:46 raker Exp $
+
+*avifile-0.7.27.20030122-r1 (30 Jan 2003)
+
+  30 Jan 2003; Nick Hadaway <raker@gentoo.org>
+  avifile-0.7.27.20030122-r1.ebuild,
+  files/digest-avifile-0.7.27.200301220-r1 :
+  cvs updated from 2003/01/30 which actually plays avi files!  :)
+  This is actually marked as 0.7.28 but since I am patching
+  the 0.7.27 version i figured a rev bump was a better idea.
 
 *avifile-0.7.27.20030122 (23 jan 2003)
 
