@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/duplicity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/duplicity/ChangeLog,v 1.4 2004/07/01 20:58:31 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/duplicity/ChangeLog,v 1.5 2004/10/24 00:23:00 ticho Exp $
+
+  24 Oct 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  duplicity-0.4.0.ebuild, duplicity-0.4.1.ebuild:
+  Revamped DEPEND and RDEPEND. Made 0.4.0 depend on librsync <=0.9.5.1. This
+  closes #67940, reported by Dave S <jk@pusspaws.net>. Set myself as
+  maintainer (and added missing metadata.xml).
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> duplicity-0.4.0.ebuild,
   duplicity-0.4.1.ebuild:
