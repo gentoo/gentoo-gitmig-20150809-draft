@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.52 2004/06/03 16:16:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.53 2004/06/06 23:14:10 kloeri Exp $
+
+  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> pwlib-1.5.2-r3.ebuild:
+  Stable on alpha.
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> pwlib-1.4.11.ebuild,
   pwlib-1.5.0.ebuild, pwlib-1.5.2-r1.ebuild, pwlib-1.5.2-r2.ebuild,
