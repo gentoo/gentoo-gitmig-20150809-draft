@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.102 2005/02/11 22:18:15 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.103 2005/03/09 01:40:14 eradicator Exp $
+
+  08 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-lib-1.0.8.ebuild:
+  Stable amd64, sparc, x86.
 
   11 Feb 2005; Tony Vroon <chainsaw@gentoo.org> alsa-lib-1.0.8.ebuild:
   GCC 4 compatability fix by gim <gentoo@gim.name>, closes bug #80759.
