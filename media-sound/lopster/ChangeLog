@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/lopster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lopster/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lopster/ChangeLog,v 1.2 2002/04/18 07:18:42 rphillips Exp $
+
+*lopster-1.0.1-r1 (18 Apr 2002)
+
+  18 Apr 2002; Ryan Phillips <rphillips@gentoo.org> lopster-1.0.1-r1.ebuild
+
+  Copied lopster-0.9.9-r1.ebuild to newer stable version. Bug (#1717)
 
 *lopster-0.9.9-r1 (1 Feb 2002)
 
