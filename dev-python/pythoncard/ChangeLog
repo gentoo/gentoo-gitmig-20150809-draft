@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pythoncard
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythoncard/ChangeLog,v 1.5 2003/10/03 03:51:17 pythonhead Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythoncard/ChangeLog,v 1.6 2004/04/01 23:04:30 kloeri Exp $
+
+  02 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> pythoncard-0.7.2.ebuild:
+  Stable on x86.
 
 *pythoncard-0.7.2 (02 Oct 2003)
 
