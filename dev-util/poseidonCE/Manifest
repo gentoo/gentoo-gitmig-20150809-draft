@@ -1,4 +1,6 @@
-MD5 38a3e385a7c93667f00356398c357994 ChangeLog 956
+MD5 02bd93da6963d7bd9b0f7b43d56cbfc2 ChangeLog 1077
 MD5 43293b026ec087097be1c686eb7dfdc0 metadata.xml 1559
 MD5 9ac36ecb9c1363bd94f4168b6a57c201 poseidonCE-2.3.1.ebuild 2170
+MD5 80ffef79b6b9abb74a572e079d29ad7c poseidonCE-2.4.1.ebuild 2162
 MD5 231f24f3d52937377409dcc695307e81 files/digest-poseidonCE-2.3.1 67
+MD5 d3cc528e08fd53fd8f14b9b4ac103928 files/digest-poseidonCE-2.4.1 67
