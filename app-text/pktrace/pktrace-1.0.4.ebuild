@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pktrace/pktrace-1.0.4.ebuild,v 1.2 2002/08/16 02:42:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pktrace/pktrace-1.0.4.ebuild,v 1.3 2002/09/23 19:12:02 vapier Exp $
 
 DESCRIPTION="small Python program to trace TeX fonts to PFA or PFB fonts"
 HOMEPAGE="http://www.cs.uu.nl/~hanwen/pktrace/"
 SRC_URI="http://www.cs.uu.nl/~hanwen/pktrace/${P}.tar.gz"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 SLOT="1"
 
