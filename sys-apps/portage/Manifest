@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 c9974bdb08c61d51ece446511bca0db0 portage-2.0.51-r8.ebuild 13125
-MD5 792bf823d26f12bc03b4c9c7a370374c portage-2.0.51-r3.ebuild 12546
-MD5 afb8bf82edd9905b328d01da5f97b2a6 portage-2.0.51-r10.ebuild 13127
+MD5 474cce4c224ba58372077a70e71695b0 portage-2.0.51-r3.ebuild 12560
+MD5 1ab62ae5da0dd73a0c8edc27e5897b9e portage-2.0.51-r10.ebuild 13138
 MD5 45cd332af1ba186c050ec9eeafe9e915 portage-2.0.51-r7.ebuild 12278
 MD5 45d685c485d82a914b924ba6ace963e1 portage-2.0.51_rc7.ebuild 11767
 MD5 2200865f3cd8ee0f4bfbd91c3de84181 portage-2.0.51-r2.ebuild 12263
@@ -22,7 +22,7 @@ MD5 8c6ba58bbfddca72824b15dacbed69ec files/gcc-2.95-libsandbox.patch 1163
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB5K3sBDOEqLMd+jQRAm0CAJ9SLfenODVPtQFvujt96fsTPQeAcgCgy85F
-LRPIsFKEBPJctBqJIw3q1m4=
-=uoZu
+iD8DBQFB5VRtBDOEqLMd+jQRAg2xAKDZdbENg5kkzXYn5qn3tQlPd0ClpwCgiMPW
+xpXeiHnWUKIxHeu9TMKlKjs=
+=Cy1V
 -----END PGP SIGNATURE-----

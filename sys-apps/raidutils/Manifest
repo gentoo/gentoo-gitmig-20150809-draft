@@ -3,13 +3,13 @@ Hash: SHA1
 
 MD5 f31596583ec502e126b470436d623ed1 ChangeLog 590
 MD5 6b2a95b826d212207a259717f1c7c6e2 metadata.xml 643
-MD5 988f2eebc3dd28ca676b012949dc63b8 raidutils-0.0.5.ebuild 792
+MD5 84ab0ac31bab18625a59722896669085 raidutils-0.0.5.ebuild 792
 MD5 4099a4c6960a610930541d55d9bb4e5d files/raidutils-0.0.5-i2octl-fixpath.patch 1597
 MD5 2e881a5176df7cf66a9c291521480d9b files/digest-raidutils-0.0.5 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB5GkCm/TpOlox+n8RAhpjAJ94M238lFZCiw4VhflFukRC/NjGSgCgkPP0
-bHCntxT8z8Az0mX9qrVeu7Y=
-=qfbU
+iD8DBQFB5VUhm/TpOlox+n8RAmdrAJ95e4r25Ld+Y4XFepuig7X+pxCsRACg3blu
+6NWe6kOujl2zv27lI8xtFqY=
+=+DZS
 -----END PGP SIGNATURE-----
