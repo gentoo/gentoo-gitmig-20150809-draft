@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ipac-ng
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.14 2005/02/25 13:10:35 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.15 2005/03/11 10:41:27 ka0ttic Exp $
+
+*ipac-ng-1.31-r1 (11 Mar 2005)
+
+  11 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> +ipac-ng-1.31-r1.ebuild:
+  Revision bump; added postgres support via USE=postgres for bug 84797. Thanks
+  to Wolfgang Frisch for the updated ebuild.
 
   25 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> ipac-ng-1.31.ebuild:
   Marked stable on x86.
