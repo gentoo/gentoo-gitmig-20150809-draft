@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.123 2004/10/05 16:00:34 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.124 2004/10/05 16:21:53 lisa Exp $
+
+  05 Oct 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.16-r2.ebuild:
+  bump 2.16-r2 on mips
 
   05 Oct 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.16-r2.ebuild:
   bump to arch on a few arches for 2.16-r2
