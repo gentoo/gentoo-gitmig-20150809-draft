@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Mozilla Firebird
+Comment=Web Browser
+Exec=/usr/bin/MozillaFirebird
+Icon=mozilla-icon.png
+Terminal=0
+Type=Application
