@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-demo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.16 2004/03/14 00:30:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.17 2004/03/16 05:25:45 augustus Exp $
+
+  16 Mar 2004; <augustus@gentoo.org> ut2004-demo-3120-r3.ebuild:
+  Masked -r3 for amd64. There was no change that should have affected amd64. In
+  fact, you missed some -r2 changes and broke it for amd64.
 
   13 Mar 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-demo-3120-r3.ebuild:
