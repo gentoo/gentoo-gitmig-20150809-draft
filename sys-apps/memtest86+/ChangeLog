@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.3 2004/02/01 20:42:15 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.4 2004/02/17 23:39:56 spock Exp $
+
+  18 Feb 2004; Michal Januszewski <spock@gentoo.org> memtest86+-1.0.ebuild:
+  Moved to stable on x86.
 
   01 Feb 2004; Michal Januszewski <spock@gentoo.org> memtest86+-1.0.ebuild:
   The ebuild now makes use of the mount-boot eclass.
