@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.37.0.ebuild,v 1.1 2004/01/28 12:56:11 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.37.0.ebuild,v 1.2 2004/01/28 19:31:00 mr_bones_ Exp $
 
 inherit elisp-common libtool
 
@@ -139,7 +139,7 @@ src_install () {
 			rmdir ${D}/usr/lib/apache2
 		else
 			mv ${D}/usr/lib/apache2 ${D}/usr/lib/apache2-extramodules
-		fi			
+		fi
 	fi
 
 	if use python; then
