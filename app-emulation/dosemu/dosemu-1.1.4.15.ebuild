@@ -1,20 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.4.15.ebuild,v 1.2 2003/06/29 20:06:54 aliz Exp $
-
-IUSE="X svga"
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.4.15.ebuild,v 1.3 2003/08/05 15:15:50 vapier Exp $
 
 MAJOR_PV=${PV%.[0-9]*}
 MINOR_PV=${PV##[0-9]*.}
 S=${WORKDIR}/${PN}-${MAJOR_PV}
 DESCRIPTION="DOS Emulator"
+HOMEPAGE="http://www.dosemu.org/"
 SRC_URI="mirror://sourceforge/dosemu/${PN}-freedos-bin.tgz
 	mirror://sourceforge/dosemu/${PN}-${MAJOR_PV}.tgz
 	http://dosemu.sourceforge.net/testing/patchset-${PV}.tgz"
-HOMEPAGE="http://www.dosemu.org/"
+
 LICENSE="GPL-2 | LGPL-2.1"
-KEYWORDS="x86 -ppc"
 SLOT="0"
+KEYWORDS="x86 -ppc"
+IUSE="X svga"
+
 DEPEND="X? ( virtual/x11 )
 	svga? ( media-libs/svgalib )
 	sys-libs/slang"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2237.ebuild,v 1.3 2003/07/28 00:46:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2237.ebuild,v 1.4 2003/08/05 15:15:51 vapier Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware. The agreeing to a licence is part of the configure step
@@ -9,6 +9,7 @@
 S=${WORKDIR}/vmware-distrib
 NP="VMware-workstation-3.2.1-2237"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
+HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
 	http://www.vmware.com/download1/software/${NP}.tar.gz
 	ftp://download1.vmware.com/pub/software/${NP}.tar.gz
@@ -16,20 +17,18 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
 	http://vmware-heva.www.conxion.com/software/${NP}.tar.gz
 	http://vmware.wespe.de/software/${NP}.tar.gz
 	ftp://vmware.wespe.de/pub/software/${NP}.tar.gz"
-HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 
 SLOT="0"
 LICENSE="vmware"
 KEYWORDS="-* x86"
 IUSE="kde"
+RESTRICT="nostrip"
 
 DEPEND="virtual/glibc
 	virtual/x11
 	sys-kernel/linux-headers
 	>=dev-lang/perl-5
 	>=dev-lang/tcl-8.3.3"
-
-RESTRICT="nostrip"
 
 src_install() {
 	# lets make gcc happy regardless of what version we're using

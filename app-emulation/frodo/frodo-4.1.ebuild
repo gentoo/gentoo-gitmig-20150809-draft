@@ -1,21 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1.ebuild,v 1.2 2003/06/29 20:06:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1.ebuild,v 1.3 2003/08/05 15:15:51 vapier Exp $
 
+inherit eutils
 
 S="${WORKDIR}/Frodo-4.1b"
 DESCRIPTION="An excellent Commodore 64 Emulator"
-SRC_URI="http://iphcip1.physik.uni-mainz.de/~cbauer/FrodoV4_1b.Src.tar.gz"
 HOMEPAGE="http://www.uni-mainz.de/~bauec002/FRMain.html"
+SRC_URI="http://iphcip1.physik.uni-mainz.de/~cbauer/FrodoV4_1b.Src.tar.gz"
+
+LICENSE="Frodo"
+SLOT="0"
+KEYWORDS="x86 ~sparc ~ppc"
 
 DEPEND=">=media-libs/libsdl-1.2
-		sys-devel/autoconf
-		dev-lang/tcl
-		dev-lang/tk"
-IUSE=""
-SLOT="0"
-LICENSE="Frodo"
-KEYWORDS="x86 ~sparc ~ppc"
+	sys-devel/autoconf
+	dev-lang/tcl
+	dev-lang/tk"
 
 src_compile() {
 	cd ${S}

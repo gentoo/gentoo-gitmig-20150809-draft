@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/nwwine/nwwine-20030618.ebuild,v 1.2 2003/08/01 20:22:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/nwwine/nwwine-20030618.ebuild,v 1.3 2003/08/05 15:15:51 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="A special version of wine for the Never Winter Nights toolkit"
 HOMEPAGE="http://www.winehq.com/ http://republika.pl/nwnlinux/"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.0.0.4460-r1.ebuild,v 1.2 2003/07/31 23:31:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.0.0.4460-r1.ebuild,v 1.3 2003/08/05 15:15:51 vapier Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware. The agreeing to a licence is part of the configure step
@@ -10,6 +10,7 @@ S=${WORKDIR}/vmware-distrib
 N26KernSupport=vmware-any-any-update38
 NP="VMware-workstation-4.0.0-4460"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
+HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
 	http://download.vmware.com/htdocs/software/${NP}.tar.gz
 	http://www.vmware.com/download1/software/${NP}.tar.gz
@@ -20,12 +21,12 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
 	ftp://vmware.wespe.de/pub/software/${NP}.tar.gz
 	http://ftp.cvut.cz/vmware/${N26KernSupport}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${N26KernSupport}.tar.gz"
-HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 
 LICENSE="vmware"
 SLOT="0"
 KEYWORDS="-* x86"
 IUSE="kde"
+RESTRICT="nostrip"
 
 DEPEND="virtual/glibc
 	virtual/x11
@@ -33,8 +34,6 @@ DEPEND="virtual/glibc
 	>=dev-lang/perl-5
 	>=dev-lang/tcl-8.3.3
 	sys-apps/pciutils"
-
-RESTRICT="nostrip"
 
 src_unpack() {
 	check_KV

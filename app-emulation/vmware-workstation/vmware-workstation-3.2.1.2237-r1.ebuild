@@ -1,17 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2237-r1.ebuild,v 1.2 2003/07/28 00:46:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2237-r1.ebuild,v 1.3 2003/08/05 15:15:51 vapier Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware.  The agreeing to a licence is part of the configure step
 # which the user must run manually.
 
-inherit gcc
+inherit gcc eutils
 
 S=${WORKDIR}/vmware-distrib
 N26KernSupport=vmware-any-any-update37
 NP="VMware-workstation-3.2.1-2237"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
+HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
 	http://www.vmware.com/download1/software/${NP}.tar.gz
 	ftp://download1.vmware.com/pub/software/${NP}.tar.gz
@@ -21,20 +22,18 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
 	ftp://vmware.wespe.de/pub/software/${NP}.tar.gz
 	http://ftp.cvut.cz/vmware/${N26KernSupport}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${N26KernSupport}.tar.gz"
-HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 
 LICENSE="vmware"
 SLOT="0"
 KEYWORDS="-* ~x86"
 IUSE="kde"
+RESTRICT="nostrip"
 
 DEPEND="virtual/glibc
 	virtual/x11
 	sys-kernel/linux-headers
 	>=dev-lang/perl-5
 	>=dev-lang/tcl-8.3.3"
-
-RESTRICT="nostrip"
 
 has_version \<sys-libs/glibc-2.3.2 \
 	&& GLIBC_232=0 \
