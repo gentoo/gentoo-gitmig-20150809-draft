@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.5 2004/06/30 02:32:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.6 2005/03/07 14:07:51 wolf31o2 Exp $
 
 inherit games
 
@@ -35,9 +35,9 @@ pkg_setup() {
 src_install() {
 	dodir ${dir}
 	einfo "Copying files... this may take a while..."
-	exeinto /opt/fakk2
+	exeinto ${dir}
 	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/fakk2
-	insinto /opt/fakk2
+	insinto ${dir}
 	doins ${CDROM_ROOT}/{README,icon.{bmp,xpm}}
 	dodir ${dir}/fakk
 	exeinto /opt/fakk2/fakk

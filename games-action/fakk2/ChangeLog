@@ -1,6 +1,9 @@
 # ChangeLog for games-action/fakk2
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/ChangeLog,v 1.5 2004/06/24 21:54:56 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/ChangeLog,v 1.6 2005/03/07 14:07:51 wolf31o2 Exp $
+
+  07 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org> fakk2-1.02.ebuild:
+  Changed hardcoded /opt/fakk2 to dir variable and closing bug #84363.
 
   03 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> fakk2-1.02.ebuild:
   fix use invocation
