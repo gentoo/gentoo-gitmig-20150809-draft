@@ -1,0 +1,15 @@
+# ChangeLog for app-emulation/winex-transgaming
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/ChangeLog,v 1.1 2003/02/18 16:15:56 phoenix Exp $
+
+*winex-transgaming-2.2.1 (18 Feb 2002)
+
+  18 Feb 2002; phoen][x <phoenix@gentoo.org> ChangeLog, winex-transgaming-2.2.1.ebuild,
+  digest-winex-transgaming-2.2.1 :
+  Initial import.  Ebuild submitted by Max Kalika <alkern23@yahoo.com> (bug #11023).
+  This ebuild gives users the possibility, to install transgamings winex distribution.
+  In order to install it, you have to fetch the winex tarball from the transgaming download-
+  section (http://www.transgaming.com/download.php) - you must be an official transgaming 
+  subscriber to enter the download area, though. This package currently blocks 
+  app-emulation/winex (they share the same locations, and cannot be installed at the same time).
+  Do not mail Max or me - we will not give you the tarball.
