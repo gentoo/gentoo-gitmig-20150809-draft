@@ -1,0 +1,52 @@
+Index: gnome-session/splash-widget.h
+===================================================================
+RCS file: /cvs/gnome/gnome-session/gnome-session/splash-widget.h,v
+retrieving revision 1.5
+diff -u -r1.5 splash-widget.h
+--- gnome-session/splash-widget.h	13 Feb 2003 22:29:57 -0000	1.5
++++ gnome-session/splash-widget.h	16 Jul 2004 04:17:00 -0000
+@@ -79,5 +79,6 @@
+ void splash_start  (void);
+ void splash_update (const gchar *text);
+ void splash_stop   (void);
++void splash_hide   (void);
+ 
+ #endif /* SPLASH_WIDGET_H */
+Index: gnome-session/splash-widget.c
+===================================================================
+RCS file: /cvs/gnome/gnome-session/gnome-session/splash-widget.c,v
+retrieving revision 1.12
+diff -u -r1.12 splash-widget.c
+--- gnome-session/splash-widget.c	14 Jun 2004 13:06:06 -0000	1.12
++++ gnome-session/splash-widget.c	16 Jul 2004 04:17:08 -0000
+@@ -600,3 +600,11 @@
+ 	}
+ }
+ 
++void
++splash_hide (void)
++{
++	if (global_splash) {
++		gtk_widget_hide (GTK_WIDGET (global_splash));
++	}
++}
++
+Index: gnome-session/manager.c
+===================================================================
+RCS file: /cvs/gnome/gnome-session/gnome-session/manager.c,v
+retrieving revision 1.78
+diff -u -r1.78 manager.c
+--- gnome-session/manager.c	25 Feb 2003 08:50:09 -0000	1.78
++++ gnome-session/manager.c	16 Jul 2004 04:17:32 -0000
+@@ -1165,8 +1165,10 @@
+ 	      if (pending_list)
+ 		runlevel = client->priority;
+ 	    }
+-	  if (pending_list)
++	  if (pending_list) {
++	    splash_hide();
+ 	    return;
++	  }
+ 	}
+       save_state = MANAGER_IDLE;
+       splash_stop ();

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.8.0.ebuild,v 1.1 2004/09/15 21:51:14 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.8.0.ebuild,v 1.2 2004/09/16 11:13:44 foser Exp $
 
 inherit gnome2 eutils
 
@@ -40,6 +40,10 @@ src_unpack() {
 	# patch for logout dialog, see bug # 30230 and dups
 	# patch to set the Gentoo splash by default in the gconf key (#42687)
 	epatch ${FILESDIR}/${PN}-2.6-schema_defaults.patch
+
+	# Hide the splash after defaults have been loaded, a temp workaround
+	# for http://bugzilla.gnome.org/show_bug.cgi?id=116814
+	epatch ${FILESDIR}/${PN}-2-hide_splash.patch
 
 }
 
