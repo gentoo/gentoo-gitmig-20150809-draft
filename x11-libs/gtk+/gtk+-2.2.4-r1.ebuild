@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.4-r1.ebuild,v 1.6 2003/10/06 04:45:52 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.4-r1.ebuild,v 1.7 2003/10/09 12:34:50 foser Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -31,15 +31,19 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 
+	cd ${S}
 	# Turn of --export-symbols-regex for now, since it removes
 	# the wrong symbols
-	cd ${S}; epatch ${FILESDIR}/gtk+-2.0.6-exportsymbols.patch
+	epatch ${FILESDIR}/gtk+-2.0.6-exportsymbols.patch
 	# should speed up metacity
-	cd ${S}; epatch ${FILESDIR}/gtk+-wm.patch
+	epatch ${FILESDIR}/gtk+-wm.patch
 	# beautifying patch for disabled icons
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
 	# xft/slighthint stuff from RH
-	cd ${S}; epatch ${FILESDIR}/${PN}-2-xftprefs.patch
+	epatch ${FILESDIR}/${PN}-2-xftprefs.patch
+	# notification area loop fix (http://bugs.gnome.org/show_bug.cgi?id=122327)
+	# submitted by <pat@engsoc.org>
+	epatch ${FILESDIR}/${PN}-2.2-notificationarea_loop.patch
 
 	autoconf || die
 }
