@@ -1,0 +1,15 @@
+# ChangeLog for media-sound/xmms-sid
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-sid/ChangeLog,v 1.1 2002/07/18 19:09:28 karltk Exp $
+
+*xmms-sid-0.7.3 (18 Jul 2002)
+
+  18 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> xmms-sid-0.7.3.ebuild files/digest-xmms-sid-0.7.3 :
+
+  From the home page:
+  
+  "XMMS-SID is a plugin for XMMS (X MultiMedia System) which provides support 
+  for playing the so-called "SID tunes". For the actual playing, XMMS-SID uses
+  the excellent libsidplay SID-chip/6502 emulator engine."
+
+  Initial import.
