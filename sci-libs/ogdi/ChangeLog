@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ogdi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.2 2004/12/29 00:24:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.3 2004/12/29 01:04:11 ribosome Exp $
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> ogdi-3.1.1.ebuild:
+  Dependency update: dev-libs/proj -> sci-libs/proj.
 
 *ogdi-3.1.4 (28 Dec 2004)
 

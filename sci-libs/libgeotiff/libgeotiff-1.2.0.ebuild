@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.0.ebuild,v 1.1 2004/12/28 22:52:55 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.0.ebuild,v 1.2 2004/12/29 01:03:39 ribosome Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="virtual/libc
 	>=media-libs/tiff-3.3.4
-	dev-libs/proj"
+	sci-libs/proj"
 
 src_compile() {
 	econf || die
