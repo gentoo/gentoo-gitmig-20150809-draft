@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/monit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.16 2005/01/01 11:13:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.17 2005/01/03 04:20:42 matsuu Exp $
+
+*monit-4.4 (03 Jan 2005)
+
+  03 Jan 2005; MATSUU Takuto <matsuu@gentoo.org> +monit-4.4.ebuild:
+  Version bumped.
 
   18 Dec 2004; Michael Hanselmann <hansmi@gentoo.org> monit-4.3.ebuild:
   Stable on ppc.
