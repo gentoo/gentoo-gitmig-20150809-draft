@@ -1,0 +1,67 @@
+diff -u -r evolution-0.15.orig/configure evolution-0.15/configure
+--- evolution-0.15.orig/configure	Wed Oct  3 00:12:24 2001
++++ evolution-0.15/configure	Mon Oct  8 02:50:11 2001
+@@ -270,8 +270,6 @@
+ ac_help="$ac_help
+   --enable-gtk-doc  Use gtk-doc to build documentation [default=auto]"
+ ac_help="$ac_help
+-  --with-movemail=PATH    Path to a movemail binary"
+-ac_help="$ac_help
+   --with-sub-version=VERSION Specify a sub-version string"
+ 
+ # Initialize some variables set by options.
+@@ -11893,46 +11891,6 @@
+   ENABLE_GTK_DOC_FALSE=
+ fi
+ 
+-# Check whether --with-movemail or --without-movemail was given.
+-if test "${with_movemail+set}" = set; then
+-  withval="$with_movemail"
+-  :
+-fi
+-
+-echo $ac_n "checking for movemail""... $ac_c" 1>&6
+-echo "configure:11904: checking for movemail" >&5
+-if test x$with_movemail = xyes -o x$with_movemail = x; then
+-    with_movemail=no
+-fi
+-if test x$with_movemail != xno; then
+-    cat >> confdefs.h <<EOF
+-#define MOVEMAIL_PATH "$with_movemail"
+-EOF
+-
+-    echo "$ac_t""$with_movemail" 1>&6
+-else
+-    emacs_exec_dir=`emacs --batch --eval '(message exec-directory)' 2>&1`
+-    case $emacs_exec_dir in
+-    /*) if test -x $emacs_exec_dir/movemail; then
+-	    if test -u $emacs_exec_dir/movemail -o -g $emacs_exec_dir/movemail; then
+-		echo "$ac_t""$emacs_exec_dir/movemail" 1>&6
+-		cat >> confdefs.h <<EOF
+-#define MOVEMAIL_PATH "$emacs_exec_dir/movemail"
+-EOF
+-
+-	    else
+-		echo "$ac_t""$emacs_exec_dir/movemail... not set-id: ignored" 1>&6
+-	    fi
+-	else
+-	    echo "$ac_t""no" 1>&6
+-	fi
+-	;;
+-    *)
+-	echo "$ac_t""no" 1>&6
+-	;;
+-    esac
+-fi
+-
+ # Check whether --with-sub-version or --without-sub-version was given.
+ if test "${with_sub_version+set}" = set; then
+   withval="$with_sub_version"
+@@ -12859,7 +12817,6 @@
+ 	Kerberos 4/5:     $msg_krb4/$msg_krb5
+ 	SSL support:      $msg_ssl
+ 	S/MIME support:   $msg_nss
+-	Use movemail:	  $with_movemail
+ 	Dot Locking:	  $msg_dot
+ 	File Locking:	  $msg_file
+ 	Gtk-doc:	  $enable_gtk_doc"
