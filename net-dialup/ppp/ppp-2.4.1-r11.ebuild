@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r11.ebuild,v 1.1 2002/08/28 15:37:20 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r11.ebuild,v 1.2 2002/09/05 16:14:31 phoenix Exp $
 
 S=${WORKDIR}/${P}.pppoe4
 DESCRIPTION="Point-to-point protocol - patched for pppoe"
@@ -32,11 +32,11 @@ src_compile() {
 		sed -e "s:COPTS = -O2 -pipe -Wall -g:COPTS = ${CFLAGS}:" \
 			-e "s/LIBS =/LIBS = -lcrypt/" \
 			-e "s/#HAVE_INET6/HAVE_INET6/" \
-			Makefile.orig > Makefile
+			-e "s/# CBCP_SUPPORT/CBCP_SUPPORT/" Makefile.orig > Makefile
 	else
 		sed -e "s:COPTS = -O2 -pipe -Wall -g:COPTS = ${CFLAGS}:" \
 			-e "s/LIBS =/LIBS = -lcrypt/" \
-			Makefile.orig > Makefile
+			-e "s/# CBCP_SUPPORT/CBCP_SUPPORT/" Makefile.orig > Makefile
 	fi
 
 	cd plugins
