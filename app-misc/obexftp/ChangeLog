@@ -1,0 +1,14 @@
+# ChangeLog for app-misc/obexftp
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/obexftp/ChangeLog,v 1.1 2002/07/18 01:55:11 george Exp $
+
+*obexftp-0.9.2.ebuild (17 July 2002)
+
+  17 July 2002; George Shapovalov <george@gentoo.org> obexftp-0.9.2.ebuild, files/digest-obexftp-0.9.2, ChangeLog :
+
+  Inital release,
+  obexftp is a package that gives users of Siemens x45 series phones access to
+  their phone's FlexMemory, an area in memory for data storage, which can be used
+  to upload bitmaps, ringtones and other files.
+  
+  ebuild submitted by  Leigh Dyer <lsd@linuxgamers.net>
