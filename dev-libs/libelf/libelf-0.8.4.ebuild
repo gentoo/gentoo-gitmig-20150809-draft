@@ -1,14 +1,14 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.4.ebuild,v 1.4 2004/06/24 23:16:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.4.ebuild,v 1.5 2005/02/09 19:41:19 vapier Exp $
 
 DESCRIPTION="A ELF object file access library"
-SRC_URI="http://www.stud.uni-hannover.de/~michael/software/${P}.tar.gz"
 HOMEPAGE="http://www.stud.uni-hannover.de/~michael/software/"
+SRC_URI="http://www.stud.uni-hannover.de/~michael/software/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE="nls"
 
 DEPEND="!dev-libs/elfutils
@@ -16,9 +16,9 @@ DEPEND="!dev-libs/elfutils
 
 src_compile() {
 	econf \
-		`use_enable nls` \
+		$(use_enable nls) \
 		--enable-shared \
-		${myconf} || die
+		|| die
 	emake || die
 }
 
@@ -29,5 +29,5 @@ src_install() {
 		includedir=${D}usr/include \
 		install \
 		install-compat || die
-	dodoc COPYING.LIB ChangeLog VERSION README
+	dodoc ChangeLog VERSION README
 }
