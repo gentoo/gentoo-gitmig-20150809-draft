@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.6.1b.ebuild,v 1.2 2004/09/19 00:57:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.6.1b.ebuild,v 1.3 2004/09/25 23:35:32 weeve Exp $
 
 inherit fixheadtails eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/scummvm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64 ~sparc"
+KEYWORDS="x86 ppc amd64 sparc"
 IUSE="alsa debug mad oggvorbis sdl zlib"
 
 DEPEND="virtual/libc
