@@ -1068,6 +1068,20 @@ class packagetree:
 					return 1
 		return 0
 
+	def exists_specific_cat(self,myspec):
+		if not self.populated:
+			self.populate()
+		myspec=self.resolve_specific(myspec)
+		if not myspec:
+			return None
+		cps=catpkgsplit(myspec)
+		if not cps:
+			return None
+		mykey=cps[0]+"/"+cps[1]
+		if self.tree.has_key(mykey):
+			return 1
+		return 0
+
 	def resolve_specific(self,myspec):
 		cps=catpkgsplit(myspec)
 		if not cps:

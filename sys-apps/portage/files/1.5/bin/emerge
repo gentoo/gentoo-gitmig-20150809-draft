@@ -124,7 +124,13 @@ class depgraph:
 			
 	def display(self,mylist):
 		for x in mylist:
-			print x[1],"to",x[0]
+			if self.db[x[0]]["vartree"].exists_specific(x[1]):
+				addl="(replacing identical package)"
+			elif self.db[x[0]]["vartree"].exists_specific_cat(x[1]):
+				addl="(package upgrade)"
+			else:
+				addl="(new)"
+			print x[1],"to",x[0],addl
 
 	def merge(self,mylist):
 		for x in mylist:
