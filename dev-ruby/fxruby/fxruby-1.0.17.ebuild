@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.0.17.ebuild,v 1.1 2002/12/27 18:22:07 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.0.17.ebuild,v 1.2 2003/02/13 11:40:22 vapier Exp $
 
 S=${WORKDIR}/FXRuby-${PV}
 DESCRIPTION="FXRuby is the Ruby language binding to the FOX GUI toolkit."

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ruby-gtk-0.30.ebuild,v 1.1 2003/01/07 23:44:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ruby-gtk-0.30.ebuild,v 1.2 2003/02/13 11:44:07 vapier Exp $
 
 S=${WORKDIR}/ruby-gnome-all-${PV}/gtk
 DESCRIPTION="Ruby Gtk+ bindings"

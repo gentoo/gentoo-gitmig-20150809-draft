@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-0.9.7.ebuild,v 1.5 2002/11/29 11:28:02 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-0.9.7.ebuild,v 1.6 2003/02/13 11:40:26 vapier Exp $
 
 S=${WORKDIR}/mod_ruby-${PV}
 DESCRIPTION="A Ruby Module for Apache"

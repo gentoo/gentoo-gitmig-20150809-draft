@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yamlrb/yamlrb-0.47.ebuild,v 1.1 2003/01/31 23:11:10 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yamlrb/yamlrb-0.47.ebuild,v 1.2 2003/02/13 11:45:18 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Machine parsable data serialization format designed for human readability."

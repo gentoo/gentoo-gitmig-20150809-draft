@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome/ruby-gnome-0.29.ebuild,v 1.5 2002/10/04 05:29:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome/ruby-gnome-0.29.ebuild,v 1.6 2003/02/13 11:43:44 vapier Exp $
 
 S=${WORKDIR}/ruby-gnome-all-${PV}/gnome
 DESCRIPTION="Ruby Gnome bindings"
