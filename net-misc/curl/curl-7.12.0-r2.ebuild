@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.12.0-r2.ebuild,v 1.8 2005/01/12 13:25:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.12.0-r2.ebuild,v 1.9 2005/01/13 16:52:53 liquidx Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -17,6 +17,8 @@ IUSE="ssl ipv6 ldap"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6a )
 	ldap? ( net-nds/openldap )"
+
+RESTRICT="maketest"
 
 src_unpack() {
 	unpack ${A}
