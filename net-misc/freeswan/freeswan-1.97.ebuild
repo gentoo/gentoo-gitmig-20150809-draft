@@ -1,19 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.97.ebuild,v 1.2 2002/05/23 19:53:36 ashmodai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.97.ebuild,v 1.3 2002/06/27 10:25:22 seemant Exp $
 
 S=${WORKDIR}/freeswan-1.97
 DESCRIPTION="FreeS/WAN IPSec Userspace Utilities"
 SRC_URI="ftp://ftp.xs4all.nl/pub/crypto/freeswan/${P}.tar.gz"
 HOMEPAGE="http://www.freeswan.org"
-DEPEND="virtual/glibc
-        virtual/linux-sources"
+DEPEND="dev-libs/gmp
+	virtual/glibc
+	virtual/linux-sources"
 LICENSE="GPL-2"
 RDEPEND=""
 SLOT="0"
 
 pkg_setup() {
-    [ -d /usr/src/linux/net/ipsec ] || {
+	[ -d /usr/src/linux/net/ipsec ] || {
 		echo You need to have the crypto-enabled version of Gentoo Sources
 		echo with a symlink to it in /usr/src/linux in order to have IPSec
 		echo kernel compatibility.  Please emerge sys-kernel/crypto-sources, 
@@ -24,7 +25,7 @@ pkg_setup() {
 
 src_compile() {
 
-    patch -p1 < ${FILESDIR}/freeswan-libdes-location.patch || die
+	patch -p1 < ${FILESDIR}/freeswan-libdes-location.patch || die
 
 	make	 						   	\
 		DESTDIR=${D}					\
