@@ -1,0 +1,33 @@
+diff -urN openntpd-3.6.1p1/ntpd.8 openntpd-3.6.1p1-new/ntpd.8
+--- openntpd-3.6.1p1/ntpd.8	2004-12-07 03:29:39.000000000 +0100
++++ openntpd-3.6.1p1-new/ntpd.8	2004-12-11 12:39:03.972096720 +0100
+@@ -83,18 +83,6 @@
+ .Xr rdate 8
+ before starting
+ .Nm .
+-Currently, the
+-.Fl s
+-option is added unconditionally in
+-.Xr rc 8 .
+-Make sure to specify the
+-.Fl S
+-option
+-(add/edit
+-.Va ntpd_flags
+-in
+-.Xr rc.conf.local 8 )
+-if this behaviour is not desired.
+ .El
+ .Sh FILES
+ .Bl -tag -width "/etc/ntpd.confXXX" -compact
+@@ -105,10 +93,7 @@
+ .El
+ .Sh SEE ALSO
+ .Xr date 1 ,
+-.Xr adjtime 2 ,
+ .Xr ntpd.conf 5 ,
+-.Xr rc 8 ,
+-.Xr rc.conf 8 ,
+ .Xr rdate 8 ,
+ .Xr timed 8
+ .Rs
