@@ -192,3 +192,4 @@ move net-www/w3m-m17n www-client/w3m-m17n
 move net-www/w3mmee www-client/w3mmee
 slotmove <sys-libs/libstdc++-v3-3.4 3.3.3 5
 move app-admin/sleuthkit app-forensics/sleuthkit
+move dev-util/examiner app-forensics/examiner
