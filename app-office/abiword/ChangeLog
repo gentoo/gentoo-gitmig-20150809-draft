@@ -1,6 +1,11 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.17 2002/10/16 23:53:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.18 2002/11/17 01:19:15 foser Exp $
+
+*abiword-1.0.4_pre1 (17 Nov 2002)
+
+  17 Nov 2002; foser <foser@gentoo.org> abiword-1.0.4_pre1.ebuild :
+  New version, should fix aspell problems
 
 *abiword-1.0.3 (17 Oct 2002)
 

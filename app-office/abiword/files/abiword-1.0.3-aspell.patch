@@ -5,10 +5,10 @@
  		_abi_cppflags="$CPPFLAGS"
  		CPPFLAGS="$CPPFLAGS -I$ABI_PSPELL_DIR/include"
 -		abi_pspell_libs="-L$ABI_PSPELL_DIR/lib -lpspell -lpspell-modules -lltdl"
-+		abi_pspell_libs="-L$ABI_PSPELL_DIR/lib -laspell -lltdl"
++		abi_pspell_libs="-L$ABI_PSPELL_DIR/lib -lstdc++ -laspell -lltdl"
  	else
 -		abi_pspell_libs="-lpspell -lpspell-modules -lltdl"
-+		abi_pspell_libs="-laspell -lltdl"
++		abi_pspell_libs="-lstdc++ -laspell -lltdl"
  	fi
 -	AC_CHECK_HEADER(pspell/pspell.h,[
 -		AC_CHECK_LIB(pspell,new_pspell_config,[
