@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.1.0.ebuild,v 1.10 2004/06/24 22:31:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.1.0.ebuild,v 1.11 2004/07/14 23:05:51 agriffis Exp $
 
 
 S=${WORKDIR}/pptp-linux-${PV}-1
@@ -13,6 +13,7 @@ DEPEND="net-dialup/ppp"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc amd64"
+IUSE=""
 
 src_compile() {
 	cd ${S}
@@ -35,4 +36,3 @@ src_install() {
 	dodoc Documentation/*
 	dodoc Reference/*
 }
-

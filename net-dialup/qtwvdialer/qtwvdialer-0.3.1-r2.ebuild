@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.3.1-r2.ebuild,v 1.12 2004/06/24 22:31:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.3.1-r2.ebuild,v 1.13 2004/07/14 23:06:35 agriffis Exp $
 
 S=${WORKDIR}/QtWvDialer-${PV}
 DESCRIPTION="QT Frontend for wvdial"
@@ -16,6 +16,7 @@ DEPEND="=x11-libs/qt-2*
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE=""
 
 src_compile() {
 
@@ -36,4 +37,3 @@ src_install () {
 	dodoc AUTHORS CHANGELOG COPYING README
 
 }
-

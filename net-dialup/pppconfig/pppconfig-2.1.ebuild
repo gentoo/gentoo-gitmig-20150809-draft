@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/pppconfig-2.1.ebuild,v 1.4 2004/06/24 22:31:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/pppconfig-2.1.ebuild,v 1.5 2004/07/14 23:05:08 agriffis Exp $
 
 DESCRIPTION="A text menu based utility for configuring ppp."
 SRC_URI="mirror://debian/pool/main/p/pppconfig/${PN}_${PV}.tar.gz"
@@ -9,6 +9,7 @@ HOMEPAGE="http://ftp.debian.org/debian/pool/main/p/pppconfig/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
+IUSE=""
 
 
 DEPEND=">=net-dialup/ppp-2.4.1-r2
@@ -24,4 +25,3 @@ src_install () {
 	 doman pppconfig.8
 	 dodoc debian/{copyright,README.debian,changelog}
 }
-

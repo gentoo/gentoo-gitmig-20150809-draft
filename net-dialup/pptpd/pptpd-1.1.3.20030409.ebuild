@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.1.3.20030409.ebuild,v 1.4 2004/07/01 22:09:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.1.3.20030409.ebuild,v 1.5 2004/07/14 23:06:12 agriffis Exp $
 
 S=${WORKDIR}/poptop
 DESCRIPTION="Linux Point-to-Point Tunnelling Protocol Server"
@@ -13,6 +13,7 @@ DEPEND="virtual/libc
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE=""
 
 src_compile() {
 	econf || die
@@ -35,4 +36,3 @@ src_install () {
 	dodoc README* AUTHORS COPYING INSTALL TODO ChangeLog
 	docinto samples; dodoc samples/*
 }
-
