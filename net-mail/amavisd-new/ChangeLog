@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/amavisd-new
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.9 2004/03/10 04:38:47 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.10 2004/03/10 17:57:49 max Exp $
+
+  10 Mar 2004; Max Kalika <max@gentoo.org> amavisd-new-20030616_p8.ebuild,
+  metadata.xml:
+  Remove patch -- was accepted upstream for this version. Add antivirus herd to
+  metadata.xml.
 
 *amavisd-new-20030616_p8 (09 Mar 2004)
 
