@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/files/radvd,v 1.2 2003/02/14 23:07:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/files/radvd,v 1.3 2003/04/21 15:11:30 gmsoft Exp $
 
 depend () {
 	need net
@@ -9,12 +9,14 @@ depend () {
 
 start () {
 	ebegin "Starting radvd"
+	echo 1 > /proc/sys/net/ipv6/conf/all/forwarding
 	start-stop-daemon --start --quiet --exec /usr/sbin/radvd -- -u radvd -p /var/run/radvd/radvd.pid
 	eend
 }
 
 stop() {
 	ebegin "Stopping radvd"
+	echo 0 > /proc/sys/net/ipv6/conf/all/forwarding
 	start-stop-daemon --stop --quiet --pidfile /var/run/radvd/radvd.pid
 	eend
 }
