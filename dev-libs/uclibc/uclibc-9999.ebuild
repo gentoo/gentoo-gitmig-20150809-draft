@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-9999.ebuild,v 1.2 2004/08/26 02:29:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-9999.ebuild,v 1.3 2004/09/01 22:35:50 vapier Exp $
 
 ECVS_SERVER="uclibc.org:/var/cvs"
 ECVS_MODULE="uClibc"
@@ -136,7 +136,7 @@ src_unpack() {
 }
 
 src_compile() {
-	mv myconfig .config
+	cp myconfig .config
 
 	#if use nls
 	#then

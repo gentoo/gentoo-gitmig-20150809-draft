@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r5.ebuild,v 1.6 2004/08/19 19:36:21 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r5.ebuild,v 1.7 2004/09/01 22:35:50 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -186,7 +186,7 @@ src_unpack() {
 src_compile() {
 	# running tests require this
 	use build || addwrite /dev/ptmx
-	mv myconfig .config
+	cp myconfig .config
 
 	#if use nls
 	#then
