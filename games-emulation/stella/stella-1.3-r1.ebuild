@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-1.3-r1.ebuild,v 1.6 2004/06/24 22:36:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-1.3-r1.ebuild,v 1.7 2004/06/28 23:10:10 mr_bones_ Exp $
 
 inherit eutils
 
@@ -22,10 +22,9 @@ DEPEND="|| (
 	media-libs/libpng"
 
 src_unpack() {
-	unpack ${A} || die
-	cd ${S}
-	epatch ${FILESDIR}/${P}-alsa-fix.patch || die \
-		"Alsalib 1.0 fix failed"
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-alsa-fix.patch"
 }
 
 src_compile() {
@@ -35,24 +34,28 @@ src_compile() {
 	if use alsa ; then
 		MYOPTS="${MYOPTS} SOUND_ALSA=1"
 	fi
-	if use X || [ -z "`use X``use sdl`" ] ; then
+	if use X || ! use sdl ; then
 		cd ${S}/src/build
-		emake OPTIMIZATIONS="${CFLAGS}" $MYOPTS linux-x || die
+		emake OPTIMIZATIONS="${CFLAGS}" $MYOPTS linux-x \
+			|| die "emake failed"
 	fi
 	if use sdl ; then
 		cd ${S}/src/build
-		emake OPTIMIZATIONS="${CFLAGS}" $MYOPTS SOUND_SDL=1 linux-sdl || die
+		emake OPTIMIZATIONS="${CFLAGS}" $MYOPTS SOUND_SDL=1 linux-sdl \
+			|| die "emake failed"
 	fi
 }
 
 src_install() {
-	use X && dobin src/build/stella.x11
-	use sdl && dobin src/build/stella.sdl
-	[ -z "`use X``use sdl`" ] && dobin src/build/stella.x11
+	if use X || ! use sdl ; then
+		dobin src/build/stella.x11 || die "dobin failed"
+	fi
+	if use sdl ; then
+		dobin src/build/stella.sdl || die "dobin failed"
+	fi
 
 	insinto /etc
-	doins src/stellarc
-	doins src/emucore/stella.pro
+	doins src/stellarc src/emucore/stella.pro
 
 	dohtml -r docs/
 	dodoc *.txt
