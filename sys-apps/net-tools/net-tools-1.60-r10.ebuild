@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r10.ebuild,v 1.1 2005/01/07 03:40:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r10.ebuild,v 1.2 2005/01/10 18:30:53 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -57,12 +57,11 @@ src_unpack() {
 		append-ldflags -static
 	fi
 
+	epatch "${FILESDIR}"/${PV}-Makefile.patch
 	sed -i \
-		-e 's/^libdir:/libdir: version.h/' \
-		-e "s:-O2 -Wall -g:${CFLAGS}:" \
-		-e "/^LOPTS =/ s/\$/${CFLAGS}/" \
-		Makefile || die "sed Makefile failed"
-
+		-e "/^COPTS =/s:=:=${CFLAGS}:" \
+		-e "/^LOPTS =/s:=:=${LDFLAGS}:" \
+		Makefile || die "sed FLAGS Makefile failed"
 	sed -i \
 		-e "s:/usr/man:/usr/share/man:" \
 		man/Makefile || die "sed man/Makefile failed"
@@ -73,20 +72,14 @@ src_unpack() {
 	fi
 
 	if ! use nls ; then
-		sed -i -e 's:\(#define I18N\) 1:\1 0:' config.h || \
-			die "sed config.h failed"
-
-		sed -i -e 's:I18N=1:I18N=0:' config.make ||
-			die "sed config.make failed"
+		sed -i -e 's:\(#define I18N\) 1:\1 0:' config.h \
+			|| die "sed config.h failed"
+		sed -i -e 's:I18N=1:I18N=0:' config.make \
+			|| die "sed config.make failed"
 	fi
-
-	# sync timestamps
-	touch config.h
-	touch -r config.h config.make
 }
 
 src_compile() {
-	# configure shouldn't run anymore so bug #820 shouldn't apply...
 	tc-export CC
 	emake libdir || die "emake libdir failed"
 	emake || die "emake failed"

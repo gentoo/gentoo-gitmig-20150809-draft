@@ -1,12 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8224cf0be07c251d08f4cbe891777624 ChangeLog 7758
+MD5 a2e3cc1e9d74acfbe8fe8d6014cd2c4d ChangeLog 7957
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 201ac629534e1b7f4c80ac33a47db967 net-tools-1.60-r10.ebuild 3521
+MD5 7cc352d215a4d78c9a4c3485fca2cd6d net-tools-1.60-r10.ebuild 3398
 MD5 34331bb3a0cf59517f6f656296d01317 net-tools-1.60-r9.ebuild 3296
 MD5 21723cf8906d7431823260022ba2bb12 files/1.60-gcc34.patch 712
 MD5 f8edd79687cbd930b5a5d749b3d8b4f1 files/1.60-man.patch 987
+MD5 c71c1508ac5e5345d14c60b5fd625226 files/1.60-Makefile.patch 1950
 MD5 51de6eabe2d6d6dc860f72c41cee636b files/net-tools-1.60-2.6-compilefix.patch 784
 MD5 e98da89f3a64d4842946223b199fd5c7 files/net-tools-1.60-cleanup-list-handling.patch 1322
 MD5 7677c2a1d1498eaba49ac1eae30d897a files/1.60-wide.patch 5137
@@ -16,9 +17,9 @@ MD5 b1288e643ec595e07f37d7fd0d755ba5 files/digest-net-tools-1.60-r10 148
 MD5 7af2e1df001555e6624e35e2bf2c9d09 files/1.60-appletalk.patch 3210
 MD5 b1288e643ec595e07f37d7fd0d755ba5 files/digest-net-tools-1.60-r9 148
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB3gSproRuSHgZdywRAqKbAJoC6xlqGu1Fs2hu36/mVFfZpseM1ACdGMzv
-AjxkOdlDas1WPxTFtgRGZec=
-=rXlY
+iD8DBQFB4spgroRuSHgZdywRAvx2AJsGib9pv6lDU1jp3KKz49bVdMQlaQCcCGVt
+nhR8n4dR0mglaEpQPYsD+ok=
+=ZkGS
 -----END PGP SIGNATURE-----
