@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.80 2004/07/13 18:39:17 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.81 2004/07/16 20:12:57 wolf31o2 Exp $
+
+  16 Jul 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  gentoo-sources-2.4.26-r6.ebuild:
+  Marked stable on x86.
 
   13 Jul 2004; <plasmaroo@gentoo.org> gentoo-sources-2.4.26-r6.ebuild,
   +files/gentoo-sources-2.4.26-OpenSWAN-CompileFix.patch:
