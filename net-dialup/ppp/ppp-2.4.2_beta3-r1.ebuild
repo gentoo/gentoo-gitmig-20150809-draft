@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2_beta3-r1.ebuild,v 1.2 2003/12/24 03:49:07 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2_beta3-r1.ebuild,v 1.3 2003/12/26 14:07:56 lanius Exp $
 
 MY_PV=${PV/_beta/b}
 MY_P=${PN}-${MY_PV}
@@ -127,9 +127,13 @@ pkg_postinst() {
 		/sbin/update-modules
 	fi
 	ewarn "To enable kernel-pppoe read html/pppoe.html in the doc-directory."
+	ewarn "Note: the library name has changed from pppoe.so to rp-pppoe.so."
 	ewarn "Pon, poff and plog scripts have been supplied for experienced users."
 	ewarn "New users or those requiring something more should have a look at"
 	ewarn "the /etc/init.d/net.ppp0 script."
 	ewarn "Users needing particular scripts (ssh,rsh,etc.)should check out the"
 	ewarn "/usr/share/doc/ppp*/scripts directory."
+
+	# lib name has changed
+	sed -i -e "s:pppoe.so:rp-pppoe.so:" ${ROOT}etc/ppp/options
 }

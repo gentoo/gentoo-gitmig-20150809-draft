@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.39 2003/12/24 03:49:07 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.40 2003/12/26 14:07:56 lanius Exp $
+
+  26 Dec 2003; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.2_beta3-r1.ebuild:
+  automatically change pppoe.so to rp-pppoe.so (library name changed in 2.4.2)
 
   23 Dec 2003; Brad House <brad_mssw@gentoo.org> ppp-2.4.2_beta3-r1.ebuild:
   freezes on compile on amd64, even after libtoolize addition
