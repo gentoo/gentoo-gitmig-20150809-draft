@@ -28,6 +28,7 @@ src_install () {
     try make prefix=${D}/usr libexecdir=${D}/usr/lib \
 	mandir=${D}/usr/share/man infodir=${D}/usr/share/info install
     cd ${D}/usr/share/info
+    rm dir
     for i in *
     do
         mv ${i%.info} $i.info
