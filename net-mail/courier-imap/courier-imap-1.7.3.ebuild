@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.3.ebuild,v 1.4 2003/05/26 00:17:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.3.ebuild,v 1.5 2003/05/28 09:25:32 robbat2 Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -24,11 +24,13 @@ DEPEND="${RDEPEND}
 	dev-lang/perl 
 	sys-apps/procps"
 
-#sandbox breaks linking against vpopmail 
+#userpriv breaks linking against vpopmail 
 VPOPMAIL_DIR=`cat /etc/passwd | grep ^vpopmail | cut -d: -f6`
-if [ -n "${VPOPMAIL_DIR}" ]; then
-	VPOPMAIL_ERROR=
-	has userpriv ${FEATURES} && [ -d "${VPOPMAIL_DIR}" ] && VPOPMAIL_ERROR=1
+VPOPMAIL_INSTALLED=
+VPOPMAIL_ERROR=
+[ -n "${VPOPMAIL_DIR}" ] && [ -f "${VPOPMAIL_DIR}/etc/lib_deps" ] && VPOPMAIL_INSTALLED=1
+if [ -n "${VPOPMAIL_INSTALLED}" ]; then
+	has userpriv "${FEATURES}" && VPOPMAIL_ERROR=1
 fi
 
 src_unpack() {
@@ -61,7 +63,7 @@ src_compile() {
 		&& myconf="${myconf} --with-db=db" \
 		|| myconf="${myconf} --with-db=gdbm"
 
-	if [ -f ${VPOPMAIL_DIR}/etc/lib_deps ]; then
+	if [ -n "${VPOPMAIL_INSTALLED}" ]; then
 		myconf="${myconf} --with-authvchkpw"
 		tmpLDFLAGS="`cat ${VPOPMAIL_DIR}/etc/lib_deps`"
 		LDFLAGS="${LDFLAGS} ${tmpLDFLAGS}"
@@ -199,7 +201,7 @@ src_install() {
 	use postgres && authmods="${authmods} authpgsql"
 	use pam && authmods="${authmods} authpam"
 	use ldap && authmods="${authmods} authldap"
-	[ -n "${VPOPMAIL_DIR}" ] && authmods="${authmods} authvchkpw"
+	[ -n "${VPOPMAIL_INSTALLED}" ] && authmods="${authmods} authvchkpw"
 	exeinto /usr/lib/courier-imap/authlib
 	for i in ${authmods}; do
 		[ -f ${S}/authlib/${i} ] && doexe ${S}/authlib/${i}
