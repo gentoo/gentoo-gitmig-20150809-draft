@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3.ebuild,v 1.3 2002/04/27 11:47:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3.ebuild,v 1.4 2002/05/01 01:15:03 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a library for running svga graphics on the console"
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${PN}-${PV}-gentoo.diff
+	patch -p1 < ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
@@ -26,6 +26,10 @@ src_compile() {
 	# Build the gl stuff tpp
 	 make OPTIMIZE="${CFLAGS}" -C gl || die
 	 make OPTIMIZE="${CFLAGS}" -C gl libvgagl.so.${PV} || die
+
+	cp Makefile Makefile.orig
+	 sed 's/\(install: $(INSTALLAOUTLIB) \)installheaders \(.*\)/\1\2/g' \
+	 	Makefile.orig > Makefile
 }
 
 src_install () {
