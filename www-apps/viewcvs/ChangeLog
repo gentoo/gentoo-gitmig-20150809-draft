@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/viewcvs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.11 2004/12/23 11:10:32 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.12 2004/12/23 19:08:16 sejo Exp $
+
+  23 Dec 2004; <SeJo@gentoo.org> viewcvs-0.9.2_p20041207-r1.ebuild:
+  stable on ppc glsa: 73772
 
 *viewcvs-0.9.2_p20041207-r1 (23 Dec 2004)
 

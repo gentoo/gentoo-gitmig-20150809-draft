@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-0.9.2_p20041207-r1.ebuild,v 1.1 2004/12/23 11:10:32 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-0.9.2_p20041207-r1.ebuild,v 1.2 2004/12/23 19:08:16 sejo Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${PN}-${PDATE}.tar.bz2"
 
 LICENSE="viewcvs"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 IUSE=""
 
 DEPEND=""
