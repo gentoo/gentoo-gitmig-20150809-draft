@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.22 2004/11/11 02:25:22 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.23 2004/11/11 03:36:50 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -500,6 +500,10 @@ src_install() {
 	dosed -e 's/include =/#include =/' /etc/mplayer.conf
 	dosed -e 's/fs=yes/fs=no/' /etc/mplayer.conf
 	dosym ../../../etc/mplayer.conf /usr/share/mplayer/mplayer.conf
+
+	#mv the midentify script to /usr/bin for emovix.
+	cp ${D}/usr/share/doc/${PF}/TOOLS/midentify ${D}/usr/bin
+	chmod a+x ${D}/usr/bin/midentify
 
 	insinto /usr/share/mplayer
 	doins ${S}/etc/codecs.conf

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.231 2004/11/11 02:25:22 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.232 2004/11/11 03:36:50 chriswhite Exp $
+
+  11 Nov 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r4.ebuild:
+  Copied midentify to /usr/bin for emovix for bug #58580.
 
   11 Nov 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre4-r7.ebuild,
   mplayer-1.0_pre5-r4.ebuild:
