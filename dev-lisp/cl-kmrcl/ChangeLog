@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-kmrcl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-kmrcl/ChangeLog,v 1.11 2004/10/15 03:52:10 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-kmrcl/ChangeLog,v 1.12 2004/12/11 18:02:17 mkennedy Exp $
+
+*cl-kmrcl-1.78 (11 Dec 2004)
+
+  11 Dec 2004; Matthew Kennedy <mkennedy@gentoo.org> +cl-kmrcl-1.78.ebuild:
+  New upstream version; Marking x86 stable.
 
 *cl-kmrcl-1.77 (14 Oct 2004)
 

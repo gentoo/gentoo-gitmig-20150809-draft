@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-rt
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rt/ChangeLog,v 1.7 2004/08/05 16:09:24 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rt/ChangeLog,v 1.8 2004/12/11 18:01:48 mkennedy Exp $
+
+  11 Dec 2004; Matthew Kennedy <mkennedy@gentoo.org> cl-rt-20040621.ebuild:
+  Marking x86 stable
 
 *cl-rt-20040621 (05 Aug 2004)
 
