@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.8-r3.ebuild,v 1.2 2004/10/13 22:42:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.8-r3.ebuild,v 1.3 2004/10/19 09:04:44 absinthe Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ DESCRIPTION="xf86config setup program"
 SRC_URI="http://developer.linuxtag.net/knoppix/sources/${MY_P}.tar.gz"
 HOMEPAGE="http://www.knopper.net"
 
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 SLOT="0"
 LICENSE="GPL-2"
 

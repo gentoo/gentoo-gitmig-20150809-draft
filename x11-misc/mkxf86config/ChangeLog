@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/mkxf86config
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.11 2004/10/13 22:42:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.12 2004/10/19 09:04:44 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  mkxf86config-0.8-r3.ebuild:
+  Stable on amd64.
 
   13 Oct 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   mkxf86config-0.8-r3.ebuild:

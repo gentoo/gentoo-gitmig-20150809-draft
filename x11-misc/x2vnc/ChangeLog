@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x2vnc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.25 2004/10/03 14:57:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.26 2004/10/19 09:05:44 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> x2vnc-1.6.1.ebuild:
+  Stable on amd64.
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> x2vnc-1.6.1.ebuild:
   Stable on sparc.

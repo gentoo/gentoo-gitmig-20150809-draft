@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.2.ebuild,v 1.5 2004/10/04 21:04:56 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.2.ebuild,v 1.6 2004/10/19 09:06:55 absinthe Exp $
 
 DESCRIPTION="X11 operating system viewer"
 SRC_URI="mirror://sourceforge/xosview/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://xosview.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2 BSD"
-KEYWORDS="x86 alpha ppc ~amd64 sparc"
+KEYWORDS="x86 alpha ppc amd64 sparc"
 
 DEPEND="virtual/x11"
 IUSE=""

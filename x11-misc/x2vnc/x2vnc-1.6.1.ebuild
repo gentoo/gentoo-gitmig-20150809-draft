@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/x2vnc-1.6.1.ebuild,v 1.3 2004/10/03 14:57:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/x2vnc-1.6.1.ebuild,v 1.4 2004/10/19 09:05:44 absinthe Exp $
 
 DESCRIPTION="Control a remote computer running VNC from X"
 SRC_URI="http://fredrik.hubbe.net/${PN}/${P}.tar.gz"
 HOMEPAGE="http://fredrik.hubbe.net/x2vnc.html"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha sparc ~amd64"
+KEYWORDS="x86 ~alpha sparc amd64"
 
 DEPEND="virtual/x11
 	tcltk? ( dev-tcltk/expect )"
