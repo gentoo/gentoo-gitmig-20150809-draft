@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.16 2003/07/28 09:13:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.17 2003/08/01 16:46:30 agriffis Exp $
+
+  01 Aug 2003; Aron Griffis <agriffis@gentoo.org> coreutils-5.0-r1.ebuild,
+  files/coreutils-5.0-confdir3.patch:
+  Fix bug 25702 by refraining from cleaning up PATH_MAX test
 
 *coreutils-5.0-r1 (28 Jul 2003)
 

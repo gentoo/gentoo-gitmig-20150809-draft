@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r1.ebuild,v 1.1 2003/07/28 06:44:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r1.ebuild,v 1.2 2003/08/01 16:46:30 agriffis Exp $
 
 inherit eutils
 
@@ -41,6 +41,9 @@ src_unpack() {
 	then
 		epatch ${WORKDIR}/${PN}-gentoo-patches/${PN}-gentoo-uname.patch
 	fi
+
+	# Fix confdir3 sandbox issue reported in bug 25702
+	epatch ${FILESDIR}/${PN}-5.0-confdir3.patch
 }
 
 src_compile() {
