@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.28 2003/03/22 19:20:12 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.29 2003/04/17 16:54:42 lostlogic Exp $
 
 *procps-3.1.8 (20 Mar 2003)
+
+  17 Apr 2003; Brandon Low <lostlogic@gentoo.org> procps-3.1.8.ebuild:
+  x86 keyword
 
   22 Mar 2003; Joshua Brindle <Method@gentoo.org> procps-3.1.8.ebuild:
   added selinux support Thanks to sindian
