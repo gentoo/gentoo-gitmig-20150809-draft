@@ -1,7 +1,9 @@
 # ChangeLog for sys-apps/fcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.15 2003/05/15 03:22:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.16 2003/06/28 23:50:48 darkspecter Exp $
 
+  29 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> fcron-2.0.0-r3.ebuild:
+  set ppc in keywords
 
 *fcron-2.0.0-r3 (02 Mar 2003)
 
