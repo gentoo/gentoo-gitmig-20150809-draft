@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.7 2004/02/09 05:06:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.8 2004/02/28 09:49:04 vapier Exp $
 
 inherit games eutils
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="-* x86"
 IUSE="X"
 
-DEPEND="|| ( games-fps/unreal-tournament games-fps/unreal-tournament-goty )
-	sys-libs/lib-compat"
+DEPEND="sys-libs/lib-compat"
 RDEPEND="X? ( virtual/x11 )
 	opengl? ( virtual/opengl )"
 
