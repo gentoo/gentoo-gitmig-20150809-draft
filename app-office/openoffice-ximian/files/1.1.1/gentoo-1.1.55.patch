@@ -1,9 +1,0 @@
---- patches/OOO_1_1_1/apply 2004-05-08 08:54:17.055306480 +0200
-+++ patches/OOO_1_1_1/apply 2004-05-08 08:54:17.057306176 +0200
-@@ -25,6 +25,7 @@
- SuSE : SuSEOnly, LinuxCommon, KDEBase, GlobalDesktopFiles, VBABits
- PLD : PLDOnly, LinuxCommon, KDEBase, OOoCUPS, GlobalDesktopFiles, StartupNotification, ODKFixes, VBABits
- Ark : ArkOnly, LinuxCommon, NativeWidgets, GlobalDesktopFiles, ODKFixes, VBABits, OOoCUPS
-+Gentoo : XimianOnly, LinuxCommon, GnomeVFS, GnomeCUPS, GlobalDesktopFiles, StartupNotification, ODKFixes, VBABits, NativeWidgets
- # somewhat odder:
- Win32 : Common, ODKFixes, VBABits, Win32Only
