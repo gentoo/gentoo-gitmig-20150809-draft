@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.6.ebuild,v 1.2 2003/10/14 20:11:51 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.8.ebuild,v 1.1 2003/11/25 13:45:29 foser Exp $
 
 inherit gnome2
 
@@ -30,17 +30,24 @@ RDEPEND=">=dev-libs/glib-2.1
 		mad? ( >=media-plugins/gst-plugins-mad-0.6.3 )
 		)"
 
-
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.20
 	>=dev-util/pkgconfig-0.12.0"
 
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
 
+src_unpack() {
+
+	unpack ${A}
+
+	#fixes sandbox violations
+	gnome2_omf_fix
+
+}
+
 # xine is default
 use gstreamer && G2CONF="${G2CONF} --enable-gstreamer"
+
 use lirc \
 	&& G2CONF="${G2CONF} --enable-lirc" \
 	|| G2CONF="${G2CONF} --disable-lirc"
-
-
