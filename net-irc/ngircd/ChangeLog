@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.12 2005/01/27 23:26:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.13 2005/02/03 17:44:49 swegener Exp $
+
+*ngircd-0.8.3 (03 Feb 2005)
+
+  03 Feb 2005; Sven Wegener <swegener@gentoo.org> +ngircd-0.8.3.ebuild:
+  Version bump, bug #80595.
 
   28 Jan 2005; Sven Wegener <swegener@gentoo.org> files/ngircd.init.d,
   -ngircd-0.8.0.ebuild, -ngircd-0.8.1.ebuild:
