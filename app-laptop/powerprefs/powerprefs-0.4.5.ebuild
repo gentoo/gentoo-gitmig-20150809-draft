@@ -1,29 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/powerprefs-0.3.1.ebuild,v 1.2 2004/06/04 05:13:48 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/powerprefs-0.4.5.ebuild,v 1.1 2004/06/04 05:13:48 dostrow Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="powerprefs is a program to interface with pbbuttonsd (Powerbook/iBook) keys in Linux"
 SRC_URI="http://www.cymes.de/members/joker/projects/pbbuttons/tar/${P}.tar.gz"
 HOMEPAGE="http://www.cymes.de/members/joker/projects/pbbuttons/pbbuttons.html"
-KEYWORDS="ppc"
+KEYWORDS="~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="=x11-libs/gtk+-1.2*
-		>=app-laptop/pbbuttonsd-0.5"
+DEPEND=">=x11-libs/gtk+-2.0
+		>=app-laptop/pbbuttonsd-0.6.0"
 
 src_compile() {
-	./configure --prefix=/usr || die "sorry, powerprefs configure failed"
+	econf || die "powerprefs configure failed"
 	make || die "sorry, powerprefs compile failed"
 }
 
 src_install() {
 	make \
 		prefix=${D}/usr \
-		mandir={D}/usr/share/man \
-		infodir={D}/usr/share/info \
+		mandir=${D}/usr/share/man \
+		infodir=${D}/usr/share/info \
 		install || die "sorry, failed to install powerprefs"
-
 	dodoc README COPYING
 }
