@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/gwnet
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gwnet/ChangeLog,v 1.1 2004/10/05 16:27:18 fafhrd Exp $
+
+*gwnet-0.1_pre20040928 (05 Oct 2004)
+
+  05 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
+  +gwnet-0.1_pre20040928.ebuild:
+  Original package added; keyworded for ~x86
+
