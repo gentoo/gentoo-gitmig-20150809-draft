@@ -3,8 +3,7 @@ service cvspserver
 	disable		= yes
 	socket_type	= stream
 	wait		= no
-	user		= cvs
-	group		= cvs
+	user		= root
 	log_type	= FILE /var/log/cvspserver
 	protocol	= tcp
 	env		= HOME=/var/cvsroot

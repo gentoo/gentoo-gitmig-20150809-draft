@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.16.ebuild,v 1.7 2004/05/21 01:03:41 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.16.ebuild,v 1.8 2004/05/23 00:43:39 scandium Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,11 +18,6 @@ DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.4"
 
-pkg_setup() {
-	enewgroup cvs
-	enewuser cvs -1 /bin/false /var/cvsroot cvs
-}
-
 src_compile() {
 	use alpha && append-flags -fPIC
 
@@ -32,8 +27,6 @@ src_compile() {
 
 src_install() {
 	einstall || die
-
-	keepdir /var/cvsroot
 
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/cvspserver.xinetd.d cvspserver || die "newins failed"
