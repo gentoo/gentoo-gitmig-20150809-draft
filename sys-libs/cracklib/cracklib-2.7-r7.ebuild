@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r7.ebuild,v 1.8 2003/06/08 23:28:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r7.ebuild,v 1.9 2003/06/14 03:09:13 gmsoft Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.crypticide.org/users/alecm/security/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="CRACKLIB"
-KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="x86 ppc sparc ~alpha ~mips hppa ~arm"
 
 RDEPEND="sys-apps/miscfiles
 		>=sys-apps/portage-2.0.47-r10"
