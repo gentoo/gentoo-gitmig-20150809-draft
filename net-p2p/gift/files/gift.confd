@@ -1,0 +1,19 @@
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/files/gift.confd,v 1.1 2004/06/26 17:53:01 squinky86 Exp $
+
+# /etc/conf.d/gift
+# Config file for gift control script
+
+# Change the following vars only if you know
+# what you're doing, there's no checking for
+# invalid data yet!
+
+# owner of giFTd process (don't change, must be existing)
+USER="p2p"
+
+# logfile (/dev/null for nowhere)
+LOG="/var/log/giftd.log"
+
+# nice level, 0<x<19, more nice -> less cpuspeed consumed
+NICE="19"

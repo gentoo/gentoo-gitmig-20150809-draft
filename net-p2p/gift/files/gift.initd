@@ -1,0 +1,29 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/files/gift.initd,v 1.1 2004/06/26 17:53:01 squinky86 Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting giFTd"
+	start-stop-daemon --quiet --start -c ${USER} --make-pidfile \
+		--pidfile /var/run/giftd.pid --exec /usr/bin/giftd -- \
+		--local-dir=/usr/share/giFT &>${LOG} &
+	renice ${NICE} -u ${USER} >/dev/null
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping giFTd - please wait"
+	start-stop-daemon --stop --quiet --pidfile /var/run/giftd.pid
+	eend $?
+}
+
+restart() {
+	svc_stop
+	sleep 10
+	svc_start
+}

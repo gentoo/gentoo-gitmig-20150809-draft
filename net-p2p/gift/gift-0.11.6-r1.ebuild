@@ -1,25 +1,26 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.5.ebuild,v 1.6 2004/06/25 00:31:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.6-r1.ebuild,v 1.1 2004/06/26 17:53:01 squinky86 Exp $
 
-IUSE=""
+inherit eutils
 
-IUSE=""
-
-DESCRIPTION="A OpenFT, Gnutella and FastTrack p2p network client"
+DESCRIPTION="A OpenFT, Gnutella and FastTrack p2p network daemon"
 HOMEPAGE="http://gift.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 RESTRICT="nomirror"
+IUSE=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc ~alpha ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64"
 
 RDEPEND=">=sys-libs/zlib-1.1.4"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-apps/sed-4"
+
+GIFTUSER="p2p"
 
 src_install() {
 	einstall \
@@ -28,11 +29,26 @@ src_install() {
 		giftdatadir=${D}/usr/share/giFT \
 		giftperldir=${D}/usr/bin \
 		libgiftincdir=${D}/usr/include/libgift || die "Install failed"
+
+	# init scripts for users who want a central server
+	insinto /etc/conf.d; newins ${FILESDIR}/gift.confd gift
+	exeinto /etc/init.d; newexe ${FILESDIR}/gift.initd gift
+
+	# add user
+	enewuser ${GIFTUSER} -1 /bin/bash /home/p2p users
+
+	touch ${D}/usr/share/giFT/giftd.log
+	chown ${GIFTUSER}:root ${D}/usr/share/giFT/giftd.log
 }
 
 pkg_postinst() {
 	einfo "First, you need to run gift-setup with your normal"
 	einfo "user account to create the giFT configuration files."
+	echo
+	einfo "Also, if you will be using the giFT init script, you"
+	einfo "will need to create /usr/share/giFT/giftd.conf"
+	einfo "This method is only recommended for users with a"
+	einfo "central giFT server."
 	echo
 	einfo "This package no longer contains any protocol plugins,"
 	einfo "please try gift-fasttrack, gift-openft, gift-gnutella"
@@ -41,5 +57,5 @@ pkg_postinst() {
 	einfo "If you encounter issues with this package, please contact"
 	einfo "us via bugs.gentoo.org rather than attempting to contact"
 	einfo "the upstream developers, as they are hesitant to provide"
-	einfo "appropriate and polite support"
+	einfo "appropriate and polite support."
 }
