@@ -28,15 +28,6 @@
  #define TMAX(a,b) ((a)>(b)?(a):(b))
  
  static	void		process_crontab(const char *, const char *,
-@@ -111,7 +120,7 @@
- 		(void) strncpy(fname, dp->d_name, MAXNAMLEN);
- 		snprintf(tabname, MAXNAMLEN+1, "/etc/cron.d/%s", fname);
- 
--		process_crontab("root", "*system*", tabname,
-+		process_crontab("root", SYSUSERNAME, tabname,
- 				&crond_stat, &new_db, old_db);
- 	}
- 	closedir(dir);
 @@ -217,7 +226,7 @@
  	if (fname == NULL) {
  		/* must be set to something for logging purposes.
