@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r2.ebuild,v 1.2 2004/11/30 13:36:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r2.ebuild,v 1.3 2004/12/24 06:38:56 absinthe Exp $
 
 inherit eutils
 
@@ -14,12 +14,12 @@ SRC_URI="http://irssi.org/files/irssi-${IRSSI_PV}.tar.bz2
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="debug pic"
 
 # All necessary dependencies are pulled in by irssi.
 DEPEND="virtual/libc"
-RDEPEND="~net-irc/irssi-0.8.9
+RDEPEND=">=net-irc/irssi-0.8.9
 	>=dev-perl/MIME-tools-5.413"
 
 S_SILC="${S}/../silc-client-${PV}"
