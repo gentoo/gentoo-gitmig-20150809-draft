@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r1.ebuild,v 1.2 2003/06/01 01:12:14 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r1.ebuild,v 1.3 2003/07/13 12:01:10 solar Exp $
 
 S=${WORKDIR}/${P}
 IUSE="pam snmp ipv6 ospfapi"
@@ -99,7 +99,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Sample configuration files can be found in /etc/zebra/sample/"
+	einfo "Sample configuration files can be found in /etc/zebra/sample"
 	einfo "You have to create config files in /etc/zebra before"
 	einfo "starting any one of the daemons."
 }
