@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.0.00.003.ebuild,v 1.1 2004/08/19 13:13:24 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.0.00.003.ebuild,v 1.2 2004/08/25 07:43:26 rl03 Exp $
 
 inherit webapp
 
@@ -26,10 +26,9 @@ pkg_setup () {
 	einfo "Please make sure that your PHP is compiled with LDAP (if using openldap), IMAP, and MySQL|PostgreSQL support"
 	einfo
 	einfo "Consider installing an MTA if you want to take advantage of eGW's mail capabilities."
-	sleep 7
 }
 
-pkg_compile() {
+src_compile() {
 	:;
 }
 

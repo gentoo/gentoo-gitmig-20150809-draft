@@ -1,5 +1,5 @@
-MD5 f3d531f4784ca310c8025300e349cb28 ChangeLog 432
-MD5 f782a73d2ea3b7b2818df1bc52258dd4 moregroupware-0.7.2.ebuild 800
+MD5 89a403a89453a54241d444dc765eaa57 ChangeLog 537
+MD5 b66ecb6e75e2fe5c5ff35e1192b4d0fd moregroupware-0.7.2.ebuild 800
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 c81c6b9fc937775f5944aadd25c9e65f files/postinstall-en.txt 379
 MD5 bdd1af21cf674ab9392bb2487569112f files/digest-moregroupware-0.7.2 77

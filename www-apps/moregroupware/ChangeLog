@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/moregroupware
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moregroupware/ChangeLog,v 1.1 2004/08/19 15:14:24 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moregroupware/ChangeLog,v 1.2 2004/08/25 07:45:44 rl03 Exp $
+
+  25 Aug 2004; Renat Lumpau <rl03@gentoo.org> moregroupware-0.7.2.ebuild:
+  Fixed pkg_compile insanity.
 
 *moregroupware-0.7.2 (19 Aug 2004)
 
