@@ -1,5 +1,15 @@
-MD5 2f885d85a75755608a477b452f45fc7c ChangeLog 1526
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3f68663275b07749c660181659feff2c rfcutil-3.2.3.ebuild 1312
+MD5 64e5136bd95106df9498371fe25f6ad2 ChangeLog 1764
 MD5 ab5b1af445d492d26a576f3f2e8204c3 metadata.xml 336
-MD5 5de6c2ae679d4e4ec1403851a7a3283e rfcutil-3.2.3.ebuild 1312
 MD5 93feedf0b8940d11c9662ebc22dec752 files/rfc-3.2.3.diff 840
 MD5 da1829ff508f6abe3d77c2e87e8599bf files/digest-rfcutil-3.2.3 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCNwtHI1lqEGTUzyQRAjj2AJ9wYx61EsqfK06/7cW0+2pza/FOsACfXuui
+Fg60nr7TEV791lxGZgUc8j0=
+=CKdR
+-----END PGP SIGNATURE-----

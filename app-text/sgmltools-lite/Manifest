@@ -1,7 +1,17 @@
-MD5 c5b3451e5fc98de6a45ad210069b1617 sgmltools-lite-3.0.3-r7.ebuild 2053
-MD5 3a933be8e90316c2d3043e70a0fddffa ChangeLog 5839
-MD5 45cd843936d0dc8ecadd3a97e1f4ddf8 sgmltools-lite-3.0.3-r6.ebuild 2171
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4d03e7204293a4ba7fee4c6a8f802b45 sgmltools-lite-3.0.3-r6.ebuild 2171
+MD5 2ac24822d6d1ce779a25a384da2709f5 ChangeLog 6012
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 0591c36449998317fed358dc63014316 sgmltools-lite-3.0.3-r7.ebuild 2053
 MD5 4068e19bd2400f18c7b90fc071c31619 files/digest-sgmltools-lite-3.0.3-r6 139
 MD5 4068e19bd2400f18c7b90fc071c31619 files/digest-sgmltools-lite-3.0.3-r7 139
 MD5 5a72138dcb78d9d707c734eaf04d248b files/sgmltools-lite-3.0.3-gentoo.diff 679
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCNwtvI1lqEGTUzyQRAiW4AKCWK/3aEUGSureCVP4THZENs+v+RgCbBkKC
+8AWffYh4pZ7sGJnP0jUId3Y=
+=+5ib
+-----END PGP SIGNATURE-----
