@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cheesetracker
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/ChangeLog,v 1.7 2004/05/31 22:44:01 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/ChangeLog,v 1.8 2004/06/01 16:56:26 eradicator Exp $
+
+  01 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  cheesetracker-0.9.9.ebuild:
+  inherit eutils.
 
   01 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
   +files/cheesetracker-0.9.9-64bit-clean.diff, cheesetracker-0.9.9.ebuild:
