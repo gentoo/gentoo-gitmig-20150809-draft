@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/chkfontpath/chkfontpath-1.9.10.ebuild,v 1.5 2004/07/01 10:48:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/chkfontpath/chkfontpath-1.9.10.ebuild,v 1.6 2004/07/14 17:04:33 agriffis Exp $
 
 IUSE=""
 
@@ -8,7 +8,6 @@ inherit rpm eutils
 
 RPM_V="2"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Simple interface for editing the font path for the X font server"
 HOMEPAGE="ftp://ftp.redhat.com/pub/redhat/linux/rawhide/SRPMS/SRPMS/"
 SRC_URI="ftp://rpmfind.net/linux/rawhide/1.0/SRPMS/SRPMS/${P}-${RPM_V}.src.rpm

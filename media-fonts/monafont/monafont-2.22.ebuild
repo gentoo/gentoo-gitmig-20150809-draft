@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.22.ebuild,v 1.8 2004/06/24 22:29:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.22.ebuild,v 1.9 2004/07/14 17:07:33 agriffis Exp $
 
 DESCRIPTION="Japanese bitmap fonts suitable for browsing 2ch"
 HOMEPAGE="http://monafont.sourceforge.net"
@@ -14,7 +14,6 @@ DEPEND="virtual/x11
 	sys-apps/sed"
 RDEPEND=""
 
-S="${WORKDIR}/${P}"
 FONTDIR=/usr/share/fonts/${PN}
 
 src_unpack() {
