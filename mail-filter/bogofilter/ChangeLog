@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.19 2004/10/23 00:08:33 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.20 2004/10/30 14:44:02 pylon Exp $
+
+  30 Oct 2004; Lars Weiler <pylon@gentoo.org> bogofilter-0.92.8.ebuild:
+  Stable on ppc as requested in bug #69505
 
   23 Oct 2004; Andrej Kacian <ticho@gentoo.org> bogofilter-0.92.8.ebuild:
   Do not install nonexistent files from the tarball. Fixed according to patch
