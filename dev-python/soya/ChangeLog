@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/soya
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.5 2004/06/25 01:50:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.6 2004/10/16 13:33:41 kloeri Exp $
+
+*soya-0.8.1 (16 Oct 2004)
+
+  16 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> +soya-0.8.1.ebuild:
+  Version bump, bug 66329.
 
   01 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> soya-0.3.1.ebuild,
   soya-0.5.ebuild, soya-0.6.1.ebuild:
