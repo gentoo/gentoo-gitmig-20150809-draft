@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r2.ebuild,v 1.4 2004/04/22 03:01:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r2.ebuild,v 1.5 2004/04/22 05:50:17 vapier Exp $
 
-IUSE="static nls bootstrap java build X multilib nogcj nof77 noobjc hardened uclibc"
+IUSE="static nls bootstrap java build X multilib gcj f77 objc ada hardened uclibc"
 KEYWORDS="~x86 ~mips ~sparc amd64 -hppa ~alpha ~ia64 ~ppc64 s390"
 
 inherit eutils flag-o-matic libtool
@@ -384,18 +384,19 @@ src_compile() {
 	local myconf=
 	local gcc_lang=
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		myconf="${myconf} --enable-shared"
 		gcc_lang="c,c++"
-		use nof77 || gcc_lang="${gcc_lang},f77"
-		use noobjc || gcc_lang="${gcc_lang},objc"
-		[ -n "`use java`" -a -z "`use nogcj`" ] && gcc_lang="${gcc_lang},java"
+		use f77 && gcc_lang="${gcc_lang},f77"
+		use objc && gcc_lang="${gcc_lang},objc"
+		use ada && gcc_lang="${gcc_lang},ada"
+		use java && use gcj && gcc_lang="${gcc_lang},java"
 		# use ada  && gcc_lang="${gcc_lang},ada"
 	else
 		gcc_lang="c"
 	fi
-	if [ -z "`use nls`" -o -z "`use build`" ]
+	if ! use nls || use build
 	then
 		myconf="${myconf} --disable-nls"
 	else
@@ -407,7 +408,7 @@ src_compile() {
 	# X11 support is still very experimental but enabling it is
 	# quite innocuous...  [No, gcc is *not* linked to X11...]
 	# <dragon@gentoo.org> (15 May 2003)
-	if [ -n "`use java`" -a -z "`use nogcj`" -a \
+	if [ -n "`use java`" -a -n "`use gcj`" -a \
 	     -n "`use X`" -a -z "`use build`" -a \
 	     -f /usr/X11R6/include/X11/Xlib.h ]
 	then
@@ -684,7 +685,7 @@ src_install() {
 		cp -f docs/html/17_intro/[A-Z]* \
 			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
 
-		if [ -n "`use java`" -a -z "`use nogcj`" ]
+		if use java && use gcj
 		then
 			cd ${S}/fastjar
 			docinto ${CCHOST}/fastjar

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.211 2004/04/22 03:01:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.212 2004/04/22 05:50:17 vapier Exp $
+
+  22 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.3.3-r2.ebuild:
+  Change the nogcj flag to gcj and add support for ada via an ada USE flag.
 
   21 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.2-r5 gcc-3.1-r8:
   These were never released so lets prune them.
@@ -17,7 +20,7 @@
   Clean up the ebuild (filter-flags and similar).
 
   20 Apr 2004; <solar@gentoo.org> gcc-3.3.3-r2.ebuild:
-  add s390 gcc-3.3.3 patch from bug #47915, added USE flags for nof77, noobjc from
+  add s390 gcc-3.3.3 patch from bug #47915, added USE flags for f77, objc from
   bug #23171.
 
 *gcc-3.4.0_pre20040416 (19 Apr 2004)
