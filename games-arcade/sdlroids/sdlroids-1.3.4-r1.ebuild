@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlroids/sdlroids-1.3.4-r1.ebuild,v 1.1 2003/09/10 19:29:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlroids/sdlroids-1.3.4-r1.ebuild,v 1.2 2003/10/27 15:16:02 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Asteroids Clone for X using SDL"
 SRC_URI="mirror://sourceforge/sdlroids/${P}.tar.gz"
+RESTRICT="nomirror"
 HOMEPAGE="http://david.hedbor.org/projects/sdlroids/"
 KEYWORDS="x86"
 LICENSE="GPL-2"
