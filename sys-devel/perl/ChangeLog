@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.48 2003/01/16 20:36:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.49 2003/01/17 17:23:47 mcummings Exp $
+
+  17 Jan 2003;Michael Cummings <mcummings@gentoo.org> perl-5.8.0-r9;
+
+  Another blundered typo. The flag-o-matic include had a "0" instead of a "O"
 
   16 Jan 2003; Michael Cummings <mcummings@gentoo.org> perl-5.8.0-r9;
 
