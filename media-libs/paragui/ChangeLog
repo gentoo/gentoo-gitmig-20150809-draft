@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/paragui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.10 2003/09/03 00:20:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.11 2003/09/03 00:42:31 vapier Exp $
 
 *paragui-1.0.4 (02 Sep 2003)
 
@@ -8,6 +8,9 @@
   Version bump + remove internal physicfs since it overwrites real physicfs.
 
 *paragui-1.0.3 (14 Jan 2003)
+
+  02 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Remove internal physicfs since it overwrites real physicfs.
 
   14 Jan 2003; Daniel Robbins <drobbins@gentoo.org>: closes bug #13909; enabled
   internal physicFS since external lib is still masked, and this version
