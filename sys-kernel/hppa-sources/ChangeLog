@@ -1,24 +1,26 @@
 # ChangeLog for sys-kernel/hppa-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.4 2003/02/19 12:40:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.5 2003/03/06 10:59:59 gmsoft Exp $
+
+*hppa-sources-2.4.20_p27 (19 Feb 2003)
+
+  06 Mar 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.20_p27.ebuild :
+  Changed ~hppa to hppa.
 
   10 Feb 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.20_p27.ebuild :
   Incremented patch level.
 
-*hppa-sources-2.4.20_p27 (19 Feb 2003)
+*hppa-sources-2.4.20_p26 (10 Feb 2003)
 
   10 Feb 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.20_p26.ebuild :
   Incremented patch level.
 
-*hppa-sources-2.4.20_p26 (10 Feb 2003)
+*hppa-sources-2.4.20_p24 (09 Feb 2003)
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.20_p24.ebuild :
   Incremented patch level.
 
-*hppa-sources-2.4.20_p24 (09 Feb 2003)
+*hppa-sources-2.4.20_p23 (08 Feb 2003)
 
   08 Feb 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.20_p23.ebuild :
   Initial import.
-
-*hppa-sources-2.4.20_p23 (08 Feb 2003)
-
