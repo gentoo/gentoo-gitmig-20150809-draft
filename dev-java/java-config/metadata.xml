@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>java</herd>
+  <herd>java</herd>
+  <maintainer>
+    <email>aether@gentoo.org</email>
+    <name>Jason Mobarak</name>
+    <description>Maintainer</description>
+  </maintainer>
+  <maintainer>
+    <email>kloeri@gentoo.org</email>
+    <name>Bryan Ostergaard</name>
+    <description>Maintainer</description>
+  </maintainer>
+  <maintainer>
+    <email>strider@gentoo.org</email>
+    <name>Adrian Almenar</name>
+    <description>Maintainer</description>
+  </maintainer>
+  <longdescription>Java enviroment configuration tool</longdescription>
 </pkgmetadata>
