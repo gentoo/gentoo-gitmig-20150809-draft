@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.61 2004/12/05 20:28:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.62 2004/12/05 21:05:37 vapier Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -568,8 +568,7 @@ create_gcc_env_entry() {
 		gcc_specs_file="${LIBPATH}/$1.specs"
 	fi
 
-	echo "CTARGET=${CTARGET}" > ${gcc_envd_file}
-	echo "PATH=\"${BINPATH}\"" >> ${gcc_envd_file}
+	echo "PATH=\"${BINPATH}\"" > ${gcc_envd_file}
 	echo "ROOTPATH=\"${BINPATH}\"" >> ${gcc_envd_file}
 
 	# Thanks to multilib, setting ldpath just got a little bit nuttier.
@@ -598,6 +597,11 @@ create_gcc_env_entry() {
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${gcc_envd_file}
 	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${gcc_envd_file}
 	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${gcc_envd_file}
+
+	# Only export CTARGET if cross-compiling (for now ...)
+	[[ ${CTARGET} != ${CHOST} ]] \
+		&& echo "CTARGET=${CTARGET}" >> ${gcc_envd_file}
+
 	# Set which specs file to use
 	[ -n "${gcc_specs_file}" ] && echo "GCC_SPECS=\"${gcc_specs_file}\"" >> ${gcc_envd_file}
 }
