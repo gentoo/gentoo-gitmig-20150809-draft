@@ -1,14 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.9.ebuild,v 1.1 2004/09/25 21:04:54 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.9.ebuild,v 1.2 2004/09/26 14:03:09 scandium Exp $
 
 DESCRIPTION="Concurrent Versions System - source code revision control tools"
 HOMEPAGE="http://www.cvshome.org/"
 
-# scandium@gentoo.org (9th June 2004)
-# Recently, upstream changed the directory structure for the files.
-# The directory numbers in the middle differ for every release/file, so
-# unfortunatly they have to be corrected with every new release.
 SRC_URI="http://ccvs.cvshome.org/files/documents/19/200/${P}.tar.bz2
 	doc? ( http://ccvs.cvshome.org/files/documents/19/205/cederqvist-${PV}.html.tar.bz2
 		http://ccvs.cvshome.org/files/documents/19/207/cederqvist-${PV}.pdf
@@ -21,7 +17,6 @@ KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="crypt doc emacs kerberos pam"
 
 DEPEND="virtual/libc
-	>=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.4
 	kerberos? ( virtual/krb5 )
 	pam? ( >=sys-libs/pam-0.73
@@ -46,6 +41,7 @@ src_install() {
 
 	dodoc BUGS ChangeLog* DEVEL* FAQ HACKING \
 		MINOR* NEWS PROJECTS README* TESTS TODO
+
 	if use emacs; then
 		insinto /usr/share/emacs/site-lisp
 		doins cvs-format.el || die "doins failed"
