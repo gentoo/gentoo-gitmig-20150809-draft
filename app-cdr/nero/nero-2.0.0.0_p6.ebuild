@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-2.0.0.0_p6.ebuild,v 1.3 2005/03/25 00:16:45 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-2.0.0.0_p6.ebuild,v 1.4 2005/03/25 11:03:22 wschlich Exp $
 
 inherit eutils rpm
 
@@ -70,5 +70,5 @@ src_install() {
 	dobin ./usr/bin/nero
 
 	insinto /usr/share/applications
-	doins "${FILESDIR}/nerolinux.desktop"
+	doins "${FILESDIR}/nero.desktop"
 }
