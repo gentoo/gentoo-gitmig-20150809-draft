@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.100 2004/10/10 17:30:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.101 2004/10/11 11:55:10 gmsoft Exp $
+
+  11 Oct 2004; Guy Martin <gmsoft@gentoo.org> glib-2.4.6.ebuild:
+  Marked stable on hppa.
 
   11 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> glib-1.2.10-r5.ebuild:
   Fixed shared libraries compilation on macos. This closes bug #60580.
