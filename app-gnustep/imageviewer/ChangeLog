@@ -1,0 +1,8 @@
+# ChangeLog for app-gnustep/imageviewer
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/imageviewer/ChangeLog,v 1.1 2003/07/17 14:55:53 brain Exp $
+
+*imageviewer-0.6.2 (17 Jul 2003)
+
+  17 Jul 2003; Michele Balistreri <brain@gentoo.org> imageviewer-0.6.2.ebuild:
+  New ebuild.
