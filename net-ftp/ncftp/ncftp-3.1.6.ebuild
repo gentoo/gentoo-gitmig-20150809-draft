@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.6.ebuild,v 1.4 2004/01/07 19:31:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.6.ebuild,v 1.5 2004/01/11 05:27:46 genone Exp $
 
 IPV6_P="ncftp-316-v6-20040106"
 DESCRIPTION="An extremely configurable ftp client"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ncftp.com/"
 
 LICENSE="Clarified-Artistic"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa"
 IUSE="ipv6"
 
 DEPEND=">=sys-libs/ncurses-5.2"
