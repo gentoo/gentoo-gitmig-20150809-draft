@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/ezmlm-idx-pgsql
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx-pgsql/ChangeLog,v 1.1 2002/10/16 20:56:38 drobbins Exp $
+
+*ezmlm-idx-pgsql-0.40 (16 Oct 2002)
+
+  16 Oct 2002; Daniel Robbins <drobbins@gentoo.org>: See ChangeLog for
+  net-mail/ezmlm-idx, of which this is a clone (and should be kept in-sync with
+  the ezmlm-idx ebuid.)
+  
