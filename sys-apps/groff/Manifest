@@ -3,7 +3,7 @@ MD5 f03ebbe7a7ba60fcacac384d1fad336f groff-1.18-r2.ebuild 1865
 MD5 bf6f7af7e329d28d0901e174574ae2a9 groff-1.16.1-r1.ebuild 814
 MD5 6d2df03cfa49cd1ec027b3d93eb78f53 groff-1.18.1.ebuild 2016
 MD5 48ad51e726af821c36a90687e1552811 groff-1.18.1-r2.ebuild 2936
-MD5 25e05324c5c1c387030e63ccccfc5315 ChangeLog 3984
+MD5 5ba2ba431459166cd7a78fb773fa4fe2 ChangeLog 3985
 MD5 ef01fb3ceb14724af378c2428d91d2d7 groff-1.17.2-r3.ebuild 2059
 MD5 2a5bffce7adb192713f376a26e792168 groff-1.18-r3.ebuild 1968
 MD5 a94a3de58bb54769a2793e1f8602a618 files/groff_1.18.1-7-fix.patch 551
