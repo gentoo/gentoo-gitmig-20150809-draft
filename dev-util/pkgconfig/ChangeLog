@@ -1,7 +1,11 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.8 2002/12/18 12:23:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.9 2003/01/22 13:31:37 foser Exp $
 
+*pkgconfig-0.15.0 (22 Jan 2003)
+
+  22 Jan 2003; foser <foser@gentoo.org> pkgconfig-0.15.0.ebuild :
+  New version
 
 *pkgconfig-0.14.0 (27 Oct 2002)
 
