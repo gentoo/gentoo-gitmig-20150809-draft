@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.2.0.ebuild,v 1.1 2003/07/09 08:16:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.2.0.ebuild,v 1.2 2003/07/09 08:20:44 seemant Exp $
 
 IUSE=""
 
@@ -26,7 +26,8 @@ src_install() {
 
 	rm -rf ${D}/usr/share/doc/libots
 
-	dohtml -r html
-
 	dodoc AUTHORS BUGS COPYING ChangeLog HACKING INSTALL NEWS README TODO
+
+	cd ${S}/doc/html
+	dohtml -r ./
 }
