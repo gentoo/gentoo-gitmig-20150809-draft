@@ -109,7 +109,7 @@
 *sys-devel/make
 *sys-devel/patch
 *sys-libs/cracklib  
-*<sys-libs/db-3.2.9
+*<sys-libs/db-3.2.10
 *sys-libs/gdbm  
 <sys-libs/ncurses-5.2.20020112a
 # Removed since it's really no need for this to be default, and it together 
