@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r1.ebuild,v 1.2 2004/02/01 09:41:56 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r1.ebuild,v 1.3 2004/02/07 04:49:32 vapier Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_P="${P/ucl/uCl}"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2"
-IUSE="pie"
+
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips"
+IUSE="pie"
 
 DEPEND="sys-devel/gcc"
 PROVIDE="virtual/glibc"
@@ -70,4 +71,5 @@ src_compile() {
 
 src_install() {
 	emake PREFIX=${D} install || die "install failed"
+	dodoc Changelog* README TODO docs/*.txt
 }
