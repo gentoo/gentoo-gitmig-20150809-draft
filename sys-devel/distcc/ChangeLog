@@ -1,8 +1,11 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.36 2003/03/18 08:56:36 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.37 2003/03/19 19:11:12 agriffis Exp $
 
 *distcc-1.2.3-r3 (17 Mar 2003)
+
+  19 Mar 2003; Aron Griffis <agriffis@gentoo.org> distcc-1.2.3-r3.ebuild:
+  Mark stable on alpha
 
   17 Mar 2003; Zach Welch <zwelch@gentoo.org> distcc-1.2.3-r1.ebuild,
   files/1.2.3/distcc-config:

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-1.2.3-r3.ebuild,v 1.1 2003/03/18 08:56:36 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-1.2.3-r3.ebuild,v 1.2 2003/03/19 19:11:12 agriffis Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ DESCRIPTION="a program to distribute compilation of C code across several machin
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips arm"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~mips arm"
 
 OPV="1.2"
 LPV="1.2.1"
