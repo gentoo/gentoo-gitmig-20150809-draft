@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.6.ebuild,v 1.6 2004/06/01 22:00:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.6.ebuild,v 1.7 2004/06/08 20:14:20 dholm Exp $
 
 inherit gcc eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND="media-libs/jpeg
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	=sys-devel/gcc-3*
+	>=sys-devel/gcc-3.3*
 	>=sys-apps/sed-4
 	>=sys-devel/automake-1.7.2"
 
