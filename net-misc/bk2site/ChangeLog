@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bk2site
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bk2site/ChangeLog,v 1.11 2004/06/26 11:39:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bk2site/ChangeLog,v 1.12 2004/07/01 20:46:31 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> bk2site-1.1.9.ebuild:
+  change virtual/glibc to virtual/libc, add IUSE
 
   26 Jun 2004; David Holm <dholm@gentoo.org> bk2site-1.1.9.ebuild:
   Added to ~ppc.

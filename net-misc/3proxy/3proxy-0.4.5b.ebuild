@@ -1,7 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/3proxy/3proxy-0.4.5b.ebuild,v 1.2 2004/06/28 21:31:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/3proxy/3proxy-0.4.5b.ebuild,v 1.3 2004/07/01 20:38:28 squinky86 Exp $
 
+
+IUSE=""
 DESCRIPTION="really tiny cross-platform proxy servers set"
 HOMEPAGE="http://www.security.nnov.ru/soft/3proxy/"
 SRC_URI="mirror://gentoo/${P}.tgz"
@@ -11,7 +13,7 @@ LICENSE="3proxy"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}
 

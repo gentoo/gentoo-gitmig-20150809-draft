@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.0.4.ebuild,v 1.3 2004/06/24 23:37:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.0.4.ebuild,v 1.4 2004/07/01 20:48:28 squinky86 Exp $
 
 # I think you want CONFIG_BRIDGE in your kernel to use this ;)
 
@@ -9,7 +9,8 @@ HOMEPAGE="http://bridge.sourceforge.net/"
 
 SRC_URI="mirror://sourceforge/bridge/${P}.tar.gz"
 
-DEPEND="virtual/glibc"
+IUSE=""
+DEPEND="virtual/libc"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
