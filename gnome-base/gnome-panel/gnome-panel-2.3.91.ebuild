@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.3.91.ebuild,v 1.1 2003/09/07 23:31:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.3.91.ebuild,v 1.2 2003/09/08 05:04:45 msterret Exp $
 
 inherit gnome2 eutils
 
@@ -60,7 +60,7 @@ src_compile() {
 	sed -i 's:--load:-v:' gnome-panel/Makefile.am
 
 	WANT_AUTOMAKE=1.4 automake -v || die
-	
+
 	# FIXME : uh yeah, this is nice
 	touch gnome-panel/blah
 	chmod +x gnome-panel/blah
@@ -70,7 +70,7 @@ src_compile() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	
+
 	einfo "setting panel gconf defaults..."
 	GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source` ${ROOT}/usr/bin/gconftool-2 --load=${S}/gnome-panel/panel-default-setup.entries
 }

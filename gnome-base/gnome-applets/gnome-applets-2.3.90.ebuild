@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.3.90.ebuild,v 1.1 2003/09/07 23:31:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.3.90.ebuild,v 1.2 2003/09/08 05:04:45 msterret Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 IUSE="doc"
 SLOT="2"
-LICENSE="GPL-2 FDL-1.1" 
+LICENSE="GPL-2 FDL-1.1"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
 
 RDEPEND=">=x11-libs/gtk+-2.1
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.1
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2"
-											
+
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=app-text/scrollkeeper-0.3.11
@@ -46,8 +46,8 @@ src_unpack() {
 #		localstatedir=${D}/var \
 #		install || die
 #	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-    
-#	dodoc AUTHORS ChangeLog COPYING* README* INSTALL NEWS message-of-doom 
+
+#	dodoc AUTHORS ChangeLog COPYING* README* INSTALL NEWS message-of-doom
 #	docinto battstat
 #	dodoc battstat/AUTHORS battstat/ChangeLog battstat/README battstat/TODO
 #	docinto cdplayer
