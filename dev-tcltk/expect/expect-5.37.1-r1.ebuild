@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r1.ebuild,v 1.15 2004/02/22 01:04:18 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r1.ebuild,v 1.16 2004/02/22 08:43:59 vapier Exp $
 
 #remove the trailing ".0" from the tarball version
 S=${WORKDIR}/${P%.1}
 
 DESCRIPTION="tool for automating interactive applications"
-SRC_URI="http://expect.nist.gov/src/${P}.tar.gz"
 HOMEPAGE="http://expect.nist.gov/"
+SRC_URI="http://expect.nist.gov/src/${P}.tar.gz"
 
-SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ~mips amd64"
 LICENSE="BSD"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha ~mips ~hppa amd64"
 IUSE="X doc"
 
 DEPEND=">=dev-lang/tcl-8.2
@@ -43,11 +43,9 @@ src_compile() {
 
 	econf $myconf --enable-shared || die
 	emake || die
-
 }
 
 src_install () {
-
 	einstall || die
 
 	#docs
@@ -60,4 +58,3 @@ src_install () {
 		cp example/* ${D}/usr/share/doc/${PF}/examples/
 	fi
 }
-
