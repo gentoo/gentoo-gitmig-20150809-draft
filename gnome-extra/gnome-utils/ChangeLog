@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.76 2005/03/09 07:45:21 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.77 2005/03/11 20:38:40 gustavoz Exp $
+
+  11 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-utils-2.10.0.ebuild:
+  To ~sparc
 
 *gnome-utils-2.10.0 (09 Mar 2005)
 
