@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-5.0.ebuild,v 1.2 2005/02/13 02:40:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-5.0.ebuild,v 1.3 2005/02/13 13:38:50 karltk Exp $
 
 # WARNING: This is the default VM on ia64, so treat this ebuild
 # with proper care.
@@ -28,9 +28,9 @@ PROVIDE="virtual/jre-1.5
 	virtual/java-scheme-2"
 
 pkg_nofetch() {
-	einfo "Please download ${A} from:"
-	einfo ${HOMEPAGE}
-	einfo "and move it to ${DISTDIR}"
+	einfo "Please download ${A} by"
+	einfo "navigating from http://commerce.bea.com/index.jsp to ${HOMEPAGE}"
+	einfo "then move the downloaded file to ${DISTDIR}"
 }
 
 src_unpack() {
