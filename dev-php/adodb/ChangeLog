@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/adodb
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.1 2004/01/05 04:59:13 robbat2 Exp $
+
+*adodb-4.0.5 (04 Jan 2004)
+
+  04 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> adodb-4.0.5.ebuild:
+  new package, partially based off initial ebuild in bug #35006, submitted by
+  Roy "UberLord" Marples <uberlord@rsm.demon.co.uk>
+
