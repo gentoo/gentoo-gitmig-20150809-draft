@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/apcupsd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.19 2003/10/17 12:34:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.20 2003/11/01 12:42:04 tantive Exp $
+
+*apcupsd-3.10.6 (01 Nov 2003)
+
+  01 Nov 2003; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.6.ebuild:
+  Version bumped.
 
   17 Oct 2003; Jason Wever <weeve@gentoo.org> apcupsd-3.10.5-r4.ebuild:
   Added ~sparc keyword.
