@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r4.ebuild,v 1.5 2004/11/30 17:21:32 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r4.ebuild,v 1.6 2004/12/03 15:19:25 ka0ttic Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs debug
 
 # no useful homepage, bug #65898
 HOMEPAGE="ftp://ftp.isc.org/isc/cron/"
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ~ppc sparc ~alpha ~mips ~hppa ~ia64 ~amd64 ~ppc64"
-IUSE="selinux pam"
+IUSE="selinux pam debug"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4.0.5
@@ -34,7 +34,6 @@ PROVIDE="virtual/cron"
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
 
 	epatch ${WORKDIR}/${P}-gentoo-${GENTOO_PATCH_REV}.patch
@@ -52,6 +51,8 @@ src_compile() {
 	# that our changes to LDFLAGS are picked up.
 
 	append-ldflags -Wl,-z,now
+	use debug && append-flags -DDEBUGGING
+
 	sed -i -e "s:gcc \(-Wall.*\):$(tc-getCC) \1 ${CFLAGS}:" \
 		-e "s:^\(LDFLAGS[ \t]\+=\).*:\1 ${LDFLAGS}:" Makefile \
 		|| die "sed Makefile failed"

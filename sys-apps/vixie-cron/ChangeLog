@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.42 2004/12/02 12:09:24 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.43 2004/12/03 15:19:25 ka0ttic Exp $
+
+  03 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> vixie-cron-4.1-r4.ebuild:
+  Give USE=debug some respect and append -DDEBUGGING to CFLAGS if enabled.
 
   02 Dec 2004; Aaron Walker <ka0ttic@gentoo.org>
   files/vixie-cron-4.1-commandline.patch:
