@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.2_rc2.ebuild,v 1.2 2005/01/29 21:18:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.2_rc2.ebuild,v 1.3 2005/03/31 14:31:56 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://apache/ws/${PN}/${MY_PV}/${SRCFILE}"
 
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
-		>=dev-java/ant-1.5
+		>=dev-java/ant-1.6
 		=dev-java/servletapi-2.4*
 		dev-java/commons-logging
 		dev-java/commons-discovery
