@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0224e9a3d947b24b46780813228641bb ChangeLog 4462
 MD5 b8821aa97616ac6b39d3f9287365f676 gnat-3.14p.ebuild 5602
-MD5 a324b57d6b8c671f7b602837987bd7cf gnat-3.15p-r3.ebuild 6091
 MD5 b9333162fb87ac124e1fe5b0e40de968 gnat-3.15p.ebuild 5658
-MD5 382f8e252beb5e237b1327ebb4851735 gnat-3.41.ebuild 4012
 MD5 4b8299d1078b0c3a88969f43c9ae6a64 metadata.xml 927
+MD5 382f8e252beb5e237b1327ebb4851735 gnat-3.41.ebuild 4012
+MD5 45f3e33cd35567965dc27ebf2b3c2a75 ChangeLog 4547
+MD5 6df5bf85baebbb51e69758238e5da694 gnat-3.15p-r3.ebuild 6071
 MD5 59500f81e672cff22232586fc278547b files/digest-gnat-3.14p 213
 MD5 737e39907fb4f28640a1b4cbbc1cdc78 files/digest-gnat-3.15p 216
 MD5 5710cea3459403d02bc4ad4674fa7d1b files/digest-gnat-3.15p-r3 378
-MD5 ffcd9ae5ebd258ffd9c88fc3cf225bd6 files/digest-gnat-3.41 315
 MD5 6055ef6f0b3cd0df65743bfedb9de925 files/gnat-3.15p-gentoo-nonx86.patch.bz2 2112
 MD5 f2825770e20893d32738f4106cd3d628 files/gnat-3.15p-gentoo.patch.bz2 3754
 MD5 6c454f942791a6212d8b5cf5c92aa2d0 files/gnat-3.15p-i686-pc-linux-gnu-bin.patch 605
 MD5 7fabcf7198fb4001adfba250899e0024 files/gnat-3.15p-noaddr2line.patch.bz2 542
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW03JI1lqEGTUzyQRArQ6AJ0a6QUWeP7cOFObcbO3yhCqDZ6LdwCeNZYr
-/tBQlvrvpKmslvku1HnDrTM=
-=Ux2Y
------END PGP SIGNATURE-----
+MD5 ffcd9ae5ebd258ffd9c88fc3cf225bd6 files/digest-gnat-3.41 315
