@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/exmh-2.5.ebuild,v 1.5 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/exmh-2.5.ebuild,v 1.6 2002/10/24 00:36:22 vapier Exp $
 
-IUSE="crypto"
+IUSE="crypt"
 
 DESCRIPTION="An X user interface for MH mail"
 SRC_URI="ftp://ftp.scriptics.com/pub/tcl/${PN}/${PN}-${PV}.tar.gz"
@@ -15,7 +15,7 @@ KEYWORDS="x86 sparc sparc64"
 DEPEND="net-mail/nmh
 	dev-tcltk/expect
 	net-mail/mailbase
-	crypto? ( app-crypt/gnupg )
+	crypt? ( app-crypt/gnupg )
 	>=dev-lang/tcl-8.2
 	>=dev-lang/tk-8.2"
 
