@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0-r1.ebuild,v 1.1 2005/02/02 10:39:28 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0-r1.ebuild,v 1.2 2005/02/02 20:30:17 greg_g Exp $
 
 inherit eutils distutils perl-module
 
@@ -13,13 +13,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="flac mad oggvorbis readline python perl"
 
-RDEPEND="dev-libs/expat"
-DEPEND="${RDEPEND}
+DEPEND=">=media-libs/musicbrainz-2.1.0
 	flac? ( media-libs/flac )
 	oggvorbis? ( media-libs/libvorbis )
 	readline? ( sys-libs/readline )
 	mad? ( media-libs/libmad )
-	>=media-libs/musicbrainz-2.1.0
 	dev-util/pkgconfig
 	!media-sound/trm"
 
