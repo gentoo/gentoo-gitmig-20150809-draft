@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r1.ebuild,v 1.8 2003/11/14 11:38:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r1.ebuild,v 1.9 2003/11/29 01:39:23 robbat2 Exp $
 
 inherit eutils
 
@@ -89,7 +89,7 @@ amanda_variable_setup() {
 	fi
 
 	# Re-apply the new settings if any
-	[ -n "${currentamanda}" ] && eval `echo "${currentamada}"`
+	[ -n "${currentamanda}" ] && eval `echo "${currentamanda}"`
 
 }
 
