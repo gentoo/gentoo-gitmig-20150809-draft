@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.5.1.ebuild,v 1.3 2004/06/24 22:08:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.5.1.ebuild,v 1.4 2004/06/28 19:38:10 agriffis Exp $
 
 DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.wxwindows.org/"
 LICENSE="wxWinLL-3"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="nls odbc opengl gtk2 unicode debug"
+IUSE="gtk2 odbc opengl unicode"
 
 RDEPEND="virtual/x11
 	sys-libs/zlib
@@ -57,7 +57,7 @@ src_compile() {
 		myconf="${myconf} `use_with odbc`"
 	fi
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die "make failed"
 
 	cd ${S}/contrib/src

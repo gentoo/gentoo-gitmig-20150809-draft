@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.53 2004/06/24 22:08:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.54 2004/06/28 19:38:10 agriffis Exp $
+
+  28 Jun 2004; Aron Griffis <agriffis@gentoo.org> wxGTK-2.4.0.ebuild,
+  wxGTK-2.4.2-r1.ebuild, wxGTK-2.4.2.ebuild, wxGTK-2.5.1.ebuild:
+  econf || die, sync IUSE, glibc -> libc
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org> wxGTK-2.4.0.ebuild,
   wxGTK-2.4.1-r1.ebuild, wxGTK-2.5.1.ebuild:
