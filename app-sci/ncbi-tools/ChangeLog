@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/ncbi-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.18 2004/11/22 22:14:12 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.19 2004/12/01 05:06:02 j4rg0n Exp $
+
+  30 Nov 2004; <j4rg0n@gentoo.org> ncbi-tools-20040616.ebuild:
+  Keyworded ~ppc-macos.
 
   22 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org>
   ncbi-tools-20040616.ebuild:
