@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1_pre4.ebuild,v 1.2 2005/01/28 17:54:31 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1_pre4.ebuild,v 1.3 2005/02/03 11:09:50 karltk Exp $
 
 inherit eutils java-utils
 
@@ -82,10 +82,9 @@ src_unpack() {
 	einfo "Patching Motif frontend"
 	patch-motif-frontend
 
-	einfo "Setting build version in Help->About"
-	sed -e "s/@build@/Gentoo Linux ${PF}/" \
-		features/org.eclipse.platform/configuration.files/configuration/config.ini \
-		|| die "Failed to patch config.ini"
+	einfo "Set build version in Help->About"
+	find -type f -name about.mappings -exec sed -e "s/@build@/Gentoo Linux ${PF}/" -i \{\} \; \
+		|| die "Failed to patch about.mappings"
 }
 
 src_compile() {
@@ -109,7 +108,7 @@ src_compile() {
 
 	einfo "Building resources.core plugin"
 	cd ${S}/${core_src_dir}
-	make JDK_INCLUDE="-I`java-config -O`/include -I`java-config -O`/include/linux" || die "Failed to build resource.core plugin"
+	make JDK_INCLUDE="`java-config -O`/include -I`java-config -O`/include/linux" || die "Failed to build resource.core plugin"
 	mkdir -p ${S}/"${core_dest_dir}"
 	mv *.so ${S}/"${core_dest_dir}"
 	cd ${S}
@@ -191,9 +190,9 @@ function detect-mozilla()
 	if [ -f ${ROOT}/usr/lib/mozilla/libgtkembedmoz.so ] ; then
 		einfo "Compiling against net-www/mozilla"
 		mozilla_dir=/usr/lib/mozilla
-	elif [ -f ${ROOT}/usr/lib/MozillaFirefox/libgtkembedmoz.so ] ; then
-		einfo "Compiling against net-www/mozilla-firefox"
-		mozilla_dir=/usr/lib/MozillaFirefox
+#	elif [ -f ${ROOT}/usr/lib/MozillaFirefox/libgtkembedmoz.so ] ; then
+#		einfo "Compiling against net-www/mozilla-firefox"
+#		mozilla_dir=/usr/lib/MozillaFirefox
 	else
 		eerror "You need either Mozilla, compiled against gtk+ v2.0 or newer"
 		eerror "To merge it, do USE=\"gtk2\" emerge mozilla."
@@ -277,21 +276,10 @@ function patch-gtk-frontend() {
 		-e "s:\(-I\$(GECKO_SDK)\)\(/.*\)\(/include\):-I${mozilla_dir}/include\2:g" \
 		-e "s:\$(XTEST_LIB_PATH):/usr/X11R6/lib:" \
 		-e "s:\$(GECKO_SDK):${mozilla_dir}:" \
+		-e "s:/usr/include/kde:\`kde-config --prefix\`/include:" \
+		-e "s:\(KDE_LIBS.*\)\(-L/usr/lib\):\1-L\`kde-config --prefix\`/lib:" \
 		-i "${S}/${gtk_swt_src_dir}/make_linux.mak" || die "Failed to patch ${gtk_swt_src_dir}/make_linux.mak"
 
-	sed -e "s:KDE_LIB_PATH=.*:KDE_LIB_PATH=$(kde-config --prefix)/lib:" \
-		-e "s:KDE_INCLUDE_PATH=.*:KDE_INCLUDE_PATH=$(kde-config --prefix)/include:" \
-		-e "s:\${GECKO_SDK}/mozilla-config.h:\${GECKO_SDK}/include/mozilla-config.h:" \
-		-e "s:\${GECKO_SDK}/nspr/include:\${GECKO_SDK}/include/nspr:" \
-		-e "s:\${GECKO_SDK}/xpcom/include:\${GECKO_SDK}/include/xpcom:" \
-		-e "s:\${GECKO_SDK}/string/include:\${GECKO_SDK}/include/string:" \
-		-e "s:\${GECKO_SDK}/embed_base/include:\${GECKO_SDK}/include/embed_base:" \
-		-e "s:\${GECKO_SDK}/embedstring/include:\${GECKO_SDK}/include/embedstring:" \
-		-e "s:-lembedstring::" \
-		-e "s:-lembed_base_s::" \
-		-e "s:-lxpcomglue_s::" \
-		-e "s:GECKO_LIBS=\":GECKO_LIBS=\"-L/usr/lib/mozilla :" \
-		-i "${S}/${gtk_swt_src_dir}/build.sh" || die "Failed to patch ${gtk_swt_src_dir}/build.sh"
 
 	sed -e "s:\(JAVA_HOME *=\)\(.*$\):\1${JAVA_HOME}:" \
 		-e "s:\(GECKO_SDK *=\)\(.*$\):\1${mozilla_dir:-/usr/lib/mozilla}:" \
@@ -420,9 +408,7 @@ function build-gtk-native() {
 
 	if use kde ; then
 		einfo "Building KDE support"
-		KDE_INCLUDE_PATH="$(kde-config --prefix)/include" \
-			KDE_LIB_PATH="$(kde-config --prefix)/lib" \
-			bash ./build.sh make_kde || die "Failed to build KDE support"
+		bash ./build.sh make_kde || die "Failed to build KDE support"
 	fi
 
 	if use mozilla ; then
