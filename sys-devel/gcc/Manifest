@@ -1,23 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 02157709ea2501691a702088d544b5ab ChangeLog 77150
-MD5 1cc192aba411ac83ab6905c2d3c1cb2d gcc-2.95.3-r8.ebuild 8432
+MD5 a65e5a627840e595d97243d21b14cace ChangeLog 77486
+MD5 197f9713e4529bbfe6ef20b7633bf437 gcc-2.95.3-r8.ebuild 8541
 MD5 a19ba7542bc8429c2662cdc9fb852190 gcc-3.4.3-r1.ebuild 5364
-MD5 4ae030bd0b7fd0ef5c859b8ca2d32436 gcc-3.2.3-r4.ebuild 19729
-MD5 1fef307d644a7f84c935236c8b6be083 gcc-3.4.2-r2.ebuild 13486
+MD5 f95107278e3a6306068d0f9ef63fc5de gcc-3.2.3-r4.ebuild 19890
+MD5 126935e7dcf1585f4bbc878288a63089 gcc-3.4.2-r2.ebuild 13505
 MD5 a8802bfe958c49e8393972d727b7edf2 gcc-3.3.5-r1.ebuild 3637
-MD5 b722492a21537c1ec3a15acb8f11a387 gcc-3.3.2-r2.ebuild 17859
-MD5 e8b561dbb0d86dcee9ca99b835813d92 gcc-3.3.2-r5.ebuild 21183
-MD5 32a49c379c995aa266bd40448f16480c gcc-3.3.4-r2.ebuild 24489
-MD5 778e3f9f0a84fb7e8c477880027fe39d gcc-3.3.2-r7.ebuild 21588
-MD5 3384a275321a4ed8869bfb2d740eb74b gcc-3.3.2.ebuild 16693
-MD5 9480816d969717d52d56af9da7b2df12 gcc-3.3.3-r3.ebuild 23403
-MD5 8d5444efd838da5c75c82e64e2625dfd gcc-3.4.1-r3.ebuild 31269
-MD5 521e5a311811e8eb920198e20a7c433f gcc-3.3.3-r6.ebuild 24793
-MD5 d81ef073d429d7ed3d5393ecffc4e610 gcc-3.4.3.ebuild 13254
+MD5 0232e73f034eb53c7e5e66264eed1652 gcc-3.4.1-r3.ebuild 31430
+MD5 cb258f3d644722f480d77c7eb370bd32 gcc-3.3.2-r2.ebuild 18016
+MD5 795d253a88e61dc43b4e8298c2a6c591 gcc-3.3.2-r5.ebuild 21340
+MD5 d1e3f9c0e5ec2a9171fda15b21c442da gcc-3.3.4-r2.ebuild 24646
+MD5 a8c39c6e43796403cadde63f14eb54b6 gcc-3.3.2-r7.ebuild 21745
+MD5 6ee069b74403ca14b28b51f9cf28f019 gcc-3.3.2.ebuild 16850
+MD5 6a96b668af8e1c5941b504d09cde6eb1 gcc-3.3.3-r3.ebuild 23560
+MD5 ba50078d0cd6896205fb2c8c44ef78e0 gcc-3.3.3-r6.ebuild 24950
+MD5 c7369b7fc6fdea22b109c33736bec20a gcc-3.4.3.20050110.ebuild 5376
+MD5 6c31dfdb1545539ed1ebbfa5d4a15f69 gcc-3.4.3.ebuild 13273
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 5b214acf30ab089dfd7d79f8115bbdd6 gcc-3.3.4-r1.ebuild 24684
+MD5 703a09e9045027be0c9812576ad719b1 gcc-3.3.4-r1.ebuild 24841
 MD5 f7e7042c2ddf66e344b30cbc66ebaf73 files/cc 24
 MD5 80d122265d3062847a4a1b161abe1d26 files/cpp 24
 MD5 3213bd50acdbbd71ce7dd3e40710e30e files/digest-gcc-2.95.3-r8 64
@@ -28,6 +29,7 @@ MD5 60e02a7ee2f579ac72ab223679d81e7a files/gcc-spec-env.patch 819
 MD5 cf81ae4b2da79c34a005da1182c40134 files/digest-gcc-3.3.2 130
 MD5 a3edf5e9d8bb500178f8dd29c1f9eadd files/digest-gcc-3.3.5-r1 442
 MD5 f48105f24e5c714530e66a94aa56d615 files/digest-gcc-3.3.2-r2 361
+MD5 e7e6f6800c5b2e5840cf837e4bd6e1a6 files/digest-gcc-3.4.3.20050110 536
 MD5 01c41c9e6857eb40d402f2acb2bd96f9 files/digest-gcc-3.3.2-r5 361
 MD5 6df16eb92245a931ecfc4cbcc73c84cf files/digest-gcc-3.3.4-r2 442
 MD5 e58b6c1f3122b79a5d0d273acc3c008c files/digest-gcc-3.3.2-r7 361
@@ -116,7 +118,7 @@ MD5 97d7409ba5038bea85f9cabe023e28a6 files/3.4.1/gcc-3.4.1-spec-env.patch 755
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB4mZqArHZZzCEUG0RAhA4AJ9tj3CABE6RYoNARFt/6kN0zRH60gCeJsVe
-T7reHVmYKe3ncqH+lbQPR50=
-=qPSL
+iD8DBQFB45VkArHZZzCEUG0RAoAKAJ9YAc2TAW22U3zSV1PwitbTdZm5FACfSw3V
+8qMXog5KIa5zDk2pNls7uzw=
+=917W
 -----END PGP SIGNATURE-----

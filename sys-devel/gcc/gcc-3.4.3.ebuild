@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.15 2005/01/07 01:47:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.16 2005/01/11 08:58:54 eradicator Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -95,7 +95,7 @@ chk_gcc_version() {
 	local OLD_GCC_CHOST="$(gcc -v 2>&1 | egrep '^Reading specs' |\
 	                       sed -e 's:^.*/gcc[^/]*/\([^/]*\)/[0-9]\+.*$:\1:')"
 
-	if [ "${OLD_GCC_VERSION}" != "${MY_PV_FULL}" ]
+	if [ "${OLD_GCC_VERSION}" != "${GCC_RELEASE_VER}" ]
 	then
 		echo "${OLD_GCC_VERSION}" > "${WORKDIR}/.oldgccversion"
 	fi
@@ -263,7 +263,7 @@ src_install() {
 
 		# Rename jar because it could clash with Kaffe's jar if this gcc is
 		# primary compiler (aka don't have the -<version> extension)
-		cd ${D}${PREFIX}/${CTARGET}/gcc-bin/${MY_PV_FULL}
+		cd ${D}${PREFIX}/${CTARGET}/gcc-bin/${GCC_RELEASE_VER}
 		[ -f jar ] && mv -f jar gcj-jar
 
 		# Move <cxxabi.h> to compiler-specific directories
@@ -438,7 +438,7 @@ pkg_postinst() {
 		then
 			OLD_GCC_VERSION="$(cat "${WORKDIR}/.oldgccversion")"
 		else
-			OLD_GCC_VERSION="${MY_PV_FULL}"
+			OLD_GCC_VERSION="${GCC_RELEASE_VER}"
 		fi
 
 		if [ -f "${WORKDIR}/.oldgccchost" ] && \

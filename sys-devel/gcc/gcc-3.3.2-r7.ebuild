@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.17 2005/01/07 01:47:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.18 2005/01/11 08:58:54 eradicator Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj"
 
@@ -38,17 +38,17 @@ strip-flags
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
 
 LOC="/usr"
-#MY_PV="`echo ${PV} | awk -F. '{ gsub(/_pre.*|_alpha.*/, ""); print $1 "." $2 }'`"
-#MY_PV_FULL="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
-MY_PV="$(get_version_component_range 1-2)"
-MY_PV_FULL="$(get_version_component_range 1-3)"
+#GCC_BRANCH_VER="`echo ${PV} | awk -F. '{ gsub(/_pre.*|_alpha.*/, ""); print $1 "." $2 }'`"
+#GCC_RELEASE_VER="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
+GCC_BRANCH_VER="$(get_version_component_range 1-2)"
+GCC_RELEASE_VER="$(get_version_component_range 1-3)"
 
-LIBPATH="${LOC}/lib/gcc-lib/${CCHOST}/${MY_PV_FULL}"
-BINPATH="${LOC}/${CCHOST}/gcc-bin/${MY_PV}"
-DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
+LIBPATH="${LOC}/lib/gcc-lib/${CCHOST}/${GCC_RELEASE_VER}"
+BINPATH="${LOC}/${CCHOST}/gcc-bin/${GCC_BRANCH_VER}"
+DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${GCC_BRANCH_VER}"
 # Dont install in /usr/include/g++-v3/, but in gcc internal directory.
 # We will handle /usr/include/g++-v3/ with gcc-config ...
-STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
+STDCXX_INCDIR="${LIBPATH}/include/g++-v${GCC_BRANCH_VER/\.*/}"
 
 # ProPolice version
 PP_VER="3_3"
@@ -63,15 +63,15 @@ PATCH_VER="1.0"
 SNAPSHOT=
 
 # Branch update support ...
-MAIN_BRANCH="${PV}"  # Tarball, etc used ...
+GCC_RELEASE_VER="${PV}"  # Tarball, etc used ...
 
 #BRANCH_UPDATE="20021208"
 BRANCH_UPDATE="20040119"
 
 if [ -z "${SNAPSHOT}" ]
 then
-	S="${WORKDIR}/${PN}-${MAIN_BRANCH}"
-	SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${PN}-${MAIN_BRANCH}.tar.bz2"
+	S="${WORKDIR}/${PN}-${GCC_RELEASE_VER}"
+	SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${PN}-${GCC_RELEASE_VER}.tar.bz2"
 
 	if [ -n "${PATCH_VER}" ]
 	then
@@ -82,7 +82,7 @@ then
 	if [ -n "${BRANCH_UPDATE}" ]
 	then
 		SRC_URI="${SRC_URI}
-		         mirror://gentoo/${PN}-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2"
+		         mirror://gentoo/${PN}-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 	fi
 else
 	S="${WORKDIR}/gcc-${SNAPSHOT//-}"
@@ -142,7 +142,7 @@ chk_gcc_version() {
 	local OLD_GCC_CHOST="$(gcc -v 2>&1 | egrep '^Reading specs' |\
 	                       sed -e 's:^.*/gcc-lib/\([^/]*\)/[0-9]\+.*$:\1:')"
 
-	if [ "${OLD_GCC_VERSION}" != "${MY_PV_FULL}" ]
+	if [ "${OLD_GCC_VERSION}" != "${GCC_RELEASE_VER}" ]
 	then
 		echo "${OLD_GCC_VERSION}" > "${WORKDIR}/.oldgccversion"
 	fi
@@ -252,7 +252,7 @@ src_unpack() {
 
 	if [ -z "${SNAPSHOT}" ]
 	then
-		unpack ${PN}-${MAIN_BRANCH}.tar.bz2
+		unpack ${PN}-${GCC_RELEASE_VER}.tar.bz2
 
 		if [ -n "${PATCH_VER}" ]
 		then
@@ -276,7 +276,7 @@ src_unpack() {
 	# Branch update ...
 	if [ -n "${BRANCH_UPDATE}" ]
 	then
-		epatch ${DISTDIR}/${PN}-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2
+		epatch ${DISTDIR}/${PN}-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
 	fi
 
 	# Do bulk patches included in ${P}-patches-${PATCH_VER}.tar.bz2
@@ -497,22 +497,22 @@ src_install() {
 
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
-	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
 	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
 		# amd64 is a bit unique because of multilib.  Add some other paths
 		echo "LDPATH=\"${LIBPATH}:${LIBPATH}/32:${LIBPATH}/../lib64:${LIBPATH}/../lib32\"" >> \
-			${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+			${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
 	else
-		echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+		echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
 	fi
-	echo "MANPATH=\"${DATAPATH}/man\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "MANPATH=\"${DATAPATH}/man\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
 	# Also set CC and CXX
-	echo "CC=\"gcc\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "CXX=\"g++\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "CC=\"gcc\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "CXX=\"g++\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
 	# Make sure we do not check glibc for SSP again, as we did already
 	if glibc_have_ssp || \
 	   [ -f "${ROOT}/etc/env.d/99glibc_ssp" ]
@@ -570,7 +570,7 @@ src_install() {
 
 		# Rename jar because it could clash with Kaffe's jar if this gcc is
 		# primary compiler (aka don't have the -<version> extension)
-		cd ${D}${LOC}/${CCHOST}/gcc-bin/${MY_PV}
+		cd ${D}${LOC}/${CCHOST}/gcc-bin/${GCC_BRANCH_VER}
 		[ -f jar ] && mv -f jar gcj-jar
 
 		# Move <cxxabi.h> to compiler-specific directories
@@ -699,7 +699,7 @@ pkg_postinst() {
 	fi
 	if [ "${ROOT}" = "/" -a "${CHOST}" = "${CCHOST}" ]
 	then
-		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
+		gcc-config --use-portage-chost ${CCHOST}-${GCC_RELEASE_VER}
 	fi
 
 	# Update libtool linker scripts to reference new gcc version ...
@@ -714,7 +714,7 @@ pkg_postinst() {
 		then
 			OLD_GCC_VERSION="$(cat "${WORKDIR}/.oldgccversion")"
 		else
-			OLD_GCC_VERSION="${MY_PV_FULL}"
+			OLD_GCC_VERSION="${GCC_RELEASE_VER}"
 		fi
 
 		if [ -f "${WORKDIR}/.oldgccchost" ] && \

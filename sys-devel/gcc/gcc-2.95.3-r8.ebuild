@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.37 2005/01/07 01:47:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.38 2005/01/11 08:58:54 eradicator Exp $
 
 inherit eutils flag-o-matic gcc versionator fixheadtails
 
@@ -25,14 +25,14 @@ do_filter_flags() {
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
 
 LOC="/usr"
-#MY_PV="`echo ${PV} | awk -F. '{ gsub(/_pre.*|_alpha.*/, ""); print $1 "." $2 }'`"
-#MY_PV_FULL="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
-MY_PV="$(get_version_component_range 1-2)"
-MY_PV_FULL="$(get_version_component_range 1-3)"
+#GCC_BRANCH_VER="`echo ${PV} | awk -F. '{ gsub(/_pre.*|_alpha.*/, ""); print $1 "." $2 }'`"
+#GCC_RELEASE_VER="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
+GCC_BRANCH_VER="$(get_version_component_range 1-2)"
+GCC_RELEASE_VER="$(get_version_component_range 1-3)"
 
-LIBPATH="${LOC}/lib/gcc-lib/${CCHOST}/${MY_PV_FULL}"
-BINPATH="${LOC}/${CCHOST}/gcc-bin/${MY_PV}"
-DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
+LIBPATH="${LOC}/lib/gcc-lib/${CCHOST}/${GCC_RELEASE_VER}"
+BINPATH="${LOC}/${CCHOST}/gcc-bin/${GCC_BRANCH_VER}"
+DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${GCC_BRANCH_VER}"
 # Dont install in /usr/include/g++/, but in gcc internal directory.
 # We will handle /usr/include/g++/ with gcc-config ...
 STDCXX_INCDIR="${LIBPATH}/include/g++"
@@ -49,7 +49,7 @@ IUSE="static nls bootstrap java build"
 # are not cross compiling, than we want SLOT to only contain
 # $PV, as people upgrading to new gcc layout will not have
 # their old gcc unmerged ...
-SLOT="${MY_PV}"
+SLOT="${GCC_BRANCH_VER}"
 
 DEPEND="virtual/libc
 	>=sys-devel/gcc-config-1.2
@@ -207,15 +207,15 @@ src_install() {
 
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
-	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "MANPATH=\"${DATAPATH}/man\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "MANPATH=\"${DATAPATH}/man\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
 	# Also set CC and CXX
-	echo "CC=\"gcc\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "CXX=\"g++\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	echo "CC=\"gcc\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "CXX=\"g++\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
 
 	# Install wrappers
 	exeinto /lib
@@ -301,6 +301,6 @@ src_install() {
 pkg_postinst() {
 	if [ "${ROOT}" = "/" -a "${CHOST}" == "${CCHOST}" ]
 	then
-		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
+		gcc-config --use-portage-chost ${CCHOST}-${GCC_RELEASE_VER}
 	fi
 }
