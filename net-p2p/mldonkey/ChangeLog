@@ -1,6 +1,6 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.44 2004/06/18 14:17:46 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.45 2004/06/18 14:21:43 squinky86 Exp $
 
 *mldonkey-2.5.16-r5 (18 Jun 2004)
 
@@ -8,7 +8,10 @@
 
   18 Jun 2004; Jon Hood <squinky86@gentoo.org> +mldonkey-2.5.16-r5.ebuild,
   -mldonkey-2.5.18.ebuild, -mldonkey-2.5.19.ebuild, -mldonkey-2.5.20.ebuild,
-  +mldonkey-2.5.21-r2.ebuild, -mldonkey-2.5.21.ebuild:
+  +mldonkey-2.5.21-r2.ebuild, -mldonkey-2.5.21.ebuild,
+  -files/mldonkey-2.5.18-configure.patch,
+  -files/mldonkey-2.5.19-configure.patch,
+  -files/mldonkey-2.5.20-configure.patch:
   version bumps; thanks to teedog <teedog@myrealbox.com> in #54260 and #52032;
   ebuild cleanups (2.5.16 is stable branch, 2.5.21 is testing branch)
 
