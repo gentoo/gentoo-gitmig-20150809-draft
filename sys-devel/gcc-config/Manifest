@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 ebc39c1fa68f338a78c5ba7eacd7c9a5 ChangeLog 13937
 MD5 0a250a07d02f1343f64fe7f7bbdbd820 gcc-config-1.3.6-r4.ebuild 2636
-MD5 bfade7fdae44f2ff073d646dd176dcaa gcc-config-1.3.8.ebuild 1356
+MD5 d2278bd7243e0641451c89c9593aad8d gcc-config-1.3.8.ebuild 1370
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 626c17691d48b229f5c619618bf365c0 gcc-config-1.3.7-r6.ebuild 1395
 MD5 6ef0c90ba3d351d20448c6e0a41fb769 files/gcc-config-1.3.8 11956
@@ -17,7 +17,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.8 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBy3IUroRuSHgZdywRArygAJwL/c1z1zkgRdiUKXT97BsCnt4CBwCfRZAA
-WN4M+HKQr4sAVbE8RYeGuOs=
-=cy7w
+iD8DBQFBy3qAroRuSHgZdywRApWvAJ4s4RAgXggIuVfZkLdCdDiFmC5DMQCfQRsB
+tc7lgLlQS2E8LPtx+JJITVA=
+=jHZR
 -----END PGP SIGNATURE-----
