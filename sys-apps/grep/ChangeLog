@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/grep
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.11 2003/02/27 12:55:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.12 2003/02/27 20:34:19 agriffis Exp $
+
+*grep-2.5.1-r1 (27 Feb 2003)
+
+  27 Feb 2003; Aron Griffis <agriffis@gentoo.org> grep-2.5.1-r1.ebuild:
+  Close bug #16495 by installing in /bin instead of /usr/bin.  I introduced
+  this error in the 2.5.1 ebuild.  Thanks to Tristan Henderson who noticed it.
 
 *grep-2.5.1 (27 Feb 2003)
 
