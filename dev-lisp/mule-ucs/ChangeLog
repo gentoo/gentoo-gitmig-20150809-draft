@@ -1,8 +1,11 @@
 # ChangeLog for dev-lisp/mule-ucs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/ChangeLog,v 1.5 2003/05/18 09:05:03 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/ChangeLog,v 1.6 2003/05/18 11:29:12 yakina Exp $
 
 *mule-ucs-0.85_rc3 (18 May 2003)
+
+  18 May 2003; YAMAKURA Makoto <yakina@gentoo.org> mule-ucs-0.85_rc3.ebuild:
+  I have commited broken ebuild. now fixed.
 
   18 May 2003; YAMAKURA Makoto <yakina@gentoo.org> Manifest, mule-ucs-0.85_rc3.ebuild,
   files/digest-mule-ucs-0.85_rc3:
