@@ -1,0 +1,20 @@
+diff -Naur mecab-ruby-0.78.orig/extconf.rb mecab-ruby-0.78/extconf.rb
+--- mecab-ruby-0.78.orig/extconf.rb	2004-06-21 19:45:57.000000000 +0900
++++ mecab-ruby-0.78/extconf.rb	2004-07-24 07:48:47.286930590 +0900
+@@ -1,12 +1,12 @@
+ require 'mkmf'
+ 
+-mecab_config = with_config ('mecab-config', 'mecab-config')
++mecab_config = with_config('mecab-config', 'mecab-config')
+ use_mecab_config = enable_config('mecab-config')
+ 
+-`mecab-config --libs-only-l`.chomp.split.each { | lib |
+-  have_library (lib)
++`#{mecab_config} --libs-only-l`.chomp.split.each { | lib |
++  have_library(lib)
+ }
+ 
+ $CFLAGS += ' ' + `#{mecab_config} --cflags`.chomp
+ 
+-have_header ('mecab.h') && create_makefile('MeCab')
++have_header('mecab.h') && create_makefile('MeCab')

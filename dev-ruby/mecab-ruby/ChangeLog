@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/mecab-ruby
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.1 2004/07/23 22:55:34 matsuu Exp $
+
+*mecab-ruby-0.78 (24 Jul 2004)
+
+  24 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> +mecab-ruby-0.78.ebuild:
+  Initial import.
+
