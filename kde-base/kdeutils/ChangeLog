@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.67 2004/04/25 03:44:41 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.68 2004/04/27 00:54:35 caleb Exp $
+
+  26 Apr 2004; Caleb Tennis <caleb@gentoo.org>
+  +files/kdeutils-3.2.2-gcc34-compile.patch:
+  GCC 3.4 compile fix
 
   24 Apr 2004; Bret Curtis <psi29a@gentoo.org> kdeutils-3.2.2.ebuild:
   Added to ~mips
