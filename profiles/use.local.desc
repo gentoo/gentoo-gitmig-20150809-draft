@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1048 2005/03/28 07:08:13 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1049 2005/03/28 12:28:56 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -818,6 +818,7 @@ www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/nsxml:xslt - Enables xslt support
 www-proxy/squid:logrotate - Use logrotate for rotating logs
 www-proxy/squid:underscores - Enables support for domain names containing underscores
+www-proxy/squid:customlog - Add support for custom log file formats
 www-proxy/tinyproxy:transparent-proxy - enable support for transparent proxies
 www-servers/fnord:diet - Compile and link with dietlibc
 www-servers/lighttpd:xattr - if you want extended attributes enabled
