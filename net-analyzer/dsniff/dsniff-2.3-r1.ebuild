@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r1.ebuild,v 1.1 2003/08/21 05:10:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r1.ebuild,v 1.2 2003/08/26 04:20:02 vapier Exp $
 
 inherit eutils
 
@@ -48,6 +48,7 @@ src_unpack() {
 	sed -i "s:lib':':" configure || die "sed configure"
 	sed -i 's:-DDSNIFF_LIBDIR=\\\"$(libdir)/\\\"::' Makefile.in || die "sed makefile"
 	sed -i 's:/usr/local/lib:/etc/dsniff:' pathnames.h || die "sed pathnames"
+	epatch ${FILESDIR}/${PV}-makefile.patch
 }
 
 src_compile() {
