@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.56 2003/09/17 01:30:39 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.57 2003/11/09 04:45:12 strider Exp $
+
+*sun-jdk-1.4.2.02 (09 Nov 2003)
+
+  09 Nov 2003; Adrian Almenar <strider@gentoo.org> sun-jdk-1.4.2.02.ebuild,
+  files/sun-jdk-1.4.2.02:
+  Version bump.
 
   16 Sep 2003; Adrian Almenar <strider@gentoo.org> sun-jdk-1.4.2.01.ebuild:
   Fixed homepage URL. #28858
