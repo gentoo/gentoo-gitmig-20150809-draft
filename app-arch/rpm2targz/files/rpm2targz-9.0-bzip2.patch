@@ -1,0 +1,27 @@
+--- rpmoffset.c	2003-06-21 13:25:14.000000000 +0100
++++ rpmoffset.c.new	2003-06-26 00:27:31.000000000 +0100
+@@ -1,4 +1,3 @@
+-
+ /* Find how deeply inside an .RPM the real data is */
+ /* kept, and report the offset in bytes */
+ 
+@@ -16,8 +15,17 @@
+ {
+         char *buff = malloc(RPMBUFSIZ),*eb,*p;
+         for (p = buff, eb = buff + read(0,buff,RPMBUFSIZ); p < eb; p++)
+-                if (*p == '\037' && p[1] == '\213' && p[2] == '\010')
+-                        printf("%d\n",p - buff),
++	{
++                if (*p == '\037' && p[1] == '\213' && p[2] == '\010') 
++		{
++                        printf("%d\n",p - buff);
+                         exit(0);
++		}
++		else if (*p == 'B' && p[1] == 'Z' && p[2] == 'h' )
++		{
++		 	printf("%d\n",p - buff);
++			exit(0);
++		}
++        }
+         exit(1);
+ }
