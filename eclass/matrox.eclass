@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.7 2004/10/04 06:21:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.8 2004/10/09 00:36:28 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -59,7 +59,7 @@ matrox_pkg_setup() {
 	# xorg-x11 compatibility
 	elif has_version "x11-base/xorg-x11"
 	then
-		if [ "${FORCE_VERSION}" -ne "4.3.0" ]
+		if [ "${FORCE_VERSION}" != "4.3.0" ]
 		then
 			die "Set FORCE_VERSION=4.3.0 to emerge this. Use at your own risk."
 		fi
