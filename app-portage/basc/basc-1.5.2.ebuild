@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/basc-1.5.2.ebuild,v 1.6 2005/01/09 01:49:03 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/basc-1.5.2.ebuild,v 1.7 2005/01/19 23:01:30 squash Exp $
 
 # ebuild contributed by Alexander Mieland and Daniel Herzog
 
@@ -10,7 +10,7 @@ DESCRIPTION="Buildtime And Statistics Client for http://www.gentoo-stats.org"
 HOMEPAGE="http://www.gentoo-stats.org"
 SRC_URI="http://www.gentoo-stats.org/download/${P}.tar.gz"
 
-KEYWORDS="x86 sparc ~hppa ppc amd64 ~ppc64"
+KEYWORDS="x86 ~hppa ppc amd64 ~ppc64"
 SLOT="0"
 LICENSE="GPL-2"
 
