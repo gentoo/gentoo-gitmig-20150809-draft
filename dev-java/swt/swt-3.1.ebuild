@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1.ebuild,v 1.2 2004/11/16 00:21:04 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1.ebuild,v 1.3 2004/11/20 11:49:17 sejo Exp $
 
 inherit eutils java-pkg
 
@@ -34,7 +34,9 @@ src_unpack() {
 		unzip ${i} &> /dev/null
 	done
 
-	use mozilla && cp library/*.cpp ${S} || die "Failed copy *.cpp"
+	if use mozilla; then
+		cp library/*.cpp ${S} || die "Failed copy *.cpp"
+	fi
 
 	mkdir src && mv org src/
 	cp ${FILESDIR}/build-${PV}.xml ${S}/build.xml || die "Failed to copy build.xml"
