@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmcpuload
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.6 2003/03/29 11:03:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.7 2003/05/19 21:18:56 mholzer Exp $
+
+*wmcpuload-1.0.1 (19 May 2003)
+
+  19 May 2003; Martin Holzer <mholzer@gentoo.org> wmcpuload-1.0.1.ebuild:
+  Version bumped. Closes #21285.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
