@@ -1,6 +1,28 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.259 2003/12/14 09:34:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.260 2003/12/14 09:39:38 spyderous Exp $
+
+  14 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.2.0-r12.ebuild,
+  files/4.2.0/XFree-4.2.0-imake-tmpdir.patch.bz2,
+  files/4.2.0/XFree86-4.2.0-GeForce2Go.patch.bz2,
+  files/4.2.0/XFree86-4.2.0-Suse-Updates.patch.bz2,
+  files/4.2.0/XFree86-4.2.0-agpgart-load.patch.bz2,
+  files/4.2.0/XFree86-4.2.0-fixkbd.patch.bz2,
+  files/4.2.0/XFree86-4.2.0-i18n.patch.bz2,
+  files/4.2.0/XFree86-4.2.0-i810-dri.patch.bz2,
+  files/4.2.0/XFree86-4.2.0-i810_i845_20020524.patch.bz2,
+  files/4.2.0/XFree86-4.2.0-r128-lockup.patch.bz2,
+  files/4.2.0/XFree86-4.2.0-v4l.patch.bz2,
+  files/4.2.0/XFree86-4.2.0-xft-leak.patch.bz2, files/4.2.0-r12/10xfree,
+  files/4.2.0-r12/XftConfig, files/4.2.0-r12/Xsession,
+  files/4.2.0-r12/Xsetup_0, files/4.2.0-r12/chooser.sh,
+  files/4.2.0-r12/site.def, files/4.2.0-r12/startDM.sh, files/4.2.0-r12/xdm,
+  files/4.2.0-r12/xdm.start, files/4.2.0-r12/xfs.conf.d,
+  files/4.2.0-r12/xfs.config, files/4.2.0-r12/xfs.start,
+  files/4.2.0-r12/xft-quality.diff, files/4.2.0-r12/xinitrc,
+  files/4.2.0-r12/Sessions/Xsession, files/4.2.0-r12/lib/libGL.la,
+  files/4.2.0-r12/lib/libGLU.la, files/4.2.0-r12/lib/libOSMesa.la:
+  Pulling 4.2.0. Anyone wanting to use 4.2.x should use 4.2.1 instead.
 
   14 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.99.16.ebuild,
   xfree-4.3.99.901.ebuild:
