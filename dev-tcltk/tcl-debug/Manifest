@@ -1,4 +1,14 @@
-MD5 854cbca7325a1e1edd2e09331a578179 tcl-debug-2.0.ebuild 1109
-MD5 4b83150346efe101fb608b44bed75f5b ChangeLog 644
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f10d63a2964b4d6e35a4c48b996d6ec4 tcl-debug-2.0.ebuild 1117
+MD5 b75db0b5abc251de455c9a7176a1e3c4 ChangeLog 761
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 843ce7fd6ebd1485509ac6a7ddaebf26 files/digest-tcl-debug-2.0 118
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCMGGg06ebR+OMO78RAsciAKCVhNRnXbO9swZgGu/7hJKuU4bV2ACfaAF4
+BG7Odqjt8qxYF0WKv2PvhII=
+=OwhM
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-debug/tcl-debug-2.0.ebuild,v 1.4 2004/06/25 02:08:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-debug/tcl-debug-2.0.ebuild,v 1.5 2005/03/10 15:02:40 luckyduck Exp $
 
 DESCRIPTION="TCL debug library"
 HOMEPAGE="http://expect.nist.gov"
@@ -8,7 +8,7 @@ SRC_URI="http://expect.nist.gov/tcl-debug/${PN}.tar.gz
 		 doc? ( http://expect.nist.gov/tcl-debug/tcl-debug.ps.Z )"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ~amd64"
 IUSE="doc"
 DEPEND=">=dev-lang/tcl-8.3.0
 		>=dev-lang/tk-8.3.0"

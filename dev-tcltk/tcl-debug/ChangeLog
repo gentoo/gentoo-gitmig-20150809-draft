@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcl-debug
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-debug/ChangeLog,v 1.4 2004/06/25 02:08:19 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-debug/ChangeLog,v 1.5 2005/03/10 15:02:40 luckyduck Exp $
+
+  10 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> tcl-debug-2.0.ebuild:
+  added ~amd64 to KEYWORDS, fixes #83052
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> tcl-debug-2.0.ebuild:
   Add missing flags to IUSE.
