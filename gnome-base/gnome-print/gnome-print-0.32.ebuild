@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.32.ebuild,v 1.1 2001/11/10 13:06:22 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.32.ebuild,v 1.2 2001/11/15 00:41:01 achim Exp $
 
 
 S=${WORKDIR}/${P}
@@ -10,10 +10,12 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 RDEPEND=">=media-libs/gdk-pixbuf-0.11.0-r1
-	 >=gnome-base/libglade-0.17-r1"
+	 >=gnome-base/libglade-0.17-r1
+	 >=media-libs/freetype-2.0.5"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext ) 
+	tex? ( app-text/tetex )
         sys-devel/perl
         >=app-text/ghostscript-6.50-r2"
 
