@@ -1,6 +1,9 @@
 # ChangeLog for net-www/resin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/resin/ChangeLog,v 1.6 2004/07/26 13:39:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/resin/ChangeLog,v 1.7 2004/07/27 20:22:22 axxo Exp $
+
+  27 Jul 2004; Thomas Matthijs <axxo@gentoo.org> :
+  new upstream version
 
   26 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   resin-2.1.9.ebuild:

@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 00bdeef5351df27749bd9ddcb6c4b1aa tomcat-3.3.2.ebuild 2630
 MD5 0149d17d01c7c375de8ebd15aecf04c8 tomcat-4.1.30.ebuild 2648
-MD5 cb499e588811bd100bd6f6be02cdc7d9 tomcat-5.0.27.ebuild 2648
+MD5 77ee379ba6b124daaf9c610bc623ed31 tomcat-5.0.27.ebuild 2647
 MD5 86361612a72e6d4c26ce99e459f7ce80 ChangeLog 7986
 MD5 56292f22dced45d993974e198033461d metadata.xml 221
 MD5 6940eb780efc66ecb6ecf11b6b7adb05 files/digest-tomcat-3.3.2 73
@@ -24,7 +24,7 @@ MD5 a4af2d8c7172284a45409b4c6869c54d files/5.0.27/21tomcat 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBBnGr/rLF9B432nYRAl9nAJ9RjeQwWWw8TiWkLCURHyy/8OkcSQCgxnxO
-V47YhICeo5UprFsEczBUnac=
-=ZBB8
+iD8DBQFBBrpB/rLF9B432nYRAo+mAJwPubLqqqj3MuTWLkhf9kMrzpYGSgCfREAn
+5+j/Vixtu3XMG4yWFNFx1ss=
+=8vkM
 -----END PGP SIGNATURE-----
