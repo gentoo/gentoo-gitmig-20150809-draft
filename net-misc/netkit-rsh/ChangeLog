@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-rsh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.16 2004/07/23 02:38:29 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.17 2004/12/08 20:09:05 hansmi Exp $
+
+  08 Dec 2004; Michael Hanselmann <hansmi@gentoo.org>
+  netkit-rsh-0.17-r5.ebuild:
+  Added a patch to prevent from segfaulting on ppc. See bug #72359.
 
   22 Jul 2004; Jon Portnoy <avenj@gentoo.org> netkit-rsh-0.17-r5.ebuild :
   Optional PAM support from Christer Ekholm in bug #56503.

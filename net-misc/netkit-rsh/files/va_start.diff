@@ -1,0 +1,29 @@
+--- netkit-rsh-0.17/rcp/rcp.c.org	2004-11-24 19:15:02.000000000 +0300
++++ netkit-rsh-0.17/rcp/rcp.c	2004-11-24 19:22:47.000000000 +0300
+@@ -877,17 +877,22 @@ error(const char *fmt, ...)
+ 	static FILE *fp;
+ 	va_list ap;
+ 
+-	va_start(ap, fmt);
+-
+ 	++errs;
+ 	if (!fp && !(fp = fdopen(rem, "w")))
+ 		return;
++
++	va_start(ap, fmt);
+ 	fprintf(fp, "%c", 0x01);
+ 	vfprintf(fp, fmt, ap);
+ 	fflush(fp);
+-	if (!iamremote)	vfprintf(stderr, fmt, ap);
+-
+ 	va_end(ap);
++	
++	if (!iamremote)	{
++		va_start(ap, fmt);
++		vfprintf(stderr, fmt, ap);
++		va_end(ap);
++	}
++
+ }
+ 
+ static void 

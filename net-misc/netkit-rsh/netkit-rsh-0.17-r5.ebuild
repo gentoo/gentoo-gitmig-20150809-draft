@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r5.ebuild,v 1.8 2004/07/23 02:38:29 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r5.ebuild,v 1.9 2004/12/08 20:09:05 hansmi Exp $
 
 inherit eutils
 
@@ -20,6 +20,9 @@ DEPEND=">=sys-libs/ncurses-5.2
 src_unpack() {
 	unpack ${A} ; cd ${S}
 	epatch ${FILESDIR}/rlogind-auth.diff
+
+	# See bug #72359
+	epatch ${FILESDIR}/va_start.diff
 }
 
 src_compile() {
