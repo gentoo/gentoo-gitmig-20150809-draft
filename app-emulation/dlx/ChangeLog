@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/dlx
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dlx/ChangeLog,v 1.1 2003/11/21 19:00:31 rphillips Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dlx/ChangeLog,v 1.2 2004/03/02 21:09:46 dholm Exp $
+
+  02 Mar 2004; David Holm <dholm@gentoo.org> dlx-1.0.0.ebuild:
+  Added to ~ppc.
 
 *dlx-1.0.0 (21 Nov 2003)
 
