@@ -1,6 +1,13 @@
 # ChangeLog for net-www/phpBB
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/ChangeLog,v 1.12 2004/04/27 20:45:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/ChangeLog,v 1.13 2004/05/14 22:08:29 stuart Exp $
+
+*phpBB-2.0.8a-r1 (14 May 2004)
+
+  14 May 2004; Stuart Herbert <stuart@gentoo.org> phpBB-2.0.8a-r1.ebuild,
+  files/2.0.8-postinstall-en.txt:
+  Converted phpBB-2.0.8a to use webapp-config; by Lars Tiefland
+  <ltiefland@gate-birds-sky.org>; see bug #50969
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> phpBB-2.0.6-r1.ebuild:
   Add inherit eutils
