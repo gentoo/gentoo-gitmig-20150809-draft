@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/trayer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.1 2005/03/07 14:55:44 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.2 2005/03/07 15:35:34 gustavoz Exp $
+
+  07 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> trayer-1.0.ebuild:
+  Keyworded ~sparc wrt #84395
 
 *trayer-1.0 (07 Mar 2005)
 
