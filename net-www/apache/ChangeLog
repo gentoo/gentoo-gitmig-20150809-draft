@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.211 2004/06/25 11:52:56 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.212 2004/06/29 03:19:04 zul Exp $
+
+  28 Jun 2004; Chuck Short <zul@gentoo.org> apache-2.0.49-r1.ebuild:
+  Removed old versions.
 
   25 Jun 2004; Chuck Short <zul@gentoo.org> apache-2.0.49-r3.ebuild:
   Replaced version berkdb detection with something that is much more smarter.
