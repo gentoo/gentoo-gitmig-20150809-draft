@@ -8,3 +8,9 @@ selinux
 # this repoman will fail on apps like sys-libs/db
 java
 
+3dnow
+icc
+icc-pgo
+mmx
+svga
+sse
