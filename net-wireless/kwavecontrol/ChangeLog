@@ -1,0 +1,8 @@
+# ChangeLog for net-wireless/kwavecontrol
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwavecontrol/ChangeLog,v 1.1 2002/12/14 19:12:56 hannes Exp $
+
+*kwavecontrol-0.2 (14 Dec 2002)
+
+  14 Dec 2002; Hannes Mehnert <hannes@gentoo.org> kwavecontrol-0.2.ebuild,
+  ChangeLog: Initial ebuild.
