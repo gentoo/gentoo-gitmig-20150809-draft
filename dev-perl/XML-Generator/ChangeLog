@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Generator
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/ChangeLog,v 1.11 2004/08/28 21:57:31 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/ChangeLog,v 1.12 2004/11/03 06:48:10 psi29a Exp $
+
+  03 Nov 2004; Bret Curtis <psi29a@gentoo.org> XML-Generator-0.99.ebuild:
+  added to ~mips for testing
 
   28 Aug 2004; Tom Gall <tgall@gentoo.org> XML-Generator-0.99.ebuild:
   stable on ppc64, bug #60196
