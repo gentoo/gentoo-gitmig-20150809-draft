@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.1.9.ebuild,v 1.3 2004/10/19 14:46:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.2.0.ebuild,v 1.1 2004/10/19 14:46:09 usata Exp $
 
 inherit eutils
 
@@ -13,26 +13,18 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=app-i18n/uim-0.4.3
+DEPEND=">=app-i18n/uim-0.4.4
 	>=x11-libs/qt-3.3.3-r1"
 
-S="${WORKDIR}/${PN}"
-
-pkg_setup() {
-	if [ ! -e /usr/qt/3/plugins/inputmethods/libqimsw-none.so ] ; then
-		die "You need to rebuild >=x11-libs/qt-3.3.3-r1 with immqt-bc(recommended) or immqt USE flag enabled."
-	fi
-}
-
 src_compile() {
-	sed -e 's,${QTDIR},${D}${QTDIR},g' install > ${T}/install
+	addwrite /usr/qt/3/etc/settings
 
-	qmake || die "qmake failed"
+	econf || die "You need to rebuild >=x11-libs/qt-3.3.3-r1 with immqt-bc(recommended) or immqt USE flag enabled."
 	emake -j1 || die "make failed."
 }
 
 src_install() {
-	sh ${T}/install || die "install failed"
+	make DESTDIR=${D} install || die
 
 	dodoc COPYING ChangeLog README* TODO THANKS
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.1.7.ebuild,v 1.4 2004/10/06 07:38:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.1.7.ebuild,v 1.5 2004/10/19 14:46:09 usata Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Qt immodules input method framework plugin for UIM"
 HOMEPAGE="http://freedesktop.org/Software/UimQt"
 SRC_URI="http://freedesktop.org/~kzk/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2 | BSD"
+LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
