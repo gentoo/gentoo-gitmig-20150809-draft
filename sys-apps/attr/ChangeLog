@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/attr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.12 2003/02/24 22:34:58 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.13 2003/04/13 13:40:49 seemant Exp $
+
+*attr-2.2.0 (13 Apr 2003)
+
+  13 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
+  attr-2.2.0.ebuild:
+  version bump. The gettext patch in FILESDIR is to disable the "compulsory"
+  gettext dependency.
 
   21 Dec 2002; Daniel Robbins <drobbins@gentoo.org>: 20020330 ->
   2.0.5_p20020330 version rename to fix policy violation for naming of CVS
