@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4cc74c6073cb3911b66fe32131ddb607 eix-0.1.2.ebuild 965
+MD5 cefb65c0be181bc9bbbd24635d859569 ChangeLog 360
+MD5 74c5aadf8e3e9d642a20e64d1afefec8 metadata.xml 239
+MD5 3081ee5e5e220ef71769117b2c358728 files/digest-eix-0.1.2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB7ThsmPFBzbX68WERAspUAJ9+ZwRd/0GWBYqGPzrbcClW1ko5FQCggtHY
+tjE1wpqALb1lVho2G6uKpVg=
+=MYVH
+-----END PGP SIGNATURE-----
