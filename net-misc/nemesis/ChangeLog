@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nemesis
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.7 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.8 2003/08/21 04:58:19 vapier Exp $
+
+*nemesis-1.4_beta3 (21 Aug 2003)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Patch to compile against SLOT-ed libnet-1.0.x #17772 + version bump.
 
 *nemesis-1.32 (23 Apr 2002)
 
