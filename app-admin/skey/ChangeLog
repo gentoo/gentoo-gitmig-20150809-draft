@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/skey
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.14 2004/06/24 21:37:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.15 2004/06/27 08:57:57 taviso Exp $
+
+*skey-1.1.5-r2 (27 Jun 2004)
+
+  27 Jun 2004; Tavis Ormandy <taviso@gentoo.org> +skey-1.1.5-r2.ebuild:
+  fixing skeyprune, looking in wrong location for skeykeys. #55278
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> skey-1.1.5-r1.ebuild:
   adding s390 keyword
