@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.30 2003/11/07 18:42:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.31 2003/12/10 21:13:25 agriffis Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -62,6 +62,7 @@ case "${ARCH}" in
 	mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mabi" ;;
 	amd64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
 	alpha)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
+	ia64)   ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
 esac
 
 # C[XX]FLAGS that we are think is ok, but needs testing
