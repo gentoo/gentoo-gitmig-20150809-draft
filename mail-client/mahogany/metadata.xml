@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>net-mail</herd>
+	<longdescription>Mahogany is an OpenSource cross-platform mail and news client. It is available for X11/Unix and MS Win32 platforms, supporting a wide range of protocols and standards, including SMTP, POP3, IMAP, NNTP (including SSL support for all of them) and full MIME support.</longdescription>
+</pkgmetadata>

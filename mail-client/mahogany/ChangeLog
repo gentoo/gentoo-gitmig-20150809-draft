@@ -1,0 +1,11 @@
+# ChangeLog for mail-mta/mahogany
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mahogany/ChangeLog,v 1.1 2005/01/10 02:40:13 ticho Exp $
+
+*mahogany-0.65 (10 Jan 2005)
+
+  10 Jan 2005; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +mahogany-0.65.ebuild:
+  Initial import, ebuild submitted by Robert Cernansky
+  <openhs@users.sourceforge.net>. Closes #46896.
+
