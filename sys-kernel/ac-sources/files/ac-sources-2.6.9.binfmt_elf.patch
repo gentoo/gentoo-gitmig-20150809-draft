@@ -1,5 +1,5 @@
---- linux-2.4.27/fs/binfmt_elf.c	2004-11-10 12:25:16 -08:00
-+++ linux-2.4.27-plasmaroo/fs/binfmt_elf.c	2004-11-10 12:25:16 -08:00
+--- linux-2.6.9/fs/binfmt_elf.c	2004-11-10 12:25:16 -08:00
++++ linux-2.6.9-plasmaroo/fs/binfmt_elf.c	2004-11-10 12:25:16 -08:00
 @@ -335,9 +335,12 @@
  		goto out;
  
