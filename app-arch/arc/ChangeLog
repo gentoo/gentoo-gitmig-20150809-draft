@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.6 2004/02/27 01:58:15 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.7 2004/03/31 13:12:17 aliz Exp $
+
+  31 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> arc-5.21j.ebuild:
+  Compile with gcc.
 
   27 Feb 2004; Sven Blumenstein <bazik@gentoo.org> arc-5.21j.ebuild:
   Stable on sparc, DEPEND of amavis.
