@@ -1,8 +1,11 @@
 # ChangeLog for net-im/pork
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/ChangeLog,v 1.8 2003/04/09 13:19:02 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/ChangeLog,v 1.9 2003/04/17 16:58:44 lostlogic Exp $
 
 *pork-0.7.0 (09 Apr 2003)
+
+  17 Apr 2003; Brandon Low <lostlogic@gentoo.org> pork-0.7.0.ebuild:
+  Stable x86 keyword
 
   09 Apr 2003; Brandon Low <lostlogic@gentoo.org> pork-0.7.0.ebuild:
   Bump
