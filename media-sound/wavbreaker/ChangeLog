@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/wavbreaker
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.1 2003/07/09 21:22:37 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.2 2003/12/18 23:06:19 mholzer Exp $
+
+*wavbreaker-0.4 (19 Dec 2003)
+
+  19 Dec 2003; Martin Holzer <mholzer@gentoo.org> wavbreaker-0.4.ebuild:
+  Version bumped. Closes 32110.
 
 *wavbreaker-0.3 (09 Jul 2003)
 
