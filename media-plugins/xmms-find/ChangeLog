@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/xmms-find
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-find/ChangeLog,v 1.4 2004/06/24 23:39:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-find/ChangeLog,v 1.5 2004/07/03 21:39:07 fvdpol Exp $
+
+*xmms-find-0.5.0 (03 Jul 2004)
+
+  03 Jul 2004; Frank van de Pol <fvdpol@gentoo.org>
+  +files/xmms-find-0.5.0-fPIC.patch, +xmms-find-0.5.0.ebuild:
+  Version bump to 0.5.0 and patched for AMD64 compatiblity. Closes bug 54256 and
+  bug 55852.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-find-0.4.7.ebuild:

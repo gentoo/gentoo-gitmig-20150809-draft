@@ -1,0 +1,11 @@
+--- xmmsfind-0.5.0-orig/Makefile	2004-07-03 23:25:50.456130064 +0200
++++ xmmsfind-0.5.0/Makefile	2004-07-03 23:26:46.634589640 +0200
+@@ -2,7 +2,7 @@
+ REMOTE = ./remote/xmmsfind_remote
+ CC = gcc
+ OBJ = plugin.o xmmsfind.o config_win.o
+-FLAGS = -Wall -rdynamic #-g -DDEBUG
++FLAGS = -Wall -rdynamic -fPIC #-g -DDEBUG
+ LIBS = -shared
+ GTKFLAGS = `gtk-config --cflags`
+ GTKLIBS = `gtk-config --libs`
