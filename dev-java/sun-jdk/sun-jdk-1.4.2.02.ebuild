@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.02.ebuild,v 1.1 2003/11/09 04:45:12 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.02.ebuild,v 1.2 2003/12/07 17:41:49 strider Exp $
 
 IUSE="doc gnome kde mozilla"
 
@@ -43,7 +43,8 @@ src_unpack() {
 		eerror "cannot read ${At}. Please check the permission and try again."
 		die
 	fi
-	testExp=`echo -e "\0177\0105\0114\0106\0001\0001\0001"`
+	#Search for the ELF Header
+	testExp=`echo -e "\177\105\114\106\001\001\001"`
 	startAt=`grep -aonm 1 ${testExp}  ${DISTDIR}/${At} | cut -d: -f1`
 	tail -n +${startAt} ${DISTDIR}/${At} > install.sfx
 	chmod +x install.sfx
@@ -124,10 +125,42 @@ pkg_postinst () {
 	# Set as default VM if none exists
 	java_pkg_postinst
 
-	einfo "If you want to install the plugin for Netscape 4.x, type"
-	einfo
-	einfo "   cd /usr/lib/nsbrowser/plugins/"
-	einfo "   ln -sf /opt/${P}/jre/plugin/i386/ns4/libjavaplugin.so"
-	einfo
-}
+	#Show info about netscape
+	if has_version '>=netscape-navigator-4.79-r1' || has_version '>=netscape-communicator-4.79-r1' ; then
+		einfo "********************************************************"
+		einfo "If you want to install the plugin for Netscape 4.x, type"
+		einfo
+		einfo "   cd /usr/lib/nsbrowser/plugins/"
+		einfo "   ln -sf /opt/${P}/jre/plugin/i386/ns4/libjavaplugin.so"
+		einfo "********************************************************"
+		echo
+	fi
 
+	#Thanks to Douglas Pollock <douglas.pollock@magma.ca> for this
+	#comment found on the sun-jdk 1.2.2 ebuild that he sent.
+	if [ !"`use X`" ] ; then
+		einfo "********************************************************"
+		eerror "You're not using X so its possible that you dont have"
+		eerror "a X server installed, please read the following warn: "
+		eerror "Some parts of Sun's JDK require XFree86 to be installed."
+		eerror "Be careful which Java libraries you attempt to use."
+		einfo "********************************************************"
+		echo
+	fi
+
+	einfo "******************************************************"
+	einfo " After installing ${P} this"
+	einfo " was set as the default JVM to run."
+	einfo " When finished please run the following so your"
+	einfo " enviroment gets updated."
+	eerror "    /usr/sbin/env-update && source /etc/profile"
+	einfo " Or use java-config program to set your preferred VM"
+	einfo "******************************************************"
+
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	sleep 8
+
+}
