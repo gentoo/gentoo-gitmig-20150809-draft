@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/libggz
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.3 2004/02/17 04:23:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.4 2004/03/28 09:36:46 mr_bones_ Exp $
+
+  28 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> libggz-0.0.5.ebuild,
+  libggz-0.0.7.ebuild, libggz-0.0.8.ebuild:
+  tidy; fix crypt/gcrypt use mismatch
 
 *libggz-0.0.8 (16 Feb 2004)
 

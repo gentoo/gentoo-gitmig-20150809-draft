@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/libggz-0.0.8.ebuild,v 1.1 2004/02/17 04:23:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/libggz-0.0.8.ebuild,v 1.2 2004/03/28 09:36:46 mr_bones_ Exp $
 
 DESCRIPTION="The GGZ library, used by GGZ Gaming Zone"
 HOMEPAGE="http://www.ggzgamingzone.org/"
@@ -20,7 +20,7 @@ src_compile() {
 	use ssl && myconf="--with-tls=OpenSSL"
 	econf \
 		--disable-dependency-tracking \
-		`use_with gcrypt` \
+		`use_with crypt gcrypt` \
 		${myconf} \
 		|| die
 	emake || die "emake failed"
