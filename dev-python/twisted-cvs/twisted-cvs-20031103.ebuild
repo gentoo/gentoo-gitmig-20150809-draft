@@ -1,14 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-cvs/twisted-cvs-20031103.ebuild,v 1.2 2004/05/07 20:22:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-cvs/twisted-cvs-20031103.ebuild,v 1.3 2004/06/17 01:56:58 mr_bones_ Exp $
 
 ECVS_USER="anon"
 ECVS_SERVER="cvs.twistedmatrix.com:/cvs"
 ECVS_MODULE="Twisted"
 ECVS_CVS_OPTIONS="-dP"
 
-inherit cvs
-inherit distutils
+inherit cvs distutils
 
 S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="Twisted is a framework, written in Python, for writing networked applications."
