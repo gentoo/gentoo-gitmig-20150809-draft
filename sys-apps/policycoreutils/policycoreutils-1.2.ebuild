@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.2.ebuild,v 1.2 2003/10/07 18:22:42 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.2.ebuild,v 1.3 2003/10/20 02:10:32 pebenito Exp $
 
 IUSE="build"
 
@@ -40,7 +40,7 @@ src_compile() {
 	for i in ${SUBDIRS}; do
 		einfo "Compiling ${i}"
 		cd ${S}/${i}
-		emake EXTRA_CFLAGS="${CFLAGS}"
+		emake EXTRA_CFLAGS="${CFLAGS}" || die
 	done
 }
 

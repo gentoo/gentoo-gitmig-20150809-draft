@@ -1,5 +1,5 @@
 MD5 927093fd813bc45afc77ef11c9258e91 metadata.xml 360
 MD5 0cfebc8a0fcbd0c037795789a77288e3 ChangeLog 1336
-MD5 5aaf331dbdc96e64e3064c932b60a6ac checkpolicy-1.2.ebuild 726
+MD5 fd23d2bfa438b9685ac76b81ebbcf46a checkpolicy-1.2.ebuild 733
 MD5 34336f141d0ccf89f3d58a10ca156287 files/digest-checkpolicy-1.2 63
 MD5 3353293995a661930e43915541e9a99c files/checkpolicy-1.2-gentoo.diff 573

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.2.ebuild,v 1.2 2003/10/07 18:19:40 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.2.ebuild,v 1.3 2003/10/20 02:12:08 pebenito Exp $
 
 IUSE=""
 
@@ -28,7 +28,7 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}
-	emake EXTRA_CFLAGS="${CFLAGS}"
+	emake EXTRA_CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
