@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.11.ebuild,v 1.7 2004/07/15 02:52:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.11.ebuild,v 1.8 2004/10/29 00:21:40 lu_zero Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="PPC Bootloader"
 SRC_URI="http://penguinppc.org/projects/yaboot/${P}.tar.gz"
@@ -24,12 +24,12 @@ MAKEOPTS='PREFIX=/usr MANDIR=share/man'
 src_compile() {
 	export -n CFLAGS
 	export -n CXXFLAGS
-	[ -n "${CC}" ] || CC="gcc"
+	[ -n "$(tc-getCC)" ] || CC="gcc"
 	# dual boot patch
 	epatch ${FILESDIR}/yaboot-3.4.patch
 	epatch ${FILESDIR}/yabootconfig-${PV}.patch
 	epatch ${FILESDIR}/chrpfix.patch
-	emake ${MAKEOPTS} CC="${CC}" || die
+	emake ${MAKEOPTS} CC="$(tc-getCC)" || die
 }
 
 src_install() {

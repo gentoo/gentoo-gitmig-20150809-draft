@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/yaboot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.11 2004/09/03 19:48:01 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.12 2004/10/29 00:21:40 lu_zero Exp $
+
+  29 Oct 2004; Luca Barbato <lu_zero@gentoo.org> yaboot-1.3.10-r1.ebuild,
+  yaboot-1.3.10-r2.ebuild, yaboot-1.3.10.ebuild, yaboot-1.3.11-r1.ebuild,
+  yaboot-1.3.11.ebuild, yaboot-1.3.12-r1.ebuild, yaboot-1.3.12.ebuild:
+  Moved to toolchain-funcs tc-getCC
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   yaboot-1.3.11-r1.ebuild, yaboot-1.3.12.ebuild:
