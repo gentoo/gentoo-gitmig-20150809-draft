@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkDPS
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.16 2004/11/02 01:42:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.17 2004/11/02 01:56:45 spyderous Exp $
+
+  01 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  gtkDPS-0.3.3-r1.ebuild, gtkDPS-0.3.4.ebuild:
+  Actually, just allow virtual/x11 -- going to pull app-text/dgs from the tree.
 
   01 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   gtkDPS-0.3.3-r1.ebuild, gtkDPS-0.3.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.3-r1.ebuild,v 1.17 2004/11/02 01:42:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.3-r1.ebuild,v 1.18 2004/11/02 01:56:45 spyderous Exp $
 
 IUSE="nls"
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 sparc"
 
 DEPEND="virtual/libc
 	=x11-libs/gtk+-1.2*
-	|| ( >=app-text/dgs-0.5.9.1 virtual/x11 )"
+	virtual/x11"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
