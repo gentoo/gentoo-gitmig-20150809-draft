@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6-r1.ebuild,v 1.1 2004/02/11 05:18:55 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6-r1.ebuild,v 1.2 2004/02/11 05:24:43 rphillips Exp $
 
 DESCRIPTION="ODBC Interface for Linux"
 HOMEPAGE="http://www.unixodbc.org/"
@@ -9,11 +9,12 @@ SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~hppa ~alpha ~amd64 ~sparc"
-IUSE="qt gtk"
+IUSE="qt gnome"
 
 DEPEND="virtual/glibc
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
+	gnome? ( gnome-base/gnome-libs )
 	qt? ( >=x11-libs/qt-3.0* )"
 
 # the configure.in patch is required for 'use qt'
@@ -44,7 +45,7 @@ src_compile() {
 
 	make || die
 
-	if [ "`use gtk`" ]
+	if [ "`use gnome`" ]
 	then
 		cd gODBCConfig
 		./configure --host=${CHOST} \
@@ -63,7 +64,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	if [ "`use gtk`" ]
+	if [ "`use gnome`" ]
 	then
 		cd gODBCConfig
 		make DESTDIR=${D} install || die
