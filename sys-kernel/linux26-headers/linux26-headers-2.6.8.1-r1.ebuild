@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.7 2004/11/12 14:19:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.8 2004/11/14 10:04:16 corsair Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -67,6 +67,8 @@ src_unpack() {
 			headers___fix ${S}/include/asm-ppc64/iSeries/*
 		;;
 	esac
+
+	use ppc64 && epatch ${FILESDIR}/${PN}-soundcard-ppc64.patch
 }
 
 src_compile() {

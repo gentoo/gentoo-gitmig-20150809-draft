@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.34 2004/11/07 15:49:33 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.35 2004/11/14 10:04:16 corsair Exp $
+
+  14 Nov 2004; Markus Rothe <corsair@gentoo.org>
+  linux26-headers-2.6.8.1-r1.ebuild:
+  Added ppc64 soundcard patch
 
   07 Nov 2004; <plasmaroo@gentoo.org> linux26-headers-2.6.8.1-r1.ebuild,
   files/linux26-headers-2.6.8.1-appCompat.patch:
