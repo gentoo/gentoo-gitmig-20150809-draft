@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rrs/rrs-1.50.ebuild,v 1.3 2004/05/28 15:40:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rrs/rrs-1.50.ebuild,v 1.4 2004/06/15 01:23:36 dragonheart Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cycom.se/uploads/36/17/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )
