@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ebafd9b59ade3aa49dd0ca9aa3dc38a1 ChangeLog 633
-MD5 dabde9cf13a619f573782b904aceb02e genromfs-0.5.1.ebuild 738
+MD5 a3e482bf6c776474a8ddaef1f1c9351f genromfs-0.5.1.ebuild 758
+MD5 5e1895c726b083ce6c171ad29f5ea3df ChangeLog 723
 MD5 95d299423cea7583af6bda19176114db files/digest-genromfs-0.5.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3E4GHTu7gpaalycRAkjhAJ4ubAXzxfP0n1ln8ZfURguDefHcewCgvrzW
-0Q9P2KXoKOilhwxW/GK8DOM=
-=bAGL
------END PGP SIGNATURE-----

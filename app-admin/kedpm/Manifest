@@ -1,5 +1,5 @@
-MD5 dfcb8e38aa5dc2990905261a4b5af026 kedpm-0.4.0.ebuild 1542
-MD5 89c4b072eafdc027d80ec5cae91efb3d ChangeLog 687
+MD5 d3e469e76f2af1ce8ad901cb5b801211 kedpm-0.4.0.ebuild 1560
+MD5 cc6b0ab0787bde7b888bf5ba9cea81a3 ChangeLog 774
 MD5 f18362b0e6199455a0da169b4f9298cf metadata.xml 362
 MD5 3b9db9ce461473c5671acd122eb92b15 files/setup-doc.patch 627
 MD5 34870b4494ae80b5bdc9cc16ee6e4410 files/digest-kedpm-0.4.0 62
