@@ -1,4 +1,4 @@
-MD5 1365d32a6fd73eee58ea1ddc36888c92 ChangeLog 9763
+MD5 15572ddb932f6fa1d2b823e978c6bcb5 ChangeLog 9994
 MD5 ad25a2a0b6ade60c13ad8040f3c319c6 metadata.xml 378
 MD5 f68ccd8232d3fad9033d4bad71f68dbf mips-sources-2.4.21-r7.ebuild 2311
 MD5 827706c9fd682fa87523068eae0ae756 mips-sources-2.4.22-r10.ebuild 2139
@@ -7,6 +7,7 @@ MD5 e3122859dab57240462cad155b0ecbcf mips-sources-2.4.25.ebuild 1949
 MD5 dea2ab0de1d16f665a88ead3ee12a56d mips-sources-2.6.3-r1.ebuild 2305
 MD5 58e6b1af9b94f7eddafa504799b9cf64 mips-sources-2.6.3.ebuild 2302
 MD5 0f953c57b29099c268fb8c7396e943d0 mips-sources-2.6.3-r2.ebuild 3259
+MD5 a9de50d4234b16e6095c0cb37888701d mips-sources-2.6.4.ebuild 3253
 MD5 e300a3e148a7dcc38a0e099494fb6cb3 files/bigendian-byteorder-fix.patch 1557
 MD5 0a3a1be2517b274c5a0c0748a437b6bd files/digest-mips-sources-2.4.21-r7 219
 MD5 93f8e3701539d6699921e4becaa72f2d files/digest-mips-sources-2.4.22-r10 218
@@ -17,6 +18,7 @@ MD5 6ff178aa1398ac2347921194944376f8 files/mipscvs-2.4.23-makefile-fix.patch 190
 MD5 a361526659bf1585152b2c819e329941 files/mipscvs-2.4.23-makefile-inlinelimit.patch 1314
 MD5 fbb6766828584e454bf053286aad6207 files/mipscvs-2.4.25-makefile-fix.patch 428
 MD5 95ba3093147f4188db0ea4949e4317cf files/mipscvs-2.4.25-makefile-inlinelimit.patch 1588
+MD5 05353361dc9d89699a648d1db065d7f9 files/digest-mips-sources-2.6.4 299
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/CAN-2003-0961-do_brk.patch 242
 MD5 5e4b24d4c540af721c5bc7e3ad77f40b files/CAN-2003-0985-mremap.patch 414
 MD5 1f646066ee81f7aea1f79a79e38a252d files/rtc-fixes.patch 2125
