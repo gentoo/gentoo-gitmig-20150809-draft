@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.9.ebuild,v 1.5 2003/01/26 23:32:26 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.9.ebuild,v 1.6 2003/02/13 17:17:32 vapier Exp $
 
 DESCRIPTION="The Shared MIME-info Database specification."
 HOMEPAGE="http://www.freedesktop.org"

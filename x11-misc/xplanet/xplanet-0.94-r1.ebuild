@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.94-r1.ebuild,v 1.5 2003/02/07 16:14:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.94-r1.ebuild,v 1.6 2003/02/13 17:21:02 vapier Exp $
 
 IUSE="gif jpeg X opengl truetype tiff png"
 

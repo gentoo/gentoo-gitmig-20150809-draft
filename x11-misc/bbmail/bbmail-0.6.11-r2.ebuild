@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/bbmail-0.6.11-r2.ebuild,v 1.8 2002/12/09 04:41:50 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/bbmail-0.6.11-r2.ebuild,v 1.9 2003/02/13 17:08:14 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="blackbox mail notification, patched for maildir"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kochi-fonts/kochi-fonts-0.2.20020503.ebuild,v 1.8 2002/12/09 04:41:53 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kochi-fonts/kochi-fonts-0.2.20020503.ebuild,v 1.9 2003/02/13 17:15:51 vapier Exp $
 
 DESCRIPTION="Kochi Gothic and Mincho Japanese TrueType fonts"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1.ebuild,v 1.1 2003/02/05 10:10:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1.ebuild,v 1.2 2003/02/13 17:14:30 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Make use of extra buttons on newer keyboards."

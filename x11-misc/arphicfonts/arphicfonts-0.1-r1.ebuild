@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.6 2002/12/10 00:55:25 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.7 2003/02/13 17:05:52 vapier Exp $
 
 DESCRIPTION="Arphic Fonts"
 SRC_URI="ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/gkai00mp.ttf.gz
