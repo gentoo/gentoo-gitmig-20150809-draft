@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.3 2002/03/16 04:35:42 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.4 2002/04/19 01:35:02 kain Exp $
+
+*rsync-2.5.4-r1 (18 Apr 2002)
+
+  18 Apr 2002; kain <kain@kain.org> rsync-2.5.4-r1.ebuild : Fix dependency to
+  libpopt so build images made with this will work.
 
 *rsync-2.5.4 (15 Mar 2002)
 
