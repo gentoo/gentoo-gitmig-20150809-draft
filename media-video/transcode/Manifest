@@ -1,4 +1,7 @@
 MD5 14237dfabcd8e09cda2baea2b81f450d transcode-0.6.10.ebuild 3777
 MD5 8bce3a80b72d96b67abc8f2afc71298f ChangeLog 10595
+MD5 1790689d31e626d10942d9c1a80101c7 transcode-0.6.11.ebuild 3678
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 bc1cb5a39d56ce5216c803c74e73545d files/digest-transcode-0.6.11 69
 MD5 ef79fbe94405505c11c537e07b25c669 files/digest-transcode-0.6.10 69
+MD5 073902a6a601ccebe91ffa24c84ca1a3 files/transcode-0.6.11-no-mmx.patch 896
