@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.1 2003/07/11 03:34:37 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.2 2003/07/11 13:09:09 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network Information Service server"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.linux-nis.org/nis/"
 IUSE=""
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 sparc"
 DEPEND=">=sys-libs/gdbm-1.8.0"
 
 src_compile() {
