@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.18 2004/10/02 06:16:57 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.19 2004/11/03 06:31:55 psi29a Exp $
+
+  03 Nov 2004; Bret Curtis <psi29a@gentoo.org> :
+  Addeing to ~mips for testing
 
 *c-client-2004a (02 Oct 2004)
 

@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e33976d27203c3df41d14113cd0a4ea5 c-client-2002e-r2.ebuild 2039
-MD5 ff3c9c23ac53a04779f2a040f81f6423 c-client-2004a.ebuild 2175
-MD5 a5b3bc4a1a6c7920f7e9db3fc87e54d8 c-client-2002e-r1.ebuild 1977
-MD5 16d735011ca6e1fba4e704b9a9e17637 c-client-2002e.ebuild 1896
-MD5 15c2baad3ad73ff964dbcbc021aa4e1d c-client-2002d-r1.ebuild 1872
-MD5 737df6515d307c5b2ff1e2de3e0062c8 ChangeLog 2459
-MD5 6b964abdc013cf2bb64040e8e33215ae metadata.xml 242
+MD5 44079b46669e8e96f2b7bd1f5149b82a ChangeLog 2542
 MD5 9cf6c167a8006a1b40e857e863e082df c-client-2002d.ebuild 1855
-MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-c-client-2002d-r1 62
-MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-c-client-2002e-r1 62
-MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-c-client-2002e-r2 62
+MD5 16d735011ca6e1fba4e704b9a9e17637 c-client-2002e.ebuild 1896
+MD5 edc992cc694f676c505dd1b67ba08fed c-client-2004a.ebuild 2183
+MD5 6b964abdc013cf2bb64040e8e33215ae metadata.xml 242
+MD5 15c2baad3ad73ff964dbcbc021aa4e1d c-client-2002d-r1.ebuild 1872
+MD5 a5b3bc4a1a6c7920f7e9db3fc87e54d8 c-client-2002e-r1.ebuild 1977
+MD5 e33976d27203c3df41d14113cd0a4ea5 c-client-2002e-r2.ebuild 2039
+MD5 c8cf618ac210e06a1641871b30550e8f files/2002d-Makefile.patch 2174
 MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-c-client-2002d 62
 MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-c-client-2002e 62
 MD5 86da98c03bc68723a437d2cf135b0775 files/digest-c-client-2004a 62
-MD5 c8cf618ac210e06a1641871b30550e8f files/2002d-Makefile.patch 2174
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBXkfjMSkoRwEucGERAlYWAJ9WhHG5OQAdP58BJ7S5Cny+JMqdsQCg0fml
-T1godMzyvIGfMU5rFs2kwnA=
-=nMdD
------END PGP SIGNATURE-----
+MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-c-client-2002d-r1 62
+MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-c-client-2002e-r1 62
+MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-c-client-2002e-r2 62
