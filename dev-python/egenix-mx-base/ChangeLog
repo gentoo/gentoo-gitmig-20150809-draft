@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.20 2004/03/21 11:02:12 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.21 2004/04/02 01:25:57 iggy Exp $
+
+  01 Apr 2004; Brian Jackson <iggy@gentoo.org> egenix-mx-base-2.0.5.ebuild:
+  add s390 to keywords
 
   21 Mar 2004; Joshua Kinard <kumba@gentoo.org> egenix-mx-base-2.0.5.ebuild:
   Marked stable on mips.
