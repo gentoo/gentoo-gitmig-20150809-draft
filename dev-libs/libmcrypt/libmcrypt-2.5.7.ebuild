@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.7.ebuild,v 1.14 2004/08/20 04:12:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.7.ebuild,v 1.15 2004/09/22 19:13:08 vapier Exp $
 
 inherit libtool
 
@@ -16,6 +16,11 @@ IUSE=""
 DEPEND=">=sys-devel/automake-1.6.1
 	>=sys-devel/libtool-1.4.1-r8"
 RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	uclibctoolize
+}
 
 src_install() {
 	dodir /usr/{bin,include,lib}
