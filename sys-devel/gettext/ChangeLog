@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.25 2003/11/12 15:18:59 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.26 2003/11/14 04:37:16 brad_mssw Exp $
+
+  13 Nov 2003; Brad House <brad_mssw@gentoo.org> gettext-0.12.1.ebuild:
+  take ~amd64 flag off gettext-0.12.1. It detects
+  being installed and messes things up royally.  Once portage is patched
+  to build 32bit and 64bit libsandbox.so's, or we have a native 64bit
 
   12 Nov 2003; Will Woods <wwoods@gentoo.org> gettext-0.11.5-r1.ebuild:
   Marked stable for alpha
