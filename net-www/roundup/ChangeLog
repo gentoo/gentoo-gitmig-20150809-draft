@@ -1,6 +1,11 @@
 # ChangeLog for net-www/roundup
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/roundup/ChangeLog,v 1.8 2003/06/30 23:14:03 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/roundup/ChangeLog,v 1.9 2004/02/11 15:27:04 aliz Exp $
+
+*roundup-0.6.4 (11 Feb 2004)
+
+  11 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> roundup-0.6.4.ebuild:
+  Version bump. Found by Tamer Fahmy <tamer@tammura.at> in #34314.
 
 *roundup-0.5.8 (30 Jun 2003)
 
