@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/adadoc-2.01.ebuild,v 1.4 2004/06/24 21:45:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/adadoc-2.01.ebuild,v 1.5 2004/08/15 14:23:17 dholm Exp $
 
-inherit gnat
+inherit eutils gnat
 
 DESCRIPTION="A tool for Ada95 to create documentation from specification packages."
 
@@ -27,6 +27,8 @@ S=${WORKDIR}/dev
 
 src_unpack() {
 	unpack ${PN}-v${PV}.src.tar.bz2
+	cd ${S}
+	epatch ${FILESDIR}/${P}-xmlada.patch || die "epatch failed"
 }
 
 src_compile() {
