@@ -69,3 +69,4 @@ move app-sci/rebase sci-biology/rebase
 move app-sci/transfac sci-biology/transfac
 move app-sci/clustalx sci-biology/clustalx
 move app-sci/njplot-unrooted sci-biology/njplot-unrooted
+move app-sci/phylip sci-biology/phylip
