@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/djbfft-0.76.ebuild,v 1.7 2004/10/07 07:29:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/djbfft-0.76.ebuild,v 1.8 2004/10/22 10:04:33 gmsoft Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://cr.yp.to/djbfft/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 amd64 ~ppc"
+KEYWORDS="~x86 amd64 ~ppc ~hppa"
 IUSE="static"
 
 src_unpack() {
