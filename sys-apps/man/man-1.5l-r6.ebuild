@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5l-r6.ebuild,v 1.11 2004/02/23 00:45:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5l-r6.ebuild,v 1.12 2004/06/15 05:27:24 solar Exp $
 
 IUSE="nls"
 
@@ -13,7 +13,8 @@ SRC_URI="mirror://kernel/linux/utils/man/man-${NV}.tar.gz"
 HOMEPAGE="http://freshmeat.net/projects/man/"
 
 DEPEND="virtual/glibc
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	nls? ( sys-devel/gettext )"
 
 RDEPEND="sys-apps/cronbase
 	>=sys-apps/groff-1.18"
@@ -69,7 +70,7 @@ src_unpack() {
 src_compile() {
 	local myconf=
 
-	use nls && myconf="+lang all"
+	use nls && myconf="+lang all" || myconf="+lang none"
 
 	./configure -confdir=/etc \
 		+sgid +fhs \
@@ -88,8 +89,7 @@ src_install() {
 
 	dodoc COPYING LSM README* TODO
 
-	if [ -n "`use nls`" ]
-	then
+	if use nls ; then
 		cd ${S}/msgs
 		./inst.sh ?? ${D}/usr/share/locale/%L/%N
 	fi

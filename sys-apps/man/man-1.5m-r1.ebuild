@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r1.ebuild,v 1.5 2004/06/11 13:48:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r1.ebuild,v 1.6 2004/06/15 05:27:24 solar Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ IUSE="nls"
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4"
 RDEPEND="sys-apps/cronbase
-	>=sys-apps/groff-1.18"
+	>=sys-apps/groff-1.18
+	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}-${NV}
 
@@ -75,7 +76,7 @@ src_unpack() {
 src_compile() {
 	local myconf=
 
-	use nls && myconf="+lang all"
+	use nls && myconf="+lang all" || myconf="+lang none"
 
 	./configure -confdir=/etc \
 		+sgid +fhs \
