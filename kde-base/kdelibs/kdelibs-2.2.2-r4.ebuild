@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r4.ebuild,v 1.1 2002/03/24 22:05:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r4.ebuild,v 1.2 2002/04/04 21:13:34 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde kde.org || die
 #don't inherit kde-dist! it calls need-kde which adds kdelibs to depend -> circular deps!
@@ -9,11 +9,12 @@ inherit kde kde.org || die
 DESCRIPTION="KDE ${PV} - Libraries"
 HOMEPAGE="http//www.kde.org/"
 
+SLOT="2"
+
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here. so we recreate the entire
 # DEPEND from scratch.
 DEPEND=""
 RDEPEND=""
-
 newdepend ">=sys-devel/gcc-2.95.2
 		virtual/glibc
 		sys-devel/ld.so

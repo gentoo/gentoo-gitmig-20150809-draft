@@ -1,12 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.5 2002/04/04 20:09:23 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.6 2002/04/04 21:13:34 danarmak Exp $
 
 *kdelibs-3.0 (4 Apr 2002)
 
   4 Apr 2002; Dan Armak <danarmak@gentoo.org> Changelog :
 
   KDE 3.0 ebuilds. Based on the well-tested kde3pre ebuild set.
+  kdelibs-2.2.2-r4: added SLOT=2.
 
 *kdelibs-2.2.2-r4 (24 Mar 2002)
 

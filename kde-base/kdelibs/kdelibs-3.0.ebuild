@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.ebuild,v 1.2 2002/04/03 21:09:32 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.ebuild,v 1.3 2002/04/04 21:13:35 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde kde.org
 #don't inherit kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
@@ -11,6 +11,8 @@ inherit kde kde.org
 
 DESCRIPTION="KDE ${PV} - Libraries"
 HOMEPAGE="http//www.kde.org/"
+
+SLOT="3"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here. so we recreate the entire
 # DEPEND from scratch.
