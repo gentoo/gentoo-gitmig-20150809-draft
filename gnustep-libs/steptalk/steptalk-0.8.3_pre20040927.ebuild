@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/steptalk-0.8.3_pre20040927.ebuild,v 1.3 2004/10/21 19:10:16 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/steptalk-0.8.3_pre20040927.ebuild,v 1.4 2004/11/12 03:56:25 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
 ECVS_USER="anoncvs"
 ECVS_AUTH="ext"
 ECVS_MODULE="gnustep/dev-libs/${PN/stept/StepT}"
-ECVS_CO_OPTS="-D ${PV/*_pre}"
-ECVS_UP_OPTS="-D ${PV/*_pre}"
+ECVS_CO_OPTS="-P -D ${PV/*_pre}"
+ECVS_UP_OPTS="-dP -D ${PV/*_pre}"
 ECVS_TOP_DIR="${DISTDIR}/cvs-src/savannah.gnu.org-gnustep"
 inherit gnustep cvs
 
@@ -25,6 +25,8 @@ IUSE="${IUSE} doc"
 DEPEND="${GS_DEPEND}"
 RDEPEND="${GS_RDEPEND}"
 
+egnustep_install_domain "System"
+
 src_install() {
 	cd ${S}
 	egnustep_env
@@ -36,8 +38,8 @@ src_install() {
 		mkdir -p ${TMP}/tmpdocs
 		mv *.* ${TMP}/tmpdocs
 		mv Reference ${TMP}/tmpdocs
-		mkdir -p ${D}${GNUSTEP_SYSTEM_ROOT}/Library/Documentation/Developer/${PN/stept/StepT}
-		mv ${TMP}/tmpdocs/* ${D}${GNUSTEP_SYSTEM_ROOT}/Library/Documentation/Developer/${PN/stept/StepT}
+		mkdir -p ${D}$(egnustep_install_domain)/Library/Documentation/Developer/${PN/stept/StepT}
+		mv ${TMP}/tmpdocs/* ${D}$(egnustep_install_domain)/Library/Documentation/Developer/${PN/stept/StepT}
 		cd ..
 	fi
 	egnustep_package_config

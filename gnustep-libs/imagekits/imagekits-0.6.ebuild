@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/imagekits/imagekits-0.6.ebuild,v 1.2 2004/10/09 22:19:00 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/imagekits/imagekits-0.6.ebuild,v 1.3 2004/11/12 03:58:10 fafhrd Exp $
 
 inherit gnustep
 
@@ -16,4 +16,6 @@ SLOT="0"
 IUSE="${IUSE}"
 DEPEND="${GS_DEPEND}"
 RDEPEND="${GS_RDEPEND}"
+
+egnustep_install_domain "System"
 

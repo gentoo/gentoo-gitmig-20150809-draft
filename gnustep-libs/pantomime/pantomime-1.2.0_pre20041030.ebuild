@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/pantomime-1.2.0_pre20041030.ebuild,v 1.1 2004/10/31 17:08:12 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/pantomime-1.2.0_pre20041030.ebuild,v 1.2 2004/11/12 03:52:29 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="Sophos.ca:/opt/cvsroot"
@@ -19,7 +19,7 @@ DESCRIPTION="A set of Objective-C classes that model a mail system."
 HOMEPAGE="http://www.collaboration-world.com/pantomime/"
 
 LICENSE="LGPL-2.1 Elm"
-KEYWORDS="~ppc"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 
 IUSE="${IUSE}"

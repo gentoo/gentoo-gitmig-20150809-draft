@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/renaissance/renaissance-0.8.0.ebuild,v 1.2 2004/10/21 19:09:54 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/renaissance/renaissance-0.8.0.ebuild,v 1.3 2004/11/12 03:58:29 fafhrd Exp $
 
 inherit gnustep
 
@@ -18,6 +18,8 @@ IUSE="${IUSE} doc"
 DEPEND="${GS_DEPEND}"
 RDEPEND="${GS_RDEPEND}"
 
+egnustep_install_domain "System"
+
 src_install() {
 	cd ${S}
 	egnustep_env
@@ -28,9 +30,9 @@ src_install() {
 		egnustep_make
 		egnustep_install
 		mkdir -p ${TMP}/tmpdocs
-		mv ${D}${GNUSTEP_SYSTEM_ROOT}/Library/Documentation/* ${TMP}/tmpdocs
-		mkdir -p ${D}${GNUSTEP_SYSTEM_ROOT}/Library/Documentation/Developer/Renaissance
-		mv ${TMP}/tmpdocs/* ${D}${GNUSTEP_SYSTEM_ROOT}/Library/Documentation/Developer/Renaissance
+		mv ${D}$(egnustep_install_domain)/Library/Documentation/* ${TMP}/tmpdocs
+		mkdir -p ${D}$(egnustep_install_domain)/Library/Documentation/Developer/Renaissance
+		mv ${TMP}/tmpdocs/* ${D}$(egnustep_install_domain)/Library/Documentation/Developer/Renaissance
 		cd ..
 	fi
 	egnustep_package_config

@@ -1,6 +1,19 @@
 # ChangeLog for gnustep-libs/pantomime
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.7 2004/10/31 17:08:12 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.8 2004/11/12 03:52:29 fafhrd Exp $
+
+*pantomime-1.2.0_pre20041108 (11 Nov 2004)
+
+  11 Nov 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  -files/pantomime-1.1.0_pre2-compilation-fix.diff, -pantomime-1.1.0.ebuild,
+  -pantomime-1.1.0_pre2.ebuild, -pantomime-1.2.0_pre20040916.ebuild,
+  -pantomime-1.2.0_pre20040927.ebuild, pantomime-1.2.0_pre20041030.ebuild,
+  +pantomime-1.2.0_pre20041108.ebuild:
+  Mass Update: gnustep.eclass revamped to allow configurable root install;
+  gnustep-base/libs/apps updated to utilize new gnustep.eclass (only versions
+  bumped where files would change); some KEYWORDS were accidentally dropped
+  between version bumps of packages -- this has been resolved; windowmaker
+  correctly supports gnustep now
 
 *pantomime-1.2.0_pre20041030 (31 Oct 2004)
 
