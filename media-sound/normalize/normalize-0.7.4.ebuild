@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.4.ebuild,v 1.3 2002/07/21 13:50:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.4.ebuild,v 1.4 2002/07/22 19:02:31 lostlogic Exp $
 
 DESCRIPTION="Audio file volume normalizer"
 HOMEPAGE="http://www.cs.columbia.edu/~cvaill/normalize"
@@ -23,7 +23,7 @@ RDEPEND="xmms? ( >=media-sound/xmms-1.2.7-r6 )
 #
 
 src_compile() {
-	econf
+	econf \
 		--with-audiofile \
 		--with-mad || die
 
