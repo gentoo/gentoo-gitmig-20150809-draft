@@ -1,0 +1,9 @@
+# ChangeLog for app-shells/ksh
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.1 2003/05/29 03:57:33 taviso Exp $
+
+*ksh-93.20030422 (29 May 2003)
+
+  29 May 2003; Tavis Ormandy <taviso@gentoo.org> ksh-93.20030422.ebuild:
+  Initial import of David Korn's original shell.
+
