@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-2.0.3.ebuild,v 1.4 2003/09/18 18:21:27 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-2.0.3.ebuild,v 1.5 2004/01/05 18:32:32 weeve Exp $
 
 DESCRIPTION="A front-end to ssh-agent"
 HOMEPAGE="http://www.gentoo.org/proj/en/keychain.xml"
 
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P}.tar.bz2"
 S=${WORKDIR}/${P}
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm amd64 ia64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~mips ~hppa ~arm amd64 ia64"
 LICENSE="GPL-2"
 SLOT="0"
 

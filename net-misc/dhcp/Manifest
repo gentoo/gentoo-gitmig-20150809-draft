@@ -1,5 +1,5 @@
-MD5 885f4d37a4831b0d4c3db40d14e8319f ChangeLog 4852
-MD5 b1e1d88acf13819b85f51f680a75394d dhcp-3.0_p2-r2.ebuild 3844
+MD5 ddb6fe58f66c0c76a8243dce4a716fba ChangeLog 4947
+MD5 d6e23f9f223748414658b0cb49aa0d23 dhcp-3.0_p2-r2.ebuild 3842
 MD5 c165af1e7e63275ca6f5974e2d3048a3 dhcp-3.0_p2.ebuild 2747
 MD5 9384ae7ba3e9f56b8027ea92f607042d metadata.xml 215
 MD5 ff4bf18624d479599da15878fdef65fe files/conf.dhcpd 401

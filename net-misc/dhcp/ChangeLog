@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.29 2003/12/31 16:44:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.30 2004/01/05 18:35:47 weeve Exp $
+
+  05 Jan 2004; Jason Wever <weeve@gentoo.org> dhcp-3.0_p2-r2.ebuild:
+  Marked stable on sparc.
 
   31 Dec 2003; Guy Martin <gmsoft@gentoo.org> dhcp-3.0_p2-r2.ebuild:
   Marked stable on hppa.
