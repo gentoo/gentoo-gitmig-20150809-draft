@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.9 2003/10/30 09:22:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.10 2003/11/22 19:29:19 liquidx Exp $
+
+*meld-0.9.1 (22 Nov 2003)
+
+  22 Nov 2003; Alastair Tse <liquidx@gentoo.org> meld-0.8.3.ebuild,
+  meld-0.8.5.ebuild, meld-0.9.0-r1.ebuild, meld-0.9.0.ebuild,
+  meld-0.9.1.ebuild, files/meld-0.8.3-gentoo.diff,
+  files/meld-0.8.5-gentoo.diff:
+  version bump. refactor patch to new improved paths.py by the meld authors
 
 *meld-0.9.0-r1 (30 Oct 2003)
 
