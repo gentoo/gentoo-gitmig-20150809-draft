@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/clockspeed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.16 2004/09/27 15:24:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.17 2004/11/02 00:30:23 robbat2 Exp $
+
+  01 Nov 2004; Robin H. Johnson <robbat2@gentoo.org>
+  clockspeed-0.62-r3.ebuild:
+  Add ~mips for my mips32 hardware.
 
   27 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   clockspeed-0.62-r3.ebuild:

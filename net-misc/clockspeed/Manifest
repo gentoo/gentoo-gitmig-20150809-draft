@@ -1,5 +1,16 @@
-MD5 7e9bd6f4f14eca4b9af65895424dbd36 ChangeLog 2198
-MD5 865505466c01a8c50418cb8db0e7bbfe clockspeed-0.62-r3.ebuild 1089
-MD5 3975c437b3f912ec31e530bdddbc5040 files/0.62-gentoo.patch 8617
-MD5 bd5f134502d1578af69ff3dc01cd0591 files/digest-clockspeed-0.62-r3 66
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5d0d111bc5d425ed54be0761f4f46ebf clockspeed-0.62-r3.ebuild 1094
+MD5 7fb088e9eb72607a826d4f9b2a57e2ce ChangeLog 2316
 MD5 26a8d476ec6b18688879f86d442a0ced files/ntpclockset 1165
+MD5 bd5f134502d1578af69ff3dc01cd0591 files/digest-clockspeed-0.62-r3 66
+MD5 3975c437b3f912ec31e530bdddbc5040 files/0.62-gentoo.patch 8617
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFBhuN7PpIsIjIzwiwRAjWKAKDtxZe075NbZqZqHN9Tke7QLJIyIwCgzQDs
+J4joNweX+h+ZKXOMA4/6g8o=
+=f/IC
+-----END PGP SIGNATURE-----
