@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.17 2004/11/21 19:52:09 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.18 2004/12/05 02:25:48 pyrania Exp $
+
+*synergy-1.1.10 (05 Dec 2004)
+
+  05 Dec 2004; Markus Nigbur <pyrania@gentoo.org> +synergy-1.1.10.ebuild:
+  Version bump.
 
 *synergy-1.1.9 (21 Nov 2004)
 
