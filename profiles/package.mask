@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <blizzy@gentoo.org> (14 Aug 2002)
+# masked since there doesn't seem to be a download location
+=net-misc/netstat-nat-1.3
+
 # <seemant@gentoo.org> (13 Aug 2002)
 # masked for testing and new uname.c patch
 =sys-apps/sh-utils-2.0.14
