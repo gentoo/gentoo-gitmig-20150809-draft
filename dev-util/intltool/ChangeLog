@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.32 2004/02/07 00:44:50 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.33 2004/02/07 00:56:19 foser Exp $
+
+  07 Feb 2004; foser <foser@gentoo.org> intltool-0.{29,30}.ebuild :
+  Fix RDEP order to actually make sense (thnx spider for the bucket of water)
 
   07 Feb 2004; <spider@gentoo.org> intltool-0.29.ebuild:
   stable on x86, doing this to get building working on things that need
