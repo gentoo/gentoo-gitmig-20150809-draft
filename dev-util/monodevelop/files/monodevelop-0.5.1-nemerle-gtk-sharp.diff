@@ -1,0 +1,49 @@
+diff -aurN monodevelop-0.5.1-orig/build/AddIns/AddIns/BackendBindings/templates/Makefile.am monodevelop-0.5.1/build/AddIns/AddIns/BackendBindings/templates/Makefile.am
+--- monodevelop-0.5.1-orig/build/AddIns/AddIns/BackendBindings/templates/Makefile.am	2004-08-07 03:33:32.000000000 -0400
++++ monodevelop-0.5.1/build/AddIns/AddIns/BackendBindings/templates/Makefile.am	2004-10-09 15:53:48.101369232 -0400
+@@ -34,6 +34,7 @@
+ JavaConsoleApplicationProject.xpt.xml \
+ Library.xpt.xml \
+ NemerleEmptyProject.xpt.xml \
+-NemerleGtkSharpProject.xpt.xml
++NemerleGtkSharpProject.xpt.xml \
++NemerleGtkSharpWindow.xft.xml
+ 
+ EXTRA_DIST = $(template_DATA)
+diff -aurN monodevelop-0.5.1-orig/build/AddIns/AddIns/BackendBindings/templates/NemerleGtkSharpWindow.xft.xml monodevelop-0.5.1/build/AddIns/AddIns/BackendBindings/templates/NemerleGtkSharpWindow.xft.xml
+--- monodevelop-0.5.1-orig/build/AddIns/AddIns/BackendBindings/templates/NemerleGtkSharpWindow.xft.xml	1969-12-31 19:00:00.000000000 -0500
++++ monodevelop-0.5.1/build/AddIns/AddIns/BackendBindings/templates/NemerleGtkSharpWindow.xft.xml	2004-10-09 15:52:51.294005264 -0400
+@@ -0,0 +1,33 @@
++<?xml version="1.0"?>
++<Template Originator   = "Pawel Rozanski"
++	  Language     = "Nemerle"
++          Created      = "07/08/2004"
++          LastModified = "07/08/2004">
++	  
++	<TemplateConfiguration>
++		<_Name>Gtk# Window</_Name>
++		<Icon>Nemerle.File.Form</Icon>
++		<Category>Nemerle</Category>
++		<LanguageName>Nemerle</LanguageName>
++		<_Description>Creates a top-level Gtk# window</_Description>
++	</TemplateConfiguration>
++	
++	<TemplateFiles>
++		<File DefaultExtension=".n" DefaultName="MyWindow">
++<![CDATA[// created on ${Date} at ${Time}
++using System;
++using Gtk;
++
++public class CreatedWindow : Window
++{
++	public this()
++	{
++		base ("MyWindow");
++	}
++}
++]]></File>
++	</TemplateFiles>
++	
++	<FileOptions/>
++	
++</Template>
