@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9460bf4f38c5c25ae1001f0b8f31324b jdbc-informix-221-r4.ebuild 1035
-MD5 eba119fba512c8eb910551495b5c7dcc ChangeLog 645
+MD5 672e37c758f5df6f2adeba96c9ab1590 ChangeLog 854
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 c1ac613f90bb99415420aeaf841f7e05 jdbc-informix-221-r4.ebuild 1059
+MD5 5cadcb55e78c16704cbb816ecab8b327 jdbc-informix-221-r5.ebuild 1058
 MD5 8b12e0a70cd5d80f175aec66cb56c11b files/digest-jdbc-informix-221-r4 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcViF/rLF9B432nYRAvKuAKCEv6MfJNCEh6S6Nzy13LOuxFNbVgCfczf1
-TkVIa1f8V7f3nN/Sh2oftWM=
-=fYrd
------END PGP SIGNATURE-----
+MD5 89b8615a82147b851118d73318989143 files/digest-jdbc-informix-221-r5 64
