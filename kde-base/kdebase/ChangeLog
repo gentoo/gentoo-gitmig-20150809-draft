@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.23 2002/08/29 14:59:56 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.24 2002/09/29 15:07:24 azarah Exp $
+
+  29 Aug 2002; Martin Schlemmer <azarah@gentoo.org> kscreensaver.pam :
+  Update to use system-auth. Bug #5953.
 
   29 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
