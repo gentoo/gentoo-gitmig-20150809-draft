@@ -1,13 +1,14 @@
 # ChangeLog for dev-lang/ruby-cvs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ChangeLog,v 1.2 2003/04/16 11:38:18 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ChangeLog,v 1.3 2003/05/11 11:02:57 twp Exp $
 
 *ruby-cvs-1.8.0 (15 Apr 2003)
 
-  16 Apr 2003; Tom Payne <twp@gentoo.org> ruby-cvs-1.8.0-r1.ebuild :
+  11 May 2003; Tom Payne <twp@gentoo.org> ruby-cvs-1.8.0-r1.ebuild :
+  Strip -fomit-frame-pointer using flag-o-matic. Bug # 8290.
 
+  16 Apr 2003; Tom Payne <twp@gentoo.org> ruby-cvs-1.8.0-r1.ebuild :
   Fixed src_install.
 
   15 Apr 2003; Tom Payne <twp@gentoo.org> ruby-cvs-1.8.0.ebuild :
-
   Initial commit. Bug # 18757.

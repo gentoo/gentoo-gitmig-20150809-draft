@@ -1,14 +1,19 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.16 2003/04/10 20:14:42 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.17 2003/05/11 11:01:01 twp Exp $
 
 *ruby-1.8.0_pre2 (10 Apr 2003)
 
-  10 Apr 2003; Tom Payne <twp@gentoo.org> ruby-1.8.0_pre2.ebuild :
+  11 May 2003; Tom Payne <twp@gentoo.org> ruby-1.8.0_pre2.ebuild :
+  Strip -fomit-frame-pointer using flag-o-matic. Bug # 8290.
 
+  10 Apr 2003; Tom Payne <twp@gentoo.org> ruby-1.8.0_pre2.ebuild :
   Version bump.
- 
+
 *ruby-1.6.8 (26 Dec 2002)
+
+  11 May 2003; Tom Payne <twp@gentoo.org> ruby-1.6.8.ebuild :
+  Strip -fomit-frame-pointer using flag-o-matic. Bug # 8290.
 
   16 Mar 2003; Guy Martin <gmsoft@gentoo.org> ruby-1.6.8.ebuild :
   Added hppa to keywords.
@@ -23,15 +28,17 @@
   Add ~alpha to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 
   30 Dec 2002; Ryan Phillips <rphillips@gentoo.org> ruby-1.6.8.ebuild 
   Remove fomit-frame-pointer from CFLAGS. It causes crashes on the compile. Fixes #12930
 
   26 Dec 2002; Ryan Phillips <rphillips@gentoo.org> ruby-1.6.8.ebuild :
   version bump
- 
+
 *ruby-1.6.7 (4 Mar 2002)
+
+  11 May 2003; Tom Payne <twp@gentoo.org> ruby-1.6.7.ebuild :
+  Removed.
 
   14 Aug 2002; Mark Guertin <gerk@gentoo.org> ruby-1.6.7.ebuild :
   Added ppc to keywords
