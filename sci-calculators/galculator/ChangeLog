@@ -1,0 +1,31 @@
+# ChangeLog for app-sci/galculator
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/ChangeLog,v 1.1 2004/12/24 14:54:42 ribosome Exp $
+
+*galculator-1.2.3 (24 Dec 2004)
+
+  24 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +galculator-1.2.1.ebuild, +galculator-1.2.3.ebuild:
+  Moved from app-sci/galculator to sci-calculators/galculator.
+
+  07 Sep 2004; <blubb@gentoo.org> galculator-1.2.3.ebuild:
+  added ~amd64 keyword
+
+*galculator-1.2.3 (26 Jun 2004)
+
+  26 Jun 2004; <plasmaroo@gentoo.org> +galculator-1.2.3.ebuild:
+  Version bump.
+
+  24 Mar 2004; David Holm <dholm@gentoo.org> galculator-1.2.1.ebuild:
+  Added to ~ppc.
+
+*galculator-1.2.1 (24 Mar 2004)
+
+  24 Mar 2004; Tim Yamin <plasmaroo@gentoo.org> galculator-1.2.1.ebuild:
+  Version bump.
+
+*galculator-1.1.3 (06 Nov 2003)
+
+  06 Nov 2003; L. Boshell <leonardop@gentoo.org> galculator-1.1.3.ebuild:
+  Initial import. Thanks to Dev and Eric Harney for their contributions on
+  bug #25956.
