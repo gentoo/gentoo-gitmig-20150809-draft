@@ -5,7 +5,7 @@ MD5 8c3f93baa224f296c0a5ce7cdcd3b9cf kdenetwork-3.3.1-r1.ebuild 1301
 MD5 d26da8c9343b0c02c135426518889081 ChangeLog 16251
 MD5 15ba8e503304d746e65dedba1b142f03 kdenetwork-3.3.1.ebuild 1225
 MD5 3bece517a429d8a402d85ffc30a37427 kdenetwork-3.2.2.ebuild 1276
-MD5 c3193a9f258008d4f84e2bfc2c52171d kdenetwork-3.4.0_beta1.ebuild 1287
+MD5 1d94ad9357331fcf47c1cae92dd4df35 kdenetwork-3.4.0_beta1.ebuild 1320
 MD5 2ebf1e1662cf3fb9e7dd2c400672793c kdenetwork-3.2.3-r1.ebuild 1319
 MD5 b80b1982dd1bc9749c50ee0e21965ad1 kdenetwork-3.3.2.ebuild 1244
 MD5 0ec2c51c6328a9c2d4f77b6c6e64a007 kdenetwork-3.2.3.ebuild 1243
