@@ -1,25 +1,24 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.8 2001/02/06 00:52:47 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.9 2001/02/06 08:13:25 pete Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac11
 LVMV=0.9.1_beta3
 if [ "$PN" = "linux" ]
 then
-	DESCRIPTION="Linux kernel, including modules, binary tools, libraries and includes"
+    DESCRIPTION="Linux kernel, including modules, binary tools, libraries and includes"
 else
-	DESCRIPTION="Kernel source package, including full sources, binary tools and libraries"
+    DESCRIPTION="Kernel source package, including full sources, binary tools and libraries"
 fi
-SRC_URI="
-http://www.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0.tar.bz2
-http://www.kernel.org/pub/linux/kernel/people/alan/2.4/patch-${KV}.bz2
-http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.5.tar.gz 
-http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.1.4-patch.tar.gz
-ftp://ftp.alsa-project.org/pub/driver/alsa-driver-0.5.10a.tar.bz2
-ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMV}.tar.gz
-http://www.braque.dhs.org/pub/linux/kernel/patch/patch-_against_2.4.1-pre10_-knfsdops-reiserfs.gz"
+SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0.tar.bz2
+         http://www.kernel.org/pub/linux/kernel/people/alan/2.4/patch-${KV}.bz2
+         http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.5.tar.gz 
+         http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.1.4-patch.tar.gz
+         ftp://ftp.alsa-project.org/pub/driver/alsa-driver-0.5.10a.tar.bz2
+         ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMV}.tar.gz
+         http://www.braque.dhs.org/pub/linux/kernel/patch/patch-_against_2.4.1-pre10_-knfsdops-reiserfs.gz"
 
 HOMEPAGE="http://www.kernel.org/
 	  http://www.netroedge.com/~lm78/
@@ -31,10 +30,12 @@ PROVIDE="virtual/kernel"
 
 RDEPEND=">=sys-apps/reiserfs-utils-3.6.25-r1"
 
-src_unpack() {
+# this is not pretty...
+LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include"
 
-	#unpack kernel and apply reiserfs-related patches
-	cd ${WORKDIR}
+src_unpack() {
+    #unpack kernel and apply reiserfs-related patches
+    cd ${WORKDIR}
     unpack linux-2.4.0.tar.bz2
     cd ${S}
     echo "Applying ${KV} patch..."
@@ -45,29 +46,29 @@ src_unpack() {
     cd fs/reiserfs
     try patch -p0 < ${FILESDIR}/${PV}-r${PR}/super.diff
     mkdir ${S}/extras
-
-	#create and apply LVM patch.  The tools get built later.
-	cd ${S}/extras
+    
+    #create and apply LVM patch.  The tools get built later.
+    cd ${S}/extras
     echo "Unpacking and applying LVM patch..."
     unpack lvm_${LVMV}.tar.gz
     cd LVM/${LVMV}
     
     # I had to hack this in so that LVM will look in the current linux
     # source directory instead of /usr/src/linux for stuff - pete
-    try CFLAGS=\"$CFLAGS -I${S}/include\" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
-
+    try CFLAGS=\""${CFLAGS} -I${S}/include"\" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
+    
     cd PATCHES
-    	try make KERNEL_VERSION=2.4.0-ac11 KERNEL_DIR=${S}
-	cd ${S}
-	#the -l option allows this patch to apply cleanly (ignore whitespace changes)
-	try patch -l -p1 < ${S}/extras/LVM/${LVMV}/PATCHES/lvm-${LVMV}-${KV}.patch
-
-	#unpack alsa drivers
-	echo "Unpacking ALSA drivers..."
+    try make KERNEL_VERSION=2.4.0-ac11 KERNEL_DIR=${S}
+    cd ${S}
+    # the -l option allows this patch to apply cleanly (ignore whitespace changes)
+    try patch -l -p1 < ${S}/extras/LVM/${LVMV}/PATCHES/lvm-${LVMV}-${KV}.patch
+    
+    #unpack alsa drivers
+    echo "Unpacking ALSA drivers..."
     cd ${S}/extras
     unpack alsa-driver-0.5.10a.tar.bz2
-
-	#unpack and apply the lm_sensors patch
+    
+    #unpack and apply the lm_sensors patch
     echo "Unpacking and applying lm_sensors patch..."
     cd ${S}/extras
     unpack lm_sensors-2.5.5.tar.gz
@@ -85,8 +86,8 @@ src_unpack() {
         Makefile.orig > Makefile
     cd ${S}
     patch -p1 < lm_sensors-patch
-
-	#get sources ready for compilation or for sitting at /usr/src/linux
+    
+    #get sources ready for compilation or for sitting at /usr/src/linux
     echo "Preparing for compilation..."
     cd ${S}
     #sometimes we have icky kernel symbols; this seems to get rid of them
@@ -95,25 +96,24 @@ src_unpack() {
     try cp ${FILESDIR}/${PV}-r${PR}/config .config
     try cp ${FILESDIR}/${PV}-r${PR}/autoconf.h include/linux/autoconf.h
     try make include/linux/version.h
-
+    
     #fix silly permissions in tarball
     cd ${WORKDIR}
-    chown -R root.root linux
+    chown -R 0.0 linux
+    chmod -R a+r-w+X,u+w linux
 }
 
 src_compile() {
-
-    # moved this up here cause it looks like LVM depends on the symlinks
+    # moved this up here cause it looks like LVM depends on the symlinks - pete
     cd ${S}
     try make symlinks
-
+    
     #LVM tools are included even in the linux-sources package
     cd ${S}/extras/LVM/${LVMV}
-
+    
     # I had to hack this in so that LVM will look in the current linux
     # source directory instead of /usr/src/linux for stuff - pete
-
-    try CFLAGS=\"${CFLAGS} -I${S}/include\" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
+    try CFLAGS=\""${CFLAGS} -I${S}/include"\" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
 
     try make
 
@@ -123,17 +123,17 @@ src_compile() {
     fi
 
     cd ${S}
-    try make dep
+    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
 
     cd ${S}/extras/lm_sensors-2.5.5
     try make
 
     cd ${S}
-    try make bzImage
-    try make modules
+    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" bzImage
+    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" modules
 
     cd ${S}/extras/alsa-driver-0.5.10a
-    try ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
+    try CFLAGS=\""${CFLAGS} -I${S}"\" ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
     try make
 }
 
