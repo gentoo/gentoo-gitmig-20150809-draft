@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.1.ebuild,v 1.9 2002/12/06 01:11:20 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.1.ebuild,v 1.10 2002/12/09 04:17:42 manson Exp $
 
 IUSE="kde gnome"
 
@@ -38,7 +38,7 @@ DEPEND="virtual/glibc
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc -sparc -sparc64"
+KEYWORDS="x86 ppc -sparc "
 
 src_install() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.65.ebuild,v 1.6 2002/11/18 10:36:43 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.65.ebuild,v 1.7 2002/12/09 04:17:41 manson Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc"
 RDEPEND=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="ppc -x86 -sparc -sparc64 -alpha"
+KEYWORDS="ppc -x86 -sparc  -alpha"
 IUSE=""
 
 src_compile() {

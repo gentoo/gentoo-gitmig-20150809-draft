@@ -1,7 +1,10 @@
 # ChangeLog for app-misc/colordiff
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.3 2002/12/02 08:23:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.4 2002/12/09 04:17:42 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *colordiff-1.0 (6 Nov 2002)
 
   02 Dec 2002; Martin Holzer <mholzer@gentoo.org> colordiff-1.0.ebuild 

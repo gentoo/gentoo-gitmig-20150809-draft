@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20021123.ebuild,v 1.2 2002/11/23 14:25:43 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20021123.ebuild,v 1.3 2002/12/09 04:17:42 manson Exp $
 
 inherit base
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="http://www.transgaming.com/"
 
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc -sparc64"
+KEYWORDS="~x86 -ppc -sparc "
 LICENSE="Aladdin"
 
 DEPEND="virtual/x11

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020605-r2.ebuild,v 1.7 2002/10/20 18:37:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020605-r2.ebuild,v 1.8 2002/12/09 04:17:41 manson Exp $
 
 IUSE="cups opengl"
 
@@ -19,7 +19,7 @@ DEPEND="virtual/x11
 	>=media-libs/freetype-2.0.0
 	dev-lang/tcl dev-lang/tk"
 
-KEYWORDS="x86 -sparc -sparc64 -ppc"
+KEYWORDS="x86 -sparc  -ppc"
 LICENSE="GPL-2"
 SLOT="0"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20021125.ebuild,v 1.1 2002/11/28 18:01:48 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20021125.ebuild,v 1.2 2002/12/09 04:17:42 manson Exp $
 
 IUSE="nas arts cups opengl alsa"
 
@@ -9,7 +9,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/ALPHA/wine/development/Wine-${PV}.tar.g
 HOMEPAGE="http://www.winehq.com/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc -sparc -sparc64"
+KEYWORDS="~x86 -ppc -sparc "
 DEPEND="virtual/x11
 	sys-devel/gcc
 	sys-devel/flex

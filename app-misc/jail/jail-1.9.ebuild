@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9.ebuild,v 1.5 2002/11/30 20:56:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9.ebuild,v 1.6 2002/12/09 04:17:42 manson Exp $
 
 S="${WORKDIR}/${PN}_1-9_stable"
 DESCRIPTION="Jail Chroot Project is a tool that builds a chrooted environment and automagically configures and builds all the required files, directories and libraries"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gsyc.inf.uc3m.es/~assman/jail/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc "
 
 DEPEND="virtual/glibc"
 RDEPEND="sys-devel/perl"
