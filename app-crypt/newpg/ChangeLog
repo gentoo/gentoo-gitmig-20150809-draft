@@ -1,8 +1,11 @@
 # ChangeLog for app-crypt/newpg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/newpg/ChangeLog,v 1.4 2003/07/15 09:21:06 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/newpg/ChangeLog,v 1.5 2003/07/22 14:32:19 pauldv Exp $
 
 *newpg-0.9.4-r1 (15 Jul 2003)
+
+  22 Jul 2003; Paul de Vrieze <pauldv@gentoo.org> newpg-0.9.4-r1.ebuild:
+  Add pinentry to the runtime dependencies. Fixing bug #24703
 
   15 Jul 2003; <paul@gentoo.org> newpg-0.9.4-r1.ebuild:
   Fix the ebuild to set sensible default locations for aux programs. Fixes bug
