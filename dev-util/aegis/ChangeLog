@@ -1,19 +1,21 @@
 # ChangeLog for dev-util/aegis
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.2 2002/05/15 09:27:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.3 2002/10/19 00:56:51 karltk Exp $
+
+*aegis-4.7 (19 Oct 2002)
+
+  19 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> aegis-4.7.ebuild files/digest-aegis-4.7 :
+  New upstream version. Fixes #5807. Doesn't add new env scripts yet :(
 
 *aegis-4.4 (15 May 2002)
 
-  15 May 2002; Seemant Kulleen <seemant@gentoo.org> aegis-4.4.ebuild
-  files/digest-aegis-4.4 :
-
+  15 May 2002; Seemant Kulleen <seemant@gentoo.org> aegis-4.4.ebuild files/digest-aegis-4.4 :
   Update submitted by peter@biolateral.com.au (Peter Maxwell) in bug report
-  # 2689
+  #2689.
 
 *aegis-4.2 (13 Apr 2002)
 
   13 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> aegis-4.2.ebuild files/digest-aegis-4.2 :
-  
   Aegis is a transaction-based software configuration management system. It 
   provides a framework within which a team of developers may work on many 
   changes to a program independently, and Aegis coordinates integrating these 
