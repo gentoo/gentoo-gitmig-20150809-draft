@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplore/xplore-1.2a.ebuild,v 1.2 2004/01/11 13:39:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplore/xplore-1.2a.ebuild,v 1.3 2004/01/13 16:20:47 lanius Exp $
 
 IUSE=""
 
@@ -16,7 +16,6 @@ KEYWORDS="x86"
 # its webpage states the lesstif does not fully work with xplore
 DEPEND="virtual/x11
 	x11-libs/openmotif"
-#	>=x11-libs/openmotif-2.2"
 
 src_compile() {
 	#Fix Xplore.tmpl so installation is to /usr instead of /usr/X11R6
