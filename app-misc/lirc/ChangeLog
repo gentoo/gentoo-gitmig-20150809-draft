@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.18 2004/02/05 14:43:50 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.19 2004/02/17 21:29:51 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> lirc-0.7.0_pre2.ebuild:
+  stable on alpha and ia64
 
   05 Feb 2004; Heinrich Wendel <lanius@gentoo.org> lirc-0.7.0_pre2.ebuild,
   files/lircd.conf:
