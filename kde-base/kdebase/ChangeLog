@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.167 2004/12/27 15:26:58 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.168 2004/12/28 19:04:18 absinthe Exp $
+
+  28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> kdebase-3.3.2-r1.ebuild:
+  Stable on amd64.
 
   27 Dec 2004; Caleb Tennis <caleb@gentoo.org> kdebase-3.3.2-r1.ebuild:
   x86 stable
@@ -58,7 +61,7 @@
   06 Dec 2004; Jason Huebel <jhuebel@gentoo.org> kdebase-3.3.1.ebuild:
   stable on amd64
 
-  17 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> kdebase-3.3.1.ebuild:
+  17 Nov 2004; Bryan ??stergaard <kloeri@gentoo.org> kdebase-3.3.1.ebuild:
   Stable on alpha.
 
   08 Nov 2004; Lars Weiler <pylon@gentoo.org> kdebase-3.3.1.ebuild:
@@ -67,7 +70,7 @@
   04 Nov 2004; Jason Wever <weeve@gentoo.org> kdebase-3.3.1.ebuild:
   Stable on sparc wrt security bug #69936.
 
-  03 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> kdebase-3.3.1.ebuild:
+  03 Nov 2004; Bryan ??stergaard <kloeri@gentoo.org> kdebase-3.3.1.ebuild:
   ~alpha keyword.
 
   03 Nov 2004; Caleb Tennis <caleb@gentoo.org> kdebase-3.3.1.ebuild:
@@ -184,7 +187,7 @@
   -kdebase-3.3.0_alpha1.ebuild, +kdebase-3.3.0_beta1.ebuild:
   New beta, remove alpha
 
-  07 Jul 2004; Bryan �stergaard <kloeri@gentoo.org> kdebase-3.2.2.ebuild:
+  07 Jul 2004; Bryan ?stergaard <kloeri@gentoo.org> kdebase-3.2.2.ebuild:
   Stable on alpha.
 
 *kdebase-3.2.3 (10 Jun 2004)

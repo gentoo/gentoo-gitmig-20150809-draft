@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.110 2004/12/27 15:40:00 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.111 2004/12/28 19:19:27 absinthe Exp $
+
+  28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> kdeaddons-3.3.2.ebuild:
+  Stable on amd64.
 
   27 Dec 2004; Caleb Tennis <caleb@gentoo.org> kdeaddons-3.3.2.ebuild:
   x86 stable
@@ -17,7 +20,7 @@
   06 Dec 2004; Jason Huebel <jhuebel@gentoo.org> kdeaddons-3.3.1.ebuild:
   stable on amd64
 
-  17 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> kdeaddons-3.3.1.ebuild:
+  17 Nov 2004; Bryan ??stergaard <kloeri@gentoo.org> kdeaddons-3.3.1.ebuild:
   Stable on alpha.
 
   08 Nov 2004; Joseph Jezak <josejx@gentoo.org> kdeaddons-3.3.1.ebuild:
@@ -29,7 +32,7 @@
   04 Nov 2004; Jason Wever <weeve@gentoo.org> kdeaddons-3.3.1.ebuild:
   Stable on sparc wrt security bug #69936.
 
-  03 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> kdeaddons-3.3.1.ebuild:
+  03 Nov 2004; Bryan ??stergaard <kloeri@gentoo.org> kdeaddons-3.3.1.ebuild:
   ~alpha keyword.
 
 *kdeaddons-3.3.1 (14 Oct 2004)
@@ -95,7 +98,7 @@
   +kdeaddons-3.3.0_beta1.ebuild:
   Add beta, remove alpha
 
-  07 Jul 2004; Bryan �stergaard <kloeri@gentoo.org> kdeaddons-3.2.2.ebuild:
+  07 Jul 2004; Bryan ?stergaard <kloeri@gentoo.org> kdeaddons-3.2.2.ebuild:
   Stable on alpha.
 
 *kdeaddons-3.2.3 (10 Jun 2004)
