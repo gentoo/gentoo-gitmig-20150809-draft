@@ -21,7 +21,9 @@
 ##   End example
 ##
 
-
+# <tantive@gentoo.org> (02 Oct 2002)
+# Initial release, masked due to freeze and for testing.
+=app-admin/openmosixtest-0.1-r1
 
 # <verwilst@gentoo.org> (2 Okt 2002)
 # Masked for t3st@ge
@@ -53,9 +55,6 @@ media-video/SDLcam
 # Another new procps from Rik Van Riel
 =sys-apps/procps-2.0.9
 
-# <tantive@gentoo.org> (30 Sep 2002)
-# Now including XFS, masked due to freeze and for testing.
-=sys-kernel/openmosix-sources-2.4.19-r6
 
 # <agenkin@gentoo.org> (30 Sep 2002)
 # Masking pending unfreeze.
