@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.91.1.ebuild,v 1.4 2004/02/04 21:45:53 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.91.1.ebuild,v 1.5 2004/02/26 23:39:33 eradicator Exp $
 
 inherit flag-o-matic
 
-IUSE="doc debug jack-tmpfs jack-caps"
+IUSE="doc debug jack-tmpfs caps"
 
 DESCRIPTION="A low-latency audio server"
 HOMEPAGE="http://jackit.sourceforge.net/"
@@ -20,7 +20,7 @@ DEPEND=">=media-libs/alsa-lib-0.9.1
 	dev-libs/glib
 	dev-util/pkgconfig
 	sys-libs/ncurses
-	jack-caps? ( sys-libs/libcap )
+	caps? ( sys-libs/libcap )
 	doc? ( app-doc/doxygen )
 	sys-devel/autoconf
 	!media-sound/jack-cvs"
@@ -29,6 +29,11 @@ PROVIDE="virtual/jack"
 
 
 src_unpack() {
+	if use jack-caps; then
+		eerror "The jack-caps USE flag has been changed to caps.  Please update your environment."
+		exit 1
+	fi
+
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-doc-option.patch || die "doc configure option failed"
@@ -49,7 +54,7 @@ src_compile() {
 		|| myconf="--disable-html-docs"
 
 	use jack-tmpfs && myconf="${myconf} --with-default-tmpdir=/dev/shm"
-	use jack-caps && myconf="${myconf} --enable-capabilities --enable-stripped-jackd"
+	use caps && myconf="${myconf} --enable-capabilities --enable-stripped-jackd"
 	use debug && myconf="${myconf} --enable-debug"
 
 	myconf="${myconf} --enable-optimize --with-gnu-ld"
