@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.41 2004/07/31 03:37:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.42 2004/08/05 18:44:09 gmsoft Exp $
+
+  05 Aug 2004; Guy Martin <gmsoft@gentoo.org> vte-0.11.11.ebuild:
+  Stable on hppa.
 
   31 Jul 2004; <spider@gentoo.org> vte-0.11.11.ebuild:
   stable on x86 for gnome 2.6.2

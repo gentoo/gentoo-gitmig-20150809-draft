@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.29 2004/07/31 03:36:54 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.30 2004/08/05 18:46:15 gmsoft Exp $
+
+  05 Aug 2004; Guy Martin <gmsoft@gentoo.org> gtksourceview-1.0.1.ebuild:
+  Stable on hppa.
 
   31 Jul 2004; <spider@gentoo.org> gtksourceview-1.0.1.ebuild:
   stable on x86 for gnome 2.6.2
