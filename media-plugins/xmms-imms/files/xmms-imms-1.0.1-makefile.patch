@@ -1,0 +1,35 @@
+diff -Naur imms-1.0.1.orig/rules.mk imms-1.0.1/rules.mk
+--- imms-1.0.1.orig/rules.mk	2004-02-25 12:53:33.000000000 -0800
++++ imms-1.0.1/rules.mk	2004-02-26 03:03:48.000000000 -0800
+@@ -11,12 +11,12 @@
+ 	$(AR) $(ARFLAGS) $@ $(CORE_OBJ)
+ 
+ %.o: %.cc vars.mk
+-	@$(CXX) $(CXXFLAGS) -M -E $< > .$*.d
+-	$(CXX) $(CXXFLAGS) -c $< -o $@
++	@$(CXX) $(CPPFLAGS) $(CXXFLAGS) -M -E $< > .$*.d
++	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
+ 
+ %.o: %.c vars.mk
+-	@$(CXX) $(CFLAGS) -M -E $< > .$*.d
+-	$(CC) $(CFLAGS) -c $< -o $@
++	@$(CC) $(CPPFLAGS) $(CFLAGS) -M -E $< > .$*.d
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+ 
+ .PHONY: clean distclean
+ 
+diff -Naur imms-1.0.1.orig/vars.mk.in imms-1.0.1/vars.mk.in
+--- imms-1.0.1.orig/vars.mk.in	2004-02-25 12:53:33.000000000 -0800
++++ imms-1.0.1/vars.mk.in	2004-02-26 03:04:54.000000000 -0800
+@@ -9,8 +9,9 @@
+ CORE_OBJ = imms.o immsdb.o fetcher.o picker.o spectrum.o sqldb.o \
+ 	   songinfo.o regexx.o strmanip.o levenshtein.o xidle.o md5.o
+ 
+-CFLAGS = `xmms-config --cflags` @DEBUG_CFLAGS@ -Wall -fPIC -D_REENTRANT
+-CXXFLAGS = ${CFLAGS} -pedantic -fno-rtti
++CPPFLAGS = `xmms-config --cflags` @CPPFLAGS@
++CFLAGS = -Wall -fPIC -D_REENTRANT @CFLAGS@ 
++CXXFLAGS = -fPIC -D_REENTRANT -pedantic -fno-rtti @CXXFLAGS@
+ LDFLAGS = `xmms-config --libs` @LIBS@
+ ARFLAGS = rs
+ 
