@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>tools-portage</herd>
-</pkgmetadata>
+    <maintainer>
+        <email>fava@gentoo.org</email>
+        <name>Fred Van Andel</name>
+    </maintainer>      
+</pkgmetadata>         
