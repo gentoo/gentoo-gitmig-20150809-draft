@@ -1,6 +1,11 @@
 # ChangeLog for net-www/gentoo-webroot-default
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/ChangeLog,v 1.5 2005/01/28 22:00:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/ChangeLog,v 1.6 2005/01/29 02:36:31 trapni Exp $
+
+  29 Jan 2005; Christian Parpart <trapni@gentoo.org>
+  gentoo-webroot-default-0.1.ebuild:
+  Adding pkg_config notice to enduser, so, that they don't just watch to
+  /dev/null when invoking `ebuild foo config`
 
   28 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
   gentoo-webroot-default-0.1.ebuild:
