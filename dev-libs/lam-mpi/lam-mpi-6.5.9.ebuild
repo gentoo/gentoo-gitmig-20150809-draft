@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lam-mpi/lam-mpi-6.5.9.ebuild,v 1.1 2003/03/25 07:20:55 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lam-mpi/lam-mpi-6.5.9.ebuild,v 1.2 2003/04/06 08:02:25 george Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc"
 RDEPEND="net-misc/openssh"
 
 SLOT="6"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 sparc ppc"
 LICENSE="as-is"
 
 
