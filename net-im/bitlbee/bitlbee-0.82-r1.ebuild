@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.82-r1.ebuild,v 1.2 2003/12/25 16:14:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.82-r1.ebuild,v 1.3 2004/01/09 20:45:21 weeve Exp $
 
 inherit eutils
 
@@ -16,9 +16,22 @@ IUSE="debug jabber msn oscar yahoo"
 DEPEND="virtual/glibc
 	msn? ( >=net-libs/libsoup-1.99.26 )"
 
+no_flags_die() {
+	eerror ""
+	eerror "Please choose a protocol or protocols to use with"
+	eerror "bitlbee by enabling the useflag for the protocol"
+	eerror "desired."
+	eerror ""
+	eerror " Valid useflags are;"
+	eerror " jabber, msn, oscar and yahoo"
+	die "No IM protocols selected!"
+}
+
 pkg_setup() {
 	einfo "Note: as of bitlbee-0.82-r1, all protocols are useflags."
 	einfo "      Make sure you've enabled the flags you want."
+
+	use jabber || use msn || use oscar || use yahoo || no_flags_die
 }
 
 src_unpack() {
