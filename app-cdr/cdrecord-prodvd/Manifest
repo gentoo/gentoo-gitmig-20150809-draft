@@ -1,5 +1,7 @@
 MD5 e210458628d80743388272a73a2e8277 ChangeLog 2216
 MD5 48ca404401bb6907e8e7e0e70ce3a690 cdrecord-prodvd-2.01_beta31.ebuild 1144
 MD5 bca2ecf18b913eeb713049629869c429 metadata.xml 323
+MD5 52f34c2e660316e8b4528cfa48eab10a cdrecord-prodvd-2.01.01.ebuild 1161
 MD5 002c45291fcb6c48c8a424362b9f8777 files/cdrecord-wrapper.sh 457
 MD5 998700ef51321a1dcbfc6c0ec2333356 files/digest-cdrecord-prodvd-2.01_beta31 86
+MD5 b634591137522e7730456a726a32c008 files/digest-cdrecord-prodvd-2.01.01 86
