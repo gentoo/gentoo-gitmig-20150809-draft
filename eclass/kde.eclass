@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.68 2003/01/30 19:21:56 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.69 2003/01/31 17:21:28 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
@@ -49,6 +49,9 @@ kde_src_unpack() {
 		touch $UIFILES
 	fi
 
+	# shorthand for removing specified subdirectories fom the build process
+	[ -n "$KDE_REMOVE_DIR" ] && kde_remove_dir $KDE_REMOVE_DIR
+
 }
 
 kde_src_compile() {
@@ -84,8 +87,6 @@ kde_src_compile() {
 			configure)
 				debug-print-section configure
 				debug-print "$FUNCNAME::configure: myconf=$myconf"
-
-				[ -n "$KDE_REMOVE_DIR" ] && kde_remove_dir $KDE_REMOVE_DIR
 
 				# rebuild configure script, etc
 				# This can happen with e.g. a cvs snapshot			
