@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.19 2004/09/13 18:31:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.20 2004/09/25 17:42:10 ticho Exp $
+
+*mutt-1.5.6-r4 (25 Sep 2004)
+
+  25 Sep 2004; Andrej Kacian <ticho@gentoo.org> +mutt-1.5.6-r4.ebuild:
+  Use newer headercache patchset. Closes #65060, reported by Horst Schirmeier
+  <gentoo@schirmeier.com>.
 
   13 Sep 2004; Guy Martin <gmsoft@gentoo.org> mutt-1.5.6-r3.ebuild:
   Stable on hppa.
