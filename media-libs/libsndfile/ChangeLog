@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.16 2004/02/17 20:24:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.17 2004/03/07 12:54:35 gustavoz Exp $
+
+  07 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> libsndfile-1.0.5.ebuild:
+  stable on sparc
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> libsndfile-1.0.6.ebuild:
   add ~alpha and ~ia64
