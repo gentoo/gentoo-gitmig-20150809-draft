@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.6 2004/12/12 20:11:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.7 2004/12/29 18:20:14 mr_bones_ Exp $
 
 inherit games eutils
 
 MY_P=${PN}-030311
 DESCRIPTION="realtime strategy game engine for games like Warcraft/Starcraft/etc."
-HOMEPAGE="http://www.savefree-aft.4t.com/"
+HOMEPAGE="http://www.math.sfu.ca/~cbm/cd/"
 SRC_URI="${MY_P}-src.tar.gz"
 
 LICENSE="GPL-2"
