@@ -197,3 +197,4 @@ move app-sci/koctave sci-mathematics/koctave
 move app-sci/Macaulay2 sci-mathematics/Macaulay2
 move app-sci/mathomatic sci-mathematics/mathomatic
 move app-sci/maxima sci-mathematics/maxima
+move app-sci/mupad sci-mathematics/mupad
