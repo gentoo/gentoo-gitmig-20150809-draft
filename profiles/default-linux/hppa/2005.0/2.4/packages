@@ -1,6 +1,6 @@
 # Copyright 2001-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2005.0/2.4/packages,v 1.1 2005/01/11 15:53:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2005.0/2.4/packages,v 1.2 2005/01/12 00:19:42 vapier Exp $
 
 # For instructions on how this file works (as an inclusion mask, primarily),
 # please refer to ${PORTDIR}/profiles/base/packages
@@ -13,4 +13,3 @@
 
 <sys-kernel/hppa-sources-2.5
 <sys-kernel/linux-headers-2.5
-<sys-kernel/hppa-headers-2.5

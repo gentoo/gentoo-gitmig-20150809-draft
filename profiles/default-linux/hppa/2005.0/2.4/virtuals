@@ -1,11 +1,11 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2005.0/2.4/virtuals,v 1.1 2005/01/11 15:53:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2005.0/2.4/virtuals,v 1.2 2005/01/12 00:19:42 vapier Exp $
 
 # This file is used to either override or extend the parent profile's
 # virtuals mappings.   In this case, this is for ARCHITECTURE SPECIFIC
 # mappings
 
 virtual/dev-manager		sys-fs/devfsd
-virtual/os-headers		sys-kernel/hppa-headers
+virtual/os-headers		sys-kernel/linux-headers
 virtual/linux-sources	sys-kernel/hppa-sources
