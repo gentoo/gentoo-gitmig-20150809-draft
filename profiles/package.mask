@@ -44,10 +44,6 @@ net-www/mod_scgi
 # Masking >=openldap-2.1 until db4 stuff gets settled 	 
 >=net-nds/openldap-2.1
 
-# foser@gentoo.org (04 Aug 2003)
-# Buggy version (#25776)
-=gnome-base/libbonoboui-2.2.3*
-
 # pebenito@gentoo.org (03 Aug 2003)
 # new api/userland for selinux
 sys-libs/libselinux
