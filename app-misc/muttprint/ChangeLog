@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/muttprint
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.11 2003/10/01 12:17:58 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.12 2004/01/09 23:27:33 agriffis Exp $
+
+  09 Jan 2004; Aron Griffis <agriffis@gentoo.org> muttprint-0.71.ebuild:
+  stable on alpha
 
   20 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> muttprint-0.62b.ebuild,
   muttprint-0.63a.ebuild, muttprint-0.64.ebuild, muttprint-0.71.ebuild:

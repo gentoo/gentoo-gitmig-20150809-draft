@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1-r1.ebuild,v 1.8 2004/01/01 18:17:23 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1-r1.ebuild,v 1.9 2004/01/09 23:22:10 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.uni-erlangen.de/pub/utilities/screen/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc hppa amd64 mips"
+KEYWORDS="x86 sparc ppc hppa amd64 mips alpha"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-apps/sed-4
@@ -38,6 +38,11 @@ src_compile() {
 
 	addpredict "`tty`"
 	addpredict "${SSH_TTY}"
+
+	# this application breaks in numerous ways (freezes, segfaults)
+	# when using any optimization on alpha
+	# (09 Jan 2004 agriffis)
+	[[ $ARCH == alpha ]] && append-flags -O0
 
 	# check config.h for other settings such as the
 	# max-number of windows allowed by screen.
