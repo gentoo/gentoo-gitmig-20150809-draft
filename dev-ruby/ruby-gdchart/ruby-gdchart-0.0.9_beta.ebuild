@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdchart/ruby-gdchart-0.0.9_beta.ebuild,v 1.1 2004/02/21 10:51:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdchart/ruby-gdchart-0.0.9_beta.ebuild,v 1.2 2004/04/10 16:33:46 usata Exp $
 
 inherit ruby
 
@@ -10,10 +10,10 @@ HOMEPAGE="http://sourceforge.jp/projects/ruby-gdchart/"
 SRC_URI="mirror://sourceforge.jp/ruby-gdchart/1080/${MY_P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 USE_RUBY="ruby16 ruby18 ruby19"
 IUSE=""
-DEPEND=">=dev-lang/ruby-1.6.1
+DEPEND="virtual/ruby
 	media-libs/libgd"
 
 S=${WORKDIR}/${MY_P}
