@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.56 2004/11/09 09:21:59 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.57 2004/11/09 19:23:32 agriffis Exp $
+
+  09 Nov 2004; Aron Griffis <agriffis@gentoo.org> iptables-1.2.11-r3.ebuild:
+  stable on ia64
 
   08 Nov 2004; Markus Rothe <corsair@gentoo.org> iptables-1.2.11-r3.ebuild:
   Stable on ppc64; bug #70240
