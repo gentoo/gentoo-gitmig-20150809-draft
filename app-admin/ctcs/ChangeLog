@@ -4,6 +4,9 @@
 
 *ctcs-1.3.0_pre4 (26 Aug 2002)
 
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+  tested for 5 months moving into stable
+
   18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> ctcs-1.3.0_pre4.ebuild :
   Updated to mirror://sourceforge in SRC_URI.
 
