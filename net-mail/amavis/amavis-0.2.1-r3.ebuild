@@ -1,15 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1-r3.ebuild,v 1.7 2003/09/05 02:35:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1-r3.ebuild,v 1.8 2003/09/08 06:40:18 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Virus Scanner"
-SRC_URI="http://www.amavis.org/dist/${P}.tar.gz"
 HOMEPAGE="http://www.amavis.org/"
+SRC_URI="http://www.amavis.org/dist/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+SLOT="0"
+KEYWORDS="x86 sparc"
 
 DEPEND="net-mail/maildrop
 	>=net-mail/tnef-0.13
@@ -18,25 +17,22 @@ DEPEND="net-mail/maildrop
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${P}-securetar.patch
+	epatch ${FILESDIR}/${P}-securetar.patch
 }
 
 src_compile() {
 	./reconf
-	patch -p0 < ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 	econf \
 		--with-logdir=/var/log/scanmail \
 		--with-virusdir=/var/tmp/virusmails \
 		--enable-qmail || die
-
 	make || die
 }
 
 src_install() {
-	try make prefix=${D}/usr install
-	into /usr
+	make prefix=${D}/usr install || die
 	dodoc AUTHORS BUGS COPYING ChangeLog FAQ HINTS NEWS README* TODO
 	dodoc doc/amavis.txt
 	dohtml -r doc
