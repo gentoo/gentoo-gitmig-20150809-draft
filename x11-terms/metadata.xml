@@ -8,5 +8,9 @@
 		La categoría x11-terms contiene emuladores de terminal para varios
 		ambientes X11.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie x11-terms enthält Terminalemulatoren für verschiedene
+		Desktopumgebungen und Window Manager.
+	</longdescription>
 </catmetadata>
 
