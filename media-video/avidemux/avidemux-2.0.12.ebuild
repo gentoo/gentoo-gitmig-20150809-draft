@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.12.ebuild,v 1.3 2003/09/07 00:08:12 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.12.ebuild,v 1.4 2003/09/10 22:34:15 msterret Exp $
 
 IUSE="debug nls oggvorbis arts truetype alsa"
 filter-flags "-funroll-loops"
@@ -18,20 +18,20 @@ SLOT="2"
 KEYWORDS="~x86"
 
 DEPEND="virtual/x11
-   media-sound/mad
-   >=media-libs/a52dec-0.7.4
-   >=media-sound/lame-3.93
-   >=media-video/mjpegtools-1.6
-   >=media-libs/xvid-0.9
-   >=dev-libs/libxml2-2.5.7
-   >=x11-libs/gtk+-2.2.1
-   >=media-libs/divx4linux-20020418-r1
-   nls? ( >=sys-devel/gettext-0.11.2 )
-   oggvorbis? ( >=media-libs/libogg-1.0
-                >=media-libs/libvorbis-1.0 )
-   arts? ( >=kde-base/arts-1.1.1 )
-   truetype? ( >=media-libs/freetype-2.1.2 )
-   alsa? ( >=media-libs/alsa-lib-0.9.1 )"
+	media-sound/mad
+	>=media-libs/a52dec-0.7.4
+	>=media-sound/lame-3.93
+	>=media-video/mjpegtools-1.6
+	>=media-libs/xvid-0.9
+	>=dev-libs/libxml2-2.5.7
+	>=x11-libs/gtk+-2.2.1
+	>=media-libs/divx4linux-20020418-r1
+	nls? ( >=sys-devel/gettext-0.11.2 )
+	oggvorbis? ( >=media-libs/libogg-1.0
+		>=media-libs/libvorbis-1.0 )
+	arts? ( >=kde-base/arts-1.1.1 )
+	truetype? ( >=media-libs/freetype-2.1.2 )
+	alsa? ( >=media-libs/alsa-lib-0.9.1 )"
 # media-sound/toolame is supported as well
 
 pkg_setup() {
@@ -52,7 +52,7 @@ src_compile() {
 	myconf="--with-gnu-ld --disable-warnings"
 
 	# --enable-profile        creates profiling infos default=no
-  	# --enable-pch            enables precompiled header support
+	# --enable-pch            enables precompiled header support
 	#                         (currently only KCC) default=no
 	# --enable-final          build size optimized apps
 	#                         (experimental - needs lots of memory)

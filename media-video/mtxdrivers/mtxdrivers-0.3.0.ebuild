@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.3.0.ebuild,v 1.5 2003/08/07 04:20:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.3.0.ebuild,v 1.6 2003/09/10 22:35:28 msterret Exp $
 
 At="mtxdrivers-rh9.0-0.3.0.run"
 DESCRIPTION="Drviers for the Matrox Parhelia and Millenium P650/P750 cards."
@@ -63,14 +63,14 @@ src_install() {
 }
 
 pkg_postinst() {
-    /sbin/depmod -a
+	/sbin/depmod -a
 	einfo "Please look at /usr/share/doc/${P}/XF86Config.* for"
 	einfo "X configurations for your Parhelia or Millenium P650/P750 card."
 	if [ ! -d /dev/video ]; then
 		if [ -f /dev/video ]; then
 			einfo "NOTE: To be able to use busmastering, you MUST have /dev/video as"
 		    einfo "a directory, which means you must remove anything there first"
-    		einfo "(rm -f /dev/video), and mkdir /dev/video"
+			einfo "(rm -f /dev/video), and mkdir /dev/video"
 		else
 			mkdir /dev/video
 		fi

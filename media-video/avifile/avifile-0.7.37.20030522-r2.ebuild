@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.37.20030522-r2.ebuild,v 1.5 2003/09/07 00:08:12 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.37.20030522-r2.ebuild,v 1.6 2003/09/10 22:34:56 msterret Exp $
 
 MAJ_PV=${PV:0:3}
 MIN_PV=${PV:3:3}
@@ -40,15 +40,15 @@ DEPEND=">=media-libs/jpeg-6b
 src_unpack() {
 	unpack ${A}
 	use qt || sed -i 's/qt[a-z]*//g' ${S}/samples/Makefile.am
-        #Fixing divx 2003 API
-        if has_version  '>=media-libs/divx4linux-20030428'
-        then
-                einfo "DivX 20030428 found"
-                cd ${S}
-                epatch ${FILESDIR}/${P}-divx.patch
-        else
-                einfo "Old DivX Api found"
-        fi
+	#Fixing divx 2003 API
+	if has_version  '>=media-libs/divx4linux-20030428'
+	then
+		einfo "DivX 20030428 found"
+		cd ${S}
+		epatch ${FILESDIR}/${P}-divx.patch
+	else
+		einfo "Old DivX Api found"
+	fi
 }
 
 src_compile() {
