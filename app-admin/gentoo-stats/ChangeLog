@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gentoo-stats
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.3 2002/08/25 22:38:15 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.4 2002/08/31 19:58:04 blizzy Exp $
+
+  31 Aug 2002; Maik Schreiber <blizzy@gentoo.org> gentoo-stats-0.1.ebuild:
+  Changed to "-sparc -sparc64" since bug #5822 isn't resolved yet. Also
+  added some information about how to edit cron jobs to make it easier
+  for new users.
 
 *gentoo-stats-0.1 (28 Jul 2002)
 
