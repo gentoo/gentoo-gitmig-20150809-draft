@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.19.2.ebuild,v 1.1 2003/10/08 21:24:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.19.2.ebuild,v 1.2 2003/10/26 19:58:20 liquidx Exp $
 
-DESCRIPTION="RSS news aggregator"
+inherit python distutils
+
+DESCRIPTION="RSS/RDF News Aggregator"
 HOMEPAGE="http://www.nongnu.org/straw/"
-LICENSE="GPL-2"
-
 SRC_URI="http://savannah.nongnu.org/download/${PN}/${PN}.pkg/${PV}/${P}.tar.bz2"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-
-DEPEND="virtual/python
+RDEPEND=">=dev-lang/python-2.2.3-r3
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnome-2.0.1
 	>=dev-python/gnome-python-1.99.13
@@ -21,26 +21,30 @@ DEPEND="virtual/python
 	>=dev-python/egenix-mx-base-2
 	=dev-python/adns-python-1.0.0"
 
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
+
+MAKEOPTS="${MAKEOPTS} -j1"
+
 src_unpack() {
-
 	unpack ${A}
-
-	cd ${S}
-	mv Makefile Makefile.orig
-	sed -e "s:-d \$(BINDIR) \$(LIBDIR) \$(DATADIR):-d \$(BINDIR) \$(LIBDIR) \$(DATADIR) \$(APPLICATIONSDIR) \$(ICONDIR):" Makefile.orig > Makefile || die
-
+	python_version
+	sed -e "s:-d \$(BINDIR) \$(LIBDIR) \$(DATADIR):-d \$(BINDIR) \$(LIBDIR) \$(DATADIR) \$(APPLICATIONSDIR) \$(ICONDIR):" \
+		-e "s:^\(PYTHON.*\)python2.2:\1python${PYVER}:" \
+		-e "s:^\(LIBDIR.*\)python2.2\(.*\):\1python${PYVER}\2:" \
+		-e "s:py\[co\]:py:" \
+		-i ${S}/Makefile || die "sed failed"
+	sed -e "s:/usr/bin/env python2.2:/usr/bin/env python${PYVER}:" \
+		-i ${S}/src/straw
 }
 
 src_compile() {
-
+	export LC_ALL="C"
 	emake || die
-
 }
 
 src_install() {
-
-	emake PREFIX=${D}/usr install || die
-
+	make PREFIX=${D}/usr install || die "install failed"
 	dodoc NEWS README TODO
-
 }
+
