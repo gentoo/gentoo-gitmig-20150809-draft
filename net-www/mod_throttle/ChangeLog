@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_throttle
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_throttle/ChangeLog,v 1.6 2003/02/12 08:51:05 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_throttle/ChangeLog,v 1.7 2004/04/05 01:17:06 zul Exp $
+
+  04 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml,
+  mod_throttle-3.1.2-r1.ebuild:
+  Updated header, added metatadata.xml.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
