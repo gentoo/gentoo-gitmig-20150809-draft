@@ -1,0 +1,19 @@
+# ChangeLog for app-misc/xnc
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnc/ChangeLog,v 1.1 2003/11/18 16:23:44 port001 Exp $
+
+*xnc-5.0.2 (18 Nov 2003)
+
+  18 Nov 2003; Ian Leitch <port001@gentoo.org> xnc-5.0.2.ebuild:
+  Moved from app-misc to x11-misc, metadata.xml created
+
+*xnc-5.0.2 (25 Mar 2003)
+
+  25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> xnc-5.0.2.ebuild:
+  version bump, since the older version's tarballs are no longer available.
+  Thanks to: Joel Hill <joelhill@earthlink.net> in bug #18197
+
+*xnc-5.0.0 (8 Jan 2003)
+
+  8 Jan 2003; J.ALberto Suarez L. <bass@gentoo.org> xnc-5.0.0.ebuild :
+  First relase.
