@@ -5,8 +5,8 @@ MD5 4b06db7f129e498e5c8abd12b815c12c gqview-1.4.1.ebuild 831
 MD5 28547a722cf067cea94efd43f6d4eea8 gqview-1.5.0.ebuild 904
 MD5 e70c2edbfc61fdb7ed7bd1a29eb92c6c metadata.xml 339
 MD5 850536abfd53aff4e999008569f8f6e6 gqview-1.5.1.ebuild 909
-MD5 72a3919ce6d1493387fa3fbec76255a8 gqview-1.5.2.ebuild 891
-MD5 33c2c2e1ffc48711bc8212684c600c6d gqview-1.4.4.ebuild 898
+MD5 e360a945a824187d1382f44d195501b1 gqview-1.5.2.ebuild 915
+MD5 8cabb93b75c78831ffd1c22fce66c365 gqview-1.4.4.ebuild 910
 MD5 b3d35cac796c66219b3690e6e5e7b4e8 files/digest-gqview-1.4.1 65
 MD5 c599a99b5155347123cabffb2fb09c0e files/digest-gqview-1.5.0 65
 MD5 7971e03d074657218357c74b9d8dfc8f files/digest-gqview-1.5.1 65
