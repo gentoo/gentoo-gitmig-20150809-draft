@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.91 2003/04/25 02:40:45 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.92 2003/04/25 05:25:00 frogger Exp $
 
   24 Mar 2003; Martin Schlemmer <azarah@gentoo.org> :
   - Fix latest ebuild to only build static if we are just building the C
@@ -35,6 +35,11 @@
   from borking when run.  This will hopefully fix bugs #15288, #16632, #16797.
 
 *gcc-3.2.2-r3 (03 Mar 2003)
+
+  25 Apr 2003; Matthew Rickard <frogger@gentoo.org> gcc-3.2.2-r3.ebuild:
+  Added files/3.2.2/protector_parallel_make.patch which
+  fixes the errors we've been seeing when using >= -j2
+  as addressed in bug 18091.
 
   24 Apr 2003; Matthew Rickard <frogger@gentoo.org> gcc-3.2.2-r3.ebuild,
   files/3.2.2/protector.c:

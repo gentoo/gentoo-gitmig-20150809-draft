@@ -13,11 +13,11 @@ MD5 b8162a884971199cc4a538d2e484cdfe gcc-3.1.1-r1.ebuild 9636
 MD5 b4bab75d7a8ceb7b8b9ce9e245733a2c gcc-3.2.2.ebuild 15271
 MD5 5a4475fa7fe0b65b070ad173457878d5 gcc-2.95.3-r8.ebuild 9170
 MD5 da9e936766a9c4650965f9edabbc618d gcc-3.2-r5.ebuild 13126
-MD5 f4d97bd37ce3f74efa459c045e1c875d gcc-3.2.2-r3.ebuild 15987
+MD5 3d8fa94dee2577144d7056caa863d843 gcc-3.2.2-r3.ebuild 16043
 MD5 396808683bbe6fe294fe6f803ec4e7a2 gcc-3.1-r8.ebuild 9803
 MD5 4ca314ddb4dc31959140fa45137e4ec0 gcc-3.2.1-r6.ebuild 14406
 MD5 31eaf707d3524543fefb3ff3d1f8af30 gcc-3.2.1-r1.ebuild 13025
-MD5 cd85bbd70f7fa9211ad95e6fe5827373 ChangeLog 18737
+MD5 4b02fec384d0fb75cf1ab8b2dcffef02 ChangeLog 18951
 MD5 d70bcc196f1d68275346f067efcb9373 files/cc 20
 MD5 dcf3646d19d351cc4d95a8096c6eaf58 files/cpp 20
 MD5 4a4be6eb294e00da7fef14ec597dcf13 files/digest-gcc-3.0.4-r6 128
@@ -88,6 +88,7 @@ MD5 444d0885eecc638ed3ca644d96323422 files/3.2.1/gcc32-tls-reload-fix.patch 6660
 MD5 f8505ae264a0fe9557382b7c96a13461 files/3.2.1/gcc32-shared-pthread.patch 3637
 MD5 c113c3352ad365b8a35d2b0c21e69256 files/3.2.1/gcc32-testsuite.patch 650
 MD5 17f15202b98a8dd84d0f4b67eff2d868 files/3.2.2/gcc32-pr7768.patch 1789
+MD5 c940a836992f425c3182b58f555592c7 files/3.2.2/protector_parallel_make.patch 483
 MD5 bc520c8b5907be897020a9379e3110ef files/3.2.2/protector.patch 37106
 MD5 465eeaf6008c25dc69ff502dc2a9d8e0 files/3.2.2/gcc322-ggc_page-speedup.patch 872
 MD5 078582ac70b1c789023c7ff90a96a87c files/3.2.2/protector.c 65094
