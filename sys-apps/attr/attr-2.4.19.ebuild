@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.19.ebuild,v 1.11 2004/12/30 20:34:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.19.ebuild,v 1.12 2004/12/30 20:38:30 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Extended attributes tools"
 HOMEPAGE="http://oss.sgi.com/projects/xfs/"
-SRC_URI="ftp://xfs.org/mirror/SGI/cmd_tars/${P}.src.tar.gz"
+SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz
+	ftp://xfs.org/mirror/SGI/cmd_tars/${P}.src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
