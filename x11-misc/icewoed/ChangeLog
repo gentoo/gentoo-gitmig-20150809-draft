@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/icewoed
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewoed/ChangeLog,v 1.12 2004/08/25 06:52:30 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewoed/ChangeLog,v 1.13 2004/08/27 07:47:50 phosphan Exp $
+
+*icewoed-1.8 (27 Aug 2004)
+
+  27 Aug 2004; Patrick Kursawe <phosphan@gentoo.org> +icewoed-1.8.ebuild:
+  version bump, using C*FLAGS now
 
   03 Aug 2004; David Holm <dholm@gentoo.org> icewoed-1.6.ebuild:
   Added to ~ppc.
