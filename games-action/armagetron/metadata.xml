@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<maintainer>
-  <email>games@gentoo.org</email>
-  <name>Games Team</name>
-</maintainer>
-<longdescription>ArmageTRON is a 3D light cycle game featuring the ability to play against others online</longdescription>
+<longdescription>
+ArmageTRON is a 3D light cycle game featuring the ability to play against others online
+</longdescription>
 </pkgmetadata>
