@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.7.ebuild,v 1.7 2004/06/25 00:40:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.7.ebuild,v 1.8 2004/11/12 02:31:11 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~ia64 ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~ia64 ~amd64 ~arm"
 IUSE="mmx encode oggvorbis doc faad dvd static sdl imlib truetype"
 
 DEPEND="encode? ( >=media-sound/lame-3.92 )
