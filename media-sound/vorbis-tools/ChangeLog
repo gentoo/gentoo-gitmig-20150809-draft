@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/vorbis-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.21 2004/05/04 03:58:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.22 2004/05/14 04:18:50 geoman Exp $
+
+  14 May 2004; Stephen P. Becker <geoman@gentoo.org>
+  vorbis-tools-1.0.1.ebuild:
+  Stable on mips.
 
   03 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
   vorbis-tools-1.0.1.ebuild:
