@@ -1,0 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1c5ebd5c89f91a161dc7631605030a94 surfraw-1.0.7.ebuild 1310
+MD5 df2429a3ce6d729caa7b8d599b7d1241 ChangeLog 736
+MD5 0c4863c95791bde92743f7f48a1eaef8 files/digest-surfraw-1.0.7 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBXezsI7fK2cqeyXkRAtoDAKCGeHSVDW4PHsxopxt+QMt8sIr6oQCgjaJF
+TirJPGhNkQ160CHWH8mgEsM=
+=Ddxn
+-----END PGP SIGNATURE-----
