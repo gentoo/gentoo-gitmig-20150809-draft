@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.2-r1.ebuild,v 1.3 2003/04/28 14:32:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.2-r1.ebuild,v 1.4 2003/05/01 15:49:15 liquidx Exp $
 
 inherit flag-o-matic libtool
 
@@ -83,7 +83,9 @@ src_install() {
 	
 	if [ -n "`use doc`" ]; then
 		cd ${WORKDIR}/${PN}-docs-${DOC_VER}
-		make DESTDIR=${D} install || die "doc install failed"
+		make DESTDIR=${D} \
+			scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper \
+			install || die "doc install failed"
 		rm -rf ${D}/var/lib/scrollkeeper
 	fi
 }	
