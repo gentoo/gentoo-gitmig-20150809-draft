@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.3 2002/07/13 19:24:18 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.4 2002/07/16 00:24:28 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker"
@@ -67,9 +67,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-sound" \
 		|| myconf="${myconf} --disable-sound"
 
-	./configure	\
-		--host=${CHOST} \
-		--prefix=/usr \
+	./configure	--prefix=/usr \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--sysconfdir=/etc/X11 \
@@ -93,12 +91,13 @@ src_compile() {
 		Makefile.orig > Makefile
 	
 	cd ${S}
-	emake || die
+	#0.80.1-r2 did not work with make -j4 (drobbins, 15 Jul 2002)
+	#with future Portage, this should become "emake -j1"
+	make || die
   
   	# WindowMaker Extra
 	cd ../WindowMaker-extra-0.1
-	./configure --host=${CHOST} \
-		    --prefix=/usr \
+	./configure --prefix=/usr \
 		    --mandir=/usr/share/man \
 		    --infodir=/usr/share/info || die
 		    
