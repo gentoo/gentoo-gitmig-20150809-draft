@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.1-r1.ebuild,v 1.1 2004/11/06 15:43:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.1-r1.ebuild,v 1.2 2004/11/08 07:35:00 usata Exp $
 
 inherit eutils
 
@@ -80,6 +80,7 @@ src_compile() {
 }
 
 src_test() {
+	addpredict /dev/ptmx
 	make check || die "make check failed"
 }
 

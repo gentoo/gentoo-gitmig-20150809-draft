@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.64 2004/11/06 15:43:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.65 2004/11/08 07:35:00 usata Exp $
+
+  08 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> zsh-4.0.9-r4.ebuild,
+  zsh-4.2.1-r1.ebuild:
+  Fixed maketest. Thanks to Marien Zwart <m_zwart@123mail.org>; bug #70364.
 
 *zsh-4.2.1-r1 (07 Nov 2004)
 *zsh-4.0.9-r4 (07 Nov 2004)

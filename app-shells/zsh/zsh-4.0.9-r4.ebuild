@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.9-r4.ebuild,v 1.1 2004/11/06 15:43:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.9-r4.ebuild,v 1.2 2004/11/08 07:35:00 usata Exp $
 
 inherit flag-o-matic eutils
 
@@ -61,6 +61,7 @@ src_compile() {
 }
 
 src_test() {
+	addpredict /dev/ptmx
 	make check || die "make check failed"
 }
 
@@ -97,4 +98,14 @@ pkg_preinst() {
 	if [ -f ${ROOT}/etc/zsh/zshenv -a ! -f ${ROOT}/etc/zsh/zprofile ]; then
 		mv ${ROOT}/etc/zsh/zshenv ${ROOT}/etc/zsh/zprofile
 	fi
+}
+
+pkg_postinst() {
+	einfo
+	einfo "If you want to enable Portage completion,"
+	einfo "emerge app-shells/zsh-completion and add"
+	einfo "	autoload -U compinit"
+	einfo "	compinit"
+	einfo "to your ~/.zshrc"
+	einfo
 }
