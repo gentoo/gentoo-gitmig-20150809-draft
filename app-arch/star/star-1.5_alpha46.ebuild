@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5_alpha46.ebuild,v 1.5 2004/09/02 08:54:17 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5_alpha46.ebuild,v 1.6 2004/09/06 18:02:55 plasmaroo Exp $
 
 S=${WORKDIR}/${P/_alpha[0-9][0-9]}
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/${PN}/alpha/${PN}-${PV/_alpha/a}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc sparc ~mips alpha ~hppa amd64 ~ia64"
+KEYWORDS="~x86 ppc sparc ~mips alpha ~hppa amd64 ia64"
 IUSE=""
 
 DEPEND="virtual/libc"
