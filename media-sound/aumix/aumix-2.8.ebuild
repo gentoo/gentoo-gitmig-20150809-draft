@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8.ebuild,v 1.6 2003/11/04 08:34:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8.ebuild,v 1.7 2003/11/24 07:25:36 phosphan Exp $
 
 IUSE="gpm nls gtk gnome alsa gtk2"
 
@@ -15,17 +15,17 @@ KEYWORDS="x86 hppa ~mips"
 DEPEND=">=sys-libs/ncurses-5.2
 	gpm?  ( >=sys-libs/gpm-1.19.3 )
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc1 )
-	gtk?  ( =x11-libs/gtk+-1.2* )
-	gtk2? ( >=x11-libs/gtk+-2.0.0 )
+	gtk?  (
+			!gtk2? ( =x11-libs/gtk+-1.2* )
+			gtk2? ( >=x11-libs/gtk+-2.0.0 )
+	)
 	nls?  ( sys-devel/gettext )"
 
 src_compile() {
 	local myconf
 
-	if use gtk2; then
-		myconf="${myconf} --without-gtk1"
-	elif use gtk; then
-		myconf="${myconf} --without-gtk"
+	if use gtk; then
+		use gtk2 && myconf="${myconf} --without-gtk1"
 	else
 		myconf="${myconf} --without-gtk --without-gtk1";
 	fi
