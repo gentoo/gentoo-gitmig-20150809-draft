@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.97 2003/12/04 17:27:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.98 2003/12/12 07:37:03 seemant Exp $
+
+*mplayer-1.0_pre3 (11 Dec 2003)
+
+  11 Dec 2003; Seemant Kulleen <seemant@gentoo.org> mplayer-1.0_pre3.ebuild,
+  files/mplayer-1.0-gtk2.patch:
+  version bump to newest release -- includes updated gtk2 patch
 
   04 Dec 2003; Seemant Kulleen <seemant@gentoo.org> mplayer-0.92.ebuild,
   mplayer-1.0_pre1-r1.ebuild, mplayer-1.0_pre2.ebuild:
