@@ -1,27 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.1.ebuild,v 1.4 2004/06/27 18:24:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.1.ebuild,v 1.5 2004/06/28 13:07:27 vapier Exp $
 
 inherit gnome2
-
-IUSE="gnome canna freewnn skk anthy"
-# --enable-debug causes build failure with gtk+-2.4
-#IUSE="${IUSE} debug"
 
 DESCRIPTION="A Japanese input module for GTK2 and XIM"
 HOMEPAGE="http://im-ja.sourceforge.net/"
 SRC_URI="http://im-ja.sourceforge.net/${P}.tar.gz
 	http://im-ja.sourceforge.net/old/${P}.tar.gz"
-LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ppc alpha"
-SLOT="0"
 
-DOCS="AUTHORS README ChangeLog TODO"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc ~sparc alpha"
+IUSE="gnome canna freewnn skk anthy"
+# --enable-debug causes build failure with gtk+-2.4
+#IUSE="${IUSE} debug"
 
 DEPEND="dev-lang/perl
 	dev-perl/URI
 	${RDEPEND}"
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=dev-libs/glib-2.2.1
 	>=dev-libs/atk-1.2.2
 	>=x11-libs/gtk+-2.2.1
@@ -34,7 +32,7 @@ RDEPEND="virtual/glibc
 	skk? ( virtual/skkserv )
 	anthy? ( || ( app-i18n/anthy app-i18n/anthy-ss ) )"
 
-#use debug && RESTRICT="nostrip"
+DOCS="AUTHORS README ChangeLog TODO"
 
 src_compile() {
 	local myconf
@@ -50,7 +48,7 @@ src_compile() {
 	gnome2_src_compile $myconf || die
 }
 
-pkg_postinst(){
+pkg_postinst() {
 	gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
 	gnome2_pkg_postinst
 	einfo
@@ -63,7 +61,7 @@ pkg_postinst(){
 	einfo
 }
 
-pkg_postrm(){
+pkg_postrm() {
 	gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
 	gnome2_pkg_postrm
 }

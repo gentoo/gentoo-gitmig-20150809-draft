@@ -1,24 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.0-r2.ebuild,v 1.5 2004/06/24 21:46:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.0-r2.ebuild,v 1.6 2004/06/28 13:07:27 vapier Exp $
 
 inherit gnome2
-
-IUSE="${IUSE} gnome canna freewnn skk anthy"
-# --enable-debug causes build failure with gtk+-2.4
-#IUSE="${IUSE} debug"
 
 DESCRIPTION="A Japanese input module for GTK2 and XIM"
 HOMEPAGE="http://im-ja.sourceforge.net/"
 SRC_URI="http://im-ja.sourceforge.net/${P}.tar.gz
 	http://im-ja.sourceforge.net/old/${P}.tar.gz"
+
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ppc alpha"
 SLOT="0"
+KEYWORDS="x86 ppc ~sparc alpha"
+IUSE="${IUSE} gnome canna freewnn skk anthy"
+# --enable-debug causes build failure with gtk+-2.4
+#IUSE="${IUSE} debug"
 
-DOCS="AUTHORS README ChangeLog TODO"
-
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=dev-libs/glib-2.2.1
 	>=dev-libs/atk-1.2.2
 	>=x11-libs/gtk+-2.2.1
@@ -34,7 +32,7 @@ DEPEND="dev-lang/perl
 	dev-perl/URI
 	${RDEPEND}"
 
-#use debug && RESTRICT="nostrip"
+DOCS="AUTHORS README ChangeLog TODO"
 
 src_compile() {
 	local myconf
@@ -53,7 +51,7 @@ src_compile() {
 	emake || die "emake im-ja failed"
 }
 
-pkg_postinst(){
+pkg_postinst() {
 	gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
 	gnome2_pkg_postinst
 	einfo
@@ -66,7 +64,7 @@ pkg_postinst(){
 	einfo
 }
 
-pkg_postrm(){
+pkg_postrm() {
 	gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
 	gnome2_pkg_postrm
 }
