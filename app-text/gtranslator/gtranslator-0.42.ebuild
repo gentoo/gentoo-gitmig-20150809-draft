@@ -1,39 +1,35 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-0.42.ebuild,v 1.1 2002/06/30 23:39:28 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-0.42.ebuild,v 1.2 2002/08/01 05:11:58 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A gettext po file editor for GNOME"
 SRC_URI="http://www.gtranslator.org/download/releases/${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.gtranslator.org/"
-LICENSE="GPL-2"
 
-RDEPEND=">=gnome-base/gnome-libs-1.2
-	( >=gnome-base/gconf-1.0
-	<gnome-base/gconf-1.1 )
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND=">=gnome-base/gnome-libs-1.2
+	=gnome-base/gconf-1.0*
 	>=gnome-extra/gal-0.11.99
 	>=app-text/scrollkeeper-0.1.4
 	=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
 	>=gnome-base/oaf-0.6.8
 	>=gnome-base/ORBit-0.5.14
-	( >=gnome-base/gnome-vfs-1.0.5
-	<gnome-base/gnome-vfs-2.0.0 )
+	>=gnome-base/gnome-vfs-1*
 	>=dev-libs/libxml-1.8.17"
 
-DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )"
+RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
-	local myopts
+	local myconf
 
-	use nls || myopts="--disable-nls"
+	use nls || myconf="--disable-nls"
 	
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		${myopts} || die "./configure failed"
-	
+	econf ${myconf} || die "./configure failed"
 	emake || die
 }
 
