@@ -1,5 +1,5 @@
-MD5 b14ad91eaa88b0f45368229abd454e54 bluez-utils-2.7.ebuild 2273
-MD5 e4e81e478be9ef1de6611fefe5c2f247 ChangeLog 3741
+MD5 f4b9fab681a77fc9c6cd7442ef82b393 bluez-utils-2.7.ebuild 2271
+MD5 a2d4d2a8bb2b7b7b7f74f12b5b320967 ChangeLog 4022
 MD5 45dd2885cd32f7dd34981e5bc9290a1d bluez-utils-2.10.ebuild 2292
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
 MD5 ce3b08e1df53875d1060e9e246810907 files/bluez-utils-2.3-rfcomm_fflush.patch 966
