@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/a52dec
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.26 2004/12/17 06:38:47 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.27 2005/03/18 01:46:40 eradicator Exp $
+
+*a52dec-0.7.4-r4 (18 Mar 2005)
+
+  18 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +a52dec-0.7.4-r4.ebuild:
+  Always install the static lib, too.
 
   17 Dec 2004; Mike Frysinger <vapier@gentoo.org> a52dec-0.7.4-r3.ebuild:
   Remove useless C++ checks #74485.
