@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
-MD5 959ff33fd25d8b68a6906ad13b29f8b6 xgridagent-1.0.ebuild 766
-MD5 8e2be10bb4a2e355e26a2745a3bf3e02 ChangeLog 355
+MD5 6560ec36cd0f8c133ecaadda1609f2ef xgridagent-1.0.ebuild 770
+MD5 c6c89dc172455c1fedaf0d58483280f3 ChangeLog 457
 MD5 73c91788bab116b1e1da53a0da34071d files/digest-xgridagent-1.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBf5EGKtJO8LeSoosRArzeAJ9/n7zLCGtduSCm2hPk6pa2RYmD3gCfXGT3
+ndo21kyKfqT9DT9fvjwVjMw=
+=bw5q
+-----END PGP SIGNATURE-----
