@@ -1,0 +1,11 @@
+# ChangeLog for net-www/drupal
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/drupal/ChangeLog,v 1.1 2004/07/11 10:30:47 stuart Exp $
+
+*drupal-4.4.2 (11 Jul 2004)
+
+  11 Jul 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/4.4.2/postinstall-en.txt, +drupal-4.4.2.ebuild:
+  Initial import; from bug #25423; thanks to Al Maw <gentoo@almaw.com> and Peter
+  Westwood <peter.westwood@ftwr.co.uk>
+
