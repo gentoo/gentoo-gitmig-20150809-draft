@@ -1,0 +1,18 @@
+# ChangeLog for app-games/ytin
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/ytin/ChangeLog,v 1.1 2003/09/10 19:03:12 vapier Exp $
+
+  02 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> ytin-1.83.5.ebuild:
+  Fixed to use mirror://sourceforge
+
+*ytin-1.83.5.ebuild (09 July 2002)
+
+  15 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added glibc-2.3.x errno fix #24542.
+
+  01 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Made final compile link against libstdc++ for gcc3.x compatibility
+
+  09 Jul 2002; phoen][x <phoenix@gentoo.org> : ChangeLog, ytin-1.83.5.ebuild,
+  Initial cvs commit. Ebuild contributed by Paul Belt <gaarde@yahoo.com>.
+  Thanks for the contribution.

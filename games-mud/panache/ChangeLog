@@ -1,0 +1,9 @@
+# ChangeLog for app-games/panache
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/panache/ChangeLog,v 1.1 2003/09/10 19:03:12 vapier Exp $
+
+*panache-0.2.1 (02 Dec 2002)
+
+  02 Dec 2002; L. Boshell <leonardop@gentoo.org> ChangeLog,
+  panache-0.2.1.ebuild : Initial Import. Original ebuild submitted by Rigo
+  Ketelings on bug #8887.

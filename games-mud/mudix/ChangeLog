@@ -1,0 +1,13 @@
+# ChangeLog for app-games/mudix
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mudix/ChangeLog,v 1.1 2003/09/10 19:03:12 vapier Exp $
+
+*mudix-4.0 (27 Feb 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> mudix-4.0.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  27 Feb 2002; Bruce A. Locke <blocke@shivan.org> mudix-4.0.ebuild :
+
+  Mudix ebuild contributed by robin@crondor.net (Robin Bakels)
+

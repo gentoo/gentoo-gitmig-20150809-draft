@@ -1,0 +1,42 @@
+# ChangeLog for app-games/gnome-mud
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.1 2003/09/10 19:03:12 vapier Exp $
+
+*gnome-mud-0.10.2 (20 Aug 2003)
+
+  20 Aug 2003; Michael Sterrett <msterret@gentoo.org> gnome-mud-0.10.2.ebuild:
+  version bump (bug 26982)
+
+*gnome-mud-0.10.1 (27 Jun 2003)
+
+  27 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Updated DEPEND and nls usage.  Also version bumped.
+
+*gnome-mud-0.9.1 (04 Jul 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> gnome-mud-0.9.1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  04 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gnome-mud-0.9.1.ebuild:
+  new version and dependencies update.
+
+*gnome-mud-0.8-r1 (7 May 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> gnome-mud-0.8-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> gnome-mud-0.8.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  7 May 2002; Spider <spider@gentoo.org> gnome-mud-0.8-r1.ebuild gnome-mud-0.8.ebuild :
+  fix sourceforge mirroring.
+      
+*gnome-mud-0.8-r1 (10 Mar 2002)
+
+  10 Mar 2002; Bruce A. Locke <blocke@shivan.org> gnome-mud-0.8-r1.ebuild :
+  NLS fixes submitted by seemant@rocketmail.com (Seemant Kulleen)
+
+*gnome-mud-0.8 (19 Feb 2002)
+
+  19 Feb 2002; Aron Griffis <agriffis@gentoo.org> gnome-mud-0.8.ebuild :
+  Added ebuild for gnome-mud

@@ -1,0 +1,11 @@
+# ChangeLog for app-games/mcl
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/ChangeLog,v 1.1 2003/09/10 19:03:12 vapier Exp $
+
+*mcl-0.52.99.ebuild (8 Aug 2002)
+
+  30 Sep 2002; Mike Frysinger <vapier@gentoo.org> mcl-0.52.99-gcc3.patch :
+  Added a patch so this compiles under gcc3.x and cleaned up the ebuild
+
+  8 Aug 2002; J. Alberto Suárez López <bass@gentoo.org> mcl-0.52.99.ebuild :
+  First relase.

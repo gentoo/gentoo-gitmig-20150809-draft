@@ -1,0 +1,13 @@
+# ChangeLog for app-games/kmc
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmc/ChangeLog,v 1.1 2003/09/10 19:03:12 vapier Exp $
+
+  03 Sep 2003; Michael Sterrett <msterret@gentoo.org> kmc-0.9.ebuild:
+  tidy; fix LICENSE
+
+*kmc-0.9 (27 Aug 2003)
+
+  27 Aug 2003; Caleb Tennis <caleb@gentoo.org> kmc-0.9.ebuild:
+  Initial import - closes bug #26837
+
+

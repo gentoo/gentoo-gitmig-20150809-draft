@@ -1,0 +1,36 @@
+diff -Nur tf-40s1/unix/Config tf-40s1-new/unix/Config
+--- tf-40s1/unix/Config	Sat Mar  6 16:43:28 1999
++++ tf-40s1-new/unix/Config	Tue Jul  3 15:04:45 2001
+@@ -33,9 +33,9 @@
+ #   even if an old version is currently in use.  You can remove
+ #   the old version manually later when it is no longer in use.
+ 
+-# TF="/usr/local/bin/tf-${TFVER}"
+-# LIBDIR="/usr/local/lib/tf-${TFVER}-lib"
+-# SYMLINK="/usr/local/bin/tf"
++TF="/usr/bin/tf-${TFVER}"
++LIBDIR="/usr/lib/tf-${TFVER}-lib"
++SYMLINK="/usr/bin/tf"
+ 
+ 
+ ### Manual Page.
+@@ -44,8 +44,8 @@
+ # uses nroff format; set MANTYPE=cat if your man uses pre-formatted
+ # vt100 "catman" pages.  Default is "cat".
+ 
+-# MANTYPE="nroff"
+-# MANPAGE="/usr/local/man/man1/tf.1"
++#MANTYPE="nroff"
++MANPAGE="/usr/share/man/man1/tf.1"
+ 
+ 
+ ### Flags.
+@@ -109,7 +109,7 @@
+ # If unixmake told you to set CC=cc, be sure to uncomment the line below
+ # by removing the leading "#".
+ 
+-# CC=cc
++CC=gcc
+ # CCFLAGS="-g"
+ 
+ 

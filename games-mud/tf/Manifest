@@ -1,0 +1,6 @@
+MD5 d1a82ec3663f9cbfc88317f7450b1b4b ChangeLog 1158
+MD5 e557299acb98b0a792979d950f44a630 tf-40-r1.ebuild 927
+MD5 acb231e431af285538fd00473a8d5c08 tf-40-r2.ebuild 964
+MD5 80b8971f6e45f11a3aae2860b99150bd files/digest-tf-40-r1 123
+MD5 80b8971f6e45f11a3aae2860b99150bd files/digest-tf-40-r2 123
+MD5 6ab320993d05aa512f0811632cbde7c3 files/tf-40-gentoo.diff 947
