@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/price
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.1 2005/03/30 16:45:41 fafhrd Exp $
+
+*price-0.5 (24 Mar 2005)
+
+  24 Mar 2005; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
+  +price-0.5.ebuild:
+  Original package import
+
