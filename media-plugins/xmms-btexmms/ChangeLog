@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/xmms-btexmms
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-btexmms/ChangeLog,v 1.1 2004/06/17 01:00:15 eradicator Exp $
+
+*xmms-btexmms-0.5 (16 Jun 2004)
+
+  16 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +xmms-btexmms-0.5.ebuild:
+  Initial ebuild submitted by Tobias Klauser <tklauser@nuerscht.ch> in bug
+  #46491.
+
