@@ -1,10 +1,15 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.18 2003/02/12 07:58:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.19 2003/02/13 07:42:44 raker Exp $
+
+*lftp-2.6.4 (13 Feb 2003)
+
+  13 Feb 2003; Nick Hadaway <raker@gentoo.org> lftp-2.6.4.ebuild,
+  files/digest-lftp-2.6.4 :
+  Version bump.  Added to portage as stable for x86.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-
 *lftp-2.6.3 (02 Dec 2002)
 
   08 Dec 2002; Nick Hadaway <raker@gentoo.org> lftp-2.6.3.ebuild :
