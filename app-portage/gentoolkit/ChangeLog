@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.18 2004/01/09 02:22:50 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.19 2004/01/12 06:26:56 genone Exp $
+
+*gentoolkit-0.2.0_pre3 (12 Jan 2004)
+
+  09 Jan 2004; Marius Mauch <genone@gentoo.org>
+  gentoolkit-0.2.0_pre3.ebuild: Fixed a traceback on "equery list",
+  added masking, keywords and slot information on "equery list".
+  Changed whitespace to tab indentation in equery, etcat and gentoolkit.py.
 
 *gentoolkit-0.2.0_pre2 (09 Jan 2004)
 
