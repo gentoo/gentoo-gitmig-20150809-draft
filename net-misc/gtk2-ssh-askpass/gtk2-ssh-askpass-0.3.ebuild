@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtk2-ssh-askpass/gtk2-ssh-askpass-0.3.ebuild,v 1.4 2004/01/08 02:49:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtk2-ssh-askpass/gtk2-ssh-askpass-0.3.ebuild,v 1.5 2004/01/27 19:31:09 agriffis Exp $
 
 DESCRIPTION="A small SSH Askpass replacement written with GTK2."
 HOMEPAGE="http://www.cgabriel.org/sw/gtk2-ssh-askpass/"
 SRC_URI="${HOMEPAGE}${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc ~alpha ~ia64"
 IUSE=""
 DEPEND="virtual/x11
 		>=x11-libs/gtk+-2.0"
