@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.28 2005/02/14 14:24:01 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.29 2005/02/23 11:32:40 humpback Exp $
+
+*tor-0.0.9.5 (23 Feb 2005)
+
+  23 Feb 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  tor-0.0.9.4-r2.ebuild, +tor-0.0.9.5.ebuild:
+  Adding version 0.0.9.5 and marking 0.0.9.4-r2 as x86.
 
 *tor-0.0.9.4-r2 (13 Feb 2005)
 
