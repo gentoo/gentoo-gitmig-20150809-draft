@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libmath++
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/ChangeLog,v 1.8 2005/01/03 00:20:52 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/ChangeLog,v 1.9 2005/03/17 02:36:00 trapni Exp $
+
+  17 Mar 2005; Christian Parpart <trapni@gentoo.org> libmath++-0.0.4.ebuild:
+  adding to amd64
 
   03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
