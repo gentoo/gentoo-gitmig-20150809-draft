@@ -19,3 +19,4 @@ virtual/x11-web-browser	net-www/mozilla
 sys-apps/console-tools	sys-apps/kbd
 sys-apps/reiserfs-utils sys-apps/reiserfsprogs
 virtual/sylpheed	net-mail/sylpheed
+virtual/php         dev-php/mod_php

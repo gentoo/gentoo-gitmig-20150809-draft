@@ -24,3 +24,4 @@ virtual/emacs		app-editors/emacs
 virtual/cron		sys-apps/dcron
 sys-apps/reiserfs-utils sys-apps/reiserfsprogs
 virtual/sylpheed	net-mail/sylpheed
+virtual/php         dev-php/mod_php
