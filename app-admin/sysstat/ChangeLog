@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.28 2005/01/01 11:30:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.29 2005/01/27 19:33:20 plasmaroo Exp $
+
+  27 Jan 2005; <plasmaroo@gentoo.org> sysstat-5.0.5-r1.ebuild:
+  Mark 5.0.5-r1 stable on x86.
 
 *sysstat-5.0.5-r1 (13 Nov 2004)
 
