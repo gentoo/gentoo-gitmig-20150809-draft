@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/whitebox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/whitebox/ChangeLog,v 1.4 2004/06/24 22:36:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/whitebox/ChangeLog,v 1.5 2004/10/25 22:50:01 slarti Exp $
+
+  25 Oct 2004; Tom Martin <slarti@gentoo.org> whitebox-0.5.ebuild:
+  Marked ~amd64, see bug 59213.
 
   04 Dec 2003; Brandon Hale <tseng@gentoo.org> whitebox-0.5.ebuild:
   fixing bad DEPEND

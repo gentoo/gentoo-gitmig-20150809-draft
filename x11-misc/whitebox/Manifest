@@ -1,4 +1,14 @@
-MD5 9de9fd1775269b9319d5b9de38bebd13 whitebox-0.5.ebuild 879
-MD5 8e4b49d2afaf6f3198c6853368df691b ChangeLog 743
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 52438b64d23d926f42e584a5b9db1bba whitebox-0.5.ebuild 884
+MD5 7c029a1a4e16e0c1fd99215dbaa241ae ChangeLog 841
 MD5 bcca52f5a53ff4aa5b2bf18fa546a4fc metadata.xml 280
 MD5 90016c51fd8847a5124807223d5f2ea1 files/digest-whitebox-0.5 127
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfXXRCHk4+ZoBpvsRAu2mAKCrm2nWpW29K9Xgg8YxuII6XJbsdQCgq0OI
+I9Zt23tAHOLlfug+9SktIYo=
+=j4cG
+-----END PGP SIGNATURE-----
