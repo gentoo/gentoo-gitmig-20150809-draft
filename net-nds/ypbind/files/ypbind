@@ -1,0 +1,38 @@
+#!/bin/sh
+#RCUPDATE:2 3 4:75:This line is required for script management
+
+. /etc/rc.d/config/functions
+. /etc/rc.d/config/basic
+
+SERVICE="NIS Client"
+opts="start stop restart"
+
+EXE="/usr/sbin/ypbind"
+PID="/var/run/ypbind.pid"
+
+start() {
+		domainname ${YP_DOMAIN}
+		ebegin "Starting $SERVICE..."
+     		start-stop-daemon --start --quiet --exec $EXE 
+		eend $? "Started $SERVICE." "Error Starting $SERVICE."
+}
+
+stop() {
+		ebegin "Stopping $SERVICE..."
+		start-stop-daemon --stop --quiet --signal 9 --pid $PID
+		eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
+
+	        # Remove binding files, if ypbind "forget" it
+		rm -f /var/yp/binding/*
+		rm -f /var/lock/subsys/ypbind
+}
+
+restart() {
+		stop
+		start
+}
+
+doservice ${@}
+
+
+

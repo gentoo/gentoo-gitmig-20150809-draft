@@ -1,0 +1,294 @@
+--- from_local.c
++++ from_local.c	2000/02/28 15:10:25
+@@ -46,6 +46,7 @@
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <netdb.h>
+ #include <netinet/in.h>
+ #include <net/if.h>
+--- Makefile
++++ Makefile	2000/02/28 15:10:25
+@@ -8,7 +8,7 @@
+ # if you disagree. See `man 3 syslog' for examples. Some syslog versions
+ # do not provide this flexibility.
+ #
+-FACILITY=LOG_MAIL
++FACILITY=LOG_AUTH
+ 
+ # To disable tcp-wrapper style access control, comment out the following
+ # macro definitions.  Access control can also be turned off by providing
+@@ -71,7 +71,7 @@
+ # With verbose logging on, HP-UX 9.x and AIX 4.1 leave zombies behind when
+ # SIGCHLD is not ignored. Enable next macro for a fix.
+ #
+-# ZOMBIES = -DIGNORE_SIGCHLD	# AIX 4.x, HP-UX 9.x
++ZOMBIES = -DIGNORE_SIGCHLD	# AIX 4.x, HP-UX 9.x
+ 
+ # Uncomment the following macro if your system does not have u_long.
+ #
+@@ -81,11 +81,15 @@
+ # libwrap.a object library. WRAP_DIR should specify the directory with
+ # that library.
+ 
+-WRAP_DIR= ../tcp_wrappers
++WRAP_DIR= /usr/lib
+ 
+ # Auxiliary object files that may be missing from your C library.
+ #
+-AUX	= daemon.o strerror.o
++AUX	= # daemon.o strerror.o
++
++LIBS	= -lwrap -lutil
++NSARCHS	= 
++O	= -Wall -O2 -pipe
+ 
+ # NEXTSTEP is a little different. The following seems to work with NS 3.2
+ #
+@@ -99,7 +103,7 @@
+ 
+ # Comment out if your compiler talks ANSI and understands const
+ #
+-CONST   = -Dconst=
++#CONST   = -Dconst=
+ 
+ ### End of configurable stuff.
+ ##############################
+@@ -109,7 +113,7 @@
+ COPT	= $(CONST) -Dperror=xperror $(HOSTS_ACCESS) $(CHECK_PORT) \
+ 	$(SYS) -DFACILITY=$(FACILITY) $(ULONG) $(ZOMBIES) $(SA_LEN) \
+ 	$(LOOPBACK) $(SETPGRP)
+-CFLAGS	= $(COPT) -O $(NSARCHS)
++CFLAGS	= $(COPT) $(O) $(NSARCHS)
+ OBJECTS	= portmap.o pmap_check.o from_local.o $(AUX)
+ 
+ all:	portmap pmap_dump pmap_set
+--- pmap_dump.8
++++ pmap_dump.8	2000/02/28 15:10:25
+@@ -0,0 +1,23 @@
++.TH PMAP_DUMP 8 "21th June 1997" Linux "Linux Programmer's Manual"
++.SH NAME
++pmap_dump \- print a list of all registered RPC programs
++.SH SYNOPSIS
++.B pmap_dump
++.SH DESCRIPTION
++The
++.B pmap_dump
++command can be used to restart a running portmapper or to print
++a list of all registered RPC programs on the local host. If you
++want to use the program to restart the portmapper you have to
++redirect the output of
++.B pmap_dump
++to a file. After this you can restart the portmapper and restore
++the list of the registered RPC programs by feeding the output
++of
++.B pmap_dump
++to the
++.B pmap_set
++command.
++.SH SEE ALSO
++.BR pmap_set (8),
++.BR portmap (8)
+--- pmap_set.8
++++ pmap_set.8	2000/02/28 15:10:25
+@@ -0,0 +1,24 @@
++.TH PMAP_SET 8 "21th June 1997" Linux "Linux Programmer's Manual"
++.SH NAME
++pmap_set \- set the list of registered RPC programs
++.SH SYNOPSIS
++.B pmap_set
++.SH DESCRIPTION
++The
++.B pmap_set
++command can be used to restart a running portmapper or to set
++the list of registered RPC programs on the local host. If you
++want to use the program to restart the portmapper you have to
++redirect the output of
++.B pmap_dump
++to a file. After this you can restart the portmapper and restore
++the list of the registered RPC programs by feeding the output
++of
++.B pmap_dump
++to the
++.B pmap_set
++command.
++.SH SEE ALSO
++.BR pmap_dump (8),
++.BR portmap (8)
++
+--- portmap.8
++++ portmap.8	2000/02/28 15:10:25
+@@ -0,0 +1,158 @@
++.\" Copyright (c) 1987 Sun Microsystems
++.\" Copyright (c) 1990, 1991 The Regents of the University of California.
++.\" All rights reserved.
++.\"
++.\" Redistribution and use in source and binary forms, with or without
++.\" modification, are permitted provided that the following conditions
++.\" are met:
++.\" 1. Redistributions of source code must retain the above copyright
++.\"    notice, this list of conditions and the following disclaimer.
++.\" 2. Redistributions in binary form must reproduce the above copyright
++.\"    notice, this list of conditions and the following disclaimer in the
++.\"    documentation and/or other materials provided with the distribution.
++.\" 3. All advertising materials mentioning features or use of this software
++.\"    must display the following acknowledgement:
++.\"	This product includes software developed by the University of
++.\"	California, Berkeley and its contributors.
++.\" 4. Neither the name of the University nor the names of its contributors
++.\"    may be used to endorse or promote products derived from this software
++.\"    without specific prior written permission.
++.\"
++.\" THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
++.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
++.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++.\" SUCH DAMAGE.
++.\"
++.\"     from: @(#)portmap.8	5.3 (Berkeley) 3/16/91
++.\"	$Id: portmap_5beta.dif,v 1.1 2000/08/09 23:55:48 achim Exp $
++.\"
++.Dd March 16, 1991
++.Dt PORTMAP 8
++.Os BSD 4.3
++.Sh NAME
++.Nm portmap
++.Nd
++.Tn DARPA
++port to
++.Tn RPC
++program number mapper
++.Sh SYNOPSIS
++.Nm portmap
++.Op Fl dv
++.Sh DESCRIPTION
++.Nm Portmap
++is a server that converts
++.Tn RPC
++program numbers into
++.Tn DARPA
++protocol port numbers.
++It must be running in order to make
++.Tn RPC
++calls.
++.Pp
++When an
++.Tn RPC
++server is started, it will tell
++.Nm portmap
++what port number it is listening to, and what
++.Tn RPC
++program numbers it is prepared to serve.
++When a client wishes to make an
++.Tn RPC
++call to a given program number,
++it will first contact
++.Nm portmap
++on the server machine to determine
++the port number where
++.Tn RPC
++packets should be sent.
++.Pp
++.Nm Portmap
++must be started before any
++.Tn RPC
++servers are invoked.
++.Pp
++Normally
++.Nm portmap
++forks and dissociates itself from the terminal
++like any other daemon.
++.Nm Portmap
++then logs errors using
++.Xr syslog 3 .
++.Pp
++Option available:
++.Bl -tag -width Ds
++.It Fl d
++(debug) prevents
++.Nm portmap
++from running as a daemon,
++and causes errors and debugging information
++to be printed to the standard error output.
++.It Fl v
++(verbose) causes
++.Nm portmap
++to give more logging information to
++.Xr syslogd 8.
++.Pp
++.Sh Access control
++By default, host access control is enabled. However, the host that runs
++the portmapper is always considered authorized. The host access control
++tables are never consulted with requests from the local system itself;
++they are always consulted with requests from other hosts.
++.Pp
++In order to avoid deadlocks, the portmap program does not attempt to
++look up the remote host name or user name, nor will it try to match NIS
++netgroups. The upshot of all this is that only network number patterns
++will work for portmap access control.
++.Pp
++Sample entries for the host access-control files are:
++
++.Nm    /etc/hosts.allow:
++        portmap: your.sub.net.number/your.sub.net.mask
++        portmap: 255.255.255.255 0.0.0.0
++
++.Nm    /etc/hosts.deny
++        portmap: ALL
++
++The syntax of the access-control files is described in the
++.Xr hosts_access 5
++and
++.Xr hosts_options 5
++manual page that comes with the tcp wrapper (log_tcp)
++sources.  The safe_finger command comes with later wrapper releases.
++.Pp
++The first line in the hosts.allow file permits access from all systems
++within your own subnet. Some rpc services rely on broadcasts and will
++contact your portmapper anyway; and once an intruder has access to your
++local network segment you're already in deep trouble.
++.Pp
++The second line in the hosts.allow file may be needed if there are
++any PC-NFS systems on your network segment.
++.Pp
++For security reasons, the portmap process drops root privilegs after
++initialization. The access control files should therefore be readable
++for group or world.
++.El
++.Sh SEE ALSO
++.Xr inetd.conf 5 ,
++.Xr rpcinfo 8 ,
++.Xr inetd 8 ,
++.Xr syslogd 8 ,
++.Xr hosts_access 5 ,
++.Xr hosts_options 5
++.Sh BUGS
++If
++.Nm portmap
++crashes, all servers must be restarted.
++.Sh HISTORY
++The
++.Nm
++command appeared in
++.Bx 4.3
+--- portmap.c
++++ portmap.c	2000/02/28 15:10:25
+@@ -182,9 +182,8 @@
+ 		exit(1);
+ 	}
+ 
+-#ifdef LOG_MAIL
+-	openlog("portmap", debugging ? LOG_PID | LOG_PERROR : LOG_PID,
+-	    FACILITY);
++#ifdef FACILITY
++	openlog("portmap", debugging ? LOG_PID | LOG_PERROR : LOG_PID, FACILITY);
+ #else
+ 	openlog("portmap", debugging ? LOG_PID | LOG_PERROR : LOG_PID);
+ #endif
