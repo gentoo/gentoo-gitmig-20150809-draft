@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3411 2004/12/23 12:11:36 robbat2 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3412 2004/12/23 15:21:48 ribosome Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -51,10 +51,6 @@
 # Upstream does not version files and overwrites with never versions intermittently.
 # See #65572.
 dev-db/aqua-data-studio
-
-# <ribosome@gentoo.org> (14 Dec 2004)
-# Needs testing
-app-sci/nmrview
 
 # <mkennedy@gentoo.org> (14 Dec 2004)
 # Masked pending removal
