@@ -1,0 +1,9 @@
+# ChangeLog for dev-lisp/cl-osicat
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-osicat/ChangeLog,v 1.1 2003/11/25 07:24:19 mkennedy Exp $
+
+*cl-osicat-0.3.3 (21 Nov 2003)
+
+  21 Nov 2003; <mkennedy@gentoo.org> cl-osicat-0.3.3.ebuild, metadata.xml:
+  initial import. ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
