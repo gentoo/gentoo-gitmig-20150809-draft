@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jdk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.97 2004/12/21 21:37:17 axxo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.98 2005/01/01 18:19:47 axxo Exp $
+
+  01 Jan 2005; Thomas Matthijs <axxo@gentoo.org> sun-jdk-1.5.0.01.ebuild,
+  sun-jdk-1.5.0.ebuild:
+  remove dep on virtual/lpr
 
 *sun-jdk-1.5.0.01 (21 Dec 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.01.ebuild,v 1.1 2004/12/21 21:37:17 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.01.ebuild,v 1.2 2005/01/01 18:19:47 axxo Exp $
 
 inherit java eutils
 
@@ -32,12 +32,10 @@ IUSE="doc gnome kde mozilla jce"
 #
 DEPEND=">=dev-java/java-config-1.2
 	sys-apps/sed
-	doc? ( =dev-java/java-sdk-docs-1.5.0* )
-	virtual/lpr"
+	doc? ( =dev-java/java-sdk-docs-1.5.0* )"
 
 RDEPEND="x86? ( sys-libs/lib-compat )
-	doc? ( =dev-java/java-sdk-docs-1.5.0* )
-	virtual/lpr"
+	doc? ( =dev-java/java-sdk-docs-1.5.0* )"
 
 PROVIDE="virtual/jre-1.5
 	virtual/jdk-1.5"
@@ -224,7 +222,7 @@ pkg_postinst() {
 	fi
 
 	echo
-	eerror "Some parts of Sun's JDK require XFree86 to be installed."
+	eerror "Some parts of Sun's JDK require virtual/x11 and/or virtual/lpr to be installed."
 	eerror "Be careful which Java libraries you attempt to use."
 
 	echo
