@@ -215,10 +215,10 @@ net-misc/gift
 # xine-dvdnav-0.9.10 is out... testing, and then we can unmask these
 # (the xine-d4d and xine-d5d plugins take too long to wait for)
 # Jun 16, Brandon Low <lostlogic@gentoo.org>
->=media-libs/xine-lib-0.9.10
->=media-video/xine-ui-0.9.10
->=media-video/xine-dvdnav-0.9.10
->=media-libs/libdvdnav-0.1.1
+#>=media-libs/xine-lib-0.9.10
+#>=media-video/xine-ui-0.9.10
+#>=media-video/xine-dvdnav-0.9.10
+#>=media-libs/libdvdnav-0.1.1
 
 # New orinoco_cs 0.11a driver -- karltk (01/05/2002)
 #
