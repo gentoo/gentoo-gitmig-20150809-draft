@@ -1,6 +1,6 @@
-# ChangeLog for app-games/fortune-mod-futurama
+# ChangeLog for games-misc/fortune-mod-futurama
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-futurama/ChangeLog,v 1.1 2003/09/10 18:14:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-futurama/ChangeLog,v 1.2 2003/09/10 20:25:36 vapier Exp $
 
 
 *fortune-mod-futurama-0.2.ebuild (17 julio 2002)
