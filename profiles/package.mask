@@ -598,3 +598,7 @@ app-cdr/cddump
 # seemant@gentoo.org 29 Apr 2002
 # new package -- masking while testing.
 =x11-misc/bbrb-0.4.1
+
+# prez@gentoo.org 1 May, 2002
+# new package -- masking while testing
+=sys-apps/gradm-1.2.1
