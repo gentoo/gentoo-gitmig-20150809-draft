@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.2 2002/04/27 10:58:46 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.3 2002/05/14 01:16:36 daybird Exp $
 
 *mpg123-0.59r-r1 (27 Apr 2002)
+
+  13 May 2002; daybird <daybird@gentoo.org> :
+  another ppc fix - ppc CFLAGS now get written to Makefile.
 
   27 Apr 2002; pvdabeel <pvdabeel@gentoo.org> :
   ppc fix 

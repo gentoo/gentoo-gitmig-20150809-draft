@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Id: mpg123-0.59r-r1.ebuild,v 1.3 2002/05/09 23:48:34 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r1.ebuild,v 1.4 2002/05/14 01:16:36 daybird Exp $
 
 S=${WORKDIR}/${P}
 
@@ -16,7 +16,8 @@ src_unpack () {
 	cd ${S}
 	patch -p1 < ${FILESDIR}/${P}-sparc.diff
 	cp Makefile Makefile.orig
-	sed -e "s:-O2 -m486:${CFLAGS}:" Makefile.orig > Makefile
+	sed -e "s:-O2 -m486:${CFLAGS}:" \
+		-e "s:-O2 -mcpu=ppc:${CFLAGS}:g" Makefile.orig > Makefile
 }
 
 src_compile() {
