@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.113 2004/09/03 21:03:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.114 2004/12/22 04:29:13 vapier Exp $
+
+*coreutils-5.2.1-r3 (21 Dec 2004)
+
+  21 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  +coreutils-5.2.1-r3.ebuild:
+  Remove i686-specific asm code on i486 systems #32429. Fix tail +# syntax
+  #66713. Move [ to same place as test #65296. Fix man-page tests #69216. Fix
+  autotool code #74210. Fix @echo in man/Makefile #53881. Use DESTDIR instead
+  of einstall. Make symlinks absolute #55620.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   coreutils-5.2.1-r1.ebuild, coreutils-5.2.1-r2.ebuild,
