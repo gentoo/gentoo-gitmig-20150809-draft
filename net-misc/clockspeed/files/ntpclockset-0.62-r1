@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [ -z "${1}" ]
+then
+    NTPSERVER=132.163.135.130
+else
+    NTPSERVER="${1}"
+fi
+
+#display how much your clock is off by
+sntpclock $NTPSERVER > /tmp/sntpclock
+
+if [ "${?}" != "0" ]
+then
+    echo ">>> Could not contact NTP server: $NTPSERVER" >&2
+    exit 1
+fi
+
+echo ">>> Current clock sync:"
+cat /tmp/sntpclock | clockview
+echo
+echo -n ">>> Now setting clock..."
+cat /tmp/sntpclock | clockadd
+echo " done."
+#wite data to the hardware clock so it survives a reboot
+echo -n ">>> Writing time to hardware clock..."
+hwclock --systohc
+echo " done."
+echo
+echo ">>> New clock sync:"
+sntpclock $NTPSERVER | clockview
