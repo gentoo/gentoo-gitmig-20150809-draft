@@ -1,6 +1,14 @@
 # ChangeLog for app-sci/foldingathome
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.15 2004/06/24 21:58:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.16 2004/11/10 06:13:14 nerdboy Exp $
+
+*foldingathome-5.0.2 (09 Nov 2004)
+
+  09 Nov 2004; Steve Arnold <nerdboy@gentoo.org> +files/copy_client_config,
+  +files/folding-conf.d-r1, +files/folding-init.d-r4, +files/initfolding-r2,
+  +foldingathome-5.0.2.ebuild:
+  bumped to current version (bug 60318) with ebuild from Gregory P. Smith
+  <greg-gentoo@electricrain.com>.  Gentoo team config.
 
   12 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
   foldingathome-4.0.0-r2.ebuild:
