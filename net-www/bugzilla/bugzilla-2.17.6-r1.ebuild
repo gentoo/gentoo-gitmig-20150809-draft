@@ -47,7 +47,7 @@ src_install () {
 
 	# Bugzilla originally needs perl to be installed in /usr/bonsaitools/bin
 	# So let's change it for /usr/bin/perl
-	perl -pi -e 's@#\!/usr/bonsaitools/bin/perl@#\!/usr/bin/perl@' *cgi *pl Bug.pm processmail || die
+	perl -pi -e 's@#\!/usr/bonsaitools/bin/perl@#\!/usr/bin/perl@' *cgi *pl Bug.pm || die
 	# syncshadowdb is gone
 	# Copy files to /var/www/bugzilla
 	insinto /var/www/bugzilla
@@ -58,7 +58,7 @@ src_install () {
 # So, it's better to keep it outside
 
 	if use apache2 ; then
-		cp ${FILESDIR}/bugzilla.conf ${D}/etc/apache/conf || die
+		cp ${FILESDIR}/bugzilla.conf ${D}/etc/apache2/conf || die
 	else
 		cp ${FILESDIR}/bugzilla.conf ${D}/etc/apache/conf || die
 	fi
