@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/apachetop
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.3 2003/10/07 00:31:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.4 2003/12/24 17:42:27 stuart Exp $
+
+*apachetop-0.9 (24 Dec 2003)
+
+  24 Dec 2003; Stuart Herbert <stuart@gentoo.org> apachetop-0.9.ebuild:
+  Version bump; for bug #36338
 
   06 Oct 2003; Jason Wever <weeve@gentoo.org> apachetop-0.5.ebuild:
   Added ~sparc keyword.
