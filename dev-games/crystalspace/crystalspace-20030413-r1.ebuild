@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-20030413-r1.ebuild,v 1.4 2003/07/18 23:17:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-20030413-r1.ebuild,v 1.5 2003/07/20 03:18:54 vapier Exp $
 
 DESCRIPTION="portable 3D Game Development Kit written in C++"
 SRC_URI="mirror://gentoo/distfiles/${P}.tar.gz"
@@ -40,4 +40,7 @@ src_install() {
 	make INSTALL_DIR=${D}/${CRYSTAL_PREFIX} install || die
 	dodir /usr/bin
 	dosym ${CRYSTAL_PREFIX}/bin/cs-config /usr/bin/cs-config
+	find ${D}/${CRYSTAL_PREFIX} -type f -exec chmod a+r '{}' \;
+	find ${D}/${CRYSTAL_PREFIX} -type d -exec chmod a+rx '{}' \;
+	chmod a+x ${D}/${CRYSTAL_PREFIX}/bin/*
 }
