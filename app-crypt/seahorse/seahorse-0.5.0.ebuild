@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.5.0.ebuild,v 1.3 2001/06/04 21:57:52 achim Exp $
+# Author Ben Lutgens <blutgens@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.5.0.ebuild,v 1.4 2001/06/07 05:22:23 blutgens Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
