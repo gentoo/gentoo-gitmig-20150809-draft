@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.6 2001/12/27 19:01:42 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.7 2002/01/20 15:01:22 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
@@ -29,6 +29,7 @@ src_unpack() {
 src_compile() {
 
     myconf="$myconf --enable-all"
+    myconf="$myconf --with-extra-libs=/usr/lib/python2.2/config"
     kde_src_compile myconf
 
     #the dir kchar/kdchart cannot be compiled with the -fomit-frame-pointer flag present
