@@ -1,5 +1,5 @@
-MD5 e50820e705d41bfccfa5212d9771fae6 ChangeLog 551
-MD5 d3e63df13a8ce74c153a8d0ee0eb7dda drraw-2.0.1.ebuild 1073
+MD5 a7b0d6bd96aeb15bdf2aae19db46c518 ChangeLog 677
+MD5 3e4e7517e1e6968a7182fa4773f2b1c2 drraw-2.0.1.ebuild 1075
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 be199e53ff4d84bf38e361364b1a6ffe files/digest-drraw-2.0.1 59
 MD5 9a8ac5bac3a337a6f32ce1ebdeade4b7 files/postinstall-en.txt 34
