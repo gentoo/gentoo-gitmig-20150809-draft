@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.19 2004/03/20 16:40:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.20 2004/03/21 15:15:11 dholm Exp $
+
+  21 Mar 2004; David Holm <dholm@gentoo.org> lilypond-2.0.3.ebuild:
+  Added to ~ppc.
 
 *lilypond-2.0.3 (20 Mar 2004)
 
