@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.2.6.0.ebuild,v 1.8 2004/12/09 09:46:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.2.6.0.ebuild,v 1.9 2005/01/31 03:25:37 mr_bones_ Exp $
 
-inherit games flag-o-matic
+inherit flag-o-matic eutils games
 
 DESCRIPTION="3d tron lightcycles, just like the movie"
 HOMEPAGE="http://armagetron.sourceforge.net/"
