@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.50 2004/05/09 13:21:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.51 2004/05/26 23:24:21 stkn Exp $
+
+  27 May 2004; Stefan Knoblich <stkn@gentoo.org> pwlib-1.6.3-r2.ebuild:
+  pwlib-1.6.3-r2 stable on x86
 
   09 May 2004; David Holm <dholm@gentoo.org> pwlib-1.6.6.ebuild:
   Added to ~ppc. Some joker decided to remove the keyword.
