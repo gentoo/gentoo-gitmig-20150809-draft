@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/mod_watch-4.03-r1.ebuild,v 1.2 2005/02/13 00:22:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/mod_watch-4.03-r1.ebuild,v 1.3 2005/03/01 00:52:34 beu Exp $
 
 inherit eutils apache-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.snert.com/Software/mod_watch/"
 SRC_URI="http://www.snert.com/Software/download/${PN}${MY_V}.tgz"
 
 KEYWORDS="~x86 ~ppc"
-DEPEND=">=sys-apps/sed-4"
+DEPEND=""
 LICENSE="as-is"
 SLOT="0"
 IUSE=""

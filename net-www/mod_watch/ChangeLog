@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_watch
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/ChangeLog,v 1.9 2005/02/13 00:22:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/ChangeLog,v 1.10 2005/03/01 00:52:34 beu Exp $
+
+  01 Mar 2005; Elfyn McBratney <beu@gentoo.org> mod_watch-4.03-r1.ebuild,
+  mod_watch-4.03.ebuild:
+  Drop DEPEND on sys-apps/sed and kill sed in global scope.
 
   13 Feb 2005; Benedikt Boehm <hollow@gentoo.org> mod_watch-4.03-r1.ebuild:
   added need_apache2 + some minor fixes
