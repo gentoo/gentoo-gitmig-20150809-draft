@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.2.4.ebuild,v 1.1 2004/10/30 20:58:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.2.4.ebuild,v 1.2 2004/11/03 11:50:59 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -12,6 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="jikes doc"
 DEPEND=">=virtual/jdk-1.4
+		app-arch/unzip
 		dev-java/ant-core
 		=dev-java/servletapi-2.4*"
 RDEPEND=">=virtual/jre-1.4"
