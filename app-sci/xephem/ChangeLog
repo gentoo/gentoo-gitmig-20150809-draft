@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/xephem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/ChangeLog,v 1.14 2004/12/15 16:13:01 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/ChangeLog,v 1.15 2004/12/20 09:42:40 phosphan Exp $
+
+  20 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> xephem-3.6.2.ebuild:
+  Declaring latest version stable because the package has fetch restriction and
+  older versions aren't available for download any more.
 
 *xephem-3.6.2 (15 Dec 2004)
 
