@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2925 2004/06/10 01:56:11 george Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2926 2004/06/10 03:34:04 absinthe Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -221,10 +221,6 @@ games-fps/aaut
 # <raker@gentoo.org> (18 Mar 2004)
 # The latest AfterStep beta is broken :(
 =x11-wm/afterstep-2.0_beta4
-
-# <foser@gentoo.org> (18 Mar 2004)
-# The big gnome 2.6 mask (leftovers)
->=net-print/gnome-cups-manager-0.17-r03202004
 
 # <aliz@gentoo.org> (17 Mar 2004)
 # Security related
