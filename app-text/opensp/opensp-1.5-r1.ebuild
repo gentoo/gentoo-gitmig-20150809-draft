@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.11 2003/11/22 00:10:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.12 2003/11/24 21:31:15 weeve Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/openjade/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="ia64 x86 amd64 hppa ~ppc alpha ~sparc"
+KEYWORDS="ia64 x86 amd64 hppa ~ppc alpha sparc"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
