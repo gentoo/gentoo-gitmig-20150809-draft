@@ -1,8 +1,17 @@
-MD5 475a90fb9b2765f6d1023350785c9e6e ChangeLog 1260
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 58b711fc398c7dd777cf1a8685569732 ChangeLog 1565
 MD5 c5b5ceb7ecb0df0ecfd4508c06ee7f37 metadata.xml 289
-MD5 e84e1a0163bd838ddde4dec2108d0248 picprog-1.5.ebuild 723
-MD5 516db04ad76043456bcb9ebd03ba227d picprog-1.6.ebuild 725
 MD5 88882b9fc239d8a050baf69a8610ef41 picprog-1.7.ebuild 724
-MD5 e725cab6fcb759047ce4fe2907b12bdf files/digest-picprog-1.5 62
-MD5 227aaa83f2e3548bb1896840fc746792 files/digest-picprog-1.6 62
+MD5 1d6b43ae8dca8959678b38634ff03ab7 picprog-1.7-r1.ebuild 840
 MD5 646f6161041a00507756e0c3e261df62 files/digest-picprog-1.7 62
+MD5 646f6161041a00507756e0c3e261df62 files/digest-picprog-1.7-r1 62
+MD5 72e83a1c722fa24f95702a8367c95a95 files/picprog-1.7-werner-almesberger.diff 3329
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCRJgJmdTrptrqvGERAmXKAJ9prbTNnXTfTyyOw4yZRcTTrnEL3ACgj/GT
+vgWH2ACA/WA5JTHbRayA4x8=
+=JFMu
+-----END PGP SIGNATURE-----
