@@ -1,12 +1,22 @@
-MD5 01a78e2dc1be97f006e1ae9a314be407 ChangeLog 7226
-MD5 7f92aa6602ee9a10960d27e5e6a1bc2e bitlbee-0.91.ebuild 3181
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1ea53830f16bd092d99a424877021ed6 bitlbee-0.84.ebuild 2389
+MD5 dcdd9134163c06f27dd3bb32a3ae0336 ChangeLog 7312
 MD5 fc51bd6f3a89c98a4a447e9b1725e488 metadata.xml 465
-MD5 348ecbcec9cf34e7164b0f0189ea5963 files/bitlbee-0.80-xinetd.patch 730
+MD5 49106d6b7c96147e679d4fbe8eb2f0fe bitlbee-0.91.ebuild 3189
 MD5 ccb2adcfc701f086102639f5d5b38802 files/bitlbee-0.82-segv.diff 415
-MD5 2332b3b72a6b0501882bacd09921c3ce files/bitlbee-0.84-passport.diff 976
-MD5 144e462c0af1d82a3412a237519b32ca files/bitlbee-xinetd.patch 519
 MD5 6ea807f03873746fb89cc62f5552cb9e files/bitlbeed.confd 556
-MD5 ca5844d2edbb81e8ab4c8042e122aeb6 files/bitlbeed.init 724
-MD5 70d0e8bb8d7639b86e3ee8c0bda16334 files/digest-bitlbee-0.91 64
+MD5 144e462c0af1d82a3412a237519b32ca files/bitlbee-xinetd.patch 519
+MD5 2332b3b72a6b0501882bacd09921c3ce files/bitlbee-0.84-passport.diff 976
 MD5 b5361a82a904f5e2bf9c5a6d0717f374 files/digest-bitlbee-0.84 64
+MD5 70d0e8bb8d7639b86e3ee8c0bda16334 files/digest-bitlbee-0.91 64
+MD5 ca5844d2edbb81e8ab4c8042e122aeb6 files/bitlbeed.init 724
+MD5 348ecbcec9cf34e7164b0f0189ea5963 files/bitlbee-0.80-xinetd.patch 730
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBbW6FCHk4+ZoBpvsRAhA0AKCdz1GhkdVDaBGKvSyU3jTky5Gv7gCgp1lQ
+Cm/g4Miz4l64KGhEzCE1tlQ=
+=0pz5
+-----END PGP SIGNATURE-----

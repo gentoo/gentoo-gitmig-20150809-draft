@@ -1,6 +1,9 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.44 2004/10/08 02:18:51 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.45 2004/10/13 18:05:15 slarti Exp $
+
+  13 Oct 2004; Tom Martin <slarti@gentoo.org> bitlbee-0.91.ebuild:
+  Marked ~amd64.
 
   07 Oct 2004; Jason Wever <weeve@gentoo.org> -files/yahoo.diff,
   -bitlbee-0.85a.ebuild, -bitlbee-0.90-r1.ebuild, -bitlbee-0.90.ebuild,
