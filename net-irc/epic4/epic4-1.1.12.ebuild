@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.12.ebuild,v 1.6 2003/11/01 22:29:20 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.12.ebuild,v 1.7 2003/11/14 02:36:30 zul Exp $
 
 IUSE="ipv6 perl ssl tcltk"
 
@@ -63,6 +63,12 @@ src_install () {
 
 	dodir /usr/share/epic
 	tar zxvf ${DISTDIR}/epic4-help-20030114.tar.gz -C ${D}/usr/share/epic
+
+	# Fix for bug 33235.
+	rm -rf ${D}/usr/share/epic/help/CVS
+	rm -f ${D}/usr/share/epic/help/Makefile
+
+	chown -R root.root ${D}/usr/share/epic/help
 }
 
 pkg_postinst() {
