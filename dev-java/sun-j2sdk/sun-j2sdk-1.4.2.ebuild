@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.2.ebuild,v 1.6 2004/07/02 04:23:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.2.ebuild,v 1.7 2004/07/14 06:54:00 axxo Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -20,11 +20,12 @@ JAVA_PATCHES="
 
 S=${WORKDIR}/j2sdk
 
-SRC_JAVA="j2sdk-1_4_2-src-scsl.zip"
-SRC_MOZHEADERS="j2sdk-1_4_2-mozilla_headers-unix.zip"
-SRC_BINJAVA="j2sdk-1_4_2-bin-scsl.zip"
+MY_PV=${PV//./_}
+SRC_JAVA="j2sdk-${MY_PV}-src-scsl.zip"
+SRC_MOZHEADERS="j2sdk-${MY_PV}-mozilla_headers-unix.zip"
+SRC_BINJAVA="j2sdk-${MY_PV}-bin-scsl.zip"
 
-SRC_URI=""
+SRC_URI="${SRC_JAVA} ${SRC_MOZHEADERS} ${SRC_BINJAVA}"
 
 DESCRIPTION="Sun's J2SE Development Kit, version 1.4.2 (From sources)"
 HOMEPAGE="http://wwws.sun.com/software/java2/download.html"
@@ -48,6 +49,16 @@ PROVIDE="virtual/jre-1.4.2
 	virtual/jdk-1.4.2
 	virtual/java-scheme-2"
 
+RESTRICT="fetch"
+
+pkg_nofetch() {
+	einfo "Please download"
+	einfo " - ${SRC_MOZHEADERS}"
+	einfo " - ${SRC_JAVA}"
+	einfo " - ${SRC_BINJAVA}"
+	einfo "from ${HOMEPAGE} and place them in ${DISTDIR}"
+}
+
 pkg_setup() {
 	#Check if we have enough space
 	if [ `df -P ${PORTAGE_TMPDIR}/portage/ | tail -n 1 | awk '{ print $4 }'` -le 2597152 ] ; then
@@ -70,24 +81,6 @@ pkg_setup() {
 }
 
 src_unpack() {
-	die_flag=""
-	if [ ! -f ${DISTDIR}/${SRC_MOZHEADERS} ] ; then
-		eerror "Please download ${SRC_MOZHEADERS} from ${HOMEPAGE} to ${DISTDIR}"
-		die_flag=1
-	fi
-
-	if [ ! -f ${DISTDIR}/${SRC_JAVA} ] ; then
-		eerror "Please download ${SRC_JAVA} from ${HOMEPAGE} to ${DISTDIR}"
-		die_flag=1
-	fi
-
-	if [ ! -f ${DISTDIR}/${SRC_BINJAVA} ] ; then
-		eerror "Please download ${SRC_BINJAVA} from ${HOMEPAGE} to ${DISTDIR}"
-		die_flag=1
-	fi
-
-	[ ! -z ${die_flag} ] && die "Some source files were not found"
-
 	mkdir ${S}
 	cd ${S}
 	unpack ${SRC_JAVA}
