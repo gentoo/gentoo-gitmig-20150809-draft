@@ -1,6 +1,6 @@
-# ChangeLog for media-sound/qjackctl
+# ChangeLog for media-sound/qsynth
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.1 2004/01/15 01:57:17 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.2 2004/01/15 05:38:45 vapier Exp $
 
 *qsynth-0.1.0 (15 Jan 2004)
 
