@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Parser
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.15 2004/02/27 13:47:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.16 2004/03/04 14:44:51 gustavoz Exp $
+
+  04 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> XML-Parser-2.34.ebuild:
+  stable on sparc
 
   27 Feb 2004; Michael Cummings <mcummings@gentoo.org> XML-Parser-2.33.ebuild:
   Cleaning up
