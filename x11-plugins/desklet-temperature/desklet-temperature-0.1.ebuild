@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-temperature/desklet-temperature-0.1.ebuild,v 1.1 2003/10/09 15:31:59 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-temperature/desklet-temperature-0.1.ebuild,v 1.2 2003/10/09 15:57:55 obz Exp $
 
 DESKLET_NAME="TempNOAA"
 
@@ -8,7 +8,7 @@ MY_PN=${PN/desklet-/}
 MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="The clock sensors and displays for gdesklets"
+DESCRIPTION="A temperature desklet that displays the temperature as it changes over 24 hours"
 SRC_URI="http://gdesklets.gnomedesktop.org/files/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.pycage.de/"
 LICENSE="as-is"
