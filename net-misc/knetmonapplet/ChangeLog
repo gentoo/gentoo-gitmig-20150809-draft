@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/knetmonapplet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetmonapplet/ChangeLog,v 1.3 2003/02/12 08:26:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetmonapplet/ChangeLog,v 1.4 2003/02/15 07:59:31 gerk Exp $
 
   30 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
@@ -9,6 +9,9 @@
   rfom the 'languageChange undeclared' bug, which it fixes.
 
 *knetmonapplet-0.6.6 (19 Dec 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> knetmonapplet-0.6.6.ebuild :
+  set ~ppc in keywords
 
   19 Dec 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
