@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsnapshot
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsnapshot/ChangeLog,v 1.13 2005/02/11 23:39:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsnapshot/ChangeLog,v 1.14 2005/03/11 14:20:55 luckyduck Exp $
+
+  11 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> rsnapshot-1.2.0.ebuild:
+  added ~amd64 to KEYWORDS, fixes #65040
 
 *rsnapshot-1.2.0 (12 Feb 2005)
 
