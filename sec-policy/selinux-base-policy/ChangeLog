@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/selinux-base-policy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.1 2003/07/28 19:38:14 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.2 2003/07/30 02:10:14 pebenito Exp $
+
+*selinux-base-policy-20030729 (29 Jul 2003)
+
+  29 Jul 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20030729.ebuild:
+  Make the ebuild use POLICYDIR. Important fix so portage can load policy so
+  selinux-policy.eclass works. update_modules_t cleanup. Fix for an access when
+  merging baselayout.
 
 *selinux-base-policy-20030720 (20 Jul 2003)
 
