@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/kamikaze
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/ChangeLog,v 1.3 2004/06/24 22:06:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/ChangeLog,v 1.4 2004/12/16 16:04:54 josejx Exp $
+
+  16 Dec 2004; Joseph Jezak <josejx@gentoo.org> kamikaze-0.1.0.ebuild:
+  Marked ~ppc.
 
 *kamikaze-0.1.0 (01 Sep 2003)
 
