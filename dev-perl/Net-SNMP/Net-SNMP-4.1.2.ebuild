@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/Net-SNMP-4.1.2.ebuild,v 1.1 2003/11/06 22:24:27 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/Net-SNMP-4.1.2.ebuild,v 1.2 2003/11/06 22:25:42 rac Exp $
 
 inherit perl-module
 
@@ -19,3 +19,4 @@ DEPEND="${DEPEND}
 	dev-perl/Digest-SHA1
 	dev-perl/Digest-HMAC
 	>=dev-perl/Crypt-DES-2.03"
+
