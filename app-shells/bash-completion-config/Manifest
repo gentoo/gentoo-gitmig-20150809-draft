@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 207343db1fb3b7d1e62d85297668f608 bash-completion-config-0.6.ebuild 1229
+MD5 8924ad57eab8ca241d84f778835c10a5 bash-completion-config-0.6.ebuild 1228
 MD5 d671f36df8ba777e7f17f8a25241d6a4 bash-completion-config-0.5.ebuild 1040
-MD5 c367f29fe34d980f9ef895f27127ec76 ChangeLog 2758
+MD5 1d240c2aa6f48390485a849e8908cbdb ChangeLog 2869
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
 MD5 d082a4cf01805e4d876f3be7c4171213 files/digest-bash-completion-config-0.5 71
 MD5 d4df6622f178f3528d241a0cafbfff55 files/digest-bash-completion-config-0.6 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBl+FBEZCkKN40op4RAkLwAJ9afGS5/OOeZhMmyDjnpm4zMLEDjgCgxKu9
-fAQvYpYUMZUMyOFybQd79Ck=
-=kzdB
+iD8DBQFBo1T1EZCkKN40op4RAqJLAJwN9Z5xdofh4QacxbhgAS4kAOChUACfW3Qa
+QRUfydvSdVa2undYZg8QUtg=
+=ah0i
 -----END PGP SIGNATURE-----
