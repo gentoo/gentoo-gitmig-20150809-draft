@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.5 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.6 2004/09/02 14:34:52 ciaranm Exp $
 #
 # This eclass simplifies installation of app-vim plugins into
 # /usr/share/vim/vimfiles.  This is a version-independent directory
@@ -47,6 +47,7 @@ vim-plugin_src_install() {
 vim-plugin_pkg_postinst() {
 	update_vim_helptags		# from vim-doc
 	update_vim_afterscripts	# see below
+	display_vim_plugin_help	# see below
 }
 
 vim-plugin_pkg_postrm() {
@@ -88,3 +89,30 @@ update_vim_afterscripts() {
 		fi
 	done
 }
+
+# Display a message with the plugin's help file if one is available. Uses the
+# VIM_PLUGIN_HELPFILES env var. If multiple help files are available, they
+# should be separated by spaces. If no help files are available, but the env
+# var VIM_PLUGIN_HELPTEXT is set, that is displayed instead.
+display_vim_plugin_help() {
+	local h
+
+	if [[ -n "${VIM_PLUGIN_HELPFILES}" ]] ; then
+		einfo " "
+		einfo "This plugin provides documentation via vim's help system. To"
+		einfo "view it, use:"
+		for h in ${VIM_PLUGIN_HELPFILES} ; do
+			einfo "    :help ${h}"
+		done
+		einfo " "
+
+	elif [[ -n "${VIM_PLUGIN_HELPTEXT}" ]] ; then
+		einfo " "
+		while read h ; do
+			einfo $h
+		done <<<"${VIM_PLUGIN_HELPTEXT}"
+		einfo " "
+
+	fi
+}
+
