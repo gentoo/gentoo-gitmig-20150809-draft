@@ -1,19 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/prozgui/prozgui-2.0.5.ebuild,v 1.4 2004/07/01 22:49:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/prozgui/prozgui-2.0.5.ebuild,v 1.5 2004/07/14 05:28:32 mr_bones_ Exp $
 
 inherit eutils
 
-S="${WORKDIR}/${P}beta"
 DESCRIPTION="A Graphical download manager"
-SRC_URI="http://prozilla.genesys.ro/downloads/${PN}/tarballs/${P}beta.tar.bz2"
 HOMEPAGE="http://prozilla.genesys.ro/"
-KEYWORDS="~x86 ~sparc ~ppc"
-SLOT="0"
+SRC_URI="http://prozilla.genesys.ro/downloads/${PN}/tarballs/${P}beta.tar.bz2"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~sparc ~ppc"
+IUSE=""
 
 DEPEND="virtual/libc
 	>=x11-libs/fltk-1.1"
+
+S="${WORKDIR}/${P}beta"
 
 src_unpack() {
 	unpack ${A}
