@@ -1,11 +1,15 @@
 # ChangeLog for app-admin/mirrorselect
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mirrorselect/ChangeLog,v 1.6 2003/02/22 16:00:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mirrorselect/ChangeLog,v 1.7 2003/02/24 19:22:12 weeve Exp $
 
   22 Feb 2003; Guy Martin <gmsoft@gentoo.org> mirrorselect-0.1-r2.ebuild :
   Added hppa to keywords.
 
 *mirrorselect-0.1-r2 (10 Feb 2003)
+
+  24 Feb 2003; Jason Wever <weeve@gentoo.org> mirrorselect-0.1-r2.ebuild:
+  Changed ~sparc keyword to sparc.
+
   10 Feb 2003; Mark Guertin <gerk@gentoo.org> mirrorselect-0.1-r2.ebuild:
   Rev bump.  Added a santify check for small screens.  Older version would 
   cause garbage to be added to make.conf.  Thanks SpanKY.
