@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jaf-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaf-bin/ChangeLog,v 1.7 2004/12/18 09:02:54 corsair Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaf-bin/ChangeLog,v 1.8 2005/01/26 20:54:02 corsair Exp $
+
+  26 Jan 2005; Markus Rothe <corsair@gentoo.org> sun-jaf-bin-1.0.2.ebuild:
+  Stable on ppc64
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> sun-jaf-bin-1.0.2.ebuild:
   added ~ppc64 to KEYWORDS
