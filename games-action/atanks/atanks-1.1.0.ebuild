@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.0.0.ebuild,v 1.2 2004/02/05 23:21:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.1 2004/02/05 23:21:16 mr_bones_ Exp $
 
 inherit games
 
