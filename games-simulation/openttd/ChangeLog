@@ -1,6 +1,13 @@
 # ChangeLog for games-simulation/openttd
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.9 2004/12/28 10:06:14 dholm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.10 2005/01/25 13:55:04 dholm Exp $
+
+*openttd-0.3.6 (25 Jan 2005)
+
+  25 Jan 2005; <avatar@gentoo.org> +files/openttd.initd,
+  -openttd-0.3.4.ebuild, +openttd-0.3.6.ebuild:
+  Version bumped Added support for dedicated USE-flag, thanks to Luca Spiller
+  (thelucster (at) gmail (dot) com
 
   28 Dec 2004; David Holm <dholm@gentoo.org> openttd-0.3.5.ebuild:
   Play midi through alsa if timidity is disabled (Bug #64863)
