@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.7_pre20040627.ebuild,v 1.4 2004/07/27 13:02:50 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.7_pre20040627.ebuild,v 1.5 2004/07/27 17:26:35 kang Exp $
 
 inherit eutils libtool
 
@@ -32,7 +32,7 @@ src_unpack() {
 	./autogen.sh || die
 }
 
-src_preinst() {
+pkg_preinst() {
 	# Add a new user
 	enewuser ${GIFTUSER} -1 /bin/bash /home/p2p users
 }
