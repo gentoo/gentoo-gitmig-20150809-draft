@@ -1,5 +1,5 @@
-MD5 68a9e157268f7f248c88d29d6b769e4c ChangeLog 4331
+MD5 8db976c454b5aeb6b73c4fde632ed647 ChangeLog 4526
 MD5 dbaa6f09202bfea8c248e1f7c222d40f metadata.xml 488
 MD5 410af8237887aac7569ff2db303f22e0 skype-0.93.0.3-r2.ebuild 3174
 MD5 1d81e190261e1a101fff0ecacaaa833d files/digest-skype-0.93.0.3-r2 211
-MD5 b59b4eab9520b2fcb36b5b036a39c4ec files/sDaemonWrapper 1718
+MD5 5da68017f6291806b14012eeecd885c9 files/sDaemonWrapper 1654
