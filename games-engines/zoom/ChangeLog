@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/zoom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/ChangeLog,v 1.3 2004/06/24 22:39:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/ChangeLog,v 1.4 2004/11/05 04:45:43 josejx Exp $
+
+  05 Nov 2004; Joseph Jezak <josejx@gentoo.org> zoom-1.0.1.ebuild:
+  Added ~ppc.
 
 *zoom-1.0.1 (31 Jan 2003)
 
