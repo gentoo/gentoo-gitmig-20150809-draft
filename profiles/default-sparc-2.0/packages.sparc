@@ -1,0 +1,15 @@
+# Please edit the file packages.sparc, it will be included in
+# packages the next time you run ../default-sparc-1.0/scripts/build.rel
+#
+# SPARC specific packages
+*sys-apps/sparc-utils
+*sys-apps/silo
+
+# VNC is broken on x86, maintainer uses i386 specific makefile
+!net-misc/vnc
+
+# Get a decent editor - BROKEN
+#*app-editors/levee
+
+# Sed replacement
+*sys-apps/supersed

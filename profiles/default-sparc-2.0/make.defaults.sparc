@@ -1,0 +1,23 @@
+#
+# $Id: make.defaults.sparc,v 1.1 2002/08/29 01:24:59 murphy Exp $
+#
+# $Log: not supported by cvs2svn $
+#
+ARCH="sparc"
+CHOST=sparc-unknown-linux-gnu
+PLATFORM=sparc-unknown-linux-gnu
+
+# Options passed to make during the build process
+# MAKEOPTS="-j2"
+
+# Fetching command (5 tries, passive ftp for firewall compatibility)
+FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
+# Global configure options
+
+# C Compiler flags
+CFLAGS="-O2 -pipe"
+# C++ Compiler flags
+CXXFLAGS=${CFLAGS}
+
+# USE arch:xxx keyword
+ACCEPT_KEYWORDS="sparc"
