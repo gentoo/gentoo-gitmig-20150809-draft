@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3.ebuild,v 1.4 2004/10/15 15:40:33 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3.ebuild,v 1.5 2004/10/23 13:22:08 suka Exp $
 
 # Notes:
 #
@@ -258,6 +258,7 @@ src_unpack() {
 	filter-flags "-fprefetch-loop-arrays"
 	filter-flags "-fno-default-inline"
 	filter-flags "-fstack-protector"
+	filter-flags "-ftracer"
 	append-flags "-fno-strict-aliasing"
 	replace-flags "-O3" "-O2"
 	replace-flags "-Os" "-O2"
