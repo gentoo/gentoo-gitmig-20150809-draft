@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.61-r2.ebuild,v 1.1 2004/09/02 21:01:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.61-r2.ebuild,v 1.2 2004/09/02 21:29:17 ticho Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ DEPEND="virtual/libc
 	kerberos? ( app-crypt/mit-krb5 )"
 RDEPEND="app-misc/mime-types"
 
-S="${WORKDIR}/${PN}${PV}"
+S="${WORKDIR}/${P/-/}"
 
 src_unpack() {
 	unpack ${A} && cd "${S}"

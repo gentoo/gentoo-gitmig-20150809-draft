@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.50-r4.ebuild,v 1.8 2004/08/14 21:02:29 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.50-r4.ebuild,v 1.9 2004/09/02 21:29:17 ticho Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND="virtual/libc
 	ldap? ( net-nds/openldap )"
 RDEPEND="app-misc/mime-types"
 
-S=${WORKDIR}/${PN}${PV}
+S="${WORKDIR}/${P/-/}"
 
 src_unpack() {
 	unpack ${A}

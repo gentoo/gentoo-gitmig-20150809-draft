@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.19 2004/09/02 21:01:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.20 2004/09/02 21:29:17 ticho Exp $
+
+  02 Sep 2004; Andrej Kacian <ticho@gentoo.org> pine-4.50-r4.ebuild,
+  pine-4.58-r3.ebuild, pine-4.60.ebuild, pine-4.61-r1.ebuild,
+  pine-4.61-r2.ebuild:
+  Use ${P/-/} instead of ${PN}${PV} in ${S}, suggested by seemant.
 
 *pine-4.61-r2 (02 Sep 2004)
 
