@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.5-r1.ebuild,v 1.7 2004/11/19 04:23:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.5-r1.ebuild,v 1.8 2004/11/30 06:21:46 vapier Exp $
 
 inherit flag-o-matic
 
@@ -10,14 +10,14 @@ SRC_URI="http://www.balabit.com/downloads/syslog-ng/${PV%.*}/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa mips amd64 ia64 ppc64 ~s390"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="static tcpd"
 
 RDEPEND=">=dev-libs/libol-0.3.14
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 DEPEND="${RDEPEND}
+	>=sys-apps/portage-2.0.51
 	sys-devel/flex"
-
 PROVIDE="virtual/logger"
 
 src_unpack() {
@@ -53,6 +53,5 @@ src_install() {
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/syslog-ng.logrotate" syslog-ng
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/syslog-ng.rc6" syslog-ng
+	newinitd "${FILESDIR}/syslog-ng.rc6" syslog-ng
 }
