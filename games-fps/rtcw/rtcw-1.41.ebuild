@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41.ebuild,v 1.14 2004/05/11 12:53:56 vapier Exp $
 
 inherit games
 
 DESCRIPTION="Return to Castle Wolfenstein - Long awaited sequel to Wolfenstein 3D"
+HOMEPAGE="http://games.activision.com/games/wolfenstein/"
 SRC_URI="ftp://ftp.idsoftware.com/idstuff/wolf/linux/wolf-linux-1.41-3.x86.run
 	ftp://3dgamers.in-span.net/pub/3dgamers4/games/returnwolfenstein/wolf-linux-1.41-3.x86.run"
-
-HOMEPAGE="http://games.activision.com/games/wolfenstein/"
 
 LICENSE="RTCW"
 SLOT="0"
 KEYWORDS="x86"
-RESTRICT="nostrip nomirror"
 IUSE="opengl dedicated"
+RESTRICT="nostrip nomirror"
 
 DEPEND="virtual/glibc"
 RDEPEND="dedicated? ( app-misc/screen )
