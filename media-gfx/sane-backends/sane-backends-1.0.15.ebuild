@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.15.ebuild,v 1.7 2005/03/23 23:02:23 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.15.ebuild,v 1.8 2005/03/24 21:07:38 kugelfang Exp $
 
 inherit eutils
 
@@ -67,7 +67,7 @@ src_install () {
 		sysconfdir=${D}/etc \
 		mandir=${D}/usr/share/man \
 		docdir=${D}/usr/share/doc/${PF} \
-		libdir=${D}/usr/${get_libdir} \
+		libdir=${D}/usr/$(get_libdir) \
 		install || die
 
 	if use usb; then
