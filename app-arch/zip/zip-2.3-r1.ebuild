@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r1.ebuild,v 1.18 2003/02/13 05:58:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r1.ebuild,v 1.19 2003/06/14 12:59:13 gmsoft Exp $
 
 DESCRIPTION="Info ZIP"
 SRC_URI="http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${PN}23.tar.gz"
 HOMEPAGE="ftp://ftp.freesoftware.com/pub/infozip/Zip.html"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 LICENSE="Info-ZIP"
 
 src_unpack() {
