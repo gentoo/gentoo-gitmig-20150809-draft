@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.1 2003/04/06 09:59:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.2 2003/04/19 19:37:34 method Exp $
 
 IUSE="nls pic build nptl"
 
@@ -230,6 +230,14 @@ pkg_setup() {
 }
 
 src_unpack() {
+        if [ `is-flag "-fstack-protector"` -a  `has "sandbox" $FEATURES` ]
+        then
+                eerror "You have both -fstack-protector and sandbox enabled"
+                eerror "glibc will not compile correctly with both of these enabled"
+                eerror "Please disable sandbox by calling emerge with FEATURES=\"-sandbox\""
+                die
+        fi
+
 	unpack glibc-${MY_PV}.tar.bz2
 	
 	# Extract pre-made man pages.  Otherwise we need perl, which is a no-no.
