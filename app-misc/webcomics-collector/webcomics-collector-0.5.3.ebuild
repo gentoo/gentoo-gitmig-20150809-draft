@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/webcomics-collector/webcomics-collector-0.5.0.ebuild,v 1.2 2004/07/18 11:44:47 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/webcomics-collector/webcomics-collector-0.5.3.ebuild,v 1.1 2004/08/03 01:24:35 vapier Exp $
 
 inherit distutils
 
