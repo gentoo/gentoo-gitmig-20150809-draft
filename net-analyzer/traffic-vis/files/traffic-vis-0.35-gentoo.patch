@@ -1,0 +1,102 @@
+--- frontends/htmlfe.c
++++ frontends/htmlfe.c	2003-06-20 07:07:17.000000000 +0000
+@@ -188,7 +188,7 @@
+ 										<TD ALIGN=\"RIGHT\">\n\
+ 											%llu\n\
+ 										</TD>\n\
+-									</TR>
++									</TR>\
+ ", host->bytes_sent, host->bytes_received);
+ 
+ 	fprintf(out, "\
+--- frontends/traffic-togif
++++ frontends/traffic-togif	2003-10-23 19:29:30.000000000 +0000
+@@ -31,7 +31,7 @@
+ my $y_size = 750;
+ 
+ my $traffic_tops = "/usr/sbin/traffic-tops";
+-my $gs = "/usr/bin/ghostscript";
++my $gs = "/usr/bin/gs";
+ my $pnmcrop = "/usr/bin/pnmcrop";
+ my $pnmscale = "/usr/bin/pnmscale";
+ my $ppmtogif = "/usr/bin/ppmtogif";
+--- collector/Makefile
++++ collector/Makefile	2003-10-23 19:45:52.000000000 +0000
+@@ -1,4 +1,4 @@
+-CFLAGS= -DVERSION="\"$(VERSION)"\" $(DEFINES) $(WARNFLAGS) $(DEBUGFLAGS) $(INCLUDES) -I.. $(OPT_FLAGS)
++CFLAGS+= -DVERSION="\"$(VERSION)"\" $(DEFINES) $(WARNFLAGS) $(DEBUGFLAGS) $(INCLUDES) -I.. $(OPT_FLAGS)
+ OBJS=packet-parse.o packet-summary.o summary-output.o ../util.o
+ TARGETS=traffic-collector
+ LFLAGS=-L..
+@@ -7,7 +7,7 @@
+ all: $(TARGETS)
+ 
+ traffic-collector: traffic-collector.o $(OBJS)
+-	$(CC) -o $@ traffic-collector.o $(OBJS) $(LIBS)
++	$(CC) $(CFLAGS) -o $@ traffic-collector.o $(OBJS) $(LIBS)
+ 
+ install:
+ 	install -m 750 -o root -g root traffic-collector $(SBINDIR)
+--- frontends/Makefile
++++ frontends/Makefile	2003-10-23 19:48:02.000000000 +0000
+@@ -1,4 +1,4 @@
+-CFLAGS= -DVERSION="\"$(VERSION)\"" $(DEFINES) $(WARNFLAGS) $(DEBUGFLAGS) $(INCLUDES) -I.. $(OPT_FLAGS)
++CFLAGS+= -DVERSION="\"$(VERSION)\"" $(DEFINES) $(WARNFLAGS) $(DEBUGFLAGS) $(INCLUDES) -I.. $(OPT_FLAGS)
+ OBJS=htmlfe.o psfe.o textfe.o
+ TARGETS=traffic-tops traffic-totext traffic-tohtml
+ LFLAGS=-L..
+@@ -7,13 +7,13 @@
+ all: $(OBJS) $(TARGETS)
+ 
+ traffic-tops: traffic-tops.o psfe.o ../libreport.a
+-	$(CC) -o $@ traffic-tops.o psfe.o $(LFLAGS) $(LIBS) -lm
++	$(CC) $(CFLAGS) -o $@ traffic-tops.o psfe.o $(LFLAGS) $(LIBS) -lm
+ 
+ traffic-totext: traffic-totext.o textfe.o ../libreport.a
+-	$(CC) -o $@ traffic-totext.o textfe.o $(LFLAGS) $(LIBS)
++	$(CC) $(CFLAGS) -o $@ traffic-totext.o textfe.o $(LFLAGS) $(LIBS)
+ 
+ traffic-tohtml: traffic-tohtml.o htmlfe.o ../libreport.a
+-	$(CC) -o $@ traffic-tohtml.o htmlfe.o $(LFLAGS) $(LIBS)
++	$(CC) $(CFLAGS) -o $@ traffic-tohtml.o htmlfe.o $(LFLAGS) $(LIBS)
+ 
+ install:
+ 	install -m 755 -o root -g root traffic-tops $(SBINDIR)
+--- sort/Makefile
++++ sort/Makefile	2003-10-23 19:49:11.000000000 +0000
+@@ -1,4 +1,4 @@
+-CFLAGS= -DVERSION="\"$(VERSION)\"" $(DEFINES) $(WARNFLAGS) $(DEBUGFLAGS) $(INCLUDES) -I.. $(OPT_FLAGS)
++CFLAGS+= -DVERSION="\"$(VERSION)\"" $(DEFINES) $(WARNFLAGS) $(DEBUGFLAGS) $(INCLUDES) -I.. $(OPT_FLAGS)
+ OBJS=
+ TARGETS=traffic-sort
+ LFLAGS=-L..
+@@ -7,7 +7,7 @@
+ all: $(TARGETS)
+ 
+ traffic-sort: traffic-sort.o ../libreport.a
+-	$(CC) $(LFLAGS) -o $@ traffic-sort.o $(LIBS)
++	$(CC) $(CFLAGS) $(LFLAGS) -o $@ traffic-sort.o $(LIBS)
+ 
+ install:
+ 	install -m 755 -o root -g root traffic-sort $(SBINDIR)
+--- utils/Makefile
++++ utils/Makefile	2003-10-23 19:50:48.000000000 +0000
+@@ -1,4 +1,4 @@
+-CFLAGS= -DVERSION="\"$(VERSION)\"" $(DEFINES) $(WARNFLAGS) $(DEBUGFLAGS) $(INCLUDES) -I.. $(OPT_FLAGS)
++CFLAGS+= -DVERSION="\"$(VERSION)\"" $(DEFINES) $(WARNFLAGS) $(DEBUGFLAGS) $(INCLUDES) -I.. $(OPT_FLAGS)
+ OBJS=
+ TARGETS=traffic-resolve traffic-exclude
+ LFLAGS=-L..
+@@ -7,10 +7,10 @@
+ all: $(OBJS) $(TARGETS)
+ 
+ traffic-exclude: traffic-exclude.o ../libreport.a
+-	$(CC) -o $@ traffic-exclude.o $(LFLAGS) $(LIBS)
++	$(CC) $(CFLAGS) -o $@ traffic-exclude.o $(LFLAGS) $(LIBS)
+ 
+ traffic-resolve: traffic-resolve.o ../libreport.a
+-	$(CC) -o $@ traffic-resolve.o $(LFLAGS) $(LIBS)
++	$(CC) $(CFLAGS) -o $@ traffic-resolve.o $(LFLAGS) $(LIBS)
+ 
+ install:
+ 	install -m 755 -o root -g root traffic-resolve $(SBINDIR)
