@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.5 2002/05/01 13:47:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.6 2002/07/10 18:01:00 rphillips Exp $
+
+*mgetty-1.1.28 (10 Jul 2002)
+
+  10 Jun 2002; Ryan Phillips <rphillips@gentoo.org> mgetty-1.1.28.ebuild :
+
+  New version and adds /var/spool/voice
+  Submitted by Rusty Phillips
 
 *mgetty-1.1.26-r4 (1 May 2002)
 
