@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.6 2002/06/05 02:18:51 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.7 2002/06/05 10:34:30 stroke Exp $
+
+*gnome-panel-1.5.24-r1 (05 Jun 2002)
+
+  05 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> gnome-panel-1.5.24-r1.ebuild:
+
+  Modified Dependencies.
 
 *gnome-panel-1.5.24 (05 Jun 2002)
   
