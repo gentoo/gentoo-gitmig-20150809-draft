@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.3.ebuild,v 1.2 2004/09/20 16:14:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.3.ebuild,v 1.3 2004/09/21 15:22:25 ka0ttic Exp $
 
 DESCRIPTION="System uptime record daemon that keeps track of your highest uptimes"
 HOMEPAGE="http://unixcode.org/uptimed/"
@@ -8,7 +8,7 @@ SRC_URI="http://unixcode.org/downloads/uptimed/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 IUSE=""
 
 DEPEND="virtual/libc"
