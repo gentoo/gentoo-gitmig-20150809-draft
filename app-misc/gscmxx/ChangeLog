@@ -1,0 +1,13 @@
+# ChangeLog for app-misc/gscmxx
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gscmxx/ChangeLog,v 1.1 2003/03/22 04:30:11 pylon Exp $
+
+*gscmxx-0.4.1 (22 Mar 2003)
+
+  22 Mar 2003; Lars Weiler <pylon@gentoo.org> gscmxx-0.4.1.ebuild:
+  initial ChangeLog
+
+  closes bug 13044
+
+  Thanks to Janne Johansson and Reik Keutterling for submitting the ebuild!
+
