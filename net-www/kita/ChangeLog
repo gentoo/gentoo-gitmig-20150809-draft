@@ -1,6 +1,11 @@
 # ChangeLog for net-www/kita
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kita/ChangeLog,v 1.17 2004/03/14 10:05:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kita/ChangeLog,v 1.18 2004/03/24 17:34:26 usata Exp $
+
+*kita-0.10.3.0 (25 Mar 2004)
+
+  25 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> kita-0.10.3.0.ebuild:
+  Version bumped.
 
 *kita-0.10.2.1 (01 Mar 2004)
 
