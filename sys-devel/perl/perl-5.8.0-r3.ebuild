@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r3.ebuild,v 1.6 2002/12/11 15:24:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r3.ebuild,v 1.7 2002/12/11 16:00:48 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -106,8 +106,8 @@ EOF
 		-Dcf_by=Gentoo \
 		-Ud_csh \
 		${myconf} || die "Unable to configure"
-	emake || die "Unable toe make"
-#	make || die "Unable to make"
+#	emake || die "Unable toe make"
+	make || die "Unable to make"
 	
 	make -i test CCDLFLAGS=
 							
