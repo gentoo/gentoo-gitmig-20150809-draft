@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.3.ebuild,v 1.5 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.3.ebuild,v 1.6 2003/05/16 19:56:36 danarmak Exp $
 
 IUSE="esd X gtk oggvorbis gnome arts"
 
@@ -66,7 +66,7 @@ src_compile() {
 	    myconf="$myconf --disable-arts"
 	fi
 
-	./configure --prefix=/usr --host=${CHOST} ${myconf} || die
+	./configure --prefix=/usr --host=${CHOST} --enable-cmdline ${myconf} || die
 	make || die
 	
 	if [ -n "`use arts`" ]; then
