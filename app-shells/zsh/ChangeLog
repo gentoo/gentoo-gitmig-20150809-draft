@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.71 2005/02/15 00:37:36 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.72 2005/02/15 07:06:51 gmsoft Exp $
+
+  15 Feb 2005; Guy Martin <gmsoft@gentoo.org> zsh-4.2.3.ebuild:
+  Stable on hppa.
 
   14 Feb 2005; Kito <kito@gentoo.org> zsh-4.2.4.ebuild:
   add ~ppc-macos
