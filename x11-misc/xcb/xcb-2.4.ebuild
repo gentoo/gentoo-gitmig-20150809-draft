@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/xcb-2.4.ebuild,v 1.3 2003/06/20 20:07:26 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/xcb-2.4.ebuild,v 1.4 2003/06/21 18:33:48 agriffis Exp $
 
 DESCRIPTION="Marc Lehmann's improved X Cut Buffers"
 HOMEPAGE="http://www.goof.com/pcg/marc/xcb.html"
@@ -11,13 +11,11 @@ KEYWORDS="alpha x86"
 IUSE="motif"
 
 DEPEND="virtual/x11
-	>=sys-apps/sed-4
 	motif? ( virtual/motif )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i 's/^CFLAGS.=/CFLAGS +=/' Makefile.std || die 'sed failed'
 	mv xcb.man xcb.1 || die 'mv failed'
 }
 

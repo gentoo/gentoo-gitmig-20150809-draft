@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/ChangeLog,v 1.3 2003/06/20 20:07:26 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/ChangeLog,v 1.4 2003/06/21 18:33:48 agriffis Exp $
+
+  21 Jun 2003; Aron Griffis <agriffis@gentoo.org> xcb-2.4.ebuild:
+  Remove bogus sed (and also the sed dependency)
 
   20 Jun 2003; <msterret@gentoo.org> xcb-2.4.ebuild:
   DEPEND on sed >= 4
