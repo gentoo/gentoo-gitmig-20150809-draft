@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1.ebuild,v 1.5 2004/01/30 12:58:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1.ebuild,v 1.6 2004/03/28 06:44:20 mr_bones_ Exp $
+
+inherit eutils
 
 MY_P="${P/sdl-/SDL_}"
 S=${WORKDIR}/${MY_P}
