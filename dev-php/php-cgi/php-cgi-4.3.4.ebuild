@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.4.ebuild,v 1.2 2004/01/08 04:16:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.4.ebuild,v 1.3 2004/01/08 06:37:38 robbat2 Exp $
 
 PHPSAPI="cgi"
 inherit php-2 eutils
@@ -9,7 +9,7 @@ IUSE="${IUSE} readline"
 
 DESCRIPTION="PHP CGI"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 
 DEPEND_EXTRA="readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 )
 	ncurses? ( >=sys-libs/ncurses-5.1 )"

@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.3-r3.ebuild,v 1.7 2004/01/08 04:11:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.3-r3.ebuild,v 1.8 2004/01/08 06:33:45 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
 DESCRIPTION="Apache module for PHP"
-KEYWORDS="x86 sparc ~ppc ~alpha hppa ~arm ~amd64"
+KEYWORDS="x86 sparc ~ppc ~alpha hppa ~amd64"
 
 detectapache() {
 	local domsg=

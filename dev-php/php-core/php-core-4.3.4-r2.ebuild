@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-core/php-core-4.3.4-r2.ebuild,v 1.1 2003/12/25 14:52:28 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-core/php-core-4.3.4-r2.ebuild,v 1.2 2004/01/08 06:42:01 robbat2 Exp $
 
 PHPSAPI="cli"
 inherit php-2 eutils
@@ -8,7 +8,7 @@ inherit php-2 eutils
 IUSE="${IUSE} readline"
 DESCRIPTION="PHP core package"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~mips ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 
 DEPEND_EXTRA="readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 )
 	ncurses? ( >=sys-libs/ncurses-5.1 )
