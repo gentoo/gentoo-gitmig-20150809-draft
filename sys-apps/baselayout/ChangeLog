@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.72 2003/04/07 03:27:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.73 2003/04/27 15:18:34 azarah Exp $
+
+*baselayout-1.8.5.9 (27 Apr 2003)
+
+  27 Apr 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.5.9.ebuild :
+  Add slocate group, bug #19604.
 
 *baselayout-1.8.6.5 (07 Apr 2003)
 
