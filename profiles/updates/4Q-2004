@@ -204,3 +204,4 @@ move app-sci/octave-forge sci-mathematics/octave-forge
 move app-sci/otter sci-mathematics/otter
 move app-sci/pari sci-mathematics/pari
 move app-sci/scilab sci-mathematics/scilab
+move app-sci/singular sci-mathematics/singular
