@@ -1,6 +1,11 @@
 # ChangeLog for app-text/wv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.9 2003/03/31 22:42:06 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.10 2003/06/18 00:24:09 foser Exp $
+
+*wv-0.7.6 (18 Jun 2003)
+
+  18 Jun 2003; foser <foser@gentoo.org> wv-0.7.6.ebuild :
+  New version
 
 *wv-0.7.5 (31 Mar 2003)
 
