@@ -1,28 +1,29 @@
 # ChangeLog for app-emulation/fceultra
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/ChangeLog,v 1.5 2002/08/06 18:45:06 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/ChangeLog,v 1.6 2002/11/21 16:53:35 vapier Exp $
 
+*fceultra-081 (21 Nov 2002)
 
-*fceultra-080 (24 July 2002)
+  21 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage
+
+*fceultra-080 (24 Jul 2002)
 
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added -ppc to keywords
 
   24 July 2002; Sascha Schwabbauer <cybersystem@gentoo.org> fceultra-080.ebuild :
-
   Updated to the newest version.
 
 *fceultra-070 (11 March 2002)
 
   11 March 2002; Donny Davies <woodchip@gentoo.org> fceultra-070.ebuild :
-
   Renamed the ebuild to allow people to install it :)  Closes #1057.  Tidy
   up the docs installed.
 
 *fceu-070 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
