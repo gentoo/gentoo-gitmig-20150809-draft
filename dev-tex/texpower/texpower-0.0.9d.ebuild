@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/texpower-0.0.9d.ebuild,v 1.4 2003/10/03 16:44:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/texpower-0.0.9d.ebuild,v 1.5 2003/11/16 05:17:37 obz Exp $
 
 inherit latex-package
 
@@ -18,6 +18,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 
 src_install() {
+
 	latex-package_src_install
 	doins *.cfg
 
@@ -32,9 +33,8 @@ src_install() {
 	newdoc contrib/00readme.txt 00readme-contrib.txt
 
 	if use doc; then
-		S=${WORKDIR}/${P}/doc
-		mkdir ${T}/fonts
-		VARTEXFONTS=${T}/fonts latex-package_src_install
-		dodoc *.tex
+		insinto /usr/share/doc/${P}/manual
+		doins doc/*.{tex,pdf,cfg}
 	fi
+
 }
