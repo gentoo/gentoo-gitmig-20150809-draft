@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/thinkpad-4.1.ebuild,v 1.3 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/thinkpad-4.1.ebuild,v 1.4 2003/09/07 00:52:20 msterret Exp $
 
 #transform P to match tarball versioning
 MYPV=${PV/_beta/beta}

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.10.ebuild,v 1.1 2003/08/04 21:46:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.10.ebuild,v 1.2 2003/09/07 00:50:55 msterret Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -40,7 +40,7 @@ RDEPEND="${DEPEND}
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
-	   
+
 src_unpack() {
 
 	unpack sysvinit-${SVIV}.tar.gz
@@ -62,7 +62,7 @@ src_unpack() {
 	fi
 
 	cd ${S}/etc
-	
+
 	# Fix Sparc specific stuff
 	if [ "${ARCH}" = "sparc" ]
 	then
@@ -115,7 +115,7 @@ src_compile() {
 
 		if [ -z "`use bootstrap`" ]
 		then
-			# We let gawk now install filefuncs.so, and that is as a symlink to a 
+			# We let gawk now install filefuncs.so, and that is as a symlink to a
 			# versioned .so ...
 			if [ -f /usr/include/awk/awk.h -a ! -L ${ROOT}/lib/rcscripts/filefuncs.so ]
 			then
@@ -127,7 +127,7 @@ src_compile() {
 #					eerror "sys-apps/gawk-3.1.1-r1 or later installed"
 #					die "problem compiling gawk module"
 #				}
-			
+
 				eerror "Please install sys-apps/gawk-3.1.1-r2 or later!"
 				die "gawk too old"
 			fi
@@ -164,7 +164,7 @@ keepdir_mount() {
 	for y in $*
 	do
 		doit=0
-		
+
 		for x in $(gawk '{print $2}' /proc/mounts)
 		do
 			[ "${x}" = "${y}" ] && doit=1
@@ -208,11 +208,11 @@ src_install() {
 	keepdir /usr/include /usr/src
 	keepdir /usr/X11R6/include/{X11,GL} /usr/X11R6/lib
 	keepdir /usr/X11R6/lib /usr/X11R6/man /usr/X11R6/share
-	
+
 	# If it already exist, do not recreate, else we get
 	# problems when /usr/portage mounted as ro NFS, etc.
 	keepdir_mount /usr/portage
-	
+
 	#dosym ../src/linux/include/linux /usr/include/linux
 	#dosym ../src/linux/include/asm-i386 /usr/include/asm
 	# Important note: Gentoo Linux 1.0_rc6 no longer uses symlinks to /usr/src for includes.
@@ -228,27 +228,27 @@ src_install() {
 		keepdir /usr/local/${foo}
 	done
 	# Local FHS compat symlinks
-	dosym share/man /usr/local/man	
-	dosym share/doc	/usr/local/doc	
+	dosym share/man /usr/local/man
+	dosym share/doc	/usr/local/doc
 
 	# FHS compatibility symlinks stuff
 	dosym share/man /usr/man
 	dosym share/doc /usr/doc
 	dosym share/info /usr/info
 	dosym ../../share/info	/usr/X11R6/share/info
-    dosym ../X11R6/include/X11 /usr/include/X11
-    dosym ../X11R6/include/GL /usr/include/GL
-    dosym ../X11R6/lib/X11 /usr/lib/X11
+	dosym ../X11R6/include/X11 /usr/include/X11
+	dosym ../X11R6/include/GL /usr/include/GL
+	dosym ../X11R6/lib/X11 /usr/lib/X11
 	# End FHS compatibility symlinks stuff
 
 	# The .keep file messes up Portage when looking in /var/db/pkg
-	dodir /var/db/pkg 
+	dodir /var/db/pkg
 	chmod 1777 ${D}/var/tmp
 	keepdir /root
-	
+
 	# /proc is very likely mounted right now so a keepdir will fail on merge
-	dodir /proc	
-	
+	dodir /proc
+
 	chmod go-rx ${D}/root
 	keepdir /tmp /var/lock
 	chmod 1777 ${D}/tmp
@@ -289,7 +289,7 @@ src_install() {
 		keepdir /dev
 		keepdir /dev/pts /dev/shm
 		dosym ../sbin/MAKEDEV /dev/MAKEDEV
-	fi	
+	fi
 
 	cd ${S}/sbin
 	into /
@@ -372,11 +372,11 @@ src_install() {
 		docinto sysvinit-${SVIV}
 		dodoc COPYRIGHT README doc/*
 	fi
-	
+
 	for foo in ${S}/man/*
 	do
 		[ -f ${foo} ] && doman ${foo}
-    done
+	done
 	docinto /
 	dodoc ${FILESDIR}/copyright
 	dodoc ${S}/ChangeLog
@@ -394,7 +394,7 @@ src_install() {
 	do
 		[ -f ${foo} ] && doins ${foo}
 	done
-	
+
 	keepdir /etc/modules.d
 	insinto /etc/modules.d
 	doins ${S}/etc/modules.d/aliases ${S}/etc/modules.d/i386
@@ -407,7 +407,7 @@ src_install() {
 	done
 
 	# Now ships with net-dialup/ppp ...
-	rm -f ${D}/etc/{conf,init}.d/net.ppp* 
+	rm -f ${D}/etc/{conf,init}.d/net.ppp*
 
 	dodir /etc/skel
 	insinto /etc/skel
@@ -420,7 +420,7 @@ src_install() {
 
 	# Skip this if we are merging to ROOT
 	[ "${ROOT}" = "/" ] && return 0
-	
+
 	# Set up default runlevel symlinks
 	for foo in default boot nonetwork single
 	do
@@ -469,7 +469,7 @@ pkg_preinst() {
 			${ROOT}/etc/modules.autoload.d/kernel-2.4
 		ln -snf modules.autoload.d/kernel-2.4 ${ROOT}/etc/modules.autoload
 	fi
-	
+
 	# Make sure user get things updated first time he merge 1.8.6 ...
 	if [ -f "${WORKDIR}/update_init_d" ]
 	then
@@ -504,7 +504,7 @@ pkg_postinst() {
 		cd ${ROOT}/dev
 		# These devices are also needed by many people and should be included
 		einfo "Making device nodes (this could take a minute or so...)"
-		
+
 		case ${ARCH} in
 			x86)
 				einfo "Using generic-i386 to make device nodes..."
@@ -535,10 +535,10 @@ pkg_postinst() {
 				${ROOT}/sbin/MAKEDEV generic
 				;;
 		esac
-		
+
 		${ROOT}/sbin/MAKEDEV sg
 		${ROOT}/sbin/MAKEDEV scd
-		${ROOT}/sbin/MAKEDEV rtc 
+		${ROOT}/sbin/MAKEDEV rtc
 		${ROOT}/sbin/MAKEDEV audio
 		${ROOT}/sbin/MAKEDEV hde
 		${ROOT}/sbin/MAKEDEV hdf
@@ -616,7 +616,7 @@ EOF
 			cp -f "${S}/${rcconfd}" "${ROOT}/${rcconfd}"
 		fi
 
-		# Replace and backup /etc/inittab (unless already in new format) 
+		# Replace and backup /etc/inittab (unless already in new format)
 		if [ -f "${ROOT}/${inittab}" ] && \
 		   [ -z "$(grep '^si::sysinit:/sbin/rc sysinit' "${ROOT}/${inittab}")" ]
 		then
@@ -639,7 +639,7 @@ EOF
 			if [ -d "${ROOT}/${oldsvcdir}/started" ]
 			then
 				cp -ax "${ROOT}/${oldsvcdir}"/* "${ROOT}/${svcdir}"
-				
+
 			elif [ -d "${ROOT}/mnt/.init.d/started" ]
 			then
 				cp -ax "${ROOT}/mnt/.init.d"/* "${ROOT}/${svcdir}"
@@ -686,7 +686,7 @@ EOF
 	echo
 	ewarn "  # etc-update"
 	echo
-	
+
 	if [ -f "${ROOT}/etc/env.d/99foo" ]
 	then
 		echo

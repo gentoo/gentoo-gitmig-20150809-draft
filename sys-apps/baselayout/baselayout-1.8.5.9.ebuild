@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.9.ebuild,v 1.5 2003/07/23 21:39:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.9.ebuild,v 1.6 2003/09/07 00:50:54 msterret Exp $
 
 IUSE="bootstrap build"
 
@@ -33,7 +33,7 @@ RDEPEND="${DEPEND}
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
-	   
+
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -77,7 +77,7 @@ src_unpack() {
 		sed -e 's:PROGS\t= init halt shutdown killall5 runlevel sulogin:PROGS\t= init halt shutdown killall5 runlevel:g' \
 			Makefile.orig > Makefile || die
 	fi
-	
+
 	# Fix Sparc specific stuff
 	if [ "${ARCH}" = "sparc" ]
 	then
@@ -93,14 +93,14 @@ src_unpack() {
 	fi
 
 	# Fix mips specific stuff
-        if [ "${ARCH}" = "mips" ]
-        then
-                cd ${S}/etc
-                cp inittab inittab.orig
-                sed -e 's"# TERMINALS"# SERIAL CONSOLE\nc0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100\n\n# TERMINALS"' \
-                        inittab.orig > inittab || die
-                rm -f inittab.orig
-        fi
+	if [ "${ARCH}" = "mips" ]
+	then
+		cd ${S}/etc
+		cp inittab inittab.orig
+		sed -e 's"# TERMINALS"# SERIAL CONSOLE\nc0:12345:respawn:/sbin/agetty 9600 ttyS0 vt100\n\n# TERMINALS"' \
+				inittab.orig > inittab || die
+		rm -f inittab.orig
+	fi
 }
 
 src_compile() {
@@ -190,11 +190,11 @@ src_install() {
 	keepdir /home
 	keepdir /usr/include /usr/src /usr/portage
 	keepdir /usr/X11R6/include/{X11,GL} /usr/X11R6/lib
-	
+
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../X11R6/include/GL /usr/include/GL
 	dosym ../X11R6/lib/X11 /usr/lib/X11
-	
+
 	#dosym ../src/linux/include/linux /usr/include/linux
 	#dosym ../src/linux/include/asm-i386 /usr/include/asm
 	# Important note: Gentoo Linux 1.0_rc6 no longer uses symlinks to /usr/src for includes.
@@ -210,8 +210,8 @@ src_install() {
 		keepdir /usr/local/${foo}
 	done
 	# Local FHS compat symlinks
-	dosym share/man /usr/local/man	
-	dosym share/doc	/usr/local/doc	
+	dosym share/man /usr/local/man
+	dosym share/doc	/usr/local/doc
 
 	# FHS compatibility symlinks stuff
 	dosym share/man /usr/man
@@ -220,7 +220,7 @@ src_install() {
 	keepdir /usr/X11R6/share
 	dosym ../../share/info	/usr/X11R6/share/info
 	# End FHS compatibility symlinks stuff
-		
+
 	for foo in doman ${FILESDIR}/MAKEDEV.8 ${S}/man/*
 	do
 		[ -f ${foo} ] && doman ${foo}
@@ -235,18 +235,18 @@ src_install() {
 	#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/control
 	#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/services
 	# End supervise stuff
-	
+
 	keepdir /opt
 
 	# The .keep file messes up Portage when looking in /var/db/pkg
-	dodir /var/db/pkg 
+	dodir /var/db/pkg
 	keepdir /var/spool /var/tmp /var/lib/misc
 	chmod 1777 ${D}/var/tmp
 	keepdir /root
-	
+
 	# /proc is very likely mounted right now so a keepdir will fail on merge
-	dodir /proc	
-	
+	dodir /proc
+
 	chmod go-rx ${D}/root
 	keepdir /tmp /var/lock
 	chmod 1777 ${D}/tmp
@@ -285,7 +285,7 @@ src_install() {
 		keepdir /dev
 		keepdir /dev/pts /dev/shm
 		dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
-	fi	
+	fi
 
 	cd ${S}/sbin
 	into /
@@ -316,7 +316,7 @@ src_install() {
 	doins ${S}/etc/env.d/00basic
 
 	keepdir /etc/devfs.d
-	
+
 	keepdir /etc/modules.d
 	insinto /etc/modules.d
 	doins ${S}/etc/modules.d/aliases ${S}/etc/modules.d/i386
@@ -387,7 +387,7 @@ src_install() {
 
 	# Skip this if we are merging to ROOT
 	[ "${ROOT}" = "/" ] && return 0
-	
+
 	# Set up default runlevel symlinks
 	local bar=""
 	for foo in default boot nonetwork single
@@ -443,7 +443,7 @@ pkg_postinst() {
 		cd ${ROOT}/dev
 		# These devices are also needed by many people and should be included
 		einfo "Making device nodes (this could take a minute or so...)"
-		
+
 		case ${ARCH} in
 			x86)
 				einfo "Using generic-i386 to make device nodes..."
@@ -466,10 +466,10 @@ pkg_postinst() {
 				${ROOT}/usr/sbin/MAKEDEV generic-i386
 				;;
 		esac
-		
+
 		${ROOT}/usr/sbin/MAKEDEV sg
 		${ROOT}/usr/sbin/MAKEDEV scd
-		${ROOT}/usr/sbin/MAKEDEV rtc 
+		${ROOT}/usr/sbin/MAKEDEV rtc
 		${ROOT}/usr/sbin/MAKEDEV audio
 		${ROOT}/usr/sbin/MAKEDEV hde
 		${ROOT}/usr/sbin/MAKEDEV hdf
@@ -511,7 +511,7 @@ EOF
 		chgrp utmp ${ROOT}/var/${x}
 		chmod 0664 ${ROOT}/var/${x}
 	done
-					
+
 
 	# Handle the ${svcdir} that changed in location
 	if [ ! -d ${ROOT}/${svcdir}/started/ ] && \
