@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/lft-2.2.ebuild,v 1.6 2005/02/06 08:15:04 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/lft-2.2.ebuild,v 1.7 2005/03/21 23:54:44 vanquirius Exp $
 
 DESCRIPTION="Layer Four Traceroute: an advanced traceroute implementation"
-HOMEPAGE="http://www.mainnerve.com/lft/"
+HOMEPAGE="http://oppleman.com/lft/"
 SRC_URI="http://mainnerve.com/lft/${P}.tar.gz"
 
 LICENSE="MainNerve"

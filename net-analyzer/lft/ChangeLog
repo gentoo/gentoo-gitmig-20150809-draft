@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/lft
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.6 2005/02/06 08:15:04 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.7 2005/03/21 23:54:44 vanquirius Exp $
+
+  21 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> lft-2.2.ebuild:
+  Updated homepage.
 
   06 Feb 2005; Kito <kito@gentoo.org> lft-2.2.ebuild:
   keyword ~ppc-macos closes bug 68499
