@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.2-r1.ebuild,v 1.11 2003/07/08 22:38:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.2-r1.ebuild,v 1.12 2003/07/16 14:58:37 pvdabeel Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X11-based passphrase dialog for use with OpenSSH"
 HOMEPAGE="http://www.liquidmeme.net/software/x11-ssh-askpass/"
 SRC_URI="http://www.liquidmeme.net/software/${PN}/${P}.tar.gz"
-KEYWORDS="x86 sparc ~alpha ~ppc"
+KEYWORDS="x86 sparc ~alpha ppc"
 LICENSE="as-is"
 SLOT="0"
 
