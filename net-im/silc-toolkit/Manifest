@@ -1,4 +1,6 @@
 MD5 d4e22fd3557f4d0b5c9290f64236a8fd silc-toolkit-0.9.11.ebuild 1462
 MD5 435e1c820899ad0784bcf2214da0b2ce ChangeLog 733
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 d0dfb8e564280583922fcdb78a9deabb silc-toolkit-0.9.11-r1.ebuild 2261
+MD5 f40b47266698753b0bc58c24ce9aac4e files/digest-silc-toolkit-0.9.11-r1 73
 MD5 f40b47266698753b0bc58c24ce9aac4e files/digest-silc-toolkit-0.9.11 73
