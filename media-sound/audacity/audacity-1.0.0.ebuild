@@ -1,15 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.0.0.ebuild,v 1.4 2002/07/13 17:06:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.0.0.ebuild,v 1.5 2002/07/19 12:27:52 seemant Exp $
 
 DESCRIPTION="A free, crossplatform audio editor."
 SRC_URI="mirror://sourceforge/audacity/audacity-src-1.0.0.tgz"
 HOMEPAGE="http://audacity.sourceforge.net/"
+
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 # doesn't compile with wxGTK-2.3.2
-DEPEND="virtual/glibc =x11-libs/wxGTK-2.2.9 oggvorbis? ( media-libs/libvorbis )" 
-RDEPEND="virtual/glibc =x11-libs/wxGTK-2.2.9 oggvorbis? ( media-libs/libvorbis )"
+DEPEND="=x11-libs/wxGTK-2.2.9
+	oggvorbis? ( media-libs/libvorbis )" 
 
 src_compile() {
 	local myconf

@@ -1,16 +1,18 @@
-# Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
+# Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.0_rc1-r1.ebuild,v 1.2 2002/07/11 06:30:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.0_rc1-r1.ebuild,v 1.3 2002/07/19 12:27:49 seemant Exp $
 
+S="${WORKDIR}/${P/_rc/rc}"
 DESCRIPTION="Advanced Linux Sound Architecture tools"
 HOMEPAGE="http://www.alsa-project.org"
-
 SRC_URI="ftp://ftp.alsa-project.org/pub/tools/${P/_rc/rc}.tar.bz2"
-S="${WORKDIR}/${P/_rc/rc}"
 
-DEPEND="virtual/glibc 
-        >=media-libs/alsa-lib-0.9.0_rc1
-        >=x11-libs/gtk+-1.0.1"
+SLOT="0.9"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND=">=media-libs/alsa-lib-0.9.0_rc1
+	>=x11-libs/gtk+-1.0.1"
 
 # This is a list of the tools in the package.
 ALSA_TOOLS="ac3dec as10k1 envy24control sb16_csp seq/sbiload"
@@ -21,10 +23,10 @@ src_compile() {
     local f
     for f in ${ALSA_TOOLS}
     do
-        cd "${S}/${f}"
-        ./configure --host="${CHOST}" --prefix=/usr --mandir=/usr/share/man \
-            || die "./configure failed"
-        emake || die "Parallel Make Failed"
+	cd "${S}/${f}"
+
+	econf || die "./configure failed"
+	emake || die "Parallel Make Failed"
     done
 }
 
@@ -32,19 +34,19 @@ src_install() {
     local f
     for f in ${ALSA_TOOLS}
     do
-        # Install the main stuff
-        cd "${S}/${f}"
-        make DESTDIR="${D}" install || die
+	# Install the main stuff
+	cd "${S}/${f}"
+	make DESTDIR="${D}" install || die
 
-        # Install the text documentation
-        local doc
-        for doc in README TODO ChangeLog COPYING AUTHORS
-        do
-            if [ -f "${doc}" ]
-            then
-                mv "${doc}" "${doc}.`basename ${f}`"
-                dodoc "${doc}.`basename ${f}`"
-            fi
-        done
+	# Install the text documentation
+	local doc
+	for doc in README TODO ChangeLog COPYING AUTHORS
+	do
+	    if [ -f "${doc}" ]
+	    then
+		mv "${doc}" "${doc}.`basename ${f}`"
+		dodoc "${doc}.`basename ${f}`"
+	    fi
+	done
     done
 }

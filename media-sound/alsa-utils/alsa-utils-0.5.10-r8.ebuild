@@ -7,9 +7,12 @@ DESCRIPTION="Advanced Linux Sound Architecture / Utils"
 SRC_URI="ftp://ftp.alsa-project.org/pub/utils/${P}.tar.bz2"
 HOMEPAGE="http://www.alsa-project.org/"
 
-DEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.1
+DEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/alsa-lib-0.5.10"
+
+SLOT="0.5"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 
@@ -19,7 +22,7 @@ src_unpack() {
 
 src_compile() {
 
-	./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} || die
+	econf || die
 	make || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.12a.ebuild,v 1.6 2002/07/16 11:36:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.12a.ebuild,v 1.7 2002/07/19 12:27:49 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Linux Sound Architecture modules"
@@ -11,11 +11,12 @@ HOMEPAGE="http://www.alsa-project.org"
 DEPEND="sys-devel/autoconf virtual/glibc"
 PROVIDE="virtual/alsa"
 
-SLOT="0"
+SLOT="0.5"
 LICENSE="GPL"
 KEYWORDS="x86"
 
 setkv() {
+	#alsa-driver will compile modules for kernel symlinked to /usr/src/linux
 	KV=""
 	KV=`readlink /usr/src/linux`
 	if [ $? -ne 0 ] ; then
@@ -24,7 +25,6 @@ setkv() {
 		echo
 		die
 	else
-		#alsa-driver will compile modules for the kernel pointed to by /usr/src/linux
 		KV=${KV/linux-/}
 	fi
 }
@@ -39,7 +39,12 @@ src_unpack() {
 
 src_compile() {
 	setkv
-	./configure --with-kernel="${ROOT}usr/src/linux-${KV}" --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all || die
+	./configure \
+		--with-kernel="${ROOT}usr/src/linux-${KV}" \
+		--with-isapnp=yes \
+		--with-sequencer=yes \
+		--with-oss=yes \
+		--with-cards=all || die
 	emake || die
 }
 
