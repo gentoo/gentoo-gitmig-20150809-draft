@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.10 2003/04/29 21:08:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.11 2003/06/01 14:07:32 mholzer Exp $
 
 IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi svga"
 
-inherit libtool flag-o-matic base
+inherit gcc libtool flag-o-matic base
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Tools for MJPEG video"
@@ -55,12 +55,12 @@ src_unpack() {
 		cp jpeg_old.h jpeg_old.h.orig
 		sed -e "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" jpeg_old.h.orig > jpeg_old.h
 
+		if [ "`gcc-major-version`" -eq "3" ] ; then
 		# Don't remove this - contact phoen][x <phoenix@gentoo.org> if you have problems with it.
 		cd ${S}/lavtools
-		mv lav_common.c lav_common.c.old
-		mv lav_io.c lav_io.c.old
-		sed -e "s/dv_decoder_new(0,0,0)\;/dv_decoder_new()\;/" lav_common.c.old > lav_common.c
-		sed -e "s/dv_decoder_new(0,0,0)\;/dv_decoder_new()\;/" lav_io.c.old > lav_io.c
+		sed -i "s/dv_decoder_new(0,0,0)\;/dv_decoder_new()\;/" lav_common.c
+		sed -i "s/dv_decoder_new(0,0,0)\;/dv_decoder_new()\;/" lav_io.c
+		fi
 	fi
 
 	if use ppc; then
@@ -107,9 +107,6 @@ src_compile() {
 }
 
 src_install() {
-
 	einstall || die
-
 	dodoc mjpeg_howto.txt
 }
-
