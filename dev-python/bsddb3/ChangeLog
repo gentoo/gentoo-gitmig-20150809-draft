@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.10 2004/03/17 09:44:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.11 2004/03/30 08:00:16 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> bsddb3-4.1.3.ebuild:
+  Adding amd64 keyword. Closing #43595.
 
   17 Mar 2004; Seemant Kulleen <seemant@gentoo.org> bsddb3-3.4.0-r1.ebuild,
   bsddb3-4.1.3.ebuild, bsddb3-4.2.4.ebuild:
