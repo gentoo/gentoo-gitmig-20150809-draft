@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql++
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.26 2005/01/10 21:16:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.27 2005/01/15 00:01:57 robbat2 Exp $
+
+  14 Jan 2005; Robin H. Johnson <robbat2@gentoo.org>
+  -mysql++-1.7.9-r2.ebuild, -mysql++-1.7.9-r5.ebuild,
+  -mysql++-1.7.9-r6.ebuild, -mysql++-1.7.9.ebuild:
+  Remove some broken old versions, and stabilize .26 on x86.
 
 *mysql++-1.7.26 (10 Jan 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.26.ebuild,v 1.1 2005/01/10 21:16:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.26.ebuild,v 1.2 2005/01/15 00:01:57 robbat2 Exp $
 
 inherit gcc eutils gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tangentsoft.net/mysql++/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~hppa ~mips ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~alpha ~hppa ~mips ~sparc ~ppc ~amd64"
 IUSE=""
 
 DEPEND=">=dev-db/mysql-4.0
@@ -33,7 +33,7 @@ src_compile() {
 	myconf="${myconf} --includedir=/usr/include/mysql++"
 	# not including the directives to where MySQL is because it seems to
 	# find it just fine without
-	
+
 	# force the cflags into place otherwise they get totally ignored by
 	# configure
 	CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
