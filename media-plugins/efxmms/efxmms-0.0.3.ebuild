@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/efxmms/efxmms-0.0.3.ebuild,v 1.9 2004/07/14 20:40:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/efxmms/efxmms-0.0.3.ebuild,v 1.10 2004/09/01 17:34:05 eradicator Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/efxmms/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~sparc"
+KEYWORDS="x86 amd64 sparc"
 
 DEPEND="media-sound/xmms"
 

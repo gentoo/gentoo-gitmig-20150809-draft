@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 44ba54879c6a511f25252c70c62d6892 ChangeLog 1338
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 7df07d54b4764069c74af00d95bf00c5 eq-xmms-0.6.ebuild 973
-MD5 096510a0c519e01f9b4db0a695c2a22c eq-xmms-0.6-r1.ebuild 1018
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 e7f37e8e2be08df85b78c53a7a99fe52 ChangeLog 1454
+MD5 c59dd6ec848e4c836fc94b387f3d9f2d eq-xmms-0.6-r1.ebuild 1000
 MD5 2cf1a0e042cf2afb1366cd05f91bedce files/digest-eq-xmms-0.6 63
 MD5 e2cda8be9765888166aa11cb345e6a41 files/eq-xmms-0.6-nonx86.patch 410
 MD5 2cf1a0e042cf2afb1366cd05f91bedce files/digest-eq-xmms-0.6-r1 63
 MD5 db956a0ebfff40720bb6487f96564a00 files/eq-xmms-0.6-shade_fix.patch 1116
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+fJZmdTrptrqvGERAi9MAJ9hZJoH+NoQdLinZidCQ3bBjE0pOwCcDVZl
-NDyuiQFfkCxrpiYBEHqSVko=
-=OGak
------END PGP SIGNATURE-----
