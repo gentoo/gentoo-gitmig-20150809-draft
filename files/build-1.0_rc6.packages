@@ -25,4 +25,4 @@
 ./net-misc/wget/wget-1.7-r1.ebuild
 ./net-misc/rsync/rsync-2.4.6-r4.ebuild
 ./sys-kernel/linux-headers/linux-headers-2.4.6-r3.ebuild
-./app-editors/e3/e3-1.7-r1.ebuild
+./app-editors/e3/e3-1.7-r2.ebuild
