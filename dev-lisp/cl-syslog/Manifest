@@ -1,5 +1,5 @@
-MD5 24ea41eb284f1f66773c22e4cb7ab380 cl-syslog-0.9.1-r1.ebuild 731
-MD5 74606b28c579849ea43ba6d97b0bdc25 cl-syslog-0.9.1.ebuild 869
+MD5 d7b7734b5ceda0c5180f241fba2ec1b4 cl-syslog-0.9.1-r1.ebuild 739
+MD5 5baf55bddf03b9a5fa9472dc4d617499 cl-syslog-0.9.1.ebuild 877
 MD5 e6d2ab8cc91e7902fa2f3aee1549c912 ChangeLog 528
 MD5 b379aa8d1fae982a74023c7e8d17827a metadata.xml 479
 MD5 018138c1f1cccb965321dd1de1984344 files/digest-cl-syslog-0.9.1-r1 65
