@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.17 2004/07/19 23:21:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.18 2004/07/21 21:06:43 gmsoft Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -27,9 +27,12 @@ S="${WORKDIR}/${PN}-${BASE_PV}"
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://sources.redhat.com/glibc/"
 
+HPPA_PATCHES=2004-06-04
+
 SRC_URI="http://ftp.gnu.org/gnu/${PN}/${PN}-${BASE_PV}.tar.bz2
 	ftp://sources.redhat.com/pub/${PN}/snapshots/${PN}-${BASE_PV}.tar.bz2
-	mirror://gentoo/${PN}-manpages-${NEW_PV}.tar.bz2"
+	mirror://gentoo/${PN}-manpages-${NEW_PV}.tar.bz2
+	hppa? ( http://parisc-linux.org/~carlos/glibc-work/glibc-hppa-patches-${HPPA_PATCHES}.tar.gz )"
 if [ -z "${BRANCH_UPDATE}" ]; then
 	SRC_URI="${SRC_URI}
 		http://ftp.gnu.org/gnu/${PN}/${PN}-linuxthreads-${BASE_PV}.tar.bz2
@@ -41,7 +44,7 @@ fi
 
 LICENSE="LGPL-2"
 SLOT="2.2"
-KEYWORDS="-* ~x86 ~mips ~amd64"
+KEYWORDS="-* ~x86 ~mips ~amd64 ~hppa"
 IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
@@ -330,9 +333,16 @@ do_arch_arm_patches() {
 
 
 do_arch_hppa_patches() {
-	cd ${S};
+	einfo "Applying hppa specific path of ${HPPA_PATCHES} ..."
+	cd ${T}
+	unpack glibc-hppa-patches-${HPPA_PATCHES}.tar.gz
+	cd ${S}
+	export EPATCH_OPTS=-p1
+	for i in ${T}/glibc-hppa-patches-${HPPA_PATCHES}/*.diff
+	do
+		patch -p 1 < ${i}
+	done
 
-	# Any needed patches for hppa go here
 }
 
 
