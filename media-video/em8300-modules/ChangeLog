@@ -1,7 +1,12 @@
 # ChangeLog for media-video/em8300-modules
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.8 2004/08/11 10:50:10 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.9 2004/08/17 14:02:24 arj Exp $
 
+  17 Aug 2004; Anders Rune Jensen <arj@gentoo.org> em8300-modules-0.15.0_pre20040525 :
+  Don't install 2.4 modules on a 2.6 kernel. Will confuse modprobe. Thanx
+  to Rasmus B. Nielsen <r10@cs.auc.dk> for pointing it out. Also get the
+  correct kernel version.
+	
 *em8300-modules-0.15.0_pre20040525 (11 Aug 2004)
  
   11 Aug 2004; Anders Rune Jensen <arj@gentoo.org> em8300-modules-0.15.0_pre20040525 :

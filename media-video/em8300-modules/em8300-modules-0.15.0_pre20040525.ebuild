@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.0_pre20040525.ebuild,v 1.1 2004/08/11 10:50:10 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.0_pre20040525.ebuild,v 1.2 2004/08/17 14:02:24 arj Exp $
 
 DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card kernel modules"
 HOMEPAGE="http://dxr3.sourceforge.net"
@@ -20,7 +20,6 @@ src_unpack () {
 
 	unpack ${A}
 	cd ${S}
-
 }
 
 src_compile ()  {
@@ -36,12 +35,17 @@ src_install () {
 	insinto "/usr/include/linux"
 	doins ../include/linux/em8300.h
 
+	KERNEL=`uname -r`
+
 	# The driver goes into the standard modules location
-	insinto "/lib/modules/${KV}/kernel/drivers/video"
-	# 2.6
-	doins em8300.ko bt865.ko adv717x.ko
-	# 2.4
-	doins em8300.o bt865.o adv717x.o
+	insinto "/lib/modules/${KERNEL}/kernel/drivers/video"
+
+	if [ "${KERNEL:0:3}" == "2.6" ]
+	then
+		doins em8300.ko bt865.ko adv717x.ko
+	else
+		doins em8300.o bt865.o adv717x.o
+	fi
 
 	# Docs
 	dodoc README-modoptions \
