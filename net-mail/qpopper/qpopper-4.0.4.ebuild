@@ -3,10 +3,10 @@
 
 PN0=qpopper
 S=${WORKDIR}/${PN0}4.0.4
-DESCRIPTION="Qpopper enables a unix/linux machine to act as a Post Office Protocol version 3 (pop) server"
+DESCRIPTION="A POP3 Server"
 SRC_URI="ftp://ftp.qualcomm.com/eudora/servers/unix/popper/${PN0}4.0.4.tar.gz
 		http://www.ibiblio.org/gentoo/distfiles/qpopper-files.tar.bz2"
-HOMEPAGE="http://www.qpopper.org/"
+HOMEPAGE="http://www.qpopper.org/qpopper/"
 
 DEPEND="virtual/glibc \
       virtual/mta \
