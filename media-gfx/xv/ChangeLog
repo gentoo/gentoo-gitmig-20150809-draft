@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.5 2002/06/05 09:44:46 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.6 2002/09/02 06:13:19 jmorgan Exp $
 
 *xv-3.10a-r2 (05 Jun 2002)
+
+  02 Sep 2002; Jack Morgan <jmorgan@gentoo.org> xv-3.10a-r2.ebuild
+  Added sparc/sparc64 keywords :
 
   05 Jun 2002; Olivier Reisch <doctomoe@gentoo.org> xv-3.10a-r2.ebuild
   files/digest-xv-3.10a-r2 :
