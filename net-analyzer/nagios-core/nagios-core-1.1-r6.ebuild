@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r6.ebuild,v 1.11 2004/07/04 19:55:26 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r6.ebuild,v 1.12 2004/07/04 22:10:38 eldad Exp $
 
 inherit eutils
 
@@ -109,7 +109,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		${myconf} || die "./configure failed"
 
-	make DESTDIR=${D} nagios contrib
+	make DESTDIR=${D} nagios contrib || die "make failed"
 
 	use noweb || make DESTDIR=${D} cgis # Only compile the CGI's if "noweb" useflag is not set.
 }

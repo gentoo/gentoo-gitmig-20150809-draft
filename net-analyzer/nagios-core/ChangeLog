@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.30 2004/07/04 19:55:26 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.31 2004/07/04 22:10:38 eldad Exp $
+
+  05 Jul 2004; Eldad Zack <eldad@gentoo.org> nagios-core-1.1-r6.ebuild,
+  nagios-core-1.2-r1.ebuild:
+  Added missing make || die. Added include path for postgresql, closes #45614.
 
   04 Jul 2004; Eldad Zack <eldad@gentoo.org> nagios-core-1.1-r4.ebuild,
   nagios-core-1.1-r5.ebuild, nagios-core-1.1-r6.ebuild,
