@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2757 2004/03/20 22:20:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2758 2004/03/20 22:46:34 foser Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -71,7 +71,7 @@ gnome-base/gnome-keyring
 >=media-gfx/eog-2.5
 >=net-www/epiphany-1.2
 net-analyzer/gnome-netstatus
->=net-print/gnome-cups-manager-r03202004
+>=net-print/gnome-cups-manager-0.17-r03202004
 >=app-arch/file-roller-2.5
 >=app-editors/gedit-2.5
 >=app-text/ggv-2.5
