@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.117 2004/10/21 09:26:06 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.118 2004/10/29 09:45:09 mglauche Exp $
+
+  29 Oct 2004; <mglauche@gentoo.org> samba-3.0.6-r3.ebuild,
+  samba-3.0.6-r4.ebuild, samba-3.0.7-r1.ebuild:
+  fixed some small typos, thanks to bin-doph <bauer@dmsb.de>
 
   21 Oct 2004; Christian Andreetta <satya@gentoo.org> -files/recycle.conf,
   -files/smb.conf.example-samba3, files/smb.conf.example-samba3.gz,

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.6-r4.ebuild,v 1.14 2004/10/21 09:26:06 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.6-r4.ebuild,v 1.15 2004/10/29 09:45:09 mglauche Exp $
 
 inherit eutils flag-o-matic
 
@@ -363,7 +363,7 @@ pkg_postinst() {
 		ewarn "    attribute on all accounts, and ensure it is not 0."
 		einfo "2004-07: WARNING: smbldap-tools changes"
 		einfo "         smbldap-tools conf changed to /etc/smbldap-tools"
-		einfo "         /usr/shared/samba/scripts: some script names changed"
+		einfo "         /usr/share/samba/scripts: some script names changed"
 		einfo "         dev-perl/Crypt-SmbHash: new pwd hash validation/conversion system"
 		einfo ""
 	fi
