@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07_beta2.ebuild,v 1.5 2004/04/17 10:54:45 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07_beta2.ebuild,v 1.6 2004/05/28 16:48:29 kugelfang Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,7 +13,7 @@ S="${WORKDIR}/${PN}-${MyPV}"
 
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha -amd64"
 IUSE="tcltk"
 
 DEPEND="virtual/glibc

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.28 2004/05/15 00:54:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.29 2004/05/28 16:48:29 kugelfang Exp $
+
+  28 May 2004; Danny van Dyk <kugelfang@gentoo.org> ocaml-3.07-r1.ebuild,
+  ocaml-3.07.ebuild, ocaml-3.07_beta2.ebuild:
+  Marked ocaml -amd64. Produces bad object code that causes segfaults under
+  certain conditions. This happens only on amd64.
 
   15 May 2004; Bryan Østergaard <kloeri@gentoo.org> ocaml-3.07-r1.ebuild:
   Stable on alpha.
