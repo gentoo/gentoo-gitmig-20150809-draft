@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/sitecopy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.18 2004/07/01 21:52:36 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.19 2004/07/16 17:11:05 chriswhite Exp $
+
+*sitecopy-0.13.4-r2 (17 Jul 2004)
+
+  17 Jul 2004; Chris White <chriswhite@gentoo.org> +sitecopy-0.13.4-r2.ebuild:
+  Updated to -r2 which fixes security Bug #51585.  Added myself as maintainer
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> sitecopy-0.10.12-r1.ebuild,
   sitecopy-0.12.1.ebuild, sitecopy-0.13.4-r1.ebuild, sitecopy-0.13.4.ebuild:
