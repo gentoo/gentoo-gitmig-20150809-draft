@@ -25,6 +25,7 @@ src_unpack() {
 	cd ${S}
 #Patch the Makefile for gentoo-isms 
 	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
+	patch -p0 < ${FILESDIR}/${P}-gcc32.diff || die
 
 }
 
