@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 65c0d48994c39b9ce1134037dbd632d9 ChangeLog 2575
-MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 60676cf60fca62bfc640fe1c60912b0d terminus-font-4.07.ebuild 1096
+MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+MD5 66f3dcb3d560498f9cb43c81a94134b9 ChangeLog 2714
 MD5 f30c80cd2efee6f287fac5069ea237f2 terminus-font-4.09.ebuild 1110
-MD5 09ca3612679b67d986a0dde236c4bf56 terminus-font-4.11.ebuild 1109
+MD5 67f01f6679108a1c1ff4dbbb3022f9be terminus-font-4.11.ebuild 1094
 MD5 92f73aafe5535cf0996be1b810ab7c9b files/digest-terminus-font-4.07 70
 MD5 fd82d94715f95b654cc4ea9a696b7981 files/digest-terminus-font-4.09 70
 MD5 675b78bea73e2d292d68944a6c455e73 files/digest-terminus-font-4.11 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCELOSKRy60XGEcJIRAkO0AKCB8/RVPHFkqhBAci0t4a2KEm88TgCeOQYi
-P3X8xQgn/PVI2exVkFe3hlU=
-=CyiP
------END PGP SIGNATURE-----

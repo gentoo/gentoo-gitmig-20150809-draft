@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.19 2005/02/14 14:19:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.20 2005/02/19 10:15:55 usata Exp $
+
+  19 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> terminus-font-4.11.ebuild:
+  Fixed file collsion with sys-apps/kdb. This closes bug #76937.
 
   14 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   terminus-font-4.11.ebuild:
