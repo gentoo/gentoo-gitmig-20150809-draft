@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-Create/ChangeLog,v 1.1 2002/11/29 12:24:30 mcummings Exp $
+
+*PDF-Create-0.01 (29 Nov 2002)
+
+  26 Nov 2002; Michael Cummings <mcummings@gentoo.org> PDF-Create-0.01.ebuld:
+ 
+  Initial import, requested for Gentoo web site work
