@@ -43,9 +43,10 @@ src_unpack() {
 # Now we need to deal with the tarball of patches.
 
     unpack ${P}-ac2-mjc3.tar.bz2
-	addpatches gentoo-patches linux-${KV}
+	cd gentoo-patches
+	addpatches . ${WORKDIR}/linux-${KV}
 
-	cd linux-${KV}
+	cd ../linux-${KV}
 	
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
