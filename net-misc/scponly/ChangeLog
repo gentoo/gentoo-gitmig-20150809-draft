@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/scponly
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.3 2003/10/17 20:01:01 bazik Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.4 2004/03/24 15:32:04 matsuu Exp $
+
+*scponly-3.11 (25 Mar 2004)
+
+  25 Mar 2004; <matsuu@gentoo.org> scponly-3.11.ebuild:
+  Version bumped.
+  Added --enable-rsync-compat and --enable-chrooted-binary to configure options.
+  Added pkg_postinst and pkg_config.
 
   17 Oct 2003; Sven Blumenstein <bazik@gentoo.org> scponly-3.8.ebuild:
   Added ~sparc keyword (bug #31195)
