@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.4 2003/09/10 17:57:30 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.5 2003/09/17 11:14:16 taviso Exp $
+
+  17 Sep 2003; Tavis Ormandy <taviso@gentoo.org> ksh-93.20030422.ebuild:
+  removing old ebuilds.
 
 *ksh-93.20030724 (10 Sep 2003)
 
