@@ -120,10 +120,6 @@ app-editors/kvim
 # Masked for testing
 >=net-www/apache-2.0.0
 
-# <mcummings@gentoo.org> (12 Sep 2002)
-# Masked for testing
-=net-mail/cyrus-imapd-2.1.5-r2
-
 # <aliz@gentoo.org> (12 Sep 2002)
 # Masked for testing
 =net-misc/freeswan-1.98b-r1
