@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.10.ebuild,v 1.1 2004/09/13 02:29:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.10.ebuild,v 1.2 2004/09/13 02:31:34 eradicator Exp $
 
 IUSE="oggvorbis mp3"
 
@@ -10,7 +10,7 @@ SRC_URI="http://pwp.netcabo.pt/paol/tagtool/${P}.tar.gz"
 
 DEPEND=">=x11-libs/gtk+-2.4.0-r1
 	>=gnome-base/libglade-2.4.0
-	mp3? ( >=media-libs/id3lib-3.8.3-r2 )
+	mp3? ( >=media-libs/id3lib-3.8.3-r3 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0.1 )"
 
 SLOT="0"
