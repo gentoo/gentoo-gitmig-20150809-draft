@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/glibwww/glibwww-0.2-r1.ebuild,v 1.4 2001/08/17 21:15:20 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,8 +10,12 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}
          ftp://gnome.eazel.com/pub/gnome/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=gnome-base/gnome-libs-1.2.13 >=net-libs/libwww-1.5.3-r1 gnome-base/gnome-env"
-RDEPEND=">=net-libs/libwww-1.5.3-r1 gnome-base/gnome-env"
+DEPEND=">=gnome-base/gnome-libs-1.2.13
+	>=net-libs/libwww-1.5.3-r1
+	gnome-base/gnome-env"
+
+RDEPEND=">=net-libs/libwww-1.5.3-r1
+	gnome-base/gnome-env"
 
 src_compile() {
   try ./configure --host=${CHOST} --prefix=/opt/gnome
