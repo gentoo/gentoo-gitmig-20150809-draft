@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.12.ebuild,v 1.1 2003/06/24 11:55:34 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.12.ebuild,v 1.2 2003/07/13 07:40:58 vapier Exp $
 
 IUSE="sdl nls gnome"
 
@@ -21,7 +21,6 @@ src_compile() {
 	local myconf="--enable-fullscreen"
 	use sdl && myconf="${myconf} --with-sdl"
 	use gnome && myconf="${myconf} --enable-gnomeui"
-	use nls || myconf="${myconf} --disable-nls"
 
 	./configure \
 		--host=${CHOST} \
