@@ -2,6 +2,12 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # $ Header: $
 
+
+gaim-0.59-r2 ( 28 Jun 2002)
+  28 Jun 2002; Spider <spider@gentoo.org> gaim-0.59-r2.ebuild: 
+  moved gnome-core to gnome-panel 1.4.1 
+
+  
 *gaim-0.59-r1 (27 June 2002)
   27 June 2002; Jays Kwak <jayskwak@gentoo.org> gaim-0.59-r1.ebuild
 
