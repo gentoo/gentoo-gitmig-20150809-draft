@@ -1,13 +1,16 @@
 # ChangeLog for dev-util/aegis
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.14 2004/06/25 02:18:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.15 2004/11/02 02:30:02 karltk Exp $
+
+  02 Nov 2004; Karl Trygve Kalleberg <karltk@gentoo.org> aegis-4.19.ebuild:
+  New upstream version. Fixes #69059.
 
   30 Apr 2004; David Holm <dholm@gentoo.org> aegis-4.16.ebuild:
   Added to ~ppc.
 
 *aegis-4.16 (30 Apr 2004)
 
-  30 Aprc 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  30 Apr 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   aegis-4.16.ebuild: New upstream version. Removed 4.4 and 4.7.
 
   24 Feb 2004; Sven Blumenstein <bazik@gentoo.org> aegis-4.9.ebuild:
