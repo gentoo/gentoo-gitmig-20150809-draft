@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.3_pre0.ebuild,v 1.2 2004/08/10 09:26:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.3_pre0.ebuild,v 1.3 2004/08/18 09:32:17 obz Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -38,7 +38,7 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=x11-libs/libxklavier-1.02
 	>=media-libs/audiofile-0.2.6
-	>=media-sound/esound-0.2.34
+	>=media-sound/esound-0.2.35
 	>=gnome-base/gnome-mime-data-2.4.1
 	>=media-libs/libart_lgpl-2.3.16
 
@@ -62,7 +62,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/control-center-2.6.1
 
 	>=gnome-base/eel-2.6.2
-	>=gnome-base/nautilus-2.6.3
+	>=gnome-base/nautilus-2.6.3-r1
 
 	>=media-libs/gstreamer-0.8.3-r1
 	>=media-libs/gst-plugins-0.8.2
@@ -87,7 +87,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=x11-themes/gnome-icon-theme-1.2.3
 	>=x11-themes/gnome-themes-2.6.2
 
-	>=x11-terms/gnome-terminal-2.6.1
+	>=x11-terms/gnome-terminal-2.6.1-r1
 	>=gnome-extra/gnome2-user-docs-2.6.0.1
 
 	>=x11-libs/gtksourceview-1.0.1
