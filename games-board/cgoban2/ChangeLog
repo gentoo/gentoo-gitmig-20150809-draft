@@ -1,6 +1,11 @@
 # ChangeLog for games-board/cgoban2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/ChangeLog,v 1.12 2004/06/24 22:15:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/ChangeLog,v 1.13 2004/07/14 08:16:59 mr_bones_ Exp $
+
+*cgoban2-2.6.3 (14 Jul 2004)
+
+  14 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> +cgoban2-2.6.3.ebuild:
+  version bump (bug #56940)
 
 *cgoban2-2.6.1 (27 May 2004)
 
