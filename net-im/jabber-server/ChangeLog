@@ -1,6 +1,10 @@
 # ChangeLog for net-im/jabber-server
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/ChangeLog,v 1.14 2003/12/17 17:18:24 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/ChangeLog,v 1.15 2003/12/31 01:51:58 bazik Exp $
+
+  31 Dec 2003; Sven Blumenstein <bazik@gentoo.org>
+  jabber-server-1.4.3-r1.ebuild, jabber-server-1.4.3.ebuild:
+  Wrong use of "useflag?" in DEPEND fixed (killed repoman)
 
 *jabber-server-1.4.3-r1 (17 Dec 2003)
 
