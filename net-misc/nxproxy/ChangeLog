@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxproxy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/ChangeLog,v 1.1 2003/08/27 03:04:42 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/ChangeLog,v 1.2 2003/09/09 13:38:50 stuart Exp $
+
+  09 Sep 2003; stuart nxproxy-1.2.2.ebuild:
+  Marked as stable
 
 *nxproxy-1.2.2 (27 Aug 2003)
 
