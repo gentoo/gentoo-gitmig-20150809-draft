@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/snarf-7.0-r2.ebuild,v 1.4 2003/10/20 21:57:27 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/snarf-7.0-r2.ebuild,v 1.5 2003/10/20 22:00:07 taviso Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A full featured small web-spider"
@@ -20,7 +20,7 @@ src_unpack() {
 
 src_compile() {
 	econf || die
-	make || die
+	emake || die
 }
 
 src_install() {
