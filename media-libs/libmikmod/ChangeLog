@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.19 2004/03/26 17:14:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.20 2004/04/08 07:35:03 eradicator Exp $
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libmikmod-3.1.10-r1.ebuild, libmikmod-3.1.10.ebuild:
+  cleaned up HOMEPAGE
 
 *libmikmod-3.1.11 (26 Mar 2004)
 
