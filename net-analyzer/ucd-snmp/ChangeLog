@@ -1,10 +1,16 @@
 # ChangeLog for net-analyzer/ucd-snmp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.4 2002/05/26 10:14:02 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.5 2002/06/29 19:27:07 blocke Exp $
+
+*ucd-snmp-4.2.5 (29 Jun 2002)
+
+  29 Jun 2002; Bruce A. Locke <blocke@shivan.org> ucd-snmp-4.2.5.ebuild:
+
+  Version bump and dependency upgrade
 
 *ucd-snmp-4.2.3-r1 (3 May 2002)
   
-  26 May 2002: Preston A. Elder <prez@gentoo.org> :
+  26 May 2002; Preston A. Elder <prez@gentoo.org> :
 
   Made it work with gcc 3.1 by removing the --with-openssl=/usr stuff,
   it caused configure to not find headers, plus openssl is autodetected.
