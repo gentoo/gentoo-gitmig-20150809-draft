@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jimi/jimi-1.0.ebuild,v 1.1 2004/09/21 18:04:46 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jimi/jimi-1.0.ebuild,v 1.2 2004/10/03 21:27:48 weeve Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://java.sun.com/products/jimi/"
 SRC_URI="jimi1_0.zip"
 LICENSE="sun-bcla-jimi"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 IUSE="doc"
 DEPEND="virtual/jre"
 RESTRICT="fetch"
