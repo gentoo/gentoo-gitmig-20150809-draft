@@ -1,9 +1,44 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.137 2004/05/06 02:34:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.138 2004/05/07 22:24:32 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.9.0 (07 May 2004)
+
+  07 May 2004; Aron Griffis <agriffis@gentoo.org> +baselayout-1.9.0.ebuild:
+  Update to rc-scripts-1.4.11, which fixes the following issues:
+  - Fix bug 20597: Skip RCS files when updating modules
+  - Fix bug 49926: Add a --assume-kernel flag to modules-update.  This
+    requires a companion patch in module-init-tools-3.0-r2 to handle the
+    same flag in generate-modprobe.conf; this dependency won't be
+    handled in the baselayout ebuild since it only affects livecd
+    building.
+  - Fix bug 34827: net.eth0 breaks when localized because the ifconfig
+    output changes.  Wrap ifconfig in a function that overrides LC_ALL=C
+  - Fix bug 48305: Provide a new network configuration variable
+    ifconfig_fallback_eth0 which allows one to specify a fallback
+    configuration in case DHCP fails.
+  - Fix bug 50246: Give root an invalid password ("*" in /etc/shadow) in
+    the default baselayout.  This prevents the first reboot after
+    installation from having a blank password.
+  - Fix bug 48595: Make sure $(id -u) is zero (root user) when running
+    init scripts to avoid a lot of error messages.
+  - Fix bug 44316: Use 0644 instead of 0640 for resolv.conf in net.ppp0
+  - Fix bug 22686: Update to version 1.10.20 of Debian's start-stop-daemon 
+    (contained in dpkg at http://packages.debian.org/testing/base/dpkg)
+    which makes --nicelevel work right
+  - In net.eth0, fix many instances of loops like "for ((i = 0; i < 100;
+    i = i + 1))".  The problem here is that the middle comparison is
+    being interpreted as a bash conditional, which means that it's doing
+    string comparison by default.  It needs to be "i -lt 100"
+  - Replace many lines of awk with two lines of grep in
+    init.d/localmount
+  
+  In the baselayout ebuild, add some information prior to calling
+  mkdirs.sh to alleviate the confusion around .keep warnings.  For
+  example bug 50369
 
   05 May 2004; Aron Griffis <agriffis@gentoo.org> baselayout-1.8.12.ebuild:
   Fix bug 50108: Create /boot/boot symlink in pkg_postinst because sometimes
