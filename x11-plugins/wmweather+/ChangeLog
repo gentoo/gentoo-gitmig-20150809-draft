@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmweather+
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/ChangeLog,v 1.15 2004/09/02 18:22:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/ChangeLog,v 1.16 2004/12/23 15:10:08 corsair Exp $
+
+  23 Dec 2004; Markus Rothe <corsair@gentoo.org> wmweather+-2.9.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #74851
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   wmweather+-2.9.ebuild:
