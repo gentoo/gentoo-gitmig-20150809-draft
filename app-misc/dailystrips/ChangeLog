@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/dailystrips
+# ChangeLog for app-misc/dailystrips
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/ChangeLog,v 1.4 2002/10/19 15:48:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/ChangeLog,v 1.5 2002/12/17 19:16:13 vapier Exp $
 
 *dailystrips-1.0.25 <13 Oct 2002>
   13 Oct 2002; Phil Bordelon <sunflare@gentoo.org> dailystrips-1.0.25.ebuild:
