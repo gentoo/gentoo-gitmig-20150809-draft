@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tn5250
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/ChangeLog,v 1.5 2004/10/02 15:38:40 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/ChangeLog,v 1.6 2005/02/14 19:22:08 blubb Exp $
+
+  14 Feb 2005; Simon Stelling <blubb@gentoo.org> tn5250-0.16.5.ebuild:
+  added ~amd64
 
   07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> tn5250-0.16.5.ebuild:
   patch for gcc3 (bug #53013); tidy
