@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/ksmoothdock
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksmoothdock/ChangeLog,v 1.5 2004/06/05 18:04:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksmoothdock/ChangeLog,v 1.6 2004/06/18 21:41:09 centic Exp $
+
+*ksmoothdock-3.5.1 (18 Jun 2004)
+
+  18 Jun 2004; Dominik Stadler <centic@gentoo.org> +ksmoothdock-3.5.1.ebuild:
+  Add Version 3.5.1, fixes Bug 54241
 
 *ksmoothdock-3.5 (05 Jun 2004)
 
