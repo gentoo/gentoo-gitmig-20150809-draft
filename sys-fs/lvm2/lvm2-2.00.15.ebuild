@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.15.ebuild,v 1.1 2004/04/24 17:05:14 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.15.ebuild,v 1.2 2004/04/24 17:19:06 max Exp $
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/lvm2/"
@@ -25,5 +25,5 @@ src_compile() {
 
 src_install() {
 	einstall sbindir="${D}/sbin" confdir="${D}/etc/lvm"
-	dodoc BUGS COPYING* INSTALL INTRO README TODO VERSION doc/*
+	dodoc COPYING* INSTALL README VERSION WHATS_NEW doc/*.{conf,c,txt}
 }
