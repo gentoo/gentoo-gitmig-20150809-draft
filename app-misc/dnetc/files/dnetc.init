@@ -1,7 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/files/dnetc.init,v 1.5 2004/02/13 19:19:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/files/dnetc.init,v 1.6 2004/06/15 22:53:33 aliz Exp $
+
+depend() {
+	use net
+}
 
 start() {
 	ebegin "Starting distributed.net client"

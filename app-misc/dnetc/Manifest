@@ -3,11 +3,11 @@ MD5 275017c3561d7accc25e31a6c1744b7c dnetc-2.9003.481-r1.ebuild 2044
 MD5 89e256fa14574e61d2a5367506880787 dnetc-2.9001.478.ebuild 1397
 MD5 e276ea65ea74e063bc129bf7346f790f dnetc-2.9005.483.ebuild 1870
 MD5 55e3ed973d9e0986d8fc9febd21802ad dnetc-2.9008.490.ebuild 1738
-MD5 2fc070cc3f7174460f89eaca863f616d ChangeLog 3830
+MD5 a1b47c0f4bda00e9de675eceb7bcc5df ChangeLog 3947
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 615d5d0ea6f9b1f72ab82077665b993f dnetc-2.9002.479.ebuild 1393
 MD5 b6444acd5a6c235ffe17bb3b528f4bc4 files/dnetc.conf 54
-MD5 413cd90d30fb0b29290d09a7a361daa1 files/dnetc.init 794
+MD5 42a0b7b8eac1c66e8ac7960464b55637 files/dnetc.init 815
 MD5 043cbafd6324fd3848f2763c32e6da51 files/digest-dnetc-2.9001.478 77
 MD5 a0b9b9b76588f355da0a87fc76aba6db files/digest-dnetc-2.9002.479 73
 MD5 b89d7982c82de8036592944c0b0dff96 files/digest-dnetc-2.9005.483 290

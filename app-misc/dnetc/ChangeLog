@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.26 2004/06/14 16:49:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.27 2004/06/15 22:53:33 aliz Exp $
+
+  15 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> files/dnetc.init:
+  Make initscript run before net, closing #53914.
 
   14 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> dnetc-2.9007.489.ebuild:
   Unmasked on x86.
