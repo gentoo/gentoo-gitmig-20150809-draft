@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.1.ebuild,v 1.14 2005/01/08 03:58:40 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.1.ebuild,v 1.15 2005/03/23 16:18:35 seemant Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -39,7 +39,7 @@ RDEPEND="X? ( virtual/x11 )
 	lirc? ( app-misc/lirc )
 	mad? ( >=media-sound/madplay-0.14.2b )
 	matroska? ( >=media-libs/libmatroska-0.4.4 )
-	mozilla? ( >=net-www/mozilla-1.4 )
+	mozilla? ( >=www-client/mozilla-1.4 )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )
 	oggvorbis? ( >=media-libs/libvorbis-1.0 >=media-libs/libogg-1.0 )
