@@ -1,6 +1,10 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.71 2004/07/07 17:10:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.72 2004/07/08 13:14:45 lanius Exp $
+
+  08 Jul 2004; Heinrich Wendel <lanius@gentoo.org> opera-7.51-r1.ebuild,
+  opera-7.51.ebuild:
+  remove vulnerable versions
 
   07 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> opera-7.52.ebuild:
   Stable sparc, amd64.  sparc only uses the static version.
