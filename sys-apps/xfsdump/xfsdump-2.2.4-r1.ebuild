@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsdump/xfsdump-2.2.4-r1.ebuild,v 1.1 2002/12/16 19:24:05 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsdump/xfsdump-2.2.4-r1.ebuild,v 1.2 2002/12/29 00:19:28 drobbins Exp $
 
 S=${WORKDIR}/${P}
 
@@ -9,7 +9,7 @@ DESCRIPTION="xfs dump/restore utilities"
 SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
