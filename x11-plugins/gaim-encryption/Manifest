@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 35ed112b89e15246389bced6810b34cb ChangeLog 9026
+MD5 21ef071e5b27c887ca8c01e36608b402 ChangeLog 9135
+MD5 c63997d503b6a459715ebd4026f20e26 gaim-encryption-2.32.ebuild 1102
 MD5 ab7db4bf9ff48c8de9da14fd12f6c15c metadata.xml 344
-MD5 6af9b817df4feca89281093fc4a061a1 gaim-encryption-2.32.ebuild 1094
 MD5 ff64a30a61d21ad47aab6594e4b1325b files/digest-gaim-encryption-2.32 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBirKdHTu7gpaalycRAucXAJ9p3k7/bxhTMpSELR0O9kAxZbHJVwCfd72e
-RZYRbHYvZIQ6Cs/8W4TcQTY=
-=H+W/
------END PGP SIGNATURE-----
