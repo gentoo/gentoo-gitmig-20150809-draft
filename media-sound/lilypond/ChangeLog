@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lilypond
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.16 2003/12/09 18:09:00 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.17 2004/01/03 20:12:39 agriffis Exp $
+
+  03 Jan 2004; Aron Griffis <agriffis@gentoo.org> lilypond-2.0.0.ebuild:
+  Fix bison dependency to prevent flip-flops
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> lilypond-1.6.6.ebuild,
   lilypond-1.6.9.ebuild, lilypond-1.8.2.ebuild, lilypond-2.0.0.ebuild:
