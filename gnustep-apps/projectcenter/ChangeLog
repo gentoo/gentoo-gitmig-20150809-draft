@@ -1,0 +1,28 @@
+# ChangeLog for app-gnustep/projectcenter
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.1 2004/07/23 13:25:55 fafhrd Exp $
+
+*projectcenter-0.3.5 (23 Jul 2004)
+
+  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> +metadata.xml,
+  +projectcenter-0.3.5.ebuild:
+  Moved from app-gnustep/projectcenter to gnustep-apps/projectcenter.
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  projectcenter-0.3.5.ebuild:
+  Changing the eclass to gnustep-old
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  projectcenter-0.3.5.ebuild:
+  Changing the eclass to gnustep-old
+
+  17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> projectcenter-0.3.5.ebuild:
+  Added IUSE=
+
+  18 Oct 2003; Nick Hadaway <raker@gentoo.org> projectcenter-0.3.5.ebuild:
+  Fixed the policy violation of setting ${A}
+
+*projectcenter-0.3.5 (15 Jul 2003)
+
+  15 Jul 2003; Nick Hadaway <raker@gentoo.org> projectcenter-0.3.5.ebuild:
+  New ebuild.
