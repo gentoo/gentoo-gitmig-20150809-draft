@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.16 2003/05/14 23:02:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.17 2003/05/16 15:07:06 coredumb Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -65,7 +65,7 @@ DEPEND="${DEPEND}
     ssl? ( >=dev-libs/openssl-0.9.5 )
     tiff? ( >=media-libs/tiff-3.5.5 )
     truetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
-    xml2? ( dev-libs/libxml2 )
+    xml2? ( dev-libs/libxml2 >=dev-libs/libxslt-1.0.30 )
     xml? ( >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.96 dev-libs/expat )
 	zlib? ( sys-libs/zlib )
 	!dev-libs/9libs
