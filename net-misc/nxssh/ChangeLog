@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxssh
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxssh/ChangeLog,v 1.10 2004/08/30 20:20:13 stuart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxssh/ChangeLog,v 1.11 2005/01/02 09:40:02 stuart Exp $
+
+*nxssh-1.4.0-r1 (02 Jan 2005)
+
+  02 Jan 2005; Stuart Herbert <stuart@gentoo.org> +nxssh-1.4.0-r1.ebuild:
+  Version bump
 
 *nxssh-1.4.0 (30 Aug 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/nx-x11-1.4.0-r2.ebuild,v 1.3 2004/09/13 00:33:37 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/nx-x11-1.4.0-r2.ebuild,v 1.4 2005/01/02 09:34:56 stuart Exp $
 
 inherit eutils
 
@@ -13,12 +13,13 @@ URI_BASE2="http://www.nomachine.com/download/nxsources/"
 SRC_NX_X11="${MY_PN}-${MY_PV}.tar.gz"
 SRC_NXAGENT="nxagent-1.4.0-47.tar.gz"
 SRC_NXAUTH="nxauth-1.4.0-1.tar.gz"
-SRC_NXCOMP="nxcomp-1.4.0-23.tar.gz"
+SRC_NXCOMP_3="nxcomp-1.3.2-4.tar.gz"
+SRC_NXCOMP_4="nxcomp-1.4.0-23.tar.gz"
 SRC_NXCOMPEXT="nxcompext-1.4.0-3.tar.gz"
 SRC_NXVIEWER="nxviewer-1.4.0-2.tar.gz"
 SRC_NXDESKTOP="nxdesktop-1.4.0-36.tar.gz"
 SRC_NXESD="nxesd-1.4.0-1.tar.gz"
-SRC_URI="$URI_BASE/${SRC_NX_X11} $URI_BASE/${SRC_NXAGENT} $URI_BASE/${SRC_NXAUTH} $URI_BASE/${SRC_NXCOMP} $URI_BASE/${SRC_NXCOMPEXT} $URI_BASE/${SRC_NXVIEWER} $URI_BASE/${SRC_NXDESKTOP} $URI_BASE/${SRC_NXESD}"
+SRC_URI="$URI_BASE/${SRC_NX_X11} $URI_BASE/${SRC_NXAGENT} $URI_BASE/${SRC_NXAUTH} $URI_BASE2/${SRC_NXCOMP_3} $URI_BASE/${SRC_NXCOMPEXT} $URI_BASE/${SRC_NXVIEWER} $URI_BASE/${SRC_NXDESKTOP} $URI_BASE/${SRC_NXESD}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
@@ -33,7 +34,7 @@ src_unpack() {
 	unpack ${SRC_NX_X11}
 	unpack ${SRC_NXAGENT}
 	unpack ${SRC_NXAUTH}
-	unpack ${SRC_NXCOMP}
+	unpack ${SRC_NXCOMP_4}
 	unpack ${SRC_NXCOMPEXT}
 	unpack ${SRC_NXVIEWER}
 	unpack ${SRC_NXDESKTOP}
@@ -72,7 +73,7 @@ src_install() {
 	dobin ../nxviewer/nxpasswd/nxpasswd
 	dobin ../nxdesktop/nxdesktop
 
-	dolib ../nxcomp/libXcomp.so
+	newlib ../nxcomp/libXcomp.so libXcomp-1.4.0.so
 	dolib ../nxcompext/libXcompext.so
 	dolib lib/X11/libX11.so
 	dolib lib/Xext/libXext.so

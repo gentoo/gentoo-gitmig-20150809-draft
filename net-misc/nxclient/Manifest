@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5e37a8f6435892221388bb42a063ae24 ChangeLog 2374
 MD5 c1c67a77261d3b3fede94b41a9d0ce1e metadata.xml 455
 MD5 fba25798d989531f2795bf0c0df18f45 nxclient-1.3.0.ebuild 1704
@@ -9,17 +6,12 @@ MD5 c81c2bfdd46cafe437d129277d9b0f5f nxclient-1.4.0.ebuild 1759
 MD5 0a3f5eed8f2922298bf483661c50c3e3 nxclient-1.4.0-r1.ebuild 1784
 MD5 9bdf149f0a214565c788b70ed44d9789 nxclient-1.3.2-r1.ebuild 1766
 MD5 08d17e7d889512da8a09da6ca956545a nxclient-1.4.0-r2.ebuild 1784
+MD5 b10436d5f241cf24d94abedec182ccc2 nxclient-1.4.0-r3.ebuild 1784
 MD5 5e85c900da1930890c8987a364976127 files/digest-nxclient-1.3.0 71
 MD5 05726c6d42d87195bcf8f5b5c76de1d3 files/digest-nxclient-1.3.2 70
 MD5 14c91b7df82e02def9a6d4c013e5c6eb files/digest-nxclient-1.4.0 72
 MD5 42aa33a6699a0b549cf5d3eaee9d8852 files/digest-nxclient-1.4.0-r1 72
 MD5 05726c6d42d87195bcf8f5b5c76de1d3 files/digest-nxclient-1.3.2-r1 70
 MD5 14c91b7df82e02def9a6d4c013e5c6eb files/digest-nxclient-1.4.0-r2 72
+MD5 6532e2cbed5e3c88e36520dc46b1be4b files/digest-nxclient-1.4.0-r3 71
 MD5 a2e15c37686ddad8dd3854b2b9b70700 files/1.3.0/50nxclient 57
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYHOSI1lqEGTUzyQRArpTAJ9bF/3W9PUTmAujqymD+XqioHiAXQCfWi/W
-iiLaaoGMmMI9CUo248JyyyQ=
-=g1rC
------END PGP SIGNATURE-----
