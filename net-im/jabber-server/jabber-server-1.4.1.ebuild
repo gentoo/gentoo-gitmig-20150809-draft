@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.1.ebuild,v 1.1 2001/12/16 01:20:50 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.1.ebuild,v 1.2 2001/12/16 14:58:38 verwilst Exp $
 
 S="${WORKDIR}/jabber-1.4.1"
 HOMEPAGE="http://www.jabber.org"
@@ -59,6 +59,7 @@ src_compile() {
 	mkdir -p ${D}/etc/init.d/
 	cp ${FILESDIR}/ServSetup ${S}
 	cp ${FILESDIR}/SetupEngine.py ${S}
+	cp ${FILESDIR}/WriteEngine.py ${S}
 	chmod a+x ${S}/ServSetup
 
 }

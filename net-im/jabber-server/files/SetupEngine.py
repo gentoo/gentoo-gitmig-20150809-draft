@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 
-#####################################################
-##                                                 ##
-## Written By Bart Verwilst <verwilst@gentoo.org>  ##
-##                                                 ##
-#####################################################
+##################################################################
+##                                                              ##
+## Written By Bart Verwilst <verwilst@gentoo.org>               ##
+## For additions and bugfixes, Please consult the author!       ##
+##                                                              ##
+##################################################################
 
+global GeneralData
 GeneralData = {}
 
 ## List all Attribs for GeneralData ##
@@ -49,17 +51,19 @@ def SetupGeneral():
 		print "   * Incorrect Input, Assuming \"Yes\" *"
                 GeneralData['admin_notif'] = 1
 
-	f = raw_input("  Send welcome Message to new users? (yes|[no]):\n  # ")
-	if f == "yes" or f == "ye" or f == "y":
+	b = raw_input("  Send welcome Message to new users? (yes|[no]):\n  # ")
+	if b == "yes" or b == "ye" or b == "y":
+                GeneralData['new_welcome'] = 1
 		GeneralData['new_welcome_subject'] = raw_input("    * Message Subject (eg. Welcome!):\n      # ")
 		GeneralData['new_welcome_body'] = raw_input("    * Message Body (eg. Welcome to our Jabber server...):\n      # ")
 	else:
+                GeneralData['new_welcome'] = 0
 		print "   * Welcome Messages will NOT be sent *"
 
-        b = raw_input("  Auto-Update JUD when vCard is edited? ([yes]|no):\n  # ")
-	if b == "no" or b == "n":
+        c = raw_input("  Auto-Update JUD when vCard is edited? ([yes]|no):\n  # ")
+	if c == "no" or c == "n":
                 GeneralData['vcard2jud'] = 0
-        elif b == "yes" or b == "ye" or b == "y":
+        elif c == "yes" or c == "ye" or c == "y":
                 GeneralData['vcard2jud'] = 1
 	else:
 		print "   * Incorrect Input, Assuming \"Yes\" *"
@@ -79,5 +83,4 @@ def ICQConfig():
         pass
 def MSNConfig():
         pass
-def WriteConfig():
-	pass
+
