@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/commonbox-styles-0.6.ebuild,v 1.4 2003/02/13 17:36:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/commonbox-styles-0.6.ebuild,v 1.5 2003/04/18 16:18:38 gmsoft Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Common styles for fluxbox, blackbox, and openbox."
@@ -10,7 +10,7 @@ HOMEPAGE="http://gentoo.mkeadle.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 RDEPEND="virtual/x11"
 

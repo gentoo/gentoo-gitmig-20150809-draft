@@ -6,6 +6,9 @@
  
 *commonbox-styles-0.6 (26 Nov 2002)
 
+  18 Apr 2003; Guy Martin <gmsoft@gentoo.org> commonbox-styles-0.6.ebuild:
+  Added hppa to KEYWORDS.
+
   26 Nov 2002; Matt Keadle <mkeadle@gentoo.org>
   commonbox-styles-0.6.ebuild files/digest-commonbox-styles-0.6 :
 
