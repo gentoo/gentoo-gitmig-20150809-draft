@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/modlogan
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.8 2003/02/12 02:25:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.9 2003/09/24 22:37:56 seemant Exp $
+
+*modlogan-0.8.10 (24 Sep 2003)
+
+  24 Sep 2003; Seemant Kulleen <seemant@gentoo.org> modlogan-0.8.10.ebuild:
+  version bump, thanks to: Sebastian Bergmann <sb@sebastian-bergmann.de> in bug
+  #29180
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
