@@ -1,6 +1,11 @@
 # ChangeLog for games-server/halflife-adminmod
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-adminmod/ChangeLog,v 1.3 2003/11/08 07:18:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-adminmod/ChangeLog,v 1.4 2004/04/16 18:30:09 vapier Exp $
+
+*halflife-adminmod-2.50.59 (16 Apr 2004)
+
+  16 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage #46306 by Daniel Fullmer.
 
 *halflife-adminmod-2.50.58 (08 Nov 2003)
 
