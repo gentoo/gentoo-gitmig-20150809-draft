@@ -1,6 +1,12 @@
 # ChangeLog for app-text/namazu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.3 2004/06/24 22:45:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.4 2004/07/25 07:57:12 hattya Exp $
+
+*namazu-2.0.13 (25 Jul 2004)
+
+  25 Jul 2004; Akinori Hattori <hattya@gentoo.org> +metadata.xml,
+  +namazu-2.0.13.ebuild:
+  version bump. fixes bug #53993.
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> namazu-2.0.12.ebuild:
   Don't assign default to S; header fix

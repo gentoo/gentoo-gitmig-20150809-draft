@@ -1,3 +1,6 @@
+MD5 6e397de7096b033ab3600b3b03a262a9 ChangeLog 686
+MD5 382a25f7a6abf0020285f37f74158690 metadata.xml 226
 MD5 3d163e41bd22696b19a5302880e603be namazu-2.0.12.ebuild 1269
-MD5 6e8bd77962a98e3be98cf0bfa1673876 ChangeLog 532
+MD5 cec85bf693e8ab439971a614f1763af0 namazu-2.0.13.ebuild 1065
 MD5 6ab3a5de7af205d9e981a2362a776aba files/digest-namazu-2.0.12 65
+MD5 6afd003b85e8fdce90f1ac9ade74950b files/digest-namazu-2.0.13 66
