@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gimps/gimps-23.5.ebuild,v 1.1 2004/01/23 16:20:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gimps/gimps-23.5.ebuild,v 1.2 2004/01/23 22:32:43 spock Exp $
 
 IUSE=""
 DESCRIPTION="GIMPS - The Great Internet Mersenne Prime Search"
@@ -10,7 +10,7 @@ SRC_URI="ftp://mersenne.org/gimps/mprime235.tar.gz"
 DEPEND=">=sys-apps/baselayout-1.8.0
 	>=sys-libs/glibc-2.1"
 SLOT="0"
-#LICENSE="as-is"
+LICENSE="as-is"
 KEYWORDS="~x86"
 
 S="${WORKDIR}"
