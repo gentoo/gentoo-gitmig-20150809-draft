@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.10.ebuild,v 1.1 2004/12/30 08:08:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.10.ebuild,v 1.2 2004/12/30 18:51:39 mr_bones_ Exp $
 
-inherit flag-o-matic games
+inherit games
 
 DESCRIPTION="state of the art Real Time Strategy (RTS) game"
 HOMEPAGE="http://www.ysagoon.com/glob2/"
@@ -24,8 +24,6 @@ DEPEND="virtual/libc
 	sys-libs/zlib"
 
 src_compile() {
-	# comment from bug #64150 to fix compile issue.
-	filter-flags -O?
 	#./configure assumes that vorbis will be installed under PREFIX bug #46352
 	egamesconf \
 		--with-vorbis=/usr \
