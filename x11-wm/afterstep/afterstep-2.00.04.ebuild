@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.00.04.ebuild,v 1.1 2005/03/30 17:06:16 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.00.04.ebuild,v 1.2 2005/03/30 17:35:06 ka0ttic Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="AfterStep is a feature rich NeXTish window manager"
 HOMEPAGE="http://www.afterstep.org"
@@ -67,7 +69,6 @@ src_compile() {
 
 	econf \
 		--with-helpcommand="xterm -e man" \
-		--with-xpm \
 		--with-ungif=no \
 		--disable-availability \
 		--disable-staticlibs \

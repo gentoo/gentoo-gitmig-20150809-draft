@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 61ac082c6563be2e5790a287988a4674 afterstep-1.8.11-r2.ebuild 1543
-MD5 b1eafc78da76cc84d8382107c2d36316 afterstep-2.00.02.ebuild 3685
-MD5 72d31860c458ed0cbe053cd6708293c6 afterstep-2.00.04.ebuild 3686
+MD5 0e90ca0a0ffc669b2d89b173b895470b afterstep-2.00.02.ebuild 3692
+MD5 9b9b86bbaa1a7a3f3271ce04188628d4 afterstep-2.00.04.ebuild 3693
 MD5 707b0b2d54141041813cbe9c2031c118 ChangeLog 4716
 MD5 5fcb6c5011c265ab4d4268662ee0dac9 metadata.xml 353
 MD5 fca9d0ef8f9ab0142654d2cf85544310 afterstep-2.00.01.ebuild 3673
@@ -19,7 +19,7 @@ MD5 9dfd9962d8a60e264920c6d4e742d74c files/as2-gnome.diff 1524
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCStyhEZCkKN40op4RAr6lAJ0fl/v+huxWADm+1Je8GNrdbvgcIwCdG4RY
-Y1H3naNRIEy+OAl7fHJPlbo=
-=DLMK
+iD8DBQFCSuNfEZCkKN40op4RAliJAJ91tywdbFEC5a0aRtZcaPg4U8p2kQCfcWoO
+KDJGuz8glxAXTQTiBKFpVQs=
+=4Yny
 -----END PGP SIGNATURE-----
