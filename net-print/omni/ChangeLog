@@ -1,6 +1,9 @@
 # ChangeLog for net-print/omni
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/omni/ChangeLog,v 1.3 2003/12/09 17:59:16 lanius Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/omni/ChangeLog,v 1.4 2004/03/02 14:07:32 lanius Exp $
+
+  02 Mar 2004; Heinrich Wendel <lanius@gentoo.org> omni-0.9.0.ebuild:
+  sed -i
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> omni-0.9.0.ebuild:
   changed app-text/ghostscript to virtual/ghostscript
