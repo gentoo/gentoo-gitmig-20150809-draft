@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.906 2005/01/25 13:09:36 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.907 2005/01/26 10:33:50 zypher Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -439,6 +439,7 @@ media-video/chaplin:vcdimager - Enables optional support for GNU VCDimager
 media-video/cinelerra-cvs:ffmpeg - Enable ffmpeg support
 media-video/emovix:codecs - Enables use of the win32 dll codecs for playback
 media-video/freej:v4l - Enables freej to pull from v4l sources
+media-video/kino:ffmpeg - Enable ffmpeg support
 media-video/kmplayer:koffice-plugin - Install KOffice part
 media-video/mjpegtools:dv - Enables support for a codec used by many camcorders
 media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
