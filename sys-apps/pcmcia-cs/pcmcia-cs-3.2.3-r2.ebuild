@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.3-r2.ebuild,v 1.1 2003/02/22 17:35:01 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.3-r2.ebuild,v 1.2 2003/03/04 21:53:27 latexer Exp $
 
 inherit eutils
 
@@ -40,6 +40,7 @@ src_unpack() {
 		#patch -p1 < ${DISTDIR}/${OV}-patched.diff
 
 		cd ${S}
+		/bin/chmod ug+w ${S}/wireless/*
 		mv ../orinoco*/hermes*.{c,h} \
 			../orinoco*/orinoco*.{c,h} \
 			../orinoco*/ieee802_11.h wireless/
@@ -48,14 +49,14 @@ src_unpack() {
 
 	
 	cd ${S}
-	cp Configure Configure.orig
+	mv Configure Configure.orig
 	sed -e 's:usr/man:usr/share/man:g' Configure.orig > Configure
 	#man pages will now install into /usr/share/man
 
 	cd ${S}
 	### As per the SourceForge web site reqs and bug #3400
 	# We'll replace all ide_cs with ide-cs
-	cp etc/config etc/config.orig
+	mv etc/config etc/config.orig
 	sed -e 's:ide_cs:ide-cs:g' etc/config.orig > etc/config
 	rm -f etc/config.orig
 
