@@ -1,0 +1,38 @@
+diff -Naur sonic-rainbow.orig/Makefile.am sonic-rainbow/Makefile.am
+--- sonic-rainbow.orig/Makefile.am	2004-03-11 00:15:26.000000000 -0800
++++ sonic-rainbow/Makefile.am	2004-07-08 14:36:28.407033927 -0700
+@@ -16,13 +16,9 @@
+ 	    fi \
+ 	  done \
+ 	fi
+-	if test -d $(srcdir)/doc; then \
+-	$(mkinstalldirs) /usr/share/Sonic-Rainbow/doc; \
+-	$(INSTALL_DATA)  $(srcdir)/doc/Sonic-Rainbow.html /usr/share/Sonic-Rainbow/doc/Sonic-Rainbow.html; \
+-	fi
+ 	if test -d $(srcdir)/icons; then \
+-	$(mkinstalldirs) /usr/share/icons; \
+-	$(INSTALL_DATA)  $(srcdir)/icons/sonic-rainbow_drag.xpm /usr/share/icons/sonic-rainbow_drag.xpm; \
++	$(mkinstalldirs) $(DESTDIR)/usr/share/icons; \
++	$(INSTALL_DATA)  $(srcdir)/icons/sonic-rainbow_drag.xpm $(DESTDIR)/usr/share/icons/sonic-rainbow_drag.xpm; \
+ 	fi
+ dist-hook:
+ 	if test -d pixmaps; then \
+diff -Naur sonic-rainbow.orig/Makefile.in sonic-rainbow/Makefile.in
+--- sonic-rainbow.orig/Makefile.in	2004-03-11 00:15:26.000000000 -0800
++++ sonic-rainbow/Makefile.in	2004-07-08 14:36:52.721994421 -0700
+@@ -365,13 +365,9 @@
+ 	    fi \
+ 	  done \
+ 	fi
+-	if test -d $(srcdir)/doc; then \
+-	$(mkinstalldirs) /usr/share/Sonic-Rainbow/doc; \
+-	$(INSTALL_DATA)  $(srcdir)/doc/Sonic-Rainbow.html /usr/share/Sonic-Rainbow/doc/Sonic-Rainbow.html; \
+-	fi
+ 	if test -d $(srcdir)/icons; then \
+-	$(mkinstalldirs) /usr/share/icons; \
+-	$(INSTALL_DATA)  $(srcdir)/icons/sonic-rainbow_drag.xpm /usr/share/icons/sonic-rainbow_drag.xpm; \
++	$(mkinstalldirs) $(DESTDIR)/usr/share/icons; \
++	$(INSTALL_DATA)  $(srcdir)/icons/sonic-rainbow_drag.xpm $(DESTDIR)/usr/share/icons/sonic-rainbow_drag.xpm; \
+ 	fi
+ dist-hook:
+ 	if test -d pixmaps; then \
