@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.9.ebuild,v 1.14 2004/06/24 22:08:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.1.19.ebuild,v 1.1 2004/08/06 19:22:54 liquidx Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils debug
 
 MY_P=${P/lib/}
 MY_PN=${PN/lib/}
@@ -15,49 +15,30 @@ HOMEPAGE="http://www.gnome.org/"
 PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
 SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.${GNOME_TARBALL_SUFFIX}"
 LICENSE="GPL-2"
-SLOT="3"
-KEYWORDS="x86 ppc sparc hppa alpha ia64 amd64"
+SLOT="3.1"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~alpha ~ia64 ~amd64"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
 
-RDEPEND=">=gnome-extra/gal-1.99.10
-	>=net-libs/libsoup-1.99.26
-	>=gnome-base/libgnomeui-2.2
+RDEPEND=">=gnome-extra/gal-2.1.13
+	>=net-libs/libsoup-2.1.12
+	>=gnome-base/libgnomeui-2
 	>=gnome-base/libgnomeprint-2.2
 	>=gnome-base/libgnomeprintui-2.2.1
-	>=gnome-base/libbonoboui-2.0
-	>=gnome-base/libbonobo-2.0
+	>=x11-themes/gnome-icon-theme-1.2.3
+	>=gnome-base/libglade-2
+	>=gnome-base/libbonoboui-2.2.4
 	>=gnome-base/ORBit2-2.5.6
 	>=gnome-base/gnome-vfs-2.1
-	>=gnome-base/gail-1.1
+	>=gnome-base/gail-1
 	>=dev-libs/libxml2-2.5"
 
 DEPEND="${RDEPEND}
+	>=dev-util/intltool-0.30
 	>=dev-util/pkgconfig-0.12.0"
 
 USE_DESTDIR="1"
 SCROLLKEEPER_UPDATE="0"
 ELTCONF="--reverse-deps"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	# The following patch fixes problems on 64-bit, but doesn't hurt
-	# to apply everywhere
-	epatch ${FILESDIR}/${PN}-3.0.8-alpha.patch
-
-	# fix gtk-2.4 build (#49218)
-	epatch ${FILESDIR}/${P}-gtk-2.4.patch
-
-}
-
-src_compile() {
-	gnome2_src_configure
-
-	EPATCH_OPTS="${S}/libtool"
-	epatch ${FILESDIR}/${PN}-3.0.7-libtool.patch
-
-	emake || die "make failed"
-}
