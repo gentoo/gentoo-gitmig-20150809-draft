@@ -1,0 +1,53 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+depend() {
+	need localmount
+}
+
+start() {
+
+	ebegin "Fixing /proc entries visibility..."
+	lockfile=/var/run/vprocunhide.lock
+
+        /usr/lib/util-vserver/vprocunhide
+
+        rc=$?
+        case "$rc" in
+	2)	rc=0;;
+	esac
+        test "$rc" -ne 0 || touch "$lockfile"
+	eend $rc "Failed"
+
+}
+
+stop()
+{
+    ebegin "Stopping vprocunhide"
+    lockfile=/var/run/vprocunhide.lock
+    rm -f "$lockfile"
+    eend $? "Failed"
+}
+
+
+restart()
+{
+    stop
+    start
+}
+
+status()
+{
+     lockfile=/var/run/vprocunhide.lock
+
+     test -f $lockfile && {
+        echo $"/proc entries were fixed"
+        exit 0
+     }
+     echo $"/proc entries are not fixed"
+     exit 1
+
+}
+
+

@@ -1,0 +1,83 @@
+#!/sbin/runscript
+# Parts taken from lm_sensors package
+
+depend() {
+	need vprocunhide
+}
+
+start(){ 
+	if ! [ -f /etc/conf.d/vservers ] ; then
+        	eerror "/etc/conf.d/vservers does not exist, nothing to do"
+		return 1
+        fi
+	. /etc/conf.d/lm_sensors
+  	
+
+	if [ -z "${MARK_0}" ] ; then
+		eerror "MARK_0 is not set in /etc/conf.d/vservers, nothing to do"
+		return 1
+	fi
+
+	einfo "Launching vservers..."
+
+	i=0
+	while true; do
+		mark=`eval echo '$'MARK_${i}`
+		if [ -z "${mark}" ] ; then
+			break
+		fi
+		ebegin "  Starting vservers with mark ${mark}"
+		export MARK=${mark}
+		/usr/lib/util-vserver/vserver-wrapper start
+		eend $?
+		i=$((i+1))
+        done
+}
+
+
+stop() {
+	if ! [ -f /etc/conf.d/vservers ] ; then
+		eerror "/etc/conf.d/vservers does not exist, nothing to do"
+		return 1
+	fi
+
+	. /etc/conf.d/lm_sensors
+  	
+
+	if [ -z "${MARK_0}" ] ; then
+		eerror "MARK_0 is not set in /etc/conf.d/vservers, nothing to do"
+		return 1
+	fi
+
+	einfo "Stopping vservers..."
+
+	# we determine the number of vserver marks
+	i=0
+		while true; do
+		mark=`eval echo '$'MARK_${i}`
+		if [ -z "${mark}" ] ; then
+			break
+		fi
+		i=$((i+1))
+		done
+
+
+		i=$((i-1))
+
+		while true; do
+			mark=`eval echo '$'MARK_${i}`
+			if [ -z "${mark}" ] ; then
+				break
+			fi
+			ebegin "  Stopping vservers with mark ${mark}"
+			export MARK=${mark}
+			/usr/lib/util-vserver/vserver-wrapper stop
+				eend $?
+			if [ "0" -eq "${i}" ] ; then
+				break
+			fi
+			i=$((i-1))
+		done
+}
+
+

@@ -1,0 +1,21 @@
+--- scripts/vserver-build.functions	2004-03-23 00:27:41.000000000 +0100
++++ ../util-vserver-0.30.190/scripts/vserver-build.functions	2004-06-27 15:05:29.000000000 +0200
+@@ -1,4 +1,4 @@
+-# $Id: vserver-build-029p214.patch,v 1.1 2004/08/25 14:53:29 tantive Exp $	--*- sh -*--
++# $Id: vserver-build-029p214.patch,v 1.1 2004/08/25 14:53:29 tantive Exp $	--*- sh -*--
+ 
+ # Copyright (C) 2003 Enrico Scholz <enrico.scholz@informatik.tu-chemnitz.de>
+ #  
+@@ -130,6 +130,12 @@
+     elif test -e /etc/SuSE-release; then
+ 	set -- $(cat /etc/SuSE-release)
+ 	DISTRIBUTION=suse$3
++    elif test -e /etc/gentoo-release; then
++	set -- $(cat /etc/gentoo-release)
++	DISTRIBUTION=gentoo$5
++    elif test -e /etc/slackware-release; then
++	set -- $(cat /etc/slackware-release)
++	DISTRIBUTION=slackware$2
+     else
+ 	echo \
+ "Can not determine distribution; please specify it manually
