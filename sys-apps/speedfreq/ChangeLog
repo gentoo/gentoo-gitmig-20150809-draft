@@ -1,9 +1,11 @@
 # ChangeLog for sys-apps/speedfreq
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/ChangeLog,v 1.3 2004/03/15 17:34:55 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/ChangeLog,v 1.4 2004/03/28 08:33:34 vapier Exp $
 
-  15 Mar 2004; Michael Imhof <tantive@gentoo.org> speedfreq-0.7.2.ebuild:
-  Unmasked on x86.
+*speedfreq-0.7.2-r1 (28 Mar 2004)
+
+  28 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Fix python search paths and use `make install` #43118.
 
 *speedfreq-0.7.2 (25 Feb 2004)
 
