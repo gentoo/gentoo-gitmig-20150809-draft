@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/eet
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/ChangeLog,v 1.1 2003/02/20 11:38:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/ChangeLog,v 1.2 2003/03/10 18:42:21 vapier Exp $
+
+*eet-0.0.1.20030310 (10 Mar 2003)
+
+  10 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Bugfixes + more documentation.
 
 *eet-0.0.1.20030220 (20 Feb 2003)
 
