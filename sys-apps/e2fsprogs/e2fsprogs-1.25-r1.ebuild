@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.25.ebuild,v 1.1 2001/10/12 00:05:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.25-r1.ebuild,v 1.1 2001/11/28 23:19:18 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard ext2 and ext3 filesystem utilities"
@@ -20,7 +20,7 @@ src_compile() {
 	else
 		myconf="--disable-nls"
 	fi
-	./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --enable-elf-shlibs ${myconf} || die
+	./configure --host=${CHOST} --prefix=/ --mandir=/usr/share/man --infodir=/usr/share/info --enable-elf-shlibs ${myconf} || die
 	# Parallel make sometimes fails
 	make || die
 }
@@ -36,13 +36,24 @@ src_install() {
 	then
 		( cd po; make DESTDIR=${D} install || die )
 	fi
-	dodir /sbin
-	mv ${D}/usr/sbin/fsck* ${D}/sbin
+	
+	# The "fsck" program is getting compiled dynamically.  So we need
+	# to recompile it statically:
+
+	cd ${S}/misc/fsck
+	rm -f fsck
+	gcc -static -o fsck fsck.o get_device_by_label.o base_device.o fstype.o ../lib/libext2fs.a ../lib/libcom_err.a
 	
 	dodoc COPYING ChangeLog README RELEASE-NOTES SHLIBS
 	docinto e2fsck
 	dodoc e2fsck/ChangeLog e2fsck/CHANGES
 
+	dodir /usr/bin /usr/sbin
+	cd ${D}/bin
+	mv lsattr chattr uuidgen ../usr/bin
+	cd ${D}/sbin
+	mv mklost+found ../usr/sbin
+	
 	local i
 	for i in e2p et ext2fs ss uuid
 	do
