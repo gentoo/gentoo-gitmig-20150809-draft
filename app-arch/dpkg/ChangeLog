@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.5 2003/07/15 14:57:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.6 2003/07/29 13:57:33 lanius Exp $
+
+  29 Jul 2003; lanius@gentoo.org dpkg-1.10.10.ebuild:
+  stable bump
 
 *dpkg-1.10.10 (15 Jul 2003)
 
