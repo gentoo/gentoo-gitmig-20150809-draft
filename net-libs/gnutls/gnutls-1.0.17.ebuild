@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.12 2004/09/26 05:19:57 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.13 2004/11/05 00:39:41 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -8,12 +8,11 @@ DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
 SRC_URI="ftp://ftp.gnutls.org/pub/gnutls/${P}.tar.bz2"
 
-IUSE="zlib doc crypt"
-LICENSE="LGPL-2.1 | GPL-2"
 # GPL-2 for the gnutls-extras library and LGPL for the gnutls library.
-
+LICENSE="LGPL-2.1 | GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 sparc ppc mips alpha ppc64 ia64 hppa"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+IUSE="zlib doc crypt"
 
 RDEPEND=">=dev-libs/libgcrypt-1.1.94
 	crypt? ( >=app-crypt/opencdk-0.5.5 )
