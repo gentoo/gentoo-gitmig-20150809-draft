@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.24 2003/09/05 01:27:12 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.25 2003/11/19 18:50:01 mholzer Exp $
 
 inherit flag-o-matic eutils
 strip-flags -funroll-loops
@@ -8,13 +8,15 @@ strip-flags -funroll-loops
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
 HOMEPAGE="http://cdrdao.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cdrdao/${P}.src.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc "
-IUSE="gnome"
+IUSE="gnome perl"
 
 RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
+	perl? ( dev-perl/libvorbis-perl )
 	<dev-cpp/gtkmm-1.3.0
 	>=dev-cpp/gnomemm-1.1.17 )"
 DEPEND=">=dev-util/pccts-1.33.24-r1
