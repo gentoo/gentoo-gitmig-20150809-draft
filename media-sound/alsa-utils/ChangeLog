@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.56 2004/06/08 02:34:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.57 2004/06/18 08:07:53 eradicator Exp $
+
+  18 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
+  Fix return value for success of modules_unload.  Redirect stdout and
+  stderr for rmmod.  Closes bug #54274.
 
   07 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
   Small beautification changes to init script.

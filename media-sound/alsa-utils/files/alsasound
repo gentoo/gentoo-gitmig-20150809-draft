@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.13 2004/06/08 02:34:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.14 2004/06/18 08:07:53 eradicator Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -110,10 +110,13 @@ unload_modules() {
 	LOADED_MODULES="$(/sbin/lsmod | grep -E "^snd" | awk '{print $1}')"
 	for MODULE in ${LOADED_MODULES}
 	do
-		/sbin/rmmod ${MODULE} 2> /dev/null
+		/sbin/rmmod ${MODULE} >& /dev/null
 	done
-	/sbin/rmmod soundcore 2> /dev/null
-	/sbin/rmmod gameport 2> /dev/null	
+	/sbin/rmmod soundcore >& /dev/null
+	/sbin/rmmod gameport >& /dev/null	
+
+	# Return success if the modules are unloaded
+	test -z "$(/sbin/lsmod | grep -E "^snd" | awk '{print $1}')"
 }
 
 terminate() {
