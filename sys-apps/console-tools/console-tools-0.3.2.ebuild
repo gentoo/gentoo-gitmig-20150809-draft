@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.3.2.ebuild,v 1.6 2003/08/03 04:34:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.3.2.ebuild,v 1.7 2003/12/10 08:51:44 seemant Exp $
 
 inherit libtool
 
@@ -26,9 +26,13 @@ src_unpack() {
 
 	# GCC-3.3 Compile Fix
 	epatch ${FILESDIR}/${P}-multi-line-string-fix.diff
+
+	# better versions of this package's console.4 and console_ioctls.4
+	epatch ${FILESDIR}/${PN}-no-man4pages.patch
 }
 
 src_compile() {
+	acloca
 	elibtoolize
 
 	local myconf=""
@@ -37,7 +41,8 @@ src_compile() {
 
 	econf \
 		`use_enable nls` \
-		`use_enable debug debugging` \
+		`use_enable debug debugging` || die
+
 	emake all || die
 }
 
@@ -56,5 +61,7 @@ src_install() {
 	dodoc doc/dvorak/*
 	docinto txt/file-formats
 	dodoc doc/file-formats/*
+
+	rm -f doc/man/console.4* doc/man/console_ioctl*
 	doman doc/man/*.[1-8]
 }
