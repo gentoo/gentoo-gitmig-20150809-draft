@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.14 2003/05/11 22:45:09 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.15 2003/05/17 19:15:25 nakano Exp $
+
+*canna-3.6_p3-r1 (18 May 2003)
+
+  18 May 2003; <masatomo@gentoo.org> canna-3.6_p3-r1.ebuild,
+  files/canna-3.6_p3-r1-gentoo.diff, files/canna.confd, files/canna.hosts,
+  files/canna.initd, files/update-canna-dics_dir:
+  Modified to use multi dictionaries.
+	Thanks to Sadayuki Kobayashi <desperado@s17.xrea.com> #21060
 
 *canna-3.6_p3 (11 May 2003)
   11 May 2003; Masatomo Nakano <nakano@gentoo.org> files/canna-3.6_p3-gentoo.diff:
