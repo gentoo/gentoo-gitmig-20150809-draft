@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/colorschemes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.14 2005/01/01 16:47:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.15 2005/02/26 22:30:49 ciaranm Exp $
+
+*colorschemes-20050226 (26 Feb 2005)
+
+  26 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +colorschemes-20050226.ebuild:
+  New version made by your friendly Gentoo Vim team
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

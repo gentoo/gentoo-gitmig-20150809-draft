@@ -1,6 +1,18 @@
-MD5 c4286a36886da7f5b69aae8536679e9a ChangeLog 1691
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a1e712cbfe4e3cbbe93e65bcaa7a916d colorschemes-20040821.ebuild 774
+MD5 07eaa18e023b6d2fd0174baf08240da6 ChangeLog 1864
 MD5 cbb409c6f2e4759d8939a77c70565105 colorschemes-20031113.ebuild 450
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 a1e712cbfe4e3cbbe93e65bcaa7a916d colorschemes-20040821.ebuild 774
+MD5 c021a4d29e4a469b5c3d927cc46db503 colorschemes-20050226.ebuild 732
 MD5 d1e57af8c6fca0096d9d2aead6987488 files/digest-colorschemes-20031113 73
+MD5 fe9aacb9b22b6039cce4a00af37386b5 files/digest-colorschemes-20050226 73
 MD5 36fa16520b961e2db213c567f1d80d17 files/digest-colorschemes-20040821 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCIPiOLLFUmVNQ7rkRAvQYAKDQB83ZID4FNLs6cdz0Qc9SSbci4wCdF1IN
+QgF7f6Sn3cvgQyjVOHnYLr0=
+=/NkR
+-----END PGP SIGNATURE-----
