@@ -1,5 +1,5 @@
-MD5 a7c9b261c2f12cfd62cc8282de6587bd rrs-1.50.ebuild 769
+MD5 54e7f0fbc6ad8d54f65e28a0cbd346a1 ChangeLog 534
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 6e1cc28fd328f10c877fbb8876eee47f ChangeLog 460
+MD5 45c5cf040181e1887beee857c2de9026 rrs-1.50.ebuild 768
 MD5 55729988ea19ac7dfc4a35622cd0d43b files/1.50-include-string.h.patch 320
 MD5 3faef8b43111fd788fee0ab7bef0fe7c files/digest-rrs-1.50 59
