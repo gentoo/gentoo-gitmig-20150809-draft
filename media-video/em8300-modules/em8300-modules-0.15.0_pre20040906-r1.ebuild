@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.0_pre20040906-r1.ebuild,v 1.1 2004/10/07 16:58:06 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.15.0_pre20040906-r1.ebuild,v 1.2 2004/10/16 20:26:49 mr_bones_ Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ src_install () {
 	doins ../include/linux/em8300.h
 
 	check_KV
-	
+
 
 	# The driver goes into the standard modules location
 	insinto "/lib/modules/${KV}/kernel/drivers/video"
@@ -90,4 +90,3 @@ pkg_postinst () {
 	einfo
 
 }
-
