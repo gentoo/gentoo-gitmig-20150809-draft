@@ -21,7 +21,7 @@ src_compile() {
 
 src_install () {
 
-	try make DESTDIR=${D} mandir=${D}/usr/share/man install
+	try make DESTDIR=${D} install
 	dodoc README COPYING AUTHORS INSTALL ChangeLog NEWS TODO data/README.bbweather
 }
 
