@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.21 2004/01/30 23:24:38 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.22 2004/02/07 18:15:39 ciaranm Exp $
+
+  07 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> dnsmasq-2.2.ebuild:
+  Adding ~mips to keywords
 
 *dnsmasq-2.2 (30 Jan 2004)
 
