@@ -1,8 +1,14 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.11 2002/09/12 16:48:58 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.12 2002/09/16 14:14:58 azarah Exp $
 
-*tetex-20020901 (11 Sep 2002)
+  16 Sep 2002; Martin Schlemmer <azarah@gentoo.org> tetex-20020901-r1.ebuild :
+
+    Some cleanups and <tab> fixes.  Fix permissions on /usr/share/texmf
+    (fowners is not recursive).  Add a patch for not running the config
+    stuff during 'make install', as we should rather do it in src_unpack().
+
+*tetex-20020901-r1 (11 Sep 2002)
 
   11 Sep 2002; satai <satai@gentoo.org> tetex-20020901-r1.ebuild :
 
