@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.37.ebuild,v 1.2 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.39.ebuild,v 1.1 2002/10/12 13:13:04 carpaski Exp $
 
 IUSE="build"
 
@@ -132,34 +132,31 @@ pkg_postinst() {
 	fi
 
 	#fix cache (could contain staleness)
-	if [ ! -d ${ROOT}var/cache/edb/dep/sys-apps ]
+	if [ ! -d ${ROOT}var/cache/edb/dep ]
 	then
-		if [ ! -d ${ROOT}var/cache/edb/dep ]
+		#upgrade /var/db/pkg library; conditional required for build image creation
+		if [ -d ${ROOT}var/db/pkg ]
 		then
-			#upgrade /var/db/pkg library; conditional required for build image creation
-			if [ -d ${ROOT}var/db/pkg ]
-			then
-				echo ">>> Database upgrade..."
-				cd ${ROOT}var/db/pkg
-				for x in *
-				do
-					[ ! -d "$x" ] && continue
-					#go into each category directory so we don't overload the python2.2 command-line
-					cd $x
-					#fix silly output from this command (hack)
-					python2.2 ${ROOT}usr/lib/portage/bin/db-update.py `find -name VIRTUAL` > /dev/null
-				cd ..
-				done
-				echo ">>> Database upgrade complete."
-				#remove old virtual directory to prevent virtual deps from getting messed-up
-				[ -d ${ROOT}var/db/pkg/virtual ] && rm -rf ${ROOT}var/db/pkg/virtual
-			fi
+			echo ">>> Database upgrade..."
+			cd ${ROOT}var/db/pkg
+			for x in *
+			do
+				[ ! -d "$x" ] && continue
+				#go into each category directory so we don't overload the python2.2 command-line
+				cd $x
+				#fix silly output from this command (hack)
+				python2.2 ${ROOT}usr/lib/portage/bin/db-update.py `find -name VIRTUAL` > /dev/null
+			cd ..
+			done
+			echo ">>> Database upgrade complete."
+			#remove old virtual directory to prevent virtual deps from getting messed-up
+			[ -d ${ROOT}var/db/pkg/virtual ] && rm -rf ${ROOT}var/db/pkg/virtual
 		fi
 		install -d -m0755 ${ROOT}var/cache/edb
-		install -d -m4755 -o root -g wheel ${ROOT}var/cache/edb/dep
+		install -d -m2775 -o root -g wheel ${ROOT}var/cache/edb/dep
 	fi
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/portage.py[co]
-	chmod 4755 ${ROOT}var/cache/edb/dep ${ROOT}var/cache/edb/dep/*
+	chmod 2775 ${ROOT}var/cache/edb/dep ${ROOT}var/cache/edb/dep/*
 	chown -R root.wheel ${ROOT}var/cache/edb/dep
 	
 	# we gotta re-compile these modules and deal with systems with clock skew (stale compiled files)
