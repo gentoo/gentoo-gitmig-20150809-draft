@@ -1,0 +1,11 @@
+# ChangeLog for sys-kernel/vanilla-tiny-sources
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-tiny-sources/ChangeLog,v 1.1 2004/02/12 02:48:15 zul Exp $
+
+*vanilla-tiny-sources-2.6.2_rc3 (11 Feb 2004)
+
+  11 Feb 2004; Chuck Short <zul@gentoo.org> metadata.xml,
+  vanilla-tiny-sources-2.6.1.ebuild, vanilla-tiny-sources-2.6.2_rc3.ebuild:
+  Initial version, ebuilds originally written by Dorian Gray
+  <gentoo-bugs@tintar.com>. Modified by me to use the kernel-2 eclass.
+
