@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.15.ebuild,v 1.1 2004/09/25 18:10:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.15.ebuild,v 1.2 2004/10/06 05:51:35 lu_zero Exp $
 
 inherit eutils gnuconfig
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/parted"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 	mirror://gentoo/${PF}-gentoo.tar.bz2
 	mirror://gentoo/${P}.tar.gz
-	http://dev.gentoo.org/~dholm/distfiles/${PF}-gentoo.tar.bz2"
+	http://dev.gentoo.org/~lu_zero/distfiles/${PF}-gentoo.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
