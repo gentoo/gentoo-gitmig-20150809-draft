@@ -1,5 +1,15 @@
-MD5 6f22d6b58fc342312b6f2635c4f1e272 jexcelapi-2.5.1.ebuild 1258
-MD5 e2b47c77ecc881f41d2313f7fe6aa78e ChangeLog 602
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 61f0ead95d0f535d07c3d8a6fd77825d jexcelapi-2.5.1.ebuild 1161
+MD5 662318e8b5916a39f7648c2713fb8aa2 ChangeLog 723
 MD5 4a7382c67259f73f392b0a5e72dba645 metadata.xml 510
 MD5 9770cc65a95a15deaf210639e64847f8 files/2.5.1-jikes.patch 769
 MD5 862d1074e51b2c7387bbe2d6fcf2dbee files/digest-jexcelapi-2.5.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOHti06ebR+OMO78RAkSJAKCAmsjVe3S/tXlXa3qgaWcAfrMBGwCeKDBA
+qF3DQRHaqunZ+FjfIO0KXqI=
+=G0Gw
+-----END PGP SIGNATURE-----
