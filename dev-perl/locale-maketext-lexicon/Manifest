@@ -1,4 +1,6 @@
 MD5 33270f69b14773e045caf76127a6cf06 ChangeLog 774
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 71390b6921cf424dbf8bdef2ca3517ad locale-maketext-lexicon-0.32.ebuild 674
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 f719826aa3cacffa9944db63595de7b5 locale-maketext-lexicon-0.35.ebuild 542
 MD5 94f33d19699ba632dd1b2b73278c05b0 files/digest-locale-maketext-lexicon-0.32 79
+MD5 76ad1bd287b12ead7360a4c9f8d0358f files/digest-locale-maketext-lexicon-0.35 79
