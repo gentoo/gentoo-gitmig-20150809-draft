@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/pilot-link-0.9.6-r3.ebuild,v 1.2 2002/04/06 16:23:27 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/pilot-link-0.9.6-r3.ebuild,v 1.3 2002/04/06 19:12:41 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A suite of tools contains a series of conduits for moving
@@ -17,7 +17,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	patch -p1 ${FILESDIR}/pilot-link-0.9.6-gcc3.diff || die
+	patch -p1 < ${FILESDIR}/pilot-link-0.9.6-gcc3.diff || die
 
 }
 
