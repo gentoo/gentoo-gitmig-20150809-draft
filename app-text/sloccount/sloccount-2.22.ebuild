@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.22.ebuild,v 1.6 2004/03/12 09:18:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.22.ebuild,v 1.7 2004/06/11 08:48:53 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.dwheeler.com/sloccount/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="dev-lang/perl
 	>=sys-apps/sed-4
