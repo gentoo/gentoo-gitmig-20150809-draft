@@ -22,6 +22,7 @@
 ##
 
 # lanius@gentoo.org (15 Aug 2003)
+# needs a lot more testing
 >net-misc/ltsp-core-3.0.9-r3
 
 
