@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.29 2004/11/27 04:14:01 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.30 2004/11/29 22:54:38 ticho Exp $
+
+  29 Nov 2004; Andrej Kacian <ticho@gentoo.org> courier-0.45.6.ebuild,
+  courier-0.46.20040816.ebuild, courier-0.46.20040825.ebuild,
+  courier-0.46.20040902.ebuild, courier-0.46.ebuild,
+  courier-0.47.20041113.ebuild, courier-0.47.20041120.ebuild,
+  courier-0.47.ebuild:
+  Changed app-admin/fam -> virtual/fam, as per bug #67170.
 
   26 Nov 2004; Scott W Taylor <swtaylor@gentoo.org> files/courier-init:
   will need courier-authlib in near future. init script updated to reflect this.

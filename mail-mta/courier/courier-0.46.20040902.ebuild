@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.46.20040902.ebuild,v 1.4 2004/09/19 08:02:03 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.46.20040902.ebuild,v 1.5 2004/11/29 22:54:38 ticho Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ DEPEND="virtual/libc
 	!virtual/imapd"
 
 RDEPEND="${DEPEND}
-	app-admin/fam
+	virtual/fam
 	dev-lang/perl
 	sys-apps/procps"
 
