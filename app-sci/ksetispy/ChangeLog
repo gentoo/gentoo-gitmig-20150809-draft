@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/ksetispy
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ksetispy/ChangeLog,v 1.5 2004/04/20 13:42:16 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ksetispy/ChangeLog,v 1.6 2004/06/06 16:40:41 kugelfang Exp $
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> ksetispy-0.5.3.ebuild:
+  Marked stable on amd64.
 
   20 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> ksetispy-0.5.3.ebuild:
   marked ~amd64
