@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.6.ebuild,v 1.2 2003/07/18 20:24:00 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.6.ebuild,v 1.3 2003/08/18 06:16:41 kumba Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Concurrent Versions System - source code revision control tools"
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ~mips amd64"
+KEYWORDS="x86 ppc sparc alpha hppa mips amd64"
 
 src_compile() {
 	econf --with-tmpdir=/tmp || die
