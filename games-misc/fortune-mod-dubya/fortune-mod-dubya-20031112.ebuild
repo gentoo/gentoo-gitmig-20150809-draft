@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-dubya/fortune-mod-dubya-20031112.ebuild,v 1.1 2003/11/12 17:46:42 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-dubya/fortune-mod-dubya-20031112.ebuild,v 1.2 2003/12/01 21:12:34 vapier Exp $
 
 DESCRIPTION="Quotes from George W. Bush"
 HOMEPAGE="http://dubya.seiler.us/"
@@ -8,7 +8,7 @@ SRC_URI="http://dubya.seiler.us/files/dubya-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64"
 
 RDEPEND="games-misc/fortune-mod"
 
