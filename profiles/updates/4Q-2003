@@ -19,3 +19,4 @@ move sys-apps/gzip_x86 app-arch/gzip-x86
 move sys-apps/sharutils app-arch/sharutils
 move sys-apps/genflags app-portage/genflags
 move sys-apps/cpio app-arch/cpio
+move net-misc/l2tpd net-dialup/l2tpd
