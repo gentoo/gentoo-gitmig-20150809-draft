@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/run-mailcap
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.7 2003/09/28 02:11:37 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.8 2003/12/22 19:08:18 twp Exp $
+
+  21 Dec 2003; Tom Payne <twp@gentoo.org> run_mailcap-3.23_p1-r1.ebuild :
+  Install mailcap(5) man page. Install compose, edit, see, print symlinks.
+  Install mime.types.
 
   28 Sep 2003; Tom Payne <twp@gentoo.org> :
   Added metadata.xml.
