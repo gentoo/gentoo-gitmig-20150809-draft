@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.33-r1.ebuild,v 1.8 2004/06/24 22:32:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.33-r1.ebuild,v 1.9 2004/07/03 22:51:23 malc Exp $
 
 IUSE="doc"
 
@@ -22,6 +22,7 @@ newdepend ">=kde-base/kdelibs-3.1
 src_unpack() {
 	kde_src_unpack
 	epatch ${FILESDIR}/dock-fix.patch
+	epatch ${FILESDIR}/gcc-3.4.patch
 }
 
 src_install () {
