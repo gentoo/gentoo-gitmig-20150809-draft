@@ -1,11 +1,20 @@
 # ChangeLog for net-www/skipstone
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/ChangeLog,v 1.14 2002/12/13 11:00:28 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/ChangeLog,v 1.15 2003/02/03 09:19:42 seemant Exp $
+
+*skipstone-0.8.3-r1 (03 Feb 2003)
+
+  03 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
+  skipstone-0.8.3-r1.ebuild files/digest-skipstone-0.8.3-r1 :
+
+  Nicholas Wourms (dragon@gentoo) found a fix from debian to make skipstone
+  compile against the newer mozillas.  Fixes bug #14616 by Alex Tananaev
+  <antissimo@mail.spbnit.ru>
+
+*skipstone-0.8.3 (25 Jun 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*skipstone-0.8.3 (25 Jun 2002)
-
   02 Nov 2002; Seemant Kulleen <seemant@gentoo.org> skipstone-0.8.3.ebuild :
 
   Upstream's cvs server is non-responsive, and muhri himself seems away from

@@ -1,31 +1,41 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/skipstone-0.8.3.ebuild,v 1.10 2002/12/09 04:33:20 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/skipstone-0.8.3-r1.ebuild,v 1.1 2003/02/03 09:19:42 seemant Exp $
+
+inherit eutils
+
+IUSE="nls"
 
 DESCRIPTION="GTK+ based web browser based on the Mozilla engine"
-SRC_URI="http://www.muhri.net/skipstone/${P}.tar.gz"
+SRC_URI="http://www.muhri.net/skipstone/${P}.tar.gz
+	mirror://gentoo/${P}-gentoo.diff.bz2"
 HOMEPAGE="http://www.muhri.net/skipstone/"
 
-KEYWORDS="x86 ppc sparc "
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="nls"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="net-www/mozilla
 	=x11-libs/gtk+-1.2*"
+
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
+	
 	if [ `use nls` ] ; then
 		cd ${S}/src
 		xgettext -k_ -kN_  ../src/*.[ch]  -o ../locale/skipstone.pot
 
 		# Now we apply a patch to rid the files of duplicate translations
 		cd ${WORKDIR}
-		patch -p0 < ${FILESDIR}/${PN}-gentoo.patch
+		epatch ${FILESDIR}/${PN}-gentoo.patch
 	fi
+	# patch to compile against newer mozilla, thanks to the debian project
+	# (found by nicholas wourms <dragon@gentoo.org>)
+	epatch ${WORKDIR}/${P}-gentoo.diff
+	
 }
 
 src_compile() {
