@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.61 2004/06/29 17:42:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.62 2004/07/01 20:03:41 leonardop Exp $
+
+  01 Jul 2004; L. Boshell <leonardop@gentoo.org> gstreamer-0.8.3.ebuild,
+  files/gstreamer-0.8.3-jade_fix.patch:
+  Patch to fix docs building process. Resolves bug #55700.
 
 *gstreamer-0.8.3 (29 Jun 2004)
 

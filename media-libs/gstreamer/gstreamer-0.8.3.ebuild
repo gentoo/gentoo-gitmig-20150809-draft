@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.3.ebuild,v 1.2 2004/06/29 17:42:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.3.ebuild,v 1.3 2004/07/01 20:03:41 leonardop Exp $
 
 inherit eutils flag-o-matic libtool gnome2
 
@@ -24,7 +24,16 @@ RDEPEND=">=dev-libs/glib-2.2
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11.5
 	dev-util/pkgconfig
-	doc? ( dev-util/gtk-doc )"
+	doc? ( dev-util/gtk-doc
+		=app-text/docbook-xml-dtd-4.2* )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Fix doc generation with jade. See bug #55700.
+	epatch ${FILESDIR}/${P}-jade_fix.patch
+}
 
 src_compile() {
 
