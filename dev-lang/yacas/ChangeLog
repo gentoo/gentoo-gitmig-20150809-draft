@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/yacas
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yacas/ChangeLog,v 1.1 2003/04/18 03:31:55 george Exp $
+
+*yacas-1.0.54.ebuild (17 Apr 2003)
+
+  17 Apr 2003; George Shapovalov <george@gentoo.org> yacas-1.0.54.ebuild, files/digest-yacas-1.0.54 :
+  initial release (#3790)
+  YACAS is a very powerful, general purpose Computer Algebra System.
+  ebuild submitted by Tobias Florek <tflorek@web.de>
