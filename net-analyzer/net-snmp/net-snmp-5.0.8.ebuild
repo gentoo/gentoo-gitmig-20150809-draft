@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.8.ebuild,v 1.5 2003/06/14 01:54:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.8.ebuild,v 1.6 2003/07/01 16:48:18 mholzer Exp $
 
 IUSE="ssl kerberos ipv6 tcpd"
 
-PROVIDES="virtual/snmp"
+PROVIDE="virtual/snmp"
 S=${WORKDIR}/${P%[a-z]}
 DESCRIPTION="Software for generating and retrieving SNMP data"
 SRC_URI="mirror://sourceforge/net-snmp/${P}.tar.gz"
