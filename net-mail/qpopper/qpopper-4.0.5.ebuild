@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5.ebuild,v 1.5 2003/06/12 21:31:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5.ebuild,v 1.6 2003/06/14 20:46:22 aliz Exp $
 
 IUSE="ssl pam"
 
@@ -21,14 +21,21 @@ LICENSE="qpopper | GPL-2"
 KEYWORDS="x86 sparc"
 
 src_compile() {                           
-	CO=" --enable-apop=/etc/pop.auth \
-         --enable-popuid=pop \
-         --enable-log-login \
-         --enable-specialauth \
-		 --enable-log-facility=LOG_MAIL \
-		 --enable-debugging \
-		 --enable-uw-kludge-flag \
-	     --with-gdbm"
+
+	local myconf
+
+	use pam && myconf="${myconf} --with-pam=pop3"
+	use ssl && myconf="${myconf} --with-openssl"
+
+	econf --enable-apop=/etc/pop.auth \
+		--enable-popuid=pop \
+		--enable-log-login \
+		--enable-specialauth \
+		--enable-log-facility=LOG_MAIL \
+		--enable-debugging \
+		--enable-uw-kludge-flag \
+		--with-gdbm \
+		${myconf}
 
 	if use ssl; then
 		if use pam; then
@@ -57,14 +64,9 @@ EOF
 		rm $$PEM1 $$PEM2
 		umask 022
 
-	elif use pam; then
-		./configure ${CO} --with-pam=pop3 || die
-		make || die
-
-	else
-		./configure ${CO}
-		make || die
 	fi
+
+	emake || die
 }
 
 src_install() {                               
@@ -80,7 +82,7 @@ src_install() {
 		fowners root.0 /etc/mail/certs/cert.pem
 	fi
 
-	doman man/popauth.8  man/poppassd.8  man/popper.8
+	doman man/popauth.8 man/popper.8
 
 	dodoc ${WORKDIR}/GUIDE.pdf
 
