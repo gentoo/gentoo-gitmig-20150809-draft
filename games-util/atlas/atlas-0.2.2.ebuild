@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.2.2.ebuild,v 1.3 2004/02/11 08:13:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.2.2.ebuild,v 1.4 2004/03/19 09:30:49 mr_bones_ Exp $
 
 inherit games
 
@@ -17,7 +17,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND=">=games-simulation/flightgear-0.8.0
-	>=libpng-1.2.5
+	>=media-libs/libpng-1.2.5
 	>=media-libs/plib-1.4
 	virtual/glut"
 

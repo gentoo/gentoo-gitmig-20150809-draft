@@ -20,7 +20,7 @@ DEPEND="virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer
-	>=emilia-pinball-0.3.1"
+	>=games-arcade/emilia-pinball-0.3.1"
 
 src_unpack() {
 	unpack ${A}
