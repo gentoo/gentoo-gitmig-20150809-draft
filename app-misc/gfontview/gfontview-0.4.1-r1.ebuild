@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.4.1-r1.ebuild,v 1.2 2000/08/16 04:37:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.4.1-r1.ebuild,v 1.3 2000/09/15 20:08:45 drobbins Exp $
 
 P=gfontview-0.4.1
 A=${P}.tar.gz
@@ -16,13 +16,13 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  CPPFLAGS="$CFLAGS -I/usr/include/freetype" ./configure --host=${CHOST} --prefix=/usr/X11R6 --with-catgets
-  make
+  CPPFLAGS="$CFLAGS -I/usr/include/freetype" try ./configure --host=${CHOST} --prefix=/usr/X11R6 --with-catgets
+  try make
 }
 
 src_install() {                               
   cd ${S}
-  make prefix=${D}/usr/X11R6 install
+  try make prefix=${D}/usr/X11R6 install
   dodoc AUTHORS COPYING ChangeLog NEWS README TODO
   insinto /usr/X11R6/include/X11/pixmaps/
   doins error.xpm openhand.xpm font.xpm t1.xpm tt.xpm 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-3.0.4-r1.ebuild,v 1.3 2000/08/23 07:00:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-3.0.4-r1.ebuild,v 1.4 2000/09/15 20:08:45 drobbins Exp $
 
 P=rpm-3.0.4
 A="${P}.tar.gz bzip2-0.9.5d.tar.gz"
@@ -21,16 +21,16 @@ src_unpack () {
 
 src_compile() {
     cd ${WORKDIR}/bzip2-0.9.5d
-    make $MAKEOPTS "MAKE = make $MAKEOPTS" all
+    try make $MAKEOPTS "MAKE = try make $MAKEOPTS" all
     cd ${S}
     export CFLAGS="-I ${WORKDIR}/bzip2-0.9.5d ${CFLAGS} -L ${WORKDIR}/bzip2-0.9.5d -lbz2"
     # there is no shared Version of bzlib so we can only build the static version :-(
-    ./configure --prefix=/usr --with-catgets
-    make
+    try ./configure --prefix=/usr --with-catgets
+    try make
 }
 
 src_install() {
-    make DESTDIR=${D} install
+    try make DESTDIR=${D} install
     mv ${D}/bin/rpm ${D}/usr/bin
     rm -rf ${D}/bin
     if [ -z "$DBUG" ]
