@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffball
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.4 2004/08/30 02:06:06 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.5 2004/09/17 08:56:34 ferringb Exp $
+
+  17 Sep 2004; Brian Harring <ferringb@gentoo.org> -diffball-0.6_pre1.ebuild:
+  removed 0.6_pre1, added 0.6_pre2.
 
   29 Aug 2004; Brian Harring <ferringb@gentoo.org> :
   Added diffball-0.6_pre1.
