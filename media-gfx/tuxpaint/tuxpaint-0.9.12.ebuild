@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.12.ebuild,v 1.2 2003/10/31 13:56:14 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.12.ebuild,v 1.3 2003/11/09 23:28:19 leonardop Exp $
 
 DESCRIPTION="Drawing program designed for young children (kids ages 3 and up)"
 HOMEPAGE="http://www.newbreedsoftware.com/tuxpaint/"
@@ -50,6 +50,7 @@ src_compile() {
 src_install () {
 	sed -i "s:^PREFIX=.*:PREFIX=${D}usr:" Makefile
 	sed -i "s:^  CONFDIR=.*:  CONFDIR=${D}etc/tuxpaint:" Makefile
+	sed -i 's:make install-gnome.*:echo "   Nothing to install"; \\:' Makefile
 
 	dodir /usr/bin
 	use kde && dodir /usr/kde/3.1/share/applnk/Graphics \
