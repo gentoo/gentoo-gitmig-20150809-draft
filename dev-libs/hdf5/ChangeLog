@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/hdf5
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf5/ChangeLog,v 1.9 2004/03/03 16:40:03 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf5/ChangeLog,v 1.10 2004/04/03 13:20:38 pbienst Exp $
+
+  03 Apr 2004; Peter Bienstman <pbienst@gentoo.org> hdf5-1.6.2.ebuild:
+  Marked stable on x86.
 
 *hdf5-1.6.2 (03 Mar 2004)
 
