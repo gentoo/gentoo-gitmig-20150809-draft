@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha1.ebuild,v 1.2 2003/12/20 10:05:15 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha1.ebuild,v 1.3 2003/12/21 18:27:26 seemant Exp $
 
 # Here, like in the other .ebuilds, the static version is
 # forced for simplicity's sake
@@ -24,7 +24,7 @@ SLOT="0"
 OPERAVER="7.50-20031219"
 OPERATYPE="1-static-qt"
 
-SRC_URI="http://snapshot.opera.com/unix/7.50-Preview-1/intel-linux/${PN}-${OPERAVER}.${OPERATYPE}.i386-en.tar.bz2"
+SRC_URI="http://snapshot.opera.com/unix/7.50-Preview-1/intel-linux/en/${PN}-${OPERAVER}.${OPERATYPE}.i386-en.tar.bz2"
 
 S=${WORKDIR}/${A/.tar.bz2/}
 
