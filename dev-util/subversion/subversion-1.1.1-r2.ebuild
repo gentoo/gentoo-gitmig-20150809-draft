@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r1.ebuild,v 1.2 2004/11/12 16:50:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r2.ebuild,v 1.1 2004/11/12 18:48:59 agriffis Exp $
 
 inherit elisp-common libtool python eutils bash-completion
 
@@ -222,6 +222,11 @@ EOF
 	# candidate for us to install as well
 	newbin contrib/client-side/svn_load_dirs.pl svn-load-dirs
 
+	# Install svnserve init-script and xinet.d snippet, bug 43245
+	insinto /etc/init.d ; newexe ${FILESDIR}/svnserve.initd svnserve
+	insinto /etc/conf.d ; newins ${FILESDIR}/svnserve.confd svnserve
+	insinto /etc/xinetd.d ; newins ${FILESDIR}/svnserve.xinetd svnserve
+
 	# 
 	# Past here is all documentation and examples
 	#
@@ -257,12 +262,12 @@ EOF
 }
 
 pkg_postinst() {
-	use emacs && elisp-site-regen
+	use emacs >/dev/null && elisp-site-regen
 
-	einfo "Subversion Installation Notes"
-	einfo "-----------------------------"
-
+	einfo "Subversion Server Notes"
+	einfo "-----------------------"
 	einfo
+
 	einfo "If you intend to run a server, a repository needs to be created using"
 	einfo "svnadmin (see man svnadmin) or the following command to create it in"
 	einfo "/var/svn:"
@@ -274,15 +279,31 @@ pkg_postinst() {
 	einfo "    db4_recover -h ${SVN_REPOS_LOC}/repos"
 	einfo "    chown -Rf apache:apache ${SVN_REPOS_LOC}/repos"
 	einfo
+	einfo "Subversion has multiple server types, take your pick:"
+	einfo
+	einfo " - svnserve daemon: "
+	einfo "   1. edit /etc/conf.d/svnserve"
+	einfo "   2. start daemon: /etc/init.d/svnserve start"
+	einfo "   3. make persistent: rc-update add svnserve default"
+	einfo
+	einfo " - svnserve via xinetd:"
+	einfo "   1. edit /etc/xinetd.d/svnserve (remove disable line)"
+	einfo "   2. restart xinetd.d: /etc/init.d/xinetd restart"
+	einfo
+	einfo " - svn over ssh:"
+	einfo "   1. create an svnserve wrapper in /usr/local/bin to set the umask you"
+	einfo "      want, for example:"
+	einfo "         #!/bin/bash"
+	einfo "         umask 002"
+	einfo "         exec /usr/bin/svnserve \"\$@\""
+	einfo
 
-	if use apache2; then
+	if use apache2 >/dev/null; then
+		einfo " - http-based server:"
+		einfo "   1. edit /etc/conf.d/apache2 to include both \"-D DAV\" and \"-D SVN\""
+		einfo "   2. create an htpasswd file:"
+		einfo "      htpasswd2 -m -c ${SVN_REPOS_LOC}/conf/svnusers USERNAME"
 		einfo
-		einfo "Subversion has multiple server types. To enable the http based version"
-		einfo "you must edit /etc/conf.d/apache2 to include both \"-D DAV\" and \"-D SVN\""
-		einfo
-		einfo "To allow web access a htpasswd file needs to be created using the"
-		einfo "following command:"
-		einfo "   htpasswd2 -m -c ${SVN_REPOS_LOC}/conf/svnusers USERNAME"
 	fi
 }
 
