@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.76 2004/11/05 02:54:32 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.77 2004/11/12 03:03:51 gustavoz Exp $
+
+  12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> metacity-2.8.5.ebuild:
+  Stable on sparc
 
   05 Nov 2004; Mike Gardiner <obz@gentoo.org> metacity-2.6.3.ebuild,
   metacity-2.6.5.ebuild, metacity-2.8.0.ebuild:
