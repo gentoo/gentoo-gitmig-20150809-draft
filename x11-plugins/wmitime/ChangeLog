@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmitime
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmitime/ChangeLog,v 1.6 2004/06/28 20:47:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmitime/ChangeLog,v 1.7 2004/09/01 02:29:15 tgall Exp $
+
+  31 Aug 2004; Tom Gall <tgall@gentoo.org> wmitime-0.3.ebuild:
+  stable on ppc64, bug #61764
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> wmitime-0.3.ebuild:
   glibc -> libc
