@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.2.ebuild,v 1.9 2004/06/06 10:47:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.2.ebuild,v 1.10 2004/06/14 17:36:17 aliz Exp $
 
 inherit libtool eutils
 
@@ -14,8 +14,7 @@ KEYWORDS="x86 sparc ppc alpha ~ia64 amd64 hppa mips"
 IUSE="ssl berkdb ipv6 krb4"
 PROVIDE="virtual/krb5"
 
-RDEPEND="
-	ssl? ( dev-libs/openssl )
+RDEPEND="ssl? ( dev-libs/openssl )
 	berkdb? ( sys-libs/db )
 	krb4? ( >=app-crypt/kth-krb-1.2.2-r2 )
 	!virtual/krb5"
@@ -46,7 +45,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	elibtoolize
 
 	aclocal -I cf || die "configure problem"
@@ -56,7 +54,7 @@ src_compile() {
 
 	local myconf="
 		$(use_with ipv6)
-		$(use_with berkdb berkely-db)
+		$(use_with berkdb berkeley-db)
 		$(use_with ssl openssl)
 		--enable-shared"
 
@@ -67,7 +65,6 @@ src_compile() {
 	#use ldap && myconf="${myconf} --with-open-ldap=/usr"
 
 	econf ${myconf} || die "econf failed"
-
 	emake prefix=/usr \
 		sysconfdir=/etc \
 		mandir=/usr/share/man \
