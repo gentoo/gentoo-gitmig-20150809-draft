@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/icewm-tools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewm-tools/ChangeLog,v 1.7 2003/07/08 14:02:33 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewm-tools/ChangeLog,v 1.8 2003/07/30 10:15:02 phosphan Exp $
+
+*icewm-tools-2.4.1 (30 Jul 2003)
+
+  30 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> icewm-tools-1.7.ebuild,
+  icewm-tools-2.1.ebuild, icewm-tools-2.2.ebuild, icewm-tools-2.3.ebuild,
+  icewm-tools-2.4.ebuild:
+  Cleanup, 2.4 as stable
+
+*icewm-tools-2.4 (08 Jul 2003)
 
   08 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> :
   Version bump
