@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.21 2002/10/01 00:27:25 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.22 2002/10/11 15:01:47 lostlogic Exp $
+
+*xchat-1.9.3.ebuild (11 Oct 2002)
+
+  11 Oct 2002; Brandon Low <lostlogic@gentoo.org> xchat-1.9.3.ebuild/xchat-1.9.3.ebuild:
+  
+  Add another masked version in the gtk2 series.
 
 *xchat-1.8.10-r1 (29 Sep 2002)
 
