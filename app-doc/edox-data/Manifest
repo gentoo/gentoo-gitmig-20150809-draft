@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 3a1c7f4b230df8663e7970913a81ed18 ChangeLog 701
+MD5 1678d2bbbdeda0efacc1155d10627be6 edox-data-0.16.7_pre3.ebuild 784
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
-MD5 5957c01bb62e7ceab1db390aa570174e ChangeLog 593
-MD5 623143cf00c7e0a6c9f4f0f04a0c1fae edox-data-0.16.7_pre3.ebuild 783
 MD5 10e05e29fbd8b90845bc663b76291cb5 files/digest-edox-data-0.16.7_pre3 83
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBxPQXroRuSHgZdywRAmwKAJ4yub9BTAOCGwtaJuawFghksNwH4gCfQXGv
-FquhS3nTfETHQAIPE98d4OY=
-=oK9W
+iD8DBQFByYHfKRy60XGEcJIRAs5/AJ4iwaoei2xwEFh2gdxqHLOAIPRP1QCfVXxp
+LtMUYK7muIIEx1QkR51dGkw=
+=6jv7
 -----END PGP SIGNATURE-----
