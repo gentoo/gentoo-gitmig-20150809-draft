@@ -1,23 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/jdepend-2.7.ebuild,v 1.1 2004/07/17 14:05:47 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/jdepend-2.8.ebuild,v 1.1 2004/08/31 03:54:12 zx Exp $
 
 inherit java-pkg
 
 DESCRIPTION="JDepend traverses Java class file directories and generates design quality metrics for each Java package."
 HOMEPAGE="http://www.clarkware.com/software/JDepend.html"
 SRC_URI="http://www.clarkware.com/software/${PN}-${PV}.zip"
-
 LICENSE="jdepend"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc jikes"
-
 DEPEND=">=virtual/jdk-1.3
-		>=app-arch/unzip-5.50-r1
-		>=dev-java/ant-1.4
-		jikes? ( >=dev-java/jikes-1.17 )"
+	>=app-arch/unzip-5.50-r1
+	>=dev-java/ant-1.4
+	jikes? ( >=dev-java/jikes-1.17 )"
 RDEPEND=">=virtual/jdk-1.3"
+RESTRICT="nomirror"
 
 #TODO Do junit testing but resolve the circular dependency we have with ant.
 src_compile() {
