@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/putty
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.18 2004/08/04 16:19:31 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.19 2004/10/27 13:37:40 taviso Exp $
+
+*putty-0.56 (27 Oct 2004)
+
+  27 Oct 2004; Tavis Ormandy <taviso@gentoo.org> -putty-0.54.ebuild,
+  -putty-0.54_pre1.ebuild, -putty-0.55.ebuild, +putty-0.56.ebuild:
+  fixing #69123
 
 *putty-0.55 (04 Aug 2004)
 
