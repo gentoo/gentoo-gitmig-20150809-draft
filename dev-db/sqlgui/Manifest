@@ -1,6 +1,0 @@
-MD5 fe5768c5aab5d1bfd08f5f9062fbe319 sqlgui-0.4.ebuild 765
-MD5 ee319f4c5e56739a30d2843ebd289ae1 sqlgui-0.5.ebuild 620
-MD5 0eded2e48657b6031b9e607ac297ec0d ChangeLog 988
-MD5 485cc6099a9c017c2260ebad2bf6ad34 files/sqlgui-0.4-gcc3.diff 674
-MD5 55906755a0aab2409f314d16649473ff files/digest-sqlgui-0.4 65
-MD5 4923a29e52ee34622f21dcac9b221379 files/digest-sqlgui-0.5 65
