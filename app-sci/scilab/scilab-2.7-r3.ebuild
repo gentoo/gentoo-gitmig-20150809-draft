@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r3.ebuild,v 1.1 2004/03/22 13:25:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r3.ebuild,v 1.2 2004/04/21 18:07:11 kugelfang Exp $
 
 inherit virtualx
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.scilab.org/"
 
 LICENSE="scilab"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="tcltk gtk"
 
 DEPEND="virtual/x11
@@ -39,6 +39,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S} && unpack ${DISTFILES}/patch_browsehelp.tar.gz
+	if [ ${ARCH} = "amd64" ]; then
+		epatch ${FILESDIR}/${P}-configure.patch
+		cd ${S}
+		autoconf
+	fi
 }
 
 src_compile() {
@@ -49,7 +54,7 @@ src_compile() {
 
 	econf ${myopts} || die "./configure failed"
 	export HOME=${S}
-	Xmake all || die
+	make all || die
 }
 
 src_install() {
