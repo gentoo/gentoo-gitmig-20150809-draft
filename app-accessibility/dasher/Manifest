@@ -1,5 +1,5 @@
-MD5 496b44386795105a4ddfdd0198f924c2 ChangeLog 2405
-MD5 adf1823916ec7b98ae39d26b1baf85eb dasher-3.2.10-r1.ebuild 1375
+MD5 ee3bd8e294c3a4435185d764c81fb3fa ChangeLog 2505
+MD5 e2355d7358358ab132126914f0ad9f9a dasher-3.2.10-r1.ebuild 1376
 MD5 2ff28281b13299c971e50d346fb5d09d dasher-3.2.4.ebuild 1199
 MD5 645aac23c66d08fa6064bdb7c95c76ef metadata.xml 420
 MD5 7ca12febbfba2b50f70134394363aa33 files/dasher-3.2.10-glade_fix.patch 548
