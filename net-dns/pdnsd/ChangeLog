@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.14 2004/02/21 02:57:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.15 2004/02/22 00:08:46 dragonheart Exp $
+
+  22 Feb 2004; Daniel Black <dragonheart@gentoo.org> files/pdnsd.rc6:
+  Improved doco in init script
 
   21 Feb 2004; Daniel Black <dragonheart@gentoo.org> files/pdnsd.rc6:
   Added -s to files/pdnsd.rc6 to enable socket usage. Thanks to Eric Harney
