@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crystality/xmms-crystality-0.92.ebuild,v 1.6 2004/06/24 23:38:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crystality/xmms-crystality-0.92.ebuild,v 1.7 2004/07/06 23:07:03 eradicator Exp $
 
 IUSE=""
 
@@ -16,7 +16,9 @@ SRC_URI="http://fanthom.math.put.poznan.pl/~gyver/crystality/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+# -sparc: 0.92: static noise when enabled
+# ~amd64: 0.92: distortions in the effects... 
+KEYWORDS="x86 ~ppc -sparc ~amd64"
 
 DEPEND="media-sound/xmms"
 
@@ -24,10 +26,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gcc3.patch
+	epatch ${FILESDIR}/${P}-PIC.patch
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS} `gtk-config --cflags`" || die
+	emake CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {

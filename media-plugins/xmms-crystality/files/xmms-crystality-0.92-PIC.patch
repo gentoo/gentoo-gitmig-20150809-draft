@@ -1,0 +1,37 @@
+diff -Naur crystality-plugin-0.92.orig/Makefile crystality-plugin-0.92/Makefile
+--- crystality-plugin-0.92.orig/Makefile	2001-08-12 16:41:14.000000000 -0700
++++ crystality-plugin-0.92/Makefile	2004-07-06 15:59:23.720725935 -0700
+@@ -1,13 +1,13 @@
+-GTK_CFLAGS=	$(shell gtk-config --cflags)
++GTK_CFLAGS=	$(shell gtk-config --cflags) -fPIC -DPIC
+ 
+ XMMS_PLUGIN=	libcrystality.so
+-XMMS_CFLAGS=	$(shell xmms-config --cflags)
++XMMS_CFLAGS=	$(shell xmms-config --cflags) -fPIC -DPIC
+ XMMS_PLUGINDIR=	$(shell xmms-config --effect-plugin-dir)
+ 
+ STDIO_PLUGIN=	crystality-stdio
+ STDIO_LIBS=	-lpthread $(shell gtk-config --libs)
+ 
+-CFLAGS= -s -mpentium -O6 -Wall -ffast-math -fomit-frame-pointer -finline-functions -fexpensive-optimizations $(GTK_CFLAGS)
++MYCFLAGS= $(GTK_CFLAGS) $(XMMS_CFLAGS) $(CFLAGS)
+ 
+ 
+ TARGETS=	$(XMMS_PLUGIN) $(STDIO_PLUGIN)
+@@ -15,13 +15,13 @@
+ all	: $(TARGETS)
+ 
+ $(STDIO_PLUGIN): crystality.o gui.o stdio.o
+-	cc $(CFLAGS) -o$(STDIO_PLUGIN) $(STDIO_LIBS) crystality.o gui.o stdio.o -lpthread
++	cc $(MYCFLAGS) -o$(STDIO_PLUGIN) $(STDIO_LIBS) crystality.o gui.o stdio.o -lpthread
+ 
+ $(XMMS_PLUGIN): crystality.o gui.o xmms.o
+-	cc $(CFLAGS) -o$(XMMS_PLUGIN) -shared -fPIC crystality.o gui.o xmms.o
++	cc $(MYCFLAGS) -o$(XMMS_PLUGIN) -shared -fPIC crystality.o gui.o xmms.o
+ 
+ .c.o	:
+-	cc $(CFLAGS) -c $<
++	cc $(MYCFLAGS) -c $<
+ 
+ clean	: 
+ 	rm -f $(TARGETS) core *\.o
