@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.19 2004/11/18 08:36:21 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.20 2004/12/14 14:22:34 phosphan Exp $
+
+  14 Dec 2004; Patrick Kursawe <phosphan@gentoo.org>
+  -files/4.2.0_rc2-plugin.patch, qwt-4.2.0.ebuild, -qwt-4.2.0_rc1-r1.ebuild,
+  -qwt-4.2.0_rc2-r3.ebuild:
+  Declaring latest version stable for x86; Cleanup
 
 *qwt-4.2.0 (18 Nov 2004)
 
