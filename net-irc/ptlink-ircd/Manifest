@@ -1,6 +1,18 @@
-MD5 37e9465d6a2078dd2d01aece0fcb7bf4 ptlink-ircd-6.18.1.ebuild 2013
-MD5 aa22a39a0c8de2c5d7228a06eb195316 ChangeLog 1549
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 48a7b60076de251bbe2a432834fab24b ChangeLog 1685
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 37e9465d6a2078dd2d01aece0fcb7bf4 ptlink-ircd-6.18.1.ebuild 2013
+MD5 444589b041ddafeadd1e90c530634f2a ptlink-ircd-6.18.2.ebuild 2013
+MD5 a8424a92a1aef170448f005a3d91aa7e files/digest-ptlink-ircd-6.18.1 64
 MD5 e7d7d7b9be4a7e73ced48f01e97329d0 files/ptlink-ircd.conf.d 288
 MD5 ac9ca761a22cbe60373a156fa04718af files/ptlink-ircd.init.d 625
-MD5 a8424a92a1aef170448f005a3d91aa7e files/digest-ptlink-ircd-6.18.1 64
+MD5 7d06d919527779013e5e3c1086f3f5aa files/digest-ptlink-ircd-6.18.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBc+psI1lqEGTUzyQRAlbJAKCukD0ZD4ty7tsJ3EptlKbafI9g5gCfVljk
+9m6R/XkT4cVHGHhFA26PXOg=
+=FcYz
+-----END PGP SIGNATURE-----
