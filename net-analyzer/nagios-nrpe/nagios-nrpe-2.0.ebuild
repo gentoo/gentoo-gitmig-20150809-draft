@@ -1,18 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.0.ebuild,v 1.5 2004/10/25 03:08:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.0.ebuild,v 1.6 2004/10/25 12:59:33 eldad Exp $
 
 inherit eutils
 
 DESCRIPTION="Nagios $PV NRPE - Nagios Remote Plugin Executor"
 HOMEPAGE="http://www.nagios.org/"
 SRC_URI="mirror://sourceforge/nagios/nrpe-${PV}.tar.gz"
+
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
+
 KEYWORDS="x86 ~ppc sparc ~amd64"
-IUSE=""
-DEPEND=">=net-analyzer/nagios-plugins-1.3.0"
+
+IUSE="ssl"
+DEPEND=">=net-analyzer/nagios-plugins-1.3.0
+	ssl? ( >=dev-libs/openssl )"
 S="${WORKDIR}/nrpe-${PV}"
 
 pkg_setup() {
@@ -21,7 +25,11 @@ pkg_setup() {
 }
 
 src_compile() {
-	./configure \
+	local myconf
+
+	myconf="${myconf} `use_enable ssl`"
+
+	./configure ${myconf} \
 		--host=${CHOST} \
 		--prefix=/usr/nagios \
 		--localstatedir=/var/nagios \
@@ -34,15 +42,21 @@ src_compile() {
 }
 
 src_install() {
-	dodoc LEGAL Changelog README
+	dodoc LEGAL Changelog README SECURITY README.SSL
+
 	insinto /etc/nagios
 	newins ${FILESDIR}/nrpe-${PV}.cfg nrpe.cfg
+
 	exeinto /usr/nagios/bin
 	doexe src/nrpe
+
 	fowners nagios:nagios /usr/nagios/bin/nrpe
+
 	exeinto /usr/nagios/libexec
 	doexe src/check_nrpe
+
 	fowners nagios:nagios /usr/nagios/libexec/check_nrpe
+
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/nrpe-${PV} nrpe
 }
