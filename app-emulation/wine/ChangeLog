@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.12 2002/07/17 14:15:33 mjc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.13 2002/07/19 00:47:50 mjc Exp $
+
+*wine-20020710-r1 (18 Jun 2002)
+  18 Jun 2002 ;Michael Cohen <mjc@gentoo.org> wine-20020710.ebuild :
+  Added ALSA and arts dependencies (Bug #5206 and friends)
 
 *wine-20020710    (17 Jun 2002)
   17 Jun 2002 ;Michael Cohen <mjc@gentoo.org> wine-20020710.ebuild :
