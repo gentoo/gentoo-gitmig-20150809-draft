@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.6.2.ebuild,v 1.1 2005/02/20 16:32:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.6.2.ebuild,v 1.2 2005/03/06 21:49:44 carlo Exp $
 
 inherit python eutils
 
@@ -48,6 +48,7 @@ src_install() {
 		-c
 	cp ${S}/patch_modpython.py ${D}/${IDIR}
 	dodoc	HISTORY LICENSE.GPL THANKS eric/README*
+	make_desktop_entry "eric3 --nosplash" eric3 "${IDIR}icons/default/eric.png" "Development;IDE;Qt"
 }
 
 pkg_postinst() {
