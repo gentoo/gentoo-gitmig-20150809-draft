@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-4.00.06a.ebuild,v 1.1 2004/07/02 19:17:21 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-4.00.06a.ebuild,v 1.2 2004/07/14 15:06:09 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://root.cern.ch/"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86"
-IUSE="mysql postgres opengl afs kerberos ldap qt"
+IUSE="afs kerberos ldap mysql opengl postgres python qt"
 
 DEPEND="virtual/x11
 	>=media-libs/freetype-2.0.9
