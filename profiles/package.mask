@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <raker@gentoo.org> 25 Jul 2002
+# masking net-misc/ices while waiting on python share library
+net-misc/ices
+
 # <seemant@gentoo.org> 25 Jul 2002
 # masked because of unhealthy groupadd operation in postinst
 # needs sorting out on the policy
