@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/at
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.22 2004/12/16 06:14:07 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.23 2005/01/02 23:12:40 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> at-3.1.8-r10.ebuild:
   Stable on amd64.
@@ -23,7 +26,7 @@
   at-3.1.8-r9.ebuild:
   Changed SRC_URI to use mirror:// syntax.
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> at-3.1.8-r10.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> at-3.1.8-r10.ebuild:
   Stable on alpha.
 
   06 Apr 2004; Aron Griffis <agriffis@gentoo.org> at-3.1.8-r10.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.34 2004/12/29 20:40:44 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.35 2005/01/02 23:25:09 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *kbd-1.12-r4 (29 Dec 2004)
 
@@ -30,7 +33,7 @@
     UTF-8 filename in the tarball
   - Trim old ebuilds
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> kbd-1.12-r2.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> kbd-1.12-r2.ebuild:
   Stable on alpha.
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> kbd-1.12-r2.ebuild:

@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/grep
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.38 2004/09/30 09:51:46 kloeri Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.39 2005/01/02 23:18:23 ciaranm Exp $
 
-  30 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> grep-2.5.1-r6.ebuild:
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  30 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> grep-2.5.1-r6.ebuild:
   Stable on alpha.
 
   26 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> grep-2.5.1-r6.ebuild:

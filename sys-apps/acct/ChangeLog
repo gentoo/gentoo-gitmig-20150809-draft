@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/acct
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acct/ChangeLog,v 1.8 2004/09/03 21:03:23 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acct/ChangeLog,v 1.9 2005/01/02 23:11:50 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> acct-6.3.5.ebuild:
   Masked acct-6.3.5.ebuild stable for ppc
@@ -11,7 +14,7 @@
   14 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> acct-6.3.5.ebuild:
   inherit eutils; use epatch; error check; tidy
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> acct-6.3.5.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> acct-6.3.5.ebuild:
   Stable on alpha.
 
   14 Apr 2004; <kloeri@gentoo.org> acct-6.3.5.ebuild:

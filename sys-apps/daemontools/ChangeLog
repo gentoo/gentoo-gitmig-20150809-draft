@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/daemontools
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/ChangeLog,v 1.24 2004/09/08 03:49:09 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/ChangeLog,v 1.25 2005/01/02 23:13:46 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   07 Sep 2004; Mike Frysinger <vapier@gentoo.org> daemontools-0.76-r4.ebuild:
   Stabilize and add doc USE flag to pull in manpages #63179 by Kalin KOZHUHAROV.
@@ -16,7 +19,7 @@
   daemontools-0.76-r4.ebuild:
   sync IUSE (+static)
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   daemontools-0.76-r4.ebuild:
   Stable on alpha.
 

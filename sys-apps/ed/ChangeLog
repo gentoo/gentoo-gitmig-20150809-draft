@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.19 2004/12/06 05:44:29 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.20 2005/01/02 23:14:21 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   06 Dec 2004; Mike Frysinger <vapier@gentoo.org> ed-0.2-r4.ebuild:
   cross-compile fixes
@@ -20,7 +23,7 @@
   05 Oct 2004; Olivier Crete <tester@gentoo.org> ed-0.2-r4.ebuild:
   Marking stable on x86 wrt bug #66400
 
-  05 Oct 2004; Bryan Østergaard,,, <kloeri@gentoo.org> ed-0.2-r4.ebuild:
+  05 Oct 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> ed-0.2-r4.ebuild:
   Stable on alpha, bug 66400.
 
 *ed-0.2-r4 (05 Oct 2004)

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hotplug
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.58 2004/11/27 16:38:31 jhuebel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.59 2005/01/02 23:22:19 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Nov 2004; Jason Huebel <jhuebel@gentoo.org> hotplug-20040923.ebuild:
   stable on amd64
@@ -58,7 +61,7 @@
   hotplug-20040401.ebuild:
   Masked hotplug-20040401.ebuild stable for ppc
 
-  23 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> hotplug-20040401.ebuild:
+  23 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> hotplug-20040401.ebuild:
   Stable on alpha.
 
   17 Aug 2004; Guy Martin <gmsoft@gentoo.org> hotplug-20040401.ebuild:

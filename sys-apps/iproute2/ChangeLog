@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iproute2
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.20 2004/12/20 13:01:26 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.21 2005/01/02 23:24:33 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   20 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
   iproute2-2.6.9.20040831.ebuild:
@@ -46,7 +49,7 @@
   04 Aug 2004; Daniel Black <dragonheart@gentoo.org> :
   digest fix - files/digest-iproute2-2.4.7.20020116
 
-  09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  09 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   iproute2-2.4.7.20020116.ebuild:
   Stable on alpha.
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r3.ebuild,v 1.3 2004/12/29 20:27:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r3.ebuild,v 1.4 2005/01/02 23:25:09 ciaranm Exp $
 
 inherit eutils toolchain-funcs
 

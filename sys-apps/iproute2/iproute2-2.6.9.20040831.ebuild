@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.9.20040831.ebuild,v 1.4 2004/12/20 13:01:26 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.9.20040831.ebuild,v 1.5 2005/01/02 23:24:33 ciaranm Exp $
 
 inherit eutils gcc
 

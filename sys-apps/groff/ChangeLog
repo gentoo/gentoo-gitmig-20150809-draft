@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/groff
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.55 2004/12/13 23:50:23 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.56 2005/01/02 23:19:04 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   13 Dec 2004; Mike Frysinger <vapier@gentoo.org>
   +files/groff-1.19.1-parallel-make.patch, groff-1.19.1-r2.ebuild:
@@ -66,7 +69,7 @@
   groff-1.19.ebuild:
   QA - fix use invocation
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> groff-1.19.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> groff-1.19.ebuild:
   Stable on alpha.
 
   17 Apr 2004; Travis Tilley <lv@gentoo.org> groff-1.19.ebuild:
