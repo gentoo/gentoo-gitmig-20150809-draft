@@ -1,0 +1,354 @@
+diff -Naurp avifile-0.7-0.7.43.orig/Makefile.am avifile-0.7-0.7.43/Makefile.am
+--- avifile-0.7-0.7.43.orig/Makefile.am	2004-11-24 15:12:53.000000000 -0800
++++ avifile-0.7-0.7.43/Makefile.am	2005-03-25 17:40:31.000000000 -0800
+@@ -1,4 +1,4 @@
+-SUBDIRS = . admin m4 ffmpeg drivers lib plugins bin \
++SUBDIRS = . admin m4 drivers lib plugins bin \
+  doc include debian libavqt player samples
+ 
+ EXTRA_DIST = INSTALL autogen.sh avifile.spec.in avifile.pc.in \
+diff -Naurp avifile-0.7-0.7.43.orig/Makefile.in avifile-0.7-0.7.43/Makefile.in
+--- avifile-0.7-0.7.43.orig/Makefile.in	2005-02-24 06:26:41.000000000 -0800
++++ avifile-0.7-0.7.43/Makefile.in	2005-03-25 17:40:40.000000000 -0800
+@@ -142,7 +142,7 @@ XVID_LIBS = @XVID_LIBS@
+ Z_LIBS = @Z_LIBS@
+ qt_version = @qt_version@
+ 
+-SUBDIRS = . admin m4 ffmpeg drivers lib plugins bin  doc include debian libavqt player samples
++SUBDIRS = . admin m4 drivers lib plugins bin  doc include debian libavqt player samples
+ 
+ 
+ EXTRA_DIST = INSTALL autogen.sh avifile.spec.in avifile.pc.in  $(pkgdoc_DATA) $(pkgconfig_DATA)
+diff -Naurp avifile-0.7-0.7.43.orig/configure.ac avifile-0.7-0.7.43/configure.ac
+--- avifile-0.7-0.7.43.orig/configure.ac	2005-02-24 03:31:38.000000000 -0800
++++ avifile-0.7-0.7.43/configure.ac	2005-03-25 17:59:48.000000000 -0800
+@@ -55,7 +55,7 @@ AC_PROG_CPP
+ AC_PROG_INSTALL
+ AC_PROG_LN_S
+ AC_PROG_MAKE_SET
+-AC_PROG_RANLIB
++AC_PROG_LIBTOOL
+ AC_PROG_AWK
+ 
+ AC_CC_VERSION
+@@ -167,8 +167,8 @@ dnl
+ dnl Libtool
+ dnl
+ dnl AC_LIBTOOL_DLOPEN
+-AM_DISABLE_STATIC
+-AM_PROG_LIBTOOL
++dnl AM_DISABLE_STATIC
++dnl AM_PROG_LIBTOOL
+ dnl automatic updating of libtool configuration files
+ dnl not needed with automake AC_SUBST(LIBTOOL_DEPS)
+ dnl using rather hack for .lo creation AM_PROG_AS
+@@ -790,11 +790,6 @@ if test x$enable_xvid4 = xyes; then
+ fi
+ 
+ 
+-dnl =======================
+-dnl Configure ffmpeg plugin
+-dnl =======================
+-AM_PATH_FFMPEG
+-
+ dnl use_nasm=
+ dnl  not needed right now
+ dnl AC_CHECK_PROG(use_nasm, nasm, yes, no)
+diff -Naurp avifile-0.7-0.7.43.orig/configure.in avifile-0.7-0.7.43/configure.in
+--- avifile-0.7-0.7.43.orig/configure.in	2005-02-24 03:31:38.000000000 -0800
++++ avifile-0.7-0.7.43/configure.in	2005-03-25 17:59:48.000000000 -0800
+@@ -55,7 +55,7 @@ AC_PROG_CPP
+ AC_PROG_INSTALL
+ AC_PROG_LN_S
+ AC_PROG_MAKE_SET
+-AC_PROG_RANLIB
++AC_PROG_LIBTOOL
+ AC_PROG_AWK
+ 
+ AC_CC_VERSION
+@@ -167,8 +167,8 @@ dnl
+ dnl Libtool
+ dnl
+ dnl AC_LIBTOOL_DLOPEN
+-AM_DISABLE_STATIC
+-AM_PROG_LIBTOOL
++dnl AM_DISABLE_STATIC
++dnl AM_PROG_LIBTOOL
+ dnl automatic updating of libtool configuration files
+ dnl not needed with automake AC_SUBST(LIBTOOL_DEPS)
+ dnl using rather hack for .lo creation AM_PROG_AS
+@@ -790,11 +790,6 @@ if test x$enable_xvid4 = xyes; then
+ fi
+ 
+ 
+-dnl =======================
+-dnl Configure ffmpeg plugin
+-dnl =======================
+-AM_PATH_FFMPEG
+-
+ dnl use_nasm=
+ dnl  not needed right now
+ dnl AC_CHECK_PROG(use_nasm, nasm, yes, no)
+diff -Naurp avifile-0.7-0.7.43.orig/lib/Makefile.am avifile-0.7-0.7.43/lib/Makefile.am
+--- avifile-0.7-0.7.43.orig/lib/Makefile.am	2003-03-11 04:53:40.000000000 -0800
++++ avifile-0.7-0.7.43/lib/Makefile.am	2005-03-25 16:49:58.000000000 -0800
+@@ -1,8 +1,7 @@
+ DIST_SUBDIRS = aviplay aviread aviwrite common subtitle video
+ noinst_HEADERS = Uncompressed.h
+ 
+-COMMONCFLAGS = $(DIVX4_CFLAGS) $(XVID_CFLAGS) -DPLUGIN_PATH=\"$(pkglibdir)\" \
+- -I$(srcdir)/../ffmpeg/libavcodec -I$(srcdir)/../ffmpeg/libavformat
++COMMONCFLAGS = $(DIVX4_CFLAGS) $(XVID_CFLAGS) -DPLUGIN_PATH=\"$(pkglibdir)\"
+ if AMM_USE_FAST_BUILD
+ AVISOURCES = libaviplay.cpp
+ AVILIBADD =
+diff -Naurp avifile-0.7-0.7.43.orig/lib/Makefile.in avifile-0.7-0.7.43/lib/Makefile.in
+--- avifile-0.7-0.7.43.orig/lib/Makefile.in	2005-02-24 06:26:48.000000000 -0800
++++ avifile-0.7-0.7.43/lib/Makefile.in	2005-03-25 16:50:19.000000000 -0800
+@@ -145,7 +145,7 @@ qt_version = @qt_version@
+ DIST_SUBDIRS = aviplay aviread aviwrite common subtitle video
+ noinst_HEADERS = Uncompressed.h
+ 
+-COMMONCFLAGS = $(DIVX4_CFLAGS) $(XVID_CFLAGS) -DPLUGIN_PATH=\"$(pkglibdir)\"  -I$(srcdir)/../ffmpeg/libavcodec -I$(srcdir)/../ffmpeg/libavformat
++COMMONCFLAGS = $(DIVX4_CFLAGS) $(XVID_CFLAGS) -DPLUGIN_PATH=\"$(pkglibdir)\"
+ 
+ @AMM_USE_FAST_BUILD_TRUE@AVISOURCES = libaviplay.cpp
+ @AMM_USE_FAST_BUILD_FALSE@AVISOURCES = codeckeeper.cpp Uncompressed.cpp
+diff -Naurp avifile-0.7-0.7.43.orig/lib/aviread/FFReadHandler.cpp avifile-0.7-0.7.43/lib/aviread/FFReadHandler.cpp
+--- avifile-0.7-0.7.43.orig/lib/aviread/FFReadHandler.cpp	2004-10-25 02:52:51.000000000 -0700
++++ avifile-0.7-0.7.43/lib/aviread/FFReadHandler.cpp	2005-03-25 17:17:41.000000000 -0800
+@@ -2,11 +2,11 @@
+ #include "FFReadStream.h"
+ #include "avm_output.h"
+ 
+-#ifndef int64_t_C
+-#define int64_t_C(c)     (c ## LL)
+-#define uint64_t_C(c)    (c ## ULL)
++#ifdef HAVE_AV_CONFIG_H
++#undef HAVE_AV_CONFIG_H
+ #endif
+-#include "avformat.h"
++
++#include <ffmpeg/avformat.h>
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+diff -Naurp avifile-0.7-0.7.43.orig/lib/aviread/FFReadStream.cpp avifile-0.7-0.7.43/lib/aviread/FFReadStream.cpp
+--- avifile-0.7-0.7.43.orig/lib/aviread/FFReadStream.cpp	2004-05-24 01:24:26.000000000 -0700
++++ avifile-0.7-0.7.43/lib/aviread/FFReadStream.cpp	2005-03-25 17:17:21.000000000 -0800
+@@ -3,11 +3,11 @@
+ #include "avm_fourcc.h"
+ #include "avm_output.h"
+ 
+-#ifndef int64_t_C
+-#define int64_t_C(c)     (c ## LL)
+-#define uint64_t_C(c)    (c ## ULL)
++#ifdef HAVE_AV_CONFIG_H
++#undef HAVE_AV_CONFIG_H
+ #endif
+-#include "avformat.h"
++
++#include <ffmpeg/avformat.h>
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+diff -Naurp avifile-0.7-0.7.43.orig/lib/aviread/Makefile.am avifile-0.7-0.7.43/lib/aviread/Makefile.am
+--- avifile-0.7-0.7.43.orig/lib/aviread/Makefile.am	2003-03-11 03:17:37.000000000 -0800
++++ avifile-0.7-0.7.43/lib/aviread/Makefile.am	2005-03-25 17:09:48.000000000 -0800
+@@ -43,21 +43,11 @@ libaviread_la_SOURCES = \
+  StreamInfo.cpp
+ 
+ 
+-if AMM_LINK_SHARED
+-FF_LIB = \
+- ../../ffmpeg/libavformat/libaviplayavformat.la \
+- ../../ffmpeg/libavcodec/libaviplayavcodec.la
+-else 
+-FF_LIB = \
+- ../../ffmpeg/libavformat/libavformat.la \
+- ../../ffmpeg/libavcodec/libavcodec.la
+-endif
++FF_LIB = -lavformat -lavcodec
+ 
+ libaviread_la_LIBADD = $(FF_LIB)
+ 
+ AM_CPPFLAGS = $(LTNOPIC) \
+- -I$(srcdir)/../common \
+- -I$(srcdir)/../../ffmpeg/libavformat \
+- -I$(srcdir)/../../ffmpeg/libavcodec
++ -I$(srcdir)/../common
+ 
+ MAINTAINERCLEANFILES = Makefile.in
+diff -Naurp avifile-0.7-0.7.43.orig/lib/aviread/Makefile.in avifile-0.7-0.7.43/lib/aviread/Makefile.in
+--- avifile-0.7-0.7.43.orig/lib/aviread/Makefile.in	2005-02-24 06:26:49.000000000 -0800
++++ avifile-0.7-0.7.43/lib/aviread/Makefile.in	2005-03-25 17:10:58.000000000 -0800
+@@ -148,12 +148,11 @@ noinst_HEADERS =   AsfFileInputStream.h 
+ 
+ libaviread_la_SOURCES =   AsfFileInputStream.cpp  asffmt.cpp  AsfNetworkInputStream.cpp  AsfReadHandler.cpp  AsfReadStream.cpp  AsfRedirectInputStream.cpp  AsfStreamSeekInfo.cpp  asf_guids.cpp  AsxReader.cpp  AviReadHandler.cpp  AviReadStream.cpp  Cache.cpp  FFReadHandler.cpp  FFReadStream.cpp  ReadFile.cpp  ReadStream.cpp  ReadStreamA.cpp  ReadStreamV.cpp  StreamInfo.cpp
+ 
+-@AMM_LINK_SHARED_TRUE@FF_LIB =  ../../ffmpeg/libavformat/libaviplayavformat.la  ../../ffmpeg/libavcodec/libaviplayavcodec.la
+-@AMM_LINK_SHARED_FALSE@FF_LIB =  ../../ffmpeg/libavformat/libavformat.la  ../../ffmpeg/libavcodec/libavcodec.la
++FF_LIB =  -lavformat -lavcodec
+ 
+ libaviread_la_LIBADD = $(FF_LIB)
+ 
+-AM_CPPFLAGS = $(LTNOPIC)  -I$(srcdir)/../common  -I$(srcdir)/../../ffmpeg/libavformat  -I$(srcdir)/../../ffmpeg/libavcodec
++AM_CPPFLAGS = $(LTNOPIC)  -I$(srcdir)/../common
+ 
+ 
+ MAINTAINERCLEANFILES = Makefile.in
+@@ -172,12 +171,7 @@ X_LIBS = @X_LIBS@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
+ X_PRE_LIBS = @X_PRE_LIBS@
+ libaviread_la_LDFLAGS = 
+-@AMM_LINK_SHARED_FALSE@libaviread_la_DEPENDENCIES =  \
+-@AMM_LINK_SHARED_FALSE@../../ffmpeg/libavformat/libavformat.la \
+-@AMM_LINK_SHARED_FALSE@../../ffmpeg/libavcodec/libavcodec.la
+-@AMM_LINK_SHARED_TRUE@libaviread_la_DEPENDENCIES =  \
+-@AMM_LINK_SHARED_TRUE@../../ffmpeg/libavformat/libaviplayavformat.la \
+-@AMM_LINK_SHARED_TRUE@../../ffmpeg/libavcodec/libaviplayavcodec.la
++libaviread_la_DEPENDENCIES =  -lavformat -lavcodec
+ libaviread_la_OBJECTS =  AsfFileInputStream.lo asffmt.lo \
+ AsfNetworkInputStream.lo AsfReadHandler.lo AsfReadStream.lo \
+ AsfRedirectInputStream.lo AsfStreamSeekInfo.lo asf_guids.lo \
+diff -Naurp avifile-0.7-0.7.43.orig/plugins/Makefile.am avifile-0.7-0.7.43/plugins/Makefile.am
+--- avifile-0.7-0.7.43.orig/plugins/Makefile.am	2004-02-09 07:06:56.000000000 -0800
++++ avifile-0.7-0.7.43/plugins/Makefile.am	2005-03-25 17:07:57.000000000 -0800
+@@ -20,7 +20,7 @@ SUBDIRS = \
+ 
+ AM_CPPFLAGS = -Ilibac3pass -Ilibwin32 -Ilibwin32/audiodec \
+  -Ilibwin32/videocodec -Ilibwin32/loader \
+- -Ilibwin32/loader/dshow -I../ffmpeg/libavcodec \
++ -Ilibwin32/loader/dshow \
+  -DWIN32_PATH=\"$(WIN32_PATH)\" -D__WINE__ -DUNICODE \
+  -Ddbg_printf=__vprintf -DTRACE=__vprintf \
+  -Wmissing-prototypes -Wimplicit-function-declaration \
+diff -Naurp avifile-0.7-0.7.43.orig/plugins/Makefile.in avifile-0.7-0.7.43/plugins/Makefile.in
+--- avifile-0.7-0.7.43.orig/plugins/Makefile.in	2005-02-24 06:26:52.000000000 -0800
++++ avifile-0.7-0.7.43/plugins/Makefile.in	2005-03-25 17:12:02.000000000 -0800
+@@ -152,7 +152,7 @@ SUBDIRS =   libac3pass  libaudiodec  lib
+ #noinst_LTLIBRARIES = libplugins.la
+ #libplugins_la_SOURCES = libplugins.cpp plugins.c
+ 
+-AM_CPPFLAGS = -Ilibac3pass -Ilibwin32 -Ilibwin32/audiodec  -Ilibwin32/videocodec -Ilibwin32/loader  -Ilibwin32/loader/dshow -I../ffmpeg/libavcodec  -DWIN32_PATH=\"$(WIN32_PATH)\" -D__WINE__ -DUNICODE  -Ddbg_printf=__vprintf -DTRACE=__vprintf  -Wmissing-prototypes -Wimplicit-function-declaration  -DAVIFILE
++AM_CPPFLAGS = -Ilibac3pass -Ilibwin32 -Ilibwin32/audiodec  -Ilibwin32/videocodec -Ilibwin32/loader  -Ilibwin32/loader/dshow -DWIN32_PATH=\"$(WIN32_PATH)\" -D__WINE__ -DUNICODE  -Ddbg_printf=__vprintf -DTRACE=__vprintf  -Wmissing-prototypes -Wimplicit-function-declaration  -DAVIFILE
+ 
+ 
+ MAINTAINERCLEANFILES = Makefile.in
+diff -Naurp avifile-0.7-0.7.43.orig/plugins/libffmpeg/FFAudioDecoder.h avifile-0.7-0.7.43/plugins/libffmpeg/FFAudioDecoder.h
+--- avifile-0.7-0.7.43.orig/plugins/libffmpeg/FFAudioDecoder.h	2003-05-12 03:34:11.000000000 -0700
++++ avifile-0.7-0.7.43/plugins/libffmpeg/FFAudioDecoder.h	2005-03-25 17:19:13.000000000 -0800
+@@ -2,7 +2,12 @@
+ #define AVIFILE_FFAUDIODECODER_H
+ 
+ #include "audiodecoder.h"
+-#include "avcodec.h"
++
++#ifdef HAVE_AV_CONFIG_H
++#undef HAVE_AV_CONFIG_H
++#endif
++
++#include <ffmpeg/avcodec.h>
+ 
+ AVM_BEGIN_NAMESPACE;
+ 
+diff -Naurp avifile-0.7-0.7.43.orig/plugins/libffmpeg/FFVideoDecoder.h avifile-0.7-0.7.43/plugins/libffmpeg/FFVideoDecoder.h
+--- avifile-0.7-0.7.43.orig/plugins/libffmpeg/FFVideoDecoder.h	2003-11-21 06:09:42.000000000 -0800
++++ avifile-0.7-0.7.43/plugins/libffmpeg/FFVideoDecoder.h	2005-03-25 17:17:15.000000000 -0800
+@@ -3,11 +3,11 @@
+ 
+ #include "videodecoder.h"
+ 
+-#ifndef int64_t_C
+-#define int64_t_C(c)     (c ## LL)
+-#define uint64_t_C(c)    (c ## ULL)
++#ifdef HAVE_AV_CONFIG_H
++#undef HAVE_AV_CONFIG_H
+ #endif
+-#include "avformat.h"
++
++#include <ffmpeg/avformat.h>
+ 
+ AVM_BEGIN_NAMESPACE;
+ 
+diff -Naurp avifile-0.7-0.7.43.orig/plugins/libffmpeg/FFVideoEncoder.h avifile-0.7-0.7.43/plugins/libffmpeg/FFVideoEncoder.h
+--- avifile-0.7-0.7.43.orig/plugins/libffmpeg/FFVideoEncoder.h	2003-06-06 02:06:26.000000000 -0700
++++ avifile-0.7-0.7.43/plugins/libffmpeg/FFVideoEncoder.h	2005-03-25 17:13:31.000000000 -0800
+@@ -2,7 +2,12 @@
+ #define AVIFILE_FFVIDEOENCODER_H
+ 
+ #include "videoencoder.h"
+-#include "avcodec.h"
++
++#ifdef HAVE_AV_CONFIG_H
++#undef HAVE_AV_CONFIG_H
++#endif
++
++#include <ffmpeg/avcodec.h>
+ 
+ #include <stdlib.h>
+ 
+diff -Naurp avifile-0.7-0.7.43.orig/plugins/libffmpeg/Makefile.am avifile-0.7-0.7.43/plugins/libffmpeg/Makefile.am
+--- avifile-0.7-0.7.43.orig/plugins/libffmpeg/Makefile.am	2003-05-26 01:49:35.000000000 -0700
++++ avifile-0.7-0.7.43/plugins/libffmpeg/Makefile.am	2005-03-25 17:11:45.000000000 -0800
+@@ -11,16 +11,13 @@ ffmpeg_la_SOURCES = \
+  FFVideoDecoder.cpp \
+  FFVideoEncoder.cpp
+ 
+-ffmpeg_la_LIBADD = $(LINK_AVIPLAY)
+-#ffmpeg_la_LIBADD = ../../ffmpeg/libavcodec/libavcodec.a
++ffmpeg_la_LIBADD = -lavformat -lavcodec
++#ffmpeg_la_LIBADD = $(LINK_AVIPLAY)
+ ffmpeg_la_LDFLAGS = -module -avoid-version
+ 
+ #KPROF_LIBS = -L/var/tmp/kprof/lib -lkprof
+ #INSTRUMENT = -finstrument-functions
+-AM_CPPFLAGS = $(LTNOPIC) $(INSTRUMENT) \
+- -I$(srcdir)/../../ffmpeg/libavcodec \
+- -I$(srcdir)/../../ffmpeg/libavformat \
+- -I$(srcdir)/../../ffmpeg
++AM_CPPFLAGS = $(LTNOPIC) $(INSTRUMENT)
+ AM_CXXFLAGS = $(CXXRTTIEXCEPT)
+ 
+ TEST_LIBS = ../../lib/libaviplay.la $(pkglib_LTLIBRARIES) $(SDL_LIBS) $(MPATROL_LIBS) $(EFENCE_LIBS) $(KPROF_LIBS)
+diff -Naurp avifile-0.7-0.7.43.orig/plugins/libffmpeg/Makefile.in avifile-0.7-0.7.43/plugins/libffmpeg/Makefile.in
+--- avifile-0.7-0.7.43.orig/plugins/libffmpeg/Makefile.in	2005-02-24 06:26:53.000000000 -0800
++++ avifile-0.7-0.7.43/plugins/libffmpeg/Makefile.in	2005-03-25 17:11:38.000000000 -0800
+@@ -149,14 +149,13 @@ pkglib_LTLIBRARIES = ffmpeg.la
+ noinst_HEADERS = FFAudioDecoder.h FFVideoDecoder.h FFVideoEncoder.h fillplugins.h
+ ffmpeg_la_SOURCES =   libffmpeg.cpp  FFAudioDecoder.cpp  FFVideoDecoder.cpp  FFVideoEncoder.cpp
+ 
+-
+-ffmpeg_la_LIBADD = $(LINK_AVIPLAY)
+-#ffmpeg_la_LIBADD = ../../ffmpeg/libavcodec/libavcodec.a
++ffmpeg_la_LIBADD = -lavformat -lavcodec
++#ffmpeg_la_LIBADD = $(LINK_AVIPLAY)
+ ffmpeg_la_LDFLAGS = -module -avoid-version
+ 
+ #KPROF_LIBS = -L/var/tmp/kprof/lib -lkprof
+ #INSTRUMENT = -finstrument-functions
+-AM_CPPFLAGS = $(LTNOPIC) $(INSTRUMENT)  -I$(srcdir)/../../ffmpeg/libavcodec  -I$(srcdir)/../../ffmpeg/libavformat  -I$(srcdir)/../../ffmpeg
++AM_CPPFLAGS = $(LTNOPIC) $(INSTRUMENT)
+ 
+ AM_CXXFLAGS = $(CXXRTTIEXCEPT)
+ 
+diff -Naurp avifile-0.7-0.7.43.orig/plugins/libffmpeg/fillplugins.h avifile-0.7-0.7.43/plugins/libffmpeg/fillplugins.h
+--- avifile-0.7-0.7.43.orig/plugins/libffmpeg/fillplugins.h	2004-05-14 03:56:52.000000000 -0700
++++ avifile-0.7-0.7.43/plugins/libffmpeg/fillplugins.h	2005-03-25 17:18:29.000000000 -0800
+@@ -4,12 +4,11 @@
+ #include "infotypes.h"
+ #include "avm_fourcc.h"
+ 
+-//#include "avcodec.h"
+-#ifndef int64_t_C
+-#define int64_t_C(c)     (c ## LL)
+-#define uint64_t_C(c)    (c ## ULL)
++#ifdef HAVE_AV_CONFIG_H
++#undef HAVE_AV_CONFIG_H
+ #endif
+-#include "avformat.h"
++
++#include <ffmpeg/avformat.h>
+ 
+ #include <string.h>
+ #include <stdlib.h>

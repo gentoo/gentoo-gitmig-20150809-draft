@@ -1,6 +1,17 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.96 2005/03/22 07:01:25 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.97 2005/03/26 04:27:13 eradicator Exp $
+
+*avifile-0.7.43.20050224-r1 (26 Mar 2005)
+
+  26 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/avifile-0.7.41.20041001-sparc.patch,
+  +files/avifile-0.7.43.20050224-sysffmpeg.patch,
+  -avifile-0.7.32.20030219.ebuild, -avifile-0.7.37.20030522-r2.ebuild,
+  -avifile-0.7.41.20041001.ebuild, -avifile-0.7.43.20050224.ebuild,
+  +avifile-0.7.43.20050224-r1.ebuild:
+  Now uses system ffmpeg and installs both static and shared libs. Removing
+  old versions. Added to ~sparc.
 
 *avifile-0.7.43.20050224 (22 Mar 2005)
 
