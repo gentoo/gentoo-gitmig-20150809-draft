@@ -1,4 +1,14 @@
-MD5 48fbe0eb3f13810b59395ce4d882d083 ChangeLog 523
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b9113c1cc539ccc3f638c5367cb8167b ChangeLog 520
 MD5 19df39ef54fc4a8677998f19bb6046ac metadata.xml 218
-MD5 fa4573dca2e005d71d09b92baa3876ca pyndex-0.3.2a.ebuild 665
+MD5 551a2418b0a34c069eb5050e8567ace6 pyndex-0.3.2a.ebuild 662
 MD5 38fb2be4d52d98d9a3ed8a80219f1f0f files/digest-pyndex-0.3.2a 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCBvOrxtZcznfol0URApudAJ9Uc0fGKizWN8YNTwfy5LogDk1LkwCfWVQH
+q0ILgfTjB9mPNahwVwNZLNE=
+=SC2X
+-----END PGP SIGNATURE-----
