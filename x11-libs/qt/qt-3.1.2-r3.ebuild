@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r3.ebuild,v 1.1 2003/04/17 12:25:13 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r3.ebuild,v 1.2 2003/04/17 13:05:09 brain Exp $
 
 inherit eutils
 
@@ -57,7 +57,7 @@ src_unpack() {
 	
 	epatch ${FILESDIR}/designer.diff
 	epatch ${FILESDIR}/${P}-qmlined.diff
-	epatch ${FILESDIR}/${P}-qsocket.diff
+	epatch ${FILESDIR}/${P}-r3-qsocket.diff
 	
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
