@@ -1,28 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/cpufreqd-1.1_rc1-r1.ebuild,v 1.3 2004/01/06 19:04:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/cpufreqd-1.1.ebuild,v 1.1 2004/01/27 03:32:40 vapier Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P/_/-}
-
+S=${WORKDIR}/${P/_/-}.orig
 DESCRIPTION="Daemon to adjust CPU speed for power saving"
-SRC_URI="mirror://sourceforge/${PN}/${P/_/-}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/cpufreqd/"
-KEYWORDS="~x86 ~ppc -*"
+SRC_URI="mirror://sourceforge/${PN}/${P/-/_}.0.orig.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="-* x86 ppc"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	#correct the init-script
-	sed -i -e s:/bin/cpufreqd:/usr/bin/cpufreqd: ${S}/scripts/gentoo/cpufreqd
-}
-
-src_compile() {
-	econf || die
-	emake || die
+	sed -i -e s:/bin/cpufreqd:/usr/sbin/cpufreqd: ${S}/scripts/gentoo/cpufreqd
 }
 
 src_install() {

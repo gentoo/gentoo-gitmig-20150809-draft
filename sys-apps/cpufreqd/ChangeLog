@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/cpufreqd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/ChangeLog,v 1.7 2003/11/21 01:08:06 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/ChangeLog,v 1.8 2004/01/27 03:32:40 vapier Exp $
+
+*cpufreqd-1.1 (26 Jan 2004)
+
+  26 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #39483 by heiko hübscher.
 
 *cpufreqd-1.1_rc1-r1 (21 Nov 2003)
 
