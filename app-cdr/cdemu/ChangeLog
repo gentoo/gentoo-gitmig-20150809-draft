@@ -1,0 +1,13 @@
+# ChangeLog for app-cdr/cdemu
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.1 2003/09/18 17:01:46 vapier Exp $
+
+*cdemu-0.5.3 (18 Sep 2003)
+
+  18 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage #25279.
+
+*virtualcd-0.4 (29 Apr 2003)
+
+  29 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
