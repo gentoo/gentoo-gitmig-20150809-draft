@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/kxmleditor
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/ChangeLog,v 1.5 2003/04/05 21:36:40 danarmak Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/ChangeLog,v 1.6 2004/03/07 14:54:57 caleb Exp $
+
+  07 Mar 2004; Caleb Tennis <caleb@gentoo.org> kxmleditor-0.8.1.ebuild,
+  kxmleditor-0.8.ebuild:
+  Version bump, looks like it's the only one available anymore
 
 *kxmleditor-0.8.1 (21 Mar 2003)
 
