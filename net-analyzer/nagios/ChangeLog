@@ -1,6 +1,8 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.15 2004/03/21 15:45:06 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.16 2004/04/28 14:43:16 aliz Exp $
+
+*nagios-1.2 (21 Mar 2004)
 
   21 Mar 2004; Michael Boman <mboman@gentoo.org> :
   Version-bumped the Nagios meta package.
