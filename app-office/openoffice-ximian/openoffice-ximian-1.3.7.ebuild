@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.14 2005/01/29 12:21:07 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.15 2005/01/31 21:06:16 suka Exp $
 
 # Notes:
 #
@@ -483,6 +483,8 @@ src_install() {
 	addpredict "/pspfontcache"
 	addpredict "/opt/OpenOffice.org/foo.tmp"
 	addpredict "/opt/OpenOffice.org/delme"
+	addpredict "/root/.gnome"
+	
 
 	# The install part should now be relatively OK compared to
 	# what it was.  Basically we use autoresponse files to install
