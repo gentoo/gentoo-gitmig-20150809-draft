@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6.ebuild,v 1.11 2004/03/27 17:37:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6.ebuild,v 1.12 2004/05/08 01:37:52 agriffis Exp $
 
 IUSE="ssl nls slang crypt imap mbox nntp vanilla"
 
@@ -24,9 +24,10 @@ SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
 RDEPEND="nls? ( sys-devel/gettext )"
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2
+	>=sys-apps/sed-4
+	net-mail/mailbase
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	slang? ( >=sys-libs/slang-1.4.2 )
-	>=sys-apps/sed-4
 	!vanilla? ( nntp? ( sys-devel/automake sys-devel/autoconf ) )"
 
 SLOT="0"
