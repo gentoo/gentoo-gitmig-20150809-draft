@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a4e08399855570da0bdadc11d86979f2 ultimate-2.8.8.ebuild 2819
-MD5 1188276d44dce5f5a7ec370457715939 ultimate-3.0.0_rc2.ebuild 1534
-MD5 e7007478295a6d0cba75d6f5b4239a38 ultimate-2.8.7.ebuild 3214
+MD5 0c3fa0e8777f3d36f6698cf2211ffd5e ultimate-2.8.8.ebuild 2818
+MD5 d9688233e350672bdcfe4ecbd935f6a2 ultimate-3.0.0_rc2.ebuild 1533
+MD5 c2883751f82fa2ccaf50f7647fd10bd2 ultimate-2.8.7.ebuild 3213
 MD5 9ebe1b372c3ab37ce2853e5cf858acca ChangeLog 1653
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 3cc78e4559af7c7a4c6c3c3e4c4e2163 files/digest-ultimate-3.0.0_rc2 70
@@ -18,7 +18,7 @@ MD5 e2df540e88be963a3ecf45f87a90a02a files/3.0.0_rc2-config.patch 1318
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB/PGuI1lqEGTUzyQRArplAJ4sxRKTNavLd74sxpwjFQau4WXF0wCfe0mQ
-mc3iuakvKN/UgF4d4Mx1lak=
-=H6OP
+iD8DBQFCFAC4I1lqEGTUzyQRAsnnAJ9DEsErR6reMWtR3Lm53D+mQA7AWgCgg+bN
+LCxve09qqDMeSXFqhoYvmIc=
+=T2dq
 -----END PGP SIGNATURE-----
