@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-opm/ptlink-opm-1.1.1.ebuild,v 1.2 2004/07/10 23:05:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-opm/ptlink-opm-1.1.1.ebuild,v 1.3 2004/07/17 09:59:05 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ptlink.net/"
 SRC_URI="mirror://sourceforge/ptlinksoft/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=""
