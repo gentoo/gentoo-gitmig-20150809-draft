@@ -1,18 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lintool/lintool-0.2.3-r1.ebuild,v 1.1 2003/02/18 02:10:05 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lintool/lintool-0.2.3-r1.ebuild,v 1.2 2003/03/29 11:32:44 seemant Exp $
 
-inherit eutils
-
+S=${WORKDIR}/${P}
 DESCRIPTION="Gentoo Linux \"lint\" utility"
-HOMEPAGE="http://www.gentoo.org/~karltk/projects/lintool/"
-SRC_URI="http://www.gentoo.org/~karltk/projects/lintool/releases/${P}.tar.bz2
-		mirror://gentoo/lintool-copyright-patch.diff"
-LICENSE="GPL-2"
+HOMEPAGE="http://www.gentoo.org/"
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	mirror://gentoo/lintool-copyright-patch.diff"
+
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc hppa alpha"
-DEPEND=">=dev-lang/python-2.2"
-S="${WORKDIR}/${P}"
+
+DEPEND=">=sys-apps/portage-2.0.47-r10
+	>=dev-lang/python-2.2"
 
 src_unpack(){
 	unpack ${A}
