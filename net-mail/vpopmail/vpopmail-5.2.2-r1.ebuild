@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.2-r1.ebuild,v 1.2 2004/01/05 07:55:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.2-r1.ebuild,v 1.3 2004/04/03 04:15:00 vapier Exp $
 
 IUSE="mysql ipalias clearpasswd"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	mysql? ( http://gentoo.twobit.net/misc/${PN}-5.2.1-mysql.diff )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 sparc"
 DEPEND_COMMON="net-mail/qmail
 	mysql? ( >=dev-db/mysql-3.23* )"
 DEPEND="sys-apps/sed
