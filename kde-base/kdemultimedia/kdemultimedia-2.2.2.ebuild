@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2.ebuild,v 1.2 2001/11/24 10:44:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2.ebuild,v 1.3 2001/11/24 10:47:22 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
@@ -22,7 +22,7 @@ NEWDEPEND=">=sys-libs/ncurses-5.2
 DEPEND="$DEPEND $NEWDEPEND"
 RDEPEND="$RDEPEND $NEWDEPEND"
 
-src_unacpk() {
+src_unpack() {
 
     base_src_unpack all patch
     
