@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcube/wmcube-0.98.ebuild,v 1.6 2004/03/13 23:55:23 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcube/wmcube-0.98.ebuild,v 1.7 2004/04/30 22:31:13 pvdabeel Exp $
 
 DESCRIPTION="a dockapp cpu monitor with spinning 3d objects"
 HOMEPAGE="http://kling.mine.nu/kling/wmcube.htm"
@@ -8,7 +8,7 @@ SRC_URI="http://kling.mine.nu/kling/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~mips"
+KEYWORDS="x86 amd64 ~mips ppc"
 
 IUSE=""
 

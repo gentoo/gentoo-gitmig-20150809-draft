@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.3.0.ebuild,v 1.4 2004/04/13 18:25:40 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.3.0.ebuild,v 1.5 2004/04/30 22:26:10 pvdabeel Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ SRC_URI="http://tnemeth.free.fr/projets/programmes/${P}.tar.gz"
 HOMEPAGE="http://tnemeth.free.fr/projets/dockapps.html"
 
 SLOT="0"
-KEYWORDS="x86 ~sparc amd64"
+KEYWORDS="x86 ~sparc amd64 ppc"
 LICENSE="GPL-2"
 
 DEPEND="virtual/x11
