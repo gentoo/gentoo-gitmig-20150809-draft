@@ -1,9 +1,13 @@
-MD5 df1dcb7b79bcf2bd5d405558053730e4 ChangeLog 3941
-MD5 658ae21e96d7cd38a7624faaea4cdd93 bugzilla-2.18.0_rc1.ebuild 1757
-MD5 76b9d84b838c7ae7eac80a265dc326ef bugzilla-2.18.0_rc2.ebuild 1934
-MD5 9f29c692017f72923c4ebd5cc08b5017 bugzilla-2.18.0_rc3.ebuild 1934
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4465aae50e641d8659851378b1f5740b ChangeLog 4221
+MD5 38228e4dffd2a46f67aff09881630972 bugzilla-2.18.0_rc1.ebuild 1721
+MD5 77bf843e701fb11d48bb9c6975155550 bugzilla-2.18.0_rc2.ebuild 1884
+MD5 76428e68158727ca182f438af140e9ca bugzilla-2.18.0_rc3.ebuild 1884
+MD5 df15de0c80da98b860010545e6c0bbe0 bugzilla-2.18.0_rc4.ebuild 2008
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 f497c7ccfc6500c485a5cd50e5f3e0f5 bugzilla-2.18.0_rc4.ebuild 2059
+MD5 084e450d86a5a25f20a6ecd617b1a7b4 files/CAN-2004-1061.patch 2203
 MD5 4a9b1a263f16b2a53b44bce45350b373 files/bugzilla.conf 148
 MD5 0be5a588dc7fdfc9e4898a855bd32361 files/bugzilla.cron.daily 115
 MD5 b38d67b03726b84833bd8c5f632e4020 files/bugzilla.cron.tab 54
@@ -12,9 +16,8 @@ MD5 0606a9da89d19a505c52818d14de61e3 files/cronset.sh 70
 MD5 8d37835f4224135a849a73ab8b6b893a files/digest-bugzilla-2.18.0_rc1 69
 MD5 6a37c51e53b1fc63769e3bf5d8c258a4 files/digest-bugzilla-2.18.0_rc2 69
 MD5 8e1b090e7085373104bd3e990621574c files/digest-bugzilla-2.18.0_rc3 69
-MD5 a001fc92584de0cd6f1a0d8de99ee6ce files/firstcheck.sh 48
-MD5 084e450d86a5a25f20a6ecd617b1a7b4 files/CAN-2004-1061.patch 2203
 MD5 8e1b090e7085373104bd3e990621574c files/digest-bugzilla-2.18.0_rc4 69
+MD5 a001fc92584de0cd6f1a0d8de99ee6ce files/firstcheck.sh 48
 MD5 32cb42777a779ac279c5384643970729 files/2.18.0_rc1/apache.htaccess 70
 MD5 2b4f3ae5bc1d383a4951a22cf65b28ae files/2.18.0_rc1/reconfig 3214
 MD5 32cb42777a779ac279c5384643970729 files/2.18.0_rc2/apache.htaccess 70
@@ -23,3 +26,10 @@ MD5 32cb42777a779ac279c5384643970729 files/2.18.0_rc3/apache.htaccess 70
 MD5 23beb9ca60294343070078f9649dbc03 files/2.18.0_rc3/reconfig 3208
 MD5 32cb42777a779ac279c5384643970729 files/2.18.0_rc4/apache.htaccess 70
 MD5 23beb9ca60294343070078f9649dbc03 files/2.18.0_rc4/reconfig 3208
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSXOQtG5z4I8BtQoRAv0sAJ4mLFcyfUixI4uDJQg0rr2EMl+iJwCeM7aG
+ZEukJXtpDeP3z8J8l/yE8nI=
+=OOzA
+-----END PGP SIGNATURE-----
