@@ -26,7 +26,6 @@
 # this change in API should be masked version-specific and follow
 # immediately underneath.
 >=sys-apps/portage-2.0.49-r18
->=sys-apps/portage-2.0.49-r17
 
 # <foser@gentoo.org> (23 Nov 2003)
 # Mask gdm 2.4.4 for testing of session changes
