@@ -1,6 +1,12 @@
 # ChangeLog for net-mailfetchmailChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.12 2002/10/23 21:36:20 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.13 2002/11/01 22:52:20 lostlogic Exp $
+
+*fetchmail-6.1.2 (01 Nov 2002)
+
+  01 Nov 2002; Brandon Low <lostlogic@gentoo.org> fetchmail-6.1.2.ebuild :
+  Refix the manpages so that we don't install un-necessary stuff,
+  version bump, unstable briefly.
 
 *fetchmail-6.1.1 (21 Oct 2002)
 
