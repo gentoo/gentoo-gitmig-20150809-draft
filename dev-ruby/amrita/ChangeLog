@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/amrita
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.7 2004/03/18 21:35:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.8 2004/04/10 06:49:07 usata Exp $
+
+  10 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> amrita-1.0.2.ebuild,
+  amrita-1.8.2-r1.ebuild, amrita-1.8.2.ebuild:
+  virtual/ruby fix, see bug #46968
 
   24 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> amrita-1.8.2.ebuild:
   Stable on sparc
