@@ -6,6 +6,6 @@ MD5 70fe1c867e8782c7ff288056677fda0c files/festival-gcc3.3.diff 5257
 MD5 10ecd75c3f74d10a67f5c491aa2b073b files/festival.rc 632
 MD5 957439462cff84152bc18202042e65c8 files/server.scm 773
 MD5 2f14ff4755bf9ac557352c33fcad14e8 ChangeLog 5384
-MD5 b0c967848a600dae471f0ecc6b1144c4 festival-1.4.3-r1.ebuild 5634
-MD5 4acaa943e6e4a0cd55983a9cd1fbc4a5 festival-1.4.3.ebuild 6113
+MD5 aa519da2f5d51f21e37225e4f280c29f festival-1.4.3-r1.ebuild 5626
+MD5 5c5728b982ad950b34387695b8e9d11c festival-1.4.3.ebuild 6111
 MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185

@@ -1,4 +1,4 @@
+MD5 c3a6f527d4905362c02d855df8ad8c81 files/digest-yasr-0.6.5 62
 MD5 e89d4d07c7f077a1d2c6c23773accb7c ChangeLog 1139
 MD5 d95be012485868eef230d5000ddda556 metadata.xml 295
-MD5 c02ce76f0bc8fe4bde5f17e823b8bcbe yasr-0.6.5.ebuild 922
-MD5 c3a6f527d4905362c02d855df8ad8c81 files/digest-yasr-0.6.5 62
+MD5 d35ce6465d9e36b9868ed8775d1abeb6 yasr-0.6.5.ebuild 837
