@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r1.ebuild,v 1.15 2004/12/09 23:46:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r1.ebuild,v 1.16 2004/12/11 06:12:06 eradicator Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
@@ -45,6 +45,9 @@ src_unpack() {
 			}' ${x}.orig > ${x}
 		rm -rf ${x}.orig
 	done
+
+	# Fix regexps in configure.host
+	epatch ${FILESDIR}/2.15/10_sparc_binutils-sparc64-multilib.patch
 
 	gnuconfig_update
 }
@@ -134,17 +137,28 @@ src_install() {
 		ln -s ../${CHOST}/bin/${x} ${x}
 	done
 
-	if [ -n "${PROFILE_ARCH}" ] && \
-	   [ "${PROFILE_ARCH/64}" != "${PROFILE_ARCH}" ]
-	then
-		dosym ${CHOST} /usr/${CHOST/-/64-}
+	if [ -n "${PROFILE_ARCH}" ]; then
+		if [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then
+			dosym ${CHOST} /usr/${CHOST32}
 
-		for x in `ls ${D}/usr/${CHOST}/bin/`
-		do
-			[ ! -e "${D}/usr/bin/${CHOST}-${x}" ] && \
-				dosym ../${CHOST}/bin/${x} /usr/bin/${CHOST}-${x}
-			dosym ../${CHOST}/bin/${x} /usr/bin/${CHOST/-/64-}-${x}
-		done
+			for x in `ls ${D}/usr/${CHOST}/bin/`
+			do
+				[ ! -e "${D}/usr/bin/${CHOST}-${x}" ] && \
+					dosym ../${CHOST}/bin/${x} /usr/bin/${CHOST}-${x}
+				dosym ../${CHOST}/bin/${x} /usr/bin/${CHOST32}-${x}
+				[ ! -e "${D}/usr/bin/${CHOST32}-${x}" ] && \
+					dosym ../${CHOST32}/bin/${x} /usr/bin/${CHOST32}-${x}
+			done
+		elif [ "${PROFILE_ARCH/64}" != "${PROFILE_ARCH}" ]; then
+			dosym ${CHOST} /usr/${CHOST/-/64-}
+
+			for x in `ls ${D}/usr/${CHOST}/bin/`
+			do
+				[ ! -e "${D}/usr/bin/${CHOST}-${x}" ] && \
+					dosym ../${CHOST}/bin/${x} /usr/bin/${CHOST}-${x}
+				dosym ../${CHOST}/bin/${x} /usr/bin/${CHOST/-/64-}-${x}
+			done
+		fi
 	fi
 
 	cd ${S}

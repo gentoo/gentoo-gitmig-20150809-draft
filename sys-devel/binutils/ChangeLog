@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.171 2004/12/04 07:32:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.172 2004/12/11 06:12:06 eradicator Exp $
+
+  10 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/2.15/10_sparc_binutils-sparc64-multilib.patch,
+  binutils-2.15.92.0.2-r1.ebuild:
+  Updated for sparc64-multilib.  Added patch to properly detect sparc64b CHOST.
 
 *binutils-2.15.90.0.1.1-r4 (04 Dec 2004)
 
