@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.29.ebuild,v 1.3 2004/02/24 23:34:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.29.ebuild,v 1.4 2004/03/01 12:03:19 mcummings Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Perl Module for Apache"
@@ -62,6 +62,13 @@ src_install () {
 
 	dodoc Changes CREDITS MANIFEST README SUPPORT ToDo
 	dohtml -r ./
+	# The following kludge is from the perl-module eclass to correct
+	# the packlist file. packlist is used by other apps to determine
+	# where to find parts of mod-perl
+	for FILE in `find ${D} -type f -name "*.html" -o -name ".packlist"`; do
+		sed -i -e "s:${D}:/:g" ${FILE}
+	done
+
 
 	cd apaci
 	exeinto /usr/lib/apache-extramodules
