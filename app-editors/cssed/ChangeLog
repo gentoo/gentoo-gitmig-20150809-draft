@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/cssed
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/ChangeLog,v 1.2 2004/03/30 06:00:27 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/ChangeLog,v 1.3 2004/04/23 10:43:11 stuart Exp $
+
+*cssed-0.2.0 (23 Apr 2004)
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> cssed-0.2.0.ebuild:
+  Version bump; thanks to Jeremy Guarini <j.g@logicdistributed.com> in bug #38113
 
   30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; cssed-0.1.1_pre.ebuild:
   Change x11-base/xfree dependency to virtual/x11.
