@@ -1,16 +1,26 @@
-MD5 e75a7e1a11d12d9ed01cb220be058440 ChangeLog 3495
-MD5 65ac406c5106aaa74f453911dd4debe1 gnome-system-tools-0.33.0.ebuild 739
-MD5 0a88c243b3c32fba10c58cda47411101 metadata.xml 592
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bde739fea970b60533b1948712229c4a ChangeLog 3595
 MD5 9ff228c405b656106129d49928acf4c6 gnome-system-tools-0.92.0.ebuild 882
+MD5 dc8648765762d12cc5f3bf65077eb8ae gnome-system-tools-1.0.2-r1.ebuild 1137
+MD5 65ac406c5106aaa74f453911dd4debe1 gnome-system-tools-0.33.0.ebuild 739
 MD5 3897441da1a32cca805b8cb358f8d980 gnome-system-tools-0.34.0-r1.ebuild 908
 MD5 27a714d27848c3a0f2fef3469c27def3 gnome-system-tools-1.0.0.ebuild 915
+MD5 0a88c243b3c32fba10c58cda47411101 metadata.xml 592
 MD5 306f8796c762dee824b9429e6b953647 gnome-system-tools-1.0.2.ebuild 919
-MD5 ff82345efdda3f4c66d9639614e822dd gnome-system-tools-1.0.2-r1.ebuild 1142
-MD5 b19810539e97be86cb285492ef7ccc7e files/digest-gnome-system-tools-0.33.0 79
-MD5 9511de777cfc95a4044ee4a201e595cc files/digest-gnome-system-tools-0.92.0 79
 MD5 deb1440d16f3601aecdc1811cc3f6667 files/digest-gnome-system-tools-0.34.0-r1 79
-MD5 059a3d1a89445a1ff4fdf30964148ca8 files/gnome-system-tools-0.34.0-fix-nopasswd-auth.patch 3545
-MD5 82eb0b595d025b134b71d03a793adfc8 files/digest-gnome-system-tools-1.0.0 78
+MD5 9511de777cfc95a4044ee4a201e595cc files/digest-gnome-system-tools-0.92.0 79
 MD5 791a751973698f6f84222f0ab66c0dd5 files/digest-gnome-system-tools-1.0.2 78
-MD5 791a751973698f6f84222f0ab66c0dd5 files/digest-gnome-system-tools-1.0.2-r1 78
+MD5 b19810539e97be86cb285492ef7ccc7e files/digest-gnome-system-tools-0.33.0 79
+MD5 82eb0b595d025b134b71d03a793adfc8 files/digest-gnome-system-tools-1.0.0 78
+MD5 059a3d1a89445a1ff4fdf30964148ca8 files/gnome-system-tools-0.34.0-fix-nopasswd-auth.patch 3545
 MD5 d260438372974645549ff9e1490cc855 files/gnome-system-tools-1.0.2-ntp.patch 11173
+MD5 791a751973698f6f84222f0ab66c0dd5 files/digest-gnome-system-tools-1.0.2-r1 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4GwYCHk4+ZoBpvsRAtbSAJ4jMC/3NtwIOHSH4wbIB4Iit/2WOACfXR7a
+SMNt8gGer9HgVN1RWQmVNfs=
+=WeKo
+-----END PGP SIGNATURE-----
