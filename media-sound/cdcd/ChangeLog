@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/cdcd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/ChangeLog,v 1.19 2004/10/05 04:05:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/ChangeLog,v 1.20 2004/10/19 06:29:44 eradicator Exp $
+
+  18 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/cdcd-0.5.0-r1-gentoo.patch, -cdcd-0.5.0-r1.ebuild:
+  Removed old version. Readded ~ppc64 to ebuild as it seems to have been
+  mistakenly removed.
 
   04 Oct 2004; Jason Wever <weeve@gentoo.org> cdcd-0.6.6.ebuild:
   Stable on sparc.
