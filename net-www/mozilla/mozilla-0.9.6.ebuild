@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6.ebuild,v 1.3 2001/11/23 04:34:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6.ebuild,v 1.4 2001/11/23 04:45:07 azarah Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla web browser"
@@ -23,10 +23,11 @@ DEPEND="${RDEPEND}
 	sys-devel/perl"
 
 
-src_compile() {
+# needed by src_compile() and src_install()
+export MOZILLA_OFFICIAL=1
+export BUILD_OFFICIAL=1	
 
-	export MOZILLA_OFFICIAL=1
-        export BUILD_OFFICIAL=1	
+src_compile() {
 
 	chown -R root.root *
 
@@ -40,8 +41,9 @@ src_compile() {
 		myconf="${myconf} --enable-strip-libs"
 	fi
 
-	# If this dont buildwith mozirc in USE, then you are on your own
-	# Dont enable venkman, etc, as it is already build ...
+	# If this dont build with mozirc in USE, then you are on your own
+	# Dont enable venkman, etc, without use flags, as build fails
+	# with them sometimes (same as with irc) ...
 	if [ "`use mozirc`" ] ; then
 		myconf="${myconf} --with-extensions=default,irc"
 	else
