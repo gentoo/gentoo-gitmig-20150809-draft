@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.1.013.ebuild,v 1.3 2003/10/13 15:04:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.1.013.ebuild,v 1.4 2003/10/29 18:03:12 usata Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_unpack() {
 
 src_compile() {
 
-	emake CFLAGS="${CFLAGS}" gcc || die
+	emake CFLAGS="-fPIC ${CFLAGS}" gcc || die
 
 }
 
