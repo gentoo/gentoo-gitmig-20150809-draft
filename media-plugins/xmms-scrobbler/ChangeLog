@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/xmms-scrobbler
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/ChangeLog,v 1.16 2004/09/30 23:43:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/ChangeLog,v 1.17 2004/10/10 20:50:26 eradicator Exp $
+
+  10 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -xmms-scrobbler-0.3.3.ebuild:
+  Upstream broke backwards compatibility. Removing old version. Marking newer
+  version stable on affected archs. Closes bug #67004.
 
 *xmms-scrobbler-0.3.5 (30 Sep 2004)
 
