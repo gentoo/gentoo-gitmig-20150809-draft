@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.4 2003/07/12 13:10:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.5 2003/12/16 12:37:47 weeve Exp $
+
+  16 Dec 2003; Jason Wever <weeve@gentoo.org> blt-2.4z.ebuild:
+  Added ~sparc keyword to fix broken dependencies of app-sci/tclspice.
 
 *blt-2.4u (13 Feb 2003)
  

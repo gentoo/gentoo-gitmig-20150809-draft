@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z.ebuild,v 1.4 2003/11/29 19:35:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z.ebuild,v 1.5 2003/12/16 12:37:47 weeve Exp $
 
 S="${WORKDIR}/${PN}${PV}"
 SRC_URI="mirror://sourceforge/blt/BLT2.4z.tar.gz"
@@ -11,7 +11,7 @@ DEPEND=">=dev-lang/tk-8.0"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 
 src_unpack() {
 
