@@ -1,18 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.5.ebuild,v 1.10 2003/09/02 18:44:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.6.ebuild,v 1.1 2003/09/02 18:44:24 mholzer Exp $
 
 IUSE="nls build"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GNU info program and utilities"
-SRC_URI="mirror://gentoo/${P}.tar.bz2
-	mirror://gnu/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/texinfo/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa ~arm mips"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~arm ~mips"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	!build? ( >=sys-libs/ncurses-5.2-r2
