@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.5.ebuild,v 1.14 2003/02/23 18:52:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.5.ebuild,v 1.15 2003/02/23 19:03:30 foser Exp $
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
 SRC_URI="ftp://ftp.easysw.com/pub/ghostscript/espgs-${PV}-source.tar.bz2
@@ -44,9 +44,6 @@ src_compile() {
 
 	use cups && myconf="${myconf} --enable-cups" \
 		|| myconf="${myconf} --disable-cups"
-
-	use gnome && myconf="${myconf} --with-gimp-print" \
-		|| myconf="${myconf} --without-gimp-print"
 
 	econf ${myconf}
 	make || die "make failed"
