@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/xmlunit
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/ChangeLog,v 1.1 2005/01/22 13:01:24 luckyduck Exp $
+
+*xmlunit-1.0 (22 Jan 2005)
+
+  22 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/xmlunit-1.0-gentoo.patch, +xmlunit-1.0.ebuild:
+  Initial import. Dependency of various new dev-java packages. fixes #75486.
+
