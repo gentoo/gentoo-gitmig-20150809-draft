@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MLDBM
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.9 2003/04/03 23:40:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.10 2003/05/31 21:13:18 mcummings Exp $
+
+*MLDBM-2.01 (31 May 2003)
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org> MLDBM-2.01.ebuild:
+  New version on CPAN
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
