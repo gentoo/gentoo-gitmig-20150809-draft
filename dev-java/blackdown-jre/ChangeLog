@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.55 2005/01/12 22:15:27 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.56 2005/02/05 21:38:37 luckyduck Exp $
+
+  05 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  blackdown-jre-1.4.2.01.ebuild:
+  tweaked unpacking options for tar to fix #77748
 
   12 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   blackdown-jre-1.4.1-r1.ebuild:
