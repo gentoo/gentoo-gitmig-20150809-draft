@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/qtparted
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.9 2003/11/21 17:30:03 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.10 2004/01/22 02:47:46 caleb Exp $
+
+*qtparted-0.4.1 (21 Jan 2004)
+
+  21 Jan 2004; Caleb Tennis <caleb@gentoo.org> qtparted-0.4.1.ebuild:
+  New version, from bug #37892
+  Note that qtparted uses progsreiserfs and not reiserfsprogs.
 
   21 Nov 2003; Martin Holzer <mholzer@gentoo.org> qtparted-0.3.2.ebuild,
   qtparted-0.4.0.ebuild:
