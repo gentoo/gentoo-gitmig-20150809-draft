@@ -1,23 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/manpages-ru-0.7.ebuild,v 1.7 2003/02/13 08:47:08 vapier Exp $
+# Distributed under the terms of the GNU General Public Licensev2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/manpages-ru-0.7.ebuild,v 1.8 2003/08/05 18:23:24 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="A collection of Russian translations of Linux manual pages."
 HOMEPAGE="http://alexm.here.ru/manpages-ru/"
+SRC_URI="ftp://ftp.win.tue.nl/pub/linux-local/manpages/translations/man-pages-ru-${PV}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc"
 
 DEPEND=""
 RDEPEND="sys-apps/man"
 
-KEYWORDS="x86 ppc"
-SLOT="0"
-
-SRC_URI="ftp://ftp.win.tue.nl/pub/linux-local/manpages/translations/man-pages-ru-${PV}.tar.gz"
-S=${WORKDIR}/${P}
-
 src_unpack() {
 	unpack ${A}
-	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
+	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
