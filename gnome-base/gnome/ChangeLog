@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.128 2004/11/04 20:46:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.129 2004/11/12 04:28:22 gustavoz Exp $
+
+  12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> gnome-2.8.0-r1.ebuild:
+  Sparc stable, let's warm the place
 
 *gnome-2.8.0-r1 (21 Oct 2004)
 
