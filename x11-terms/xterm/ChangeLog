@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.24 2004/06/10 16:50:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.25 2004/06/11 00:19:05 seemant Exp $
+
+  10 Jun 2004; Seemant Kulleen <seemant@gentoo.org> xterm-191.ebuild:
+  Added libtermcap-compat as a DEPEND. Closes bug #53573 by Martin Hajduch
+  <martin.hajduch@assyst-intl.com>
 
   10 Jun 2004; Seemant Kulleen <seemant@gentoo.org> xterm-191.ebuild:
   Apply the termcap breakage patch to fix the make install errors. Closes bug

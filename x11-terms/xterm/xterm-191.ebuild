@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-191.ebuild,v 1.3 2004/06/10 16:50:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-191.ebuild,v 1.4 2004/06/11 00:19:05 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,6 +16,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~hppa amd64 ~mips"
 
 DEPEND="virtual/x11
 	sys-apps/utempter
+	sys-libs/libtermcap-compat
 	Xaw3d? ( x11-libs/Xaw3d )"
 
 src_unpack() {
@@ -44,10 +45,10 @@ src_compile() {
 		--enable-load-vt-fonts \
 		--enable-i18n \
 		--enable-luit \
-		--enable-tcap-query \
 		--enable-wide-chars \
 		--enable-doublechars \
 		--enable-warnings \
+		--enable-tcap-query \
 		--disable-imake \
 		--disable-toolbar \
 		${myconf} || die
