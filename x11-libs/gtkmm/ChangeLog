@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtkmm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/ChangeLog,v 1.20 2003/05/22 14:00:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/ChangeLog,v 1.21 2003/05/23 17:04:14 foser Exp $
+
+*gtkmm-2.2.3 (23 May 2003)
+
+  23 May 2003; foser <foser@gentoo.org> gtkmm-2.2.3.ebuild :
+  2.2.2 had some serious so installation problem, this release should fix that
 
 *gtkmm-2.2.2 (22 May 2003)
 
