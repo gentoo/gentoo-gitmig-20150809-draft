@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/freetds
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.15 2004/03/14 13:18:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.16 2004/04/24 18:56:02 robbat2 Exp $
+
+*freetds-0.62.3 (24 Apr 2004)
+
+  24 Apr 2004; Robin H. Johnson <robbat2@gentoo.org> freetds-0.62.3.ebuild:
+  version bump, bug 47435.
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> freetds-0.61-r1.ebuild,
   freetds-0.62.1.ebuild:
