@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.32.ebuild,v 1.3 2003/11/13 02:19:23 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.32.ebuild,v 1.4 2004/01/26 00:30:10 vapier Exp $
 
 inherit gnome2
 
@@ -30,4 +30,4 @@ DEPEND="${RDEPEND}
 G2CONF="${G2CONF} `use_enable mmx` `use_with gnome gnome-print`"
 G2CONF="${G2CONF} --with-xft --with-popt"
 
-DOCS="AUTHORS COPYING ChangeLog HACKING NEWS README TODO"
+DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.33.ebuild,v 1.2 2003/12/24 19:24:18 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.33.ebuild,v 1.3 2004/01/26 00:30:10 vapier Exp $
 
 inherit gnome2
 
@@ -34,4 +34,4 @@ G2CONF="${G2CONF} --with-xft --with-popt"
 # disable experimental features for now
 G2CONF="${G2CONF} --without-mlview --without-kde"
 
-DOCS="AUTHORS COPYING ChangeLog HACKING NEWS README TODO"
+DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
