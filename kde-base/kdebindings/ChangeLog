@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebindings
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.67 2004/06/24 22:12:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.68 2004/08/12 11:19:49 carlo Exp $
+
+  12 Aug 2004; Carsten Lohrke <carlo@gentoo.org> kdebindings-3.2.3.ebuild:
+  fixed kdebase dependency, #59775
 
   17 Jun 2004; Jason Wever <weeve@gentoo.org> kdebindings-3.2.3.ebuild:
   Added ~sparc keyword because for some odd reason it wasn't there.
