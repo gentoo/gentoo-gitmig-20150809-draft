@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c4621f5072ec3f6382c67ebab4fcde4e ChangeLog 3350
-MD5 4e8f6b4306d3c55047cd893628818869 libgnomecups-0.1.6.ebuild 521
-MD5 574309004015c52c39e2f4e8122c18a3 metadata.xml 180
 MD5 d63cb268508db805f38c2f8853e66586 libgnomecups-0.1.10.ebuild 533
 MD5 6bf45b3fc80196467a6ca4efa67310f4 libgnomecups-0.1.8.ebuild 523
-MD5 81f79b88b8b5242e7a59b950a0a937df libgnomecups-0.1.14.ebuild 535
-MD5 598c276edd67500c9c91148bb57c968c files/digest-libgnomecups-0.1.6 71
+MD5 a0f771c095bc4e333e5688475d2839e1 libgnomecups-0.1.14.ebuild 534
+MD5 2e0d9951cd5dba3ed0ef332f4300a60a ChangeLog 3446
+MD5 574309004015c52c39e2f4e8122c18a3 metadata.xml 180
+MD5 4e8f6b4306d3c55047cd893628818869 libgnomecups-0.1.6.ebuild 521
 MD5 0905ed8e2bea808cde2ae60aab7f3d31 files/digest-libgnomecups-0.1.10 72
-MD5 b12b28469ad2e7e4f62f8e95eb0e0553 files/digest-libgnomecups-0.1.8 71
 MD5 972a00f1c984c22f4b9cdb69122edd38 files/digest-libgnomecups-0.1.14 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB8fBeroRuSHgZdywRApW+AJ0YF74V/MIATfYLZyxeRUAhK07JMACghmS+
-8fJbCj+xm61RB4zuWah6plI=
-=Ny2t
------END PGP SIGNATURE-----
+MD5 598c276edd67500c9c91148bb57c968c files/digest-libgnomecups-0.1.6 71
+MD5 b12b28469ad2e7e4f62f8e95eb0e0553 files/digest-libgnomecups-0.1.8 71
