@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1-r1.ebuild,v 1.10 2004/07/15 01:57:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1-r1.ebuild,v 1.11 2004/10/26 19:54:07 slarti Exp $
 
-inherit fixheadtails eutils
+inherit fixheadtails eutils toolchain-funcs
 
 DESCRIPTION="Rate-limited autoresponder for qmail."
 SRC_URI="http://untroubled.org/qmail-autoresponder/${P}.tar.gz"
@@ -10,7 +10,7 @@ HOMEPAGE="http://untroubled.org/qmail-autoresponder/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc alpha ~mips ~hppa"
+KEYWORDS="x86 sparc ppc alpha ~mips ~hppa ~amd64"
 IUSE="mysql"
 
 DEPEND="virtual/libc
@@ -34,8 +34,8 @@ src_compile() {
 	cd ${S}
 	echo "/usr/lib/bglibs/include" > conf-bgincs
 	echo "/usr/lib/bglibs/lib" > conf-bglibs
-	echo "${CC} ${CFLAGS}" > conf-cc
-	echo "${CC} ${LDFLAGS}" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 
 	# fails on parallel builds!
 	make qmail-autoresponder || die "Failed to make qmail-autoresponder"

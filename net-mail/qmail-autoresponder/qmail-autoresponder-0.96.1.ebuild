@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1.ebuild,v 1.9 2004/07/15 01:57:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1.ebuild,v 1.10 2004/10/26 19:54:07 slarti Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Rate-limited autoresponder for qmail."
 SRC_URI="http://untroubled.org/qmail-autoresponder/${P}.tar.gz"
@@ -29,8 +29,8 @@ src_compile() {
 	cd ${S}
 	echo "/usr/lib/bglibs/include" > conf-bgincs
 	echo "/usr/lib/bglibs/lib" > conf-bglibs
-	echo "gcc ${CFLAGS}" > conf-cc
-	echo "gcc" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getLD) ${LDFLAGS}" > conf-ld
 	make || die
 }
 

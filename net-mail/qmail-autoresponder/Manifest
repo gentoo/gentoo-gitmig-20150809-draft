@@ -1,9 +1,19 @@
-MD5 378fc4a090d738a4822e15acfbb322fa qmail-autoresponder-0.95.ebuild 1257
-MD5 0e61cde8d95a958b3ff9ad4c17effc3c qmail-autoresponder-0.96.1.ebuild 1550
-MD5 a59703a5834575f7e7c0c3184351a700 qmail-autoresponder-0.96.1-r1.ebuild 1601
-MD5 2bf65d9b8c343a73e993e00a4119d1fb ChangeLog 2118
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f840ee9649b2b1a5dcb8683f7e22ca17 qmail-autoresponder-0.95.ebuild 1307
+MD5 edaa4427a51802c835bbf83d87e27f49 qmail-autoresponder-0.96.1.ebuild 1592
+MD5 3b8f9ac3097c31a0fc9f0cafad717cbb qmail-autoresponder-0.96.1-r1.ebuild 1634
+MD5 288f7099948d500c90ca276e5c32f1be ChangeLog 2335
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 6afa2313932bc099d5d9fce81ad915a6 files/qmail-autoresponder-0.96.1-gcc33-multiline-string-fix.patch 1579
 MD5 90b5670299663d9218e1d8e32476ddd9 files/digest-qmail-autoresponder-0.95 75
 MD5 9f8689f8a0b50c22c0a351a281d6c77f files/digest-qmail-autoresponder-0.96.1-r1 77
 MD5 9f8689f8a0b50c22c0a351a281d6c77f files/digest-qmail-autoresponder-0.96.1 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfp2FCHk4+ZoBpvsRAn+tAKCEYLU3K5l32DUA6adZDlTVQ0ImiQCgowqN
+hn6t+XeC4btbRfKggKH5Qd0=
+=k5Dd
+-----END PGP SIGNATURE-----
