@@ -1,3 +1,5 @@
-MD5 ea5f499186d3d22fdc31014b78d322be ChangeLog 421
+MD5 3a51c76df1fc6b180b42e6f7b6c31570 ChangeLog 565
 MD5 a97605697b202e08625d3b09f2eb0f1d firestorm-0.5.2.ebuild 636
+MD5 caa5b04d83f49bb19487b3e93082b43e firestorm-0.5.4.ebuild 633
 MD5 5fd77e2f02542a16e419af97f39edb06 files/digest-firestorm-0.5.2 67
+MD5 36474e9be9cd5c6d37f465ee7408d561 files/digest-firestorm-0.5.4 67
