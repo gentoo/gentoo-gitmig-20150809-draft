@@ -1,8 +1,11 @@
 # ChangeLog for homeblutgensgentoo-x86net-ircirssiChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.8 2002/09/14 00:23:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.9 2002/09/16 01:04:00 murphy Exp $
 
 *irssi-0.8.5-r2 (12 Sep 2002)
+
+  16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> irssi-0.8.5-r2.ebuild : Added
+  sparc/sparc64 keywords.
 
   13 Sep 2002; Michael Cummings <mcummings@gentoo.org>: Corrected perl
   syntax to use perl eclass for perl Makefile.PL actions, bug 7868.
