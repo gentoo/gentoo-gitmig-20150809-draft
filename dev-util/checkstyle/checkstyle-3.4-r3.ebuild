@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.4-r2.ebuild,v 1.5 2005/01/14 19:19:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.4-r3.ebuild,v 1.1 2005/03/27 21:15:36 luckyduck Exp $
 
 inherit java-pkg
 
@@ -25,7 +25,7 @@ RDEPEND=">=virtual/jre-1.3
 		=dev-java/commons-cli-1*
 		dev-java/commons-collections
 		dev-java/commons-logging
-		>=dev-java/regexp-1.3-r1"
+		=dev-java/jakarta-regexp-1.3*"
 
 src_unpack() {
 	unpack ${A}
@@ -35,7 +35,7 @@ src_unpack() {
 	java-pkg_jar-from commons-cli-1
 	java-pkg_jar-from commons-collections
 	java-pkg_jar-from commons-logging
-	java-pkg_jar-from regexp regexp.jar jakarta-regexp-1.3.jar
+	java-pkg_jar-from jakarta-regexp-1.3 jakarta-regexp.jar jakarta-regexp-1.3.jar
 	#if use junit; then
 	#	java-pkg_jar-from junit
 	#else
@@ -62,7 +62,7 @@ src_install() {
 
 	echo '#!/bin/bash' > checkstyle
 	echo '' >> checkstyle
-	echo '`java-config -J` -cp `java-config -p checkstyle,antlr,commons-beanutils,commons-cli-1,commons-collections,commons-logging,regexp` com.puppycrawl.tools.checkstyle.Main "$@"' >> checkstyle
+	echo '`java-config -J` -cp `java-config -p checkstyle,antlr,commons-beanutils,commons-cli-1,commons-collections,commons-logging,jakarta-regexp-1.3` com.puppycrawl.tools.checkstyle.Main "$@"' >> checkstyle
 
 	insinto /usr
 	dobin checkstyle
