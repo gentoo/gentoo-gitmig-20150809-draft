@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqsh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/ChangeLog,v 1.6 2004/01/11 13:42:59 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/ChangeLog,v 1.7 2004/03/09 15:23:33 aliz Exp $
+
+  09 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> sqsh-2.1-r1.ebuild:
+  Adding amd64 keyword. Closing #43599.
 
   11 Jan 2004; Heinrich Wendel <lanius@gentoo.org> sqsh-2.1-r1.ebuild,
   sqsh-2.1.ebuild:
