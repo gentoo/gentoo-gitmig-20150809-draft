@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Date-ICal
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/ChangeLog,v 1.1 2002/06/28 12:35:15 seemant Exp $
+
+*Date-ICal-1.69 (28 Jun 2002)
+
+  28 Jun 2002; Seemant Kulleen <seemant@gentoo.org> Date-ICal-1.69.ebuild
+  files/digest-Date-ICal-1.69 :
+
+  New package, courtesy of: rac@intrigue.com (Robert Coie) in bug #4182

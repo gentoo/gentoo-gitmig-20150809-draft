@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Date-Leapyear
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/ChangeLog,v 1.1 2002/06/28 12:31:33 seemant Exp $
+
+*Date-Leapyear-1.7 (28 Jun 2002)
+
+  28 Jun 2002; Seemant Kulleen <seemant@gentoo.org> Date-Leapyear-1.7.ebuild
+  files/digest-Date-Leapyear-1.7 :
+
+  New package, courtesy of rac@intrigue.com (Robert Coie) in bug #4181
