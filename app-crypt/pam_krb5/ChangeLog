@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pam_krb5
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/ChangeLog,v 1.10 2004/08/19 22:19:51 kugelfang Exp $
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/ChangeLog,v 1.11 2004/09/28 00:19:33 swegener Exp $
+
+  28 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Gentoo Technologies, Inc. -> Gentoo Foundation
 
   20 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> pam_krb5-1.0-r1.ebuild:
   Fixed BUG #59323. Marked ~amd64.
