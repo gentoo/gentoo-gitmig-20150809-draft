@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.5.ebuild,v 1.6 2004/03/25 22:56:22 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.5.ebuild,v 1.7 2004/04/23 00:21:56 caleb Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
@@ -34,17 +34,20 @@ use oggvorbis 	&& myconf="$myconf --with-vorbis"	|| myconf="$myconf --without-vo
 use opengl	&& myconf="$myconf --with-gl"		|| myconf="$myconf --without-gl"
 use ssl		&& myconf="$myconf --with-ssl"		|| myconf="$myconf --without-ssl"
 use pam		&& myconf="$myconf --with-pam=yes"	|| myconf="$myconf --with-pam=no --with-shadow"
-use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$myconf --without-java"
 
 PATCHES=""
 
 src_unpack() {
+
 	kde_src_unpack
 	use amd64 && epatch ${FILESDIR}/kdebase-3.1.4-amd64-accessviol.patch
 	#cd ${S} && aclocal
 }
 
 src_compile() {
+
+	use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$myconf --without-java"
+
 	kde_remove_flag kdm/kfrontend -fomit-frame-pointer
 	kde_src_compile
 }
