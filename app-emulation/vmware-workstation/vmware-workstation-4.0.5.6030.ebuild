@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.0.5.6030.ebuild,v 1.6 2003/12/30 23:45:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.0.5.6030.ebuild,v 1.7 2003/12/31 13:36:43 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -43,9 +43,9 @@ src_unpack() {
 	if [ "${KV:0:3}" == "2.6" ] || [ "${KV:0:3}" == "2.5" ] ; then
 		einfo "Adding 2.{5,6}.x kernel support"
 		# Fix from Georgi Georgiev (chutz@chubaka.net)
-		epatch ${FILESDIR}/vmware-26kern-ksyms-gentoo.patch
+		epatch ${FILESDIR}/vmware-26kern-init-gentoo.patch
 		unpack ${N26KernSupport}.tar.gz
-		mv ${N26KernSupport}/*.tar ${S}/lib/modules/source/
+		mv -f ${N26KernSupport}/*.tar ${S}/lib/modules/source/
 	else
 		einfo "Using 2.4.x kernel support"
 	fi
