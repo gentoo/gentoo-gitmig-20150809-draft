@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-logrotate/selinux-logrotate-20041109.ebuild,v 1.1 2004/11/13 19:55:09 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-logrotate/selinux-logrotate-20041114.ebuild,v 1.1 2004/11/14 20:40:11 kaiowas Exp $
 
 inherit selinux-policy
 
