@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tdb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tdb/ChangeLog,v 1.4 2003/02/12 06:10:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tdb/ChangeLog,v 1.5 2003/07/14 04:48:45 msterret Exp $
+
+  13 Jul 2003; Michael Sterrett <msterret@gentoo.org> tdb-1.0.6.ebuild:
+  fix issue with man pages installing in /usr/man (bug 19809); tidy
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
