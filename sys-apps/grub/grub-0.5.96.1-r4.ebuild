@@ -23,7 +23,7 @@ src_compile() {
 	try     ./configure --prefix=/usr sbindir=/sbin \
                 --mandir=/usr/share/man --infodir=/usr/share/info --host=${CHOST}
 
-	try make ${MAKEOPTS} -e  CPPFLAGS=\"-Wall -Wmissing-prototypes -Wunused -Wshadow -malign-jumps=1 -malign-loops=1 -malign-functions=1 -Wundef\"
+	try make ${MAKEOPTS} -e  CPPFLAGS="-Wall -Wmissing-prototypes -Wunused -Wshadow -malign-jumps=1 -malign-loops=1 -malign-functions=1 -Wundef"
 }
 
 src_install() {
