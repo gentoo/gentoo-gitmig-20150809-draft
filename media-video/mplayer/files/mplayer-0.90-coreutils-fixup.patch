@@ -1,0 +1,35 @@
+diff -urpN MPlayer-0.90/configure MPlayer-0.90.CUfixed/configure
+--- MPlayer-0.90/configure	2003-03-22 18:29:16.000000000 +0200
++++ MPlayer-0.90.CUfixed/configure	2003-08-03 09:38:25.000000000 +0200
+@@ -452,7 +452,7 @@ fi
+ if test "$_skip_cc_check" != yes ; then
+  for _cc in "$_cc" gcc-3.1 gcc3 gcc-3.0 cc ; do
+   echocheck "$_cc version"
+-  cc_name=`( $_cc -v ) 2>&1 | tail -1 | cut -d ' ' -f 1`
++  cc_name=`( $_cc -v ) 2>&1 | tail -n 1 | cut -d ' ' -f 1`
+   cc_version=`( $_cc -dumpversion ) 2>&1`
+   if test "$?" -gt 0; then
+     cc_version="not found"
+@@ -552,15 +552,15 @@ if x86 || ppc; then
+     _cpuinfo="TOOLS/cpuinfo"
+   fi
+ 
+-  pname=`$_cpuinfo | grep 'model name' | cut -d ':' -f 2 | head -1`
+-  pvendor=`$_cpuinfo | grep 'vendor_id' | cut -d ':' -f 2  | cut -d ' ' -f 2 | head -1`
+-  pfamily=`$_cpuinfo | grep 'cpu family' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -1`
+-  pmodel=`$_cpuinfo | grep -v 'model name' | grep 'model' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -1`
+-  pstepping=`$_cpuinfo | grep 'stepping' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -1`
++  pname=`$_cpuinfo | grep 'model name' | cut -d ':' -f 2 | head -n 1`
++  pvendor=`$_cpuinfo | grep 'vendor_id' | cut -d ':' -f 2  | cut -d ' ' -f 2 | head -n 1`
++  pfamily=`$_cpuinfo | grep 'cpu family' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1`
++  pmodel=`$_cpuinfo | grep -v 'model name' | grep 'model' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1`
++  pstepping=`$_cpuinfo | grep 'stepping' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1`
+ 
+-  pparam=`$_cpuinfo | grep 'features' | cut -d ':' -f 2 | head -1`
++  pparam=`$_cpuinfo | grep 'features' | cut -d ':' -f 2 | head -n 1`
+   if test -z "$pparam" ; then
+-    pparam=`$_cpuinfo | grep 'flags' | cut -d ':' -f 2 | head -1`
++    pparam=`$_cpuinfo | grep 'flags' | cut -d ':' -f 2 | head -n 1`
+   fi
+ 
+   _mmx=no
