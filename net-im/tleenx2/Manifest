@@ -1,6 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aee577150993676c8b3bfe5c32ada520 tleenx2-20040106.ebuild 660
-MD5 f036ad3d54d8c2eaab9188b8c0e7adde ChangeLog 663
+MD5 fe54cc331804226ce22a7cb2fa554480 tleenx2-20041125.ebuild 673
+MD5 9457f7def7afa46d4e5cb6fc1e82a926 ChangeLog 791
 MD5 bee39157a0491e747442baf4eed96348 metadata.xml 263
 MD5 8dc0ed01a51c8dc534772fa453b4eb10 tleenx2-20040214.ebuild 656
 MD5 a35060e40600fedc9a38b9b4818ecef8 files/digest-tleenx2-20040106 68
 MD5 5e9774e292b6723e8e4b736468f81bf4 files/digest-tleenx2-20040214 68
+MD5 68d198e0ec663e7c05a057fa888bc600 files/digest-tleenx2-20041125 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBp5xcchej4aZK9/cRAjvOAJ0YQI5YlQTwgpjN2XFl9puHWVlc6QCfVBdt
+x/j2tPNFiMt6SvUuhVvA0zE=
+=3rM8
+-----END PGP SIGNATURE-----
