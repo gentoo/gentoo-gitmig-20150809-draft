@@ -1,6 +1,16 @@
-MD5 d7ae2208b5414c761236590e8e285eb9 ChangeLog 1633
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a0b35f0d18eefadee73ff00327c4ea4d ChangeLog 1738
 MD5 fb2864fb428edf1726af9a50b45cb84a metadata.xml 344
-MD5 5920ee05bfc16a4c7a3a789f2568c15d wmmemload-0.1.5.ebuild 632
-MD5 6204abb7f2b82d53d11f4a0d5ec2379c wmmemload-0.1.6.ebuild 632
+MD5 eae7fb40db6d0aaf1bfe0e9b4746be6f wmmemload-0.1.6.ebuild 637
+MD5 8755638c1a9dc5b565e07e7fac6f2efd wmmemload-0.1.5.ebuild 630
 MD5 87c53da6317e5d6469ad5aaca7a24cbc files/digest-wmmemload-0.1.6 67
 MD5 ad8eaca5b428d4f6236e9d707186c304 files/digest-wmmemload-0.1.5 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCBPfJugEuf3OQ0akRAv4uAJ9tEXFKrKutqKvAHBOYGEn6B/0KIQCfVYCR
+W/g8nvAIb/6NQrJAWCebgLw=
+=WV3P
+-----END PGP SIGNATURE-----
