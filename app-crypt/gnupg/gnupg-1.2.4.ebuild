@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.9 2004/02/25 16:50:35 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.10 2004/03/08 21:19:18 weeve Exp $
 
 inherit eutils flag-o-matic
 
@@ -44,7 +44,7 @@ DEPEND="caps? ( sys-libs/libcap )
 # fix until the gcc problem can be tracked down.
 
 if [ "${ARCH}" == "sparc" ] && [ "${PROFILE_ARCH}" == "sparc" ]; then
-	filter-flags "-mcpu=supersparc -mcpu=v8 -mcpu=v7"
+	filter-flags -mcpu=supersparc -mcpu=v8 -mcpu=v7
 fi
 
 src_unpack() {

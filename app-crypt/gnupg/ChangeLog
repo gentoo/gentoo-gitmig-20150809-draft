@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.50 2004/02/25 16:50:35 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.51 2004/03/08 21:19:18 weeve Exp $
+
+  08 Mar 2004; Jason Wever <weeve@gentoo.org> gnupg-1.2.4.ebuild:
+  Adjusted filter-flags syntax for sparc32.  Fixes bug #43008.
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> gnupg-1.2.4.ebuild:
   All your stable keywords are belong to sparc!
