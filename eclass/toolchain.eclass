@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.49 2004/11/14 23:13:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.50 2004/11/15 00:35:25 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -568,13 +568,13 @@ should_we_gcc_config() {
 		else
 			# if we're installing a genuinely different compiler version,
 			# we should probably tell the user -how- to switch to the new
-			# gcc version, since we're now going to do it for him/her.
+			# gcc version, since we're not going to do it for him/her.
 			einfo "The current gcc config appears valid, so it will not be"
 			einfo "automatically switched for you. If you would like to"
 			einfo "switch to the newly installed gcc version, do the"
 			einfo "following:"
 			echo
-			einfo "gcc-config ${CTARGET}-${MY_PV_FULL}${use_specs}"
+			einfo "gcc-config ${CTARGET}-${MY_PV_FULL}"
 			einfo "source /etc/profile"
 			echo
 			ebeep
