@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=jEdit
+Comment=Java Editor
+Exec=/usr/bin/jedit
+Icon=/usr/share/jedit/doc/jedit.png
+Terminal=false
+Type=Application
+Categories=Application;Development;
+Encoding=UTF-8

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2.ebuild,v 1.8 2004/12/04 17:44:59 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2.ebuild,v 1.9 2004/12/27 20:29:56 anti Exp $
 
 inherit java-utils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/jedit/jedit${MY_PV}source.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~ppc amd64"
 SLOT="0"
-IUSE="jikes doc"
+IUSE="jikes doc gnome kde"
 
 RDEPEND=">=virtual/jdk-1.4"
 DEPEND="${RDEPEND}
@@ -74,6 +74,11 @@ src_install () {
 	chmod 755 ${D}/usr/share/jedit/jedit.sh
 
 	ln -s ../share/jedit/jedit.sh ${D}/usr/bin/jedit
+
+	if use gnome || use kde ; then
+		insinto /usr/share/applications
+		doins ${FILESDIR}/jedit.desktop
+	fi
 
 	keepdir /usr/share/jedit/jars
 }
