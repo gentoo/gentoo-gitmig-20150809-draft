@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.13-r1.ebuild,v 1.4 2003/08/16 02:26:12 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.13-r1.ebuild,v 1.5 2003/08/16 03:18:58 g2boojum Exp $
 
 IUSE="ssl mysql sasl ldap ipv6 maildir mbox postgres"
 
@@ -49,11 +49,11 @@ is_postfix_installed() {
 
 pkg_setup() {
 	if ! grep -q ^postdrop: /etc/group ; then
-		groupadd postdrop || die "problem adding group postdrop"
+		groupadd postdrop
 	fi
 
 	if ! grep -q ^mail:.*postfix /etc/group ; then
-		usermod -G mail postfix || die "problem adding user postfix to group mail"
+		usermod -G mail postfix
 	fi
 	
 	# Prevent mangling the smtpd.conf file
