@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.63 2004/12/27 13:31:48 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.64 2004/12/28 20:14:44 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -60,27 +60,46 @@ SLOT="${PVR}"
 #Eclass functions only from here onwards ...
 #==============================================================
 kernel_is() {
-	local RESULT
-	RESULT=1
+	# if we haven't determined the version yet, we need too.
+	get_version;
+	
+	local RESULT operator value test
+	RESULT=0
+	
+	operator="-eq"
+	if [ "${1}" == "lt" ]
+	then
+		operator="-lt"
+		shift
+	elif [ "${1}" == "gt" ]
+	then
+		operator="-gt"
+		shift
+	elif [ "${1}" == "le" ]
+	then
+		operator="-le"
+		shift
+	elif [ "${1}" == "ge" ]
+	then
+		operator="-ge"
+		shift
+	fi
 
 	if [ -n "${1}" ]
 	then
-		[ "${1}" = "${KV_MAJOR}" ] && RESULT=0
+		[ ${KV_MAJOR} ${operator} ${1} ] || RESULT=1
 	fi
-
 	if [ -n "${2}" ]
 	then
-		RESULT=1
-		[ "${2}" = "${KV_MINOR}" ] && RESULT=0
+		[ ${KV_MINOR} ${operator} ${2} -a ${RESULT} -eq 0 ] || RESULT=1
 	fi
-
 	if [ -n "${3}" ]
 	then
-		RESULT=1
-		[ "${3}" = "${KV_PATCH}" ] && RESULT=0
+		[ ${KV_PATCH} ${operator} ${3} -a ${RESULT} -eq 0 ] || RESULT=1
 	fi
 	return ${RESULT}
 }
+
 
 kernel_is_2_4() {
 	kernel_is 2 4
