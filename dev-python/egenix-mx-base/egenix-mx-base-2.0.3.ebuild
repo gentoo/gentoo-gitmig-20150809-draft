@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.3.ebuild,v 1.14 2004/03/16 19:28:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.3.ebuild,v 1.15 2004/05/07 19:59:42 kloeri Exp $
 
 inherit flag-o-matic
 
@@ -12,6 +12,7 @@ HOMEPAGE="http://www.egenix.com/"
 DEPEND="virtual/python"
 RDEPEND="${RDEPEND}"
 
+IUSE=""
 SLOT="0"
 KEYWORDS="x86 sparc alpha"
 LICENSE="eGenixPublic"
