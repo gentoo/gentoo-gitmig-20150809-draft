@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.75 2005/01/26 21:13:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.76 2005/01/31 17:55:57 lanius Exp $
+
+  31 Jan 2005; Heinrich Wendel <lanius@gentoo.org> -xpdf-3.00-r6.ebuild,
+  -xpdf-3.00-r7.ebuild:
+  remove old versions, fix xpdf-latin2.tar.gz
 
   26 Jan 2005; Guy Martin <gmsoft@gentoo.org> xpdf-3.00-r8.ebuild:
   Stable on hppa.
