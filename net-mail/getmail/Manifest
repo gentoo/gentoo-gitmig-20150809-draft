@@ -1,26 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a4d51836949c395a270b858dd305c5bc ChangeLog 6396
-MD5 9a89b3c964ef5316f9e20b12d1650083 getmail-4.2.0.ebuild 1455
+MD5 3534f772f0283ea6c9af9d80f9037c2c ChangeLog 6511
 MD5 9e830882f4584351d636b4336ddcd2b4 getmail-4.2.2.ebuild 1457
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 f6d764c97c25ae37fd5c40b387c17ccb getmail-4.2.3.ebuild 1460
-MD5 1ee82606922bc4a3c5bf14465fddd53e getmail-4.2.4.ebuild 1460
 MD5 80e50bf8a0312099f272ff2f9ab7f037 getmail-4.2.5.ebuild 1462
-MD5 8566132276d31c8a36e0a93aedc78c82 getmail-4.2.6.ebuild 1461
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 65e064ba4134d614ae26d86a910b3793 getmail-4.3.0.ebuild 1461
-MD5 5d6de052ec20bd1c9d1d50ae49bf41a4 files/digest-getmail-4.2.0 65
-MD5 703aa5a6a4ea209d4bb94bc43745e1dc files/digest-getmail-4.2.2 65
+MD5 1ee82606922bc4a3c5bf14465fddd53e getmail-4.2.4.ebuild 1460
+MD5 9a89b3c964ef5316f9e20b12d1650083 getmail-4.2.0.ebuild 1455
+MD5 8566132276d31c8a36e0a93aedc78c82 getmail-4.2.6.ebuild 1461
+MD5 30b647bad42d81f6b60ef77ded357baa getmail-4.3.1.ebuild 1461
+MD5 f6d764c97c25ae37fd5c40b387c17ccb getmail-4.2.3.ebuild 1460
 MD5 ea228df09117f6d0617365ff7c024398 files/digest-getmail-4.2.3 65
-MD5 0a65dc470eb892234524c070a6163b04 files/digest-getmail-4.2.4 65
-MD5 94d0d625767272d78892b2cde0e7b41d files/digest-getmail-4.2.5 65
 MD5 ff8ffca20907f92c1560cd57fc63bcce files/digest-getmail-4.2.6 65
+MD5 703aa5a6a4ea209d4bb94bc43745e1dc files/digest-getmail-4.2.2 65
+MD5 0a65dc470eb892234524c070a6163b04 files/digest-getmail-4.2.4 65
 MD5 479383244ba9dcf857062301ec83d5d8 files/digest-getmail-4.3.0 65
+MD5 7e6a2b6fbe17c42e8eb34c370f432661 files/digest-getmail-4.3.1 65
+MD5 94d0d625767272d78892b2cde0e7b41d files/digest-getmail-4.2.5 65
+MD5 5d6de052ec20bd1c9d1d50ae49bf41a4 files/digest-getmail-4.2.0 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB7BUSKRy60XGEcJIRApeJAKCW4U+GMZJIWmAg1BE1wL7jsk2uTACbBXT4
-8OcYIDuOMNkMzYR1gF5voTo=
-=cUcO
+iD8DBQFB7dAMQlM6RnzZP+IRAoiCAJ9/jTZNZxMXnRyZAJPNPpK8QEUjogCeJGLP
+s72nXs53/leK4/RcDtm/TwA=
+=ASWQ
 -----END PGP SIGNATURE-----
