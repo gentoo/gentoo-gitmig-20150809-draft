@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.13.4-r1.ebuild,v 1.4 2004/04/26 12:43:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.13.4-r1.ebuild,v 1.5 2004/04/26 19:04:10 agriffis Exp $
 
 IUSE="ssl xml xml2 gnome"
 
@@ -41,12 +41,12 @@ src_compile() {
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 
 	emake || die "emake failed"
 
 	if [ "`use gnome`" ]; then
-		econf ${myconf} --with-gnomefe
+		econf ${myconf} --with-gnomefe || die "econf failed"
 
 		# gnome compile fix
 		sed -i -e "s:VERSION:PACKAGE_VERSION:" gnome/init.c
