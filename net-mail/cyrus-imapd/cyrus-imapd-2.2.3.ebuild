@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.3.ebuild,v 1.1 2004/01/20 18:00:43 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.3.ebuild,v 1.2 2004/01/30 07:00:24 drobbins Exp $
 
 inherit eutils ssl-cert
 
@@ -14,12 +14,7 @@ KEYWORDS="~x86"
 IUSE="afs drac kerberos pam snmp ssl tcpd"
 
 PROVIDE="virtual/imapd"
-DEPEND="virtual/glibc
-	sys-devel/libtool
-	sys-devel/autoconf
-	sys-devel/automake
-	>=sys-apps/sed-4
-	>=sys-libs/db-3.2
+RDEPEND=">=sys-libs/db-3.2
 	>=dev-libs/cyrus-sasl-2.1.13
 	afs? ( >=net-fs/openafs-1.2.2 )
 	pam? ( >=sys-libs/pam-0.75 )
@@ -28,6 +23,13 @@ DEPEND="virtual/glibc
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	drac? ( >=net-mail/drac-1.12-r1 )"
+
+DEPEND="$RDEPEND
+	sys-devel/libtool
+	>=sys-devel/autoconf-2.58
+	sys-devel/automake
+	>=sys-apps/sed-4"
+	
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
