@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/xcdroast
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp
+
+*xcdroast-0.98_alpha15-r3 (17 Jan 2004)
+
+  17 Jan 2004; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha15-r2.ebuild,
+  xcdroast-0.98_alpha15-r3.ebuild:
+  Made slightly changes in alpha15-r3 as cdrecord-prodvd became a package by
+  it's own. Bumped alpha15-r2 stable for x86 and ppc.
 
   18 Dec 2003; Jason Wever <weeve@gentoo.org> xcdroast-0.98_alpha15-r2.ebuild:
   Added ~sparc keyword.

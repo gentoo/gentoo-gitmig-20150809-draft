@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r2.ebuild,v 1.5 2004/01/17 22:28:45 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.1 2004/01/17 22:28:45 pylon Exp $
 
 inherit eutils
 
@@ -8,13 +8,11 @@ S=${WORKDIR}/${P/_/}
 DESCRIPTION="Menu based front-end to mkisofs and cdrecord"
 HOMEPAGE="http://www.xcdroast.org/"
 SRC_URI="mirror://sourceforge/xcdroast/${P/_/}.tar.gz
-	mirror://gentoo/${P}_new_configure.tar.gz
-	dvdr? ( ftp://ftp.berlios.de/pub/cdrecord/ProDVD/cdrecord-prodvd-2.01a12-i586-pc-linux-gnu )
-	dvdr? ( ftp://ftp.berlios.de/pub/cdrecord/ProDVD/cdrecord-prodvd-2.0-powerpc-unknown-linux-gnu )"
+	mirror://gentoo/${P}_new_configure.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE="nls dvdr gtk2 gnome"
 
 DEPEND="
@@ -22,10 +20,13 @@ DEPEND="
 	!gtk2? ( =x11-libs/gtk+-1.2.10* )
 	!gtk2? ( >=media-libs/gdk-pixbuf-0.16.0 )
 	=dev-libs/glib-1.2*
-	>=media-libs/giflib-3.0
-	>=app-cdr/cdrtools-2.01_alpha17"
+	>=media-libs/giflib-3.0"
 
-RDEPEND="${DEPEND}"
+RDEPEND="
+	dvdr? (
+		x86? ( >=app-cdr/cdrecord-prodvd-2.01_alpha24 )
+	)
+	>=app-cdr/cdrtools-2.01_alpha17"
 
 src_unpack() {
 	unpack ${P/_/}.tar.gz
@@ -61,8 +62,7 @@ src_install() {
 	#install cdrecord.prodvd
 	if use dvdr; then
 		into /usr/lib/xcdroast-0.98
-		use x86 && newbin ${DISTDIR}/cdrecord-prodvd-2.01a12-i586-pc-linux-gnu cdrecord.prodvd
-		use ppc && newbin ${DISTDIR}/cdrecord-prodvd-2.0-powerpc-unknown-linux-gnu cdrecord.prodvd
+		dosym /usr/bin/cdrecord.prodvd cdrecord.prodvd
 	fi
 
 	if use gnome; then
