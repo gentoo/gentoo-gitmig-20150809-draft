@@ -3,7 +3,6 @@ MD5 0bd88c25618464c75595f9e0e39195ff unixODBC-2.0.8.ebuild 1108
 MD5 bce7742b423efcd78fb836b84c822c8a unixODBC-2.2.6.ebuild 952
 MD5 b2e3dd45ad9c661f62edf96865878c7d ChangeLog 1858
 MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
-MD5 34cbce459221e84e81fe21e09eed39ae unixODBC-2.0.6.ebuild 1426
 MD5 ffd3cee4e2a1f6dffc130557ccda934b files/gentoo-yac.diff 316
 MD5 f383c7806ba5f687ba55d5f1bc6a36aa files/digest-unixODBC-2.0.8 67
 MD5 0f7614b93d6ede252ed2f7d7ff1aac90 files/digest-unixODBC-2.2.2 67
