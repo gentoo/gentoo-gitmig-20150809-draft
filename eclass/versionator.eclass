@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.1 2004/09/10 18:45:01 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.2 2004/09/10 21:42:21 ciaranm Exp $
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
 #
@@ -23,6 +23,10 @@
 #     get_after_major_version         ver_str
 #     replace_version_separator       index     newvalue   ver_str
 #     replace_all_version_separators  newvalue  ver_str
+#
+# There's also:
+#     version_is_at_least             want      have
+# but it's *really* experimental...
 
 ECLASS=versionator
 INHERITED="$INHERITED $ECLASS"
@@ -174,5 +178,100 @@ replace_all_version_separators() {
 	c=( $(get_all_version_components "${2:-${PV}}" ) )
 	c="${c[@]//[-._]/$1}"
 	echo ${c// }
+}
+
+# Is $2 (defaults to $PVR) at least version $1? Intended for use in eclasses
+# only. Not very reliable, doesn't understand most things, make sure you test
+# reaaaallly well before using this. Prod ciaranm if you need it to support more
+# things... WARNING: DOES NOT HANDLE 1.2b style versions. WARNING: not very well
+# tested, needs lots of work before it's totally reliable. Use with extreme
+# caution.
+version_is_at_least() {
+	local want_s="$1" have_s="${2:-${PVR}}" want_c have_c
+	want_c=( $(get_version_components "$want_s" ) )
+	have_c=( $(get_version_components "$have_s" ) )
+
+	# Stage 1: compare the version numbers part.
+	local done_w="" done_h="" i=0
+	while [[ -z "${done_w}" ]] || [[ -z "${done_h}" ]] ; do
+		local cur_w="${want_c[$i]}" cur_h="${have_c[$i]}"
+		[[ -z "${cur_w##[^[:digit:]]*}" ]] && done_w="yes"
+		[[ -z "${cur_h##[^[:digit:]]*}" ]] && done_h="yes"
+		[[ -z "${done_w}" ]] || cur_w=0
+		[[ -z "${done_h}" ]] || cur_h=0
+		if [[ ${cur_w} -lt ${cur_h} ]] ; then return 0 ; fi
+		if [[ ${cur_w} -gt ${cur_h} ]] ; then return 1 ; fi
+		i=$(($i + 1))
+	done
+
+	local part
+	for part in "_alpha" "_beta" "_pre" "_rc" "_p" "-r" ; do
+		local part_w= part_h=
+
+		for (( i = 0 ; i < ${#want_c[@]} ; i = $i + 1 )) ; do
+			if [[ -z "${want_c[$i]##${part#[-._]}*}" ]] ; then
+				part_w="${want_c[$i]##${part#[-._]}}"
+				break
+			fi
+		done
+		for (( i = 0 ; i < ${#have_c[@]} ; i = $i + 1 )) ; do
+			if [[ -z "${have_c[$i]##${part#[-._]}*}" ]] ; then
+				part_h="${have_c[$i]##${part#[-._]}}"
+				break
+			fi
+		done
+
+		if [[ "${part}" == "_p" ]] || [[ "${part}" == "-r" ]] ; then
+			# if present in neither want nor have, go to the next item
+			[[ -z "${part_w}" ]] && [[ -z "${part_h}" ]] && continue
+
+			[[ -z "${part_w}" ]] && [[ -n "${part_h}" ]] && return 0
+			[[ -n "${part_w}" ]] && [[ -z "${part_h}" ]] && return 1
+
+			if [[ ${part_w} -lt ${part_h} ]] ; then return 0 ; fi
+			if [[ ${part_w} -gt ${part_h} ]] ; then return 1 ; fi
+
+		else
+			# if present in neither want nor have, go to the next item
+			[[ -z "${part_w}" ]] && [[ -z "${part_h}" ]] && continue
+
+			[[ -z "${part_w}" ]] && [[ -n "${part_h}" ]] && return 1
+			[[ -n "${part_w}" ]] && [[ -z "${part_h}" ]] && return 0
+
+			if [[ ${part_w} -lt ${part_h} ]] ; then return 0 ; fi
+			if [[ ${part_w} -gt ${part_h} ]] ; then return 1 ; fi
+		fi
+	done
+
+	return 0
+}
+
+# Test function thing. To use, source versionator.eclass and then run it.
+__versionator__test_version_is_at_least() {
+	version_is_at_least "1.2"             "1.2"         || echo "test  1 failed"
+	version_is_at_least "1.2"             "1.2.3"       || echo "test  2 failed"
+	version_is_at_least "1.2.3"           "1.2"         && echo "test  3 failed"
+
+	version_is_at_least "1.2_beta1"       "1.2"         || echo "test  4 failed"
+	version_is_at_least "1.2_alpha1"      "1.2"         || echo "test  5 failed"
+	version_is_at_least "1.2_alpha1"      "1.2_beta1"   || echo "test  6 failed"
+
+	version_is_at_least "1.2"             "1.2_beta1"   && echo "test  7 failed"
+	version_is_at_least "1.2"             "1.2_alpha1"  && echo "test  8 failed"
+	version_is_at_least "1.2_beta1"       "1.2_alpha1"  && echo "test  9 failed"
+
+	version_is_at_least "1.2_beta1"       "1.2_beta1"   || echo "test 10 failed"
+	version_is_at_least "1.2_beta2"       "1.2_beta1"   && echo "test 11 failed"
+	version_is_at_least "1.2_beta2"       "1.2_beta3"   || echo "test 12 failed"
+
+	version_is_at_least "1.2-r1"          "1.2"         && echo "test 13 failed"
+	version_is_at_least "1.2"             "1.2-r1"      || echo "test 14 failed"
+	version_is_at_least "1.2-r1"          "1.3"         || echo "test 15 failed"
+	version_is_at_least "1.2-r1"          "1.2-r2"      || echo "test 16 failed"
+	version_is_at_least "1.2-r3"          "1.2-r2"      && echo "test 17 failed"
+
+	version_is_at_least "1.2-r1"        "1.2_beta2-r3"  && echo "test 18 failed"
+	version_is_at_least "1.2-r1"        "1.3_beta2-r3"  || echo "test 19 failed"
+	return 0
 }
 
