@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc3.ebuild,v 1.2 2003/01/20 02:11:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc3.ebuild,v 1.3 2003/01/20 19:16:22 azarah Exp $
 
 IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts"
 
@@ -244,8 +244,8 @@ src_install() {
 	if [ -f ${S}/postproc/libpostproc.a ]
 	then
 		dolib ${S}/postproc/libpostproc.a
-		insinto /usr/include
-		doins ${S}/postproc/postprocess.h
+#		insinto /usr/include
+#		doins ${S}/postproc/postprocess.h
 	fi
 
 	# Install the documentation
