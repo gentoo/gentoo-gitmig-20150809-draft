@@ -1,24 +1,24 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/files/rsyncd.init,v 1.4 2004/05/02 22:58:16 mholzer Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+or later
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/files/rsyncd.init,v 1.5 2004/06/06 14:14:26 klieber Exp $
 
 depend() {
-	use net
+need net
 }
 
 # FYI: --sparce seems to cause problems.
-RSYNC_OPTS="--safe-links --compress --bwlimit=700 --timeout=1800"
-
+RSYNCOPTS="--daemon --safe-links --timeout=300"
 
 start() {
-	ebegin "Starting rsyncd"
-	rsync --daemon ${RSYNC_OPTS}
-	eend $?
+ebegin "Starting rsync daemon"
+start-stop-daemon --start --quiet --pidfile /var/run/rsyncd.pid --nicelevel 15 --exec /usr/bin/rsync -- ${RSYNCOPTS}
+eend $?
 }
 
 stop() {
-	ebegin "Stopping rsyncd"
-	kill `cat /var/run/rsyncd.pid`
-	eend $?
-}
+ebegin "Stopping rsync daemon"
+start-stop-daemon --stop --quiet --pidfile /var/run/rsyncd.pid
+eend $?
+} 

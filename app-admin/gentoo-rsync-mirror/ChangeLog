@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.11 2003/12/10 21:39:13 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.12 2004/06/06 14:14:26 klieber Exp $
+
+  06 Jun 2004; Kurt Lieber <klieber@gentoo.org> :
+  added additional einfo language, changed chroot to 'yes' instead of 'no' in
+  files/rsyncd.conf and disabled logging of transfers.  no changes of
+  substance to the ebuild itself.  Fixes #52666
 
   10 Dec 2003; Michael Imhof <tantive@gentoo.org> :
   Some fixes to improve logging when called with absolute paths.
