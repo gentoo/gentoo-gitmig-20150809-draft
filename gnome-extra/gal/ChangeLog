@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.50 2003/11/09 18:05:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.51 2003/12/11 17:11:50 agriffis Exp $
+
+  11 Dec 2003; <agriffis@gentoo.org> gal-1.99.10.ebuild:
+  stable on ia64
 
   09 Nov 2003; Jason Wever <weeve@gentoo.org> gal-1.99.10.ebuild:
   Marked stable for sparc.
