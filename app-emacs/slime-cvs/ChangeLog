@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/slime-cvs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/ChangeLog,v 1.13 2005/01/01 14:01:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/ChangeLog,v 1.14 2005/02/10 09:19:21 mkennedy Exp $
+
+*slime-cvs-0-r3 (07 Feb 2005)
+
+  07 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml,
+  files/70slime-gentoo.el, files/swank-loader.lisp, files/swank.asd,
+  +slime-cvs-0-r3.ebuild:
+  Support for =dev-lisp/common-lisp-controller-4*; Build documentation; Brand
+  new system definition file.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
