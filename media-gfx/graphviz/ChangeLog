@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.15 2003/05/05 14:16:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.16 2003/06/17 00:36:57 wwoods Exp $
+
+  16 Jun 2003; Will Woods <wwoods@gentoo.org> graphviz-1.9.ebuild:
+  added alpha to KEYWORDS.
 
   05 May 2003; Luca Barbato <@gentoo.org> graphviz-1.9.ebuild:
   Added ppc to keywords.

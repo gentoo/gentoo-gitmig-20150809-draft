@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.9.ebuild,v 1.6 2003/05/05 14:16:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.9.ebuild,v 1.7 2003/06/17 00:36:57 wwoods Exp $
 
 IUSE="tcltk"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.research.att.com/sw/tools/graphviz/"
 
 SLOT="0"
 LICENSE="as-is | ATT"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc alpha"
 
 #Can use freetype-1.3 or 2.0, but not both
 DEPEND=">=sys-libs/zlib-1.1.3
