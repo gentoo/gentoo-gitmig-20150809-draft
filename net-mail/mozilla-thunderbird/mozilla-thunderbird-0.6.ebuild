@@ -1,10 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.6.ebuild,v 1.1 2004/05/04 07:41:45 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.6.ebuild,v 1.2 2004/05/04 14:26:59 agriffis Exp $
 
-inherit makeedit flag-o-matic gcc nsplugins eutils
+IUSE="gtk2 ipv6 ldap crypt xinerama"
 
-S=${WORKDIR}/mozilla
+unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
+inherit flag-o-matic gcc eutils nsplugins
 
 EMVER="0.83.6"
 IPCVER="1.0.5"
@@ -15,10 +16,9 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/thund
 	 crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
 	   		  http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
 SLOT="0"
-LICENSE="MPL-1.1 | NPL-1.1"
-IUSE="gtk2 gnome ipv6 crypt xinerama"
+LICENSE="MPL-1.1 NPL-1.1"
 
 RDEPEND="virtual/x11
 	virtual/xft
@@ -30,55 +30,178 @@ RDEPEND="virtual/x11
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
-	gtk2? ( >=x11-libs/gtk+-2.1.1 >=dev-libs/libIDL-0.8.0 )
-	!gtk2? ( =x11-libs/gtk+-1.2* >=gnome-base/ORBit-0.5.10-r1 )
+	gtk2? (
+		>=x11-libs/gtk+-2.2.0
+		>=dev-libs/libIDL-0.8.0 )
+	!gtk2? (
+		=x11-libs/gtk+-1.2*
+		>=gnome-base/ORBit-0.5.10-r1 )
 	crypt? ( >=app-crypt/gnupg-1.2.1 )"
 
 DEPEND="${RDEPEND}
-	virtual/glibc
 	dev-util/pkgconfig
 	dev-lang/perl"
+
+S=${WORKDIR}/mozilla
 
 # needed by src_compile() and src_install()
 export MOZ_THUNDERBIRD=1
 export MOZ_ENABLE_XFT=1
 
-#pkg_setup() {
-#	einfo "Please unmerge previous installs of Mozilla Thunderbird before"
-#	einfo "merging this. Running emerge unmerge mozilla-thunderbird && rm -rf"
-#	einfo "/usr/lib/MozillaThunderbird will ensure that all files are"
-#	einfo "removed. If you need to do this, please press ctrl-c now and"
-#	einfo "resume emerging once you're done."
-#	sleep 5
-#}
-
 src_unpack() {
-
-	unpack thunderbird-source-${PV}.tar.bz2
+	unpack ${A} || die "unpack failed"
+	cd ${S} || die
 
 	# Unpack the enigmail plugin
-	if use crypt
-		then
-			unpack ipc-${IPCVER}.tar.gz
-			unpack enigmail-${EMVER}.tar.gz
-
-			mv -f ${WORKDIR}/ipc ${S}/extensions/
-			mv -f ${WORKDIR}/enigmail ${S}/extensions/
-			cp ${FILESDIR}/enigmail/Makefile-ipc ${S}/extensions/ipc/Makefile
-			cp ${FILESDIR}/enigmail/Makefile-enigmail ${S}/extensions/enigmail/Makefile
+	if use crypt; then
+		mv -f ${WORKDIR}/ipc ${S}/extensions/
+		mv -f ${WORKDIR}/enigmail ${S}/extensions/
+		cp ${FILESDIR}/enigmail/Makefile-enigmail ${S}/extensions/enigmail/Makefile
+		cp ${FILESDIR}/enigmail/Makefile-ipc ${S}/extensions/ipc/Makefile
 	fi
 
 	use amd64 && epatch ${FILESDIR}/mozilla-thunderbird-amd64.patch
 }
 
 src_compile() {
-	local myconf="--with-x \
+	####################################
+	#
+	# myconf setup
+	#
+	####################################
+
+	local myconf
+
+	# NOTE: QT and XLIB toolkit seems very unstable, leave disabled until
+	#       tested ok -- azarah
+	if use gtk2; then
+		myconf="${myconf}
+			--enable-toolkit-gtk2 \
+			--enable-default-toolkit=gtk2 \
+			--disable-toolkit-qt \
+			--disable-toolkit-xlib \
+			--disable-toolkit-gtk"
+	else
+		myconf="${myconf}
+			--enable-toolkit-gtk \
+			--enable-default-toolkit=gtk \
+			--disable-toolkit-qt \
+			--disable-toolkit-xlib \
+			--disable-toolkit-gtk2"
+	fi
+
+	if ! use debug; then
+		myconf="${myconf} \
+			--disable-dtd-debug \
+			--disable-debug \
+			--disable-tests \
+			--enable-reorder \
+			--enable-strip \
+			--enable-strip-libs"
+#			--enable-cpp-rtti"
+
+		# Currently --enable-elf-dynstr-gc only works for x86 and ppc,
+		# thanks to Jason Wever <weeve@gentoo.org> for the fix.
+		if use x86 || use ppc; then
+			myconf="${myconf} --enable-elf-dynstr-gc"
+		fi
+	fi
+
+	####################################
+	#
+	# CFLAGS setup and ARCH support
+	#
+	####################################
+
+	local enable_optimize
+
+	# Set optimization level based on CFLAGS
+	if is-flag -O0; then
+		enable_optimize=-O0
+	elif [[ ${ARCH} == alpha || ${ARCH} == amd64 || ${ARCH} == ia64 ]]; then
+		# Anything more than this causes segfaults on startup on 64-bit
+		# (bug 33767)
+		enable_optimize=-O1
+		append-flags -fPIC
+	elif is-flag -O1; then
+		enable_optimize=-O1
+	else
+		enable_optimize=-O2
+	fi
+
+	# Now strip optimization from CFLAGS so it doesn't end up in the
+	# compile string
+	filter-flags '-O*'
+
+	# Strip over-aggressive CFLAGS - Mozilla supplies its own
+	# fine-tuned CFLAGS and shouldn't be interfered with..  Do this
+	# AFTER setting optimization above since strip-flags only allows
+	# -O -O1 and -O2
+	strip-flags
+
+	# Who added the following line and why?  It doesn't really hurt
+	# anything, but is it necessary??  (28 Apr 2004 agriffis)
+	append-flags -fforce-addr
+
+	# Additional ARCH support
+	case "${ARCH}" in
+	alpha)
+		# Mozilla won't link with X11 on alpha, for some crazy reason.
+		# set it to link explicitly here.
+		sed -i 's/\(EXTRA_DSO_LDOPTS += $(MOZ_GTK_LDFLAGS).*$\)/\1 -L/usr/X11R6/lib -lX11/' \
+			${S}/gfx/src/gtk/Makefile.in
+		;;
+
+	ppc)
+		# Fix to avoid gcc-3.3.x micompilation issues.
+		if [[ $(gcc-major-version).$(gcc-minor-version) == 3.3 ]]; then
+			append-flags -fno-strict-aliasing
+		fi
+		;;
+
+	sparc)
+		# Sparc support ...
+		replace-sparc64-flags
+		;;
+
+	x86)
+		if [[ $(gcc-major-version) -eq 3 ]]; then
+			# gcc-3 prior to 3.2.3 doesn't work well for pentium4
+			# see bug 25332
+			if [[ $(gcc-minor-version) -lt 2 ||
+				( $(gcc-minor-version) -eq 2 && $(gcc-micro-version) -lt 3 ) ]]
+			then
+				replace-flags -march=pentium4 -march=pentium3
+				filter-flags -msse2
+			fi
+			# Enable us to use flash, etc plugins compiled with gcc-2.95.3
+			myconf="${myconf} --enable-old-abi-compat-wrappers"
+		fi
+		;;
+	esac
+
+	# Needed to build without warnings on gcc-3
+	CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
+
+	####################################
+	#
+	#  Configure and build Thunderbird
+	#
+	####################################
+
+	cd ${S}
+	einfo "Configuring Thunderbird..."
+	econf \
+		--with-x \
 		--with-system-jpeg \
-		--with-system-zlib \
-		--with-system-png \
 		--with-system-mng \
-		--disable-calendar \
+		--with-system-png \
+		--with-system-zlib \
 		--enable-xft \
+		$(use_enable ipv6) \
+		$(use_enable ldap) \
+		--disable-calendar \
+		$(use_enable xinerama) \
 		--disable-pedantic \
 		--disable-svg \
 		--enable-mathml \
@@ -86,8 +209,10 @@ src_compile() {
 		--enable-nspr-autoconf \
 		--enable-xsl \
 		--enable-crypto \
-		--with-pthreads \
+		--enable-extensions=wallet,spellcheck \
+		--enable-optimize="${enable_optimize}" \
 		--with-default-mozilla-five-home=/usr/lib/MozillaThunderbird \
+		--with-pthreads \
 		--with-user-appdir=.thunderbird \
 		--disable-jsd \
 		--disable-accessibility \
@@ -96,79 +221,22 @@ src_compile() {
 		--disable-activex-scripting \
 		--disable-installer \
 		--disable-activex \
-		--disable-tests \
-		--disable-debug \
-		--disable-dtd-debug \
 		--disable-logging \
-		--enable-reorder \
-		--enable-optimize="-O2" \
-		--enable-strip \
-		--enable-strip-libs \
-		--enable-cpp-rtti \
 		--enable-xterm-updates \
-		--disable-toolkit-qt \
-		--disable-toolkit-xlib \
-		--enable-extensions=wallet,spellcheck \
 		--enable-necko-protocols=http,file,jar,viewsource,res,data \
-		--enable-image-decoders=png,gif,jpeg"
+		--enable-image-decoders=png,gif,jpeg \
+		${myconf} || die
 
-	if [ -n "`use gtk2`" ] ; then
-		myconf="${myconf} --enable-toolkit-gtk2 \
-							--enable-default-toolkit=gtk2 \
-							--disable-toolkit-gtk"
-	else
-		myconf="${myconf} --enable-toolkit-gtk \
-							--enable-default-toolkit=gtk \
-							--disable-toolkit-gtk2"
-	fi
-
-	if [ -n "`use ipv6`" ] ; then
-		myconf="${myconf} --enable-ipv6"
-	fi
-
-	# Check for xinerama - closes #19369
-	if [ -n "`use xinerama`" ] ; then
-		myconf="${myconf} --enable-xinerama=yes"
-	else
-		myconf="${myconf} --enable-xinerama=no"
-	fi
-
-	# Crashes on start when compiled with -fomit-frame-pointer
-	filter-flags -fomit-frame-pointer -mpowerpc-gfxopt
-	filter-flags -ffast-math
-	append-flags -s -fforce-addr
-
-	if [ "$(gcc-major-version)" -eq "3" ]; then
-		# Currently gcc-3.2 or older do not work well if we specify "-march"
-		# and other optimizations for pentium4.
-		if [ "$(gcc-minor-version)" -lt "3" ]; then
-			replace-flags -march=pentium4 -march=pentium3
-			filter-flags -msse2
-		fi
-	fi
-
-	# Added to get thunderbird to compile on sparc.
-	replace-sparc64-flags
-
-	if use ppc && [[ $(gcc-major-version) == 3 && $(gcc-minor-version) == 3 ]]
-	then
-		append-flags -fno-strict-aliasing
-	fi
-
-	econf ${myconf} || die
-
-	edit_makefiles
 	emake MOZ_THUNDERBIRD=1 || die
 
 	# Build the enigmail plugin
-	if use crypt
-	then
+	if use crypt; then
 		einfo "Building Enigmail plugin..."
-		cd ${S}/extensions/ipc
-		make || die
+		cd ${S}/extensions/ipc || die "cd ipc failed"
+		make || die "make ipc failed"
 
-		cd ${S}/extensions/enigmail
-		make || die
+		cd ${S}/extensions/enigmail || die "cd enigmail failed"
+		make || die "make enigmail failed"
 	fi
 }
 
@@ -177,14 +245,13 @@ src_install() {
 	dodir /usr/lib/MozillaThunderbird
 	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}/usr/lib/MozillaThunderbird
 
-	#fix permissions
+	# fix permissions
 	chown -R root:root ${D}/usr/lib/MozillaThunderbird
 
 	dobin ${FILESDIR}/thunderbird
 
 	# Install icon and .desktop for menu entry
-	if [ "`use gnome`" ]
-	then
+	if use gnome; then
 		insinto /usr/share/pixmaps
 		doins ${FILESDIR}/icon/thunderbird-icon.png
 
@@ -192,6 +259,12 @@ src_install() {
 		insinto /usr/share/gnome/apps/Internet
 		doins ${FILESDIR}/icon/mozillathunderbird.desktop
 	fi
+}
+
+pkg_preinst() {
+	# Remove entire installed instance to solve various
+	# problems, for example see bug 27719
+	rm -rf ${ROOT}/usr/lib/MozillaThunderbird
 }
 
 pkg_postinst() {
