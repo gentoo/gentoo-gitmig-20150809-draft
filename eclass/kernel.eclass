@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.43 2003/12/01 19:09:35 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.44 2003/12/14 22:45:49 lu_zero Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -177,7 +177,12 @@ kernel_pkg_postinst() {
 	if [ ! -e ${ROOT}usr/src/linux ]
 	then
 		rm -f ${ROOT}usr/src/linux
+	if [ "`use ppc`" ]
+		then
+		ln -sf ${PF} ${ROOT}/usr/src/linux
+		else
 		ln -sf linux-${KV} ${ROOT}/usr/src/linux
+		fi
 	fi
 
 	echo
