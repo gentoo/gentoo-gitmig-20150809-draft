@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1-r1.ebuild,v 1.19 2004/04/21 16:38:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1-r1.ebuild,v 1.20 2004/05/08 01:06:47 dragonheart Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="x86 ppc sparc alpha"
 IUSE=""
 
 DEPEND="~sys-devel/m4-1.4"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
