@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/enemy-territory
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.19 2005/03/22 17:48:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.20 2005/04/04 15:33:41 wolf31o2 Exp $
+
+  04 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -enemy-territory-2.56-r2.ebuild, enemy-territory-2.60.ebuild:
+  Marking stable for bug #87911.
 
 *enemy-territory-2.60 (22 Mar 2005)
 
