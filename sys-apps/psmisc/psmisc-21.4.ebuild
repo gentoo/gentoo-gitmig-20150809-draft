@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.19 2005/01/01 21:16:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.20 2005/01/01 21:25:27 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -32,15 +32,17 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf=""
+	use selinux && myconf="${myconf} --enable-flask"
 	econf \
 		$(use_enable nls) \
-		$(use_enable selinux flask) \
+		${myconf} \
 		|| die
 	emake || die
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	einstall || die
 	dosym killall /usr/bin/pidof
 
 	# Some packages expect these to use /usr, others to use /

@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 cea85e921fc6586f5e3eeb611590ad6e ChangeLog 5828
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 8cae3b05d354320805b8b9d112402fe1 psmisc-21.4.ebuild 1332
+MD5 ab88999e6ea9d394da1d8be8f541e64f psmisc-21.4.ebuild 1362
 MD5 f8a6de9ef42d405c6ac24373df5c5f74 files/psmisc-21.4-selinux.diff.bz2 7720
 MD5 b27975d795b1253e70ef1133dde797d0 files/digest-psmisc-21.4 63
 MD5 429eeb81b4aaa5515cfa08f533e5123d files/psmisc-21.4-no-nls.patch 1360
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB1xNMroRuSHgZdywRAtpTAJ0W7ZeYzCA3qgLtH9u4OEKFXm6h/QCfQqPW
-/eJwVxYHd4XIQmaaz5kazvs=
-=wzSR
+iD8DBQFB1xVTroRuSHgZdywRAvpmAKCC0J+2jNXnoeqcegbMooNKmhxc1gCfSQpG
+xWctZYtlDKAphu1U9HIuosI=
+=KfWU
 -----END PGP SIGNATURE-----
