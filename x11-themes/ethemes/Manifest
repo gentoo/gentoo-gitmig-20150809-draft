@@ -1,4 +1,14 @@
-MD5 27d4b316ac57f39c9f263888791f87e9 ethemes-0.16.7.ebuild 566
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 80604cc4a719c5614d99762cc697886c ChangeLog 712
+MD5 3899756900345c72344a9d71c1d0c691 ethemes-0.16.7.ebuild 565
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
-MD5 4d15e1fbfb065ba388d537ebdefb30ff ChangeLog 616
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ethemes-0.16.7 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCCVajugEuf3OQ0akRAl+bAJ9C+vjCAZcDp6vpQuHe8uPBCiGdRQCgiFFP
+uVPEMt/oAYLKyjK2WqTqK/Q=
+=90G+
+-----END PGP SIGNATURE-----

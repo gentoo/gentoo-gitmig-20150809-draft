@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7f9ee1c7d00e4f6498ed1042d665b0a7 ChangeLog 936
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
-MD5 35e45ea9172afd86ae45fa09009c5eba ChangeLog 827
-MD5 091fe3a01f5de1180ad9cd7116488352 etheme-BlueSteel-0.16.7.1.ebuild 798
+MD5 99dd7b6ee704c7265b1abd55abd52a7a etheme-BlueSteel-0.16.7.1.ebuild 797
 MD5 2c753bfd5c249675eb8cbfb7044b61a7 files/digest-etheme-BlueSteel-0.16.7.1 91
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCCVZ4ugEuf3OQ0akRAriwAJ9l2Tv/SO+PjPYMnPdL0C4o4WGKcACZAWKY
+t5xufsZE9QT+yI0f3UbwFJw=
+=c2FI
+-----END PGP SIGNATURE-----
