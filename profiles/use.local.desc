@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.115 2003/09/11 12:35:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.116 2003/09/11 12:36:13 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -124,6 +124,7 @@ net-www/mozilla:moznoxft - blank
 net-www/mozilla:mozp3p - blank
 net-www/mozilla:mozsvg - blank
 net-www/mozilla:mozxmlterm - blank
+net-www/tinyproxy:transparent-proxy - enable support for transparent proxies
 sys-apps/busybox:diet - Compile and link with dietlibc
 sys-apps/busybox:uclibc - Compile with uclibc :)
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
