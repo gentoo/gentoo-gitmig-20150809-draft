@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r2.ebuild,v 1.3 2004/06/24 22:41:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r2.ebuild,v 1.4 2004/06/28 19:03:56 aliz Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,11 +13,9 @@ SLOT="0"
 KEYWORDS="-*"
 #KEYWORDS="x86 ~ppc sparc ~mips alpha arm hppa amd64 ia64"
 IUSE="ipv6 static extensions"
-
-# iptables is dependent on kernel sources.  Strange but true.
 DEPEND="virtual/linux-sources"
 
-pkg_preinst() {
+pkg_setup() {
 	if use extensions; then
 		einfo "WARNING: 3rd party extensions has been enabled."
 		einfo "This means that iptables will use your currently installed"
@@ -31,36 +29,35 @@ pkg_preinst() {
 
 
 src_unpack() {
-	replace-flags -O0 -O2
-
-	if [ -z `get-flag O` ]; then
-		append-flags -O2
-	fi
-
 	unpack ${A} ; cd ${S}
 
+	epatch ${FILESDIR}/${PV}-files/04_all_install_ipv6_apps.patch.bz2
+	epatch ${FILESDIR}/${PV}-files/05_all_install_all_dev_files.patch.bz2
+
+	# The folowing hack is needed because ${ARCH} is "sparc" and not "sparc64"
+	# and epatch uses ??_${ARCH}_foo.${EPATCH_SUFFIX} when reading from directories
+	[ "${PROFILE_ARCH}" = "sparc64" ] && epatch ${FILESDIR}/${PV}-files/sparc64_limit_fix.patch.bz2
+	use hppa && epatch ${FILESDIR}/${PV}-files/03_hppa_gentoo.patch.bz2
+
 	if use extensions; then
-		epatch ${FILESDIR}/extensions/${P}-grsecurity.patch.bz2
-		epatch ${FILESDIR}/extensions/${P}-imq.patch.bz2
-		epatch ${FILESDIR}/extensions/${P}-l7.patch.bz2
+		epatch ${FILESDIR}/${PV}-files/01_all_grsecurity.patch.bz2
+		epatch ${FILESDIR}/${PV}-files/02_all_imq.patch.bz2
+		epatch ${FILESDIR}/${PV}-files/06_all_l7.patch.bz2
 
 		chmod +x extensions/.IMQ-test*
 		chmod +x extensions/.childlevel-test*
 		chmod +x extensions/.layer7-test*
 	fi
 
-	# The folowing hack is needed because ${ARCH} is "sparc" and not "sparc64"
-	# and epatch uses ??_${ARCH}_foo.${EPATCH_SUFFIX} when reading from directories
-	[ "${PROFILE_ARCH}" = "sparc64" ] && epatch ${FILESDIR}/sparc64_limit_fix.patch.bz2
-	usr hppa && epatch ${FILESDIR}/${P}-hppa.patch.bz2
 
 	sed -i -e "s:-O2:${CFLAGS} -Iinclude:g" -e "s:/usr/local::g" -e "s:-Iinclude/::" Makefile
 }
 
 src_compile() {
-	# Only check_KV if /usr/src/linux exists
-	if [ -L ${ROOT}/usr/src/linux -o -d ${ROOT}/usr/src/linux ]; then
-		check_KV
+	replace-flags -O0 -O2
+
+	if [ -z `get-flag O` ]; then
+		append-flags -O2
 	fi
 
 	# prevent it from causing ICMP errors.
@@ -75,16 +72,21 @@ src_compile() {
 	use static && myconf="${myconf} NO_SHARED_LIBS=0"
 
 	if use extensions; then
+		# Only check_KV if /usr/src/linux exists
+		if [ -L ${ROOT}/usr/src/linux -o -d ${ROOT}/usr/src/linux ]; then
+			check_KV
+		else
+			ewarn "You don't have kernel sources available at /usr/src/linux."
+			ewarn "Iptables will be built against linux-headers."
+		fi
+
 		make ${myconf} \
 			LIBDIR=/lib \
 			BINDIR=/sbin \
 			MANDIR=/usr/share/man \
 			INCDIR=/usr/include \
 			KERNEL_DIR=/usr/src/linux \
-			|| (
-				eerror "Please check http://cvs.iptables.org/patch-o-matic-ng/updates/ if your kernel needs to be patched for iptables"
-				die
-			)
+			|| die "Please check http://cvs.iptables.org/patch-o-matic-ng/updates/ if your kernel needs to be patched for iptables"
 	else
 		make ${myconf} \
 			LIBDIR=/lib \
@@ -107,16 +109,16 @@ src_install() {
 	dodoc COPYING
 	dodir /var/lib/iptables ; keepdir /var/lib/iptables
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PF}.init iptables
+	newexe ${FILESDIR}/${PN}-${PV}-r1.init iptables
 	insinto /etc/conf.d
-	newins ${FILESDIR}/${PF}.confd iptables
+	newins ${FILESDIR}/${PN}-${PV}-r1.confd iptables
 
 	if use ipv6; then
 		dodir /var/lib/ip6tables ; keepdir /var/lib/ip6tables
 		exeinto /etc/init.d
-		newexe ${FILESDIR}/${PF/iptables/ip6tables}.init ip6tables
+		newexe ${FILESDIR}/${PN/iptables/ip6tables}-${PV}-r1.init ip6tables
 		insinto /etc/conf.d
-		newins ${FILESDIR}/${PF/iptables/ip6tables}.confd ip6tables
+		newins ${FILESDIR}/${PN/iptables/ip6tables}-${PV}-r1.confd ip6tables
 	fi
 }
 
