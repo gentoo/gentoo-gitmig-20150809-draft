@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.1.ebuild,v 1.2 2004/01/27 18:49:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.2.ebuild,v 1.1 2004/01/27 18:49:50 mholzer Exp $
 
 inherit libtool
 
@@ -23,16 +23,6 @@ MY_P=${P/_rc/rc}
 SRC_URI="mirror://alsaproject/lib/${MY_P}.tar.bz2"
 RESTRICT="nomirror"
 S=${WORKDIR}/${MY_P}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	# - remove trampolines and text relocations - <solar@gentoo>
-	## send this patch upstream after we have tested fully 
-	## on the various arches for inclusion in 1.x final
-	epatch ${FILESDIR}/${P}-notextrel-notrampoline.patch
-}
 
 src_compile() {
 	elibtoolize
