@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.41 2003/06/17 12:10:37 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.42 2003/06/17 15:20:01 latexer Exp $
+
+  17 Jun 2003; Peter Johanson <latexer@gentoo.org> mm-sources-2.5.72-r1.ebuild:
+  Using mirror://kernel for SRC_URI now
 
 *mm-sources-2.5.72-r1 (17 Jun 2003)
 
