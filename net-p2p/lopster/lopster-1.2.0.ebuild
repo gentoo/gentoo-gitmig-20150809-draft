@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.2.0.ebuild,v 1.8 2004/07/09 01:42:52 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.2.0.ebuild,v 1.9 2004/07/15 03:50:41 agriffis Exp $
 
 IUSE="nls"
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A Napster Client using GTK"
 HOMEPAGE="http://lopster.sourceforge.net"
 SRC_URI="http://lopster.sourceforge.net/download/${P}.tar.gz
