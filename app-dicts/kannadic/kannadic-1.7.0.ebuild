@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/kannadic-1.7.0.ebuild,v 1.1 2003/12/04 07:04:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/kannadic-1.7.0.ebuild,v 1.2 2004/03/21 03:46:52 weeve Exp $
 
 IUSE="debug xinerama"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://linux-life.net/program/cc/kde/app/kannadic/"
 SRC_URI="http://linux-life.net/program/cc/kde/app/kannadic/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 SLOT="0"
 
 S="${WORKDIR}/${P}"

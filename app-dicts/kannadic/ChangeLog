@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/kannadic
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/ChangeLog,v 1.2 2003/12/04 07:04:29 usata Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/ChangeLog,v 1.3 2004/03/21 03:46:52 weeve Exp $
+
+  20 Mar 2004; Jason Wever <weeve@gentoo.org> kannadic-1.7.0.ebuild:
+  Added ~sparc keyword.
 
 *kannadic-1.7.0 (04 Dec 2003)
 
