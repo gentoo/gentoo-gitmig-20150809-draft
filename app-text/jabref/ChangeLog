@@ -1,6 +1,10 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.22 2005/03/31 02:47:46 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.23 2005/04/03 10:08:23 luckyduck Exp $
+
+  03 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> jabref-1.7.ebuild:
+  changed a jar-from call to reflect the fact that the forms.jar is installed
+  with a version number in the filename
 
   31 Mar 2005; Saleem Abdulrasool <compnerd@gentoo.org> :
   Dropped ~SPARC from jabref 1.5, 1.6
