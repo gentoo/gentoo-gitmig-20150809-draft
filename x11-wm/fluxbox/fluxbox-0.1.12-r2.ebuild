@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.12-r2.ebuild,v 1.2 2002/10/26 05:06:35 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.12-r2.ebuild,v 1.3 2002/11/04 22:42:39 mkeadle Exp $
 
 inherit commonbox flag-o-matic
 
@@ -22,6 +22,14 @@ export WANT_AUTOMAKE_1_6=1
 export WANT_AUTOCONF_2_5=1
 
 src_unpack() {
+
+if [ ! "`use nls`" ]
+then
+	ewarn "You currently have -nls in your USE. This build of Fluxbox will not"
+	ewarn "build if nls is disabled. Please try:"
+	ewarn "USE=\"nls\" emerge fluxbox"
+	exit 1
+fi
 
 	unpack ${P}.tar.gz
 

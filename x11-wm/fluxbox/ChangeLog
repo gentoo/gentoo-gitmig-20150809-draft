@@ -1,8 +1,14 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.36 2002/10/26 05:05:41 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.37 2002/11/04 22:42:39 mkeadle Exp $
 
 *fluxbox-0.1.12-r2 (26 Oct 2002)
+
+  4 Nov 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.12-r2.ebuild
+
+  Minor edit to ebuild to test for absence of nls in USE (remember
+  patched version will not build without it. Furthering the effort
+  to deal with bug #9909
 
   26 Oct 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.12-r2.ebuild
   files/digest-fluxbox-0.1.12-r2 :
