@@ -15,32 +15,32 @@ HOMEPAGE="http://www.gnu.org/software/screen/"
 DEPEND="virtual/glibc
         >=sys-libs/ncurses-5.2"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+# Repair broken texi files so install-info don't barf on the dir entry
+	patch -p1 < ${FILESDIR}/screen-3.9.9-texi.patch
+}
 src_compile() {
 
-    try ./configure --prefix=/usr --host=${CHOST} --with-sys-screenrc=/etc/screen/screenrc \
-	--mandir=/usr/share --libexecdir=/usr/lib/misc\
-	--host=${CHOST}
-    try make CFLAGS="$CFLAGS"
+    try ./configure --prefix=/usr --host=${CHOST} \
+	--with-sys-screenrc=/etc/screen/screenrc \
+	--mandir=/usr/share --libexecdir=/usr/lib/misc
+    try emake
 
 }
 
 src_install () {
 
-    dodir /usr/bin
-    insinto /usr/bin
     dobin screen
-    dodir
     insinto /usr/share/terminfo
     doins terminfo/screencap
     insinto /etc/screen
     doins etc/screenrc
-    dodoc README ChangeLog INSTALL COPYING TODO
-    docinto doc
-    cd doc
-    dodoc FAQ README.DOTSCREEN 
-    docinto print
-    dodoc fdpat.ps window_to_display.ps
-    doinfo *.info*
-    doman screen.1
+    dodoc README ChangeLog INSTALL COPYING TODO \
+	 doc/{FAQ,README.DOTSCREEN,fdpat.ps,window_to_display.ps}
+    doman doc/screen.1
+	 doinfo doc/screen.info*
+
 }
 
