@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12b.ebuild,v 1.2 2004/09/04 01:19:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12b.ebuild,v 1.3 2004/09/04 20:11:54 solar Exp $
 
 inherit eutils flag-o-matic
 
@@ -123,6 +123,8 @@ src_unpack() {
 }
 
 src_compile() {
+	# opt to use non-lazy bindings for suids installed by this package.
+	append-ldflags -Wl,-z,now
 	use static && append-ldflags -static
 	econf || die "configure failed"
 	emake || die "emake failed"

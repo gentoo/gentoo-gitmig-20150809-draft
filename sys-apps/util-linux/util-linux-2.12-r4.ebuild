@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r4.ebuild,v 1.16 2004/07/01 21:44:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r4.ebuild,v 1.17 2004/09/04 20:11:54 solar Exp $
 
 inherit eutils flag-o-matic
 
@@ -116,9 +116,9 @@ src_unpack() {
 }
 
 src_compile() {
-	if use static ; then
-		export LDFLAGS="${LDFLAGS} -static"
-	fi
+	append-ldflags -Wl,-z,now
+	use static && append-ldflags -static
+	export LDFLAGS
 
 	econf || die "configure failed"
 

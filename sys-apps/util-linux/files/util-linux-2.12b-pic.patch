@@ -77,3 +77,14 @@ diff -u -r -N util-linux-2.11z.orig/fdisk/sfdisk.c util-linux-2.11z/fdisk/sfdisk
 # # define pivot_root(new_root,put_old) syscall(SYS_pivot_root,new_root,put_old)
 # #else
 # # include <linux/unistd.h>
+--- util-linux-2.12b/partx/partx.c.orig	2004-09-04 15:58:23.000000000 -0400
++++ util-linux-2.12b/partx/partx.c	2004-09-04 15:57:40.000000000 -0400
+@@ -333,7 +333,7 @@
+ /*
+  * sseek: seek to specified sector
+  */
+-#if !defined (__alpha__) && !defined (__ia64__) && !defined (__s390x__) && !defined(__x86_64__)
++#if !defined (__alpha__) && !defined (__ia64__) && !defined (__s390x__) && !defined(__x86_64__) && !defined(__PIC__)
+ #define NEED__llseek
+ #endif
+ 
