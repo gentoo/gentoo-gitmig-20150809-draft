@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.26 2003/06/29 10:42:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.27 2003/06/30 06:10:36 spyderous Exp $
+
+  30 Jun 2003; Donnie Berkholz <spyderous@gentoo.org>;
+  xfree-drm-4.3.0-r4.ebuild:
+  Changed XFREE_CARDS to VIDEO_CARDS so non-xfree apps can use it. Also made the
+  USE + VIDEO_CARDS work better.
 
   29 Jun 2003; Donnie Berkholz <spyderous@gentoo.org>;
   xfree-drm-4.3.0-r4.ebuild:

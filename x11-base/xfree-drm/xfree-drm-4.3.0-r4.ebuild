@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r4.ebuild,v 1.4 2003/06/29 10:42:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r4.ebuild,v 1.5 2003/06/30 06:10:36 spyderous Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -8,7 +8,7 @@
 
 IUSE="3dfx gamma i8x0 matrox rage128 radeon sis"
 
-# XFREE_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis"
+# VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis"
 
 inherit eutils xfree
 
@@ -50,23 +50,23 @@ PROVIDE="virtual/drm"
 
 VIDCARDS=""
 
-if use matrox &>/dev/null
+if [ `use matrox || vcards matrox` ]
 then
 	VIDCARDS="${VIDCARDS} mga.o"
 fi
-if use 3dfx &>/dev/null
+if [ `use 3dfx || vcards 3dfx` ]
 then
 	VIDCARDS="${VIDCARDS} tdfx.o"
 fi
-if use rage128 &>/dev/null
+if [ `use rage128 || vcards rage128` ]
 then
 	VIDCARDS="${VIDCARDS} r128.o"
 fi
-if use radeon &>/dev/null
+if [ `use radeon || vcards radeon` ]
 then
 	VIDCARDS="${VIDCARDS} radeon.o"
 fi
-if use sis &>/dev/null
+if [ `use sis || vcards sis` ]
 then
 	VIDCARDS="${VIDCARDS} sis.o"
 fi
@@ -74,30 +74,25 @@ if use i8x0 &>/dev/null
 then
 	VIDCARDS="${VIDCARDS} i810.o i830.o"
 fi
-if use gamma &>/dev/null
+if [ `use gamma || vcards gamma` ]
 then
 	VIDCARDS="${VIDCARDS} gamma.o"
 fi
 
-# Add XFREE_CARDS functionality.
-# Having a module twice (once from USE, once from XFREE_CARDS)
+# Add VIDEO_CARDS functionality.
+# Having a module twice (once from USE, once from VIDEO_CARDS)
 # doesn't matter at all.
 
-xcards matrox &>/dev/null && VIDCARDS="${VIDCARDS} mga.o"
+#vcards matrox &>/dev/null && VIDCARDS="${VIDCARDS} mga.o"
+#vcards 3dfx &>/dev/null && VIDCARDS="${VIDCARDS} tdfx.o"
+#vcards rage128 &>/dev/null && VIDCARDS="${VIDCARDS} r128.o"
+#vcards radeon &>/dev/null && VIDCARDS="${VIDCARDS} radeon.o"
+#vcards sis &>/dev/null && VIDCARDS="${VIDCARDS} sis.o"
+#vcards gamma &>/dev/null && VIDCARDS="${VIDCARDS} gamma.o"
 
-xcards 3dfx &>/dev/null && VIDCARDS="${VIDCARDS} tdfx.o"
+vcards i810 &>/dev/null && VIDCARDS="${VIDCARDS} i810.o"
 
-xcards rage128 &>/dev/null && VIDCARDS="${VIDCARDS} r128.o"
-
-xcards radeon &>/dev/null && VIDCARDS="${VIDCARDS} radeon.o"
-
-xcards sis &>/dev/null && VIDCARDS="${VIDCARDS} sis.o"
-
-xcards i810 &>/dev/null && VIDCARDS="${VIDCARDS} i810.o"
-
-xcards i830 &>/dev/null && VIDCARDS="${VIDCARDS} i830.o"
-
-xcards gamma &>/dev/null && VIDCARDS="${VIDCARDS} gamma.o"
+vcards i830 &>/dev/null && VIDCARDS="${VIDCARDS} i830.o"
 
 # This builds everything if none of the cards are in USE.
 #if [ -z "${VIDCARDS}" ]
@@ -116,7 +111,7 @@ src_unpack() {
 	fi
 
 	if [ -z "${VIDCARDS}" ] ; then
-		die "Please set at least one video card in XFREE_CARDS. USE is deprecated."
+		die "Please set at least one video card in VIDEO_CARDS. USE is deprecated."
 	fi
 
 	unpack ${A}
@@ -158,7 +153,7 @@ pkg_postinst() {
 		/sbin/modules-update
 	fi
 
-	einfo "USE is deprecated. Please set your video cards using XFREE_CARDS."
-	einfo "Possible XFREE_CARDS values are matrox, 3dfx, rage128, radeon, sis, i810, i830, and gamma."
+	einfo "USE is deprecated. Please set your video cards using VIDEO_CARDS."
+	einfo "Possible VIDEO_CARDS values are matrox, 3dfx, rage128, radeon, sis, i810, i830, and gamma."
 
 }
