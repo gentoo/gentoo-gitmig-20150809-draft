@@ -2,6 +2,5 @@ MD5 c73013820d2f5b228d11ebaa676f1ceb ChangeLog 2353
 MD5 8d08e9a7e45330b731e02aadc8acb6fc metadata.xml 354
 MD5 2e29c836f10738545cc0b6e98d54ab2f guifications-2.1.ebuild 826
 MD5 36a9350837aeca93f5710f97be9c0607 guifications-2.0.ebuild 824
-MD5 1ebdb44cf39382ae8d55a23cfdfb5bad files/gf-1.10-gaim-0.81.patch 635
 MD5 05649300441ccfb0127b62a03fec4efa files/digest-guifications-2.0 68
 MD5 5d7a2a89ef40847cea5701b8e8fc2a29 files/digest-guifications-2.1 69
