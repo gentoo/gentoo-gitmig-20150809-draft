@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.10 2002/06/17 04:05:39 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.11 2002/06/20 05:05:26 prez Exp $
+
+*postgresql-7.2.1-r1 (20 Jun 2002)
+
+  20 Jun 2002; Preston A. Elder <prez@gentoo.org> postgresql-7.2.1-r1.ebuild :
+
+  Changed the arguments to configure to increase things such as max
+  simultaneous connections, etc.
 
 *postgresql-7.2.1 (16 Jun 2002)
 
