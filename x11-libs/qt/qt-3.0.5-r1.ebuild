@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r1.ebuild,v 1.2 2002/07/25 15:11:42 jayskwak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r1.ebuild,v 1.3 2002/07/26 03:05:15 jayskwak Exp $
 
 S=${WORKDIR}/qt-x11-free-${PV}
 
@@ -9,8 +9,7 @@ SLOT="3"
 LICENSE="QPL-1.0"
 KEYWORDS="x86"
 
-SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.gz
-	 ftp://ftp.nnongae.com/pub/gentoo/qt-x11-free-3.0.5-ko_input.patch"
+SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.gz"
 
 HOMEPAGE="http://www.trolltech.com/"
 
@@ -38,12 +37,11 @@ src_unpack() {
 
 	# qt patch - for ami, fixed on the spot bug. 
 	cd ${S}
-	use nls && patch -p1 < ${DISTDIR}/qt-x11-free-3.0.5-ko_input.patch
-
+	use nls && patch -p1 < ${FILESDIR}/qt-x11-free-3.0.5-ko_input.patch
+	
 	cd ${S}
 	cp configure configure.orig
-	sed -e 's:read acceptance:acceptance=yes:' \
-	    -e 's:|-repeater|:|-nas-sound|-repeater|:' configure.orig > configure
+	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
 
 }
 
@@ -53,7 +51,7 @@ src_compile() {
 	
 	export LDFLAGS="-ldl"
 
-	use nas		&& myconf="${myconf} -nas-sound"
+	use nas		&& myconf="${myconf} -system-nas-sound"
 	use gif		&& myconf="${myconf} -qt-gif"
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server"
