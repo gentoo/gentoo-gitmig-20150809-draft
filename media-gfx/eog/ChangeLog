@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.53 2004/02/10 06:41:46 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.54 2004/03/03 16:12:13 foser Exp $
+
+  03 Mar 2004; foser <foser@gentoo.org> eog-0.6-r4.ebuild :
+  Fix sandbox issues (#43165) patch by <usata@gentoo.org>
+  Fix SLOT to be 1, this is not parallel installable (#43165)
+  Remove redundant ${S}
+  Use gnome.org for SRC_URI
 
   10 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> eog-2.4.1.ebuild:
   set ppc in keywords
