@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.1-r1.ebuild,v 1.1 2002/01/14 14:13:08 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.1-r1.ebuild,v 1.2 2002/01/14 19:48:13 gbevin Exp $
 
 DB3=db-3.1.17
 S=${WORKDIR}/${P}
@@ -113,6 +113,7 @@ src_install() {
 		datadir=${D}/usr/share \
 		sysconfdir=${D}/etc \
 		localstatedir=${D}/var/lib \
+		KDE_APPLNK_DIR=${D}/usr/share/applnk \
 		install || die
 
 	dodoc AUTHORS COPYING ChangeLog HACKING MAINTAINERS
