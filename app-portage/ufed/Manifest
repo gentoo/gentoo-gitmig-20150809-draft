@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6553547cfde0e48f11aeabd7a683f610 ChangeLog 4237
+MD5 5b239a48dca80f4d77638418f77c1534 metadata.xml 175
 MD5 b854d7b32009a942ddeac70bbf723867 ufed-0.34.ebuild 584
 MD5 10c952ad8b1ed9e276d99822b5d478cc ufed-0.35.ebuild 594
-MD5 6553547cfde0e48f11aeabd7a683f610 ChangeLog 4237
-MD5 c3742bafc85e9e48b6fd432461e51517 metadata.xml 290
 MD5 35a8e5d4b5839bd2b35920e1a8c36ac6 files/digest-ufed-0.34 61
 MD5 a7da464cbe65178edc2a25fdf2c17a58 files/digest-ufed-0.35 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBKTkv6J2i8a8J4okRAi0VAJ44aTPuiZQIDYSGi77Ne/PDH9AQagCff35+
+pkJGirhsCStnr2fEv1JLdwY=
+=eEkm
+-----END PGP SIGNATURE-----
