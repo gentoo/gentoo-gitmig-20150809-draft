@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/fte
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.13 2003/02/12 03:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.14 2003/07/24 17:39:15 mholzer Exp $
+
+  25 Jul 2003; Martin Holzer <mholzer@gentoo.org> fte-20010819-r2.ebuild,
+  fte-20010819-r3.ebuild, fte-20020324.ebuild:
+  Added slang to DEPEND. Closes #25128.
 
 *fte-20020324 (17 May 2002)
 
