@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/jta
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/ChangeLog,v 1.1 2004/01/18 07:01:04 strider Exp $
+
+*jta-1.0.1 (16 Jan 2004)
+
+  17 Jan 2004; Adrian Almenar <strider@gentoo.org> jta-1.0.1.ebuild:
+  Initial import.  Ebuild submitted by Greg Bowyer <bg115@gre.ac.uk>.
+  Made some fixes to the submitted ebuild.
