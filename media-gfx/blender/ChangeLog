@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.49 2005/01/04 13:19:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.50 2005/01/22 10:20:08 mr_bones_ Exp $
+
+  22 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org> blender-2.36-r1.ebuild:
+  fix use invocation
 
   04 Jan 2005; Luca Barbato <lu_zero@gentoo.org> blender-2.36-r1.ebuild:
   Minor fix
