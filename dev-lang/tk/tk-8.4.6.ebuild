@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.6.ebuild,v 1.12 2004/08/19 02:05:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.6.ebuild,v 1.13 2004/09/06 18:51:12 ciaranm Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ pkg_setup() {
 		ewarn "that compile against tcl. You use threading at"
 		ewarn "your own discretion."
 		ewarn ""
-		sleep 5
+		epause 5
 	fi
 }
 

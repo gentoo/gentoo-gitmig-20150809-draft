@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.4.ebuild,v 1.14 2004/07/02 04:32:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.4.ebuild,v 1.15 2004/09/06 18:49:51 ciaranm Exp $
+
+inherit eutils
 
 IUSE="threads"
 
@@ -31,7 +33,7 @@ pkg_setup() {
 		ewarn "that compile against tcl. You use threading at"
 		ewarn "your own discretion."
 		ewarn ""
-		sleep 5
+		epause 5
 	fi
 }
 

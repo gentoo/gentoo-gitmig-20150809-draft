@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.38 2004/08/24 04:20:29 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.39 2004/09/06 18:49:51 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> tcl-8.3.4.ebuild,
+  tcl-8.4.6.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
   24 Aug 2004; Chris Aniszczyk <zx@gentoo.org> tcl-8.4.6.ebuild:
   Stable on x86
