@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.51 2005/03/04 06:38:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.52 2005/03/07 23:16:50 mrness Exp $
+
+*rp-pppoe-3.5-r8 (08 Mar 2005)
+
+  08 Mar 2005; Alin Nastac <mrness@gentoo.org>
+  +files/rp-pppoe-3.5-username-charset.patch, +rp-pppoe-3.5-r8.ebuild:
+  Add support for special chars in username (#82410), thanks to Pierluigi
+  Petrelli <pierluigipetrelli@tin.it>.
 
   04 Mar 2005; Alin Nastac <mrness@gentoo.org>
   -files/rp-pppoe-3.5-pidfile.patch, -rp-pppoe-3.5-r2.ebuild,
