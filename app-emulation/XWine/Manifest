@@ -2,20 +2,15 @@
 Hash: SHA1
 
 MD5 bc36fb9f8cbe0d6b4e8b1e05d87074b5 ChangeLog 1848
-MD5 218500fa6ef62551ad4b5ff2726154a2 XWine-0.3.1.ebuild 1037
-MD5 1157650bd4454976f59c4bd2073d3ed5 XWine-0.3.2.ebuild 1105
 MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
 MD5 a0af7d9a353298e58f8c81d16eb716b9 XWine-0.3.2-r1.ebuild 1009
-MD5 4837a922513d4f243f19eb64789f2556 files/digest-XWine-0.3.1 66
-MD5 1a3b9953738fd3b0df84b1e7d030932c files/digest-XWine-0.3.2 66
-MD5 a593986c3cc61044428d0f01fe06b1aa files/fix-compile.patch 553
 MD5 1a3b9953738fd3b0df84b1e7d030932c files/digest-XWine-0.3.2-r1 66
 MD5 1b20eb4a1777e134f251c7bcb1e12f9c files/0.3.2-missing-paren.patch 556
 MD5 59f359ff56f14985bce984e558787c20 files/0.3.2-wine-update.patch 750
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhEosHTu7gpaalycRAkdmAJ0VRFJO7aURS0KnhlQzXL/hr1wYlgCfVs7a
-M+gobildH/iRrLP4Np/SSw0=
-=8No0
+iD4DBQFBhEpUHTu7gpaalycRAlQSAJUcz87bmwcqADjWPnEBiF4jhQTSAKCqB1cL
+e04Tl29Y6OsaiMHhFXJW4w==
+=OT6x
 -----END PGP SIGNATURE-----
