@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 14938e7718965970885d71a4c9fd38ab linkchecker-2.5.ebuild 529
 MD5 324e8a97380eccb75e196de6daf6b75f linkchecker-1.12.1.ebuild 660
-MD5 6f9b0d9e6b5640859acdbaf8c272473e linkchecker-2.4.ebuild 529
-MD5 ce3c5ca597aae69bd05cbc8e4d68b703 ChangeLog 1338
+MD5 8c4a7604063cdc8f0b7c3434db329afe linkchecker-2.4.ebuild 528
+MD5 e8ca71f746bb75e7d9d4aab533e87983 ChangeLog 1507
 MD5 6bc2db5b1e135821863e91fa8658ad48 metadata.xml 255
 MD5 fe51c9bc36ce4ce1967c3abf0898dfe3 files/digest-linkchecker-1.12.1 70
 MD5 8ecf51f70e8f10036ef9ed0382e3fc09 files/digest-linkchecker-2.4 67
+MD5 53b00a0f50e098114c8b2584b6a17d80 files/digest-linkchecker-2.5 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCCiw/EZCkKN40op4RArqVAJ9EJrxPmvQtCsA306YiCUFDN06H6wCcDojL
-eS6wz4CWiScu1TGQf4BftRk=
-=3zk9
+iD8DBQFCKRApEZCkKN40op4RAqkWAKCHyuzVOLAXFI7v5s65iJxmRaGyWACfVmz5
+Mx92zWMvtDg2jmgoBsoLh1M=
+=EafB
 -----END PGP SIGNATURE-----
