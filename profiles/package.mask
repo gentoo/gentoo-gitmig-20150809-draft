@@ -52,7 +52,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1149 2002/08/02 07:14:28 lostlogic Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1150 2002/08/02 07:15:41 lostlogic Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
@@ -358,10 +358,6 @@ sys-apps/mkisofs
 # cardoe@gentoo.org (12 Jul 2002)
 # masked cause it has not been tested enough
 =net-dialup/hsflinmodem-5.03.03.02062500
-
-# <danarmak@gentoo.org> (10 July 2002)
-# short-term mask for testing - see bug #2483. Anyone except the user there doesn't care about this.
-=x11-libs/qt-3.0.4.20020606-r3
 
 # sunflare@gentoo.org (09 Jul 2002)
 # Masked because readline-4.2 is masked in default-1.0.
