@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r2.ebuild,v 1.5 2005/03/23 01:06:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r2.ebuild,v 1.6 2005/04/01 15:03:05 agriffis Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND="virtual/libc
 		ldap? ( >=net-nds/openldap-2.0 )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
