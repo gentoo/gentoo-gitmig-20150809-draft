@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.24.ebuild,v 1.3 2003/04/06 08:41:12 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.24.ebuild,v 1.4 2003/04/10 06:57:32 absinthe Exp $
 
 S=${WORKDIR}/jakarta-${P}
 At="jakarta-tomcat-${PV}.tar.gz"
@@ -61,7 +61,7 @@ src_install() {
 	cp -a ${FILESDIR}/${PV}/21tomcat ${S}/21tomcat
 	insinto /etc/env.d
 	insopts -m0755
-	doins ${S}/tomcat
+	doins ${S}/21tomcat
 
 	# SEND JARS TO SHARED LOCATION
 	for i in \
