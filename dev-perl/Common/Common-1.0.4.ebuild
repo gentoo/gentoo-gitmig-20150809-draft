@@ -1,6 +1,6 @@
 # Copyright 2002 damien krotkine <dams@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Common/Common-1.0.4.ebuild,v 1.1 2002/12/01 12:00:07 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Common/Common-1.0.4.ebuild,v 1.2 2002/12/07 15:35:14 dams Exp $
 
 ECVS_ANON="no"
 ECVS_USER="anoncvs"
@@ -21,41 +21,48 @@ SLOT="0"
 LICENSE="GPL"
 KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 
-#DEPEND="${DEPEND}
-#        >=dev-lang/ocaml"
+DEPEND="dev-lang/ocaml
+		sys-devel/perl"
 
-#This patch may or may not be backwards compatible with perl-5.6.1
-#Add gaurd as necessary...
-
-#src_unpack() {
-#	echo " ***** pouet $PWD";
-#	echo "filesdir : ${FILESDIR}"
-#        #unpack ${A}
-#	echo " pwd : $PWD"
-#        patch -p0 <${FILESDIR}/Common-1.0.4.patch || die
-#}
 
 src_compile() {
 	cd ../../perl-MDK-Common;
-	echo " pwd : $PWD"
-        patch -p1 <${FILESDIR}/Common-1.0.4.patch || die
-	echo "compile in ${PWD}";
-	make clean;
-	make
-	#perl-module_src_prep;
-	#perl-module_src_compile;
+	patch -p0 <${FILESDIR}/Common-1.0.4.patch || die
+	cp Makefile Makefile.bak
+   sed -e "s: /usr: ${D}/usr:" Makefile.bak > Makefile
+   make \
+              PREFIX=${D}/usr \
+                INSTALLMAN1DIR=${D}/usr/share/man/man1 \
+                INSTALLMAN2DIR=${D}/usr/share/man/man2 \
+                INSTALLMAN3DIR=${D}/usr/share/man/man3 \
+                INSTALLMAN4DIR=${D}/usr/share/man/man4 \
+                INSTALLMAN5DIR=${D}/usr/share/man/man5 \
+                INSTALLMAN6DIR=${D}/usr/share/man/man6 \
+                INSTALLMAN7DIR=${D}/usr/share/man/man7 \
+                INSTALLMAN8DIR=${D}/usr/share/man/man8 \
+                INSTALLSITEMAN1DIR=${D}/usr/share/man/man1 \
+                INSTALLSITEMAN2DIR=${D}/usr/share/man/man2 \
+                INSTALLSITEMAN3DIR=${D}/usr/share/man/man3 \
+                INSTALLSITEMAN4DIR=${D}/usr/share/man/man4 \
+                INSTALLSITEMAN5DIR=${D}/usr/share/man/man5 \
+                INSTALLSITEMAN6DIR=${D}/usr/share/man/man6 \
+                INSTALLSITEMAN7DIR=${D}/usr/share/man/man7 \
+                INSTALLSITEMAN8DIR=${D}/usr/share/man/man8 \
+                INSTALLSITEARCH=${D}/${SITE_ARCH} \
+                INSTALLSCRIPT=${D}/usr/bin 
+
 }
 
 src_install() {
 	cd ../../perl-MDK-Common;
-	echo "install in ${PWD}"
-	make PREFIX=${D}/usr install
-}
+        make install
 
-src_prep() {
-	SRC_PREP="yes"
-	cd ../../perl-MDK-Common
-	echo "prep in ${PWD}";	
 }
+																																		
+#src_prep() {
+#	SRC_PREP="yes"
+#	cd soft/perl-MDK-Common
+#}
+
 
 
