@@ -1,6 +1,13 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.90 2005/03/12 20:24:43 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.91 2005/03/15 21:39:13 joem Exp $
+
+*epiphany-1.6.0-r2 (15 Mar 2005)
+
+  15 Mar 2005; Joe McCann <joem@gentoo.org>
+  +files/epiphany-1.6.0-view_source.patch, +epiphany-1.6.0-r2.ebuild:
+  patch from epiphany cvs to fix view page source. Thanks to the tracking in
+  but 85337
 
 *epiphany-1.6.0-r1 (12 Mar 2005)
 
