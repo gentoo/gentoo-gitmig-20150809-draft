@@ -1,12 +1,18 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.7 2002/09/12 12:00:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.8 2002/09/16 05:03:31 rphillips Exp $
 
 *openafs-1.2.6 (03 Aug 2002)
+
+  15 Sep 2002; Ryan Phillips <rphillips@gentoo.org> openafs-1.2.6.ebuild :
 
   12 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> openafs-1.2.6.ebuild :
   Added CONFIG_PROTECT_MASK to allow binaries in /etc to be overwritten.
   Closes #5976.
+
+  Temporarily disabled the sandbox due to bug #7775
+
+  03 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> openafs-1.2.6.ebuild :
 
   03 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> openafs-1.2.6.ebuild :
   Security fix.
