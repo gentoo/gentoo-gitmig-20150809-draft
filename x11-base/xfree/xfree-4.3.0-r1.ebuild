@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.4 2003/03/09 22:36:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.5 2003/03/10 01:23:55 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -59,11 +59,11 @@ X_PATCHES="mirror://gentoo/XFree86-4.2.99.4-patches-${PATCH_VER}.tar.bz2
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
-	http://www.webit.at/~twinny/sis/sis_drv_src_${SISDRV_VER}.tar.gz"
+	http://www.winischhofer.net/sis/sis_drv_src_${SISDRV_VER}.tar.gz"
 #	3dfx? ( mirror://gentoo/glide3-headers.tar.bz2 )"
 # Updated Wacom driver:  http://people.mandrakesoft.com/~flepied/projects/wacom/
 # Latest Savaga drivers:  http://www.probo.com/timr/savage40.html
-# Latest SIS drivers:  http://www.webit.at/~twinny/linuxsis630.shtml
+# Latest SIS drivers:  http://www.winischhofer.net/
 # Glide headers for compiling the tdfx modules
 
 # For the MS Core fonts ..
