@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.21 2003/06/25 05:56:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.22 2003/06/25 19:27:33 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -36,7 +36,10 @@ INHERITED="$INHERITED $ECLASS"
 
 
 # C[XX]FLAGS that we allow in strip-flags
-ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -pipe -g -mips1 -mips2 -mips3 -mips4 -mabi"
+ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -pipe -g"
+case "${ARCH}" in
+	mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mabi" ;;
+esac
 
 # C[XX]FLAGS that we are think is ok, but needs testing
 # NOTE:  currently -Os have issues with gcc3 and K6* arch's
