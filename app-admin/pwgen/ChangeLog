@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.21 2004/06/24 21:35:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.22 2004/07/24 18:45:58 alexander Exp $
+
+  24 Jun 2004; Alexander Plank <alexander@gentoo.org> pwgen-2.03-r1.ebuild
+  Add macos keyword to pwgen
 
   17 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml,
   +files/pwgen.rc, pwgen-2.01.ebuild, pwgen-2.03-r1.ebuild,
