@@ -11,7 +11,7 @@
 *net-misc/netkit-telnetd
 *net-misc/rsync
 *net-misc/wget
-*sys-apps/at
+*<sys-apps/at-3.1.8-r6
 *sys-apps/bash
 *sys-apps/bzip2
 *sys-apps/console-data

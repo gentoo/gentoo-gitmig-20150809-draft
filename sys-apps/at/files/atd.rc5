@@ -2,7 +2,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/files/atd,v 1.1 2000/08/02 17:10:25 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/files/atd.rc5,v 1.1 2001/09/02 03:39:24 woodchip Exp $
 
 #RCUPDATE:2 3 4:75:
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r3.ebuild,v 1.3 2001/09/02 03:39:24 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r6.ebuild,v 1.1 2001/09/02 03:39:24 woodchip Exp $
 
 A="${P}.tar.bz2 ${P}.dif"
 S=${WORKDIR}/${P}
@@ -56,8 +56,8 @@ src_install() {
 	  touch ${D}/var/cron/${i}/.SEQ
 	done
 
-	exeinto /etc/rc.d/init.d
-	newexe ${FILESDIR}/atd.rc5 atd
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/atd.rc6 atd
 	insinto /etc/at
 	insopts -m 0644
 	doins ${FILESDIR}/at.deny

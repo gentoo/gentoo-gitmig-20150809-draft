@@ -49,8 +49,6 @@
 *net-misc/openssh
 *net-misc/rsync
 *net-misc/wget
-#does everyone really need at?
-#sys-apps/at
 *sys-apps/bash
 *sys-apps/bzip2
 *sys-apps/console-data
@@ -132,6 +130,8 @@
 *sys-apps/iproute2
 #not required, since glibc depends on linux-headers and they come with the build image
 *sys-kernel/linux-headers
+#these ones have rc6 specific initfiles
 >=sys-apps/xinetd-2.3.3-r1
 >=net-fs/samba-2.2.1a-r6
+>=sys-apps/at-3.1.8-r6
 
