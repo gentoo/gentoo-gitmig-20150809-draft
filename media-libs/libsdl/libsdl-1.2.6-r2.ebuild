@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r2.ebuild,v 1.6 2003/12/01 21:23:05 vapier Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r2.ebuild,v 1.7 2003/12/02 08:00:05 seemant Exp $
 
 DESCRIPTION="Simple Direct Media Layer"
 HOMEPAGE="http://www.libsdl.org/"
@@ -36,7 +34,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	# this should fix Bug 31235
-	epatch ${FILESDIR}/${P}-fullscreen.patch
+	# Cannot use epatch as this patch fails on the dry-run -- perhaps the
+	# patch needs to be regenerated?
+	ebegin "applying ${P}-fullscreen.patch..."
+	patch -p1 -s< ${FILESDIR}/${P}-fullscreen.patch || die
+	eend 0
+
 	sed -i \
 		-e 's:head -1:head -n 1:' configure || \
 			die "sed configure failed"
