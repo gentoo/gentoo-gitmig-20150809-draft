@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r2.ebuild,v 1.1 2001/02/04 23:50:01 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r2.ebuild,v 1.2 2001/02/06 09:01:35 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -66,7 +66,10 @@ src_install()
 	chmod 1777 ${D}/tmp
 	insopts -m0644
 	insinto /etc
-	for foo in services passwd shadow nsswitch.conf inetd.conf ld.so.conf protocols fstab hosts syslog.conf pwdb.conf filesystems group profile crontab
+	for foo in services passwd shadow nsswitch.conf \
+	           inetd.conf ld.so.conf protocols fstab \
+		   hosts syslog.conf pwdb.conf filesystems \
+		   group profile crontab inputrc
 	do
 		doins ${FILESDIR}/${foo}
 	done
