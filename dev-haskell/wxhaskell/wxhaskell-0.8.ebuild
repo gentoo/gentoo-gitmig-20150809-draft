@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.8.ebuild,v 1.3 2004/09/28 11:59:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.8.ebuild,v 1.4 2004/10/26 13:57:18 kosmikus Exp $
 
 inherit wxwidgets
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/wxhaskell/${PN}-src-${PV}.zip"
 LICENSE="wxWinLL-3"
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 IUSE="doc gtk2"
 
@@ -21,7 +21,16 @@ DEPEND="${DEPEND}
 
 # the variable ghc_version is used to store the ghc version we are building against
 
+pkg_setup() {
+	ghc_version=`best_version virtual/ghc | sed -e "s:.*/::" -e "s:-r.*::"`
+	test -n ${ghc_version} && ghclibdir="/usr/lib/${ghc_version}"
+	test -n ${ghclibdir} || ghclibdir="/usr/lib"
+	einfo "Using GHC library dir ${ghclibdir}."
+}
+
+
 src_compile() {
+	einfo "Using GHC library dir ${ghclibdir}."
 	#wxhaskell supports gtk or gtk2, but not unicode yet:
 	if ! use gtk2; then
 		need-wxwidgets gtk
@@ -40,9 +49,6 @@ src_compile() {
 	# multiple versions of ghc)
 	local myopts
 	local wxconfig
-	ghc_version=`best_version virtual/ghc | sed "s:.*/::"`
-	test -n ${ghc_version} && ghclibdir="/usr/lib/${ghc_version}"
-	test -n ${ghclibdir} || ghclibdir="/usr/lib"
 	test -n ${ghclibdir} && myopts="${myopts} --libdir=${D}/${ghclibdir}"
 	wxconfig="${WX_CONFIG}"
 	# --wx-config must appear first according to configure file comments 
@@ -53,17 +59,16 @@ src_compile() {
 		--with-opengl \
 		${myopts} \
 		|| die "./configure failed"
-	# emake doesn't work
-	make || die "make failed"
+	emake -j1 || die "make failed"
 	# create documentation
 	if use doc; then
-		make doc || die "make doc failed"
+		emake -j1 doc || die "make doc failed"
 	fi
 }
 
 src_install() {
 	local f
-	make install || die "make install failed"
+	emake -j1 install || die "make install failed"
 	for f in ${D}/usr/lib/${ghc_version}/libwxc-*.so; do
 		mv ${f} ${D}/usr/lib
 	done
@@ -75,9 +80,9 @@ src_install() {
 
 pkg_postinst() {
 	einfo "Registering wxcore package"
-	wxhlibdir=${ghclibdir} ghc-pkg -u -i ${S}/config/wxcore.pkg
+	wxhlibdir=${ghclibdir} ghc-pkg -u -i ${ghclibdir}/wxcore.pkg
 	einfo "Registering wx package"
-	wxhlibdir=${ghclibdir} ghc-pkg -u -i ${S}/config/wx.pkg
+	wxhlibdir=${ghclibdir} ghc-pkg -u -i ${ghclibdir}/config/wx.pkg
 }
 
 pkg_postrm() {
