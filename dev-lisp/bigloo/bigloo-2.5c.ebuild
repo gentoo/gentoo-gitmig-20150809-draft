@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo/bigloo-2.5c.ebuild,v 1.2 2003/09/06 22:35:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo/bigloo-2.5c.ebuild,v 1.3 2003/12/16 19:06:50 weeve Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${PN}${PV}
@@ -11,7 +11,7 @@ DEPEND=">=sys-apps/sed-4"
 #RDEPEND=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 src_compile() {
 	local myconf

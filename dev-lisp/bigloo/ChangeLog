@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/bigloo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo/ChangeLog,v 1.6 2003/11/29 19:39:19 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo/ChangeLog,v 1.7 2003/12/16 19:06:50 weeve Exp $
+
+  16 Dec 2003; Jason Wever <weeve@gentoo.org> bigloo-2.5c.ebuild:
+  Added ~sparc keyword to fix broken dependencies in dev-lisp/bigloo-lib.
 
 *bigloo-2.6a (28 Nov 2003)
 
