@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/libwhisker-2.2.ebuild,v 1.2 2005/01/31 18:19:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/libwhisker-2.2.ebuild,v 1.3 2005/03/13 20:38:32 mcummings Exp $
 
 MY_P="${PN}2-current"
 S="${WORKDIR}/${PN}2-${PV}"
@@ -14,19 +14,6 @@ IUSE="ssl"
 
 DEPEND=">=dev-lang/perl-5.6.1
 		ssl? ( >=dev-perl/Net-SSLeay-1.19 )"
-
-# FOR THE RECORD:
-# The author of libwhisker has explicity asked that we not mirror
-# this package. 
-RESTRICT="fetch"
-
-pkg_nofetch() {
-	einfo "Could not find the libwhisker tarball!"
-	einfo "It could not be fetched normally because http://www.wiretrip.net "
-	einfo "denies the wget User-Agent header."
-	einfo "You can find this library in: "
-	einfo ${SRC_URI}
-}
 
 src_compile() {
 	cd ${S}

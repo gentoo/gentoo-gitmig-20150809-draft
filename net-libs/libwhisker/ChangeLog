@@ -1,6 +1,22 @@
 # ChangeLog for net-libs/libwhisker
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/ChangeLog,v 1.11 2005/01/31 18:19:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/ChangeLog,v 1.12 2005/03/13 20:38:32 mcummings Exp $
+
+  13 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  -libwhisker-1.8.ebuild, -libwhisker-2.1.ebuild, libwhisker-2.2.ebuild:
+  Removing old versions based on keywords
+
+  13 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  libwhisker-2.2.ebuild:
+  Removing mirror restriction from this library. From RFP: 
+  If you want to tweak wget by using -U parameter so you can straight download 
+  from wiretrip.net, that's fine too.  If you want to download from 
+  sourceforge.net, that's fine too (three?).  I do want to note that I 
+  majorly slack in updating the copy on sourceforge, so it's not as up to 
+  date as wiretrip.net.  And if you want to mirror it on your own servers, 
+  that's fine...just please try to keep it up to date (I always announce new 
+  versions to the libwhisker mailing list, so as long as someone is 
+  monitoring that, it should be fine).
 
   31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> libwhisker-2.2.ebuild:
   Stable on sparc
