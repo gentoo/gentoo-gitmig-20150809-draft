@@ -1,10 +1,16 @@
 #!/bin/sh
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/pkg-size,v 1.1 2003/08/15 12:23:44 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/pkg-size,v 1.2 2003/11/18 17:44:19 karltk Exp $
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
+
 spec=$1
+
+if [ -z "$spec" ] ; then
+  echo "Usage: pkg-size package"
+  exit 1
+fi
 
 name=`echo $1 | sed "s/\([^/]*\)\///"`
 category=`echo $1 | sed "s/\/.*//"`
