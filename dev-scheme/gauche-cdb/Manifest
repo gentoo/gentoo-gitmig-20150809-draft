@@ -1,5 +1,5 @@
-MD5 55d8171c0013ba547cdce96633834d6a ChangeLog 437
-MD5 42dbab003c60e6af3ea39ed6e98e8e8f gauche-cdb-0.3.1.ebuild 980
+MD5 d47d4e7772fdb9c6fc6791b5f2e6fc7f ChangeLog 527
+MD5 86995f9ea7b792d0e1a9ca0281b3a811 gauche-cdb-0.3.1.ebuild 986
 MD5 c9f54ac0eadf3d14a44e5dc692f0df73 metadata.xml 230
 MD5 f6895dbeccdca1452f430f0afc70b529 files/digest-gauche-cdb-0.3.1 67
 MD5 e0b23c83d59568c4c25137aeec1a0c1b files/gauche-cdb-0.3.1-gpd.diff 357

@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gauche-cdb
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/ChangeLog,v 1.1 2004/08/19 08:51:45 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/ChangeLog,v 1.2 2004/09/16 15:35:09 hattya Exp $
+
+  17 Sep 2004; Akinori Hattori <hattya@gentoo.org> gauche-cdb-0.3.1.ebuild:
+  add ~ia64.
 
 *gauche-cdb-0.3.1 (19 Aug 2004)
 
