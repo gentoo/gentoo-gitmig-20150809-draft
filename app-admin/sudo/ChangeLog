@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.13 2003/03/21 17:35:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.14 2003/05/19 19:02:26 aliz Exp $
+
+*sudo-1.6.7_p5 (19 May 2003)
+
+  19 May 2003; Daniel Ahlberg <aliz@gentoo.org> sudo-1.6.7_p5.ebuild :
+  Version bump.
 
   05 Feb 2003; Martin Schlemmer <azarah@gentoo.org> $FILESDIR/sudo :
   Update pam.d file to use system-auth via pam_stack.so.  This
