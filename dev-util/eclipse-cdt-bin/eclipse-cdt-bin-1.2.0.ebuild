@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/eclipse-cdt-bin-1.2.0.ebuild,v 1.4 2004/06/25 02:30:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/eclipse-cdt-bin-1.2.0.ebuild,v 1.5 2004/07/14 23:22:09 agriffis Exp $
 
 inherit eclipse-ext
 
@@ -11,6 +11,7 @@ SRC_URI=" gtk? ( http://download.eclipse.org/tools/cdt/updates/release/dist/cdt-
 SLOT="1"
 LICENSE="CPL-1.0"
 KEYWORDS="-* ~x86 ~sparc"
+IUSE="gtk motif"
 DEPEND="=dev-util/eclipse-sdk-2.1*"
 RDEPEND="${DEPEND}
 	gtk? ( >=x11-libs/gtk+-2.2.4-r1 )
