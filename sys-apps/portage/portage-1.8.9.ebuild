@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.9.ebuild,v 1.2 2002/03/31 18:48:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.9.ebuild,v 1.3 2002/03/31 18:50:24 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -13,7 +13,7 @@ if [ "`use build`" ]
 then
 	RDEPEND=""
 else
-	RDEPEND=">=dev-lang/python-2.2 sys-apps/debianutils"
+	RDEPEND=">=sys-apps/fileutils-4.1.8 >=dev-lang/python-2.2 sys-apps/debianutils"
 fi
 
 src_unpack() {
