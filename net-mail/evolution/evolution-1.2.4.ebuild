@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.4.ebuild,v 1.4 2003/04/28 23:46:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.4.ebuild,v 1.5 2003/05/07 11:22:39 liquidx Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -78,6 +78,9 @@ src_unpack() {
 	cp Makefile.in Makefile.in.orig
 	sed -e 's:-mkdir $(defaultdir:-mkdir $(DESTDIR)$(defaultdir:g' \
 		Makefile.in.orig > Makefile.in
+		
+	# Remove unneeded db1 linking for nss/mozilla
+	cd ${S}; sed -i -e "s/-ldb1//" configure.in
 }
 
 src_compile() {

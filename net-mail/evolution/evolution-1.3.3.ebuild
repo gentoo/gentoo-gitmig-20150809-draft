@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.2.ebuild,v 1.3 2003/05/07 11:22:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.3.ebuild,v 1.1 2003/05/07 11:22:39 liquidx Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -9,9 +9,9 @@ inherit eutils flag-o-matic gnome.org libtool virtualx gnome2
 DB3="db-3.1.17"
 S="${WORKDIR}/${P}"
 DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
-#SRC_URI="${SRC_URI} http://www.sleepycat.com/update/snapshot/${DB3}.tar.gz"
-SRC_URI="ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/${P}.tar.gz
-	http://www.sleepycat.com/update/snapshot/${DB3}.tar.gz"
+SRC_URI="${SRC_URI} http://www.sleepycat.com/update/snapshot/${DB3}.tar.gz"
+#SRC_URI="ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/${P}.tar.gz
+#	http://www.sleepycat.com/update/snapshot/${DB3}.tar.gz"
 HOMEPAGE="http://www.ximian.com"
 
 SLOT="2" # can co-exist with evolution <= 1.2
@@ -19,7 +19,15 @@ SLOT="2" # can co-exist with evolution <= 1.2
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
 
-RDEPEND=">=gnome-extra/libgtkhtml-3.0.2
+# top stanza are ximian deps
+RDEPEND=">=gnome-extra/libgtkhtml-3.0.3
+    >=gnome-extra/gal-1.99.4
+    >=net-libs/libsoup-1.99.20
+	pda?     ( >=gnome-extra/gnome-pilot-2.0.8
+		>=dev-libs/pilot-link-0.11.7
+		>=gnome-extra/gnome-pilot-conduits-2.0.8 )
+	spell?   ( >=app-text/gnome-spell-1.0.3 )
+	
 	>=gnome-base/ORBit2-2.6.0
     >=gnome-base/libbonoboui-2.0
     >=gnome-base/gnome-vfs-2.0
@@ -29,19 +37,13 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.0.2
     >=gnome-base/bonobo-activation-2.2.1
     >=dev-libs/libxml2-2.5
     >=gnome-base/gconf-2.0
-    >=gnome-extra/gal-1.99.3
-    >=net-libs/libsoup-1.99.17
     >=gnome-base/libgnomecanvas-2.2.0.2
     >=gnome-base/libgnomeprintui-2.2
     >=gnome-base/libgnomeprint-2.2
 	doc?	 ( >=app-text/scrollkeeper-0.3.10-r1 )
 	ssl? ( mozilla? ( >=net-www/mozilla-0.9.9 ) : ( >=dev-libs/openssl-0.9.5 ) )
 	ldap?    ( >=net-nds/openldap-2.0 )
-	pda?     ( >=gnome-extra/gnome-pilot-2.0.5
-			>=dev-libs/pilot-link-0.11.7
-            >=gnome-extra/gnome-pilot-conduits-2.0.5 )
-    kerberos? ( >=app-crypt/krb5-1.2.5 )
-	spell?   ( >=app-text/gnome-spell-1.0.2 )"
+    kerberos? ( >=app-crypt/krb5-1.2.5 )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.4.1-r1
@@ -65,7 +67,15 @@ pkg_setup() {
     ewarn "mail from being erased on the server after download."
     echo
     ewarn "Please read this page for more info:"
-    ewarn "http://developer.ximian.com/projects/evolution/release_notes/1.3.2.html"
+    ewarn "http://developer.ximian.com/projects/evolution/release_notes/1.3.3.html"
+	sleep 5
+	
+}
+
+src_unpack() {
+	unpack ${A}
+	# remove dependency on libdb1.so (its deprecated)
+	cd ${S}; sed -i -e "s/-ldb1//" configure	
 }
 
 src_compile() {
