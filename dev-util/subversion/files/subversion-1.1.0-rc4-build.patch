@@ -1,0 +1,15 @@
+diff -urN subversion-1.1.0-rc4.orig/configure.in subversion-1.1.0-rc4/configure.in
+--- subversion-1.1.0-rc4.orig/configure.in	2004-09-22 23:07:59.000000000 +0200
++++ subversion-1.1.0-rc4/configure.in	2004-09-23 20:40:14.650146368 +0200
+@@ -702,6 +702,11 @@
+ SVN_CONFIG_SCRIPT(tools/hook-scripts/propchange-email.pl)
+ SVN_CONFIG_SCRIPT(subversion/bindings/swig/perl/native/Makefile.PL)
+ 
++test -z "$SVN_DB_INCLUDES" && SVN_DB_INCLUDES="
++AC_SUBST(SVN_DB_INCLUDES)
++test -z "$SVN_DB_LIBS" && SVN_DB_LIBS=""
++AC_SUBST(SVN_DB_LIBS)
++
+ AC_OUTPUT
+ 
+ 
