@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/fam-oss
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/ChangeLog,v 1.25 2003/07/01 21:05:22 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/ChangeLog,v 1.26 2003/07/30 21:43:55 raker Exp $
+
+*fam-oss-2.6.10-r1 (30 Jul 2003)
+
+  30 Jul 2003; Nick Hadaway <raker@gentoo.org> fam-oss-2.6.10-r1.ebuild,
+  files/fam-oss-2.6.10-nostatvfs.patch:
+  Added a patch to removed the hooks for statvfs which appears to be
+  b0rked on Linux.  Even in the source are comments re: it's brokenness.
+  Thanks to Danny Milosavljevic on bug #24280 for doing research on 
+  this.
 
   25 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> fam-oss-2.6.10.ebuild:
   set ppc in keywords
