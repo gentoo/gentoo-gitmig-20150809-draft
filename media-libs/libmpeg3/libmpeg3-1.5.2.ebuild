@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2.ebuild,v 1.7 2004/05/12 12:17:27 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2.ebuild,v 1.8 2004/05/16 19:48:57 vapier Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils gcc
 
 DESCRIPTION="An mpeg library for linux"
 HOMEPAGE="http://heroinewarrior.com/libmpeg3.php3"
@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
+IUSE=""
 
 RDEPEND="sys-libs/zlib
 	media-libs/jpeg
@@ -31,6 +32,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-largefile.patch
 	epatch ${FILESDIR}/${PV}-proper-c.patch
 	epatch ${FILESDIR}/${PV}-no-nasm.patch
+	[ "`gcc-version`" == "3.4" ] && epatch ${FILESDIR}/${PV}-gcc3.4.patch #49452
 	# remove a52 crap
 	echo > Makefile.a52
 	rm -rf a52dec-0.7.3/*

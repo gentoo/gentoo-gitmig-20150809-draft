@@ -1,0 +1,95 @@
+Only in libmpeg3-1.5.2-orig: i686
+diff -urbB libmpeg3-1.5.2-orig/video/output.c libmpeg3-1.5.2/video/output.c
+--- libmpeg3-1.5.2-orig/video/output.c	2002-06-21 12:35:24.000000000 +0000
++++ libmpeg3-1.5.2/video/output.c	2004-05-04 12:47:31.153075072 +0000
+@@ -6,21 +6,21 @@
+ 
+ static long long mpeg3_MMX_0 = 0L;
+ static unsigned long  mpeg3_MMX_10w[]         = {0x00100010, 0x00100010};                     /*dd    00010 0010h, 000100010h */
+-static unsigned long  mpeg3_MMX_80w[]         = {0x00800080, 0x00800080};                     /*dd    00080 0080h, 000800080h */
++static unsigned long  __attribute__((used)) mpeg3_MMX_80w[]         = {0x00800080, 0x00800080};                     /*dd    00080 0080h, 000800080h */
+ 
+-static unsigned long  mpeg3_MMX_00FFw[]       = {0x00ff00ff, 0x00ff00ff};                     /*dd    000FF 00FFh, 000FF00FFh */
++static unsigned long  __attribute__((used)) mpeg3_MMX_00FFw[]       = {0x00ff00ff, 0x00ff00ff};                     /*dd    000FF 00FFh, 000FF00FFh */
+ 
+-static unsigned short mpeg3_MMX_Ublucoeff[]   = {0x81, 0x81, 0x81, 0x81};                     /*dd    00081 0081h, 000810081h */
+-static unsigned short mpeg3_MMX_Vredcoeff[]   = {0x66, 0x66, 0x66, 0x66};                     /*dd    00066 0066h, 000660066h */
++static unsigned short __attribute__((used)) mpeg3_MMX_Ublucoeff[]   = {0x81, 0x81, 0x81, 0x81};                     /*dd    00081 0081h, 000810081h */
++static unsigned short __attribute__((used)) mpeg3_MMX_Vredcoeff[]   = {0x66, 0x66, 0x66, 0x66};                     /*dd    00066 0066h, 000660066h */
+ 
+-static unsigned short mpeg3_MMX_Ugrncoeff[]   = {0xffe8, 0xffe8, 0xffe8, 0xffe8};             /*dd    0FFE7 FFE7h, 0FFE7FFE7h */
+-static unsigned short mpeg3_MMX_Vgrncoeff[]   = {0xffcd, 0xffcd, 0xffcd, 0xffcd};             /*dd    0FFCC FFCCh, 0FFCCFFCCh */
++static unsigned short __attribute__((used)) mpeg3_MMX_Ugrncoeff[]   = {0xffe8, 0xffe8, 0xffe8, 0xffe8};             /*dd    0FFE7 FFE7h, 0FFE7FFE7h */
++static unsigned short __attribute__((used)) mpeg3_MMX_Vgrncoeff[]   = {0xffcd, 0xffcd, 0xffcd, 0xffcd};             /*dd    0FFCC FFCCh, 0FFCCFFCCh */
+ 
+-static unsigned short mpeg3_MMX_Ycoeff[]      = {0x4a, 0x4a, 0x4a, 0x4a};                     /*dd    0004A 004Ah, 0004A004Ah */
++static unsigned short __attribute__((used)) mpeg3_MMX_Ycoeff[]      = {0x4a, 0x4a, 0x4a, 0x4a};                     /*dd    0004A 004Ah, 0004A004Ah */
+ 
+-static unsigned short mpeg3_MMX_redmask[]     = {0xf800, 0xf800, 0xf800, 0xf800};             /*dd    07c00 7c00h, 07c007c00h */
++static unsigned short __attribute__((used)) mpeg3_MMX_redmask[]     = {0xf800, 0xf800, 0xf800, 0xf800};             /*dd    07c00 7c00h, 07c007c00h */
+ 
+-static unsigned short mpeg3_MMX_grnmask[]     = {0x7e0, 0x7e0, 0x7e0, 0x7e0};                 /*dd    003e0 03e0h, 003e003e0h */
++static unsigned short __attribute__((used)) mpeg3_MMX_grnmask[]     = {0x7e0, 0x7e0, 0x7e0, 0x7e0};                 /*dd    003e0 03e0h, 003e003e0h */
+ 
+ static unsigned char mpeg3_601_to_rgb[256];
+ 
+@@ -207,12 +207,12 @@
+ 		);
+ }
+ 
+-static unsigned long long  mpeg3_MMX_U_80 = 0x0000008000800000;
+-static unsigned long long  mpeg3_MMX_V_80 = 0x0000000000800080;
+-static long long  mpeg3_MMX_U_COEF        = 0x00000058ffd30000;
+-static long long  mpeg3_MMX_V_COEF        = 0x00000000ffea006f;
+-static long long  mpeg3_MMX_601_Y_COEF    = 0x0000004800480048;
+-static long long  mpeg3_MMX_601_Y_DIFF    = 0x0000000000000010;
++static unsigned long long  __attribute__((used)) mpeg3_MMX_U_80 = 0x0000008000800000;
++static unsigned long long  __attribute__((used)) mpeg3_MMX_V_80 = 0x0000000000800080;
++static long long  __attribute__((used)) mpeg3_MMX_U_COEF        = 0x00000058ffd30000;
++static long long  __attribute__((used)) mpeg3_MMX_V_COEF        = 0x00000000ffea006f;
++static long long  __attribute__((used)) mpeg3_MMX_601_Y_COEF    = 0x0000004800480048;
++static long long  __attribute__((used)) mpeg3_MMX_601_Y_DIFF    = 0x0000000000000010;
+ 
+ inline void mpeg3_bgra32_mmx(unsigned long y, 
+ 		unsigned long u, 
+@@ -297,10 +297,10 @@
+ : "r" (&y), "r" (&u), "r" (&v), "r" (output));
+ }
+ 
+-static unsigned long long  mpeg3_MMX_U_80_RGB    = 0x0000000000800080;
+-static unsigned long long  mpeg3_MMX_V_80_RGB    = 0x0000008000800000;
+-static long long  mpeg3_MMX_U_COEF_RGB    = 0x00000000ffd30058;
+-static long long  mpeg3_MMX_V_COEF_RGB    = 0x0000006fffea0000;
++static unsigned long long  __attribute__((used)) mpeg3_MMX_U_80_RGB    = 0x0000000000800080;
++static unsigned long long  __attribute__((used)) mpeg3_MMX_V_80_RGB    = 0x0000008000800000;
++static long long  __attribute__((used)) mpeg3_MMX_U_COEF_RGB    = 0x00000000ffd30058;
++static long long  __attribute__((used)) mpeg3_MMX_V_COEF_RGB    = 0x0000006fffea0000;
+ 
+ inline void mpeg3_rgba32_mmx(unsigned long y, 
+ 		unsigned long u, 
+diff -urbB libmpeg3-1.5.2-orig/video/reconstruct.c libmpeg3-1.5.2/video/reconstruct.c
+--- libmpeg3-1.5.2-orig/video/reconstruct.c	2002-06-21 12:35:24.000000000 +0000
++++ libmpeg3-1.5.2/video/reconstruct.c	2004-05-04 12:51:36.933710736 +0000
+@@ -271,8 +271,8 @@
+ }
+ 
+ #else  // HAVE_3DNOW
+-	static long long ADD_1	=	0x0101010101010101LL;
+-	static long long MASK_AND = 0x7f7f7f7f7f7f7f7fLL;
++	static long long __attribute__((used)) ADD_1	= 0x0101010101010101LL;
++	static long long __attribute__((used)) MASK_AND = 0x7f7f7f7f7f7f7f7fLL;
+ #endif
+ 
+ static inline void rec_mmx(unsigned char *s, unsigned char *d, int lx2, int h)
+diff -urbB libmpeg3-1.5.2-orig/video/slice.c libmpeg3-1.5.2/video/slice.c
+--- libmpeg3-1.5.2-orig/video/slice.c	2002-06-21 12:35:24.000000000 +0000
++++ libmpeg3-1.5.2/video/slice.c	2004-05-04 12:50:17.111845504 +0000
+@@ -6,7 +6,7 @@
+ 
+ #define CLIP(x)  ((x) >= 0 ? ((x) < 255 ? (x) : 255) : 0)
+ 
+-static unsigned long long MMX_128 = 0x80008000800080LL;
++static unsigned long long __attribute__((used)) MMX_128 = 0x80008000800080LL;
+ 
+ int mpeg3_new_slice_buffer(mpeg3_slice_buffer_t *slice_buffer)
+ {

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.22 2004/05/12 12:17:27 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.23 2004/05/16 19:48:57 vapier Exp $
+
+  16 May 2004; Mike Frysinger <vapier@gentoo.org> +files/1.5.2-gcc3.4.patch,
+  libmpeg3-1.5.2.ebuild:
+  Add gcc-3.4 patch by ecco@piggy.demon.nl #49452 by Jonathan Adamczewski
 
   12 May 2004; Alexander Gabert <pappy@gentoo.org> libmpeg3-1.5-r1.ebuild,
   libmpeg3-1.5.1.ebuild, libmpeg3-1.5.2.ebuild:
