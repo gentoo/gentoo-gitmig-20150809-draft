@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.29 2003/07/16 17:40:05 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.30 2003/07/23 18:03:31 lostlogic Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -27,15 +27,17 @@ then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
 			  >=sys-devel/binutils-2.11.90.0.31 )
-			doc? ( app-text/docbook-sgml-utils
-				media-gfx/transfig )
 			app-admin/addpatches"
+# This causes kernels to pull X when they really shouldn't
+#			doc? ( app-text/docbook-sgml-utils
+#				media-gfx/transfig )
 	RDEPEND="${DEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
-			   tcltk? dev-lang/tk
 			   dev-lang/perl
 			   virtual/modutils
 			   sys-devel/make )"
+# This also causes kernels to pull X when it shouldn't...
+#			   tcltk? dev-lang/tk
 	PROVIDE="virtual/linux-sources"
 
 elif [ "${ETYPE}" = "headers" ]
