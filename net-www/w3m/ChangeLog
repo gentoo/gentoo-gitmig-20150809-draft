@@ -1,6 +1,14 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.6 2002/07/17 16:52:15 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.7 2002/07/21 04:40:53 naz Exp $
+
+w3m-0.3-r5 (20 Jul 2002)
+
+  20 Jul 2002; Michael Nazaroff <naz@gentoo.org.com> w3m-0.3-r5.ebuild:
+
+  Updated the build to allow w3m to use ANSI color escapes during
+  the compile, making it inifinitely more useable.  Thanx to CJ 
+  Kucera <pez@apocalyptech.com> for the suggestion.
 
 * w3m-0.3-r4 (18 Jul 2002)
 
