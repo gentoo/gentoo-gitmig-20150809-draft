@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.1 2003/09/06 18:08:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.2 2003/09/08 20:12:00 mholzer Exp $
 
 inherit flag-o-matic
 filter-flags -fPIC
@@ -10,7 +10,7 @@ MY_P=${PN}_${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Really Slick Screensavers using OpenGL for XScreenSaver"
 HOMEPAGE="http://rss-glx.sourceforge.net/"
-SRC_URI="mirror://sourceforge/rss-glx/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,7 +20,7 @@ IUSE="kde sse 3dnow"
 DEPEND="virtual/x11
 	virtual/opengl
 	>=sys-apps/sed-4
-	media-gfx/imagemagick
+	>=media-gfx/imagemagick-5.5.7
 	kde? ( kde-base/kdeartwork ) : ( x11-misc/xscreensaver )"
 
 src_unpack() {
