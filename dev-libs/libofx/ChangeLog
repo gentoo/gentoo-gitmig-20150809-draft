@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/libofx
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.1 2003/04/28 02:08:57 liquidx Exp $
+
+*libofx-0.6.4 (28 Apr 2003)
+
+  28 Apr 2003; Alastair Tse <liquidx@gentoo.org> libofx-0.6.4.ebuild:
+  new package. gnucash dependency.
+
