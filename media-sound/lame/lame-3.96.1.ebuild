@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.1.ebuild,v 1.4 2004/10/12 19:22:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.1.ebuild,v 1.5 2004/10/16 16:48:31 gongloo Exp $
 
 IUSE="gtk debug"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/lame/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha hppa amd64 ~ia64 ~mips"
+KEYWORDS="x86 ~ppc sparc ~alpha hppa amd64 ~ia64 ~mips ~ppc-macos"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	gtk? ( =x11-libs/gtk+-1.2* )"
