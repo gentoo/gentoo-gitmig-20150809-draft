@@ -389,7 +389,7 @@ dev-libs/libiconv
 <net-im/licq-1.1.0
 =net-im/gtk+licq-0.51-r2
 # masking licq-console as well due to licq dependency
-net-im/licq-console
+=net-im/licq-console-1.0.2
 
 # Fails to compile... <Verwilst, 6 april 2002>
 =dev-libs/pwlib-1.2.13
