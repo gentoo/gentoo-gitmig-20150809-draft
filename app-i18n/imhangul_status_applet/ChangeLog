@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for app-i18n/imhangul_status_applet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul_status_applet/ChangeLog,v 1.3 2003/01/27 23:48:51 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul_status_applet/ChangeLog,v 1.4 2003/02/05 06:19:58 vapier Exp $
 
 *imhangul_status_applet-0.2-r1 (27 Jan 2003)
 
