@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r1.ebuild,v 1.1 2003/05/29 08:38:56 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r1.ebuild,v 1.2 2003/05/29 22:59:34 carpaski Exp $
 
 IUSE="build"
 
@@ -20,7 +20,6 @@ RDEPEND="!build? ( >=sys-apps/sed-4.0.5 >=sys-apps/fileutils-4.1.8 dev-python/py
 src_unpack() {
 	unpack ${A}
 	cd ${S}/pym
-	gzip -dc ${FILESDIR}/output.py.diff.gz | patch -p0
 }
 
 src_compile() {
