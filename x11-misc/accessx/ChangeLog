@@ -2,8 +2,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # Maintainer: George Shapovalov <george@gentoo.org>
 # /space/gentoo/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.1 2002/02/20 02:58:37 agriffis Exp
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 
 *accessx-950-r1 (24 Jul 2002)

@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/fspanel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fspanel/ChangeLog,v 1.3 2002/12/11 02:57:12 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fspanel/ChangeLog,v 1.4 2002/12/13 11:00:54 blizzy Exp $
 
 *fspanel-0.8_beta1 (29 Jul 2002)
 
@@ -9,8 +9,7 @@
 
   Now works with Xft2.
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *fspanel-0.8_beta1 (29 Jul 2002)
 
