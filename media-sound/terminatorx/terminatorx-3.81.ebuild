@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.1 2003/09/20 06:55:55 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.2 2003/10/28 14:28:57 mholzer Exp $
 
 inherit gnome2
 
@@ -58,7 +58,8 @@ src_compile() {
 		&& myconf="${myconf} --enable-oss" \
 		#|| myconf="${myconf} --disable-oss" # Doesn't work
 	use sox \
-		&& myconf="${myconf} --enable-sox"
+		&& myconf="${myconf} --enable-sox" \
+		|| myconf="${myconf} --disable-sox"
 
 	econf ${myconf}
 
@@ -77,4 +78,3 @@ pkg_postinst() {
 	ewarn "Please read http://www.terminatorx.cx/faq.html#11"
 	ewarn "for details and potential security risks."
 }
-
