@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.11 2003/06/01 05:36:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.12 2003/06/02 08:08:16 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -446,6 +446,12 @@ src_unpack() {
 			fi
 		done
 	fi
+
+	if [ use debug ]
+	then
+		sed -i 's|libidriver.a: $(SUBDIRS)|libidriver.a: all.subdirs|' \
+			programs/Xserver/hw/xfree86/input/Makefile
+	fi
 }
 
 src_compile() {
@@ -461,6 +467,7 @@ src_compile() {
 	unset MAKE_OPTS
 
 	einfo "Building XFree86..."
+
 	emake World || die
 
 	if [ -n "`use nls`" ]

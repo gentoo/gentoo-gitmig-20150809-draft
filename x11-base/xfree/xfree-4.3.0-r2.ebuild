@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.24 2003/06/01 05:36:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.25 2003/06/02 08:08:16 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -204,6 +204,8 @@ src_unpack() {
 	if [ -z "`use debug`" ]
 	then
 		rm -f ${WORKDIR}/patch/202_all_4.2.99.3-acecad-debug.patch.bz2
+	else
+		rm -f ${WORKDIR}/patch/120_all_4.2.99-parallel-make.patch
 	fi
 # FIXME: bug #19812, 075 should be deprecated by 076, left as
 # TDFX_RISKY for feedback (put in -r3 if no problems)
