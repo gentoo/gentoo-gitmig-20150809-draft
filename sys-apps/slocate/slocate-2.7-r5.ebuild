@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.2 2004/01/11 22:54:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.3 2004/01/14 23:19:11 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -33,18 +33,15 @@ src_install() {
 	fperms 0755 /etc/cron.daily/slocate
 	keepdir /var/lib/slocate
 
-	# If this file doesn't exist, the first run of updatedb will create
-	# it anyway.  But doing this shuts it up.
-	if [ ! -f ${ROOT}/var/lib/slocate/slocate.db ] ; then
-		touch ${D}/var/lib/slocate/slocate.db
-	fi
+	# fix bug 37354: nice updatedb
+	sed -i -e 's,^\([[:space:]]*\)\(/usr/bin/updatedb\),\1nice \2,' \
+		${D}/etc/cron.daily/slocate
 
 	dodoc INSTALL LICENSE COPYING AUTHORS NEWS README ChangeLog
 
 	# man page fixing
-	rm -rf ${D}/usr/share/man/man1/locate.1.gz
+	rm -f ${D}/usr/share/man/man1/locate.1.gz
 	dosym slocate.1.gz /usr/share/man/man1/locate.1.gz
-
 
 	insinto /etc
 	doins ${FILESDIR}/updatedb.conf
@@ -61,16 +58,28 @@ pkg_postinst() {
 
 	chown root:slocate /usr/bin/slocate
 
-	# If nobody else minds I'd like to see 2711 become the system wide default. -solar
-	has sfperms ${FEATURES} && chmod 2711 /usr/bin/slocate || chmod 2755 /usr/bin/slocate
+	# If nobody else minds I'd like to see 2711 become the system wide default.
+	# -solar
+	if has sfperms ${FEATURES}; then
+		chmod 2711 /usr/bin/slocate 
+	else
+		chmod 2755 /usr/bin/slocate
+	fi
 
 	chown -R root:slocate /var/lib/slocate
 	chmod 0750 /var/lib/slocate
 
-	ewarn "If you merged slocate-2.7.ebuild, please remove"
-	ewarn "/etc/cron.daily/slocate.cron the .cron is no longer"
-	ewarn "in the filename"
-	echo
+	if [[ -f /etc/cron.daily/slocate.cron ]]; then
+		ewarn
+		ewarn "If you merged slocate-2.7.ebuild, please remove"
+		ewarn "/etc/cron.daily/slocate.cron since .cron has been removed"
+		ewarn "from the filename"
+		ewarn
+		echo
+	fi
+
+	einfo
 	einfo "Note that the /etc/updatedb.conf file is generic"
 	einfo "Please customize it to your system requirements"
+	einfo
 }
