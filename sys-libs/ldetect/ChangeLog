@@ -1,9 +1,9 @@
 # ChangeLog for sys-libs/ldetect
 # Copyright 2002 Damien Krotkine; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect/ChangeLog,v 1.1 2002/12/01 19:02:36 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect/ChangeLog,v 1.2 2002/12/01 20:51:27 dams Exp $
 
-*ldetect-0.4.6 (1 Dec 2002)
+*ldetect-0.4.7 (1 Dec 2002)
 
-  1 Dec 2002; <dams@gentoo.org> Common-0.4.6.ebuild:
+  1 Dec 2002; <dams@gentoo.org> ldetect-0.4.7.ebuild:
 
   Initial version.
