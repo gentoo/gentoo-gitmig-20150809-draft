@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35.ebuild,v 1.6 2004/06/02 05:26:17 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35.ebuild,v 1.7 2004/06/17 09:51:14 pappy Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Standard EXT2 and EXT3 filesystem utilities"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
@@ -31,6 +31,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+
+	# building e2fsprogs on sparc results in silo breaking
+	[ "${ARCH}" = "sparc" ] && filter-flags "-fstack-protector"
 
 	use static \
 		&& myconf="${myconf} --with-ldopts=-static" \
