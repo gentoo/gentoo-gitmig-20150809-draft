@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/rsbac-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.5 2004/06/30 20:48:19 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.6 2004/07/16 17:20:25 kang Exp $
+
+*rsbac-dev-sources-2.6.7-r2 (16 Jul 2004)
+
+  16 Jul 2004; Guillaume Destuynder <kang@gentoo.org>
+  +files/rsbac-dev-sources-CAN-2004-0497.patch,
+  +rsbac-dev-sources-2.6.7-r2.ebuild,
+  -rsbac-dev-sources-2.6.7-r1.ebuild:
+  Fixes CAN 0497 and #56479.
 
 *rsbac-dev-sources-2.6.7-r1 (30 Jun 2004)
 
