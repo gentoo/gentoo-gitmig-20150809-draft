@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.12 2003/05/13 20:55:21 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.13 2003/10/13 20:58:15 liquidx Exp $
+
+  13 Oct 2003; Alastair Tse <liquidx@gentoo.org> libgcrypt-1.1.10.ebuild,
+  libgcrypt-1.1.12.ebuild, libgcrypt-1.1.8.ebuild:
+  stable bump and cleanup
 
   13 May 2003; Tavis Ormandy <taviso@gentoo.org> libgcrypt-1.1.12.ebuild:
   adding ~alpha keyword.
