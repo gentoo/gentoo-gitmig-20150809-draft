@@ -1,0 +1,10 @@
+--- global.h.orig	2003-06-28 02:23:56.000000000 -0400
++++ global.h	2003-06-28 02:19:58.000000000 -0400
+@@ -23,6 +23,7 @@
+ 
+ */
+ 
++#define gettext(s) s
+ #ifndef GLOBAL_H
+ #define GLOBAL_H 1
+ 
