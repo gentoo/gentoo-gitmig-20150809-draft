@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9d9773bbcb5390c9e700e7ee5375db79 multi-gnome-terminal-1.6.2.ebuild 1930
-MD5 f119ce5dcb1be1d4365d8afb27339520 multi-gnome-terminal-1.6.2-r1.ebuild 2012
+MD5 9c0cdf9f340d9352ded5f75f60ed8b0d multi-gnome-terminal-1.6.2-r1.ebuild 2014
 MD5 d417bd77d840c26a367c4d0e15ed9cad ChangeLog 3545
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 d2af4e1acb1bc5842cf1b8b11cb80a3e files/digest-multi-gnome-terminal-1.6.2 80
 MD5 d2af4e1acb1bc5842cf1b8b11cb80a3e files/digest-multi-gnome-terminal-1.6.2-r1 80
 MD5 763affd4473fc41fbbfa967a23a9cbf0 files/multi-gnome-terminal-1.6.2-remove_debug.patch 2559
 MD5 a799552d002f0a012c2001e045e42a2c files/multi-gnome-terminal-1.6.2-gcc-3.4.patch 1250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOfHj/rLF9B432nYRAu8qAJ4rPv88CsQ+E9ilZEoGXq9TjW+twwCcDy1C
+1/e89kCeYpcbmVnAefXDXMQ=
+=Z3kn
+-----END PGP SIGNATURE-----
