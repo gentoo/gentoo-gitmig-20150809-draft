@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp/ChangeLog,v 1.6 2004/04/14 07:10:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp/ChangeLog,v 1.7 2004/04/14 10:27:14 eradicator Exp $
+
+  14 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> wmmp-0.10.0.ebuild:
+  Stable x86.
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> wmmp-0.10.0.ebuild:
   Marked stable on amd64.
