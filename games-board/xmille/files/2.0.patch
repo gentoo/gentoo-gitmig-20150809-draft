@@ -1,0 +1,86 @@
+--- xmille-2.0.orig/roll.c
++++ xmille-2.0/roll.c
+@@ -7,7 +7,7 @@
+ 
+ # define	reg	register
+ 
+-# if (! defined ultrix && ! defined mips && ! defined vax)
++# if (! defined ultrix && ! defined mips && ! defined vax && ! defined linux && !defined __GNU__ )
+ # define	MAXRAND	32767L
+ 
+ roll(ndie, nsides)
+--- xmille-2.0.orig/save.c
++++ xmille-2.0/save.c
+@@ -1,7 +1,8 @@
+ #include	"mille.h"
+ #include	<sys/types.h>
+ #include	<sys/stat.h>
+-#include	<sys/time.h>
++#include	<time.h>
++#include        <errno.h>
+ # ifdef	attron
+ #	include	<term.h>
+ #	define	_tty	cur_term->Nttyb
+@@ -22,7 +23,7 @@
+  *	This routine saves the current game for use at a later date
+  */
+ extern int	errno;
+-extern char	*sys_errlist[];
++/* extern char	*sys_errlist[]; */
+ 
+ save() {
+ 
+@@ -50,7 +51,8 @@
+ 		return FALSE;
+ 
+ 	if ((outf = creat(buf, 0644)) < 0) {
+-		error(sys_errlist[errno]);
++		/* error(sys_errlist[errno]); */
++		strerror(errno);
+ 		return FALSE;
+ 	}
+ 	Error (buf);
+--- xmille-2.0.orig/ui.c
++++ xmille-2.0/ui.c
+@@ -399,6 +399,10 @@
+ 	Colormap	def_cm;
+ 
+ 	dpy = XOpenDisplay ((char *) 0);
++	if (!dpy) {
++		printf("Error: Can't open X Display\n");
++		exit(1);
++	}
+ 	screen = DefaultScreen(dpy);
+ 	def_cm = DefaultColormap(dpy, screen);
+ 	
+--- xmille-2.0.orig/CHANGES
++++ xmille-2.0/CHANGES
+@@ -42,3 +42,9 @@
+ 	Added comments to Imakefile about fonts.
+ 	Packaged for net submittal.
+ 	Updated version number (easier for bug reports).
++
++
++2001-03-29  Steve M. Robbins  <steve@nyongwa.montreal.qc.ca>
++
++	* save.c: Include <time.h> to get struct tm, not <sys/time.h>.
++
+--- xmille-2.0.orig/Imakefile
++++ xmille-2.0/Imakefile
+@@ -5,7 +5,7 @@
+ /**/# Dana Chee
+ /**/#
+ #define IHaveSubdirs
+-#define PassCDebugFlags 'CDEBUGFLAGS=$(CDEBUGFLAGS) DEFINES=$(DEFINES)'
++#define PassCDebugFlags 'CDEBUGFLAGS=$(CDEBUGFLAGS) $(DEFINES)'
+ 
+ HEADERS = ui.h
+ SRCS=	comp.c end.c extern.c init.c mille.c misc.c move.c print.c \
+@@ -17,6 +17,7 @@
+ LOCAL_LIBRARIES =	control/libcontrol.a cards/libcardlib.a $(XLIB) 
+ SYS_LIBRARIES = -lm
+ SUBDIRS = control cards
++BINDIR = /usr/games
+ 
+ /**/# 
+ /**/# This looks better with the timrom12 and timrom12b fonts supplied,
