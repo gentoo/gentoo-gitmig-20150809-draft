@@ -1,4 +1,5 @@
-MD5 a392820e36894d483ed1a141ff893f73 tix-8.2.0.ebuild 1074
-MD5 7c529c73212ea53aab9dd9d03a6ac7de ChangeLog 1059
+MD5 b7018daf62768970ba756d9809fbb80b tix-8.2.0.ebuild 1074
+MD5 2d61c518f952b7dee679fef89970f4d9 ChangeLog 1148
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 19bebbc485fa998898efa8592573adc5 files/tix-8.2.0-gentoo.diff 9779
 MD5 ea64edb8aaac879cf4c5d01ee6349394 files/digest-tix-8.2.0 63
