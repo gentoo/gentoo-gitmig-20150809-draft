@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/bpmdj
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/ChangeLog,v 1.8 2004/03/19 23:32:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/ChangeLog,v 1.9 2004/03/31 18:46:49 eradicator Exp $
+
+*bpmdj-2.3 (31 Mar 2004)
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> bpmdj-1.6.ebuild,
+  bpmdj-1.9.ebuild, bpmdj-2.0.1.ebuild, bpmdj-2.3.ebuild:
+  Added addwrites for QT bug #45658.  Version bump closes bug #40503.
 
   19 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> bpmdj-1.5.ebuild,
   bpmdj-1.6.ebuild, bpmdj-1.7.ebuild, bpmdj-1.8.ebuild, bpmdj-1.9.ebuild,
