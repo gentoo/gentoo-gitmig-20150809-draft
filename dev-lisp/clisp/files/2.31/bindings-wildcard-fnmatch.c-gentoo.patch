@@ -1,0 +1,33 @@
+diff -u clisp-2.31.orig/modules/wildcard/Makefile.in clisp-2.31/modules/wildcard/Makefile.in
+--- clisp-2.31.orig/modules/wildcard/Makefile.in	2000-03-31 18:17:50.000000000 -0600
++++ clisp-2.31/modules/wildcard/Makefile.in	2003-09-04 03:24:14.869343640 -0500
+@@ -24,7 +24,7 @@
+ 	$(CC) $(CFLAGS) -I$(INCLUDES) -c wildcard.c
+ 
+ fnmatch.o : fnmatch.c fnmatch.h
+-	$(CC) $(CFLAGS) -I. -DHAVE_CONFIG_H -D_LIBC -c fnmatch.c
++	$(CC) $(CFLAGS) -I. -DHAVE_CONFIG_H -c fnmatch.c
+ 
+ # Make a module
+ clisp-module : all
+Only in clisp-2.31/modules/wildcard: Makefile.in~
+diff -u clisp-2.31.orig/modules/wildcard/fnmatch.c clisp-2.31/modules/wildcard/fnmatch.c
+--- clisp-2.31.orig/modules/wildcard/fnmatch.c	1998-07-22 15:22:52.000000000 -0500
++++ clisp-2.31/modules/wildcard/fnmatch.c	2003-09-04 03:24:37.101169587 -0500
+@@ -37,9 +37,6 @@
+    program understand `configure --with-gnu-libc' and omit the object files,
+    it is simpler to just do this in the source for each such file.  */
+ 
+-#if defined (_LIBC) || !defined (__GNU_LIBRARY__)
+-
+-
+ # if defined (STDC_HEADERS) || !defined (isascii)
+ #  define ISASCII(c) 1
+ # else
+@@ -237,5 +234,3 @@
+ 
+ # undef FOLD
+ }
+-
+-#endif	/* _LIBC or not __GNU_LIBRARY__.  */
+Only in clisp-2.31/modules/wildcard: fnmatch.c~

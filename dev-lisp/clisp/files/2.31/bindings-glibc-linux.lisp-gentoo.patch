@@ -1,0 +1,22 @@
+diff -u clisp-2.31.orig/modules/bindings/glibc/linux.lisp clisp-2.31/modules/bindings/glibc/linux.lisp
+--- clisp-2.31.orig/modules/bindings/glibc/linux.lisp	2003-08-07 15:23:56.000000000 -0500
++++ clisp-2.31/modules/bindings/glibc/linux.lisp	2003-09-04 02:13:04.383537043 -0500
+@@ -873,8 +873,6 @@
+ ;    (:arguments (x double-float) (iptr (c-ptr double-float) :out))
+ ;  (:return-type double-float))
+ (def-call-out rint (:arguments (x double-float)) (:return-type double-float))
+-(def-call-out scalb (:arguments (x double-float) (n double-float))
+-  (:return-type double-float))
+ (def-call-out nextafter (:arguments (x double-float) (y double-float))
+   (:return-type double-float))
+ (def-call-out remainder (:arguments (x double-float) (y double-float))
+@@ -964,8 +962,6 @@
+ ;    (:arguments (x single-float) (iptr (c-ptr single-float) :out))
+ ;  (:return-type single-float))
+ (def-call-out rintf (:arguments (x single-float)) (:return-type single-float))
+-(def-call-out scalbf (:arguments (x single-float) (n single-float))
+-  (:return-type single-float))
+ (def-call-out nextafterf (:arguments (x single-float) (y single-float))
+   (:return-type single-float))
+ (def-call-out remainderf (:arguments (x single-float) (y single-float))
+Only in clisp-2.31/modules/bindings/glibc/: linux.lisp~

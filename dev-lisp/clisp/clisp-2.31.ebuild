@@ -1,15 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.30-r1.ebuild,v 1.2 2003/09/05 03:21:37 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.31.ebuild,v 1.1 2003/09/05 03:21:37 mkennedy Exp $
 
-IUSE="X threads"
+IUSE="X threads fastcgi postgres ldap"
 
 DESCRIPTION="A portable, bytecode-compiled implementation of Common Lisp"
 HOMEPAGE="http://clisp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/clisp/${P}.tar.bz2"
 S=${WORKDIR}/${P}
-DEPEND="X? ( x11-base/xfree )
-	dev-lisp/common-lisp-controller"
+DEPEND="dev-libs/libsigsegv
+	dev-lisp/common-lisp-controller
+	fastcgi? ( dev-libs/fcgi )
+	postgres? ( dev-db/postgresql )
+	X? ( x11-base/xfree )
+	ldap? ( net-nds/openldap )"
 
 LICENSE="GPL-2"
 SLOT="2"
@@ -17,26 +21,31 @@ KEYWORDS="~x86 ~ppc"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S} && patch -p1 <${FILESDIR}/${P}-gentoo.patch || die
-	cd ${S} && patch -p2 <${FILESDIR}/${P}-linux.lisp-upstream.patch || die
+	cd ${S}
+	patch -p1 <${FILESDIR}/${PV}/bindings-glibc-linux.lisp-gentoo.patch || die
+	patch -p1 <${FILESDIR}/${PV}/bindings-wildcard-fnmatch.c-gentoo.patch || die
 }
 
 src_compile() {
 	local myconf="--with-dynamic-ffi
-		--with-dynamic-modules
-		--with-export-syscalls
-		--with-module=wildcard
+		--with-unicode
 		--with-module=regexp
-		--with-module=bindings/linuxlibc6"
-
-# for the time being, these modules cause segv during build
+		--with-module=syscalls
+		--with-module=bindings/glibc
+		--with-module=wildcard
+		--with-module=queens"
+#		--with-module=netica (netica is non-free, so there is little point in supporting it)
 	use X && myconf="${myconf} --with-module=clx/new-clx"
-# 	use threads && myconf="${myconf} --with-threads=POSIX_THREADS"
-
-	einfo "Configuring with $myconf"
+	use postgres && myconf="${myconf} --with-module=postgresql"
+	use fastcgi && myconf="${myconf} --with-module=fastcgi"
+#	use ldap && myconf="${myconf} --with-module=dirkey" # openldap is currently broken
+	use threads && myconf="${myconf} --with-threads=POSIX_THREADS"
+	unset CFLAGS
 	./configure --prefix=/usr ${myconf} || die "./configure failed"
-	cd src && ./makemake ${myconf} > Makefile
+	cd src
+	./makemake ${myconf} >Makefile
 	make config.lisp
+	sed 's,"vi","nano",g' <config.lisp >config.gentoo && mv config.gentoo config.lisp || die
 	make || die
 }
 
