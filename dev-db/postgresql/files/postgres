@@ -6,7 +6,7 @@
 
 . /etc/rc.d/config/basic
 
-SERVICE=posgres
+SERVICE=postgres
 EXE="/usr/bin/postmaster"
 opts="start stop restart"
 
