@@ -1,6 +1,11 @@
 # ChangeLog for media-video/totem
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.39 2004/11/29 14:22:40 foser Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.40 2005/01/08 23:31:16 foser Exp $
+
+*totem-0.100 (09 Jan 2005)
+
+  09 Jan 2005; foser <foser@gentoo.org> totem-0.100.ebuild :
+  New release, dep fixes
 
   29 Nov 2004; foser <foser@gentoo.org> totem-0.99.{19,22-r1}.ebuild :
   Do the compile fix right #71960 -> #72124, thanks the Ed Catmur for the patch
