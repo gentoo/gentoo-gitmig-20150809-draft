@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.285 2004/07/13 18:47:57 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.286 2004/07/13 19:44:00 lv Exp $
+
+  13 Jul 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.1.ebuild:
+  marking 3.4.1 stable on amd64. fixes bug 56864
 
   13 Jul 2004; Travis Tilley <lv@gentoo.org> files/awk/fixlafiles.awk:
   added Martin Schlemmer's new fixlafiles.awk with support for gcc 3.4 lib paths
