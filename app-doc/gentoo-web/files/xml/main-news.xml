@@ -4,10 +4,21 @@
 <author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
 
 <version>1.0.3</version>
-<date>14 Aug 2001</date>
+<date>16 Aug 2001</date>
 
 <newsitems>
-	<news align="left" graphic="/images/icon-stick1.png">
+	<news align="left" graphic="/images/icon-linux.png">
+		<poster>drobbins</poster>
+		<date>16 Aug 2001</date>
+		<title>New IBM dW tutorial, Hackfest, LWN</title>
+		<body>
+		<p><b>My new <uri link="http://www-105.ibm.com/developerworks/education.nsf/linux-onlinecourse-bytitle/0FB4D16BD2C3E83E86256AA2005244D1?OpenDocument">Linux Backup Tutorial</uri> is now online</b> in the <uri link="http://www.ibm.com/developerworks/linux/">IBM developerWorks Linux Zone</uri>.  In it, I show you how to create a set of automated tape backup scripts based upon <c>star</c>, a high-performance <c>tar</c> archiver that is especially well suited to tape backups.  I also unravel the mysteries behind the <c>mt</c> command and <e>tape block sizes</e>; so if you're curious, give it a read.  Registration is required, but worth it :)
+		</p>
+		<p><b>Lamer (also known as Ben Lutgens of <uri link="http://www.sistina.com">Sistina Software, Inc.</uri>) asked me to announce the semi-official Gentoo Linux Hackfest</b>, this weekend (Aug 17-19) in the <c>#gentoo</c> IRC channel on the <uri link="http://www.openprojects.net">Open Projects IRC Network</uri>.  The goal of this Hackfest is to allow Gentoo Linux users to report bugs and have Gentoo Linux developers fix them on CVS/rsync in real time!  Great idea, lamer!</p>
+		<p>And third, <b>a new issue of <uri link="http://www.lwn.net">the Linux Weekly News</uri> is now online</b>.  I'm a big fan of LWN, and if you want to keep up with what is going on in the Linux world, it's always a good idea to head over to <uri>http://www.lwn.net</uri> every Thursday and give it a read.</p>
+		</body>
+	</news>
+<news align="right" graphic="/images/icon-stick1.png">
 		<poster>drobbins</poster>
 		<date>14 Aug 2001</date>
 		<title>Web site updates</title>
@@ -44,7 +55,7 @@ Right now, the XML component of the news system is complete, and Thread (dev-wik
 		</p>
 		</body>
 	</news>
-	<news align="right" graphic="/images/icon-clock.png">
+	<news align="left" graphic="/images/icon-clock.png">
 		<poster>drobbins</poster>
 		<date>14 Aug 2001</date>
 		<title>Gentoo Linux 1.0_rc6 status update</title>

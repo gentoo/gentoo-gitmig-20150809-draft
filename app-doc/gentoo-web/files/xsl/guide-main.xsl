@@ -290,7 +290,8 @@ of your sale will go towards further Gentoo Linux development.</p>
 						<p class="altmenu">
 						Download Mirrors:<br/>
 							<a class="altlink" href="http://www.ibiblio.org/gentoo">ibiblio.org (USA)</a><br/>
-							<a class="altlink" href="http://cfx5.tgv.net/gentoo/www.ibiblio.org/pub/linux/distributions/gentoo/">tgv.net (France, high speed)</a><br/><br/>
+							<a class="altlink" href="http://cfx5.tgv.net/">tgv.net (France, high speed)</a><br/>
+							<a class="altlink" href="ftp://ftp.ilug-bom.org.in/Linux/distributions/gentoo/">ILUG Bombay (India)</a><br/><br/>
 <a href="http://www.qksrv.net/click-477620-5033206" target="_top" >
 <img src="http://www.qksrv.net/image-477620-5033206" width="88" height="31" alt="Factory-direct memory upgrades" border="0"/></a><br/><br/>
 User Docs:<br/>
