@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.5 2002/07/19 09:54:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.6 2002/08/01 19:16:31 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -16,7 +16,7 @@ INHERITED="$INHERITED $ECLASS"
 # cvs command to run. you can set fex. "cvs -t" for extensive debug information
 # on the cvs onnection. the default of "cvs -q -f -z4" means to be quiet, to disregard
 # the ~/.cvsrc config file and to use maximum compression.
-[ -z "$ECVS_CVS_COMMAND" ] && ECVS_CVS_COMMAND="cvs -q -f -z4"
+[ -z "$ECVS_CVS_COMMAND" ] && ECVS_CVS_COMMAND="cvs -f -z4"
 
 # Where the cvs modules are stored/accessed
 [ -z "$ECVS_TOP_DIR" ] && ECVS_TOP_DIR="/usr/src"
@@ -39,18 +39,15 @@ INHERITED="$INHERITED $ECLASS"
 # I don't like the former ="$NP" default setting
 [ -z "$ECVS_MODULE" ] && die "$ECLASS: error: ECVS_MODULE not set, cannot continue"
 
-# Subdirectory in module to be fetched, default is root "/" = whole module (NOT YET IMPLEMENTED)
-[ -z "$ECVS_MODULE_SUBDIR" ] && ECVS_MODULE_SUBDIR="/"
+# Subdirectory in module to be fetched, default is not defined = whole module
+# DO NOT set default to "", if it's defined at all code will break!
+# don't uncomment following line!
+#[ -z "$ECVS_MODULE_SUBDIR" ] && ECVS_MODULE_SUBDIR=""
 
 # --- end ebuild-configurable settings ---
 
-debug-print "$ECLASS: init: ECVS_CVS_COMMAND=$ECVS_CVS_COMMAND
-ECVS_TOP_DIR=$ECVS_TOP_DIR
-ECVS_SERVER=$ECVS_SERVER
-ECVS_USER=$ECVS_USER
-ECVS_PASS=$ECVS_PASS
-ECS_MODULE=$ECVS_MODULE
-ECVS_MODULE_SUBDIR=$ECVS_MODULE_SUBDIR"
+# add cvs to deps
+DEPEND="$DEPEND dev-util/cvs"
 
 # since we now longer have src_fetch as a redefinable ebuild function,
 # we are forced to call this function from cvs_src_unpack
@@ -58,43 +55,92 @@ cvs_fetch() {
 
 	debug-print-function $FUNCNAME $*
 
-	# disable the sandbox for this dir
-	if [ ! -d "$ECVS_TOP_DIR" ]; then
-	    addwrite $ECVS_TOP_DIR/..
-	    mkdir -p $ECVS_TOP_DIR
-	    adddeny $ECVS_TOP_DIR/..
+	debug-print "$FUNCNAME: init:
+ECVS_CVS_COMMAND=$ECVS_CVS_COMMAND
+ECVS_TOP_DIR=$ECVS_TOP_DIR
+ECVS_SERVER=$ECVS_SERVER
+ECVS_USER=$ECVS_USER
+ECVS_PASS=$ECVS_PASS
+ECS_MODULE=$ECVS_MODULE
+ECVS_MODULE_SUBDIR=$ECVS_SUBDIR
+DIR=$DIR"
+	
+	# a shorthand
+	[ -n "$ECVS_SUBDIR" ] && DIR="${ECVS_TOP_DIR}/${ECVS_MODULE}/${ECVS_SUBDIR}" || \
+							DIR="${ECVS_TOP_DIR}/${ECVS_MODULE}"
+	
+	addread $DIR
+	
+	if [ -z "$ECVS_SERVER" ]; then
+		# we're not required to fetch anything, the module already exists and shouldn't be updated
+	    if [ -d "$DIR" ]; then
+			debug-print "$FUNCNAME: offline mode, exiting"
+			return 0
+	    else
+			einfo "ERROR: Offline mode specified, but module/subdir not found. Aborting."
+			debug-print "$FUNCNAME: offline mode specified but module/subdir not found, exiting with error"
+			return 1
+	    fi
 	fi
-	addread ${ECVS_TOP_DIR}
-	addwrite ${ECVS_TOP_DIR}
+
+	# disable the sandbox for this dir
+	
+	# not just $DIR because we want to create moduletopdir/CVS too
+	addwrite $ECVS_TOP_DIR/$ECVS_MODULE
+	
+	if [ ! -d "$DIR" ]; then
+		debug-print "$FUNCNAME: creating cvs directory $DIR"
+		einfo "Creating directory $DIR"
+		mkdir -p /$DIR
+	fi
 
 	# prepare a cvspass file just for this session so that cvs thinks we're logged
 	# in at the cvs server. we don't want to mess with ~/.cvspass.
 	echo ":pserver:${ECVS_SERVER} A" > ${T}/cvspass
 	export CVS_PASSFILE="${T}/cvspass"
-
-	cd $ECVS_TOP_DIR
-
-	if [ -z "$ECVS_SERVER" ]; then
-		# we're not required to fetch anything, the module already exists and shouldn't be updated
-	    if [ -d "$ECVS_MODULE" ]; then
-			debug-print "$FUNCNAME: offline mode, exiting"
-			return 0
-	    else
-			einfo "ERROR: Offline mode specified, but module not found. Aborting."
-			debug-print "$FUNCNAME: offline mode specified but module not found, exiting with error"
-			return 1
-	    fi
+	#export CVSROOT=:pserver:${ECVS_USER}@${ECVS_SERVER}
+		
+	# Note: cvs update and checkout commands are unified.
+	# we make sure a CVS/ dir exists in our module subdir with the right
+	# Root and Repository entries in it and cvs update.
+	
+	newserver=":pserver:anonymous@${ECVS_SERVER}"
+	
+	# CVS/Repository files can't (I think) contain two concatenated slashes
+	if [ -n "$ECVS_SUBDIR" ]; then
+		repository="${ECVS_MODULE}/${ECVS_SUBDIR}"
+	else
+		repository="${ECVS_MODULE}"
 	fi
+	
+	debug-print "$FUNCNAME: Root<-$newserver, Repository<-$repository"
 
-	if [ -d "${ECVS_MODULE}" ]; then
+	cd $DIR
+	if [ ! -d "$DIR/CVS" ]; then
+		# create a new CVS/ directory (checkout)
+		debug-print "$FUNCNAME: creating new cvs directory"
+		
+		mkdir CVS
+		echo $newserver > CVS/Root
+		echo $repository > CVS/Repository
+		touch CVS/Entries
+		
+		# if we're checking out a subdirectory only, create a CVS/ dir
+		# in the module's top dir so that the user (and we) can cvs update
+		# from there to get the full module.
+		if [ ! -d "$ECVS_TOP_DIR/$ECVS_MODULE/CVS" ]; then
+			debug-print "$FUNCNAME: Copying CVS/ directory to module top-level dir"
+			cp -r CVS $ECVS_TOP_DIR/$ECVS_MODULE/
+			echo $ECVS_MODULE > $ECVS_TOP_DIR/$ECVS_MODULE/CVS/Repository
+		fi
+		
+	else
 		#update existing module
-
-		cd ${ECVS_MODULE}
-
+		debug-print "$FUNCNAME: updating existing module/subdir"
+		
 		# Switch servers if needed
-		# cvs keeps the server info in th CVS/Root file in every checked-out dir;
+		# cvs keeps the server info in the CVS/Root file in every checked-out dir;
 		# we can fix those files to point to the new server
-		newserver=":pserver:anonymous@${ECVS_SERVER}"
 		oldserver="`cat CVS/Root`"
 		if [ "$newserver" != "$oldserver" ]; then
 
@@ -114,19 +160,12 @@ cvs_fetch() {
 
 		fi
 
-		debug-print "$FUNCNAME: running $ECVS_CVS_COMMAND update with $ECVS_SERVER for module $ECVS_MODULE"
-		einfo "Running $ECVS_CVS_COMMAND update with $ECVS_SERVER for module $ECVS_MODULE..."
-		$ECVS_CVS_COMMAND update -dP || die "died running cvs update"
-
-	else 
-	# checkout module
-
-		export CVSROOT=:pserver:${ECVS_USER}@${ECVS_SERVER}
-		debug-print "$FUNCNAME: running $ECVS_CVS_COMMAND checkout -P $ECVS_MODULE with $CVSROOT..."
-		einfo "Running $ECVS_CVS_COMMAND checkout -P $ECVS_MODULE with $CVSROOT..."
-		$ECVS_CVS_COMMAND checkout -P $ECVS_MODULE || die "died running cvs checkout"
-
 	fi
+
+	# finally run the cvs update command
+	debug-print "$FUNCNAME: running $ECVS_CVS_COMMAND update with $ECVS_SERVER for module $ECVS_MODULE subdir $ECVS_SUBDIR"
+	einfo "Running $ECVS_CVS_COMMAND update with $ECVS_SERVER for $ECVS_MODULE/$ECVS_SUBDIR..."
+	$ECVS_CVS_COMMAND update -dP || die "died running cvs update"
 
 }
 
@@ -140,7 +179,8 @@ cvs_src_unpack() {
 	# the reason this lives here and not in kde-source_src_unpack
 	# is that in the future after copying the sources we might need to 
 	# delete them, so this has to be self-contained
-    cp -Rf ${ECVS_TOP_DIR}/${ECVS_MODULE} $WORKDIR
+    [ -n "$ECVS_SUBDIR" ] && cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR $WORKDIR \
+						|| cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE $WORKDIR
     
     # implement some of base_src_unpack's functionality;
     # note however that base.eclass may not have been inherited!

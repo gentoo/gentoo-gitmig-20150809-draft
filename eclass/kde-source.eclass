@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.2 2002/07/18 17:37:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.3 2002/08/01 19:16:31 danarmak Exp $
 
 # This is for kde-base cvs ebuilds. Read comments about settings.
 # It uses $S and sets $SRC_URI, so inherit it as late as possible (certainly after any other eclasses).
@@ -63,19 +63,19 @@ kde-source_src_unpack() {
 	
 	# typically for kde cvs, the admin subdir lives in the kde-common module
 	# which is also needed
-	if [ ! -d "${WORKDIR}/${ECVS_MODULE}/admin" ]; then
-		ECVS_MODULE="kde-common" cvs_src_unpack
-		einfo "Copying admin/ subdir from module kde-common..."
-		debug-print "Copying admin/ subdir from module kde-common..."
-    	mv ${WORKDIR}/kde-common/admin ${WORKDIR}/${ECVS_MODULE}/
+	if [ ! -d "$S/admin" ]; then
+		ECVS_MODULE="kde-common" ECVS_SUBDIR="admin" cvs_src_unpack
+#		einfo "Copying admin/ subdir from module kde-common..."
+#		debug-print "Copying admin/ subdir from module kde-common..."
+    	mv ${WORKDIR}/admin $S/
 	fi
 	
 	# make sure checked-out module is accessible at $S, in case
 	# the ebuild overrode our S=$WORKDIR/$PN setting
-	if [ "$S" != "$WORKDIR/$PN" ]; then
-		cd $WORKDIR
-		ln -sf $PN $S
-	fi
+#	if [ "$S" != "$WORKDIR/$PN" ]; then
+#		cd $WORKDIR
+#		ln -sf $PN $S
+#	fi
 	
 	# make sure we give them a clean cvs checkout
 	cd ${S}
