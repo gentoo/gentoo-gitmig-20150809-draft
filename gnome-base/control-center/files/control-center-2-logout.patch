@@ -1,0 +1,337 @@
+diff -ur control-center-2.8.1/capplets/keybindings/gnome-keybinding-properties.c control-center-2.8.1-patched/capplets/keybindings/gnome-keybinding-properties.c
+--- control-center-2.8.1/capplets/keybindings/gnome-keybinding-properties.c	2004-09-10 10:34:56.000000000 +0800
++++ control-center-2.8.1-patched/capplets/keybindings/gnome-keybinding-properties.c	2004-12-08 11:28:52.339884952 +0800
+@@ -41,13 +41,13 @@
+ const KeyListEntry desktop_key_list[] =
+ {
+   { "/apps/gnome_settings_daemon/keybindings/help", ALWAYS_VISIBLE, 0 },
+-  { "/apps/gnome_settings_daemon/keybindings/power", ALWAYS_VISIBLE, 0 },
+   { "/apps/gnome_settings_daemon/keybindings/sleep", ALWAYS_VISIBLE, 0 },
+   { "/apps/gnome_settings_daemon/keybindings/screensaver", ALWAYS_VISIBLE, 0 },
+   { "/apps/gnome_settings_daemon/keybindings/home", ALWAYS_VISIBLE, 0 },
+   { "/apps/gnome_settings_daemon/keybindings/search", ALWAYS_VISIBLE, 0 },
+   { "/apps/gnome_settings_daemon/keybindings/email", ALWAYS_VISIBLE, 0 },
+   { "/apps/gnome_settings_daemon/keybindings/www", ALWAYS_VISIBLE, 0 },
++  { "/apps/metacity/global_keybindings/logout", ALWAYS_VISIBLE, 0 },
+   { "/apps/metacity/global_keybindings/panel_run_dialog", ALWAYS_VISIBLE, 0 },
+   { "/apps/metacity/global_keybindings/panel_main_menu", ALWAYS_VISIBLE, 0 },
+   { "/apps/metacity/global_keybindings/run_command_screenshot", ALWAYS_VISIBLE, 0 },
+diff -ur control-center-2.8.1/gnome-settings-daemon/actions/acme.h control-center-2.8.1-patched/gnome-settings-daemon/actions/acme.h
+--- control-center-2.8.1/gnome-settings-daemon/actions/acme.h	2004-03-24 10:54:33.000000000 +0800
++++ control-center-2.8.1-patched/gnome-settings-daemon/actions/acme.h	2004-12-08 11:28:52.339884952 +0800
+@@ -29,7 +29,6 @@
+ 	MUTE_KEY,
+ 	VOLUME_DOWN_KEY,
+ 	VOLUME_UP_KEY,
+-	POWER_KEY,
+ 	EJECT_KEY,
+ 	HOME_KEY,
+ 	SEARCH_KEY,
+@@ -64,7 +63,6 @@
+ 	{ MUTE_KEY, GCONF_BINDING_DIR "/volume_mute",NULL },
+ 	{ VOLUME_DOWN_KEY, GCONF_BINDING_DIR "/volume_down", NULL },
+ 	{ VOLUME_UP_KEY, GCONF_BINDING_DIR "/volume_up", NULL },
+-	{ POWER_KEY, GCONF_BINDING_DIR "/power", NULL },
+ 	{ EJECT_KEY, GCONF_BINDING_DIR "/eject", NULL },
+ 	{ HOME_KEY, GCONF_BINDING_DIR "/home", NULL },
+ 	{ SEARCH_KEY, GCONF_BINDING_DIR "/search", NULL },
+diff -ur control-center-2.8.1/gnome-settings-daemon/gnome-settings-multimedia-keys.c control-center-2.8.1-patched/gnome-settings-daemon/gnome-settings-multimedia-keys.c
+--- control-center-2.8.1/gnome-settings-daemon/gnome-settings-multimedia-keys.c	2004-10-09 09:52:01.000000000 +0800
++++ control-center-2.8.1-patched/gnome-settings-daemon/gnome-settings-multimedia-keys.c	2004-12-08 11:28:52.340884800 +0800
+@@ -641,22 +641,6 @@
+ }
+ 
+ static void
+-do_exit_action (Acme *acme)
+-{
+-	GnomeClient *master;
+-
+-	master = gnome_master_client();
+-	g_return_if_fail(master != NULL);
+-
+-	gnome_client_request_save(master,
+-			GNOME_SAVE_BOTH,
+-			TRUE,
+-			GNOME_INTERACT_ANY,
+-			FALSE,
+-			TRUE);
+-}
+-
+-static void
+ do_eject_action (Acme *acme)
+ {
+ 	GtkWidget *progress;
+@@ -797,9 +781,6 @@
+ 	case VOLUME_UP_KEY:
+ 		do_sound_action (acme, type);
+ 		break;
+-	case POWER_KEY:
+-		do_exit_action (acme);
+-		break;
+ 	case EJECT_KEY:
+ 		do_eject_action (acme);
+ 		break;
+diff -ur control-center-2.8.1/schemas/apps_gnome_settings_daemon_keybindings.schemas control-center-2.8.1-patched/schemas/apps_gnome_settings_daemon_keybindings.schemas
+--- control-center-2.8.1/schemas/apps_gnome_settings_daemon_keybindings.schemas	2004-10-15 03:00:04.000000000 +0800
++++ control-center-2.8.1-patched/schemas/apps_gnome_settings_daemon_keybindings.schemas	2004-12-08 11:29:58.511825288 +0800
+@@ -1106,238 +1106,6 @@
+ 
+ 
+         <schema>
+-            <key>/schemas/apps/gnome_settings_daemon/keybindings/power</key>
+-            <applyto>/apps/gnome_settings_daemon/keybindings/power</applyto>
+-            <type>string</type>
+-            <default></default>
+-            <locale name="C">
+-                <short>Log out</short>
+-                <long>Log out's shortcut.</long>
+-            </locale>
+-
+-            <locale name="ar">
+-                <short>تسجيل الخروج</short>
+-                <long>مختصر تسجيل الخروج.</long>
+-            </locale>
+-
+-            <locale name="az">
+-                <short>İclası sonlandır</short>
+-                <long>İclası sonlandırma qısa yolu.</long>
+-            </locale>
+-
+-            <locale name="bg">
+-                <short>Смяна на потребителя</short>
+-                <long>Бърз клавиш за излизане от работната среда.</long>
+-            </locale>
+-
+-            <locale name="bn">
+-                <short>লগ-আউট</short>
+-                <long>লগ-আউট করার শর্টকাট।</long>
+-            </locale>
+-
+-            <locale name="bs">
+-                <short>Odjava</short>
+-                <long>Kratica za odjavu.</long>
+-            </locale>
+-
+-            <locale name="ca">
+-                <short>Surt</short>
+-                <long>Drecera per a sortir.</long>
+-            </locale>
+-
+-            <locale name="cs">
+-                <short>Odhlásit se</short>
+-                <long>Zkratka odhlášení.</long>
+-            </locale>
+-
+-            <locale name="cy">
+-                <short>Allgofnodi</short>
+-                <long>Byrlwybr i allgofnodi.</long>
+-            </locale>
+-
+-            <locale name="da">
+-                <short>Logud</short>
+-                <long>Genvej til logud.</long>
+-            </locale>
+-
+-            <locale name="de">
+-                <short>Abmelden</short>
+-                <long>Abmelden-Tastenkombination.</long>
+-            </locale>
+-
+-            <locale name="el">
+-                <short>Αποσύνδεση</short>
+-                <long>Σύντομευση αποσύνδεσης.</long>
+-            </locale>
+-
+-            <locale name="en_CA">
+-                <short>Log out</short>
+-                <long>Log out&apos;s shortcut.</long>
+-            </locale>
+-
+-            <locale name="en_GB">
+-                <short>Log out</short>
+-                <long>Log out&apos;s shortcut.</long>
+-            </locale>
+-
+-            <locale name="es">
+-                <short>Terminar sesión</short>
+-                <long>Combinación de teclas para terminar sesión.</long>
+-            </locale>
+-
+-            <locale name="fi">
+-                <short>Kirjaudu ulos</short>
+-                <long>Ulos kirjaava pikanäppäin.</long>
+-            </locale>
+-
+-            <locale name="fr">
+-                <short>Déconnexion</short>
+-                <long>Raccourci clavier de « Déconnexion ».</long>
+-            </locale>
+-
+-            <locale name="gu">
+-                <short>બહાર નીકળો</short>
+-                <long>બહાર નીકળવાનું ટુંકાણ.</long>
+-            </locale>
+-
+-            <locale name="hi">
+-                <short>लॉग आउट</short>
+-                <long>लॉगआउट का शॉर्टकट.</long>
+-            </locale>
+-
+-            <locale name="hu">
+-                <short>Kijelentkezés</short>
+-                <long>Kijelentkezés gyorsbillentyűje.</long>
+-            </locale>
+-
+-            <locale name="it">
+-                <short>Termina sessione</short>
+-                <long>Scorciatoia di «Termina sessione».</long>
+-            </locale>
+-
+-            <locale name="ja">
+-                <short>ログアウト</short>
+-                <long>ログアウトする機能のショートカットです。</long>
+-            </locale>
+-
+-            <locale name="ko">
+-                <short>로그아웃</short>
+-                <long>로그아웃 바로 가기.</long>
+-            </locale>
+-
+-            <locale name="lt">
+-                <short>Atsijungti</short>
+-                <long>Atsijungimo susiejimas.</long>
+-            </locale>
+-
+-            <locale name="mk">
+-                <short>Одјави се</short>
+-                <long>Кратенка за одјава.</long>
+-            </locale>
+-
+-            <locale name="nb">
+-                <short>Logg ut</short>
+-                <long>Snarvei for å logge ut.</long>
+-            </locale>
+-
+-            <locale name="nl">
+-                <short>Afmelden</short>
+-                <long>Sneltoets voor afmelden</long>
+-            </locale>
+-
+-            <locale name="nn">
+-                <short>Logg ut</short>
+-                <long>Snøggtast som loggar ut.</long>
+-            </locale>
+-
+-            <locale name="no">
+-                <short>Logg ut</short>
+-                <long>Snarvei for å logge ut.</long>
+-            </locale>
+-
+-            <locale name="pa">
+-                <short>ਬਾਹਰੀ ਦਰ</short>
+-                <long>ਬਾਹਰੀ ਦਰ ਦਾ ਸ਼ਾਰਟਕਟ ਹੈ।</long>
+-            </locale>
+-
+-            <locale name="pl">
+-                <short>Wylogowanie</short>
+-                <long>Klawisz skrótu wylogowania.</long>
+-            </locale>
+-
+-            <locale name="pt">
+-                <short>Terminar a sessão</short>
+-                <long>Atalho para terminar a sessão.</long>
+-            </locale>
+-
+-            <locale name="pt_BR">
+-                <short>Sair</short>
+-                <long>Atalho para Sair</long>
+-            </locale>
+-
+-            <locale name="ro">
+-                <short>Deautentificare</short>
+-                <long>Combinaţie pentru Deautentificare</long>
+-            </locale>
+-
+-            <locale name="ru">
+-                <short>Завершить сеанс</short>
+-                <long>Комбинация клавиш для завершения сеанса.</long>
+-            </locale>
+-
+-            <locale name="sq">
+-                <short>Dil jashtë</short>
+-                <long>Shpejtuesi i tasteve për daljen jashtë(log out).</long>
+-            </locale>
+-
+-            <locale name="sr">
+-                <short>Одјава</short>
+-                <long>Пречица за одјављивање.</long>
+-            </locale>
+-
+-            <locale name="sr@Latn">
+-                <short>Odjava</short>
+-                <long>Prečica za odjavljivanje.</long>
+-            </locale>
+-
+-            <locale name="sv">
+-                <short>Logga ut</short>
+-                <long>Genvägen för logga ut.</long>
+-            </locale>
+-
+-            <locale name="ta">
+-                <short>இட அமைவு.</short>
+-                <long>_கனிமேசை குறுக்கு வழிகள்.</long>
+-            </locale>
+-
+-            <locale name="th">
+-                <short>ออกจากระบบ</short>
+-                <long>ปุ่มลัดสำหรับออกจากระบบ</long>
+-            </locale>
+-
+-            <locale name="tr">
+-                <short>Çıkış</short>
+-                <long>Çıkış&apos;ın kısayolu.</long>
+-            </locale>
+-
+-            <locale name="uk">
+-                <short>Завершення роботи</short>
+-                <long>Комбінація клавіш для завершення роботи.</long>
+-            </locale>
+-
+-            <locale name="vi">
+-                <short>Đăng xuất</short>
+-                <long>Phím tắt Đăng xuất.</long>
+-            </locale>
+-
+-            <locale name="zh_CN">
+-                <short>注销</short>
+-                <long>注销的快捷键。</long>
+-            </locale>
+-        </schema>
+-
+-
+-        <schema>
+             <key>/schemas/apps/gnome_settings_daemon/keybindings/eject</key>
+             <applyto>/apps/gnome_settings_daemon/keybindings/eject</applyto>
+             <type>string</type>
+diff -ur control-center-2.8.1/schemas/apps_gnome_settings_daemon_keybindings.schemas.in control-center-2.8.1-patched/schemas/apps_gnome_settings_daemon_keybindings.schemas.in
+--- control-center-2.8.1/schemas/apps_gnome_settings_daemon_keybindings.schemas.in	2004-05-18 01:03:38.000000000 +0800
++++ control-center-2.8.1-patched/schemas/apps_gnome_settings_daemon_keybindings.schemas.in	2004-12-08 11:28:52.341884648 +0800
+@@ -50,18 +50,6 @@
+ 
+ 
+         <schema>
+-            <key>/schemas/apps/gnome_settings_daemon/keybindings/power</key>
+-            <applyto>/apps/gnome_settings_daemon/keybindings/power</applyto>
+-            <type>string</type>
+-            <default></default>
+-            <locale name="C">
+-                <short>Log out</short>
+-                <long>Log out's shortcut.</long>
+-            </locale>
+-        </schema>
+-
+-
+-        <schema>
+             <key>/schemas/apps/gnome_settings_daemon/keybindings/eject</key>
+             <applyto>/apps/gnome_settings_daemon/keybindings/eject</applyto>
+             <type>string</type>
