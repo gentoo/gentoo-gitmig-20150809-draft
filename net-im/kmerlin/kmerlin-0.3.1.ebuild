@@ -7,15 +7,15 @@ S=${WORKDIR}/${P}
 DESCRIPTION="KMerlin 0.3.1"
 SRC_URI="http://prdownloads.sourceforge.net/kmsn/kmerlin-0.3.1.tar.gz"
 
-HOMEPAGE="http://kmsn.sourceforge.net"
+HOMEPAGE="http://kmerlin.olsd.de"
 
 DEPEND="virtual/glibc
-         	>=x11-libs/qt-x11-2.2.1
-        	>=kde-base/kdelibs-2.1"
+        >=x11-libs/qt-x11-2.2.1
+        >=kde-base/kdelibs-2.1"
 
 src_compile() {
 
-    ./configure --prefix=/usr --host=${CHOST} || die
+    ./configure --host=${CHOST} || die
     make || die
 
 }
