@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.1.ebuild,v 1.1 2003/11/27 19:11:40 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.1.ebuild,v 1.2 2003/12/26 10:24:33 plasmaroo Exp $
 
 inherit flag-o-matic
 
@@ -13,13 +13,14 @@ SRC_URI="http://www.lm-sensors.nu/archive/${MY_P}.tar.gz"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
 
 SLOT="${KV}"
-# gentoo-sources-2.4.20-r1 and xfs-sources-2.4.20-r1 will
-# have support for this package, do not change these to ~
-# until your arch has i2c-2.7.0 in it's kernel.
+
+# Dependencies here are either for I2C or gentoo-sources 2.4.22
 KEYWORDS="~x86 ~amd64 -ppc -sparc"
 LICENSE="GPL-2"
 
-DEPEND=">=sys-apps/i2c-2.8.1"
+DEPEND="|| (	>=sys-apps/i2c-2.8.1
+		>=sys-kernel/gentoo-sources-2.4.22
+	)"
 
 src_unpack() {
 	unpack ${A} || die
@@ -36,10 +37,11 @@ src_compile()  {
 	einfo "*****************************************************************"
 	einfo
 	einfo "This ebuild assumes your /usr/src/linux kernel is the one you"
-	einfo "used to build i2c-2.8.0. and is >=2.4.9 && < 2.5+"
+	einfo "used to build i2c-2.8.1. and is >=2.4.9 && < 2.5+"
 	einfo
 	einfo "For 2.5+ series kernels, use the support already in the kernel"
-	einfo "under 'Character devices' -> 'I2C support'."
+	einfo "under 'Character devices' -> 'I2C support' and get lm-sensors"
+	einfo "2.8.2."
 	einfo
 	einfo "To cross-compile, 'export LINUX=\"/lib/modules/<version>/build\"'"
 	einfo "or symlink /usr/src/linux to another kernel."
@@ -89,6 +91,7 @@ src_install() {
 	dodoc BACKGROUND BUGS CHANGES CONTRIBUTORS COPYING INSTALL QUICKSTART \
 		README* RPM TODO
 	cp -a doc/* ${D}/usr/share/doc/${PF}
+
 }
 
 pkg_postinst() {

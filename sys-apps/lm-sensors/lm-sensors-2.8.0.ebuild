@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.0.ebuild,v 1.6 2003/10/30 22:18:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.0.ebuild,v 1.7 2003/12/26 10:24:33 plasmaroo Exp $
 
 inherit flag-o-matic
 
@@ -13,10 +13,7 @@ SRC_URI="http://www.lm-sensors.nu/archive/${MY_P}.tar.gz"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
 
 SLOT="${KV}"
-# gentoo-sources-2.4.20-r1 and xfs-sources-2.4.20-r1 will
-# have support for this package, do not change these to ~
-# until your arch has i2c-2.7.0 in it's kernel.
-KEYWORDS="~x86 ~amd64 -ppc -sparc"
+KEYWORDS="x86 ~amd64 -ppc -sparc"
 LICENSE="GPL-2"
 
 DEPEND=">=sys-apps/i2c-2.8.0"

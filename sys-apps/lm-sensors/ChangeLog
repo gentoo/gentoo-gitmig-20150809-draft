@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.11 2003/12/13 23:22:27 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.12 2003/12/26 10:24:33 plasmaroo Exp $
+
+  26 Dec 2003; <plasmaroo@gentoo.org> lm-sensors-2.8.0.ebuild,
+  lm-sensors-2.8.1.ebuild, files/rc:
+  Changed KEYWORDS to reflect the availability of I2C 2.8.1 in
+  gentoo-sources-2.4.22. Also updated the initialization script to support 2.6
+  kernels. This closes bug #36243 and bug #35709.
 
 *lm-sensors-2.8.2 (13 Dec 2003)
 

@@ -13,14 +13,30 @@ start() {
 		return 1
 	fi
 
-	ebegin "Loading lm_sensors modules"
-	eend $?
-	if ! [ -e /proc/sys/dev/sensors ] ; then
+	einfo "Loading lm_sensors modules..."
+
+	mount | grep sysfs &>/dev/null
+	if [ $? == 0 ]; then
+		if ! [ -e /sys/i2c ]; then
+			ebegin "  Loading i2c-core"
+			modprobe i2c-core &>/dev/null
+			if [ $? != 0 ]; then
+				eerror "    Could not load i2c-core!"
+				eend 1
+			fi
+			[ -e /sys/i2c ] || return 1
+			eend 0
+		fi
+	elif ! [ -e /proc/sys/dev/sensors ]; then
 		ebegin "  Loading i2c-proc"
 		modprobe i2c-proc &>/dev/null
-		eend $?
+		if [ $? != 0 ]; then
+			eerror "    Could not load i2c-proc!"
+			eend 1
+		fi
+		[ -e /proc/sys/dev/sensors ] || return 1
+		eend 0
 	fi
-	[ -e /proc/sys/dev/sensors ] || return 1
 
 	i=0
 	while true; do
@@ -71,10 +87,12 @@ stop() {
 		eend $?
 	done
 
-	# should we actually remove i2c-proc???
-	ebegin "  Removing i2c-proc"
-	rmmod i2c-proc &>/dev/null
-	eend $?
+	if [ -e /proc/sys/dev/sensors ] ; then
+		ebegin "  Removing i2c-proc"
+		rmmod i2c-proc &>/dev/null
+		eend $?
+	fi
 
 	return 0
+
 }
