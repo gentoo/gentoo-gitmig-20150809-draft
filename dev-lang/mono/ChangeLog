@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.11 2003/02/12 05:57:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.12 2003/02/24 15:53:41 foser Exp $
+
+*mono-0.20 (24 Feb 2003)
+
+  24 Feb 2003; foser <foser@gentoo.org> mono-0.20.ebuild :
+  New version
 
 *mono-0.19 (22 Jan 2003)
 
