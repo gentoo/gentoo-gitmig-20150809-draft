@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.13-r1.ebuild,v 1.1 2002/11/22 01:27:36 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.13-r1.ebuild,v 1.2 2002/11/27 10:44:35 mkeadle Exp $
 
 IUSE="nls"
 
@@ -26,6 +26,9 @@ src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${S}
 	patch -p1 < ${FILESDIR}/fluxbox-0.1.13-menukey.patch
+	patch -p1 < ${FILESDIR}/${P}-aa2.patch
+	patch -p1 < ${FILESDIR}/${P}-openoffice.patch
+	patch -p0 < ${FILESDIR}/${P}-nls.patch
 }
 
 src_compile() {
