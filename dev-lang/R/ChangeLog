@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.14 2004/02/17 10:05:24 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.15 2004/02/25 07:25:48 phosphan Exp $
+
+  25 Feb 2004; Patrick Kursawe <phosphan@gentoo.org> R-1.4.1-r1.ebuild,
+  R-1.4.1.ebuild, R-1.5.1.ebuild, R-1.6.1.ebuild, R-1.6.2.ebuild,
+  R-1.7.0.ebuild, R-1.7.1.ebuild, R-1.8.0.ebuild, files/R-1.5.1-tcltk.diff:
+  Big cleanup, marking 1.8.0 as stable
 
 *R-1.8.1 (17 Feb 2004)
 
