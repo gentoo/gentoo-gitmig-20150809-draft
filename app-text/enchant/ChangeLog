@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enchant
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.4 2003/08/25 13:33:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.5 2003/08/30 12:41:16 weeve Exp $
+
+  30 Aug 2003; Jason Wever <weeve@gentoo.org> enchant-0.2.0.ebuild:
+  Added ~sparc to keywords.
 
 *enchant-0.1.2 (25 Aug 2003)
 
