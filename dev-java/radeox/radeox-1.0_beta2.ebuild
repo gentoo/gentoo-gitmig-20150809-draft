@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/radeox/radeox-1.0_beta2.ebuild,v 1.7 2005/03/29 16:18:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/radeox/radeox-1.0_beta2.ebuild,v 1.8 2005/03/29 16:20:14 luckyduck Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://snipsnap.org/radeox/${PN}-1.0-BETA-2-src.tgz"
 LICENSE="LGPL-2.1"
 SLOT="1"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="doc"
+IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant
 	jikes? ( dev-java/jikes )"
