@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0_beta1.ebuild,v 1.4 2005/01/17 17:30:47 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0_beta1.ebuild,v 1.5 2005/01/18 23:43:35 greg_g Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
 KEYWORDS="~x86"
-IUSE="arts cups java ldap lm_sensors logitech-mouse opengl pam samba sasl ssl"
+IUSE="arts cups java ldap lm_sensors logitech-mouse opengl pam samba ssl"
 
 DEPEND="arts? ( ~kde-base/arts-${PV} )
 	ldap? ( >=net-nds/openldap-2 )
@@ -15,9 +15,9 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	cups? ( net-print/cups )
 	ssl? ( dev-libs/openssl )
 	opengl? ( virtual/opengl )
-	samba? ( >=net-fs/samba-3.0.1 )
+	samba? ( >=net-fs/samba-3.0.4 )
 	java? ( || ( virtual/jdk virtual/jre ) )
-	sasl? ( >=dev-libs/cyrus-sasl-2 )
+	>=dev-libs/cyrus-sasl-2
 	lm_sensors? ( sys-apps/lm-sensors )
 	logitech-mouse? ( dev-libs/libusb )
 	>=media-libs/freetype-2.1.3" # for kfontinst
