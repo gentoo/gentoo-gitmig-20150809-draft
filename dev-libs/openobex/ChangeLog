@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openobex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.14 2004/07/05 18:15:31 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.15 2004/07/19 00:09:48 aliz Exp $
+
+  19 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> openobex-1.0.1.ebuild:
+  Added gnuconfig_update.
 
   03 Jul 2004; Danny van Dyk <kugelfang@gentoo.org>
   +files/openobex-1.0.1-shared-object.patch, openobex-1.0.1.ebuild:
