@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.6.8a.ebuild,v 1.1 2002/10/23 14:48:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.6.8a.ebuild,v 1.2 2002/11/15 01:10:17 vapier Exp $
 
 DESCRIPTION="Cacti is a complete frondend to rrdtool"
 HOMEPAGE="http://www.raxnet.net/products/cacti/"
@@ -10,6 +10,7 @@ IUSE="snmp"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+
 DEPEND=""
 RDEPEND="net-www/apache
 	snmp? ( net-analyzer/ucd-snmp )
@@ -17,9 +18,9 @@ RDEPEND="net-www/apache
 	dev-php/php
 	dev-php/mod_php"
 
-S="${WORKDIR}/${P}"
-
-INSTALL_DEST=/home/httpd/htdocs/cacti
+INSTALL_DEST="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
+[ -z "${INSTALL_DEST}" ] && INSTALL_DEST="/home/httpd/htdocs"
+INSTALL_DEST="${INSTALL_DEST}/cacti"
 
 src_install() {
 	dodoc docs/{CHANGELOG,CONTRIB,README}

@@ -1,8 +1,11 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.1 2002/10/23 14:48:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.2 2002/11/15 01:10:17 vapier Exp $
 
 *cacti-0.6.8a (23 Oct 2002)
+
+  14 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Replaced hardcoding of /home/httpd/htdocs with a grep of /etc/apache/conf/apache.conf
 
   23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   Initial import. Ebuild submitted by me.
