@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rdiff-backup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/ChangeLog,v 1.13 2003/07/07 17:55:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/ChangeLog,v 1.14 2003/08/06 19:34:58 mholzer Exp $
+
+*rdiff-backup-0.12.2 (06 Aug 2003)
+
+  06 Aug 2003; Martin Holzer <mholzer@gentoo.org> rdiff-backup-0.12.2.ebuild:
+  Version bumped.
 
 *rdiff-backup-0.12.0 (07 Jul 2003)
 
