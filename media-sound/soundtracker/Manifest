@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4af5af3a74d27d7e1ca20875267d5752 ChangeLog 2360
+MD5 ff644313511acb941a22efeaaa7366d4 ChangeLog 2463
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 338a9c5668ac402d5191e55f436dc9cf soundtracker-0.6.6.ebuild 1241
-MD5 a7a505f30892eb4120cc151dc043dacf soundtracker-0.6.7.ebuild 1696
+MD5 542c69b4af5e8bd75711fa65c75e0bd9 soundtracker-0.6.7.ebuild 1696
 MD5 101f1904a2972826f42c6ba029667728 files/digest-soundtracker-0.6.6 70
 MD5 5cbb33544d36f65f595aa8b229e9b515 files/digest-soundtracker-0.6.7 70
 MD5 369a16c17d2850a6ed6d6fee6c9f72fc files/soundtracker-0.6.7-alsa1.patch 951
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZhzSArHZZzCEUG0RAkQHAJ9cQSL0cb0MT8xdfpbn83xmWVs96wCfX2NN
-uxmzZqvVBmRa1d9f9sD/ySA=
-=5B9K
+iD8DBQFBxSPXArHZZzCEUG0RAsCGAJ4u3t3fsXLiJPggRaMcwFo7LHN/hQCfZcko
+VqH0EvuO0Zl7vuf2Xp6HL/E=
+=LwLr
 -----END PGP SIGNATURE-----
