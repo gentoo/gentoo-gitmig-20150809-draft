@@ -1,6 +1,6 @@
 # ChangeLog for games-board/gnubg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.13 2004/12/17 08:40:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.14 2004/12/27 04:31:48 vapier Exp $
 
   17 Dec 2004; David Holm <dholm@gentoo.org> gnubg-0.14.2.ebuild:
   Added to ~ppc.
@@ -9,7 +9,7 @@
   filter-flags -ffast-math #bug #67929
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> gnubg-0.14.2.ebuild:
-  Added to -amd64.
+  Added to -amd64 (game segfaults on startup).
 
   12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gnubg-0.14.2.ebuild:
   Added to ~sparc.  Closes bug #38396.

@@ -1,6 +1,16 @@
-MD5 cb670c94cd9665c4d49e89edd048e1fa ChangeLog 1815
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9532ad09eabd19c5ef49a353dae1dac6 ChangeLog 1844
 MD5 7bc659276e35c74af2850c203e8e50c4 gnubg-0.13.0-r1.ebuild 2495
-MD5 86cc19fa9a00b9da3e0beba055e7ef31 gnubg-0.14.2.ebuild 2820
 MD5 3f11aaf297b2fe67404a96cda13e9bfe metadata.xml 251
-MD5 14a8f9e2546292fc22c04fbea97287f7 files/digest-gnubg-0.13.0-r1 188
+MD5 789625bc8c658772924228d061e12fa1 gnubg-0.14.2.ebuild 2772
 MD5 0c7a8ec2862198de493c51ea97e3eed6 files/digest-gnubg-0.14.2 252
+MD5 14a8f9e2546292fc22c04fbea97287f7 files/digest-gnubg-0.13.0-r1 188
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBz5BEroRuSHgZdywRAjVhAJ9F4s/60ghwnZmaq0yPQhTQbP4FdwCfbOX4
+z2TszZP37YFQO9hSfKedE3g=
+=0Jy1
+-----END PGP SIGNATURE-----

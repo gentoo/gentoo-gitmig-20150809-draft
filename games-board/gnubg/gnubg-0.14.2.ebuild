@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.2.ebuild,v 1.7 2004/12/17 08:40:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.2.ebuild,v 1.8 2004/12/27 04:31:48 vapier Exp $
 
 inherit gnuconfig flag-o-matic games
 
@@ -14,9 +14,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/gnubg/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-
-#-amd64: segfault on game start -- eradicator
-KEYWORDS="~x86 ~sparc -amd64 ~ppc"
+KEYWORDS="-amd64 ~ppc ~sparc x86"
 IUSE="gtk gtk2 readline python guile X gdbm truetype nls png esd arts nas"
 
 # FIXME does this need to DEPEND on netpbm?
@@ -51,8 +49,8 @@ src_unpack() {
 	if  use nas ; then
 		# couldn't find -laudio without this.  Very odd.
 		sed -i \
-			-e "s:-laudio:-L/usr/X11R6/lib/ -laudio:" configure.in || \
-				die "sed configure.in failed"
+			-e "s:-laudio:-L/usr/X11R6/lib/ -laudio:" configure.in \
+			|| die "sed configure.in failed"
 	fi
 	gnuconfig_update
 }
