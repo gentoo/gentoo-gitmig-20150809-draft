@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.3.18.ebuild,v 1.3 2003/07/16 18:21:44 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.3.18.ebuild,v 1.4 2003/07/20 18:48:33 lanius Exp $
 
 IUSE="nls gtk readline cups foomaticdb ppds"
 
@@ -42,13 +42,14 @@ src_compile() {
 
 	if [ `use cups` ]; then
 		myconf="${myconf} --with-cups"
-		if [ `use ppds` ]; then
-			myconf="${myconf} --enable-cups-ppds"
-		else
-			myconf="${myconf} --disable-cups-ppds"
-		fi
 	else
 		myconf="${myconf} --without-cups"
+	fi
+
+	if [ `use ppds` -a `use ppds` ]; then
+		myconf="${myconf} --enable-cups-ppds"
+	else
+		myconf="${myconf} --disable-cups-ppds"
 	fi
 	
 	use foomaticdb \
