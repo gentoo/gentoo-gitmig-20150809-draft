@@ -1,6 +1,8 @@
 # ChangeLog for x11-themes/gtk-engines-geramik
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/ChangeLog,v 1.22 2004/07/03 14:26:29 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/ChangeLog,v 1.23 2004/07/17 21:30:48 aliz Exp $
+
+*gtk-engines-geramik-0.27 (03 Jul 2004)
 
   03 Jul 2004; <pyrania@gentoo.org> :
   Version bump. Closing bug #54074.

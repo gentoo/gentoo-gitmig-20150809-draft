@@ -1,6 +1,8 @@
 # ChangeLog for x11-themes/gnome-themes-extras
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.18 2004/06/24 23:28:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.19 2004/07/17 21:30:48 aliz Exp $
+
+*gnome-themes-extras-0.7 (09 Jun 2004)
 
   09 Jun 2004; Yi Qiang <khai@gentoo.org> :
   Version bump
