@@ -1,0 +1,7 @@
+MD5 143327b75a1b113f378ad179fe4c9951 xv-3.10a-r3.ebuild 1507
+MD5 a1af7e816b30618ebacfbf86bbc9a0b6 ChangeLog 2667
+MD5 0882c0dbf1e66f66dcdec7b678db2793 xv-3.10a-r2.ebuild 1222
+MD5 f0dfce1262042f01e76412c96ba62d25 files/digest-xv-3.10a-r2 125
+MD5 f0dfce1262042f01e76412c96ba62d25 files/digest-xv-3.10a-r3 125
+MD5 4590eadc74a630f5aa530a08b4102a3c files/xv.diff 3838
+MD5 a533b616d1b8911f97cc37cd89dccd6f files/xv-3.10a-ppc.patch 1202

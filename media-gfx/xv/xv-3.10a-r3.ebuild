@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.4 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.5 2003/05/27 01:00:03 taviso Exp $
+
+inherit ccc
 
 IUSE="png"
 
@@ -46,6 +48,7 @@ src_compile() {
 	sed -e "s:COPTS=\t-O:COPTS= ${CFLAGS}:" \
 		Makefile.orig > Makefile
 	cd ..
+	is-ccc && replace-cc-hardcode 
 	make || die
 }
 
