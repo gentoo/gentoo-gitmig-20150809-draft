@@ -1,21 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 deeeb298766d14df9dd4bec326208877 ChangeLog 5485
 MD5 ecbb5a02001856289bc050635b8d8394 metadata.xml 522
 MD5 4f03dd69be734fbd9aa2969d30ebb2c2 phpwebsite-0.10.0.ebuild 1433
 MD5 41dbaed8aafa97c8930480adc9d77c58 phpwebsite-0.9.3_p4-r1.ebuild 1636
-MD5 2605b5e8abb079f71b12202c38a8f86d phpwebsite-0.10.0-r1.ebuild 1616
-MD5 327bb207c31e945e61c642c16a8e5df8 ChangeLog 5324
 MD5 c9b0b64992415f435bb5cf0b8f603435 phpwebsite-0.9.3_p4-r2.ebuild 1853
+MD5 2605b5e8abb079f71b12202c38a8f86d phpwebsite-0.10.0-r1.ebuild 1616
+MD5 348acb5a77c3da67632229d3548d49d6 phpwebsite-0.10.0-r2.ebuild 1737
+MD5 6ddbbfb4f4e1e5c4d8bf717835d3c2d8 files/digest-phpwebsite-0.9.3_p4-r2 239
+MD5 dab689c75fd084b695c69c427aa758b8 files/digest-phpwebsite-0.10.0 75
 MD5 9db128d972b5f4cbbda4723ba50699d7 files/postinstall-en.txt 466
 MD5 e328ec89d9602d614fbf60f87988f218 files/digest-phpwebsite-0.10.0-r1 147
-MD5 dab689c75fd084b695c69c427aa758b8 files/digest-phpwebsite-0.10.0 75
 MD5 823ff723bde0deb5142a1753183467fd files/digest-phpwebsite-0.9.3_p4-r1 157
-MD5 6ddbbfb4f4e1e5c4d8bf717835d3c2d8 files/digest-phpwebsite-0.9.3_p4-r2 239
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCIa+VugEuf3OQ0akRAqHwAKCQnSLREoqxFUdRi0UGOjHZ2rsv0wCggabe
-i6exuFdVlL3SmWql1cN3x+0=
-=y8Pf
------END PGP SIGNATURE-----
+MD5 c50eef019c793463d0818d3fe35b46f4 files/digest-phpwebsite-0.10.0-r2 221
