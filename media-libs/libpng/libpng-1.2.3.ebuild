@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.3.ebuild,v 1.1 2002/05/26 11:20:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.3.ebuild,v 1.2 2002/06/05 05:19:39 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libpng"
@@ -28,7 +28,12 @@ src_install() {
 		DESTDIR=${D} \
 		MANPATH=/usr/share/man \
 		install || die
-
+	
+#	rm ${D}/usr/lib/libpng.so
+#	rm ${D}/usr/lib/libpng.a
+#	rm ${D}/usr/include/png.h
+#	rm ${D}/usr/include/pngconf.h
+	
 	doman *.[35]
 	dodoc ANNOUNCE CHANGES KNOWNBUG LICENSE README TODO Y2KINFO
 }
