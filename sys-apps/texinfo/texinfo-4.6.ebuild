@@ -1,22 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.6.ebuild,v 1.10 2004/04/09 05:05:36 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.6.ebuild,v 1.11 2004/04/24 08:07:35 vapier Exp $
 
-IUSE="nls build"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="The GNU info program and utilities"
-SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/texinfo/"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 amd64 ppc ~sparc ~alpha ~hppa ~mips ia64 ppc64 s390"
+SLOT="0"
+KEYWORDS="~x86 ppc ppc64 ~sparc ~mips ~alpha arm ~hppa amd64 ia64 s390"
+IUSE="nls build"
 
 DEPEND="virtual/glibc
 	!build? ( >=sys-libs/ncurses-5.2-r2
-	          >=sys-apps/sed-4.0.5
-	          nls? ( sys-devel/gettext ) )"
+		>=sys-apps/sed-4.0.5
+		nls? ( sys-devel/gettext ) )"
 
 RDEPEND="virtual/glibc
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
@@ -36,7 +34,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=
-	if [ -z "`use nls`" ] || [ -n "`use build`" ] ; then
+	if ! use nls || use build ; then
 		myconf="--disable-nls"
 	fi
 
@@ -47,7 +45,7 @@ src_compile() {
 }
 
 src_install() {
-	if [ -n "`use build`" ] ; then
+	if use build ; then
 		mv util/ginstall-info util/install-info
 		dobin makeinfo/makeinfo util/{install-info,texi2dvi,texindex}
 	else
@@ -62,7 +60,7 @@ src_install() {
 			die "Could not install texinfo.info!!!"
 		fi
 
-		dodoc AUTHORS ChangeLog COPYING INTRODUCTION NEWS README TODO
+		dodoc AUTHORS ChangeLog INTRODUCTION NEWS README TODO
 		docinto info
 		dodoc info/README
 		docinto makeinfo
