@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.36 2005/01/12 20:53:14 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.37 2005/01/18 21:42:31 dsd Exp $
+
+  19 Jan 2005; Daniel Drake <dsd@gentoo.org> -slmodem-2.9.10-r1.ebuild,
+  slmodem-2.9.9a.ebuild:
+  2.9.9a stable on x86. Removing 2.9.10 because of licensing issues. There are
+  no differences between 2.9.9 and 2.9.10 so moving from 2.9.10-r1 to 2.9.9a
+  *can* be considered an upgrade. See bug 77184
 
 *slmodem-2.9.9a (12 Jan 2005)
 
