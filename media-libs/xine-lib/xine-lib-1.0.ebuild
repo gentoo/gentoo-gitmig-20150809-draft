@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.22 2005/03/17 06:22:38 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.23 2005/03/17 10:13:14 swegener Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -39,7 +39,7 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	samba? ( net-fs/samba )
 	png? ( media-libs/libpng )
 	mng? ( media-libs/libmng )
-	ffmpeg? (>=ffmpeg-0.4.9_p20050226-r1)"
+	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050226-r1 )"
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.59

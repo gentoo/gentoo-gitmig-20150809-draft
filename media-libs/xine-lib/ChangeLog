@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.196 2005/03/17 06:22:37 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.197 2005/03/17 10:13:14 swegener Exp $
+
+  17 Mar 2005; Sven Wegener <swegener@gentoo.org> xine-lib-1.0.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   17 Mar 2005; Chris White <chriswhite@gentoo.org> xine-lib-1.0.ebuild:
   Specifically targeted latest ffmpeg as dep target. Regression of ppc64.
