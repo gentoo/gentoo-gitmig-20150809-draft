@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.33.ebuild,v 1.5 2004/01/31 09:58:47 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.33.ebuild,v 1.6 2004/02/02 21:07:56 mholzer Exp $
 
 inherit libtool
 
@@ -18,6 +18,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
 
 DEPEND="media-libs/libpng
+	media-libs/libexif
 	sys-libs/zlib"
 #	flash? ( media-libs/ming )"
 
