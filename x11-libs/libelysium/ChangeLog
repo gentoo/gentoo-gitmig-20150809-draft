@@ -1,6 +1,6 @@
-# ChangeLog for x11-libs/elysiumlib
+# ChangeLog for x11-libs/libelysium
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysium/ChangeLog,v 1.1 2003/05/01 00:00:38 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysium/ChangeLog,v 1.2 2003/06/20 04:19:54 vapier Exp $
 
 *libelysium-0.99.5 (01 May 2003)
 
