@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r5.ebuild,v 1.7 2003/01/07 20:48:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r5.ebuild,v 1.8 2003/02/05 03:26:18 weeve Exp $
 
 IUSE="motif"
 
@@ -9,7 +9,7 @@ DESCRIPTION="rxvt -- nice small x11 terminal"
 SRC_URI="ftp://ftp.rxvt.org/pub/rxvt/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha"
+KEYWORDS="x86 ppc alpha sparc"
 
 HOMEPAGE="http://www.rxvt.org"
 
