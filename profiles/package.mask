@@ -22,6 +22,10 @@
 ##
 
 # <phoenix@gentoo.org> (09 Sep 2002)
+# masked for testing
+>=app-emulation/wine-20020804
+
+# <phoenix@gentoo.org> (09 Sep 2002)
 # Testing a workaround in emerge-webrsync
 =app-admin/gentoolkit-0.1.17-r1
 
@@ -94,10 +98,6 @@ net-www/galeon-cvs
 =gnome-extra/libgtkhtml-2.0.2
 =gnome-base/control-center-2.0.1.1
 =gnome-base/gnome-2.0.2_pre1
-
-# <phoenix@gentoo.org> (05 Sep 2002)
-# masked for testing
-=app-emulation/wine-20020804
 
 # <spider@gentoo.org> (05 Sep 2002)
 # masked for testing and recheck of ebuild by rphillips
