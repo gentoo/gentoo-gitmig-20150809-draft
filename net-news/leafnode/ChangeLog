@@ -1,11 +1,13 @@
 # ChangeLog for net-news/leafnode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.9 2003/01/02 10:46:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.10 2003/01/19 13:45:15 lordvan Exp $
 
 *leafnode-1.9.31 (02 Jan 2003)
 
   02 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> leafnode-1.9.31.ebuild :
   Security update.
+  19 Jan 2003; Thomas Raschbacher <lordvan@gentoo.org> leafnode-1.9.31.ebuild:
+  fixed download location (bug #14056) cuz its now on sf.net
 
 *leafnode-1.9.30-r1 (30 Dec 2002)
   30 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org> leafnode-1.9.30-r1 ebuild:
