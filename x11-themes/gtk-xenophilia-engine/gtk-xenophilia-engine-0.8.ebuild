@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-xenophilia-engine/gtk-xenophilia-engine-0.8.ebuild,v 1.4 2002/10/22 15:45:01 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-xenophilia-engine/gtk-xenophilia-engine-0.8.ebuild,v 1.5 2002/10/24 23:23:45 blizzy Exp $
 
 MY_P=${P/gtk-/}
 MY_P=${MY_P/-engine/}
@@ -32,11 +32,6 @@ src_install () {
 }
 
 pkg_config () {
-
-einfo "${GOOD}************************************************************** *${NORMAL}"
-	einfo "                                                               ${GOOD}*${NORMAL}"
-	einfo "After merge please run,   xset fp rehash                       ${GOOD}*${NORMAL}"
-	einfo "                                                               ${GOOD}*${NORMAL}"
-	einfo "${GOOD}************************************************************** *${NORMAL}"
-
+	einfo "Please run \"xset fp rehash\" to let your X server"
+	einfo "pick up the new fonts."
 }

@@ -13,10 +13,7 @@ LICENSE="Artistic"
 KEYWORDS="x86 sparc sparc64"
 
 pkg_setup() {
-	einfo "${GOOD}****************************************************************************** *${NORMAL}"
-   	einfo "This package will overwrite your your stable ion install.                      ${GOOD}*${NORMAL}"
-	einfo "                     !WARNING! !WARNING! !WARNING!                             ${GOOD}*${NORMAL}"
-	einfo "${GOOD}****************************************************************************** *${NORMAL}"
+	ewarn "This package will overwrite your stable ion installation."
 }
 
 src_compile() {

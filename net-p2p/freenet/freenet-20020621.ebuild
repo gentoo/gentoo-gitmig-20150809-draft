@@ -1,6 +1,6 @@
 # Copyright (c) 2002, Per Wigren <wigren@home.se>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-20020621.ebuild,v 1.6 2002/10/20 18:52:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-20020621.ebuild,v 1.7 2002/10/24 23:23:45 blizzy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Freenet server"
@@ -62,18 +62,13 @@ src_install () {
 }
 
 pkg_postinstall () {
-
-	einfo "*********************************************************"
-	einfo "freenet is buil every night, but with the actually"
-	einfo "portage version we can't garantee the integrity of the"
-	einfo "files. So you can use the version of freenet for update"
-	einfo "it. Simply use the update-freenet script."
-	einfo "*********************************************************"
+	einfo "freenet is built every night, but we cannot guarantee the"
+	einfo "integrity of the files with our current Portage version."
+	einfo "Use \"update-freenet\" to update your version of freenet."
 }
 
 pkg_postrm () {
-
 	einfo "Note that if updates freenat after emerge, the /var/freenet"
 	einfo "dir don't is removed in unemerge. Please do it manually"
-	einfo "(rm -rf /var/freenat) if you want it."
+	einfo "(rm -rf /var/freenet) if you want it."
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.2.0.11-r1.ebuild,v 1.5 2002/10/04 05:55:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.2.0.11-r1.ebuild,v 1.6 2002/10/24 23:23:45 blizzy Exp $
 
 S=${WORKDIR}/X11R6
 MY_P=ATI-4.2.0-11
@@ -29,15 +29,10 @@ src_install () {
 }
 
 pkg_postinst() {
-
-	einfo
-	einfo "***************************************************************"
-	einfo " To ensure that the drivers distributed with XFree86 do not"
-	einfo " get over written with the ones distributed with this package,"
-	einfo " \"gatos-\" is pre-pended to all the drivers.  This means that"
-	einfo " for instance, \"ati_drv.o\" have become \"gatos-ati_drv.o\","
-	einfo " and that \"gatos-ati\" should be used in your XF86Config."
-	einfo "***************************************************************"
-	einfo
+	einfo "To ensure that the drivers distributed with XFree86 do not"
+	einfo "get over written with the ones distributed with this package,"
+	einfo "\"gatos-\" is pre-pended to all the drivers.  This means that"
+	einfo "for instance, \"ati_drv.o\" have become \"gatos-ati_drv.o\","
+	einfo "and that \"gatos-ati\" should be used in your XF86Config."
 }
 

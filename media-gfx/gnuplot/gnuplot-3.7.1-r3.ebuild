@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.7.1-r3.ebuild,v 1.9 2002/10/20 18:48:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.7.1-r3.ebuild,v 1.10 2002/10/24 23:23:45 blizzy Exp $
 
 IUSE="X readline svga plotutils"
 
@@ -68,15 +68,10 @@ src_install () {
 }
 
 pkg_postinst() {
-	if [ "`use svga`" ]
-	then
-		einfo ""	
-		einfo "*****************************************************************"
-		einfo " In order to enable ordinary users to use SVGA console graphics"
-		einfo " gnuplot needs to be set up as setuid root.  Please note that"
-		einfo " this is usually considered to be a security hazard."
-		einfo " As root, manually chmod u+s /usr/bin/gnuplot"
-		einfo "*****************************************************************"
-		einfo
+	if [ "`use svga`" ] ; then
+		einfo "In order to enable ordinary users to use SVGA console graphics"
+		einfo "gnuplot needs to be set up as setuid root.  Please note that"
+		einfo "this is usually considered to be a security hazard."
+		einfo "As root, manually chmod u+s /usr/bin/gnuplot"
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.11.ebuild,v 1.4 2002/10/04 05:33:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.11.ebuild,v 1.5 2002/10/24 23:23:45 blizzy Exp $
 
 DESCRIPTION="GNOME2 Display Manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -173,25 +173,19 @@ pkg_postinst() {
 	fi
 	touch ${ROOT}/var/lib/gdm/.keep
 
-	echo
-	echo "***********************************************************************"
-	echo "* To make GDM start at boot, edit /etc/rc.conf (or /etc/conf.d/basic) *"
-	echo "* and then execute 'rc-update add xdm default'.                       *"
-	echo "*                                                                     *"
-	echo "* NOTE:  you need xfree-4.1.0-r4 or later ...                         *"
-	echo "***********************************************************************"
-	echo
+	echo ""
+	einfo "To make GDM start at boot, edit /etc/rc.conf (or /etc/conf.d/basic)"
+	einfo "and then execute 'rc-update add xdm default'."
+	einfo ""
+	einfo "Note that you need xfree-4.1.0-r4 or later."
 }
 
 pkg_postrm() {
 	echo ">>> Updating Scrollkeeper database..."
 	scrollkeeper-update >/dev/null 2>&1
 
-	echo
-	echo "**********************************************"
-	echo "* To remove GDM from startup please execute  *"
-	echo "* 'rc-update del xdm default'                *"
-	echo "**********************************************"
-	echo
+	echo ""
+	einfo "To remove GDM from startup please execute"
+	einfo "'rc-update del xdm default'"
 }
 

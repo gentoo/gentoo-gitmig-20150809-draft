@@ -1,6 +1,6 @@
 # Copyright 2002 Alexander Holler
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20020701.ebuild,v 1.3 2002/10/04 06:01:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20020701.ebuild,v 1.4 2002/10/24 23:23:45 blizzy Exp $
 
 MY_P=capi4k-utils-2002-07-01
 S=${WORKDIR}/${PN}
@@ -36,13 +36,9 @@ src_install() {
 }
 
 pkg_postinst() {
-
-        einfo "*************************************************"
-        einfo "* NOTE: To use isdn4linux with CAPI replace     *"
-        einfo "* I4L_MODULE=\"hisax\" with I4L_MODULE=\"capidrv\", *"
-        einfo "* start /etc/init.d/capi and load the module    *"
-        einfo "* capidrv.                                      *"
-        einfo "*************************************************"
-
+        einfo "To use isdn4linux with CAPI replace"
+        einfo "I4L_MODULE=\"hisax\" with I4L_MODULE=\"capidrv\","
+        einfo "start /etc/init.d/capi and load the module"
+        einfo "capidrv."
 }
 

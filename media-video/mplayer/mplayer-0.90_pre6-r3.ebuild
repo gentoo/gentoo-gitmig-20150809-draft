@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre6-r3.ebuild,v 1.12 2002/10/05 18:11:21 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre6-r3.ebuild,v 1.13 2002/10/24 23:23:45 blizzy Exp $
 
 IUSE="dga oss 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl dvd gtk esd fbcon encode directfb alsa"
 
@@ -266,26 +266,23 @@ src_install() {
 }
 
 pkg_postinst() {
-
-	echo
-	echo '######################################################################'
-	echo '# MPlayer users that are going to use the GUI, please note the       #'
-	echo '# following:                                                         #'
-	echo '#                                                                    #'
-	echo '#   The GUI works best with mplayer -vo xv -gui, but since there is  #'
-	echo '#   no USE flag for XVideo, or for using the GUI, the autodetection  #'
-	echo '#   process cannot detect this by default (SDL will be used rather). #'
-	echo '#   So, if your setup supports XVideo (xvinfo should give output),   #'
-	echo '#   maybe do something like:                                         #'
-	echo '#                                                                    #'
-	echo '#     echo "vo = xv" >~/.mplayer/config                              #'
-	echo '#     echo "gui = 1" >>~/.mplayer/config                             #'
-	echo '#                                                                    #'
-	echo '#   after launching mplayer for the first time.                      #'
-	echo '#                                                                    #'
-	use gtk &>/dev/null \
-		|| echo '# NB: the GUI needs "gtk" as USE flag to build.                      #'
-	echo '######################################################################'
+	einfo 'MPlayer users that are going to use the GUI, please note the'
+	einfo 'following:'
+	einfo ""
+	einfo 'The GUI works best with mplayer -vo xv -gui, but since there is'
+	einfo 'no USE flag for XVideo, or for using the GUI, the autodetection'
+	einfo 'process cannot detect this by default (SDL will be used rather).'
+	einfo 'So, if your setup supports XVideo (xvinfo should give output),'
+	einfo 'maybe do something like:'
+	einfo ""
+	einfo "\techo \"vo = xv\" >~/.mplayer/config"
+	einfo "\techo \"gui = 1\" >>~/.mplayer/config"
+	einfo ""
+	einfo 'after launching mplayer for the first time.'
+	if [ -z "`use gtk`" ] ; then
+		echo ""
+		einfo "The GUI needs \"gtk\" as USE flag to build."
+	fi
 	echo
 	depmod -a &>/dev/null || :
 }

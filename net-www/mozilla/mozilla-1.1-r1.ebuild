@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.9 2002/10/17 19:16:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.10 2002/10/24 23:23:45 blizzy Exp $
 
 IUSE="moznomail java mozp3p crypt ldap gtk2 mozinterfaceinfo ssl mozaccess mozxmlterm mozctl gnome mozsvg"
 
@@ -426,21 +426,15 @@ pkg_postinst() {
 	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 755 {} \; || :
 
 
-    echo
-	einfo
-	einfo "*****************************************************************"
-	einfo "* NB:  Please unmerge old versions of mozilla, as the header    *"
-	einfo "* layout in /usr/lib/mozilla/include have changed and will      *"
-	einfo "* result in compile errors when compiling programs that need    *"
-	einfo "* mozilla headers and libs (galeon, nautilus, ...)              *"
-	einfo "*****************************************************************"
 	echo
-	einfo "*****************************************************************"
-	einfo "* Any Errors seen during Component and Chrome registration is   *"
-	einfo "* caused by pre 1.1 versions of mozilla being installed.        *"
-	einfo "* Please unmerge older versions and everything should be fine.  *"
-	einfo "*****************************************************************"
-	einfo
+	ewarn "Please unmerge old versions of mozilla, as the header"
+	ewarn "layout in /usr/lib/mozilla/include have changed and will"
+	ewarn "result in compile errors when compiling programs that need"
+	ewarn "mozilla headers and libs (galeon, nautilus, ...)"
+	echo
+	ewarn "Any errors seen during Component and Chrome registration is"
+	ewarn "caused by pre 1.1 versions of mozilla being installed."
+	ewarn "Please unmerge older versions and everything should be fine."
 }
 
 pkg_postrm() {

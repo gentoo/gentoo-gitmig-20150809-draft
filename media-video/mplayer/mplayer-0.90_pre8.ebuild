@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre8.ebuild,v 1.6 2002/10/05 18:12:44 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre8.ebuild,v 1.7 2002/10/24 23:23:45 blizzy Exp $
 
 IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb"
 
@@ -288,12 +288,8 @@ pkg_postinst() {
 
 	if [ -n "`use truetype`" ]
 	then
-		einfo
-		einfo "***************************************************************"
-		einfo " Please note that with the new freetype support you need to"
-		einfo " copy a truetype (.ttf) font to ~/.mplayer/subfont.ttf"
-		einfo "***************************************************************"
-		einfo
+		einfo "Please note that with the new freetype support you need to"
+		einfo "copy a truetype (.ttf) font to ~/.mplayer/subfont.ttf"
 	fi
 
 	depmod -a &>/dev/null || :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/fresco-base/fresco-cvs/fresco-cvs-20021020.ebuild,v 1.1 2002/10/20 10:48:00 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/fresco-base/fresco-cvs/fresco-cvs-20021020.ebuild,v 1.2 2002/10/24 23:23:45 blizzy Exp $
 
 ECVS_SERVER="cvs.fresco.org:/cvs/fresco"
 ECVS_MODULE="Fresco"
@@ -55,7 +55,5 @@ src_install () {
 }
 
 pkg_postinst () {
-	einfo "***********************************************"
-	einfo "* Use /opt/fresco/rundemo.sh to run the demo. *"
-	einfo "***********************************************"
+	einfo "Use /opt/fresco/rundemo.sh to run the demo."
 }

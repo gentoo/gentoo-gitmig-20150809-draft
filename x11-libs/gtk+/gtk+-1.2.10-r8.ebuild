@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r8.ebuild,v 1.12 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r8.ebuild,v 1.13 2002/10/24 23:23:45 blizzy Exp $
 
 IUSE="nls"
 
@@ -72,14 +72,9 @@ src_install() {
 }
 
 pkg_postinst() {
-
-	echo
-	echo "**********************************************************************"
-	echo "* Older versions added /etc/X11/gtk/gtkrc which changed settings for *"
-	echo "* all themes it seems.  Please remove it manually as it will not due *"
-	echo "* to /env protection.						*"
-	echo "*								    *"
-	echo "* NB:  The old gtkrc is available through the new Gentoo gtk theme.  *"
-	echo "**********************************************************************"
-	echo
+	ewarn "Older versions added /etc/X11/gtk/gtkrc which changed settings for"
+	ewarn "all themes it seems.  Please remove it manually as it will not due"
+	ewarn "to /env protection."
+	echo ""
+	einfo "The old gtkrc is available through the new Gentoo gtk theme."
 }

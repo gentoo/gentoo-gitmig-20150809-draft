@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.18 2002/10/17 19:16:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.19 2002/10/24 23:23:45 blizzy Exp $
 
 IUSE="moznomail java mozp3p mozaccess gtk2 mozinterfaceinfo ssl ldap mozxmlterm mozctl gnome mozsvg"
 
@@ -415,13 +415,10 @@ pkg_postinst() {
 
     
 	echo
-	echo "*****************************************************************"
-	echo "* NB:  Please unmerge old versions of mozilla, as the header    *"
-	echo "* layout in /usr/lib/mozilla/include have changed and will      *"
-	echo "* result in compile errors when compiling programs that need    *"
-	echo "* mozilla headers and libs (galeon, nautilus, ...)              *"
-	echo "*****************************************************************"
-	echo
+	ewarn "Please unmerge old versions of mozilla, as the header"
+	ewarn "layout in /usr/lib/mozilla/include have changed and will"
+	ewarn "result in compile errors when compiling programs that need"
+	ewarn "mozilla headers and libs (galeon, nautilus, ...)"
 }
 
 pkg_postrm() {

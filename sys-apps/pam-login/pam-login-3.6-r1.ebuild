@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.6-r1.ebuild,v 1.7 2002/10/20 18:54:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.6-r1.ebuild,v 1.8 2002/10/24 23:23:45 blizzy Exp $
 
 MY_PN="${PN/pam-/pam_}"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -51,13 +51,11 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	ewarn "Due to a compatibility issue, ${ROOT}etc/login.defs "
+	ewarn "is being updated automatically. Your old login.defs"
+	ewarn "will be backed up as:  ${ROOT}etc/login.defs.bak"
 	echo
-	echo "************************************************************"
-	echo "   Due to a compatibility issue, ${ROOT}etc/login.defs "
-	echo "   is being updated automatically. Your old login.defs"
-	echo "   will be backed up as:  ${ROOT}etc/login.defs.bak"
-	echo "************************************************************"
-	echo
+
 	local CHECK1=`md5sum ${ROOT}/etc/login.defs | cut -d ' ' -f 1`
 	local CHECK2=`md5sum ${ROOT}/etc/login.defs.new | cut -d ' ' -f 1`
 

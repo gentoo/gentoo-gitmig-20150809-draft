@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9.ebuild,v 1.6 2002/10/20 18:52:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9.ebuild,v 1.7 2002/10/24 23:23:45 blizzy Exp $
 
 IUSE="ssl kerberos perl snmp afs"
 
@@ -172,39 +172,39 @@ src_install () {
 }
 
 pkg_postinst() {
+	ewarn "If you change the fs-type of /var/imap or"
+	ewarn "/var/spool/imap you should read step 9 of"
+	ewarn "/usr/share/doc/${P}/html/install-configure.html."
+	echo ""
 
-	ewarn "*****************************************************************"
-	ewarn "* WARNING: If you change the fs-type of /var/imap or            *"
-	ewarn "* /var/spool/imap you should read step 9 of                     *"
-	ewarn "* /usr/share/doc/${P}/html/install-configure.html. *"
 	if df -T /var/imap | grep -q ' ext[23] ' ; then
-		ewarn "* Setting /var/imap/user/* and /var/imap/quota/* to synchronous *"
-		ewarn "* updates.                                                      *"
+		ewarn "Setting /var/imap/user/* and /var/imap/quota/* to synchronous"
+		ewarn "updates."
 		chattr +S /var/imap/user /var/imap/user/* /var/imap/quota /var/imap/quota/*
+		echo ""
 	fi
-	if df -T /var/spool/imap | grep -q ' ext[23] ' ; then
-		ewarn "* Setting /var/spool/imap/* to synchronous updates.             *"
-		chattr +S /var/spool/imap /var/spool/imap/*
-	fi
-	ewarn "* If the queue directory of the mail daemon resides on an ext2  *"
-	ewarn "* or ext3 partition you need to set it manually to update       *"
-	ewarn "* synchronously. E.g. 'chattr +S /var/spool/mqueue'.            *"
-	ewarn "*****************************************************************"
 
-	einfo "*****************************************************************"
-	einfo "* NOTE: For correct logging add                                 *"
-	einfo "*         local6.* /var/log/imapd.log                           *"
-	einfo "*         auth.debug /var/log/auth.log                          *"
-	einfo "*       to /etc/syslog.conf.                                     *"
-	einfo "*****************************************************************"
+	if df -T /var/spool/imap | grep -q ' ext[23] ' ; then
+		ewarn "Setting /var/spool/imap/* to synchronous updates."
+		chattr +S /var/spool/imap /var/spool/imap/*
+		echo ""
+	fi
+
+	ewarn "If the queue directory of the mail daemon resides on an ext2"
+	ewarn "or ext3 partition you need to set it manually to update"
+	ewarn "synchronously. E.g. 'chattr +S /var/spool/mqueue'."
+	echo ""
+
+	einfo "For correct logging add"
+	einfo "\tlocal6.* /var/log/imapd.log"
+	einfo "\tauth.debug /var/log/auth.log"
+	einfo "to /etc/syslog.conf."
+	echo ""
 
 	if [ "'use ssl'" ]; then
-		ewarn "*****************************************************************"
-		ewarn "* WARNING: Read the section about SSL and TLS of                *"
-		ewarn "* /usr/share/doc/${P}/html/install-configure.html. *"
-		ewarn "* about installing the needed keys.                             *"
-		ewarn "*****************************************************************"
+		ewarn "Read the section about SSL and TLS of"
+		ewarn "/usr/share/doc/${P}/html/install-configure.html."
+		ewarn "about installing the needed keys."
 	fi
-
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r1.ebuild,v 1.11 2002/10/18 22:43:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r1.ebuild,v 1.12 2002/10/24 23:23:45 blizzy Exp $
 
 IUSE="mozxmlterm moznomail java mozp3p crypt ipv6 gtk2 mozinterfaceinfo ssl ldap mozaccess mozctl gnome mozsvg"
 
@@ -442,15 +442,11 @@ pkg_postinst() {
 	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 755 {} \; || :
 
 
-    echo
-	einfo
-	einfo "*****************************************************************"
-	einfo "* NB:  Please unmerge old versions of mozilla, as the header    *"
-	einfo "* layout in /usr/lib/mozilla/include have changed and will      *"
-	einfo "* result in compile errors when compiling programs that need    *"
-	einfo "* mozilla headers and libs (galeon, nautilus, ...)              *"
-	einfo "*****************************************************************"
 	echo
+	ewarn "Please unmerge old versions of mozilla, as the header"
+	ewarn "layout in /usr/lib/mozilla/include have changed and will"
+	ewarn "result in compile errors when compiling programs that need"
+	ewarn "mozilla headers and libs (galeon, nautilus, ...)"
 }
 
 pkg_postrm() {
@@ -474,4 +470,3 @@ pkg_postrm() {
 		find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 755 {} \; || :
 	fi
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r2.ebuild,v 1.6 2002/10/04 05:16:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r2.ebuild,v 1.7 2002/10/24 23:23:44 blizzy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GLib library of C routines"
@@ -51,12 +51,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "************************* WARNING ************************"
-	einfo ""
-	einfo "To allow parallel installation of sig++-1.0 and sig++-1.2,"
-	einfo "the header files are now installed in a version specific"
-	einfo "subdirectory.  Be sure to unmerge any libsig++ versions"
-	einfo "< 1.0.4 that you may have previously installed."
-	einfo ""
-	einfo "**********************************************************"
+	ewarn "To allow parallel installation of sig++-1.0 and sig++-1.2,"
+	ewarn "the header files are now installed in a version specific"
+	ewarn "subdirectory.  Be sure to unmerge any libsig++ versions"
+	ewarn "< 1.0.4 that you may have previously installed."
 }

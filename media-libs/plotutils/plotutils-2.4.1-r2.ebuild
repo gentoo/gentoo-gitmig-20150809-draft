@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.9 2002/10/05 05:39:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.10 2002/10/24 23:23:45 blizzy Exp $
 
 IUSE="X"
 
@@ -61,12 +61,7 @@ src_install () {
 }
 
 pkg_postinst() {
-
-	if [ 'use X' ]
-	then
-		einfo ""
-		einfo "*********************************************************"	
-		einfo ""
+	if [ 'use X' ] ; then
 		einfo "There are extra fonts available in plotutils package."
 		einfo "The current ebuild does not install them for you."
 		einfo "You may want to do so, but you will have to do it"
@@ -78,9 +73,5 @@ pkg_postinst() {
 		einfo "advantage of the additional ps fonts."
 		einfo "Also, it is possible to enable ghostscript and possibly"
 		einfo "your printer to use the HP fonts." 
-		einfo ""
-		einfo "**********************************************************"
-		einfo ""
-
 	fi
 }

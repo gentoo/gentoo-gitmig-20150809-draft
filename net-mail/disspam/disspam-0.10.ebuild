@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/disspam/disspam-0.10.ebuild,v 1.4 2002/08/14 12:05:25 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/disspam/disspam-0.10.ebuild,v 1.5 2002/10/24 23:23:45 blizzy Exp $
 
 S=${WORKDIR}/disspam
 DESCRIPTION="A Perl script that removes spam from POP3 mailboxes based on RBLs."
@@ -18,12 +18,4 @@ DEPEND=">=sys-devel/perl-5.6.1
 src_install() {
 	dobin disspam.pl
 	dodoc changes.txt configuration.txt readme.txt sample.conf
-}
-
-pkg_postinst() {
-	einfo "**************************************************************"
-	einfo "* NOTE: DisSpam has been installed, check documentation	    *"
-	einfo "* directory for sample configuration file sample.conf.  Also *"
-	einfo "* instructions for setting up cron are in readme.txt.	    *"
-	einfo "**************************************************************"
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r2.ebuild,v 1.6 2002/10/05 05:39:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r2.ebuild,v 1.7 2002/10/24 23:23:45 blizzy Exp $
 
 IUSE="opengl"
 
@@ -52,17 +52,12 @@ src_install() {
 }
 
 pkg_postinst() {
-
-	echo "**********************************************"
-	echo "Customization of behaviour and appearance of"
-	echo "flwm requires manually editing the config.h"
-	echo "source file.  If you want to change the defaults,"
-	echo "Do the following:"
-	echo ""
-	echo "ebuild ${P}.ebuild unpack"
-	echo "${EDITOR} ${S}/config.h "
-	echo "ebuild ${P} compile install qmerge"
-	echo ""
-	echo "**********************************************"
-
+	einfo "Customization of behaviour and appearance of"
+	einfo "flwm requires manually editing the config.h"
+	einfo "source file.  If you want to change the defaults,"
+	einfo "do the following:"
+	einfo ""
+	einfo "\tebuild ${P}.ebuild unpack"
+	einfo "\t${EDITOR} ${S}/config.h "
+	einfo "\tebuild ${P} compile install qmerge"
 }

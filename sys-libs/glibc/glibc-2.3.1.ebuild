@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1.ebuild,v 1.2 2002/10/20 18:00:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1.ebuild,v 1.3 2002/10/24 23:23:45 blizzy Exp $
 
 IUSE="nls pic build"
 
@@ -62,11 +62,9 @@ PROVIDE="virtual/glibc"
 pkg_config() {
 	if [ "`gcc-major-version`" -ne "3" -o "`gcc-minor-version`" -lt "2" ]
 	then
-		eerror "************************************************"
-		eerror " As of glibc-2.3, gcc-3.2 or later is needed"
-		eerror " for the build to succeed!"
-		eerror "************************************************"
-		die "GCC too old!"
+		eerror "As of glibc-2.3, gcc-3.2 or later is needed"
+		eerror "for the build to succeed."
+		die "GCC too old"
 	fi
 }
 
