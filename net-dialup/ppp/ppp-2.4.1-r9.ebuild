@@ -1,6 +1,6 @@
 # ChangeLog for net-dialuppppChangeLog/net-dialuppppppp-2.4.1-r9.ebuild
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r9.ebuild,v 1.4 2002/07/17 10:43:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r9.ebuild,v 1.5 2002/08/03 16:19:50 cselkirk Exp $
 
 S=${WORKDIR}/${P}.pppoe4
 DESCRIPTION="Point-to-point protocol - patched for pppoe"
@@ -12,7 +12,7 @@ PROVIDE="virtual/pppd"
 
 SLOT="0"
 LICENSE="BSD GPL"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 
