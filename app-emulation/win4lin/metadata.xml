@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>bass@gentoo.org</email>
+  <name>José Alberto Suárez López</name>
+</maintainer>
+<longdescription>
+The NeTraverse product suite delivers the fastest and most cost-effective, resource-efficient, high-performance solution for running Windows applications on Linux.
+</longdescription>
+</pkgmetadata>

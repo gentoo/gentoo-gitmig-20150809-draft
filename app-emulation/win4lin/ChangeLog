@@ -1,11 +1,17 @@
 # ChangeLog for app-emulation/win4lin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/ChangeLog,v 1.10 2003/06/29 20:06:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/ChangeLog,v 1.11 2003/08/17 20:28:38 bass Exp $
+
+*win4lin-5.0.4 (17 Aug 2003)
+
+ 17 Aug 2003; J.Alberto Suárez L. <bass@gentoo.org> win4lin-5.0.4.ebuild:
+ New version.
+ This version has beta support to glibc-2.3.2.
 
 *win4lin-5.0.1 (03 Jun 2003)
 
  19 Jun 2003; J.Alberto Suárez L. <bass@gentoo.org> win4lin-5.0.1.ebuild:
- Masrked as stable.
+ Marked as stable.
 
  03 Jun 2003; J.Alberto Suárez L. <bass@gentoo.org> win4lin-5.0.1.ebuild:
  New version and new evaluation code.
