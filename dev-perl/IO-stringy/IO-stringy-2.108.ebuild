@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-stringy/IO-stringy-2.108.ebuild,v 1.8 2004/07/14 18:32:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-stringy/IO-stringy-2.108.ebuild,v 1.9 2005/01/22 17:49:18 mcummings Exp $
 
 inherit perl-module
 
