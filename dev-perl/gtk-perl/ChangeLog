@@ -1,6 +1,12 @@
 # ChangeLog for dev-perlgtk-perlChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.12 2002/11/07 13:14:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.13 2002/11/26 17:17:47 mcummings Exp $
+
+*gtk-perl-0.7008-r8 (26 Nov 2002)
+
+  26 Nov 2002; Michael Cuummings <mcummings@gentoo.org> :
+
+  No more hidden dependancies on Gnome! Bug 9506 is squashed
 
 *gtk-perl-0.7008-r7 (7 Nov 2002)
 
