@@ -1,6 +1,3 @@
-#Doesn't compile.. <18 dec 2001 - Verwilst>
-=app-office/koffice-1.1.1
-
 #still playing with XFS, low latency patches (12/14/2001 - drobbins)
 #=sys-kernel/linux-sources-2.4.16-r1
 
