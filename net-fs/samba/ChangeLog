@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.93 2004/07/28 05:04:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.94 2004/07/30 10:07:38 satya Exp $
+
+  30 Jul 2004; Christian Andreetta <satya@gentoo.org> samba-3.0.5-r1.ebuild:
+  empty dirs disappearance fixed (bug #53976)
 
   28 Jul 2004; Joshua Kinard <kumba@gentoo.org> samba-3.0.5-r1.ebuild,
   samba-3.0.5.ebuild:

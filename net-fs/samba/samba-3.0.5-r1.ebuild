@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.5-r1.ebuild,v 1.5 2004/07/29 04:04:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.5-r1.ebuild,v 1.6 2004/07/30 10:07:38 satya Exp $
 
 inherit eutils flag-o-matic
 
@@ -301,12 +301,17 @@ src_install() {
 	# dirs -----------------------------------------------------------------
 	diropts -m0700
 	dodir /etc/samba/private
+	touch ${D}/etc/samba/private/.keep
 	diropts -m1777
 	dodir /var/spool/samba
+	touch ${D}/var/spool/samba/.keep
 	diropts -m0755
 	dodir /var/{log,run,cache}/samba
 	dodir /var/lib/samba/{netlogon,profiles}
 	dodir /var/lib/samba/printers/{W32X86,WIN40,W32ALPHA,W32MIPS,W32PPC}
+	touch ${D}/var/{log,run,cache}/samba/.keep
+	touch ${D}/var/lib/samba/{netlogon,profiles}/.keep
+	touch ${D}/var/lib/samba/printers/{W32X86,WIN40,W32ALPHA,W32MIPS,W32PPC}/.keep
 	# docs -----------------------------------------------------------------
 	docinto ""
 	dodoc ${S}/COPYING ${S}/Manifest ${S}/README ${S}/Roadmap ${S}/WHATSNEW.txt
