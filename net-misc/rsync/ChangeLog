@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.1 2002/02/01 21:53:35 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.2 2002/03/01 07:11:38 drobbins Exp $
+
+*rsync-2.5.2-r1 (1 Mar 2002)
+
+  1 Mar 2002; Daniel Robbins <drobbins@gentoo.org> : Closed remote denial of
+  service attack/hung process problem reopened in 2.5.2 due to a missing patch.
 
 *rsync-2.5.2 (1 Feb 2002)
 
