@@ -1,6 +1,12 @@
 # ChangeLog for net-www/screem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/ChangeLog,v 1.7 2003/03/12 02:46:33 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/ChangeLog,v 1.8 2003/04/20 02:57:18 darkspecter Exp $
+
+*screem-0.6.2 (20 Apr 2003)
+
+  20 Apr 2003; Bartosch Pixa <darkspecter@gentoo.org> screem-0.6.2.ebuild:
+  revision bump, should fix occasional scrollkeeper issues on merge. added einfo
+  about neon being needed for http/WebDAV support and set to ~ppc
 
 *screem-0.6.0 (11 Mar 2003)
 
