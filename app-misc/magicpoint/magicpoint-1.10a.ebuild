@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.10a.ebuild,v 1.2 2003/08/24 20:42:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.10a.ebuild,v 1.3 2003/09/01 18:09:22 usata Exp $
 
-inherit eutils
+inherit elisp eutils
 
 IUSE="cjk emacs truetype gif nls imlib"
 
@@ -14,8 +14,9 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="x86 ~alpha ~sparc ~ppc"
 
+E_DEPEND="emacs? ( ${E_DEPEND}  )"
+E_RDEPEND="emacs? ( ${E_RDEPEND} )"
 DEPEND="virtual/x11
-	emacs? ( virtual/emacs )
 	gif? ( >=media-libs/libungif-4.0.1 )
 	imlib? ( media-libs/imlib )
 	cjk? ( truetype? ( >=media-libs/vflib-2.25.6-r1 )
@@ -23,10 +24,6 @@ DEPEND="virtual/x11
 	truetype? ( =media-libs/freetype-1* )"
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
-
-SLOT="0"
-LICENSE="Sleepycat"
-KEYWORDS="~x86"
 
 S=${WORKDIR}/${P}
 SITELISP=/usr/share/emacs/site-lisp
@@ -94,20 +91,4 @@ src_install() {
 	cd -
 
 	dodoc COPYRIGHT* FAQ README* RELNOTES SYNTAX TODO* USAGE*
-}
-
-pkg_postinst() {
-
-	if [ -n "`use emacs`" ] ; then
-		inherit elisp
-		elisp-site-regen
-	fi
-}
-
-pkg_postrm() {
-
-	if [ -n "`use emacs`" ] ; then
-		inherit elisp
-		elisp-site-regen
-	fi
 }

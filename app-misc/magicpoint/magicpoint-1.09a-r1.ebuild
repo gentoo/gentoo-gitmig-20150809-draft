@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.09a-r1.ebuild,v 1.10 2003/08/15 06:31:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.09a-r1.ebuild,v 1.11 2003/09/01 18:09:22 usata Exp $
 
 IUSE="truetype gif nls imlib"
 
@@ -20,10 +20,6 @@ DEPEND="virtual/x11
 
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
-
-SLOT="0"
-LICENSE="Sleepycat"
-KEYWORDS="x86"
 
 src_compile() {
  	
