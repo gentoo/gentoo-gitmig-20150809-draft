@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/locale-maketext-fuzzy
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-fuzzy/ChangeLog,v 1.1 2003/07/29 15:42:57 mcummings Exp $
+
+*locale-maketext-fuzzy-0.02 (29 Jul 2003)
+
+  29 Jul 2003; Michael Cummings <mcummings@gentoo.org>
+  locale-maketext-fuzzy-0.02.ebuild:
+  Bug 24879 dep for Request tracker - Celestial Wizard
+  <gentoo@dev.celestialwizard.org>
+
