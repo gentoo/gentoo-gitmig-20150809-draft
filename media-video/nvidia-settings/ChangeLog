@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.7 2004/08/16 22:28:05 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.8 2004/11/07 07:25:08 cyfred Exp $
+
+*nvidia-settings-1.0.6629 (07 Nov 2004)
+
+  07 Nov 2004; Andrew Bevitt <cyfred@gentoo.org>
+  nvidia-settings-1.0.6106.ebuild, nvidia-settings-1.0.6111.ebuild,
+  +nvidia-settings-1.0.6629.ebuild:
+  Changes to reflect new nvidia drivers
 
   17 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>; :
   Fixing digests
