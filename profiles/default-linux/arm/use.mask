@@ -57,3 +57,4 @@ howl
 
 lirc
 jack
+afs

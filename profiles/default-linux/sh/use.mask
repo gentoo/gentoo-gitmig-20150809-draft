@@ -63,3 +63,4 @@ directfb
 xv
 gtk
 gtk2
+afs
