@@ -1,13 +1,19 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/2004.2/make.defaults,v 1.2 2004/09/23 13:51:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/2004.2/make.defaults,v 1.3 2004/09/27 09:12:55 kumba Exp $
 
 ARCH="mips"
 
+# Even though this is a 64bit kernel, we use a 32-bit userland (o32)
+CHOST="mips-unknown-linux-gnu"
+
+# Used in ebuilds for verifying mips64 profile
 PROFILE_ARCH="mips64"
 
-FEATURES="ccache"
+# Sandbox is broken on mips (Bug #45814)
+FEATURES="-sandbox ccache"
+
+ACCEPT_KEYWORDS="mips"
 
 USE="slang readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips"
 
-ACCEPT_KEYWORDS="mips"
