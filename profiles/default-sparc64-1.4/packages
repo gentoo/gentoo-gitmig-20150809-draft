@@ -136,4 +136,4 @@
 *sys-libs/zlib
 *net-misc/openssh
 *sys-apps/devfsd
-<=app-admin/portagemaster-0.1.5
+<=app-portage/portagemaster-0.1.5
