@@ -1,6 +1,11 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.10 2003/06/12 20:18:34 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.11 2003/09/13 07:25:31 obz Exp $
+
+*texmacs-1.0.1-r1 (13 Sep 2003)
+
+  13 Sep 2003; Mike Gardiner <obz@gentoo.org> texmacs-1.0.1-r1.ebuild:
+  New revision adding spell support through ispell
 
   12 Jun 2003; <msterret@gentoo.org> texmacs-1.0.0.19.ebuild,
   texmacs-1.0.1.ebuild:
