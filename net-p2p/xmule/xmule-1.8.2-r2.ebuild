@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.2-r2.ebuild,v 1.1 2004/06/01 19:42:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.2-r2.ebuild,v 1.2 2004/06/04 01:30:08 squinky86 Exp $
 
 MY_P=${P}c
 S=${WORKDIR}/${PN}
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 
 IUSE="nls"
 
-DEPEND=">=x11-libs/wxGTK-2.4.1
+DEPEND=">=x11-libs/wxGTK-2.4.2
 	nls? ( sys-devel/gettext )
 	>=sys-libs/zlib-1.2.1"
 

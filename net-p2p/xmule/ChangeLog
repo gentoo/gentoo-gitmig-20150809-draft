@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.35 2004/06/01 19:42:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.36 2004/06/04 01:30:08 squinky86 Exp $
+
+  03 Jun 2004; Jon Hood <squinky86@gentoo.org> xmule-1.8.2-r1.ebuild,
+  xmule-1.8.2-r2.ebuild, xmule-1.8.2.ebuild:
+  DEPEND on wxGTK 2.4.2; closes #52769
 
 *xmule-1.8.2-r2 (01 Jun 2004)
 
