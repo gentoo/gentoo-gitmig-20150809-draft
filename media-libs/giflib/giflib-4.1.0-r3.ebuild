@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.3 2002/04/14 16:55:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.4 2002/04/14 17:01:27 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="giflib"
@@ -37,9 +37,8 @@ src_install() {
 		install || die
 	
 	# if gif is not in USE, then ungif is preferred
-	use gif || ( \
-		rm -rf ${D}/usr/bin
-	)
+	use gif || rm -rf ${D}/usr/bin
+	
 
 	dodoc AUTHORS BUGS COPYING ChangeLog INSTALL NEWS ONEWS
 	dodoc PATENT_PROBLEMS README TODO
