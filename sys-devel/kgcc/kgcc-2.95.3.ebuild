@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc/kgcc-2.95.3.ebuild,v 1.6 2004/05/12 13:06:47 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc/kgcc-2.95.3.ebuild,v 1.7 2004/06/24 02:46:00 agriffis Exp $
 
 IUSE="static"
 
@@ -73,7 +73,7 @@ src_compile() {
 	# Setup -j in MAKEOPTS
 	get_number_of_jobs
 
-	if [ -z "`use static`" ]
+	if ! use static
 	then
 		emake bootstrap-lean || die
 	else
