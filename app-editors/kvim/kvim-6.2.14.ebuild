@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.12 2004/06/24 21:58:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.13 2004/07/03 21:36:21 carlo Exp $
 
 inherit kde eutils
-need-kde 3
 
 DESCRIPTION="KDE editor based on vim"
 HOMEPAGE="http://www.freehackers.org/${PN}"
@@ -21,6 +20,7 @@ DEPEND=">=app-editors/vim-core-6.2
 	perl?   ( dev-lang/perl )
 	python? ( dev-lang/python )
 	ruby?   ( dev-lang/ruby )"
+need-kde 3
 
 S="${WORKDIR}/${P//_}"
 

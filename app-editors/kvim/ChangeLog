@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kvim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/ChangeLog,v 1.21 2004/06/24 21:58:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/ChangeLog,v 1.22 2004/07/03 21:36:21 carlo Exp $
+
+  03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> kvim-6.2.14.ebuild:
+  QA: need-kde after R/DEPEND
 
   04 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kvim-6.2.14.ebuild,
   metadata.xml:
