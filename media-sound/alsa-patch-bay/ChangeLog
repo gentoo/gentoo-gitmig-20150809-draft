@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-patch-bay
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/ChangeLog,v 1.5 2003/05/09 15:30:53 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/ChangeLog,v 1.6 2003/05/09 15:56:32 darkspecter Exp $
+
+  09 May 2003; Bartosch Pixa <darkspecter@gentoo.org>
+  alsa-patch-bay-0.5.1.ebuild:
+  minor symlink fix
 
 *alsa-patch-bay-0.5.1 (09 May 2003)
 

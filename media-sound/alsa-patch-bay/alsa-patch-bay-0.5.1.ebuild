@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-0.5.1.ebuild,v 1.1 2003/05/09 15:30:53 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-0.5.1.ebuild,v 1.2 2003/05/09 15:56:32 darkspecter Exp $
 
 DESCRIPTION="Graphical patch bay for the ALSA sequencer API."
 HOMEPAGE="http://pkl.net/~node/alsa-patch-bay.html"
@@ -38,4 +38,12 @@ src_compile() {
 src_install() {
 	einstall APB_DESKTOP_PREFIX=${D}/usr/share || die
         dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS TODO
+}
+
+pkg_preinst() {
+	if [ -e ${D}/usr/bin/jack-patch-bay ]
+	then
+		rm ${D}/usr/bin/jack-patch-bay
+		ln -s alsa-patch-bay ${D}/usr/bin/jack-patch-bay
+	fi
 }
