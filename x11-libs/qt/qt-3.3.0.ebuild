@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.9 2004/02/10 15:17:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.10 2004/02/10 19:06:25 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -56,7 +56,7 @@ src_compile() {
 
 	# Let's just allow writing to these directories during Qt emerge
 	# as it makes Qt much happier.
-	dodir "${QTBASE}/etc/settings"
+	keepdir "${QTBASE}/etc/settings"
 	addwrite "${QTBASE}/etc/settings"
 	addwrite "$HOME/.qt"
 
@@ -73,8 +73,7 @@ src_compile() {
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
 	use xinerama    && myconf="${myconf} -xinerama"
 	use zlib	&& myconf="${myconf} -system-zlib" || myconf="${myconf} -qt-zlib"
-#	use ipv6        && myconf="${myconf} -ipv6" || myconf="${myconf} -no-ipv6"
-	use ipv6        && myconf="${myconf} -ipv6"
+	use ipv6        && myconf="${myconf} -ipv6" || myconf="${myconf} -no-ipv6"
 
 	export YACC='byacc -d'
 
@@ -164,11 +163,3 @@ src_install() {
 	done
 }
 
-#pkg_postinst()
-#{
-#	einfo
-#	einfo "If you upgraded from Qt 3.2 or less, your KDE plugins may now not work."
-#	einfo "A re-emerge of kdelibs and kdebase (and kdeartwork/kdeaddons if you have"
-#	einfo "them) should fix the problem."
-#	einfo
-#}
