@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 84906df12ff06c74e269a55f292f09ac wvstreams-3.70-r2.ebuild 869
-MD5 77b398c5e340c07fb0542d2bcdb37e18 wvstreams-3.75-r1.ebuild 1805
-MD5 bdb46ccc369b2a9e9a333efc21fa67d1 wvstreams-3.75.ebuild 1733
-MD5 bb108ca918e7c5eb834e70a4f783e3ca wvstreams-4.0-r1.ebuild 1872
-MD5 d991640e2ff373e482b3c3478282fef1 wvstreams-3.74.ebuild 1392
-MD5 cf27c29c37faccdc7c3ccc1c4bf46fec ChangeLog 5257
+MD5 3be1171ce32ff73591dfd15435205718 wvstreams-3.70-r2.ebuild 870
+MD5 74a4bfcf2058ccb955b5c651fc8a54c2 wvstreams-3.75-r1.ebuild 1805
+MD5 9ca1a20c31c760d33b68b028608f5118 wvstreams-3.75.ebuild 1734
+MD5 60b96db18756825c4a224c0730bed9ce wvstreams-4.0-r1.ebuild 1873
+MD5 a6c55c09298c40a94e7204e58eadd8ca wvstreams-3.74.ebuild 1392
+MD5 65e4172f87d7baaae2a49f83d6d766b6 ChangeLog 5361
 MD5 89fa1cfef9ad019177d0f555b30618a2 wvstreams-4.0.1.ebuild 1873
 MD5 7c8d69f73480b56621770449d11a2e17 metadata.xml 235
 MD5 dab468062cf36e0e81e72fb2a59299e0 files/3.70-gcc3.patch 3171
@@ -30,7 +30,7 @@ MD5 e4f46fcdd724dc1c316aefe9e0228dac files/wvstreams-3.75-gcc34.patch 3573
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB2OYIjiC39V7gKu0RAqHhAKCHmLVZllqdupTu6tcBieeJ86LJYgCfTSDO
-PmbmDn9Vs+oQUJkOhmdbCyI=
-=VcDX
+iD8DBQFB2vU1Z/iYVBmujdURAiDPAJ0RuClqKsGMhV6BbMvln1nzI/7q+gCfZHj8
+X8JjFk45LazYsRRpyxaOhos=
+=UU8V
 -----END PGP SIGNATURE-----
