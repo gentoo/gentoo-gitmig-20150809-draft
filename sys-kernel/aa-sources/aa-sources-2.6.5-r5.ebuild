@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.6.5-r5.ebuild,v 1.3 2004/05/30 23:53:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.6.5-r5.ebuild,v 1.4 2004/06/13 19:58:44 plasmaroo Exp $
 
-UNIPATCH_LIST="${DISTDIR}/${KV}.bz2 ${FILESDIR}/${P}.CAN-2004-0075.patch ${FILESDIR}/${P}.CAN-2004-0228.patch ${FILESDIR}/${P}.CAN-2004-0229.patch ${FILESDIR}/${P}.CAN-2004-0427.patch"
+UNIPATCH_LIST="${DISTDIR}/${KV}.bz2 ${FILESDIR}/${P}.CAN-2004-0075.patch ${FILESDIR}/${P}.CAN-2004-0228.patch ${FILESDIR}/${P}.CAN-2004-0229.patch ${FILESDIR}/${P}.CAN-2004-0427.patch ${FILESDIR}/${P}.FPULockup-53804.patch"
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 

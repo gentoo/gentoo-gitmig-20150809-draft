@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/aa-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.39 2004/06/04 18:06:11 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.40 2004/06/13 19:58:44 plasmaroo Exp $
+
+  13 Jun 2004; <plasmaroo@gentoo.org> aa-sources-2.4.23-r2.ebuild,
+  aa-sources-2.6.5-r5.ebuild, +files/aa-sources-2.4.23.FPULockup-53804.patch,
+  +files/aa-sources-2.6.5.FPULockup-53804.patch:
+  Added patches for the FPU-lockup issues; please see bug #58304 for details.
 
   04 Jun 2004; <plasmaroo@gentoo.org> -aa-sources-2.4.22-r1.ebuild,
   -aa-sources-2.4.23-r1.ebuild:
