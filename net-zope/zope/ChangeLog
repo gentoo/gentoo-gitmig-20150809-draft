@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.53 2004/10/25 07:27:13 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.54 2004/10/25 14:36:24 batlogg Exp $
+
+  25 Oct 2004; Jodok Batlogg <batlogg@gentoo.org>; files/2.7.2/zope.initd,
+  files/2.7.3/zope.initd:
+  reload needs to call zope's restart
 
 *zope-2.7.3 (24 Oct 2004)
 
