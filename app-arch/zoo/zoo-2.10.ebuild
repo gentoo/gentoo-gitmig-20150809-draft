@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/zoo-2.10.ebuild,v 1.9 2003/02/13 05:58:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/zoo-2.10.ebuild,v 1.10 2003/09/05 22:49:03 msterret Exp $
 
 DESCRIPTION="Manipulate archives of files in compressed form."
 SRC_URI="ftp://ftp.kiarchive.ru/pub/unix/arcers/${P}pl1.tar.gz"
@@ -21,6 +21,6 @@ src_compile() {
 }
 
 src_install() {
-	dobin zoo fiz 
+	dobin zoo fiz
 	doman zoo.1 fiz.1
 }

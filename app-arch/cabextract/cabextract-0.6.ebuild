@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-0.6.ebuild,v 1.8 2003/07/18 19:14:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-0.6.ebuild,v 1.9 2003/09/05 22:49:03 msterret Exp $
 
 DESCRIPTION="Extracts files from Microsoft .cab files"
 SRC_URI="http://www.kyz.uklinux.net/downloads/${P}.tar.gz"
