@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.85.ebuild,v 1.1 2004/07/02 19:33:08 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.85.ebuild,v 1.2 2004/07/02 19:54:10 agriffis Exp $
 
 inherit eutils
 
@@ -23,7 +23,9 @@ src_unpack() {
 	# Note that if sysvinit is ever built with USE=build, need to
 	# refrain from building sulogin as it needs libcrypt which is
 	# not in the build image:
-	# sed -i -e '/^PROGS/s/ sulogin//' Makefile || die
+	if use build; then
+		sed -i -e '/^PROGS/s/ sulogin//' Makefile || die
+	fi
 
 	# SELinux patch
 	use selinux && epatch ${FILESDIR}/sysvinit-${PV}-selinux.patch
