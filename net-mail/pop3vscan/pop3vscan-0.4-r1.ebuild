@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/pop3vscan-0.4-r1.ebuild,v 1.2 2004/10/01 21:41:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/pop3vscan-0.4-r1.ebuild,v 1.3 2004/10/17 09:58:27 dholm Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ RDEPEND="net-firewall/iptables"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE=""
 
 src_unpack() {
