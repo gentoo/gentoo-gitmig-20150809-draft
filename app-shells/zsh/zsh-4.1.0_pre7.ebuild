@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.0_pre7.ebuild,v 1.3 2003/08/14 08:59:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.0_pre7.ebuild,v 1.4 2003/08/20 10:18:03 usata Exp $
 
 IUSE="ncurses"
 MY_PV=${PV%_*}-dev-${PV#*_pre}
@@ -59,4 +59,14 @@ src_install() {
 
 	insinto /etc/zsh
 	doins ${FILESDIR}/zshenv
+}
+
+pkg_postinst() {
+
+	# see Bug 26776
+	ewarn
+	ewarn "If you are upgrading from zsh-4.0.x you may need to"
+	ewarn "remove all your old ~/.zcompdump files in order to use"
+	ewarn "completion.  For more info see zcompsys manpage."
+	ewarn
 }

@@ -1,8 +1,13 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.24 2003/08/14 18:38:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.25 2003/08/20 10:18:03 usata Exp $
 
 *zsh-4.1.1 (24 Jul 2003)
+
+  20 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> zsh-4.1.0_pre7.ebuild,
+  zsh-4.1.1.ebuild:
+  Added a little notice about completion for users from zsh 4.0.x,
+  see bug #26776.
 
   15 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> zsh-4.1.1.ebuild:
   Changed x86 ~x86 (I've got a bug report that tab completion doesn't
