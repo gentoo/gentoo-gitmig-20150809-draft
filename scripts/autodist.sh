@@ -44,7 +44,7 @@ fi
 [ -z "${KERNEL_SRC}" ] && KERNEL_SRC="/usr/src/`readlink /usr/src/linux`"
 [ -z "${KERNEL_VERSION}" ] && KERNEL_VERSION="`echo ${KERNEL_SRC} | sed 's,.*-\([0-9]\.[0-9]\.[0-9]\+\(-ac[0-9]\+\)\?\)$,\1,'`"
 
-[ -z "${INITRD_USE}" ] && INITRD_USE="bootcd lvm ext3"
+[ -z "${INITRD_USE}" ] && INITRD_USE="lvm ext3"
 # size of the initrd in kbytes
 [ -z "${INITRD_SIZE}" ] && INITRD_SIZE=24576
 [ -z "${INITRD_BSIZE}" ] && INITRD_BSIZE=4096
