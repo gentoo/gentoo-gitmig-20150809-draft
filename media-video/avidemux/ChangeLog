@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.31 2003/11/02 18:28:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.32 2003/11/27 17:59:23 mholzer Exp $
+
+  27 Nov 2003; Martin Holzer <mholzer@gentoo.org> avidemux-2.0.18.ebuild,
+  files/resize_crash.patch:
+  adding patch. Closes #33993.
 
   02 Nov 2003; Martin Holzer <mholzer@gentoo.org>
   avidemux-2.0.16.ebuild, avidemux-2.0.18.ebuild, files/gcc2.patch:

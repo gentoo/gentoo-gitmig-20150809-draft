@@ -1,0 +1,27 @@
+? DIA_prefs.lo
+? DIA_resize.lo
+Index: DIA_resize.cpp
+===================================================================
+RCS file: /cvsroot/avidemux2/avidemux2/avidemux2/avidemux/ADM_dialog/DIA_resize.cpp,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 DIA_resize.cpp
+--- DIA_resize.cpp	16 Sep 2003 17:58:25 -0000	1.1.1.1
++++ DIA_resize.cpp	21 Nov 2003 17:29:53 -0000
+@@ -132,15 +132,14 @@
+ 				ret=1;
+ 				stop=1;
+ 				break;
++		default:			
+ 		case GTK_RESPONSE_CANCEL:
+ 				stop=1;
+ 				break;
+ 		case GTK_RESPONSE_APPLY:
+ 				drag(NULL,NULL);
+ 				break;
+-		default:
+-				assert(0);
+-				break;
++							
+ 		}
+ 
+ 	}

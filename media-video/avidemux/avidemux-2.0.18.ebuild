@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.18.ebuild,v 1.3 2003/11/02 18:28:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.18.ebuild,v 1.4 2003/11/27 17:59:23 mholzer Exp $
 
 IUSE="debug nls oggvorbis arts truetype alsa"
 filter-flags "-funroll-loops"
@@ -42,6 +42,7 @@ src_compile() {
 	touch -r *
 
 	cd ${S}/avidemux/mpeg2enc; epatch ${FILESDIR}/gcc2.patch; cd ${S}
+	cd ${S}/avidemux/ADM_dialog; epatch ${FILESDIR}/resize_crash.patch; cd ${S}
 
 	export WANT_AUTOCONF_2_5=1
 	autoconf
