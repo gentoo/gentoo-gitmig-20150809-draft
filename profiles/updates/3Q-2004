@@ -69,3 +69,4 @@ move dev-java/maven dev-java/maven-bin
 move dev-java/mg4j dev-java/mg4j-bin
 move dev-java/qat dev-java/qat-bin
 move dev-java/regexp dev-java/regexp-bin
+move dev-java/saxon dev-java/saxon-bin
