@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.2-r7.ebuild,v 1.1 2002/01/28 23:00:55 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.2-r8.ebuild,v 1.1 2002/01/29 23:23:19 woodchip Exp $
 
 DESCRIPTION="SAMBA is a suite of SMB and CIFS client/server programs for UNIX"
 HOMEPAGE="http://samba.org http://www.amherst.edu/~bbstone/howto/samba.html"
@@ -12,7 +12,8 @@ SRC_URI="http://us1.samba.org/samba/ftp/${P}.tar.gz
 	http://www.amherst.edu/~bbstone/recycle_bin/2.2.2/proto.h.patch
 	http://www.amherst.edu/~bbstone/recycle_bin/2.2.2/reply.c.patch"
 
-RDEPEND="virtual/glibc cups? ( net-print/cups ) pam? ( >=sys-libs/pam-0.72 ) ssl? ( >=dev-libs/openssl-0.9.6 )"
+RDEPEND="virtual/glibc >=sys-libs/pam-0.72 cups? ( net-print/cups )"
+# needs testing -- ssl? ( >=dev-libs/openssl-0.9.6 )"
 DEPEND="${RDEPEND} tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) sys-devel/autoconf"
 
 src_unpack() {
@@ -36,7 +37,7 @@ src_unpack() {
 		autoconf || die
 	fi
 
-	#fix kerberos include file collision.  from Paul de Vrieze.
+	#fix kerberos include file collision
 	cd ${S}/source/include
 	mv profile.h smbprofile.h
 	sed -e "s:profile\.h:smbprofile.h:" includes.h > includes.h.new
@@ -47,9 +48,8 @@ src_compile() {
 
 	local myconf
 	use afs && myconf="--with-afs"
-	use pam && myconf="${myconf} --with-pam --with-pam_smbpass"
 	use acl && myconf="${myconf} --with-acl-support"
-	#ssl needs testing.. anybody feel like trying and reporting back?
+	#ssl needs testing...
 	myconf="${myconf} --without-ssl"
 
 	export CFLAGS="${CFLAGS} -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE"
@@ -64,9 +64,10 @@ src_compile() {
 		--with-mandir=/usr/share/man \
 		--with-swatdir=/usr/share/swat \
 		--with-privatedir=/etc/smb/private \
+		--with-pam --with-pam_smbpass \
 		--without-sambabook \
 		--without-automount \
-		--with-spinlocks \
+		--without-spinlocks \
 		--with-netatalk \
 		--with-smbmount \
 		--with-profile \
