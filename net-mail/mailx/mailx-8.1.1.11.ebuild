@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.1.11.ebuild,v 1.10 2002/10/04 06:08:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.1.11.ebuild,v 1.11 2002/10/13 20:57:46 vapier Exp $
 
 MX_VER="8.1.1"
 S=${WORKDIR}/mailx-${MX_VER}.orig
@@ -13,7 +13,7 @@ DEPEND=">=net-libs/liblockfile-1.03
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 src_unpack() {
 
