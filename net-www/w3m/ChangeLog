@@ -1,6 +1,9 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.60 2004/08/09 03:19:31 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.61 2004/08/26 11:11:50 usata Exp $
+
+  26 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> w3m-0.5.1-r1.ebuild:
+  Stable on x86, alpha and ppc.
 
   08 Aug 2004; Tom Gall <tgall@gentoo.org> w3m-0.5.1-r1.ebuild:
   stable on ppc64, bug #57676
