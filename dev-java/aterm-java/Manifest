@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0f13a27cffbeac014bda21419c83e60c aterm-java-1.6.ebuild 986
-MD5 f6d0c4cdadb8ce0af6d34e954a530a09 ChangeLog 922
+MD5 9c503091bc64f7f32338fa0dbe83f369 ChangeLog 1020
+MD5 4562c2475cf1ece2e378a97526e0d06c aterm-java-1.6.ebuild 997
 MD5 c6fda29703c19902128457a305e5f960 metadata.xml 1021
 MD5 83c4c3de06ab9a728df5efb8e636faa4 files/digest-aterm-java-1.6 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVNx/rLF9B432nYRAsD3AKCsGdJ/EpKJnwHQljNsQS0te2xm7gCfQlVB
-tZ2HIE99L17kcdaOYIXAgkw=
-=gTMc
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 610c26bc529fd8088de5c286a297b745 ChangeLog 767
 MD5 feac4bd1d57fb7370b3fd3ea37df28e8 metadata.xml 279
-MD5 ec11a317227cd7e601cdb2e4c5b249bf shared-objects-1.4.ebuild 939
-MD5 6e5fdb0bc437b5d834fbef48bcf33685 ChangeLog 667
+MD5 7148b1b5de04d1f70dbb57d52f10aa3b shared-objects-1.4.ebuild 950
 MD5 ab3542fe5faff0c966e584b71c8dfbc5 files/digest-shared-objects-1.4 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBWLEkI1lqEGTUzyQRAlB8AJ4wPFZfTQRhouNE2B7RKKaYPzCs1wCgo9Q3
-dlPkVVsfnB3uGOqPhaHzoCw=
-=3f0Z
------END PGP SIGNATURE-----
