@@ -25,6 +25,8 @@ app-text/sgml2x
 # incompatible
 >=net-nds/openldap-2.0
 >=app-text/ghostscript-7
+# unfinished
+>=dev-lang/python-2.1
 
 #OK, I assume that the XFS in 2.4.4-r5 is hosed; alkaline?
 
