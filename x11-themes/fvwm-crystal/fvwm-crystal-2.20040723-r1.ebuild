@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-2.20040723-r1.ebuild,v 1.5 2004/09/18 19:17:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-2.20040723-r1.ebuild,v 1.6 2005/01/15 19:34:40 lucass Exp $
 
 MY_P="${P/-2./-}"
 DESCRIPTION="Configurable and full featured theme for FVWM, with lots of transparency."
