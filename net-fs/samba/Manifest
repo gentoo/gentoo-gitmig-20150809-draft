@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 998e5fa677027d5f9c34c6e11a2f2300 samba-3.0.7.ebuild 13959
 MD5 752029d2b65f2faafedafcbc8f74c0cb samba-3.0.7-r1.ebuild 15430
 MD5 a099bbaec41e1bf990ab5b7986ce4cf1 samba-3.0.6-r4.ebuild 14235
 MD5 0f3d8c9bb836841be55e78eadd0ea0b7 samba-3.0.9.ebuild 16226
 MD5 636cefb79b33da2114659a179850f094 samba-3.0.6-r3.ebuild 14258
 MD5 7b437485608a9d4133c07e606ab9fda8 samba-3.0.9-r1.ebuild 16411
-MD5 71a406fa15680d2b412c47e50ea55c50 samba-3.0.10.ebuild 16227
+MD5 6123aff96eab56aceb36dc0c78c00c5e samba-3.0.10.ebuild 16366
 MD5 8df69d51a4a13d38c421f32cbf82d2a6 samba-3.0.8.ebuild 16847
 MD5 9f0a8c7680e04b052edc2f96ec9859a6 ChangeLog 25677
 MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
@@ -57,10 +54,3 @@ MD5 48bea6e2bb73a2b7ce286bedefae3011 files/samba-3.0.9-util.c-bitpmap.c-4120.pat
 MD5 de43ff30dd5f1431590fd62a997e71b4 files/samba-3.0.4-python-setup.patch 833
 MD5 fcebd975211fecf647f6cecf26ba5c96 files/samba-3.0.x.patch 8086
 MD5 8289eda694b35875eec6df5cc3f50c86 files/samba-2.2.6-libresolv.patch 540
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB4RR5I1lqEGTUzyQRApjdAKCSXeX7wD7FXiRX6fp6RwXYatWebQCeO5ig
-YrUql0ZCAUTF+YL/MWClaHk=
-=QhMr
------END PGP SIGNATURE-----
