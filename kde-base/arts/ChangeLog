@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.35 2003/02/28 20:44:51 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.36 2003/03/11 13:31:16 danarmak Exp $
+
+*arts-1.1.0-r1 (11 Mar 2003)
+
+  11 Mar 2003; Dan Armak <danarmak@gentoo.org> arts-1.1.0-r1.ebuild:
+  Fix bug #16329 (arts not added to paths without kdelibs); goes together
+  with the new kdelibs-3.1-r3.
+  Also, add an informational message about making artswrapper suid root
+  (cf bug #7883).
 
   28 Feb 2003; Hannes Mehnert <hannes@gentoo.org> arts-1.1.0.ebuild:
   Fix bug #13453: filter out the -foptimize-sibling-calls optimization flag,
