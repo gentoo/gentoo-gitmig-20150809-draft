@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r2.ebuild,v 1.16 2004/07/04 14:15:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r2.ebuild,v 1.17 2004/09/29 15:41:09 usata Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/emacs/${P}.tar.gz
 	leim? ( mirror://gnu/emacs/leim-${PV}.tar.gz )"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="21"
 KEYWORDS="x86 ppc sparc alpha amd64 hppa ia64 s390"
 IUSE="X nls motif leim gnome Xaw3d"
 
