@@ -1,6 +1,11 @@
 # ChangeLog for net-www/phpBB
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/ChangeLog,v 1.10 2004/03/02 16:18:13 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/ChangeLog,v 1.11 2004/03/30 20:30:48 stuart Exp $
+
+*phpBB-2.0.8a (30 Mar 2004)
+
+  30 Mar 2004; Stuart Herbert <stuart@gentoo.org> phpBB-2.0.8a.ebuild:
+  Version bump; for bug #45482
 
 *phpBB-2.0.6-r2 (02 Mar 2004)
 
