@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.5.ebuild,v 1.4 2002/10/13 08:44:18 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.5.ebuild,v 1.5 2002/10/13 11:34:40 bcowan Exp $
 
 IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda"
 
@@ -9,8 +9,7 @@ MY_P="sylpheed-${PV}claws"
 S=${WORKDIR}/${MY_P}
 S2=${WORKDIR}/gentoo-extra
 DESCRIPTION="Bleeding edge version of Sylpheed"
-SRC_URI="mirror://sourceforge/sylpheed-claws/${MY_P}.tar.bz2
-	mirror://gentoo/sylpheed-gentoo-extra.tar.bz2"
+SRC_URI="mirror://sourceforge/sylpheed-claws/${MY_P}.tar.bz2"
 HOMEPAGE="http://sylpheed-claws.sf.net"
 
 SLOT="0"
@@ -41,7 +40,7 @@ src_unpack() {
 	if use gtkhtml
 	then
 		cd ${S}
-		patch -p1 < ${S2}/${PN}-0.8.1-gentoo.patch || die
+		patch -p1 < ${FILESDIR}/sylpheed-0.8.3claws32-dillo.patch || die
 	fi
 }
 
