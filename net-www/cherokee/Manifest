@@ -9,5 +9,5 @@ MD5 328043d9bd3472aa21ed3eab65a8bb87 files/digest-cherokee-0.4.0 72
 MD5 c4c2ec2b5ce18737c27b306f0ba93578 files/digest-cherokee-0.4.1 66
 MD5 a4010247cc6d338421781155b7ad324b files/digest-cherokee-0.4.4 66
 MD5 298dfdd3c83893b3123d85278d1c1e7e files/digest-cherokee-0.4.5 66
-MD5 5583731c6ea8f60b92df0b57aab6e68d files/cherokee-0.4.5-init.d 879
+MD5 55e316b8e6cfda17196223aec86d55c5 files/cherokee-0.4.5-init.d 886
 MD5 6da94000869b804248b03d61703b69bb files/cherokee-0.4.5-Makefile.am.patch 956
