@@ -1,10 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.04.ebuild,v 1.7 2002/10/17 14:31:08 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.04.ebuild,v 1.8 2002/10/17 14:35:42 blizzy Exp $
 
 IUSE="doc mozilla"
 
-. /usr/portage/eclass/inherit.eclass
 inherit java
 
 At="j2sdk-1_3_1_04-linux-i586.bin"
