@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.6 2003/07/13 13:32:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.7 2003/09/05 02:40:30 msterret Exp $
 
 inherit eutils
 
@@ -94,30 +94,30 @@ src_install() {
 	diropts -m 755 -o alias -g qmail
 	dodir /var/qmail/alias
 
-	einfo "Installing the qmail software ..." 
+	einfo "Installing the qmail software ..."
 
 	insopts -o root -g qmail -m 755
 	insinto /var/qmail/boot
 	doins home home+df proc proc+df binm1 binm1+df binm2 binm2+df binm3 binm3+df
- 
+
 	into /usr
-	dodoc FAQ UPGRADE SENDMAIL INSTALL* TEST* REMOVE* PIC* SECURITY 
+	dodoc FAQ UPGRADE SENDMAIL INSTALL* TEST* REMOVE* PIC* SECURITY
 	dodoc SYSDEPS TARGETS THANKS THOUGHTS TODO VERSION
-	dodoc ${FILESDIR}/${PV}/tls-patch.txt 
+	dodoc ${FILESDIR}/${PV}/tls-patch.txt
 
 	insopts -o qmailq -g qmail -m 4711
 	insinto /var/qmail/bin
 	doins qmail-queue qmail-queue
-        
+
 	insopts -o root -g qmail -m 700
 	insinto /var/qmail/bin
 	doins qmail-lspawn qmail-start qmail-newu qmail-newmrh
-        
+
 	insopts -o root -g qmail -m 711
 	insinto /var/qmail/bin
 	doins qmail-getpw qmail-local qmail-remote qmail-rspawn \
 	qmail-clean qmail-send splogger qmail-pw2u
- 
+
 	insopts -o root -g qmail -m 755
 	insinto /var/qmail/bin
 	doins qmail-inject predate datemail mailsubj qmail-showctl \
@@ -158,7 +158,7 @@ src_install() {
 		touch ${D}/var/qmail/alias/.qmail-${i}
 		fowners alias.qmail /var/qmail/alias/.qmail-${i}
 	done
- 
+
 	einfo "Setting up maildirs by default in the account skeleton ..."
 	diropts -m 755 -o root -g root
 	insinto /etc/skel
@@ -247,7 +247,7 @@ pkg_postinst() {
 	touch ${ROOT}/var/qmail/queue/lock/sendmutex
 	chmod 600 ${ROOT}/var/qmail/queue/lock/sendmutex
 	chown qmails.qmail ${ROOT}/var/qmail/queue/lock/sendmutex
- 
+
 	mkfifo ${ROOT}/var/qmail/queue/lock/trigger
 	chmod 622 ${ROOT}/var/qmail/queue/lock/trigger
 	chown qmails.qmail ${ROOT}/var/qmail/queue/lock/trigger
@@ -264,10 +264,10 @@ pkg_postinst() {
 
 pkg_config() {
 
-export qhost=`hostname`			
+export qhost=`hostname`
 	if [ ${ROOT} = "/" ] ; then
 		if [ ! -f ${ROOT}/var/qmail/control/me ] ; then
-			${ROOT}/var/qmail/bin/config-fast $qhost 
+			${ROOT}/var/qmail/bin/config-fast $qhost
 		fi
 	fi
 

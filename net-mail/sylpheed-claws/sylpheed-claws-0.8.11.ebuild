@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.11.ebuild,v 1.6 2003/08/30 09:28:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.11.ebuild,v 1.7 2003/09/05 02:23:42 msterret Exp $
 
 IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda"
 
@@ -28,7 +28,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	xface? ( >=media-libs/compface-1.4 )
 	gtkhtml? ( net-www/dillo )
 	x11-misc/shared-mime-info"
-	
+
 RDEPEND="nls? ( sys-devel/gettext )"
 
 PROVIDE="virtual/sylpheed"
@@ -50,7 +50,7 @@ src_unpack() {
 		sed -e "s/PACKAGE\=sylpheed/PACKAGE\=sylpheed-claws/" \
 			${i}.orig > ${i}
 	done
-	
+
 	# use shared-mime-info
 	cd ${S}/src
 	epatch ${FILESDIR}/procmime.patch
@@ -62,29 +62,29 @@ src_compile() {
 	use gnome \
 	    && myconf="${myconf} --enable-gdk-pixbuf" \
 	    || myconf="${myconf} --disable-gdk-pixbuf"
-	
+
 	use imlib \
 	    && myconf="${myconf} --enable-imlib" \
 	    || myconf="${myconf} --disable-imlib"
-	    
+
 	use spell \
 	    && myconf="${myconf} --enable-aspell" \
 	    || myconf="${myconf} --disable-aspell"
-	    
+
 	use ldap && myconf="${myconf} --enable-ldap"
-	
+
 	use ssl && myconf="${myconf} --enable-openssl"
-	
+
 	use crypt && myconf="${myconf} --enable-gpgme"
-	
+
 	use ipv6 && myconf="${myconf} --enable-ipv6"
-	
+
 	use pda && myconf="${myconf} --enable-jpilot"
-	
+
 	use nls || myconf="${myconf} --disable-nls"
-	
+
 	echo ${myconf}
-	
+
 	econf \
 		--program-suffix=-claws \
 		--enable-spamassassin-plugin \
@@ -108,7 +108,7 @@ src_install() {
 	mv ${D}/usr/share/pixmaps/sylpheed.png \
 		${D}/usr/share/pixmaps/sylpheed-claws.png
 
-	dodoc AUTHORS ChangeLog* INSTALL* NEWS README* TODO*  
+	dodoc AUTHORS ChangeLog* INSTALL* NEWS README* TODO*
 }
 
 pkg_postinst() {

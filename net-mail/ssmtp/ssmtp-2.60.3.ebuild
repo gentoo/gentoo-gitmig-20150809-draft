@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.60.3.ebuild,v 1.5 2003/07/21 14:58:03 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.60.3.ebuild,v 1.6 2003/09/05 02:28:09 msterret Exp $
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 SRC_URI="ftp://ftp.es.debian.org/debian/pool/main/s/ssmtp/ssmtp_${PV}.tar.gz"
@@ -31,12 +31,12 @@ src_compile() {
 	econf \
 		--sysconfdir=/etc/ssmtp \
 		${myconf} || die
-	
+
 	make clean || die
 	make etcdir=/etc || die
 }
 
-src_install() {							   
+src_install() {
 	dodir /usr/bin /usr/sbin /usr/lib
 	dosbin ssmtp
 	chmod 755 ${D}/usr/sbin/ssmtp
@@ -56,22 +56,22 @@ src_install() {
 
 	# Set up config file
 	# See bug #22658
-        #local conffile="/etc/ssmtp/ssmtp.conf"
-        #local hostname=`hostname -f`
-        #local domainname=`hostname -d`
-        #mv ${conffile} ${conffile}.orig
-        #sed -e "s:rewriteDomain=:rewriteDomain=${domainname}:g" \
-        #        -e "s:_HOSTNAME_:${hostname}:" \
-        #        -e "s:^mailhub=mail:mailhub=mail.${domainname}:g" \
-        #        ${conffile}.orig > ${conffile}.pre
+	#local conffile="/etc/ssmtp/ssmtp.conf"
+	#local hostname=`hostname -f`
+	#local domainname=`hostname -d`
+	#mv ${conffile} ${conffile}.orig
+	#sed -e "s:rewriteDomain=:rewriteDomain=${domainname}:g" \
+	#        -e "s:_HOSTNAME_:${hostname}:" \
+	#        -e "s:^mailhub=mail:mailhub=mail.${domainname}:g" \
+	#        ${conffile}.orig > ${conffile}.pre
 	#if [ `use ssl` ];
-        #then
-        #        sed -e "s:^#UseTLS=YES:UseTLS=YES:g" \
-        #                ${conffile}.pre > ${conffile}
-        #        mv ${conffile}.pre ${conffile}.orig
-        #else
-        #        mv ${conffile}.pre ${conffile}
-        #fi
+	#then
+	#        sed -e "s:^#UseTLS=YES:UseTLS=YES:g" \
+	#                ${conffile}.pre > ${conffile}
+	#        mv ${conffile}.pre ${conffile}.orig
+	#else
+	#        mv ${conffile}.pre ${conffile}
+	#fi
 }
 
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.9-r1.ebuild,v 1.5 2003/07/13 13:32:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.9-r1.ebuild,v 1.6 2003/09/05 02:39:51 msterret Exp $
 
 IUSE="ssl ldap sasl berkdb tcpd gdbm mbox"
 
@@ -84,14 +84,14 @@ src_compile() {
 	for x in libmilter libsmutil sendmail mailstats rmail praliases smrsh makemap vacation mail.local
 	do
 		pushd ${x}
-		sh Build 
+		sh Build
 		popd
 	done
 }
 
 src_install () {
 	OBJDIR="obj.`uname -s`.`uname -r`.`arch`"
-	dodir /etc/pam.d /usr/bin /usr/include/libmilter /usr/lib 
+	dodir /etc/pam.d /usr/bin /usr/include/libmilter /usr/lib
 	dodir /usr/share/man/man{1,5,8} /usr/sbin /var/log /usr/share/sendmail-cf
 	dodir /var/spool/{mqueue,clientmqueue} /etc/conf.d
 	keepdir /var/spool/{clientmqueue,mqueue}
@@ -131,8 +131,8 @@ src_install () {
 	newdoc cf/cf/README README.install-cf
 	cp -a cf/* ${D}/usr/share/sendmail-cf
 	insinto /etc/mail
-	if [ -n "` use mbox `" ] 
-	then  
+	if [ -n "` use mbox `" ]
+	then
 		doins ${FILESDIR}/{sendmail.cf,sendmail.mc}
 	else
 		newins ${FILESDIR}/sendmail-procmail.cf sendmail.cf
@@ -169,9 +169,6 @@ EOF
 }
 
 pkg_postinst() {
-                                                                                
-        einfo "This ebuild uses mbox support by default. If you are"
-        einfo "looking for maildir support put -mbox into your USE variables."
-                                                                                
+	einfo "This ebuild uses mbox support by default. If you are"
+	einfo "looking for maildir support put -mbox into your USE variables."
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.3.12.ebuild,v 1.4 2003/06/22 20:49:38 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.3.12.ebuild,v 1.5 2003/09/05 02:35:44 msterret Exp $
 
 DESCRIPTION="A perl module which integrates virus scanning software with your MTA"
 HOMEPAGE="http://www.amavis.org"
@@ -75,7 +75,7 @@ src_compile() {
 	sed \
 		-e "s:/usr/local/f-prot:/opt/f-prot:" \
 		-e "s:ac_dummy=\"\$PATH\:/usr/bin\:/usr/local/bin\":ac_dummy=\"\$PATH\:/usr/bin\:/usr/local/bin\:/opt/vlnx\":" \
-		< configure.tmp > configure 
+		< configure.tmp > configure
 
 	local myconf
 
@@ -106,7 +106,7 @@ src_install() {
 		chown -R qmailq:qmail ${D}/var/amavis
 	else
 		chown -R amavis:amavis ${D}/var/amavis
-	fi	
+	fi
 
 	chmod -R 770 ${D}/var/amavis
 
@@ -119,7 +119,6 @@ src_install() {
 		|| die "make install failed"
 
 	dodoc AUTHORS BUGS ChangeLog FAQ HINTS INSTALL NEWS README* TODO
-
 }
 
 pkg_postinst() {
@@ -130,5 +129,4 @@ pkg_postinst() {
 	einfo ""
 	einfo "less /usr/share/doc/${P}/README.$mymta.gz"
 	einfo ""
-
 }

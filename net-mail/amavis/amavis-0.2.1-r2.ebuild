@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1-r2.ebuild,v 1.11 2003/02/13 14:22:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1-r2.ebuild,v 1.12 2003/09/05 02:35:44 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Virus Scanner"
@@ -38,5 +38,4 @@ src_install() {
 	dodir /var/tmp/virusmails
 	chmod 777 ${D}/var/log/scanmail
 	chmod 777 ${D}/var/tmp/virusmails
-
 }

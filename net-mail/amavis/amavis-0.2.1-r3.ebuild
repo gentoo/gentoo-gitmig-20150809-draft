@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1-r3.ebuild,v 1.6 2003/02/13 14:22:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1-r3.ebuild,v 1.7 2003/09/05 02:35:44 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Virus Scanner"
@@ -18,7 +18,7 @@ DEPEND="net-mail/maildrop
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
 	patch -p0 < ${FILESDIR}/${P}-securetar.patch
 }

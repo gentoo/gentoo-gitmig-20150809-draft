@@ -34,7 +34,7 @@ RDEPEND="virtual/glibc
 	!virtual/imapd"
 
 	# Removed these from RDEP until the tcltk situation is clarified.
-	# They are only necessary for non-virtual users to be able to change 
+	# They are only necessary for non-virtual users to be able to change
 	# passwords via webmail. Hopefully not a highly used feature.
 	#>=dev-tcltk/expect-5.33.0
 	#tcltk? ( >=dev-tcltk/expect-5.33.0 )
@@ -65,27 +65,27 @@ src_compile() {
 		|| myconf="${myconf} --without-ispell"
 
 	if [ -f /var/vpopmail/etc/lib_deps ]; then
-                myconf="${myconf} --with-authvchkpw"
-        else
-                myconf="${myconf} --without-authvchkpw"
-        fi
-	
+		myconf="${myconf} --with-authvchkpw"
+	else
+		myconf="${myconf} --without-authvchkpw"
+	fi
+
 	#
 	# 1. If nls is enabled and ENABLE_UNICODE is not empty...
 	#    enable the specified unicode sets
-	# 2. If nls is enabled and no unicode sets are specified, 
+	# 2. If nls is enabled and no unicode sets are specified,
 	#    enable them all
 	# 3. If nls is disabled, disable unicode sets
 	#
 	if use nls && [ ! -z "$ENABLE_UNICODE" ]; then
-                myconf="${myconf} --enable-unicode=$ENABLE_UNICODE"
-        elif use nls; then
-                myconf="${myconf} --enable-unicode"
-        else
-                myconf="${myconf} --disable-unicode"
-        fi
+		myconf="${myconf} --enable-unicode=$ENABLE_UNICODE"
+	elif use nls; then
+		myconf="${myconf} --enable-unicode"
+	else
+		myconf="${myconf} --disable-unicode"
+	fi
 
-	myconf="${myconf} debug=true"	
+	myconf="${myconf} debug=true"
 
 	./configure \
 		--prefix=/usr \
@@ -118,7 +118,7 @@ chg_cfg() {
 	sed -e "/\#\#NAME: ${key}/,+20 s|${key}=.*|${key}=\"${value}\"|g" ${file} > ${file}.tmp && chmod --reference ${file} ${file}.tmp && mv ${file}.tmp ${file}
 	rm -f ${f}.tmp 1>/dev/null 2>&1
 }
-	
+
 set_mime() {
 	local files=$*
 
@@ -155,12 +155,12 @@ set_maildir() {
 
 	local f
 	for f in ${files}
-	do	
+	do
 		echo "changing ${origmaildir} in ${f} to ${newmaildir}"
 		sed -e"/^[^\#]/ s/${origmaildir}/${newmaildir}/g" ${f} > ${f}.tmp && chmod --reference ${f} ${f}.tmp && mv -f ${f}.tmp ${f}
 		rm -f ${f}.tmp 1> /dev/null 2>&1
 	done
-}						
+}
 
 src_install() {
 	dodir /var/lib/courier
@@ -185,7 +185,7 @@ src_install() {
 	exeinto /etc/init.d
 	# we install the new single init script as courier
 	newexe ${FILESDIR}/courier-init courier
-	# and install the old main init script as courier-old if the old one 
+	# and install the old main init script as courier-old if the old one
 	# is installed which it will be now, but for the future...
 	`grep DAEMONLIST /etc/init.d/courier >&/dev/null` && \
 		newexe ${FILESDIR}/courier courier-old
@@ -203,7 +203,7 @@ src_install() {
 	newins ${FILESDIR}/locallowercase locallowercase
 	newins ${FILESDIR}/sizelimit sizelimit
 	newins ${FILESDIR}/apache-sqwebmail.inc apache-sqwebmail.inc
-	
+
 	touch ${D}/var/lib/courier/webmail-logincache/.keep
 	touch ${D}/var/lib/courier/tmp/broken/.keep
 	touch ${D}/var/lib/courier/msgs/.keep
@@ -240,7 +240,7 @@ pkg_preinst() {
 	do
 		mv ${y} courier-${y}
 	done
-	
+
 	cd ${D}/etc/courier
 	for y in *.dist
 	do
@@ -261,13 +261,13 @@ pkg_postinst() {
 	cd ${S}
 	make install-configure
 
-	# fixes bug #15873 for upgrades, should be able to yank this sometime in 
+	# fixes bug #15873 for upgrades, should be able to yank this sometime in
 	# the future
 	chown --recursive mail.mail ${ROOT}/var/run/courier
 
-	# need to do this for new installs to be able to start courier 
-        # without having to run rc-update ...
-        /etc/init.d/depscan.sh
+	# need to do this for new installs to be able to start courier
+	# without having to run rc-update ...
+	/etc/init.d/depscan.sh
 
 	einfo "The following command will setup courier for you system:"
 	einfo "ebuild /var/db/pkg/${CATEGORY}/${PN}-${PV}/${PN}-${PV}.ebuild config"
@@ -302,10 +302,10 @@ pkg_postinst() {
 pkg_config() {
 	mailhost=`hostname`
 	export mailhost
-	
+
 	domainname=`echo ${mailhost} | sed -e "s/[^\.]*\.\(.*\)/\1/"`
 	export domainname
-	
+
 
 	if [ ${ROOT} = "/" ] ; then
 		file=${ROOT}/etc/courier/locals
@@ -318,7 +318,7 @@ pkg_config() {
 			echo ${domainname} > ${file}
 			/usr/sbin/makeacceptmailfor
 		fi
-		
+
 		file=${ROOT}/etc/courier/smtpaccess/${domainname}
 		if [ ! -f ${file} ]
 		then
@@ -345,7 +345,7 @@ pkg_config() {
 			/usr/sbin/makesmtpaccess
 		fi
 	fi
-	
+
 	echo "creating cert for esmtpd-ssl:"
 	/usr/sbin/mkesmtpdcert
 	echo "creating cert for imapd-ssl:"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/bogofilter-0.13.7.3.ebuild,v 1.2 2003/07/21 15:01:42 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/bogofilter-0.13.7.3.ebuild,v 1.3 2003/09/05 02:24:48 msterret Exp $
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
@@ -29,13 +29,13 @@ src_install() {
 	insinto /usr/lib/${PN}/tuning
 	doexe tuning/bogolex.sh tuning/bogol tuning/bogotune
 	doins tuning/README.bogotune tuning/bogol.1 tuning/bogotune.1
-	
+
 	exeinto /usr/lib/${PN}/contrib
 	doexe contrib/bogofilter-qfe contrib/bogogrep contrib/mime.get.rfc822 contrib/parmtest.sh
 	doexe contrib/printmaildir.pl contrib/randomtrain contrib/scramble contrib/bogofilter-milter.pl
 	insinto /usr/lib/${PN}/contrib
 	doins contrib/README.randomtrain contrib/bogo.R contrib/trainbogo.sh
-	
+
 	dodoc AUTHORS INSTALL COPYING METHODS NEWS README README.cvs TODO UPGRADE
 	dodoc RELEASE.NOTES-0.1* CHANGES-0.1* doc/integrating-with-* doc/*.HOWTO
 	dodoc contrib/mailfilter.example contrib/procmailrc.example
@@ -49,7 +49,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	
+
 	einfo "With version 0.11 the options of bogofilter have changed."
 	einfo "If you update from an older version, you eventually must change"
 	einfo "your configuration."

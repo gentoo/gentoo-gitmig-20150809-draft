@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/bogofilter-0.11.2.ebuild,v 1.2 2003/06/02 22:53:39 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/bogofilter-0.11.2.ebuild,v 1.3 2003/09/05 02:24:48 msterret Exp $
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
@@ -33,7 +33,7 @@ src_install() {
 
 	dohtml doc/*.html
 	docinto programmer ; dodoc doc/programmer/*
-	
+
 	einfo "With version 0.11 the options of bogofilter are changed."
 	einfo "If you update from an old version, you eventually must change"
 	einfo "your configuration."

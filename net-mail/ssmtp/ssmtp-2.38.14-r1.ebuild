@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.38.14-r1.ebuild,v 1.19 2003/02/13 14:40:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.38.14-r1.ebuild,v 1.20 2003/09/05 02:28:08 msterret Exp $
 
 S=${WORKDIR}/${P}
 
@@ -15,12 +15,12 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa"
 LICENSE="GPL-2"
 
-src_compile() {						   
+src_compile() {
 	make clean || die
 	make ${MAKEOPTS} || die
 }
 
-src_install() {							   
+src_install() {
 	dodir /usr/bin /usr/sbin /usr/lib
 	dosbin ssmtp
 	chmod 755 ${D}/usr/sbin/ssmtp

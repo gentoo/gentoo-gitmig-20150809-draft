@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.22 2003/07/31 11:21:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.23 2003/09/05 02:44:16 msterret Exp $
 
 inherit eutils
 
@@ -52,7 +52,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-${PR}/smtp-auth-close3.patch
 
 	# TLS support and an EHLO patch
-	if use ssl 
+	if use ssl
 	then
 		ebegin "Applying tls.patch.bz2..."
 		bzcat ${FILESDIR}/${PV}-${PR}/tls.patch.bz2 | patch -p1 &>/dev/null || die
@@ -61,7 +61,7 @@ src_unpack() {
 
 	# patch so an alternate queue processor can be used
 	# i.e. - qmail-scanner
-	epatch ${DISTDIR}/qmailqueue-patch	
+	epatch ${DISTDIR}/qmailqueue-patch
 
 	# a patch for faster queue processing
 	epatch ${DISTDIR}/big-todo.103.patch
@@ -117,29 +117,29 @@ src_install() {
 	diropts -m 755 -o alias -g qmail
 	dodir /var/qmail/alias
 
-	einfo "Installing the qmail software ..." 
+	einfo "Installing the qmail software ..."
 
 	insopts -o root -g qmail -m 755
 	insinto /var/qmail/boot
 	doins home home+df proc proc+df binm1 binm1+df binm2 binm2+df binm3 binm3+df
- 
-	dodoc FAQ UPGRADE SENDMAIL INSTALL* TEST* REMOVE* PIC* SECURITY 
+
+	dodoc FAQ UPGRADE SENDMAIL INSTALL* TEST* REMOVE* PIC* SECURITY
 	dodoc SYSDEPS TARGETS THANKS THOUGHTS TODO VERSION
-	dodoc ${FILESDIR}/${PV}-${PR}/tls-patch.txt 
+	dodoc ${FILESDIR}/${PV}-${PR}/tls-patch.txt
 
 	insopts -o qmailq -g qmail -m 4711
 	insinto /var/qmail/bin
 	doins qmail-queue qmail-queue
-        
+
 	insopts -o root -g qmail -m 700
 	insinto /var/qmail/bin
 	doins qmail-lspawn qmail-start qmail-newu qmail-newmrh
-        
+
 	insopts -o root -g qmail -m 711
 	insinto /var/qmail/bin
 	doins qmail-getpw qmail-local qmail-remote qmail-rspawn \
 	qmail-clean qmail-send splogger qmail-pw2u
- 
+
 	insopts -o root -g qmail -m 755
 	insinto /var/qmail/bin
 	doins qmail-inject predate datemail mailsubj qmail-showctl \
@@ -182,7 +182,7 @@ src_install() {
 			fowners alias.qmail /var/qmail/alias/.qmail-${i}
 		fi
 	done
- 
+
 	einfo "Setting up maildirs by default in the account skeleton ..."
 	diropts -m 755 -o root -g root
 	insinto /etc/skel
@@ -285,7 +285,7 @@ pkg_postinst() {
 	touch ${ROOT}/var/qmail/queue/lock/sendmutex
 	chmod 600 ${ROOT}/var/qmail/queue/lock/sendmutex
 	chown qmails.qmail ${ROOT}/var/qmail/queue/lock/sendmutex
- 
+
 	mkfifo ${ROOT}/var/qmail/queue/lock/trigger
 	chmod 622 ${ROOT}/var/qmail/queue/lock/trigger
 	chown qmails.qmail ${ROOT}/var/qmail/queue/lock/trigger
@@ -305,10 +305,10 @@ pkg_postinst() {
 
 pkg_config() {
 
-export qhost=`hostname --fqdn`			
+export qhost=`hostname --fqdn`
 	if [ ${ROOT} = "/" ] ; then
 		if [ ! -f ${ROOT}/var/qmail/control/me ] ; then
-			${ROOT}/var/qmail/bin/config-fast $qhost 
+			${ROOT}/var/qmail/bin/config-fast $qhost
 		fi
 	fi
 

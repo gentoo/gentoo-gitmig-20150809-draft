@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r11.ebuild,v 1.3 2003/08/06 08:44:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r11.ebuild,v 1.4 2003/09/05 02:44:16 msterret Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ S=${WORKDIR}/${P}
 src_unpack() {
 
 	# This makes life easy
-	EPATCH_OPTS="-d ${S}" 
+	EPATCH_OPTS="-d ${S}"
 
 	# unpack the initial stuff
 	unpack ${P}.tar.gz qmail-tls.patch.tbz2 qmail-smtpd-auth-0.31.tar.gz
@@ -60,10 +60,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-${PR}/smtp-auth-close3.patch
 
 	# TLS support and an EHLO patch
-	if use ssl 
+	if use ssl
 	then
 		#bzcat ${WORKDIR}/tls.patch.bz2 | patch -p1 &>/dev/null || die
-		ebegin "Adding TLS support" 
+		ebegin "Adding TLS support"
 		bzcat ${WORKDIR}/tls.patch.bz2 | patch -p1 -d ${S} &>/dev/null || die
 		eend $?
 	fi
@@ -71,7 +71,7 @@ src_unpack() {
 	# patch so an alternate queue processor can be used
 	# i.e. - qmail-scanner
 	EPATCH_SINGLE_MSG="Adding QMAILQUEUE support" \
-	epatch ${DISTDIR}/qmailqueue-patch	
+	epatch ${DISTDIR}/qmailqueue-patch
 
 	# a patch for faster queue processing
 	EPATCH_SINGLE_MSG="Patching for large queues" \
@@ -83,7 +83,7 @@ src_unpack() {
 
 	# Fix for tabs in .qmail bug noted at
 	# http://www.ornl.gov/its/archives/mailing-lists/qmail/2000/10/msg00696.html
-	# gentoo bug #24293 
+	# gentoo bug #24293
 	epatch ${DISTDIR}/qmail-local-tabs.patch
 
 	# Account for Linux filesystems lack of a synchronus link()
@@ -102,7 +102,7 @@ src_unpack() {
 	epatch ${DISTDIR}/sendmail-flagf.patch
 
 	# Reject some bad relaying attempts
-	# gentoo bug #18064 
+	# gentoo bug #18064
 	epatch ${DISTDIR}/qmail-smtpd-relay-reject
 
 	cd ${S}
@@ -144,29 +144,29 @@ src_install() {
 	diropts -m 755 -o alias -g qmail
 	dodir /var/qmail/alias
 
-	einfo "Installing the qmail software ..." 
+	einfo "Installing the qmail software ..."
 
 	insopts -o root -g qmail -m 755
 	insinto /var/qmail/boot
 	doins home home+df proc proc+df binm1 binm1+df binm2 binm2+df binm3 binm3+df
- 
-	dodoc FAQ UPGRADE SENDMAIL INSTALL* TEST* REMOVE* PIC* SECURITY 
+
+	dodoc FAQ UPGRADE SENDMAIL INSTALL* TEST* REMOVE* PIC* SECURITY
 	dodoc SYSDEPS TARGETS THANKS THOUGHTS TODO VERSION
-	dodoc ${WORKDIR}/tls-patch.txt 
+	dodoc ${WORKDIR}/tls-patch.txt
 
 	insopts -o qmailq -g qmail -m 4711
 	insinto /var/qmail/bin
 	doins qmail-queue qmail-queue
-        
+
 	insopts -o root -g qmail -m 700
 	insinto /var/qmail/bin
 	doins qmail-lspawn qmail-start qmail-newu qmail-newmrh
-        
+
 	insopts -o root -g qmail -m 711
 	insinto /var/qmail/bin
 	doins qmail-getpw qmail-local qmail-remote qmail-rspawn \
 	qmail-clean qmail-send splogger qmail-pw2u
- 
+
 	insopts -o root -g qmail -m 755
 	insinto /var/qmail/bin
 	doins qmail-inject predate datemail mailsubj qmail-showctl \
@@ -185,7 +185,7 @@ src_install() {
 	einfo "Adding env.d entry for qmail"
 	dodir /etc/env.d
 	insinto /etc/env.d
-	doins ${FILESDIR}/${PV}-${PR}/99qmail 
+	doins ${FILESDIR}/${PV}-${PR}/99qmail
 
 	einfo "Creating sendmail replacement ..."
 	diropts -m 755
@@ -199,14 +199,14 @@ src_install() {
 	# for good measure
 	keepdir /var/qmail/alias/.maildir/{cur,new,tmp}
 
-	for i in mailer-daemon postmaster root 
+	for i in mailer-daemon postmaster root
 	do
 		if [ ! -f ${ROOT}/var/qmail/alias/.qmail-${i} ]; then
 			touch ${D}/var/qmail/alias/.qmail-${i}
 			fowners alias.qmail /var/qmail/alias/.qmail-${i}
 		fi
 	done
- 
+
 	einfo "Setting up maildirs by default in the account skeleton ..."
 	diropts -m 755 -o root -g root
 	insinto /etc/skel
@@ -282,7 +282,7 @@ pkg_postinst() {
 	chmod 644 ${ROOT}/var/qmail/queue/lock/tcpto
 	chown qmailr.qmail ${ROOT}/var/qmail/queue/lock/tcpto
 
-	
+
 	[ -e ${ROOT}/var/qmail/queue/lock/sendmutex ] || touch ${ROOT}/var/qmail/queue/lock/sendmutex
 	chmod 600 ${ROOT}/var/qmail/queue/lock/sendmutex
 	chown qmails.qmail ${ROOT}/var/qmail/queue/lock/sendmutex
@@ -309,17 +309,17 @@ pkg_postinst() {
 	einfo "Additionally, the QMTP and QMQP protocols are supported, and can be started as:"
 	einfo "ln -s /var/qmail/supervise/qmail-qmtpd /service/qmail-qmtpd"
 	einfo "ln -s /var/qmail/supervise/qmail-qmqpd /service/qmail-qmqpd"
-	echo 
+	echo
 	einfo "Additionally, if you wish to run qmail right now, you should run:"
 	einfo "source /etc/profile"
 }
 
 pkg_config() {
 
-	export qhost=`hostname --fqdn`			
+	export qhost=`hostname --fqdn`
 	if [ ${ROOT} = "/" ] ; then
 		if [ ! -f ${ROOT}/var/qmail/control/me ] ; then
-			${ROOT}/var/qmail/bin/config-fast $qhost 
+			${ROOT}/var/qmail/bin/config-fast $qhost
 		fi
 	fi
 

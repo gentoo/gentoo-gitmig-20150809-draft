@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.2.ebuild,v 1.3 2003/06/11 01:48:34 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.2.ebuild,v 1.4 2003/09/05 02:31:27 msterret Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -20,20 +20,20 @@ RDEPEND="virtual/glibc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.2 )
 	>=dev-tcltk/expect-5.33.0"
-DEPEND="${RDEPEND} 
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	dev-lang/perl 
+	dev-lang/perl
 	sys-apps/procps"
 
 inherit flag-o-matic
 filter-flags -funroll-loops
 filter-flags -fomit-frame-pointer
 
-#sandbox breaks linking against vpopmail 
+#sandbox breaks linking against vpopmail
 VPOPMAIL_DIR=`cat /etc/passwd | grep ^vpopmail | cut -d: -f6`
 if [ -n "${VPOPMAIL_DIR}" ]; then
 	VPOPMAIL_ERROR=
-	if [ "`has userpriv ${FEATURES}`" ]; then 
+	if [ "`has userpriv ${FEATURES}`" ]; then
 		VPOPMAIL_ERROR=1
 	fi
 fi
@@ -43,7 +43,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	
+
 	# explicitly use db3 over db4
 	if [ -n "`use berkdb`" ]; then
 		sed -i -e 's,-ldb,-ldb-3.2,g' configure
@@ -101,7 +101,7 @@ src_compile() {
 		--enable-workarounds-for-imap-client-bugs \
 		--with-authdaemonvar=/var/lib/courier-imap/authdaemon \
 		--cache-file=${cachefile} \
-		${myconf} 
+		${myconf}
 
 	# change the pem file location..
 	cp imap/imapd-ssl.dist imap/imapd-ssl.dist.old
@@ -116,7 +116,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /var/lib/courier-imap /etc/pam.d 
+	dodir /var/lib/courier-imap /etc/pam.d
 	make install DESTDIR=${D} || die
 
 	# avoid name collisions in /usr/sbin wrt imapd and pop3d
@@ -150,7 +150,7 @@ src_install() {
 	do
 		mv ${x}.dist ${x}
 	done
-	
+
 	insinto /etc/courier-imap
 	doins ${FILESDIR}/authdaemond.conf
 
@@ -178,10 +178,10 @@ src_install() {
 	cd ..
 
 	rm -f ${D}/usr/sbin/mkimapdcert ${D}/usr/sbin/mkpop3dcert
-	exeinto /usr/sbin 
+	exeinto /usr/sbin
 		doexe ${FILESDIR}/mkimapdcert ${FILESDIR}/mkpop3dcert
 
- 	exeinto /etc/init.d
+	exeinto /etc/init.d
 		newexe ${FILESDIR}/authdaemond.rc6 authdaemond
 		newexe ${FILESDIR}/courier-imapd.rc6 courier-imapd
 		newexe ${FILESDIR}/courier-imapd-ssl.rc6 courier-imapd-ssl
@@ -193,7 +193,7 @@ src_install() {
 		newexe ${FILESDIR}/gentoo-imapd-ssl-1.6.1.rc gentoo-imapd-ssl.rc
 		newexe ${FILESDIR}/gentoo-pop3d-1.6.1.rc gentoo-pop3d.rc
 		newexe ${FILESDIR}/gentoo-pop3d-ssl-1.6.1.rc gentoo-pop3d-ssl.rc
-	
+
 	local authmods
 	authmods="authsystem.passwd authcram authshadow authuserdb authpwd authtest authinfo authmksock authcustom authdaemontest"
 	use mysql && authmods="${authmods} authmysql"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.48.ebuild,v 1.11 2003/07/25 04:53:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.48.ebuild,v 1.12 2003/09/05 02:28:09 msterret Exp $
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a
 Mailhub"
@@ -18,12 +18,12 @@ PROVIDE="virtual/mta"
 
 S=${WORKDIR}/${P}
 
-src_compile() {						   
+src_compile() {
 	make clean || die
 	make ${MAKEOPTS} || die
 }
 
-src_install() {							   
+src_install() {
 	dodir /usr/bin /usr/sbin /usr/lib
 	dosbin ssmtp
 	chmod 755 ${D}/usr/sbin/ssmtp
