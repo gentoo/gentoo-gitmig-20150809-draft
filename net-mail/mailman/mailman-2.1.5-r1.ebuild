@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r1.ebuild,v 1.2 2004/07/22 06:40:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r1.ebuild,v 1.3 2004/07/22 18:42:18 langthang Exp $
 
 inherit eutils
 IUSE="apache2"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.list.org/"
 
 SLOT="O"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ~ppc ~amd64"
 
 DEPEND=">=dev-lang/python-2.3
 	virtual/mta
