@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/sash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.13 2003/10/18 09:14:03 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.14 2003/10/18 11:16:44 plasmaroo Exp $
+
+  18 Oct 2003; <plasmaroo@gentoo.org> files/sash-3.6-fix-includes.patch:
+  Fixed includes patch to get rid of bootstrapping-breakage: e2fsprogs
+  DEPEND should now be un-necessary.
 
   18 Oct 2003; Jon Portnoy <avenj@gentoo.org> sash-3.6.ebuild :
   Fixed DEPEND to include sys-fs/e2fsprogs.

@@ -8,32 +8,4 @@ diff -ruN sash-3.6.orig/Makefile sash-3.6/Makefile
 -LDFLAGS = -static -s
 +LDFLAGS = -all-static -s
  LIBS = -lz
- 
- 
-diff -ruN sash-3.6.orig/cmd_chattr.c sash-3.6/cmd_chattr.c
---- sash-3.6.orig/cmd_chattr.c	2002-03-08 08:21:03.000000000 +0100
-+++ sash-3.6/cmd_chattr.c	2003-10-17 14:24:47.559786560 +0200
-@@ -12,7 +12,7 @@
- 
- #include <sys/ioctl.h>
- #include <sys/types.h>
--#include <linux/ext2_fs.h>
-+#include <ext2fs/ext2_fs.h>
- 
- #include "sash.h"
- 
-diff -ruN sash-3.6.orig/cmds.c sash-3.6/cmds.c
---- sash-3.6.orig/cmds.c	2002-07-22 00:28:19.000000000 +0200
-+++ sash-3.6/cmds.c	2003-10-17 14:24:31.013302008 +0200
-@@ -17,11 +17,6 @@
- #include <utime.h>
- #include <errno.h>
- 
--#if	HAVE_LINUX_MOUNT
--#include <linux/fs.h>
--#endif
--
--
- void
- do_echo(int argc, const char ** argv)
- {
+
