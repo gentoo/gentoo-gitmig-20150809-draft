@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.4.11.ebuild,v 1.6 2003/12/06 23:00:49 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.4.11.ebuild,v 1.7 2004/04/27 20:48:09 agriffis Exp $
 
-inherit debug
+inherit debug eutils
 
 DESCRIPTION="A program to draw text and graphs in the root window"
 HOMEPAGE="http://root-portal.sourceforge.net"

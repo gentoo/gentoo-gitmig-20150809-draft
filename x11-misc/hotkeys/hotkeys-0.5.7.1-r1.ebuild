@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1-r1.ebuild,v 1.5 2004/03/02 14:03:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1-r1.ebuild,v 1.6 2004/04/27 20:42:47 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Make use of extra buttons on newer keyboards."
 SRC_URI="http://ypwong.org/hotkeys/${PV}/${PN}_${PV}.tar.gz"

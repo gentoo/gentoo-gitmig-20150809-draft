@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0.ebuild,v 1.7 2004/04/11 17:32:05 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0.ebuild,v 1.8 2004/04/27 20:52:23 agriffis Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A simple interactive calendar program with a notebook capability"

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/seyon/seyon-2.20c.ebuild,v 1.2 2004/04/11 15:24:42 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/seyon/seyon-2.20c.ebuild,v 1.3 2004/04/27 20:50:19 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Seyon is a complete full-featured telecommunications package for the X Window System. Some of its features are: dialing directory, scripting language, external file transfer protocol support, zmodem auto-download and configurable keyboard translation modes."
 HOMEPAGE="http://www.debian.org/"

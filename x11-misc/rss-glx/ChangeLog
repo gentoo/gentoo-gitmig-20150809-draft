@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.17 2004/04/15 02:26:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.18 2004/04/27 20:49:28 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> rss-glx-0.7.4-r1.ebuild,
+  rss-glx-0.7.6.ebuild:
+  Add inherit eutils
 
   14 Apr 2004; Jason Wever <weeve@gentoo.org> rss-glx-0.7.6.ebuild:
   Added ~sparc keyword.

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.5-r1.ebuild,v 1.2 2004/04/13 15:56:40 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.5-r1.ebuild,v 1.3 2004/04/27 20:40:04 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="OpenGL virtual desktop switching"
 HOMEPAGE="http://desk3d.sourceforge.net/"

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.1.ebuild,v 1.5 2004/04/26 19:56:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.1.ebuild,v 1.6 2004/04/27 20:56:14 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="X11 operating system viewer"
 SRC_URI="mirror://sourceforge/xosview/${P}.tar.gz"

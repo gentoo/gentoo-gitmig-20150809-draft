@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcalendar
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.7 2004/04/11 17:32:05 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.8 2004/04/27 20:52:23 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> xcalendar-4.0.ebuild:
+  Add inherit eutils
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> xcalendar-4.0.ebuild:
   Go epatch!

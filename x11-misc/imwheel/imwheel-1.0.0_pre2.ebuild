@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/imwheel-1.0.0_pre2.ebuild,v 1.4 2004/04/11 15:08:00 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/imwheel-1.0.0_pre2.ebuild,v 1.5 2004/04/27 20:45:22 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="mouse tool for advanced features such as wheels and 3+ buttons"
 HOMEPAGE="http://jcatki.dhs.org/imwheel/"
