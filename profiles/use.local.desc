@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.184 2003/12/08 22:10:37 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.185 2003/12/10 23:03:58 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -56,7 +56,7 @@ dev-java/ant:bcel - Enable jakarta-bcel support
 dev-java/ant:jython - Enable Jython support.
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
-dev-lang/ruby:ruby18 - Use ruby-1.8 as default ruby
+dev-lang/ruby:ruby16 - Use ruby-1.6 as default ruby
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-lips/bigloo-lib:expat - enable expat support
