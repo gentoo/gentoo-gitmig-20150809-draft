@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.2.ebuild,v 1.1 2004/03/26 06:57:20 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.2.ebuild,v 1.2 2004/03/26 09:51:05 robbat2 Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
-RESTRICT="nomirror"
 HOMEPAGE="http://www.courier-mta.org/"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="gdbm ldap berkdb mysql pam nls postgres fam"
@@ -29,17 +28,28 @@ DEPEND="${RDEPEND}
 
 #userpriv breaks linking against vpopmail
 RESTRICT="nouserpriv nomirror"
-VPOPMAIL_DIR=`cat /etc/passwd | grep ^vpopmail | cut -d: -f6`
+
 VPOPMAIL_INSTALLED=
-has_version 'net-mail/vpopmail' && [ -n "${VPOPMAIL_DIR}" ] && [ -f "${VPOPMAIL_DIR}/etc/lib_deps" ] && VPOPMAIL_INSTALLED=1 || VPOPMAIL_DIR=
+VPOPMAIL_DIR=
+export VPOPMAIL_INSTALLED VPOPMAIL_DIR
+
+vpopmail_setup() {
+	VPOPMAIL_DIR=`grep ^vpopmail /etc/passwd 2>/dev/null | cut -d: -f6`
+	VPOPMAIL_INSTALLED=
+	if has_version 'net-mail/vpopmail' && [ -n "${VPOPMAIL_DIR}" ] && [ -f "${VPOPMAIL_DIR}/etc/lib_deps" ]; then
+		VPOPMAIL_INSTALLED=1
+	else
+		VPOPMAIL_DIR=
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
 
 	# patch to fix db4.0 detection as db4.1
-	# bug #27517, patch needs to go upstream
+	# bug #27517, patch was sent upstream, but was ignored :-(
 	EPATCH_OPTS="${EPATCH_OPTS} -p1 -d ${S}" \
-	epatch ${FILESDIR}/courier-imap-3.0.2-db40vs41.patch
+	epatch ${FILESDIR}/${PN}-3.0.2-db40vs41.patch
 
 	cd ${S}
 	# explicitly use db3 over db4
@@ -60,6 +70,7 @@ src_unpack() {
 }
 
 src_compile() {
+	vpopmail_setup
 
 	local myconf
 	myconf="${myconf} `use_with pam authpam`"
@@ -143,6 +154,8 @@ src_compile() {
 }
 
 src_install() {
+	vpopmail_setup
+
 	dodir /var/lib/courier-imap /etc/pam.d
 	make install DESTDIR=${D} || die
 
