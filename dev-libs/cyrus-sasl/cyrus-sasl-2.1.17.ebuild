@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.4 2004/01/28 14:17:44 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.5 2004/01/28 15:38:10 max Exp $
 
 inherit eutils flag-o-matic
 
@@ -32,7 +32,12 @@ src_unpack() {
 	unpack ${A} && cd "${S}"
 
 	# Fix broken include.
-	sed -e 's:sasl/sasl.h:sasl.h:' -i saslauthd/lak.c || die "sed failed"
+	sed -e 's:sasl/sasl.h:sasl.h:' \
+		-i saslauthd/lak.c || die "sed failed"
+
+	# Fix default port name for rimap auth mechanism.
+	sed -e '/define DEFAULT_REMOTE_SERVICE/s:imap:imap2:' \
+		-i saslauthd/auth_rimap.c || die "sed failed"
 
 	# DB4 detection and versioned symbols.
 	epatch "${FILESDIR}/cyrus-sasl-2.1.17-db4.patch"
