@@ -817,7 +817,9 @@ x11-libs/gdkxft
 
 # rphillips@gentoo.org 27 Jun 2002
 # masked since package is not released
->=dev-db/mysql-4.0.1_alpha
+# -declared new stable release as of mysql-4.0.12
+# -woodchip@gentoo.org 22 Mar 2003
+#>=dev-db/mysql-4.0.1_alpha
 
 # agriffis@gentoo.org 06 Jul 2002
 # ruby-libglade-1.2 is OLD.  The 0.2[789] versions represent new
