@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.79 2005/01/12 21:37:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.80 2005/01/13 05:09:06 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -386,18 +386,18 @@ preinst_headers() {
 # pkg_postinst functions
 #==============================================================
 postinst_sources() {
-	local MAKELINK
+	local MAKELINK=0
 	
 	# if we are to forcably symlink, delete it if it already exists first.
-	if [ -n "${K_SYMLINK}" ]; then
-		[ -h ${ROOT}usr/src/linux ] && rm ${ROOT}usr/src/linux
+	if [[ -n ${K_SYMLINK} ]] ; then
+		[[ -h ${ROOT}usr/src/linux ]] && rm ${ROOT}usr/src/linux
 		MAKELINK=1
 	fi
 	
 	# if the link doesnt exist, lets create it
-	[ ! -h ${ROOT}usr/src/linux ] && MAKELINK=1
+	[[ ! -h ${ROOT}usr/src/linux ]] && MAKELINK=1
 	
-	[ ${MAKELINK} == 1 ] && \
+	[[ ${MAKELINK} == 1 ]] && \
 		ln -sf ${ROOT}usr/src/linux-${KV_FULL} ${ROOT}usr/src/linux
 
 	# Don't forget to make directory for sysfs
@@ -413,11 +413,9 @@ postinst_sources() {
 	echo
 
 	# if K_EXTRAEINFO is set then lets display it now
-	if [ -n "${K_EXTRAEINFO}" ]
-	then
+	if [[ -n ${K_EXTRAEINFO} ]] ; then
 		echo ${K_EXTRAEINFO} | fmt |
-		while read -s ELINE
-		do
+		while read -s ELINE ; do
 			einfo "${ELINE}"
 		done
 
