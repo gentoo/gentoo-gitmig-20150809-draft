@@ -1,4 +1,4 @@
 MD5 44b8f8e39dc42d26a3b9d484a2d2874a metadata.xml 866
-MD5 0cae21249978cfdf8c4f1330633eb2eb ChangeLog 427
-MD5 91ba95ccc6dd28845d82193d597bd0c3 devel-chroots-0.0.1.ebuild 818
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-devel-chroots-0.0.1 0
+MD5 45f6df97265df9f3e72d02c6cf7116ae ChangeLog 479
+MD5 56c337ae2be07192f0b6792d7a00aa47 devel-chroots-0.0.1.ebuild 817
+MD5 a697d644f51129fafdda915bb06c40d4 files/digest-devel-chroots-0.0.1 69
