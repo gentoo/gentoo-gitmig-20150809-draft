@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.8 2005/03/20 17:11:06 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.9 2005/03/21 09:53:50 obz Exp $
+
+  21 Mar 2005; Mike Gardiner <obz@gentoo.org> herdstat-0.6-r1.ebuild:
+  Keyworded ~ppc
 
 *herdstat-0.6-r1 (20 Mar 2005)
 
