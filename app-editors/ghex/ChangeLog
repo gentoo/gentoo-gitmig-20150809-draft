@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/ghex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.21 2004/10/25 23:52:22 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.22 2004/12/01 19:44:44 joem Exp $
+
+  01 Dec 2004; Joe McCann <joem@gentoo.org> :
+  Overdue bump to latest version. Updated old deps and added new ones
+  (gconf,gnome-vfs,libbonoboui) Thanks to everybody on bug #57595
 
   25 Oct 2004; Tom Martin <slarti@gentoo.org> ghex-2.4.1.ebuild:
   Marked ~amd64, see bug 68801.
