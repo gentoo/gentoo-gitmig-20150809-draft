@@ -1,5 +1,6 @@
 # This file contains a list of useflags that cannot be used on s390.
-
+jpeg
+gpm
 3dfx
 3dnow
 acpi
