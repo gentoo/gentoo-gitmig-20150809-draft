@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rootstrap
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.4 2004/04/09 13:09:52 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.5 2004/04/27 20:58:17 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> rootstrap-0.3.19.ebuild:
+  Add inherit eutils
 
 *rootstrap-0.3.19 (09 Apr 2004)
 

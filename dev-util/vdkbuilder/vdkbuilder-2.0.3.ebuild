@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.0.3.ebuild,v 1.9 2004/03/04 16:00:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.0.3.ebuild,v 1.10 2004/04/27 21:01:24 agriffis Exp $
 #	sdl? ( media-libs/vdksdl )
 # if we figure out xdb... there's a --enable-xdb and vdkxdb
+
+inherit eutils
 
 IUSE="nls gnome"
 
