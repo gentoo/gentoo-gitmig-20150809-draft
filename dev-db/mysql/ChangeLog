@@ -1,6 +1,6 @@
-# ChangeLog for home/mysql
+# ChangeLog for dev-db/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.29 2002/12/16 19:17:19 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.30 2002/12/17 19:17:50 vapier Exp $
 
 *mysql-3.23.54a (16 Dec 2002)
 
