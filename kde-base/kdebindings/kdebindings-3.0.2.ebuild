@@ -1,12 +1,12 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # $Header:
-
 # TODO: add gnustep bindings
+inherit kde-dist
 
-inherit  kde-dist
+DESCRIPTION="KDE $PV - kde library bindings for languages other than c++"
 
-DESCRIPTION="${DESCRIPTION}Bindings"
+KEYWORDS="x86"
 
 newdepend ">=kde-base/kdebase-${PV}
 	=x11-libs/gtk+-1.2*

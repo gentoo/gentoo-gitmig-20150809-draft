@@ -11,7 +11,7 @@
 +# Gentoo part:
 +export PATH="_KDEDIR_/bin:${PATH}"
 +export KDEDIR="_KDEDIR_"
-+export KDEDIRS="_KDEDIR_:${KDEDIRS}"
++export KDEDIRS="_KDEDIR_:${KDEDIRS//${KDEDIR}}"
 +export KDEMAINDIR="_KDEDIR_"
 +
 +cd ~

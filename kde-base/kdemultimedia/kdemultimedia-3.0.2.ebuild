@@ -1,10 +1,10 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.2.ebuild,v 1.2 2002/07/11 06:30:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.2.ebuild,v 1.3 2002/07/25 17:53:21 danarmak Exp $
+inherit kde-dist flag-o-matic
 
-inherit  kde-dist flag-o-matic
-
-DESCRIPTION="${DESCRIPTION}Multimedia"
+DESCRIPTION="KDE $PV - multimedia apps"
+KEYWORDS="x86"
 
 newdepend ">=sys-libs/ncurses-5.2
 	>=media-sound/cdparanoia-3.9.8

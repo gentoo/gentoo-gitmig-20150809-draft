@@ -1,9 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.1_alpha1.ebuild,v 1.2 2002/07/22 21:55:27 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.1_alpha1.ebuild,v 1.3 2002/07/25 17:53:21 danarmak Exp $
 inherit kde-dist
 
-DESCRIPTION="${DESCRIPTION}Graphics"
+DESCRIPTION="KDE $PV - graphics-related apps"
+
+KEYWORDS="x86"
 
 newdepend "gphoto2? ( >=media-gfx/gphoto2-2.0_beta1 >=media-libs/libgpio-20010607 )
 	    sys-devel/perl
