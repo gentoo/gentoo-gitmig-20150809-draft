@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.2.3.ebuild,v 1.10 2005/01/20 00:06:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.2.3.ebuild,v 1.11 2005/03/18 15:15:51 dsd Exp $
 
 inherit gnome2 eutils versionator
 
@@ -37,4 +37,10 @@ DEPEND="${RDEPEND}
 USE_DESTDIR="1"
 SCROLLKEEPER_UPDATE="0"
 ELTCONF="--reverse-deps"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-3.2-i18n.patch || die "gettext fix"
+}
 
