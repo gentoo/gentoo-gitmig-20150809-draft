@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.18 2003/10/27 01:50:55 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.19 2003/11/29 21:52:43 brad_mssw Exp $
+
+  29 Nov 2003; Brad House <brad_mssw@gentoo.org> libsigc++-1.2.5.ebuild:
+  need to run libtoolize on amd64
 
   26 Oct 2003; Brad House <brad_mssw@gentoo.org> libsigc++-1.0.4-r2.ebuild:
   add amd64 flag
