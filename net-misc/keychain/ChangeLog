@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/keychain
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.11 2003/03/27 05:28:19 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.12 2003/04/22 20:03:07 sethbc Exp $
+
+*keychain-2.0.3 (22 Apr 2003)
+
+  22 Apr 2003; Seth Chandler <sethbc@gentoo.org>; keychain-2.0.3.ebuild:
+  a couple of changes...one for cygwin ($grepopts), and a colorized doc
+  change...oh oh oh, we have a man page now ! man keychain =)  We also
+  Have COPYING included in the tar.bz2 now...not that it matters for us
+  Gentoo folk
 
   26 Mar 2003; Graham Forest <vladimir@gentoo.org> keychain-2.0.2.ebuild :
   Automated cleanup of LICENSE
