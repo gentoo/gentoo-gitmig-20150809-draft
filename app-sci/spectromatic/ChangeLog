@@ -1,0 +1,8 @@
+# ChangeLog for app-sci/spectromatic
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/spectromatic/ChangeLog,v 1.1 2002/12/22 23:22:11 viz Exp $
+
+*spectromatic-1.0 (23 Dec 2002)
+
+  23 Dec 2002; Tobias Eichert <viz@gentoo.org> spectromatic-1.0.ebuild, files/spectromatic-1.0-gentoo.diff
+  Initial import.
