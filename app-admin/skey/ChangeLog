@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/skey
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.16 2004/09/08 03:06:07 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.17 2004/09/14 14:50:43 taviso Exp $
+
+*skey-1.1.5-r3 (14 Sep 2004)
+
+  14 Sep 2004; Tavis Ormandy <taviso@gentoo.org> +skey-1.1.5-r3.ebuild:
+  the default algorithm should be md5.
 
   07 Sep 2004; Tom Gall <tgall@gentoo.org> skey-1.1.5-r2.ebuild:
   stable on ppc64
