@@ -1,12 +1,12 @@
 # ChangeLog for app-emulation/winex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.18 2003/02/05 21:29:44 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.19 2003/02/05 21:37:11 phoenix Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
 *winex-20021123 (23 Nov 2002)
 
-  23 Nov 2002; phoen][x <phoenix@gentoo.org> winex-20021123.ebuild :
+  05 Feb 2003; phoen][x <phoenix@gentoo.org> winex-20021123.ebuild :
   Modified X dependencies. You can build winex without X now (for commandline
   applications) - this closes bug #14651.
  
