@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/multi-gnome-terminal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.11 2002/07/29 16:11:33 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.12 2002/07/29 20:59:06 azarah Exp $
+
+  29 Jul 2002; Martin Schlemmer <azarah@gentoo.org> multi-gnome-terminal-1.5.2.ebuild :
+  
+  We dialup guys like bz2's more :)  Some other fixes I had laying around.
 
 *multi-gnome-terminal-1.5.2 (29 Jul 2002)
 
