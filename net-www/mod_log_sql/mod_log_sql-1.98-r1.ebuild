@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.98.ebuild,v 1.6 2005/01/30 14:03:20 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.98-r1.ebuild,v 1.1 2005/02/17 02:29:43 beu Exp $
 
 inherit eutils
 
@@ -10,11 +10,11 @@ SRC_URI="http://www.outoforder.cc/downloads/mod_log_sql/${P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ppc"
-IUSE="ssl"
+KEYWORDS="~x86 ~ppc"
+IUSE="apache2"
 
 DEPEND=">=dev-db/mysql-3.23.15
-	>=net-www/apache-1*"
+	net-www/apache"
 
 detectapache() {
 	local domsg=
@@ -61,30 +61,41 @@ detectapache() {
 
 src_compile() {
 	detectapache
-	myconf="--with-apxs=${APXS}"
+	local myconf="--with-apxs=${APXS}"
 
 	#epatch ${FILESDIR}/mod_log_sql-1.97-gentoo.patch || die "Patch failed."
-	use ssl && myconf="${myconf} --enable-ssl"
+	#use ssl && myconf="${myconf} --enable-ssl"
 	./configure ${myconf}
 	emake || die
 }
 
 src_install() {
 	detectapache
+
 	exeinto ${APACHE_MODULES_DIR}
-	doexe mod_log_sql_mysql.so
+	if use apache2; then
+		doexe .libs/mod_log_sql.so .libs/mod_log_sql_mysql.so
+	else
+		doexe mod_log_sql.so mod_log_sql_mysql.so
+	fi
 
 	cat ${CONFIG_FILE} | sed -e "s#machine_id#`hostname -f`#" > 10_mod_log_sql.conf
 	insinto ${APACHE_MODULES_CONFIG_DIR}
 	doins 10_mod_log_sql.conf
 
-	dodoc AUTHORS CHANGELOG INSTALL LICENSE TODO Documentation/README Documentation/manual.html Documentation/manual.xml
+	dodoc AUTHORS CHANGELOG INSTALL LICENSE TODO docs/README
+	dohtml docs/manual.html docs/manual.xml
 	docinto contrib
 	dodoc contrib/create_tables.sql contrib/make_combined_log.pl contrib/mysql_import_combined_log.pl
 }
 
 pkg_postinst() {
-	einfo "Please add '-D LOG_SQL' to your /etc/conf.d/apache APACHE_OPTS setting"
+	detectapache
+
+	local cfver=
+	use apache2 && cfgfile=2
+
+	einfo "Please add '-D LOG_SQL' to your /etc/conf.d/apache${cfver} APACHE_OPTS setting"
 
 	einfo "Do not forget to adapt ${APACHE_MODULES_CONFIG_DIR}/10_mod_log_sql.conf to your needs."
 	einfo "See /usr/share/doc/${PF}/contrib/create_tables.sql.gz on how to create logging tables.\n"

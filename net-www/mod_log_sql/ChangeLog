@@ -1,6 +1,18 @@
 # ChangeLog for net-www/mod_log_sql
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/ChangeLog,v 1.16 2005/02/05 09:57:50 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/ChangeLog,v 1.17 2005/02/17 02:29:43 beu Exp $
+
+*mod_log_sql-1.98-r1 (17 Feb 2005)
+
+  17 Feb 2005; Elfyn McBratney <beu@gentoo.org> files/10_mod_log_sql.conf,
+  files/10_mod_log_sql_apache2.conf, +mod_log_sql-1.98-r1.ebuild,
+  -mod_log_sql-1.98.ebuild:
+  Version bump as the the previous version's ebuild was horribly broken:
+  just DEPEND on net-www/apache, add apache2 to IUSE, call detechapache in
+  pkg_postinst (bleh), documentation is now in "docs" (was in "Documentation"),
+  use dohtml instead of dodoc for HTML/XML docs, fix typo in 10_mod_log_sql.conf
+  and disable SSL support (which is not currently detected on 1.3 or 2.0).  Oh
+  yeah, and actually install the modules!  Closes bug #81495.
 
   05 Feb 2005; Christian Parpart <trapni@gentoo.org>
   mod_log_sql-1.100.ebuild:
