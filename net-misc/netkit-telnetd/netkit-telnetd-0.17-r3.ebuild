@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r3.ebuild,v 1.15 2003/02/10 10:32:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r3.ebuild,v 1.16 2003/02/23 09:42:24 gmsoft Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 
