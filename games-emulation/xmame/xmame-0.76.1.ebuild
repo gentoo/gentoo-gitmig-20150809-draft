@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.76.1.ebuild,v 1.2 2003/11/01 07:05:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.76.1.ebuild,v 1.3 2003/11/03 23:52:43 mr_bones_ Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://x.mame.net/"
 
 LICENSE="xmame"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~ia64 ~amd64"
 IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts joystick icc"
 
 RDEPEND="sys-libs/zlib
@@ -36,7 +36,8 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-glx-fix.patch
 
-	if [ ${ARCH} == "x86" ] ; then
+	case "${ARCH}" in
+	x86|ia64|amd64)
 		sed -i \
 			-e '/X86_ASM_68000 =/s:#::' \
 			-e '/X86_MIPS3_DRC =/s:#::' Makefile || \
@@ -46,23 +47,23 @@ src_unpack() {
 				-e '/JOY_I386.*=/s:#::' Makefile || \
 					die "sed Makefile (joystick) failed"
 		fi
-	elif [ ${ARCH} == "ppc" ] ; then
+		;;
+	ppc|sparc)
 		sed -i \
 			-e '/^MY_CPU/s:i386:risc:' Makefile || \
-				die "sed Makefile (ppc) failed"
-	elif [ ${ARCH} == "sparc" ] ; then
-		sed -i \
-			-e '/^MY_CPU/s:i386:risc:' Makefile || \
-				die "sed Makefile (sparc) failed"
-	elif [ ${ARCH} == "alpha" ] ; then
+				die "sed Makefile (ppc|sparc) failed"
+		;;
+	alpha)
 		sed -i \
 			-e '/^MY_CPU/s:i386:alpha:' Makefile || \
 				die "sed Makefile (alpha) failed"
-	elif [ ${ARCH} == "mips" ] ; then
+		;;
+	mips)
 		sed -i \
 			-e '/^MY_CPU/s:i386:mips:' Makefile || \
 				die "sed Makefile (mips) failed"
-	fi
+		;;
+	esac
 
 	if [ `use icc` ] ; then
 		sed -i \

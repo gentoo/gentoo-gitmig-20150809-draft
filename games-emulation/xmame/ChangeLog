@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.6 2003/11/01 07:05:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.7 2003/11/03 23:52:43 mr_bones_ Exp $
+
+  03 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.76.1.ebuild:
+  replace the arch if/then thing with a case statement; added support for ia64
+  and amd64 for bug 32628
 
   31 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.76.1.ebuild:
   add icc USE support (bug 31769); DEPEND on sed >= 4 for -i; add more error
