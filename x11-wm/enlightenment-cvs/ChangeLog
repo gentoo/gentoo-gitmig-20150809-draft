@@ -1,11 +1,17 @@
 # ChangeLog for x11-wm/enlightenment-cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/ChangeLog,v 1.6 2002/12/26 16:57:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/ChangeLog,v 1.7 2003/01/12 00:08:53 vapier Exp $
+
+*enlightenment-cvs-20030111 (11 Jan 2003)
+
+  11 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added med back in (since its been updated to evas2).  Also added elogin to the ebuild.
+  The e install bug has also been fixed thx to Bluesman on EFNet in #gentoo.
 
 *enlightenment-cvs-20021224 (26 Dec 2002)
 
   26 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
-  Swapped some SPLIT for HEAD and disabled mmx support in evas2
+  Swapped some SPLIT for HEAD and disabled mmx support in evas2.
 
 *enlightenment-cvs-20021219 (21 Dec 2002)
 
