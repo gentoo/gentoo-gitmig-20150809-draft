@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.25 2004/08/02 17:46:33 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.26 2004/08/11 00:57:28 lv Exp $
 
 inherit eutils
 
@@ -62,6 +62,9 @@ src_compile() {
 src_install() {
 	dodir /lib
 	dodir /usr/lib
+	use amd64 && (
+		dodir /lib64
+		dodir /usr/lib64 )
 	dodir /bin
 	dodir /usr/bin
 
@@ -73,7 +76,14 @@ src_install() {
 	prepalldocs
 
 	mv ${D}/usr/bin/* ${D}/bin
-	mv ${D}/usr/lib/libattr.so* ${D}/lib
 
-	dosym /lib/libattr.so /usr/lib/libattr.so
+	# this file might be in lib... with the amd64 lib64 migration it might be
+	# in lib64 too (maybe).
+	if [ -a ${D}/usr/lib64/libattr.so.? ] ; then
+		mv ${D}/usr/lib64/libattr.so* ${D}/lib64
+		dosym /lib64/libattr.so /usr/lib64/libattr.so
+	else
+		mv ${D}/usr/lib/libattr.so* ${D}/lib
+		dosym /lib/libattr.so /usr/lib/libattr.so
+	fi
 }

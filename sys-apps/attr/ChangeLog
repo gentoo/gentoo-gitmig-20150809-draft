@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/attr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.36 2004/08/02 17:46:33 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.37 2004/08/11 00:57:28 lv Exp $
+
+  10 Aug 2004; Travis Tilley <lv@gentoo.org> attr-2.4.7-r1.ebuild,
+  attr-2.4.8.ebuild:
+  made attr ebuild lib64 aware
 
   02 Aug 2004; Jon Portnoy <avenj@gentoo.org> attr-2.4.7-r1.ebuild, 
   attr-2.4.8.ebuild :
