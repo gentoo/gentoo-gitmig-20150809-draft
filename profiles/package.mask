@@ -385,3 +385,6 @@ dev-lang/tcl-tk
 #g2boojum@gentoo.org, 22 Feb 2002
 # masking PAM version that shouldn't be there anymore
 >=sys-libs/pam-0.75-r3
+
+#maksing 2.2 kernels until a new baselayout is available
+<=sys-kernel/linux-sources-2.4
