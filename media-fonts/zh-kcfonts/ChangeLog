@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/zh-kcfonts
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/ChangeLog,v 1.1 2003/06/02 13:48:21 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/ChangeLog,v 1.2 2004/04/03 23:34:33 spyderous Exp $
+
+  03 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; zh-kcfonts-1.05.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
 *zh-kcfonts-1.05 (02 Jun 2003)
 

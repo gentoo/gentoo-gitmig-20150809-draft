@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/zh-kcfonts-1.05.ebuild,v 1.3 2003/09/06 23:54:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/zh-kcfonts-1.05.ebuild,v 1.4 2004/04/03 23:34:33 spyderous Exp $
 
 KCFONTS="zh-kcfonts-1.05.tgz"
 
@@ -12,7 +12,7 @@ LICENSE="freedist"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="x11-base/xfree"
+DEPEND="virtual/x11"
 S=${WORKDIR}/${PN}
 CFONTDIR=/usr/X11R6/lib/X11/fonts/misc/
 
