@@ -11,7 +11,7 @@
 
 inherit libtool
 
-MY_PV="`echo ${PV} | cut -d. -f1,2`"
+MY_PV="`echo ${PV/_pre} | cut -d. -f1,2`"
 GCC_SUFFIX=-${MY_PV}
 LOC="/usr"
 # dont install in /usr/include/g++-v3/, as it will nuke gcc-3.0.x installs
@@ -170,8 +170,8 @@ src_install() {
 
 	[ -e ${D}${LOC}/bin/gcc${GCC_SUFFIX} ] || die "gcc not found in ${D}"
 	
-	FULLPATH=${LOC}/lib/gcc-lib/${CHOST}/${PV}
-	FULLPATH_D=${D}${LOC}/lib/gcc-lib/${CHOST}/${PV}
+	FULLPATH=${LOC}/lib/gcc-lib/${CHOST}/${PV/_pre}
+	FULLPATH_D=${D}${LOC}/lib/gcc-lib/${CHOST}/${PV/_pre}
 	cd ${FULLPATH_D}
 	dodir /lib
 	dodir /etc/env.d
