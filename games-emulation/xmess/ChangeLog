@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/xmess
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.19 2004/06/24 22:37:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.20 2004/12/05 02:33:28 mr_bones_ Exp $
+
+*xmess-0.88 (04 Dec 2004)
+
+  04 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +xmess-0.88.ebuild:
+  version bump
 
   18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> xmess-0.83.1.ebuild:
   sync with xmame ebuild
