@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.48.ebuild,v 1.7 2004/02/07 02:10:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.48.ebuild,v 1.8 2004/06/09 18:24:02 agriffis Exp $
 
 inherit gcc eutils
 
@@ -29,10 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall \
-		nmapdatadir=${D}/usr/share/nmap \
-		install \
-		|| die
+	einstall nmapdatadir=${D}/usr/share/nmap install || die
 	use gnome || rm -rf ${D}/usr/share/gnome/
 
 	dodoc CHANGELOG HACKING INSTALL docs/README docs/*.txt
