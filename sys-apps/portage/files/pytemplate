@@ -1,0 +1,41 @@
+#! /usr/bin/env python
+# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/files/pytemplate,v 1.1 2000/08/05 05:35:16 drobbins Exp $
+
+import sys
+
+def runfile(myarg):
+	mylocals={}
+	try:
+		a=open(myarg,'r')
+	except IOError:
+		sys.stderr.write("Error opening "+myarg+".  Exiting.\n")
+		return
+	mylines=a.readlines()
+	a.close()
+	pos=0
+	while pos<len(mylines):
+		if mylines[pos][0:8]=="<!--code":
+			mycode=""
+			pos=pos+1
+			while (pos<len(mylines)) and (mylines[pos][0:3]!="-->"):
+				mycode=mycode+mylines[pos]
+				pos=pos+1
+			exec(mycode,globals(),mylocals)
+		else:
+			sys.stdout.write(mylines[pos])
+		pos=pos+1
+
+if len(sys.argv)>1:
+	for x in sys.argv[1:]:
+		runfile(x)
+	sys.exit(0)
+else:
+	sys.stderr.write("pytemplate 1.0: Embedded Python Templater\n")
+	sys.stderr.write("Copyright 1999-2000, Gentoo Technologies, Inc.\n")
+	sys.stderr.write("Distributed under the GPL, v2 or later\n\n")
+	sys.stderr.write("Usage: "+sys.argv[0]+" file0 [file1]...\n")
+	sys.exit(1)
+
