@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/gaim-encryption-2.32.ebuild,v 1.2 2004/10/17 15:32:44 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/gaim-encryption-2.32.ebuild,v 1.3 2004/10/20 04:53:20 rizzo Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -24,7 +24,7 @@ src_compile() {
 	myconf="${myconf} --with-nspr-includes=${NSS_INC}/nspr"
 	myconf="${myconf} --with-nss-includes=${NSS_INC}/nss"
 	myconf="${myconf} --with-nspr-libs=${NSS_LIB}"
-	myconf="${myconf} --with-nss-libs=${NSS_LIB}"
+	myconf="${myconf} --with-nss-libs=${NSS_LIB}/nss"
 
 	econf ${myconf} || die "Configuration failed"
 	einfo "Replacing -Os CFLAG with -O2"
