@@ -35,6 +35,8 @@ DEPEND="$DEPEND
 
 S="${WORKDIR}"
 
+DESCRIPTION="an X11/RDP/VNC proxy server especially well suited to low bandwidth links such as wireless, WANS, and worse"
+
 EXPORT_FUNCTIONS pkg_nofetch src_compile src_install pkg_postinst
 
 nxserver_pkg_nofetch () {
