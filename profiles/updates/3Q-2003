@@ -1,1 +1,2 @@
 move dev-python/ReportLab dev-python/reportlab
+move x11-libs/gtkmm dev-cpp/gtkmm
