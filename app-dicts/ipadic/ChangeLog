@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/ipadic
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ChangeLog,v 1.6 2004/07/22 15:14:35 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ChangeLog,v 1.7 2004/09/27 02:33:17 usata Exp $
+
+  27 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> ipadic-2.6.1.ebuild,
+  ipadic-2.6.3.ebuild:
+  Added to ppc.
 
   23 Jul 2004; Akinori Hattori <hattya@gentoo.org> ipadic-2.6.1.ebuild,
   ipadic-2.6.3.ebuild, ipadic-2.7.0.ebuild:
