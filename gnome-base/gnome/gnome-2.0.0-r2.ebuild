@@ -1,10 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.0-r2.ebuild,v 1.1 2002/07/16 22:54:24 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.0-r2.ebuild,v 1.2 2002/07/23 23:00:05 spider Exp $
 
 S=${WORKDIR}
 DESCRIPTION="GNOME 2.0 - merge this package to merge the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/"
+LICENSE="as-is"
+KEYWORDS="ppc x86"
+SLOT="2.0"
 
 #  Note to developers:
 #  This is a wrapper for the complete Gnome2 desktop, 
@@ -63,4 +66,9 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/libglade-2.0.0
 	>=x11-libs/libwnck-0.14-r1
 	>=gnome-base/ORBit2-2.4.0-r1"
-
+pkg_postinst () {
+	einfo "note that to change windowmanager to metacity do: "
+	einfo " export WINDOW_MANAGER=\"/usr/bin/metacity\""
+	einfo "of course this works for all other window managers as well"
+	
+}

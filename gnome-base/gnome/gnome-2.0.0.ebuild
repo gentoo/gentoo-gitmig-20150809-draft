@@ -1,11 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.0.ebuild,v 1.3 2002/06/29 09:23:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.0.ebuild,v 1.4 2002/07/23 23:00:05 spider Exp $
 
 S=${WORKDIR}
 DESCRIPTION="GNOME 2.0 - merge this package to merge the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/"
-
+SLOT="2.0"
+LICENSE="as-is"
+KEYWORDS="ppc x86"
 #  Note to developers:
 #  This is a wrapper for the complete Gnome2 desktop, 
 #  This means all components that a user expects in Gnome2 are present

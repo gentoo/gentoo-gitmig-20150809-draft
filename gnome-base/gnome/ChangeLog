@@ -1,8 +1,22 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.31 2002/07/16 20:05:22 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.32 2002/07/23 23:00:05 spider Exp $
 
+
+gnome-2.0.0-r2 (24 Jul 2002)
+  * 24 Jul 2002; Spider <spider@gentoo.org> 
+  updated with SLOT KEYWORDS and LICENSE
+
+gnome-1.4-r3 (24 Jul 2002)
+  24 Jul 2002; Spider <spider@gentoo.org>
+  updated with SLOT KEYWORDS and LICENSE
+    
+gnome-2.0.0 (24 Jul 2002)
+  24 Jul 2002; Spider <spider@gentoo.org>
+  updated with SLOT KEYWORDS and LICENSE
+      
 *gnome-2.0.0-r1 (16 Jul 2002)
+
   16 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gnome-2.0.0-r1.ebuild :
   Few packages in the list have been updated. Debugging is still there.
 
