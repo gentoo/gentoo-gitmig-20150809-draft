@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.46 2005/03/18 06:56:46 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.47 2005/03/20 07:14:55 morfic Exp $
+
+  20 Mar 2005; Daniel Goller <morfic@gentoo.org> boost-1.32.0-r1.ebuild:
+  fixed parallel building for distcc and SMP users
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> boost-1.32.0-r1.ebuild:
   depend on icc 8 as 7 is no longer supported by intel

@@ -5,9 +5,9 @@ MD5 12f996aa5f489e4e51055e537ea059a8 boost-1.31.0.ebuild 3967
 MD5 8d4eca3eb59bc23e2d53b3d0cfd06c97 boost-1.32.0.ebuild 2294
 MD5 d259ae434e176df207cba3deab973f61 boost-1.29.0.ebuild 1426
 MD5 34d13e0eeb58e13e1992908d04d51b45 boost-1.30.0.ebuild 2973
-MD5 670c7efff8b9fd91618479875eba5519 ChangeLog 6935
+MD5 076673c7190536c9766b449b4978e854 ChangeLog 7060
 MD5 ac17509c51769ef73346e3d3d7733f67 metadata.xml 347
-MD5 f84358ea9581a62ed2f593d83c68876a boost-1.32.0-r1.ebuild 3666
+MD5 2f2463145cb9b8df23e0bd632edc8ffc boost-1.32.0-r1.ebuild 5378
 MD5 4759f9391ad73c487d4f6b3dbf8632a8 boost-1.30.2.ebuild 2960
 MD5 ed187a2b2048776a7e5b27060d96938c files/digest-boost-1.29.0 65
 MD5 2b36d47323b021671d391600501685cc files/digest-boost-1.30.0 66
@@ -18,7 +18,7 @@ MD5 1d06245b53e5677556ae22e5f60f0df3 files/digest-boost-1.32.0-r1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCOnclUpKYMelfdYERAoYaAJ9dhp3V092UlkopVKYiSYRNXwT4BgCfYuZF
-pmozfro7SonPpDTVLwcymQo=
-=TOhn
+iD8DBQFCPRxaUpKYMelfdYERAqZqAJ9b1WwrB8MuZBN2pAUywUB+UsWp9ACdFayj
+Tea7De3sfMGUVXfkcjV1F6o=
+=mxx5
 -----END PGP SIGNATURE-----
