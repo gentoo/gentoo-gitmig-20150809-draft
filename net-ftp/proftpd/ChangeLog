@@ -1,6 +1,6 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.86 2005/03/02 23:19:46 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.87 2005/03/02 23:28:48 humpback Exp $
 
 *proftpd-1.2.10-r3 (02 Mar 2005)
 
@@ -10,7 +10,8 @@
   seems impossible to backport it to 1.2.10 as it is being developed for the cvs
   version. Also am fixing small issue with softquota as reported in #80002 by
   Michael Cramer. Also fixing bug #83312 and #63196 pam related credits Roy
-  Marples <uberlord@gentoo.org>
+  Marples <uberlord@gentoo.org>. As a bonus a fix for a small bug in dodoc
+  reported by Thilo Bangert in #65320.
 
   21 Jan 2005; Markus Rothe <corsair@gentoo.org> proftpd-1.2.10-r2.ebuild:
   Added ~ppc64 to KEYWORDS; bug #78927

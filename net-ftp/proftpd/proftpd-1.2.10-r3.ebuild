@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r3.ebuild,v 1.1 2005/03/02 23:19:46 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r3.ebuild,v 1.2 2005/03/02 23:28:48 humpback Exp $
 
 inherit flag-o-matic eutils
 
@@ -125,7 +125,7 @@ src_install() {
 	keepdir /home/ftp
 	keepdir /var/run/proftpd
 
-	dodoc contrib/README.mod_sql ${FILESDIR}/proftpd.conf \
+	dodoc contrib/UPGRADE.mod_sql ${FILESDIR}/proftpd.conf \
 		COPYING CREDITS ChangeLog NEWS README* \
 		doc/{license.txt,GetConf}
 	dohtml doc/*.html

@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8c46cf71c2d9a04e8311ffd609d8c8e5 ChangeLog 14026
+MD5 fdd759339f12fae35f40a371c773c18c ChangeLog 14108
 MD5 b47207aedd0149443faa2152950714ed metadata.xml 401
 MD5 0da1408981233bd78976ee644a3a5e84 proftpd-1.2.10-r1.ebuild 4395
 MD5 77ab83f5b6de2298739b5d6b6c792a78 proftpd-1.2.10-r2.ebuild 4478
-MD5 926b92cd7ee25e58613387519b9af16b proftpd-1.2.10-r3.ebuild 4329
+MD5 1260354a840c5fca83d551172f4657ce proftpd-1.2.10-r3.ebuild 4330
 MD5 6fc1a218a29c9fc20ee69100d1f8888a proftpd-1.2.10.ebuild 4139
 MD5 58abdaa0274915af4dcc12046c752afb proftpd-1.2.9-r2.ebuild 3439
 MD5 e558f099037d359da5f855285542246e files/1.2.9_rc3-reversedns.diff 1974
@@ -24,7 +24,7 @@ MD5 4d676b70c97bc6daabd8c2ba8d52d27a files/proftpd.xinetd 295
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCJkou8zY1VwezZiERAq9KAJ4hm2P4iBoAWRlJDMUp6gnwGZ/sswCgmpcL
-EepuqS7y1PYtupfvwaANsb4=
-=axoO
+iD8DBQFCJkxB8zY1VwezZiERAsOEAKCaIbYKEAgHOJrIlXY5WG7IWK7SiQCffPW+
+4kKzJWFVkeMXtX5Xc9oi5wI=
+=vjKl
 -----END PGP SIGNATURE-----
