@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.1.ebuild,v 1.3 2002/09/24 23:34:41 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.1.ebuild,v 1.4 2002/10/01 19:26:20 azarah Exp $
 
 inherit virtualx
 
@@ -39,6 +39,10 @@ SLOT="0"
 KEYWORDS="x86 ppc -sparc -sparc64"
 
 src_install() {
+
+	# Sandbox issues; bug #8587
+	addpredict "/user"
+	addpredict "/share"
 
 	# Autoresponse file for main installation
 	cat > ${T}/rsfile-global <<-"END_RS"
