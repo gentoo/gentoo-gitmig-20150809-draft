@@ -1,6 +1,11 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.14 2002/07/29 06:08:32 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.15 2002/08/06 01:04:04 stroke Exp $
+
+*gnumeric-1.1.6 (06 Aug 2002)
+  06 Aug 2002 ; Gabriele Giorgetti <stroke@gentoo.org> gnumeric-1.1.6.ebuild ChangeLog:
+  New version, updated deps, added new dep to gnome-extra/libgsf. 
+  Also closes bug #5395
 
 *gnumeric-1.0.9 (29 Jul 2002)
   29 Jul 2002; Spider <spider@gentoo.org> gnumeric-1.0.9.ebuild gnumeric-1.0.8.ebuild gnumeric-1.1.5.ebuild :
