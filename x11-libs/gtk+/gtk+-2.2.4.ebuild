@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.4.ebuild,v 1.1 2003/09/07 10:43:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.4.ebuild,v 1.2 2003/09/08 03:48:38 msterret Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -84,7 +84,7 @@ pkg_postinst() {
 	gtk-query-immodules-2.0 >	/etc/gtk-2.0/gtk.immodules
 	gdk-pixbuf-query-loaders >	/etc/gtk-2.0/gdk-pixbuf.loaders
 
-	einfo "For your gtk themes to work correctly after an update," 
+	einfo "For your gtk themes to work correctly after an update,"
 	einfo "you might have to rebuild your theme engines."
 	einfo "Executing 'qpkg -I -nc gtk-engines | xargs emerge' should do the trick (requires gentoolkit)"
 
