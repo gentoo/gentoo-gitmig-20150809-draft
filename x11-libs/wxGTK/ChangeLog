@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.62 2004/09/02 11:15:24 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.63 2004/09/09 01:34:08 pythonhead Exp $
+
+  08 Sep 2004; Rob Cakebread <pythonhead@gentoo.org> -wxGTK-2.5.1.ebuild:
+  Modified so apps can use wxwidgets eclass
 
 *wxGTK-2.4.2-r3 (02 Sep 2004)
 
