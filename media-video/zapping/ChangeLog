@@ -1,7 +1,14 @@
 # ChangeLog for media-video/zapping
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/ChangeLog,v 1.2 2002/02/09 21:15:59 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/ChangeLog,v 1.3 2002/08/31 19:36:07 spider Exp $
 
+
+*zapping-0.6.4-r1 (29 aug 2002)
+  29 Aug 2002; Spider <spider@gentoo.org> zapping-0.6.4-r1.ebuild :
+  new version thanks to : Daniel Mettler <mettlerd@icu.unizh.ch> and Andreas Kotowicz <koto@mynetix.de>
+  changed libglade dep to depend on right gnome version 
+
+  
 *zapping-0.6.2 (9 Feb 2002)
 
   9 Feb 2002; Daniel Robbins <drobins@gentoo.org> New "zapping" from Jan Czmok
