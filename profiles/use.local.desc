@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.341 2004/05/04 03:50:43 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.342 2004/05/04 04:17:06 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -321,7 +321,8 @@ sys-devel/gcc:gcj - Do not build gcj (java compiler included with gcc package)
 sys-devel/gcc:hardened - improve PIE (position independent executables) and SSP (stack smashing protector) building of executables and libraries
 sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
 sys-devel/gcc:objc - Build support for the Objective C code language
-sys-devel/gdb:objc - Build support for the Objective C code language
+sys-devel/gcc:uclibc - Enable uclibc specific patches for gcc
+ys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/hardened-gcc:debug - activate verbose commandline output of the default PIE SSP hardened-gcc wrapper
 sys-devel/libperl:threads - Enable Perl threads, has some compatibility problems
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
@@ -352,7 +353,7 @@ sys-kernel/wolk-dev-sources:win4lin - Enable win4lin supoort (2.6.x kernel)
 sys-kernel/wolk-sources:wolk-bootsplash - If you want WOLK's own bootsplash patch (deprecated)
 sys-kernel/wolk-sources:wolk-supermount - If you want to use supermount (deprecated)
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
-sys-libs/glibc:pic - Build position independent code. Needed for (prelink/hardened-gcc)
+sys-libs/glibc:pic - Build position independent code. Needed for prelink or the hardened toolchain
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:freetype - Enables Freetype font support
