@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r2.ebuild,v 1.7 2002/08/17 02:10:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r2.ebuild,v 1.8 2002/09/14 15:51:25 bjb Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Use this to try make tarballs :)"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/tar/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND="sys-apps/gzip
 	sys-apps/bzip2

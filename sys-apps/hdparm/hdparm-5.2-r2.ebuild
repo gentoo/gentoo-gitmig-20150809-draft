@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ibiblio.org/pub/Linux/system/hardware/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}"

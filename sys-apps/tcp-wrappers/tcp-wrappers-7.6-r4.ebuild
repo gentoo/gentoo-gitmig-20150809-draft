@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.5 2002/08/14 03:14:17 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.6 2002/09/14 15:51:25 bjb Exp $
 
 MY_P="tcp_wrappers_${PV}"
 PATCH0="${MY_P}.dif"
@@ -10,7 +10,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="tcp wrappers"
 SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz"
 HOMEPAGE="ftp://ftp.porcupine.org/pub/security/index.html"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 SLOT="0"
 LICENSE="Freeware"
 DEPEND="virtual/glibc"
@@ -28,6 +28,11 @@ src_unpack() {
 	cp Makefile Makefile.orig
 	sed -e "s/-O2/${CFLAGS}/" \
 		-e "s:AUX_OBJ=.*:AUX_OBJ= \\\:" Makefile.orig > Makefile
+
+	if [ ${ARCH} == "alpha" ]; then
+        patch -p1 < ${FILESDIR}/tcp_wrappers_7.6-alpha-fpic-fix.patch
+    fi
+
 }
 
 src_compile() {

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.3.2.ebuild,v 1.7 2002/08/14 03:22:06 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.3.2.ebuild,v 1.8 2002/09/14 15:51:25 bjb Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU compressor"
 SRC_URI="ftp://alpha.gnu.org/gnu/gzip/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gzip/gzip.html"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -21,6 +21,13 @@ src_unpack() {
 
 src_compile() {
 	[ -z "`use nls`" ] && myconf="--disable-nls"
+
+	# Compiling with gcc3 and higher level of optimization seems to
+    # cause a segmentation fault in some very rare cases on alpha. 
+    if [ ${ARCH} == "alpha" ]; then
+        CFLAGS="-O -pipe"
+    fi
+	
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--exec-prefix=/ \

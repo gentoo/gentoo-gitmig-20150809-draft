@@ -1,0 +1,28 @@
+--- netkit-base-0.17/ping/ping.c	Sun Jul 23 06:16:21 2000
++++ netkit-base-0.17-alpha-ping-fix/ping/ping.c	Tue Sep 10 20:14:51 2002
+@@ -203,7 +203,7 @@
+  * datalen is the length of the other data plus the timeval.
+  * note: due to alignment problems don't assign to OUTPACK_TIME, use memcpy.
+  */
+-static u_int8_t outpack[IP_MAXPACKET];
++static u_int8_t outpack[IP_MAXPACKET] __attribute__((aligned(sizeof(long)))); 
+ static int datalen = DEFDATALEN;
+ 
+ #define OUTPACK_ICMP    ((struct icmp *)outpack)
+@@ -725,6 +725,7 @@
+ 			tp = (struct timeval *)icp->icmp_data;
+ 			memcpy(&packettv, tp, sizeof(struct timeval));
+ 			tvsub(&now, &packettv);
++			
+ 
+ 			/* precision: tenths of milliseconds */
+ 			triptime = now.tv_sec * 10000 + (now.tv_usec / 100);
+@@ -760,7 +761,7 @@
+ 			       inet_ntoa(from->sin_addr), icp->icmp_seq);
+ 			printf(" ttl=%d", ip->ip_ttl);
+ 			if (timing) {
+-				printf(" time=%ld.%ld ms", triptime/10,
++				printf(" time=%hd.%hd ms", triptime/10,
+ 				       triptime%10);
+ 			}
+ 			if (dupflag) {

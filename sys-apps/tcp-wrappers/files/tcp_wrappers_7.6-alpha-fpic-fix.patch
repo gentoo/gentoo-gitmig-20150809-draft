@@ -1,0 +1,11 @@
+--- tcp_wrappers_7.6/Makefile	Wed Sep 11 18:12:55 2002
++++ tcp_wrappers_7.6-alpha/Makefile	Wed Sep 11 18:19:10 2002
+@@ -145,7 +145,7 @@
+ 	@make REAL_DAEMON_DIR=$(REAL_DAEMON_DIR) STYLE=$(STYLE) \
+ 	LIBS= RANLIB=ranlib ARFLAGS=rv AUX_OBJ= \
+ 	NETGROUP=-DNETGROUP TLI= \
+-	EXTRA_CFLAGS="-DSYS_ERRLIST_DEFINED -DINET6=1 -Dss_family=__ss_family" all
++	EXTRA_CFLAGS="-fPIC -DSYS_ERRLIST_DEFINED -DINET6=1 -Dss_family=__ss_family" all
+ 
+ # This is good for many SYSV+BSD hybrids with NIS, probably also for HP-UX 7.x.
+ hpux hpux8 hpux9 hpux10:

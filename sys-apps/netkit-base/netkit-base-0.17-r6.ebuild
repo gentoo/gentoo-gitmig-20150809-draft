@@ -1,15 +1,27 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r6.ebuild,v 1.6 2002/08/14 03:38:54 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r6.ebuild,v 1.7 2002/09/14 15:51:25 bjb Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard linux net thingees -- inetd, ping"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
 HOMEPAGE=""
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 SLOT="0"
 LICENSE="BSD"
 DEPEND="virtual/glibc"
+
+
+src_unpack() {
+
+    unpack ${A}
+
+    if [ ${ARCH} == "alpha" ]; then
+		cd ${S}
+        patch -p1 < ${FILESDIR}/netkit-base-0.17-alpha-ping-fix.patch
+    fi
+
+}
 
 src_compile() {
 	./configure || die
