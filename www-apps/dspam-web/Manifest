@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 6faadf0763d6d1e00242c301efb9d4d7 ChangeLog 1243
 MD5 4692761753a5e1a98e276b526d94012e dspam-web-3.0.0.ebuild 2466
 MD5 55a56f7500a70a7a2b0eb13264adc8d0 dspam-web-3.1.0.ebuild 2496
 MD5 4c0fb80119dae74b9a563a35fe629569 dspam-web-3.1.1.ebuild 2496
 MD5 f1ea445d6b4ddf81c55a4e886bc04218 metadata.xml 341
-MD5 b743f54ee56a61d08a320e2593c8f3a1 ChangeLog 1105
+MD5 4caeee90976069b6b27ad1510149b306 dspam-web-3.2_rc3.ebuild 5197
+MD5 ffdfc8d816078f4c58b75b9bed07503f files/htaccess 135
+MD5 b4099a94a52af9abd4ade48d82914c3c files/htpasswd 19
+MD5 e867cb6cbb3196ac407e7dfc765bb327 files/digest-dspam-web-3.2_rc3 65
 MD5 05dce5dc8cf516655657aa2a4cc5f1da files/digest-dspam-web-3.0.0 63
 MD5 7f1185a1a89bc7c74aafba93afc2b0cf files/digest-dspam-web-3.1.0 63
 MD5 1abffcec9dd1aad2db3d68918b4aec05 files/digest-dspam-web-3.1.1 63
-MD5 ffdfc8d816078f4c58b75b9bed07503f files/htaccess 135
-MD5 b4099a94a52af9abd4ade48d82914c3c files/htpasswd 19
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOs9qI1lqEGTUzyQRAm2oAJ9Lm+jCB1WCA/evnqBD012N9nM2EwCgvXW2
-e5igc4mJaqKkgv7bvGKHkLM=
-=VX43
------END PGP SIGNATURE-----
