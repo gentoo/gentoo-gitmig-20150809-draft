@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.4-r2.ebuild,v 1.1 2004/04/13 21:38:26 steel300 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.4-r2.ebuild,v 1.2 2004/04/14 07:14:07 aliz Exp $
 
 UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2"
 K_PREPATCHED="yes"
@@ -10,6 +10,7 @@ K_NOUSENAME="yes"
 ETYPE="sources"
 inherit kernel-2
 detect_version
+IUSE=""
 
 DESCRIPTION="Full sources for the Stock Linux kernel Con Kolivas's high performance patchset"
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"

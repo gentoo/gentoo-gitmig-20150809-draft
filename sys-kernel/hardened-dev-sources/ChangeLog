@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.7 2004/03/29 18:23:34 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.8 2004/04/14 07:14:07 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
+  hardened-dev-sources-2.6.4.ebuild:
+  Added IUSE=.
 
 *hardened-dev-sources-2.6.4-r3 (29 Mar 2004)
 

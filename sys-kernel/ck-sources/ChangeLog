@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.27 2004/04/13 21:38:26 steel300 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.28 2004/04/14 07:14:07 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> ck-sources-2.6.4-r2.ebuild:
+  Added IUSE=
 
 *ck-sources-2.6.4-r2 (13 Apr 2004)
 
