@@ -1,0 +1,11 @@
+--- pcap_inet.c.orig	2004-02-09 14:01:54.000000000 +0100
++++ pcap_inet.c	2004-02-09 14:02:02.000000000 +0100
+@@ -150,7 +150,7 @@
+ 
+ int
+ pcap_lookupnet(device, netp, maskp, errbuf)
+-	register char *device;
++	register const char *device;
+ 	register u_int *netp, *maskp;
+ 	register char *errbuf;
+ {

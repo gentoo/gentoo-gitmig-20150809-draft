@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/ttt
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ChangeLog,v 1.1 2004/03/04 17:00:39 mboman Exp $
+
+*ttt-1.8 (05 Mar 2004)
+
+  05 Mar 2004; Michael Boman <mboman@gentoo.org> ttt-1.8.ebuild,
+  files/ttt-1.8-linux-sll.patch, files/ttt-1.8-pcap.patch:
+  New ebuild, submitted by Jochen <jochen.eisinger@gmx.de>. Closes 40958.
+
