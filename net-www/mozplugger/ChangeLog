@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozplugger
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozplugger/ChangeLog,v 1.9 2005/01/23 19:12:50 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozplugger/ChangeLog,v 1.10 2005/03/18 16:38:01 seemant Exp $
+
+  18 Mar 2005; Seemant Kulleen <seemant@gentoo.org> mozplugger-1.6.2.ebuild,
+  mozplugger-1.7.1.ebuild:
+  Dependency update: net-www/mozilla-bin -> www-client/mozilla-bin.
 
   23 Jan 2005; Dominik Stadler <centic@gentoo.org> :
   Add Version 1.7.1, fixes Bug 75611
