@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_fastcgi/mod_fastcgi-2.4.2.ebuild,v 1.1 2004/05/22 02:06:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_fastcgi/mod_fastcgi-2.4.2.ebuild,v 1.2 2004/06/20 14:20:18 zul Exp $
 
 DESCRIPTION="FastCGI  is a language independent, scalable, open extension to CGI that provides high performance without the limitations of server specific APIs."
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 detectapache() {
 	local domsg=
@@ -85,7 +85,7 @@ pkg_postinst() {
 		einfo "Add '-D FASTCGI' to your APACHE2_OPTS in /etc/conf.d/apache2"
 	else
 		einfo "1. Execute the command:"
-		einfo " \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
+		einfo " \"ebuild /var/db/pkg/net-www/${PF}/${PF}.ebuild config\""
 		einfo "2. Edit /etc/conf.d/apache and add \"-D FASTCGI\" to APACHE_OPTS"
 	fi
 }
