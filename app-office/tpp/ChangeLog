@@ -1,0 +1,11 @@
+# ChangeLog for app-office/tpp
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/tpp/ChangeLog,v 1.1 2005/03/02 12:39:08 citizen428 Exp $
+
+*tpp-1.1.1 (02 Mar 2005)
+
+  02 Mar 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
+  +files/tpp-1.1.1-Makefile.patch, +tpp-1.1.1.ebuild:
+  Initial import. Requested by Adrian Fruehwirth <fruehwia@spengergasse.at> in
+  bug #73938
+

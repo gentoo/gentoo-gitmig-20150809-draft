@@ -1,0 +1,24 @@
+--- Makefile	2005-03-02 12:46:07.000000000 +0100
++++ Makefile.new	2005-03-02 13:12:56.657585504 +0100
+@@ -3,15 +3,17 @@
+ #################################################
+ 
+ BIN = tpp  
+-prefix=/usr/local
+-INSPATH= $(prefix)/bin/
+-DOCPATH = $(prefix)/share/doc/tpp
+-MANPATH = $(prefix)/man/man1
++prefix=/usr
++INSPATH= $(DESTDIR)$(prefix)/bin/
++DOCPATH = $(DESTDIR)$(prefix)/share/doc/tpp
++MANPATH = $(DESTDIR)$(prefix)/man/man1
+ 
+ install :
+ 	mkdir -p $(DOCPATH)	
+ 	install -m644 CHANGES COPYING README THANKS $(DOCPATH)	
++	mkdir -p $(MANPATH)
+ 	install -m644 doc/tpp.1 $(MANPATH)
++	mkdir -p $(INSPATH)
+ 	install tpp.rb $(INSPATH)$(BIN)		
+ 	mkdir -p $(DOCPATH)/contrib
+ 	mkdir -p $(DOCPATH)/examples
