@@ -1,0 +1,10 @@
+# ChangeLog for app-arch/tob
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tob/ChangeLog,v 1.1 2004/03/20 14:17:31 centic Exp $
+
+*tob-0.26 (20 Mar 2004)
+
+  20 Mar 2004; Dominik Stadler <centic@gentoo.org> tob-0.26.ebuild,
+  files/tob-0.26-no-maketemp-warn.diff:
+  New ebuild
+
