@@ -1,0 +1,7 @@
+MD5 2706df8fdcd73d9c0dd478565d927814 xosview-1.8.0.ebuild 1114
+MD5 4385ee62ca6056e1d9b38f1121e014e5 ChangeLog 1508
+MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
+MD5 c6579bb720046ebff01f1b2a8c3d62fa files/digest-xosview-1.8.0 65
+MD5 9ccfdc5def757ddbc2460b7a7c6ed84d files/xosview-gcc-3.3.1.patch 4605
+MD5 b96b1e80221cab3e2cf8a6d5081b6440 files/xosview-1.8.0-ppc.diff 3488
+MD5 332f3ebb3cdfed0ed20ecbf6c79a424a files/xosview-kernel-2.5+.diff 3771
