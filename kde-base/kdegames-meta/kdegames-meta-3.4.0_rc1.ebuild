@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/kdegames-meta-3.4.0_rc1.ebuild,v 1.1 2005/02/27 20:21:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/kdegames-meta-3.4.0_rc1.ebuild,v 1.2 2005/02/28 15:31:05 greg_g Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -13,13 +13,14 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
+arts? ( $(deprange $PV $MAXKDEVER kde-base/kasteroids)
+	$(deprange $PV $MAXKDEVER kde-base/kbounce)
+	$(deprange $PV $MAXKDEVER kde-base/kolf) )
 $(deprange $PV $MAXKDEVER kde-base/atlantik)
-$(deprange $PV $MAXKDEVER kde-base/kasteroids)
 $(deprange $PV $MAXKDEVER kde-base/katomic)
 $(deprange $PV $MAXKDEVER kde-base/kbackgammon)
 $(deprange $PV $MAXKDEVER kde-base/kbattleship)
 $(deprange $PV $MAXKDEVER kde-base/kblackbox)
-$(deprange $PV $MAXKDEVER kde-base/kbounce)
 $(deprange $PV $MAXKDEVER kde-base/kenolaba)
 $(deprange $PV $MAXKDEVER kde-base/kfouleggs)
 $(deprange $PV $MAXKDEVER kde-base/kgoldrunner)
@@ -28,7 +29,6 @@ $(deprange $PV $MAXKDEVER kde-base/klickety)
 $(deprange $PV $MAXKDEVER kde-base/klines)
 $(deprange $PV $MAXKDEVER kde-base/kmahjongg)
 $(deprange $PV $MAXKDEVER kde-base/kmines)
-arts? ( $(deprange $PV $MAXKDEVER kde-base/kolf) )
 $(deprange $PV $MAXKDEVER kde-base/konquest)
 $(deprange $PV $MAXKDEVER kde-base/kpat)
 $(deprange $PV $MAXKDEVER kde-base/kpoker)
