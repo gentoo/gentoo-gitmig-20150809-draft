@@ -11,13 +11,13 @@ depend() { need sysklogd net }
 start() {
 		ebegin "Starting $SERVICE..."
      		start-stop-daemon --start --quiet --exec $EXE -- $ARGS
-		eend $? "Started $SERVICE." "Error Starting $SERVICE."
+		eend $? 
 }
 
 stop() {
 		ebegin "Stopping $SERVICE..."
 		start-stop-daemon --stop --quiet --pidfile $PIDFILE --exec $EXE
-		eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
+		eend $? 
 }
 
 restart() {

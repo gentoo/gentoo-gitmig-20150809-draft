@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.13.ebuild,v 1.2 2001/09/08 15:16:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.13.ebuild,v 1.3 2001/09/12 04:07:00 lamer Exp $
 
 DB3=db-3.1.17
 A="${P}.tar.gz ${DB3}.tar.gz"
@@ -47,7 +47,7 @@ src_compile() {
 
     try ./configure --prefix=/opt/gnome --host=${CHOST} \
 	--sysconfdir=/etc/opt/gnome --enable-file-locking=no \
-	--with-db3=${WORKDIR}/db3 --enable-nntp $myconf
+	--with-db3=${WORKDIR}/db3 --without-movemail --enable-nntp $myconf
 
     make || die # emake didn't work.
 }

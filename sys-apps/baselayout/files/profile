@@ -7,7 +7,10 @@ if [ -e "/etc/profile.env" ]
 then
   source /etc/profile.env
 fi
-
+# In case someone is used to using .profile
+if [ -e $HOME/.profile ]; then
+  source $HOME/.profile
+fi
 if [ `/usr/bin/whoami` == 'root' ] ; then
 	export PS1='\[\033[01;31m\]\h \[\033[01;34m\]\W \$ \[\033[00m\]'
 	export PATH=/bin:/sbin:/usr/bin:/usr/sbin:${ROOTPATH}

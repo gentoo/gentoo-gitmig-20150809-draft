@@ -1,0 +1,30 @@
+#!/sbin/runscript
+SERVICE=hogwash
+opts="start stop"
+PIDFILE="/var/run/hogwash.pid"
+EXE=/usr/sbin/hogwash
+
+# Note you need to edit this to fit your needs
+# -e is the external interface if you are not using this on a box with two
+# or more NiCs this first line fits your needs
+OPTS="-e eth0 -c /etc/hogwash/stock.rules"
+
+# I'm using hogwash on a stackless box for stealth packet scrubbing so I
+# use this line
+#OPTS="-e eth0 -i eth1 -c /etc/hogwash/rules0727"
+
+depend() { 
+	need net
+}
+
+start() {
+	ebegin "Starting $SERVICE"
+	$EXE $OPTS 2>&1 >/dev/null & 
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping $SERVICE"
+	kill `cat $PIDFILE` 
+	eend $?
+}
