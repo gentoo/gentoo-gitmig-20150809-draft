@@ -1,8 +1,8 @@
 #!/bin/bash
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/scan_libgcc_linked_ssp.sh,v 1.2 2003/12/30 06:54:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/scan_libgcc_linked_ssp.sh,v 1.3 2004/07/15 00:59:02 agriffis Exp $
 
 usage() {
 cat << "USAGE_END"

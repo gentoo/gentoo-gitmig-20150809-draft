@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Contributor: Ned Ludd <solar@gentoo.org>
 # Contributor: Natanael Copa  <nat@c2i.net>
 # Contributor: Carter Smithhart <derheld42@derheld.net>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/scanforssp.awk,v 1.6 2004/03/01 18:06:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/scanforssp.awk,v 1.7 2004/07/15 00:59:02 agriffis Exp $
 
 
 # Does not seem to be used in this script.
