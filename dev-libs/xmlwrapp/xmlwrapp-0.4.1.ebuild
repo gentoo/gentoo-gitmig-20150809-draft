@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/xmlwrapp-0.4.1.ebuild,v 1.5 2004/07/02 04:57:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/xmlwrapp-0.4.1.ebuild,v 1.6 2004/09/20 16:44:48 usata Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://pmade.org/software/xmlwrapp/download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND="virtual/libc
