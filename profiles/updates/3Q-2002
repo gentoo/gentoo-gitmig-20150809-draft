@@ -75,3 +75,4 @@ move media-sound/xmms-volnorm media-plugins/xmms-volnorm
 move media-sound/xmms-xosd media-plugins/xmms-xosd
 move media-video/avi-xmms media-plugins/avi-xmms
 move app-admin/kportagemaster app-admin/kportage
+move net-misc/nt net-misc/d4x
