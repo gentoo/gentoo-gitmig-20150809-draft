@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/adplay
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/adplay/ChangeLog,v 1.1 2004/07/20 14:15:42 spock Exp $
+
+*adplay-1.3 (20 Jul 2004)
+
+  20 Jul 2004; Michal Januszewski <spock@gentoo.org> +metadata.xml,
+  +adplay-1.3.ebuild:
+  Initial commit.
+
