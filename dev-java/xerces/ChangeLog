@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.33 2004/10/17 19:22:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.34 2004/10/20 07:57:12 absinthe Exp $
+
+  20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> xerces-2.3.0.ebuild:
+  Keywords ~amd64.
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> xerces-1.3.1.ebuild,
   xerces-2.3.0.ebuild:

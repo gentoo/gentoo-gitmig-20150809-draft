@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sidekick
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sidekick/ChangeLog,v 1.1 2004/09/17 09:38:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sidekick/ChangeLog,v 1.2 2004/10/20 07:58:26 absinthe Exp $
+
+  20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> sidekick-0.3.ebuild:
+  Keywords ~amd64.
 
 *sidekick-0.3 (17 Sep 2004)
 
