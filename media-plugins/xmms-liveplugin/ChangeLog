@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/xmms-liveplugin
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-liveplugin/ChangeLog,v 1.1 2004/03/21 21:26:09 eradicator Exp $
+
+*xmms-liveplugin-0.2.5 (21 Mar 2004)
+
+  21 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  xmms-liveplugin-0.2.5.ebuild:
+  You can control XMMS using your SBLive Drive's IR port. Ebuild by me. Closes
+  bug #42404.
+
