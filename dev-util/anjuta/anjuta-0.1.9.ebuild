@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-0.1.9.ebuild,v 1.4 2002/07/23 10:38:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-0.1.9.ebuild,v 1.5 2002/07/24 07:17:41 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A versatile Integrated Development Environment (IDE) for C and C++."
@@ -16,10 +16,10 @@ DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	media-libs/audiofile
 	dev-libs/libxml
 	dev-util/pkgconfig
+	gnome-extra/libglademm
 	app-text/scrollkeeper"
 	
 RDEPEND="dev-util/glade
-	 dev-util/glademm
 	 media-gfx/gnome-iconedit
 	 app-text/scrollkeeper
 	 =x11-libs/gtk+-1.2*
