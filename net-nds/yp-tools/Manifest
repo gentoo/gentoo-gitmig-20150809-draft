@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 39fccc7e35d16d4779156e6b0ad93a5e ChangeLog 2953
-MD5 c12bc75b492249815b699599f56c8c0d yp-tools-2.7-r1.ebuild 1088
+MD5 ec12c66beb928fb700e34ba744819b40 ChangeLog 3056
 MD5 563bf98cd0b0f6492414596d186f061b yp-tools-2.8.ebuild 1132
+MD5 c12bc75b492249815b699599f56c8c0d yp-tools-2.7-r1.ebuild 1088
 MD5 ab59365f7f92becce9ea574af606ca09 metadata.xml 270
 MD5 8a4aadbeac31db4a5bf80b9506607d41 files/digest-yp-tools-2.7-r1 65
 MD5 2b599af2b4904c58b39a22d7043d4de0 files/digest-yp-tools-2.8 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBojTCArHZZzCEUG0RAnOKAKCAdp/hTDgfpKJsKy8+gnsLLqq1PACfZHPF
-oKqJ9fX3snZVEziajgtJrPQ=
-=5EK0
------END PGP SIGNATURE-----

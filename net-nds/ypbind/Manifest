@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0801d49b50c51061a1ea7de9668c5250 ChangeLog 4121
-MD5 ab59365f7f92becce9ea574af606ca09 metadata.xml 270
+MD5 5e9c444db6f43b6bfc6f2a7c73c0e000 ChangeLog 4225
 MD5 84f05ded26e2d0edba3d174d21c5b7dd ypbind-1.17.2-r1.ebuild 1249
-MD5 4a8f16abe013d049df327a1495db254c files/ypbind.initd 887
+MD5 ab59365f7f92becce9ea574af606ca09 metadata.xml 270
 MD5 c5aee6bd628cd668314e4879a2cad696 files/ypbind.confd-r1 112
+MD5 4a8f16abe013d049df327a1495db254c files/ypbind.initd 887
 MD5 abf5b898fdb40aee7909eb21402b8b16 files/digest-ypbind-1.17.2-r1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBojNzArHZZzCEUG0RApLZAJ0VhAgxHnHrwW9aeq+YYDEzIkCZJwCdFukG
-pQykk9ewtvw6BORP7zIzcas=
-=Aw2S
------END PGP SIGNATURE-----

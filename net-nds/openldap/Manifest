@@ -1,44 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ab4b7c6b32406f758b481dd2d9bae9c6 openldap-2.1.30-r3.ebuild 7209
-MD5 fcf2498fd5a5126d7e735603e54e45fa openldap-2.1.27.ebuild 7057
-MD5 456232c9bd2a5921a3e34f9cef26f67b openldap-2.1.30-r2.ebuild 7485
-MD5 a37218f28166d09192ec6d94fb78cdca openldap-2.1.30-r4.ebuild 7278
 MD5 3e935052931394e2e3797107fabb18e2 openldap-2.2.19.ebuild 7979
-MD5 5379787c408ca43732cc3ab371d2def7 openldap-2.2.14.ebuild 7271
-MD5 ba77f306a8d0cb13ba801e10323ca35e openldap-2.1.30.ebuild 7367
-MD5 d47b63342e600ae59e64d6b867333590 openldap-2.1.26.ebuild 7096
+MD5 c2b5788e6bd56c43439b8758a888eacc ChangeLog 18318
+MD5 456232c9bd2a5921a3e34f9cef26f67b openldap-2.1.30-r2.ebuild 7485
 MD5 c199a7e5a277675e2b872ab356bd7b3c openldap-2.1.30-r1.ebuild 7382
-MD5 283f9f29e456f76451cff356ddafddc8 ChangeLog 18212
-MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 6287c43754f97e597792e66d4a0d0152 openldap-2.1.27-r1.ebuild 7451
-MD5 c8d6f4ebeb92ef1085b1bb77d7b4db5f files/gencert.sh 3505
-MD5 c58db81c8d7084a9abf48747134da0a8 files/openldap-2.1.30-db40.patch 718
-MD5 f829d2ebaab2e3e020a6b25522734331 files/digest-openldap-2.1.27-r1 65
-MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30-r1 65
-MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30-r2 65
-MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30-r3 65
-MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30-r4 65
-MD5 1afdae6ce6fa709abed41ce45f41f5e8 files/openldap-2.1.30-tls-activedirectory-hang-fix.patch 1122
-MD5 4c6ef684996786b3a7cc2dc15c4ae7a4 files/openldap-2.2.14-db40.patch 773
-MD5 95a998755d69f0f30cb64b9cb8eeab15 files/openldap-2.2.14-perlthreadsfix.patch 614
-MD5 ca2c43219df88502aafeab9db9eda4d5 files/openldap-2.1.27-perlthreadsfix.patch 967
+MD5 5379787c408ca43732cc3ab371d2def7 openldap-2.2.14.ebuild 7271
+MD5 d47b63342e600ae59e64d6b867333590 openldap-2.1.26.ebuild 7096
+MD5 ab4b7c6b32406f758b481dd2d9bae9c6 openldap-2.1.30-r3.ebuild 7209
+MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
+MD5 ba77f306a8d0cb13ba801e10323ca35e openldap-2.1.30.ebuild 7367
+MD5 fcf2498fd5a5126d7e735603e54e45fa openldap-2.1.27.ebuild 7057
+MD5 a37218f28166d09192ec6d94fb78cdca openldap-2.1.30-r4.ebuild 7278
 MD5 30ef1dc504563809f990b72ffe2be6c0 files/digest-openldap-2.1.26 65
-MD5 f829d2ebaab2e3e020a6b25522734331 files/digest-openldap-2.1.27 65
-MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30 65
-MD5 27d2ee25b32bf4a429ae80149508ff34 files/digest-openldap-2.2.14 65
+MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30-r2 65
+MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30-r1 65
 MD5 d1db1a9bf4afc66b26e33beef17f07f4 files/digest-openldap-2.2.19 65
+MD5 c58db81c8d7084a9abf48747134da0a8 files/openldap-2.1.30-db40.patch 718
+MD5 ca2c43219df88502aafeab9db9eda4d5 files/openldap-2.1.27-perlthreadsfix.patch 967
+MD5 f829d2ebaab2e3e020a6b25522734331 files/digest-openldap-2.1.27-r1 65
+MD5 1afdae6ce6fa709abed41ce45f41f5e8 files/openldap-2.1.30-tls-activedirectory-hang-fix.patch 1122
+MD5 27d2ee25b32bf4a429ae80149508ff34 files/digest-openldap-2.2.14 65
 MD5 b10517f0e7be829d47bb8096d86fb519 files/openldap-2.1.27-db40.patch 718
+MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30 65
+MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30-r3 65
 MD5 2e6d3f7cf49a1d85468befdff2bfc1d8 files/openldap-2.1.30-ximian_connector.patch 6435
+MD5 f829d2ebaab2e3e020a6b25522734331 files/digest-openldap-2.1.27 65
+MD5 4c6ef684996786b3a7cc2dc15c4ae7a4 files/openldap-2.2.14-db40.patch 773
+MD5 c8d6f4ebeb92ef1085b1bb77d7b4db5f files/gencert.sh 3505
+MD5 6da89687536a5ec9a422938e997a8a04 files/digest-openldap-2.1.30-r4 65
+MD5 95a998755d69f0f30cb64b9cb8eeab15 files/openldap-2.2.14-perlthreadsfix.patch 614
 MD5 1a7084c17a74e59db33578c0833e4099 files/2.0/slapd 584
-MD5 50257f7d6b63c8e9778b6407c7d2dddb files/2.0/slapd.conf 277
 MD5 d68ba97d9f54b8455c1e2d93c352d24a files/2.0/slurpd 495
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-Comment: Robbat2 @ Orbis-Terrarum Networks
-
-iD8DBQFBtU+SPpIsIjIzwiwRAii/AKCXDm5Rlod5ANCqjK0zUsg+iD7PTACcDY/Y
-e/FbsiUj76gr9xxaBOAhkHM=
-=VSPy
------END PGP SIGNATURE-----
+MD5 50257f7d6b63c8e9778b6407c7d2dddb files/2.0/slapd.conf 277
