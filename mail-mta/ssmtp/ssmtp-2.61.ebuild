@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.9.ebuild,v 1.14 2005/01/24 21:32:35 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61.ebuild,v 1.1 2005/01/24 21:32:35 ferdy Exp $
 
 inherit eutils
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 HOMEPAGE="ftp://ftp.debian.org/debian/pool/main/s/ssmtp/"
-SRC_URI="ftp://ftp.debian.org/debian/pool/main/s/ssmtp/${P/-/_}.tar.gz"
+SRC_URI="ftp://ftp.debian.org/debian/pool/main/s/ssmtp/${P/-/_}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha arm amd64 hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="~alpha ~arm ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="ssl ipv6 md5sum mailwrapper"
 
 DEPEND="virtual/libc
@@ -21,7 +21,7 @@ RDEPEND="mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 	ssl? ( dev-libs/openssl )"
 PROVIDE="virtual/mta"
 
-S=${WORKDIR}/ssmtp-2.60
+S=${WORKDIR}/ssmtp-2.61
 
 src_compile() {
 	econf \

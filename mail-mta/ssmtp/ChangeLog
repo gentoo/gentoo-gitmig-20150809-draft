@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/ssmtp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.15 2004/12/25 20:37:50 slarti Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.16 2005/01/24 21:32:35 ferdy Exp $
+
+*ssmtp-2.61 (24 Jan 2005)
+
+  24 Jan 2005; Fernando J. Pereda <ferdy@gentoo.org> +ssmtp-2.61.ebuild:
+  Version bump, closes #69999. Reported by: Yani Ioannou <yani.ioannou@gmail.com>
 
   25 Dec 2004; Tom Martin <slarti@gentoo.org> ssmtp-2.60.9.ebuild:
   Resolve bug 47562, by commenting out hostname=_HOSTNAME_ by default,
