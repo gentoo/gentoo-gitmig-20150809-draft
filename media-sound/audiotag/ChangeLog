@@ -1,0 +1,8 @@
+# ChangeLog for media-sound/audiotag
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/ChangeLog,v 1.1 2004/07/07 21:02:38 fvdpol Exp $
+
+  07 Jul 2004; Frank van de Pol <fvdpol@gentoo.org> :
+  New ebuild thanks submitted by Ryan McGuigan <ryan@cardweb.com>. Closes bug
+  #45884.
+
