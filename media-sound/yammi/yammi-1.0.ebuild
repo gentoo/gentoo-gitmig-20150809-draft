@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.0.ebuild,v 1.3 2004/03/19 23:39:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.0.ebuild,v 1.4 2004/04/01 08:47:12 eradicator Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="MP3/Ogg/Wav-Manager and Jukebox 4 XMMS/Noatun"
 HOMEPAGE="http://yammi.sourceforge.net/"
