@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/drac/drac-1.12.ebuild,v 1.4 2003/07/13 13:32:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/drac/drac-1.12.ebuild,v 1.5 2003/08/03 03:35:31 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cc.umanitoba.ca/src/${PN}.tar.Z"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
-IUSE=""
+IUSE="debug"
 
 DEPEND="virtual/glibc
 	sys-libs/db
@@ -32,7 +32,7 @@ src_compile() {
 		-e "s:RPCGENFLAGS =:RPCGENFLAGS = -C -I:" \
 		-e "s:MANADM = 1m:MANADM = 8:" \
 		< Makefile.orig > Makefile
-	if [ ! -z $DEBUGBUILD ]; then
+	if [ `use debug` ]; then
 		cp Makefile Makefile.posthacked
 		sed -e "s:CFLAGS = \$(DEFS) -g -I/usr/local/src/db/db-4.1.25/build_unix:CFLAGS = \$(DEFS) -g ${CFLAGS}:" \
 			< Makefile.posthacked > Makefile
