@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Peter Maxwell <peter@biolateral.com.au>
-# /space/gentoo/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.2.ebuild,v 1.1 2002/04/13 21:55:07 karltk Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.4.ebuild,v 1.2 2002/07/09 04:48:52 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A transaction based revision control system"
@@ -14,14 +13,16 @@ DEPEND="sys-libs/zlib
 	sys-devel/bison  
 	tcltk? ( >=dev-lang/tk-8.3 )"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
 src_compile() {
 	# By default aegis configure puts shareable read/write files (locks etc)  
 	# in ${prefix}/com/aegis but the FHS says /var/lib/aegis can be shared.
-	./configure \
-		--prefix=/usr \
-                --sharedstatedir=/var/lib/aegis \
-		--with-nlsdir=/usr/share/locale \
-		--mandir=/usr/share/man || die "./configure failed"
+	econf
+		--sharedstatedir=/var/lib/aegis \
+		--with-nlsdir=/usr/share/locale || die "./configure failed"
 	
 	# Second ebuild causes redefined/undefined function errors 	
 	make clean 
@@ -58,4 +59,6 @@ src_install () {
 	
 	# Config file examples are documentation.
 	mv ${D}/usr/share/aegis/config.example ${D}/usr/share/doc/${PF}/
+
+	dodoc LICENSE BUILDING MANIFEST README
 }
