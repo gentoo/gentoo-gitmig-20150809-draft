@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+ <email>morfic@gentoo.org</email>
+ <name>Daniel Goller</name>
+</maintainer>
+<longdescription>
+gtkdiskfree is a gtk2 extension to the cli tool df, does the same and more
+</longdescription>
+</pkgmetadata>
