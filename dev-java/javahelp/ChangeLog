@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javahelp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.1 2004/04/11 21:03:44 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.2 2004/04/12 09:30:34 dholm Exp $
+
+  12 Apr 2004; David Holm <dholm@gentoo.org> javahelp-2.0.01.ebuild:
+  Added to ~ppc.
 
 *javahelp-2.0.01 (11 Apr 2004)
 

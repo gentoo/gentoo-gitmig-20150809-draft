@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/javahelp-2.0.01.ebuild,v 1.1 2004/04/11 21:03:44 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/javahelp-2.0.01.ebuild,v 1.2 2004/04/12 09:30:34 dholm Exp $
 
 inherit java-pkg
 
@@ -8,7 +8,7 @@ DESCRIPTION="JavaHelp software is a full-featured, platform-independent, extensi
 HOMEPAGE="http://java.sun.com/products/javahelp/"
 LICENSE="sun-j2sl"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 DEPEND=">=app-arch/unzip-5.50-r1"
 RDEPEND=">=virtual/jdk-1.3"
 RESTRICT="fetch"
