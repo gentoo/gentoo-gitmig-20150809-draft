@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <agenkin@gentoo.org> (31 Oct 2002)
+# Masked pending some testing.
+>=net-www/opera-static-6.1
+
 # <danarmak@gentoo.org> (31 Oct 2002)
 # kde 3.1 rc1: masked permanently
 ~x11-libs/qt-3.1_pre20021024
