@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/kmyfirewall
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.16 2004/06/24 22:41:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.17 2004/07/03 20:43:53 carlo Exp $
+
+  03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> -kmyfirewall-0.9.4.ebuild,
+  -kmyfirewall-0.9.5.ebuild, kmyfirewall-0.9.6.2.ebuild:
+  removed old ebuilds, QA: need-kde after R/DEPEND
 
   19 Apr 2004; Daniel Black <dragonheart@gentoo.org> kmyfirewall-0.4.5.ebuild,
   kmyfirewall-0.9.4.ebuild, kmyfirewall-0.9.5.ebuild,
