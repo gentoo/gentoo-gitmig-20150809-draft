@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/ftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.9 2003/02/15 19:40:22 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.10 2003/06/13 13:24:03 seemant Exp $
+
+*ftp-0.17-r3 (13 Jun 2003)
+
+  13 Jun 2003; Seemant Kulleen <seemant@gentoo.org> ftp-0.17-r3.ebuild,
+  files/netkit-ftp-0.17+ssl-0.2+auth.diff:
+  patch to establish a secure (ssl/tls) connection to an ftp server; submitted
+  by: Norberto Bensa <nbensa@yahoo.com> and ebuild by: Tobias Sager
+  <moixa@gmx.ch>
 
 *ftp-0.17-r2 (12 Nov 2002)
   
