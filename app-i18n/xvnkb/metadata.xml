@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>cjk</herd>
+<maintainer>
+  <email>pclouds@vnlinux.org</email>
+  <name>Nguyen Thai Ngoc Duy</name>
+  <description>Since none of us in cjk herd speak Vietnamese he helps
+  us a lot in Vietnamese support.</description>
+</maintainer>
+</pkgmetadata>

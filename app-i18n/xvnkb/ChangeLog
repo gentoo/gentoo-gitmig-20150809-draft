@@ -1,0 +1,12 @@
+# ChangeLog for app-i18n/xvnkb
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/ChangeLog,v 1.1 2004/04/29 17:06:34 usata Exp $
+
+*xvnkb-0.2.8a (30 Apr 2004)
+
+  30 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> xvnkb-0.2.8a.ebuild,
+  files/xvnkb-0.2.8a.patch:
+  Initial import. Thanks to <nnt@nntsoft.com>, James W. Dumay
+  <i386@sauceage.org> and Nguyen Thai Ngoc Duy <pclouds@vnlinux.org>.
+  Closing bug #32875
+
