@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <phoenix@gentoo.org> (01 Sep 2002)
+# This needs a lot of testing
+app-emulation/winex-cvs
+
 # <blizzy@gentoo.org> (01 Sep 2002)
 # masked because there is a freeze and for testing
 net-misc/d4x
