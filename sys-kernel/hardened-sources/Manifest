@@ -1,10 +1,11 @@
 MD5 62dbd590a0b10e7b60ff94e3f7a8e84d hardened-sources-2.4.20-r4.ebuild 2220
 MD5 bcb6f42455c668fd90f2aa1015c7ef49 hardened-sources-2.4.22.ebuild 2274
 MD5 e9492d001901547618002ca594ddad85 hardened-sources-2.4.22-r2.ebuild 2446
+MD5 deb834c19142a02d28cdbaa70a243f45 hardened-sources-2.4.24.ebuild 1541
 MD5 992f0b2386fb616e6bab558c071d1c25 hardened-sources-2.4.20-r3.ebuild 2220
 MD5 6e9a60791f820fc7994d4f0137c96e0f hardened-sources-2.4.21.ebuild 2480
 MD5 6ecc735e601e6bb705ffb7d789738ef2 hardened-sources-2.4.22-r1.ebuild 2287
-MD5 5e5f649772adbd68b454c7f5e205f87d ChangeLog 5293
+MD5 11e80246a1728833b876adeca2a9708a ChangeLog 5695
 MD5 724c01628b1dd03c8bfe196f0ae31368 metadata.xml 558
 MD5 17a8a3d12f41f23a72b2e666777bf0cf hardened-sources-2.4.20-r2.ebuild 2302
 MD5 e2e2b545b6fcdcecf49e33798efa5b84 files/rtc_fix.patch 7073
@@ -17,3 +18,4 @@ MD5 0d5619823272f50a9bac7d4a50ca7757 files/digest-hardened-sources-2.4.22-r1 144
 MD5 0d5619823272f50a9bac7d4a50ca7757 files/digest-hardened-sources-2.4.22-r2 144
 MD5 1c70b8c63f548b518631d93e5e8ca5cb files/digest-hardened-sources-2.4.21 144
 MD5 0d5619823272f50a9bac7d4a50ca7757 files/digest-hardened-sources-2.4.22 144
+MD5 5f7f4f858f6ba088827d50ff2c6db55b files/digest-hardened-sources-2.4.24 321
