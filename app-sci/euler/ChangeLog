@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/euler
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/ChangeLog,v 1.9 2004/06/06 16:23:00 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/ChangeLog,v 1.10 2004/06/16 04:51:07 mr_bones_ Exp $
+
+  15 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> euler-1.59.1.ebuild,
+  euler-1.60.6.ebuild:
+  PROVIDE is for virtuals
 
   06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> euler-1.60.6-r1.ebuild:
   Marked stable on amd64.

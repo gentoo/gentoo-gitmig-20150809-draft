@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.59.1.ebuild,v 1.13 2004/04/22 17:21:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.59.1.ebuild,v 1.14 2004/06/16 04:51:07 mr_bones_ Exp $
 
 DESCRIPTION="Mathematical programming environment"
 HOMEPAGE="http://euler.sourceforge.net/"
@@ -13,7 +13,6 @@ KEYWORDS="x86"
 DEPEND="virtual/glibc
 	virtual/x11
 	=x11-libs/gtk+-1.2*"
-PROVIDE="app-misc/euler"
 
 src_unpack() {
 	unpack ${P}.tar.gz

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.50.ebuild,v 1.3 2004/03/06 00:11:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.50.ebuild,v 1.4 2004/06/16 04:54:56 mr_bones_ Exp $
 
 inherit flag-o-matic
 
