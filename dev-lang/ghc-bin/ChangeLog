@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.19 2004/10/18 22:54:07 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.20 2004/11/03 13:57:04 kosmikus Exp $
+
+  03 Nov 2004; Andres Loeh <kosmikus@gentoo.org> ghc-bin-6.2.1.ebuild:
+  ghc-pkg was not installed properly for amd64 (#56997)
 
   19 Oct 2004; Andres Loeh <kosmikus@gentoo.org> ghc-bin-6.2.1.ebuild:
   Fix amd64 version to properly install environment file.
