@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xpm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xpm/ChangeLog,v 1.13 2004/06/24 23:25:56 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xpm/ChangeLog,v 1.14 2005/04/04 18:56:25 luckyduck Exp $
+
+  04 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> xpm-3.4k-r2.ebuild:
+  added ~amd64 to KEYWORDS, fixes #87861
 
   03 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xpm-3.4k-r2.ebuild:
   Change XFree86 references to X11.

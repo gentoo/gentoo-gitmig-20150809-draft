@@ -1,3 +1,13 @@
-MD5 09e21d4779ced3b4a2dc4489522c960d ChangeLog 453
-MD5 7d45648e5d1d891f5e2487dd09855358 xpm-3.4k-r2.ebuild 713
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cf2e43eff271aa74e52f77f4bd834931 ChangeLog 568
+MD5 eb8fb245f26577a4ec150c8dce99ac95 xpm-3.4k-r2.ebuild 721
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xpm-3.4k-r2 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCUY3u06ebR+OMO78RAg8LAJ0eaKn0QQ9a+ViW/zt6o1GNIIVJFgCfeWIX
+SkouOnrfakVHeBrC7wbvFHg=
+=fwK/
+-----END PGP SIGNATURE-----
