@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.67 2003/08/28 04:55:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.68 2003/09/11 02:04:01 solar Exp $
+
+*mysql-4.0.13-r4 (10 Sep 2003)
+
+  10 Sep 2003; <solar@gentoo.org> mysql-4.0.13-r4.ebuild,
+  mysql-4.0.14-r2.ebuild, files/mysql-4.0.14-security-28394.patch:
+  secuirty fixes for stable and non stable branches of mysql, see bug 28394 for
+  more info
 
   27 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.14-r1.ebuild:
   Fix bug  #27204, thanks to help from forums while I was away on holiday.
