@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.1.1.ebuild,v 1.1 2001/09/15 23:06:03 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.1.1.ebuild,v 1.2 2001/09/19 19:37:48 danarmak Exp $
 
 S=${WORKDIR}/${P}-1
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 src_compile() {
 
-    QTDIR=/usr/X11R6/lib/qt make
+    make || die
     
 }
 
