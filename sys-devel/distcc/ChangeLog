@@ -1,8 +1,21 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.40 2003/04/18 00:14:24 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.41 2003/04/28 20:27:33 zwelch Exp $
 
 *distcc-2.0.1 (31 Mar 2003)
+
+  28 Apr 2003; Zach Welch <zwelch@gentoo.org> distcc-0.12.ebuild,
+  distcc-0.12.ebuild, distcc-0.15.ebuild, distcc-0.15.ebuild,
+  distcc-1.0.ebuild, distcc-1.0.ebuild, distcc-1.1-r11.ebuild,
+  distcc-1.1-r11.ebuild, distcc-1.1-r8.ebuild, distcc-1.1-r8.ebuild,
+  distcc-1.1.ebuild, distcc-1.1.ebuild, distcc-1.2.1.ebuild,
+  distcc-1.2.1.ebuild, distcc-1.2.3.ebuild, distcc-1.2.3.ebuild,
+  distcc-1.2.ebuild, distcc-1.2.ebuild, files/distccd, files/distccd.1,
+  files/distccd.2, files/distccd.4, files/wrapper-1.1.patch,
+  files/1.2/distcc-config, files/1.2/wrapper.patch, files/1.2.1/distcc-config,
+  files/1.2.1/wrapper.patch, files/1.2.3/distcc-config:
+  Bump distcc-2.0.1 revision and add new --set-j option for setting MAKEOPTS.
+  Remove old versions that are no longer needed or desired.
 
   17 Apr 2003; Zach Welch <zwelch@gentoo.org> files/1.2.3/distcc-config:
   fix distcc-config to add DCCC_QUIET
