@@ -1,6 +1,6 @@
-# ChangeLog for dev-util/ebuilder
+# ChangeLog for app-portage/ebuilder
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ebuilder/ChangeLog,v 1.1 2003/08/15 13:19:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ebuilder/ChangeLog,v 1.2 2003/08/16 05:35:56 vapier Exp $
 
 *ebuilder-0.4-r1 (15 Aug 2003)
 
@@ -39,7 +39,7 @@
 
   A revision number can now be added to the package name.
 
-  Changed the fourth line in the ebuilds to "$Header: /var/cvsroot/gentoo-x86/app-portage/ebuilder/ChangeLog,v 1.1 2003/08/15 13:19:22 lanius Exp $".
+  Changed the fourth line in the ebuilds to "$Header: /var/cvsroot/gentoo-x86/app-portage/ebuilder/ChangeLog,v 1.2 2003/08/16 05:35:56 vapier Exp $".
 
 
 *ebuilder-0.3 (04 May 2002)
