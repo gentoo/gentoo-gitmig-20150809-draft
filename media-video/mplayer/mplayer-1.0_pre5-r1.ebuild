@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r1.ebuild,v 1.4 2004/07/23 09:56:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r1.ebuild,v 1.5 2004/07/23 11:10:24 eradicator Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -31,7 +31,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	bidi? ( dev-libs/fribidi )
 	cdparanoia? ( media-sound/cdparanoia )
 	directfb? ( dev-libs/DirectFB )
-	dvdread? ( media-libs/libdvdread )
+	dvd? ( dvdread? ( media-libs/libdvdread ) )
 	encode? ( media-sound/lame
 			>=media-libs/libdv-0.9.5 )
 	esd? ( media-sound/esound )
@@ -151,7 +151,15 @@ src_compile() {
 	###############
 	myconf="${myconf} $(use_enable bidi fribidi)"
 	myconf="${myconf} $(use_enable cdparanoia)"
-	myconf="${myconf} $(use_enable dvd mpdvdkit)"
+	if use dvd; then
+		if use dvdread; then
+			myconf="${myconf} --enable-dvdread --disable-mpdvdkit"
+		else
+			myconf="${myconf} --disable-dvdread --enable-mpdvdkit"
+		fi
+	else
+			myconf="${myconf} --disable-dvdread --disable-mpdvdkit"
+	fi
 	myconf="${myconf} $(use_enable edl)"
 	myconf="${myconf} $(use_enable encode mencoder)"
 	myconf="${myconf} $(use_enable gtk gui) $(use_enable gtk x11) $(use_enable gtk xv) $(use_enable gtk vm)"
