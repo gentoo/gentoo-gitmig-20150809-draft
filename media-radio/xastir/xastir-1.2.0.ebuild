@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-1.2.0.ebuild,v 1.2 2003/09/08 07:17:35 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-1.2.0.ebuild,v 1.3 2003/09/11 01:39:53 msterret Exp $
 
 DESCRIPTION="XASTIR"
 HOMEPAGE="http://xastir.sourceforge.net/"
@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="virtual/glibc
-        virtual/motif"
+	virtual/motif"
 
 src_compile() {
 	cd ${S}
@@ -27,4 +27,3 @@ src_install() {
 	mkdir -p ${D}/usr/local
 	dosym ../xastir usr/local/xastir
 }
-
