@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ndu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.5 2004/07/19 01:57:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.6 2004/07/19 09:43:28 dholm Exp $
+
+  19 Jul 2004; David Holm <dholm@gentoo.org> ndu-0.4-r1.ebuild:
+  Added to ~ppc.
 
 *ndu-0.4-r1 (18 Jul 2004)
 
