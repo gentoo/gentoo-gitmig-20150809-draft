@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r1.ebuild,v 1.1 2003/08/21 11:08:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r1.ebuild,v 1.2 2003/09/04 08:04:42 msterret Exp $
 
 IUSE="tcltk java doc"
 
@@ -55,12 +55,12 @@ src_compile() {
 	use tcltk \
 		&& myconf="${myconf} --enable-tcl --with-tcl=/usr/lib" \
 		|| myconf="${myconf} --disable-tcl"
-	
+
 	if use java && [ -n "${JAVAC}" ]; then
 		export PATH=`dirname ${JAVAC}`:${PATH}
 		export JAVAC=`basename ${JAVAC}`
 	fi
-	
+
 	../dist/configure \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
@@ -70,7 +70,7 @@ src_compile() {
 		--localstatedir=/var/lib \
 		--enable-compat185 \
 		--enable-cxx \
-                --with-uniquename \
+		--with-uniquename \
 		${myconf} || die
 
 	emake || make || die
@@ -83,9 +83,9 @@ src_install () {
 	db_src_install_usrbinslot
 
 	db_src_install_headerslot
-	
+
 	db_src_install_doc
-	
+
 	db_src_install_usrlibcleanup
 }
 

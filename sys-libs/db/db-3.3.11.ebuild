@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.3.11.ebuild,v 1.16 2003/06/22 05:10:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.3.11.ebuild,v 1.17 2003/09/04 08:04:42 msterret Exp $
 
 S=${WORKDIR}/${P}/build_unix
 DESCRIPTION="Berkeley DB for transaction support in MySQL"
@@ -23,7 +23,7 @@ export CXXFLAGS="${CXXFLAGS/-fno-exceptions/-fexceptions}"
 
 src_unpack() {
 	unpack ${A}
-	
+
 	# fix invalid .la files
 	cd ${WORKDIR}/${P}/dist
 	rm -f ltversion.sh
@@ -42,7 +42,7 @@ src_compile() {
 		--enable-shared \
 		--enable-static \
 		--enable-cxx || die
-		
+
 	#--enable-rpc does not work
 	echo
 	# Parallel make does not work
@@ -65,14 +65,14 @@ src_install () {
 		libcxx=libcxx_3.2.a \
 		prefix=${D}/usr \
 		install || die
-		
+
 	dolib.a libdb-3.2.a libdb_cxx-3.2.a
 
 	dodir usr/include/db3
 	cd ${D}/usr/include
 	mv *.h db3
 	ln db3/db.h db.h
-	
+
 	cd ${D}/usr/lib
 	ln -s libdb-3.2.so libdb.so.3
 
@@ -82,7 +82,7 @@ src_install () {
 	chmod go+rx *.so
 	#.la's aren't go readable either
 	chmod go+r *.la
-	
+
 	cd ${S}/..
 	dodoc README LICENSE
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r7.ebuild,v 1.15 2003/08/09 17:30:42 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r7.ebuild,v 1.16 2003/09/04 08:01:46 msterret Exp $
 
 IUSE=""
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 
- 	unpack ${A}
+	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-redhat.patch
 	epatch ${FILESDIR}/${P}-gentoo-new.diff
@@ -50,7 +50,7 @@ src_install() {
 
 	dodir /usr/{lib,sbin,include}
 	keepdir /usr/share/cracklib
-	
+
 	make DESTDIR=${D} install || die
 
 	# This link is needed and not created. :| bug #9611

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r2.ebuild,v 1.7 2003/06/22 05:10:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r2.ebuild,v 1.8 2003/09/04 08:04:42 msterret Exp $
 
 IUSE=""
 
@@ -28,7 +28,7 @@ export CXXFLAGS="${CXXFLAGS/-fno-exceptions/-fexceptions}"
 
 src_unpack() {
 	unpack ${A}
-	
+
 	chmod -R ug+w *
 
 	cd ${WORKDIR}/${P}
@@ -66,7 +66,7 @@ src_compile() {
 		--prefix=/usr"
 	# --enable-rpc aparently does not work .. should verify this
 	# at some stage ...
-	
+
 	# NOTE: we should not build both shared and static versions
 	#       of the libraries in the same build root!
 
@@ -81,7 +81,7 @@ src_compile() {
 	cd ${S}/build-shared
 	../dist/configure ${conf} \
 		--enable-shared || die
-		
+
 	# Parallel make does not work
 	MAKEOPTS="${MAKEOPTS} -j1"
 	einfo "Building ${P} (static)..."
@@ -98,7 +98,7 @@ src_install () {
 		libcxx=libcxx_3.2.a \
 		prefix=${D}/usr \
 		install || die
-	
+
 	cd ${S}/build-static
 	dolib.a libdb-3.2.a libdb_cxx-3.2.a
 
@@ -106,7 +106,7 @@ src_install () {
 	cd ${D}/usr/include
 	mv *.h db3
 	ln db3/db.h db.h
-	
+
 	cd ${D}/usr/lib
 	ln -s libdb-3.2.so libdb.so.3
 
@@ -117,7 +117,7 @@ src_install () {
 	chmod go+rx *.so
 	# The .la's aren't readable either
 	chmod go+r *.la
-	
+
 	cd ${S}
 	dodoc README LICENSE
 

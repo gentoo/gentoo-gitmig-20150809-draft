@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.18 2003/06/22 05:10:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.19 2003/09/04 08:04:42 msterret Exp $
 
 S=${WORKDIR}/db.${PV}
 DESCRIPTION="db 1.85 -- required for RPM 4.0 to compile; that's about it."
@@ -22,8 +22,8 @@ src_unpack() {
 
 src_compile() {
 
-    cd ${S}/PORT/linux
-    make ${MAKEOPTS} OORG="${CFLAGS} -fomit-frame-pointer" prefix=/usr || die
+	cd ${S}/PORT/linux
+	make ${MAKEOPTS} OORG="${CFLAGS} -fomit-frame-pointer" prefix=/usr || die
 
 }
 
@@ -45,9 +45,9 @@ src_install () {
 	doins include/db.h include/mpool.h
 
 	insinto /usr/include/db1
-        doins include/ndbm.h
+	doins include/ndbm.h
 	dosed "s:<db.h>:<db1/db.h>:" /usr/include/db1/ndbm.h
-        dosym db1/ndbm.h /usr/include/ndbm.h
+	dosym db1/ndbm.h /usr/include/ndbm.h
 	cp db_dump185 db1_dump185
 	dobin db1_dump185
 
