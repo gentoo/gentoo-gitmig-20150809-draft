@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.94 2004/02/24 17:44:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.95 2004/03/01 23:39:05 iluxa Exp $
+
+  01 Mar 2004; Ilya Volynets <ilya@total-knowledge.com> fluxbox-0.9.8.ebuild:
+  ~mips fluxbox-0.9.8, as it works stably according to geoman
 
   24 Feb 2004; Aron Griffis <agriffis@gentoo.org> fluxbox-0.9.8.ebuild:
   stable on alpha and ia64
