@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.ebuild,v 1.9 2001/11/16 12:50:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.ebuild,v 1.10 2001/12/08 17:27:11 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
@@ -28,3 +28,10 @@ src_unpack() {
 	kde-objprelink-patch
 }
 
+src_compile() {
+
+    kde_src_compile myconf configure
+    cd ${S} 
+    make LIBPYTHON="`python-config --libs`"
+
+}
