@@ -1,0 +1,12 @@
+# ChangeLog for net-www/nvu
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/ChangeLog,v 1.1 2004/10/14 23:17:00 chriswhite Exp $
+
+*nvu-0.50 (14 Oct 2004)
+
+  14 Oct 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +files/.mozconfig, +files/nvu-0.50-prefix.patch, +files/nvu.desktop,
+  +nvu-0.50.ebuild:
+  Intial import to the tree. Thanks goes to the people of Bug #40821 for their
+  help. Package.masked as it is a testing version.
+

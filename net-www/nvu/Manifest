@@ -1,0 +1,7 @@
+MD5 bc61cc925d247769cbe0ca88da9aeff4 nvu-0.50.ebuild 1367
+MD5 61e0760385f6cbd59f2e755773e22932 metadata.xml 226
+MD5 33ce65619be42a1e19656afb61766694 ChangeLog 512
+MD5 a2a4021bb009aff30f530f05e97611cd files/.mozconfig 2105
+MD5 f04489cb980dbc4f22e78024f3e611e0 files/digest-nvu-0.50 71
+MD5 aae073cc843ae213edb20559a512ee71 files/nvu-0.50-prefix.patch 331
+MD5 4f757ecfc69252df6ebc3c62bb4713f1 files/nvu.desktop 182
