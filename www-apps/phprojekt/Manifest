@@ -1,21 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 da50e21c5474f6255b37cb0b004f8afe ChangeLog 2530
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 374a53239ebb4faadcbe47ec1b7f6ba8 phprojekt-3.2a.ebuild 852
 MD5 a17a98187231826b89b8aa103692b7a7 phprojekt-4.0-r1.ebuild 840
 MD5 2feb03e3c6c4d906cca711b6639b4816 phprojekt-4.1.ebuild 836
 MD5 5ffb04c6604cca9afcba6dde36ae7292 phprojekt-4.2.ebuild 965
-MD5 e7190f84688e7f483d4bdd1e64d32493 ChangeLog 2374
+MD5 6e092f05dd228be28860a59c3607bc48 phprojekt-4.2-r1.ebuild 1115
 MD5 a5312d2a7dbb70b1d0416e37c9fd82d8 files/digest-phprojekt-3.2a 61
 MD5 a4fc4523f14a2ad77b9d00dd7e386b88 files/digest-phprojekt-4.0-r1 65
 MD5 6d1069d70f3ff3b4f87db9ca117da41d files/digest-phprojekt-4.1 65
 MD5 9795a83201163bd130899be5e47aaad3 files/digest-phprojekt-4.2 66
 MD5 b22d3aff81f01ade762c248b632b59af files/postinstall-en.txt 566
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOtS1I1lqEGTUzyQRAv0lAJ9hiSNnwng7FugoBIy+GSmEnh/L2wCbBPsV
-NCITZsmWiJ4RtvFjVyEo6WA=
-=yaOM
------END PGP SIGNATURE-----
+MD5 938b9d2863dfb43c71b95e95dfa47fec files/digest-phprojekt-4.2-r1 118
