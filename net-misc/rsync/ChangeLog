@@ -1,11 +1,14 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.21 2003/02/24 00:58:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.22 2003/02/25 15:32:43 gmsoft Exp $
 
   24 Feb 2003; Luca Barbato <lu_zero@gentoo.org> :
   Added the popt in DEPEND
 
 *rsync-2.5.6-r1 (22 Feb 2003)
+
+  25 Feb 2003; Guy Martin <gmsoft@gentoo.org> rsync-2.5.6-r1.ebuild :
+  Commited stable for hppa.
 
   22 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
   Add init.d and conf.d files
