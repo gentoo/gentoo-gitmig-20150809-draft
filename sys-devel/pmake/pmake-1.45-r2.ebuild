@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.12 2004/06/24 22:49:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.13 2004/06/29 17:37:44 agriffis Exp $
 
 IUSE=""
 
@@ -37,7 +37,6 @@ src_unpack() {
 	use x86 && sed 's/MACHINE_ARCH=sparc/MACHINE_ARCH=i386/g' Makefile.bootor > Makefile.boot
 	use alpha && sed 's/MACHINE_ARCH=sparc/MACHINE_ARCH=alpha/g' Makefile.bootor > Makefile.boot
 	use ppc && sed 's/MACHINE_ARCH=sparc/MACHINE_ARCH=ppc/g' Makefile.bootor > Makefile.boot
-	use sparc64 && sed 's/MACHINE_ARCH=sparc/MACHINE_ARCH=sparc64/g' Makefile.bootor > Makefile.boot
 	use amd64 && sed 's/MACHINE_ARCH=sparc/MACHINE_ARCH=amd64/g' Makefile.bootor > Makefile.boot
 }
 
