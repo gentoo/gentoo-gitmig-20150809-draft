@@ -92,10 +92,6 @@ app-admin/va-systemimager-client
 >=media-gfx/autotrace-0.26
 =net-ftp/lftp-2.4.3
 
-# These works on one of my machines but not the other
-=net-irc/xchat-1.8.1
-=gnome-office/gnumeric-0.68
-
 # untested
 >=sys-devel/libtool-1.4
 >=net-fs/netatalk-1.5
