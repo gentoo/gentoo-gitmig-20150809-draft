@@ -1,6 +1,19 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.34 2003/10/11 10:14:58 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.35 2003/10/13 17:17:05 taviso Exp $
+
+  13 Oct 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.4.16-r1.ebuild,
+  fvwm-2.4.16.ebuild, fvwm-2.4.17.ebuild, fvwm-2.4.8.ebuild,
+  fvwm-2.5.7-r2.ebuild, fvwm-2.5.7-r3.ebuild:
+  
+  marking 2.5.7-r3 stable, it is a release from the development branch, but has
+  proven stable in practice and has some important internationalisation 
+  features (among other things) missing from the stable branch.
+
+  2.4.17 is also stable, and will be maintained in portage for those who 
+  prefer it.
+
+  removing stale ebuilds.
 
 *fvwm-2.5.7-r3 (11 Oct 2003)
 
