@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.3.ebuild,v 1.5 2000/11/03 02:47:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.3.ebuild,v 1.6 2000/11/21 19:44:58 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -22,7 +22,6 @@ src_compile() {
 src_install() {                               
   cd ${S}
   try make prefix=${D}/opt/gnome install
-  prepinfo /opt/gnome
 
   dodoc AUTHORS COPYING* ChangeLog README NEWS TODO
   dodoc docs/*.txt docs/IDEA1
@@ -32,6 +31,12 @@ src_install() {
   docinto popt
   cd ../popt
   dodoc CHANGES COPYING README
+}
+
+pkg_postinst() {
+
+   ldconfig -r ${ROOT}
+
 }
 
 

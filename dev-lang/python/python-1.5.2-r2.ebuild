@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-1.5.2-r2.ebuild,v 1.4 2000/11/15 16:33:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-1.5.2-r2.ebuild,v 1.5 2000/11/21 19:44:58 achim Exp $
 
 P=python-1.5.2      
 A="py152.tgz python-fchksum-1.1.tar.gz"
@@ -19,6 +19,7 @@ DEPEND=">=sys-apps/bash-2.04
 	>=sys-libs/glibc-2.1.3
 	>=sys-libs/gpm-1.19.3
 	>=sys-libs/ncurses-5.1
+	>=dev-lang/tcl-tk-8.1
 	>=x11-base/xfree-4.0.1"
 	
 # This does not work	>=dev-lang/tcl-tk-8.1.1
