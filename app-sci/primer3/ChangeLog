@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/primer3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/primer3/ChangeLog,v 1.4 2004/08/10 23:15:36 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/primer3/ChangeLog,v 1.5 2004/11/01 01:11:29 ribosome Exp $
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> -primer3-0.9.ebuild,
+  primer3-1.0.0.ebuild:
+  Removed old version. Added 1.0 to x86. Fixed regression test.
 
 *primer3-1.0.0 (10 Aug 2004)
 
