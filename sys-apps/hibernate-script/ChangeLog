@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/hibernate-script
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hibernate-script/ChangeLog,v 1.1 2004/11/12 18:58:43 brix Exp $
+
+*hibernate-script-1.00 (12 Nov 2004)
+
+  12 Nov 2004; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
+  +hibernate-script-1.00.ebuild:
+  Initial check-in. Thank you to all who commented on bug #52019.
+
