@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-jaxp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.10 2005/03/13 19:26:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.11 2005/03/23 14:34:24 gustavoz Exp $
+
+  23 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnu-jaxp-1.0_beta1-r1.ebuild:
+  Keyworded ~sparc wrt #84992
 
   13 Mar 2005; Markus Rothe <corsair@gentoo.org> gnu-jaxp-1.0_beta1-r1.ebuild:
   Added ~ppc64 to KEYWORDS
