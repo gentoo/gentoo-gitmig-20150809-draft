@@ -1,16 +1,20 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.4 2002/05/22 02:50:27 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.5 2002/07/30 04:36:31 cselkirk Exp $
 
 *syslog-ng-1.5.17 (21 May 2002)
 
-  21 May 2002; Bruce A. Locke <blocke@shivan.org> syslog-ng-1.5.17.ebuild:
+  30 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> syslog-ng-1.5.17.ebuild :
+  
+  Added -ppc to KEYWORDS.
+
+  21 May 2002; Bruce A. Locke <blocke@shivan.org> syslog-ng-1.5.17.ebuild :
 
   New development branch version... a pain to compile and is masked out
 
 *syslog-ng-1.4.15 (21 May 2002)
 
-  21 May 2002; Bruce A. Locke <blocke@shivan.org> syslog-ng-1.4.15.ebuild:
+  21 May 2002; Bruce A. Locke <blocke@shivan.org> syslog-ng-1.4.15.ebuild :
 
   New Version
 
