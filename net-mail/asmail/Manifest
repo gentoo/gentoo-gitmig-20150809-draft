@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c7f91023af5fa81b228f363e884c684f ChangeLog 409
+MD5 3fa6aece58fac2b0eab31f3fd81b3ce1 asmail-0.56.ebuild 809
+MD5 56a092974815c0e8367540c0874118e0 ChangeLog 522
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 709702bf2f484c8bdbafa376ddfd0652 asmail-0.56.ebuild 806
 MD5 a748083efe71212fc0b5737b769448ce files/digest-asmail-0.56 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBODcm10xuJSrg3/sRAjjfAJ4sjz7rLspvlW6tDOmWWhI2PzYsdQCfZdxt
-VUWorqrklr3cvDLOJhX9oFM=
-=aYRX
------END PGP SIGNATURE-----
