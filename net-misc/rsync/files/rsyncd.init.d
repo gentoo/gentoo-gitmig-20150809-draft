@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/files/rsyncd.init.d,v 1.3 2004/07/15 00:11:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/files/rsyncd.init.d,v 1.4 2004/10/21 01:10:48 vapier Exp $
 
 depend() {
 	use net
@@ -15,6 +15,6 @@ start() {
 
 stop() {
 	ebegin "Stopping rsyncd"
-	kill `cat /var/run/rsyncd.pid`
+	start-stop-daemon --stop --pidfile /var/run/rsyncd.pid
 	eend $?
 }
