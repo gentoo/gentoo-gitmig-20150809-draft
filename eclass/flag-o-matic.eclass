@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.28 2003/10/26 00:40:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.29 2003/10/31 23:03:40 puggy Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -25,6 +25,10 @@ INHERITED="$INHERITED $ECLASS"
 #### strip-flags ####
 # Strip C[XX]FLAGS of everything except known
 # good options.
+#
+#### strip-unsupported-flags ####
+# Strip C[XX]FLAGS of any flags not supported by
+# installed version of gcc
 #
 #### get-flag <flag> ####
 # Find and echo the value for a particular flag
@@ -176,6 +180,27 @@ strip-flags() {
 
 	export CFLAGS="${NEW_CFLAGS}"
 	export CXXFLAGS="${NEW_CXXFLAGS}"
+}
+
+test_flag () {
+	if gcc -S -xc $1 -o /dev/null /dev/null >/dev/null 2>&1; then
+		echo "$1"
+	fi
+}
+
+strip-unsupported-flags() {
+	for x in ${CFLAGS}
+	do
+		NEW_CFLAGS=${NEW_CFLAGS}" ""`test_flag ${x}`"
+	done
+
+	for x in ${CXXFLAGS}
+	do
+		NEW_CXXFLAGS=${NEW_CXXFLAGS}" ""`test_flag ${x}`"
+	done
+
+	CFLAGS="${NEW_CFLAGS}"
+	CXXFLAGS="${NEW_CXXFLAGS}"
 }
 
 get-flag() {
