@@ -1,11 +1,14 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.48 2003/03/10 19:46:47 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.49 2003/03/23 07:45:22 vladimir Exp $
 
   10 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> xchat-2.0.0.ebuild:
   Mark stable on ppc
 
 *xchat-2.0.1 (03 Mar 2003)
+
+  22 Mar 2003; Graham Forest <vladimir@gentoo.org> xchat-2.0.1.ebuild:
+  set ppc in keywords
 
   03 Mar 2003; Brandon Low <lostlogic@gentoo.org> xchat-2.0.1.ebuild:
   Bump to latest gtk2 release and remove all other old unstable gtk2 releases
