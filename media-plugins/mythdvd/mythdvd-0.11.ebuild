@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.11.ebuild,v 1.4 2004/01/15 18:04:10 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.11.ebuild,v 1.5 2004/04/26 18:16:38 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -37,7 +37,7 @@ src_compile() {
 
 	qmake -o "${S}/Makefile" "${S}/${PN}.pro"
 
-	econf "`use_enable transcode`"
+	econf "`use_enable transcode`" || die "econf failed"
 	emake || die "compile problem"
 }
 
