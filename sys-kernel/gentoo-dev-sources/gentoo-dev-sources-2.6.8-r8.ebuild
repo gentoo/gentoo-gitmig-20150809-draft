@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.8-r8.ebuild,v 1.2 2004/10/12 12:14:18 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.8-r8.ebuild,v 1.3 2004/10/22 14:41:21 pvdabeel Exp $
 
 ETYPE="sources"
 AMD64_URI="ftp://ftp.x86-64.org/pub/linux/v2.6/x86_64-2.6.8-1.bz2"
@@ -13,7 +13,7 @@ GPV="8.54"
 GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
 	mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2"
 
-KEYWORDS="x86 ~amd64 ~ppc ~ppc64 ~ia64 ~alpha"
+KEYWORDS="x86 ~amd64 ppc ~ppc64 ~ia64 ~alpha"
 
 UNIPATCH_LIST="${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
 	       ${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2
