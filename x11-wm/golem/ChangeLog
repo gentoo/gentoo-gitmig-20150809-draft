@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/golem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/golem/ChangeLog,v 1.6 2003/11/04 14:52:09 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/golem/ChangeLog,v 1.7 2004/03/02 08:32:38 aliz Exp $
 
   04 Nov 2003; Brandon Hale <tseng@gentoo.org> golem-0.0.5-r1.ebuild,
   metadata.xml:
@@ -12,7 +12,7 @@
   Added xinerama and esd to IUSE.
   Added golem to /etc/X11/Sessions.
 
-*golem-0.0.5.ebuild (07 Jan 2003)
+*golem-0.0.5 (07 Jan 2003)
 
   31 Jul 2003; MATSUU Takuto <matsuu@gentoo.org> golem-0.0.5.ebuild:
   Added ~sparc to KEYWORDS.

@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/ctwm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.6 2004/02/07 06:06:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.7 2004/03/02 08:32:38 aliz Exp $
 
   07 Feb 2004; Mamoru KOMACHI <usata@gentoo.org>
   files/ctwm-3.6-r1-gentoo.diff, files/ctwm-3.7_alpha4-gentoo.diff:
@@ -10,6 +10,7 @@
   Marked as stable
 
 *ctwm-3.7_alpha4-r1 (16 Jan 2004)
+*ctwm-3.6-r1 (16 Jan 2004)
 
   16 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> ctwm-3.6-r1.ebuild,
   ctwm-3.7_alpha4-r1.ebuild:

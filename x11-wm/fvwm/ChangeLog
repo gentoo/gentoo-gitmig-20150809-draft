@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.59 2004/02/28 15:36:28 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.60 2004/03/02 08:32:38 aliz Exp $
 
   28 Feb 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.8-r5.ebuild:
   stable on alpha and x86
@@ -122,6 +122,7 @@
   removing stale ebuilds.
 
 *fvwm-2.5.7-r3 (11 Oct 2003)
+*fvwm-2.4.17 (11 Oct 2003)
 
   11 Oct 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.4.17.ebuild,
   fvwm-2.5.7-r3.ebuild:
