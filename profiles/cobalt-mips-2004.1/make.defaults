@@ -24,6 +24,6 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-USE="bitmap-fonts xprint slang readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips"
+USE="bitmap-fonts slang readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips"
 
 ACCEPT_KEYWORDS="mips"

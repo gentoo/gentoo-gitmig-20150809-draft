@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/make.defaults,v 1.9 2004/10/08 16:03:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/make.defaults,v 1.10 2004/10/28 19:35:24 spyderous Exp $
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -12,7 +12,7 @@ STAGE1_USE="multilib"
 GRP_STAGE23_USE="${STAGE1_USE} ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses readline zlib -java -nptl"
 
 # Sane, functional, almost-but-not-quite-minimal default for USE
-USE="${GRP_STAGE23_USE} bitmap-fonts oss alsa crypt f77 jpeg nls userlocales opengl png xml2 acpi gif jp2 lzw lzw-tiff png tiff truetype usb xpm xprint xrandr xv"
+USE="${GRP_STAGE23_USE} bitmap-fonts oss alsa crypt f77 jpeg nls userlocales opengl png xml2 acpi gif jp2 lzw lzw-tiff png tiff truetype usb xpm xrandr xv"
 
 ARCH="amd64"
 

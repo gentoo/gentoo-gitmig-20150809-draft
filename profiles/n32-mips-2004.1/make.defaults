@@ -22,7 +22,7 @@ CFLAGS="-O2 -pipe -mabi=n32 -mips4"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-USE="bitmap-fonts xprint slang readline gpm berkdb gdbm tcpd pam crypt libwww ssl nls perl python sdl mips n32 -multilib"
+USE="bitmap-fonts slang readline gpm berkdb gdbm tcpd pam crypt libwww ssl nls perl python sdl mips n32 -multilib"
 
 ACCEPT_KEYWORDS="mips ~mips"
 

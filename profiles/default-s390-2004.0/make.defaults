@@ -23,7 +23,7 @@ CFLAGS=""
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-USE="berkdb bitmap-fonts crypt cups f77 fbcon foomaticdb gdbm imlib jpeg libwww mikmod motif mad mpeg ncurses nls pam perl png python readline slang spell ssl tcpd truetype xprint zlib"
+USE="berkdb bitmap-fonts crypt cups f77 fbcon foomaticdb gdbm imlib jpeg libwww mikmod motif mad mpeg ncurses nls pam perl png python readline slang spell ssl tcpd truetype zlib"
 
 # The following USE flags are NOT recommended for sparc32 and might cause breakage...
 # mmx, 3dnow, sse, svga, gpm,  

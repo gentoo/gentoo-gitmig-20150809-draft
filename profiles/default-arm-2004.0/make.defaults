@@ -3,7 +3,7 @@
 
 GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses"
 
-USE="arm berkdb bitmap-fonts crypt cups encode foomaticdb gdbm gif gpm jpeg libg++ libwww mpeg ncurses nls pam png perl python readline spell ssl tcpd truetype xprint zlib"
+USE="arm berkdb bitmap-fonts crypt cups encode foomaticdb gdbm gif gpm jpeg libg++ libwww mpeg ncurses nls pam png perl python readline spell ssl tcpd truetype zlib"
 
 ARCH="arm"
 ACCEPT_KEYWORDS="arm"

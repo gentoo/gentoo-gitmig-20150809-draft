@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc31/make.defaults,v 1.8 2004/10/13 01:48:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc31/make.defaults,v 1.9 2004/10/28 19:35:24 spyderous Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
 
-USE="x86 oss apm arts avi berkdb bitmap=fonts crypt cups encode f77 gdbm gif gpm gtk imlib java jpeg kde gnome libg++ libwww mikmod mmx motif mpeg ncurses nls oggvorbis opengl pam pdflib png python qt quicktime readline sdl slang spell ssl svga tcpd truetype X xml2 xmms xprint xv zlib"
+USE="x86 oss apm arts avi berkdb bitmap=fonts crypt cups encode f77 gdbm gif gpm gtk imlib java jpeg kde gnome libg++ libwww mikmod mmx motif mpeg ncurses nls oggvorbis opengl pam pdflib png python qt quicktime readline sdl slang spell ssl svga tcpd truetype X xml2 xmms xv zlib"
 
 ARCH="x86"
 ACCEPT_KEYWORDS="x86"
