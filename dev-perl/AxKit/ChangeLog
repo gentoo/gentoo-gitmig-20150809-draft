@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/AxKit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/ChangeLog,v 1.14 2003/04/28 19:19:34 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/ChangeLog,v 1.15 2003/05/03 06:34:26 rac Exp $
 
 *AxKit-1.6.1 (28 Apr 2003)
+
+  02 May 2003; <rac@gentoo.org> AxKit-1.6.1.ebuild:
+  mark stable on x86
 
   28 Apr 2003; <rac@gentoo.org> AxKit-1.6.1.ebuild:
   New upstream bugfix version
