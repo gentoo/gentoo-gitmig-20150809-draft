@@ -1,0 +1,29 @@
+#!/bin/sh
+
+echo "${REMOVER}" | grep '0$'
+
+if [ $? -eq 0 ]; then
+
+	case "$ACTION" in
+		add)
+			cat > "${REMOVER}" <<-EOF
+			#!/bin/sh
+
+			/etc/init.d/speedtouch stop
+			/sbin/lsmod | grep -q "^speedtch"
+			if [ \$? -eq 0 ]; then
+				#wait for pppd to exit
+				sleep 20
+				/sbin/rmmod speedtch
+			fi
+			EOF
+
+			/bin/chmod +x "${REMOVER}"
+			/etc/init.d/speedtouch start
+    	;;
+	esac
+
+fi
+
+exit 0
+

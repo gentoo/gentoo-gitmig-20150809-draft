@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/files/speedtouch.confd,v 1.4 2004/07/14 23:11:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/files/speedtouch.confd,v 1.5 2004/09/27 13:56:33 dragonheart Exp $
 
 # Config file for the speedtouch ebuild
 
 # Set the microcode path
-# MICROCODE="/usr/share/speedtouch/mgmt.o"
+#MICROCODE="/usr/share/speedtouch/mgmt.o"
 
 # Set verbose level for modem_run
 VERBOSE="0"
@@ -15,5 +15,7 @@ VERBOSE="0"
 PEER="adsl"
 
 # Extra options to modem_run
-# Some modems will need -s, if in doubt then leave blank
+# Some modems will need "-s", if in doubt then leave blank
+# add "-k" for use with the kernel mode driver
+# add "-a /usr/share/speedtouch/boot.v123.bin" if your modem is green or purple
 #MODEM_RUN_EXTRAOPTS="-s"
