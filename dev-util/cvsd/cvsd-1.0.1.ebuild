@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/cvsd-1.0.0.ebuild,v 1.2 2004/03/15 18:18:04 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/cvsd-1.0.1.ebuild,v 1.1 2004/03/15 18:18:04 max Exp $
+
+inherit eutils
 
 DESCRIPTION="CVS pserver daemon."
 HOMEPAGE="http://tiefighter.et.tudelft.nl/~arthur/cvsd/"
@@ -11,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="tcpd"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 RDEPEND="${DEPEND}
 	>=dev-lang/perl-5.8.0
 	>=dev-util/cvs-1.11.6"
