@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r2.ebuild,v 1.4 2002/01/16 20:54:44 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r2.ebuild,v 1.5 2002/01/17 18:59:47 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde kde.org || die
 #don't inherit kde-dist! it calls need-kde which adds kdelibs to depend -> circular deps!
@@ -46,6 +46,14 @@ need-qt $selected_version
 
 set-kdedir $PV
 
+src_unpack() {
+    
+	base_src_unpack
+	
+	kde_sandbox_patch ${S}/{arts/soundserver,kio/kpac}
+	
+}
+
 src_compile() {
     
 	kde_src_compile myconf
@@ -61,19 +69,6 @@ src_compile() {
 
 src_install() {
 
-	# patch for sandbox
-	cd ${S}/arts/soundserver
-	mv Makefile Makefile.orig
-	sed -e 's: $(bindir)/artswrapper:$(DESTDIR)/$(bindir)/artswrapper:' Makefile.orig > Makefile
-	rm Makefile.orig
-
-	cd ${S}/kio/kpac
-	mv Makefile Makefile.orig
-	sed -e 's: $(bindir)/kpac_dhcp_helper:$(DESTDIR)/$(bindir)/kpac_dhcp_helper:' Makefile.orig > Makefile
-	rm Makefile.orig
-	
-	cd ${S}
-	
 	kde_src_install
 	
 	docinto html

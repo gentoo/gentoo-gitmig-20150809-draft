@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.2-r1.ebuild,v 1.1 2002/01/09 19:13:23 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.2-r1.ebuild,v 1.2 2002/01/17 18:59:47 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist
 
@@ -19,6 +19,14 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	opengl? ( virtual/opengl )" #this last for opengl screensavers
 #	samba? ( net-fs/samba ) #use flag doesn't exist yet and we don't want such a heavy dep by deafult
 #	lm_sensors? ( ?/lm_sensors ) # ebuild doesn't exist yet
+
+src_unpack() {
+
+    base_src_unpack
+    
+    kde_sandbox_patch ${S}/konsole/src
+
+}
 
 src_compile() {
     
@@ -39,7 +47,7 @@ src_compile() {
 
 
 src_install() {
-
+    
     kde_src_install
 
     insinto /etc/pam.d
