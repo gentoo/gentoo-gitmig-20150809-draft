@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7.ebuild,v 1.3 2004/08/02 22:05:50 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7.ebuild,v 1.4 2004/08/03 18:42:21 lanius Exp $
 
 inherit eutils kmod
 
@@ -64,10 +64,6 @@ src_compile() {
 	[ "x${LIRC_OPTS}" = x ] && LIRC_OPTS="--with-driver=serial \
 		--with-port=0x3f8 --with-irq=4"
 
-	if is_kernel 2 6 && ! is_koutput; then
-		kmod_make_linux_writable
-	fi
-
 	# remove parallel driver on SMP systems
 	if [ ! -z "`uname -v | grep SMP`" ]
 	then
@@ -80,6 +76,11 @@ src_compile() {
 		--with-syslog=LOG_DAEMON \
 		--enable-sandboxed \
 		${LIRC_OPTS} || die "./configure failed"
+
+	drivers=`cat drivers/Makefile | grep "^SUBDIRS ="`
+	if is_kernel 2 6 && ! is_koutput && [ "$drivers" != "SUBDIRS = " ]; then
+		kmod_make_linux_writable
+	fi
 
 	emake || die
 
