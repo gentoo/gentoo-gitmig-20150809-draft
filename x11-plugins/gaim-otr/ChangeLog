@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gaim-otr
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/ChangeLog,v 1.6 2005/02/10 20:33:46 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/ChangeLog,v 1.7 2005/02/24 18:38:29 rizzo Exp $
+
+*gaim-otr-2.0.1 (24 Feb 2005)
+
+  24 Feb 2005; Don Seiler <rizzo@gentoo.org> +gaim-otr-2.0.1.ebuild:
+  Version bump, closes bug #83173
 
 *gaim-otr-2.0.0 (10 Feb 2005)
 
