@@ -39,3 +39,4 @@ move app-text/latex2html dev-tex/latex2html
 move app-text/chktex dev-tex/chktex
 move app-text/ivritex dev-tex/ivritex
 move app-xemacs/ispell app-xemacs/xemacs-ispell
+move app-xemacs/eterm app-xemacs/xemacs-eterm
