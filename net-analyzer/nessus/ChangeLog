@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nessus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.24 2003/10/13 12:08:10 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.25 2003/11/19 09:49:28 phosphan Exp $
+
+*nessus-2.0.9 (19 Nov 2003)
+
+  19 Nov 2003; Patrick Kursawe <phosphan@gentoo.org> nessus-2.0.6a-r1.ebuild,
+  nessus-2.0.9.ebuild, files/nessusd, files/nessusd-r6:
+  Version bump.
 
 *nessus-2.0.8a (13 Oct 2003)
 
