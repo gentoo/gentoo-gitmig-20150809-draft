@@ -1,6 +1,18 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.27 2005/03/03 22:27:21 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.28 2005/03/08 20:00:06 peitolm Exp $
+
+*exim-4.50-r1 (08 Mar 2005)
+
+  08 Mar 2005; Colin Morey <peitolm@gentoo.org> -exim-4.33-r1.ebuild,
+  -exim-4.34-r1.ebuild, -exim-4.34.ebuild, -exim-4.40.ebuild,
+  -exim-4.41.ebuild, -exim-4.42.ebuild, -exim-4.43-r1.ebuild,
+  -exim-4.43.ebuild, +exim-4.50-r1.ebuild:
+  Bug fixes for exiscan incorporation into mainstream (patch was out of
+  order).
+  
+  Clean up of old, insecure versions, every arch should be represented by at
+  least one ebuild.
 
   03 Mar 2005; Colin Morey <peitolm@gentoo.org> :
   New Version and bug fix for #79743
