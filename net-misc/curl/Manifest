@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4cdac4063266a53633cc1756c315042c ChangeLog 6483
+MD5 97d337b82c2a9c083250eef9c0e84ddc ChangeLog 6572
 MD5 30687265d15bba921c501cf9ade9e00d curl-7.10.8-r1.ebuild 1088
 MD5 91cff829647dc675e59959c241d2062a curl-7.11.0.ebuild 979
-MD5 9ef221ccf3d48a21c4ec0ce428dd4677 curl-7.11.1.ebuild 1027
-MD5 857f128a2aa3a48783e4d6519ac52f65 curl-7.12.0-r2.ebuild 1274
+MD5 3e93c0219822cfc10a410aab67b70d25 curl-7.11.1.ebuild 1026
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 dc352925b526421b92ff81fc9b8315da files/7.12.0-no-fputc.patch 312
+MD5 857f128a2aa3a48783e4d6519ac52f65 curl-7.12.0-r2.ebuild 1274
 MD5 e2795c792b9a04fd73ca556ce257f39f files/curl-7.10.5-badssl.patch 343
 MD5 05e37478314d224f2ce5840f2e1f31c9 files/curl-7.10.8-transfer-segv.patch 744
 MD5 4bc4b19a5cd9b1bb8be92330189dbecb files/digest-curl-7.10.8-r1 65
 MD5 3d8968398ac9406fdf47efe23004dcdc files/digest-curl-7.11.0 65
 MD5 960d346648779ac90316a39974aff792 files/digest-curl-7.11.1 65
 MD5 b1be312bb3cb53a17c9ba9683bda165a files/digest-curl-7.12.0-r2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBc4srRkyva5PS18kRAm8lAKCmQ4isWIXOFXOZ/yJg21iYxRxnlQCgymHi
-uFMGk2rxylyCV9TP68RrCXc=
-=zzT3
------END PGP SIGNATURE-----
+MD5 dc352925b526421b92ff81fc9b8315da files/7.12.0-no-fputc.patch 312
