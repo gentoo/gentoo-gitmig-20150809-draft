@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.15 2003/05/14 22:59:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.16 2003/05/14 23:02:57 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -308,6 +308,9 @@ php_src_compile() {
 
 php_src_install() {
 	addwrite /usr/share/snmp/mibs/.index
+	dodir /usr/bin
+	dodir /usr/lib/php
+	dodir /usr/include/php
 
 	# parallel make breaks it
 	# so no emake here
