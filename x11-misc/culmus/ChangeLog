@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/culmus
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/culmus/ChangeLog,v 1.6 2004/01/29 23:04:11 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/culmus/ChangeLog,v 1.7 2004/04/11 15:00:39 pyrania Exp $
+
+  11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> culmus-0.90-r1.ebuild,
+  culmus-0.93.ebuild:
+  fixup and marked stable.
 
 *culmus-0.93 (30 Jan 2004)
   30 Jan 2004; Meir Kriheli <mksoft@gentoo.org> culmus-0.93.ebuild:
