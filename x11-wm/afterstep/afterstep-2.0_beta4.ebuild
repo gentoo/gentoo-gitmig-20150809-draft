@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.0_beta4.ebuild,v 1.3 2004/04/27 21:28:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.0_beta4.ebuild,v 1.4 2004/06/23 22:48:19 mr_bones_ Exp $
 
 inherit eutils
 
@@ -19,8 +19,7 @@ DEPEND="virtual/glibc
 	png? ( >=media-libs/libpng-1.2.5 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	gif?  ( >=media-libs/giflib-4.1.0 )
-	tiff? ( >=media-libs/tiff-3.5.7 )
-	!ppc? ( debug? ( >=dev-util/efence-2.2.2 ) )"
+	tiff? ( >=media-libs/tiff-3.5.7 )"
 RDEPEND="${DEPEND}
 	>=media-sound/sox-12.17.3"
 
