@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.34.ebuild,v 1.10 2003/12/21 16:06:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.34.ebuild,v 1.11 2003/12/24 11:43:13 plasmaroo Exp $
 
 inherit eutils
 
@@ -27,6 +27,8 @@ src_unpack() {
 	unpack ${A}
 	# Fix a cosmetic error in mk_cmds's help output.
 	cd ${S}; epatch ${FILESDIR}/e2fsprogs-1.32-mk_cmds-cosmetic.patch
+	# Needed for 2.6 support:
+	epatch ${FILESDIR}/${P}-kernel-2.6-fix.patch
 	# Userpriv fix. Closes #27348
 	chmod u+w po/*.po
 }
