@@ -5,7 +5,7 @@
 media-libs/nurbs++
 
 # Just masked until more testing can be done. (sandymac, 24 May 2002)
-=net-www/mozilla-1.0_rc3
+>=net-www/mozilla-1.0_rc3
 
 # devel branch of syslog-ng -- broken (blocke, May 21, 2002)
 >=app-admin/syslog-ng-1.5.17
@@ -72,9 +72,9 @@ dev-libs/libiconv
 
 # pam-login is a new package that is based on util-linux's /bin/login,
 # but adds shadow features.
->=sys-apps/util-linux-2.11o-r3
->=sys-apps/shadow-4.0.2-r5
->=sys-apps/pam-login-3.6
+#>=sys-apps/util-linux-2.11o-r3
+#>=sys-apps/shadow-4.0.2-r5
+#>=sys-apps/pam-login-3.6
 
 # masked for security reasons
 # see
@@ -368,8 +368,8 @@ sys-kernel/linux-sources-vanilla
 #
 # Azarah (26/03/2002)
 #
-<sys-devel/automake-1.6.1-r2
-<sys-devel/autoconf-2.53
+<sys-devel/automake-1.6.1-r4
+<sys-devel/autoconf-2.53a
 
 # broken
 app-admin/powertweak
