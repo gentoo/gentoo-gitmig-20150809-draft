@@ -1,9 +1,12 @@
 # ChangeLog for app-crypt/kth-krb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.8 2003/01/06 15:19:59 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.9 2003/01/21 02:23:06 nall Exp $
 
 *kth-krb 1.2.1 (26 Oct 2002)
   
+  20 Jan 2003; Jon Nall <nall@gentoo.org> kth-krb-1.2.1.ebuild : 
+  keyworded ~ppc
+
   06 Jan 2003; Jack Morgan <jmorgan@gentoo.org> kth-krb-1* :
   Removed sparc keywords 
 
