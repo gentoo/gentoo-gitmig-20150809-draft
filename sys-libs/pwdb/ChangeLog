@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pwdb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.3 2002/04/05 22:40:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.4 2002/07/16 03:48:22 gerk Exp $
+
+  15 Jul 2002; Mark Guertin <gerk@gentoo.org>
+  Added ppc to keywords
 
   5 Apr 2002; M.Schlemmer <azarah@gentoo.org> pwdb-0.61-r3.ebuild :
 

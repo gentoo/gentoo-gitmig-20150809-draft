@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r3.ebuild,v 1.10 2002/07/11 06:30:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r3.ebuild,v 1.11 2002/07/16 03:48:22 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Password database"
 SRC_URI="ftp://gentoolinux.sourceforge.net/pub/gentoolinux/current/distfiles/${P}.tar.gz"
 DEPEND="virtual/glibc"
 LICENSE="PWDB"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SLOT="0"
 
 src_unpack () {
