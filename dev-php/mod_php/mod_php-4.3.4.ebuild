@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.4.ebuild,v 1.2 2003/11/24 00:13:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.4.ebuild,v 1.3 2003/11/24 03:51:25 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -53,17 +53,7 @@ inherit php eutils
 
 DEPEND="${DEPEND}
 	>=net-www/apache-1.3.26-r2
-	apache2? ( >=net-www/apache-2.0.43-r1 )
-	>=sys-apps/findutils-4.1.7-r5"
-
-pkg_setup() {
-	if has_version '=sys-apps/findutils-4.1.20'; then
-		eerror "Sorry, you need to have >=sys-apps/findutils-4.1.20-r1"
-		eerror "installed, due to a shortcoming in Portage we can't"
-		eerror "put it into the DEPEND list yet (to be fixed soon)..."
-		die
-	fi
-}
+	apache2? ( >=net-www/apache-2.0.43-r1 )"
 
 src_unpack() {
 	multiinstwarn
