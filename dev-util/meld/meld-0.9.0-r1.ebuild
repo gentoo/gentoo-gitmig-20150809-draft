@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-0.9.0-r1.ebuild,v 1.1 2003/10/30 09:22:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-0.9.0-r1.ebuild,v 1.2 2003/11/22 19:29:19 liquidx Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/meld/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 ~alpha"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2
