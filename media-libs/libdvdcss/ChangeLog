@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.34 2004/08/22 03:03:34 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.35 2004/09/24 21:14:08 kito Exp $
+
+  24 Sep 2004; kito@gentoo.org libdvdcss-1.2.8.ebuild:
+  ~ppc-macos keyword
 
   21 Aug 2004; Hardave Riar <hardave@gentoo.org> libdvdcss-1.2.8.ebuild:
   Added ~mips keyword
