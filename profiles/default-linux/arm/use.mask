@@ -49,3 +49,4 @@ qdbm
 mzscheme
 
 directfb
+qt
