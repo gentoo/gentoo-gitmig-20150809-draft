@@ -1,5 +1,5 @@
-MD5 945a68166d01f99d21a3e532cce30224 selinux-sources-2.4.21-r4.ebuild 1063
-MD5 6b53befc1649d5517608c0754db91212 ChangeLog 3562
+MD5 d06e186a49502b4eb5afeb2d32e968b4 selinux-sources-2.4.21-r4.ebuild 1058
+MD5 8714173f7e9ae01a4d479c0d0f4b40ac ChangeLog 3683
 MD5 f455fbb5d96167058282b93599457a4f metadata.xml 470
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
 MD5 76ec5f9fe491fd7c166830604f3651e2 files/digest-selinux-sources-2.4.21-r4 145
