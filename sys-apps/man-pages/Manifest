@@ -1,5 +1,7 @@
+MD5 87b1c189b86c3bf0f92b633174e1c43d man-pages-1.64.ebuild 613
 MD5 87b1c189b86c3bf0f92b633174e1c43d man-pages-1.61.ebuild 613
 MD5 79b3fae525ab86989c4694d7c10755dd ChangeLog 3104
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 af09d031dcee66929510e078d00066f2 files/man2.tar.gz 1982
 MD5 5e49fd81fd83f0bc4596e9bcecf42638 files/digest-man-pages-1.61 67
+MD5 0280f7976d79211bb86d1387c02712f5 files/digest-man-pages-1.64 67

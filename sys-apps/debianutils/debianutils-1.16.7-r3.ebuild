@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r3.ebuild,v 1.13 2003/11/14 20:11:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r3.ebuild,v 1.14 2003/12/10 03:06:05 seemant Exp $
 
 IUSE="static build"
 
@@ -59,7 +59,7 @@ src_install() {
 		dosbin mkboot
 
 		into /usr
-		doman mktemp.1 readlink.1 tempfile.1 run-parts.8 savelog.8 \
+		doman mktemp.1 tempfile.1 run-parts.8 savelog.8 \
 			installkernel.8 mkboot.8
 
 		cd debian

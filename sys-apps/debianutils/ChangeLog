@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.31 2003/09/26 18:54:11 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.32 2003/12/10 03:06:05 seemant Exp $
+
+  09 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
+  debianutils-1.16.7-r2.ebuild, debianutils-1.16.7-r3.ebuild:
+  don't install the readlink manpage -- partially closes bug #32096 by Radek
+  Podgorny <radek@podgorny.cz>
 
   26 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org>
   debianutils-1.16.7-r3.ebuild:
