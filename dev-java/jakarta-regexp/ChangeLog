@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jakarta-regexp
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/ChangeLog,v 1.4 2005/03/27 17:05:50 luckyduck Exp $
+
+*jakarta-regexp-1.3 (27 Mar 2005)
+
+  27 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +jakarta-regexp-1.3.ebuild:
+  Initial import, move from regexp to jakarta-regexp, see #71336
+
