@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.4b.ebuild,v 1.5 2004/03/12 14:42:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.4b.ebuild,v 1.6 2004/03/13 12:15:43 tester Exp $
 
 IUSE="oggvorbis"
 inherit eutils distutils
@@ -22,8 +22,6 @@ DEPEND=">=dev-lang/python-2.1
 	>=dev-python/wxPython-2.4.1.2
 	>=x11-libs/wxGTK-2.4.1
 	oggvorbis? ( dev-python/pyvorbis dev-python/pyogg )"
-
-RDEPEND=${DEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
