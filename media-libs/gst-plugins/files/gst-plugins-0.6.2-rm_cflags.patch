@@ -1,0 +1,60 @@
+diff -uNr gst-plugins-0.6.2/gst/mpeg1enc/Makefile.am gst-plugins-0.6.2.patched/gst/mpeg1enc/Makefile.am
+--- gst-plugins-0.6.2/gst/mpeg1enc/Makefile.am	2002-12-08 15:49:43.000000000 +0100
++++ gst-plugins-0.6.2.patched/gst/mpeg1enc/Makefile.am	2003-08-24 17:43:31.000000000 +0200
+@@ -16,11 +16,7 @@
+                           transform.c \
+                           gstmpeg1encoder.c
+ 
+-if HAVE_CPU_I386
+-ARCHCFLAGS = -O3 -mcpu=i486 -fschedule-insns2 $(FOMIT_FRAME_POINTER) -funroll-all-loops -finline-functions -ffast-math -DNDEBUG
+-else
+ ARCHCFLAGS = -O3 -fschedule-insns2 $(FOMIT_FRAME_POINTER) -funroll-all-loops -finline-functions -ffast-math -DNDEBUG
+-endif
+ 
+ libgstmpeg1encoder_la_CFLAGS = $(ARCHCFLAGS) $(GST_CFLAGS)
+ libgstmpeg1encoder_la_LIBADD =
+diff -uNr gst-plugins-0.6.2/gst/mpeg2enc/Makefile.am gst-plugins-0.6.2.patched/gst/mpeg2enc/Makefile.am
+--- gst-plugins-0.6.2/gst/mpeg2enc/Makefile.am	2002-12-08 15:49:44.000000000 +0100
++++ gst-plugins-0.6.2.patched/gst/mpeg2enc/Makefile.am	2003-08-24 17:43:49.000000000 +0200
+@@ -45,11 +45,7 @@
+                           gstmpeg2enc.c \
+ 			  $(ASM_SRCS)
+ 
+-if HAVE_CPU_I386
+-ARCHCFLAGS = -mcpu=i486
+-else
+ ARCHCFLAGS = 
+-endif
+ 
+ libgstmpeg2enc_la_CFLAGS = -O3 $(ARCHCFLAGS) -fschedule-insns2 $(FOMIT_FRAME_POINTER) -finline-functions -ffast-math $(GST_CFLAGS)
+ libgstmpeg2enc_la_LIBADD =
+diff -uNr gst-plugins-0.6.2/gst/mpeg2sub/Makefile.am gst-plugins-0.6.2.patched/gst/mpeg2sub/Makefile.am
+--- gst-plugins-0.6.2/gst/mpeg2sub/Makefile.am	2002-12-08 15:49:45.000000000 +0100
++++ gst-plugins-0.6.2.patched/gst/mpeg2sub/Makefile.am	2003-08-24 17:44:06.000000000 +0200
+@@ -4,11 +4,7 @@
+ 
+ libgstmpeg2subt_la_SOURCES = gstmpeg2subt.c  
+ 
+-if HAVE_CPU_I386
+-ARCHCFLAGS = -mcpu=i486
+-else
+ ARCHCFLAGS = 
+-endif
+ 
+ libgstmpeg2subt_la_CFLAGS = -O3 $(ARCHCFLAGS) -fschedule-insns2 $(FOMIT_FRAME_POINTER) -finline-functions -ffast-math $(GST_CFLAGS)
+ libgstmpeg2subt_la_LIBADD =
+diff -uNr gst-plugins-0.6.2/gst/mpegaudio/Makefile.am gst-plugins-0.6.2.patched/gst/mpegaudio/Makefile.am
+--- gst-plugins-0.6.2/gst/mpegaudio/Makefile.am	2002-12-08 15:49:45.000000000 +0100
++++ gst-plugins-0.6.2.patched/gst/mpegaudio/Makefile.am	2003-08-24 17:43:10.000000000 +0200
+@@ -12,11 +12,7 @@
+ 	tables.c            \
+ 	tonal.c
+ 
+-if HAVE_CPU_I386
+-ARCHCFLAGS = -O2 -mcpu=i486 $(FOMIT_FRAME_POINTER) -finline-functions -ffast-math
+-else
+ ARCHCFLAGS = -O2 $(FOMIT_FRAME_POINTER) -finline-functions -ffast-math
+-endif
+ 
+ libgstmpegaudio_la_CFLAGS = $(ARCHCFLAGS) $(GST_CFLAGS)
+ libgstmpegaudio_la_LIBADD =
