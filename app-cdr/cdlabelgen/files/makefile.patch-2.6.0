@@ -1,0 +1,28 @@
+--- cdlabelgen-2.6.0/Makefile	2003-05-13 11:16:49.000000000 +1200
++++ cdlabelgen-2.6.0.patched/Makefile	2003-06-19 13:01:29.000000000 +1200
+@@ -8,12 +8,12 @@
+ # Change these to locations you need, also
+ # remember to edit cdlabelgen and its @where_is_the_template as needed.
+ 
+-BASE_DIR   = /usr/local
++BASE_DIR   = $(DESTDIR)/usr
+ # BASE_DIR   = /usr/local
+ # BASE_DIR   = /opt
+ BIN_DIR   = $(BASE_DIR)/bin
+-LIB_DIR   = $(BASE_DIR)/lib/cdlabelgen
+-MAN_DIR   = $(BASE_DIR)/man
++LIB_DIR   = $(BASE_DIR)/share/cdlabelgen
++MAN_DIR   = $(BASE_DIR)/share/man
+ SOURCES    = cdlabelgen ChangeLog INSTALL README Makefile cdinsert.pl INSTALL.WEB cdlabelgen.pod cdlabelgen.1 cdlabelgen.html cdlabelgen$(VERSION).spec
+ POSTSCRIPT = template.ps *.eps
+ DISTFILES = $(SOURCES) $(POSTSCRIPT)
+@@ -45,7 +45,8 @@
+ 	@echo ""
+ 	$(INSTALL_DIR) $(BIN_DIR)
+ 	$(INSTALL) cdlabelgen $(BIN_DIR)
+-	$(INSTALL) cdlabelgen.1 $(MAN_DIR)/man1
++	$(INSTALL_DIR) $(MAN_DIR)
++	$(INSTALL) cdlabelgen.1 $(MAN_DIR)
+ 	$(INSTALL_DIR) $(LIB_DIR)
+ 	set -e; \
+ 	for file in $(POSTSCRIPT); do \
