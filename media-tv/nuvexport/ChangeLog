@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/nuvexport
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/ChangeLog,v 1.9 2005/01/27 01:10:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/ChangeLog,v 1.10 2005/01/28 08:42:38 cardoe Exp $
+
+*nuvexport-0.2_pre20050127 (28 Jan 2005)
+
+  28 Jan 2005; Doug Goldstein <cardoe@gentoo.org>
+  +nuvexport-0.2_pre20050127.ebuild:
+  rev bump fro hdtv/dvb fixes
 
 *nuvexport-0.2_pre20050125 (26 Jan 2005)
 
