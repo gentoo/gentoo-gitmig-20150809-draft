@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.6.4.ebuild,v 1.1 2004/04/28 17:45:44 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.6.4.ebuild,v 1.2 2004/06/20 01:16:33 squinky86 Exp $
 
 inherit kde-base
 
@@ -14,7 +14,7 @@ DESCRIPTION="Excellent QT/KDE Gnutella Client"
 
 SLOT="3" # why??
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~ppc"
 export MAKEOPTS="$MAKEOPTS -j1"
 
 src_compile() {
