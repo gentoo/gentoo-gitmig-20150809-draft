@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2.ebuild,v 1.17 2003/05/27 23:41:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2.ebuild,v 1.18 2003/08/24 08:40:43 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -118,15 +118,25 @@ FAKE_ROOT=""
 
 chk_gcc_version() {
 	# This next bit is for updating libtool linker scripts ...
-	OLD_GCC_VERSION="`gcc -dumpversion`"
+	local OLD_GCC_VERSION="`gcc -dumpversion`"
+	local OLD_GCC_CHOST="$(gcc -v 2>&1 | egrep '^Reading specs' |\
+	                       sed -e 's:^.*/gcc-lib/\([^/]*\)/[0-9]\+.*$:\1:')"
 
 	if [ "${OLD_GCC_VERSION}" != "${MY_PV_FULL}" ]
 	then
-		echo "${OLD_GCC_VERSION}" > ${WORKDIR}/.oldgccversion
+		echo "${OLD_GCC_VERSION}" > "${WORKDIR}/.oldgccversion"
+	fi
+
+	if [ -n "${OLD_GCC_CHOST}" ]
+	then
+		if [ "${CHOST}" = "${CCHOST}" -a "${OLD_GCC_CHOST}" != "${CHOST}" ]
+		then
+			echo "${OLD_GCC_CHOST}" > "${WORKDIR}/.oldgccchost"
+		fi
 	fi
 
 	# Did we check the version ?
-	touch ${WORKDIR}/.chkgccversion
+	touch "${WORKDIR}/.chkgccversion"
 }
 
 src_unpack() {
@@ -520,11 +530,27 @@ pkg_postinst() {
 	fi
 
 	# Update libtool linker scripts to reference new gcc version ...
-	if [ -f ${WORKDIR}/.oldgccversion -a "${ROOT}" = "/" ]
+	if [ "${ROOT}" = "/" ] && \
+	   [ -f "${WORKDIR}/.oldgccversion" -o -f "${WORKDIR}/.oldgccchost" ]
 	then 
-		OLD_GCC_VERSION="`cat ${WORKDIR}/.oldgccversion`"
+		local OLD_GCC_VERSION=
+		local OLD_GCC_CHOST=
 
-		/sbin/fix_libtool_files.sh ${OLD_GCC_VERSION}
+		if [ -f "${WORKDIR}/.oldgccversion" ] && \
+		   [ -n "$(cat "${WORKDIR}/.oldgccversion")" ]
+		then
+			OLD_GCC_VERSION="$(cat "${WORKDIR}/.oldgccversion")"
+		else
+			OLD_GCC_VERSION="${MY_PV_FULL}"
+		fi
+		
+		if [ -f "${WORKDIR}/.oldgccchost" ] && \
+		   [ -n "$(cat "${WORKDIR}/.oldgccchost")" ]
+		then
+			OLD_GCC_CHOST="--oldarch $(cat "${WORKDIR}/.oldgccchost")"
+		fi
+
+		/sbin/fix_libtool_files.sh ${OLD_GCC_VERSION} ${OLD_GCC_CHOST}
 	fi
 	
 	# Fix ncurses b0rking (if r5 isn't unmerged)
