@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/DBD-SQLite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.4 2004/06/25 00:22:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.5 2004/07/30 09:52:34 mcummings Exp $
+
+*DBD-SQLite-1.00 (30 Jul 2004)
+
+  30 Jul 2004; Michael Cummings <mcummings@gentoo.org>
+  +DBD-SQLite-1.00.ebuild:
+  New version on CPAN. Regarding the block against upgrades (from the author):
+  (Older verions of DBD::SQLite use) the old sqlite database format. This
+  version of DBD::SQLite will *NOT* open these files, and installing this module
+  may cause problems on your system.
 
   05 Jun 2004; David Holm <dholm@gentoo.org> DBD-SQLite-0.31.ebuild:
   Added to ~ppc.
