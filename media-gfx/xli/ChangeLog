@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xli
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.10 2004/11/09 19:51:45 usata Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.11 2005/01/03 22:07:41 gustavoz Exp $
+
+  03 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> xli-1.17.0.ebuild:
+  Keyworded ~sparc wrt #76234
 
   10 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> xli-1.17.0.ebuild:
   Added to ~ppc-macos.
