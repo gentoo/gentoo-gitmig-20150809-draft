@@ -1,0 +1,11 @@
+# ChangeLog for app-doc/vilearn
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/vilearn/ChangeLog,v 1.1 2004/02/17 15:52:18 hattya Exp $
+
+*vilearn-1.0 (18 Feb 2004)
+
+  18 Feb 2004; Akinori Hattori <hattya@gentoo.org> metadata.xml,
+  vilearn-1.0.ebuild:
+  Initial revision. Ebuild submitted by Michael C. Ferguson <mcf@augustmail.com>
+  in bug #41812.
+
