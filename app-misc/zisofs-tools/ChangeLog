@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/zisofs-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/ChangeLog,v 1.5 2003/02/12 05:12:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/ChangeLog,v 1.6 2003/05/25 14:47:43 mholzer Exp $
+
+  25 May 2003; Martin Holzer <mholzer@gentoo.org> zisofs-tools-1.0.3.ebuild,
+  zisofs-tools-1.0.4-r1.ebuild, zisofs-tools-1.0.4.ebuild:
+  now uses mirror://kernel
 
 *zisofs-tools-1.0.4-r1 (15 Jan 2003)
 
