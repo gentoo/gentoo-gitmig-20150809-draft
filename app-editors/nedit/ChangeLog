@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nedit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.34 2005/01/01 13:32:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.35 2005/02/19 12:20:02 lanius Exp $
+
+  19 Feb 2005; Heinrich Wendel <lanius@gentoo.org> nedit-5.5.ebuild:
+  fix to compile with all motif versions, mark stable
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

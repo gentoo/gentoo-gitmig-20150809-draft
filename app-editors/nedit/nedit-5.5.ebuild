@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5.ebuild,v 1.2 2005/01/01 13:32:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5.ebuild,v 1.3 2005/02/19 12:20:02 lanius Exp $
 
 inherit gcc
 
@@ -10,16 +10,19 @@ SRC_URI="mirror://sourceforge/nedit/${P}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~amd64 ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~mips amd64 ~alpha"
 IUSE="spell"
 
 RDEPEND="spell? ( virtual/aspell-dict )
-	virtual/x11"
+	x11-libs/openmotif"
 DEPEND="${RDEPEND}
 	dev-util/yacc
 	x11-libs/openmotif"
 
 src_compile() {
+	sed -i -e "s:-Wl,-Bstatic::" makefiles/Makefile.linux
+	sed -i -e "s:0.93.0:0.94.0:" util/check_lin_tif.c
+	sed -i -e "s:CFLAGS=-O:CFLAGS=${CFLAGS}:" makefiles/Makefile.linux
 	sed -i -e 's:"/bin/csh":"/bin/sh":' source/preferences.c
 	make CC=$(gcc-getCC) linux || die
 }
