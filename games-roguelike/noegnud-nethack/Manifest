@@ -1,6 +1,18 @@
-MD5 3b90e9065e098eacb48ef797627a91d8 ChangeLog 738
-MD5 22e18492f9fe0b7799fe9356b5fb6c15 noegnud-nethack-0.7.1.ebuild 1507
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3de05807f2d99827af4b101535121ac8 noegnud-nethack-0.8.2.ebuild 1966
+MD5 22e18492f9fe0b7799fe9356b5fb6c15 noegnud-nethack-0.7.1.ebuild 1507
+MD5 af0bb19617d247c112198f6a79ca4c72 ChangeLog 899
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 feb477e8d2ba5fa1adff0044415d39f7 noegnud-nethack-0.8.3.ebuild 1967
 MD5 5980dfc62f455dbda695dfdfd084b4d9 files/digest-noegnud-nethack-0.7.1 130
 MD5 34a83b9229d1783a3d5bdd88406dc020 files/digest-noegnud-nethack-0.8.2 146
+MD5 508811d35758f8f298bc8e632ba67142 files/digest-noegnud-nethack-0.8.3 150
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBnkSb/UDVUK2NELYRAtPhAJ9Z5Wckg3MFnVGkVb6/YUcGqsvRRgCgmKCb
+yymmigGx50WP5xkyD7xiMG0=
+=e3f4
+-----END PGP SIGNATURE-----
