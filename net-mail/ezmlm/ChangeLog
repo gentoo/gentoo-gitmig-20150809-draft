@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/ezmlm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ChangeLog,v 1.7 2003/02/12 08:10:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ChangeLog,v 1.8 2003/04/08 01:05:31 liquidx Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -13,6 +13,10 @@
   fixor (bug #2729) - added LICENSE 
 
 *ezmlm-0.53 (25 Mar 2002)
+
+  08 Apr 2003; Alastair Tse <liquidx@gentoo.org> ezmlm-0.53.ebuild,
+  files/ezmlm-0.53-errno.patch:
+  errno fix for glibc-2.3.2. thanks to Sebastian Klemke <packet@berlin.ccc.de>.
 
   25 Mar 2002; Thilo Bangert <thilo.bangert@gmx.net> ChangeLog:
 

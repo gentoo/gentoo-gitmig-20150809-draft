@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53.ebuild,v 1.10 2003/02/13 14:29:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53.ebuild,v 1.11 2003/04/08 01:05:31 liquidx Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Simple yet powerful mailing list manager for qmail."
@@ -15,6 +15,11 @@ DEPEND=" sys-apps/groff"
 
 RDEPEND="net-mail/qmail"
 
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/ezmlm-0.53-errno.patch
+}
 
 src_compile() {
 	cd ${S}
