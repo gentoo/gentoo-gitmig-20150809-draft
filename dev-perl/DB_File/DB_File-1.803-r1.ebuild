@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File/DB_File-1.803-r1.ebuild,v 1.3 2002/10/17 16:43:13 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File/DB_File-1.803-r1.ebuild,v 1.4 2002/10/20 18:27:52 seemant Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 alpha"
 
 DEPEND="${DEPEND}
-		>=sys-libs/db-3.2"
+	>=sys-libs/db-3.2"
 
 mydoc="Changes"
 
