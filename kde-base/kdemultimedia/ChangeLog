@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.61 2003/10/04 22:39:18 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.62 2003/11/01 15:14:01 caleb Exp $
+
+*kdemultimedia-3.2.0_beta1 (01 Nov 2003)
+
+  01 Nov 2003; Caleb Tennis <caleb@gentoo.org> kdemultimedia-3.2.0_beta1.ebuild:
+  New beta version
 
   04 Oct 2003; Brad House <brad_mssw@gentoo.org>
   kdemultimedia-3.1.4-r1.ebuild:
