@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.32 2004/10/07 07:19:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.33 2004/10/10 17:41:29 gongloo Exp $
 
 inherit gnuconfig flag-o-matic libtool eutils
 
@@ -44,8 +44,10 @@ src_install() {
 		mandir=${D}/usr/share/man/man1 \
 		install || die
 
-	dosym libjpeg.so.62.0.0 /usr/$(get_libdir)/libjpeg.so.62
-	dosym libjpeg.so.62.0.0 /usr/$(get_libdir)/libjpeg.so
+	if [ ! use ppc-macos ]; then
+		dosym libjpeg.so.62.0.0 /usr/$(get_libdir)/libjpeg.so.62
+		dosym libjpeg.so.62.0.0 /usr/$(get_libdir)/libjpeg.so
+	fi
 
 	dodoc README install.doc usage.doc wizard.doc change.log \
 		libjpeg.doc example.c structure.doc filelist.doc \
