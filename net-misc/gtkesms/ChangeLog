@@ -1,20 +1,21 @@
 # ChangeLog for net-misc/esms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkesms/Changelog,v 1.4 2002/06/01 13:03:57 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkesms/ChangeLog,v 1.1 2002/07/07 07:03:48 phoenix Exp $
 
 *gtkems-0.0.4 (26 May 2002)
 
-  01 Jun 2002; J.Alberto S.L. <bass@gentoo.org> gtkesms-0.0.4.ebuild:
+  01 Jun 2002; phoen][x <phoenix@gentoo.org> gtkesms-0.0.4.ebuild:
+  Added KEYWORDS.
 
+  01 Jun 2002; J.Alberto S.L. <bass@gentoo.org> gtkesms-0.0.4.ebuild:
   Ebuild clean
 
   01 Jun 2002; Bruce A. Locke <blocke@shivan.org> gtkems-0.0.4.ebuild:
-
   GTK+ dependency fix
 
   26 May 2002; J.Alberto S.L. <bass@gentoo.org> gtkesms-0.0.4.ebuild:
-	First relase.
+  First relase.
 
   31 May 2002;  J.Alberto S.L. <bass@gentoo.org> gtkesms-0.0.4.ebuild:
-  	Fixed problem with gtk.
+  Fixed problem with gtk.
