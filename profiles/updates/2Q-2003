@@ -23,3 +23,4 @@ move app-text/gnu-gs-fonts-std media-fonts/gnu-gs-fonts-std
 move app-text/sharefonts media-fonts/sharefonts
 move net-www/phoenix-bin net-www/mozilla-firebird-bin
 move x11-wm/WindowMaker x11-wm/windowmaker
+move net-www/phoenix-cvs net-www/mozilla-firebird-cvs
