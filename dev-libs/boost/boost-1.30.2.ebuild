@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.30.2.ebuild,v 1.6 2004/07/02 04:34:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.30.2.ebuild,v 1.7 2005/03/03 11:31:44 morfic Exp $
 
 DESCRIPTION="Boost provides free peer-reviewed portable C++ source libraries."
 HOMEPAGE="http://www.boost.org"

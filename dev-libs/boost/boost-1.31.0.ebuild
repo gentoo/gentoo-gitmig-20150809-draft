@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0.ebuild,v 1.10 2004/12/10 19:07:21 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0.ebuild,v 1.11 2005/03/03 11:31:44 morfic Exp $
 
 MyPV=${PV//./_}
 
