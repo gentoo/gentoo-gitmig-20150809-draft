@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/takcd-0.08.ebuild,v 1.1 2003/02/08 01:36:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/takcd-0.08.ebuild,v 1.2 2003/03/05 10:34:12 seemant Exp $
 
 IUSE=""
 
@@ -11,9 +11,9 @@ SRC_URI="http://bard.sytes.net/takcd/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
-DEPEND=""
+DEPEND="virtual/glibc"
 
 src_compile() {
 	./autogen.sh
