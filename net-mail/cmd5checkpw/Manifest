@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 4ad94d95d424ced613c6678489571c25 ChangeLog 1994
+MD5 4b2aaad446026dca3012dac325d16af2 cmd5checkpw-0.22-r2.ebuild 1516
+MD5 66830fff0cff1af05d0fb44ba944a60d ChangeLog 2114
 MD5 aacd8f2db592426a19a8f21256399c34 cmd5checkpw-0.22-r1.ebuild 1399
-MD5 7f7496c7cf3b68506e3a53b90e9ad7cc cmd5checkpw-0.22-r2.ebuild 1517
-MD5 ad1486139852e253c71bccd1c53083ba files/digest-cmd5checkpw-0.22-r2 67
 MD5 970ef1c2abdda72f534516f43e89f20a files/euid.diff 931
-MD5 a3bc1c985b3e114b9e1a4b9a8b7810da files/poppasswd 84
 MD5 ad1486139852e253c71bccd1c53083ba files/digest-cmd5checkpw-0.22-r1 67
+MD5 a3bc1c985b3e114b9e1a4b9a8b7810da files/poppasswd 84
+MD5 ad1486139852e253c71bccd1c53083ba files/digest-cmd5checkpw-0.22-r2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCD71umOfEJZHYOKcRAny8AKDU4AYeTAnq73WM7VR/0nYOYWNKawCfZpMi
+MFI+ld5Ry5exyLomxsVtm00=
+=eXPd
+-----END PGP SIGNATURE-----
