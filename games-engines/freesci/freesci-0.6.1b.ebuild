@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.6.1b.ebuild,v 1.4 2004/07/01 05:23:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.6.1b.ebuild,v 1.5 2004/09/11 09:02:23 blubb Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www-plan.cs.colorado.edu/reichenb/freesci/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="X ggi directfb alsa sdl ncurses"
 
 RDEPEND="virtual/libc
