@@ -1,0 +1,19 @@
+#!/sbin/runscript
+
+OPTS="-bd -q15m"
+
+depend() {
+    need sysklogd net
+}
+
+start() {
+    ebegin "Starting exim"
+    start-stop-daemon --start --quiet --exec /usr/sbin/exim -- $OPTS
+    eend $? 
+}
+
+stop() {
+    ebegin "Stopping exim"
+    start-stop-daemon --stop --quiet --pidfile /var/run/exim.pid
+    eend $? 
+}

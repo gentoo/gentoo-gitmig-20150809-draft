@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-3.32.ebuild,v 1.7 2001/09/13 06:20:47 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-3.32-r6.ebuild,v 1.1 2001/09/13 06:20:47 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
@@ -141,8 +141,8 @@ src_install () {
     einfo "Cat this to the end of your configure for AUTH=PAM support"
     # FIXME The above messages should be moved into pkg_postinst !!!
 
-    exeinto /etc/rc.d/init.d
-    newexe ${FILESDIR}/exim.rc5 exim
+    exeinto /etc/init.d
+    newexe ${FILESDIR}/exim.rc6 exim
 }
 
 
