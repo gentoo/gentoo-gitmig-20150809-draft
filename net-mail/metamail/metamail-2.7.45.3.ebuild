@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.45.3.ebuild,v 1.9 2004/10/13 16:19:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.45.3.ebuild,v 1.10 2004/10/19 10:23:02 absinthe Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://thumper.bellcore.com/pub/nsb/mm${PV%.*.*}.tar.Z
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc alpha ~ia64 sparc s390 ~amd64 hppa"
+KEYWORDS="x86 ppc alpha ~ia64 sparc s390 amd64 hppa"
 
 DEPEND="sys-libs/ncurses
 	app-arch/sharutils
