@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.20-r2.ebuild,v 1.1 2002/12/19 20:43:15 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.20-r2.ebuild,v 1.2 2002/12/20 00:06:52 lostlogic Exp $
 
 IUSE="build"
 
@@ -14,7 +14,7 @@ OKV="2.4.20"
 KV="2.4.20-ck${PR/r/}"
 S=${WORKDIR}/linux-${KV}
 
-EXTRAVERSION="-ck1"
+EXTRAVERSION="-ck${PR/r/}"
 DESCRIPTION="Full sources for the Stock Linux kernel Con Kolivas's high performance patchset"
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://members.optusnet.com.au/ckolivas/kernel/ck${PR/r/}_${OKV}.patch.bz2"
