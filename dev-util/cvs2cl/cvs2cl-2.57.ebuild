@@ -1,11 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2cl/cvs2cl-2.57.ebuild,v 1.2 2004/07/21 18:49:16 dholm Exp $
-
-#ECVS_SERVER="cvs -d :pserver:anonymous@cvs.red-bean.com:/usr/local/cvs login"
-#ECVS_PASS="the key"
-#ECVS_MODULE="cvs2cl"
-#inherit cvs
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2cl/cvs2cl-2.57.ebuild,v 1.3 2004/10/12 09:57:45 ka0ttic Exp $
 
 DESCRIPTION="produces a GNU-style ChangeLog for CVS-controlled sources"
 HOMEPAGE="http://www.red-bean.com/cvs2cl/"
@@ -21,5 +16,5 @@ DEPEND="dev-lang/perl"
 S=${WORKDIR}
 
 src_install() {
-	newbin ${P}.pl ${PN}.pl
+	newbin ${P}.pl ${PN} || die
 }

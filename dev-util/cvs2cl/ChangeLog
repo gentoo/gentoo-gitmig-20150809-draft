@@ -1,88 +1,46 @@
-2004-09-21 12:21  ka0ttic
+# ChangeLog for dev-util/cvs2cl
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2cl/ChangeLog,v 1.8 2004/10/12 09:57:45 ka0ttic Exp $
 
-	* Manifest: Added metadata.xml (Manifest recommit)
+  12 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> -cvs2cl-2.50.ebuild,
+  cvs2cl-2.57.ebuild:
+  Install w/o pl extension (bug #67158); removed old version that is bad and
+  uses uncompressed .pl file in SRC_URI. Also, converted ChangeLog to proper
+  Gentoo-style format.
 
-2004-09-21 12:20  ka0ttic
+  21 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml:
+  Added metadata.xml
 
-	* ChangeLog, Manifest, metadata.xml: Added metadata.xml
+  21 Jul 2004; David Holm <dholm@gentoo.org> cvs2cl-2.57.ebuild:
+  Added to ~ppc
 
-2004-07-21 14:49  dholm
+*cvs2cl-2.57 (20 Jul 2004)
 
-	* Manifest: Added to ~ppc (Manifest recommit)
+  20 Jul 2004; Mike Frysinger <vapier@gentoo.org> +cvs2cl-2.57.ebuild:
+  ver bump #57461
 
-2004-07-21 14:49  dholm
+  14 Jul 2004; Aron Griffis <agriffis@gentoo.org> cvs2cl-2.50.ebuild:
+  sync IUSE (missing)
 
-	* ChangeLog, cvs2cl-2.57.ebuild: Added to ~ppc
+  24 Jun 2004; Aron Griffis <agriffis@gentoo.org> cvs2cl-2.50.ebuild:
+  update copyright line: Gentoo Technologies => Gentoo Foundation
 
-2004-07-20 19:07  vapier
+  18 May 2004; Jason Eric Huebel <jhuebel@gentoo.org> cvs2cl-2.50.ebuild:
+  ~amd64
 
-	* Manifest: ver bump #57461 (Manifest recommit)
+  12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> cvs2cl-2.50.ebuild:
+  header fix
 
-2004-07-20 19:07  vapier
+*cvs2cl-2.50 (29 Nov 2003)
 
-	* ChangeLog, cvs2cl-2.57.ebuild, files/digest-cvs2cl-2.57: ver bump
-	  #57461
+  29 Nov 2003; Mike Frysinger <vapier@gentoo.org> +cvs2cl-2.50.ebuild:
+  ver bump
 
-2004-07-14 18:56  agriffis
+  18 Jul 2003; Mike Frysinger <vapier@gentoo.org> cvs2cl-2.49.ebuild:
+  GPL-2 it
 
-	* Manifest: sync IUSE (missing) (Manifest recommit)
+*cvs2cl-2.49 (13 Jul 2003)
 
-2004-07-14 18:56  agriffis
-
-	* cvs2cl-2.50.ebuild: sync IUSE (missing)
-
-2004-06-24 22:25  agriffis
-
-	* Manifest: (Manifest recommit)
-
-2004-06-24 22:25  agriffis
-
-	* ChangeLog, cvs2cl-2.50.ebuild: update copyright line: Gentoo
-	  Technologies => Gentoo Foundation
-
-2004-05-18 19:58  jhuebel
-
-	* Manifest: ~amd64 (Manifest recommit)
-
-2004-05-18 19:58  jhuebel
-
-	* cvs2cl-2.50.ebuild: ~amd64
-
-2004-03-12 20:49  mr_bones_
-
-	* Manifest: header fix (Manifest recommit)
-
-2004-03-12 20:49  mr_bones_
-
-	* cvs2cl-2.50.ebuild: header fix
-
-2003-11-29 16:38  vapier
-
-	* Manifest: fixing Manifest
-
-2003-11-29 16:16  vapier
-
-	* ChangeLog, cvs2cl-2.49.ebuild, cvs2cl-2.50.ebuild,
-	  files/digest-cvs2cl-2.49, files/digest-cvs2cl-2.50: ver bump
-
-2003-07-18 17:27  vapier
-
-	* Manifest: fixing Manifest
-
-2003-07-18 15:00  vapier
-
-	* cvs2cl-2.49.ebuild: GPL-2 it
-
-2003-07-13 00:32  vapier
-
-	* ChangeLog, cvs2cl-2.49.ebuild, files/digest-cvs2cl-2.49,
-	  Manifest: initial ebuild #11523
-
-2003-07-03 01:03  robbat2
-
-	* .frozen: removing lockfile
-
-2003-07-02 22:12  robbat2
-
-	* .frozen: Add frozen lock support
+  13 Jul 2003; Mike Frysinger <vapier@gentoo.org> +cvs2cl-2.49.ebuild:
+  initial ebuild #11523
 
