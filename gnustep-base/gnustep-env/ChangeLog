@@ -1,6 +1,6 @@
-# ChangeLog for x11-wm/gnustep-env
+# ChangeLog for gnustep-base/gnustep-env
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.2 2004/07/26 03:36:05 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.3 2004/07/27 17:19:30 aliz Exp $
 
   25 Jul 2004; Lina Pezzella <burgundy@gentoo.org> :
   Fixed Manifest.
