@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/rox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/ChangeLog,v 1.4 2002/04/17 05:33:54 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/ChangeLog,v 1.5 2002/07/11 03:10:27 seemant Exp $
+
+*rox-1.2.1 (10 Jul 2002)
+
+  10 Jul 2002; Seemant Kulleen <seemant@gentoo.org> rox-1.2.1.ebuild
+  files/digest-rox-1.2.1 :
+
+  Version bump.
 
 *rox-1.2.0 (16 Apr 2002)
 

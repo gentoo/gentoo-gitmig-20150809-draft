@@ -1,12 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.2.0.ebuild,v 1.5 2002/07/11 03:10:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.2.1.ebuild,v 1.1 2002/07/11 03:10:27 seemant Exp $
 
 HOMEPAGE="http://rox.sourceforge.net"
 DESCRIPTION="ROX-Filer is a fast and powerful graphical file manager"
-
+BPN="rox-base"
+BPV="1.0.2"
+BP=${BPN}-${BPV}
 S=${WORKDIR}/${P}
-SRC_URI="mirror://sourceforge/rox/rox-base-1.0.1.tgz
+SRC_URI="mirror://sourceforge/rox/${BP}.tgz
 	mirror://sourceforge/rox/${P}.tgz"
 
 DEPEND="virtual/glibc
@@ -24,7 +26,7 @@ src_install() {
 	# libxml2 header fix
 	CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml -I/usr/include/libxml2"
 
-	cd ${WORKDIR}/rox-base-1.0.1/Choices
+	cd ${WORKDIR}/${BP}/Choices
 	mkdir -p ${D}/usr/share/Choices
 	cp -rf MIME-icons/ ${D}/usr/share/Choices/
 	cp -rf MIME-info/ ${D}/usr/share/Choices/
