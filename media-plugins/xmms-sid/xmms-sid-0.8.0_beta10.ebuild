@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/xmms-sid-0.8.0_beta10.ebuild,v 1.4 2004/07/03 08:41:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/xmms-sid-0.8.0_beta10.ebuild,v 1.5 2004/07/04 15:53:31 vapier Exp $
 
 MY_PV=${PV/_beta/beta}
 MY_P=${PN}-${MY_PV}
@@ -9,18 +9,16 @@ DESCRIPTION="C64 SID plugin for XMMS"
 HOMEPAGE="http://www.tnsp.org/xmms-sid.php"
 SRC_URI="http://tnsp.org/xs-files/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~alpha ~hppa ~ppc ~amd64"
-
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 IUSE=""
 
 # This really NEEDs one of the libsidplays, but unfortunately we need to RDEPEND on both for
 # GRP to work right.
 RDEPEND="media-sound/xmms
-	 =media-libs/libsidplay-1*
-	 !alpha? ( !hppa? ( =media-libs/libsidplay-2* ) )"
-
+	=media-libs/libsidplay-1*
+	!alpha? ( =media-libs/libsidplay-2* )"
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7"
 
