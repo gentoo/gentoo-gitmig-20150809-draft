@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.1-r1.ebuild,v 1.3 2004/01/13 22:35:35 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.1-r1.ebuild,v 1.4 2004/02/05 13:32:47 johnm Exp $
 
 # As this is the example source to use kernel-2.eclass then a very brief explanation is to go here
 #
@@ -32,7 +32,7 @@ detect_version
 DESCRIPTION="Full sources including the gentoo patchset for the 2.6 kernel tree"
 SRC_URI="${KERNEL_URI} ${GPV_SRC}"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64 ~mips ~hppa ~sparc ~alpha"
 
 pkg_postinst() {
 	postinst_sources
