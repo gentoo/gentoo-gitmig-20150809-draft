@@ -23,8 +23,6 @@
 
 OLD_PY_VER=2.2
 NEW_PY_VER=$(python -V 2>&1 | sed 's:Python ::' | cut -d. -f1-2)
-OLD_MODULES_DIR=/usr/lib/python${OLD_PY_VER}
-OLD_INCLUDE_DIR=/usr/include/python${OLD_PY_VER}
 
 PKGS_EXCEPTIONS="dev-lang/python sys-apps/portage"
 PKGS_MANUAL="app-office/gnumeric app-office/dia x11-libs/vte"
@@ -71,6 +69,14 @@ elog() {
 }
 
 
+usage() {
+	echo "usage: python-updater [-h|-p|-o X.X|-n X.X]"
+	echo " -h      help"
+	echo " -p      pretend (don't do anything)"
+	echo " -o X.X  set old python version to upgrade from [default: ${OLD_PY_VER}]"
+	echo " -n X.X  set new python version to upgrade to [default: ${NEW_PY_VER}]"
+}
+
 #
 # Sanity check
 #
@@ -93,21 +99,30 @@ fi
 # Command Line Parsing
 #
 #
-
-if [ -n "$1" ]; then
+while [ -n "$1" ]; do
 	case "$1" in
-		-h) 
-			echo "usage: python-updater [-h|-p]"
-			echo " -h    help"
-			echo " -p    pretend (don't do anything)"
+		-h)
+			usage
+			exit 0
 			;;
 		-p)
 			PRETEND=1
 			;;
+		-o)
+			shift
+			OLD_PY_VER="$1"
+			;;
+		-n)
+			shift
+			NEW_PY_VER="$1"
+			;;
 		*)
+			usage
+			echo "unrecognised option: $1"
 			;;
 	esac
-fi	
+	shift
+done
 
 #
 # Test where portage is, in python2.2 or somewhere else?
@@ -125,6 +140,8 @@ done
 # /usr/lib/python${OLD_PY_VER}
 #
 #
+OLD_MODULES_DIR=/usr/lib/python${OLD_PY_VER}
+OLD_INCLUDE_DIR=/usr/include/python${OLD_PY_VER}
 
 eloginfo "Starting Python Updater from ${OLD_PY_VER} to ${NEW_PY_VER} :"
 eloginfo "Searching for packages with files in ${OLD_MODULES_DIR} .."
@@ -219,10 +236,12 @@ OUTPUT_PKGS_FAILED=""
 for pkg in ${PKGS_FAILED}; do OUTPUT_PKGS_FAILED="${OUTPUT_PKGS_FAILED} \=$pkg"; done
 
 if [ -n "${PKGS_FAILED}" -o -n "${PKGS_MISSING}" -o -n "${PKGS_MASKED}" ]; then
+   ewarn " "
    ewarn "************************************************************"
    ewarn "* Packages that still need to be manually emerged :        *"
    ewarn "************************************************************"
    if [ -n "${OUTPUT_PKGS_MASKED}" ]; then
+      ewarn " "
       ewarn " Masked Packages:"
 	  ewarn " ----------------"
       ewarn " Unmask the following packages (at your own risk) and  "
@@ -233,6 +252,7 @@ if [ -n "${PKGS_FAILED}" -o -n "${PKGS_MISSING}" -o -n "${PKGS_MASKED}" ]; then
       ewarn " "
    fi
    if [ -n "${OUTPUT_PKGS_MISSING}" ]; then
+      ewarn " "   
       ewarn " Missing Packages:"
 	  ewarn " -----------------"
       ewarn " These packages need to be updated because their versions do"
@@ -241,9 +261,9 @@ if [ -n "${PKGS_FAILED}" -o -n "${PKGS_MISSING}" -o -n "${PKGS_MASKED}" ]; then
       for x in ${OUTPUT_PKGS_MISSING}; do 
          echo "   ${x}"
       done
-      ewarn " "
    fi
    if [ -n "${OUTPUT_PKGS_FAILED}" ]; then
+      ewarn " "   
       ewarn " Failed Packaged:"
 	  ewarn " ----------------"
       ewarn " These packages have failed and need to be re-emerged again."
