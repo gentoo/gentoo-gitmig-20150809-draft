@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.15 2004/01/23 18:15:52 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.16 2004/01/23 19:45:25 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -28,6 +28,7 @@
 
 # UNIPATCH_LIST		- space delimetered list of patches to be applied to the kernel
 # UNIPATCH_DOCS		- space delimemeted list of docs to be installed to the doc dir
+# UNIPATCH_STRICTORDER	- if this is set places patches into directories of order, so they are applied in the order passed
 
 ECLASS="kernel-2"
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst
@@ -138,11 +139,10 @@ install_universal() {
 
 install_headers() {
 	[ $(kernel_is_2_4) $? == 0 ] && unpack_2_4
-	[ $(kernel_is_2_6) $? == 0 ] && ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
-	
 	
 	cd ${S}
 	dodir /usr/include/linux
+	ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
 	cp -ax ${S}/include/linux/* ${D}/usr/include/linux
 	rm -rf ${D}/usr/include/linux/modules
 	
@@ -287,6 +287,7 @@ unipatch() {
 	local KPATCH_DIR
 	local PATCH_DEPTH
 	local ELINE
+	local STRICT_COUNT
 
 	[ -z "${KPATCH_DIR}" ] && KPATCH_DIR="${WORKDIR}/patches/"
 	[ ! -d ${KPATCH_DIR} ] && mkdir -p ${KPATCH_DIR}
@@ -310,7 +311,15 @@ unipatch() {
 				      die "Unrecognized tarball compression";;
 			esac
 
-			${PIPE_CMD} ${i} -C ${KPATCH_DIR} 1>/dev/null
+			if [ -n "${UNIPATCH_STRICTORDER}" ]
+			then
+				STRICT_COUNT=$((${STRICT_COUNT} + 1))
+				mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
+				${PIPE_CMD} ${i} -C ${KPATCH_DIR}/${STRICT_COUNT}/ 1>/dev/null
+			else
+				${PIPE_CMD} ${i} -C ${KPATCH_DIR} 1>/dev/null
+			fi
+
 			if [ $? == 0 ]
 			then
 				einfo "${i/*\//} unpacked"
@@ -338,7 +347,15 @@ unipatch() {
 		esac
 		x=${i/*\//}
 		x=${x/\.${extention}/}
-		[ -n "${PIPE_CMD}" ] && ${PIPE_CMD} ${i} > ${KPATCH_DIR}/${x}.patch
+
+		if [ -n "${UNIPATCH_STRICTORDER}" -a -n "${PIPE_CMD}" ]
+		then
+			STRICT_COUNT=$((${STRICT_COUNT} + 1))
+			mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
+			$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${STRICT_COUNT}/${x}.patch)
+		else
+			$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${x}.patch)
+		fi
 	done
 
 	#populate KPATCH_DIRS so we know where to look to remove the excludes
@@ -368,8 +385,6 @@ unipatch() {
 	do
 		for i in $(find ${x} -maxdepth 1 -iname "*.patch" -or -iname "*.diff" | sort -u)
 		do
-
-
 			PATCH_DEPTH=0
 			ebegin "Applying ${i/*\//}"
 			while [ ${PATCH_DEPTH} -lt 5 ]
