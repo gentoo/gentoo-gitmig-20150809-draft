@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.5 2004/09/06 18:38:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.6 2004/12/12 20:11:47 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -80,7 +80,7 @@ pkg_postinst() {
 	einfo "you will need to either use a Warcraft CD or install the"
 	einfo "freecraft-fcmp ebuild.  To use a Warcraft CD:"
 	einfo " 1 mount the cd as /mnt/cdrom"
-	einfo " 2 cd ${GAMES_DATADIR}"
+	einfo " 2 cd ${GAMES_DATADIR}/${PN}"
 	einfo " 3 run tools/build.sh"
 	einfo "This will extract the data files to the correct place."
 	einfo "Note that the CD is still needed for the music.  To"
