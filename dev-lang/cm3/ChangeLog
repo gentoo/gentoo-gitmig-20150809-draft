@@ -1,0 +1,9 @@
+# ChangeLog for dev-lang/cm3
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3/ChangeLog,v 1.1 2003/04/17 16:10:51 vapier Exp $
+
+*cm3-5.2.4 (17 Apr 2003)
+
+  17 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
+  It is incomplete though ... i dont use m3, i cant really test it ;)
