@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.2_pre0.ebuild,v 1.5 2004/12/29 05:07:01 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.2_pre0.ebuild,v 1.6 2004/12/29 17:15:23 obz Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -103,11 +103,11 @@ RDEPEND="!gnome-base/gnome-core
 
 	hal? ( >=gnome-base/gnome-volume-manager-1.0.2-r1 )
 
-	>=gnome-extra/evolution-data-server-1.0.2
-	>=mail-client/evolution-2.0.2
+	>=gnome-extra/evolution-data-server-1.0.3
+	>=mail-client/evolution-2.0.3
 	>=gnome-extra/evolution-webcal-2.0.1
-	>=gnome-extra/gal-2.2.3
-	>=gnome-extra/libgtkhtml-3.2.3
+	>=gnome-extra/gal-2.2.4
+	>=gnome-extra/libgtkhtml-3.2.4
 
 	>=net-misc/vino-2.8.1
 
