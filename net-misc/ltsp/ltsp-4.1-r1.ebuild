@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.1-r1.ebuild,v 1.2 2004/09/25 09:26:03 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.1-r1.ebuild,v 1.3 2004/09/28 05:15:59 lanius Exp $
 
 IUSE="X debug nas esd audiofile snmp"
 
@@ -155,6 +155,13 @@ src_install() {
 			tar -xzf ${DISTDIR}/${FILE} -C ${D}/opt/ltsp-${PV} 2> /dev/null
 		done
 	fi
+
+	# Sound Stuff stuff
+	echo "Installing Sound packages..."
+	for FILE in ${LTSP_SOUND}
+	do
+		tar -xzf ${DISTDIR}/${FILE} -C ${D}/opt/ltsp-${PV} 2> /dev/null
+	done
 
 	# kernel stuff
 	echo "Installing kernel packages..."
