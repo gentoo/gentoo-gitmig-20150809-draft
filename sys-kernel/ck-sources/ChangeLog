@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.69 2004/11/26 01:10:48 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.70 2004/11/27 17:49:41 plasmaroo Exp $
+
+*ck-sources-2.4.27-r4 (27 Nov 2004)
+
+  27 Nov 2004; <plasmaroo@gentoo.org> -ck-sources-2.4.27-r3.ebuild,
+  +ck-sources-2.4.27-r4.ebuild, ck-sources-2.6.9-r3.ebuild,
+  +files/ck-sources-2.4.27.binfmt_a.out.patch,
+  +files/ck-sources-2.6.9.binfmt_a.out.patch, +files/ck-sources.AF_UNIX.patch:
+  Version bump for the AF_UNIX and a.out security vulnerabilities; bugs #72452
+  and #72317.
 
   26 Nov 2004; Daniel Drake <dsd@gentoo.org> ck-sources-2.4.27-r3.ebuild,
   ck-sources-2.6.9-r3.ebuild:

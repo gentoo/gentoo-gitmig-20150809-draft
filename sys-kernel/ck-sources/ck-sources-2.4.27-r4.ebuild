@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.27-r3.ebuild,v 1.3 2004/11/26 01:10:48 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.27-r4.ebuild,v 1.1 2004/11/27 17:49:41 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -18,7 +18,9 @@ UNIPATCH_LIST="${DISTDIR}/patch-${PV}-lck${CKV}.bz2
 	${FILESDIR}/${P}.cmdlineLeak.patch
 	${FILESDIR}/${P}.XDRWrapFix.patch
 	${FILESDIR}/${P}.binfmt_elf.patch
-	${FILESDIR}/${P}.smbfs.patch"
+	${FILESDIR}/${P}.smbfs.patch
+	${FILESDIR}/${PN}.AF_UNIX.patch
+	${FILESDIR}/${P}.binfmt_a.out.patch"
 
 DESCRIPTION="Full sources for the Stock Linux kernel Con Kolivas's high performance patchset"
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"
