@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gsasl
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.4 2004/07/07 19:10:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.5 2004/07/09 17:48:47 hansmi Exp $
+
+  09 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> gsasl-0.1.1.ebuild:
+  Added to ~ppc.
 
   07 Jul 2004; Tom Martin <slarti@gentoo.org> gsasl-0.1.1.ebuild:
   Added to ~amd64.
