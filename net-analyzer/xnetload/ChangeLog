@@ -1,8 +1,11 @@
 # ChangeLog for net-analyzer/xnetload
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.2 2003/02/12 07:51:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.3 2003/03/18 03:15:12 weeve Exp $
 
 *xnetload-1.11.3 (06 Nov 2002)
+
+  17 Mar 2003; Jason Wever <weeve@gentoo.org> xnetload-1.11.3.ebuild:
+  Added ~sparc to keywords.
 
   06 Nov 2002; Seemant Kulleen <seemant@gentoo.org> xnetload-1.11.3.ebuild
   ChangeLog files/digest-xnetload-1.11.3 :
