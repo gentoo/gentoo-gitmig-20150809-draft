@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.22 2004/08/28 04:02:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.23 2004/09/18 10:33:34 blubb Exp $
+
+  18 Sep 2004; <blubb@gentoo.org> kaffe-1.1.4.ebuild:
+  added ~amd64
 
   27 Aug 2004; Jason Wever <weeve@gentoo.org> kaffe-1.1.4.ebuild:
   Stable on sparc.

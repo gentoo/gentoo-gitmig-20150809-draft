@@ -1,5 +1,5 @@
-MD5 1946d9295ff09d742edd4c59f710fdd2 ChangeLog 3248
-MD5 f82d5866ef84a7e13fc90317a837ef4b kaffe-1.1.4.ebuild 1509
+MD5 fcadc41bb77c035a2a9b8c466bbe11f0 ChangeLog 3318
+MD5 63706e18ed61331780b32028dbf445a9 kaffe-1.1.4.ebuild 1517
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 22d8f8b117ca1322d67d6343f07aca01 files/30kaffe 89
 MD5 d9c1b3469316eb29e7b79058353f007f files/digest-kaffe-1.1.4 64
