@@ -1,21 +1,29 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/oer-mysql/oer-mysql-1.0.42.ebuild,v 1.6 2004/07/01 22:23:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/oer-mysql/oer-mysql-1.0.42.ebuild,v 1.7 2004/11/24 21:54:47 swegener Exp $
 
-IUSE=""
-MY_P=N"oer+MySQL"
-S=${WORKDIR}/${MY_P}-dist
+inherit fixheadtails
+
+MY_P="oer+MySQL"
 
 DESCRIPTION="Free to use GPL'd IRC bot"
 HOMEPAGE="http://oer.equnet.org/"
-SRC_URI="http://oer.equnet.org/testing/${MY_P}-1.0-42.tar.gz"
+SRC_URI="http://oer.equnet.org/${MY_P}-1.0-42.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
+IUSE=""
 
 DEPEND="virtual/libc
 	 >=dev-db/mysql-3.23.52-r1
 	 >=sys-apps/sed-3.02.80-r4"
+
+S=${WORKDIR}/${MY_P}-dist
+
+src_unpack() {
+	unpack ${A}
+	ht_fix_file ${S}/configure
+}
 
 src_compile() {
 
