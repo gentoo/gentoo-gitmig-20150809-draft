@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.145 2004/12/16 20:11:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.146 2004/12/21 22:06:23 dsd Exp $
+
+*gentoo-dev-sources-2.6.9-r11 (21 Dec 2004)
+
+  21 Dec 2004; Daniel Drake <dsd@gentoo.org>
+  +gentoo-dev-sources-2.6.9-r11.ebuild:
+  Add more AF_UNIX security fixes, and a SHM_LOCK DoS fix.
 
   16 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gentoo-dev-sources-2.6.9-r10.ebuild:
