@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/xfce4-fsguard
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard/ChangeLog,v 1.1 2003/11/09 16:49:05 bcowan Exp $
+
+*xfce4-fsguard-0.1.0 (09 Nov 2003)
+
+  09 Nov 2003; Brad Cowan <bcowan@gentoo.org> metadata.xml,
+  xfce4-fsguard-0.1.0.ebuild:
+  Initial import.
+
