@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/moosic
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.11 2004/06/25 00:11:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.12 2004/07/13 07:42:25 eradicator Exp $
+
+  13 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> moosic-1.5.0.ebuild:
+  Added ~sparc ~amd64
 
   06 May 2004; Jeremy Huddleston <eradicator@gentoo.org> moosic-1.5.0.ebuild:
   Stable x86.
