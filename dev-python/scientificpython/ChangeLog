@@ -1,6 +1,9 @@
-# ChangeLog for dev-python/ScientificPython
+# ChangeLog for dev-python/scientificpython
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.1 2004/07/20 19:20:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.2 2004/09/05 07:42:10 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *scientificpython-2.4.3 (20 Jul 2004)
 
