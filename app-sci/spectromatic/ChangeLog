@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/spectromatic
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/spectromatic/ChangeLog,v 1.4 2004/06/24 22:18:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/spectromatic/ChangeLog,v 1.5 2004/07/02 19:33:08 phosphan Exp $
+
+  02 Jul 2004; Patrick Kursawe <phosphan@gentoo.org> spectromatic-1.0.ebuild,
+  files/spectromatic-1.0-stringliteral.patch:
+  Adding patch that replaces deprecated multiline string literals, see
+  bug #54507
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> spectromatic-1.0.ebuild:
   Changed patch to epatch
