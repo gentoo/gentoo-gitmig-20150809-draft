@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.7-r4.ebuild,v 1.14 2002/12/15 11:58:45 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.7-r4.ebuild,v 1.15 2002/12/17 07:56:23 seemant Exp $
 
 DESCRIPTION="Aumix volume/mixer control program."
 SRC_URI="http://jpj.net/~trevor/aumix/${P}.tar.gz"
@@ -19,10 +19,10 @@ DEPEND=">=sys-libs/ncurses-5.2
 
 src_compile() {
 	local myconf
-	use gpm  || myconf="--without-gpm"
-	use nls  || myconf="--disable-nls"
-	use gtk  || myconf="$myconf --without-gtk"
-	use alsa || myconf="$myconf --without-alsa"
+	use gpm  || myconf="${myconf} --without-gpm"
+	use nls  || myconf="${myconf} --disable-nls"
+	use gtk  || myconf="${myconf} --without-gtk"
+	use alsa || myconf="${myconf} --without-alsa"
 	
 	econf ${myconf}
 	emake || die "make failed"
