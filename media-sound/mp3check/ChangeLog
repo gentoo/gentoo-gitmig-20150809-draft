@@ -1,5 +1,9 @@
 # ChangeLog for media-sound/mp3check
-# Copyright 2004-2004 Gentoo Technologies, Inc.; Distributed under the GPL
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3check/ChangeLog,v 1.4 2004/09/28 01:19:20 swegener Exp $
+
+  28 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Gentoo Technologies, Inc. -> Gentoo Foundation
 
   19 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
