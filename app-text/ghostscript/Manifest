@@ -6,6 +6,7 @@ MD5 b109fca2c805d2bea14c0261a373616f ghostscript-7.05.5.ebuild 1886
 MD5 96922ead39294ea771bcc47b5d4b7a2b ghostscript-7.05.6-r1.ebuild 2605
 MD5 5775b11c48d3699b400fe9d518682f0c ghostscript-7.05.6-r2.ebuild 2712
 MD5 5fd0e465470e0c28630425b8aa19f06a ghostscript-7.05.6.ebuild 2592
+MD5 c8563213c40627b530bfeea7d80ec0e1 ghostscript-7.05.6-r3.ebuild 2923
 MD5 cd47befad950c27337bdc21511f89050 files/digest-ghostscript-7.05.3-r1 295
 MD5 ac5b31ed5b19e7d882fc094159e35e8d files/digest-ghostscript-7.05.5 220
 MD5 3cdc3dc3a080a9e1e29ba2ddf05debd4 files/digest-ghostscript-7.05.5-r1 359
@@ -21,3 +22,5 @@ MD5 f0a076c486b8d72e90c8aac2355ccd4d files/gs7.05.6-cjk.diff 20038
 MD5 86e743552ef51cab2ef4c70728ad6954 files/lxm3200-cups.diff 1256
 MD5 f9c4821dac99d593d62405379f6653ec files/png.diff 426
 MD5 54ca592ef6bd375f6fdd214786962efb files/ps2epsi-security.patch 281
+MD5 e065254ba9e798e4177ed687b6b5ee2e files/gs7.05.6-random.patch 478
+MD5 e6464077e601f6f64b405b1547fe1d6f files/digest-ghostscript-7.05.6-r3 220
