@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.48 2004/08/13 01:34:13 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.49 2004/09/12 06:48:59 mr_bones_ Exp $
+
+*libpng-1.2.7 (11 Sep 2004)
+
+  11 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/1.2.7-gentoo.diff, +libpng-1.2.7.ebuild:
+  version bump
 
   12 Aug 2004; Joshua Kinard <kumba@gentoo.org> libpng-1.2.5-r8.ebuild:
   Bumped 1.2.5-r8 to mips stable to fix Bug #59424.
