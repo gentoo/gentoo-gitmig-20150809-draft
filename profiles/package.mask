@@ -33,10 +33,6 @@
 # It may crash your desktop
 =x11-themes/gtk-engines-geramik-0.08-r2
 
-# <foser@gentoo.org> (27 Nov 2002)
-# Sometimes segfaults
-=net-irc/xchat-1.9.6
-
 # <bcowan@gentoo.org> (25 Nov 2002)
 # masking until db-4* are unmasked
 # that way emerge -pu world works
