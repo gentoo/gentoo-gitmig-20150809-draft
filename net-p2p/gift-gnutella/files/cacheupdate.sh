@@ -1,11 +1,11 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/files/cacheupdate.sh,v 1.5 2004/10/11 20:13:47 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/files/cacheupdate.sh,v 1.6 2004/10/29 19:42:42 squinky86 Exp $
 
 if [ -d ~/.giFT/Gnutella/ ]; then
 	cd ~/.giFT/Gnutella
-	wget http://gwebcache.squinky.gotdns.com/perlgcache.cgi?get=1\&hostfile=1\&net=gnutella2\&client=GEN2\&version=0.1 -O gwebcaches.new || die "Unable to retrieve new caches."
+	wget http://loot.alumnigroup.org/?get=1\&hostfile=1\&net=gnutella2\&client=GEN2\&version=0.1 -O gwebcaches.new || die "Unable to retrieve new caches."
 	grep "u|" gwebcaches.new > gwebcaches.new1
 	sed -i -e 's:u|::g' gwebcaches.new1
 	sed -i -e 's:|.*::g' gwebcaches.new1
