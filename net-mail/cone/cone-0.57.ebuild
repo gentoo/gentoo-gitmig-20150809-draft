@@ -8,7 +8,7 @@ HOMEPAGE="http://www.courier-mta.org/cone/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 IUSE="spell crypt"
 
 RDEPEND="virtual/glibc
