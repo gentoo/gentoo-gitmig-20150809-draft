@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/onis-0.6.0.ebuild,v 1.2 2004/06/29 16:47:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/onis-0.6.0.ebuild,v 1.3 2004/07/30 00:03:54 swegener Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://verplant.org/onis/"
 SRC_URI="http://verplant.org/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND="dev-lang/perl"
