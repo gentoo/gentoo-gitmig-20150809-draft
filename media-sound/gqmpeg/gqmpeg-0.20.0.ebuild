@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/gqmpeg-0.20.0.ebuild,v 1.9 2004/09/14 16:32:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/gqmpeg-0.20.0.ebuild,v 1.10 2004/11/01 19:35:02 corsair Exp $
 
 IUSE="nls gnome"
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~alpha ~ppc sparc amd64"
+KEYWORDS="x86 ~alpha ~ppc sparc amd64 ~ppc64"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/gdk-pixbuf-0.13.0"
