@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7.ebuild,v 1.2 2003/02/13 16:15:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7.ebuild,v 1.3 2003/03/30 19:54:26 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Secure locate provides a secure way to index and quickly search for files on your system (drop-in replacement for 'locate')"
@@ -35,7 +35,12 @@ src_install() {
 	doins doc/slocate.1.gz doc/updatedb.1.gz
 	dosym /usr/share/man/man1/slocate.1.gz /usr/share/man/man1/locate.1.gz
 
-	dodoc LICENSE COPYING AUTHORS NEWS README ChangeLog
+	dodoc INSTALL LICENSE COPYING AUTHORS NEWS README ChangeLog
+	dodoc ${FILESDIR}/updatedb.conf
+	einfo ""
+	einfo "You can find a sample config file in"
+	einfo "/usr/doc/${P}/updatedb.conf.gz"
+	einfo ""
 }
 
 pkg_postinst() {
