@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.91 2004/03/30 17:39:25 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.92 2004/04/07 18:13:45 iggy Exp $
+
+  07 Apr 2004; Brian Jackson <iggy@gentoo.org> vim-6.2-r7.ebuild:
+  added s390 keyword
 
   30 Mar 2004; Jon Portnoy <avenj@gentoo.org> vim-6.2-r7.ebuild :
   Stable on AMD64
