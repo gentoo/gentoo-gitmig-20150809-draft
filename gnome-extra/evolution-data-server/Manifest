@@ -1,4 +1,6 @@
 MD5 94e8f3ea940c36c5c7b8d81d82d9bc2f evolution-data-server-0.0.97.ebuild 949
-MD5 8b9ae768c1f5fc078b775c18addb0660 ChangeLog 502
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 f2bf4dc6e3988b1b0bc5e4b511d3b3ac evolution-data-server-0.0.98.ebuild 949
+MD5 8b9ae768c1f5fc078b775c18addb0660 ChangeLog 502
 MD5 f327a312b24ef4297eb7d0a7084a0ad1 files/digest-evolution-data-server-0.0.97 82
+MD5 b4b079019d0e2b856b217a9247c290aa files/digest-evolution-data-server-0.0.98 82
