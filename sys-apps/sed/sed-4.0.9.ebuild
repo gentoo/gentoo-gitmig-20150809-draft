@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.30 2005/01/02 23:50:06 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.31 2005/02/12 00:43:02 vapier Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -36,9 +36,7 @@ src_compile() {
 	fi
 
 	local myconf=""
-	if use macos || use ppc-macos ; then
-		myconf="--program-prefix=g"
-	fi
+	use ppc-macos && myconf="--program-prefix=g"
 	econf \
 		$(use_enable nls) \
 		${myconf} \
@@ -67,7 +65,7 @@ src_install() {
 	fi
 
 	rm -f "${D}/usr/bin/sed"
-	if use macos || use ppc-macos ; then
+	if use ppc-macos ; then
 		cd "${D}"
 		local x
 		for x in $(find . -name 'sed*' -print);
