@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.6-r4.ebuild,v 1.10 2004/09/09 21:57:55 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.6-r4.ebuild,v 1.11 2004/09/10 14:12:00 satya Exp $
 
 inherit eutils flag-o-matic
 
@@ -49,7 +49,7 @@ SLOT="0"
 # some archs are removed due to dependency tree integrity for ldap and
 #   dev-perl/Crypt-SmbHash flags
 #   should be: KEYWORDS="~arm ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="~amd64 arm hppa ia64 ~mips ppc sparc x86 alpha"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc sparc x86"
 
 src_unpack() {
 	local i
@@ -83,12 +83,12 @@ src_unpack() {
 	epatch ${FILESDIR}/samba-3.0.6-winbind_getpwnam_v1.patch || die
 	cp ${FILESDIR}/samba-3.0.6-samba.schema ${S}/examples/LDAP/samba.schema
 	cd ${S} || die
+	use amd64 && epatch ${FILESDIR}/${P}-libdirsymlink.patch
 	# examples: to be copied as docs ---------------------------------------
 	rm -rf ${S}/examples.ORIG
 	cp -a ${S}/examples ${S}/examples.ORIG
 	# Prep samba-vscan source.
 	use oav && cp -a ${WORKDIR}/${PN}-vscan-${VSCAN_VER} ${S}/examples/VFS
-	use amd64 && epatch ${FILEDIR}/${P}-libdirsymlink.patch
 	#-----------------------------------------------------------------------
 	cd ${S}/source
 	echo "Running autoconf ..."
