@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5d47804bf659a618b77f58e29ce11782 ChangeLog 998
-MD5 7da871243b166eee48f2a45bfa79f1d0 digitemp-3.2.0.ebuild 1844
-MD5 da38ffa2c357e1fdb676af52d3db3717 digitemp-3.3.1.ebuild 1845
+MD5 e6652760b3fb9df368deffb0a58594d0 digitemp-3.3.1.ebuild 1836
+MD5 d4d2738fb01e4362bc03231ce69f4bc4 digitemp-3.2.0.ebuild 1835
+MD5 675055c494676f6664be098b06d4d377 ChangeLog 1126
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 be3c44f8d662d55090d70813c9b3adc9 files/digest-digitemp-3.2.0 66
 MD5 97b7451b04d6c11f4379f845b552b682 files/digest-digitemp-3.3.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35EuHTu7gpaalycRAkleAJwNPVtBwRrB3RI3w+LN5vCDKzmN8QCg6ACt
-UVwWAds+AJJLbx+yYduH+kA=
-=dUWi
------END PGP SIGNATURE-----
