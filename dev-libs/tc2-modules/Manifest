@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ad979501056fab55fee59c59d4eb0a6d ChangeLog 792
+MD5 7ea3bd4e31295df647cbc2ecd495417d ChangeLog 897
+MD5 a6431c722c2520685d626b8960f395b2 tc2-modules-0.6.0.ebuild 737
+MD5 116ffc3bbaf543356dc1991a184719b4 tc2-modules-0.5.2.ebuild 702
 MD5 b930e21bf22fd73f984ae65f871fdc2d metadata.xml 253
 MD5 7c7f989d0be4dff57fd2835eb73b85cc tc2-modules-0.5.0.ebuild 703
-MD5 116ffc3bbaf543356dc1991a184719b4 tc2-modules-0.5.2.ebuild 702
-MD5 a6431c722c2520685d626b8960f395b2 tc2-modules-0.6.0.ebuild 737
-MD5 21b0859754e610ba1f559d4a21a53458 files/digest-tc2-modules-0.5.0 69
 MD5 de4d1550287137b347734d64928c1e04 files/digest-tc2-modules-0.5.2 69
+MD5 21b0859754e610ba1f559d4a21a53458 files/digest-tc2-modules-0.5.0 69
 MD5 f4aae0d96cec93771a963e36b1167abe files/digest-tc2-modules-0.6.0 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYGyoI1lqEGTUzyQRAiFBAKCi22xWNia/wEXV8QuwZuzRD5dJcwCgrCnd
-bpAPUTOyGspnQefDuCtZH6Q=
-=FvrU
------END PGP SIGNATURE-----

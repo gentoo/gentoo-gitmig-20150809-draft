@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 06ae068538a603945ea03c8cd2adb9e8 ChangeLog 839
+MD5 9ba7fe65a28d9f82f8e3b2401570df13 ChangeLog 946
 MD5 bdd167d80a9ba1aa563e517e7d856b0f libvc-003.ebuild 643
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 12b728bfe75c41637b4f23ec7ab27f81 files/digest-libvc-003 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB0tEWCHk4+ZoBpvsRAs4IAJ4z5o8dmZB58y+p7SRPog1k6gDwsACgx9AD
-W6KdD19VC3M/Bao/9XyTVqQ=
-=/VKa
------END PGP SIGNATURE-----

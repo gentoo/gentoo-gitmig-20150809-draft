@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 23f170fb507ca1f9a5f474df402e8abe ChangeLog 1282
+MD5 0d2db8b492f4ab74dd44a13d5e0c5529 ChangeLog 1390
 MD5 473efc81f813b68e72150d8470fa83ee metadata.xml 367
 MD5 8fc993bb2b8c59082ec895a6d9a3ca69 uulib-0.5.20.ebuild 649
 MD5 dadaf02caf53bd14d197889095810182 files/digest-uulib-0.5.20 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBPnLoHTu7gpaalycRAuNOAKCtTNGQDhbk9IXkipuyxOtgsosvjwCgxR3l
-q61ERmfFVl5n2ucS8f4QLL0=
-=Umdo
------END PGP SIGNATURE-----
