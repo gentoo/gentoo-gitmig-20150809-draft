@@ -1,0 +1,11 @@
+--- Makefile.PL.orig	2000-03-15 10:31:42.000000000 -0700
++++ Makefile.PL	2003-01-10 23:27:38.000000000 -0700
+@@ -9,7 +9,7 @@
+     'PREREQ_PM'    => {	
+ 	                 'Term::ReadLine::Perl' => 0,
+ 		         'Term::ANSIColor'    => 0,
+-		         'MPEG::MP3Info'    => 0,
++		         'MP3::Info'    => 0,
+ 		      },
+     'macro' => {
+ 	  CVSROOT => 'modperl.com:/local/cvs_repository',
