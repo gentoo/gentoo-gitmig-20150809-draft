@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/xconvers-0.8.2.ebuild,v 1.3 2004/06/30 02:36:17 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/xconvers-0.8.2.ebuild,v 1.4 2004/08/04 23:22:47 killsoft Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.qsl.net/pg4i/download/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND="virtual/libc
@@ -27,3 +27,4 @@ src_install() {
 	dodoc README
 	make_desktop_entry xconvers Xconvers xconvers.png HamRadio
 }
+
