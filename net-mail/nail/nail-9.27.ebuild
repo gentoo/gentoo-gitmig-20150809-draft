@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nail/nail-9.27.ebuild,v 1.2 2001/07/08 17:31:53 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nail/nail-9.27.ebuild,v 1.3 2001/07/08 17:44:37 g2boojum Exp $
 
 #Remeber to add the proper Author line, above.  Don't worry about the fourth line;
 #it'll get automatically fixed when the ebuild is checked in.
@@ -73,6 +73,17 @@ pkg_postinst () {
               "      It is best to use nail only for outgoing mail, and\n" \
 	      "      really only use it for scripts that require it.\n\n" \
 	      "NOTE: This build has ~/.maildir compiled in as the\n" \
-	      "      mail spool directory.\n"
+	      "      mail spool directory (for incoming mail).\n" \
+	      "      Nail will work for sending outgoing mail even if\n" \
+	      "      the mail spool directory does not exist.\n\n" \
+	      "NOTE: When used to send mail via a remote smtp server\n" \
+	      "      nail does not require a local mail transfer agent.\n" \
+	      "      ISP smtp servers tend to have names like\n" \
+	      "        mail.ispname.com\n" \
+	      "      or\n" \
+	      "        smtp.ispname.com.\n" \
+	      "      If you do not wish to use a remote smtp server,\n" \
+	      "      then you WILL have to install a mta such as sendmail,\n" \
+	      "      postfix, exim, etcetera.\n"
 
 }
