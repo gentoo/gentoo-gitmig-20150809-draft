@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.4.ebuild,v 1.13 2004/06/25 15:47:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.4.ebuild,v 1.14 2004/07/01 22:50:23 eradicator Exp $
 
 IUSE="pam ldap ssl sasl snmp debug"
 
@@ -18,7 +18,7 @@ S=${WORKDIR}/squid-2.5.STABLE3
 SRC_URI="ftp://ftp.squid-cache.org/pub/squid-2/STABLE/squid-2.5.STABLE3.tar.bz2
 	ftp://ftp.squid-cache.org/pub/squid-2/STABLE/diff-2.5.STABLE3-2.5.STABLE4.gz"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	pam? ( >=sys-libs/pam-0.72 )
 	ldap? ( >=net-nds/openldap-2.0.25 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )

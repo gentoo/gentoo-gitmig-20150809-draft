@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_authenticache/mod_authenticache-2.0.6.ebuild,v 1.5 2004/06/25 00:59:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_authenticache/mod_authenticache-2.0.6.ebuild,v 1.6 2004/07/01 22:45:33 eradicator Exp $
 
 DESCRIPTION="A generic Apache2 credential caching module"
 HOMEPAGE="http://original.killa.net/infosec/mod_authenticache/"
 
 S=${WORKDIR}/${P}
 SRC_URI="http://original.killa.net/infosec/${PN}/${P}.tar.bz2"
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="${DEPEND} =net-www/apache-2*"
 LICENSE="Apache-1.1"
 KEYWORDS="x86"

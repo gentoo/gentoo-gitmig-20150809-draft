@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-2.0.1.ebuild,v 1.2 2004/06/25 00:58:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-2.0.1.ebuild,v 1.3 2004/07/01 22:45:06 eradicator Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="${IUSE} pam zlib"
 
 #S=${WORKDIR}/
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	dev-libs/libpcre
 	 pam? (	sys-libs/pam )
 	zlib? (	sys-libs/zlib )

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9-r1.ebuild,v 1.7 2004/06/25 01:05:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9-r1.ebuild,v 1.8 2004/07/01 22:47:21 eradicator Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozilla-launcher
 
@@ -35,7 +35,7 @@ RDEPEND="virtual/x11
 	>=net-www/mozilla-launcher-1.7-r1"
 
 DEPEND="${RDEPEND}
-	virtual/glibc
+	virtual/libc
 	dev-util/pkgconfig
 	java? ( >=dev-java/java-config-0.2.0 )"
 

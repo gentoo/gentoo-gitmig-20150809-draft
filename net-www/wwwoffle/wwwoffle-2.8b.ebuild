@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.8b.ebuild,v 1.6 2004/06/25 01:16:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.8b.ebuild,v 1.7 2004/07/01 22:51:35 eradicator Exp $
 
 inherit eutils
 
@@ -22,11 +22,11 @@ DEPEND=">=sys-apps/sed-4
 	sys-devel/flex
 	sys-libs/zlib
 	sys-devel/gcc
-	virtual/glibc
+	virtual/libc
 	app-arch/tar"
 
 RDEPEND="sys-libs/zlib
-	virtual/glibc"
+	virtual/libc"
 
 pkg_setup() {
 	# Add a wwwoffle user

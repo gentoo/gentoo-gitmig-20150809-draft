@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.140.0.ebuild,v 1.3 2004/06/25 00:56:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.140.0.ebuild,v 1.4 2004/07/01 22:43:45 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="x86"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=x11-libs/qt-3.1
 	>=kde-base/kdebase-3.1
 	>=kde-base/kdelibs-3.1

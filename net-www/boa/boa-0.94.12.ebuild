@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.12.ebuild,v 1.14 2004/06/25 00:49:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.12.ebuild,v 1.15 2004/07/01 22:41:51 eradicator Exp $
 
 DESCRIPTION="Boa - A very small and very fast http daemon."
 SRC_URI="http://www.boa.org/${P}.tar.gz"
@@ -11,13 +11,13 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="tetex"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/flex
 	sys-devel/bison
 	sys-apps/texinfo
 	tetex? ( virtual/tetex )"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_compile() {
 	cd src

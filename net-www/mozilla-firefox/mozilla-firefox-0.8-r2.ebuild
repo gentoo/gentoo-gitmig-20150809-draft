@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r2.ebuild,v 1.8 2004/06/25 01:05:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r2.ebuild,v 1.9 2004/07/01 22:47:21 eradicator Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -32,7 +32,7 @@ RDEPEND="virtual/x11
 	!net-www/mozilla-firefox-bin"
 
 DEPEND="${RDEPEND}
-	virtual/glibc
+	virtual/libc
 	dev-util/pkgconfig
 	dev-lang/perl
 	java? ( >=dev-java/java-config-0.2.0 )"

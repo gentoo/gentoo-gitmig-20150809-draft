@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webfs/webfs-1.20.ebuild,v 1.5 2004/06/25 01:16:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webfs/webfs-1.20.ebuild,v 1.6 2004/07/01 22:51:21 eradicator Exp $
 
 IUSE="ssl"
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 sparc alpha"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
 
 RDEPEND="${DEPEND}

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/lighttpd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/ChangeLog,v 1.9 2004/06/27 00:21:42 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/ChangeLog,v 1.10 2004/07/01 22:44:04 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  lighttpd-1.1.8-r1.ebuild, lighttpd-1.1.8.ebuild, lighttpd-1.2.2.ebuild:
+  virtual/glibc -> virtual/libc
 
 *lighttpd-1.2.2 (27 Jun 2004)
 

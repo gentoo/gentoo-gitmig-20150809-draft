@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webcpp/webcpp-0.8.0-r1.ebuild,v 1.4 2004/06/25 01:16:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webcpp/webcpp-0.8.0-r1.ebuild,v 1.5 2004/07/01 22:51:08 eradicator Exp $
 
 inherit gcc
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 RDEPEND="sys-devel/gcc
-	virtual/glibc"
+	virtual/libc"
 
 pkg_setup() {
 	[ `gcc-major-version` -eq 2 ] \

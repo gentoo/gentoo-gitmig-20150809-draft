@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.12 2004/06/25 17:56:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.13 2004/07/01 22:50:55 eradicator Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ RDEPEND=">=sys-libs/ncurses-5.2-r3
 	X? ( || ( !nopixbuf? ( >=media-libs/gdk-pixbuf-0.22.0 )
 		imlib2? ( >=media-libs/imlib2-1.0.5 )
 		imlib? ( >=media-libs/imlib-1.9.8 )
-		virtual/glibc )
+		virtual/libc )
 	)
 	xface? ( media-libs/compface )
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )

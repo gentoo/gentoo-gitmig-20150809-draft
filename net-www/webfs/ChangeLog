@@ -1,6 +1,9 @@
 # ChangeLog for net-www/webfs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webfs/ChangeLog,v 1.7 2004/06/25 01:16:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webfs/ChangeLog,v 1.8 2004/07/01 22:51:21 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> webfs-1.20.ebuild:
+  virtual/glibc -> virtual/libc
 
   11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> webfs-1.20.ebuild:
   Stable on alpha.

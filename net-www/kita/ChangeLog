@@ -1,6 +1,10 @@
 # ChangeLog for net-www/kita
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kita/ChangeLog,v 1.25 2004/06/25 00:56:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kita/ChangeLog,v 1.26 2004/07/01 22:43:45 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> kita-0.130.0.ebuild,
+  kita-0.140.0.ebuild, kita-0.150.0.ebuild:
+  virtual/glibc -> virtual/libc
 
 *kita-0.150.0 (13 Jun 2004)
 

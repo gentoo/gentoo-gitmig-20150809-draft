@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mini_httpd/mini_httpd-1.19.ebuild,v 1.3 2004/06/28 03:37:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mini_httpd/mini_httpd-1.19.ebuild,v 1.4 2004/07/01 22:45:20 eradicator Exp $
 
 DESCRIPTION="Small forking webserver with optional ssl and ipv6 support"
 HOMEPAGE="http://www.acme.com/software/mini_httpd/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="ssl ipv6"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
 
 S=${WORKDIR}/${P}

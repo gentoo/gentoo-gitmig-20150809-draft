@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/netscape-plugger-4.0-r2.ebuild,v 1.8 2004/06/25 01:07:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/netscape-plugger-4.0-r2.ebuild,v 1.9 2004/07/01 22:48:24 eradicator Exp $
 
 inherit nsplugins
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://fredrik.hubbe.net/plugger.html"
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc"
 LICENSE="GPL-2"
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 IUSE=""
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/mod_mp3-0.40.ebuild,v 1.5 2004/06/25 01:03:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/mod_mp3-0.40.ebuild,v 1.6 2004/07/01 22:46:45 eradicator Exp $
 
 IUSE="mysql postgres"
 
@@ -11,7 +11,7 @@ KEYWORDS="x86 ~sparc ~ppc"
 S=${WORKDIR}/${P}
 SRC_URI="http://software.tangent.org/download/${P}.tar.gz"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	=net-www/apache-1*
 	dev-lang/perl
 	mysql? ( >=dev-db/mysql-3.23.26 )

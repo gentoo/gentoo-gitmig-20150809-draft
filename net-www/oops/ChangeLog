@@ -1,6 +1,9 @@
 # ChangeLog for net-www/oops
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/oops/ChangeLog,v 1.8 2004/06/25 01:08:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/oops/ChangeLog,v 1.9 2004/07/01 22:48:37 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> oops-1.5.6.ebuild:
+  virtual/glibc -> virtual/libc
 
   08 Dec 2003; <spider@gentoo.org> oops-1.5.6.ebuild:
   Fixing a  chown user.group issue

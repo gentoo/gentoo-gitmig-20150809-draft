@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/lighttpd-1.2.2.ebuild,v 1.1 2004/06/27 00:21:42 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/lighttpd-1.2.2.ebuild,v 1.2 2004/07/01 22:44:04 eradicator Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="QPL-1.0"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="mysql ssl php"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		>=dev-libs/libpcre-3.1
 		>=sys-libs/zlib-1.1
 		>=sys-devel/libtool-1.4

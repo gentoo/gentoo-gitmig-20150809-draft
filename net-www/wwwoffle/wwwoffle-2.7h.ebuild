@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.7h.ebuild,v 1.10 2004/06/25 01:16:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.7h.ebuild,v 1.11 2004/07/01 22:51:35 eradicator Exp $
 
 DESCRIPTION="wwwoffle = WWW Offline Explorer, an adv. caching proxy especially suitable for nonpermanent (e.g. dialup) Internet connections"
 
@@ -15,11 +15,11 @@ IUSE="ipv6"
 DEPEND="sys-devel/flex
 	sys-libs/zlib
 	sys-devel/gcc
-	virtual/glibc
+	virtual/libc
 	>=sys-apps/sed-4"
 
 RDEPEND="sys-libs/zlib
-	virtual/glibc"
+	virtual/libc"
 
 src_compile() {
 	local myconf

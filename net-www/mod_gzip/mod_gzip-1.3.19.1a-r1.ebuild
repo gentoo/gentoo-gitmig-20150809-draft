@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_gzip/mod_gzip-1.3.19.1a-r1.ebuild,v 1.11 2004/06/25 01:01:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_gzip/mod_gzip-1.3.19.1a-r1.ebuild,v 1.12 2004/07/01 22:46:12 eradicator Exp $
 
 DESCRIPTION="Apache module which acts as an Internet Content Accelerator"
 HOMEPAGE="http://www.remotecommunications.com/apache/mod_gzip/"
@@ -9,7 +9,7 @@ KEYWORDS="x86 sparc"
 S=${WORKDIR}/${P}
 SRC_URI="http://www.remotecommunications.com/apache/${PN}/src/${PV}/${PN}.c.gz"
 
-DEPEND="virtual/glibc =net-www/apache-1* >=sys-libs/zlib-1.1.4"
+DEPEND="virtual/libc =net-www/apache-1* >=sys-libs/zlib-1.1.4"
 LICENSE="Apache-1.1"
 SLOT="0"
 

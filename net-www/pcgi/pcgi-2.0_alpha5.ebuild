@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/pcgi/pcgi-2.0_alpha5.ebuild,v 1.3 2004/06/25 01:09:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/pcgi/pcgi-2.0_alpha5.ebuild,v 1.4 2004/07/01 22:48:49 eradicator Exp $
 
 # this package is ONLY available inside the Zope tarball!!!
 ZOPE_PV=2.6.1
@@ -24,9 +24,9 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="${DEPEND}
-		virtual/glibc"
+		virtual/libc"
 RDEPEND="${RDEPEND}
-	virtual/glibc
+	virtual/libc
 	virtual/python"
 
 src_compile() {

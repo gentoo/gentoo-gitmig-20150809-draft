@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/monkeyd/monkeyd-0.8.4.ebuild,v 1.2 2004/06/25 03:06:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/monkeyd/monkeyd-0.8.4.ebuild,v 1.3 2004/07/01 22:46:59 eradicator Exp $
 
 WEBROOT=/var/www/localhost
 
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="php"
 
-DEPEND="virtual/glibc"
-RDEPEND="virtual/glibc
+DEPEND="virtual/libc"
+RDEPEND="virtual/libc
 	php? ( dev-php/php-cgi )"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-#$Header: /var/cvsroot/gentoo-x86/net-www/prozilla/prozilla-1.3.6-r1.ebuild,v 1.12 2004/06/25 01:10:28 agriffis Exp $
+#$Header: /var/cvsroot/gentoo-x86/net-www/prozilla/prozilla-1.3.6-r1.ebuild,v 1.13 2004/07/01 22:49:49 eradicator Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A download manager"
@@ -10,7 +10,7 @@ KEYWORDS="x86 sparc ppc amd64"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc >=sys-libs/ncurses-5.2"
+DEPEND="virtual/libc >=sys-libs/ncurses-5.2"
 
 src_compile() {
 	./configure --prefix=/usr \

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/mod_contribs-1.0.8-r1.ebuild,v 1.16 2004/06/25 01:00:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/mod_contribs-1.0.8-r1.ebuild,v 1.17 2004/07/01 22:45:45 eradicator Exp $
 
 # The mod_layout and mod_random that come in the archive are really old,
 # so I've replaced them with more current versions.
@@ -16,7 +16,7 @@ KEYWORDS="x86 sparc"
 LICENSE="Apache-1.1"
 SLOT="0"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	=net-www/apache-1*"
 RDEPEND=""
 IUSE=""

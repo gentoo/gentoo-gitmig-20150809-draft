@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozplugger
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozplugger/ChangeLog,v 1.5 2004/06/25 01:06:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozplugger/ChangeLog,v 1.6 2004/07/01 22:47:57 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mozplugger-1.5.2.ebuild:
+  virtual/glibc -> virtual/libc
 
   19 Apr 2004; Aron Griffis <agriffis@gentoo.org> mozplugger-1.5.2.ebuild:
   Change net-www/mozilla* to || ( net-www/mozilla net-www/mozilla-firefox

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_authenticache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_authenticache/ChangeLog,v 1.8 2004/06/25 00:59:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_authenticache/ChangeLog,v 1.9 2004/07/01 22:45:33 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mod_authenticache-2.0.6.ebuild, mod_authenticache-2.0.8.ebuild:
+  virtual/glibc -> virtual/libc
 
   20 Jun 2004; Chuck Short <zul@gentoo.org> mod_authenticache-2.0.8.ebuild:
   Marked stable fox x86.

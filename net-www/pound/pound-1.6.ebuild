@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/pound/pound-1.6.ebuild,v 1.3 2004/06/28 03:38:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/pound/pound-1.6.ebuild,v 1.4 2004/07/01 22:49:22 eradicator Exp $
 
 MY_P=${P/p/P}
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 IUSE="ssl"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/boa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/boa/ChangeLog,v 1.20 2004/06/25 00:49:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/boa/ChangeLog,v 1.21 2004/07/01 22:41:51 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> boa-0.94.12.ebuild,
+  boa-0.94.13-r1.ebuild, boa-0.94.13.ebuild:
+  virtual/glibc -> virtual/libc
 
   14 Jun 2004; Aron Griffis <agriffis@gentoo.org> boa-0.94.12.ebuild,
   boa-0.94.13-r1.ebuild, boa-0.94.13.ebuild:

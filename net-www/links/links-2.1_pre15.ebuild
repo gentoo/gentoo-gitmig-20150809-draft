@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre15.ebuild,v 1.4 2004/06/25 15:42:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre15.ebuild,v 1.5 2004/07/01 22:44:27 eradicator Exp $
 
 IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg"
 
@@ -31,7 +31,7 @@ RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	directfb? ( dev-libs/DirectFB )
 	fbcon? ( >=media-libs/libpng-1.2.1 sys-libs/gpm )
 	sys-libs/zlib
-	virtual/glibc
+	virtual/libc
 	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}

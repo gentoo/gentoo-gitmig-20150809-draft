@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/mozilla-firefox-bin-0.9-r1.ebuild,v 1.4 2004/06/25 01:05:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/mozilla-firefox-bin-0.9-r1.ebuild,v 1.5 2004/07/01 22:47:40 eradicator Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -21,7 +21,7 @@ KEYWORDS="-* ~x86 ~amd64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="virtual/x11
 	x86? (
 		>=sys-libs/lib-compat-1.0-r2

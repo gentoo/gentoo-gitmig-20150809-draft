@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/spawn-fcgi/spawn-fcgi-1.1.0.ebuild,v 1.2 2004/06/27 11:39:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/spawn-fcgi/spawn-fcgi-1.1.0.ebuild,v 1.3 2004/07/01 22:50:02 eradicator Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="QPL-1.0"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		>=dev-libs/libpcre-3.1
 		>=sys-libs/zlib-1.1"
 RDEPEND=">=sys-libs/zlib-1.1

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_contribs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/ChangeLog,v 1.12 2004/06/25 01:00:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/ChangeLog,v 1.13 2004/07/01 22:45:45 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mod_contribs-1.0.8-r1.ebuild:
+  virtual/glibc -> virtual/libc
 
   20 Jun 2004; Chuck Short <zul@gentoo.org> mod_contribs-1.0.8-r1.ebuild:
   Ebuild cleanup.
