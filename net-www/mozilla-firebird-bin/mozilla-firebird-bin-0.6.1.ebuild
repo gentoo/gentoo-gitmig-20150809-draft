@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/mozilla-firebird-bin-0.6.1.ebuild,v 1.2 2003/08/01 04:36:20 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/mozilla-firebird-bin-0.6.1.ebuild,v 1.3 2003/08/01 04:45:55 brad Exp $
 
 inherit nsplugins eutils
 
@@ -21,9 +21,8 @@ DEPEND="virtual/glibc"
 RDEPEND=">=sys-libs/lib-compat-1.0-r2
 	=x11-libs/gtk+-1.2* 
 	virtual/x11
-	!net-www/phoenix-cvs
-	!new-www/phoenix-bin
-	!new-www/mozilla-firebird"
+	!new-www/mozilla-firebird
+	!new-www/mozilla-firebird-cvs"
 
 src_install() {
 	# Plugin path creation
