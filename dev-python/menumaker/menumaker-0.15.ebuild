@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/menumaker/menumaker-0.15.ebuild,v 1.1 2003/11/25 09:48:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/menumaker/menumaker-0.15.ebuild,v 1.2 2003/12/29 16:36:51 g2boojum Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.1"

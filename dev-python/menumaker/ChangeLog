@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/menumaker
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/menumaker/ChangeLog,v 1.2 2003/11/25 09:48:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/menumaker/ChangeLog,v 1.3 2003/12/29 16:36:51 g2boojum Exp $
+
+*menumaker-0.12 (29 Dec 2003)
+
+  29 Dec 2003; Grant Goodyear <g2boojum@gentoo.org> menumaker-0.12.ebuild,
+  menumaker-0.15.ebuild:
+  Marked all ebuilds as x86.
 
 *menumaker-0.15 (25 Nov 2003)
 
