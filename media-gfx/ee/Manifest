@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dd73c3d9f9fa7717c987c5ce70125d30 ChangeLog 1239
+MD5 c7ec2ccd18383961be8d6d87f18ffd4d ChangeLog 1361
 MD5 deb1f761d3a7c7874a143ea14656bb03 ee-0.3.12-r2.ebuild 961
-MD5 3a9923f87aa62b5de53e8fe037fc0dae files/ee-mo.diff 502
+MD5 dc3bd868c2bab2eedbb4ac1e739d72d0 ee-0.3.12-r3.ebuild 1457
 MD5 bd6a1a727ab6ef5c722ecf4f77cf719e files/digest-ee-0.3.12-r2 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBXVIiI7fK2cqeyXkRAn58AKCkKj1khM+R4ICbAZBSk0pxYiKjnQCeNjOM
-/d5M45S0q9/UN7Nn8wDHeAY=
-=SFLq
------END PGP SIGNATURE-----
+MD5 bd6a1a727ab6ef5c722ecf4f77cf719e files/digest-ee-0.3.12-r3 61
+MD5 3a9923f87aa62b5de53e8fe037fc0dae files/ee-mo.diff 502
