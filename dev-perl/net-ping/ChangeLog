@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/net-ping
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ping/ChangeLog,v 1.5 2004/07/09 17:59:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ping/ChangeLog,v 1.6 2004/07/23 08:44:18 eradicator Exp $
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> net-ping-2.31.ebuild:
+  Stable amd64.
 
   09 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> net-ping-2.31.ebuild:
   Stable on ppc.
