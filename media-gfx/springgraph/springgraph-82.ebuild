@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/springgraph/springgraph-82.ebuild,v 1.1 2004/05/30 02:11:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/springgraph/springgraph-82.ebuild,v 1.2 2004/06/17 11:32:48 kloeri Exp $
+
+inherit eutils
 
 DESCRIPTION="Generate spring graphs from graphviz input files"
 HOMEPAGE="http://www.chaosreigns.com/code/springgraph"
