@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/clamassassin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.5 2004/08/28 20:07:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.6 2004/08/31 16:10:11 ticho Exp $
+
+*clamassassin-1.2.1 (31 Aug 2004)
+
+  31 Aug 2004; <ticho@gentoo.org> +clamassassin-1.2.1.ebuild:
+  Version bump, closes #62108. Also updated DEPEND to require clamav-0.75.1
 
   28 Aug 2004; David Holm <dholm@gentoo.org> clamassassin-1.2.0-r1.ebuild:
   Added to ~ppc.
