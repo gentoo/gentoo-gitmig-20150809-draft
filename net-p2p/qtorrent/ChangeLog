@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/qtorrent
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtorrent/ChangeLog,v 1.4 2004/04/21 12:04:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtorrent/ChangeLog,v 1.5 2004/04/25 23:59:50 aliz Exp $
+
+  25 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> qtorrent-0.9.6.1.ebuild:
+  Marked stable on amd64 and x86.
 
   21 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> qtorrent-0.9.5.ebuild,
   qtorrent-0.9.6.1.ebuild:
