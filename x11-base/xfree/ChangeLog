@@ -1,10 +1,12 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.12 2002/04/07 15:08:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.13 2002/04/07 20:25:46 azarah Exp $
 
   7 Apr 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r9.ebuild :
 
-  Fix a stray symlink in /
+  Fix a stray symlink in /.  Also moved libGL.a to /usr/lib/opengl/xfree/lib, as
+  it caused compile problems for tuxracer, etc.  Fixed opengl-update to generate
+  the /usr/lib/libGLcore.so symlinks for nvidia implementation.
 
 *xfree-4.2.0-r9 (7 Apr 2002)
 

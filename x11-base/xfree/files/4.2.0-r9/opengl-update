@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.0-r9/opengl-update,v 1.2 2002/04/07 06:05:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.0-r9/opengl-update,v 1.3 2002/04/07 20:25:46 azarah Exp $
 
 
 source /etc/init.d/functions.sh
@@ -61,6 +61,32 @@ else
 		/usr/lib/libGL.so
 	ln -sf /usr/lib/opengl/${1}/lib/${realname} \
 		/usr/lib/libGL.so.1
+	
+	#setup the /usr/X11R6/lib/libMesaGL.so symlink
+	if [ -e /usr/X11R6/lib/libMesaGL.so ]
+	then
+		rm -f /usr/X11R6/lib/libMesaGL.so
+	fi
+	ln -sf /usr/lib/opengl/${1}/lib/${realname} \
+		/usr/X11R6/lib/libMesaGL.so
+
+	#setup the /usr/lib/libGLcore.so symlink
+	if [ -e /usr/lib/libGLcore.so ]
+	then
+		rm -f /usr/lib/libGLcore.so
+	fi
+	if [ -e /usr/lib/libGLcore.so.1 ]
+	then
+		rm -f /usr/lib/libGLcore.so.1
+	fi
+	if [ -e /usr/lib/opengl/${1}/lib/libGLcore.so ]
+	then
+		realname="$(readlink /usr/lib/opengl/${1}/lib/libGLcore.so)"
+		ln -sf /usr/lib/opengl/${1}/lib/${realname} \
+			/usr/lib/libGLcore.so
+		ln -sf /usr/lib/opengl/${1}/lib/${realname} \
+			/usr/lib/libGLcore.so.1
+	fi
 
 	#setup the /usr/X11R6/lib/modules/extensions/libglx.so symlink
 	if [ -e /usr/X11R6/lib/modules/extensions/libglx.so ]
