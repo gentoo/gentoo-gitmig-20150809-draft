@@ -1,14 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-1.0.9.ebuild,v 1.3 2001/11/10 12:45:09 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-1.0.9.ebuild,v 1.4 2002/04/12 17:39:22 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GOB is a preprocessor for making GTK+ objects with inline C code"
 SRC_URI="http://ftp.5z.com/pub/gob/${P}.tar.gz"
 HOMEPAGE="http://www.5z.com/jirka/gob.html"
 
-RDEPEND=">=dev-libs/glib-1.2.10"
+RDEPEND="=dev-libs/glib-1.2*"
 
 DEPEND="${RDEPEND}
 	sys-devel/flex"
