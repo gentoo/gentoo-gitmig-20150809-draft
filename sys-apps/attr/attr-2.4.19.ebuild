@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.19.ebuild,v 1.8 2004/12/06 13:59:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.19.ebuild,v 1.9 2004/12/16 06:14:46 absinthe Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls debug"
 RESTRICT="nomirror" # to let new digests propogate #70997
 
