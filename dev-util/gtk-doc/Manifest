@@ -1,6 +1,7 @@
 MD5 7d43fac3d8d098afec1e7d3b841aa2d7 ChangeLog 2032
 MD5 cfdffd5cccf8eba740e698d8c3f5a924 gtk-doc-0.9-r2.ebuild 798
 MD5 de5ab9bf68dc1e3410290fb1159cbcec gtk-doc-1.0.ebuild 917
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 557619e346f385cad71ac1bb54e967ff gtk-doc-1.1.ebuild 897
 MD5 f8283f744714787de6d57b3a6d13a883 files/digest-gtk-doc-0.9-r2 63
 MD5 700d48e51ea12ccd525a271ee5ff7ce4 files/digest-gtk-doc-1.0 64
