@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.2_pre20041022.ebuild,v 1.4 2004/11/01 04:30:51 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.3.ebuild,v 1.1 2004/11/01 04:30:51 fafhrd Exp $
 
 inherit kernel-mod eutils
 
 DESCRIPTION="Enable realtime capabilties via a security module."
 
 HOMEPAGE="http://www.sourceforge.net/projects/realtime-lsm/"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="http://www.joq.us/realtime/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc"
 
 IUSE=""
 DEPEND="virtual/linux-sources
@@ -60,7 +60,7 @@ src_unpack() {
 	fi
 
 	cd ${S}
-	epatch ${FILESDIR}/kmisc.patch-${PV}
+	epatch ${FILESDIR}/kmisc.patch-0.8.2_pre20041022
 }
 
 src_compile() {
