@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gltt/gltt-2.5.2-r1.ebuild,v 1.12 2004/06/24 23:01:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gltt/gltt-2.5.2-r1.ebuild,v 1.13 2004/07/14 19:40:57 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GL truetype library"
 SRC_URI="http://gltt.sourceforge.net/download/${P}.tar.gz"
 HOMEPAGE="http://gltt.sourceforge.net/"
@@ -10,6 +9,7 @@ HOMEPAGE="http://gltt.sourceforge.net/"
 SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="x86 sparc "
+IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/glut

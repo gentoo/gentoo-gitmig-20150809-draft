@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/giblib-1.2.2.ebuild,v 1.13 2004/06/24 23:00:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/giblib-1.2.2.ebuild,v 1.14 2004/07/14 19:36:50 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Giblib, graphics library"
 HOMEPAGE="http://www.linuxbrit.co.uk/"
 SRC_URI="http://www.linuxbrit.co.uk/downloads/${P}.tar.gz"
@@ -10,6 +9,7 @@ SRC_URI="http://www.linuxbrit.co.uk/downloads/${P}.tar.gz"
 SLOT="0"
 LICENSE="as-is | BSD"
 KEYWORDS="x86 ppc sparc ~alpha"
+IUSE=""
 
 DEPEND=">=media-libs/imlib2-1.0.3
 	>=media-libs/freetype-2.0"
