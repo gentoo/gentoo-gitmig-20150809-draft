@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libip_vs_user_sync
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libip_vs_user_sync/ChangeLog,v 1.1 2004/08/31 15:39:41 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libip_vs_user_sync/ChangeLog,v 1.2 2004/09/04 17:48:20 squinky86 Exp $
+
+  04 Sep 2004; Jon Hood <squinky86@gentoo.org>
+  libip_vs_user_sync-1.0.0.ebuild:
+  Change virtual/glibc --> virtual/libc.
 
 *libip_vs_user_sync-1.0.0 (31 Aug 2004)
 
