@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.13 2005/02/12 00:45:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.14 2005/02/12 02:15:05 eradicator Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
 
@@ -9,7 +9,9 @@
 # within the main xmms tarball.  Usage:
 
 # PATCH_VER:
+# M4_VER:
 # GENTOO_URI:
+GENTOO_URI=${GENTOO_URI-"http://dev.gentoo.org/~eradicator/xmms"}
 # Set this variable if you want to use a gentoo specific patchset.  This adds
 # ${GENTOO_URI}/xmms-${PV}-gentoo-patches-${PATCH_VER}.tar.bz2 to the SRC_URI
 
@@ -31,40 +33,49 @@ DESCRIPTION="Xmms Plugin: ${PN}"
 LICENSE="GPL-2"
 
 SRC_URI="http://www.xmms.org/files/1.2.x/xmms-${PV}.tar.bz2
+	 ${M4_VER:+${GENTOO_URI}/xmms-${PV}-gentoo-m4-${M4_VER}.tar.bz2}
 	 ${PATCH_VER:+${GENTOO_URI}/xmms-${PV}-gentoo-patches-${PATCH_VER}.tar.bz2}"
 
 # Set S to something which exists
 S="${WORKDIR}/xmms-${PV}"
 
-if [[ -n "${PATCH_VER}" ]]; then
-	RDEPEND="${RDEPEND+${RDEPEND}}${RDEPEND-${DEPEND}}"
-	DEPEND="${DEPEND}
-	        =sys-devel/automake-1.7*
-		=sys-devel/autoconf-2.5*
-		sys-devel/libtool"
-fi
+RDEPEND="${RDEPEND+${RDEPEND}}${RDEPEND-${DEPEND}}"
+DEPEND="${DEPEND}
+        =sys-devel/automake-1.7*
+	=sys-devel/autoconf-2.5*
+	sys-devel/libtool"
 
 xmms-plugin_src_unpack() {
 	unpack ${A}
 
+	cd ${S}
 	if [[ -n "${PATCH_VER}" ]]; then
-		cd ${S}
 
 		EPATCH_SUFFIX="patch"
 		epatch ${WORKDIR}/patches
-
-		export WANT_AUTOMAKE=1.7
-		export WANT_AUTOCONF=2.5
-
-		rm acinclude.m4
-		libtoolize --force --copy || die "libtoolize --force --copy failed"
-
-		[[ ! -f ltmain.sh ]] && ln -s ../ltmain.sh
-		aclocal -I ${WORKDIR}/patches/m4 || die "aclocal failed"
-		autoheader || die "autoheader failed"
-		automake --gnu --add-missing --include-deps --force-missing --copy || die "automake failed"
-		autoconf || die "autoconf failed"
 	fi
+
+	cd ${S}/${PLUGIN_PATH}
+	sed -i -e 's:-I$(top_srcdir)::g' \
+	       -e "s:\$(top_builddir)/libxmms/libxmms.la:/usr/$(get_libdir)/libxmms.la:g" \
+	       Makefile.am
+
+	cd ${S}
+
+	export WANT_AUTOMAKE=1.7
+	export WANT_AUTOCONF=2.5
+
+	libtoolize --force --copy || die "libtoolize --force --copy failed"
+
+	if [[ -n "${M4_VER}" ]]; then
+		rm acinclude.m4
+		aclocal -I ${WORKDIR}/m4 || die "aclocal failed"
+	else
+		aclocal || die "aclocal failed"
+	fi
+	autoheader || die "autoheader failed"
+	automake --gnu --add-missing --include-deps --force-missing --copy || die "automake failed"
+	autoconf || die "autoconf failed"
 }
 
 xmms-plugin_src_compile() {
@@ -78,6 +89,7 @@ xmms-plugin_src_compile() {
 
 	econf ${myconf}
 	cd ${S}/${PLUGIN_PATH}
+
 	emake -j1 || die
 }
 
