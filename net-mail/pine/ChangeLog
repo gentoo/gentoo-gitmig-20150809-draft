@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.25 2003/02/12 08:14:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.26 2003/02/15 18:31:20 raker Exp $
+
+*pine-4.53-r4 (14 Feb 2003)
+
+  14 Feb 2003; Nick Hadaway <raker@gentoo.org> pine-4.53-r4.ebuild,
+  files/digest-pine-4.53-r4, files/pine-4.53-chappa-20030214.patch.bz2 :
+  Happy Singles Awareness Day (SAD) to ya'll. :)  Here's an
+  I love pine gift for everyone.  An updated patch with rules.c and
+  rules.h included so the configure script doesn't try to wget
+  the files.  This closes bug #15455.
 
 *pine-4.53-r3 (04 Feb 2003)
 
