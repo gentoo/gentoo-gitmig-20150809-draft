@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmappl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappl/ChangeLog,v 1.8 2004/09/02 18:22:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappl/ChangeLog,v 1.9 2004/09/29 09:23:08 pyrania Exp $
+
+  29 Sep 2004; <pyrania@gentoo.org> wmappl-0.71.ebuild:
+  Marked stable on x86.
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> wmappl-0.71.ebuild:
   Masked wmappl-0.71.ebuild stable for ppc
