@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.35 2002/02/07 23:39:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.36 2002/02/25 01:29:56 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -40,11 +40,9 @@ src_install() {
 	done
 	dodir ${WEBROOT}/images
 	insinto ${WEBROOT}/images
-	cd ${S}/images
-	doins paypal.png gtop-s.jpg znurt.jpg gbot-s.gif gridtest.gif gentoo-new.gif install*.gif fishhead.gif line.gif icon-* keychain-2.gif gentoo-2.gif
-	insinto ${WEBROOT}/images/shots
-	doins shots/*
+	cp -a ${S}/images ${WEBROOT}
 	local x
+	cd images
 	for x in shots/desktop*.png
 	do
 		[ "${x%*small.png}" != "${x}" ] && continue
