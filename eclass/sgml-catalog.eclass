@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.5 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.6 2003/04/12 16:15:03 foser Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 
 inherit base
 INHERITED="$INHERITED $ECLASS"
 
-newdepend ">=sgml-common-0.6.3-r2"
+newdepend ">=app-text/sgml-common-0.6.3-r2"
 ECLASS=sgml-catalog
 
 declare -a toinstall
