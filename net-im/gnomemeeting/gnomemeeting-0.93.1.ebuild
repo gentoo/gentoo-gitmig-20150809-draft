@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.93.1.ebuild,v 1.2 2002/08/10 15:41:02 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.93.1.ebuild,v 1.3 2002/09/11 15:25:22 raker Exp $
 
 inherit gnome2
 
@@ -16,15 +16,12 @@ KEYWORDS="x86 -ppc -sparc -sparc64"
 RDEPEND="net-libs/openh323
 	>=dev-libs/glib-2.0.3
 	>=x11-libs/gtk+-2.0.5
-	>=gnome-base/gconf-1.2.0
 	>=sys-devel/autoconf-2.52
 	>=dev-libs/pwlib-1.2.19
 	>=net-nds/openldap-2.0.21
 	>=dev-libs/libIDL-0.8.0
 	>=net-libs/linc-0.5.0-r2
-	>=gnome-base/gnome-vfs-2.0.0
-	>=gnome-base/libgnomeui-2.0.0
-	>=gnome-base/gnome-common-1.2.4-r3"
+	>=gnome-base/gnome-2.0.1"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
