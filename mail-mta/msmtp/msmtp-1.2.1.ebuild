@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.2.1.ebuild,v 1.2 2004/08/03 19:34:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.2.1.ebuild,v 1.3 2004/08/08 19:00:27 slarti Exp $
 
 DESCRIPTION="An SMTP client and SMTP plugin for mail user agents such as Mutt"
 HOMEPAGE="http://msmtp.sourceforge.net/"
@@ -17,15 +17,18 @@ KEYWORDS="~x86 ~ppc ~amd64"
 
 src_compile () {
 	local myconf
+
 	use sasl \
 		&& myconf="${myconf} --enable-gsasl" \
 		|| myconf="${myconf} --disable-gsasl"
 
-	if  use ssl && use gnutls ; then
+	if use ssl && use gnutls ; then
 		myconf="${myconf} --enable-ssl --with-ssl=gnutls"
-	elif  use ssl && ! use gnutls ; then
+	elif use ssl && ! use gnutls ; then
 		myconf="${myconf} --enable-ssl --with-ssl=openssl"
-	else
+	elif ! use ssl && use gnutls ; then
+		myconf="${myconf} --enable-ssl --with-ssl=gnutls"
+	elif ! use ssl && ! use gnutls ; then
 		myconf="${myconf} --disable-ssl"
 	fi
 
@@ -36,13 +39,6 @@ src_compile () {
 src_install () {
 	einstall || die "install failed"
 
-	if ! use ssl && use gnutls ; then
-		ewarn " "
-		ewarn "gnutls support was not enabled (even though it was in your USE flags) as"
-		ewarn "ssl was not in them also."
-		ewarn " "
-	fi
-
-	dodoc AUTHORS COPYING ChangeLog NEWS README THANKS \
+	dodoc AUTHORS ChangeLog NEWS README THANKS \
 		doc/msmtprc.example doc/Mutt+msmtp.txt || die "dodoc failed"
 }

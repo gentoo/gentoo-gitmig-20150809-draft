@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.10 2004/08/03 19:34:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.11 2004/08/08 19:00:27 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> msmtp-1.2.1.ebuild:
+  Improve USE flag handling.
 
   03 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> msmtp-1.2.1.ebuild:
   fix use invocation
