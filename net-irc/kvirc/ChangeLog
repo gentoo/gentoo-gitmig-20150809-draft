@@ -1,6 +1,20 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.1 2002/02/01 21:53:32 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.2 2002/07/01 17:35:13 danarmak Exp $
+
+*kvirc-3.0.0_beta1 (01 Jul 2002)
+
+  01 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  This is the 3.0.0 beta1 release. It compiles under gcc 3.x (fix bug #4127),
+  adds working kde support which can be turned on and off, antialiasing and
+  many other goodies.
+  
+  Note: the ebuild with version number 3.0.0 which existed for a long time
+  was actually the 'xmas' release, a prerelease of 3.0.0 which should have
+  been marked e.g. 3.0.0_alpha1. As it is, portage will not automatically
+  update an already-installed 'xmas' kvirc to beta1, but you are encouraged
+  to do so.
 
 *kvirc-3.0.0 (1 Feb 2002)
 
