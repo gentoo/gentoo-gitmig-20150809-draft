@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1bb2217fe22953b0f3df04f9b4bc54dd fujaba-4.1.0.ebuild 1092
-MD5 e317ad61d9390f1e0e21f62f76c991f0 fujaba-4.0.1.ebuild 878
-MD5 ef2429efb705dcbc37b7ad1b0da62059 ChangeLog 853
+MD5 6fdffa76090843719b320104a53b8a94 fujaba-4.1.0.ebuild 1115
+MD5 6065f9116d4f98aef146322e4e88fadb fujaba-4.0.1.ebuild 897
+MD5 60897ecde5db92a0e35cb669f3c22e9a ChangeLog 974
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 bc7d3c5a2391e2ca7a7370c94a862989 files/digest-fujaba-4.0.1 81
 MD5 5d139b04e0178ac6209b48123ca329df files/digest-fujaba-4.1.0 81
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBf7Ma/rLF9B432nYRAhXWAJ9ZjlB8DBMHOEn+g1S/EqLG8WlRMgCfVwLN
-NC4uDHy6OEOBvzi/b7jOrG8=
-=ji/1
+iD8DBQFBiMU9/rLF9B432nYRAjvuAKDBUsqFuR+Exs40781WL4NH+RWdcACfeu3J
+3wMW04JojFa243dBEr1p434=
+=zDAn
 -----END PGP SIGNATURE-----

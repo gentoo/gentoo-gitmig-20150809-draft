@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d3e890a85e7daed0b02cb51f13f9183c ChangeLog 668
-MD5 879b458ec225e53098adbdd022b765ac eclipse-gef-bin-20040330.ebuild 935
+MD5 efcc762f63f9f41453070643e3b0f6a9 eclipse-gef-bin-20040619.ebuild 961
+MD5 5c7581ddc744d42f29a468f1c95743b5 eclipse-gef-bin-20040330.ebuild 948
+MD5 20da1aa8f7d854abe037653882f4c30e ChangeLog 809
 MD5 e00347ef153b8083c4c327c64bb69698 metadata.xml 942
-MD5 109378ccce5d3419076f15be04933e31 eclipse-gef-bin-20040619.ebuild 946
 MD5 7d4e5c1037c609f8af5be7897714d6ec files/digest-eclipse-gef-bin-20040330 71
 MD5 0586fe3a6a8267029902c0bec33b4492 files/digest-eclipse-gef-bin-20040619 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBW1OcI1lqEGTUzyQRAqZNAKC4Uesmjdesqw2BXKTCwU5N3CKHWQCgqSBf
-zXuuXCkP33PDs2EjUSejP4M=
-=8EBT
+iD8DBQFBiMTG/rLF9B432nYRAtnMAJ9tTSJXe7Rem8241yoxT1nyfv+0xQCdHE62
+zQ4RaJu9qyc1d+Ca4/bzNLY=
+=65At
 -----END PGP SIGNATURE-----

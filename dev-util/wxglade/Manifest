@@ -1,12 +1,22 @@
-MD5 e8474e8663460d106afdf337d009fa4e ChangeLog 2077
-MD5 4fca175f747a090fd2b7b8ce22fbc06d metadata.xml 162
-MD5 860eefe292d22a855dc291b4fccb940e wxglade-0.3.1-r1.ebuild 1111
-MD5 129879b0f888a03548abb4a04169e8f2 wxglade-0.3.1.ebuild 999
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7418bb425c04860b3966bbe2e121100e wxglade-0.3.2.ebuild 1113
+MD5 860eefe292d22a855dc291b4fccb940e wxglade-0.3.1-r1.ebuild 1111
+MD5 c015fb0ade9fdeda8c7432c17952f35f wxglade-0.3.4.ebuild 1076
+MD5 129879b0f888a03548abb4a04169e8f2 wxglade-0.3.1.ebuild 999
+MD5 99dec73a2cc61a4f01de2bfb5494180f ChangeLog 2170
+MD5 4fca175f747a090fd2b7b8ce22fbc06d metadata.xml 162
 MD5 448d4d4af966e99fb53434afa91cc061 wxglade-0.3.3.ebuild 1062
-MD5 1251726fc4fc6ce1cb84d3a1c92f9805 wxglade-0.3.4.ebuild 1066
-MD5 e2d210765074f03bd2e2c5d2ce8f6b63 files/digest-wxglade-0.3.1 62
 MD5 e2d210765074f03bd2e2c5d2ce8f6b63 files/digest-wxglade-0.3.1-r1 62
+MD5 e2d210765074f03bd2e2c5d2ce8f6b63 files/digest-wxglade-0.3.1 62
 MD5 cb49ef62c01f4e657f5ccfdfc792ce1f files/digest-wxglade-0.3.2 62
 MD5 100d8ac5a0df34f93e797042d7a6dc64 files/digest-wxglade-0.3.3 62
 MD5 a02e86d0ccc0ee0cabeea016ffc1b975 files/digest-wxglade-0.3.4 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiMYH/rLF9B432nYRApMQAKCRUlyEz/tRKmr2pJLNxIuabCCgswCfVXrj
+YqjIf3cgQa3MeAn1fDIvViU=
+=e9qY
+-----END PGP SIGNATURE-----
