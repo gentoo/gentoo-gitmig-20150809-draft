@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/grass
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/ChangeLog,v 1.2 2003/04/17 22:37:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/ChangeLog,v 1.3 2003/08/17 21:39:09 mholzer Exp $
+
+  17 Aug 2003; Martin Holzer <mholzer@gentoo.org> grass-5.0.1.ebuild,
+  grass-5.0.2.ebuild:
+  Fixed install dir. Marked stable
 
 *grass-5.0.2 (17 Apr 2003)
 

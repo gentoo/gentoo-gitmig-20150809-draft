@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.2.ebuild,v 1.1 2003/04/17 22:37:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.2.ebuild,v 1.2 2003/08/17 21:39:09 mholzer Exp $
 
 DESCRIPTION="An open-source GIS with raster and vector functionality."
 HOMEPAGE="http://grass.baylor.edu/"
-SRC_URI="http://grass.ibiblio.org/grass5/source/${P}_src.tar.gz"
+SRC_URI="http://grass.ibiblio.org/${PN}5/source/${P}_src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="tcltk png jpeg tiff postgres odbc gd motif truetype"
-# Internal USE flags for still-unstable packages with no system USE flags.
-IUSE="${IUSE} nviz"
+# Removed cause mesa never goes stable.
+# IUSE="${IUSE} nviz"
 
 DEPEND=">=sys-devel/make-3.80
 	>=sys-libs/zlib-1.1.4
@@ -27,7 +27,7 @@ DEPEND=">=sys-devel/make-3.80
 	>=media-libs/netpbm-9.12
 	>=dev-lang/R-1.6.1
 	tcltk? ( >=dev-lang/tcl-8.3.4
-		 >=dev-lang/tk-8.3.4 )
+		>=dev-lang/tk-8.3.4 )
 	png? ( >=media-libs/libpng-1.2.5 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.7 )
@@ -35,8 +35,9 @@ DEPEND=">=sys-devel/make-3.80
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
 	gd? ( >=media-libs/libgd-1.8.3 )
 	motif? ( >=x11-libs/lesstif-0.93.36 )
-	truetype? ( >=media-libs/freetype-2.1.3 )
-	nviz? ( >=media-libs/mesa-3.5 )"
+	truetype? ( >=media-libs/freetype-2.1.3 )"
+	#nviz? ( >=media-libs/mesa-3.5 )"
+
 S=${WORKDIR}/${P/-/}
 
 src_compile() {
@@ -79,21 +80,21 @@ src_compile() {
 	&& myconf="${myconf} --with-freetype" \
 	|| myconf="${myconf} --without-freetype"
 
-	use nviz \
-	&& myconf="${myconf} --with-glw" \
-	|| myconf="${myconf} --without-glw"
+	#use nviz \
+	#&& myconf="${myconf} --with-glw" \
+	#|| myconf="${myconf} --without-glw"
 
 	./configure \
 		--host=${CHOST} \
-		--prefix=${D}/usr/local \
-		--infodir=/usr/local/share/info \
-		--mandir=/usr/local/share/man \
+		--prefix=${D}/usr \
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man \
 		${myconf} || die "./configure failed"
 	make || die "make failed"
 }
 
 src_install() {
 	make install || die
-	dosed "s:^GISBASE=.*$:GISBASE=/usr/local/grass5:" \
-	  /usr/local/bin/grass5
+	dosed "s:^GISBASE=.*$:GISBASE=/usr/grass5:" \
+	  /usr/bin/grass5
 }
