@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.11.ebuild,v 1.2 2003/12/09 16:28:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.11.ebuild,v 1.3 2003/12/09 16:29:49 lanius Exp $
 
 inherit eutils
 
@@ -114,5 +114,4 @@ src_install() {
 	cd ${S}/ijs
 	dodir /usr/bin /usr/include /usr/lib
 	einstall install_prefix=${D}
-	die
 }
