@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3456 2005/01/07 17:26:22 solar Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3457 2005/01/07 18:52:19 vericgar Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,58 @@
 ##
 ##   End example
 ##
+
+# <vericgar@gentoo.org> (07 Jan 2005)
+# Apache herd package refresh
+# Masked for user testing. Meta-bug #76457
+=dev-libs/apr-0.9.5
+=dev-libs/apr-1.0.0
+=dev-libs/apr-1.0.1
+=dev-libs/apr-util-0.9.5
+=dev-libs/apr-util-1.0.0
+=dev-libs/apr-util-1.0.1
+=net-www/gentoo-webroot-default-0.1
+=net-www/lingerd-0.94
+=net-www/mod_auth_external-2.2.7-r1
+=net-www/mod_auth_kerb-4.11-r1
+=net-www/mod_auth_ldap-2.4.2-r1
+=net-www/mod_auth_mysql-2.5-r1
+=net-www/mod_auth_pam-1.1.1-r1
+=net-www/mod_backhand-1.2.2
+=net-www/mod_bandwidth-0.1
+=net-www/mod_bandwidth-2.0.5-r1
+=net-www/mod_encoding-20021209-r1
+=net-www/mod_fastcgi-2.4.2-r1
+=net-www/mod_injection-0.3.1-r1
+=net-www/mod_layout-3.2.1-r1
+=net-www/mod_layout-4.0.1a-r1
+=net-www/mod_ldap_userdir-1.1.4-r1
+=net-www/mod_limitipconn-0.22-r1
+=net-www/mod_loopback-2.01-r1
+=net-www/mod_mp3-0.40-r1
+=net-www/mod_pcgi2-2.0.2-r1
+=net-www/mod_random-1.4-r1
+=net-www/mod_random-2.0-r1
+=net-www/mod_roaming-2.0.0-r1
+=net-www/mod_scgi-1.2-r1
+=net-www/mod_security-1.8.4
+=net-www/mod_security-1.8.6
+=net-www/mod_ssl-2.8.22
+=net-www/mod_throttle-3.1.2-r2
+=net-www/mod_transform-0.6.0
+=net-www/mod_vdbh-1.0.3-r1
+=net-www/mod_watch-4.03-r1
+=net-www/mod_xslt-1.0.5a-r1
+=www-apache/libapreq2-2.04_pre03
+=www-apache/mod_csv-0.0.1
+=www-apache/mod_dav_svn-1.1.0
+=www-apache/mod_dav_svn-1.1.1
+=www-apache/mod_diagnostics-0.0.1
+=www-apache/mod_lisp-2.33-r1
+=www-apache/mod_macro-1.1.6
+=www-apache/mod_proxy_html-0.0.1
+=www-apache/mod_tcl-1.0-r1
+=www-apache/mod_umask-0.1.0
 
 # <solar@gentoo> (07 Jan 2005)
 # Masked for security reasons. Requested by <koon@gentoo>. Upstream 
