@@ -1,0 +1,23 @@
+# ChangeLog for app-sci/hcalc
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/ChangeLog,v 1.1 2004/12/24 14:56:10 ribosome Exp $
+
+*hcalc-1.0 (24 Dec 2004)
+
+  24 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +hcalc-1.0.ebuild:
+  Moved from app-sci/hcalc to sci-calculators/hcalc.
+
+  08 Sep 2004; <blubb@gentoo.org> hcalc-1.0.ebuild:
+  added ~amd64 keyword
+
+*hcalc-1.0 (22 Jun 2004)
+
+  22 Jun 2004; Olivier Fisette <ribosome@gentoo.org>; hcalc-1.0.ebuild
+  Removed superfluous RDEPEND="${DEPEND}"
+
+*hcalc-1.0 (16 Jul 2003)
+
+  16 Jul 2003; Don Seiler <rizzo@gentoo.org>; hcalc-1.0.ebuild:
+  ebuild submitted by damjan.bole(at)studioproteus.si
+
