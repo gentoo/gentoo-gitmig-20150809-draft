@@ -1,10 +1,14 @@
-MD5 e54ad75ecc907ad36f90073e6d861a8e vconfig-1.8.ebuild 1430
-MD5 7a15ac1dc2c128d9cae26d4788d3e0b3 vconfig-1.7-r1.ebuild 1255
-MD5 83477bb978ec1a75ef7ba70bf55dc5cc vconfig-1.7.ebuild 904
-MD5 c6bf4416be4273349147bc3ff0e49b11 vconfig-1.7-r2.ebuild 1378
-MD5 e8d099ab785d3cac7ac7794b046f187f ChangeLog 1844
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 26679e22cb346f96b1bb1984e04a3664 vconfig-1.8.ebuild 1460
+MD5 2cbb14f8edbab361c21053e9734c0bad ChangeLog 2032
 MD5 da7c34aae19ef948be141f51591982e0 metadata.xml 497
-MD5 f2bc7516c2dfe6d1722ef5cc7c546488 files/digest-vconfig-1.7 59
 MD5 4522407c3158529f4f2c56dce0c498b5 files/digest-vconfig-1.8 60
-MD5 f2bc7516c2dfe6d1722ef5cc7c546488 files/digest-vconfig-1.7-r1 59
-MD5 cab63a6609b92c352b8b8e657587b778 files/digest-vconfig-1.7-r2 135
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBgVQO94CCfB4KcwwRAlJtAJ4jLhRM605CVUbNLrAvuN9hJaNJdACgtI2a
+w1IlmLsPSI8A6pcSH6SQF+U=
+=dkIB
+-----END PGP SIGNATURE-----

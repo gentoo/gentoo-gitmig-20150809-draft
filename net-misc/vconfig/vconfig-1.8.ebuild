@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.8.ebuild,v 1.7 2004/07/13 03:06:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.8.ebuild,v 1.8 2004/10/28 20:19:55 solar Exp $
 
-inherit eutils
+inherit eutils flag-o-matic toolchain-funcs
 
 MY_PN="vlan"
 S=${WORKDIR}/${MY_PN}
@@ -24,8 +24,8 @@ src_unpack() {
 }
 
 src_compile() {
-	use static && LDFLAGS="${LDFLAGS} -static"
-	emake CC="${CC}" CCFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
+	use static && appened-ldflags -static
+	emake CC="$(tc-getCC)" CCFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vconfig
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.11 2004/07/13 03:06:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.12 2004/10/28 20:19:55 solar Exp $
+
+  28 Oct 2004; <solar@gentoo.org> -vconfig-1.7-r1.ebuild,
+  -vconfig-1.7-r2.ebuild, -vconfig-1.7.ebuild, vconfig-1.8.ebuild:
+  fixed CC usage to use new toolchain-funcs.eclass. bug 69275
 
   12 Jul 2004; <solar@gentoo.org> vconfig-1.7-r1.ebuild,
   vconfig-1.7-r2.ebuild, vconfig-1.7.ebuild, vconfig-1.8.ebuild:
