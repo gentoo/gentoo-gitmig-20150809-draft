@@ -722,6 +722,10 @@ gnome-extra/gconf-editor
 gnome-extra/gal2
 gnome-extra/at-spi
 >=app-text/ggv-1.99.0
+# this fails to compile until new gtk+ is out 
+=app-text/ggv-1.99.5
+>=app-editors/gedit-1.110.0
+
 dev-libs/libmrproject
 >=app-office/mrproject-0.5.91
 >=app-office/gnumeric-1.1.3
