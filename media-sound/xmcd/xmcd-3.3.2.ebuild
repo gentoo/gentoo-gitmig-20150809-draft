@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.4 2004/06/01 16:56:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.5 2004/06/19 04:33:20 weeve Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.ibiblio.org/tkan/download/${PN}/${PV}/src/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc sparc ~amd64"
 
 DEPEND="virtual/x11
 	x11-libs/openmotif
