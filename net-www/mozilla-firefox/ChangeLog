@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.64 2004/09/17 08:03:06 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.65 2004/09/17 20:59:25 tester Exp $
+
+  17 Sep 2004; Olivier Crete <tester@gentoo.org>
+  mozilla-firefox-1.0_pre.ebuild:
+  Marking stable on x86 per security bug #63996
 
   17 Sep 2004; Travis Tilley <lv@gentoo.org> mozilla-firefox-1.0_pre.ebuild:
   stable on amd64
