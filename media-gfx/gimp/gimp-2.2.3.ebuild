@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.3.ebuild,v 1.2 2005/02/10 01:19:05 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.3.ebuild,v 1.3 2005/03/07 14:09:29 corsair Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gimp/v2.2/${P}.tar.bz2
 	doc? ( mirror://gimp/help/testing/${P_HELP}.tar.gz )"
 
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~hppa ~sparc ~amd64 ~mips ~ppc64 ~alpha"
+KEYWORDS="~x86 ~ppc ~hppa ~sparc ~amd64 ~mips ppc64 ~alpha"
 #IUSE="X aalib altivec debug doc gimpprint jpeg mmx mng png python sse svg tiff wmf"
 IUSE="aalib altivec debug doc gtkhtml gimpprint jpeg mmx mng png python sse svg tiff wmf"
 
