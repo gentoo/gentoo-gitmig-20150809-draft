@@ -1,8 +1,9 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.4 2002/08/12 06:12:06 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.5 2002/11/17 08:39:59 vapier Exp $
 
 *vanilla-sources-2.4.18 (12 Aug 2002)
+
   12 Aug 2002; Jack Morgan <jmorgan@gentoo.org>
   Added arch keywords (sparc64)
 
@@ -18,6 +19,9 @@
   Added arch keywords (x86 ppc)
 
   09 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> ChangeLog :
-
   Added ChangeLog.
 
+*vanilla-sources-2.2.22 (17 Nov 2002)
+
+  17 Nov 2002; Mike Frysinger <vapier@gentoo.org>
+  Some people like old school kernels
