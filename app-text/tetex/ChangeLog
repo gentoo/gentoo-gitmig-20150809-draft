@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.46 2003/09/18 05:56:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.47 2003/09/27 14:06:11 obz Exp $
+
+  27 Sep 2003; Mike Gardiner <obz@gentoo.org> tetex-2.0.2-r1.ebuild,
+  tetex-2.0.2.ebuild:
+  Fixed listings.sty location, and marked stable on x86. Thanks to John Steele
+  Scott <toojays@toojays.net> for help on bug #29723
 
   18 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> tetex-1.0.7-r12.ebuild,
   tetex-1.0.7-r13.ebuild, tetex-2.0.2-r1.ebuild, tetex-2.0.2.ebuild:

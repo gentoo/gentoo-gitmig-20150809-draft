@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2.ebuild,v 1.10 2003/09/18 05:56:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2.ebuild,v 1.11 2003/09/27 14:06:11 obz Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -16,7 +16,7 @@ SRC_URI="ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TETEXSR
 	ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TEXMF}"
 HOMEPAGE="http://tug.org/teTeX/"
 
-KEYWORDS="~x86 ppc sparc alpha amd64"
+KEYWORDS="x86 ppc sparc alpha amd64"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="ncurses X libwww png"
@@ -52,6 +52,10 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-dont-run-config.diff
 	epatch ${FILESDIR}/${P}.diff
+
+	# fix up misplaced listings.sty in the 2.0.2 archive. 
+	# this should be fixed in the next release <obz@gentoo.org>
+	mv texmf/source/latex/listings/listings.sty texmf/tex/latex/listings/
 
 }
 
