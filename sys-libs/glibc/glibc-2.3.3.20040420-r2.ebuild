@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420-r2.ebuild,v 1.2 2004/11/10 09:20:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420-r2.ebuild,v 1.3 2004/11/11 02:29:50 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -287,11 +287,6 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.3/${LOCAL_P}-propolice-guard-functions-v3.patch
 		cp ${FILESDIR}/2.3.3/ssp.c ${S}/sysdeps/unix/sysv/linux || \
 			die "failed to copy ssp.c to ${S}/sysdeps/unix/sysv/linux/"
-		# gcc 3.4 nukes ssp without this patch
-		if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
-		then
-			epatch ${FILESDIR}/2.3.3/glibc-2.3.3-ssp-gcc34-after-frandom.patch
-		fi
 	fi
 
 	# sparc fails when building the components for the normal crt1.o
