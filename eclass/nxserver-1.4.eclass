@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.4.eclass,v 1.1 2004/08/30 21:25:50 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.4.eclass,v 1.2 2004/09/01 20:21:52 stuart Exp $
 #
 # eclass for handling the different nxserver binaries available
 # from nomachine's website
@@ -21,7 +21,11 @@ RESTRICT="nomirror strip"
 
 SRC_URI="nxserver-${MY_PV}.i386.rpm"
 DEPEND="$DEPEND
-		 >=net-misc/nxclient-1.3.2"
+		 >=net-misc/nxclient-1.4.0
+        >=sys-apps/shadow-4.0.3-r6
+		>=net-misc/openssh-3.6.1_p2
+		>=net-misc/nxssh-1.4.0
+		net-misc/nx-x11"
 
 RDEPEND="$RDEPEND
 	     >=media-libs/jpeg-6b-r3
@@ -30,13 +34,6 @@ RDEPEND="$RDEPEND
 		 virtual/x11
 		 >=net-misc/openssh-3.6.1_p2
 		 >=dev-lang/perl-5.8.0-r12"
-
-DEPEND="$DEPEND
-        >=sys-apps/shadow-4.0.3-r6
-		>=net-misc/openssh-3.6.1_p2
-		>=net-misc/nxssh-1.3.2
-		>=net-misc/nxproxy-1.3.2
-		net-misc/nx-x11"
 
 S="${WORKDIR}"
 
@@ -104,15 +101,17 @@ nxserver_pkg_postinst() {
 	chmod 0600 /usr/NX/etc/$l_szPasswd
 	chown -R nx:root /usr/NX/home/nx
 	chown -R nx:root /usr/NX/var
+	chmod 755 /usr/NX/etc
 
 	einfo "Generating SSH keys for the 'nx' user"
 	if [ ! -f /usr/NX/etc/users.id_dsa ]; then
 		ssh-keygen -q -t dsa -N '' -f /usr/NX/etc/users.id_dsa
 	fi
 	chown nx:root /usr/NX/etc/users.id_dsa
-	if [ -f /usr/NX/home/nx.ssh/server.id_dsa.pub.key ] ; then
-		cp -f /usr/NX/home/nx/.ssh/server.id_dsa.pub.key /usr/NX/home/nx/.ssh/authorized_keys2
-	fi
+
+	cp -f /usr/NX/home/nx/.ssh/server.id_dsa.pub.key /usr/NX/home/nx/.ssh/authorized_keys2
+	chown nx:root /usr/NX/home/nx/.ssh/authorized_keys2
+	chmod 0600 /usr/NX/home/nx/.ssh/authorized_keys2
 
 	if [ ! -f /usr/NX/var/broadcast.txt ]; then
 	    einfo "Creating NX user registration database"
@@ -130,6 +129,8 @@ nxserver_pkg_postinst() {
 		ewarn "If you don't have one already, you can get an evaluation"
 		ewarn "key, or purchase a full license, from www.nomachine.com"
 		ewarn
+		ewarn "The key.txt file must be chmod'd 0400 and must owned by"
+		ewarn "by the 'nx' user."
 	fi
 
 	if [ ! -f /usr/NX/etc/node.conf ] ; then
@@ -137,9 +138,8 @@ nxserver_pkg_postinst() {
 		ewarn "To complete the installation, you must create a file called"
 		ewarn "'/usr/NX/etc/node.conf'.  An example configuration file can"
 		ewarn "be found in /usr/NX/etc"
-		ewarn
 	fi
 
 	# regen the ld.so cache, because Portage sometimes doesn't
-	ldconfig -v > /dev/null
+	ldconfig -v > /dev/null 2>&1
 }
