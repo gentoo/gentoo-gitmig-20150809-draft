@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.2_pre2.ebuild,v 1.1 2004/02/18 01:54:26 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.2_pre2.ebuild,v 1.2 2004/02/18 19:31:17 rphillips Exp $
 
 MY_P="${P/_/}"
 
@@ -43,6 +43,8 @@ src_install () {
 	dodoc COPYING
 	cd docs-tla
 	dodoc =README
-	cd html
-	dohtml -r .
+	docinto ps
+	dodoc ps/*.ps
+	docinto html
+	dohtml -r html/
 }
