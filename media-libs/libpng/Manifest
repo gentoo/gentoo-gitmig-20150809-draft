@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7eaed8a3df30c09593b3bf763ad9f5f2 ChangeLog 10057
+MD5 e6bada19707d6444a6b1f62743189bcd ChangeLog 10086
 MD5 c99f79f220032714a162ca69e0dfe911 libpng-1.2.8.ebuild 1642
-MD5 8799b3b063d02da3c9fb322d2b9811d5 libpng-1.2.7-r1.ebuild 1897
+MD5 5b69ffa5bbaa2f1f03c1b75133166f04 libpng-1.2.7-r1.ebuild 1885
 MD5 b86cb2a5d09ddf0b1deff86514b7a1b3 libpng-1.2.7.ebuild 1834
 MD5 37681c3a63bbaa895831b03e9644f77c files/digest-libpng-1.2.8 65
 MD5 7443cfcd027ad293e56ec7bed76ee21c files/macos.patch 589
@@ -16,7 +16,7 @@ MD5 fbf3226ad08934966af8773089b8c945 files/libpng-1.2.7-png_do_strip_filler.diff
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB2cAproRuSHgZdywRAuh9AJ9tdNTRhubaqpiOZI21Ce4hRgKQawCeKzAW
-JKCx1WAogN0NuUUZnpxzyDo=
-=fyL/
+iD8DBQFB2cCVroRuSHgZdywRAg5FAJ9EMO/3IQrAiP+6xTF12reV/Rn7NgCfVsNE
+ZSrc3QTds/YxjNlKqr0l0eI=
+=vzxf
 -----END PGP SIGNATURE-----
