@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre17-r1.ebuild,v 1.3 2004/02/29 22:47:54 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre19.ebuild,v 1.1 2004/02/29 22:47:54 latexer Exp $
 
-inherit pcmcia kernel-mod
+inherit pcmcia
 
 IUSE="${IUSE} usb build"
 
@@ -21,7 +21,7 @@ DEPEND="sys-kernel/linux-headers
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86"
 
 src_unpack() {
 	check_KV
@@ -34,10 +34,17 @@ src_unpack() {
 
 	cp ${WORKDIR}/${PN}-gentoo-init ${S}/etc/rc.wlan
 
+	# Small fix to make sure prism2dl compiles against /usr/include/linux
+	# and not /usr/src/linux/include/linux. Userland shouldn't use
+	# /usr/src/linux (especially this seems to break under 2.6 headers)
+
+	cd ${S}
+	EPATCH_SINGLE_MSG="Fixing prism2dl includes to use /usr/include/linux" \
+		epatch ${FILESDIR}/${P}-prism2dl.diff
+
 	# Lots of sedding to do to get the man pages and a few other
 	# things to end up in the right place.
 
-	cd ${S}
 	sed -i -e "s:mkdir:#mkdir:" \
 		-e "s:cp nwepgen.man:#cp nwepgen.man:" \
 		-e "s:\t\$(TARGET_:\t#\$(TARGET_:" \
@@ -97,11 +104,6 @@ src_compile() {
 	emake || die "Failed to compile add-on keygen program"
 	cd ${S}/add-ons/lwepgen
 	emake || die "Failed to compile add-on lwepgen program"
-	if kernel-mod_is_2_4_kernel
-	then
-		cd ${S}/src/prism2/download
-		emake || die "Failed to compile prism2dl program"
-	fi
 }
 
 src_install () {
@@ -126,10 +128,7 @@ src_install () {
 	exeinto /sbin
 	doexe add-ons/keygen/keygen
 	doexe add-ons/lwepgen/lwepgen
-	if kernel-mod_is_2_4_kernel
-	then
-		doexe src/prism2/download/prism2dl
-	fi
+
 }
 
 pkg_postinst() {
