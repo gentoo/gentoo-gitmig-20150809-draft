@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.5.2.ebuild,v 1.1 2004/01/04 15:54:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.5.2.ebuild,v 1.2 2004/01/20 18:34:52 usata Exp $
 
 IUSE="doc emacs"
 
@@ -10,8 +10,9 @@ MY_P="${P/-latex/}"
 
 DESCRIPTION="A LaTeX 2e macro package which enables the use of CJK scripts in various encodings"
 HOMEPAGE="http://cjk.ffii.org/"
+# fonts are taken from ftp://ftp.ctan.org/tex-archive/fonts/CJK.tar.gz
 SRC_URI="ftp://ftp.ffii.org/pub/cjk/${MY_P}.tar.gz
-	ftp://ftp.ctan.org/tex-archive/fonts/CJK.tar.gz
+	mirror://gentoo/${MY_P}-fonts.tar.gz
 	doc? ( ftp://ftp.ffii.org/pub/cjk/${MY_P}-doc.tar.gz )"
 
 LICENSE="GPL-2"
@@ -30,7 +31,7 @@ src_unpack() {
 	use doc && unpack ${MY_P}-doc.tar.gz
 
 	cd ${S}
-	unpack CJK.tar.gz
+	unpack ${MY_P}-fonts.tar.gz
 	rm CJK/han*.300.tar.gz || die
 	for f in ${S}/CJK/*.tar.gz; do
 		tar --no-same-owner -xzf $f || die
