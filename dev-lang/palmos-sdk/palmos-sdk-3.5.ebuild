@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/palmos-sdk-3.5.ebuild,v 1.1 2003/12/25 19:19:25 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/palmos-sdk/palmos-sdk-3.5.ebuild,v 1.2 2004/03/13 12:57:22 plasmaroo Exp $
 
 DESCRIPTION="The static libraries and header files needed for developing PalmOS applications."
 HOMEPAGE="http://www.palmos.com/"
@@ -14,7 +14,7 @@ A1="sdk35.tar.gz"
 A2="sdk35-update1.tar.gz"
 AD1="sdk35-docs.tar.gz"
 AD2="sdk35-examples.tar.gz"
-A="${A1} ${A2}"
+AX="${A1} ${A2}"
 
 IUSE=""
 BASE="/opt/palmdev/sdk-${SLOT}"
@@ -44,7 +44,7 @@ pkg_setup() {
 
 src_unpack() {
 
-	unpack ${A}
+	unpack ${AX}
 	if [ `use doc` ]; then
 		unpack ${AD1}
 		unpack ${AD2}
