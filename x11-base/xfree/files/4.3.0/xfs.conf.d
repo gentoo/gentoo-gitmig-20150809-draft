@@ -1,9 +1,8 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.3.0/xfs.conf.d,v 1.1 2003/02/28 04:28:29 seemant Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.3.0/xfs.conf.d,v 1.2 2004/03/06 04:20:10 vapier Exp $
 
 # Config file for /etc/init.d/xfs
-
 
 # Port for xfs to listen on.  Default is set to "-1", meaning
 # it will only listen on unix sockets, and not tcp ports.  If
@@ -20,4 +19,3 @@ XFS_PORT="-1"
 # if it takes too long for you.
 
 SETUP_FONTDIRS="yes"
-
