@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.26 2002/08/14 07:10:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.27 2002/08/15 16:29:49 danarmak Exp $
+
+  15 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix deps: remove incorrect deps on libgif and libngif and add missing dep
+  on libjpeg. Also remove old ebuilds.
 
   12 Aug 2002; Dan Armak <danarmak@gentoo.org> qt-2.3.2-r1.ebuild  :
 

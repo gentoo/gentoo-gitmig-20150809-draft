@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r1.ebuild,v 1.7 2002/08/14 13:05:59 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r1.ebuild,v 1.8 2002/08/15 16:29:49 danarmak Exp $
 
 S=${WORKDIR}/qt-x11-free-${PV}
 
@@ -16,10 +16,9 @@ HOMEPAGE="http://www.trolltech.com/"
 DEPEND="virtual/x11
 	media-libs/libpng
 	media-libs/lcms
+	media-libs/jpeg
 	>=media-libs/libmng-1.0.0
 	>=media-libs/freetype-2
-	gif? ( media-libs/giflib
-		media-libs/libungif )
 	nas? ( >=media-libs/nas-1.4.1 )
 	odbc? ( >=dev-db/unixODBC-2.0 )
 	mysql? ( >=dev-db/mysql-3.2.10 )
