@@ -1,5 +1,5 @@
---- module-init-tools-0.9.10/modprobe.c.orig	2003-03-09 13:02:52.000000000 +0200
-+++ module-init-tools-0.9.10/modprobe.c	2003-03-09 13:17:05.000000000 +0200
+--- module-init-tools-0.9.10/modprobe.c.orig	2003-03-09 13:47:46.000000000 +0200
++++ module-init-tools-0.9.10/modprobe.c	2003-03-09 13:49:09.000000000 +0200
 @@ -1096,12 +1096,14 @@
  	while ((opt = getopt_long(argc, argv, "vVC:o:rknqsclt:aif", options, NULL)) != -1){
  		switch (opt) {
@@ -26,7 +26,7 @@
 +
 +	/* Check MODPROBE_CONFIG */
 +	if ((getenv("MODPROBE_CONFIG")) && (NULL == config))
-+		config = getenv("MODPROBE_CONFIG");
++		config = NOFAIL(strdup(getenv("MODPROBE_CONFIG")));
 +
  	/* Check MODPROBE_QUIET */
 -	if (getenv("MODPROBE_QUIET"))
@@ -43,3 +43,15 @@
  		if (0 == strcmp(getenv("MODPROBE_LOG"), "1"))
  			log = 1;
  
+@@ -1206,8 +1218,10 @@
+ 	if (config && !dump_only && strncmp(argv[optind], "/dev/", 5) == 0) {
+ 		if (strcmp("/etc/modules.conf", config) == 0)
+ 			config = NULL;
+-		else if (strcmp("/etc/modules.devfs", config) == 0)
++		else if (strcmp("/etc/modules.devfs", config) == 0) {
+ 			config = "/etc/modprobe.devfs";
++			setenv("MODPROBE_CONFIG", "/etc/modprobe.devfs", 1);
++		}
+ 	}
+ 
+ 	/* -r only allows certain restricted options */
