@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.93.20030118.ebuild,v 1.13 2003/09/14 17:58:31 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.93.20030118.ebuild,v 1.14 2003/12/01 22:49:15 pappy Exp $
 
 inherit mount-boot eutils flag-o-matic
 
@@ -52,7 +52,8 @@ src_compile() {
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
 	if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
 	then
-		CC="${CC} -yet_exec"
+		# the configure script has problems with -nostdlib
+		CC="${CC} -yet_exec -yno_propolice"
 	fi
 
 	econf --exec-prefix=/ \
