@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/darcnes/dn9b-0401.ebuild,v 1.1 2001/05/27 22:39:02 ryan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/darcnes/dn9b-0401-r1.ebuild,v 1.1 2001/10/06 13:20:34 azarah Exp $
 
 A=dn9b0401.tgz
 S=${WORKDIR}/darcnes
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.netway.com/~nyef"
 
 DEPEND=">=media-libs/svgalib-1.4.2
 	X? ( virtual/x11 )
-	gtk? ( >=x11-libs/gtk+-1.2.8 )"
+	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )"
 
 src_compile() {
 
@@ -40,7 +40,7 @@ src_install () {
     doexe sdarcnes
     if [ "`use X`" ]
     then
-	exeinto /usr/X11R6/bin
+	exeinto /usr/bin
         doexe darcnes
     fi
     dodoc readme

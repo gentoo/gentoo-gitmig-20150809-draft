@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Ben Beuchler <insyte@mazer.squad51.net> 
 #     and Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.0.ebuild,v 1.1 2001/09/27 14:45:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.0-r1.ebuild,v 1.1 2001/10/06 13:20:34 azarah Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -70,8 +70,8 @@ DEPEND="$guidep
         >=sys-libs/ncurses-5.2-r2
 	dev-util/cscope
         gpm?    ( >=sys-libs/gpm-1.19.3 )
-	gnome?  ( gnome-base/gnome-libs )
-	gtk?    ( x11-libs/gtk+ )
+	gnome?  ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
+	gtk?    ( >=x11-libs/gtk+-1.2.10-r1 )
 	X?      ( x11-base/xfree )
 	perl?   ( sys-devel/perl )
 	python? ( dev-lang/python )
