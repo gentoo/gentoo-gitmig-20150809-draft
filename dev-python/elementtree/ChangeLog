@@ -1,0 +1,7 @@
+# ChangeLog for dev-python/elementtree
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.1 2004/06/05 17:18:26 lucass Exp $
+
+  05 Jun 2004; <lucass@gentoo.org> :
+  Initial commit. Bug #44870. Thanks for Martin Klaffenboeck and Jacob Smullyan.
+
