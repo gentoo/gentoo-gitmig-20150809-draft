@@ -1,10 +1,10 @@
 # ChangeLog for games-fps/ut2003
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.16 2004/03/22 14:17:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.17 2004/03/22 14:17:54 wolf31o2 Exp $
 
   22 Mar 2004; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225-r1.ebuild:
   Modified sed line to change sed from working on portage tree to working on
-  file in . Closing bug #45287.
+  file in ${D}. Closing bug #45287.
 
   19 Mar 2004; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225-r1.ebuild:
   Fixing sed problem and (hopefully) closing bug #35603.
