@@ -1,5 +1,5 @@
-MD5 1d861b25af2358906aef3a75f63b1a4b raptor2-1.0.0-r1.ebuild 989
-MD5 976eaa198416b428eab47158b0cfb318 ChangeLog 1123
+MD5 8d83f96c1b1229b89a7bc5001e9fea57 ChangeLog 1216
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 cb9946abee76de3990d02d08d371045f raptor2-1.0.0-r1.ebuild 986
 MD5 563987e822f08af130b65e3862776d6c files/1.0.0-chdir.patch 291
 MD5 ee85df7f290384c5b32e7aa0f1ff1bc5 files/digest-raptor2-1.0.0-r1 65
