@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/clientcookie/clientcookie-0.4.19.ebuild,v 1.2 2004/06/25 01:27:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/clientcookie/clientcookie-0.4.19.ebuild,v 1.3 2004/06/27 18:09:35 pythonhead Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://wwwsearch.sourceforge.net/ClientCookie/"
 SRC_URI="http://wwwsearch.sourceforge.net/ClientCookie/src/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DOCS="COPYING ChangeLog PKG-INFO README.txt"
 
