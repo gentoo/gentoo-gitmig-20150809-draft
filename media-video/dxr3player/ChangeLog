@@ -1,6 +1,9 @@
-# ChangeLog for media-video/cxfe
+# ChangeLog for media-video/dxr3player
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/ChangeLog,v 1.1 2004/09/18 21:55:24 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/ChangeLog,v 1.2 2004/09/24 17:59:04 swegener Exp $
+
+  24 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *dxr3player-0.9 (18 Sep 2004)
 
