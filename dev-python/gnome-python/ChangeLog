@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.32 2004/05/04 11:18:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.33 2004/06/03 17:26:48 agriffis Exp $
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> gnome-python-1.4.2.ebuild,
+  gnome-python-1.4.4.ebuild:
+  Fix use invocation
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> gnome-python-1.4.2.ebuild,
   gnome-python-1.4.4.ebuild:

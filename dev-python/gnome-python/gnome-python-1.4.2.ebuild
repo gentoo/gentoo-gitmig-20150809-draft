@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.2.ebuild,v 1.15 2004/05/04 11:18:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.2.ebuild,v 1.16 2004/06/03 17:26:48 agriffis Exp $
 
 IUSE="gnome opengl"
 
@@ -21,7 +21,7 @@ KEYWORDS="x86 ppc sparc alpha"
 LICENSE="GPL-2"
 
 src_compile() {
-	if [ -n "`use gnome`" ]
+	if use gnome
 	then
 		CFLAGS="${CFLAGS} `gnome-config capplet --cflags`" \
 		econf ${myopts} || die
@@ -34,7 +34,7 @@ src_compile() {
 
 src_install() {
 
-	if [ -n "`use gnome`" ]
+	if use gnome
 	then
 		cd ${S}/pygnome
 		make prefix=${D}/usr datadir=${D}/usr/share install || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.5.ebuild,v 1.2 2004/01/25 02:31:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.5.ebuild,v 1.3 2004/06/03 17:25:17 agriffis Exp $
 
 inherit python distutils
 
@@ -56,7 +56,7 @@ src_install() {
 	cp -r ${S}/{LICENCIA,MANUAL,demos} ${D}/usr/share/doc/${PF}
 	rm -f ${D}/usr/share/doc/${PF}/demos/modulepythong.py
 
-	if [ -n "`use doc`" ]; then
+	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins ${DISTDIR}/python.pdf
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.1.0.ebuild,v 1.7 2004/03/06 08:38:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.1.0.ebuild,v 1.8 2004/06/03 17:35:31 agriffis Exp $
 
 inherit distutils
 
@@ -24,7 +24,7 @@ src_install() {
 	distutils_src_install
 
 	# use gtk2 if they so wish
-	if [ -n "`use gtk2`" ]; then
+	if use gtk2; then
 		sed -e 's/import manhole/import manhole2/' \
 			-e 's/manhole\.run()/manhole2.run()/' \
 			-i ${D}/usr/bin/manhole

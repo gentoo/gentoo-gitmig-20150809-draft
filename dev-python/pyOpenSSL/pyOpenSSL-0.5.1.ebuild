@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyOpenSSL/pyOpenSSL-0.5.1.ebuild,v 1.15 2004/06/02 21:32:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyOpenSSL/pyOpenSSL-0.5.1.ebuild,v 1.16 2004/06/03 17:27:55 agriffis Exp $
 
 inherit distutils
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	distutils_src_compile
-	if [ "`use tetex`" ] ; then
+	if use tetex ; then
 		addwrite /var/cache/fonts
 		cd ${S}/doc
 		make html ps dvi
@@ -30,7 +30,7 @@ src_compile() {
 src_install() {
 	distutils_src_install
 
-	if [ "`use tetex`" ] ; then
+	if use tetex ; then
 		dohtml ${S}/doc/html/*
 		dodoc ${S}/doc/pyOpenSSL.*
 	fi

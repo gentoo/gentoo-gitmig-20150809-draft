@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythong
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/ChangeLog,v 1.8 2004/03/28 11:55:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/ChangeLog,v 1.9 2004/06/03 17:25:17 agriffis Exp $
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> pythong-2.1.2.ebuild,
+  pythong-2.1.4.ebuild, pythong-2.1.5.ebuild:
+  Fix use invocation
 
   28 Mar 2004; Bryan Østergaard <kloeri@gentoo.org> pythong-2.1.2.ebuild,
   pythong-2.1.4.ebuild:
