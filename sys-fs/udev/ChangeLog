@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.53 2004/06/28 09:14:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.54 2004/06/30 18:42:44 gregkh Exp $
+
+  30 Jun 2004; Greg Kroah-Hartman <gregkh@gentoo.org> -udev-016-r2.ebuild:
+  removed old ebuilds, closing bug #4900
 
   28 Jun 2004; Joshua Kinard <kumba@gentoo.org> udev-026-r1.ebuild:
   Marked stable on mips.
