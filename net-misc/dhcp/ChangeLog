@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.45 2004/10/17 12:42:14 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.46 2004/11/10 07:24:38 lv Exp $
+
+  10 Nov 2004; Travis Tilley <lv@gentoo.org>
+  +files/dhcp-3.0.1-fix-invalid-attribute.patch, dhcp-3.0.1.ebuild:
+  fixed some invalid attributes in includes/dhcpd.h so that dhcp compiles
+  using gcc 3.4 again. closes bug 69555
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> dhcp-3.0.1.ebuild:
   keywords ~amd64.

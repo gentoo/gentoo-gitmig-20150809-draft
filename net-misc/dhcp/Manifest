@@ -1,21 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 82dc460a1bd400681e03fe80a7bcb00f ChangeLog 7375
-MD5 fc6fd08c31e500eab4e03de058c3d904 dhcp-3.0.1.ebuild 3930
+MD5 37dfb44d785e2277fd5a8859a311c424 ChangeLog 7597
 MD5 9384ae7ba3e9f56b8027ea92f607042d metadata.xml 215
+MD5 7d50e4a39640d74b9a0bedf1c5b57705 dhcp-3.0.1.ebuild 3986
 MD5 a4fc0a5a40c8ec22f3301945fc744516 files/conf.dhcpd 381
+MD5 66becf9870e0293bbd35d1fba770751a files/dhcp-3.0+paranoia.patch 5366
+MD5 d909d81a4d4ea39ddfc9898d33488c73 files/dhcp-3.0pl2-fix-perms.patch 485
 MD5 0203f009ee3427c47c6962c1352e3de4 files/dhcp.conf 634
 MD5 6fac614e84b5c2856503f0a62d10c1fa files/dhcp.rc6 1100
-MD5 7f1859e6517a23f87c8e83c68a15a537 files/digest-dhcp-3.0.1 62
-MD5 d909d81a4d4ea39ddfc9898d33488c73 files/dhcp-3.0pl2-fix-perms.patch 485
 MD5 1a902e3332707119032d7bc229b91001 files/dhcrelay.conf 505
 MD5 c2433edf6a800843b0d55c9086de1252 files/dhcrelay.rc6 564
-MD5 66becf9870e0293bbd35d1fba770751a files/dhcp-3.0+paranoia.patch 5366
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBiaaMHTu7gpaalycRAvH2AKDuLQu5+nrd3KAPU760AWOSjnEM7ACgtN4D
-lAPg0cyNDyDDmRkGq7AhRhI=
-=Yf9B
------END PGP SIGNATURE-----
+MD5 7f1859e6517a23f87c8e83c68a15a537 files/digest-dhcp-3.0.1 62
+MD5 ca45269300d74a3a8750e0e64e8d92ea files/dhcp-3.0.1-fix-invalid-attribute.patch 583

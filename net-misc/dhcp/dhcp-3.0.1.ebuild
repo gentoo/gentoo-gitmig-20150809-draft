@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.1.ebuild,v 1.9 2004/11/04 03:47:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.1.ebuild,v 1.10 2004/11/10 07:24:38 lv Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -24,6 +24,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/dhcp-3.0+paranoia.patch
 	epatch ${FILESDIR}/dhcp-3.0pl2-fix-perms.patch
+	epatch ${FILESDIR}/dhcp-3.0.1-fix-invalid-attribute.patch
 	has noman ${FEATURES} && sed -i 's:nroff:echo:' */Makefile.dist
 }
 
