@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 36b79e9f337c0cf4eb6bfef40522f5eb ethstatus-0.4.2-r2.ebuild 672
-MD5 55e15b7534133b2ae6e677b5e66b095c ChangeLog 395
+MD5 102e76781375e656d2675449c3eeab93 ChangeLog 401
 MD5 3627d7378552f7fce06d331ddeae2926 metadata.xml 219
 MD5 43b28edd9eb20ab82774f4c17f2554c4 files/digest-ethstatus-0.4.2-r2 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBtQKhI1lqEGTUzyQRAoM3AKCOo/caTcuRsCb/LkrBKJhBRd9n3gCfRdc6
+CyHglVqjC64f1OdwiAn5pWI=
+=vo31
+-----END PGP SIGNATURE-----
