@@ -8,7 +8,7 @@ start() {
 
 	. /etc/conf.d/lm_sensors
 
-	if [ -n "${NOLOADMODULES}" ] ; then
+	if [ -z "${NOLOADMODULES}" ] ; then
 		if [ -z "${MODULE_0}" ] ; then
 			eerror "MODULE_0 is not set in /etc/conf.d/lm_sensors, try running sensors-detect"
 			return 1
@@ -73,7 +73,7 @@ stop() {
 
 	. /etc/conf.d/lm_sensors
 
-	if [ -n "${NOLOADMODULES}" ] ; then
+	if [ -z "${NOLOADMODULES}" ] ; then
 		if [ -z "${MODULE_0}" ] ; then
 			eerror "MODULE_0 is not set in /etc/conf.d/lm_sensors, try running sensors-detect"
 			return 1

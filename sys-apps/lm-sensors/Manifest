@@ -29,5 +29,5 @@ MD5 d8c62d91275ce75f12c70d068db57a97 files/rc_lm_sensors 621
 MD5 4c60dc8246e548fab5b56c66f6d6a020 files/lm-sensors-2.6.5-hk-longstring.patch 1475
 MD5 7f118aec7c81c482c292c7d228c80119 files/digest-lm-sensors-2.9.0 68
 MD5 456d41bfdda2f5df2208f6c4a232a6c4 files/digest-lm-sensors-2.8.5 68
-MD5 b0a4855a926efd6dcaf0f8284e8a2997 files/rc 2332
+MD5 6caf3a2ef7bd1503aac7e3c8129c88a8 files/rc 2332
 MD5 62d5eaa6c0f7bec20849a635b32616b6 files/lm-sensors-2.8.8-sensors-detect-gentoo.diff 4843
