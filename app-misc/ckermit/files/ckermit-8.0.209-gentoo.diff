@@ -1,0 +1,13 @@
+--- ckcnet.c~	Sat Feb  5 18:27:48 2000
++++ ckcnet.c	Fri Apr 27 04:58:43 2001
+@@ -59,7 +59,9 @@
+ #ifdef CK_SSL
+ #include "ck_ssl.h"
+ #endif /* CK_SSL */
+-
++#ifdef LINUX
++#include <time.h>
++#endif
+ #ifdef CK_DNS_SRV
+ #ifdef OS2
+ #ifdef NT
