@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.22.ebuild,v 1.1 2002/03/23 01:43:45 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.22.ebuild,v 1.2 2002/03/27 12:23:31 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The most popular logfile analyser in the world"
@@ -29,7 +29,7 @@ src_install() {
 	dodoc README.txt Licence.txt analog.cfg
 	dohtml -a html,gif,css,ico docs/*
 	docinto examples ; dodoc examples/*
-	docinto cgi ; dodoc anlgform.html anlgform.pl
+	docinto cgi ; dodoc anlgform.pl
 	cp -a how-to ${D}/usr/share/doc/${PF}
 
 	insinto /usr/share/analog/images ; doins images/*
