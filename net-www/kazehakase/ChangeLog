@@ -1,6 +1,11 @@
 # ChangeLog for net-www/kazehakase
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.2 2004/03/02 17:53:15 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.3 2004/04/06 07:09:36 brad Exp $
+
+*kazehakase-0.1.4 (06 Apr 2004)
+
+  06 Apr 2004; Brad Laue <brad@gentoo.org> kazehakase-0.1.4.ebuild:
+  Version bump. Bugfixes and compatibility with GTK+ 2.4.
 
 *kazehakase-0.1.3 (02 Mar 2004)
 
