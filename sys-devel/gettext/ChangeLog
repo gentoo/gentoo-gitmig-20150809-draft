@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.77 2005/02/19 18:31:02 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.78 2005/03/13 06:07:16 vapier Exp $
+
+*gettext-0.14.2 (13 Mar 2005)
+
+  13 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/gettext-0.14.2-no-java-tests.patch, +gettext-0.14.2.ebuild:
+  Version bump.
 
   19 Feb 2005; Kito <kito@gentoo.org> gettext-0.14.1.ebuild:
   add conditional to save existing libintl. ~ppc-macos keyword
