@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/id3ed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3ed/ChangeLog,v 1.7 2004/09/14 16:35:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3ed/ChangeLog,v 1.8 2004/09/26 04:10:22 tgall Exp $
+
+  25 Sep 2004; Tom Gall <tgall@gentoo.org> id3ed-1.10.4.ebuild:
+  added ~ppc64, bug #64102
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> id3ed-1.10.4.ebuild:
   Stable amd64, sparc.
