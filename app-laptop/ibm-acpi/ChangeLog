@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/ibm-acpi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.4 2004/10/18 18:36:43 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.5 2004/10/20 20:34:30 brix Exp $
+
+*ibm-acpi-0.6 (20 Oct 2004)
+
+  20 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> +ibm-acpi-0.6.ebuild:
+  Version bump. Only install example configuration if USE="doc".
 
 *ibm-acpi-0.5 (18 Oct 2004)
 
