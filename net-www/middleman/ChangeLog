@@ -1,6 +1,20 @@
 # ChangeLog for net-www/middleman
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/ChangeLog,v 1.3 2003/08/11 23:06:48 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/ChangeLog,v 1.4 2003/09/11 14:36:50 solar Exp $
+
+*middleman-1.9 (11 Sep 2003)
+
+  11 Sep 2003; <solar@gentoo.org> middleman-1.9.ebuild:
+  version bumpage, The changes in this release are as follows:
+  Support for ICP (Internet cache protocol) was  added, making it
+  possible to arrange several  proxies in a hierarchy and share cached
+  objects.  It is now possible to specify multiple  directories for
+  cached objects to be stored. The  'Host' and 'File' options in most
+  configuration  sections were removed in favor of enabling/ disable
+  profiles based on the URL requested. A  workaround was added for a
+  bug triggered by  improper headers sent by Apache 1.3 when a  tar.gz
+  file was requested by a client that  doesn't support gzip
+  compression.
 
 *middleman-1.8.2 (11 Aug 2003)
 
