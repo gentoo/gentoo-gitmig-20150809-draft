@@ -9,7 +9,7 @@ MD5 d043a27656d6972c3eff302c3278642d koffice-1.3_beta1.ebuild 1241
 MD5 8d25144bc3f609caab76c82bc069a66b koffice-1.2_rc1.ebuild 847
 MD5 a0e94b795d07efc85539ea4ea091a5ba koffice-1.1.1.ebuild 1141
 MD5 4e4fab387f62640da72b98e9e56233c2 ChangeLog 4538
-MD5 2c635c379088841ed105511faa1d4ce7 koffice-1.3_beta3.ebuild 1023
+MD5 e9c6f3bffdc5870a5bd4c15db9cde008 koffice-1.3_beta3.ebuild 1023
 MD5 9ac6e869b89945991aa610d979745f09 metadata.xml 225
 MD5 7eb5f8e0051bdfa9d39ddc41d0f2b11e files/digest-koffice-1.2_beta2 71
 MD5 362c1081c562d8405d25be71122ca125 files/koffice-1.2-connectortool.diff 493
