@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/stldb4/stldb4-0.3.7.ebuild,v 1.1 2004/04/13 04:27:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/stldb4/stldb4-0.3.7.ebuild,v 1.2 2004/04/14 02:36:06 vapier Exp $
 
 inherit flag-o-matic
 
-DESCRIPTION=""
+DESCRIPTION="a nice C++ wrapper for db4"
 HOMEPAGE="http://witme.sourceforge.net/libferris.web/"
 SRC_URI="mirror://sourceforge/witme/${P}.tar.bz2"
 
