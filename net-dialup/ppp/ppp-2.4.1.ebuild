@@ -1,12 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1.ebuild,v 1.1 2001/05/29 22:17:40 ryan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1.ebuild,v 1.2 2001/06/20 14:07:06 drobbins Exp $
 
-A="${P}.tar.gz"
 S=${WORKDIR}/${P}
 DESCRIPTION="Point-to-point protocol - used for communicating with your ISP"
-SRC_URI="ftp://ftp.linuxcare.com.au/pub/ppp/${A}"
+SRC_URI="ftp://cs.anu.edu.au/pub/software/ppp/${P}.tar.gz"
 
 DEPEND="virtual/glibc"
 
