@@ -1,19 +1,17 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.18 2003/06/04 23:40:43 brad Exp $
-
-*squid-2.5.2 (04 Jun 2003)
-
-  04 Jun 2003; Brad Laue <brad@gentoo.org> Manifest, squid-2.5.2.ebuild,
-  Mark stable on x86.
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.19 2003/06/05 01:28:09 woodchip Exp $
 
 *squid-2.5.3 (04 Jun 2003)
 
-  04 Jun 2003; <woodchip@gentoo.org> Manifest, squid-2.5.3.ebuild,
+  04 Jun 2003; Donny Davies <woodchip@gentoo.org> Manifest, squid-2.5.3.ebuild,
   files/squid-2.5.3-gentoo.diff:
   Version bump.  Re-diff patch.
 
 *squid-2.5.2 (27 Mar 2003)
+
+  04 Jun 2003; Brad Laue <brad@gentoo.org> Manifest, squid-2.5.2.ebuild,
+  Mark stable on x86.
 
   27 Mar 2003; Donny Davies <woodchip@gentoo.org> squid-2.5.2.ebuild,
   files/squid-2.5.2-gentoo.diff:
