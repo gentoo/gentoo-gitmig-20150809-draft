@@ -1,8 +1,11 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.18 2003/07/26 19:40:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.19 2003/08/20 09:16:33 foser Exp $
 
 *totem-0.99.2 (26 Jul 2003)
+
+  19 Aug 2003; foser <foser@gentoo.org> totem-0.99.2.ebuild :
+  Added lirc USE flag (#24127) thanks to matt <matt@schick.mine.nu>
 
   26 Jul 2003; foser <foser@gentoo.org> totem-0.99.2.ebuild, manifest.xml :
   New version, fixed gtk+ dep so xfree-4.3 is needed (#24194,#21336)
