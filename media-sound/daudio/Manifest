@@ -1,5 +1,5 @@
-MD5 58a34c090e2f2afac78c7da2dd791b81 ChangeLog 531
-MD5 b7dee0416fc90a1d7c0713958d8cf5af daudio-0.3.ebuild 776
+MD5 0a576fd6e92af3c5ab0fe6d5ea3d138c ChangeLog 624
+MD5 2c2e27eb08b228f27ce101254ad5699e daudio-0.3.ebuild 881
 MD5 e680c5e2ccb91369a26a8603f6e4606d metadata.xml 222
 MD5 2df8f39620e0fdc7a5315888a01d7f97 files/daudio.rc 544
 MD5 1a45fb71ea5e016c3603b5efdd1fd8b1 files/digest-daudio-0.3 61

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daudio/daudio-0.3.ebuild,v 1.3 2004/07/01 07:50:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daudio/daudio-0.3.ebuild,v 1.4 2004/07/12 19:16:14 eradicator Exp $
 
 DESCRIPTION="Distributed audio on the local network"
 HOMEPAGE="http://daudio.sourceforge.net/"
@@ -9,7 +9,8 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+#-sparc: 0.3: static audio on local daemon.  No audio when client connects to amd64 daemon
+KEYWORDS="~x86 ~amd64 -sparc"
 
 IUSE=""
 DEPEND="virtual/libc
