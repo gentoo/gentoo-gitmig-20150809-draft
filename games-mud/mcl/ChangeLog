@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/mcl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/ChangeLog,v 1.7 2004/06/24 23:00:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/ChangeLog,v 1.8 2004/08/20 07:50:29 mr_bones_ Exp $
+
+  20 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/0.53.00-vc.patch, mcl-0.53.00.ebuild:
+  Add patch from Robert Gill via bug #58489 to enable mcl to be able to be
+  used from the virtual console.
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> mcl-0.53.00.ebuild:
   Marking stable on amd64 (no bugs in 202 days).
