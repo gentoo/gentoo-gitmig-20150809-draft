@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.5 2003/06/21 14:30:21 liquidx Exp $
-
-inherit eutils rpm
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.6 2003/06/22 20:39:53 taviso Exp $
 
 RH_EXTRAVERSION="1"
 
@@ -27,6 +25,8 @@ DEPEND="sys-devel/autoconf
 # Because one may only want to use the theme with kde OR gtk OR Metacity
 # OR gdm, we don't want any run-time dependencies...
 RDEPEND=""
+
+inherit eutils rpm
 
 S="${WORKDIR}/${P}"
 
