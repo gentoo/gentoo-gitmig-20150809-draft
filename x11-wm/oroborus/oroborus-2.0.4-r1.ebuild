@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.4-r1.ebuild,v 1.11 2003/02/13 17:53:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.4-r1.ebuild,v 1.12 2003/09/04 06:12:55 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Yet another window manager"
@@ -21,7 +21,7 @@ src_compile() {
 	 	    --infodir=/usr/share/info \
 		    --mandir=/usr/share/man \
 		    || die
-	
+
 	emake || die
 }
 

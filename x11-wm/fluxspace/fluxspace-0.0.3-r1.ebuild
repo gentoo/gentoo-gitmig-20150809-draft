@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxspace/fluxspace-0.0.3-r1.ebuild,v 1.3 2003/08/29 20:33:28 liquidx Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxspace/fluxspace-0.0.3-r1.ebuild,v 1.4 2003/09/04 06:10:29 msterret Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -50,7 +50,7 @@ pkg_postinst() {
 	einfo "    \"no\" to \"yes\" depending on what features you want enabled."
 	einfo " "
 	einfo " 3. Edit ~/.fluxbox/init to 'turn on' fluxspace.  Change line:"
-    einfo "        session.screen0.rootCommand:"
+	einfo "        session.screen0.rootCommand:"
 	einfo "    to..."
 	einfo "        session.screen0.rootCommand: fluxspace"
 	einfo " "

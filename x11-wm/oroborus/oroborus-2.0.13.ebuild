@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.13.ebuild,v 1.1 2003/07/09 18:19:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.13.ebuild,v 1.2 2003/09/04 06:12:55 msterret Exp $
 
 DESCRIPTION="Small and fast window manager."
 HOMEPAGE="http://www.oroborus.org/oroborus.shtml"
@@ -16,7 +16,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${P}"
 
 src_compile() {
-    aclocal
+	aclocal
 	autoheader
 	automake --add-missing
 	autoconf
