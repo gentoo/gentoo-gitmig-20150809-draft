@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtop/gtop-1.0.13-r1.ebuild,v 1.4 2002/08/16 04:13:58 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtop/gtop-1.0.13-r1.ebuild,v 1.5 2002/09/21 01:51:40 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gtop"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
-HOMEPGAE="http://www.gnome.org/"
+HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc sparc64"
