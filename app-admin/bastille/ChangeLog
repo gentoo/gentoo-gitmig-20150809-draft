@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/bastille
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.7 2004/03/24 01:03:05 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.8 2004/06/15 23:52:12 kloeri Exp $
+
+  16 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> bastille-2.1.1-r2.ebuild:
+  Stable on alpha.
 
   23 Mar 2004; Bryan Stine <battousai@gentoo.org>; bastille-2.1.1-r1.ebuild:
   Changing back to x86-only stable. How repoman and myself missed this
