@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1998-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.2.ebuild,v 1.6 2004/09/20 01:49:26 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.2.ebuild,v 1.7 2004/10/10 11:40:17 blubb Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
