@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5-r1.ebuild,v 1.2 2004/06/24 22:32:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5-r1.ebuild,v 1.3 2004/08/28 03:58:20 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.roaringpenguin.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc sparc x86 mips"
+KEYWORDS="alpha amd64 arm hppa mips ppc sparc x86"
 IUSE="X"
 
 DEPEND=">=net-dialup/ppp-2.4.1
