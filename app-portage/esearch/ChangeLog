@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/esearch
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.2 2003/10/01 17:17:19 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.3 2003/10/03 02:25:22 genone Exp $
+
+*esearch-0.4.2 (03 Oct 2003)
+
+  03 Oct 2003; Marius Mauch <genone@gentoo.org> esearch-0.4.2.ebuild:
+  version bump, needed for #30171
 
 *esearch-0.4.1 (01 Oct 2003)
 
