@@ -6,6 +6,6 @@ MD5 6b639232d435829fd97b09e10f58de81 files/rpm-4.0.4-system-popt.diff 18639
 MD5 3d46eae2efd769e423b004de176d9812 files/rpm-4.2-system-popt.diff 14435
 MD5 ec4886ca775cb1cb83aebcd42f20f59f files/rpm-4.2-python2.3.diff 1479
 MD5 8ab864b742e198e24607ef0a582d195f ChangeLog 5619
-MD5 cf60d136cb1308f2f6be68aad07df2d4 rpm-4.0.4-r5.ebuild 1643
-MD5 3b9d4ea8062ddf9facb4203986a4e5f8 rpm-4.2.1.ebuild 2493
-MD5 c0e9fdc1eed59b14b58834defe56acbf rpm-4.2_pre069.ebuild 2188
+MD5 f994a052f91df39a431706ca5d6adcc0 rpm-4.0.4-r5.ebuild 1633
+MD5 b2e463613a2afc912dc17ec7070481f4 rpm-4.2.1.ebuild 2485
+MD5 aada60cb22ee6f29fd37d082f0c06680 rpm-4.2_pre069.ebuild 2180

@@ -1,5 +1,5 @@
 MD5 1aa64b174e55455b11c0e6492107ba10 files/digest-par2cmdline-0.3 67
 MD5 c4c768958c9fb685125ffc0399983685 files/digest-par2cmdline-0.4 67
 MD5 f13f4dd19de7602ed3934bcb8180efa9 ChangeLog 738
-MD5 6fe66c43eb06bb4469f36c232fbcb6f3 par2cmdline-0.3.ebuild 867
-MD5 c7a1dbe490be400904ae80576f99fc0e par2cmdline-0.4.ebuild 867
+MD5 6e7bd5d569dbe76842278063abe7ae8f par2cmdline-0.3.ebuild 811
+MD5 1e55f42ac3c1f8f19aaf43c788c80c4f par2cmdline-0.4.ebuild 813

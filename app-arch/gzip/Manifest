@@ -1,4 +1,4 @@
-MD5 c3b9add1ee0cbaa11bd22900af631f99 ChangeLog 3230
-MD5 8e211d852376c7c84d5670cb417fa4a8 gzip-1.3.3-r2.ebuild 1971
 MD5 2034712a3fa0de0258ee8a1598965ac5 files/digest-gzip-1.3.3-r2 62
 MD5 2e1eadb762ec68d94f784a1d28303658 files/gzip-1.3.3-security.patch 1562
+MD5 c3b9add1ee0cbaa11bd22900af631f99 ChangeLog 3230
+MD5 8f4f4052bba17d9ab7cbcda71c879a0c gzip-1.3.3-r2.ebuild 1963

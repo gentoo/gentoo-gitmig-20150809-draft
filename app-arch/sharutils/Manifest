@@ -5,7 +5,7 @@ MD5 a0ed4cfc65c5d37392c6b3816d3fbdbe files/digest-sharutils-4.2.1-r8 67
 MD5 aeb2dc437bac48b13e8ebc1d632013ad files/sharutils-4.2.1-buffer-check.patch 2416
 MD5 a0ed4cfc65c5d37392c6b3816d3fbdbe files/digest-sharutils-4.2.1-r9 67
 MD5 bd7e2e02e0a42299d7a225959949cffd ChangeLog 3992
-MD5 ad2c8d9e6aadb667f4d23695ea506711 sharutils-4.2.1-r6.ebuild 1379
-MD5 45aa49d0ec9ad55622e4576fcc6cfe82 sharutils-4.2.1-r7.ebuild 1263
+MD5 df57ad9e80b7e61eb18ec4b349b93b5b sharutils-4.2.1-r6.ebuild 1366
+MD5 77ece0a322f9dd21eb774078f0bb0cd3 sharutils-4.2.1-r7.ebuild 1250
 MD5 e1b8b5ee3ea291ad60c04ddc3ca1e106 sharutils-4.2.1-r8.ebuild 1373
 MD5 4d172534fea4d5b0b2e30d4cdcf30a74 sharutils-4.2.1-r9.ebuild 1375
