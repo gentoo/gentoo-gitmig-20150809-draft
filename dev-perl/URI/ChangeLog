@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/URI
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.29 2004/09/25 07:00:52 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.30 2004/09/26 18:02:54 mcummings Exp $
+
+*URI-1.33 (26 Sep 2004)
+
+  26 Sep 2004; Michael Cummings <mcummings@gentoo.org> +URI-1.33.ebuild:
+  New version on cpan; bug 54989
 
   25 Sep 2004; Joshua Kinard <kumba@gentoo.org> URI-1.31.ebuild:
   Marked stable on mips.
