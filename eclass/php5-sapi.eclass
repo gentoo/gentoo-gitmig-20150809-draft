@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.3 2004/07/10 16:00:25 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.4 2004/07/14 21:55:27 stuart Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -23,10 +23,57 @@ HOMEPAGE="http://www.php.net/"
 LICENSE="PHP"
 SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
-IUSE="${IUSE} adabas bcmath birdstep bzlib calendar cpdflib crypt ctype curl curlwrappers db2 dbase dbmaker dbx dio esoob exif fam frontbase fdftk filepro ftp gmp hyperwave-api iconv informix ingres interbase iodbc libedit mcve mhash ming mnogosearch msession msql mssql mysql ncurses nls nis oci8 oracle7 ssl ovrimos pcre pfpro postgres posix readline recode sapdb session shared simplexml snmp soap sockets solid spell spl ssl sybase sybase-ct sysvipc tidy tokenizer truetype odbc wddx xsl xml2 xmlrpc zlib dba cdb berkdb flatfile gdbm inifile qdbm empress empress-bcs gd gd-external imap kerberos ssl ldap sasl pcntl mmap sqlite"
+IUSE="${IUSE} adabas bcmath birdstep bzlib calendar cpdflib crypt ctype curl curlwrappers db2 dbase dbmaker dbx dio esoob exif fam frontbase fdftk filepro ftp gmp hyperwave-api iconv informix ingres interbase iodbc libedit mcve mhash ming mnogosearch msession msql mssql mysql ncurses nls nis oci8 oracle7 ssl ovrimos pcre pfpro postgres posix readline recode sapdb session shared simplexml snmp soap sockets solid spell spl ssl sybase sybase-ct sysvipc tidy tokenizer truetype odbc wddx xsl xml2 xmlrpc zlib dba cdb berkdb flatfile gdbm inifile qdbm empress empress-bcs gd gd-external imap kerberos ssl ldap sasl pcntl sqlite"
+
+# these USE flags should have the correct dependencies
+
 DEPEND="$DEPEND
 	!<=dev-php/php-4.99.99
-	readline? ( sys-libs/readline )"
+	bzlib? ( app-arch/bzip2 )
+	crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
+	curl? ( >=net-misc/curl-7.10.2 )
+	fam? ( app-admin/fam )
+	fdftk? ( app-text/fdftk )
+	gd-external? ( media-libs/gd )
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	gmp? ( dev-libs/gmp )
+	iconv? ( dev-libs/libiconv )
+	imap? ( virtual/imapd )
+	jpeg? ( >=media-libs/jpeg-6b )
+	ldap? ( >=net-nds/openldap-1.2.11 )
+	mhash? ( app-crypt/mhash )
+	ming? ( media-libs/ming )
+	mysql? ( >=dev-db/mysql-3.23.26 )
+	mysqli? ( >=dev-db/mysql-4.0.18 )
+	ncurses? ( sys-libs/ncurses )
+	nls? ( sys-devel/gettext )
+	odbc? ( >=dev-db/unixODBC-1.8.13 )
+	postgres? ( >=dev-db/postgresql-7.1 )
+	readline? ( sys-libs/readline )
+	recode? ( app-text/recode )
+	simplexml? ( dev-libs/libxml2 )
+	snmp? ( virtual/snmp )
+	soap? ( dev-libs/libxml2 )
+	spell? ( app-text/aspell )
+	sqlite? ( dev-db/sqlite )
+	ssl? ( >=dev-libs/openssl-0.9.7 )
+	sybase? ( dev-db/freetds )
+	tidy? ( app-text/htmltidy )
+	wddx? ( dev-libs/expat )
+	xml2? ( dev-libs/libxml2 )
+	xsl? ( dev-libs/libxslt )
+	zlib? ( sys-libs/zlib )"
+
+# these USE flags have not yet been sorted out
+
+	#berkdb?
+	#cpdflib?
+	#dbmaker?
+	#esoodb?
+	#iodbc?
+	#kerberos?
+	#solid?
+	#xmlrpc?
 
 # ========================================================================
 
@@ -40,6 +87,11 @@ PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install"
 
 PHP_PROVIDER_PKG="dev-php/php"
 PHP_PROVIDER_PKG_MINPVR="5.0.0"
+
+# ========================================================================
+
+PHP_INI_DIR="/etc/php/${PHPSAPI}-php5"
+PHP_INI_FILE="php.ini"
 
 # ========================================================================
 
@@ -59,7 +111,6 @@ php5-sapi_check_awkward_uses () {
 		enable_extension_with "flatfile"	"flatfile"	1
 		enable_extension_with "gdbm"		"gdbm"		1
 		enable_extension_with "inifile"		"inifile"	1
-		enable_extension_with "ndbm"		"ndbm"		1
 		enable_extension_with "qdbm"		"qdbm"		1
 	fi
 
@@ -114,10 +165,11 @@ php5-sapi_check_awkward_uses () {
 
 	confutils_use_conflict "readline" "libedit"
 
+	confutils_use_conflict "recode" "mysql" "nis"
+
 	if ! useq session ; then
 		enable_extension_disable	"session"		"session"		1
 	else
-		enable_extension_with		"mm"			"mmap"			0
 		enable_extension_with		"msession"		"msession"		1
 	fi
 
@@ -126,6 +178,44 @@ php5-sapi_check_awkward_uses () {
 	else
 		enable_extension_enable		"sqlite-utf8"	"nls"	0
 	fi
+
+	confutils_use_depend_all "cdb"		"dba"
+	confutils_use_depend_all "db4"		"dba"
+	confutils_use_depend_all "flatfile"	"dba"
+	confutils_use_depend_all "gdbm"		"dba"
+	confutils_use_depend_all "inifile"	"dba"
+	confutils_use_depend_all "qdbm"		"dba"
+
+	confutils_use_depend_any "exif" "jpeg" "tiff"
+
+	# GD library support
+	confutils_use_depend_any "truetype" "gd" "gd-external"
+	
+	# imap support
+	confutils_use_depend_all "kerberos" "imap"
+
+	# ldap support
+	confutils_use_depend_all "sasl" "ldap"
+
+	# mysql support
+	confutils_use_conflict "mysqli" "mysql"
+
+	# odbc support
+	confutils_use_depend_all "adabas"		"odbc"
+	confutils_use_depend_all "birdstep"		"odbc"
+	confutils_use_depend_all "dbmaker"		"odbc"
+	confutils_use_depend_all "empress"		"odbc"
+	confutils_use_depend_all "empress-bcs"	"odbc" "empress"
+	confutils_use_depend_all "esoob"		"odbc"
+	confutils_use_depend_all "db2"			"odbc"
+	confutils_use_depend_all "sapdb"		"odbc"
+	confutils_use_depend_all "solid"		"odbc"
+
+	# session support
+	confutils_use_depend_all "mm"		"session"
+	confutils_use_depend_all "msession"	"session"
+
+	confutils_warn_about_missing_deps
 }
 
 # are we the CLI ebuild or not?
@@ -175,7 +265,8 @@ php5-sapi_src_compile () {
 
 	confutils_init
 
-	my_conf="${my_conf} --with-config-file-path=/etc/php/${PHPSAPI}-php5/php.ini"
+	my_conf="${my_conf} --with-config-file-path=${PHP_INI_DIR}"
+	php5-sapi_is_providerbuild || my_conf="${my_conf} --without-pear"
 
 	#							extension		USE flag		shared support?
 	enable_extension_enable		"bcmath"		"bcmath"		1
@@ -245,37 +336,8 @@ php5-sapi_src_compile () {
 	php5-sapi_check_awkward_uses
 
 	# DBA support
-	confutils_use_depend_all "cdb"		"dba"
-	confutils_use_depend_all "db4"		"dba"
-	confutils_use_depend_all "flatfile"	"dba"
-	confutils_use_depend_all "gdbm"		"dba"
-	confutils_use_depend_all "inifile"	"dba"
-	confutils_use_depend_all "qdbm"		"dba"
 
 	enable_extension_enable		"dba"		"dba" 1
-
-	# GD library support
-	confutils_use_depend_any "truetype" "gd" "gd-external"
-	
-	# imap support
-	confutils_use_depend_all "kerberos" "imap"
-
-	# ldap support
-	confutils_use_depend_all "sasl" "ldap"
-
-	# mysql support
-	confutils_use_conflict "mysqli" "mysql"
-
-	# odbc support
-	confutils_use_depend_all "adabas"		"odbc"
-	confutils_use_depend_all "birdstep"		"odbc"
-	confutils_use_depend_all "dbmaker"		"odbc"
-	confutils_use_depend_all "empress"		"odbc"
-	confutils_use_depend_all "empress-bcs"	"odbc empress"
-	confutils_use_depend_all "esoob"		"odbc"
-	confutils_use_depend_all "db2"			"odbc"
-	confutils_use_depend_all "sapdb"		"odbc"
-	confutils_use_depend_all "solid"		"odbc"
 
 	# readline support
 	#
@@ -283,9 +345,6 @@ php5-sapi_src_compile () {
 	enable_extension_with		"readline"		"readline"		0
 	enable_extension_with		"libedit"		"libedit"		1
 
-	# session support
-	confutils_use_depend_all "mm"		"session"
-	confutils_use_depend_all "msession"	"session"
 
 	echo "${my_conf}"
 
@@ -303,6 +362,12 @@ php5-sapi_src_install () {
 	if [ "$PHPSAPI" = "cli" ]; then
 		dobin sapi/cli/php
 	fi
+
+	# don't forget the php.ini file
+
+	dodir ${PHP_INI_DIR}
+	insinto ${PHP_INI_DIR}
+	newins php.ini-dist ${PHP_INI_FILE}
 
 	# we only install the following for the PHP_PROVIDER_PKG ebuild
 
