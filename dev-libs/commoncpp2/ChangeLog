@@ -2,6 +2,9 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header:
 
+  08 Dec 2003; Heinrich Wendel <lanius@gentoo.org> commoncpp2-1.0.12.ebuild:
+  ~x86 -> x86
+
   07 Dec 2003; Heinrich Wendel <lanius@gentoo.org> commoncpp2-1.0.13.ebuild:
   bump
 
