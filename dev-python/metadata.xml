@@ -5,5 +5,9 @@
 		The dev-python category contains libraries and utilities relevant to the
 		Python programming language.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie dev-python enthält Bibliotheken und Werkzeuge für die
+		Programmiersprache Python.
+	</longdescription>
 </catmetadata>
 
