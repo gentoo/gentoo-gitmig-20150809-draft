@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.3 2004/08/14 03:22:20 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.4 2004/11/08 19:24:52 vapier Exp $
 
 MY_P=${P/pyopengl/PyOpenGL}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/pyopengl/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/python
@@ -39,7 +39,7 @@ src_install() {
 	distutils_src_install
 }
 
-pkg_setup () {
+pkg_setup() {
 	if [ -e /etc/env.d/09opengl ]
 	then
 		# Set up X11 implementation
@@ -61,7 +61,7 @@ pkg_setup () {
 	fi
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	if [ "${USING_X11}" -eq "1" ]
 	then
 		opengl-update ${GL_IMPLEM}
