@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.3.3.1-r2.ebuild,v 1.4 2002/12/13 19:54:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.3.3.1-r2.ebuild,v 1.5 2003/01/13 16:57:45 vapier Exp $
 
 MY_P="${P/-/Src-}"
 S="${WORKDIR}/${MY_P}/${PN}"
@@ -45,7 +45,7 @@ src_compile() {
 		patch -p1 < ${FILESDIR}/${P}-noglcanvas.diff || die "patch failed"
 	fi
 
-	python setup.py ${myconf} build || die "build failed ... make sure you compiled wxGTK with all the graphic libraries enabled via USE"
+	python setup.py ${myconf} build || die "build failed ... make sure you compiled wxGTK with all the graphic libraries enabled via USE (jpeg png opengl gif tiff zlib gtk X)"
 }
 
 src_install() {
