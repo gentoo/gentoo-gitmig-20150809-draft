@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.2.2.ebuild,v 1.1 2003/06/11 00:29:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.2.2.ebuild,v 1.2 2003/06/11 22:15:45 liquidx Exp $
 
 DESCRIPTION="Smart Common Input Method (SCIM) Closed Source Pinyin Input Method"
 HOMEPAGE="http://www.gnuchina.org/~suzhe/scim/"
@@ -62,5 +62,5 @@ src_install() {
 	
 	insinto /etc/gconf/schemas
 	doins etc/gconf/schemas/*
-	dodoc usr/share/doc/packages/scim-chinese-0.2.1/{AUTHORS,COPYING,README}
+	dodoc usr/share/doc/packages/${PF}/{AUTHORS,COPYING,README}
 }
