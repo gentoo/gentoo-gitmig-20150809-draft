@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {                               
-  try make prefix=${D}/opt/gnome \
+  try make prefix=${D}/opt/gnome localedir=${D}/opt/gnome/share/local \
 	GNOME_sysconfdir=${D}/opt/gnome/etc \
 	GNOME_datadir=${D}/opt/gnome/share \
 	GNOMEDB_oafinfodir=${D}/opt/gnome/share/oaf \

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.5.0.ebuild,v 1.5 2001/06/11 08:11:28 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.5.0.ebuild,v 1.6 2001/06/24 20:11:29 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -19,7 +19,9 @@ src_compile() {
 }
 
 src_install() {
-  try make prefix=${D}/opt/gnome install
+  try make DESTDIR=${D} localedir=${D}/opt/gnome/share/locale \
+  	gnulocaledir=${D}/opt/gnome/share/locale install
+  #try make prefix=${D}/opt/gnome install
   dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 
 }
