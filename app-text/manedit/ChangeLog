@@ -1,0 +1,10 @@
+# ChangeLog for app-text/manedit
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.1 2002/05/02 23:38:06 agenkin Exp $
+
+*manedit-0.5.6 (2 May, 2002)
+
+  2 May 2002; Arcady Genkin <agenkin@thpoon.com> manedit-0.5.6.ebuild :
+  
+  Initial version of the ebuild, submitted by Nicholas Jones
+  <carpaski@twobit.net>.
