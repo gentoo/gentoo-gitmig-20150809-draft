@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta10.ebuild,v 1.3 2004/04/02 10:35:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta10.ebuild,v 1.4 2004/04/02 19:15:19 eradicator Exp $
 
 IUSE="nls ardour-ksi"
 
 DESCRIPTION="multi-track hard disk recording software"
-HOMEPAGE="http://ardour.sourceforge.net/"
+HOMEPAGE="http://ardour.org/"
 SRC_URI="http://ardour.org/releases/${P/_/}.tar.bz2"
 
 LICENSE="GPL-2"

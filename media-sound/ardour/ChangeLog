@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.16 2004/04/02 10:34:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.17 2004/04/02 19:15:19 eradicator Exp $
+
+*ardour-0.9_beta11-r1 (02 Apr 2004)
+
+  02 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ardour-0.9_beta10.ebuild, ardour-0.9_beta11-r1.ebuild,
+  ardour-0.9_beta11.ebuild:
+  Version bump.  -r1 is beta11.2, but portage doesn't like that version string.
 
   02 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ardour-0.9_beta10.ebuild, ardour-0.9_beta11.ebuild,
