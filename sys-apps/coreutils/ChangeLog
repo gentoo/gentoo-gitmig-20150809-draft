@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.25 2003/08/26 10:39:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.26 2003/08/28 13:54:06 gmsoft Exp $
 
 *coreutils-5.0-r3 (26 Aug 2003)
+
+  28 Aug 2003; Guy Martin <gmsoft@gentoo.org> coreutils-5.0-r3.ebuild :
+  Marked stable on hppa.
 
   26 Aug 2003; Martin Schlemmer <azarah@gentoo.org> Manifest,
   coreutils-5.0-r3.ebuild:
