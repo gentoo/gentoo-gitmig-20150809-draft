@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.9 2004/11/07 20:19:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.10 2004/11/28 19:16:14 plasmaroo Exp $
+
+*sg3_utils-1.11 (28 Nov 2004)
+
+  28 Nov 2004; <plasmaroo@gentoo.org> -sg3_utils-1.10.ebuild,
+  +sg3_utils-1.11.ebuild:
+  Version bump, bug #72575.
 
 *sg3_utils-1.10 (07 Nov 2004)
 
