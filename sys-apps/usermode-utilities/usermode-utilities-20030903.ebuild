@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/usermode-utilities-20030903.ebuild,v 1.5 2004/07/01 21:43:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/usermode-utilities-20030903.ebuild,v 1.6 2004/07/15 02:46:46 agriffis Exp $
 
 S=${WORKDIR}/tools
 DESCRIPTION="Tools for use with Usermode Linux virtual machines"
@@ -10,6 +10,7 @@ HOMEPAGE="http://user-mode-linux.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64 -ppc -sparc -alpha"
+IUSE=""
 
 DEPEND="virtual/libc"
 
