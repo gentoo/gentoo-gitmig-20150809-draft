@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/htbinit-0.8.4.ebuild,v 1.1 2003/08/17 18:34:53 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/htbinit-0.8.4.ebuild,v 1.2 2003/08/25 09:07:19 bass Exp $
 
 DESCRIPTION="Sets up Hierachical Token Bucket based traffic control (QoS) with iproute2"
 HOMEPAGE="http://www.sourceforge.net/projects/htbinit"

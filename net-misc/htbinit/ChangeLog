@@ -1,9 +1,12 @@
 # ChangeLog for net-misc/htbinit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.1 2003/08/17 18:34:53 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.2 2003/08/25 09:07:18 bass Exp $
 
 *htbinit-0.8.4 (17 Aug 2003)
 
     19 Jun 2003; J.Alberto Suárez L. <bass@gentoo.org> htbinit-0.8.4.ebuild:
     First release. Thanks to Juan J. Prieto <jjptapia@eresmas.com>.
+
+    25 Aug 2003; J.Alberto Suárez L. <bass@gentoo.org> htbinit-0.8.4.ebuild:
+    Added to initscript the "clear" & "reload" options. Juan J. Prieto <jjptapia@eresmas.com>.
 
