@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-1.0.ebuild,v 1.1 2004/06/30 15:34:55 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-1.0.ebuild,v 1.2 2004/06/30 19:02:30 latexer Exp $
 
 inherit eutils mono
 
@@ -43,7 +43,8 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} GACUTIL_FLAGS="/root ${D}/usr/lib" install || die
+	einstall || die
+	#make DESTDIR=${D} GACUTIL_FLAGS="/root ${D}/usr/lib /gacdir ${D}/usr/lib" install || die
 
 	dodoc README* ChangeLog
 }
