@@ -1,0 +1,10 @@
+# ChangeLog for net-news/slrnconf
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrnconf/ChangeLog,v 1.1 2004/07/04 22:01:01 swegener Exp $
+
+*slrnconf-0.8.4 (05 Jul 2004)
+
+  05 Jul 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +slrnconf-0.8.4.ebuild:
+  Initial import, ebuild submitted by tove <bugs@veller.net> in bug #56039.
+
