@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/lupy-0.2.1.ebuild,v 1.1 2004/06/07 14:51:35 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/lupy-0.2.1.ebuild,v 1.2 2004/06/08 20:32:22 dholm Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/lupy/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~s390"
+KEYWORDS="~x86 ~s390 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2"
