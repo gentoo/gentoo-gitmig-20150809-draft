@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/jircii
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/ChangeLog,v 1.8 2004/10/03 19:37:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/ChangeLog,v 1.9 2004/10/17 01:37:12 swegener Exp $
+
+*jircii-16 (17 Oct 2004)
+
+  17 Oct 2004; Sven Wegener <swegener@gentoo.org> +jircii-16.ebuild:
+  Version bump.
 
 *jircii-15 (03 Oct 2004)
 

@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b309621f6bfb36c923f758b186f5d04f miau-0.5.3.ebuild 1440
+MD5 3c402cecc149d80a42cd38b36c41803a miau-0.5.3.ebuild 1441
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 e54b4bf7f74bc1bb7fa55fbc2240fd6d ChangeLog 351
+MD5 959feeb9bbb1a197db9611c0147243b3 ChangeLog 447
 MD5 d0f670c0da18c03d20ee0adbbdb6a6e3 files/digest-miau-0.5.3 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBaG7gI1lqEGTUzyQRAk1MAJ0bMOvhD2tbbJezmzE4hZpKLxLc2ACgpRXc
-TrEkjl6xb9EsymZ8Q0sjxII=
-=lJwP
+iD8DBQFBcc2OI1lqEGTUzyQRApQJAJ96hBhhrf7PSvg24NrqVk5B9gRhBwCfRMNZ
+DeAC6sVuHTT5NGUmEqoiUas=
+=r37O
 -----END PGP SIGNATURE-----
