@@ -1,6 +1,11 @@
 # ChangeLog for net-im/linpopup
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/ChangeLog,v 1.5 2004/03/01 20:37:00 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/ChangeLog,v 1.6 2004/03/24 16:44:43 mholzer Exp $
+
+*linpopup-2.0.3 (24 Mar 2004)
+
+  24 Mar 2004; Martin Holzer <mholzer@gentoo.org> linpopup-2.0.3.ebuild:
+  Version bumped. Closes 45596
 
 *linpopup-2.0.2 (25 Sep 2003)
 
