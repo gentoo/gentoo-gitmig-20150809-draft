@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/archetypes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/archetypes/ChangeLog,v 1.10 2004/09/11 22:27:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/archetypes/ChangeLog,v 1.11 2004/09/12 22:09:46 batlogg Exp $
+
+  13 Sep 2004; Jodok Batlogg <batlogg@gentoo.org>;
+  archetypes-1.2.5_rc4.ebuild, archetypes-1.2.5_rc5.ebuild,
+  archetypes-1.3.0_beta3.ebuild, archetypes-1.3.0_rc2.ebuild:
+  added SLOT
 
 *archetypes-1.3.0_rc2 (12 Sep 2004)
 
