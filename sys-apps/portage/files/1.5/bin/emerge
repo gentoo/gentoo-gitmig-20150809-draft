@@ -385,6 +385,8 @@ if "rsync" in mymode:
 		mycommand=mycommand+"--delete --exclude='distfiles/*' --exclude='packages/*' "
 	mycommand=mycommand+"rsync://cvs.gentoo.org/gentoo-x86-portage/* "+myportdir
 	print ">>> starting rsync with cvs.gentoo.org..."
+	#protect users that did not set a default umask
+	os.umask(022)
 	sys.exit(os.system(mycommand))	
 
 if ("system" in mymode) or ("update" in mymode):
