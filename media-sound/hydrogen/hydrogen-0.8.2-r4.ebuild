@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.8.2-r4.ebuild,v 1.3 2004/10/07 08:53:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.8.2-r4.ebuild,v 1.4 2005/01/03 09:37:57 corsair Exp $
 
 IUSE="alsa jack"
 
