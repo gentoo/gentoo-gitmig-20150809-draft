@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.304 2004/04/20 00:57:57 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.305 2004/04/20 01:16:28 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -8,8 +8,8 @@
 app-accessibility/festival:asterisk - adds a new command named tts_textasterisk that is required by net-misc/asterisk to communicate with the Festival server
 app-accessibility/gnopernicus:brltty - Adds support for braille displays using brltty
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
-app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-cdr/k3b:monkey - Enable support for Monkey's audio codec
+app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-editors/nano:justify - Toggle the justify option ...
 app-editors/nano:nomac - Turn off mac formatting output
 app-editors/nano:wsconvert - Turn on whitespace highlighting feature
@@ -22,8 +22,8 @@ app-editors/xemacs:neXt - Chooses the neXt L&F widget set
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-emulation/mol:sheep - Support for the sheep net driver
-app-i18n/im-ja:skk - Support for SKK input method
 app-i18n/im-ja:anthy - Support for Anthy input method
+app-i18n/im-ja:skk - Support for SKK input method
 app-misc/grass:nviz - support GLw functionality
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
 app-misc/workrave:no-exercises - Disable exercises support
@@ -52,11 +52,13 @@ app-sci/opendx:cdf - Adds cdf data exchange format to app-sci/opendx
 app-sci/opendx:hdf - Adds support for the Hierarchical Data Format to app-sci/opendx
 app-sci/orsa:cln - Use the Class Library for Numbers for calculations
 app-sci/orsa:gsl - Use the GNU scientific library for calculations
-app-shells/zsh:pcre - Adds PCRE (Perl-compatible regular expressions) support
 app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
+app-shells/zsh:pcre - Adds PCRE (Perl-compatible regular expressions) support
 app-text/namazu:chasen - Enable chasen support for namazu
 app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/sword:icu - Enable icu support for sword
+deb-libs/pwlib:ieee1394 - enable dv/firewire camera support
+dev-db/firebird:inetd - If you want inetd version instead of a superserver (daemon)
 dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
 dev-db/postgresql:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/postgresql:pg-vacuumdelay - Adds in the vacuum inter-page delay feature.
@@ -90,7 +92,6 @@ dev-libs/libcdio:cddb - use libcddb for CD database lookups
 dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
 dev-libs/libsqlora8:pthreads - specifies use of POSIX threads
 dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
-deb-libs/pwlib:ieee1394 - enable dv/firewire camera support
 dev-libs/uclibc:pie - adds support for Position Independent Executables
 dev-lisp/bigloo-lib:expat - enable expat support
 dev-lisp/bigloo-lib:ipcs - enable ipcs support
@@ -133,12 +134,12 @@ kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
 kde-base/kdenetwork:wifi - Enable wireless network functions in kde
+media-gfx/blender:fmod - Adds mod support to blender
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
 media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
 media-gfx/nvidia-cg-toolkit:glut - enable glut support
 media-gfx/optipng:ext-png - Link with the system libpng, rather than the bundled optimised version.
 media-gfx/optipng:ext-zlib - Link with the system zlib, rather than the bundled version optimised specifically for use with png.
-media-gfx/blender:fmod - Adds mod support to blender
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
 media-libs/libao:mmap - (experimental) Enable memory-mapped I/O 
@@ -172,11 +173,11 @@ media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
 media-video/ffmpeg:faad - Enables faad2 support
 media-video/mjpegtools:dv - Enables libdv support
 media-video/mplayer:matroska - Enables support for the matroska video format
+media-video/mplayer:v4l - Enables video4linux support
+media-video/mplayer:v4l2 - Enables video4linux2 support
 media-video/vlc:matroska - Enables support for the matroska video format
 media-video/vlc:v4l - Enables video4linux support
 media-video/vlc:xvid - Enables xvid codec support
-media-video/mplayer:v4l2 - Enables video4linux2 support
-media-video/mplayer:v4l - Enables video4linux support
 net-analyzer/nagios-core:noweb - disable web interface
 net-analyzer/nagios-plugins:nagios-dns - installs deps for dns monitoring
 net-analyzer/nagios-plugins:nagios-ntp - installs deps for ntp monitoring
@@ -211,13 +212,13 @@ net-mail/amavisd-new:milter - Enable Sendmail milter support
 net-mail/courier:fax - Enables fax support in the courier mail server
 net-mail/courier:norewrite - Prevents courier mail server from mangling virtual user addresses when sending
 net-mail/cyrus-imapd:drac - Enable dynamic relay support in the cyrus imap server
-net-mail/dovecot:vpopmail - Add vpopmail support
 net-mail/dovecot:nopop3d - Do not build pop3d support
+net-mail/dovecot:vpopmail - Add vpopmail support
+net-mail/exim:dnsdb - Adds support for a DNS search for a record whose domain name is the supplied query
 net-mail/exim:exiscan - Patch providing support for content scanning backward-compatability
 net-mail/exim:exiscan-acl - Patch providing support for content scanning
 net-mail/exim:lmtp - Adds support for lmtp
 net-mail/exim:wildlsearch - Adds support for Wildcarded Linear searches
-net-mail/exim:dnsdb - Adds support for a DNS search for a record whose domain name is the supplied query
 net-mail/mutt:nntp - Adds support for nntp via patch
 net-mail/mutt:vanilla - Refrain from patching additional functionality into mutt
 net-mail/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
@@ -255,6 +256,8 @@ net-www/elinks:lua - enable lua support
 net-www/links:javascript - enable javascript support
 net-www/memcached:php - Include the PHP API for memcached
 net-www/monkeyd:php - Include support for php scripts
+net-www/mozilla-firefox:moznoxft - Disable XFT support in and/or firefox
+net-www/mozilla-firefox:mozsvg - Enable SVG support in Mozilla and/or Firefox
 net-www/mozilla:mozaccess - Enable text-to-speech (and eventually to braille), http://mozilla.org/projects/ui/accessibility/
 net-www/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
 net-www/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
@@ -265,8 +268,6 @@ net-www/mozilla:moznoxft - Disable XFT support in mozilla and/or firefox
 net-www/mozilla:mozp3p - Enable mozilla's Platform for Privacy Preferences, http://mozilla.org/projects/p3p/
 net-www/mozilla:mozsvg - Enable SVG support in mozilla and/or firefox, http://mozilla.org/projects/svg/
 net-www/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
-net-www/mozilla-firefox:moznoxft - Disable XFT support in and/or firefox
-net-www/mozilla-firefox:mozsvg - Enable SVG support in Mozilla and/or Firefox
 net-www/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
 net-www/tinyproxy:transparent-proxy - enable support for transparent proxies
 net-www/w3m-m17n:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
@@ -342,4 +343,3 @@ x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
 x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
 x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
-dev-db/firebird:inetd - If you want inetd version instead of a superserver (daemon)
