@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.17 2003/10/15 05:42:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.18 2003/10/22 22:53:23 seemant Exp $
+
+*wget-1.9 (22 Oct 2003)
+
+  22 Oct 2003; Seemant Kulleen <seemant@gentoo.org> wget-1.9.ebuild:
+  version bump -- this one should have support for ipv6, >2G fetches, and ipv6
+  out of the box
 
 *wget-1.8.2-r3 (14 Oct 2003)
 
