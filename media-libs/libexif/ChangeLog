@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libexif
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.12 2003/11/15 02:40:27 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.13 2004/02/06 02:38:40 spider Exp $
+
+*libexif-0.5.12-r1 (06 Feb 2004)
+
+  06 Feb 2004; <spider@gentoo.org> libexif-0.5.10.ebuild,
+  libexif-0.5.12-r1.ebuild, libexif-0.5.12.ebuild, libexif-0.5.9.ebuild:
+  add an RDEPEND="virtual/glibc" to free pkgconfig
+  Clean up on old builds
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> libexif-0.5.12.ebuild:
   Stable on ia64

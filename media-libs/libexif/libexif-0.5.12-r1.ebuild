@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.5.12.ebuild,v 1.11 2003/12/09 15:22:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.5.12-r1.ebuild,v 1.1 2004/02/06 02:38:40 spider Exp $
 
 inherit flag-o-matic
 
@@ -16,6 +16,7 @@ LICENSE="LGPL-2.1"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 
 DEPEND="dev-util/pkgconfig"
+RDEPEND="virtual/glibc"
 
 src_compile() {
 	econf `use_enable nls` || die
