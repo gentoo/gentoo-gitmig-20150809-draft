@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r8.ebuild,v 1.6 2003/01/09 01:01:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r8.ebuild,v 1.7 2003/01/12 15:33:51 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -123,11 +123,12 @@ pkg_setup() {
 		ewarn "that compile against perl. You use threading at "
 		ewarn "your own discretion. "
 		ewarn ""
+		sleep 10
 	fi
 
 	if [ "${PN}" = "perl" -a ! -f /usr/lib/${LIBPERL} ]
 	then
-		# Make sure whe have libperl installed ...
+		# Make sure we have libperl installed ...
 		eerror "Cannot find /usr/lib/${LIBPERL}!  Make sure that you"
 		eerror "have sys-libs/libperl installed properly ..."
 		die "Cannot find /usr/lib/${LIBPERL}!"
@@ -432,6 +433,9 @@ pkg_postinst() {
 		eerror "the problem, please check http://bugs.gentoo.org/"
 		eerror "for more information or to report a bug."
 		eerror ""
+		sleep 5
+		eerror ""
+		
 	fi
 }
 
