@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-5.0.0.16.ebuild,v 1.3 2005/03/08 23:18:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-5.0.0.18.ebuild,v 1.1 2005/03/08 23:18:59 mr_bones_ Exp $
 
 inherit kde games
 
@@ -26,9 +26,9 @@ src_compile() {
 }
 
 src_install() {
-	egamesinstall || die
+	make DESTDIR="${D}" install || die "make install failed"
 	doman showeq.1
-	dodoc BUGS CHANGES FAQ INSTALL README* ROADMAP TODO doc/*.{doc,txt}
+	dodoc BUGS FAQ INSTALL README* ROADMAP TODO doc/*.{doc,txt}
 	dohtml doc/*
 	prepgamesdirs
 }

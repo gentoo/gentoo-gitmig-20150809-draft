@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e8dbb92e07d26606d0c036b16deadf9d ChangeLog 1345
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 9311515908195712cccb535b9908546a showeq-5.0.0.16.ebuild 775
-MD5 c7bb62887e4de0d28e24e5d05e806f2d showeq-4.3.21.ebuild 1242
+MD5 d2ac9592c5c544b5cc25f358606839c2 ChangeLog 1487
+MD5 a891c8763aca9da1fe8afefab81428ea showeq-4.3.21.ebuild 1240
+MD5 a4bc8252138bd41114343f2879d35206 showeq-5.0.0.16.ebuild 773
+MD5 21a0376016ef1f7a5ec7f395d8382b93 showeq-5.0.0.18.ebuild 801
 MD5 89367ba61dd3417f3e851cd88aaa7b94 files/digest-showeq-5.0.0.16 68
 MD5 1d9ebbfda3f734899a768723ecf0c5ea files/digest-showeq-4.3.21 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB/AQemdTrptrqvGERAvq4AJ9eHwTRFwYfzS9xKvpMM9MebGh2VwCgiY3N
-OrWCFgn9SFKj7wmtM0hUroo=
-=EYZ5
------END PGP SIGNATURE-----
+MD5 e50ed8d4a1b9184df765b72f6fcab6f1 files/digest-showeq-5.0.0.18 68
