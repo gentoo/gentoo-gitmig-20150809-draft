@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.27 2003/06/24 22:42:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.28 2003/06/26 22:07:43 vapier Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -18,7 +18,7 @@ KV=${OKV}${EXTRAVERSION}
 S=${WORKDIR}/linux-${KV}
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
-IUSE="${IUSE} doc"
+IUSE="${IUSE} doc tcltk"
 if [ "${ETYPE}" = "sources" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
