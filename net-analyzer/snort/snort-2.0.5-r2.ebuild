@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.5-r2.ebuild,v 1.2 2003/12/20 16:48:53 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.5-r2.ebuild,v 1.3 2004/04/14 17:59:00 squinky86 Exp $
 
 inherit eutils
 
