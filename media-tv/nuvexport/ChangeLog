@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/nuvexport
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/ChangeLog,v 1.7 2005/01/24 19:07:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/ChangeLog,v 1.8 2005/01/25 08:41:25 cardoe Exp $
+
+*nuvexport-0.2_pre20050123-r1 (25 Jan 2005)
+
+  25 Jan 2005; Doug Goldstein <cardoe@gentoo.org>
+  +nuvexport-0.2_pre20050123-r1.ebuild, -nuvexport-0.2_pre20050123.ebuild:
+  check to see if media-video/transcode has mjpeg support compiled in, if not
+  tell the user we need it
 
 *nuvexport-0.2_pre20050123 (24 Jan 2005)
 
