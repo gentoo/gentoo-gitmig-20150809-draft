@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/yard-2.0-r1.ebuild,v 1.8 2002/07/17 01:20:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/yard-2.0-r1.ebuild,v 1.9 2002/07/20 19:36:02 gerk Exp $
 
 A="${P}.tar.gz diet-utils.tar.bz2"
 S=${WORKDIR}/${P}
@@ -8,10 +8,11 @@ DESCRIPTION="Yard is a suite of Perl scripts for creating rescue disks (also
 called bootdisks) for Linux."
 SRC_URI="http://www.croftj.net/~fawcett/yard/${P}.tar.gz"
 HOMEPAGE="http://www.linuxlots.com/~fawcett/yard/"
-
 SLOT="0"
 LICENSE="GPL-2 Artistic"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
+DEPEND="sys-devel/perl"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${P}.tar.gz
