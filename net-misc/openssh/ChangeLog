@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.97 2004/08/18 21:55:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.98 2004/08/19 23:19:09 pebenito Exp $
+
+  19 Aug 2004; Chris PeBenito <pebenito@gentoo.org>
+  +files/openssh-3.9_p1-selinux.diff, openssh-3.9_p1.ebuild:
+  Update SELinux patch
 
   18 Aug 2004; Daniel Ahlberg <aliz@gentoo.org> openssh-3.8.1_p1-r2.ebuild:
   Fixed sftplogging patch, closing #60417 again.

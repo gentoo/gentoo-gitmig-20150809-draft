@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1.ebuild,v 1.2 2004/08/19 15:32:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1.ebuild,v 1.3 2004/08/19 23:19:09 pebenito Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -10,6 +10,7 @@ PARCH=${P/_/}
 
 SFTPLOG_PATCH_VER="1.2"
 X509_PATCH="${PARCH}+x509h.diff.gz"
+SELINUX_PATCH="openssh-3.9_p1-selinux.diff"
 
 S=${WORKDIR}/${PARCH}
 DESCRIPTION="Port of OpenBSD's free SSH release"
@@ -41,7 +42,7 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/ssh"
 
 pkg_setup() {
-	if use X509 || use selinux; then
+	if use X509; then
 		eerror "No updated patch available for ${P}."
 		die
 	fi
@@ -57,7 +58,7 @@ src_unpack() {
 	use skey && epatch ${FILESDIR}/${P}-skey.patch
 	use chroot && epatch ${FILESDIR}/${P}-chroot.patch
 #	use X509 && epatch ${DISTDIR}/${X509_PATCH}
-#	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
+	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
 	use smartcard && epatch ${FILESDIR}/${P}-opensc.patch
 }
 
