@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.281 2004/10/27 03:37:23 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.282 2004/10/28 05:48:26 lv Exp $
+
+  27 Oct 2004; Travis Tilley <lv@gentoo.org> -glibc-2.3.4.20041006.ebuild,
+  glibc-2.3.4.20041021.ebuild:
+  keyworded 2.3.4.10041021 as testing on amd64, x86, and ppc64. removed the 1006
+  snapshot due to bug 67603, which 1021 fixes.
 
 *glibc-2.3.4.20041021 (26 Oct 2004)
 

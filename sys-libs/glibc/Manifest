@@ -4,9 +4,8 @@ MD5 daf5c4924c0a0ccc6e55f7588b1b4d52 glibc-2.3.3.20040420-r2.ebuild 21765
 MD5 af6f1491a70a6ee80e8d867d8ee0f98f glibc-2.3.4.20040619-r2.ebuild 20997
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 ac8cbd194b0e622f368f12f876f732a7 glibc-2.3.4.20040808-r1.ebuild 23089
-MD5 ac704370dea38856c98d18c9c46bcc2d ChangeLog 58369
-MD5 e0ec086f0af0cfe48f5d5914aeb0eea6 glibc-2.3.4.20041006.ebuild 25746
-MD5 b9b82909d160ca9bbc5ce1e695d0102f glibc-2.3.4.20041021.ebuild 25820
+MD5 ead771f0df321265f2f02c5390ffb42e ChangeLog 58604
+MD5 abc1a5d68569d59213a1e4124d28e5d9 glibc-2.3.4.20041021.ebuild 25805
 MD5 9cc1e6b6f749dba7c8759bd07266f7d9 files/digest-glibc-2.2.5-r9 143
 MD5 e4393f4721a207750581d6265d5f7f40 files/fix-sysctl_h.patch 376
 MD5 52cfc7627fc62dfb26d8d163aac361f6 files/glibc-2.2.2-test-lfs-timeout.patch 320
@@ -26,7 +25,6 @@ MD5 42af7e35fe2404a49954f91fd1aee891 files/digest-glibc-2.3.3.20040420-r2 312
 MD5 123d66ef523985c88c77af1ab1fc2d56 files/digest-glibc-2.3.4.20041021 383
 MD5 470f57fe18dd0a94cb4a4d6cf51528af files/digest-glibc-2.3.4.20040619-r2 307
 MD5 2f05d3181e9a9ded61e074147af47e8e files/digest-glibc-2.3.4.20040808-r1 382
-MD5 add6c542940ecab2c890d642760d974b files/digest-glibc-2.3.4.20041006 383
 MD5 f75ebd335c4b882013cc12229d39c9f7 files/2.2.5/glibc-2.2.5-alpha-gcc3-fix.diff 475
 MD5 843eaa26ae2c49e894aa365b6f463546 files/2.2.5/glibc-2.2.5-alpha-pcdyn-fix.diff 471
 MD5 5182f441608833569cb9e78536baf8af files/2.2.5/glibc-2.2.5-arm-errlist-fix.diff 2210
