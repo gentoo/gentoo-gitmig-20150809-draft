@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/aolserver.eclass,v 1.1 2005/01/05 13:37:56 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/aolserver.eclass,v 1.2 2005/01/05 14:06:39 port001 Exp $
 
 # Authors:
 #	Ian Leitch <port001@gentoo.org>
@@ -20,6 +20,7 @@ LIBXML2=/usr
 LIBXSLT=/usr
 
 IUSE=""
+SRC_URI="mirror://sourceforge/aolserver/${P}.tar.gz"
 HOMEPAGE="http://www.aolserver.com"
 LICENSE="MPL-1.1"
 SLOT="0"
