@@ -2,6 +2,7 @@
 
 depend() {
     need clock
+    use sysklogd metalog syslog-ng
 }
 
 start() {
