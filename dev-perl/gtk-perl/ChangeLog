@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/gtk-perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.3 2002/05/05 10:59:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.4 2002/05/06 17:41:44 seemant Exp $
+
+*gtk-perl-0.7008-r3 (6 May 2002)
+
+  6 May 2002; Seemant Kulleen <seemant@gentoo.org> gtk-perl-0.7008-r3.ebuild
+  files/digest-gtk-perl-0.7008-r3 :
+
+  No more interactivity, and no more gnome libs checking.  The latter fix
+  sent in by Phoen][x.  The former closes bug report # 2465 reported by
+  ian.c.smith@btinternet.com (Ian Smith)
 
 *gtk-perl-0.7008-r2 (5 May 2002)
 
