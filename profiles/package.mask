@@ -715,3 +715,7 @@ app-misc/todo-manager-bronze
 # agriffis@gentoo.org 29 Jul 2003
 # mask nforce-net-1.0.0261 for bug 24815
 =net-misc/nforce-net-1.0.0261*
+
+# rphillips@gentoo.org 01 Dec 2003
+# mask arch in favor of tla
+dev-util/arch
