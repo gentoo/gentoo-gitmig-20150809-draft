@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/dircproxy
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.3 2002/11/05 19:29:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.4 2003/02/03 06:50:02 vapier Exp $
+
+*dircproxy-1.0.5 (03 Feb 2003)
+
+  03 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #14707.
 
 *dircproxy-1.0.4 (05 Nov 2002)
 
