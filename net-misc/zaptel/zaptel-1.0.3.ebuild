@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.3.ebuild,v 1.1 2004/12/19 00:16:42 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.3.ebuild,v 1.2 2005/01/05 01:49:19 stkn Exp $
 
 IUSE="devfs26"
 
@@ -32,8 +32,10 @@ pkg_setup() {
 	if [ $(echo $KV | cut -d. -f1) -eq 2 ] && [ $(echo $KV|cut -d. -f2) -eq 6 ]; then
 		echo
 		einfo "You're using zaptel with linux-2.6:"
-		ewarn "   Zaptel doesn't support devfs with 2.6, you'll need to use udev or disable devfs"
-		ewarn "   or use devfs and write a script which re-creates the device nodes for you"
+		ewarn "   Zaptel doesn't support devfs with 2.6, your options:"
+		ewarn "   * use udev and disable devfs"
+		ewarn "   * use devfs and write a script that re-creates the necessary device nodes for you"
+		ewarn "   * enable the devfs26 useflag (see below)"
 		ewarn ""
 		ewarn "There's an experimental patch which adds devfs support when using linux-2.6, but:"
 		ewarn "  1. It's an ugly hack atm and needs a cleanup..."

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zaptel
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.20 2004/12/19 00:30:10 stkn Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.21 2005/01/05 01:49:19 stkn Exp $
+
+  05 Jan 2005; Stefan Knoblich <stkn@gentoo.org> zaptel-1.0.3.ebuild:
+  changed the linux-2.6 + devfs warning messages, should be less confusing now...
 
   19 Dec 2004; Stefan Knoblich <stkn@gentoo.org> zaptel-1.0.2.ebuild:
   fixed SRC_URI

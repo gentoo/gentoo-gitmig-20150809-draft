@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-0.9.1.ebuild,v 1.7 2004/09/06 00:50:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-0.9.1.ebuild,v 1.8 2005/01/05 01:49:19 stkn Exp $
 
 inherit eutils
 
