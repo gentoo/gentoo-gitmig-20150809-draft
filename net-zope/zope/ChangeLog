@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.30 2004/07/13 23:51:28 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.31 2004/07/13 23:55:01 batlogg Exp $
+
+  14 Jul 2004; Jodok Batlogg <batlogg@gentoo.org>; zope-2.4.0-r6.ebuild,
+  zope-2.5.1.ebuild, zope-2.6.4.ebuild:
+  repoman qa fixes
 
 *zope-2.7.1 (14 Jul 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4.ebuild,v 1.6 2004/07/01 22:51:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4.ebuild,v 1.7 2004/07/13 23:55:01 batlogg Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ HOMEPAGE="http://www.zope.org"
 SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-src.tgz"
 LICENSE="ZPL"
 SLOT="${PV}"
+IUSE=""
 
 KEYWORDS="x86 ~sparc"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.5.1.ebuild,v 1.10 2004/07/01 22:51:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.5.1.ebuild,v 1.11 2004/07/13 23:55:01 batlogg Exp $
 
 S=${WORKDIR}/Zope-${PV}-src
 DESCRIPTION="Zope is web application platform used for building high-performance, dynamic web sites."
@@ -13,6 +13,7 @@ DEPEND="virtual/libc
 SLOT="${PV}"
 LICENSE="as-is"
 KEYWORDS="x86 sparc "
+IUSE=""
 
 src_unpack() {
 
