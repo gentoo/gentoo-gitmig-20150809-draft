@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.10.ebuild,v 1.2 2005/01/12 22:33:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.10.ebuild,v 1.3 2005/01/13 22:29:16 ticho Exp $
 
 inherit gnome2 eutils mono
 
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	#db2html should be docbook2html
-	sed -i -e 's:db2html:docbook2html:g' \
+	sed -i -e 's:db2html:docbook2html -o gmime-tut:g' \
 		docs/tutorial/Makefile.am docs/tutorial/Makefile.in \
 		|| die "sed failed (1)"
 }
@@ -42,6 +42,11 @@ src_compile() {
 src_install() {
 	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package ${PN}" \
 		DESTDIR=${D} install || die
+
+	if useq doc; then
+		docinto tutorial
+		dodoc docs/tutorial/html/*
+	fi
 }
 
 pkg_preinst() {
