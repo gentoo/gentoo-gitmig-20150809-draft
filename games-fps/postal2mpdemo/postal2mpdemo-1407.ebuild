@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/postal2mpdemo-1407.ebuild,v 1.6 2004/09/17 23:56:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/postal2mpdemo-1407.ebuild,v 1.7 2004/09/17 23:58:06 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -12,6 +12,7 @@ LICENSE="postal2"
 SLOT="0"
 KEYWORDS="x86 ~amd64"
 IUSE=""
+RESTRICT="nomirror"
 
 RDEPEND="virtual/x11
 	virtual/libc
