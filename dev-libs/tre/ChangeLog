@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/tre
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.8 2004/07/18 06:00:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.9 2004/09/03 22:40:47 slarti Exp $
+
+  03 Sep 2004; Tom Martin <slarti@gentoo.org> tre-0.6.8.ebuild:
+  Marked ~amd64, resolves #58522. Thanks to Gabriel Ebner <ge@gabrielebner.at>
+  for reporting.
 
   18 Jul 2004; Daniel Black <dragonheart@gentoo.org> tre-0.6.8.ebuild:
   x86 stable
