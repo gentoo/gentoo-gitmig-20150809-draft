@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/ikons
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ikons/ChangeLog,v 1.1 2002/08/30 08:06:26 seemant Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ikons/ChangeLog,v 1.2 2002/08/31 19:12:46 danarmak Exp $
+
+  31 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix bug #5901 - use kde-functions.eclass to determine the proper insall
+  location.
 
 *ikons-0.5.7 (1 Feb 2002)
 
