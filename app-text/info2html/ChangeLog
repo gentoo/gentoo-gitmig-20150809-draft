@@ -1,0 +1,8 @@
+# ChangeLog for app-text/info2html
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/ChangeLog,v 1.1 2003/09/28 01:05:46 twp Exp $
+
+*info2html-1.4 (28 Sep 2003)
+
+  28 Sep 2003; Tom Payne <twp@gentoo.org> info2html-1.4.ebuild :
+  Initial version. Bug # 16283.
