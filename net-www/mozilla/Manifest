@@ -15,11 +15,6 @@ MD5 e30291e992d71bccac5937cca9696da0 files/enigmail-Makefile 1560
 MD5 d0e52abf109fe61c4195f0cbf002ae18 files/google.src 706
 MD5 766df4cd7332bf4127847985f98e46ec files/gtk2mozilla_head_patch2 27148
 MD5 fec6b616b0fec2ee53d64edc2dbfa03c files/mozilla 134
-MD5 937ecdca5b59d442c2b0b5027ead762d files/mozilla-1.0-abi-compat-wrappers.patch 1799
-MD5 4749f0978ad569b9bcf028c75b5de9cc files/mozilla-1.0-abi-xpcom-ppc.patch 12433
-MD5 e239c459343aa377a9c1a6fd0239e4c9 files/mozilla-1.0-asmfixes.patch 9089
-MD5 2428c0ad22b38f773fb9c174722909de files/mozilla-1.0.1-platform.patch 3543
-MD5 1c48ae2eab3e01fae125748d40917e79 files/mozilla-1.0.1-sparc-xpcom.patch 4267
 MD5 f0e9adeb0454377ce019e8969e644efb files/mozilla-1.4-amd64.patch 35052
 MD5 23d6b685fd5e49a07cc4a1786871bf47 files/mozilla-alpha-xpcom-subs-fix.patch 4953
 MD5 df4a4bc60d8f5d28c801ccedfea84d70 files/mozilla-ft-bytecode.patch 629
