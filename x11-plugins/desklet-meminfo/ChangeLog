@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/desklet-meminfo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-meminfo/ChangeLog,v 1.2 2003/09/24 19:59:46 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-meminfo/ChangeLog,v 1.3 2003/09/28 05:35:17 obz Exp $
+
+*desklet-meminfo-0.1.4-r1 (28 Sep 2003)
+
+  28 Sep 2003; Mike Gardiner <obz@gentoo.org> desklet-meminfo-0.1.4-r1.ebuild:
+  New revision, updated depends to -core-0.22 and removed fontselector
 
   24 Sep 2003; Todd Sunderlin <todd@gentoo.org> desklet-meminfo-0.1.4.ebuild:
   added ~sparc keyword
