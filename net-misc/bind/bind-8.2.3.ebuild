@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-8.2.3.ebuild,v 1.3 2001/05/28 14:32:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-8.2.3.ebuild,v 1.4 2001/09/20 14:25:32 lamer Exp $
 
 A="bind-src.tar.gz bind-doc.tar.gz"
 S=${WORKDIR}/src
@@ -11,8 +11,9 @@ SRC_URI="ftp://ftp.isc.org/isc/bind/src/8.2.3/bind-src.tar.gz
          ftp://ftp.isc.org/isc/bind/src/8.2.3/bind-doc.tar.gz"
 HOMEPAGE="http://www.isc.org/products/BIND"
 
-DEPEND="virtual/glibc sys-apps/groff sys-devel/flex"
-RDEPEND="virtual/glibc"
+DEPEND="virtual/glibc 
+		>=sys-apps/groff-1.16.1 
+		>=sys-devel/flex-2.5.4"
 
 src_unpack() {
     unpack ${A}
