@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Spider <spider@gentoo.org>, Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/ickle/ickle-0.3.0.ebuild,v 1.1 2002/04/17 21:27:07 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ickle/ickle-0.3.1.ebuild,v 1.1 2002/04/27 07:16:49 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ICQ 200x compatible ICQ client. limited featureset."
@@ -14,7 +14,8 @@ DEPEND=">=x11-libs/gtk+-1.2.10
 		>=x11-libs/gtkmm-1.2.5
 		>=dev-libs/libsigc++-1.0.4
 		>=sys-libs/lib-compat-1.0
-		=net-libs/libicq2000-0.3.0
+		=net-libs/libicq2000-0.3.1
+		spell? ( app-text/ispell )
 		gnome? ( >= gnome-base/gnome-applets-1.4.0 
 			 >= gnome-base/gnome-libs-1.4.1 )"
 
