@@ -1,5 +1,4 @@
 MD5 0b8b8ca7a5b5e38c862fb266dafd4aac gaim-0.78-r3.ebuild 4536
-MD5 adf3d75421baa4c0fbe9c5de43c567d8 gaim-0.78-r2.ebuild 4483
 MD5 7714781d616cb8875df7278910898f6a gaim-0.77.ebuild 4041
 MD5 3bb264bfcd9a28cbc67d9760e7b81b0b gaim-0.75-r10.ebuild 3671
 MD5 16c4f4c058f5590eacc6ab13da12a1a9 ChangeLog 30716
@@ -12,7 +11,6 @@ MD5 a714a5babbb4387f5a5516f75548528a files/gaim-0.76cvs-yahoo-misc-fixes-1.diff 
 MD5 68525b8389e356a5d05d531b84fb1ada files/gaim-0.74-gnome-url-handler.patch 1854
 MD5 a8234ce30b90015d2798a6f576982857 files/gaim-0.78cvs-novelltweaks5.patch 715
 MD5 fa4c02c17e5d4096a6353342bed870ec files/gaim-0.78-log_find_click.patch 1049
-MD5 f07855631a1ef3f986568b772f335865 files/digest-gaim-0.78-r2 63
 MD5 f07855631a1ef3f986568b772f335865 files/digest-gaim-0.78-r3 63
 MD5 a4f3b00a7aa80e7fbc1e315b8c9306c8 files/gaim-0.76cvs-signals-varargs.diff 1753
 MD5 53302cc68bb7bef9803723e977010339 files/gaim-0.74_cjk_gtkconv.patch 1128
