@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.8.0.ebuild,v 1.1 2004/09/15 14:44:09 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.8.0.ebuild,v 1.2 2004/10/09 12:37:55 foser Exp $
 
 inherit gnome2
 
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.4.1
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomecanvas-2
 	>=gnome-base/libbonoboui-2
-	>=gnome-base/gnome-vfs-2.5.3
+	>=gnome-base/gnome-vfs-2.7.3
 	gnome-base/gnome-keyring
 	jpeg? ( media-libs/jpeg )"
 
