@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/epm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.5 2004/03/29 17:00:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.6 2004/04/05 04:41:25 agriffis Exp $
+
+*epm-0.8.7 (05 Apr 2004)
+
+  05 Apr 2004; Aron Griffis <agriffis@gentoo.org> +epm-0.8.7.ebuild:
+  Add patch from Michael Sterret in bug 45927 to handle whitespace in filenames
 
 *epm-0.8.6 (29 Mar 2004)
 
