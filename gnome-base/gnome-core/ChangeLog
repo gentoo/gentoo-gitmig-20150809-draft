@@ -1,7 +1,12 @@
 # ChangeLog for gnome-base/gnome-core
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/ChangeLog,v 1.5 2002/04/04 19:39:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/ChangeLog,v 1.6 2002/04/23 16:45:56 spider Exp $
 
+*gnome-core-1.4.0.7 (23 Apr 2002)
+  23 Apr 2002; Spider <spider@gentoo.org> gnome-core-1.4.0.7.ebuild :
+  Create a patch to fix a png link configure problem
+  update to new version of gnome-core
+'
 *gnome-core-1.4.0.6-r5 (4 Apr 2002)
 
   4 Apr 2002; M.Schlemmer <azarah@gentoo.org> gnome-core-1.4.0.6-r5.ebuild :
