@@ -16,7 +16,7 @@ do
 	    then
 		strip --strip-unneeded ${x}
 	    fi
-	    install -m0644 ${x} ${D}${DESTTREE}/lib
+	    install -m0755 ${x} ${D}${DESTTREE}/lib
 	else
 	    echo "${0}: ${x} does not exist"
 	fi
