@@ -1,0 +1,9 @@
+# ChangeLog for app-games/supertux
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/ChangeLog,v 1.1 2003/09/12 01:52:45 msterret Exp $
+
+*supertux-0.0.4 (09 Sep 2003)
+
+  09 Sep 2003; Michael Sterrett <msterret@gentoo.org> supertux-0.0.4.ebuild:
+  initial commit; ebuild from mikami and then modified (bug 28251)
+
