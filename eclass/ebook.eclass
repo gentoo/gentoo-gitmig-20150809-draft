@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.15 2004/04/11 05:46:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.16 2004/04/16 10:27:23 mr_bones_ Exp $
 #
 # Author Francisco Gimeno <kikov@fco-gimeno.com>
 # Mantainer José Alberto Suárez López <bass@gentoo.org>
@@ -66,7 +66,7 @@ if [ "${RDEPEND}" = "" ]; then
 	RDEPEND=">=dev-util/devhelp-0.6"
 fi
 if [ "${DESCRIPTION}" = "" ]; then
-	DESCRIPTION="${P} ebook based in $ECLASS eclass"
+	DESCRIPTION="${P} ebook based on $ECLASS eclass"
 fi
 if [ "${EBOOKDESTDIR}" = "" ]; then
 	EBOOKDESTDIR=${_ebookdestdir}
