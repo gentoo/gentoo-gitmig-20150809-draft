@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/ondir
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.1 2003/08/21 21:02:07 pylon Exp $
+
+*ondir-0.2.1 (21 Aug 2003)
+
+  21 Aug 2003; Lars Weiler <pylon@gentoo.org> ondir-0.2.1.ebuild:
+  Initial submission
+  Thanks to Wolfram Schlich <wolfram@schlich.org> for this ebuild.
+
