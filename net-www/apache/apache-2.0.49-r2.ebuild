@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r2.ebuild,v 1.1 2004/05/19 18:10:17 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r2.ebuild,v 1.2 2004/05/21 00:20:09 kumba Exp $
 
-inherit flag-o-matic eutils fixheadtails
+inherit flag-o-matic eutils fixheadtails gnuconfig
 
 DESCRIPTION="Apache Web Server, Version 2.0.x"
 HOMEPAGE="http://www.apache.org/"
@@ -98,6 +98,9 @@ src_unpack() {
 src_compile() {
 	set_filter_flags
 	apache_setup_vars
+
+	# Detect mips systems properly
+	use mips && gnuconfig_update
 
 	local myconf
 	if use ldap; then
