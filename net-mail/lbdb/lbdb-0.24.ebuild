@@ -1,11 +1,12 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.24.ebuild,v 1.1 2001/07/10 19:34:41 lamer Exp $
-P=lbdb_0.24
-S=${WORKDIR}/lbdb-0.24
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.24.ebuild,v 1.2 2002/04/27 20:23:13 seemant Exp $
+
+MY_P=${P/-/_}
+S=${WORKDIR}/${P}
 DESCRIPTION="This is a sample skeleton ebuild file"
-SRC_URI="http://www.spinnaker.de/debian/${P}.tar.gz"
+SRC_URI="http://www.spinnaker.de/debian/${MY_P}.tar.gz"
 HOMEPAGE="http://www.spinnaker.de/debian/lbdb.html"
 DEPEND=">=net-mail/mutt-1.2.5"
 
@@ -17,18 +18,14 @@ DEPEND=">=net-mail/mutt-1.2.5"
 
 
 src_compile() {
-	try ./configure --infodir=/usr/share/info --mandir=/usr/share/man \
-		--prefix=/usr --sysconfdir=/etc --libdir=/usr/lib/lbdb --host=${CHOST}
+
+	econf --libdir=/usr/lib/lbdb || die
 	
-	try emake
-	#try make
+	emake || die
 }
 
 src_install () {
 	
-	# try make prefix=${D}/usr install
-
-    try make install_prefix=${D} install
+    make install_prefix=${D} install || die
 	 dodoc README INSTALL COPYING NEWS TODO
 }
-
