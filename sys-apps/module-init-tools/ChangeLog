@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/module-init-tools
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.1 2002/12/11 00:47:06 lostlogic Exp $
+
+*module-init-tools-0.9.1 (10 Dec 2002)
+
+  10 Dec 2002; Brandon Low <lostlogic@gentoo.org> module-init-tools-0.9.1 :
+  New unstable package for managing modules in 2.5 series kernels.  A
+  bit complicated as it does overwrite the modutils system package,
+  we'll need to take another look at this before 2.6 comes out.
