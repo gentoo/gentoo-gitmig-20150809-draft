@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.17 2005/04/06 15:50:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.18 2005/04/06 18:28:29 seemant Exp $
+
+  06 Apr 2005; Seemant Kulleen <seemant@gentoo.org> ddclient-3.6.6.ebuild:
+  I was too hasty in my enew edits. Enewuser now behaves here. Apologies to:
+  mmagos <marc_magos@yahoo.com> in bug #88165
 
   06 Apr 2005; Seemant Kulleen <seemant@gentoo.org> -ddclient-3.6.2.ebuild,
   ddclient-3.6.3.ebuild:
