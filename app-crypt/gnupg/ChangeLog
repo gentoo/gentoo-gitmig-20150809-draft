@@ -1,11 +1,14 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.28 2003/09/16 02:33:09 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.29 2003/09/23 15:31:36 gmsoft Exp $
 
   16 Sep 2003; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.3-r2.ebuild:
   marking stable x86 and alpha.
 
 *gnupg-1.2.3-r2 (30 Aug 2003)
+
+  23 Aug 2003; Guy Martin <gmsoft@gentoo.org> gnupg-1.2.3-r2.ebuild :
+  Marked stable on hppa.
 
   30 Aug 2003; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.3-r2.ebuild:
   configure interprets libexecdir different from the install makefile 
