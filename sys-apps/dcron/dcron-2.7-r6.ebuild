@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>, Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r6.ebuild,v 1.1 2001/10/03 04:35:19 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r6.ebuild,v 1.2 2001/10/14 23:42:53 azarah Exp $
 
 # to use this, you must be part of the "cron" group
 
@@ -28,6 +28,9 @@ src_install() {
 	dodir /usr/{sbin,bin}
 	install -o root -g wheel -m 0700 crond ${D}/usr/sbin
 	install -o root -g cron -m 4750 crontab ${D}/usr/bin
+
+	# Need to exist, else dcron do not start -- Azarah
+	dodir /var/spool/cron/crontabs
 
 	diropts -m0755 ; dodir /var
 	diropts -m0750 ; dodir /var/cron/lastrun
