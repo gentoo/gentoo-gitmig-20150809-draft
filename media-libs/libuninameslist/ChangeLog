@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libuninameslist
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.4 2004/07/01 08:01:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.5 2004/07/13 06:49:09 eradicator Exp $
+
+  12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libuninameslist-20030713.ebuild:
+  Added ~sparc and ~amd64
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libuninameslist-20030713.ebuild:
