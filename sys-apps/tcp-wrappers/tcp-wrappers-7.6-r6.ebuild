@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r6.ebuild,v 1.2 2003/09/18 21:55:43 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r6.ebuild,v 1.3 2003/10/13 07:00:29 robbat2 Exp $
 
 inherit eutils
 
@@ -14,10 +14,11 @@ HOMEPAGE="ftp://ftp.porcupine.org/pub/security/index.html"
 IUSE="ipv6 static"
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ia64"
+KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ia64"
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4"
+RDEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
