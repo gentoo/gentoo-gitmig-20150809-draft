@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/ctorrent
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.3 2004/10/18 17:22:12 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.4 2004/11/29 03:22:27 squinky86 Exp $
+
+*ctorrent-1.3.4-r1 (28 Nov 2004)
+
+  28 Nov 2004; Jon Hood <squinky86@gentoo.org> +ctorrent-1.3.4-r1.ebuild:
+  Version bump, fix CFLAGS, #69678, thanks mkennedy.
 
   18 Oct 2004; Jon Hood <squinky86@gentoo.org> ctorrent-1.3.4.ebuild:
   Stable on x86.
