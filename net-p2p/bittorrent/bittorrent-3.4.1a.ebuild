@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.4.1a.ebuild,v 1.1 2004/03/13 23:30:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.4.1a.ebuild,v 1.2 2004/03/15 00:34:40 eradicator Exp $
 
 inherit distutils
 
@@ -22,6 +22,7 @@ RDEPEND="X? ( >=dev-python/wxPython-2.2 )
 	>=dev-lang/python-2.1
 	!virtual/bittorrent"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	>=sys-apps/sed-4.0.5"
 PROVIDE="virtual/bittorrent"
 
