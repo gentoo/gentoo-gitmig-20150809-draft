@@ -1,5 +1,6 @@
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-core/Manifest,v 1.16 2003/12/16 22:09:54 robbat2 Exp $
-MD5 e9e978910dcbc5d44a4f60063f05e95e php-core-4.3.4.ebuild 1946
-MD5 70fda8c6caea19a50e1e57b5e7780bb9 ChangeLog 468
+MD5 1e52a65a59d4362ea87c163882c91400 ChangeLog 469
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
+MD5 f8689fdb454429ad37f78817dce60c87 php-core-4.3.4.ebuild 1947
+MD5 f8689fdb454429ad37f78817dce60c87 php-core-4.3.4-r1.ebuild 1947
 MD5 5547bf31e6a425747226d5984cff04e9 files/digest-php-core-4.3.4 137
+MD5 5547bf31e6a425747226d5984cff04e9 files/digest-php-core-4.3.4-r1 137
