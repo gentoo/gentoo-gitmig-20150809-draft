@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.2.04.ebuild,v 1.9 2004/02/02 17:37:52 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.2.04.ebuild,v 1.10 2004/02/06 22:53:24 spock Exp $
 
 MY_P=xfract${PV}
 
@@ -48,7 +48,3 @@ src_install() {
 	insinto /etc/env.d
 	newins ${FILESDIR}/xfractint.envd 60xfractint
 }
-
-
-
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.3.00.ebuild,v 1.1 2004/02/02 19:46:45 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.3.00.ebuild,v 1.2 2004/02/06 22:53:24 spock Exp $
 
 MY_P=xfract${PV}
 
@@ -47,4 +47,11 @@ src_install() {
 
 	insinto /etc/env.d
 	newins ${FILESDIR}/xfractint.envd 60xfractint
+}
+
+pkg_postinst() {
+	einfo
+	einfo "XFractInt requires the FRACTDIR variable to be set in order to start."
+	einfo "Please re-login or \`source /etc/profile\` to have this variable set automatically."
+	einfo
 }
