@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/phpwebsite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.16 2005/01/20 17:47:54 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.17 2005/02/25 21:05:32 rizzo Exp $
+
+*phpwebsite-0.10.0-r1 (25 Feb 2005)
+
+  25 Feb 2005; Don Seiler <rizzo@gentoo.org> +phpwebsite-0.10.0-r1.ebuild:
+  Revision bump for security fix.  Bug #83297
 
   20 Jan 2005; Don Seiler <rizzo@gentoo.org> phpwebsite-0.10.0.ebuild:
   Marking stable in x86
