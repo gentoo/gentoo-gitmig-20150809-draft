@@ -21,6 +21,15 @@
 ##   End example
 ##
 
+
+# <seemant@gentoo.org> 12 Dec 2003)
+# All the sylpheed-gtk2 versions will be masked here together
+=net-mail/sylpheed-claws-0.9.5-r1
+=net-mail/sylpheed-0.9.4-r1
+=net-mail/sylpheed-0.9.5-r1
+=net-mail/sylpheed-0.9.8-r1
+
+
 # <seemant@gentoo.org> (11 Dec 2003)
 # An MIRC malformed dcc header exploit works to bring down xchat.
 # but I thought that OSS, bah
@@ -239,9 +248,6 @@ dev-lisp/cmucl-bin
 # Produces broken code. See bug 28875.
 =sys-devel/gcc-3.3.1-r2
 
-# <seemant@gentoo.org> (15 Sep 2003)
-# Working copy of gtk2 -claws got checked in
-=net-mail/sylpheed-claws-0.9.5-r1
 
 # <caleb@gentoo.org> (10 Sep 2003)
 # new kde versions mask
@@ -283,12 +289,6 @@ dev-lisp/cmucl-bin
 =kde-base/kdelibs-3.2.0_beta2
 =kde-base/kdebase-3.2.0_beta2
 =kde-base/arts-1.2.0_beta2
-
-# <spider@gentoo.org> (04 Sep 2003)
-# <spider@gentoo.org> (08 Sep 2003)
-# Experimental gtk2 support
-=net-mail/sylpheed-0.9.4-r1
-=net-mail/sylpheed-0.9.5-r1
 
 # <lu_zero@gentoo.org> (04 Sep 2003)
 # Not working for me, still builds fine
