@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.63-r1.ebuild,v 1.2 2003/03/25 03:59:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.63-r1.ebuild,v 1.3 2003/05/12 09:09:32 liquidx Exp $
 
 inherit eutils
 
@@ -49,6 +49,7 @@ src_unpack() {
 	tar xzf ${P}*.src.tar.gz
 	tar xzf ${P}.tar.gz
     cd ${S}; epatch ${FILESDIR}/redhat-artwork-0.63-cursors.patch || die
+	cd ${S}; epatch ${FILESDIR}/redhat-artwork-0.63-gcc2.patch || die
 }
 
 src_compile() {

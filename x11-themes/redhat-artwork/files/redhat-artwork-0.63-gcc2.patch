@@ -1,0 +1,19 @@
+*** art/kde/kwin/Bluecurve/redhatclient.cpp.org	Fri Jan 17 15:37:18 2003
+--- art/kde/kwin/Bluecurve/redhatclient.cpp	Mon May 12 01:35:13 2003
+***************
+*** 893,899 ****
+      }
+  
+      if (last_button) {
+!       if(not isLeft)
+  	last_button->pos = ButtonRight;
+        else
+  	last_button->pos = LeftButtonRight;
+--- 893,899 ----
+      }
+  
+      if (last_button) {
+!       if ( !isLeft)
+  	last_button->pos = ButtonRight;
+        else
+  	last_button->pos = LeftButtonRight;

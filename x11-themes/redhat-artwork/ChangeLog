@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/redhat-artwork 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.17 2003/05/10 11:52:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.18 2003/05/12 09:09:31 liquidx Exp $
+
+  12 May 2003; Alastair Tse <liquidx@gentoo.org>
+  redhat-artwork-0.63-r1.ebuild, redhat-artwork-0.65.ebuild,
+  redhat-artwork-0.73.ebuild, files/redhat-artwork-0.63-gcc2.patch:
+  gcc2.95 compatibility patch added. thanks to John Youells
+  <jyouells@adelphia.net>.
 
 *redhat-artwork-0.73 (10 May 2003)
 
