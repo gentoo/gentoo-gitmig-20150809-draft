@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/empy
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.1 2003/10/24 05:58:49 pythonhead Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.2 2004/04/01 01:15:27 kloeri Exp $
+
+*empy-3.3 (01 Apr 2004)
+
+  01 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> empy-3.2.ebuild,
+  empy-3.3.ebuild:
+  Mark 3.2 stable on x86, add new 3.3 version, fix homepage + src_uri.
 
 *empy-3.2 (23 Oct 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/empy-3.2.ebuild,v 1.2 2004/04/01 01:15:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/empy-3.3.ebuild,v 1.1 2004/04/01 01:15:27 kloeri Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.alcyone.com/software/empy/"
 SRC_URI="http://www.alcyone.com/software/empy/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 DEPEND="dev-lang/python"
 
@@ -29,7 +29,7 @@ src_install() {
 	dodir /usr/share/doc/${PF}/examples
 	insinto /usr/share/doc/${PF}/examples
 	doins sample.em sample.bench
-	#3.2 has the html in this funny place. Fix in later version:
+	#3.3 has the html in this funny place. Fix in later version:
 	dohtml doc/home/max/projects/empy/doc/em/*
 	dohtml doc/home/max/projects/empy/doc/em.html
 	dohtml doc/index.html
