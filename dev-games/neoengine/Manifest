@@ -1,10 +1,20 @@
-MD5 10cdb6874f98d957699f6b0510051a53 neoengine-0.8.1.ebuild 979
-MD5 8046198d84dcbb9d4964c76c6e535329 neoengine-0.7.0.ebuild 1119
-MD5 0ac263b80054ab0d2c9d3b8de8586365 neoengine-0.8.0.ebuild 979
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ba58b377cea44c1e4d7c90b68fa8f5eb ChangeLog 781
 MD5 cb4362fd483552bef1fd270bf9e9d2ce metadata.xml 719
+MD5 c7ca15329e0d834b5246af2d918741a8 neoengine-0.7.0.ebuild 1068
+MD5 7c17c7c8b8c1cf8a7b946000534186ae neoengine-0.8.0.ebuild 973
+MD5 b8ee1b103037dd0083b7fe88be678198 neoengine-0.8.1.ebuild 973
 MD5 0b91b355776c52a872ecc19ddf88983d files/0.7.0-execute.patch 1091
 MD5 990103eb9645b5e60de0ddba37697ee4 files/0.7.0-ppc.patch 1906
 MD5 4f703ca7a7fdb63f9912eee2713f483d files/digest-neoengine-0.7.0 69
 MD5 7706793d1da9e4ed465a9f3676e2f664 files/digest-neoengine-0.8.0 70
 MD5 5b830b64facde8a5b6569e9372495ea6 files/digest-neoengine-0.8.1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4YWJHTu7gpaalycRAsmsAKCx9c8XQMLOTFE5+B9uLnVXfDGGAACfRfxC
+dtppWkzm4qGnKNf5nekbJpA=
+=3QSu
+-----END PGP SIGNATURE-----
