@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libcdaudio
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.16 2004/08/12 00:44:28 mr_bones_ Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.17 2005/04/05 02:28:10 obz Exp $
+
+*libcdaudio-0.99.10-r1 (05 Apr 2005)
+
+  05 Apr 2005; Mike Gardiner <obz@gentoo.org>
+  +files/libcdaudio-0.99-CAN-2005-0706.patch, +libcdaudio-0.99.10-r1.ebuild:
+  CAN-2005-0706, bumped 0.99.10 to 0.99.10-r1. Marked 0.99.10-r1 x86 and ppc,
+  please stabilise this version
 
   11 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
   libcdaudio-0.99.9.ebuild:

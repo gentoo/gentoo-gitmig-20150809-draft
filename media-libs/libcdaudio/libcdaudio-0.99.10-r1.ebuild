@@ -1,23 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.9.ebuild,v 1.12 2005/04/05 02:28:10 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.10-r1.ebuild,v 1.1 2005/04/05 02:28:10 obz Exp $
 
-inherit flag-o-matic gnuconfig
+inherit flag-o-matic
 
 DESCRIPTION="Library of cd audio related routines."
-SRC_URI="mirror://sourceforge/libcdaudio/${P}.tar.gz"
 HOMEPAGE="http://libcdaudio.sourceforge.net/"
+SRC_URI="mirror://sourceforge/libcdaudio/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~mips ~amd64 ia64 ppc64"
+KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
 IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	gnuconfig_update
-
+	# CAN-2005-0706 (#84936)
+	epatch ${FILESDIR}/${PN}-0.99-CAN-2005-0706.patch
 }
 
 src_compile() {
@@ -30,5 +29,5 @@ src_compile() {
 
 src_install() {
 	einstall
-	dodoc AUTHORS COPYING ChangLog NEWS README README.BeOS README.OSF1 TODO
+	dodoc AUTHORS COPYING ChangLog INSTALL NEWS README TODO
 }
