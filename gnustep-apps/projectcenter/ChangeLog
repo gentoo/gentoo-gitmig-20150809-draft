@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/projectcenter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.6 2004/12/04 20:20:16 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.7 2004/12/05 03:48:13 fafhrd Exp $
+
+  04 Dec 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  projectcenter-0.4.1_pre20041203.ebuild:
+  Fixed GNUstep non-flattened building (patch no longer needed)
 
 *projectcenter-0.4.1_pre20041203 (03 Dec 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/projectcenter-0.4.1_pre20041203.ebuild,v 1.1 2004/12/04 20:20:16 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/projectcenter-0.4.1_pre20041203.ebuild,v 1.2 2004/12/05 03:48:13 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -31,8 +31,5 @@ src_unpack() {
 	cvs_src_unpack
 	egnustep_env
 	cd ${S}
-	if [ -z "${GNUSTEP_FLATTENED}" ]; then
-		epatch ${FILESDIR}/pc-non-flattened.patch
-	fi
 }
 
