@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/tmda
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/ChangeLog,v 1.19 2002/10/30 07:14:37 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/ChangeLog,v 1.20 2002/11/09 20:33:51 agenkin Exp $
+
+*tmda-0.64 ( 09 Nov 2002 )
+
+  09 Nov 2002; Arcady Genkin <agenkin@thpoon.com> tmda-0.64.ebuild :
+
+  Version update.  Updated Python dependency to greater or equal than
+  2.1.
 
 *tmda-0.63 ( 30 Oct 2002 )
 
