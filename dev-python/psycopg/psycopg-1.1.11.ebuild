@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.11.ebuild,v 1.1 2004/05/08 15:34:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.11.ebuild,v 1.2 2004/06/02 21:29:27 kloeri Exp $
 
 inherit python
 
@@ -13,7 +13,7 @@ DEPEND="virtual/python
 	>=dev-db/postgresql-7.1.3"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc"
+KEYWORDS="~x86 ~sparc alpha ~ppc"
 LICENSE="GPL-2"
 IUSE=""
 

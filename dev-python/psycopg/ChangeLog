@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.14 2004/05/08 15:34:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.15 2004/06/02 21:29:27 kloeri Exp $
+
+  02 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> psycopg-1.1.11.ebuild:
+  Stable on alpha.
 
 *psycopg-1.1.11 (08 May 2004)
 
