@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bidwatcher
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bidwatcher/ChangeLog,v 1.15 2003/12/17 17:30:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bidwatcher/ChangeLog,v 1.16 2003/12/19 22:06:22 mholzer Exp $
+
+  19 Dec 2003; Martin Holzer <mholzer@gentoo.org> bidwatcher-1.3.11.ebuild:
+  Stable since 1.3.10 is brokne
 
 *bidwatcher-1.3.11 (17 Dec 2003)
 
