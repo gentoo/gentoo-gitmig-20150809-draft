@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/smarty
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.31 2005/03/25 21:06:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.32 2005/03/26 18:15:29 kloeri Exp $
+
+  26 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> smarty-2.6.8.ebuild:
+  Stable on alpha, bug 86488.
 
   25 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> smarty-2.6.8.ebuild:
   Stable on hppa.
