@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.12 2003/03/22 08:33:57 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.13 2003/05/09 08:39:11 kosmikus Exp $
+
+*ghc-5.04.3-r1 (09 May 2003)
+
+  09 May 2003; Andres Loeh <kosmikus@gentoo.org> ghc-5.04.3-r1.ebuild:
+  Fixed bug that caused ghci to fail with glibc-2.3.2 (reported by Ralf Hinze
+  <ralf@informatik.uni-bonn.de>). Also added the generation of documentation
+  again (had been missing for a while). To get full documentation, set the "doc"
+  USE flag.
 
 *ghc-5.04.2 (21 Mar 2003)
 
