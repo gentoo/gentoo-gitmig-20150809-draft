@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/rhyme-0.9.ebuild,v 1.1 2003/09/04 17:14:58 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/rhyme-0.9.ebuild,v 1.2 2003/09/19 10:03:48 taviso Exp $
 
 inherit ccc
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/rhyme/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 alpha"
 
 IUSE="ncurses"
 
@@ -44,7 +44,7 @@ src_install() {
 
 	einstall BINPATH=${D}/usr/bin \
 			MANPATH=${D}/usr/share/man/man1 \
-			RHYMEPATH=${D}/usr/share/rhyme || die
+			RHYMEPATH=${D}/usr/share/rhyme
 
 	dodoc INSTALL COPYING
 
