@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/yosucker-59.ebuild,v 1.4 2005/01/28 12:07:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/yosucker-67.ebuild,v 1.1 2005/03/09 16:42:35 ticho Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="Perl script that downloads mail from a Yahoo! webmail account to a 
 SRC_URI="mirror://sourceforge/yosucker/${MY_P}.tar.gz"
 HOMEPAGE="http://yosucker.sourceforge.net"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 SLOT="0"
 
@@ -34,10 +34,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn
+	draw_line
 	ewarn "The Yahoo! Mail interface has changed!!"
-	ewarn "you will need to log in to it manually before yosucker works again."
-	ewarn
-	ebeep 5
-	epause 8
+	ewarn "you may need to log in to it manually before yosucker works again."
+	draw_line
+	ebeep 2
+	epause 5
 }

@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/yosucker
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.18 2005/01/28 12:07:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.19 2005/03/09 16:42:35 ticho Exp $
+
+*yosucker-67 (09 Mar 2005)
+
+  09 Mar 2005; Andrej Kacian <ticho@gentoo.org> -yosucker-59.ebuild,
+  yosucker-65.ebuild, +yosucker-67.ebuild:
+  Version bump. Closes #84634, reported by Dale K. Williamson
+  <jadmech1@yahoo.com>. Marked yosucker-65 stable and removed yosucker 59, as
+  it is no longer usable.
 
 *yosucker-65 (28 Jan 2005)
 
