@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7bc1038a8cd8c0459cc98a88211504c0 ChangeLog 3420
+MD5 fb5208b29b1002b7c36bf282057c952c ChangeLog 3514
+MD5 4e550750cdcb0a6432c46d259d38e4db logwatch-4.3.2.ebuild 1345
 MD5 70cb3442dbd2bafb307ea09f5eea8d03 logwatch-5.0.ebuild 1398
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 e5be263690085aa1615e36400d2dee31 logwatch-5.2.2.ebuild 1406
-MD5 4e550750cdcb0a6432c46d259d38e4db logwatch-4.3.2.ebuild 1345
+MD5 e97d933a4de3a1516e785b3e3c8e3308 logwatch-5.2.2.ebuild 1413
 MD5 cf548a7143dce1aba3792d0647ae4f90 files/digest-logwatch-4.3.2 65
-MD5 e8d38d01460c2fcf26e92e8853bf6c84 files/digest-logwatch-5.2.2 66
 MD5 4a5e8c25106385b7e823785f6c61855d files/digest-logwatch-5.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB49wmQlM6RnzZP+IRAhGYAKCG0YeDt/lPy9O0k6VxaRBDGHuZEACggXPm
-uiYoAUc2JxE1jErX+36VpCc=
-=Be/Q
------END PGP SIGNATURE-----
+MD5 e8d38d01460c2fcf26e92e8853bf6c84 files/digest-logwatch-5.2.2 66
