@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.43 2005/02/17 17:36:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.44 2005/04/06 18:46:21 corsair Exp $
+
+  06 Apr 2005; Markus Rothe <corsair@gentoo.org> rpm-4.2.1.ebuild:
+  Stable on ppc64
 
   17 Feb 2005; Markus Rothe <corsair@gentoo.org> rpm-4.2.1.ebuild:
   Added ~ppc64 to KEYWORDS
