@@ -1,6 +1,5 @@
 /*
  * Copyright (c) 1993, 1994, 1995, 1996 Rick Sladkey <jrs@world.std.com>
- * Copyright (c) 1996-1999 Wichert Akkerman <wichert@cistron.nl>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -25,7 +24,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- *	$Id: stream.c,v 1.1 2000/11/15 16:46:05 achim Exp $
+ *	$Id: stream.c,v 1.2 2000/11/27 15:59:32 achim Exp $
  */
 
 #include "defs.h"
@@ -35,13 +34,13 @@
 #if defined(linux)
 #include <sys/poll.h>
 #include <stropts.h>
+
 #define MORECTL 1
 #define MOREDATA 2
 
 #else /* linux */
 
 #include <stropts.h>
-
 #include <poll.h>
 #include <sys/conf.h>
 #include <sys/stream.h>
@@ -74,7 +73,7 @@ int getting;
 		if (getting)
 			tprintf("maxlen=%d, ", sbp->maxlen);
 		tprintf("len=%d, buf=", sbp->len);
-		printstr(tcp, (unsigned long) sbp->buf, sbp->len);
+		printstr(tcp, (int) sbp->buf, sbp->len);
 		tprintf("}");
 	}
 }
@@ -213,7 +212,6 @@ struct tcb *tcp;
 			printstrbufarg(tcp, tcp->u_arg[i], 1);
 		/* pointer to band */
 		printnum(tcp, tcp->u_arg[3], "%d");
-		tprintf(", ");
 		/* pointer to flags */
 		if (tcp->u_arg[4] == 0)
 			tprintf("NULL");
