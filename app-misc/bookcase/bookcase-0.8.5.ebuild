@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bookcase/bookcase-0.8.5.ebuild,v 1.1 2004/03/13 19:15:06 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bookcase/bookcase-0.8.5.ebuild,v 1.2 2004/03/21 18:31:28 weeve Exp $
 
 inherit kde
 need-kde 3.1
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.periapsis.org/bookcase/"
 LICENSE="GPL-2"
 SRC_URI="http://www.periapsis.org/${PN}/download/${P}.tar.gz"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 IUSE=""
 
 
