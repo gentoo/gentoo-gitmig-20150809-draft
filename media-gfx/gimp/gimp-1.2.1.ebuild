@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.1.ebuild,v 1.4 2001/06/04 06:41:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.1.ebuild,v 1.5 2001/06/11 10:29:06 hallski Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -35,7 +35,7 @@ src_compile() {
     myconf="--disable-perl"
   fi
   try ./configure --host=${CHOST} --prefix=/usr/X11R6 --sysconfdir=/etc --with-mp ${myconf}
-  try make 
+  try make   # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {                               
