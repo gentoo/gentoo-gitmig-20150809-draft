@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.0.ebuild,v 1.2 2003/03/03 16:02:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.1.2.ebuild,v 1.1 2003/03/14 05:39:04 seemant Exp $
 
 inherit flag-o-matic
 
 IUSE="ipv6 kde gnome mozilla"
 
-S=${WORKDIR}/${P}
+S=${WORKDIR}/${PN}-0.7.1
 S2=${WORKDIR}/gentoo-dillo-extras-patch
 
 DESCRIPTION="Lean GTK+-based web browser"
