@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.96 2005/02/06 07:38:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.97 2005/02/07 19:50:43 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -123,7 +123,6 @@ kde-base/kdebase kde-base/kdcop
 kde-base/kdebase kde-base/kdebase-applnk
 kde-base/kdebase kde-base/kdebase-kioslaves
 kde-base/kdebase kde-base/kdebase-l10n
-kde-base/kdebase kde-base/kdebase-pam
 kde-base/kdebase kde-base/kdebase-pics
 kde-base/kdebase kde-base/kdebase-startkde
 kde-base/kdebase kde-base/kdebugdialog
