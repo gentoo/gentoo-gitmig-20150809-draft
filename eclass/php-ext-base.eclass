@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.7 2003/08/18 12:54:30 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.8 2003/09/09 08:22:17 stuart Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -70,6 +70,7 @@ php-ext-base_buildinilist () {
 }
 
 php-ext-base_src_install() {
+	php-ext-base_buildinilist
 	if [ "$PHP_EXT_INI" = "yes" ] ; then
 		php-ext-base_addextension "${PHP_EXT_NAME}.so"
 	fi
@@ -132,8 +133,3 @@ php-ext-base_addtoinifiles () {
 		php-ext-base_addtoinifile $1 $2 $x "$3"
 	done
 }
-	
-# now, we build the INI file list for use in this class
-
-php-ext-base_buildinilist
-
