@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.7 2002/09/16 22:45:18 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.8 2002/09/22 14:13:49 azarah Exp $
+
+*openoffice-1.0.1-r1 (22 Sep 2002)
+
+  22 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Enable bytecode interpreter, and build against freetype-2.1.2,
+  based on great work from Paul de Vrieze <gentoo-bugs@devrieze.net>.
+  This should close bug #8096.
 
   17 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
   Fix openoffice-1.0.1-parallel-build.patch, as stupid

@@ -1,0 +1,90 @@
+diff -ru misc/freetype-2.1.2/builds/compiler/visualc.mk misc/build/freetype-2.1.2/builds/compiler/visualc.mk
+--- misc/freetype-2.1.2/builds/compiler/visualc.mk	2000-12-14 00:44:33.000000000 +0100
++++ misc/build/freetype-2.1.2/builds/compiler/visualc.mk	2002-09-20 10:20:11.000000000 +0200
+@@ -63,7 +63,7 @@
+ #   ANSI compliance.
+ #
+ ifndef CFLAGS
+-  CFLAGS := /nologo /c /Ox /G5 /W3 /WX
++  CFLAGS := /nologo /c /Ox /G5 /W3 /WX /MT /Gd -D_CTYPE_DISABLE_MACROS
+ endif
+ 
+ # ANSIFLAGS: Put there the flags used to make your compiler ANSI-compliant.
+diff -ru misc/freetype-2.1.2/builds/unix/ltmain.sh misc/build/freetype-2.1.2/builds/unix/ltmain.sh
+--- misc/freetype-2.1.2/builds/unix/ltmain.sh	2002-03-05 16:09:59.000000000 +0100
++++ misc/build/freetype-2.1.2/builds/unix/ltmain.sh	2002-09-20 10:20:11.000000000 +0200
+@@ -643,7 +643,7 @@
+     if test "$build_old_libs" = yes; then
+       if test "$pic_mode" != yes; then
+ 	# Don't build PIC code
+-	command="$base_compile $srcfile"
++	command="$base_compile $srcfile -DPIC $pic_flag"
+       else
+ 	# All platforms use -DPIC, to notify preprocessed assembler code.
+ 	command="$base_compile $srcfile $pic_flag -DPIC"
+@@ -2274,7 +2274,7 @@
+ 	  ;;
+ 
+ 	irix)
+-	  major=`expr $current - $age + 1`
++	  major=`expr $current - $age`
+ 	  verstring="sgi$major.$revision"
+ 
+ 	  # Add in all the interfaces that we are compatible with.
+diff -ru misc/freetype-2.1.2/include/freetype/config/ftmodule.h misc/build/freetype-2.1.2/include/freetype/config/ftmodule.h
+--- misc/freetype-2.1.2/include/freetype/config/ftmodule.h	2002-05-21 16:13:00.000000000 +0200
++++ misc/build/freetype-2.1.2/include/freetype/config/ftmodule.h	2002-09-20 10:21:40.000000000 +0200
+@@ -1,7 +1,9 @@
+ FT_USE_MODULE(autohint_module_class)
+ FT_USE_MODULE(cff_driver_class)
+ FT_USE_MODULE(t1cid_driver_class)
++/*
+ FT_USE_MODULE(pcf_driver_class)
++*/
+ FT_USE_MODULE(bdf_driver_class)
+ FT_USE_MODULE(psaux_module_class)
+ FT_USE_MODULE(psnames_module_class)
+@@ -13,4 +15,6 @@
+ FT_USE_MODULE(t1_driver_class)
+ FT_USE_MODULE(t42_driver_class)
+ FT_USE_MODULE(pfr_driver_class)
++/*
+ FT_USE_MODULE(winfnt_driver_class)
++*/
+diff -ru misc/freetype-2.1.2/include/freetype/config/ftoption.h misc/build/freetype-2.1.2/include/freetype/config/ftoption.h
+--- misc/freetype-2.1.2/include/freetype/config/ftoption.h	2002-09-20 09:58:44.000000000 +0200
++++ misc/build/freetype-2.1.2/include/freetype/config/ftoption.h	2002-09-20 10:20:11.000000000 +0200
+@@ -101,7 +101,10 @@
+   /*   All convenience functions are declared as such in their             */
+   /*   documentation.                                                      */
+   /*                                                                       */
++/*
+ #undef FT_CONFIG_OPTION_NO_CONVENIENCE_FUNCS
++*/
++#define FT_CONFIG_OPTION_NO_CONVENIENCE_FUNCS
+ 
+ 
+   /*************************************************************************/
+@@ -139,8 +142,10 @@
+   /*   use a vector `plotter' format that isn't supported when this        */
+   /*   macro is undefined.                                                 */
+   /*                                                                       */
++/*
+ #define FT_CONFIG_OPTION_ALTERNATE_GLYPH_FORMATS
+-
++*/
++#undef FT_CONFIG_OPTION_ALTERNATE_GLYPH_FORMATS
+ 
+   /*************************************************************************/
+   /*                                                                       */
+--- misc/freetype-2.1.2/include/freetype/config/ftoption.h.orig	Sun Sep  8 13:10:22 2002
++++ misc/build/freetype-2.1.2/include/freetype/config/ftoption.h	Sun Sep  8 13:31:32 2002
+@@ -375,7 +375,7 @@
+   /* By undefining this, you will only compile the code necessary to load  */
+   /* TrueType glyphs without hinting.                                      */
+   /*                                                                       */
+-#undef  TT_CONFIG_OPTION_BYTECODE_INTERPRETER
++#define TT_CONFIG_OPTION_BYTECODE_INTERPRETER
+ 
+ 
+   /*************************************************************************/
