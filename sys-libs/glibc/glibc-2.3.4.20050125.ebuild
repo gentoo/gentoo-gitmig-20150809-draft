@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.32 2005/03/15 20:45:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.33 2005/03/15 21:50:18 azarah Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -1032,6 +1032,10 @@ src_unpack() {
 		GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} glibc-2.3.4-hardened-sysdep-shared.patch"
 
 	toolchain-glibc_src_unpack
+
+	# Fix assert in _dl_next_tls_modid-assert (sysdeps/generic/dl-tls.c),
+	# bug #52374.
+	epatch ${FILESDIR}/2.3.4/${PN}-2.3.4-fix-_dl_next_tls_modid-assert.patch
 
 	case $(tc-arch) in
 		alpha)
