@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.23 2004/09/24 00:01:57 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.24 2004/10/29 23:27:32 stkn Exp $
+
+*asterisk-1.0.1 (30 Oct 2004)
+
+  30 Oct 2004; <stkn@gentoo.org> +files/1.0.0/asterisk-1.0.1-linux26.diff,
+  +files/1.0.0/asterisk-uclibc-dns.diff, +asterisk-1.0.1.ebuild:
+  new version, pri and zaptel use-flags flipped (now default disabled), fixes:
+  #66557 (thx to REdOG <bugzilla@opelousas.org>), #66720 (webapp stuff
+  removed...), a workaround for #65195 (fixed for newer versions of linux?).
 
 *asterisk-1.0.0 (24 Sep 2004)
 

@@ -1,0 +1,22 @@
+--- work/asterisk-1.0.0/dns.c2004-06-22 20:11:15.000000000 +0000
++++ dns.c2004-10-06 12:59:38.000000000 +0000
+@@ -150,15 +150,18 @@
+ }
+ return 0;
+ }
+-
++/*
+ #if defined(res_ninit)
+ #define HAS_RES_NINIT
+ #else
++*/
+ AST_MUTEX_DEFINE_STATIC(res_lock);
++/*
+ #if 0
+ #warning Warning, res_ninit is missing... Could have reentrancy issues
+ #endif
+ #endif
++*/
+ 
+ int ast_search_dns(void *context,
+    const char *dname, int class, int type,

@@ -1,0 +1,14 @@
+--- asterisk-1.0.1/channels/chan_phone.c.orig	2004-10-24 20:24:06.646210032 +0200
++++ asterisk-1.0.1/channels/chan_phone.c	2004-10-24 20:26:05.699111240 +0200
+@@ -33,6 +33,11 @@
+ #include <sys/ioctl.h>
+ #include <linux/telephony.h>
+ /* Still use some IXJ specific stuff */
++#include <linux/version.h>
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++/* required to compile on 2.6 */
++#include <linux/compiler.h>
++#endif
+ #include <linux/ixjuser.h>
+ #include "DialTone.h"
+ 
