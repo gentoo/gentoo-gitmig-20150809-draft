@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/memcached-api-perl/memcached-api-perl-1.0.7.ebuild,v 1.2 2003/10/05 06:50:27 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/memcached-api-perl/memcached-api-perl-1.0.8.ebuild,v 1.1 2003/10/05 06:50:27 lisa Exp $
 
 inherit perl-module
 
