@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.17 2004/04/28 22:05:18 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.18 2004/05/31 20:34:33 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,11 +8,10 @@ DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
 SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2
 	idea? ( ftp://ftp.gnupg.dk/pub/contrib-dk/idea.c.gz )"
-SLOT="0"
 
 LICENSE="GPL-2 | IDEA GPL-2"
-
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips"
+SLOT="0"
+KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ia64"
 IUSE="X ldap nls static caps idea"
 
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
@@ -23,7 +22,6 @@ RDEPEND="!static? ( ldap? ( net-nds/openldap )
 	nls? ( sys-devel/gettext )
 	virtual/glibc
 	dev-lang/perl"
-
 # XXX: libpcap earlier than 1.10-r3 did not provide libcap.a
 #	DEPEND="caps? ( static? ( >=sys-libs/libcap-1.10-r3 )
 #				!static? ( sys-libs/libcap ) )
@@ -34,14 +32,6 @@ DEPEND="caps? ( sys-libs/libcap )
 	app-arch/bzip2
 	virtual/glibc
 	dev-lang/perl"
-
-# Certain sparc32 machines seem to have trouble building correctly with 
-# -mcpu enabled.  While this is not a gnupg problem, it is a temporary
-# fix until the gcc problem can be tracked down.
-
-if [ "${ARCH}" == "sparc" ] && [ "${PROFILE_ARCH}" == "sparc" ]; then
-	filter-flags -mcpu=supersparc -mcpu=v8 -mcpu=v7
-fi
 
 src_unpack() {
 	unpack ${A}
@@ -59,6 +49,13 @@ src_unpack() {
 }
 
 src_compile() {
+	# Certain sparc32 machines seem to have trouble building correctly with 
+	# -mcpu enabled.  While this is not a gnupg problem, it is a temporary
+	# fix until the gcc problem can be tracked down.
+	if [ "${ARCH}" == "sparc" ] && [ "${PROFILE_ARCH}" == "sparc" ]; then
+		filter-flags -mcpu=supersparc -mcpu=v8 -mcpu=v7
+	fi
+
 	# support for external HKP keyservers requested in #16457.
 	local myconf="--enable-external-hkp --enable-static-rnd=linux --libexecdir=/usr/lib --enable-sha512"
 
@@ -106,8 +103,8 @@ src_install() {
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
 
-	dodoc ABOUT-NLS AUTHORS BUGS COPYING ChangeLog INSTALL NEWS PROJECTS \
-	README THANKS TODO VERSION doc/{FAQ,HACKING,DETAILS,ChangeLog,OpenPGP,faq.raw}
+	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS PROJECTS README THANKS \
+		TODO VERSION doc/{FAQ,HACKING,DETAILS,ChangeLog,OpenPGP,faq.raw}
 
 	use idea && dodoc ${S}/cipher/idea.c
 

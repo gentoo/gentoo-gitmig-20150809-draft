@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r2.ebuild,v 1.11 2004/04/25 21:55:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r2.ebuild,v 1.12 2004/05/31 20:34:33 vapier Exp $
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
 SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 alpha ~sparc hppa ia64"
+SLOT="0"
+KEYWORDS="x86 ~sparc alpha hppa ia64"
 IUSE="X zlib ldap nls"
 
 DEPEND="dev-lang/perl
@@ -32,7 +32,7 @@ src_compile() {
 	fi
 
 	econf ${myconf} --libexecdir=/usr/lib || die "econf failed"
-	emake
+	emake || die
 }
 
 src_install() {
@@ -40,8 +40,8 @@ src_install() {
 
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
 
-	dodoc ABOUT-NLS AUTHORS BUGS COPYING ChangeLog INSTALL NEWS PROJECTS \
-	README THANKS TODO VERSION doc/{FAQ,HACKING,DETAILS,ChangeLog,OpenPGP,faq.raw}
+	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS PROJECTS README THANKS \
+		TODO VERSION doc/{FAQ,HACKING,DETAILS,ChangeLog,OpenPGP,faq.raw}
 
 	docinto sgml
 	dodoc doc/*.sgml

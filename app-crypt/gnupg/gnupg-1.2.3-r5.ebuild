@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r5.ebuild,v 1.8 2004/03/13 12:37:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r5.ebuild,v 1.9 2004/05/31 20:34:33 vapier Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
 SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2"
-SLOT="0"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64"
 IUSE="X ldap nls static caps"
 
@@ -20,7 +21,6 @@ RDEPEND="!static? ( ldap? ( net-nds/openldap )
 	virtual/glibc
 	dev-lang/perl
 	virtual/mta"
-
 # XXX: libpcap earlier than 1.10-r3 did not provide libcap.a
 #	DEPEND="caps? ( static? ( >=sys-libs/libcap-1.10-r3 )
 #				!static? ( sys-libs/libcap ) )
@@ -30,14 +30,6 @@ DEPEND="caps? ( sys-libs/libcap )
 	!static? ( sys-libs/zlib )
 	virtual/glibc
 	dev-lang/perl"
-
-# Certain sparc32 machines seem to have trouble building correctly with 
-# -mcpu enabled.  While this is not a gnupg problem, it is a temporary
-# fix until the gcc problem can be tracked down.
-
-if [ "${ARCH}" == "sparc" ] && [ "${PROFILE_ARCH}" == "sparc" ]; then
-	filter-flags "-mcpu=supersparc -mcpu=v8 -mcpu=v7"
-fi
 
 src_unpack() {
 	unpack ${A}
@@ -57,6 +49,13 @@ src_unpack() {
 }
 
 src_compile() {
+	# Certain sparc32 machines seem to have trouble building correctly with 
+	# -mcpu enabled.  While this is not a gnupg problem, it is a temporary
+	# fix until the gcc problem can be tracked down.
+	if [ "${ARCH}" == "sparc" ] && [ "${PROFILE_ARCH}" == "sparc" ]; then
+		filter-flags "-mcpu=supersparc -mcpu=v8 -mcpu=v7"
+	fi
+
 	# support for external HKP keyservers requested in #16457.
 	# gpg faq entry 3.3 reccommends using --enable-static-rnd=linux 
 	# whenever possible.
@@ -106,8 +105,8 @@ src_install() {
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
 
-	dodoc ABOUT-NLS AUTHORS BUGS COPYING ChangeLog INSTALL NEWS PROJECTS \
-	README THANKS TODO VERSION doc/{FAQ,HACKING,DETAILS,ChangeLog,OpenPGP,faq.raw}
+	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS PROJECTS README THANKS \
+		TODO VERSION doc/{FAQ,HACKING,DETAILS,ChangeLog,OpenPGP,faq.raw}
 
 	newdoc ${FILESDIR}/${P}-disable-elgamal.diff README.elgamal
 

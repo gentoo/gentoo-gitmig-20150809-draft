@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.8.ebuild,v 1.2 2004/05/05 17:43:05 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.8.ebuild,v 1.3 2004/05/31 20:34:33 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
 SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/${P}.tar.gz"
-SLOT="0"
-LICENSE="GPL-2 | GPL-2 IDEA"
 
-KEYWORDS="~x86 ~alpha ~mips"
+LICENSE="GPL-2 | GPL-2 IDEA"
+SLOT="0"
+KEYWORDS="~x86 ~mips ~alpha"
 IUSE="X ldap nls caps"
 
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
@@ -24,7 +24,6 @@ RDEPEND="!static? ( ldap? ( net-nds/openldap )
 	dev-lang/perl
 	dev-libs/pth
 	virtual/mta"
-
 DEPEND="caps? ( sys-libs/libcap )
 	ldap? ( net-nds/openldap )
 	nls? ( sys-devel/gettext )
@@ -75,8 +74,8 @@ src_install() {
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
 
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS \
-	README THANKS TODO VERSION doc/{FAQ,HACKING,DETAILS,ChangeLog,OpenPGP,faq.raw}
+	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS TODO VERSION \
+		doc/{FAQ,HACKING,DETAILS,ChangeLog,OpenPGP,faq.raw}
 
 	if ! use caps; then
 		chmod u+s "${D}/usr/bin/gpg"

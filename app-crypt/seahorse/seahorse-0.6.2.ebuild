@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.6.2.ebuild,v 1.8 2004/04/26 15:52:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.6.2.ebuild,v 1.9 2004/05/31 20:34:34 vapier Exp $
 
-IUSE=""
 DESCRIPTION="gnome front end to gnupg"
-SRC_URI="mirror://sourceforge/seahorse/${P}.tar.gz"
 HOMEPAGE="http://seahorse.sourceforge.net/"
+SRC_URI="mirror://sourceforge/seahorse/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~ppc"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~sparc"
+IUSE=""
 
 RDEPEND="virtual/x11
 	>=app-crypt/gnupg-1.2.0
@@ -17,16 +17,10 @@ RDEPEND="virtual/x11
 	>=x11-libs/gtk+-2*
 	>=gnome-base/libgnome-2*
 	>=app-text/scrollkeeper-0.3*"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_compile() {
-	econf || die "econf failed"
-	emake || die "parallel make failed"
-}
-
 src_install() {
-	einstall
-	dodoc AUTHORS COPYING* ChangeLog NEWS README TODO THANKS
+	einstall || die
+	dodoc AUTHORS ChangeLog NEWS README TODO THANKS
 }

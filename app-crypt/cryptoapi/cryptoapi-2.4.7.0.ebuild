@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.20 2004/04/25 21:53:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.21 2004/05/31 20:34:33 vapier Exp $
 
 inherit check-kernel
 
 DESCRIPTION="Modules that add encryption ability at the kernel level."
-SRC_URI="mirror://sourceforge/cryptoapi/${P}.tar.gz"
 HOMEPAGE="http://www.sourceforge.net/projects/cryptoapi"
+SRC_URI="mirror://sourceforge/cryptoapi/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 -ppc"
+IUSE=""
 
 DEPEND=">=sys-apps/util-linux-2.11o-r2
 	virtual/linux-sources
@@ -40,7 +41,7 @@ src_install() {
 	dodir ${D}/lib/modules/${KV}/misc
 	make MODLIB=${D}/lib/modules/${KV}/misc install || die
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL LICENSE.crypto
+	dodoc AUTHORS ChangeLog INSTALL LICENSE.crypto
 	dodoc NEWS README* TODO doc/* doc/utils/*
 }
 
