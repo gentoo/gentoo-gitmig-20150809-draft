@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.5 2004/06/01 00:11:51 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.6 2004/06/11 00:47:48 lv Exp $
+
+  10 Jun 2004; Travis Tilley <lv@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild:
+  stable on amd64
+
+  10 Jun 2004; Travis Tilley <lv@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild:
+  fixed the bug where some apps would fail to link if libstdc++-v3 is installed.
+  I didnt have previous ebuilds remove the .so symlink... this one does.
 
   31 May 2004; Joshua Kinard <kumba@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild:
   Added ~mips to KEYWORDS.
