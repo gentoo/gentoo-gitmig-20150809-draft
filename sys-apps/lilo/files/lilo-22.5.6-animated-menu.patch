@@ -341,7 +341,7 @@ diff -urpN lilo-22.5.6/gfxlogo.S lilo-22.5.6.gfx/gfxlogo.S
 +
 +		mov ax,#0xffff
 +		seg fs
-+		xchg ax,par2_timeout+SSDIFF
++		xchg ax,par2_timeout
 +
 +		; map 0xffff -> 0
 +		add ax,#1

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.6-r3.ebuild,v 1.1 2003/08/03 13:33:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.6-r3.ebuild,v 1.2 2003/08/03 21:02:20 azarah Exp $
 
 inherit mount-boot eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://brun.dyndns.org/pub/linux/lilo/"
 
 SLOT="0"
 LICENSE="BSD GPL-2"
-KEYWORDS="-* ~x86"
+KEYWORDS="-*"
 
 DEPEND="dev-lang/nasm
 	>=sys-devel/bin86-0.15.5"
@@ -35,6 +35,9 @@ src_unpack() {
 	#   Quequero <quequerp@bitchx.it>
 	#
 	epatch ${FILESDIR}/${P}-animated-menu.patch
+
+	# Fixup things for glibc-2.3.3 (and later CVS versions of 2.3.2)
+	epatch ${FILESDIR}/${P}-glibc233.patch
 }
 
 src_compile() {
