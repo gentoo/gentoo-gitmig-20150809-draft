@@ -180,6 +180,7 @@
 				</tr>
 				<tr>
 				<td align="center">
+					<p class="alttext">Support our development efforts by donating via credit card!</p>
 							<!-- Begin PayPal Logo -->
 						<form action="https://www.paypal.com/cgi-bin/webscr" methd="post">
 						<input type="hidden" name="cmd" value="_xclick"/>
@@ -390,6 +391,7 @@ User Docs:<br/>
 				</tr>
 				<tr>
 				<td align="center">
+					<p class="alttext">Support our development efforts by donating via credit card!</p>
 							<!-- Begin PayPal Logo -->
 						<form action="https://www.paypal.com/cgi-bin/webscr" methd="post">
 						<input type="hidden" name="cmd" value="_xclick"/>
