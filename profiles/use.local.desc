@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.635 2004/09/20 03:36:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.636 2004/09/20 12:08:28 lanius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -406,7 +406,7 @@ net-analyzer/snort:flexresp - Enable connection tearing (not recommended)
 net-analyzer/snort:snortsam - patches snort for use with snortsam
 net-dialup/freeradius:frascend - Enable ascend binary mode
 net-dialup/freeradius:frlargefiles - Enable large file support
-net-dialup/freeradius:frnothreds - Disable thread support
+net-dialup/freeradius:frnothreads - Disable thread support
 net-dialup/freeradius:frxp - enable experimental modules
 net-dialup/gammu:bluetooth - Enable Bluetooth Support
 net-dialup/gammu:irda - Enable Infrared Support
