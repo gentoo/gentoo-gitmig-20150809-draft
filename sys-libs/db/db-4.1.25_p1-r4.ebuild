@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r4.ebuild,v 1.16 2005/01/19 13:14:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r4.ebuild,v 1.17 2005/01/30 19:39:20 pauldv Exp $
 
 inherit eutils gnuconfig db
 
@@ -19,7 +19,7 @@ fi
 S=${WORKDIR}/${MY_P}/build_unix
 DESCRIPTION="Berkeley DB"
 HOMEPAGE="http://www.sleepycat.com/"
-SRC_URI="http://www.sleepycat.com/update/snapshot/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.sleepycat.com/releases/${MY_P}.tar.gz"
 for (( i=1 ; i<=$PATCHNO ; i++ )) ; do
 	export SRC_URI="${SRC_URI} http://www.sleepycat.com/update/${MY_PV}/patch.${MY_PV}.${i}"
 done
