@@ -1,8 +1,14 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.19 2002/12/13 11:00:07 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.20 2002/12/25 11:27:25 raker Exp $
 
 courier-imap-1.6.1 (12 Dec 2002)
+
+  25 Dec 2002; Nick Hadaway <raker@gentoo.org> courier-imap-1.6.1.ebuild,
+  files/gentoo-imapd-1.6.1.rc, files/gentoo-imapd-ssl-1.6.1.rc,
+  files/gentoo-pop3d-1.6.1.rc, files/gentoo-pop3d-ssl-1.6.1.rc :
+  Updated the gentoo rc files and ebuild as logger has changed
+  to courierlogger.
 
   12 Dec 2002; Nick Hadaway <raker@gentoo.org>
   courier-imap-1.6.1.ebuild, files/digest-courier-imap-1.6.1 :

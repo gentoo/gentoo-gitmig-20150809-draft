@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.6.1.ebuild,v 1.2 2002/12/13 04:51:27 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.6.1.ebuild,v 1.3 2002/12/25 11:27:25 raker Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="http://twtelecom.dl.sourceforge.net/sourceforge/courier/${P}.tar.bz2"
@@ -44,6 +44,8 @@ src_compile() {
 	else
 		myconf="${myconf} --without-authvchkpw"
 	fi
+
+	myconf="${myconf} debug=true"
 
 	./configure \
 		--prefix=/usr \
@@ -142,8 +144,10 @@ src_install() {
 		newexe ${FILESDIR}/courier-pop3d-ssl.rc6 courier-pop3d-ssl
 
 	exeinto /usr/lib/courier-imap
-		doexe ${FILESDIR}/gentoo-imapd.rc ${FILESDIR}/gentoo-imapd-ssl.rc \
-			${FILESDIR}/gentoo-pop3d.rc ${FILESDIR}/gentoo-pop3d-ssl.rc
+		newexe ${FILESDIR}/gentoo-imapd-1.6.1.rc gentoo-imapd.rc
+		newexe ${FILESDIR}/gentoo-imapd-ssl-1.6.1.rc gentoo-imapd-ssl.rc
+		newexe ${FILESDIR}/gentoo-pop3d-1.6.1.rc gentoo-pop3d.rc
+		newexe ${FILESDIR}/gentoo-pop3d-ssl-1.6.1.rc gentoo-pop3d-ssl.rc
 
 	dodir /usr/bin
 	mv ${D}/usr/sbin/maildirmake ${D}/usr/bin/maildirmake
