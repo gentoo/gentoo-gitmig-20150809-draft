@@ -1,8 +1,13 @@
 # ChangeLog for dev-util/eclipse-platform-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-platform-bin/ChangeLog,v 1.7 2003/04/05 00:23:30 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-platform-bin/ChangeLog,v 1.8 2003/04/27 06:29:40 tberman Exp $
 
 *eclipse-platform-bin-2.1 (05 Apr 2003)
+
+  27 Apr 2003; <tberman@gentoo.org> eclipse-platform-bin-2.0.2.ebuild,
+  eclipse-platform-bin-2.0.ebuild, eclipse-platform-bin-2.1.ebuild,
+  files/eclipse.desktop:
+  Added eclipse.desktop file, closes bug #17141.
 
   05 Apr 2003; Peter Johanson <latexer@gentoo.org> eclipse-platform-bin-2.1.ebuild:
   Version bump
