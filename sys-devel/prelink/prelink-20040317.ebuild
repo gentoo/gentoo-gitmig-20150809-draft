@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20040317.ebuild,v 1.4 2004/04/13 10:08:02 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20040317.ebuild,v 1.5 2004/04/15 08:38:35 cretin Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 amd64 ppc alpha"
 
 DEPEND=">=dev-libs/elfutils-0.94
 	!dev-libs/libelf
-	>=sys-libs/glibc-2.3.1
+	>=sys-libs/glibc-2.3.2-r9
 	>=sys-devel/binutils-2.13.90.0.10"
 
 S=${WORKDIR}/${PN}
