@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/mac-fdisk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.5 2003/12/08 23:04:32 spider Exp $
+# $Id: ChangeLog,v 1.6 2004/03/30 18:40:20 tgall Exp $
+
+*mac-fdisk-0.1-r1 (30 Mar 2004)
+
+  30 Mar 2004; Tom Gall <tgall@gentoo.org> mac-fdisk-0.2:
+  fix amazingly bad 2.6 kernel header problems for ppc64 with
+     utterly bad hack.
+  pull in latest fixes from debian land diff 8 to diff 10
+  mark as ~for ppc
 
   09 Dec 2003; <spider@gentoo.org> mac-fdisk-0.1.ebuild:
   fix chown 0.0 to 0:0
