@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-for x in `find /usr/portage -iname *.ebuild`
+for x in `find /usr/portage/ -iname *.ebuild`
 do
 /usr/bin/ebuild ${x} fetch digest
 if [ $? -ne 0 ]
