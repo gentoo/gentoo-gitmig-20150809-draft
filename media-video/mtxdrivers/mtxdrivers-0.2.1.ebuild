@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.                                                                                         
 # Distributed under the terms of the GNU General Public License v2                                                                      
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.2.1.ebuild,v 1.5 2003/04/20 02:29:13 darkspecter Exp $                     
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.2.1.ebuild,v 1.6 2003/04/20 02:32:13 darkspecter Exp $                     
 
 RELEASE=2002
 SRC_URI="ftp://ftp.matrox.com/pub/mga/archive/linux/${RELEASE}/${P/-/_}.tgz"
@@ -28,7 +28,7 @@ src_compile() {
 	# hack to make mtx.o compile with rmap enabled kernels
 	if use rmaphack; then
 		cp kernel/src/mtx_vm.c kernel/src/mtx_vm.c.orig
-		sed -e "s:pte_offset:pte_offset_kernel:g" mtx_vm.c.orig > mtx_vm.c
+		sed -e "s:pte_offset:pte_offset_kernel:g" kernel/src/mtx_vm.c.orig > kernel/src/mtx_vm.c
 	fi
 
 	# Patch because X 4.3.0 is 'not supported' but works.
