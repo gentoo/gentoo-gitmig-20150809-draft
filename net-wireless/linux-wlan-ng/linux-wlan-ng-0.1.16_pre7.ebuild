@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.1.16_pre7.ebuild,v 1.6 2003/09/07 00:19:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.1.16_pre7.ebuild,v 1.7 2003/09/10 04:47:55 msterret Exp $
 
 # linux-wlan-ng requires a configured pcmcia-cs source tree.
 # unpack/configure it in WORKDIR.  No need to compile it though.
@@ -85,7 +85,7 @@ src_compile() {
 			--kflags="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer" \
 			$myconf || die "failed configuring pcmcia-cs"
 	fi
-    # now lets build wlan-ng
+	# now lets build wlan-ng
 	cd ${S}
 	if [ -n "`use pcmcia`" ]; then
 		export PCMCIA_CS=${PCMCIA_CS}; sed -e 's:PCMCIA_SRC=:PCMCIA_SRC=${WORKDIR}/${PCMCIA_CS}:' \

@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Authour: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavelan-applet/wavelan-applet-0.5.ebuild,v 1.6 2003/09/07 00:19:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavelan-applet/wavelan-applet-0.5.ebuild,v 1.7 2003/09/10 04:48:26 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Panel applet that shows the strength of a wavelan connection"
@@ -27,13 +27,13 @@ src_unpack() {
 
 
 src_compile() {
-  	./configure --host=${CHOST} \
+	./configure --host=${CHOST} \
 		    --prefix=/usr \
 		    --sysconfdir=/etc \
 		    --localstatedir=/var/lib
 	assert "Package configuration failed."
 
-  	emake || die "Package building failed."
+	emake || die "Package building failed."
 }
 
 src_install() {
@@ -42,5 +42,5 @@ src_install() {
 	     localstatedir=${D}/var/lib \
 	     install || die
 
-  	dodoc AUTHORS COPYING* ChangeLog README NEWS
+	dodoc AUTHORS COPYING* ChangeLog README NEWS
 }
