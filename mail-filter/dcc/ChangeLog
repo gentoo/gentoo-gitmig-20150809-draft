@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.7 2004/07/18 15:40:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.8 2004/09/20 01:09:18 swtaylor Exp $
+
+  19 Sep 2004; Scott W Taylor <swtaylor@gentoo.org> dcc-1.2.28.ebuild:
+  fix rdepend. procmail does exist if courier is installed
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> dcc-1.2.28.ebuild:
   virtual/glibc -> virtual/libc
