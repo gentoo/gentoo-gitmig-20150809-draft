@@ -1,0 +1,24 @@
+# Copyright 2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.1/use.mask,v 1.1 2004/04/09 19:27:13 jhuebel Exp $
+
+# Anything that relies on vm86.h will not built on amd64
+# SVGAlib doesnt build
+svga
+
+# Too many packages assume that mmx/sse/sse2/3dnow are 86-32 only things to
+# make them useful on amd64. Anyway, all amd64 cpus have them, so they should
+# not be many flag dependant in this case
+mmx
+sse
+sse2
+3dnow
+
+# x86 binary only for now
+icc
+
+# Firebird doesnt build on amd64
+firebird
+
+# x86 binary only, used by php
+fdftk
