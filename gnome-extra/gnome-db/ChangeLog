@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-db
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/ChangeLog,v 1.1 2002/02/01 21:53:29 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/ChangeLog,v 1.2 2002/03/23 00:52:28 seemant Exp $
+
+*gnome-db-0.2.95-r2 (22 Mar 2002)
+
+  22 Mar 2002; Seemant Kulleen <seemant@gentoo.org>  gnome-db-0.2.95-r2.ebuild :
+
+  Added USE dependent NLS compilation, from a patch submitted by Matthew
+  Kennedy.
 
 *gnome-db-0.2.95-r1 (1 Feb 2002)
 
