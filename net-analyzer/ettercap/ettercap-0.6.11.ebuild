@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.11.ebuild,v 1.6 2004/04/26 20:27:13 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.11.ebuild,v 1.7 2004/04/29 12:59:35 weeve Exp $
 
 MY_PV=0.6.b
 MY_P=${PN}-${MY_PV}
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~alpha hppa ~amd64"
+KEYWORDS="x86 ppc sparc ~alpha hppa ~amd64"
 IUSE="ssl ncurses debug"
 
 RDEPEND="virtual/glibc
