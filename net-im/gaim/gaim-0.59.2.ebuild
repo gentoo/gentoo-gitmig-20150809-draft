@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.2.ebuild,v 1.4 2002/10/08 15:13:33 kilroy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.2.ebuild,v 1.5 2002/10/20 18:51:53 vapier Exp $
 
 IUSE="nas nls esd gnome arts gtk2 perl"
 
@@ -23,7 +23,6 @@ DEPEND="=sys-libs/db-1*
 		  || ( =x11-libs/gtk+-1.2* =dev-libs/glib-1.2*
 		     ( gnome? ( =gnome-base/gnome-panel-1.4* >=media-libs/gdk-pixbuf-0.16.0 ) ) )"
 
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 

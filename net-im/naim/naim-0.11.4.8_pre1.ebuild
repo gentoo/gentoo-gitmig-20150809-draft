@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.4.8_pre1.ebuild,v 1.1 2002/10/19 19:32:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.4.8_pre1.ebuild,v 1.2 2002/10/20 18:51:53 vapier Exp $
 
 MY_P="${PN}-0.11.4.8"
 SRC_URI="http://128.113.139.111/~n/.naim_archive/naim-0.11.4.8-2002-10-19-1516.tar.gz"
@@ -13,7 +13,6 @@ KEYWORDS="~x86"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	virtual/glibc"
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
