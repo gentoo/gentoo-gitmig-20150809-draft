@@ -1,4 +1,4 @@
-MD5 6440eef118d124052e2baaafac08a003 digikamimageplugins-0.7.0_rc1.ebuild 811
-MD5 387d848d695a6d11ef94acf3b91e5b08 ChangeLog 747
+MD5 55856e83bac3a42c4ae6bb89065fdcc5 digikamimageplugins-0.7.0.ebuild 799
+MD5 b57decaf3165264bfa17ad91d20fab59 ChangeLog 930
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 026693093892a450834aad39feeae4b2 files/digest-digikamimageplugins-0.7.0_rc1 83
+MD5 def0b0394e7938645a3ac084c99358b6 files/digest-digikamimageplugins-0.7.0 79
