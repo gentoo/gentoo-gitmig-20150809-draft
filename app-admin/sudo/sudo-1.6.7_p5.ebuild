@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5.ebuild,v 1.14 2004/04/28 01:13:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5.ebuild,v 1.15 2004/06/02 02:16:58 tgall Exp $
 
 #
 # TODO: Fix support for krb4 and krb5
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${P/_/}.tar.gz"
 
 LICENSE="Sudo"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64"
 IUSE="pam"
 
 DEPEND="pam? ( >=sys-libs/pam-0.73-r1 )"
