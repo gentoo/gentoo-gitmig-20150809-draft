@@ -1,9 +1,11 @@
 # ChangeLog for app-doc/ebook-gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/ebook-gcc/ChangeLog,v 1.1 2003/03/16 01:15:20 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/ebook-gcc/ChangeLog,v 1.2 2003/05/06 18:08:17 mholzer Exp $
 
-*ebook-gcc-3.2.2 (18 Mar 2003)
-  08 Jan 2003; J.Alberto Suárez López <bass@gentoo.org> ebook-gcc-.3.2.2.ebuild:
+*ebook-gcc-3.2 (18 Mar 2003)
+
+  06 May 2003; Martin Holzer <mholzer@gentoo.org> ebook-gcc-3.2.ebuild:
+  Fixing. Closes #20200
+
+  08 Jan 2003; J.Alberto Suárez López <bass@gentoo.org> ebook-gcc-3.2.ebuild:
   First realse. Ebuild by Alan B. Clements
-
-
