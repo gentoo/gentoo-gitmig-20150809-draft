@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.6.5.ebuild,v 1.4 2004/02/16 20:50:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.6.5.ebuild,v 1.5 2004/04/25 21:26:57 vapier Exp $
 
-inherit distutils
+inherit distutils eutils
 
 MY_P="PyDS-${PV}"
 
@@ -10,9 +10,9 @@ DESCRIPTION="Python Desktop Server"
 HOMEPAGE="http://pyds.muensterland.org/"
 SRC_URI="http://simon.bofh.ms/~gb/${MY_P}.tar.gz"
 
-KEYWORDS="~x86"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="media-libs/jpeg

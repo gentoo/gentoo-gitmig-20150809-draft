@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.0.1.ebuild,v 1.3 2004/02/14 12:45:22 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.0.1.ebuild,v 1.4 2004/04/25 21:28:17 vapier Exp $
 
-inherit python
+inherit python eutils
 
 DESCRIPTION="Python bindings to GtkGLExt"
 HOMEPAGE="http://gtkglext.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gtkglext/${P}.tar.bz2"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+
 DEPEND=">=dev-lang/python-2.2.3-r3
 	>=dev-python/pygtk-2
 	>=dev-libs/glib-2.0
@@ -24,17 +25,13 @@ DEPEND=">=dev-lang/python-2.2.3-r3
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}; epatch ${FILESDIR}/${P}-gentoo.diff
-}
-
-src_compile() {
-	econf
-	emake || die
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc README COPYING* AUTHORS ChangeLog
+	dodoc README AUTHORS ChangeLog
 	insinto /usr/share/doc/${PF}/examples
 	doins examples/*.py
 }

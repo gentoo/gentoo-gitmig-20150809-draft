@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3-r1.ebuild,v 1.5 2004/03/27 10:37:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3-r1.ebuild,v 1.6 2004/04/25 21:20:56 vapier Exp $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Set of python tools for processing plaintext docs into HTML, XML, etc."
 HOMEPAGE="http://docutils.sourceforge.net/"
@@ -67,4 +67,3 @@ src_install() {
 	insinto /usr/lib/python${PYVER}/site-packages/docutils/writers
 	newins ${GLEP_SRC}/glep_htmlwrite.py glep_html.py
 }
-
