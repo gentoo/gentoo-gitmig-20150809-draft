@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r4.ebuild,v 1.1 2002/06/05 16:24:48 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r4.ebuild,v 1.2 2002/06/05 16:27:24 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -45,9 +45,6 @@ src_unpack() {
 	# (Added by drobbins on 05 Mar 2002)
 	patch -p0 < ${FILESDIR}/glibc-2.2.5-threadsig.diff || die
 
-	# patch to fix a bug in the ld_preload handling
-	patch -p1 < ${FILESDIR}/glibc-2.2.5-sandbox.diff || die
-
 	# This next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
 	cd ${S}/io; patch -p0 < ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch || die
 
@@ -68,9 +65,9 @@ src_unpack() {
 	# patch -p1 < ${FILESDIR}/glibc-2.2.4-glob-overflow.diff || die
 
 	# This patch fixes the nvidia-glx probs, openoffice and vmware probs and such..
-	# http://sources.redhat.com/ml/libc-hacker/2002-02/msg00152.html
-	cd ${S}
-	patch -p1 < ${FILESDIR}/glibc-divdi3.diff || die
+        # http://sources.redhat.com/ml/libc-hacker/2002-02/msg00152.html
+        cd ${S}
+        patch -p1 < ${FILESDIR}/glibc-divdi3.diff || die
 
 }
 
@@ -145,6 +142,6 @@ pkg_postinst()
 	then
 		echo "Please remember to set your timezone using the zic command."
 		rm -f ${ROOT}/etc/localtime
-		ln -s ../usr/share/zoneinfo/Factory ${ROOT}/etc/localtime	
+		ln -s ../usr/share/zoneinfo/Factory ${ROOT}/etc/localtime
 	fi
 }
