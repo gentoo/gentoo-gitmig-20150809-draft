@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-0.9.4.1.ebuild,v 1.2 2004/10/30 23:01:24 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-0.9.4.1.ebuild,v 1.3 2004/12/06 16:30:14 obz Exp $
 
 inherit python gnome.org
 
@@ -23,6 +23,14 @@ DEPEND=">=dev-lang/python-2.2
 # - liquidx (16 Oct 2004)
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_unpack() {
+
+	unpack ${A}
+	# Fix the .desktop icon name, see bug #73550
+	sed -i -e "s:Icon=meld:Icon=meld-icon.png:" ${S}/meld.desktop.in
+
+}
 
 src_compile() {
 	emake || die "make failed"
