@@ -1,10 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4c036ee248fdf0dd7157545e36a83003 ChangeLog 17347
 MD5 0feff9b09e482567359625301bddce1c metadata.xml 1329
 MD5 aec43e5b3a4401a4acb51363c755a729 openssh-3.7.1_p2-r1.ebuild 4113
 MD5 a028e2299c7750ee138516c268f1eeec openssh-3.7.1_p2-r2.ebuild 4644
 MD5 f80730dd66dcef312979858e358615e7 openssh-3.8.1_p1.ebuild 4064
 MD5 2358cb06c79fcfc3c2cde9444309a324 openssh-3.8_p1.ebuild 4241
-MD5 12097112d6d6bf07220294da6c6d5d29 openssh-3.8.1_p1-r1.ebuild 4242
+MD5 5f87f18a24efe616d1dfcc5e9848946b openssh-3.8.1_p1-r1.ebuild 4241
 MD5 b4353850fbc9705f26093f98055cfc69 openssh-3.8.1_p1-r2.ebuild 4266
 MD5 e9523dae352f6d0b78f1574f05df7f74 openssh-3.9_p1.ebuild 4425
 MD5 2f8fc1bd837220c9708d9d8b0730fe2c files/digest-openssh-3.7.1_p2-r2 142
@@ -40,3 +43,10 @@ MD5 6905aafd16d110e8e8b74cad4914ceb7 files/openssh-3.8.1_p1-largekey.patch.bz2 1
 MD5 6c92c72a7cbec59eed493e728d14ad3c files/openssh-3.8.1p1-sftplogging-1.2-gentoo.patch.bz2 6164
 MD5 328a5f063659ddb400d21201feb92170 files/openssh-3.9_p1-opensc.patch.bz2 1381
 MD5 93d19c0ef91091a730510c46ab8e811e files/openssh-3.9_p1-selinux.diff.bz2 1307
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0gW8roRuSHgZdywRAvEqAJkB+GiuyQoy1KsMavLwWzmTndUB1gCdEv5t
+H/7P4QEMLeqsERMt/DX5dKw=
+=2VDS
+-----END PGP SIGNATURE-----
