@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8688ace777b2310ab72f7ce01343e9d9 genext2fs-1.3.ebuild 778
+MD5 e2a3b4deb42ea3adc0822138f2221aaf ChangeLog 330
+MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
+MD5 37cb01e293bf874834afb1062ba0135d files/digest-genext2fs-1.3 136
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBA1+3HTu7gpaalycRAvPkAKCeyd/WPl5xKykxiqN0x63Z2GWGLgCfdDQT
+5YzRid9WNx6pfefKtraqR+c=
+=xxWY
+-----END PGP SIGNATURE-----
