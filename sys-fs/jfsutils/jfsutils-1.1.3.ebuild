@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.3.ebuild,v 1.2 2003/09/18 22:54:26 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.3.ebuild,v 1.3 2003/09/21 19:31:27 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IBM's Journaling Filesystem (JFS) Utilities"
@@ -13,6 +13,11 @@ KEYWORDS="~x86 ~amd64 -ppc ~hppa ia64"
 
 DEPEND="virtual/glibc"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.diff || die "patch failed"
+}
 
 src_compile() {
 	econf \
