@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-502.ebuild,v 1.3 2005/03/02 02:17:04 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-502.ebuild,v 1.4 2005/03/02 19:55:26 ribosome Exp $
 
 DESCRIPTION="A restriction enzyme database"
 HOMEPAGE="http://rebase.neb.com"
@@ -8,10 +8,12 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="public-domain"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64 ~ppc-macos"
+KEYWORDS="x86 ~ppc ~amd64 ppc-macos"
 IUSE="emboss minimal"
 # Minimal build keeps only the indexed files (if applicable) and the documentation.
 # The non-indexed database is not installed.
+
+DEPEND="emboss? ( sci-biology/emboss )"
 
 src_compile() {
 	if use emboss; then

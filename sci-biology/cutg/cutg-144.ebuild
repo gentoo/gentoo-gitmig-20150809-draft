@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/cutg-144.ebuild,v 1.6 2005/02/23 04:04:17 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/cutg-144.ebuild,v 1.7 2005/03/02 19:55:26 ribosome Exp $
 
 DESCRIPTION="Codon usage tables calculated from GenBank"
 HOMEPAGE="http://www.kazusa.or.jp/codon/"
@@ -12,6 +12,8 @@ KEYWORDS="x86 ~ppc ppc-macos ~ppc64"
 IUSE="emboss minimal"
 # Minimal build keeps only the indexed files (if applicable) and the documentation.
 # The non-indexed database is not installed.
+
+DEPEND="emboss? ( sci-biology/emboss )"
 
 S=${WORKDIR}
 
