@@ -1,6 +1,9 @@
 # ChangeLog for net-news/gnewspost
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/ChangeLog,v 1.4 2003/08/14 20:02:19 lisa Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/ChangeLog,v 1.5 2004/03/30 14:53:58 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> gnewspost-0.6.ebuild:
+  Adding amd64 keyword and fixing dependencies, closing #45934.
 
   14 Aug 2003; Lisa Seelye <lisa@gentoo.org> gnewspost-0.6.ebuild:
   i blame the gremlins for this fix. (silly pwd prob)
