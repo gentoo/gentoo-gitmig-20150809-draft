@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.27 2002/10/09 16:50:50 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.28 2002/10/29 20:34:17 danarmak Exp $
+
+*kdebase-3.0.4-r1 (29 Oct 2002)
+
+  29 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  A new version that adds a patch described in comment #20 of bug #9423
+  (kfontinst not compiling with xfree 4.2.1) in an attempt to fix that bug.
 
 *kdebase-3.0.4 (09 Oct 2002)
 
