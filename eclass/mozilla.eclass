@@ -1,13 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.7 2004/08/08 19:05:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.8 2004/08/09 02:15:19 agriffis Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
 
 IUSE="java gnome gtk2 ldap debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
-IUSE="${IUSE} mozsvg moznoxft mozdevelop mozplaintext mozxmlterm"
+IUSE="${IUSE} mozsvg moznoxft"
+if [[ ${PN} == mozilla || ${PN} == mozilla-firefox ]]; then
+	IUSE="${IUSE} mozdevelop mozplaintext mozxmlterm"
+fi
 
 RDEPEND="virtual/x11
 	!moznoxft ( virtual/xft )
