@@ -998,6 +998,9 @@ gnome-extra/gal2
 media-libs/monkey-sound
 media-sound/rhythmbox
 
+# Gabriele Giorgetti <stroke@gentoo.org> ; 12 Aug 2002;
+# gnomeicu for gnome2. Masked for testing 
+>=net-im/gnomeicu-0.98.111
 
 # Gnome 2 users should not uncomment theese. broken and/or not-present.
 # I repeat- NOT -
