@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r3.ebuild,v 1.1 2005/03/31 20:57:46 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r3.ebuild,v 1.2 2005/04/01 13:49:12 xmerlin Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -17,7 +17,7 @@ DEPEND="${RDEPEND} sys-devel/autoconf"
 RDEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/lzo-1.08
-	>=dev-libs/newt-0.50.35-r1
+	>=dev-libs/newt-0.51.6
 	app-arch/bzip2
 	>=sys-libs/slang-1.4.5-r2
 	nls? ( sys-devel/gettext )
