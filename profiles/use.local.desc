@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.964 2005/02/23 03:26:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.965 2005/02/23 15:36:35 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -435,6 +435,8 @@ media-video/vlc:utf8 - Enables utf8 support
 media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.
 media-video/vlc:vorbis - Enables vorbis audio codec support
 media-video/winki:css - Enables ripping of encrypted dvds
+net-analyzer/bwm-ng:html - enable html output
+net-analyzer/bwm-ng:csv - enable csv output
 net-analyzer/echoping:http - enable support for http protocol.
 net-analyzer/echoping:icp - enable support for ICP (used to monitor proxies).
 net-analyzer/echoping:idn - enable support for Internalized Domain Names.
