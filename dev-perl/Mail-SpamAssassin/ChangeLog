@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Mail-SpamAssassin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/ChangeLog,v 1.24 2003/05/20 13:56:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/ChangeLog,v 1.25 2003/06/18 14:13:58 mcummings Exp $
+
+*Mail-SpamAssassin-2.55-r1 (18 Jun 2003)
+
+  18 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  Mail-SpamAssassin-2.55-r1.ebuild:
+  This update is to address an inacurate DEPEND; bad strips in cf files, etc.
 
 *Mail-SpamAssassin-2.55 (20 May 2003)
 
