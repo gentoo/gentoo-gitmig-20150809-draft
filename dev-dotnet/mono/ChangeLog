@@ -1,6 +1,14 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.36 2004/12/13 19:46:34 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.37 2004/12/21 01:14:54 latexer Exp $
+
+*mono-1.0.5-r3 (20 Dec 2004)
+
+  20 Dec 2004; Peter Johanson <latexer@gentoo.org> +mono-1.0.5-r2.ebuild,
+  +mono-1.0.5-r3.ebuild:
+  Revision bump pthreads and nptl mono versions that now build mcs and class
+  libs as well. Includes fix for bug #72770/66528. Thanks to foser
+  <foser@gentoo.org> for the corlib fix.
 
 *mono-1.0.5 (13 Dec 2004)
 
