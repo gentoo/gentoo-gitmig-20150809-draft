@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fpm/fpm-0.60.ebuild,v 1.6 2004/06/25 16:08:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fpm/fpm-0.60.ebuild,v 1.7 2004/07/23 22:22:56 lv Exp $
 
 DESCRIPTION="A password manager for gnome"
 HOMEPAGE="http://fpm.sourceforge.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/fpm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="nls"
 
 DEPEND="virtual/libc

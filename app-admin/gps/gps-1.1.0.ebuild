@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/gps-1.1.0.ebuild,v 1.9 2004/06/24 21:27:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/gps-1.1.0.ebuild,v 1.10 2004/07/23 22:25:48 lv Exp $
 
 DESCRIPTION="Graphical (GTK+1.2) Process Statistics"
 HOMEPAGE="http://gps.seul.org/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.seul.org/pub/gps/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 IUSE=""
 
 DEPEND="=x11-libs/gtk+-1.2*"
