@@ -1,11 +1,14 @@
 # ChangeLog for dev-tcltk/tkTheme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.8 2004/06/25 02:10:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.9 2004/12/31 01:25:15 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> tkTheme-1.0.ebuild:
   Added ~sparc keyword.
 
-  03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> tkTheme-1.0.ebuild:
+  03 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> tkTheme-1.0.ebuild:
   Stable on alpha.
 
   04 Apr 2004; Chris Aniszczyk <zx@gentoo.org> metadata.xml,

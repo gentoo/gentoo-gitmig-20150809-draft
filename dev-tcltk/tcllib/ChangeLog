@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcllib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.11 2004/12/21 17:34:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.12 2004/12/31 01:20:55 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   21 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> tcllib-1.6.1.ebuild:
   ~alpha keyword.
@@ -13,7 +16,7 @@
   28 Sep 2004; MATSUU Takuto <matsuu@gentoo.org> +tcllib-1.6.1.ebuild:
   Version bumped.
 
-  03 Jun 2004; Bryan �stergaard <kloeri@gentoo.org> tcllib-1.6.ebuild:
+  03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> tcllib-1.6.ebuild:
   Stable on alpha.
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> tcllib-1.6.ebuild:

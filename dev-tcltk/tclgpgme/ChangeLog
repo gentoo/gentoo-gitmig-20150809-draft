@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclgpgme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.14 2004/11/15 20:45:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.15 2004/12/31 01:18:29 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Nov 2004; Daniel Black <dragonheart@gentoo.org> -tclgpgme-1.0.ebuild:
   cleanup of old ebuild that depend on old gpgme versions in the deletion queue
@@ -8,7 +11,7 @@
   31 Oct 2004; Tom Gall <tgall@gentoo.org> tclgpgme-1.0-r1.ebuild:
   stable on ppc64, bug #64485
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> tclgpgme-1.0-r1.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> tclgpgme-1.0-r1.ebuild:
   Stable on alpha, requested in bug 64485.
 
   23 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> tclgpgme-1.0-r1.ebuild:

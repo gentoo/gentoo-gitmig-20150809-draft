@@ -1,14 +1,17 @@
 # ChangeLog for dev-tcltk/tclx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.21 2004/10/19 17:46:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.22 2004/12/31 01:22:40 ciaranm Exp $
 
-  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> tclx-8.3.5.ebuild:
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  19 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> tclx-8.3.5.ebuild:
   Stable on alpha.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> tclx-8.3.5.ebuild:
   KEYWORDS ~amd64.
 
-  14 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> tclx-8.3.5.ebuild:
+  14 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> tclx-8.3.5.ebuild:
   Add ~alpha keyword.
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> tclx-8.3-r1.ebuild:

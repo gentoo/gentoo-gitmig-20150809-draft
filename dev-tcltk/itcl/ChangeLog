@@ -1,14 +1,17 @@
 # ChangeLog for dev-tcltk/itcl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.20 2004/10/19 10:00:11 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.21 2004/12/31 01:16:16 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> itcl-3.2.1-r1.ebuild:
   Stable on amd64.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> itcl-3.2.1-r1.ebuild:
+  10 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> itcl-3.2.1-r1.ebuild:
   Stable on alpha.
 
-  09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> itcl-3.2.1-r1.ebuild:
+  09 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> itcl-3.2.1-r1.ebuild:
   Add ~alpha keyword.
 
   22 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> itcl-3.2.1-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclxml
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.14 2004/12/22 21:31:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.15 2004/12/31 01:23:34 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   22 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> tclxml-2.6.ebuild:
   Stable on alpha.
@@ -20,7 +23,7 @@
   19 Jun 2004; Jason Wever <weeve@gentoo.org> tclxml-2.4.ebuild:
   Added ~sparc keyword.
 
-  03 Jun 2004; Bryan �stergaard <kloeri@gentoo.org> tclxml-2.4.ebuild:
+  03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> tclxml-2.4.ebuild:
   Stable on alpha.
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> tclxml-2.4.ebuild:
