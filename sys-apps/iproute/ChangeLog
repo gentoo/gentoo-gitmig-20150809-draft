@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iproute
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.31 2004/02/01 15:17:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.32 2004/03/25 10:41:15 kumba Exp $
+
+  25 Mar 2004; Joshua Kinard <kumba@gentoo.org> iproute-20010824-r4.ebuild:
+  Marked stable on mips.
 
   02 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> iproute-20010824-r1.ebuild,
   iproute-20010824-r2.ebuild, iproute-20010824-r3.ebuild,

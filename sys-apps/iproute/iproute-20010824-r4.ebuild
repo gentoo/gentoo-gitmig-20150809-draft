@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r4.ebuild,v 1.10 2004/02/01 15:17:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r4.ebuild,v 1.11 2004/03/25 10:41:15 kumba Exp $
 
 IUSE="doc"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.worldbank.ro/ip-routing/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ppc sparc alpha hppa ~mips"
+KEYWORDS="x86 ~amd64 ppc sparc alpha hppa mips"
 
 # we install our kernel headers in /usr/include/linux
 # we should NEVER depend on /usr/src/linux existing ever
