@@ -1,27 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/eprog/eprog-0.0.0.20030220.ebuild,v 1.4 2003/03/20 13:03:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/eprog/eprog-0.0.0.20030629.ebuild,v 1.1 2003/06/29 19:40:33 vapier Exp $
 
-IUSE=""
+inherit enlightenment
 
-S=${WORKDIR}/${PN}
 DESCRIPTION="convenience library for evas2"
 HOMEPAGE="http://www.rephorm.com/rephorm/code/eprog/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
-DEPEND="virtual/x11
+DEPEND="${DEPEND}
+	virtual/x11
 	>=x11-libs/evas-1.0.0.2003*
 	>=x11-libs/ecore-0.0.2.2003*"
 
-pkg_setup() {
-	# the stupid gettextize script prevents non-interactive mode, so we hax it
-	cp `which gettextize` ${T} || die "could not copy gettextize"
-	cp ${T}/gettextize ${T}/gettextize.old
-	sed -e 's:read dummy < /dev/tty::' ${T}/gettextize.old > ${T}/gettextize
+S=${WORKDIR}/${PN}
+
+src_unpack() {
+	unpack ${A}
+	gettext_modify
 }
 
 src_compile() {
