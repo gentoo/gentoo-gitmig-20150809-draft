@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.6.ebuild,v 1.6 2003/09/07 00:08:13 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.6.ebuild,v 1.7 2003/09/24 20:46:33 mholzer Exp $
 
 inherit libtool flag-o-matic
 
@@ -41,6 +41,8 @@ DEPEND=">=media-libs/a52dec-0.7.3
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-2pass.patch || die "2pass patch died"
 
 	if has_version  '>=media-libs/netpbm-9.13'
 	then

@@ -1,0 +1,75 @@
+--- transcode-0.6.6/export/aud_aux.c	2003-05-20 12:31:35.000000000 +0000
++++ export/aud_aux.c	2003-09-25 22:46:38.000000000 +0000
+@@ -94,6 +94,7 @@
+  *
+  * ------------------------------------------------------------*/
+ 
++char * lame_error2str(int error);
+ 
+ int audio_init(vob_t *vob, int debug)
+ {
+@@ -535,7 +536,7 @@
+ #define DEBUG
+ #undef DEBUG
+ 
+-	while(buffer_len < 4) {
++	while(buffer_len < 4 && input_buffer_len >= aud_size_len) {
+ 
+ 
+ 	    if(aud_mono) {
+@@ -551,6 +552,10 @@
+ 
+ 	    }
+ 
++	    if(outsize<0) {
++		fprintf(stderr, "(%s) lame encoding error|1| (%s)\n", __FILE__, lame_error2str(outsize));
++		return(TC_EXPORT_ERROR); 
++	    }
+ 	    // please, please rewrite me.
+ 	    memmove (input_buffer, input_buffer+aud_size_len, buffer_size - aud_size_len);
+ 
+@@ -598,6 +603,10 @@
+ 
+ 		}
+ 
++		if(outsize<0) {
++		    fprintf(stderr, "(%s) lame encoding error |2|(%s)\n", __FILE__, lame_error2str(outsize));
++		    return(TC_EXPORT_ERROR); 
++		}
+ 		// please, please rewrite me.
+ 		memmove (input_buffer, input_buffer+aud_size_len, buffer_size - aud_size_len);
+ 		buffer_len += outsize;
+@@ -613,7 +622,7 @@
+ 
+ 
+ 	if(outsize<0) {
+-	    fprintf(stderr, "(%s) lame encoding error (%d)\n", __FILE__, outsize);
++	    fprintf(stderr, "(%s) lame encoding error |3|(%d)\n", __FILE__, outsize);
+ 	    return(TC_EXPORT_ERROR); 
+ 	}
+ #ifdef DEBUG
+@@ -621,7 +630,7 @@
+ 		__FILE__, buffer_len, header_len, aud_size, (write_audio?"yes":"no"));
+ #endif
+ 
+-	if (write_audio) {
++	if (header_len > 0 && write_audio) {
+ 	    int doit=1;
+ 	    int inner_len = header_len;
+ 
+@@ -922,3 +931,15 @@
+     return framesize;
+ }
+ 
++char * lame_error2str(int error)
++{
++    switch (error) {
++	case -1: return "-1:  mp3buf was too small";
++	case -2: return "-2:  malloc() problem";
++	case -3: return "-3:  lame_init_params() not called";
++	case -4: return "-4:  psycho acoustic problems";
++	case -5: return "-5:  ogg cleanup encoding error";
++	case -6: return "-6:  ogg frame encoding error";
++	default: return "";
++    }
++}
