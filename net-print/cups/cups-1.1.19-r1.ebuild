@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.5 2003/07/29 15:19:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.6 2003/07/29 15:22:27 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -32,7 +32,6 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64"
 filter-flags -fomit-frame-pointer
 
 src_unpack() {
-	echo ${DEPEND}
 	unpack ${A} || die
 	cd ${S} || die
 
