@@ -1,6 +1,6 @@
-# ChangeLog for net-wireless/gkrellmwireless
+# ChangeLog for x11-plugins/gkrellmwireless
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwireless/ChangeLog,v 1.5 2003/03/23 16:32:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwireless/ChangeLog,v 1.6 2003/04/22 10:26:58 vapier Exp $
 
 *gkrellmwireless-0.2.2 (23 Mar 2003)
 
