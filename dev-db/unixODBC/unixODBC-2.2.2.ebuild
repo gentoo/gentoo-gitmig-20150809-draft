@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.2.ebuild,v 1.4 2002/10/05 05:39:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.2.ebuild,v 1.5 2002/10/19 21:45:03 cselkirk Exp $
 
 IUSE="qt"
 
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc
 		>=sys-libs/ncurses-5.2
 		qt? ( >=x11-libs/qt-3.0* )"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SLOT="0"
 
 src_unpack() {
