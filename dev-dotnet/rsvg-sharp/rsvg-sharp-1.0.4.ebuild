@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/rsvg-sharp/rsvg-sharp-1.0.4.ebuild,v 1.1 2004/11/19 03:23:56 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/rsvg-sharp/rsvg-sharp-1.0.4.ebuild,v 1.2 2004/12/30 23:23:33 swegener Exp $
 
-inherit gtk-sharp-component eutils
+inherit gtk-sharp-component
 
 SLOT="1"
 KEYWORDS="~x86"
