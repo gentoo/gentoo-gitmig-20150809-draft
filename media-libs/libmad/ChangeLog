@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmad
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.14 2004/03/26 19:23:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.15 2004/03/29 18:54:53 gustavoz Exp $
+
+  29 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> libmad-0.15.1b.ebuild:
+  fix for b0rked sound on sparc
 
   26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libmad-0.15.0b-r1.ebuild, libmad-0.15.1b.ebuild:

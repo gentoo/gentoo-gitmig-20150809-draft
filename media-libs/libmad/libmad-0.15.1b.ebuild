@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.3 2004/03/26 19:23:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.4 2004/03/29 18:54:53 gustavoz Exp $
 
 IUSE="debug"
 
@@ -23,6 +23,10 @@ src_compile() {
 	# --enable-accuracy      optimize for accuracy over speed
 	# --enable-experimental  enable code using the EXPERIMENTAL
 	#                        preprocessor define
+
+	# Fix for b0rked sound on sparc64 (maybe also sparc32?)
+	# default/approx is also possible, uses less cpu but sounds worse
+	[ "$PROFILE_ARCH" = "sparc64" ] && myconf="${myconf} --enable-fpm=64bit"
 
 	use debug && myconf="${myconf} --enable-debugging" \
 		|| myconf="${myconf} --disable-debugging"
