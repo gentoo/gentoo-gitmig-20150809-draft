@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.2.4.ebuild,v 1.1 2004/06/13 01:59:12 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.2.4.ebuild,v 1.2 2004/06/13 02:11:37 pyrania Exp $
 
 IUSE="cups debug opengl"
 DESCRIPTION="C++ based Toolkit for developing Graphical User Interfaces easily and effectively"
@@ -19,7 +19,8 @@ src_compile() {
 	local myconf
 
 	use opengl || myconf="$myconf --with-opengl=no" #default enabled
-	myconf="$myconf `use_enable cups debug`"      #default disabled
+	myconf="$myconf `use_enable cups`"      #default disabled
+	myconf="$myconf `use_enable debug`"      #default disabled
 
 	./configure \
 		--prefix=/usr \
