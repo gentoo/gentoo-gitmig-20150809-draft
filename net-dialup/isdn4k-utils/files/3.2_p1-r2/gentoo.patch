@@ -1,6 +1,6 @@
 diff -ruN isdn4k-utils.orig/isdnlog/Makefile.in isdn4k-utils/isdnlog/Makefile.in
 --- isdn4k-utils.orig/isdnlog/Makefile.in	2002-07-19 21:03:55.000000000 +0200
-+++ isdn4k-utils/isdnlog/Makefile.in	2002-11-21 00:36:44.000000000 +0100
++++ isdn4k-utils/isdnlog/Makefile.in	2003-04-26 12:06:28.000000000 +0200
 @@ -1794,6 +1794,7 @@
  				$(INSTALL_DATA) samples/$$f.conf.$(NATION) $(DESTDIR)$(I4LCONFDIR)/$$f.conf.new ; \
  			fi ; \
@@ -20,3 +20,25 @@ diff -ruN isdn4k-utils.orig/isdnlog/Makefile.in isdn4k-utils/isdnlog/Makefile.in
  		@for f in `ls zone-$(NATION)-*.gdbm zone-$(NATION)-*.db zone-$(NATION)-*.cdb tools/dest/dest.gdbm tools/dest/dest.db tools/dest/dest.cdb 2>/dev/null` ; do \
  		  $(INSTALL_DATA) $$f $(DESTDIR)$(DATADIR); \
  		  echo Installing $(DESTDIR)$(DATADIR)/$$f; \
+diff -ruN isdn4k-utils.orig/isdnlog/samples/isdn.conf isdn4k-utils/isdnlog/samples/isdn.conf
+--- isdn4k-utils.orig/isdnlog/samples/isdn.conf	2002-01-29 17:39:20.000000000 +0100
++++ isdn4k-utils/isdnlog/samples/isdn.conf	2003-04-26 12:05:01.000000000 +0200
+@@ -20,13 +20,13 @@
+ CHARGEMAX       = 50.00
+ CURRENCY = 0.062,EUR
+ 
+-COUNTRYFILE = /usr/lib/isdn/country.dat
+-DESTFILE= /usr/lib/isdn/dest.cdb
++COUNTRYFILE = /usr/share/isdn/country.dat
++DESTFILE= /usr/share/isdn/dest.cdb
+ RATECONF= /etc/isdn/rate.conf
+ # replace the xx in the next 3 lines with your country's letters!
+-RATEFILE= /usr/lib/isdn/rate-xx.dat
+-HOLIDAYS= /usr/lib/isdn/holiday-xx.dat
+-ZONEFILE= /usr/lib/isdn/zone-xx-%s.cdb
++RATEFILE= /usr/share/isdn/rate-xx.dat
++HOLIDAYS= /usr/share/isdn/holiday-xx.dat
++ZONEFILE= /usr/share/isdn/zone-xx-%s.cdb
+ 
+ # providerselect
+ VBN = 10	# change this, depends on your country

@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.5 2003/02/12 07:52:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.6 2003/05/19 02:51:14 seemant Exp $
+
+  18 May 2003; Seemant Kulleen <seemant@gentoo.org>
+  files/3.2_p1-r2/gentoo.patch:
+  enhanced patch to fix PATHs issue submitted by: Matze Braun <matze@braunis.de>
+  in bug #19509
 
 *isdn4k-utils-3.2_p1-r2 (16 Dec 2002)
 
