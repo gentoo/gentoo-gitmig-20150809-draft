@@ -1,5 +1,5 @@
-MD5 a50750cd668c041d54ee31da43834e6d qmidiarp-0.0.2.ebuild 750
+MD5 cdb6d9f5de81a2f38e1e89a744614d38 ChangeLog 592
 MD5 4e5a50f7aee667b932576ab7fdcfc85f metadata.xml 219
-MD5 07d38b6aebf69a46ca8209d43c2c04a2 ChangeLog 511
+MD5 fd077e5a0a1fc49c0dafc71ff91f9026 qmidiarp-0.0.2.ebuild 750
 MD5 19bf8edcb576fd4989a3dd037226cd72 files/digest-qmidiarp-0.0.2 66
 MD5 c12d23f0f4c6059ce7c29fc4c8ff2414 files/qmidiarp-0.0.2-fix_qtdir_in_makefile.patch 426

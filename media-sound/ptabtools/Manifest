@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2ee654b11eb9abef41a1bbaa4f8ef22d ptabtools-0.3.1.ebuild 744
-MD5 b9330a30372ae6bf363397da0ffe6705 ChangeLog 404
+MD5 8bc9e9b845fad854a4c816a7499cc58d ChangeLog 488
 MD5 83c2574543d0501303b57050254e3880 metadata.xml 222
+MD5 4001a9f37e4ce1a2d13beb33dee03b8f ptabtools-0.3.1.ebuild 746
 MD5 24b33a79baff0ec4ed867727fb49fc36 files/digest-ptabtools-0.3.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBRNsHE67gNkjlZFIRApBoAJ48qYI7yjFYetcNK0XIX8dXGCM8uwCgzbr8
-K4OdLG41Yj4dNTU6oHBIljY=
-=1d1M
------END PGP SIGNATURE-----
