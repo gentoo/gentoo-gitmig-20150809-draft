@@ -67,6 +67,7 @@ ipv6 - Adds support for IP version 6
 java - Adds support for Java
 jikes - Compile Java source code with jikes (faster)
 jpeg - Adds JPEG image support
+junit - Adds junit awareness -- useful for developers.
 kde - Adds support for kde-base/kde (K Desktop Enviroment)
 kerberos - Adds kerberos support
 lcms - Adds lcms support to media-gfx/imagemagick (Color management)
