@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/plex86/plex86-20021117.ebuild,v 1.10 2005/01/01 14:15:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/plex86/plex86-20021117.ebuild,v 1.11 2005/03/22 23:57:16 ciaranm Exp $
 
 DESCRIPTION="Plex86 is THE opensource free-software alternative for VMWare, VirtualPC, and other IA-32 on IA-32 \"Virtual PC products.\""
 HOMEPAGE="http://savannah.gnu.org/projects/plex86/"
@@ -52,16 +52,12 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo ",-----------------------------------------------------------------."
-	einfo "| IMPORTANT NOTICE                                                |"
-	einfo "|-----------------------------------------------------------------|"
-	einfo "| This code is EXTREMELY EXPERIMENTAL, and may well result in a   |"
-	einfo "| SYSTEM CRASH, and who knows what other ill effects.  RUN THIS   |"
-	einfo "| SOFTWARE AT YOUR OWN RISK.  As a precaution, do not attempt to  |"
-	einfo "| run this software on a system with important data on it, and    |"
-	einfo "| make liberal use of the sync command!  Expect to have to use    |"
-	einfo "| the power button.                                               |"
-	einfo "\`-----------------------------------------------------------------'"
+	ewarn "This code is EXTREMELY EXPERIMENTAL, and may well result in a"
+	ewarn "SYSTEM CRASH, and who knows what other ill effects.  RUN THIS"
+	ewarn "SOFTWARE AT YOUR OWN RISK.  As a precaution, do not attempt to"
+	ewarn "run this software on a system with important data on it, and"
+	ewarn "make liberal use of the sync command!  Expect to have to use"
+	ewarn "the power button."
 	echo
 	einfo "Contact me (lordvan@lordvan.com) if you encounter any problems."
 	echo
