@@ -1,6 +1,9 @@
-# ChangeLog for sys-apps/hotplug
+# ChangeLog for sys-apps/coldplug
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/ChangeLog,v 1.1 2004/09/21 00:27:44 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/ChangeLog,v 1.2 2004/09/24 18:00:10 swegener Exp $
+
+  24 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *coldplug-20040920 (20 Sep 2004)
 
