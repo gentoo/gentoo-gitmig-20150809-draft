@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r9.ebuild,v 1.7 2003/02/13 14:37:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r9.ebuild,v 1.8 2003/02/17 08:41:57 raker Exp $
 
 IUSE="ssl ldap"
 
@@ -37,7 +37,7 @@ PROVIDE="virtual/mta
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="-x86 -ppc -sparc "
 
 src_unpack() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.11 2003/02/15 19:16:01 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.12 2003/02/17 08:41:57 raker Exp $
 
 inherit eutils
 
@@ -48,6 +48,8 @@ src_unpack() {
 	cp README.auth base64.c base64.h ${S}
 	cd ${S}
 	epatch ../qmail-smtpd-auth-0.31/auth.patch
+	# Fixes a problem when utilizing "morercpthosts"
+	epatch ${FILESDIR}/${PV}-${PR}/smtp-auth-close3.patch
 
 	# TLS support and an EHLO patch
 	use ssl && bzcat ${FILESDIR}/${PV}-${PR}/tls.patch.bz2 | patch || die
