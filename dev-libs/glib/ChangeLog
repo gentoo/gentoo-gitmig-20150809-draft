@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.108 2004/12/16 10:15:13 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.109 2004/12/17 06:57:17 vapier Exp $
+
+  17 Dec 2004; Mike Frysinger <vapier@gentoo.org> glib-1.2.10-r5.ebuild:
+  Clean up ebuild and dont bother calling elibtoolize anymore (since it doesnt
+  actually do anything).
 
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> glib-2.4.7.ebuild:
   Stable on amd64.
