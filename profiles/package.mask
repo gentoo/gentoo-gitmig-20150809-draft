@@ -613,3 +613,7 @@ app-cdr/cddump
 # prez@gentoo.org 1 May, 2002
 # new package -- masking while testing
 =sys-apps/gradm-1.2.1
+
+# jnelson@gentoo.org 1 May 2002
+# mask ntp 4.1.72* as they are alpha
+=net-misc/ntp-4.1.72
