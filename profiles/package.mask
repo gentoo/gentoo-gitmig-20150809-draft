@@ -22,6 +22,16 @@
 ##   End example
 ##
 
+# azarah@gentoo.org (07 Jul 2002)
+# Add a snapshot for gcc-3.1.1, which also resolves bug #4411,
+# and also should enable a bootstrap && emerge system with
+# CFLAGS="-march=pentium4 -O3 -pipe" (at least for me), as 
+# gcc-3.1 is too buggy.
+# NOTE: you must also unmask glibc-2.2.5-r5, as gcc-3.1.1 have
+#       stricker checking, and will fail otherwise
+>=sys-devel/gcc-3.1.1
+=sys-libs/glibc-2.2.5-r5
+
 # <danarmak@gentoo.org> (06 July 2002)
 # short-term mask for testing - see core post for details
 =x11-libs/qt-3.0.4.20020606-r2
@@ -271,7 +281,7 @@ net-im/gtk+licq
 
 #Seems to cause binary incompatibility problems
 #(gbevin, 05 Apr 2002)
-=glibc-2.2.5-r3
+=sys-libs/glibc-2.2.5-r3
 
 # 23 Mar, m0rpheus: bind 8 keeps having serious problems.
 <net-misc/bind-9.0.0 
