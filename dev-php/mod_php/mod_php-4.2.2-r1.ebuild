@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.2-r1.ebuild,v 1.1 2002/08/19 00:03:40 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.2-r1.ebuild,v 1.2 2002/08/26 20:15:19 rphillips Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -96,6 +96,7 @@ src_compile() {
 	use ssl && myconf="${myconf} --with-openssl"
 	use curl && myconf="${myconf} --with-curl"
 	use snmp && myconf="${myconf} --with-snmp --enable-ucd-snmp-hack"
+	use cjk && myconf="${myconf} --enable-mbstring"
 	use gdbm && myconf="${myconf} --with-gdbm=/usr"
 	use berkdb && myconf="${myconf} --with-db3=/usr"
 	use mysql && myconf="${myconf} --with-mysql=/usr" || myconf="${myconf} --without-mysql"

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.1 2002/08/19 00:02:21 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.2 2002/08/26 20:16:51 rphillips Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -87,6 +87,7 @@ src_compile() {
 	use pam && myconf="${myconf} --with-pam"
 	use nls && myconf="${myconf} --with-gettext" || myconf="${myconf} --without-gettext"
 	use ssl && myconf="${myconf} --with-openssl"
+	use cjk && myconf="${myconf} --enable-mbstring"
 	use curl && myconf="${myconf} --with-curl"
 	use snmp && myconf="${myconf} --with-snmp --enable-ucd-snmp-hack"
 	use gdbm && myconf="${myconf} --with-gdbm=/usr"
