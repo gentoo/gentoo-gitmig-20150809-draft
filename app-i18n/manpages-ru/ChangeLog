@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/manpages-ru
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/ChangeLog,v 1.4 2004/06/07 05:09:39 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/ChangeLog,v 1.5 2004/06/24 21:51:34 agriffis Exp $
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   manpages-ru-0.7.ebuild:

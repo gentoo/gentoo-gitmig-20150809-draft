@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/skkinput
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/ChangeLog,v 1.21 2004/06/21 17:23:37 usata Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/ChangeLog,v 1.22 2004/06/24 21:54:44 agriffis Exp $
 
   22 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> skkinput-2.05.ebuild,
   skkinput-2.06.4.ebuild:

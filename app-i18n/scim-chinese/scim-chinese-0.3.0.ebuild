@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.3.0.ebuild,v 1.2 2004/05/04 20:24:35 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.3.0.ebuild,v 1.3 2004/06/24 21:53:36 agriffis Exp $
 
 inherit gnome2
 

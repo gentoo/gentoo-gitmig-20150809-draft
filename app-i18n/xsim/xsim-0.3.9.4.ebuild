@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4.ebuild,v 1.6 2004/06/14 07:30:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4.ebuild,v 1.7 2004/06/24 21:57:00 agriffis Exp $
 
 DESCRIPTION="A simple and fast GBK Chinese XIM server."
 HOMEPAGE="http://developer.berlios.de/projects/xsim/"

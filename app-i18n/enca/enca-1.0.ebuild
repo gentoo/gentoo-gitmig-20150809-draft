@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/enca-1.0.ebuild,v 1.3 2004/06/07 04:57:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/enca-1.0.ebuild,v 1.4 2004/06/24 21:44:44 agriffis Exp $
 
 DESCRIPTION="ENCA detects the character coding of a file and converts it if desired"
 HOMEPAGE="http://trific.ath.cx/software/enca/"

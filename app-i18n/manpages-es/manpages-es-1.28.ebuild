@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-es/manpages-es-1.28.ebuild,v 1.6 2004/06/07 05:07:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-es/manpages-es-1.28.ebuild,v 1.7 2004/06/24 21:50:41 agriffis Exp $
 
 S1=${WORKDIR}/man-pages-es-1.28
 S2=${WORKDIR}/man-pages-es-extra-0.8a

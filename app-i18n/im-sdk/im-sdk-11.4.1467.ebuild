@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-sdk/im-sdk-11.4.1467.ebuild,v 1.3 2004/03/10 20:21:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-sdk/im-sdk-11.4.1467.ebuild,v 1.4 2004/06/24 21:47:02 agriffis Exp $
 
 inherit iiimf
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kurso-de-esperanto/kurso-de-esperanto-3.0.ebuild,v 1.2 2004/06/07 05:04:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kurso-de-esperanto/kurso-de-esperanto-3.0.ebuild,v 1.3 2004/06/24 21:49:28 agriffis Exp $
 
 DESCRIPTION="multimedia computer program for teaching yourself Esperanto"
 HOMEPAGE="http://www.cursodeesperanto.com.br/"

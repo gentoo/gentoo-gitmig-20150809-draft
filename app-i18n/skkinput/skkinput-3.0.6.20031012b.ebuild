@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/skkinput-3.0.6.20031012b.ebuild,v 1.2 2004/05/04 16:29:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/skkinput-3.0.6.20031012b.ebuild,v 1.3 2004/06/24 21:54:44 agriffis Exp $
 
 inherit eutils
 
