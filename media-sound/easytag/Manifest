@@ -1,7 +1,8 @@
 MD5 cb53aa418ba9e84a213a5e8ef0c49568 easytag-0.31-r4.ebuild 1354
 MD5 59f7db49916260858c6d8155b5cab07c easytag-0.30d.ebuild 1590
 MD5 4eb47875043bdfcfd4d6933a26a6192b easytag-0.31.ebuild 1676
-MD5 9c2bc6cca970b6c557e54000d450f4b4 ChangeLog 7606
+MD5 3e1c8ad26fc4f8f13306ac7ff772c0e5 easytag-0.31-r5.ebuild 1491
+MD5 e19b2a64d19e1b31b88ae4fbed4d6dad ChangeLog 7852
 MD5 79119f45cab878d56945e1c66e22550c metadata.xml 402
 MD5 48e87a785093c34f6afe264fff4a42f0 easytag-0.31-r2.ebuild 1505
 MD5 25444660393147e2d06a5f1378a89ec4 files/easytag-0.31_pre2-gcc2.patch 2763
@@ -10,4 +11,5 @@ MD5 a767d8be7a9435927acebb4b1ca9df4c files/easytag-0.30.2-fix-configure.patch 64
 MD5 d81b9befdf36f2e2bdc8ef1e26d450cb files/digest-easytag-0.31 138
 MD5 eaf43037ba8c09b632e3dd43420700e3 files/digest-easytag-0.31-r2 154
 MD5 fe4673ebf7a66c8e9b725eb95462a0c1 files/digest-easytag-0.31-r4 78
+MD5 0bcb64d3797ce004cacafe857e0ce268 files/digest-easytag-0.31-r5 153
 MD5 5630250004c7a1257a3a170ab8bb749f files/easytag-0.30.2-gcc2.patch 11999

@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.40 2004/09/12 12:34:25 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.41 2004/09/26 13:51:26 dsd Exp $
+
+*easytag-0.31-r5 (26 Sep 2004)
+
+  26 Sep 2004; Daniel Drake <dsd@gentoo.org> +easytag-0.31-r5.ebuild:
+  Add patch to fix filename handling, please report success/failure. There is
+  one more issue left to solve, please don't mark as stable yet.
 
 *easytag-0.31-r4 (12 Sep 2004)
 
