@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Gtk-Gnutella
-Comment=Gtk+ Gnutella Client
-Exec=gtk-gnutella
-Icon=gtk-gnutella.png
-Terminal=0
-Type=Application
