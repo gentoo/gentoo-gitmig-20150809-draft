@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/gmt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/ChangeLog,v 1.4 2004/03/24 07:05:11 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/ChangeLog,v 1.5 2004/03/25 08:44:58 phosphan Exp $
+
+*gmt-3.4.4-r1 (25 Mar 2004)
+
+  25 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> gmt-3.4.4-r1.ebuild:
+  Fixing a few problems building with gmtsuppl in USE.
 
 *gmt-3.4.4 (24 Mar 2004)
 
