@@ -277,3 +277,14 @@ diff -ur src/verbs.c src/verbs.c
  	svp = malloc (sizeof (NRSVP) + (nsegs - 1) * sizeof (NRSVPSegment));
  	svp->length = nsegs;
  	if (nsegs > 0) {
+--- src/libnrtype/nr-type-xft.c	2003-12-15 15:38:21.000000000 -0700
++++ src/libnrtype/nr-type-xft.c	2004-08-14 18:46:45.108908800 -0700
+@@ -186,7 +186,7 @@
+ 
+ 	/* Get typeface list */
+ #ifdef WITH_FONTCONFIG
+-	obj = FcObjectSetBuild (FC_SCALABLE, FC_OUTLINE, FC_FAMILY, FC_WEIGHT, FC_SLANT, FC_FILE, FC_INDEX, 0);
++	obj = FcObjectSetBuild (FC_SCALABLE, FC_OUTLINE, FC_FAMILY, FC_WEIGHT, FC_SLANT, FC_FILE, FC_INDEX, NULL);
+ 	NRXftPatterns = FcFontList (cfg, pat, obj);
+ 	FcObjectSetDestroy (obj);
+ #else
