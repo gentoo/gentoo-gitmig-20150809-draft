@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.16 2003/07/11 12:39:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.17 2003/09/30 02:09:40 weeve Exp $
+
+  29 Sep 2003; Jason Wever <weeve@gentoo.org> unzip-5.50-r2.ebuild:
+  Added ~sparc keyword.
 
 *unzip-5.50-r2 (11 Jul 2003)
 
