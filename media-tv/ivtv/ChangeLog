@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.12 2004/10/18 04:14:26 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.13 2004/10/19 14:39:59 iggy Exp $
+
+  19 Oct 2004; <iggy@gentoo.org> ivtv-0.2.0_rc1.ebuild:
+  dodir a few dirs, fixes bug 68110, thanks to Ajay Sharma
 
   17 Oct 2004; <iggy@gentoo.org> ivtv-0.2.0_rc1.ebuild:
   fixed compiling on 2.4, thanks to Salim Fadhley, closes bug 67833

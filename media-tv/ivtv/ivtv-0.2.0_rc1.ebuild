@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc1.ebuild,v 1.2 2004/10/18 04:14:26 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc1.ebuild,v 1.3 2004/10/19 14:39:59 iggy Exp $
 
 # TODO
 # the "Gentoo way" is to use /usr/src/linux, not the running kernel
@@ -73,6 +73,10 @@ src_install() {
 	dodoc README.mythtv-ivtv README.radio README.vbi zvbi.diff
 	dodoc lircd-g.conf lircd.conf lircrc
 
+	# for whatever reason, the Makefile doesn't make the dirs we need
+	# fixes bug # 68110
+	dodir /usr/include/linux
+	dodir /lib/modules/`uname -r`/extra
 	cd ${WORKDIR}/${MY_P}/driver
 	make DESTDIR=${D} install || die "installation of driver failed"
 
