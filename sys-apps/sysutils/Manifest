@@ -1,4 +1,14 @@
-MD5 cc25cfa71a590e6b2c5fe23b329c5b29 ChangeLog 533
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2ea2b9196258e21f35f01a58abb11fb1 ChangeLog 648
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 9b51cf91d46860c17ca8cf803b666930 sysutils-0.1.0.ebuild 669
+MD5 c91235d7c71018adca6f6c228b5744fd sysutils-0.1.0.ebuild 657
 MD5 4747a0ef688ca4c2c1ca0c06841020a4 files/digest-sysutils-0.1.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBKrdJI1lqEGTUzyQRAtdQAJ4rs1ZxaXFXwrsKk9/NhUtb89NTKACfc/yV
+zDNFnBJVg8c14EVUIuAQO3o=
+=6naA
+-----END PGP SIGNATURE-----
