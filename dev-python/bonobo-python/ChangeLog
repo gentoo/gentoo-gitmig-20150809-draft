@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/bonobo-python
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/ChangeLog,v 1.5 2002/12/10 20:05:44 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/ChangeLog,v 1.6 2002/12/13 10:56:45 blizzy Exp $
 
 *bonobo-python-0.2.0-r3 (10 Dec 2002)
   10 Dec 2002; Thomas Raschbacher (lordvan@gentoo.org>:
@@ -13,7 +13,7 @@
   and fixed dependency (gnome-python1)
 	
 * Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *bonobo-python-0.2.0-r1 (1 Feb 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.4 2002/12/11 23:31:10 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.5 2002/12/13 10:56:45 blizzy Exp $
 
 *psycopg-1.0.13 (12 Dec 2002)
 
@@ -14,8 +14,7 @@
 
   Version bump + bugfix for Bug #8936
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *psycopg-1.0.1 (1 Feb 2002)
 
