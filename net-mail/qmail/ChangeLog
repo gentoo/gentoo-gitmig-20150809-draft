@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.26 2003/07/27 09:22:27 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.27 2003/07/31 11:21:08 seemant Exp $
+
+  31 Jul 2003; Seemant Kulleen <seemant@gentoo.org> qmail-1.03-r10.ebuild:
+  changed epatch to patch, because the dry-run on tls.patch.bz2 seems to fail.
 
   27 Jul 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild:
   Integrated the qmail-pop3d build into this.  It was just the creation 
