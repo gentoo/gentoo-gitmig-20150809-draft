@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/gshield
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/ChangeLog,v 1.1 2003/03/31 17:08:46 mholzer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/ChangeLog,v 1.2 2004/03/15 07:53:55 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> gshield-2.8-r1.ebuild,
+  gshield-2.8.ebuild:
+  tidy older versions
 
 *gshield-2.8 (31 Mar 2003)
 
