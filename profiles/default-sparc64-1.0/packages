@@ -169,7 +169,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by ../default-sparc-1.0/scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.20 2002/08/08 14:20:11 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.21 2002/08/13 23:52:26 murphy Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
@@ -180,6 +180,9 @@
 
 # Kernel compiler
 *sys-devel/egcs64-sparc
+
+# VNC is broken on x86, maintainer uses i386 specific makefile
+<net-misc/vnc-3.3.3-r2
 
 # Not all ebuilds have a sparc64 keyword as of now, so don't use the new version of portage yet.
 <=sys-apps/portage-2.0.14
