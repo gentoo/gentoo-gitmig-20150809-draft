@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/CORBA-ORBit-0.4.3-r3.ebuild,v 1.8 2002/10/17 16:43:13 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/CORBA-ORBit-0.4.3-r3.ebuild,v 1.9 2002/10/20 18:46:13 vapier Exp $
 
 inherit perl-module
 
@@ -18,7 +18,6 @@ DEPEND="${DEPEND}
 	>=dev-perl/Error-0.13
 	>=gnome-base/ORBit-0.5.6"
 
-RDEPEND="${DEPEND}"
 
 src_compile() {
 
