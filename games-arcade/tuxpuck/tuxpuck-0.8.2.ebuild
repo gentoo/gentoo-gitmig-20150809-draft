@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/tuxpuck-0.8.2.ebuild,v 1.1 2003/09/10 19:29:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/tuxpuck-0.8.2.ebuild,v 1.2 2004/02/03 01:10:17 mr_bones_ Exp $
 
 inherit games
 
@@ -8,9 +8,10 @@ DESCRIPTION="Hover hockey"
 SRC_URI="http://www.efd.lth.se/~d00jkr/tuxpuck/${P}.tar.gz"
 HOMEPAGE="http://www.efd.lth.se/~d00jkr/tuxpuck/"
 
-SLOT="0"
-LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
+LICENSE="GPL-2"
+SLOT="0"
+IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.1.5
 	media-libs/libpng
@@ -22,8 +23,8 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin tuxpuck		|| die "dogamesbin failed"
-	doman man/tuxpuck.6.gz	|| die "doman failed"
-	dodoc COPYING *.txt		|| die "dodoc failed"
+	dogamesbin tuxpuck     || die "dogamesbin failed"
+	doman man/tuxpuck.6.gz || die "doman failed"
+	dodoc *.txt            || die "dodoc failed"
 	prepgamesdirs
 }
