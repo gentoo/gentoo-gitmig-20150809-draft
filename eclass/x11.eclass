@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x11.eclass,v 1.4 2004/11/03 10:15:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x11.eclass,v 1.5 2005/01/30 22:49:02 spyderous Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -12,8 +12,6 @@
 
 ECLASS=x11
 INHERITED="${INHERITED} ${ECLASS}"
-
-EXPORT_FUNCTIONS vcards is_kernel strip_bins
 
 vcards() {	
 	has "$1" ${VIDEO_CARDS} && return 0
