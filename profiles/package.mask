@@ -3,11 +3,6 @@
 
 =sys-apps/portage-1.8.9.3
 
-#This breaks some packages; people, please don't add major gcc3 fixes
-#that affect core packages, esp. since we should be working on Gentoo 1.0
-#(drobbins, 24 Mar 2002)
-#=sys-libs/ncurses-5.2.20020112a
-
 #Seems to cause binary incompatibility problems
 #(gbevin, 05 Apr 2002)
 =glibc-2.2.5-r3
@@ -522,4 +517,3 @@ dev-lang/tcl-tk
 # >ncurses-5.2-r5 causes an incompatibility here
 # masking until that can be resolved
 =sys-devel/gdb-5.1.1
->=sys-libs/ncurses-5.2.20020112a

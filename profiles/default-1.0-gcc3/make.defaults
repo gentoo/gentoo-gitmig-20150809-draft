@@ -1,0 +1,5 @@
+# Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
+# System-wide defaults for the Portage system
+
+USE="xv slang readline gpm berkdb mmx 3dnow gdbm tcpd pam libwww ssl nls 
+mitshm arts cups lame perl python esd gif imlib sdl oggvorbis gnome gtk X qt kde motif opengl avi"

@@ -35,7 +35,7 @@
 *>=sys-apps/portage-1.8.9_pre25
 *~sys-devel/binutils-2.11.92.0.12.3
 *=sys-devel/gcc-2.95.3-r5
-*~sys-libs/glibc-2.2.5
+*~sys-libs/glibc-3.0.4
 ~sys-kernel/linux-headers-2.4.19
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
@@ -163,5 +163,5 @@
 >=net-www/wwwoffle-2.6d-r6
 >=net-www/squid-2.4.2s-r6
 >=net-dialup/ppp-2.4.1-r6
-<=sys-apps/tcp-wrappers-7.6-r3
-<sys-libs/ncurses-5.2.20020112a
+>=sys-apps/tcp-wrappers-7.6-r4
+>=sys-libs/ncurses-5.2.20020112a
