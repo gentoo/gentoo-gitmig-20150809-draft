@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/penguin-command-1.6.6.ebuild,v 1.10 2004/06/24 22:10:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/penguin-command-1.6.6.ebuild,v 1.11 2004/10/12 20:24:47 blubb Exp $
 
 inherit gnuconfig games
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc ~amd64"
 IUSE="nls"
 
 DEPEND="media-libs/libpng
