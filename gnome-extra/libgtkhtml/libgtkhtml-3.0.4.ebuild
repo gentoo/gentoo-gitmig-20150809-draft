@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.4.ebuild,v 1.1 2003/06/03 10:24:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.4.ebuild,v 1.2 2003/06/05 13:27:37 lu_zero Exp $
 
 inherit gnome2
 
@@ -16,7 +16,7 @@ PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
 SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.${GNOME_TARBALL_SUFFIX}"
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
