@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.42.ebuild,v 1.4 2001/11/10 02:33:03 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.42.ebuild,v 1.5 2002/02/17 23:15:38 m0rpheus Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Unzipper for pkzip-compressed files"
@@ -10,12 +10,6 @@ SRC_URI="http://soft.ivanovo.ru/Linux/unzip542.tar.gz"
 HOMEPAGE="ftp://ftp.info-zip.org/pub/infozip/UnZip.html"
 
 DEPEND="virtual/glibc"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	patch -p0 < ${FILESDIR}/unzip-5.42.patch
-}
 
 
 src_compile() {

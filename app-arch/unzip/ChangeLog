@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/unzip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.1 2002/02/01 21:53:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.2 2002/02/17 23:15:38 m0rpheus Exp $
+
+*unzip-5.42 (18 Feb 2002)
+
+ 18 Feb 2002; F.Meyndert <m0rpheus@gentoo.org> unzip-5.42.ebuild :
+ 
+ Removed patch. Patch broke more things then it fixes. Waiting for new
+ vendor patch. This is also the fix for bug #650
 
 *unzip-5.42 (1 Feb 2002)
 
