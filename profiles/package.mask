@@ -22,6 +22,12 @@
 ##   End example
 ##
 
+# Brandon Low <lostlogic@gentoo.org> (06 Aug 2002)
+# Mask new xine version for testing, please test and report.
+=media-libs/xine-lib-0.9.13
+=media-video/xine-ui-0.9.13
+=media-video/xine-dvdnav-0.9.13
+
 # <nitro@gentoo.org> (05 Aug 2002)
 # masked for testing -- new features
 =net-dns/bind-9.2.1-r2
