@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/stardict-langdao-en-zh-gb
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-langdao-zh-en-gb/ChangeLog,v 1.1 2004/08/25 13:12:55 citizen428 Exp $
+
+*stardict-langdao-en-zh-gb-2.4.2 (25 Aug 2004)
+
+  25 Aug 2004; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
+  +stardict-langdao-zh-en-gb-2.4.2.ebuild:
+  Initial import. Submitted by Jackey Yang <043936y@acadiau.ca> in Bug #61322
+
