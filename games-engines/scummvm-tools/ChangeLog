@@ -1,6 +1,12 @@
 # ChangeLog for games-engines/scummvm-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/ChangeLog,v 1.5 2004/09/03 23:00:04 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/ChangeLog,v 1.6 2004/12/26 10:12:17 vapier Exp $
+
+*scummvm-tools-0.7.0 (26 Dec 2004)
+
+  26 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  +scummvm-tools-0.7.0.ebuild:
+  Version bump #75615 by cpu.
 
   03 Sep 2004; Tom Martin <slarti@gentoo.org> scummvm-tools-0.6.1.ebuild:
   Marked ~amd64, resolves bug 62314. Thanks to Adrian Frühwirth
