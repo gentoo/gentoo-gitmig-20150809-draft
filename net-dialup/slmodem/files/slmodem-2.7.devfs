@@ -1,5 +1,5 @@
 # slmodem kernel modules' devfs configuration file
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.7.devfs,v 1.1 2003/10/29 05:12:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.7.devfs,v 1.2 2004/07/18 03:51:28 dragonheart Exp $
 
 # Create /dev/modem for /dev/ttySL0 (Change to suit your setup)
 LOOKUP          ^modem$    CFUNCTION GLOBAL mksymlink ttySL0 modem
