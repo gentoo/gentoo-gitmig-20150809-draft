@@ -1,6 +1,9 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+#for testing only
+=sys-apps/portage-1.9.4_pre1
+
 # masked for security reasons
 # see
 # http://online.securityfocus.com/advisories/4061
