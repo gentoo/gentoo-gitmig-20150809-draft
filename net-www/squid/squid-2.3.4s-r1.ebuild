@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r1.ebuild,v 1.5 2000/12/22 01:07:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r1.ebuild,v 1.6 2000/12/22 07:34:15 drobbins Exp $
 
 P=squid-2.3.STABLE4
 A=${P}-src.tar.gz
@@ -19,7 +19,7 @@ src_compile() {
  LDFLAGS="$LDFLAGS -lresolv" try ./configure --host=${CHOST} \
 	--prefix=/usr --sysconfdir=/etc/squid \
 	--localstatedir=/var/state/squid \
-	--enable-ipf-transparent --enable-useragent-log \
+	--enable-useragent-log \
 	--enable-async-io --enable-icmp
  try make
  cd ${S}/auth_modules/LDAP
