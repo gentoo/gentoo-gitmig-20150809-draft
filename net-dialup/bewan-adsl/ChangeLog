@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/bewan-adsl
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.1 2004/09/27 14:14:59 dragonheart Exp $
+
+*bewan-adsl-0.8.7 (27 Sep 2004)
+
+  27 Sep 2004; Daniel Black <dragonheart@gentoo.org> +bewan-adsl-0.8.7.ebuild
+  +metadata.xml:
+  Initial ebuild thanks to  Alin Nastac <mrness@gentoo.ro> in bug #3578
+
