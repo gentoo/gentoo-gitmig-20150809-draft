@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 db6a1bc68da8f1dfcf81401ff730c225 bitbake-0.ebuild 670
+MD5 f25fc42ff786f00eaad538b6716c6713 ChangeLog 334
+MD5 8ef75eba39772bdd1a8facc7815dbebb metadata.xml 161
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-bitbake-0 0
+MD5 79d7b48ffa627cafff89db0966e8d80e files/0-gentoo-paths.patch 590
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB8HVNroRuSHgZdywRAiGWAJ0U12RHWOeb+2y3XSkFEZqIB2kBewCfSIeI
+Y/ZVp72YIvZb8fLFaids/XA=
+=UpJP
+-----END PGP SIGNATURE-----

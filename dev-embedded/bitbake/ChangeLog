@@ -1,0 +1,8 @@
+# ChangeLog for dev-embedded/bitbake
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.1 2005/01/21 03:20:45 vapier Exp $
+
+*bitbake-0 (20 Jan 2004)
+
+  20 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
