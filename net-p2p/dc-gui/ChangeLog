@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/dc-gui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.3 2002/06/25 11:20:29 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.4 2002/07/06 06:08:35 seemant Exp $
+
+*dc-gui-0.58 (5 Jul 2002)
+
+  5 Jul 2002; Seemant Kulleen <seemant@gentoo.org> dc-gui-0.58.ebuild
+  files/digest-dc-gui-0.58 :
+
+  Version bump thanks to autobot@midsouth.rr.com (AutoBot) in bug #4253.
 
   25 Jun 2002; Thilo Bangert <bangert@gentoo.org>:
   
