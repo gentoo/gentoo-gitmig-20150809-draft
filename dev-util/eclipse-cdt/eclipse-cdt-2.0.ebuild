@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt/eclipse-cdt-2.0.ebuild,v 1.2 2004/07/28 14:40:32 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt/eclipse-cdt-2.0.ebuild,v 1.3 2004/07/28 19:49:19 mr_bones_ Exp $
 
 inherit eclipse-ext
 
@@ -40,7 +40,7 @@ src_compile() {
 	# Use java-utils
 	addwrite /proc/cpuinfo
 	(
-		cd results/plugins/org.eclipse.cdt.core.linux/library || die 
+		cd results/plugins/org.eclipse.cdt.core.linux/library || die
 		make ARCH=x86 all || die "Failed to compile platform-specific code"
 	)
 	./build.sh || die "Failed to compile"
