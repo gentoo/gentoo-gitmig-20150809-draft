@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.128 2004/11/02 00:20:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.129 2004/11/02 19:23:21 malc Exp $
+
+  02 Nov 2004; Malcolm Lashley <malc@gentoo.org> :
+  Fix missing digest - bug #69859
 
 *gtk+-2.4.13 (02 Nov 2004)
 
