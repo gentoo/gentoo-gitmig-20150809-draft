@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-pt/ispell-pt-20010720.ebuild,v 1.1 2002/07/11 11:15:07 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-pt/ispell-pt-20010720.ebuild,v 1.2 2002/10/04 04:23:20 vapier Exp $
 
 S=${WORKDIR}"/portugues"
 DESCRIPTION="A Portuguese dictionary for ispell"
