@@ -33,11 +33,14 @@ class depgraph:
 		myroot,mykey=string.split(mybigkey)
 		myebuild=self.db[myroot]["porttree"].getname(mykey)
 		mydep={}
-		mydep["/"],mydep[portage.root]=portage.doebuild(myebuild,"depend")
+		edepend=portage.doebuild(myebuild,"depend")
+		if portage.root=="/":
+			mydep["/"]=edepend[0]+" "+edepend[1]
+		else:
+			mydep["/"],mydep[portage.root]=edepend
 		self.digraph.addnode(mybigkey,myparent)
 		for dep in mydep.keys():
 			mycheck=self.db[dep]["vartree"].depcheck(mydep[dep])
-			print "mycheck",mycheck
 			if mycheck[0]==0:
 				print "!!! depgraph.create() error: string format:",mydep
 				return 0
