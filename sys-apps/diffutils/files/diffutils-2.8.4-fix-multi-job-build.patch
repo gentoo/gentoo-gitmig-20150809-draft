@@ -1,0 +1,19 @@
+diff -urN diffutils-2.8.4/src/Makefile.in diffutils-2.8.4.azarah/src/Makefile.in
+--- diffutils-2.8.4/src/Makefile.in	2002-06-28 09:04:20.000000000 +0200
++++ diffutils-2.8.4.azarah/src/Makefile.in	2002-10-14 11:49:11.000000000 +0200
+@@ -254,13 +254,13 @@
+ distclean-depend:
+ 	-rm -rf ./$(DEPDIR)
+ 
+-.c.o:
++.c.o: paths.h
+ @AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+ @AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+ @AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ 	$(COMPILE) -c `test -f '$<' || echo '$(srcdir)/'`$<
+ 
+-.c.obj:
++.c.obj: paths.h
+ @AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+ @AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+ @AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
