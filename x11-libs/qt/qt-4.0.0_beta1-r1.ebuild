@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.1 2004/12/28 17:21:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.2 2004/12/28 18:33:46 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -79,6 +79,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/qt4b1.patch
 	epatch ${FILESDIR}/qt4b1_20041228.patch
+	epatch ${FILESDIR}/qt4-rpath.patch
 }
 
 src_compile() {
