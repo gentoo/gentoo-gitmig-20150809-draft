@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.7.ebuild,v 1.5 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.7.ebuild,v 1.6 2003/03/27 02:28:38 seemant Exp $
 
 IUSE="snmp pam ldap"
 
@@ -8,26 +8,31 @@ IUSE="snmp pam ldap"
 MY_P=${PN}-2.4.STABLE7
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A caching web proxy, with advanced features"
+HOMEPAGE="http://www.squid-cache.org/"
 SRC_URI="ftp://ftp.squid-cache.org/pub/squid-2/STABLE/${MY_P}-src.tar.gz
 	ftp://sunsite.auc.dk/pub/infosystems/squid/squid-2/STABLE/${MY_P}-src.tar.gz"
-HOMEPAGE="http://www.squid-cache.org/"
 
-RDEPEND="virtual/glibc pam? ( >=sys-libs/pam-0.72 ) ldap? ( >=net-nds/openldap-2 )"
-DEPEND="${RDEPEND} dev-lang/perl"
-LICENSE="GPL-2"
-KEYWORDS="*"
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
+
+RDEPEND="pam? ( >=sys-libs/pam-0.72 )
+	ldap? ( >=net-nds/openldap-2 )"
+
+DEPEND=">=sys-apps/portage-2.0.47-r10
+	>=sys-apps/sed-4.0.5
+	dev-lang/perl"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	# see the tops of these patches for details..
-	patch -p1 < ${FILESDIR}/${P}-debian.diff || die
-	patch -p1 < ${FILESDIR}/${P}-gentoo.diff || die
+	epatch ${FILESDIR}/${P}-debian.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
+
 	if [ -z "$DEBUG" ]
 	then
-		mv configure.in configure.in.orig
-		sed -e 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in.orig > configure.in
+		sed -i 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in
 		autoconf || die
 	fi
 }
