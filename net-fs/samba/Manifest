@@ -38,6 +38,7 @@ MD5 66e68bb6d3ceb275479b3c68e7becf9d files/digest-samba-3.0.8-r1 203
 MD5 9560b7e29d3a65db029fc1800e84abcc files/samba-pdb_ldap-exop.patch 3921
 MD5 3685eadb817d185b06476eca6c0c15c4 files/smbusers 204
 MD5 09195dd8ab25ce77ac51c0c05b4ab93c files/system-auth-winbind 869
+MD5 4b541de7c65bbbb129d2522d821b4609 files/samba-3.0.8-lanman.patch 472
 MD5 579303048a39e504238ff8e658413452 files/samba-3.0.6-homes-reuse_v2.patch 2411
 MD5 990fe15ff8a0e79f39069fff6475536d files/samba-3.0.2a-smbprint.patch 1224
 MD5 b836e258befae9d6c66cb3f158769b25 files/samba-3.0.6-libdirsymlink.patch 592
