@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20031020_pre12.ebuild,v 1.1 2003/10/20 16:03:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20031025_pre12.ebuild,v 1.1 2003/10/25 16:15:37 vapier Exp $
 
 inherit enlightenment flag-o-matic
 
