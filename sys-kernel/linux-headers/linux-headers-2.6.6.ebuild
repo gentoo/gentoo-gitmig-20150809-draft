@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.6.ebuild,v 1.3 2004/06/06 02:52:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.6.ebuild,v 1.4 2004/06/19 13:16:08 malc Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
 PROVIDE="virtual/kernel virtual/os-headers"
-KEYWORDS="-* arm ~amd64"
+KEYWORDS="-* arm amd64"
 
 pkg_setup() {
 	# Figure out what architecture we are, and set ARCH appropriately
