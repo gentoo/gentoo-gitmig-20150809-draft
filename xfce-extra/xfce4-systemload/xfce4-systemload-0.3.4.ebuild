@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/xfce4-systemload-0.3.4.ebuild,v 1.12 2004/11/09 03:13:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/xfce4-systemload-0.3.4.ebuild,v 1.13 2005/01/06 23:41:11 bcowan Exp $
 
 MY_P="${PN}-plugin-${PV}"
 S=${WORKDIR}/${MY_P}

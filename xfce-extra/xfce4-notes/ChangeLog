@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-notes
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/ChangeLog,v 1.4 2004/06/24 22:02:09 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/ChangeLog,v 1.5 2005/01/06 23:41:11 bcowan Exp $
+
+*xfce4-notes-0.9.7-r1 (06 Jan 2005)
+
+  06 Jan 2005; Brad Cowan <bcowan@gentoo.org> +xfce4-notes-0.9.7-r1.ebuild:
+  Updated to use Xfce4 eclass.
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> xfce4-notes-0.9.7.ebuild:
   Stable on sparc.

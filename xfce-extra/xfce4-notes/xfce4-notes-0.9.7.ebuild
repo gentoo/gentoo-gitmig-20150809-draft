@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/xfce4-notes-0.9.7.ebuild,v 1.9 2004/12/17 06:11:41 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/xfce4-notes-0.9.7.ebuild,v 1.10 2005/01/06 23:41:11 bcowan Exp $
 
 MY_P="${PN}-plugin-${PV}"
 S=${WORKDIR}/${MY_P}
