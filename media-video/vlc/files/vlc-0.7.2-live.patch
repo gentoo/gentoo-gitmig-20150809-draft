@@ -1,0 +1,47 @@
+--- modules/demux/livedotcom.cpp.old	2004-08-08 22:44:54.171817176 +0900
++++ modules/demux/livedotcom.cpp	2004-08-08 22:47:48.793270680 +0900
+@@ -132,7 +132,7 @@
+         }
+         if( ( rtsp = RTSPClient::createNew(*env, 1/*verbose*/, "VLC Media Player" ) ) == NULL )
+         {
+-            delete env;
++            env->reclaim();
+             delete scheduler;
+             msg_Err( p_input, "RTSPClient::createNew failed" );
+             return VLC_EGENERIC;
+@@ -149,7 +149,7 @@
+             msg_Err( p_input, "describeURL failed (%s)", env->getResultMsg() );
+ 
+             free( psz_url );
+-            delete env;
++            env->reclaim();
+             delete scheduler;
+             free( p_sys );
+             return VLC_EGENERIC;
+@@ -160,7 +160,7 @@
+ 
+         //fprintf( stderr, "sdp=%s\n", p_sys->p_sdp );
+ 
+-        delete env;
++        env->reclaim();
+         delete scheduler;
+ 
+         var_Create( p_input, "rtsp-tcp", VLC_VAR_BOOL|VLC_VAR_DOINHERIT );
+@@ -670,7 +670,7 @@
+     }
+     if( p_sys->env )
+     {
+-        delete p_sys->env;
++        p_sys->env->reclaim();
+     }
+     if( p_sys->scheduler )
+     {
+@@ -724,7 +724,7 @@
+ 
+     if( p_sys->env )
+     {
+-        delete p_sys->env;
++        p_sys->env->reclaim();
+     }
+     if( p_sys->scheduler )
+     {

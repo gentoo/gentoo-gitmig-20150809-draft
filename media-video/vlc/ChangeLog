@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.54 2004/07/28 20:03:44 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.55 2004/08/10 17:04:43 chriswhite Exp $
+
+*vlc-0.7.2-r1 (10 Aug 2004)
+
+  10 Aug 2004; Chris White <chriswhite@gentoo.org> metadata.xml,
+  +files/vlc-0.7.2-live.patch, vlc-0.7.2-r1.ebuild:
+  Removed CFLAGS unsetting, disabled broken interfaces, added myself as
+  maintainer, and stopped the live downgrading issue.
 
   01 Jul 2004; Joel Martin <kanaka@gentoo.org> :
   Add dts use flag, update dependancy version requirements to more closely match
