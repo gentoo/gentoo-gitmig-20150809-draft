@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.4_rc1.ebuild,v 1.2 2004/12/21 21:03:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.4_rc2.ebuild,v 1.1 2004/12/29 21:43:21 genstef Exp $
 
 DESCRIPTION="Daemon to mount/unmount devices, based on info from HAL"
 HOMEPAGE="http://ivman.sf.net"
@@ -27,5 +27,5 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	exeinto /etc/init.d/
-	doexe ${FILESDIR}/ivman-0.3.init ivman
+	newexe ${FILESDIR}/ivman-0.3.init ivman
 }

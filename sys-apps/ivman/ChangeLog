@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.8 2004/12/21 21:03:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.9 2004/12/29 21:43:21 genstef Exp $
+
+*ivman-0.4_rc2 (29 Dec 2004)
+
+  29 Dec 2004; Stefan Schweizer <genstef@gentoo.org> -ivman-0.4_rc1.ebuild,
+  +ivman-0.4_rc2.ebuild:
+  Version bump, fixing bug 76073: doexe -> newexe
 
   21 Dec 2004; Stefan Schweizer <genstef@gentoo.org> ivman-0.4_rc1.ebuild:
   Adding missing sudo dep, thanks to Thomas Frase <thomas.frase@gmx.net> in
