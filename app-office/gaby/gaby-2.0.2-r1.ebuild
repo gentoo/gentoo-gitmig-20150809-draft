@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Craig Joly <joly@ee.ualberta.ca>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r1.ebuild,v 1.3 2002/05/23 06:50:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r1.ebuild,v 1.4 2002/07/11 06:30:17 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small personal databases manager for Linux"

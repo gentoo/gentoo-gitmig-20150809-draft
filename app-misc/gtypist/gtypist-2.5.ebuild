@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Matthew Kennedy <mkennedy@gentoo.org>
-# Author: Matthew Kennedy <mbkennedy@ieee.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.5.ebuild,v 1.2 2002/04/27 23:08:35 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.5.ebuild,v 1.3 2002/07/11 06:30:16 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU Typist (also called gtypist) is a universal typing tutor."

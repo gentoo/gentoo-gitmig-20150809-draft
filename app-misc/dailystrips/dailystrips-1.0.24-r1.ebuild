@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Justin Lambert <jlambert@eml.cc>>
 # /space/gentoo/cvsroot/gentoo-x86/app-misc/dailystrips/dailystrips-1.0.24.ebuild,v 1.3 2002/05/27 17:27:35 drobbins Exp
 
 DESCRIPTION="dailystrips automatically downloads your favorite online comics from the web."

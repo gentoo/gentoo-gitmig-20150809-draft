@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Maintainer: Hanno Boeck <hanno@gmx.de>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sonypid/sonypid-20010123.ebuild,v 1.1 2002/07/01 19:48:44 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sonypid/sonypid-20010123.ebuild,v 1.2 2002/07/11 06:30:16 drobbins Exp $
 
 
 DESCRIPTION="sonypid - a tool to use the Sony Vaios jog-dial as a mouse-wheel"

@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/multimon/multimon-1.0.ebuild,v 1.2 2001/08/11 04:42:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/multimon/multimon-1.0.ebuild,v 1.3 2002/07/11 06:30:16 drobbins Exp $
 
 S=${WORKDIR}/multimon
 SRC_URI="http://www.baycom.org/~tom/ham/linux/multimon.tar.gz"

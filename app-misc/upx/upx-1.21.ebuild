@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Will Glynn <delta407@lerfjhax.com>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/upx/upx-1.21.ebuild,v 1.2 2002/07/09 18:24:51 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/upx/upx-1.21.ebuild,v 1.3 2002/07/11 06:30:16 drobbins Exp $
 
 DESCRIPTION="upx is the Ultimate Packer for eXecutables"
 SRC_URI="http://upx.sourceforge.net/download/${P}-src.tar.gz"

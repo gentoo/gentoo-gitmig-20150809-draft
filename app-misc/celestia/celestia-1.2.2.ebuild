@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/celestia-1.2.2.ebuild,v 1.4 2002/06/20 20:14:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/celestia-1.2.2.ebuild,v 1.5 2002/07/11 06:30:16 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Celestia is a free real-time space simulation that lets you experience our universe in three dimensions"

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Jo Ryden <jo@our-own.net>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ldapbrowser/ldapbrowser-282_beta2.ebuild,v 1.2 2002/04/28 02:37:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ldapbrowser/ldapbrowser-282_beta2.ebuild,v 1.3 2002/07/11 06:30:16 drobbins Exp $
 
 MY_P="Browser282b2"
 S=${WORKDIR}/ldapbrowser

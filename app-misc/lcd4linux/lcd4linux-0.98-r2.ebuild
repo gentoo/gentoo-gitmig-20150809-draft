@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Jens Blaesche <mr.big@pc-trouble.de>
 # /space/gentoo/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.98-r1.ebuild,v 1.1 2002/05/20 10:54:06 seemant Exp
 
 S=${WORKDIR}/${P}
