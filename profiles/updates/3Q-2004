@@ -166,3 +166,4 @@ move net-www/squidguard www-proxy/squidguard
 move net-www/squirm www-proxy/squirm
 move net-www/tinyproxy www-proxy/tinyproxy
 move net-www/wwwoffle www-proxy/wwwoffle
+move dev-php/egroupware www-apps/egroupware
