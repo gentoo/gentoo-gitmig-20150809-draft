@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.14 2004/06/17 11:39:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.15 2004/06/20 02:15:25 usata Exp $
+
+*scim-0.99.0_pre20040619 (20 Jun 2004)
+
+  20 Jun 2004; Mamoru KOMACHI <usata@gentoo.org>
+  scim-0.99.0_pre20040619.ebuild:
+  Updated CVS snapshot
 
 *scim-0.99.0_pre20040616 (17 Jun 2004)
 
