@@ -1,0 +1,56 @@
+# ChangeLog for app-games/nwn
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.1 2003/09/10 06:26:50 vapier Exp $
+
+  06 Sep 2003; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.30.ebuild:
+  Added RESTRICT=fetch.  Closes bug #27548.
+
+  29 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.30.ebuild:
+  Added RESTRICT=fetch.  Closing bug #27548.
+
+*nwn-1.30 (26 Jun 2003)
+
+  14 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add updated ebuild from Daniel Mannarino <thesnark@operamail.com> #25162.
+  Fixes USE=nowin install.
+
+  16 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add resources via USE=nowin for those ppl who run pure linux.
+
+  26 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump (added 1.30 patch) #23391.
+
+*nwn-1.29 (22 Jun 2003)
+
+  22 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + games.eclass support #23198.
+
+*nwn-1.29_beta6 (06 Jun 2003)
+
+  06 Jun 2003; Martin Holzer <mholzer@gentoo.org> nwn-1.29_beta4.ebuild,
+  nwn-1.29_beta5.ebuild, nwn-1.29_beta6.ebuild:
+  Version bumped. Marked stable. Cleanup
+
+*nwn-1.29_beta5 (24 May 2003)
+
+  24 May 2003; Martin Holzer <mholzer@gentoo.org> nwn-1.29_beta5.ebuild,
+  files/nwn-1.29_beta5-fixinstall:
+  Version bumped.
+
+*app-games/nwn-1.29_beta2.ebuild (13 Apr 2003)
+
+  13 Apr 2003; phoen][x <phoenix@gentoo.org> ChangeLog, nwn-1.29_beta4.ebuild,
+  files/digest-nwn-1.29_beta4, files/nwn-1.29_beta4-fixinstall :
+  Version bump.
+
+*app-games/nwn-1.29_beta2.ebuild (28 Mar 2003)
+
+  28 Mar 2003; phoen][x <phoenix@gentoo.org> ChangeLog, nwn-1.29_beta3.ebuild,
+  files/digest-nwn-1.29_beta3, files/nwn-1.29_beta3-fixinstall :
+  Version bump.
+
+*app-games/nwn-1.29_beta2.ebuild (27 Mar 2003)
+
+  27 Mar 2003; phoen][x <phoenix@gentoo.org> ChangeLog, nwn-1.29_beta2.ebuild,
+  files/digest-nwn-1.29_beta2, files/nwn-1.29_beta2-fixinstall :
+  Initial import.

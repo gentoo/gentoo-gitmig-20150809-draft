@@ -1,0 +1,9 @@
+# ChangeLog for app-games/openglad
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/openglad/ChangeLog,v 1.1 2003/09/10 06:26:50 vapier Exp $
+
+*openglad-0.98 (01 Aug 2003)
+
+  01 Aug 2003; Michael Sterrett <msterret@gentoo.org> openglad-0.98.ebuild:
+  initial commit.  ebuild submitted by Rob Cakebread (modified) via bug 24844
+

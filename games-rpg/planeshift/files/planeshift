@@ -1,0 +1,5 @@
+#!/bin/sh
+export CRYSTAL=GENTOO_CRYSTAL_DIR
+export CEL=GENTOO_CEL_DIR
+cd GENTOO_PLANESHIFT_DIR
+exec ./psclient ${@}

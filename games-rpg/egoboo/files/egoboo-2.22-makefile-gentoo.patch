@@ -1,0 +1,15 @@
+--- Makefile.old	Sat Jun  1 00:47:47 2002
++++ Makefile	Sat Jun  1 00:59:00 2002
+@@ -1,9 +1,9 @@
+ OBJECTS=camera.o char.o enchant.o game.o graphic.o input.o menu.o module.o network.o particle.o passage.o script.o sound.o lin-file.o gltexture.o mathstuff.o graphicfan.o graphicmad.o graphicprt.o configfile.c
+ FLAGS=-D_LINUX -ffast-math -funroll-loops -O3 -g
+-LIBS=`sdl-config --libs` -lGL -lGLU
+-INCDIR=`sdl-config --cflags` -I/usr/X11/include
++LIBS=$(SDLLIBS) -lGL -lGLU
++INCDIR=$(SDLFLAGS) -I/usr/X11/include
+ LIBDIR=-L/usr/X11R6/lib -L/usr/lib
+-CC=gcc
++CC=gcc $(CFLAGS)
+ 
+ egoboo: $(OBJECTS)
+ 	$(CC) $(OBJECTS) $(FLAGS) $(INCDIR) $(LIBDIR) $(LIBS) -o egoboo

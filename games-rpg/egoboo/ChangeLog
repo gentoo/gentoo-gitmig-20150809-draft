@@ -1,0 +1,30 @@
+# ChangeLog for app-games/egoboo
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.1 2003/09/10 06:26:50 vapier Exp $
+
+*egoboo-2.22 (18 Sep 2002)
+
+  31 Jan 2003; Martin Holzer <mholzer@gentoo.org> egoboo-2.22.ebuild :
+  Change SRC_URI to use mirror://sourceforge.
+
+  06 Dec 2003; Mark Guertin <gerk@gentoo.org> egoboo-2.22.ebuild :
+  set -ppc to keywords, has upstream endian issues
+
+  18 Sep 2002: Matthew Kennedy <mkennedy@gentoo.org>
+  egoboo-2.22.ebuild, ChangeLog :
+
+  Filter -march=pentium4 or -march=athlon*. Replace with i686.
+    
+  20 Jul 2002: Jose Alberto Suárez López <bass@gentoo.org> egoboo-2.22.ebuild :
+  Fixed bug #5272. Only moving env variables to other section.
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> egoboo-2.22.ebuild :
+  Added KEYWORDS.
+
+  20 June 2002; George Shapovalov <george@gentoo.org> all :
+
+  corrected ebuild to let regular users run egoboo,
+  committed the ebuild
+
+  31 May 2002; Sean P. Kane <spk42@spkane.org> egoboo-2.22.ebuild :
+  First egoboo ebuild

@@ -1,0 +1,8 @@
+# ChangeLog for app-games/openrpg
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/openrpg/ChangeLog,v 1.1 2003/09/10 06:26:50 vapier Exp $
+
+*openrpg-1.4.1 (12 Jul 2003)
+
+  12 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Mark Mealman <mmealman@tarsis.org> #12451.

@@ -1,0 +1,11 @@
+--- configure.in.orig	2003-03-10 19:34:50.000000000 -0800
++++ configure.in	2003-03-10 19:35:31.000000000 -0800
+@@ -216,7 +216,7 @@
+ 
+    if test x$haveldd != x ; then
+        changequote(<<, >>)
+-       py_deps=`ldd $PYPACKAGE | sed 's/\( *lib\([^\/]*\)\.so.*=.*$\)/-l\2/p; d'`
++       py_deps=`ldd $PYPACKAGE | sed 's/\( *.*lib\([^\/]*\)\.so.*=.*$\)/-l\2/p; d' | grep -v sandbox`
+        for py_lib in $py_deps ; do
+          if test "$py_lib" != "-lm" && test "$py_lib" != "-lc" ; then
+             PY_DEPS="$PY_DEPS $py_lib"

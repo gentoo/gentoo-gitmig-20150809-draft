@@ -1,0 +1,11 @@
+# ChangeLog for app-games/wastesedge
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/ChangeLog,v 1.1 2003/09/10 06:26:50 vapier Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> wastesedge-0.3.3.ebuild:
+  add Header
+
+*wastesedge-0.3.3 (02 Mar 2003)
+
+  02 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Luca Barbato <lu_zero@gentoo.org> #11875.

@@ -1,0 +1,13 @@
+# ChangeLog for app-games/freedroid
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroid/ChangeLog,v 1.1 2003/09/10 06:26:50 vapier Exp $
+
+*freedroid-1.0.1 (05 Jun 2003)
+
+  05 Jun 2003; Martin Holzer <mholzer@gentoo.org> freedroid-1.0.1.ebuild:
+  Version bumped. Closes #21753.
+
+*freedroid-0.8.4 (1 Aug 2002)
+
+  1 Aug 2002; Jose Alberto Suárez López <bass@gentoo.org> freedroid-0.8.4.ebuild:
+  First relase.

@@ -1,0 +1,24 @@
+# ChangeLog for app-games/vegastrike
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/ChangeLog,v 1.1 2003/09/10 06:26:50 vapier Exp $
+
+*vegastrike-0.3.1 (21 Jun 2003)
+
+  21 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + openal + deprecated GL headers.
+  Fixes #18021, #18025, and #16336.
+
+*vegastrike-0.2.9.4 (16 Oct 2002)
+
+  01 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Fixes for #10794 and games eclass support
+
+  11 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Made package compile on gcc2.x and with libpng 1.2.5
+
+  16 Oct 2002; Bart Lauwers <blauwers@gentoo.org> vegastrike-0.2.9.4.ebuild:
+  Initial version of this ebuild for Vega Strike. Vega Strike is a 3d OpenGL
+  Action RPG space sim for Windows/Linux that allows a player to trade and
+  bounty hunt in the spirit of Elite. You start in an old beat up Wayfarer
+  cargo ship, with endless possibility before you and just enough cash to
+  scrape to

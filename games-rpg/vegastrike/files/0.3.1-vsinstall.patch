@@ -1,0 +1,24 @@
+--- vsinstall.orig	2003-06-21 08:31:00.000000000 -0400
++++ vsinstall	2003-06-21 08:32:08.000000000 -0400
+@@ -2,16 +2,16 @@
+ CURPWD=$PWD
+ mkdir $HOME/.vegastrike
+ cd $HOME/.vegastrike
+-if cat save.txt ;
++if [ -f save.txt ] ;
+ then
+ touch save.txt;
+ else
+ echo "default"> save.txt ;
+ fi
+-cp /usr/local/games/vegastrike/data/setup.config .
+-cp /usr/local/games/vegastrike/data/.vegastrike/*.m3u .
+-cp /usr/local/games/vegastrike/data/vegastrike.config .
+-/usr/local/bin/vssetup
++cp /usr/share/games/vegastrike/data/setup.config .
++cp /usr/share/games/vegastrike/data/.vegastrike/*.m3u .
++cp /usr/share/games/vegastrike/data/vegastrike.config .
++/usr/games/bin/vssetup
+ echo "Download http://aslp.gallaudet.edu/jjg/wcrm/Vault_Room/vault_room.html the WC2 Collection and the Privateer-RF Collection to ~/music/  directory that you make."
+ echo "If you wish to have your own music edit ~/.vegastrike/*.m3u  Each playlist represents a place or situation in Vega Strike"
+ cd $CURPWD

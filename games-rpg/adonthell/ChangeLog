@@ -1,0 +1,22 @@
+# ChangeLog for app-games/adonthell
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.1 2003/09/10 06:26:50 vapier Exp $
+
+*adonthell-0.3.3-r1 (20 Mar 2003)
+
+  21 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added a small patch back ported from 0.3.4-cvs #17281.
+
+  27 Mar 2003; Michael Nazaroff <naz@gentoo.org> adonthell-0.3.3-r1.ebuild:
+  Added a License to the ebuild.
+  
+  20 Mar 2003; Graham Forest <vladimir@gentoo.org> adonthell-0.3.3-r1.ebuild:
+  Removed usage of pic USE flag
+
+*adonthell-0.3.3 (02 Mar 2003)
+
+  27 Mar 2003; Michael Nazaroff <naz@gentoo.org> adonthell-3.3.ebuild:
+  Added a License to the ebuild.
+  
+  02 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Luca Barbato <lu_zero@gentoo.org> #11875.

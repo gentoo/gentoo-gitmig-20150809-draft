@@ -1,0 +1,26 @@
+# ChangeLog for app-games/planeshift
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/ChangeLog,v 1.1 2003/09/10 06:26:50 vapier Exp $
+
+*planeshift-0.2.010-r1 (10 Jul 2003)
+
+  10 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumped to fix all known problems.  Thanks to everyone at
+  #20181 and especially Matze Braun <matze@braunis.de>.
+
+*planeshift-0.2.010 (16 Apr 2003)
+
+  19 May 2003; Thomas Raschbacher <lrodvan@gentoo.org>:
+  exporting CRYSTAL in src_compile now so configure can find cs-config
+	
+  27 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added game.eclass support.
+
+  18 Apr 2003; Philip Walls <malverian@gentoo.org>
+  planeshift-0.2.010.ebuild :
+  Do not install some other autoconf/build scripts and files. Thanks
+  seemant :)
+
+  16 Apr 2003; Philip Walls <malverian@gentoo.org>
+  planeshift-0.2.010.ebuild :
+  Initial import.
