@@ -1,3 +1,6 @@
 MD5 43bcb8f43f7e1d24cedb7077fc4e92ba xdvik-22.40y.ebuild 1337
 MD5 ec35af9bfec12ab1cab90c999cdccb51 ChangeLog 444
+MD5 4ca2bf76caf7e5b1d1e049d4a6e0a90e xdvik-22.40y-r1.ebuild 1535
 MD5 7605fd292b3cac2b9e0e4372ff8e1277 files/digest-xdvik-22.40y 137
+MD5 8fce9c0c7ca3de1b6fed369d696f85fb files/xdvik-22.40y-j1.17-vfontcap-gentoo.diff 2626
+MD5 7605fd292b3cac2b9e0e4372ff8e1277 files/digest-xdvik-22.40y-r1 137
