@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/seatris-0.0.14.ebuild,v 1.3 2004/12/21 14:32:21 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/seatris-0.0.14.ebuild,v 1.4 2005/03/08 19:19:04 luckyduck Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.earth.li/projectpurple/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~ppc64"
+KEYWORDS="x86 ~ppc ~ppc64 ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc
