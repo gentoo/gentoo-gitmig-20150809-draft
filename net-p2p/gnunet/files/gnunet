@@ -11,18 +11,21 @@ depend() {
 }
 
 start() {
-	ebegin "Starting gnunetd"
+	ebegin "Starting GNUnet"
 	# -u username, -c path to gnunet.conf file
 	start-stop-daemon --start --quiet --background --exec /usr/bin/gnunetd \
 		-- -u gnunet -c /var/lib/GNUnet/gnunet.conf
-	eend $? "Failed to start gnunetd"
+	eend $? "Failed to start GNUnet"
 }
 
 stop() {
-	ebegin "Stopping gnunetd"
-	# pointing file descriptors to /dev/null, because start-stop-daemon
-	# prints warnings that it cannot kill process forks, 
-	# but they are already dead
-	start-stop-daemon --stop --quiet --user gnunet &>/dev/null
-	eend $? "Failed to stop gnunetd"
+	ebegin "Stopping GNUnet"
+	killall gnunetd
+	eend $? "Failed to stop GNUnet"
+}
+
+restart() {
+        svc_stop
+        sleep 3
+        svc_start
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.6.2b.ebuild,v 1.1 2004/06/29 01:25:10 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.6.2b.ebuild,v 1.2 2004/06/29 01:51:38 squinky86 Exp $
 
 inherit libtool
 
@@ -58,6 +58,8 @@ src_install() {
 	newins contrib/gnunet.root gnunet.conf
 	docinto contrib
 	dodoc contrib/*
+	exeinto /etc/init.d
+	doexe ${FILESDIR}/gnunet
 }
 
 pkg_postinst() {
