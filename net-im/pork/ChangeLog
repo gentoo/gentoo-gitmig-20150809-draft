@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/ChangeLog,v 1.20 2004/08/05 22:00:08 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/ChangeLog,v 1.21 2004/08/30 21:22:59 slarti Exp $
+
+  30 Aug 2004; Tom Martin <slarti@gentoo.org> pork-0.99.4.ebuild:
+  Marked ~amd64.
 
 *pork-0.99.4 (05 Aug 2004)
 
