@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/molden-4.0.ebuild,v 1.3 2004/04/07 19:56:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/molden-4.0.ebuild,v 1.4 2004/04/21 18:22:51 spyderous Exp $
 
-inherit eutils gcc
+inherit eutils gcc flag-o-matic
 
 MY_P="${PN}${PV}"
 DESCRIPTION="Display molecular density from GAMESS-UK, GAMESS-US, GAUSSIAN and Mopac/Ampac."
@@ -27,27 +27,25 @@ src_unpack() {
 	# No need to add a new identical patch
 	# assuming people don't stupidly remove 3.9 patch with 3.9
 	epatch ${FILESDIR}/${PN}-3.9-fixMakefile.patch
-	# Respect $CC
-	sed -i -e "s:^CC = cc:CC = $(gcc-getCC):g" ${S}/makefile
-	# Respect $CFLAGS
-	sed -i -e "s:^CFLAGS = :CFLAGS = ${CFLAGS} :g" ${S}/makefile
-	# Respect $FC if set
-	if [ -n "${FC}" ] ; then
-		sed -i -e "s:^FC = g77:FC = ${FC}:g" ${S}/makefile
-		sed -i -e "s:^LDR = g77:LDR = ${FC}:g" ${S}/makefile
-	fi
-	# Respect $FFLAGS if set
-	if [ -n "${FFLAGS}" ] ; then
-		sed -i -e "s:^FFLAGS =:FFLAGS = ${FFLAGS}:g" ${S}/makefile
-	fi
 }
 
 src_compile() {
+	# Use -mieee on alpha, according to the Makefile
+	use alpha && append-flags -mieee
+
+	# Honor CC, CFLAGS, FC, and FFLAGS from environment;
+	# unfortunately a bash bug prevents us from doing typeset and
+	# assignment on the same line.
+	typeset -a args
+	args=( CC="${CC} ${CFLAGS}" \
+		${FC:+FC="${FC}" LDR="${FC}"} \
+		${FFLAGS:+FFLAGS="${FFLAGS}"} )
+
 	einfo "Building Molden..."
-	emake || die "molden emake failed"
+	emake "${args[@]}" || die "molden emake failed"
 	if use opengl ; then
 		einfo "Building Molden OpenGL helper..."
-		emake moldenogl || die "moldenogl emake failed"
+		emake "${args[@]}" moldenogl || die "moldenogl emake failed"
 	fi
 }
 

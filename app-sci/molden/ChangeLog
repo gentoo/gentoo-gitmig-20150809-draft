@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/molden
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/ChangeLog,v 1.5 2004/04/05 03:09:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/ChangeLog,v 1.6 2004/04/21 18:22:51 spyderous Exp $
+
+  21 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; molden-4.0.ebuild:
+  Some wizardly bash replacements for sed by Aron Griffis <agriffis@gentoo.org>
+  (#46816).
 
   04 Apr 2004; Aron Griffis <agriffis@gentoo.org> molden-3.9.ebuild,
   molden-4.0.ebuild:
