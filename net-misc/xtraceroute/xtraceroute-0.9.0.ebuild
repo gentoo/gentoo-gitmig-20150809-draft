@@ -25,7 +25,7 @@ src_compile() {
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
-		--with-host=/usr/local/bin/host \
+		--with-host=/usr/bin/hostx \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man || die "./configure failed"
 	
