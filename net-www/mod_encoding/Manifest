@@ -1,5 +1,15 @@
-MD5 0f7efcdc0f92452a3b49703df471fe2f mod_encoding-20021209.ebuild 1351
-MD5 1e713b96b6ec1890d4ed06077eedcfe5 ChangeLog 533
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 285c7ab6790a74d7a110b5e6c76ea39a ChangeLog 630
 MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
-MD5 e274f697cbb8b61da07d216dd8100f47 files/mod_encoding.conf 336
+MD5 9c2e06ee20142e756def9bbe209d136d mod_encoding-20021209.ebuild 1358
 MD5 00857432d70d5a0a4f1723623feee5f6 files/digest-mod_encoding-20021209 73
+MD5 e274f697cbb8b61da07d216dd8100f47 files/mod_encoding.conf 336
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBirwaI1lqEGTUzyQRAmIwAJ9ujvONkuY8LnL0ZKgq7i7zju4NcwCfaU/u
+1BJmPkV4Eftq0vgp9SlcOmA=
+=8rVK
+-----END PGP SIGNATURE-----
