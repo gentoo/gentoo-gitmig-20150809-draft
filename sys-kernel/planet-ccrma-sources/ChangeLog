@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/planet-ccrma-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/ChangeLog,v 1.12 2004/04/15 10:27:23 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/ChangeLog,v 1.13 2004/04/17 12:11:58 plasmaroo Exp $
+
+*planet-ccrma-sources-2.4.21-r7 (17 Apr 2004)
+
+  17 Apr 2004; <plasmaroo@gentoo.org>
+  +files/planet-ccrma-sources.CAN-2004-0010.patch,
+  +files/planet-ccrma-sources.CAN-2004-0177.patch,
+  +files/planet-ccrma-sources.CAN-2004-0178.patch,
+  -planet-ccrma-sources-2.4.21-r6.ebuild,
+  +planet-ccrma-sources-2.4.21-r7.ebuild:
+  Added patches for the CAN-2004-0010, CAN-2004-0177 and CAN-2004-0178
+  vulnerabilities.
 
 *planet-ccrma-sources-2.4.21-r6 (15 Apr 2004)
 
