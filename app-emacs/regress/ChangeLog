@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/regress
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/regress/ChangeLog,v 1.1 2003/11/25 17:28:02 mkennedy Exp $
+
+*regress-1.5.0 (25 Nov 2003)
+
+  25 Nov 2003; <mkennedy@gentoo.org> metadata.xml, regress-1.5.0.ebuild,
+  files/50regress-gentoo.el:
+  initial import.  ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
