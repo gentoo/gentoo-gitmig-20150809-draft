@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-libs/objcunit
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/objcunit/ChangeLog,v 1.1 2004/11/14 20:32:41 fafhrd Exp $
+
+*objcunit-1.2 (14 Nov 2004)
+
+  14 Nov 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
+  +objcunit-1.2.ebuild:
+  Original package import; keyworded for ~ppc
+
