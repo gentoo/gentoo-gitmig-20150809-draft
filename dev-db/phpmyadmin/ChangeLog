@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.80 2005/01/11 17:25:05 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.81 2005/01/25 23:09:46 twp Exp $
+
+*phpmyadmin-2.6.1 (26 Jan 2005)
+
+  26 Jan 2005; Tom Payne <twp@gentoo.org> +phpmyadmin-2.6.1.ebuild:
+  Version bump. Bug # 79305.
 
   11 Jan 2005; Tom Payne <twp@gentoo.org> -phpmyadmin-2.6.0_p2.ebuild,
   -phpmyadmin-2.6.0_p3.ebuild, phpmyadmin-2.6.1_rc1.ebuild:
