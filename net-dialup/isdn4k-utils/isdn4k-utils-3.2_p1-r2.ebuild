@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r2.ebuild,v 1.12 2004/07/01 22:07:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r2.ebuild,v 1.13 2004/12/02 12:47:17 dragonheart Exp $
 
 inherit eutils
 
@@ -91,6 +91,11 @@ src_install() {
 	doins ip-down.ippp0
 	doins ioptions
 	doins options.ippp0
+
+
+	# ippdp.init script for the ebuild thinks ipppd should be in /sbin
+	dodir /sbin
+	mv ${D}/usr/sbin/ipppd ${D}/sbin/ipppd
 }
 
 pkg_postinst() {

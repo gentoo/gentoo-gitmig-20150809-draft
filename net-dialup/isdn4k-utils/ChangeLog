@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.30 2004/11/22 20:14:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.31 2004/12/02 12:47:17 dragonheart Exp $
+
+  02 Dec 2004; Daniel Black <dragonheart@gentoo.org>
+  isdn4k-utils-3.2_p1-r2.ebuild, isdn4k-utils-3.5_pre20041110.ebuild:
+  Changed ipppd install directory as per bug #73067. Thanks to Martin Wegner
+  <comp@mroot.net>
 
   22 Nov 2004; Alin Nastac <mrness@gentoo.org> -files/local.start,
   -files/3.2_p1-r4/config, -files/3.2_p1-r4/pathfix.patch,
