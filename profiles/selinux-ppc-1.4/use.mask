@@ -10,3 +10,6 @@ mmx
 svga
 sse
 scanner 
+
+#mask until sys-cluster/lam-mpi is tested on ppc
+mpi

@@ -26,3 +26,6 @@ hdf
 
 # media-libs/glide-v3 requires some extra work on ppc
 3dfx
+
+#mask until sys-cluster/lam-mpi is tested on ppc
+mpi
