@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010500-r1.ebuild,v 1.1 2003/07/10 02:05:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010500-r1.ebuild,v 1.2 2003/07/10 17:53:30 mcummings Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cpan.org/authors/id/I/IL/ILYAZ/modules/${MY_P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 ~alpha ~ppc ~sparc"
 
 # Math::Pari requires that a copy of the pari source in a parallel
 # directory to where you build it. It does not need to compile it, but
