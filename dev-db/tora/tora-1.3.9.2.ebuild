@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.9.2.ebuild,v 1.5 2003/08/05 18:50:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.9.2.ebuild,v 1.6 2003/08/27 16:20:14 rizzo Exp $
 
 DESCRIPTION="TOra - Toolkit For Oracle"
 HOMEPAGE="http://www.globecom.se/tora/"
@@ -45,4 +45,5 @@ src_compile() {
 src_install() {
 	dodir ${D}/usr/bin
 	einstall ROOT=${D} 
+	dodoc LICENSE.txt BUGS INSTALL NEWS README TODO
 }
