@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.327 2005/02/08 20:09:22 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.328 2005/02/10 06:45:49 spyderous Exp $
+
+  09 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild, xorg-x11-6.8.1.904.ebuild:
+  (#81431) We should only be removing libGL.*, but unfortunately the dot
+  matched any character so we needed libGL\.* instead. Note that this has been
+  around since xfree-4.3.0.
 
   08 Feb 2005; David Holm <dholm@gentoo.org> xorg-x11-6.8.1.904.ebuild:
   Added to ~ppc.
