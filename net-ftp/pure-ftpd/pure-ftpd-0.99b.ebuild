@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-0.99-r2.ebuild,v 1.2 2001/08/11 12:29:57 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-0.99b.ebuild,v 1.1 2001/08/14 16:22:46 pm Exp $
 
-A=pure-ftpd-0.99.tar.gz
+A=pure-ftpd-0.99b.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A Fast Production Quality FTP Server - Bug fixes backported from 0.99 . No new feature. Use this version on production servers."
 SRC_URI="http://prdownloads.sourceforge.net/pureftpd/${A}"
@@ -17,7 +17,8 @@ src_compile() {
     cd ${S}
     try ./configure --prefix=/usr  --with-throttling --with-virtualhosts \
 	--with-ratios --with-largefile --with-cookie --with-welcomemsg \
-	--with-altlog --with-ftpwho --with-uploadscript
+	--with-altlog --with-ftpwho --with-uploadscript --infodir=/usr/share/info \
+	--mandir=/usr/share/man --host=${CHOST}
     try make
 
 }
@@ -43,6 +44,13 @@ src_install () {
     echo -e "\033[1;42m\033[1;33m ebuild pure-ftpd-0.99-r1.ebuild config \033[0m"
     echo -e "\033[1;42m\033[1;33m This will add the necessary post install config to your system. \033[0m"
     dosym /dev/null /etc/pure-ftpd/127.0.0.1
+    fowners ftp.bin /home/ftp
+    fowners ftp.bin /home/ftp/incoming
+    fowners root.root /home/ftp/pub
+    fperms 757 /home/ftp/incoming
+    fperms 700 /etc/pure-ftpd	
+    fperms 600 /etc/ftpusers
+    fperms 644 /home/ftp/welcome.msg
 }
 
 pkg_config() {
@@ -52,10 +60,6 @@ pkg_config() {
 	read
 	cat ${FILESDIR}/pftpd.inetd >> ${ROOT}/etc/inetd.conf
 	/etc/rc.d/init.d/svc-xinetd restart
-	chown ftp.bin /home/ftp
-    	chown ftp.bin /home/ftp/incoming
-    	chmod 757 /home/ftp/incoming
-    	chown -R root.root /home/ftp/pub
 	echo "Modifications applied."
 }
 
