@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/emul-linux-x86-soundlibs
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.1 2004/09/11 12:15:39 kugelfang Exp $
+
+*emul-linux-x86-soundlibs-1.0 (11 Sep 2004)
+
+  11 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> +metadata.xml,
+  +emul-linux-x86-soundlibs-1.0.ebuild:
+  Initial release.
+
