@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ids-0.83_beta2-r1.ebuild,v 1.2 2004/08/30 13:30:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ids-0.83_beta2-r1.ebuild,v 1.3 2004/08/30 19:23:11 rl03 Exp $
 
 inherit webapp
 
@@ -11,7 +11,6 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 IUSE=""
 KEYWORDS="~x86 ~sparc ~ppc"
-DEPEND="$DEPEND"
 RDEPEND="net-www/apache
 	>=dev-lang/perl-5.6.1
 	dev-perl/ImageInfo
@@ -20,14 +19,9 @@ RDEPEND="net-www/apache
 
 S=${WORKDIR}/${PN}
 
-src_compile() {
-	:;
-}
-
 src_install() {
 	webapp_src_preinst
 
-	#Do not remove docs as it will not work without
 	dodoc CREDITS ChangeLog PATCH.SUBMISSION README
 
 	cp -R . ${D}/${MY_HTDOCSDIR}

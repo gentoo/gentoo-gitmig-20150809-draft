@@ -1,6 +1,9 @@
 # ChangeLog for net-www/ids
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ChangeLog,v 1.3 2004/08/30 13:30:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ChangeLog,v 1.4 2004/08/30 19:23:11 rl03 Exp $
+
+  30 Aug 2004; Renat Lumpau <rl03@gentoo.org> ids-0.83_beta2-r1.ebuild:
+  Fixed DEPEND/RDEPEND, removed unneeded src_compile
 
 *ids-0.83_beta2-r1 (30 Aug 2004)
 
