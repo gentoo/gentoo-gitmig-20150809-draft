@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.8.9.ebuild,v 1.4 2004/10/09 22:55:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.8.9.ebuild,v 1.5 2004/10/31 01:43:49 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://gotbnc.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ~arm"
+KEYWORDS="alpha arm ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
@@ -26,7 +26,7 @@ src_compile() {
 
 src_install() {
 	dobin bnc bncchk bncsetup bncmkpasswd || die "dobin failed"
-	dodoc CHANGES README example.conf motd || die "dodoc failed"
+	dodoc CHANGES README example.conf motd
 }
 
 pkg_postinst() {
