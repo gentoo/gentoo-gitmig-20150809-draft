@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.2.4.ebuild,v 1.8 2004/07/16 02:07:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.2.4.ebuild,v 1.9 2004/07/23 18:59:42 gongloo Exp $
 
 inherit flag-o-matic
 
@@ -16,16 +16,16 @@ SRC_URI="ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/${MY_P}.tar.gz"
 HOMEPAGE="http://www.netperf.org/"
 LICENSE="netperf"
 SLOT="0"
-KEYWORDS="x86 sparc ia64 alpha amd64 ppc64"
+KEYWORDS="x86 sparc ia64 alpha amd64 ppc64 macos"
 
 IUSE="ipv6"
 
-RDEPEND="virtual/libc"
+RDEPEND="virtual/libc >=sys-apps/sed-4"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_compile() {
-	append-flags -DDO_UNIX
+	[ `use macos` ] || append-flags -DDO_UNIX
 	use ipv6 && append-flags -DDO_IPV6
 	emake CFLAGS="${CFLAGS}" || die
 	sed -i 's:^\(NETHOME=\).*:\1/usr/bin:' *_script

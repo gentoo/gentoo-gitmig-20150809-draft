@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.13 2004/07/16 02:07:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.14 2004/07/23 18:56:19 gongloo Exp $
+
+  23 Jul 2004; Hasan Khalil <gongloo@gentoo.org> netperf-2.2.4.ebuild:
+  Stable on macos.
 
   15 Jul 2004; Tom Gall <tgall@gentoo.org> netperf-2.2.4.ebuild:
   stable on ppc64, bug #55547
