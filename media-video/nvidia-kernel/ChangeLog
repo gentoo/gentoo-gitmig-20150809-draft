@@ -1,6 +1,16 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.109 2005/03/05 10:43:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.110 2005/03/11 19:43:04 azarah Exp $
+
+*nvidia-kernel-1.0.7167 (11 Mar 2005)
+
+  11 Mar 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/1.0.7167/NVIDIA_kernel-1.0-7167-amd64-shutup-warnings.patch,
+  +files/1.0.7167/NVIDIA_kernel-1.0-7167-conftest-koutput-includes.patch,
+  +files/1.0.7167/NVIDIA_kernel-1.0-7167-disable-preempt-on-smp_processor_id
+  .patch, +files/1.0.7167/NVIDIA_kernel-1.0-7167-x86-shutup-warnings.patch,
+  +nvidia-kernel-1.0.7167.ebuild:
+  Update version.
 
 *nvidia-kernel-1.0.6629-r4 (05 Mar 2005)
 

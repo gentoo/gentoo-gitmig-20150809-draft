@@ -1,8 +1,12 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 17e5291b91d1eef96d55e54a2cba6d81 nvidia-kernel-1.0.6629-r1.ebuild 4748
 MD5 bf8f040d6927016f9da24ab89262d346 nvidia-kernel-1.0.6629-r4.ebuild 4567
-MD5 30b5adc05523d11a2d9297cbf4d8688b ChangeLog 28645
+MD5 b4cc7148b83e220711ca00091219aa6b ChangeLog 29086
 MD5 3915412914635df4d7329ad27323f4c5 nvidia-kernel-1.0.6629-r2.ebuild 4264
 MD5 631e8deabfb0c7726b9b31259f1673a0 nvidia-kernel-1.0.6629-r3.ebuild 4330
+MD5 0ba23f57441bbadc6c92d4ae80d75fcc nvidia-kernel-1.0.7167.ebuild 3776
 MD5 c84a79e7d9b69a204003fb8c2dbaad01 metadata.xml 297
 MD5 6efd7d5ad3c7739f685111aa84466b68 nvidia-kernel-1.0.6111-r3.ebuild 4488
 MD5 d8fcf2021aa68584d4a4d9e96b671da0 files/nvidia 501
@@ -10,6 +14,7 @@ MD5 8a4687b0fc3e7cc0b36c247697d94701 files/digest-nvidia-kernel-1.0.6629-r1 163
 MD5 8a4687b0fc3e7cc0b36c247697d94701 files/digest-nvidia-kernel-1.0.6629-r4 163
 MD5 8a4687b0fc3e7cc0b36c247697d94701 files/digest-nvidia-kernel-1.0.6629-r2 163
 MD5 8a4687b0fc3e7cc0b36c247697d94701 files/digest-nvidia-kernel-1.0.6629-r3 163
+MD5 97b3ec5488fb7f7f6cdde31ee42e45af files/digest-nvidia-kernel-1.0.7167 163
 MD5 ed1e098d85579c75542ef0a49ee4dd5c files/digest-nvidia-kernel-1.0.6111-r3 163
 MD5 14924b09123b075f910c73316baff848 files/1.0.6111/power-suspend-2.6.9-changes.patch 856
 MD5 29eafcaf7ab5d59dd90d3d3243bf57c3 files/1.0.6111/nv_enable_pci.patch 3640
@@ -35,3 +40,14 @@ MD5 bca6ad85efa6071a949bdcb24fce1733 files/1.0.6629/NVIDIA_kernel-1.0-6629-agp_b
 MD5 d4e8ffdb0cc67c56884e6055d2045e51 files/1.0.6629/NVIDIA_kernel-1.0-6629-1182399.patch 2608
 MD5 e210d99cae87c3f60120ea474b97fca7 files/1.0.6629/NVIDIA_kernel-1.0-6629-1189413.patch 8072
 MD5 da7644fcc801d40c26fb22b570a88835 files/1.0.6629/NVIDIA_kernel-1.0-6629-1201042.diff 9445
+MD5 6c6bd7d2e4589cf3f4725082bb413a43 files/1.0.7167/NVIDIA_kernel-1.0-7167-x86-shutup-warnings.patch 742
+MD5 7ae487fba8a81fb91d53f35b9066512f files/1.0.7167/NVIDIA_kernel-1.0-7167-conftest-koutput-includes.patch 1082
+MD5 9df3fbed7af6fcb4ad13b1b5c3851381 files/1.0.7167/NVIDIA_kernel-1.0-7167-disable-preempt-on-smp_processor_id.patch 419
+MD5 82d99e72fddbc1b0447708afd84dc8c5 files/1.0.7167/NVIDIA_kernel-1.0-7167-amd64-shutup-warnings.patch 770
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD4DBQFCMfWY1ZcsMnZjRyIRAhLpAJiCIQ/qN6dwfihmnzXH26fu6AFUAJ9Kxn1Q
+zvBiKVKI91QVH4msLQuhnw==
+=XgmS
+-----END PGP SIGNATURE-----
