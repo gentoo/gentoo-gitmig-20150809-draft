@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <lu_zero@gentoo.org> (06 Jan 2004)
+# Has memory leak issue
+=media-video/ati-drivers-3.7.0
+
 # <taviso@gentoo.org> (06 Jan 2004)
 # alpha branch of gnupg.
 >=app-crypt/gnupg-1.9.0
@@ -481,10 +485,6 @@ media-plugins/avi-xmms
 # New versions of packages that have new cross-compiling support
 #  These will be unmasked once everything has been fully tested 
 >=sys-devel/gcc-config-1.4
-
-# <lu_zero@gentoo.org> (06 Apr 2003)
-# Has issues
-=media-video/ati-drivers-2.9.6
 
 # <lu_zero@gentoo.org> (16 Mar 2003)
 # to be tested, seems unstable
