@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.10_alpha3.ebuild,v 1.1 2002/10/23 21:03:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.10_alpha3.ebuild,v 1.2 2002/10/24 06:43:02 vapier Exp $
+
+inherit gcc
 
 IUSE="gtk gnome ipv6"
 
@@ -17,6 +19,13 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 
 src_compile() {
+	# fix header
+	if [ `gcc-major-version` -eq 3 ] ; then
+		cp nbase/nbase.h nbase/nbase.h.old
+		sed -e 's:char \*strcasestr://:' \
+			nbase/nbase.h.old > nbase/nbase.h
+	fi
+
 	use ipv6 \
 		&& econf --enable-ipv6 \
 		|| econf
