@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/migemo-dict
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/migemo-dict/ChangeLog,v 1.7 2004/07/19 13:23:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/migemo-dict/ChangeLog,v 1.8 2004/07/30 17:05:34 matsuu Exp $
+
+  31 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> migemo-dict-200309.ebuild:
+  Added to ~amd64.
 
   19 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> migemo-dict-200309.ebuild:
   Added to macos.
