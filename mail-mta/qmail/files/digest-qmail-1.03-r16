@@ -23,6 +23,7 @@ MD5 68e7697fd61d7cd9a5a7dc88ce2ecd47 netscape-progress.patch 1457
 MD5 598aca7a3a99426d1f49079172986b31 sendmail-ignore-N.patch 636
 MD5 2bd191cca4e640e87cca79bc0405f97a qmail-1.03-moreipme-0.6pre1-gentoo.patch 13942
 MD5 d9408411822973415ff10018ff4419be qmail-relaymxlookup-0.4.diff 3728
-MD5 d898fbb2b4cb259b208dbb8c9d8c47a9 gentoo-qmail-1.03-r16-mfcheck.3.patch 4223
-MD5 95692f3a7574f258489943ca9d09981a gentoo-qmail-1.03-r16-spp.034.patch 34568
+MD5 9b8c96c9636fe0fde3dbfbe092ee3e9b qmail-1.03-r16-spp.diff 34896
+MD5 bcdb312cb6bb5f7ec41eb350a064e70b qmail-1.03-r16-mfcheck.diff 3192
+MD5 bd7d61ba21c1f1d3b134c2e8cfec81c5 qmail-1.03-r16-logrelay.diff 619
 MD5 a6d05602399a51f6133c7ff19142b7c8 qmail-bounce-encap-20040210.patch 4238

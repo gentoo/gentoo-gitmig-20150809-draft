@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.12 2005/01/27 19:19:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.13 2005/02/19 13:36:59 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -34,8 +34,9 @@ SRC_URI="mirror://qmail/${P}.tar.gz
 	http://www-dt.e-technik.uni-dortmund.de/~ma/djb/qmail/sendmail-ignore-N.patch
 	mirror://gentoo/qmail-1.03-moreipme-0.6pre1-gentoo.patch
 	http://hansmi.ch/download/qmail/qmail-relaymxlookup-0.4.diff
-	mirror://gentoo/gentoo-qmail-1.03-r16-mfcheck.3.patch
-	mirror://gentoo/gentoo-qmail-1.03-r16-spp.034.patch
+	mirror://gentoo/qmail-1.03-r16-spp.diff
+	mirror://gentoo/qmail-1.03-r16-mfcheck.diff
+	mirror://gentoo/qmail-1.03-r16-logrelay.diff
 	http://www.finnie.org/software/qmail-bounce-encap/qmail-bounce-encap-20040210.patch
 	"
 # broken stuffs
@@ -218,16 +219,17 @@ src_unpack() {
 	# add SPP framework for future extensions. Once this has been tested, most
 	# other patches may be rewritten to add a SPP module instead of patching
 	# qmail-smtpd
-	#EPATCH_SINGLE_MSG="Adding SPP framework for qmail-smtpd" \
-	#epatch ${DISTDIR}/gentoo-qmail-${PVR}-spp.034.patch
+	EPATCH_SINGLE_MSG="Adding SPP framework for qmail-smtpd" \
+	epatch ${DISTDIR}/qmail-1.03-r16-spp.diff
 
 	# add mail from DNS check
-	#EPATCH_SINGLE_MSG="check envelope sender's domain for validity" \
-	#epatch ${DISTDIR}/gentoo-qmail-${PVR}-mfcheck.3.patch
+	EPATCH_SINGLE_MSG="check envelope sender's domain for validity" \
+	#EPATCH_OPTS="${EPATCH_OPTS} -F 3" \
+	epatch ${DISTDIR}/qmail-1.03-r16-mfcheck.diff
 
 	# log relay attempts
-	#EPATCH_SINGLE_MSG="log relay attempts" \
-	#epatch ${FILESDIR}/${PVR}/gentoo-qmail-${PVR}-logrelay.patch
+	EPATCH_SINGLE_MSG="log relay attempts" \
+	epatch ${DISTDIR}/qmail-1.03-r16-logrelay.diff
 
 	# Rediffed patch to prevent from the problem that qmail doesn't know
 	# that it is reachable under another IP address when using NAT.
@@ -259,11 +261,6 @@ src_unpack() {
 	# Add double-bounce-trim-patch from bug 45782
 	EPATCH_SINGLE_MSG="Adding double-bounce-trim-patch" \
 	epatch ${FILESDIR}/${PVR}/double-bounce-trim.patch
-
-	# Fixes bug 40010
-	# TODO hansmi, 2005-01-06: no longer needed because auth-after-tls-only is fixed
-	#EPATCH_SINGLE_MSG="Fixing broken #ifdef's to #if (TLS && TLS_BEFORE_AUTH)" \
-	#epatch ${FILESDIR}/${PV}-r15/tlsbeforeauth-fix.patch
 
 	# Fix bug 49971
 	EPATCH_SINGLE_MSG="Applying fix for a special case with courier-imapd" \
