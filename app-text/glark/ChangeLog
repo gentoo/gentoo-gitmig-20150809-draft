@@ -1,6 +1,9 @@
 # ChangeLog for app-text/glark
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.11 2004/04/11 16:51:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.12 2004/04/11 20:35:54 dholm Exp $
+
+  11 Apr 2004; David Holm <dholm@gentoo.org> glark-1.6.8.ebuild:
+  Added to ~ppc.
 
 *glark-1.6.8 (12 Apr 2004)
 
