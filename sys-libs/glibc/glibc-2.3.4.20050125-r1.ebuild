@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.15 2005/03/06 00:34:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.16 2005/03/06 11:44:08 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -301,7 +301,7 @@ toolchain-glibc_src_install() {
 		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
 			install_root=${D} \
 			install || die
-	elif use nptlonly ; then
+	else # nptlonly
 		cd ${WORKDIR}/build-${ABI}-${CTARGET}-nptl
 		einfo "Installing GLIBC with NPTL..."
 		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
@@ -602,7 +602,7 @@ setup_flags() {
 			# Sparc64 Only support...
 			if has_multilib_profile || [ "${PROFILE_ARCH}" = "sparc64" ] ; then
 				case ${ABI} in
-					default|sparc)
+					default|sparc32)
 						if is-flag "-mcpu=ultrasparc3"; then
 							CTARGET_OPT="sparcv9b-unknown-linux-gnu"
 						else
@@ -718,7 +718,12 @@ want_nptl() {
 
 	# Archs that can use NPTL
 	case $(tc-arch) in
-		amd64|ia64|ppc|ppc64|s390|sparc|x86)
+		amd64|ia64|ppc|ppc64|s390|x86)
+			return 0;
+		;;
+		sparc)
+			# >= v9 is needed for nptl.
+			[[ "${PROFILE_ARCH}" == "sparc32" ]] && return 1
 			return 0;
 		;;
 	esac
