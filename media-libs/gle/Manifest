@@ -1,3 +1,13 @@
-MD5 fe6776293b3c51511c466d8ec58b0a0e gle-3.0.1-r2.ebuild 742
-MD5 cfce620c63198f47dba671ad2fb67e9a ChangeLog 1361
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7cc77963e7b137154987f54cf7b4ea8e gle-3.0.1-r2.ebuild 749
+MD5 8327d69dad5a11c2945d1f8d6b91276e ChangeLog 1485
 MD5 bc18c41cd2d1809c7c674cb3133dad36 files/digest-gle-3.0.1-r2 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBYm+dArHZZzCEUG0RAvLcAJ0bpQyJQ87mAL7ZjXoAwSDqMPj4vwCfdhGP
+HHa7z0BVYkx7ex8N6SeXFZY=
+=MlXr
+-----END PGP SIGNATURE-----
