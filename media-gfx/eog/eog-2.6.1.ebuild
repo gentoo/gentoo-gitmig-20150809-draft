@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.6.1.ebuild,v 1.8 2004/08/22 19:03:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.6.1.ebuild,v 1.9 2004/09/28 21:43:53 swtaylor Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Eye Of Gnome, an image viewer"
 HOMEPAGE="http://www.gnome.org/"
@@ -35,3 +35,9 @@ DEPEND="${RDEPEND}
 G2CONF="${G2CONF} $(use_with jpeg libjpeg) $(use_with jpeg libexif)"
 
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS HACKING DEPENDS THANKS TODO"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	has_version '>=media-libs/libexif-0.6' && epatch ${FILESDIR}/${P}-libexif-0.6.patch
+}

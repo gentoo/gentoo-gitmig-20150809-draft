@@ -1,0 +1,24 @@
+--- libeog/eog-info-view.c.orig	2004-09-28 13:41:23.987814033 -0600
++++ libeog/eog-info-view.c	2004-09-28 13:43:09.522474289 -0600
+@@ -246,6 +246,7 @@
+ 	EogInfoView *view;
+ 	EogInfoViewPrivate *priv;
+ 	char *path;
++	char b[1024];
+ 
+ 	view = EOG_INFO_VIEW (data);
+ 	priv = view->priv;
+@@ -255,11 +256,11 @@
+ 	path = g_hash_table_lookup (priv->id_path_hash, GINT_TO_POINTER (entry->tag));
+ 
+ 	if (path != NULL) {
+-		set_row_data (store, path, exif_tag_get_name (entry->tag), exif_entry_get_value (entry));	
++		set_row_data (store, path, exif_tag_get_name (entry->tag), exif_entry_get_value (entry, b, sizeof(b)));	
+ 	}
+ 	else {
+ 		path = set_row_data (store, NULL, 
+-				     exif_tag_get_name (entry->tag), exif_entry_get_value (entry));	
++				     exif_tag_get_name (entry->tag), exif_entry_get_value (entry, b, sizeof(b)));	
+ 
+ 		g_hash_table_insert (priv->id_path_hash,
+ 				     GINT_TO_POINTER (entry->tag),

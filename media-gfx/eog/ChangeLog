@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.71 2004/09/17 11:52:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.72 2004/09/28 21:43:53 swtaylor Exp $
+
+  28 Sep 2004; Scott W Taylor <swtaylor@gentoo.org>
+  +files/eog-2.6.1-libexif-0.6.patch, eog-2.6.1.ebuild:
+  now happy with libexif-0.6, same type fix as in 13463
 
 *eog-2.8.0 (17 Sep 2004)
 
