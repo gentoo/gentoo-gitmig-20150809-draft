@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.4.1.ebuild,v 1.2 2004/04/06 16:23:35 avenj Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.5.1.ebuild,v 1.1 2004/04/06 16:23:35 avenj Exp $
 
 DESCRIPTION="A GTK-based image browser"
 HOMEPAGE="http://gqview.sourceforge.net/"
@@ -10,7 +8,8 @@ SRC_URI="mirror://sourceforge/gqview/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+IUSE="nls xinerama"
 
 DEPEND="media-libs/libpng
 	>=x11-libs/gtk+-2.2.0"
@@ -18,7 +17,10 @@ DEPEND="media-libs/libpng
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
-	econf `use_enable nls` || die
+	econf \
+		--disable-dependency-tracking \
+		`use_enable xinerama` \
+		`use_enable nls` || die
 	emake || die "emake failed"
 }
 
