@@ -1,0 +1,11 @@
+# ChangeLog for app-text/psiconv
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/psiconv/ChangeLog,v 1.1 2003/09/15 00:19:21 seemant Exp $
+
+*psiconv-0.8.3 (14 Sep 2003)
+
+  14 Sep 2003; Seemant Kulleen <seemant@gentoo.org> psiconv-0.8.3.ebuild:
+  Psiconv is a standalone tool for the reading and conversion of Psion
+  documents.  It also provides a lib used by AbiWord to read same with a
+  plugin.  Ebuild submitted by: MG <markgilbert@hotpop.com> in bug #28717
+
