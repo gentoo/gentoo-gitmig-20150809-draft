@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.13 2004/06/06 09:04:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.14 2004/06/06 09:05:31 dragonheart Exp $
+
+  06 Jun 2004; Daniel Black <dragonheart@gentoo.org> libevent-0.7c.ebuild:
+  QA - IUSE
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> libevent-0.7a.ebuild:
   QA - redundant S=
