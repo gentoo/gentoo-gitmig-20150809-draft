@@ -1,8 +1,17 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.1 2002/07/24 18:53:40 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.2 2002/07/24 21:04:26 sunflare Exp $
 
 *mono-0.12 (24 Jul 2002)
+
+  23 Jul 2002; Phil Bordelon <sunflare@gentoo.org> ChangeLog: Unmasking the ebuild.
+  PLEASE NOTE that the build has been known to bomb on at least one machine, although
+  it worked on all of the rest of them that we tested it on.  This is very much
+  work-in-progress software, so please take that into account before you start to
+  post bugs.
+
+  23 Jul 2002; Phil Bordelon <sunflare@gentoo.org> mono-0.12.ebuild: dodoc should
+  grab 'ChangeLog,' not 'Changelog.'  Fixed.
 
   23 Jul 2002; Phil Bordelon <sunflare@gentoo.org> mono-0.12.ebuild, ChangeLog:
   Original release.  The ebuild was submitted by Luis Mayoral <satriani@okulto.net>.
