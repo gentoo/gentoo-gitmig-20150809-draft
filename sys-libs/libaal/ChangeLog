@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libaal
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/ChangeLog,v 1.1 2004/01/11 04:02:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/ChangeLog,v 1.2 2004/01/30 11:52:05 vapier Exp $
+
+*libaal-0.4.15-r1 (30 Jan 2004)
+
+  30 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Upstream released new tarballs with a few fixes #39443.
 
 *libaal-0.4.15 (10 Jan 2004)
 
