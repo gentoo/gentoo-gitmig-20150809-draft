@@ -72,7 +72,7 @@ start() {
 		fi
 	done
 
-	if [ -d ${PROCDIR}/grsec_lock ] ; then
+	if [ -f ${PROCDIR}/grsec_lock ] ; then
 		echo ${LOCK} >${PROCDIR}/grsec_lock
 	fi
 
