@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/ExtUtils-MakeMaker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.26 2003/07/28 09:23:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.27 2003/07/28 15:44:01 mcummings Exp $
+
+  28 Jul 2003; Michael Cummings <mcummings@gentoo.org>
+  ExtUtils-MakeMaker-6.11.ebuild:
+  Added DESTDIR to avoid sandbox errors - MakeMaker now supports module building
+  for distros!
 
 *ExtUtils-MakeMaker-6.11 (28 Jul 2003)
 
