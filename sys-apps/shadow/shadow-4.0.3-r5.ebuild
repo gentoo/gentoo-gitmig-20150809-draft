@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r5.ebuild,v 1.1 2003/05/13 08:10:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r5.ebuild,v 1.2 2003/05/14 16:17:31 kumba Exp $
 
 IUSE=""
 
-inherit eutils libtool
+inherit eutils libtool gnuconfig
 
 FORCE_SYSTEMAUTH_UPDATE="yes"
 
@@ -52,6 +52,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# Allows shadow configure detect mips systems properly
+	gnuconfig_update
+
 	elibtoolize
 
 	local myconf=""
