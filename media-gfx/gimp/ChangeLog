@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.66 2004/01/21 13:53:13 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.67 2004/01/31 14:02:07 tseng Exp $
+
+  31 Jan 2004; Brandon Hale <tseng@gentoo.org> gimp-2.0_pre2.ebuild,
+  files/gimp-2.0_pre2-cpuaccel-pic.patch:
+  Apply patch from Gimp CVS to allow for PIC-safe building.
+  (http://bugs.gnome.org/show_bug.cgi?id=132999)
 
 *gimp-2.0_pre2 (21 Jan 2004)
 

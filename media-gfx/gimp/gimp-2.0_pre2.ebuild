@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0_pre2.ebuild,v 1.1 2004/01/21 13:53:13 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0_pre2.ebuild,v 1.2 2004/01/31 14:02:07 tseng Exp $
 
 inherit debug flag-o-matic libtool
 
@@ -57,6 +57,7 @@ src_unpack() {
 	cd ${S}
 	# fix gimp-remote behavior
 	epatch ${FILESDIR}/${P}-remote_new_behaviour.patch
+	epatch ${FILESDIR}/${P}-cpuaccel-pic.patch
 
 }
 
