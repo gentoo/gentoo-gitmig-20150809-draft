@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/mysqltool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.10 2003/05/04 11:38:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.11 2003/05/05 01:52:45 robbat2 Exp $
 
 *mysqltool-0.95-r2 (04 May 2003)
 
@@ -8,7 +8,7 @@
   files/90_mysqltool.conf.m4:
   Rewrote the install/postinst sections to support apache2+mod_perl better, as
   well as fixing bug #20119 at the same time. Also made it easier for the user
-  ;-).
+  ;-).  Fixed some more bugs in my ebuilds now.
 
 *mysqltool-0.95-r1 (03 May 2002)
 
