@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.16 2003/11/05 20:56:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.17 2003/11/13 14:40:35 caleb Exp $
+
+*valgrind-2.0.0 (13 Nov 2003)
+
+  13 Nov 2003; Caleb Tennis <caleb@gentoo.org> valgrind-2.0.0.ebuild,
+  valgrind-2.0_pre20031012.ebuild:
+  Version bump, remove prerelease, mark as stable.
 
   05 Nov 2003; Caleb Tennis <caleb@gentoo.org> valgrind-1.0.4-r1.ebuild,
   valgrind-1.0.4.ebuild, valgrind-1.9.3.ebuild,
