@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r2.ebuild,v 1.5 2003/12/11 10:52:21 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r2.ebuild,v 1.6 2003/12/11 11:59:24 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -80,6 +80,9 @@ src_unpack() {
 	# perllib applications were getting destroyed before the ON_EXIT 
 	# handler could be invoked.
 	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.8-perllib-disconnect.diff
+
+	# files with \n in them make fvwm-menu-directory misbehave.
+	cd ${S}/bin; epatch ${FILESDIR}/fvwm-2.5.8-fvwm-menu-directory-security.diff
 
 	# build fails on alpha with certain options without this.
 	use alpha && append-flags -fPIC
