@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.26 2001/12/29 17:41:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.27 2001/12/30 13:58:20 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit autoconf base || die
 ECLASS=kde
@@ -161,7 +161,12 @@ qtver-from-kdever() {
 }
 
 
-
+# compat
+need-kdelibs() {
+    echo "WARNING: need-kdelibs() called, where need-kde() is correct.
+If this happens at the unmerging of an old ebuild, disregard; otherwise report."
+    need-kde $*
+}
 
 
 
