@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.6 2002/04/16 05:21:16 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.7 2002/04/17 04:16:21 mkennedy Exp $
+
+*xemasc-21.4.6-r4 (16 Apr 2002)
+
+  16 Apr 2002: Matthew Kennedy <mkennedy@gentoo.org>
+  xemacs-21.4.6-r4.ebuild, files/digest-xemacs-21.4.6-r4, ChanegLog :
+
+  Includes SANDBOX_DISABLED="1" (quick and dirty fix) to prevent
+  xemacs segfaults.
 
 *xemacs-21.4.6-r3 (15 Apr 2002)
 
