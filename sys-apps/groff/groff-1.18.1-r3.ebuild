@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r3.ebuild,v 1.6 2003/12/15 19:30:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r3.ebuild,v 1.7 2003/12/17 03:55:19 brad_mssw Exp $
 
 IUSE="X cjk"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://groff.ffii.org/pub/groff/old/${P}.tar.gz
 	cjk? ( http://people.debian.org/~ukai/groff/${MB_PATCH}.diff.gz )"
 HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
 
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm ia64"
+KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm ia64 ppc64"
 SLOT="0"
 LICENSE="GPL-2"
 

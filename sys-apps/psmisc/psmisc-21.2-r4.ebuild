@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.2-r4.ebuild,v 1.4 2003/10/29 03:14:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.2-r4.ebuild,v 1.5 2003/12/17 04:02:55 brad_mssw Exp $
 
 SELINUX_PATCH="psmisc-21.2-selinux.diff.bz2"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/psmisc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~arm ~mips ia64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~arm ~mips ia64 ppc64"
 IUSE="nls selinux"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2

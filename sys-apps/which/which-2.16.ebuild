@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.16.ebuild,v 1.5 2003/12/14 02:58:31 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.16.ebuild,v 1.6 2003/12/17 04:12:26 brad_mssw Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.xs4all.nl/~carlo17/which/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc sparc ~alpha ~mips hppa ~arm ia64"
+KEYWORDS="x86 ~amd64 ~ppc sparc ~alpha ~mips hppa ~arm ia64 ppc64"
 
 RDEPEND="virtual/glibc
 	sys-apps/texinfo"

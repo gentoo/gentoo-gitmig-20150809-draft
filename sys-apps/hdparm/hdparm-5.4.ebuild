@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.4.ebuild,v 1.8 2003/09/30 19:54:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.4.ebuild,v 1.9 2003/12/17 03:56:23 brad_mssw Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utility to change hard drive performance parameters"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ibiblio.org/pub/Linux/system/hardware/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ppc sparc ~alpha hppa ia64 ~mips"
+KEYWORDS="x86 ~amd64 ppc sparc ~alpha hppa ia64 ~mips ppc64"
 
 DEPEND="virtual/glibc"
 

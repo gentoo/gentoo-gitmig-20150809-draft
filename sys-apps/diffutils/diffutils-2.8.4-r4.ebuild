@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.6 2003/12/10 04:00:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.7 2003/12/17 03:50:24 brad_mssw Exp $
 
 IUSE="nls build static"
 
@@ -18,7 +18,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/diffutils/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc alpha ~hppa ~mips ~arm ~amd64 ia64"
+KEYWORDS="x86 ~ppc ~sparc alpha ~hppa ~mips ~arm ~amd64 ia64 ppc64"
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.47-r10
