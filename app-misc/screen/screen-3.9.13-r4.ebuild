@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.13-r4.ebuild,v 1.7 2003/12/06 23:34:27 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.13-r4.ebuild,v 1.8 2003/12/08 08:03:22 spyderous Exp $
 
 inherit flag-o-matic
 
@@ -71,7 +71,7 @@ src_install () {
 	fperms 2755 /usr/bin/screen
 
 	dodir /var/run/screen
-	touch ${D}/var/run/screen/.keep
+	keepdir /var/run/screen
 
 	# can't use this cause fowners do not support multiple args.
 	# fowners root:utmp /{usr/bin,var/run}/screen
