@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/xpde-0.3.0.ebuild,v 1.1 2003/03/19 16:01:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/xpde-0.4.0.ebuild,v 1.1 2003/08/15 08:06:02 seemant Exp $
 
 IUSE=""
 S="${WORKDIR}/${P}"
 DESCRIPTION="A Desktop Environment modelled after the O/S from Redmond, WA"
 HOMEPAGE="http://www.xpde.com/"
-SRC_URI="http://www.xpde.com/dist2/${P}-20030315.tar.gz"
+SRC_URI="http://www.xpde.com/releases/${P}-20030730.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
