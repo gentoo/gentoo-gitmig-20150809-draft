@@ -7,7 +7,7 @@ HOMEPAGE="http://${PN}.sourceforge.net/"
 LICENSE="LGPL-2.1"
 DEPEND="dev-db/libdbi"
 IUSE="mysql postgres sqlite oci8"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT=0
 
 src_compile() {
