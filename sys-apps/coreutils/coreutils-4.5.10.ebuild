@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-4.5.10.ebuild,v 1.2 2003/03/20 11:22:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-4.5.10.ebuild,v 1.3 2003/03/20 17:08:27 method Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa arm"
 
 DEPEND="virtual/glibc
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
 
 
 src_unpack() {
@@ -25,7 +26,7 @@ src_unpack() {
 	cd ${S}
 
 	# Causes compile failure
-#	use selinux && epatch ${DISTDIR}/${P}-selinux.patch.bz2
+	use selinux && epatch ${DISTDIR}/${P}-selinux.patch.bz2
 
 	# patch to remove Stallman's su/wheel group rant (which doesn't apply,
 	# since Gentoo's su is not GNU/su, but that from shadow.
