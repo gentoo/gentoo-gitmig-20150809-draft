@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.287 2004/11/05 14:04:45 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.288 2004/11/05 16:38:28 lv Exp $
+
+  05 Nov 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.4.20041102.ebuild:
+  keywording as ~amd64, ~ppc64, ~ia64, and ~x86. added ~ppc keyword thanks to
+  testing by morfic. hopefully this will be the last new revision for a bit.
 
   05 Nov 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.4.20041021.ebuild,
   glibc-2.3.4.20041102.ebuild:
