@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/adjtimex-1.16-r1.ebuild,v 1.4 2004/12/05 16:10:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/adjtimex-1.16-r1.ebuild,v 1.5 2005/01/07 12:03:11 robbat2 Exp $
 
 inherit fixheadtails eutils
 
@@ -32,6 +32,7 @@ src_unpack() {
 	done
 	ht_fix_file debian/adjtimexconfig
 	sed -e '/CFLAGS = -Wall -t/,/endif/d' -i Makefile.in
+	epatch ${FILESDIR}/${PN}-1.16-pic.patch
 }
 
 src_install() {
