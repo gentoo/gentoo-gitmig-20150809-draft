@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.27.ebuild,v 1.4 2003/07/12 20:30:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.29.ebuild,v 1.1 2003/09/02 02:01:22 seemant Exp $
 
 IUSE="nls oggvorbis"
 
@@ -13,21 +13,12 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/id3lib-3.8.2
 	media-libs/flac
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
-	
+
 DEPEND=">=sys-apps/sed-4.0.5"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	#glibc fix
-	sed -i "s:extern int errno;:#include <errno.h>:" src/easytag.h
-	sed -i "s:extern int errno;:#include <errno.h>:" intl/dcigettext.c
-}
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 src_compile() {
 	local myconf
@@ -39,7 +30,7 @@ src_compile() {
 	emake || die
 }
 
-src_install() {							   
+src_install() {
 	einstall \
 		sysdir=${D}/usr/share/applets/Multimedia \
 		GNOME_SYSCONFDIR=${D}/etc \
