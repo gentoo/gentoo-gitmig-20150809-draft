@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article
+  PUBLIC "-//Norman Walsh//DTD Simplified DocBk XML V3.1.7.1//EN"
+  "/online/www/nwalsh/docbook/simple/3.1.7.1/sdocbook.dtd">
+
+<!--  "http://nwalsh.com/docbook/simple/3.1.7.1/sdocbook.dtd">-->
+
+<article>
+
+<artheader>
+    <title>Gentoo Linux Installation Guide</title>
+    <author>
+        <honorifice>Chief Architect</honorifice>
+        <surname>Robbins</surname>
+        <firstname>Daniel</firstname>
+    </author>
+    <pubnumber>1.0</pubnumber>
+    <pubdate>08 Feb 2001</pubdate>
+</artheader>
+
+<abstract>
+<para>
+This guide shows you how to install Gentoo Linux 1.0_rc4_pre2.  Right now,
+Gentoo Linux installation is geared towards intermediate to advanced developers
+and system administrators.  The process itself is not incredibly complex, but
+you must know how to set up partitions, manually create filesystems, and
+extract tarballs.  If you know how to do this, then you're ready to install the
+Gentoo Linux release candidate.
+</para>
+</abstract>
+
+<sect1 label="1">
+<title>Getting started</title>
+
+<sect2>
+<title>Install Methods</title>
+<para>
+Rather than provide a special system installer program, we've chosen to provide
+you with a real Linux shell prompt.  From this prompt, you can perform all the
+steps necessary to install Gentoo Linux, and get everything set up exactly as
+you need it.  People often ask whether we're going to provide a fancy install
+program in the future.  Yes, we'd like to do this, but there will always be a
+relatively simple "manual" install method for those who need it.  By having
+a manual install method, we not only cater to Linux experts, but also make it
+easy for people building a special-purpose product out of Gentoo Linux.  Because
+our install process is "out in the open", it's easy for others to customize,
+automate or beautify to their liking.
+</para>
+</sect2>
+
+<sect2>
+<title>Partition layout</title>
+<para>
+Here's a quick overview of the standard Gentoo Linux partition layout.  We're going to create at
+least three partitions: a swap partition, a root partition (to hold the bulk of Gentoo Linux), and a special boot
+partition.  The boot partition is designed to hold GRUB boot loader information
+as well as your Linux kernel(s).  The boot partition gives us a safe place to
+store everything related to booting Linux. During normal day-to-day Gentoo
+Linux use, your boot partition should remain <i>unmounted</i>.  This prevents
+your kernel from being made unavailable to GRUB (due to filesystem corruption)
+in the event of a system crash, preventing the chicken-and-egg problem where
+GRUB can't read your kernel (since your filesystem is corrupted) but you can't
+run fsck to uncorrupt your filesystem (since you can't boot!)
+</para>
+</sect2>
+
+<sect2>
+<title>Partition selection</title>
+<para>
+Now, on to filesystem types.  We recommend that you install Gentoo Linux on a
+ReiserFS filesystem because they're much faster and generally more reliable
+than their ext2 counterparts.  We've been using ReiserFS for a long time now
+and we believe it's not only "stable enough", but perfect for use in production
+environments.  However, if you want to use ext2 for your root and boot
+filesystems, we support this as well.  Support will likely be added for JFS in
+the near future, as well as XFS -- as soon as it's ready.  Here are our recommended
+filesystem sizes and types:
+</para>
+
+<table>
+
+<tgroup cols="3">
+    <thead>
+        <row><entry>Partition</entry><entry>Size</entry><entry>Type</entry></row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>boot partition, containing kernel(s) and boot information</entry>
+            <entry>~100 Megabytes</entry>
+            <entry>>ReiserFS recommended, ext2 ok</entry>
+        </row>
+        <row>
+            <entry>root partition, containing main filesystem (/usr, /home, etc)</entry>
+            <entry>&gt;=1.5 Gigabytes</entry>
+            <entry>ReiserFS recommended, ext2 ok</entry>
+        </row>
+        <row>
+            <entry>swap partition (no longer a 128 Megabyte limit)</entry>
+            <entry>&gt;=128 Megabytes</entry>
+            <entry>Linux swap</entry>
+        </row>
+    </tbody>
+</tgroup>
+
+</table>
+
+</sect2>
+
+<sect2>
+
+<title>Getting what you need</title>
+
+<para>
+In this install guide, I'm going to be stepping you through the Gentoo
+Linux CD-based installation process.  To perform the CD install, you'll
+need the Gentoo Linux 1.0_rc4_pre2 CD ISO image, available <ulink
+url="http://www.ibiblio.org/gentoo/gentoo-iso-images/">here</ulink> (~550Mb download.)
+It's also possible to install Gentoo Linux from an existing Linux
+installation.  If you'd like to do this instead, you'll need to
+download the 1.0_rc4_pre2 sys.tbz2 file, available from <ulink
+url="http://www.ibiblio.org/gentoo/gentoo-x86-distro/gentoo-1.0_rc4_pre2/packages">here</ulink> (~67Mb download.)
+If you choose to install Gentoo Linux from another Linux distribution, you'll
+need to have the tools to unpack a bzip'd tarball (nearly all distributions do.)  However,
+at this time, most distributions don't have the ability to create and mount ReiserFS
+partitions.  If you don't have this ability, you may need to ReiserFS-enable your
+current system if you'd like to use ReiserFS.  Another possibility is to use
+ext2 filesystems for Gentoo Linux, or alternatively just download and burn our
+CD image, which has all the tools you need for ReiserFS.
+</para>
+
+</sect2>
+
+</sect1>
+
+<sect1 label="2">
+
+<title>Installation</title>
+
+<sect2>
+
+<title>Booting the CD</title>
+
+<para>
+Once you've downloaded the ISO image and burned your own Gentoo Linux CD, go ahead
+and boot your system from the CD.  You'll be presented with a GRUB menu that looks
+like this:
+</para>
+
+<para>
+<graphic fileref="install-boot.gif"/>
+</para>
+
+<para>
+Go ahead and select the first option to continue the CD boot process.  Linux will boot and the Gentoo
+Linux CD detector will start up and detect and mount a minimal Gentoo Linux system included
+on the CD.  When the boot process is complete, you'll be presented with a login prompt.  To
+log in, go ahead and type "root" and hit Enter.  You won't be prompted for a password.
+</para>
+
+</sect2>
+
+<sect2>
+
+<title>Step 1: Create and format your partitions</title>
+
+<para>
+The first step is to create your boot, root (plus optional /home, /usr, /var)
+and swap partitions using fdisk (type "fdisk /dev/hd?" to start it up.)  Your
+boot and root partition should be tagged as a "Linux" partitions (type 83) even
+if you're using ReiserFS.  Your swap partition should be tagged as "Linux swap"
+(type 82).  Here's a screenshot of an example partition layout.  In this
+example, /dev/hda1 is the boot partition (256Mb), /dev/hda2 is the swap
+partition (256Mb), and /dev/hda3 is the root partition (1.5Mb).  Notice that
+/dev/hda1 has the bootable flag set (you can set this with the "a" option.)
+Once you've created your partitions, remember to write your changes with the
+"w" option.
+</para>
+
+<para>
+<graphic fileref="install-fdisk.gif"/>
+</para>
+
+</sect2>
+
+<sect2>
+
+<title>Step 2: Create and mount filesystems</title>
+
+<para>
+The second step is to create your filesystems.  Use the commands mke2fs, mkreiserfs and mkswap for this.  For example, to create
+a new ReiserFS filesystem on the partition /dev/hda1, type:
+</para>
+
+<screen># mkreiserfs /dev/hda1</screen>
+
+<para>For my example partition layout above, I typed in the following commands:</para>
+
+<screen>
+# mkreiserfs /dev/hda1
+# mkswap /dev/hda2
+# mkreiserfs /dev/hda3
+</screen>
+
+<para>
+Now that the filesystems have been created, it's time to get your boot and root (and optionally your /var, /usr and /home partitions) mounted.
+For my example partition layout, I typed in the following:</para>
+
+<screen>
+# mount /dev/hda3 /mnt/gentoo
+# mkdir /mnt/gentoo/boot
+# mount /dev/hda1 /mnt/gentoo/boot -o notail
+</screen>
+
+<para>
+<emphasis>(note: the "notail" option is required if you're installing GRUB as a secondary boot loader.  It also doesn't hurt to include it if you're not.)</emphasis>
+</para>
+<para>
+Notice that I had to create the /mnt/gentoo/boot filesystem before mounting /dev/hda1.  If you've created
+additional non-root filesystems (/var, /usr, /home, etc), you'll need to create the appropriate directories under /mnt/gentoo
+and then mount all your filesystems at the correct locations.  Once all your filesystems are mounted, we're ready to extract
+the sys.tbz2 tarball -- the file that contains the Gentoo Linux base system.
+</para>
+<para>
+<emphasis>Note for those installing from an existing Linux distro:</emphasis>
+If you're installing from an existing Linux distribution, make sure that all your filesystems are mounted at the /mnt/gentoo
+mountpoint just like I described above.  From this point on, you should be able to follow our install instructions word for
+word.
+</para>
+
+</sect2>
+
+
+<sect2>
+<title>Step 3: Extract the sys.tbz2 tarball</title>
+<para>
+Now, it's time to extract the sys.tbz2 tarball to /mnt/gentoo.
+You'll find the tarball at /mnt/distcd/packages/sys.tbz2.
+Extract it by typing:</para>
+
+<screen>
+# tar xjvf /mnt/distcd/packages/sys.tbz2 -C /mnt/gentoo
+</screen>
+
+<para>
+If you're installing from another Linux distribution and your version of tar doesn't have the -j (bzip2) option, the following
+pipeline should do the exact same thing:
+</para>
+
+<screen>
+# cat /path/to/sys.tbz2 | bzip2 -d | tar -xvf - -C /mnt/gentoo
+</screen>
+</body>
+</sect2>
+
+
+</sect1>
+<sect1 label="3">
+<title>How to really end</title>
+
+<sec2>
+<title>step 3</title>
+<para>
+This is how you really end things.
+</para>
+<para>Really....</para>
+
+</sect2>
+</sect1>
+
+</article>
+
