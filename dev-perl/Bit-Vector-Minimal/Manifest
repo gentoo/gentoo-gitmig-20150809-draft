@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a55cbe4e880355792370e3303891825 Bit-Vector-Minimal-1.0.ebuild 495
+MD5 a8c704ebd60d49b446092febf3448445 ChangeLog 523
+MD5 34c0dcb6c23796d905136c608e99570c Bit-Vector-Minimal-1.0.ebuild 494
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 d3165e5ae819d09b36e4626e7c59cd47 ChangeLog 414
 MD5 4a09c20eec97d43dbb19401682acd234 files/digest-Bit-Vector-Minimal-1.0 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZHphtG5z4I8BtQoRAsMuAJ4tWoGsT/GToMrA0CUjfECcYWNKIQCfa7x9
-TCf1/5/6X9bryH7TVAdjxIk=
-=Ga8X
+iD8DBQFB8V1itG5z4I8BtQoRAt5XAJ9kYev8cQ+OIL+FZr7WV+//sQryuQCbBPWA
+Wned0VAIfInb1SwD5vYwY4U=
+=EXub
 -----END PGP SIGNATURE-----

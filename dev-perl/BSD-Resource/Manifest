@@ -1,6 +1,16 @@
-MD5 fe6eb588d2262c2938e1400b67986e93 ChangeLog 1119
-MD5 c788968b5b211bd61dc9c38c52921c12 BSD-Resource-1.23.ebuild 564
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0a0f6e1776ef2c772bd38d1e1587b010 metadata.xml 309
-MD5 4221ef6bdc376534c8cb054d63847bd3 BSD-Resource-1.24.ebuild 582
-MD5 7c0143f2a1de9325985efd9311baa470 files/digest-BSD-Resource-1.24 68
+MD5 a7bcbaac7dae0b74bdaea5a7c7091fc2 BSD-Resource-1.23.ebuild 570
+MD5 c137550b463110ae217708b87f30d713 BSD-Resource-1.24.ebuild 579
+MD5 5cc401bcc0a587f00159ddeae13aeffd ChangeLog 1225
 MD5 0864dc089d8956d37dabee38530d7ad5 files/digest-BSD-Resource-1.23 68
+MD5 7c0143f2a1de9325985efd9311baa470 files/digest-BSD-Resource-1.24 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB8VvItG5z4I8BtQoRAhksAKCL18mvDYkoPCKjaf0LT50p0q4agACffDoZ
+WfQ6qcR99cYWQ65Xjx67pxg=
+=JHIp
+-----END PGP SIGNATURE-----
