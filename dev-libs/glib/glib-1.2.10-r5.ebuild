@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.25 2004/07/02 04:41:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.26 2004/07/14 14:27:37 agriffis Exp $
 
 inherit libtool gnuconfig flag-o-matic eutils
 
@@ -37,9 +37,7 @@ src_compile() {
 	# See bug 47950 for more information.
 	# -- avenj@gentoo.org  19 Apr 04
 
-	use amd64 && gnuconfig_update
-	use ppc64 && gnuconfig_update
-	use s390 && gnuconfig_update
+	gnuconfig_update
 
 
 	# For some reason, elibtoolize stopped doing its job in the last couple
