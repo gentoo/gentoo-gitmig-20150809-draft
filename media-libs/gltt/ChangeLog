@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/gltt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gltt/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gltt/ChangeLog,v 1.2 2002/04/26 07:36:33 seemant Exp $
+
+*gltt-2.5.2-r1 (26 Apr 2002)
+
+  26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gltt-2.5.2-r1.ebuild
+  files/digest-gltt-2.5.2-r1 :
+
+  Changed DESTDIR to point to ${D} instead of ${D}/usr so that include files
+  are installed in /usr/include instead of /usr/usr/include.  This closes bug
+  # 2114 by fraterm@io.com (Michael S Costello (MiscRat))
 
 *gltt-2.5.2 (1 Feb 2002)
 
