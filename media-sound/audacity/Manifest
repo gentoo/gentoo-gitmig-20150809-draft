@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 79f1d89e1f30415eaab6846fdbf5afd2 ChangeLog 5696
+MD5 7352e409dd7f2ba077a06b097187b88d ChangeLog 5845
+MD5 00b46afa4cfc8d8d4c540bfad893ce5c audacity-1.2.3.ebuild 2172
 MD5 a4b9a9c19045d3e0455e825217505db8 audacity-1.2.1.ebuild 2277
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 55397049da8bf71d20f78ab5733aff65 audacity-1.2.2.ebuild 2186
+MD5 bf35b35e84d0c0be6fa8e87acf085294 files/digest-audacity-1.2.3 71
 MD5 8332a9c72a43ed19ab1904a935a25e03 files/audacity.desktop 155
 MD5 8f1e5073472cee2da1987db62e7db3a9 files/digest-audacity-1.2.1 72
 MD5 a150eb16468631b07901c6ca01451679 files/digest-audacity-1.2.2 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBhMQyArHZZzCEUG0RAv5dAJ9IB30MMSjC18TB57NskO66X0QeiwCdEyxF
-3sqenaRQaZyMUmLjel4ebLU=
-=GHEW
+iD8DBQFBqx3jArHZZzCEUG0RAscjAJ0XKc9Qk7dCe/6V/V36ki+8guOu6gCfUEIs
+Q/yTG7Rkz8IMlZYLIwkx8Lg=
+=E1GZ
 -----END PGP SIGNATURE-----

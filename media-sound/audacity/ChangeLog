@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.27 2004/10/31 10:37:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.28 2004/11/29 13:02:12 eradicator Exp $
+
+*audacity-1.2.3 (29 Nov 2004)
+
+  29 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +audacity-1.2.3.ebuild:
+  Version bump closes bug #72290.
 
 *audacity-1.2.2 (31 Oct 2004)
 
