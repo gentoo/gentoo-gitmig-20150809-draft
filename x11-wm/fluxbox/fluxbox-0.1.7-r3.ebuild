@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.7-r3.ebuild,v 1.3 2002/03/21 02:48:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.7-r3.ebuild,v 1.4 2002/03/21 07:05:15 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window manager based on BlackBox"
@@ -10,7 +10,7 @@ HOMEPAGE="http://fluxbox.sf.net"
 
 DEPEND="virtual/x11
 	virtual/glibc
-	nls? ( >=sys-devel/gettext-0.10.38 ) "
+	nls? ( >=sys-devel/gettext-0.10.38 )"
 	
 RDEPEND="$DEPEND"
 
@@ -29,7 +29,7 @@ src_compile() {
 	use kde && myconf="${myconf} --enable-kde" \
 		&& export KDEDIR=/usr/kde/2 \
 		|| myconf="${myconf} --disable-kde"
-	use gnome && myconf="${myconf --enable-gnome" \
+	use gnome && myconf="${myconf} --enable-gnome" \
 		|| myconf="${myconf} --disable-gnome"
 	 
 	./configure \
