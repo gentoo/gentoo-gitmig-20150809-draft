@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles/libtifiles-0.6.1.ebuild,v 1.1 2004/12/28 21:20:15 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles/libtifiles-0.6.1.ebuild,v 1.2 2004/12/28 21:32:53 ribosome Exp $
 
 DESCRIPTION="Various TI file formats support for the TiLP calculator linking program"
 HOMEPAGE="http://tilp.info/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="nls"
 
-RDEPEND="dev-libs/libticables
+RDEPEND="sci-libs/libticables
 	virtual/libc
 	nls? sys-devel/gettext"
 
