@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexml/rexml-2.4.0.ebuild,v 1.2 2002/07/10 17:00:09 rphillips Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexml/rexml-2.4.0.ebuild,v 1.3 2002/10/04 05:28:43 vapier Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Ruby Electric XML"
