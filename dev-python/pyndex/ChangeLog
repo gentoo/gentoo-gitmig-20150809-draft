@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyndex
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyndex/ChangeLog,v 1.1 2004/02/17 15:21:16 lordvan Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyndex/ChangeLog,v 1.2 2004/04/16 20:44:27 randy Exp $
+
+  16 Apr 2004; Michael McCabe <randy@gentoo.org> pyndex-0.3.2a.ebuild:
+  adding s390 keywords
 
 *pyndex-0.3.2a (17 Feb 2004)
   
