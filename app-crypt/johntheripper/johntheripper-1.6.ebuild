@@ -1,15 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.9 2003/02/13 05:38:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.10 2003/02/13 05:41:51 seemant Exp $
 
 inherit eutils
 
 IUSE="mmx"
 
-MY_PN=${PN/theripper/}
-MY_P=${MY_PN}-${PV}
+MY_P=${P/theripper/}
 S=${WORKDIR}/${MY_P}
-DEBPATCH=${MY_PN}_${PV}-17.diff
+DEBPATCH=${MY_P/-/_}-17.diff
 DESCRIPTION="John the Ripper is a fast password cracker."
 HOMEPAGE="http://www.openwall.com/${PN0}/"
 SRC_URI="${HOMEPAGE}/${MY_P}.tar.gz
