@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.3.ebuild,v 1.2 2004/06/25 02:23:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.3.ebuild,v 1.3 2004/07/14 22:53:45 agriffis Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/checkstyle/${PN}-src-${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~sparc"
-IUSE="doc"
+IUSE="doc jikes"
 
 S=${WORKDIR}/${PN}-src-${PV}
 
