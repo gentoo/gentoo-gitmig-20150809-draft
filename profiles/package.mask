@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (20 Feb 2003)
+# Odd problems on select systems and is breaking some ebuilds.
+=sys-apps/portage-2.0.47-r2
+
 # <lu_zero@gentoo.org> (20 Feb 2003)
 # no more present
 =net-www/amaya-7.0
