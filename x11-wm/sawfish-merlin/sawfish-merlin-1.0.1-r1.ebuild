@@ -1,6 +1,6 @@
 # Copyright 2001 theLeaf sprl/bvba
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/sawfish-merlin-1.0.1.ebuild,v 1.2 2002/02/17 16:41:15 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/sawfish-merlin-1.0.1-r1.ebuild,v 1.1 2002/04/07 15:28:17 gbevin Exp $
 
 A=sawfish-${PV}.tar.gz
 S=${WORKDIR}/sawfish-${PV}
@@ -12,56 +12,53 @@ DEPEND=">=dev-libs/rep-gtk-0.15-r1
 	>=dev-libs/librep-0.14
 	>=media-libs/imlib-1.9.10-r1
 	esd? ( >=media-sound/esound-0.2.22 )
-	readline? ( >=sys-libs/readline-4.1 )
-	nls? ( sys-devel/gettext )
-	gnome? ( >=media-libs/gdk-pixbuf-0.11.0-r1
-			 >=gnome-base/gnome-core-1.4.0.4-r1 )"
+	gtk? ( >=media-libs/gdk-pixbuf-0.11.0-r1 )
+	gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1
+		>=media-libs/gdk-pixbuf-0.11.0-r1 )"
 
-RDEPEND=">=dev-libs/rep-gtk-0.15-r1
-	>=dev-libs/librep-0.14
+RDEPEND="${DEPEND}
 	>=x11-libs/gtk+-1.2.10-r4
-	>=media-libs/imlib-1.9.10-r1
-	>=x11-wm/sawfish-1.0.1
-	esd? ( >=media-sound/esound-0.2.22 )
-	gnome? ( >=media-libs/gdk-pixbuf-0.11.0-r1
-	>=gnome-base/gnome-core-1.4.0.4-r1 )"
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 
 	unpack ${A}
+
+	cd ${S}
+	patch -p0 <${FILESDIR}/capplet-crash.patch || die
+	#fix buggy Makefile with newer libtool
+	patch -p0 <${FILESDIR}/sawfish-${PV}-exec.patch || die
+
 	cd ${S}/po
 	cd ${S}/src
-	patch -p1 < ${FILESDIR}/x.c.patch-merlin-1.0.2
+	patch -p1 < ${FILESDIR}/x.c.patch-merlin-1.0.2 || die
+
+	#update libtool for "relink" bug fix
+	libtoolize --copy --force
+	aclocal
 }
 
 
 src_compile() {
 
   	local myconf
-	if [ "`use esd`" ]
-	then
-		myconf="--with-esd"
-	else
-		myconf="--without-esd"
-	fi
-	if [ "`use gnome`" ]
-	then
-		myconf="${myconf} --with-gnome-prefix=/usr --enable-gnome-widgets --enable-capplet"
-	else
-		myconf="${myconf} --disable-gnome-widgets --disable-capplet --without-gdk-pixbuf"
-	fi
-	if [ "`use readline`" ]
-	then
-		myconf="${myconf} --with-readline"
-	else
-		myconf="${myconf} --without-readline"
-	fi
-	if [ -z "`use nls`" ]
-	then
-		myconf="${myconf} --disable-linguas"
-	fi
+	
+	use esd	\
+		&& myconf="--with-esd"	\
+		|| myconf="--without-esd"
+	
+	use gnome	\
+		&& myconf="${myconf} --with-gnome-prefix=/usr --enable-gnome-widgets --enable-capplet"	\
+		|| myconf="${myconf} --disable-gnome-widgets --disable-capplet"
+	
+	use nls || myconf="${myconf} --disable-linguas"
 
-	./configure --host=${CHOST} \
+	use gtk || use gnome 	\
+		&& myconf="${myconf} --with-gdk-pixbuf"	\
+		|| myconf="${myconf} --without-gdk-pixbuf"
+
+	./configure	\
+		--host=${CHOST} \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--libexecdir=/usr/lib \
@@ -69,7 +66,6 @@ src_compile() {
 		${myconf} || die
 
 	emake || die
-	
 }
 
 src_install() {
