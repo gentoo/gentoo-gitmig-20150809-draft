@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.17.ebuild,v 1.3 2004/09/05 09:34:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.17.ebuild,v 1.4 2004/10/06 18:23:45 tester Exp $
 
 DESCRIPTION="An extremely fast and tiny web server."
 SRC_URI="ftp://laurel.datsi.fi.upm.es/pub/linux/cherokee/0.4/${PV}/${P}.tar.gz"
@@ -13,7 +13,7 @@ RDEPEND="virtual/libc
 DEPEND=">=sys-devel/automake-1.7.5
 	${RDEPEND}"
 
-KEYWORDS="~x86 ppc"
+KEYWORDS="x86 ppc"
 SLOT="0"
 IUSE=""
 
