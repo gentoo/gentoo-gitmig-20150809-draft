@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.1-r2.ebuild,v 1.6 2002/08/07 20:29:16 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.1-r2.ebuild,v 1.7 2002/08/07 21:45:19 nitro Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="BIND - Name Server"
@@ -99,6 +99,7 @@ pkg_config() {
 	chown named:named /chroot/dns/etc/bind/rndc.key
 	chgrp named	/chroot/dns/etc/bind/named.conf
 	cp -R /var/bind /chroot/dns/var/
+	chown -R named:named /chroot/dns/var/bind/{pri,sec}
 	mknod /chroot/dns/dev/zero c 1 5
 	mknod /chroot/dns/dev/random c 1 8
 	chmod 666 /chroot/dns/dev/{random,zero}
