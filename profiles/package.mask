@@ -96,3 +96,5 @@ app-editors/gtk-xemacs
 # chadh
 # openssh with no svc support
 =net-misc/openssh-2.9_p2-r2
+# samba with no svc support
+=net-fs/samba-2.2.1a-r1

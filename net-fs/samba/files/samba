@@ -27,6 +27,10 @@ stop() {
 	eend $result
 }
 
+depend() {
+	need net
+}
+
 doservice ${@}
 
 
