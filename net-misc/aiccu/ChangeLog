@@ -1,0 +1,9 @@
+# ChangeLog for sys-boot/palo
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.1 2005/03/27 17:34:09 gmsoft Exp $
+
+*aiccu-2005.01.31 (27 Mar 2005)
+
+  27 Mar 2005; Guy Martin <gmsoft@gentoo.org> +aiccu-2005.01.31.ebuild:
+  Initital commit of the aiccu ebuild (close #64409).
+
