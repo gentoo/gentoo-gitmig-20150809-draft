@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.1-r1.ebuild,v 1.5 2004/02/20 19:50:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.1-r1.ebuild,v 1.6 2004/04/25 22:29:02 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -32,7 +32,7 @@ src_compile() {
 	append-flags -fno-default-inline
 	append-flags -fno-inline
 
-	econf
+	econf || die "econf failed"
 	sed -i "s:\(^CXXOPTIMIZE = \).*:\1${CXXFLAGS}:" src/common.makefile
 
 	cd ${S}
