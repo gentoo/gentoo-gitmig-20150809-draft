@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-0.15.1.ebuild,v 1.3 2004/06/24 23:16:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-0.17.2.ebuild,v 1.1 2004/12/18 17:03:51 foser Exp $
 
 inherit gnome2
 
@@ -9,11 +9,11 @@ HOMEPAGE="http://loudmouth.imendio.org/"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 
 IUSE="doc ssl"
 
-RDEPEND=">=dev-libs/glib-2
+RDEPEND=">=dev-libs/glib-2.4
 	ssl? ( >=net-libs/gnutls-1.0.0 )"
 
 DEPEND="${RDEPEND}
@@ -22,6 +22,5 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
 
-use ssl \
-	&& G2CONF="${G2CONF} --with-ssl" \
-	|| G2CONF="${G2CONF} --without-ssl"
+G2CONF="${G2CONF} `use_with ssl` --disable-mono"
+# FIXME :  We probably want to add a local mono use flag. However, I have no chance to -test- the monobindings, so I'm just disabling it right now.
