@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegpixi/jpegpixi-0.16.0.ebuild,v 1.4 2004/10/29 11:11:16 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegpixi/jpegpixi-1.0.3.ebuild,v 1.1 2004/10/29 11:11:16 eldad Exp $
 
 DESCRIPTION="almost lossless JPEG pixel interpolator, for correcting digital camera defects."
 HOMEPAGE="http://www.zero-based.org/software/jpegpixi/"
@@ -24,5 +24,5 @@ src_install () {
 
 	doman man/jpegpixi.1 man/jpeghotp.1
 
-	dodoc AUTHORS NEWS README README.jpeglib
+	dodoc AUTHORS NEWS README README.jpeglib ChangeLog
 }

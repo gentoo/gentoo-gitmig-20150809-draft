@@ -1,4 +1,16 @@
-MD5 4bb85283198a067942e7b2e9e9ddd392 ChangeLog 507
-MD5 532f730aae1c33f6821dccb09f8ffdda jpegpixi-0.16.0.ebuild 740
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bc5ca966b3bd952ae0b76530c63d8103 jpegpixi-1.0.3.ebuild 757
+MD5 a91e7885e818f6e46727d52c48aaa2c4 jpegpixi-0.16.0.ebuild 748
+MD5 fa149b00e324978810dd5c7014d619bc ChangeLog 677
 MD5 ce71377210eadee7d86189e4fa901428 metadata.xml 364
+MD5 daf74296062587c8afe589e7383072e8 files/digest-jpegpixi-1.0.3 66
 MD5 b95b4e5862cb8682c353497eff1f1190 files/digest-jpegpixi-0.16.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBgiT/T+MN7JbqCpMRAqqiAJsE7aGVTaauG1FICK0wrAZ3ysU/oACcDz0u
+q2Sc2rz9REKnp1pLSbn/yPk=
+=9dPs
+-----END PGP SIGNATURE-----
