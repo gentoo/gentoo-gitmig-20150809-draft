@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XQL/XML-XQL-0.67.ebuild,v 1.4 2003/06/21 21:36:44 drobbins Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XQL/XML-XQL-0.67.ebuild,v 1.5 2003/08/07 02:20:23 vapier Exp $
 
 inherit perl-module
 
@@ -15,8 +15,7 @@ LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="x86 amd64 sparc  ~ppc ~alpha"
 
-DEPEND="${DEPEND}
-	>=dev-perl/libxml-perl-0.07-r1
+DEPEND=">=dev-perl/libxml-perl-0.07-r1
 	>=dev-perl/XML-DOM-1.39-r1
 	>=dev-perl/Parse-Yapp-1.05
 	>=dev-perl/DateManip-5.40-r1"
