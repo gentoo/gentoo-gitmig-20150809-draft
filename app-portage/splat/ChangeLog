@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/splat
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/ChangeLog,v 1.10 2004/07/12 23:30:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/ChangeLog,v 1.11 2004/07/17 16:11:48 tgall Exp $
+
+  17 Jul 2004; Tom Gall <tgall@gentoo.org> splat-0.08.ebuild:
+  stable on ppc64, bug #55518
 
   12 Jul 2004; Jason Wever <weeve@gentoo.org> splat-0.08.ebuild:
   Added the super spiffy ~sparc keyword.
