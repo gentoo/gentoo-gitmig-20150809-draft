@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.8 2003/09/24 21:43:47 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.9 2003/10/19 15:13:57 lanius Exp $
 
 DESCRIPTION="ICQ Client with v8 support"
 HOMEPAGE="http://www.licq.org/"
@@ -142,4 +142,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 	docinto plugins/rms
 	dodoc README licq_rms.conf
+
+	# fixes bug #22136
+	rm -fR ${D}/var
 }

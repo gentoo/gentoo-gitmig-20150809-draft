@@ -1,6 +1,10 @@
 # ChangeLog for net-im/licq
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.32 2003/09/24 21:43:47 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.33 2003/10/19 15:13:57 lanius Exp $
+
+  19 Oct 2003; Heinrich Wendel <lanius@gentoo.org> licq-1.2.6-r1.ebuild,
+  licq-1.2.6.ebuild, licq-1.2.7.ebuild:
+  cleanups, bug #22136
 
   24 Sep 2003; Chuck Short <zul@gentoo.org> licq-1.2.7.ebuild:
   Unmasked for sparc.
