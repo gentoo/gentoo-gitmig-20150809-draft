@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/gmt
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/ChangeLog,v 1.3 2003/07/09 18:21:34 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/ChangeLog,v 1.4 2004/03/24 07:05:11 phosphan Exp $
+
+*gmt-3.4.4 (24 Mar 2004)
+
+  24 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> gmt-3.4.4.ebuild:
+  Version bump because of bug #38477.
 
 *gmt-3.4.3 (08 Jul 2003)
 
