@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/vdkbuilder
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.13 2004/06/25 02:49:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.14 2004/10/13 21:00:47 chriswhite Exp $
+
+  13 Oct 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
+  Taking over as maintainer of this package.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> vdkbuilder-2.0.3.ebuild:
   Add inherit eutils
