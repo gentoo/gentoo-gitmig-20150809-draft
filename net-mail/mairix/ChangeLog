@@ -1,0 +1,9 @@
+# ChangeLog for net-mail/mairix
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.1 2003/01/20 15:32:29 raker Exp $
+
+*mairix-0.10 (20 Jan 2003)
+
+  20 Jan 2003; Nick Hadaway <raker@gentoo.org> mairix-0.10.ebuild,
+  files/digest-mairix-0.10 :
+  New ebuild as suggested Bardur Arantsson on bug #10206
