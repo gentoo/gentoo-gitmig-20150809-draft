@@ -26,6 +26,10 @@
 =dev-lang/ruby-1.6.8-r2
 =dev-lang/ruby-1.8.0-r1
 
+# <tseng@gentoo.org> (11 Oct 2003)
+# Mask pending a solution to bsetroot
+=x11-misc/commonbox-utils-0.5
+
 # <lanius@gentoo.org> (10 Oct 2003)
 # motif cleanups
 =openmotif-2.2.2-r3
