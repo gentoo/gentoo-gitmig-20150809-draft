@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/opendchub-0.7.14.ebuild,v 1.6 2004/07/01 09:38:20 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/opendchub-0.7.14-r1.ebuild,v 1.1 2004/08/23 21:09:54 squinky86 Exp $
 
 inherit eutils
 
@@ -20,6 +20,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/opendchub-gentoo.patch
+	epatch ${FILESDIR}/${PV}-telnet.patch
+}
+
+src_compile() {
+	econf `use_enable perl` || die "configure failed"
+	emake || die "make failed"
 }
 
 src_install() {
