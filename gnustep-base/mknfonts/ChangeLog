@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/mknfonts
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.4 2004/10/31 11:59:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.5 2004/11/02 16:37:43 blubb Exp $
+
+  02 Nov 2004; Simon Stelling <blubb@gentoo.org> mknfonts-0.5.ebuild:
+  added ~amd64
 
   31 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> mknfonts-0.5.ebuild:
   ~alpha keyword.
