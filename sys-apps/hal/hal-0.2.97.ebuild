@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.2.97.ebuild,v 1.2 2004/08/17 21:05:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.2.97.ebuild,v 1.3 2004/08/17 21:06:30 foser Exp $
 
 inherit eutils debug python
 
@@ -63,7 +63,7 @@ pkg_postinst() {
 	ewarn "that will create mount rules for non-existing devices in"
 	ewarn "fstab if needed, mount points will be created in /media."
 	ewarn "This functionality alters your fstab runtime on the filesystem"
-	ewarn "and might affects certain applications."
+	ewarn "and might have unforseen side-effects."
 	echo
 	einfo "The HAL daemon needs to be running for certain applications to"
 	einfo "work. Suggested is to add the init script to your start-up"
