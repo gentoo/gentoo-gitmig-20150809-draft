@@ -1,8 +1,6 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.1 2005/03/23 15:30:13 seemant Exp $
-
-*mozilla-1.7.6-r1 (23 Mar 2005)
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.2 2005/03/23 16:48:04 agriffis Exp $
 
   23 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
   +files/svg-cairo-0.3.0-fix.patch,
@@ -15,6 +13,12 @@
   +mozilla-1.7.5.ebuild, +mozilla-1.7.5-r1.ebuild, +mozilla-1.7.6.ebuild,
   +mozilla-1.7.6-r1.ebuild:
   mozilla now in www-client
+
+*mozilla-1.7.6-r1 (23 Mar 2005)
+
+  23 Mar 2005; Aron Griffis <agriffis@gentoo.org> +mozilla-1.7.6-r1.ebuild:
+  Use a stub script instead of symlink to mozilla-launcher.  This in
+  combination with mozilla-launcher-1.28 should fix #78890
 
 *mozilla-1.7.6 (23 Mar 2005)
 
