@@ -24,6 +24,7 @@ empress
 empress-bcs
 esoob
 filepro
+firebird
 frontbase
 hyperwave
 informix
