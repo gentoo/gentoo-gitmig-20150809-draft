@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/partysip-2.1.1.ebuild,v 1.7 2004/09/21 20:28:30 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/partysip-2.1.1.ebuild,v 1.8 2004/10/23 02:18:38 weeve Exp $
 
 #IUSE="gdbm berkdb debug"
 IUSE="debug"
@@ -16,7 +16,7 @@ RESTRICT="nostrip"
 
 SLOT="0"
 LICENSE="LGPL-2" # not 100% about -2, but core is LGPL
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND="virtual/libc
 	>=net-libs/libosip-2.0.0"

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/partysip
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/ChangeLog,v 1.7 2004/09/21 20:28:30 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/ChangeLog,v 1.8 2004/10/23 02:18:38 weeve Exp $
+
+  22 Oct 2004; Jason Wever <weeve@gentoo.org> partysip-2.1.1.ebuild:
+  Added ~sparc keyword.
 
   21 Sep 2004; <stkn@gentoo.org> partysip-2.1.1.ebuild:
   changed DEPENDS to old value (>=net-libs/libosip-2.0.0) after closing #64526

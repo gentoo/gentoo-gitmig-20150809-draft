@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sipsak
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sipsak/ChangeLog,v 1.4 2004/08/08 00:25:40 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sipsak/ChangeLog,v 1.5 2004/10/23 02:19:12 weeve Exp $
+
+  22 Oct 2004; Jason Wever <weeve@gentoo.org> sipsak-0.8.6.ebuild:
+  Added ~sparc keyword.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> sipsak-0.8.6.ebuild:
   Typo in DESCRIPTION: comand -> command. Bug 59717.
