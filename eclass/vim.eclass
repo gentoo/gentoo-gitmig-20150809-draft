@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.67 2004/09/06 02:34:41 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.68 2004/09/08 22:59:55 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -9,6 +9,14 @@
 # 	Ciaran McCreesh <ciaranm@gentoo.org>
 
 inherit eutils vim-doc flag-o-matic
+
+# This isn't a conditional inherit from portage's perspective, since $PN is
+# constant at cache creation time. It's therefore legal and doesn't break
+# anything. I even checked with carpaski first :) (08 Sep 2004 ciaranm)
+if [[ "${PN}" != "vim-core" ]] ; then
+	inherit debug
+fi
+
 ECLASS=vim
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_unpack
@@ -201,7 +209,10 @@ src_compile() {
 			--disable-pythoninterp \
 			--disable-rubyinterp \
 			--disable-gpm"
+
 	else
+		use debug && append-flags "-DDEBUG"
+
 		myconf="--with-features=huge \
 			--enable-multibyte"
 		myconf="${myconf} `use_enable cscope`"
@@ -215,7 +226,7 @@ src_compile() {
 		#myconf="${myconf} `use_enable tcl tclinterp`"
 
 		# --with-features=huge forces on cscope even if we --disable it. We need
-			# to sed this out to avoid screwiness. (1 Sep 2004 ciaranm)
+		# to sed this out to avoid screwiness. (1 Sep 2004 ciaranm)
 		if ! use cscope ; then
 			sed -i -e '/# define FEAT_CSCOPE/d' src/feature.h || \
 				die "couldn't disable cscope"
