@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Festival-Client-Async
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Festival-Client-Async/ChangeLog,v 1.2 2003/07/31 04:52:12 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Festival-Client-Async/ChangeLog,v 1.3 2004/02/27 13:33:21 mcummings Exp $
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org>
+  Festival-Client-Async-0.0303.ebuild:
+  masked for 217 days; unmasking
 
 *Festival-Client-Async-0.0303 (25 Jul 2003)
 

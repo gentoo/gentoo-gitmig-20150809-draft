@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-SmbHash
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SmbHash/ChangeLog,v 1.1 2003/08/14 02:41:09 robbat2 Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SmbHash/ChangeLog,v 1.2 2004/02/27 13:31:40 mcummings Exp $
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org>
+  Crypt-SmbHash-0.02.ebuild:
+  Masked for 198 days; unmasking
 
 *Crypt-SmbHash-0.02 (13 Aug 2003)
 

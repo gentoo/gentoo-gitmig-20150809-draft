@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Test-Harness
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/ChangeLog,v 1.20 2004/02/24 10:39:03 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/ChangeLog,v 1.21 2004/02/27 13:45:28 mcummings Exp $
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org>
+  Test-Harness-2.30.ebuild:
+  Unmasking for x86 after 196 days
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org>
+  Test-Harness-2.29-r1.ebuild, Test-Harness-2.29.ebuild:
+  Removing old versions not in use
 
   24 Feb 2004; Joshua Kinard <kumba@gentoo.org> Test-Harness-2.30.ebuild:
   Added ~mips to satisfy repoman deps.

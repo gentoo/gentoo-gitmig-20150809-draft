@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBI
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.20 2004/02/04 10:31:57 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.21 2004/02/27 13:32:38 mcummings Exp $
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org> DBI-1.38.ebuild:
+  Masked for 185 days, unmasking for x86
 
   04 Feb 2004; Joshua Kinard <kumba@gentoo.org> DBI-1.38.ebuild:
   Added ~mips to KEYWORDS

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SSLeay
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.18 2004/01/20 18:00:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.19 2004/02/27 13:41:51 mcummings Exp $
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org> Net-SSLeay-1.23.ebuild:
+  Unmasking after 189 days for x86
 
   20 Jan 2004; <gustavoz@gentoo.org> Net-SSLeay-1.22.ebuild:
   stable on sparc
