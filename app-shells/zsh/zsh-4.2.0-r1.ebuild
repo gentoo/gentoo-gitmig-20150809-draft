@@ -1,31 +1,28 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0-r1.ebuild,v 1.1 2004/05/03 18:46:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0-r1.ebuild,v 1.2 2004/05/31 17:20:43 vapier Exp $
 
 inherit eutils
 
-IUSE="maildir ncurses static doc pcre cap"
-
-DESCRIPTION="UNIX Shell similar to the Korn shell"
-HOMEPAGE="http://www.zsh.org/"
-
 MYDATE="20040204"
 MY_P="${P/_pre/-pre-}"
-
+DESCRIPTION="UNIX Shell similar to the Korn shell"
+HOMEPAGE="http://www.zsh.org/"
 SRC_URI="ftp://ftp.zsh.org/pub/${MY_P}.tar.bz2
 	cjk? ( http://www.ono.org/software/dist/${P}-euc-0.2.patch.gz )
 	doc? ( ftp://ftp.zsh.org/pub/${MY_P}-doc.tar.bz2 )"
 
-SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~hppa"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha arm ~hppa ~amd64"
+IUSE="maildir ncurses static doc pcre cap"
 
-DEPEND="sys-apps/groff
-	>=sys-apps/sed-4
-	${RDEPEND}"
 RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
 	cap? ( sys-libs/libcap )
 	ncurses? ( >=sys-libs/ncurses-5.1 )"
+DEPEND="sys-apps/groff
+	>=sys-apps/sed-4
+	${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -66,7 +63,7 @@ src_compile() {
 		`use_enable cap` \
 		${myconf} || die "configure failed"
 
-	if [ -n "`use static`" ] ; then
+	if use static ; then
 		# compile all modules statically, see Bug #27392
 		sed -i -e "s/link=no/link=static/g" \
 			-e "s/load=no/load=yes/g" \
@@ -102,7 +99,7 @@ src_install() {
 
 	dodoc ChangeLog* META-FAQ README INSTALL LICENCE config.modules
 
-	if [ "`use doc`" ] ; then
+	if use doc ; then
 		dohtml Doc/*
 		insinto /usr/share/doc/${PF}
 		doins Doc/zsh{.dvi,_us.ps,_a4.ps}
@@ -122,7 +119,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-
 	einfo
 	einfo "If you want to enable Portage completion and Gentoo prompt,"
 	einfo "add"
