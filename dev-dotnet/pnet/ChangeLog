@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/pnet
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.3 2003/07/26 07:40:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.4 2003/08/26 17:03:44 scandium Exp $
+
+  26 Aug 2003; Rainer Groesslinger <scandium@gentoo.org> pnet-0.5.10.ebuild,
+  pnet-0.5.8.ebuild:
+  Add a block for dev-dotnet/mono because both are using
+  /usr/bin/ilasm for converting IL assembly source files into an IL binary
 
 *pnet-0.5.10 (26 Jul 2003)
 

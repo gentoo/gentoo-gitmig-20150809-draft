@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.24-r1.ebuild,v 1.1 2003/07/25 00:12:47 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.24-r1.ebuild,v 1.2 2003/08/26 17:03:44 scandium Exp $
 
 inherit eutils mono
 
@@ -20,7 +20,8 @@ KEYWORDS="x86 -ppc"
 
 DEPEND="virtual/glibc
 	>=dev-libs/glib-2.0
-	>=dev-libs/boehm-gc-6.1"
+	>=dev-libs/boehm-gc-6.1
+	!dev-dotnet/pnet"
 
 RDEPEND="${DEPEND}
 	dev-util/pkgconfig"

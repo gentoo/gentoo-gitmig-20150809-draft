@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.3 2003/08/26 13:02:19 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.4 2003/08/26 17:03:44 scandium Exp $
+
+  26 Aug 2003; Rainer Groesslinger <scandium@gentoo.org> mono-0.23-r1.ebuild,
+  mono-0.24-r1.ebuild, mono-0.25-r1.ebuild, mono-0.25.ebuild,
+  mono-0.26.ebuild:
+  Add a block for dev-dotnet/pnet because both are using
+  /usr/bin/ilasm for converting IL assembly source files into an IL binary
 
 *mono-0.26 (26 Aug 2003)
 

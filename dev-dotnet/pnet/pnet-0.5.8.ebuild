@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.5.8.ebuild,v 1.2 2003/07/25 11:55:32 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.5.8.ebuild,v 1.3 2003/08/26 17:03:44 scandium Exp $
 
 DESCRIPTION="Portable .NET runtime, compiler, tools"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -12,7 +12,8 @@ KEYWORDS="x86"
 
 IUSE=""
 
-DEPEND=">=dev-util/treecc-0.2.4"
+DEPEND=">=dev-util/treecc-0.2.4
+	!dev-dotnet/mono"
 
 src_compile() {
 	econf || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.5.10.ebuild,v 1.4 2003/08/13 15:57:35 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.5.10.ebuild,v 1.5 2003/08/26 17:03:44 scandium Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="x86"
 
 IUSE=""
 
-DEPEND=">=dev-util/treecc-0.2.6"
+DEPEND=">=dev-util/treecc-0.2.6
+	!dev-dotnet/mono"
 
 src_unpack() {
 # Fix a pnetc compile problem
