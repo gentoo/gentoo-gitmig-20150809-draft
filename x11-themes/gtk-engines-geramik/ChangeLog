@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-geramik
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/ChangeLog,v 1.16 2003/08/31 13:00:31 obz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/ChangeLog,v 1.17 2004/02/06 16:46:47 agriffis Exp $
+
+  06 Feb 2004; Aron Griffis <agriffis@gentoo.org>
+  gtk-engines-geramik-0.26.ebuild:
+  stable on alpha
 
   31 Aug 2003; Mike Gardiner <obz@gentoo.org> gtk-engines-geramik-0.25.ebuild:
   Marked stable on x86

@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtpixmap
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtpixmap/ChangeLog,v 1.5 2004/02/02 03:19:30 avenj Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtpixmap/ChangeLog,v 1.6 2004/02/06 16:45:23 agriffis Exp $
+
+  06 Feb 2004; Aron Griffis <agriffis@gentoo.org> qtpixmap-0.27.ebuild:
+  stable on alpha
 
   01 Feb 2004; Jon Portnoy <avenj@gentoo.org> qtpixmap-0.27.ebuild :
   AMD64 keywords.
