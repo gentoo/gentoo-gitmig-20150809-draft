@@ -85,11 +85,11 @@ then
 	
 elif [ "X${ENGINE}" = "Xcrux" ]
 then
-	SRC_URI="mirror://gnome/sources/${MY_PN}/${MY_P}.tar.bz2"
+	SRC_URI="mirror://gnome/2.0.1/sources/${MY_PN}/${MY_P}.tar.bz2"
 	
 elif [ "X${MY_PN}" = "Xgtk-engines" ] && [ "$SLOT" -eq "2" ]
 then
-	SRC_URI="mirror://gnome/sources/${MY_PN}/${MY_P}.tar.bz2"
+	SRC_URI="mirror://gnome/2.0.1/sources/${MY_PN}/${MY_P}.tar.bz2"
 
 else
 	SRC_PATH=`echo ${MY_PN} | awk '{print substr($0,1,1);}'`
