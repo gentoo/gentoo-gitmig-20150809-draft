@@ -1,35 +1,36 @@
 # ChangeLog for sys-apps/jfsutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/jfsutils/ChangeLog,v 1.8 2002/11/21 01:38:25 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/jfsutils/ChangeLog,v 1.9 2002/12/10 17:11:30 drobbins Exp $
+
+*jfsutils-1.1.0-r1 (10 Dec 2002)
+
+  10 Dec 2002; Daniel Robbins <drobbins@gentoo.org> jfsutils-1.1.0-r1.ebuild:
+  ensured that binaries get installed to /sbin; created mkfs.jfs and fsck.jfs
+  symlinks. Unmasking for x86 since we are using a 7-8 month old version of
+  jfsutils.
 
 *jfsutils-1.1.0 (20 Nov 2002)
 
   20 Nov 2002; Brad Cowan <bcowan@gentoo.org> jfsutils-1.1.0.ebuild,
-  files/digest-jfsutils-1.1.0 :
-  
-  Version bump.
+  files/digest-jfsutils-1.1.0 : Version bump.
 
 *jfsutils-1.0.24 (18 Oct 2002)
 
   18 Oct 2002; Brad Cowan <bcowan@gentoo.org> jfsutils-1.0.24.ebuild,
-  files/digest-jfsutils-1.0.24 :
-  
-  Version bump.
+  files/digest-jfsutils-1.0.24 : Version bump.
 
 *jfsutils-1.0.22 (21 Sep 2002)
 
   16 Sep 2002; Brad Cowan <bradlyatc@cowancomputers.com> ChangeLog:
-  jfsutils-1.0.22.ebuild, files/digest-jfsutils-1.0.22 :
-  
-  version bump, updated ebuild
+  jfsutils-1.0.22.ebuild, files/digest-jfsutils-1.0.22 : version bump, updated
+  ebuild
 
 *jfsutils-1.0.21 (24 Aug 2002)
 
   24 Aug 2002; Brad Cowan <bradlyatc@cowancomputers.com> ChangeLog:
-  jfsutils-1.0.21.ebuild, files/digest-jfsutils-1.0.21 :
-  
-  version bump, updated ebuild (resolves bug #6984 -- commited by
-  Matthew Kennedy <mkennedy@gentoo.org>)
+  jfsutils-1.0.21.ebuild, files/digest-jfsutils-1.0.21 : version bump, updated
+  ebuild (resolves bug #6984 -- commited by Matthew Kennedy
+  <mkennedy@gentoo.org>)
 
 *jfsutils-1.0.17 (25 Apr 2002)
 
