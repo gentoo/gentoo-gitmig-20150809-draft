@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/tengwar-fonts/tengwar-fonts-1.9d.ebuild,v 1.4 2004/11/04 11:50:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/tengwar-fonts/tengwar-fonts-1.9d.ebuild,v 1.5 2004/12/14 16:54:01 corsair Exp $
 
 inherit font
 
@@ -16,7 +16,7 @@ SRC_URI="
 
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="x86 ppc ~ppc64 ~alpha"
+KEYWORDS="x86 ppc ppc64 ~alpha"
 
 DEPEND="app-arch/unzip"
 RDEPEND=""

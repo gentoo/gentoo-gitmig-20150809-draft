@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/tengwar-fonts
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/tengwar-fonts/ChangeLog,v 1.4 2004/11/04 11:50:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/tengwar-fonts/ChangeLog,v 1.5 2004/12/14 16:54:01 corsair Exp $
+
+  14 Dec 2004; Markus Rothe <corsair@gentoo.org> tengwar-fonts-1.9d.ebuild:
+  Stable on ppc64
 
   04 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> tengwar-fonts-1.9d.ebuild:
   Corrected typo in DESCRIPTION. Thanks to steven_ruppert@mho.com; bug #68061.
