@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.31 2004/03/15 15:22:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.32 2004/06/02 05:21:20 lv Exp $
+
+  02 Jun 2004; Travis Tilley <lv@gentoo.org> dhcpcd-1.3.22_p4-r5.ebuild:
+  stable on amd64
 
 *dhcpcd-1.3.22_p4-r5 (08 Mar 2004)
 *dhcpcd-1.3.22_p4-r4 (08 Mar 2004)
