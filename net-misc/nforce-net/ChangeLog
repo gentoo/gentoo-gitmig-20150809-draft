@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nforce-net
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/ChangeLog,v 1.3 2003/02/19 15:08:54 alain Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/ChangeLog,v 1.4 2003/05/04 12:37:15 aliz Exp $
+
+*nforce-net-1.0.256 (04 May 2003)
+
+  04 May 2003; Daniel Ahlberg <aliz@gentoo.org> nforce-net-1.0.256.ebuild :
+  Version bump.
 
 *nforce-net-1.0.0248-r2 (19 Feb 2003)
 
