@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.93.20030118.ebuild,v 1.2 2003/01/18 11:31:49 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.93.20030118.ebuild,v 1.3 2003/01/18 11:36:17 woodchip Exp $
 
 inherit mount-boot
 
@@ -21,7 +21,8 @@ src_unpack() {
 	cd ${S} || die
 
 	# grub-0.93.20030118-gentoo.diff; <woodchip@gentoo.org> (18 Jan 2003)
-	# -vga16 patches; from Debian's grub-0.93+cvs20030102-1.diff
+	# -fixes from grub CVS pulled on 20030118
+	# -vga16 patches; mined from Debian's grub-0.93+cvs20030102-1.diff
 	# -special-raid-devices.patch
 	# -addsyncs.patch
 	# -splashimagehelp.patch
