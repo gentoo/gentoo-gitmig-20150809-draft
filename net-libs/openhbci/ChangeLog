@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/openhbci
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci/ChangeLog,v 1.7 2004/01/09 22:56:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci/ChangeLog,v 1.8 2004/01/14 20:14:32 hanno Exp $
+
+*openhbci-0.9.14 (14 Jan 2004)
+
+  14 Jan 2004; Hanno Boeck <hanno@gentoo.org> openhbci-0.9.14.ebuild:
+  Version bump.
 
   09 Jan 2004; Aron Griffis <agriffis@gentoo.org> openhbci-0.9.13.ebuild:
   stable on alpha
