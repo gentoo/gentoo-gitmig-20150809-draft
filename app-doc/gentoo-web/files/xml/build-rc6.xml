@@ -1,38 +1,38 @@
 <?xml version='1.0'?>
 <guide link="/doc/build.html">
-<title>Gentoo Linux 1.0_rc5 Build CD Installation</title>
+<title>Gentoo Linux 1.0_rc6 "from source" (build) CD Installation</title>
 <author title="Chief Architect"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
-<author title="Editor"><mail link="thomasfl@gentoo.org">Thomas Flavel</mail></author>
 <author title="Author"><mail link="jerry@gentoo.org">Jerry Alexandratos</mail></author>
 <author title="Ghost"><mail link="g2boojum@gentoo.org">Grant Goodyear</mail></author>
 <abstract>
-These instructions step you through the process of installing Gentoo Linux 1.0_rc5 using
+These instructions step you through the process of installing Gentoo Linux 1.0_rc6 using
 our minimal build CD.  Using this method, the complete system is built from scratch using
 sources that are automatically downloaded from the Internet.  This build CD install method
 will work with any x86-compatible system.
 </abstract>
 
-<version>1.0</version>
-<date>2 July 2001</date>
+<version>1.1</version>
+<date>31 August 2001</date>
 
 <chapter>
 <title>About the Install</title>
 <section>
 <body>
 
-<p>The Gentoo Linux 1.0_rc6 ISO release is based upon a new <c>isolinux</c>-based
+<p>The Gentoo Linux 1.0_rc6 ISO release is based upon a new <c>isolinux/zdisk</c>-based
 boot process.  This new boot CD will boot from nearly any modern IDE CD-ROM drive,
-as well as almost any modern SCSI CD-ROM.  We've included support for the following
-SCSI controllers: Adaptec (all), Buslogic (all), Initio, ICP Vortex, IBM ServeRAID,
-NCR, Symbios, Tekram and more.  Pretty much any modern SCSI controller should be
-supported.</p>
+as well as almost any modern SCSI CD-ROM.  We've included support for IDE built-in
+tot the kernel, and all SCSI devices are available as modules and can be loaded with
+<c>insmod</c>.  However, the CD should boot on nearly all modern CD-ROM drives, IDE
+or SCSI.  </p>
 
 <p>These instructions step you through the process of installing Gentoo Linux 1.0_rc6 using
 our minimal build CD.  Using this method, the complete system is built from scratch using
 sources that are automatically downloaded from the Internet.  This build CD install method
 will work with any x86-compatible system; to begin the install process, first grab the 15Mb
-build CD ISO image from
-<uri>http://www.ibiblio.org/gentoo/releases/not_available_yet</uri>. 
+build CD ISO image (<path>build-ix86-1.0_rc6-r8.iso</path> is the latest at the time this
+article was written) from
+<uri>http://www.ibiblio.org/gentoo/snapshots/build/ix86-linux-gnu/</uri>. 
 </p>
 
 </body>
@@ -42,8 +42,8 @@ build CD ISO image from
 <title>Download and burn</title>
 <section>
 <body>
-<p>First, download and burn the ISO image (link above) and boot your system with the CD in the drive.  At
-the <c>login:</c> prompt, type <c>root</c> and hit <e>Enter</e>.</p>
+<p>First, download and burn the ISO image (link above) and boot your system with the CD in the drive.
+You should be able to get to a root <c>#</c> prompt with no problem.</p>
 </body>
 </section>
 </chapter>
