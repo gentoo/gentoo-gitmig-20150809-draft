@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jlfgr/jlfgr-1.0.ebuild,v 1.2 2004/10/06 22:13:20 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jlfgr/jlfgr-1.0.ebuild,v 1.3 2004/10/07 14:24:33 axxo Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,6 @@ KEYWORDS="~x86 ~sparc ~ppc"
 IUSE=""
 DEPEND=""
 RDEPEND=""
-RESTRICT="fetch"
 S=${WORKDIR}
 
 src_unpack() {
