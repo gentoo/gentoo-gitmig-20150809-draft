@@ -1,0 +1,10 @@
+# ChangeLog for games-fps/vendetta-online-bin
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-online-bin/ChangeLog,v 1.1 2004/12/01 06:26:27 warpzero Exp $
+
+*vendetta-online-bin-1 (30 Nov 2004)
+
+  30 Nov 2004; Joshua Charles Campbell <warpzero@gentoo.org> vendetta-online-bin1.ebuild:
+  initial commit, ebuild submitted by yoosty69@netzero.net and 
+  Roguelazer@gmail.com
+
