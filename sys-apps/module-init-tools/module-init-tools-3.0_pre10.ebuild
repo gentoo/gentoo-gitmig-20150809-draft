@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0_pre10.ebuild,v 1.3 2004/03/02 16:43:19 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0_pre10.ebuild,v 1.4 2004/03/29 20:57:33 avenj Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 IUSE=""
@@ -16,7 +16,7 @@ SRC_URI="mirror://kernel/linux/kernel/people/rusty/modules/${MYP}.tar.bz2
 	mirror://kernel/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/rusty/modules"
 
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~ia64 ~ppc64 ~hppa s390"
+KEYWORDS="~x86 amd64 ~ppc ~sparc ~alpha ~mips ~ia64 ~ppc64 ~hppa s390"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -44,6 +44,7 @@ src_unpack() {
 
 	cd ${S}
 	rm -f missing
+	export WANT_AUTOMAKE="1.6"
 	automake --add-missing
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0_pre9.ebuild,v 1.2 2004/02/23 00:46:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0_pre9.ebuild,v 1.3 2004/03/29 20:57:33 avenj Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 IUSE=""
@@ -48,6 +48,7 @@ src_unpack() {
 
 	cd ${S}
 	rm -f missing
+	export WANT_AUTOMAKE=1.6
 	automake --add-missing
 }
 

@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.54 2004/02/19 17:52:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.55 2004/03/29 20:57:32 avenj Exp $
+
+  29 Mar 2004; Jon Portnoy <avenj@gentoo.org> 
+  module-init-tools-3.0_pre10.ebuild, 
+  module-init-tools-3.0_pre9.ebuild,
+  module-init-tools-3.0_pre4.ebuild, 
+  module-init-tools-0.9.15_pre4.ebuild :
+  Update ebuilds to use automake 1.6, fixes bug 37743.
+  Marked 3.0_pre10 stable on AMD64.
 
 *module-init-tools-3.0_pre10 (19 Feb 2004)
 
