@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.1-r6.ebuild,v 1.5 2002/08/01 11:40:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.1-r6.ebuild,v 1.6 2002/08/10 00:00:13 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Automated port scan detector and response tool"
@@ -11,24 +11,24 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
-DEPEND="virtual/glibc"
+DEPEND="sys-apps/supersed"
 
 src_unpack() {
 
 	unpack ${A} ; cd ${S}
 
 	# Setting the portsentry.conf file location
-	sed -e 's:/usr/local/psionic/portsentry/portsentry.conf:/etc/portsentry/portsentry.conf:' \
-	portsentry_config.h | cat > portsentry_config.h
+	sed -i 's:/usr/local/psionic/portsentry/portsentry.conf:/etc/portsentry/portsentry.conf:' \
+		portsentry_config.h
 
 	# presetting the other file locations in portsentry.conf
-	sed -e 's:^IGNORE_FILE.*:IGNORE_FILE="/etc/portsentry/portsentry.ignore":g' \
-	    -e 's:^HISTORY_FILE.*:HISTORY_FILE="/etc/portsentry/portsentry.history":g' \
-	    -e 's:^BLOCKED_FILE.*:BLOCKED_FILE="/etc/portsentry/portsentry.blocked":g' \
-	portsentry.conf | cat > portsentry.conf
+	sed -i -e 's:\(^IGNORE_FILE\).*:\1="/etc/portsentry/portsentry.ignore":g' \
+	    -e 's:^\(HISTORY_FILE\).*:\1="/etc/portsentry/portsentry.history":g' \
+	    -e 's:^\(BLOCKED_FILE\).*:\1="/etc/portsentry/portsentry.blocked":g' \
+		portsentry.conf
 
-	sed -e "s:^set SENTRYDIR.*:set SENTRYDIR=/etc/portsentry:g" \
-	ignore.csh | cat > ignore.csh
+	sed -i "s:^set SENTRYDIR.*:set SENTRYDIR=/etc/portsentry:g" \
+		ignore.csh
 }
 
 src_compile() {
