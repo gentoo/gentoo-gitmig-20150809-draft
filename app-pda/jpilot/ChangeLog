@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/jpilot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.6 2003/11/12 23:05:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.7 2003/11/22 16:38:45 strider Exp $
+
+*jpilot-0.99.6-r1 (22 Nov 2003)
+
+  22 Nov 2003; Adrian Almenar <strider@gentoo.org> jpilot-0.99.6-r1.ebuild:
+  Updated Syncmal and Malsync to latest versions. Closes bug #33355
 
 *jpilot-0.99.6 (12 Nov 2003)
 
