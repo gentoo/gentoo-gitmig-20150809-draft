@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.11 2002/06/20 05:05:26 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.12 2002/06/20 14:25:45 prez Exp $
+
+*postgresql-7.2.1-r1 (20 Jun 2002)
+
+  20 Jun 2002; Preston A. Elder <prez@gentoo.org> files/7.2.1/postgresql :
+
+  Changed the startup script to a) one that works, and b) to be in the
+  same style as all other startup scripts we use.
 
 *postgresql-7.2.1-r1 (20 Jun 2002)
 
