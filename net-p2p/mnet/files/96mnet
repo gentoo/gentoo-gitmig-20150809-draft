@@ -1,0 +1,2 @@
+MNETDIR=/usr/share/mnet
+PYTHONPATH=/usr/share/mnet
