@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.4-r2.ebuild,v 1.3 2002/04/17 17:41:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.4-r2.ebuild,v 1.4 2002/04/29 08:47:19 bangert Exp $
 
 MY_PN=ImageMagick
 MY_P=${MY_PN}-${PV}-4
@@ -11,8 +11,8 @@ SRC_URI="http://imagemagick.sourceforge.net/http/${MY_P}.tar.gz"
 HOMEPAGE="http://www.imagemagick.org/"
 
 
-DEPEND="X? ( virtual/x11 )
-	>=app-text/dgs-0.5.9.1
+DEPEND="X? ( virtual/x11
+	    >=app-text/dgs-0.5.9.1 )
 	>=sys-apps/bzip2-1
 	>=sys-libs/zlib-1.1.3
 	>=media-libs/freetype-2.0
