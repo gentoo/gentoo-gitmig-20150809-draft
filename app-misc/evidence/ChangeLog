@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/evidence
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/ChangeLog,v 1.7 2003/04/02 17:41:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/ChangeLog,v 1.8 2003/06/30 04:18:22 vapier Exp $
+
+*evidence-0.9.6.20030629_pre1 (30 Jun 2003)
+
+  30 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + more local USE flags.
 
 *evidence-0.9.4.20030220-r2 (24 Mar 2003)
 
