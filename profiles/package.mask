@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3124 2004/09/03 19:13:09 caleb Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3125 2004/09/03 19:15:16 caleb Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -800,8 +800,4 @@ app-admin/va-systemimager-client
 #seemant@gentoo.org 20 Mar 2002
 # Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
 =gnome-extra/medusa-0.5.1-r4
-
-# mkennedy@gentoo.org 19 Apr 2002
-# not fit for release (working on it though)
-app-cdr/cddump
 
