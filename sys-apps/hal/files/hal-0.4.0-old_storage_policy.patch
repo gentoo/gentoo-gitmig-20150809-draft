@@ -5,7 +5,7 @@
      <match key="info.udi" string="/org/freedesktop/Hal/devices/computer">
        <merge key="storage.policy.default.mount_root" type="string">/media</merge>
 -      <merge key="storage.policy.default.use_managed_keyword" type="bool">true</merge>
-+      <merge key="storage.policy.default.use_managed_keyword" type="bool">false</merge>
++      <merge key="storage.policy.default.use_managed_keyword" type="bool">true</merge>
        <merge key="storage.policy.default.managed_keyword.primary" type="string">managed</merge>
        <merge key="storage.policy.default.managed_keyword.secondary" type="string">kudzu</merge>
        <merge key="storage.policy.default.mount_option.noauto" type="bool">true</merge>
