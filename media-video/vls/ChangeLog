@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vls
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vls/ChangeLog,v 1.6 2003/07/07 22:23:09 raker Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vls/ChangeLog,v 1.7 2004/01/13 21:48:02 mholzer Exp $
+
+*vls-0.5.4 (13 Jan 2004)
+
+  13 Jan 2004; Martin Holzer <mholzer@gentoo.org> vls-0.5.4.ebuild:
+  Verison bumped.
 
 *vls-0.5.3 (07 Jul 2003)
 
