@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/mamory
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/ChangeLog,v 1.6 2004/10/17 09:54:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/ChangeLog,v 1.7 2004/12/01 11:48:28 mr_bones_ Exp $
+
+*mamory-0.2.15 (01 Dec 2004)
+
+  01 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +mamory-0.2.15.ebuild:
+  version bump (bug #72631)
 
   17 Oct 2004; David Holm <dholm@gentoo.org> mamory-0.2.14.ebuild:
   Added to ~ppc.
