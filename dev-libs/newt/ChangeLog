@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/newt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.9 2003/03/28 23:17:43 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.10 2003/08/11 19:56:42 wwoods Exp $
+
+  11 Aug 2003; Will Woods <wwoods@gentoo.org> newt-0.50.35-r1.ebuild,
+  newt-0.50.35-r2.ebuild:
+  Marked stable for alpha
 
 *newt-0.50.35-r2 (23 Dec 2002)
 
