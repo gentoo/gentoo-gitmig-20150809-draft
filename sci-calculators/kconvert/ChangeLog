@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/kconvert
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/kconvert/ChangeLog,v 1.3 2005/02/24 17:22:27 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/kconvert/ChangeLog,v 1.4 2005/02/24 21:30:08 motaboy Exp $
+
+  24 Feb 2005; Simone Gotti <motaboy@gentoo.org> kconvert-1.1-r1.ebuild,
+  kconvert-1.1.ebuild:
+  Fix little typo in the package description.
 
 *kconvert-1.1-r1 (24 Feb 2005)
 
