@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc3-oracle
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/ChangeLog,v 1.3 2003/10/04 00:54:04 strider Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/ChangeLog,v 1.4 2004/01/17 04:39:21 strider Exp $
+
+  17 Jan 2004; Adrian Almenar <strider@gentoo.org> jdbc3-oracle-9.2.0.1.ebuild,
+  jdbc3-oracle-9.2.0.3.ebuild:
+  Removed arch where >=jdk-1.4 its not available.
 
   03 Oct 2003; Adrian Almenar <strider@gentoo.org> jdbc3-oracle-9.2.0.1.ebuild,
   jdbc3-oracle-9.2.0.3.ebuild:

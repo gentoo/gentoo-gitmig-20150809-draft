@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.1.ebuild,v 1.4 2003/10/04 00:54:04 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.1.ebuild,v 1.5 2004/01/17 04:39:21 strider Exp $
 
 inherit java-pkg
 
@@ -8,7 +8,7 @@ S=${WORKDIR}
 DESCRIPTION="JDBC 3.0 Drivers for Oracle"
 SRC_URI=""
 HOMEPAGE="http://otn.oracle.com/software/tech/java/sqlj_jdbc/htdocs/jdbc9201.html"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 sparc"
 LICENSE="oracle-jdbc"
 SLOT="1"
 DEPEND=">=app-arch/unzip-5.50-r1"
