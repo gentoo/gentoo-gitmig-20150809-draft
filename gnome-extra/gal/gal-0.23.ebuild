@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.23.ebuild,v 1.1 2003/03/04 18:23:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.23.ebuild,v 1.2 2003/03/08 18:58:18 foser Exp $
 
 IUSE="nls doc"
 
@@ -19,7 +19,8 @@ RDEPEND=">=dev-libs/libxml-1.8.16
          =gnome-base/libglade-0*
          =x11-libs/gtk+-1.2*
          <gnome-base/gnome-vfs-1.9.0
-         >=dev-libs/libunicode-0.4-r1"         
+         >=dev-libs/libunicode-0.4-r1
+	media-libs/gdk-pixbuf"         
 
 DEPEND="nls? ( sys-devel/gettext )
         >=dev-util/intltool-0.11
