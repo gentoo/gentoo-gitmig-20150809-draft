@@ -1,10 +1,20 @@
 # ChangeLog for net-analyzer/squid-graph
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/ChangeLog,v 1.5 2003/02/12 15:19:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/ChangeLog,v 1.6 2003/04/07 23:21:01 robbat2 Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+* squid-graph-3.1 (07 April 2003) 
+  07 April 2003; Robin Hugh Johnson <robbat2@gentoo.org>
+  squid-graph-3.1.ebuild, ChangeLog, files/digest-squid-graph-3.1:
+  Added ebuild for new version. 
+  In unstable due to package upgrade freeze.
+  Changes in ebuild: 
+  1. 'prepalldocs' to compress html pages
+  2. SRCURI has .gz added
+  Ebuild contributed by Russell Cloran <russell@rucus.ru.ac.za>
  
 * squid-graph-3.0 (12 August 2002)
+  
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   18 Oct 2002; Seemant Kulleen <seemant@gentoo.org> squid-graph-3.0.ebuild :
 
