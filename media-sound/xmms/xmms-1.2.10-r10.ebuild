@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r10.ebuild,v 1.1 2005/01/23 00:55:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r10.ebuild,v 1.2 2005/01/28 00:07:18 eradicator Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
-PATCHVER="2.1.6"
+PATCHVER="2.1.7"
 
 PATCHDIR="${WORKDIR}/patches"
 
@@ -17,10 +17,9 @@ SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-# Notice to arch maintainers:
-# Please test out the plugins listed below in PDEPEND.  They should
-# work on most of your archs, but haven't been marked yet.
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+# alpha and mips were removed because they don't satisfy DEPEND.  See bug #66572.
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 alsa oss arts jack sndfile lirc flac mad"
 
 DEPEND="=x11-libs/gtk+-1.2*
@@ -45,12 +44,12 @@ DEPEND="${DEPEND}
 	       sys-devel/gettext )"
 
 # USE flags pull in xmms plugins
-PDEPEND="!alpha? ( !mips? ( !ppc64? ( jack? ( media-plugins/xmms-jack ) ) ) )
-	!alpha? ( !ppc64? ( lirc? ( media-plugins/xmms-lirc ) ) )
-	!ppc64? ( arts? ( media-plugins/xmms-arts ) )
-	!alpha? ( !mips? ( !ppc64? ( sndfile? ( media-plugins/xmms-sndfile ) ) ) )
-	!alpha? ( !mips? ( mad? ( >=media-plugins/xmms-mad-0.7 ) ) )
-	flac? ( media-libs/flac )"
+PDEPEND="jack? ( media-plugins/xmms-jack )
+	 lirc? ( media-plugins/xmms-lirc )
+	 arts? ( media-plugins/xmms-arts )
+	 sndfile? ( media-plugins/xmms-sndfile )
+	 mad? ( >=media-plugins/xmms-mad-0.7 )
+	 flac? ( media-libs/flac )"
 
 src_unpack() {
 	unpack ${A}
@@ -63,19 +62,19 @@ src_unpack() {
 	export WANT_AUTOCONF=2.5
 
 	cd ${S}
-	libtoolize --force --copy
-	aclocal
-	autoheader
-	automake --gnu --add-missing --include-deps --force-missing --copy
-	autoconf
+	libtoolize --force --copy || die "libtoolize --force --copy failed"
+	aclocal || die "aclocal failed"
+	autoheader || die "autoheader failed"
+	automake --gnu --add-missing --include-deps --force-missing --copy || die "automake failed"
+	autoconf || die "autoconf failed"
 
 	cd ${S}/libxmms
-	libtoolize --force --copy
-	ln -s ../ltmain.sh
-	aclocal
-	autoheader
-	automake --gnu --add-missing --include-deps --force-missing --copy
-	autoconf
+	libtoolize --force --copy || die "libtoolize --force --copy failed"
+	[ ! -f ltmain.sh ] && ln -s ../ltmain.sh
+	aclocal || die "aclocal failed"
+	autoheader || die "autoheader failed"
+	automake --gnu --add-missing --include-deps --force-missing --copy || die "automake failed"
+	autoconf || die "autoconf failed"
 
 	if use nls; then
 		cd ${S}/po
@@ -88,6 +87,7 @@ src_unpack() {
 }
 
 src_compile() {
+	export EGREP="grep -E"
 	filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 
 	local myconf=""
@@ -125,7 +125,6 @@ src_compile() {
 		|| die
 
 	# For some reason, gmake doesn't export this for libtool's consumption
-	export EGREP="grep -E"
 	emake -j1 || die
 }
 
