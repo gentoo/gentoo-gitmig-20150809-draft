@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.02.ebuild,v 1.12 2004/06/24 22:06:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.02.ebuild,v 1.13 2004/06/25 20:43:02 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -32,7 +32,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	if [ -z "`use build`" ] ; then
+	if ! use build ; then
 		dodoc LEGAL.NOTICE MAINT README || die
 	else
 		rm -rf ${D}/usr/share/man

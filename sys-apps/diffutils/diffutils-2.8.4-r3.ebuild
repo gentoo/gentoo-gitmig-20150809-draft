@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r3.ebuild,v 1.19 2004/06/24 22:03:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r3.ebuild,v 1.20 2004/06/25 20:41:21 agriffis Exp $
 
 IUSE="nls build static"
 
@@ -31,7 +31,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	if [ -n "`use build`" ] ; then
+	if use build ; then
 		#disable texinfo building so we can remove the dep
 		sed -i -e 's:SUBDIRS = doc:SUBDIRS =:' \
 			Makefile.in || die "Makefile.in sed"
@@ -56,7 +56,7 @@ src_unpack() {
 src_compile() {
 	econf --build=${CHOST} `use_enable nls` || die "econf"
 
-	if [ "`use static`" ] ; then
+	if use static ; then
 		emake LDFLAGS=-static || die
 	else
 		emake || die
@@ -66,7 +66,7 @@ src_compile() {
 src_install() {
 	einstall
 
-	if [ -z "`use build`" ] ; then
+	if ! use build ; then
 		dodoc COPYING ChangeLog NEWS README
 	else
 		rm -rf ${D}/usr/share/info

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.07.ebuild,v 1.5 2004/06/24 22:06:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.07.ebuild,v 1.6 2004/06/25 20:43:02 agriffis Exp $
 
 inherit flag-o-matic gnuconfig eutils
 
@@ -49,7 +49,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	if [ -z "`use build`" ] ; then
+	if ! use build ; then
 		dodoc ChangeLog LEGAL.NOTICE MAINT README || die "dodoc failed"
 	else
 		rm -rf ${D}/usr/share/man

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.41.ebuild,v 1.6 2004/06/24 22:06:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.41.ebuild,v 1.7 2004/06/25 20:43:02 agriffis Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	if [ -z "`use build`" ] ; then
+	if ! use build ; then
 		dodoc LEGAL.NOTICE MAINT README
 	else
 		rm -rf ${D}/usr/share/man
