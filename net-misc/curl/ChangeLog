@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.16 2004/10/31 18:58:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.17 2004/11/03 14:48:15 gustavoz Exp $
+
+  03 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> curl-7.12.0-r2.ebuild:
+  Stable on sparc
 
   31 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> curl-7.12.0-r2.ebuild:
   Stable on alpha.
