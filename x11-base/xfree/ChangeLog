@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.329 2004/04/21 16:08:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.330 2004/04/25 21:13:49 spyderous Exp $
+
+  25 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
+  Modify TODO. Only thing holding this back from unmasking on our side is adding
+  the opengl-update with --get-implementation. On the portage side, Jason Stubbs
+  has a patch waiting to get committed that allows to-be-merged packages to
+  fulfill dependencies.
 
   21 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
   Add a couple of missing definitions for USE=sse -- HasSSESupport and
