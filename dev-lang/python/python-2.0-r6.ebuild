@@ -3,7 +3,7 @@
 # Author Daniel Robbins <drobbins@gentoo.org>
 # Modified Tod M. Neidt <tneidt@fidnet.com>
 # /home/cvsroot/gentoo-x86/dev-lang/python/python-2.0-r4.ebuild,v 1.1 2001/06/04 19:49:02 drobbins Exp
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.0-r6.ebuild,v 1.1 2001/10/31 18:54:58 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.0-r6.ebuild,v 1.2 2001/11/08 17:50:57 achim Exp $
 
 
 S=${WORKDIR}/Python-2.0
@@ -62,7 +62,7 @@ src_unpack() {
 	  -e 's:#[[:blank:]]-lX11:-lX11:' \
 	Setup.in > Setup.new
         mv Setup.new Setup.in
-	mylibs="$mylibs -ltk8.4 -ltcl8.4 -L/usr/X11R6/lib -lX11"
+	mylibs="$mylibs -ltk{tk_version} -ltcl{tcl_version} -L/usr/X11R6/lib -lX11"
     fi
 
     if [ "`use berkdb`" ]
