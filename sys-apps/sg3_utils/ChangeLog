@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.4 2004/08/09 15:38:41 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.5 2004/08/09 21:38:41 plasmaroo Exp $
+
+  09 Aug 2004; <plasmaroo@gentoo.org> sg3_utils-1.06.ebuild,
+  +files/sg3_utils-llseek.patch:
+  Added a patch to solve PIC issues; bug #59832.
 
   09 Aug 2004; Travis Tilley <lv@gentoo.org> sg3_utils-1.06.ebuild:
-  added ~amd64 keyword
+  Added ~amd64 keyword.
 
   18 Jun 2004; Jason Wever <weeve@gentoo.org> sg3_utils-1.06.ebuild:
   Added ~sparc keyword.
