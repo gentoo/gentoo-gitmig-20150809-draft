@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <robbat2@gentoo.org> (20 Oct 2003)
+# needs gcc3.3/tcl8.4 fixing
+dev-embedded/picptk
+
 # <strider@gentoo.org> (18 Oct 2003)
 # Brand new building system for ant needs a lot of testing
 =dev-java/ant-1.5.4-r2
