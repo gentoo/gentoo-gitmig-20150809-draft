@@ -1,6 +1,6 @@
 # Copyright 2002-2003 Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ispell-ru-0.99.6.1-r1.ebuild,v 1.1 2003/09/09 10:07:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ispell-ru-0.99.6.1-r1.ebuild,v 1.2 2003/09/09 10:08:22 seemant Exp $
 
 MY_PV=${PV/.6./f}
 S="${WORKDIR}"
@@ -10,7 +10,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/rus-isp
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="ppc x86 sparc alpha mips hppa arm"
+KEYWORDS="~ppc ~x86 ~sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND="app-text/ispell"
 
