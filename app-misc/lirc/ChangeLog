@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lirc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.14 2003/12/29 18:58:05 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.15 2004/01/14 16:40:46 iggy Exp $
+
+  14 Jan 2004; Brian Jackson <iggy@gentoo.org> lirc-0.6.6-r1.ebuild,
+  lirc-0.7.0_pre2.ebuild, files/lircd:
+  updated dates in ebuilds, added ${LIRCD_OPTS} to the start cmd line to
+  pass extra options to the daemon
 
   29 Dec 2003; Sven Blumenstein <bazik@gentoo.org> lirc-0.6.6-r1.ebuild:
   Marked sparc to fix gxine depend.

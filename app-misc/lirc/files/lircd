@@ -10,7 +10,7 @@ depend()
 start()
 {
 	ebegin "Starting lircd"
-	start-stop-daemon --start --quiet --exec /usr/sbin/lircd
+	start-stop-daemon --start --quiet --exec /usr/sbin/lircd -- ${LIRCD_OPTS}
 	eend $?
 }
 
