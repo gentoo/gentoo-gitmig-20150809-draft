@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-portmap
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-portmap/ChangeLog,v 1.1 2003/08/12 02:38:53 pebenito Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-portmap/ChangeLog,v 1.2 2004/02/17 22:43:18 lostlogic Exp $
+
+  17 Feb 2004; Brandon Low <lostlogic@gentoo.org> :
+  strip arm keyword
 
 *selinux-portmap-20030811 (11 Aug 2003)
 
