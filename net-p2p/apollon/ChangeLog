@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/apollon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/ChangeLog,v 1.12 2004/07/07 19:24:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/ChangeLog,v 1.13 2004/09/28 19:34:48 centic Exp $
+
+*apollon-1.0 (28 Sep 2004)
+
+  28 Sep 2004; Dominik Stadler <centic@gentoo.org> apollon-0.9.4-r1.ebuild,
+  +apollon-1.0.ebuild:
+  Add new Version 1.0, fixes Bug 62136. Also mark 0.9.4-r1 stable on x86
 
   07 Jul 2004; Travis Tilley <lv@gentoo.org> apollon-0.9.3.ebuild:
   stable on amd64
