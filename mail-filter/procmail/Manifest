@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 cddcbd5f87c5c840fc8facd686935681 ChangeLog 5446
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 0a9338e684b3b5b02b626ed7caa9950c procmail-3.22-r6.ebuild 1776
-MD5 280e86cd3850b13629b0beee3c2c5522 files/gentoo-maildir2.diff 797
+MD5 8a521a4a68617d703b7cd4e89159d2fc procmail-3.22-r6.ebuild 1787
 MD5 3b583fb1759a67d82e1f304ea40c2859 files/digest-procmail-3.22-r6 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBUTd410xuJSrg3/sRAguCAJ9FCbralPfs3wuBpUHEA/TwKi5YdwCcCI+i
-uroDf3Z8KZFK9FXPMhR+Ido=
-=5n6i
------END PGP SIGNATURE-----
+MD5 280e86cd3850b13629b0beee3c2c5522 files/gentoo-maildir2.diff 797

@@ -1,22 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.9 2004/09/22 08:27:22 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.10 2004/11/08 08:53:23 mr_bones_ Exp $
 
 inherit eutils
 
 DESCRIPTION="Mail delivery agent/filter"
-SRC_URI="http://www.procmail.org/${P}.tar.gz"
 HOMEPAGE="http://www.procmail.org/"
+SRC_URI="http://www.procmail.org/${P}.tar.gz"
+
+LICENSE="|| ( Artistic GPL-2 )"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips s390 ppc64"
 IUSE="mbox"
+PROVIDE="virtual/mda"
+
 DEPEND="virtual/libc !mail-mta/courier virtual/mta"
 RDEPEND="virtual/libc"
-PROVIDE="virtual/mda"
-SLOT="0"
-LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips s390 ppc64"
 
 src_compile() {
-
 # With gcc-3.1 and newer, there is a bug with aggressive optimization caused by
 # -finline-functions (implied by -O3) that leaves strstr() is an infinite loop.
 # To work around this, we append -fno-inline-functions to CFLAGS disable just
