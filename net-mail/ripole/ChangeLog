@@ -1,0 +1,7 @@
+# ChangeLog for net-mail/ripole
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.1 2005/01/26 10:23:55 ferdy Exp $
+
+  26 Jan 2005; Fernando J. Pereda <ferdy@gentoo.org> :
+  New package ripole, closes #79166. Submitted by: steveb <tp22a@softhome.net>
+

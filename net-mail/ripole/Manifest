@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7c64364ba6be524b6ebc077c3ea53098 ripole-0.1.4.ebuild 601
+MD5 2c8002cf06d8a17d661c0a0789d6ce78 ChangeLog 337
+MD5 391a69f80ad60b20f9b8a2b15ccbcf32 metadata.xml 320
+MD5 16c8fe11065280cae6211da41b55ec73 files/digest-ripole-0.1.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB92/GViELBEf1JB0RAgN7AJ9rSuOwnGxTqZzzXr8HQQ7okQu5HgCfRLqa
+4capGp9JgHTwboUvKewIeAQ=
+=8z+e
+-----END PGP SIGNATURE-----
