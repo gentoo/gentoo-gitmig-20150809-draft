@@ -32,3 +32,6 @@ move x11-libs/libxfce4util xfce-base/libxfce4util
 move x11-libs/libxfcegui4 xfce-base/libxfcegui4
 move net-print/gimp-print-cups media-gfx/gimp-print
 move dev-libs/ode dev-games/ode
+move dev-lisp/apel app-emacs/apel
+move dev-lisp/flim app-emacs/flim
+move dev-lisp/semi app-emacs/semi
