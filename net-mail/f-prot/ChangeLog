@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/f-prot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/ChangeLog,v 1.20 2003/10/16 07:08:31 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/ChangeLog,v 1.21 2003/12/25 16:50:44 hanno Exp $
+
+*f-prot-4.3.2 (25 Dec 2003)
+
+  25 Dec 2003; Hanno Boeck <hanno@gentoo.org> f-prot-4.3.2.ebuild:
+  Version bump.
 
 *f-prot-4.3.1 (16 Oct 2003)
 
