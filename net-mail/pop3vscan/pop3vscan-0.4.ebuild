@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/pop3vscan-0.4.ebuild,v 1.11 2003/12/07 03:02:57 wesolows Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/pop3vscan-0.4.ebuild,v 1.12 2004/06/04 18:06:50 mr_bones_ Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A transparent POP3-Proxy with virus-scanning capabilities."
@@ -37,8 +37,7 @@ src_install () {
 	dodoc README
 }
 
-pkg_postinstall () {
-
+pkg_postinst() {
 	useradd -d /tmp -s /bin/false -g nogroup mail
 	dodir /var/spool/pop3vscan
 	fowners mail /var/spool/pop3vscan
