@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2a-r1.ebuild,v 1.5 2003/03/05 11:34:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2a-r1.ebuild,v 1.6 2003/03/11 20:50:08 seemant Exp $
 
 inherit eutils gnuconfig
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r2
-	>=sys-apps/bash-2.05a-r3"
+	>=app-shells/bash-2.05a-r3"
 
 src_unpack() {
 	unpack ${A}

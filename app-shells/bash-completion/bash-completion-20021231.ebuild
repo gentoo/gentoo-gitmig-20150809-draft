@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20021231.ebuild,v 1.2 2003/02/13 09:28:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20021231.ebuild,v 1.3 2003/03/11 20:50:08 seemant Exp $
 
 S=${WORKDIR}/${PN/-/_}
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND="sys-apps/tar sys-apps/bzip2"
-RDEPEND=">=sys-apps/bash-2.05a"
+RDEPEND=">=app-shells/bash-2.05a"
 
 src_install() {
 	insinto /etc

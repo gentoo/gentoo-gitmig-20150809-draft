@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r3.ebuild,v 1.5 2003/02/24 20:57:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r3.ebuild,v 1.6 2003/03/11 20:50:08 seemant Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha mips"
 
 # We must be sertain that we have a bash that is linked
 # to its internal readline, else we may get problems.
-DEPEND=">=sys-apps/bash-2.05b-r2
+DEPEND=">=app-shells/bash-2.05b-r2
 	>=sys-libs/ncurses-5.2-r2"
 
 src_unpack() {

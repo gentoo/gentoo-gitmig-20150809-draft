@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.10 2003/02/28 22:04:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.11 2003/03/11 20:50:08 seemant Exp $
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -13,22 +13,21 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 
-RDEPEND="virtual/glibc
-	 dev-util/dialog
-	 sys-apps/bash
-	 sys-apps/diffutils
-	 sys-apps/e2fsprogs
-	 sys-apps/fileutils
-	 sys-apps/grep
-	 sys-apps/modutils
-	 sys-apps/psmisc
-	 sys-apps/sed
-	 sys-apps/sh-utils
-	 sys-apps/textutils
-	 sys-apps/util-linux
-	 sys-devel/make
-	 sys-devel/perl
-	 sys-libs/ncurses"
+RDEPEND="dev-util/dialog
+	app-shells/bash
+	sys-apps/diffutils
+	sys-apps/e2fsprogs
+	sys-apps/fileutils
+	sys-apps/grep
+	sys-apps/modutils
+	sys-apps/psmisc
+	sys-apps/sed
+	sys-apps/sh-utils
+	sys-apps/textutils
+	sys-apps/util-linux
+	sys-devel/make
+	sys-devel/perl
+	sys-libs/ncurses"
 
 # Optional: app-admin/smartsuite  (depricated?)
 # Optional: sys-apps/lm_sensors
