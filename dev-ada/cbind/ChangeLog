@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/cbind
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/cbind/ChangeLog,v 1.4 2004/01/04 18:48:52 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/cbind/ChangeLog,v 1.5 2004/03/19 10:07:11 aliz Exp $
+
+  19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> cbind-6.ebuild:
+  Inherit eutils.
 
   06 Oct 2003; David Holm <dholm@gentoo.org> cbind-6.ebuild:
   Moved to stable on x86.
