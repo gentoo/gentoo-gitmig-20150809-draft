@@ -1,8 +1,11 @@
 # ChangeLog for net-print/qtcups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/qtcups/ChangeLog,v 1.2 2002/07/14 20:41:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/qtcups/ChangeLog,v 1.3 2002/08/14 10:57:21 pvdabeel Exp $
 
 *qtcups-2.0-r1 (1 Feb 2002)
+
+  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+  Added ppc keyword
 
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> qtcups-2.0-r1.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
