@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.41 2004/10/16 05:01:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.42 2004/10/19 09:33:13 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> emacs-21.3-r3.ebuild:
+  Stable on amd64.
 
   16 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> emacs-21.3-r3.ebuild,
   emacs-21.3-r4.ebuild:
