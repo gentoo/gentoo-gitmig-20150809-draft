@@ -1,0 +1,9 @@
+# ChangeLog for net-www/mod_limitipconn
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_limitipconn/ChangeLog,v 1.1 2004/04/04 03:29:20 zul Exp $
+
+*mod_limitipconn-0.22 (03 Apr 2004)
+
+  03 Apr 2004; Chuck Short <zul@gentoo.org> mod_limitipconn-0.22.ebuild:
+  Initial verison, ebuild written by me. Closes #31306.
+
