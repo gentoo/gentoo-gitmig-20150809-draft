@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.12 2004/11/22 14:22:58 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.13 2004/12/28 11:47:42 josejx Exp $
+
+  28 Dec 2004; Joseph Jezak <josejx@gentoo.org> zziplib-0.13.36.ebuild:
+  Marked ppc stable.
 
   22 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org>
   zziplib-0.13.36.ebuild:
