@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.39 2003/06/09 11:58:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.40 2003/07/01 17:45:32 gmsoft Exp $
 
 *pango-1.2.3 (09 Jun 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> pango-1.2.3.ebuild :
+  Added ~hppa to KEYWORDS.
 
   09 Jun 2003; foser <foser@gentoo.org> pango-1.2.3.ebuild :
   New version
@@ -28,6 +31,9 @@
   Added speedimproving patch from cvs
 
 *pango-1.2.1 (04 Feb 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> pango-1.2.1.ebuild :
+  Added hpp ato KEYWORDS.
 
   04 Mar 2003; Jason Wever <weeve@gentoo.org> pango-1.2.1.ebuild:
   Added sparc to keywords.
