@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 47a6afb4a1201f8659ce030f09202c29 diffstat-1.37.ebuild 809
-MD5 cc2f9487e827f0580da9a48142607097 diffstat-1.34.ebuild 744
+MD5 e8dd1fe9ef4bb0c0c6da48f565da63b9 diffstat-1.37.ebuild 815
+MD5 fcc037084e8836ffef85a96e6df7124e diffstat-1.34.ebuild 743
 MD5 ed23ac03de66678c66724d5cc9b7607a ChangeLog 2435
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 3b747948604effbe1ba7f4554ecc210f files/diffstat-1.34-hard-locale.patch 523
@@ -12,7 +12,7 @@ MD5 168d13b92334db83f0a5d8bd367f8e4a files/digest-diffstat-1.37 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBw4UfI1lqEGTUzyQRAubTAKDBk6YBBDLAuDATrRK4NKIe5pIwEQCfbwrW
-BRfIOkrNZmDHwlql/vXNx50=
-=1XDf
+iD8DBQFBw4WoI1lqEGTUzyQRAoWSAJ9/vQSjdW/56PFK5tZIIWjuPGuzlwCdFpcP
+czhnELRLN9Uol7E6laGcmBg=
+=GGPo
 -----END PGP SIGNATURE-----

@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.34.ebuild,v 1.7 2004/11/03 20:14:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.34.ebuild,v 1.8 2004/12/18 01:19:30 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="diffstat reads the output of diff and displays a histogram of the insertions, deletions, and modifications per-file"
-SRC_URI="ftp://invisible-island.net/${PN}/${PN}-${PV}.tgz"
-HOMEPAGE="http://dickey.his.com/diffstat/diffstat.html"
+SRC_URI="ftp://invisible-island.net/${PN}/${P}.tgz"
+HOMEPAGE="http://invisible-island.net/diffstat/diffstat.html"
 
 SLOT="0"
 LICENSE="as-is"
