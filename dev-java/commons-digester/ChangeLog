@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-digester
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.19 2005/01/20 19:27:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.20 2005/02/14 19:54:36 luckyduck Exp $
+
+  14 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  commons-digester-1.6.ebuild:
+  stable on amd64 and x86.
 
   20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   commons-digester-1.4.ebuild, commons-digester-1.5.ebuild,

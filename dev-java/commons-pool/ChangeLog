@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-pool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.21 2005/01/20 18:40:14 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.22 2005/02/14 19:51:10 luckyduck Exp $
+
+  14 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> commons-pool-1.2.ebuild:
+  stable on amd64 and x86.
 
   20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> commons-pool-1.1.ebuild,
   commons-pool-1.2.ebuild:
