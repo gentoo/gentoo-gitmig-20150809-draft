@@ -1,7 +1,16 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.4 2002/04/07 05:52:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.5 2002/04/08 12:36:57 jhhudso Exp $
 
+*python-2.2-r5 (8 Apr 2002)
+
+  8 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> python-2.2-r5.ebuild :
+	
+  Added include flag for compilation of tcltk with python to compile
+  correctly.
+
+  --------
+	
   06 Apr 2002; Daniel Robbins <drobbins@gentoo.org> : the 2.2-r4 ebuild now
   disables C++ support if we are creating a new build image (since we have no
   C++ in that case).
