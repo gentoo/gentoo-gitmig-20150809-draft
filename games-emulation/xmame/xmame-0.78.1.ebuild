@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.78.1.ebuild,v 1.3 2004/02/11 08:08:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.78.1.ebuild,v 1.4 2004/02/12 15:28:30 vapier Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 LICENSE="xmame"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~amd64"
-IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts joystick icc net"
+IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts joystick net"
 
 RDEPEND="sys-libs/zlib
 	sdl? ( >=media-libs/libsdl-1.2.0 )
@@ -26,9 +26,9 @@ RDEPEND="sys-libs/zlib
 	ggi? ( media-libs/libggi )
 	arts? ( kde-base/arts )"
 DEPEND="${RDEPEND}
-	icc? ( dev-lang/icc )
 	x86? ( dev-lang/nasm )
 	>=sys-apps/sed-4"
+#	icc? ( dev-lang/icc )
 
 S=${WORKDIR}/xmame-${PV}
 
@@ -73,17 +73,18 @@ src_unpack() {
 		sed -i \
 			-e '/XMAME_NET/s:#::' Makefile \
 			|| die "sed Makefile (net) failed"
-		if [ `use icc` ] ; then
-			ewarn "Sorry, but net support is not compatible with icc."
-			ewarn "icc support has been ignored in favor of net support."
-		fi
-	else
-		if [ `use icc` ] ; then
-			epatch ${FILESDIR}/${PV}-icc.patch
-			sed -i \
-				-e '/^CC/s:gcc:icc:' Makefile \
-				|| die "sed Makefile (icc) failed"
-		fi
+# Icc sucks #41342
+#		if [ `use icc` ] ; then
+#			ewarn "Sorry, but net support is not compatible with icc."
+#			ewarn "icc support has been ignored in favor of net support."
+#		fi
+#	else
+#		if [ `use icc` ] ; then
+#			epatch ${FILESDIR}/${PV}-icc.patch
+#			sed -i \
+#				-e '/^CC/s:gcc:icc:' Makefile \
+#				|| die "sed Makefile (icc) failed"
+#		fi
 	fi
 	if [ `use esd` ] ; then
 		sed -i \
