@@ -5,6 +5,6 @@ MD5 dd447223bf4607bf5be37d0353366b7f ChangeLog 1331
 MD5 19df39ef54fc4a8677998f19bb6046ac metadata.xml 218
 MD5 e493796b04c4c8ab5e2a0e50bbd4f3fd files/bayescustomize.ini 3968
 MD5 52c534163bb7d37f2b179098aa65339c files/digest-spambayes-1.0_rc1 68
-MD5 c0ce210ebd950ba0db2c66fc0bc2ff5f files/spambayespop3proxy.rc 712
+MD5 ba6377ec98f33913c8794cedbbf34454 files/spambayespop3proxy.rc 705
 MD5 3c91b3be373a22e3af5205120586c3ac files/digest-spambayes-1.0_beta1 69
 MD5 bb0d1706a516be043cf42592fab906bb files/digest-spambayes-1.0_alpha9 67
