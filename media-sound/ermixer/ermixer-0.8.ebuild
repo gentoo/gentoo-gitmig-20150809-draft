@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ermixer-0.8.ebuild,v 1.10 2004/03/01 05:37:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ermixer-0.8.ebuild,v 1.11 2004/03/16 15:27:53 eradicator Exp $
+
+IUSE="qt"
 
 DESCRIPTION="A full featured console-based audio mixer."
 HOMEPAGE="http://ermixer.sourceforge.net"
@@ -13,13 +15,10 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc alpha"
 
 SRC_URI="mirror://sourceforge/ermixer/${P}.tar.gz"
-S="${WORKDIR}/${P}"
+RESTRICT="nomirror"
 
 src_compile() {
-	local myconf
-
-	use qt && myconf="--enable-qt=yes"
-	econf ${myconf}|| die
+	econf `use_enable qt` || die
 	emake || die
 }
 
