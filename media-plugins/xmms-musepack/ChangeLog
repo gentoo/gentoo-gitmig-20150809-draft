@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/xmms-musepack
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.9 2004/02/19 09:56:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.10 2004/02/20 03:47:16 eradicator Exp $
+
+*xmms-musepack-0.98-r2 (19 Feb 2004)
+
+  19 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-musepack-0.98-r2.ebuild, files/xmms-musepack-0.98-titles.patch:
+  Revision bumping to add patch to correct NULL title strings. Patch submitted
+    by Stefan Koegl <gensk@t-online.de> to close bug #41238.
 
 *xmms-musepack-0.94-r2 (19 Feb 2004)
 
