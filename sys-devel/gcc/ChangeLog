@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.137 2003/10/21 20:41:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.138 2003/10/21 21:28:55 azarah Exp $
+
+  21 Oct 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.2.ebuild:
+  Mask this puppy again until I figure out why it breaks visibility attribute
+  support (and thus NPTL, possibly TLS as well).
 
 *gcc-3.3.2 (21 Oct 2003)
 
