@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/struts-legacy-1.0-r1.ebuild,v 1.4 2004/10/03 13:48:55 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/struts-legacy-1.0-r1.ebuild,v 1.5 2004/10/03 13:53:41 axxo Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ DEPEND=">=virtual/jdk-1.4
 	jikes? ( dev-java/jikes )"
 RDEPEND="|| (
 		>=virtual/jdk-1.4
-		( >=virtual/jdk-1.3 >=dev-java/jdbc2-stdext-2.0)
+		( >=virtual/jdk-1.3 >=dev-java/jdbc2-stdext-2.0 )
 	)
 	dev-java/commons-logging"
 LICENSE="Apache-1.1"
