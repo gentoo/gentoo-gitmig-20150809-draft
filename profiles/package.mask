@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3047 2004/08/08 13:28:02 foser Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3048 2004/08/09 08:21:49 mr_bones_ Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -67,10 +67,6 @@ gnome-extra/evolution-data-server
 # <kugelfang@gentoo.org> (Jul 31 2004)
 # Not to be unmasked before all packages of this brand ship out.
 =app-emulation/emul-linux-x86-glibc-1.0
-
-# <mr_bones_@gentoo.org> (Jul 29 2004)
-# Mask until 0.6.1b can replace it.  Upstream noticed a bug right after release.
-=games-engines/scummvm-0.6.1
 
 # <ciaranm@gentoo.org> (Jul 26 2004)
 # Mask kvim until vim7 is out. See bug #56992 for details.
