@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <robbat2@gentoo.org> (22 Jan 2004)
+# masked because these don't work atm
+<net-analyzer/ns-2.27
+
 # <usata@gentoo.org> (22 Jan 2004)
 # masked because of chkfontpath, bug #36109
 =media-fonts/unifont-1.0
