@@ -1,0 +1,29 @@
+Index: Eterm/src/pixmap.c
+===================================================================
+RCS file: /cvsroot/enlightenment/eterm/Eterm/src/pixmap.c,v
+retrieving revision 1.90
+retrieving revision 1.91
+diff -u -r1.90 -r1.91
+--- Eterm/src/pixmap.c  13 Oct 2002 05:28:36 -0000      1.90
++++ Eterm/src/pixmap.c  27 Nov 2002 20:18:23 -0000      1.91
+@@ -222,15 +222,15 @@
+     D_PIXMAP(("parse_pixmap_ops(str [%s]) called.\n", str));
+ 
+     for (; (token = (char *) strsep(&str, ":"));) {
+-        if (!BEG_STRCASECMP("tiled", token)) {
++        if (!BEG_STRCASECMP(token, "tile")) {
+             op |= OP_TILE;
+-        } else if (!BEG_STRCASECMP("hscaled", token)) {
++        } else if (!BEG_STRCASECMP(token, "hscale")) {
+             op |= OP_HSCALE;
+-        } else if (!BEG_STRCASECMP("vscaled", token)) {
++        } else if (!BEG_STRCASECMP(token, "vscale")) {
+             op |= OP_VSCALE;
+-        } else if (!BEG_STRCASECMP("scaled", token)) {
++        } else if (!BEG_STRCASECMP(token, "scale")) {
+             op |= OP_SCALE;
+-        } else if (!BEG_STRCASECMP("propscaled", token)) {
++        } else if (!BEG_STRCASECMP(token, "propscale")) {
+             op |= OP_PROPSCALE;
+         }
+     }
