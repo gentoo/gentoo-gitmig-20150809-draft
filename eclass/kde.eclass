@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.75 2003/03/11 21:26:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.76 2003/03/15 17:38:29 hannes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -9,7 +9,6 @@
 inherit base kde-functions
 ECLASS=kde
 INHERITED="$INHERITED $ECLASS"
-IUSE="$IUSE ppc"
 
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
