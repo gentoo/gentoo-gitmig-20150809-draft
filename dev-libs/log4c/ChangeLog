@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/log4c
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/ChangeLog,v 1.11 2004/06/24 23:26:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/ChangeLog,v 1.12 2004/08/11 09:28:43 dragonheart Exp $
+
+*log4c-1.0.11 (11 Aug 2004)
+
+  11 Aug 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +log4c-1.0.11.ebuild, +files/configure.in.patch:
+  Version bump thanks to Aaron Walker <ka0ttic@butsugenjitemple.org> in bug
+  #59666.
 
   18 May 2004; Mamoru KOMACHI <usata@gentoo.org> log4c-1.0.6-r1.ebuild,
   log4c-1.0.6.ebuild:
