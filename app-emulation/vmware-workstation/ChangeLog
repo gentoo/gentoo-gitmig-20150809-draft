@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.77 2005/03/15 20:02:44 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.78 2005/03/17 11:40:50 absinthe Exp $
+
+*vmware-workstation-5.0_rc4 (17 Mar 2005)
+
+  17 Mar 2005; Dylan Carlson <absinthe@gentoo.org>
+  -vmware-workstation-5.0_rc1.ebuild, -vmware-workstation-5.0_rc2.ebuild,
+  +vmware-workstation-5.0_rc4.ebuild:
+  Version bump. Apparently the build number of the latest release candidate
+  changed. Thanks to Dan Gilkerson for the heads up. Also removed expired
+  release candidates.
 
 *vmware-workstation-5.0_rc3 (15 Mar 2005)
 

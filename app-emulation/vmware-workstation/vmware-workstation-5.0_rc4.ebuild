@@ -9,7 +9,7 @@
 inherit eutils
 
 S=${WORKDIR}/vmware-distrib
-NP="VMware-workstation-5.0.0-12544"
+NP="VMware-workstation-5.0.0-13014"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 
