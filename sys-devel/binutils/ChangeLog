@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.13 2002/10/10 19:21:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.14 2002/10/14 18:35:00 azarah Exp $
+
+*binutils-2.13.90.0.10 (14 Oct 2002)
+
+  14 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Version update.  Remove sparc until further testing
+  from Seemant.
 
 *binutils-2.13.90.0.8 (10 Oct 2002)
 
