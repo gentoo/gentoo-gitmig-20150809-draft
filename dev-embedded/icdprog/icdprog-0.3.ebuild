@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/icdprog/icdprog-0.3.ebuild,v 1.2 2004/03/05 09:22:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/icdprog/icdprog-0.3.ebuild,v 1.3 2004/04/14 11:51:48 dragonheart Exp $
 
 DESCRIPTION="Microchip PIC Programmer using ICD hardware"
 HOMEPAGE="http://${PN}.sf.net/"
@@ -12,7 +12,6 @@ IUSE=""
 DEPEND="sys-devel/gcc
 	>=sys-apps/sed-4"
 RDEPEND="" #we don't depend on anything after we are compiled
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
