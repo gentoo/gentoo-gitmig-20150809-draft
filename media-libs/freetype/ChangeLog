@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.27 2003/06/21 01:16:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.28 2003/07/14 03:28:06 avenj Exp $
+
+  13 Jul 2003; Jon Portnoy <avenj@gentoo.org> freetype-2.1.4.ebuild :
+  Trivial change, moved prebuilt -> bindist to reflect USE flag
+  name change.
 
   20 Jun 2003; Jason Wever <weeve@gentoo.org> freetype-2.1.4.ebuild:
   Changed ~sparc keyword to sparc.

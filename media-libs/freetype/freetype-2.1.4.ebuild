@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.4.ebuild,v 1.4 2003/06/21 01:16:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.4.ebuild,v 1.5 2003/07/14 03:28:06 avenj Exp $
 
-IUSE="doc zlib prebuilt"
+IUSE="doc zlib bindist"
 
 inherit eutils flag-o-matic
 
@@ -37,7 +37,7 @@ src_compile() {
 		&& myconf="${myconf} --with-zlib" \
 		|| myconf="${myconf} --without-zlib" 
 
-	use prebuilt || append-flags "${CFLAGS} -DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
+	use bindist || append-flags "${CFLAGS} -DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
 	
 	make CFG="--host=${CHOST} --prefix=/usr ${myconf}" || die
 	emake || die
