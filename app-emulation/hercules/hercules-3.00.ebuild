@@ -1,46 +1,44 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-2.15.ebuild,v 1.9 2003/09/04 01:05:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.00.ebuild,v 1.1 2003/10/12 18:27:22 lanius Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Hercules System/370, ESA/390 and zArchitecture Mainframe Emulator"
 SRC_URI="http://www.conmicro.cx/hercules/${P}.tar.gz"
 HOMEPAGE="http://www.conmicro.cx/hercules/"
 LICENSE="QPL-1.0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 SLOT="0"
 IUSE=""
 
 DEPEND="virtual/glibc
 	sys-apps/bzip2"
 
-
 src_compile() {
 	local mycflags
 	mycflags="${CFLAGS}"
 	unset CFLAGS ; unset CXXFLAGS
 
-	./configure \
-		--prefix=/usr \
+	econf \
 		--enable-optimization="${mycflags}" \
 		--enable-cckd-bzip2 \
 		--enable-het-bzip2 \
 		--enable-setuid-hercifc \
 		--enable-custom="Gentoo Linux ${PF}.ebuild" \
-		|| die "bad ./configure"
+		--enable-multi-cpu=7 \
+		|| die "econf failed"
 
-	make || die "compile problem"
+	emake || die "emake failed"
 }
 
 src_install() {
-
 	make DESTDIR=${D} install
-	dodoc INSTALL
-
-	dohtml html/*.html html/hercules.css
-
+	dohtml -r html/
 	insinto /usr/share/hercules
 	doins hercules.cnf
+	dodoc README.COMMADPT README.CVS README.ECPSVM README.HDL
+	dodoc README.NETWORKING README.OSX README.TAPE
+	dodoc RELEASE.NOTES CHANGES
 }
 
 pkg_postinst() {
@@ -51,9 +49,12 @@ pkg_postinst() {
 	einfo "and operating instructions, see http://www.conmicro.cx/hercules"
 	einfo
 	einfo "In order to use Hercules you will need a guest operating"
-	einfo "system. There are several flavours of 'Linux for S/390'"
-	einfo "available, or if you want that 'Big Iron' feel, you can"
-	einfo "download several real mainframe operating systems such as"
-	einfo "OS/360, MVS 3.8J or VM370r6 from http://www.cbttape.org"
+	einfo "system. There are several flavours of 'Linux for S/390' and"
+	einfo "'Linux for zSeries' available, or if you want that 'Big Iron'"
+	einfo "feel, you can download several real mainframe operating systems"
+	einfo "such as OS/360, DOS/VS, MVS, or VM370 from http://www.cbttape.org"
+	einfo
+	einfo "Hercules is also capable of runing OS/390, z/OS, and z/VM with an"
+	einfo "appropriate liscense."
 	einfo
 }
