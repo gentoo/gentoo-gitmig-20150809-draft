@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.4-r2.ebuild,v 1.1 2002/11/19 20:04:31 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.4-r2.ebuild,v 1.2 2002/11/19 20:48:35 phoenix Exp $
 
 IUSE=""
 
@@ -22,7 +22,7 @@ RDEPEND=">=sys-libs/lib-compat-1.0-r2
 
 src_install() {
 	# Plugin path creation
-	PLUGIN_DIR="/usr/share/mozilla/plugins" 
+	PLUGIN_DIR="/usr/lib/nsbrowser/plugins" 
 	mkdir -p ${D}/${PLUGIN_DIR}
 
 	dodir /usr/lib
@@ -31,7 +31,7 @@ src_install() {
 
 	# Plugin path setup (rescuing the existent plugins)
 	mv ${D}/usr/lib/${MY_PN}/plugins ${D}/usr/lib/${MY_PN}/plugins.temp
-	dosym ${PLUGIN_DIR} /usr/lib/${MY_PN}/
+	dosym ../nsbrowser/plugins /usr/lib/${MY_PN}/
 	mv ${D}/usr/lib/${MY_PN}/plugins.temp/* ${D}/usr/lib/${MY_PN}/plugins/
 	rmdir ${D}/usr/lib/${MY_PN}/plugins.temp
 

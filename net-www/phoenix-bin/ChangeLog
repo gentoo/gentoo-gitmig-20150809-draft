@@ -1,13 +1,13 @@
 # ChangeLog for net-www/phoenix-bin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.9 2002/11/19 20:04:31 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.10 2002/11/19 20:48:35 phoenix Exp $
 
 *phoenix-bin-0.4-r1 (19 Nov 2002)
 
   19 Nov 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-0.4-r2.ebuild 
   files/digest-phoenix-bin0.4-r2 :
   Made phoenix mozilla plugin compliant. The new plugin layout for 
-  phoenix and mozilla is: All plugins go to /usr/share/mozilla/plugins 
+  phoenix and mozilla is: All plugins go to /usr/lib/nsbrowser/plugins 
   and the browsers plugins/ dir is symlinked to that very directory. 
   Check bug #10056 for further details.
 
