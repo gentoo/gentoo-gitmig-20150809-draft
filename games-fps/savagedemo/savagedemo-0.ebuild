@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/savagedemo/savagedemo-0.ebuild,v 1.3 2003/10/12 22:36:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/savagedemo/savagedemo-0.ebuild,v 1.4 2003/12/30 20:18:28 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -37,6 +37,9 @@ src_install() {
 	dodir ${dir}
 
 	cp -rf Savage/* linux/* ${D}/${dir}/
+
+	cp -f ${D}/${dir}/icon.xpm ${D}/usr/share/pixmaps/savage.xpm
+
 	insinto ${dir}/game
 	doins linux/game/game_demo.so
 	find ${D}/${dir} -type f -exec chmod a-x '{}' \;
@@ -48,4 +51,6 @@ src_install() {
 
 	prepgamesdirs
 	chmod -R g+w ${D}/${dir}/updater
+
+	make_desktop_entry savagedemo "Savage (Demo)" savage.xpm
 }
