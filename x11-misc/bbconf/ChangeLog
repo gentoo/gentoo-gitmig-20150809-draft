@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/bbconf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbconf/ChangeLog,v 1.7 2003/03/01 20:40:16 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbconf/ChangeLog,v 1.8 2003/05/13 17:18:48 hanno Exp $
+
+*bbconf-1.10 (13 May 2003)
+
+  13 May 2003; Hanno Boeck <hanno@gentoo.org> bbconf-1.10.ebuild :
+  New version submitted by Matt Jacobs.
 
   01 Mar 2003; Hanno Boeck <hanno@gentoo.org> :
   Fixed download location.
