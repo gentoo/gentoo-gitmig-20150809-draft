@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-2.0.0_alpha20041227.ebuild,v 1.1 2005/01/17 19:52:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-2.0.0_alpha20050215.ebuild,v 1.1 2005/02/17 03:44:43 swegener Exp $
 
 inherit flag-o-matic
 
@@ -13,6 +13,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="ipv6 pam"
+RESTRICT="nomirror"
 
 DEPEND=">=dev-libs/libpcre-3.9
 	pam? ( sys-libs/pam )"
