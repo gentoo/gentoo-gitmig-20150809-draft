@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.5 2002/09/11 00:50:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.6 2002/09/11 00:57:55 azarah Exp $
 # This eclass contains (or should) functions to get common info about gcc
 ECLASS=gcc
 INHERITED="$INHERITED $ECLASS"
@@ -17,22 +17,25 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # Returns the name of the C compiler binary
 gcc-getCC() {
 
-	local CC="gcc"
-
-	if [ "$(${CC} -dumpversion | cut -f1 -d.)" -ne 3 ] && \
-	   [ "${WANT_GCC_3}" = "yes" ]
+	if [ "${WANT_GCC_3}" = "yes" -o -z "${CC}" ]
 	then
-		# We use the dual/multiple install of gcc-3.x if the user
-		# have 2.95.3 as base
-		if [ -x /usr/bin/gcc-3.2 ]
+		local CC="gcc"
+
+		if [ "$(${CC} -dumpversion | cut -f1 -d.)" -ne 3 ] && \
+		   [ "${WANT_GCC_3}" = "yes" ]
 		then
-			CC="gcc-3.2"
-		elif [ -x /usr/bin/gcc-3.1 ]
-		then
-			CC="gcc-3.1"
-		elif [ -x /usr/bin/gcc-3.0 ]
-		then
-			CC="gcc-3.0"
+			# We use the dual/multiple install of gcc-3.x if the user
+			# have 2.95.3 as base
+			if [ -x /usr/bin/gcc-3.2 ]
+			then
+				CC="gcc-3.2"
+			elif [ -x /usr/bin/gcc-3.1 ]
+			then
+				CC="gcc-3.1"
+			elif [ -x /usr/bin/gcc-3.0 ]
+			then
+				CC="gcc-3.0"
+			fi
 		fi
 	fi
 
@@ -42,13 +45,18 @@ gcc-getCC() {
 # Returns the name of the C++ compiler binary
 gcc-getCXX() {
 
-	CC="$(gcc-getCC)"
-	
-	if [ "$(${CC} -dumpversion | cut -f1 -d.)" -eq 3 ]
+	if [ "${WANT_GCC_3}" = "yes" -o -z "${CXX}" ]
 	then
-		echo "${CC/gcc/g++}"
+		local CC="$(gcc-getCC)"
+	
+		if [ "$(${CC} -dumpversion | cut -f1 -d.)" -ge 3 ]
+		then
+			echo "${CC/gcc/g++}"
+		else
+			echo "${CC}"
+		fi
 	else
-		echo "${CC}"
+		echo "${CXX}"
 	fi
 }
 
