@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/loudmouth
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.22 2004/12/18 17:03:51 foser Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.23 2005/02/14 23:31:37 foser Exp $
+
+*loudmouth-0.17.2-r1 (15 Feb 2005)
+
+  15 Feb 2005; foser <foser@gentoo.org> loudmouth-0.17.2-r1.ebuild :
+  Add patch to fix gnutls deprecated symbol issues (#79309)
 
 *loudmouth-0.17.2 (18 Dec 2004)
 
