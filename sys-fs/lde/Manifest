@@ -1,4 +1,5 @@
-MD5 8d920b3cfc487ce71ae2f5d46b5c5c7e files/digest-lde-2.6.0 61
-MD5 6d2b5ea1d128bb17a638b7224049b384 files/2.6.0-gcc3.patch 6305
 MD5 51af8676b67c2c199cdfa7d0d72ef768 lde-2.6.0.ebuild 688
 MD5 238cf7ad790426d2964bf28594325b38 ChangeLog 522
+MD5 8b38aca4e779e11e0569c860f8f851a4 metadata.xml 204
+MD5 8d920b3cfc487ce71ae2f5d46b5c5c7e files/digest-lde-2.6.0 61
+MD5 5bed5e7b01d4a35898ba6ce2409b61a9 files/2.6.0-gcc3.patch 274

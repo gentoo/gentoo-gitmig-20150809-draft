@@ -1,5 +1,6 @@
 MD5 75af4253ae028e056fbb08f99850ff37 ext2resize-1.1.17.ebuild 669
 MD5 069ded8e4921ac7ee31c5fdf147e7aad ext2resize-1.1.17-r1.ebuild 884
 MD5 27e22acd50103d6fbb836c768fe80c7f ChangeLog 1079
+MD5 8b38aca4e779e11e0569c860f8f851a4 metadata.xml 204
 MD5 47b7f77e01a5ed768f6456a7e85f3962 files/digest-ext2resize-1.1.17-r1 70
 MD5 47b7f77e01a5ed768f6456a7e85f3962 files/digest-ext2resize-1.1.17 70

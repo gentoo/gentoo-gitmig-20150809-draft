@@ -1,6 +1,7 @@
 MD5 404bd4ab959bd2f484dda0064417a7e0 hfsplusutils-1.0.4.ebuild 1041
 MD5 392e6e92a3f68c97087714e6b498f9ad hfsplusutils-1.0.4-r1.ebuild 1121
 MD5 ff5b4eee29a9e912402d58526f71f021 ChangeLog 1340
+MD5 8b38aca4e779e11e0569c860f8f851a4 metadata.xml 204
 MD5 4d95cf7ea2995218d48dbf18375f0673 files/digest-hfsplusutils-1.0.4 70
 MD5 55d48aa8e0ed10af513c1ccf3afeb25f files/hfsplusutils-1.0.4-errno.patch 445
 MD5 04d73b3a534085a657c52eee99c5e1d4 files/hfsplusutils-1.0.4-glob.patch 288
