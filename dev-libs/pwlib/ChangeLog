@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.23 2003/04/01 02:50:24 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.24 2003/05/16 23:30:11 liquidx Exp $
+
+  17 May 2003; Alastair Tse <liquidx@gentoo.org> pwlib-1.4.11.ebuild:
+  marked as x86 stable
 
 *pwlib-1.4.11 (20 Mar 2003)
 
