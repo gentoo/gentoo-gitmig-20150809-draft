@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.59 2003/01/18 23:19:45 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.60 2003/01/18 23:24:03 tuxus Exp $
+
+*baselayout-1.8.6.2 (07 Jan 2003)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  serial console for mips
 
   15 Jan 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.6.2.ebuild :
 
@@ -16,6 +21,7 @@
   'svcmount' stuff ...
 
 *baselayout-1.8.6.0 (07 Jan 2003)
+
 
   07 Jan 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.6.0.ebuild :
 
