@@ -800,3 +800,7 @@ sys-apps/texinfo
 # patch to support gcc3.1 -- masked until someone tests this with
 # gcc2.95.3 etc.
 =net-www/galeon-1.2.1-r2
+
+# ashmodai@gentoo.org 22 May 2002
+# Masked until I can get the 'support' packages/patches merged.
+=net-dialup/pptpd-1.1.2
