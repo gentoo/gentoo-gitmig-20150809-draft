@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <karltk@gentoo.org> (08 Sep 2002)
+# This fixes a few problems, but should not be unmasked 
+# before it's properly tested, probably not before 1.4
+# release.
+=dev-lang/ant-1.5
+
 # <tantive@gentoo.org> (08 Sep 2002)
 # Masked for testing, added a patch to compile using gcc3 
 =sys-kernel/openmosix-sources-2.4.19-r4
