@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.0.ebuild,v 1.9 2004/04/20 15:11:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.0.ebuild,v 1.10 2004/04/27 07:50:44 vapier Exp $
 
-inherit enlightenment flag-o-matic gcc
+inherit enlightenment flag-o-matic eutils
 
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
 HOMEPAGE="http://www.enlightenment.org/pages/imlib2.html"
@@ -23,10 +23,13 @@ DEPEND="=media-libs/freetype-2*
 
 S=${WORKDIR}/${P}
 
+src_unpack() {
+	enlightenment_src_unpack
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc-3.4.patch
+}
+
 src_compile() {
-	replace-flags k6-3 i586
-	replace-flags k6-2 i586
-	replace-flags k6 i586
 	[ ${ARCH} = alpha ] && append-flags -fPIC
 
 	econf \
