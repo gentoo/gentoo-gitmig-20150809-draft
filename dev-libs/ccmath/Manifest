@@ -1,13 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fbb7157d23ab6d18f77ceba3a5ef7b1a ChangeLog 1113
-MD5 cc53c4652310450b853c0e85ccf804a1 ccmath-2.2.1.ebuild 959
+MD5 fe7502af8f12f063a28e80070b5baa3d ccmath-2.2.1.ebuild 1153
+MD5 3a8103629e7d283faa430d3889c13b5a ChangeLog 1265
+MD5 e659e0f4f4aa1423e24d5d5089d0ae61 files/ccmath-2.2.1-fPIC.patch 707
 MD5 1c8ba73673ef00b6ffaf5c195bccb99d files/digest-ccmath-2.2.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW0+ZI1lqEGTUzyQRAgvoAKCBBjbMA5SjXj3qMfNQhd81iD6JfgCbBb8x
-zQl8vtwQE6UeUbOZne3Pk1Q=
-=O/LH
------END PGP SIGNATURE-----
