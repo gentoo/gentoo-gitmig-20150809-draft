@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r2.ebuild,v 1.5 2002/11/10 10:00:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r2.ebuild,v 1.6 2002/11/11 11:52:13 hannes Exp $
 inherit kde-dist
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"
@@ -95,7 +95,7 @@ src_install() {
 
     # startkde script
     cd ${D}/${KDEDIR}/bin
-    patch -p0 < ${FILESDIR}/startkde-${PVR}-gentoo.diff || die
+    patch -p0 < ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff || die
     mv startkde startkde.orig
     sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
     rm startkde.orig
