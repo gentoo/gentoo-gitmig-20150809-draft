@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/krusader
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/ChangeLog,v 1.14 2003/06/12 15:03:13 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/ChangeLog,v 1.15 2003/07/20 13:32:19 caleb Exp $
+
+*krusader-1.21_beta1 (20 Jul 2003) 
+
+  20 Jul 2003; Caleb Tennis <caleb@gentoo.org> krusader-1.21_beta1.ebuild:
+  Version bump.
 
   12 Jun 2003; Caleb Tennis <caleb@gentoo.org>:
   Removed old ebuilds: krusader-1.00, krusader-1.11, krusader-1.12_beta{1,2}
