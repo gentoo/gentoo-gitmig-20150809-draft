@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.1 2002/07/01 19:37:20 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.2 2002/07/30 13:19:11 danarmak Exp $
+
+*kile-1.1 (31 Jul 2002)
+
+  31 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New version. Closes #5673.
 
 *kile-1.0_beta1 (5 May 2002)
 
