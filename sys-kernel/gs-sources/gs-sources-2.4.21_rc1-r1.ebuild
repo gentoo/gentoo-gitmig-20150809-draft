@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.21_rc1-r1.ebuild,v 1.4 2003/09/07 18:55:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.21_rc1-r1.ebuild,v 1.5 2003/09/10 04:29:07 msterret Exp $
 
 IUSE="build crypt"
 
@@ -27,8 +27,8 @@ S=${WORKDIR}/linux-${KV}
 # to /usr/share/doc/gs-sources-${PV}/patches.txt.gz
 
 DESCRIPTION="This kernel stays up to date with current kernel -pres,
-	     with recent acpi,evms,win3lin ,futexes,aic79xx,
-             superfreeswan,preempt/ll, and various hw fixes."
+	with recent acpi,evms,win3lin ,futexes,aic79xx,
+	superfreeswan,preempt/ll, and various hw fixes."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 http://gentoo.lostlogicx.com/patches-${KV}.tar.bz2"
 KEYWORDS="~x86 -ppc -sparc "

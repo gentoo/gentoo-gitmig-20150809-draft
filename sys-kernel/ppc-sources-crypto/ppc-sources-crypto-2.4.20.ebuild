@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ppc-sources-crypto-2.4.20.ebuild,v 1.7 2003/07/22 20:00:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ppc-sources-crypto-2.4.20.ebuild,v 1.8 2003/09/10 04:32:25 msterret Exp $
 
 IUSE="build crypt"
 
@@ -35,7 +35,7 @@ then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
 	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl
-        	 virtual/modutils sys-devel/make"
+		virtual/modutils sys-devel/make"
 fi
 
 
