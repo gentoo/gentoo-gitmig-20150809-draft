@@ -14,3 +14,4 @@ sse
 svga
 tcc
 x86 
+uclibc

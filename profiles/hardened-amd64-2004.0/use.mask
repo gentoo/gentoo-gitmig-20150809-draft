@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-amd64-2004.0/use.mask,v 1.1 2004/05/05 01:20:59 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-amd64-2004.0/use.mask,v 1.2 2004/06/26 23:29:26 solar Exp $
 
 # Anything that relies on vm86.h will not built on amd64
 # SVGAlib doesnt build
@@ -24,3 +24,4 @@ selinux
 
 # x86 binary only, used by php
 fdftk
+uclibc

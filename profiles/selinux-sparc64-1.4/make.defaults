@@ -1,4 +1,4 @@
-# Copyright 2004 Gentoo Technologies, Inc.
+# Copyright 2004 Gentoo Foundation.
 # System-wide defaults for the Portage system
 
 ARCH="sparc"

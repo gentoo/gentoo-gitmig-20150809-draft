@@ -1,4 +1,4 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 2002 Gentoo Foundation.
 # System-wide defaults for the gcc 3.2 Portage system
 
 #Experimental: trying to use these USE variables to build up from stage 2->3 

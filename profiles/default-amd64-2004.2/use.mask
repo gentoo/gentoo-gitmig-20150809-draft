@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.2/use.mask,v 1.2 2004/06/25 21:00:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.2/use.mask,v 1.3 2004/06/26 23:29:25 solar Exp $
 
 # WON'T BUILD - SECTION
 
@@ -50,3 +50,4 @@ selinux
 # Known BUGs (#54760) + lack of brain/man power to maintain "hardened" in the
 # default profile. Use the hardened profile instead.
 hardened
+uclibc

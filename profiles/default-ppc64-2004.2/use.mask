@@ -29,3 +29,4 @@ selinux
 java
 
 media-sound/alsa-driver
+uclibc

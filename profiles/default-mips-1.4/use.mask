@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-1.4/use.mask,v 1.9 2004/06/11 08:57:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-1.4/use.mask,v 1.10 2004/06/26 23:29:25 solar Exp $
 
 
 # Chris PeBenito <pebenito@gentoo.org>
@@ -56,3 +56,4 @@ ia64
 ppc64
 s390
 
+uclibc

@@ -30,3 +30,4 @@ hdf
 
 #mask until sys-cluster/lam-mpi is tested on ppc
 mpi
+uclibc

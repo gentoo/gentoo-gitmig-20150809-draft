@@ -1,6 +1,6 @@
-# Copyright 2004 Gentoo Technologies, Inc.
+# Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.1 2004/03/19 21:58:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.2 2004/06/26 23:29:25 solar Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -40,3 +40,4 @@ arm
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
+uclibc

@@ -1,4 +1,4 @@
-# Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
+# Copyright 2000 Daniel Robbins, Gentoo Foundation.
 # System-wide defaults for the Portage system
 
 GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses"

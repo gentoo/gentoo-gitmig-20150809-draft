@@ -14,3 +14,4 @@ icc-pgo
 mmx
 svga
 sse
+uclibc

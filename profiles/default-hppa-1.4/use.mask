@@ -58,3 +58,4 @@ trusted
 wavelan
 x86
 firebird
+uclibc

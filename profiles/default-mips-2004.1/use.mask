@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-2004.1/use.mask,v 1.5 2004/06/05 02:58:35 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-2004.1/use.mask,v 1.6 2004/06/26 23:29:25 solar Exp $
 
 # Ilya A. Volynets-Evenbach
 # no nptl on mips yet
@@ -56,3 +56,4 @@ amd64
 ia64
 ppc64
 s390
+uclibc

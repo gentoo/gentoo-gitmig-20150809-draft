@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86/virtuals,v 1.4 2004/06/04 04:03:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86/virtuals,v 1.5 2004/06/26 23:29:26 solar Exp $
 
 virtual/bootloader	sys-boot/grub
 virtual/linux-sources	sys-kernel/selinux-sources

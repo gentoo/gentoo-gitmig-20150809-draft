@@ -7,3 +7,4 @@ uclibc
 # Jon portnoy <avenj@gentoo.org>
 # PPC-specific.
 altivec
+uclibc

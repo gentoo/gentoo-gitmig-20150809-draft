@@ -35,3 +35,4 @@ tcc
 # I don't think that openafs really works on other architectures,
 # despite some internal Gentoo efforts (mine) to port it
 afs
+uclibc

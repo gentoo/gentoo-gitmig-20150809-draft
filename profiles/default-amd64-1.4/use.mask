@@ -40,3 +40,4 @@ ifc
 # masked
 3dfx
 
+uclibc

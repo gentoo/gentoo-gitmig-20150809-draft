@@ -1,6 +1,6 @@
-# Copyright 2004 Gentoo Technologies, Inc.
+# Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.4 2004/03/17 01:05:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.5 2004/06/26 23:29:24 solar Exp $
 
 aalib						media-libs/aalib	
 alsa						media-libs/alsa-lib

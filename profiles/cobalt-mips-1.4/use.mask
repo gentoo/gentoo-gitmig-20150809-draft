@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/cobalt-mips-1.4/use.mask,v 1.4 2004/06/11 08:57:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/cobalt-mips-1.4/use.mask,v 1.5 2004/06/26 23:29:24 solar Exp $
 
 
 # Chris PeBenito <pebenito@gentoo.org>
@@ -54,3 +54,4 @@ ia64
 ppc64
 s390
 
+uclibc

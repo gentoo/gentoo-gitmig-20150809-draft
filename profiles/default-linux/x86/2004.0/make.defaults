@@ -1,6 +1,6 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 2002 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2004.0/make.defaults,v 1.1 2004/03/19 21:58:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2004.0/make.defaults,v 1.2 2004/06/26 23:29:25 solar Exp $
 
 # System-wide defaults for the gcc 3.2 Portage system (2004.0)
 

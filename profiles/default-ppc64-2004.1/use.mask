@@ -36,3 +36,4 @@ ldap
 # no nptl on ppc64 yet
 nptl
 
+uclibc

@@ -1,4 +1,4 @@
-# copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
+# copyright 2000 Daniel Robbins, Gentoo Foundation.
 # System-wide defaults for the Portage system
 
 ARCH="mips"

@@ -1,4 +1,4 @@
-# Copyright 2002 Daniel Robbins, Gentoo Technologies, Inc.
+# Copyright 2002 Daniel Robbins, Gentoo Foundation.
 # System-wide defaults for the gcc 3.1 Portage system
 
 USE="x86 oss 3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib

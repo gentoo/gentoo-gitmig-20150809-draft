@@ -1,4 +1,4 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 2002 Gentoo Foundation.
 
 GRP_STAGE23_USE="amd64 berkdb crypt readline nls ssl tcpd zlib pam pic python acl ncurses -java -gcj f77 objc -X -multilib hardened"
 USE="amd64 berkdb crypt readline nls ssl tcpd zlib pam pic python acl ncurses -java -gcj f77 objc -multilib hardened -cups gdbm zlib"

@@ -6,3 +6,4 @@ selinux
 # Jon Portnoy <avenj@gentoo.org>
 # PPC-specific.
 altivec
+uclibc
