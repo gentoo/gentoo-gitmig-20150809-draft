@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-2.5.ebuild,v 1.3 2004/06/24 21:59:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-2.5.ebuild,v 1.4 2004/07/08 23:32:26 eldad Exp $
 
 DESCRIPTION="darkstat is a network traffic analyzer"
 HOMEPAGE="http://members.optushome.com.au/emikulic/net/darkstat/"
@@ -13,8 +13,6 @@ SLOT="0"
 
 DEPEND=">=net-libs/libpcap-0.7.1"
 RDEPEND=""
-
-S="${WORKDIR}/${P}"
 
 src_compile() {
 	./configure \

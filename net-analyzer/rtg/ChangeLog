@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/rtg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/ChangeLog,v 1.5 2004/06/24 22:16:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/ChangeLog,v 1.6 2004/07/08 23:29:58 eldad Exp $
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> rtg-0.7.4-r1.ebuild,
+  rtg-0.7.4.ebuild:
+  marked x86 stable
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> rtg-0.7.4.ebuild:
+  added missing IUSE
 
   04 Jun 2004; David Holm <dholm@gentoo.org> rtg-0.7.4-r1.ebuild:
   Added to ~ppc.
