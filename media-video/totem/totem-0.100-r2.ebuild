@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.100-r2.ebuild,v 1.1 2005/01/12 14:07:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.100-r2.ebuild,v 1.2 2005/01/12 16:10:31 foser Exp $
 
 inherit gnome2 eutils
 
@@ -67,6 +67,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-cdrom_include.patch
 	# fix the desktop item (#77204)
 	epatch ${FILESDIR}/${P}-fix_desktop_item.patch
+	# some more minor fixes
+	cd ${S}/src
+	epatch ${FILESDIR}/${P}-gst_backend_fixes-r1.patch
 
 	WANT_AUTOMAKE=1.4 automake
 

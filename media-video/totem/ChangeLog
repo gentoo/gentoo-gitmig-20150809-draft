@@ -1,12 +1,13 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.42 2005/01/12 14:07:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.43 2005/01/12 16:10:31 foser Exp $
 
 *totem-0.100-r2 (12 Jan 2005)
 
   12 Jan 2005; foser <foser@gentoo.org> totem-0.100-r2.ebuild :
   Redo the kernel 2.4 cdrom/header fix (#68087)
   Add scrollkeeper dep (#77631)
+  Add a patch with minor speed fixes for gst
 
 *totem-0.100-r1 (09 Jan 2005)
 

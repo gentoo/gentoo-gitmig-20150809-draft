@@ -1,0 +1,38 @@
+--- bacon-video-widget-gst.c.orig	2005-01-03 00:18:38.000000000 +0100
++++ bacon-video-widget-gst.c	2005-01-12 14:17:36.000000000 +0100
+@@ -802,14 +802,6 @@
+ {
+   GstFormat fmt = GST_FORMAT_TIME;
+   gint64 value;
+-  gboolean res;
+-
+-  if (!GST_FLAG_IS_SET (bvw->priv->play, GST_BIN_SELF_SCHEDULABLE)) {
+-    res = gst_bin_iterate (GST_BIN (bvw->priv->play));
+-  } else {
+-    g_usleep (100);
+-    res = (gst_element_get_state (bvw->priv->play) == GST_STATE_PLAYING);
+-  }
+ 
+   /* check length/pos of stream */
+   if (!bvw->priv->stream_length) {
+@@ -825,10 +817,7 @@
+ 		   value, bvw);
+   }
+ 
+-  if (!res)
+-    bvw->priv->update_id = 0;
+-
+-  return res;
++  return TRUE;
+ }
+ 
+ static void
+@@ -876,7 +865,7 @@
+   } else if (new_state == GST_STATE_PLAYING) {
+     if (bvw->priv->update_id != 0)
+       g_source_remove (bvw->priv->update_id);
+-    bvw->priv->update_id = g_idle_add ((GSourceFunc) cb_iterate, bvw);
++    bvw->priv->update_id = g_timeout_add (200, (GSourceFunc) cb_iterate, bvw);
+   }
+ 
+   if (old_state <= GST_STATE_READY &&
