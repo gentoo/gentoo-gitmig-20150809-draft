@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.8 2003/08/21 23:47:29 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.9 2003/10/30 16:28:00 lanius Exp $
+
+  30 Oct 2003; Heinrich Wendel <lanius@gentoo.org> files/3.2_p1-r2/ip-up,
+  files/3.2_p1-r2/isdn4linux.init:
+  bug #29690, #23526
 
   21 Aug 2003; Will Woods <wwoods@gentoo.org> isdn4k-utils-3.2_p1-r2.ebuild:
   Marked stable for alpha
