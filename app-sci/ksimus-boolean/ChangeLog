@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/ksimus-boolean
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ksimus-boolean/ChangeLog,v 1.4 2004/06/24 22:06:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ksimus-boolean/ChangeLog,v 1.5 2004/06/29 11:52:51 carlo Exp $
+
+  29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> ksimus-boolean-0.3.6.ebuild:
+  QA: inherit kde-base -> inherit kde
 
   26 Mar 2004; Patrick Kursawe <phosphan@gentoo.org>
   ksimus-boolean-0.3.6.ebuild:
