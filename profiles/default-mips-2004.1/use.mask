@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-2004.1/use.mask,v 1.10 2004/09/01 03:20:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-2004.1/use.mask,v 1.11 2004/09/30 17:35:11 geoman Exp $
+
+# Stephen P. Becker <geoman@gentoo.org>
+# masked because of header issues
+hal
 
 # Stephen P. Becker <geoman@gentoo.org>
 # mask evolution use flag until it can be properly tested
