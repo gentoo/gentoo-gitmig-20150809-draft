@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.2.ebuild,v 1.3 2004/06/29 02:43:15 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.2.ebuild,v 1.4 2004/07/02 04:41:59 eradicator Exp $
 
 inherit libtool
 
@@ -17,7 +17,7 @@ DEPEND=">=dev-util/pkgconfig-0.14
 	>=sys-devel/gettext-0.11
 	doc? ( !s390? ( >=dev-util/gtk-doc-1 ) )"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_compile() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20040302.ebuild,v 1.4 2004/06/25 03:14:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20040302.ebuild,v 1.5 2004/07/02 04:45:15 eradicator Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses
-	virtual/glibc"
+	virtual/libc"
 
 S=${WORKDIR}/netbsd-cvs
 

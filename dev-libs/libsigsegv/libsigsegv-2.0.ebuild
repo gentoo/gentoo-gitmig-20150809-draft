@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.0.ebuild,v 1.4 2004/06/24 23:22:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.0.ebuild,v 1.5 2004/07/02 04:49:19 eradicator Exp $
 
 DESCRIPTION="GNU libsigsegv is a library for handling page faults in user mode."
 HOMEPAGE="ftp://ftp.gnu.org/pub/gnu/libsigsegv/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	./configure \

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/skyutils-2.6.ebuild,v 1.3 2004/06/24 23:33:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/skyutils-2.6.ebuild,v 1.4 2004/07/02 04:55:20 eradicator Exp $
 
 IUSE="ssl"
 
@@ -12,12 +12,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-apps/gawk
 	sys-devel/gcc
 	ssl? ( dev-libs/openssl )"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_compile() {
 	econf `use_enable ssl` || die "./configure failed"

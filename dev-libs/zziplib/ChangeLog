@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.7 2004/06/24 23:39:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.8 2004/07/02 04:58:37 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  zziplib-0.13.33.ebuild:
+  virtual/glibc -> virtual/libc
 
   29 Apr 2004; Aron Griffis <agriffis@gentoo.org> zziplib-0.13.33.ebuild:
   Add ~alpha

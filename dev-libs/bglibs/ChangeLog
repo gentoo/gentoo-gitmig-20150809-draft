@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/bglibs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.12 2004/06/24 23:00:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.13 2004/07/02 04:33:54 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> bglibs-1.001.ebuild,
+  bglibs-1.009-r1.ebuild, bglibs-1.009.ebuild, bglibs-1.011.ebuild:
+  virtual/glibc -> virtual/libc
 
   23 May 2004; Bryan Østergaard <kloeri@gentoo.org> bglibs-1.011.ebuild:
   Stable on alpha.

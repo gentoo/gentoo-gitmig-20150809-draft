@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/log4cpp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.7 2004/06/24 23:26:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.8 2004/07/02 04:51:20 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  log4cpp-0.3.4b.ebuild:
+  virtual/glibc -> virtual/libc
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> log4cpp-0.3.4b.ebuild:
   adding s390 keywords

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ccmath/ccmath-2.2.1.ebuild,v 1.7 2004/06/24 23:01:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ccmath/ccmath-2.2.1.ebuild,v 1.8 2004/07/02 04:35:12 eradicator Exp $
 
 DESCRIPTION="CCMATH is a mathematics library, coded in C, that contains functions for linear algebra, numerical integration,
 	geometry and trigonometry, curve fitting, roots and optimization, Fourier analysis, simulation generation, statistics,
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ppc sparc"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 IUSE=""
 

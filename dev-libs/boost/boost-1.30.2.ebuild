@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.30.2.ebuild,v 1.5 2004/06/24 23:01:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.30.2.ebuild,v 1.6 2004/07/02 04:34:23 eradicator Exp $
 
 DESCRIPTION="Boost provides free peer-reviewed portable C++ source libraries."
 HOMEPAGE="http://www.boost.org"
@@ -15,7 +15,7 @@ IUSE="icc"
 # This would be a good place for someone to figure out how to get
 # boost to build nicely with icc, as it's documented to be doable.
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND=">=dev-util/yacc-1.9.1-r1
 	>=dev-lang/python-2.2.1
 	icc? ( >=dev-lang/icc-7.1 )"

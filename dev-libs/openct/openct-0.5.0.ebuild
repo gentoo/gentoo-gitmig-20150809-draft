@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.5.0.ebuild,v 1.3 2004/06/24 23:30:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.5.0.ebuild,v 1.4 2004/07/02 04:53:17 eradicator Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="usb"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	usb? (	>=dev-libs/libusb-0.1.7
 		>=sys-apps/hotplug-20030805-r1 )"
 DEPEND="${RDEPEND}

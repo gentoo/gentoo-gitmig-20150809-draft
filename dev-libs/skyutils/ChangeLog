@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/skyutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/ChangeLog,v 1.9 2004/06/24 23:33:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/ChangeLog,v 1.10 2004/07/02 04:55:20 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> skyutils-2.5.ebuild,
+  skyutils-2.6.ebuild:
+  virtual/glibc -> virtual/libc
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> -skyutils-2.1.ebuild,
   -skyutils-2.4.ebuild, skyutils-2.6.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/phlib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/phlib/ChangeLog,v 1.2 2004/06/24 23:31:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/phlib/ChangeLog,v 1.3 2004/07/02 04:53:46 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> phlib-1.20.ebuild:
+  virtual/glibc -> virtual/libc
 
 *phlib-1.20 (02 Apr 2004)
 

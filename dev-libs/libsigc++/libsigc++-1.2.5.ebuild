@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.16 2004/06/24 23:22:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.17 2004/07/02 04:49:06 eradicator Exp $
 
 DESCRIPTION="Typesafe callback system for standard C++"
 HOMEPAGE="http://libsigc.sourceforge.net/"
@@ -11,7 +11,7 @@ SLOT="1.2"
 KEYWORDS="x86 ppc sparc hppa amd64 alpha ia64"
 IUSE="debug"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 DEPEND="${RDEPEND}
 	amd64? ( >=sys-devel/automake-1.7 )"

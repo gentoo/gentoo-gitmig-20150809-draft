@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.7 2004/06/24 23:15:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.8 2004/07/02 04:44:29 eradicator Exp $
 
 S=${WORKDIR}/usr
 SRC_URI=""
 DESCRIPTION="Compaqs eXtended Math Library for linux alpha"
 HOMEPAGE="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/downloads.html"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		app-arch/rpm2targz
 		dev-libs/libots
 		dev-libs/libcpml"

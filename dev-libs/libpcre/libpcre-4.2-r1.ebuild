@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-4.2-r1.ebuild,v 1.14 2004/06/24 23:21:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-4.2-r1.ebuild,v 1.15 2004/07/02 04:48:11 eradicator Exp $
 
 inherit libtool flag-o-matic
 
@@ -15,7 +15,7 @@ SLOT="3"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	if [ "${ARCH}" = "amd64" ]

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libots/libots-2.2.7-r2.ebuild,v 1.3 2004/06/24 23:21:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libots/libots-2.2.7-r2.ebuild,v 1.4 2004/07/02 04:47:55 eradicator Exp $
 
 inherit eutils rpm
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.support.compaq.com/alpha-tools/"
 DESCRIPTION="Compaq Linux optimized runtime for Alpha/Linux/GNU"
 SRC_URI="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/${At}"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 LICENSE="compaq-sdla"
 SLOT="2.2.7"
 KEYWORDS="-* alpha"

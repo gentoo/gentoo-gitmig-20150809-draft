@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libhtmlparse
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhtmlparse/ChangeLog,v 1.4 2004/06/24 23:18:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhtmlparse/ChangeLog,v 1.5 2004/07/02 04:46:38 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libhtmlparse-0.1.12.ebuild:
+  virtual/glibc -> virtual/libc
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   libhtmlparse-0.1.12.ebuild:

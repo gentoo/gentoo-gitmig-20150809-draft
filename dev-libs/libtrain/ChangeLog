@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtrain
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtrain/ChangeLog,v 1.5 2004/06/24 23:24:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtrain/ChangeLog,v 1.6 2004/07/02 04:50:17 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> libtrain-0.9b.ebuild:
+  virtual/glibc -> virtual/libc
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.87 2004/06/28 16:01:22 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.88 2004/07/02 04:53:33 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  openssl-0.9.6m.ebuild, openssl-0.9.7c-r1.ebuild, openssl-0.9.7c.ebuild,
+  openssl-0.9.7d-r1.ebuild, openssl-0.9.7d.ebuild:
+  virtual/glibc -> virtual/libc
 
   28 Jun 2004; <solar@gentoo.org> openssl-0.9.7d-r1.ebuild:
   added missing uclibc to IUSE

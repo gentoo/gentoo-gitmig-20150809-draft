@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.3_alpha6.ebuild,v 1.2 2004/06/24 23:01:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.3_alpha6.ebuild,v 1.3 2004/07/02 04:34:08 eradicator Exp $
 
 MY_P=gc${PV/_/}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64 ~hppa"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	econf --enable-threads=pthreads \

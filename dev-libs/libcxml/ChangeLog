@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcxml
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/ChangeLog,v 1.3 2004/06/24 23:15:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/ChangeLog,v 1.4 2004/07/02 04:44:29 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> libcxml-5.2.0.ebuild:
+  virtual/glibc -> virtual/libc
 
 *libcxml-5.2.0 (23 Jun 2003)
 

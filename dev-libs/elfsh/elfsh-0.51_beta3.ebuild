@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfsh/elfsh-0.51_beta3.ebuild,v 1.5 2004/06/24 23:08:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfsh/elfsh-0.51_beta3.ebuild,v 1.6 2004/07/02 04:39:57 eradicator Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-libs/expat-1.95
 	>=sys-devel/gettext-0.11"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/atlas-3.4.2.ebuild,v 1.4 2004/06/24 23:00:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/atlas-3.4.2.ebuild,v 1.5 2004/07/02 04:33:39 eradicator Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SLOT="0"
 # if you change keywords here, please check dev-lang/R
 KEYWORDS="x86 sparc"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}/ATLAS
 

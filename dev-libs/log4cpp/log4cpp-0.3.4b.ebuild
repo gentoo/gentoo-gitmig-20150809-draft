@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-0.3.4b.ebuild,v 1.10 2004/06/24 23:26:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-0.3.4b.ebuild,v 1.11 2004/07/02 04:51:20 eradicator Exp $
 
 DESCRIPTION="library of C++ classes for flexible logging to files, syslog, IDSA and other destinations"
 HOMEPAGE="http://log4cpp.sourcforge.net/"
@@ -10,7 +10,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ppc amd64 s390"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	econf || die "./configure failed"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libtu-svn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtu-svn/ChangeLog,v 1.4 2004/06/24 23:25:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtu-svn/ChangeLog,v 1.5 2004/07/02 04:50:30 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libtu-svn-20040412.ebuild:
+  virtual/glibc -> virtual/libc
 
   31 May 2004; <twp@gentoo.org> libtu-svn-20040412.ebuild:
   Stable on x86.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvcgi/dvcgi-0.5.8.ebuild,v 1.4 2004/06/24 23:06:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvcgi/dvcgi-0.5.8.ebuild,v 1.5 2004/07/02 04:37:34 eradicator Exp $
 
 DESCRIPTION="dvcgi provides a C++ interface for C++ cgi programs"
 HOMEPAGE="http://tinf2.vub.ac.be/~dvermeir/software/dv/dvcgi/html/"
@@ -12,7 +12,7 @@ KEYWORDS="x86 ppc"
 
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	dev-libs/dvutil
 	dev-libs/dvnet"
 

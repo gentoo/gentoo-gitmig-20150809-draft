@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libax25
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/ChangeLog,v 1.4 2004/06/24 23:14:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/ChangeLog,v 1.5 2004/07/02 04:43:44 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libax25-0.0.11-r1.ebuild, libax25-0.0.11.ebuild:
+  virtual/glibc -> virtual/libc
 
 *libax25-0.0.11-r1 (31 Jul 2003)
 *libax25-0.0.11 (19 Jun 2003)

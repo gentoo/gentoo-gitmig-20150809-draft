@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syncdir/syncdir-1.0.ebuild,v 1.9 2004/06/24 23:35:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syncdir/syncdir-1.0.ebuild,v 1.10 2004/07/02 04:55:33 eradicator Exp $
 
 DESCRIPTION="Provides an alternate implementation for open, link, rename, and unlink "
 HOMEPAGE="http://untroubled.org/syncdir"
@@ -10,7 +10,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_compile() {
 	emake || die "compile problem"

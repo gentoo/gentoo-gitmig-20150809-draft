@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtu-svn/libtu-svn-20040412.ebuild,v 1.3 2004/06/24 23:25:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtu-svn/libtu-svn-20040412.ebuild,v 1.4 2004/07/02 04:50:30 eradicator Exp $
 
 inherit subversion
 
@@ -10,7 +10,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~ppc ~sparc x86"
 IUSE=""
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 ESVN_REPO_URI="http://tao.uab.es/ion/svn/libtu/trunk"
 ESVN_PROJECT="libtu-snapshot"

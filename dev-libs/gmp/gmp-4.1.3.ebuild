@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.3.ebuild,v 1.5 2004/06/24 23:11:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.3.ebuild,v 1.6 2004/07/02 04:42:19 eradicator Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -18,9 +18,9 @@ DEPEND="sys-apps/gawk
 	sys-devel/flex
 	sys-devel/libtool
 	sys-devel/gcc
-	virtual/glibc"
+	virtual/libc"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_compile() {
 	filter-flags -ffast-math

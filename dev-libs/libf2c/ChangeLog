@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libf2c
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.10 2004/07/01 16:48:00 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.11 2004/07/02 04:45:46 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libf2c-20021004-r1.ebuild, libf2c-20021004.ebuild:
+  virtual/glibc -> virtual/libc
 
   01 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> libf2c-20021004-r1.ebuild:
   Marked ~sparc on behalf of ciaranm.

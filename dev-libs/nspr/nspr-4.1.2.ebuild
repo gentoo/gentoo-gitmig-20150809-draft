@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.1.2.ebuild,v 1.12 2004/06/24 23:29:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.1.2.ebuild,v 1.13 2004/07/02 04:52:37 eradicator Exp $
 
 DESCRIPTION="Netscape Portable Runtime"
 SRC_URI="ftp://ftp.mozilla.org/pub/nspr/releases/v${PV}/src/${P}.tar.gz"
@@ -10,7 +10,7 @@ SLOT="0"
 LICENSE="MPL-1.1"
 KEYWORDS="x86 sparc"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${P}.tar.gz

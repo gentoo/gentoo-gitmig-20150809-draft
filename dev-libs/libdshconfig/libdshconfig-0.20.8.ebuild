@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdshconfig/libdshconfig-0.20.8.ebuild,v 1.4 2004/06/24 23:15:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdshconfig/libdshconfig-0.20.8.ebuild,v 1.5 2004/07/02 04:44:42 eradicator Exp $
 
 DESCRIPTION="Library for parsing dsh.style configuration files"
 HOMEPAGE="http://www.netfort.gr.jp/~dancer/software/downloads/"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="virtual/ssh"
 
 src_compile() {

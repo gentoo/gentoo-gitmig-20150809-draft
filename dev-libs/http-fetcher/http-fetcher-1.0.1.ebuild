@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/http-fetcher/http-fetcher-1.0.1.ebuild,v 1.3 2004/06/24 23:12:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/http-fetcher/http-fetcher-1.0.1.ebuild,v 1.4 2004/07/02 04:42:46 eradicator Exp $
 
 DESCRIPTION="HTTP Fetcher is a small, robust, flexible library for downloading files via HTTP using the GET method."
 HOMEPAGE="http://cs.nmu.edu/~lhanson/http_fetcher/"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}/${P/-/_}
 

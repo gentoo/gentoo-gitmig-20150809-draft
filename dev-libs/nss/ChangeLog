@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.21 2004/06/24 23:29:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.22 2004/07/02 04:52:51 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> nss-3.8.ebuild:
+  virtual/glibc -> virtual/libc
 
   30 Apr 2004; Stephen P. Becker <geoman@gentoo.org> nss-3.8.ebuild:
   Stable on mips.

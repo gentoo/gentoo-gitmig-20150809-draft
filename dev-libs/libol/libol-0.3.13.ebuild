@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/libol-0.3.13.ebuild,v 1.12 2004/06/25 10:49:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/libol-0.3.13.ebuild,v 1.13 2004/07/02 04:47:42 eradicator Exp $
 
 DESCRIPTION="Support library for syslog-ng"
 HOMEPAGE="http://www.balabit.hu/en/products/syslog-ng/"
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc sparc alpha hppa mips amd64 ~ia64 ppc64 s390"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND=""
 
 src_compile() {

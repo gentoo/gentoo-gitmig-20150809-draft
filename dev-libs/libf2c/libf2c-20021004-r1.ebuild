@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20021004-r1.ebuild,v 1.3 2004/07/01 16:48:00 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20021004-r1.ebuild,v 1.4 2004/07/02 04:45:47 eradicator Exp $
 
 inherit gcc eutils
 
@@ -12,7 +12,7 @@ LICENSE="libf2c"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}/${PN}
 

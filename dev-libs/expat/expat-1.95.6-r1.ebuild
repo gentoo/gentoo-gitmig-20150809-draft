@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.6-r1.ebuild,v 1.16 2004/06/24 23:09:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.6-r1.ebuild,v 1.17 2004/07/02 04:40:12 eradicator Exp $
 
 inherit eutils gnuconfig
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="amd64 x86 ppc sparc alpha hppa ia64 mips"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

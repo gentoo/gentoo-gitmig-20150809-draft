@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tdb/ChangeLog,v 1.12 2004/06/24 23:35:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tdb/ChangeLog,v 1.13 2004/07/02 04:55:46 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> tdb-1.0.6.ebuild:
+  virtual/glibc -> virtual/libc
 
   18 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> tdb-1.0.6.ebuild:
   Run gnuconfig_update for all archs, add amd64 keyword, inherit eutils, closing

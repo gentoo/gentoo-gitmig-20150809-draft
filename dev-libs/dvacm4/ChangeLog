@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dvacm4
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvacm4/ChangeLog,v 1.8 2004/06/24 23:06:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvacm4/ChangeLog,v 1.9 2004/07/02 04:37:21 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> dvacm4-0.3.5.ebuild:
+  virtual/glibc -> virtual/libc
 
   01 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> dvacm4-0.3.5.ebuild:
   don't assign default to S; fix depend; tidy

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhoard/libhoard-2.1.0.ebuild,v 1.9 2004/06/24 23:18:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhoard/libhoard-2.1.0.ebuild,v 1.10 2004/07/02 04:46:25 eradicator Exp $
 
 inherit libtool
 
@@ -13,7 +13,7 @@ LICENSE="LGPL-2.1"
 KEYWORDS="x86 sparc"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	# update libtool

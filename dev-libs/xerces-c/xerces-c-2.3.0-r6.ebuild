@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.3.0-r6.ebuild,v 1.5 2004/06/24 23:38:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.3.0-r6.ebuild,v 1.6 2004/07/02 04:57:24 eradicator Exp $
 
 MY_PV=${PV//./_}
 
@@ -9,7 +9,7 @@ DESCRIPTION="Xerces-C++ is a validating XML parser written in a portable subset 
 SRC_URI="http://xml.apache.org/dist/xerces-c/stable/${PN}-src_${MY_PV}.tar.gz"
 HOMEPAGE="http://xml.apache.org/xerces-c/index.html"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86 ~ppc"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/libmoe-1.5.6.ebuild,v 1.4 2004/06/24 23:20:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/libmoe-1.5.6.ebuild,v 1.5 2004/07/02 04:47:23 eradicator Exp $
 
 inherit gcc
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc -alpha"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	dev-lang/perl"
 
 src_compile() {

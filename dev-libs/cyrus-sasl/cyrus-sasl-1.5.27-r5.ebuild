@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27-r5.ebuild,v 1.10 2004/06/24 23:04:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27-r5.ebuild,v 1.11 2004/07/02 04:36:28 eradicator Exp $
 
 IUSE="kerberos"
 
@@ -13,7 +13,7 @@ LICENSE="as-is"
 SLOT="1"
 KEYWORDS="x86 sparc ppc"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
 	kerberos? ( >=app-crypt/mit-krb5-1.2.5 )"

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.36 2004/06/24 23:21:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.37 2004/07/02 04:48:11 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libpcre-3.9-r1.ebuild, libpcre-3.9-r2.ebuild, libpcre-3.9.ebuild,
+  libpcre-4.2-r1.ebuild, libpcre-4.4.ebuild:
+  virtual/glibc -> virtual/libc
 
   23 May 2004; Bryan Østergaard <kloeri@gentoo.org> libpcre-4.4.ebuild:
   Stable on alpha.
