@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110.ebuild,v 1.19 2005/03/01 02:32:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110.ebuild,v 1.20 2005/03/18 05:55:50 vapier Exp $
 
 MAN_VER="3.4.3"
 PATCH_VER="1.1"
@@ -29,7 +29,7 @@ PIE_GLIBC_UNSUPPORTED="hppa"
 
 # whether we should split out specs files for multiple {PIE,SSP}-by-default
 # and vanilla configurations.
-SPLIT_SPECS=${SPLIT_SPECS:=true}
+SPLIT_SPECS=${SPLIT_SPECS:-true}
 
 #GENTOO_PATCH_EXCLUDE=""
 #PIEPATCH_EXCLUDE=""
@@ -37,6 +37,7 @@ SPLIT_SPECS=${SPLIT_SPECS:=true}
 inherit toolchain eutils
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
+
 KEYWORDS="-* ~amd64 ~mips ~ppc64 ~x86 -hppa ~ppc ~sparc -ia64"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
