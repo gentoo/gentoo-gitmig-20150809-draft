@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.3 2003/10/22 21:08:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.4 2003/11/25 18:17:03 lanius Exp $
 
 inherit eutils
 
@@ -69,8 +69,13 @@ src_unpack() {
 }
 
 src_compile() {
+	ewarn "If you are using a 2.6 kernel you have to patch it for lirc support."
+	ewarn "There are several patches floating around, one of them can be found at "
+	ewarn "http://lwn.net/Articles/42217/."
+
 	ewarn "make sure you have IrDA (infrared) support"
 	ewarn "in your kernel or this will fail"
+
 	#Let portage tell us where to put our modules
 	check_KV
 

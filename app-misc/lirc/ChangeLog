@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.9 2003/11/16 17:09:32 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.10 2003/11/25 18:17:03 lanius Exp $
+
+  25 Nov 2003; Heinrich Wendel <lanius@gentoo.org> lirc-0.7.0_pre2.ebuild:
+  added warning about 2.6 kernel
 
   16 Nov 2003; Brad House <brad_mssw@gentoo.org> lirc-0.6.6-r1.ebuild:
   mark stable on amd64
