@@ -65,7 +65,6 @@
 *sys-apps/groff
 *sys-apps/gzip
 *sys-apps/hdparm
-*net-firewall/iptables
 *sys-apps/less
 *sys-apps/man
 *sys-apps/man-pages

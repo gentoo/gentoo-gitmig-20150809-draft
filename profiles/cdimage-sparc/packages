@@ -23,8 +23,6 @@ sys-apps/gawk
 sys-apps/grep
 sys-apps/gzip
 sys-apps/hdparm
-net-firewall/ipchains
-net-firewall/iptables
 sys-apps/less
 sys-apps/lvm-user
 sys-apps/silo

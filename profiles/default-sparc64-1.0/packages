@@ -43,7 +43,6 @@
 #*sys-apps/grub
 *sys-apps/gzip
 *sys-apps/hdparm
-*net-firewall/iptables
 *sys-apps/less
 
 *sys-apps/man
@@ -139,7 +138,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by ../default-sparc-1.0/scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.34 2003/03/25 17:09:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.35 2003/03/27 08:11:18 seemant Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh

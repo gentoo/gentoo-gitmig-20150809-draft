@@ -75,7 +75,6 @@
 *sys-apps/grub
 *sys-apps/gzip
 *sys-apps/hdparm
-*net-firewall/iptables
 *sys-apps/less
 >=sys-apps/lilo-22.1
 

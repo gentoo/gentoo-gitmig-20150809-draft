@@ -22,8 +22,6 @@ sys-apps/grep
 sys-apps/grub
 sys-apps/gzip
 sys-apps/hdparm
-net-firewall/ipchains
-net-firewall/iptables
 sys-apps/isapnptools
 sys-apps/less
 sys-apps/lilo
