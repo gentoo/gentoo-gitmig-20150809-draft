@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ninja-1.5.9_pre9.ebuild,v 1.9 2004/06/24 23:07:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ninja-1.5.9_pre9.ebuild,v 1.10 2004/07/01 22:22:48 eradicator Exp $
 
 # Get rid of underscore in package name
 MY_PV=`echo ${PV} | sed -e 's/_.*//'`
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ~sparc ~ppc"
 IUSE="ncurses ipv6 ssl"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ncurses? ( sys-libs/ncurses )
 	ssl?  ( dev-libs/openssl )"
 

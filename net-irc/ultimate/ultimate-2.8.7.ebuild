@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-2.8.7.ebuild,v 1.6 2004/06/24 23:09:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-2.8.7.ebuild,v 1.7 2004/07/01 22:23:48 eradicator Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE="debug"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND=">=sys-apps/sed-4"
 
 S="${WORKDIR}/${MY_P}"

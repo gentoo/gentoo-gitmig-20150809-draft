@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink/ptlink-6.14.2.ebuild,v 1.4 2004/06/24 23:08:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink/ptlink-6.14.2.ebuild,v 1.5 2004/07/01 22:23:17 eradicator Exp $
 
 MY_P="PTlink${PV}"
 DESCRIPTION="PTlink IRCd is a secure IRC daemon with many advanced features."
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
 IUSE=""
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND=""
 
 S=${WORKDIR}/${MY_P}

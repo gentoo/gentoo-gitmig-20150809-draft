@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.6.4.ebuild,v 1.11 2004/06/24 23:02:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.6.4.ebuild,v 1.12 2004/07/01 22:20:18 eradicator Exp $
 
 MY_P=${P/-/}
 DESCRIPTION="BNC (BouNCe) is used as a gateway to an IRC Server"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha arm"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}/${MY_P}
 

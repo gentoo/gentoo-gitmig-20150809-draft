@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/dircproxy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.10 2004/06/24 23:03:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.11 2004/07/01 22:21:03 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  dircproxy-1.0.5.ebuild, dircproxy-1.1.0.ebuild:
+  virtual/glibc -> virtual/libc
 
   17 Jun 2004; Sven Wegener <swegener@gentoo.org> dircproxy-1.0.5.ebuild,
   dircproxy-1.1.0.ebuild:

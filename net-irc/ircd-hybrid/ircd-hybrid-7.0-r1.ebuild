@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0-r1.ebuild,v 1.5 2004/06/28 03:35:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0-r1.ebuild,v 1.6 2004/07/01 22:21:47 eradicator Exp $
 
 MAX_NICK_LENGTH=30
 MAX_CLIENTS=500
@@ -33,7 +33,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	zlib? ( >=sys-libs/zlib-1.1.4-r1 )
 	ssl? ( >=dev-libs/openssl-0.9.6j )
 	|| ( >=dev-libs/libelf-0.8.2 >=dev-libs/elfutils-0.89 )

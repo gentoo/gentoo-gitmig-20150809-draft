@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.0.3.ebuild,v 1.3 2004/06/24 23:10:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.0.3.ebuild,v 1.4 2004/07/01 22:24:02 eradicator Exp $
 
 DESCRIPTION="Portable and multi-interface IRC client."
 HOMEPAGE="http://weechat.flashtux.org/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-libs/ncurses"
 RDEPEND=""
 

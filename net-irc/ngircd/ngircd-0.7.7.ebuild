@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-0.7.7.ebuild,v 1.4 2004/06/24 23:07:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-0.7.7.ebuild,v 1.5 2004/07/01 22:22:34 eradicator Exp $
 
 DESCRIPTION="A IRC server written from scratch."
 HOMEPAGE="http://arthur.ath.cx/~alex/ngircd/"
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND=""
 
 src_compile() {

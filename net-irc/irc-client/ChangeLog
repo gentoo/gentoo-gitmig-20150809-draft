@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irc-client
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/ChangeLog,v 1.5 2004/06/24 23:04:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/ChangeLog,v 1.6 2004/07/01 22:21:33 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  irc-client-2.10.3_p3.ebuild:
+  virtual/glibc -> virtual/libc
 
   21 Jun 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   irc-client-2.10.3_p3.ebuild:

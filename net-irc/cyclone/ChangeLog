@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/cyclone
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cyclone/ChangeLog,v 1.8 2004/06/24 23:02:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cyclone/ChangeLog,v 1.9 2004/07/01 22:20:35 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  cyclone-0.3.1.1.ebuild:
+  virtual/glibc -> virtual/libc
 
   07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> cyclone-0.3.1.1.ebuild:
   src_postinst() -> pkg_postinst(); IUSE; tidy
