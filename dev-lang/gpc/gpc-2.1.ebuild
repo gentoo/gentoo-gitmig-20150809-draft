@@ -1,15 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-2.1.ebuild,v 1.8 2002/10/20 18:41:38 vapier Exp $
-
-S="${WORKDIR}/gcc-2.95.3"
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-2.1.ebuild,v 1.9 2002/11/17 09:03:49 vapier Exp $
 
 DESCRIPTION="Gnu Pascal Compiler"
-
 SRC_URI="http://gnu-pascal.de/current/${P}.tar.gz
-		ftp://gcc.gnu.org/pub/gcc/releases/gcc-2.95.3/gcc-2.95.3.tar.gz"
+	ftp://gcc.gnu.org/pub/gcc/releases/gcc-2.95.3/gcc-2.95.3.tar.gz"
 #only need gcc-core (smaller download), but user will likely have this one already
-
 HOMEPAGE="http://gnu-pascal.de"
 
 SLOT="0"
@@ -17,8 +13,9 @@ KEYWORDS="x86 sparc sparc64"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
-		~sys-devel/gcc-2.95.3"
+	~sys-devel/gcc-2.95.3"
 
+S="${WORKDIR}/gcc-2.95.3"
 
 src_unpack() {
 	unpack "${P}.tar.gz"
@@ -48,7 +45,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	#lets reduce optimisation somewhat
 	export CFLAGS="${CFLAGS/-O?/-O2}"
 	export CXXFLAGS="${CXXFLAGS/-O?/-O2}"
@@ -68,7 +64,7 @@ src_compile() {
 	#make || die
 }
 
-src_install () {
+src_install() {
 	make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
@@ -80,7 +76,7 @@ src_install () {
 	#we do not want to overwrite it, do we? (even though the binaries are supposed to be the same)
 	#so do a dirty hack:
 	#go in to the image dir and delete everything inappropriate
-	
+
 	cd ${D}/usr/
 
 	mv bin bin.orig
@@ -106,7 +102,7 @@ src_install () {
 	#lets move it under /usr/share/doc
 	#(Ok, this is not the most buitiful way to do it, but it seems to be the easiest here :))
 	cd ${D}/usr/doc
-	mkdir -p ${D}/usr/share/doc/
+	dodir /usr/share/doc/
 	mv gpc/ ${D}/usr/share/doc/${P}
 	cd ${D}/usr/share/doc/${P}
 	for fn in *; do [ -f $fn ] && gzip $fn; done
