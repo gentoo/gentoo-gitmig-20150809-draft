@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta1.ebuild,v 1.1 2004/02/19 04:12:51 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta1.ebuild,v 1.2 2004/05/02 01:09:27 zx Exp $
 
 inherit java-pkg
 
@@ -12,6 +12,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 RDEPEND=">=virtual/jdk-1.2"
 DEPEND=">=virtual/jre-1.2"
+IUSE="kde gnome"
 
 S=${WORKDIR}
 
@@ -26,4 +27,12 @@ src_compile() {
 src_install() {
 	dobin ${FILESDIR}/bsh.Console ${FILESDIR}/bsh.Interpreter
 	java-pkg_dojar ${DISTDIR}/${P/_beta1/b1}.jar
+
+	if [ `use gnome` ] || [ `use kde` ] ; then
+		insinto /usr/share/pixmaps
+		doins ${FILESDIR}/beanshell-icon.png
+
+		insinto /usr/share/applications
+		doins ${FILESDIR}/beanshell.desktop
+	fi
 }
