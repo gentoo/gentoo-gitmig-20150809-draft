@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.8-r1.ebuild,v 1.2 2003/11/07 18:39:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.8-r1.ebuild,v 1.3 2003/11/12 11:13:19 pappy Exp $
 
 inherit mount-boot eutils
 
@@ -45,6 +45,12 @@ src_unpack() {
 }
 
 src_compile() {
+	# add the hardened-gcc compiler flag for building its assembler parts ;-)
+	if has_version 'sys-devel/hardened-gcc'
+	then
+		export CC="${CC:=gcc} -yet_exec"
+		find ${W} -type f -name "Makefile" -exec sed -i "s:CC=cc:CC=${CC}:" {} \;
+	fi
 
 	# Do not use custom CFLAGS for stability reasons
 	emake CC="${CC:=gcc}" lilo || die
