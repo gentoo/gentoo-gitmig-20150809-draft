@@ -110,3 +110,4 @@ move x11-misc/tkseti sci-astronomy/tkseti
 move app-sci/setimgr sci-astronomy/setimgr
 move app-sci/stellarium sci-astronomy/stellarium
 move app-sci/xephem sci-astronomy/xephem
+move app-sci/calcoo sci-calculators/calcoo
