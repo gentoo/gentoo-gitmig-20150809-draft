@@ -1,8 +1,11 @@
 # ChangeLog for net-libs/openhbci
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci/ChangeLog,v 1.1 2003/04/28 01:45:47 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci/ChangeLog,v 1.2 2003/04/29 10:16:12 liquidx Exp $
 
 *openhbci-0.9.9 (28 Apr 2003)
+
+  29 Apr 2003; Alastair Tse <liquidx@gentoo.org> openhbci-0.9.9.ebuild:
+  added chipcard support
 
   28 Apr 2003; Alastair Tse <liquidx@gentoo.org> openhbci-0.9.9.ebuild:
   initial ebuild commit. gnucash likes this one.
