@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/atftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/ChangeLog,v 1.4 2003/08/28 22:59:10 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/ChangeLog,v 1.5 2003/10/30 17:11:15 lanius Exp $
+
+  30 Oct 2003; Heinrich Wendel <lanius@gentoo.org> atftp-0.6-r1.ebuild,
+  atftp-0.6.ebuild:
+  added virtual/tftp
 
 *atftp-0.6-r1 (29 Aug 2003)
 
