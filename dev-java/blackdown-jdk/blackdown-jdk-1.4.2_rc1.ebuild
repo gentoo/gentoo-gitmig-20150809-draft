@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.7 2004/03/11 21:03:37 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.8 2004/03/17 05:32:50 zx Exp $
 
 IUSE="doc"
 
@@ -21,16 +21,16 @@ SRC_URI="amd64? ( ${J_URI}/amd64/${JREV}/j2sdk-${JV}-${JREV}-linux-amd64.bin )
 
 if [ "${ARCH}" = "amd64" ]
 then
-	A="j2sdk-${JV}-${JREV}-linux-amd64.bin"
+	MY_A="j2sdk-${JV}-${JREV}-linux-amd64.bin"
 elif [ "${ARCH}" = "x86" ]
 then
-	A="j2sdk-${JV}-${JREV}-linux-i586-gcc3.2.bin"
+	MY_A="j2sdk-${JV}-${JREV}-linux-i586-gcc3.2.bin"
 elif [ "${ARCH}" = "sparc" ]
 then
-	A="j2sdk-${JV}-${JREV}-linux-sparc.bin"
+	MY_A="j2sdk-${JV}-${JREV}-linux-sparc.bin"
 elif [ "${ARCH}" = "ppc" ]
 then
-	A="j2sdk-${JV}-${JREV}-linux-ppc.bin"
+	MY_A="j2sdk-${JV}-${JREV}-linux-ppc.bin"
 fi
 
 HOMEPAGE="http://www.blackdown.org"
@@ -65,15 +65,15 @@ get_offset() {
 }
 
 src_unpack () {
-	local offset="`get_offset ${DISTDIR}/${A}`"
+	local offset="`get_offset ${DISTDIR}/${MY_A}`"
 
 	if [ -z "${offset}" ] ; then
 		eerror "Failed to get offset of tarball!"
 		die "Failed to get offset of tarball!"
 	fi
 
-	echo ">>> Unpacking ${A}..."
-	tail -n +${offset} ${DISTDIR}/${A} | tar --no-same-owner -jxpf - || die
+	echo ">>> Unpacking ${MY_A}..."
+	tail -n +${offset} ${DISTDIR}/${MY_A} | tar --no-same-owner -jxpf - || die
 }
 
 unpack_jars()
