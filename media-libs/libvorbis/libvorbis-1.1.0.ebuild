@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.0.ebuild,v 1.2 2004/10/07 01:58:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.0.ebuild,v 1.3 2004/10/19 05:52:08 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://downloads.xiph.org/releases/vorbis/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~mips ~sparc ~hppa ~alpha ~ia64 ~ppc ~ppc64 ~macos ~ppc-macos"
+KEYWORDS="x86 amd64 ~mips sparc ~hppa ~alpha ~ia64 ~ppc ~ppc64 ~macos ~ppc-macos"
 
 RDEPEND=">=media-libs/libogg-1.0"
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.1.2.ebuild,v 1.1 2004/09/30 17:39:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.1.2.ebuild,v 1.2 2004/10/19 05:53:39 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://downloads.xiph.org/releases/ogg/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips ~ia64 ~ppc64 ~macos ~ppc-macos"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa amd64 ~mips ~ia64 ~ppc64 ~macos ~ppc-macos"
 
 DEPEND="virtual/libc"
 
