@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r5.ebuild,v 1.1 2003/12/29 21:31:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r5.ebuild,v 1.2 2003/12/30 06:54:42 seemant Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -180,7 +180,7 @@ check_glibc_ssp() {
 		echo
 		ewarn "This sys-libs/glibc has __guard object and __stack_smash_handler functions"
 		ewarn "scanning the system for binaries with __guard - this may take 5-10 minutes"
-		ewarn "Please do not press crtl-C or crtl-Z during this period - it will continue"
+		ewarn "Please do not press ctrl-C or ctrl-Z during this period - it will continue"
 		echo
 		if ! bash ${FILESDIR}/scan_libgcc_linked_ssp.sh
 		then
@@ -201,7 +201,7 @@ check_glibc_ssp() {
 			echo
 			einfo  " # ${FILESDIR}/scan_libgcc_linked_ssp.sh"
 			echo
-			die "Binaires with libgcc __guard@GCC dependencies detected!"
+			die "Binaries with libgcc __guard@GCC dependencies detected!"
 		else
 			echo
 			einfo "No binaries with suspicious libgcc __guard@GCC dependencies detected"
