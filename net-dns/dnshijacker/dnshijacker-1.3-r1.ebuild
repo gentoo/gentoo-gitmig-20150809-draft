@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnshijacker/dnshijacker-1.3-r1.ebuild,v 1.4 2004/07/14 23:23:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnshijacker/dnshijacker-1.3-r1.ebuild,v 1.5 2005/01/29 21:18:40 dragonheart Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=net-libs/libpcap-0.7.1
+DEPEND="virtual/libpcap
 	>=net-libs/libnet-1.0.2a-r3
 	<net-libs/libnet-1.1"
 
