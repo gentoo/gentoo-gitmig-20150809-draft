@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.3 2003/03/22 04:24:41 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.4 2003/04/03 19:23:06 absinthe Exp $
 
 
 S=${WORKDIR}/${PN}
@@ -37,14 +37,12 @@ pkg_setup() {
 		groupadd -g 260 orion || die "problem adding group orion"
 	fi
 	if ! id orion; then
-		useradd -g orion -s /bin/bash -d /opt/orion -c "orion" orion || die "problem adding user orion"
+		useradd -u 260 -g orion -s /bin/bash -d /opt/orion -c "orion" orion || die "problem adding user orion"
 	fi
 }
 
 
 src_install() {
-	local INSTALLING
-	INSTALLING="yes"
 	
 	# CREATE DIRECTORIES
 	DIROPTIONS="--mode=0775 --owner=orion --group=orion"
@@ -151,15 +149,4 @@ pkg_postinst() {
 	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
         sleep 10
 
-}
-
-pkg_postrm() {
-	if [ -z "${INSTALLING}" ] ; then
-		einfo ">>> Removing user for Orion"
-		userdel orion || die "Error removing Orion user"
-		einfo ">>> Removing group for Orion"
-		groupdel orion || die "Error removing Orion group"
-	else
-		einfo ">>> Orion user and group preserved"
-	fi
 }
