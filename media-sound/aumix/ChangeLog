@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/aumix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.34 2004/07/23 21:25:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.35 2004/08/29 21:13:24 eradicator Exp $
+
+  29 Aug 2004; Jeremy Huddleston <eradicator@gentoo.org> files/aumix.rc6:
+  Added 'usr hotplug' to init script for bug #62091.
 
   23 Jul 2004; Seemant Kulleen <seemant@gentoo.org> aumix-2.8-r2.ebuild:
   add nls check in the configure -- no nls now = no .mofiles being installed
