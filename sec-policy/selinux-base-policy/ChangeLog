@@ -1,6 +1,6 @@
 # ChangeLog for sec-policy/selinux-base-policy
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.11 2003/12/26 04:24:05 pebenito Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.12 2004/01/08 04:37:06 pebenito Exp $
 
 *selinux-base-policy-20031225 (25 Dec 2003)
 
@@ -9,8 +9,10 @@
   New release, with merged NSA 1.4 policy. One critical note, this policy
   requires pam 0.77. Much work has been done to minimize access to /etc/shadow,
   and one requirement is in the patch for pam 0.77. If you do not use this pam
-  version or newer, you will be unable to authenticate in enforcing. You should
-  merge the changes, and relabel.
+  version or newer, you will be unable to authenticate in enforcing. Since
+  devfs no longer is usable in SELinux, it's policy has been removed. You
+  should merge the changes, remove the devfsd policy (devfsd.te and devfsd.fc),
+  load the policy, and relabel.
 
   27 Nov 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-base-policy-20031010-r1.ebuild:
