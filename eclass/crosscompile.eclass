@@ -1,18 +1,16 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the term of the GNU General Public License v2
 # Author: Zachary T Welch
-# $Header: /var/cvsroot/gentoo-x86/eclass/crosscompile.eclass,v 1.1 2003/03/19 02:50:39 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/crosscompile.eclass,v 1.2 2003/04/06 03:39:06 zwelch Exp $
 
 ECLASS=crosscompile
 INHERITED="$INHERITED $ECLASS"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
-# set default CBUILD and CCHOST if not set
 # CBUILD is the --build for configure
+# CHOST is the --host for configure
 # CCHOST is the --target for configure
-[ -n "${CBUILD}" ] || export CBUILD="${CHOST}"
-[ -n "${CCHOST}" ] || export CCHOST="${CHOST}"
 
 extract-arch() {
 	local ISSPARC=$(expr "${1}" : sparc64)
@@ -52,7 +50,7 @@ target-arch() {
 # this function tests to see if we are currently 
 #  building something for another host
 cross-build() {
-	test "${CBUILD}" != "${CHOST}"
+	[ -n "${CBUILD}" ] && [ "${CBUILD}" != "${CHOST}" ]
 }
 
 # this function tests to see if we are currently
@@ -64,7 +62,7 @@ cross-build() {
 #  parallel installs themselves, but most packages
 #  that support --target should provide most of it
 cross-target() {
-	test "${CHOST}" != "${CCHOST}"
+	[ -n "${CCHOST}" ] && [ "${CHOST}" != "${CCHOST}" ]
 }
 
 
@@ -73,20 +71,81 @@ cross-target() {
 #  Right now, we take away a couple of obvious bullets from the
 #  guns aimed at users' toes... what others remain?
 cross-check() {
-	# if we're cross compiling, 
-	#  be sure to set ROOT or risk overwriting native versions
-	if cross-build && [ "${ROOT}" = "/" ]; then
-		eerror "You are cross-compiling and have not set ROOT"
-		die
-	fi
+	if cross-build
+	then
+		# if we're cross compiling, 
+		#  be sure to set ROOT or risk overwriting native versions
+		if [ "${ROOT}" = "/" ]; then
+			eerror "You are cross-compiling and have not set ROOT"
+			die
+		fi
 
-	# if we're targeting another host, 
-	#  modify SLOT for parallel install
-	if cross-target; then 
-		# einfo ">>> Building for --target=${CCHOST}..."
-		SLOT="${CCHOST}-${1}"
-	else
-		SLOT="${1}"
+		# Sets CC and CXX to the correct compilers
+		CC=${CHOST}-gcc
+		CXX=${CHOST}-gcc
+
+		# For want of a better way I am using filter-flags to
+		# invalidate and march or mcpu flags then strip-flags
+		# removes any invalid flags.
+		# -march=athlonx-xp won't work when targeting something
+		# other than an athlon-xp.
+		# The correct CFLAGS really needs to get set for CHOST.
+		filter-flags "-march= -mcpu="
+		strip-flags
+
+		# The compiler will need to be able to find the header files
+		# and libs from $ROOT
+#		CFLAGS="${CFLAGS} -I${ROOT}/usr/include -L${ROOT}lib -L${ROOT}usr/lib"
+#		CXXFLAGS=${CFLAGS}
 	fi
 }
 
+# This function is just for diagnostic purposes. It prints the
+# environment flags to do with building packages then abort
+# the emerge. Saves me having to put a lot of echos in an
+# ebuild just to check a few environment variables.
+#   Aiken 31/03/2003
+cross-diag() {
+	echo CBUILD = ${CBUILD}
+	echo CHOST = ${CHOST}
+	echo CCHOST = ${CCHOST}
+	echo CC = ${CC}
+	echo CXX = ${CXX}
+	echo CFLAGS = ${CFLAGS}
+	echo CXXFLAGS = ${CXXFLAGS}
+	echo CPPFLAGS = ${CPPFLAGS}
+	echo LDPATH = ${LDPATH}
+	echo PV = ${PV}
+	echo ROOT = ${ROOT}
+	die "Diagnostic purposes"
+}
+
+# Create a config.cache that works in the cross compile case.
+# Not all packages need this which is good. Generate a local
+# config cache then remove information that is specific to 
+# building for the host.
+#   Aiken 31/03/2003
+cross-configure() {
+	# Run configure to generate a config.cache
+	CC=gcc ./configure --cache-file=config.cache
+	mv config.cache config.cache-orig
+	make distclean
+
+	# Remove the host specific information.
+	grep -v \
+		-e bigendian \
+		-e ac_cv_env_CC \
+		-e ac_cv_env_build_alias \
+		-e ac_cv_env_host_alias \
+		-e ac_cv_env_target_alias \
+		-e ac_cv_env_CFLAGS \
+		-e ac_cv_host \
+		-e ac_cv_host_alias \
+		-e ac_cv_lib_termcap_tgetent \
+		-e ac_cv_prog_AR \
+		-e ac_cv_prog_CPP \
+		-e ac_cv_prog_ac_ct_CC \
+		-e ac_cv_prog_ac_ct_RANLIB \
+		-e _cv_termcap_lib \
+		config.cache-orig > config.cache
+}
