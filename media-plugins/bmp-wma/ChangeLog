@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/bmp-wma
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-wma/ChangeLog,v 1.1 2004/12/21 22:17:11 chainsaw Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-wma/ChangeLog,v 1.2 2005/01/09 12:11:44 chainsaw Exp $
+
+*bmp-wma-0.1.1-r1 (09 Jan 2005)
+
+  09 Jan 2005; Tony Vroon <chainsaw@gentoo.org> +bmp-wma-0.1.1-r1.ebuild,
+  -bmp-wma-0.1.1.ebuild:
+  SRC_URI, documentation and configure updates. Stable on x86. Closes bug #77213.
 
 *bmp-wma-0.1.1 (21 Dec 2004)
 
