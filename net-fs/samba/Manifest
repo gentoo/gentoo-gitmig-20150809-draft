@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 b50ca53090b0001df14a517f7d2a20bf ChangeLog 17191
 MD5 63bc25b07c7404f26d602e69ddad747e metadata.xml 458
 MD5 633511d04d7a7d7702c17089c85ba697 samba-3.0.1-r1.ebuild 11333
 MD5 df4f73693b725799675e37ba3f90643f samba-3.0.2a-r2.ebuild 12249
-MD5 8e1b0b9906fbde27ec8d6ca639796f9f ChangeLog 17093
-MD5 c9d2c044c38c981c4a8b65e81779ed98 samba-3.0.4-r1.ebuild 11142
+MD5 1074504ca5533e4e1d671bff313b5734 samba-3.0.4-r1.ebuild 11143
 MD5 fd2382184b6a07e63cb07ff26b578fd2 files/config-svc-smbd+nmbd 784
 MD5 f3a4b3b0a8162ae87779846d7e6adbbf files/digest-samba-3.0.1-r1 202
 MD5 81931e1d9764390841dec0d0f327a114 files/digest-samba-3.0.2a-r2 204
@@ -35,10 +32,3 @@ MD5 a86336201c2eced7a6e5a5138514e2f7 files/digest-samba-3.0.4-r1 203
 MD5 de43ff30dd5f1431590fd62a997e71b4 files/samba-3.0.4-python-setup.patch 833
 MD5 fcebd975211fecf647f6cecf26ba5c96 files/samba-3.0.4.patch 8086
 MD5 341521b710d02d57a70acd49b1d4c06b files/samba-conf 1291
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA3bEc6J2i8a8J4okRAi08AJ41k136hHhypyccjGDWr2/rkSBaIQCg1cmv
-v6804RftmmxAPFDJTFVV7v8=
-=+v0K
------END PGP SIGNATURE-----
