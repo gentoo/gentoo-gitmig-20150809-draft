@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.0.5.ebuild,v 1.9 2003/09/07 00:23:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.0.5.ebuild,v 1.10 2003/09/08 06:56:31 msterret Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -71,8 +71,8 @@ src_compile() {
 
 		# -accel-{voodoo3,mach64,matrox} -vnc -depths v,4,8,16,24,32 # this stuff miscompiles :-(
 
-    		./configure $myconf -depths 8,16 -system-zlib -thread -stl -freetype -qvfb \
-    			-plugin-imgfmt-{jpeg,mng,png} -system-lib{png,jpeg,mng} || die
+		./configure $myconf -depths 8,16 -system-zlib -thread -stl -freetype -qvfb \
+			-plugin-imgfmt-{jpeg,mng,png} -system-lib{png,jpeg,mng} || die
 	else
 		# use build == we're building for the gentoo isntaller project
 		# and know exactly which features we'll need
