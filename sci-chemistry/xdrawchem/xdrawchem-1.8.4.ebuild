@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.8.4.ebuild,v 1.1 2004/12/24 17:06:38 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.8.4.ebuild,v 1.2 2005/01/02 15:54:19 ribosome Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="a molecular structure drawing program"
-HOMEPAGE="http://${PN}.sourceforge.net/"
+HOMEPAGE="http://xdrawchem.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
