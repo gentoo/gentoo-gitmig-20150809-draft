@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdoc/kdoc-1.94.ebuild,v 1.2 2000/09/21 04:21:02 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdoc/kdoc-1.94.ebuild,v 1.3 2000/09/21 20:40:12 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -20,9 +20,12 @@ src_compile() {
 }
 
 src_install() {
+
+  dodir /opt/kde/man/man1
   try make install DESTDIR=${D}
   dodoc README TODO Version
   prepman /opt/kde
+
 }
 
 
