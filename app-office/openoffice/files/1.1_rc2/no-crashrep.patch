@@ -1,0 +1,54 @@
+--- oo_1.1rc2_src/scp/source/office/files.scp.orig	2003-08-12 13:44:42.000000000 +0200
++++ oo_1.1rc2_src/scp/source/office/files.scp	2003-08-12 13:46:05.000000000 +0200
+@@ -235,51 +235,6 @@
+ 
+ #endif
+ 
+-#ifndef MACOSX
+-// crashreporter files
+-
+-File GID_FILE_BIN_CRASHREPORT
+-		BIN_FILE_BODY;
+-	#ifdef UNX
+-    	Name            = "crash_report.bin";
+-    #else
+-    	Name            = "crashrep.exe";
+-    #endif
+-    	Dir             = GID_DIR_PROGRAM;
+-    	Styles          = (PACKED);
+-End
+-#endif
+-
+-#ifdef WNT
+-
+-File GID_FILE_BIN_CRASHREPORT_COM
+-		BIN_FILE_BODY;
+-		Name	= "crashrep.com";
+-		Dir		= GID_DIR_PROGRAM;
+-		Styles	= (PACKED);
+-End
+-
+-#endif
+-
+-#ifdef UNX
+- 
+-File GID_FILE_BIN_CRASHREPORT_SCRIPT
+-		BIN_FILE_BODY;
+-		Name	= "crash_report";
+-		Dir		= GID_DIR_PROGRAM;
+-		Styles	= (PACKED);
+-End
+-
+-#ifndef MACOSX
+-File GID_FILE_RES_CRASHDUMP
+-	TXT_FILE_BODY;
+-    Name            = "crash_dump.res";
+-    Dir             = GID_DIR_RESOURCE;
+-    Styles          = (PACKED);
+-End
+-#endif
+-#endif
+-
+ // special files for migration for 5.2 to 6.0
+ 
+ #if defined (CLASSIC_FAT_PRODUCT)

@@ -1,0 +1,78 @@
+diff -urN oo_1.1rc2_src/connectivity/prj/build.lst oo_1.1rc2_src.new/connectivity/prj/build.lst
+--- oo_1.1rc2_src/connectivity/prj/build.lst	2003-06-02 09:53:47.000000000 +0200
++++ oo_1.1rc2_src.new/connectivity/prj/build.lst	2003-08-08 11:56:21.000000000 +0200
+@@ -1,4 +1,4 @@
+-cn	connectivity	:	comphelper moz svtools unixODBC NULL
++cn	connectivity	:	comphelper svtools unixODBC NULL
+ cn	connectivity							usr1	-	all	cn_mkout NULL
+ cn	connectivity\source\types				nmake	-	all	cn_types NULL
+ cn	connectivity\source\commontools			nmake	-	all	cn_cmtools cn_parse cn_types NULL
+@@ -7,8 +7,6 @@
+ cn	connectivity\source\resource			nmake	-	all	cn_res NULL
+ cn	connectivity\source\sdbcx				nmake	-	all	cn_sdbcx cn_types NULL
+ cn	connectivity\source\drivers\ado			nmake	-	w	cn_ado cn_dbtools NULL
+-cn	connectivity\source\drivers\mozab\mozillasrc		nmake	-	all	cn_mozab_mozillasrc cn_file NULL
+-cn	connectivity\source\drivers\mozab	nmake	-	all	cn_mozab cn_mozab_mozillasrc cn_dbtools NULL
+ cn	connectivity\source\drivers\evoab	nmake	-	all	cn_evoab cn_dbtools cn_file NULL
+ cn	connectivity\source\drivers\calc		nmake	-	all	cn_calc cn_file NULL
+ cn	connectivity\source\drivers\odbc		nmake	-	all	cn_odbc cn_dbtools NULL
+diff -urN oo_1.1rc2_src/scp/source/office/files.scp oo_1.1rc2_src.new/scp/source/office/files.scp
+--- oo_1.1rc2_src/scp/source/office/files.scp	2003-07-16 16:37:14.000000000 +0200
++++ oo_1.1rc2_src.new/scp/source/office/files.scp	2003-08-08 12:15:21.000000000 +0200
+@@ -433,19 +433,6 @@
+ 	Styles			= (PACKED);
+ End
+ 
+-#ifndef MACOSX
+-File GID_FILE_LIB_MOZABDRV
+-	TXT_FILE_BODY;
+-	#ifdef UNX
+-    Name            = STRING(CONCAT2(libmozabdrv2,UNXSUFFIX));
+-	#else
+-    Name            = "mozabdrv2.dll";
+-	#endif
+-    Dir             = GID_DIR_PROGRAM;
+-	Styles			= (PACKED);
+-End
+-#endif
+-
+ STD_UNO_LIB_FILE( GID_FILE_LIB_DBU, dbu )
+ STD_UNO_LIB_FILE( GID_FILE_LIB_DBA, dba)
+ 
+@@ -795,20 +782,6 @@
+         #endif
+ End
+ 
+-#ifndef MACOSX
+-File GID_FILE_LIB_MOZAB_2
+-        TXT_FILE_BODY;
+-        Styles          = (PACKED,UNO_COMPONENT);
+-        RegistryID      = GID_STARREGISTRY_SERVICES_RDB;
+-        Dir             = GID_DIR_PROGRAM;
+-        #ifdef UNX
+-        Name            = STRING(CONCAT2(libmozab2,UNXSUFFIX));
+-        #else
+-        Name            = "mozab2.dll";
+-        #endif
+-End
+-#endif
+-
+ #ifdef UNX
+ 
+ File GID_FILE_LIB_EVOAB_1
+@@ -3241,15 +3214,6 @@
+ #endif
+ 
+ #endif
+-                                  // of #ifdef SOLAR_JAVA
+-#ifndef MACOSX
+-File GID_FILE_MOZILLA_RUNTIME
+-        TXT_FILE_BODY;
+-        Styles = (ARCHIVE);
+-        Dir    = GID_DIR_PROGRAM;
+-        Name	= "mozruntime.zip";
+-End
+-#endif
+ 
+ File GID_FILE_HTML_THIRDPARTYLICENSEREADME
+         Name   = "THIRDPARTYLICENSEREADME.html";
