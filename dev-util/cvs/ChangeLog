@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.37 2004/03/28 19:23:15 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.38 2004/04/08 21:43:22 agriffis Exp $
+
+  08 Apr 2004; Aron Griffis <agriffis@gentoo.org> cvs-1.11.14.ebuild:
+  Stable on alpha and ia64
 
   28 Mar 2004; Lars Weiler <pylon@gentoo.org> cvs-1.11.14.ebuild:
   stable on ppc
