@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r2.ebuild,v 1.1 2001/10/08 22:49:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r2.ebuild,v 1.2 2002/01/19 16:20:03 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Enlightenment Window Manager"
@@ -26,6 +26,8 @@ src_compile() {
 
 src_install() {
 
+	mv man/Makefile man/Makefile_orig
+	sed -e "s:DESTDIR =:DESTDIR = ${D}:" man/Makefile_orig > man/Makefile
 	make prefix=${D}/usr 				\
 		localedir=${D}/usr/share/locale		\
 		gnulocaledir=${D}/usr/share/locale	\
