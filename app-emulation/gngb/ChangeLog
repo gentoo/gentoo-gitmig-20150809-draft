@@ -1,8 +1,11 @@
 # ChangeLog for app-emulation/gngb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gngb/ChangeLog,v 1.2 2002/07/27 13:47:52 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gngb/ChangeLog,v 1.3 2002/08/06 18:43:50 gerk Exp $
 
 *gngb-20020111 (27 Jul 2002)
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added -ppc to keywords
 
   27 Jul 2002; Stuart Bouyer <stubear@gentoo.org> gngb-20020111.ebuild :
 
