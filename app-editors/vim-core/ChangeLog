@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.124 2005/01/13 22:17:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.125 2005/01/14 21:56:34 ciaranm Exp $
+
+  14 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> files/vimrc:
+  Update vimrc to only try to use ftplugins if we have a valid ftplugin
+  directory (for livecds)
 
 *vim-core-7.0_alpha20050113 (13 Jan 2005)
 

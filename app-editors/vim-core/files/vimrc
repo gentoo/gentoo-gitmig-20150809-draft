@@ -58,8 +58,11 @@ if &term=="xterm"
   set ttymouse=xterm2	" only works for >=xfree86-3.3.3, should be okay
 endif
 
-" Enable plugin-provided filetype settings
-filetype plugin on
+" Enable plugin-provided filetype settings, but only if the ftplugin
+" directory exists (which it won't on livecds, for example).
+if isdirectory(expand("$VIMRUNTIME/ftplugin"))
+  filetype plugin on
+endif
 
 " Uncomment the next line (or copy to your ~/.vimrc) for plugin-provided
 " indent settings. Some people don't like these, so we won't turn them on by 
