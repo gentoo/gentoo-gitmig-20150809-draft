@@ -1,7 +1,3 @@
-MD5 6919a735df23a537b02a563502f6edaf ChangeLog 8872
-MD5 63f21ef7e024f3212fd020fb2c2c94a6 cups-1.1.19-r1.ebuild 3886
-MD5 144c48df10ab6c5f467b2b645eb923ca cups-1.1.20.ebuild 3329
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 ec90893091ccb9fa45c107c08dc7152c files/configure-jpeg-buildfix.diff 308
 MD5 4d42d58387ed0a01b5f4e49ace9a8c0a files/cups.pam 232
 MD5 543135cac63f9e38f45d656c1b1ef36c files/cups.xinetd 366
@@ -10,3 +6,7 @@ MD5 c6c1e1d0b2b094bb3a6cdd9700c88aaf files/cupsd.rc6 522
 MD5 28180a32f4b7e4d332f17fd20c99ee91 files/digest-cups-1.1.19-r1 72
 MD5 baaa1e0bc63f959779998f5e57de6f9d files/digest-cups-1.1.20 72
 MD5 7bce495a238ee9dbebb61496f3b3ae51 files/disable-strip.patch 422
+MD5 17d4b32baa4dfa9cdd3f1c3139fb4ac0 ChangeLog 8968
+MD5 63f21ef7e024f3212fd020fb2c2c94a6 cups-1.1.19-r1.ebuild 3886
+MD5 15d78c46e5923db6ff74e5df95081bdd cups-1.1.20.ebuild 3323
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
