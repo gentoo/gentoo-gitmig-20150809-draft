@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.23 2004/07/19 15:53:22 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.24 2004/09/25 07:43:50 vapier Exp $
 
 inherit gcc flag-o-matic eutils gnuconfig
 
@@ -38,7 +38,7 @@ src_compile() {
 	# (04 Feb 2004 agriffis)
 	#
 	if (( $(gcc-major-version) == 3 && $(gcc-minor-version) < 4 )) ; then
-		replace-cpu-flags i586 k6 k6-1 k6-2
+		replace-cpu-flags k6 k6-1 k6-2 i586
 	fi
 
 	econf `use_enable nls` || die
