@@ -1,0 +1,10 @@
+# ChangeLog for net-print/foomatic-filters
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.1 2003/07/16 14:41:52 lanius Exp $
+
+*foomatic-filters-3.0.0 (16 Jul 2003)
+
+  16 Jul 2003; Heinrich Wendel <lanius@gentoo.org>
+  foomatic-filters-3.0.0.ebuild:
+  initial release
+
