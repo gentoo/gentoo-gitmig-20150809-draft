@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/winex-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.11 2003/03/23 18:58:01 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.12 2003/04/17 13:42:53 mholzer Exp $
+
+*winex-cvs-3.0 (17 Apr 2003)
+
+  17 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
+  winex-cvs-2.0.ebuild, winex-cvs-2.0.ebuild, winex-cvs-2.1.ebuild,
+  winex-cvs-2.1.ebuild, winex-cvs-2.2.ebuild, winex-cvs-2.2.ebuild,
+  winex-cvs-3.0.ebuild:
+  Version bumped. Cleanup. Thx to phoen][x.
 
 *winex-cvs-3.0_pre1 (16 Mar 2003)
 
