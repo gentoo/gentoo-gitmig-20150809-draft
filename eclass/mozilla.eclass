@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.16 2004/09/28 21:29:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.17 2004/10/03 07:24:45 brad Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
@@ -244,7 +244,8 @@ mozilla_conf() {
 	# Some firefox-only flags
 	if ${FF}; then
 		mozilla_annotate "n/a on ${PN}" \
-			--disable-mailnews
+			--disable-mailnews \
+			--disable-composer
 	fi
 
 	# Some moz-only flags
