@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Grant Goodyear <g2boojum@hotmail.com>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r2.ebuild,v 1.1 2002/01/15 01:27:50 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r2.ebuild,v 1.2 2002/01/16 22:05:07 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library for generating PDF on the fly"
 SRC_URI="http://www.pdflib.com/pdflib/download/${P}.tar.gz"
 HOMEPAGE="http://www.pdflib.com"
 
-DEPEND="tcltk? ( =dev-lang/tk-8.2 )
+DEPEND="tcltk? ( >=dev-lang/tk-8.2 )
 	perl? ( >=sys-devel/perl-5.1 )
 	python? ( >=dev-lang/python-2.0 )
 	java? ( >=virtual/jdk-1.3 )"
