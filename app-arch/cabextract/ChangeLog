@@ -1,10 +1,13 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.8 2003/03/16 11:19:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.9 2003/04/18 20:00:04 tuxus Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *cabextract-0.6 (17 Oct 2002)
+
+  18 Apr 2003; Jan Seidel <tuxus@gentoo.org> cabextract-0.6.ebuild :
+  Added mips to keywords.
 
   16 Mar 2003; Guy Martin <gmsoft@gentoo.org> cabextract-0.6.ebuild :
   Added hppa to keywords.
