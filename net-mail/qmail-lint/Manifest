@@ -1,4 +1,4 @@
-MD5 fc259a5b8c23b114470cb36b0e321c29 files/digest-qmail-lint-0.55 59
-MD5 965df4d50dee964614cdec7c75a03253 ChangeLog 364
+MD5 e30bc7fb29b4c15e336cdb7dfe58d0d3 qmail-lint-0.55.ebuild 644
+MD5 79798d6182582f398866b134b1924732 ChangeLog 356
 MD5 f914360bf06cc501287e976d6539d64b metadata.xml 453
-MD5 1e2944986a64398b98c0ab0cc1c20711 qmail-lint-0.55.ebuild 652
+MD5 fc259a5b8c23b114470cb36b0e321c29 files/digest-qmail-lint-0.55 59
