@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Author Fabrice Alphonso <fabrice@alphonso.dyndns.org>
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.8.0-r1.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.8.0-r1.ebuild,v 1.3 2002/07/11 06:30:47 drobbins Exp $
 
 S="${WORKDIR}/openh323"
 SRC_URI="http://www.gnomemeeting.org/downloads/latest/sources/openh323_1.8.0-patched.tar.gz"

@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a.ebuild,v 1.2 2002/05/11 01:30:51 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a.ebuild,v 1.3 2002/07/11 06:30:47 drobbins Exp $
 
 S=${WORKDIR}/Libnet-1.0.2a
 DESCRIPTION="library to provide an API for commonly used low-level network

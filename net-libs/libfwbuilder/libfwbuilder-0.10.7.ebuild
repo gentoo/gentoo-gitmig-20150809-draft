@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Artur Wanzel <t1ck@bonetmail.com> 
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-0.10.7.ebuild,v 1.1 2002/07/10 15:10:29 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-0.10.7.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
 
 MY_PN=${PN/lib/}
 DESCRIPTION="A firewall GUI"

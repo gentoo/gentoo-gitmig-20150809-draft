@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Spider  <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.5.1-r2.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.5.1-r2.ebuild,v 1.3 2002/07/11 06:30:47 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Soup is a SOAP implementation"
