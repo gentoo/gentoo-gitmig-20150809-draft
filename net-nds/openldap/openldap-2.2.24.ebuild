@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.24.ebuild,v 1.1 2005/03/21 01:04:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.24.ebuild,v 1.2 2005/03/21 06:07:31 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils
 
@@ -53,7 +53,7 @@ OPENLDAP_VERSIONTAG="/var/lib/openldap-data/.version-tag"
 #DEPEND="${DEPEND} !<net-nds/openldap-2.2"
 
 openldap_upgrade_warning() {
-	ewarn "If you are upgrading from OpenLDAP-2.1, and run slapd on this" 
+	ewarn "If you are upgrading from OpenLDAP-2.1, and run slapd on this"
 	ewarn "machine please see the ebuild for upgrade instructions, otherwise"
 	ewarn "you may corrupt your database!"
 	echo
