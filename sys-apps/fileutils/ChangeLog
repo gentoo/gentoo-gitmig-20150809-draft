@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/fileutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.18 2003/06/23 18:26:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.19 2003/07/06 09:16:35 kumba Exp $
+
+
+*fileutils-4.1.11-r1 (12 Dec 2002)
+
+  06 Jul 2003; Joshua Kinard <kumba@gentoo.org> fileutils-4.1.11-r1.ebuild:
+  Changed ~mips to mips in KEYWORDS
+  Cleaned up Changelog
 
   23 Jun 2003; Martin Holzer <mholzer@gentoo.org> fileutils-4.1.11-r1.ebuild:
   Fixed SRC_URI. Closes #23333.
@@ -19,8 +26,6 @@
 
   Committing a new digest file to match the updated patch. I didn't bother to
   bump, as the package was masked and has only lived in cvs for a few hours.
-
-*fileutils-4.1.11-r1 (12 Dec 2002)
 
   12 Dec 2002; Joachim Blaabjerg <styx@gentoo.org> fileutils-4.1.11-r1.ebuild,
   files/digest-fileutils-4.1.11-r1, ChangeLog :
