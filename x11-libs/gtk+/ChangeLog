@@ -1,17 +1,17 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.49 2003/02/06 02:18:25 nall Exp $
-
-
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.50 2003/02/08 00:11:40 foser Exp $
 
 *gtk+-2.2.1 (04 Feb 2003)
+
+  07 Feb 2003; foser <foser@gentoo.org> gtk+-2.2.1.ebuild :
+  Added alpha blended disabled icons patch
 
   05 Feb 2003; Jon Nall <nall@gentoo.org> gtk+--2.2.1.ebuild :
   added patch to fix endian problem for 15/24 bit displays
 
   04 Feb 2003; Spider <spider@gentoo.org> gtk+-2.2.1.ebuild :
   bumped version
-
 
   16 Jan 2003; foser <foser@gentoo.org> gtk+-2.2.0.ebuild :
   Added some info about rebuilding gtk theme engines after an emerge
