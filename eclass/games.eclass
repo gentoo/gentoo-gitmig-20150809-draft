@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.50 2003/10/01 23:07:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.51 2003/10/14 01:27:40 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,msterret}@gentoo.org
 #
@@ -172,4 +172,17 @@ games_ut_unpack() {
 		#	rm ${ut_unpack}/${f} || die "deleting compressed file ${f}"
 		#done
 	fi
+}
+
+# make a wrapper script ...
+games_make_wrapper() {
+	local bin=$1 ; shift
+	local chdir=$1 ; shift
+	local wrapper="`mymktemp ${T}`"
+	cat << EOF > ${wrapper}
+#!/bin/sh
+cd "${chdir}"
+exec "./${bin}" "\$@"
+EOF
+	echo ${wrapper}
 }
