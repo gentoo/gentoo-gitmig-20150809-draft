@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.16.ebuild,v 1.2 2003/11/25 03:55:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.16.ebuild,v 1.3 2003/11/26 14:36:55 lu_zero Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -98,7 +98,7 @@ SRC_URI="${SRC_PATH0}/${MY_SV}.tar.bz2
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 # sys-apps/portage for USE_EXPAND
 DEPEND=">=sys-apps/baselayout-1.8.3
