@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/mt-st
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.7 2003/03/25 14:06:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.8 2003/06/22 19:43:03 woodchip Exp $
+
+*mt-st-0.7-r1 (22 Jun 2003)
+
+  22 Jun 2003; Donny Davies <woodchip@gentoo.org> mt-st-0.7-r1.ebuild:
+  Close #22854; add some doc files.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -10,19 +15,7 @@
   Added hppa to KEYWORDS.
 
   14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
-
   Added ppc keyword
 
   12 Apr 2002; Donny Davies <woodchip@gentoo.org> :
-
   Update to latest available release.
-
-*mt-st-0.6 (1 Feb 2002)
-
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
