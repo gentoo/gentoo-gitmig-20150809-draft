@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-calendar/latex-calendar-3.1.ebuild,v 1.1 2003/06/09 13:11:26 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-calendar/latex-calendar-3.1.ebuild,v 1.2 2003/09/10 22:30:39 msterret Exp $
 
 inherit latex-package
 
@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="x86 sparc ppc"
 
 src_compile() {
-    debug-print function $FUNCNAME $*
-    cd ${S}
-    echo "Extracting from allcal.ins"
+	debug-print function $FUNCNAME $*
+	cd ${S}
+	echo "Extracting from allcal.ins"
 	echo "y
 	y" | latex allcal.ins > /dev/null
 }
