@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.48-r4.ebuild,v 1.4 2004/03/28 22:38:30 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.48-r4.ebuild,v 1.5 2004/04/06 01:02:27 zul Exp $
 
 inherit flag-o-matic eutils
 has_version =sys-libs/glibc-2.2* && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -32,6 +32,11 @@ src_unpack() {
 	cd ${S} || die
 	patch -p1 <${FILESDIR}/apache-2.0.48-gentoo.diff || die
 	epatch ${FILESDIR}/apache-2.0.48-export.diff
+
+	if use ipv6
+	then
+		epatch ${FILESDIR}/httpd-2.0.48-ipv6.patch || die
+	fi
 
 	#avoid utf-8 charset problems
 	export LC_CTYPE=C

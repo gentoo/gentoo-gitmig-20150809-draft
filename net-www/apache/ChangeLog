@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.117 2004/04/04 22:15:53 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.118 2004/04/06 01:02:27 zul Exp $
+
+  05 Apr 2004; Chuck Short <zul@gentoo.org> apache-2.0.48-r1.ebuild,
+  apache-2.0.48-r2.ebuild, apache-2.0.48-r3.ebuild, apache-2.0.48-r4.ebuild,
+  apache-2.0.48.ebuild, files/httpd-2.0.48-ipv6.patch:
+  Fixed IPV6 start error. IPV6 works as expected under 2.0.48. Closes #32389.
 
   04 Apr 2004; Chuck Short <zul@gentoo.org> files/apache.confd,
   files/apache.rc6:
