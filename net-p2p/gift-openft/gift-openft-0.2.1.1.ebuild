@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.1.ebuild,v 1.1 2003/09/19 12:14:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.1.ebuild,v 1.2 2003/10/05 12:23:08 lanius Exp $
 
 DESCRIPTION="The giFT OpenFT plugin"
 HOMEPAGE="http://gift.sf.net/"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc"
 
 DEPEND="virtual/glibc
-	>=net-p2p/gift-0.11.3
+	>=net-p2p/gift-0.11.4
 	>=sys-apps/sed-4
 	>=sys-libs/zlib-1.1.4"
 

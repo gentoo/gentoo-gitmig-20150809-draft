@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift-openft
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.4 2003/09/19 12:14:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.5 2003/10/05 12:23:08 lanius Exp $
+
+  05 Oct 2003; Heinrich Wendel <lanius@gentoo.org> gift-openft-0.2.1.1.ebuild:
+  corrected deps #30374
 
 *gift-openft-0.2.1.1 (19 Sep 2003)
 
