@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/dictd-elements
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-elements/ChangeLog,v 1.11 2005/02/27 11:16:54 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-elements/ChangeLog,v 1.12 2005/04/01 15:16:23 nigoro Exp $
+
+  02 Apr 2005; Yuta SATOH <nigoro@gentoo.org>
+  dictd-elements-2000.22.07-r1.ebuild:
+  Stable on ppc64
 
   27 Feb 2005; Yuta SATOH <nigoro@gentoo.org>
   dictd-elements-2000.22.07-r1.ebuild:
