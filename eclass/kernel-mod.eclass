@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.9 2004/10/06 21:25:11 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.10 2004/10/06 21:48:24 dsd Exp $
 
 # This eclass provides help for compiling external kernel modules from
 # source.
@@ -124,6 +124,16 @@ kernel-mod_configoption_builtin ()
 kernel-mod_modules_supported ()
 {
 	kernel-mod_configoption_builtin "MODULES"
+}
+
+kernel-mod_check_modules_supported ()
+{
+	if ! kernel-mod_modules_supported
+	then
+		eerror "Your current kernel does not support loading external modules."
+		eerror "Please enable \"Loadable module support\" (CONFIG_MODULES) in your kernel config."
+		die "kernel does not support loading modules"
+	fi
 }
 
 kernel-mod_checkzlibinflate_configured ()
