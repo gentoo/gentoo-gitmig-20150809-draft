@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2750 2004/03/15 23:22:20 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2751 2004/03/17 04:34:21 pylon Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -30,10 +30,6 @@
 # <eradicator@gentoo.org> (13 Mar 2004)
 # teknap is having some gcc3.3 related issues.
 net-p2p/teknap
-
-# <pylon@gentoo.org> (11 Mar 2004)
-# The dvdr-patch does not applies, but the cdrtools would compile without it
->=app-cdr/cdrtools-2.01_alpha27
 
 # <vapier@gentoo.org> (09 Mar 2004)
 # CVS ebuild to help out developers
