@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/cpu-1.3.100-r1.ebuild,v 1.1 2003/07/05 09:31:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/cpu-1.3.100-r1.ebuild,v 1.2 2003/07/06 07:03:42 robbat2 Exp $
 
 DESCRIPTION="CPU is an LDAP user management tool written in C and loosely based on FreeBSD's pw(8)."
 HOMEPAGE="http://cpu.sourceforge.net/"
@@ -39,6 +39,9 @@ src_compile() {
 
 	# cache our config!
 	#myconf="${myconf} --cache-file=${S}/config.cache"
+
+	# This app really belongs in sbin!
+	myconf="${myconf} --bindir=/usr/sbin"
 	
 	econf ${myconf} || die "Configure failure"
 
@@ -46,6 +49,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "Einstall failure"
+	einstall bindir="${D}/usr/sbin" || die "Einstall failure"
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }

@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/cpu
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/ChangeLog,v 1.3 2003/07/05 09:31:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/ChangeLog,v 1.4 2003/07/06 07:03:42 robbat2 Exp $
 
 *cpu-1.3.100-r1 (05 Jul 2003)
+
+  05 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> cpu-1.3.100-r1.ebuild:
+  Force install in sbin.
 
   05 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> cpu-1.3.100-r1.ebuild, files/cpu-1.3.100-fixup.patch:
   Found a cleaner fix for the package.
