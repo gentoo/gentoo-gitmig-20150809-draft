@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.7 2002/05/03 00:34:30 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.8 2002/05/03 06:49:30 agenkin Exp $
 
 *alsa-driver-0.9.0_rc1 (27 Apr 2002)
+
+  3 May 2002; Arcady Genkin <agenkin@thpoon.com>
+	alsa-driver-0.9.0_rc1-r5.ebuild :
+
+  Makes sure that Portage determines the kernel version.
 
   2 May 2002; Arcady Genkin <agenkin@thpoon.com>
 	alsa-driver-0.9.0_rc1-r4.ebuild :
