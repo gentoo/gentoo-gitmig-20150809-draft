@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.3.ebuild,v 1.21 2003/09/06 08:39:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.3.ebuild,v 1.22 2003/09/19 01:00:44 avenj Exp $
 
 inherit gnuconfig
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://cscope.sourceforge.net"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha hppa mips arm amd64"
+KEYWORDS="x86 ppc sparc alpha hppa mips arm amd64 ia64"
 
 RDEPEND=">=sys-libs/ncurses-5.2"
 DEPEND="${RDEPEND}
