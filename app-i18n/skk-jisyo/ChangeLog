@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.1 2002/07/30 14:54:52 stubear Exp $
+
+*skk-jisyo-200207 (30 Jul 2002)
+
+  30 Jul 2002; Stuart Bouyer <stubear@gentoo.org> skk-jisyo-200207.ebuild :
+
+  Initail ebuild submitted by Matsuu Takuto <matsuu@7501.net>
