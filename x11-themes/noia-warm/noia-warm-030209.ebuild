@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia-warm/noia-warm-030209.ebuild,v 1.7 2004/06/24 23:36:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia-warm/noia-warm-030209.ebuild,v 1.8 2004/06/28 22:47:27 agriffis Exp $
 
 inherit kde
 
@@ -14,6 +14,7 @@ KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="as-is"
 IUSE=""
+DEPEND=">=sys-apps/sed-4"
 
 # stripping hangs and we've no binaries
 RESTRICT="$RESTRICT nostrip"
