@@ -1,0 +1,42 @@
+# These are the services needed for amanda.
+# Default is to talk to localhost only unless 
+# AMANDA_SERVER was specified at build time.
+
+service amanda
+{
+        socket_type     = dgram
+        protocol        = udp
+        wait            = yes
+        user            = amanda
+        group           = root
+        groups          = yes
+        server          = /usr/libexec/amandad
+        only_from	    = __AMANDA_SERVER__
+        disable         = yes
+}
+
+service amandaidx
+{
+        socket_type     = stream
+        protocol        = tcp
+        wait            = no
+        user            = amanda
+        group           = root
+        groups          = yes
+        server          = /usr/libexec/amindexd
+        only_from	    = __AMANDA_SERVER__
+        disable         = yes
+}
+
+service amidxtape
+{
+        socket_type     = stream
+        protocol        = tcp
+        wait            = no
+        user            = amanda
+        group           = root
+        groups          = yes
+        server          = /usr/libexec/amidxtaped
+        only_from	    = __AMANDA_SERVER__
+        disable         = yes
+}
