@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/countrycodes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.7 2004/09/12 19:28:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.8 2004/09/20 02:44:57 tgall Exp $
+
+  19 Sep 2004; Tom Gall <tgall@gentoo.org> countrycodes-1.0.5.ebuild:
+  stable on ppc64, bug #63661
 
   12 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> countrycodes-1.0.5.ebuild:
   Add ~alpha keyword, bug 63723.
