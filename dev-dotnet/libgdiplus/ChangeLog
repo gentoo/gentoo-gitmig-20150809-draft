@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.6 2004/06/28 02:57:31 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.7 2004/06/29 17:59:30 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> libgdiplus-0.10.ebuild,
+  libgdiplus-0.8.ebuild, libgdiplus-0.9.ebuild:
+  add sed-4 dep
 
   27 Jun 2004; Peter Johanson <latexer@gentoo.org> :
   Fix the digest.

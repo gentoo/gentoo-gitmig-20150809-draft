@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.3.ebuild,v 1.4 2004/06/29 14:36:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.3.ebuild,v 1.5 2004/06/29 17:54:39 agriffis Exp $
 
 inherit mono
 
@@ -15,7 +15,8 @@ IUSE=""
 
 DEPEND=">=dev-dotnet/mono-0.95
 	>=x11-libs/gtk-sharp-0.93
-	>=x11-libs/gtksourceview-0.7.0"
+	>=x11-libs/gtksourceview-0.7.0
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-0.8.ebuild,v 1.4 2004/06/29 14:37:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-0.8.ebuild,v 1.5 2004/06/29 17:59:30 agriffis Exp $
 
 DESCRIPTION="Library for using System.Drawing with Mono"
 HOMEPAGE="http://www.go-mono.com/"
@@ -15,7 +15,8 @@ DEPEND=">=x11-libs/cairo-0.1.23
 	tiff? ( media-libs/tiff )
 	gif? ( media-libs/libungif )
 	jpeg? ( media-libs/jpeg )
-	png? ( media-libs/libpng )"
+	png? ( media-libs/libpng )
+	>=sys-apps/sed-4"
 RDEPEND=">=dev-dotnet/mono-0.95"
 
 src_compile() {
