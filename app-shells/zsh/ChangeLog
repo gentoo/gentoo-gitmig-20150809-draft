@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.68 2005/01/18 13:45:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.69 2005/02/10 08:18:18 usata Exp $
+
+*zsh-4.2.4 (10 Feb 2005)
+
+  10 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> zsh-4.2.3.ebuild,
+  +zsh-4.2.4.ebuild:
+  Version bumped. Marked 4.2.3 stable on x86 and ppc.
 
 *zsh-4.2.3 (18 Jan 2005)
 
