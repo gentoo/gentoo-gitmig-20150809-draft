@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/bar
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.10 2004/12/19 01:32:49 ka0ttic Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.11 2005/01/09 20:23:22 ka0ttic Exp $
+
+  09 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> -bar-1.07.ebuild,
+  bar-1.10.2.ebuild:
+  Marked 1.10.2 stable on x86; removed old 1.07.
 
   18 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> bar-1.08.ebuild:
   Never actually marked 1.08 stable.
