@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25.ebuild,v 1.8 2005/02/01 19:44:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25.ebuild,v 1.9 2005/02/02 21:24:14 mr_bones_ Exp $
 
 IUSE=""
 
@@ -112,7 +112,7 @@ src_install() {
 	doins ${FILESDIR}/09ati
 	exeinto /opt/ati/bin
 	doexe usr/X11R6/bin/*
-	
+
 	#ati custom stuff
 	cp -a ${WORKDIR}/usr/include ${D}/usr/include
 }
