@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/oidentd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.14 2003/06/12 21:43:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.15 2003/07/14 03:29:04 avenj Exp $
+
+*oidentd-2.0.7 (13 Jul 2003)
+
+  13 Jul 2003; Jon Portnoy <avenj@gentoo.org> oidentd-2.0.7.ebuild :
+  Version bump.
 
   12 Jun 2003; <msterret@gentoo.org> oidentd-2.0.3-r1.ebuild:
   add Header
