@@ -1,4 +1,5 @@
 #! /usr/bin/perl
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/files/cupsomatic,v 1.2 2002/05/04 22:45:53 woodchip Exp $
 
 # The above Perl path may vary on your system; fix it!!!
 
@@ -144,7 +145,7 @@ my $accounting_prolog = $ps_accounting ? "[{
 # Flush everything immediately.
 $|=1;
 
-my $comversion='$Revision: 1.1 $';
+my $comversion='$Revision: 1.2 $';
 #'# Fix emacs syntax highlighting
 print $logh "Cupsomatic backend version $comversion running...\n";
 print $logh "called with arguments: '",join("','",@ARGV),"'\n";

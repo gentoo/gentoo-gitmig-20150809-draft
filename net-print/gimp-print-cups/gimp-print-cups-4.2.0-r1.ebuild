@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: System Team <system@gentoo.org>
-# Author: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/gimp-print-cups-4.2.0.ebuild,v 1.2 2002/04/13 13:39:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/gimp-print-cups-4.2.0-r1.ebuild,v 1.1 2002/05/04 22:45:53 woodchip Exp $
 
 DESCRIPTION="The Common Unix Printing System - Gimp Print Drivers"
 HOMEPAGE="http://www.cups.org"
@@ -13,9 +11,10 @@ DEPEND="net-print/cups
 	media-gfx/imagemagick
 	sys-libs/readline
 	sys-devel/perl"
+LICENSE="GPL-2"
+SLOT="0"
 
 src_compile() {
-
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc \
@@ -37,7 +36,6 @@ src_compile() {
 }
 
 src_install () {
-
 	make install DESTDIR=${D} || die
 
 	exeinto /usr/share/gimp-print

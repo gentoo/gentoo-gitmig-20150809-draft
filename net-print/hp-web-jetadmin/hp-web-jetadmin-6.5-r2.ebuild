@@ -1,7 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/hp-web-jetadmin-6.5-r1.ebuild,v 1.1 2001/10/02 04:45:34 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/hp-web-jetadmin-6.5-r2.ebuild,v 1.1 2002/05/04 22:45:53 woodchip Exp $
 
 # This package, in its most basic form (no optional components) will install
 # some 4300 files, totalling some 45MB. According to HP the minimum system
@@ -18,6 +17,8 @@ SRC_URI="http://ftp.hp.com/pub/networking/software/hpwebjet_linux.selfx
 #        http://www.hp.com/pond/wja/live/manual/bundles/wjarda_linux_bundle.fpb
 #        http://www.hp.com/pond/wja/live/manual/bundles/wjapps_linux_bundle.fpb"
 DEPEND="virtual/glibc"
+LICENSE="HP"
+SLOT="0"
 
 src_unpack() { :; } ; src_compile() { :; }
 

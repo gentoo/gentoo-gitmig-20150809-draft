@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.14-r2.ebuild,v 1.1 2002/03/29 18:39:16 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.14-r4.ebuild,v 1.1 2002/05/04 22:45:53 woodchip Exp $
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org"
@@ -14,15 +13,18 @@ DEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.75 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	slp? ( >=net-libs/openslp-1.0.4 )
-	>=media-libs/libpng-1.0.12
+	>=media-libs/libpng-1.2.1
 	>=media-libs/tiff-3.5.5
 	>=media-libs/jpeg-6b"
 RDEPEND="${DEPEND} !virtual/lpr"
+LICENSE="GPL-2"
+SLOT="0"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
 	# make sure libcupsimage gets linked with libjpeg
 	patch -p0 < ${FILESDIR}/configure-jpeg-buildfix.diff || die
+	patch -p1 < ${FILESDIR}/disable-strip.patch || die
 }
 
 src_compile() {
@@ -64,7 +66,7 @@ src_install() {
 	PREFIX=${D} \
 	install || die "install problem"
 
-	dodoc {CHANGES,CREDITS,ENCRYPTION,LICENSE,README}.txt LICENSE.html
+	dodoc {CHANGES,CREDITS,ENCRYPTION,LICENSE,README}.txt
 	dosym /usr/share/cups/docs /usr/share/doc/${PF}/html
 
 	fowners lp.root /usr/bin/lppasswd

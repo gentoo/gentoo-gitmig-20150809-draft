@@ -1,5 +1,6 @@
 # default: off
 # description: The cups-lpd mini daemon accepts jobs from a remote LPD client.
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/files/cups.xinetd,v 1.2 2002/05/04 22:45:53 woodchip Exp $
 
 service printer
 {
