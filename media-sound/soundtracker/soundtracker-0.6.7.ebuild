@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7.ebuild,v 1.7 2004/06/25 00:23:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7.ebuild,v 1.8 2004/09/15 17:31:56 eradicator Exp $
 
 IUSE="nls esd gnome oss alsa jack"
 
@@ -30,7 +30,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 
 src_unpack() {
 	unpack ${A}

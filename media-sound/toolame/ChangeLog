@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/toolame
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.7 2004/07/01 08:00:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.8 2004/09/15 17:40:35 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> toolame-02l.ebuild:
+  Stable amd64.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> toolame-02l.ebuild:
   virtual/glibc -> virtual/libc

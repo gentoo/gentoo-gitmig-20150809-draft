@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmcd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/ChangeLog,v 1.10 2004/06/25 00:29:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/ChangeLog,v 1.11 2004/09/15 17:47:18 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> xmcd-3.3.2.ebuild:
+  Stable amd64.
 
   18 Jun 2004; Jason Wever <weeve@gentoo.org> xmcd-3.3.2.ebuild:
   Stable on sparc.
