@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <robbat2@gentoo.org> (25 Dec 2003)
+# Masking as the location of the domain mail has changed
+>=net-mail/vpopmail-5.2.1-r9
+
 # <usata@gentoo.org> (25 Dec 2003)
 # PRIME 0.7.x hangs when you select number with app-emacs/prime-el client,
 # while this doesn't occur if you use app-i18n/uim (uim-prime)
