@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 90560537661de864f2a457de6f54f483 eagle-usb-2.1.1.ebuild 2366
-MD5 449f8e665be85c867050d364548dc3a1 ChangeLog 481
+MD5 985e78184bda37cec38888adf4263165 ChangeLog 574
 MD5 784ec6993aa07588926fec5a7fbf2c70 metadata.xml 246
 MD5 9bcb1e4277b2ca63a52b873a3c8b632d files/confd 805
 MD5 e6bb5c4e3d40da64218b22962001d51e files/initd 9194
 MD5 4062d2a6eb8bbb26c70db6813102e56c files/digest-eagle-usb-2.1.1 68
 MD5 a26da8905bd09e0c8d5628c0afd96a8b files/dsl.peer 185
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCH5Y0jiC39V7gKu0RAj7dAJ9rfjl4cPZVugVOul68Rwql2InO+QCfZxGT
-9reFsK6KggZlbyuxmM5euTo=
-=jTFh
------END PGP SIGNATURE-----
