@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 daf18b693bafb0b2c67a3f7f018afa63 ChangeLog 3411
-MD5 74b7e2334e4f7752da02af2f692c130b baghira-0.5h-r1.ebuild 656
-MD5 77a747b5fbf7edf698a0c698141ecf02 metadata.xml 163
 MD5 80a7d17950d2f5d144e4ad620e27c8ea baghira-0.5h.ebuild 551
-MD5 774517f599c6894428daeae8e024a0ea baghira-0.4.ebuild 479
-MD5 61354f96f91ee2110c1f0821bcef3dee baghira-0.3r.ebuild 586
-MD5 dc556fcc7bcedee9380d2b447399fa9f baghira-0.5a.ebuild 553
-MD5 92a862a42e40c25b0a2698d82825997c baghira-0.5.ebuild 545
 MD5 611648c5fee65250a61849a75732a35f baghira-0.4d.ebuild 546
+MD5 92a862a42e40c25b0a2698d82825997c baghira-0.5.ebuild 545
+MD5 74b7e2334e4f7752da02af2f692c130b baghira-0.5h-r1.ebuild 656
 MD5 14bcf61c4de42530d5fd41ed148b6832 baghira-0.4c.ebuild 481
-MD5 691364364acad0a765bf32167748acb0 files/digest-baghira-0.5h 65
+MD5 774517f599c6894428daeae8e024a0ea baghira-0.4.ebuild 479
+MD5 ca9f0cb1ecc593633154416f9eeef36c ChangeLog 3602
+MD5 77a747b5fbf7edf698a0c698141ecf02 metadata.xml 163
+MD5 dc556fcc7bcedee9380d2b447399fa9f baghira-0.5a.ebuild 553
+MD5 696a33c18289d55a037eace99920e2e9 baghira-0.6.ebuild 564
 MD5 8059cc03ed0b17d80519bc48e39fb0b2 files/digest-baghira-0.4c 65
-MD5 e6be1454433cd6ccf91aa2190ab7a6aa files/digest-baghira-0.5 64
-MD5 96f7dee65dcd1e12c813b5e149ff5588 files/gcc34-baghira-03r.patch 1048
-MD5 8cb20294cb456e1d964dea305c62d001 files/digest-baghira-0.5a 65
 MD5 573be735a54a4d9105e1c947aa04063c files/digest-baghira-0.4d 65
-MD5 eb9cfc658932affe09a33b70035d99fa files/baghira-ximian_fix.patch 1041
-MD5 1abb328b1d75150a4f2275db2cd634a6 files/digest-baghira-0.3r 65
+MD5 8cb20294cb456e1d964dea305c62d001 files/digest-baghira-0.5a 65
+MD5 691364364acad0a765bf32167748acb0 files/digest-baghira-0.5h 65
 MD5 4e0249b66e7688f90353f3a3fd4f3e19 files/digest-baghira-0.4 64
+MD5 e6be1454433cd6ccf91aa2190ab7a6aa files/digest-baghira-0.5 64
+MD5 b5731b1b1a55c04b91821bbbf39037b3 files/digest-baghira-0.6 64
 MD5 691364364acad0a765bf32167748acb0 files/digest-baghira-0.5h-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBiTebugEuf3OQ0akRAtOoAKChmwrnEUYgcvW5BncSKKHjE3/VuACeIrFV
-fIeOxfIgvtrhU6g/TRMksq0=
-=E7Ck
------END PGP SIGNATURE-----
+MD5 96f7dee65dcd1e12c813b5e149ff5588 files/gcc34-baghira-03r.patch 1048
+MD5 eb9cfc658932affe09a33b70035d99fa files/baghira-ximian_fix.patch 1041
