@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.2.1.ebuild,v 1.6 2004/08/26 11:29:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.2.3.ebuild,v 1.1 2004/08/26 11:29:59 usata Exp $
 
 inherit flag-o-matic
 
@@ -11,15 +11,16 @@ SRC_URI="http://jserv.sayya.org/qooing/${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 DEPEND="virtual/libc"
 
 src_compile() {
-	append-flags -I./include
-	emake CFLAGS="${CFLAGS}" -j1 || die
+	econf || die
+	emake || die
 }
 
 src_install() {
-	dodir /usr/lib
-	make install PREFIX=${D}/usr || die
+	make DESTDIR=${D} install || die
+
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
