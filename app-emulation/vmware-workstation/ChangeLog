@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.59 2004/11/04 01:44:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.60 2004/11/04 02:18:00 wolf31o2 Exp $
+
+*vmware-workstation-4.5.2.8848-r2 (03 Nov 2004)
+
+  03 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  +vmware-workstation-4.5.2.8848-r2.ebuild:
+  Updated to patch 84 and closing bugs #58041, #64237, #64300, #59035, #66134,
+  #68030, #66673, and #54269.
 
   03 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org> :
   Fixing bad digest.
