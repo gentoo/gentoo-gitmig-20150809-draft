@@ -1,0 +1,46 @@
+# ChangeLog for sys-apps/gtkpbbuttons
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/gtkpbbuttons/ChangeLog,v 1.1 2004/03/16 04:37:41 warpzero Exp $
+
+*gtkpbbuttons-0.6.2 (07 Mar 2004)
+
+  07 Mar 2004; Lars Weiler <pylon@gentoo.org> gtkpbbuttons-0.6.2.ebuild:
+  Version bump.
+
+  26 Nov 2003; Luca Barbato <lu_zero@gentoo.org> gtkpbbuttons-0.6.1.ebuild:
+  Fixed deps, thanks to Mathieu Leduc-Hamel 
+  <leduc-hamel.mathieu@courrier.uqam.ca> for the report.
+
+*gtkpbbuttons-0.6.1 (26 Nov 2003)
+
+  26 Nov 2003; Luca Barbato <lu_zero@gentoo.org> gtkpbbuttons-0.6.1.ebuild:
+  New version
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*gtkpbbuttons-0.5.2 (17 Oct 2002)
+
+  17 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Clean up compile/install to fix incorrect installs and be more Gentooish.
+
+  14 Mar 2003; Mark Guertin <gerk@gentoo.org> gtkpbbuttons-0.4.6b.ebuild,
+  gtkpbbuttons-0.5.2.ebuild:
+  Fixed deps and keywords
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> gtkpbbuttons-0.5.2.ebuild :
+  This is definitely not for mips.
+
+  17 Oct 2002; Kain <kain@kain.org> gtkpbbuttons-0.5.2.ebuild :
+  Update to bring us in line with pbbuttonsd-0.5+.
+
+*gtkpbbuttons-0.4.6b (09 Jul 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> gtkpbbuttons-0.4.6b.ebuild :
+  This is definitely not for mips.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> gtkpbbuttons-0.4.6b.ebuild :
+  Added KEYWORDS, SLOT.
+
+  09 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> ChangeLog :
+
+  Added ChangeLog.
