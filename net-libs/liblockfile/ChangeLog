@@ -1,8 +1,11 @@
 # ChangeLog for net-libs/liblockfile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.7 2003/07/28 18:39:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.8 2003/08/03 15:38:42 gmsoft Exp $
 
 *liblockfile-1.03-r1 (28 Jul 2003)
+
+  03 Jul 2003; Guy Martin <gmsoft@gentoo.org> liblockfile-1.03-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   28 Jul 2003; Martin Schlemmer <azarah@gentoo.org>
   liblockfile-1.03-r1.ebuild, files/liblockfile-1.03-gcc33.patch:
