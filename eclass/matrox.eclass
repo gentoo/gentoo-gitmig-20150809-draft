@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.8 2004/10/09 00:36:28 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.9 2004/10/09 00:58:42 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -74,7 +74,7 @@ matrox_src_compile() {
 	cd ..
 	# Can't use emake here
 	make clean
-	make
+	make || die "make failed"
 }
 
 matrox_base_src_install() {
