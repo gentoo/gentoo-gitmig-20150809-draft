@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/jless-iso254-358.ebuild,v 1.5 2003/02/13 08:01:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/jless-iso254-358.ebuild,v 1.6 2003/07/30 17:33:46 usata Exp $
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~alpha ~sparc ~ppc"
 A=less-${PV}.tar.gz
 S=${WORKDIR}/less-${PV}
 DESCRIPTION="Japanese enabled pager -- less-iso254"

@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/jless-iso254
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/ChangeLog,v 1.3 2003/02/12 04:22:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/ChangeLog,v 1.4 2003/07/30 17:33:46 usata Exp $
 
 *jless-iso254-358 (09 Jul 2002)
+
+  31 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> jless-iso254-358.ebuild:
+  Added ~alpha, ~sparc and ~ppc keywords
 
   09 Jul 2002; Stuart Bouyer <stubear@gentoo.org> jless-iso254-358.ebuild :
   Initial addition of jless pacakge. Shamelessly ripped from Brandon form
