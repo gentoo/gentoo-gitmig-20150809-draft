@@ -1,0 +1,7 @@
+# ChangeLog for sci-misc/camfr
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/camfr/ChangeLog,v 1.1 2005/04/05 07:52:12 pbienst Exp $
+
+  05 Apr 2005; Peter Bienstman <pbienst@gentoo.org> :
+  Initial import. Closes bug 36560.
+
