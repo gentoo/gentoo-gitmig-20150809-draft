@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/logrotate.mysql,v 1.1 2004/12/23 10:56:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/logrotate.mysql,v 1.2 2005/01/07 03:30:11 robbat2 Exp $
 /var/log/mysql/mysql.err /var/log/mysql/mysql.log /var/log/mysql/mysqld.err {
 monthly
 create 660 mysql mysql
@@ -8,6 +8,7 @@ notifempty
 size 5M
 sharedscripts
 postrotate
+missingok
 /sbin/kill -HUP `cat /var/run/mysqld/mysqld.pid`
 endscript
 }
