@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Foundation.
 # System-wide defaults for the gcc 3.2 Portage system
 
-USE="x86 berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
+USE="x86 berkdb bitmap-fonts crypt ncurses pam python readline selinux ssl tcpd xprint zlib"
 GRP_STAGE23_USE="x86 berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
 
 ARCH="x86"

@@ -13,7 +13,7 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-USE="sparc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
+USE="sparc berkdb bitmap-fonts crypt ncurses pam python readline selinux ssl tcpd xprint zlib"
 GRP_STAGE23_USE="x86 berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
 
 ACCEPT_KEYWORDS="sparc"

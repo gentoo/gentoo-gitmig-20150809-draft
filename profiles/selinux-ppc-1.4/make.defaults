@@ -20,7 +20,7 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-USE="ppc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
+USE="ppc berkdb bitmap-fonts crypt ncurses pam python readline selinux ssl tcpd xprint zlib"
 GRP_STAGE23_USE="ppc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
 
 # The following USE should _not_ bet set on ppc as they can cause breakage
