@@ -23,6 +23,18 @@ Defaults	env_reset
 
 # Runas alias specification
 
+# *** REMEMBER ***************************************************
+# * GIVING SUDO ACCESS TO USERS ALLOWS THEM TO RUN THE SPECIFIED *
+# * COMMANDS WITH ELEVATED PRIVILEGES.                           *
+# *                                                              *
+# * ONLY PERMIT SUDO ACCESS SPARINGLY.                           *
+# *                                                              *
+# * NEVER ALLOW ACCESS TO UNTRUSTED USERS.                       *
+# *                                                              *
+# * IF YOU DON'T KNOW A COMMAND IS SAFE TO USE WITH SUDO, ASSUME *
+# * IT ISNT, AND PERMIT ACCESS ACCORDINGLY.                      *
+# ****************************************************************
+
 # User privilege specification
 root	ALL=(ALL) ALL
 
