@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7cd676d0d24d076c25bbaa9467b7626d libpano12-2.7.0.8.ebuild 1040
+MD5 c3fb12f680214d842862d39bb5ca372f ChangeLog 1121
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 d2f7311b51c5b24ae5d00c2a0f4642a1 ChangeLog 1120
-MD5 0a3cdaab664659fdf6046781946ebc95 libpano12-2.7.0.8.ebuild 1040
-MD5 896b7fb7c5462f3b2b76e652ab8c6058 files/libpano12-2.7.0.8-dejava.patch 2164
 MD5 825822b85e6626200ea237c1276831ad files/digest-libpano12-2.7.0.8 70
+MD5 896b7fb7c5462f3b2b76e652ab8c6058 files/libpano12-2.7.0.8-dejava.patch 2164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCLHsPI1lqEGTUzyQRAlC4AJ96MYPTZhfD8xHV76UsEai0g6QHSgCeJqR/
+HcqfaLORPOJiPWAPiNp05n4=
+=8zXm
+-----END PGP SIGNATURE-----

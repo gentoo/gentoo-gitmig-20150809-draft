@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano12/libpano12-2.7.0.8.ebuild,v 1.2 2005/03/07 12:50:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano12/libpano12-2.7.0.8.ebuild,v 1.3 2005/03/07 16:02:17 swegener Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	use java \
-		&& myconf="--with-java=${JAVA_HOME}" 
+		&& myconf="--with-java=${JAVA_HOME}"
 	use java \
 		|| myconf="--without-java"
 	econf ${myconf} || die "Configure failed"
