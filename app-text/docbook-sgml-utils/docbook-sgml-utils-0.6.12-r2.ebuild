@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12-r2.ebuild,v 1.6 2004/06/24 22:32:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12-r2.ebuild,v 1.7 2004/07/02 20:29:24 tgall Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://sources.redhat.com/pub/docbook-tools/new-trials/SOURCES/${MY_P}.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~amd64 mips"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~amd64 mips ppc64"
 IUSE="tetex"
 
 DEPEND=">=dev-lang/perl-5
