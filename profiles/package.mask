@@ -580,3 +580,7 @@ app-cdr/cddump
 #seemant@gentoo.org 26 Apr 2002
 # this package is obsolete
 >=media-sound/grip-id3v2-2.96
+
+# spider@gentoo.org 26 Apr 2002
+# alpha release, go get it ;)
+>=x11-wm/blackbox-0.65.0_alpha1
