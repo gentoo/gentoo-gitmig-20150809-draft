@@ -1,4 +1,14 @@
-MD5 05830232154d122a888e36c2fcbf3552 ChangeLog 624
-MD5 b32d4fb9a9571cc11e825b177eecd486 libstatgrab-0.10.ebuild 1112
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ec60945df9c08380da68e9f5a0246cf0 libstatgrab-0.10.ebuild 1112
+MD5 05033d0b3dbc450bbf7597707546c1ba ChangeLog 717
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
 MD5 de876db041af220fa9dbec5f31ee01e8 files/digest-libstatgrab-0.10 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+hRImdTrptrqvGERAjtqAJ9UfdvnwCH7578IRK5ae+dgiOYQVgCgg2NN
+aaj7vTP1Latg/GcH/bgCmFw=
+=7gGe
+-----END PGP SIGNATURE-----
