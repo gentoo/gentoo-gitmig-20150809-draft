@@ -1,21 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f0035f7da2fdc959c872590bfb8dd6dd ChangeLog 1568
+MD5 90abea05fd011e28b966593dbe77b9d6 ChangeLog 1705
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 27717deade05cd8e88a9568e07e61f8c xmms-find-0.4.7.ebuild 828
-MD5 cc46305785bb210b83920d1d997de2a2 xmms-find-0.5.0.ebuild 938
 MD5 47719d8f7f5e34d08a7fd521dc1b28fb xmms-find-0.5.1.ebuild 904
-MD5 b57d4f8f578acda09601872dc668d137 xmms-find-0.5.2.ebuild 910
+MD5 26d9f248e94a84705d0a09ad8316deec xmms-find-0.5.2.ebuild 860
 MD5 581f8ac202bf532dda4d1114a0548f1f files/digest-xmms-find-0.4.7 65
-MD5 7308537b42945eb380f0beb988f0f790 files/digest-xmms-find-0.5.0 65
 MD5 2c54572283c00b354437f7b39a4d2a0e files/xmms-find-0.5.0-fPIC.patch 395
 MD5 fc7a8bb49c2e3358cfc5251a7b594409 files/digest-xmms-find-0.5.1 65
 MD5 99c79b6a93f54acffc9c437114634b2c files/digest-xmms-find-0.5.2 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBj+YpArHZZzCEUG0RAqcUAJ456tBXGyaBy7dlh/rs4MnVudrX3gCffVzA
-byKy7s3jIHDW/5ZVZQMAcco=
-=HhxF
+iD8DBQFBm8qLArHZZzCEUG0RAqSVAJ4wWUXHTehfHoMHPvjbBt7wAcwmZQCfbGJ5
+/7LFNgAA0q7Hl83Gp6vC5bo=
+=2ySx
 -----END PGP SIGNATURE-----
