@@ -1,14 +1,51 @@
 # Author Matthew Turk <m-turk@nwu.edu>
-# An ebuild calling this class can cd to the appropriate
-# directory and call latex-package_src_doinstall all, or leave
-# the src_install function as-is if the system is single-directory.
+#
+# This eClass is designed to be easy to use and implement.  The vast majority of
+# LaTeX packages will only need to define SRC_URI (and sometimes S) for a
+# successful installation.  If fonts need to be installed, then the variable
+# SUPPLIER must also be defined.
+#
+# However, those packages that contain subdirectories must process each
+# subdirectory individually.  For example, a package that contains directories
+# DIR1 and DIR2 must call latex-package_src_compile() and
+# latex-package_src_install() in each directory, as shown here:
+#
+# src_compile() {
+#    cd ${S}
+#    cd DIR1
+#    latex-package_src_compile
+#    cd ..
+#    cd DIR2
+#    latex-package_src_compile
+# }
+#
+# src_install() {
+#    cd ${S}
+#    cd DIR1
+#    latex-package_src_install
+#    cd ..
+#    cd DIR2
+#    latex-package_src_install
+# }
+#
+# The eClass automatically takes care of rehashing TeX's cache (ls-lR) after
+# installation and after removal, as well as creating final documentation from
+# TeX files that come with the source.  Note that we break TeX layout standards 
+# by placing documentation in /usr/share/doc/${PN}
+#
+# For examples of basic installations, check out app-text/latex-aastex and
+# app-text/latex-leaflet.
+#
+# NOTE: The CTAN "directory grab" function creates files with different MD5
+# signatures EVERY TIME.  For this reason, if you are grabbing from the CTAN,
+# you must either grab each file individually, or find a place to mirror an
+# archive of them.  (iBiblio)
 
 inherit base
-ECLASS=latex-package
 INHERITED="$INHERITED $ECLASS"
 
 newdepend ">=app-text/tetex-1.0.7"
-
+ECLASS=latex-package
 HOMEPAGE="http://www.tug.org/"
 SRC_URI="ftp://tug.ctan.org/macros/latex/"
 S=${WORKDIR}/${P}
@@ -20,48 +57,47 @@ latex-package_src_doinstall() {
     # This actually follows the directions for a "single-user" system
     # at http://www.ctan.org/installationadvice/ modified for gentoo.
     [ -z "$1" ] && latex-package_src_install all
- 
+
     while [ "$1" ]; do
         case $1 in
             "sh")
-                for i in `find . -maxdepth 1 -name "*.${1}"`
+                for i in `find . -maxdepth 1 -type f -name "*.${1}"`
                 do
                     dobin $i
                 done
                 ;;
-            "sty" | "cls" | "fd")
-                for i in `find . -maxdepth 1 -name "*.${1}"`
+            "sty" | "cls" | "fd" | "clo" | "def")
+                for i in `find . -maxdepth 1 -type f -name "*.${1}"`
                 do
                     insinto ${TEXMF}/tex/latex/${PN}
                     doins $i
                 done
                 ;;
-            "dvi" | "ps" | "pdf" | "tex")
-                for i in `find . -maxdepth 1 -name "*.${1}"`
+            "dvi" | "ps" | "pdf" | "tex" | "dtx")
+                for i in `find . -maxdepth 1 -type f -name "*.${1}"`
                 do
-                    insinto ${TEXMF}/doc/latex/${PN}
-                    doins $i
+                    dodoc $i
                 done
                 ;;
             "tfm" | "vf" | "afm" | "pfb")
-                for i in `find . -maxdepth 1 -name "*.${1}"`
+                for i in `find . -maxdepth 1 -type f -name "*.${1}"`
                 do
                     insinto ${TEXMF}/fonts/${1}/${SUPPLIER}/${PN}
                     doins $i
                 done
                 ;;
             "ttf")
-                for i in `find . -maxdepth 1 -name "*.ttf"`
+                for i in `find . -maxdepth 1 -type f -name "*.ttf"`
                 do
                     insinto ${TEXMF}/fonts/truetype/${SUPPLIER}/${PN}
                     doins $i
                 done
                 ;;
             "styles")
-                latex-package_src_doinstall sty cls fd
+                latex-package_src_doinstall sty cls fd clo def
                 ;;
             "doc")
-                latex-package_src_doinstall dvi ps pdf tex
+                latex-package_src_doinstall dvi ps pdf tex dtx
                 ;;
             "fonts")
                 latex-package_src_doinstall tfm vg afm pfb ttf
@@ -80,12 +116,7 @@ latex-package_src_doinstall() {
 latex-package_src_compile() {
     debug-print function $FUNCNAME $*
     cd ${S}
-    for i in `find \`pwd\` -maxdepth 1 -name "*.ins"`
-    do
-        echo "Extracting from $i"
-        latex --interaction=batchmode $i > /dev/null
-    done
-    for i in `find \`pwd\` -maxdepth 1 -name "*.dtx"`
+    for i in `find \`pwd\` -maxdepth 1 -type f -name "*.ins"`
     do
         echo "Extracting from $i"
         latex --interaction=batchmode $i > /dev/null
@@ -101,18 +132,14 @@ latex-package_src_install() {
 latex-package_pkg_postinst() {
     debug-print function $FUNCNAME $*
     latex-package_rehash
-    if [ ! -e ${TEXMF}/doc/latex/${PN} ] ; then return ; fi
-    cd ${TEXMF}/doc/latex/${PN}
+    if [ ! -e /usr/doc/latex/${PN} ] ; then return ; fi
+    cd /usr/share/doc/${PN}
     latex-package_make_documentation
 }
 
 latex-package_pkg_postrm() {
     debug-print function $FUNCNAME $*
-    # This may be a bit harsh, so perhaps it should be overridden.
     latex-package_rehash
-    if [ ! -e ${TEXMF}/doc/latex/${PN} ] ; then return ; fi
-    echo "Removing stale documentation: ${TEXMF}/doc/latex/${PN}"
-    rm -rf ${TEXMF}/doc/latex/${PN}
 }
 
 latex-package_rehash() {
@@ -122,13 +149,15 @@ latex-package_rehash() {
 
 latex-package_make_documentation() {
     debug-print function $FUNCNAME $*
-    # This has to come after the installation of all our files.
-    # All errors will be discarded.
-    for i in `find \`pwd\` -maxdepth 1 -name "*.tex"`
+    for i in `find \`pwd\` -maxdepth 1 -type f -name "*.[dt]tex"`
     do
-        # Note - we rerun twice to get references properly.
         echo "Making Documentation: $i"
         latex --interaction=batchmode $i > /dev/null
+        # And we don't want any leftovers...
+        for ext in aux toc log
+        do
+            rm ${i}.${ext}
+        done
     done
     echo "Completed."
 }
