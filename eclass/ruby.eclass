@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.16 2003/11/16 21:36:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.17 2003/12/24 22:14:55 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -32,6 +32,8 @@ INHERITED="${INHERITED} ${ECLASS}"
 EXPORT_FUNCTIONS erubyconf erubymake erubyinstall erubydoc \
 	src_unpack econf emake src_compile einstall src_install
 
+inherit eutils
+
 HOMEPAGE="http://raa.ruby-lang.org/list.rhtml?name=${PN}"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
@@ -51,23 +53,25 @@ if has_version '=dev-lang/ruby-1.6*' && has_version '=dev-lang/ruby-1.8*' \
 fi
 
 ruby_src_unpack() {
+
+	unpack ${A}
+	# apply bulk patches
+	[[ -n "${PATCHES}" ]] && xpatch "${PATCHES}"
+
 	if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
-		mkdir -p ${S}/{1.6,1.8}
-		cd ${S}/1.6; unpack ${A}; cd -
-		cd ${S}/1.8; unpack ${A}; cd -
-	else
-		unpack ${A}
+		mkdir ${T}/${S#${WORKDIR}}
+		cp -a * ${T}${S#${WORKDIR}}
 	fi
 }
 
 erubyconf() {
 	local RUBY
 	if [ "$1" = ruby16 ] ; then
-		RUBY=ruby16
+		RUBY=/usr/bin/ruby16
 	elif [ "$1" = ruby18 ] ; then
-		RUBY=ruby18
+		RUBY=/usr/bin/ruby18
 	else
-		RUBY=ruby
+		RUBY=/usr/bin/ruby
 	fi
 	shift
 
@@ -98,11 +102,9 @@ erubyconf() {
 ruby_econf() {
 	if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
 		einfo "running econf for ruby 1.6 ;)"
-		cd 1.6/${S#${WORKDIR}}
 		erubyconf ruby16 $@ || die
-		cd -
 		einfo "running econf for ruby 1.8 ;)"
-		cd 1.8/${S#${WORKDIR}}
+		cd ${T}/${S#${WORKDIR}}
 		erubyconf ruby18 $@ || die
 		cd -
 	elif [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" ]] ; then
@@ -126,11 +128,9 @@ erubymake() {
 ruby_emake() {
 	if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
 		einfo "running emake for ruby 1.6 ;)"
-		cd 1.6/${S#${WORKDIR}}
 		erubymake $@ || die
-		cd -
 		einfo "running emake for ruby 1.8 ;)"
-		cd 1.8/${S#${WORKDIR}}
+		cd ${T}/${S#${WORKDIR}}
 		erubymake $@ || die
 		cd -
 	elif [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" ]] ; then
@@ -156,11 +156,11 @@ ruby_src_compile() {
 erubyinstall() {
 	local RUBY siteruby
 	if [ "$1" = ruby16 -a -x /usr/bin/ruby16 ] ; then
-		RUBY=ruby16
+		RUBY=/usr/bin/ruby16
 	elif [ "$1" = ruby18 -a -x /usr/bin/ruby18 ] ; then
-		RUBY=ruby18
+		RUBY=/usr/bin/ruby18
 	else
-		RUBY=ruby
+		RUBY=/usr/bin/ruby
 	fi
 	shift
 
@@ -188,15 +188,11 @@ ruby_einstall() {
 
 	if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
 		einfo "running einstall for ruby 1.6 ;)"
-		MY_S=${S}/1.6/${S#${WORKDIR}}
-		cd ${MY_S}
 		erubyinstall ruby16 $@
 		einfo "running einstall for ruby 1.8 ;)"
-		MY_S=${S}/1.8/${S#${WORKDIR}}
-		cd ${MY_S}
+		cd ${T}/${S#${WORKDIR}}
 		erubyinstall ruby18 $@
-		S=${MY_S}
-		#cd -
+		cd -
 	elif [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" ]] ; then
 		einfo "running einstall for ruby 1.6 ;)"
 		erubyinstall ruby16 $@
@@ -204,23 +200,23 @@ ruby_einstall() {
 		einfo "running einstall for ruby 1.8 ;)"
 		erubyinstall ruby18 $@
 	elif [[ "${WITH_RUBY/any/}" != "${WITH_RUBY}" ]] ; then
-		if [ -n "`use ruby18`" ] ; then
-			erubyinstall ruby18 $@
-			if [ -d ${D}${siteruby}/../1.8 ] ; then
-				cd ${D}${siteruby}/../1.8
-				dodir ${siteruby}/../1.6
-				for x in * ; do
-					ln -s ../1.8/$x ../1.6/$x
-				done
-				cd -
-			fi
-		else
+		if [ -n "`use ruby16`" ] ; then
 			erubyinstall ruby16 $@
 			if [ -d ${D}${siteruby}/../1.6 ] ; then
 				cd ${D}${siteruby}/../1.6
 				dodir ${siteruby}/../1.8
 				for x in * ; do
 					ln -s ../1.6/$x ../1.8/$x
+				done
+				cd -
+			fi
+		else
+			erubyinstall ruby18 $@
+			if [ -d ${D}${siteruby}/../1.8 ] ; then
+				cd ${D}${siteruby}/../1.8
+				dodir ${siteruby}/../1.6
+				for x in * ; do
+					ln -s ../1.8/$x ../1.6/$x
 				done
 				cd -
 			fi
