@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-3.2-r3.ebuild,v 1.1 2004/09/05 11:27:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-3.2-r3.ebuild,v 1.2 2004/09/05 13:29:41 axxo Exp $
 
 inherit java-pkg
 
@@ -43,7 +43,7 @@ src_install() {
 	newins ${PN}-${PV} 22javacc || die "Missing ${PF}"
 }
 
-pkg_postrm() {
+pkg_postinst() {
 	#close bug 61975
 	if [ -f /etc/env.d/22javacc ] ; then
 		rm -f /etc/env.d/22javacc
