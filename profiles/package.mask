@@ -41,10 +41,6 @@
 # needs testing.
 =sys-apps/baselayout-1.8.0
 
-# stubear@gentoo.org (16 Jul 2002)                                              
-# w3m-0.3-r4 - test for multi-byte char support                              
-=net-www/w3m-0.3-r4
-
 # cybersystem@gentoo.org (17 Jul 2002)
 # Masking knapster2 - this package is broken on gcc 3.1
 =net-p2p/knapster2-0.4
@@ -76,10 +72,6 @@
 # initscript needs testing, I don't run a system wide fetchmail so can't
 # verify.
 =net-mail/fetchmail-5.9.11-r1
-
-# stubear@gentoo.org (16 Jul 2002)
-# rxvt-2.7.8-r5 - test for multi-byte char support
-=x11-terms/rxvt-2.7.8-r5
 
 # cardoe@gentoo.org (16 Jul 2002)
 # pcmcia-cs-3.1.34-r8 is messed up.. -r7 should be used
