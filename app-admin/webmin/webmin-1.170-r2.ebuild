@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.170-r2.ebuild,v 1.1 2004/12/31 22:14:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.170-r2.ebuild,v 1.2 2004/12/31 22:45:19 eradicator Exp $
 
 IUSE="ssl apache2 webmin-minimal"
 
@@ -54,6 +54,8 @@ src_unpack() {
 		# Fix some all name virtual items
 		epatch ${FILESDIR}/virtual-server-2.31-namevirtual.patch
 	fi
+
+	epatch ${FILESDIR}/${PN}-1.170-setup-nocheck.patch
 }
 
 src_install() {
@@ -112,19 +114,9 @@ src_install() {
 	# Cleanup from the config script
 	rm -rf ${D}/var/log/webmin
 	keepdir /var/log/webmin/
-
-	exeinto /etc/webmin
-	doexe ${FILESDIR}/uninstall.sh
 }
 
 pkg_postinst() {
-	${ROOT}/etc/init.d/webmin stop >/dev/null 2>&1
-	stopstatus=$?
-	if [ "$stopstatus" = "0" ]; then
-		# Start if it was running before
-		${ROOT}/etc/init.d/webmin start
-	fi
-
 	einfo "To make webmin start at boot time, run: 'rc-update add webmin default'."
 	einfo "Point your web browser to http://localhost:10000 to use webmin."
 }
