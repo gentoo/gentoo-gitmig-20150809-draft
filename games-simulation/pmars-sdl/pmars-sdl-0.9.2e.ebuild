@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.6 2004/09/23 09:33:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.7 2004/10/16 19:04:22 vapier Exp $
 
 inherit games gcc
 
@@ -22,7 +22,7 @@ DEPEND="virtual/libc
 		sdl?  ( virtual/x11 media-libs/libsdl )
 		X?    ( virtual/x11 )
 		svga? ( media-libs/svgalib )
-		( sys-libs/ncurses sys-libs/libtermcap-compat )
+		sys-libs/ncurses
 	)"
 
 S="${WORKDIR}/${MY_P}"
