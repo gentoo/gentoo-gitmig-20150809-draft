@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/qat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qat-bin/ChangeLog,v 1.1 2004/07/30 21:27:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qat-bin/ChangeLog,v 1.2 2004/08/21 11:56:10 axxo Exp $
+
+*qat-bin-2.7.1-r1 (21 Aug 2004)
+
+  21 Aug 2004; Thomas Matthijs <axxo@gentoo.org> +qat-bin-2.7.1-r1.ebuild:
+  fix S path
 
 *qat-2.7.1 (09 Mar 2004)
 
