@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/biew
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.1 2004/02/12 11:27:20 spock Exp $
+
+*biew-5.5.0 (12 Feb 2004)
+
+  12 Feb 2004; Michal Januszewski <spock@gentoo.org> biew-5.5.0.ebuild,
+  metadata.xml:
+  Initial commit, closes #41027. Thanks to Daniel Fullmer <lsmod@hotmail.com>
+  for the original ebuild.
+
