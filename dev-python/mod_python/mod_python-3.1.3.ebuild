@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.1.3.ebuild,v 1.1 2004/02/29 01:59:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.1.3.ebuild,v 1.2 2004/05/04 12:55:59 kloeri Exp $
 
 inherit python
 
 DESCRIPTION="An Apache2 DSO providing an embedded Python interpreter"
 HOMEPAGE="http://www.modpython.org/"
-SRC_URI="http://www.apache.org/dist/httpd/modpython/${P}.tgz"
+SRC_URI="mirror://apache/modpython/${P}.tgz"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86"
