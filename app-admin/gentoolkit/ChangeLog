@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.39 2002/09/09 15:14:08 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.40 2002/10/30 22:25:58 karltk Exp $
+
+*gentoolkit-0.1.17-r2 (30 Oct 2002)
+
+  30 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.17-r2.ebuild files/digest-gentoolkit-0.1.17-r2:
+  Removed lintool, as it now lives in dev-util/lintool.
+
+  Removed gentoolkit-0.1.17-r1.ebuild files/digest-gentoolkit-0.1.17-r1
 
 *gentoolkit-0.1.17 (03 Sep 2002)
 

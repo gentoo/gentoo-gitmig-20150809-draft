@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.17-r1.ebuild,v 1.4 2002/10/18 13:31:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.17-r2.ebuild,v 1.1 2002/10/30 22:25:58 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
@@ -51,10 +51,10 @@ src_install () {
 	dosbin ${FILESDIR}/scripts/emerge-webrsync
 	dosbin ${FILESDIR}/scripts/epm
 
-	dobin ${FILESDIR}/lintool/lintool
-	doman ${FILESDIR}/lintool/lintool.1
-	docinto lintool
-	dodoc ${FILESDIR}/lintool/{checklist-for-ebuilds,ChangeLog}
+#	dobin ${FILESDIR}/lintool/lintool
+#	doman ${FILESDIR}/lintool/lintool.1
+#	docinto lintool
+#	dodoc ${FILESDIR}/lintool/{checklist-for-ebuilds,ChangeLog}
 
 # Included in portage as of 03 Sep 2002
 #	dosbin ${FILESDIR}/etc-update/etc-update
