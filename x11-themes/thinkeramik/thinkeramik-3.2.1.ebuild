@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/thinkeramik-3.2.1.ebuild,v 1.8 2005/01/01 02:52:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/thinkeramik-3.2.1.ebuild,v 1.9 2005/01/22 13:37:39 motaboy Exp $
 
 inherit kde
-need-kde 3.2
 
 DESCRIPTION="A cool kde style modified from keramik"
 SRC_URI="http://prefsx1.hp.infoseek.co.jp/tk040429/${P}.tar.gz"
@@ -16,9 +15,4 @@ IUSE=""
 
 KEYWORDS="x86 ppc ~amd64 ~sparc"
 
-src_compile()
-{
-	./configure --prefix=$KDEDIR
-	emake
-}
-
+need-kde 3.2

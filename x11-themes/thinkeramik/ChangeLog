@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/thinkeramik
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.23 2005/01/01 02:52:19 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.24 2005/01/22 13:37:39 motaboy Exp $
+
+  22 Jan 2005; Simone Gotti <motaboy@gentoo.org> thinkeramik-2.8.1.ebuild,
+  thinkeramik-3.1.2.ebuild, thinkeramik-3.2.1.ebuild:
+  Remove the call to configure as it's already done in the kde.eclass. Fixes
+  bug #79071.
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> thinkeramik-3.2.1.ebuild:
   Added ~sparc keyword.
