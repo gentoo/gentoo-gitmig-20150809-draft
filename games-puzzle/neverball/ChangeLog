@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/neverball
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.13 2004/05/05 19:05:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.14 2004/05/05 19:10:52 mr_bones_ Exp $
+
+  05 May 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  neverball-1.2.0-r1.ebuild, neverball-1.2.1.ebuild:
+  clean older ebuilds
 
 *neverball-1.2.5 (05 May 2004)
 
