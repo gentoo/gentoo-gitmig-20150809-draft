@@ -1,17 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.3.ebuild,v 1.1 2003/07/20 00:16:42 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.3.ebuild,v 1.2 2003/07/21 06:22:07 raker Exp $
+
+IUSE="ssl nls ipv6"
 
 inherit eutils
 
-DESCRIPTION="Fetchmail is a full-featured remote-mail retrieval and forwarding utility"
+DESCRIPTION="a full-featured remote-mail retrieval and forwarding utility"
 HOMEPAGE="http://www.catb.org/~esr/fetchmail/"
 SRC_URI="http://www.catb.org/~esr/fetchmail/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 public-domain"
-KEYWORDS="~x86 ~alpha"
-IUSE="ssl nls ipv6"
+KEYWORDS="x86 ~alpha"
 
 DEPEND="virtual/glibc
 	ssl? ( >=dev-libs/openssl-0.9.6 )
@@ -25,14 +26,17 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+
 	use ssl && myconf="${myconf} --with-ssl=/usr"
 	use nls || myconf="${myconf} --disable-nls"
 	use ipv6 && myconf="${myconf} --enable-inet6"
+
 	econf \
 		--enable-RPA \
 		--enable-NTLM \
 		--enable-SDPS \
 		${myconf} || die "Configuration failed."
+
 	emake || die "Compilation failed."
 }
 
