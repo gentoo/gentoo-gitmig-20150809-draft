@@ -1,0 +1,14 @@
+# ChangeLog for dev-libs/ntl
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.1 2002/11/08 08:52:32 george Exp $
+
+*ntl-5.3 (07 Nov 2002)
+
+  07 Nov 2002; George Shapovalov <george@gentoo.org> ntl-5.3.ebuild :
+
+  Initial release
+  NTL is a high-performance, portable C++ library providing data structures and algorithms for arbitrary 
+  length integers; for vectors, matrices, and polynomials over the integers and over finite fields; and for 
+  arbitrary precision floating point arithmetic.
+
+  ebuild submitted by Brendan Johnson <johnsobm@clarkson.edu>
