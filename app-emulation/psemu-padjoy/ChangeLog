@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/psemu-padjoy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-padjoy/ChangeLog,v 1.5 2003/02/12 04:02:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-padjoy/ChangeLog,v 1.6 2003/08/14 06:25:09 vapier Exp $
+
+*psemu-padjoy-0.81 (14 Aug 2003)
+
+  14 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + games.eclass support.
 
 *psemu-padjoy-0.62 (29 Jul 2002)                                                
                                                                                 
@@ -8,19 +13,14 @@
   Added -ppc to keywords
 
   29 Jul 2002; Stuart Bouyer <stubear@gentoo.org> psemu-padjoy-0.62.ebuild :
-
-   Version bump. Author changed version 62 to GPL. LICENSE added to ebuild. 
+  Version bump. Author changed version 62 to GPL. LICENSE added to ebuild. 
 
 *psemu-padjoy-0.61 (27 Jul 2002)
 
   27 Jul 2002; Stuart Bouyer <stubear@gentoo.org> psemu-padjoy-0.61.ebuild :
-
   Added SLOT, LICENSE, and KEYWORDS="x86"
 
-*psemu-padjoy-0.61 (2 June 2002)
-
   2 June 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
