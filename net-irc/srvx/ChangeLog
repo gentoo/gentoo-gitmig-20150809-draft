@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/srvx
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/srvx/ChangeLog,v 1.1 2004/12/16 01:16:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/srvx/ChangeLog,v 1.2 2004/12/16 16:08:53 swegener Exp $
+
+*srvx-1.3_p84 (16 Dec 2004)
+
+  16 Dec 2004; Sven Wegener <swegener@gentoo.org> -srvx-1.3_p81.ebuild,
+  +srvx-1.3_p84.ebuild:
+  Version bump. Closes bug #74599.
 
 *srvx-1.3_p81 (16 Dec 2004)
 

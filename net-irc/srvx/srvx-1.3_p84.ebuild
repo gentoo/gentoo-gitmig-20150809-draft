@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/srvx/srvx-1.3_p81.ebuild,v 1.1 2004/12/16 01:16:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/srvx/srvx-1.3_p84.ebuild,v 1.1 2004/12/16 16:08:53 swegener Exp $
 
 inherit eutils
 
@@ -8,15 +8,16 @@ MY_P=${P/_/-}
 
 DESCRIPTION="A complete set of services for IRCu 2.10.10+ and bahamut based networks"
 HOMEPAGE="http://www.srvx.net/"
-SRC_URI="http://srvx.arlott.org/arch/${MY_P}.tar.bz2"
+SRC_URI="http://www.macs.hw.ac.uk/~sa3/pub/srvx/${MY_P}.tar.bz2
+	http://srvx.arlott.org/arch/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="bahamut"
 
-DEPEND="=sys-devel/automake-1.9*
-	=sys-devel/autoconf-2.59*"
+DEPEND=">=sys-devel/automake-1.8
+	>=sys-devel/autoconf-2.59"
 RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
@@ -54,7 +55,7 @@ src_install() {
 		dosym "../../../usr/share/srvx/${helpfile}" "/var/lib/srvx/${helpfile}" || die "dosym failed"
 	done
 
-	dodoc AUTHORS FAQ INSTALL NEWS README TODO || die "dodoc failed"
+	dodoc AUTHORS FAQ INSTALL NEWS README TODO srvx.conf.example sockcheck.conf.example || die "dodoc failed"
 
 	newinitd ${FILESDIR}/srvx.init.d srvx || die "newinitd failed"
 	newconfd ${FILESDIR}/srvx.conf.d srvx || die "newconfd failed"
@@ -62,9 +63,10 @@ src_install() {
 
 pkg_setup() {
 	enewgroup srvx
-	enewuser srvx -1 /bin/false /etc/srvx srvx
+	enewuser srvx -1 /bin/false /var/lib/srvx srvx
 }
 
 pkg_postinst() {
 	chown -R srvx:srvx ${ROOT}/etc/srvx ${ROOT}/var/lib/srvx
+	chmod 0700 ${ROOT}/etc/srvx ${ROOT}/var/lib/srvx
 }
