@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.47.ebuild,v 1.1 2002/10/22 19:03:35 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.47.ebuild,v 1.2 2002/11/03 18:32:15 lostlogic Exp $
 
 S=${WORKDIR}/${PN/-rescue/}-${PV}_20021020
 DESCRIPTION="a nice backup tool"
@@ -8,7 +8,7 @@ SRC_URI="http://www.microwerks.net/~hugo/download/daily/${PN/-rescue/}-${PV}_200
 HOMEPAGE="http://www.microwerks.net/~hugo/download.html"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=app-arch/afio-2.4.7
 	>=sys-apps/mindi-0.67
