@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xalan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.25 2004/09/19 21:34:25 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.26 2004/09/27 16:34:18 axxo Exp $
+
+  27 Sep 2004; Thomas Matthijs <axxo@gentoo.org> xalan-2.6.0-r1.ebuild:
+  small dep fix
 
 *xalan-2.6.0-r1 (19 Sep 2004)
 
