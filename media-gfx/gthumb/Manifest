@@ -1,3 +1,4 @@
+MD5 5bb1cd72e6e6d9230b1fc4647b834095 gthumb-2.1.5.ebuild 944
 MD5 9e7a21a0eae98900c2d5bad94e15a66a gthumb-0.13.ebuild 953
 MD5 bed2ea0937855e2d4be48ad1985cf5e9 gthumb-2.0.1.ebuild 1058
 MD5 5bb1cd72e6e6d9230b1fc4647b834095 gthumb-2.1.4.ebuild 944
@@ -7,4 +8,5 @@ MD5 6cbfe2d1483923a2af5187d845180f3a gthumb-2.1.1.ebuild 1096
 MD5 ca0f5f3d6f82d7d700cf19e06bf70693 files/digest-gthumb-2.0.1 65
 MD5 87171724d5a88b1ca370f0070769d9f0 files/digest-gthumb-2.1.1 66
 MD5 4f6fb44105354748b1d0cd5ff3edf74a files/digest-gthumb-2.1.4 66
+MD5 5c241cc31fceb1e13cdd8731f5b4cd87 files/digest-gthumb-2.1.5 66
 MD5 6552832e528ea12ac21ec464c103fc2f files/digest-gthumb-0.13 63
