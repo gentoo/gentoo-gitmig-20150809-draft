@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.3.ebuild,v 1.4 2003/07/22 20:00:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.3.ebuild,v 1.5 2003/08/07 22:33:24 johnm Exp $
 
 IUSE="build"
 
@@ -33,7 +33,6 @@ src_unpack() {
 	bzcat ${DISTDIR}/linux-${OKV}-wolk4.0s-to-4.1s.patch.bz2 | patch -p1 || die
 	bzcat ${DISTDIR}/linux-${OKV}-wolk4.1s-to-4.2s.patch.bz2 | patch -p1 || die
 	bzcat ${DISTDIR}/linux-${OKV}-wolk4.2s-to-4.3s.patch.bz2 | patch -p1 || die
-	echo "KV=${KV}" >/tmp/KV
 }
 src_install() {
 	dodir /usr/src

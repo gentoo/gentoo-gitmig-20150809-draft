@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/gaming-sources-2.4.20-r5.ebuild,v 1.4 2003/07/22 20:00:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/gaming-sources-2.4.20-r5.ebuild,v 1.5 2003/08/07 22:35:03 johnm Exp $
 
 IUSE="build"
 
@@ -31,7 +31,6 @@ src_unpack() {
 
 	cd ${KV} || die #enter the patch directory and go!
 	kernel_src_unpack
-        echo "KV=${KV}" >/tmp/KV
 }
 
 
