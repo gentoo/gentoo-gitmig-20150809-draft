@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ogle
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.21 2004/03/24 02:21:53 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.22 2004/03/30 04:56:45 spyderous Exp $
+
+  29 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; ogle-0.9.1.ebuild,
+  ogle-0.9.2.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   23 Mar 2004; root <root@gentoo.org> ogle-0.9.1.ebuild:
   removed ~mips from KEYWORDS
