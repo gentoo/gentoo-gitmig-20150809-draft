@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Original from libgd-1.8.3-r3.ebuild slightly edited for libgd-2.0.1
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-2.0.1.ebuild,v 1.1 2002/09/10 01:55:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-2.0.1.ebuild,v 1.2 2002/09/14 12:39:18 mcummings Exp $
 
 MY_P=${P/lib/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A graphics library for fast image creation"
 SRC_URI="http://www.boutell.com/gd/http/${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/gd-2.0.1.patch.bz2"
 HOMEPAGE="http://www.boutell.com/gd/"
 
 SLOT="0"
