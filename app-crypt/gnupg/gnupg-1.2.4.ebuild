@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.27 2005/01/15 01:08:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.28 2005/01/23 10:17:33 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -141,7 +141,7 @@ pkg_postinst() {
 		einfo "individuals'."
 		einfo
 		einfo "Countries where the patent applies are listed here"
-		einfo "http://www.mediacrypt.com/engl/Content/patent_info.htm"
+		einfo "http://www.mediacrypt.com/_contents/10_idea/101030_ea_pi.asp"
 		einfo
 		einfo "Further information and other licenses are availble from http://www.mediacrypt.com/"
 	fi

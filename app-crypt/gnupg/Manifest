@@ -1,25 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7116bc167ab94b2ffbd722fc9e181357 ChangeLog 15321
-MD5 1fac16f2e963b490bc2bddb2c544754b gnupg-1.9.14.ebuild 4010
-MD5 60abe012deb7ef3299727bdf308700e3 gnupg-1.2.4.ebuild 4349
+MD5 4d93a716267764c3a0e9d7b956323682 gnupg-1.9.15.ebuild 3184
+MD5 817ec2097a355c1e3cd550d92126ee9b ChangeLog 15768
+MD5 fdc1de835c5ed0906d8b638555580608 gnupg-1.9.14.ebuild 3029
+MD5 996d6e0d67754f357628628f19c1a6cd gnupg-1.2.4.ebuild 4355
 MD5 31e47fabf70190e99e427f9861707069 gnupg-1.2.6.ebuild 3780
 MD5 f060c73f6f74e7174b1f7d7c570421fe metadata.xml 572
-MD5 565496fbc556b3007d61f9e42d069cb6 gnupg-1.4.0-r1.ebuild 4467
+MD5 286219bbfc74bb05c1c1ea74a172a094 gnupg-1.4.0-r1.ebuild 4473
+MD5 7f4537d3a587ef6c45764c91af9bd1ed gnupg-1.4.0-r2.ebuild 5077
 MD5 e698420245e3ee4535db946dfd41cfcd gnupg-1.9.10.ebuild 2985
-MD5 e23491eb03cb2bea5a2011f12c84b4ef files/digest-gnupg-1.9.14 117
+MD5 a614d4d6eb27b31d9b4651c349b31c3e files/digest-gnupg-1.9.14 65
 MD5 c3a43a1e5da266ef33222f721e05fd63 files/digest-gnupg-1.2.6 117
 MD5 a8d4b32b219641e9b9df83b581a935ba files/digest-gnupg-1.4.0-r1 117
 MD5 7f0e728ae9c6810cb9c61500fdc39fc9 files/digest-gnupg-1.2.4 117
 MD5 dd317d852aed29e96c5a542f00d0766e files/gnupg-1.2.6-ppc64.patch 454
+MD5 e62b7134c5c0c1b3aad6a08bfdf99b48 files/digest-gnupg-1.9.15 66
 MD5 8c88d9fdef69bdda173170c5a8abd59e files/digest-gnupg-1.9.10 65
+MD5 9e4bb59ff6cbb14c85cf044408669ccd files/digest-gnupg-1.4.0-r2 190
 MD5 c6114a5a40f10aeca63d07b59fed650f files/gnupg-1.2.4-hppa_unaligned_constant.patch 1213
 MD5 cdb57d67164c7a63a167c33426c0a7a3 files/gnupg-1.2.4.ppc64.patch 471
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB7sKZmdTrptrqvGERAldoAJwPS9tBuHdQshHL9FaoWc7+MMn5oQCbB6qp
-jDj/tvgOB3Rcl6RM69DdO7g=
-=tVf8
------END PGP SIGNATURE-----

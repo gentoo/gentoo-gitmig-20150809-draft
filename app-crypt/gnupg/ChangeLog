@@ -1,6 +1,16 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.98 2005/01/19 20:26:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.99 2005/01/23 10:17:33 dragonheart Exp $
+
+*gnupg-1.4.0-r2 (23 Jan 2005)
+*gnupg-1.9.15 (23 Jan 2005)
+
+  23 Jan 2005; Daniel Black <dragonheart@gentoo.org> gnupg-1.2.4.ebuild,
+  gnupg-1.4.0-r1.ebuild, +gnupg-1.4.0-r2.ebuild, gnupg-1.9.14.ebuild,
+  +gnupg-1.9.15.ebuild:
+  Corrected URL for IDEA patent info. Added 1.4.0-r2 to include elliptic curve
+  cryptosystem and smartcard support. Version bump to gnupg-1.9.15. Removed IDEA
+  from gnupg-1.9.* cause it realy didn't support it anyway.
 
   20 Jan 2005; Daniel Black <dragonheart@gentoo.org> gnupg-1.9.14.ebuild:
   Changed libassuan dependacy to 0.6.9 as per bug #78713. Thanks Alexander
