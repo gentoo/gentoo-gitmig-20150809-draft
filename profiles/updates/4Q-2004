@@ -58,3 +58,4 @@ move app-sci/elph sci-biology/elph
 move app-sci/foldingathome sci-biology/foldingathome
 move app-sci/gibbs sci-biology/gibbs
 move app-sci/hmmer sci-biology/hmmer
+move app-sci/ncbi-tools sci-biology/ncbi-tools
