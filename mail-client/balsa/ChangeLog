@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.19 2005/03/27 12:53:11 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.20 2005/03/27 15:24:20 allanonjl Exp $
+
+  27 Mar 2005; John N. Laliberte <allanonjl@gentoo.org> balsa-2.2.6.ebuild:
+  Typo on the gmime dep.
 
   27 Mar 2005; John N. Laliberte <allanonjl@gentoo.org> balsa-2.2.6.ebuild:
   Updated deps to require >=gmime-2.1.9-r1. Fixes bug #86750.
