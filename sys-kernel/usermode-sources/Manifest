@@ -1,4 +1,4 @@
-MD5 4df0a8a8f43fc740c23e2e01e09fe57d ChangeLog 16457
+MD5 22d981888d011f049fb102cdae8c4d6f ChangeLog 16568
 MD5 80ed84b37a7a284b84ad96321340717b usermode-sources-2.4.26-r12.ebuild 2120
 MD5 a76f13cb946fc2720c04b189616da2de metadata.xml 159
 MD5 b1f8c771ec2cdea1b1d76681a105f8f9 usermode-sources-2.6.8.1-r8.ebuild 1427
@@ -31,7 +31,7 @@ MD5 c2510fe1891f5a9effb12c2196922206 files/usermode-sources-2.6.cmdlineLeak.patc
 MD5 95708646470a95668e8789cd415844ed files/usermode-sources.CAN-2004-0497.patch 846
 MD5 452e04a312368605e145428c35bd0e05 files/usermode-sources-2.6.devPtmx.patch 572
 MD5 2b3ddb8b8b15f8da35ade38544b57857 files/usermode-sources-2.4.XDRWrapFix.patch 1499
-MD5 362eb8e147238e1c4ea006ee163a8db9 files/usermode-sources-2.6.77094.patch 5209
+MD5 9eda91c0c7c7cd61ac3fbc4b309de3c0 files/usermode-sources-2.6.77094.patch 5193
 MD5 c27699e9d62f7d46213bd51f87636163 files/usermode-sources-2.4.vma.patch 8143
 MD5 c9da1bc82b906f6abc648c056e7bf662 files/usermode-sources-2.4.FPULockup-53804.patch 354
 MD5 22192366443458dc8815827df35b63a7 files/usermode-sources-2.6.vma.patch 8034
