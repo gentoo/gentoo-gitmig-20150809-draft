@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.46 2004/12/29 22:09:15 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.47 2005/03/19 05:51:07 matsuu Exp $
+
+*tcl-8.4.9 (19 Mar 2005)
+
+  19 Mar 2005; MATSUU Takuto <matsuu@gentoo.org> +tcl-8.4.9.ebuild:
+  Version bumped, #83816
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.6-r1.ebuild,v 1.13 2005/03/19 05:53:01 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.9.ebuild,v 1.1 2005/03/19 05:53:01 matsuu Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tcl/${PN}${PV}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~x86 ~ppc64 ~sparc ~hppa ~amd64 ~ppc ~mips ~alpha ~arm ~ia64"
 IUSE="threads"
 
 DEPEND=">=sys-apps/sed-4.0.5
@@ -36,11 +36,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/library
-	epatch ${FILESDIR}/remove-control-v-8.4.diff || die
-
-	cd ${S}/unix
-	epatch ${FILESDIR}/tk-wm-maxsize.patch || die
+	cd ${S}
+	epatch ${FILESDIR}/remove-control-v-${PV}.diff || die
+	epatch ${FILESDIR}/${P}-man.patch || die
 }
 
 src_compile() {
@@ -66,7 +64,8 @@ src_install() {
 	v1=${PV%.*}
 
 	cd ${S}/unix
-	make INSTALL_ROOT=${D} MAN_INSTALL_DIR=${D}/usr/share/man install || die
+	#make INSTALL_ROOT=${D} MAN_INSTALL_DIR=${D}/usr/share/man install || die
+	make INSTALL_ROOT=${D} install || die
 
 	# fix the tkConfig.sh to eliminate refs to the build directory
 	sed -i \

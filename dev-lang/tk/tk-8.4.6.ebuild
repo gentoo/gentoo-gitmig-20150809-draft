@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.6.ebuild,v 1.13 2004/09/06 18:51:12 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.6.ebuild,v 1.14 2005/03/19 05:53:01 matsuu Exp $
 
 inherit eutils
 
