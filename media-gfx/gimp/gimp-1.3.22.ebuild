@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.22.ebuild,v 1.1 2003/11/10 08:41:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.22.ebuild,v 1.2 2003/11/11 16:15:14 foser Exp $
 
 IUSE="doc python aalib png jpeg tiff gtkhtml mmx sse X altivec"
 
@@ -112,6 +112,10 @@ pkg_postinst() {
 
 	ewarn "The ${SV} Gimp series have been reslotted to SLOT 2."
 	ewarn "To clean up old ${SV} version remove all ${SV} series and recompile."
+	echo ""
+	ewarn "If you are upgrading from an earlier 1.3 release, please note that"
+	ewarn "the gimprc and sessionrc file formats changed. We suggest you remove"
+	ewarn "your personal ~/.gimp-1.3 directory and do a fresh user installation."
 
 }
 
