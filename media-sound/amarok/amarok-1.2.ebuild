@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2.ebuild,v 1.1 2005/02/13 22:20:58 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2.ebuild,v 1.2 2005/02/15 18:15:12 greg_g Exp $
 
 inherit kde eutils
 
@@ -29,7 +29,7 @@ RDEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	 >=media-libs/taglib-1.3.1
 	 gstreamer? ( >=media-libs/gst-plugins-0.8.6
 	 	      >=media-plugins/gst-plugins-mad-0.8.6 )
-	 mysql? ( >=dev-db/mysql-3 )"
+	 mysql? ( >=dev-db/mysql-4 )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0"
 
