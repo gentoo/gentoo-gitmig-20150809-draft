@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r4.ebuild,v 1.3 2005/03/20 19:20:20 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r4.ebuild,v 1.4 2005/03/22 23:35:20 fafhrd Exp $
 
 inherit eutils gnustep-funcs flag-o-matic
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${P/windowm/WindowM}
 DESCRIPTION="The fast and light GNUstep window manager"
 SRC_URI="ftp://ftp.windowmaker.org/pub/source/release/${P/windowm/WindowM}.tar.gz
 	http://www.windowmaker.org/pub/source/release/WindowMaker-extra-0.1.tar.gz
-	mirror://gentoo/windowmaker-0.9X-use-giflib.patch.bz2"
+	mirror://gentoo/windowmaker-0.9X-use-giflib.patch2.bz2"
 HOMEPAGE="http://www.windowmaker.org/"
 
 IUSE="gif gnustep jpeg nls png tiff modelock xinerama"
@@ -35,7 +35,7 @@ src_unpack() {
 		&& ewarn "CFLAG -fstack-protector has been disabled, as it is known to cause bugs with WindowMaker (bug #78051)" && ebeep 2
 	unpack ${A}
 	cd ${S}
-	epatch ${WORKDIR}/windowmaker-0.9X-use-giflib.patch || die "giflib patch failed"
+	epatch ${WORKDIR}/windowmaker-0.9X-use-giflib.patch2 || die "giflib patch failed"
 	epatch ${FILESDIR}/menufocus.patch || die "menu focus patch failed"
 	epatch ${FILESDIR}/singleclick-shadeormaxopts-0.9x.patch || die "single click and shade-or-maximize-options patch failed"
 	epatch ${FILESDIR}/wlist-0.9x.patch || die "window list patch failed"
