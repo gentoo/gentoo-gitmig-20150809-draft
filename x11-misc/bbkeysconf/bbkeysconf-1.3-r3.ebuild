@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeysconf/bbkeysconf-1.3-r3.ebuild,v 1.14 2003/02/13 17:08:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeysconf/bbkeysconf-1.3-r3.ebuild,v 1.15 2003/07/22 20:15:58 vapier Exp $
 
-inherit kde base || die		# note: base is intended to override kde!
+inherit kde base
 
 DESCRIPTION="Configure bbkeys"
 SRC_URI="http://movingparts.thelinuxcommunity.org/bbkeys/${P}.tar.gz"
