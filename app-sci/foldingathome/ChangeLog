@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/foldingathome
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.5 2003/04/23 08:47:02 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.6 2003/05/05 20:03:38 aliz Exp $
+
+  05 May 2003; Daniel Ahlberg <aliz@gentoo.org> files/folding-init.d :
+  Fixed stop() in init script. Fix by 
+  Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl> in #20327.
 
   23 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> foldingathome-3.2.4.ebuild, files/folding-init.d :
   Now has the version number in SRC_URI and also uses the newer client if we're running >=glibc-2.3.0. 

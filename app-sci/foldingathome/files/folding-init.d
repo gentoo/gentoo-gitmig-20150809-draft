@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/files/folding-init.d,v 1.3 2003/04/23 08:20:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/files/folding-init.d,v 1.4 2003/05/05 20:03:38 aliz Exp $
 
 start() {
 
@@ -12,10 +12,13 @@ start() {
 }
 
 stop() {
-	ebegin "Stopping Folding@home"
-	killall FahCore_78.exe > /dev/null
-	if ! $? ; then
-		killall foldingathome
-	fi
+	ebegin "Stopping Folding@Home"
+	cd /opt/foldingathome
+	for I in FahCore*.exe
+	do
+		killall -q $I >/dev/null
+	done
+	killall foldingathome >/dev/null
 	eend $?
 }
+
