@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/kannadic-1.1.1.ebuild,v 1.2 2003/12/04 07:04:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/kannadic-1.7.0.ebuild,v 1.1 2003/12/04 07:04:29 usata Exp $
 
 IUSE="debug xinerama"
 
@@ -8,11 +8,11 @@ DESCRIPTION="Graphical Canna style dictionary editor written for KDE"
 HOMEPAGE="http://linux-life.net/program/cc/kde/app/kannadic/"
 SRC_URI="http://linux-life.net/program/cc/kde/app/kannadic/download/${P}.tar.gz"
 
-LICENSE="GPL-2 QPL-1.0"
-KEYWORDS="x86"
+LICENSE="GPL-2"
+KEYWORDS="~x86"
 SLOT="0"
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${P}"
 
 DEPEND="virtual/glibc
 	virtual/x11
