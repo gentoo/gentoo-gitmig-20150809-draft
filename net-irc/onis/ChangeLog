@@ -1,0 +1,10 @@
+# ChangeLog for net-irc/onis
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/ChangeLog,v 1.1 2004/06/28 23:44:05 swegener Exp $
+
+*onis-0.6.0 (29 Jun 2004)
+
+  29 Jun 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +files/0.6.0-nochdir.patch, +onis-0.6.0.ebuild:
+  Initial import, ebuild written by me.
+
