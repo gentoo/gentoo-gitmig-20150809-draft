@@ -33,4 +33,7 @@ src_compile () {
 
 src_install () {
 	make DESTDIR=${D} install
+	
+	exeinto /etc/init.d ; newexe ${FILESDIR}/intersync.rc intersync
+	insinto /etc/conf.d ; newins ${FILESDIR}/intersync.conf intersync
 }
