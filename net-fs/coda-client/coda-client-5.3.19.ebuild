@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/coda-client-5.3.19.ebuild,v 1.8 2004/03/27 14:15:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/coda-client-5.3.19.ebuild,v 1.9 2004/04/26 00:43:05 dragonheart Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-libs/lwp-1.9
 	>=net-libs/rpc2-1.13
 	>=sys-libs/rvm-1.6
-	>=sys-libs/db-3
+	=sys-libs/db-1*
 	>=sys-libs/ncurses-4
 	>=sys-libs/readline-3
 	>=sys-kernel/linux-headers-2.4"
