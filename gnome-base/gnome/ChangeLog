@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.133 2004/12/01 03:23:21 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.134 2004/12/08 04:42:31 obz Exp $
+
+*gnome-2.8.1-r1 (08 Dec 2004)
+
+  08 Dec 2004; Mike Gardiner <obz@gentoo.org> +gnome-2.8.1-r1.ebuild,
+  gnome-2.8.1.ebuild:
+  New version in ~arch, see bug #72798 for the movement from package.mask
 
   30 Nov 2004; Joe McCann <joem@gentoo.org> gnome-2.8.0-r1.ebuild,
   gnome-2.8.1.ebuild:
