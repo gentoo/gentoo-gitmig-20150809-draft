@@ -1,5 +1,5 @@
-MD5 2fbb896373bdddb0a9448e905bf6cdac ChangeLog 531
 MD5 fbcaa99d9e2e13b52ad4aa474d7fc89f scponly-3.7.ebuild 938
-MD5 fa50688848d344b1b8cdf10752396b68 scponly-3.8.ebuild 938
+MD5 884d54e76e05d1a4c9e970d594c936df scponly-3.8.ebuild 942
+MD5 44657f148d42bae2f004667fd6c74a67 ChangeLog 639
 MD5 7f3245890a81d9e6c8e271517fa8b3ad files/digest-scponly-3.7 59
 MD5 f0dc17e8e5f9acc8a7173578e9a8b560 files/digest-scponly-3.8 59
