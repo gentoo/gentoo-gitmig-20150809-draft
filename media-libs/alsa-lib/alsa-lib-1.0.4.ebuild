@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.4.ebuild,v 1.2 2004/04/20 08:12:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.4.ebuild,v 1.3 2004/04/29 08:34:25 eradicator Exp $
 
 inherit libtool
 
@@ -27,6 +27,14 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 
+	if use static; then
+		mv ${S} ${S}.static
+		unpack ${A}
+
+		cd ${S}.static
+		elibtoolize
+	fi
+
 	cd ${S}
 	elibtoolize
 }
@@ -34,13 +42,15 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 
+	econf --enable-static=no --enable-shared=yes || die
+	emake || die
+
 	# Can't do both according to alsa docs and bug #48233
 	if use static; then
-		myconf="--enable-static=yes --enable-shared=no"
+		cd ${S}.static
+		econf --enable-static=yes --enable-shared=no || die
+		emake || die
 	fi
-
-	econf ${myconf} || die
-	emake || die
 }
 
 src_install() {
@@ -54,4 +64,9 @@ src_install() {
 	#fixes the problem (fingers crossed)
 	dosym /usr/lib/libasound.so.2 /usr/lib/libasound.so.1
 	dodoc ChangeLog COPYING TODO
+
+	if use static; then
+		cd ${S}.static
+		make DESTDIR="${D}" install || die "make install failed"
+	fi
 }
