@@ -1,7 +1,7 @@
 /*
  * Copyright 1999-2004 Gentoo Foundation
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.2.c,v 1.3 2004/08/19 15:16:25 vapier Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.2.c,v 1.4 2004/12/08 23:47:13 vapier Exp $
  * Author: Martin Schlemmer <azarah@gentoo.org>
  */
 
@@ -39,7 +39,9 @@ struct wrapper_data {
 
 static const char *wrapper_strerror(int err, struct wrapper_data *data)
 {
-	strerror_r(err, data->tmp, sizeof(data->tmp));
+	/* this app doesn't use threads and strerror 
+	 * is more portable than strerror_r */
+	strncpy(data->tmp, strerror(err), sizeof(data->tmp));
 	return data->tmp;
 }
 
@@ -155,7 +157,7 @@ static int find_target_in_envd(struct wrapper_data *data)
 				/* A bash variable may be unquoted, quoted with " or
 				 * quoted with ', so extract the value without those ..
 				 */
-				token = strsep(&strp, "\n\"\'");
+				token = strtok(&strp, "\n\"\'");
 
 				while (NULL != token) {
 					
@@ -165,7 +167,7 @@ static int find_target_in_envd(struct wrapper_data *data)
 						return 1;
 					}
 
-					token = strsep(&strp, "\n\"\'");
+					token = strtok(&strp, "\n\"\'");
 				}
 			}
 			
@@ -247,19 +249,15 @@ static void modify_path(struct wrapper_data *data)
 			return;
 	}
 
-	len = strlen(dname) + strlen(data->path) + 2;
+	len = strlen(dname) + strlen(data->path) + 2 + strlen("PATH") + 1;
 
 	newpath = (char *)malloc(len);
 	if (NULL == newpath)
 		wrapper_exit("out of memory\n");
 	memset(newpath, 0, len);
 
-	snprintf(newpath, len, "%s:%s", dname, data->path);
-	setenv("PATH", newpath, 1);
-
-	if (newpath)
-		free(newpath);
-	newpath = NULL;
+	snprintf(newpath, len, "PATH=%s:%s", dname, data->path);
+	putenv(newpath);
 }
 
 int main(int argc, char **argv) 

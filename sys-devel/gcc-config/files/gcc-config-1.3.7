@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.7,v 1.9 2004/12/05 21:07:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.7,v 1.10 2004/12/08 23:47:13 vapier Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 
 trap ":" INT QUIT TSTP
@@ -224,14 +224,11 @@ switch_profile() {
 			fi
 		fi
 	done
-	# Only install cpp if the toolchain supports C++
+	# Only install cpp if switching to a native one
 	if ! is_cross_compiler
 	then
 		${RM} -f "${ROOT}/lib/cpp"
-		if [ -x "${ROOT}/usr/bin/${REAL_CHOST}-g++" ]
-		then
-			${CP} -f "${ROOT}/usr/lib/gcc-config/wrapper" "${ROOT}/lib/cpp"
-		fi
+		${CP} -f "${ROOT}/usr/lib/gcc-config/wrapper" "${ROOT}/lib/cpp"
 	fi
 
 	if [ "${ROOT}" = "/" ] && [ "${OLD_CC_COMP}" != "${CC_COMP}" ]
