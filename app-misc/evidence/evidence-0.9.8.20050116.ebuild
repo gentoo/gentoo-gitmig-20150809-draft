@@ -1,7 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.8.20041226.ebuild,v 1.1 2004/12/26 22:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.8.20050116.ebuild,v 1.1 2005/01/19 01:23:16 vapier Exp $
 
+ECVS_MODULE="evidence"
+ECVS_SERVER="cvs.sourceforge.net:/cvsroot/evidence"
 inherit enlightenment eutils flag-o-matic
 
 DESCRIPTION="GTK2 file-manager"

@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 9399ab3945e6ac09e623f8988bef8e74 ChangeLog 1933
 MD5 7ea3664b45c5ea25f8de25b77f7a7303 metadata.xml 2822
-MD5 ee6c7d9adc9b20428a9e61db9584914a evidence-0.9.8.20041226.ebuild 1936
-MD5 2ce0e7b6429003c3a0cade1a2713fdcf evidence-9999.ebuild 2001
-MD5 a18c52fb26cca1dbee4b83c147353a82 files/digest-evidence-0.9.8.20041226 77
+MD5 b146dcacb7a0c0fb6eca7dc0bd46ece0 evidence-0.9.8.20050116.ebuild 2011
+MD5 b09fdf0c32d075e014d1f4374307b0a8 evidence-9999.ebuild 2001
+MD5 5bc53b027b6a7ff845ff150a8aeb4f36 files/digest-evidence-0.9.8.20050116 77
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-evidence-9999 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFBzzqdroRuSHgZdywRAgndAJ9Fmg/9fN7sMfGy4iTQN6goWUNZEACcDgI5
-Qrb/UnjiOhB4sws7UO73qI8=
-=Dj+L
+iD8DBQFB7bazroRuSHgZdywRAnWCAKCHQz+KZcNF4tnqOlSju+qPQtt5GACeIFPm
+YVew1gvTEw6gqvX1O1sMKHo=
+=R1ay
 -----END PGP SIGNATURE-----
