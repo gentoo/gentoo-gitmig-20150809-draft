@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakartacommons/jakartacommons-0.4.3.ebuild,v 1.2 2004/10/20 07:50:41 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakartacommons/jakartacommons-0.4.3.ebuild,v 1.3 2005/04/04 14:58:00 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -17,7 +17,7 @@ DEPEND=">=app-editors/jedit-4.2
 RDEPEND="dev-java/bcel
 		dev-java/commons-collections
 		>=dev-java/commons-httpclient-2.0.1
-		>=dev-java/commons-lang-2.0
+		=dev-java/commons-lang-2.0*
 		dev-java/commons-logging
 		dev-java/log4j"
 

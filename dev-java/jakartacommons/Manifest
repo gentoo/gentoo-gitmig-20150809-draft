@@ -1,5 +1,15 @@
-MD5 17c6d3ea8fa39b9949d79aa3bfaa195d ChangeLog 513
-MD5 70bbc2b10a80ffc780ce2c775384fcc9 jakartacommons-0.4.3.ebuild 1467
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 82463e429f293194375a8f1f37e90abb jakartacommons-0.4.3.ebuild 1463
+MD5 936b8de7ea6796afa1059dde4993a797 ChangeLog 642
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
-MD5 58474956cd8fbf4ace24d3fcc09f07dd files/digest-jakartacommons-0.4.3 70
 MD5 6b5e6a5a3a2cb586298c21d61b81c6fb files/props.patch 414
+MD5 58474956cd8fbf4ace24d3fcc09f07dd files/digest-jakartacommons-0.4.3 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCUVYR/rLF9B432nYRAlphAKCoZtJEfRr7UpFcLgUwXR0s4w1+vwCgyZDm
+l8ySfpnotqKVW6AAASsVmi0=
+=cF+7
+-----END PGP SIGNATURE-----
