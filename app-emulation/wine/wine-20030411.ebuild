@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030411.ebuild,v 1.4 2003/04/15 07:18:33 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030411.ebuild,v 1.5 2003/04/16 09:44:58 cretin Exp $
 
-inherit eutils base flag-o-matic
+inherit eutils base
 
 DESCRIPTION="free implementation of Windows(tm) on Unix - CVS snapshot"
 SRC_URI="mirror://gentoo/wine-${PV}.tar.bz2"
@@ -25,8 +25,6 @@ DEPEND="sys-devel/gcc
 	nas? ( media-libs/nas )
 	cups? ( net-print/cups )
 	opengl? ( virtual/opengl )"
-
-strip-flags
 
 src_unpack() {
 	base_src_unpack
