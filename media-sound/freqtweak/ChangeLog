@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/freqtweak
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.4 2003/07/17 14:24:59 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.5 2003/09/16 14:46:46 tigger Exp $
+
+*freqtweak-0.5.2 (16 Sep 2003)
+
+  16 Sep 2003; rob holland <tigger@gentoo.org> freqtweak-0.5.2.ebuild,
+  metadata.xml:
+  version bump. reported by the infamous Kasper Souren <Kasper.Souren@ircam.fr>
+  ;) closes #27194
 
 *freqtweak-0.5.0 (17 Jul 2003)
 
