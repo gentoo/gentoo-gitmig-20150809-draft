@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/glsof
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glsof/ChangeLog,v 1.1 2004/11/08 12:43:12 ticho Exp $
+
+*glsof-0.9.16 (08 Nov 2004)
+
+  08 Nov 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +glsof-0.9.16.ebuild:
+  Initial import. Closes #50056, ebuild submitted by Sourav Mandal
+  <sourav@sourav.net>.
+

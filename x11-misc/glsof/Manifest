@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ec0fc54f5f89f9e2923a1612c1968889 ChangeLog 407
+MD5 bd9e210457c22384582e7c1394314d3f metadata.xml 250
+MD5 f0971bbb1db9c75d443bdb4ea304cfb7 glsof-0.9.16.ebuild 602
+MD5 6db8152b4888b8a5ed2b8303b9694ccb files/digest-glsof-0.9.16 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBj2np10xuJSrg3/sRAn06AJ9m2KFGh5C1m9YHHXhCJefzOU1r3wCeKG31
+QAeqJXSXonljDX/FV7Aw1+w=
+=2Wr8
+-----END PGP SIGNATURE-----
