@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2731 2004/03/03 20:58:47 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2732 2004/03/03 21:09:05 avenj Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -552,10 +552,6 @@ net-dialup/hcfusbmodem
 # not really stable enough for my tastes. needs testing.
 dev-db/mergeant
 
-# <method@gentoo.org> (05 Mar 2003)
-# gcc with optimizations
-=sys-devel/gcc-3.2.2-r3
-
 # <chadh@gentoo.org> (23 Jan 2003)
 # new pcmcia-cs ebuilds need testing and acceptance
 sys-apps/pcmcia-cs-tools
@@ -604,11 +600,6 @@ app-emacs/monk
 # Initial version that support alpha version of new multi version/arch
 # scheme.  Very ALPHA, so use at your own risk!!
 =sys-devel/gcc-3.2-r5
-
-# <spider@gentoo.org> (23 oct 2002)
-# okay, this has been a bothersome thing with recompiles of static packages 
-# and all that. Headache.  Masking it for now until we can get it solid.
-=sys-libs/glibc-2.3.1
 
 # <chadh@gentoo.org> (21 Oct 2002)
 # This is a version of pcmcia-cs-3.2.1 with a patch to let it work with kismet
@@ -661,10 +652,6 @@ app-misc/nomadii-utils
 # masked while licensing is sorted out
 app-misc/ldapbrowser
 
-# <nerdboy@gentoo.org> (12 Jan 2004) commented for 1.0.4 update
-# new ebuild.  probably x86-only as well.
-#app-misc/mwavem
-
 # <karltk@gentoo.org> (18 Jul 2002)
 # standard library does not compile
 =dev-lang/clean-2.0.1
@@ -673,10 +660,6 @@ app-misc/ldapbrowser
 # libwmfun completes compiling but doesn't appear to support PLDrawString
 # functions correctly.  Masking while incompatible pointers are figured out
 =x11-libs/libwmfun-0.0.4
-
-# drobbins@gentoo.org (07 Jul 2002)
-# stuff with deps that are missing; ebuilds have problems so I'm masking them
-#net-mail/exmh
 
 #azarah@gentoo.org (03 Jul 2002)
 #this one moves a lot of stuff around, and have a search dir
@@ -761,9 +744,6 @@ app-admin/va-systemimager-client
 =sys-devel/libtool-1.4.2-r2
 
 =dev-ruby/mod-ruby-0.9.7
-
-#security update
-<sys-libs/zlib-1.1.4
 
 #seemant@gentoo.org 20 Mar 2002
 # Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
