@@ -23,7 +23,27 @@ DISK_FULL="-k 90%"
 ## Authentication (others are 'pam', ...)##
 AUTH="-l unix"
 
-
 ## Misc. Others ##
-MISC_OTHER="-A -x"
+MISC_OTHER="-A -x -j -R"
+
+#
+# Use these inside $MISC_OTHER
+# More can be found on "http://pureftpd.sourceforge.net/README"
+#
+# -A [ chroot() everyone, but root ]
+# -e [ Only allow anonymous users ]
+# -E [ Only allow authenticated users. Anonymous logins are prohibited. ]
+# -i [ Disallow upload for anonymous users, whatever directory perms are ]
+# -j [ If the home directory of a user doesn't exist, auto-create it ]
+# -M [ Allow anonymous users to create directories. ]
+# -R [ Disallow users (even non-anonymous ones) usage of the CHMOD command ]
+# -x [ Authenticated users can read/write files beginning with a dot ('.') 
+#       Anonymous users can't, for security reasons ]
+# -X [ Users can't write/read files and directories starting with a dot ('.') ]
+
+
+
+
+
+
 
