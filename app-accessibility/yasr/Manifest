@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5e26921d842c8d140adf987b910bb835 ChangeLog 1130
+MD5 63e7fccc1db6198a594e2ada07eae1ba ChangeLog 1216
 MD5 d95be012485868eef230d5000ddda556 metadata.xml 295
-MD5 945eb5d820d9e0cbd22dfc788d6ff46c yasr-0.6.5.ebuild 827
+MD5 8728aca7bb66b9d7c7e8afe83d86fa36 yasr-0.6.5.ebuild 848
 MD5 c3a6f527d4905362c02d855df8ad8c81 files/digest-yasr-0.6.5 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3EvFHTu7gpaalycRAuQGAJ0ZVuKsfmc1EsI960hNHfRSWBUILQCfYPpW
-sGtF+HlExRh3FBpTvKiX8do=
-=t0Y6
------END PGP SIGNATURE-----
