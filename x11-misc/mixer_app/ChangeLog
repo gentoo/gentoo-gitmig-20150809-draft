@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/mixer_app
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/ChangeLog,v 1.8 2004/02/28 19:19:17 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/ChangeLog,v 1.9 2004/04/11 15:18:33 pyrania Exp $
+
+  11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> mixer_app-1.8.0.ebuild:
+  Marked stable on x86.
 
   03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
   Added metadata.xml
