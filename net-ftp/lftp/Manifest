@@ -1,11 +1,21 @@
-MD5 5eb7ff3fe551f34c4e18f52a049264c1 ChangeLog 10648
-MD5 e10db0d02d25e0c016ae9c0f4172d3ac lftp-3.0.6.ebuild 1630
-MD5 5cc6534d93ec378a445f5c3e925f0799 lftp-3.0.13.ebuild 1810
-MD5 21c731f3e67e1e9392417b30747519da lftp-3.0.9.ebuild 1801
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 45344fd13a43fd125216ffddaab9f7e0 lftp-3.0.13.ebuild 1805
+MD5 e247ff3082d33b4545928cc4b1312b28 lftp-3.0.12-r1.ebuild 1900
+MD5 8107d6cb6f4473db274b2047834f9912 ChangeLog 10755
 MD5 bd30469259dd912781df916084edcacd metadata.xml 430
-MD5 aaba7049b8d20d5d557da8fbcef490e2 lftp-3.0.12-r1.ebuild 1901
-MD5 8e29dd236e9977e83aee442106844d7e files/digest-lftp-3.0.13 65
-MD5 eceb1084634c247eeee6cc05ce894f4e files/digest-lftp-3.0.6 64
-MD5 d1af8a5cd6bafa180270376cbe244639 files/lftp-3.0.12.patch 290
-MD5 1bd10abe800fc5aac7bd57f88e2696c8 files/digest-lftp-3.0.9 64
+MD5 64b91090cde2d0fb0385d189817c8a54 lftp-3.0.9.ebuild 1796
+MD5 9135b54b9369c3225c8ab829e490bdd1 lftp-3.0.6.ebuild 1628
 MD5 47641d36387cc209419ceea76c35e6e6 files/digest-lftp-3.0.12-r1 65
+MD5 1bd10abe800fc5aac7bd57f88e2696c8 files/digest-lftp-3.0.9 64
+MD5 8e29dd236e9977e83aee442106844d7e files/digest-lftp-3.0.13 65
+MD5 d1af8a5cd6bafa180270376cbe244639 files/lftp-3.0.12.patch 290
+MD5 eceb1084634c247eeee6cc05ce894f4e files/digest-lftp-3.0.6 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB8pvUugEuf3OQ0akRAt56AJ4y3gvU7m2pgYTgBH+6w7NO0iP3uACfQ9Tk
+P3tf78I015TTH4rfw2rIJFY=
+=V6XQ
+-----END PGP SIGNATURE-----
