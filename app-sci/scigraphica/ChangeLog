@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/scigraphica
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/ChangeLog,v 1.6 2004/01/04 20:49:18 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/ChangeLog,v 1.7 2004/04/19 12:24:03 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org>
+  scigraphica-0.8.0-r1.ebuild, scigraphica-0.8.0-r2.ebuild,
+  scigraphica-0.8.0.ebuild:
+  Adding IUSE, cleanup
 
 *scigraphica-0.8.0-r2 (04 jan 2003)
 

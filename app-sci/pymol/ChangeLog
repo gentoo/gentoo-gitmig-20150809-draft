@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/pymol
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/ChangeLog,v 1.8 2004/03/03 17:08:42 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/ChangeLog,v 1.9 2004/04/19 12:16:46 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> pymol-0.82.ebuild,
+  pymol-0.86.ebuild, pymol-0.88.ebuild, pymol-0.90.ebuild:
+  Adding IUSE, cleanup
 
   03 Mar 2004; Peter Bienstman <pbienst@gentoo.org> pymol-0.90:
   marked stable on x86
