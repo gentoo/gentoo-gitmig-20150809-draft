@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.2-r4.ebuild,v 1.1 2003/01/17 20:31:28 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.2-r4.ebuild,v 1.2 2003/02/01 18:58:11 jmorgan Exp $
 
 IUSE="ssl motif ldap encode cups oggvorbis pam"
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - base packages: the desktop, panel, window manager, konqueror..."
 
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 sparc"
 
 SRC_URI="${SRC_URI}
 	mirror://kde/security_patches/post-${PV}-${PN}.diff"

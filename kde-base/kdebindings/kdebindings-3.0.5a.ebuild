@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.0.5a.ebuild,v 1.3 2003/01/30 19:40:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.0.5a.ebuild,v 1.4 2003/02/01 19:01:21 jmorgan Exp $
 # TODO: add gnustep bindings
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - kde library bindings for languages other than c++"
 
-KEYWORDS="x86 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 ~ppc ~alpha sparc"
 
 PATCHES="${FILESDIR}/${P}-qt31.diff"
 
