@@ -317,7 +317,7 @@ of your sale will go towards further Gentoo Linux development.</p>
 <a href="http://www.qksrv.net/click-477620-5033206" target="_top" >
 <img src="http://www.qksrv.net/image-477620-5033206" width="88" height="31" alt="Factory-direct memory upgrades" border="0"/></a><br/><br/>
 User Docs:<br/>
-						<font color="#ff0000">Updated!</font> <a class="altlink" href="/doc/faq.html">FAQ</a><br/>
+						<font color="#ff0000">Updated 02 Sep 2001!</font> <a class="altlink" href="/doc/faq.html">FAQ</a><br/>
 						<a class="altlink" href="/doc/desktop.html">Desktop Guide</a><br/>
 						<a class="altlink" href="/doc/portage-user.html">Portage User Guide</a><br/>
 						<font color="#ff0000">New!</font> <a class="altlink" href="/doc/openafs.html">OpenAFS Installation Guide</a><br/>
