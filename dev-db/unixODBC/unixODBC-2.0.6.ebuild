@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.0.6.ebuild,v 1.19 2003/09/06 22:25:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.0.6.ebuild,v 1.20 2003/09/11 01:06:22 msterret Exp $
 
 inherit gnuconfig
 
@@ -14,9 +14,9 @@ KEYWORDS="x86 ppc hppa sparc alpha ~amd64"
 IUSE="qt"
 
 DEPEND="virtual/glibc
-        >=sys-libs/readline-4.1
-        >=sys-libs/ncurses-5.2
-        qt? ( =x11-libs/qt-2.3* )"
+	>=sys-libs/readline-4.1
+	>=sys-libs/ncurses-5.2
+	qt? ( =x11-libs/qt-2.3* )"
 
 src_unpack() {
 	unpack ${A}

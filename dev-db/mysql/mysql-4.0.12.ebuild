@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.12.ebuild,v 1.5 2003/08/15 13:01:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.12.ebuild,v 1.6 2003/09/11 01:06:22 msterret Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -89,8 +89,8 @@ src_compile() {
 	#glibc-2.3.2_pre fix; bug #16496
 	export CFLAGS="${CFLAGS} -DHAVE_ERRNO_AS_DEFINE=1"
 
-        #bug fix for #15099, should make this api backward compatible, thanks dragon
-        export CFLAGS="${CFLAGS} -DUSE_OLD_FUNCTIONS"
+	#bug fix for #15099, should make this api backward compatible, thanks dragon
+	export CFLAGS="${CFLAGS} -DUSE_OLD_FUNCTIONS"
 
 	#the compiler flags are as per their "official" spec ;)
 	CFLAGS="${CFLAGS/-O?/} -O3" \

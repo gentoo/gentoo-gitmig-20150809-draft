@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.11.ebuild,v 1.3 2003/09/06 22:25:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.11.ebuild,v 1.4 2003/09/11 01:06:22 msterret Exp $
 
 DESCRIPTION="TOra - Toolkit For Oracle"
 HOMEPAGE="http://www.globecom.se/tora/"
@@ -18,7 +18,7 @@ pkg_setup() {
 	if [ "`use oci8`" -a ! $ORACLE_HOME ] ; then
 		einfo "ORACLE_HOME variable is not set."
 		einfo ""
-                einfo "You must install Oracle >= 8i client for Linux in"
+		einfo "You must install Oracle >= 8i client for Linux in"
 		einfo "order to compile TOra with Oracle support."
 		einfo ""
 		einfo "Otherwise specify -oci8 in your USE variable."

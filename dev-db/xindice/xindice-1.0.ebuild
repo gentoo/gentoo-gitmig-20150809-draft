@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0.ebuild,v 1.4 2003/09/06 22:25:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0.ebuild,v 1.5 2003/09/11 01:06:22 msterret Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_install() {
 	cp -Rvdp bin config icons docs logs idl ${D}${TARGET}
 	cd java
 	cp -Rvdp lib tests examples ${D}${TARGET}/java
- 	cd ..
+	cd ..
 	dodoc docs/LICENSE docs/README docs/FAQ docs/TODO docs/VERSIONS docs/AUTHORS
 	dohtml docs/AdministratorsGuide.html docs/DevelopersGuide.html docs/UsersGuide.html docs/ToolsReference.html docs/feather.gif docs/index.html docs/xindice.jpg
 	dodir /etc/env.d

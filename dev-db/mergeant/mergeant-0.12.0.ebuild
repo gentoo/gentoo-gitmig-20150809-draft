@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/mergeant-0.12.0.ebuild,v 1.2 2003/07/11 21:04:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/mergeant-0.12.0.ebuild,v 1.3 2003/09/11 01:06:22 msterret Exp $
 
 IUSE=""
 
@@ -35,6 +35,6 @@ src_unpack() {
 }
 
 src_install() {
-    # redefined libdir so plugins don't get installed in /usr/lib
+	# redefined libdir so plugins don't get installed in /usr/lib
 	gnome2_src_install "libdir=${D}/usr/share/mergeant/plugins" "dtddir=${D}/usr/share/mergeant/dtd/" "Mergeant_Lang_helpdir=${D}/usr/share/doc/mergeant/C" "scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/" "Pixmapdir=${D}/usr/share/pixmaps/mergeant"
 }

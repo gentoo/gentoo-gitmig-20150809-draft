@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/sqlgui-0.4.ebuild,v 1.4 2003/09/06 22:25:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/sqlgui-0.4.ebuild,v 1.5 2003/09/11 01:06:22 msterret Exp $
 inherit kde-base
 
 need-kde 3
@@ -20,11 +20,11 @@ myconf="$myconf --with-extra-includes=/usr/include/mysql"
 
 src_unpack() {
 
-    cd $WORKDIR
-    unpack sqlgui-0.4.0.tar.gz
-    cd sqlgui-0.4.0
-    tar -xvzpf $P.tar.gz
-    cd $S
-    patch -p0 < $FILESDIR/$P-gcc3.diff
+	cd $WORKDIR
+	unpack sqlgui-0.4.0.tar.gz
+	cd sqlgui-0.4.0
+	tar -xvzpf $P.tar.gz
+	cd $S
+	patch -p0 < $FILESDIR/$P-gcc3.diff
 
 }
