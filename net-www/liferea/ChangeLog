@@ -1,9 +1,13 @@
 # ChangeLog for net-www/liferea
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.7 2004/06/25 00:57:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.8 2004/07/17 22:19:30 aliz Exp $
+
+*liferea-0.4.9 (23 May 2004)
 
   23 May 2004; Yi Qiang <khai@gentoo.org> :
   Version bump, added ewarns about losing the feed list
+
+*liferea-0.4.8 (05 May 2004)
 
   05 May 2004; Yi Qiang <khai@gentoo.org> :
   Version bump

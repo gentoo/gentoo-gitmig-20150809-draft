@@ -1,6 +1,8 @@
 # ChangeLog for net-www/orion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/ChangeLog,v 1.14 2004/07/16 14:00:35 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/ChangeLog,v 1.15 2004/07/17 22:19:30 aliz Exp $
+
+*orion-2.0.2 (16 Jul 2004)
 
   16 Jul 2004; Thomas Matthijs <axxo@gentoo.org> :
   Version Bump
