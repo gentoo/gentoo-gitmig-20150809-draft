@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.13 2003/02/28 09:15:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.14 2003/06/21 02:29:45 jje Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -101,3 +101,8 @@ Xemake() {
 	virtualmake "$*"
 }
 
+#Same as "econf", but setup the Xvfb hack if needed
+Xeconf() {
+	export maketype="econf"
+	virtualmake "$*"
+}
