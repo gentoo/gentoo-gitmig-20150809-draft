@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1e-r2.ebuild,v 1.1 2003/01/26 20:16:52 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1e-r2.ebuild,v 1.2 2003/01/27 01:44:36 g2boojum Exp $
 
 S=${WORKDIR}
 MY_P="${P/-/-snap-}"
@@ -105,12 +105,16 @@ src_install() {
 
 	dodoc ${S}/{Acknowledgments,Announce,Blurb,ChangeLog,License,Install}
 
-	dodir ${S}/etc/cvsup
-	insinto ${S}/etc/cvsup
+	dodir /etc/cvsup
+	insinto /etc/cvsup
+	doins ${FILESDIR}/gentoo.sup
+	doins ${FILESDIR}/gentoo_mirror.sup
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/cvsupd.rc cvsupd
-	insinto /etc/init.d/conf.d
+	insinto /etc/conf.d
 	newins ${FILESDIR}/cvsupd.confd cvsupd
+
+	dodir /var/cvsup
 	
 }
