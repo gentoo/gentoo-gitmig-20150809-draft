@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.188 2003/09/21 20:33:38 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.189 2003/09/24 07:00:48 spyderous Exp $
+
+  24 Sep 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
+  Patchset 2.1.14. Adding patches 0261 and 0262 to fix module loading issues on
+  ia64. 0261 is from splite, 0262 I got from Mike Harris's patches. Fixing bug
+  #29430 as well.
 
   21 Sep 2003; Jon Portnoy <avenj@gentoo.org> xfree-4.3.0-r3.ebuild,
   files/xfree-4.3.0-ia64-elfloader.patch :

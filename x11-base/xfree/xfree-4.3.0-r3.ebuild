@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.52 2003/09/21 20:33:38 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.53 2003/09/24 07:00:48 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -37,7 +37,7 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="2.1.13"
+PATCH_VER="2.1.14"
 FT2_VER="2.1.3"
 XCUR_VER="0.3.1"
 SISDRV_VER="100803-1"
@@ -56,7 +56,7 @@ SRC_PATH1="ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/${BASE_PV}/source"
 HOMEPAGE="http://www.xfree.org"
 
 # Misc patches we may need to fetch ..
-X_PATCHES="mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
+X_PATCHES="http://dev.gentoo.org/~spyderous/xfree/patchsets/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 	http://www.cpbotha.net/files/dri_resume/xfree86-dri-resume-v8.patch"
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
@@ -230,6 +230,10 @@ src_unpack() {
 	# This was formerly applied if USE=debug, but it causes builds
 	# to randomly die (spyderous).
 	mv -f ${PATCH_DIR}/0120* ${PATCH_DIR}/excluded
+
+	# This is splite's ia64 patch. Is it necessary,
+	# now that 0262 is applied? (spyderous)
+	mv -f ${PATCH_DIR}/0261* ${PATCH_DIR}/excluded
 
 	if use debug
 	then
@@ -535,12 +539,6 @@ src_unpack() {
 				rm -f ${x}.orig
 			fi
 		done
-	fi
-
-	if use ia64
-	then
-		cd ${S}/programs/Xserver/hw/xfree86/loader
-		epatch ${FILESDIR}/xfree-4.3.0-ia64-elfloader.patch
 	fi
 }
 
