@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.5 2004/09/06 14:55:06 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.6 2004/09/07 17:08:11 lu_zero Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -627,7 +627,7 @@ gcc_do_configure() {
 
 	# default arch support
 	use sparc && confgcc="${confgcc} --with-cpu=v7"
-	use ppc && confgcc="${confgcc} --with-cpu=default32"
+	use ppc && confgcc="${confgcc} --with-cpu=common"
 
 	# Nothing wrong with a good dose of verbosity
 	echo
