@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.54a.ebuild,v 1.4 2003/02/13 10:02:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.54a.ebuild,v 1.5 2003/02/23 09:08:32 gmsoft Exp $
 
 # bug #11681; get b0rked code when using -march=k6 with this package.
 inherit flag-o-matic
@@ -22,7 +22,7 @@ SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/${SDIR
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="static readline innodb berkdb tcpd ssl"
-KEYWORDS="x86 ~sparc alpha"
+KEYWORDS="x86 ~sparc alpha hppa"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
@@ -57,7 +57,7 @@ src_compile() {
 	# http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
 	# same for alpha (see http://www.mysql.com/doc/en/BDB_portability.html)
 	# thanks to peter@icebear.net for noticing this.
-	if use sparc || use sparc64 || use alpha
+	if use sparc || use sparc64 || use alpha || use hppa
 	then
 		myconf="${myconf} --without-berkeley-db"
 	else
