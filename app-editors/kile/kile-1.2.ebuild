@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.2.ebuild,v 1.3 2002/10/17 13:17:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.2.ebuild,v 1.4 2003/01/30 19:50:22 danarmak Exp $
 inherit kde-base
 
 need-kde 3
@@ -16,7 +16,7 @@ KEYWORDS="x86"
 LICENSE="GPL-2"
 
 src_unpack() {
-	base_src_unpack
+	kde_src_unpack
     
 	cd $S/kile
 	mv Makefile.in Makefile.in.orig
