@@ -1,6 +1,13 @@
 # ChangeLog for media-video/smpeg-xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/smpeg-xmms/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smpeg-xmms/ChangeLog,v 1.2 2002/08/03 09:25:42 cardoe Exp $
+
+*smpeg-xmms-0.3.4-r2 (03 Aug 2002)
+  
+  03 Aug 2002; Doug Goldstein <cardoe@gentoo.org> smpeg-xmms-0.3.4-r2 :
+ 
+  I updated the depends to smpeg-0.4.4-r3 to require the newer version with gcc-3.1 support
+  Bug #5558 Olivier Crete <tester@videotron.ca> posted the patch from Redhat.
 
 *smpeg-xmms-0.3.4-r1 (1 Feb 2002)
 
