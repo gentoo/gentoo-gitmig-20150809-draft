@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.99 2003/05/30 21:59:57 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.100 2003/06/11 22:23:24 liquidx Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
-aalib - Adds support for media-libs/aalib (ASCI-Graphics Library)
+aalib - Adds support for media-libs/aalib (ASCII-Graphics Library)
 acl - Adds support for Access Control Lists
 acpi - Adds support for Advanced Configuration and Power Interface
 afs - Adds OpenAFS support (distributed file system)
