@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-1.10.4.ebuild,v 1.1 2004/01/26 11:05:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-1.10.4.ebuild,v 1.2 2004/04/15 14:48:48 kugelfang Exp $
 
 inherit games
 
@@ -13,9 +13,19 @@ SRC_URI="mirror://sourceforge/bzflag/${MY_P}.tar.bz2"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 
 DEPEND="virtual/opengl"
+
+src_compile () {
+	if [ "`use amd64`" ]; then
+		sed -e "s/-mcpu=\$host_cpu//" configure > configure.new
+		mv configure.new configure
+		chmod +x configure
+	fi
+	egamesconf || die
+	emake || die
+}
 
 src_install () {
 	make DESTDIR=${D} install || die "make install failed"
