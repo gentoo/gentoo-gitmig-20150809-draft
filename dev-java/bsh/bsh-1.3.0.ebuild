@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-1.3.0.ebuild,v 1.5 2004/05/02 01:09:27 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-1.3.0.ebuild,v 1.6 2004/05/09 22:09:54 weeve Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ S=${WORKDIR}
 DESCRIPTION="BeanShell is a small, free, embeddable, Java source interpreter with object scripting language features."
 SRC_URI="http://www.beanshell.org/${At}"
 HOMEPAGE="http://www.beanshell.org/"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc ~sparc"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
