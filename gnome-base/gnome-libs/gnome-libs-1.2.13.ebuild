@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.2.13.ebuild,v 1.7 2001/06/11 08:11:28 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.2.13.ebuild,v 1.8 2001/07/27 23:19:50 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -13,6 +13,7 @@ HOMEPAGE="http://www.gnome.org/"
 DEPEND=">=media-libs/imlib-1.9.10
 	>=media-sound/esound-0.2.22
 	>=gnome-base/ORBit-0.5.7
+	>=x11-libs/gtk+-1.2.8
 	<sys-libs/db-2"
 
 src_compile() {                           
