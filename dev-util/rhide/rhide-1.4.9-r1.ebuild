@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Desktop Team <desktop@cvs.gentoo.org>
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.4.9-r1.ebuild,v 1.1 2001/11/02 02:04:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.4.9-r1.ebuild,v 1.2 2001/12/06 20:17:01 azarah Exp $
 
 TVISIONVER="1.1.3b"
 SETEDITVER="0.4.41"
@@ -25,33 +25,33 @@ DEPEND="virtual/glibc
 	sys-libs/gpm
 	sys-libs/zlib
 	app-text/tetex"
-	
+
 
 src_unpack() {
-	
+
 	unpack ${A}
-	
+
 	cd ${S}/../tvision/
 	patch -p1 <${FILESDIR}/tvision-${TVISIONVER}.diff || die
-	
+
 	cd ${S}/../setedit/
 	patch -p1 <${FILESDIR}/setedit-${SETEDITVER}.diff || die
-	
+
 	cd ${S}
 	patch <${FILESDIR}/rhide-1.4.9-makefile.diff || die
 }
 
 src_compile() {
-	
+
 	# Most of these use a _very_ lame build system,
 	# so please no comments ;/
-	
+
 # ************* TVision *************
-	
+
 	cd ${WORKDIR}/tvision/
-	
+
 	DUMMYFLAGS=""
-	
+
 	./configure --prefix=/usr				\
 		--fhs						\
 		--cflags='${DUMMYFLAGS}'			\
@@ -61,22 +61,22 @@ src_compile() {
 	cp Makefile Makefile.orig
 	sed -e 's/all: static-lib dynamic-lib/all: static-lib/'	\
 		Makefile.orig >Makefile
-	
+
 	# -j breaks build
 	make || die
-	
+
 	# Fix include problem
 	cp ${WORKDIR}/tvision/include/tv/* ${WORKDIR}/tvision/include
-		
 	
+
 # ************* SetEdit *************
-	
+
 	cd ${WORKDIR}/setedit/
-	
+
 	./configure --prefix=/usr				\
 		--fhs						\
 		--libset || die
-	
+
 	# Fix CFLAGS and CXXFLAGS
 	cd ${WORKDIR}/setedit/makes
 	cp rhide.env rhide.env.orig
@@ -86,41 +86,41 @@ src_compile() {
 	make clean || die
 	make force-patch || die
 	cd ${WORKDIR}/setedit/
-	
+
 	# -j breaks build
 	make || die
 
 	# Make the docs
 	cd ${WORKDIR}/setedit/doc
 	make || die
-	
-	
+
+
 # ************* RHIDE ***************
-	
+
 	cd ${S}
-	
+
 	# Fix CXXFLAGS
 	cp rhide.mak rhide.mak.orig
 	sed -e 's:-O2:$(CXXFLAGS):' rhide.mak.orig >rhide.mak
-        cp rhide_.mak rhide_.mak.orig
+	cp rhide_.mak rhide_.mak.orig
 	sed -e 's:-O2:$(CXXFLAGS):' rhide_.mak.orig >rhide_.mak
 	cp gpr2mak.mak gpr2mak.mak.orig
 	sed -e 's:-O2:$(CXXFLAGS):' gpr2mak.mak.orig >gpr2mak.mak
 	cp gprexp.mak gprexp.mak.orig
 	sed -e 's:-O2:$(CXXFLAGS):' gprexp.mak.orig >gprexp.mak
-	
+
 	export RHIDESRC="`pwd`"
 	export SETSRC="${RHIDESRC}/../setedit"
 	export SETOBJ="${RHIDESRC}/../setedit/makes"
 	export TVSRC="${RHIDESRC}/../tvision"
 	export TVOBJ="${RHIDESRC}/../tvision/linux"
-	
+
 	# -j breaks build
 	make prefix=/usr			  		\
 		install_docdir=share/doc/${PF}			\
 		install_infodir=share/info			\
 		|| die
-	
+
 	# Update and Fix DIR entry in .info files
 	cd ${S}/share/setedit/
 	sed -e 's:editor.inf:setedit.inf:g'			\
@@ -129,19 +129,19 @@ src_compile() {
 	sed -e	's:infeng.inf:infview.inf:g'			\
 		${WORKDIR}/setedit/doc/infeng.inf >             \
 		infview.inf || die
-        cd ${S}
+	cd ${S}
 
 	# Update setedit macro's
 	cp -f ${WORKDIR}/setedit/cfgfiles/*.pmc ${S}/share/setedit
 }
 
 src_install() {
-	
+
 	make prefix=${D}/usr					\
 	install_docdir=share/doc/${PF}				\
 	install_infodir=share/info				\
 	install || die
-	
+
 	# Fix .info files
 	for file in ${D}/usr/share/info/*.inf ; do
 		mv ${file} ${file}o
