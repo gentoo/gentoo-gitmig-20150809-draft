@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# seemant@gentoo.org (22 Apr 2003)
+# the package is unmainteained and dead upstream. it will die in portage
+# accordingly.
+media-plugins/avi-xmms
+
 # <mkeadle@gentoo.org> (22 Apr 2003)
 # new fluxbox dev series. no guarentees.
 >=x11-wm/fluxbox-0.9.0
