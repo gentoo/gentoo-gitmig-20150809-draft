@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/dictd-wn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.9 2004/07/24 19:52:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.10 2004/07/25 14:59:51 liquidx Exp $
+
+  25 Jul 2004; Alastair Tse <liquidx@gentoo.org> dictd-wn-2.0.ebuild:
+  removing amd64 keyword temporarily because of problems with configure script.
 
 *dictd-wn-2.0 (24 Jul 2004)
 
