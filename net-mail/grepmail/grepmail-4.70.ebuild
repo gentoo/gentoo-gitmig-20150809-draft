@@ -1,12 +1,12 @@
 # Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Arcady Genkin <agenkin@thpoon.com>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-4.70.ebuild,v 1.1 2002/04/22 20:51:23 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-4.70.ebuild,v 1.2 2002/05/27 17:27:39 drobbins Exp $
 
 DESCRIPTION="Search normal or compressed mailbox using a regular expression or dates."
 HOMEPAGE="http://grepmail.sourceforge.net/"
 
-SRC_URI="http://prdownloads.sourceforge.net/grepmail/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/grepmail/${P}.tar.gz"
 S=${WORKDIR}/${P}
 
 DEPEND="dev-perl/TimeDate

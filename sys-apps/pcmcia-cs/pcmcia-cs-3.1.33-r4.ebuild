@@ -2,14 +2,14 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Craig Joly <joly@ee.ualberta.ca>, Daniel Robbins <drobbins@gentoo.org>, Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.33-r4.ebuild,v 1.1 2002/05/01 13:01:29 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.33-r4.ebuild,v 1.2 2002/05/27 17:27:39 drobbins Exp $
 
 # This ebuild installs ${FILESDIR}/hermes.conf, which you can get from
 # http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/hermes.conf
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
-SRC_URI="http://prdownloads.sourceforge.net/pcmcia-cs/${P}.tar.gz
+SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz
 	http://ozlabs.org/people/dgibson/dldwd/orinoco-0.11a.tar.gz"
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
 DEPEND="sys-kernel/linux-headers"

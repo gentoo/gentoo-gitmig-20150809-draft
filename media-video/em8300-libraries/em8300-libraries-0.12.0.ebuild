@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Brandon Low <lostlogic@lostlogicx.com>
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.12.0.ebuild,v 1.1 2002/04/23 02:54:25 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.12.0.ebuild,v 1.2 2002/05/27 17:27:39 drobbins Exp $
 
 DESCRIPTION="em8300 video decoder card libraries"
 HOMEPAGE="http://dxr3.sourceforge.net"
 
-SRC_URI="http://prdownloads.sourceforge.net/dxr3/${P/-libraries/}.tar.gz"
+SRC_URI="mirror://sourceforge/dxr3/${P/-libraries/}.tar.gz"
 
 DEPEND="media-video/em8300-modules
         x11-libs/gtk+"

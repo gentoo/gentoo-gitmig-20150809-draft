@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Jon Nelson <jnelson@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bk2site/bk2site-1.1.8.ebuild,v 1.2 2002/04/06 06:55:32 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bk2site/bk2site-1.1.8.ebuild,v 1.3 2002/05/27 17:27:39 drobbins Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="bk2site will transform your Netscape bookmarks file into a yahoo-like website with slashdot-like news."
-SRC_URI="http://prdownloads.sourceforge.net/bk2site/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/bk2site/${P}.tar.gz"
 HOMEPAGE="http://bk2site.sourceforge.net/"
 
 DEPEND=""

@@ -8,7 +8,7 @@
 S=${WORKDIR}/${P}
 DESCRIPTION="s-lang Newsreader"
 PATCH_URI="http://slrn.sourceforge.net/patches"
-SRC_URI="http://prdownloads.sourceforge.net/slrn/${P}.tar.bz2
+SRC_URI="mirror://sourceforge/slrn/${P}.tar.bz2
 ${PATCH_URI}/${P}-mimeenc.diff ${PATCH_URI}/${P}-ssl.diff
 ${PATCH_URI}/${P}-menu.diff"
 HOMEPAGE="http://slrn.sourceforge.net/"

@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.25-r1.ebuild,v 1.2 2001/12/12 20:38:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.25-r1.ebuild,v 1.3 2002/05/27 17:27:39 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard ext2 and ext3 filesystem utilities"
-SRC_URI="http://prdownloads.sourceforge.net/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
 
 DEPEND="virtual/glibc nls? ( sys-devel/gettext ) sys-apps/texinfo"

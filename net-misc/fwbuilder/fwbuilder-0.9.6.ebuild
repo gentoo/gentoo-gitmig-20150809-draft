@@ -1,12 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fwbuilder/fwbuilder-0.9.6.ebuild,v 1.1 2001/11/07 12:09:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fwbuilder/fwbuilder-0.9.6.ebuild,v 1.2 2002/05/27 17:27:39 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A firewall GUI"
-SRC_URI="http://prdownloads.sourceforge.net/fwbuilder/$A"
+SRC_URI="mirror://sourceforge/fwbuilder/$A"
 HOMEPAGE="http://fwbuilder.sourceforge.net"
 
 DEPEND=">=x11-libs/gtkmm-1.2.5-r1

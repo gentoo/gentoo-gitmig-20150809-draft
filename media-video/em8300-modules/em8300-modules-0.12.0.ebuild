@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Brandon Low <lostlogic@lostlogicx.com>
 # Maintainer: Brandon Low <lostlogic@lostlogicx.com>
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.7 2002/05/11 17:04:55 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.8 2002/05/27 17:27:39 drobbins Exp $
 
 DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card kernel modules"
 HOMEPAGE="http://dxr3.sourceforge.net"
@@ -11,7 +11,7 @@ DEPEND="virtual/linux-sources"
 RDEPEND="${DEPEND}
 	>=sys-apps/portage-1.9.10"
 
-SRC_URI="http://prdownloads.sourceforge.net/dxr3/${P/-modules/}.tar.gz"
+SRC_URI="mirror://sourceforge/dxr3/${P/-modules/}.tar.gz"
 S="${WORKDIR}/${P}/modules"
 
 

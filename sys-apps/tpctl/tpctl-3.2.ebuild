@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Wout Mertens <Wout.Mertens@advalvas.be>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/tpctl-3.2.ebuild,v 1.1 2002/04/25 23:39:54 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/tpctl-3.2.ebuild,v 1.2 2002/05/27 17:27:39 drobbins Exp $
 
 #transform P to match tarball versioning
 MYPV=${PV/_beta/beta}
@@ -9,7 +9,7 @@ MYP="${PN}_${MYPV}"
 KV=""
 
 DESCRIPTION="Thinkpad system control user space programs"
-SRC_URI="http://prdownloads.sourceforge.net/tpctl/${MYP}.tar.gz"
+SRC_URI="mirror://sourceforge/tpctl/${MYP}.tar.gz"
 HOMEPAGE="http://tpctl.sourceforge.net/tpctlhome.htm"
 
 DEPEND="$DEPEND sys-apps/thinkpad ncurses? ( sys-libs/ncurses )"

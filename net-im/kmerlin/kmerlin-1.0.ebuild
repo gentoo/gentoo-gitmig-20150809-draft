@@ -6,5 +6,5 @@ inherit kde-base || die
 S="${WORKDIR}/kmerlin-1.0"
 need-kde 3
 DESCRIPTION="KDE MSN Messenger"
-SRC_URI="http://prdownloads.sourceforge.net/kmerlin/kmerlin-1.0.tar.gz"
+SRC_URI="mirror://sourceforge/kmerlin/kmerlin-1.0.tar.gz"
 HOMEPAGE="http://kmerlin.olsd.de"

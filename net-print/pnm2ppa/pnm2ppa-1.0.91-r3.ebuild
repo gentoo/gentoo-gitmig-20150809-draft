@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.0.91-r3.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.0.91-r3.ebuild,v 1.3 2002/05/27 17:27:39 drobbins Exp $
 # Note: this also d/ls the hp-ppa-howto and installs it under /usr/share/doc/${P}
 
 # pnm2ppa is a print filter for HP's line of Winprinters which use a proprietary
@@ -18,8 +18,8 @@
 # and use env. var. CFLAGS. Took a lot of changes though.
 
 S=${WORKDIR}/${PN}
-SRC_URI="http://prdownloads.sourceforge.net/${PN}/${P}.tgz
-	 http://prdownloads.sourceforge.net/${PN}/howto.tgz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tgz
+	 mirror://sourceforge/${PN}/howto.tgz"
 
 HOMEPAGE="http://pnm2ppa.sourceforge.net"
 DESCRIPTION="Print driver for Hp Deskjet 710, 712, 720, 722, 820, 1000 series"

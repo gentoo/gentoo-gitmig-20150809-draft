@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
 # Author Craig Dooley <cd5697@albany.edu>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.73.ebuild,v 1.1 2002/04/23 16:56:03 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.73.ebuild,v 1.2 2002/05/27 17:27:39 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="TV application for the bttv driver"
 SRC_URI="http://bytesex.org/xawtv/xawtv_3.73.tar.gz
-http://prdownloads.sourceforge.net/xaw-deinterlace/xaw-deinterlace-0.0.3.diff.bz2"
+mirror://sourceforge/xaw-deinterlace/xaw-deinterlace-0.0.3.diff.bz2"
 HOMEPAGE="http://bytesex.org/xawtv/"
 SLOT="0"
 DEPEND="virtual/glibc

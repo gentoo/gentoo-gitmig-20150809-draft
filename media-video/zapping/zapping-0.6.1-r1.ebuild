@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Jens Blaesche <mr.big@pc-trouble.de>
-# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/zapping-0.6.1-r1.ebuild,v 1.4 2002/05/23 06:50:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/zapping-0.6.1-r1.ebuild,v 1.5 2002/05/27 17:27:39 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Zapping is a TV- and VBI- viewer for the Gnome environment."
-SRC_URI="http://prdownloads.sourceforge.net/zapping/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/zapping/${P}.tar.gz"
 HOMEPAGE="http://zapping.sourceforge.net"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1

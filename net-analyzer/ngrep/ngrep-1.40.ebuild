@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.40.ebuild,v 1.2 2002/04/27 12:43:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.40.ebuild,v 1.3 2002/05/27 17:27:39 drobbins Exp $
 
 S=${WORKDIR}/ngrep
 DESCRIPTION="A grep for network layers"
-SRC_URI="http://prdownloads.sourceforge.net/ngrep/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/ngrep/${P}.tar.gz"
 HOMEPAGE="http://ngrep.sourceforge.net"
 
 DEPEND="virtual/glibc

@@ -1,14 +1,14 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Wout Mertens <Wout.Mertens@advalvas.be>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/thinkpad-3.2.ebuild,v 1.1 2002/04/25 23:35:59 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/thinkpad-3.2.ebuild,v 1.2 2002/05/27 17:27:39 drobbins Exp $
 
 #transform P to match tarball versioning
 MYPV=${PV/_beta/beta}
 MYP="${PN}_${MYPV}"
 KV=""
 DESCRIPTION="Thinkpad system control kernel modules"
-SRC_URI="http://prdownloads.sourceforge.net/tpctl/${MYP}.tar.gz"
+SRC_URI="mirror://sourceforge/tpctl/${MYP}.tar.gz"
 HOMEPAGE="http://tpctl.sourceforge.net/tpctlhome.htm"
 
 #virtual/glibc should depend on specific kernel headers

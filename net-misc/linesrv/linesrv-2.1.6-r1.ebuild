@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/linesrv-2.1.6-r1.ebuild,v 1.1 2002/05/04 04:11:14 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/linesrv-2.1.6-r1.ebuild,v 1.2 2002/05/27 17:27:39 drobbins Exp $
 
 DESCRIPTION="Client/Server system to control the Internet link of a masquerading server"
 HOMEPAGE="http://linecontrol.sourceforge.net"
 
 S=${WORKDIR}/linesrv-2.1
-SRC_URI="http://prdownloads.sourceforge.net/linecontrol/${PN}-${PV}.src.tar.bz2"
+SRC_URI="mirror://sourceforge/linecontrol/${PN}-${PV}.src.tar.bz2"
 #windows client: http://people.ee.ethz.ch/~sfuchs/LineControl/down/wlc-122.zip
 
 DEPEND="virtual/glibc pam? ( >=sys-libs/pam-0.75 )"

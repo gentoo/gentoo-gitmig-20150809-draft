@@ -4,7 +4,7 @@
 
 A=${PN}-0.1.0-test6.tar.gz
 S=${WORKDIR}/${PN}-0.1.0-test6/driver
-SRC_URI="http://prdownloads.sourceforge.net/marvel/${A}"
+SRC_URI="mirror://sourceforge/marvel/${A}"
 DESCRIPTION="Matrox Marvel G200/G400/Rainbow Runner G-series V4L I and II drivers"
 HOMEPAGE="http://marvel.sourceforge.net"
 

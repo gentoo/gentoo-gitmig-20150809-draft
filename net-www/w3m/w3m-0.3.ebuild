@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.3.ebuild,v 1.2 2002/04/27 21:30:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.3.ebuild,v 1.3 2002/05/27 17:27:39 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text based WWW browser, supports tables and frames"
-SRC_URI="http://prdownloads.sourceforge.net/w3m/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/w3m/${P}.tar.gz"
 HOMEPAGE="http://w3m.sourceforge.net/"
 
 DEPEND="virtual/glibc

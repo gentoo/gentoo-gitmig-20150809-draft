@@ -4,7 +4,7 @@
 
 S=${WORKDIR}/X11R6
 DESCRIPTION="ATI drivers for Xfree86 that support ATI video capabilities"
-SRC_URI="http://prdownloads.sourceforge.net/gatos/ATI-4.2.0-6.i386.tar.gz"
+SRC_URI="mirror://sourceforge/gatos/ATI-4.2.0-6.i386.tar.gz"
 HOMEPAGE="http://gatos.sourceforge.net"
 
 DEPEND="x11-base/xfree"

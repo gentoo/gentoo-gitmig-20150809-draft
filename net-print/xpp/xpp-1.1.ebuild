@@ -3,7 +3,7 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X Printing Panel"
-SRC_URI="http://prdownloads.sourceforge.net/cups/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/cups/${P}.tar.gz"
 HOMEPAGE="http://cups.sourceforge.net/xpp/"
 
 DEPEND="virtual/glibc >=net-print/cups-1.1.14
