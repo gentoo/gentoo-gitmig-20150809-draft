@@ -1,15 +1,13 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.4 2001/08/21 02:52:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.5 2001/08/21 05:30:01 drobbins Exp $
 
 SV=1.1.2
 S=${WORKDIR}/rc-scripts-${SV}
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts)"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
-RDEPEND=">=sys-apps/devfsd-1.3.16-r1"
-
 #if [ -z "`use bootcd`" ]
 #then
 #	INIT_D_SCRIPTS="bootmisc checkfs checkroot clock halt hostname
