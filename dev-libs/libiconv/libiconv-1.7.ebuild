@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.7.ebuild,v 1.10 2002/12/09 04:21:03 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.7.ebuild,v 1.11 2003/01/04 01:09:10 spider Exp $
 
-DESCRIPTION="This is a required for GTK+ in GNOME2"
+DESCRIPTION="This is a fork of the glibc iconv implementation that is incompatible. it may break things."
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/libiconv/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libiconv/"
 
