@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.63 2004/03/09 01:25:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.64 2004/03/09 01:42:38 robbat2 Exp $
+
+  08 Mar 2004; Robin H. Johnson <robbat2@gentoo.org> openldap-2.1.23.ebuild,
+  openldap-2.1.26.ebuild, openldap-2.1.27.ebuild:
+  ppc64 keywords removed pending deps: app-crypt/mit-krb5, app-crypt/heimdal,
+  dev-libs/cyrus-sasl, dev-db/unixODBC
 
 *openldap-2.1.27 (08 Mar 2004)
 
