@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.5.5.ebuild,v 1.4 2001/06/04 00:39:52 michael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.5.5-r1.ebuild,v 1.1 2001/06/04 00:39:52 michael Exp $
 
 #P=
 A=${P}.tar.gz
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc"
 
 src_compile() {
     
-    try ./configure --prefix=/usr --mandir=/usr/share \
+    try ./configure --prefix=/usr --mandir=/usr/share/man \
         --with-etcdir=/etc/dict --host=${CHOST}
     try make
 }
@@ -24,12 +24,12 @@ src_install () {
     # gotta set up the dirs for it....
     dodir /usr/bin
     dodir /usr/sbin
-    dodir /usr/share/man1
-    dodir /usr/share/man8
+    dodir /usr/share/man/man1
+    dodir /usr/share/man/man8
 
     #Now install it.
-    try make prefix=${D}/usr man1_prefix=${D}/usr/share/man1 \
-             man8_prefix=${D}/usr/share/man8 conf=${D}/etc/dict install
+    try make prefix=${D}/usr man1_prefix=${D}/usr/share/man/man1 \
+             man8_prefix=${D}/usr/share/man/man8 conf=${D}/etc/dict install
 
     #Install docs
     dodoc README TODO COPYING ChangeLog ANNOUNCE
