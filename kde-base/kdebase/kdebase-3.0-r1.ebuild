@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0-r1.ebuild,v 1.3 2002/04/13 19:07:53 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0-r1.ebuild,v 1.4 2002/04/13 19:14:26 verwilst Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist
 
@@ -83,6 +83,8 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
     sed -e 's:SessionTypes=:SessionTypes=kde-3.0,kde-2.2.2,:' kdmrc.orig > kdmrc
     rm kdmrc.orig
 
+    mkdir -p ${D}/usr/share/pixmaps
+    mv ${D}/usr/kde/3/share/apps/kdesktop/pics/* ${D}/usr/share/pixmaps/
     rm -rf ${D}/usr/kde/3/share/apps/kdesktop/pics/
     cd ${D}/usr/kde/3/share/apps/kdesktop/
     ln -sf /usr/share/pixmaps/ pics    

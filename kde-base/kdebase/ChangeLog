@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.8 2002/04/13 19:07:53 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.9 2002/04/13 19:14:25 verwilst Exp $
+
+  13 Apr 2002; Bart Verwilst <verwilst@gentoo.org>: Ok, just copied the 
+  icons inside the pics dir to the /usr/share/pixmaps first :o) you never 
+  know somebody _might_ add some more icons over time..
 
   13 Apr 2002; Bart Verwilst <verwilst@gentoo.org>: Make sure the gnome 
   icons are visible when choosing a new icon (under 'other icons'), 
