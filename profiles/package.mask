@@ -101,6 +101,7 @@ app-admin/va-systemimager-client
 >=net-fs/netatalk-1.5
 >=media-libs/freetype-2.0.4
 >=dev-db/unixODBC-2.0.8
+=app-editors/fte-20010819
 #=dev-java/blackdown-1.3.1
 
 #OK, I assume that the XFS in 2.4.4-r5 is hosed; alkaline?
