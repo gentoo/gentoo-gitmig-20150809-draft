@@ -21,6 +21,29 @@
 ##   End example
 ##
 
+# <foser@gentoo.org> (30 Jan 2003)
+# GNOME 2.2 RC2 Mask
+# !!! DO NOT UNMASK, COMMIT IS NOT YET COMPLETE !!!
+>=gnome-base/gnome-desktop-2.2.0
+>=gnome-base/ORBit2-2.5.1
+>=gnome-base/bonobo-activation-2.2.0
+>=gnome-base/eel-2.2.0.2
+>=gnome-base/gnome-applets-2.2.0
+>=gnome-base/gconf-2.2.0
+>=gnome-base/gnome-panel-2.2.0
+>=gnome-base/gnome-session-2.2.0.1
+>=gnome-base/gnome-vfs-2.2.0
+>=gnome-base/libbonoboui-2.2.0
+>=gnome-base/libbonobo-2.2.0
+>=gnome-base/libgnome-2.2.0.1
+>=gnome-base/libgnomeui-2.2.0.1
+>=gnome-base/libgnomecanvas-2.2.0.1
+>=gnome-base/libgnomeprint-2.2.1
+>=gnome-base/libgnomeprintui-2.2.1
+>=gnome-base/libgnomeui-2.2.0.1
+>=gnome-base/librsvg-2.2.1
+>=gnome-base/nautilus-2.2.0.2
+>=x11-libs/libwnck-2.2.0
 
 # <lu_zero@gentoo.org> (28 Jan 2003)
 #not sure that it works now, sorry
