@@ -26,7 +26,6 @@ MD5 369b42cafcbe5631c2d03cbbfd4aeddd files/exim-4.10-gentoo.diff 1889
 MD5 5d5aabea7d56a91803df1312c04d32c0 files/exim-4.14-tail.patch 446
 MD5 622b726ea7b32aae93a8fe9f3c2af9cd files/exim-4.20-maildir.patch 478
 MD5 f442b68d435598831bab8536ade071b8 files/exim.confd 62
-MD5 f0676c8d629efaa211aebbe01750eb41 files/exim.rc5 585
 MD5 f46aa6bc138d2aebbcea85d89658b7a5 files/exim.rc6 523
 MD5 eb249c90af3ab11e5a4d307e184a75ac files/exiscan.conf 22113
 MD5 d230e0fa45f2b65d5bc50c0879c40148 files/pam.d-exim 101
