@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.42 2005/01/29 05:54:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.43 2005/01/29 14:39:01 corsair Exp $
+
+  29 Jan 2005; Markus Rothe <corsair@gentoo.org> catalyst-1.1.4.ebuild:
+  Stable on ppc64
 
   29 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> :
   Updated version info.
