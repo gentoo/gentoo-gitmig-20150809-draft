@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/xcut
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcut/ChangeLog,v 1.1 2004/10/08 02:57:22 agriffis Exp $
+
+*xcut-0.2 (07 Oct 2004)
+
+  07 Oct 2004; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
+  +xcut-0.2.ebuild:
+  Add xcut to portage.  Thanks to Aaron Brooks for the ebuild
+
