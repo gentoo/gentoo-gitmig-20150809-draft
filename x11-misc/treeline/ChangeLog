@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/treeline
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.10 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.11 2004/12/09 15:18:35 taviso Exp $
+
+*treeline-0.10.2 (09 Dec 2004)
+
+  09 Dec 2004; Tavis Ormandy <taviso@gentoo.org> +treeline-0.10.2.ebuild,
+  -treeline-0.7.3-r1.ebuild, -treeline-0.8.0.ebuild:
+  *bump*
+  clearing out stale ebuilds
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   treeline-0.7.3-r1.ebuild, treeline-0.8.0.ebuild, treeline-0.8.1.ebuild:
