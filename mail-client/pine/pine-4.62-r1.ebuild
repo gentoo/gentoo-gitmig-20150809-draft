@@ -1,22 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.62.ebuild,v 1.2 2005/02/25 01:36:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.62-r1.ebuild,v 1.1 2005/02/25 01:36:21 ticho Exp $
 
 inherit eutils
 
-# Using this ugly hack, since we're making our own versioned copies of chappa
-# patch, as upstream doesn't version them. (see #59573)
-CHAPPA_PF="${P}"
+# Using this ugly hack, since we're making our own versioned copies of chappa 
+# patch, as upstream doesn't version them. (see #59573) 
+CHAPPA_PF="${P}-r1"
 
 DESCRIPTION="A tool for reading, sending and managing electronic messages."
 HOMEPAGE="http://www.washington.edu/pine/
 	http://www.math.washington.edu/~chappa/pine/patches/"
 SRC_URI="ftp://ftp.cac.washington.edu/pine/${P/-/}.tar.bz2
-	mirror://gentoo/${CHAPPA_PF}-chappa-all.patch.gz
-	!maildir? ( http://dev.gentoo.org/~ticho/portage/pine-4.62-maildir.patch.gz )"
-# using my webspace until the patch gets fully distributed to mirrors  -Ticho
-#	mirror://gentoo/${CHAPPA_PF}-chappa-all.patch.gz"
-
+	mirror://gentoo/${CHAPPA_PF}-chappa-all.patch.gz"
 #	ipv6? (
 #		http://www.ngn.euro6ix.org/IPv6/${PN}/${P}-v6-20031001.diff
 #		http://www.ngn.euro6ix.org/IPv6/${PN}/readme.${P}-v6-20031001
@@ -24,9 +20,8 @@ SRC_URI="ftp://ftp.cac.washington.edu/pine/${P/-/}.tar.bz2
 
 LICENSE="PICO"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64 ~ppc-macos"
-#IUSE="ipv6 maildir ssl ldap kerberos passfile"
-IUSE="ssl ldap kerberos largeterminal pam passfile debug maildir"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ppc-macos"
+IUSE="ssl ldap kerberos largeterminal pam passfile debug"
 
 DEPEND="virtual/libc
 	>=sys-apps/sed-4
@@ -41,21 +36,21 @@ S="${WORKDIR}/${P/-/}"
 
 maildir_warn() {
 	einfo
-	use maildir && {
-		einfo "This build of Pine has Maildir support built in as"
-		einfo "part of the chappa-all patch."
-		einfo
-		einfo "If you have a maildir at ~/Maildir it will be your"
-		einfo "default INBOX. The path may be changed with the"
-		einfo "\"maildir-location\" setting in Pine."
-		einfo
-		einfo "To use /var/spool/mail INBOX again, set"
-		einfo "\"disable-these-drivers=md\" in your .pinerc file."
-	} || {
-		einfo "This build of pine has Maildir support disabled."
-		einfo "To enable it, turn on \"maildir\" USE flag."
-	}
+	einfo "This build of Pine has Maildir support built in as"
+	einfo "part of the chappa-all patch."
 	einfo
+	einfo "If you have a maildir at ~/Maildir it will be your"
+	einfo "default INBOX. The path may be changed with the"
+	einfo "\"maildir-location\" setting in Pine."
+	einfo
+	einfo "To use /var/spool/mail INBOX again, set"
+	einfo "\"disable-these-drivers=md\" in your .pinerc file."
+	einfo
+	einfo "Alternately, you might want to read following webpage, which explains, how to"
+	einfo "use multiple mailboxes simultaneously:"
+	echo
+	echo "http://www.math.washington.edu/~chappa/pine/pine-info/collections/incoming-folders/"
+	echo
 }
 
 pkg_setup() {
@@ -67,18 +62,10 @@ src_unpack() {
 
 	# Various fixes and features.
 	epatch "${WORKDIR}/${CHAPPA_PF}-chappa-all.patch"
-	# Revert maildir patch if maildir USE flag is not set
-	# UTF8 support. Not ported. 4.60 has utf8 some conversion.
-	#epatch "${DISTDIR}/${PN}${PV}-utf8-to-singlebyte.patch"
 	# Fix flock() emulation.
 	cp "${FILESDIR}/flock.c" "${S}/imap/src/osdep/unix"
 	# Build the flock() emulation.
 	epatch "${FILESDIR}/imap-4.7c2-flock_4.60.patch"
-	use maildir || {
-		einfo "Reverse-applying the maildir patch to remove maildir support brought in by"
-		einfo "the chappa-all patch. Ignore any warnings."
-		patch -s -R -t -p1 <${WORKDIR}/${PN}-4.62-maildir.patch || die "reverse patch failed"
-	}
 	if use ldap ; then
 		# Link to shared ldap libs instead of static.
 		epatch "${FILESDIR}/pine-4.30-ldap.patch"
