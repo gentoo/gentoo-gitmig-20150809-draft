@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/fcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.12 2003/02/12 08:58:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.13 2003/03/02 08:51:34 seemant Exp $
+
+*fcron-2.0.0-r3 (02 Mar 2003)
+
+  02 Mar 2003; Seemant Kulleen <seemant@gentoo.org> fcron-2.0.0-r3.ebuild:
+  use epach, econf; and use /usr/bin/vim instead of /usr/bin/nano to close bug
+  #16651 by Nils Ohlmeier <nils@ohlmeier.de>
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
