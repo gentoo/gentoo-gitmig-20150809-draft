@@ -1,8 +1,8 @@
 # ChangeLog for dev-tex/texpower
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.2 2003/06/20 04:16:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.3 2003/07/12 13:17:44 aliz Exp $
 
-*latex-texpower-0.0.8h (02 Feb 03)
+*texpower-0.0.8h (02 Feb 03)
 
   02 Apr 2003; Lars Weiler <pylon@gentoo.org> latex-texpower-0.0.8h.ebuild:
   Set ppc in KEYWORDS

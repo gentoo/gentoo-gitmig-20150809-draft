@@ -1,11 +1,11 @@
 # ChangeLog for dev-tex/eurosym
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.3 2003/06/20 04:15:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.4 2003/07/12 13:17:44 aliz Exp $
 
   12 Jun 2003; <msterret@gentoo.org> eurosym-1.2.ebuild:
   add Header
 
-*latex-eurosym-1.2 (19 January 2002)
+*eurosym-1.2 (19 January 2002)
 
   19 January 2003; Felix Kurth <felix@fkurth,de> :
   

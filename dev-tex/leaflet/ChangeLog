@@ -1,10 +1,10 @@
 # ChangeLog for dev-tex/leaflet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/ChangeLog,v 1.2 2003/06/20 04:16:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/ChangeLog,v 1.3 2003/07/12 13:17:44 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*latex-leaflet-19990601 (21 May 2002)
+*leaflet-19990601 (21 May 2002)
 
   21 May 2002; Bruce A. Locke <blocke@shivan.org> latex-leaflet-19990601.ebuild :
 
