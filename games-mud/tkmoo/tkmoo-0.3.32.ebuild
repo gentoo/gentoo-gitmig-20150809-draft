@@ -1,9 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/tkmoo-0.3.32.ebuild,v 1.2 2003/12/07 00:38:00 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/tkmoo-0.3.32.ebuild,v 1.3 2003/12/07 00:43:50 port001 Exp $
 
 inherit games eutils
 
+MY_PN=${PN/moo/MOO-light}
 S=${WORKDIR}/${P/moo/MOO-light}
 
 DESCRIPTION="MOO Client written in TK"
@@ -26,14 +27,14 @@ src_unpack() {
 src_compile() {
 	emake \
 		WISH="`which wish`" \
-		TKMOO_LIB_DIR=${GAMES_LIBDIR}/${PN} \
+		TKMOO_LIB_DIR=${GAMES_LIBDIR}/${MY_PN} \
 		TKMOO_BIN_DIR=${GAMES_BINDIR} \
 		|| die
 }
 
 src_install() {
 	make \
-		TKMOO_LIB_DIR=${D}/${GAMES_LIBDIR}/${PN} \
+		TKMOO_LIB_DIR=${D}/${GAMES_LIBDIR}/${MY_PN} \
 		TKMOO_BIN_DIR=${D}/${GAMES_BINDIR} \
 		install \
 		|| die
