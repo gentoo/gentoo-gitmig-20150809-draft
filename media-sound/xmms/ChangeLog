@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.70 2003/09/15 13:46:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.71 2003/09/15 17:09:44 seemant Exp $
+
+  15 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
+  files/xmms-1.2.8-mpg123j.patch:
+  the cjk patch was fixed, so now xmms will compile with cjk support turned on.
+  This is hopefully the last we'll see of issues with -r2. Thanks to: Michael
+  Dillon <gsvalore@lordlegacy.com> in the same bug report #28768
 
   15 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
   files/xmms-1.2.8-dtd.patch:

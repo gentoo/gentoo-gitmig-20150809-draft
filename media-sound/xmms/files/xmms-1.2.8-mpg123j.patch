@@ -248,13 +248,15 @@ diff -urN xmms-1.2.8/Input/mpg123/id3_frame_text.c xmms-1.2.8-jp/Input/mpg123/id
  	{
  	    char *text16 = (char *) frame->fr_data + 1;
  
-@@ -161,11 +169,16 @@
+@@ -161,11 +169,15 @@
  	    return NULL;
  	}
      }
 -
 -    if (*(guint8 *) frame->fr_data == ID3_ENCODING_ISO_8859_1)
 -	return g_strdup((char *) frame->fr_data + 1);
+-    else
+-	return id3_utf16_to_ascii(((char *) frame->fr_data + 1));
 +	switch (*(guint8 *) frame->fr_data) {
 +		case ID3_ENCODING_ISO_8859_1:
 +		case ID3_ENCODING_UTF8:
@@ -262,8 +264,6 @@ diff -urN xmms-1.2.8/Input/mpg123/id3_frame_text.c xmms-1.2.8-jp/Input/mpg123/id
 +		case ID3_ENCODING_UTF16:
 +		case ID3_ENCODING_UTF16BE:
 +		default:
-     else
--	return id3_utf16_to_ascii(((char *) frame->fr_data + 1));
 +		return id3_utf16_to_ascii(((char *) frame->fr_data + 1));
 +	}
  }
