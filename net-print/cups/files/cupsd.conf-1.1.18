@@ -1,5 +1,5 @@
 #
-# "$Id: cupsd.conf-1.1.18,v 1.1 2003/01/27 21:50:16 lordvan Exp $"
+# "$Id: cupsd.conf-1.1.18,v 1.2 2003/09/25 13:58:56 lanius Exp $"
 #
 #   Sample configuration file for the Common UNIX Printing System (CUPS)
 #   scheduler.
@@ -724,12 +724,15 @@ Allow From 127.0.0.1
 #
 #</Location>
 
-#<Location /jobs>
+<Location /jobs>
 #
 # You may wish to limit access to job operations, either with Allow
 # and Deny lines, or by requiring a username and password.
 #
-#</Location>
+AuthType Basic
+AuthClass System
+
+</Location>
 
 #<Location /printers>
 #
@@ -781,5 +784,5 @@ Allow From 127.0.0.1
 </Location>
 
 #
-# End of "$Id: cupsd.conf-1.1.18,v 1.1 2003/01/27 21:50:16 lordvan Exp $".
+# End of "$Id: cupsd.conf-1.1.18,v 1.2 2003/09/25 13:58:56 lanius Exp $".
 #
