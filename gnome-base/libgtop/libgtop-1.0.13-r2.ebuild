@@ -1,34 +1,37 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-1.0.13-r2.ebuild,v 1.9 2002/12/09 04:22:38 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-1.0.13-r2.ebuild,v 1.10 2002/12/11 18:50:57 foser Exp $
+
+inherit eutils
 
 IUSE="nls"
-
 S=${WORKDIR}/${P}
 DESCRIPTION="libgtop"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
-
 HOMEPAGE="http://www.gnome.org/"
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 RDEPEND=">=sys-devel/bc-1.06
 	 >=sys-libs/readline-4.1
          >=gnome-base/gnome-libs-1.4.1.2-r1"
 
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext ) 
+	nls? ( sys-devel/gettext )
+	>=dev-util/guile-1.4 
 	sys-devel/perl"
 
 
 src_unpack() {
-
 	unpack ${A}
 
 	# Fix a remote buffer overflow vuln.
 	cd ${S}
-	patch -p1 <${FILESDIR}/${PV}-remote_buffer_overflow.diff || die
+	epatch ${FILESDIR}/${PV}-remote_buffer_overflow.diff
+	# guile compile fix
+	epatch ${FILESDIR}/${PN}-${PV}-guile-compile.patch
+	automake-1.4
 }
 
 src_compile() {
