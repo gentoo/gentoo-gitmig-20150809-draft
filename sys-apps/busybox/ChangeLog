@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/busybox
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.19 2003/12/24 08:13:54 solar Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.20 2004/02/04 00:07:15 solar Exp $
+
+*busybox-1.00_pre6 (03 Feb 2004)
+
+  03 Feb 2004; <solar@gentoo.org> busybox-0.50.ebuild, busybox-0.60.2.ebuild,
+  busybox-0.60.3-r1.ebuild, busybox-0.60.3.ebuild, busybox-0.60.5-r1.ebuild,
+  busybox-0.60.5-r2.ebuild, busybox-0.60.5.ebuild, busybox-1.00_pre5.ebuild,
+  busybox-1.00_pre6.ebuild:
+  ~arch version bump, adds new procps sysctl option to busybox. misc bugfixes.
+  new local useflag called savedconfig for user defined configs.
 
 *busybox-1.00_pre5 (24 Dec 2003)
 
