@@ -24,7 +24,7 @@ S=${WORKDIR}/linux-${KV}
 OKV=2.4.19
 DESCRIPTION="LSM patched kernel with SELinux archive"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 
-	http://gentoo.org/~styx/patches-${KV}.tar.bz2"
+	mirror://gentoo/patches-${KV}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/ http://www.nsa.gov/selinux"
 KEYWORDS="~x86 -ppc -sparc "
 SLOT="${KV}"
