@@ -1,6 +1,12 @@
 # ChangeLog for net-im/kmerlin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmerlin/ChangeLog,v 1.1 2002/02/01 21:53:32 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmerlin/ChangeLog,v 1.2 2002/03/11 18:49:13 guidob Exp $
+
+*kmerlin-0.3.3 (11 Mar 2002)
+
+  11 Mar 2002; Guido Bakker <guidob@gentoo.org> ebuild :
+
+  Version update, bugfix release.
 
 *kmerlin-0.3.1 (1 Feb 2002)
 
