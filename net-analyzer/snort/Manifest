@@ -1,7 +1,7 @@
-MD5 7c88ec79d1f2d48c48df59ccbdaf3c07 ChangeLog 5902
+MD5 d41e65840935bc7acd88bbf61e15d8e8 ChangeLog 6023
 MD5 9c6b611339af7149d67f677a96d398db metadata.xml 930
 MD5 f80a28eb514d54c97e9962eebf935123 snort-2.0.5-r2.ebuild 3146
-MD5 e1144542473f559b33cdeca5f85022e0 snort-2.0.6.ebuild 3147
+MD5 5cf6cb439a158c243eb718af43bd2ce5 snort-2.0.6.ebuild 3144
 MD5 6b8e74b31bd8b33a1abf5099637de1f1 snort-1.9.1-r3.ebuild 2280
 MD5 8d46f6a0e861639987d7340b883c0e9f snort-2.0.0.ebuild 3047
 MD5 0c4f28771a4096a1dc044f13ea500bff snort-2.0.1-r1.ebuild 2734
@@ -30,3 +30,4 @@ MD5 513637a4fadce14177bf85e97e5931f8 files/snort-2.0.5-gcc3.patch 350
 MD5 f0da97d8f9acc787973aa956caebb66c files/digest-snort-2.0.5-r1 150
 MD5 ea783bd276257a20df5b6537d3ff5d49 files/snort-drop-calculation.diff 4957
 MD5 202dd3be05b16c852303a04284eba720 files/digest-snort-2.0.6 150
+MD5 513637a4fadce14177bf85e97e5931f8 files/snort-2.0.6-gcc3.patch 350
