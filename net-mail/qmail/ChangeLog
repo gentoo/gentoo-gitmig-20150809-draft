@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.33 2003/08/11 07:35:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.34 2003/08/12 05:47:14 robbat2 Exp $
+
+  11 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild,
+  files/1.03-r12/conf-common, files/1.03-r12/conf-qmqpd,
+  files/1.03-r12/conf-qmtpd, files/1.03-r12/conf-smtpd,
+  files/1.03-r12/config-sanity-check, files/1.03-r12/run-qmailqmqpd,
+  files/1.03-r12/run-qmailqmtpd, files/1.03-r12/run-qmailsmtpd,
+  files/1.03-r12/smtp-auth-close3.patch:
+  fix bug #23658, add SMTP-AUTH stubs to conf-smtpd, seperate the sanity check,
+  allow easier configuration of all options. Install config files with correct
+  permissions, prevent the pkg_config from destroying old data. Bug #17283 done.
 
 *qmail-1.03-r12 (11 Aug 2003)
 
