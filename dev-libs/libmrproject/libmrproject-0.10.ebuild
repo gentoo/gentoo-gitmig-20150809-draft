@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/libmrproject-0.10.ebuild,v 1.4 2004/01/09 16:59:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/libmrproject-0.10.ebuild,v 1.5 2004/02/07 00:18:31 plasmaroo Exp $
 
 inherit gnome.org
 
@@ -44,6 +44,6 @@ src_install() {
 
 	einstall || die
 
-	dodoc AUTHORS COPYING ChangeL* INSTALL NEWS  README*
+	dodoc AUTHORS COPYING ChangeL* INSTALL README*
 
 }
