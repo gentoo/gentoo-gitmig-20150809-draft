@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.20 2002/03/23 23:33:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.21 2002/03/24 09:08:44 azarah Exp $
+
+  24 Mar 2002; M. Schlemmer <azarah@gentoo.org> :
+
+  baselayout-1.7.4* used copies of depscan.sh and functions.sh in ${FILESDIR} to
+  fix problems, and this was forgotten to be taken out in 1.7.5*.
 
 *baselayout-1.7.5-r1 (23 Mar 2002)
 
