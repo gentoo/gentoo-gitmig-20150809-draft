@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.ebuild,v 1.8 2005/03/19 23:29:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.ebuild,v 1.9 2005/03/19 23:48:11 luckyduck Exp $
 
 inherit java-pkg
 
@@ -47,17 +47,17 @@ src_install () {
 	do
 		java-pkg_dojar ${jar}
 		rm -f ${jar}
-		ln -s ${DESTTREE}/share/${PN}/lib/${jar} ${jar}
+		ln -s ${DESTTREE}/share/${PN}-${SLOT}/lib/${jar} ${jar}
 	done
 
 	cd ${S}
-	cp -ra ${P}/lib ${D}${DESTTREE}/share/${PN}/lib/
+	cp -ra ${P}/lib ${D}${DESTTREE}/share/${PN}-${SLOT}/lib/
 
 	dodoc README LICENSE
 	use doc && java-pkg_dohtml -r ${P}/docs/
 
-	echo "#!/bin/sh" > ${PN}
-	echo '${JAVA_HOME}/bin/java -classpath $(java-config -p batik,xerces-2,rhino-1.5) org.apache.batik.apps.svgbrowser.Main $*' >> ${PN}
-	dobin ${PN}
+	echo "#!/bin/sh" > ${PN}${SLOT}
+	echo '${JAVA_HOME}/bin/java -classpath $(java-config -p batik-1.5,xerces-2,rhino-1.5) org.apache.batik.apps.svgbrowser.Main $*' >> ${PN}${SLOT}
+	dobin ${PN}${SLOT}
 
 }

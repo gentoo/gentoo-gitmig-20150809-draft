@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ef995a113c15163bc4db93eaedc0c1d4 batik-1.5.1-r3.ebuild 1718
+MD5 abf071e9289c9c21e6f13071ee84145b batik-1.5.1-r3.ebuild 1737
 MD5 914f1ad23f39cbaa68716d2557b2c956 batik-1.5.1.ebuild 1050
 MD5 5534e4d9f3ab116bd40681c5d9016fd3 ChangeLog 2462
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 3958b12d4f172fcf7ed424c99cce8040 batik-1.5.1-r4.ebuild 1678
-MD5 c545c2bc5fc790caa0aa12f518c97e0b batik-1.5.ebuild 1675
+MD5 0a62ed035c72f43ed9f35f772a206615 batik-1.5.1-r4.ebuild 1725
+MD5 d2308fcfb3acb01163e6360a14dc4524 batik-1.5.ebuild 1716
 MD5 479ed0922a69b318b40b485614a6af16 files/digest-batik-1.5 63
 MD5 2773f6aa10bcb901bd07ea509571ccef files/digest-batik-1.5.1 66
 MD5 2773f6aa10bcb901bd07ea509571ccef files/digest-batik-1.5.1-r3 66
@@ -14,7 +14,7 @@ MD5 2773f6aa10bcb901bd07ea509571ccef files/digest-batik-1.5.1-r4 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCPLXf06ebR+OMO78RAsz7AJ9vuKgEErhPR3lCzgKLf3VsLdOISQCfYCnq
-YBx40+1XvuhUjV/jHc8ZguY=
-=5SFj
+iD8DBQFCPLpB06ebR+OMO78RAkS1AJ4y9QCsVZoUKjpbhet2ElKttJqt/ACfUoAD
+ZlTpILxUOBKsQmD3Vf2RFgM=
+=dL9U
 -----END PGP SIGNATURE-----
