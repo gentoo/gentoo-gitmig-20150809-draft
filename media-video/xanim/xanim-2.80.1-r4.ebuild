@@ -1,18 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.23 2004/03/14 00:50:25 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.24 2004/06/19 04:40:00 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gcc
 
 DESCRIPTION="program for playing a wide variety of animation, audio and video formats"
 HOMEPAGE="http://smurfland.cit.buffalo.edu/xanim/home.html"
-SLOT="0"
+
 LICENSE="XAnim"
-KEYWORDS="x86 ppc sparc alpha ~mips hppa amd64 ia64"
+SLOT="0"
+KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ia64"
+IUSE=""
 
 RDEPEND="virtual/x11
 	>=sys-libs/zlib-1.1.3"
-
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4.0.5"
 
@@ -82,12 +83,12 @@ src_unpack() {
 
 src_compile() {
 	# -O higher than -O2 breaks for GCC3.1
-	filter-flags "-O?" "-O2"
+	replace-flags -O3 -O2
 	filter-flags -finline-functions
 
 	# Set XA_DLL_PATH even though we statically link the mods, I guess
 	# this provides extensibility
-	make CC="${CC}" OPTIMIZE="${CFLAGS}" \
+	make CC="$(gcc-getCC)" OPTIMIZE="${CFLAGS}" \
 		XA_DLL_DEF="-DXA_DLL -DXA_PRINT" XA_DLL_PATH=/usr/lib/xanim/mods \
 		${_XA_EXT:+ \
 			XA_IV32_LIB="mods/${_XA_CVID}" \
@@ -95,9 +96,8 @@ src_compile() {
 			XA_CVID_LIB="mods/${_XA_IV32}" }
 }
 
-src_install () {
-	into /usr
-	dobin xanim
+src_install() {
+	dobin xanim || die
 	newman docs/xanim.man xanim.1
 	dodoc README
 	dodoc docs/README.* docs/*.readme docs/*.doc
