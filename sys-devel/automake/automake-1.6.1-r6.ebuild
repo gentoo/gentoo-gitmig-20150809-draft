@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.1.ebuild,v 1.4 2002/04/23 19:42:16 azarah Exp
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.1-r6.ebuild,v 1.15 2003/06/12 22:11:42 msterret Exp $
 
 # OLD14 = 1.4
 # OLD15 = 1.5
