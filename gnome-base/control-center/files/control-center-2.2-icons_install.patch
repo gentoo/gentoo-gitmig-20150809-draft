@@ -1,0 +1,57 @@
+diff -ur control-center-2.2.2.orig/capplets/theme-switcher/gnome-theme-details.c control-center-2.2.2/capplets/theme-switcher/gnome-theme-details.c
+--- control-center-2.2.2.orig/capplets/theme-switcher/gnome-theme-details.c	2003-03-12 08:37:58.000000000 -0800
++++ control-center-2.2.2/capplets/theme-switcher/gnome-theme-details.c	2003-06-15 16:02:17.000000000 -0700
+@@ -318,13 +318,13 @@
+ 
+   /* window manager themes */
+   widget = WID ("window_install_button");
+-  g_signal_connect (G_OBJECT (widget), "clicked", G_CALLBACK (gnome_icon_theme_installer_run_cb), parent);
++  g_signal_connect (G_OBJECT (widget), "clicked", G_CALLBACK (gnome_theme_installer_run_cb), parent);
+   widget = WID ("window_manage_button");
+   g_signal_connect (G_OBJECT (widget), "clicked", G_CALLBACK (gnome_theme_manager_window_show_manage_themes), dialog);
+ 
+   /* icon themes */
+   widget = WID ("icon_install_button");
+-  g_signal_connect (G_OBJECT (widget), "clicked", G_CALLBACK (gnome_theme_installer_run_cb), parent);
++  g_signal_connect (G_OBJECT (widget), "clicked", G_CALLBACK (gnome_icon_theme_installer_run_cb), parent);
+   widget = WID ("icon_manage_button");
+   g_signal_connect (G_OBJECT (widget), "clicked", G_CALLBACK (gnome_theme_manager_icon_show_manage_themes), dialog);
+ 
+diff -ur control-center-2.2.2.orig/capplets/theme-switcher/gnome-theme-installer.c control-center-2.2.2/capplets/theme-switcher/gnome-theme-installer.c
+--- control-center-2.2.2.orig/capplets/theme-switcher/gnome-theme-installer.c	2003-01-15 23:40:29.000000000 -0800
++++ control-center-2.2.2/capplets/theme-switcher/gnome-theme-installer.c	2003-06-15 16:38:39.000000000 -0700
+@@ -45,8 +45,15 @@
+ 	gchar *path = data;
+ 
+ 	/* this should be something more clever and nonblocking */
+-	command = g_strdup_printf ("sh -c 'gzip -d -c < \"%s\" | tar xf - -C \"%s/.themes\"'",
++	if (strstr (path, ".icons") != NULL) {
++		command = g_strdup_printf ("sh -c 'gzip -d -c < \"%s\" | tar xf - -C \"%s/.icons\"'",
+ 				   path, g_get_home_dir ());
++	}
++	else {
++		command = g_strdup_printf ("sh -c 'gzip -d -c < \"%s\" | tar xf - -C \"%s/.themes\"'",
++				   path, g_get_home_dir ());
++	}
++
+ 	if (g_spawn_command_line_sync (command, NULL, NULL, &status, NULL) && status == 0)
+ 		gnome_vfs_unlink (path);
+ 	g_free (command);
+@@ -74,8 +81,15 @@
+ 	gchar *path = data;
+ 
+ 	/* this should be something more clever and nonblocking */
+-	command = g_strdup_printf ("sh -c 'bzip2 -d -c < \"%s\" | tar xf - -C \"%s/.themes\"'",
+-				   path, g_get_home_dir ());
++	if (strstr (path, ".icons") != NULL) {
++		command = g_strdup_printf ("sh -c 'bzip2 -d -c < \"%s\" | tar xf - -C \"%s/.icons\"'",
++			path, g_get_home_dir ());
++	}
++	else {
++		command = g_strdup_printf ("sh -c 'bzip2 -d -c < \"%s\" | tar xf - -C \"%s/.themes\"'",
++			path, g_get_home_dir ());
++	}
++
+ 	if (g_spawn_command_line_sync (command, NULL, NULL, &status, NULL) && status == 0)
+ 		gnome_vfs_unlink (path);
+ 	g_free (command);
