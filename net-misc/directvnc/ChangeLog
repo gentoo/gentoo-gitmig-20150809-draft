@@ -1,25 +1,26 @@
 # ChangeLog for net-misc/directvnc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.8 2002/12/13 11:00:11 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.9 2003/01/18 04:47:15 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*directvnc-0.7 (07 Nov 2002)
+*directvnc-0.7 (17 Jan 2003)
+
+  17 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added a small patch to fix dfb.c.
 
   07 Nov 2002; Seemant Kulleen <seemant@gentoo.org> directvnc-0.7.ebuild
   files/digest-directvnc-0.7 :
-
   Version bump, thanks to: andreh@lddd.org (Andre Heidemann) in bug #9521.
 
 *directvnc-0.6.1 (06 Jul 2002)
 
-  08 Aug 2002; Seemant Kulleen <seemant@gentoo.org> directvnc-0.6.1.ebuild :
+  17 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added a small patch to fix dfb.c.
 
+  08 Aug 2002; Seemant Kulleen <seemant@gentoo.org> directvnc-0.6.1.ebuild :
   FHS compliance.
 
   06 Jul 2002; Seemant Kulleen <seemant@gentoo.org> directvnc-0.6.1.ebuild
   files/digest-directvnc-0.6.1 files/dfb.c :
-
   Version bump, and the dfb.c from directvnc's CVS, where the API changes
   for DirectFB since 0.9.10 have been implemented.  Now, this will compile
   against portage's version of DirectFB.
@@ -27,9 +28,7 @@
 *directvnc-0.6-r1 (03 Jul 2002)
 
   03 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
-
   Fixed DirectFB dep to be ~0.9.10
-# ChangeLog for net-misc/directvnc
 
 *directvnc-0.6 (31 May 2002)
 
@@ -37,20 +36,3 @@
   New import.  Note that the stuff in src_unpack (and the automake/
   autoconf dependencies) should go away in the next release, since
   they're only there to fix the author's mistake.
- 
--- Explanation of ChangeLog format:
- 
-  Every new version or revision of the package should be marked by a '*'
-  seperator line as above. Changes since the last revision have to be added to
-  the top of the file, underneath the initial copyright and cvs header
-  comments, in exactly the same format as this comment.
-  
-  This means that you start with header line that has the following format,
-  indented two spaces:
-  
-  DD MMM YYYY; your_name <your_email> changed_file1, changed_file2: Your
-  explanation should follow. It should be indented and wrapped at a line width
-  of 80 characters.  The changed_files can be omitted if they are obvious; for
-  example, if you are only modifying the .ebuild file and committing a new rev
-  of a package.  Any details about what exactly changed in the code should be
-  added as a message when the changes are committed to cvs, not in this file.

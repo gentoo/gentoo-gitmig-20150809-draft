@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/directvnc-0.7.ebuild,v 1.3 2003/01/05 18:42:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/directvnc-0.7.ebuild,v 1.4 2003/01/18 04:47:16 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Very thin VNC client for unix framebuffer systems"
 HOMEPAGE="http://adam-lilienthal.de/directvnc"
@@ -19,9 +21,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/src
 	
-	#fix src/dfb.c to handle the new API changes in DirectFB
-#	cp ${FILESDIR}/dfb.c .
-	
+	# fix src/dfb.c to handle the new API changes in DirectFB
+	epatch ${FILESDIR}/${P}-api-fix.patch
+
 	#fix broken Makefile.am
 	mv Makefile.am Makefile.am.orig
 	sed -e 's/-$(DIRECTFB_LIBS)/$(DIRECTFB_LIBS)/' \
