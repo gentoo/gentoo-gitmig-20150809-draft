@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libdbx/libdbx-1.0.3.ebuild,v 1.1 2004/03/05 07:19:37 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libdbx/libdbx-1.0.3.ebuild,v 1.2 2004/04/19 09:19:19 phosphan Exp $
 
 DESCRIPTION="Tools and library for reading Outlook Express mailboxes (.dbx format)"
 HOMEPAGE="http://sourceforge.net/projects/ol2mbox"
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 
