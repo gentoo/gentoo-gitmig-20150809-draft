@@ -1,8 +1,18 @@
-MD5 409a9e3cbe6ff688986b5c960b66d5df ginac-1.2.3.ebuild 695
-MD5 66b3aad52cca0700e8bf14d81084aa49 ginac-1.1.6.ebuild 696
-MD5 7774d0e34ed27d26992aa2f189b50c38 ChangeLog 1368
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 047751a8cc0ccd9fbbfd3fc8bb572520 ginac-1.2.3.ebuild 703
+MD5 9e6ec3b398fd843e2466516331eacf9d ginac-1.1.6.ebuild 704
+MD5 5e114d7dd5ad6228dea5bcc55b88ce3a ChangeLog 1976
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 de1aaa4b611385c599981a5224b9e314 ginac-1.1.3.ebuild 695
+MD5 d49c543b7eac72cac5a8d3ac70ff6b49 ginac-1.1.3.ebuild 703
 MD5 d2ea63bca4f3db9789c13a7a568ed185 files/digest-ginac-1.1.3 64
 MD5 4007ab2506865c9eda6f28459c9521dc files/digest-ginac-1.1.6 64
 MD5 f4742264ea978194ec2b9c9c196d4e8f files/digest-ginac-1.2.3 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB06FII1lqEGTUzyQRAvBlAJ4+KVSi5hzI8CRgXIfrol93UJDsTACgkjXC
+MtkfHAMDjlGyhUc88tK7tCI=
+=2mOO
+-----END PGP SIGNATURE-----
