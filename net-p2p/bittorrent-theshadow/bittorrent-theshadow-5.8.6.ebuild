@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc., Okrain Genady (^Mafteah), and Luke-Jr
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/bittorrent-theshadow-5.8.6.ebuild,v 1.1 2003/10/16 12:18:44 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/bittorrent-theshadow-5.8.6.ebuild,v 1.2 2003/11/26 11:13:09 aliz Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://home.elp.rr.com/tur/BitTorrent-experimental-S-${PV}.tar.gz"
 HOMEPAGE="http://bt.degreez.net/"
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
 
 IUSE="X psyco nopsyco"
 
