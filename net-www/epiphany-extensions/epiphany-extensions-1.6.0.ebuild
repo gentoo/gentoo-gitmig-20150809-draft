@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany-extensions/epiphany-extensions-1.6.0.ebuild,v 1.1 2005/03/15 20:28:39 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany-extensions/epiphany-extensions-1.6.0.ebuild,v 1.2 2005/03/16 05:30:13 joem Exp $
 
 inherit gnome2 eutils
 
@@ -38,8 +38,8 @@ select-stylesheet,\
 sidebar,\
 smart-bookmarks,\
 tab-groups,\
-tabsmenu,\
-`use doc && echo sample-mozilla,sample`"
+tabsmenu\
+`use doc && echo ,sample-mozilla,sample`"
 
 src_unpack() {
 	unpack ${A}
