@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r3.ebuild,v 1.1 2004/09/13 02:18:06 eradicator Exp $
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r3.ebuild,v 1.2 2004/09/15 18:01:07 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +12,8 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ~ia64 ppc64"
+KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ia64 ppc64"
+IUSE="doc"
 
 RDEPEND="sys-libs/zlib"
 DEPEND="sys-devel/autoconf

@@ -1,7 +1,17 @@
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f47cb8a8571cb88f89850dba4a520c5e ChangeLog 4227
+MD5 eee25ce0cc2efc9feaa7dea5555fb439 id3lib-3.8.3-r3.ebuild 1317
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 76b1df6d2d985be416c9fe592c5a422d id3lib-3.8.3-r2.ebuild 1266
-MD5 d5fb97c5fd1e1c1cf8a886a9661fa250 id3lib-3.8.3-r3.ebuild 1323
-MD5 202375b32b2a80a367a2230716144988 files/digest-id3lib-3.8.3-r2 64
 MD5 202375b32b2a80a367a2230716144988 files/digest-id3lib-3.8.3-r3 64
 MD5 e896e39ce5196f4fd2ca6fc7553e2c60 files/id3lib-3.8.3-zlib.patch 833
+MD5 202375b32b2a80a367a2230716144988 files/digest-id3lib-3.8.3-r2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBSIO6HTu7gpaalycRAuQ0AKCjak4iOzhmBbv0S/8i12P5Sa1q7wCgzy0Y
+CrxyT4NBKeCNhY8cAZtJUSA=
+=Zw3k
+-----END PGP SIGNATURE-----
