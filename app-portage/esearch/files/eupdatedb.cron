@@ -1,0 +1,18 @@
+#! /bin/sh
+
+# Run some script
+
+SCRIPT="eupdatedb"
+
+DATE="`date +%Y%m%d`"
+LOG="/var/log/${SCRIPT}"
+
+# Start logging
+echo "--- Starting ${SCRIPT} for ${DATE} ---" >> ${LOG}
+
+${SCRIPT} && \
+echo "${SCRIPT}: success." >> ${LOG} || \
+echo "ERROR: ${SCRIPT} failed." >> ${LOG}
+
+# End logging
+echo "--- Ending ${SCRIPT} for ${DATE} ---" >> ${LOG}

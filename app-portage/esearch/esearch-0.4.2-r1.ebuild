@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.4.0.ebuild,v 1.1 2003/09/19 07:55:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.4.2-r1.ebuild,v 1.1 2003/10/18 13:24:28 genone Exp $
 
 IUSE=""
 DESCRIPTION="Replacement for 'emerge search' with search-index"
@@ -23,6 +23,6 @@ src_install() {
 	dosym /usr/lib/esearch/esearch.py /usr/bin/esearch
 	dosym /usr/lib/esearch/eupdatedb.py /usr/sbin/eupdatedb
 
-	dodoc ChangeLog
+	dodoc ChangeLog ${FILESDIR}/eupdatedb.cron
 }
 
