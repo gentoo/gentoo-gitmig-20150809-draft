@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/cantus
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.1 2002/12/22 21:05:03 mjc Exp $
+
+*cantus-1.0.3 (22 Dec 2002)
+  
+  22 Dec 2002; Michael J. Cohen <mjc@gentoo.org> cantus-1.0.3.ebuild :
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. 
