@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.16 2004/01/30 16:08:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.17 2004/02/29 01:03:43 liquidx Exp $
+
+*libusb-0.1.8 (29 Feb 2004)
+
+  29 Feb 2004; Alastair Tse <liquidx@gentoo.org> libusb-0.1.8.ebuild:
+  version bump. workaround missing .so extensions with libtool version (#42955)
 
   30 Jan 2004; Aron Griffis <agriffis@gentoo.org> libusb-0.1.7-r1.ebuild:
   Add some more error-checking to this ebuild
