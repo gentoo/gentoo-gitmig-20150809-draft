@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.13 2004/01/13 15:56:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.14 2004/01/26 00:06:05 vapier Exp $
 
 inherit gnuconfig
 
@@ -44,7 +44,7 @@ src_unpack() {
 src_compile() {
 
 	export YACC=yacc
-	export WANT_AUTOCONF_2_5=1 ; autoreconf
+	export WANT_AUTOCONF=2.5 ; autoreconf
 
 	econf --sysconfdir=/etc/a2ps \
 		--includedir=/usr/include \

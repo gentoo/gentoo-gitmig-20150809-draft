@@ -1,8 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r1.ebuild,v 1.4 2003/12/14 00:46:39 pylon Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r1.ebuild,v 1.5 2004/01/26 00:06:52 vapier Exp $
 
 inherit gnome.org gnome2 libtool
 
@@ -19,7 +17,6 @@ RDEPEND=">=gnome-base/libgnomeui-2.2
 	>=gnome-base/libbonobo-2.0
 	>=gnome-base/ORBit2-2.0
 	>=app-text/enchant-1"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
@@ -28,13 +25,11 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS COPYING ChangeLog NEWS README"
 
 src_unpack() {
-
 	unpack ${A}
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-enchant.patch
 
-	WANT_AUTOCONF_2_5=1 autoconf || die
+	WANT_AUTOCONF=2.5 autoconf || die
 	automake || die
-
 }
