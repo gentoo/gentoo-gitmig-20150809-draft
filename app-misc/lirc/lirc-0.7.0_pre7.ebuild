@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7.ebuild,v 1.5 2004/08/03 19:32:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7.ebuild,v 1.6 2004/09/08 16:13:14 lanius Exp $
 
 inherit eutils kmod
 
@@ -73,6 +73,7 @@ src_compile() {
 	unset ARCH
 	econf \
 		--disable-manage-devices \
+		--localstatedir=/var \
 		--with-syslog=LOG_DAEMON \
 		--enable-sandboxed \
 		${LIRC_OPTS} || die "./configure failed"

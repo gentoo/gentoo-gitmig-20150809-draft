@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.36 2004/08/03 19:32:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.37 2004/09/08 16:13:14 lanius Exp $
+
+  08 Sep 2004; Heinrich Wendel <lanius@gentoo.org> lirc-0.7.0_pre7.ebuild:
+  fix pid file, bug #62838
 
   03 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> lirc-0.7.0_pre7.ebuild:
   fix use invocation
