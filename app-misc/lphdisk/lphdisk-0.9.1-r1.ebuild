@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lphdisk/lphdisk-0.9.1-r1.ebuild,v 1.2 2004/04/27 19:38:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lphdisk/lphdisk-0.9.1-r1.ebuild,v 1.3 2004/06/07 07:11:08 dragonheart Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ SRC_URI="http://www.procyon.com/~pda/lphdisk/${P}.tar.bz2"
 # laptops with Phoenix NoteBIOS.
 
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc -alpha"
+IUSE=""
+KEYWORDS="x86 -ppc -sparc -alpha"
 LICENSE="Artistic"
 DEPEND=">=sys-apps/sed-4"
 

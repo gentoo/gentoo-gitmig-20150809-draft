@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lphdisk/lphdisk-0.9.1.ebuild,v 1.8 2004/03/14 10:51:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lphdisk/lphdisk-0.9.1.ebuild,v 1.9 2004/06/07 07:11:08 dragonheart Exp $
 
 DESCRIPTION="utility for preparing a hibernation partition for APM Suspend-To-Disk"
 HOMEPAGE="http://www.procyon.com/~pda/lphdisk/"
@@ -11,6 +11,7 @@ SRC_URI="http://www.procyon.com/~pda/lphdisk/${P}.tar.bz2"
 # laptops with Phoenix NoteBIOS.
 
 SLOT="0"
+IUSE=""
 KEYWORDS="x86 -ppc -sparc -alpha"
 LICENSE="Artistic"
 
