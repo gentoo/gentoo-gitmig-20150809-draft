@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r3.ebuild,v 1.5 2003/02/13 11:50:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r3.ebuild,v 1.6 2003/03/30 00:36:40 liquidx Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="virtual/x11
 	>=sys-devel/gdb-4.16
-	>=x11-libs/openmotif-2.1.30"
+	virtual/motif"
 
 
 src_unpack() {

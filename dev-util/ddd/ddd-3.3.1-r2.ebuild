@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r2.ebuild,v 1.8 2003/02/13 11:50:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r2.ebuild,v 1.9 2003/03/30 00:36:40 liquidx Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU DDD is a graphical front-end for command-line debuggers"
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc sparc "
 
 DEPEND="virtual/x11
 	>=sys-devel/gdb-4.16
-	>=x11-libs/openmotif-2.1.30"
+	virtual/motif"
 
 
 src_unpack() {

@@ -1,10 +1,14 @@
 # ChangeLog for dev-util/ddd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.7 2003/02/12 06:40:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.8 2003/03/30 00:36:40 liquidx Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *ddd-3.3.1-r3 (05 Dec 2002)
+
+  30 Mar 2003; Alastair Tse <liquidx@gentoo.org> ddd-3.3.1-r1.ebuild,
+  ddd-3.3.1-r2.ebuild, ddd-3.3.1-r3.ebuild:
+  change deps to virtual/motif
 
   05 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
 
