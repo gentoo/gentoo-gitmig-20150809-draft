@@ -30,6 +30,7 @@
 *>=dev-lang/python-2.2-r4
 
 *dev-lang/perl
+*dev-libs/popt
 *dev-perl/ExtUtils-MakeMaker
 
 >=sys-apps/apmd-3.0.1-r6
