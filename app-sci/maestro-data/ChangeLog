@@ -1,0 +1,11 @@
+# ChangeLog for app-sci/maestro-data
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maestro-data/ChangeLog,v 1.1 2004/03/09 05:03:33 zx Exp $
+
+*maestro-data-2004 (09 Mar 2004)
+
+  09 Mar 2004; Chris Aniszczyk <zx@gentoo.org> maestro-data-2004.ebuild,
+  metadata.xml:
+  Initial Import.
+  Thanks to <nosdr4g@hotmail.com> for the initial ebuild. Closes #43957
+
