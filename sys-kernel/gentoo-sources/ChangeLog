@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.83 2004/08/02 11:11:09 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.84 2004/08/04 22:06:42 plasmaroo Exp $
+
+*gentoo-sources-2.4.25-r7 (04 Aug 2004)
+
+  04 Aug 2004; <plasmaroo@gentoo.org> -gentoo-sources-2.4.19-r19.ebuild,
+  +gentoo-sources-2.4.19-r20.ebuild, -gentoo-sources-2.4.20-r22.ebuild,
+  +gentoo-sources-2.4.20-r23.ebuild, -gentoo-sources-2.4.22-r13.ebuild,
+  +gentoo-sources-2.4.22-r14.ebuild, -gentoo-sources-2.4.25-r6.ebuild,
+  +gentoo-sources-2.4.25-r7.ebuild, -gentoo-sources-2.4.26-r5.ebuild,
+  -gentoo-sources-2.4.26-r6.ebuild, +gentoo-sources-2.4.26-r7.ebuild:
+  Added a patch for the CAN-2004-0415 vulnerability, bug #59378.
 
 *gentoo-sources-2.4.20-r22 (02 Aug 2004)
 
