@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/grsec-sources
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.1 2003/08/14 21:47:23 solar Exp $
+
+*grsec-sources-2.4.21.2.0_rc2 (14 Aug 2003)
+
+  14 Aug 2003; <solar@gentoo.org> grsec-sources-2.4.21.1.9.11.ebuild,
+  grsec-sources-2.4.21.2.0_rc2.ebuild, metadata.xml:
+  Initial import of grsec-sources
+
