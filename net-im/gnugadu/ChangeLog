@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gnugadu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.19 2004/08/23 09:07:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.20 2004/08/23 13:30:53 spock Exp $
+
+  23 Aug 2004; Michal Januszewski <spock@gentoo.org> gnugadu-2.0.5.ebuild:
+  Changed the GTK+ dep to >= gtk-2.4.0 to match the one specified in the
+  program's ChangeLog.
 
 *gnugadu-2.0.5 (23 Aug 2004)
 
