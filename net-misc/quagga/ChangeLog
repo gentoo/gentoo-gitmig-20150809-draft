@@ -1,9 +1,29 @@
 # ChangeLog for net-misc/quagga
-# Copyright 2003-2004 DataCore GmbH; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.9 2004/10/05 22:11:05 malverian Exp $
+# Copyright 1999-2004 Gentoo Foundation
+# Copyright 2003-2004 DataCore GmbH
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.10 2004/10/22 08:16:24 amir Exp $
+
+*quagga-0.97.1 (21 Oct 2004)
+
+  21 Oct 2004; Amir Guindehi <amir@datacore.ch> quagga-0.97.1.ebuild:
+  Bumped version number. Added two patches to fix compilation of
+  the source when used with the 'ospfapi' use flag.
+
+*quagga-0.96.5-r1 (21 Oct 2004)
+
+  21 Oct 2004; Amir Guindehi <amir@datacore.ch> +quagga-0.96.5-r1.ebuild:
+  Added dependency to sys-apps/iproute2. Added --localstatedir. The ebuild
+  will apply patches if it finds the corresponding patch directory exists.
+  Fixed location of quagga include files to /usr/include/quagga. Added new
+  USE flag named 'ospfapi' to enable ospfapi and opaque lsa support 
+  sepparately. Made x86 stable.
 
 *quagga-0.96.5 (05 Oct 2004)
 
+  21 Oct 2004; Amir Guindehi <amir@datacore.ch> quagga-0.96.5.ebuild:
+  Made x86 stable.
+	
   05 Oct 2004; Philip Walls <malverian@gentoo.org> +quagga-0.96.5.ebuild:
   Version bump, support for tcp md5 passwords
 

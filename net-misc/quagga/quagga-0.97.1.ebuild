@@ -1,19 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
+# Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.4-r6.ebuild,v 1.8 2004/10/22 08:16:24 amir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.97.1.ebuild,v 1.1 2004/10/22 08:16:24 amir Exp $
 
 inherit eutils
 
+MD5_PATCH="ht-20040525-0.96.5-bgp-md5.patch"
+
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
 HOMEPAGE="http://quagga.net/"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
-SRC_URI="http://www.quagga.net/download/${P}.tar.gz"
-IUSE="ipv6 snmp pam"
+SRC_URI="http://www.quagga.net/download/${P}.tar.gz
+	tcpmd5? ( http://hasso.linux.ee/quagga/$MD5_PATCH )"
+
+IUSE="ipv6 snmp pam tcpmd5 ospfapi"
 
 DEPEND="virtual/libc
 	sys-devel/binutils
+	sys-apps/iproute2
 	>=sys-libs/libcap-1.10-r3
 	!sys-apps/zebra
 	!sys-apps/zebra-ag-svn
@@ -21,13 +27,15 @@ DEPEND="virtual/libc
 	!sys-apps/quagga-ag-svn-HEAD
 	!sys-apps/quagga-svn-HEAD"
 
-[ -z "${QUAGGA_GROUP_GID}" ] && QUAGGA_GROUP_GID=441
-[ -z "${QUAGGA_GROUP_NAME}" ] && QUAGGA_GROUP_NAME="quagga"
 [ -z "${QUAGGA_USER_NAME}" ] && QUAGGA_USER_NAME="quagga"
 [ -z "${QUAGGA_USER_UID}" ] && QUAGGA_USER_UID=441
+[ -z "${QUAGGA_GROUP_NAME}" ] && QUAGGA_GROUP_NAME="quagga"
+[ -z "${QUAGGA_GROUP_GID}" ] && QUAGGA_GROUP_GID=441
+[ -z "${QUAGGA_VTYGROUP}" ] && QUAGGA_VTYGROUP="quagga"
 [ -z "${QUAGGA_USER_SH}" ] && QUAGGA_USER_SH="/bin/false"
 [ -z "${QUAGGA_USER_HOMEDIR}" ] && QUAGGA_USER_HOMEDIR=/var/empty
 [ -z "${QUAGGA_USER_GROUPS}" ] && QUAGGA_USER_GROUPS=${QUAGGA_GROUP_NAME}
+[ -z "${QUAGGA_STATEDIR}" ] && QUAGGA_STATEDIR=/var/run/quagga
 
 pkg_preinst() {
 	enewgroup ${QUAGGA_GROUP_NAME} ${QUAGGA_GROUP_GID}
@@ -37,18 +45,24 @@ pkg_preinst() {
 src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
-	epatch ${FILESDIR}/patches-${PV}/opaque-ready.patch
-	epatch ${FILESDIR}/patches-${PV}/ospf_refcount.patch
+	[ -d ${FILESDIR}/patches-${PV} ] && epatch ${FILESDIR}/patches-${PV}
 }
 
 src_compile() {
 	local ipv
 	local snmp
 	local pam
+	local tcpmd5
+	local ospfapi
 
 	use ipv6 && ipv="--enable-ipv6 --enable-ripng --enable-ospf6d --enable-rtadv" || ipv="--disable-ipv6 --disable-ripngd --disable-ospf6d"
 	use snmp && snmp="--enable-snmp"
 	use pam && pam="--with-libpam"
+
+	use tcpmd5 && tcpmd5="--enable-tcp-md5"
+	use tcpmd5 && epatch ${DISTDIR}/$MD5_PATCH
+
+	use ospfapi && ospfapi="--enable-opaque-lsa --enable-ospf-te --enable-ospfclient"
 
 	# update makefiles
 
@@ -65,16 +79,19 @@ src_compile() {
 
 	# configure the stuff
 
-	./configure --host=${HOST} --prefix=/usr --enable-tcp-zebra \
-	            --enable-nssa --enable-opaque-lsa --enable-ospf-te \
-		    --enable-ospf-secondary \
+	./configure --host=${HOST} \
+		    --prefix=${D}/usr \
+		    --enable-tcp-zebra \
+	            --enable-nssa \
 		    --enable-user=${QUAGGA_USER} \
 		    --enable-group=${QUAGGA_GROUP} \
 		    --enable-vty-group=${QUAGGA_VTYGROUP} \
 		    --with-cflags="${CFLAGS}" \
-	            --enable-vtysh ${ipv} ${snmp} ${pam} \
+	            --enable-vtysh ${ipv} ${snmp} ${pam} ${tcpmd5} ${ospfapi} \
 		    --sysconfdir=/etc/quagga \
-		    --includedir=${D}/usr/include/quagga \
+		    --enable-exampledir=${D}/etc/quagga/samples \
+		    --includedir=${D}/usr/include \
+		    --localstatedir=${QUAGGA_STATEDIR} \
 		    --libdir=${D}/usr/lib/quagga \
 			|| die
 	emake || die
@@ -84,8 +101,7 @@ src_install() {
 	einstall || die
 
 	dodir /etc/quagga || die
-	dodir /etc/quagga/sample || die
-	mv ${D}/etc/*sample* ${D}/etc/quagga/sample || die
+	dodir /etc/quagga/samples || die
 
 	keepdir /var/run/quagga || die
 

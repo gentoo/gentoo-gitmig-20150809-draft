@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.5.ebuild,v 1.1 2004/10/05 22:11:06 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.5.ebuild,v 1.2 2004/10/22 08:16:24 amir Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ MD5_PATCH="ht-20040525-0.96.5-bgp-md5.patch"
 
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
 HOMEPAGE="http://quagga.net/"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz
