@@ -1,5 +1,4 @@
+MD5 3694dd94ad9a26de4f7dd4bf60a5eaf6 ChangeLog 356
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 504d02ac8fffe4f54ef089d2e53c8430 proxyindex-1.2.ebuild 364
-MD5 ac21e63f6958c3d00a18e5cd44a358bc files/digest-sprout-0.5 58
-MD5 e9814e9de817884a88766ab0f9fc134c files/digest-annotations-0.4.3 64
+MD5 f572b76e1e70d12ba584af1a9a9ede8d proxyindex-1.2.ebuild 466
 MD5 a6636674079d17197dd532d29d750fb9 files/digest-proxyindex-1.2 61
