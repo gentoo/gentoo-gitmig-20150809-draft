@@ -1,3 +1,6 @@
 MD5 39430c7d3895dd6b7a9981e094a2e357 nxcomp-1.2.2.ebuild 760
-MD5 5d171f8da221ed0165d117c446944a6a ChangeLog 365
+MD5 4fd57b32ef537fc119d5274c6a5ab3f1 nxcomp-1.2.2-r1.ebuild 760
+MD5 5a29de99400781859ff7458ba23e1f12 ChangeLog 432
+MD5 8e92b9291198042d907534cb08b013f8 metadata.xml 361
+MD5 93171603dadf0e06996bd9fd833c5064 files/digest-nxcomp-1.2.2-r1 67
 MD5 b7ad142d655c6e9ae50d78bf227a1248 files/digest-nxcomp-1.2.2 67
