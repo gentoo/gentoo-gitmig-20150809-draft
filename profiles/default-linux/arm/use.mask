@@ -51,3 +51,6 @@ arts
 kde
 alsa
 nas
+
+hal
+howl
