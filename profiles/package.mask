@@ -385,10 +385,6 @@ net-www/galeon-cvs
 # Masked pending portage unfreeze.
 dev-python/pycrypto
 
-# <seemant@gentoo.org> (03 Sep 2002)
-# many patches and fixes applied.  please test.
-=net-misc/vnc-3.3.3-r3
-
 # <phoenix@gentoo.org> (02 Sep 2002)
 # This needs a lot of testing
 =net-dialup/minicom-2.00.0
