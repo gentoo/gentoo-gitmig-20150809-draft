@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r5.ebuild,v 1.10 2004/04/10 05:06:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r5.ebuild,v 1.11 2004/04/13 17:30:58 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha hppa amd64"
 IUSE="doc"
 
-DEPEND="virtual/os-headers
+DEPEND=">=virtual/os-headers-2.4.21
 	>=sys-apps/sed-4
 	doc? ( virtual/tetex )"
 RDEPEND="virtual/glibc"
