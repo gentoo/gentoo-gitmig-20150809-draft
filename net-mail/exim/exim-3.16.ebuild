@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Your Name <your email>
+# Author Jerry Alexandratos <jerry@gentoo.org>
 # /home/cvsroot/gentoo-x86/skel.ebuild,v 1.1 2000/10/09 18:00:52 achim Exp
 
 A=${P}.tar.gz
@@ -18,10 +18,9 @@ src_compile() {
 
 src_install () {
     cd ${S}/build-Linux-i386
-
     insopts -o root -g root -m 4755
     insinto /usr/sbin
-    doins exim exim
+    doins exim
 
     dosym /usr/sbin/exim /usr/sbin/sendmail
     dosym /usr/sbin/exim /usr/sbin/mailq
@@ -44,13 +43,14 @@ src_install () {
     done
 
     cd ${S}/src
+    insopts -o root -g root -m 644
     insinto /etc/exim
     donewins configure.default configure
 
     dodoc ${S}/doc/*
 
-    insinto /etc/rc.d/init.d
     insopts -m 755
+    insinto /etc/rc.d/init.d
     doins ${O}/files/exim
 }
 
