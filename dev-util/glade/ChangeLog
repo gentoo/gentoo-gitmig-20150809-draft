@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.15 2003/04/12 18:06:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.16 2003/04/22 13:37:19 liquidx Exp $
+
+*glade-2.0.0-r1 (22 Apr 2003)
+
+  22 Apr 2003; Alastair Tse <liquidx@gentoo.org> glade-2.0.0-r1.ebuild,
+  files/glade-2.0.0-scrollkeeper.patch:
+  added optional gnomedb support (#18724). cleaned up scrollkeeper files.
 
 *glade-2.0.0 (12 Apr 2003)
 
