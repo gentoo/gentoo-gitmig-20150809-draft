@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/rmerge2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rmerge2/ChangeLog,v 1.4 2003/02/12 02:26:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rmerge2/ChangeLog,v 1.5 2003/05/07 21:07:39 mholzer Exp $
+
+*rmerge2-0.9.9 (07 May 2003)
+
+  07 May 2003; Martin Holzer <mholzer@gentoo.org> rmerge2-0.9.9.ebuild,
+  files/rmerge2-0.9.9:
+  Version bumped. Submitted by Bardur Arantsson
+  <bardur-gta@odense.kollegienet.dk> in #11495.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
