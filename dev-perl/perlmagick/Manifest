@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 a4152927ae5f877507ec65b9ccd84159 perlmagick-6.1.3.4.ebuild 999
 MD5 0015e363dbbf96d1777d9780941b9791 perlmagick-6.1.3.2.ebuild 999
-MD5 eed8a11cba7a0002ec5ad92e43b35ff8 perlmagick-6.1.0.1.ebuild 1002
-MD5 9ac57feabcaf2f74f6fb436990a6bddf perlmagick-6.1.6.0.ebuild 1006
-MD5 887efad57297751df801f359ffd0904d ChangeLog 6178
-MD5 e4d5293954d2acdf08f3f2fe91be023f perlmagick-6.1.8.8.ebuild 1002
-MD5 7d52263cf9dc503cd7bfe263aabe81d7 perlmagick-6.0.8.1.ebuild 1026
+MD5 a4152927ae5f877507ec65b9ccd84159 perlmagick-6.1.3.4.ebuild 999
 MD5 bf3333220f992d8490185b177c6ee5eb perlmagick-6.0.7.1.ebuild 1019
-MD5 42fd34630ded62400ed31be1426e3b32 files/digest-perlmagick-6.1.8.8 73
-MD5 88435dc2f0a4064ae49313f41419695d files/digest-perlmagick-6.1.3.4 73
-MD5 2dd9ba895922b7d6bb513572bb851254 files/digest-perlmagick-6.1.3.2 73
-MD5 edbc2be86318f2676c55ce64e47ea2f6 files/perlpatch.diff 1598
-MD5 95b9bca1e2ef2b6fed9919fcc59b1462 files/digest-perlmagick-6.0.8.1 73
-MD5 4dbe04f2c27a20911e1080d591674997 files/digest-perlmagick-6.1.6.0 73
-MD5 a4a32e0f76d7fe0b204a2d408fc52158 files/digest-perlmagick-6.1.0.1 73
+MD5 7d52263cf9dc503cd7bfe263aabe81d7 perlmagick-6.0.8.1.ebuild 1026
+MD5 9ac57feabcaf2f74f6fb436990a6bddf perlmagick-6.1.6.0.ebuild 1006
+MD5 eed8a11cba7a0002ec5ad92e43b35ff8 perlmagick-6.1.0.1.ebuild 1002
+MD5 248d83181661ab9027a00a972e131e83 ChangeLog 6283
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 f8f04a8f9065f22913bcc067cd08a505 perlmagick-6.1.8.8.ebuild 1004
 MD5 220c2dac3f8b381c42fdb5e92085bdd8 files/digest-perlmagick-6.0.7.1 73
+MD5 95b9bca1e2ef2b6fed9919fcc59b1462 files/digest-perlmagick-6.0.8.1 73
+MD5 a4a32e0f76d7fe0b204a2d408fc52158 files/digest-perlmagick-6.1.0.1 73
+MD5 2dd9ba895922b7d6bb513572bb851254 files/digest-perlmagick-6.1.3.2 73
+MD5 88435dc2f0a4064ae49313f41419695d files/digest-perlmagick-6.1.3.4 73
+MD5 4dbe04f2c27a20911e1080d591674997 files/digest-perlmagick-6.1.6.0 73
+MD5 42fd34630ded62400ed31be1426e3b32 files/digest-perlmagick-6.1.8.8 73
+MD5 edbc2be86318f2676c55ce64e47ea2f6 files/perlpatch.diff 1598
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB7cNkmOfEJZHYOKcRAgHkAKDb09TivdXMckIdtaL9cQw7XhCx8QCfTPWk
-DSwNAFPcMvhq0/DC9fJHw+o=
-=IMvx
+iD8DBQFB7o53Z/iYVBmujdURAqarAKCLKgol8o29HBj0JyRNn/yrQrTuIwCfSiic
+wtUF/FQiAGuQcPH+0sa+axY=
+=EMeU
 -----END PGP SIGNATURE-----
