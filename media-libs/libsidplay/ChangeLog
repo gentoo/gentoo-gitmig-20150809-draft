@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsidplay
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.18 2004/09/03 20:16:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.19 2004/12/15 21:59:14 kloeri Exp $
+
+  15 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  libsidplay-2.1.1.ebuild:
+  Stable on alpha.
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libsidplay-2.1.1.ebuild:
