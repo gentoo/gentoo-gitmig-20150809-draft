@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/sonar-1.2.2-r1.ebuild,v 1.3 2004/07/01 20:21:08 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/sonar-1.2.2-r1.ebuild,v 1.4 2004/07/08 22:57:00 eldad Exp $
 
 DESCRIPTION="network reconnaissance utility"
 HOMEPAGE="http://autosec.sourceforge.net/"
@@ -10,8 +10,9 @@ RESTRICT="nomirror"
 IUSE="doc"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 S=${WORKDIR}/${PF}
+
 DEPEND="virtual/libc
 	>=dev-libs/popt-1.7-r1
 	app-text/tetex
