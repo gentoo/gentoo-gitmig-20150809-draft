@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.2.ebuild,v 1.1 2002/12/03 13:30:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.2.ebuild,v 1.2 2002/12/05 11:01:17 danarmak Exp $
 
-DESCRIPTION="Daemon that allows non-privileged apps to have root access without compromising security"
+DESCRIPTION="App that allows non-privileged apps to write utmp (login) info, which needs root access"
 HOMEPAGE="www.redhat.com" # no homepage really, but redhat are the authors
 SRC_URI="mirror://gentoo/$P.tar.gz"
 LICENSE="GPL-2"
