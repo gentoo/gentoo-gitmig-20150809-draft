@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.6 2002/09/14 15:51:26 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.7 2002/09/19 21:15:27 azarah Exp $
 
 inherit flag-o-matic gcc
 # Compile problems with these ...
@@ -139,12 +139,35 @@ src_unpack() {
 
 	# Various patches from all over
 	einfo "Applying various patches (bugfixes/updates)..."
-	for x in ${WORKDIR}/*.patch.bz2 ${FILESDIR}/${PV}-patches/*.patch.bz2
+	for x in ${WORKDIR}/*.patch.bz2
 	do
 		if [ -f ${x} ]
 		then
 			einfo "  ${x##*/}..."
-			bzip2 -dc ${x} | patch -p2 > /dev/null || die
+			bzip2 -dc ${x} | patch -p2 > /dev/null || die "Failed Patch: ${x##*/}!"
+		fi
+	done
+	for x in ${FILESDIR}/${PV}-patches/*.patch.bz2
+	do
+		# New ARCH dependant patch naming scheme...
+		# 
+		# Ranges:
+		#
+		#   1-19  - generic stuff
+		#   20-29 - x86 stuff
+		#   30-39 - ppc stuff
+		#   40-49 - sparc stuff
+		#   50-59 - sparc64 stuff
+		#   60-69 - alpha stuff
+		#   90-?? - own stuff
+		#
+		# NOTE: can mabye thing about merging sparc and sparc64
+		#
+		if [ -f ${x} ] && \
+		   [ "${x/_all_}" != "${x}" -o "`eval echo \$\{x/_${ARCH}_\}`" != "${x}" ]
+		then
+			einfo "  ${x##*/}..."
+			bzip2 -dc ${x} | patch -p2 > /dev/null || die "Failed Patch: ${x##*/}!"
 		fi
 	done
 
