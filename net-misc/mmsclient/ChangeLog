@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/mmsclient
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mmsclient/ChangeLog,v 1.5 2003/02/12 08:27:54 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mmsclient/ChangeLog,v 1.6 2004/04/26 06:51:28 dragonheart Exp $
+
+*mmsclient-0.0.3-r1 (26 Apr 2004)
+
+  26 Apr 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  mmsclient-0.0.3-r1.ebuild, mmsclient-0.0.3.ebuild,
+  files/mmsclient-0.0.3-r1.patch:
+  Big patch courtesy of siefkenj@onid.oregonstate.edu in bug #48188
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
