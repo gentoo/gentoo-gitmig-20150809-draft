@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/passook-1.0.0.ebuild,v 1.13 2004/03/07 18:36:09 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/passook-1.0.0.ebuild,v 1.14 2004/03/29 23:16:31 mr_bones_ Exp $
+
+inherit eutils
 
 S=${WORKDIR}
 DESCRIPTION="Password generator capable of generating pronounceable and/or secure passwords."

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/petrovich
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/ChangeLog,v 1.6 2003/02/12 02:25:55 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/ChangeLog,v 1.7 2004/03/29 23:17:12 mr_bones_ Exp $
+
+  29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> petrovich-1.0.0.ebuild:
+  inherit eutils for epatch
 
 *petrovich-1.0.0 (1 Feb 2002)
 

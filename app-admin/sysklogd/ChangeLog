@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.26 2004/02/08 00:42:56 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.27 2004/03/29 23:19:31 mr_bones_ Exp $
+
+  29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  sysklogd-1.4.1-r10.ebuild, sysklogd-1.4.1-r7.ebuild,
+  sysklogd-1.4.1-r8.ebuild, sysklogd-1.4.1-r9.ebuild:
+  inherit eutils for epatch
 
   08 Feb 2004; <plasmaroo@gentoo.org> sysklogd-1.4.1-r10.ebuild,
   files/sysklogd-1.4.1-2.6.headers.patch:

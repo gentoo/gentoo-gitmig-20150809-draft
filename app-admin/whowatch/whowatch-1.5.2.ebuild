@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.5.2.ebuild,v 1.16 2004/02/02 03:30:12 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.5.2.ebuild,v 1.17 2004/03/29 23:21:20 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="interactive who-like program that displays information about users currently logged on in real time."
 SRC_URI="http://wizard.ae.krakow.pl/~mike/download/${P}.tar.gz"
