@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/run-mailcap
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.5 2003/06/17 13:58:01 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.6 2003/09/15 21:59:26 dholm Exp $
+
+  15 Sep 2003; David Holm <dholm@gentoo.org> run-mailcap-3.23_p1.ebuild:
+  Apparently "all ARCHes" does not include ppc.
 
   17 Jun 2003; Tom Payne <twp@gentoo.org> run-mailcap-3.23_p1.ebuild :
   Added all ARCHes.
