@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.15 2004/06/24 22:25:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.16 2004/08/17 18:09:54 agriffis Exp $
+
+*muttprint-0.72a (17 Aug 2004)
+
+  17 Aug 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/muttprint-0.72a-platex.patch, -muttprint-0.62b.ebuild,
+  -muttprint-0.63a.ebuild, -muttprint-0.64.ebuild, muttprint-0.71.ebuild,
+  +muttprint-0.72a.ebuild:
+  Add psutils to RDEPEND #59477. Mark 0.71 stable and trim old versions. Add
+  0.72 with improved ptex support
 
   19 Jun 2004; <malc@gentoo.org> muttprint-0.71.ebuild:
   add ~amd64 - fixes bug #54410
