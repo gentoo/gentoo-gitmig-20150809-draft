@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.3.ebuild,v 1.6 2004/07/02 04:42:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.3.ebuild,v 1.7 2004/08/20 04:23:56 tgall Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/gmp/${P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm hppa ~amd64 ia64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm hppa ~amd64 ia64 s390 ppc64"
 IUSE="debug"
 
 DEPEND="sys-apps/gawk
@@ -21,6 +21,18 @@ DEPEND="sys-apps/gawk
 	virtual/libc"
 
 RDEPEND="virtual/libc"
+
+src_unpack () {
+	unpack ${A}
+	cd ${S}
+
+#   This patch will actually be somewhat short lived as it's really
+#   somewhat of a hack. The toolchain folks (alanm) have a set of patches
+#   to remove the use of the '.' form in ppc64 assembler
+	use ppc64 && epatch ${FILESDIR}/ppc64-gmp-acinclude.patch
+
+	autoreconf
+}
 
 src_compile() {
 	filter-flags -ffast-math
