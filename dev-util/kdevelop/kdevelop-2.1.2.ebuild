@@ -1,9 +1,8 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.3 2002/07/11 06:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.4 2002/07/20 04:59:03 drobbins Exp $
 
 inherit kde-base
-
 need-kde 3
 
 S=${WORKDIR}/${P}_for_KDE_3.0
@@ -33,9 +32,7 @@ newdepend ">=kde-base/kdebase-3
 	>=app-doc/qt-docs-${QTVER}"
 
 src_unpack() {
-
     base_src_unpack
-    
     cd ${S}/kdevelop
     for x in *.desktop; do
 	mv $x $x.2
