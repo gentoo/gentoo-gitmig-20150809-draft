@@ -1,7 +1,17 @@
-MD5 6608ccd61921c1bfa94bf12f2cd597c1 ChangeLog 1269
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7677edc9fdf55fd66b0511cccae7239b ChangeLog 1352
 MD5 096184842335c18127eba29e54ba2fb9 selectwm-0.3-r1.ebuild 660
-MD5 3202f88426e0def9a77570c824bfeb62 selectwm-0.4.1.ebuild 668
 MD5 b87e6e71edd52e360939dc9852435106 selectwm-0.4.ebuild 687
-MD5 6315bbb263ca7f8c9ae1edd8abbb8c22 files/digest-selectwm-0.3-r1 64
+MD5 9844c33d64d2b35823784352aa124bd8 selectwm-0.4.1.ebuild 666
 MD5 b193344baf56453336881050b77a025e files/digest-selectwm-0.4 65
 MD5 23df09d920f180bf1663aa02426bd19c files/digest-selectwm-0.4.1 67
+MD5 6315bbb263ca7f8c9ae1edd8abbb8c22 files/digest-selectwm-0.3-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPtbI7fK2cqeyXkRAi1YAJ9ud1kWemHqTVlIC17piflz2NM7NQCaA4ID
+uw/hI8kDBkgCybWMz62z97c=
+=O2xE
+-----END PGP SIGNATURE-----
