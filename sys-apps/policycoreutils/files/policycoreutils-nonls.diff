@@ -1,0 +1,150 @@
+Index: load_policy/Makefile
+===================================================================
+RCS file: /cvsroot/selinux/nsa/selinux-usr/policycoreutils/load_policy/Makefile,v
+retrieving revision 1.6
+diff -u -r1.6 Makefile
+--- load_policy/Makefile	13 Aug 2004 17:19:09 -0000	1.6
++++ load_policy/Makefile	20 Dec 2004 03:19:51 -0000
+@@ -5,7 +5,7 @@
+ LOCALEDIR ?= /usr/share/locale
+ 
+ CFLAGS = -Wall
+-override CFLAGS += -DLOCALEDIR="\"$(LOCALEDIR)\"" -DPACKAGE="\"policycoreutils\""
++override CFLAGS += -DUSE_NLS -DLOCALEDIR="\"$(LOCALEDIR)\"" -DPACKAGE="\"policycoreutils\""
+ LDLIBS += -lsepol -lselinux
+ 
+ TARGETS=$(patsubst %.c,%,$(wildcard *.c))
+Index: load_policy/load_policy.c
+===================================================================
+RCS file: /cvsroot/selinux/nsa/selinux-usr/policycoreutils/load_policy/load_policy.c,v
+retrieving revision 1.8
+diff -u -r1.8 load_policy.c
+--- load_policy/load_policy.c	26 Aug 2004 17:15:39 -0000	1.8
++++ load_policy/load_policy.c	20 Dec 2004 03:19:52 -0000
+@@ -10,9 +10,13 @@
+ #include <getopt.h>
+ #include <selinux/selinux.h>
+ #include <sepol/sepol.h>
++#ifdef USE_NLS
+ #include <locale.h>			    /* for setlocale() */
+ #include <libintl.h>			    /* for gettext() */
+ #define _(msgid) gettext (msgid)
++#else
++#define _(msgid) (msgid)
++#endif
+ #ifndef PACKAGE
+ #define PACKAGE "policycoreutils"   /* the name of this package lang translation */
+ #endif
+@@ -30,9 +34,11 @@
+ 	void *map;
+ 	char *polpath, *boolpath = NULL, **names;
+ 
++#ifdef USE_NLS
+ 	setlocale (LC_ALL, "");
+ 	bindtextdomain (PACKAGE, LOCALEDIR);
+ 	textdomain (PACKAGE);
++#endif
+ 
+ 	while ((opt = getopt(argc, argv, "qb")) > 0) {
+ 		switch (opt) {
+Index: newrole/Makefile
+===================================================================
+RCS file: /cvsroot/selinux/nsa/selinux-usr/policycoreutils/newrole/Makefile,v
+retrieving revision 1.4
+diff -u -r1.4 Makefile
+--- newrole/Makefile	26 Nov 2003 18:01:24 -0000	1.4
++++ newrole/Makefile	20 Dec 2004 03:19:52 -0000
+@@ -6,7 +6,7 @@
+ LOCALEDIR = /usr/share/locale
+ 
+ CFLAGS = -Wall
+-override CFLAGS += -DUSE_PAM -DLOCALEDIR="\"$(LOCALEDIR)\"" -DPACKAGE="\"policycoreutils\""
++override CFLAGS += -DUSE_NLS -DUSE_PAM -DLOCALEDIR="\"$(LOCALEDIR)\"" -DPACKAGE="\"policycoreutils\""
+ LDLIBS += -lselinux -ldl -lpam -lpam_misc
+ 
+ TARGETS=$(patsubst %.c,%,$(wildcard *.c))
+Index: newrole/newrole.c
+===================================================================
+RCS file: /cvsroot/selinux/nsa/selinux-usr/policycoreutils/newrole/newrole.c,v
+retrieving revision 1.4
+diff -u -r1.4 newrole.c
+--- newrole/newrole.c	12 Aug 2004 13:58:10 -0000	1.4
++++ newrole/newrole.c	20 Dec 2004 03:19:52 -0000
+@@ -64,9 +64,13 @@
+ #include <selinux/get_default_type.h>
+ #include <selinux/get_context_list.h> /* for SELINUX_DEFAULTUSER */
+ #include <signal.h>
++#ifdef USE_NLS
+ #include <locale.h>			    /* for setlocale() */
+ #include <libintl.h>			    /* for gettext() */
+ #define _(msgid) gettext (msgid)
++#else
++#define _(msgid) (msgid)
++#endif
+ #ifndef PACKAGE
+ #define PACKAGE "policycoreutils"   /* the name of this package lang translation */
+ #endif
+@@ -265,9 +269,11 @@
+   /* Terminate on SIGHUP. */
+   signal(SIGHUP, SIG_DFL);
+ 
++#ifdef USE_NLS
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);
+   textdomain (PACKAGE);
++#endif
+ 
+   /*
+    *
+Index: run_init/Makefile
+===================================================================
+RCS file: /cvsroot/selinux/nsa/selinux-usr/policycoreutils/run_init/Makefile,v
+retrieving revision 1.4
+diff -u -r1.4 Makefile
+--- run_init/Makefile	26 Nov 2003 18:01:25 -0000	1.4
++++ run_init/Makefile	20 Dec 2004 03:19:52 -0000
+@@ -7,7 +7,7 @@
+ LOCALEDIR ?= /usr/share/locale
+ 
+ CFLAGS = -Wall
+-override CFLAGS += -DUSE_PAM -DLOCALEDIR="\"$(LOCALEDIR)\"" -DPACKAGE="\"policycoreutils\""
++override CFLAGS += -DUSE_NLS -DUSE_PAM -DLOCALEDIR="\"$(LOCALEDIR)\"" -DPACKAGE="\"policycoreutils\""
+ LDLIBS += -lselinux -ldl -lpam -lpam_misc
+ 
+ TARGETS=$(patsubst %.c,%,$(wildcard *.c))
+Index: run_init/run_init.c
+===================================================================
+RCS file: /cvsroot/selinux/nsa/selinux-usr/policycoreutils/run_init/run_init.c,v
+retrieving revision 1.4
+diff -u -r1.4 run_init.c
+--- run_init/run_init.c	17 Jun 2004 16:43:42 -0000	1.4
++++ run_init/run_init.c	20 Dec 2004 03:19:53 -0000
+@@ -49,10 +49,14 @@
+ #include <selinux/context.h>              /* for context-mangling functions */
+ #include <fcntl.h>
+ #include <ctype.h>
++#include <limits.h>
++#ifdef USE_NLS
+ #include <libintl.h>
+ #include <locale.h>
+-#include <limits.h>
+ #define _(msgid) gettext (msgid)
++#else
++#define _(msgid) (msgid)
++#endif
+ #ifndef PACKAGE
+ #define PACKAGE "policycoreutils"   /* the name of this package lang translation */
+ #endif
+@@ -314,9 +318,12 @@
+   extern char *optarg;               /* used by getopt() for arg strings */
+   extern int opterr;                 /* controls getopt() error messages */
+   security_context_t new_context;	     /* context for the init script context  */
++  
++#ifdef USE_NLS
+   setlocale(LC_ALL, "");
+   bindtextdomain(PACKAGE, LOCALEDIR);
+   textdomain(PACKAGE);
++#endif
+ 
+   /* Verify that we are running on a flask-enabled kernel. */
+   if( !is_selinux_enabled() ) {

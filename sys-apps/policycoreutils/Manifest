@@ -1,7 +1,18 @@
-MD5 0010091d172d2328cc40e7ffea493b77 ChangeLog 5794
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 64ec0a59aff25cac6557c7ed20439c82 ChangeLog 6011
 MD5 2eeb1df30e87ba2861eddbdc34a48bb8 metadata.xml 836
+MD5 b4e7ffca2885906d5ba0643ea4a9f1b7 policycoreutils-1.18-r1.ebuild 3388
 MD5 6ace8ffd9877d971422974d8a7a64252 policycoreutils-1.16.ebuild 1772
-MD5 538e0850edbda5a8eb2bf25c3d005625 policycoreutils-1.18.ebuild 1972
 MD5 b3fb897ca820d6d94105ecf7103cab70 files/digest-policycoreutils-1.16 144
 MD5 308dfedc40a02c48b8cc5118feb8f9ef files/policycoreutils-1.16-genhomedircon-compat.diff 1744
-MD5 2dbe913419502995a710560072ca8517 files/digest-policycoreutils-1.18 145
+MD5 b6b925cfe77dec139f161917b9837e63 files/policycoreutils-nonls.diff 5207
+MD5 62eac355bd774e69b2ced7cdaf4d9c4d files/digest-policycoreutils-1.18-r1 145
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2e0DMTuwkQ6eEKsRAqZqAJ4xOXm9mHoSwZWzzVUhbKi5MPzUNQCfW1ez
+JeRST6K6h30rIIV/mp6c9Ic=
+=sKlK
+-----END PGP SIGNATURE-----
