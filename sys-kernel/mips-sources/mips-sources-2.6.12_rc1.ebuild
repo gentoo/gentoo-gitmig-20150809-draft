@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.12_rc1.ebuild,v 1.1 2005/03/25 02:30:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.12_rc1.ebuild,v 1.2 2005/03/26 07:18:16 kumba Exp $
 
 
 # INCLUDED:
@@ -243,7 +243,7 @@ do_ip30_support() {
 	echo -e ""
 	einfo ">>> Patching kernel for SGI Octane (IP30) support ..."
 	epatch ${MIPS_PATCHES}/misc-2.6.12-rc1-ip30-octane-support.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.11-cgs-ioc3-eth-dow.patch
+#//	epatch ${MIPS_PATCHES}/misc-2.6.11-cgs-ioc3-eth-dow.patch
 	mv ${WORKDIR}/linux-${OKV}-${CVSDATE} ${WORKDIR}/linux-${OKV}-${CVSDATE}.ip30
 	S="${S}.ip30"
 }
