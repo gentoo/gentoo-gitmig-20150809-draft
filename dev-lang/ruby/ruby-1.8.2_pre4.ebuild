@@ -1,22 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.21 2004/11/12 16:53:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre4.ebuild,v 1.1 2004/12/22 10:36:55 usata Exp $
 
-ONIGURUMA="onigd2_3_2"
-MY_P=${P/_pre/-preview}
+ONIGURUMA="onigd2_4_0"
 
 inherit flag-o-matic alternatives eutils gnuconfig
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
-SRC_URI="mirror://ruby/${PV%.*}/${MY_P}.tar.gz"
-SRC_URI="${SRC_URI}
-	cjk? ( http://www.geocities.jp/kosako1/oniguruma/archive/${ONIGURUMA}.tar.gz )"
+SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
+	cjk? ( http://www.geocities.jp/kosako3/oniguruma/archive/${ONIGURUMA}.tar.gz )"
 
 LICENSE="Ruby"
 SLOT="1.8"
 # please keep sorted
-KEYWORDS="alpha amd64 arm hppa -ia64 mips ppc ppc-macos ~s390 sparc x86 ppc64"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
 IUSE="socks5 tcltk cjk doc threads"
 
 RDEPEND="virtual/libc
@@ -46,10 +44,8 @@ src_unpack() {
 		popd
 	fi
 
-	# Enable build on alpha EV67
-	if use alpha ; then
-		gnuconfig_update || die "gnuconfig_update failed"
-	fi
+	# Enable build on alpha EV67 (but run gnuconfig_update everywhere)
+	gnuconfig_update || die "gnuconfig_update failed"
 
 	cd ${S}
 	epatch ${FILESDIR}/ruby-rdoc-gentoo.diff
@@ -70,6 +66,11 @@ src_compile() {
 	if [ -n "${RUBY_GC_MALLOC_LIMIT}" ] ; then
 		CFLAGS="${CFLAGS} -DGC_MALLOC_LIMIT=${RUBY_GC_MALLOC_LIMIT}"
 		export CFLAGS
+	fi
+
+	# On ia64 we need to build without optimization #48824
+	if use ia64; then
+		replace-flags '-O*' -O0
 	fi
 
 	econf --program-suffix=${SLOT/./} --enable-shared \
