@@ -5,8 +5,8 @@ MD5 642ea25c3926d67609ba51eb5730114f kdelibs-3.2.3-r5.ebuild 2940
 MD5 ea27e399daaad758dcac0697981f3584 kdelibs-3.4.0_beta1.ebuild 2813
 MD5 e9880699449565ce112cfb096a2b73bf kdelibs-3.3.2-r3.ebuild 3291
 MD5 2c0cb12da53349c06a23f2485a3f2fe9 kdelibs-3.3.1-r2.ebuild 2986
-MD5 c93a8f68714dcdba89732e2f5c51f12d ChangeLog 34583
-MD5 925e04431501fe246aeec1d202a4ef48 kdelibs-3.4.0.ebuild 2836
+MD5 ad169e2e9204a95dd5508f4c0e862e26 ChangeLog 34723
+MD5 ac2b987ade1a6fc4d3c688f4350bbb82 kdelibs-3.4.0.ebuild 2943
 MD5 a269dba5d66751563def52ffa62c65f5 kdelibs-3.3.2-r4.ebuild 3348
 MD5 79b789f02dced6acb0daf91de04bd55c kdelibs-3.3.2-r2.ebuild 3153
 MD5 fcbbc60f31a8a5ec853b401b5a058e9d kdelibs-3.4.0_beta2.ebuild 2701
@@ -20,6 +20,7 @@ MD5 296419fbb169c4d87ace85d1e1645652 files/kdelibs-3.4.0-form-freeze.patch 660
 MD5 119cc73926dceafff9107b5f916277ee files/post-3.2.3-kdelibs-htmlframes.patch 15435
 MD5 7e082af5fd71b9b01d01a86f31646499 files/post-3.3.2-kdelibs-htmlframes2.patch 989
 MD5 0046c691fa833b2ff8d7eac15312a68b files/post-3.2.3-kdelibs-dcopserver.patch 4751
+MD5 998641088387e630d4ab9e9013caa539 files/kdelibs-3.4.0-imagemap.patch 546
 MD5 1c47f3fafa13fcf69ce4cb1c474f5643 files/digest-kdelibs-3.4.0_beta1 69
 MD5 a9840789442b11d5f1d4418b706566a7 files/post-3.3.1-kdelibs-kio.diff 1324
 MD5 57b3bdaa9934d84f320c1aa40a56afe4 files/digest-kdelibs-3.2.3-r5 68

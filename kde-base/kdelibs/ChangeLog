@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.214 2005/03/14 21:11:40 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.215 2005/03/15 17:44:45 greg_g Exp $
+
+  15 Mar 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdelibs-3.4.0-imagemap.patch, kdelibs-3.4.0.ebuild:
+  Add patch for bug #82017.
 
   14 Mar 2005; Gregorio Guidi <greg_g@gentoo.org>
   +files/kdelibs-3.4.0-form-freeze.patch, kdelibs-3.4.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0.ebuild,v 1.3 2005/03/14 21:11:40 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0.ebuild,v 1.4 2005/03/15 17:44:45 greg_g Exp $
 
 inherit kde eutils
 set-kdedir 3.4
@@ -50,8 +50,11 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	kde_src_unpack
 
-	# Fix freezing in web forms (kde bug 100963). Applied in CVS.
+	# Fix freezing in web forms (kde bug 100963). Applied for 3.4.1.
 	epatch "${FILESDIR}/${P}-form-freeze.patch"
+
+	# Fix forms with images (kde bug 59701). Applied for 3.4.1.
+	epatch "${FILESDIR}/${P}-imagemap.patch"
 }
 
 src_compile() {

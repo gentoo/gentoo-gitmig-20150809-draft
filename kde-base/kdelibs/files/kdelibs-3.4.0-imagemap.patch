@@ -1,0 +1,15 @@
+diff -Nur kdelibs-3.4.0.orig/khtml/html/html_formimpl.cpp kdelibs-3.4.0/khtml/html/html_formimpl.cpp
+--- kdelibs-3.4.0.orig/khtml/html/html_formimpl.cpp	2005-02-23 12:57:04.000000000 +0100
++++ kdelibs-3.4.0/khtml/html/html_formimpl.cpp	2005-03-15 10:20:50.000000000 +0100
+@@ -1604,6 +1604,11 @@
+ 		m_render->absolutePosition(offsetX,offsetY);
+ 		xPos = me->clientX()-offsetX;
+ 		yPos = me->clientY()-offsetY;
++		KHTMLView* v = getDocument()->view(); 
++		if ( v ) {
++		    xPos += v->contentsX();
++		    yPos += v->contentsY();
++		}
+ 	    }
+ 	}
+ 
