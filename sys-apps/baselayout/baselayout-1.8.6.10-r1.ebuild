@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.10-r1.ebuild,v 1.4 2003/09/23 15:28:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.10-r1.ebuild,v 1.5 2003/10/05 20:58:19 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
 
 IUSE="bootstrap build static"
 
-SV="1.4.3.10p1"
-SVREV=""
+SV="1.4.3.10"
+SVREV="p1"
 # SysvInit version
 SVIV="2.84"
 
@@ -16,8 +16,8 @@ S="${WORKDIR}/rc-scripts-${SV}"
 S2="${WORKDIR}/sysvinit-${SVIV}/src"
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts and sysvinit)"
 SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.gz
-	ftp://sunsite.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz"
-#	http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
+	ftp://sunsite.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz
+	mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
@@ -43,10 +43,7 @@ fi
 
 src_unpack() {
 
-	unpack sysvinit-${SVIV}.tar.gz
-
-	echo ">>> Unpacking rc-scripts-${SV}${SVREV}.tar.bz2"
-	tar -jxf ${FILESDIR}/rc-scripts-${SV}${SVREV}.tar.bz2 || die
+	unpack ${A}
 
 	use static && export LDFLAGS="-static"
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.9.ebuild,v 1.7 2003/09/08 02:25:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.9.ebuild,v 1.8 2003/10/05 20:58:19 azarah Exp $
 
 IUSE="bootstrap build"
 
 SV="1.4.2.9"
-SVREV=""
+SVREV=
 # SysvInit version
 SVIV="2.84"
 
@@ -13,8 +13,8 @@ S="${WORKDIR}/rc-scripts-${SV}"
 S2="${WORKDIR}/sysvinit-${SVIV}/src"
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts and sysvinit)"
 SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.gz
-	ftp://sunsite.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz"
-#	http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
+	ftp://sunsite.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz
+	mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
@@ -57,10 +57,7 @@ pkg_setup() {
 
 src_unpack() {
 
-	unpack sysvinit-${SVIV}.tar.gz
-
-	echo ">>> Unpacking rc-scripts-${SV}${SVREV}.tar.bz2"
-	tar -jxf ${FILESDIR}/rc-scripts-${SV}${SVREV}.tar.bz2 || die
+	unpack ${A}
 
 	# Fix CFLAGS for sysvinit stuff
 	cd ${S2}
