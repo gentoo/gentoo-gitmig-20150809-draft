@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/mosfet-liquid-widgets
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mosfet-liquid-widgets/ChangeLog,v 1.4 2002/11/01 19:51:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mosfet-liquid-widgets/ChangeLog,v 1.5 2003/01/24 16:12:46 verwilst Exp $
+
+*mosfet-liquid-widgets-0.9.6_pre2 (24 Jan 2002)
+
+  24 Jan 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog  :
+
+  New version
 
 *mosfet-liquid-widgets-0.9.6_pre1 (01 Nov 2002)
 
