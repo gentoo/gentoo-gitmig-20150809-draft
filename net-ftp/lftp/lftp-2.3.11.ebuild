@@ -32,7 +32,7 @@ src_compile() {
     export CXXFLAGS="-fno-exceptions -fno-rtti ${CXXFLAGS}"
 
     try ./configure --prefix=/usr --sysconfdir=/etc/lftp --with-modules --mandir=/usr/share/man $myconf
-    try pmake
+    try make
 }
 
 src_install() {
