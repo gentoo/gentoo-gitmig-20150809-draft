@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug-base/ChangeLog,v 1.1 2004/03/29 23:58:36 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug-base/ChangeLog,v 1.2 2004/03/30 00:12:14 gregkh Exp $
+
+  29 Mar 2004; Greg Kroah-Hartman <gregkh@gentoo.org>
+  hotplug-base-20040329.ebuild:
+  got rid of the post messages ad as they do not make any sense.
 
 *hotplug-base-20040329 (29 Mar 2004)
 

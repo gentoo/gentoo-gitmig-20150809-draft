@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug-base/hotplug-base-20040329.ebuild,v 1.1 2004/03/29 23:58:36 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug-base/hotplug-base-20040329.ebuild,v 1.2 2004/03/30 00:12:14 gregkh Exp $
 
 inherit eutils
 
@@ -23,10 +23,5 @@ src_install() {
 	into /
 	dosbin sbin/hotplug
 	keepdir /etc/hotplug.d/
-}
-
-pkg_postinst() {
-	ewarn "WARNING: The fxload program was spliced off this package"
-	ewarn "WARNING: emerge fxload if you need it"
 }
 
