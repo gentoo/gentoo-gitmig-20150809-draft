@@ -1,8 +1,17 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/ChangeLog,v 1.4 2002/06/04 10:30:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/ChangeLog,v 1.5 2002/06/04 21:09:05 seemant Exp $
 
-*SDL-sdlpl-1.18 (4 Jun 2002)
+*SDL-sdlpl-1.18.3 (4 Jun 2002)
+
+  4 Jun 2002; Seemant Kulleen <seemant@gentoo.org> SDL-sdlpl-1.18.3.ebuild
+  files/digest-SDL-sdlpl-1.18.3 :
+
+  Version bump which is patched to work against the SDL headers.  Mesa is
+  still an undecided issue at this point.  Thanks to David J. Goehrig of
+  sdl-perl.org for putting out a patch so quick.
+
+*SDL-sdlpl-1.18.2 (4 Jun 2002)
 
   4 Jun 2002; Seemant Kulleen <seemant@gentoo.org> SDL-sdlpl-1.18.2.ebuild
   files/digest-SDL-sdlpl-1.18.2 :
