@@ -1,11 +1,11 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.62 2003/08/05 11:16:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.63 2003/08/06 23:32:20 lisa Exp $
 
   04 Aug 2003; Aron Griffis <agriffis@gentoo.org> distcc-2.8-r2.ebuild:
   Mark stable on alpha.  Fix formatting and some errors in ChangeLog
 
-  02 Aug 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  02 Aug 2003: Lisa Marie Seelye <lisa@gentoo.org> ChangeLog :
   Added a metadata.xml file. Initially under the `cluster' herd.  Also
   normalized this file (distcc-2.8) to have most recent dates at the top of
   the file
@@ -19,33 +19,36 @@
 
 *distcc-2.8 (09 Jul 2003)
 
+  06 Aug 2003; Lisa Marie Seelye <lisa@gentoo.org> distcc-2.8-r2.ebuild:
+  Marked 2.8-r2 stable on sparc thanks todd
+
   05 Aug 2003; Guy Martin <gmsoft@gentoo.org> distcc-2.8-r2.ebuild :
   Marked stable on hppa.
 
-  27 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  27 Jul 2003; Lisa Marie Seelye <lisa@gentoo.org> :
   Bumped distcc-2.8-r2 to x86
 
-  13 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  13 Jul 2003; Lisa Marie Seelye <lisa@gentoo.org> :
   (files/2.8/conf) Added a --port to DISTCC_OPTS (/etc/conf.d/distccd) to
   change the running port.
   (distcc-2.8-r2.ebuild) Added a note to the backup distcc website
 
-  12 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  12 Jul 2003; Lisa Marie Seelye <lisa@gentoo.org> :
   Oops. :)  `gtk' is preferred over `gtk2'.  Thanks Spider for the
   heads up!
 
-  10 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  10 Jul 2003; Lisa Marie Seelye <lisa@gentoo.org> :
   New version released and committed (Still with the patch to fix tmpdir)
 
 *distcc-2.7.1 (01 Jul 2003)
 
-  21 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  21 Jul 2003; Lisa Marie Seelye <lisa@gentoo.org> :
   Updated distcc-config to reflect bug #24972
 
-  17 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  17 Jul 2003; Lisa Marie Seelye <lisa@gentoo.org> :
   Changed gnome stuff to gtk. How on earth did this get missed??
 
-  14 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  14 Jul 2003; Lisa Marie Seelye <lisa@gentoo.org> :
   Updated the "How-to" website URI in the .ebuild
 
   10 Jul 2003; Lisa Marie Seelye <lisa@gentoo.org> :
@@ -54,7 +57,7 @@
   04 Jul 2003; Joshua Kinard <kumba@gentoo.org> :
   Fixed b0rked digests
 
-  01 Jul 2003; Karl Trygve Kalleberg <karltk@gentoo.org>
+  01 Jul 2003; Karl Trygve Kalleberg <karltk@gentoo.org> :
   distcc-2.7.ebuild, files/2.7.1/distcc-config, files/2.7.1/conf,
   files/2.7.1/init, files/2.7.1/001_fix_tmpdir.patch.gz:
   New upstream version. Ebuild submitted by Lisa Marie <lisa@thedoh.com>.
