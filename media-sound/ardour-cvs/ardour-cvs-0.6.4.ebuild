@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.4.ebuild,v 1.4 2003/05/13 10:20:46 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.4.ebuild,v 1.5 2003/05/14 09:03:23 jje Exp $
 
 IUSE="nls"
 
@@ -82,7 +82,7 @@ src_install() {
 
 	dodoc ${S}/AUTHORS ${S}/INSTALL ${S}/README ${S}/README.it \
 		${S}/NEWS ${S}/COPYING ${S}/ChangeLog ${S}/sample_ardour.rc \
-		${S}/ardour_faq.txt
+		${S}/FAQ
 	doman ${S}/ardour.1 
 }
 
