@@ -1,6 +1,15 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.208 2004/11/16 16:07:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.209 2004/11/18 14:04:33 agriffis Exp $
+
+*mozilla-1.7.3-r3 (18 Nov 2004)
+
+  18 Nov 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/mozilla-1.7.3-4ft2.patch, +mozilla-1.7.3-r3.ebuild:
+  Update to enigmail 0.89.0 #64547. Add patch for freetype-2.1.8+ binary
+  compatibility #59849. Switch from svg-libart to svg-cairo because the libart
+  version we were using depends on the bad freetype APIs. Additionally we're
+  using cairo in firefox so it's good to be in sync
 
   16 Nov 2004; Aron Griffis <agriffis@gentoo.org> mozilla-1.7.3-r2.ebuild:
   Remove IUSE=gtk2 because we always depend on gtk2 now
