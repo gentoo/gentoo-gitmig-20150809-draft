@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r5.ebuild,v 1.7 2004/09/01 22:35:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r5.ebuild,v 1.8 2004/09/06 19:07:39 ciaranm Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -238,7 +238,7 @@ src_install() {
 
 	# shameless plug for mjn3 who gives us so much...
 	# please give back if you can. -solar
-	f=DEDICATION.mjn3 ; [ -e "$f" ] && ( cat $f ; sleep 2s )
+	f=DEDICATION.mjn3 ; [ -e "$f" ] && ( cat $f ; epause 2 )
 
 	if ! use build
 	then

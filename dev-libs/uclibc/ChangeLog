@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/uclibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.35 2004/08/25 22:47:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.36 2004/09/06 19:07:39 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> uclibc-0.9.26-r3.ebuild,
+  uclibc-0.9.26-r4.ebuild, uclibc-0.9.26-r5.ebuild, uclibc-9999.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
 *uclibc-9999 (25 Aug 2004)
 
