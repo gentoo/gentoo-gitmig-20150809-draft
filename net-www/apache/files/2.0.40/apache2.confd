@@ -1,29 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/net-www/apache/files/apache.confd,v 1.2 2002/05/04 23:23:00 woodchip Exp
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.40/apache2.confd,v 1.2 2002/11/28 20:23:09 woodchip Exp $
 
 # Config file for /etc/init.d/apache2
 
-# Here's an example from /etc/apache2/conf/apache.conf using mod_ssl:
+# An example from /etc/apache2/conf/modules.d/40_mod_ssl.conf:
 #
 # <IfDefine SSL>
-# LoadModule ssl_module    extramodules/libssl.so
+#  <IfModule !mod_ssl.c>
+#    LoadModule ssl_module    extramodules/mod_ssl.so
+#  </IfModule>
 # </IfDefine>
 #
-# This means that libssl.so is only loaded into the server when you
-# pass "-D SSL" to it at startup.
-#
-# Anything else in apache.conf which is guarded similarly, like:
-#
-# <IfDefine FOO> ... </IfDefine>
-#
-# can be easily turned on/off by editing APACHE_OPTS2 below to
-# include or to not include "-D FOO".
-#
-# If you installed mod_throttle, you can add "-D THROTTLE"; if you
-# installed mod_dav, then add "-D DAV".  For mod_gzip use "-D GZIP".
-# The mod_contribs package has several options you can use.  See
-# your apache.conf file for more details.
+# This means that the mod_ssl.so DSO module is only loaded
+# into the server when you pass "-D SSL" at startup.  To
+# enable WebDAV, add "-D DAV".  If you installed mod_php
+# then add "-D PHP".  For more options, please read the
+# snippets in the /etc/apache2/conf/modules.d directory.
 
-
-#APACHE2_OPTS="-D SSL -D PHP4"
+#APACHE2_OPTS="-D SSL"

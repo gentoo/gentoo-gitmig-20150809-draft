@@ -1,6 +1,14 @@
 # ChangeLog for net-www/apache
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.29 2002/11/02 08:18:52 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.30 2002/11/28 20:23:09 woodchip Exp $
+
+*apache-2.0.43-r1 (28 Nov 2002)
+
+  28 Nov 2002; Donny Davies <woodchip@gentoo.org> : Updated layout!
+  Getting closer to fully deprecating Apache1.  Third party module
+  integration is now somewhat simplified; simply install the desired
+  module and edit /etc/conf.d/apache2.  There's no longer the need
+  for the 'ebuild /var/db/pkg/.../foo.ebuild config' dance.  Yay.
 
 *apache-2.0.43 (02 Nov 2002)
 
