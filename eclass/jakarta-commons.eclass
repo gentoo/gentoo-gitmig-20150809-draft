@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.1 2003/03/18 22:36:09 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.2 2003/03/18 22:37:41 absinthe Exp $
 
 inherit base
-ECLASS=java-commons
+ECLASS=jakarta-commons
 INHERITED="$INHERITED $ECLASS"
 IUSE="$IUSE"
 
@@ -20,7 +20,7 @@ DEPEND="$DEPEND
 RDEPEND="$RDEPEND >=virtual/jdk-1.3"
 SLOT="$SLOT"
 
-#java-commons_src_unpack() {
+#jakarta-commons_src_unpack() {
 #
 #	debug-print-function $FUNCNAME $*
 #	
@@ -33,10 +33,10 @@ SLOT="$SLOT"
 #	debug-print "$FUNCNAME: Unpacked to $PWD"
 #}
 
-java-commons_src_compile() {
+jakarta-commons_src_compile() {
 
 	debug-print-function $FUNCNAME $*
-	[ -z "$1" ] && java-commons_src_compile all
+	[ -z "$1" ] && jakarta-commons_src_compile all
     ant_targetlist=`fgrep "<target" build.xml | sed -e 's/.*name="\([^"]*\)".*/\1/g'`
     debug-print "TargetList: $ant_targetlist"
 
@@ -89,7 +89,7 @@ java-commons_src_compile() {
 			all)
 				debug-print-section all
                 # Problem in commons-logging
-				java-commons_src_compile myconf make makedoc
+				jakarta-commons_src_compile myconf make makedoc
 				;;
 		esac
 
@@ -97,10 +97,10 @@ java-commons_src_compile() {
 	done
 }
 
-java-commons_src_install() {
+jakarta-commons_src_install() {
 
 	debug-print-function $FUNCNAME $*
-	[ -z "$1" ] && java-commons_src_install all
+	[ -z "$1" ] && jakarta-commons_src_install all
 
 	cd ${S}
 	while [ "$1" ]; do
@@ -121,7 +121,7 @@ java-commons_src_install() {
 				;;
 	    	all)
 				debug-print-section all
-				java-commons_src_install dojar dohtml
+				jakarta-commons_src_install dojar dohtml
 				;;
 		esac
 
