@@ -15,3 +15,4 @@ move app-misc/krecipes kde-misc/krecipes
 move app-misc/kshutdown kde-misc/kshutdown
 move app-misc/kdirstat kde-misc/kdirstat
 move app-misc/ksensors kde-misc/ksensors
+move app-misc/kgraphspace kde-misc/kgraphspace
