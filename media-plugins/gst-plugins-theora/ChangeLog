@@ -1,0 +1,9 @@
+# ChangeLog for media-plugins/gst-plugins-theora
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.1 2004/10/22 11:35:32 foser Exp $
+
+*gst-plugins-theora-0.8.5.ebuild (22 Oct 2004)
+
+  22 Oct 2004; foser <foser@gentoo.org> gst-plugins-theora-0.8.5.ebuild, metadata.xml, ChangeLog :
+  Initial commit, plugin for theora decoding & encoding
+  Added to gstreamer & gnome herd
