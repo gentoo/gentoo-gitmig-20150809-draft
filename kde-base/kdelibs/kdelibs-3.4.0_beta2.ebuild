@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0_beta2.ebuild,v 1.3 2005/02/09 20:21:52 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0_beta2.ebuild,v 1.4 2005/02/16 01:50:02 weeve Exp $
 
 inherit kde eutils flag-o-matic
 set-kdedir 3.4
@@ -14,7 +14,7 @@ SRC_URI="mirror://kde/unstable/${MY_PV}/src/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.4"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~sparc"
 IUSE="alsa arts cups doc jpeg2k kerberos openexr spell ssl tiff"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
