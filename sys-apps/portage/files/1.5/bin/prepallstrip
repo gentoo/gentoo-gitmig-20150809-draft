@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 if [ -n "${DEBUG}" ]
 then
 	exit

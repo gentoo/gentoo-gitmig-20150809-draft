@@ -8,6 +8,3 @@ else
 fi
 
 ldconfig -n -N ${z}
-
-
-

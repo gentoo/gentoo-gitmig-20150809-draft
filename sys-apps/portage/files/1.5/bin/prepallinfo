@@ -1,28 +1,16 @@
 #!/bin/bash
-
-z=`find ${D} -name "info" -type d`
+[ ! -d ${D}/usr/share/info ] && exit
 echo "info:"
-for x in ${z} 
+cd ${D}/usr/share/info
+rm -f dir dir.info dir.info.gz
+for x in ${D}/usr/share/info/*
 do
-	rm -f ${x}/dir ${x}/dir.info ${x}/dir.info.gz
-	w=`echo ${x}/*.info*`
-	if [ "${w}" != "${x}"'/*.info*' ]
+	[ ! -f $x ] && continue
+	if [ "${x##*.}" != "gz" ]
 	then
-	for y in ${w}
-	do
-		if [ -h ${y} ]
-	    	then
-			#symlink
-			linkto=`ls -l ${y} | sed -e "s:${D}::" | awk '{ printf ("%s.gz",$11) } '`
-	        	echo "$linkto $y.gz"
-			ln -sf ${linkto} ${y}.gz
-			rm ${y}
-	    	else
-			echo ${y}
-			gzip -f -9 ${y}
-            	fi	
-	done
-	fi
+			echo gzipping GNU info file ${x##*/}
+			gzip -f -9 ${x}
+	fi	
 done
 
 
