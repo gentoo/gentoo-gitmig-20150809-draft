@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.33 2002/01/09 19:13:23 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.34 2002/01/10 19:57:41 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit autoconf base
 ECLASS=kde
@@ -42,9 +42,9 @@ kde_src_compile() {
 				    break
 				fi
 			    done
-			    [ -f "./configure" ] || die
+			    [ -f "./configure" ] || die "no configure script found, generation unsuccessful"
 			fi
-			
+
 			export PATH="${KDEDIR}/bin:${PATH}"
 			./configure ${myconf} || die
 			;;
