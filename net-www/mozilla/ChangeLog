@@ -1,6 +1,14 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.44 2002/10/24 08:50:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.45 2002/11/12 17:28:01 azarah Exp $
+
+*mozilla-1.0.1-r3 (12 Nov 2002)
+
+  12 Nov 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Update some patches from Redhat.  Disable short-wchar.  Disable libmng.
+  Disable xprint.  All these to try and stabilize things a bit.  Test seem
+  better.
 
 *mozilla-1.0.1-r2 (19 Oct 2002)
 
