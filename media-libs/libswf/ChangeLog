@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libswf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/ChangeLog,v 1.7 2003/03/20 02:45:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/ChangeLog,v 1.8 2003/05/15 15:26:19 phosphan Exp $
+
+  15 May 2003; Patrick Kursawe <phosphan@gentoo.org> libswf-0.99.ebuild:
+  Hopefully fixed bug 20346 (problem while unpacking, seems default unpack
+  changed behaviour)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

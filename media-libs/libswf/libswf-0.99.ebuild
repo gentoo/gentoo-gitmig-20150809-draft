@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/libswf-0.99.ebuild,v 1.10 2003/03/20 02:45:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/libswf-0.99.ebuild,v 1.11 2003/05/15 15:26:19 phosphan Exp $
 
 S=${WORKDIR}/dist
 DESCRIPTION="A library for flash movies"
@@ -14,10 +14,11 @@ KEYWORDS="x86 sparc ppc hppa"
 DEPEND="virtual/glibc
 	app-arch/unzip"
 
-src_unpack() {
-
+src_unpack () {
 	unpack ${A}
-	tar xf dist.99.linux.tar
+	if [ -f dist.99.linux.tar ]; then
+		tar -xf dist.99.linux.tar
+	fi
 }
 
 src_install () {
