@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.0.ebuild,v 1.4 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.0.ebuild,v 1.5 2003/04/11 22:44:20 liquidx Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="http://twtelecom.dl.sourceforge.net/sourceforge/courier/${P}.tar.bz2"
@@ -10,10 +10,11 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="ipv6 gdbm tcltk ldap berkdb mysql pam nls postgres"
 PROVIDE="virtual/imapd"
+# not compatible with >=sys-libs/db-4
 RDEPEND="virtual/glibc
 	>=dev-libs/openssl-0.9.6
 	pam? ( >=sys-libs/pam-0.75 )
-	berkdb? ( >=sys-libs/db-3.2 )
+	berkdb? ( =sys-libs/db-3* )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	mysql? ( >=dev-db/mysql-3.23.36 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
