@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r1.ebuild,v 1.12 2004/11/12 15:23:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r1.ebuild,v 1.13 2004/11/14 03:49:01 vapier Exp $
 
 inherit eutils
 
@@ -53,7 +53,7 @@ OLD16_S="${WORKDIR}/${OLD16_P}"
 OLD15_S="${WORKDIR}/${OLD15_P}"
 OLD14_S="${WORKDIR}/${OLD14_P}"
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
-HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
+HOMEPAGE="http://sources.redhat.com/automake/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 	mirror://gnu/${PN}/${OLD17_P}.tar.bz2
 	mirror://gnu/${PN}/${OLD16_P}.tar.bz2

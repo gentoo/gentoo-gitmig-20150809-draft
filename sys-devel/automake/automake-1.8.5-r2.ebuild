@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r2.ebuild,v 1.2 2004/11/12 15:23:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r2.ebuild,v 1.3 2004/11/14 03:49:01 vapier Exp $
 
 inherit eutils gnuconfig
 
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
-HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
+HOMEPAGE="http://sources.redhat.com/automake/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
