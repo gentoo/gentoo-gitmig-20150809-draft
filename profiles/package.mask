@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <karltk@gentoo.org> (8 Sep 2002)
+# Waiting for renamed distfiles to propagate.
+=dev-lisp/mzscheme-201
+
 # <styx@gentoo.org> (8 Sep 2002)
 # Masking for b0rkage... again :-/
 >dev-util/glimmer-1.2.1-r3
