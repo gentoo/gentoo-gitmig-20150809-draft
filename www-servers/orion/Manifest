@@ -1,7 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c8a12e74b3a5310f51d633c0dbc36760 orion-2.0.1.ebuild 3545
-MD5 2ce1da0a90f5acaf8fc8dce15adba2fc orion-2.0.5.ebuild 3611
+MD5 60a3298925edc6fa6ceb2492ac62baf1 orion-2.0.5.ebuild 3609
 MD5 9d286e41d6e3c3a0b29ff81f50f0a35b orion-2.0.2.ebuild 3548
-MD5 1d57105d0cb43dc99874267a5712b733 ChangeLog 4128
+MD5 f6d465038c07ef3b2297d2b64f7eff43 ChangeLog 4311
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 5e78308ed1712b24bcced31b5097e7fc files/digest-orion-2.0.1 60
 MD5 2e8906fc5bfd8955cfbac84d1ce4850c files/digest-orion-2.0.2 60
@@ -26,3 +29,10 @@ MD5 47d0ad15473027f371c1d02681a84e1e files/2.0.5/2.0.5-gentoo.patch 5287
 MD5 10a92f413fc87c341c409074bc3ce7d4 files/2.0.5/orion.conf 1490
 MD5 9395af08eda1e3bebe30f911f366a668 files/2.0.5/orion.init 625
 MD5 640aeac33bfeef4b73251c255a5cf0b5 files/2.0.5/start_orion.sh 329
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCODrc06ebR+OMO78RAmHnAKCE7BrU3Q0IA+V5uahPMR62zyAr5gCePcVK
+sKOeGyTV8kZY4KRkkqBngNc=
+=dsSB
+-----END PGP SIGNATURE-----

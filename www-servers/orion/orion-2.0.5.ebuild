@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.2 2005/01/08 02:27:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.3 2005/03/16 13:55:30 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -31,7 +31,7 @@ pkg_preinst() {
 
 src_install() {
 	# CREATE DIRECTORIES
-	diropts -m0775
+	diropts -m0755
 	dodir /opt/${PN}
 	dodir /opt/${PN}/config
 	dodir /opt/${PN}/sbin
@@ -92,7 +92,7 @@ pkg_postinst() {
 
 	chown -R orion:orion /opt/${PN} || die "Failed to chown in /opt"
 	chown -R orion:orion /var/log/${PN} || die "Failed to chown in /var/log"
-	chown orion:orion /etc/conf.d/orion
+	chown root:root /etc/conf.d/orion
 
 	einfo " "
 	einfo " NOTICE!"

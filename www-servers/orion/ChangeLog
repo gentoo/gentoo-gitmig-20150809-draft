@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/orion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/ChangeLog,v 1.7 2005/01/08 02:27:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/ChangeLog,v 1.8 2005/03/16 13:55:30 luckyduck Exp $
+
+  16 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> orion-2.0.5.ebuild:
+  applied parts of the patch which was suggested in #85032 by Marc Vilanova
+  Vilaseró <marc@noctambuls.net>
 
   08 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> orion-2.0.5.ebuild:
   added ~amd64 to keywords. fixes #76960.
