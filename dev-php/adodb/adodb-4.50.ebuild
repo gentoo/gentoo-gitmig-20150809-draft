@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-4.5.0.ebuild,v 1.1 2004/07/25 02:45:49 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-4.50.ebuild,v 1.1 2004/07/27 00:47:40 pfeifer Exp $
 
 inherit php-lib
 
