@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r1.ebuild,v 1.2 2004/07/23 05:12:11 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r1.ebuild,v 1.3 2004/07/23 05:33:18 ferringb Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -49,7 +49,6 @@ RDEPEND="xvid? (
 	jpeg? ( media-libs/jpeg )
 	libcaca? ( media-libs/libcaca )
 	lirc? ( app-misc/lirc )
-	live? ( >=media-plugins/live-2004.03.27 )
 	lzo? ( dev-libs/lzo )
 	mad? ( media-libs/libmad )
 	matroska? ( >=media-libs/libmatroska-0.6.0 )
@@ -62,7 +61,9 @@ RDEPEND="xvid? (
 	samba? ( >=net-fs/samba-2.2.8a )
 	sdl? ( media-libs/libsdl )
 	svga? ( media-libs/svgalib )
-	theora? ( media-libs/libtheora )
+	!ia64? ( theora? ( media-libs/libtheora )
+		live? ( >=media-plugins/live-2004.03.27 )
+		)
 	truetype? ( >=media-libs/freetype-2.1 )
 	xinerama? ( virtual/x11 )
 	xmms? ( media-sound/xmms )
@@ -161,7 +162,11 @@ src_compile() {
 	myconf="${myconf} $(use_enable ipv6 inet6)"
 	myconf="${myconf} $(use_enable joystick)"
 	myconf="${myconf} $(use_enable lirc)"
-	myconf="${myconf} $(use_enable live)"
+	if use ia64; then
+		myconf="${myconf} --disable-live"
+	else
+		myconf="${myconf} $(use_enable live)"
+	fi
 	myconf="${myconf} $(use_enable network) $(use_enable network ftp)"
 	myconf="${myconf} $(use_enable rtc)"
 	myconf="${myconf} $(use_enable samba smb)"
@@ -179,7 +184,11 @@ src_compile() {
 	myconf="${myconf} $(use_enable matroska external-matroska) $(use_enable !matroska internal-matroska)"
 	myconf="${myconf} $(use_enable mpeg external-faad) $(use_enable !mpeg internal-faad)"
 	myconf="${myconf} $(use_enable oggvorbis vorbis)"
-	myconf="${myconf} $(use_enable theora)"
+	if use ia64;  then
+		myconf="${myconf} --disable-theora"
+	else
+		myconf="${myconf} $(use_enable theora)"
+	fi
 	myconf="${myconf} $(use_enable xmms)"
 	myconf="${myconf} $(use_enable xvid)"
 
