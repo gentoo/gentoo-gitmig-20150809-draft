@@ -1,11 +1,12 @@
 # ChangeLog for x11-themes/redhat-artwork 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.14 2003/02/22 17:37:16 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.15 2003/02/22 18:38:10 blocke Exp $
 
 *redhat-artwork-0.65 (21 Feb 2003)
 
   22 Feb 2003; Bruce A. Locke <blocke@shivan.org> redhat-artwork-0.65.ebuild:
-  kde build fix, kde support may still be seriously broken 
+  - kde build fix, kde support may still be seriously broken 
+  - gtk iconrc fix
 
   21 Feb 2003; Bruce A. Locke <blocke@shivan.org> redhat-artwork-0.65.ebuild:
   New version, still has kde issues.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.65.ebuild,v 1.3 2003/02/22 18:11:45 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.65.ebuild,v 1.4 2003/02/22 18:38:10 blocke Exp $
 
 RH_EXTRAVERSION="1"
 
@@ -115,6 +115,12 @@ src_compile() {
 	chmod +x configure
 
 	)
+
+	# fix iconrc
+	mv art/gtk/make-iconrc.sh art/gtk/make-iconrc.sh.broken
+	sed 's|ICON_PATH=$3|ICON_PATH=/usr/share/icons/Bluecurve/24x24/stock|' \
+		art/gtk/make-iconrc.sh.broken >  art/gtk/make-iconrc.sh
+	chmod +x art/gtk/make-iconrc.sh
 
 	./configure || die
         emake || die
