@@ -1,20 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.9 2003/02/13 05:17:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.10 2003/02/28 22:04:02 vapier Exp $
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="CTCS (Cerberus Test Control System) used to make sure that new systems are ready to go out and face the perils of the cold, hard world.  It's made up of a suite of programs that literally pound the system.  The tests are meant for hardware with nothing on it yet... you will lose data.  Not might.  Will.  Please read at least README.FIRST before attempting to use the Cerberus Test Control System as certain configurations of CTCS may damage your system."
+DESCRIPTION="CTCS (Cerberus Test Control System) used to stress systems for the real world"
 HOMEPAGE="http://sourceforge.net/projects/va-ctcs/"
 SRC_URI="mirror://sourceforge/va-ctcs/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
-IUSE=""
 
-# Runtime dependancies
 RDEPEND="virtual/glibc
 	 dev-util/dialog
 	 sys-apps/bash
@@ -63,7 +61,7 @@ src_install() {
 	done
 }
 
-src_postinst() {
+pkg_postinst() {
 	cd /usr/ctcs/runin
 	dosym messages-info allmessages-info
 	dosym blockrdtst sblockrdtst
@@ -74,4 +72,13 @@ src_postinst() {
 	dosym destructiveblocktst-info sdestructiveblocktst-info
 	dosym traverseread-info straverseread-info
 	dosym traverseread straverseread
+
+	ewarn "CTCS (Cerberus Test Control System) used to make sure that"
+	ewarn "new systems are ready to go out and face the perils of the"
+	ewarn "cold, hard world.  It's made up of a suite of programs that"
+	ewarn "literally pound the system.  The tests are meant for hardware"
+	ewarn "with nothing on it yet... you will lose data.  Not might."
+	ewarn "Will.  Please read at least README.FIRST before attempting"
+	ewarn "to use the Cerberus Test Control System as certain"
+	ewarn "configurations of CTCS may damage your system."
 }
