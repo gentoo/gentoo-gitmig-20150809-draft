@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.52 2004/05/30 02:55:58 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.53 2004/06/01 04:28:38 solar Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -274,6 +274,12 @@ get-flag() {
 	return 1
 }
 
+has_hardened() {
+	local cc=${CC:-gcc}
+	[[ $(${cc%% *} --version 2>&1) == *Hardened* ]]
+	return $?
+}
+
 has_pic() {
 	[ "${CFLAGS/-fPIC}" != "${CFLAGS}" ] && return 0
 	[ "${CFLAGS/-fpic}" != "${CFLAGS}" ] && return 0
@@ -341,6 +347,10 @@ filter-ldflags() {
 }
 
 etexec-flags() {
+	# if your not using a hardened compiler you wont need this
+	# PIC/no-pic kludge in the first place.
+	has_hardened || return
+
 	has_pie || has_pic
 	if [ $? == 0 ] ; then
 	[ -z "`is-flag -fno-pic`" ] && 
