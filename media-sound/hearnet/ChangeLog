@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/hearnet
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/ChangeLog,v 1.7 2004/07/20 01:46:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/ChangeLog,v 1.8 2004/08/03 11:56:57 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> hearnet-0.0.2.ebuild:
+  Added to ~ppc.
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> hearnet-0.0.2.ebuild:
   -amd64

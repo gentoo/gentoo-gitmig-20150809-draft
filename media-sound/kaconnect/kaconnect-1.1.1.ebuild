@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kaconnect/kaconnect-1.1.1.ebuild,v 1.5 2004/06/25 00:07:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kaconnect/kaconnect-1.1.1.ebuild,v 1.6 2004/08/03 11:56:54 dholm Exp $
 
 DESCRIPTION="Part of Kalsatools - QT based frontend to aconnect"
 HOMEPAGE="http://www.suse.de/~mana/kalsatools.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.suse.com/pub/people/mana/kalsatools-current/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 
 RDEPEND="media-sound/alsa-utils
