@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ogle
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.29 2005/01/27 19:25:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.30 2005/02/05 13:53:42 luckyduck Exp $
+
+  05 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> ogle-0.9.2.ebuild:
+  renamed ifo_dump binary to ifo_dump_ogle to avoid collision with the
+  libdvdread one. see #80837
 
   27 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> ogle-0.9.2.ebuild:
   0.9.2 now stable on x86.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2.ebuild,v 1.11 2005/01/27 19:25:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2.ebuild,v 1.12 2005/02/05 13:53:42 luckyduck Exp $
 
 inherit eutils libtool
 
@@ -57,12 +57,16 @@ src_compile() {
 	# configure needs access to the updated CFLAGS
 	CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml -I/usr/include/libxml2"
 
-	econf ${myconf} || die
-	emake CFLAGS="${CFLAGS}" || die
+	econf ${myconf} || die "./configure failed"
+	emake CFLAGS="${CFLAGS}" || die "make failed"
 }
 
 src_install() {
-	einstall || die
+	einstall || die "make install failed"
+
+	cd ${D}usr/bin/
+	mv ./ifo_dump ./ifo_dump_ogle
+
 	dodoc AUTHORS COPYING ChangeLog HISTORY INSTALL NEWS README TODO
 	dodoc doc/liba52.txt
 }
