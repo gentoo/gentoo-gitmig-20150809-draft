@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.2 2003/12/23 16:55:30 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.3 2003/12/24 02:22:08 brad_mssw Exp $
 
 IUSE="doc"
 
@@ -14,9 +14,24 @@ JV="${JV/_rc1/}"
 S="${WORKDIR}/j2sdk${JV}"
 DESCRIPTION="Blackdown Java Development Kit ${PV}"
 J_URI="ftp://ftp.tux.org/pub/java/JDK-${JV}"
+SRC_URI="amd64? ( ${J_URI}/amd64/${JREV}/j2sdk-${JV}-${JREV}-linux-amd64.bin )
+	 x86? ( ${J_URI}/i386/${JREV}/j2sdk-${JV}-${JREV}-linux-i586-gcc3.2.bin )
+	 sparc? ( ${J_URI}/sparc/${JREV}/j2sdk-${JV}-${JREV}-linux-sparc.bin )"
 
-A="j2sdk-${JV}-${JREV}-linux-amd64.bin"
-SRC_URI="${J_URI}/amd64/${JREV}/${A}"
+
+if [ "${ARCH}" = "amd64" ]
+then
+	A="j2sdk-${JV}-${JREV}-linux-amd64.bin"
+elif [ "${ARCH}" = "x86" ]
+then
+	A="j2sdk-${JV}-${JREV}-linux-i586-gcc3.2.bin"
+elif [ "${ARCH}" = "sparc" ]
+then
+	A="j2sdk-${JV}-${JREV}-linux-sparc.bin"
+elif [ "${ARCH}" = "ppc" ]
+then
+	A="j2sdk-${JV}-${JREV}-linux-ppc.bin"
+fi
 
 HOMEPAGE="http://www.blackdown.org"
 
@@ -137,5 +152,26 @@ pkg_postinst () {
 	# Set as default system VM if none exists
 	java_pkg_postinst
 
+	# if chpax is on the target system, set the appropriate PaX flags
+	# this will not hurt the binary, it modifies only unused ELF bits
+	# but may confuse things like AV scanners and automatic tripwire
+	if has_version "sys-apps/chpax"
+	then
+		einfo "setting up conservative PaX flags for jar and javac"
+
+		for paxkills in "jar" "javac" "java"
+		do
+			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/bin/$paxkills
+		done
+
+		# /opt/blackdown-jdk-1.4.1/jre/bin/java_vm
+		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/jre/bin/java_vm
+
+		einfo "you should have seen lots of chpax output above now"
+		ewarn "make sure the grsec ACL contains those entries also"
+		ewarn "because enabling it will override the chpax setting"
+		ewarn "on the physical files - help for PaX and grsecurity"
+		ewarn "can be given by #gentoo-hardened + pappy@gentoo.org"
+	fi
 }
 
