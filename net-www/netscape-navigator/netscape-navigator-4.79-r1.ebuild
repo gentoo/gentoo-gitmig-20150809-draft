@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-navigator/netscape-navigator-4.79-r1.ebuild,v 1.4 2002/08/16 03:01:02 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-navigator/netscape-navigator-4.79-r1.ebuild,v 1.5 2002/08/19 17:42:50 cybersystem Exp $
 
 S=${WORKDIR}/navigator-v479.x86-unknown-linux2.2
 DESCRIPTION="Netscape Navigator 4.79"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.netscape.com/pub/communicator/english/4.79/unix/supported/lin
 HOMEPAGE="http://developer.netscape.com/support/index.html"
 RDEPEND=">=sys-libs/lib-compat-1.0"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 -ppc sparc sparc64"
 LICENSE="NETSCAPE"
 
 src_unpack() {

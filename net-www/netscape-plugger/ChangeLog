@@ -1,6 +1,12 @@
 # ChangeLog for net-www/netscape-plugger
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/ChangeLog,v 1.3 2002/04/05 04:31:41 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/ChangeLog,v 1.4 2002/08/19 17:44:30 cybersystem Exp $
+
+*netscape-plugger-4.0-r1 (19 August 2002)
+
+  19 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, netscape-plugger-4.0-r1.ebuild :
+
+  Added -ppc to the keywords.
 
 *netscape-plugger-4.0-r1 (4 Apr 2002)
 
