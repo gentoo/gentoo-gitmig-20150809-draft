@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.8 2002/10/12 18:28:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.9 2002/10/19 16:34:23 aliz Exp $
 
 *cdrdao-1.1.7 (12 Oct 2002)
 
@@ -8,6 +8,9 @@
   New version, should fix gnome build (bug #5331)
 
 *cdrdao-1.1.5-r1 (1 Feb 2002)
+
+  19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> cdrdao-1.1.5-r1.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
 
   15 Sep 2002; Maarten Thibaut <murphy@gentoo.org> cdrdao-1.1.5-r1.ebuild :
   Added keywords for sparc and sparc64. Reorganized ChangeLog.
