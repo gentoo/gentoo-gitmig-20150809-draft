@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-patch-bay
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/ChangeLog,v 1.18 2004/10/03 00:16:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/ChangeLog,v 1.19 2004/11/22 22:30:48 eradicator Exp $
+
+*alsa-patch-bay-1.0.0-r2 (22 Nov 2004)
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +alsa-patch-bay-1.0.0-r2.ebuild:
+  Ebuild cleanup.  Added support for more reasonable USE flags.  Added to ~sparc.
 
   02 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -alsa-patch-bay-0.5.1-r1.ebuild, -alsa-patch-bay-0.5.2.ebuild,

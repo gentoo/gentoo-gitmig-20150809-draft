@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 258206e70defcc155bad02a9856ef83a ChangeLog 2659
-MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
+MD5 db3962f11bf3e344941209b0ad3c1b99 ChangeLog 2874
+MD5 d207967140ec984abaa81bf36cb9f7ac alsa-patch-bay-1.0.0-r2.ebuild 1295
 MD5 710a1550119b3a25d1d1ff38b3553eb5 alsa-patch-bay-1.0.0-r1.ebuild 1398
+MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
+MD5 f3ba80b5a1ce25a42136ca5f4396d691 files/digest-alsa-patch-bay-1.0.0-r2 72
 MD5 3451271c44f72268abb6051fa9af1145 files/alsa-patch-bay-1.0.0-amd64.patch 2030
 MD5 f3ba80b5a1ce25a42136ca5f4396d691 files/digest-alsa-patch-bay-1.0.0-r1 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBX0ThArHZZzCEUG0RAorTAJ9jXG+F/3recVBh+cXwKSsFaLy4JQCdHZUT
-u2JjC1kulFLApFMSp+Xq5uQ=
-=0pjq
+iD8DBQFBomijArHZZzCEUG0RAjSkAJ4q6QkrOYC5KEjTZqBh1qDK4m24EwCfe5C9
+c+7QUJ9cWO5KHy3G2lco9BI=
+=p6/m
 -----END PGP SIGNATURE-----
