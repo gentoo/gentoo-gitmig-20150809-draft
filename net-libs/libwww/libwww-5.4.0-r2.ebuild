@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.24 2005/02/14 21:39:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.25 2005/02/20 02:01:52 vapier Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.w3.org/Library/Distribution/${MY_P}.tgz
 
 LICENSE="W3C"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64 ppc-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sparc x86"
 IUSE="ssl mysql"
 
 RDEPEND="dev-lang/perl
@@ -27,14 +27,14 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-config-liborder.patch
-	epatch ${WORKDIR}/${P}-debian-autoconf-2.5.patch
-	epatch ${FILESDIR}/${P}-autoconf-gentoo.diff
-	epatch ${FILESDIR}/${P}-automake-gentoo.diff	# bug #41959
-	epatch ${FILESDIR}/${P}-disable-ndebug-gentoo.diff	# bug #50483
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-config-liborder.patch
+	epatch "${WORKDIR}"/${P}-debian-autoconf-2.5.patch
+	epatch "${FILESDIR}"/${P}-autoconf-gentoo.diff
+	epatch "${FILESDIR}"/${P}-automake-gentoo.diff	# bug #41959
+	epatch "${FILESDIR}"/${P}-disable-ndebug-gentoo.diff	# bug #50483
 
-	if use ppc-macos; then
+	if use ppc-macos ; then
 		glibtoolize -c -f || die "libtoolize failed"
 	else
 		libtoolize -c -f || die "libtoolize failed"
@@ -42,30 +42,26 @@ src_unpack() {
 
 	aclocal || die "aclocal failed"
 	autoconf || die "autoconf failed"
-
 }
 
 src_compile() {
-
 	econf \
 		--enable-shared \
 		--enable-static \
 		--with-zlib \
 		--with-md5 \
 		--with-expat \
-		`use_with mysql` \
-		`use_with ssl` \
+		$(use_with mysql) \
+		$(use_with ssl) \
 		|| die
 
 	emake check-am || die
-
 	use ppc-macos && echo "#undef HAVE_APPKIT_APPKIT_H" >> wwwconf.h
-
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc ChangeLog
 	dohtml -r .
 }
