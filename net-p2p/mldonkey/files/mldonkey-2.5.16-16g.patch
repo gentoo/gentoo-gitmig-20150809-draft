@@ -1,0 +1,2324 @@
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./config/configure.in ./config/configure.in
+--- ./config/configure.in	2004-03-08 00:02:31.000000000 +0100
++++ ./config/configure.in	2004-04-02 00:32:13.000000000 +0200
+@@ -11,7 +11,7 @@
+ echo $MYCONFIG_ARGS
+ 
+ CURRENT_VERSION=2.5
+-CURRENT_RELEASE=16
++CURRENT_RELEASE=16g
+ 
+ REQUIRED_OCAML=3.07
+ DOWNLOAD_OCAML=3.07pl2
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./config/Makefile.in ./config/Makefile.in
+--- ./config/Makefile.in	2004-03-07 10:34:24.000000000 +0100
++++ ./config/Makefile.in	2004-04-02 00:32:13.000000000 +0200
+@@ -1294,8 +1294,8 @@
+ #######################################################################
+ 
+ DISDIR=mldonkey-distrib
+-distrib/Readme.txt: $(GUI)/gui_messages.ml
+-	grep -A 1000 help_text $(GUI)/gui_messages.ml | grep -v '"' > distrib/Readme.txt
++#distrib/Readme.txt: $(GUI)/gui_messages.ml
++#	grep -A 1000 help_text $(GUI)/gui_messages.ml | grep -v '"' > distrib/Readme.txt
+ 
+ 
+ debug:
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./distrib/Install.txt ./distrib/Install.txt
+--- ./distrib/Install.txt	2004-02-08 23:58:17.000000000 +0100
++++ ./distrib/Install.txt	2004-04-02 00:32:12.000000000 +0200
+@@ -45,7 +45,7 @@
+ -------------------
+ 
+ You have now two options to compile mldonkey:
+-- Individually install Objective-Caml 3.06 and LablGTK 1.2.?. Then, you can
++- Individually install Objective-Caml 3.06 and LablGTK 1.2.6. Then, you can
+   compile mldonkey. The instructions are given below at '1)'.
+ - If you want to install ocaml and lablgtk only to compile mldonkey. You must
+   have a good internet access (you want mldonkey after all :). You must have
+@@ -61,7 +61,9 @@
+ is compiled.
+ 
+ ------------------------------------------------------------------------
+-1) Installing required tools: Objective-Caml 3.06 and LablGTK 1.2.3 or 1.2.?
++1) Installing required tools: Objective-Caml and LablGTK 1.2.6
++   Recommended version of Objective-Caml for MinGW is 3.06, on Unix 3.07+2.
++   Example configuration for Ocaml 3.06:
+ 
+  1.1) Objective-Caml 3.06 (from   http://pauillac.inria.fr/caml)
+ 
+@@ -73,15 +75,15 @@
+     ~/tmp/ocaml-3.06> make world opt opt.opt
+     ~/tmp/ocaml-3.06> make install
+ 
+- 1.2) LablGTK 1.2.3 (from 
++ 1.2) LablGTK 1.2.6 (from 
+             http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html)
+ 
+-    ~/tmp> tar zxf lablgtk-1.2.3.tar.gz
+-    ~/tmp> cd lablgtk-1.2.3
+-    ~/tmp/lablgtk-1.2.3> make configure
+-    ~/tmp/lablgtk-1.2.3> make
+-    ~/tmp/lablgtk-1.2.3> make opt
+-    ~/tmp/lablgtk-1.2.3> make install
++    ~/tmp> tar zxf lablgtk-1.2.6.tar.gz
++    ~/tmp> cd lablgtk-1.2.6
++    ~/tmp/lablgtk-1.2.6> make configure
++    ~/tmp/lablgtk-1.2.6> make
++    ~/tmp/lablgtk-1.2.6> make opt
++    ~/tmp/lablgtk-1.2.6> make install
+ 
+ 2) Compiling mldonkey:
+ 
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./Install.txt ./Install.txt
+--- ./Install.txt	2004-02-08 23:58:16.000000000 +0100
++++ ./Install.txt	2004-04-02 00:32:12.000000000 +0200
+@@ -1,142 +1 @@
+-Installation
+-
+-==================
+-
+--If you want to get up and running quickly and easily-
+-
+-Compile mldonkey without GUI support
+-You have to have zlib, zlib-dev and m4 packages installed.
+-
+-Mldonkey/> ./configure
+-Type in 'n' <enter> when it asks if you want to get lablgtk.
+-Mldonkey/> make depend
+-Mldonkey/> make
+-
+-There is no additional 'make install' command. Copy the file 'mlnet'
+-(this is MLdonkey) to the folder where you've choosen to run MLdonkey.
+-
+-Start 'mlnet'
+-
+-Mlnet/> ./mlnet
+-Leave the terminal window open. MLdonkey is now running.
+-
+-Open a browser and type in the URL http://localhost:4080 <enter>.
+-A web-based interface to MLdonkey appears. Certain ports enabling inbound
+-routing on your firewall/router need to be opened to fully use MLdonkey.
+-The Options tab in the web interface shows the ports.
+-
+--You're done!-
+-
+-Some goodies (make_torrent, ed2k_hash) come with mldonkey, you can also
+-compile them using the additionnal command:
+-
+-Mldonkey/> make utils
+-
+-==================
+-There are additional ways besides the web interface to control Mlnet(MLdonkey).
+-- Compiling support for the 'mlgui' application while compiling MLdonkey
+-  is one. This requires additional libraries, which, depending on your platform
+-  and skill, may be easy or not so easy to add. The 'mlnet' application functions
+-  fine without the GUI.
+-- Other applications are written by third-parties and available for specific
+-  platforms. These vary in stability and functionality.
+-
+-Compiling mldonkey with mldonkey_gui support:
+--------------------
+-
+-You have now two options to compile mldonkey:
+-- Individually install Objective-Caml 3.06 and LablGTK 1.2.?. Then, you can
+-  compile mldonkey. The instructions are given below at '1)'.
+-- If you want to install ocaml and lablgtk only to compile mldonkey. You must
+-  have a good internet access (you want mldonkey after all :). You must have
+-  "wget" installed. Then, run:
+-
+-./configure -enable-batch
+-
+-The configure script will download ocaml and lablgtk, compile and install them
+-locally so that they can be used to compile mldonkey. Steps below can be skipped
+-now. Be patient. Ocaml and lablgtk tools take a while to compile and install.
+-
+-Note: At least 70 M of free disk space is required on the partition where mldonkey
+-is compiled.
+-
+-------------------------------------------------------------------------
+-1) Installing required tools: Objective-Caml 3.06 and LablGTK 1.2.3 or 1.2.?
+-
+- 1.1) Objective-Caml 3.06 (from   http://pauillac.inria.fr/caml)
+-
+-    ~/tmp> tar zxf ocaml-3.06.tar.gz
+-    ~/tmp> cd ocaml-3.06
+-
+-   If you REALLY want to patch it:
+-    ~/tmp/ocaml-3.06> ./configure
+-    ~/tmp/ocaml-3.06> make world opt opt.opt
+-    ~/tmp/ocaml-3.06> make install
+-
+- 1.2) LablGTK 1.2.3 (from 
+-            http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html)
+-
+-    ~/tmp> tar zxf lablgtk-1.2.3.tar.gz
+-    ~/tmp> cd lablgtk-1.2.3
+-    ~/tmp/lablgtk-1.2.3> make configure
+-    ~/tmp/lablgtk-1.2.3> make
+-    ~/tmp/lablgtk-1.2.3> make opt
+-    ~/tmp/lablgtk-1.2.3> make install
+-
+-2) Compiling mldonkey:
+-
+-    ~/tmp/mldonkey> ./configure
+-    ~/tmp/mldonkey> make depend
+-    ~/tmp/mldonkey> make
+-
+-  You should now have 'mldonkey' (the daemon with edonkey/overnet support), 
+-'mlnet' (the daemon with all network support) and 'mldonkey_gui' (the
+-interface) No 'make install' is provided. 
+-
+-  You can disable all other p2p networks using the --disable-multinet option
+-   with ./configure. Only edonkey support will then be compiled.
+-
+-------------------------------------------------------------------------
+-
+-Using mldonkey:
+----------------
+-
+-mldonkey binaries are normally distributed with only the content of the
+-mldonkey/distrib/ directory. Consequently, all documentation files on how to
+-use mldonkey are stored in this directory. You will also find default 
+-configuration files in this directory, and in particular, a list of servers
+-for edonkey in the servers.ini file.
+-
+- See the distrib/Readme.txt and distrib/FAQ.html files for more information
+-on how to use mldonkey.
+-
+- Note that you should execute mldonkey in the distrib/ directory, where a
+-list of servers is present with other files. It will create other
+-configuration files in this directory. mldonkey_gui has its own configuration
+-file in the user directory (~/.mldonkey_gui.ini). I would advise you to move
+-mldonkey, mldonkey_gui, mldonkey_gui2 and mlchat to distrib/, then move this
+-directory where you want to put your downloads, and then remove mldonkey 
+-sources.
+-
+-You must NOT run mldonkey as root (or you should use the run_as_user
+-option to change the user after the port has been bound).
+-
+-NOTES:
+-------
+-2002/12/18: To compile on MinGW
+- * configure: -enable-batch will not work, you must download and install ocaml
+-    yourself
+- * if ocamlopt/gcc fails to generate mldonkey.exe, add '-verbose -S'
+-     to the LIBS_opt in the Makefile. Use 'make &> log' to keep the
+-     commands, edit the 'log' file and remove all the commands except
+-     the 2 last 'as' and 'gcc' lines. Then use 'sh ./log' to rerun
+-     these commands, that should work this way :)
+- * For a flawless compile these variables should be set
+-   (OCAMLDIR means the root directory of the Ocaml binaries):
+-   SET CAMLLIB=OCAMLDIR/lib
+-   SET CAMLP4LIB=OCAMLDIR/lib/camlp4
+-   SET OCAMLLIB=OCAMLDIR/lib
+-   SET OCAMLRUNPARAM="l=256M"
+- * On the MLDonkeyworld forum is a great thread with information about
+-   how to compile MLDonkey with MinGW:
+-   http://mldonkey.berlios.de/modules.php?name=Forums&file=viewtopic&t=1363
++See distrib/Install.txt
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/config/unix/os_stubs_c.c ./src/config/unix/os_stubs_c.c
+--- ./src/config/unix/os_stubs_c.c	2004-03-07 10:34:24.000000000 +0100
++++ ./src/config/unix/os_stubs_c.c	2004-04-02 00:32:12.000000000 +0200
+@@ -47,7 +47,7 @@
+ #include <sys/mman.h>
+ #endif
+ 
+-int64 os_lseek(OS_FD fd, off_t pos, int dir)
++int64 os_lseek(OS_FD fd, int64 pos, int dir)
+ {
+   off_t result =  lseek(fd, pos, dir);
+ 
+@@ -65,7 +65,7 @@
+   return result;
+ }
+  
+-void os_ftruncate(OS_FD fd, off_t len)
++void os_ftruncate(OS_FD fd, int64 len)
+ {
+   int64 cursize;
+   if(!fd) failwith("ftruncate32: file is closed");
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/daemon/common/commonFile.ml ./src/daemon/common/commonFile.ml
+--- ./src/daemon/common/commonFile.ml	2004-02-04 01:21:45.000000000 +0100
++++ ./src/daemon/common/commonFile.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -564,10 +564,11 @@
+     
+     end else
+     begin
+-      Printf.bprintf buf "[%-s %5d] %-50s %10s %10s\npriority %d\n" 
+-        n.network_name (file_num file) (match info.G.file_names with
++      Printf.bprintf buf "[%-s %5d] %s %10s %10s\npriority %d\n" 
++        n.network_name (file_num file) 
++        (String2.shorten !!max_name_len (match info.G.file_names with
+           [] -> Md4.to_string info.G.file_md4
+-        | (name,_) :: _ -> name)
++		      | (name,_) :: _ -> name))
+       (Int64.to_string info.G.file_size)
+       (Int64.to_string info.G.file_downloaded)
+       (file_priority file);
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/daemon/common/commonGlobals.ml ./src/daemon/common/commonGlobals.ml
+--- ./src/daemon/common/commonGlobals.ml	2004-03-07 10:34:24.000000000 +0100
++++ ./src/daemon/common/commonGlobals.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -28,9 +28,11 @@
+   
+ let networks_string = ref ""
+   
++let patches_string = ref "2620 2760 backchanges 2845 fix_really_write_0_byte 2791 2792 2773 2768 2807 2806 2846 2832 2833 2836 2837 2840 2861 2852 2866 2869 2870 2871 2872 2885"
++
+ let version () = 
+-  Printf.sprintf "MLNet %s: Multi-Network p2p client (%s)"  
+-    Autoconf.current_version !networks_string
++  Printf.sprintf "MLNet %s: Multi-Network p2p client (%s)\nPatches: (%s)"  
++    Autoconf.current_version !networks_string !patches_string
+   
+   
+ (* Should we try to find another port when we cannot bind to the one set
+@@ -798,3 +800,8 @@
+   match tcp_connection with
+     Connection sock -> f sock
+   | _ -> ()
+\ Kein Zeilenumbruch am Dateiende.
++  
++let print_localtime () =
++let t = Unix.localtime (Unix.time ()) in
++  let { Unix.tm_mon = tm_mon; Unix.tm_mday = tm_mday; Unix.tm_hour = tm_hour; Unix.tm_min = tm_min; Unix.tm_sec = tm_sec } = t in
++  lprintf " on localtime: %2d/%2d, %02d:%02d:%02d\n" tm_mday (tm_mon+1) tm_hour tm_min tm_sec;
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/daemon/common/commonInteractive.ml ./src/daemon/common/commonInteractive.ml
+--- ./src/daemon/common/commonInteractive.ml	2004-03-07 10:34:24.000000000 +0100
++++ ./src/daemon/common/commonInteractive.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -585,6 +585,19 @@
+   );
+   !options
+ 
++let parse_simple_options args = 
++  let v = all_simple_options () in
++  match args with
++    [] -> v 
++    | args ->
++      let match_star = Str.regexp "\\*" in
++      let options_filter = Str.regexp ("^\\(" 
++        ^ (List.fold_left (fun acc a -> acc 
++        ^ (if acc <> "" then "\\|" else "") 
++        ^ (Str.global_replace match_star ".*" a)) "" args) 
++        ^ "\\)$") in
++      List.filter (fun o -> Str.string_match options_filter o.option_name 0) v
++
+ let some_simple_options num =
+                let cnt = ref 0 in
+                let options = ref [] in
+@@ -704,7 +717,7 @@
+     
+     
+ let _ =
+-  add_infinite_option_timer filter_search_delay (fun _ ->
++  add_infinite_timer filter_search_delay (fun _ ->
+ (*      if !!filter_search then *) begin
+ (*          lprintf "Filter search results\n"; *)
+           List.iter (fun user ->
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/daemon/common/commonMessages.ml ./src/daemon/common/commonMessages.ml
+--- ./src/daemon/common/commonMessages.ml	2004-02-08 23:58:17.000000000 +0100
++++ ./src/daemon/common/commonMessages.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -66,8 +66,8 @@
+ input.txt2 {background: @C11@;
+ font: 12px courier; padding: 0px;
+ width: 38px; height: 18px; line-height: 14px; color: #000;
+-BORDER-RIGHT: #000 2px solid; BORDER-TOP: #fff 1px solid;
+-BORDER-LEFT: #fff 1px solid; BORDER-BOTTOM: #000 2px solid;
++BORDER-RIGHT: #fff 2px solid; BORDER-TOP: #000 1px solid;
++BORDER-LEFT: #000 1px solid; BORDER-BOTTOM: #fff 2px solid;
+ }
+ input.but2 {background: @C14@;
+ border: 0px; padding: 0px; font: bold 10px verdana; 
+@@ -305,6 +305,8 @@
+ td.ar {text-align: right;}
+ td.al {text-align: left;}
+ td.ac {text-align: center;}
++td.brs {border-right: #000 solid 1px; padding-left: 2px; padding-right: 2px; text-align: center;}
++td.np {padding-left: 2px; padding-right: 0px; text-align: center;}
+ td.big { border-top: #000 solid 1px; border-left: #000 solid 1px; }
+ td.pr { border-right: #000 solid 1px; }
+ .bigbutton { font-family: Verdana, serif; font-size: 10px; background: @C0@; border: @C0@ solid 1px; cursor: pointer; }
+@@ -381,7 +383,7 @@
+ onclick=\"showTab(6);mSub('fstatus','version');mSub('output','help');\">Help+</TD></TR></TBODY></TABLE></TD>
+ <FORM name=cmdFormular action=submit target=output>
+ <TD noWrap width=100% title=\\\"Input mldonkey commands here\\\"><TABLE cellSpacing=0 cellpadding=0 width=\"100%\"><TBODY><TR>
+-<TD style=\"padding: 0px; border: 0px;\" title=\"Input mldonkey command here\">
++<TD style=\"padding: 0px; border: 0px; padding-left: 5px;\" title=\"Input mldonkey command here\">
+ <INPUT class=\"txt2\" style=\"WIDTH: 99%;\" name=q>
+ </TD></TR></TBODY></TABLE></TD><TD noWrap>
+ <TABLE class=commands cellSpacing=0 cellPadding=0 width=\"100%\"><TBODY><TR>
+@@ -505,6 +507,9 @@
+ <TD class=\"bu bbig\" title=\"View/send messages (20 second refresh)\" 
+ onMouseOver=\"mOvr(this,'mOvr1');\" onMouseOut=\"mOut(this);\"
+ onClick=\"mSub('output','message')\">Messages</TD>
++<TD class=\"bu bbig\" title=\"IP blocking statistics\" 
++onMouseOver=\"mOvr(this,'mOvr1');\" onMouseOut=\"mOut(this);\"
++onClick=\"mSub('output','block_list')\">IP blocking</TD>
+ <TD class=\"bu bbig\" title=\"Recover files from temp directory\" 
+ onMouseOver=\"mOvr(this,'mOvr1');\" onMouseOut=\"mOut(this);\"
+ onClick=\"mSub('fstatus','recover_temp');mSub('output','scan_temp');\">Recover temp</TD>
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/daemon/common/commonOptions.ml ./src/daemon/common/commonOptions.ml
+--- ./src/daemon/common/commonOptions.ml	2004-03-08 00:02:31.000000000 +0100
++++ ./src/daemon/common/commonOptions.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -329,11 +329,6 @@
+   
+ let current_section = networks_section
+   
+-let enable_server = define_expert_option current_section
+-    ["enable_server"]
+-  "Set to true if you also want mldonkey to run as a server (experimental)"
+-    bool_option false
+-
+ let enable_overnet = define_option current_section
+     ["enable_overnet"]
+   "Set to true if you also want mldonkey to run as an overnet client (enable_donkey must be true)"
+@@ -495,7 +490,7 @@
+   [
+     ("server.met", 1, "http://ocbmaurice.dyndns.org/pl/slist.pl/server.met?download/server-best.met");
+     ("ocl",1, "http://members.lycos.co.uk/appbyhp2/FlockHelpApp/contact-files/contact.ocl" );
+-    ("guarding.p2p", 1, "http://www.peerguardian.net/pgipdb/guarding.p2p");
++    ("guarding.p2p", 1, "http://www.bluetack.co.uk/config/antip2p.txt");
+   ]
+   
+ let ip_blocking = define_expert_option current_section ["ip_blocking"]
+@@ -604,10 +599,6 @@
+   "The maximal number of files in Downloading state (other ones are Queued)"
+     int_option 60
+     
+-let delete_original = define_option current_section ["delete_original"]
+-  "Should MLdonkey delete the file downloaded when splitting has been succesful"
+-    bool_option false
+-
+ let file_completed_cmd = define_option current_section 
+     ["file_completed_cmd"] "A command that is called when a file is completely
+     downloaded. Arguments are: <file_name on disk> <md4> <size>"
+@@ -727,7 +718,7 @@
+   "Allow others to browse our share list (0: none, 1: friends only, 2: everyone" allow_browse_share_option 2
+ 
+ let messages_filter = define_option current_section ["messages_filter"]
+-    "Regexp of messages to filter out" string_option ""
++    "Regexp of messages to filter out, example: string1\|string2\|string3" string_option "Your client is connecting too fast"
+   
+   
+   
+@@ -848,18 +839,6 @@
+ 
+ let commands_frame_height = define_expert_option current_section ["commands_frame_height"] "The height of the command frame in pixel (depends on your screen and browser sizes)" int_option 42
+ 
+-(*
+-let filter_search = define_expert_option current_section ["filter_search"]
+-  "Should mldonkey filter results of searches
+-  (results are displayed only if they exactly match the request,
+-    and filtering is done every 'filter_search_delay'." 
+-    bool_option false
+-    *)
+-
+-let filter_search_delay = define_expert_option current_section ["filter_search_delay"]
+-  "Delay before two filtering on results (results
+-    are not displayed until filtered). Min is 1 second." float_option 5.
+-    
+ let motd_html = define_expert_option current_section ["motd_html"]
+     "Message printed at startup (automatically downloaded from the previous
+     URL directory" string_option "Welcome to MLdonkey"
+@@ -933,7 +912,6 @@
+ let create_mlsubmit =
+   define_expert_option current_section ["create_mlsubmit"] "Should the MLSUBMIT.REG file be created" bool_option true
+   
+-
+ let minor_heap_size = define_expert_option current_section
+     ["minor_heap_size"] "Size of the minor heap in kB"
+     int_option 32
+@@ -942,14 +920,9 @@
+   "The minimal delay between two connections to the same client (in seconds)" 
+     int_option 600
+   
+-let max_reask_delay = define_expert_option current_section ["max_reask_delay"]
+-    "The maximal delay between two connections to the same client" 
+-  int_option 3600
+-    
+ let display_downloaded_results = define_expert_option current_section
+     ["display_downloaded_results"] "Whether to display results already downloaded" bool_option true
+ 
+-    
+ let filter_table_threshold = define_expert_option current_section
+     ["filter_table_threshold"] "Minimal number of results for filter form to appear"
+     int_option 50
+@@ -960,7 +933,7 @@
+ 
+ let save_options_delay = 
+   define_expert_option current_section ["save_options_delay"] 
+-    "The delay between two saves of the 'downloads.ini' file (default is 4 minutes)" 
++    "The delay between two saves of the 'downloads.ini' file (default is 15 minutes)" 
+   float_option 900.0
+ 
+ let server_connection_timeout = define_expert_option current_section
+@@ -988,10 +961,10 @@
+       string_option)))
+   []
+ 
+-let ip_cache_timeout = define_expert_option current_section
++(* let ip_cache_timeout = define_expert_option current_section
+     ["ip_cache_timeout"]
+     "The time an ip address can be kept in the cache"
+-    int_option 3600
++    int_option 3600 *)
+   
+ let compaction_overhead = define_expert_option current_section 
+     ["compaction_overhead"] 
+@@ -1099,6 +1072,8 @@
+ 
+ let start_running_plugins = ref false
+   
++let filter_search_delay = 5.0
++  
+ (* Infer which nets to start depending on the name used *)
+ let _ =
+   let name = String.lowercase (Filename.basename Sys.argv.(0)) in
+@@ -1118,7 +1093,6 @@
+   | "mlslsk" -> enable_soulseek =:= true
+   | "mlbt" -> enable_bittorrent =:= true
+   | "mlnap" -> enable_opennap =:= true
+-  | "mlcymes" -> enable_server =:= true
+   | _ -> 
+ (* default *)
+       enable_donkey =:= true;
+@@ -1153,8 +1127,6 @@
+         max_upload_slots =:= 3);
+   option_hook buffer_writes_threshold (fun _ ->
+       Unix32.max_buffered := Int64.of_int (1024 * !!buffer_writes_threshold));
+-  option_hook filter_search_delay (fun _ ->
+-      if !!filter_search_delay < 1. then filter_search_delay =:= 1.);
+   option_hook log_size (fun _ ->
+       lprintf_max_size := !!log_size   
+   );
+@@ -1342,7 +1314,6 @@
+     "Bandwidth", "Socket Buffer Size", shortname client_buffer_size, "T";
+ 
+     "Delays", "Min Reask Delay", shortname min_reask_delay, "T";
+-    "Delays", "Max Reask Delay", shortname max_reask_delay, "T";
+     "Delays", "Save Options Delay", shortname save_options_delay, "T";
+     "Delays", "Server Connection Timeout", shortname server_connection_timeout, "T";
+ (*    "Delays", "Client Connection Timeout", shortname  *)
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/daemon/common/commonShared.ml ./src/daemon/common/commonShared.ml
+--- ./src/daemon/common/commonShared.ml	2004-02-04 23:35:57.000000000 +0100
++++ ./src/daemon/common/commonShared.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -94,10 +94,10 @@
+ 
+ let update_shared_num impl =
+   if impl.impl_shared_num = 0 then begin
+-(*      if !verbose then begin *)
+-          lprintf "NEW SHARED %s/%s" impl.impl_shared_codedname
+-            impl.impl_shared_fullname; lprint_newline ();
+-(*        end; *)
++      if !verbose_share then begin
++          lprintf "NEW SHARED %s/%s\n" impl.impl_shared_codedname
++            impl.impl_shared_fullname;
++      end;
+       incr shared_counter;
+       impl.impl_shared_num <- !shared_counter;
+       H.add shareds_by_num (as_shared impl);
+@@ -133,8 +133,10 @@
+ 	dirnames_prio := (name, prio) :: !dirnames_prio;
+         name in
+   let codedname = Filename.concat dirname filename in
+-  lprintf "\ndirname %s \nfilename %s \nfullname %s\ncodedname %s"
+-    dirname filename fullname codedname; lprint_newline (); 
++    if !verbose_share then begin
++      lprintf "\ndirname %s \nfilename %s \nfullname %s\ncodedname %s\n"
++      dirname filename fullname codedname;
++    end;
+ 
+   let size = Unix32.getsize fullname in
+   incr files_scanned;
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/daemon/common/commonUploads.ml ./src/daemon/common/commonUploads.ml
+--- ./src/daemon/common/commonUploads.ml	2004-03-07 10:34:24.000000000 +0100
++++ ./src/daemon/common/commonUploads.ml	2004-04-02 00:32:12.000000000 +0200
+@@ -715,7 +715,7 @@
+   (let upload_rate = 
+       (if !!max_hard_upload_rate = 0 then 10000 else !!max_hard_upload_rate)
+       * 1024 in
+-    not_buffer_more sock (upload_rate * (Fifo.length upload_clients)))
++    not_buffer_more sock (upload_rate * 2))
+ 
+ let upload_to_one_client () =
+   if !remaining_bandwidth < 10000 then begin
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/daemon/common/guiEncoding.ml ./src/daemon/common/guiEncoding.ml
+--- ./src/daemon/common/guiEncoding.ml	2004-03-07 23:48:26.000000000 +0100
++++ ./src/daemon/common/guiEncoding.ml	2004-04-02 00:32:12.000000000 +0200
+@@ -888,7 +888,7 @@
+         (Printexc2.to_string e)
+         
+         
+-let best_gui_version = 25
++let best_gui_version = 26
+   
+ (********** Some assertions *********)
+   
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/daemon/driver/driverCommands.ml ./src/daemon/driver/driverCommands.ml
+--- ./src/daemon/driver/driverCommands.ml	2004-03-08 00:02:31.000000000 +0100
++++ ./src/daemon/driver/driverCommands.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -1217,8 +1217,9 @@
+                   let v=   CommonInteractive.all_simple_options () in
+                   v
+               
+-              | [tab] ->
+-                  let tab = int_of_string tab in
++              | [arg] ->
++                  try  
++                  let tab = int_of_string arg in
+                   match tab with
+                     1 -> 
+                       [
+@@ -1276,10 +1277,8 @@
+                         strings_of_option update_gui_delay; 
+                         strings_of_option server_connection_timeout; 
+                         strings_of_option client_timeout; 
+-                        strings_of_option ip_cache_timeout; 
+                         strings_of_option compaction_delay; 
+                         strings_of_option min_reask_delay; 
+-                        strings_of_option max_reask_delay; 
+                         strings_of_option max_connections_per_second; 
+                         strings_of_option buffer_writes; 
+                         strings_of_option buffer_writes_delay; 
+@@ -1306,10 +1305,7 @@
+                         strings_of_option filename_in_subject; 
+                       ] 
+                   | 7 -> 
+-                      ([
+-                        strings_of_option enable_server; 
+-                        ] @
+-			(if Autoconf.donkey = "yes" then [(strings_of_option enable_overnet)] else [])
++                      ( (if Autoconf.donkey = "yes" then [(strings_of_option enable_overnet)] else [])
+ 			@ [
+ 			] @
+ 			(if Autoconf.donkey = "yes" then [(strings_of_option enable_donkey)] else [])
+@@ -1369,6 +1365,10 @@
+                   | _ -> 
+                       let v = CommonInteractive.some_simple_options (tab - !mtabs) in
+                       List.sort (fun d1 d2 -> compare d1 d2) v;
++              with _ ->
++                    let v = CommonInteractive.parse_simple_options args in
++                    List.sort (fun d1 d2 -> compare d1 d2) v;
++
+             
+             );
+             Printf.bprintf buf "
+@@ -1405,21 +1405,7 @@
+               Printf.bprintf buf "\\</td\\>\\</tr\\>\\</table\\>\\</div\\>";
+           end
+         else begin
+-            list_options o  (let v = CommonInteractive.all_simple_options () in
+-              match args with
+-                [] -> v
+-              | args ->
+-                  let match_star = Str.regexp "\\*" in
+-                  let options_filter = Str.regexp (
+-                      "^\\(" ^ (List.fold_left (fun acc a ->
+-                            acc ^
+-                              (if acc <> "" then "\\|" else "") ^
+-                              (Str.global_replace match_star ".*" a)
+-                        ) "" args) ^ "\\)$") in
+-                  List.filter (fun o ->
+-                      Str.string_match options_filter o.option_name 0
+-                  ) v
+-            );
++            list_options o (CommonInteractive.parse_simple_options args) 
+           end;
+         ""
+     ), ":\t\t\t\t\tprint all options";
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/daemon/driver/driverInteractive.ml ./src/daemon/driver/driverInteractive.ml
+--- ./src/daemon/driver/driverInteractive.ml	2004-02-02 11:34:08.000000000 +0100
++++ ./src/daemon/driver/driverInteractive.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -142,6 +142,7 @@
+ 	match nn with 
+    | "Open Napster" -> "N"
+    | "Direct Connect" -> "C"
++   | "FileTP" -> "T"
+    | _ -> String.sub nn 0 1 
+    
+   
+@@ -497,7 +498,9 @@
+ 
+ \\<table width=\\\"100%%\\\" class=\\\"downloaders\\\" cellspacing=0 cellpadding=0\\>\\<tr\\>
+ 
+-\\<td title=\\\"Pause/Resume/Cancel\\\" class=\\\"dlheader\\\"\\>P/R/C\\</td\\>"
++\\<td title=\\\"Pause\\\"  class=\\\"dlheader np\\\"\\>P\\</td\\>
++\\<td title=\\\"Resume\\\" class=\\\"dlheader np\\\"\\>R\\</td\\>
++\\<td title=\\\"Cancel\\\" class=\\\"dlheader brs\\\"\\>C\\</td\\>"
+ (if !qnum > 0 then begin
+ 	Printf.sprintf "title=\\\"Active(%d): %s/%s | Queued(%d): %s/%s\\\""
+ 	(List.length guifiles - !qnum) (size_of_int64 (Int64.sub !tdl !qdl)) (size_of_int64 (Int64.sub !tsize !qsize))
+@@ -548,16 +551,17 @@
+           (if downloading file then
+               Printf.sprintf "
+ 				onMouseOver=\\\"mOvr(this);return true;\\\" onMouseOut=\\\"mOut(this);\\\"\\>
+-                \\<td class=\\\"dl al\\\"\\>\\<input class=checkbox name=pause type=checkbox value=%d\\> R
+-                \\<input class=checkbox name=cancel type=checkbox value=%d\\>\\</td\\>"
++                \\<td class=\\\"dl al np\\\"\\>\\<input class=checkbox name=pause type=checkbox value=%d\\>\\</td\\>
++                \\<td class=\\\"dl al np\\\"\\>R\\</td\\>
++                \\<td class=\\\"dl al brs\\\"\\>\\<input class=checkbox name=cancel type=checkbox value=%d\\>\\</td\\>"
+                 file.file_num
+                 file.file_num
+             else 
+               Printf.sprintf "
+ 				onMouseOver=\\\"mOvr(this);return true;\\\" onMouseOut=\\\"mOut(this);\\\"\\>
+-                \\<td class=\\\"dl al\\\"\\>P
+-                \\<input class=checkbox name=resume type=checkbox value=%d\\>
+-                \\<input class=checkbox name=cancel type=checkbox value=%d\\>\\</td\\>"
++                \\<td class=\\\"dl al np\\\"\\>P\\</td\\>
++                \\<td class=\\\"dl al np\\\"\\>\\<input class=checkbox name=resume type=checkbox value=%d\\>\\</td\\>
++                \\<td class=\\\"dl al brs\\\"\\>\\<input class=checkbox name=cancel type=checkbox value=%d\\>\\</td\\>"
+                 file.file_num
+                 file.file_num);
+ 
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/daemon/driver/driverMain.ml ./src/daemon/driver/driverMain.ml
+--- ./src/daemon/driver/driverMain.ml	2004-03-08 00:02:31.000000000 +0100
++++ ./src/daemon/driver/driverMain.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -359,6 +359,7 @@
+   MlUnix.set_signal  Sys.sighup
+     (Sys.Signal_handle (fun _ ->
+         lprintf "SIGHUP"; BasicSocket.close_all ();
++	CommonGlobals.print_localtime ();
+ (*        BasicSocket.print_sockets (); *)
+     ));
+   MlUnix.set_signal  Sys.sigpipe (*Sys.Signal_ignore*)
+@@ -488,8 +489,11 @@
+   Unix32.max_cache_size := MlUnix.max_filedescs
+  
+ let _ =
+-  lprintf (_b "Core started\n"); 
++  lprintf (_b "Core started"); 
+   core_included := true;
++  CommonGlobals.print_localtime ();
++  CommonGlobals.do_at_exit (fun _ -> CommonGlobals.print_localtime ());
++  CommonGlobals.do_at_exit (fun _ -> lprintf "Core stopped");
+   
+   if not !keep_console_output then begin
+       lprintf (_b "Disabling output to console, to enable: stdout true\n");
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/gtk/newgui/gui_friends.ml ./src/gtk/newgui/gui_friends.ml
+--- ./src/gtk/newgui/gui_friends.ml	2004-03-07 10:34:25.000000000 +0100
++++ ./src/gtk/newgui/gui_friends.ml	2004-04-02 00:32:12.000000000 +0200
+@@ -446,7 +446,7 @@
+         gclient_name = c.client_name;
+         gclient_files = c.client_files;
+         gclient_rating = c.client_rating;
+-        gclient_connect_time = c.client_connect_time;
++        gclient_connect_time = (BasicSocket.last_time () - c.client_connect_time);
+         gclient_software = c.client_software;
+         gclient_emulemod = c.client_emulemod;
+         gclient_downloaded = c.client_downloaded;
+@@ -482,7 +482,7 @@
+           (* added *)
+           f.gclient_tags <- f_new.client_tags;
+           f.gclient_rating <- f_new.client_rating;
+-          f.gclient_connect_time <-  f_new.client_connect_time;
++          f.gclient_connect_time <-  (BasicSocket.last_time () - f_new.client_connect_time);
+           f.gclient_software <- f_new.client_software;
+           f.gclient_emulemod <- f_new.client_emulemod;
+           f.gclient_downloaded <- f_new.client_downloaded;
+@@ -649,7 +649,7 @@
+         gclient_name = c.client_name;
+         gclient_files = c.client_files;
+         gclient_rating = c.client_rating;
+-        gclient_connect_time =  c.client_connect_time;
++        gclient_connect_time =  (BasicSocket.last_time () - c.client_connect_time);
+         gclient_software = c.client_software;
+         gclient_emulemod = c.client_emulemod;
+         gclient_downloaded = c.client_downloaded;
+@@ -693,7 +693,7 @@
+                     let (row, c) = self#find_client c_new.client_num in
+                     c.gclient_state <- c_new.client_state;
+                     c.gclient_rating <- c_new.client_rating;
+-                    c.gclient_connect_time <- c_new.client_connect_time;
++                    c.gclient_connect_time <- (BasicSocket.last_time () - c_new.client_connect_time);
+                     c.gclient_name <- c_new.client_name;
+                     c.gclient_kind <- c_new.client_kind;
+                     c.gclient_tags <- c_new.client_tags;
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/bittorrent/bTClients.ml ./src/networks/bittorrent/bTClients.ml
+--- ./src/networks/bittorrent/bTClients.ml	2004-03-08 00:02:31.000000000 +0100
++++ ./src/networks/bittorrent/bTClients.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -445,7 +445,7 @@
+     connection_ok c.client_connection_control;
+     if !verbose_msg_clients then
+       lprintf "file and client found\n";
+-    if not c.client_incoming then
++(*    if not c.client_incoming then *)
+       send_bitfield c;
+     c.client_blocks_sent <- file.file_blocks_downloaded;
+ (*
+@@ -739,6 +739,7 @@
+           for j = 0 to 7 do
+             if (int_of_char p.[i]) land bits.(j) <> 0 then
+               begin
++		c.client_new_chunks <- i*8+j :: c.client_new_chunks;
+                 bitmap.[i*8+j] <- '1';
+               end
+             else 
+@@ -749,6 +750,7 @@
+ (*Update availability for GUI*)
+         CommonEvent.add_event (File_update_availability
+             (as_file file, as_client c,  String.copy bitmap));
++        update_client_bitmap c;
+         
+         let swarmer = match c.client_file.file_swarmer with
+             None -> assert false
+@@ -771,8 +773,10 @@
+                 (Int64Swarmer.AvailableCharBitmap bitmap));
+         c.client_registered_bitfield <- true;	  
+         c.client_bitmap <- Some bitmap;
++(*
+         if c.client_incoming then
+           send_bitfield c;
++*)
+         send_interested c;
+         if !verbose_msg_clients then 
+           lprintf "New BitField Registered\n";
+@@ -781,7 +785,21 @@
+         done*)
+     
+     | Have n ->
+-        begin
++	(*A client can send a Have without sending a Bitfield*)
++        let swarmer = match c.client_file.file_swarmer with
++            None -> assert false
++          | Some swarmer -> swarmer in
++	let n = Int64.to_int n in
++	let verified = Int64Swarmer.verified_bitmap swarmer in
++          if verified.[n] < '2' then begin
++            c.client_interesting <- true;
++            send_interested c;  
++            c.client_new_chunks <- n :: c.client_new_chunks;
++            update_client_bitmap c;
++	  end;
++	    
++
++(*        begin
+           match c.client_bitmap, c.client_uploader with
+             Some bitmap, Some up ->
+               let swarmer = Int64Swarmer.uploader_swarmer up in
+@@ -801,9 +819,11 @@
+                   done*)
+                       end
+                   end
+-          | _ -> assert false
++          | None, Some _ -> lprintf "no bitmap but client_uploader\n";
++	  | Some _ , None ->lprintf "bitmap but no client_uploader\n";
++	  | None, None -> lprintf "no bitmap no client_uploader\n";
+         end
+-        
++*)      
+     | Interested ->
+         c.client_interested <- true;
+         
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/bittorrent/bTGlobals.ml ./src/networks/bittorrent/bTGlobals.ml
+--- ./src/networks/bittorrent/bTGlobals.ml	2004-03-07 10:34:25.000000000 +0100
++++ ./src/networks/bittorrent/bTGlobals.ml	2004-04-02 00:32:12.000000000 +0200
+@@ -236,7 +236,7 @@
+       
+ let new_client file peer_id kind =
+   try
+-    let c = Hashtbl.find file.file_clients peer_id in
++    let c = Hashtbl.find file.file_clients kind in
+     c.client_host <- kind;
+     c
+   with _ ->
+@@ -280,7 +280,7 @@
+         } in
+       c.client_connection_control.control_min_reask <- 120;
+       new_client impl;
+-      Hashtbl.add file.file_clients peer_id c;
++      Hashtbl.add file.file_clients kind c;
+       file.file_clients_num <- file.file_clients_num + 1;
+       file_add_source (as_file file) (as_client c);
+       c
+@@ -290,7 +290,7 @@
+   current_files := List2.removeq file !current_files
+ 
+ let remove_client c = 
+-    Hashtbl.remove c.client_file.file_clients c.client_uid ;
++    Hashtbl.remove c.client_file.file_clients c.client_host ;
+     c.client_file.file_clients_num <- c.client_file.file_clients_num  - 1;
+     file_remove_source (as_file c.client_file) (as_client c)
+ 
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/bittorrent/bTOptions.ml ./src/networks/bittorrent/bTOptions.ml
+--- ./src/networks/bittorrent/bTOptions.ml	2004-01-30 07:11:05.000000000 +0100
++++ ./src/networks/bittorrent/bTOptions.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -58,7 +58,6 @@
+   [
+     "Port", shortname client_port, "T";
+     "Commit Downloads In Incoming Subdir", shortname commit_in_subdir, "T";
+-    "Delete Original", shortname delete_original, "B";
+   ]
+ 
+   
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/bittorrent/bTProtocol.ml ./src/networks/bittorrent/bTProtocol.ml
+--- ./src/networks/bittorrent/bTProtocol.ml	2004-01-30 07:11:05.000000000 +0100
++++ ./src/networks/bittorrent/bTProtocol.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -293,6 +293,14 @@
+     try
+       while b.len >= 4 do
+         let msg_len = get_int b.buf b.pos in
++        if msg_len < 0 then
++          begin
++            lprintf "BT: Unknown message dropped!!\n";
++            dump (String.sub b.buf b.pos b.len);
++            buf_used b b.len;
++          end
++        else
++          begin
+         if b.len >= 4 + msg_len then
+           begin
+               buf_used b 4;
+@@ -311,7 +319,8 @@
+               (*received a ping*)
+               set_lifetime sock 130.
+           end
+-        else raise Not_found
++        else raise Not_found;
++          end
+       done
+     with 
+     | Not_found -> ()
+@@ -329,15 +338,20 @@
+           
+ (*          dump (String.sub b.buf b.pos (min b.len 100)); *)
+           let slen = get_int8 b.buf b.pos in
+-          if slen + 49 <= b.len then
++	  let peer_id = ref Sha1.null in
++          if slen + 29 <= b.len then
+             let proto = String.sub b.buf (b.pos+1) slen in
+             let file_id = Sha1.direct_of_string 
+                 (String.sub  b.buf (b.pos+9+slen) 20) in
+-            let peer_id = Sha1.direct_of_string 
+-                (String.sub  b.buf (b.pos+29+slen) 20) in
++	      if slen + 49 <= b.len then
++		peer_id := Sha1.direct_of_string 
++		  (String.sub  b.buf (b.pos+29+slen) 20);
+             let proto,pos = get_string8 b.buf b.pos in
+-            buf_used b (slen+49);
+-            h gconn sock (proto, file_id, peer_id);
++	      if slen + 49 <= b.len then
++		buf_used b (slen+49)
++	      else 
++		buf_used b (slen+29);
++            h gconn sock (proto, file_id, !peer_id);
+             if not (TcpBufferedSocket.closed sock) then 
+               iter_read sock 0
+ 
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/bittorrent/bTTypes.ml ./src/networks/bittorrent/bTTypes.ml
+--- ./src/networks/bittorrent/bTTypes.ml	2004-03-07 10:34:25.000000000 +0100
++++ ./src/networks/bittorrent/bTTypes.ml	2004-04-02 00:32:12.000000000 +0200
+@@ -78,7 +78,7 @@
+     file_id : Sha1.t;
+     file_name : string;
+     mutable file_swarmer : Int64Swarmer.t option;
+-    mutable file_clients : (Sha1.t, client) Hashtbl.t ;
++    mutable file_clients : ((Ip.t*int), client) Hashtbl.t ;
+     mutable file_clients_num : int ;
+     mutable file_chunks : Sha1.t array; 
+     mutable file_tracker_connected : bool;
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/donkey/donkeyClient.ml ./src/networks/donkey/donkeyClient.ml
+--- ./src/networks/donkey/donkeyClient.ml	2004-03-08 00:02:31.000000000 +0100
++++ ./src/networks/donkey/donkeyClient.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -136,7 +136,7 @@
+   
+   let client_enter_upload_queue c =
+     do_if_connected  c.client_sock (fun sock ->
+-        set_rtimeout sock !!upload_timeout;
++        set_rtimeout sock !!upload_first_message_timeout;
+         direct_client_send c (
+           let module M = DonkeyProtoClient in
+           let module Q = M.AvailableSlot in
+@@ -196,6 +196,8 @@
+   CommonEvent.add_event (Console_message_event m)
+   
+ let disconnect_client c reason =
++  CommonUploads.remove_pending_slot (as_client c.client_client);
++  set_client_has_a_slot (as_client c.client_client) false;
+   match c.client_sock with
+     NoConnection -> ()
+   | ConnectionWaiting token ->
+@@ -203,18 +205,18 @@
+       c.client_sock <- NoConnection
+   | Connection sock ->
+       (try
+-          if c.client_debug then 
+-            lprintf "Client[%d]: disconnected\n" (client_num c);
++          if c.client_debug then begin
++            lprintf "Client[%d]: disconnected" (client_num c);
++	    CommonGlobals.print_localtime ();
++	  end;
+           if c.client_checked then count_seen c;
+           if !!log_clients_on_console && c.client_name <> "" then 
+             log_client_info c sock
+             ;
+           (try Hashtbl.remove connected_clients c.client_md4 with _ -> ());
+-          CommonUploads.remove_pending_slot (as_client c.client_client);
+           connection_failed c.client_connection_control;
+           TcpBufferedSocket.close sock reason;
+           printf_string "-c"; 
+-          set_client_has_a_slot (as_client c.client_client) false;
+           
+           (* Remove the Connected and NoLimit tags *)
+           set_client_type c (client_type c
+@@ -405,6 +407,9 @@
+     let len_requested = Int64.to_int (Int64.sub end_pos begin_pos) in
+     let len = Int64.to_int (Int64.sub end_pos begin_pos) in
+     let pair = (begin_pos, end_pos) in
++    let chunk = up.up_file.file_chunks.(Int64.to_int (Int64.div begin_pos block_size)) in
++      match chunk with
++	  PresentVerified | PresentTemp ->
+     (match up.up_chunks with
+         [] ->
+           up.up_pos <- begin_pos;
+@@ -413,6 +418,7 @@
+       | chunks ->
+           if not (List.mem pair chunks) then
+             up.up_chunks <- chunks @ [pair])
++	| _ -> ()
+   
+ let identify_client_brand c =
+   if c.client_brand = Brand_unknown then
+@@ -733,7 +739,7 @@
+         | Known_location (ip,port) ->
+             lprintf " [%s:%d]" (Ip.to_string ip) port;
+       );
+-      lprint_newline ();
++      CommonGlobals.print_localtime ();
+       
+       M.print t;
+       lprint_newline ();
+@@ -929,12 +935,12 @@
+             lprintf "[QUEUED WITH BLOCK]"; lprint_newline ();
+             DonkeyOneFile.clean_client_zones c;
+       end;
++      (try	 
+       begin
+         match c.client_file_queue with
+           _ :: _ -> ()
+         | [] ->
+             if c.client_slot = SlotNotAsked then
+-              try
+                 let files, _ = try
+                     let v = Hashtbl.find join_queue_by_md4 c.client_md4 in
+                     if c.client_debug then
+@@ -943,6 +949,8 @@
+                   with _ ->
+                       let id = client_id c in
+                       let v = Hashtbl.find join_queue_by_id id in
++			(*if we fail to find file,chunks with this ^ 
++			  we should disconnect*)
+                       if c.client_debug then
+                         lprintf "Recovered file queue by md4\n";
+                       v
+@@ -955,12 +963,13 @@
+                 DonkeyOneFile.restart_download c
+               
+               
+-              with _ -> ()
++
+       end;
+ (* now, we can forget we have asked for a slot *)
+       c.client_slot <- SlotReceived;
+       DonkeyOneFile.find_client_block c
+-  
++       with _ -> disconnect_client c (Closed_for_error "Couldn't recover joined file");  
++      )
+   | M.JoinQueueReq _ when not (!!ban_queue_jumpers && c.client_banned) ->
+ (*
+ (*
+@@ -1049,6 +1058,7 @@
+           printf_string s;
+           c.client_rating <- c.client_rating + 1;
+           
++          DonkeySourcesMisc.add_file_location file c;
+           DonkeySourcesMisc.set_request_result c file File_found;
+           DonkeyNeighbours.new_neighbour c file;
+           
+@@ -1079,6 +1089,7 @@
+       let module Q = M.QueryChunksReply in      
+       let file = find_file t.Q.md4 in
+       
++      DonkeySourcesMisc.add_file_location file c;
+       DonkeySourcesMisc.set_request_result c file File_found;
+       
+       if file_state file = FileDownloading then begin
+@@ -1214,6 +1225,8 @@
+       let begin_pos = t.Q.start_pos in
+       let end_pos = t.Q.end_pos in
+       
++      DonkeySourcesMisc.add_file_location file c;
++
+       set_client_state c (Connected_downloading (file_num file));
+       let len = Int64.sub end_pos begin_pos in
+       if Int64.to_int len <> t.Q.bloc_len then begin
+@@ -1235,20 +1248,19 @@
+             then 
+               let chunk_num = Int64.to_int (Int64.div begin_pos block_size) 
+               in
+-              lprintf "%d: Exceeding block boundaries" (client_num c);
+-              lprint_newline ();
++	      if !verbose then begin
++              lprintf "%d: Exceeding block boundaries\n" (client_num c);
+               
+-              lprintf "%Ld-%Ld (%Ld-%Ld)" 
++              lprintf "%Ld-%Ld (%Ld-%Ld)\n" 
+                 (begin_pos) (end_pos)
+               (bb.block_begin) (bb.block_end)
+               ;
+-              lprint_newline ();
+               
+               List.iter (fun z ->
+                   lprintf "zone: %Ld-%Ld"
+                     (z.zone_begin) (z.zone_end)
+               ) c.client_zones;
+-
++              end;
+ (* try to recover the corresponding block ... *)
+               
+               if bb.block_pos <> chunk_num then begin
+@@ -1422,12 +1434,18 @@
+             count_filerequest c;
+             let file = find_file t in
+             (match file.file_shared with
+-                None -> ()
++                None -> 
++		  if file_size file > block_size then 
++		    ()
++		  else
++		    (*The file_size is < one block : emule clients won't send a 
++		      querychunks we must send now that we don't share this file*)
++		    direct_client_send c (
++		      M.NoSuchFileReq t)	
+               | Some impl ->
++		  begin
+                   shared_must_update_downloaded (as_shared impl);
+-                  impl.impl_shared_requests <- impl.impl_shared_requests + 1);
+-            request_for c file sock;
+-	    set_client_upload (as_client c.client_client) (shared_of_file file);
++                    impl.impl_shared_requests <- impl.impl_shared_requests + 1;
+             direct_client_send c (
+               let module Q = M.QueryFileReply in
+               let filename = file_best_name file in
+@@ -1438,6 +1456,10 @@
+                 Q.md4 = file.file_md4;
+                 Q.name = published_filename
+               });
++		  end
++	    );
++	      set_client_upload (as_client c.client_client) (shared_of_file file);
++              request_for c file sock;
+             DonkeySourcesMisc.query_file c file
+           
+           with _ -> ()	    
+@@ -1637,6 +1659,14 @@
+       new_chunk up t.Q.start_pos1 t.Q.end_pos1;
+       new_chunk up t.Q.start_pos2 t.Q.end_pos2;
+       new_chunk up t.Q.start_pos3 t.Q.end_pos3;
++      match up.up_chunks with 
++	  [] -> 	
++	    set_client_has_a_slot (as_client c.client_client) false;
++	    CommonUploads.refill_upload_slots ();
++            disconnect_client c (Closed_for_error "Bad bloc requests");
++	    lprintf "Rejected uploader : bad query\n";
++	| _ ->  
++	    begin	    
+       c.client_upload <- Some up;
+       set_client_upload (as_client c.client_client) (shared_of_file file);
+       if not waiting && !CommonUploads.has_upload = 0 then begin
+@@ -1644,6 +1674,7 @@
+           up.up_waiting <- true
+         end
+     end
++    end
+ 
+   | M.NoSuchFileReq t ->
+       begin
+@@ -1667,7 +1698,7 @@
+ 
+   | BASIC_EVENT (LTIMEOUT | RTIMEOUT) ->
+       printf_string "[TO?]";
+-      close sock Closed_for_timeout;
++      disconnect_client c (Closed_for_timeout);
+ 
+       (*
+       if c.client_name <> "" then begin
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/donkey/donkeyComplexOptions.ml ./src/networks/donkey/donkeyComplexOptions.ml
+--- ./src/networks/donkey/donkeyComplexOptions.ml	2004-02-04 19:58:18.000000000 +0100
++++ ./src/networks/donkey/donkeyComplexOptions.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -719,7 +719,8 @@
+ let diff_time = ref 0
+ 
+ let save _ =
+-  lprintf "SAVING SHARED FILES AND SOURCES"; lprint_newline ();
++  lprintf "SAVING SHARED FILES AND SOURCES";
++  CommonGlobals.print_localtime ();
+   Options.save_with_help shared_files_ini;
+   guptime =:= !!guptime + (last_time () - start_time) - !diff_time;
+   diff_time := (last_time () - start_time);
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/donkey/donkeyFiles.ml ./src/networks/donkey/donkeyFiles.ml
+--- ./src/networks/donkey/donkeyFiles.ml	2004-01-30 07:11:05.000000000 +0100
++++ ./src/networks/donkey/donkeyFiles.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -474,19 +474,19 @@
+ (*
+   try
+ (*    lprintf "upload ?"; lprint_newline (); *)
+-    if !!new_upload_system then
++(*    if !!new_upload_system then *)
+       NewUpload.next_uploads ()
+-    else
++(*    else
+       OldUpload.next_uploads ()
+   with e -> 
+       lprintf "exc %s in upload" (Printexc2.to_string e);
+-      lprint_newline () 
++      lprint_newline () *)
+       
+ let reset_upload_timer _ =
+-    if !!new_upload_system then
++(*    if !!new_upload_system then *)
+       NewUpload.reset_upload_timer ()
+-    else
+-      OldUpload.reset_upload_timer ()
++(*    else
++      OldUpload.reset_upload_timer () *)
+   
+   
+ let upload_credit_timer _ =
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/donkey/donkeyGlobals.ml ./src/networks/donkey/donkeyGlobals.ml
+--- ./src/networks/donkey/donkeyGlobals.ml	2004-03-08 00:02:31.000000000 +0100
++++ ./src/networks/donkey/donkeyGlobals.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -167,10 +167,13 @@
+   
+ let queue_timeout = ref (60. *. 10.) (* 10 minutes *)
+     
++let files_queries_per_minute = 1
++    
+ let nclients = ref 0
+   
+ let connected_server_list = ref ([]  : server list)
+ 
++let protocol_version = 61
+   
+ let (banned_ips : (Ip.t, int) Hashtbl.t) = Hashtbl.create 113
+ let (old_requests : (int * int, request_record) Hashtbl.t) = 
+@@ -756,9 +759,7 @@
+   | FileAborted s -> Printf.sprintf "Aborted: %s" s
+   | FileQueued -> "File Queued"
+       
+-
+-(* First patch for removing MLDK by devein(?) *)
+-let left_bytes = ""
++let left_bytes = "MLDK"
+ 
+ let overnet_server_ip = ref Ip.null
+ let overnet_server_port = ref 0
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/donkey/donkeyInteractive.ml ./src/networks/donkey/donkeyInteractive.ml
+--- ./src/networks/donkey/donkeyInteractive.ml	2004-03-07 10:34:25.000000000 +0100
++++ ./src/networks/donkey/donkeyInteractive.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -966,7 +966,7 @@
+       !list
+   );
+   file_ops.op_file_print_sources_html <- (fun file buf ->
+-      if !!source_management = 3 then DonkeySources.print_sources_html file buf
++      DonkeySources.print_sources_html file buf
+   );
+   file_ops.op_file_cancel <- (fun file ->
+       Hashtbl.remove files_by_md4 file.file_md4;
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/donkey/donkeyMain.ml ./src/networks/donkey/donkeyMain.ml
+--- ./src/networks/donkey/donkeyMain.ml	2004-01-30 07:11:05.000000000 +0100
++++ ./src/networks/donkey/donkeyMain.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -62,7 +62,6 @@
+   DonkeyThieves.clean_thieves ()
+     
+ let quarter_timer timer =
+-  DonkeyServers.remove_old_servers ();
+   clean_join_queue_tables ()
+ 
+ let fivemin_timer timer =
+@@ -126,13 +125,13 @@
+   client_to_client_tags :=
+   [
+     string_tag "name" (local_login ());
+-    int_tag "version" !!DonkeyOptions.protocol_version;
++    int_tag "version" protocol_version;
+     int_tag "port" !client_port;
+   ];      
+   client_to_server_tags :=
+   [
+     string_tag "name" (local_login ());
+-    int_tag "version" !!DonkeyOptions.protocol_version;
++    int_tag "version" protocol_version;
+     int_tag "port" !client_port;
+   ];      
+   if Autoconf.has_zlib then
+@@ -277,7 +276,7 @@
+ 
+     reset_tags ();
+ 
+-    Options.option_hook DonkeyOptions.protocol_version reset_tags;
++(*    Options.option_hook DonkeyOptions.protocol_version reset_tags; *)
+     Options.option_hook global_login reset_tags;
+     Options.option_hook login reset_tags;
+     
+@@ -300,7 +299,7 @@
+     add_session_timer enabler 900. quarter_timer;
+     add_session_timer enabler 1. second_timer;
+     add_session_timer enabler 60. DonkeyServers.query_locations_timer;
+-
++    if !!remove_old_servers_delay > 0. then add_session_option_timer enabler remove_old_servers_delay DonkeyServers.remove_old_servers;
+     
+     DonkeyComplexOptions.load_sources ();
+     
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/donkey/donkeyOptions.ml ./src/networks/donkey/donkeyOptions.ml
+--- ./src/networks/donkey/donkeyOptions.ml	2004-03-07 10:34:26.000000000 +0100
++++ ./src/networks/donkey/donkeyOptions.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -124,9 +124,9 @@
+     ["max_walker_servers"] "Number of servers that can be used to walk
+ between servers" int_option 1
+     
+-let max_sources_age = define_expert_option donkey_section
++(* let max_sources_age = define_expert_option donkey_section
+     ["max_source_age"] "Sources that have not been connected for this number of days are removed"
+-    int_option 3
++    int_option 3 *)
+   
+ let max_clients_per_second = define_expert_option donkey_section
+     ["max_clients_per_second"] 
+@@ -185,18 +185,6 @@
+     will eventually be removed"
+     (list_option int_option) []
+    
+-let protocol_version = 
+-  define_expert_option donkey_section ["protocol_version"] 
+-    "The version of the protocol that should be sent to servers "
+-    int_option 61
+-  
+-  (*
+-let emule_protocol_version = 
+-  define_expert_option donkey_section ["emule_protocol_version"] 
+-    "The version of the protocol that should be sent to eMule peers "
+-    int_option 0x26
+-    *)
+-
+ let queued_timeout = 
+   define_expert_option donkey_section ["queued_timeout"] 
+     "How long should we wait in the queue of another client"
+@@ -207,6 +195,11 @@
+     "How long can a silent client stay in the upload queue"
+     float_option 1800. 
+       
++let upload_first_message_timeout = 
++  define_expert_option donkey_section ["upload_first_message_timeout"] 
++    "Maximal delay between a client receiving an upload slot and his first request"
++    float_option 10. 
++      
+ let upload_lifetime = 
+   define_expert_option donkey_section ["upload_lifetime"] 
+     "How long a downloading client can stay in my upload queue (in minutes >5)"
+@@ -245,21 +238,14 @@
+   are currently connected to, for the central server to be able to
+     generate accurate server lists." bool_option false
+ 
+-let files_queries_per_minute = define_expert_option donkey_section
+-    ["files_queries_per_minute"] 
+-  "Maximal number of localisation queries that can be sent to
+-  one server per minute. Some servers kick clients when this
+-  value is greater than 1" int_option 1
+-
+-let files_queries_initial_delay = define_expert_option donkey_section
+-    ["files_queries_initial_delay"] 
+-  "Initial delay after sending the first localisation queries to
+-  a server, before sending other localisation queries." int_option 20
+-
+ let commit_in_subdir = define_expert_option donkey_section ["commit_in_subdir"]
+   "The subdirectory of temp/ where files should be moved to"
+     string_option ""
+ 
++let remove_old_servers_delay = define_expert_option donkey_section ["remove_old_servers_delay"]
++  "How often should remove old donkey be called (in seconds, 0 to disable)"
++    float_option 900.
++
+ let min_left_servers = define_expert_option donkey_section ["min_left_servers"]
+   "Minimal number of servers remaining after remove_old_servers"
+     int_option 200
+@@ -284,10 +270,6 @@
+     "Are the cancelled files added to the old files list to prevent re-download ?"
+     bool_option false
+   
+-let new_upload_system = define_expert_option donkey_section
+-    ["new_upload_system"] "Should we use the new experimental upload system"
+-    bool_option true
+-  
+ let send_warning_messages = define_expert_option donkey_section
+     ["send_warning_messages"] "true if you want your mldonkey to lose some
+ upload bandwidth sending messages to clients which are banned :)"
+@@ -318,12 +300,12 @@
+ 
+   
+   
+-let source_management = define_expert_option donkey_section
++(* let source_management = define_expert_option donkey_section
+     ["source_management"] "Which source management to use:
+     1: based on separate time queues, shared by files (2.02-1...2.02-5)
+     2: based on unified queues with scores, shared by files (2.02-6...2.02-9)
+     3: based on separate file queues (2.02-10)
+-    " int_option 3
++    " int_option 3 *)
+   
+ let sources_per_chunk = 
+   define_expert_option donkey_section ["sources_per_chunk"]
+@@ -341,16 +323,9 @@
+   define_expert_option donkey_section ["become_master_delay"] 
+     "(only for development tests)" int_option 120
+ 
+-let _ = 
+-(* Clients should never send more than 5 localisations queries
+-per minute. Greater values are bad for server ressources.  *)
+-  option_hook files_queries_per_minute (fun _ ->
+-      if !!files_queries_per_minute > 5 then 
+-        files_queries_per_minute =:= 5)
+-  
+ let gui_donkey_options_panel = 
+   [
+-    "Maximal Source Age", shortname max_sources_age, "T";
++(*    "Maximal Source Age", shortname max_sources_age, "T"; *)
+     "Maximal Server Age", shortname max_server_age, "T";
+     "Min Left Servers After Clean", shortname min_left_servers, "T";
+     "Update Server List", shortname update_server_list, "B";
+@@ -360,7 +335,6 @@
+     "Max Number of Connected Servers", shortname max_connected_servers, "T";
+     "Max Upload Slots", shortname max_upload_slots, "T";
+     "Max Sources Per Download", shortname max_sources_per_file, "T";
+-    "Protocol Version", shortname protocol_version, "T";
+     "Commit Downloads In Incoming Subdir", shortname commit_in_subdir, "T";
+     "Port", shortname port, "T";
+     "Login", shortname login, "T";
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/donkey/donkeyOvernet.ml ./src/networks/donkey/donkeyOvernet.ml
+--- ./src/networks/donkey/donkeyOvernet.ml	2004-02-11 00:25:08.000000000 +0100
++++ ./src/networks/donkey/donkeyOvernet.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -139,6 +139,7 @@
+   
+ let global_peers_size = Array.make 256 0
+ 
++let is_enabled = ref false
+ 
+ 
+ (********************************************************************
+@@ -1217,7 +1218,7 @@
+   ) !DonkeyGlobals.current_files
+   
+ let enable enabler = 
+-  
++  if !!enable_overnet then begin
+   let sock = (UdpSocket.create (Ip.to_inet_addr !!client_bind_addr)
+       (!!overnet_port) (udp_handler udp_client_handler)) in
+   udp_sock := Some sock;
+@@ -1242,6 +1243,7 @@
+         lprint_newline ();
+         tcp_sock := None;
+   end;
++  end;
+ 
+ (* every 3min try a new publish search, if any *)
+   add_session_timer enabler 180. (fun _ ->
+@@ -1317,11 +1319,31 @@
+     (fun _ -> if !!overnet_max_known_peers < 4096 then overnet_max_known_peers =:= 4096)
+   
+ let disable () = 
+-  match !udp_sock with
++  begin
++  (match !udp_sock with
+     None -> ()
+   | Some sock -> 
+       udp_sock := None;
+-      UdpSocket.close sock Closed_by_user
++      UdpSocket.close sock Closed_by_user);
++  (match !tcp_sock with
++    None -> ()
++  | Some sock -> 
++      tcp_sock := None;
++      TcpServerSocket.close sock Closed_by_user);
++  end
++
++let _ =
++  option_hook enable_overnet
++  	(fun _ -> if !!enable_overnet = false then 
++  	  begin 
++  	    is_enabled := false;
++  	    disable() 
++  	  end else 
++  	  if !is_enabled then begin
++  	    is_enabled := true;
++  	    enable is_enabled
++  	  end
++  	)
+       
+ let parse_overnet_url url =
+   match String2.split (String.escaped url) '|' with
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/donkey/donkeyProtoCom.ml ./src/networks/donkey/donkeyProtoCom.ml
+--- ./src/networks/donkey/donkeyProtoCom.ml	2004-01-30 07:11:06.000000000 +0100
++++ ./src/networks/donkey/donkeyProtoCom.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -83,7 +83,7 @@
+         | Known_location (ip,port) ->
+             lprintf " [%s:%d]" (Ip.to_string ip) port;
+       );
+-      lprint_newline ();
++      CommonGlobals.print_localtime ();
+       DonkeyProtoClient.print m;
+       lprint_newline ();
+     end;
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/donkey/donkeyServers.ml ./src/networks/donkey/donkeyServers.ml
+--- ./src/networks/donkey/donkeyServers.ml	2004-02-16 15:02:17.000000000 +0100
++++ ./src/networks/donkey/donkeyServers.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -112,7 +112,7 @@
+ (* During the first 20 minutes, don't send any localisation query
+ to the server *)
+       if s.server_queries_credit <= 0 then
+-        query_locations s !!files_queries_per_minute
++        query_locations s files_queries_per_minute
+       else 
+         s.server_queries_credit <- s.server_queries_credit - 1
+   ) (connected_servers())
+@@ -247,7 +247,7 @@
+ number of queries that can be sent per minute (for lugdunum, it's one!).
+ Once the first queries have been sent, we must wait 20 minutes before next
+ queries. *)
+-      query_locations s (20 * !!files_queries_per_minute);
++      query_locations s (20 * files_queries_per_minute);
+       s.server_queries_credit <- (* !!files_queries_initial_delay *) 0
+ (*      !server_is_connected_hook s sock *)
+   
+@@ -509,6 +509,7 @@
+   let t2 = Unix.gettimeofday () in
+   lprintf "Delay to detect black-listed servers: %2.2f\n" (t2 -. t1); 
+   
++  if List.length !to_keep > !!min_left_servers then begin
+   let array = Array.of_list !to_keep in
+   Array.sort (fun (ls1,_) (ls2,_) ->
+       if ls1 = ls2 then 0 else if ls1 > ls2 then -1 else 1
+@@ -534,6 +535,7 @@
+         to_remove := s :: !to_remove
+       end
+   done;
++  end;
+   let t3 = Unix.gettimeofday () in
+   lprintf "Delay to detect old servers: %2.2f\n" (t3 -. t2); 
+ 
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/donkey/donkeyShare.ml ./src/networks/donkey/donkeyShare.ml
+--- ./src/networks/donkey/donkeyShare.ml	2004-03-07 10:34:26.000000000 +0100
++++ ./src/networks/donkey/donkeyShare.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -86,7 +86,9 @@
+       | _ -> md4_of_list md4s
+     in
+     
++    if !verbose_share then begin
+     lprintf "Sharing file with MD4: %s\n" (Md4.to_string md4);
++    end;
+     
+     let file = new_file FileShared sh.sh_name md4 sh.sh_size false in
+     must_share_file file codedname old_impl;
+@@ -111,8 +113,9 @@
+           lprintf "DonkeyOvernet.publish_file: %s" (Printexc2.to_string e);
+ lprint_newline ());
+   *)
+-    lprintf "Sharing %s" sh.sh_name;
+-    lprint_newline ();
++    if !verbose_share then begin
++        lprintf "Sharing %s\n" sh.sh_name;
++    end;
+   with e ->
+       lprintf "Exception %s while sharing %s" (Printexc2.to_string e)
+       sh.sh_name; lprint_newline () 
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/donkey/donkeySources2.ml ./src/networks/donkey/donkeySources2.ml
+--- ./src/networks/donkey/donkeySources2.ml	2003-04-23 00:33:39.000000000 +0200
++++ ./src/networks/donkey/donkeySources2.ml	1970-01-01 01:00:00.000000000 +0100
+@@ -1,645 +0,0 @@
+-(* Copyright 2001, 2002 Simon, INRIA *)
+-(*
+-    This file is part of mldonkey.
+-
+-    mldonkey is free software; you can redistribute it and/or modify
+-    it under the terms of the GNU General Public License as published by
+-    the Free Software Foundation; either version 2 of the License, or
+-    (at your option) any later version.
+-
+-    mldonkey is distributed in the hope that it will be useful,
+-    but WITHOUT ANY WARRANTY; without even the implied warranty of
+-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-    GNU General Public License for more details.
+-
+-    You should have received a copy of the GNU General Public License
+-    along with mldonkey; if not, write to the Free Software
+-    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+-*)
+-
+-(*
+-
+-New idea: what about trying to connect anyway if not all the slots
+-where tried ? We could reconnect more frequently to bad sources if we
+-have time to do it.
+-
+-*)
+-
+-open Printf2
+-open Options
+-open CommonOptions
+-open DonkeyOptions
+-open CommonTypes
+-open BasicSocket
+-open DonkeyTypes
+-open DonkeyGlobals
+-open DonkeySourcesMisc
+-
+-(* Here the semantics of the fields in the source structure are different:
+-source_client = SourceLastConnection (basic_score, last_attempt, client_num)
+-source_score = / basic_score when source_client = SourceClient
+-               \ current_score
+-*)    
+-
+-
+-module SourcesSet = Set.Make (
+-    struct
+-      type t = source
+-      let compare s1 s2 = 
+-        if s1.source_addr = s2.source_addr then begin
+-            (if !verbose_sources then
+-                if s1.source_num <> s2.source_num then begin
+-                    lprintf "same addr for different sources!"; 
+-                    lprint_newline ();
+-                    exit 2
+-                  end);
+-            0 end else
+-        let result = 
+-          if s1.source_score = s2.source_score then
+-            compare s1.source_addr s2.source_addr
+-          else
+-            s1.source_score - s2.source_score
+-        in
+-        if !verbose_sources && result = 0 then begin
+-            lprintf "Two different sources are compared equally"; 
+-            lprint_newline ();
+-            exit 2
+-          end;
+-        result
+-    end
+-  )
+-
+-let old_source_score = 0
+-let new_source_score = 100
+-let friend_source_score = 1000
+-
+-let compare_sources s1 s2 =
+-  if s1.source_addr = s2.source_addr then 0 else
+-    s1.source_score - s2.source_score
+-
+-let clients_queue = Fifo.create ()
+-let ready_sources = ref SourcesSet.empty
+-
+-let queues = [| (-20, 10); (-40, 30); (-1000, 60) |]
+-let waiting_sources = Array.init (Array.length queues) (fun _ ->
+-      Fifo.create  ())
+-
+-let add_source_request = add_source_request
+-
+-let rec find_source_queue score pos len =
+-  if pos = len then raise SourceTooOld;
+-  let (min_score, period) = queues.(pos) in
+-  if min_score <= score then pos else 
+-    find_source_queue score (pos+1) len
+-
+-let source_queue s =
+-  match s.source_client with 
+-  | SourceClient _ -> raise Not_found
+-  | SourceLastConnection (basic_score,_,_) ->
+-      find_source_queue basic_score 0 (Array.length queues)
+-
+-exception UselessSource
+-
+-let score s = 
+-  begin
+-    if !verbose_sources then begin
+-        lprintf "score %d" s.source_num; lprint_newline ();
+-      end;
+-    match s.source_client with
+-    | SourceClient _ -> assert false          
+-    | SourceLastConnection (basic_score, last_attempt, client_num) ->
+-        s.source_score <- basic_score 
+-          + (last_time () - last_attempt) / 60
+-        ;
+-        if !verbose_sources then begin
+-            lprintf "  initial score: %d" s.source_score; lprint_newline ();
+-          end;
+-        let useful_source = ref false in
+-        List.iter (fun r ->
+-            
+-            let popularity = 1 + try !
+-                  (Intmap.find (file_num r.request_file)
+-                  !stats_saved_files) * 100
+-                  / !stats_saved_files_size
+-              with _ -> 0 in
+-            s.source_score <- s.source_score + 
+-              (match file_state r.request_file  with
+-                FileDownloading -> useful_source := true; 2
+-              | FilePaused | FileAborted _ | FileQueued -> 
+-                  useful_source := true; 1
+-              | _ -> 0) *
+-            (maxi 1 (file_priority r.request_file + 10)) *
+-            (match r.request_result with
+-                File_not_found | File_possible -> 0
+-              | File_expected -> 1
+-              | File_found -> 10
+-              | File_chunk -> 20
+-              | File_upload -> 30
+-              | File_new_source -> 15
+-            ) / popularity;
+-            if !verbose_sources then begin
+-                lprintf "  request %s result %s" (Md4.Md4.to_string r.request_file.file_md4) (string_of_result r.request_result);
+-                lprint_newline ();
+-              end;
+-        ) s.source_files;
+-        if not !useful_source then raise UselessSource;
+-        let (ip,port) = s.source_addr in
+-        if !verbose_sources then begin
+-            lprintf "Score for %d(%s:%d) = %d/%d" s.source_num (Ip.to_string ip) port 
+-              s.source_score basic_score;
+-            lprint_newline ();
+-          end;
+-  end
+-
+-let reschedule_source s file =
+-  if !verbose_sources then begin
+-      lprintf "reschedule_source %d" s.source_num; lprint_newline ();
+-    end;
+-  if SourcesSet.mem s !ready_sources then begin
+-      ready_sources := SourcesSet.remove s !ready_sources ;
+-      score s;
+-      ready_sources := SourcesSet.add s !ready_sources;
+-    end 
+-
+-let client_connected c =
+-  c.client_score <- 0;
+-  match c.client_source with None -> () | Some s ->
+-      s.source_age <- last_time ()
+-
+-let queue_new_source new_score source_age addr file =
+-  let ip, port = addr in
+-  if !verbose_sources then begin
+-      lprintf "queue_new_source %s:%d" (Ip.to_string ip) port; 
+-      lprint_newline ();
+-    end;
+-  try
+-    let finder =  { dummy_source with source_addr = addr } in
+-    let s = H.find sources finder in
+-    
+-    incr stats_new_sources;
+-    
+-    if not (has_source_request s file) then begin
+-        s.source_files <- {
+-          request_file = file;
+-          request_time = 0;
+-          request_result = File_new_source;
+-        } :: s.source_files;
+-        reschedule_source s file;
+-        s
+-      end
+-    else
+-      s
+-  
+-  with _ ->
+-      let s = { dummy_source with
+-          source_num = (incr source_counter;!source_counter);
+-          source_addr = addr;
+-          source_age = source_age;
+-          source_client = SourceLastConnection (
+-            new_score, last_time (), CommonClient.book_client_num ());
+-          source_files = [{
+-              request_file = file;
+-              request_time = 0;
+-              request_result = File_new_source;
+-            }]
+-        }  in
+-      H.add sources s;
+-      incr stats_sources;
+-      if !verbose_sources then begin
+-          lprintf "Source %d added" s.source_num; lprint_newline ();
+-        end;
+-      score s;
+-      ready_sources := SourcesSet.add s !ready_sources;
+-      s
+-
+-let old_source old_source_score source_age addr file = 
+-  queue_new_source (old_source_score-50) source_age addr file
+-
+-let new_source addr file = 
+-  queue_new_source new_source_score (last_time()) addr file
+-
+-let source_of_client c = 
+-  outside_queue := Intmap.remove (client_num c) !outside_queue;      
+-  
+-  if !verbose_sources then begin
+-      lprintf "source_of_client %d" (client_num c); lprint_newline ();
+-    end;
+-  
+-  match c.client_source with
+-    None -> 
+-(* This client is an indirect connection. Can't do anything with it. *)
+-      
+-      if !verbose_sources then begin
+-          lprintf "%d --> indirect" (client_num c); lprint_newline ();
+-        end;
+-      List.iter (fun r -> 
+-          remove_file_location r.request_file c) c.client_files;
+-      c.client_files <- [];
+-      
+-      raise Exit
+-  
+-  | Some s ->
+-      
+-      let ip, port = s.source_addr in
+-      if !verbose_sources then begin
+-          lprintf "Old source %s:%d" (Ip.to_string ip) port; 
+-          lprint_newline ();
+-        end;
+-      let (files, downloading) = purge_requests c.client_files in
+-      c.client_files <- files;
+-      try
+-        
+-        if keep_client c then begin
+-            if !verbose_sources then begin
+-                lprintf "%d --> kept" (client_num c); lprint_newline ();
+-              end;
+-            
+-            Fifo.put clients_queue (c, last_time ())
+-          
+-          end else
+-        if not (List.exists (fun r -> r.request_result > File_not_found)
+-            files) then begin
+-            H.remove sources s;
+-            incr stats_remove_useless_sources;
+-            raise Exit
+-          end else
+-        let basic_score = c.client_score in
+-        if !verbose_sources then begin
+-            lprintf "%d --> new score %d" (client_num c) basic_score; lprint_newline ();
+-          end;
+-        List.iter (fun r -> remove_file_location r.request_file c) 
+-        c.client_files;
+-        if !verbose_sources then begin
+-            lprintf "Set SourceLastConnection for source %d" 
+-              s.source_num; 
+-            lprint_newline ();
+-          end;
+-        s.source_client <- SourceLastConnection (
+-          basic_score, last_time (), client_num c);
+-        s.source_files <- c.client_files;
+-        c.client_files <- [];
+-        try
+-          Fifo.put waiting_sources.(source_queue s) s;
+-          score s
+-        with SourceTooOld ->
+-            if !verbose_sources then begin
+-                lprintf "Removed old source %d" s.source_num;
+-                lprint_newline ();
+-              end;
+-            H.remove sources s;
+-            incr stats_remove_old_sources;
+-      
+-      with _ ->
+-          if !verbose_sources then begin
+-              lprintf "%d --> removed" (client_num c); lprint_newline ();
+-            end;
+-          List.iter (fun r -> 
+-              remove_file_location r.request_file c) c.client_files;
+-          c.client_files <- []
+-
+-let reschedule_sources files = 
+-  if !verbose_sources then begin      
+-      lprintf "reschedule_sources file not implemented";
+-      lprint_newline () 
+-    end
+-
+-(* Change a source structure into a client structure before attempting
+-  a connection. *)
+-let client_of_source reconnect_client s basic_score client_num = 
+-  if !verbose_sources then begin
+-      lprintf "client_of_source %d" s.source_num; lprint_newline ();
+-    end;
+-  let (files, downloading) = purge_requests s.source_files in
+-  if !verbose_sources then begin
+-      lprintf "Source for %d files" (List.length files); 
+-      lprint_newline ();
+-    end;
+-  (if downloading then
+-      let (ip, port) = s.source_addr in
+-      let c = DonkeyGlobals.new_client_with_num (Known_location (ip,port))
+-        client_num in
+-      c.client_next_queue <- 0;
+-      
+-      c.client_overnet <- s.source_overnet;
+-      if s.source_overnet then begin
+-          c.client_brand <- Brand_overnet;
+-        end;
+-      (match c.client_source with
+-          Some ss when s != ss -> 
+-            if !verbose_sources then begin
+-                lprintf "Client already has a source!"; lprint_newline ();
+-              end;
+-        |  _ -> ());
+-      c.client_source <- Some s;
+-      if !verbose_sources then begin
+-          lprintf "set SourceClient for source %d" s.source_num;
+-          lprint_newline ();
+-        end;
+-      
+-      s.source_client <- SourceClient c;
+-
+-(* This will be used after the connection to know where to put this client *)
+-      c.client_score <- basic_score - 10;
+-      
+-      c.client_files <- s.source_files;
+-      let new_source = ref false in
+-      let good_source = ref false in
+-      List.iter (fun r ->
+-          if r.request_result > File_not_found then begin
+-              add_file_location r.request_file c;
+-              match r.request_result with
+-              | File_new_source -> new_source := true
+-              | File_chunk | File_upload -> good_source := true
+-              | _ -> ()
+-            end;
+-      ) c.client_files;
+-      
+-      if !good_source then 
+-        incr stats_connect_good_sources
+-      else
+-      if !new_source then
+-        incr stats_connect_new_sources
+-      else
+-        incr stats_connect_old_sources;
+-      
+-      useful_client source_of_client reconnect_client c
+-    else
+-    try (* put back the sources in the waiting_queues. Not a good idea,
+-        we should have another table for them, to wait until the file
+-        is resumed, or another file can be downloaded from them. *)
+-      Fifo.put waiting_sources.(source_queue s) s;
+-      false
+-    with SourceTooOld -> false
+-  )
+-
+-let recompute_ready_sources () =
+-  if !verbose_sources then begin
+-      lprintf "recompute_ready_sources"; lprint_newline ();
+-    end;
+-  let t1 = Unix.gettimeofday () in
+-
+-(* Very simple *)
+-  let previous_sources = !ready_sources in
+-  let list = ref [] in
+-  let rec iter i =
+-    let s = try Fifo.head waiting_sources.(i) with _ -> raise Not_found in
+-    match s.source_client with
+-      SourceLastConnection (_,time,_) ->
+-        if time + 720 < last_time () then
+-          let s = Fifo.take waiting_sources.(i) in
+-          list := s :: !list;
+-          iter i
+-    | SourceClient c -> 
+-        if !verbose_sources then begin
+-            lprintf "ERROR: CLIENT %d" (client_num c); lprint_newline ();
+-            assert false
+-          end
+-  in
+-  for i = 0 to Array.length queues - 1 do
+-    (try iter i   with Not_found -> ());
+-  done;
+-  ready_sources := SourcesSet.empty;
+-  let add_source s =
+-    if s.source_age + !!max_sources_age * half_day < last_time () then begin
+-        if !verbose_sources then begin
+-            lprintf " --> drop source too old"; lprint_newline ();
+-          end;
+-        H.remove sources s;
+-        incr stats_remove_too_old_sources;
+-      end else begin
+-        try
+-          score s; 
+-          ready_sources := SourcesSet.add s !ready_sources
+-        with UselessSource ->
+-            H.remove sources s;
+-            incr stats_remove_useless_sources
+-      end
+-  in        
+-  SourcesSet.iter add_source previous_sources;
+-  List.iter add_source !list;
+-  let t2 = Unix.gettimeofday () in
+-  if !verbose_sources then begin
+-      lprintf "Delay for Sources: %2.2f" (t2 -. t1); lprint_newline ();
+-    end
+-
+-
+-let check_sources reconnect_client = 
+-  
+-  let uptime = last_time () - start_time in
+-  
+-  if uptime mod 60 = 0 then
+-    recompute_ready_sources ();
+-  
+-  if uptime mod 600 = 0 then
+-    begin
+-      
+-      stats_saved_connect_good_clients := !stats_connect_good_clients;
+-      stats_saved_connect_good_sources := !stats_connect_good_sources;
+-      stats_saved_connect_new_sources := !stats_connect_new_sources;
+-      stats_saved_connect_old_sources := !stats_connect_old_sources;
+-      stats_saved_new_sources := !stats_new_sources;
+-      stats_saved_files := !stats_files;
+-      stats_saved_ranks := !stats_ranks;
+-      
+-      stats_saved_files_size := 1;
+-      Intmap.iter (fun _ n -> 
+-          stats_saved_files_size := !stats_saved_files_size + !n)
+-      !stats_saved_files;
+-      
+-      stats_connect_good_clients := 0;
+-      stats_connect_new_sources := 0;
+-      stats_connect_good_sources := 0;
+-      stats_connect_old_sources := 0;
+-      stats_new_sources := 0;
+-      stats_files := Intmap.empty;
+-      stats_ranks := Array.create 10 0;
+-    
+-    end;
+-  
+-  let rec iter_clients nclients = 
+-    if CommonGlobals.can_open_connection () && nclients > 0 then begin
+-        try
+-          let (c, time) = Fifo.head clients_queue in
+-          if time + 720 <= last_time () then
+-            let _ = Fifo.take clients_queue in
+-            
+-            incr stats_connect_good_clients;
+-            stats_register_files c.client_files;
+-            
+-            if useful_client source_of_client reconnect_client c then
+-              iter_clients (nclients-1)
+-            else iter_clients nclients
+-          
+-          else raise Fifo.Empty
+-        
+-        with Fifo.Empty ->
+-            iter_sources nclients
+-      end
+-  
+-  and iter_sources nclients = 
+-    if !verbose_sources then begin
+-        lprintf "iter_sources %d" nclients; lprint_newline ();
+-      end;
+-    
+-    if CommonGlobals.can_open_connection () && nclients > 0 then begin
+-        let s = SourcesSet.max_elt !ready_sources in
+-        ready_sources := SourcesSet.remove s !ready_sources;
+-        
+-        
+-        let ip, port = s.source_addr in
+-        if !verbose_sources then begin
+-            lprintf "One source %d[%s:%d] from ready_sources" 
+-              s.source_num
+-              (Ip.to_string ip) port; 
+-            lprint_newline ();
+-          end;
+-        
+-        
+-        if !verbose_sources then begin
+-            if SourcesSet.mem s !ready_sources then begin
+-                lprintf "Source %d is still in ready_sources after remove" s.source_num; lprint_newline ();
+-              end;
+-          end;
+-        let ss = SourcesSet.max_elt !ready_sources in
+-        if !verbose_sources then begin
+-            lprintf "next max = %d" s.source_num; lprint_newline ();
+-          end;                
+-        match s.source_client with
+-        | SourceLastConnection (basic_score, time, client_num) ->
+-            s.source_score <- basic_score;
+-            stats_register_files s.source_files;
+-            if client_of_source reconnect_client s basic_score client_num
+-            then
+-              iter_sources (nclients-1)
+-            else
+-              iter_sources nclients                  
+-        
+-        | SourceClient c -> 
+-            if !verbose_sources then begin                    
+-                lprintf "ERROR: CLIENT %d" (client_num c); 
+-                lprint_newline ();
+-                assert false
+-              end
+-      
+-      end
+-  in
+-  try
+-    iter_clients !!max_clients_per_second
+-  with Not_found -> ()
+-  | e ->
+-      if !verbose_sources then begin
+-          lprintf "Exception %s in check_sources" (Printexc2.to_string e);
+-          lprint_newline ()
+-        end
+-
+-let need_new_sources file = 
+-  Fifo.length clients_queue < 720
+-
+-let iter f =
+-  Intmap.iter (fun _ c ->
+-      match c.client_source with
+-        None -> () | Some s -> f s)
+-  !outside_queue;
+-  Fifo.iter (fun (c,_) ->
+-      match c.client_source with
+-        None -> () | Some s -> f s
+-  ) clients_queue;
+-  SourcesSet.iter f !ready_sources;
+-  Array.iter (fun fifo -> Fifo.iter f fifo) waiting_sources
+-
+-let print_sources buf =
+-  let ngood_clients = Fifo.length clients_queue in  
+-  Printf.bprintf buf "Queue[Good Clients]: %d sources\n" 
+-    ngood_clients;
+-  let nready_sources = SourcesSet.cardinal !ready_sources in
+-  Printf.bprintf buf "Queue[Ready Sources]: %d sources\n" 
+-    nready_sources;
+-  
+-  let total_nwaiting_sources = ref 0 in
+-  for i = 0 to Array.length queues - 1 do
+-    let nwaiting_sources = Fifo.length waiting_sources.(i) in
+-    total_nwaiting_sources := !total_nwaiting_sources + nwaiting_sources;
+-    Printf.bprintf buf "Queue[Waiting Sources %d]: %d sources\n" 
+-      i nwaiting_sources;
+-  done;
+-  
+-  let noutside_queue = Intmap.length !outside_queue in
+-  Printf.bprintf buf "  Outside of queues: %d sources\n" noutside_queue;
+-  
+-  let positive_sources = ref 0 in
+-  let negative_sources = ref 0 in
+-  let nchunks = ref 0 in
+-  let nupload = ref 0 in
+-  let nfound = ref 0 in
+-  let nnotfound = ref 0 in
+-  iter (fun s ->
+-      (match s.source_client with 
+-          SourceClient c -> s.source_files <- c.client_files;
+-        | _ -> ());
+-      
+-      List.iter (fun r ->
+-          match r.request_result with
+-            File_not_found -> incr nnotfound
+-          | File_found -> incr nfound
+-          | File_chunk -> incr nchunks
+-          | File_upload -> incr nupload
+-          | _ -> ()
+-      ) s.source_files;
+-      
+-      if s.source_score >= 0 then incr positive_sources else
+-        incr negative_sources);
+-  
+-  Printf.bprintf buf "Positive/Negative: %d/%d\n" !positive_sources
+-    !negative_sources; 
+-  Printf.bprintf buf "NotFound/Found/Chunk/Upload: %d/%d/%d/%d\n\n"
+-    !nnotfound !nfound !nchunks !nupload;
+-  Printf.bprintf buf "Ranks: ";
+-  for i = 0 to 9 do
+-    Printf.bprintf buf " %d[%d]" !stats_ranks.(i) !stats_saved_ranks.(i)
+-  done;
+-  Printf.bprintf buf "\n";
+-  
+-  Printf.bprintf buf "Removed Sources (on %d): useless %d/old %d/too old %d\n"
+-    !stats_sources
+-    !stats_remove_useless_sources !stats_remove_old_sources
+-    !stats_remove_too_old_sources;
+-  
+-  
+-  Printf.bprintf buf "  Connected last %d seconds[previous 10 minutes]: %d[%d]\n"
+-    ((last_time () - start_time) mod 600)
+-  (!stats_connect_good_clients + !stats_connect_good_sources + !stats_connect_old_sources + !stats_connect_new_sources)
+-  (!stats_saved_connect_good_clients + !stats_saved_connect_good_sources + !stats_saved_connect_old_sources + !stats_saved_connect_new_sources)
+-  
+-  ;
+-  Printf.bprintf buf "     Good clients: %d[%d]\n" 
+-    !stats_connect_good_clients
+-    !stats_saved_connect_good_clients;
+-  Printf.bprintf buf "     Good sources: %d[%d]\n" 
+-    !stats_connect_good_sources
+-    !stats_saved_connect_good_sources;
+-  Printf.bprintf buf "     New sources: %d/%d[%d/%d]\n" 
+-    !stats_connect_new_sources !stats_new_sources
+-    !stats_saved_connect_new_sources !stats_saved_new_sources;
+-  Printf.bprintf buf "     Old sources: %d[%d]\n" 
+-    !stats_connect_old_sources
+-    !stats_saved_connect_old_sources;
+-  
+-  Printf.bprintf buf "By files:\n";
+-  let stats_connect_old_file = ref 0 in
+-  Intmap.iter (fun file_num n ->
+-      try
+-        let file = CommonFile.file_find file_num in
+-        let old_n = try !(Intmap.find file_num !stats_saved_files) with 
+-            _ -> 0
+-        in
+-        Printf.bprintf buf "  %-60s  %d[%d]\n" 
+-          (CommonFile.file_best_name file) !n old_n
+-      with _ -> incr stats_connect_old_file
+-  ) !stats_files;
+-  Printf.bprintf buf " Old files:  %d\n" !stats_connect_old_file;
+-  
+-  Printf.bprintf buf "\nTotal number of sources:%d\n" 
+-    (noutside_queue + ngood_clients + nready_sources + 
+-      !total_nwaiting_sources)
+-  
+-let init () = ()
+\ Kein Zeilenumbruch am Dateiende.
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/donkey/donkeySources2.mli ./src/networks/donkey/donkeySources2.mli
+--- ./src/networks/donkey/donkeySources2.mli	2003-04-23 00:33:39.000000000 +0200
++++ ./src/networks/donkey/donkeySources2.mli	1970-01-01 01:00:00.000000000 +0100
+@@ -1,33 +0,0 @@
+-(* Copyright 2001, 2002 Simon, INRIA *)
+-(*
+-    This file is part of mldonkey.
+-
+-    mldonkey is free software; you can redistribute it and/or modify
+-    it under the terms of the GNU General Public License as published by
+-    the Free Software Foundation; either version 2 of the License, or
+-    (at your option) any later version.
+-
+-    mldonkey is distributed in the hope that it will be useful,
+-    but WITHOUT ANY WARRANTY; without even the implied warranty of
+-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-    GNU General Public License for more details.
+-
+-    You should have received a copy of the GNU General Public License
+-    along with mldonkey; if not, write to the Free Software
+-    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+-*)
+-
+-val old_source : int -> int -> Ip.t * int -> DonkeyTypes.file -> 
+-  DonkeyTypes.source
+-val iter : (DonkeyTypes.source -> unit) -> unit
+-val source_of_client : DonkeyTypes.client -> unit    
+-val reschedule_sources : DonkeyTypes.file -> unit
+-val new_source : Ip.t * int -> DonkeyTypes.file -> DonkeyTypes.source
+-val need_new_sources : DonkeyTypes.file -> bool
+-val check_sources :     (DonkeyTypes.client -> unit) -> unit
+-val print_sources : Buffer.t -> unit
+-val recompute_ready_sources : unit -> unit
+-val client_connected : DonkeyTypes.client -> unit
+-val add_source_request : DonkeyTypes.source ->
+-  DonkeyTypes.file -> int -> DonkeyTypes.request_result -> unit
+-val init : unit -> unit  
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/donkey/donkeySourcesMisc.ml ./src/networks/donkey/donkeySourcesMisc.ml
+--- ./src/networks/donkey/donkeySourcesMisc.ml	2004-03-08 00:02:31.000000000 +0100
++++ ./src/networks/donkey/donkeySourcesMisc.ml	2004-04-02 00:32:12.000000000 +0200
+@@ -175,6 +175,7 @@
+           let module M = DonkeyProtoClient in
+           M.QueryFileReq file.file_md4);      
+         
++	if file_size file > block_size then 
+         DonkeyProtoCom.direct_client_send c (
+           let module M = DonkeyProtoClient in
+             M.QueryChunksReq file.file_md4); 
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/networks/soulseek/slskOptions.ml ./src/networks/soulseek/slskOptions.ml
+--- ./src/networks/soulseek/slskOptions.ml	2004-02-04 19:58:19.000000000 +0100
++++ ./src/networks/soulseek/slskOptions.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -31,10 +31,10 @@
+   ["max_connected_servers"] 
+     "The number of servers you want to stay connected to" int_option 10
+ 
+-let ip_cache_timeout = define_option soulseek_section
++(* let ip_cache_timeout = define_option soulseek_section
+     ["ip_cache_timeout"]
+     "The time an ip address can be kept in the cache"
+-    float_option 3600.
++    float_option 3600. *)
+ 
+ let load_serverlist = define_option soulseek_section ["load_serverlist"]
+   "Download a list of servers"
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/utils/cdk/unix2.ml ./src/utils/cdk/unix2.ml
+--- ./src/utils/cdk/unix2.ml	2004-02-04 01:21:46.000000000 +0100
++++ ./src/utils/cdk/unix2.ml	2004-04-02 00:32:12.000000000 +0200
+@@ -68,13 +68,8 @@
+     
+ (* same as in downloadClient.ml *)
+ let rec really_write fd s pos len =
+-  if len = 0 then begin
+-(*      lprintf "really_write 0 BYTES !!!!!!!!!\n";  *)
+-      raise End_of_file
+-    end else
++  if len > 0 then
+   let nwrite = Unix.write fd s pos len in
+-  if nwrite = 0 then raise End_of_file else
+-  if nwrite < len then 
+     really_write fd s (pos + nwrite) (len - nwrite)
+       
+ let rec really_read fd s pos len =
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/utils/lib/unix32.ml ./src/utils/lib/unix32.ml
+--- ./src/utils/lib/unix32.ml	2004-02-06 00:23:35.000000000 +0100
++++ ./src/utils/lib/unix32.ml	2004-04-02 00:32:13.000000000 +0200
+@@ -986,8 +986,8 @@
+   | MultiFile t -> MultiFile.write t file_pos string string_pos len
+   | SparseFile t -> SparseFile.write t file_pos string string_pos len
+   | Destroyed -> failwith "Unix32.write on destroyed FD"
+-  else
+-    lprintf "Unix32.write: error, invalid argument len = 0\n"
++(*  else
++    lprintf "Unix32.write: error, invalid argument len = 0\n" *)
+         
+ let buffer = Buffer.create 65000
+ 
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/utils/net/http_server.ml ./src/utils/net/http_server.ml
+--- ./src/utils/net/http_server.ml	2004-03-07 10:34:28.000000000 +0100
++++ ./src/utils/net/http_server.ml	2004-04-02 00:32:12.000000000 +0200
+@@ -730,11 +730,11 @@
+ 
+   if len+clen > max_refill sock then
+     TcpBufferedSocket.set_max_output_buffer sock (len + clen);
+-  lprintf "HTTPSEND: [%s]\n" (String.escaped s);
++(*  lprintf "HTTPSEND: [%s]\n" (String.escaped s); - log commented out *)
+   TcpBufferedSocket.write_string sock s;
+     
+   if request.request <> "HEAD" then begin
+-      lprintf "HTTPSEND: [%s]\n" (String.escaped c);
++(*        lprintf "HTTPSEND: [%s]\n" (String.escaped c); - log commented out *)
+       TcpBufferedSocket.write_string sock c;
+       match request.reply_stream with
+         None -> ()
+@@ -749,8 +749,8 @@
+   let end_pos = b.pos + b.len in
+   let new_pos = end_pos - nread in
+   let new_pos = maxi 0 (new_pos - 1) in
+-  lprintf "received [%s]\n" (String.escaped 
+-      (String.sub b.buf new_pos nread));
++(*  lprintf "received [%s]\n" (String.escaped 
++      (String.sub b.buf new_pos nread)); - log commented out *)
+   let rec iter i =
+     let end_pos = b.pos + b.len in
+     if i < end_pos then
+diff -x Entries -x '*.orig' --unidirectional-new-file -N -u -w -r ./src/utils/net/tcpBufferedSocket.ml ./src/utils/net/tcpBufferedSocket.ml
+--- ./src/utils/net/tcpBufferedSocket.ml	2004-03-07 10:34:28.000000000 +0100
++++ ./src/utils/net/tcpBufferedSocket.ml	2004-04-02 00:32:12.000000000 +0200
+@@ -864,12 +864,12 @@
+ 
+ let close_after_write t =
+   if t.wbuf.len = 0 then begin
+-      lprintf "close_after_write: CLOSE\n";
++(*    lprintf "close_after_write: CLOSE\n";  - log output removed  *)
+       shutdown t Closed_by_user
+     end
+   else
+     set_handler t WRITE_DONE (fun t ->
+-        lprintf "close_after_write: CLOSE\n";
++(*      lprintf "close_after_write: CLOSE\n";  - log output removed  *)
+         shutdown t Closed_by_user)
+     
+ exception Http_proxy_error of string

@@ -1,0 +1,147 @@
+? backchanges.patch
+? getnopeeridclients.patch
+? mlsubmit.reg
+? torrents
+Index: src/networks/bittorrent/bTClients.ml
+===================================================================
+RCS file: /cvsroot/mldonkey/mldonkey/src/networks/bittorrent/bTClients.ml,v
+retrieving revision 1.26
+diff -u -w -b -B -r1.26 bTClients.ml
+--- src/networks/bittorrent/bTClients.ml	7 Mar 2004 23:02:31 -0000	1.26
++++ src/networks/bittorrent/bTClients.ml	9 Mar 2004 13:11:08 -0000
+@@ -739,6 +739,7 @@
+           for j = 0 to 7 do
+             if (int_of_char p.[i]) land bits.(j) <> 0 then
+               begin
++		c.client_new_chunks <- i*8+j :: c.client_new_chunks;
+                 bitmap.[i*8+j] <- '1';
+               end
+             else 
+@@ -749,6 +750,7 @@
+ (*Update availability for GUI*)
+         CommonEvent.add_event (File_update_availability
+             (as_file file, as_client c,  String.copy bitmap));
++        update_client_bitmap c;
+         
+         let swarmer = match c.client_file.file_swarmer with
+             None -> assert false
+@@ -781,7 +783,21 @@
+         done*)
+     
+     | Have n ->
+-        begin
++	(*A client can send a Have without sending a Bitfield*)
++        let swarmer = match c.client_file.file_swarmer with
++            None -> assert false
++          | Some swarmer -> swarmer in
++	let n = Int64.to_int n in
++	let verified = Int64Swarmer.verified_bitmap swarmer in
++          if verified.[n] < '2' then begin
++            c.client_interesting <- true;
++            send_interested c;  
++            c.client_new_chunks <- n :: c.client_new_chunks;
++            update_client_bitmap c;
++	  end;
++	    
++
++(*        begin
+           match c.client_bitmap, c.client_uploader with
+             Some bitmap, Some up ->
+               let swarmer = Int64Swarmer.uploader_swarmer up in
+@@ -801,9 +817,11 @@
+                   done*)
+                       end
+                   end
+-          | _ -> assert false
++          | None, Some _ -> lprintf "no bitmap but client_uploader\n";
++	  | Some _ , None ->lprintf "bitmap but no client_uploader\n";
++	  | None, None -> lprintf "no bitmap no client_uploader\n";
+         end
+-        
++*)      
+     | Interested ->
+         c.client_interested <- true;
+         
+Index: src/networks/bittorrent/bTGlobals.ml
+===================================================================
+RCS file: /cvsroot/mldonkey/mldonkey/src/networks/bittorrent/bTGlobals.ml,v
+retrieving revision 1.19
+diff -u -w -b -B -r1.19 bTGlobals.ml
+--- src/networks/bittorrent/bTGlobals.ml	7 Mar 2004 09:34:25 -0000	1.19
++++ src/networks/bittorrent/bTGlobals.ml	9 Mar 2004 13:11:08 -0000
+@@ -236,7 +236,7 @@
+       
+ let new_client file peer_id kind =
+   try
+-    let c = Hashtbl.find file.file_clients peer_id in
++    let c = Hashtbl.find file.file_clients kind in
+     c.client_host <- kind;
+     c
+   with _ ->
+@@ -280,7 +280,7 @@
+         } in
+       c.client_connection_control.control_min_reask <- 120;
+       new_client impl;
+-      Hashtbl.add file.file_clients peer_id c;
++      Hashtbl.add file.file_clients kind c;
+       file.file_clients_num <- file.file_clients_num + 1;
+       file_add_source (as_file file) (as_client c);
+       c
+@@ -290,7 +290,7 @@
+   current_files := List2.removeq file !current_files
+ 
+ let remove_client c = 
+-    Hashtbl.remove c.client_file.file_clients c.client_uid ;
++    Hashtbl.remove c.client_file.file_clients c.client_host ;
+     c.client_file.file_clients_num <- c.client_file.file_clients_num  - 1;
+     file_remove_source (as_file c.client_file) (as_client c)
+ 
+Index: src/networks/bittorrent/bTProtocol.ml
+===================================================================
+RCS file: /cvsroot/mldonkey/mldonkey/src/networks/bittorrent/bTProtocol.ml,v
+retrieving revision 1.9
+diff -u -w -b -B -r1.9 bTProtocol.ml
+--- src/networks/bittorrent/bTProtocol.ml	30 Jan 2004 06:11:05 -0000	1.9
++++ src/networks/bittorrent/bTProtocol.ml	9 Mar 2004 13:11:08 -0000
+@@ -329,15 +329,20 @@
+           
+ (*          dump (String.sub b.buf b.pos (min b.len 100)); *)
+           let slen = get_int8 b.buf b.pos in
+-          if slen + 49 <= b.len then
++	  let peer_id = ref Sha1.null in
++          if slen + 29 <= b.len then
+             let proto = String.sub b.buf (b.pos+1) slen in
+             let file_id = Sha1.direct_of_string 
+                 (String.sub  b.buf (b.pos+9+slen) 20) in
+-            let peer_id = Sha1.direct_of_string 
+-                (String.sub  b.buf (b.pos+29+slen) 20) in
++	      if slen + 49 <= b.len then
++		peer_id := Sha1.direct_of_string 
++		  (String.sub  b.buf (b.pos+29+slen) 20);
+             let proto,pos = get_string8 b.buf b.pos in
+-            buf_used b (slen+49);
+-            h gconn sock (proto, file_id, peer_id);
++	      if slen + 49 <= b.len then
++		buf_used b (slen+49)
++	      else 
++		buf_used b (slen+29);
++            h gconn sock (proto, file_id, !peer_id);
+             if not (TcpBufferedSocket.closed sock) then 
+               iter_read sock 0
+ 
+Index: src/networks/bittorrent/bTTypes.ml
+===================================================================
+RCS file: /cvsroot/mldonkey/mldonkey/src/networks/bittorrent/bTTypes.ml,v
+retrieving revision 1.16
+diff -u -w -b -B -r1.16 bTTypes.ml
+--- src/networks/bittorrent/bTTypes.ml	7 Mar 2004 09:34:25 -0000	1.16
++++ src/networks/bittorrent/bTTypes.ml	9 Mar 2004 13:11:08 -0000
+@@ -78,7 +78,7 @@
+     file_id : Sha1.t;
+     file_name : string;
+     mutable file_swarmer : Int64Swarmer.t option;
+-    mutable file_clients : (Sha1.t, client) Hashtbl.t ;
++    mutable file_clients : ((Ip.t*int), client) Hashtbl.t ;
+     mutable file_clients_num : int ;
+     mutable file_chunks : Sha1.t array; 
+     mutable file_tracker_connected : bool;
