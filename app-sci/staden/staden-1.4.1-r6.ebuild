@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r6.ebuild,v 1.2 2004/09/18 20:15:52 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r6.ebuild,v 1.3 2004/09/18 23:13:40 ribosome Exp $
 
 inherit eutils
 
@@ -219,7 +219,6 @@ src_compile() {
 	# Remove the prebuilt EMBOSS tcl/tk GUIs.
 	rm ${S}/tables/emboss_menu
 	rm -r ${S}/lib/spin2_emboss/acdtcl
-	rm -r ${S}/lib/spin_emboss/acdtcl
 
 	# Patch just built hypertext documentation.
 	cd ${S}/doc/manual
