@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.45-r1.ebuild,v 1.1 2001/12/10 02:57:23 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.50.0.ebuild,v 1.1 2002/04/28 03:20:06 seemant Exp $
 
 S=${WORKDIR}/docbook-xsl-${PV}
 DESCRIPTION="XSL Stylesheets for Docbook"
@@ -23,7 +23,7 @@ src_install() {
 		cp -af ${i} ${D}/${DEST} 
 		cd ${D}/${DEST}/${i}
 
-        	for j in ChangeLog LostLog README
+		for j in ChangeLog LostLog README
 		do
 			if [ -e ${j} ]
 			then
@@ -35,6 +35,8 @@ src_install() {
 	prepalldocs
 	cd ${S}
 	dodoc BUGS TODO WhatsNew
+
+	dodir /etc/xml
 }
 
 pkg_postinst() {
@@ -45,16 +47,16 @@ pkg_postinst() {
 	/usr/bin/xmlcatalog --noout --create $CATALOG
 	
 	/usr/bin/xmlcatalog --noout --add "rewriteSystem" \
-        	"http://docbook.sourceforge.net/release/xsl/1.45" \
-        	"/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
+		"http://docbook.sourceforge.net/release/xsl/1.45" \
+		"/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
 	/usr/bin/xmlcatalog --noout --add "rewriteURI" \
-        	"http://docbook.sourceforge.net/release/xsl/1.45" \
-	        "/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
+			"http://docbook.sourceforge.net/release/xsl/1.45" \
+			"/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
 	/usr/bin/xmlcatalog --noout --add "rewriteSystem" \
-        	"http://docbook.sourceforge.net/release/xsl/current" \
-	        "/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
+			"http://docbook.sourceforge.net/release/xsl/current" \
+			"/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
 	/usr/bin/xmlcatalog --noout --add "rewriteURI" \
-        	"http://docbook.sourceforge.net/release/xsl/current" \
-	        "/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
+			"http://docbook.sourceforge.net/release/xsl/current" \
+			"/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
 
 }
