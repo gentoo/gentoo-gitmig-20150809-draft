@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.1.14.ebuild,v 1.8 2001/10/24 21:05:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.1.14.ebuild,v 1.9 2001/10/24 21:34:42 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XEmacs"
@@ -33,7 +33,7 @@ src_compile() {
 	else
 		myopts="$myopts --with-sound=native"
 	fi
-	./configure $myopts --with-database=berkdb --without-offix --with-ncurses --with-xpm --without-xface --without-gif --prefix=/usr || die
+	./configure $myopts --with-database=gnudbm --without-offix --with-ncurses --with-xpm --without-xface --without-gif --prefix=/usr || die
 	make || die
 }
 
