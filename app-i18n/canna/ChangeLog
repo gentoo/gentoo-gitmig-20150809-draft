@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.31 2004/03/07 21:55:33 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.32 2004/03/30 06:14:16 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; canna-3.6_p4.ebuild,
+  canna-3.7.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   07 Mar 2004; Jon Portnoy <avenj@gentoo.org> canna-3.7.ebuild :
   Added AMD64 keywords. Not sure where they went precisely...

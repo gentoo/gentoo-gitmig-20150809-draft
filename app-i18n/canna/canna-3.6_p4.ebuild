@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.10 2004/02/23 18:05:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.11 2004/03/30 06:14:16 spyderous Exp $
 
 inherit cannadic
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="x86 alpha ppc sparc"
 
 DEPEND="virtual/glibc
-	x11-base/xfree
+	virtual/x11
 	>=sys-apps/sed-4
 	doc? ( app-text/ptex )"
 RDEPEND="virtual/glibc"
