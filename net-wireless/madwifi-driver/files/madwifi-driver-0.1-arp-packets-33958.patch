@@ -1,0 +1,13 @@
+diff -Nrup madwifi-driver-0.1_pre20040514.orig/driver/if_ath.c madwifi-driver-0.1_pre20040514/driver/if_ath.c
+--- madwifi-driver-0.1_pre20040514.orig/driver/if_ath.c	2004-05-14 19:31:03.000000000 -0400
++++ madwifi-driver-0.1_pre20040514/driver/if_ath.c	2004-07-26 11:44:11.000000000 -0400
+@@ -759,7 +759,8 @@ ath_skbhdr_adjust(struct sk_buff *skb, s
+ 
+ 	if (ic->ic_flags & IEEE80211_F_WEPON)
+ 		len += IEEE80211_WEP_IVLEN + IEEE80211_WEP_KIDLEN;
+-	if ((skb_headroom(skb) < len) &&
++	if (len < skb_headroom(skb)) len=skb_headroom(skb);
++	if ((skb_cloned(skb) || (skb_headroom(skb) < len)) &&
+ 	    pskb_expand_head(skb, len - skb_headroom(skb), 0, GFP_ATOMIC)) {
+ 		dev_kfree_skb(skb);
+ 		return -ENOMEM;

@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/madwifi-driver
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.10 2004/06/25 00:46:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.11 2004/07/26 16:12:29 solar Exp $
+
+*madwifi-driver-0.1_pre20040726 (26 Jul 2004)
+
+  26 Jul 2004; <solar@gentoo.org> madwifi-driver-0.1_pre20040726.ebuild,
+  files/madwifi-driver-0.1-arp-packets-33958.patch:
+  new snapshot and added patch from madwifi mailing list which resolves corrupt
+  frames on wlan0 when ath0 and wlan0 are in the same bridge
 
   15 May 2004; Peter Johanson <latexer@gentoo.org>
   madwifi-driver-0.1_pre20040514.ebuild:
