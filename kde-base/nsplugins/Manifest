@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 137d22a1be4c3cb7f68899119b2e49f3 nsplugins-3.4.0.ebuild 398
-MD5 16b727bf26681a19c601bb1bf955c3e0 nsplugins-3.4.0_rc1.ebuild 396
-MD5 d4aba3d3721f03734ac95e06a9453dc2 ChangeLog 1247
+MD5 70c10da5eb0eca511254c41b71bda456 ChangeLog 1341
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 16b727bf26681a19c601bb1bf955c3e0 nsplugins-3.4.0_rc1.ebuild 396
+MD5 6840751ace684c21c0aa8bba9ccaa651 nsplugins-3.4.0.ebuild 404
 MD5 bf55cbe0244386a3b46be4ca7fe7bc8a files/digest-nsplugins-3.4.0_rc1 378
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-nsplugins-3.4.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD4DBQFCOwbRUpKYMelfdYERAinEAJdbDmo3kRogewnBOjqU35WvZsOaAJ97nEOq
-R0SG2Tbbw9TbERnWgAo3Ag==
-=3K+A
------END PGP SIGNATURE-----

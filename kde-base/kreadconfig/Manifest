@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d609fcf963269cd2656bdbf9ae9ae4ab ChangeLog 1157
+MD5 dc9ca39aac58485217ee9da2a7171a59 ChangeLog 1253
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 97e543f510dcb0f0ddc0c5ad3a4a08af kreadconfig-3.4.0.ebuild 416
+MD5 f6732dd89f4fec18dd24521250a5b8e4 kreadconfig-3.4.0.ebuild 422
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kreadconfig-3.4.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOwkoUpKYMelfdYERArmrAJ41nDJLslwC022lLX+YXl34OTEPDgCdEt5b
-A4Qumv2FNuoaeWvViJWrlJM=
-=8RNc
------END PGP SIGNATURE-----

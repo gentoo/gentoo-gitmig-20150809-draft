@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4bc42df3979da119f19811d0957a8821 kcontrol-3.4.0_rc1.ebuild 1353
-MD5 14c6364a6e0edf2ad799466453ae4244 ChangeLog 1828
-MD5 2385dd55313c24be45faae16f34c11f5 kcontrol-3.4.0.ebuild 1344
+MD5 eb27286c2f28311e1e1747ece4f7c9dc ChangeLog 1922
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kcontrol-3.4.0 68
-MD5 bf55cbe0244386a3b46be4ca7fe7bc8a files/digest-kcontrol-3.4.0_rc1 378
+MD5 d87c500d3826176b570d90c78eb9b0bb kcontrol-3.4.0.ebuild 1350
+MD5 4bc42df3979da119f19811d0957a8821 kcontrol-3.4.0_rc1.ebuild 1353
 MD5 64e656c39553f20b12d38eca1f8120d6 files/configure.in.in-kdm-settings.diff 686
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOxcuUpKYMelfdYERAuCIAJ4xFrzefgpbd7DJKpqbt/R+77aipgCfQ/Dq
-1UrSd0yuj3jCA49a4yToVKI=
-=0rQb
------END PGP SIGNATURE-----
+MD5 bf55cbe0244386a3b46be4ca7fe7bc8a files/digest-kcontrol-3.4.0_rc1 378
+MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kcontrol-3.4.0 68

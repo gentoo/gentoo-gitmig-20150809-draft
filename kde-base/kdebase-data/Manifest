@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 a172e22cfd3e9e3f2d963a811ff06334 ChangeLog 1159
+MD5 1a3048f5dad89e0127aa8a81ccef7b33 kdebase-data-3.4.0.ebuild 1148
 MD5 98ab469304095035dd2e8244d79d2365 kdebase-data-3.4.0_rc1-r1.ebuild 1162
-MD5 af4440269e4fe6ab1d8e3741252ae1b1 kdebase-data-3.4.0.ebuild 1142
-MD5 0398399b819892ddbb28a81fd7822abc ChangeLog 1062
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 bf55cbe0244386a3b46be4ca7fe7bc8a files/digest-kdebase-data-3.4.0_rc1-r1 378
 MD5 010340a437b3c0d1605af4ddf95368eb files/agent-shutdown.sh 260
-MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kdebase-data-3.4.0 68
 MD5 c1250a1da4ea1fd131b44ebc27f32f3f files/agent-startup.sh 551
+MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kdebase-data-3.4.0 68
+MD5 bf55cbe0244386a3b46be4ca7fe7bc8a files/digest-kdebase-data-3.4.0_rc1-r1 378
 MD5 0aa159291daa24450f0ecf1962a0a179 files/startkde-3.4.0_rc1-gentoo.diff 1210
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOwXuUpKYMelfdYERAke9AJ9zEdXv8FZ2wlSir99xTAbeQeLwmgCfXgJ/
-1Gs+XGsFTv5q13+Whfmakl4=
-=SXuv
------END PGP SIGNATURE-----
