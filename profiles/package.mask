@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2907 2004/06/03 15:50:30 humpback Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2908 2004/06/03 21:45:26 lv Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,10 +21,6 @@
 ##
 ##   End example
 ##
-
-# <lv@gentoo.org> (02 June 2004)
-# semi-broken and a work in progress
->=sys-libs/glibc-2.3.3.20040602
 
 # <klieber@gentoo.org> (01 June 2004)
 # security masked due to issue described in #51586
