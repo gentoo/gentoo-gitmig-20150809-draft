@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ladebug-4.0.67.ebuild,v 1.6 2004/06/25 02:38:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ladebug-4.0.67.ebuild,v 1.7 2004/07/02 05:09:50 eradicator Exp $
 #
 # Submitted By Tavis Ormandy <taviso@gentoo.org>
 #
@@ -16,7 +16,7 @@ LICENSE="PLDSPv2"
 SLOT="0"
 # NOTE: ALPHA Only!
 KEYWORDS="-* alpha"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		app-arch/rpm2targz
 		emacs? ( virtual/emacs )"
 RDEPEND="dev-libs/libots

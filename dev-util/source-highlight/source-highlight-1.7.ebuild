@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-1.7.ebuild,v 1.4 2004/06/25 02:46:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-1.7.ebuild,v 1.5 2004/07/02 05:13:36 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 amd64"
 SLOT="0"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S="${WORKDIR}/${P}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.1.1-r1.ebuild,v 1.2 2004/06/25 02:49:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.1.1-r1.ebuild,v 1.3 2004/07/02 05:14:19 eradicator Exp $
 
 inherit flag-o-matic eutils
 RESTRICT="nostrip"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 -sparc -ppc -alpha"
 IUSE="X"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/autoconf
 	sys-devel/automake
 	X? ( virtual/x11 )"

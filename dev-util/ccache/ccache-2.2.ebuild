@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.2.ebuild,v 1.7 2004/06/25 02:22:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.2.ebuild,v 1.8 2004/07/02 05:03:56 eradicator Exp $
 
 DESCRIPTION="ccache is a fast compiler cache. It is used as a front end to your
 compiler to safely cache compilation output. When the same code is compiled
@@ -12,7 +12,7 @@ IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha mips hppa amd64"
-DEPEND="virtual/glibc \
+DEPEND="virtual/libc \
 		>=sys-apps/portage-2.0.46-r11"
 
 # Note: this version is designed to be auto-detected and used if

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.19 2004/06/25 02:43:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.20 2004/07/02 05:11:55 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  pkgconfig-0.12.0.ebuild, pkgconfig-0.14.0.ebuild, pkgconfig-0.15.0.ebuild:
+  virtual/glibc -> virtual/libc
 
   02 Mar 2004; Brian Jackson <iggy@gentoo.org> pkgconfig-0.15.0.ebuild:
   s390 keywords

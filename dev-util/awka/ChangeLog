@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/awka
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/awka/ChangeLog,v 1.2 2004/06/25 02:20:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/awka/ChangeLog,v 1.3 2004/07/02 05:03:29 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> awka-0.7.5.ebuild:
+  virtual/glibc -> virtual/libc
 
 *awka-0.7.5 (24 Aug 2003)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ladebug
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ChangeLog,v 1.5 2004/06/25 02:38:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ChangeLog,v 1.6 2004/07/02 05:09:50 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ladebug-4.0.67.ebuild:
+  virtual/glibc -> virtual/libc
 
   23 Jun 2003; Tavis Ormandy <taviso@gentoo.org> ladebug-4.0.67.ebuild:
   stable on alpha

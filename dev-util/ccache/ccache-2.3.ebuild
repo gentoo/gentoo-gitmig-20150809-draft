@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.3.ebuild,v 1.14 2004/06/25 02:22:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.3.ebuild,v 1.15 2004/07/02 05:03:56 eradicator Exp $
 
 DESCRIPTION="fast compiler cache"
 HOMEPAGE="http://ccache.samba.org/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE=""
 
-DEPEND="virtual/glibc \
+DEPEND="virtual/libc \
 	>=sys-apps/portage-2.0.46-r11"
 
 # Note: this version is designed to be auto-detected and used if

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.4.2.ebuild,v 1.2 2004/06/25 02:31:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-3.4.2.ebuild,v 1.3 2004/07/02 05:07:16 eradicator Exp $
 
 IUSE="idl"
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 python_version
 IDIR="/usr/lib/python${PYVER}/site-packages/eric3/"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/libtool
 	>=x11-libs/qt-3.1
 	>=dev-python/qscintilla-1.54

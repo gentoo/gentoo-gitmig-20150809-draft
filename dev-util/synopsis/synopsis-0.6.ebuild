@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/synopsis-0.6.ebuild,v 1.2 2004/06/25 02:48:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/synopsis-0.6.ebuild,v 1.3 2004/07/02 05:14:05 eradicator Exp $
 
 inherit distutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Synopsis is a general source code documentation tool."
 SRC_URI="http://synopsis.fresco.org/download/${P}.tar.bz2"
 HOMEPAGE="http://synopsis.fresco.org/index.html"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-lang/python-2.2"
 
 RDEPEND="${DEPEND}

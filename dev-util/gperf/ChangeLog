@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gperf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.18 2004/06/28 02:09:30 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.19 2004/07/02 05:08:27 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gperf-2.7.2.ebuild,
+  gperf-3.0.1.ebuild:
+  virtual/glibc -> virtual/libc
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> gperf-3.0.1.ebuild:
   Stable on mips

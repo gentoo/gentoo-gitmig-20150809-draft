@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pmk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmk/ChangeLog,v 1.4 2004/06/25 02:43:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmk/ChangeLog,v 1.5 2004/07/02 05:12:13 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> pmk-0.8.1.ebuild,
+  pmk-0.8.ebuild:
+  virtual/glibc -> virtual/libc
 
   16 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> pmk-0.8.1.ebuild,
   pmk-0.8.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/cutils-1.6.ebuild,v 1.9 2004/06/25 02:25:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/cutils-1.6.ebuild,v 1.10 2004/07/02 05:05:26 eradicator Exp $
 
 DESCRIPTION="C language utilities"
 HOMEPAGE="http://www.sigala.it/sandro/software.html#cutils"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="x86 sparc"
 LICENSE="as-is"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack  ${A}

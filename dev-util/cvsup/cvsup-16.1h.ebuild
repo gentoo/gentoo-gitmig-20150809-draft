@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.11 2004/06/28 04:22:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.12 2004/07/02 05:06:21 eradicator Exp $
 
 inherit eutils
 
@@ -20,11 +20,11 @@ SLOT="0"
 KEYWORDS="-* x86 ~ppc"
 IUSE="X opengl static"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	dev-util/yacc
 	>=sys-apps/sed-4
 	ppc? ( dev-lang/cm3 )"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 S=${WORKDIR}
 

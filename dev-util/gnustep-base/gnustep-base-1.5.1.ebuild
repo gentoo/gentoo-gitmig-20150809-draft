@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/gnustep-base-1.5.1.ebuild,v 1.6 2004/06/25 02:34:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/gnustep-base-1.5.1.ebuild,v 1.7 2004/07/02 05:07:45 eradicator Exp $
 
 IUSE=""
 DESCRIPTION="GNUstep base package"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.gnustep.org"
 LICENSE="LGPL-2.1"
 DEPEND=">=dev-util/gnustep-make-1.5.1
 	>=dev-libs/libxml2-2.4.23"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
 KEYWORDS="x86 -ppc ~sparc "
 SLOT="0"

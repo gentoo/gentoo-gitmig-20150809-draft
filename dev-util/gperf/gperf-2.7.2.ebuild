@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/gperf-2.7.2.ebuild,v 1.16 2004/06/25 02:35:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/gperf-2.7.2.ebuild,v 1.17 2004/07/02 05:08:27 eradicator Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A perfect hash function generator."
@@ -11,10 +11,10 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha amd64 hppa ia64"
 IUSE=""
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=sys-apps/sed"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	sed -i -e "s#^docdir = \$(prefix).*#docdir = @datadir@/doc/${PF}#" doc/Makefile.in

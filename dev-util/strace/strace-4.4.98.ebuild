@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.98.ebuild,v 1.14 2004/06/25 02:47:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.98.ebuild,v 1.15 2004/07/02 05:13:52 eradicator Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc ~alpha hppa -mips amd64 ia64"
 IUSE="static"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.54"
 

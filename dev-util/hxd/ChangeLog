@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/hxd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hxd/ChangeLog,v 1.4 2004/06/28 05:39:23 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hxd/ChangeLog,v 1.5 2004/07/02 05:08:53 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> hxd-0.70.ebuild:
+  virtual/glibc -> virtual/libc
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> hxd-0.70.ebuild:
   Added ~sparc, ~mips

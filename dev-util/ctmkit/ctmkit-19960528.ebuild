@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctmkit/ctmkit-19960528.ebuild,v 1.8 2004/06/25 02:25:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctmkit/ctmkit-19960528.ebuild,v 1.9 2004/07/02 05:04:55 eradicator Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="old NetBSD port of FreeBSD's CTM, a set of utilities to synchronize directories through email"
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="public-domain RSA-MD2 RSA-MD4 RSA-MD5 as-is"
 KEYWORDS="x86 s390"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.7.1.ebuild,v 1.5 2004/06/25 02:34:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.7.1.ebuild,v 1.6 2004/07/02 05:08:13 eradicator Exp $
 
 IUSE="X"
 
@@ -12,7 +12,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-x86"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-devel/gcc-3.2
 	>=dev-libs/ffcall-1.8d
 	>=dev-libs/gmp-4.1

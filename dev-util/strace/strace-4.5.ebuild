@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.ebuild,v 1.4 2004/06/25 02:47:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.ebuild,v 1.5 2004/07/02 05:13:52 eradicator Exp $
 
 DESCRIPTION="A useful diagnostic, instructional, and debugging tool"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -12,7 +12,7 @@ LICENSE="as-is"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa mips ~amd64 ~ia64"
 inherit flag-o-matic
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-devel/autoconf-2.54"
 
 src_compile() {

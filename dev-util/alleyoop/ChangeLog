@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/alleyoop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/ChangeLog,v 1.5 2004/06/25 02:18:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/ChangeLog,v 1.6 2004/07/02 05:03:03 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alleyoop-0.8.2.ebuild:
+  virtual/glibc -> virtual/libc
 
   15 Jun 2004; Daniel Black <dragonheart@gentoo.org> alleyoop-0.8.2.ebuild:
   x86 stable. Removed surplus dependancies

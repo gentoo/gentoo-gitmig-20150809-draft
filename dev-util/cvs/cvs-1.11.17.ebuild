@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.17.ebuild,v 1.11 2004/06/25 02:25:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.17.ebuild,v 1.12 2004/07/02 05:05:45 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,7 +22,7 @@ KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 
 IUSE="doc emacs"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.4"
 

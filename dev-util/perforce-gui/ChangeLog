@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/perforce-gui
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-gui/ChangeLog,v 1.4 2004/06/25 02:42:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-gui/ChangeLog,v 1.5 2004/07/02 05:11:15 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  perforce-gui-2003.1.ebuild, perforce-gui-2003.2.ebuild:
+  virtual/glibc -> virtual/libc
 
 *perforce-gui-2003.2 (18 Apr 2004)
   18 Apr 2004; Stuart Herbert <stuart@gentoo.org> :

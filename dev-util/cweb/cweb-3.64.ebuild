@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/cweb-3.64.ebuild,v 1.5 2004/06/25 02:27:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/cweb-3.64.ebuild,v 1.6 2004/07/02 05:06:35 eradicator Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Knuth's and Levy's C/C++ documenting system"
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="x86 sparc "
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	#emake won't work, because cweave needs ctangle to compile

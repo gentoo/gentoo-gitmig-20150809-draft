@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.0.0.ebuild,v 1.6 2004/06/25 02:49:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.0.0.ebuild,v 1.7 2004/07/02 05:14:19 eradicator Exp $
 
 inherit flag-o-matic eutils
 RESTRICT="nostrip"
@@ -12,7 +12,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="An open-source memory debugger for x86-GNU/Linux"
 HOMEPAGE="http://valgrind.kde.org"
 SRC_URI="http://developer.kde.org/~sewardj/${MY_P}.tar.bz2"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/autoconf
 	X? ( virtual/x11 )"
 

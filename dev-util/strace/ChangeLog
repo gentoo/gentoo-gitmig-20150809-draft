@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.40 2004/06/25 02:47:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.41 2004/07/02 05:13:52 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> strace-4.4.94.ebuild,
+  strace-4.4.98-r1.ebuild, strace-4.4.98.ebuild, strace-4.5.1.ebuild,
+  strace-4.5.ebuild:
+  virtual/glibc -> virtual/libc
 
   05 Jun 2004; <tuxus@gentoo.org> strace-4.4.98-r1.ebuild,
   strace-4.4.98.ebuild:

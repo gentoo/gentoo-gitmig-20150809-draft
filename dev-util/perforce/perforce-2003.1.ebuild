@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/perforce-2003.1.ebuild,v 1.5 2004/06/25 02:42:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/perforce-2003.1.ebuild,v 1.6 2004/07/02 05:10:49 eradicator Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="x86"
 IUSE=""
 RESTRICT="nomirror nostrip"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}
 

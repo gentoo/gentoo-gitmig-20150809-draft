@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.12.0.ebuild,v 1.13 2004/06/25 02:43:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.12.0.ebuild,v 1.14 2004/07/02 05:11:55 eradicator Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Package Config system that manages compile/link flags for libraries"
@@ -10,7 +10,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND=""
 
 src_compile() {
