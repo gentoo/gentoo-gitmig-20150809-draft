@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.0/virtuals,v 1.5 2004/06/28 19:26:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.0/virtuals,v 1.6 2004/06/28 20:46:45 vapier Exp $
 
 # Virtuals specific to the Gentoo/amd64 2004.0 release
 
@@ -17,8 +17,5 @@ virtual/os-headers		sys-kernel/linux-headers
 virtual/winkernel		sys-kernel/win4lin-sources
 
 # Package Remapping
-sys-apps/fileutils		sys-apps/coreutils
 sys-apps/reiserfs-utils		sys-fs/reiserfsprogs
-sys-apps/sh-utils		sys-apps/coreutils
-sys-apps/textutils		sys-apps/coreutils
 virtual/ruby		dev-lang/ruby
