@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/meterbridge
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/meterbridge/ChangeLog,v 1.1 2003/05/28 12:35:32 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/meterbridge/ChangeLog,v 1.2 2003/05/29 09:58:20 jje Exp $
+
+  29 May 2003; jje <jje@gentoo.org> meterbridge-0.9.0.ebuild:
+  Fixed ebuild description.
 
 *meterbridge-0.9.0 (28 May 2003)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/meterbridge/meterbridge-0.9.0.ebuild,v 1.1 2003/05/28 12:35:32 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/meterbridge/meterbridge-0.9.0.ebuild,v 1.2 2003/05/29 09:58:20 jje Exp $
 
-DESCRIPTION="This is a sample skeleton ebuild file"
+DESCRIPTION="Software meterbridge for the UNIX based JACK audio system."
 HOMEPAGE="http://plugin.org.uk/meterbridge/"
 SRC_URI="http://plugin.org.uk/meterbridge/${P}.tar.gz"
 
