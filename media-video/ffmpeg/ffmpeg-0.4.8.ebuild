@@ -1,24 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.ebuild,v 1.5 2004/01/17 03:54:46 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.ebuild,v 1.6 2004/01/29 23:03:13 vapier Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Complete solution to record, convert and stream audio and video. Includes libavcodec."
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://ffmpeg.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-IUSE="mmx altivec encode oggvorbis doc faad dvd static sdl imlib truetype"
-
-inherit flag-o-matic
-filter-flags "-fforce-addr -fPIC"
-# fixes bug #16281
-use alpha && append-flags "-fPIC"
-use amd64 && append-flags "-fPIC"
-
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ppc ~sparc ~alpha amd64"
+IUSE="mmx altivec encode oggvorbis doc faad dvd static sdl imlib truetype"
 
 DEPEND="encode? ( >=media-sound/lame-3.92 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0-r1 )
@@ -29,8 +22,6 @@ DEPEND="encode? ( >=media-sound/lame-3.92 )
 	imlib? ( >=media-libs/imlib2-1.0.6 )
 	truetype? ( >=media-libs/freetype-2.1.2 )"
 
-S=${WORKDIR}/${P}
-
 src_unpack() {
 	unpack ${A} || die
 	cd ${S}
@@ -38,10 +29,14 @@ src_unpack() {
 	# for some reason it tries to #include <X11/Xlib.h>,b ut doesn't use it
 	cd ${S}
 	sed -i s:\#define\ HAVE_X11:\#define\ HAVE_LINUX: ffplay.c
-
 }
 
 src_compile() {
+	filter-flags -fforce-addr -fPIC
+	# fixes bug #16281
+	use alpha && append-flags -fPIC
+	use amd64 && append-flags -fPIC
+
 	local myconf
 	myconf="${myconf} --disable-opts --enable-pp"
 	use mmx || myconf="${myconf} --disable-mmx"
@@ -61,7 +56,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make \
 		DESTDIR=${D} \
 		prefix=${D}/usr \
