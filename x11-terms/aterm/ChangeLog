@@ -1,17 +1,16 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.6 2002/12/09 22:07:06 blauwers Exp $
-
-*aterm-0.4.2-r3 (09 Dec 2002)
-
-  9 Dec 2002; B.Lauwers <blauwers@gentoo.org> aterm-0.4.2-r3.ebuild :
-
-  Added sparc to keywords
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.7 2002/12/30 12:59:52 mholzer Exp $
 
 *aterm-0.4.2-r3 (11 Jun 2002)
-  
-  3 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> aterm-0.4.2-r3.ebuild : 
 
+  30 Dec 2002; Martin Holzer <mholzer@gentoo.org> aterm-0.4.2-r3.ebuild :
+  Change SRC_URI to use mirror://sf
+
+  9 Dec 2002; B.Lauwers <blauwers@gentoo.org> aterm-0.4.2-r3.ebuild :
+  Added sparc to keywords
+
+  3 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> aterm-0.4.2-r3.ebuild : 
   Added ppc to KEYWORDS.
 
   11 Jun 2002; Seemant Kulleen <seemant@gentoo.org> aterm-0.4.2-r4.ebuild
@@ -23,7 +22,6 @@
 *aterm-0.4.2-r2 (17 May 2002)
 
   17 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> aterm-0.4.2-r2.ebuild files/digest-aterm-0.4.2-r2:
-
   Added proper backspace support.
 
   Removed aterm-0.4.2-r1.ebuild files/digest-aterm-0.4.2-r1
@@ -31,15 +29,14 @@
 *aterm-0.4.2-r1 (27 Mar 2002)
 
   27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> aterm-0.4.2-r1.ebuild :
-
   man page/LFH compliance submitted by Matthew Kennedy
 
 *aterm-0.4.2 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+
