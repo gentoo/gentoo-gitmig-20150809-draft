@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.15.ebuild,v 1.17 2004/07/02 09:31:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.15.ebuild,v 1.18 2004/07/15 03:10:40 agriffis Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -9,7 +9,6 @@ IUSE="nls bootstrap static build"
 
 inherit libtool
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2"
 HOMEPAGE="http://sources.redhat.com/binutils/"
@@ -129,4 +128,3 @@ src_install() {
 		rm -rf ${D}/usr/share/man
 	fi
 }
-

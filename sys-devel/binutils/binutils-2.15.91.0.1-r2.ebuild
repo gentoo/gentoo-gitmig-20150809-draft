@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.91.0.1-r2.ebuild,v 1.5 2004/07/02 09:31:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.91.0.1-r2.ebuild,v 1.6 2004/07/15 03:10:41 agriffis Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -65,7 +65,7 @@ src_compile() {
 	# GCC 3.4 miscompiles binutils unless CFLAGS are conservative #47581
 	has_version "=sys-devel/gcc-3.4*" && strip-flags && replace-flags -O3 -O2
 
-	use uclibc && gnuconfig_update
+	gnuconfig_update
 
 	local myconf=
 	[ ! -z "${CBUILD}" ] && myconf="--build=${CBUILD}"

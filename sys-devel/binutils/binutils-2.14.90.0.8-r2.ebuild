@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r2.ebuild,v 1.7 2004/07/08 20:40:41 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r2.ebuild,v 1.8 2004/07/15 03:10:41 agriffis Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -62,7 +62,7 @@ src_compile() {
 	# Generate borked binaries.  Bug #6730, #27456
 	filter-flags "-fomit-frame-pointer" "-fssa" "-freduce-all-givs"
 
-	use uclibc && gnuconfig_update
+	gnuconfig_update
 
 	local myconf=
 	[ ! -z "${CBUILD}" ] && myconf="--build=${CBUILD}"

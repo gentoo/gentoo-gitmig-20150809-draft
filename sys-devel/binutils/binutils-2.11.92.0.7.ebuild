@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.92.0.7.ebuild,v 1.17 2004/07/02 09:31:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.92.0.7.ebuild,v 1.18 2004/07/15 03:10:40 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2 BINUTILS"
 SLOT="0"
 KEYWORDS="x86 sparc"
+IUSE="build nls static"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 
 DEPEND="virtual/libc"
@@ -77,6 +77,3 @@ src_install() {
 	fi
 
 }
-
-
-
