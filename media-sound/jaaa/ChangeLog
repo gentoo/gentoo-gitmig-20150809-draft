@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/jaaa
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/ChangeLog,v 1.4 2004/11/27 18:46:24 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/ChangeLog,v 1.5 2004/11/28 13:30:31 fvdpol Exp $
+
+*jaaa-0.1.2-r1 (28 Nov 2004)
+
+  28 Nov 2004; Frank van de Pol <fvdpol@gentoo.org>
+  +files/jaaa-0.1.2-amd64.patch, +jaaa-0.1.2-r1.ebuild:
+  Fixed initialisation on amd64, thanks to Fons Adriaensen
+  <fons.adriaensen@skynet.be>. Closing bug 72657.
 
 *jaaa-0.1.2 (27 Nov 2004)
 
