@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.35 2004/07/18 01:31:56 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.36 2004/07/18 02:51:17 cyfred Exp $
+
+*opengl-update-1.8.1 (18 Jul 2004)
+
+  18 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>; -files/opengl-update-1.8,
+  +files/opengl-update-1.8.1, -opengl-update-1.8-r1.ebuild,
+  +opengl-update-1.8.1.ebuild, -opengl-update-1.8.ebuild:
+  Making /usr/lib/tls back into a directory again, for future compatibility
 
   18 Jul 2004; Bart Lauwers <blauwers@gentoo.org> opengl-update-1.8.ebuild:
   Corrected typo.

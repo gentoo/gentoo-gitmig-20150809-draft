@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-1.8,v 1.1 2004/07/17 03:25:31 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-1.8.1,v 1.1 2004/07/18 02:51:17 cyfred Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -181,10 +181,14 @@ ebegin "Switching to ${GL_IMPLEM} OpenGL interface"
 		fi
 
 		# Setup nvidia tls symlinks (if necessary)
-		if [ -e /usr/${LIBDIR}/tls ]
+		if [ -h /usr/${LIBDIR}/tls ]
 		then
 			rm -f /usr/${LIBDIR}/tls
 		fi
+		# Make the directory 
+		mkdir -p /usr/${LIBDIR}/tls
+
+		# Now setup the library links
 		if [ -e /usr/${LIBDIR}/libnvidia-tls.so ]
 		then
 			rm -f /usr/${LIBDIR}/libnvidia-tls.so
@@ -193,9 +197,13 @@ ebegin "Switching to ${GL_IMPLEM} OpenGL interface"
 		then
 			rm -f /usr/${LIBDIR}/libnvidia-tls.so.1
 		fi
-		if [ -d /usr/${LIBDIR}/opengl/${GL_LOCAL}/lib/tls ]
+		if [ -e /usr/${LIBDIR}/opengl/${GL_LOCAL}/lib/tls/libnvidia-tls.so.1 ]
 		then
-			ln -sf /usr/${LIBDIR}/opengl/${GL_LOCAL}/lib/tls /usr/${LIBDIR}/tls
+			realtls="$(readlink /usr/${LIBDIR}/opengl/${GL_LOCAL}/lib/tls/libnvidia-tls.so.1)"
+			ln -sf /usr/${LIBDIR}/opengl/${GL_LOCAL}/lib/tls/${realtls} \
+				/usr/${LIBDIR}/tls/libnvidia-tls.so
+			ln -sf /usr/${LIBDIR}/opengl/${GL_LOCAL}/lib/tls/${realtls} \
+				/usr/${LIBDIR}/tls/libnvidia-tls.so.1
 		fi
 		if [ -e /usr/${LIBDIR}/opengl/${GL_LOCAL}/lib/libnvidia-tls.so.1 ]
 		then
