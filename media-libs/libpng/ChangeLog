@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.17 2003/01/08 14:26:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.18 2003/01/14 08:17:27 seemant Exp $
+
+*libpng-1.0.15 (14 Jan 2003)
+
+  14 Jan 2003; Seemant Kulleen <seemant@gentoo.org> libpng-1.0.15.ebuild
+  files/digest-libpng-1.0.15 :
+
+  Version bump of the libpng-10 series.  This should not clobber libpng-12
+  from being the default.  Closes bug #10726 by : jk@xylema.org (John Kozak)
+
 
 *libpng-1.2.5-r2 (08 Jan 2003)
 *libpng-1.0.12-r2 (08 Jan 2003)
