@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.9.14.ebuild,v 1.2 2004/09/21 23:49:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.9.14.ebuild,v 1.3 2004/12/20 15:12:58 liquidx Exp $
 
 inherit gnuconfig
 
@@ -44,7 +44,7 @@ src_install() {
 
 	# startups for dictd
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PVR}/dictd dictd
+	newexe ${FILESDIR}/1.9.11-r1/dictd dictd
 	insinto /etc/conf.d
-	newins ${FILESDIR}/${PVR}/dictd.confd dictd
+	newins ${FILESDIR}/1.9.11-r1/dictd.confd dictd
 }
