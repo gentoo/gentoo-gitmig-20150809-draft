@@ -1,14 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsplusutils/hfsplusutils-1.0.4.ebuild,v 1.12 2002/12/09 04:37:25 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsplusutils/hfsplusutils-1.0.4.ebuild,v 1.13 2002/12/30 00:46:18 vapier Exp $
 
-S=${WORKDIR}/hfsplus-${PV}
 MY_P="hfsplus_${PV}"
 DESCRIPTION="HFS+ Filesystem Access Utilities (PPC Only)"
 SRC_URI="http://ftp.penguinppc.org/users/hasi/${MY_P}.src.tar.bz2"
 HOMEPAGE="http://ftp.penguinppc.org/users/hasi/"
 
-KEYWORDS="ppc -x86 -sparc  -alpha"
+KEYWORDS="x86 ppc -sparc -alpha"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -16,6 +15,8 @@ DEPEND="sys-devel/autoconf
 	sys-devel/automake
 	sys-apps/bzip2"
 RDEPEND=""
+
+S=${WORKDIR}/hfsplus-${PV}
 
 MAKEOPTS='PREFIX=/usr MANDIR=/usr/share/man'
 
@@ -25,7 +26,7 @@ src_compile() {
 
 	patch -p0 < ${FILESDIR}/hfsplusutils-1.0.4-glob.patch || die "Patch failed"
 
-	econf
+	econf || die
 	emake || die
 }
 
@@ -38,6 +39,5 @@ src_install() {
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die
-	dodir /usr/share/man/man1
-	cp doc/man/hfsp.man ${D}/usr/share/man/man1/hfsp.1
+	newman doc/man/hfsp.man hfsp.1
 }
