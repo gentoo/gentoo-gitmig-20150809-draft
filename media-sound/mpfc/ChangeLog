@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpfc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/ChangeLog,v 1.5 2004/10/25 22:25:00 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/ChangeLog,v 1.6 2004/11/18 18:02:23 pkdawson Exp $
+
+*mpfc-1.3.5 (18 Nov 2004)
+
+  18 Nov 2004; Patrick Dawson <pkdawson@gentoo.org> +mpfc-1.3.5.ebuild:
+  Version bump.
 
 *mpfc-1.3.4 (25 Oct 2004)
 
