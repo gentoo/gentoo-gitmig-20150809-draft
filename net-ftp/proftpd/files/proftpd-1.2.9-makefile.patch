@@ -1,0 +1,15 @@
+--- Makefile.in.orig	2004-01-28 19:11:27.400918368 +0000
++++ Makefile.in	2004-01-28 19:11:33.818942680 +0000
+@@ -58,10 +58,10 @@
+ ftpshut$(EXEEXT): utils
+ 	$(CC) $(LDFLAGS) -o $@ $(BUILD_FTPSHUT_OBJS)
+ 
+-ftptop$(EXEEXT): utils
++ftptop$(EXEEXT): utils lib
+ 	$(CC) $(LDFLAGS) -o $@ $(BUILD_FTPTOP_OBJS) $(CURSES_LIBS) -lsupp
+ 
+-ftpwho$(EXEEXT): utils
++ftpwho$(EXEEXT): utils lib
+ 	$(CC) $(LDFLAGS) -o $@ $(BUILD_FTPWHO_OBJS) -lsupp
+ 
+ 

@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.50 2004/01/31 14:26:46 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.51 2004/02/12 19:14:14 blkdeath Exp $
+
+*proftpd-1.2.9-r1 (12 Feb 2004)
+
+  12 Feb 2004; Stewart Honsberger <blkdeath@gentoo.org>
+  proftpd-1.2.9-r1.ebuild, files/proftpd-1.2.9-makefile.patch:
+  Re: Bug #39678; apply patch to correct race condition for paralell build.
 
   31 Jan 2004; Christian Birchinger <joker@gentoo.org> proftpd-1.2.9.ebuild:
   Added sparc stable keyword
