@@ -352,9 +352,6 @@ dev-lang/tcl-tk
 =x11-base/xfree-4.2.0
 =x11-base/xfree-4.2.0-r1
 
-# Development branch
->=net-www/galeon-1.1.0
-
 # Bevin <gbevin@gentoo.org> - new grub release, splashimage path should
 # be updated in the docs to be "splashimage=(hd0,0)/grub/splash.xpm.gz"
 # instead. Also, this release hasn't been tested with xfs yet, only with
