@@ -1,5 +1,5 @@
 MD5 6152df4babff9c5381e5bcd1075b3304 ChangeLog 566
-MD5 1ffa2367099bd181a13ea5b593845f1c linuxfromscratch-text-3.3.ebuild 845
-MD5 11c0e66384feebf2f45f518aec9cdb22 linuxfromscratch-text-4.0.ebuild 845
+MD5 7b7f8c39d5dcbc15769d67d1be2c2acf linuxfromscratch-text-3.3.ebuild 848
+MD5 3be2c2f157bbd761a0be4bf718b9d9e3 linuxfromscratch-text-4.0.ebuild 848
 MD5 591bdc0443084d1827fd8eb0e4a88d44 files/digest-linuxfromscratch-text-3.3 64
 MD5 fa023d470072f4904af565bc0cf31373 files/digest-linuxfromscratch-text-4.0 64
