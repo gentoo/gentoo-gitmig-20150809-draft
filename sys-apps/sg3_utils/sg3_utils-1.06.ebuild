@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.06.ebuild,v 1.3 2004/06/24 22:26:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.06.ebuild,v 1.4 2004/08/09 15:38:41 lv Exp $
 
 DESCRIPTION="Sg3_utils provide a collection of programs that use the sg SCSI interface"
 HOMEPAGE="http://www.torque.net/sg/"
@@ -9,7 +9,7 @@ SRC_URI="http://www.torque.net/sg/p/sg3_utils-1.06.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~amd64"
 IUSE=""
 
 DEPEND=""
