@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8.ebuild,v 1.7 2003/11/24 07:25:36 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8.ebuild,v 1.8 2003/12/09 18:11:41 seemant Exp $
 
-IUSE="gpm nls gtk gnome alsa gtk2"
+IUSE="alsa gtk gtk2 gnome gpm nls"
 
 DESCRIPTION="Aumix volume/mixer control program."
 SRC_URI="http://jpj.net/~trevor/aumix/${P}.tar.bz2"
@@ -25,7 +25,9 @@ src_compile() {
 	local myconf
 
 	if use gtk; then
-		use gtk2 && myconf="${myconf} --without-gtk1"
+		use gtk2 \
+			&& myconf="${myconf} --without-gtk1" \
+			|| myconf="${myconf} --without-gtk with-gtk1"
 	else
 		myconf="${myconf} --without-gtk --without-gtk1";
 	fi

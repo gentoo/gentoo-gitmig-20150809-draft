@@ -1,7 +1,11 @@
 # ChangeLog for media-sound/aumix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.13 2003/11/04 08:34:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.14 2003/12/09 18:11:41 seemant Exp $
 
+  09 Dec 2003; Seemant Kulleen <seemant@gentoo.org> aumix-2.7-r4.ebuild,
+  aumix-2.8.ebuild:
+  fix gtk/gtk2 issue so that it compiles gtk1 interface if -gtk in USE. Thanks
+  to: Will Richey <w-gentoo@mulm.org> in bug #35444
 
   18 May 2003; Seemant Kulleen <seemant@gentoo.org> files/aumix.rc6:
   Added support for OSS detection in the initscript. Thanks to: Jarkko
