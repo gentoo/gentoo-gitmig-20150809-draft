@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.3-r1.ebuild,v 1.1 2004/04/02 19:51:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.3-r1.ebuild,v 1.2 2004/06/24 23:00:02 agriffis Exp $
 
 if [ $( use kde ) ]; then
 	inherit kde-base eutils

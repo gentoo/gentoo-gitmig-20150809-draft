@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openc6/openc6-0.9.5_beta.ebuild,v 1.2 2004/05/28 15:41:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openc6/openc6-0.9.5_beta.ebuild,v 1.3 2004/06/24 22:58:34 agriffis Exp $
 
 inherit kde eutils
 need-qt 3.1

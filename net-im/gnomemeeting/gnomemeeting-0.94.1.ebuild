@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.94.1.ebuild,v 1.10 2004/03/17 00:14:07 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.94.1.ebuild,v 1.11 2004/06/24 22:52:26 agriffis Exp $
 
 IUSE="sdl ssl"
 

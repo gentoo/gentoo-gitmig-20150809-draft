@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openmcu/openmcu-1.1.7.ebuild,v 1.4 2003/10/24 19:30:17 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openmcu/openmcu-1.1.7.ebuild,v 1.5 2004/06/24 22:58:45 agriffis Exp $
 
 inherit eutils
 

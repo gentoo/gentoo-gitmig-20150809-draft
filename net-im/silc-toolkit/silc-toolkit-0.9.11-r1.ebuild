@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.11-r1.ebuild,v 1.5 2004/06/17 23:36:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.11-r1.ebuild,v 1.6 2004/06/24 22:59:41 agriffis Exp $
 
 IUSE="client server debug ipv6 perl socks5"
 

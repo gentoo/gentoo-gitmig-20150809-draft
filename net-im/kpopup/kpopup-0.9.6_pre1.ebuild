@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kpopup/kpopup-0.9.6_pre1.ebuild,v 1.1 2004/03/15 21:10:56 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kpopup/kpopup-0.9.6_pre1.ebuild,v 1.2 2004/06/24 22:55:52 agriffis Exp $
 
 inherit kde-base || die
 need-kde 3

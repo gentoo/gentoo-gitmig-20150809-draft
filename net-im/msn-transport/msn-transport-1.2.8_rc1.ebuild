@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-1.2.8_rc1.ebuild,v 1.8 2004/06/03 16:33:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-1.2.8_rc1.ebuild,v 1.9 2004/06/24 22:57:31 agriffis Exp $
 
 MY_PV="${PV/_rc/rc}"
 S="${WORKDIR}/${PN}-${MY_PV}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tleenx2/tleenx2-20040214.ebuild,v 1.2 2004/06/17 21:31:19 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tleenx2/tleenx2-20040214.ebuild,v 1.3 2004/06/24 23:00:45 agriffis Exp $
 
 IUSE=""
 LICENSE="GPL-2"

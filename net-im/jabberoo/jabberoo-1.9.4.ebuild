@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberoo/jabberoo-1.9.4.ebuild,v 1.2 2004/06/23 00:57:37 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberoo/jabberoo-1.9.4.ebuild,v 1.3 2004/06/24 22:54:15 agriffis Exp $
 
 
 DESCRIPTION="Jabberoo is a C++ interface to the Jabber protocol."

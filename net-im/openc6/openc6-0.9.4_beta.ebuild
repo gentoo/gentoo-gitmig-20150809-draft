@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openc6/openc6-0.9.4_beta.ebuild,v 1.3 2004/03/14 17:26:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openc6/openc6-0.9.4_beta.ebuild,v 1.4 2004/06/24 22:58:34 agriffis Exp $
 
 inherit kde
 

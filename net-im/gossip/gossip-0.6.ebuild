@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.6.ebuild,v 1.4 2004/05/21 23:49:05 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.6.ebuild,v 1.5 2004/06/24 22:52:59 agriffis Exp $
 
 inherit gnome2
 

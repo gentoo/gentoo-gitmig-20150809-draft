@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.3.8.ebuild,v 1.2 2004/05/13 15:31:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.3.8.ebuild,v 1.3 2004/06/24 22:54:47 agriffis Exp $
 
 inherit flag-o-matic
 
