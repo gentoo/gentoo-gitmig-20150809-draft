@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.2.2.ebuild,v 1.1 2004/02/26 10:36:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.2.2.ebuild,v 1.2 2004/02/27 10:59:43 mr_bones_ Exp $
 
 inherit games
 
@@ -39,6 +39,7 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 HOME="${T}"
+MAKEOPTS="-j1"
 
 src_unpack() {
 	unpack ${A}
