@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.23 2004/07/04 17:38:13 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.24 2004/07/04 19:15:05 weeve Exp $
+
+  04 Jul 2004; Jason Wever <weeve@gentoo.org> kdbg-1.2.10.ebuild:
+  Stable on sparc wrt bug #55438.
 
   04 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> kdbg-1.2.10.ebuild:
   Marked stable on amd64.
