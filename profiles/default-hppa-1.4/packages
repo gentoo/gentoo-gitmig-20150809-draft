@@ -62,9 +62,8 @@
 *sys-apps/grep
 *sys-apps/groff
 *sys-apps/gzip
-#Those two still have problems
-#*sys-apps/hdparm
-#*sys-apps/iptables
+*sys-apps/hdparm
+*sys-apps/iptables
 *sys-apps/palo
 *sys-apps/less
 *sys-apps/man
