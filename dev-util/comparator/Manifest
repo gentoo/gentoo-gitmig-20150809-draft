@@ -1,5 +1,5 @@
-MD5 2020c1253c9ec984cfd7fd7187c36bb9 ChangeLog 505
+MD5 8dd384549ca4884dd02470d8f7740e33 ChangeLog 505
 MD5 9b0c611cb639d79fc27fb95010aaf673 comparator-1.0.ebuild 719
-MD5 9e0d13f88d83069fcd903f488331bde2 comparator-2.2.ebuild 798
+MD5 c22fc56694ebde20189710bd980397eb comparator-2.2.ebuild 798
 MD5 b301c36b83dd0f86d71875009d7f5c9c files/digest-comparator-1.0 65
 MD5 6656b7abd2421064676a3e1f38d4635c files/digest-comparator-2.2 67
