@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.14.ebuild,v 1.4 2004/01/08 01:28:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.14.ebuild,v 1.5 2004/05/06 23:15:42 khai Exp $
 
 inherit gnome2 eutils
 
@@ -33,6 +33,11 @@ RDEPEND="net-mail/mailbase
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/gtk+2.4-2.patch
+}
 src_compile() {
 	local myconf
 
