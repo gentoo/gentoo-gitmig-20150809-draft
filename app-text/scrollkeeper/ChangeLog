@@ -1,8 +1,11 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.21 2003/01/24 06:41:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.22 2003/02/10 14:14:35 foser Exp $
 
 *scrollkeeper-0.3.12 (24 Jan 2003)
+
+  10 Feb 2003; foser <foser@gentoo.org> scrollkeeper-0.3.1[1-r1,2].ebuild :
+  Fixed docbook-xml-dtd to be more picky
   
   24 Jan 2003; Spider <spider@gentoo.org> : scrollkeeper-0.3.12.ebuild: 
   First official release in ages, now fixes the tempfile vulnerability and 
