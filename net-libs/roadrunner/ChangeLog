@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/roadrunner
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/roadrunner/ChangeLog,v 1.1 2004/05/07 00:55:52 dragonheart Exp $
+
+*roadrunner-0.9.1 (07 May 2004)
+
+  07 May 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +roadrunner-0.9.1.ebuild:
+  Initial import thanks to Robert Varga <nite@hq.alert.sk> in bug #48467
+
