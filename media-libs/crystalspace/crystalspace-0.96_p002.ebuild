@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/crystalspace/crystalspace-0.96_p002.ebuild,v 1.1 2003/04/02 19:02:25 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/crystalspace/crystalspace-0.96_p002.ebuild,v 1.2 2003/04/02 19:40:00 malverian Exp $
 
 IUSE="oggvorbis mikmod"
 
@@ -55,8 +55,10 @@ src_compile() {
 }
 
 src_install() {
-	dodir /opt /etc/env.d
+	dodir /opt /etc/env.d /usr/bin
 
 	make INSTALL_DIR=${D}/${CRYSTAL_PREFIX} install
 	echo "CRYSTAL=${CRYSTAL_PREFIX}" > ${D}/etc/env.d/15crystalspace
+
+	dosym /opt/crystal/bin/cs-config /usr/bin/cs-config
 }
