@@ -1,12 +1,16 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.13 2003/04/16 07:53:11 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.14 2003/04/20 18:38:28 mholzer Exp $
+
+*libpcre-4.2 (15 Apr 2003)
+
+  20 Apr 2003; Martin Holzer <mholzer@gentoo.org> libpcre-3.9-r2.ebuild,
+  libpcre-4.2.ebuild:
+  Fixing Header
 
   16 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> libpcre-4.2.ebuild :
   parallel make failed if no older version was installed - tried to
   link with the not-yet-existing library. Changed emake -> make.
-
-*libpcre-4.2 (15 Apr 2003)
 
   15 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
   libpcre-4.2.ebuild:
