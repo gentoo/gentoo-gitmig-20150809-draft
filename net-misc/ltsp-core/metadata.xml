@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>lanius@gentoo.org</email>
+	</maintainer>
+	<longdescription>LTSP, the Linux Terminal Server Project, is designed to 
+	allow multiple dummy terminals to run off of one central server. It 
+	includes support for local sound, usb mass media access, CD-ROM access, 
+	floppy access, and a host of other goodies. See http://www.ltsp.org for a 
+	full run-down of this fantastic package. 
+	</longdescription>
+</pkgmetadata>

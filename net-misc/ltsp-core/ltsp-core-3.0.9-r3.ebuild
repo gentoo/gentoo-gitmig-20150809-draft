@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-3.0.9-r3.ebuild,v 1.10 2004/07/15 03:03:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-3.0.9-r3.ebuild,v 1.11 2004/08/19 09:28:56 lanius Exp $
 
 
 IUSE="gnome kde"
@@ -37,7 +37,7 @@ DEPEND="gnome? ( >=gnome-base/gdm-2.4.0.0 )
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 ltsp_strip_config() {
 	local SOURCE="/"$1
