@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.8.9.ebuild,v 1.10 2003/02/13 06:23:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.8.9.ebuild,v 1.11 2004/02/22 18:13:40 agriffis Exp $
 
 DESCRIPTION="mhash is a library providing a uniform interface to a large number of hash algorithms."
 SRC_URI="http://mhash.sourceforge.net/dl/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://mhash.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/glibc"
 
