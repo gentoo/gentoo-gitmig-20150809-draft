@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.1.5.ebuild,v 1.2 2004/05/05 23:18:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.1.5.ebuild,v 1.3 2004/05/24 21:47:31 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -10,9 +10,9 @@ DATAVERSION="0.1.3"
 SRC_URI="http://download.berlios.de/netpanzer/netpanzer-${PV}.tar.bz2
 	http://download.berlios.de/netpanzer/netpanzerdata-${DATAVERSION}.tar.bz2"
 
-KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.2.5
@@ -49,5 +49,6 @@ src_install() {
 	# Don't use DESTDIR yet, because 0.1.3 didn't support that yet
 	jam -sdatadir="${D}${GAMES_DATADIR}" install \
 		|| die "jam install failed (data package)"
+	dodoc ChangeLog README TODO
 	prepgamesdirs
 }
