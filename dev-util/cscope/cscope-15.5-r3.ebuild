@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5-r3.ebuild,v 1.6 2004/12/11 23:31:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5-r3.ebuild,v 1.7 2004/12/12 19:38:47 rphillips Exp $
 
 inherit gnuconfig elisp-common eutils
 
@@ -24,8 +24,8 @@ SITEFILE=50xcscope-gentoo.el
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# Gentoo Bug #71595, http://www.rexotec.com/advisory/RX171104.html
-	epatch ${FILESDIR}/${PV}-noclobber-tempfile-rexotec.patch
+
+	#rphillips - tempfile security patch
 	epatch ${FILESDIR}/${PN}-${PV}-tempfile.patch
 }
 
