@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/ncpfs
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.18 2004/12/15 12:41:03 latexer Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.19 2005/01/29 01:18:11 griffon26 Exp $
+
+*ncpfs-2.2.6 (29 Jan 2005)
+
+  29 Jan 2005; Maurice van der Pot <griffon26@gentoo.org>
+  +ncpfs-2.2.6.ebuild:
+  Added new version that fixes security bug #77414.
+  Immediately marked stable on x86.
 
   15 Dec 2004; Peter Johanson <latexer@gentoo.org> ncpfs-2.2.5.ebuild:
   Fix syntax for php depends. See bug #74005
