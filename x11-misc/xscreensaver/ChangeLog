@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.1 2002/06/29 09:05:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.2 2002/07/07 10:05:16 phoenix Exp $
+
+*xscreensaver-4.05-r3 (07 July 2002)
+
+  07 Jul 2002; phoen][x <phoenix@gentoo.org>
+  xscreensaver-4.05-r3.ebuild files/digest-xscreensaver-4.05-r3 :
+
+  Version bump - old source was not available anymore.
+  Added KEYWORDS, LICENSE, SLOT.
 
 *xscreensaver-4.05-r2 (29 Jun 2002)
 

@@ -1,9 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.05-r2.ebuild,v 1.2 2002/07/07 10:05:16 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.05-r3.ebuild,v 1.1 2002/07/07 10:05:16 phoenix Exp $
 
-S="${WORKDIR}/${P/.2/}"
 DESCRIPTION="a modular screensaver for X11"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 HOMEPAGE="http://www.jwz.org/xscreensaver/"
@@ -24,14 +23,14 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	use nls && ( \
-		cd po
-		patch -p0 < ${FILESDIR}/${P}-gentoo.diff
-	) || ( \
+	#use nls && ( \
+	#	cd po
+	#	patch -p0 < ${FILESDIR}/${P}-gentoo.diff
+	#) || ( \
 		cp Makefile.in Makefile.in.orig
 		sed "s:hacks/glx po:hacks/glx:" \
 			Makefile.in.orig > Makefile.in
-	)
+	#)
 }
 
 src_compile() {
