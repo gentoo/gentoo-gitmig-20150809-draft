@@ -1,8 +1,8 @@
 # ChangeLog for net-print/hpijs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.10 2003/03/07 16:36:42 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.11 2003/07/13 20:39:09 aliz Exp $
 
-*hpjis-1.3.1 (07 Mar 2003)
+*hpijs-1.3.1 (07 Mar 2003)
   07 Mar 2003; Thomas Raschbacher <lordvan@gentoo.org> hpijs-1.3.1.ebuild:
   new version (bug #15626)
 	

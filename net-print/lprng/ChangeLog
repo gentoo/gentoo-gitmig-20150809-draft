@@ -1,6 +1,6 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.7 2003/06/14 14:07:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.8 2003/07/13 20:39:09 aliz Exp $
 
 *lprng-3.8.12-r1 (14 Jun 2003)
 
@@ -13,7 +13,7 @@
   03 Feb 2003; Aron Griffis <agriffis@gentoo.org> lprng-3.8.12.ebuild :
   Add alpha to KEYWORDS
 
-*lprng-3.8.12.ebuild (14 July 2002)
+*lprng-3.8.12 (14 July 2002)
 
   07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> lprng-3.8.12.ebuild :
   Changed sparc64 to sparc keyword

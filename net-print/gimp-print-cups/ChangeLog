@@ -1,6 +1,6 @@
 # ChangeLog for net-print/gimp-print-cups
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/ChangeLog,v 1.18 2003/06/10 18:42:58 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/ChangeLog,v 1.19 2003/07/13 20:39:09 aliz Exp $
 
 *gimp-print-cups-4.3.16 (09 Jun 2003)
 
@@ -24,6 +24,16 @@
   added 4.3.10 for testing
   added gtk+ dep for 4.3.10 since it seems to require it (bug #14945)
 	
+*gimp-print-cups-4.3.10 (11 Mar 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*gimp-print-cups-4.3.8-r1 (11 Mar 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
 *gimp-print-cups-4.3.8 (28 Jan 2003)
   28 Jan 2003; Thomas Raschbacher <lordvan@gentoo.org> gimp-print-cups-4.3.8.ebuild:
   new version (bug #14661) ~arch
