@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-arts/xmms-arts-0.4-r2.ebuild,v 1.4 2002/01/11 06:28:36 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-arts/xmms-arts-0.4-r3.ebuild,v 1.1 2002/04/11 18:32:39 verwilst Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
@@ -17,19 +17,20 @@ newdepend "virtual/glibc
 	sys-devel/gcc
 	 >=media-sound/xmms-1.2.5-r1"
 
-need-kde 2.1
+need-kde 3
 	 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	cp Makefile.am Makefile.orig
-	sed -e "s:artsc-config:${KDE2DIR}/bin/artsc-config:" Makefile.orig > Makefile.am
+	sed -e "s:artsc-config:${KDE3DIR}/bin/artsc-config:" Makefile.orig > Makefile.am
 	autoconf
 }
 
 src_compile() {     
 	kde_src_compile myconf # calls set-kdedir
-	CFLAGS="$CFLAGS -I/usr/X11R6/include -I/usr/include -I${KDE2DIR}/include -I${KDE2DIR}/include/artsc"  ./configure --prefix=/usr --host=${CHOST} || die
+	CFLAGS="$CFLAGS -I/usr/X11R6/include -I/usr/include -I${KDE3DIR}/include -I${KDE3DIR}/include/artsc"  
+	./configure --prefix=/usr --host=${CHOST} || die
 	emake || die
 }
 
