@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.2-r2.ebuild,v 1.3 2004/02/13 00:21:57 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.2-r2.ebuild,v 1.4 2004/03/30 14:23:25 pylon Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ppc ~sparc"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-libs/pwlib-1.5.2
