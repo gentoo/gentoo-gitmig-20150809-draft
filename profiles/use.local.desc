@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.488 2004/07/16 19:14:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.489 2004/07/16 20:41:53 stuart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -383,6 +383,7 @@ net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
 net-wireless/libbtctl:mono - Add Mono Bluetooth bindings
 net-www/apache:distcache - Enable SSL distcache support
 net-www/apache:threads - Enable thread support
+net-www/drupal:minimal - Disables installing the additional plugins
 net-www/elinks:lua - enable lua support
 net-www/links:javascript - enable javascript support
 net-www/mozilla-firefox:mozdomi - Enable DOM inspector in firefox
