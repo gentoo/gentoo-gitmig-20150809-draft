@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/yelp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.25 2003/03/13 23:47:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.26 2003/05/29 14:36:10 liquidx Exp $
+
+  29 May 2003; Alastair Tse <liquidx@gentoo.org> yelp-0.10.ebuild,
+  yelp-1.0.3.ebuild, yelp-1.0.6.ebuild, yelp-1.0.7.ebuild, yelp-2.2.0.ebuild:
+  fixed libgtkhtml deps
 
 *yelp-2.2.0 (30 Jan 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.2.0.ebuild,v 1.9 2003/04/24 11:24:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.2.0.ebuild,v 1.10 2003/05/29 14:36:11 liquidx Exp $
 
 inherit gnome2
 
@@ -17,7 +17,7 @@ RDEPEND="gnome-base/ORBit2
 	>=gnome-base/libgnome-2.0.2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libbonobo-2
-	>=gnome-extra/libgtkhtml-2.1.2
+	=gnome-extra/libgtkhtml-2.2*
 	>=dev-libs/libxslt-1.0.15
 	>=gnome-base/libglade-2"
 DEPEND="${DEPEND}
