@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.37 2004/01/22 12:42:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.38 2004/02/04 15:32:45 usata Exp $
+
+*zsh-4.1.1-r5 (05 Feb 2004)
+
+  05 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> zsh-4.0.9-r3.ebuild,
+  zsh-4.1.1-r4.ebuild, zsh-4.1.1-r5.ebuild, files/_portage-20040204:
+  Added completion functions for rc, rc-update, rc-status, opengl-update and
+  ebuild. Thanks to baptux <bapt@ifrance.com> for polishing zsh completion ;)
 
   22 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> zsh-4.0.9-r1.ebuild,
   zsh-4.0.9-r2.ebuild, zsh-4.0.9.ebuild, zsh-4.1.1-r2.ebuild,
