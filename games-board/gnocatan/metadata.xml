@@ -3,6 +3,9 @@
 <pkgmetadata>
 <herd>games</herd>
 <maintainer>
-    <email>rizzo@gentoo.org</email>
+<email>rizzo@gentoo.org</email>
 </maintainer>
+<longdescription>
+Gnocatan is a clone of the board game The Settlers of Catan.
+</longdescription>
 </pkgmetadata>
