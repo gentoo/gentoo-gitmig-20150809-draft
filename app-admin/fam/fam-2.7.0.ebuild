@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.8 2004/02/10 02:00:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.9 2004/02/11 22:47:51 wolf31o2 Exp $
 
 inherit libtool eutils
 
@@ -16,10 +16,7 @@ DEPEND=">=net-nds/portmap-5b-r6"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	libtoolize -c -f || die "libtoolize failed"
-	aclocal || die "aclocal failed"
-	autoconf || die "autoconf failed"
+	chmod u+w ${S}/configure
 }
 
 src_install() {
