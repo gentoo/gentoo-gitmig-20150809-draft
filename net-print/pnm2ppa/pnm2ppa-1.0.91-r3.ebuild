@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.0.91-r3.ebuild,v 1.9 2003/09/07 00:18:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.0.91-r3.ebuild,v 1.10 2003/09/08 08:40:06 lanius Exp $
 # Note: this also d/ls the hp-ppa-howto and installs it under /usr/share/doc/${P}
 
 IUSE="ncurses gtk"
@@ -40,55 +40,54 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 
-    cd ${WORKDIR}
-    unpack ${P}.tgz
-    cd ${S}
-    unpack howto.tgz
+	cd ${WORKDIR}
+	unpack ${P}.tgz
+	cd ${S}
+	unpack howto.tgz
 
 	cd ${WORKDIR}
 	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
-
 }
 
 src_compile() {
 
 	export CFLAGS="-DNDEBUG ${CFLAGS}"
 
-    emake 	\
+	emake \
 		CFLAGS="${CFLAGS} -DLANG_EN" || die
 
 
-    cd ${S}/ppa_protocol
-    emake 	\
+	cd ${S}/ppa_protocol
+	emake \
 		CFLAGS="${CFLAGS}" || die
 
-    cd ${S}/ppaSet-beta1
-    # This requires gtk, ncurses etc. on which we don't want to depend
-    # so we simply fail if they aren't installed
-    echo "The following may fail, don't pay attention to any error"
-    sleep 1s
+	cd ${S}/ppaSet-beta1
+	# This requires gtk, ncurses etc. on which we don't want to depend
+	# so we simply fail if they aren't installed
+	echo "The following may fail, don't pay attention to any error"
+	sleep 1s
 
-    use gtk &&	\
-		make 	\
-			BASEDIR=/usr/share/pnm2ppa/ppaSet	\
-			BINDIR=/usr/bin	\
-			PNM2PPA=/usr/bin/pnm2ppa	\
-			CALIBRATE_PPA=/usr/bin/calibrate_ppa	\
+	use gtk && \
+		make \
+			BASEDIR=/usr/share/pnm2ppa/ppaSet \
+			BINDIR=/usr/bin \
+			PNM2PPA=/usr/bin/pnm2ppa \
+			CALIBRATE_PPA=/usr/bin/calibrate_ppa \
 			CFLAGS="${CFLAGS}" gPpaSet
 
 	use ncurses && \
-		make 	\
-			BASEDIR=/usr/share/pnm2ppa/ppaSet	\
+		make \
+			BASEDIR=/usr/share/pnm2ppa/ppaSet \
 			BINDIR=/usr/bin	\
-			PNM2PPA=/usr/bin/pnm2ppa	\
-			CALIBRATE_PPA=/usr/bin/calibrate_ppa	\
+			PNM2PPA=/usr/bin/pnm2ppa \
+			CALIBRATE_PPA=/usr/bin/calibrate_ppa \
 			CFLAGS="${CFLAGS}" nPpaSet
 
-    make	\
-		BASEDIR=/usr/share/pnm2ppa/ppaSet	\
+	make \
+		BASEDIR=/usr/share/pnm2ppa/ppaSet \
 		BINDIR=/usr/bin	\
-		PNM2PPA=/usr/bin/pnm2ppa	\
-		CALIBRATE_PPA=/usr/bin/calibrate_ppa	\
+		PNM2PPA=/usr/bin/pnm2ppa \
+		CALIBRATE_PPA=/usr/bin/calibrate_ppa \
 		CFLAGS="${CFLAGS}"
 }
 
@@ -132,7 +131,7 @@ src_install () {
 	exeinto /etc/pdq/interfaces
 	doexe dummy
 
-    cd ${S}/ppaSet-beta1
+	cd ${S}/ppaSet-beta1
 	use gtk &&	\
 		yes "" | make	\
 			BASEDIR=${D}/usr/ppaSet	\
@@ -180,21 +179,21 @@ src_install () {
 
 pkg_postinst() {
 
-    einfo "
-    Now, you *must* edit /etc/pnm2ppa.conf and choose (at least)
-    your printer model and papersize.
+	einfo "
+	Now, you *must* edit /etc/pnm2ppa.conf and choose (at least)
+	your printer model and papersize.
 
-    Run calibrate_ppa to calibrate color offsets.
+	Run calibrate_ppa to calibrate color offsets.
 
-    Read the docs in /usr/share/pnm2ppa/ to configure the printer,
-    configure lpr substitutes, cups, pdq, networking etc.
+	Read the docs in /usr/share/pnm2ppa/ to configure the printer,
+	configure lpr substitutes, cups, pdq, networking etc.
 
-    Note that lpr and pdq drivers *have* been installed, but if your
-    config file management has /etc blocked (the default), they have
-    been installed under different filenames. Read the appropriate
-    Gentoo documentation for more info.
+	Note that lpr and pdq drivers *have* been installed, but if your
+	config file management has /etc blocked (the default), they have
+	been installed under different filenames. Read the appropriate
+	Gentoo documentation for more info.
 
-    Note: lpr has been configured for default papersize letter
-    "
+	Note: lpr has been configured for default papersize letter
+	"
 
 }

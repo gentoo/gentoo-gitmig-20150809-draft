@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19.ebuild,v 1.3 2003/07/29 15:19:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19.ebuild,v 1.4 2003/09/08 08:34:20 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,7 +45,7 @@ src_compile() {
 	local myconf
 	use pam || myconf="${myconf} --disable-pam"
 	use ssl || myconf="${myconf} --disable-ssl"
-        use slp || myconf="${myconf} --disable-slp"
+	use slp || myconf="${myconf} --disable-slp"
 
 	./configure \
 		--with-cups-user=lp \

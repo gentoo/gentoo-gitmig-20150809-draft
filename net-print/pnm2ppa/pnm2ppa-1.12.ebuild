@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.5 2003/09/08 07:07:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.6 2003/09/08 08:40:06 lanius Exp $
 
 # Note: this also d/ls the hp-ppa-howto and installs it under /usr/share/doc/${P}
 
@@ -25,11 +25,11 @@ RDEPEND="${DEPEND}
 	dev-util/dialog"
 
 src_unpack() {
-    unpack ${P}.tar.gz
-    cd ${S}
-    unpack howto.tgz
+	unpack ${P}.tar.gz
+	cd ${S}
+	unpack howto.tgz
 
-    patch -l -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	patch -l -p0 < ${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {
@@ -99,9 +99,9 @@ pkg_postinst() {
 	einfo ""
 	einfo "Run calibrate_ppa to calibrate color offsets."
 	einfo ""
-    	einfo "Read the docs in /usr/share/pnm2ppa/ to configure the printer,"
+	einfo "Read the docs in /usr/share/pnm2ppa/ to configure the printer,"
 	einfo "configure lpr substitutes, cups, pdq, networking etc."
- 	einfo ""
+	einfo ""
 	einfo "Note that lpr and pdq drivers *have* been installed, but if your"
 	einfo "config file management has /etc blocked (the default), they have"
 	einfo "been installed under different filenames. Read the appropriate"

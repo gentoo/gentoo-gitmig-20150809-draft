@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.90-r1.ebuild,v 1.5 2003/09/08 07:07:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.90-r1.ebuild,v 1.6 2003/09/08 08:36:15 lanius Exp $
 
 DESCRIPTION="HP OfficeJet Linux driver"
 HOMEPAGE="http://hpoj.sourceforge.net/"
@@ -17,34 +17,34 @@ DEPEND="qt?      ( >=x11-libs/qt-3.1.0-r1 )
 	snmp?    ( >=net-analyzer/ucd-snmp-4.2.6 )
 	cups?    ( >=net-print/cups-1.1.18-r2 )
 	usb?     ( dev-libs/libusb )
-        >=net-print/hpijs-1.3.1"
+	>=net-print/hpijs-1.3.1"
 RDEPEND=""
 
 S=${WORKDIR}/${P}
 
 src_compile() {
-    local myconf
-    use snmp \
+	local myconf
+	use snmp \
 	&& myconf="${myconf} --with-snmp=/usr" \
 	|| myconf="${myconf} --without-snmp"
 
-    use cups \
+	use cups \
 	&& myconf="${myconf} --with-cups-backend=/usr" \
 	|| myconf="${myconf} --without-cups"
 
-    # xojpanel
-    use qt \
+	# xojpanel
+	use qt \
 	&& myconf="${myconf} --with-qt=/usr/qt/3" \
 	|| myconf="${myconf} --without-qt"
 
-    use scanner \
+	use scanner \
 	&& myconf="${myconf} --with-sane-packend=/usr" \
 	|| myconf="${myconf} --without-sane"
 
-    econf ${myconf}
-#    patch -p0 ${S}/mlcd/Makefile < ${FILESDIR}/mlcd_make.patch
+	econf ${myconf}
+#   patch -p0 ${S}/mlcd/Makefile < ${FILESDIR}/mlcd_make.patch
 #   patch -p0 ${S}/mlcd/ExMgr.cpp < ${FILESDIR}/ExMgr.cpp_patch
-    make || die "compilation failed"
+	make || die "compilation failed"
 }
 ## after cups
 src_install() {
@@ -91,7 +91,7 @@ src_install() {
 pkg_postinst() {
 	echo
 	einfo "You might want to emerge app-admin/mtools for photo-card support."
-    echo
+	echo
 	einfo "Before starting hpoj you have to set it up with 'ptal-init setup'"
 	echo
 }
