@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.27 2004/10/17 04:41:23 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.28 2004/10/25 07:33:50 usata Exp $
+
+  25 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> gv-3.5.8-r4.ebuild:
+  Provide virtual/pdfviewer; bug #50423.
 
   16 Oct 2004; Hardave Riar <hardave@gentoo.org> gv-3.5.8-r4.ebuild:
   Added ~mips keyword.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.132.ebuild,v 1.9 2004/10/01 05:56:46 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.132.ebuild,v 1.10 2004/10/25 07:32:56 usata Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -26,5 +26,7 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.29
 	>=dev-util/pkgconfig-0.12.0"
+
+PROVIDE="virtual/pdfviewer"
 
 DOCS="AUTHORS CHANGES ChangeLog COPYING INSTALL NEWS README*"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.03.ebuild,v 1.10 2004/06/24 22:57:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.03.ebuild,v 1.11 2004/10/25 07:30:34 usata Exp $
 
 MY_PV=${PV/.1/pl1}
 
@@ -19,6 +19,8 @@ DEPEND="motif? ( virtual/x11
 	>=media-libs/freetype-2.0.5
 	>=media-libs/t1lib-1.3
 	virtual/ghostscript"
+
+PROVIDE="virtual/pdfviewer"
 
 src_compile() {
 	econf \
