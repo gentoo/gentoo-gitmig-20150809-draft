@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui2/dc-gui2-0.70.ebuild,v 1.2 2003/02/28 06:52:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui2/dc-gui2-0.71.ebuild,v 1.1 2003/03/11 13:24:36 vapier Exp $
 
 S=${WORKDIR}/${P/-/_}
 DESCRIPTION="GUI for dctc (GTK2 version)"
