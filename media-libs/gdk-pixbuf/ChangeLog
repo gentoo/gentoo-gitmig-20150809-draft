@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/gdk-pixbuf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.4 2002/04/01 06:55:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.5 2002/04/02 18:55:30 seemant Exp $
+
+*gdk-pixbuf-0.16.0-r7 (2 Apr 2002)
+
+  2 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gdk-pixbuf-0.16.0-r7.ebuild :
+
+  For the record: blocke is a sheer genius.  His idea was to look at an RPM, so
+  I had a look at Mandrake's src.rpm, and lo! David BAUDENS 
+  <baudens@mandrakesoft.com> had a fix for compiling without the display.
 
 *gdk-pixbuf-0.16.0-r6 (31 Mar 2002)
 
