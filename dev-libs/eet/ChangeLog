@@ -1,40 +1,13 @@
 # ChangeLog for dev-libs/eet
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/ChangeLog,v 1.9 2004/06/24 23:08:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/ChangeLog,v 1.10 2004/08/10 03:19:36 vapier Exp $
 
-*eet-0.9.0.20031013 (13 Oct 2003)
+*eet-0.9.9 (09 Aug 2004)
 
-  13 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  09 Aug 2004; Mike Frysinger <vapier@gentoo.org> :
   Version bump.
 
-*eet-0.0.1.20030629 (29 Jun 2003)
-
-  29 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
-  Version bump.
-
-*eet-0.0.1.20030220-r1 (20 Mar 2003)
-
-  20 Mar 2003; Graham Forest <vladimir@gentoo.org>
-  eet-0.0.1.20030220-r1.ebuild, eet-0.0.1.20030310-r1.ebuild:
-  Removed usage of pic USE flag
-
-*eet-0.0.1.20030310-r1 (20 Mar 2003)
- 
-  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
-  Added missing changelog entry.
-
-*eet-0.0.1.20030310 (10 Mar 2003)
-
-  19 Mar 2003; Mark Guertin <gerk@gentoo.org> eet-0.0.1.20030310.ebuild:
-  set ~ppc in keywords and also -fPIC for ppc
-
-  11 Mar 2003; Aron Griffis <agriffis@gentoo.org> eet-0.0.1.20030310.ebuild:
-  Add ~alpha to KEYWORDS and -fPIC for alpha
-
-  10 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
-  Bugfixes + more documentation.
-
-*eet-0.0.1.20030220 (20 Feb 2003)
+*eet-0.9.0.* (13 Oct 2003)
 
   20 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by me.
