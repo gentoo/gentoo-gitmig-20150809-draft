@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebindings-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/ChangeLog,v 1.7 2005/02/27 20:21:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/ChangeLog,v 1.8 2005/02/27 20:28:47 danarmak Exp $
+
+  27 Feb 2005; Dan Armak <danarmak@gentoo.org>
+  kdebindings-meta-3.4.0_rc1.ebuild:
+  Fix incorrect dep: dcoppython doesn't have an rc1 ebuild
 
 *kdebindings-meta-3.4.0_rc1 (27 Feb 2005)
 
