@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/Net-SSLeay-1.19.ebuild,v 1.7 2003/06/21 21:36:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/Net-SSLeay-1.19.ebuild,v 1.8 2004/03/23 09:57:56 kumba Exp $
 
 inherit perl-module
 
