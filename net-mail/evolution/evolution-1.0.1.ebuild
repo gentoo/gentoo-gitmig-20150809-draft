@@ -1,37 +1,35 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0-r3.ebuild,v 1.1 2002/01/07 00:36:34 hallski Exp $
+# Maintainer: Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.1.ebuild,v 1.1 2002/01/13 16:35:44 azarah Exp $
 
 DB3=db-3.1.17
 S=${WORKDIR}/${P}
 DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
-SRC_URI="ftp://ftp.ximian.com/pub/source/${PN}/${P}.tar.gz
-	 ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz
+	 ftp://ftp.ximian.com/pub/source/${PN}/${P}.tar.gz
 	 http://people.codefactory.se/~micke/${PN}/${P}.tar.gz
 	 http://www.sleepycat.com/update/3.1.17/${DB3}.tar.gz"
 HOMEPAGE="http://www.ximian.com"
 
 DEPEND=">=gnome-extra/bonobo-conf-0.14
-        >=gnome-base/bonobo-1.0.15
-	>=gnome-extra/gal-0.18.1
+        >=gnome-base/bonobo-1.0.18
+	>=gnome-extra/gal-0.19
         >=gnome-base/gconf-1.0.7
-	>=gnome-extra/gtkhtml-1.0.0
-	>=gnome-base/oaf-0.6.6-r1
-	>=gnome-base/ORBit-0.5.10-r1
+	>=gnome-extra/gtkhtml-1.0.1
+	>=gnome-base/oaf-0.6.7
+	>=gnome-base/ORBit-0.5.12
 	>=gnome-base/libglade-0.17-r1
-	>=media-libs/gdk-pixbuf-0.11.0-r1
+	>=media-libs/gdk-pixbuf-0.14.0
 	>=dev-libs/libxml-1.8.16
 	>=gnome-base/gnome-vfs-1.0.2-r1
-	>=gnome-base/gnome-print-0.30
+	>=gnome-base/gnome-print-0.34
 	>=app-text/scrollkeeper-0.2
         >=dev-util/intltool-0.11
 	ssl?     ( >=net-www/mozilla-0.9.6-r3 )
+	ldap?    ( >=net-nds/openldap-2.0 )
 	mozilla? ( >=net-www/mozilla-0.9.6-r3 )
 	pda?     ( >=gnome-extra/gnome-pilot-0.1.61-r2 )" 
-
-# Until ldap >= 2.0 is unmasked.
-# 	ldap?    ( net-nds/openldap )
 
 
 src_compile() {
@@ -53,11 +51,11 @@ src_compile() {
 		myconf="${myconf} --enable-pilot-conduits=no"
 	fi
 
-#	if [ "`use ldap`" ] ; then
-#		myconf="${myconf} --with-openldap=yes"
-#	else
-#		myconf="${myconf} --with-openldap=no"
-#	fi
+	if [ "`use ldap`" ] ; then
+		myconf="${myconf} --with-openldap=yes"
+	else
+		myconf="${myconf} --with-openldap=no"
+	fi
 
 	if [ "`use mozilla`" ] ; then
 		myconf="${myconf} --with-nspr-includes=${MOZILLA}/include/nspr \
