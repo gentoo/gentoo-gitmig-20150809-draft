@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.37.ebuild,v 1.3 2004/02/19 10:14:00 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.37.ebuild,v 1.4 2004/02/22 17:29:09 brad_mssw Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc amd64"
 IUSE="gnome mmx"
 
 RDEPEND=">=x11-libs/gtk+-2.2.4
