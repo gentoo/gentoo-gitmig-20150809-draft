@@ -12,8 +12,8 @@
 <net-misc/bind-9.0.0 
 
 #these two needs automake-1.6 and autoconf-1.53
-=media-libs/audiofile-0.2.3-r1
-=app-office/abiword-0.99.3
+#=media-libs/audiofile-0.2.3-r1
+#=app-office/abiword-0.99.3
 
 # 
 net-mail/vlnx
@@ -47,7 +47,7 @@ net-www/zope
 >=net-misc/krfb-0.6
 >=net-misc/kio_fish-1.1
 >=x11-misc/mosfet-liquid-widgets-0.9.1
->=netmisc/kbiff-3.6
+>=net-misc/kbiff-3.6
 
 # These two have compile problems -- Azarah (24/03/2002)
 #
@@ -499,3 +499,6 @@ dev-lang/tcl-tk
 # moved theese to gphoto2
 =media-gfx/gphoto-2.0.0
 =media-gfx/gphoto-2.0.0-r1
+
+#seemant@gentoo.org 1 Apr 2002
+=media-video/drip-0.81
