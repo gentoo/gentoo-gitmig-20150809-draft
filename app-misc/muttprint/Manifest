@@ -1,4 +1,16 @@
-MD5 c820c118644f62effc4af88a4252228f ChangeLog 2767
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 05aa9a4a4011cc971a1af72b9f3cb0b0 muttprint-0.72b.ebuild 828
 MD5 44bf60002076ee4fd80a28dfd43080fc muttprint-0.72a.ebuild 819
-MD5 4f1eb6f695cc9ae2070de833996803ad files/digest-muttprint-0.72a 67
+MD5 ba5022d981e7f16b41f8e387633007e1 ChangeLog 2907
 MD5 75129b19f90f3b9e9cd0a258fe884482 files/muttprint-0.72a-platex.patch 654
+MD5 4f1eb6f695cc9ae2070de833996803ad files/digest-muttprint-0.72a 67
+MD5 d14d2a961751226d19bdc060f2531929 files/digest-muttprint-0.72b 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsatzCHk4+ZoBpvsRAuJBAJ9y8+0bcmczQbuCpun6EFsuHC9TiACfSwnl
+bn7r7y0lMm6MxmuqpqemqOQ=
+=a0O5
+-----END PGP SIGNATURE-----
