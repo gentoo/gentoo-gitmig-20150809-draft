@@ -172,6 +172,13 @@ sys-apps/sysvinit
 #buggy < Danarmak, Verwilst >
 =x11-libs/qt-x11-2.3.2
 
+#the src_uri is broken: error 404.
+#something else:  when i tried to fix it, portage stops trying
+#to even download it at all!  whats going on with that?
+#i do ebuild fetch and it just does nothing.. weird.
+#~woodchip
+=x11-libs/qt-3.0.3.1
+
 #untested, author mentions an error
 media-libs/id3lib-docs
 
