@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/gentoo-x86/app-cdr/cdbkup-1.0.ebuild,v 1.0 2002/07/27 01:09:30 raker Exp 
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbkup/cdbkup-1.0.ebuild,v 1.3 2002/10/17 12:55:52 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="cdbkup performs full or incremental backups of local or remote filesystems onto CD-R(W)s."

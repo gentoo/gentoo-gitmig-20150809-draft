@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/cdlabelgen-2.3.0.ebuild,v 1.4 2002/10/04 03:54:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/cdlabelgen-2.3.0.ebuild,v 1.5 2002/10/17 12:55:52 vapier Exp $
 
 DESCRIPTION="CD cover, tray card and envelope generator"
 HOMEPAGE="http://www.aczone.com/tools/cdinsert"
@@ -10,7 +10,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64"
 
 RDEPEND=">=perl-5.6.1"
-DEPEND=""
+DEPEND="sys-apps/tar
+	sys-apps/gzip"
 
 S="${WORKDIR}/${P}"
 
@@ -18,7 +19,7 @@ src_compile() {
 	patch -p0 -i ${FILESDIR}/makefile.patch
 }
 
-src_install () {
+src_install() {
 	emake DESTDIR="${D}" install || die "install problem"
 	dodoc README INSTALL.WEB *.spec cdinsert.pl
 	dohtml *.html
