@@ -1,0 +1,58 @@
+--- kemistry-0.7/work/kemistry-0.7/kdrawchem/kdrawchempart.cpp	2003-01-02 17:47:58.000000000 +0000
++++ kemistry-0.7_patched/work/kemistry-0.7/kdrawchem/kdrawchempart.cpp	2004-09-05 12:18:13.204401136 +0100
+@@ -17,7 +17,7 @@
+     {
+         return new KDrawChemFactory;
+     }
+-};
++}
+ 
+ /**
+  * We need one static instance of the factory for our C 'main'
+@@ -115,4 +115,4 @@
+ //eof
+ 
+ 
+-#include "kdrawchempart.moc"
+\ No newline at end of file
++#include "kdrawchempart.moc"
+--- kemistry-0.7/work/kemistry-0.7/kdrawchem/kdrawchemdoc.cpp	2003-01-02 17:47:58.000000000 +0000
++++ kemistry-0.7_patched/work/kemistry-0.7/kdrawchem/kdrawchemdoc.cpp	2004-09-05 12:16:39.540640192 +0100
+@@ -183,7 +183,7 @@
+     OBMol *mol=new OBMol;
+ 
+     OBExtensionTable extab;
+-	  enum io_type importType;
++	  io_type importType;
+ 
+ 	  importType=extab.FilenameToType(const_cast<char*>(tmpfile.latin1()));  //doesn't like being a const char*--casted it to a char*
+ 
+@@ -241,4 +241,4 @@
+ }
+ 
+ 
+-#include "kdrawchemdoc.moc"
+\ No newline at end of file
++#include "kdrawchemdoc.moc"
+--- kemistry-0.7/work/kemistry-0.7/kdrawchem/kdcpreview.cpp	2002-12-19 23:12:43.000000000 +0000
++++ kemistry-0.7_patched/work/kemistry-0.7/kdrawchem/kdcpreview.cpp	2004-09-05 12:14:07.154806360 +0100
+@@ -65,7 +65,7 @@
+     OBMol *mol=new OBMol;
+ 
+     OBExtensionTable extab;
+-	  enum io_type importType;
++	  io_type importType;
+ 
+ 	  importType=extab.FilenameToType(const_cast<char*>(filename.latin1()));  //doesn't like being a const char*--casted it to a char*
+ 
+--- kemistry-0.7/work/kemistry-0.7/kfile_plugins/kfile_openbabel.cpp	2002-12-24 13:08:26.000000000 +0000
++++ kemistry-0.7_patched/work/kemistry-0.7/kfile_plugins/kfile_openbabel.cpp	2004-09-05 12:35:48.666946440 +0100
+@@ -37,7 +37,7 @@
+ typedef KGenericFactory<OpenBabelPlugin> OpenBabelFactory;
+ 
+ K_EXPORT_COMPONENT_FACTORY(kfile_openbabel,
+-                           OpenBabelFactory("kfile_openbabel"));
++                           OpenBabelFactory("kfile_openbabel"))
+ 
+ OpenBabelPlugin::OpenBabelPlugin(QObject* parent,  const char* name,
+                                  const QStringList &args)
