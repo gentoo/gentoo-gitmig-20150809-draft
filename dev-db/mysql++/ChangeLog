@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/mysql++
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.6 2003/05/08 20:31:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.7 2003/05/08 21:13:24 robbat2 Exp $
 
 *mysql++-1.7.9-r1 (08 May 2003)
 
@@ -15,8 +15,13 @@
   by the large number of files put into it (it overwrote some other headers); 
   This may break some other code, testing is needed!
   Bugs #15688, #20635 resolved.
+  Now use epatch instead of patch to apply patches easier as well.
   
 *mysql++-1.7.9 (11 Dec 2002)
+  
+  08 May 2003; Robin Johnson <robbat2@gentoo.org> mysql++-1.7.9.ebuild:
+  Moved files/mysql++-gcc-3.2.patch to DISTDIR and gzipped it.
+  Also changed mysql++-gcc-3.2.patch to use the gzipped version
 
   09 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
   mysql++-1.7.9.ebuild:
