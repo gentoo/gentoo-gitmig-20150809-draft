@@ -1,0 +1,96 @@
+--- Makefile	2004-02-01 14:04:44.965532560 +0100
++++ Makefile	2004-02-01 14:04:41.037129768 +0100
+@@ -15,7 +15,7 @@
+ 
+ 
+ 
+-SOURCES = $(asfxload_SOURCES) $(aweset_SOURCES) $(gusload_SOURCES) $(setfx_SOURCES) $(sf2text_SOURCES) $(sfxload_SOURCES) $(sfxtest_SOURCES) $(text2sf_SOURCES)
++SOURCES = $(aweset_SOURCES) $(gusload_SOURCES) $(setfx_SOURCES) $(sf2text_SOURCES) $(sfxload_SOURCES) $(sfxtest_SOURCES) $(text2sf_SOURCES)
+ 
+ srcdir = .
+ top_srcdir = .
+@@ -41,1 +41,1 @@
+-bin_PROGRAMS = sfxload$(EXEEXT) asfxload$(EXEEXT) aweset$(EXEEXT) \
++bin_PROGRAMS = sfxload$(EXEEXT) aweset$(EXEEXT) \
+@@ -58,9 +58,6 @@
+ am__installdirs = $(DESTDIR)$(bindir) $(DESTDIR)$(man1dir)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
+ PROGRAMS = $(bin_PROGRAMS)
+-am_asfxload_OBJECTS = asfxload.$(OBJEXT) alsa.$(OBJEXT)
+-asfxload_OBJECTS = $(am_asfxload_OBJECTS)
+-asfxload_DEPENDENCIES = awelib/libawe.a
+ am_aweset_OBJECTS = aweset.$(OBJEXT) seq.$(OBJEXT)
+ aweset_OBJECTS = $(am_aweset_OBJECTS)
+ aweset_LDADD = $(LDADD)
+@@ -92,7 +89,7 @@
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/include
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+-DEP_FILES = ./$(DEPDIR)/alsa.Po ./$(DEPDIR)/asfxload.Po \
++DEP_FILES = \
+ 	./$(DEPDIR)/aweset.Po ./$(DEPDIR)/gusload.Po \
+ 	./$(DEPDIR)/seq.Po ./$(DEPDIR)/setfx.Po \
+ 	./$(DEPDIR)/sf2text.Po ./$(DEPDIR)/sfxload.Po \
+@@ -105,10 +102,10 @@
+ CCLD = $(CC)
+ LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+-SOURCES = $(asfxload_SOURCES) $(aweset_SOURCES) $(gusload_SOURCES) \
++SOURCES = $(aweset_SOURCES) $(gusload_SOURCES) \
+ 	$(setfx_SOURCES) $(sf2text_SOURCES) $(sfxload_SOURCES) \
+ 	$(sfxtest_SOURCES) $(text2sf_SOURCES)
+-DIST_SOURCES = $(asfxload_SOURCES) $(aweset_SOURCES) \
++DIST_SOURCES = $(aweset_SOURCES) \
+ 	$(gusload_SOURCES) $(setfx_SOURCES) $(sf2text_SOURCES) \
+ 	$(sfxload_SOURCES) $(sfxtest_SOURCES) $(text2sf_SOURCES)
+ RECURSIVE_TARGETS = all-recursive check-recursive dvi-recursive \
+@@ -172,7 +169,7 @@
+ INSTALL_STRIP_PROGRAM = ${SHELL} $(install_sh) -c -s
+ LDFLAGS = 
+ LIBOBJS = 
+-LIBS = 
++LIBS = -lm -ldl -lpthread
+ LIBTOOL = $(SHELL) $(top_builddir)/libtool
+ LN_S = ln -s
+ LTLIBOBJS = 
+@@ -234,8 +231,6 @@
+ SUBDIRS = awelib include samples
+ LDADD = awelib/libawe.a
+ INCLUDES = -Iinclude
+-asfxload_SOURCES = asfxload.c alsa.c
+-asfxload_LDADD = awelib/libawe.a 
+ sfxload_SOURCES = sfxload.c seq.c
+ aweset_SOURCES = aweset.c seq.c
+ gusload_SOURCES = gusload.c seq.c
+@@ -311,9 +306,6 @@
+ 	  echo " rm -f $$p $$f"; \
+ 	  rm -f $$p $$f ; \
+ 	done
+-asfxload$(EXEEXT): $(asfxload_OBJECTS) $(asfxload_DEPENDENCIES) 
+-	@rm -f asfxload$(EXEEXT)
+-	$(LINK) $(asfxload_LDFLAGS) $(asfxload_OBJECTS) $(asfxload_LDADD) $(LIBS)
+ aweset$(EXEEXT): $(aweset_OBJECTS) $(aweset_DEPENDENCIES) 
+ 	@rm -f aweset$(EXEEXT)
+ 	$(LINK) $(aweset_LDFLAGS) $(aweset_OBJECTS) $(aweset_LDADD) $(LIBS)
+@@ -342,8 +334,8 @@
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-include ./$(DEPDIR)/alsa.Po
+-include ./$(DEPDIR)/asfxload.Po
++
++
+ include ./$(DEPDIR)/aweset.Po
+ include ./$(DEPDIR)/gusload.Po
+ include ./$(DEPDIR)/seq.Po
+@@ -797,8 +789,8 @@
+ 
+ 
+ install-data-hook:
+-	rm -f $(DESTDIR)$(mandir)/man1/asfxload.1
+-	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) sfxload.1 asfxload.1)
++#/	rm -f $(DESTDIR)$(mandir)/man1/asfxload.1
++#	(cd $(DESTDIR)$(mandir)/man1 && $(LN_S) sfxload.1 asfxload.1)
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
