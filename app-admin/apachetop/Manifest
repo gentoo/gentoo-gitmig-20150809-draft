@@ -1,6 +1,17 @@
-MD5 67f0e1e6850f02d709cf68ddc1d5d335 ChangeLog 2550
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0a9413f341077bc3f0aa39adc4d8563c apachetop-0.12.ebuild 1054
 MD5 fb23591f5c813b3a9b437b3d5fe609bc apachetop-0.11.ebuild 1031
-MD5 b96ae33cd41fe53585b268ec7e1260ac apachetop-0.12.ebuild 1057
+MD5 1caa5af7c4e6558501dae2d9e92c18dd ChangeLog 2652
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 fdecf3384b463c0f2b2d46f6417c7a69 files/digest-apachetop-0.11 66
 MD5 6e87f45d9828dcc07fc87b5f2c75d159 files/digest-apachetop-0.12 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFBmbOmPpIsIjIzwiwRAjsbAKCK2gK79c+NDt9DU1FirE2r9ZdxxwCg6orN
+f4XtOv7TUc6hYWkxKBEPvHc=
+=u0Y3
+-----END PGP SIGNATURE-----
