@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.1.ebuild,v 1.1 2004/09/10 18:49:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.1.ebuild,v 1.2 2005/01/11 21:41:03 zypher Exp $
 
 MY_P=OpenEXR-${PV}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.openexr.com"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="doc"
 
 DEPEND="x11-libs/fltk"
