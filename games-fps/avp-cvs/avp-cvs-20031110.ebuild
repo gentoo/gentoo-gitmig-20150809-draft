@@ -1,14 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp-cvs/avp-cvs-20030314.ebuild,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp-cvs/avp-cvs-20031110.ebuild,v 1.1 2003/11/10 15:39:19 vapier Exp $
 
-ECVS_PASS="anonymous"
-ECVS_SERVER="icculus.org:/cvs/cvsroot"
+#ECVS_PASS="anonymous"
+#ECVS_SERVER="icculus.org:/cvs/cvsroot"
 ECVS_MODULE="avp"
-inherit cvs games
+#inherit cvs
+inherit games
 
 DESCRIPTION="Linux port of Aliens vs Predator"
 HOMEPAGE="http://www.icculus.org/avp/"
+SRC_URI="mirror://gentoo/avp-${PV}.tar.bz2"
 
 LICENSE="AvP"
 SLOT="0"
@@ -20,6 +22,14 @@ DEPEND="x11-base/xfree
 	>=sys-apps/sed-4"
 
 S=${WORKDIR}/${ECVS_MODULE}
+
+src_unpack() {
+	if [ -z "${ECVS_SERVER}" ] ; then
+		unpack ${A}
+	else
+		cvs_src_unpack
+	fi
+}
 
 src_compile() {
 	sed -i \
