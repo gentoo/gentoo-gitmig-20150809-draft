@@ -1,0 +1,33 @@
+diff -ur gsweb/GSWAdaptors/Apache/GNUmakefile-Apache2x gsweb-test/GSWAdaptors/Apache/GNUmakefile-Apache2x
+--- gsweb/GSWAdaptors/Apache/GNUmakefile-Apache2x	2003-04-04 13:24:19.000000000 -0500
++++ gsweb-test/GSWAdaptors/Apache/GNUmakefile-Apache2x	2005-03-23 23:18:33.552474840 -0500
+@@ -39,7 +39,7 @@
+ 	ifeq ("FreeBSD",$(strip $(OSNAME)))
+ 		APXS = /usr/local/sbin/apxs
+ 	else
+-		APXS = /usr/apache/sbin/apxs
++		APXS = /usr/sbin/apxs2
+ 	endif
+ else
+ 	ifneq (,$(findstring no apxs,$(APXS)))
+@@ -65,9 +65,9 @@
+ LOADBALANCING = roundrobin
+ COMMON = $(SRCROOT)/common
+ 
+-INCLUDE = -I. -I$(COMMON) $(APACHEHEADERS) -I/usr/X11R6/include
++INCLUDE = -I. -I$(COMMON) $(APACHEHEADERS) -I/usr/X11R6/include $(shell apr-config --includes) $(shell apu-config --includes)
+ 
+-CFLAGS = $(APACHE_CFLAGS) -fpic $(RC_CFLAGS) $(INCLUDE) -D$(SERVERAPI) -DREENTRANT -DEAPI
++CFLAGS = $(APACHE_CFLAGS) -fpic $(RC_CFLAGS) $(INCLUDE) -D$(SERVERAPI) -DREENTRANT -DEAPI $(shell apr-config --cflags --cppflags)
+ 
+ include $(COMMON)/common.make
+ OFILES = $(COMMONOBJS) $(OBJROOT)/mod_gsweb.o
+@@ -78,7 +78,7 @@
+ RANLIB = ranlib
+ 
+ LDFLAGS = -rdynamic
+-LIBS = -ldl -lcrypt -lm -lPropList
++LIBS = -ldl -lcrypt -lm -lPropList $(apr-config --link-ld --libs) $(shell apu-config --link-ld --libs)
+ LDSHARED = $(LD) -shared  $(CFLAGS)
+ INSTALL = /usr/bin/install -c
+ INSTALL_PROGRAM = $(INSTALL)

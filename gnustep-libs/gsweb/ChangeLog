@@ -1,6 +1,21 @@
 # ChangeLog for gnustep-libs/gsweb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/ChangeLog,v 1.3 2005/01/10 16:24:19 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/ChangeLog,v 1.4 2005/03/24 05:38:11 fafhrd Exp $
+
+*gsweb-1.1.1_pre20050312 (24 Mar 2005)
+
+  24 Mar 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -files/1.1.1_pre-build-fixes.patch,
+  -files/1.1.1_pre20041119-build-fixes.patch,
+  +files/1.1.1_pre20050312-build-fixes.patch, -files/apache1-make.patch,
+  -files/apache2-make.patch, -files/1/90_mod_gsweb.conf,
+  +files/2/42_mod_gsweb.conf, -files/2/90_mod_gsweb.conf,
+  -gsweb-1.1.1_pre20041203.ebuild, -gsweb-1.1.1_pre20050106.ebuild,
+  +gsweb-1.1.1_pre20050312.ebuild:
+  first and foremost, fixes for bug 77778; ebuild uses depend.apache.eclass,
+  and not apache-module.eclass, as it is a complex apache module; depends on
+  apache2; GSWeb must load right after SSL (for now), as mod_php is screwing
+  up its alias handler, but not vice versa (and I dont use ldap or dav, atm)
 
 *gsweb-1.1.1_pre20050106 (10 Jan 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/gsweb-1.1.1_pre20041203.ebuild,v 1.2 2005/01/10 16:24:19 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/gsweb-1.1.1_pre20050312.ebuild,v 1.1 2005/03/24 05:38:11 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -26,21 +26,16 @@ DEPEND="${GS_DEPEND}
 	x11-libs/libPropList"
 RDEPEND="${GS_RDEPEND}
 	gnustep-libs/gdl2
-	x11-libs/libPropList
-	net-www/apache"
+	x11-libs/libPropList"
 need_apache2
+
 IUSE="${IUSE}"
 
 egnustep_install_domain "System"
 
 src_unpack() {
-	cvs_src_unpack
-	cd ${S}/GSWeb.framework
-	epatch ${FILESDIR}/1.1.1_pre-build-fixes.patch
-	cd ${S}/GSWAdaptors/Apache
-	epatch ${FILESDIR}/apache1-make.patch
-	cd ${S}/GSWAdaptors/Apache
-	epatch ${FILESDIR}/apache2-make.patch
+	cvs_src_unpack ${A}
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PV}-build-fixes.patch
 	cd ${S}
 }
 
@@ -50,30 +45,34 @@ src_compile() {
 	econf "--prefix=$(egnustep_prefix)" || die "./configure failed"
 	egnustep_make || die
 	cd ${S}/GSWAdaptors/Apache
-	pwd
-	einfo "emake -f GNUmakefile-Apache${APACHE_VERSION}x all"
+	#pwd
+	#einfo "emake -f GNUmakefile-Apache${APACHE_VERSION}x all"
 	emake -f GNUmakefile-Apache${APACHE_VERSION}x all
-	ls -la
+	#ls -la
 	cd ${S}
-	pwd
+	#pwd
 }
 
 src_install() {
+	egnustep_env
 	gnustep_src_install
 	cd ${S}/GSWAdaptors/Apache
-	insinto /usr/lib/apache${APACHE_VERSION#1}-extramodules
+	insinto ${APACHE2_MODULESDIR}
 	insopts -m0755
 	doins mod_gsweb.so
 	cd ${S}
 
-	insinto /etc/apache${APACHE_VERSION#1}/conf/modules.d
-	doins ${FILESDIR}/${APACHE_VERSION}/90_mod_gsweb.conf
+	insinto ${APACHE2_MODULES_CONFDIR}
+	insopts -m0664
+	doins ${FILESDIR}/${APACHE_VERSION}/42_mod_gsweb.conf
 
-	insinto /etc/apache${APACHE_VERSION#1}/conf
+	dodir /etc/gsweb
+	insinto /etc/gsweb
+	insopts -m0664
 	doins ${FILESDIR}/gsweb.conf
 
-	dodir $(egnustep_system_domain)/Library/Documentation/GSWeb
-	insinto $(egnustep_system_domain)/Library/Documentation/GSWeb
+	dodir $(egnustep_system_root)/Library/Documentation/GSWeb
+	insinto $(egnustep_system_root)/Library/Documentation/GSWeb
 	doins GSWAdaptors/Doc/ConfigurationFile.html
 }
 
