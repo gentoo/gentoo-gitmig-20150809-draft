@@ -1,0 +1,13 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/ChangeLog,v 1.1 2002/02/24 03:54:35 tod Exp $
+
+*unlzx-1.1 (23 Feb 2002)
+
+  23 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog, unlzx-1.1.ebuild, digest-unlzx-1.1 :
+ 
+  Initial commit. Unlzx decompresses Amiga LZX archives.
+  Version 1.1 supports pipes.
+  Thanks to Per Wigren for the contribution.
+  Note: there is no version in the tarball name.
+  Suggestion on how to handle this welcome.
