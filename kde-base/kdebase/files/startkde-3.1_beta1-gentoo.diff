@@ -1,4 +1,4 @@
---- startkde.orig	Mon Aug  5 18:29:33 2002
+--- startkde	Mon Aug  5 18:29:33 2002
 +++ startkde	Thu Aug 22 17:04:50 2002
 @@ -1,8 +1,28 @@
 -#!/bin/sh
