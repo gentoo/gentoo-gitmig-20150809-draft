@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r8.ebuild,v 1.5 2004/10/23 23:06:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r8.ebuild,v 1.6 2004/10/24 04:17:57 eradicator Exp $
 
 IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 alsa oss arts jack sndfile lirc flac mad"
 
@@ -125,7 +125,6 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "This version of xmms is under development and subject to change."
-	ewarn "while it is still in package.mask.  Some features found in earlier"
-	ewarn "versions of xmms (cjk support and an id3v2 editor) are not yet"
-	ewarn "integrated into this version."
+	ewarn "while it is still in package.mask.  Additionally, cjk support is"
+	ewarn "not yet availible in this version."
 }
