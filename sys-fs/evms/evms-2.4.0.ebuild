@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.4.0.ebuild,v 1.1 2004/09/20 15:28:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.4.0.ebuild,v 1.2 2004/10/07 07:23:53 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE="ncurses gtk"
 
 #EVMS uses libuuid from e2fsprogs
@@ -76,12 +76,12 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/evms2-init evms
+
+	# Needed for bug #51252
+	dosym libevms-2.4.so.0.0 /$(get_libdir)/libevms-2.4.so.0
 }
 
 pkg_postinst() {
 	ewarn "Presently gentoo-sources-2.4.22 has basic support for evms2,"
 	ewarn "but does NOT support some of the more advanced features."
-
-	# Needed for bug #51252
-	ldconfig
 }
