@@ -1,10 +1,13 @@
 # ChangeLog for x11-plugins/asapm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/ChangeLog,v 1.5 2003/02/12 09:34:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/ChangeLog,v 1.6 2003/02/15 08:19:39 gerk Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *asapm-2.11 (12 Apr 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> asapm-2.11.ebuild :
+  set ppc in keywords
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> asapm-2.11.ebuild :
 
