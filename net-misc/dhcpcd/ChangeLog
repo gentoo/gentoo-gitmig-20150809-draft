@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.11 2002/12/13 11:00:11 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.12 2003/01/04 22:07:32 aliz Exp $
+
+*dhcpcd-1.3.22_p4 (04 Jan 2003)
+
+  04 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump
+
+*dhcpcd-1.3.22_p3-r3 (04 Jan 2003)
+
+  04 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> dhcpcd-1.3.22_p3-r3.ebuild :
+  Removed installation of pcmcia network files. Marked stable becuse of security update.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
