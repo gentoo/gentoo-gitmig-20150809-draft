@@ -1,0 +1,17 @@
+--- src/network/qsocket.cpp.orig	2003-02-24 09:30:06.000000000 +0100
++++ src/network/qsocket.cpp	2002-12-09 10:40:38.000000000 +0100
+@@ -1273,13 +1259,8 @@
+     }
+     d->rba.append( a );
+     d->rsize += nread;
+-    if ( !force ) {
+-	if ( d->rsn )
+-	    d->rsn->setEnabled( FALSE );
++    if ( !force )
+ 	emit readyRead();
+-	if ( d->rsn )
+-	    d->rsn->setEnabled( TRUE );
+-    }
+ 
+     QSocketPrivate::sn_read_alreadyCalled.removeRef( this );
+ }
