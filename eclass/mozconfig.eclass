@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.8 2005/03/23 20:52:18 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.9 2005/03/24 02:46:12 agriffis Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -101,6 +101,9 @@ mozconfig_init() {
 	# AFTER setting optimization above since strip-flags only allows
 	# -O -O1 and -O2
 	strip-flags
+
+	# -fstack-protector is in ALLOWED_FLAGS but breaks moz #83511
+	filter-flags -fstack-protector
 
 	# Additional ARCH support
 	case "${ARCH}" in
