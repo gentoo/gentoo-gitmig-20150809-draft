@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.4_p1.ebuild,v 1.6 2004/12/05 09:14:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.4_p1.ebuild,v 1.7 2004/12/05 11:24:59 kloeri Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.pdflib.com/products/pdflib/download/504src/${MY_P}.tar.gz"
 
 LICENSE="Aladdin"
 SLOT="5"
-KEYWORDS="x86 ppc sparc ~mips ~alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="x86 ppc sparc ~mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE="tcltk perl python java"
 
 DEPEND=">=sys-apps/sed-4
