@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gtkpbbuttons
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtkpbbuttons/ChangeLog,v 1.10 2003/11/26 00:42:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtkpbbuttons/ChangeLog,v 1.11 2003/11/26 16:32:57 lu_zero Exp $
+
+  26 Nov 2003; Luca Barbato <lu_zero@gentoo.org> gtkpbbuttons-0.6.1.ebuild:
+  Fixed deps, thanks to Mathieu Leduc-Hamel 
+  <leduc-hamel.mathieu@courrier.uqam.ca> for the report.
 
 *gtkpbbuttons-0.6.1 (26 Nov 2003)
 
