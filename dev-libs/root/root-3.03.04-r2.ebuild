@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.03.04-r2.ebuild,v 1.2 2003/02/28 21:59:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.03.04-r2.ebuild,v 1.3 2003/06/12 16:57:45 seemant Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,7 +15,6 @@ KEYWORDS="x86 sparc ~ppc"
 IUSE="mysql postgres opengl"
 
 DEPEND="virtual/x11
-	>=media-libs/xpm-3.4k
 	>=media-libs/freetype-2.0.9
 	opengl? ( virtual/opengl virtual/glu )
 	mysql? ( >=dev-db/mysql-3.23.49 )
