@@ -27,22 +27,22 @@ src_unpack() {
 
 	cd ${S}
 	sed -e 's:var/log/mgetty:var/log/mgetty/mgetty:' \
-	    -e 's:var/log/sendfax:var/log/mgetty/sendfax:' \
-	    -e 's:\/\* \#define CNDFILE "dialin.config" \*\/:\#define CNDFILE "dialin.config":' \
-	    policy.h-dist > policy.h
+		-e 's:var/log/sendfax:var/log/mgetty/sendfax:' \
+		-e 's:\/\* \#define CNDFILE "dialin.config" \*\/:\#define CNDFILE "dialin.config":' \
+		policy.h-dist > policy.h
 }
 
 src_compile() {
 	mycflags="${CFLAGS}"
 	unset CFLAGS
 	emake prefix=/usr \
-	      CONFDIR=/etc/mgetty+sendfax \
-	      CFLAGS="${mycflags}" \
-	      || die
+		CONFDIR=/etc/mgetty+sendfax \
+		CFLAGS="${mycflags}" \
+		|| die
 	cd voice
 	emake CONFDIR=/etc/mgetty+sendfax \
-	      CFLAGS="${mycflags}" \
-	      || die
+		CFLAGS="${mycflags}" \
+		|| die
 	cd ${S}
 }
 
@@ -50,15 +50,20 @@ src_install () {
 	dodir /var/spool
 	dodir /usr/share/info
 	make prefix=${D}/usr \
-	     INFODIR=${D}/usr/share/info \
-	     CONFDIR=${D}/etc/mgetty+sendfax \
-	     spool=${D}/var/spool \
-	     install || die
+		INFODIR=${D}/usr/share/info \
+		CONFDIR=${D}/etc/mgetty+sendfax \
+		MAN1DIR=${D}/usr/share/man/man1 \
+		MAN4DIR=${D}/usr/share/man/man4 \
+		MAN5DIR=${D}/usr/share/man/man5 \
+		MAN8DIR=${D}/usr/share/man/man8 \
+		spool=${D}/var/spool \
+		install || die
 
 	cd voice
 	make prefix=${D}/usr \
-	     CONFDIR=${D}/etc/mgetty+sendfax \
-	     install || die
+		CONFDIR=${D}/etc/mgetty+sendfax \
+		MAN1DIR=${D}/usr/share/man/man1 \
+		install || die
 
 	cd ${S}
 	dodoc BUGS ChangeLog FTP README.1st Recommend THANKS TODO
