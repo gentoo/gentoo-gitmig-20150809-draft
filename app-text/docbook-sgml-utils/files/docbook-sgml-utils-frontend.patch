@@ -1,0 +1,12 @@
+diff -ru docbook-utils-0.6.11/frontends/docbook.in docbook-utils-0.6.11.patch/frontends/docbook.in
+--- docbook-utils-0.6.11/frontends/docbook.in	Thu Jun 27 06:28:20 2002
++++ docbook-utils-0.6.11.patch/frontends/docbook.in	Thu Aug 22 13:04:10 2002
+@@ -25,7 +25,7 @@
+ 	    break
+ 	  fi
+ 	done
+-	if [ -z "SGML_CATALOG" ]
++	if [ -z "$SGML_CATALOG" ]
+ 	then
+ 	  if [ "${SGML_XML}" != "sgml" ]
+ 	  then SGML_CATALOG=${SGML_CATALOGS_DIR}/${SGML_XML}-docbook.cat
