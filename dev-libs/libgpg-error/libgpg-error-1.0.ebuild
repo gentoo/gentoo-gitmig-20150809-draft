@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.0.ebuild,v 1.3 2004/09/08 12:10:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.0.ebuild,v 1.4 2004/09/09 18:20:22 gustavoz Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ~ppc64 macos"
+KEYWORDS="x86 ~ppc sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ~ppc64 macos"
 IUSE="nls"
 
 DEPEND="virtual/libc"
