@@ -1,6 +1,8 @@
 # ChangeLog for sys-apps/less
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.28 2004/06/25 03:08:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.29 2004/07/18 15:55:10 aliz Exp $
+
+*less-382-r2 (16 Jun 2004)
 
   16 Jun 2004; Aron Griffis <agriffis@gentoo.org> files/lesspipe.sh-r2,
   -less-382-r1.ebuild:

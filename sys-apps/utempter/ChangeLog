@@ -1,9 +1,11 @@
 # ChangeLog for sys-apps/utempter
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.22 2004/07/16 19:17:08 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.23 2004/07/18 15:55:10 aliz Exp $
 
   16 Jul 2004; Tom Gall <tgall@gentoo.org> utempter-0.5.5.5.ebuild:
   stable on ppc64
+
+*utempter-0.5.5.5 (12 Jul 2004)
 
   12 Jul 2004; Seemant Kulleen <seemant@gentoo.org> :
   version bump to the rebuilded src.rpm -- no feature additions or any other
