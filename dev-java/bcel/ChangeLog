@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.14 2004/09/04 12:59:57 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.15 2004/09/10 19:46:20 axxo Exp $
+
+  10 Sep 2004; Thomas Matthijs <axxo@gentoo.org> bcel-5.1.ebuild:
+  depend on ant-core
 
   04 Sep 2004; Thomas Matthijs <axxo@gentoo.org> bcel-5.1.ebuild:
   regexp-bin -> regexp
