@@ -1,5 +1,4 @@
-MD5 1e973de2babd867be15cda83655ee358 clustalw-1.83-r1.ebuild 1126
+MD5 1d14c74f67564192fb070844e69857d8 clustalw-1.83-r1.ebuild 1110
 MD5 94ed28e3b9a07a98dcd58dce4300b30a ChangeLog 815
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 c0269ebe063d17c20c037e7e97e16701 files/optimize-clustalw1.83.patch 327
 MD5 59931bb873b284e7ab0b7c452e87d075 files/digest-clustalw-1.83-r1 69
