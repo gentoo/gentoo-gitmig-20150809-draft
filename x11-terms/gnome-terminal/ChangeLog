@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.51 2004/02/10 06:44:08 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.52 2004/03/17 00:56:40 geoman Exp $
+
+  16 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  gnome-terminal-2.4.2.ebuild:
+  Added ~mips keyword.
 
   10 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org>
   gnome-terminal-2.4.2.ebuild:
