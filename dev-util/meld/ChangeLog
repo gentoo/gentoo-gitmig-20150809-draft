@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.2 2003/07/01 20:19:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.3 2003/07/06 00:06:56 liquidx Exp $
+
+  06 Jul 2003; Alastair Tse <liquidx@gentoo.org> meld-0.8.2.ebuild,
+  files/meld-0.8.2-gentoo.diff:
+  add patch thanks to suka <suka@t0.or.at>
 
 *meld-0.8.2 (01 Jul 2003)
 
