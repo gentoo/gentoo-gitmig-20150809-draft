@@ -2,6 +2,11 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp
 
+*xcdroast-0.98_alpha10-r3 (16 May 2003)
+
+  16 May 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Updated dependencies to allow multiple revisions of cdrtools.
+
 *xcdroast-0.98_alpha13 (04 Jan 2003)
 
   02 Apr 2003; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha13.ebuild:
