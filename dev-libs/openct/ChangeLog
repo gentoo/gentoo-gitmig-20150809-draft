@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openct
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.3 2004/07/02 04:53:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.4 2004/07/14 03:33:31 vapier Exp $
+
+*openct-0.6.0_alpha (13 Jul 2004)
+
+  13 Jul 2004; Mike Frysinger <vapier@gentoo.org> +openct-0.6.0_alpha.ebuild:
+  Add an alpha version -* for Lars T. Mikkelsen #55828.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> openct-0.5.0.ebuild:
   virtual/glibc -> virtual/libc
