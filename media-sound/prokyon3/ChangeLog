@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/prokyon3
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/ChangeLog,v 1.4 2004/03/20 00:11:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/prokyon3/ChangeLog,v 1.5 2004/04/20 16:59:02 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  prokyon3-0.9.2.ebuild:
+  Stable x86.
 
 *prokyon3-0.9.2 (19 Mar 2004)
 
