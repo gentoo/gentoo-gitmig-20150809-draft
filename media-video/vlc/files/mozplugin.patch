@@ -1,0 +1,204 @@
+diff -urN vlc-0.6.0/mozilla/npvlc_rc.rc vlc-0.6.0-mozfix/mozilla/npvlc_rc.rc
+--- vlc-0.6.0/mozilla/npvlc_rc.rc	1969-12-31 18:00:00.000000000 -0600
++++ vlc-0.6.0-mozfix/mozilla/npvlc_rc.rc	2003-07-16 16:32:54.000000000 -0500
+@@ -0,0 +1,44 @@
++
++/////////////////////////////////////////////////////////////////////////////
++//
++//  VLC Plugin description.
++//
++
++//VS_VERSION_INFO VERSIONINFO
++1 VERSIONINFO
++ FILEVERSION 1,0,0,1
++ PRODUCTVERSION 1,0,0,1
++ FILEFLAGSMASK 0x3fL
++#ifdef _DEBUG
++ FILEFLAGS 0x1L
++#else
++ FILEFLAGS 0x0L
++#endif
++ FILEOS 0x4L
++ FILETYPE 0x2L
++ FILESUBTYPE 0x0L
++
++BEGIN
++    BLOCK "StringFileInfo"
++    BEGIN
++        BLOCK "040904e4"
++        BEGIN
++            VALUE "ProductName", "VLC Multimedia Plugin\0"
++            VALUE "ProductVersion", "1, 0, 0, 1\0"
++            VALUE "OriginalFilename", "npvlc.dll\0"
++            VALUE "FileVersion", "1, 0, 0, 1\0"
++            VALUE "FileDescription", "VLC multimedia plugin<br><br>VideoLAN WWW: <a href=""http://www.videolan.org/"">http://www.videolan.org/</a>\0"
++            VALUE "InternalName", "npvlc\0"
++            VALUE "CompanyName", "VideoLAN\0"
++            VALUE "LegalCopyright", "Copyright VideoLAN \251 1996-2003\0"
++            VALUE "MIMEType", "audio/mpeg|audio/x-mpeg|video/mpeg|video/x-mpeg|video/mpeg-system|video/x-mpeg-system|video/mpeg4|audio/mpeg4|application/mpeg4-iod|application/mpeg4-muxcodetable|video/x-msvideo|video/quicktime|application/x-ogg|application/x-vlc-plugin\0"
++            VALUE "FileExtents", "mp2,mp3,mpga,mpega|mp2,mp3,mpga,mpega|mpg,mpeg,mpe|mpg,mpeg,mpe|mpg,mpeg,vob|mpg,mpeg,vob|mp4,mpg4|mp4,mpg4|mp4,mpg4|mp4,mpg4|avi|mov,qt|ogg|\0"
++            VALUE "FileOpenName", "MPEG audio|MPEG audio|MPEG video|MPEG video|MPEG video|MPEG video|MPEG-4 video|MPEG-4 audio|MPEG-4 video|MPEG-4 video|AVI video|QuickTime video|Ogg stream|VLC plugin\0"
++        END
++    END
++    BLOCK "VarFileInfo"
++    BEGIN
++        VALUE "Translation", 0x409, 1252
++    END
++END
++
+diff -urN vlc-0.6.0/mozilla/support/npmac.cpp vlc-0.6.0-mozfix/mozilla/support/npmac.cpp
+--- vlc-0.6.0/mozilla/support/npmac.cpp	2003-04-09 11:18:36.000000000 -0500
++++ vlc-0.6.0-mozfix/mozilla/support/npmac.cpp	2003-07-16 16:33:20.000000000 -0500
+@@ -66,6 +66,7 @@
+     #include <A4Stuff.h>
+ #endif
+ 
++#include "nscore.h"
+ #include "jri.h"
+ #include "npapi.h"
+ 
+diff -urN vlc-0.6.0/mozilla/support/npunix.c vlc-0.6.0-mozfix/mozilla/support/npunix.c
+--- vlc-0.6.0/mozilla/support/npunix.c	2003-04-09 11:18:36.000000000 -0500
++++ vlc-0.6.0-mozfix/mozilla/support/npunix.c	2003-07-16 16:33:20.000000000 -0500
+@@ -32,12 +32,16 @@
+  *----------------------------------------------------------------------
+  * PLUGIN DEVELOPERS:
+  *  YOU WILL NOT NEED TO EDIT THIS FILE.
++ * TO NETSCAPE DEVELOPERS:
++ *  OF COURSE I WILL NEED TO EDIT THIS FILE, YOU BORKED IT ALL AROUND YOU
++ *  IGNORANT FOOLS -- sam
+  *----------------------------------------------------------------------
+  */
+ 
+ #define XP_UNIX 1
+ 
+ #include <stdio.h>
++#include "nscore.h"
+ #include "npapi.h"
+ #include "npupp.h"
+ 
+@@ -367,7 +371,7 @@
+  *    that the navigator needs.
+  */
+ NPError
+-NP_GetValue(NPP future, NPPVariable variable, void *value)
++NP_GetValue(void *future, NPPVariable variable, void *value)
+ {
+     return NPP_GetValue(future, variable, value);
+ }
+diff -urN vlc-0.6.0/mozilla/vlc.r vlc-0.6.0-mozfix/mozilla/vlc.r
+--- vlc-0.6.0/mozilla/vlc.r	1969-12-31 18:00:00.000000000 -0600
++++ vlc-0.6.0-mozfix/mozilla/vlc.r	2003-07-16 16:32:54.000000000 -0500
+@@ -0,0 +1,33 @@
++/*****************************************************************************
++ * VLC Plugin description for OS X
++ *****************************************************************************/
++
++/* Definitions of system resource types */
++#include <Types.r>
++
++/* The first string in the array is a plugin description,
++ * the second is the plugin name */
++resource 'STR#' (126)
++{
++    {
++        "A VLC test plugin... hope it goes somewhere",
++        "VLC plugin"
++    };
++};
++
++/* A description for each MIME type in resource 128 */
++resource 'STR#' (127)
++{
++    {
++        "Invoke scriptable sample plugin"
++    };
++};
++
++/* A series of pairs of strings... first MIME type, then file extension(s) */
++resource 'STR#' (128,"MIME Type")
++{
++    {
++        "application/vlc-plugin", ""
++    };
++};
++
+diff -urN vlc-0.6.0/mozilla/vlcpeer.cpp vlc-0.6.0-mozfix/mozilla/vlcpeer.cpp
+--- vlc-0.6.0/mozilla/vlcpeer.cpp	2002-10-11 17:32:56.000000000 -0500
++++ vlc-0.6.0-mozfix/mozilla/vlcpeer.cpp	2003-07-16 16:32:54.000000000 -0500
+@@ -2,7 +2,7 @@
+  * vlcpeer.cpp: scriptable peer descriptor
+  *****************************************************************************
+  * Copyright (C) 2002 VideoLAN
+- * $Id: mozplugin.patch,v 1.1 2003/07/16 23:38:40 raker Exp $
++ * $Id: mozplugin.patch,v 1.1 2003/07/16 23:38:40 raker Exp $
+  *
+  * Authors: Samuel Hocevar <sam@zoy.org>
+  *
+@@ -26,12 +26,13 @@
+  *****************************************************************************/
+ #include <vlc/vlc.h>
+ 
+-#include "npapi.h"
++#include <nsISupports.h>
++#include <nsMemory.h>
++#include <npapi.h>
++
+ #include "vlcpeer.h"
+ #include "vlcplugin.h"
+ 
+-#include "nsMemory.h"
+-
+ NS_IMPL_ISUPPORTS2( VlcPeer, VlcIntf, nsIClassInfo )
+ 
+ /*****************************************************************************
+diff -urN vlc-0.6.0/mozilla/vlcplugin.cpp vlc-0.6.0-mozfix/mozilla/vlcplugin.cpp
+--- vlc-0.6.0/mozilla/vlcplugin.cpp	2003-02-18 07:13:12.000000000 -0600
++++ vlc-0.6.0-mozfix/mozilla/vlcplugin.cpp	2003-07-16 16:32:54.000000000 -0500
+@@ -2,7 +2,7 @@
+  * vlcplugin.cpp: a VLC plugin for Mozilla
+  *****************************************************************************
+  * Copyright (C) 2002 VideoLAN
+- * $Id: mozplugin.patch,v 1.1 2003/07/16 23:38:40 raker Exp $
++ * $Id: mozplugin.patch,v 1.1 2003/07/16 23:38:40 raker Exp $
+  *
+  * Authors: Samuel Hocevar <sam@zoy.org>
+  *
+@@ -26,6 +26,8 @@
+  *****************************************************************************/
+ #include <vlc/vlc.h>
+ 
++#include <nsISupports.h>
++#include <nsMemory.h>
+ #include <npapi.h>
+ 
+ #include "vlcpeer.h"
+diff -urN vlc-0.6.0/mozilla/vlcshell.cpp vlc-0.6.0-mozfix/mozilla/vlcshell.cpp
+--- vlc-0.6.0/mozilla/vlcshell.cpp	2003-04-09 12:27:51.000000000 -0500
++++ vlc-0.6.0-mozfix/mozilla/vlcshell.cpp	2003-07-16 16:32:54.000000000 -0500
+@@ -2,7 +2,7 @@
+  * vlcshell.cpp: a VLC plugin for Mozilla
+  *****************************************************************************
+  * Copyright (C) 2002 VideoLAN
+- * $Id: mozplugin.patch,v 1.1 2003/07/16 23:38:40 raker Exp $
++ * $Id: mozplugin.patch,v 1.1 2003/07/16 23:38:40 raker Exp $
+  *
+  * Authors: Samuel Hocevar <sam@zoy.org>
+  *
+@@ -29,6 +29,7 @@
+  *****************************************************************************/
+ #include <stdio.h>
+ #include <string.h>
++#include <stdlib.h>
+ 
+ /* vlc stuff */
+ #ifdef USE_LIBVLC
+@@ -36,6 +37,8 @@
+ #endif
+ 
+ /* Mozilla stuff */
++#include <nsISupports.h>
++#include <nsMemory.h>
+ #include <npapi.h>
+ 
+ #ifdef XP_WIN

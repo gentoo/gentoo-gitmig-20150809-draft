@@ -1,6 +1,14 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.23 2003/07/16 08:03:37 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.24 2003/07/16 23:38:40 raker Exp $
+
+vlc-0.6.0-r1 (16 Jul 2003)
+
+  16 Jul 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.0-r1.ebuild,
+  files/mozplugin.patch:
+  Now utilizes the mozilla USE variable to install a way cool
+  mozilla plugin.  The code has been tested with mozilla 1.4
+  and may work with 1.3.
 
   16 Jul 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.0.ebuild:
   Adding mplayer as a dependancy until the libpostproc issue is
