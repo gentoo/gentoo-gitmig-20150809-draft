@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mcp-plugins
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/ChangeLog,v 1.5 2004/06/15 18:29:42 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/ChangeLog,v 1.6 2004/06/15 19:09:54 fvdpol Exp $
+
+  15 Jun 2004; Frank van de Pol <fvdpol@gentoo.org> +metadata.xml:
+  Added metadata.xml.
 
 *mcp-plugins-0.3.0 (15 Jun 2004)
 
