@@ -1,4 +1,6 @@
+MD5 3bec8ea1f936c15592059bcba91e3c77 uim-fep-0.2.5.ebuild 1116
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 8856fac3a65592a5112daafa32ac5cbc ChangeLog 562
+MD5 ce96121709edca2b5a36af8de1c02b59 ChangeLog 682
 MD5 2c46207441e645a8cdbd93da7bdf5e6e uim-fep-0.2.3.ebuild 1116
+MD5 43324d15fbceb19d138e72659d572513 files/digest-uim-fep-0.2.5 64
 MD5 ccfa8de992b316f4ed7a19c78f48a836 files/digest-uim-fep-0.2.3 64
