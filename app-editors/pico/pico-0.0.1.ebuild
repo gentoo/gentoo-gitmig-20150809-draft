@@ -1,10 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Maik Schreiber <bZ@iq-computing.de>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/pico/pico-0.0.1.ebuild,v 1.1 2002/06/10 01:24:55 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/pico/pico-0.0.1.ebuild,v 1.2 2002/07/08 20:56:35 blizzy Exp $
 
 HOMEPAGE="http://www.washington.edu/pine"
 DESCRIPTION="Pico text editor"
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="*"
 
 pkg_setup () {
 	einfo "There is no real Pico here."

@@ -1,17 +1,27 @@
 # Copyright 2002 Maik Schreiber
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.0.ebuild,v 1.1 2002/06/10 01:30:58 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.0.ebuild,v 1.2 2002/07/08 21:02:50 blizzy Exp $
 
 S="${WORKDIR}/jEdit"
 DESCRIPTION="A programmer's editor written in Java"
 HOMEPAGE="http://www.jedit.org"
-LICENSE="GPL-2"
-DEPEND=">=dev-java/ant-1.4.1 >=dev-java/jikes-1.15"
-RDEPEND=">=virtual/jdk-1.3"
 SRC_URI="http://unc.dl.sourceforge.net/sourceforge/jedit/jedit40source.tar.gz"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="*"
+
+RDEPEND=">=virtual/jdk-1.3"
+DEPEND="${RDEPEND}
+	>=dev-java/ant-1.4.1
+	jikes? ( >=dev-java/jikes-1.15 )"
 
 src_compile() {
-	ant -Dbuild.compiler=jikes || die
+	local antflags
+
+	antflags=""
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+
+	ant ${antflags} || die "compile problem"
 }
 
 src_install () {
