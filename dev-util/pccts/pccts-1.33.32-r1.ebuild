@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.32-r1.ebuild,v 1.3 2002/07/23 13:28:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.32-r1.ebuild,v 1.4 2002/07/23 22:11:45 gerk Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Purdue Compiler Construction Tool Set is an embedded C/C++ parser generator"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.polhode.com/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="app-arch/unzip"
 

@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/pccts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.4 2002/03/17 11:32:43 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.5 2002/07/23 22:11:45 gerk Exp $
 
 *pccts-1.33.32-r1 ( 17 Mar 2002 )
+
+  23 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   17 Mar 2002; G.Bevin <gbevin@gentoo.org> pccts-1.33.32-r1.ebuild
   files/digest-pccts-1.33.32-r1
