@@ -1,6 +1,9 @@
 # ChangeLog for app-text/html2text
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html2text/ChangeLog,v 1.13 2004/07/01 19:28:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html2text/ChangeLog,v 1.14 2004/10/05 03:11:45 tgall Exp $
+
+  04 Oct 2004; Tom Gall <tgall@gentoo.org> html2text-1.3.2.ebuild:
+  stable on ppc64, bug #64273
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   html2text-1.3.1.ebuild, html2text-1.3.2.ebuild:
