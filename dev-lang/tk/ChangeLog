@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tk
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.27 2004/01/04 20:14:39 tuxus Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.28 2004/03/04 19:21:26 mholzer Exp $
+
+*tk-8.4.6 (04 Mar 2004)
+
+  04 Mar 2004; Martin Holzer <mholzer@gentoo.org> tk-8.4.6.ebuild:
+  Verison bumped.
 
   04 Jan 2004; <tuxus@gentoo.org> tk-8.4.3.ebuild:
   Added mips to KEYWORDS
