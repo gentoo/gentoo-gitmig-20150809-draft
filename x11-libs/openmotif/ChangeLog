@@ -1,9 +1,16 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.13 2003/05/09 19:19:06 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.14 2003/05/15 15:51:19 phosphan Exp $
 
   09 May 2003; Tavis Ormandy <taviso@gentoo.org> openmotif-2.2.2-r1.ebuild:
   Looks good on ALPHA, marking stable.
+
+*openmotif-2.1.30-r1 (15 May 2003)
+
+  15 May 2003; Patrick Kursawe <phosphan@gentoo.org>
+  openmotif-2.1.30-r1.ebuild:
+  Bringing back old version on user request (bug 20298)
+  Had to remove sparc64 keyword because repoman complains.
 
   30 Apr 2003; Jason Wever <weeve@gentoo.org> openmotif-2.2.2-r1.ebuild,
   openmotif-2.2.2.ebuild:
