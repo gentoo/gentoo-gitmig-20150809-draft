@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r10.ebuild,v 1.5 2003/03/16 22:27:51 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r10.ebuild,v 1.6 2003/03/30 17:43:09 agriffis Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND="virtual/x11
 
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc ~sparc ~alpha ~hppa"
+KEYWORDS="x86 ppc ~sparc alpha ~hppa"
 
 src_unpack() {
 	unpack ${P}.tar.gz
