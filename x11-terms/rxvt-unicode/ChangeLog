@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.41 2005/02/18 19:25:13 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.42 2005/02/18 19:34:36 ciaranm Exp $
+
+  18 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  -rxvt-unicode-2.4.ebuild, -rxvt-unicode-3.6.ebuild,
+  -rxvt-unicode-3.9.ebuild, -rxvt-unicode-4.7.ebuild:
+  Tidy up
 
 *rxvt-unicode-5.1 (18 Feb 2005)
 
