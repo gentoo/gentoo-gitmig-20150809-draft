@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiostation/radiostation-0.5.ebuild,v 1.9 2004/09/15 17:20:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiostation/radiostation-0.5.ebuild,v 1.10 2005/01/29 15:16:20 greg_g Exp $
+
+inherit kde-functions
 
 IUSE="debug kde"
 
@@ -35,6 +37,7 @@ src_unpack() {
 
 src_compile() {
 	if use kde; then
+		set-kdedir 3
 		econf `use_enable debug` || die "Unsuccessful configure"
 		emake || die "Unsuccessful make"
 	fi
