@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/kemistry
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/ChangeLog,v 1.9 2004/06/24 22:04:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/ChangeLog,v 1.10 2004/06/29 11:37:26 carlo Exp $
+
+  29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kemistry-0.6.ebuild,
+  kemistry-0.7.ebuild:
+  QA: inherit kde-base -> inherit kde, newdepend -> DEPEND, need-kde after
+  R/DEPEND
 
   21 Mar 2004; Jason Wever <weeve@gentoo.org> kemistry-0.7.ebuild:
   Added ~sparc keyword.
