@@ -1,6 +1,6 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.189 2004/06/06 17:35:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.190 2004/06/07 01:34:16 zul Exp $
 
 *apache-1.3.29-r1 (06 Jun 2004)
 
@@ -8,6 +8,12 @@
   apache-1.3.29-r1.ebuild:
   resurrect apache-1.3.29-r1.ebuild since the deps for net-www/mod_ssl were
   broken
+
+  06 Jun 2004; Chuck Short <zul@gentoo.org> apache-2.0.49-r1.ebuild,
+  apache-2.0.49-r2.ebuild, apache-2.0.49-r3.ebuild:
+  Strip out in CFLAGS that apache doesnt like. If you must know apache configure
+  bails out saying that the CFLAGS have changed between the buildconf and
+  configure if there are any extra spaces in the CFLAGS. :-).
 
   05 Jun 2004; Chuck Short <zul@gentoo.org> apache-1.3.29-r1.ebuild,
   apache-2.0.48-r4.ebuild, apache-2.0.49.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r2.ebuild,v 1.11 2004/06/01 11:55:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r2.ebuild,v 1.12 2004/06/07 01:34:16 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -49,6 +49,7 @@ apache_setup_vars() {
 }
 
 set_filter_flags () {
+	CFLAGS="${CFLAGS/  / }"
 	has_version =sys-libs/glibc-2.2* && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 }
 
