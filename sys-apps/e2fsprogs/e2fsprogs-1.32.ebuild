@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.30.ebuild,v 1.1 2002/11/01 22:39:01 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.32.ebuild,v 1.1 2002/11/11 21:47:20 lostlogic Exp $
 
 IUSE="nls"
 
