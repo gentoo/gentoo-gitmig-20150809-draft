@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.3.ebuild,v 1.4 2003/09/05 08:48:47 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.3.ebuild,v 1.5 2004/01/18 22:59:02 tuxus Exp $
 
 IUSE="ssl nls ipv6"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.catb.org/~esr/fetchmail/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 public-domain"
-KEYWORDS="x86 alpha"
+KEYWORDS="x86 alpha ~mips"
 
 DEPEND="virtual/glibc
 	ssl? ( >=dev-libs/openssl-0.9.6 )

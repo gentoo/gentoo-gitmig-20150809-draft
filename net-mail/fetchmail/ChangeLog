@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fetchmail
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.39 2003/11/22 01:40:19 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.40 2004/01/18 22:59:02 tuxus Exp $
+
+  18 Jan 2004; <tuxus@gentoo.org> fetchmail-6.2.3.ebuild:
+  Added ~mips to KEYWORDS.
 
   21 Nov 2003; Jason Wever <weeve@gentoo.org> fetchmail-6.2.5.ebuild:
   Added ~sparc keyword.
