@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.65 2004/09/15 02:33:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.66 2004/09/24 01:49:12 caleb Exp $
+
+  23 Sep 2004; Caleb Tennis <caleb@gentoo.org> kdesdk-3.3.0.ebuild:
+  Change the dep to callgrind, as that's what the package 
+  is called now
 
   14 Sep 2004; Jason Wever <weeve@gentoo.org> kdesdk-3.3.0.ebuild:
   Stable on sparc.
