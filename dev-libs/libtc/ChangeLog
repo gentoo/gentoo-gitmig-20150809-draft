@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libtc
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/ChangeLog,v 1.1 2003/10/30 02:30:45 seemant Exp $
+
+*libtc-0.6.4 (29 Oct 2003)
+
+  29 Oct 2003; Seemant Kulleen <seemant@gentoo.org> libtc-0.6.4.ebuild:
+  new library for supplementing libc. Submitted by: Marc Hildebrand
+  <marc.hildebrand@t-online.de>  in bug #29140
+
