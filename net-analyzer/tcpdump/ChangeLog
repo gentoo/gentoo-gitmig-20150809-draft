@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.15 2003/04/28 06:20:28 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.16 2003/11/04 19:13:29 wwoods Exp $
+
+  04 Nov 2003; Will Woods <wwoods@gentoo.org> tcpdump-3.7.2.ebuild:
+  Added files/tcpdump-3.7.2-sctp.patch, fixing bug #25544
 
 *tcpdump-3.7.2 (03 Mar 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.7.2.ebuild,v 1.6 2003/09/18 21:39:46 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.7.2.ebuild,v 1.7 2003/11/04 19:13:29 wwoods Exp $
 
 IUSE="ssl"
 
@@ -17,6 +17,12 @@ KEYWORDS="x86 ppc sparc alpha mips hppa arm ia64"
 
 DEPEND=">=net-libs/libpcap-0.6.1
 	ssl? ( >=dev-libs/openssl-0.6.9 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-sctp.patch
+}
 
 src_compile() {
 	local myconf
