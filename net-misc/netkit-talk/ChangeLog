@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/netkit-talk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.7 2003/02/24 19:42:04 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.8 2003/04/03 18:20:38 mholzer Exp $
+
+*netkit-talk-0.17-r3 (03 Apr 2003)
+
+  03 Apr 2003; Martin Holzer <mholzer@gentoo.org> netkit-talk-0.17-r3.ebuild,
+  files/netkit-talk-0.17-r3-gentoo.diff, files/talk.xinetd:
+  Added xinetd entry. Closes #18251.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
