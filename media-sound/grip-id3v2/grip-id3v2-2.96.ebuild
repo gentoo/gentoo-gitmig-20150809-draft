@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip-id3v2/grip-id3v2-2.96.ebuild,v 1.1 2001/10/26 01:53:21 lordjoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip-id3v2/grip-id3v2-2.96.ebuild,v 1.2 2001/10/26 01:54:07 lordjoe Exp $
 
 P=grip-${PV}
 S=${WORKDIR}/${P}
@@ -10,7 +10,8 @@ SRC_URI="http://www.nostatic.org/grip/${P}.tgz http://www.slackorama.net/oss/qta
 HOMEPAGE="http://www.nostatic.org/grip"
 
 DEPEND="media-libs/id3lib
-	media-sound/cdparanoia"
+	media-sound/cdparanoia
+	virtual/x11"
 
 src_unpack() {
 
