@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.7 2003/12/05 12:12:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.8 2003/12/10 04:34:59 seemant Exp $
+
+IUSE="nls debug"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xfs extended attributes tools"
@@ -10,16 +12,24 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~amd64 ~mips ppc ia64 sparc"
+KEYWORDS="x86 ppc sparc ~alpha ~hppa ~mips ~amd64 ia64"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4.0.5
 	virtual/glibc
 	nls? ( sys-devel/gettext )
 	>=sys-devel/gcc-3*"
+
 RDEPEND="virtual/glibc"
 
-IUSE="nls debug"
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# More extensive man 2 documentation is found in the man-pages package,
+	# so disable the installation of them
+	epatch ${FILESDIR}/${PN}-no-man2pages.patch
+}
 
 src_compile() {
 	if use debug; then

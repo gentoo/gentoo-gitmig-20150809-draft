@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.1.ebuild,v 1.7 2003/09/25 01:04:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.1.ebuild,v 1.8 2003/12/10 04:34:59 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xfs extended attributes tools"
@@ -27,6 +27,10 @@ src_unpack() {
 		epatch ${FILESDIR}/${P}-gettext.diff
 		sed -i "s: po::" Makefile
 	fi
+
+	# More extensive man 2 documentation is in the man-pages package, so
+	# disable the generation/installation of man2/ manpages here
+	epatch ${FILESDIR}/${PN}-no-man2pages.patch
 }
 
 src_compile() {

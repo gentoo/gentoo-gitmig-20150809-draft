@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/attr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.22 2003/12/05 12:12:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.23 2003/12/10 04:34:59 seemant Exp $
+
+  09 Dec 2003; Seemant Kulleen <seemant@gentoo.org> attr-2.2.0.ebuild,
+  attr-2.4.1.ebuild, attr-2.4.7-r1.ebuild, files/attr-no-man2pages.patch:
+  Since the man-pages package provides much more extensive documentation in man2
+  for this, the man2 manpages will not be generated in attr
 
   05 Dec 2003; Jason Wever <weeve@gentoo.org> attr-2.4.7-r1.ebuild:
   Marked stable on sparc because of acl dependency borkage.
