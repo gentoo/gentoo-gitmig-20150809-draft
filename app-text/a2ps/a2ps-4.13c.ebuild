@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c.ebuild,v 1.9 2004/03/09 05:31:59 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c.ebuild,v 1.10 2004/04/27 07:16:20 vapier Exp $
 
 inherit gnuconfig eutils
 
@@ -10,9 +10,9 @@ HOMEPAGE="http://www-inf.enst.fr/~demaille/a2ps/"
 SRC_URI="mirror://gentoo/${P}.tar.gz
 	cjk? ( http://dev.gentoo.org/~usata/distfiles/${P}-ja_nls.patch.gz ) "
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ia64 ~x86 ~ppc ~sparc ~alpha amd64 hppa ~mips"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips hppa amd64 ~ia64"
 IUSE="nls tetex cjk"
 
 DEPEND=">=sys-devel/automake-1.6
@@ -35,6 +35,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-locale-gentoo.diff
 	epatch ${FILESDIR}/a2ps-4.13-stdout.diff
+	epatch ${FILESDIR}/${PV}-gcc34.patch
 	use cjk && epatch ${DISTDIR}/${P}-ja_nls.patch.gz
 }
 

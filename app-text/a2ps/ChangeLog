@@ -1,6 +1,10 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.24 2004/03/09 05:31:59 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.25 2004/04/27 07:16:20 vapier Exp $
+
+  27 Apr 2004; Mike Frysinger <vapier@gentoo.org> +files/4.13c-gcc34.patch,
+  a2ps-4.13c.ebuild:
+  Add gcc-3.4 patch #47667 by Tamran Lengyel
 
   07 Mar 2004; Bret Curtis <psi29a@gentoo.org> a2ps-4.13c.ebuild:
   Added ~mips to KEYWORDS.
