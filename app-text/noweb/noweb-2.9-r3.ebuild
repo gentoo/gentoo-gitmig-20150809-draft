@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r3.ebuild,v 1.6 2003/11/29 03:45:25 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r3.ebuild,v 1.7 2004/02/09 08:33:16 absinthe Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="sys-devel/gcc
 	virtual/tetex
 	sys-apps/gawk
 	sys-apps/debianutils"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha amd64"
 
 src_unpack() {
 
