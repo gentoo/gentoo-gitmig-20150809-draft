@@ -1,23 +1,24 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.17.ebuild,v 1.10 2005/03/05 00:37:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.17-r1.ebuild,v 1.1 2005/03/05 00:37:48 swegener Exp $
 
 inherit eutils
 
 MY_P=eggdrop${PV}
-PATCHSET_V=1.0
+PATCHSET_V=1.1
 
 DESCRIPTION="An IRC bot extensible with C or Tcl."
 HOMEPAGE="http://www.eggheads.org/"
 SRC_URI="ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/${MY_P}.tar.gz
-	mirror://gentoo/${P}-patches-${PATCHSET_V}.tar.bz2"
-KEYWORDS="x86 sparc ~mips ia64 amd64 ppc alpha"
+	mirror://gentoo/${P}-patches-${PATCHSET_V}.tar.bz2
+	mirror://dev.gentoo.org/~swegener/distfiles/${P}-patches-${PATCHSET_V}.tar.bz2"
+KEYWORDS="~x86 ~sparc ~mips ~ia64 ~amd64 ~ppc ~alpha"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug static mysql postgres ssl"
 
 DEPEND="dev-lang/tcl
-	mysql? ( <dev-db/mysql-4.1 )
+	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )
 	ssl? ( dev-libs/openssl )"
 
@@ -81,7 +82,7 @@ src_install() {
 		src/mod/away.mod/away.doc \
 		src/mod/rcon.mod/matchbot.tcl \
 		src/mod/mystats.mod/tools/mystats.{conf,sql} \
-		src/mod/pgstats.mod/tools/pgstats.{conf,php,sql} \
+		src/mod/pgstats.mod/tools/{pgstats.conf,setup.sql} \
 		text/motd.*
 
 	dohtml ${S}/doc/html/*.html
