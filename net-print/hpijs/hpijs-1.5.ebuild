@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.5.ebuild,v 1.7 2004/06/02 02:29:03 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.5.ebuild,v 1.8 2004/06/15 03:14:08 agriffis Exp $
 
 inherit gnuconfig eutils
 
@@ -23,31 +23,26 @@ DEPEND="virtual/ghostscript
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use amd64 && gnuconfig_update
+	gnuconfig_update
 	epatch ${FILESDIR}/${P}-gcc34.patch
 	epatch ${FILESDIR}/hpijs-1.4.1-rss.1.patch
 }
 
 src_compile () {
-	econf \
-		--disable-cups-install \
-		`use_enable ppds foomatic-install` \
-		|| die "econf failed"
+	econf --disable-cups-install \
+		$(use_enable ppds foomatic-install) || die "econf failed"
 
-	for i in Makefile; do
-		mv $i $i.orig ;
-		cat $i.orig | \
-			sed -e 's|/usr/share/cups|${prefix}/share/cups|g' | sed -e 's|/usr/lib/cups|${prefix}/lib/cups|g' > $i
-	done
+	sed -i -e 's|/usr/share/cups|${prefix}/share/cups|g' \
+		-e 's|/usr/lib/cups|${prefix}/lib/cups|g' Makefile \
+		|| die "sed failed"
 
-	make || die "compile problem"
+	make || die "make failed"
 
 	if use foomaticdb ; then
-		cd ../foomatic-db-hpijs-${DB_V}
+		cd ${WORKDIR}/foomatic-db-hpijs-${DB_V}
 		econf || die "econf failed"
 		rm -fR data-generators/hpijs-rss
 		make || die
-		cd ../${P}
 	fi
 }
 
@@ -68,10 +63,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To use the hpijs driver with the PDQ spooler you will need the PDQ driver file"
-	einfo "for your printer from http://www.linuxprinting.org/show_driver.cgi?driver=hpijs"
+	einfo "To use the hpijs driver with the PDQ spooler you will need the PDQ"
+	einfo "driver file for your printer from"
+	einfo "http://www.linuxprinting.org/show_driver.cgi?driver=hpijs"
 	einfo "This file should be installed in /etc/pdq/drivers"
 	einfo
-	einfo "The hpijs ebuild no longer creates the ppds automatically, please use foomatic"
-	einfo "to do so or remerge hpijs with the ppds use flag."
+	einfo "The hpijs ebuild no longer creates the ppds automatically, please use"
+	einfo "foomatic to do so or remerge hpijs with the ppds use flag."
 }

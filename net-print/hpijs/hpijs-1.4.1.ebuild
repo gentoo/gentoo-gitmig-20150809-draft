@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.4.1.ebuild,v 1.9 2004/04/27 22:04:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.4.1.ebuild,v 1.10 2004/06/15 03:14:08 agriffis Exp $
 
 inherit gnuconfig eutils
 
@@ -17,55 +17,53 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="cups foomaticdb ppds"
 
-src_compile () {
-	use amd64 && gnuconfig_update
-
-	use ppds \
-		&& myconf="--enable-foomatic-install" \
-		|| myconf="--disable-foomatic-install"
-
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	gnuconfig_update
 	epatch ${FILESDIR}/hpijs-${PV}-rss.1.patch
+}
 
-	econf --disable-cups-install ${myconf} || die "econf failed"
+src_compile() {
+	econf --disable-cups-install \
+		$(use_enable ppds foomatic-install) || die "econf failed"
 
-	for i in Makefile; do
-		mv $i $i.orig ;
-		cat $i.orig | \
-			sed -e 's|/usr/share/cups|${prefix}/share/cups|g' | sed -e 's|/usr/lib/cups|${prefix}/lib/cups|g' > $i
-	done
+	sed -i -e 's|/usr/share/cups|${prefix}/share/cups|g' \
+		-e 's|/usr/lib/cups|${prefix}/lib/cups|g' Makefile \
+		|| die "sed failed"
 
-	make || die "compile problem"
+	make || die "make failed"
 
-	if [ `use foomaticdb` ]; then
-		cd ../foomatic-db-hpijs-1.4-1
+	if use foomaticdb; then
+		cd ${WORKDIR}/foomatic-db-hpijs-1.4-1
 		econf || die "econf failed"
 		rm -fR data-generators/hpijs-rss
 		make || die
-		cd ../${P}
 	fi
 }
 
 src_install () {
 	einstall || die
 
-	if [ "`use cups`" -a "`use ppds`" ] ; then
+	if use cups && use ppds; then
 		dodir /usr/share/cups/model
 		dosym /usr/share/ppd /usr/share/cups/model/foomatic-ppds
 	fi
 
 	use ppds && rm -f ${D}/usr/bin/foomatic-rip
 
-	if [ `use foomaticdb` ]; then
+	if use foomaticdb; then
 		cd ../foomatic-db-hpijs-1.4-1
 		make DESTDIR=${D} install || die
 	fi
 }
 
 pkg_postinst () {
-	einfo "To use the hpijs driver with the PDQ spooler you will need the PDQ driver file"
-	einfo "for your printer from http://www.linuxprinting.org/show_driver.cgi?driver=hpijs"
+	einfo "To use the hpijs driver with the PDQ spooler you will need the PDQ"
+	einfo "driver file for your printer from"
+	einfo "http://www.linuxprinting.org/show_driver.cgi?driver=hpijs"
 	einfo "This file should be installed in /etc/pdq/drivers"
 	einfo
-	einfo "The hpijs ebuild no longer creates the ppds automatically, please use foomatic"
-	einfo "to do so or remerge hpijs with the ppds use flag."
+	einfo "The hpijs ebuild no longer creates the ppds automatically, please use"
+	einfo "foomatic to do so or remerge hpijs with the ppds use flag."
 }
