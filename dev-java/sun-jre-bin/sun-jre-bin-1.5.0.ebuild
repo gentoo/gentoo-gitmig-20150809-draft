@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.ebuild,v 1.1 2004/10/08 22:51:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.ebuild,v 1.2 2004/10/18 08:02:16 axxo Exp $
 
 inherit java eutils
 
@@ -78,7 +78,14 @@ src_unpack() {
 }
 
 src_install() {
-	local dirs="bin javaws lib man plugin"
+
+	if use amd64; then
+		local dirs="bin lib man"
+	else
+		local dirs="bin lib man plugin javaws"
+	fi
+	
+	
 	dodir /opt/${P}
 
 	for i in $dirs ; do
