@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.5 2004/02/09 22:10:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.6 2004/02/10 03:15:27 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -47,8 +47,6 @@ src_unpack() {
 
 	export PLATFORM=linux-g++
 	use icc && export PLATFORM=linux-icc
-	use amd64 && export PLATFORM=linux-g++-64
-	use ia64 && export PLATFORM=linux-g++-64
 }
 
 src_compile() {
