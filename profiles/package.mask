@@ -519,3 +519,8 @@ dev-lang/tcl-tk
 # mkennedy@gentoo.org 14 Apr 2002
 # Beta, so masked for now. See also bug 1662.
 =app-arch/rar-3.0_beta5
+
+#seemant@gentoo.org, 14 Apr 2002
+# these are lower versions not higher
+=media-libs/libgii-20010313
+=media-libs/libggi-20010313
