@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/vimspell
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimspell/ChangeLog,v 1.1 2003/11/19 19:35:33 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimspell/ChangeLog,v 1.2 2003/11/30 02:41:29 ciaranm Exp $
+
+*vimspell-1.70 (30 Nov 2003)
+
+  30 Nov 2003; Ciaran McCreesh <ciaranm@gentoo.org> vimspell-1.70.ebuild:
+  Version bump
 
 *vimspell-1.68 (19 Nov 2003)
 
