@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.9.0.ebuild,v 1.2 2004/04/06 04:00:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.9.0.ebuild,v 1.3 2004/04/25 20:31:23 squinky86 Exp $
 
 inherit gnome2 eutils
 
@@ -47,7 +47,7 @@ src_compile() {
 }
 
 src_install() {
-	gnome2_src_install || "install failed"
+	gnome2_src_install || die "install failed"
 	dodoc README AUTHORS ChangeLog docs/developers docs/scim.cfg
 	dohtml -r docs/html/*
 }
