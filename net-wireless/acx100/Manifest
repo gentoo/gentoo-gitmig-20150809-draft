@@ -1,4 +1,6 @@
-MD5 4667cdc1ecd90fe45b4b7a0c24bc45d8 ChangeLog 502
+MD5 98cfc24b0b6c8a15010f8d29a089953c ChangeLog 695
 MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
 MD5 948cd1b54d1c2d4d107e8042fa8b6d4e acx100-0.2.0_pre8.ebuild 1470
+MD5 5e445dbce33f7a47892d7020428859e8 acx100-0.2.0_pre8-r1.ebuild 1463
+MD5 7eceb6b8ae27a469f114acb0ed8ba6fe files/digest-acx100-0.2.0_pre8-r1 147
 MD5 3924129f57034ee98a24be83bc12bdbc files/digest-acx100-0.2.0_pre8 147
