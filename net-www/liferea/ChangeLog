@@ -1,6 +1,12 @@
 # ChangeLog for net-www/liferea
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.20 2004/11/22 17:30:58 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.21 2004/12/02 21:27:26 citizen428 Exp $
+
+*liferea-0.6.4b (02 Dec 2004)
+
+  02 Dec 2004; Michael Kohl <citizen428@gentoo.org> metadata.xml,
+  -liferea-0.5.3.ebuild, -liferea-0.6.0.ebuild, +liferea-0.6.4b.ebuild:
+  Version bump. Removed some older versions. Added myself as maintainer.
 
 *liferea-0.6.2 (22 Nov 2004)
 
