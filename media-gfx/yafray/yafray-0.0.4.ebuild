@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.4.ebuild,v 1.4 2004/06/24 22:54:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.4.ebuild,v 1.5 2005/02/18 01:08:28 lu_zero Exp $
 
 DESCRIPTION="Yet Another Free Raytracer"
 HOMEPAGE="http://www.yafray.org"
