@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/aop
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/aop/ChangeLog,v 1.1 2004/12/02 10:26:27 mr_bones_ Exp $
+
+*aop-0.6 (02 Dec 2004)
+
+  02 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +aop-0.6.ebuild:
+  initial commit - ebuild submitted by Adrian Fruehwirth via bug #72611
+
