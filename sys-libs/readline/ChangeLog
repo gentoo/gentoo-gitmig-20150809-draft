@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.28 2004/03/21 22:24:47 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.29 2004/06/11 18:09:53 kloeri Exp $
+
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> readline-4.3-r5.ebuild:
+  Stable on alpha.
 
   21 Mar 2004; Joshua Kinard <kumba@gentoo.org> readline-4.3-r5.ebuild:
   Added gnuconfig support for mips
