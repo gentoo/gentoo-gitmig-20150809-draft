@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/id3-py
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/id3-py/ChangeLog,v 1.8 2004/09/15 19:38:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/id3-py/ChangeLog,v 1.9 2004/11/17 02:55:11 pythonhead Exp $
+
+  16 Nov 2004; Rob Cakebread <pythonhead@gentoo.org> id3-py-1.2.ebuild:
+  Moved inherit up top bug# 71465
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> id3-py-1.2.ebuild:
   Stable sparc.

@@ -1,4 +1,14 @@
-MD5 629f0d7206dedfa2aa84ee7edaf271e2 ChangeLog 899
-MD5 2c535b8dbe62f98bb9037048767df447 id3-py-1.2.ebuild 547
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 26163fd98eb9e7b54f3458d28dd5d7e5 ChangeLog 1006
+MD5 3d46734a31562ff89fd6fcb4c671056f id3-py-1.2.ebuild 548
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 67d86e5ba530b2d98c6bd8b459911251 files/digest-id3-py-1.2 54
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBmr2cz2gxt1z4IGYRAlq4AKC/oJ1KeLRt7eMICai+H37D+t/koACgs8lz
+dPMH8vVL0l9kH9utsJxKUOk=
+=GQLc
+-----END PGP SIGNATURE-----
