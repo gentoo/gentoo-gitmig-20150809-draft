@@ -27,3 +27,4 @@ move dev-python/PyOpenGL dev-python/pyopengl
 move app-gnustep/affiche gnustep-apps/affiche
 move app-gnustep/easydiff gnustep-apps/easydiff
 move app-gnustep/gridlock gnustep-apps/gridlock
+move app-gnustep/gnumail gnustep-apps/gnumail
