@@ -1,3 +1,5 @@
-MD5 97c13ec146f72468b73d1af9f11ced7a files/digest-flightgear-0.9.2 139
+MD5 4406de900087a7790eb8352f591f990c flightgear-0.9.3.ebuild 978
 MD5 62d3d6fe261d6644cf362279e70ebbf5 ChangeLog 1298
 MD5 314361e9fdc3d8c95486da38326898ef flightgear-0.9.2.ebuild 978
+MD5 97c13ec146f72468b73d1af9f11ced7a files/digest-flightgear-0.9.2 139
+MD5 3d09238b7ecb04e753e165a9d41dad44 files/digest-flightgear-0.9.3 139
