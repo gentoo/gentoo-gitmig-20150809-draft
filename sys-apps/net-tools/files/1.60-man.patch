@@ -1,3 +1,10 @@
+splite writes:
+The netstat(8) man page in sys-apps/net-tools states that the "-i" and
+"--interfaces" flags to netstat take an optional argument denoting a 
+particular interface when it in fact does not.
+
+http://bugs.gentoo.org/show_bug.cgi?id=29677
+
 --- man/en_US/netstat.8.orig	2003-09-26 10:08:19.000000000 -0500
 +++ man/en_US/netstat.8	2003-09-26 10:25:39.000000000 -0500
 @@ -44,7 +44,6 @@
