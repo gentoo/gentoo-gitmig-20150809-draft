@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-0.8.3.ebuild,v 1.4 2003/03/16 18:55:59 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-0.8.3.ebuild,v 1.5 2003/07/09 17:34:57 liquidx Exp $
 
 IUSE="nls"
 
@@ -13,11 +13,12 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc"
 
-DEPEND="=x11-libs/gtk+-1.2*
+RDEPEND="=x11-libs/gtk+-1.2*
 	>=gnome-base/gnome-libs-1.4.1.4
 	<gnome-base/gnome-panel-2
 	net-firewall/iptables"
-RDEPEND="nls? ( sys-devel/gettext )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
 
