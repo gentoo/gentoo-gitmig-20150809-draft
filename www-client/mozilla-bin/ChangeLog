@@ -1,15 +1,18 @@
 # ChangeLog for www-client/mozilla-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/ChangeLog,v 1.3 2005/03/23 14:29:40 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/ChangeLog,v 1.4 2005/03/23 17:19:45 agriffis Exp $
+
+*mozilla-bin-1.7.6-r1 (23 Mar 2005)
+
+  23 Mar 2005; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-bin-1.7.6-r1.ebuild:
+  Use a stub script instead of symlink to mozilla-launcher. This in
+  combination with mozilla-launcher-1.28 should fix #78890
 
 *mozilla-bin-1.7.6 (23 Mar 2005)
 
   23 Mar 2005; Brad Laue <brad@gentoo.org> +mozilla-bin-1.7.6.ebuild:
   Bump to 1.7.6. See bug #84074 for details.
-
-*mozilla-bin-1.7.5 (18 Mar 2005)
-*mozilla-bin-1.7.3 (18 Mar 2005)
-*mozilla-bin-1.7.2 (18 Mar 2005)
 
   18 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
   +files/mozilla-bin.desktop, +files/mozilla-bin-icon.png, +metadata.xml,
