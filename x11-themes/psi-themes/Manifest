@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d02608025f80c8ad75d5ea5524edeac4 psi-themes-0.9.1.ebuild 2868
-MD5 f99e57d9bac2956d4de80fb60179b370 psi-themes-0.9.3_p1-r2.ebuild 2473
-MD5 a120400bbeefff51694b3a1929a6bddf ChangeLog 1738
+MD5 e227adc786d41dba9ac4ff3ed9b1bcfc ChangeLog 1825
 MD5 26dd2e4dfbbb0001da8160681e3ef984 metadata.xml 323
-MD5 27e453bd873db2b9a688d870312fbcad files/digest-psi-themes-0.9.1 2254
+MD5 19cd8c0eecf746fa453c2dceac412fbd psi-themes-0.9.1.ebuild 2867
+MD5 f99e57d9bac2956d4de80fb60179b370 psi-themes-0.9.3_p1-r2.ebuild 2473
 MD5 a139b31c2e5e1c8be34b028b2996086e files/digest-psi-themes-0.9.3_p1-r2 274
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCGk/PZ/iYVBmujdURAi0jAKDX7glcLH7Nvk2uXeQUiDvqq2USqQCfSQ9L
-ZcAF7Cu5/Us7X5+gmEy/wSU=
-=oKTi
------END PGP SIGNATURE-----
+MD5 27e453bd873db2b9a688d870312fbcad files/digest-psi-themes-0.9.1 2254
