@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.2-r3.ebuild,v 1.2 2004/06/28 16:32:11 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.2-r3.ebuild,v 1.3 2004/07/09 03:02:37 squinky86 Exp $
 
 inherit eutils
 
@@ -49,7 +49,7 @@ src_compile () {
 	myconf="${myconf} --with-zlib=/tmp/zlib/"
 
 	econf ${myconf} || die
-	MAKEOPTS="${MAKEOPTS} -j1" emake || die
+	emake || die
 }
 
 src_install () {

@@ -1,6 +1,6 @@
 MD5 12b865a7299303650b46a684a04b10c6 xmule-1.8.1.ebuild 1379
 MD5 06daddc3b417f47b904d62b52434b7c0 xmule-1.8.2-r1.ebuild 1293
-MD5 390b2559ea30bc403d1e938eedc393a1 xmule-1.8.2-r3.ebuild 1646
+MD5 67089554b634517709e86dbe62723f35 xmule-1.8.2-r3.ebuild 1619
 MD5 44ff57a672951db68829afa0025e541f xmule-1.8.0.ebuild 1374
 MD5 b77ddff2f5a2e6b88ebc21303fbcd528 xmule-1.6.0a.ebuild 986
 MD5 ad09f9b125a467e41f6e3e051b95ccae xmule-1.6.1.ebuild 1137
@@ -8,7 +8,7 @@ MD5 b35448f0136134e43c9dc8bd10e97ff9 xmule-1.6.0a-r1.ebuild 1131
 MD5 5866d00d0eada5cce0db517f8290e149 xmule-1.8.2.ebuild 1342
 MD5 029adc5ac8a24ba75d7074c302fa3850 xmule-1.7.4c.ebuild 1375
 MD5 dcf56b1dc4d057fd8126f99bcddf249d xmule-1.8.2-r2.ebuild 1380
-MD5 37918e0b6552d18a67cb69955a322e02 ChangeLog 5048
+MD5 ab862be19b4f161d3bf6d96e625e4b32 ChangeLog 5148
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 1135d70abe10f56fe3b0590aa3cae9c9 files/ini2.patch 273
 MD5 d4e66918eaa0f6b42f988409ae3c218f files/rehash.patch 348
