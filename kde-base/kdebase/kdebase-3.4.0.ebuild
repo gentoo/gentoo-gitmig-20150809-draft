@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0.ebuild,v 1.2 2005/03/18 16:33:30 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0.ebuild,v 1.3 2005/03/19 02:00:08 eradicator Exp $
 
 inherit kde-dist eutils
 
@@ -19,7 +19,7 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	opengl? ( virtual/opengl )
 	samba? ( >=net-fs/samba-3.0.4 )
 	lm_sensors? ( sys-apps/lm_sensors )
-	logitech-mouse? ( dev-libs/libusb )
+	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )
 	ieee1394? ( sys-libs/libraw1394 )
 	hal? ( >=sys-apps/dbus-0.22-r3
 	       >=sys-apps/hal-0.4 )"
