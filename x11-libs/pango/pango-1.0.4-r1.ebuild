@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.0.4-r1.ebuild,v 1.2 2002/08/04 08:29:30 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.0.4-r1.ebuild,v 1.3 2002/08/12 21:35:56 spider Exp $
 
 inherit libtool
 
@@ -15,7 +15,7 @@ LICENSE="LGPL-2.1"
 
 RDEPEND="virtual/x11
 	>=dev-libs/glib-2.0.6-r1
-	>=media-libs/freetype-2.0.9"
+	>=media-libs/freetype-2.1.2"
 	
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
