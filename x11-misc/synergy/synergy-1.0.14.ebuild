@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.0.14.ebuild,v 1.6 2004/04/11 17:18:07 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.0.14.ebuild,v 1.7 2004/06/02 16:58:46 kugelfang Exp $
 
 DESCRIPTION="Lets you easily share a single mouse and keyboard between multiple computers."
 SRC_URI="mirror://sourceforge/${PN}2/${P}.tar.gz"
 HOMEPAGE="http://synergy2.sourceforge.net/"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ppc"
+KEYWORDS="x86 ~sparc ppc ~amd64"
 SLOT="0"
 IUSE=""
 
