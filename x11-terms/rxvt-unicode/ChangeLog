@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.12 2004/04/13 14:15:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.13 2004/04/13 22:41:11 latexer Exp $
+
+*rxvt-unicode-2.8 (13 Apr 2004)
+
+  13 Apr 2004; Peter Johanson <latexer@gentoo.org> rxvt-unicode-2.8.ebuild:
+  Bump. Thanks to khai for pointing out this new version.
 
   13 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> rxvt-unicode-2.4.ebuild:
   Added amd64 keyword, closing #47571.
