@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.99 2004/09/01 18:43:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.100 2004/09/02 09:16:40 robbat2 Exp $
+
+  02 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> :
+  fix missing digest bug #62562.
 
 *db-1.85-r2 (01 Sep 2004)
 
