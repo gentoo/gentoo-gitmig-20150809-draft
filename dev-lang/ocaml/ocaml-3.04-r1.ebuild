@@ -1,6 +1,6 @@
 # Copyright 20022 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.04-r1.ebuild,v 1.4 2002/08/14 11:58:50 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.04-r1.ebuild,v 1.5 2002/09/02 18:30:15 george Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Objective Caml is a fast modern type-inferring functional programming language descended from the ML (Meta Language) family."
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.inria.fr/lang/caml-light/${P}.tar.gz"
 HOMEPAGE="http://www.ocaml.org/"
 
 DEPEND="virtual/glibc
-	>=dev-lang/tk-3.3.3"
+	tcltk? ( >=dev-lang/tk-3.3.3 )"
 RDEPEND="${DEPEND}"
 
 SLOT="0"
