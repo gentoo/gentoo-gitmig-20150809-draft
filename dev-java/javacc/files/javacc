@@ -1,0 +1,6 @@
+#! /bin/sh
+
+java=$(java-config --java)
+classpath=$(java-config --classpath=javacc)
+
+${java} -classpath ${classpath} javacc "$@"
