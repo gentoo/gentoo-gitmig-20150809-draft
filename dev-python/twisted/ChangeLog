@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.30 2004/01/21 11:51:39 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.31 2004/03/05 20:12:48 lordvan Exp $
+
+*twisted-1.2.0 (05 Mar 2004)
+
+  05 Mar 2004; Thomas Raschbacher <lordvan@gentoo.org>
+  twisted-1.2.0.ebuild:
+  Version Bump (~arch for now)
+
 	
   16 Dec 2003; Jason Wever <weeve@gentoo.org> twisted-1.1.0.ebuild:
   Changed sparc keyword to ~sparc as dependency dev-python/pycrypto was missing
