@@ -4,4 +4,4 @@ MD5 ea25db65a0cf5097ff0d6c2eddd2665d files/digest-cpudyn-0.4.7 60
 MD5 9a34189fc90cddc3b8f042208d483404 cpudyn-0.4.6.ebuild 872
 MD5 53704c33f9cc8769ba8e3f9bb5e33776 ChangeLog 594
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
-MD5 8936ea1b71b02818e247550a5a373feb cpudyn-0.4.7.ebuild 872
+MD5 619eedbec92197c0e236b2a807af8087 cpudyn-0.4.7.ebuild 876
