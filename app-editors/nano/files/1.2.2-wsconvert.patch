@@ -160,7 +160,7 @@ diff -ur work.orig/nano-1.2.2/winio.c work/nano-1.2.2/winio.c
 -	if (*original == '\t')
 -	    do {
 +	if (*original == '\t') {
-+	    converted[pos++] = (ISSET(WS_CONVERT) ? tabconvert : ' ');
++	    converted[pos++] = /*(ISSET(WS_CONVERT) ?*/ tabconvert /*: ' ')*/;
 +	    while (pos % tabsize)
  		converted[pos++] = ' ';
 -	    } while (pos % tabsize);
@@ -174,7 +174,7 @@ diff -ur work.orig/nano-1.2.2/winio.c work/nano-1.2.2/winio.c
  		converted[pos++] = *original + 64;
  	} else
 -	    converted[pos++] = *original;
-+	    converted[pos++] = (*original==' '&&ISSET(WS_CONVERT)) ? spaceconvert : *original;
++	    converted[pos++] = (*original==' '/*&&ISSET(WS_CONVERT)*/) ? spaceconvert : *original;
      }
      converted[pos] = '\0';
  
