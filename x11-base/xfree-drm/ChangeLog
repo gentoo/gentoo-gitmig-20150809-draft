@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.24 2003/06/29 06:37:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.25 2003/06/29 08:02:39 spyderous Exp $
+
+  29 Jun 2003; Donnie Berkholz <spyderous@gentoo.org>;
+  xfree-drm-4.3.0-r4.ebuild:
+  Add xfree.eclass for better XFREE_CARDS functionality.
 
   29 Jun 2003; root <root@gentoo.org> xfree-drm-4.3.0-r4.ebuild:
   Updated patch to fix sis not working.

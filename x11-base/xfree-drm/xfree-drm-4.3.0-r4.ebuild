@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r4.ebuild,v 1.2 2003/06/29 06:37:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r4.ebuild,v 1.3 2003/06/29 08:02:39 spyderous Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -10,7 +10,7 @@ IUSE="3dfx gamma i8x0 matrox rage128 radeon sis"
 
 # XFREE_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis"
 
-inherit eutils
+inherit eutils xfree
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -83,38 +83,21 @@ fi
 # Having a module twice (once from USE, once from XFREE_CARDS)
 # doesn't matter at all.
 
-case "${XFREE_CARDS}" in
-        *matrox*)
-                VIDCARDS="${VIDCARDS} mga.o" ;;
-esac
-case "${XFREE_CARDS}" in
-        *3dfx*)
-                VIDCARDS="${VIDCARDS} tdfx.o" ;;
-esac
-case "${XFREE_CARDS}" in
-        *rage128*)
-                VIDCARDS="${VIDCARDS} r128.o" ;;
-esac
-case "${XFREE_CARDS}" in
-        *radeon*)
-                VIDCARDS="${VIDCARDS} radeon.o" ;;
-esac
-case "${XFREE_CARDS}" in
-        *sis*)
-                VIDCARDS="${VIDCARDS} sis.o" ;;
-esac
-case "${XFREE_CARDS}" in
-        *i810*)
-                VIDCARDS="${VIDCARDS} i810.o" ;;
-esac
-case "${XFREE_CARDS}" in
-        *i830*)
-                VIDCARDS="${VIDCARDS} i830.o" ;;
-esac
-case "${XFREE_CARDS}" in
-        *gamma*)
-                VIDCARDS="${VIDCARDS} gamma.o" ;;
-esac
+xcards matrox &>/dev/null && VIDCARDS="${VIDCARDS} mga.o"
+
+xcards 3dfx &>/dev/null && VIDCARDS="${VIDCARDS} tdfx.o"
+
+xcards rage128 &>/dev/null && VIDCARDS="${VIDCARDS} r128.o"
+
+xcards radeon &>/dev/null && VIDCARDS="${VIDCARDS} radeon.o"
+
+xcards sis &>/dev/null && VIDCARDS="${VIDCARDS} sis.o"
+
+xcards i810 &>/dev/null && VIDCARDS="${VIDCARDS} i810.o"
+
+xcards i830 &>/dev/null && VIDCARDS="${VIDCARDS} i830.o"
+
+xcards gamma &>/dev/null && VIDCARDS="${VIDCARDS} gamma.o"
 
 # This builds everything if none of the cards are in USE.
 #if [ -z "${VIDCARDS}" ]
