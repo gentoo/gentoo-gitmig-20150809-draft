@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.19 2004/03/15 14:49:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.20 2004/03/26 22:38:27 batlogg Exp $
+
+  26 Mar 2004; Jodok Batlogg <batlogg@gentoo.org>; :
+  zope 2.6.3 is known to be buggy. it's better to take it out of portage
 
   15 Mar 2004; David Holm <dholm@gentoo.org> zope-2.6.4-r1.ebuild:
   Added to ~ppc.
