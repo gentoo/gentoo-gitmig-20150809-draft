@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.17.ebuild,v 1.4 2004/10/24 10:38:49 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.17.ebuild,v 1.5 2004/10/26 08:40:48 motaboy Exp $
 
 inherit kde
 
@@ -43,10 +43,10 @@ I18N="${PN}-i18n-${PV%.*}"
 # for another version of K3b, DO check whether these values are different.
 # Check the {po,doc}/Makefile.am files in k3b-i18n package.
 LANGS="ar bg bs ca cs da de el en_GB es et fi fo fr gl hu it ja nb nl nso pl pt pt_BR ro ru sk sl sr sv ta tr ven xh xx zh_CN zh_TW zu"
-LANGS_DOC="da de es et fr it pt pt_BR ru sv"
+LANGS_DOC="da de es et fr pt pt_BR ru sv"
 
-MAKE_PO=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d)
-MAKE_DOC=$(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d)
+MAKE_PO=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d | fmt -w 10000)
+MAKE_DOC=$(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d | fmt -w 10000)
 
 if [ -n "$MAKE_PO" ] ; then
 	SRC_URI="${SRC_URI} mirror://sourceforge/k3b/${I18N}.tar.bz2"
