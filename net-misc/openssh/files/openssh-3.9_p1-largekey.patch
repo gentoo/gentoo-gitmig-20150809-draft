@@ -1,0 +1,130 @@
+diff -uNr openssh-3.8.1p1/auth2-pubkey.c openssh-3.8.1p1-hugekeys/auth2-pubkey.c
+--- openssh-3.8.1p1/auth2-pubkey.c	2004-01-21 01:02:50.000000000 +0100
++++ openssh-3.8.1p1-hugekeys/auth2-pubkey.c	2004-06-24 13:53:28.493574960 +0200
+@@ -32,6 +32,7 @@
+ #include "bufaux.h"
+ #include "auth.h"
+ #include "key.h"
++#include "authfile.h"
+ #include "pathnames.h"
+ #include "uidswap.h"
+ #include "auth-options.h"
+@@ -167,7 +168,8 @@
+ static int
+ user_key_allowed2(struct passwd *pw, Key *key, char *file)
+ {
+-	char line[8192];
++	size_t size;
++	char *line;
+ 	int found_key = 0;
+ 	FILE *f;
+ 	u_long linenum = 0;
+@@ -204,7 +204,10 @@
+ 	found_key = 0;
+ 	found = key_new(key->type);
+ 
+-	while (fgets(line, sizeof(line), f)) {
++	size = 4096;
++	line = xmalloc(size);
++
++	while (read_whole_line(&line, &size, f)) {
+ 		char *cp, *key_options = NULL;
+ 		linenum++;
+ 		/* Skip leading whitespace, empty and comment lines. */
+@@ -245,6 +250,9 @@
+ 			break;
+ 		}
+ 	}
++
++	xfree(line);
++
+ 	restore_uid();
+ 	fclose(f);
+ 	key_free(found);
+diff -uNr openssh-3.8.1p1/authfile.c openssh-3.8.1p1-hugekeys/authfile.c
+--- openssh-3.8.1p1/authfile.c	2003-09-22 13:01:27.000000000 +0200
++++ openssh-3.8.1p1-hugekeys/authfile.c	2004-06-24 13:49:28.425070920 +0200
+@@ -588,17 +588,50 @@
+ 	return prv;
+ }
+ 
++char *
++read_whole_line(char **line, size_t *size, FILE *f)
++{
++	char *ln = *line;
++	size_t i, sz = *size;
++
++	if (!ln) {
++		fatal("read_whole_line: NULL pointer given as line argument");
++	}
++
++	for (i = 0; ln[sz - 2] = '\0', fgets(ln + i, sz - i, f); i = sz - 1, sz <<= 1) {
++		if (ln[sz - 2]) {
++			ln = xrealloc(ln, sz << 1);
++			continue;
++		}
++
++		*line = ln;
++		*size = sz;
++
++		return ln;
++	}
++
++	return NULL;
++}
++
+ static int
+ key_try_load_public(Key *k, const char *filename, char **commentp)
+ {
+ 	FILE *f;
+-	char line[4096];
++	size_t size;
++	char *line;
+ 	char *cp;
+ 
+ 	f = fopen(filename, "r");
+ 	if (f != NULL) {
+-		while (fgets(line, sizeof(line), f)) {
+-			line[sizeof(line)-1] = '\0';
++		size = 4096;
++		line = xmalloc(size);
++
++		while (read_whole_line(&line, &size, f)) {
++			/* FIXME: is this useful? fgets already stores a '\0'
++			 * after the last character in the buffer...
++			 */
++			line[size-1] = '\0';
++
+ 			cp = line;
+ 			switch (*cp) {
+ 			case '#':
+@@ -613,11 +646,15 @@
+ 				if (key_read(k, &cp) == 1) {
+ 					if (commentp)
+ 						*commentp=xstrdup(filename);
++
++					xfree(line);
+ 					fclose(f);
+ 					return 1;
+ 				}
+ 			}
+ 		}
++
++		xfree(line);
+ 		fclose(f);
+ 	}
+ 	return 0;
+diff -uNr openssh-3.8.1p1/authfile.h openssh-3.8.1p1-hugekeys/authfile.h
+--- openssh-3.8.1p1/authfile.h	2002-06-06 21:57:34.000000000 +0200
++++ openssh-3.8.1p1-hugekeys/authfile.h	2004-06-24 13:42:59.556187976 +0200
+@@ -15,6 +15,8 @@
+ #ifndef AUTHFILE_H
+ #define AUTHFILE_H
+ 
++char    *read_whole_line(char **, size_t *, FILE *);
++
+ int	 key_save_private(Key *, const char *, const char *, const char *);
+ Key	*key_load_public(const char *, char **);
+ Key	*key_load_public_type(int, const char *, char **);
+--- /tmp/auth2-pubkey.c	2004-08-18 19:57:44.991708913 +0000
++++ auth2-pubkey.c	2004-08-18 19:58:19.241405296 +0000

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1-r2.ebuild,v 1.2 2004/08/18 21:55:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1.ebuild,v 1.1 2004/08/18 21:55:16 aliz Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -8,14 +8,14 @@ inherit eutils flag-o-matic ccc gnuconfig
 # and _p? releases.
 PARCH=${P/_/}
 
+SFTPLOG_PATCH_VER="1.2"
 X509_PATCH="${PARCH}+x509h.diff.gz"
-SELINUX_PATCH="openssh-3.7.1_p1-selinux.diff"
 
 S=${WORKDIR}/${PARCH}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
-SRC_URI="mirror://openssh/${PARCH}.tar.gz
-	X509? ( http://roumenpetrov.info/openssh/x509h/${X509_PATCH} )"
+SRC_URI="mirror://openssh/${PARCH}.tar.gz"
+#	X509? ( http://roumenpetrov.info/openssh/x509h/${X509_PATCH} )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -40,18 +40,24 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf"
 PROVIDE="virtual/ssh"
 
+pkg_setup() {
+	if use X509 || use selinux; then
+		eerror "No updated patch available for ${P}."
+		die
+	fi
+}
+
 src_unpack() {
 	unpack ${PARCH}.tar.gz ; cd ${S}
 
-	epatch ${FILESDIR}/${P}-resolv_functions.patch
 	epatch ${FILESDIR}/${P}-largekey.patch
 
-	use X509 && epatch ${DISTDIR}/${X509_PATCH}
-	use sftplogging && epatch ${FILESDIR}/${PARCH}-sftplogging-1.2-gentoo.patch
-	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
+	use sftplogging && epatch ${FILESDIR}/${P}-sftplogging-1.2-gentoo.patch
 	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch
 	use skey && epatch ${FILESDIR}/${P}-skey.patch
 	use chroot && epatch ${FILESDIR}/${P}-chroot.patch
+#	use X509 && epatch ${DISTDIR}/${X509_PATCH}
+#	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
 	use smartcard && epatch ${FILESDIR}/${P}-opensc.patch
 }
 
@@ -65,8 +71,6 @@ src_compile() {
 	use selinux && append-flags "-DWITH_SELINUX"
 	use static && append-ldflags -static
 	export LDFLAGS
-
-	autoconf
 
 	local myconf="\
 		$( use_with tcpd tcp-wrappers ) \

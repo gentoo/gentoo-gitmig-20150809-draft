@@ -1,0 +1,755 @@
+diff -ru openssh-3.8.1p1/servconf.c openssh-3.8.1p1_sftp/servconf.c
+--- openssh-3.8.1p1/servconf.c	2004-01-23 11:03:10.000000000 +0000
++++ openssh-3.8.1p1_sftp/servconf.c	2004-08-18 21:28:18.564861272 +0000
+@@ -102,6 +102,15 @@
+ 	options->authorized_keys_file = NULL;
+ 	options->authorized_keys_file2 = NULL;
+ 
++	options->log_sftp = LOG_SFTP_NOT_SET;
++        options->sftp_log_facility = SYSLOG_FACILITY_NOT_SET;
++        options->sftp_log_level = SYSLOG_LEVEL_NOT_SET;
++
++	memset(options->sftp_umask, 0, SFTP_UMASK_LENGTH);
++
++	options->sftp_permit_chmod = SFTP_PERMIT_NOT_SET;
++	options->sftp_permit_chown = SFTP_PERMIT_NOT_SET;
++
+ 	/* Needs to be accessable in many places */
+ 	use_privsep = -1;
+ }
+@@ -109,7 +118,7 @@
+ void
+ fill_default_server_options(ServerOptions *options)
+ {
+-	/* Portable-specific options */
++/* Portable-specific options */
+ 	if (options->use_pam == -1)
+ 		options->use_pam = 0;
+ 
+@@ -228,6 +237,24 @@
+ 	if (options->authorized_keys_file == NULL)
+ 		options->authorized_keys_file = _PATH_SSH_USER_PERMITTED_KEYS;
+ 
++	/* Turn sftp-server logging off by default */
++	if (options->log_sftp == LOG_SFTP_NOT_SET)
++		options->log_sftp = LOG_SFTP_NO;
++        if (options->sftp_log_facility == SYSLOG_FACILITY_NOT_SET)
++                options->sftp_log_facility = SYSLOG_FACILITY_AUTH;
++        if (options->sftp_log_level == SYSLOG_LEVEL_NOT_SET)
++                options->sftp_log_level = SYSLOG_LEVEL_INFO;
++
++	/* Don't set sftp-server umask */
++	if (!options->sftp_umask)
++		memset(options->sftp_umask, 0, SFTP_UMASK_LENGTH);
++
++	/* allow sftp client to issue chmod, chown / chgrp commands */
++	if (options->sftp_permit_chmod == SFTP_PERMIT_NOT_SET)
++		options->sftp_permit_chmod = SFTP_PERMIT_YES;
++	if (options->sftp_permit_chown == SFTP_PERMIT_NOT_SET)
++		options->sftp_permit_chown = SFTP_PERMIT_YES;
++
+ 	/* Turn privilege separation on by default */
+ 	if (use_privsep == -1)
+ 		use_privsep = 1;
+@@ -249,6 +276,9 @@
+ 	/* Portable-specific options */
+ 	sUsePAM,
+ 	/* Standard Options */
++	sLogSftp, sSftpLogFacility, sSftpLogLevel,
++	sSftpUmask,
++	sSftpPermitChown, sSftpPermitChmod,
+ 	sPort, sHostKeyFile, sServerKeyBits, sLoginGraceTime, sKeyRegenerationTime,
+ 	sPermitRootLogin, sLogFacility, sLogLevel,
+ 	sRhostsRSAAuthentication, sRSAAuthentication,
+@@ -334,6 +364,12 @@
+ 	{ "printmotd", sPrintMotd },
+ 	{ "printlastlog", sPrintLastLog },
+ 	{ "ignorerhosts", sIgnoreRhosts },
++	{ "logsftp", sLogSftp},
++	{ "sftplogfacility", sSftpLogFacility},
++	{ "sftploglevel", sSftpLogLevel},
++	{ "sftpumask", sSftpUmask},
++	{ "sftppermitchmod", sSftpPermitChmod},
++	{ "sftppermitchown", sSftpPermitChown},
+ 	{ "ignoreuserknownhosts", sIgnoreUserKnownHosts },
+ 	{ "x11forwarding", sX11Forwarding },
+ 	{ "x11displayoffset", sX11DisplayOffset },
+@@ -431,6 +467,8 @@
+ 	char *cp, **charptr, *arg, *p;
+ 	int *intptr, value, i, n;
+ 	ServerOpCodes opcode;
++	unsigned int umaskvalue = 0;
++	char *umaskptr;
+ 
+ 	cp = line;
+ 	arg = strdelim(&cp);
+@@ -871,6 +909,58 @@
+ 	case sBanner:
+ 		charptr = &options->banner;
+ 		goto parse_filename;
++
++        case sLogSftp:
++                intptr = &options->log_sftp;
++                goto parse_flag;
++
++        case sSftpLogFacility:
++                intptr = (int *) &options->sftp_log_facility;
++                arg = strdelim(&cp);
++                value = log_facility_number(arg);
++                if (value == SYSLOG_FACILITY_NOT_SET)
++                        fatal("%.200s line %d: unsupported log facility '%s'",
++                            filename, linenum, arg ? arg : "<NONE>");
++                if (*intptr == -1)
++                        *intptr = (SyslogFacility) value;
++                break;
++
++        case sSftpLogLevel:
++                intptr = (int *) &options->sftp_log_level;
++                arg = strdelim(&cp);
++                value = log_level_number(arg);
++                if (value == SYSLOG_LEVEL_NOT_SET)
++                        fatal("%.200s line %d: unsupported log level '%s'",
++                            filename, linenum, arg ? arg : "<NONE>");
++                if (*intptr == -1)
++                        *intptr = (LogLevel) value;
++                break;
++
++        case sSftpUmask:
++                arg = strdelim(&cp);
++		umaskptr = arg;
++                while (*arg && *arg >= '0' && *arg <= '9')
++                    umaskvalue = umaskvalue * 8 + *arg++ - '0';
++                if (*arg || umaskvalue > 0777)
++                    fatal("%s line %d: bad value for umask",
++			    filename, linenum);
++		else {
++			while (*umaskptr && *umaskptr == '0')
++					*umaskptr++;
++			strncpy(options->sftp_umask, umaskptr,
++				SFTP_UMASK_LENGTH);
++		}
++
++                break;
++
++        case sSftpPermitChmod:
++                intptr = &options->sftp_permit_chmod;
++                goto parse_flag;
++
++        case sSftpPermitChown:
++                intptr = &options->sftp_permit_chown;
++                goto parse_flag;
++
+ 	/*
+ 	 * These options can contain %X options expanded at
+ 	 * connect time, so that you can specify paths like:
+@@ -913,6 +1003,7 @@
+ 	if ((arg = strdelim(&cp)) != NULL && *arg != '\0')
+ 		fatal("%s line %d: garbage at end of line; \"%.200s\".",
+ 		    filename, linenum, arg);
++
+ 	return 0;
+ }
+ 
+Only in openssh-3.8.1p1_sftp/: servconf.c.orig
+diff -ru openssh-3.8.1p1/servconf.h openssh-3.8.1p1_sftp/servconf.h
+--- openssh-3.8.1p1/servconf.h	2003-12-31 00:37:34.000000000 +0000
++++ openssh-3.8.1p1_sftp/servconf.h	2004-08-18 21:30:53.354147322 +0000
+@@ -13,6 +13,19 @@
+  * called by a name other than "ssh" or "Secure Shell".
+  */
+ 
++/* sftp-server logging */
++#define LOG_SFTP_NOT_SET	-1
++#define LOG_SFTP_NO		0
++#define LOG_SFTP_YES		1
++
++/* sftp-server umask control */
++#define SFTP_UMASK_LENGTH	5
++
++/* sftp-server client priviledge */
++#define SFTP_PERMIT_NOT_SET	-1
++#define SFTP_PERMIT_NO		0
++#define SFTP_PERMIT_YES		1
++
+ #ifndef SERVCONF_H
+ #define SERVCONF_H
+ 
+@@ -94,6 +107,12 @@
+ 	int     use_login;	/* If true, login(1) is used */
+ 	int     compression;	/* If true, compression is allowed */
+ 	int	allow_tcp_forwarding;
++	int	log_sftp;		/* perform sftp-server logging */
++        SyslogFacility sftp_log_facility;    /* Facility for sftp subsystem logging. */
++        LogLevel sftp_log_level;     /* Level for sftp subsystem logging. */
++	char	sftp_umask[SFTP_UMASK_LENGTH];		/* Sftp Umask */
++	int	sftp_permit_chmod;
++	int	sftp_permit_chown;
+ 	u_int num_allow_users;
+ 	char   *allow_users[MAX_ALLOW_USERS];
+ 	u_int num_deny_users;
+Only in openssh-3.8.1p1_sftp/: servconf.h.orig
+diff -ru openssh-3.8.1p1/session.c openssh-3.8.1p1_sftp/session.c
+--- openssh-3.8.1p1/session.c	2004-04-16 12:47:55.000000000 +0000
++++ openssh-3.8.1p1_sftp/session.c	2004-08-18 21:06:14.440083846 +0000
+@@ -112,6 +112,15 @@
+ 
+ static int is_child = 0;
+ 
++/* so SFTP_LOG_FACILITY and SFTP_LOG_LEVEL can be passed through the 
++   environment to the sftp-server subsystem. */
++static const char *sysfac_to_int[] = { "0", "1", "2", "3", "4", "5", "6",
++	"7", "8", "9", "10", "11", "-1" };
++static const char *syslevel_to_int[] = { "0", "1", "2", "3", "4", "5", "6",
++	"7", "-1" };
++
++static char *sftpumask;
++
+ /* Name and directory of socket for authentication agent forwarding. */
+ static char *auth_sock_name = NULL;
+ static char *auth_sock_dir = NULL;
+@@ -979,6 +988,7 @@
+ 	env = xmalloc(envsize * sizeof(char *));
+ 	env[0] = NULL;
+ 
++
+ #ifdef HAVE_CYGWIN
+ 	/*
+ 	 * The Windows environment contains some setting which are
+@@ -1119,6 +1129,67 @@
+ 		child_set_env(&env, &envsize, SSH_AUTHSOCKET_ENV_NAME,
+ 		    auth_sock_name);
+ 
++	/* LOG_SFTP */
++	if (options.log_sftp == -1 )
++		child_set_env(&env, &envsize, "LOG_SFTP", "-1");
++	else if (options.log_sftp == 0)
++		child_set_env(&env, &envsize, "LOG_SFTP", "0");
++	else
++		child_set_env(&env, &envsize, "LOG_SFTP", "1");
++
++	/* SFTP_LOG_FACILITY */
++	if (options.sftp_log_facility < 0)
++		child_set_env(&env, &envsize, "SFTP_LOG_FACILITY",
++			"-1");
++	else
++		child_set_env(&env, &envsize, "SFTP_LOG_FACILITY", 
++			sysfac_to_int[options.sftp_log_facility]);
++
++	/* SFTP_LOG_LEVEL */
++        if (options.sftp_log_level < 0)
++                child_set_env(&env, &envsize, "SFTP_LOG_LEVEL",
++                        "-1");
++        else
++                child_set_env(&env, &envsize, "SFTP_LOG_LEVEL",
++                        syslevel_to_int[options.sftp_log_level]);
++
++	/* SFTP_UMASK */
++
++	if (options.sftp_umask[0] == '\0')
++		child_set_env(&env, &envsize, "SFTP_UMASK", 
++			"" );
++	else {
++		if (!(sftpumask = calloc(SFTP_UMASK_LENGTH,1))) {
++
++logit("session.c: unabled to allocate memory for SftpUmask. SftpUmask control \
++will be turned off.");
++
++		child_set_env(&env, &envsize, "SFTP_UMASK", 
++			"" );
++		} else {
++			strncpy(sftpumask, options.sftp_umask,
++				SFTP_UMASK_LENGTH);
++			child_set_env(&env, &envsize, "SFTP_UMASK", 
++				sftpumask );
++		}
++	}
++
++        /* SFTP_PERMIT_CHMOD */
++        if (options.sftp_permit_chmod == -1 )
++                child_set_env(&env, &envsize, "SFTP_PERMIT_CHMOD", "-1");
++        else if (options.sftp_permit_chmod == 0)
++                child_set_env(&env, &envsize, "SFTP_PERMIT_CHMOD", "0");
++        else
++                child_set_env(&env, &envsize, "SFTP_PERMIT_CHMOD", "1");
++
++        /* SFTP_PERMIT_CHOWN */
++        if (options.sftp_permit_chown == -1 )
++                child_set_env(&env, &envsize, "SFTP_PERMIT_CHOWN", "-1");
++        else if (options.sftp_permit_chown == 0)
++                child_set_env(&env, &envsize, "SFTP_PERMIT_CHOWN", "0");
++        else
++                child_set_env(&env, &envsize, "SFTP_PERMIT_CHOWN", "1");
++
+ 	/* read $HOME/.ssh/environment. */
+ 	if (options.permit_user_env && !options.use_login) {
+ 		snprintf(buf, sizeof buf, "%.200s/.ssh/environment",
+Only in openssh-3.8.1p1_sftp/: session.c.orig
+diff -ru openssh-3.8.1p1/sftp-server.8 openssh-3.8.1p1_sftp/sftp-server.8
+--- openssh-3.8.1p1/sftp-server.8	2003-10-15 05:50:43.000000000 +0000
++++ openssh-3.8.1p1_sftp/sftp-server.8	2004-08-18 21:06:14.441083601 +0000
+@@ -42,12 +42,27 @@
+ option.
+ See
+ .Xr sshd_config 5
++for more information. Sftp-server transactions may be logged
++using the
++.Cm LogSftp ,
++.Cm SftpLogFacility ,
++and
++.Cm SftpLogLevel
++options. The administrator may exert control over the file and directory
++permission and ownership, with
++.Cm SftpUmask ,
++.Cm SftpPermitChmod ,
++and
++.Cm SftpPermitChown
++. See
++.Xr sshd_config 5
+ for more information.
+ .Sh SEE ALSO
+ .Xr sftp 1 ,
+ .Xr ssh 1 ,
+ .Xr sshd_config 5 ,
+-.Xr sshd 8
++.Xr sshd 8,
++.Xr sshd_config 5
+ .Rs
+ .%A T. Ylonen
+ .%A S. Lehtinen
+diff -ru openssh-3.8.1p1/sftp-server.c openssh-3.8.1p1_sftp/sftp-server.c
+--- openssh-3.8.1p1/sftp-server.c	2004-02-23 22:19:15.000000000 +0000
++++ openssh-3.8.1p1_sftp/sftp-server.c	2004-08-18 21:06:14.443083113 +0000
+@@ -31,6 +31,13 @@
+ #define get_string(lenp)		buffer_get_string(&iqueue, lenp);
+ #define TRACE				debug
+ 
++/* SFTP_UMASK */
++static mode_t setumask = 0;
++
++static int permit_chmod = 1;
++static int permit_chown = 1;
++static int permit_logging = 0;
++
+ #ifdef HAVE___PROGNAME
+ extern char *__progname;
+ #else
+@@ -385,6 +392,14 @@
+ 	a = get_attrib();
+ 	flags = flags_from_portable(pflags);
+ 	mode = (a->flags & SSH2_FILEXFER_ATTR_PERMISSIONS) ? a->perm : 0666;
++
++	if (setumask != 0) {
++		if ( permit_logging == 1 )
++		logit("setting file creation mode to 0666 and umask to %o", setumask);
++		mode = 0666;
++		umask(setumask);
++	}
++
+ 	TRACE("open id %u name %s flags %d mode 0%o", id, name, pflags, mode);
+ 	fd = open(name, flags, mode);
+ 	if (fd < 0) {
+@@ -398,6 +413,8 @@
+ 			status = SSH2_FX_OK;
+ 		}
+ 	}
++	if ( permit_logging == 1 )
++	logit("open %s", name);
+ 	if (status != SSH2_FX_OK)
+ 		send_status(id, status);
+ 	xfree(name);
+@@ -434,6 +451,7 @@
+ 	    (u_int64_t)off, len);
+ 	if (len > sizeof buf) {
+ 		len = sizeof buf;
++		if ( permit_logging == 1 )
+ 		logit("read change len %d", len);
+ 	}
+ 	fd = handle_to_fd(handle);
+@@ -453,6 +471,8 @@
+ 			}
+ 		}
+ 	}
++	if ( permit_logging == 1 )
++	logit("reading file");
+ 	if (status != SSH2_FX_OK)
+ 		send_status(id, status);
+ }
+@@ -487,10 +507,13 @@
+ 			} else if (ret == len) {
+ 				status = SSH2_FX_OK;
+ 			} else {
++				if ( permit_logging == 1 )
+ 				logit("nothing at all written");
+ 			}
+ 		}
+ 	}
++	if ( permit_logging == 1 )
++	logit("writing file");
+ 	send_status(id, status);
+ 	xfree(data);
+ }
+@@ -583,24 +606,46 @@
+ 	a = get_attrib();
+ 	TRACE("setstat id %u name %s", id, name);
+ 	if (a->flags & SSH2_FILEXFER_ATTR_SIZE) {
++if ( permit_logging == 1 )
++logit("process_setstat: truncate");
+ 		ret = truncate(name, a->size);
+ 		if (ret == -1)
+ 			status = errno_to_portable(errno);
+ 	}
+ 	if (a->flags & SSH2_FILEXFER_ATTR_PERMISSIONS) {
+-		ret = chmod(name, a->perm & 0777);
+-		if (ret == -1)
+-			status = errno_to_portable(errno);
++		if (permit_chmod == 1) {
++			ret = chmod(name, a->perm & 0777);
++			if (ret == -1)
++				status = errno_to_portable(errno);
++			else
++				if ( permit_logging == 1 )
++				logit("chmod'ed %s", name);
++		} else {
++			status = SSH2_FX_PERMISSION_DENIED;
++			if ( permit_logging == 1 )
++			logit("chmod %s: operation prohibited by sftp-server configuration.", name);
++		}
+ 	}
+ 	if (a->flags & SSH2_FILEXFER_ATTR_ACMODTIME) {
++if ( permit_logging == 1 )
++logit("process_setstat: utimes");
+ 		ret = utimes(name, attrib_to_tv(a));
+ 		if (ret == -1)
+ 			status = errno_to_portable(errno);
+ 	}
+ 	if (a->flags & SSH2_FILEXFER_ATTR_UIDGID) {
+-		ret = chown(name, a->uid, a->gid);
+-		if (ret == -1)
+-			status = errno_to_portable(errno);
++		if (permit_chown == 1) {
++			ret = chown(name, a->uid, a->gid);
++			if (ret == -1)
++				status = errno_to_portable(errno);
++			else
++				if ( permit_logging == 1 )
++				logit("chown'ed %s.", name);
++		} else {
++			status = SSH2_FX_PERMISSION_DENIED;
++			if ( permit_logging == 1 )
++			logit("chown %s: operation prohibited by sftp-server configuration.", name);
++		}
+ 	}
+ 	send_status(id, status);
+ 	xfree(name);
+@@ -615,6 +660,9 @@
+ 	int status = SSH2_FX_OK;
+ 	char *name;
+ 
++if ( permit_logging == 1 )
++logit("process_fsetstat");
++
+ 	id = get_int();
+ 	handle = get_handle();
+ 	a = get_attrib();
+@@ -625,20 +673,33 @@
+ 		status = SSH2_FX_FAILURE;
+ 	} else {
+ 		if (a->flags & SSH2_FILEXFER_ATTR_SIZE) {
++if ( permit_logging == 1 )
++logit("process_fsetstat: ftruncate");
+ 			ret = ftruncate(fd, a->size);
+ 			if (ret == -1)
+ 				status = errno_to_portable(errno);
+ 		}
+ 		if (a->flags & SSH2_FILEXFER_ATTR_PERMISSIONS) {
++			if (permit_chmod == 1) {
+ #ifdef HAVE_FCHMOD
+-			ret = fchmod(fd, a->perm & 0777);
++				ret = fchmod(fd, a->perm & 0777);
+ #else
+-			ret = chmod(name, a->perm & 0777);
++				ret = chmod(name, a->perm & 0777);
+ #endif
+-			if (ret == -1)
+-				status = errno_to_portable(errno);
++				if (ret == -1)
++					status = errno_to_portable(errno);
++				else
++					if ( permit_logging == 1 )
++					logit("chmod: succeeded.");
++			} else {
++	                        status = SSH2_FX_PERMISSION_DENIED;
++				if ( permit_logging == 1 )
++				logit("chmod: operation prohibited by sftp-server configuration.");
++			}
+ 		}
+ 		if (a->flags & SSH2_FILEXFER_ATTR_ACMODTIME) {
++if ( permit_logging == 1 )
++logit("process_fsetstat: utimes");
+ #ifdef HAVE_FUTIMES
+ 			ret = futimes(fd, attrib_to_tv(a));
+ #else
+@@ -648,13 +709,22 @@
+ 				status = errno_to_portable(errno);
+ 		}
+ 		if (a->flags & SSH2_FILEXFER_ATTR_UIDGID) {
++			if (permit_chown == 1) {
+ #ifdef HAVE_FCHOWN
+-			ret = fchown(fd, a->uid, a->gid);
++				ret = fchown(fd, a->uid, a->gid);
+ #else
+-			ret = chown(name, a->uid, a->gid);
++				ret = chown(name, a->uid, a->gid);
+ #endif
+-			if (ret == -1)
+-				status = errno_to_portable(errno);
++				if (ret == -1)
++					status = errno_to_portable(errno);
++				else
++					if ( permit_logging == 1 )
++					logit("chown: succeeded");
++			} else {
++				status = SSH2_FX_PERMISSION_DENIED;
++				if ( permit_logging == 1 )
++				logit("chown: operation prohibited by sftp-server configuration.");
++			}
+ 		}
+ 	}
+ 	send_status(id, status);
+@@ -684,6 +754,8 @@
+ 		}
+ 
+ 	}
++	if ( permit_logging == 1 )
++	logit("opendir %s", path);
+ 	if (status != SSH2_FX_OK)
+ 		send_status(id, status);
+ 	xfree(path);
+@@ -757,6 +829,8 @@
+ 	TRACE("remove id %u name %s", id, name);
+ 	ret = unlink(name);
+ 	status = (ret == -1) ? errno_to_portable(errno) : SSH2_FX_OK;
++	if ( permit_logging == 1 )
++	logit("remove file %s", name);
+ 	send_status(id, status);
+ 	xfree(name);
+ }
+@@ -774,9 +848,19 @@
+ 	a = get_attrib();
+ 	mode = (a->flags & SSH2_FILEXFER_ATTR_PERMISSIONS) ?
+ 	    a->perm & 0777 : 0777;
++
++        if (setumask != 0) {
++		if ( permit_logging == 1 )
++                logit("setting directory creation mode to 0777 and umask to %o.", setumask);
++                mode = 0777;
++                umask(setumask);
++        }
++
+ 	TRACE("mkdir id %u name %s mode 0%o", id, name, mode);
+ 	ret = mkdir(name, mode);
+ 	status = (ret == -1) ? errno_to_portable(errno) : SSH2_FX_OK;
++	if ( permit_logging == 1 )
++	logit("mkdir %s", name);
+ 	send_status(id, status);
+ 	xfree(name);
+ }
+@@ -793,6 +877,8 @@
+ 	TRACE("rmdir id %u name %s", id, name);
+ 	ret = rmdir(name);
+ 	status = (ret == -1) ? errno_to_portable(errno) : SSH2_FX_OK;
++	if ( permit_logging == 1 )
++	logit("rmdir %s", name);
+ 	send_status(id, status);
+ 	xfree(name);
+ }
+@@ -819,6 +905,8 @@
+ 		s.name = s.long_name = resolvedname;
+ 		send_names(id, 1, &s);
+ 	}
++	if ( permit_logging == 1 )
++	logit("realpath %s", path);
+ 	xfree(path);
+ }
+ 
+@@ -854,6 +942,8 @@
+ 			status = SSH2_FX_OK;
+ 	}
+ 	send_status(id, status);
++	if ( permit_logging == 1 )
++	logit("rename old %s new %s", oldpath, newpath);
+ 	xfree(oldpath);
+ 	xfree(newpath);
+ }
+@@ -879,6 +969,8 @@
+ 		s.name = s.long_name = link;
+ 		send_names(id, 1, &s);
+ 	}
++	if ( permit_logging == 1 )
++	logit("readlink %s", path);
+ 	xfree(path);
+ }
+ 
+@@ -897,6 +989,8 @@
+ 	ret = symlink(oldpath, newpath);
+ 	status = (ret == -1) ? errno_to_portable(errno) : SSH2_FX_OK;
+ 	send_status(id, status);
++	if ( permit_logging == 1 )
++	logit("symlink old %s new %s", oldpath, newpath);
+ 	xfree(oldpath);
+ 	xfree(newpath);
+ }
+@@ -1018,6 +1112,8 @@
+ {
+ 	fd_set *rset, *wset;
+ 	int in, out, max;
++	unsigned int val = 0;
++	char *umask_env;
+ 	ssize_t len, olen, set_size;
+ 
+ 	/* XXX should use getopt */
+@@ -1025,10 +1121,53 @@
+ 	__progname = ssh_get_progname(av[0]);
+ 	handle_init();
+ 
++	/* Transaction logging */
++
++	if (atoi(getenv("LOG_SFTP")) == 1)
++	{
++		permit_logging = 1;
++		log_init("sftp-server", atoi(getenv("SFTP_LOG_LEVEL")),
++			atoi(getenv("SFTP_LOG_FACILITY")), 0);
++	};
++
++
+ #ifdef DEBUG_SFTP_SERVER
+ 	log_init("sftp-server", SYSLOG_LEVEL_DEBUG1, SYSLOG_FACILITY_AUTH, 0);
+ #endif
+ 
++	if ( permit_logging == 1 )
++	logit("Starting sftp-server logging for user %s.", getenv("USER"));
++
++	/* Umask control */
++
++	umask_env = getenv("SFTP_UMASK");
++	while (*umask_env && *umask_env >= '0' && *umask_env <= '9')
++		val = val * 8 + *umask_env++ - '0';
++
++	if (*umask_env || val > 0777 || val == 0) {
++		if ( permit_logging == 1 )
++		logit("bad value %o for SFTP_UMASK, turning umask control off.", val);
++		setumask = 0;
++	} else {
++		if ( permit_logging == 1 )
++		logit("umask control is on.");
++		setumask = val;
++	};
++
++
++	/* Sensitive client commands */
++	
++        if (atoi(getenv("SFTP_PERMIT_CHMOD")) != 1) {
++		permit_chmod = 0;
++		if ( permit_logging == 1 )
++                logit("client is not permitted to chmod.");
++	};
++        if (atoi(getenv("SFTP_PERMIT_CHOWN")) != 1) {
++		permit_chown = 0;
++		if ( permit_logging == 1 )
++                logit("client is not permitted to chown.");
++	};
++	
+ 	in = dup(STDIN_FILENO);
+ 	out = dup(STDOUT_FILENO);
+ 
+@@ -1071,6 +1210,8 @@
+ 			len = read(in, buf, sizeof buf);
+ 			if (len == 0) {
+ 				debug("read eof");
++				if ( permit_logging == 1 )
++				logit("sftp-server finished.");
+ 				exit(0);
+ 			} else if (len < 0) {
+ 				error("read error");
+Only in openssh-3.8.1p1_sftp/: sftp-server.c.orig
+diff -ru openssh-3.8.1p1/sshd_config openssh-3.8.1p1_sftp/sshd_config
+--- openssh-3.8.1p1/sshd_config	2003-12-31 00:38:32.000000000 +0000
++++ openssh-3.8.1p1_sftp/sshd_config	2004-08-18 21:06:14.443083113 +0000
+@@ -95,3 +95,14 @@
+ 
+ # override default of no subsystems
+ Subsystem	sftp	/usr/libexec/sftp-server
++
++# sftp-server logging
++#LogSftp no
++#SftpLogFacility AUTH
++#SftpLogLevel INFO
++
++# sftp-server umask control
++#SftpUmask
++
++#SftpPermitChmod yes
++#SftpPermitChown yes
+diff -ru openssh-3.8.1p1/sshd_config.5 openssh-3.8.1p1_sftp/sshd_config.5
+--- openssh-3.8.1p1/sshd_config.5	2004-04-14 03:04:36.000000000 +0000
++++ openssh-3.8.1p1_sftp/sshd_config.5	2004-08-18 21:06:14.444082869 +0000
+@@ -379,6 +379,10 @@
+ DEBUG and DEBUG1 are equivalent.
+ DEBUG2 and DEBUG3 each specify higher levels of debugging output.
+ Logging with a DEBUG level violates the privacy of users and is not recommended.
++.It Cm LogSftp
++Specifies whether to perform logging of
++.Nm sftp-server
++subsystem transactions. Must be "yes" or "no." The default value is "no."
+ .It Cm MACs
+ Specifies the available MAC (message authentication code) algorithms.
+ The MAC algorithm is used in protocol version 2
+@@ -533,6 +537,37 @@
+ .It Cm ServerKeyBits
+ Defines the number of bits in the ephemeral protocol version 1 server key.
+ The minimum value is 512, and the default is 768.
++.It Cm SftpLogFacility
++Gives the facility code that is used when logging
++.Nm sftp-server .
++transactions. The possible values are: DAEMON, USER, AUTH, LOCAL0,
++LOCAL1, LOCAL2, LOCAL3, LOCAL4, LOCAL5, LOCAL6, LOCAL7.
++The default is AUTH.
++.It Cm SftpLogLevel
++Gives the verbosity level that is used when logging messages from
++.Nm sftp-server .
++The possible values are:
++QUIET, FATAL, ERROR, INFO, VERBOSE, DEBUG, DEBUG1, DEBUG2 and DEBUG3.
++The default is INFO.  DEBUG and DEBUG1 are equivalent.  DEBUG2
++and DEBUG3 each specify higher levels of debugging output.
++Logging with a DEBUG level violates the privacy of users
++and is not recommended.
++.It Cm SftpPermitChmod
++Specifies whether the sftp-server allows the sftp client to execute chmod 
++commands on the server. The default is yes.
++.It Cm SftpPermitChown
++Specifies whether the sftp-server allows the sftp client to execute chown
++or chgrp commands on the server. Turning this value on means that the client
++is allowed to execute both chown and chgrp commands. Turning it off means that
++the client is prohibited from executing either chown or chgrp.
++ The default is yes.
++.It Cm SftpUmask
++Specifies an optional umask for 
++.Nm sftp-server
++subsystem transactions. If a umask is given, this umask will override all system, 
++environment or sftp client permission modes. If
++no umask or an invalid umask is given, file creation mode defaults to the permission
++mode specified by the sftp client. The default is for no umask.
+ .It Cm StrictModes
+ Specifies whether
+ .Nm sshd
+Only in openssh-3.8.1p1_sftp/: sshd_config.5.orig
+Only in openssh-3.8.1p1_sftp/: sshd_config.orig
+diff -ru openssh-3.8.1p1/version.h openssh-3.8.1p1_sftp/version.h
+--- openssh-3.8.1p1/version.h	2004-03-21 22:39:10.000000000 +0000
++++ openssh-3.8.1p1_sftp/version.h	2004-08-18 21:06:14.436084823 +0000
+@@ -1,3 +1,3 @@
+ /* $OpenBSD: version.h,v 1.41 2004/03/20 10:40:59 markus Exp $ */
+ 
+-#define SSH_VERSION	"OpenSSH_3.8.1p1"
++#define SSH_VERSION	"OpenSSH_3.8.1p1+sftplogging-v1.2"
+Only in openssh-3.8.1p1_sftp/: version.h.orig
