@@ -31,3 +31,4 @@ move app-gnustep/gnumail gnustep-apps/gnumail
 move app-gnustep/gorm gnustep-apps/gorm
 move app-gnustep/gworkspace gnustep-apps/gworkspace
 move app-gnustep/helpviewer gnustep-apps/helpviewer
+move app-gnustep/imageviewer gnustep-apps/imageviewer
