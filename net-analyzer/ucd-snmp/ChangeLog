@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ucd-snmp
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.18 2003/11/18 12:33:40 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.19 2004/04/09 07:17:55 iggy Exp $
+
+  09 Apr 2004; Brian Jackson <iggy@gentoo.org> ucd-snmp-4.2.6-r2.ebuild:
+  added s390 keyword
 
   18 Nov 2003; Aron Griffis <agriffis@gentoo.org> ucd-snmp-4.2.6-r2.ebuild:
   Add ~alpha

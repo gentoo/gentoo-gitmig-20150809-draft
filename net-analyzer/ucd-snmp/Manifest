@@ -1,4 +1,7 @@
 MD5 d9e045d4008d0f44a554a6665cc42e60 ucd-snmp-4.2.6-r1.ebuild 1705
+MD5 3d2d163793d19d002b9eb701f9c20716 ucd-snmp-4.2.6-r2.ebuild 2214
+MD5 95efea876ebbab197a99d1e762a232b5 ChangeLog 3171
+MD5 9384ae7ba3e9f56b8027ea92f607042d metadata.xml 215
 MD5 49b593493c840a940b816caacf7f92fe files/ucd-snmp-4.2.6-coreutils-2.patch 6482
 MD5 4ff916bcceac5a47315c3c25834e45bb files/ucd-snmp-4.2.6-openssl-0.9.7.patch 5417
 MD5 5373330fe4b7a9764712aedc2f9fc36a files/ucd-snmp-4.2.6-agent-parallel-fixes.patch 1648
@@ -7,6 +10,3 @@ MD5 44590fec309fff6dd494d4e161eb225b files/ucd-snmp-4.2.6-Makefile-fixes.patch 1
 MD5 44772dee27e41b0e9b37881019306f60 files/snmpd.rc6 485
 MD5 0b7185775cd34df5a4b4390a49d480fd files/digest-ucd-snmp-4.2.6-r1 67
 MD5 0b7185775cd34df5a4b4390a49d480fd files/digest-ucd-snmp-4.2.6-r2 67
-MD5 01e1ea07ddad25f5f510ce6a0848b892 ucd-snmp-4.2.6-r2.ebuild 2214
-MD5 ba5874e424022d8f006e8a33fe3692a0 ChangeLog 3080
-MD5 9384ae7ba3e9f56b8027ea92f607042d metadata.xml 215
