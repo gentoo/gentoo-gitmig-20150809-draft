@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0.ebuild,v 1.1 2004/07/28 13:49:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0.ebuild,v 1.2 2004/07/28 22:41:02 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
 # Official patches
-#PLEVEL="x002 x003 x004 x005 x006 x007"
+PLEVEL=""
 
 DESCRIPTION="The standard GNU Bourne again shell"
 HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
-SRC_URI="mirror://gnu/bash/${P}.tar.gz
-	ftp://ftp.cwru.edu/pub/bash/${P}.tar.gz
-	mirror://gentoo/${P}-gentoo.diff.bz2"
-#	${PLEVEL//x/mirror://gnu/bash/bash-${PV}-patches/bash${PV/\.}-}"
+SRC_URI="ftp://ftp.cwru.edu/pub/bash/${P}.tar.gz
+	mirror://gnu/bash/${P}.tar.gz
+	mirror://gentoo/${P}-gentoo.diff.bz2
+	${PLEVEL//x/mirror://gnu/bash/bash-${PV}-patches/bash${PV/\.}-}"
 
 LICENSE="GPL-2"
 SLOT="0"
