@@ -1,7 +1,0 @@
-MD5 2e4a7524d9e7129070eae7bf6ad5da27 nemerle-0.2.1-r2.ebuild 1052
-MD5 2d8911a60dbb70bcaba5bfbf65d7cf70 nemerle-0.2.1-r1.ebuild 883
-MD5 f44bcc07d5fa267e573ec2c267f15de6 ChangeLog 1103
-MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
-MD5 4274209a3c36a732036a5d15656c1e57 files/digest-nemerle-0.2.1-r1 66
-MD5 4274209a3c36a732036a5d15656c1e57 files/digest-nemerle-0.2.1-r2 66
-MD5 4ec77da51ae7d4412fcdb9f276f45b94 files/nemerle-0.2.1-ncc-fix.diff 1172
