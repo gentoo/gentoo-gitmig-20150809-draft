@@ -85,6 +85,8 @@ nxserver_pkg_postinst() {
 
 	if [ -f /usr/NX/etc/passwd -a -f /usr/NX/etc/passwords ]; then
 		mv /usr/NX/etc/passwd /usr/NX/etc/passwords
+	fi
+	if [ -f /usr/NX/etc/passwords ]; then
 		l_szPasswd=passwords
 	fi
 
@@ -94,6 +96,7 @@ nxserver_pkg_postinst() {
 	fi
 
 	if [ -d /usr/NX/nxhome -a -d /usr/NX/home ]; then
+		einfo "Moving home directory of user 'nx' to /usr/NX/home"
 		usermod -d /usr/NX/home nx
 	fi
 
