@@ -48,7 +48,7 @@ src_unpack() {
 	  -e 's:#[[:blank:]]-lX11:-lX11:' \
 	Setup.in > Setup.new
         mv Setup.new Setup.in
-	mylibs="$mylibs -ltk8.4 -ltcl8.4 -L/usr/X11R6 -lX11"
+	mylibs="$mylibs -ltk8.4 -ltcl8.4 -L/usr/X11R6/lib -lX11"
     fi
 
     if [ "`use berkdb`" ]
