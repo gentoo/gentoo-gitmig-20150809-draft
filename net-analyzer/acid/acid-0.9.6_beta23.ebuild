@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.9 2005/02/18 10:45:28 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.10 2005/02/26 03:41:28 dragonheart Exp $
 
 inherit webapp versionator eutils
 
@@ -20,7 +20,7 @@ RDEPEND="apache2? ( >=net-www/apache-2 )
 	>=dev-php/adodb-4.0.5
 	>=dev-php/jpgraph-1.12.2
 	media-libs/gd
-	dev-php/mod_php"
+	=dev-php/mod_php-4*"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/acid
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.8 2005/02/18 10:45:28 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.9 2005/02/26 03:41:28 dragonheart Exp $
+
+  26 Feb 2005; Daniel Black <dragonheart@gentoo.org> acid-0.9.6_beta23.ebuild:
+  Changed dependancy to php4 only as per bug #79609. Thanks Nicolas-Loïc 
+  Fortin <nicolasloic.fortin@gmail.com> and Marco Morales <soulse@gmail.com>
 
   18 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> acid-0.9.6_beta23.ebuild:
   Removed snort dep since its possible to run snort on a different box (bug
