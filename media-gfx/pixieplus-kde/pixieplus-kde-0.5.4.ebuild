@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixieplus-kde/pixieplus-kde-0.5.4.ebuild,v 1.1 2003/03/07 00:17:21 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixieplus-kde/pixieplus-kde-0.5.4.ebuild,v 1.2 2003/04/05 22:20:27 danarmak Exp $
 
 inherit kde-base 
 
@@ -18,6 +18,7 @@ KEYWORDS="~x86 ~ppc"
 
 DEPEND="media-gfx/imagemagick"
 
-newdepend ">=kde-base/kdebase-3.1"
+newdepend ">=kde-base/kdebase-3.1
+	    media-libs/libungif"
 
 S=${WORKDIR}/pixieplus-${PV}

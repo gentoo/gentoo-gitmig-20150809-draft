@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/pixieplus-kde
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixieplus-kde/ChangeLog,v 1.7 2003/03/07 00:17:21 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixieplus-kde/ChangeLog,v 1.8 2003/04/05 22:20:27 danarmak Exp $
 
 *pixieplus-kde-0.5.4 (07 Mar 2003)
+
+  06 Apr 2003; Dan Armak <danarmak@gentoo.org> pixieplus-kde-0.5.4.ebuild:
+  Add missing dep on libungif. Mark as x86 stable.
 
   07 Mar 2003; Hannes Mehnert <hannes@gentoo.org> pixieplus-kde-0.5.4.ebuild:
   version bump, fixes bug #15711, thanks to Laurent Maestracci
