@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-3.1.1-r1.ebuild,v 1.4 2001/11/24 18:40:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-3.1.1-r1.ebuild,v 1.5 2002/03/27 11:17:29 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Library for arithmetic on arbitrary precision integers, rational numbers, and floating-point numbers"
@@ -28,6 +28,5 @@ src_install() {
 	dodoc AUTHORS ChangeLog COPYING* NEWS README
 	dodoc doc/assembly_code doc/configuration
 	dodoc doc/isa_abi_headache doc/multiplication
-	docinto html
-	dodoc doc/*.html
+	dohtml -r doc
 }
