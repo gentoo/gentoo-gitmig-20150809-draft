@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r3.ebuild,v 1.2 2001/02/27 14:58:17 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r4.ebuild,v 1.1 2001/04/23 18:07:17 drobbins Exp $
 
 A=dcron27.tgz
 S=${WORKDIR}/dcron
@@ -28,6 +28,11 @@ src_compile() {
 src_install() {
 
     try make DESTDIR=${D} install
+	
+	#important fix!
+	dodir /usr/sbin
+	mv ${D}/usr/bin/crond ${D}/usr/sbin
+	
 	#to use cron, you must be part of the "cron" group
 
     #    dobin crontab
