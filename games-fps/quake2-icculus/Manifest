@@ -1,5 +1,5 @@
-MD5 4c447c19c67ee2ece7f6baa8a92ae592 quake2-icculus-0.15-r1.ebuild 4348
-MD5 759f3b73d1c81b6da2ab983b539bb61a ChangeLog 1189
+MD5 f2c94aba7ef8dcf14354b5625307dd60 quake2-icculus-0.15-r1.ebuild 4374
+MD5 9f24a1f1aaf6d1675c6e2b327c294703 ChangeLog 1309
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 ad5de2e8c5c06b69b3b5a2dd926a758f files/0.15-Makefile-optflags.patch 260
 MD5 2219e82edb75f4e2a9fa232afc365c5d files/0.15-Makefile-gcc3.patch 787

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.7 2004/06/24 22:43:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.8 2004/06/28 22:19:10 agriffis Exp $
 
 inherit eutils gcc games
 
@@ -20,7 +20,7 @@ KEYWORDS="x86 ppc sparc alpha"
 IUSE="arts svga X sdl aalib opengl noqmax rogue xatrix"
 
 # default to X11 if svga/X/sdl/aalib are not in USE
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	opengl? ( virtual/opengl )
 	svga? ( media-libs/svgalib )
 	X? ( virtual/x11 )
@@ -44,7 +44,7 @@ src_unpack() {
 		|| die "sed src/qcommon/files.c failed"
 
 	ln -s `which echo` ${T}/more
-	for g in `use rogue` `use xatrix` ; do
+	for g in $(useq rogue && echo rogue) $(useq xatrix && echo matrix); do
 		mkdir -p ${S}/src/${g}
 		cd ${S}/src/${g}
 		unpack ${g}src320.shar.Z
@@ -63,7 +63,7 @@ src_unpack() {
 
 yesno() {
 	for f in $@ ; do
-		[ `use $f` ] || { echo NO ; return 1 ; }
+		useq $f || { echo NO ; return 1 ; }
 	done
 	echo YES
 	return 0
