@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/maxima
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/ChangeLog,v 1.3 2003/09/01 07:30:40 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/ChangeLog,v 1.4 2003/09/21 06:36:21 mkennedy Exp $
+
+  21 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> maxima-5.9.0-r1.ebuild:
+  depend on virtual/emacs, not app-editors/emacs
 
   31 Aug 2003; George Shapovalov <george@gentoo.org> maxima-5.9.0-r1.ebuild :
   few more improvements from #16529. Now supports clisp, cmucl and gcl in any combination

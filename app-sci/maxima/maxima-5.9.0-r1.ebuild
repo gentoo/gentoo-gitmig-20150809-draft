@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.0-r1.ebuild,v 1.2 2003/09/01 07:30:40 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.0-r1.ebuild,v 1.3 2003/09/21 06:36:21 mkennedy Exp $
 
 DESCRIPTION="Free computer algebra environment, based on Macsyma"
 HOMEPAGE="http://maxima.sourceforge.net/"
@@ -14,7 +14,7 @@ IUSE="cmucl clisp gcl tetex emacs auctex"
 
 
 DEPEND="tetex? ( app-text/tetex )
-	emacs? ( app-editors/emacs )
+	emacs? ( virtual/emacs )
 	auctex? ( app-emacs/auctex )
 	>=sys-apps/texinfo-4.3
 	!clisp?	( !gcl? ( !cmucl? ( dev-lisp/cmucl-bin ) ) )
