@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.19 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.20 2004/07/05 09:15:27 solar Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
@@ -64,6 +64,8 @@ gnuconfig_do_update() {
 # returns the directory where they can be found.
 gnuconfig_findnewest() {
 	local locations="/usr/share/gnuconfig/config.sub \
+	                 /usr/share/automake-1.8/config.sub \
+	                 /usr/share/automake-1.7/config.sub \
 	                 /usr/share/automake-1.6/config.sub \
 	                 /usr/share/automake-1.5/config.sub \
 	                 /usr/share/automake-1.4/config.sub"
