@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.8 2004/03/14 13:55:42 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.9 2004/03/15 17:24:55 latexer Exp $
+
+*rxvt-unicode-2.3 (15 Mar 2004)
+
+  15 Mar 2004; Peter Johanson <latexer@gentoo.org> rxvt-unicode-2.3.ebuild,
+  files/rxvt-unicode-2.3-font-fix.diff:
+  Bump. Still needs font patch to fix segfaults when exiting. Patch submitted
+  upstream.
 
   14 Mar 2004; Sven Blumenstein <bazik@gentoo.org> rxvt-unicode-2.2.ebuild:
   Moved back to ~sparc, latexer broke it :P
