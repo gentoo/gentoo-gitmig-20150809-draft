@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Team: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r2.ebuild,v 1.6 2001/09/04 04:50:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r2.ebuild,v 1.7 2001/09/06 01:59:53 woodchip Exp $
 
 MYP="openssh-2.9p2"
 S=${WORKDIR}/${MYP}
@@ -25,10 +25,10 @@ src_compile() {
     local myconf
     if [ "`use tcpd`" ]
     then
-		myconf="--with-tcp-wrappers"
+	myconf="--with-tcp-wrappers"
     else
-		myconf="--without-tcp-wrappers"
-	fi
+	myconf="--without-tcp-wrappers"
+    fi
     if [ "`use pam`" ]
     then
 	myconf="${myconf} --with-pam"
@@ -48,11 +48,6 @@ src_install() {
     insinto /etc/pam.d
     donewins ${FILESDIR}/sshd.pam sshd
     exeinto /etc/init.d
-    newexe ${FILESDIR}/openssh sshd
+    dowexe ${FILESDIR}/sshd
 }
-
-#pkg_postinst() {
-	# People may not want sshd to automatically start like this
-	# rc-update add sshd default
-#}
 
