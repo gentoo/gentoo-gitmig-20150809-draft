@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/time/time-1.7-r1.ebuild,v 1.22 2004/11/08 19:29:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/time/time-1.7-r1.ebuild,v 1.23 2004/12/06 04:30:42 vapier Exp $
 
 inherit eutils
 
@@ -13,12 +13,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	automake -a || die "automake"
+	WANT_AUTOMAKE=1.4 automake -a || die "automake"
 	autoconf || die "autoconf"
 	epatch ${FILESDIR}/${PV}-info-dir-entry.patch
 }
