@@ -1,0 +1,11 @@
+# ChangeLog for net-mail/mlmmj
+# Copyright 2004-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.1 2004/09/11 20:45:06 klieber Exp $
+
+  11 Sep 2004; Kurt Lieber <klieber@gentoo.org> :
+  committing for siggy
+
+*mlmmj-1.0.0 (11 Sep 2004)
+
+  11 Sep 2004; Luca Mercuri <siggy@gentoo.org> mlmmj-1.0.0.ebuild:
+  Initial import. 
