@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19-r1.ebuild,v 1.4 2002/12/20 16:55:00 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19-r1.ebuild,v 1.5 2002/12/20 16:56:20 alron Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -94,7 +94,7 @@ src_install() {
 				if [ ! -r ${D}/usr/include/asm-sparc64/asm_offsets.h ]
 				then
 					cp ${SPARCFILEDIR}/${OKV}/sparc64-asm_offsets.h \
-						${D}/usr/include/asm-/asm_offsets.h
+						${D}/usr/include/asm-sparc64/asm_offsets.h
 				fi
 			fi
 
