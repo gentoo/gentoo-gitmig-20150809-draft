@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0a8163c6c2883d8bfd3f7507502bb10f ChangeLog 2129
+MD5 a0f5bc38a6a8cb1c3f49fb323690b1ad ChangeLog 2286
 MD5 4a52cd771138efea4026da82a803a812 metadata.xml 1156
 MD5 6f3029e129c1fd2ad177615100e813c5 horde-turba-2.0.ebuild 470
-MD5 aa71b971e47fbd799d0d694602c2e9f3 horde-turba-1.2.3.ebuild 454
+MD5 1a79e9068bb7b4029e4fd2eb9519dfdc horde-turba-1.2.4.ebuild 454
+MD5 213aa321b978436e1171423863ab1027 files/digest-horde-turba-1.2.4 63
 MD5 c0f4670a7e47e595278da5575863af8e files/digest-horde-turba-2.0 65
-MD5 eb3adfa41b1c63c30c3333720a97f5f1 files/digest-horde-turba-1.2.3 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB6krwroRuSHgZdywRAiR8AJ9j5YQ734asO60MriWx7k0EC5v4YwCdGz6K
-V0kvrZqjf5I5x314iUZvUig=
-=j1DZ
+iD8DBQFB6kvGroRuSHgZdywRAitpAJ49r6UmkIvPOxa9OE1Ul0XriA9gYwCdFVru
+s6o9QUElTIvrVxuIglsABTg=
+=Cijq
 -----END PGP SIGNATURE-----
