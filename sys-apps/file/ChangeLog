@@ -1,11 +1,18 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.23 2003/10/18 03:17:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.24 2003/10/18 10:04:04 kumba Exp $
+
+
+*file-4.06 (17 Oct 2003)
+
+  18 Oct 2003; Joshua Kinard <kumba@gentoo.org> file-4.05.ebuild,
+  file-4.06.ebuild, files/file-4.05-mips-gentoo.diff,
+  files/file-4.xx-mips-gentoo.diff:
+  Renamed the 4.05 patch for mips to 4.xx because it'll likely apply cleanly for
+  several versions. Modified file-4.05 and file-4.06 to use this patch.
 
   17 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> file-4.06.ebuild:
   fix failure of parallel make.  bug 31356
-
-*file-4.06 (17 Oct 2003)
 
   17 Oct 2003; Joshua Kinard <kumba@gentoo.org> file-4.05.ebuild,
   file-4.06.ebuild:
