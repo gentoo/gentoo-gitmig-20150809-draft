@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/wwwoffle-2.8c.ebuild,v 1.2 2004/09/19 14:30:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/wwwoffle-2.8e.ebuild,v 1.1 2005/04/06 19:33:00 mrness Exp $
 
 inherit eutils
 
 DESCRIPTION="wwwoffle = WWW Offline Explorer, an adv. caching proxy especially suitable for nonpermanent (e.g. dialup) Internet connections"
 
-SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/apps/www/servers/${P}.tgz"
+SRC_URI="http://www.gedanken.freeserve.co.uk/download-wwwoffle/${P}.tgz"
 HOMEPAGE="http://www.gedanken.demon.co.uk/wwwoffle"
 KEYWORDS="~x86 ~sparc ~ppc ~ppc64"
 SLOT="0"
@@ -101,9 +101,9 @@ src_install() {
 	#fi
 
 	# install the wwwoffled init script
-	newinitd ${FILESDIR}/${P}-init ${PN}d
-	newinitd  ${FILESDIR}/${P}-init-online ${PN}d-online
-	newconfd ${FILESDIR}/${P}-config-online wwwoffled-online
+	newinitd ${FILESDIR}/${PN}.initd wwwoffled
+	newinitd  ${FILESDIR}/${PN}-online.initd wwwoffled-online
+	newconfd ${FILESDIR}/${PN}-online.confd wwwoffled-online
 
 	keepdir /var/spool/wwwoffle/{http,outgoing,monitor,lasttime,lastout,local}
 	for number in 1 2 3 4 5 6 7 8 9;

@@ -1,6 +1,15 @@
 # ChangeLog for www-proxy/wwwoffle
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/ChangeLog,v 1.7 2004/11/20 01:17:10 dragonheart Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/ChangeLog,v 1.8 2005/04/06 19:33:00 mrness Exp $
+
+*wwwoffle-2.8e (06 Apr 2005)
+
+  06 Apr 2005; Alin Nastac <mrness@gentoo.org>
+  -files/wwwoffle-2.8c-config-online, -files/wwwoffle-2.8c-init,
+  -files/wwwoffle-2.8c-init-online, +files/wwwoffle.initd,
+  +files/wwwoffle-online.confd, +files/wwwoffle-online.initd,
+  -wwwoffle-2.8c.ebuild, +wwwoffle-2.8e.ebuild:
+  Version bump
 
   20 Nov 2004; Daniel Black <dragonheart@gentoo.org> files/wwwoffle-2.8c-init,
   files/wwwoffle-2.8c-init-online:
