@@ -1,4 +1,4 @@
-MD5 cb03b69d5beb3956a2fc7814f78acbac ChangeLog 527
-MD5 0660061f26b105c503cd25a90c54ff6e gst-plugins-oss-0.6.3.ebuild 312
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 ad7d13e5c42638d153311159e0c64028 files/digest-gst-plugins-oss-0.6.3 71
+MD5 0660061f26b105c503cd25a90c54ff6e gst-plugins-oss-0.6.3.ebuild 312
+MD5 bbe1901b9167454db87d5c9bfe18c7d8 ChangeLog 531
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
