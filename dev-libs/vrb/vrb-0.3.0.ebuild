@@ -1,6 +1,6 @@
-# Copyright 2002 Johannes Findeisen <you@hanez.org>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/vrb-0.3.0.ebuild,v 1.8 2003/09/11 01:10:02 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/vrb-0.3.0.ebuild,v 1.9 2003/09/29 21:12:26 mholzer Exp $
 
 DESCRIPTION="library for a virtual ring buffer"
 HOMEPAGE="http://phil.ipal.org/freeware/vrb/"
@@ -13,9 +13,7 @@ KEYWORDS="x86 sparc"
 DEPEND="virtual/glibc"
 
 src_compile() {
-	sed -e "s/copts=\"-pipe -O2\"/copts=\"${CFLAGS}\"/g" \
-		< Configure > Configure.hacked
-	cp Configure.hacked Configure
+	sed -i "s/copts=\"-pipe -O2\"/copts=\"${CFLAGS}\"/g" Configure
 
 	./Configure 						\
 		--prefix=/usr || die "./Configure failed"
