@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/enigma
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.7 2003/09/25 19:33:51 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.8 2003/10/14 01:53:25 mr_bones_ Exp $
+
+*enigma-0.81 (13 Oct 2003)
+
+  13 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> enigma-0.81.ebuild:
+  version bump
 
   25 Sep 2003; Michael Sterrett <msterret@gentoo.org>
   files/enigma-0.80-beta.patch:
