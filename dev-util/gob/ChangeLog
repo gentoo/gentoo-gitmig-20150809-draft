@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gob
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.21 2004/02/12 18:36:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.22 2004/02/15 18:43:11 weeve Exp $
+
+  15 Feb 2004; Jason Wever <weeve@gentoo.org> gob-2.0.6.ebuild:
+  Marked stable on sparc to fix broken gnome-pilot dependencies.
 
   12 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> gob-2.0.6.ebuild:
   Added ~sparc for bug #39710
