@@ -1,4 +1,15 @@
-MD5 f88f168cfbfac915f5e1056e1a5858fa bbappconf-0.0.2.ebuild 651
-MD5 a8c5e20082db032e2042855d73bee3b5 ChangeLog 1134
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2461aee19428a44886fa2ff6f4313781 bbappconf-0.0.2.ebuild 828
+MD5 85c39459ff68ef57944ac34f903374f7 ChangeLog 1323
 MD5 035e70a253189f818aa3f8317376cd35 metadata.xml 291
+MD5 d6d095fbad88fb74892cf39b4db24f48 files/bbappconf-0.0.2-fix-sigsegv.diff 651
 MD5 43cacc45a353c364c3818a8229f42a54 files/digest-bbappconf-0.0.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB7n4MEZCkKN40op4RAqlrAKCX2A4CvSQw+og/HITxmCoUZFIWWQCgt+DM
+INa2RSqSE2IRLTVYC/J+Cyc=
+=/xIn
+-----END PGP SIGNATURE-----

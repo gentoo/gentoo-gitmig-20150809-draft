@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbappconf
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbappconf/ChangeLog,v 1.7 2004/06/24 22:11:50 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbappconf/ChangeLog,v 1.8 2005/01/19 15:34:25 ka0ttic Exp $
+
+  19 Jan 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/bbappconf-0.0.2-fix-sigsegv.diff, bbappconf-0.0.2.ebuild:
+  Fixed sigsegv for bug 59246; added debug to IUSE for use_enable debug.
 
 *bbappconf-0.0.2 (12 Dec 2002)
 
