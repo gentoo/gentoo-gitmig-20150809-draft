@@ -1,13 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20-r6.ebuild,v 1.2 2002/07/06 18:49:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20-r6.ebuild,v 1.3 2002/07/08 14:22:48 sunflare Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Highly configurable service monitoring daemon"
 SRC_URI="ftp://ftp.kernel.org/pub/software/admin/mon/${P}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/software/mon/"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 RDEPEND=">=dev-perl/Mon-0.9
