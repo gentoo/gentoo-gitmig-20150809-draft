@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.0.4-r1.ebuild,v 1.4 2005/02/07 12:01:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.0.4-r1.ebuild,v 1.5 2005/03/08 17:43:24 vapier Exp $
 
 MY_P=${P/-mpi}
 S=${WORKDIR}/${MY_P}
@@ -18,7 +18,7 @@ RDEPEND="${DEPEND}
 
 SLOT="6"
 KEYWORDS="~x86 ppc"
-IUSE="crypt f77"
+IUSE="crypt fortran"
 LICENSE="as-is"
 
 src_unpack() {
@@ -37,7 +37,7 @@ src_compile() {
 		myconf="--with-rsh=rsh"
 	fi
 
-	if use f77; then
+	if use fortran; then
 	myconf="${myconf} --with-fc"
 	else
 	myconf="${myconf} --without-fc"
