@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.8.ebuild,v 1.1 2004/02/29 01:03:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.8.ebuild,v 1.2 2004/04/01 13:06:43 lv Exp $
 
 DESCRIPTION="Userspace access to USB devices"
 HOMEPAGE="http://libusb.sourceforge.net/"
@@ -14,6 +14,13 @@ IUSE=""
 DEPEND="sys-devel/libtool
 	doc? ( app-text/openjade
 		=app-text/docbook-sgml-dtd-3.1-r1 )"
+
+src_unpack(){
+	unpack ${A}
+	# needed by libgphoto2, see bug #45889
+	cd ${S}
+	epatch ${FILESDIR}/libusb-0.1.8-amd64-fPIC.patch
+}
 
 src_compile() {
 	local myconf
