@@ -469,11 +469,6 @@ media-video/kxine
 # New libgda masked for testing.
 =gnome-extra/libgda-0.8.192
 
-# <cselkirk@gentoo.org> (26 Jul 2002)
-# fix for procmail delivery to Maildir style mailboxes.
-# Masked for testing.
-=net-mail/procmail-3.22-r3
-
 # <spider@gentoo.org> (25 Jul 2002)
 # we need to fix deps on >=dev-util/gob-1.0.x
 >=dev-util/gob-1.99.3
