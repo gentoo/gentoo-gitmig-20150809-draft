@@ -1,26 +1,26 @@
 # ChangeLog for dev-db/mysqltool
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.5 2002/11/10 00:36:14 rphillips Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.6 2002/11/14 18:47:07 vapier Exp $
 
 *mysqltool-0.95-r1 (3 May 2002)
+
+  14 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Replaced hardcoding of /home/httpd/htdocs with a grep of /etc/apache/conf/apache.conf
 
   09 Nov 2002; <rphillips@gentoo.org> :
   Added Paul Belt's fixes for the installation paths
 
-  15 Oct 2002; <mucmmings@gentoo.org> : Add sparc64 to keywords
+  15 Oct 2002; <mucmmings@gentoo.org> :
+  Add sparc64 to keywords
 
   9 Sep 2002; <mcummings@gentoo.org> :
-  
   Added perl-module eclass support properly.
   
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
-
   Added LICENSE, SLOT.
 
 *mysqltool-0.95 (17 Apr 2002)
 
   17 Apr 2002; Donny Davies <woodchip@gentoo.org> :
-
   Created an ebuild for mysqltool, a perl-based frontend for administering
   MySQL servers.  Similiar to phpMyAdmin.
-
