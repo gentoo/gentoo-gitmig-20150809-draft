@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.30 2004/10/19 07:51:10 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.31 2004/12/23 22:27:42 sejo Exp $
+
+  23 Dec 2004; <SeJo@gentoo.org> Net-DNS-0.37-r1.ebuild:
+  stable on ppc
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> Net-DNS-0.40.ebuild:
   Stable on amd64.
