@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/netkit-base
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.6 2002/12/13 11:00:33 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.7 2002/12/22 22:16:52 raker Exp $
+
+*netkit-base-0.17-r7 (22 Dec 2002)
+
+  22 Dec 2002; Nick Hadaway <raker@gentoo.org>
+  netkit-base-0.17-r7.ebuild,
+  files/digest-netkit-base-0.17-r7,
+  files/netkit-base-0.17-wrong-byte-fix.patch :
+  Updated ebuild with a patch for ping posted by
+  ragnar@linalco.com (Ragnar Hojland Espinosa) on bug # 12023.
+  Currently marked unstable.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
