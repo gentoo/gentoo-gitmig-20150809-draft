@@ -1,8 +1,12 @@
 # ChangeLog for net-im/micq
 # Copyright 2001-2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.5 2002/12/08 21:05:52 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.6 2003/01/31 09:58:03 mholzer Exp $
 
 * micq-0.4.9.4 (8 Dec 2002) Bart Verwilst <verwilst@gentoo.org>
+
+  31 Jan 2003; Martin Holzer <mholzer@gentoo.org> micq-0.4.9.4.ebuild
+  ChangeLog :
+  Fixed SRC_URI. Closes #14826.
 
 * micq-0.4.9.2b (12 August 2002)
 
