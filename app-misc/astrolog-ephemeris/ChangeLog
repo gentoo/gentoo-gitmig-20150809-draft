@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/astrolog-ephemeris
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog-ephemeris/ChangeLog,v 1.6 2004/11/03 11:57:11 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog-ephemeris/ChangeLog,v 1.7 2004/12/08 21:42:50 sekretarz Exp $
+
+  08 Dec 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  astrolog-ephemeris-5.40.ebuild:
+  Added to ~amd64, bug #73724
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org>
   astrolog-ephemeris-5.40.ebuild:
