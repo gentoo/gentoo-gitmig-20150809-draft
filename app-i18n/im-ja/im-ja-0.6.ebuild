@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.6.ebuild,v 1.2 2003/09/04 14:39:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.6.ebuild,v 1.3 2003/09/05 02:52:23 usata Exp $
+
+inherit eutils
 
 DESCRIPTION="A Japanese input module for GTK2"
 HOMEPAGE="http://im-ja.sourceforge.net/"
@@ -27,10 +29,11 @@ GCONFDIR=$(gconftool-2 --get-default-source | sed -e "s|^xml::/|${D}|")
 src_unpack() {
 
 	unpack ${A}
+	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	cd ${S}/data
 	# work around
-	dosed "s:\(GCONF_CONFIG_SOURCE=\)\$(GCONF_CONFIG_SOURCE):\1\$(GCONF_SCHEMA_CONFIG_SOURCE):" Makefile.in
+	sed -i -e "s:\(GCONF_CONFIG_SOURCE=\)\$(GCONF_CONFIG_SOURCE):\1\$(GCONF_SCHEMA_CONFIG_SOURCE):" Makefile.in
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.6 2003/09/04 14:39:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.7 2003/09/05 02:52:23 usata Exp $
 
 *im-ja-0.7_p2 (20 Aug 2003)
 
@@ -10,7 +10,7 @@
 *im-ja-0.6 (07 Jul 2003)
 
   04 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> im-ja-0.4.ebuild,
-  im-ja-0.6.ebuild:
+  im-ja-0.6.ebuild, files/im-ja-0.6-gentoo.diff:
   Added -I/usr/include/wnn to fix compilation bug in #27896.
   Marked stable on x86 for im-ja-0.6.
 
