@@ -614,7 +614,7 @@ dev-lang/tcl-tk
 
 #seemant@gentoo.org 20 Mar 2002
 # Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
-=medusa-0.5.1-r4
+=gnome-extra/medusa-0.5.1-r4
 
 #karltk@gentoo.org 23 Mar 2002
 # has a defect build system that doesn't honor --prefix=${D}
