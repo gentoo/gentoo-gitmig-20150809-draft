@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mmix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.4 2003/02/12 05:57:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.5 2003/12/18 18:14:53 zul Exp $
+
+  18 Dec 2003; Chuck Short <zul@gentoo.org> mmix-20020216.ebuild:
+  Added dependcy, need ghostscript to read the manual. Closes #35559.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
