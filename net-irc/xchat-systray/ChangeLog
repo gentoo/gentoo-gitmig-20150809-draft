@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat-systray
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/ChangeLog,v 1.1 2003/08/30 17:34:03 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/ChangeLog,v 1.2 2003/09/22 12:05:45 pauldv Exp $
+
+  22 Sep 2003; <paul@gentoo.org> metadata.xml:
+  Fix metadata.xml
 
 *xchat-systray-2.3.1 (30 Aug 2003)
 
