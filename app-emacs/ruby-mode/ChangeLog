@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ruby-mode
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.10 2005/03/21 17:35:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.11 2005/03/26 23:00:18 kloeri Exp $
+
+  26 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> ruby-mode-1.8.2.ebuild:
+  Stable on alpha.
 
   21 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> ruby-mode-1.8.2.ebuild:
   Stable on x86 and ppc-macos.
