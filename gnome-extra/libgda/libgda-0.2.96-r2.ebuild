@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.96-r2.ebuild,v 1.16 2004/07/14 15:56:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.96-r2.ebuild,v 1.17 2004/08/06 00:29:48 arj Exp $
 
 IUSE="odbc postgres mysql"
 
@@ -23,7 +23,7 @@ RDEPEND="virtual/libc
 	 >=sys-libs/gdbm-1.8.0
 	 >=sys-libs/readline-4.1
 	 >=dev-perl/CORBA-ORBit-0.4.3
-	 >=dev-db/sqlite-2.0.8
+	 =dev-db/sqlite-2*
 	 mysql? ( >=dev-db/mysql-3.23.26 )
 	 postgres? ( >=dev-db/postgresql-7.1 )
 	 odbc? ( >=dev-db/unixODBC-2.0.6 )"
