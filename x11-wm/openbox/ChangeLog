@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.37 2003/06/19 04:57:24 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.38 2003/06/19 13:39:34 mkeadle Exp $
+
+  19 Jun 2003; mkeadle <mkeadle@gentoo.org> openbox-2.3.0.ebuild,
+  openbox-2.3.1.ebuild, files/openbox-gcc.patch:
+  adding minor patch to help with potential compiles against gcc3.3
 
   12 Jun 2003; <msterret@gentoo.org> openbox-2.1.3-r4.ebuild:
   fix Header
