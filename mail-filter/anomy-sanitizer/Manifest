@@ -1,6 +1,6 @@
 MD5 13e209ed00c1014cb38df3328078ad04 ChangeLog 1114
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 ef246ef6b4f1ae04e27a3c9ac2497d11 anomy-sanitizer-1.67.ebuild 2966
+MD5 e6f860f10b16ab9c8334475b3c0bc0c7 anomy-sanitizer-1.67.ebuild 2945
 MD5 e516d95d8691b03784d4868f0d4dc9ac files/sample_e-mail-architektur.flw 7001
 MD5 bfbe48e53cc13347c50082c700ca1981 files/digest-anomy-sanitizer-1.67 72
 MD5 28080935c9282efa29386151ab7036ab files/sample2_mailfilter.sh 1898
