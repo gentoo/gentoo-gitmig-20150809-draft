@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/testunit/testunit-0.1.4.ebuild,v 1.1 2002/08/20 02:07:07 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/testunit/testunit-0.1.4.ebuild,v 1.2 2002/08/20 04:30:10 george Exp $
 
 DESCRIPTION="Test::Unit is a unit testing framework for the Ruby language"
 HOMEPAGE="http://testunit.talbott.ws/"
@@ -23,6 +23,4 @@ src_install () {
 
 	dohtml -r doc/ 
 	dohtml -r examples
-	#cp -R doc ${D}usr/share/doc/${PF}/${DOCDESTTREE}/
-	#cp -R examples ${D}usr/share/doc/${PF}/${DOCDESTTREE}/
 }
