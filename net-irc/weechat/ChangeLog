@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/weechat
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.6 2004/06/17 22:11:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.7 2004/06/17 22:19:49 swegener Exp $
+
+*weechat-0.0.6 (18 Jun 2004)
+
+  18 Jun 2004; Sven Wegener <swegener@gentoo.org> +weechat-0.0.6.ebuild:
+  Version bump. Made CFLAGS aware and added support for the following USE flags:
+  debug, gtk (dropped gtk2 as it's only for using gtk+-2 over gtk+-1.2), perl
+  and ncurses.
 
   18 Jun 2004; Sven Wegener <swegener@gentoo.org> metadata.xml,
   weechat-0.0.2.ebuild, weechat-0.0.3-r1.ebuild, weechat-0.0.3.ebuild:
