@@ -25,10 +25,6 @@
 # abi-1.0 mask pending removal
 =app-office/abiword-1*
 
-# <usata@gentoo.org> (14 Dec 2003)
-# experimental XIM support. Bug 33123
->=app-i18n/im-ja-0.9_alpha20031109
-
 # <solar@gentoo.org> (13 Dec 2003)
 # <seemant@gentoo.org> (11 Dec 2003)
 # malformed dcc send requests in xchat-2.0.6
