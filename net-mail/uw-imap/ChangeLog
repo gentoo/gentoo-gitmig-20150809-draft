@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.48 2005/01/08 13:14:18 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.49 2005/01/28 11:54:46 ticho Exp $
+
+*uw-imap-2004c (28 Jan 2005)
+
+  28 Jan 2005; Andrej Kacian <ticho@gentoo.org> +uw-imap-2004c.ebuild:
+  Version bump.
 
   08 Jan 2005; Tom Martin <slarti@gentoo.org> uw-imap-2002e-r4.ebuild:
   Added missing inherit flag-o-matic to 2002e-r4.
