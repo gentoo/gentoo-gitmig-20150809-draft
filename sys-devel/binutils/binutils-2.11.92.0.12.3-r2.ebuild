@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.92.0.12.3-r2.ebuild,v 1.5 2002/07/11 06:30:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.92.0.12.3-r2.ebuild,v 1.6 2002/08/14 03:43:01 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
 SRC_URI="http://ftp.kernel.org/pub/linux/devel/binutils/${P}.tar.bz2 http://www.ibiblio.org/gentoo/distfiles/${PN}-manpages-${PV}.tar.bz2"
 LICENSE="GPL-2 LGPL-2 BINUTILS"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 
 DEPEND="virtual/glibc

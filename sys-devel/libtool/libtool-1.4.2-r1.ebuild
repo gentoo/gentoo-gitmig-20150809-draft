@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.2-r1.ebuild,v 1.6 2002/07/11 06:30:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.2-r1.ebuild,v 1.7 2002/08/14 03:49:37 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A shared library tool for developers"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="virtual/glibc"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.53-r1.ebuild,v 1.4 2002/07/11 06:30:55 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.53-r1.ebuild,v 1.5 2002/08/14 03:48:45 murphy Exp $
 
 OLD_PV=2.13
 OLD_P=${PN}-${OLD_PV}
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.bz2
 	ftp://ftp.gnu.org/gnu/${PN}/${OLD_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=sys-devel/m4-1.4p
 	sys-devel/perl"
