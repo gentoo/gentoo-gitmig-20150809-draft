@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.72 2004/08/27 20:03:13 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.73 2004/08/27 20:12:04 axxo Exp $
+
+  27 Aug 2004; Thomas Matthijs <axxo@gentoo.org>
+  -files/1.5.3/1_6_backport-jdk142.patch.gz, -files/1.5.3/ant,
+  -files/1.6.0-r2/ant, -files/1.6.2/ant, -files/1.6.2-r1/ant,
+  -ant-1.5.3-r5.ebuild, -ant-1.6.0-r2.ebuild, -ant-1.6.2-r1.ebuild,
+  -ant-1.6.2.ebuild:
+  remove older versions
 
   27 Aug 2004; Thomas Matthijs <axxo@gentoo.org> metadata.xml,
   ant-1.6.2-r3.ebuild:
