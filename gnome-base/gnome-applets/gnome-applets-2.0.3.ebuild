@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.0.3.ebuild,v 1.4 2002/10/05 05:39:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.0.3.ebuild,v 1.5 2002/11/08 13:18:42 foser Exp $
 
 IUSE="doc"
 
@@ -49,7 +49,8 @@ src_install() {
 	make prefix=${D}/usr \
 		sysconfdir=${D}/etc \
 		infodir=${D}/usr/share/info \
-		mandir=$${D}/usr/share/man \
+		mandir=${D}/usr/share/man \
+		localstatedir=${D}/var \
 		install || die
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
     
