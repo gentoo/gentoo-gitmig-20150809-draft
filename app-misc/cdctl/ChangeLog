@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/cdctl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/ChangeLog,v 1.1 2003/03/04 23:57:27 agenkin Exp $
+
+*cdctl-0.15 (04 Mar 2003)
+
+  04 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Initial version by Matt Tucker <tuck@whistlingfish.net>.
