@@ -1,10 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.19.ebuild,v 1.9 2004/02/21 23:22:07 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.19.ebuild,v 1.10 2004/02/24 17:44:11 mholzer Exp $
 
 DESCRIPTION="GNU VCDimager"
 HOMEPAGE="http://www.vcdimager.org/"
 SRC_URI="mirror://sourceforge/xine/${P}-cdio.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
