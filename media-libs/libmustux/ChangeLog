@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmustux
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.3 2003/12/20 17:00:52 mholzer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.4 2004/02/01 12:47:54 ferringb Exp $
+
+  01 Feb 2004; Brian Harring <ferringb@gentoo.org> libmustux-0.16.0.ebuild,
+  files/libmustux-0.16.0-alsalib-fix.patch:
+  Alsalib-1.0 compilation fix (39092)
 
 *libmustux-0.20.0 (20 Dec 2003)
 

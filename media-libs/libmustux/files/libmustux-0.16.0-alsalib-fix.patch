@@ -1,0 +1,14 @@
+diff -ur libmustux-0.16.0/MustuxAudioDeviceMapper.hh libmustux-0.16.0-fixed/MustuxAudioDeviceMapper.hh
+--- libmustux-0.16.0/MustuxAudioDeviceMapper.hh	2003-01-02 18:23:01.000000000 -0600
++++ libmustux-0.16.0-fixed/MustuxAudioDeviceMapper.hh	2004-01-22 21:13:42.557717632 -0600
+@@ -2,6 +2,10 @@
+ #define MUSTUXAUDIODEVICEMAPPER_HH
+ 
+ #ifdef _ALSA
++#include <alsa/version.h>
++#if SND_LIB_MAJOR==1 
++# define ALSA_PCM_OLD_HW_PARAMS_API
++#endif
+ #include <alsa/asoundlib.h>
+ #endif
+ 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.16.0.ebuild,v 1.3 2003/09/11 01:17:47 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.16.0.ebuild,v 1.4 2004/02/01 12:47:54 ferringb Exp $
 
 DESCRIPTION="Protux - Libary"
 HOMEPAGE="http://www.nognu.org/protux"
@@ -15,6 +15,13 @@ S="${WORKDIR}/${P}"
 DEPEND="virtual/x11
 	>=x11-libs/qt-3
 	media-libs/alsa-lib"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-alsalib-fix.patch || \
+		die "alsalib-1.0 patch failed"
+}
 
 src_compile() {
 
