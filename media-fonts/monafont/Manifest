@@ -1,4 +1,6 @@
 MD5 d4c44c01857145caa611cc15e74f0fac monafont-2.22.ebuild 1182
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 e904f5cb95d99a32ca97339f85d171a9 ChangeLog 829
+MD5 c1918ed9b5035c4c63c101e85945756c monafont-2.30_pre2.ebuild 1206
 MD5 ebf85e0cc13fcb1be0732fd10f837d05 files/digest-monafont-2.22 66
+MD5 98d41587bf7a924b644dfd89410fe446 files/digest-monafont-2.30_pre2 70
