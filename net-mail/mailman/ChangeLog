@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.52 2005/01/19 20:56:58 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.53 2005/02/09 18:04:48 langthang Exp $
+
+  09 Feb 2005; Tuấn Văn <langthang@gentoo.org>
+  +files/mailman-2.1.5-true_path.patch:
+  revision bump with true_path patch.
 
   19 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org>
   mailman-2.1.5-r3.ebuild:
