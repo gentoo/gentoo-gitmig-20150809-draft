@@ -1,0 +1,6 @@
+MD5 4b3b1574818e0695171fbab1df54a428 ax25-apps-0.0.6.ebuild 1106
+MD5 9d32be567b1b4dc0cbc426847b070834 files/ax25rtd.rc 409
+MD5 487da038fb8422cc25aa692c790c68ff files/ax25mond.rc 413
+MD5 d11cb1e7e7635247a9e2684e98a19915 files/digest-ax25-apps-0.0.6 67
+MD5 d41d8cd98f00b204e9800998ecf8427e files/ax25rtd.blank 0
+MD5 40eb527f5e4c317d0964da0c5eb92e09 files/ax25ipd.rc 409
