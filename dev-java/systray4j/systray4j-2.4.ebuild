@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/systray4j-2.4.ebuild,v 1.1 2004/03/12 02:33:19 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/systray4j-2.4.ebuild,v 1.2 2004/05/05 07:32:55 eradicator Exp $
 
 inherit kde java-pkg
 
@@ -12,14 +12,15 @@ SRC_URI="mirror://sourceforge/systray/${P}-kde3-src.tar.bz2"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 DEPEND="=kde-base/kdelibs-3*
-		dev-java/java-config
-		>=virtual/jdk-1.3
-		jikes? ( >=dev-java/jikes-1.15 )
-		sys-apps/sed"
+	dev-java/java-config
+	>=virtual/jdk-1.3
+	jikes? ( >=dev-java/jikes-1.15 )
+	sys-apps/sed"
 
-RDEPEND=">=virtual/jre-1.3"
+RDEPEND="=kde-base/kdelibs-3*
+	 >=virtual/jre-1.3"
 
 need-kde 3
 
