@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.4.ebuild,v 1.1 2003/05/07 11:12:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.7.ebuild,v 1.1 2003/06/10 13:53:59 liquidx Exp $
 
 IUSE="doc"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=gnome-base/libgnomeprint-2.2.0
 	>=gnome-base/libgnomeprintui-2.2.1
@@ -32,10 +32,17 @@ src_unpack() {
 	unpack ${A}
 	gnome2_omf_fix
 	
-	# patch sgml
-	epatch ${FILESDIR}/${P}-sgml-fix2.patch
-	epatch ${FILESDIR}/${P}-sgml-fix3.patch
-	
 	# remove gtkdoc-fixxref
 	cd ${S}; patch -p1 < ${FILESDIR}/gal-1.99.3-docfix.patch
 }	     
+
+src_install() {
+	gnome2_src_install
+	
+	# HACK HACK HACK !!
+	# See libgtkhtml-3.x for more info. but basically this is here
+	# for exactly the same reason. We should NOT release this until
+	# we get those libtool problems fixed! However, this is the
+	# temporary workaround. - <liquidx@gentoo.org>
+	dosym /usr/lib/libgal-2.0.so.3 /usr/lib/libgal-2.0.so.2
+}

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.3.ebuild,v 1.1 2003/05/07 11:17:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.5.ebuild,v 1.1 2003/06/10 13:56:51 liquidx Exp $
 
 inherit gnome2
 
@@ -16,27 +16,28 @@ PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
 SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.${GNOME_TARBALL_SUFFIX}"
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
 
 RDEPEND=">=gnome-base/libgnomeui-2.2
 	>=gnome-base/libgnomeprint-2.2
-    >=gnome-base/libgnomeprintui-2.2.1
-    >=gnome-base/libbonoboui-2.0
-    >=gnome-base/bonobo-activation-2.0
-    >=gnome-base/libbonobo-2.0
-    >=gnome-extra/gal-1.99.4
-    >=gnome-base/ORBit2-2.5.6
-    >=net-libs/libsoup-1.99.17
+	>=gnome-base/libgnomeprintui-2.2.1
+	>=gnome-base/libbonoboui-2.0
+	>=gnome-base/bonobo-activation-2.0
+	>=gnome-base/libbonobo-2.0
+	>=gnome-extra/gal-1.99.7
+	>=gnome-base/ORBit2-2.5.6
+	>=net-libs/libsoup-1.99.23
 	>=dev-libs/libxml2-2.5
 	>=gnome-base/gnome-vfs-2.1
-    >=gnome-base/gail-1.1"
+	>=gnome-base/gail-1.1"
  
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
+USE_DESTDIR="1"
 SCROLLKEEPER_UPDATE="0"
 
 # HACK HACK HACK !!!
@@ -50,6 +51,8 @@ SCROLLKEEPER_UPDATE="0"
 
 src_install() {
 	gnome2_src_install
-	dosym /usr/lib/libgtkhtml-a11y-3.0.so.1 /usr/lib/libgtkhtml-a11y-3.0.so.0
-	dosym /usr/lib/libgtkhtml-3.0.so.1 /usr/lib/libgtkhtml-3.0.so.0	
+	dosym /usr/lib/libgtkhtml-a11y-3.0.so.2 /usr/lib/libgtkhtml-a11y-3.0.so.0
+	dosym /usr/lib/libgtkhtml-3.0.so.2 /usr/lib/libgtkhtml-3.0.so.0
+	dosym /usr/lib/libgtkhtml-a11y-3.0.so.2 /usr/lib/libgtkhtml-a11y-3.0.so.1
+	dosym /usr/lib/libgtkhtml-3.0.so.2 /usr/lib/libgtkhtml-3.0.so.1
 }
