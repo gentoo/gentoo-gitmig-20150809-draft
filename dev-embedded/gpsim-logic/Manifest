@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7242dfe130c8645f3a80ff5caa430839 ChangeLog 462
+MD5 ea48f3951601a1ea2f7216c22b4fd089 gpsim-logic-0.0.2.ebuild 820
 MD5 12123e42142c8221f145921666038104 metadata.xml 296
-MD5 9abbe3374af12bf4188851e5a1dec0df gpsim-logic-0.0.2.ebuild 868
 MD5 71e6a715430ba22511d42de29d598d18 files/digest-gpsim-logic-0.0.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4W19HTu7gpaalycRAgYiAKDaFhJOd/KO8lzYwsDiQ/u1LEQELwCg7CcK
+wHtiaoUxfR7SxWeCOoU9xzM=
+=sAqC
+-----END PGP SIGNATURE-----

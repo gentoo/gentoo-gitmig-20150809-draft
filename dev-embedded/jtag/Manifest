@@ -1,4 +1,14 @@
-MD5 9c95f72b295b868fc2338a2920a9779a jtag-0.5.1.ebuild 872
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8026a970d1ed0c553780657a164807bf ChangeLog 642
+MD5 b2b4bcd5c6b2090587f415d4ab61863e jtag-0.5.1.ebuild 735
 MD5 a28a809849d8cc98176478c8a7313876 metadata.xml 412
 MD5 09b6f20c9fb4fecd8754d06560debd93 files/digest-jtag-0.5.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4W3PHTu7gpaalycRAoAWAJ9bS+Jnhi7sjZh0F/hwoMMjSLzh8ACeLq6s
+v4t7HueMkVU4pJ8Lwb+BC/k=
+=r0ey
+-----END PGP SIGNATURE-----
