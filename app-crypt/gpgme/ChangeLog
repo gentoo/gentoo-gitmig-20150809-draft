@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.6 2002/10/18 08:45:42 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.7 2002/11/27 04:34:52 jrray Exp $
+
+*gpgme-0.3.13 (26 Nov 2002)
+
+  26 Nov 2002; J Robert Ray <jrray@gentoo.org> gpgme-0.3.13.ebuild :
+  Version bump, no longer an alpha release.  Closing bug 11213.
 
 *gpgme-0.3.12 (18 Oct 2002)
 
