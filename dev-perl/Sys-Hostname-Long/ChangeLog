@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Sys-Hostname-Long
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Hostname-Long/ChangeLog,v 1.1 2004/09/22 23:16:12 mcummings Exp $
+
+*Sys-Hostname-Long-1.2 (22 Sep 2004)
+
+  22 Sep 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Sys-Hostname-Long-1.2.ebuild:
+  Dep for SPF support in SpamAssassin3
+
