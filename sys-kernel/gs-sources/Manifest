@@ -1,5 +1,5 @@
-MD5 f77b939cab613d0da057a5cc9da0f5da gs-sources-2.4.25_pre7-r7.ebuild 2983
-MD5 a36367448086c550334daa93ab76d8d3 ChangeLog 8265
+MD5 8f4f2da2e389cd2c7f89eb3301c1caa7 gs-sources-2.4.25_pre7-r7.ebuild 2974
+MD5 e75786b7ef5ce11c771e51bc4d559508 ChangeLog 8378
 MD5 4df72e65b139d3e4c18bec81f3a561df metadata.xml 227
 MD5 0f66013f643c79c97fda489618a4e2fd files/gs-sources.CAN-2004-0535.patch 476
 MD5 c9da1bc82b906f6abc648c056e7bf662 files/gs-sources.FPULockup-53804.patch 354

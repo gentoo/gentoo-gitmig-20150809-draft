@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r7.ebuild,v 1.2 2004/06/24 22:57:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r7.ebuild,v 1.3 2004/06/25 15:35:08 agriffis Exp $
 
 IUSE="build crypt"
 
@@ -41,7 +41,7 @@ src_unpack() {
 	# Kill patches we aren't suppposed to use, don't worry about
 	# failures, if they aren't there that is a good thing!
 	# This is the ratified crypt USE flag, enables IPSEC and patch-int
-	if [ -z "`use crypt`" ]; then
+	if ! use crypt; then
 		einfo "No Cryptographic support, dropping patches..."
 		for file in 8*;do
 			einfo "Dropping ${file}..."
