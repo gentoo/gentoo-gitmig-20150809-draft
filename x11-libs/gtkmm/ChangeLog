@@ -1,7 +1,11 @@
 # ChangeLog for x11-libs/gtkmm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/ChangeLog,v 1.14 2002/11/17 00:53:08 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/ChangeLog,v 1.15 2002/12/06 15:12:14 foser Exp $
 
+*gtkmm-2.0.2 (06 Dec 2002)
+
+  06 Dec 2002; foser <foser@gentoo.org> gtkmm-2.0.2.ebuild :
+  New version
 
 *gtkmm-2.0.1 (16 Nov 2002)
   

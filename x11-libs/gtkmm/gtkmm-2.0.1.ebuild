@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-2.0.1.ebuild,v 1.1 2002/11/17 00:53:08 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-2.0.1.ebuild,v 1.2 2002/12/06 15:12:15 foser Exp $
 
 S=${WORKDIR}/${P}
 IUSE=""
@@ -8,7 +8,7 @@ DESCRIPTION="C++ interface for GTK+2"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="x86 ~ppc ~sparc ~sparc64"
 
 SLOT="2"
 DEPEND="virtual/glibc
