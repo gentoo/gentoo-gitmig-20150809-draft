@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.13 2004/11/12 10:48:50 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.14 2004/11/16 10:35:46 kloeri Exp $
+
+  16 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> vino-2.8.0.1.ebuild:
+  ~alpha keyword.
 
   12 Nov 2004; Mike Gardiner <obz@gentoo.org> vino-2.8.0.1.ebuild:
   Keyworded ppc for GNOME 2.8
