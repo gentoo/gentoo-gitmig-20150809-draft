@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.152 2005/03/03 10:55:49 mglauche Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.153 2005/03/12 16:22:47 satya Exp $
+
+  12 Mar 2005; Christian Andreetta <satya@gentoo.org> samba-3.0.11.ebuild:
+  minor fixes: dirs creations via keepdir, examples permissions (bug #83563)
 
   03 Mar 2005; <mglauche@gentoo.org> samba-3.0.10.ebuild:
   smbldap-tools have new download location, see Bug 83203. Thanks to Ricardo

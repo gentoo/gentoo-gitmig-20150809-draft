@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.11.ebuild,v 1.3 2005/02/11 22:57:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.11.ebuild,v 1.4 2005/03/12 16:22:48 satya Exp $
 
 inherit eutils flag-o-matic
 #---------------------------------------------------------------------------
@@ -325,18 +325,13 @@ src_install() {
 	# dirs -----------------------------------------------------------------
 	diropts -m0700
 	local PRIVATE_DST=/var/lib/samba/private
-	dodir ${PRIVATE_DST}
-	touch ${D}${PRIVATE_DST}/.keep
+	keepdir ${PRIVATE_DST}
 	diropts -m1777
-	dodir /var/spool/samba
-	touch ${D}/var/spool/samba/.keep
+	keepdir /var/spool/samba
 	diropts -m0755
-	dodir /var/{log,run,cache}/samba
-	dodir /var/lib/samba/{netlogon,profiles}
-	dodir /var/lib/samba/printers/{W32X86,WIN40,W32ALPHA,W32MIPS,W32PPC}
-	touch ${D}/var/{log,run,cache}/samba/.keep
-	touch ${D}/var/lib/samba/{netlogon,profiles}/.keep
-	touch ${D}/var/lib/samba/printers/{W32X86,WIN40,W32ALPHA,W32MIPS,W32PPC}/.keep
+	keepdir /var/{log,run,cache}/samba
+	keepdir /var/lib/samba/{netlogon,profiles}
+	keepdir /var/lib/samba/printers/{W32X86,WIN40,W32ALPHA,W32MIPS,W32PPC}
 	# docs -----------------------------------------------------------------
 	docinto ""
 	dodoc ${S}/COPYING ${S}/Manifest ${S}/README ${S}/Roadmap ${S}/WHATSNEW.txt
@@ -344,6 +339,8 @@ src_install() {
 	dodoc ${FILESDIR}/nsswitch.conf-wins
 	use winbind && dodoc ${FILESDIR}/nsswitch.conf-winbind
 	cp -a ${S}/examples.ORIG/* ${D}/usr/share/doc/${PF}/examples
+	chmod -R 755 `find ${D}/usr/share/doc/${PF}/examples -type d`
+	chmod -R 644 `find ${D}/usr/share/doc/${PF}/examples ! -type d`
 	if use oav; then
 		docinto ${PN}-vscan-${VSCAN_VER}
 		cd ${WORKDIR}/${PN}-vscan-${VSCAN_VER}
