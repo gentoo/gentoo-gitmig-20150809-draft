@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.12 2002/05/31 05:23:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.13 2002/05/31 14:35:53 seemant Exp $
 
 *xmms-1.2.7-r7 (30 May 2002)
 
@@ -8,7 +8,8 @@
   files/digest-xmms-1.2.7-r7 :
 
   Added a patch to optimise for 3dnow and mmx.  Thanks to aliz@telia.com
-  (Daniel Ahlberg) in bug #2630.
+  (Daniel Ahlberg) in bug #2630.  Fixed use avi && patch syntax per Daniel
+  Sabo in bug #3086
 
 *xmms-1.2.7-r6 (19 May 2002)
 

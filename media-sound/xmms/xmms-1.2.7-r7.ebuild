@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r7.ebuild,v 1.1 2002/05/31 05:23:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r7.ebuild,v 1.2 2002/05/31 14:34:51 seemant Exp $
 
 PLO_VER="$(echo ${PV} | sed -e "s:\.::g")"
 S=${WORKDIR}/${P}
@@ -35,7 +35,9 @@ src_unpack() {
 
 	# For plugins such as avi4xmms, xmms needs to be linked to libavifile
 	# and libstdcxx.
-	use avi && patch -p1 <${FILESDIR}/${P}-enable-avifile-plugins.patch || die
+	use avi && ( \
+		patch -p1 <${FILESDIR}/${P}-enable-avifile-plugins.patch || die
+	)
 
 	# For mmx/3dnow enabled CPUs, this patch adds mmx/3dnow optimisations
 	( use mmx || use 3dnow ) && \
