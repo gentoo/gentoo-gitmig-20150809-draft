@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.11 2004/07/22 02:35:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.12 2004/07/24 19:20:43 lu_zero Exp $
+
+  24 Jul 2004; Luca Barbato <lu_zero@gentoo.org> ssmtp-2.60.9.ebuild:
+  Marked ppc
 
   21 Jul 2004; Jason Wever <weeve@gentoo.org> ssmtp-2.60.9.ebuild:
   Stable on sparc wrt bug #57553.
