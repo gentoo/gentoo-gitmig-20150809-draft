@@ -1,23 +1,24 @@
-# ChangeLog for dev-perlmod_perlChangeLog/
+# ChangeLog for dev-perl/mod_perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.9 2002/10/30 07:20:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.10 2002/11/29 11:22:37 woodchip Exp $
+
+*mod_perl-1.99.07 (29 Nov 2002)
+
+  29 Nov 2002; Donny Davies <woodchip@gentoo.org> :
+  New development version for Apache2.
 
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/mod_perl
 
 *mod_perl-1.27 (20 Jun 2002)
 
   15 Sep 2002; Ryan Phillips <rphillips@gentoo.org> mod_perl-1.27.ebuild :
-
   Added libwww-perl depedency... Hopefully fixes #7867
 
   9 Sep 2002; <mcummings@gentoo.org> mod_perl-1.27.ebuild :
   Corrected build syntax
 
   1 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> mod_perl-1.27.ebuild :
-
   Added ppc to KEYWORDS.
 
   20 Jun 2002; Thilo Bangert <bangert@gentoo.org> mod_perl-1.27.ebuild :
@@ -25,25 +26,12 @@
 
 *mod_perl-1.26 (7 May 2002)
 
-
 *mod_perl-1.25-r2 (9 Apr 2002)
 
   9 Apr 2002; Donny Davies <woodchip@gentoo.org> :
-
   Small updates to fit in with the reworked apache package.
 
 *mod_perl-1.25-r1 (27 Mar 2002)
 
   27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> mod_perl-1.25-r1.ebuild :
-
   Updated the ebuild to new syntax, and ungzipped HTML documentation.
-
-*mod_perl-1.25 (1 Feb 2002)
-
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
