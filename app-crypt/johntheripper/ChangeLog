@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.20 2004/10/02 23:00:02 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.21 2004/11/01 00:48:50 pylon Exp $
+
+  01 Nov 2004; Lars Weiler <pylon@gentoo.org>
+  johntheripper-1.6.37-r1.ebuild:
+  Fixed ebuild so that the patch applies correctly. Also marked stable on ppc,
+  as requested in Bug #44203.
 
   02 Oct 2004; Aaron Walker <ka0ttic@gentoo.org>
   johntheripper-1.6.37-r1.ebuild:
