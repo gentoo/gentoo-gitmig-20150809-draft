@@ -29,7 +29,7 @@ diff -ur rpm-4.2/Makefile.am rpm-4.2.new/Makefile.am
  	@LIBMISC@
 diff -ur rpm-4.2/Makefile.in rpm-4.2.new/Makefile.in
 --- rpm-4.2/Makefile.in	2003-02-24 22:11:41.000000000 +0000
-+++ rpm-4.2.new/Makefile.in	2003-04-14 20:10:45.000000000 +0100
++++ rpm-4.2.new/Makefile.in	2003-04-14 22:27:30.000000000 +0100
 @@ -219,7 +219,7 @@
  	rpm.magic rpmpopt-$(VERSION) rpmqv.c rpm.c
  
@@ -110,7 +110,7 @@ diff -ur rpm-4.2/Makefile.in rpm-4.2.new/Makefile.in
  
 diff -ur rpm-4.2/build/Makefile.am rpm-4.2.new/build/Makefile.am
 --- rpm-4.2/build/Makefile.am	2003-01-01 17:46:54.000000000 +0000
-+++ rpm-4.2.new/build/Makefile.am	2003-04-14 20:08:50.000000000 +0100
++++ rpm-4.2.new/build/Makefile.am	2003-04-14 22:26:03.000000000 +0100
 @@ -9,7 +9,6 @@
  	-I$(top_srcdir)/lib \
  	-I$(top_srcdir)/rpmdb \
@@ -119,9 +119,17 @@ diff -ur rpm-4.2/build/Makefile.am rpm-4.2.new/build/Makefile.am
  	@WITH_LIBELF_INCLUDE@ \
  	@INCPATH@
  
+@@ -27,6 +26,7 @@
+ 	parseFiles.c parsePreamble.c parsePrep.c parseReqs.c parseScript.c \
+ 	parseSpec.c poptBT.c reqprov.c rpmfc.c spec.c
+ librpmbuild_la_LDFLAGS = -release @VERSION@ \
++	-L$(top_builddir)/lib/.libs \
+ 	$(top_builddir)/lib/librpm.la \
+ 	$(top_builddir)/rpmdb/librpmdb.la \
+ 	$(top_builddir)/rpmio/librpmio.la \
 diff -ur rpm-4.2/build/Makefile.in rpm-4.2.new/build/Makefile.in
 --- rpm-4.2/build/Makefile.in	2003-02-24 22:11:42.000000000 +0000
-+++ rpm-4.2.new/build/Makefile.in	2003-04-14 20:10:45.000000000 +0100
++++ rpm-4.2.new/build/Makefile.in	2003-04-14 22:27:30.000000000 +0100
 @@ -212,7 +212,6 @@
  	-I$(top_srcdir)/lib \
  	-I$(top_srcdir)/rpmdb \
@@ -130,6 +138,14 @@ diff -ur rpm-4.2/build/Makefile.in rpm-4.2.new/build/Makefile.in
  	@WITH_LIBELF_INCLUDE@ \
  	@INCPATH@
  
+@@ -232,6 +231,7 @@
+ 	parseSpec.c poptBT.c reqprov.c rpmfc.c spec.c
+ 
+ librpmbuild_la_LDFLAGS = -release @VERSION@ \
++	-L$(top_builddir)/lib/.libs \
+ 	$(top_builddir)/lib/librpm.la \
+ 	$(top_builddir)/rpmdb/librpmdb.la \
+ 	$(top_builddir)/rpmio/librpmio.la \
 diff -ur rpm-4.2/lib/Makefile.am rpm-4.2.new/lib/Makefile.am
 --- rpm-4.2/lib/Makefile.am	2003-01-01 17:46:14.000000000 +0000
 +++ rpm-4.2.new/lib/Makefile.am	2003-04-14 20:08:50.000000000 +0100
@@ -152,7 +168,7 @@ diff -ur rpm-4.2/lib/Makefile.am rpm-4.2.new/lib/Makefile.am
  	@echo expect 10 shift/reduce conflicts
 diff -ur rpm-4.2/lib/Makefile.in rpm-4.2.new/lib/Makefile.in
 --- rpm-4.2/lib/Makefile.in	2003-02-24 22:11:45.000000000 +0000
-+++ rpm-4.2.new/lib/Makefile.in	2003-04-14 20:10:46.000000000 +0100
++++ rpm-4.2.new/lib/Makefile.in	2003-04-14 22:27:30.000000000 +0100
 @@ -212,7 +212,6 @@
  	-I$(top_srcdir)/build \
  	-I$(top_srcdir)/rpmdb \
@@ -192,7 +208,7 @@ diff -ur rpm-4.2/python/Makefile.am rpm-4.2.new/python/Makefile.am
  LDADD =
 diff -ur rpm-4.2/python/Makefile.in rpm-4.2.new/python/Makefile.in
 --- rpm-4.2/python/Makefile.in	2003-02-24 22:11:45.000000000 +0000
-+++ rpm-4.2.new/python/Makefile.in	2003-04-14 20:10:46.000000000 +0100
++++ rpm-4.2.new/python/Makefile.in	2003-04-14 22:27:31.000000000 +0100
 @@ -221,7 +221,6 @@
  	-I$(top_srcdir)/rpmdb \
  	-I$(top_srcdir)/rpmio \
@@ -232,7 +248,7 @@ diff -ur rpm-4.2/rpmdb/Makefile.am rpm-4.2.new/rpmdb/Makefile.am
  librpmdb_la_LIBADD = $(DBLIBOBJS) $(DB3LOBJS)
 diff -ur rpm-4.2/rpmdb/Makefile.in rpm-4.2.new/rpmdb/Makefile.in
 --- rpm-4.2/rpmdb/Makefile.in	2003-02-24 22:11:47.000000000 +0000
-+++ rpm-4.2.new/rpmdb/Makefile.in	2003-04-14 20:10:47.000000000 +0100
++++ rpm-4.2.new/rpmdb/Makefile.in	2003-04-14 22:27:31.000000000 +0100
 @@ -212,7 +212,6 @@
  	-I$(top_srcdir)/lib \
  	-I$(top_srcdir)/rpmio \
@@ -306,7 +322,7 @@ diff -ur rpm-4.2/rpmio/Makefile.am rpm-4.2.new/rpmio/Makefile.am
  
 diff -ur rpm-4.2/rpmio/Makefile.in rpm-4.2.new/rpmio/Makefile.in
 --- rpm-4.2/rpmio/Makefile.in	2003-02-24 22:11:47.000000000 +0000
-+++ rpm-4.2.new/rpmio/Makefile.in	2003-04-14 20:10:47.000000000 +0100
++++ rpm-4.2.new/rpmio/Makefile.in	2003-04-14 22:27:31.000000000 +0100
 @@ -213,7 +213,6 @@
  
  INCLUDES = -I. \
