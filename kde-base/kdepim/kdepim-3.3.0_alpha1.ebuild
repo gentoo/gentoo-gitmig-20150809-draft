@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.3.0_alpha1.ebuild,v 1.1 2004/05/26 01:00:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.3.0_alpha1.ebuild,v 1.2 2004/06/14 08:17:51 lv Exp $
 
 inherit kde-dist
 
 DESCRIPTION="KDE PIM (Personal Information Management) apps: korganizer, kmail, knode..."
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="pda crypt ldap"
 
 DEPEND="~kde-base/kdenetwork-${PV}
