@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.3.ebuild,v 1.12 2003/10/22 16:42:43 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.3.ebuild,v 1.13 2003/11/08 16:17:06 todd Exp $
 
 # IMPORTANT
 #
@@ -18,7 +18,7 @@ DESCRIPTION="Basepack of plugins for gstreamer"
 HOMEPAGE="http://gstreamer.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc alpha amd64"
+KEYWORDS="x86 ppc sparc alpha amd64"
 
 # TODO : gconf support is also optional
 
