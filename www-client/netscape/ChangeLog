@@ -1,6 +1,9 @@
 # ChangeLog for www-client/netscape
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netscape/ChangeLog,v 1.1 2005/02/05 05:03:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netscape/ChangeLog,v 1.2 2005/02/12 16:10:41 usata Exp $
+
+  13 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> netscape-7.2.ebuild:
+  Corrected libnullplugin.so path. See bug #58410.
 
 *netscape-7.2 (05 Feb 2005)
 
