@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.31.ebuild,v 1.5 2003/12/06 02:44:29 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.31.ebuild,v 1.6 2004/01/28 22:39:01 zul Exp $
 
 NEWP=${P}-04Jun03
 S=${WORKDIR}/${NEWP}
@@ -44,18 +44,20 @@ src_compile() {
 		`use_enable readline`
 		`use_enable gnome`
 		`use_enable tcpd`
-		`use_enable mysql`
-		`use_enable sqlite`
 		`use_enable X x`
 		"
 	#not ./configure'able
 	#`use_enable ssl`
 
 	# mysql is the reccomended choice ...
-	if use mysql && use sqlite
+	if use mysql
 	then
-		#needs one or the either, nuke '--with-sqlite'
-		myconf=${myconf/--with-sqlite/}
+		myconf="${myconf} --with-mysql=/usr"
+	fi
+
+	if use sqlite
+	then
+		myconf="${myconf} --with-sqlite=/usr"
 	fi
 
 	./configure \

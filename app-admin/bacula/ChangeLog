@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/bacula
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.8 2003/12/06 02:44:29 zul Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.9 2004/01/28 22:39:01 zul Exp $
+
+  28 Jan 2004; Chuck Short <zul@gentoo.org> bacula-1.29.ebuild,
+  bacula-1.31.ebuild, metadata.xml:
+  Added metadata.xml
+  Updated headers
+  Fixed mysql issues when using mysql in USE. Closes #38547.
 
   05 Dec 2003; Chuck Short <zul@gentoo.org> bacula-1.29.ebuild,
   bacula-1.31.ebuild:
