@@ -1,6 +1,16 @@
 # ChangeLog for dev-lisp/cmucl-bin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/ChangeLog,v 1.2 2002/07/13 05:34:11 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/ChangeLog,v 1.3 2002/08/18 00:05:46 karltk Exp $
+
+*cmucl-bin-18d-r1 (18 Aug 2002)
+
+  18 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> cmucl-bin-18d-r1.ebuild files/digest-cmucl-bin-18d-r1:
+
+  Man pages are not installed properly. Renamed /usr/bin/cmucl to 
+  /usr/bin/lisp, to be legacy-compatible. This may change without notice in
+  the future! Fixes #6555.
+
+  Removed cmucl-bin-18d.ebuild files/digest-cmucl-bin-18d
 
 *cmucl-bin-18d (07 Jun 2002)
 
