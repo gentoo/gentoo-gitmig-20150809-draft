@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.13 2002/12/09 04:26:14 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.14 2002/12/11 20:54:41 lostlogic Exp $
+
+*nvidia-glx-1.0.4191 (11 Dec 2002)
+
+  11 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
+  New version thanks Nvidia. :)
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
