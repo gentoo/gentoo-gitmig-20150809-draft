@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.82 2004/12/28 12:22:35 lu_zero Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.83 2005/01/08 22:35:00 eradicator Exp $
+
+  08 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  transcode-0.6.14.ebuild:
+  Fix bug #75488 not filtering out some CFLAGS.
 
   28 Dec 2004; Luca Barbato <lu_zero@gentoo.org> transcode-0.6.11.ebuild:
   Backport fix from the .14

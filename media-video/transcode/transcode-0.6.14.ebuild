@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14.ebuild,v 1.3 2004/12/06 15:43:52 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14.ebuild,v 1.4 2005/01/08 22:35:00 eradicator Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -49,7 +49,7 @@ DEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	pvm? ( >=sys-cluster/pvm-3.4 )"
 
 src_compile() {
-	filter-flags "-maltivec -mabi=altivec -momit-leaf-frame-pointer"
+	filter-flags -maltivec -mabi=altivec -momit-leaf-frame-pointer
 	use ppc && append-flags -U__ALTIVEC__
 	# fix invalid paths in .la files of plugins
 	elibtoolize
