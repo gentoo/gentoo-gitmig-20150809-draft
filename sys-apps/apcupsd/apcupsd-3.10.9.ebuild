@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.5-r4.ebuild,v 1.4 2004/01/03 00:54:46 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.9.ebuild,v 1.1 2004/01/14 16:35:28 tantive Exp $
 
-IUSE="doc snmp usb"
+IUSE="doc snmp usb apache2"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
@@ -30,6 +30,10 @@ XPWRFAILDIR=${XSYSCONFDIR}
 src_unpack() {
 	unpack ${A}
 	cp -a ${WORKDIR}/gd1.2 ${S}/src/
+	cd ${S}/platforms/gentoo
+	epatch ${FILESDIR}/${PV}/apcupsd.in.patch
+	cd ${S}
+	epatch ${FILESDIR}/${PV}/ucd-snmp.patch
 }
 
 src_compile() {
@@ -54,8 +58,8 @@ src_compile() {
 		--enable-master-slave \
 		--enable-powerflute \
 		--enable-pthreads \
-		--with-css-dir=/home/httpd/apcupsd \
-		--with-cgi-bin=/home/httpd/apcupsd \
+		--with-css-dir=/var/www/apcupsd \
+		--with-cgi-bin=/var/www/apcupsd \
 		--enable-cgi \
 		${myconf} \
 		|| die
@@ -65,10 +69,19 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die "installed failed"
 
-	insinto /etc/apache/conf/addon-modules
-	newins ${FILESDIR}/${PV}/apache.conf apcupsd.conf
+	use apache2 || insinto /etc/apache/conf/addon-modules
+	use apache2 || newins  ${FILESDIR}/${PV}/apache.conf apcupsd.conf
+
+	use apache2 && insinto /etc/apache2/conf/modules.d
+	use apache2 && newins ${FILESDIR}/${PV}/apache.conf 60_apcupsd.conf
+
 	insinto /etc/apcupsd
 	newins examples/safe.apccontrol safe.apccontrol
+
+	cd ${D}/etc/apcupsd
+	epatch ${FILESDIR}/${PV}/smtp.patch
+
+	ln -s onbattery powerout
 
 	if [ "`use doc`x" != "x" ]
 	then
