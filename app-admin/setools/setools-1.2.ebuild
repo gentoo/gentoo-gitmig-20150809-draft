@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.2.ebuild,v 1.1 2004/02/06 04:48:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.2.ebuild,v 1.2 2004/02/07 05:45:20 pebenito Exp $
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
@@ -42,12 +42,17 @@ src_unpack() {
 	sed -i -e "s: policy-install::g" ${S}/seuser/Makefile
 
 	# fix up the file contexts
-	sed -i -e 's:local/selinux/::' -e 's:local/::' ${S}/policy/seuser.fc
+	sed -i -e 's:/usr/apol:/usr/lib/apol:' ${S}/policy/seuser.fc
 
 	# ensure install -Z isn't used
 	sed -i -e 's,-Z system_u:object_r:seuser_exec_t,,g' ${S}/seuser/Makefile
 	sed -i -e 's,-Z system_u:object_r:seuser_conf_t,,g' ${S}/seuser/Makefile
 	sed -i -e 's,-Z system_u:object_r:policy_src_t,,g' ${S}/seuser/Makefile
+
+	# set policy dir in seuser.conf
+	sed -i -e '/^policy_dir/d' -e '/^user_file/d' ${S}/seuser/seuser.conf
+	echo "policy_dir ${POLICYDIR}" >> ${S}/seuser/seuser.conf
+	echo "user_file ${POLICYDIR}/users" >> ${S}/seuser/seuser.conf
 }
 
 src_compile() {
