@@ -1,4 +1,4 @@
-# This file created automagically by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh on Tue May  7 02:52:39 CEST 2002
+# This file created automagically by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh on Wed May  8 02:42:24 CEST 2002
 
 # Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
 # System-wide defaults for the Portage system
@@ -12,7 +12,7 @@ slang  spell ssl svga tcltk tcpd truetype X xml2 xmms xv"
 
 # These lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
 #
-# $Id: make.defaults,v 1.6 2002/05/07 01:24:23 murphy Exp $
+# $Id: make.defaults,v 1.7 2002/05/08 01:12:44 murphy Exp $
 #
 # $Log: not supported by cvs2svn $
 # Revision 1.2  2002/04/18 21:06:28  murphy
