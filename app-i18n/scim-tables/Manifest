@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1e6ca25bc1b3cf14b1e5d78f7d8dc9b7 ChangeLog 3468
+MD5 1050ac5601c672dc5c1e7e5a3a25118e ChangeLog 3642
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 6f6c7fc11d1face73db14b301af9b4a3 scim-tables-0.5.0.ebuild 706
-MD5 87c9e84b5075e7f567623c503fd5f39a scim-tables-0.4.3.ebuild 709
+MD5 56899ef77b1cce60f19a66a1dce80b8c scim-tables-0.5.0.ebuild 705
+MD5 a9200544eab86c863efc203b5cbebe1e scim-tables-0.4.3.ebuild 757
 MD5 dcead7a42490a138eaa65cfa864ca4b8 files/digest-scim-tables-0.5.0 70
 MD5 816513805b8e99a3dd4971ced29413ff files/digest-scim-tables-0.4.3 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCDFdxVWNWqTUmv+0RAuNWAJwLNRnntHFBo1pjpATclULGg88AIQCguDCx
-uFUCxUmZNrRkaL261TdJM/Q=
-=NFIy
+iD8DBQFCNCwiVWNWqTUmv+0RAvSpAKCZes0UqywRjWawq5CW5RxL9AOM8wCeOo4q
+gl6kjLmGws3vfAS5NPIYRhE=
+=eG+e
 -----END PGP SIGNATURE-----
