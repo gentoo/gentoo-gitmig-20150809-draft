@@ -1,4 +1,6 @@
+MD5 8c968dbb16afff97a2cc90db32926cfa ChangeLog 1270
 MD5 5fa8d041e432db07defddfd1bdd83e2a findlib-0.8.ebuild 863
-MD5 55259ac3050c07a4903c57a13c6cffe9 ChangeLog 1061
 MD5 845dbbef4eb685e1bfd5f9e13a03f2b8 metadata.xml 225
+MD5 cd293136b5de1e2bd113915341382255 findlib-1.0.4.ebuild 1221
 MD5 71c0cb8388ce98236cf5c6f38d6703c1 files/digest-findlib-0.8 63
+MD5 0f67e24c7ecc9bad9281ccdf7e20f49f files/digest-findlib-1.0.4 65
