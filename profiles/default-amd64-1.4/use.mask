@@ -19,3 +19,5 @@ mmx
 sse
 sse2
 3dnow
+
+icc
