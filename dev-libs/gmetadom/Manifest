@@ -1,4 +1,6 @@
 MD5 689e66f92e382238fd3e56b6ef3df48e gmetadom-0.0.3-r3.ebuild 1609
-MD5 16d48c417435224e947de6882b74923b ChangeLog 566
+MD5 64fc16a85aa4a6976e29c803ebbc3341 gmetadom-0.1.8.ebuild 741
+MD5 b114da9a0c4f5500483ba34211ec1d42 ChangeLog 812
+MD5 61a42bb68511dea925d7f7860eb7027c files/digest-gmetadom-0.1.8 66
 MD5 7192830dc2daf239e593ee9d302af67e files/digest-gmetadom-0.0.3-r3 66
 MD5 07657f960b260c0ab18b3022b6c115a4 files/gmetadom-0.0.3-gcc3.diff 863

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/gmetadom
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.1 2003/04/18 06:37:42 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.2 2003/08/29 21:43:38 george Exp $
+
+*gmetadom-0.1.8 (29 Aug 2003)
+
+  29 Aug 2003; George Shapovalov <george@gentoo.org> gmetadom-0.1.8.ebuild :
+  new (much improved) version, ebuild haks no longer necessary (#27418)
+  thanks to Matsuu Takuto <matsuu@gentoo.org> for the submission
 
 *gmetadom-0.0.3-r3.ebuild (17 Apr 2003)
 
