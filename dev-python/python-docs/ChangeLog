@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.33 2004/05/30 21:32:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.34 2004/06/04 19:17:01 kloeri Exp $
+
+*python-docs-2.3.4 (04 Jun 2004)
+
+  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> +python-docs-2.3.4.ebuild:
+  Bump version.
 
   30 May 2004; Guy Martin <gmsoft@gentoo.org> python-docs-2.3.4_rc1.ebuild:
   Added ~hppa to satisfy depend with python.
