@@ -1,4 +1,4 @@
-MD5 948b94bc9e3e54d67f91af6ac4be4ef5 ChangeLog 522
-MD5 8f743617c9425d3b6efa2099f90970cb jmp-0.41.ebuild 750
+MD5 2e82324f249dfc617ca9e5a55509994e ChangeLog 651
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 59afa8037f1543394d9d512f566018cb files/digest-jmp-0.41 60
+MD5 90da9b0c7dbcb47aeebb93890aaf21d6 jmp-0.43.ebuild 742
+MD5 3bd5014c45cc1b4ef005e98a8af62bce files/digest-jmp-0.43 60
