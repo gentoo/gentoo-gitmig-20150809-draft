@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.36-r1.ebuild,v 1.10 2004/04/19 11:59:55 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.36-r1.ebuild,v 1.11 2004/04/21 06:23:59 phosphan Exp $
 
 inherit flag-o-matic eutils
 
@@ -52,7 +52,7 @@ src_compile() {
 		--enable-rpath \
 		--enable-lite-kernel || die "configure failed"
 
-	patch -p1 < ${FILESDIR}/kill-dvips.diff || die
+	epatch ${FILESDIR}/kill-dvips.diff
 	emake || die "emake failed"
 }
 
