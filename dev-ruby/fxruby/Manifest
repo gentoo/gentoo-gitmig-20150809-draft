@@ -1,10 +1,22 @@
-MD5 f715895d68c617694596a61319a1586d fxruby-1.0.25.ebuild 817
-MD5 616d8197fe8edc92e1c5e84a78967ad9 ChangeLog 2260
-MD5 6e0cdc92d72880a4dc0c2667b5722e43 fxruby-1.0.29.ebuild 894
-MD5 76d32ce390299a436ae41c805dc06ab5 fxruby-1.2.2.ebuild 873
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cf3777edc68370eabae49637eb8ccfc5 ChangeLog 2384
+MD5 70c3e44bbf58c14066f439eb6ee2d5c5 fxruby-1.0.25.ebuild 824
+MD5 678242cdf129fab0d3c799442f555d5a fxruby-1.0.28-r1.ebuild 904
+MD5 eab751ed35c49bf0d756d439740d7772 fxruby-1.2.4.ebuild 877
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 5d9d923d562a12d3716cc454de296b81 fxruby-1.0.28-r1.ebuild 897
+MD5 f99b78dcb11bebbd26086421353b57dc fxruby-1.0.29.ebuild 901
+MD5 321a37413e2bb2d7a2fa87bc2094dfb3 fxruby-1.2.2.ebuild 877
 MD5 5b8116570096e239322ab661fab4c28e files/digest-fxruby-1.0.25 66
+MD5 e69dad1f048449e87e84fd0b8d7346be files/digest-fxruby-1.0.29 66
 MD5 fa4e0faf89216ee5d3ff44cbcf81bb3e files/digest-fxruby-1.0.28-r1 66
 MD5 8f2fac03ecec32a91a0d64dd129d6f2c files/digest-fxruby-1.2.2 65
-MD5 e69dad1f048449e87e84fd0b8d7346be files/digest-fxruby-1.0.29 66
+MD5 9dc20936088985660c214685f4fa1c30 files/digest-fxruby-1.2.4 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCHlu8z2gxt1z4IGYRAqQoAJ0ZzhyUyTEwnWaqOk8nnv9YpE1raQCeKvVS
+t2QzMTVc11UjVRPLxKz7v7Q=
+=Dz8i
+-----END PGP SIGNATURE-----
