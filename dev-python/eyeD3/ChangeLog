@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.1 2004/08/30 20:56:42 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.2 2004/09/03 00:52:09 dholm Exp $
+
+  03 Sep 2004; David Holm <dholm@gentoo.org> eyeD3-0.6.2.ebuild:
+  Added to ~ppc.
 
 *eyeD3-0.6.2 (30 Aug 2004)
 
