@@ -1,10 +1,12 @@
 # ChangeLog for app-admin/gentoo-stats
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.13 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.14 2003/02/05 04:25:34 manson Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *gentoo-stats-0.4 (25 Oct 2002)
+
+  04 Feb 2003; Rodney Rees <manson@gentoo.org>: added ~sparc for testing
 
   25 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
   Changes in this release:
