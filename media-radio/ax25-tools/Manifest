@@ -1,3 +1,6 @@
+MD5 4ecb002d26296fdbfb28769c9f5d502c ChangeLog 539
+MD5 57d60778ef1206db71568cca69015710 ax25-tools-0.0.8.ebuild 576
+MD5 9b823bb642f3e8ce541f5f71405aa156 ax25-tools-0.0.8-r1.ebuild 1267
 MD5 93a20248f3e57dc0a669237393b4cf52 files/digest-ax25-tools-0.0.8 68
 MD5 efd5178c31a1c57b2c85cc31c1d8b139 files/ax25d.rc 504
 MD5 93a20248f3e57dc0a669237393b4cf52 files/digest-ax25-tools-0.0.8-r1 68
@@ -6,6 +9,3 @@ MD5 e927289dafea3f11d6d6694ed882ee05 files/netromd.rc 514
 MD5 669ac9c360374adabaecc2afce64ca32 files/rip98d.rc 509
 MD5 9ab1907e2ab93499d060f416a0a96f4b files/rxecho.rc 509
 MD5 a96b68c9af772435c1cc6509488cf950 files/ttylinkd.rc 519
-MD5 4ecb002d26296fdbfb28769c9f5d502c ChangeLog 539
-MD5 57d60778ef1206db71568cca69015710 ax25-tools-0.0.8.ebuild 576
-MD5 2dd755c7060fc474352574ec82f97298 ax25-tools-0.0.8-r1.ebuild 1268
