@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30.ebuild,v 1.18 2004/07/14 23:02:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30.ebuild,v 1.19 2004/08/03 07:38:13 lanius Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc alpha ia64 hppa ppc amd64"
 IUSE="doc"
 
-pkg_setup() {
+pkg_preinst() {
 	enewgroup fax
 	enewuser fax -1 /bin/false /dev/null fax
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.31 2004/06/24 22:29:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.32 2004/08/03 07:38:13 lanius Exp $
+
+  03 Aug 2004; Heinrich Wendel <lanius@gentoo.org> mgetty-1.1.28.ebuild,
+  mgetty-1.1.30-r1.ebuild, mgetty-1.1.30.ebuild:
+  fix new user adding, remove old ebuild
 
   18 May 2004; Mamoru KOMACHI <usata@gentoo.org> mgetty-1.1.28.ebuild,
   mgetty-1.1.30-r1.ebuild, mgetty-1.1.30.ebuild:
