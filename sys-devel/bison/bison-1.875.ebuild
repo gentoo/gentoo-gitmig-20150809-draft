@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.18 2004/04/27 12:07:03 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.19 2004/06/16 02:23:49 dragonheart Exp $
 
 inherit gcc flag-o-matic eutils
 
@@ -11,10 +11,12 @@ SRC_URI="mirror://gnu/bison/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
-IUSE="nls static"
+IUSE="nls static uclibc"
 
 DEPEND="sys-devel/m4
 	nls? ( sys-devel/gettext )"
+
+use uclibc && PROVIDE="dev-util/yacc"
 
 src_unpack() {
 	unpack ${A}
@@ -33,7 +35,7 @@ src_compile() {
 	# Bug 29017 says that bison has compile-time issues with
 	# -march=k6* prior to 3.4CVS.  Use -march=i586 instead 
 	# (04 Feb 2004 agriffis)
-	if [ $(gcc-major-version) == 3 ] && [ $(gcc-minor-version) < 4 ] ; then
+	if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -lt "4" ] ; then
 		replace-cpu-flags i586 k6 k6-1 k6-2
 	fi
 
@@ -54,7 +56,9 @@ src_install() {
 		install || die
 
 	# This one is installed by dev-util/yacc
-	mv ${D}/usr/bin/yacc ${D}/usr/bin/yacc.bison || die
+	if ! use uclibc; then
+		mv ${D}/usr/bin/yacc ${D}/usr/bin/yacc.bison || die
+	fi
 
 	# We do not need this.
 	rm -f ${D}/usr/lib/liby.a
