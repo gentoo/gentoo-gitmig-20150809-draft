@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.34 2005/03/11 01:15:51 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.35 2005/03/27 19:40:15 leonardop Exp $
+
+*gok-1.0.3 (27 Mar 2005)
+
+  27 Mar 2005; Leonardo Boshell <leonardop@gentoo.org> gok-1.0.3.ebuild:
+  New release.
 
 *gok-1.0.2 (10 Mar 2005)
 
