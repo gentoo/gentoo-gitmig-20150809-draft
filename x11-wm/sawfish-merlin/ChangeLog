@@ -1,6 +1,6 @@
-# ChangeLog for x11-wm/sawfish
+# ChangeLog for x11-wm/sawfish-merlin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/ChangeLog,v 1.6 2002/12/13 11:01:05 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/ChangeLog,v 1.7 2002/12/17 19:52:10 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
