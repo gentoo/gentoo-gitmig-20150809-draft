@@ -1,0 +1,23 @@
+--- mlmmj-1.0.0/src/mlmmj-sub.c     13 Sep 2004 23:01:32 -0000      1.22
++++ mlmmj-1.0.0/src/mlmmj-sub.c     14 Sep 2004 10:57:17 -0000
+@@ -313,5 +313,6 @@
+ 	off_t suboff;
+ 	struct stat st;
+ 	pid_t pid, childpid;
++	uid_t uid;
+
+ 	CHECKFULLPATH(argv[0]);
+
+--- mlmmj-1.0.0/src/mlmmj-sub.c     13 Sep 2004 23:01:32 -0000      1.22
++++ mlmmj-1.0.0/src/mlmmj-sub.c     14 Sep 2004 10:57:17 -0000
+@@ -371,7 +371,8 @@
+-		if(stat(listdir, &st) == 0) {
++		uid = getuid();
++		if(!uid && stat(listdir, &st) == 0) {
+ 			printf("Changing to uid %d, owner of %s.\n",
+ 					(int)st.st_uid, listdir);
+ 			if(setuid(st.st_uid) < 0) {
+ 				perror("setuid");
+ 				fprintf(stderr, "Continuing as uid %d\n",
+-						(int)getuid());
++						(int)uid);
