@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0.ebuild,v 1.4 2003/10/17 09:37:29 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r1.ebuild,v 1.1 2003/10/17 09:37:29 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -62,7 +62,7 @@ HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="gnome kde"
 
 RDEPEND=">=sys-libs/glibc-2.1
@@ -90,26 +90,17 @@ export LS_COLORS=""
 
 pkg_setup() {
 
-	if [ "$(gcc-version)" != "3.2" ]
+	if [ "$(gcc-version)" != "3.2" ] && [ "$(gcc-version)" != "3.3" ]
 	then
 		eerror
-		eerror "This build needs gcc-3.2.x, but due to profile"
+		eerror "This build needs gcc-3.{2,3}.x, but due to profile"
 		eerror "settings, it cannot DEPEND on it, so please merge it"
 		eerror "manually:"
 		eerror
 		eerror " #  ebuild ${PORTDIR}/sys-devel/gcc/gcc-3.2.1.ebuild merge"
 		eerror
 		eerror "Please make sure that you use the latest availible revision of"
-		eerror "gcc-3.2.  Thus if there is already a gcc-3.2.1-r2 out, use this"
-		eerror "rather than 3.2.1, etc."
-		eerror
-		eerror "As of writing, gcc-3.2.3-r1 seemed to create the most stable builds."
-		eerror "Also, because OO is such a complex build, ONLY gcc-3.2.3-r1 will be"
-		eerror "supported!"
-		eerror
-		eerror "This process is not highly recomended, as upgrading your compiler"
-		eerror "without upgrading your distribution can be detrimental to your "
-		eerror "installation of gentoo, unless you know what you're getting into"
+		eerror "gcc."
 		eerror
 		die
 	fi
@@ -267,6 +258,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/newstlportfix.patch
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/no-mozab.patch
+
+	epatch ${FILESDIR}/${PV}/nptl.patch
 
 	#The gcc-3.2.3 version in gentoo is fixed for the internal error that
 	#blocks compilation with it, so remove the check from the configure script

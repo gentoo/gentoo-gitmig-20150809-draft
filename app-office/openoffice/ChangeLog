@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.41 2003/10/10 18:47:27 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.42 2003/10/17 09:37:29 pauldv Exp $
+
+*openoffice-1.1.0-r1 (17 Oct 2003)
+
+  17 Oct 2003; Paul de Vrieze <pauldv@gentoo.org> openoffice-1.1.0-r1.ebuild,
+  openoffice-1.1.0.ebuild, files/1.1.0/nptl.patch:
+  Add cretin@gentoo.org's nptl patch. This should fix compilation on nptl
+  systems and 2.6.0 kernel systems. Further mark 1.1.0 stable.
 
   10 Oct 2003; Alexander Gabert <pappy@gentoo.org> openoffice-1.0.3-r1.ebuild:
   changed hardened-gcc flags
