@@ -1,5 +1,14 @@
 --- linux-2.6.0/include/asm-i386/byteorder.h	2003-07-10 21:11:31.000000000 +0100
 +++ linux-2.6.0/include/asm-i386/byteorder.h	2003-12-26 22:58:17.000000000 +0000
+@@ -1,6 +1,8 @@
+ #ifndef _I386_BYTEORDER_H
+ #define _I386_BYTEORDER_H
+ 
++#define __attribute_const__	__attribute__((__const__))
++
+ #include <asm/types.h>
+ #include <linux/compiler.h>
+ 
 @@ -43,13 +43,13 @@
  	} v;
  	v.u = val;
