@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/igrep
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/igrep/ChangeLog,v 1.5 2004/06/24 23:14:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/igrep/ChangeLog,v 1.6 2004/11/01 20:38:50 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  igrep-1.10.ebuild:
+  Marked ~ppc64; bug #67091
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> igrep-1.10.ebuild:
   Stable on alpha
