@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.6-r1.ebuild,v 1.1 2002/10/13 13:44:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.6-r1.ebuild,v 1.2 2002/10/14 02:56:36 seemant Exp $
 
 IUSE="ssl ldap sasl berkdb tcpd gdbm"
 
@@ -61,7 +61,6 @@ src_unpack() {
 	do
 		cat ${FILESDIR}/${file}.patch | patch -d ${S} -p1 || die "${file} patch failed"
 	done
-echo "blah"
 	patch -d ${S}/smrsh -p0 < ${FILESDIR}/${PF}-gentoo.diff
 
 	confCCOPTS="${CFLAGS}"
