@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.2.ebuild,v 1.1 2004/01/16 17:46:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.2.ebuild,v 1.2 2004/01/17 01:40:31 spider Exp $
 
 inherit gnome2 eutils
 
@@ -32,7 +32,9 @@ DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.11
 	>=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.21
+	dev-perl/XML-Parser
 	doc? ( >=dev-util/gtk-doc-0.9 )"
+# agh. ./configure check for XML::Parser.
 
 DOCS="AUTHORS COPYING* ChangeLog HACKING INSTALL NEWS README"
 
