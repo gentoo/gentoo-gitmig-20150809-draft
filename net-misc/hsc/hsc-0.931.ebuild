@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/hsc-0.929.ebuild,v 1.2 2003/12/12 06:39:47 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/hsc-0.931.ebuild,v 1.1 2003/12/12 06:39:47 george Exp $
 
 DESCRIPTION="An HTML preprocessor using ML syntax"
 HOMEPAGE="http://www.linguistik.uni-erlangen.de/~msbethke/software.html"
@@ -8,7 +8,7 @@ SRC_URI="http://www.linguistik.uni-erlangen.de/~msbethke/binaries/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 IUSE=""
 
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	gzcat ${FILESDIR}/Makefile.${PF}.patch.gz|patch -p1 Makefile || die "patch failed"
+	bzcat ${FILESDIR}/Makefile.${PF}.patch.bz2|patch -p1 Makefile || die "patch failed"
 }
 
 src_compile() {
