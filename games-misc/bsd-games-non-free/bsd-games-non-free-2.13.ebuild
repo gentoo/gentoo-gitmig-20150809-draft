@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.13.ebuild,v 1.6 2004/10/22 19:55:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.13.ebuild,v 1.7 2004/10/22 21:56:44 swegener Exp $
 
 inherit games
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.advogato.org/proj/bsd-games/"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/games/${P}.tar.gz"
 
 # See /usr/share/doc/${P}/COPYRIGHT.hack and CHANGES.rogue
-LICENSE="BSD | free-noncomm"
+LICENSE="|| ( BSD free-noncomm )"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""

@@ -1,7 +1,17 @@
-MD5 116fa56229e815621eafffb7368123f3 bsd-games-non-free-2.13.ebuild 1911
-MD5 e43d47eb21df0dd0abe5d28ea3b86ac8 ChangeLog 787
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2eabb58c102ebc330a89a072bb3acf28 ChangeLog 1011
+MD5 45e5ca2f66fa0d7cb94867ff4325e525 bsd-games-non-free-2.13.ebuild 1921
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 f791791f24963261fb91e227bc16e615 files/digest-bsd-games-non-free-2.13 75
-MD5 582347263c44f4dce3b7d0b7cd8f5cc8 files/config.params-gentoo 1232
 MD5 49c481f8746cf44f3fe40302e6ffd77e files/bsdgames-2.13-gentoo.diff 253
 MD5 81250dd8b2e30e4076c1e3de43f669ad files/bsdgames_2.13-11.diff 40228
+MD5 582347263c44f4dce3b7d0b7cd8f5cc8 files/config.params-gentoo 1232
+MD5 f791791f24963261fb91e227bc16e615 files/digest-bsd-games-non-free-2.13 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBeYImI1lqEGTUzyQRAvtzAKClk5QQv2WkRZASNtLNkmb4i5PWgwCgz2ZT
+smEKfbpA4WjNuCIe8cHNqB8=
+=Txyw
+-----END PGP SIGNATURE-----
