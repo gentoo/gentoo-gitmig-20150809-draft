@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/qscintilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.39 2005/03/06 23:21:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.40 2005/03/31 19:41:15 kloeri Exp $
+
+  31 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> qscintilla-1.61.ebuild:
+  Stable on alpha.
 
 *qscintilla-1.5.1 (07 Mar 2005)
 
