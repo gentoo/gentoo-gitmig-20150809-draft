@@ -1,11 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.0.0.ebuild,v 1.4 2004/07/21 07:01:47 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.0_beta11.ebuild,v 1.1 2004/07/21 07:01:47 st_lim Exp $
 
 inherit eutils
 
+MY_PV=${PV/_beta11/.beta.1.1}
+S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
-SRC_URI="http://www.nuclearelephant.com/projects/dspam/sources/${P}.tar.gz"
+SRC_URI="http://www.nuclearelephant.com/projects/dspam/sources/${PN}-${MY_PV}.tar.gz"
 HOMEPAGE="http://www.nuclearelephant.com/projects/dspam/index.html"
 LICENSE="GPL-2"
 
