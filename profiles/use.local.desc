@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.120 2003/09/19 17:58:46 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.121 2003/09/20 04:27:01 max Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -100,6 +100,7 @@ net-mail/courier:fax - Enables fax support in the courier mail server
 net-mail/exim:exiscan - Patch providing support for content scanning backward-compatability
 net-mail/exim:exiscan-acl - Patch providing support for content scanning
 net-mail/exim:lmtp - Adds support for lmtp
+net-mail/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
 net-mail/ssmtp:md5sum - Enables MD5 summing for ssmtp
 net-mail/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a plugin
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
