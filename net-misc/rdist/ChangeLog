@@ -1,11 +1,13 @@
 # ChangeLog for net-misc/rdist
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/ChangeLog,v 1.4 2003/02/12 08:31:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/ChangeLog,v 1.5 2003/09/08 16:44:30 avenj Exp $
+
+  08 Sep 2003; Jon Portnoy <avenj@gentoo.org> rdist-6.1.5.ebuild :
+  Changed ebuild to use bison instead of yacc. Fixes bug 24465.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *rdist-6.1.5 (04 Aug 2002)
 
-	04 Aug 2002; Aron Griffis <agriffis@gentoo.org> rdist-6.1.5.ebuild:
-
-	Initial ebuild for MagniComp's RDist.
+  04 Aug 2002; Aron Griffis <agriffis@gentoo.org> rdist-6.1.5.ebuild:
+  Initial ebuild for MagniComp's RDist.

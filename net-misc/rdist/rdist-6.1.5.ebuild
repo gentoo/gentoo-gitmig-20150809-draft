@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/rdist-6.1.5.ebuild,v 1.5 2003/02/13 15:05:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/rdist-6.1.5.ebuild,v 1.6 2003/09/08 16:44:30 avenj Exp $
 
 DESCRIPTION="Remote software distribution system"
 HOMEPAGE="http://www.magnicomp.com/rdist/rdist.shtml"
@@ -10,11 +10,11 @@ LICENSE="RDist"
 SLOT="1"
 KEYWORDS="x86 sparc "
 
-DEPEND="dev-util/yacc"
-RDEPEND=""  # yacc only needed for compile
+DEPEND="sys-devel/bison"
+RDEPEND=""  # bison only needed for compile
 
 src_compile() {
-	emake || die "emake failed"
+	emake YACC="bison -y" || die "emake failed"
 }
 
 src_install() {
