@@ -2,3 +2,6 @@
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
+
+# No apm support on ia64
+apm
