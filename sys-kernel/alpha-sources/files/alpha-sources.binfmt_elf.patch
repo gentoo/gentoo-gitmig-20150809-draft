@@ -1,0 +1,85 @@
+diff -ur linux-2.4.21/fs/binfmt_elf.c linux-2.4.21-plasmaroo/fs/binfmt_elf.c
+--- linux-2.4.21/fs/binfmt_elf.c	2004-08-14 18:15:42.000000000 +0100
++++ linux-2.4.21-plasmaroo/fs/binfmt_elf.c	2004-11-12 18:09:38.000000000 +0000
+@@ -299,9 +299,12 @@
+ 		goto out;
+ 
+ 	retval = kernel_read(interpreter,interp_elf_ex->e_phoff,(char *)elf_phdata,size);
+-	error = retval;
+-	if (retval < 0)
++	error = -EIO;
++	if (retval != size) {
++		if (retval < 0)
++			error = retval;	
+ 		goto out_close;
++	}
+ 
+ 	eppnt = elf_phdata;
+ 	for (i=0; i<interp_elf_ex->e_phnum; i++, eppnt++) {
+@@ -473,8 +476,11 @@
+ 		goto out;
+ 
+ 	retval = kernel_read(bprm->file, elf_ex.e_phoff, (char *) elf_phdata, size);
+-	if (retval < 0)
++	if (retval != size) {
++		if (retval >= 0)
++			retval = -EIO;
+ 		goto out_free_ph;
++	}
+ 
+ 	retval = get_unused_fd();
+ 	if (retval < 0)
+@@ -509,8 +515,14 @@
+ 			retval = kernel_read(bprm->file, elf_ppnt->p_offset,
+ 					   elf_interpreter,
+ 					   elf_ppnt->p_filesz);
+-			if (retval < 0)
++			if (retval != elf_ppnt->p_filesz) {
++				if (retval >= 0)
++					retval = -EIO;
+ 				goto out_free_interp;
++			}
++			/* make sure path is NULL terminated */
++			elf_interpreter[elf_ppnt->p_filesz - 1] = '\0';
++
+ 			/* If the program interpreter is one of these two,
+ 			 * then assume an iBCS2 image. Otherwise assume
+ 			 * a native linux image.
+@@ -529,8 +541,11 @@
+ 			if (IS_ERR(interpreter))
+ 				goto out_free_interp;
+ 			retval = kernel_read(interpreter, 0, bprm->buf, BINPRM_BUF_SIZE);
+-			if (retval < 0)
++			if (retval != BINPRM_BUF_SIZE) {
++				if (retval >= 0)
++					retval = -EIO;
+ 				goto out_free_dentry;
++			}
+ 
+ 			/* Get the exec headers */
+ 			interp_ex = *((struct exec *) bprm->buf);
+@@ -967,7 +982,10 @@
+ #endif
+ 
+ 			if (BAD_ADDR(error))
+-				continue;
++			{
++				send_sig(SIGKILL, current, 0);
++				goto out_free_dentry;
++			}
+ 
+ 			/* PaX: mirror at a randomized base */
+ 			down_write(&current->mm->mmap_sem);
+@@ -1008,7 +1026,10 @@
+ 		{
+ 			error = elf_map(bprm->file, load_bias + vaddr, elf_ppnt, elf_prot, elf_flags);
+ 			if (BAD_ADDR(error))
+-				continue;
++			{
++				send_sig(SIGKILL, current, 0);
++				goto out_free_dentry;
++			}
+ 		}
+ 
+ 		if (!load_addr_set) {
+
