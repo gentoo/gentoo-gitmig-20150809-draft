@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/gcc34/2004.3/v9a/make.defaults,v 1.1 2004/12/09 20:21:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/gcc34/2004.3/v9a/make.defaults,v 1.2 2004/12/09 20:36:16 eradicator Exp $
 
 ARCH="sparc"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -12,7 +12,7 @@ CHOST="sparc64-unknown-linux-gnu"
 PLATFORM="sparc64-unknown-linux-gnu"
 
 # Compiler flags
-CFLAGS="-O2 -pipe -mcpu=v9a -mtune=v9a"
+CFLAGS="-O2 -pipe -mcpu=v9 -mtune=v9 -Wa,-xarch=v9a"
 CXXFLAGS=${CFLAGS}
 
 # Misc
