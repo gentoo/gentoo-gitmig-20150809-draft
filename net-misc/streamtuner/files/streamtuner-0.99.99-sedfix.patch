@@ -1,0 +1,12 @@
+diff -ruN streamtuner-0.99.99.orig/docs/reference/Makefile.in streamtuner-0.99.99/docs/reference/Makefile.in
+--- streamtuner-0.99.99.orig/docs/reference/Makefile.in	2004-12-21 16:31:18.000000000 +0100
++++ streamtuner-0.99.99/docs/reference/Makefile.in	2004-12-30 00:13:13.599093728 +0100
+@@ -517,7 +517,7 @@
+ @ENABLE_GTK_DOC_TRUE@	rm -rf $(srcdir)/html 
+ @ENABLE_GTK_DOC_TRUE@	mkdir $(srcdir)/html
+ @ENABLE_GTK_DOC_TRUE@	cd $(srcdir)/html && gtkdoc-mkhtml $(DOC_MODULE) ../$(DOC_MAIN_SGML_FILE)
+-@ENABLE_GTK_DOC_TRUE@	sed -i "" -e \
++@ENABLE_GTK_DOC_TRUE@	sed -i -e \
+ @ENABLE_GTK_DOC_TRUE@		's/background: #ffeeee/background: #daffd1/g; \
+ @ENABLE_GTK_DOC_TRUE@		 s/border: solid 1px #ffaaaa/border: solid 1px #74ff54/g; \
+ @ENABLE_GTK_DOC_TRUE@		 s/background: #eeeeff/background: #feffde/g; \

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/streamtuner
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.21 2004/12/26 17:17:30 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.22 2005/01/30 08:55:17 eradicator Exp $
+
+  30 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/streamtuner-0.99.99-sedfix.patch, streamtuner-0.99.99.ebuild:
+  Fix sed statement in docs.  Closes bug #76014 thanks to tuXXer <bs.net@gmx.de>
 
 *streamtuner-0.99.99 (26 Dec 2004)
 

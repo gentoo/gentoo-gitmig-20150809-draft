@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99.ebuild,v 1.1 2004/12/26 17:17:30 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99.ebuild,v 1.2 2005/01/30 08:55:17 eradicator Exp $
 
 IUSE="xmms"
 
@@ -27,3 +27,10 @@ DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-sedfix.patch
+}
