@@ -1,3 +1,5 @@
 MD5 dc4942b8b7e8314e8258f2cb6465aecd gkwebmon-0.1b.ebuild 599
-MD5 ef5ccfcb4b2ccd465697fb2157cc765c ChangeLog 520
+MD5 b9ab2a109da215454d755f69ad3a82b1 gkwebmon-0.2.ebuild 599
+MD5 f3b9be111ca106eccf50ff1240a55ed5 ChangeLog 657
 MD5 e2d0f770ed50ef17fbeac6997d779f20 files/digest-gkwebmon-0.1b 64
+MD5 e3e58b3fad106069c8f4278c0ca12874 files/digest-gkwebmon-0.2 60
