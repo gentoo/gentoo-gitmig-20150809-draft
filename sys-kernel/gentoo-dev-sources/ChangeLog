@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.57 2004/04/16 08:38:14 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.58 2004/04/17 11:53:03 spock Exp $
+
+  17 Apr 2004; Michal Januszewski <spock@gentoo.org>
+  gentoo-dev-sources-2.6.4-r1.ebuild, gentoo-dev-sources-2.6.4.ebuild,
+  gentoo-dev-sources-2.6.5-r1.ebuild, gentoo-dev-sources-2.6.5.ebuild:
+  Updated the warning messages in ebuilds for 2.6.4 and 2.6.5 kernels. Closes
+  bug #47348.
 
   16 Apr 2004; Brian Harring <ferringb@gentoo.org> :
   Transfered mips's CAN-2004-0109 patch in, since it was missed in the previous

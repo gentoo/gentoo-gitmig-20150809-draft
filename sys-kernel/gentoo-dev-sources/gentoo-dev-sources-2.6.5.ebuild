@@ -28,9 +28,8 @@ pkg_postinst() {
 	ewarn "IMPORTANT:"
 	ewarn "ptyfs support has now been dropped from devfs and as a"
 	ewarn "result you are now required to compile this support into"
-	ewarn "the kernel. You can do so by enabling the following options"
-	ewarn "    Device Drivers -> Character devices  -> Unix98 PTY Support"
-	ewarn "    File systems   -> Pseudo filesystems -> /dev/pts filesystem."
+	ewarn "the kernel. You can do so by enabling the following option:"
+	ewarn "    Device Drivers -> Character devices -> Legacy (BSD) PTY Support."
 	echo
 	ewarn "If you choose to use UCL/gcloop please ensure you compile gcloop"
 	ewarn "without -fstack-protector."
