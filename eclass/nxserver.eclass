@@ -15,9 +15,7 @@ IUSE=""
 LICENSE="nomachine"
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc -alpha -mips"
-RESTRICT="mirror fetch nostrip"
-
-MY_PV="${PV}-72"
+RESTRICT="nomirror strip"
 
 SRC_URI="nxserver-${MY_PV}.i386.rpm"
 RDEPEND="$RDEPEND
@@ -26,11 +24,9 @@ RDEPEND="$RDEPEND
 		 >=sys-libs/zlib-1.1.4-r1
 		 >=x11-base/xfree-4.3.0-r2
 		 >=net-misc/openssh-3.6.1_p2
-		 >=dev-lang/perl-5.8.0-r12
-		 =net-misc/nxssh-1.2.2"
+		 >=dev-lang/perl-5.8.0-r12"
 
 DEPEND="$DEPEND
-	    >=net-misc/nxproxy-1.2.2
         >=sys-apps/shadow-4.0.3-r6
 		>=net-misc/openssh-3.6.1_p2"
 
@@ -70,7 +66,7 @@ nxserver_src_install() {
 	touch ${D}/usr/NX/var/sessions/NOT_EMPTY
 
 	insinto /etc/env.d
-	doins ${FILESDIR}/${PVR}/50nxserver
+	doins ${FILESDIR}/${PV}/50nxserver
 
 	fperms 0600 /usr/NX/etc/passwd
 }
