@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.131 2004/05/12 13:51:58 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.132 2004/05/19 06:34:23 phosphan Exp $
+
+*mplayer-1.0_pre4-r2 (19 May 2004)
+
+  19 May 2004; Patrick Kursawe <phosphan@gentoo.org>
+  mplayer-1.0_pre4-r2.ebuild, files/mga-kernel-2.6.patch:
+  Fixing bug #40616 (mga driver), little cleanups for the patch section.
 
   12 May 2004; Alexander Gabert <pappy@gentoo.org> mplayer-1.0_pre3-r5.ebuild,
   mplayer-1.0_pre4-r1.ebuild, mplayer-1.0_pre4.ebuild:
