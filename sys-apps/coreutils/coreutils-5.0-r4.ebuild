@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.8 2003/09/21 23:32:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.9 2003/09/21 23:40:43 azarah Exp $
 
 inherit eutils
 
@@ -75,8 +75,7 @@ src_compile() {
 	then
 		if [ -z "`use selinux`" ]
 		then
-			if [ -n "`which cvs 2>/dev/null`" ] && \
-			   [ -x "`which cvs 2>/dev/null`" ]
+			if [ -z "`which cvs 2>/dev/null`" ]
 			then
 				# Fix issues with gettext's autopoint if cvs is not installed,
 				# bug #28920.

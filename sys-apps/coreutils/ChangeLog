@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.34 2003/09/21 23:32:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.35 2003/09/21 23:40:43 azarah Exp $
+
+  22 Sep 2003; Martin Schlemmer <azarah@gentoo.org> coreutils-5.0-r4.ebuild:
+  Ok, was on crack there for a moment - the test for cvs was inverted, should be
+  fixed now.
 
   22 Sep 2003; Martin Schlemmer <azarah@gentoo.org> coreutils-5.0-r4.ebuild:
   Fix issues with gettext's autopoint if cvs is not installed (bug #28920).
