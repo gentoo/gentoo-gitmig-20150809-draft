@@ -1,17 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.4.ebuild,v 1.4 2002/10/05 05:39:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.4.ebuild,v 1.5 2002/11/30 01:40:58 vapier Exp $
 
-IUSE="gtk"
-
-S=${WORKDIR}/${PN}
-DESCRIPTION="Powertweak"
+DESCRIPTION="tune your kernel and hardware settings for optimal performance"
 SRC_URI="mirror://sourceforge/powertweak/${P}.tar.bz2"
-HOMEPAGE="http://powertweak.sourceforge.net"
+HOMEPAGE="http://powertweak.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc"
+IUSE="gtk"
 
 DEPEND="gtk? ( =x11-libs/gtk+-1.2* )
 	>=dev-libs/libxml-1.8.10
@@ -21,6 +19,8 @@ DEPEND="gtk? ( =x11-libs/gtk+-1.2* )
 RDEPEND=">=sys-apps/pciutils-2.1.0
 	gtk? ( =x11-libs/gtk+-1.2* )"
 
+S=${WORKDIR}/${PN}
+
 inherit libtool
 
 src_unpack() {
@@ -29,10 +29,10 @@ src_unpack() {
 	cd ${S} ; patch -l -p1 < ${FILESDIR}/${P}-gentoo.diff
 
 	for FILE in `find . -iname "Makefile*"`;do
+		cp ${FILE} ${FILE}.hacked
 		sed -e "s:\(^CFLAGS =.*\):\1 ${CFLAGS}:" \
 			-e "s:\(^CPPFLAGS =.*\):\1 ${CPPFLAGS}:" \
-			${FILE} > ${FILE}.hacked || die "Hack failed"
-		mv ${FILE}.hacked ${FILE}
+			${FILE}.hacked > ${FILE} || die "Hack failed"
 	done
 }
 
@@ -44,7 +44,7 @@ src_compile() {
 	CFLAGS="${CPPFLAGS} -Wno-error"
 	CPPFLAGS="${CPPFLAGS} -Wno-deprecated"
 
-	econf ${myconf} || die
+	econf ${myconf}
 	emake || die
 }
 
@@ -55,7 +55,7 @@ src_install() {
 	dodoc Documentation/* Documentation/Hackers/*
 
 	use gtk || rm ${D}/usr/bin/gpowertweak
-	
+
 	exeinto /etc/init.d ; newexe ${FILESDIR}/powertweakd.rc6 powertweakd
 }
 

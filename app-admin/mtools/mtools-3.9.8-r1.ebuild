@@ -1,13 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mtools/mtools-3.9.8-r1.ebuild,v 1.15 2002/10/20 18:14:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mtools/mtools-3.9.8-r1.ebuild,v 1.16 2002/11/30 01:37:27 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Mtools is a collection of utilities to access MS-DOS disks 
-from Unix without mounting them. It supports Win95 style long file names,..." 
+DESCRIPTION="utilities to access MS-DOS disks from Unix without mounting them"
 SRC_URI="http://mtools.linux.lu/mtools-3.9.8.tar.gz"
-HOMEPAGE="http://mtools.linux.lu"
-IUSE=""
+HOMEPAGE="http://mtools.linux.lu/"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -16,13 +13,12 @@ KEYWORDS="x86 ppc sparc sparc64"
 DEPEND="sys-apps/texinfo"
 
 src_compile() {
-	econf --sysconfdir=/etc/mtools || die
+	econf --sysconfdir=/etc/mtools
 	make || die
 }
 
-src_install () {
-	einstall \
-		sysconfdir=${D}/etc/mtools || die
+src_install() {
+	einstall sysconfdir=${D}/etc/mtools
 	insinto /etc/mtools
 	newins mtools.conf mtools.conf.example
 	dodoc COPYING ChangeLog NEWPARAMS README* Release.notes 

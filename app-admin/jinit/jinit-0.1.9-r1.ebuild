@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/jinit-0.1.9-r1.ebuild,v 1.10 2002/10/18 13:31:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/jinit-0.1.9-r1.ebuild,v 1.11 2002/11/30 01:28:59 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="An alternative to sysvinit which supports the need(8) concept"
 SRC_URI="http://homepage.ntlworld.com/john.fremlin/programs/linux/jinit/download/${P}.tar.gz"
 HOMEPAGE="http://homepage.ntlworld.com/john.fremlin/programs/linux/jinit/
@@ -11,19 +10,16 @@ HOMEPAGE="http://homepage.ntlworld.com/john.fremlin/programs/linux/jinit/
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
-IUSE=""
 
 DEPEND="virtual/glibc"
 RDEPEND=""
 
 src_compile() {
-
-	econf || die
+	econf
 	make || die
 }
 
-src_install () {
-
+src_install() {
 	make DESTDIR=${D} install || die
 	mv ${D}/usr/sbin ${D}
 	mv ${D}/sbin/init ${D}/sbin/jinit

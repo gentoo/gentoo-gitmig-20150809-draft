@@ -1,23 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.7 2002/11/17 05:37:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.8 2002/11/30 01:25:23 vapier Exp $
 
-# ${A}        - the tarball itself             eg:  ${PORTDIR}/distfiles/t.tgz
-# ${P}        - program name-program version   eg:  foo-1.0
-# ${PN}       - program name                   eg:  foo
-# ${PV}       - program version                eg:  1.0
-# ${D}        - /var/tmp/portage/foo-1.0/image -- install files go here
-# ${S}        - /var/tmp/portage/foo-1.0/work/${P}
-# ${WORKDIR}  - /var/tmp/portage/foo-1.0/work
-# ${FILESDIR} - Location of patches
-
-MY_P="ctcs-1.3.0pre4"
+MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="CTCS (Cerberus Test Control System) used to make sure that new systems are ready to go out and face the perils of the cold, hard world.  It's made up of a suite of programs that literally pound the system.  The tests are meant for hardware with nothing on it yet... you will lose data.  Not might.  Will.  Please read at least README.FIRST before attempting to use the Cerberus Test Control System as certain configurations of CTCS may damage your system."
-
-# Developer reference
-HOMEPAGE="http://sourceforge.net/projects/va-ctcs"
+HOMEPAGE="http://sourceforge.net/projects/va-ctcs/"
+SRC_URI="mirror://sourceforge/va-ctcs/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -46,7 +36,6 @@ RDEPEND="virtual/glibc
 # Optional: sys-apps/lm_sensors
 
 src_compile() {
-#	econf || die
 	emake || die
 }
 

@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.09a.ebuild,v 1.3 2002/10/05 05:39:05 drobbins Exp $
-
-IUSE="postgres mysql"
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.09a.ebuild,v 1.4 2002/11/30 01:32:38 vapier Exp $
 
 #lame upstream conventions...
 #archive:    msyslog-1.09a-src.tar.gz
@@ -13,18 +11,19 @@ DESCRIPTION="Flexible and easy to integrate syslog with modularized input/output
 HOMEPAGE="http://sourceforge.net/projects/msyslog/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
 
+SLOT="0"
+LICENSE="BSD"
+KEYWORDS="x86 sparc sparc64"
+IUSE="postgres mysql"
+
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}
 	mysql? ( >=dev-db/mysql-3.23 )
 	postgres? ( >=dev-db/postgresql-7 )"
 
-SLOT="0"
-LICENSE="BSD"
-KEYWORDS="x86 sparc sparc64"
-
 src_unpack() {
-	unpack ${A} || die
-	cd ${S} || die
+	unpack ${A}
+	cd ${S}
 	# fix paths for pidfile, config file, libdir, logdir...
 	patch -p1 <${FILESDIR}/${P}-gentoo.diff || die
 }
@@ -33,7 +32,7 @@ src_compile() {
 	local myconf
 	use mysql || myconf="${myconf} --without-mysql"
 	use postgres || myconf="${myconf} --without-pgsql"
-	econf --with-daemon-name=msyslogd ${myconf} || die
+	econf --with-daemon-name=msyslogd ${myconf}
 	emake || die
 }
 

@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.01.ebuild,v 1.10 2002/10/20 18:14:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.01.ebuild,v 1.11 2002/11/30 01:45:46 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Password Generator"
 SRC_URI="mirror://sourceforge/pwgen/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/pwgen/"
@@ -19,10 +18,10 @@ src_compile() {
 	sed -e 's:$(prefix)/man/man1:$(mandir)/man1:g' \
 		Makefile.in.new > Makefile.in
 
-	econf --sysconfdir=/etc/pwgen || die "./configure failed"
+	econf --sysconfdir=/etc/pwgen
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 }
