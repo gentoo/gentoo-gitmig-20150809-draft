@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/myster
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/myster/ChangeLog,v 1.1 2004/06/29 09:06:40 squinky86 Exp $
+
+*myster-8.0 (29 Jun 2004)
+
+  29 Jun 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +myster-8.0.ebuild:
+  Initial import. Thanks to Guillaume Marceau <gmarceau@cs.brown.edu> in #55486
+  for this ebuild.
+
