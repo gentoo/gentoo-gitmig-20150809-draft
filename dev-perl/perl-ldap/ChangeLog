@@ -1,0 +1,9 @@
+# ChangeLog for dev-perlperl-ldapChangeLog/
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.1 2002/09/22 18:07:26 g2boojum Exp $
+
+*perl-ldap-0.25 (22 Sep 2002)
+
+  22 Sep 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  new package
