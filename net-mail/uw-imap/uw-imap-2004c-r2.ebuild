@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004c-r2.ebuild,v 1.1 2005/02/11 14:03:08 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004c-r2.ebuild,v 1.2 2005/02/18 22:08:58 ferdy Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 MY_P="imap-${PV}1"
 S=${WORKDIR}/${MY_P}
@@ -25,6 +25,19 @@ DEPEND="!net-mail/vimap
 	>=net-mail/mailbase-0.00-r8
 	ssl? ( dev-libs/openssl )
 	kerberos? ( virtual/krb5 )"
+
+pkg_setup() {
+	# ewarn people not using pam with this file
+	if ! built_with_use net-mail/mailbase pam;
+	then
+		echo
+		ewarn "It is recommended to have the net-mail/mailbase package"
+		ewarn "  built with the pam use flag activated. Please rebuild"
+		ewarn "  net-mail/mailbase with pam activated."
+		echo
+		epause 3
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -144,9 +157,14 @@ src_install() {
 	# gentoo config stuff
 
 	## Those are now provided by mailbase
-	# insinto /etc/pam.d
-	# newins ${FILESDIR}/uw-imap.pam-system-auth imap
-	# newins ${FILESDIR}/uw-imap.pam-system-auth pop
+	#   but if mailbase didn't provide them, install needed files
+	if ! built_with_use net-mail/mailbase pam;
+	then
+		insinto /etc/pam.d
+		newins ${FILESDIR}/uw-imap.pam-system-auth imap
+		newins ${FILESDIR}/uw-imap.pam-system-auth pop
+	fi
+
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/uw-imap.xinetd  imap
 	newins ${FILESDIR}/uw-ipop2.xinetd ipop2
