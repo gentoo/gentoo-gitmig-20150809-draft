@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9_rc1.ebuild,v 1.1 2003/03/10 21:38:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9_rc3.ebuild,v 1.1 2003/03/23 17:32:34 mholzer Exp $
 
 inherit eutils
 
@@ -11,14 +11,14 @@ SRC_URI="http://fixounet.free.fr/avidemux/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 S="${WORKDIR}/${MY_P}"
 
 DEPEND="virtual/x11
 	>=media-sound/mad-0.14.2b-r2
-	>=media-sound/lame-3.93.1
-	<=media-sound/esound-0.2.29
+	>=media-sound/lame-3.93.1-r1
+	>=media-sound/esound-0.2.29
 	>=media-libs/libmpeg3-1.5-r1
 	>=media-libs/a52dec-0.7.4
 	>=media-libs/divx4linux-20020418-r1
@@ -26,10 +26,8 @@ DEPEND="virtual/x11
 	>=media-video/mjpegtools-1.6.0-r5"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
-
 }
 
 src_compile() {
