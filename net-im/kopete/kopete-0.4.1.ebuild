@@ -1,5 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.4.1.ebuild,v 1.5 2002/10/30 18:32:35 hannes Exp $
+
+IUSE=""
 
 inherit kde-base || die
 
