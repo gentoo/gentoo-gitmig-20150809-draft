@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux32/linux32-1.0.ebuild,v 1.2 2003/07/13 23:39:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux32/linux32-1.0.ebuild,v 1.3 2003/07/27 19:37:46 tester Exp $
 
 DESCRIPTION="A utility that allows AMD64 code to run in an environment so that the uname() call returns non-AMD64-specific info"
 HOMEPAGE="ftp://ftp.x86-64.org/pub/linux-x86_64/tools/linux32/"
 SRC_URI="mirror://${P}.tar.gz"
 SLOT="0"
-KEYWORDS="-* amd64"
+KEYWORDS="-* amd64 x86"
 LICENSE="GPL-2"
 
 src_compile() {
