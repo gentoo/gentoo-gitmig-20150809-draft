@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mac-fdisk/mac-fdisk-0.1-r1.ebuild,v 1.2 2004/04/27 21:14:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mac-fdisk/mac-fdisk-0.1-r1.ebuild,v 1.3 2004/05/29 02:49:41 tgall Exp $
 
 inherit eutils
 
@@ -21,7 +21,8 @@ src_unpack() {
 	mv mac-fdisk-${PV}.orig ${P}
 	cd ${S}
 	cat ${DISTDIR}/mac-fdisk_${PV}-${DEBRV}.diff.gz | gzip -dc | patch -p1 || die
-	 [ `use ppc64` ] && epatch ${FILESDIR}/mac-fdisk-ppc64.patch
+	[ `use ppc64` ] && epatch ${FILESDIR}/mac-fdisk-ppc64.patch
+	[ `use ppc64` ] && epatch ${FILESDIR}/mac-fdisk-ppc64-1.patch
 	cd ${WORKDIR}
 	chown -R 0:0 *
 	chmod -R a+r-w+X,u+w *
