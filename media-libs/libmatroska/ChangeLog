@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.31 2004/08/25 19:32:26 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.32 2004/09/25 19:27:14 weeve Exp $
+
+  25 Sep 2004; Jason Wever <weeve@gentoo.org> libmatroska-0.6.3.ebuild:
+  Stable on sparc.
 
 *libmatroska-0.7.3 (25 Aug 2004)
 
