@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.6 2004/06/28 19:34:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.7 2004/08/13 20:59:43 seemant Exp $
 
 aalib						media-libs/aalib	
 alsa						media-libs/alsa-lib
@@ -51,3 +51,4 @@ tetex						app-text/tetex
 tiff						media-libs/tiff
 ungif						media-libs/ungif
 X						x11-base/xfree
+bitmap-fonts

@@ -1,5 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.1/use.defaults,v 1.3 2004/06/26 23:29:25 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.1/use.defaults,v 1.4 2004/08/13 20:59:43 seemant Exp $
 
 #xinerama
+bitmap-fonts
