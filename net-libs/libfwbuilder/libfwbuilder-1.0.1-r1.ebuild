@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-1.0.1-r1.ebuild,v 1.4 2004/04/27 22:18:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-1.0.1-r1.ebuild,v 1.5 2004/06/10 20:09:46 agriffis Exp $
 
 inherit eutils
 
@@ -41,7 +41,7 @@ src_compile() {
 		`use_with ssl openssl`
 		${myconf} || die "./configure failed"
 
-	if [ "`use static`" ] ; then
+	if use static ; then
 		emake LDFLAGS="-static" || die "emake LDFLAGS failed"
 	else
 		emake || die "emake failed"
