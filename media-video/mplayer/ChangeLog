@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.177 2004/07/24 10:22:00 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.178 2004/07/24 16:25:24 eradicator Exp $
+
+  24 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mplayer-1.0_pre5-r2.ebuild:
+  Tested and marked stable for amd64 and x86.
 
 *mplayer-1.0_pre5-r2 mplayer-1.0_pre4-r7 (24 Jul 2004)
 
