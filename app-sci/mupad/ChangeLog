@@ -1,0 +1,11 @@
+# ChangeLog for app-sci/mupad
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mupad/ChangeLog,v 1.1 2003/05/12 01:14:29 george Exp $
+
+*mupad-2.5.2.ebuild (11 May 2003)
+
+  11 May 2003; George Shapovalov <george@gentoo.org> mupad-2.5.2.ebuild, files/{digest-mupad-2.5.2} :
+  initial release (#16862)
+  MuPAD is an open computer algebra system
+  ebuild submitted by Sourav Mandal <sourav@sourav.net>
+  note, this edition of MuPAD is free only for non-commercial use.
