@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.7 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.8 2002/12/21 00:35:38 avenj Exp $
+
+
+*busybox-0.60.5.ebuild (20 Dec 2002)
+   20 Dec 2002; Jon Portnoy <avenj@gentoo.org> busybox-0.60.5.ebuild :
+   Version bump.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
