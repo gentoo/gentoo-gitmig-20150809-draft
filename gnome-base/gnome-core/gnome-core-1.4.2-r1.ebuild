@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.2-r1.ebuild,v 1.7 2003/10/20 22:24:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.2-r1.ebuild,v 1.8 2004/02/06 16:46:00 gustavoz Exp $
 
 IUSE="kde nls cups"
 
@@ -9,7 +9,7 @@ inherit libtool gnome.org
 S=${WORKDIR}/${P}
 DESCRIPTION="Core components of the GNOME desktop environment"
 HOMEPAGE="http://www.gnome.org/"
-KEYWORDS="x86 ~ppc ~sparc alpha"
+KEYWORDS="x86 ~ppc sparc alpha"
 LICENSE="GPL-2"
 SLOT="0"
 
