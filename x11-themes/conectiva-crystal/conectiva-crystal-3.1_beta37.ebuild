@@ -8,6 +8,7 @@ SRC_URI="http://www.ibiblio.org/gentoo/distfiles/crystal-3.1_beta3.7.tar.gz"
 HOMEPAGE="http://www.conectiva.com.br"
 KEYWORDS="x86"
 SLOT="0"
+LICENSE="as-is"
 
 src_compile() {
 
