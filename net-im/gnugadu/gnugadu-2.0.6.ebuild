@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.0.6.ebuild,v 1.1 2004/09/08 17:09:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.0.6.ebuild,v 1.2 2004/10/02 18:15:36 spock Exp $
 
 IUSE="debug tlen esd oss xosd arts jabber perl spell"
 
@@ -25,7 +25,8 @@ DEPEND=">=x11-libs/gtk+-2.4.0
 	perl? ( dev-lang/perl dev-perl/XML-Parser )
 	arts? ( >=kde-base/arts-0.9.5 )
 	esd? ( media-sound/esound )
-	tlen? ( net-libs/libtlen )"
+	tlen? ( net-libs/libtlen )
+	spell? ( app-text/gtkspell )"
 
 src_unpack() {
 	unpack ${A}

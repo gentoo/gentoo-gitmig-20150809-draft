@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 414bd0688eb80cd101b7a03e4912f94c gnugadu-2.0.6.ebuild 1602
-MD5 fc76c64344343902fa4c6b2fd9cac62a gnugadu-2.0.5.ebuild 1602
-MD5 47574473507169515c09d2bcf0e366d7 ChangeLog 3305
+MD5 48b6807c40565fc72d0d87680e4f3f72 gnugadu-2.0.6.ebuild 1632
+MD5 ea08879e8af5698ce11c5202fc80781f gnugadu-2.0.5.ebuild 1632
+MD5 e953747cec00d0e867679db2fe87a68e ChangeLog 3481
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 8785333b8cac4f85424dd57b133ff275 files/digest-gnugadu-2.0.5 62
 MD5 fe366f7737ad55e66f707209f6617a08 files/digest-gnugadu-2.0.6 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBPz16chej4aZK9/cRAsw1AJ9SSUhicfG/96b90yExO1E4xCE/zwCfS4FZ
-4oaE8NGw3ufJl7JdAvq4ols=
-=YFE/
+iD8DBQFBXvBgchej4aZK9/cRAj3MAJ9sbH6fxosiv2UU8Td2KWh4UTMnkwCcCX4g
+ArEJF5deXj0lee7VEWJA7b8=
+=dfNr
 -----END PGP SIGNATURE-----
