@@ -15,4 +15,3 @@ arm	default-arm-1.4		stable
 hppa	default-hppa-1.4	stable
 amd64	default-amd64-1.4	stable
 ia64	default-ia64-1.4	stable
-x86obsd	default-x86obsd-1.4	stable
