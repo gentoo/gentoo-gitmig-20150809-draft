@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/crack-attack
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.6 2004/05/05 03:53:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.7 2004/06/12 00:49:40 mr_bones_ Exp $
+
+  11 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  crack-attack-1.1.10.ebuild, files/1.1.10-i865g.patch:
+  add patch from Guillaume Cottenceau via bug #53320
 
   04 May 2004; Michael Sterrett <mr_bones_@gentoo.org>
   crack-attack-1.1.10.ebuild, files/1.1.10-gcc34.patch:
