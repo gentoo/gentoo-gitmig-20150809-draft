@@ -12,7 +12,7 @@ DEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="GPL"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_unpack() {
 	unpack ${A}

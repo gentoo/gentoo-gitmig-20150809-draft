@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.0.2.ebuild,v 1.4 2002/07/16 03:23:14 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.0.2.ebuild,v 1.5 2002/08/14 13:05:59 murphy Exp $
 
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
@@ -12,7 +12,7 @@ CXXFLAGS="${CXXFLAGS} -g"
 
 
 SLOT="1"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text rendering and Layout library"

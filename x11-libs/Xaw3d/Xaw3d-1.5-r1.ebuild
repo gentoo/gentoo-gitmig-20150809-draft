@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.5 2002/07/22 13:57:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.6 2002/08/14 13:05:59 murphy Exp $
 
 # Ok, hopefully this will resolv the problem with the version of libXaw3d that
 # gets created.
@@ -26,7 +26,7 @@ SRC_URI="ftp://ftp.x.org/contrib/widgets/Xaw3d/R6.3/${P}.tar.gz
 #HOMEPAGE="http://"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 # There _might_ be something else, but I doubt it.
 DEPEND="virtual/x11"

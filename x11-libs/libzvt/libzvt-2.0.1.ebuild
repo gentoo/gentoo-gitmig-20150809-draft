@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.1.ebuild,v 1.3 2002/08/02 19:43:35 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.1.ebuild,v 1.4 2002/08/14 13:05:59 murphy Exp $
 
 inherit debug
 inherit libtool
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnome/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 RDEPEND=">=dev-libs/glib-2.0.3
 	>=x11-libs/gtk+-2.0.5

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.16.ebuild,v 1.2 2002/07/09 10:53:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.16.ebuild,v 1.3 2002/08/14 13:05:59 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Shared library implementing a Lisp dialect"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://librep.sourceforge.net/"
 SLOT="gtk-2.0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 # I think we should use gnome? ( ... ) and add "use gnome" with $myopts as rep-gtk
 # can be compiled without gnome support, no ?

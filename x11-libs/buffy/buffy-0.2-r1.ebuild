@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/buffy/buffy-0.2-r1.ebuild,v 1.6 2002/08/05 10:02:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/buffy/buffy-0.2-r1.ebuild,v 1.7 2002/08/14 13:05:59 murphy Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://reality.sgi.com/offer/src/buffy/"
 
 SLOT="0"
 LICENSE="X11"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 

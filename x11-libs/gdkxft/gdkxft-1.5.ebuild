@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gdkxft.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	virtual/x11

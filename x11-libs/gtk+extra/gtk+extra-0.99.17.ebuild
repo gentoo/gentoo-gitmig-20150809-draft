@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/gtk+extra-0.99.17.ebuild,v 1.5 2002/08/01 11:40:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/gtk+extra-0.99.17.ebuild,v 1.6 2002/08/14 13:05:59 murphy Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,7 @@ SRC_URI="http://gtkextra.sourceforge.net/src/${P}.tar.gz"
 HOMEPAGE="http://gtkextra.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 
