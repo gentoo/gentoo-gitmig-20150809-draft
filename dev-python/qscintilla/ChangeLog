@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/qscintilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.9 2003/06/16 10:27:21 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.10 2003/07/31 20:10:40 caleb Exp $
+
+  31 Jul 2003; Caleb Tennis <caleb@gentoo.org> qscintilla-1.53.ebuild:
+  Moved to x86 stable, and remove dep on any specific qt version.
 
 *qscintilla-1.53 (16 Jun 2003)
   16 Jun 2003; Michele Balistreri <brain@gentoo.org> qscintilla-1.53.ebuild :
