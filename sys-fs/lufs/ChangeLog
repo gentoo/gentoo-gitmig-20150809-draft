@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/lufs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.16 2004/09/03 19:16:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.17 2004/12/14 17:59:50 genstef Exp $
+
+*lufs-0.9.7-r3 (14 Dec 2004)
+
+  14 Dec 2004; Stefan Schweizer <genstef@gentoo.org> metadata.xml,
+  +files/lufs-0.9.7-enable-gnome-2.patch, +files/lufs-automount-port.diff,
+  +lufs-0.9.7-r3.ebuild:
+  Version bump, removing kernel layer in favour of lufis/fuse, only working
+  filesystems, closes Bug 67212
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   lufs-0.9.7-r2.ebuild:
