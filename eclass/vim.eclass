@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.65 2004/07/31 22:15:01 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.66 2004/09/01 03:30:29 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -213,6 +213,13 @@ src_compile() {
 		# the following command never returns:
 		#   VIMINIT='let OS=system("uname -s")' vim
 		#myconf="${myconf} `use_enable tcl tclinterp`"
+
+		# --with-features=huge forces on cscope even if we --disable it. We need
+			# to sed this out to avoid screwiness. (1 Sep 2004 ciaranm)
+		if ! use cscope ; then
+			sed -i -e '/# define FEAT_CSCOPE/d' src/feature.h || \
+				die "couldn't disable cscope"
+		fi
 
 		if [ ${PN} = vim ]; then
 			# don't test USE=X here... see bug #19115
