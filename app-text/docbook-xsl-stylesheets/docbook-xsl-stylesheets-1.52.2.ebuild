@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.45-r2.ebuild,v 1.3 2002/07/11 06:30:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.52.2.ebuild,v 1.1 2002/07/13 01:41:01 seemant Exp $
 
 S=${WORKDIR}/docbook-xsl-${PV}
 DESCRIPTION="XSL Stylesheets for Docbook"
@@ -8,6 +8,10 @@ SRC_URI="mirror://sourceforge/docbook/docbook-xsl-${PV}.tar.gz"
 HOMEPAGE="http://www.oasis-open.org/docbook/"
 
 DEPEND="dev-libs/libxml2"
+
+SLOT="0"
+LICENSE="as-is | BSD"
+KEYWORDS="x86"
 
 src_install() {
 	DEST="/usr/share/sgml/docbook/xsl-stylesheets-${PV}"
@@ -22,7 +26,7 @@ src_install() {
 		cp -af ${i} ${D}/${DEST} 
 		cd ${D}/${DEST}/${i}
 
-        	for j in ChangeLog LostLog README
+		for j in ChangeLog LostLog README
 		do
 			if [ -e ${j} ]
 			then
@@ -46,16 +50,16 @@ pkg_postinst() {
 	/usr/bin/xmlcatalog --noout --create $CATALOG
 	
 	/usr/bin/xmlcatalog --noout --add "rewriteSystem" \
-        	"http://docbook.sourceforge.net/release/xsl/1.45" \
-        	"/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
+		"http://docbook.sourceforge.net/release/xsl/1.45" \
+		"/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
 	/usr/bin/xmlcatalog --noout --add "rewriteURI" \
-        	"http://docbook.sourceforge.net/release/xsl/1.45" \
-	        "/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
+			"http://docbook.sourceforge.net/release/xsl/1.45" \
+			"/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
 	/usr/bin/xmlcatalog --noout --add "rewriteSystem" \
-        	"http://docbook.sourceforge.net/release/xsl/current" \
-	        "/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
+			"http://docbook.sourceforge.net/release/xsl/current" \
+			"/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
 	/usr/bin/xmlcatalog --noout --add "rewriteURI" \
-        	"http://docbook.sourceforge.net/release/xsl/current" \
-	        "/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
+			"http://docbook.sourceforge.net/release/xsl/current" \
+			"/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG
 
 }
