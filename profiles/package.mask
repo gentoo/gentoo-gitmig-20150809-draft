@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# mjc@gentoo.org (17 Jul 2002)
+# New wine release, masked for testing and to wait for winesetuptk fix.
+>=app-emulation/wine-20020710
+
 # raker@gentoo.org (16 Jul 2002)
 # libwmfun completes compiling but doesn't appear to support PLDrawString
 # functions correctly.  Masking while incompatible pointers are figured out
