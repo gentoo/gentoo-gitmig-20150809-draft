@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.11 2003/10/18 21:18:30 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.12 2003/10/19 17:26:47 zhen Exp $
+
+*genkernel-2.0 (19 Oct 2003)
+
+  19 Oct 2003; zhen <zhen@gentoo.org> genkernel-2.0.ebuild:
+  2.0 is the testing only ebuild for 2.6 support. Adding into the tree.
 
   18 Oct 2003; zhen <zhen@gentoo.org> files/bin-keymaps.tar.gz:
   moving some source around - bin-keymaps will be added in here instead of being
