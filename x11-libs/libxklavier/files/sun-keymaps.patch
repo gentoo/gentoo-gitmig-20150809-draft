@@ -1,0 +1,24 @@
+diff -Nura libxklavier-1.00/libxklavier/xklavier_config_xkb.c libxklavier-1.00.sun/libxklavier/xklavier_config_xkb.c
+--- libxklavier-1.00/libxklavier/xklavier_config_xkb.c	2004-01-20 20:28:22.000000000 -0300
++++ libxklavier-1.00.sun/libxklavier/xklavier_config_xkb.c	2004-03-23 11:56:10.000000000 -0300
+@@ -16,16 +16,16 @@
+ #include <X11/extensions/XKM.h>
+ #endif
+ 
+-#define RULES_FILE "xfree86"
++#define RULES_FILE "sun"
+ 
+ #define RULES_PATH ( XKB_BASE "/rules/" RULES_FILE )
+ 
+-#define XML_CFG_PATH ( XKB_BASE "/rules/xfree86.xml" )
++#define XML_CFG_PATH ( XKB_BASE "/rules/sun.xml" )
+ 
+ // For "bad" X servers we hold our own copy
+-#define XML_CFG_FALLBACK_PATH ( DATA_DIR "/xfree86.xml" )
++#define XML_CFG_FALLBACK_PATH ( DATA_DIR "/sun.xml" )
+ 
+-#define MULTIPLE_LAYOUTS_CHECK_PATH ( XKB_BASE "/symbols/pc/en_US" )
++#define MULTIPLE_LAYOUTS_CHECK_PATH ( XKB_BASE "/symbols/sun/us" )
+ 
+ #define XK_XKB_KEYS
+ #include <X11/keysymdef.h>
