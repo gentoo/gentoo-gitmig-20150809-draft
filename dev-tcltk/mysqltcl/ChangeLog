@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/mysqltcl
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/ChangeLog,v 1.4 2004/04/04 21:56:41 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/ChangeLog,v 1.5 2004/04/14 11:32:38 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> mysqltcl-2.40.ebuild:
+  Added IUSE
 
 *mysqltcl-2.50 (04 Apr 2004)
 

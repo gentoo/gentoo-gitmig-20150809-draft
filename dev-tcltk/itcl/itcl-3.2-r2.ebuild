@@ -1,10 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.2-r2.ebuild,v 1.15 2004/04/05 04:17:12 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.2-r2.ebuild,v 1.16 2004/04/14 11:32:38 aliz Exp $
+
+inherit eutils
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
-
+IUSE=""
 DESCRIPTION="Object Oriented Enhancements for Tcl/Tk"
 SRC_URI="http://dev.scriptics.com/ftp/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.tcltk.com/itcl/"

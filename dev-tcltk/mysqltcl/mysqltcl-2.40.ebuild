@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/mysqltcl-2.40.ebuild,v 1.2 2004/04/04 21:56:41 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/mysqltcl-2.40.ebuild,v 1.3 2004/04/14 11:32:38 aliz Exp $
 
 DESCRIPTION="TCL MySQL Interface"
 HOMEPAGE="http://www.xdobry.de/mysqltcl/"
 SRC_URI="http://www.xdobry.de/mysqltcl/${P}.tar.gz"
-
+IUSE=""
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"

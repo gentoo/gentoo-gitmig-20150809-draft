@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/itcl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.14 2004/04/04 22:16:25 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.15 2004/04/14 11:32:38 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> itcl-3.2-r2.ebuild,
+  itcl-3.2.1-r1.ebuild:
+  Inherit eutils, added IUSE=
 
   04 Apr 2004; Chris Aniszczyk <zx@gentoo.org> itcl-3.2-r2.ebuild,
   itcl-3.2.1-r1.ebuild, itcl-3.2.1.ebuild, metadata.xml:

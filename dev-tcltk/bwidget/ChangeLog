@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/bwidget
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.6 2004/04/04 21:51:29 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.7 2004/04/14 11:32:38 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> bwidget-1.4.1.ebuild:
+  Added IUSE=
+
+*bwidget-1.7.0 (04 Apr 2004)
 
   04 Apr 2004; Chris Aniszczyk <zx@gentoo.org> :
   Version bump. Added metadata.xml.

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3-r1.ebuild,v 1.7 2004/03/13 09:53:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3-r1.ebuild,v 1.8 2004/04/14 11:32:38 aliz Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 IUSE="X"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclxml-expat
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml-expat/ChangeLog,v 1.5 2004/04/04 22:58:16 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml-expat/ChangeLog,v 1.6 2004/04/14 11:32:38 aliz Exp $
+
+  14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> tclxml-expat-2.4.ebuild:
+  Added IUSE=
 
 *tclxml-expat-2.6 (04 Apr 2004)
 

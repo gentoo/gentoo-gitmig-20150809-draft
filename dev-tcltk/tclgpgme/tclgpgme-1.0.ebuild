@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/tclgpgme-1.0.ebuild,v 1.6 2004/01/15 03:57:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/tclgpgme-1.0.ebuild,v 1.7 2004/04/14 11:32:38 aliz Exp $
 
 inherit eutils
 
 DESCRIPTION="Tcl/Tk libraries to gpgme."
 HOMEPAGE="http://beepcore-tcl.sourceforge.net/"
 SRC_URI="http://beepcore-tcl.sourceforge.net/${P}.tgz"
-
+IUSE=""
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 alpha"
