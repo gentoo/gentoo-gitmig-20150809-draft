@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 336d7e017f22bdd50df330a53597c17f ChangeLog 3639
-MD5 6e88f2af334172d796b3f9e15aa46763 manpages-ja-20040415.ebuild 1820
-MD5 810551da4db8279cd210c31c87da4e42 manpages-ja-20040615.ebuild 1878
-MD5 ab36b3d047ad7c57102524d4ddca1d58 manpages-ja-20040315.ebuild 1819
+MD5 2174b88c427c2a4180507445456da3d0 manpages-ja-20040415.ebuild 1814
+MD5 497ed10411977dfd61529d9d684a8fe9 manpages-ja-20040615.ebuild 1871
 MD5 475629439c6cc71bc10ec394f4da68cf metadata.xml 566
+MD5 440cc1f22128d6f38056fd73f3317448 manpages-ja-20040315.ebuild 1811
 MD5 75215fb4a3f1d57852e804e9ad6449c2 files/digest-manpages-ja-20040415 153
 MD5 fe1ea41c6d263adba6232159b147770c files/digest-manpages-ja-20040615 154
 MD5 c79ac537f5d0ad206c229185712d6e33 files/digest-manpages-ja-20040315 153
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA33plHTu7gpaalycRAjboAKCi7KnnVHNq1YU9IZy9wULpZPZThwCg87Qv
+7PnZ7/jdO1dcQUybnLnwz6c=
+=qtZY
+-----END PGP SIGNATURE-----

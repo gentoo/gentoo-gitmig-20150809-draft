@@ -1,4 +1,14 @@
-MD5 d8c3f745b0e3f9c795cf1bad6994e38a kakasi-2.3.4.ebuild 725
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7fa7149aff7d4069043c61d9791d456b ChangeLog 582
+MD5 f1c2f54e0ea659c56f30ea7b121492df kakasi-2.3.4.ebuild 676
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 bff86d8003cf523b0b80675f149efcf8 files/digest-kakasi-2.3.4 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA33j0HTu7gpaalycRAhKpAKCFNdgWo/FkvtHAaYFHpYakb+oonwCeLshA
+EoBvMjE1hBRmnHGwPuE/o2A=
+=OTW9
+-----END PGP SIGNATURE-----

@@ -1,12 +1,22 @@
-MD5 01e9ef06857c49659b5b8630ad4d8002 freewnn-1.1.1_alpha17.ebuild 1551
-MD5 c31d08a2e10e68aa4c9eaae15f675e66 freewnn-1.1.1_alpha20.ebuild 1336
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 85178fa99e5aadbfd0288f1db13da43c ChangeLog 2306
+MD5 62bc63f44df993b21e0382fa14bc9cc3 freewnn-1.1.1_alpha20.ebuild 1333
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 26f2f4f4d23f76e26254c9d074e3e75a files/digest-freewnn-1.1.1_alpha17 71
+MD5 ad1b5c28b737b4cd9bc7b5d3b8d23900 freewnn-1.1.1_alpha17.ebuild 1547
 MD5 a67e6df6683b65c8912a11446a1c1240 files/digest-freewnn-1.1.1_alpha20 72
 MD5 9ef81b34a1fb16dd2b5c6f717913cb9e files/freewnn.initd 296
-MD5 a24127af4d21ec364c841cc06b37411a files/a017/FreeWnn-sighandler.patch 876
+MD5 26f2f4f4d23f76e26254c9d074e3e75a files/digest-freewnn-1.1.1_alpha17 71
 MD5 8b54a21960c4499a862294bac020848b files/a017/FreeWnn-1.1.1-a017.dif 19564
 MD5 d7f8705d389f74cb64218fe0ff512be5 files/a017/FreeWnn-lib64.patch 479
 MD5 96c9b5198682f09611b2ec0dbeddbce3 files/a017/FreeWnn-s390x.patch 7099
+MD5 a24127af4d21ec364c841cc06b37411a files/a017/FreeWnn-sighandler.patch 876
 MD5 7db8085bf871d6445f549b015b7217a9 files/a017/FreeWnn-uum.patch 1983
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA33f2HTu7gpaalycRAtxvAKC0C2hXjiAipJnQDdXz2mCRIHzFqgCgxlbd
+ciuKlUYDBsPFZ+YIYmLTncQ=
+=DZzK
+-----END PGP SIGNATURE-----

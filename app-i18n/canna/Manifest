@@ -1,17 +1,27 @@
-MD5 c6f9aa6b4dad75bdcd7689bf8128296e canna-3.7_p1.ebuild 3444
-MD5 2060f92df6835bd38a99cd689b1455ed canna-3.6_p4.ebuild 2889
-MD5 6a36ed8c6673ea787d4e2adfa9a56589 canna-3.7.ebuild 3429
-MD5 4e6d3dccc93f471ac405b88c3e7032fe canna-3.7_p2.ebuild 3371
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7fb40a261570014e956d764fe78551f9 ChangeLog 6700
+MD5 bf0514f31ad4dd77b5e7eb6fbce2bde1 canna-3.6_p4.ebuild 2880
+MD5 eb0508d2ef5de9f690bb1ed57d28d719 canna-3.7.ebuild 3418
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 9d8c84805868b02a0ba084b1683e772f files/canna.confd 305
-MD5 d60168a33fd321ad1a29382cafcb60d3 files/canna.hosts 5
-MD5 9b51fe7a511b778d4ac662b66df58880 files/canna.initd 1004
+MD5 ba6b61480805ed528d5f1866c281b887 canna-3.7_p1.ebuild 3433
+MD5 c749685c6bb8f4f25e7a99169630bc95 canna-3.7_p2.ebuild 3360
 MD5 d77588a06485914d6bab3aab2a1985fb files/canna-3.6_p4-gentoo.diff 5587
-MD5 0d09a45d1074f9f4801a48bf8ec3208a files/update-canna-dics_dir 1101
 MD5 2b13f6b61d303f6bf273a325ff3bc411 files/canna-3.7-gentoo.diff.in 5263
-MD5 167b6b59b36ffe7d7ebda5ddd85c930a files/digest-canna-3.7 61
-MD5 c48de658742361ca5549edaddebb3e94 files/digest-canna-3.6_p4 62
+MD5 d817072e9bb7181804fdde1b52427a3f files/canna-kpdef-gentoo.diff 255
+MD5 248b68ec823c14f763cc3f62221fb7d7 files/canna.confd 306
+MD5 d60168a33fd321ad1a29382cafcb60d3 files/canna.hosts 5
+MD5 67ba430259be85b8791dac27115538b0 files/canna.initd 1005
 MD5 928c920864a62989dc12b294fa01aac5 files/digest-canna-3.7_p1 63
 MD5 300a4fe937c6c06bda8fe832906b672c files/digest-canna-3.7_p2 63
-MD5 d817072e9bb7181804fdde1b52427a3f files/canna-kpdef-gentoo.diff 255
+MD5 c48de658742361ca5549edaddebb3e94 files/digest-canna-3.6_p4 62
+MD5 167b6b59b36ffe7d7ebda5ddd85c930a files/digest-canna-3.7 61
+MD5 0d09a45d1074f9f4801a48bf8ec3208a files/update-canna-dics_dir 1101
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA33doHTu7gpaalycRAlK+AJ9FgskMgghKvUCBp3YLI5hYsrE78gCeNO+4
++rfcAYm5BUdziDSFEokMNDc=
+=WE8O
+-----END PGP SIGNATURE-----

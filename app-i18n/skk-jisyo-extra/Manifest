@@ -1,8 +1,18 @@
-MD5 947b5dbe7c6308a88d7cbd680c97d5fb skk-jisyo-extra-200401.ebuild 1019
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 24328ec23e11422d5e76ad671bc85bc5 ChangeLog 2380
-MD5 624384494c7a9704cd2bc2d90b1bdb3e skk-jisyo-extra-200310.ebuild 1025
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 089a79378d3f9f455aff0b524b070230 skk-jisyo-extra-200404.ebuild 1019
+MD5 8109c422d93875b53e9de180ed610e9a skk-jisyo-extra-200404.ebuild 1010
+MD5 3a88b536752e5376db7de65013b48f77 skk-jisyo-extra-200310.ebuild 1015
+MD5 26bf926871b91f13d7348511acf93d36 skk-jisyo-extra-200401.ebuild 1010
+MD5 7636bb1e25fc642bfe7e910fd3768807 files/digest-skk-jisyo-extra-200404 75
 MD5 65ebae5f288b23febcfe2cc04b99b40b files/digest-skk-jisyo-extra-200310 75
 MD5 9063486b508292b6a5b83da6e0f057d8 files/digest-skk-jisyo-extra-200401 75
-MD5 7636bb1e25fc642bfe7e910fd3768807 files/digest-skk-jisyo-extra-200404 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA33yUHTu7gpaalycRApWVAJ0SjufgSNAP07zwkjn1O0+P0ZgyAQCcC1Uh
+zGYUNGMLHN98M2sj8caioqQ=
+=wvuH
+-----END PGP SIGNATURE-----

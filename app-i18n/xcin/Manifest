@@ -1,14 +1,24 @@
-MD5 2923ab736d8fc257b92d4ea1dde72f9b xcin-2.5.3_pre3.ebuild 1689
-MD5 6e0a75004077f669a871415ed75c19a5 xcin-2.5.3_pre2.ebuild 1533
-MD5 73e5ddeb3afd67f9ecc01da8f5d6d123 xcin-2.5.2.3.ebuild 1014
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ed1bd0fc43e505a440167f394c3a3986 ChangeLog 1378
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 45a11282435d9bb690c2e388324c7c82 xcin-2.5.2.3.ebuild 1012
+MD5 6e0a75004077f669a871415ed75c19a5 xcin-2.5.3_pre2.ebuild 1533
+MD5 2923ab736d8fc257b92d4ea1dde72f9b xcin-2.5.3_pre3.ebuild 1689
 MD5 698d94bfd746092fb8e1eda636dba660 files/digest-xcin-2.5.2.3 65
 MD5 5aced2b4a30907127ff8090d320e0f8e files/digest-xcin-2.5.3_pre2 147
-MD5 e7e5e0b30c75b104c2335d6d9c4c1729 files/digest-xcin-2.5.3_pre3 83
-MD5 6e5bc36880a6b30cee3b3670725cb85b files/xcin-2.5.3_pre2-db3.patch 439
-MD5 6e5bc36880a6b30cee3b3670725cb85b files/xcin-db3.patch 439
 MD5 ef91a9aa450278758e82e712b3296141 files/gentoo-xcinrc 7927
-MD5 aff10d274d928e8d522824906fed2cf1 files/xcin-chewing.diff 14766
+MD5 6e5bc36880a6b30cee3b3670725cb85b files/xcin-2.5.3_pre2-db3.patch 439
+MD5 e7e5e0b30c75b104c2335d6d9c4c1729 files/digest-xcin-2.5.3_pre3 83
 MD5 31ddfe2e1c6e6354ab2dec0a41d28bdf files/xcin-2.5.2.3-gentoo.patch 1535
 MD5 3cff29c7fef9ace734719fe5434e43c1 files/xcin-2.5.3_pre2-gentoo.patch 468
+MD5 aff10d274d928e8d522824906fed2cf1 files/xcin-chewing.diff 14766
+MD5 6e5bc36880a6b30cee3b3670725cb85b files/xcin-db3.patch 439
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA331lHTu7gpaalycRAgfCAJ4+t4xAJQ8f7S+TKr+jSOMJ0qGvjwCgvZEd
+mhnHGVNlfNbFKMwdGQTkiTo=
+=jLZX
+-----END PGP SIGNATURE-----

@@ -1,9 +1,19 @@
-MD5 752599149827f5601d4d370361acd7cb xsim-0.3.9.4-r2.ebuild 1654
-MD5 12bafa41f9990c677ff508f23816eb0e xsim-0.3.9.4-r1.ebuild 1788
-MD5 79bb82a7ebf0cace02e17d5477898963 xsim-0.3.9.4.ebuild 1253
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f6f763126a4c7f13ca9ff7678aaf4a32 ChangeLog 993
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 393ef162b504a14738a76facef3fb972 xsim-0.3.9.4-r1.ebuild 1784
+MD5 560f9680af4ad6527d1a16455a853048 xsim-0.3.9.4-r2.ebuild 1650
+MD5 e924b34f248cc5a9c75e0de7b5f4b689 xsim-0.3.9.4.ebuild 1249
+MD5 b09020ab653fd5cd1b693e3def773f0b files/digest-xsim-0.3.9.4 65
 MD5 b09020ab653fd5cd1b693e3def773f0b files/digest-xsim-0.3.9.4-r1 65
 MD5 b09020ab653fd5cd1b693e3def773f0b files/digest-xsim-0.3.9.4-r2 65
 MD5 922ec332bf51c73ead1e3082d62d23c8 files/xsim-0.3.9.4-db3.patch 934
-MD5 b09020ab653fd5cd1b693e3def773f0b files/digest-xsim-0.3.9.4 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA332EHTu7gpaalycRAuFLAJ40SEcFaYgDA1cDtadQ8+rn+5h0ZwCfSikj
+ZG8yjd3ih78wFbNOrcdIQag=
+=V1Ax
+-----END PGP SIGNATURE-----
