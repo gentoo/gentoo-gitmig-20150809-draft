@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.ebuild,v 1.10 2002/10/04 05:32:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.ebuild,v 1.11 2002/10/20 18:48:04 vapier Exp $
 
 # NOTE: For some reason, upstream has changed the naming scheme
 # for the tarballs to something quite lame:
@@ -22,7 +22,6 @@ LICENSE="as-is"
 KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND="virtual/glibc sys-devel/autoconf"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	# Compile fails with -O3 on sparc64 but works on x86, sparc untested
