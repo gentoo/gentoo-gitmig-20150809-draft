@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.2.0.ebuild,v 1.2 2004/08/16 10:57:42 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.2.0.ebuild,v 1.3 2004/10/29 19:47:51 eldad Exp $
 
 inherit eutils gnuconfig
 
@@ -96,6 +96,15 @@ src_compile() {
 	emake || die "compile problem"
 }
 
+pkg_preinst() {
+	enewgroup snort
+	enewuser snort -1 /dev/null /var/log/snort snort
+	usermod -d "/var/log/snort" snort || die "usermod problem"
+	usermod -g "snort" snort || die "usermod problem"
+	usermod -s "/dev/null" snort || die "usermod problem"
+	echo "ignore any message about CREATE_HOME above..."
+}
+
 src_install() {
 	make DESTDIR=${D} install || die
 
@@ -115,16 +124,22 @@ src_install() {
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/snort.rc6 snort
 	insinto /etc/conf.d ; newins ${FILESDIR}/snort.confd snort
+
+	chown snort:snort ${D}/var/log/snort
+	chmod 0770 ${D}/var/log/snort
 }
 
 pkg_postinst() {
-	enewgroup snort
-	enewuser snort -1 /dev/null /var/log/snort snort
-	usermod -d "/var/log/snort" snort || die "usermod problem"
-	usermod -g "snort" snort || die "usermod problem"
-	usermod -s "/dev/null" snort || die "usermod problem"
-	echo "ignore any message about CREATE_HOME above..."
-
-	chown snort:snort /var/log/snort
-	chmod 0770 /var/log/snort
+	if use mysql || use postgres
+	then
+		einfo "To use a database as a backend for snort you'll have to"
+		einfo "import the correct tables to the database."
+		einfo "You'll have to setup a user called snort first."
+		einfo ""
+		use mysql && einfo "  MySQL: zcat /usr/share/doc/${P}/contrib/create_mysql.gz | mysql -p snort"
+		use postgres && einfo "  PostgreSQL: import /usr/share/doc/${P}/contrib/create_postgresql.gz"
+		einfo ""
+		einfo "Also, read the following Gentoo forums article:"
+		einfo '   http://forums.gentoo.org/viewtopic.php?t=78718'
+	fi
 }
