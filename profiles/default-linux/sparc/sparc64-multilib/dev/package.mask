@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/package.mask,v 1.4 2005/01/23 11:30:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/package.mask,v 1.5 2005/03/04 18:18:45 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@dev.gentoo.org>
 # Masking to prevent accidental emerge of unsafe alsa drivers.
@@ -19,3 +19,6 @@
 =sys-kernel/gentoo-dev-sources-2.6.8-r10
 ~sys-kernel/gentoo-dev-sources-2.6.9
 sys-kernel/development-sources
+
+# We have a native sparc64 compiler now
+sys-devel/gcc-sparc64
