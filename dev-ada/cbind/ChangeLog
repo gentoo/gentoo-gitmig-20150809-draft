@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/cbind
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/cbind/ChangeLog,v 1.1 2003/07/13 23:53:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/cbind/ChangeLog,v 1.2 2003/08/17 20:57:26 dholm Exp $
+
+  17 Aug 2003; David Holm <dholm@gentoo.org> metadata.xml:
+  Added <longdescription> to metadata.xml.
 
 *cbind-6.ebuild (13 Jul 2003)
 
