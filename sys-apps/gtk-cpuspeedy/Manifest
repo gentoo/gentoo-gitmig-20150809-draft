@@ -1,4 +1,6 @@
 MD5 68b3f10c61573ad0716fea8b44555733 gtk-cpuspeedy-0.1.ebuild 1032
 MD5 9e2a054a1c88817613efae9564a60cf4 metadata.xml 530
-MD5 e45bf9c63cce02969a7d641f371a5771 ChangeLog 754
+MD5 d42f9313de6551068100e6c9796bc2d7 ChangeLog 951
+MD5 65091995aba46fb1cce203d6a4d3feb4 gtk-cpuspeedy-0.3.0.ebuild 1074
 MD5 db41ffc9bc8dc7fc1be848e0eed10243 files/digest-gtk-cpuspeedy-0.1 68
+MD5 e894da4eaf551e42693cdff2b43e935d files/digest-gtk-cpuspeedy-0.3.0 71
