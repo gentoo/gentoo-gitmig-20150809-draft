@@ -1,6 +1,17 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.74 2004/08/19 19:31:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.75 2004/08/30 15:45:00 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> kde-3.1.5.ebuild,
+  kde-3.2.1.ebuild, kde-3.3.0.ebuild:
+  Masked kde-3.3.0.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> kde-3.1.5.ebuild,
+  kde-3.2.1.ebuild:
+  Masked kde-3.2.1.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> kde-3.1.5.ebuild:
+  Masked kde-3.1.5.ebuild stable for ppc
 
 *kde-3.3.0 (19 Aug 2004)
 

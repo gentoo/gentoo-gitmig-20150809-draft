@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.1.ebuild,v 1.9 2004/06/25 03:05:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.1.ebuild,v 1.10 2004/08/30 15:45:01 pvdabeel Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.2"
-KEYWORDS="x86 ~ppc sparc hppa amd64 ~alpha ~ia64"
+KEYWORDS="x86 ppc sparc hppa amd64 ~alpha ~ia64"
 IUSE="alsa cups ipv6 ssl doc ldap"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.

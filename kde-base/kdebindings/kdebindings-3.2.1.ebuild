@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.2.1.ebuild,v 1.6 2004/06/24 22:12:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.2.1.ebuild,v 1.7 2004/08/30 15:45:01 pvdabeel Exp $
 # TODO: add gnustep, objc bindings
 
 inherit kde-dist flag-o-matic
 
 DESCRIPTION="KDE library bindings for languages other than c++"
 
-KEYWORDS="~x86 ~ppc sparc hppa ~amd64"
+KEYWORDS="~x86 ppc sparc hppa ~amd64"
 IUSE="mozilla java python ruby gtk"
 
 DEPEND="=kde-base/kdebase-${PV}

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.7 2004/08/19 15:08:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.8 2004/08/30 15:45:01 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdewebdev-3.3.0.ebuild:
+  Masked kdewebdev-3.3.0.ebuild stable for ppc
 
 *kdewebdev-3.3.0 (19 Aug 2004)
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.2.ebuild,v 1.3 2004/06/24 22:13:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.2.ebuild,v 1.4 2004/08/30 15:45:01 pvdabeel Exp $
 
 inherit kde-dist flag-o-matic
 
 DESCRIPTION="KDE multimedia apps: noatun, kscd, artsbuilder..."
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
 IUSE="nas encode esd motif slang tcltk oggvorbis gtk alsa gstreamer"
 
 DEPEND="~kde-base/kdebase-${PV}

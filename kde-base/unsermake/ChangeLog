@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/unsermake
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/ChangeLog,v 1.5 2004/07/30 15:17:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/ChangeLog,v 1.6 2004/08/30 15:45:01 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  unsermake-0.3.0.4137.0.ebuild:
+  Masked unsermake-0.3.0.4137.0.ebuild stable for ppc
 
 *unsermake-0.3.0.4137.0 (30 Jul 2004)
 

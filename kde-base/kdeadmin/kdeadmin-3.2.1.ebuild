@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.2.1.ebuild,v 1.6 2004/06/25 03:05:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.2.1.ebuild,v 1.7 2004/08/30 15:45:00 pvdabeel Exp $
 
 inherit kde-dist
 
 DESCRIPTION="KDE administration tools (user manager, etc.)"
 
-KEYWORDS="x86 ~ppc sparc ~alpha hppa amd64 ~ia64"
+KEYWORDS="x86 ppc sparc ~alpha hppa amd64 ~ia64"
 IUSE="pam"
 
 DEPEND="~kde-base/kdebase-${PV}

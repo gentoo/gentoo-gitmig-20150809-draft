@@ -1,6 +1,18 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.89 2004/08/23 02:05:16 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.90 2004/08/30 15:45:00 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdeadmin-3.1.5.ebuild, kdeadmin-3.2.1.ebuild, kdeadmin-3.3.0.ebuild:
+  Masked kdeadmin-3.3.0.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdeadmin-3.1.5.ebuild, kdeadmin-3.2.1.ebuild:
+  Masked kdeadmin-3.2.1.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdeadmin-3.1.5.ebuild:
+  Masked kdeadmin-3.1.5.ebuild stable for ppc
 
   22 Aug 2004; Tom Gall <tgall@gentoo.org> kdeadmin-3.3.0.ebuild:
   stable on ppc64, bug #58190

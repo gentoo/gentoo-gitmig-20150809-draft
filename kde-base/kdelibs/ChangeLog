@@ -1,6 +1,28 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.155 2004/08/23 16:20:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.156 2004/08/30 15:45:01 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdelibs-3.1.5-r1.ebuild, kdelibs-3.2.1.ebuild, kdelibs-3.2.2.ebuild,
+  kdelibs-3.2.3.ebuild, kdelibs-3.3.0.ebuild:
+  Masked kdelibs-3.3.0.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdelibs-3.1.5-r1.ebuild, kdelibs-3.2.1.ebuild, kdelibs-3.2.2.ebuild,
+  kdelibs-3.2.3.ebuild:
+  Masked kdelibs-3.2.3.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdelibs-3.1.5-r1.ebuild, kdelibs-3.2.1.ebuild, kdelibs-3.2.2.ebuild:
+  Masked kdelibs-3.2.2.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdelibs-3.1.5-r1.ebuild, kdelibs-3.2.1.ebuild:
+  Masked kdelibs-3.2.1.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdelibs-3.1.5-r1.ebuild:
+  Masked kdelibs-3.1.5-r1.ebuild stable for ppc
 
   23 Aug 2004; psi29a <psi29a@gentoo.org> kdelibs-3.3.0.ebuild:
   Added to ~mips

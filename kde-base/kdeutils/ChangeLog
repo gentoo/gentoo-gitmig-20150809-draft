@@ -1,6 +1,18 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.83 2004/08/23 04:09:12 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.84 2004/08/30 15:45:01 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdeutils-3.1.5.ebuild, kdeutils-3.2.1.ebuild, kdeutils-3.3.0.ebuild:
+  Masked kdeutils-3.3.0.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdeutils-3.1.5.ebuild, kdeutils-3.2.1.ebuild:
+  Masked kdeutils-3.2.1.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdeutils-3.1.5.ebuild:
+  Masked kdeutils-3.1.5.ebuild stable for ppc
 
   22 Aug 2004; Tom Gall <tgall@gentoo.org> kdeutils-3.3.0.ebuild:
   stable on ppc64, bug #58305

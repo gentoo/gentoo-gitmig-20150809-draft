@@ -1,6 +1,35 @@
 # ChangeLog for kde-base/kdebindings
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.70 2004/08/26 16:35:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.71 2004/08/30 15:45:01 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdebindings-3.1.5.ebuild, kdebindings-3.2.0.ebuild,
+  kdebindings-3.2.1.ebuild, kdebindings-3.2.2.ebuild,
+  kdebindings-3.3.0.ebuild:
+  Masked kdebindings-3.3.0.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdebindings-3.1.5.ebuild, kdebindings-3.2.0.ebuild,
+  kdebindings-3.2.1.ebuild, kdebindings-3.2.2.ebuild:
+  Masked kdebindings-3.2.3.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdebindings-3.1.5.ebuild, kdebindings-3.2.0.ebuild,
+  kdebindings-3.2.1.ebuild, kdebindings-3.2.2.ebuild:
+  Masked kdebindings-3.2.2.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdebindings-3.1.5.ebuild, kdebindings-3.2.0.ebuild,
+  kdebindings-3.2.1.ebuild:
+  Masked kdebindings-3.2.1.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdebindings-3.1.5.ebuild, kdebindings-3.2.0.ebuild:
+  Masked kdebindings-3.2.0.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kdebindings-3.1.5.ebuild:
+  Masked kdebindings-3.1.5.ebuild stable for ppc
 
   26 Aug 2004; Caleb Tennis <caleb@gentoo.org> kdebindings-3.3.0.ebuild,
   files/3.3.0-sip-Makefile.am.patch:
