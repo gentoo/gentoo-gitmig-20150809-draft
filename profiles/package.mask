@@ -95,11 +95,6 @@ dev-perl/CDDB-File
 # Ebuild for 1.1.0 is a work in progress, since it seems to be a mess.
 >=media-sound/audacity-1.1.0
 
-# <seemant@gentoo.org> (26 Aug 2002)
-# Masked for testing -- put into portage because the current version 
-# has a buggy od
-=sys-apps/textutils-2.0.21
-
 # <aliz@gentoo.org> (26 Aug 2002)
 # Masked to force lynx-2.8.4.1c
 =net-www/lynx-2.8.4a-r4
