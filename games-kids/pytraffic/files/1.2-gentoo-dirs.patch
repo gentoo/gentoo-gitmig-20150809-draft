@@ -1,0 +1,36 @@
+diff -urN PyTraffic-1.2-orig/pytraffic PyTraffic-1.2/pytraffic
+--- PyTraffic-1.2-orig/pytraffic	2004-12-27 16:16:15.000000000 -0500
++++ PyTraffic-1.2/pytraffic	2004-12-27 16:16:51.000000000 -0500
+@@ -1 +1 @@
+-exec python /usr/share/pytraffic12/Game.py 
++exec python /usr/share/games/pytraffic12/Game.py 
+diff -urN PyTraffic-1.2-orig/pytraffic.desktop PyTraffic-1.2/pytraffic.desktop
+--- PyTraffic-1.2-orig/pytraffic.desktop	2004-12-27 16:16:15.000000000 -0500
++++ PyTraffic-1.2/pytraffic.desktop	2004-12-27 16:17:22.000000000 -0500
+@@ -7,4 +7,4 @@
+ Exec=/usr/bin/pytraffic
+ Terminal=0
+ Type=Application
+-Icon=/usr/share/pytraffic12/ICNS/carNred64x64.png
++Icon=/usr/share/games/pytraffic12/ICNS/carNred64x64.png
+diff -urN PyTraffic-1.2-orig/setup.py PyTraffic-1.2/setup.py
+--- PyTraffic-1.2-orig/setup.py	2004-12-27 16:16:15.000000000 -0500
++++ PyTraffic-1.2/setup.py	2004-12-27 16:16:51.000000000 -0500
+@@ -45,7 +45,7 @@
+                         'install_lib' :  r"c:\pytraffic12"}
+     options['build_ext']={'compiler' : 'mingw32'}
+ else:
+-    options['install']={'home' : "/usr/share/pytraffic12",
++    options['install']={'home' : "/usr/share/games/pytraffic12",
+                        'install_lib' : '$base',
+                        'install_data' : '$base'}
+     options['build_ext']={'compiler' : 'unix'}
+@@ -53,7 +53,7 @@
+ 
+ def main_command():
+     if os.name=='posix':
+-        return [("/usr/bin",['pytraffic'])]
++        return [("/usr/games/bin",['pytraffic'])]
+     else:
+         return [(".",["WinGame.pyw"])]
+ 
