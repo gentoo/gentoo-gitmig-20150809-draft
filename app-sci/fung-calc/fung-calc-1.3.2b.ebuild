@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/fung-calc/fung-calc-1.3.2b.ebuild,v 1.3 2004/05/01 10:36:44 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/fung-calc/fung-calc-1.3.2b.ebuild,v 1.4 2004/05/11 06:55:31 phosphan Exp $
 
 IUSE="opengl"
 
@@ -21,6 +21,7 @@ DEPEND=">=sys-libs/zlib-1
 	>=kde-base/kdebase-3.1"
 
 src_compile() {
+	addwrite ${QTDIR}/etc/settings
 	local myconf
 	use opengl || myconf="${myconf} --disable-glgraph"
 	# use kde || myconf="${myconf} --disable-kde-app"
