@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/gtk2hs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.8 2005/01/19 11:00:27 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.9 2005/01/26 17:31:00 kosmikus Exp $
+
+*gtk2hs-0.9.7 (26 Jan 2005)
+
+  26 Jan 2005; Andres Loeh <kosmikus@gentoo.org> +gtk2hs-0.9.7.ebuild:
+  New version (bug #79352).
 
   19 Jan 2005; Andres Loeh <kosmikus@gentoo.org> gtk2hs-0.9.6-r1.ebuild:
   Added a check of the memory requirements (see bug #62790, comment 37)
