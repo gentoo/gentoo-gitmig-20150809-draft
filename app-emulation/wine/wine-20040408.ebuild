@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20040408.ebuild,v 1.3 2004/06/24 22:36:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20040408.ebuild,v 1.4 2004/06/30 03:21:53 agriffis Exp $
 
 inherit eutils base
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/Wine-${PV}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~x86"
-IUSE="nas arts cups opengl alsa tcltk nptl debug"
+IUSE="X alsa arts cups debug nas nptl opengl tcltk"
 
 DEPEND="sys-devel/gcc
 	sys-devel/flex
@@ -25,7 +25,8 @@ DEPEND="sys-devel/gcc
 	alsa? ( media-libs/alsa-lib )
 	nas? ( media-libs/nas )
 	cups? ( net-print/cups )
-	opengl? ( virtual/opengl )"
+	opengl? ( virtual/opengl )
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack Wine-${PV}.tar.gz
