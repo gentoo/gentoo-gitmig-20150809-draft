@@ -1,0 +1,11 @@
+diff -aur mono-1.1.5-orig/mono/metadata/metadata.c mono-1.1.5/mono/metadata/metadata.c
+--- mono-1.1.5-orig/mono/metadata/metadata.c	2005-03-16 11:18:22.000000000 -0500
++++ mono-1.1.5/mono/metadata/metadata.c	2005-03-22 23:50:27.000000000 -0500
+@@ -551,6 +551,7 @@
+ 				g_assert (i == 4 || i == 5);
+ 				field_size = i == 4 ? idx_size (MONO_TABLE_FIELD):
+ 					idx_size(MONO_TABLE_METHOD);
++				break;
+ 			case MONO_TABLE_GENERICPARAM:
+ 				g_assert (i == 2 || i == 4 || i == 5);
+ 				if (i == 2)

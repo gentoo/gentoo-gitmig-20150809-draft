@@ -1,0 +1,12 @@
+diff -aur mono-1.1.4-orig/mcs/class/corlib/System.IO/Path.cs mono-1.1.4/mcs/class/corlib/System.IO/Path.cs
+--- mono-1.1.4-orig/mcs/class/corlib/System.IO/Path.cs	2005-02-05 14:42:23.000000000 -0500
++++ mono-1.1.4/mcs/class/corlib/System.IO/Path.cs	2005-02-22 21:00:50.122250160 -0500
+@@ -387,7 +387,7 @@
+ 			//if (root == path) return path;
+ 				
+ 			// STEP 3: split the directories, this gets rid of consecutative "/"'s
+-			string [] dirs = path.Split (DirectorySeparatorChar, AltDirectorySeparatorChar);
++			string [] dirs = path.Split (DirectorySeparatorChar);
+ 			// STEP 4: Get rid of directories containing . and ..
+ 			int target = 0;
+ 			

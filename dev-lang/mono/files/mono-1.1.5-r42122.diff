@@ -1,0 +1,40 @@
+Index: mono/mini/exceptions-ppc.c
+===================================================================
+--- mono/mini/exceptions-ppc.c	(revision 42121)
++++ mono/mini/exceptions-ppc.c	(working copy)
+@@ -199,6 +199,7 @@
+ 	ppc_break (code);
+ 
+ 	g_assert ((code - start) < sizeof(start));
++	mono_arch_flush_icache (start, code - start);
+ 	return start;
+ }
+ 
+@@ -268,6 +269,7 @@
+ 	ppc_blr (code);
+ 
+ 	g_assert ((code - start) < sizeof(start));
++	mono_arch_flush_icache (start, code - start);
+ 	return start;
+ }
+ 
+@@ -371,6 +373,7 @@
+ 	/* we should never reach this breakpoint */
+ 	ppc_break (code);
+ 	g_assert ((code - start) < size);
++	mono_arch_flush_icache (start, code - start);
+ 	return start;
+ }
+ 
+Index: mono/mini/tramp-ppc.c
+===================================================================
+--- mono/mini/tramp-ppc.c	(revision 42121)
++++ mono/mini/tramp-ppc.c	(working copy)
+@@ -537,6 +537,7 @@
+ 	if (notification_address)
+ 		*notification_address = buf;
+ 	ppc_blr (buf);
++	mono_arch_flush_icache (ptr, buf - ptr);
+ 
+ 	return ptr;
+ }
