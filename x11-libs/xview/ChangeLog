@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/xview
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.11 2005/02/17 11:22:16 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.12 2005/02/17 16:05:02 humpback Exp $
+
+  17 Feb 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/CAN-2005-0076.patch, -xview-3.2-r2.ebuild:
+  Removed -r2 that did not work with xorg. Added -r3 that does not use the
+  debian patches and has a new HOMEPAGE and seems to be supported there. This
+  version from the new home still needed the CAN-2005-0076 patch. This was
+  tested with xorg 6.8.0-r4 and 6.8.2 on x86.
 
 *xview-3.2-r2 (17 Feb 2005)
 
