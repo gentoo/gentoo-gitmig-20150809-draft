@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/extutils-pkgconfig-1.03.ebuild,v 1.2 2004/04/06 22:51:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/extutils-pkgconfig-1.03.ebuild,v 1.3 2004/05/30 15:58:16 kloeri Exp $
 
 inherit perl-module
 
@@ -12,4 +12,4 @@ SRC_URI="http://search.cpan.org/CPAN/authors/id/R/RM/RMCFARLA/Gtk2-Perl/${MY_P}.
 
 LICENSE="Artistic | GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ~alpha hppa ~amd64"
+KEYWORDS="x86 ~ppc sparc ~mips alpha hppa ~amd64"
