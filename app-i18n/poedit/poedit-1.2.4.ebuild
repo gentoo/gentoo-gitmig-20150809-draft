@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.2.5.ebuild,v 1.2 2004/08/07 21:15:01 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.2.4.ebuild,v 1.1 2004/08/07 21:15:01 pythonhead Exp $
 
 inherit eutils kde wxwidgets
 
@@ -13,14 +13,8 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86 ~sparc"
 
-DEPEND=">=x11-libs/wxGTK-2.4.2
+DEPEND=">=x11-libs/wxGTK-2.3.4
 	>=sys-libs/db-3"
-
-src_unpack() {
-	unpack ${A} || die "Failed to unpack ${A}"
-	cd ${S} || die "Failed to cd ${S}"
-	epatch ${FILESDIR}/poedit-1.2.5-db4-compilation.patch
-}
 
 pkg_setup() {
 	if use unicode && ! use gtk2; then
@@ -38,8 +32,8 @@ src_compile() {
 	fi
 	#Maybe WX_CONFIG_NAME should be added to wxwidgets.eclass
 	export WX_CONFIG_NAME=${WX_CONFIG}
-	econf || die
-	emake || die
+	econf || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install () {
@@ -51,3 +45,4 @@ src_install () {
 
 	dodoc AUTHORS LICENSE NEWS README TODO
 }
+
