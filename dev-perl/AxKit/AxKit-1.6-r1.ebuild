@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.6-r1.ebuild,v 1.3 2002/12/09 04:21:05 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.6-r1.ebuild,v 1.4 2002/12/17 21:46:30 vapier Exp $
 
 inherit perl-module
 
@@ -26,9 +26,6 @@ newdepend ">=dev-perl/libapreq-0.31 \
 	>=dev-perl/XML-Sablot-0.50 \
 	>=dev-perl/Digest-MD5-2.09"
 
-APACHE_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
-[ -z "${APACHE_ROOT}" ] && APACHE_ROOT="/home/httpd/htdocs"
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -41,7 +38,7 @@ src_install() {
 
 	diropts -o nobody -g nogroup
 	dodir /var/cache/axkit
-	dodir ${APACHE_ROOT}/xslt
+	dodir /home/httpd/htdocs/xslt
 	insinto /etc/apache
 	doins ${FILESDIR}/httpd.axkit
 }
