@@ -1,9 +1,14 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.10 2002/12/09 04:26:10 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.11 2002/12/11 19:58:09 azarah Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+*fontconfig-2.1 (11 Dec 2002)
+
+  11 Dec 2002; Martin Schlemmer <azarah@gentoo.org> fontconfig-2.1.ebuild :
+  New version.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  Changed sparc ~sparc keywords
  
   02 Dec 2002; foser <foser@gentoo.org> fontconfig-2.0-r3.ebuild :
   Depend on freetype-2.1.2-r2, as it fixes bug #10028.
