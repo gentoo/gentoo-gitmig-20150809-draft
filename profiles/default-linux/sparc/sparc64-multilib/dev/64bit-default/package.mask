@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/package.mask,v 1.1 2005/01/23 11:30:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/64bit-default/package.mask,v 1.1 2005/01/23 11:50:29 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to & look in proper $(get_libdir))
@@ -11,3 +11,9 @@
 <net-libs/courier-authlib-0.52
 <sys-apps/iproute2-2.6.10.20050112
 <sys-devel/flex-2.5.4a-r6
+
+# sparc64 aware versions
+# this version of openssl always builds the 64bit version... when we get a
+# smarter portage, it will need to be updated
+<dev-libs/openssl-0.9.7d-r2
+

@@ -1,12 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/make.defaults,v 1.3 2004/12/31 11:42:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/make.defaults,v 1.4 2005/01/23 11:50:29 eradicator Exp $
 
 # 64bit kernel, 32/64bit multilib userland 
 CHOST="sparc64-unknown-linux-gnu"
 PROFILE_ARCH="sparc64-multilib"
-
-# Make sure multilib is on
-STAGE1_USE="multilib"
-GRP_STAGE23_USE="${STAGE1_USE}"
-USE="${GRP_STAGE23_USE}"

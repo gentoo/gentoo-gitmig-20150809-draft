@@ -1,0 +1,5 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/64bit-default/make.defaults,v 1.1 2005/01/23 11:50:29 eradicator Exp $
+
+DEFAULT_ABI="sparc64"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/packages,v 1.16 2005/01/23 11:30:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/packages,v 1.17 2005/01/23 11:50:29 eradicator Exp $
 
 # Sometimes necessary to trick programs into thinking we're really
 # a sparc32 system.
@@ -18,8 +18,3 @@
 *>=sys-libs/glibc-2.3.4.20040808-r1
 *>=sys-devel/gcc-config-1.3.9
 >=sys-devel/distcc-2.18.3-r1
-
-# sparc64 aware versions
-# this version of openssl always builds the 64bit version... when we get a
-# smarter portage, it will need to be updated
->=dev-libs/openssl-0.9.7d-r2
