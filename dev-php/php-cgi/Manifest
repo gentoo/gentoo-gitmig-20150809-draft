@@ -1,4 +1,4 @@
-MD5 80f6f741da4f882aa1e3610a5eb669dc ChangeLog 3502
+MD5 92f41e4da5f9a0d6d7ad6a13ded649dd ChangeLog 3668
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 22244fe422175e6371727eba17d37ff1 php-cgi-4.3.4-r2.ebuild 713
 MD5 021f585c6dbc6fbd4a9d28368508e7dd php-cgi-4.3.5.ebuild 688
@@ -8,6 +8,7 @@ MD5 417086a2a3c4e674e77e6c5150a68133 php-cgi-4.3.6_rc2.ebuild 736
 MD5 1f49e8beeb045ec0111e0873bfb07fdb php-cgi-4.3.7-r1.ebuild 751
 MD5 5b1a215e21110a1e5a603b3a21e5fd53 php-cgi-4.3.7.ebuild 687
 MD5 423bd6c00ab92c007d9f2f9630c1e9ea php-cgi-4.3.8.ebuild 746
+MD5 ff8d280e1df6a129bc07898d5acbb1c0 php-cgi-5.0.0.ebuild 751
 MD5 c2702f299c02afa047535bf819093868 files/digest-php-cgi-4.3.4-r2 282
 MD5 abf76ecb45117098456e6ee3bf69944e files/digest-php-cgi-4.3.5 282
 MD5 707c9fff181593ffacc69ce674a92a8a files/digest-php-cgi-4.3.6 350
@@ -17,3 +18,5 @@ MD5 01013db7bcb660532237428f5aa61b26 files/digest-php-cgi-4.3.7 281
 MD5 01013db7bcb660532237428f5aa61b26 files/digest-php-cgi-4.3.7-r1 281
 MD5 663577b8f4b90d61f245bb6052629194 files/pear_config.diff 422
 MD5 390a659097a43447e44ab5bdd59378b5 files/digest-php-cgi-4.3.8 282
+MD5 11f305b98b753ee023da8503a360762a files/digest-php-cgi-5.0.0 63
+MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
