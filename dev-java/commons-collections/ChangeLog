@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.16 2004/02/27 03:45:00 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.17 2004/05/03 22:29:05 zx Exp $
+
+  08 May 2004; Chris Aniszczyk <zx@gentoo.org> commons-collections-3.0.ebuild:
+  Marking stable on x86
 
 *commons-collections-3.0 (29 Feb 2004)
 
