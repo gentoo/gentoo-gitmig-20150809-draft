@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kmymoney2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.16 2004/10/23 23:41:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.17 2004/11/23 15:31:38 carlo Exp $
+
+  23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> kmymoney2-0.6.2.ebuild:
+  stable on x86
 
   23 Oct 2004; Jason Wever <weeve@gentoo.org> kmymoney2-0.5.1.ebuild:
   Stable on sparc.
