@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r4.ebuild,v 1.1 2003/08/17 06:09:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r4.ebuild,v 1.2 2003/08/23 23:22:22 mholzer Exp $
 
 inherit eutils
 
 IUSE="tetex"
 
-DEBIANPATCH="${P/-/_}-10.diff.gz"
+DEBIANPATCH="${P/-/_}-11.diff.gz"
 SRCFILE="iproute2-2.4.7-now-ss${PV/20}.tar.gz"
 
 S=${WORKDIR}/iproute2
