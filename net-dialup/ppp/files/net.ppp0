@@ -1,0 +1,216 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# Author:  Martin Schlemmer <azarah@gentoo.org>
+# Credits:  To all those I got ideas from :)
+# 
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/net.ppp0,v 1.1 2003/05/23 04:45:18 killian Exp $
+
+# NB: Config is in /etc/conf.d/net.$IFACE
+
+
+# Misc internal variables
+CMD_LINE=""
+FUNCT="$2"
+TEMPLATEDIR="/etc/ppp"
+
+checkconfig() {
+
+	if [ ! -x "$(which pppd)" -o ! -x "$(which chat)" ]
+	then
+		eerror "pppd and chat needs to be installed"
+		return 1
+	fi
+
+	if [ -e "/var/run/ppp-${IFACE}.pid" -o -e "/var/run/${IFACE}.pid" ] && \
+	   [ "${FUNCT}" = "start" ]
+	then
+		eerror "ppp0 is already up"
+		return 1
+	fi
+}
+
+start() {
+
+	checkconfig || return 1
+
+	setup_cmd_line
+	setup_cfg_files
+
+	ebegin "Bringing ${IFACE} up"
+	if [ -x "$(which pppd)" ]
+	then
+
+		if [ "${DEFROUTE}" = "yes" ]
+		then
+			[ -n "$(/sbin/route | egrep 'default')" ] && route del default
+		fi
+		# Added hide-password here, can't be too sure...
+		/usr/sbin/pppd ${CMD_LINE} ${MODEMPORT} ${LINESPEED} \
+			ipparam ${IFACE} linkname ${IFACE} call ${PEER} \
+			noauth ${PPPOPTIONS} hide-password
+	fi
+	eend
+}
+
+stop() {
+
+	checkconfig || return 1
+
+	ebegin "Bringing ${IFACE} down"
+	if [ -x "$(which ifconfig)" ]
+	then
+
+		if [ -z "$(/sbin/ifconfig | egrep "${IFACE}")" ]
+		then
+			ewarn "Interface seems to be down already"
+			# We should return 0 here, else svc_stop() will not remove
+			# the 'started' symlink ...
+			return 0
+		fi
+		
+#		/sbin/ifconfig ${IFACE} down
+		if [ -e /var/run/ppp-${IFACE}.pid ]
+		then
+			kill $(egrep -v "${IFACE}" /var/run/ppp-${IFACE}.pid)
+
+		elif [ -e /var/run/${IFACE}.pid ]
+		then
+			kill $(egrep -v "${IFACE}" /var/run/${IFACE}.pid)
+		fi
+	fi
+	eend
+}
+
+setup_cmd_line() {
+
+	CMD_LINE="lock"
+	
+	if [ "${DEBUG}" = "yes" ]
+	then
+		CMD_LINE="${CMD_LINE} debug"
+	fi
+
+	if [ "${PERSIST}" = "yes" ]
+	then
+		CMD_LINE="${CMD_LINE} persist holdoff ${RETRYTIMEOUT}"
+	fi
+
+	if [ "${DEFROUTE}" = "yes" ]
+	then
+		CMD_LINE="${CMD_LINE} defaultroute"
+	fi
+
+	if [ "${HARDFLOWCTL}" = "yes" ]
+	then
+		CMD_LINE="${CMD_LINE} modem crtscts"
+	fi
+
+	if [ "${ESCAPECHARS}" = "yes" ]
+	then
+		CMD_LINE="${CMD_LINE} asyncmap 00000000"
+	fi
+
+	if [ "${PEERDNS}" = "yes" ]
+	then
+		CMD_LINE="${CMD_LINE} usepeerdns"
+	fi
+
+	if [ -n "${IPADDR}${REMIP}" ]
+	then
+		CMD_LINE="${CMD_LINE} ${IPADDR}:${REMIP}"
+	fi
+
+	if [ -n "${NETMASK}" ]
+	then
+		CMD_LINE="${CMD_LINE} netmask ${NETMASK}"
+	fi
+
+	if [ -n "${MRU}" ]
+	then
+		CMD_LINE="${CMD_LINE} mru ${MRU}"
+	fi
+	
+	if [ -n "${MTU}" ]
+	then
+		CMD_LINE="${CMD_LINE} mtu ${MTU}"
+	fi
+	    
+	if [ -n "${USERNAME}" ]
+	then
+		CMD_LINE="${CMD_LINE} user ${USERNAME} remotename ${PEER}"
+	fi
+
+	if [ "${ONDEMAND}" = "yes" ]
+	then
+		CMD_LINE="${CMD_LINE} demand ktune idle ${IDLETIMEOUT}"
+		CMD_LINE="${CMD_LINE} holdoff ${RETRYTIMEOUT}"
+	fi
+}
+
+setup_cfg_files() {
+
+	if [ "${AUTOCFGFILES}" = "yes" ]
+	then
+		# Setup the peers file
+		echo "connect '/usr/sbin/chat -v -f /etc/ppp/chat-${PEER}'" \
+			>/etc/ppp/peers/${PEER}
+
+		# Setup the secrets files
+		echo "${USERNAME} ${PEER} \"${PASSWORD}\"" >/etc/ppp/chap-secrets
+		chmod 600 /etc/ppp/chap-secrets
+		echo "${USERNAME} ${PEER} \"${PASSWORD}\"" >/etc/ppp/pap-secrets
+		chmod 600 /etc/ppp/pap-secrets
+
+		# Setup the chat file
+		if [ -n "${INITSTRING}" ]
+		then
+			sed -e "9i\\'OK\' \'${INITSTRING}\'" \
+				-e "s:\$NUMBER:${NUMBER}:" \
+				${TEMPLATEDIR}/chat-default \
+				>/etc/ppp/chat-${PEER}
+		else
+			sed -e "s:\$NUMBER:${NUMBER}:" \
+				${TEMPLATEDIR}/chat-default \
+				>/etc/ppp/chat-${PEER}
+		fi
+
+		# Setup the ip-scripts so long
+		echo '#!/bin/sh' >/etc/ppp/ip-up
+		chmod 700 /etc/ppp/ip-up
+		echo '#!/bin/sh' >/etc/ppp/ip-down
+		chmod 700 /etc/ppp/ip-down
+
+		# Setup if-up and if-down
+		if [ -x ${FWSCRIPT} ]
+		then
+			echo "${FWSCRIPT} start" >>/etc/ppp/ip-up
+			echo "${FWSCRIPT} stop" >>/etc/ppp/ip-down
+		fi
+
+		if [ "${PEERDNS}" = "yes" ]
+		then
+			# ip-up: add the server supplied DNS entries to
+			# /etc/resolv.conf
+			echo "/bin/cp -f /etc/resolv.conf /etc/resolv.conf.old" \
+				>>/etc/ppp/ip-up
+			echo "/bin/cat /etc/ppp/resolv.conf >> /etc/resolv.conf" \
+				>>/etc/ppp/ip-up
+			# Change perms because it b0rked kppp
+			echo "chmod 640 /etc/resolv.conf" >>/etc/ppp/ip-up
+				
+			# ip-down: restore original /etc/resolv.conf
+			echo "/bin/mv -f /etc/resolv.conf.old /etc/resolv.conf" \
+				>>/etc/ppp/ip-down
+			echo "chmod 640 /etc/resolv.conf" >>/etc/ppp/ip-down 
+		fi
+
+		echo "[ -f /etc/ppp/ip-up.local ] && . /etc/ppp/ip-up.local" \
+			>>/etc/ppp/ip-up
+		echo "[ -f /etc/ppp/ip-down.local ] && . /etc/ppp/ip-down.local" \
+			>>/etc/ppp/ip-down
+	fi
+}
+
+
+# vim:ts=4
