@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/ezusb2131
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ezusb2131/ChangeLog,v 1.1 2003/05/22 11:15:09 jje Exp $
+
+*ezusb2131-1.0 (22 May 2003)
+
+  22 May 2003; root <root@gentoo.org> ezusb2131-1.0.ebuild:
+  Initial revision.
+  
+  Submitted by: robh@gentoo.org
+
