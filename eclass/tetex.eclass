@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.29 2004/11/18 15:24:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.30 2004/11/20 17:14:55 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -124,6 +124,7 @@ tetex_src_compile() {
 	local xdvik
 
 	if useq X ; then
+		addwrite /var/cache/fonts
 		xdvik="--with-xdvik --with-oxdvik"
 		#xdvik="$xdvik --with-system-t1lib"
 	else
@@ -247,36 +248,45 @@ tetex_src_install() {
 			einfo "Fixing permissions ..."
 			# root group name doesn't exist on Mac OS X
 			chown -R 0:0 ${D}/usr/share/texmf
+			find ${D} -name "ls-R" -exec rm {} \;
 			;;
 		link)	# link is for tetex-beta
-			#dodir /etc/env.d
-			#echo 'CONFIG_PROTECT="/var/lib/texmf"' > ${D}/etc/env.d/98tetex
+			dodir /etc/env.d
+			echo 'CONFIG_PROTECT_MASK="/etc/texmf/web2c"' > ${D}/etc/env.d/98tetex
 			# populate /etc/texmf
-			dodir /etc/texmf
-			pushd ${D}${TEXMF_PATH}
+			keepdir /etc/texmf/web2c
+			cd ${D}/usr/share/texmf		# not ${TEXMF_PATH}
 			for d in $(find . -name config -type d | sed -e "s:\./::g") ; do
 				dodir /etc/texmf/${d}
-				for f in $(find ${D}${TEXMF_PATH}/$d -maxdepth 1 -mindepth 1); do
+				for f in $(find ${D}usr/share/texmf/$d -maxdepth 1 -mindepth 1); do
 					mv $f ${D}/etc/texmf/$d || die "mv $f failed"
-					dosym /etc/texmf/$d/$(basename $f) ${TEXMF_PATH}/$d/$(basename $f)
+					dosym /etc/texmf/$d/$(basename $f) /usr/share/texmf/$d/$(basename $f)
 				done
 			done
+			cd -
+			cd ${D}${TEXMF_PATH}
 			for f in $(find . -name '*.cnf' -o -name '*.cfg' -type f | sed -e "s:\./::g") ; do
-				if [ "${f/source/}" != "${f}" -o "${f/config/}" != "${f}" ] ; then
+				if [ "${f/config/}" != "${f}" ] ; then
 					continue
 				fi
 				dodir /etc/texmf/$(dirname $f)
 				mv ${D}${TEXMF_PATH}/$f ${D}/etc/texmf/$(dirname $f) || die "mv $f failed."
 				dosym /etc/texmf/$f ${TEXMF_PATH}/$f
 			done
+
+			# take care of updmap.cfg, fmtutil.cnf and texmf.cnf
+			dodir /etc/texmf/{updmap.d,fmtutil.d,texmf.d}
+			cp ${D}/usr/share/texmf/web2c/updmap.cfg ${D}/etc/texmf/updmap.d/00updmap.cfg
+			mv ${D}/etc/texmf/web2c/fmtutil.cnf ${D}/etc/texmf/fmtutil.d/00fmtutil.cnf
+			mv ${D}/etc/texmf/web2c/texmf.cnf ${D}/etc/texmf/texmf.d/00texmf.cnf
+
+			# xdvi
 			if useq X ; then
 				dodir /etc/X11/app-defaults /etc/texmf/xdvi
 				mv ${D}${TEXMF_PATH}/xdvi/XDvi ${D}/etc/X11/app-defaults || die "mv XDvi failed"
 				dosym /etc/X11/app-defaults/XDvi ${TEXMF_PATH}/xdvi/XDvi
-				#mv ${D}${TEXMF_PATH}/xdvi/xdvi.cfg ${D}/etc/texmf/xdvi/xdvi.cfg || die "mv xdvi.cfg failed"
-				#dosym /etc/texmf/xdvi.cfg ${TEXMF_PATH}/xdvi/xdvi.cfg
 			fi
-			popd
+			cd -
 			;;
 		cnf)	# cnf is for tetex-2.0.2
 			dodir /etc/env.d/
@@ -306,22 +316,20 @@ tetex_src_install() {
 
 tetex_pkg_preinst() {
 
-	if [ "${PV}" != "2.0.2" ] ; then
-		for d in $(find ${ROOT}usr/share/texmf -name config \( -type d -o -type l \)) ; do
-			if [ -d "$d" ]
-			then
-				# Portage doesn't handle symbolic links well.
-				ewarn "Removing $d"
-				rm -rf "$d"
-			fi
-		done
-
+	if [ "${TETEX_PV}" != "2.0.2" ] ; then
 		ewarn "Removing ${ROOT}usr/share/texmf/web2c"
 		rm -rf "${ROOT}usr/share/texmf/web2c"
 	fi
 
-	# Let's take care of config protecting.
-	einfo "Here I am!"
+	# take care of config protection, upgrade from <=tetex-2.0.2-r4
+	for conf in updmap.cfg texmf.cnf fmtutil.cnf
+	do
+		if [ ! -d "${ROOT}etc/texmf/${conf/.*/.d}" -a -f "${ROOT}etc/texmf/${conf}" ]
+		then
+			mkdir "${ROOT}etc/texmf/${conf/.*/.d}"
+			cp "${ROOT}etc/texmf/${conf}" "${ROOT}etc/texmf/00${conf/.*/.d}"
+		fi
+	done
 }
 
 tetex_pkg_postinst() {
@@ -333,7 +341,15 @@ tetex_pkg_postinst() {
 	while [ "$1" ]; do
 	case $1 in
 		configure)
-			if [ $ROOT = "/" ]
+			for conf in texmf.cnf fmtutil.cnf updmap.cfg
+			do
+				if [ -d "${ROOT}etc/texmf/${conf/.*/.d}" ]
+				then
+					einfo "Generating ${ROOT}etc/texmf/web2c/$conf from ${ROOT}etc/texmf/${conf/.*/.d} ..."
+					cat ${ROOT}etc/texmf/${conf/.*/.d}/* > "${ROOT}etc/texmf/web2c/$conf" || die "generating $conf failed"
+				fi
+			done
+			if [ "$ROOT" = "/" ]
 			then
 				einfo "Configuring teTeX ..."
 				mktexlsr &>/dev/null
@@ -346,7 +362,7 @@ tetex_pkg_postinst() {
 			fi
 			;;
 		generate)
-			if [ $ROOT = "/" ]
+			if [ "$ROOT" = "/" ]
 			then
 				einfo "Generating format files ..."
 				fmtutil --missing &>/dev/null
