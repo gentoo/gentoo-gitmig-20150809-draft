@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r2.ebuild,v 1.1 2002/10/26 04:02:49 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r2.ebuild,v 1.2 2002/10/26 04:17:04 george Exp $
 
 IUSE="X doc"
 
@@ -12,7 +12,7 @@ SRC_URI="http://expect.nist.gov/src/${P}.tar.gz"
 HOMEPAGE="http://expect.nist.gov/"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 LICENSE="BSD"
 
 DEPEND=">=dev-lang/tcl-8.2
@@ -58,8 +58,9 @@ src_install () {
 	
 	#install examples if 'doc' is set
 	if use doc; then
+		cd ${S}
 		dodir /usr/share/doc/${PF}/examples/
-		cp example/* /usr/share/doc/${PF}/examples/
+		cp example/* ${D}/usr/share/doc/${PF}/examples/
 	fi
 }
 
