@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.77 2003/11/21 16:42:01 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.78 2003/12/01 16:24:26 seemant Exp $
+
+  01 Dec 2003; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.8-r1.ebuild,
+  xmms-1.2.8-r2.ebuild, xmms-1.2.8-r3.ebuild, xmms-1.2.8.ebuild,
+  files/xmms-1.2.8-dtd.patch, files/xmms-1.2.8-jump.patch,
+  files/xmms-1.2.8-mpg123j.patch, files/xmms-1.2.8-random.patch,
+  files/xmms-1.2.8-russian-charset-csa20.patch,
+  files/xmms-1.2.8-russian-charset.patch, files/xmms-1.2.8-shadow.patch,
+  files/xmms-1.2.8-sid-songpos.patch, files/xmms-1.2.8-sigterm.patch:
+  removed older 1.2.8 ebuilds and moved the patches into a patch tarball on the
+  mirrors instead of bloating up files/
 
   21 Nov 2003; Martin Holzer <mholzer@gentoo.org> xmms-1.2.8-r3.ebuild,
   files/xmms-1.2.8-shadow.patch:
