@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.16 2002/06/02 15:17:15 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.17 2002/06/06 05:58:57 lostlogic Exp $
+
+*xmms-1.2.7-r9 (06 June 2002)
+
+  06 June 2002; Brandon Low <lostlogic@gentoo.org> xmms-1.2.7-r9.ebuild files/xmms-1.2.7-gentoo.patch:
+
+  New revision with a generated patch to fix a bunch of error output which 
+  was happening at compile time, also hopefully closes 3431, but waiting on
+  confirmation of that.
 
 *xmms-1.2.7-r8 (02 June 2002)
 
