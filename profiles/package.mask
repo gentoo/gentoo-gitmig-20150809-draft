@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2734 2004/03/04 08:47:24 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2735 2004/03/05 05:42:46 pebenito Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -47,12 +47,6 @@
 # PropertyFile broken, and who knows what else
 =dev-java/ant-1.6*
 =dev-java/ant-optional-1.6*
-
-# <pebenito@gentoo.org> (24 Feb 2004)
-# Needs some work, and v16 kernel
->=sys-libs/libselinux-1.6
->=sys-apps/checkpolicy-1.6
->=sys-apps/policycoreutils-1.6
 
 # <foser@gentoo.org> (24 Feb 2004)
 # breaks source builds 
