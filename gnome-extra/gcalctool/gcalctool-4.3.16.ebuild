@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-4.3.16.ebuild,v 1.6 2004/01/14 12:06:00 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-4.3.16.ebuild,v 1.7 2004/01/18 14:40:46 gustavoz Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://calctool.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc hppa alpha ia64 amd64"
+KEYWORDS="x86 ~ppc sparc hppa alpha ia64 amd64"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2
