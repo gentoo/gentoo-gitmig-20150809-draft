@@ -1,0 +1,6 @@
+MD5 dd9ae184013d870ff229254b0bb88f85 ChangeLog 3346
+MD5 c885b28272a4f8f5700afbf72c132c34 mol-0.9.69_pre1.ebuild 2302
+MD5 84c32ed763ae9c3851d03607a6bd1684 mol-0.9.68-r4.ebuild 2217
+MD5 74a86e79153cbc402d0152b5144680f7 files/dhcpd-mol.conf.patch 455
+MD5 d4bc3f0122eb77fbfbfcf584f442049d files/digest-mol-0.9.68-r4 67
+MD5 ed1cd84e5dcfb74b62b9a2cac39e72d7 files/digest-mol-0.9.69_pre1 203
