@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.21 2003/05/20 21:34:33 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.22 2003/06/01 20:04:02 mkeadle Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -24,7 +24,7 @@ RDEPEND="nls? ( sys-devel/gettext )
 	
 PROVIDE="virtual/blackbox"
 
-myconf=""
+myconf="--enable-xft"
 mydoc=""
 BOOTSTRAP=""
 FORCEXFT=""
