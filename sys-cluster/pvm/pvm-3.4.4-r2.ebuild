@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r2.ebuild,v 1.1 2004/04/02 22:09:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r2.ebuild,v 1.2 2004/04/04 09:52:51 dholm Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ DEPEND=""
 RDEPEND="virtual/glibc"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 S="${WORKDIR}/${MY_P%%.*}"
 
 src_unpack() {
