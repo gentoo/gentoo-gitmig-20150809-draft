@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.11 2003/03/04 11:05:42 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.12 2003/03/29 16:13:54 agriffis Exp $
+
+*snort-1.9.1-r1 (29 Mar 2003)
+
+  29 Mar 2003; Aron Griffis <agriffis@gentoo.org> snort-1.9.1-r1.ebuild,
+  files/snort-1.9.1-alpha.patch:
+  Add patch and bump revision for alpha. Thanks to Tavis Ormandy for providing
+  this in bug #18258
 
 *snort-1.9.1 (04 Mar 2003)
 
