@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/jgoodies-looks
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.1 2005/01/05 23:55:56 luckyduck Exp $
+
+*jgoodies-looks-1.2.2 (06 Jan 2005)
+
+  06 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/build.xml, +files/plastic.txt, +jgoodies-looks-1.2.2.ebuild:
+  Initial import. Ebuild contributed by Saleem A. <compnerd@gentoo.org>. Fixes
+  #74996.
+
