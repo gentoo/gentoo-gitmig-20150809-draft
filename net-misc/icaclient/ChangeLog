@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/icaclient
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.1 2002/06/09 04:05:30 woodchip Exp $
+
+*icaclient-6.30 (8 Jun 2002)
+
+  8 Jun 2002; Donny Davies <woodchip@gentoo.org> :
+
+  New port submitted bu Frédéric Mangeant <frederic.mangeant@free.fr>.
+  Bug #2440.
