@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/textutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/ChangeLog,v 1.5 2002/08/26 17:08:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/ChangeLog,v 1.6 2002/09/25 15:20:39 azarah Exp $
+
+*textutils-2.1 (25 Sep 2002)
+
+  25 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Update version.
 
 *textutils-2.0.21 (26 Aug 2002)
 
