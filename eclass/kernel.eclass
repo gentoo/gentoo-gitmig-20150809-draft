@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.17 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.18 2003/02/26 23:35:42 zwelch Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -14,17 +14,10 @@ EXTRAVERSION="`echo ${PN}-${PV}-${PR} | \
 	sed -e 's:^\(.*\)-sources-[0-9]\+\.[0-9]\+\.[0-9]\+.r*\([0-9]\+\)\(_[^-_]\+\)\?\(-r[0-9]\+\)\?$:-\1-r\2\3:'`"
 KV=${OKV}${EXTRAVERSION}
 S=${WORKDIR}/linux-${KV}
-PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
 
-# removes superficial bug if ETYPE is not set, and saves debugging time ;) - Gerk
-if [ -z "${ETYPE}" ] ; then
-	eerror "Please set ETYPE!"
-	die
-fi
-
-if [ $ETYPE = "sources" ]
+if [ "${ETYPE}" = "sources" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
@@ -36,6 +29,14 @@ then
 			   sys-devel/perl
 			   >=sys-apps/modutils-2.4.2
 			   sys-devel/make )"
+	PROVIDE="virtual/linux-sources"
+
+elif [ "${ETYPE}" = "headers" ]
+then
+	PROVIDE="virtual/kernel"
+else
+	eerror "Unknown ETYPE=\"${ETYPE}\"!"
+	die
 fi
 
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
@@ -65,7 +66,8 @@ kernel_universal_unpack() {
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make distclean || die
 
-	#this file is required for other things to build properly, so we autogenerate it
+	# this file is required for other things to build properly, 
+	#  so we autogenerate it
 	make include/linux/version.h || die
 
 }
@@ -74,7 +76,8 @@ kernel_src_unpack() {
 
 	kernel_exclude
 
-	/usr/bin/addpatches . ${WORKDIR}/linux-${KV} || die "Addpatches failed, bad KERNEL_ExCLUDE?"
+	/usr/bin/addpatches . ${WORKDIR}/linux-${KV} || \
+		die "Addpatches failed, bad KERNEL_EXCLUDE?"
 
 	kernel_universal_unpack
 
@@ -132,3 +135,4 @@ kernel_pkg_postinst() {
 		ln -sf linux-${KV} ${ROOT}/usr/src/linux
 	fi
 }
+
