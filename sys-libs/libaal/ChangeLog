@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libaal
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/ChangeLog,v 1.10 2004/08/14 08:55:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/ChangeLog,v 1.11 2004/08/24 22:26:34 vapier Exp $
+
+*libaal-1.0.1 (24 Aug 2004)
+
+  24 Aug 2004; Mike Frysinger <vapier@gentoo.org> +libaal-1.0.1.ebuild:
+  Version bump #61563 by Daniel Webert.
 
 *libaal-1.0.0 (14 Aug 2004)
 
