@@ -1,7 +1,7 @@
-# ChangeLog for app-misc/sqeeed
+# ChangeLog for app-misc/sqeed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # AUTHOR: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sqeed/ChangeLog,v 1.1 2002/07/03 00:05:14 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sqeed/ChangeLog,v 1.2 2002/12/17 19:16:32 vapier Exp $
 
 *sqeed-0.2.2 (03 Jul 2002)
 
