@@ -1,6 +1,13 @@
 # ChangeLog for net-www/ochusha
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ChangeLog,v 1.2 2003/11/09 19:20:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ChangeLog,v 1.3 2003/11/27 14:38:01 usata Exp $
+
+*ochusha-0.4.4.8 (27 Nov 2003)
+
+  27 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> ochusha-0.4.4.1.ebuild,
+  ochusha-0.4.4.8.ebuild:
+  Version bumped. Pass --enable-regex to econf and DEPEND on
+  dev-libs/oniguruma (--enable-regex requires it).
 
 *ochusha-0.4.4.2 (10 Nov 2003)
 
