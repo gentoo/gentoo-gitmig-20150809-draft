@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.8.6.ebuild,v 1.4 2004/04/07 18:59:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.8.6.ebuild,v 1.5 2004/06/19 06:44:17 weeve Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://plan.ftp.fu-berlin.de/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 sparc"
 
 DEPEND="virtual/x11
 	x11-libs/openmotif"
