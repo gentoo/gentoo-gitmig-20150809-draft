@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.3 2003/07/18 15:06:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.4 2003/07/18 16:08:01 seemant Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -23,5 +23,5 @@ vcards() {
 }
 
 filter-patch() {
-	mv ${PATCH_DIR}/"*${1}* ${PATCH_DIR}/excluded
+	mv ${PATCH_DIR}/"*${1}*" ${PATCH_DIR}/excluded
 }
