@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3649 2005/02/22 00:24:44 latexer Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3650 2005/02/22 14:33:00 lanius Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -197,13 +197,6 @@ dev-lisp/cl-imho
 # Paul de Vrieze <pauldv@gentoo.org> (02 Feb 2005)
 # Masked for testing dependend packages
 >=sys-libs/db-4.3
-
-# Heinrich Wendel <lanius@gentoo.org> (14 Feb 2005)
-# ebuilds for SLOTed motif, bug #81829
-=x11-libs/lesstif-0.94.0-r1
-=x11-libs/openmotif-2.1.30-r8
-=x11-libs/openmotif-2.2.3-r2
-x11-libs/motif-config
 
 # Benedikt Boehm <hollow@gentoo.org> (30 Jan 2005)
 # Apache herd package refresh
@@ -1113,10 +1106,6 @@ app-accessibility/speechd-up
 # gnome meta update tracker for 2.8.2 and 2.8.3
 =gnome-base/gnome-2.8.2_pre*
 =gnome-base/gnome-2.8.3_pre*
-
-# <lanius@gentoo.org> (12 Apr 2004) (upd. 25 Aug 2004)
-# these are beta version
-=media-gfx/gimp-print-5.0.0_beta2
 
 # <klasikahl@gentoo.org> (09 Apr 2004)
 # Still in the testing phase.
