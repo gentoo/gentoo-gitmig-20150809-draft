@@ -1,13 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.0.ebuild,v 1.1 2002/06/10 02:10:03 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.0.ebuild,v 1.2 2002/07/22 14:56:59 seemant Exp $
 
-DESCRIPTION="The Linux Audio Developer's Simple Plugin API and some example plugins"
-HOMEPAGE="http://www.ladspa.org/"
-LICENSE="LGPL-2.1"
-DEPEND="virtual/glibc"
-SRC_URI="http://www.ladspa.org/download/ladspa_sdk.tgz"
 S=${WORKDIR}/ladspa_sdk/src
+DESCRIPTION="The Linux Audio Developer's Simple Plugin API and some example plugins"
+SRC_URI="http://www.ladspa.org/download/ladspa_sdk.tgz"
+HOMEPAGE="http://www.ladspa.org/"
+
+SLOT="0"
+LICENSE="LGPL-2.1"
+KEYWORDS="x86"
+
+DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack "${A}"
@@ -29,4 +33,3 @@ src_install() {
 
 	dodoc ../doc/*
 }
-
