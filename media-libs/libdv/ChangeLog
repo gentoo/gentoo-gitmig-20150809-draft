@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.19 2003/08/25 18:47:05 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.20 2003/09/10 19:06:32 max Exp $
+
+  10 Sep 2003; Max Kalika <max@gentoo.org> libdv-0.99-r1.ebuild,
+  files/libdv-0.99-disablegtk.patch:
+  Re-add dev-util/pkgconfig to DEPEND and add -lXext to the Xv check of the
+  disablegtk patch. Fixes bug 27139. Thanks to Marc Bevand for the suggestion.
 
   25 Aug 2003; Max Kalika <max@gentoo.org> libdv-0.99-r1.ebuild,
   files/libdv-0.99-disablegtk.patch:
