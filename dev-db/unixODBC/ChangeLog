@@ -1,9 +1,12 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.17 2003/12/16 12:11:33 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.18 2003/12/19 22:28:57 rphillips Exp $
 
   16 Dec 2003; Guy Martin <gmsoft@gentoo.org> unixODBC-2.2.6.ebuild:
   Marked stable on hppa.
+
+  19 Dec 2003; <rphillips@gentoo.org> unixODBC-2.2.6.ebuild:
+  Added Olivier fixes for gODBCConfig
 
   15 Dec 2003; <rphillips@gentoo.org> unixODBC-2.2.6.ebuild:
   added Cory Visi's modified ebuild to correct the dependecy problems with
