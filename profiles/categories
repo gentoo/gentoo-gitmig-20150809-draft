@@ -98,6 +98,7 @@ net-print
 net-wireless
 net-www
 net-zope
+rox-base
 sec-policy
 sys-apps
 sys-boot
