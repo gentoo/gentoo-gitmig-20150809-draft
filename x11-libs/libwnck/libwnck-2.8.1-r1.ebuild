@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.8.1-r1.ebuild,v 1.2 2005/01/08 23:21:13 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.8.1-r1.ebuild,v 1.3 2005/01/22 06:48:40 vapier Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="A window navigation construction kit"
 HOMEPAGE="http://www.gnome.org/"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips ~ppc64 ~arm"
 IUSE="doc"
