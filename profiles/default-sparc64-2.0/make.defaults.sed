@@ -1,0 +1,2 @@
+s:ARCH=.*::
+s:ACCEPT_KEYWORDS=.*::
