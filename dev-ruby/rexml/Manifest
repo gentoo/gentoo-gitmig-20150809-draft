@@ -1,0 +1,7 @@
+MD5 59b847f57a7f7077bb1c97692aca048f ChangeLog 2065
+MD5 905fbd01b65f0fbb132b88587bb9c5b0 rexml-2.5.8.ebuild 712
+MD5 a0b92fc3e8520d1f1ddb2215ce4f32ac files/rexml-1.2.5-gentoo.diff 688
+MD5 301b50c7c72700e5499da68349a3d605 files/rexml-2.3.5-gentoo.diff 572
+MD5 ab46802b8dbd93ed51afbb2e06d286bb files/rexml-2.3.7-gentoo.diff 594
+MD5 d8c7f8b4e49227432a5e6f52f035a0ad files/rexml-2.4.0-gentoo.diff 539
+MD5 8212a4de094b70c4109b28b262682eb0 files/digest-rexml-2.5.8 60
