@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/fsviewer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.4 2003/02/12 09:35:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.5 2003/06/05 00:38:48 robh Exp $
+
+*fsviewer-0.2.3e-r1 (05 Jun 2003)
+
+  05 Jun 2003; robh <robh@gentoo.org> fsviewer-0.2.3e-r1.ebuild,
+  fsviewer-0.2.3e.ebuild:
+  fixed /usr/share/GNUstep sillyness.
 
 *fsviewer-0.2.3e (24 Oct 2002)
 
