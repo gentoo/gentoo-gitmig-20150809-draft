@@ -1,0 +1,37 @@
+# ChangeLog for net-www/webcpp
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/webcpp/ChangeLog,v 1.1 2004/08/15 17:37:20 stuart Exp $
+
+*webcpp-0.8.4 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +webcpp-0.8.2.ebuild,
+  +webcpp-0.8.4.ebuild:
+  Moved from net-www/webcpp to dev-util/webcpp.
+
+*webcpp-0.8.4 (17 Jul 2004)
+
+  17 Jul 2004; Mike Frysinger <vapier@gentoo.org> -webcpp-0.8.0-r1.ebuild,
+  -webcpp-0.8.0.ebuild, +webcpp-0.8.4.ebuild:
+  Version bump #57211 by sekretarz.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  webcpp-0.8.0-r1.ebuild, webcpp-0.8.0.ebuild, webcpp-0.8.2.ebuild:
+  virtual/glibc -> virtual/libc
+
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> webcpp-0.8.2.ebuild:
+  Stable on alpha.
+
+*webcpp-0.8.2 (02 Jul 2003)
+
+  02 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*webcpp-0.8.0-r1 (20 Mar 2003)
+
+  20 Mar 2003; Seemant Kulleen <seemant@gentoo.org> webcpp-0.8.0-r1.ebuild:
+  removed pic cruft
+
+*webcpp-0.8.0 (16 Feb 2003)
+
+  16 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
