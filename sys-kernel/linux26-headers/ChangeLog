@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.22 2004/08/24 19:30:17 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.23 2004/08/24 23:42:15 plasmaroo Exp $
+
+*linux26-headers-2.6.8.1 (25 Aug 2004)
+
+  25 Aug 2004; <plasmaroo@gentoo.org> +linux26-headers-2.6.8.1.ebuild,
+  +files/linux26-headers-2.6.8.1-appCompat.patch,
+  +files/linux26-headers-2.6.8.1-strict-ansi-fix.patch:
+  Version bump. Also closes bug #61109 on HPPA and some PPC issues.
 
   24 Aug 2004; <plasmaroo@gentoo.org> -linux26-headers-2.6.1.ebuild,
   -linux26-headers-2.6.3-r1.ebuild, -linux26-headers-2.6.4.ebuild,
