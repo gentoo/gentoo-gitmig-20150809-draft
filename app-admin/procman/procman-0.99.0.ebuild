@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-0.99.0.ebuild,v 1.12 2003/06/10 13:14:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-0.99.0.ebuild,v 1.13 2003/09/20 19:56:29 aliz Exp $
 
 DESCRIPTION="Process viewer for GNOME"
-SRC_URI="http://www.personal.psu.edu/users/k/f/kfv101/${PN}/source/${P}.tar.gz"
+SRC_URI="http://www.personal.psu.edu/users/k/f/kfv101/procman/source/${P}.tar.gz"
 HOMEPAGE="http://www.personal.psu.edu/kfv101/procman"
 
 SLOT="0"

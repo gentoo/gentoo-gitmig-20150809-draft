@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-0.98.ebuild,v 1.5 2003/09/04 05:17:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-0.98.ebuild,v 1.6 2003/09/20 19:56:29 aliz Exp $
 
 DESCRIPTION="iptables daemon for ULOG target for userspace iptables filter logging"
-SRC_URI="ftp://ftp.netfilter.org/pub/${PN}/${P}.tar.gz"
+SRC_URI="ftp://ftp.netfilter.org/pub/ulogd/${P}.tar.gz"
 HOMEPAGE="http://www.gnumonks.org/gnumonks/projects/project_details?p_id=1"
 
 SLOT="0"

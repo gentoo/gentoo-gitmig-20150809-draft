@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.6.5-r1.ebuild,v 1.5 2003/08/05 14:25:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.6.5-r1.ebuild,v 1.6 2003/09/20 19:56:29 aliz Exp $
 
 inherit eutils
 
 DESCRIPTION="Rotates, compresses, and mails system logs"
 HOMEPAGE="http://packages.debian.org/unstable/admin/logrotate.html"
-SRC_URI="http://ftp.debian.org/debian/pool/main/l/${PN}/${PN}_${PV}.orig.tar.gz
+SRC_URI="mirror://debian/pool/main/l/logrotate/${P/-/_}.orig.tar.gz
 	selinux? http://www.nsa.gov/selinux/patches/${P}-2003011510.patch.gz"
 
 LICENSE="GPL-2"

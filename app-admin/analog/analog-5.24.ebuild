@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.24.ebuild,v 1.11 2003/02/13 05:17:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.24.ebuild,v 1.12 2003/09/20 19:56:29 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The most popular logfile analyser in the world"
@@ -25,7 +25,7 @@ src_unpack() {
 		-e 's:^DEFS.*:DEFS = -DHAVE_GD -DHAVE_PCRE:' \
 		-e 's:^LIBS.*:LIBS = -lgd -lpng -ljpeg -lz -lpcre -lm:' \
 		src/Makefile.orig > src/Makefile
-	patch -p1 < ${FILESDIR}/${PN}-5.1-gentoo.diff
+	epatch ${FILESDIR}/${PN}-5.1-gentoo.diff
 }
 
 src_compile() {

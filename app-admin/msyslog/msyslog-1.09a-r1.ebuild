@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.09a-r1.ebuild,v 1.1 2003/09/17 22:28:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.09a-r1.ebuild,v 1.2 2003/09/20 19:56:29 aliz Exp $
 
 IUSE="postgres mysql"
 
@@ -11,7 +11,7 @@ IUSE="postgres mysql"
 S=${WORKDIR}/${PN}-v${PV}
 DESCRIPTION="Flexible and easy to integrate syslog with modularized input/output"
 HOMEPAGE="http://sourceforge.net/projects/msyslog/"
-SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
+SRC_URI="mirror://sourceforge/msyslog/${P}-src.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lcap/lcap-0.0.6-r1.ebuild,v 1.2 2003/09/06 22:08:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lcap/lcap-0.0.6-r1.ebuild,v 1.3 2003/09/20 19:56:29 aliz Exp $
 
 DESCRIPTION="kernel capability remover"
 
@@ -9,7 +9,7 @@ DESCRIPTION="kernel capability remover"
 HOMEPAGE="http://packages.debian.org/unstable/admin/lcap.html"
 
 # same for the sources
-SRC_URI="http://ftp.debian.org/debian/pool/main/l/lcap/${PN}_${PV}.orig.tar.gz"
+SRC_URI="mirror://debian/pool/main/l/lcap/${P/-/_}.orig.tar.gz"
 
 LICENSE="GPL-2"
 
@@ -26,7 +26,7 @@ RDEPEND="virtual/glibc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch < ${FILESDIR}/${PF}.patch || die "patch failed"
+	epatch ${FILESDIR}/${PF}.patch
 	use lids || (sed < Makefile > Makefile.tmp -e "s:LIDS =:#\0:" && \
 				mv Makefile.tmp Makefile)
 }
