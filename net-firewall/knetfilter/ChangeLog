@@ -1,0 +1,65 @@
+# ChangeLog for net-misc/knetfilter
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/knetfilter/ChangeLog,v 1.1 2003/02/17 20:51:43 mholzer Exp $
+
+  30 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Change ebuilds to use kde_src_unpack() instead of base_src_unpack(). This
+  does not affect in any way the compiled output, or any ebuild not suffering
+  rfom the 'languageChange undeclared' bug, which it fixes.
+
+*knetfilter-3.1.0 (19 Dec 2002)
+
+  19 Dec 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  A new upstream version.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*knetfilter-3.0.3 (24 Oct 2002)
+
+  24 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New upstream bugfix release.
+
+  31 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Eliminate sandbox problem when running make install in src/scripts.
+
+  31 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Run make clean after unpacking to make sure ew'll rebuild this, since it
+  comes with prebuilt binaries.
+
+*knetfilter-3.0.2 (21 Jul 2002)
+
+  21 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New upstream release.
+
+*knbetfilter-3.0.1 (17 May 2002)
+
+  08 Jun 2002; phoen][x <phoen][x@gentoo.org> knetfilter-3.0.1.ebuild :
+  Added KEYWORDS.
+
+  17 May 2002; Dan Armak <danarmak@gentoo.org> changelog:  
+  Forgot to put 3.0.0 in here; that was the kde3 version. This is a bugfix release.
+
+*knetfilter-2.2.5 (1 Feb 2002)
+
+  08 Jun 2002; phoen][x <phoen][x@gentoo.org> knetfilter-2.2.5.ebuild :
+  Added KEYWORDS, LICENSE.
+  
+  14 Mar 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :  
+  New upstream release. Upstream changelog is too long to paste here.
+
+
+*knetfilter-2.2.3 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
