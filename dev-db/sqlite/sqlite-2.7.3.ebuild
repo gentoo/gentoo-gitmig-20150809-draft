@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.7.3.ebuild,v 1.5 2003/02/13 10:05:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.7.3.ebuild,v 1.6 2003/09/06 22:25:50 msterret Exp $
 
 S=${WORKDIR}/sqlite
 DESCRIPTION="SQLite: An SQL Database Engine in a C Library."
@@ -18,14 +18,14 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--sysconfdir=/etc || die
-		
+
 	emake || die
 	make doc || die
 }
 
 src_install () {
 	dodir /usr/{bin,include,lib}
-	
+
 	make prefix=${D}/usr \
 	     mandir=${D}/usr/share/man \
 	     infodir=${D}/usr/share/info \
@@ -34,7 +34,7 @@ src_install () {
 
 	dobin lemon
 
-	dodoc README VERSION 
+	dodoc README VERSION
 	docinto html
 	dohtml doc/*.html doc/*.txt doc/*.png
 }

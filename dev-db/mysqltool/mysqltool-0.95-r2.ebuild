@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r2.ebuild,v 1.4 2003/05/12 16:08:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r2.ebuild,v 1.5 2003/09/06 22:25:50 msterret Exp $
 
 inherit perl-module
 
@@ -23,8 +23,8 @@ DEPEND="virtual/glibc
 	dev-perl/DBD-mysql
 	dev-perl/Crypt-Blowfish"
 RDEPEND="${DEPEND}
-	|| ( >=net-www/apache-1.3.24-r1 
-		 apache2? ( >=net-www/apache-2.0.45 ) 
+	|| ( >=net-www/apache-1.3.24-r1
+		 apache2? ( >=net-www/apache-2.0.45 )
 	    )"
 
 src_install() {
@@ -38,8 +38,8 @@ src_install() {
 	make install || die
 
 	dodoc COPYING Changes MANIFEST README Upgrade
-	
-	local __apache_server_root__ 
+
+	local __apache_server_root__
 	if [ "`use apache2`" ]; then
 		__apache_server_root__="/etc/apache2"
 	else

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-2.4.1-r1.ebuild,v 1.10 2003/02/13 10:04:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-2.4.1-r1.ebuild,v 1.11 2003/09/06 22:25:50 msterret Exp $
 
 MY_PN=phpPgAdmin
 MY_PV="`echo ${PV} | sed -e 's:\.:-:g'`"
@@ -14,8 +14,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 SLOT="0"
 
-DEPEND=">=net-www/apache-1.3.24-r1 
-	>=dev-db/postgresql-7.0.3-r3 
+DEPEND=">=net-www/apache-1.3.24-r1
+	>=dev-db/postgresql-7.0.3-r3
 	>=dev-php/mod_php-4.1.2-r5"
 
 src_compile() { :; }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.ebuild,v 1.3 2003/07/20 14:53:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.ebuild,v 1.4 2003/09/06 22:25:50 msterret Exp $
 
 DESCRIPTION="GUI-independent C++ libraries for database applications, plus API documentation and tutorials"
 HOMEPAGE="http://hk-classes.sourceforge.net/"
@@ -13,9 +13,9 @@ IUSE="mysql postgres odbc"
 
 # At least one of the following is required
 DEPEND="mysql? ( >=dev-db/mysql-3.23.54a )
-	postgres? ( >=dev-db/postgresql-7.3 ) 
+	postgres? ( >=dev-db/postgresql-7.3 )
         odbc? ( >=dev-db/unixODBC-2.0.6 )"
-	
+
 S=${WORKDIR}/${P}
 
 src_compile() {
@@ -31,7 +31,7 @@ src_compile() {
   		--with-postgres-libdir=/usr/lib/postgresql"
 	use odbc && myconf="${myconf} --with-odbc-incdir=/usr/include \
   		--with-odbc-libdir=/usr/lib"
-	
+
 	./configure ${myconf} || die "./configure failed"
 	emake || die
 }

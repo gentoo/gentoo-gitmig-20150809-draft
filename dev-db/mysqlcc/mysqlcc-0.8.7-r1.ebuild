@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/mysqlcc-0.8.7-r1.ebuild,v 1.2 2003/06/12 20:29:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/mysqlcc-0.8.7-r1.ebuild,v 1.3 2003/09/06 22:25:50 msterret Exp $
 
 S=${WORKDIR}/${P}-src
 DESCRIPTION="a MySQL GUI Client"
@@ -34,7 +34,7 @@ src_compile() {
 	if [ -e /usr/share/automake-1.4/config.sub ]; then
 		cp /usr/share/automake-1.4/config.sub ${S}
 	fi
-	cd ${S}; autoreconf -f; 
+	cd ${S}; autoreconf -f;
 
 	econf || die
 
@@ -42,8 +42,8 @@ src_compile() {
 	sed -e "s:CFLAGS   = -pipe -Wall -W -g:CFLAGS   = ${CFLAGS}:" \
 		-e "s:CXXFLAGS = -pipe -Wall -W -g:CXXFLAGS = ${CXXFLAGS}:" \
 		Makefile.orig > Makefile
-		
-	QTDIR=$QTDIR 
+
+	QTDIR=$QTDIR
 	emake || die
 }
 
@@ -53,6 +53,6 @@ src_install() {
 	insinto /usr/share/mysqlcc
 	doins warning.wav information.wav error.wav syntax.txt
 	dodir /usr/share/mysqlcc/translations
-	insinto /usr/share/mysqlcc/translations 
+	insinto /usr/share/mysqlcc/translations
 	doins translations/Espanol.qm  translations/Espanol.ts  translations/Russian.qm  translations/Russian.ts
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.2.ebuild,v 1.8 2003/06/06 20:12:37 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.2.ebuild,v 1.9 2003/09/06 22:25:50 msterret Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 SRC_URI="ftp://ftp.postgresql.org/pub/source/v${PV}/${P}.tar.gz"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 IUSE="ssl nls java python tcltk perl libg++ pam readline zlib"
 
-filter-flags -ffast-math 
+filter-flags -ffast-math
 
 DEPEND="virtual/glibc
 	sys-devel/autoconf

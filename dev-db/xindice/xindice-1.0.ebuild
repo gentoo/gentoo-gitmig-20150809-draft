@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0.ebuild,v 1.3 2003/07/11 21:04:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0.ebuild,v 1.4 2003/09/06 22:25:50 msterret Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ src_install() {
 	dodir ${TARGET}
 	dodir ${TARGET}/java
 	cp -Rvdp bin config icons docs logs idl ${D}${TARGET}
-	cd java 
+	cd java
 	cp -Rvdp lib tests examples ${D}${TARGET}/java
  	cd ..
 	dodoc docs/LICENSE docs/README docs/FAQ docs/TODO docs/VERSIONS docs/AUTHORS
@@ -54,9 +54,9 @@ src_install() {
 	dodir /etc/init.d
 	insinto /etc/init.d
 	insopts -m0755
-	doins ${FILESDIR}/xindice	
+	doins ${FILESDIR}/xindice
 	insinto ${TARGET}
 	doins start
 	keepdir /opt/xindice/db
-	chown -R xindice.xindice ${D}/opt/xindice	
+	chown -R xindice.xindice ${D}/opt/xindice
 }

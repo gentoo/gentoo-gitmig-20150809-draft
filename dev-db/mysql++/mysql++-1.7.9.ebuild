@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9.ebuild,v 1.9 2003/08/05 16:01:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9.ebuild,v 1.10 2003/09/06 22:25:50 msterret Exp $
 
 inherit gcc eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 		--enable-exceptions \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man || die "./configure failed"
-	
+
 	emake || die "unable to make"
 }
 

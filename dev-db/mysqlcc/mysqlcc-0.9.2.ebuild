@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/mysqlcc-0.9.2.ebuild,v 1.3 2003/08/15 18:37:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/mysqlcc-0.9.2.ebuild,v 1.4 2003/09/06 22:25:50 msterret Exp $
 
 inherit eutils kde-functions
 need-qt 3.0.5
@@ -34,7 +34,7 @@ src_compile() {
 	if [ -e /usr/share/automake-1.4/config.sub ]; then
 		cp /usr/share/automake-1.4/config.sub ${S}
 	fi
-	cd ${S}; autoreconf -f; 
+	cd ${S}; autoreconf -f;
 
 	if [ "`use ssl`" ]; then
 		SUBLIBS="${SUBLIBS} -lssl"
@@ -47,7 +47,7 @@ src_compile() {
 	sed -e "s:CFLAGS   = -pipe -Wall -W -O2:CFLAGS   = ${CFLAGS}:" \
 		-e "s:CXXFLAGS = -pipe -Wall -W -O2:CXXFLAGS = ${CXXFLAGS}:" \
 		Makefile.orig > Makefile
-		
+
 	QTDIR=$QTDIR
 	emake || die
 }
@@ -58,6 +58,6 @@ src_install() {
 	insinto /usr/share/mysqlcc
 	doins warning.wav information.wav error.wav syntax.txt
 	dodir /usr/share/mysqlcc/translations
-	insinto /usr/share/mysqlcc/translations 
+	insinto /usr/share/mysqlcc/translations
 	doins translations/*.qm  translations/*.ts
 }

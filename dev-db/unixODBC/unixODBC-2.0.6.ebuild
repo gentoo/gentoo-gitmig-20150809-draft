@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.0.6.ebuild,v 1.18 2003/08/05 16:05:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.0.6.ebuild,v 1.19 2003/09/06 22:25:50 msterret Exp $
 
 inherit gnuconfig
 
@@ -38,7 +38,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	
+
 	if [ "`use qt`" ]
 	then
 		myconf="--enable-gui=yes"

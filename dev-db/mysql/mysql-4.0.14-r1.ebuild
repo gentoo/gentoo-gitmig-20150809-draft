@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r1.ebuild,v 1.5 2003/08/28 04:55:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r1.ebuild,v 1.6 2003/09/06 22:25:50 msterret Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -77,7 +77,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	#The following fix is due to a bug with bdb on sparc's. See: 
+	#The following fix is due to a bug with bdb on sparc's. See:
 	#http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
 	if use sparc || use sparc64 || use alpha || use hppa
 	then
@@ -167,7 +167,7 @@ src_install() {
 	fi
 
 	dodoc README COPYING COPYING.LIB MIRRORS Docs/manual.*
-	docinto conf-samples  
+	docinto conf-samples
 	dodoc support-files/my-*.cnf
 	dohtml -r Docs/*
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/freecdb-0.62.ebuild,v 1.2 2003/06/24 07:45:33 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/freecdb-0.62.ebuild,v 1.3 2003/09/06 22:25:50 msterret Exp $
 
 DESCRIPTION="A fast, reliable, simple package for creating and reading constant databases"
 SRC_URI="http://ftp.debian.org/debian/pool/main/f/freecdb//${P/-/_}.tar.gz"
@@ -15,11 +15,11 @@ DEPEND="sys-devel/make
 	dev-lang/perl"
 RDEPEND=""
 
-src_compile() {                           
+src_compile() {
 	emake DESTDIR=${D} || die "make failed"
 }
 
-src_install() {                               
+src_install() {
 	mkdir -p ${D}/usr/{lib,bin,include}
 	mkdir -p ${D}/usr/share/man/man{1,3}
 	emake DESTDIR=${D} install

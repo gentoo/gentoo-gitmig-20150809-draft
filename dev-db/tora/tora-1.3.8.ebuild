@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.8.ebuild,v 1.4 2003/08/05 18:50:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.8.ebuild,v 1.5 2003/09/06 22:25:50 msterret Exp $
 
 DESCRIPTION="TOra - Toolkit For Oracle"
 HOMEPAGE="http://www.globecom.se/tora/"
@@ -34,15 +34,15 @@ src_compile() {
 
 	use kde \
 		&& myconf="$myconf --with-kde" \
-		|| myconf="$myconf --without-kde"	
+		|| myconf="$myconf --without-kde"
 	use mysql \
 		&& myconf="$myconf" \
-		|| myconf="$myconf --without-mysql"	
+		|| myconf="$myconf --without-mysql"
 #	use postgres	&& myconf="$myconf" \
-#				|| myconf="$myconf --without-postgres"	
+#				|| myconf="$myconf --without-postgres"
 	use oci8 \
 		&& myconf="$myconf" \
-		|| myconf="$myconf --without-oracle"	
+		|| myconf="$myconf --without-oracle"
 
 	#patch -p0 < ${FILESDIR}/tora-${PV}.patch
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r2.ebuild,v 1.1 2003/08/18 04:37:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r2.ebuild,v 1.2 2003/09/06 22:25:50 msterret Exp $
 
 inherit gcc eutils
 
@@ -49,10 +49,10 @@ src_unpack() {
 		epatch ${FILESDIR}/mysql++-1.7.9-gcc_throw.patch
 		# This is included in mysql++-gcc-3.2.2.patch.gz
 		#EPATCH_SINGLE_MSG="Patch for const char* error" \
-		#epatch ${FILESDIR}/mysql++-1.7.9-mysql4-gcc3.patch	
+		#epatch ${FILESDIR}/mysql++-1.7.9-mysql4-gcc3.patch
 	else
 		EPATCH_SINGLE_MSG="Patch for const char* error" \
-		epatch ${FILESDIR}/mysql++-1.7.9-mysql4-gcc295.patch	
+		epatch ${FILESDIR}/mysql++-1.7.9-mysql4-gcc295.patch
 	fi
 	EPATCH_SINGLE_MSG="Fixing examples directory bug..." \
 	epatch ${FILESDIR}/mysql++-1.7.9_example.patch
@@ -71,7 +71,7 @@ src_compile() {
 	CFLAGS="${CFLAGS}" CXXFLAGS="${CFLAGS} ${CXXFLAGS}" \
 	econf \
 		--enable-exceptions \
-		--includedir=/usr/include/mysql++ 
+		--includedir=/usr/include/mysql++
 
 	emake || die "unable to make"
 }

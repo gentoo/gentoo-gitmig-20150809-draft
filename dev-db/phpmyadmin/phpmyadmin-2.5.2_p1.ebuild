@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.2_p1.ebuild,v 1.1 2003/08/09 11:00:59 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.2_p1.ebuild,v 1.2 2003/09/06 22:25:50 msterret Exp $
 
 inherit eutils
 
@@ -55,7 +55,7 @@ src_install() {
 	insinto /etc/phpmyadmin
 	doins config.inc.php mysql-setup.sql
 	dosym /etc/phpmyadmin/config.inc.php ${destdir}/config.inc.php
-	
+
 }
 
 pkg_postinst() {
