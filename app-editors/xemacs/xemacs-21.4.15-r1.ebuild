@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.15-r1.ebuild,v 1.2 2005/01/01 13:36:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.15-r1.ebuild,v 1.3 2005/01/09 10:42:06 swegener Exp $
 
 inherit eutils
 
@@ -48,7 +48,7 @@ RDEPEND="virtual/libc
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2"
 PDEPEND="app-xemacs/xemacs-base
-	mule? app-xemacs/mule-base"
+	mule? ( app-xemacs/mule-base )"
 PROVIDE="virtual/xemacs virtual/editor"
 
 src_unpack() {
