@@ -1,4 +1,14 @@
-MD5 bc68ad4e1de46c096ffeedaf1d8f9d29 ChangeLog 1159
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3d693318d5e4f169b645f59a968a601e gnu-javamail-20040331.ebuild 1260
+MD5 711faad46cc016a86365261635f33518 ChangeLog 1299
 MD5 1abfa0b375cbfc010259917a4d3f57b7 metadata.xml 1094
-MD5 0f144126fc68deefb592f28c7adf90af gnu-javamail-20040331.ebuild 1256
 MD5 cb7f0ddae1ab50f81f5bbb9b6a67753d files/digest-gnu-javamail-20040331 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB4R/iI1lqEGTUzyQRAgxFAJ9f78Ho5UCmEbM4BcMDAQJyT0+hzwCfTvB2
+0z7xDbgHtfysoQhfXyzSgG8=
+=MvrU
+-----END PGP SIGNATURE-----
