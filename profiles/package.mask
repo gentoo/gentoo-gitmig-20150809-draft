@@ -826,11 +826,6 @@ net-mail/courier
 # should be updated to 4.2 
 <sys-apps/texinfo-4.2
 
-# mkennedy@gentoo.org 27 May 2002
-# -Wno-deprecated in CPPFLAGS to support gcc3.1 --masked until someone
-# tests this with gcc-2.95.3
-=net-www/htdig-3.1.6-r4
-
 # ashmodai@gentoo.org 22 May 2002
 # Masked until I can get the 'support' packages/patches merged.
 =net-dialup/ppp-2.4.1-r9
