@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/k3b
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.34 2003/12/16 22:04:08 azarah Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.35 2004/01/26 17:27:11 lu_zero Exp $
+
+*k3b-0.11.1 (26 Jan 2004)
+
+  26 Jan 2004; Luca Barbato <lu_zero@gentoo.org> k3b-0.11.1.ebuild:
+  New version, ui fixes
 
 *k3b-0.10.3-r2 (16 Dec 2003)
 
