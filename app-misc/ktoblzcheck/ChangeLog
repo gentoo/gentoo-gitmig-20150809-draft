@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ktoblzcheck
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.15 2005/02/05 17:57:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.16 2005/02/14 17:09:58 blubb Exp $
+
+  14 Feb 2005; Simon Stelling <blubb@gentoo.org> ktoblzcheck-1.2.ebuild:
+  added ~amd64
 
   05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> ktoblzcheck-1.2.ebuild:
   ~alpha keyword.
