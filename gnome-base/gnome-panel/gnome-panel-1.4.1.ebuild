@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.4.1.ebuild,v 1.5 2002/06/29 09:15:45 spider Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.4.1.ebuild,v 1.6 2002/07/15 13:46:09 stroke Exp $
 
 inherit libtool
 
@@ -10,6 +9,7 @@ DESCRIPTION="Split out panel from gnome-core"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-core/gnome-core-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="1.4"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 
 RDEPEND="=gnome-base/control-center-1.4*
