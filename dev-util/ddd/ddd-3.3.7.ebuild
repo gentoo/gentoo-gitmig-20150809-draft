@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.7.ebuild,v 1.1 2003/10/02 08:07:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.7.ebuild,v 1.2 2003/10/12 17:06:36 mholzer Exp $
 
 inherit eutils
 
@@ -13,6 +13,7 @@ LICENSE="GPL-2 LGPL-2.1 FDL-1.1"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/x11
+	>=sys-devel/gcc-3
 	>=sys-devel/gdb-4.16
 	virtual/motif"
 
