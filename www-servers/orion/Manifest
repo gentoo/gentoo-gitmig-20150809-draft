@@ -1,31 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 0bdd36caab423af897535155eab06d2c orion-2.0.1.ebuild 3527
 MD5 0a76c79ab42c974a42aa6db91ad1fd54 orion-2.0.2.ebuild 3530
-MD5 a774b73ec87b7ee7c8fbe34a0aa79179 ChangeLog 3423
+MD5 ad6bfd5d1adf70dd7b7d6d8473a326d4 ChangeLog 3588
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 5e78308ed1712b24bcced31b5097e7fc files/digest-orion-2.0.1 60
 MD5 2e8906fc5bfd8955cfbac84d1ce4850c files/digest-orion-2.0.2 60
-MD5 abd7c855a9b9601253916624d6f0e782 files/2.0/2.0-gentoo.patch 5301
-MD5 e175ab77e3672e6af0b3440ecf17d1b0 files/2.0/orion.conf 1488
-MD5 fc1340b1f2506b2c5f20d79c5b7da347 files/2.0/orion.init 624
-MD5 d639d66431028cebb11ae1642722e64a files/2.0/start_orion.sh 327
 MD5 d07a4a710da503acad73a3ff6a33b53d files/2.0/stop_orion.sh 199
+MD5 e175ab77e3672e6af0b3440ecf17d1b0 files/2.0/orion.conf 1488
+MD5 8bc08ac3b94467c660311e05f5274235 files/2.0/orion.init 621
+MD5 d639d66431028cebb11ae1642722e64a files/2.0/start_orion.sh 327
+MD5 abd7c855a9b9601253916624d6f0e782 files/2.0/2.0-gentoo.patch 5301
+MD5 8e79ab4c81d11f32ad95f591e4bdcf86 files/2.0.1/stop_orion.sh 201
 MD5 abd7c855a9b9601253916624d6f0e782 files/2.0.1/2.0.1-gentoo.patch 5301
 MD5 7601a324323ba4d391105924f7130ef5 files/2.0.1/orion.conf 1490
-MD5 30917c8e2cb458024f0f41b7e401adbf files/2.0.1/orion.init 626
+MD5 4769c90a33df53412fe897b0e85d30ee files/2.0.1/orion.init 623
 MD5 381c1a5cf920e989d67d3dce11a4b18f files/2.0.1/start_orion.sh 329
-MD5 8e79ab4c81d11f32ad95f591e4bdcf86 files/2.0.1/stop_orion.sh 201
-MD5 abd7c855a9b9601253916624d6f0e782 files/2.0.2/2.0.2-gentoo.patch 5301
-MD5 9e9bda794856b8df9f83b685b8927e2f files/2.0.2/orion.conf 1490
-MD5 3b54a71fecb2e41e8a56ce4d83687c5d files/2.0.2/orion.init 626
-MD5 68df9354bacc148d8077dc4aadd5e296 files/2.0.2/start_orion.sh 329
 MD5 6371601ecd23c07b7e2ff7ade715ac62 files/2.0.2/stop_orion.sh 201
+MD5 9e9bda794856b8df9f83b685b8927e2f files/2.0.2/orion.conf 1490
+MD5 95371637dbe2fe9a6b90a338b1d2713f files/2.0.2/orion.init 623
+MD5 68df9354bacc148d8077dc4aadd5e296 files/2.0.2/start_orion.sh 329
+MD5 abd7c855a9b9601253916624d6f0e782 files/2.0.2/2.0.2-gentoo.patch 5301
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBXswRI1lqEGTUzyQRAjwnAJ0QqLa/VTxkhjXeF/mKcV3IMP5jkwCcCc8E
-k/FTz0fygi5DevkTP+CtOh4=
-=IxU9
+iD8DBQFBZphx/rLF9B432nYRAm48AJkBzcQec1Cme+GLPD+a4pwJAvaJ3ACgtksp
+wWNO28qsrQ/70pPN1Uluuq8=
+=vTti
 -----END PGP SIGNATURE-----
