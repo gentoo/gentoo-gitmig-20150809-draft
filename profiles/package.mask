@@ -531,3 +531,7 @@ dev-lang/tcl-tk
 #seemant@gentoo.org, 15 Apr 2002
 # won't compile against Qt3, so it is under investigation
 =media-video/vlc-0.3.0
+
+#seemant@gentoo.org 16 Apr 2002
+# libpng is just scary -- masked while I get the braver users to test this
+=media-libs/libpng-1.2.2
