@@ -1,5 +1,5 @@
-MD5 9495369921b923a78916fe71803455ae gnus-cvs-5.11.ebuild 1458
-MD5 321b5e2a8cff6232fee9954e326473ac ChangeLog 998
+MD5 b9331838b1f66aed13726aad84d0c989 gnus-cvs-5.11.ebuild 1461
+MD5 6b3e1165a765e5c9d499209f9d80b020 ChangeLog 1104
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 e4585970dba5b3fe1ed52d9b7a45fc26 files/70gnus-cvs-gentoo.el 107
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnus-cvs-5.11 0

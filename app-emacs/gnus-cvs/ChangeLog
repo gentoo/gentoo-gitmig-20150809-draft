@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnus-cvs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/ChangeLog,v 1.7 2004/06/28 03:13:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/ChangeLog,v 1.8 2004/09/05 15:19:53 aliz Exp $
+
+  05 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> gnus-cvs-5.11.ebuild:
+  Added amd64 keyword, closing #58609.
 
   27 Jun 2004; Aron Griffis <agriffis@gentoo.org> gnus-cvs-5.11.ebuild:
   QA - fix use invocation
