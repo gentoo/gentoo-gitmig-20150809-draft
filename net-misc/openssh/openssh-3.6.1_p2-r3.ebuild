@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.6.1_p2-r3.ebuild,v 1.1 2003/09/05 13:18:43 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.6.1_p2-r3.ebuild,v 1.2 2003/09/05 13:52:33 taviso Exp $
 
 inherit eutils flag-o-matic ccc
 
@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="-* -x86 -alpha"
+KEYWORDS="~x86 ~alpha"
 
 src_unpack() {
 	unpack ${PARCH}.tar.gz ; cd ${S}
