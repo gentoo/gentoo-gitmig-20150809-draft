@@ -1,4 +1,4 @@
-MD5 8aaf497023c0f95be345b08cb1b3be45 comix-1.1.6.ebuild 480
-MD5 6fec7e47fc3445f0c04507f2509936e6 ChangeLog 401
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 5b692c2d0c22102cea73a0f2a421c440 files/digest-comix-1.1.6 70
+MD5 1d61b76f1fbe0af860769c2a20a4bfdc ChangeLog 538
+MD5 2f72b2d223861b25131946e4393f50e0 comix-1.2.3.ebuild 480
+MD5 409374b842155f26cf3955492ae86e0b files/digest-comix-1.2.3 70
