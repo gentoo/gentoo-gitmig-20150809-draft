@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.9.1.ebuild,v 1.7 2004/08/08 00:26:20 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.9.1.ebuild,v 1.8 2004/08/10 12:23:13 humpback Exp $
 
 inherit gnuconfig
 
@@ -36,7 +36,8 @@ src_install() {
 		doins ${ROOT}/etc/ssh2/hostkey{,.pub}
 		fperms go-rwx /etc/ssh2/hostkey
 	fi
-
+	#this is ugly but helps on some problems on fresh installs see bug #57915
+	addwrite /root/.ssh2
 	make install DESTDIR=${D} || die "install failed"
 	chmod 600 ${D}/etc/ssh2/sshd2_config
 	dodoc CHANGES FAQ HOWTO.anonymous.sftp README* SSH2.QUICKSTART
