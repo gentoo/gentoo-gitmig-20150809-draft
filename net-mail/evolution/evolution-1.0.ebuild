@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.99.0.ebuild,v 1.4 2001/11/10 02:06:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.ebuild,v 1.1 2001/12/03 22:10:13 hallski Exp $
 
 DB3=db-3.1.17
 S=${WORKDIR}/${P}
@@ -14,9 +14,9 @@ HOMEPAGE="http://www.ximian.com"
 
 DEPEND=">=gnome-extra/bonobo-conf-0.14
         >=gnome-base/bonobo-1.0.15
-	>=gnome-extra/gal-0.18
+	>=gnome-extra/gal-0.18.1
         >=gnome-base/gconf-1.0.7
-	>=gnome-extra/gtkhtml-0.16.0
+	>=gnome-extra/gtkhtml-1.0.0
 	>=gnome-base/oaf-0.6.6-r1
 	>=gnome-base/ORBit-0.5.10-r1
 	>=gnome-base/libglade-0.17-r1
@@ -28,8 +28,8 @@ DEPEND=">=gnome-extra/bonobo-conf-0.14
         >=dev-util/intltool-0.11
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
-	mozilla? ( >=net-www/mozilla-0.9.5-r1 )
-	pda? ( >=gnome-extra/gnome-pilot-0.1.61-r1 )" 
+	mozilla? ( >=net-www/mozilla-0.9.5-r1 )"
+#	pda? ( >=gnome-extra/gnome-pilot-0.1.61-r1 )" 
 
 src_compile() {
 	cd ${WORKDIR}/${DB3}/build_unix
@@ -49,9 +49,9 @@ src_compile() {
 		myconf="$myconf --disable-ssl"
 	fi
 
-	if [ "`use pda`" ] ; then
-		myconf="$myconf --with-pisock=/usr --enable-pilot-conduits=yes"
-	fi
+#	if [ "`use pda`" ] ; then
+#		myconf="$myconf --with-pisock=/usr --enable-pilot-conduits=yes"
+#	fi
 
 	if [ "`use mozilla`" ] ; then
 		myconf="$myconf --with-nspr-includes=${MOZILLA}/include/nspr \
@@ -59,9 +59,7 @@ src_compile() {
 				--with-nspr-libs=${MOZILLA}"
 	fi
 
-#	CFLAGS="-I${WORKDIR}/db3/include ${CFLAGS} 			\
-#		`gnome-config --cflags bonobo`"
-
+	CFLAGS="${CFLAGS} -I/usr/include/libpisock"
 	./configure --host=${CHOST} 		     			\
 		    --prefix=/usr					\
 		    --sysconfdir=/etc		 			\
