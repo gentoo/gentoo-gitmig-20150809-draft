@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-1.61.ebuild,v 1.1 2005/02/24 14:15:49 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-1.61.ebuild,v 1.2 2005/02/28 12:49:38 uberlord Exp $
 
 inherit eutils webapp
 
 MY_PV=161
 DESCRIPTION="Web-based browsing tool for Subversion (SVN) repositories in PHP"
-HOMEPAGE="http://websvn.tirgris.org/"
+HOMEPAGE="http://websvn.tigris.org/"
 SRC_URI="http://websvn.tigris.org/files/documents/1380/14334/WebSVN_${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 IUSE="enscript"
