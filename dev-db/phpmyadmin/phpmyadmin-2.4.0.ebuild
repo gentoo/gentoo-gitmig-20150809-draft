@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.4.0.ebuild,v 1.1 2003/04/08 10:17:26 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.4.0.ebuild,v 1.2 2003/04/09 10:04:04 twp Exp $
 
 inherit eutils
 
@@ -36,22 +36,25 @@ src_compile() {
 src_install () {
 	cd ${S}
 
-	insinto /home/httpd/htdocs/phpmyadmin
+	local DocumentRoot="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
+	[ -z "${DocumentRoot}" ] && DocumentRoot="/home/httpd/htdocs"
+
+	insinto ${DocumentRoot}/phpmyadmin
 	doins *.{php,html} ChangeLog
 
-	insinto /home/httpd/htdocs/phpmyadmin/images
+	insinto ${DocumentRoot}/phpmyadmin/images
 	doins images/*.{gif,png}
 
-	insinto /home/httpd/htdocs/phpmyadmin/scripts
+	insinto ${DocumentRoot}/phpmyadmin/scripts
 	doins scripts/*.sh
 
-	insinto /home/httpd/htdocs/phpmyadmin/lang
+	insinto ${DocumentRoot}/phpmyadmin/lang
 	doins lang/*.{php,sh}
 
-	insinto /home/httpd/htdocs/phpmyadmin/libraries
+	insinto ${DocumentRoot}/phpmyadmin/libraries
 	doins libraries/*.{php,js}
 
-	insinto /home/httpd/htdocs/phpmyadmin/libraries/auth
+	insinto ${DocumentRoot}/phpmyadmin/libraries/auth
 	doins libraries/auth/*.php
 
 	dodoc ANNOUNCE.txt CREDITS ChangeLog TODO Documentation.{txt,html} \
@@ -60,7 +63,7 @@ src_install () {
 	insinto /etc/phpmyadmin
 	doins config.inc.php mysql-setup.sql
 
-	dosym /etc/phpmyadmin/config.inc.php /home/httpd/htdocs/phpmyadmin/config.inc.php
+	dosym /etc/phpmyadmin/config.inc.php ${DocumentRoot}/phpmyadmin/config.inc.php
 	
 }
 
