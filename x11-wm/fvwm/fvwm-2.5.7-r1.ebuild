@@ -1,17 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r1.ebuild,v 1.2 2003/08/05 20:26:41 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r1.ebuild,v 1.3 2003/08/14 11:37:19 taviso Exp $
 
 inherit gnuconfig
 
-IUSE="readline ncurses gtk stroke gnome rplay xinerama cjk doc perl nls png bidi imlib tcltk gtk2 debug"
+IUSE="readline ncurses gtk stroke gnome rplay xinerama cjk perl nls png bidi imlib tcltk debug"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="an extremely powerful ICCCM-compliant multiple virtual desktop window manager"
 SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
 		perl? ( http://users.tpg.com.au/users/scottie7/FvwmTabs 
-				http://users.tpg.com.au/users/scottie7/fvwmtabrc )
-		doc? ( http://tronche.com/gui/x/icccm/icccm.tar.gz )"
+				http://users.tpg.com.au/users/scottie7/fvwmtabrc )"
 HOMEPAGE="http://www.fvwm.org/"
 
 SLOT="0"
@@ -31,9 +30,7 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 		stroke? ( >=dev-libs/libstroke-0.4 )
 		perl? ( tcltk? ( >=dev-lang/tk-8.3.4
 						>=dev-perl/perl-tk-800.024-r2
-						>=dev-perl/X11-Protocol-0.51 )
-				gtk2? ( >=dev-perl/gtk2-perl-0.92 )
-				gtk? ( >=dev-perl/gtk-perl-0.7008-r9 ) )
+						>=dev-perl/X11-Protocol-0.51 ) )
 		>=dev-lang/perl-5.6.1-r10	
 		>=media-libs/netpbm-9.12-r4
 		>=media-libs/fontconfig-2.1-r1
@@ -219,11 +216,6 @@ src_install() {
 	docs/COMMANDS docs/DEVELOPERS docs/FAQ docs/error_codes docs/TODO \
 	docs/fvwm.lsm
 
-	# iccm documentation, useful for developers,module writers,etc, etc
-	if use doc; then
-		dohtml -r ${WORKDIR}/icccm
-	fi
-
 	prepallman
 }
 
@@ -231,25 +223,24 @@ pkg_postinst() {
 	ewarn
 	ewarn "The following features that you did not request are now"
 	ewarn "controlled via USE flags:"
-	use readline	|| ewarn "	Readline support in FvwmConsole [${HILITE}readline${NORMAL}]"
-	use ncurses		|| ewarn "	Ncurses support in FvwmConsole [${HILITE}ncurses${NORMAL}]"
-	use stroke		|| ewarn "	Mouse Gestures [${HILITE}stroke${NORMAL}]"
-	use xinerama	|| ewarn "	Xinerama Support [${HILITE}xinerama${NORMAL}]"
-	use cjk			|| ewarn "	Multibyte Character Support [${HILITE}cjk${NORMAL}]"
-	use perl 		|| ewarn "	FVWM Perl bindings (including toolkit modules, and FvwmTabs) [${HILITE}perl${NORMAL}]"
-	use tcltk		|| ewarn "	FVWM Perl-tk support, including the FvwmTabs module [${HILITE}perl tcltk${NORMAL}]"
-	use gtk2		|| ewarn "	FVWM gtk2-perl support [${HILITE}perl gtk2${NORMAL}]"
-	use nls			|| ewarn "	Native Language Support [${HILITE}nls${NORMAL}]"
-	use png			|| ewarn "	PNG Support [${HILITE}png${NORMAL}]"
-	use bidi		|| ewarn "	Bidirectional Language Support [${HILITE}bidi${NORMAL}]"
-	use rplay		|| ewarn "	RPlay Support in FvwmEvent [${HILITE}rplay${NORMAL}]"
-	use gtk			|| ewarn "	FvwmGTK (gtk+ support) [${HILITE}gtk${NORMAL}]"
-	use imlib		|| ewarn "	FvwmGTK (GDK image support) [${HILITE}imlib${NORMAL}]"
+	use readline	|| ewarn "	Readline support in FvwmConsole [readline]"
+	use ncurses		|| ewarn "	Ncurses support in FvwmConsole [ncurses]"
+	use stroke		|| ewarn "	Mouse Gestures [stroke]"
+	use xinerama	|| ewarn "	Xinerama Support [xinerama]"
+	use cjk			|| ewarn "	Multibyte Character Support [cjk]"
+	use perl 		|| ewarn "	FVWM Perl bindings [perl]"
+	use tcltk		|| ewarn "	FVWM Perl-tk support, including FvwmTabs [perl tcltk]"
+	use nls			|| ewarn "	Native Language Support [nls]"
+	use png			|| ewarn "	PNG Support [png]"
+	use bidi		|| ewarn "	Bidirectional Language Support [bidi]"
+	use rplay		|| ewarn "	RPlay Support in FvwmEvent [rplay]"
+	use gtk			|| ewarn "	FvwmGTK (gtk+ support) [gtk]"
+	use imlib		|| ewarn "	FvwmGTK (GDK image support) [imlib]"
 	ewarn
 	ewarn "If you require any of the features listed above, you should remerge"
 	ewarn "FVWM with the appropriate USE flags. Use this command to see the flags"
 	ewarn "available:"
-	ewarn "	$ ${HILITE}emerge -pv fvwm${NORMAL}"
+	ewarn "	$ emerge -pv fvwm"
 	ewarn
 	use perl && use tcltk && {
 		einfo "The FvwmTabs module has been installed (USE=\"perl tcltk\")."
