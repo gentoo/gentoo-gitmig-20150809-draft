@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.13.ebuild,v 1.6 2005/01/18 00:21:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.13.ebuild,v 1.7 2005/03/17 09:18:45 hansmi Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://pkedu.fbt.eitn.wau.nl/~olivier/downloads/${P}.tar.bz2"
 HOMEPAGE="http://bluefish.openoffice.nl/"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~amd64 alpha ~ia64 ~ppc64"
+KEYWORDS="x86 ppc sparc ~amd64 alpha ~ia64 ~ppc64"
 SLOT="0"
 
 RDEPEND=">=x11-libs/gtk+-2
