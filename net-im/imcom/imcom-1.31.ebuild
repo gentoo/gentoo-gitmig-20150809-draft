@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/imcom-1.31.ebuild,v 1.1 2003/08/21 08:21:33 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/imcom-1.31.ebuild,v 1.2 2003/08/29 20:31:51 liquidx Exp $
 
 MYVER=${PV}
 S=${WORKDIR}/${PN}-${MYVER}
@@ -10,7 +10,7 @@ HOMEPAGE="http://imcom.floobin.cx"
 DESCRIPTION="Python commandline Jabber Client"
 
 DEPEND=">=dev-lang/python-2.2
-	>=dev-python/PyXML-0.7"
+	>=dev-python/pyxml-0.7"
 RDEPEND=""
 
 SLOT="0"
