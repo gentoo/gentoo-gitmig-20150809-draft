@@ -1,10 +1,49 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # System-wide defaults for the gcc 3.x Portage system on IA-64
 
-USE="ia64 oss apm arts avi berkdb crypt cups encode foomaticdb gdbm gif gpm 
-gtk imlib -java jpeg kde gnome libg++ libwww mad mikmod mmx motif mpeg 
-ncurses nls oggvorbis opengl pam pdflib png python qt quicktime 
-readline sdl slang spell ssl svga tcpd truetype X xml2 xmms xv zlib"
+USE="
+ia64
+berkdb
+crypt
+cups
+encode
+foomaticdb
+gdbm
+gif
+gnome
+gpm
+gtk
+imlib
+jpeg
+kde
+libg++
+libwww
+mikmod
+motif
+ncurses
+nls
+oggvorbis
+opengl
+oss
+pam
+pdflib
+png
+python
+qt
+quicktime
+readline
+sdl
+slang
+spell
+ssl
+tcpd
+truetype
+X
+xml2
+xmms
+xv
+zlib
+"
 
 ARCH="ia64"
 COMPILER="gcc3"
