@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-maps/descent1-maps-1.0.ebuild,v 1.2 2004/06/24 21:54:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-maps/descent1-maps-1.0.ebuild,v 1.3 2004/07/14 14:18:53 agriffis Exp $
 
 inherit games
 
@@ -11,9 +11,9 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 DEPEND="games-action/d1x"
 
-S="${WORKDIR}/${P}"
 
 src_install () {
 
