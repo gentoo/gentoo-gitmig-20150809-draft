@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/nrg2iso-0.1.ebuild,v 1.1 2003/09/09 22:31:41 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/nrg2iso-0.1.ebuild,v 1.2 2003/09/10 01:42:48 msterret Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -19,7 +19,7 @@ RDEPEND=""
 
 
 src_compile() {
-	${CC} ${CFLAGS} -o nrg2iso nrg2iso.c || die 
+	${CC} ${CFLAGS} -o nrg2iso nrg2iso.c || die
 }
 
 src_install() {
