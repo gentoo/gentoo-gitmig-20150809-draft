@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.126 2004/10/10 17:42:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.127 2004/10/13 21:02:25 usata Exp $
+
+  14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> gtk+-1.2.10-r11.ebuild:
+  Removed ~ppc-macos keyword until bug #57677 is solved.
 
   11 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> gtk+-1.2.10-r11.ebuild:
   Added to ~ppc-macos. This closes bug #62069.

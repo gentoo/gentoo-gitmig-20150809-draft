@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bacd96520e2dee7a58b531e858cb72db gtk+-1.2.10-r11.ebuild 1800
+MD5 71531996ce3e654b8c2f1de597b99481 gtk+-1.2.10-r11.ebuild 1789
 MD5 6880289256085cb8cb69a597d8098333 gtk+-2.4.1.ebuild 2238
 MD5 d5904f53031cf372937b9a803f39ea14 gtk+-2.4.4.ebuild 2989
 MD5 4b173bf958771b902f94c9bf0702ad7f gtk+-2.4.7.ebuild 3037
 MD5 a163afecf3733f645a0926074e03929f gtk+-2.4.9-r1.ebuild 3107
-MD5 b42b10d835883ff7b34604c5fa3db05b ChangeLog 19131
+MD5 d3ec0459739e45362319504586f8e008 ChangeLog 19262
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 745da6d8feb5c80670d33a3c43400bf5 gtk+-1.2.10-r10.ebuild 1719
 MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r11 138
@@ -25,7 +25,7 @@ MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r10 138
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (Darwin)
 
-iD8DBQFBaXSZVWNWqTUmv+0RAiN5AJ9RrcmIOz991+HrCa3xyoaDy0Ce7wCfbFb2
-whRu/gwgKTtu5FLwoc66RXc=
-=vlHo
+iD8DBQFBbZjMVWNWqTUmv+0RAuuCAJ9fe6M5cL/qB4Mu8uU7WizczWRn0wCff9Vd
+nXM9X5s7rJpfPPAo6xgj91M=
+=4zTX
 -----END PGP SIGNATURE-----

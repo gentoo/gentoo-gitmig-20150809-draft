@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r11.ebuild,v 1.14 2004/10/10 17:42:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r11.ebuild,v 1.15 2004/10/13 21:02:25 usata Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 inherit gnome.org eutils libtool gnuconfig
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI} http://www.ibiblio.org/gentoo/distfiles/gtk+-1.2.10-r8-gento
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="x86 ppc ~sparc mips alpha arm hppa amd64 ia64 ppc64 ~ppc-macos"
+KEYWORDS="x86 ppc ~sparc mips alpha arm hppa amd64 ia64 ppc64"
 IUSE="nls debug"
 
 RDEPEND="virtual/x11
