@@ -1,12 +1,13 @@
 # ChangeLog for net-www/privoxy
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.2 2002/08/29 23:28:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.3 2002/08/30 00:15:15 seemant Exp $
 
 *privoxy-2.9.14_beta (07 Jul 2002)
 
   29 Aug 2002; Seemant Kulleen <seemant@gentoo.org> privoxy-2.9.14_beta :
 
   Cleaned up ebuild slightly, and added a virtual/textbrowser dependency,
-  which closes bug #7175 by: fridtjof@fbunet.de
+  which closes bug #7175 by: fridtjof@fbunet.de  Also added a .keep file in
+  /var/log/privoxy
 
   07 Jul 2002; Georg Sauthoff <g_sauthoff@web.de> *: Initial Ebuild!
