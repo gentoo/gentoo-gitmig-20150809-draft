@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.8a.ebuild,v 1.3 2003/07/18 21:34:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.8a.ebuild,v 1.4 2003/09/04 01:56:20 weeve Exp $
 
 inherit eutils
 
@@ -57,6 +57,13 @@ src_unpack() {
 	# prep the samba-vscan source
 	use oav && \
 	cp -a ${WORKDIR}/${PN}-vscan-${VSCAN_VER} ${S}/examples.bin/VFS
+
+	# Add a patch for sparc to fix bug #27858
+	if [ "${ARCH}" = "sparc" ]
+	then
+		cd ${S}/source/include
+		epatch ${FILESDIR}/samba-2.2.8-statfs.patch
+	fi
 
 	cd ${S}/source
 	autoconf || die
