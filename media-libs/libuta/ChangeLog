@@ -1,14 +1,20 @@
 # ChangeLog for media-libs/libuta
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuta/ChangeLog,v 1.5 2003/02/12 07:13:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuta/ChangeLog,v 1.6 2003/05/08 10:25:31 liquidx Exp $
+
+*libuta-0.4.4 (08 May 2003)
+
+  08 May 2003; Alastair Tse <liquidx@gentoo.org> libuta-0.4.4.ebuild:
+  version bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*libuta-0.4.3 (1 Okt 2002) Bart Verwilst <verwilst@gentoo.org>
+*libuta-0.4.3 (01 Oct 2002)
 
-  bugfix release
+  01 Oct 2002; Bart Verwilst <verwilst@gentoo.org> :
+  Bugfix Release
 
 *libuta-0.4.1-r1 (12 Apr 2002)
-  12 Apr 2002; Spider <spider@gentoo.org>
-  Initial ChangeLog
-  Updating revision to work with new libpng
+
+  12 Apr 2002; Spider <spider@gentoo.org> :
+  Initial ChangeLog. Updating revision to work with new libpng
