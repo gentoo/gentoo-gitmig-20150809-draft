@@ -3,3 +3,4 @@ MD5 0bfb6b59036d1fe3e8075bc8879e772b metadata.xml 412
 MD5 b6e6b794c36f3011a2aac836e2138209 mips-prepatch-sources-2.4.25_pre6.ebuild 2148
 MD5 d41d8cd98f00b204e9800998ecf8427e files/.keep 0
 MD5 1646cb074c99365f653d5db9416625dc files/digest-mips-prepatch-sources-2.4.25_pre6 290
+MD5 1f2d806ba24602d1a46129700e8fcc5d files/mipscvs-2.4.25-pre6-makefile-fix.patch 1513

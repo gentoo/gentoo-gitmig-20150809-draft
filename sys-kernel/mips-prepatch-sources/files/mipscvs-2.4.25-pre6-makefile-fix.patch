@@ -1,0 +1,38 @@
+--- arch/mips64/Makefile.orig	2004-02-05 02:28:01.961823000 -0500
++++ arch/mips64/Makefile	2004-02-05 02:28:59.251823000 -0500
+@@ -26,6 +26,9 @@ ifdef CONFIG_CROSSCOMPILE
+ CROSS_COMPILE	= $(tool-prefix)
+ endif
+ 
++check_gcc = $(shell if $(CC) $(1) -S -o /dev/null -xc /dev/null > /dev/null 2>&1; then echo "$(1)"; else echo "$(2)"; fi)
++check_gas = $(shell if $(CC) $(1) -Wa,-Z -c -o /dev/null -xassembler /dev/null > /dev/null 2>&1; then echo "$(1)"; else echo "$(2)"; fi)
++
+ #
+ # The ELF GCC uses -G 0 -mabicalls -fpic as default.  We don't need PIC
+ # code in the kernel since it only slows down the whole thing.  For the
+@@ -49,9 +52,6 @@ GCCFLAGS	+= -mno-sched-prolog -fno-omit-
+ endif
+ endif
+ 
+-check_gcc = $(shell if $(CC) $(1) -S -o /dev/null -xc /dev/null > /dev/null 2>&1; then echo "$(1)"; else echo "$(2)"; fi)
+-check_gas = $(shell if $(CC) $(1) -Wa,-Z -c -o /dev/null -xassembler /dev/null > /dev/null 2>&1; then echo "$(1)"; else echo "$(2)"; fi)
+-
+ #
+ # Use: $(call set_gccflags,<cpu0>,<isa0>,<cpu1>,<isa1>)
+ #
+@@ -334,7 +334,7 @@ endif
+ # convert to ECOFF using elf2ecoff.
+ #
+ ifdef CONFIG_BOOT_ELF32
+-GCCFLAGS += -Wa,-32 $(call check_gas,-Wa$(comma)-mgp64,)
++GCCFLAGS += -Wa,-mabi=o64 $(call check_gas,-Wa$(comma)-mgp64,)
+ LINKFLAGS += -T arch/mips64/ld.script.elf32
+ endif
+ #
+@@ -402,5 +402,6 @@ archmrproper:
+ archdep:
+ 	if [ ! -f $(TOPDIR)/include/asm-$(ARCH)/offset.h ]; then \
+ 		touch $(TOPDIR)/include/asm-$(ARCH)/offset.h; \
++		$(MAKE) -C arch/mips/tools clean; \
+ 	fi;
+ 	@$(MAKEBOOT) dep
