@@ -1,0 +1,22 @@
+--- gnomemeeting-1.00/src/sound_handling.cpp.orig	2005-02-06 22:28:47.933846336 +0000
++++ gnomemeeting-1.00/src/sound_handling.cpp	2005-02-06 22:29:32.096132648 +0000
+@@ -580,7 +580,7 @@
+   test_dialog =
+     gtk_dialog_new_with_buttons ("Audio test running",
+ 				 GTK_WINDOW (gw->druid_window),
+-				 (enum GtkDialogFlags) (GTK_DIALOG_MODAL),
++				 (GtkDialogFlags) (GTK_DIALOG_MODAL),
+ 				 GTK_STOCK_OK,
+ 				 GTK_RESPONSE_ACCEPT,
+ 				 NULL);
+--- gnomemeeting-1.00/src/videograbber.cpp.orig	2005-02-06 22:33:05.224732176 +0000
++++ gnomemeeting-1.00/src/videograbber.cpp	2005-02-06 22:33:22.208150304 +0000
+@@ -569,7 +569,7 @@
+   test_dialog =
+     gtk_dialog_new_with_buttons ("Video test running",
+ 				 GTK_WINDOW (gw->druid_window),
+-				 (enum GtkDialogFlags) (GTK_DIALOG_MODAL),
++				 (GtkDialogFlags) (GTK_DIALOG_MODAL),
+ 				 GTK_STOCK_OK,
+ 				 GTK_RESPONSE_ACCEPT,
+ 				 NULL);

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.00.ebuild,v 1.12 2005/01/09 00:26:51 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.00.ebuild,v 1.13 2005/02/06 22:53:39 stkn Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="H.323 compatible Gnome VoIP/videoconferencing client"
 HOMEPAGE="http://www.gnomemeeting.org"
@@ -38,6 +38,14 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	# closes #80232
+	epatch ${FILESDIR}/${P}-gcc34.patch
+}
 
 src_compile() {
 
