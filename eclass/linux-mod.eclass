@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.12 2004/12/18 16:22:13 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.13 2004/12/28 20:05:45 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -156,15 +156,14 @@ generate_modulesd() {
 		ebegin "Preparing file for modules.d"
 		echo  "# modules.d config file for ${selectedmodule}" >> ${module_config}
 		echo  "# this file was automatically generated from linux-mod.eclass" >> ${module_config}
-		echo  "# on behalf of ${EBUILD/*\//}" >> ${module_config}
 		for temp in ${module_docs}
 		do
 			echo "#  Please read ${temp/*\//} for more info" >> ${module_config}
 		done
 
-		# like inserting any aliases
 		if [ ${module_aliases} > 0 ];
 		then
+			echo >> ${module_config}
 			echo  "# Internal Aliases - Do not edit" >> ${module_config}
 			echo  "# ------------------------------" >> ${module_config}
 

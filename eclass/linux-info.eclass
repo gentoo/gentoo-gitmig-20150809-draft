@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.11 2004/12/17 15:12:07 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.12 2004/12/28 20:05:45 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -182,24 +182,39 @@ kernel_is() {
 	# if we haven't determined the version yet, we need too.
 	get_version;
 	
-	local RESULT
-	RESULT=1
+	local RESULT operator value test
+	RESULT=0
 	
+	operator="-eq"
+	if [ "${1}" == "lt" ]
+	then
+		operator="-lt"
+		shift
+	elif [ "${1}" == "gt" ]
+	then
+		operator="-gt"
+		shift
+	elif [ "${1}" == "le" ]
+	then
+		operator="-le"
+		shift
+	elif [ "${1}" == "ge" ]
+	then
+		operator="-ge"
+		shift
+	fi
+
 	if [ -n "${1}" ]
 	then
-		[ "${1}" = "${KV_MAJOR}" ] && RESULT=0
+		[ ${KV_MAJOR} ${operator} ${1} ] || RESULT=1
 	fi
-	
 	if [ -n "${2}" ]
 	then
-		RESULT=1
-		[ "${2}" = "${KV_MINOR}" ] && RESULT=0
+		[ ${KV_MINOR} ${operator} ${2} -a ${RESULT} -eq 0 ] || RESULT=1
 	fi
-	
 	if [ -n "${3}" ]
 	then
-		RESULT=1
-		[ "${3}" = "${KV_PATCH}" ] && RESULT=0
+		[ ${KV_PATCH} ${operator} ${3} -a ${RESULT} -eq 0 ] || RESULT=1
 	fi
 	return ${RESULT}
 }
@@ -301,7 +316,9 @@ get_version() {
 	if [ ! -s "${KV_OUT_DIR}/.config" ]
 	then
 		qeerror "Could not find a usable .config in the kernel source directory."
-		qeerror "Please ensure that ${KERNEL_DIR} points to a configured set of Linux sources"
+		qeerror "Please ensure that ${KERNEL_DIR} points to a configured set of Linux sources."
+		qeerror "If you are using KBUILD_OUTPUT, please set the environment var so that"
+		qeerror "it points to the necessary object directory so that it might find .config."
 		die ".config not found in ${KV_OUT_DIR}"
 	fi
 }
