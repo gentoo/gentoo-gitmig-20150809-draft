@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.4.24.ebuild,v 1.2 2004/03/26 23:17:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.4.24.ebuild,v 1.3 2004/03/27 07:13:48 mr_bones_ Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ LICENSE="BSD"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND="sys-devel/pmake
-	sys-apps/sed 
+	sys-apps/sed
 	dev-util/yacc"
 
 src_compile() {
@@ -31,6 +31,6 @@ src_install() {
 
 	newman sh.1 dash.1
 	#dosym /usr/share/man/man1/ash.1.gz /usr/share/man/man1/sh.1.gz
-	
+
 	dodoc TOUR debian/changelog
 }
