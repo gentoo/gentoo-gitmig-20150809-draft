@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.44 2003/10/09 13:43:25 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.45 2003/12/03 00:40:22 agriffis Exp $
+
+  02 Dec 2003; Aron Griffis <agriffis@gentoo.org> pcmcia-cs-3.2.5.ebuild:
+  Mark stable on alpha
 
 *pcmcia-cs-3.2.5 (09 Oct 2003)
 
