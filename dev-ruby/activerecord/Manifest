@@ -1,2 +1,14 @@
-MD5 d17ddc4182680dc9c4b92d57f385f114 activerecord-1.6.0.ebuild 701
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0b79e8edb84ee62fa795dd79459d4c20 activerecord-1.6.0.ebuild 814
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 7a63cde5d3169ffe67e936d60b2a5617 ChangeLog 356
 MD5 0bb4ff3c6365bbbba9cbece5c7d63763 files/digest-activerecord-1.6.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCEt0Zz2gxt1z4IGYRAo38AKCN96/buLN6+RDJLgckURKUoAJi0wCdFyAM
+pWHiHZ139FT9yGEG4aZhgfA=
+=zSGx
+-----END PGP SIGNATURE-----
