@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r5.ebuild,v 1.5 2004/07/22 19:35:26 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r5.ebuild,v 1.6 2004/07/22 23:33:33 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -109,6 +109,9 @@ src_unpack() {
 
 	# GCC 3.4 fixes
 	epatch ${FILESDIR}/mplayer-1.0_pre4-alsa-gcc34.patch
+
+	# fixes gui vulnerabilities mentioned in bug #55456
+	epatch ${FILESDIR}/gui_vuln_code.patch
 
 	#Setup the matrox makefile
 	if use matrox; then
