@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.10 2004/07/27 16:02:41 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.11 2004/09/06 00:29:39 ciaranm Exp $
 
 inherit eutils
 
@@ -90,7 +90,7 @@ pkg_setup() {
 					fi
 					ewarn "Zope Corp. only recommends using python-2.1.3 "
 					ewarn "with this version of zope. Emerge at your own risk."
-					sleep 12
+					epause 12
 	fi
 }
 
