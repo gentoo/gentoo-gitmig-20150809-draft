@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jal
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/ChangeLog,v 1.1 2004/03/06 21:35:48 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/ChangeLog,v 1.2 2004/03/22 19:58:35 dholm Exp $
+
+  22 Mar 2004; David Holm <dholm@gentoo.org> jal-20031117.ebuild:
+  Added to ~ppc.
 
 *jal-20031117 (09 Mar 2004)
 

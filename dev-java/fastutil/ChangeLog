@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fastutil
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.1 2004/02/16 02:59:37 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.2 2004/03/22 19:55:40 dholm Exp $
+
+  22 Mar 2004; David Holm <dholm@gentoo.org> fastutil-4.1.ebuild:
+  Added to ~ppc.
 
 *fastutil-4.1 (15 Feb 2004)
 

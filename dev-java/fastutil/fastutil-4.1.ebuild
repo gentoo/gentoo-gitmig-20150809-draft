@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-4.1.ebuild,v 1.1 2004/02/16 02:59:37 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-4.1.ebuild,v 1.2 2004/03/22 19:55:40 dholm Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://fastutil.dsi.unimi.it"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="doc jikes"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 
 DEPEND=">=virtual/jdk-1.4
 		 >=dev-java/ant-1.5.4"

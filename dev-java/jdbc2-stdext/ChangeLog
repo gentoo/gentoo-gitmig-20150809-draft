@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdbc2-stdext
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-stdext/ChangeLog,v 1.1 2004/02/25 06:42:18 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-stdext/ChangeLog,v 1.2 2004/03/22 20:01:12 dholm Exp $
+
+  22 Mar 2004; David Holm <dholm@gentoo.org> jdbc2-stdext-2.0.ebuild:
+  Added to ~ppc.
 
 *jdbc2-stdext-2.0 (27 Feb 2004)
 
