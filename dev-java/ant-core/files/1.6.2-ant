@@ -15,7 +15,7 @@
 #   limitations under the License.
 
 #   Edited for Gentoo Linux
-#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/files/1.6.2-ant,v 1.1 2004/09/10 19:45:18 axxo Exp $
+#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/files/1.6.2-ant,v 1.2 2004/09/17 00:08:25 axxo Exp $
 
 # Extract launch and ant arguments, (see details below).
 ant_exec_args=
@@ -68,11 +68,14 @@ else
   fi
 fi
 
-if [ -f $HOME/.gentoo/java-env ] ; then
-  source $HOME/.gentoo/java-env
-else
-  JAVA_HOME=`java-config --jdk-home`
-  CLASSPATH=`java-config --classpath`:${CLASSPATH}
+
+if [ -z $JAVA_HOME ] ; then
+	if [ -f $HOME/.gentoo/java-env ] ; then
+		source $HOME/.gentoo/java-env
+	else
+		JAVA_HOME=`java-config --jdk-home`
+		CLASSPATH=`java-config --classpath`:${CLASSPATH}
+	fi
 fi
 
 if [ -z $JAVA_HOME ] ; then
