@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.9.7.ebuild,v 1.5 2004/05/26 14:11:39 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.9.7.ebuild,v 1.6 2004/06/11 22:42:15 stuart Exp $
 
 inherit eutils
 
@@ -54,9 +54,13 @@ src_compile() {
 		|| myconf="${myconf} --disable-perl"
 	use python && myconf="${myconf} --with-python" \
 		|| myconf="${myconf} --disable-python"
-	use ruby && myconf="${myconf} --with-ruby" \
-		|| myconf="${myconf} --disable-ruby"
+	# ruby support disabled for now
+	# use ruby && myconf="${myconf} --with-ruby" \
+	myconf="${myconf} --disable-ruby"
 	use zlib || myconf="${myconf} --disable-compression"
+	# mono support disabled for now
+	# use mono && myconf="${myconf} --with-csharp" \
+	myconf="${myconf} --disable-csharp"
 
 	econf $myconf || die "./configure failed"
 
