@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.28 2005/02/18 23:21:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.29 2005/02/20 11:51:52 lanius Exp $
+
+  20 Feb 2005; Heinrich Wendel <lanius@gentoo.org> hal-0.4.5-r2.ebuild:
+  move back to testing, it requires a 2.6.10 kernel which is not yet stable on
+  amd64
 
   19 Feb 2005; Heinrich Wendel <lanius@gentoo.org> hal-0.4.5-r2.ebuild:
   stable on amd64
