@@ -1,9 +1,19 @@
-MD5 5f339434bd04ebb937db98ed0083b6f1 ChangeLog 1574
-MD5 bd3e471b0c936214b718d6716216d0e8 gnustep-back-art-0.9.4.ebuild 1072
-MD5 8956a879f132db7a07d67cb4ecb576b3 gnustep-back-art-0.9.5_pre20040928.ebuild 1314
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f1cf6cf1cdd57da9167e31d4db9319c0 ChangeLog 1691
 MD5 e2bc2a5b2bdec3808102e5a2caf41f7f metadata.xml 1030
+MD5 c9af38e9cc55101d48313f3d2606bf03 gnustep-back-art-0.9.5_pre20040928.ebuild 1322
+MD5 bd3e471b0c936214b718d6716216d0e8 gnustep-back-art-0.9.4.ebuild 1072
 MD5 9222af1b058f9114ed9812cab1ba50e1 gnustep-back-art-0.9.5_pre20041030.ebuild 1310
 MD5 7421c230db078e850be063b28fdf18cf files/config-gnustep-back-art.sh 415
-MD5 9c943c0c0837bfe718a98769bc25d366 files/digest-gnustep-back-art-0.9.4 70
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-back-art-0.9.5_pre20040928 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-back-art-0.9.5_pre20041030 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-back-art-0.9.5_pre20040928 0
+MD5 9c943c0c0837bfe718a98769bc25d366 files/digest-gnustep-back-art-0.9.4 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhPE8ugEuf3OQ0akRAlJJAKCDRJGB3AkyrX8vcrjOJOgawwn/GwCfaUB4
+qQHIQaIHLr00xQU/3JLXxfk=
+=ejVd
+-----END PGP SIGNATURE-----
