@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnomecanvas
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/ChangeLog,v 1.31 2003/12/12 23:31:56 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/ChangeLog,v 1.32 2004/03/16 03:27:36 geoman Exp $
+
+  15 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  libgnomecanvas-2.4.0.ebuild:
+  Added ~mips keyword.
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> libgnomecanvas-2.4.0.ebuild:
   Stable on ia64
