@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r5.ebuild,v 1.1 2004/01/18 21:41:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r5.ebuild,v 1.2 2004/02/23 09:46:34 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 # Note that truetype, ssl and nls IUSE flags will take effect
 # only if you enable cjk IUSE flag.
 IUSE="ipv6 kde gnome mozilla truetype ssl cjk nls"

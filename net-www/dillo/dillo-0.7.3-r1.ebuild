@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r1.ebuild,v 1.5 2003/10/17 04:27:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r1.ebuild,v 1.6 2004/02/23 09:46:34 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ~mips ~hppa"
+KEYWORDS="x86 ppc sparc alpha ~hppa"
 IUSE="ipv6 kde gnome mozilla"
 
 
