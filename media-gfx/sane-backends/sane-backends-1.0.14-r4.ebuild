@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.14-r3.ebuild,v 1.10 2004/08/18 07:35:41 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.14-r4.ebuild,v 1.1 2004/08/18 07:35:41 phosphan Exp $
 
 inherit eutils
 
@@ -19,10 +19,11 @@ BROTHERMFCDRIVER="sane-backends-1.0.13-brothermfc-r1.patch"
 
 SRC_URI="ftp://ftp.mostang.com/pub/sane/${P}/${P}.tar.gz
 	ftp://ftp.mostang.com/pub/sane/old-versions/${P}/${P}.tar.gz
+	usb? ( mirror://sourceforge/hp3300backend/backend-20040723_1.tar.gz )
 	usb? ( mirror://gentoo/${BROTHERMFCDRIVER}.bz2 )"
 SLOT="0"
 LICENSE="GPL-2 public-domain"
-KEYWORDS="x86 ~sparc ppc ppc64"
+KEYWORDS="~x86 ~sparc ~ppc ~ppc64"
 
 
 src_unpack() {
@@ -39,6 +40,14 @@ src_unpack() {
 	sed -i -e 's:function_name:__FUNCTION__:g' backend/artec_eplus48u.c
 	use usb && epatch ${WORKDIR}/${BROTHERMFCDRIVER}
 	use usb && epatch ${FILESDIR}/libusbscanner-device-r1.patch
+
+	if use usb; then
+		#patch sane-backends for NIASH chip support
+		einfo "Applying NIASH chip support patch"
+		cd ${WORKDIR}/backend
+		chmod +x patch-sane.sh
+		./patch-sane.sh ${S}
+	fi
 }
 
 src_compile() {
