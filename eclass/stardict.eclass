@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.6 2004/07/30 21:31:52 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.7 2005/01/13 16:41:27 liquidx Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org>
 #
@@ -44,8 +44,8 @@ stardict_src_compile() {
 }
 
 stardict_src_install() {
+	cd ${S}
 	insinto /usr/share/stardict/dic
-	echo `pwd`
 	doins *.dict.dz
 	doins *.idx*
 	doins *.ifo
