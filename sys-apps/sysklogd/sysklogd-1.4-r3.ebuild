@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Daniel Robbins <drobbins@gentoo.org>, Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysklogd/sysklogd-1.4-r3.ebuild,v 1.3 2001/09/04 04:36:06 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysklogd/sysklogd-1.4-r3.ebuild,v 1.4 2001/09/14 05:11:15 lamer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard log daemons"
@@ -28,7 +28,7 @@ src_install() {
 	doexe ${FILESDIR}/syslog
 	dodoc ANNOUNCE CHANGES COPYING MANIFEST NEWS README.1st README.linux
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/sysklogd.new sysklogd
+	doexe ${FILESDIR}/sysklogd
 	insinto /etc
-   	doins ${FILESDIR}/syslog.conf
+  	doins ${FILESDIR}/syslog.conf
 }
