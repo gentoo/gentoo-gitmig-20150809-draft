@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05b-r3.ebuild,v 1.5 2002/10/20 18:54:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05b-r3.ebuild,v 1.6 2002/12/01 12:24:36 azarah Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 # Official patches
 PLEVEL="x002 x003 x004"
@@ -22,13 +22,14 @@ DEPEND=">=sys-libs/ncurses-5.2-r2
 	sys-devel/autoconf"
 
 src_unpack() {
-	unpack ${P}.tar.gz ${P}-gentoo.diff.bz2
-	
+	unpack ${P}.tar.gz
+
 	cd ${S}
-	patch -p1 < ${WORKDIR}/${P}-gentoo.diff || die
+	epatch ${DISTDIR}/${P}-gentoo.diff.bz2
+
 	for x in ${PLEVEL//x}
 	do
-		patch -p0 < ${DISTDIR}/${PN}${PV/\.}-${x} || die
+		epatch ${DISTDIR}/${PN}${PV/\.}-${x}
 	done
 }
 
