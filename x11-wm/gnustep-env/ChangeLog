@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/gnustep-env
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/gnustep-env/ChangeLog,v 1.5 2003/06/12 19:05:42 msterret Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/gnustep-env/ChangeLog,v 1.6 2004/02/18 09:37:50 dholm Exp $
+
+  18 Feb 2004; David Holm <dholm@gentoo.org> gnustep-env-0.1.ebuild:
+  Added to ~ppc.
 
   12 Jun 2003; <msterret@gentoo.org> gnustep-env-0.1.ebuild:
   add Header
