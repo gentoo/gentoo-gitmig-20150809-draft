@@ -1,15 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.4-r1.ebuild,v 1.1 2004/04/16 01:25:20 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.3-r4.ebuild,v 1.1 2004/04/21 22:05:38 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20040311"
-COBALTPATCHVER="1.2"
+CVSDATE="20040305"
+COBALTPATCHVER="1.3"
 IP32DIFFDATE="20040229"
 [ "${USE_IP32}" = "yes" ] && EXTRAVERSION="-mipscvs-${CVSDATE}-ip32" || EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
+
+
+
 
 # Miscellaneous stuff
 S=${WORKDIR}/linux-${OKV}-${CVSDATE}
@@ -41,13 +44,13 @@ pkg_setup() {
 	# See if we're on a cobalt system (must use the cobalt-mips profile)
 	if [ "${PROFILE_ARCH}" = "cobalt" ]; then
 		echo -e ""
-		ewarn "Please keep in mind that the 2.6 kernel will NOT boot on Cobalt"
-		ewarn "systems that are still using the old Cobalt bootloader.  In"
-		ewarn "order to boot a 2.6 kernel on Cobalt systems, you must be using"
-		ewarn "Peter Horton's new bootloader, which does not have the kernel"
-		ewarn "size limitation that the older bootloader has.  As of this"
-		ewarn "ebuild revision, this bootloader is not in portage, and 2.6"
-		ewarn "support on cobalt should be regarded as HIGHLY experimental."
+		einfo "Please keep in mind that the 2.6 kernel will NOT boot on Cobalt"
+		einfo "systems that are still using the old Cobalt bootloader.  In"
+		einfo "order to boot a 2.6 kernel on Cobalt systems, you must be using"
+		einfo "Peter Horton's new bootloader, which does not have the kernel"
+		einfo "size limitation that the older bootloader has.  If you want"
+		einfo "to use the newer bootloader, make sure you have sys-boot/colo"
+		einfo "installed and setup."
 		echo -e ""
 	fi
 

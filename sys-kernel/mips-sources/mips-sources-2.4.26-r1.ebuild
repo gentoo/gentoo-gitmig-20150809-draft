@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.26.ebuild,v 1.1 2004/04/16 06:03:36 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.26-r1.ebuild,v 1.1 2004/04/21 22:05:38 kumba Exp $
 
 
 # Version Data
@@ -8,7 +8,7 @@ OKV=${PV/_/-}
 CVSDATE="20040415"
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
-COBALTPATCHVER="1.1"
+COBALTPATCHVER="1.4"
 
 # Miscellaneous stuff
 S=${WORKDIR}/linux-${OKV}-${CVSDATE}
@@ -53,6 +53,8 @@ src_unpack() {
 	if [ "${PROFILE_ARCH}" = "cobalt" ]; then
 		echo -e ""
 		einfo ">>> Patching kernel for Cobalt support ..."
+		mkdir ${WORKDIR}/cobalt-patches-24xx-${COBALTPATCHVER}/skip
+		mv ${WORKDIR}/cobalt-patches-24xx-${COBALTPATCHVER}/08* ${WORKDIR}/cobalt-patches-24xx-${COBALTPATCHVER}/skip
 		for x in ${WORKDIR}/cobalt-patches-24xx-${COBALTPATCHVER}/*.patch; do
 			epatch ${x}
 		done

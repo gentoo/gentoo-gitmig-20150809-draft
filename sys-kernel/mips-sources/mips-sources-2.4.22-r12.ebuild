@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.21-r8.ebuild,v 1.2 2004/04/16 06:03:36 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r12.ebuild,v 1.1 2004/04/21 22:05:38 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20030803"
+CVSDATE="20031015"
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
-COBALTPATCHVER="1.0"
+COBALTPATCHVER="1.2"
 
 # Miscellaneous stuff
 S=${WORKDIR}/linux-${OKV}-${CVSDATE}
+IUSE=""
 
 # Eclass stuff
 ETYPE="sources"
@@ -20,15 +21,13 @@ inherit kernel eutils
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 03 Aug 2003
+# 2) linux-mips.org CVS snapshot diff from 15 Oct 2003
 # 3) patch to fix arch/mips[64]/Makefile to pass appropriate CFLAGS
-# 4) Fix for headers on big-endian machines
-# 5) do_brk fix
-# 6) mremap fix
-# 7) RTC fixes
-# 8) do_munmap fix
-# 9) ISO9660 Fix
-# 10) Patches for Cobalt support
+# 4) do_brk fix
+# 5) mremap fix
+# 6) RTC fixes
+# 7) iso9660 fix
+# 8) Patches for Cobalt support
 
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
@@ -52,9 +51,6 @@ src_unpack() {
 	# Patch arch/mips/Makefile for gcc (Pass -mips3/-mips4 for r4k/r5k cpus)
 	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-fix.patch
 
-	# Big Endian Fix (Fix in headers for big-endian machines)
-	epatch ${FILESDIR}/bigendian-byteorder-fix.patch
-
 	# MIPS RTC Fixes (Fixes memleaks, backport from 2.4.24)
 	epatch ${FILESDIR}/rtc-fixes.patch
 
@@ -70,6 +66,8 @@ src_unpack() {
 		epatch ${FILESDIR}/CAN-2004-0010-ncpfs.patch
 		epatch ${FILESDIR}/CAN-2004-0077-do_munmap.patch
 		epatch ${FILESDIR}/CAN-2004-0109-2.4-iso9660.patch
+		epatch ${FILESDIR}/CAN-2004-0177-ext3_jbd.patch
+		epatch ${FILESDIR}/CAN-2004-0178-sbblaster.patch
 	eend
 
 	# Cobalt Patches
