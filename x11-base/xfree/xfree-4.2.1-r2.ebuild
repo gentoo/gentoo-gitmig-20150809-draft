@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.28 2003/03/24 15:01:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.29 2003/04/06 03:00:10 joker Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -13,9 +13,9 @@ inherit eutils flag-o-matic gcc
 
 filter-flags "-funroll-loops"
 
-# Sparc support ...                                                                                     
-replace-flags "-mcpu=ultrasparc" "-mcpu=v8"                                                             
-replace-flags "-mcpu=v9" "-mcpu=v8"        
+# Sparc support
+replace-flags "-mcpu=ultrasparc" "-mcpu=v8 -mtune=ultrasparc"
+replace-flags "-mcpu=v9" "-mcpu=v8 -mtune=v9"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
