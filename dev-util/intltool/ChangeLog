@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.15 2003/02/22 00:02:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.16 2003/03/13 17:50:49 doctomoe Exp $
+
+  13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> intltool-0.25.ebuild :
+  Marked ppc stable.
 
 *intltool-0.25 (07 Jan 2002)
 
