@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.5.ebuild,v 1.13 2005/01/03 00:06:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.5.ebuild,v 1.14 2005/01/16 17:55:23 eradicator Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -192,6 +192,8 @@ src_compile() {
 	fi
 
 	rm -f config.sh Policy.sh
+
+	[ -n "${ABI}" ] && myconf="${myconf} -Dusrinc=$(get_ml_incdir)"
 
 	sh Configure -des \
 		-Darchname="${myarch}" \
