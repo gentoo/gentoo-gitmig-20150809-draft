@@ -1,8 +1,14 @@
 # ChangeLog for app-dicts/ispell-br
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-br/ChangeLog,v 1.4 2003/02/12 03:33:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-br/ChangeLog,v 1.5 2003/02/12 13:22:15 seemant Exp $
 
 *ispell-br-2.4-r1 (18 Jan 2003)
+
+  12 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
+  ispell-br-2.4-r1.ebuild :
+
+  Moved to x86, and added all other arches to ~arch, did this for the old
+  ebuild too.  Also, moved patch to a bz2 on the mirrors instead.
 
   18 Jan 2003; Seemant Kulleen <seemant@gentoo.org> ispell-br-2.4-r1.ebuild
   files/ispell-2.4-palavras-gentoo.diff :

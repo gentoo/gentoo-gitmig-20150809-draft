@@ -1,6 +1,6 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 2002-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-br/ispell-br-2.4.ebuild,v 1.1 2002/12/03 07:15:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-br/ispell-br-2.4.ebuild,v 1.2 2003/02/12 13:22:15 seemant Exp $
 
 MY_P="br.ispell-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="http://www.ime.usp.br/~ueda/br.ispell/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa"
 
 DEPEND="app-text/ispell
 	sys-apps/gawk"
