@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpasman
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/ChangeLog,v 1.8 2004/12/12 18:10:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/ChangeLog,v 1.9 2004/12/13 08:36:40 s4t4n Exp $
+
+  13 Dec 2004; Michele Noberasco <s4t4n@gentoo.org> wmpasman-0.8.3.ebuild:
+  Removed old ebuild.
 
   12 Dec 2004; Jason Wever <weeve@gentoo.org> wmpasman-0.8.4.1.ebuild:
   Added ~sparc keyword.
