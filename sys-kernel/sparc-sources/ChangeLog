@@ -1,0 +1,13 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.1 2002/05/12 21:42:40 murphy Exp $
+
+*sparc-sources-2.2.21_pre3 (12 May 2002)
+
+  12 May 2002; M.Thibaut <murphy@gentoo.org> :
+  This is the 2.2.20 version of the Linux kernel with the devfs patch
+  added. You should be able to to use the linux-vanilla sources instead,
+  but you can use this kernel if you want Linux 2.2.x.
+
+  This is only intended towards sparc 32 bit platforms (sun4[cdm]) but
+  should be usable by all platforms.
