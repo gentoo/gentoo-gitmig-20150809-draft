@@ -1,6 +1,6 @@
 # ChangeLog for app-text/freepwing
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/freepwing/ChangeLog,v 1.4 2004/06/24 22:35:33 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/freepwing/ChangeLog,v 1.5 2005/01/01 16:14:27 eradicator Exp $
 
   22 Sep 2003; <paul@gentoo.org> metadata.xml:
   Fix metadata.xml

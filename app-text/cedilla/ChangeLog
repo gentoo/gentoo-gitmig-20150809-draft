@@ -1,6 +1,6 @@
 # ChangeLog for app-text/cedilla
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/ChangeLog,v 1.4 2004/06/24 22:29:18 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/ChangeLog,v 1.5 2005/01/01 16:05:12 eradicator Exp $
 
   11 Feb 2004; Chuck Short <zul@gentoo.org> cedilla-0.3.ebuild:
   Removed /var/tmp/portage/cedilla from cedilla when doing an install. Closes

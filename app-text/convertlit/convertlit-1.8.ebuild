@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/convertlit-1.8.ebuild,v 1.4 2004/11/03 04:52:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/convertlit-1.8.ebuild,v 1.5 2005/01/01 16:06:19 eradicator Exp $
 
 MY_P="clit${PV//./}"
 

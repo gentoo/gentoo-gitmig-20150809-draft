@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/clara/clara-20031214.ebuild,v 1.6 2004/09/07 11:59:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/clara/clara-20031214.ebuild,v 1.7 2005/01/01 16:05:40 eradicator Exp $
 
 DESCRIPTION="An OCR (Optical Character Recognition) program"
 SRC_URI="http://www.claraocr.org/sources/${P}.tar.gz"

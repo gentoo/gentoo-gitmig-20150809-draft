@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.22 2004/07/13 21:02:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.23 2005/01/01 16:09:11 eradicator Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Tools to convert docbook to man and info"

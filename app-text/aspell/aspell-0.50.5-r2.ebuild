@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r2.ebuild,v 1.8 2004/09/05 23:30:01 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r2.ebuild,v 1.9 2005/01/01 16:03:13 eradicator Exp $
 
 inherit libtool eutils flag-o-matic
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/agrep
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.13 2004/11/21 10:53:49 dragonheart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.14 2005/01/01 16:02:27 eradicator Exp $
 
   21 Nov 2004; Daniel Black <dragonheart@gentoo.org> agrep-2.04.ebuild:
   added conficts with app-misc/glimpse and dev-libs/tre as per bug #71795

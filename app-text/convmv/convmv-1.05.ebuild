@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/convmv-1.05.ebuild,v 1.7 2004/11/24 01:41:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/convmv-1.05.ebuild,v 1.8 2005/01/01 16:06:33 eradicator Exp $
 
 DESCRIPTION="convert filenames to utf8 or any other charset"
 HOMEPAGE="http://j3e.de/linux/${PN}"

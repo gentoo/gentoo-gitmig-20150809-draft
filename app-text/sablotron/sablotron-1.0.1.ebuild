@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.1.ebuild,v 1.9 2004/11/20 04:53:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.1.ebuild,v 1.10 2005/01/01 16:34:37 eradicator Exp $
 
 inherit libtool gnuconfig flag-o-matic
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.8.ebuild,v 1.12 2004/11/14 02:23:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.8.ebuild,v 1.13 2005/01/01 16:30:45 eradicator Exp $
 
 MY_P=${PN}-${PV/_/}
 S=${WORKDIR}/${MY_P}

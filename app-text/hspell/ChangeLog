@@ -1,6 +1,6 @@
 # ChangeLog for app-text/hspell
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.10 2004/09/27 19:59:20 gustavoz Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.11 2005/01/01 16:19:10 eradicator Exp $
 
   27 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> hspell-0.6.ebuild:
   Stable on sparc

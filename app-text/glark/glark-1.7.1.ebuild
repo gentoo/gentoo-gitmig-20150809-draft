@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/glark-1.7.1.ebuild,v 1.1 2004/12/20 15:40:48 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/glark-1.7.1.ebuild,v 1.2 2005/01/01 16:16:15 eradicator Exp $
 
 DESCRIPTION="File searcher similar to grep but with fancy output"
 HOMEPAGE="http://glark.sourceforge.net/"

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/dictd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.21 2004/12/20 15:12:58 liquidx Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.22 2005/01/01 16:08:17 eradicator Exp $
 
   20 Dec 2004; Alastair Tse <liquidx@gentoo.org> dictd-1.9.14.ebuild:
   fix installation of conf.d and init.d files for 1.9.14 (#74771)

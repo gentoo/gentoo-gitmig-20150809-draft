@@ -1,6 +1,6 @@
 # ChangeLog for app-text/mftrace
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.17 2004/10/09 20:27:41 usata Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.18 2005/01/01 16:25:58 eradicator Exp $
 
   10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> -mftrace-1.0.31.ebuild,
   mftrace-1.0.34.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r3.ebuild,v 1.11 2004/09/02 07:07:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r3.ebuild,v 1.12 2005/01/01 16:27:47 eradicator Exp $
 
 inherit eutils
 

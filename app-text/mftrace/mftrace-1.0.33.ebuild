@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.33.ebuild,v 1.5 2004/09/02 08:50:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.33.ebuild,v 1.6 2005/01/01 16:25:58 eradicator Exp $
 
 IUSE="truetype"
 

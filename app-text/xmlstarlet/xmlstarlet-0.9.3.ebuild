@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-0.9.3.ebuild,v 1.2 2004/11/30 03:02:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-0.9.3.ebuild,v 1.3 2005/01/01 16:44:10 eradicator Exp $
 
 DESCRIPTION="XMLStarlet is a set of XML command line utilities"
 HOMEPAGE="http://xmlstar.sourceforge.net/"

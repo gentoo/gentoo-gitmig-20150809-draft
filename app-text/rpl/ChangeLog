@@ -1,6 +1,6 @@
 # ChangeLog for app-text/rpl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rpl/ChangeLog,v 1.10 2004/10/21 15:12:34 ka0ttic Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rpl/ChangeLog,v 1.11 2005/01/01 16:34:21 eradicator Exp $
 
   21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
   Add metadata (shell-tools)

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/tkman
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/ChangeLog,v 1.14 2004/06/24 22:53:37 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/ChangeLog,v 1.15 2005/01/01 16:38:51 eradicator Exp $
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> :
   Don't assign default to S; header fix

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/kfilereplace
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kfilereplace/ChangeLog,v 1.12 2004/07/03 20:41:46 carlo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/kfilereplace/ChangeLog,v 1.13 2005/01/01 16:24:07 eradicator Exp $
 
   03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> kfilereplace-0.7.0.ebuild:
   QA: missing metadata.xml, need-kde after R/DEPEND

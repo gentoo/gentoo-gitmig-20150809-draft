@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmlrecode/htmlrecode-1.2.0.ebuild,v 1.2 2004/09/04 23:02:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmlrecode/htmlrecode-1.2.0.ebuild,v 1.3 2005/01/01 16:20:30 eradicator Exp $
 
 DESCRIPTION="Recodes HTML file using a new character set"
 HOMEPAGE="http://bisqwit.iki.fi/source/htmlrecode.html"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.10.ebuild,v 1.1 2004/12/16 12:48:18 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.10.ebuild,v 1.2 2005/01/01 16:02:00 eradicator Exp $
 
 inherit nsplugins eutils
 

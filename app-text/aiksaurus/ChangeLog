@@ -1,6 +1,6 @@
 # ChangeLog for app-text/aiksaurus
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.18 2004/08/14 15:03:28 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.19 2005/01/01 16:02:42 eradicator Exp $
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Corrected metadata.xml to match DTD.

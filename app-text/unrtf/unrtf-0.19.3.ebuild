@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/unrtf-0.19.3.ebuild,v 1.7 2004/09/24 21:06:14 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/unrtf-0.19.3.ebuild,v 1.8 2005/01/01 16:40:38 eradicator Exp $
 
 DESCRIPTION="Converts RTF files to various formats"
 HOMEPAGE="http://www.gnu.org/software/unrtf/unrtf.html"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.5.ebuild,v 1.1 2004/11/19 11:50:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.5.ebuild,v 1.2 2005/01/01 16:42:52 eradicator Exp $
 
 inherit eutils flag-o-matic elisp-common
 

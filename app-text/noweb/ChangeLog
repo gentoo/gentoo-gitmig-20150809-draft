@@ -1,6 +1,6 @@
 # ChangeLog for app-text/noweb
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.17 2004/09/02 07:07:27 usata Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.18 2005/01/01 16:27:47 eradicator Exp $
 
   02 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> noweb-2.9-r3.ebuild,
   noweb-2.9-r4.ebuild:

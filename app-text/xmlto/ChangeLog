@@ -1,6 +1,6 @@
 # ChangeLog for app-text/xmlto
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.24 2004/10/13 09:36:01 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.25 2005/01/01 16:44:26 eradicator Exp $
 
   13 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> xmlto-0.0.15.ebuild,
   xmlto-0.0.17.ebuild, xmlto-0.0.18.ebuild:

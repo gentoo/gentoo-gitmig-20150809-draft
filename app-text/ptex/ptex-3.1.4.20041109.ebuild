@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.4.20041109.ebuild,v 1.1 2004/11/18 17:24:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.4.20041109.ebuild,v 1.2 2005/01/01 16:32:00 eradicator Exp $
 
 TETEX_PV=2.99.3.20041109
 TEXMF_PATH=/var/lib/texmf

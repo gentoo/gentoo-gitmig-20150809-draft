@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.77.ebuild,v 1.13 2004/07/22 04:52:13 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.77.ebuild,v 1.14 2005/01/01 16:09:26 eradicator Exp $
 
 MY_P=${P/-stylesheets/}
 S=${WORKDIR}/${MY_P}

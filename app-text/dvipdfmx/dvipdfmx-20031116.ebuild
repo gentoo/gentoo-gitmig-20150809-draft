@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20031116.ebuild,v 1.7 2004/10/03 15:51:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20031116.ebuild,v 1.8 2005/01/01 16:12:34 eradicator Exp $
 
 inherit eutils
 

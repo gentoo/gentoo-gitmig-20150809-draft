@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkinfo/tkinfo-2.6.ebuild,v 1.6 2004/12/07 22:40:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkinfo/tkinfo-2.6.ebuild,v 1.7 2005/01/01 16:38:37 eradicator Exp $
 
 DESCRIPTION="Info Browser in TK"
 SRC_URI="http://math-www.uni-paderborn.de/~axel/tkinfo/${P}.tar.gz"

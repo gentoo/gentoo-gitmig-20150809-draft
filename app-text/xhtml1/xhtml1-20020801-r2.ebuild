@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/xhtml1-20020801-r2.ebuild,v 1.1 2004/11/06 13:19:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/xhtml1-20020801-r2.ebuild,v 1.2 2005/01/01 16:43:05 eradicator Exp $
 
 inherit sgml-catalog eutils
 

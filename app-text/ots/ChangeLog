@@ -1,6 +1,6 @@
 # ChangeLog for app-text/ots
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.6 2004/06/24 22:46:39 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.7 2005/01/01 16:29:00 eradicator Exp $
 
   28 Apr 2004; Jon Portnoy <avenj@gentoo.org> ots-0.4.1.ebuild :
   Stable on AMD64 and x86.

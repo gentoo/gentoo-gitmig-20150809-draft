@@ -1,6 +1,6 @@
 # ChangeLog for app-text/hnb
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.9 2004/06/24 22:38:57 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.10 2005/01/01 16:18:56 eradicator Exp $
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> :
   Don't assign default to S; header fix

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/xlhtml
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/ChangeLog,v 1.7 2004/09/24 21:04:46 batlogg Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/ChangeLog,v 1.8 2005/01/01 16:43:18 eradicator Exp $
 
   24 Sep 2004; Jodok Batlogg <batlogg@gentoo.org>; xlhtml-0.5.ebuild:
   marked as stable on x86 and ppc

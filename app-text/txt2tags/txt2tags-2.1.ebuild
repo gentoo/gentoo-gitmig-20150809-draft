@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.1.ebuild,v 1.2 2004/12/03 11:12:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.1.ebuild,v 1.3 2005/01/01 16:40:11 eradicator Exp $
 
 inherit elisp-common
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/psiconv
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psiconv/ChangeLog,v 1.5 2004/07/01 19:28:49 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/psiconv/ChangeLog,v 1.6 2005/01/01 16:30:58 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> psiconv-0.8.3.ebuild:
   virtual/glibc -> virtual/libc

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fdftk/fdftk-6.0-r1.ebuild,v 1.5 2004/07/21 19:54:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fdftk/fdftk-6.0-r1.ebuild,v 1.6 2005/01/01 16:14:02 eradicator Exp $
 
 MY_P="FDFToolkitForUnix"
 At="${MY_P}.tar.gz"

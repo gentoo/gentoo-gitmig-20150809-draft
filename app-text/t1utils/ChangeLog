@@ -1,6 +1,6 @@
 # ChangeLog for app-text/t1utils
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.17 2004/09/15 13:14:09 gustavoz Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.18 2005/01/01 16:37:22 eradicator Exp $
 
   15 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> t1utils-1.28.ebuild:
   Stable on sparc

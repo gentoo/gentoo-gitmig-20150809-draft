@@ -1,6 +1,6 @@
 # ChangeLog for app-text/wv2
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.26 2004/12/20 13:33:09 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.27 2005/01/01 16:42:37 eradicator Exp $
 
   20 Dec 2004; Dylan Carlson <absinthe@gentoo.org> wv2-0.2.2.ebuild:
   Stable on amd64.

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/pep
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pep/ChangeLog,v 1.7 2004/10/09 21:23:37 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pep/ChangeLog,v 1.8 2005/01/01 16:30:31 eradicator Exp $
 
   10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> pep-2.8.ebuild:
   Stable on x86 and ppc.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htag/htag-0.0.23.ebuild,v 1.1 2004/12/05 02:09:42 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htag/htag-0.0.23.ebuild,v 1.2 2005/01/01 16:19:23 eradicator Exp $
 
 DESCRIPTION="random signature maker"
 HOMEPAGE="http://www.earth.li/projectpurple/progs/htag.html"

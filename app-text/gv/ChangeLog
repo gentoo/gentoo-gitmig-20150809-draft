@@ -1,6 +1,6 @@
 # ChangeLog for app-text/gv
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.29 2004/10/25 07:58:23 usata Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.30 2005/01/01 16:18:29 eradicator Exp $
 
   25 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> gv-3.5.8-r4.ebuild:
   Provide virtual/pdfviewer and virtual/psviewer; bug #50423.

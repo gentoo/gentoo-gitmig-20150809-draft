@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r7.ebuild,v 1.7 2004/12/28 13:24:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r7.ebuild,v 1.8 2005/01/01 16:44:42 eradicator Exp $
 
 inherit eutils
 

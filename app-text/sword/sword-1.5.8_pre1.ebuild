@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.8_pre1.ebuild,v 1.4 2004/07/03 01:07:28 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.8_pre1.ebuild,v 1.5 2005/01/01 16:36:54 eradicator Exp $
 
 DESCRIPTION="Library for Bible reading software"
 HOMEPAGE="http://www.crosswire.org/sword/"

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/gsview
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.9 2004/11/03 11:53:39 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.10 2005/01/01 16:17:47 eradicator Exp $
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> gsview-4.5.ebuild,
   gsview-4.6.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/dvipdfm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.8 2004/06/24 22:34:13 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.9 2005/01/01 16:12:19 eradicator Exp $
 
   05 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> dvipdfm-0.13.2c.ebuild:
   Blocks teTeX-2 based TeX distributions

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.6.1.ebuild,v 1.10 2004/10/25 08:02:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.6.1.ebuild,v 1.11 2005/01/01 16:14:59 eradicator Exp $
 
 inherit gnome2
 

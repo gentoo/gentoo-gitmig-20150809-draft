@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bow/bow-20020213.ebuild,v 1.5 2004/07/01 11:56:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bow/bow-20020213.ebuild,v 1.6 2005/01/01 16:04:18 eradicator Exp $
 
 DESCRIPTION="Bag of words library - Statistical language modeling, text retrieval, Classification and clustering"
 HOMEPAGE="http://www-2.cs.cmu.edu/~mccallum/bow/"

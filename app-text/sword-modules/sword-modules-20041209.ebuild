@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20041209.ebuild,v 1.1 2004/12/09 20:01:05 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20041209.ebuild,v 1.2 2005/01/01 16:37:07 eradicator Exp $
 
 CROSSWIREFTP="http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip"
 DESCRIPTION="a collection of modules for the sword project"

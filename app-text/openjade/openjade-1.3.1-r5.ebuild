@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r5.ebuild,v 1.13 2004/08/07 21:38:24 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r5.ebuild,v 1.14 2005/01/01 16:28:30 eradicator Exp $
 
 inherit libtool flag-o-matic
 

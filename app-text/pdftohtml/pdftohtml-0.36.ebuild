@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/pdftohtml-0.36.ebuild,v 1.10 2004/10/19 03:21:32 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/pdftohtml-0.36.ebuild,v 1.11 2005/01/01 16:30:19 eradicator Exp $
 
 DESCRIPTION="pdftohtml is a utility which converts PDF files into HTML and XML formats"
 HOMEPAGE="http://${PN}.sourceforge.net/"

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/scrollkeeper
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.45 2004/07/01 14:22:08 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.46 2005/01/01 16:35:07 eradicator Exp $
 
   01 Jul 2004; Tom Gall <tgall@gentoo.org> scrollkeeper-0.3.14.ebuild:
   stable on ppc64 bug #54799

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.24 2004/07/14 14:02:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.25 2005/01/01 16:28:46 eradicator Exp $
 
 inherit eutils gnuconfig
 

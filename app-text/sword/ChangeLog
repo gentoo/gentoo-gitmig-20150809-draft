@@ -1,6 +1,6 @@
 # ChangeLog for app-text/sword
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.19 2004/07/03 01:07:28 squinky86 Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.20 2005/01/01 16:36:54 eradicator Exp $
 
   02 Jul 2004; Jon Hood <squinky86@gentoo.org>
   -files/sword-gcc34-gentoo.patch, -files/sword-installmgr-gentoo.patch,

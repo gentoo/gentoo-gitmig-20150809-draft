@@ -1,6 +1,6 @@
 # ChangeLog for app-text/aspell
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.65 2004/12/08 02:22:56 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.66 2005/01/01 16:03:13 eradicator Exp $
 
   07 Dec 2004; Jason Wever <weeve@gentoo.org> aspell-0.60.1.1.ebuild:
   Added ~sparc keyword as the version bump was inproperly done.

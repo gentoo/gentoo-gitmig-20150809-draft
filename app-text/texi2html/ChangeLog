@@ -1,6 +1,6 @@
 # ChangeLog for app-text/texi2html
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.22 2004/12/16 10:31:43 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.23 2005/01/01 16:38:25 eradicator Exp $
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> texi2html-1.64-r1.ebuild,
   texi2html-1.70.ebuild:

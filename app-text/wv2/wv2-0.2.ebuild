@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.2.ebuild,v 1.10 2004/08/14 11:10:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.2.ebuild,v 1.11 2005/01/01 16:42:37 eradicator Exp $
 
 
 DESCRIPTION="Excellent MS Word filter lib, used in most Office suites"

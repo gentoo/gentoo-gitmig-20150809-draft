@@ -1,6 +1,6 @@
 # ChangeLog for app-text/cmigemo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.12 2004/10/23 10:10:54 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.13 2005/01/01 16:05:54 eradicator Exp $
 
   23 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> cmigemo-1.3c.ebuild:
   Marked as stable.

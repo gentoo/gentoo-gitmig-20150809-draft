@@ -1,6 +1,6 @@
 # ChangeLog for app-text/diction
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.5 2004/06/28 02:24:53 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.6 2005/01/01 16:08:30 eradicator Exp $
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> diction-1.02.ebuild:
   Added ~sparc, ~mips

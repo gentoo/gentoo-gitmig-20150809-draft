@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040601.ebuild,v 1.8 2004/09/01 01:59:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040601.ebuild,v 1.9 2005/01/01 16:07:04 eradicator Exp $
 
 inherit eutils
 

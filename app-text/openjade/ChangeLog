@@ -1,6 +1,6 @@
 # ChangeLog for app-text/openjade
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.39 2004/09/09 20:34:43 hardave Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.40 2005/01/01 16:28:30 eradicator Exp $
 
   09 Sep 2004; Hardave Riar <hardave@gentoo.org> openjade-1.3.2-r1.ebuild:
   Added gnuconfig_update for mips

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/xdvik
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.22 2004/11/19 22:00:51 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.23 2005/01/01 16:42:52 eradicator Exp $
 
   20 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> -xdvik-22.84.3-r1.ebuild,
   -xdvik-22.84.3.ebuild:

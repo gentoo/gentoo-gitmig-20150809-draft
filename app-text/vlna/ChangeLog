@@ -1,6 +1,6 @@
 # ChangeLog for app-text/vlna
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.5 2004/07/01 19:07:38 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.6 2005/01/01 16:41:29 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> vlna-1.2.ebuild:
   virtual/glibc -> virtual/libc

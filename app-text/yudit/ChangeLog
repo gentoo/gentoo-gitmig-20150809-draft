@@ -1,6 +1,6 @@
 # ChangeLog for app-text/yudit
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.13 2004/06/24 22:59:18 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.14 2005/01/01 16:45:08 eradicator Exp $
 
   13 Mar 2004; Jason Wever <weeve@gentoo.org> yudit-2.7.6.ebuild:
   Stable on sparc.

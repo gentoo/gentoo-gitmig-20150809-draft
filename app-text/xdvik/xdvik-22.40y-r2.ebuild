@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y-r2.ebuild,v 1.12 2004/10/24 15:38:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y-r2.ebuild,v 1.13 2005/01/01 16:42:52 eradicator Exp $
 
 inherit eutils
 

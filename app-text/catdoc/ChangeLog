@@ -1,6 +1,6 @@
 # ChangeLog for app-text/catdoc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/ChangeLog,v 1.4 2004/09/05 11:57:22 malc Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/catdoc/ChangeLog,v 1.5 2005/01/01 16:04:56 eradicator Exp $
 
   05 Sep 2004; Malcolm Lashley <malc@gentoo.org> catdoc-0.93.3.ebuild:
   ~amd64 - closes bug #62247

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.80.ebuild,v 1.1 2004/10/28 12:21:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.80.ebuild,v 1.2 2005/01/01 16:25:42 eradicator Exp $
 
 # need one of ipadic-2.4.4/2.5.0/2.5.1 
 MY_IPADIC="ipadic-2.5.1"

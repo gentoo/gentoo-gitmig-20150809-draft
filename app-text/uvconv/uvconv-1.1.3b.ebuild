@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uvconv/uvconv-1.1.3b.ebuild,v 1.1 2004/11/22 09:50:04 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uvconv/uvconv-1.1.3b.ebuild,v 1.2 2005/01/01 16:41:04 eradicator Exp $
 
 DESCRIPTION="A small utility that converts among Vietnamese charsets"
 SRC_URI="mirror://sourceforge/unikey/${PF}.tar.gz"

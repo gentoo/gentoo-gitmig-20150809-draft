@@ -1,6 +1,6 @@
 # ChangeLog for app-text/pdfjam
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.4 2004/11/27 07:18:32 pclouds Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.5 2005/01/01 16:29:52 eradicator Exp $
 
   27 Nov 2004; <pclouds@gentoo.org> pdfjam-1.10.ebuild,+metadata.xml:
   Marked 1.10 stable on x86. Added missing metadata.xml

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/sloccount
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.5 2004/12/02 13:52:27 fmccor Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.6 2005/01/01 16:36:27 eradicator Exp $
 
   02 Dec 2004; Ferris McCormick <fmccor@gentoo.org> sloccount-2.22.ebuild:
   Add ~sparc keyword at user request (Leif Sawyer).  Program builds, runs,

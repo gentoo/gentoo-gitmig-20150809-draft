@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/itext/itext-1.02b-r1.ebuild,v 1.1 2004/11/14 10:59:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/itext/itext-1.02b-r1.ebuild,v 1.2 2005/01/01 16:22:07 eradicator Exp $
 
 inherit java-pkg
 

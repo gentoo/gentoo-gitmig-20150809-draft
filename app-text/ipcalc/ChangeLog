@@ -1,6 +1,6 @@
 # ChangeLog for app-text/ipcalc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ipcalc/ChangeLog,v 1.12 2004/09/22 19:55:39 hansmi Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ipcalc/ChangeLog,v 1.13 2005/01/01 16:21:39 eradicator Exp $
 
   22 Sep 2004; Michael Hanselmann <hansmi@gentoo.org> ipcalc-0.37.ebuild:
   Added to ~ppc, bug 63718.
