@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.73 2005/03/28 03:04:25 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.74 2005/04/04 17:20:15 luckyduck Exp $
+
+  04 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> vlc-0.8.1-r1.ebuild:
+  introduced support for several useflags, implemented enhancement suggestions
+  which were made by Diego Pettenò <dgp85@users.sourceforge.net>. Fixes #87289
 
 *vlc-0.8.1-r1 (28 Mar 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.1 2005/03/28 03:04:25 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.2 2005/04/04 17:20:15 luckyduck Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -15,7 +15,7 @@ SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg oggvorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick mozilla hal stream mad xv bidi gtk2"
+IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg oggvorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick mozilla hal stream mad xv bidi gtk2 sdl threads ssl portaudio"
 
 DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		cdio? ( >=dev-libs/libcdio-0.70 )
@@ -58,7 +58,11 @@ DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		sys-libs/zlib
 		media-libs/libpng
 		media-libs/libdvbpsi
-		aac?( >=media-libs/faad2-2.0-r2 )"
+		aac?( >=media-libs/faad2-2.0-r2 )
+		threads? ( dev-libs/pth )
+		sdl? ( >=media-libs/libsdl-1.2.8 )
+		ssl? ( net-libs/gnutls )
+		portaudio? ( media-libs/portaudio )"
 
 pkg_setup() {
 	WX_GTK_VER="2.4"
@@ -143,8 +147,7 @@ src_compile () {
 		$(use_enable theora) \
 		$(use_enable X x11) \
 		$(use_enable xv xvideo) \
-		$(use_enable opengl glx) \
-		$(use_enable opengl) \
+		$(use_enable opengl glx) $(use_enable opengl) \
 		$(use_enable freetype) \
 		$(use_enable bidi fribidi) \
 		$(use_enable dvd dvdread) $(use_enable dvd dvdplay) $(use_enable dvd dvdnav) \
@@ -171,6 +174,10 @@ src_compile () {
 		$(use_enable mpeg libmpeg2) \
 		$(use_enable ggi) \
 		$(use_enable 3dfx glide) \
+		$(use_enable threads pth) \
+		$(use_enable sdl) \
+		$(use_enable ssl gnutls) \
+		$(use_enable portaudio) \
 		${myconf} || die "configuration failed"
 
 	if [[ $(gcc-major-version) == 2 ]]; then
