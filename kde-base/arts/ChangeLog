@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.143 2005/02/16 01:44:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.144 2005/02/26 13:41:57 danarmak Exp $
+
+*arts-3.4.0_rc1 (26 Feb 2005)
+
+  26 Feb 2005; Dan Armak <danarmak@gentoo.org> +arts-3.4.0_rc1.ebuild:
+  Arts 3.4.0_rc1 (not yet released, and masked).
 
   15 Feb 2005; Jason Wever <weeve@gentoo.org> arts-3.4.0_beta2.ebuild:
   Added ~sparc keyword.
