@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0.ebuild,v 1.2 2004/09/22 21:09:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0.ebuild,v 1.3 2004/09/22 21:25:48 eradicator Exp $
 
-IUSE="doc debug jack-tmpfs caps"
+IUSE="doc debug jack-tmpfs caps alsa oss portaudio"
 
 inherit flag-o-matic eutils
 
@@ -20,6 +20,7 @@ RDEPEND=">=media-libs/libsndfile-1.0.0
 	dev-libs/glib
 	dev-util/pkgconfig
 	sys-libs/ncurses
+	!ppc64? ( !alpha? ( !ia64? ( portaudio? ( media-libs/portaudio ) ) ) )
 	!ppc-macos? ( !sparc? ( alsa? ( >=media-libs/alsa-lib-0.9.1 ) ) )
 	!ppc-macos? ( caps? ( sys-libs/libcap ) )
 	!media-sound/jack-cvs"
@@ -59,6 +60,8 @@ src_compile() {
 	use ppc-macos && myconf="${myconf} --enable-altivec"
 
 	myconf="${myconf} --enable-optimize --with-gnu-ld"
+
+	myconf="${myconf} `use_enable oss` `use_enable portaudio` `use_enable alsa`"
 
 	econf ${myconf} || die "configure failed"
 	emake || die "compilation failed"
