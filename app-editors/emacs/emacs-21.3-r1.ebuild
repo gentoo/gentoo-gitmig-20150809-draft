@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r1.ebuild,v 1.7 2004/02/17 22:08:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r1.ebuild,v 1.8 2004/03/02 20:31:51 usata Exp $
 
 IUSE="X nls motif leim gnome Xaw3d"
 
@@ -21,11 +21,12 @@ DEPEND="sys-libs/ncurses
 		>=media-libs/libungif-4.1.0.1b
 		>=media-libs/jpeg-6b-r2
 		>=media-libs/tiff-3.5.5-r3
-		>=media-libs/libpng-1.2.1 )
-	Xaw3d? ( x11-libs/Xaw3d )
-	motif? ( >=x11-libs/openmotif-2.1.30 )
-	nls? ( sys-devel/gettext )
-	gnome? ( gnome-base/gnome-desktop )"
+		>=media-libs/libpng-1.2.1
+		Xaw3d? ( x11-libs/Xaw3d )
+		motif? ( >=x11-libs/openmotif-2.1.30 )
+		gnome? ( gnome-base/gnome-desktop )
+	)
+	nls? ( sys-devel/gettext )"
 
 PROVIDE="virtual/emacs virtual/editor"
 SANDBOX_DISABLED="1"

@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.22 2004/02/27 01:37:57 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.23 2004/03/02 20:31:51 usata Exp $
+
+  03 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> emacs-21.1-r4.ebuild,
+  emacs-21.2-r2.ebuild, emacs-21.3-r1.ebuild, emacs-21.3-r2.ebuild:
+  Moved gnome USE flag inside X. Closing bug #43228
 
   27 Feb 2004; Sven Blumenstein <bazik@gentoo.org> emacs-21.3-r2.ebuild:
   Stable on sparc. <imo>use vim, use vim, use vim, use vim, use vim!</imo>
