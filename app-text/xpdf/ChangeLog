@@ -1,8 +1,12 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.5 2002/07/14 13:11:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.6 2002/07/16 04:12:30 owen Exp $
 
 *xpdf-1.01-r1 (13 Jul 2002)
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added KEYWORDS.
 
   13 Jul 2002; Daniel Ahlberg <aliz@telia.com> xpdf-1.01-r1.ebuild
  

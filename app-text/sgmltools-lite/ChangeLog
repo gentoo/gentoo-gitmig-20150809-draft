@@ -1,8 +1,12 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.6 2002/04/03 12:20:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.7 2002/07/16 04:09:40 owen Exp $
 
 *sgmltools-lite-3.0.3-r4 (3 Apr 2002)
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added KEYWORDS.
 
   3 Apr 2002; Seemant Kulleen <seemant@gentoo.org> sgmltools-lite-3.0.3-r4.ebuild :
 
