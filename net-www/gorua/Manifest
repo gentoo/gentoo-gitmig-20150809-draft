@@ -1,6 +1,6 @@
 MD5 2d10cac28b8610a810575305c4b16e7e gorua-0.16-r2.ebuild 1612
-MD5 8afe4eded45a484580ce855f24ffea2e metadata.xml 265
 MD5 c14172d5dd7a3a8bc76e29abeb41b8da gorua-0.17.ebuild 1567
+MD5 8afe4eded45a484580ce855f24ffea2e metadata.xml 265
 MD5 f4ce4decc03045eb0af253b92d3e7099 ChangeLog 1578
 MD5 724fb352ab2279edb44600256a49b084 files/bookmarks_sample 899
 MD5 73ea25f0872db7674096178985e51955 files/digest-gorua-0.16-r2 62
