@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.5-r1.ebuild,v 1.2 2005/03/05 22:12:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.5-r1.ebuild,v 1.3 2005/03/16 06:27:44 eradicator Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit multilib
@@ -142,13 +142,16 @@ src_compile() {
 	####################################
 
 	# ./configure picks up the mozconfig stuff
+	export LD="$(tc-getLD)"
+	export CC="$(tc-getCC)"
+	export CXX="$(tc-getCXX)"
 	./configure || die "configure failed"
 
 	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
 	# requirements while compiling
 	edit_makefiles
 
-	emake || die "emake failed"
+	emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" LD="$(tc-getLD)" || die "emake failed"
 
 	####################################
 	#
@@ -164,11 +167,11 @@ src_compile() {
 		cd ${S}/security/coreconf || die "cd coreconf failed"
 		echo 'INCLUDES += -I$(DIST)/include/nspr -I$(DIST)/include/dbm'\
 			>>headers.mk
-		emake -j1 || die "make security headers failed"
+		emake -j1 CXX="$(tc-getCXX)" CC="$(tc-getCC)" LD="$(tc-getLD)" || die "make security headers failed"
 
 		cd ${S}/security/nss || die "cd nss failed"
-		emake -j1 moz_import || die "make moz_import failed"
-		emake -j1 || die "make nss failed"
+		emake -j1 CXX="$(tc-getCXX)" CC="$(tc-getCC)" LD="$(tc-getLD)" moz_import || die "make moz_import failed"
+		emake -j1 CXX="$(tc-getCXX)" CC="$(tc-getCC)" LD="$(tc-getLD)" || die "make nss failed"
 	fi
 
 	####################################
@@ -181,10 +184,10 @@ src_compile() {
 	if use crypt && ! use moznomail; then
 		einfo "Building Enigmail plugin..."
 		cd ${S}/extensions/ipc || die "cd ipc failed"
-		emake || die "make ipc failed"
+		emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" LD="$(tc-getLD)" || die "make ipc failed"
 
 		cd ${S}/extensions/enigmail || die "cd enigmail failed"
-		emake || die "make enigmail failed"
+		emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" LD="$(tc-getLD)" || die "make enigmail failed"
 	fi
 }
 
