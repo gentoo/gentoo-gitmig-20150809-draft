@@ -1087,10 +1087,6 @@ app-cdr/cddump
 # ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-01%3A48.tcpdump.asc
 <net-analyzer/tcpdump-3.6.2-r1
 
-# agenkin@gentoo.org 1 Aug 2002
-# This version breaks pretty-print (see bug #5560).
-app-editors/xemacs-packages-sumo-2002.07.20
-
 # mkennedy@gentoo.org 12 May 2002
 # will be renames to app-editors/xemacs-gtk (so we'll have xemacs,
 # xemacs-gtk, xemacs-motif)
