@@ -35,11 +35,11 @@ MD5 344d17a865edc40adebe07797853c839 files/pam.d/other 198
 MD5 a1c7fb84c2dc309db86ba7b8d3dfae76 files/pam.d/passwd 214
 MD5 60d44a6f43aafcb9ca35858ab2534a49 files/pam.d/shadow 227
 MD5 942190363cb06bd4cf1b3acdcca6c513 files/pam.d/su 1296
-MD5 1baa646400c4a596290e9d4b9e1c09b2 files/pam.d/system-auth-1.1 491
+MD5 624bacd4dd8e9855404cd262dd6f8f62 files/pam.d/system-auth-1.1 671
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBtmqProRuSHgZdywRAjjVAJ43yljrbBSRDkQhhWnZyp26Gm1tAwCfe1xS
-kGodwgQrC6/QXWD2kYjoWvM=
-=xKRS
+iD8DBQFBvPMJroRuSHgZdywRArdpAKCF7GTGM0uHNSd69ge5fjW+pvWLCACggomX
+hGIh3bLTHM+VazSbWih+NUY=
+=J/cd
 -----END PGP SIGNATURE-----
