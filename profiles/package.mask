@@ -758,18 +758,6 @@ net-www/zope
 # drobbins, 16 Mar 2002: This kernel sucks :)
 =sys-kernel/linux-sources-2.4.18
 
-
-# Arcady Genkin <agenkin@gentoo.org>
-# Aug 15 2002
-# Masking _rc3 pending some testing
-# There are a couple of compile-time problems with the 
-# -driver package.
->=media-sound/alsa-driver-0.9.0_rc3
->=media-libs/alsa-lib-0.9.0_rc3
->=media-sound/alsa-utils-0.9.0_rc3
->=media-sound/alsa-tools-0.9.0_rc4
-
-
 # 18 Feb 2002, azarah.
 # Gnumeric needs 0.0.17, and most other stuff should work with this version
 >gnome-extra/gb-0.0.17
