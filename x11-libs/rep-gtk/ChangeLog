@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/rep-gtk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.31 2004/06/28 19:25:04 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.32 2005/03/14 04:07:38 agriffis Exp $
+
+*rep-gtk-0.18-r1 (14 Mar 2005)
+
+  14 Mar 2005; Aron Griffis <agriffis@gentoo.org> +rep-gtk-0.18-r1.ebuild:
+  Respect USE=gnome #62029
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> rep-gtk-0.17-r1.ebuild,
   rep-gtk-0.18.ebuild:
