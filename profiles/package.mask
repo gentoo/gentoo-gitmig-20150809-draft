@@ -160,7 +160,7 @@ net-www/galeon-cvs
 =gnome-extra/gconf-editor-0.3.1
 =media-sound/esound-0.2.29
 =gnome-extra/gnome-system-monitor-2.0.2
-=gnome-base/gnome-applets-2.0.2
+>=gnome-base/gnome-applets-2.0.2
 >=app-text/ggv-1.99.10
 =x11-libs/libwnck-0.17
 =gnome-base/ORBit2-2.4.3
