@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/uclibc-buildroot-20040218.ebuild,v 1.2 2004/02/28 01:17:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/uclibc-buildroot-20040218.ebuild,v 1.3 2004/06/04 14:41:48 dragonheart Exp $
 
 inherit eutils crosscompile
 
@@ -210,7 +210,7 @@ src_unpack() {
 	cd ${UCLIBCDIR}
 	local patches="uClibc-0.9.26-Makefile.patch"
 
-	#[ `use pie` && ${TARGETARCH} == "i386" ] && patches="${patches} uClibc-${PV}-pie-option.patch"
+	# use pie && ${TARGETARCH} == "i386" ] && patches="${patches} uClibc-${PV}-pie-option.patch"
 
 	for patch in ${patches} ; do
 		[ -f ${FILESDIR}/${UCLIBCVER}/${patch} ] && epatch ${FILESDIR}/${UCLIBCVER}/${patch}
@@ -289,7 +289,7 @@ src_compile() {
 			uclibc_config_option y UCLIBC_HAS_MMU
 
 
-		if [ `use pie` ] && ${TARGETARCH} == "i386"; then
+		if use pie && ${TARGETARCH} == "i386"; then
 			uclibc_config_option y UCLIBC_PIE_SUPPORT
 			uclibc_config_option n CONFIG_PROFILING
 		else
@@ -353,14 +353,14 @@ src_compile() {
 	emake -j1 || die "Could not make uclibc-buildroot"
 
 	if use debug; then
-		if [ -f /etc/embedded/busybox.config } && use savedconfig; then
+		if [ -f /etc/embedded/busybox.config ] && use savedconfig; then
 			emake BUSYBOX_CONFIG=/etc/embedded/busybox.config busybox \
 				|| "Error making busybox old config"
 		else
 			emake  busybox || "Error making busybox default config"
 		fi
 
-		[ -f /etc/embedded/tinylogin.config && `use savedconfig` ] && \
+		[ -f /etc/embedded/tinylogin.config ] && use savedconfig ] && \
 			cp /etc/embedded/tinylogin.config build_${TARGETARCH}/tinylogin-${TINYLOGINVER}/Config.h
 
 		emake extras-compile

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/uclibc-buildroot
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/ChangeLog,v 1.8 2004/02/28 01:17:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/ChangeLog,v 1.9 2004/06/04 14:41:48 dragonheart Exp $
+
+  05 Jun 2004; Daniel Black <dragonheart@gentoo.org>
+  -uclibc-buildroot-20040209.ebuild, uclibc-buildroot-20040218.ebuild:
+  Small correction to Gentoo's ugliest ebuild
 
   28 Feb 2004; Daniel Black <dragonheart@gentoo.org>
   uclibc-buildroot-20040218.ebuild:
