@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/fcpci
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.9 2004/11/13 19:38:34 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.10 2004/11/19 18:21:40 mrness Exp $
+
+  19 Nov 2004; Alin Nastac <mrness@gentoo.org> -fcpci-03.09.10.ebuild,
+  fcpci-03.11.02.ebuild:
+  Marked stable on x86. Remove old ebuild.
 
 *fcpci-3.11.02-r1 (13 Nov 2004)
 

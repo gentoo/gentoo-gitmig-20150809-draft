@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/fcpci-03.11.02.ebuild,v 1.3 2004/07/14 22:40:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/fcpci-03.11.02.ebuild,v 1.4 2004/11/19 18:21:40 mrness Exp $
 
 inherit flag-o-matic kernel-mod
 
@@ -10,7 +10,7 @@ S="${WORKDIR}/fritz"
 SRC_URI="ftp://ftp.avm.de/cardware/fritzcrd.pci/linux/suse.82/fcpci-suse8.2-${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="virtual/linux-sources"
 

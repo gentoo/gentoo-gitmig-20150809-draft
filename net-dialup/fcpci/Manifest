@@ -1,13 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a4bba6811bd14a2c36cbe323e63a0114 ChangeLog 958
-MD5 b6e834e8d8a57bce3b9933ce3828bfa9 fcpci-03.09.10.ebuild 1122
+MD5 7df64f9651c0df4722a8696f4a0995e7 ChangeLog 1099
 MD5 0d5d85f3c77ee1182c4bb748c53fdf3f fcpci-03.10.02.ebuild 1080
-MD5 05a7eed1fb08c56cb30255fa983c97fd fcpci-03.11.02.ebuild 1136
+MD5 f33ffce2d8a0940f2d43ef0727a5e683 fcpci-03.11.02.ebuild 1133
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 b717b72ebb8c4c80fbcba82c7a9b211a fcpci-3.11.02-r1.ebuild 1719
-MD5 90cc176e076cf2b4cfd1bf929679fa63 files/digest-fcpci-03.09.10 74
 MD5 a9248e51d7bf2980d55b7e5872c378f7 files/digest-fcpci-03.10.02 74
 MD5 e4cdfad1b954f1a2875dce5a65e1f64c files/digest-fcpci-03.11.02 75
 MD5 a8deb5bd6be2291d0af5ac6be6f35ca8 files/tools.c.diff 556
@@ -15,7 +13,7 @@ MD5 19cda2540206daba0f907ca4fa34c8b4 files/digest-fcpci-3.11.02-r1 148
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBlmLDjtv59x0+BrURAuXrAJ9px9f7wAhHBFw+FlKsFmGB1EiX5gCgkD01
-hrvBnkHMsuViYnREfhGP0MM=
-=Nuxs
+iD8DBQFBnjm+jtv59x0+BrURApKVAJ4rsBerc9fZWJ5vLDsfmFDjYl6VowCg1vG9
+yyT8YqLFVY2Y7nxVMy+32oo=
+=1BJh
 -----END PGP SIGNATURE-----
