@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/ezmlm-idx-mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx-mysql/ChangeLog,v 1.2 2003/02/12 08:10:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx-mysql/ChangeLog,v 1.3 2003/04/08 23:12:30 liquidx Exp $
+
+*ezmlm-idx-mysql-0.40-r2 (09 Apr 2003)
+
+  09 Apr 2003; Alastair Tse <liquidx@gentoo.org>
+  ezmlm-idx-mysql-0.40-r2.ebuild, files/ezmlm-0.53-errno.patch,
+  files/from-header.patch, files/get_header.c, files/get_header.h:
+  glibc-2.3.2 compile errno compile fix. and sync with ezmlm-idx.
 
 *ezmlm-idx-mysql-0.40 (16 Oct 2002)
 
