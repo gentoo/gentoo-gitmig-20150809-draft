@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.70.ebuild,v 1.4 2004/03/26 16:24:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.70.ebuild,v 1.5 2004/04/12 01:43:48 weeve Exp $
 
 MY_P="fmodapi${PV/.}linux"
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="fmod"
-KEYWORDS="x86 ~sparc ~ppc ~mips ~alpha ~hppa ~amd64"
+KEYWORDS="x86 -sparc ~ppc ~mips ~alpha ~hppa ~amd64"
 
 src_install() {
 	dolib api/libfmod-${PV}.so
