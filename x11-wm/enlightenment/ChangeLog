@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.2 2002/02/16 10:23:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.3 2002/03/20 02:34:19 seemant Exp $
+
+*enlightenment-0.16.5-r4 (19 Mar 2002)
+
+  19 Mar 2002; Seemant Kulleen <seemant@gentoo.org> enlightenment-0.16.5-r4.ebuild :
+
+  There was an issue where the path to the enlightenment binary was not being 
+  put into englightenment.install script.  The Makefile in scripts/ should have
+  done that, but it didn't resolve the name correctly.  So, this has been
+  adjusted to make the script work.
 
 *enlightenment-0.16.5-r3 (14 Feb 2002)
 
