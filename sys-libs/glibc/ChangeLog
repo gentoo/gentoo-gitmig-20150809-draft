@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.324 2005/03/07 11:33:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.325 2005/03/15 20:00:21 eradicator Exp $
+
+  15 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.4.20050125-r1.ebuild:
+  gcc-4 fix from bug #83403.  Fixes for when CBUILD != CHOST.
 
   07 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20050125-r1.ebuild:
