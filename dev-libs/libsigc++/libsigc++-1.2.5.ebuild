@@ -1,20 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.4 2003/07/23 19:09:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.5 2003/08/03 02:18:13 vapier Exp $
 
-IUSE="debug"
 DESCRIPTION="The GLib library of C routines"
-SRC_URI="mirror://sourceforge/libsigc/${P}.tar.gz"
 HOMEPAGE="http://libsigc.sourceforge.net/"
-SLOT="1.2"
+SRC_URI="mirror://sourceforge/libsigc/${P}.tar.gz"
+
 LICENSE="GPL-2 LGPL-2.1"
+SLOT="1.2"
 KEYWORDS="x86 ~ppc ~sparc hppa"
+IUSE="debug"
 
 DEPEND="virtual/glibc"
 
 src_compile() {
 	local myconf
-    
 	use debug \
 		&& myconf="--enable-debug=yes" \
 		|| myconf="--enable-debug=no"

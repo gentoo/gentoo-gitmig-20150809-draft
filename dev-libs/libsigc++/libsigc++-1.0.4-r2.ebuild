@@ -1,29 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r2.ebuild,v 1.10 2003/07/11 20:13:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r2.ebuild,v 1.11 2003/08/03 02:18:13 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="The GLib library of C routines"
-SRC_URI="http://download.sourceforge.net/libsigc/${P}.tar.gz"
 HOMEPAGE="http://libsigc.sourceforge.net/"
+SRC_URI="http://download.sourceforge.net/libsigc/${P}.tar.gz"
 
-SLOT="1.0"
 LICENSE="GPL-2 LGPL-2.1"
+SLOT="1.0"
 KEYWORDS="x86 ppc sparc hppa"
+IUSE="debug"
 
 DEPEND="virtual/glibc"
 
 src_compile() {
-
 	local myconf=""
-    
-	if [ "${DEBUG}" ]
-	then
-		myconf="--enable-debug=yes"
-	else
-		myconf="--enable-debug=no"
-	fi
-    
+	use debug \
+		&& myconf="--enable-debug=yes" \
+		|| myconf="--enable-debug=no"
 	econf ${myconf} || die
 	
 	# Fix sandbox violation when old libsig++ is already installed,
