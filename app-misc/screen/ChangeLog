@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.18 2002/12/18 23:19:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.19 2002/12/19 17:27:44 blizzy Exp $
+
+  19 Dec 2002; Maik Schreiber <blizzy@gentoo.org> files/screenrc: Changed
+  scrollback buffer to 1000 lines per default. Also removed version output
+  on startup.
 
 *screen-3.9.13-r2 (19 Dec 2002)
 
