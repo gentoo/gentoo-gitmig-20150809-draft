@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.86 2003/11/01 08:08:08 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.87 2003/11/03 21:29:01 lostlogic Exp $
+
+*gaim-0.72-r1 (03 Nov 2003)
+
+  03 Nov 2003; Brandon Low <lostlogic@gentoo.org> gaim-0.72-r1.ebuild:
+  Bump encryption for bugfix
 
 *gaim-0.72 (01 Nov 2003)
 
