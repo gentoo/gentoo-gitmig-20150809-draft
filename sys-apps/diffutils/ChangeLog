@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.4 2002/09/25 12:47:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.5 2002/09/25 15:15:43 vapier Exp $
 
 *diffutils-2.8.4 (25 Sep 2002)
+
+  25 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added --datadir=${D}/usr/share to fix #8364
 
   25 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
   Version update.
