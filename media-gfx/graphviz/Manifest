@@ -3,9 +3,9 @@ Hash: SHA1
 
 MD5 c5bef5489036d6a3783c62248e65991e ChangeLog 4549
 MD5 e98595ce89ff0da26058b1e6e0ce3d31 metadata.xml 1540
-MD5 d2e5a72b7bcd2cdd69138fd3923dd12f graphviz-1.10.ebuild 1283
-MD5 7db944454e4d0a8205973e89edfb19ad graphviz-1.12-r1.ebuild 1815
-MD5 559e6fa96bdbb9d25f11237c282960d0 graphviz-1.12.ebuild 1379
+MD5 65c29c3effb1d8d09eea3144c650ca2d graphviz-1.10.ebuild 1287
+MD5 5ff9ccfd3ba33e42e1be2f4d738bb5e1 graphviz-1.12-r1.ebuild 1820
+MD5 b9a764009af3637cf54e8da64a8b65c6 graphviz-1.12.ebuild 1384
 MD5 ea7e00b7c49179d3961458a98aee9d6c files/digest-graphviz-1.10 66
 MD5 cea8244a5db85a3bc5e74e4ecd3c9a2b files/digest-graphviz-1.12 66
 MD5 54cdc52906c56a19e4e09cd0773d4633 files/digest-graphviz-1.12-r1 139
@@ -14,7 +14,7 @@ MD5 5e8726d7d859188692efcfe9e9155761 files/gdgen.c.patch 756
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBiYbXHTu7gpaalycRAjU3AKC/Fy4o1jS+0LxB4RVMMlxEbnN3qACcDCEa
-z8ItisnFBw5XXhAj0/oE0SU=
-=nlzv
+iD8DBQFBiZx0HTu7gpaalycRArLQAKDmZnob+H2wbO9k3Xx5n0ifrTcAegCfbB4b
+Fhv5609DnCuj1rXgHvqXJaE=
+=e4tW
 -----END PGP SIGNATURE-----
