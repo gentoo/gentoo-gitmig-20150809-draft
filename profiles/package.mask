@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+# raker@gentoo.org (16 Jul 2002)
+# New freetype build from development series - please test
+# This should be the first good replacement for 2.0.9
+=media-libs/freetype-2.1.2
+
 # lamer@gentoo.org (16 Jul 2002)
 # Brand spanking shiny new ebuild! Needs testing!
 =net-mail/mailman-2.0.12
