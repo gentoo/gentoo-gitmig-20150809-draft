@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.2.6.ebuild,v 1.5 2004/05/10 19:47:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.2.6.ebuild,v 1.6 2004/05/11 22:41:04 lv Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A fast, lightweight imageviewer using imlib2"
@@ -8,7 +8,7 @@ SRC_URI="http://www.linuxbrit.co.uk/downloads/${P}.tar.gz"
 HOMEPAGE="http://www.linuxbrit.co.uk/feh"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc sparc"
+KEYWORDS="~x86 ~ppc sparc ~amd64"
 DEPEND=">=media-libs/giblib-1.2.2
 	>=media-libs/imlib2-1.0.0
 	<media-libs/freetype-2"
