@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/efont-unicode
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/ChangeLog,v 1.7 2004/11/01 17:46:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/ChangeLog,v 1.8 2004/11/06 14:56:30 pylon Exp $
+
+  06 Nov 2004; Lars Weiler <pylon@gentoo.org> efont-unicode-0.4.2.ebuild:
+  Stable on ppc.
 
   01 Nov 2004; Markus Rothe <corsair@gentoo.org>
 
