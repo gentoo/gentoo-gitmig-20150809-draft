@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.23 2003/11/13 13:26:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.24 2003/11/27 11:14:16 aliz Exp $
+
+*tightvnc-4.0_beta20031113 (27 Nov 2003)
+
+  27 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> tightvnc-4.0_beta20031113:
+  New cvs snapshot together with a cleaner ebuild. WARNING, some features are missing in 4.0.
+  Also removed some old ebuilds.
 
   13 Nov 2003; Aron Griffis <agriffis@gentoo.org> tightvnc-1.2.9-r1.ebuild:
   Unbreak this ebuild for architectures other than amd64...  Maybe this was
