@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.4 2004/10/26 04:46:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.5 2004/10/26 05:12:34 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 #KEYWORDS="-* ~amd64 ~mips ~ppc64 ~x86 -hppa -ppc"
-KEYWORDS="-*"
+KEYWORDS="-* amd64"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 # we also need at least glibc 2.3.3 20040420-r1 in order for gcc 3.4 not to nuke
@@ -131,14 +131,14 @@ src_unpack() {
 	# misc patches that havent made it into a patch tarball yet
 	epatch ${FILESDIR}/3.4.0/gcc34-reiser4-fix.patch
 	epatch ${FILESDIR}/gcc-spec-env.patch
-	epatch ${FILESDIR}/3.4.2/400-mips-pr17565.patch
-	epatch ${FILESDIR}/3.4.2/401-ppc-eabi-typo.patch
-	epatch ${FILESDIR}/3.4.2/600-gcc34-arm-ldm-peephole.patch
-	epatch ${FILESDIR}/3.4.2/601-gcc34-arm-ldm.patch
-	epatch ${FILESDIR}/3.4.2/602-sdk-libstdc++-includes.patch
-	epatch ${FILESDIR}/3.4.2/700-pr15068-fix.patch
-	epatch ${FILESDIR}/3.4.2/800-arm-bigendian.patch
-	epatch ${FILESDIR}/3.4.2/810-arm-bigendian-uclibc.patch
+	#epatch ${FILESDIR}/3.4.2/400-mips-pr17565.patch
+	#epatch ${FILESDIR}/3.4.2/401-ppc-eabi-typo.patch
+	#epatch ${FILESDIR}/3.4.2/600-gcc34-arm-ldm-peephole.patch
+	#epatch ${FILESDIR}/3.4.2/601-gcc34-arm-ldm.patch
+	#epatch ${FILESDIR}/3.4.2/602-sdk-libstdc++-includes.patch
+	#epatch ${FILESDIR}/3.4.2/700-pr15068-fix.patch
+	#epatch ${FILESDIR}/3.4.2/800-arm-bigendian.patch
+	#epatch ${FILESDIR}/3.4.2/810-arm-bigendian-uclibc.patch
 
 	# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
 	if use mips && use !multilib; then
