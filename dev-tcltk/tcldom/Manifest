@@ -1,4 +1,14 @@
-MD5 64ee2643fbc92898da6c4f115097e280 ChangeLog 402
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ac5f412860df78788fc0c24099cf6d9b ChangeLog 477
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 bfec5e9fdb2b08f92f748ac6a0c30468 tcldom-2.6.ebuild 613
+MD5 27502d34f340290321d42645a6c83fa2 tcldom-2.6.ebuild 614
 MD5 ad2e519bbc7102830cb4f72173944a18 files/digest-tcldom-2.6 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjO/MI7fK2cqeyXkRAqZuAJ0fo+h+XNWryyhDfRFm2fOp6ThZCACeP3eL
+6cbPfu0i1nLNduYkcFHfakQ=
+=bwU6
+-----END PGP SIGNATURE-----
