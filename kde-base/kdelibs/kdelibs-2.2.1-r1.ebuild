@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.1-r1.ebuild,v 1.6 2001/11/13 00:41:38 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.1-r1.ebuild,v 1.7 2001/11/13 01:41:18 drobbins Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
@@ -22,8 +22,6 @@ COMMONDEPEND=">=sys-devel/gcc-2.95.2
 		alsa? ( >=media-libs/alsa-lib-0.5.9 )
 		cups? ( net-print/cups )
 		>=media-libs/tiff-3.5.5"
-
-#kdelibs (2.2.1-r1) currently has problems with libxml2-2.4.10, but works with 2.4.9.  Thus the dependency.
 
 DEPEND="$COMMONDEPEND
 	sys-devel/make
