@@ -1,8 +1,13 @@
 # ChangeLog for dev-java/junit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.5 2002/10/29 15:29:06 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.6 2002/11/28 04:31:28 strider Exp $
 
 *junit-3.8.1 (14 Oct 2002)
+
+  28 Nov 2002; Adrian Almenar <strider@gentoo.org> junit-3.8.1.ebuild:
+  Added app-arch/unzip a dependency. Fixes #11229.
+  Updated ebuild to follow the policy about IUSE="".
+  Updated Package HOMEPAGE and RDEPEND.
 
   29 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> junit-3.8.1.ebuild :
   Added dev-java/ant as a dependency. Fixes #9709.
@@ -12,6 +17,11 @@
 
 *junit-3.7-r1 (19 Jul 2002)
 
+  28 Nov 2002; Adrian Almenar <strider@gentoo.org> junit-3.7-r1.ebuild:
+  Added app-arch/unzip a dependency. Fixes #11229.
+  Updated ebuild to follow the policy about IUSE="".
+  Updated Package HOMEPAGE AND RDEPEND.
+ 
   01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> junit-3.7-r1.ebuild :
   Added KEYWORDS.
 
