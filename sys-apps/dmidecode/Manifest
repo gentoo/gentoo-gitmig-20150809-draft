@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c1362bcebafbb3310cf48bb341daa5c3 dmidecode-2.4.ebuild 917
-MD5 4aacc721a138e55350298240bb5953d3 ChangeLog 355
+MD5 6d7e048f14d21bfdd39f8f2636949f8f ChangeLog 439
+MD5 fc9d31db0b151398f5ac48477e2a9b3f dmidecode-2.4.ebuild 921
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 6a74ce88ec57714cc3170b034b461293 files/digest-dmidecode-2.4 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBJtKBHTu7gpaalycRAiCeAKCn7MdnA4EKiKtcyyq3Gh2BDKIrGwCffvRm
-00tZ4Bwn2xDvYZg5QRk1FTk=
-=+ioH
------END PGP SIGNATURE-----
