@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.113 2004/10/14 01:39:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.114 2004/10/24 00:47:38 carlo Exp $
+
+*kdegraphics-3.3.1-r1 (24 Oct 2004)
+
+  24 Oct 2004; Carsten Lohrke <carlo@gentoo.org>
+  +files/post-3.2.3-kdegraphics.diff, +files/post-3.3.1-kdegraphics.diff,
+  +files/xpdf-3.3.0-kdegraphics.diff, +kdegraphics-3.2.3-r1.ebuild,
+  +kdegraphics-3.3.0-r1.ebuild, +kdegraphics-3.3.1-r1.ebuild:
+  fxing kpdf integer overflows, #68558
 
 *kdegraphics-3.3.1 (13 Oct 2004)
 

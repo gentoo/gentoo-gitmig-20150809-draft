@@ -1,0 +1,49 @@
+--- ../../../kdegraphics-3.3.0-r1/work/kdegraphics-3.3.0/kpdf/xpdf/Catalog.cc	2003-08-20 23:25:12.000000000 +0200
++++ kpdf/xpdf/Catalog.cc	2004-10-24 02:03:30.000000000 +0200
+@@ -56,13 +56,23 @@
+     goto err2;
+   }
+   pagesDict.dictLookup("Count", &obj);
+-  if (!obj.isInt()) {
++  // some PDF files actually use real numbers here ("/Count 9.0")
++  if (!obj.isNum()) {
+     error(-1, "Page count in top-level pages object is wrong type (%s)",
+ 	  obj.getTypeName());
+     goto err3;
+   }
+-  pagesSize = numPages0 = obj.getInt();
++  pagesSize = numPages0 = (int)obj.getNum();
+   obj.free();
++  // The gcc doesnt optimize this away, so this check is ok,
++  // even if it looks like a pagesSize != pagesSize check
++  if (pagesSize*sizeof(Page *)/sizeof(Page *) != pagesSize ||
++      pagesSize*sizeof(Ref)/sizeof(Ref) != pagesSize) {
++    error(-1, "Invalid 'pagesSize'");
++    ok = gFalse;
++    return;
++  }
++
+   pages = (Page **)gmalloc(pagesSize * sizeof(Page *));
+   pageRefs = (Ref *)gmalloc(pagesSize * sizeof(Ref));
+   for (i = 0; i < pagesSize; ++i) {
+@@ -190,6 +200,10 @@
+       }
+       if (start >= pagesSize) {
+ 	pagesSize += 32;
++        if (pagesSize*sizeof(Page *)/sizeof(Page *) != pagesSize) {
++          error(-1, "Invalid 'pagesSize' parameter.");
++          goto err3;
++        }
+ 	pages = (Page **)grealloc(pages, pagesSize * sizeof(Page *));
+ 	pageRefs = (Ref *)grealloc(pageRefs, pagesSize * sizeof(Ref));
+ 	for (j = pagesSize - 32; j < pagesSize; ++j) {
+@@ -307,8 +321,8 @@
+ 	} else if (cmp < 0) {
+ 	  done = gTrue;
+ 	}
+-	name1.free();
+       }
++      name1.free();
+     }
+     names.free();
+     if (!found)
