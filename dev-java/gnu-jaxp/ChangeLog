@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/gnu-jaxp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.4 2004/06/24 22:27:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.5 2004/09/22 22:00:55 axxo Exp $
+
+*gnu-jaxp-1.0_beta1-r1 (23 Sep 2004)
+
+  23 Sep 2004; Thomas Matthijs <axxo@gentoo.org>
+  +gnu-jaxp-1.0_beta1-r1.ebuild:
+  now builds from source, Thanks too Hendrik Sticher <hendrik_sticher@gmx.de> in
+  bug 63291
 
   03 May 2004; David Holm <dholm@gentoo.org> gnu-jaxp-1.0_beta1.ebuild:
   Added to ~ppc.
