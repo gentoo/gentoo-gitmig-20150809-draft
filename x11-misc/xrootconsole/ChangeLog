@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xrootconsole
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.7 2004/03/06 10:12:08 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.8 2004/04/11 17:43:24 pyrania Exp $
+
+  11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> xrootconsole-0.4-r1.ebuild:
+  Marked stable on x86.
 
 *xrootconsole-0.4-r1 (06 Mar 2004)
 
