@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.16 2003/06/07 17:45:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.17 2003/06/27 13:46:27 foser Exp $
+
+  27 Jun 2003; foser <foser@gentoo.org> anjuta-1.0.2.ebuild :
+  Removed db dep, it's not needed at all (!) (#23376)
 
 *anjuta-1.1.1 (07 Jun 2003)
 

@@ -1,3 +1,4 @@
+MD5 dc77f7a1d55762cadb5ff967ca3230f2 anjuta-1.1.97.ebuild 1047
 MD5 1fa9fb2bfe9191c2749ae9e9e7c2fe39 anjuta-1.0.2.ebuild 1303
 MD5 6123a4dc94d01171d863e5b1210ae852 anjuta-1.0.1.ebuild 1287
 MD5 dc77f7a1d55762cadb5ff967ca3230f2 anjuta-1.1.1.ebuild 1047
@@ -7,3 +8,4 @@ MD5 536ce37536811eb5da512e0cca9189cd files/digest-anjuta-1.0.0 65
 MD5 1c6d2df41f726a297756a3538e5b9c5a files/digest-anjuta-1.0.1 65
 MD5 e85b6f172c9060236ecad97dd8d434e8 files/digest-anjuta-1.0.2 65
 MD5 479193c66bd3db4ece7cf12c0542a3a3 files/digest-anjuta-1.1.1 65
+MD5 926b6c21f9ba75ab05248b066704d9aa files/digest-anjuta-1.1.97 66
