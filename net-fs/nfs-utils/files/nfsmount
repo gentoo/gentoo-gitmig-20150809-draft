@@ -1,10 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsmount,v 1.4 2004/07/14 23:36:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsmount,v 1.5 2004/07/24 06:03:29 eradicator Exp $
 
 depend() {
 	need net portmap
+	use ypbind
 }
 
 start_statd() {

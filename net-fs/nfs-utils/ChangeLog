@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.43 2004/07/07 16:51:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.44 2004/07/24 06:03:28 eradicator Exp $
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> files/nfsmount:
+  Added 'use ypbind' to nfsmount script to close bug #28195.
 
 *nfs-utils-1.0.6-r4 (07 Jul 2004)
 
