@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1.ebuild,v 1.1 2003/09/03 17:45:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1.ebuild,v 1.2 2003/09/03 17:49:14 mholzer Exp $
 
-DESCRIPTION="Linux Point-to-Point Tunnelling Protocol Server"
+DESCRIPTION="Tools for ATM"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://linux-atm.sourceforge.net/"
 
