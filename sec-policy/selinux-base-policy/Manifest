@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3552d68f16615f11fa6fd0afbdc871be selinux-base-policy-20040604.ebuild 2673
-MD5 2e73809684fe415f46227077effb292a selinux-base-policy-20040225.ebuild 2217
-MD5 674034903cf497b7f46d20ed62479e1f selinux-base-policy-20040629.ebuild 2676
 MD5 8098f5e2b3f198edf5b82c6e1a4530e5 ChangeLog 8276
-MD5 1ec05b5603cc44bc8b406af4f6efd260 selinux-base-policy-20040509.ebuild 2673
 MD5 808b5f7f5d6654666e9193672d463229 metadata.xml 473
+MD5 2e73809684fe415f46227077effb292a selinux-base-policy-20040225.ebuild 2217
+MD5 1ec05b5603cc44bc8b406af4f6efd260 selinux-base-policy-20040509.ebuild 2673
+MD5 3552d68f16615f11fa6fd0afbdc871be selinux-base-policy-20040604.ebuild 2673
+MD5 c9ac9b3040b3cd2ed94ca63608899cfe selinux-base-policy-20040629.ebuild 2673
 MD5 e072d1ac900d493b546adc9c2f755bc5 selinux-base-policy-20040702.ebuild 2676
 MD5 7afea4eea1a3c5611ca773551fbd1bb5 files/digest-selinux-base-policy-20040225 80
+MD5 0671869ee0d92a38cfabe4491da88e1c files/digest-selinux-base-policy-20040509 80
 MD5 0c51e2c101c04d1a58f6da20add86a86 files/digest-selinux-base-policy-20040604 80
 MD5 b04dbcde2eb7e0f4177e3076075fe6ca files/digest-selinux-base-policy-20040629 80
 MD5 aa75977434391487a1fe3dfe2394157d files/digest-selinux-base-policy-20040702 80
-MD5 0671869ee0d92a38cfabe4491da88e1c files/digest-selinux-base-policy-20040509 80
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFA5fOvGFJQsIJWJy4RAojnAJ9jHATjEO+y1h7gunzT9ElrWmYn1QCcCFqi
-mm80HuVK8C9TnEMm/+cF/gU=
-=frQ7
+iD8DBQFBMoAUGFJQsIJWJy4RAlNcAJwIz77gXcybssk/sJRh14EjgoXyqgCfcGeS
+cZub3xvCtbY38G8wNgJMgZo=
+=YjBM
 -----END PGP SIGNATURE-----
