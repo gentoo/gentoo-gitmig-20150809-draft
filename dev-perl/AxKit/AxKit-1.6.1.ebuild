@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.6.1.ebuild,v 1.2 2003/05/03 06:34:26 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.6.1.ebuild,v 1.3 2003/05/31 19:46:20 mcummings Exp $
 
 inherit perl-module
 
@@ -23,6 +23,7 @@ newdepend ">=dev-perl/libapreq-1.0 \
 	>=dev-perl/XML-XPath-1.04 \
 	>=dev-perl/XML-LibXML-1.31 \
 	>=dev-perl/XML-LibXSLT-1.31 \
+	>=dev-perl/XML-Parser-2.31 \
 	>=dev-perl/XML-Sablot-0.50 \
 	>=dev-perl/Digest-MD5-2.09 \
 	<dev-perl/mod_perl-1.99"
@@ -30,8 +31,7 @@ newdepend ">=dev-perl/libapreq-1.0 \
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	cp Makefile.PL Makefile.PL.orig
-	sed -e "s:0\.31_03:0.31:" Makefile.PL.orig > Makefile.PL
+	sed -ie "s:0\.31_03:0.31:" Makefile.PL
 }
 
 src_compile() {
