@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <avenj@gentoo.org> (25 Sep 2003)
+# Severly borks due to bad pam.d/login, see bug 29563
+=sys-apps/pam-login-3.12
+
 # <strider@gentoo.org> (21 Sep 2003)
 # ant 1.5.4 the ebuild is ok but ant
 # script its no working too well
