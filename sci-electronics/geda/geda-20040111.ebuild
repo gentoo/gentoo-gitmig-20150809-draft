@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20040111.ebuild,v 1.9 2004/12/27 20:31:10 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20040111.ebuild,v 1.10 2004/12/28 18:52:36 ribosome Exp $
 
 S=${WORKDIR}
 
@@ -30,7 +30,7 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	virtual/x11
 
 	>=dev-util/pkgconfig-0.15.0
-	>=app-sci/libgdgeda-2.0.15
+	>=sci-libs/libgdgeda-2.0.15
 
 	>=app-sci/libgeda-${PV}
 	>=sci-electronics/gerbv-0.15
