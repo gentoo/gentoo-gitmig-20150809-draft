@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.1.7.ebuild,v 1.4 2004/09/19 17:19:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.1.7.ebuild,v 1.5 2004/10/02 22:20:10 ka0ttic Exp $
 
 DESCRIPTION="Rootkit Hunter scans for known and unknown rootkits, backdoors, and sniffers."
-HOMEPAGE="http://www.rootkit.nl/"
+HOMEPAGE="http://www.rootkit.org/"
 SRC_URI="http://downloads.rootkit.nl/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
