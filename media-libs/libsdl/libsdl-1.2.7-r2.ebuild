@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r2.ebuild,v 1.9 2004/09/20 01:11:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r2.ebuild,v 1.10 2004/09/28 17:50:27 vapier Exp $
 
 inherit fixheadtails eutils gnuconfig
 
@@ -78,7 +78,7 @@ src_compile() {
 		# dependency loop, only link against DirectFB if it
 		# isn't broken #61592
 		echo 'int main(){}' > directfb-test.c
-		$(gcc-getCC) sdl-test.c -ldirectfb 2>/dev/null \
+		$(gcc-getCC) directfb-test.c -ldirectfb 2>/dev/null \
 			&& directfbconf="--enable-video-directfb" \
 			|| ewarn "Disabling DirectFB since libdirectfb.so is broken"
 	fi
