@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-eternalspu/psemu-eternalspu-1.41.ebuild,v 1.1 2003/07/13 08:41:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-eternalspu/psemu-eternalspu-1.41-r1.ebuild,v 1.1 2003/08/14 06:23:03 vapier Exp $
+
+inherit games
 
 DESCRIPTION="PSEmu Eternal SPU"
 HOMEPAGE="http://www1.odn.ne.jp/psx-alternative/"
@@ -15,7 +17,8 @@ DEPEND="media-libs/libsdl"
 S=${WORKDIR}
 
 src_install() {
-	exeinto /usr/lib/psemu/plugins
+	exeinto ${GAMES_LIBDIR}/psemu/plugins
 	doexe libspuEternal.so.*
 	dodoc *.txt
+	prepgamesdirs
 }
