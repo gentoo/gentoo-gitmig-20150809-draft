@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/files/speedtouch.confd,v 1.5 2004/09/27 13:56:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/files/speedtouch.confd,v 1.6 2004/09/28 01:23:20 swegener Exp $
 
 # Config file for the speedtouch ebuild
 
