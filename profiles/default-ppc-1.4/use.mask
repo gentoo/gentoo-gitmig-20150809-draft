@@ -13,6 +13,10 @@ firebird
 tcc
 acpi
 
+# No stable enough gcc-3.3.x available on ppc
+nptl
+
+
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
