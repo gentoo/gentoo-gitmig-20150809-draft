@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.2-r1.ebuild,v 1.10 2005/01/24 23:34:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.2-r1.ebuild,v 1.11 2005/02/07 22:56:54 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -120,7 +120,7 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 	sed -i -e "s:_PREFIX_:${KDEDIR}:;s:_VERSION_:${PV}:" \
 		${D}/usr/share/xsessions/kde-${PV}.desktop
 
-	dodir ${D}/${KDEDIR}/share/services/searchprovider
+	dodir ${KDEDIR}/share/services/searchprovider
 	insinto ${D}/${KDEDIR}/share/services/searchprovider
 	newins ${FILESDIR}/pgo.desktop
 
