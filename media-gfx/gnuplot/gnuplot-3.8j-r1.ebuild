@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.8j-r1.ebuild,v 1.2 2004/04/27 21:43:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.8j-r1.ebuild,v 1.3 2004/06/07 21:55:46 agriffis Exp $
 
 inherit eutils
 
@@ -57,7 +57,7 @@ src_compile() {
 	cd ${S}
 	emake || die
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		cd docs
 		make pdf || die
 	fi
@@ -71,7 +71,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	if [ "`use svga`" ] ; then
+	if use svga ; then
 		einfo "In order to enable ordinary users to use SVGA console graphics"
 		einfo "gnuplot needs to be set up as setuid root.  Please note that"
 		einfo "this is usually considered to be a security hazard."

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1.ebuild,v 1.7 2004/04/29 01:03:45 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1.ebuild,v 1.8 2004/06/07 21:55:29 agriffis Exp $
 
 inherit eutils
 
@@ -37,9 +37,9 @@ src_compile() {
 
 	# mplayer and xine movie support cannot be installed at the same
 	# time so prefer xine support over mplayer if both are available
-	if [ "`use mpeg`" ]; then
+	if use mpeg; then
 		myflags="${myflags} --enable-xine"
-	elif [ "`use avi`"]; then
+	elif use avi; then
 		myflags="${myflags} --disable-xinetest --enable-mplayer"
 	else
 		myflags="${myflags} --disable-xinetest"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.16 2004/03/08 17:43:53 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.17 2004/06/07 21:56:56 agriffis Exp $
 
 inherit gcc eutils
 
@@ -22,7 +22,7 @@ DEPEND="media-libs/libpng
 	svga? ( media-libs/svgalib )"
 
 pkg_setup() {
-	if [ "`use icc`" ]
+	if use icc
 	then
 		einfo "using icc"
 	else
@@ -70,7 +70,7 @@ src_compile() {
 	# rphillips - removed because of compilation issues
 	# echo "s/^CPPFLAGS =/CPPFLAGS = -ansi -c/" >> makefile.sed
 
-	if [ "`use icc`" ]; then
+	if use icc; then
 		# ICC CPPFLAGS
 		echo "s/g++/icc/" >> makefile.sed
 		echo "s/gcc/icc/" >> makefile.sed
@@ -96,7 +96,7 @@ src_compile() {
 	fi
 
 	# fix library dependency
-	if [ "`use X`" ]; then
+	if use X; then
 		echo 's/LIBS = \(.*\)/LIBS = \1 -ldl -lpthread/' >> makefile.sed
 	else
 		echo 's/LIBS = \(.*\)/LIBS = \1 -ldl/' >> makefile.sed

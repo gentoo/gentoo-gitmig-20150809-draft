@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r5.ebuild,v 1.14 2003/09/06 23:56:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r5.ebuild,v 1.15 2004/06/07 21:56:56 agriffis Exp $
 
 S=${WORKDIR}/povray31
 DESCRIPTION="The Persistance Of Vision Ray Tracer"
@@ -53,7 +53,7 @@ src_compile() {
 
 	echo "s/^CFLAGS =/CFLAGS = -ansi -c/" >> makefile.sed
 
-	if [ "`use icc`" ]; then
+	if use icc; then
 		# ICC CFLAGS
 		echo "s/gcc/icc/" >> makefile.sed
 
@@ -70,7 +70,7 @@ src_compile() {
 		# This is optimized for Pentium 4 (untested, I don't own one):
 		#echo "s/^CFLAGS =/CFLAGS = -O3 -xW -ip -tpp7 /" >> makefile.sed
 
-		if [ "`use icc-pgo`" ]; then
+		if use icc-pgo; then
 			IPD=${BUILDDIR}/icc-pgo
 			echo "s:^CFLAGS =:CFLAGS = -prof_dir ${IPD} :" >> makefile.sed
 			if [ ! -d "${IPD}" ]; then
@@ -93,11 +93,11 @@ src_compile() {
 	einfo Building povray
 	emake newunix || die
 
-	if [ "`use X`" ] ; then
+	if use X ; then
 		einfo Building x-povray
 		emake newxwin || die
 	fi
-	if [ "`use svga`" ] ; then
+	if use svga ; then
 		einfo Building s-povray
 		make newsvga || die
 	fi

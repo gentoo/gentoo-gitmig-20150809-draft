@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gnuplot
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.22 2004/05/05 09:25:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.23 2004/06/07 21:55:46 agriffis Exp $
+
+  07 Jun 2004; Aron Griffis <agriffis@gentoo.org> gnuplot-3.8j-r1.ebuild,
+  gnuplot-3.8j.ebuild, gnuplot-4.0.ebuild:
+  Fix use invocation
 
   05 May 2004; Patrick Kursawe <phosphan@gentoo.org> gnuplot-4.0.ebuild,
   files/header-order.patch:
