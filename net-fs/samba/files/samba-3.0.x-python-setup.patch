@@ -1,29 +1,41 @@
---- source/python/setup.py	2004-04-04 09:37:15.000000000 +0200
-+++ source/python/setup.py.new	2004-05-09 12:38:43.196926688 +0200
-@@ -50,16 +50,25 @@
+--- source/python/setup.py	2004-10-25 23:04:52.000000000 +0200
++++ source/python/setup.py.new	2004-11-13 08:41:26.601337672 +0100
+@@ -50,16 +50,36 @@
  libraries = []
  library_dirs = []
  
 +next_is_path = 0
++next_is_flag = 0
  for lib in string.split(samba_libs):
 -    if lib[0:2] == "-l":
 +    if next_is_path <> 0:
-+       library_dirs.append(lib);
-+       next_is_path = 0;
++	library_dirs.append(lib);
++	next_is_path = 0;
++	continue
++    elif next_is_flag <> 0:
++       next_is_flag = 0;
 +       continue
-+    if lib == "-Wl,-rpath":
++    elif lib == "-Wl,-rpath":
 +       next_is_path = 1;
 +       continue
 +    elif lib[0:2] == "-l":
          libraries.append(lib[2:])
          continue
 -    if lib[0:2] == "-L":
+-        library_dirs.append(lib[2:])
 +    elif lib[0:2] == "-L":
-         library_dirs.append(lib[2:])
++	library_dirs.append(lib[2:])
++	continue
++    elif lib[0:2] == "-W":
++	# Skip linker flags
++	continue
++    elif lib[0:2] == "-s":
++        # Skip linker flags
          continue
 -    if lib[0:2] == "-W":
-+    elif lib[0:2] == "-W":
++    elif lib[0:2] == "-z":
          # Skip linker flags
++        next_is_flag = 1;
          continue
 +
      print "Unknown entry '%s' in $LIBS variable passed to setup.py" % lib
