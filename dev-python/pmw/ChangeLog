@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pmw
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.6 2003/02/12 06:33:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.7 2003/04/28 20:03:28 liquidx Exp $
+
+  28 Apr 2003; Alastair Tse <liquidx@gentoo.org> pmw-1.1.ebuild:
+  be verbose about missing tk
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
