@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.6 2002/08/01 17:11:12 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.7 2002/08/16 01:41:47 murphy Exp $
 
 . /usr/portage/eclass/inherit.eclass
 inherit java
@@ -18,10 +18,10 @@ case `system_arch` in
 		MY_P="j2re-1.3.1-FCS-linux-i386.tar.bz2"
 		;;
 
-	sparc)
-		;;
-
-	sparc64)
+	sparc|sparc64)
+		PLATFORM="sparc"
+		FCS="FCS-02b"
+		MY_P="j2re-1.3.1-02b-FCS-linux-sparc.bin"
 		;;
 esac
 
@@ -37,12 +37,15 @@ PROVIDE="virtual/jre-1.3
 	virtual/java-scheme-2"
 SLOT="0"
 LICENSE="sun-bcla"
-KEYWORDS="x86 ppc -sparc -sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack () {
 	if [ $PLATFORM = "ppc" ]; then
 		tail +422 ${DISTDIR}/${MY_P} > j2re-1.3.1-ppc.tar.bz2
 		tar -xjf j2re-1.3.1-ppc.tar.bz2
+	elif [ $PLATFORM = "sparc" ]; then
+		tail +422 ${DISTDIR}/${MY_P} > j2re-1.3.1-sparc.tar.bz2
+		tar -xjf j2re-1.3.1-sparc.tar.bz2
 	else
 		unpack ${MY_P}
 	fi
