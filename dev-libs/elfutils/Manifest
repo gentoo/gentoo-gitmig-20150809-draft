@@ -4,9 +4,9 @@ MD5 6cbd1797e98b78a920f6c33f1f2f3d57 files/digest-elfutils-0.76 65
 MD5 6cbd1797e98b78a920f6c33f1f2f3d57 files/digest-elfutils-0.76-r1 65
 MD5 6cbd1797e98b78a920f6c33f1f2f3d57 files/digest-elfutils-0.76-r2 65
 MD5 6cf1b4c89c8668b6f6ac5713b8b496c7 files/elfutils-0.76-hidden.diff 789
-MD5 80693c73d37ba4a03bc9d30194bd23c7 elfutils-0.72.ebuild 963
-MD5 ead62149bda908303979625c49247974 elfutils-0.73.ebuild 963
+MD5 5a3ada30731370639676305792968b7b elfutils-0.72.ebuild 960
+MD5 5d9fde09514f443f04fb7f8ea599a451 elfutils-0.73.ebuild 960
 MD5 c95c6800ae5545e52f6845739131f6cd ChangeLog 1790
 MD5 221ffb37f5e6c385358719a3f6764d63 elfutils-0.76.ebuild 1190
 MD5 885eae2d29d9e49c2cc205a0112926e9 elfutils-0.76-r1.ebuild 1220
-MD5 ae003597ec8a74b7787b9029c9f8f669 elfutils-0.76-r2.ebuild 1271
+MD5 bfb858774d9e650aa1d140e7e6b577c5 elfutils-0.76-r2.ebuild 1268
