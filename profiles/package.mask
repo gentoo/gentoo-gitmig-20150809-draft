@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3724 2005/03/13 19:03:02 kloeri Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3725 2005/03/13 20:42:04 solar Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1137,7 +1137,7 @@ games-fps/aaut
 media-plugins/rmxmms
 media-plugins/realvideo-codecs
 
-# <solar@gentoo.org> (06 Feb 2004)
+# <solar@gentoo> (06 Feb 2004)
 # RealOne/RealPlayer 8 vulnerabilities bug #40469
 media-video/realplayer
 media-video/realone
@@ -1162,7 +1162,7 @@ media-video/realone
 # blocked for testing
 =mail-mta/qmail-ldap-1.03-r3
 
-# <solar@gentoo.org> (Jan 11 2004)
+# <solar@gentoo> (Jan 11 2004)
 # multiple vulnerabilities discovered in zebra.
 net-misc/zebra
 
