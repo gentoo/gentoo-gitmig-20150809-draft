@@ -1,0 +1,10 @@
+--- units.dat	2004-10-19 09:37:24.802027245 +0200
++++ units.dat.new	2004-10-19 09:37:19.665715964 +0200
+@@ -1380,6 +1380,7 @@
+                                         #   actual mean distance is slightly
+                                         #   larger because the earth's mass is
+                                         #   not negligible.  
++au			1 astronomicalunit
+ sundist                 1.0000010178 au # mean earth-sun distance
+ moondist                3.844e8 m       # mean earth-moon distance
+ sundist_near            1.471e11 m      # earth-sun distance at perihelion
