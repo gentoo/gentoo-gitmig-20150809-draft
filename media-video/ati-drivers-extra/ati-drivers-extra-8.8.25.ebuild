@@ -1,24 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-3.7.6.ebuild,v 1.8 2005/01/04 20:54:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-8.8.25.ebuild,v 1.1 2005/01/18 22:16:33 lu_zero Exp $
 
 IUSE="qt"
 
-inherit eutils rpm
+inherit eutils rpm linux-info
 
 DESCRIPTION="Ati precompiled drivers extra application"
 HOMEPAGE="http://www.ati.com"
-SRC_URI="http://www2.ati.com/drivers/linux/fglrx-4.3.0-${PV}.i386.rpm"
-SLOT="${KV}"
+SRC_URI="x86? ( http://www2.ati.com/drivers/linux/fglrx_6_8_0-${PV}-1.i386.rpm )
+		amd64?
+		( http://www2.ati.com/drivers/linux/fglrx64_6_8_0-${PV}-1.x86_64.rpm )"
+
 LICENSE="ATI GPL-2 QPL-1.0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~x86"  # ~amd64" yet to be fixed
 
-DEPEND=">=virtual/linux-sources-2.4
-	app-arch/rpm2targz
-	=media-video/ati-drivers-${PV}*
-	qt? ( >=x11-libs/qt-3.0 )"
-
-RDEPEND="=media-video/ati-drivers-${PV}*
+DEPEND="=media-video/ati-drivers-${PV}*
 	qt? ( >=x11-libs/qt-3.0 )"
 
 ATIBIN="${D}/opt/ati/bin"
@@ -44,13 +41,12 @@ src_unpack() {
 	tar --no-same-owner -C ${WORKDIR}/extra/fglrx_panel/ -zxf \
 		${WORKDIR}/usr/src/ATI/fglrx_panel_sources.tgz \
 		|| die "Failed to unpack fglrx_panel_sources.tgz!"
+	cd ${WORKDIR}/extra/fglrx_panel
+#	epatch ${FILESDIR}/${P}-improvements.patch.bz2
 	sed -e "s:"${OLDBIN}":"${ATIBIN}":"\
 		-i ${WORKDIR}/extra/fglrx_panel/Makefile
 
-	# Messed up fglrx_panel headers
-	cd ${WORKDIR}/extra/fglrx_panel
-	epatch ${FILESDIR}/fglrx-3.7.0-fix-fglrx_panel-includes.patch
-}
+	}
 
 src_compile() {
 	einfo "Building the fgl_glxgears sample..."
@@ -80,16 +76,17 @@ src_install() {
 	then
 		doexe ${WORKDIR}/extra/fglrx_panel/fireglcontrol
 
-		# Fix the paths in these
-		sed -e 's|/usr/X11R6/|/opt/ati/|g' \
-			-i ${WORKDIR}/usr/share/applnk/fireglcontrol.kdelnk \
-			-i ${WORKDIR}/usr/share/gnome/apps/fireglcontrol.desktop
+		insinto /usr/share/applications/
+		doins ${FILESDIR}/fireglcontrol.desktop
+
+		insinto /usr/share/pixmaps/
+		doins ${WORKDIR}/extra/fglrx_panel/ati.xpm
 	else
 		# Removing unused stuff
 		rm -rf ${WORKDIR}/usr/share/{applnk,gnome,icons,pixmaps}
 	fi
 
-	dodoc ${WORKDIR}/usr/share/doc/fglrx/LICENSE.*
+	# not necessary dodoc ${WORKDIR}/usr/share/doc/fglrx/LICENSE.*
 
 	# Removing unused stuff
 	rm -rf ${WORKDIR}/usr/{src,share/doc}
