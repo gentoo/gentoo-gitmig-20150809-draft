@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.4.ebuild,v 1.1 2004/12/28 22:57:03 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.4.ebuild,v 1.2 2004/12/29 01:04:28 ribosome Exp $
 
 DESCRIPTION="open geographical datastore interface"
 HOMEPAGE="http://ogdi.sourceforge.net"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~hppa ~alpha ~amd64 ~ppc ~ppc64"
 IUSE=""
 
-DEPEND="dev-libs/proj
+DEPEND="sci-libs/proj
 	sys-libs/zlib
 	dev-libs/expat"
 
