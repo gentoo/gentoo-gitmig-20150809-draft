@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.28 2005/01/14 02:51:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.29 2005/01/14 13:35:23 eradicator Exp $
 
 inherit eutils multilib flag-o-matic gcc versionator
 
@@ -53,7 +53,7 @@ LICENSE="LGPL-2"
 #-sparc: Compiled fine with 3.4.1-r1, but tar would consistantly bus error when untarring the
 #        samba-1.0.9 tarball.
 KEYWORDS="~amd64 ppc64 -hppa ~ia64 ~ppc ~x86 ~mips -sparc"
-IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales nomalloccheck emul-linux-x86"
+IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales nomalloccheck"
 RESTRICT="nostrip multilib-pkg-force" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
@@ -70,7 +70,7 @@ RDEPEND="virtual/os-headers
 	sys-apps/baselayout
 	nls? ( sys-devel/gettext )"
 # until we compile the 32bit glibc here
-PDEPEND="emul-linux-x86? ( multilib? ( app-emulation/emul-linux-x86-glibc ) )"
+PDEPEND="amd64? ( multilib? ( app-emulation/emul-linux-x86-glibc ) )"
 
 PROVIDE="virtual/glibc virtual/libc"
 
