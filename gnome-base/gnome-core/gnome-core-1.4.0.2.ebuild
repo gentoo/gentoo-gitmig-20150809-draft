@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.1.ebuild,v 1.3 2001/04/28 02:42:45 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.2.ebuild,v 1.1 2001/04/30 19:34:26 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -22,12 +22,12 @@ DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.13
 	>=sys-devel/automake-1.4"
 
-src_unpack() {
-  unpack ${A}
-  cd ${S}
-  patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
-  try NOCONFIGURE=yes srcdir=${S} bash macros/autogen.sh
-}
+#src_unpack() {
+#  unpack ${A}
+#  cd ${S}
+#  patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
+#  try NOCONFIGURE=yes srcdir=${S} bash macros/autogen.sh
+#}
 
 src_compile() {                           
   local myconf
