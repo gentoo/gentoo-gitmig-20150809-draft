@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.14 2003/03/25 21:12:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.15 2003/04/21 10:17:21 seemant Exp $
 
   24 Mar 2003; Martin Schlemmer <azarah@gentoo.org> xfree-drm-4.3.0.ebuild :
   Update to rather use the "more official" DRM sources from
@@ -17,6 +17,11 @@
   rev bump to match current xfree
 
 *xfree-drm-4.3.0 (28 Feb 2003)
+
+  21 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
+  xfree-drm-4.3.0.ebuild:
+  changed to stable x86. Awaiting leachim's -r2 which combines x86 and ppc (and
+  others?)
 
   25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> xfree-drm-4.3.0.ebuild:
   changed ibm USE to i8x0 USE which is more accurate. Thanks to: Marcin Wisnicki
