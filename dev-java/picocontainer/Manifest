@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 765b89b8104bbc25c62c77b11993313e picocontainer-1.0_beta4.ebuild 1176
-MD5 94c49456a56905e822aedfeb2ae6f0bc ChangeLog 1024
+MD5 298e32df49387c3682a6b9d529aef791 ChangeLog 1125
 MD5 bebc5edd0414aba81a45ce457cd9d4f3 metadata.xml 553
-MD5 97ebd02972a71839f46ad4e434c2a4be picocontainer-1.0_beta3.ebuild 1166
+MD5 2c852213edc5a9bce066c002b38d9fda picocontainer-1.0_beta3.ebuild 1162
 MD5 adc69399f0b305739a9e45e3372d2380 files/digest-picocontainer-1.0_beta3 79
 MD5 c2b76bdb1d4fad1a042d5c415bec441b files/digest-picocontainer-1.0_beta4 79
 MD5 a8864951b56c2a4abc07e4cb8a4067f2 files/build-1.0_beta3.xml 6500
 MD5 a8864951b56c2a4abc07e4cb8a4067f2 files/build-1.0_beta4.xml 6500
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBQ27h/rLF9B432nYRAiS5AJ491PozGkNB2sES8nRh+/Tl8+7DqgCfe4hl
+ufuHCqE/azRXU31kZnihhbs=
+=oH4U
+-----END PGP SIGNATURE-----

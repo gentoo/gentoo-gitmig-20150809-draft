@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/picocontainer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/ChangeLog,v 1.6 2004/06/24 22:40:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/ChangeLog,v 1.7 2004/09/11 21:32:04 axxo Exp $
+
+  11 Sep 2004; Thomas Matthijs <axxo@gentoo.org>
+  picocontainer-1.0_beta3.ebuild:
+  changed dependency
 
   04 May 2004; David Holm <dholm@gentoo.org> picocontainer-1.0_beta4.ebuild:
   Added to ~ppc.
