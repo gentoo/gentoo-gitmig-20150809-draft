@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901.ebuild,v 1.3 2002/09/05 15:16:35 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901.ebuild,v 1.4 2002/09/05 21:15:03 satai Exp $
 
 TEXMFSRC="teTeX-texmfsrc-beta-20020829.tar.gz"
 TEXMF="teTeX-texmf-beta-20020901.tar.gz"
@@ -62,7 +62,7 @@ src_compile() {
 		&& myconf="${myconf} --with-system-pnglib"
 
 	
-	use ncurse \
+	use ncurses \
 		&& myconf="${myconf} --with-system-ncurses"
 
 	
