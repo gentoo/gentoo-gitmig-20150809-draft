@@ -1,21 +1,31 @@
-MD5 57cf02a9fcbdaa0d378550db4753e46c glib-2.4.6.ebuild 1368
-MD5 ffbee93d9d757b110286ffdb8de3715a glib-2.4.8.ebuild 1369
-MD5 e3543194b7abbc688bdc628d195248a4 glib-2.4.5.ebuild 1363
-MD5 fdbd1ad8f94ffb6c68cfc0b20b121fb9 glib-2.6.1.ebuild 1388
-MD5 8de834dfc52af854cef264bb49454375 glib-2.4.7.ebuild 1372
-MD5 6901ecf48140dd3c71b25f2ad85e0691 glib-2.4.2.ebuild 1042
-MD5 40d3f42487f32d8337dfbab13fa4ecf4 glib-2.4.4.ebuild 1381
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a46c7eb068b9c905b303e0a03525a17d ChangeLog 14550
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 6d72b939f34651614d45bc501ae4d3ff glib-2.6.0.ebuild 1387
 MD5 38cbcae8435ce706e48ebcc0819014dd glib-1.2.10-r5.ebuild 1494
+MD5 6901ecf48140dd3c71b25f2ad85e0691 glib-2.4.2.ebuild 1042
+MD5 57cf02a9fcbdaa0d378550db4753e46c glib-2.4.6.ebuild 1368
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 40d3f42487f32d8337dfbab13fa4ecf4 glib-2.4.4.ebuild 1381
+MD5 e3543194b7abbc688bdc628d195248a4 glib-2.4.5.ebuild 1363
+MD5 8de834dfc52af854cef264bb49454375 glib-2.4.7.ebuild 1372
+MD5 65f379f8e8ff6f4cd919cebaaca30e5b glib-2.4.8.ebuild 1366
+MD5 6d72b939f34651614d45bc501ae4d3ff glib-2.6.0.ebuild 1387
+MD5 fdbd1ad8f94ffb6c68cfc0b20b121fb9 glib-2.6.1.ebuild 1388
+MD5 0b6b97a59b4b0e1acc433697ce022a3c files/digest-glib-1.2.10-r5 63
 MD5 bb11efe8c19407a4742056f67df25dd7 files/digest-glib-2.4.2 64
 MD5 524c2c1cfb5ab43d0b402cefb8da4a9a files/digest-glib-2.4.4 64
-MD5 4f50760a1f3a23a715d8c07ff936bcf6 files/digest-glib-2.4.5 64
 MD5 560ff41071c92560f9de1990dcdde70f files/digest-glib-2.4.6 64
+MD5 2657ca6d0c857b4e97ad93525212ffa1 files/glib-1.2.10-gcc34-fix.patch 2008
+MD5 4f50760a1f3a23a715d8c07ff936bcf6 files/digest-glib-2.4.5 64
 MD5 c2049695996219f5b8c81ad1b89f40f0 files/digest-glib-2.4.7 64
 MD5 394ed1e8214a881afbed68f0fa2546c9 files/digest-glib-2.4.8 64
 MD5 c5265ab52225b51ac7feb1d75bbf4266 files/digest-glib-2.6.0 64
 MD5 9a002ab796c6ae648f61aa78d2987450 files/digest-glib-2.6.1 64
-MD5 2657ca6d0c857b4e97ad93525212ffa1 files/glib-1.2.10-gcc34-fix.patch 2008
-MD5 0b6b97a59b4b0e1acc433697ce022a3c files/digest-glib-1.2.10-r5 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB8f2croRuSHgZdywRAqD6AJ49cISFc9yHi+RtlL64HI5YLh6DXACfeKEV
+aYVcWGavigYk1nt3v4kxo4w=
+=d3Ej
+-----END PGP SIGNATURE-----
