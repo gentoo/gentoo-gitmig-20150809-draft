@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shapelib/shapelib-1.2.10.ebuild,v 1.2 2003/09/08 07:19:26 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shapelib/shapelib-1.2.10.ebuild,v 1.3 2003/11/23 22:13:47 nerdboy Exp $
 
 inherit base eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gdal.velocet.ca/projects/shapelib/"
 SRC_URI="ftp://gdal.velocet.ca/pub/outgoing//${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/glibc"
