@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.85 2003/09/29 22:51:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.86 2003/10/08 02:42:37 agriffis Exp $
+
+  07 Oct 2003; Aron Griffis <agriffis@gentoo.org> glibc-2.3.2-r1.ebuild:
+  Demote 2.3.2-r1 from alpha to ~alpha since it doesn't build on alpha with
+  recent gcc. We really need the more recent glibc to become available for
+  alpha.
 
   30 Sep 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r6.ebuild,
   files/2.3.2/sysmacros.h:
