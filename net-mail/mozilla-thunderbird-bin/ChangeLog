@@ -1,0 +1,12 @@
+# ChangeLog for net-mail/mozilla-thunderbird-bin
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird-bin/ChangeLog,v 1.1 2003/12/06 17:06:25 brad Exp $
+
+*mozilla-thunderbird-bin-0.4 (06 Dec 2003)
+
+  06 Dec 2003; Brad Laue <brad@gentoo.org> metadata.xml,
+  mozilla-thunderbird-bin-0.4.ebuild, files/MozillaThunderbird,
+  files/thunderbird-0.3-antialiasing-patch,
+  files/icon/mozillathunderbird.desktop, files/icon/thunderbird-icon.png:
+  Import of mozilla-thunderbird-bin to the tree, starting with 0.4.
+
