@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.29 2003/04/28 05:51:20 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.30 2003/05/16 21:26:09 pylon Exp $
+
+*kde-3.1.1a (16 Mai 2003)
+
+  16 Mai 2003; Lars Weiler <pylon@gentoo.org> kde-3.1.1a.ebuild:
+  Set ppc in KEYWORDS
 
   28 Apr 2003; Lars Weiler <pylon@gentoo.org> kde-3.1.1.ebuild:
   Set ppc in KEYWORDS
