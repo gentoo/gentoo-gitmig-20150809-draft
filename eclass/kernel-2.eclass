@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.54 2004/11/26 09:55:44 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.55 2004/11/26 15:06:17 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -16,38 +16,46 @@
 # A Couple of env vars are available to effect usage of this eclass
 # These are as follows:
 #
-# K_NOSETEXTRAVERSION	- if this is set then EXTRAVERSION will not be automatically set within the kernel Makefile
-# K_NOUSENAME		- if this is set then EXTRAVERSION will not include the first part of ${PN} in EXTRAVERSION
-# K_PREPATCHED		- if the patchset is prepatched (ie: mm-sources, ck-sources, ac-sources) it will use PR (ie: -r5) as the patchset version for 
-#			- and not use it as a true package revision
-# K_EXTRAEINFO		- this is a new-line seperated list of einfo displays in postinst and can be used to carry additional postinst messages
-# K_EXTRAEWARN		- same as K_EXTRAEINFO except ewarn's instead of einfo's
+# K_NOSETEXTRAVERSION	- if this is set then EXTRAVERSION will not be
+#						  automatically set within the kernel Makefile
+# K_NOUSENAME			- if this is set then EXTRAVERSION will not include the
+#						  first part of ${PN} in EXTRAVERSION
+# K_PREPATCHED			- if the patchset is prepatched (ie: mm-sources, 
+#						  ck-sources, ac-sources) it will use PR (ie: -r5) as 
+#						  the patchset version for 
+#						- and not use it as a true package revision
+# K_EXTRAEINFO			- this is a new-line seperated list of einfo displays in
+#						  postinst and can be used to carry additional postinst 
+#						  messages
+# K_EXTRAEWARN			- same as K_EXTRAEINFO except ewarn's instead of einfo's
 
-# H_SUPPORTEDARCH	- this should be a space separated list of ARCH's which can be supported by the headers ebuild
+# H_SUPPORTEDARCH		- this should be a space separated list of ARCH's which
+#						  can be supported by the headers ebuild
 
-# UNIPATCH_LIST		- space delimetered list of patches to be applied to the kernel
-# UNIPATCH_EXCLUDE	- an addition var to support exlusion based completely on "<passedstring>*" and not "<passedno#>_*"
-#			- this should _NOT_ be used from the ebuild as this is reserved for end users passing excludes from the cli
-# UNIPATCH_DOCS		- space delimemeted list of docs to be installed to the doc dir
-# UNIPATCH_STRICTORDER	- if this is set places patches into directories of order, so they are applied in the order passed
+# UNIPATCH_LIST			- space delimetered list of patches to be applied to the
+#						  kernel
+# UNIPATCH_EXCLUDE		- an addition var to support exlusion based completely
+#						  on "<passedstring>*" and not "<passedno#>_*"
+#						- this should _NOT_ be used from the ebuild as this is 
+#						  reserved for end users passing excludes from the cli
+# UNIPATCH_DOCS			- space delimemeted list of docs to be installed to 
+#						  the doc dir
+# UNIPATCH_STRICTORDER	- if this is set places patches into directories of 
+#						  order, so they are applied in the order passed
 
 ECLASS="kernel-2"
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst
 
-# to prevent errors if theres no sources in /usr/src
-# we set KV and re-set it later on as well.
-[ -z "${KV}" ] && KV=${PV}
-
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
 IUSE="${IUSE} build doc"
-SLOT="${KV}"
+SLOT="${KV_FULL}"
 
-# Grab kernel version from KV
-KV_MAJOR=$(echo ${KV} | cut -d. -f1)
-KV_MINOR=$(echo ${KV} | cut -d. -f2)
-KV_PATCH=$(echo ${KV} | cut -d. -f3-)
+# Grab kernel version from KV_FULL
+KV_MAJOR=$(echo ${KV_FULL} | cut -d. -f1)
+KV_MINOR=$(echo ${KV_FULL} | cut -d. -f2)
+KV_PATCH=$(echo ${KV_FULL} | cut -d. -f3-)
 KV_PATCH=${KV_PATCH/[-_]*/}
 
 # set LINUX_HOSTCFLAGS if not already set
@@ -79,34 +87,36 @@ kernel_is() {
 }
 
 kernel_is_2_4() {
-	[ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 4 ] && return 0 || return 1
+	[  `kernel_is 2 4` ] && return 0 || return 1
 }
 
 kernel_is_2_6() {
-	[ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 5 -o ${KV_MINOR} -eq 6 ] && return 0 || return 1
+	[ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 5 -o ${KV_MINOR} -eq 6 ] && \
+		return 0 || return 1
 }
 
 # Capture the sources type and set DEPENDs
 if [ "${ETYPE}" == "sources" ]
 then
-	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
+	# binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
-		>=sys-devel/binutils-2.11.90.0.31 )
-		doc? ( !arm? ( !s390? ( app-text/docbook-sgml-utils ) ) )"
+			>=sys-devel/binutils-2.11.90.0.31 )
+			doc? ( !arm? ( !s390? ( app-text/docbook-sgml-utils ) ) )"
 
 	RDEPEND="${DEPEND}
-		 !build? ( >=sys-libs/ncurses-5.2
-		dev-lang/perl
-		sys-apps/module-init-tools
-		sys-devel/make )"
+		 	 !build? ( >=sys-libs/ncurses-5.2
+			 dev-lang/perl
+			 sys-apps/module-init-tools
+			 sys-devel/make )"
 		
-	[ $(kernel_is_2_4) $? == 0 ] && PROVIDE="virtual/linux-sources" || PROVIDE="virtual/linux-sources virtual/alsa"
+	[ $(kernel_is_2_4) $? == 0 ] && PROVIDE="virtual/linux-sources" \
+		|| PROVIDE="virtual/linux-sources virtual/alsa"
 
 elif [ "${ETYPE}" == "headers" ]
 then
 	PROVIDE="virtual/kernel virtual/os-headers"
 else
-	eerror "Unknown ETYPE=\"${ETYPE}\", must be either \"sources\" or \"headers\""
+	eerror "Unknown ETYPE=\"${ETYPE}\", must be \"sources\" or \"headers\""
 	die
 fi
 
@@ -126,18 +136,16 @@ universal_unpack() {
 
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
-	if [ "${OKV}" != "${KV}" ]
+	if [ "${OKV}" != "${KV_FULL}" ]
 	then
-		mv linux-${OKV} linux-${KV} || die "Unable to move source tree to ${KV}."
+		mv linux-${OKV} linux-${KV_FULL} \
+			|| die "Unable to move source tree to ${KV_FULL}."
 	fi
 	cd ${S}
 	
 	# change incorrect install path
-	mv Makefile Makefile.orig
-	sed	-e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
-		Makefile.orig > Makefile
-	rm Makefile.orig
-
+	sed	-ie 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' Makefile
+		
 	# remove all backup files
 	find . -iname "*~" -exec rm {} \; 2> /dev/null
 
@@ -151,12 +159,8 @@ universal_unpack() {
 }
 
 unpack_set_extraversion() {
-	# Gentoo Linux uses /boot, so fix 'make install' to work properly and fix EXTRAVERSION
 	cd ${S}
-	mv Makefile Makefile.orig
-	sed	-e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" \
-		Makefile.orig > Makefile
-	rm Makefile.orig
+	sed -ie "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" Makefile
 }
 
 # Compile Functions
@@ -259,10 +263,10 @@ install_manpages() {
 	ebegin "Installing manpages"
 	MY_ARCH=${ARCH}
 	unset ARCH
-	sed -i -e "s#/usr/local/man#${D}/usr/man#g" scripts/makeman
+	sed -ie "s#/usr/local/man#${D}/usr/man#g" scripts/makeman
 	make installmandocs
 	eend $?
-	sed -i -e "s#${D}/usr/man#/usr/local/man#g" scripts/makeman
+	sed -ie "s#${D}/usr/man#/usr/local/man#g" scripts/makeman
 	ARCH=${MY_ARCH}
 }
 
@@ -278,7 +282,7 @@ preinst_headers() {
 postinst_sources() {
 	if [ ! -h ${ROOT}usr/src/linux ]
 	then
-		ln -sf ${ROOT}usr/src/linux-${KV} ${ROOT}usr/src/linux
+		ln -sf ${ROOT}usr/src/linux-${KV_FULL} ${ROOT}usr/src/linux
 	fi
 
 	# Don't forget to make directory for sysfs
@@ -306,7 +310,8 @@ postinst_sources() {
 	fi
 
 	# Show policy version, if this kernel has SELinux ...
-	local secfile="${ROOT}usr/src/linux-${KV}/security/selinux/include/security.h"
+	local secfile
+	secfile="${ROOT}usr/src/linux-${KV_FULL}/security/selinux/include/security.h"
 	if use selinux && [ -f "$secfile" ]
 	then
 		local polver=$(awk '/POLICYDB_VERSION /{print $3}' $secfile)
@@ -341,7 +346,8 @@ postinst_headers() {
 # pkg_setup functions
 #==============================================================
 setup_headers() {
-	ARCH=$(uname -m | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/)
+	ARCH=$(uname -m | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ \
+	-e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/)
 	[ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH="sparc64"
 	
 	[ -z "${H_SUPPORTEDARCH}" ] && H_SUPPORTEDARCH="${PN/-*/}"
@@ -475,15 +481,12 @@ unipatch() {
 	UNIPATCH_DROP="${UNIPATCH_EXCLUDE} ${UNIPATCH_DROP}"
 	for i in ${UNIPATCH_DROP}
 	do
+		ebegin "Excluding Patch #${i}"
 		for x in ${KPATCH_DIR}
 		do
 			rm -f ${x}/${i}* 2>/dev/null
-			if [ $? == 0 ]
-			then
-				einfo "Excluding Patch #${i}"
-				einfo "From: ${x/${WORKDIR}/}"
-			fi
 		done
+		eend $?
 	done
 
 	# and now, finally, we patch it :)
@@ -552,6 +555,16 @@ detect_version() {
 	# - KV: Kernel Version (2.6.0-gentoo/2.6.0-test11-gentoo-r1)
 	# - EXTRAVERSION: The additional version appended to OKV (-gentoo/-gentoo-r1)
 	
+	if [ -n "${KV_FULL}" ] ;
+	then
+		# we will set this for backwards compatibility.
+		KV=${KV_FULL}
+		
+		# we know KV_FULL so lets stop here. but not without resetting S
+		S=${WORKDIR}/linux-${KV_FULL}
+		return
+	fi
+	
 	OKV=${PV/_beta/-test}
 	OKV=${OKV/_rc/-rc}
 	OKV=${OKV/_pre*/}
@@ -574,7 +587,6 @@ detect_version() {
 	RELEASE=${RELEASE/_pre/-bk}
 	fi
 	RELEASETYPE=${RELEASE//[0-9]/}
-	
 	EXTRAVERSION="${RELEASE}"
 	
 	if [ -n "${K_PREPATCHED}" ]
@@ -582,10 +594,10 @@ detect_version() {
 		EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}${PR/r/}"
 	else
 		[ -z "${K_NOUSENAME}" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}"
-		[ "${PR}" != "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+		[ "${PR}" != "r0" ] 	&& EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	fi
 	
-	KV=${OKV}${EXTRAVERSION}
+	KV_FULL=${OKV}${EXTRAVERSION}
 	
 	# -rcXX-bkXX pulls are *IMPOSSIBLE* to support within the portage naming convention
 	# these cannot be supported, but the code here can handle it up until this point
@@ -597,7 +609,7 @@ detect_version() {
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${PV//_/-}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${PV//_/-}.bz2"
-		KV=${PV/[-_]*/}${EXTRAVERSION}
+		KV_FULL=${PV/[-_]*/}${EXTRAVERSION}
 	fi
 	
 	if [ "${RELEASETYPE}" == "-bk" ]
@@ -606,7 +618,7 @@ detect_version() {
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
-		KV=${PV/[-_]*/}${EXTRAVERSION}
+		KV_FULL=${PV/[-_]*/}${EXTRAVERSION}
 	fi
 	
 	if [ "${RELEASETYPE}" == "-rc-bk" ]
@@ -617,10 +629,12 @@ detect_version() {
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
-		KV=${PV/[-_]*/}${EXTRAVERSION}
+		KV_FULL=${PV/[-_]*/}${EXTRAVERSION}
 	fi
 	
-	S=${WORKDIR}/linux-${KV}
+	S=${WORKDIR}/linux-${KV_FULL}
+	# we will set this for backwards compatibility.
+	KV=${KV_FULL}
 }
 
 detect_arch() {
@@ -646,7 +660,8 @@ detect_arch() {
 		COMPAT_URI="${LOOP_ARCH}_URI"
 		COMPAT_URI="${!COMPAT_URI}"
 		
-		[ -n "${COMPAT_URI}" ] && ARCH_URI="${ARCH_URI} $(echo ${LOOP_ARCH} | tr '[:upper:]' '[:lower:]')? ( ${COMPAT_URI} )"
+		[ -n "${COMPAT_URI}" ] && \
+			ARCH_URI="${ARCH_URI} $(echo ${LOOP_ARCH} | tr '[:upper:]' '[:lower:]')? ( ${COMPAT_URI} )"
 		
 		if [ "${LOOP_ARCH}" == "$(echo ${ARCH} | tr '[:lower:]' '[:upper:]')" ]
 		then
@@ -670,7 +685,8 @@ kernel-2_src_unpack() {
 
 kernel-2_src_compile() {
 	[ "${ETYPE}" == "headers" ] && compile_headers
-	[ "${ETYPE}" == "sources" ] && use doc && ! use arm && ! use s390 && compile_manpages
+	[ "${ETYPE}" == "sources" ] && \
+		use doc && ! use arm && ! use s390 && compile_manpages
 }
 
 kernel-2_pkg_preinst() {
