@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/gtkterm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.6 2004/11/19 22:09:33 mrness Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.7 2005/02/28 22:56:30 astinus Exp $
+
+  28 Feb 2005; Alex Howells <astinus@gentoo.org> gtkterm-0.99.3.ebuild,
+  gtkterm-0.99.4.ebuild:
+  Adding keywords ~amd64 to both versions currently in the tree, as per the
+  request in bug 83388.
 
 *gtkterm-0.99.4 (20 Nov 2004)
 

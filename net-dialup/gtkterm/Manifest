@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 629443c84268b68a139f62cbb458c4c7 ChangeLog 812
-MD5 d5205ced86134105efea604b2e4bd4cd gtkterm-0.99.3.ebuild 625
+MD5 e85d0dad9d2e4e78043a31c951a753f6 ChangeLog 1011
+MD5 1f0e3145604ce193e1583b71105948cb gtkterm-0.99.3.ebuild 633
+MD5 9bb17af44e2bcfc98219d2de9f8565a7 gtkterm-0.99.4.ebuild 648
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 81f2292869aef34055ae50c13612be92 gtkterm-0.99.4.ebuild 640
 MD5 bbc54e5d94abd22c3d8f4ebbd336e6ae files/digest-gtkterm-0.99.3 66
 MD5 c8d58fdaa9be726aaf30d6c81001a041 files/digest-gtkterm-0.99.4 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBpDB2jtv59x0+BrURAs5bAJ9LZICxYWZFhtu1R/F81KvF0aByLgCg3mUg
-9LZPgp+OEeaX0CwRq0GDy3U=
-=mwW1
------END PGP SIGNATURE-----
