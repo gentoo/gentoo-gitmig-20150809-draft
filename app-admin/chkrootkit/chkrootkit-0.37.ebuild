@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.37.ebuild,v 1.14 2004/04/06 03:23:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.37.ebuild,v 1.15 2004/06/06 10:40:44 dragonheart Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.pangeia.com.br/pub/seg/pac/${P}.tar.gz"
 LICENSE="AMS"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
-
+IUSE=""
 DEPEND="virtual/glibc"
 
 src_unpack() {
