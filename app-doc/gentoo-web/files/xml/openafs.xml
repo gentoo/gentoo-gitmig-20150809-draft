@@ -1,0 +1,480 @@
+<?xml version='1.0'?>
+<guide>
+<title>Gentoo Linux OpenAFS Guide</title>
+<author title="Editor">
+  <mail link="darks@gentoo.org">Holger Brueckner</mail>
+</author>
+
+<abstract>
+This guide shows you how to install a openafs server and client on gentoo linux 
+</abstract>
+
+<version>0.1</version>
+<date>05 June 2001</date>
+
+<chapter>
+  <title>Overview</title>
+  <section>
+    <title>About this Document</title>
+    <body>
+      This document provides you with all neccessary steps to install an openafs server on Gento Linux.
+      Parts of this document are taken from the AFS FAQ and IBM's Quick Beginnings guide on AFS. Well, never reinvent
+      the weel :)
+    </body>
+  </section>
+  <section>
+    <title>What is AFS ?</title>
+    <body>
+    <p>
+    AFS is a distributed filesystem that enables co-operating hosts
+   (clients and servers) to efficiently share filesystem resources
+   across both local area and wide area networks.
+   </p>
+   <p>
+   AFS is based on a distributed file system originally developed
+   at the Information Technology Center at Carnegie-Mellon University
+   that was called the "Andrew File System". "Andrew" was the name of the research project at CMU - honouring the
+   founders of the University.  Once Transarc was formed and AFS became a
+   product, the "Andrew" was dropped to indicate that AFS had gone beyond
+   the Andrew research project and had become a supported, product quality
+   filesystem. However, there were a number of existing cells that rooted
+   their filesystem as /afs. At the time, changing the root of the filesystem
+   was a non-trivial undertaking. So, to save the early AFS sites from having
+   to rename their filesystem, AFS remained as the name and filesystem root.
+   </p> 
+   </body>
+  </section>  
+    <section>
+    <title>What is an AFS cell ?</title>
+    <body>
+    <p>An AFS cell is a collection of servers grouped together administratively
+    and presenting a single, cohesive filesystem.  Typically, an AFS cell is a set of hosts that use the same Internet domain name. 
+
+   Normally, a variation of the domain name is used as the AFS cell name.
+
+   Users log into AFS client workstations which request information and files
+   from the cell's servers on behalf of the users.
+   </p>
+    </body>
+  </section>  
+  <section>
+    <title>What are the benefits of using AFS ?</title>
+    <body>
+    <p>The main strengths of AFS are its:
+ 
+       caching facility,
+       security features,
+       simplicity of addressing,
+       scalability,
+       communications protocol. 
+    </p>
+    </body>
+  </section>  
+  <section>
+    <title>Where can i get more information ?</title>
+    <body>
+    <p>
+    Read the <uri link="http://www.angelfire.com/hi/plutonic/afs-faq.html">AFS FAQ</uri>.
+    </p>
+    <p>
+    Openafs main page is at <uri link="http://www.openafs.com">www.openafs.org</uri>.
+    </p>
+    <p>
+    AFS was originally developed by Transarc which is now owned by IBM.
+    You can find some information about AFS on
+    <uri link="http://www.transarc.ibm.com/Product/EFS/AFS/index.html">Transarcs Webpage</uri>
+    </p>
+    </body>
+  </section>  
+
+</chapter>
+
+<chapter>
+<title>Documentation</title>
+  <section>
+    <title>Getting AFS Documentation</title>
+    <body>
+    <p>
+    You can get the original IBM AFS Documentation. It is very well written and you really should 
+    read it if you want to administer a AFS Server.
+    </p>
+    <pre>
+    # <c>cd /usr/portage/app-doc/afsdoc/afsdoc-3.6-r1.ebuild</c>
+    # <c>emerge afsdoc-3.6-r1.ebuild</c>
+    </pre>
+    </body>   
+  </section>
+</chapter>
+
+<chapter>
+<title>Client Installation</title>
+   <section>
+     <title>Preliminary Work</title>
+     <body>
+       <note>
+         Unfortunately the AFS Client needs a ext2 partiton for it's cache to run correctly. You need to create a ext2
+	 partition of approx. 200MB and mount it to <path>/usr/vice/cache</path>
+       </note>
+       <p>
+       You should adjust the two files CellServDB ans ThisCell before you build the afs client.
+       </p>
+       <pre>
+       CellServDB:
+       >netlabs        #Cell name
+       10.0.0.1        #storage
+       
+       ThisCell:
+       netlabs       
+       </pre>
+       <p>
+       CellServDB tells your client which servers he needs to contact for a specific cell. 
+       ThisCell should be quite obvious.
+       </p>
+     </body>
+   </section>
+   <section>
+     <title>Building the Client</title>
+     <body>
+       <pre>
+       # <c>cd /usr/portage/net-fs/openafs</c>
+       # <c>emerge openafs-xxx.ebuild</c>
+       </pre>
+       <p>
+       After successfull compilation you're ready to go.
+       </p>
+     </body>
+   </section>
+   <section>
+     <title>Starting afs on startup</title>
+     <body>
+       <pre>
+       # <c>rc-update add afs</c>
+       Adding afs to runlevel 3 4
+       </pre>
+     </body>
+   </section>
+</chapter>
+
+<chapter>
+<title>Server Installation</title>
+   <section>
+     <title>Building the Server</title>
+     <body>
+       <p>
+       The follwing command will install all necessary binaries for settung up a AFS Server and Client
+       </p>
+       <pre>
+       # <c>cd /usr/portage/net-fs/openafs</c>
+       # <c>emerge openafs-xxx.ebuild</c>
+       </pre>
+     </body>
+   </section>
+  <section>
+    <title>Starting AFS Server</title>    
+    <body>
+      <p>
+      You need to remove the sample CellServDB and ThisCell file first.
+      </p>
+      <pre>
+      # <c>rm /usr/vice/etc/ThisCell</c>
+      # <c>rm /usr/vice/etc/CellServDB</c>
+      </pre>
+      <p>
+      Next you will issue the <b>bosserver</b> command to initialize the Basic OverSeer (BOS) Server,
+      which monitors and controls other AFS server processe on its server machine. Include the <b>-noauth</b>
+      flag to disable authorization checking.
+      </p>
+      <p>
+      <warn>
+      Disabling authorization checking gravely compromises cell security. You must complete all subsequent steps
+      in one uninterrupted pass and must not leave the machine unattended until you restart the BOS Server with
+      authorization checking enabled.
+      </warn>
+      </p>
+      <pre>
+      # <c>/usr/afs/bin/bosserver -noauth &amp;</c>
+      </pre>
+      <p>
+      Verify that the BOS Server created <path>/usr/vice/etc/CellServDB</path> and <path>/usr/vice/etc/ThisCell</path>
+      </p>
+      <pre>
+      # <c>ls -al /usr/vice/etc/</c>
+      -rw-r--r--    1 root     root           41 Jun  4 22:21 CellServDB
+      -rw-r--r--    1 root     root            7 Jun  4 22:21 ThisCell
+      </pre>
+      
+    </body>    
+  </section>
+  <section>
+    <title>Defining Cell Name and Membership for Server Process</title>
+    <body>
+      <p>
+      Now assign your cells name. 
+      </p>
+      <p>      
+      <impo>There are some restrictions on the name format. Two of the most important restrictions are that the name
+      cannot include uppercase letters or more than 64 characters</impo>
+      </p>
+      <p>
+      <note>In the following and every instruction in this guide, for the <i>server name</i> argument substitute the
+      full-qualified hostname (such as <b>afs.gentoo.org</b>) of the machine you are installing. For the <i>cell name</i>
+      argument substitute your cell's complete name (such as <b>gentoo</b>)</note>
+      </p>
+      <p>
+      Issue the <b>bos setcellname</b> command to set the cell name:
+      </p>
+      <pre>
+        # <c>/usr/afs/bin/bos setcellname server name cell name -noauth</c>
+      </pre>      
+    </body>
+  </section>
+  <section>
+    <title>Starting the Database Server Process</title>
+    <body><p>
+       Next use the <b>bos create</b> command to create entries for the four database server processes in the
+       <path>/usr/afs/local/BosConfig</path> file an start them running. The four processes run on database server
+       machines only.
+       </p>
+       <p>
+       <table>
+       <tr>
+         <ti>kaserver</ti>
+	 <ti>The Authentification Server maintains the Authentification Database</ti>
+       </tr>
+       <tr>
+         <ti>buserver</ti>
+	 <ti>The Backup Server maintains the Backup Database</ti>
+       </tr>
+       <tr>
+         <ti>ptserver</ti>
+	 <ti>The Protection Server maintains the Protection Database</ti>
+       </tr>
+       <tr>
+         <ti>vlserver</ti>
+	 <ti>The Volume Location Server maintains the Volume Location Databse (VLDB)</ti>
+       </tr>
+       </table>    
+       </p>
+       <pre>
+        # <c>/usr/afs/bin/bos create &lt;server name&gt; kaserver simple /usr/afs/bin/kaserver -cell &lt;cell name&gt; -noauth</c>
+	 # <c>/usr/afs/bin/bos create &lt;server name&gt; buserver simple /usr/afs/bin/buserver -cell &lt;cell name&gt; -noauth</c>
+	 # <c>/usr/afs/bin/bos create &lt;server name&gt; ptserver simple /usr/afs/bin/ptserver -cell &lt;cell name&gt; -noauth</c>
+	 # <c>/usr/afs/bin/bos create &lt;server name&gt; vlserver simple /usr/afs/bin/vlserver -cell &lt;cell name&gt; -noauth</c>
+       </pre>
+       <p>
+       You can verify that all servers are running with the <b>bos staus</b> command:
+       </p>
+       <pre>
+        # <c>/usr/afs/bin/bos status storage -noauth</c>
+        Instance kaserver, currently running normally.
+        Instance buserver, currently running normally.
+        Instance ptserver, currently running normally.
+        Instance vlserver, currently running normally.
+       </pre>
+       
+    </body>
+  </section>
+  <section>
+    <title>Initializing Cell Security</title>
+    <body>
+      <p>
+      Now initialize the cell's security mechanisms. Begin by creating the following two initial entries in the
+      Authentification Database: A generic administrative account, called <b>admin</b> by convention and an entry for
+      the AFS server processes, called <b>afs</b>. No user logs in unde the identity <b>afs</b>, but the Authentication
+      Server's Ticket Granting Service (TGS) module uses the associated key to encrypt the server tickets that it
+      grants to AFS clients.
+      </p>
+      <p>
+      Enter <b>kas</b> interactive mode
+      </p>
+      <pre>
+       # <c>/usr/afs/bin/kas -cell &lt;cell name&gt; -noauth</c>
+       ka&gt; <c>create afs</c>
+       initial_password:
+       Verifying, please re-enter initial_password:
+       ka&gt; <c>create admin</c>
+       initial_password:
+       Verifying, please re-enter initial_password:
+       ka&gt; <c>examine afs</c>
+ 
+       User data for afs
+         key (0) cksum is 2651715259, last cpw: Mon Jun  4 20:49:30 2001
+         password will never expire.
+         An unlimited number of unsuccessful authentications is permitted.
+         entry never expires.  Max ticket lifetime 100.00 hours.
+         last mod on Mon Jun  4 20:49:30 2001 by $lt;none&gt;
+         permit password reuse
+       ka&gt; <c>setfields admin -flags admin</c>
+       ka&gt; <c>examine admin</c>
+ 
+       User data for admin (ADMIN)
+         key (0) cksum is 2651715259, last cpw: Mon Jun  4 20:49:59 2001
+         password will never expire.
+         An unlimited number of unsuccessful authentications is permitted.
+         entry never expires.  Max ticket lifetime 25.00 hours.
+         last mod on Mon Jun  4 20:51:10 2001 by $lt;none&gt;
+         permit password reuse
+       ka&gt;
+      </pre>
+      <p>
+        Issue the <b>bos adduser</b> command, to add the <b>admin</b> user to the <path>/usr/afs/etc/UserList</path>.
+      </p>
+      <pre>
+        # <c>/usr/afs/bin/bos adduser &lt;server name&gt; admin -cell &lt;cell name&gt; -noauth</c>
+      </pre>
+      <p>
+        Issue the <b>bos addkey</b> command to define the AFS Server encryption key in <path>/usr/afs/etc/KeyFile</path>
+      </p>
+      <note>
+        If asked for the input key, provide the password you entered when creating the afs entry with <b>kas</b>
+      </note>
+      <pre>
+        # <c>/usr/afs/bin/bos addkey  &lt;server name&gt; -kvno 0 -cell &lt;cell name&gt; -noauth</c>
+            input key:
+            Retype input key:
+      </pre>
+      <p>
+        Issue the <b>pts createuser</b> command to create a Protection Databse entry for the admin user
+      </p>
+      <note>
+        By default, the Protection Server assigns AFS UID 1 to the <b>admin</b> user, because it is the first user
+	entry you are creating. If the local password file (/etc/passwd or equivalent) already has an entry for
+	<b>admin</b> that assigns a different UID use the <b>-id</b> argument to create matching UID's
+       </note>
+      <pre>
+        # <c>/usr/afs/bin/pts createuser -name admin -cell &lt;cell name&gt; [-id &lt;AFS UID&gt;] -noauth</c>
+      </pre>
+      <p>
+        Issue the <b>pts adduser</b> command to make the <b>admin</b> user a member of the system:administrators group,
+	and the <b>pts membership</b> command to verify the new membership>
+      </p>
+      <pre>
+       # <c>/usr/afs/bin/pts adduser admin system:administrators -cell &lt;cell name&gt; -noauth</c>
+	# <c>/usr/afs/bin/pts membership admin -cell &lt;cell name&gt; -noauth</c>
+             Groups admin (id: 1) is a member of:
+               system:administrators
+      </pre>
+      <p>
+        Restart all AFS Server processes
+      </p>
+      <pre>
+         # <c>/usr/afs/bin/bos restart &lt;server name&gt; -all -cell &lt;cell name&gt; -noauth</c>
+      </pre>
+    </body>
+  </section>
+  <section>
+    <title>Starting the File Server, Volume Server and Salvager</title>
+    <body>
+    <p>
+      Start the <b>fs</b> process, which consists of the File Server, Volume Server and Salavager (fileserver,
+      volserver and salvager processes).
+    </p>
+    <pre>
+      # <c>/usr/afs/bin/bos create &lt;server name&gt; fs fs /usr/afs/bin/fileserver /usr/afs/bin/volserver /usr/afs/bin/salvager -cell &lt;cell name&gt; -noauth</c>
+    </pre>
+    <p>
+    Verify that all processes are running
+    </p>
+    <pre>
+     # <c>/usr/afs/bin/bos status &lt;server name&gt; -long -noauth</c>
+     Instance kaserver, (type is simple) currently running normally.
+         Process last started at Mon Jun  4 21:07:17 2001 (2 proc starts)
+         Last exit at Mon Jun  4 21:07:17 2001
+         Command 1 is '/usr/afs/bin/kaserver'
+ 
+     Instance buserver, (type is simple) currently running normally.
+         Process last started at Mon Jun  4 21:07:17 2001 (2 proc starts)
+         Last exit at Mon Jun  4 21:07:17 2001
+         Command 1 is '/usr/afs/bin/buserver'
+ 
+     Instance ptserver, (type is simple) currently running normally.
+         Process last started at Mon Jun  4 21:07:17 2001 (2 proc starts)
+         Last exit at Mon Jun  4 21:07:17 2001
+         Command 1 is '/usr/afs/bin/ptserver'
+ 
+     Instance vlserver, (type is simple) currently running normally.
+         Process last started at Mon Jun  4 21:07:17 2001 (2 proc starts)
+         Last exit at Mon Jun  4 21:07:17 2001
+         Command 1 is '/usr/afs/bin/vlserver'
+ 
+     Instance fs, (type is fs) currently running normally.
+         Auxiliary status is: file server running.
+         Process last started at Mon Jun  4 21:09:30 2001 (2 proc starts)
+         Command 1 is '/usr/afs/bin/fileserver'
+         Command 2 is '/usr/afs/bin/volserver'
+         Command 3 is '/usr/afs/bin/salvager'
+    </pre>
+    <p>
+      Your next action depends on whether you have ever run AFS file server machines in the cell:
+    </p>
+    <p>
+      If you are installing the first AFS Server ever in the cell create the first AFS volumen, <b>root.afs</b>
+    </p>
+    <note>
+    For the partition name argument, substitute the name of one of the machine's AFS Server partitions. By convention
+    these partitions are named <path>/vicex</path>, where x is in the range of a-z.
+    </note>
+    <pre>
+      # <c>/usr/afs/bin/vos create &lt;server name&gt; &lt;partition name&gt; root.afs -cell &lt;cell name&gt; -noauth</c>
+    </pre>
+    <p>
+      If ther are existing AFS file server machines and volumes in the cell issue the <b>vos sncvldb</b> and <b>vos
+      syncserv</b> commands to synchronize the VLDB with the actual state of volumes on the local machine.
+    </p>
+    <pre>
+      # <c>/usr/afs/bin/vos syncvldb &lt;server name&gt; -cell &lt;cell name&gt; -verbose -noauth</c>
+      # <c>/usr/afs/bin/vos syncserv &lt;server name&gt; -cell &lt;cell name&gt; -verbose -noauth</c> 
+    </pre>
+    </body>
+  </section>
+  <section>
+    <title>Starting the Server Portion of the Update Server</title>
+    <body>
+      <pre>
+         # <c>/usr/afs/bin/bos create &lt;server name&gt; upserver simple "/usr/afs/bin/upserver -crypt /usr/afs/etc -clear /usr/afs/bin" -cell &lt;cell name&gt; -noauth</c>
+      </pre>
+    </body>
+  </section>
+  <section>
+    <title>Configuring the Top Level of the AFS filespace</title>
+    <body>
+      <p>
+        First you need to set some acl's, so that any user can lookup <path>/afs</path>.	
+      </p>
+      <pre>
+        # <c>/usr/afs/bin/fs setacl /afs system:anyuser rl</c>
+      </pre>
+      <p>
+       The you need to create the root volume, mount it readonly on <path>/afs/&lt;cell name&gt;</path> and read/write
+       on <path>/afs/.&lt;cell name&gt;</path>
+       <pre>
+         # <c>/usr/afs/bin/vos create &lt;server name&gt; &lt;partition name&gt; root.cell</c>
+         # <c>/usr/afs/bin/fs mkmount /afs/&lt;cell name&gt; root.cell </c>
+         # <c>/usr/afs/bin/fs setacl /afs/&lt;cell name&gt; system:anyuser rl</c>
+         # <c>/usr/afs/bin/fs mkmount /afs/.&lt;cell name&gt; root.cell -rw</c>     
+       </pre>
+      </p>
+      <p>
+        Finally you're done !!! You should now have a working AFS file server on your local network. Time to get a big
+	cup of coffee and print out the AFS documentation !!!
+      </p>
+      <note>
+        It is crucial for the AFS server to function properly, that all system clock's are synchronized. This is best
+	accomplished by installing a ntp server on one machine (e.g. the AFS server) and synchronize all client clock's
+	with the ntp client.
+      </note>
+    </body>
+  </section>
+  
+</chapter>
+
+<chapter>
+  <title>Basic Administration</title>
+  <section>
+  <title></title>
+  <body>
+    To be done ... For now read the AFS Documentation :)
+  </body>
+  </section>
+</chapter>
+</guide>

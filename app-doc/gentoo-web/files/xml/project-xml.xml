@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<guide type="project" link="/projects/xml.html">
+<title>XML projects page</title>
+<author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
+
+<abstract>
+This page contains information about the "guide" XML project, used for the
+Gentoo Linux documentation and Web site.
+</abstract>
+
+<version>1.0</version>
+<date>07 Jun 2001</date>
+
+<chapter>
+<title>Guide XML</title>
+
+<section>
+<body>
+
+<p>The Gentoo Linux team uses a special simple XML format called <c>guide
+XML</c> for all of its documentation and web pages.  If you're interested in
+learning more about this format, you may want to read the <e>A site reborn</e>
+series of <uri link="http://www.ibm.com/developerworks">IBM
+developerWorks</uri> articles, written by Daniel Robbins:</p>
+
+<ul>
+	<li>In <uri link="http://www-106.ibm.com/developerworks/usability/library/us-gentoo/index.html">Part 1</uri>, Daniel creates a user-centric action plan and introduces <c>pytext</c>, an embedded Python interpreter.</li>
+	<li>In <uri link="http://www-106.ibm.com/developerworks/usability/library/us-gent/">Part 2</uri>, Daniel shows off the new <c>guide XML</c> documentation system and sets up a daily CVS-log mailing list.</li>
+	<li>Part 3: Coming soon</li>
+	<li>Part 4: Coming soon</li>
+</ul>
+
+<p>We also have a <uri link="/doc/xml-guide.html">Gentoo Linux Documentation
+Guide</uri> that explains how to use the <c>guide XML</c> format.  You can
+download the latest version of all our <c>guide XML</c> tools by grabbing this file, which actually contains a CVS snapshot of all the files used to create the website: <uri
+link="/projects/guide-xml-latest.tar.gz">xml-guide-latest.tar.gz</uri>.  This
+tarball is automatically regenerated every time the Gentoo Linux Web site
+is updated, so it will always be current.  Instructions on how to use the
+included files can be found in the <uri link="/doc/xml-guide.html">Gentoo Linux Documentation Guide</uri> (FYI, this
+tarball contains a snapshot of the <path>/usr/portage/app-doc/gentoo-web/files</path> directory).
+</p>
+
+</body>
+</section>
+</chapter>
+</guide>
+
