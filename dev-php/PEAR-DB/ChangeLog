@@ -1,12 +1,18 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.3 2003/10/14 03:41:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.4 2003/12/23 16:49:35 coredumb Exp $
 
   13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   add metadata.xml
 
   11 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> PEAR-DB-1.3.ebuild:
   fix bug #28168, move to stable
+
+*PEAR-DB-1.5.0_rc2 (23 Dec 2003)
+
+  23 Dec 2003; Tal Peer <coredumb@gentoo.org> PEAR-DB-1.5.0_rc2.ebuild:
+  Version bump.
+  Uses the new eclass.
 
 *PEAR-DB-1.3 (07 May 2003)
 
