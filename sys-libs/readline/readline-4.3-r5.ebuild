@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.8 2004/04/26 02:39:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.9 2004/04/26 02:40:51 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -16,6 +16,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/readline/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha arm ~mips hppa amd64 ~ia64 ppc64 s390"
+IUSE=""
 
 # We must be certain that we have a bash that is linked
 # to its internal readline, else we may get problems.
