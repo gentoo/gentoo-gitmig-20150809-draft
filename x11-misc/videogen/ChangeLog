@@ -1,8 +1,11 @@
 # ChangeLog for x11-misc/videogen
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/videogen/ChangeLog,v 1.4 2004/10/28 15:21:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/videogen/ChangeLog,v 1.5 2004/10/28 17:15:30 spyderous Exp $
 
-  28 Oct 2004; Donnie Berkholz,,, <donnie@gentoo.org> videogen-0.32.ebuild:
+  28 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; videogen-0.32.ebuild:
+  x86.
+
+  28 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; videogen-0.32.ebuild:
   Change from CC to tc-getCC in toolchain-funcs eclass to fix for newer
   gcc-config.
 
