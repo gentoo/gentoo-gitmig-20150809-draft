@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vimap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/ChangeLog,v 1.2 2003/02/12 08:17:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/ChangeLog,v 1.3 2003/05/28 22:12:09 alron Exp $
+
+*vimap-2002c (28 May 2003)
+  28 May 2003; Dean Bailey <alron@gentoo.org> vimap-2003c :
+  Version bump, new vimap patch for uw-imap 2002c1.
 
 *vimap-2001a (09 Feb 2003)
 
