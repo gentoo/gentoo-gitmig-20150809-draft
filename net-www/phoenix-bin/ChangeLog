@@ -1,12 +1,12 @@
 # ChangeLog for net-www/phoenix-bin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.3 2002/10/31 17:42:48 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.4 2002/10/31 18:16:28 phoenix Exp $
 
 *phoenix-bin-0.4 (31 Oct 2002)
 
   31 Oct 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-0.4.ebuild :
 
-  Bumped to new version. 
+  Bumped to new version. Removed the mozilla dependency.
 
 *phoenix-bin-0.3 (27 Oct 2002)
 
