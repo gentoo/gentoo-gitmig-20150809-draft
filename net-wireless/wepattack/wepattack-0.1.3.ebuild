@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepattack/wepattack-0.1.3.ebuild,v 1.4 2003/02/13 15:30:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepattack/wepattack-0.1.3.ebuild,v 1.5 2003/10/21 00:01:44 wschlich Exp $
 
 MY_P="WepAttack-${PV}"
 DESCRIPTION="WLAN tool for breaking 802.11 WEP keys"
@@ -19,8 +19,8 @@ S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	cd src
-	cp Makefile{,.old}
-	sed -e "/^CFLAGS=/s:=:=${CFLAGS} :" Makefile.old > Makefile
+	chmod +x wlan
+	sed -i -e "/^CFLAGS=/s:=:=${CFLAGS} :" Makefile
 	emake || die
 }
 
