@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.7 2003/09/29 19:50:15 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.8 2003/11/11 00:57:50 tseng Exp $
+
+*obconf-1.5-r1 (10 Nov 2003)
+
+  10 Nov 2003; Brandon Hale <tseng@gentoo.org> obconf-1.0.ebuild,
+  obconf-1.4.ebuild, obconf-1.5-r1.ebuild:
+  ObConf needs rebuilt against Openbox 3.0 final, bumping the revision to force
+  a rebuild.
 
 *obconf-1.5 (29 Sep 2003)
 
