@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.25.ebuild,v 1.16 2003/10/08 06:15:27 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.25.ebuild,v 1.17 2003/10/09 19:10:16 pappy Exp $
 
 inherit flag-o-matic
 
@@ -24,10 +24,19 @@ src_compile() {
 
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
 	# we disable etdyn because of assembler and extra add fstackprotector plus the necessary libs
-	if has_version 'sys-devel/hardened-gcc'
+	if [ "${ARCH}" != "hppa" ] && [ "${ARCH}" != "hppa64" ] && has_version 'sys-devel/hardened-gcc'
 	then
-		[ "${ARCH}" != "hppa" ] && append-flags "-yet_exec -fstack-protector -Wl,$(gcc-config -L)/libgcc.a -Wl,/lib/libc.so.6"
-		[ "${ARCH}" == "hppa" ] && append-flags "-yet_exec"
+		append-flags "-yet_exec -fstack-protector"
+	fi
+
+	if [ "${ARCH}" == "hppa" ] && has_version 'sys-devel/hardened-gcc'
+	then
+		append-flags "-yet_exec"
+	fi
+
+	if [ "${ARCH}" == "hppa64" ] && has_version 'sys-devel/hardened-gcc'
+	then
+		append-flags "-yet_exec"
 	fi
 
 	myconf=""
