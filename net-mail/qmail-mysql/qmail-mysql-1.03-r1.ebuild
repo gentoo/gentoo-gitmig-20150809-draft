@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03-r1.ebuild,v 1.1 2000/08/08 20:58:39 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03-r1.ebuild,v 1.2 2000/08/16 04:38:17 drobbins Exp $
 
 P=qmail-mysql-1.03
 A="qmail-1.03.tar.gz checkpassword-0.81.tar.gz"
@@ -9,7 +9,6 @@ A0=qmail-mysql.patch
 A1=checkpassword-mysql.patch
 S=${WORKDIR}/qmail-1.03
 DESCRIPTION="QMail with MySQL Support"
-CATEGORY=net-mail
 SRC_URI="http://cr.yp.to/software/qmail-1.03.tar.gz
 	 http://cr.yp.to/software/checkpassword-0.81.tar.gz"
 HOMEPAHE="http://www.qmail.org iain.cx/unix/qmail/mysql.php"

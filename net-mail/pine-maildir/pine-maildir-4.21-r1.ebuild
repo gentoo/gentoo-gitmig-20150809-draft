@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.21-r1.ebuild,v 1.1 2000/08/08 20:58:39 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.21-r1.ebuild,v 1.2 2000/08/16 04:38:16 drobbins Exp $
 
 P=pine-maildir-4.21
 A="pine4.21.tar.gz pine-4.20-maildir_3.patch"
 S=${WORKDIR}/pine4.21
-CATEGORY="net-mail"
 DESCRIPTION="Pine, Pico, Pilot, imapd"
 SRC_URI="ftp://ftp.cac.washington.edu/pine/pine4.21.tar.gz
 	 ftp://158.195.33.220/pub/pine/pine-4.20-maildir_3.patch"

@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/qmail-ldap-1.03-20000701-r1.ebuild,v 1.1 2000/08/08 20:58:39 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/qmail-ldap-1.03-20000701-r1.ebuild,v 1.2 2000/08/16 04:38:16 drobbins Exp $
 
 P=qmail-ldap-1.03-20000701
 A="qmail-1.03.tar.gz qmail-ldap-1.03-20000701.patch.gz"
 S=${WORKDIR}/qmail-1.03
 DESCRIPTION="QMail with LDAP-Support"
-CATEGORY=net-mail
 
 SRC_URI="http://cr.yp.to/software/qmail-1.03.tar.gz
 	 http://www.nrg4u.com/qmail/qmail-ldap-1.03-20000701.patch.gz"
