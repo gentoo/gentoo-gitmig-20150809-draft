@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/ipw2200
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.1 2004/08/14 22:38:50 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.2 2004/08/17 02:54:46 jbms Exp $
+
+*ipw2200-0.4 (16 Aug 2004)
+
+  16 Aug 2004; Jeremy Maitin-Shepard <jbms@gentoo.org> +ipw2200-0.4.ebuild:
+  Version bump.  Resolves Bug #60614.
 
 *ipw2200-0.3 (14 Aug 2004)
 
