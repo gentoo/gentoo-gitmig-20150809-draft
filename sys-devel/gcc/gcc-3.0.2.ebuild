@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.2.ebuild,v 1.1 2001/11/01 17:06:42 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.2.ebuild,v 1.2 2001/11/01 18:43:30 g2boojum Exp $
 
 TV=4.0
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
@@ -32,6 +32,7 @@ src_unpack() {
 	# Now we integrate texinfo-${TV} into gcc.  It comes with texinfo-3.12.
 	cd ${S}
 	tar xzf ${DISTDIR}/texinfo-${TV}.tar.gz || die
+	mkdir ${S}/texinfo
 	cp -a ${S}/texinfo-4.0/* ${S}/texinfo
 	cd ${S}/texinfo
 	if [ "`use build`" ]
