@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6.ebuild,v 1.7 2004/06/24 22:00:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6.ebuild,v 1.8 2004/06/29 17:28:06 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -15,9 +15,9 @@ SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${PV}.tar.bz2
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha amd64 hppa ia64 mips"
-IUSE="ssl nls java python tcltk perl libg++ pam readline zlib"
+IUSE="doc java libg++ nls pam perl python readline ssl tcltk zlib"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/autoconf
 	app-admin/sudo
 	>=sys-libs/ncurses-5.2
@@ -32,7 +32,7 @@ DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"
 # java dep workaround for portage bug
 # x86? ( java? ( =dev-java/sun-jdk-1.3* >=dev-java/ant-1.3 ) )
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	tcltk? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )

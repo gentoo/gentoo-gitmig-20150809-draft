@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.3.ebuild,v 1.2 2004/06/24 22:00:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.3.ebuild,v 1.3 2004/06/29 17:28:06 agriffis Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
 IUSE="ssl nls java python tcltk perl libg++ pam readline zlib doc pg-hier pg-vacuumdelay pg-intdatetime"
 RESTRICT="nomirror"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/autoconf
 	>=sys-libs/ncurses-5.2
 	>=sys-devel/bison-1.875
@@ -33,7 +33,7 @@ DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"
 # java dep workaround for portage bug
 # x86? ( java? ( =dev-java/sun-jdk-1.3* >=dev-java/ant-1.3 ) )
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	app-admin/sudo
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	tcltk? ( >=dev-lang/tcl-8 )
