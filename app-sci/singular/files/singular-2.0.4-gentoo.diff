@@ -68,3 +68,24 @@
  #include <dlfcn.h>
  
  static void* kernel_handle = NULL;
+--- singuname.sh	2003-08-07 12:48:09.000000000 +0200
++++ singuname.sh.new	2003-08-07 12:50:14.000000000 +0200
+@@ -180,6 +180,18 @@
+         echo ${prefix}-Unknown
+         exit 1
+     fi
++# PowerPC Linux ########################################################
++elif (echo $uname_a | $egrep " ppc " > $devnull)
++then
++    prefix=ppc
++    if (echo $uname_a | $egrep "Linux" > $devnull)
++    then
++        echo ${prefix}-Linux
++        exit 0
++    else
++        echo ${prefix}-Unknown
++        exit 1
++    fi
+ else # Unknown ########################################################
+     echo Unknown
+     exit 2
