@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.10 2003/07/31 10:57:40 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.11 2003/07/31 15:14:38 taviso Exp $
 
 inherit gnuconfig
 
-IUSE="readline gtk stroke gnome rplay xinerama cjk perl nls png bidi"
+IUSE="readline ncurses gtk stroke gnome rplay xinerama cjk perl nls png bidi"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="an extremely powerful ICCCM-compliant multiple virtual desktop window manager"
@@ -15,17 +15,22 @@ SLOT="0"
 KEYWORDS="~x86 ~alpha"
 LICENSE="GPL-2 FVWM"
 
-RDEPEND="readline? ( >=sys-libs/readline-4.1 )
+RDEPEND="readline? ( >=sys-libs/readline-4.1 
+				ncurses? ( >=sys-libs/ncurses-5.3-r1 )
+				!ncurses? ( >=sys-libs/libtermcap-compat-1.2.3 ) )
 		gtk? ( =x11-libs/gtk+-1.2* )
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
-		rplay? ( media-sound/rplay )
-		perl? ( dev-lang/perl )	
+		rplay? ( >=media-sound/rplay-3.3.2 )
+		perl? ( >=dev-lang/perl-5.6.1-r10 )	
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
-		png? ( media-libs/libpng )
+		png? ( >=media-libs/libpng-1.0.12-r2 )
 		stroke? ( >=dev-libs/libstroke-0.4 )
-		media-libs/fontconfig
-		dev-libs/expat"
+		>=media-libs/fontconfig-2.1-r1
+		>=dev-libs/expat-1.95.6-r1
+		virtual/x11
+		virtual/xft"
 DEPEND="${RDEPEND} 
+	>=sys-apps/sed-4
 	sys-devel/automake
 	sys-devel/autoconf
 	dev-util/pkgconfig"
@@ -48,6 +53,15 @@ src_compile() {
 	# use readline in FvwmConsole.
 	if ! use readline; then
 		myconf="${myconf} --without-readline-library"
+	else
+		myconf="${myconf} --with-readline-library"
+
+		# choose ncurses or termcap.
+		if use ncurses; then
+			myconf="${myconf} --without-termcap-library"
+		else
+			myconf="${myconf} --without-ncurses-library"
+		fi
 	fi
 
 	# fvwm configure doesnt provide a way to disable gtk support if the 
