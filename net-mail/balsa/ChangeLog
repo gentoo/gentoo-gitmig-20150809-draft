@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/balsa
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.31 2003/03/03 20:23:21 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.32 2003/03/08 18:43:29 foser Exp $
+
+*balsa-2.0.9-r1 (08 Mar 2003)
+
+  08 Mar 2003; foser <foser@gentoo.org> balsa-2.0.9-r1.ebuild :
+  disabled threads because of bug #17079
 
 *balsa-2.0.9 (03 Mar 2003)
 
