@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.1.ebuild,v 1.2 2003/03/17 22:37:13 edolnx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.1.ebuild,v 1.3 2003/03/20 01:00:33 nall Exp $
 
 inherit flag-o-matic
 inherit	libtool
@@ -9,7 +9,7 @@ DESCRIPTION="A personal finance manager"
 SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnucash.org/"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="nls postgres"

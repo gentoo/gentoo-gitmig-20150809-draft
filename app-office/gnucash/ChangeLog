@@ -1,8 +1,11 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.15 2003/03/17 22:37:13 edolnx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.16 2003/03/20 01:00:33 nall Exp $
 
 *gnucash-1.8.1 (17 Mar 2003)
+
+  19 Mar 2003; Jon Nall <nall@gentoo.org> gnucash-1.8.1.ebuild :
+  added ~ppc
 
   17 Mar 2003; Carl Perry <edolnx@gentoo.org> gnucash-1.8.1.ebuild, 
   gnucash-1.6.8.ebuild: Fixed broken dependancy in 1.8.1 so it compiles 
