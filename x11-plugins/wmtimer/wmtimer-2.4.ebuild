@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wmtimer/wmtimer-2.4.ebuild,v 1.1 2002/08/12 09:02:38 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.4.ebuild,v 1.1 2002/09/16 16:14:04 raker Exp $
 
 S=${WORKDIR}/${P}
 S2=${S}/wmtimer
