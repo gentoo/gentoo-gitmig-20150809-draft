@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.6.3.ebuild,v 1.9 2004/09/14 12:52:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.6.3.ebuild,v 1.10 2004/09/14 16:43:10 carlo Exp $
 
 inherit kde
 
@@ -16,5 +16,5 @@ LICENSE="GPL-2"
 
 DEPEND="dev-lang/perl"
 RDEPEND="virtual/tetex
-	kde? (kde-base/kdegraphics)"
+	kde? ( kde-base/kdegraphics )"
 need-kde 3.1
