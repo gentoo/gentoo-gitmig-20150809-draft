@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.6.ebuild,v 1.1 2005/02/14 07:02:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.6.ebuild,v 1.2 2005/02/22 23:07:20 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -14,7 +14,6 @@ KEYWORDS="~ppc ~x86"
 IUSE="alsa debug expat fbcon ncurses oss sdl slang static svga truetype zlib"
 
 RDEPEND="virtual/libc
-	games-emulation/advancemame
 	alsa? ( media-libs/alsa-lib )
 	expat? ( dev-libs/expat )
 	ncurses? ( sys-libs/ncurses )
