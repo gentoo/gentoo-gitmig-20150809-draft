@@ -1,0 +1,5 @@
+MD5 e0e1f4bd0a184ee356e99b26b177ffeb mpeglib-3.4.0_beta1.ebuild 356
+MD5 e0e1f4bd0a184ee356e99b26b177ffeb mpeglib-3.4.0_alpha1.ebuild 356
+MD5 43e784a2028b42eff11cfacd5dc9e845 files/digest-mpeglib-3.4.0_beta1 231
+MD5 fc6c88b42efcb16aaa7a7459489c41b2 files/digest-mpeglib-3.4.0_alpha1 74
+MD5 0af60268ec8424c72256db89062b6f31 files/kdemultimedia-64bit.patch 634

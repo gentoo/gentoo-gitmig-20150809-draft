@@ -1,0 +1,13 @@
+# ChangeLog for kde-base/kdebase-startkde
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.1 2005/01/15 02:24:30 danarmak Exp $
+
+*kdebase-startkde-3.4.0_beta1 (15 Jan 2005)
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> +metadata.xml,
+  +files/agent-shutdown.sh, +files/agent-startup.sh,
+  +files/startkde-3.4.0_beta1-gentoo.diff,
+  +kdebase-startkde-3.4.0_beta1.ebuild:
+  Adding the split ebuilds to portage. For KDE 3.4, we've created separate
+  ebuilds for all the KDE apps.
+

@@ -1,0 +1,5 @@
+MD5 3322544b4403fa3078184efd2d43b15c kmtrace-3.4.0_beta1.ebuild 438
+MD5 3322544b4403fa3078184efd2d43b15c kmtrace-3.4.0_alpha1.ebuild 438
+MD5 a859d7dcb2c41d449cdccedc9f23f561 files/digest-kmtrace-3.4.0_beta1 210
+MD5 6fd89829eb39c6f490ef984b5bb6b1e6 files/digest-kmtrace-3.4.0_alpha1 67
+MD5 e7464365b16610b1c4062a72eff0db18 files/liberty-link.diff 383

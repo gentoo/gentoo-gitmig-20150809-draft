@@ -1,0 +1,5 @@
+MD5 e4b06866707e8dc1f09328adc499bf40 lilo-config-3.4.0_beta1.ebuild 310
+MD5 e4b06866707e8dc1f09328adc499bf40 lilo-config-3.4.0_alpha1.ebuild 310
+MD5 d593b6b8d568cef10aecca256d8dd6be files/never-disable.diff 281
+MD5 06d8b082374f502eb28cb4e5681f0bf7 files/digest-lilo-config-3.4.0_beta1 215
+MD5 5c80d63263041da2a3656e9484510f15 files/digest-lilo-config-3.4.0_alpha1 69

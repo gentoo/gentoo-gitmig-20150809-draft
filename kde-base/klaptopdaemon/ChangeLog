@@ -1,0 +1,11 @@
+# ChangeLog for kde-base/klaptopdaemon
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.1 2005/01/15 02:24:33 danarmak Exp $
+
+*klaptopdaemon-3.4.0_beta1 (15 Jan 2005)
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> +metadata.xml,
+  +files/acpi_helper.diff, +klaptopdaemon-3.4.0_beta1.ebuild:
+  Adding the split ebuilds to portage. For KDE 3.4, we've created separate
+  ebuilds for all the KDE apps.
+

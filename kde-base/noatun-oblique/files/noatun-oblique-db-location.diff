@@ -1,0 +1,30 @@
+--- noatun-plugins/oblique/configure.in.in.orig	2003-06-27 16:43:29.000000000 +0300
++++ noatun-plugins/oblique/configure.in.in	2004-10-15 21:48:49.356533352 +0200
+@@ -1,23 +1,9 @@
+ 
+-AC_MSG_CHECKING(for Berkeley DB++)
+-berkeley_db=no
++berkeley_db=yes
+ AC_LANG_PUSH(C++)
+-AC_TRY_COMPILE([
+-		#include <db_cxx.h>
+-	],[
+-	],[
+-		berkeley_db=yes
+-	])
+-AC_MSG_RESULT($berkeley_db)
+-if test x$berkeley_db = xyes; then
+-	AC_CHECK_LIB(db_cxx,db_create,berkeley_db_lib=yes,
+-	             berkeley_db=no,[-ldb_cxx])
+-fi
+-if test x$berkeley_db = xyes; then
+-	AC_DEFINE(BERKELEY_DB,1,[Define if you have Berkeley DB++ installed])
+-	BERKELEY_DB_LIBS="-ldb_cxx"
+-	AC_SUBST(BERKELEY_DB_LIBS)
+-fi
++AC_DEFINE(BERKELEY_DB,1,[Define if you have Berkeley DB++ installed])
++BERKELEY_DB_LIBS="-ldb_cxx-4.2"
++AC_SUBST(BERKELEY_DB_LIBS)
+ AC_LANG_POP(C++)
+ 
+ AM_CONDITIONAL(include_BERKELEY_DB, test "$berkeley_db" = yes)

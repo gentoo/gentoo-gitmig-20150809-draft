@@ -1,0 +1,5 @@
+MD5 1224859d0de3f5cd740be038e8c71114 kcontrol-3.4.0_beta1.ebuild 1307
+MD5 1224859d0de3f5cd740be038e8c71114 kcontrol-3.4.0_alpha1.ebuild 1307
+MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-kcontrol-3.4.0_beta1 216
+MD5 99206d9cd7498b2daddb8b1099b0b24b files/digest-kcontrol-3.4.0_alpha1 69
+MD5 64e656c39553f20b12d38eca1f8120d6 files/configure.in.in-kdm-settings.diff 686

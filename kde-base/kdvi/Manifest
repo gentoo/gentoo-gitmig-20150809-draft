@@ -1,0 +1,5 @@
+MD5 57264107d6d9b7065ce7b69030d996e9 kdvi-3.4.0_beta1.ebuild 600
+MD5 57264107d6d9b7065ce7b69030d996e9 kdvi-3.4.0_alpha1.ebuild 600
+MD5 b415d97354c9487f035eaf2bb2dcf57c files/kdvi-configure-check-freetype.diff 1192
+MD5 2ed7b7cff3ca3ea63807d913c938cf52 files/digest-kdvi-3.4.0_beta1 225
+MD5 f85ff1154cc1ce2a3fcc01be1098fca8 files/digest-kdvi-3.4.0_alpha1 72

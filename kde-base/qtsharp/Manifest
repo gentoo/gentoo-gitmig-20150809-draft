@@ -1,5 +1,7 @@
+MD5 d0151be5c0139cadc3907848b9cfb030 qtsharp-3.4.0_beta1.ebuild 698
 MD5 b732ba72aa7d5a3640ab57fc85aec9af qtsharp-3.3.1.ebuild 635
 MD5 7a6780fcecfc1b41355278f09acf13f1 ChangeLog 1146
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 70e20b1b123bf8d012966ea1675c9306 files/digest-qtsharp-3.3.1 222
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
+MD5 4877266a41162d4c439090a71dcc66bc files/digest-qtsharp-3.4.0_beta1 225
