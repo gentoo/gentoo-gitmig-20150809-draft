@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-018.ebuild,v 1.1 2004/02/19 22:18:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-018.ebuild,v 1.2 2004/02/21 08:15:30 mr_bones_ Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"
@@ -108,8 +108,8 @@ src_install() {
 	if false
 	then
 		dosbin extras/multipath/{multipath,devmap_name}
-        exeinto /etc/hotplug.d/scsi/
-        doexe  extras/multipath/multipath.hotplug
+		exeinto /etc/hotplug.d/scsi/
+		doexe  extras/multipath/multipath.hotplug
 	fi
 
 	exeinto /etc/udev/scripts
