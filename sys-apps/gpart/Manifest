@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0eb706f13e43ea5421f45c5ac4946966 ChangeLog 478
-MD5 9e3ec4d2054845b39333e0c19e6a9cda gpart-0.1h.ebuild 698
+MD5 afb9670b513877e5d1f06e9e22e683da ChangeLog 864
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 b4ea218f9e03ca35f19b07496b5e5d33 files/digest-gpart-0.1h 61
-MD5 864b9cb6a654b69cf36c09b1240b2888 files/gpart-0.1h-errno.diff 533
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4idcHTu7gpaalycRAhKtAJ9FSGewK1xwF4YU1okLUQKIR4yPSgCcCx7Z
-S4GCkJ5zAx3pYgLuLMWmieU=
-=LvBw
------END PGP SIGNATURE-----
+MD5 ce7fa1811fa547ac62834270c03be2a1 gpart-0.1h-r1.ebuild 873
+MD5 1ed269d6c15522200092b17a53c7a90c files/digest-gpart-0.1h-r1 136
+MD5 81eee5d9985df9bf9c23624e46cf945f files/gpart-0.1h-errno.patch 384
+MD5 ae6d86b0268618d34e618824dcd82754 files/gpart-0.1h-vfat.patch 515
+MD5 8161c02116ee4575906587eb09e35bde files/gpart-0.1h-ntfs.patch 2430
