@@ -1,0 +1,17 @@
+#!/sbin/runscript
+
+depend() {
+    need clock
+}
+
+start() {
+    ebegin "Starting fcron..."
+    start-stop-daemon --start --quiet --exec /usr/sbin/fcron
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping fcron..."
+    start-stop-daemon --stop --quiet --pidfile /var/run/fcron.pid --exec /usr/sbin/fcron
+    eend $?
+}
