@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.3 2002/08/26 20:50:07 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.4 2002/08/30 16:59:19 rphillips Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -23,7 +23,7 @@ DEPEND=">=dev-libs/gmp-3.1.1
 	qt? ( =x11-libs/qt-2.3* )
 	nls? ( sys-devel/gettext )
 	pam? ( >=sys-libs/pam-0.75 )
-	xml? ( >=app-text/sablotron-0.95-r1 )
+	xml? ( >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.95-r1 )
 	ssl? ( >=dev-libs/openssl-0.9.5 )
 	curl? ( >=net-ftp/curl-7.8.1 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )

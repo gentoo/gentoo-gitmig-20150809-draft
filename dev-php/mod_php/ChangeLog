@@ -1,8 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.12 2002/08/27 01:06:19 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.13 2002/08/30 17:01:23 rphillips Exp $
 
 *mod_php-4.2.2-r1 (18 Aug 2002)
+
+  30 Aug 2002; Ryan Phillips <rphillips@gentoo.org> mod_php-4.2.2-r1.ebuild :
+
+  Fixed xml dependency bug
 
   26 Aug 2002; Donny Davies <woodchip@gentoo.org> mod_php-4.2.2-r1.ebuild :
 
