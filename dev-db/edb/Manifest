@@ -5,14 +5,14 @@ MD5 97f3df92b5a6dfa76c6261144a02f628 ChangeLog 1344
 MD5 d37acdf791ef8e51d40ed9078ddd80d6 edb-9999.ebuild 674
 MD5 a032cc85dfbeb82be60c19caf473c8d3 edb-1.0.5.ebuild 689
 MD5 2d0647a67387b6483b9e24bafb1d794d metadata.xml 602
-MD5 70cd2d41797968eb58b55caafda413e4 edb-1.0.5.20041016.ebuild 684
+MD5 bf8c08b4374ced09bf8854fa64d78d17 edb-1.0.5.20041031.ebuild 684
 MD5 51d95c6f5c812a7a345fdfc4312012c4 files/digest-edb-1.0.5 61
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-edb-9999 0
-MD5 13ecaed0340754c2f29536c347de15f4 files/digest-edb-1.0.5.20041016 71
+MD5 baaf1efe335f8c0f5f9725d899afa7ff files/digest-edb-1.0.5.20041031 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBeGmKHTu7gpaalycRAoZKAJ4i++O7wHFW1Kq0ho0Cun2Ae0WU7gCgt7Uv
-HafwO2eCLSCFAa6TpB+rUnw=
-=fnjF
+iD8DBQFBhvybHTu7gpaalycRAnZpAKCHRWLgvU0w5f32XTUu05ti1fxeggCfT5lp
+X9KQtERiMsQof83L+SpcsbM=
+=Q7UL
 -----END PGP SIGNATURE-----
