@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.1.30.ebuild,v 1.3 2003/09/07 03:12:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.1.30.ebuild,v 1.4 2003/09/18 18:44:13 avenj Exp $
 
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/"
@@ -8,7 +8,7 @@ SRC_URI=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64 ia64"
 
 DEPEND=">=dev-lang/python-2.0
 	>=dev-util/dialog-0.7
