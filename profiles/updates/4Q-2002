@@ -26,4 +26,4 @@ move media-video/xine-d4d media-plugins/xine-d4d
 move media-video/xine-d5d media-plugins/xine-d5d
 move media-video/xine-dmd media-plugins/xine-dmd
 move media-video/xine-dvdnav media-plugins/xine-dvdnav
-
+move media-sound/rmxmms media-plugins/rmxmms
