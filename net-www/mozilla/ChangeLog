@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.127 2003/10/25 17:19:11 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.128 2003/11/15 03:08:21 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> mozilla-1.4-r3.ebuild:
+  Stable on ia64
 
   25 Oct 2003; Brad Laue <brad@gentoo.org> mozilla-1.5.ebuild:
   Add a warning about the non-default extensions, as they're not guaranteed to
