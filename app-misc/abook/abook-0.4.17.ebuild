@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/abook-0.4.17.ebuild,v 1.1 2002/08/18 21:11:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/abook-0.4.17.ebuild,v 1.2 2002/10/17 00:27:13 vapier Exp $
 
 DESCRIPTION="Abook is a text-based addressbook program designed to use with mutt mail client."
 HOMEPAGE="http://abook.sourceforge.net/"
@@ -9,6 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 DEPEND="sys-libs/ncurses"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}
 
@@ -23,6 +24,6 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/smtm-1.4.0.ebuild,v 1.3 2002/10/04 04:57:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/smtm-1.4.0.ebuild,v 1.4 2002/10/17 00:24:16 vapier Exp $
 
 DESCRIPTION="Stock ticker, profit/loss calculator and chart tool"
 HOMEPAGE="http://eddelbuettel.com/dirk/code/smtm.html"
@@ -14,14 +14,11 @@ DEPEND=">=sys-devel/perl-5
 	dev-perl/perl-tk
 	dev-perl/DateManip
 	dev-perl/libwww-perl"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
 
-src_compile() {
-	echo "nothing to compile"
-}
-
-src_install () {
+src_install() {
 	exeinto /usr/bin
 	doexe smtm
 
