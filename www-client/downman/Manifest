@@ -1,0 +1,6 @@
+MD5 16e9036fe5abc312d17fc3a876eac1ec downman-0.0.5.ebuild 796
+MD5 f362b6d499c5391c15634ff0a58fa0a1 downman-0.0.4.ebuild 711
+MD5 8cdb4419d7b38a0d52a05264d2bb3c40 ChangeLog 1266
+MD5 d8c0577adf02470a6535ac25fd5a48ea files/digest-downman-0.0.4 65
+MD5 5eb901a7966e529a4203e5476b37b614 files/digest-downman-0.0.5 65
+MD5 aa707c9bac84ee5c03190a1f073a9af9 files/0.0.5-gcc34.patch 1544
