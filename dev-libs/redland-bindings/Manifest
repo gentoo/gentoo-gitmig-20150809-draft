@@ -2,13 +2,14 @@
 Hash: SHA1
 
 MD5 7ded305696581501c40b8c453f34436d ChangeLog 393
-MD5 61733c86814af7f388c4e8817f0f2bc7 redland-bindings-0.9.18.1.ebuild 1639
+MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
+MD5 9511a0129ebe350a5b520516d4d8d44e redland-bindings-0.9.18.1.ebuild 1224
 MD5 ead1e201de272cbdd6087dfdad8b210b files/digest-redland-bindings-0.9.18.1 77
 MD5 909fca319d39298806c8b2ce49caff2d files/0.9.18.1-configure.patch 511
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBID41HTu7gpaalycRAvP1AKCWDMycLaAqR9CPSA1KL2D6yE/u3ACdHecg
-C5s0vgQlw1JDPnxnBzw32m4=
-=ySLV
+iD8DBQFBM933HTu7gpaalycRAn1AAJ99UJVbqHZWa6FBM5oE7nA2MJMWDgCfRwNz
+gxBOVH4XTuNv4uWYkUdoo8c=
+=IzLW
 -----END PGP SIGNATURE-----
