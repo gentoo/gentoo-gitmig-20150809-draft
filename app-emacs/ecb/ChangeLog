@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ecb
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.6 2003/12/08 07:30:53 usata Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.7 2004/03/08 16:54:07 mkennedy Exp $
+
+*ecb-2.21 (08 Mar 2004)
+
+  08 Mar 2004; <mkennedy@gentoo.org> ecb-2.21.ebuild, metadata.xml:
+  New upstream.
 
 *ecb-2.11 (08 Dec 2003)
 
