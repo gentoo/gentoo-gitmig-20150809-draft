@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.6.ebuild,v 1.8 2003/04/23 14:56:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.6.ebuild,v 1.9 2003/05/01 10:57:37 mholzer Exp $
 
 DESCRIPTION="scientific software package for numerical computations"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/${P}.src.tar.gz"
@@ -89,8 +89,8 @@ src_install() {
 
 	touch .binary
 	strip bin/scilex
-	cd tests && make distclean
-	cd examples && make distclean
+	cd tests && make distclean && cd ..
+	cd examples && make distclean && cd ..
 	dodir /usr/lib
 	(cd ..; tar cf - ${BINDISTFILES} | (cd ${D}/usr/lib; tar xf -))
 	rm .binary
@@ -112,5 +112,6 @@ pkg_postrm() {
 	rm /usr/lib/${P}/Path.incl
 	rm -r /usr/lib/${P}/bin
 	rm -r /usr/lib/${P}/util
+	rm -r /usr/lib/${P}/examples
 	rmdir /usr/lib/${P} 
 }
