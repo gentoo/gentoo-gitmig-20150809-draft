@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.7.14.ebuild,v 1.1 2003/10/29 05:12:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.7.14.ebuild,v 1.2 2003/12/14 12:26:54 spyderous Exp $
 
 DESCRIPTION="Driver for Smart Link modem"
 HOMEPAGE="http://www.smlink.com/"
@@ -10,7 +10,7 @@ LICENSE="Smart-Link"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+RDEPEND="virtual/glibc"
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
