@@ -1,6 +1,26 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.130 2003/05/06 05:15:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.131 2003/05/20 12:37:02 seemant Exp $
+
+  20 May 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.2.1-r1.ebuild,
+  xfree-4.2.1-r1.ebuild, xfree-4.3.0-r1.ebuild, xfree-4.3.0-r1.ebuild,
+  xfree-4.3.0.ebuild, xfree-4.3.0.ebuild,
+  files/4.2.1-r1/108_all_4.2.1-xterm-enable-backspace.patch,
+  files/4.2.1-r1/109_ppc_4.2.1-xterm-eightBitInput-fix.patch,
+  files/4.2.1-r1/10xfree,
+  files/4.2.1-r1/110_all_4.2.1-xf86_h-missing-bracket-fix.patch,
+  files/4.2.1-r1/XftConfig, files/4.2.1-r1/Xsession, files/4.2.1-r1/Xsetup_0,
+  files/4.2.1-r1/chooser.sh, files/4.2.1-r1/site.def,
+  files/4.2.1-r1/startDM.sh, files/4.2.1-r1/xdm.pamd,
+  files/4.2.1-r1/xdm.start, files/4.2.1-r1/xfs.conf.d,
+  files/4.2.1-r1/xfs.config, files/4.2.1-r1/xfs.start,
+  files/4.2.1-r1/xft-quality.diff, files/4.2.1-r1/xinitrc,
+  files/4.2.1-r1/xserver.pamd, files/4.2.1-r1/Sessions/Xsession,
+  files/4.2.1-r1/lib/libGL.la, files/4.2.1-r1/lib/libGLU.la,
+  files/4.2.1-r1/lib/libOSMesa.la,
+  files/4.3.0-patches/XFree86-4.3.0-enable-nv-on-ppc.patch,
+  files/4.3.0-patches/XFree86-4.3.0-sparc-kb.patch:
+  removed crusty ebuilds
 
   05 May 2003; Daniel Robbins <drobbins@gentoo.org>: xfree-4.3.0*.ebuild: moved
   "inherit" line below DEPEND definition, since the "newdepend" lines in the
