@@ -1,5 +1,6 @@
 #!/bin/bash
 source /etc/profile
+export PATH="/usr/lib/portage/bin:${PATH}"
 source /etc/rc.d/config/functions
 export DESTTREE=/usr
 export INSDESTTREE=""
