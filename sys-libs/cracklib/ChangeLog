@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.37 2004/02/09 10:02:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.38 2004/02/09 21:15:13 gustavoz Exp $
+
+  09 Feb 2004; <gustavoz@gentoo.org> cracklib-2.7-r8.ebuild:
+  stable on sparc
 
   09 Feb 2004; Guy Martin <gmsoft@gentoo.org> cracklib-2.7-r8.ebuild:
   Marked stable on hppa.
