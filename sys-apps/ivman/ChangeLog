@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/ivman
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.1 2004/10/19 17:15:33 eradicator Exp $
+
+*ivman-0.3 (19 Oct 2004)
+
+  19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +files/ivman-0.3-cvs.update, +files/ivman-0.3.init, +ivman-0.3.ebuild:
+  Initial version submitted by Stefan Schweizer <sschweizer@gmail.com> in bug
+  #66013.
+

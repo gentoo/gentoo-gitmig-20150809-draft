@@ -1,0 +1,407 @@
+diff -u ivman-0.3/src/manager.c.orig ivman-0.3/src/manager.c
+--- ivman-0.3/src/manager.c.orig	2004-09-30 17:06:19.918758400 +0200
++++ ivman-0.3/src/manager.c	2004-09-30 17:08:32.532598032 +0200
+@@ -11,7 +11,7 @@
+  * 
+  * See http://www.troll.no/qpl for QPL licensing information.
+  *
+- * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
++ * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
+  *****************************************************************************/
+ 
+ #include <stdio.h>
+@@ -108,6 +108,9 @@
+         char *path;
+         gboolean retval;
+ 
++        DEBUG("Checking for DVD in '%s' mounted on '%s'", device,
++              mount_point);
++
+         path =
+             g_build_path(G_DIR_SEPARATOR_S, mount_point, "video_ts", NULL);
+         retval = g_file_test(path, G_FILE_TEST_IS_DIR);
+@@ -155,6 +158,10 @@
+         if (device2 != NULL)
+                 DEBUG("Mapped to %s", device2);
+ 
++
++        // we said in the mailing list that we don't want to be calling
++        // commands 
++        // like that anymore, or did i get that wrong?
+         argv[0] = MOUNT_PATH;
+         argv[1] = (device2 == NULL) ? device : device2;
+         argv[2] = NULL;
+@@ -218,6 +225,19 @@
+ 
+         media_type = hal_device_get_property_string(hal_ctx, udi,
+                                                     "storage.drive_type");
++
++        if ((hal_device_get_property_bool(hal_ctx, udi, "volume.is_disc")
++             == TRUE) && (!media_type))
++        {
++                DEBUG("Forcing media type");
++                media_type =
++                    hal_device_get_property_string(hal_ctx,
++                                                   hal_device_get_property_string
++                                                   (hal_ctx, udi,
++                                                    "block.storage_device"),
++                                                   "storage.drive_type");
++        }
++
+         if (!media_type)
+         {
+                 warn("cannot get storage.drive_type\n");
+@@ -285,7 +305,23 @@
+         }
+ }
+ 
++void ivm_eject_pressed(const char *udi)
++{
++        char *device = NULL;
+ 
++        device =
++            hal_device_get_property_string(hal_ctx, udi, "block.device");
++        if (device != NULL)
++        {
++                if (cfg_actions->handle_eject)
++                        ivm_run_command(device, cfg_actions->eject_cmd,
++                                        NULL);
++                DEBUG("EjectPressed");
++                // should we unlock?
++                // what does the eject command do?
++        }
++        hal_free_string(device);
++}
+ 
+ int main(int argc, char *argv[])
+ {
+@@ -317,8 +353,7 @@
+ 
+ 
+ 
+-        printf
+-            ("Ikke's Volume Manager pre-alpha, by Ikke (www.eikke.com)\n");
++        printf("Ikke's Volume Manager, http://ivman.sf.net\n");
+ 
+         log_notice("IVM started");
+ 
+diff -u ivman-0.3/src/IvmConfig/IvmConfigActions.xml.orig ivman-0.3/src/IvmConfig/IvmConfigActions.xml
+--- ivman-0.3/src/IvmConfig/IvmConfigActions.xml.orig	2004-09-30 17:28:17.838404160 +0200
++++ ivman-0.3/src/IvmConfig/IvmConfigActions.xml	2004-09-30 17:28:29.899570584 +0200
+@@ -5,8 +5,10 @@
+     <ivm:Option name="autoplay_cda" value="true" />
+     <ivm:Option name="autoplay_cda_cmd" value="cdplay -d %d -c" />
+     <!-- Automagic DVD playback isn't supported yet (I have no DVD reader) -->
+-    <ivm:Option name="autoplay_dvd" value="false" />
+-    <ivm:Option name="autoplay_dvd_cmd" value="" />
++    <ivm:Option name="autoplay_dvd" value="true" />
++    <ivm:Option name="autoplay_dvd_cmd" value="mplayer dvd://1 -really-quiet -fs" />
++    <ivm:Option name="handle_eject" value="true" />
++    <ivm:Option name="eject_cmd" value="eject %d" />
+     
+     <!-- Specific actions on specific devices are configured here -->
+     <!--
+diff -u ivman-0.3/src/IvmConfig/IvmConfigActions.c.orig ivman-0.3/src/IvmConfig/IvmConfigActions.c
+--- ivman-0.3/src/IvmConfig/IvmConfigActions.c.orig	2004-09-30 17:36:01.405931184 +0200
++++ ivman-0.3/src/IvmConfig/IvmConfigActions.c	2004-09-30 17:36:12.374263744 +0200
+@@ -11,7 +11,7 @@
+  * 
+  * See http://www.troll.no/qpl for QPL licensing information.
+  *
+- * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
++ * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
+  *****************************************************************************/
+ 
+ #include <glib.h>
+@@ -111,8 +111,7 @@
+                         if (!xmlStrcmp
+                             (name, (const xmlChar *) "autoplay_cda_cmd"))
+                         {
+-                                ret->autoplay_cda_cmd =
+-                                    (gchar *) xmlStrdup(value);
++                                ret->autoplay_cda_cmd = (gchar *) xmlStrdup(value);
+                         }
+ 
+                         if (!xmlStrcmp
+@@ -127,8 +126,24 @@
+                         if (!xmlStrcmp
+                             (name, (const xmlChar *) "autoplay_dvd_cmd"))
+                         {
+-                                ret->autoplay_dvd_cmd =
+-                                    (gchar *) xmlStrdup(value);
++                                ret->autoplay_dvd_cmd = (gchar *) xmlStrdup(value);
++                        }
++			
++			
++			
++			if (!xmlStrcmp
++                            (name, (const xmlChar *) "handle_eject"))
++                        {
++                                if (!xmlStrcmp
++                                    (value, (const xmlChar *) "true"))
++                                        ret->handle_eject = TRUE;
++                                else
++                                        ret->handle_eject = FALSE;
++                        }
++                        if (!xmlStrcmp
++                            (name, (const xmlChar *) "eject_cmd"))
++                        {
++                                ret->eject_cmd = (gchar *) xmlStrdup(value);
+                         }
+ 
+                         xmlFree(value);
+@@ -143,10 +158,9 @@
+         return ret;
+ }
+ 
+-int get_actions(const char *path, const char *key, const char *value,
+-                char ***ret)
++int get_actions(const char *path, const char *key, const char *value, char ***ret)
+ {
+-        xmlInitParser();
++	xmlInitParser();
+         LIBXML_TEST_VERSION xmlDocPtr doc;
+         xmlXPathContextPtr xpathCtx;
+         xmlXPathObjectPtr xpathObj;
+@@ -172,17 +186,15 @@
+                 DEBUG("Failed to register namespace");
+         }
+ 
+-        const char *all_actions_xpath =
+-            "/ivm:ActionsConfig/ivm:Device[@key='%s' and @value='%s']/ivm:Action/text()";
++		const char *all_actions_xpath="/ivm:ActionsConfig/ivm:Device[@key='%s' and @value='%s']/ivm:Action/text()";
+ 
+-        char *xpath;
+-        int length =
+-            strlen(all_actions_xpath) + strlen(key) + strlen(value);
+-        xpath = malloc(length);
+-        memset(xpath, 0, length);
++		char *xpath;
++		int length=strlen(all_actions_xpath)+strlen(key)+strlen(value);
++		xpath=malloc(length);
++		memset(xpath,0,length);
+ 
+-        sprintf(xpath, all_actions_xpath, key, value);
+-        // DEBUG("Xpath: %s", xpath);
++		sprintf(xpath, all_actions_xpath, key, value);
++		//DEBUG("Xpath: %s", xpath);
+ 
+         xpathObj = xmlXPathEvalExpression(xpath, xpathCtx);
+         if (xpathObj == NULL)
+@@ -202,54 +214,50 @@
+                 DEBUG("Nodeset is null");
+                 return -1;
+         }
+-        // DEBUG("Number of elements in nodeset: %d",
+-        // xmlXPathNodeSetGetLength(nodeset));
+ 
+-        *ret = malloc(xmlXPathNodeSetGetLength(nodeset) * sizeof(char *));
++		//DEBUG("Number of elements in nodeset: %d", xmlXPathNodeSetGetLength(nodeset));
+ 
+-        int i;
++		*ret=malloc(xmlXPathNodeSetGetLength(nodeset)*sizeof(char*));
+ 
+-        for (i = 0; i < xmlXPathNodeSetGetLength(nodeset); i++)
+-        {
+-                (*ret)[i] =
+-                    xmlStrdup(xmlXPathCastNodeToString
+-                              (nodeset->nodeTab[i]));
+-                // DEBUG("Action %d: %s", i, (*ret)[i]);
+-        }
++		int i;
++		for(i=0; i<xmlXPathNodeSetGetLength(nodeset); i++)
++		{
++			(*ret)[i]=xmlStrdup(xmlXPathCastNodeToString(nodeset->nodeTab[i]));
++			//DEBUG("Action %d: %s", i, (*ret)[i]);
++		}
+ 
+-        int reti = xmlXPathNodeSetGetLength(nodeset);
++		int reti=xmlXPathNodeSetGetLength(nodeset);
+ 
+         xmlXPathFreeObject(xpathObj);
+         xmlXPathFreeContext(xpathCtx);
+         xmlFreeDoc(doc);
+ 
+-        free(xpath);
++		free(xpath);
+ 
+         xmlCleanupParser();
+ 
+-        /* for(i=0; i<reti; i++) { //DEBUG("Action %d: %s", i, (*ret)[i]);
+-           } */
++		/*for(i=0; i<reti; i++)
++		{
++			//DEBUG("Action %d: %s", i, (*ret)[i]);
++		}*/
+ 
+-        return reti;
++		return reti;
+ }
+ 
+-gboolean check_action(const char *path, const char *action,
+-                      const char *key, const char *value)
++gboolean check_action(const char *path, const char *action, const char *key, const char *value)
+ {
+-        char **actions;
+-        int num = get_actions(path, key, value, &actions);
+-
+-        // Error
+-        if (num == -1)
+-                return FALSE;
+-
+-        int i;
+-
+-        for (i = 0; i < num; i++)
+-        {
+-                // DEBUG("Action %d is %s", i, actions[i]);
+-                if (strcmp(actions[i], action) == 0)
+-                        return TRUE;
+-        }
+-        return FALSE;
+-}
++	char **actions;
++	int num=get_actions(path, key, value, &actions);
++	
++	//Error
++	if(num==-1) return FALSE;
++
++	int i;
++	for(i=0; i<num; i++)
++	{
++		//DEBUG("Action %d is %s", i, actions[i]);
++		if(strcmp(actions[i], action)==0)
++			return TRUE;
++	}
++	return FALSE;
++}
+\ Kein Zeilenumbruch am Dateiende.
+diff -u ivman-0.3/src/IvmConfig/IvmConfigActions.h.orig ivman-0.3/src/IvmConfig/IvmConfigActions.h
+--- ivman-0.3/src/IvmConfig/IvmConfigActions.h.orig	2004-09-30 17:35:51.757397984 +0200
++++ ivman-0.3/src/IvmConfig/IvmConfigActions.h	2004-09-30 17:36:12.375263592 +0200
+@@ -11,7 +11,7 @@
+  * 
+  * See http://www.troll.no/qpl for QPL licensing information.
+  *
+- * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
++ * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
+  *****************************************************************************/
+ 
+ #ifndef _IVMCONFIGACTIONS_H
+@@ -30,12 +30,13 @@
+ 
+         gboolean autoplay_dvd;
+         gchar *autoplay_dvd_cmd;
++	
++	gboolean handle_eject;
++	gchar *eject_cmd;
+ } IvmConfigActions, *IvmConfigActionsPtr;
+ 
+ IvmConfigActionsPtr parseIvmConfigActions(char *path);
+-gboolean check_action(const char *path, const char *action,
+-                      const char *key, const char *value);
+-int get_actions(const char *path, const char *key, const char *value,
+-                 char ***ret);
++gboolean check_action(const char *path, const char *action, const char *key, const char *value);
++int get_actions(const char *path, const char *key, const char *value, char ***ret);
+ 
+ #endif
+diff -u ivman-0.3/src/hal_interface.c.orig ivman-0.3/src/hal_interface.c
+--- ivman-0.3/src/hal_interface.c.orig	2004-09-30 17:35:32.373344808 +0200
++++ ivman-0.3/src/hal_interface.c	2004-09-30 17:35:38.510411832 +0200
+@@ -11,7 +11,7 @@
+  * 
+  * See http://www.troll.no/qpl for QPL licensing information.
+  *
+- * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
++ * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
+  *****************************************************************************/
+ 
+ #include <dbus/dbus.h>
+@@ -22,6 +22,7 @@
+ #include "manager.h"
+ #include "hal_interface.h"
+ 
++#include <string.h>
+ 
+ void dump_devices();
+ 
+@@ -86,14 +87,10 @@
+ 
+         if (cfg_actions->automount_drives)
+         {
+-                // Only mount if its a cd for now (dont mount HD's on
+-                // init, bug!)
+-                if (hal_device_get_property_bool
+-                    (hal_ctx, udi, "volume.is_disc") == TRUE)
++                //Only mount if its a cd for now (dont mount HD's on init, bug!)
++                if(hal_device_get_property_bool(hal_ctx, udi,"volume.is_disc")==TRUE)
+                 {
+-                        DEBUG
+-                            ("Volume %s seems to be a disc, so let's mount...",
+-                             udi);
++                        DEBUG("Volume %s seems to be a disc, so let's mount...", udi);
+                         ivm_device_mount(device);
+                 }
+         }
+@@ -170,23 +167,36 @@
+                 {
+                         DEBUG("Mounted: %s", udi);
+                         // Add to device list
+-                        char *str;
++                        char *str; char *device = NULL;
+ 
+                         str =
+                             hal_device_get_property_string(hal_ctx, udi,
+                                                            "volume.mount_point");
+-                        g_hash_table_insert(devices,
++                        
++			//Dennis' part
++			/* we need to find the block device in order to run the DVD check */
++			device = hal_device_get_property_string(hal_ctx, udi,
++                                                "block.device");
++			
++			g_hash_table_insert(devices,
+                                             (gpointer) g_strdup(udi),
+                                             (gpointer) str);
+-                        DEBUG("Devices table has %d entries",
++                        
++			//Dennis: not sure, why we need these two commands
++			DEBUG("Devices table has %d entries",
+                               g_hash_table_size(devices));
+                         dump_devices();
+-                        if (cfg_base->unlock == TRUE)
++			
++			
++                        if(cfg_base->unlock == TRUE)
+                         {
+-                                ivm_unlock_device
+-                                    (hal_device_get_property_string
+-                                     (hal_ctx, udi, "block.device"));
++                                ivm_unlock_device(hal_device_get_property_string
++                                          (hal_ctx, udi, "block.device"));
+                         }
++			
++			//Dennis' part
++			//now just call the function and we should be fine 
++			ivm_check_dvd (device ,str);
+                 } else
+                 {
+                         DEBUG("Unmounted: %s", udi);
+@@ -214,7 +224,16 @@
+                      __attribute__ ((__unused__)), DBusMessage * message
+                      __attribute__ ((__unused__)))
+ {
+-        DEBUG("Name: %s", condition_name);
++        
++	if (! strcmp (condition_name, "EjectPressed"))
++	{
++		//Eject pressed, we need to handle this event
++		ivm_eject_pressed (udi);
++	}
++	else
++	{
++	DEBUG("Event Recieved  but no action taken \n Name: %s", condition_name);	
++	}
+ }
+ 
+ 
