@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.1.ebuild,v 1.9 2005/03/22 22:42:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.1.ebuild,v 1.10 2005/03/24 20:44:23 corsair Exp $
 
 inherit eutils flag-o-matic
 
@@ -90,6 +90,9 @@ src_compile() {
 
 	# waiting on arm bug #76234
 	use arm || myconf="${myconf} `use_enable X photo-viewers`"
+
+	# fix compile problem on ppc64
+	use ppc64 && myconf="${myconf} --disable-asm"
 
 	econf \
 		`use_enable ldap` \

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.110 2005/03/24 10:11:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.111 2005/03/24 20:44:23 corsair Exp $
+
+  24 Mar 2005; Markus Rothe <corsair@gentoo.org> gnupg-1.4.1.ebuild:
+  Added --disable-asm for ppc64 only; stable on ppc64; bug #85547
 
 *gnupg-1.9.15-r1 (24 Mar 2005)
 
