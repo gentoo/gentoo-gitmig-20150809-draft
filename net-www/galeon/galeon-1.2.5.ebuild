@@ -54,7 +54,7 @@ src_compile() {
 		--without-debug	--disable-werror \
 		--disable-applet \
 		--disable-install-schemas \
-		--enable-nautilus-view=auto \
+		--enable-nautilus-view=no \
 		${myconf} || die
 
 	emake || die
