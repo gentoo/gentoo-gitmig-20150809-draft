@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/logwatch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.4 2003/02/19 21:33:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.5 2003/03/31 02:47:50 jhhudso Exp $
 
+  30 Mar 2003; Jared Hudson <jhhudso@gentoo.org> : Provider archived this
+  version of the tarball, so I changed our location in the ebuild.
+	
 *logwatch-4.3.1 (07 Feb 2003)
 
   07 Feb 2003; Jared Hudson <jhhudso@gentoo.org> : Version bump.
