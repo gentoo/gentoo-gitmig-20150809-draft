@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.8.0b-r1.ebuild,v 1.2 2003/02/01 20:59:40 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.8.0b-r1.ebuild,v 1.3 2003/02/01 22:09:40 latexer Exp $
 
 DESCRIPTION="Kismet is a 802.11b wireless network sniffer."
 HOMEPAGE="http://www.kismetwireless.net/"
@@ -48,7 +48,7 @@ src_compile() {
                 s:=ap_manuf:=/etc/kismet/ap_manuf:g; \
                 s:=client_manuf:=/etc/kismet/client_manuf:g" \
 			kismet.conf.orig > kismet.conf
-	sed -e "s:/usr/local:/usr/g" kismet_ui.conf.orig > kismet_ui.conf
+	sed -e "s:/usr/local:/usr:g" kismet_ui.conf.orig > kismet_ui.conf
 	rm -f kismet.conf.orig kismet_ui.conf.orig
 
 	cd ${S} 
