@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.4 2001/09/03 06:48:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.5 2001/09/03 06:50:47 drobbins Exp $
 
 SV=1.1.5
 S=${WORKDIR}/rc-scripts-${SV}
@@ -153,14 +153,14 @@ src_install()
 		dosym /usr/sbin/MAKEDEV /dev-state/MAKEDEV
 		keepdir /dev-state
 		keepdir /dev-state/pts /dev-state/shm
-		cd ${D}/dev
+		cd ${D}/dev-state
 	else
 		#normal
 		keepdir /dev
 		keepdir /dev-state
 		keepdir /dev/pts /dev/shm
 		dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
-		cd ${D}/dev-state
+		cd ${D}/dev
 	fi	
 	#These devices are also needed by many people and should be included
 	echo "Making device nodes... (this could take a minute or so...)"
