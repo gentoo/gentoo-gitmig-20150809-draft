@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ids/ids-0.82.ebuild,v 1.2 2003/12/14 13:20:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ids/ids-0.82.ebuild,v 1.3 2003/12/15 20:36:55 stuart Exp $
 
 inherit webapp-apache
 
@@ -28,6 +28,8 @@ pkg_setup() {
 }
 
 src_install() {
+	webapp-mkdirs
+
 	local DocumentRoot=${HTTPD_ROOT}
 	local destdir=${DocumentRoot}/${PN}
 	dodir ${destdir}

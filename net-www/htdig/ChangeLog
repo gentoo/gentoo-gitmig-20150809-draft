@@ -1,6 +1,9 @@
 # ChangeLog for net-www/htdig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/ChangeLog,v 1.17 2003/11/16 22:08:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/ChangeLog,v 1.18 2003/12/15 20:41:11 stuart Exp $
+
+  15 Dec 2003; Stuart Herbert <stuart@gentoo.org> htdig-3.1.6-r4.ebuild:
+  Fix for bug #32636
 
   16 Nov 2003; Martin Holzer <mholzer@gentoo.org> htdig-3.1.6-r4.ebuild:
   added webapps-apache.eclass. Closes #33622

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/ids
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ids/ChangeLog,v 1.2 2003/12/14 13:20:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ids/ChangeLog,v 1.3 2003/12/15 20:36:55 stuart Exp $
+
+  15 Dec 2003; Stuart Herbert <stuart@gentoo.org> ids-0.82.ebuild,
+  ids-0.83_beta2.ebuild:
+  Fix for bug #32636
 
   14 Dec 2003; Martin Holzer <mholzer@gentoo.org> ids-0.82.ebuild,
   ids-0.83_beta2.ebuild:

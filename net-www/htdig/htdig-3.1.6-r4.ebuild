@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.6-r4.ebuild,v 1.13 2003/11/16 22:08:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.6-r4.ebuild,v 1.14 2003/12/15 20:41:11 stuart Exp $
 
 inherit webapp-apache
 
@@ -47,6 +47,8 @@ src_compile() {
 }
 
 src_install () {
+	webapp-mkdirs
+
 	local DocumentRoot=${HTTPD_ROOT}
 	local destdir=${DocumentRoot}/${PN}
 

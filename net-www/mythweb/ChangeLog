@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mythweb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/ChangeLog,v 1.4 2003/12/11 22:04:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/ChangeLog,v 1.5 2003/12/15 20:55:29 stuart Exp $
+
+  15 Dec 2003; Stuart Herbert <stuart@gentoo.org> mythweb-0.12.ebuild,
+  mythweb-0.13.ebuild:
+  Fix for bug #32636
 
 *mythweb-0.13 (11 Dec 2003)
 

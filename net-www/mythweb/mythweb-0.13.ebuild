@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/mythweb-0.13.ebuild,v 1.1 2003/12/11 22:04:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/mythweb-0.13.ebuild,v 1.2 2003/12/15 20:55:30 stuart Exp $
 
 inherit webapp-apache
 
@@ -23,6 +23,8 @@ pkg_setup() {
 }
 
 src_install() {
+	webapp-mkdirs
+
 	dodir "${HTTPD_ROOT}"
 	cp -R "${S}" "${D}${HTTPD_ROOT}/${PN}"
 

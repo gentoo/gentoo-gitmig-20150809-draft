@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/phpwebsite-0.9.3_p1-r1.ebuild,v 1.3 2003/11/23 00:42:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/phpwebsite-0.9.3_p1-r1.ebuild,v 1.4 2003/12/15 20:51:18 stuart Exp $
 
 inherit webapp-apache
 
@@ -34,6 +34,8 @@ src_unpack() {
 }
 
 src_install() {
+	webapp-mkdirs
+
 	dodir "${HTTPD_ROOT}/phpwebsite"
 	cp -a * "${D}/${HTTPD_ROOT}/phpwebsite"
 	dodoc ${S}/docs/*
