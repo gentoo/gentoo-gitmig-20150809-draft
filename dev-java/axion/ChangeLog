@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/axion
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/ChangeLog,v 1.11 2005/01/09 12:11:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/ChangeLog,v 1.12 2005/03/27 18:20:46 luckyduck Exp $
+
+*axion-1.0_rc2-r1 (27 Mar 2005)
+
+  27 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/commons-codec.patch, +axion-1.0_rc2-r1.ebuild, axion-1.0_rc2.ebuild:
+  moved from dev-java/regexp to dev-java/jakarta-regexp dependency. see #71336.
+  keyworded ~amd64, introduced support for the source useflag. added patch to
+  fix compilation errors, related to commons-codec. removed junit tests, another
+  package where they are b0rked
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org> axion-1.0_rc2.ebuild:
   Added missing parentheses in SRC_URI/*DEPEND/LICENSE.

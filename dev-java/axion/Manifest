@@ -1,14 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 14a048d0621b8fefd87cb1eb0a3bde63 axion-1.0_rc2.ebuild 1590
-MD5 57a263902bc7f4c0adde0ae2cd4cf329 ChangeLog 1055
+MD5 35ad63a4ddd878755e1bf8d314d4e6fc axion-1.0_rc2.ebuild 1639
+MD5 31ec0f428332ddd9409da9994defccae axion-1.0_rc2-r1.ebuild 1625
+MD5 2a04f1614943d008730f21731f0607e8 ChangeLog 1491
 MD5 1efa58c8ec21eb8f929a4abccb0a543e metadata.xml 515
+MD5 40a767f2792e03e5e7b536b901a4417d files/digest-axion-1.0_rc2-r1 68
+MD5 da11842a1e904d37a02a64d8dfa3ed48 files/commons-codec.patch 2452
 MD5 40a767f2792e03e5e7b536b901a4417d files/digest-axion-1.0_rc2 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB4R9+I1lqEGTUzyQRAs9oAKDC/kD5pXXSAldsSFxioCf6frXaewCeKmrz
-xGvk+UvzwPUu0CUzD8yVRCw=
-=Glt5
+iD8DBQFCRvmT06ebR+OMO78RAqIIAKCE1AX2Z8SPbNUUy4NLBg+r+GNiVwCcD5O4
+4ZHPlRkW+A++RzPJMksCct0=
+=AIeg
 -----END PGP SIGNATURE-----
