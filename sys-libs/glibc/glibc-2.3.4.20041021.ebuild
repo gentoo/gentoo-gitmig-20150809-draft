@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041021.ebuild,v 1.6 2004/10/31 15:51:47 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041021.ebuild,v 1.7 2004/11/05 14:04:45 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -286,6 +286,11 @@ pkg_setup() {
 		eerror "Please use \"-nptlonly\" for now."
 		einfo "See http://bugs.gentoo.org/69258 for more info."
 		die "Can't migrate from nptl to nptlonly at this time"
+	fi
+
+	if use nptlonly && use !nptl ; then
+		eerror "If you want nptlonly, add nptl to your USE too ;p"
+		die "nptlonly without nptl"
 	fi
 
 	# give some sort of warning about the nptl logic changes...

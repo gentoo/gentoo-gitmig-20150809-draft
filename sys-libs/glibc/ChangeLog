@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.286 2004/11/05 02:56:41 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.287 2004/11/05 14:04:45 lv Exp $
+
+  05 Nov 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.4.20041021.ebuild,
+  glibc-2.3.4.20041102.ebuild:
+  made the ebuild die if nptlonly is in USE without nptl also being in USE
 
 *glibc-2.3.4.20041102 (04 Nov 2004)
 

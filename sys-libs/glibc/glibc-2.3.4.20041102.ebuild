@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.1 2004/11/05 02:56:41 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.2 2004/11/05 14:04:45 lv Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -263,6 +263,11 @@ setup_locales() {
 
 
 pkg_setup() {
+	if use nptlonly && use !nptl ; then
+		eerror "If you want nptlonly, add nptl to your USE too ;p"
+		die "nptlonly without nptl"
+	fi
+
 	# give some sort of warning about the nptl logic changes...
 	if want_nptl && use !nptlonly ; then
 		ewarn "Warning! Gentoo's GLIBC with NPTL enabled now behaves like the"
