@@ -179,6 +179,10 @@ net-p2p/mldonkey
 
 =sys-devel/binutils-2.12.90.0.9
 
+# blizzy@gentoo.org (11 Jul 2002)
+# masked due to b0rkenness
+=sys-devel/binutils-2.12.90.0.14
+
 # masking nhc98, until strange module lookup behaviour is resolved
 # george - Jun 8, 2002
 dev-lang/nhc98
