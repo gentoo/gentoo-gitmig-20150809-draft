@@ -1,4 +1,4 @@
 #!/bin/sh
-
-#`java-config --java` -cp "`java-config --classpath=bluej`:`java-config --jdk-home`/lib/tools.jar" bluej.Main $*	
-cd /usr/share/bluej; java -jar lib/bluej.jar
+APPBASE="/usr/share/bluej"
+CP="${APPBASE}/lib/bluej.jar"
+`java-config --java` -jar "${CP}" bluej.Main $*
