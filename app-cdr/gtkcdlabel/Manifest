@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f99933faa05149a04d5c34f87c1ca97b gtkcdlabel-1.0_pre6.ebuild 928
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 c8419fd553160f539ea8948899878778 ChangeLog 1927
-MD5 ab691427e752754ee30b3d7a10671e6c gtkcdlabel-1.0_pre3.ebuild 825
 MD5 034cbfa704c69957b7fb5a1cd5ab9db4 gtkcdlabel-1.0_pre7.ebuild 933
-MD5 31fc5fdd1f546485e74c081065ddf534 files/digest-gtkcdlabel-1.0_pre3 71
-MD5 61f4ce77f924ab6c43cb682caa6e7973 files/digest-gtkcdlabel-1.0_pre6 71
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 182ae0cc553d4201a26d1870964dc702 gtkcdlabel-1.0_pre6.ebuild 925
+MD5 0a0962cbe20f10deea11fcc39a458df8 ChangeLog 2027
+MD5 ab691427e752754ee30b3d7a10671e6c gtkcdlabel-1.0_pre3.ebuild 825
 MD5 d7ee7d62014b9fa28eb2db67028e28cc files/digest-gtkcdlabel-1.0_pre7 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB9rp5KRy60XGEcJIRAntGAJ0WZjXboiX8B3Z8GUT5ZhNJ4Ap5SgCfWfMt
-q4wF/5MobZs7kxNj+vX7p1A=
-=+VLi
------END PGP SIGNATURE-----
+MD5 61f4ce77f924ab6c43cb682caa6e7973 files/digest-gtkcdlabel-1.0_pre6 71
+MD5 31fc5fdd1f546485e74c081065ddf534 files/digest-gtkcdlabel-1.0_pre3 71
