@@ -1,0 +1,28 @@
+--- ltmain.sh_orig	2004-01-29 02:00:07.202890120 -0500
++++ ltmain.sh	2004-01-29 02:05:30.628721920 -0500
+@@ -2586,6 +2586,12 @@
+ 	  set dummy $deplibs_check_method
+ 	  file_magic_regex=`expr "$deplibs_check_method" : "$2 \(.*\)"`
+ 	  for a_deplib in $deplibs; do
++
++	    if test "x$a_deplib" = "x-lc-client" ; then
++              newdeplibs="$newdeplibs $a_deplib"
++              continue
++            fi
++
+ 	    name="`expr $a_deplib : '-l\(.*\)'`"
+ 	    # If $name is empty we are operating on a -L argument.
+ 	    if test -n "$name" && test "$name" != "0"; then
+@@ -2645,6 +2651,12 @@
+ 	  set dummy $deplibs_check_method
+ 	  match_pattern_regex=`expr "$deplibs_check_method" : "$2 \(.*\)"`
+ 	  for a_deplib in $deplibs; do
++
++	    if test "x$a_deplib" = "x-lc-client" ; then
++              newdeplibs="$newdeplibs $a_deplib"
++              continue
++            fi
++
+ 	    name="`expr $a_deplib : '-l\(.*\)'`"
+ 	    # If $name is empty we are operating on a -L argument.
+ 	    if test -n "$name" && test "$name" != "0"; then

@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.4-r3.ebuild,v 1.3 2004/02/05 04:05:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.4-r3.ebuild,v 1.4 2004/02/05 07:25:17 vapier Exp $
 
 IUSE="${IUSE} apache2"
 
 DESCRIPTION="Apache module for PHP"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa ~ia64"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa ~ia64 ~amd64"
 
 detectapache() {
 	local domsg=
@@ -66,6 +66,9 @@ src_unpack() {
 	multiinstwarn
 	detectapache domsg
 	php-sapi_src_unpack
+	if [ "${ARCH}" == "amd64" ] ; then
+		epatch ${FILESDIR}/${P}-amd64hack.diff
+	fi
 
 	# bug fix for security problem - bug #39952
 	epatch ${FILESDIR}/mod_php-4.3.4-r3.diff
