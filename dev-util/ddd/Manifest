@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 87a2b74f6dbb1b8a8b23af267758e457 ddd-3.3.1-r2.ebuild 1001
-MD5 1787bdc1e5624f5ee4c968f70adee204 ddd-3.3.8.ebuild 1279
-MD5 55d2e29f1ae90b8b2b4ec47402429a27 ddd-3.3.1-r1.ebuild 859
-MD5 73ee372fe9411919aef394ebe83b0ce1 ddd-3.3.10.ebuild 1230
-MD5 fbf26cfc89b735b02e128ac7e47a5849 ddd-3.3.7.ebuild 1225
 MD5 fc4bcd797606e1b0c052fcac51acc48f ddd-3.3.1-r3.ebuild 1687
+MD5 55d2e29f1ae90b8b2b4ec47402429a27 ddd-3.3.1-r1.ebuild 859
+MD5 2d5ef087b36ec0834bf5f0836d64748d ChangeLog 4146
+MD5 1787bdc1e5624f5ee4c968f70adee204 ddd-3.3.8.ebuild 1279
+MD5 87a2b74f6dbb1b8a8b23af267758e457 ddd-3.3.1-r2.ebuild 1001
+MD5 fbf26cfc89b735b02e128ac7e47a5849 ddd-3.3.7.ebuild 1225
+MD5 774e4e03c6390f8f884048006307fe5d ddd-3.3.10.ebuild 1227
 MD5 51e642d3c459aece489cef016bf2ad47 ddd-3.3.9.ebuild 1204
-MD5 3a131498c3ca131d79df3b43d204b8b4 ChangeLog 4057
+MD5 d4dd3754f854ec6c8f64101f66656cf6 files/digest-ddd-3.3.1-r1 136
 MD5 d202dc6d8a53bb3c226007ee3a73ad66 files/ddd-3.3.1-help-window-fix.patch 411
-MD5 682f5789fb009931579fc61eea853161 files/ddd-3.3.8-gcc34.patch 366
+MD5 cce61fcc7e8624cc8f3519dc93be9d59 files/digest-ddd-3.3.7 63
+MD5 fe741077721e30a864d2d61e530340cd files/ddd-3.3.1-gcc3-gentoo.patch 271
+MD5 d4dd3754f854ec6c8f64101f66656cf6 files/digest-ddd-3.3.1-r2 136
+MD5 3a74694a9dd751f507344456d8ec48c4 files/ddd-3.3.1-link-libstdc++.patch 797
 MD5 7275dbc6a4eb227d1d40e42e21b38acb files/digest-ddd-3.3.10 63
 MD5 2d3cff085de702c9683408841f0516ed files/ddd-3.3.1-detect-hipot.patch 809
-MD5 3a74694a9dd751f507344456d8ec48c4 files/ddd-3.3.1-link-libstdc++.patch 797
-MD5 cce61fcc7e8624cc8f3519dc93be9d59 files/digest-ddd-3.3.7 63
 MD5 3f4ee432776983fdd43cb322ab8540e0 files/digest-ddd-3.3.8 62
 MD5 b611121e84b1fbdfdd025b98758ce836 files/digest-ddd-3.3.9 62
-MD5 d4dd3754f854ec6c8f64101f66656cf6 files/digest-ddd-3.3.1-r1 136
-MD5 d4dd3754f854ec6c8f64101f66656cf6 files/digest-ddd-3.3.1-r2 136
+MD5 682f5789fb009931579fc61eea853161 files/ddd-3.3.8-gcc34.patch 366
 MD5 d4dd3754f854ec6c8f64101f66656cf6 files/digest-ddd-3.3.1-r3 136
-MD5 fe741077721e30a864d2d61e530340cd files/ddd-3.3.1-gcc3-gentoo.patch 271
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCQMgOI1lqEGTUzyQRAqoWAJ42ByqxgUjOVIpZCLcQluhqg57YhACcCSBW
-9O/w1ZAUW/YL319Ux1nEAiQ=
-=bKGK
------END PGP SIGNATURE-----
