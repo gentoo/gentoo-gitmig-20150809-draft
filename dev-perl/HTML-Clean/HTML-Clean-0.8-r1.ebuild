@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Clean/HTML-Clean-0.8-r1.ebuild,v 1.11 2004/10/05 13:22:25 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Clean/HTML-Clean-0.8-r1.ebuild,v 1.12 2004/12/23 10:56:46 nigoro Exp $
 
 inherit perl-module
 
@@ -10,5 +10,5 @@ SRC_URI="http://cpan.org/modules/by-module/HTML/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 amd64 sparc alpha ppc s390"
+KEYWORDS="x86 amd64 sparc alpha ppc s390 ~ppc64"
 IUSE=""
