@@ -1,8 +1,11 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.36 2003/01/31 01:40:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.37 2003/01/31 23:58:28 foser Exp $
 
 *gnome-vfs-2.2.0 (30 Jan 2003)
+
+  31 Jan 2003; foser <foser@gentoo.org> gnome-vfs-2.2.0.ebuild :
+  Fixed gnome-mime-data dep, got lost along the way
 
   30 Jan 2003; foser <foser@gentoo.org> gnome-vfs-2.2.0.ebuild :
   GNOME 2.2 rc2 commit
