@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 527845a8b775b18ede964775660bc5de ChangeLog 8668
-MD5 9cee4adcef8a47ea4ee35090f7f89b0a metadata.xml 225
-MD5 c72a802ecbe6e41d0d9e4576221aa1db nfs-utils-1.0.6-r6.ebuild 2903
-MD5 4f4b6a8a798a0d3944bff7d29eca3734 nfs-utils-1.0.6-r4.ebuild 2675
+MD5 a7af7a123c34c6ea479ce2cf45393ccf nfs-utils-1.0.6-r6.ebuild 2905
 MD5 038a2973748342f5bd4cfdaff04cfb1b nfs-utils-1.0.6-r5.ebuild 2782
-MD5 a02eed87e5d581e56feb0f6dfd18e6df files/exports 66
-MD5 b8368dca9c921631ed7019c5c08c3a11 files/nfsmount 1163
+MD5 65e6d66a660e2d0ccb0c8d33110c6e6c ChangeLog 8785
+MD5 9cee4adcef8a47ea4ee35090f7f89b0a metadata.xml 225
+MD5 4f4b6a8a798a0d3944bff7d29eca3734 nfs-utils-1.0.6-r4.ebuild 2675
 MD5 28aff43d6059a5645973388f8e4b9d5f files/nfs 5297
-MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r4 67
-MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r6 67
-MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r5 67
-MD5 3c693e012dcb68827b8f82cc98fa129b files/nfs-utils-0.3.3-rquotad-overflow.patch 1243
-MD5 df57bdbe3dfddd40cda65b04509d5957 files/nfs-utils-1.0.6-usn36.patch.gz 5596
 MD5 a23ae1dac684526aeaa679372648f9bf files/nfs.confd 616
+MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r4 67
+MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r5 67
+MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r6 67
+MD5 3c693e012dcb68827b8f82cc98fa129b files/nfs-utils-0.3.3-rquotad-overflow.patch 1243
+MD5 a02eed87e5d581e56feb0f6dfd18e6df files/exports 66
+MD5 df57bdbe3dfddd40cda65b04509d5957 files/nfs-utils-1.0.6-usn36.patch.gz 5596
+MD5 b8368dca9c921631ed7019c5c08c3a11 files/nfsmount 1163
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBtMpRwDHaUUJ0mYMRAsi0AJ9/+N7XoTRumlM5+pPrO+wqOnXSmgCggNFX
-fL+Y4Qp9KXbS0vJG8yQrvAM=
-=O3Pg
+iD8DBQFBtOE6Z/iYVBmujdURAg6zAKCLE187KaxKd6SMKcjV7cE+4yGvnACfde36
+u2dDrs10jjcxRiguY0Wtg8s=
+=QLus
 -----END PGP SIGNATURE-----
