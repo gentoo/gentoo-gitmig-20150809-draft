@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/kaffeine-mozilla-plugin-0.2.ebuild,v 1.3 2004/08/19 23:20:27 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/kaffeine-mozilla-plugin-0.2.ebuild,v 1.4 2004/10/11 22:53:43 carlo Exp $
 
 inherit nsplugins
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://kaffeine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/kaffeine/${MY_P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 IUSE=""
 
