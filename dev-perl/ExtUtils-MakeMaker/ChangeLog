@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ExtUtils-MakeMaker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.20 2003/06/02 01:10:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.21 2003/06/07 06:53:48 rac Exp $
+
+  06 Jun 2003; <rac@gentoo.org> ExtUtils-MakeMaker-6.05-r4.ebuild,
+  ExtUtils-MakeMaker-6.05-r5.ebuild:
+  Add IUSE, sed-4 dependency
 
 *ExtUtils-MakeMaker-6.05-r5 (01 Jun 2003)
 
