@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.181 2004/10/22 01:10:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.182 2004/10/22 04:08:59 wolf31o2 Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.9.4-r6 (22 Oct 2004)
+
+  22 Oct 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/rc-scripts-1.4.16-livecd.patch, +baselayout-1.9.4-r6.ebuild:
+  Changed from using mingetty to using bashlogin on the livecd. This only
+  affects livecd-functions,sh, so moving straight to stable.
 
   21 Oct 2004; Mike Frysinger <vapier@gentoo.org> baselayout-1.11.2.ebuild:
   Dont install a lot of old symlinks anymore #27082.
