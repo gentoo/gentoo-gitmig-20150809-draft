@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6dfb949a962b9934785d7c5c1fcebc29 PECL-Fileinfo-0.2.ebuild 513
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 d7fe014d4c19406cdbf0c868ce9ac256 ChangeLog 416
+MD5 40304e43b365e0428613782f30a5ccc7 files/digest-PECL-Fileinfo-0.2 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCE4oDaGfFFLhbXWkRAkUfAJoDrRtJmnvo3rxVU3b2NGnA6zvNQACfcDch
+bW/YNUgtlER9LfHsayt6kIo=
+=q6eo
+-----END PGP SIGNATURE-----
