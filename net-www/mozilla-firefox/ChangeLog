@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.91 2004/12/22 22:08:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.92 2004/12/29 12:22:04 josejx Exp $
+
+  29 Dec 2004; Joseph Jezak <josejx@gentoo.org> mozilla-firefox-1.0.ebuild:
+  Tested and marked ppc stable for bug #68976.
 
   22 Dec 2004; Guy Martin <gmsoft@gentoo.org> mozilla-firefox-1.0-r3.ebuild:
   Moved filtering of C[XX]FLAGS for hppa in mozilla.eclass.
