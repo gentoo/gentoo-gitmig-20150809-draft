@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.3.6.ebuild,v 1.5 2004/01/26 01:01:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.3.6.ebuild,v 1.6 2004/01/30 07:11:04 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network-UPS Tools"
@@ -10,9 +10,8 @@ KEYWORDS="x86 ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND=""
+DEPEND=">=sys-devel/autoconf-2.58"
 RDEPEND=">=sys-apps/baselayout-1.8.2"
-
 
 if [ "`use apache2`" ]; then
 	APACHEBIN="apache2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.2.ebuild,v 1.5 2004/01/26 01:01:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.2.ebuild,v 1.6 2004/01/30 07:11:04 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network-UPS Tools"
@@ -23,6 +23,7 @@ if [ -n "${APACHE}" ]; then
 	RDEPEND="${RDEPEND} net-www/apache"
 fi
 RDEPEND="${RDEPEND} ${DEPEND}"
+DEPEND="$DEPEND >=sys-devel/autoconf-2.58"
 
 src_unpack() {
 	unpack ${A} || die

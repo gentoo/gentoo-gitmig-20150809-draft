@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.1-r1.ebuild,v 1.5 2004/01/26 01:01:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.1-r1.ebuild,v 1.6 2004/01/30 07:11:04 drobbins Exp $
 
 IUSE="png"
 
@@ -18,6 +18,7 @@ SLOT="0"
 
 DEPEND="png? ( =sys-libs/zlib-1* =media-libs/libgd-1* =media-libs/libpng-1.2* )"
 RDEPEND="${DEPEND} png? ( net-www/apache ) >=sys-apps/baselayout-1.8.2"
+DEPEND="$DEPEND >=sys-devel/autoconf-2.58"
 
 src_unpack() {
 	unpack ${A} || die

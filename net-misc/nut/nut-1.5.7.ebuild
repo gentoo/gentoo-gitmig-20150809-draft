@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.5.7.ebuild,v 1.2 2004/01/26 01:01:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.5.7.ebuild,v 1.3 2004/01/30 07:11:04 drobbins Exp $
 
 DESCRIPTION="Network-UPS Tools."
 SRC_URI="http://www.exploits.org/nut/development/${PV%.*}/${P}.tar.gz"
@@ -11,8 +11,10 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc"
 IUSE="cgi"
 
-DEPEND=">=sys-apps/sed-4
-	cgi? ( =media-libs/libgd-1* )"
+RDEPEND="cgi? ( =media-libs/libgd-1* )"
+DEPEND="$RDEPEND
+	>=sys-apps/sed-4
+	>=sys-devel/autoconf-2.58"
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
