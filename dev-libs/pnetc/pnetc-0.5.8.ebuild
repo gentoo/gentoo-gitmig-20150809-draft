@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pnetc/pnetc-0.5.6.ebuild,v 1.1 2003/05/03 11:00:43 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pnetc/pnetc-0.5.8.ebuild,v 1.1 2003/06/17 08:37:59 scandium Exp $
 
 MY_P=${P/c/C}
 S=${WORKDIR}/${MY_P}
@@ -15,9 +15,7 @@ KEYWORDS="~x86"
 
 IUSE=""
 
-DEPEND=">=dev-util/treecc-0.2.4
-        >=dev-lang/pnet-${PV}*
-	>=dev-libs/pnetlib-${PV}*"
+DEPEND="=dev-libs/pnetlib-${PV}*"
 
 src_compile() {
 	econf || die
