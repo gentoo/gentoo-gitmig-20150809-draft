@@ -1,50 +1,39 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.45.ebuild,v 1.2 2002/10/04 06:08:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.45.ebuild,v 1.3 2003/02/11 09:40:42 seemant Exp $
 
-DESCRIPTION="Metamail (with Debian patches) - Generic MIME package"
-HOMEPAGE="ftp://thumper.bellcore.com/pub/nsb/"
+inherit eutils
+
+IUSE=""
 
 S=${WORKDIR}/mm2.7/src
+DESCRIPTION="Metamail (with Debian patches) - Generic MIME package"
+HOMEPAGE="ftp://thumper.bellcore.com/pub/nsb/"
 SRC_URI="ftp://thumper.bellcore.com/pub/nsb/mm2.7.tar.Z
-        http://ftp.debian.org/debian/pool/main/m/metamail/metamail_2.7-45.diff.gz"
-LICENSE="GPL-2"
+	http://ftp.debian.org/debian/pool/main/m/metamail/${PN}_2.7-45.diff.gz"
+
 SLOT="0"
-KEYWORDS="*"
+LICENSE="GPL-2"
+KEYWORDS="~x86"
 
-RDEPEND="virtual/glibc
-        sys-libs/ncurses
-        sys-apps/sharutils
-        net-mail/mailbase"
-
-DEPEND="virtual/glibc
-        sys-libs/ncurses
-        sys-devel/automake"
+DEPEND="sys-libs/ncurses
+	sys-apps/sharutils
+	net-mail/mailbase"
 
 src_unpack() {
-
-        unpack mm2.7.tar.Z || die
-        cd ${S}
-        cat ${DISTDIR}/metamail_2.7-45.diff.gz | gzip -d  | patch -p1 || die
-
-}
-
-src_compile() {
-
-        /bin/sh ./configure --prefix=/usr || die "configure problem"
-        emake || die "compile problem"
-
+	unpack ${A}
+	cd ${S}
+	epatch ${WORKDIR}/metamail_2.7-45.diff
+	chmod +x ${S}/configure
 }
 
 src_install () {
-
-        make install DESTDIR=${D}
-        dodoc COPYING CREDITS README
-        rm man/mmencode.1
-        doman man/*
-        doman debian/mimencode.1 debian/mimeit.1
-        insinto /etc
-        doins ${FILESDIR}/mime.types
-
+	make DESTDIR=${D} install || die
+	dodoc COPYING CREDITS README
+	rm man/mmencode.1
+	doman man/*
+	doman debian/mimencode.1 debian/mimeit.1
+	insinto /etc
+	doins ${FILESDIR}/mime.types
 }
 
