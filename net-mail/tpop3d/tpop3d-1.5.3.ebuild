@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3.ebuild,v 1.9 2004/10/21 18:51:22 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3.ebuild,v 1.10 2005/02/16 16:45:36 slarti Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ex-parrot.com/~chris/tpop3d/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="ssl ldap mysql perl pam tcpd maildir debug postgres"
 
 DEPEND="virtual/libc

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.4.2.ebuild,v 1.15 2004/08/26 01:29:51 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.4.2.ebuild,v 1.16 2005/02/16 16:45:36 slarti Exp $
 
 inherit eutils
 
