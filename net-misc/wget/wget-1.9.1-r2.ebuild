@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r2.ebuild,v 1.19 2004/10/23 05:52:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r2.ebuild,v 1.20 2004/11/12 15:48:57 vapier Exp $
 
 inherit gnuconfig eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/wget/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ppc64 ~sparc ~mips alpha arm hppa amd64 ia64 s390 ppc-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 ppc-macos s390 sh ~sparc ~x86"
 IUSE="build debug ipv6 nls socks5 ssl static"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
