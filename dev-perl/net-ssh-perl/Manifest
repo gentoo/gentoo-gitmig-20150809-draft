@@ -1,4 +1,6 @@
-MD5 926e23559e732b5335a08b1e7f54cb6f ChangeLog 602
+MD5 22822bc65d4eb442a367cbbb1bfd5771 ChangeLog 768
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 6d95190810d8eb3458ba60aaad18fcd2 net-ssh-perl-1.23.ebuild 1035
+MD5 b3b348e6ed86770415e389d89032f4db net-ssh-perl-1.25.ebuild 1015
 MD5 128485dab695cc3529f7f42e7baf593f files/digest-net-ssh-perl-1.23 68
+MD5 50dc3546abd916eda57d2a4bb353713c files/digest-net-ssh-perl-1.25 68
