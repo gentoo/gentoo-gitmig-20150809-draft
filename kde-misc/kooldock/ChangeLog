@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kooldock
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.2 2004/11/17 03:53:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.3 2004/11/23 15:52:49 carlo Exp $
+
+  23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> kooldock-0.3.ebuild:
+  QA: missing "inherit eutils"
 
   16 Nov 2004; Jason Wever <weeve@gentoo.org> kooldock-0.3.ebuild:
   Added ~sparc keyword.

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kadslwatch/kadslwatch-01.00.05.ebuild,v 1.2 2004/10/29 23:49:19 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kadslwatch/kadslwatch-01.00.05.ebuild,v 1.3 2004/11/23 15:44:55 carlo Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="K ADSL Watch is a universal CAPI based ADSL monitor for KDE."
 HOMEPAGE="http://www.avm.de/de/Service/AVM_Service_Portale/Linux/CAPI_Tools/K_ADSL_Watch.html"

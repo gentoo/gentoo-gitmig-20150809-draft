@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgraphspace/kgraphspace-0.3.0_pre1.ebuild,v 1.2 2004/11/06 17:30:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgraphspace/kgraphspace-0.3.0_pre1.ebuild,v 1.3 2004/11/23 15:46:33 carlo Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="A Disk space utility "
 HOMEPAGE="http://kgraphspace.sourceforge.net"

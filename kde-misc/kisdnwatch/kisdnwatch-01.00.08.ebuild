@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kisdnwatch/kisdnwatch-01.00.08.ebuild,v 1.1 2004/10/29 23:56:48 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kisdnwatch/kisdnwatch-01.00.08.ebuild,v 1.2 2004/11/23 15:48:05 carlo Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="K ISDN Watch is a CAPI-Monitor for KDE."
 HOMEPAGE="http://www.avm.de/de/Service/AVM_Service_Portale/Linux/CAPI_Tools/K_ISDN_Watch.html"
