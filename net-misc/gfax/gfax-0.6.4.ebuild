@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gfax/gfax-0.6.4.ebuild,v 1.1 2004/11/27 14:26:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gfax/gfax-0.6.4.ebuild,v 1.2 2004/12/13 16:06:58 genstef Exp $
 
-inherit eutils
+inherit eutils mono
 
 DESCRIPTION="Gfax is a free fax front end"
 HOMEPAGE="http://gfax.cowlug.org/"
@@ -12,16 +12,15 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=">=dev-dotnet/mono-0.93
-		>=dev-dotnet/gtk-sharp-0.93"
+		>=dev-dotnet/gtk-sharp-1.0.4-r1
+		dev-dotnet/gnome-sharp
+		dev-dotnet/gconf-sharp
+		dev-dotnet/glade-sharp"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/gfax.Makefile.fix
-}
-
-src_compile() {
-	emake || die "emake failed"
 }
 
 src_install() {

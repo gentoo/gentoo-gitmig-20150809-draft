@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gfax
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gfax/ChangeLog,v 1.1 2004/11/27 14:26:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gfax/ChangeLog,v 1.2 2004/12/13 16:06:58 genstef Exp $
+
+  13 Dec 2004; Stefan Schweizer <genstef@gentoo.org> gfax-0.6.4.ebuild:
+  Fix up the sandbox violation (inherit mono), depend on new gtk-sharp, remove
+  standard src_compile
 
 *gfax-0.6.4 (27 Nov 2004)
 
