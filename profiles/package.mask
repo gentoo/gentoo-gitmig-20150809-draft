@@ -51,7 +51,6 @@ gnome-base/glibwww
 #=sys-apps/devfsd-1.3.16-r1
 #=sys-libs/gpm-1.19.3-r4
 
-
 # conflict with linux-sources, to be resolved soon
 sys-kernel/linux-sources-vanilla
 
@@ -108,7 +107,11 @@ app-editors/gtk-xemacs
 =dev-java/blackdown-1.3.1
 
 # Segfault? someone test this
-=app-misc/bbweather-0.3
+# It works just fine for me, although somewhat difficult to use
+# because you gotta run a perl script first, then the program. Yuck.
+# Its really ugly too. Should we put this to sleep by removing it?
+# THeres probably a better replacement app out there. -Woodchip
+# =app-misc/bbweather-0.3
 
 #OK, I assume that the XFS in 2.4.4-r5 is hosed; alkaline?
 =sys-kernel/linux-sources-2.4.4-r5
