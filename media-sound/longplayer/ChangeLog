@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/longplayer
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/longplayer/ChangeLog,v 1.1 2004/03/31 18:43:05 eradicator Exp $
+
+*longplayer-0.99.2 (31 Mar 2004)
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  longplayer-0.99.2.ebuild, files/longplayer-0.99.2-gentoo.patch:
+  Initial import.  Ebuild submitted in bug #29889 by Sam Wouters <sam@ericom.be>.
+

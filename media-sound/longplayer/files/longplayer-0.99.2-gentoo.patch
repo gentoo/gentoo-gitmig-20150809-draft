@@ -1,0 +1,68 @@
+diff -Naur lplayer-0.99.2.orig/configure.in.in lplayer-0.99.2/configure.in.in
+--- lplayer-0.99.2.orig/configure.in.in	2004-02-09 14:42:44.000000000 -0800
++++ lplayer-0.99.2/configure.in.in	2004-03-21 14:56:13.000000000 -0800
+@@ -20,16 +20,16 @@
+     [if test "$enableval" = yes;  then
+         use_berkeleydb=yes
+         BERKELEYOBJS='lpberkeleydbreader.$(OBJEXT)'
++        BERKELEYLIBS='-ldb_cxx-4.1'
+      fi],
+     [])
+ 
+ if test "$use_berkeleydb" = yes; then
+-    AC_CHECK_LIB([db_cxx], [main], [], 
+-                 AC_MSG_ERROR([Berkeley DB library not found]))
+-    AC_CHECK_HEADER([db_cxx.h],[],
++    AC_CHECK_HEADER([db4.1/db_cxx.h],[],
+                  AC_MSG_ERROR([Berkeley DB includes not found]))
+ fi 
+ 
+ AC_SUBST(BERKELEYOBJS)
++AC_SUBST(BERKELEYLIBS)
+ 
+ AC_CONFIG_FILES([src/longplayer])
+diff -Naur lplayer-0.99.2.orig/src/Makefile.am lplayer-0.99.2/src/Makefile.am
+--- lplayer-0.99.2.orig/src/Makefile.am	2004-02-09 14:42:44.000000000 -0800
++++ lplayer-0.99.2/src/Makefile.am	2004-03-21 14:54:52.000000000 -0800
+@@ -16,8 +16,8 @@
+ #lplayer_bin_LDFLAGS = $(KDE_RPATH) $(all_libraries) $(XMMS_LIBS)
+ 
+ # the libraries to link against.
+-lplayer_bin_LDADD   = @BERKELEYOBJS@ $(LIB_QT) $(LIB_X11)
+-lplayer_bin_DEPENDENCIES = @BERKELEYOBJS@
++lplayer_bin_LDADD   = $(BERKELEYOBJS) $(BERKELEYLIBS) $(LIB_QT) $(LIB_X11)
++lplayer_bin_DEPENDENCIES = $(BERKELEYOBJS)
+ # for kde...
+ #lplayer_bin_LDADD   = $(LIB_KFILE) $(LIB_KDEPRINT) 
+ 
+diff -Naur lplayer-0.99.2.orig/src/Makefile.in lplayer-0.99.2/src/Makefile.in
+--- lplayer-0.99.2.orig/src/Makefile.in	2004-02-09 14:47:40.000000000 -0800
++++ lplayer-0.99.2/src/Makefile.in	2004-03-21 14:55:23.000000000 -0800
+@@ -48,6 +48,7 @@
+ AUTOMAKE = @AUTOMAKE@
+ AWK = @AWK@
+ BERKELEYOBJS = @BERKELEYOBJS@
++BERKELEYLIBS = @BERKELEYLIBS@
+ CC = @CC@
+ CCDEPMODE = @CCDEPMODE@
+ CFLAGS = @CFLAGS@
+@@ -211,8 +212,8 @@
+ #lplayer_bin_LDFLAGS = $(KDE_RPATH) $(all_libraries) $(XMMS_LIBS)
+ 
+ # the libraries to link against.
+-lplayer_bin_LDADD = @BERKELEYOBJS@ $(LIB_QT) $(LIB_X11)
+-lplayer_bin_DEPENDENCIES = @BERKELEYOBJS@
++lplayer_bin_LDADD = $(BERKELEYOBJS) $(BERKELEYLIBS) $(LIB_QT) $(LIB_X11)
++lplayer_bin_DEPENDENCIES = $(BERKELEYOBJS)
+ 
+ # for kde...
+ #lplayer_bin_LDADD   = $(LIB_KFILE) $(LIB_KDEPRINT) 
+diff -Naur lplayer-0.99.2.orig/src/lpberkeleydbreader.cpp lplayer-0.99.2/src/lpberkeleydbreader.cpp
+--- lplayer-0.99.2.orig/src/lpberkeleydbreader.cpp	2004-02-09 14:42:44.000000000 -0800
++++ lplayer-0.99.2/src/lpberkeleydbreader.cpp	2004-03-21 14:52:15.000000000 -0800
+@@ -1,4 +1,4 @@
+-#include <db_cxx.h>
++#include <db4.1/db_cxx.h>
+ #include <cstring>
+ #include <iostream>//FIXME: temporary
+ #include <sstream>
