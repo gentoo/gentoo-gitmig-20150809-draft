@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.29 2003/11/01 15:32:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.30 2003/11/15 02:22:40 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> pygtk-1.99.13-r1.ebuild:
+  Stable on ia64
 
   01 Nov 2003; Jason Wever <weeve@gentoo.org> pygtk-0.6.11.ebuild:
   Marked stable for sparc in regards to bug #31858.
