@@ -1,6 +1,13 @@
 # ChangeLog for www-proxy/dansguardian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian/ChangeLog,v 1.8 2005/02/06 18:33:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian/ChangeLog,v 1.9 2005/02/25 22:29:55 mrness Exp $
+
+*dansguardian-2.8.0.4 (26 Feb 2005)
+
+  26 Feb 2005; Alin Nastac <mrness@gentoo.org> metadata.xml,
+  files/dansguardian.init, dansguardian-2.8.0.2.ebuild,
+  +dansguardian-2.8.0.4.ebuild:
+  Version bump. Fix bug #66177. Append user CFLAGS. Change herd to www-proxy.
 
   06 Feb 2005; Markus Rothe <corsair@gentoo.org> dansguardian-2.8.0.2.ebuild:
   Stable on ppc64
