@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.4.ebuild,v 1.1 2004/05/29 21:44:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.4.ebuild,v 1.2 2004/06/06 05:25:37 mr_bones_ Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="syslog replacement with advanced filtering features"
 HOMEPAGE="http://www.balabit.com/products/syslog_ng/"
@@ -9,9 +11,9 @@ SRC_URI="http://www.balabit.com/downloads/syslog-ng/${PV%.*}/src/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ~ppc64 ~s390"
-IUSE="tcpd"
+IUSE="static tcpd"
 
-RDEPEND=">=dev-libs/libol-0.3.9
+RDEPEND=">=dev-libs/libol-0.3.13
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 DEPEND="${RDEPEND}
 	sys-devel/flex"
@@ -25,9 +27,11 @@ src_unpack() {
 }
 
 src_compile() {
+	use static && append-ldflags -static
+	LDFLAGS="${LDFLAGS}" \
 	econf \
 		$(use_enable tcpd tcp-wrapper) || die "econf failed"
-	emake prefix="${D}/usr" all || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
