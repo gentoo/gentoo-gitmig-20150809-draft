@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/spampd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spampd/ChangeLog,v 1.1 2003/10/28 21:01:43 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spampd/ChangeLog,v 1.2 2003/11/20 10:21:34 mkennedy Exp $
+
+*spampd-2.11-r1 (20 Nov 2003)
+
+  20 Nov 2003; <mkennedy@gentoo.org> spampd-2.11-r1.ebuild, files/init:
+  fixed typo in init script which caused failure to shutdown
 
 *spampd-2.11 (28 Oct 2003)
 
