@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.2.1.ebuild,v 1.2 2003/03/30 16:00:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.2.1.ebuild,v 1.3 2003/05/18 11:07:00 liquidx Exp $
 
 IUSE="doc"
 
@@ -27,30 +27,17 @@ RDEPEND=">=x11-libs/gtk+-2.1
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=app-text/scrollkeeper-0.3.11
 	doc? ( dev-util/gtk-doc )
-	${DEPEND}"
+	${RDEPEND}"
 
-src_compile() {
-	elibtoolize
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		--disable-install-schemas \
-		--enable-platform-gnome-2 \
-		--enable-panelmenu=yes || die
-	make || die
+G2CONF="--disable-install-schemas --enable-platform-gnome-2 --enable-panelmenu=yes"
+
+src_unpack() {
+	unpack ${A}
+	gnome2_omf_fix
 }
 
 src_install() {
-	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
-	make prefix=${D}/usr \
-		sysconfdir=${D}/etc \
-		infodir=${D}/usr/share/info \
-		mandir=${D}/usr/share/man \
-		localstatedir=${D}/var \
-		install || die
-	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
+	gnome2_src_install
     
 	dodoc AUTHORS ChangeLog COPYING* README* INSTALL NEWS message-of-doom 
 	docinto battstat
