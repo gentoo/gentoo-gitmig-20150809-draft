@@ -1,0 +1,5 @@
+MD5 9a3ef009bca4b93baccda46b510bc152 jamvm-1.2.2.ebuild 1089
+MD5 b8504e5a3ea0a8d14393caaad82f0ba6 ChangeLog 400
+MD5 0637a933ecb6e8cedfc4ddfcf3491728 metadata.xml 310
+MD5 993705327b355e08b0839151f016a3d6 files/1.2.2-classpath-fix.diff 521
+MD5 fdfdeff695c4418f2f3787e41bcb88e1 files/digest-jamvm-1.2.2 63
