@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.16.ebuild,v 1.1 2004/12/11 04:52:13 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.16.ebuild,v 1.2 2005/01/03 21:48:03 joem Exp $
 
 inherit libtool gnome.org flag-o-matic gnuconfig
 
@@ -36,6 +36,9 @@ src_compile() {
 	# USE zlib support breaks gnome2
 	# (libgnomeprint for instance fails to compile with
 	# fresh install, and existing) - <azarah@gentoo.org> (22 Dec 2002).
+
+	#see bug #76447
+	epatch ${FILESDIR}/${P}-xlattable.patch
 
 	econf --with-zlib \
 		$(use_with python) \

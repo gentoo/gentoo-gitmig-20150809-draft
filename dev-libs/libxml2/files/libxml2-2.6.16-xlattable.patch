@@ -1,0 +1,17 @@
+===================================================================
+RCS file: /cvs/gnome/libxml2/encoding.c,v
+retrieving revision 1.87
+retrieving revision 1.88
+diff -u -r1.87 -r1.88
+--- encoding.c	2004/11/06 13:26:59	1.87
++++ encoding.c	2004/11/11 20:42:04	1.88
+@@ -2335,7 +2335,7 @@
+     unsigned int c;
+ 
+     if ((out == NULL) || (outlen == NULL) || (inlen == NULL) ||
+-        (in == NULL) || (xlattable == NULL))
++        (in == NULL) || (unicodetable == NULL))
+ 	return(-1);
+     outend = out + *outlen;
+     inend = in + *inlen;
+
