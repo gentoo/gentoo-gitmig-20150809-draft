@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-215-r1.ebuild,v 1.6 2004/06/06 10:06:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-215-r1.ebuild,v 1.7 2004/06/08 05:43:30 raker Exp $
 
 inherit fixheadtails eutils
 
@@ -21,6 +21,8 @@ src_unpack() {
 	unpack ${A}
 	# bug #34717
 	epatch ${FILESDIR}/db4_1.85.diff
+	cd ${S}
+	epatch ${FILESDIR}/nsswitch.ldap.diff
 }
 
 src_compile() {
