@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.35 2003/07/01 15:13:37 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.36 2003/07/03 08:29:19 pauldv Exp $
+
+  03 Jul 2003; Paul de Vrieze <pauldv@gentoo.org> db-4.1.25.ebuild:
+  Allow db-4.0 and db-4.1 to be both installed, by putting db-4.1 in a different
+  slot and by renaming the binaries to db41_??? instead of db4_???
 
   01 Jul 2003; Todd Sunderlin <todd@gentoo.org> db-3.2.9-r5.ebuild:
   set stable on sparc

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25.ebuild,v 1.8 2003/06/30 06:50:56 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25.ebuild,v 1.9 2003/07/03 08:29:19 pauldv Exp $
 
 IUSE="tcltk java"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}/build_unix
 DESCRIPTION="Berkeley DB"
 SRC_URI="http://www.sleepycat.com/update/snapshot/${P}.tar.gz"
 HOMEPAGE="http://www.sleepycat.com"
-SLOT="4"
+SLOT="4.1"
 LICENSE="DB"
 KEYWORDS="amd64"
 
@@ -52,7 +52,7 @@ src_install () {
 	einstall || die
 	for fname in ${D}/usr/bin/db_*
 	do
-		mv ${fname} ${fname//\/db_/\/db4_}
+		mv ${fname} ${fname//\/db_/\/db41_}
 	done
 
 	dodir /usr/include/db4
