@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/cronolog-1.6.2.ebuild,v 1.8 2004/06/24 21:24:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/cronolog-1.6.2.ebuild,v 1.9 2004/06/25 16:06:53 vapier Exp $
 
 DESCRIPTION="Cronolog apache logfile rotator"
 HOMEPAGE="http://cronolog.org/"
@@ -11,8 +11,9 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~ia64"
 IUSE=""
 
-DEPEND="virtual/glibc"
-RDEPEND="${DEPEND} net-www/apache"
+DEPEND="virtual/libc"
+RDEPEND="${DEPEND}
+	net-www/apache"
 
 src_install() {
 	make DESTDIR=${D} install || die

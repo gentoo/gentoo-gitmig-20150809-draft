@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1.ebuild,v 1.6 2004/06/24 21:23:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1.ebuild,v 1.7 2004/06/25 16:04:48 vapier Exp $
 
 DESCRIPTION="A flexible and fast logfile colorizer"
 HOMEPAGE="http://bonehunter.rulez.org/CCZE.html"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 sparc"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-libs/ncurses
 	dev-libs/libpcre"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/cronolog-1.6.2-r1.ebuild,v 1.6 2004/06/24 21:24:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/cronolog-1.6.2-r1.ebuild,v 1.7 2004/06/25 16:06:53 vapier Exp $
 
 inherit eutils
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="x86 ~ppc amd64"
 IUSE=""
 
-DEPEND="virtual/glibc"
-RDEPEND="${DEPEND} net-www/apache"
+DEPEND="virtual/libc"
+RDEPEND="${DEPEND}
+	net-www/apache"
 
 src_unpack() {
 	local a

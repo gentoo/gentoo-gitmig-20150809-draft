@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.2.3.ebuild,v 1.4 2004/06/24 21:23:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.2.3.ebuild,v 1.5 2004/06/25 16:04:19 vapier Exp $
 
 DESCRIPTION="Another Password Generator"
 HOMEPAGE="http://www.adel.nursat.kz/apg/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	cp Makefile Makefile.orig
@@ -21,9 +21,9 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /usr/bin ; doexe apg apgbfm
+	dobin apg apgbfm || die
 	dodoc CHANGES INSTALL README THANKS TODO
-	cd ${S}/doc
+	cd doc
 	doman man/apg.1
 	dodoc APG_TIPS pronun.txt rfc0972.txt rfc1750.txt
 }
