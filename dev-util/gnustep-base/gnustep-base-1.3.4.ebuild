@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/gnustep-base-1.3.4.ebuild,v 1.3 2002/07/19 06:21:08 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/gnustep-base-1.3.4.ebuild,v 1.4 2002/07/19 17:27:49 raker Exp $
 
 DESCRIPTION="GNUstep base package"
 HOMEPAGE="http://www.gnustep.org"
@@ -32,8 +32,8 @@ src_install () {
 	dodir	/usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu
 	cd ${WORKDIR}/${P}/Source/shared_obj/ix86/linux-gnu/gnu-gnu-gnu
 	insinto /usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu
-	doins libgnustep-base.so.1.3.3	
-	dosym /usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu/libgnustep-base.so.1.3.3 \
+	doins libgnustep-base.so.1.3.4	
+	dosym /usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu/libgnustep-base.so.1.3.4 \
 		/usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu/libgnustep-base.so.1
 	dosym /usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu/libgnustep-base.so.1 \
 		/usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu/libgnustep-base.so
