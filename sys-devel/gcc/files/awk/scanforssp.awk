@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Contributor: Ned Ludd <solar@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/scanforssp.awk,v 1.3 2003/12/29 18:51:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/scanforssp.awk,v 1.4 2003/12/29 21:08:02 azarah Exp $
 
 
 # Does not seem to be used in this script.
@@ -193,6 +193,8 @@ BEGIN {
 
 					print
 					
+					close(scan_file_pipe)
+					close(pipe)
 					exit(1)
 				}
 			}
