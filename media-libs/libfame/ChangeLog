@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libfame
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.22 2004/10/01 22:59:35 pyrania Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.23 2005/01/04 10:01:36 hardave Exp $
+
+  04 Jan 2005; Hardave Riar <hardave@gentoo.org> libfame-0.9.1.ebuild:
+  Stable on mips, dep of bug #74475.
 
   02 Oct 2004; Markus Nigbur <pyrania@gentoo.org> libfame-0.9.1.ebuild:
   inherit eutils!

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.8.10.ebuild,v 1.14 2004/07/14 20:07:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.8.10.ebuild,v 1.15 2005/01/04 10:01:36 hardave Exp $
 
 DESCRIPTION="MPEG-1 and MPEG-4 video encoding library"
 SRC_URI="mirror://sourceforge/fame/${P}.tar.gz"
