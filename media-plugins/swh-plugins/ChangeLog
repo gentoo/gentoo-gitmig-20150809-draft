@@ -1,8 +1,13 @@
 # ChangeLog for media-plugins/swh-plugins
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.4 2002/12/24 15:53:11 viz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.5 2003/01/23 21:06:24 styx Exp $
 
 *swh-plugins-0.3.3 (24 Dec 2002)
+
+  23 Jan 2003; Joachim Blaabjerg <styx@gentoo.org> swh-plugins-0.3.3.ebuild :
+
+  According to Paul Thompson in bug #14271, these plugins work without ALSA
+  installed, so I made the alsa-driver dependency alsa USE flag  conditional.
 
   24 Dec 2002; Tobias Eichert <viz@gentoo.org> swh-plugins-0.3.3.ebuild
   files/digest-swh-plugins-0.3.3 :
