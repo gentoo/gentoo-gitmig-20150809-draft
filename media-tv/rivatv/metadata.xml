@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>video</herd>
+<herd>media-tv</herd>
 <maintainer>
   <email>blauwers@gentoo.org</email>
   <name>Bart Lauwers</name>
-<!--  <description>Description of the maintainership</description> -->
 </maintainer>
-<!-- <longdescription>Long description of the package</longdescription> -->
 </pkgmetadata>

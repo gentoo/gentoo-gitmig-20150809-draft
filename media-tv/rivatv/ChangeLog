@@ -1,6 +1,19 @@
 # ChangeLog for media-tv/rivatv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/ChangeLog,v 1.7 2004/06/25 00:34:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/ChangeLog,v 1.8 2004/07/11 14:31:31 blauwers Exp $
+
+* rivatv-0.8.5-r1 (11 Jul 2004)
+
+  11 Jul 2004; Bart Lauwers <blauwers@gentoo.org> rivatv-0.8.5-r1.ebuild:
+  Added workaround for build on 2.6 kernels per Bug #45811
+
+* rivatv-0.8.5 (11 Jul 2004)
+
+  11 Jul 2004; Bart Lauwers <blauwers@gentoo.org> rivatv-0.8.0-r1.ebuild, rivatv-0.8.2.ebuild, rivatv-0.8.4.ebuild, rivatv-0.8.5.ebuild, rivatv-0.8.1.ebuild, rivatv-0.8.3.ebuild metadata.xml:
+  metadata did not like herd video (dixit repoman)
+  Clean up copyright notices for Gentoo Foundation
+  Add IUSE as suggested by repoman
+  Version bump to 0.8.5
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> rivatv-0.8.3.ebuild,
   rivatv-0.8.4.ebuild:
