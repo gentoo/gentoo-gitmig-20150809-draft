@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.90.ebuild,v 1.7 2004/10/13 03:51:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.90.ebuild,v 1.8 2004/10/13 19:38:49 vapier Exp $
 
 inherit flag-o-matic eutils gnuconfig
 
@@ -41,6 +41,16 @@ src_compile() {
 		--libexecdir=/usr/sbin \
 		$(use_enable nls) || die
 	emake || die "emake failed"
+}
+
+src_test() {
+	if [ "${ARCH}" == "x86" ] ; then
+		einfo "Skipping make test due to a glibc bug (See #67051)."
+		einfo "Then again, it probably would have worked anyways."
+		einfo "So have some faith and pretend everything is OK."
+	else
+		make test || die "make test failed"
+	fi
 }
 
 src_install() {
