@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.13 2005/01/02 22:16:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.14 2005/01/03 19:44:44 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -212,6 +212,10 @@ src_unpack() {
 	# Look at http://hansmi.ch/software/qmail
 	epatch ${DISTDIR}/qmail-relaymxlookup-0.3.diff
 	epatch ${FILESDIR}/${PVR}/Makefile-relaymxlookup.patch
+
+	# Fix a bug on ia64, see bug 68173
+	# Doesn't affect other platforms
+	epatch ${FILESDIR}/${PVR}/spawn-alloc-h.patch
 
 	echo -n "$(tc-getCC) ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then
