@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.2 2004/04/30 09:36:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.3 2004/05/02 02:33:43 eradicator Exp $
 
 # Note that this ebuild requires you to set the MAYA_INSTALL_LOC environment
 # variable to the location of your maya RPMS and documentation:
@@ -217,6 +217,11 @@ pkg_postinstall() {
 	einfo "Two init scripts have been installed:"
 	einfo "maya-docs is for the document server (help system)."
 	einfo "aw_flexlm is for the license server"
+	einfo
+
+	einfo "Maya 5.0.1 was compiled with gcc 3.0 and origionally linked against glibc 2.1.3.  If you intend to compile"
+	einfo "plugins for Maya, you will need to 'emerge \=sys-devel/gcc-3.0*' and use gcc-config to switch compilers."
+	einfo "The Maya SDK headers are located in /usr/aw/maya/include, and libs are in /usr/aw/maya/lib."
 	einfo
 
 	# http://www.highend2d.com/boards/showthreaded.php?Cat=&Board=linuxforum&Number=174726&page=&view=&sb=&o=
