@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9e42ce02f7aa27d4a057f834c29b9bc8 ChangeLog 650
+MD5 2a14f62dfe1ddfa69f951670f5b9f461 ChangeLog 651
 MD5 fcff05a43d4b7a4b35e3dfa4f56ae455 jjtraveler-0.4.3.ebuild 911
 MD5 7e8fc34441612f3c9026431a35dc23e0 metadata.xml 249
 MD5 c00868eb38ba6ef4163ce97a69a0da83 files/digest-jjtraveler-0.4.3 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBWLBeI1lqEGTUzyQRAq3EAKCznMYe1JpKd+wyHTMD3INknO4sDgCgxOz0
-pwbJQ42SKDvFQ7yclOtotnc=
-=Wpar
+iD8DBQFBW00LI1lqEGTUzyQRAt/1AJ93qdnbyhk/IrAP2PDm377nqSqi9wCfft51
+6+AO3zkWkbZZlneKAhW2QAQ=
+=YdVD
 -----END PGP SIGNATURE-----

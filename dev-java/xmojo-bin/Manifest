@@ -1,4 +1,14 @@
-MD5 842f0044fc60297bec64a469d7daee70 xmojo-bin-5.0.0.ebuild 1122
-MD5 bc197d6d9d9a8c1e7fa598a272bd6f62 ChangeLog 369
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f3a642e2d26f013dda71018b439dc09e ChangeLog 370
 MD5 3a31e5cc149fc6042a181061f39211ec metadata.xml 1245
+MD5 842f0044fc60297bec64a469d7daee70 xmojo-bin-5.0.0.ebuild 1122
 MD5 cb835949b6e9454bf1f7143a08f7b671 files/digest-xmojo-bin-5.0.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW0q4I1lqEGTUzyQRAqnCAKCl6hPOaK+w3obCXqe/WHU66VuoRwCeLZND
+mPYdZHm1llXFM+FFuObqOJA=
+=Yh9h
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 fa25ffc102c5fd613e316d023923c714 ChangeLog 542
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0db2af3e5c7a08a7811b50e510ef3166 ChangeLog 549
 MD5 99604501f8fef1bf3c918682b2c3ef76 gnu-crypto-2.0.1.ebuild 1032
 MD5 f68ccff3a15a74a08ec0f41232d8a6e0 metadata.xml 461
 MD5 a30727b2c8c5fc36a69558733c20d877 files/digest-gnu-crypto-2.0.1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW0u1I1lqEGTUzyQRAnz0AKDKxG+zjVsNfqsiWIy5psJAOiPQFQCgj7LJ
+oX0+vJPTaMz4X8HwCyEDm3I=
+=dzY5
+-----END PGP SIGNATURE-----

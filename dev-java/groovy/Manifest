@@ -1,4 +1,7 @@
-MD5 f639b0138ca1879556e76996887acb55 ChangeLog 1058
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3cc15d917c26c0b984ed71b9643016ea ChangeLog 1061
 MD5 ebbba0dfed8407850f874c29a5449163 groovy-1.0_beta4-r1.ebuild 3923
 MD5 04115968338455a8b9695e3e6892cf24 groovy-1.0_beta4.ebuild 1880
 MD5 d24f57f20f31e6a9a7181d82f4cfc9b9 metadata.xml 831
@@ -6,3 +9,10 @@ MD5 6e8019506e306b3b30bde2ac6dcb9d53 files/basescript-1.0_beta4 3179
 MD5 7481ca6b947624d4f94dcddc9d04e25b files/build.xml-1.0_beta4 5427
 MD5 81ed508672aae26b21b7aadfab3f3c9d files/digest-groovy-1.0_beta4 73
 MD5 81ed508672aae26b21b7aadfab3f3c9d files/digest-groovy-1.0_beta4-r1 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW0sGI1lqEGTUzyQRAgMnAKCpapv4/xrv4yaMR7lYrW69loDFCgCgkrdA
+5KYHwy5ryYrtHG77Qrq5J88=
+=2lQh
+-----END PGP SIGNATURE-----
