@@ -3,7 +3,8 @@
 <pkgmetadata>
 	<herd>desktop-misc</herd>
 <maintainer>
-	<email>liquidx@gentoo.org</email>
-	<description>looking for volunteers to take over maintaining this</description>
+	<email>rizzo@gentoo.org</email>
+	<description>I'll work on this in liquidx's absence.  Can't guarantee I
+		won't break anything.</description>
 </maintainer>
 </pkgmetadata>

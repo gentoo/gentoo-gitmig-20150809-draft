@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.73 2005/02/24 20:45:34 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.74 2005/02/24 21:22:29 rizzo Exp $
+
+*xscreensaver-4.20 (24 Feb 2005)
+
+  24 Feb 2005; Don Seiler <rizzo@gentoo.org> metadata.xml,
+  +files/xscreensaver-4.20-norpm.patch, +xscreensaver-4.20.ebuild:
+  Version bump. As of 4.19 GTK1 support has been removed. This closes bug
+  #60379. Thank you to my NetNet buddy Ryan Finnie.
 
   24 Feb 2005; Don Seiler <rizzo@gentoo.org> xscreensaver-4.16.ebuild:
   Fixing dependency so it matches the terms of configure flags. Bug was
