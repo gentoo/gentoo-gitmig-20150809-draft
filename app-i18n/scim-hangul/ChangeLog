@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/scim-hangul
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/ChangeLog,v 1.1 2004/08/03 12:14:12 usata Exp $
+
+*scim-hangul-0.0.2 (03 Aug 2004)
+
+  03 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +scim-hangul-0.0.2.ebuild:
+  Initial import.
+
