@@ -1,6 +1,16 @@
-MD5 4161266d3f54078f63f39368583a6494 ChangeLog 1116
-MD5 155da428f344189ed3afe853bdd0a233 metadata.xml 354
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c5891d02599802a324b2f89bd0fdca5d ecell-3.1.102.ebuild 776
-MD5 02eca1206323f73c027d082c782c5a0c ecell-3.1.102-r1.ebuild 1044
-MD5 8f591a6f5e0c8c4c1389b02612d7c6df files/digest-ecell-3.1.102 66
+MD5 05f5746322c9f3abfd0dd04c0228f465 ecell-3.1.102-r1.ebuild 1059
+MD5 5cc9cf38052ab80c509ad16c9e118ea3 ChangeLog 1263
+MD5 155da428f344189ed3afe853bdd0a233 metadata.xml 354
 MD5 8f591a6f5e0c8c4c1389b02612d7c6df files/digest-ecell-3.1.102-r1 66
+MD5 8f591a6f5e0c8c4c1389b02612d7c6df files/digest-ecell-3.1.102 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB2GVQI1lqEGTUzyQRAoRtAKCdH1V3g4ak8FFAqAnhDtyb4ZpLfQCfQA44
+QAeuIRnFyLkok9aZiwx8+Lc=
+=nR9e
+-----END PGP SIGNATURE-----

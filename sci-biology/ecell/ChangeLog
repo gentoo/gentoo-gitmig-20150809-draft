@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/ecell
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ecell/ChangeLog,v 1.4 2005/01/02 17:26:33 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ecell/ChangeLog,v 1.5 2005/01/02 21:19:04 swegener Exp $
+
+*ecell-3.1.102-r1 (02 Jan 2005)
+
+  02 Jan 2005; Sven Wegener <swegener@gentoo.org> ecell-3.1.102-r1.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   02 Jan 2005; Chris Bainbridge <chrb@gentoo.org> :
   Replaced gtk flag with gnome flag, since gui is actually a gnome app not
