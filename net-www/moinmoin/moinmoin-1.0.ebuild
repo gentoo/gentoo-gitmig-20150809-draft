@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/moinmoin/moinmoin-1.0.ebuild,v 1.8 2003/11/16 21:51:16 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/moinmoin/moinmoin-1.0.ebuild,v 1.9 2003/12/08 22:46:27 spider Exp $
 
 inherit webapp-apache
 
@@ -40,7 +40,7 @@ src_install () {
 	cp -r data htdocs/* ${D}/${HTTPD_ROOT}/${PN}
 	cp cgi-bin/* ${D}/${HTTPD_ROOT}/${PN}
 	cd ${D}/${HTTPD_ROOT}
-	chown -R ${HTTPD_USER}.${HTTPD_USER} ${PN}
+	chown -R ${HTTPD_USER}:${HTTPD_USER} ${PN}
 	cd ${D}/${HTTPD_ROOT}/${PN}
 	chmod  a+x moin.cgi
 	sed -i -e "s/\/wiki/\/moinmoin/" moin_config.py
