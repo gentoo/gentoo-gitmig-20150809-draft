@@ -1,11 +1,15 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.14 2002/08/27 20:55:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.15 2002/09/04 10:03:59 aliz Exp $
 
+*scrollkeeper-0.3.11-r1 (04 Sep 2002)
+  04 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> scrollkeeper-0.3.11.ebuild-r1 files/scrollkeeper-0.3.11-gentoo.diff :
+  Security update.
+
+*scrollkeeper-0.3.11 (29 Jul 2002)
   27 Aug 2002; Martin Schlemmer <azarah@gentoo.org> scrollkeeper-0.3.11.ebuild :
   Touch ${S}/intl/libintl.h if "nls" is not in USE.  Closes bug #7011.
 
-*scrollkeeper-0.3.11 (29 Jul 2002)
   29 Jul 2002; Spider <spider@gentoo.org> scrollkeeper-0.3.11.ebuild :
   Update ebuild and patch
   
