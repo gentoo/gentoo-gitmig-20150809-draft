@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/hdf-4.2.0.ebuild,v 1.1 2003/12/17 08:10:54 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/hdf-4.2.0.ebuild,v 1.2 2004/02/06 15:56:46 aliz Exp $
 
 # substitute second dot by "r"
 MY_PV=${PV/./X}
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.ncsa.uiuc.edu/HDF/pub/outgoing/hdf4/hdf${MY_PV}/hdf${MY_PV}.t
 HOMEPAGE="http://hdf.ncsa.uiuc.edu/hdf4.html"
 
 LICENSE="NCSA-HDF"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 SLOT="0"
 IUSE=""
 
