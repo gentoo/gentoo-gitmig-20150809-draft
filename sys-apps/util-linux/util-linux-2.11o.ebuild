@@ -2,12 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11o.ebuild,v 1.2 2002/04/26 05:42:18 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11o.ebuild,v 1.3 2002/04/26 05:53:52 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Various useful Linux utilities"
-SRC_URI="http://www.kernel.org/pub/linux/utils/${PN}/${P}.tar.gz
-	
+SRC_URI="http://www.kernel.org/pub/linux/utils/${PN}/${P}.tar.gz"
 
 DEPEND="virtual/glibc >=sys-libs/ncurses-5.2-r2"
 
