@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/koma-script
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.4 2004/04/17 16:36:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.5 2004/05/06 16:16:06 ciaranm Exp $
+
+  06 May 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  koma-script-20040111-r1.ebuild:
+  Added ~sparc, #50250
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
   koma-script-20040111-r1.ebuild, koma-script-20040111.ebuild:
