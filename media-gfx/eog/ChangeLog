@@ -1,7 +1,11 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.8 2002/06/06 21:53:13 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.9 2002/06/10 21:18:57 spider Exp $
 
+*eog-1.0.0 (10 Jun 2002)
+  10 Jun 2002; Spider <spider@gentoo.org> eog-1.0.0.ebuild :
+  New stable version! get it while its hot
+  
 eog-0.118.0 (06 Jun 2002)
   06 Jun  2002; Spider <spider@gentoo.org>  eog-0.118.0.ebuild:
    gnome-print fix
