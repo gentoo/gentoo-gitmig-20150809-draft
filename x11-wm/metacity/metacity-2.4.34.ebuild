@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.34.ebuild,v 1.8 2003/04/09 15:38:55 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.34.ebuild,v 1.9 2003/05/22 17:21:29 foser Exp $
 
 inherit gnome2
 
@@ -15,8 +15,7 @@ KEYWORDS="x86 ~ppc alpha sparc"
 MAKEOPTS="-j1"
 
 # sharp gtk dep is for a certain speed patch
-RDEPEND="virtual/x11
-	>=x11-libs/gtk+-2.2.0-r1
+RDEPEND=">=x11-libs/gtk+-2.2.0-r1
 	>=gnome-base/gconf-1.2
 	>=gnome-base/libglade-2
 	>=x11-libs/startup-notification-0.4"

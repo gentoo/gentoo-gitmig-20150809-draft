@@ -1,21 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.21.ebuild,v 1.3 2003/02/13 17:50:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.55.ebuild,v 1.1 2003/05/22 17:21:29 foser Exp $
 
 inherit gnome2
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Small gtk2 WindowManager"
-HOMEPAGE="http://people.redhat.com/~hp/metacity/"
+HOMEPAGE="http://www.gnome.org/softwaremap/projects/metacity/"
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+IUSE=""
+
+# not parallel-safe; see bug #14405
+MAKEOPTS="${MAKEOPTS} -j1"
 
 # sharp gtk dep is for a certain speed patch
 RDEPEND="virtual/x11
 	>=x11-libs/gtk+-2.2.0-r1
 	>=gnome-base/gconf-1.2
-	>=gnome-base/libglade-2
 	>=x11-libs/startup-notification-0.4"
 
 DEPEND="${RDEPEND}
