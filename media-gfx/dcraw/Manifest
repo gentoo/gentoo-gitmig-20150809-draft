@@ -2,9 +2,11 @@ MD5 1bd699e70e3c768e5ff6d63e38cbe78b dcraw-6.25.ebuild 1546
 MD5 4c9f3fcd9343cbf3e5bd2782b333ea5c dcraw-6.08.ebuild 1239
 MD5 2cdd1dede98bfcd0b23ab1e73c8dd9da dcraw-6.09.ebuild 1335
 MD5 9ec463cfd8dec8ebebb2d61eb070ada3 metadata.xml 728
-MD5 ce82e4bf92a9bb35a687d815fb077f7f ChangeLog 1071
+MD5 015e52ae1c71042a9dfe3a47b3da2dfb ChangeLog 1187
+MD5 d6e853ca6bceaff827a99365622f0c28 dcraw-6.31.ebuild 1543
 MD5 68cdb7a97cd285acf5fa030f207fcf49 dcraw-6.19.ebuild 1342
 MD5 d9bd5461e3812d09c6fac5e700a0f4a6 files/digest-dcraw-6.19 62
+MD5 4b362e7db64e25af915237f19ddf630b files/digest-dcraw-6.31 62
 MD5 75a3faedfe2fbc457ef792c7438bf2ef files/digest-dcraw-6.08 62
 MD5 f18fbdbd428d34df0a063484f690219f files/digest-dcraw-6.09 62
 MD5 ce5fd286688fa453124dd4e3701c6964 files/digest-dcraw-6.25 62
