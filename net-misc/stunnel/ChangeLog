@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.31 2004/07/28 20:35:26 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.32 2004/08/18 23:10:03 aliz Exp $
+
+  18 Aug 2004; Daniel Ahlberg <aliz@gentoo.org> files/stunnel.conf.4.05,
+  files/stunnel.rc6.4.05:
+  Added missing files to CVS, closing #54390.
+  Unmasked on x86 and amd64.
 
   28 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> stunnel-3.26.ebuild:
   Marked ~amd64.
