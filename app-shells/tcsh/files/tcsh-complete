@@ -2,7 +2,7 @@
 ##
 ## Gentoo system tcsh scripts
 ##
-## $Id: tcsh-complete,v 1.2 2003/10/18 05:40:05 raker Exp $
+## $Id: tcsh-complete,v 1.3 2003/12/22 15:07:59 gmsoft Exp $
 ##
 ## Based on the TCSH complete.tcsh script, with changed from the TCSHRC
 ## package (http://tcshrc.sourceforge.net)
@@ -917,13 +917,13 @@ endif
     #			n/*/'`mount | cut -d " " -f 1`'/
     #complete  mountall	c/-/"(F l r)"/ n@-F@'`\ls -1 /usr/lib/fs`'@
     #complete umountall	c/-/"(F h k l r s)"/ n@-F@'`\ls -1 /usr/lib/fs`'@ \
-    			n/-h/'`df -k | cut -s -d ":" -f 1 | sort -u`'/
+    #			n/-h/'`df -k | cut -s -d ":" -f 1 | sort -u`'/
     # BSD 4.3 filesystems
-    complete  mount	c/-/"(a r t v)"/ n/-t/"(4.2 nfs)"/ \
-    			n@*@'`grep -v "^#" /etc/fstab | tr -s " " "	" | cut -f 2`'@
-    complete umount	c/-/"(a h t v)"/ n/-t/"(4.2 nfs)"/ \
-    			n/-h/'`df | cut -s -d ":" -f 1 | sort -u`'/ \
-    			n/*/'`mount | cut -d " " -f 3`'/
+    #complete  mount	c/-/"(a r t v)"/ n/-t/"(4.2 nfs)"/ \
+    #			n@*@'`grep -v "^#" /etc/fstab | tr -s " " "	" | cut -f 2`'@
+    #complete umount	c/-/"(a h t v)"/ n/-t/"(4.2 nfs)"/ \
+    #			n/-h/'`df | cut -s -d ":" -f 1 | sort -u`'/ \
+    #			n/*/'`mount | cut -d " " -f 3`'/
     # BSD 4.2 filesystems
     #complete  mount	c/-/"(a r t v)"/ n/-t/"(ufs nfs)"/ \
     #			n@*@'`cut -d ":" -f 2 /etc/fstab`'@
