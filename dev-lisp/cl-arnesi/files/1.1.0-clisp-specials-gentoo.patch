@@ -1,0 +1,52 @@
+diff -ur arnesi_1.1.0.orig/src/specials.lisp arnesi_1.1.0/src/specials.lisp
+--- arnesi_1.1.0.orig/src/specials.lisp	2003-11-19 07:50:23.000000000 -0600
++++ arnesi_1.1.0/src/specials.lisp	2003-11-30 05:33:45.775662608 -0600
+@@ -2,6 +2,12 @@
+ 
+ (in-package :it.bese.arnesi)
+ 
++(defun check-required (required name vars)
++  (dolist* (var required)
++    (assert (member var vars)
++                        (var)
++                        "Unrecognized symbol ~S in ~S." var name)))
++
+ (defmacro def-special-enviroment (name (&key accessor binder binder*) &rest vars)
+   "Define two macros for dealing with groups or related special
+   variables.
+@@ -25,26 +31,26 @@
+   (unless binder*
+     (setf binder*  (intern-concat (list binder '#:*) (symbol-package binder))))
+   `(progn
+-     (flet ((check-required (required)
+-              (dolist* (var required)
+-                (assert (member var ',vars)
+-                        (var)
+-                        "Unrecognized symbol ~S in ~S." var ',name))))
++;;      (flet ((check-required (required)
++;;               (dolist* (var required)
++;;                 (assert (member var ',vars)
++;;                         (var)
++;;                         "Unrecognized symbol ~S in ~S." var ',name))))
+        (defmacro ,binder (requested-vars &body body)
+-         (check-required (mapcar #'car requested-vars))
++         (check-required (mapcar #'car requested-vars) ',name ',vars)
+          `(let ,requested-vars
+             (declare (special ,@(mapcar #'car requested-vars)))
+             ,@body))
+        (defmacro ,binder* (requested-vars &body body)
+-         (check-required (mapcar #'car requested-vars))
++         (check-required (mapcar #'car requested-vars) ',name ',vars)
+          `(let* ,requested-vars
+             (declare (special ,@(mapcar #'car requested-vars)))
+             ,@body))
+        (defmacro ,accessor (requested-vars &body body)
+-         (check-required requested-vars)
++         (check-required requested-vars ',name ',vars)
+          `(locally (declare (special ,@requested-vars))
+             ,@body))
+-       ',name)))
++       ',name))
+   
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;;;; Copyright (c) 2002-2003, Edward Marco Baringer

@@ -1,0 +1,45 @@
+diff -ur arnesi_1.1.0.orig/src/string.lisp arnesi_1.1.0/src/string.lisp
+--- arnesi_1.1.0.orig/src/string.lisp	2003-11-19 07:50:23.000000000 -0600
++++ arnesi_1.1.0/src/string.lisp	2003-11-30 01:35:09.262103488 -0600
+@@ -2,15 +2,16 @@
+ 
+ (in-package :it.bese.arnesi)
+ 
+-(defconstant +lower-case-ascii-alphabet+ "abcdefghijklmnopqrstuvwxyz")
++(eval-when (:compile-toplevel)
++  (defconstant +lower-case-ascii-alphabet+ "abcdefghijklmnopqrstuvwxyz")
+ 
+-(defconstant +upper-case-ascii-alphabet+ "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
++  (defconstant +upper-case-ascii-alphabet+ "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+ 
+-(defconstant +ascii-alphabet+ "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
++  (defconstant +ascii-alphabet+ "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+ 
+-(defconstant +alphanumeric-ascii-alphabet+ "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
++  (defconstant +alphanumeric-ascii-alphabet+ "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+ 
+-(defconstant +base64-alphabet+ "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/")
++  (defconstant +base64-alphabet+ "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"))
+ 
+ (defun random-string (&optional (length 32) (alphabet +ascii-alphabet+))
+   "Returns a random alphabetic string."
+@@ -54,13 +55,14 @@
+ 		  when (not (member (aref string (1- index)) chars))
+ 		    do (return index)))))
+ 
+-(defconstant ~% (format nil "~%"))
++(eval-when (:compile-toplevel)
++  (defconstant ~% (format nil "~%"))
+ 
+-(defconstant ~T (string #\Tab))
++  (defconstant ~T (string #\Tab))
+ 
+-(defconstant +CR-LF+ (make-array 2 :element-type 'character
++  (defconstant +CR-LF+ (make-array 2 :element-type 'character
+                                    :initial-contents (list (code-char #x0D)
+-                                                           (code-char #x0A))))
++                                                           (code-char #x0A)))))
+ 
+ (defun ~D (number &optional stream &key mincol pad-char)
+   (format stream "~v,vD" mincol pad-char number))
+Only in arnesi_1.1.0/src: string.lisp~
