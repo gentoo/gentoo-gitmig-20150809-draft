@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/genflags
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/genflags/ChangeLog,v 1.1 2003/07/27 11:14:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/genflags/ChangeLog,v 1.2 2003/07/27 19:28:05 robbat2 Exp $
+
+*genflags-0.94-r1 (27 Jul 2003)
+
+  27 Jul 2003; Robin Hugh Johnson,Room,604-339-5621,604-298-8414
+  <robbat2@gentoo.org> genflags-0.94-r1.ebuild:
+  Add post-install note on what it does wrong. Mark stable on ALL arches (it
+  doesn't get compiled so this is easy).
 
 *genflags-0.94 (27 Jul 2003)
 
