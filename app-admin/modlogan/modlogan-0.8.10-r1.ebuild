@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.10-r1.ebuild,v 1.5 2004/04/12 16:04:42 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.10-r1.ebuild,v 1.6 2004/05/04 13:35:30 kloeri Exp $
 
 IUSE="nls mysql X"
 
@@ -17,7 +17,7 @@ MY_FILESDIR="${FILESDIR}/${PV%.*}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ia64 ~amd64 ~ppc sparc ~alpha hppa"
+KEYWORDS="x86 ~ia64 ~amd64 ~ppc sparc alpha hppa"
 
 DEPEND="dev-libs/libxml
 	dev-libs/libxml2

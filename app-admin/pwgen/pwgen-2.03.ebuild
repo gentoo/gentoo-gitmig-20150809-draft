@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.03.ebuild,v 1.9 2004/04/25 21:42:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.03.ebuild,v 1.10 2004/05/04 13:41:44 kloeri Exp $
 
 DESCRIPTION="Password Generator"
 SRC_URI="mirror://sourceforge/pwgen/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://sourceforge.net/projects/pwgen/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc hppa amd64 alpha"
+KEYWORDS="x86 ~ppc ~sparc hppa amd64 ~alpha"
 
 DEPEND="virtual/glibc"
 
