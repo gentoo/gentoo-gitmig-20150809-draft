@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/mjc-sources-2.4.20-r2.ebuild,v 1.3 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/mjc-sources-2.4.20_pre10-r1.ebuild,v 1.1 2002/10/25 21:48:58 lostlogic Exp $
 
 IUSE="build"
 
@@ -11,10 +11,12 @@ ETYPE="sources"
 inherit kernel || die
 
 OKV=2.4.19
+KV=2.4.20-pre10-mjc1
+EXTRAVERSION=-pre10-mjc2
+S=${WORKDIR}/linux-${KV}
 DESCRIPTION="Full sources for MJC's Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 http://www.kernel.org/pub/linux/kernel/v2.4/testing/patch-2.4.20-pre7.bz2
-	 mirror://gentoo/patch-${KV}.bz2"
+	 http://www.kernel.org/pub/linux/kernel/people/mjc/patches-${KV}a.tar.bz2"
 KEYWORDS="x86 -ppc -sparc -sparc64"
 
 src_unpack() {
@@ -22,10 +24,9 @@ src_unpack() {
 	unpack linux-${OKV}.tar.bz2
 	mv linux-${OKV} linux-${KV} || die
 
-	cd linux-${KV}
-	bzcat ${DISTDIR}/patch-2.4.20-pre7.bz2|patch -p1 || die "patch 1 failed"
-	bzcat ${DISTDIR}/patch-${KV}.bz2 | patch -p1 || die "patch 2 failed"
+	unpack patches-${KV}a.tar.bz2
+	cd ${KV}
 
-	kernel_universal_unpack
+	kernel_src_unpack
 
 }

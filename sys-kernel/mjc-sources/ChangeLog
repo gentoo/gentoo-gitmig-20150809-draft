@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/mjc-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/ChangeLog,v 1.4 2002/10/01 00:37:22 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/ChangeLog,v 1.5 2002/10/25 21:48:58 lostlogic Exp $
+
+*mjc-sources-2.4.20_pre10-r1 (25 Oct 2002)
+
+  25 Oct 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.20_pre10-r1.ebuild:
+
+  I know the version is wrong, but this is more correct to how he names
+  them.
+
+  This kernel is very nice, has no documentation, but I'm running it...
+
+  Rather than lolo-sources, this may become the next gentoo-sources as
+  it matches very closely what I'm doing with lolo-sources, but MJC
+  seems to be doing a better job keeping up with stuff ATM.
 
 *mjc-sources-2.4.20-r2 (30 Sep 2002)
 
