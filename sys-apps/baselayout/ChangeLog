@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.185 2004/10/26 02:23:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.186 2004/11/01 19:10:13 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.11.5 (01 Nov 2004)
+
+  01 Nov 2004; Aron Griffis <agriffis@gentoo.org> +baselayout-1.11.5.ebuild:
+  Fix problems related to depscan/envupdate caching. Add the 'lo' option to
+  RC_NET_STRICT_CHECKING to resolve bug #29225. Lots of net-scripts bug-fixes.
+  See rc-scripts ChangeLog for more details
 
 *baselayout-1.11.4 (25 Oct 2004)
 
