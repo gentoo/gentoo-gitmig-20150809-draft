@@ -1,7 +1,9 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.1 2002/11/02 05:55:41 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.2 2002/11/02 06:26:20 alron Exp $
 
 *nagios-plugins-1.3_beta1	(1 Nov 2002)
   1 Nov 2002; Dean Bailey <alron@gentoo.org> nagios-plugins-1.3_beta1 :
   Initial import. Ebuild submitted by Dean Bailey <alron@gentoo.org>.
+  Christian - Manny Calavera - Neumair <christian-neumair@web.de> also
+  had submitted a bug report about nagios.
