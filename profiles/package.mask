@@ -21,6 +21,26 @@
 ##   End example
 ##
 
+# <danarmak@gentoo.org> (22 Aug 2002)
+# kde 3.1 beta1: masked permanently; some people like prereleases
+=kde-base/arts-1.0.7
+=kde-base/kde-3.1_beta1
+=kde-base/kdeaddons-3.1_beta1
+=kde-base/kdeadmin-3.1_beta1
+=kde-base/kdeartwork-3.1_beta1
+=kde-base/kdebase-3.1_beta1
+=kde-base/kdebindings-3.1_beta1
+=kde-base/kdeedu-3.1_beta1
+=kde-base/kdegames-3.1_beta1
+=kde-base/kdegraphics-3.1_beta1
+=kde-base/kdelibs-3.1_beta1
+=kde-base/kdemultimedia-3.1_beta1
+=kde-base/kdenetwork-3.1_beta1
+=kde-base/kdepim-3.1_beta1
+=kde-base/kdesdk-3.1_beta1
+=kde-base/kdetoys-3.1_beta1
+=kde-base/kdeutils-3.1_beta1
+
 # <stubear@gentoo.org> (22 Aug 2002)                                            
 # masked for testing 
 =x11-terms/mlterm-2.5.0
