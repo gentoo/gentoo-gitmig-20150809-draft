@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.13-r3.ebuild,v 1.2 2004/02/27 09:38:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.13-r3.ebuild,v 1.3 2004/02/28 09:49:11 phosphan Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ DEPEND=">=media-libs/jpeg-6b
 	=sys-apps/sed-4*
 	usb? ( dev-libs/libusb )"
 
-BROTHERMFCDRIVER="sane-backends-1.0.13-brothermfc.patch"
+BROTHERMFCDRIVER="sane-backends-1.0.13-brothermfc-r1.patch"
 
 SRC_URI="ftp://ftp.mostang.com/pub/sane/${P}/${P}.tar.gz
 	ftp://ftp.mostang.com/pub/sane/old-versions/${P}/${P}.tar.gz
