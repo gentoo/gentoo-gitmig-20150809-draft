@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/celestia-1.2.2.ebuild,v 1.2 2002/04/28 09:30:04 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/celestia-1.2.2.ebuild,v 1.3 2002/05/27 17:27:35 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Celestia is a free real-time space simulation that lets you experience our universe in three dimensions"
-SRC_URI="http://prdownloads.sourceforge.net/celestia/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/celestia/${P}.tar.gz"
 HOMEPAGE="http://www.shatters.net/celestia"
 SLOT="0"
 

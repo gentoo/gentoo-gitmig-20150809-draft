@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Leo Lipelis <aeoo@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.24.ebuild,v 1.1 2002/04/30 22:35:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.24.ebuild,v 1.2 2002/05/27 17:27:35 drobbins Exp $
 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
-SRC_URI="http://prdownloads.sourceforge.net/gentoo/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/gentoo/${P}.tar.gz"
 HOMEPAGE="http://www.obsession.se/gentoo/"
 
 DEPEND="=x11-libs/gtk+-1.2*"
