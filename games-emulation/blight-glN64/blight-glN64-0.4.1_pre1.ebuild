@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/blight-glN64/blight-glN64-0.4.1_pre1.ebuild,v 1.1 2003/09/09 16:26:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/blight-glN64/blight-glN64-0.4.1_pre1.ebuild,v 1.2 2003/09/27 04:02:55 mr_bones_ Exp $
 
 inherit games
 
 S=${WORKDIR}
 MY_P="glN64-${PV/_/-}"
-DESCRIPTION="An audio plugin for the mupen64 N64 emulator"
+DESCRIPTION="An OpenGL graphics plugin for the mupen64 N64 emulator"
 SRC_URI="http://deltaanime.ath.cx/~blight/n64/blight_glN64_port/${MY_P}.so"
 HOMEPAGE="http://deltaanime.ath.cx/~blight/n64/"
 
