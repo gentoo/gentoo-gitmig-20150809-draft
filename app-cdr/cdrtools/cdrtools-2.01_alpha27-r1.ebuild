@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha27-r1.ebuild,v 1.1 2004/04/19 01:58:16 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha27-r1.ebuild,v 1.2 2004/04/19 07:56:44 vapier Exp $
 
-
-inherit eutils
+inherit eutils gcc
 
 DESCRIPTION="A set of tools for CD recording, including cdrecord."
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
@@ -40,7 +39,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CC="${CC} -D__attribute_const__=const" || die
+	emake CC="$(gcc-getCC) -D__attribute_const__=const" || die
 }
 
 src_install() {
