@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gnomemm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/ChangeLog,v 1.5 2003/09/17 21:19:24 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/ChangeLog,v 1.6 2003/10/27 01:55:55 brad_mssw Exp $
+
+  26 Oct 2003; Brad House <brad_mssw@gentoo.org> gnomemm-1.2.3-r1.ebuild:
+  add amd64 flag
 
   17 Sep 2003; Alastair Tse <liquidx@gentoo.org> gnomemm-1.2.3-r1.ebuild,
   files/gnomemm-1.2.3-gcc33.patch:
