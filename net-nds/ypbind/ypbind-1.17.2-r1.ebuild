@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.17.2-r1.ebuild,v 1.6 2004/10/08 18:01:16 hansmi Exp $
-
-IUSE="nls slp"
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.17.2-r1.ebuild,v 1.7 2004/10/31 05:38:08 vapier Exp $
 
 MY_P=${PN}-mt-${PV}
 S="${WORKDIR}/${MY_P}"
@@ -13,19 +11,21 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/net/NIS/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc alpha ppc amd64 ~ia64 ~ppc64"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
+IUSE="nls slp"
 
-DEPEND="slp? ( net-libs/openslp )"
-
-RDEPEND="${DEPEND}
+RDEPEND="slp? ( net-libs/openslp )
 	net-nds/yp-tools
 	net-nds/portmap"
-
-DEPEND="${DEPEND}
-	nls? ( sys-devel/gettext )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
+	>=sys-apps/portage-2.0.51"
 
 src_compile() {
-	econf `use_enable nls` `use_enable slp` || die
+	econf \
+		$(use_enable nls) \
+		$(use_enable slp) \
+		|| die
 	emake || die "emake failed"
 }
 
@@ -33,8 +33,8 @@ src_install() {
 	einstall || die
 	dodoc AUTHORS ChangeLog README THANKS TODO
 	insinto /etc ; doins etc/yp.conf
-	insinto /etc/conf.d ; newins ${FILESDIR}/ypbind.confd-r1 ypbind
-	exeinto /etc/init.d ; newexe ${FILESDIR}/ypbind.initd ypbind
+	newconfd ${FILESDIR}/ypbind.confd-r1 ypbind
+	newinitd ${FILESDIR}/ypbind.initd ypbind
 }
 
 pkg_postinst() {
