@@ -8,7 +8,7 @@ MD5 4e1f2d8315e7e2a5482798c9d19fac4d sendmail-flagf.patch 863
 MD5 122664c38338e5ec35fcac43f33d6927 qmail-1.03-qmtpc.patch 6197
 MD5 24fc1a33089faf12e00b127cd659f317 qmail-smtpd-relay-reject 1230
 MD5 ed5c0ddb6a5cc0386b1e04ced71d26ad qmail-local-tabs.patch 505
-MD5 7553829a93411cdaffce31a29323697f qmail-maildir++.patch 43510
+MD5 413be7bb5b407c2964c3275c4d596947 qmail-maildir++.patch 43512
 MD5 d566e8bd99b33efee0194e855b8d6995 qmail-date-localtime.patch.txt 2603
 MD5 1c4518f780d231bde9745cdd0fa313b2 qmail-limit-bounce-size.patch.txt 1753
 MD5 9140ad2b03017145cd7963c84bb24f16 qmail-103.patch 2104

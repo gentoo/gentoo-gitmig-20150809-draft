@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.57 2004/01/22 20:58:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.58 2004/01/25 02:31:29 robbat2 Exp $
+
+  24 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> :
+  recreate digests
 
 *qmail-1.03-r15 (22 Jan 2004)
 
