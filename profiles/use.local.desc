@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.251 2004/02/22 22:15:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.252 2004/02/26 07:41:32 phosphan Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -42,9 +42,9 @@ app-sci/maxima:gcl   - adds gcl (lisp) support to maxima
 app-sci/mupad:mupad-noscilab - Disable scilab that comes with MuPAD package. Use system-wide instead.
 app-sci/octave-forge:ginac - Adds app-sci/ginac (symbolic math) support
 app-sci/octave-forge:qhull - Adds media-libs/qhull (geometric extentions) support
+app-sci/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to app-sci/octave (may be merged with hdf when opendx is completed)
 app-sci/opendx:cdf - Adds cdf data exchange format to app-sci/opendx
 app-sci/opendx:hdf - Adds support for the Hierarchical Data Format to app-sci/opendx
-app-sci/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to app-sci/octave (may be merged with hdf when opendx is completed)
 app-text/namazu:chasen - Enable chasen support for namazu
 app-text/namazu:kakasi - Enable kakasi support for namazu
 dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
@@ -55,7 +55,6 @@ dev-games/clanlib:clanVoice - Enables voice support in clanlib
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
 dev-games/crystalspace:mng - Enables mng support in CrystalSpace
 dev-games/crystalspace:openal - Enables Open Audio Library support in CrystalSpace
-dev-java/ant:optional-tasks - Enable Optional Tasks Support
 dev-java/ant-optional:antlr - Enable ANTLR support
 dev-java/ant-optional:bcel - Enable jakarta-bcel support
 dev-java/ant-optional:bsh - Enable BeanShell support
@@ -69,20 +68,22 @@ dev-java/ant-optional:regexp - Enable jakarta-regexp support
 dev-java/ant-optional:rhino - Enable Rhino JavaScript support
 dev-java/ant-optional:xalan - Enable Xalan support
 dev-java/ant-optional:xerces - Enable Xerces support
+dev-java/ant:optional-tasks - Enable Optional Tasks Support
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
 dev-lang/ruby:ruby16 - Use ruby-1.6 as default ruby
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/gmetadom:ocaml - adds support/bindings for the Ocaml
-dev-libs/uclibc:pie - adds support for Position Independent Executables
+dev-libs/libcdio:cddb - use libcddb for CD database lookups
 dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
 dev-libs/libsqlora8:pthreads - specifies use of POSIX threads
+dev-libs/uclibc:pie - adds support for Position Independent Executables
 dev-lisp/bigloo-lib:expat - enable expat support
 dev-lisp/bigloo-lib:ipcs - enable ipcs support
-dev-ml/lablgtk:svg - Enable librsvg bindings compilation.
-dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/lablgl:glut - Enable glut support.
+dev-ml/lablgtk:glade - Enable libglade bindings compilation.
+dev-ml/lablgtk:svg - Enable librsvg bindings compilation.
 dev-php/PEAR-HTML_Template_Flexy:javascript - Use the PEAR-HTML_Javascript package
 dev-php/PEAR-Log:pear-db - Use the PEAR-DB package
 dev-python/anygui:wxwin - enable wxwin support
@@ -108,8 +109,8 @@ games-server/halflife-statsme:nocstrike - no counterstrike
 games-server/halflife-statsme:nodod - no day of defeat
 games-server/halflife-statsme:notfc - no team fortress classic
 games-strategy/freecraft-fcmp:music - Also installs the music that the project provides
-games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:editor - Enable compilation editor
+games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:tools - Enable compilation of translation tools
 games-util/xqf:geoip - Add geoip support
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
@@ -172,10 +173,10 @@ net-fs/ftpfs:autofs - Adds support for autofs mounting
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/shfs:amd - Enable automounter support
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
-net-im/kadu:kadu-voice - Enables voice chat in kadu
 net-im/kadu:kadu-modules - Enables modules in kadu
-net-im/silc-toolkit:server - Enables silc server
+net-im/kadu:kadu-voice - Enables voice chat in kadu
 net-im/silc-toolkit:client - Enables silc client
+net-im/silc-toolkit:server - Enables silc server
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat:xchattext - Enables the text/console front end to XChat
 net-libs/libnvcserver:no24bpp - disable 24bpp support
@@ -197,11 +198,11 @@ net-mail/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a 
 net-mail/sylpheed-claws:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
 net-mail/vpopmail:clearpasswd - Enables cleartext password storage in the vpasswd files
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
+net-misc/asterisk:noiax - Disable iax (Inter-Asterisk eXchange) support
 net-misc/asterisk:nopri - Disable pri support
 net-misc/asterisk:nozaptel - Disable zaptel support
-net-misc/asterisk:noiax - Disable iax (Inter-Asterisk eXchange) support
-net-misc/gnugk:radius - Enables radius support
 net-misc/gnugk:accounting - Enables call logging (accounting)
+net-misc/gnugk:radius - Enables radius support
 net-misc/ntp:nodroproot - Disable support for running ntpd as a non-root user
 net-misc/ntp:parse-clocks - Add parse clock support
 net-misc/nut:cgi - Add CGI script support
@@ -245,20 +246,14 @@ sys-apps/busybox:diet - Compile and link with dietlibc
 sys-apps/busybox:savedconfig - Adds support to user defined configs
 sys-apps/busybox:uclibc - Compile with uclibc
 sys-apps/dbus:mono - Build Mono bindings to support dotnet type stuff
-sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/memtest86+:serial - Compile with serial console support
+sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/parted:noreiserfs - Do not include reiserfs support
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:uclibc - Compile with uclibc
 sys-apps/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
-sys-devel/uclibc-buildroot:fullrpc - Defines xdr functions and some lesser used rpc stuff. Required for NFS
-sys-devel/uclibc-buildroot:nommu - No memory management unit on target architecture
-sys-devel/uclibc-buildroot:propolice - Stack-Smashing Protecton
-sys-devel/uclibc-buildroot:pie - adds support for Position Independent Executables
-sys-devel/uclibc-buildroot:softfloat - software floating point calculations for FPU lacking processors
-sys-devel/uclibc-buildroot:savedconfig - Adds support to user defined configs
 sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
 sys-devel/gcc:nogcj - Do not build gcj (java compiler included with gcc package)
 sys-devel/gdb:objc - If you want to be able to debug Objective C code.
@@ -266,6 +261,12 @@ sys-devel/oskit:oskit-noassert - Disable assertions in debugging
 sys-devel/oskit:oskit-nobuild - Configure but don't build OSKit
 sys-devel/oskit:oskit-noconf - Unpack sources to /usr/src but don't configure OSKit
 sys-devel/oskit:oskit-profiling - enable profiling support
+sys-devel/uclibc-buildroot:fullrpc - Defines xdr functions and some lesser used rpc stuff. Required for NFS
+sys-devel/uclibc-buildroot:nommu - No memory management unit on target architecture
+sys-devel/uclibc-buildroot:pie - adds support for Position Independent Executables
+sys-devel/uclibc-buildroot:propolice - Stack-Smashing Protecton
+sys-devel/uclibc-buildroot:savedconfig - Adds support to user defined configs
+sys-devel/uclibc-buildroot:softfloat - software floating point calculations for FPU lacking processors
 sys-fs/lufs:lufsusermount - allow users to mount LUFS filesystems
 sys-kernel/development-sources:vanilla - keep the kernel sources in a vanilla state and do not apply anything from genpatches.
 sys-kernel/gentoo-sources:aavm - adds Andrea Arcangeli's vm support (removes rmap by Rik van Riel which is the default)
@@ -282,16 +283,16 @@ sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into 
 sys-libs/glibc:pic - Build position independent code. Needed for (prelink/hardened-gcc)
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
-x11-base/kdrive:speedo - Enables Speedo font support
-x11-base/kdrive:type1 - Enables Type1 font support
 x11-base/kdrive:freetype - Enables Freetype font support
 x11-base/kdrive:fs - Enables font server support
+x11-base/kdrive:speedo - Enables Speedo font support
+x11-base/kdrive:type1 - Enables Type1 font support
 x11-base/xfree-drm:gamma - If you have a 3dlabs video card
+x11-base/xfree-drm:gatos - Performs GATOS-specific actions including SDK install
 x11-base/xfree-drm:i8x0 - If you have an ibm i810 or i830 video card
 x11-base/xfree-drm:radeon - If you have an ATI Radeon video card
 x11-base/xfree-drm:rage128 - If you have an ATI Rage128 based video card
 x11-base/xfree-drm:sis - If you have an SiS video card
-x11-base/xfree-drm:gatos - Performs GATOS-specific actions including SDK install
 x11-base/xfree:gatos - Performs GATOS-specific actions including SDK install
 x11-base/xfree:sdk - Builds the SDK
 x11-libs/gtkmathview:t1lib - Enable t1lib support
