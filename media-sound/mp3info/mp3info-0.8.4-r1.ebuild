@@ -1,6 +1,6 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.4-r1.ebuild,v 1.4 2002/07/21 03:07:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.4-r1.ebuild,v 1.5 2002/08/01 11:40:16 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An MP3 technical info viewer and ID3 1.x tag editor"

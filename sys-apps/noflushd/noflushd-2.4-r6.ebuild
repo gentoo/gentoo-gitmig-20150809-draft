@@ -1,6 +1,6 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.4-r6.ebuild,v 1.5 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.4-r6.ebuild,v 1.6 2002/08/01 11:40:16 seemant Exp $
 # Note: the daemon's current 2.4 version has nothing to do with kernel versions
 
 MY_P=${P/-/_}

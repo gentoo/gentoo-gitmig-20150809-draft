@@ -1,6 +1,6 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.31-r7.ebuild,v 1.6 2002/07/14 19:20:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.31-r7.ebuild,v 1.7 2002/08/01 11:40:16 seemant Exp $
 
 # This ebuild installs ${FILESDIR}/hermes.conf, which you can get from
 # http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/hermes.conf
