@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.4.ebuild,v 1.18 2004/07/14 14:47:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.4.ebuild,v 1.19 2004/08/07 21:57:05 slarti Exp $
 
-DESCRIPTION="A Stroke and Guesture recognition Library"
+DESCRIPTION="A Stroke and Gesture recognition Library"
 SRC_URI="http://www.etla.net/libstroke/${P}.tar.gz"
 HOMEPAGE="http://www.etla.net/libstroke"
 

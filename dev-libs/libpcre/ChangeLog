@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.39 2004/07/13 05:22:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.40 2004/08/07 21:55:25 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> libpcre-3.9.ebuild:
+  Typo in DESCRIPTION: compitable -> compatible. Bug 59717.
 
 *libpcre-4.5 (12 Jul 2004)
 
