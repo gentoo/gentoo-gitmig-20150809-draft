@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0-r1.ebuild,v 1.2 2004/11/04 20:46:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0-r1.ebuild,v 1.3 2004/11/11 02:18:12 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -11,7 +11,7 @@ SLOT="2.0"
 IUSE="accessibility cdr dvdr hal"
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips ~hppa ~ia64"
+KEYWORDS="x86 ~ppc ~sparc ~amd64 ~mips ~hppa ~ia64"
 
 RDEPEND="!gnome-base/gnome-core
 
@@ -63,7 +63,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=app-editors/gedit-2.8
 
 	>=app-text/ggv-2.8
-	>=app-text/gpdf-2.8
+	>=app-text/gpdf-2.8.0-r2
 
 	>=gnome-base/gnome-session-2.8
 	>=gnome-base/gnome-desktop-2.8
@@ -93,7 +93,7 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=x11-libs/startup-notification-0.7
 
-	>=gnome-extra/yelp-2.6.2
+	>=gnome-extra/yelp-2.6.4
 	>=x11-libs/vte-0.11.11-r1
 	>=gnome-extra/zenity-2.8
 	>=net-analyzer/gnome-netstatus-2.8
@@ -113,16 +113,21 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=app-admin/gnome-system-tools-1
 
-	>=net-analyzer/gnome-nettool-0.99.3
-
 	accessibility? (
 		>=gnome-extra/libgail-gnome-1.1
 		>=gnome-base/gail-1.8
 		>=gnome-extra/at-spi-1.6
-		>=app-accessibility/gnome-speech-0.3.5
 		>=app-accessibility/gnome-mag-0.11.5
 		>=app-accessibility/gok-0.11.8
 		>=app-accessibility/gnopernicus-0.9.12 )"
+
+# freetts not stable yet
+#		>=app-accessibility/gnome-speech-0.3.5
+
+
+# need a decision.. lets see how this goes
+#	>=net-analyzer/gnome-nettool-0.99.3
+
 
 # unrelated
 # scrollkeeper
