@@ -2,6 +2,7 @@
 # that should not be used on PPC64
 # Tom Gall <tgall@gentoo.org> manages this list
 acl
+acpi
 afs
 3dfx
 3dnow
