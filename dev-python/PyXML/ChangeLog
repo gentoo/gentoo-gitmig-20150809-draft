@@ -1,10 +1,13 @@
 # ChangeLog for dev-python/PyXML
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyXML/ChangeLog,v 1.10 2003/02/22 00:10:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyXML/ChangeLog,v 1.11 2003/04/09 03:05:55 todd Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *PyXML-0.8.1 (18 Oct 2002)
+
+  08 Apr 2003; Todd Sunderlin <todd@gentoo.org> PyXML-0.8.1.ebuild:
+  Marked stable for sparc.
 
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> PyXML-0.8.1.ebuild :
   Mark stable on alpha
