@@ -1,7 +1,7 @@
 # Copyrigth 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.8.ebuild,v 1.1 2002/03/10 11:24:23 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.8.ebuild,v 1.2 2002/03/10 11:31:13 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X-Chat is an IRC client for UNIX operating systems."
@@ -38,8 +38,10 @@ src_compile() {
 	use gnome  	|| myopts="--enable-gtkfe --disable-gnome --disable-gdk-pixbuf --disable-zvt"
 	use ssl    	&& myopts="$myopts --enable-openssl"
 	use perl   	|| myopts="$myopts --disable-perl"
+
 	use python 	&& myflags="`python-config`"
-	use python 	|| myopts="$myopts --disable-python"
+	use python 	&& myopts="$myopts --enable-python"
+
 	use nls    	|| myopts="$myopts --disable-nls"
 	use mmx		&& myopts="$myopts --enable-mmx"
 	
