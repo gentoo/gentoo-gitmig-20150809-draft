@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.9 2004/07/31 01:58:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.10 2004/08/09 12:23:13 slarti Exp $
+
+*mime-types-1.0-r1 (09 Aug 2004)
+
+  09 Aug 2004; Tom Martin <slarti@gentoo.org> +mime-types-1.0-r1.ebuild,
+  mime-types-1.0.ebuild:
+  Added new revision with an amalgamated version of all mime.types provided by
+  other packages.
 
   31 Jul 2004; Tom Gall <tgall@gentoo.org> mime-types-1.0.ebuild:
   stable on ppc64, bug #57114
