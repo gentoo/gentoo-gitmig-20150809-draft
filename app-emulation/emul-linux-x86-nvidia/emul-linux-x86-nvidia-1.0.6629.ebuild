@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/emul-linux-x86-nvidia-1.0.6111.ebuild,v 1.1 2004/08/06 01:01:12 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/emul-linux-x86-nvidia-1.0.6629.ebuild,v 1.1 2004/11/07 01:52:39 cyfred Exp $
 
 inherit eutils
 
@@ -49,12 +49,12 @@ src_install() {
 
 	# TLS libraries
 	# not sure we need these as glibc in emul-linux-x86-baselibs is non-nptl
-	dodir ${TLS_ROOT}
-	exeinto ${TLS_ROOT}
-	doexe tls/libnvidia-tls.so.${PV}
-	dosym libnvidia-tls.so.${PV} ${TLS_ROOT}/libnvidia-tls.so
-	dosym libnvidia-tls.so.${PV} ${TLS_ROOT}/libnvidia-tls.so.1
-	#dosym ${LIB_ROOT}/tls ${LIB32_ROOT}
+	# See bug #58668 glibc is non-nptl commenting out for future reference
+	#dodir ${TLS_ROOT}
+	#exeinto ${TLS_ROOT}
+	#doexe tls/libnvidia-tls.so.${PV}
+	#dosym libnvidia-tls.so.${PV} ${TLS_ROOT}/libnvidia-tls.so
+	#dosym libnvidia-tls.so.${PV} ${TLS_ROOT}/libnvidia-tls.so.1
 }
 
 pkg_postinst() {

@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-nvidia
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/ChangeLog,v 1.8 2004/09/06 01:52:11 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/ChangeLog,v 1.9 2004/11/07 01:52:39 cyfred Exp $
+
+*emul-linux-x86-nvidia-1.0.6629 (07 Nov 2004)
+
+  07 Nov 2004; Andrew Bevitt <cyfred@gentoo.org>
+  -emul-linux-x86-nvidia-1.0.6111.ebuild,
+  +emul-linux-x86-nvidia-1.0.6629.ebuild:
+  New version 1.0.6629 to match nvidia-glx.
 
   05 Sep 2004; Travis Tilley <lv@gentoo.org>
   emul-linux-x86-nvidia-1.0.6111-r1.ebuild:
