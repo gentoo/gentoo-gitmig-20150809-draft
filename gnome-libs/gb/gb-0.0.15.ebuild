@@ -5,11 +5,11 @@
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="libole2"
+DESCRIPTION="GNOME Basic"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=dev-libs/glib-1.2.8"
+DEPEND=">=gnome-base/gnome-libs-1.2.4"
 
 src_unpack() {
   unpack ${A}

@@ -5,15 +5,13 @@
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="gda lib"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-db/${A}"
-HOMEPAGE="http://www.gnome.org/gnome-db"
+DESCRIPTION="The Gnome Application Libraries"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
+HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=gnome-base/gconf-0.8
-	>=gnome-base/gnome-libs-1.2.4
-	>=dev-db/mysql-3.23.26
-	>=dev-db/unixODBC-1.8.13
-	>=net-nds/openldap-1.2.11"
+DEPEND=">=gnome-base/gnome-libs-1.2.8
+	>=net-libs/libwww-1.5.3-r1"
+RDEPEND=">=net-libs/libwww-1.5.3-r1
 
 src_unpack() {
   unpack ${A}
@@ -21,8 +19,7 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  try ./configure --host=${CHOST} --prefix=/opt/gnome \
-	--with-mysql=/usr --with-ldap=/usr --with-odbc 
+  try ./configure --host=${CHOST} --prefix=/opt/gnome
   try make
 }
 
@@ -32,6 +29,7 @@ src_install() {
 
   dodoc AUTHORS COPYING.* ChangeLog NEWS README THANKS TODO
 }
+
 
 
 
