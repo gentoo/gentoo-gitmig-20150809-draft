@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepattack/wepattack-0.1.3.ebuild,v 1.1 2002/12/29 01:52:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepattack/wepattack-0.1.3.ebuild,v 1.2 2003/01/01 05:13:43 vapier Exp $
 
 MY_P="WepAttack-${PV}"
 DESCRIPTION="WLAN tool for breaking 802.11 WEP keys"
@@ -14,8 +14,7 @@ IUSE=""
 
 DEPEND="sys-libs/zlib
 	net-libs/libpcap
-	dev-libs/openssl
-	net-wireless/kismet"
+	dev-libs/openssl"
 
 S=${WORKDIR}/${MY_P}
 
