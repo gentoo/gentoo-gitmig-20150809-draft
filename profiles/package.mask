@@ -843,6 +843,11 @@ x11-base/xdirectfb
 #g2boojum@gentoo.org 27 June 2002
 # masked until we get the cups ghostscript in portage
 >=net-print/cups-1.1.15
+# if this gets removed, remove the ghostscript one too!
+
+# blocke@gentoo.org 28 June 2002
+# needs cups-1.1.15
+=app-text/ghostscript-7.05-r1
 
 # rphillips@gentoo.org 27 Jun 2002
 # masked since package is not released
