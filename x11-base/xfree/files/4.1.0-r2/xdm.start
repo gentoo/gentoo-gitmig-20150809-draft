@@ -1,0 +1,42 @@
+#!/sbin/runscript
+# Based upon a script Copyright (c) 1996-99 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+# Not sure how much of the SuSE original is left.
+
+. /etc/profile.env
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:$ROOTPATH
+
+case "$DISPLAYMANAGER" in
+    kdm|kde|KDM|KDE)	 
+	EXE=$KDEDIR/bin/kdm   
+	;;
+    gdm|GDM|Gnome|GNOME) 
+	EXE=$GNOME_PATH/bin/gdm 
+	;;
+    *)	
+	EXE=/usr/X11R6/bin/xdm ;;
+esac
+
+test ! -x "$EXE" && EXE=/usr/X11R6/bin/xdm
+
+SERVICE=${EXE##*/}
+PID="/var/run/xdm.pid"
+
+start() {
+	ebegin "Starting ${SERVICE}"
+	start-stop-daemon --start --quiet --exe $EXE 1>&2
+	if [ -n "$?" ] ; then
+		# After a crash or a kill signal we may have
+		# a wrong ownership of /dev/console
+		chown root:tty /dev/console /dev/tty0
+		chmod 622 /dev/console /dev/tty0
+	else
+		eend $? "Error starting ${SERVICE}."
+	fi
+}
+
+stop() {
+	ebegin "Stopping ${SERVICE}"
+	killall X
+	start-stop-daemon --stop --quiet --exe $EXE 1>&2
+	eend $? "Error stopping ${SERVICE}."
+}
