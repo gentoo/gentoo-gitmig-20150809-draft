@@ -1,0 +1,19 @@
+# ChangeLog for app-admin/kcmgrunlevel
+# Copyright 2002-2005 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kcmgrunlevel/ChangeLog,v 1.1 2005/02/01 20:51:35 centic Exp $
+
+*kcmgrunlevel-0.2 (01 Feb 2005)
+
+  01 Feb 2005; Dominik Stadler <centic@gentoo.org> +metadata.xml,
+  +kcmgrunlevel-0.2.ebuild:
+  Added to portage, fixes Bug 48011
+
+*kcmgrunlevel-0.2 (22 Apr 2004)
+
+  22 Apr 2004; Elias Probst <elias.probst@gmx.de> kcmgrunlevel-0.2.ebuild,
+  Version bump, routine for copying the icon added.
+
+*kcmgrunlevel-0.1 (14 Apr 2004)
+
+  14 Apr 2004; Elias Probst <elias.probst@gmx.de> kcmgrunlevel-0.1.ebuild,
+  ChangeLog: Initial ebuild.
