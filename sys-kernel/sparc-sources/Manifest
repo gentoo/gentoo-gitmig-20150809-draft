@@ -1,6 +1,6 @@
 MD5 cb4c38405de3cb1aec7e1fc36520ba94 ChangeLog 7490
 MD5 ad07544c32101f3f910d9dffb9b90fb7 sparc-sources-2.4.23.ebuild 2145
-MD5 372ceaa962baf8bf7de46b0a57ade5f8 sparc-sources-2.4.23-r1.ebuild 2150
+MD5 f87755f6973c60e072a14d2f9a6b9d57 sparc-sources-2.4.23-r1.ebuild 2149
 MD5 6706a601c155869440dcb544e3759a04 metadata.xml 381
 MD5 0d524d16d16682fd4af99221b0891296 sparc-sources-2.4.22.ebuild 2241
 MD5 935f3a9c9a5209ad79a0cdbf9ca4b610 files/U1-hme-lockup.patch 263
