@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.43 2005/01/12 14:46:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.44 2005/03/26 20:54:25 vanquirius Exp $
+
+  26 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> libgcrypt-1.1.91.ebuild,
+  libgcrypt-1.1.92.ebuild, libgcrypt-1.1.94.ebuild, libgcrypt-1.2.0-r1.ebuild,
+  libgcrypt-1.2.0-r2.ebuild, libgcrypt-1.2.0.ebuild, libgcrypt-1.2.1.ebuild:
+  Added dev-libs/libgpg-error to RDEPEND. Fix bug 86456. Thanks Spider
+  <spider@gentoo.org>.
 
 *libgcrypt-1.2.1 (13 Jan 2005)
 

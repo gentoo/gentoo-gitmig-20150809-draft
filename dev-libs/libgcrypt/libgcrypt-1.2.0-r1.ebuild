@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.0-r1.ebuild,v 1.5 2005/01/12 14:46:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.0-r1.ebuild,v 1.6 2005/03/26 20:54:25 vanquirius Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ppc64 ~ppc-macos s390 sparc ~x8
 IUSE="nls"
 
 DEPEND="dev-libs/libgpg-error"
-RDEPEND="nls? ( sys-devel/gettext )"
+RDEPEND="nls? ( sys-devel/gettext )
+	dev-libs/libgpg-error"
 
 src_unpack() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.1.91.ebuild,v 1.8 2005/01/12 14:46:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.1.91.ebuild,v 1.9 2005/03/26 20:54:25 vanquirius Exp $
 
 DESCRIPTION="general purpose crypto library based on the code used in GnuPG"
 HOMEPAGE="http://www.gnupg.org/"
@@ -12,7 +12,8 @@ KEYWORDS="x86 ~ppc amd64"
 IUSE="nls"
 
 DEPEND="dev-libs/libgpg-error"
-RDEPEND="nls? ( sys-devel/gettext )"
+RDEPEND="nls? ( sys-devel/gettext )
+	dev-libs/libgpg-error"
 
 src_compile() {
 	econf `use_enable nls` --disable-dependency-tracking || die
