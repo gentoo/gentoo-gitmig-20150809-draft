@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.55 2003/04/27 13:49:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.56 2003/05/11 19:16:59 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -386,29 +386,8 @@ kde_remove_dir(){
 
 }
 
-# return the $1th parameter, starting from $2
-get_param() {
-
-	num=$1
-
-	for x in `seq $num`; do shift; done
-	echo "$1"
-
-}
-
-# return total amount of free memory (ram+swap) assuming /proc/meminfo exists and is readable
-get_free_mem() {
-
-	free_ram=`get_param 2 \`grep MemFree /proc/meminfo\``
-	free_swap=`get_param 2 \`grep SwapFree /proc/meminfo\``
-	declare -i total
-	total=$free_ram+$free_swap
-	echo $total
-
-}
-
 # is this a kde-base ebuid?
-case $PN in kde-i18n*|arts|kdeaddons|kdeadmin|kdeartwork|kdebase|kdebindings|kdeedu|kdegames|kdegraphics|kdelibs|kdemultimedia|kdenetwork|kdepim|kdesdk|kdetoys|kdeutils)
+case $PN in kde-i18n*|arts|kdeaddons|kdeadmin|kdeartwork|kdebase|kdebindings|kdeedu|kdegames|kdegraphics|kdelibs|kdemultimedia|kdenetwork|kdepim|kdesdk|kdetoys|kdeutils|kdelibs-apidocs)
 		debug-print "$ECLASS: KDEBASE ebuild recognized"
 		export KDEBASE="true"
 		;;
