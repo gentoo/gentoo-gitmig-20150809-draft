@@ -1,20 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.35.0-r1.ebuild,v 1.4 2003/02/13 13:17:29 vapier Exp $
-
-IUSE="X alsa"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.35.0-r1.ebuild,v 1.5 2003/08/03 02:54:04 vapier Exp $
 
 # Miller Puckette uses nonstandard versioning scheme that we have to crunch
 MY_P=`echo ${P} | sed 's/\.\([0-9]\+\)$/-\1/'`
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="real-time music and multimedia environment"
-SRC_URI="http://www-crca.ucsd.edu/~msp/Software/${MY_P}.linux.tar.gz"
 HOMEPAGE="http://www-crca.ucsd.edu/~msp/software.html"
+SRC_URI="http://www-crca.ucsd.edu/~msp/Software/${MY_P}.linux.tar.gz"
 
-SLOT="0"
 LICENSE="BSD | as-is"
+SLOT="0"
 KEYWORDS="x86"
+IUSE="X alsa"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
@@ -22,46 +21,26 @@ DEPEND=">=dev-lang/tcl-8.3.3
 	X? ( x11-base/xfree )"
 
 src_unpack() {
-
 	unpack ${A}
 
 	cd ${S} || die
-	patch -p1 < ${FILESDIR}/0.35.0-r1.patch || die
+	epatch ${FILESDIR}/${PF}.patch
 
 	cd src || die
 	autoconf || die
-
 }
 
 src_compile() {
-
 	cd src
-
-	local myconf
-	
-	use alsa && myconf="--enable-alsa" \
-		|| myconf="--disable-alsa"
-
-	use X && myconf="${myconf} --with-x" \
-		|| myconf="${myconf} --without-x"
-
-	if [ -n "$DEBUG" ]; then
-		myconf="${myconf} --enable-debug"
-	else
-		myconf="${myconf} --disable-debug"
-	fi
-
-	econf ${myconf} || die "./configure failed"
-
+	econf \
+		`use_enable alsa` \
+		`use_with X x` \
+		`use_enable debug` \
+		|| die "./configure failed"
 	emake || die "parallel make failed"
-
 }
 
-src_install () {
-
+src_install() {
 	cd src
-	make \
-		DESTDIR=${D} \
-		install || die "install failed"
-
+	make DESTDIR=${D} install || die "install failed"
 }

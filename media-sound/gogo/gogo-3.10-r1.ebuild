@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.6 2003/02/13 13:12:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.7 2003/08/03 02:48:40 vapier Exp $
 
-S=${WORKDIR}/petit310pl3
+MY_PV=310pl3
 DESCRIPTION="GoGo is an assembly optimized version of LAME 3.91"
-SRC_URI="http://member.nifty.ne.jp/~pen/free/gogo3/down/petit310pl3.tgz"
 HOMEPAGE="http://member.nifty.ne.jp/~pen/free/gogo3/mct_gogo.htm"
+SRC_URI="http://member.nifty.ne.jp/~pen/free/gogo3/down/petit${MY_PV}.tgz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc -sparc "
+SLOT="0"
+KEYWORDS="x86 -ppc -sparc"
 
 DEPEND="dev-lang/nasm"
 #	>=sys-libs/ncurses-5.H2
@@ -21,8 +21,9 @@ DEPEND="dev-lang/nasm"
 #	gtk?    ( =x11-libs/gtk+-1.2* )"
 #	oggvorbis? ( >=media-libs/libvorbis-1.0_rc3 )"
 
-src_compile() {
+S=${WORKDIR}/petit${MY_PV}
 
+src_compile() {
 	local myconf=""
 #	if [ "`use oggvorbis`" ] ; then
 #		myconf="--with-vorbis"
@@ -33,11 +34,9 @@ src_compile() {
 #	if [ "`use gtk`" ] ; then
 #		myconf="$myconf --enable-mp3x"
 #	fi
-	if [ "$DEBUG" ] ; then
-		myconf="$myconf --enable-debug=yes"
-	else
-		myconf="$myconf --enable-debug=no"
-	fi
+	[ `use debug` ] \
+		&& myconf="$myconf --enable-debug=yes" \
+		|| myconf="$myconf --enable-debug=no"
 	
 	econf \
 		--enable-shared \
@@ -49,8 +48,7 @@ src_compile() {
 }
 
 src_install () {
-
-	patch -p0 < ${FILESDIR}/make-work-3.10pl3.patch || die
+	epatch ${FILESDIR}/make-work-3.10pl3.patch
 
 	dodir /usr/bin
 	dodir /usr/share/man
