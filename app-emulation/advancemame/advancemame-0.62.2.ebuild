@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/advancemame/advancemame-0.62.2.ebuild,v 1.1 2002/12/25 23:30:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/advancemame/advancemame-0.62.2.ebuild,v 1.2 2003/01/08 12:16:37 hanno Exp $
 
 IUSE=""
 
@@ -66,7 +66,7 @@ src_unpack() {
 			${S}/advance/linux/${x}.orig > ${S}/advance/linux/${x}
 		rm -f ${S}/advance/linux/${x}.orig
 	done
-	
+
 	# Fix manpage/doc install location
 	cp -f ${S}/advance/advance.mak ${S}/advance/advance.mak.orig
 	sed -e 's:$(PREFIX)/doc/advance:$(PREFIX)/share/doc/$(PF):g' \
@@ -85,7 +85,7 @@ src_compile() {
 	use slang || myconf="${myconf} --disable-slang"
 
 	use svga || myconf="${myconf} --disable-svgalib"
-	
+
 	# Configure with explicit SDL support
 	# NOTE: do not use econf, as we should not
 	#       pass --host ...
