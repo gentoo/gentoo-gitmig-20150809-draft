@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3d182d43f7f0341a9a42f96694f04e72 metadata.xml 224
 MD5 7e68523f421ec68168959ed7826e7e7e thttpd-2.25.ebuild 1180
-MD5 5b3a9470eb803a73a358087ceceaf52d ChangeLog 1118
+MD5 e6404d96f6c416527d95855e8b42b3f0 ChangeLog 1193
+MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
 MD5 1e6cbba778f6846533ae1d69310e0c4e files/digest-thttpd-2.25 64
-MD5 1d3e759791468812bd3c6dd786428cac files/thttpd-2.25/thttpd.conf.sample 672
 MD5 84af2600ce2cfa9331871027accd00f5 files/thttpd-2.25/thttpd.confd 1152
 MD5 98bfd7ed90b6a438a940413d5e541c29 files/thttpd-2.25/thttpd.init 828
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOuFZI1lqEGTUzyQRAn5RAKC8z6MCPLHOIGiTsjaIIm3NJlKODQCbB/Wc
-0Nc1z8i0W3MWmEEVIAR9IHo=
-=ghr6
------END PGP SIGNATURE-----
+MD5 1d3e759791468812bd3c6dd786428cac files/thttpd-2.25/thttpd.conf.sample 672
