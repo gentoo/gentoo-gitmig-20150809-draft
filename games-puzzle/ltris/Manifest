@@ -1,3 +1,5 @@
 MD5 e3d4e20a4157633164aeb1763e42a7c4 ltris-1.0.4.ebuild 653
 MD5 931baa65410fa1a74315ec4083ed10e5 files/digest-ltris-1.0.4 63
-MD5 42fccea1c3863579347cfc77587ddb61 ChangeLog 777
+MD5 6005e345148260e0f0ea8d27ef909fff files/digest-ltris-1.0.5 63
+MD5 f011f153d8cb8e36ef32bf8b8725c251 ltris-1.0.5.ebuild 690
+MD5 c9c8beb4fac2f0525578f5f760e4d378 ChangeLog 912
