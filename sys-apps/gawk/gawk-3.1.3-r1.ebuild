@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.19 2004/09/01 10:17:24 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.20 2004/11/05 15:48:38 vapier Exp $
 
-inherit eutils gnuconfig
+inherit eutils gnuconfig toolchain-funcs
 
 DESCRIPTION="GNU awk pattern-matching language"
 HOMEPAGE="http://www.gnu.org/software/gawk/gawk.html"
@@ -47,7 +47,7 @@ src_compile() {
 	emake || die "emake failed"
 
 	cd ${WORKDIR}/filefuncs
-	emake AWKINCDIR=${S} || die "filefuncs emake failed"
+	emake AWKINCDIR=${S} CC=$(tc-getCC) || die "filefuncs emake failed"
 }
 
 src_install() {
