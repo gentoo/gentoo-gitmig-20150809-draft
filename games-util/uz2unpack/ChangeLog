@@ -1,6 +1,9 @@
 # ChangeLog for games-util/uz2unpack
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/uz2unpack/ChangeLog,v 1.2 2004/07/14 22:25:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/uz2unpack/ChangeLog,v 1.3 2004/11/29 18:40:07 wolf31o2 Exp $
+
+  29 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org> uz2unpack-0.1.ebuild:
+  Moved sources to new SRC_URI.
 
 *uz2unpack-0.1 (26 Jun 2004)
 
