@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20040524-r1.ebuild,v 1.9 2005/02/04 22:47:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20040524-r1.ebuild,v 1.10 2005/03/02 15:56:36 ferdy Exp $
 
 inherit ccc eutils flag-o-matic
 
@@ -50,7 +50,7 @@ src_install() {
 	dosym mail.1 /usr/share/man/man1/Mail.1
 
 	cd ${S}/misc
-	insinto /usr/lib
+	insinto /usr/share/${PN}/
 	insopts -m 644
 	doins mail.help mail.tildehelp
 	insinto /etc
