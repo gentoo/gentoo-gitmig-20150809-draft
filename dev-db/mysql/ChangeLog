@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.159 2005/01/19 15:24:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.160 2005/01/19 21:13:16 robbat2 Exp $
+
+  19 Jan 2005; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.23-r1.ebuild:
+  Undo stable masking on 4.0.23 for nasty upstream bug.
+  http://bugs.mysql.com/bug.php?id=7515. Patched 4.0.22 to come out shortly.
 
   19 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> mysql-4.0.23-r1.ebuild:
   Stable on sparc wrt #77805
@@ -8,7 +12,7 @@
   19 Jan 2005; Markus Rothe <corsair@gentoo.org> mysql-4.0.23-r1.ebuild:
   Stable on ppc64; bug #78620
 
-  19 Jan 2005; Olivier Crête <tester@gentoo.org> mysql-4.0.23-r1.ebuild:
+  19 Jan 2005; Olivier CrÃªte <tester@gentoo.org> mysql-4.0.23-r1.ebuild:
   Stable on x86 wrt security bug 77805
 
 *mysql-4.1.8-r1 (18 Jan 2005)
@@ -60,7 +64,7 @@
   02 Nov 2004; Markus Rothe <corsair@gentoo.org> mysql-4.0.22.ebuild:
   Marked ppc64; bug #69668
 
-  02 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> mysql-4.0.22.ebuild:
+  02 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org> mysql-4.0.22.ebuild:
   Stable on alpha, bug 69668.
 
   02 Nov 2004; Lars Weiler <pylon@gentoo.org> mysql-4.0.22.ebuild:
@@ -102,7 +106,7 @@
   18 Oct 2004; Tom Gall <tgall@gentoo.org> mysql-4.0.21.ebuild:
   stable on ppc64, bug #67062
 
-  18 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> mysql-4.0.21.ebuild:
+  18 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> mysql-4.0.21.ebuild:
   Stable on alpha, bug 67062.
 
   18 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> mysql-4.0.21.ebuild:
@@ -142,7 +146,7 @@
   mysql-4.0.20-r1.ebuild:
   Stable on x86. Bug #60744.
 
-  25 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> mysql-3.23.58-r1.ebuild,
+  25 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> mysql-3.23.58-r1.ebuild,
   mysql-4.0.20-r1.ebuild:
   Stable on alpha, bug 60744.
 
@@ -170,7 +174,7 @@
   16 Jul 2004; Gustavo Zacarias <gustavoz@gentoo.org> mysql-4.0.20.ebuild:
   Stable on sparc and hppa
 
-  14 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mysql-4.0.20.ebuild:
+  14 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> mysql-4.0.20.ebuild:
   Stable on alpha.
 
   10 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.20.ebuild:
@@ -231,7 +235,7 @@
   14 Apr 2004; Jason Wever <weeve@gentoo.org> mysql-4.0.18-r1.ebuild:
   Stable on sparc wrt bug #46242.
 
-  14 Apr 2004; Bryan Østergaard,,, <kloeri@gentoo.org> mysql-4.0.18-r1.ebuild:
+  14 Apr 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org> mysql-4.0.18-r1.ebuild:
   Stable on Alpha.
 
   14 Apr 2004; Michael McCabe <randy@gentoo.org> mysql-4.0.18-r1.ebuild:
