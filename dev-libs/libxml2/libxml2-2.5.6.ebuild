@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.6.ebuild,v 1.3 2003/05/07 22:45:42 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.6.ebuild,v 1.4 2003/06/14 02:57:16 gmsoft Exp $
 
 inherit eutils libtool gnome.org
 
@@ -16,7 +16,7 @@ DEPEND="sys-libs/zlib
  
 SLOT="2"
 LICENSE="MIT"
-KEYWORDS="x86 ~ppc sparc ~alpha ~hppa"
+KEYWORDS="x86 ~ppc sparc ~alpha hppa"
 
 src_compile() {
 	# Fix .la files of python site packages

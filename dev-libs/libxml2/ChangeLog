@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.40 2003/05/24 18:29:59 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.41 2003/06/14 02:57:16 gmsoft Exp $
 
   24 May 2003; Tavis Ormandy <taviso@gentoo.org> libxml2-2.5.4.ebuild,
   libxml2-2.5.7.ebuild, files/libxml2-2.5.4-dec-alpha-compiler.diff,
@@ -20,6 +20,9 @@
   version bump and cleanup
 
 *libxml2-2.5.6 (01 Apr 2003)
+
+  14 Jun 2003; Guy Martin <gmsoft@gentoo.org> libxml2-2.5.6.ebuild :
+  Added hppa to KEYWORDS.
 
   01 Apr 2003; foser <foser@gentoo.org> libxml2-2.5.6.ebuild :
   New version
