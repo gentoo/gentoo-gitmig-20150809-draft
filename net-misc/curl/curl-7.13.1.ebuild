@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.13.1.ebuild,v 1.7 2005/03/12 04:51:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.13.1.ebuild,v 1.8 2005/03/12 19:58:34 vapier Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -12,19 +12,18 @@ SRC_URI="http://curl.haxx.se/download/${P}.tar.bz2"
 
 LICENSE="MIT X11"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha ~arm ~hppa amd64 ppc64 ~s390"
+KEYWORDS="alpha amd64 arm hppa ~mips ppc ppc64 s390 sparc x86"
 IUSE="ssl ipv6 ldap"
+RESTRICT="maketest"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6a )
 	ldap? ( net-nds/openldap )"
 
-RESTRICT="maketest"
-
 src_compile() {
 	econf \
-		`use_enable ipv6` \
-		`use_enable ldap` \
-		`use_with ssl` \
+		$(use_enable ipv6) \
+		$(use_enable ldap) \
+		$(use_with ssl) \
 		--enable-http \
 		--enable-ftp \
 		--enable-gopher \
@@ -40,8 +39,7 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR="${D}" || die
-	dodoc LEGAL CHANGES README
+	dodoc CHANGES README
 	dodoc docs/FEATURES docs/INSTALL docs/INTERNALS docs/LIBCURL
 	dodoc docs/MANUAL docs/FAQ docs/BUGS docs/CONTRIBUTE
-
 }
