@@ -1,7 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.4.8.ebuild,v 1.1 2002/10/19 20:16:50 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.4.8.ebuild,v 1.2 2002/10/19 20:19:10 lostlogic Exp $
 
+# if the below URI isn't updated, check
+# http://128.113.139.111/~n/.naim_archive/naim-VERSION.tar.gz
+# but that doesn't have as good uptime.
 SRC_URI="http://www.acm.rpi.edu/~n/${P}.tar.gz"
 DESCRIPTION="An ncurses AOL Instant Messenger."
 HOMEPAGE="http://site.rpi-acm.org/info/naim/"
