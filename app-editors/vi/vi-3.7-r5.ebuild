@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r5.ebuild,v 1.6 2004/04/20 00:40:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r5.ebuild,v 1.7 2004/04/20 16:44:58 gmsoft Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://ex-vi.berlios.de/"
 SRC_URI="mirror://sourceforge/ex-vi/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="Caldera"
-KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ~ppc64"
+KEYWORDS="x86 ~ppc sparc ~alpha hppa ~mips ~amd64 ~ia64 ~ppc64"
 
 # NOTE: vi needs /etc/termcap to function properly with TERM=linux.
 DEPEND="sys-libs/ncurses
