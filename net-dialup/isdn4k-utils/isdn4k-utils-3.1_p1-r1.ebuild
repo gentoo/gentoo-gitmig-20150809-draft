@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.1_p1-r1.ebuild,v 1.6 2000/11/02 08:31:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.1_p1-r1.ebuild,v 1.7 2001/01/05 03:21:55 achim Exp $
 
 A=isdn4k-utils.v3.1pre1.tar.gz   
 S=${WORKDIR}/isdn4k-utils
@@ -20,7 +20,7 @@ DEPEND=">=sys-apps/bash-2.04
 src_unpack() {
   unpack ${A}
   cd ${S}
-  sed -e "s:CONFIG_KERNELDIR=.*:CONFIG_KERNELDIR='${WORKDIR}/../../linux-UP-2\.2\.17-r3/work/linux':" ${O}/files/${P}.config > .config
+  sed -e "s:CONFIG_KERNELDIR=.*:CONFIG_KERNELDIR='${WORKDIR}/../../linux-2\.4\.0_rc103/work/linux':" ${O}/files/${P}.config > .config
 }
 
 src_compile() {                           

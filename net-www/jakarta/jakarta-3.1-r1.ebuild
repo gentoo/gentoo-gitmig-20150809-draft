@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/jakarta/jakarta-3.1-r1.ebuild,v 1.4 2000/11/02 08:31:53 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jakarta/jakarta-3.1-r1.ebuild,v 1.5 2001/01/05 03:21:55 achim Exp $
 
 P=jakarta-3.1
 A="jakarta-tomcat.tar.gz jakarta-ant.tar.gz"
@@ -13,6 +13,7 @@ HOMEPAGE="http://jakarta.apache.org"
 
 DEPEND=">=sys-apps/bash-2.04
 	>=sys-libs/glibc-2.1.3
+	>=dev-lang/jdk-1.2
 	>=net-www/apache-ssl-1.3"
 
 src_unpack() {

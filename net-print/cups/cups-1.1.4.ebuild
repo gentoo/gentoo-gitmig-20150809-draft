@@ -1,14 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.4.ebuild,v 1.5 2000/12/19 00:34:25 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.4.ebuild,v 1.6 2001/01/05 03:21:55 achim Exp $
 
 GPV="4.0.4"
 S=${WORKDIR}/${P}
 S0=${WORKDIR}/print-${GPV}/cups
 DESCRIPTION="The Common Unix Printing System"
-SRC_URI="ftp://ftp.easysw.com/pub/cups/${PV}/${P}-source.tar.bz2
-	 http://download.sourceforge.net/gimp-print/print-${GPV}.tar.gz"
+SRC_URI="ftp://ftp.easysw.com/pub/cups/${PV}/${P}-source.tar.bz2"
 
 HOMEPAGE="http://www.cups.org"
 
@@ -31,10 +30,6 @@ src_compile() {
     sed -e "s:/usr/share/doc/cups:/usr/share/cups/doc:" \
 	Makedefs.orig > Makedefs 
     try make 
-#    cd ${S0}
-#      try ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc \
-#	--disable-gimptest
-#    try make
 }
 
 src_install () {

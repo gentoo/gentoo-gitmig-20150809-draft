@@ -10,7 +10,8 @@ DESCRIPTION="Gconf"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/GConf/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=gnome-base/oaf-0.6.1"
+DEPEND=">=gnome-base/oaf-0.6.1
+	>=x11-libs/gtk+-1.2"
 
 src_unpack() {
   unpack ${A}
