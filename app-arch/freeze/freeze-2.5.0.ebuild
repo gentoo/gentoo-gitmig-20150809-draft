@@ -4,7 +4,7 @@ HOMEPAGE="http://www.ibiblio.org/pub/Linux/utils/compress/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/glibc"
