@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.3 2002/03/30 13:21:05 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.4 2002/05/27 15:04:10 seemant Exp $
+
+*mpg321-0.2.10-r1 (27 May 2002)
+
+  27 May 2002; Seemant Kulleen <seemant@gentoo.org> mpg321-0.2.10-r1.ebuild
+  files/digest-mpg321-0.2.10-r1.ebuild :
+
+  The mpg123->mpg321 symlink is now only created if mpg123 doesn't own that
+  file.  This is done using the configure option, by the way.  Thanks to
+  Rachel Holmes for pointing that out.
 
 *mpg321-0.2.10 (30 Mar 2002)
   30 Mar 2002; Spider <spider@gentoo.org>
