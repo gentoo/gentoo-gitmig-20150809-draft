@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xtrs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.2 2003/02/12 04:04:38 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.3 2004/03/19 03:37:06 mr_bones_ Exp $
+
+  18 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> xtrs-4.9.ebuild:
+  depend on virtual/x11, not x11-base/xfree; only unpack what's needed to
+  compile; use CFLAGS and CC; tidy src_install
 
 *xtrs-4.9 (29 Jun 2002)
 
