@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.4.26.1.3.9.ebuild,v 1.2 2004/06/03 12:15:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.4.26.1.3.9-r1.ebuild,v 1.1 2004/06/14 18:54:22 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel eutils
@@ -9,7 +9,8 @@ KV=2.4.26
 
 ## idea: after the kernel-version (2.4.26) we append the vs-version (e.g. 1.3.9) to
 ## get 2.4.25.1.3.9 that is globbed out here:
-EXTRAVERSION="-vs${PV#*.*.*.}"
+VEXTRAVERSION="-vs${PV#*.*.*.}"
+EXTRAVERSION="-vs${PV#*.*.*.}-${PR}"
 
 S=${WORKDIR}/linux-${KV}
 # What's in this kernel?
@@ -20,7 +21,7 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Linux kernel with DEVEL version ctx-/vserver-patch"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	http://www.13thfloor.at/vserver/d_release/${EXTRAVERSION/-vs/v}/linux-vserver-${EXTRAVERSION/-vs/}.tar.bz2"
+	http://www.13thfloor.at/vserver/d_release/${VEXTRAVERSION/-vs/v}/linux-vserver-${VEXTRAVERSION/-vs/}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/ http://www.13thfloor.at/vserver/ http://www.linux-vserver.org/"
 
 KEYWORDS="~x86 -ppc"
@@ -29,13 +30,13 @@ SLOT="${KV}"
 src_unpack() {
 	unpack linux-${OKV}.tar.bz2
 	cd ${WORKDIR}
-	mv linux-${OKV} linux-${KV}${EXTRAVERSION}
+	mv linux-${OKV} linux-${KV}${VEXTRAVERSION}
 
-	tar xvjf ${DISTDIR}/linux-vserver-${EXTRAVERSION/-vs/}.tar.bz2 || die "Unpacking patch failed!"
+	tar xvjf ${DISTDIR}/linux-vserver-${VEXTRAVERSION/-vs/}.tar.bz2 || die "Unpacking patch failed!"
 
-	cd linux-${KV}${EXTRAVERSION}
-	epatch ${WORKDIR}/patch-${KV}${EXTRAVERSION}.diff
+	cd linux-${KV}${VEXTRAVERSION}
+	epatch ${WORKDIR}/patch-${KV}${VEXTRAVERSION}.diff
 	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
-
+	epatch ${FILESDIR}/${P}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 	kernel_universal_unpack
 }
