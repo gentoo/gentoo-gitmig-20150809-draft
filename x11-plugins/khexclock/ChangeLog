@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/khexclock
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/khexclock/ChangeLog,v 1.5 2004/08/14 00:53:52 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/khexclock/ChangeLog,v 1.6 2004/09/02 18:22:39 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  khexclock-0.0.4.ebuild:
+  Masked khexclock-0.0.4.ebuild stable for ppc
 
   13 Aug 2004; Jon Hood <squinky86@gentoo.org> khexclock-0.0.4.ebuild:
   Stable on x86.

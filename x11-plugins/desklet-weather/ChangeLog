@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/desklet-weather
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-weather/ChangeLog,v 1.8 2004/06/24 22:51:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-weather/ChangeLog,v 1.9 2004/09/02 18:22:39 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  desklet-weather-0.22.ebuild, desklet-weather-0.25.ebuild:
+  Masked desklet-weather-0.25.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  desklet-weather-0.22.ebuild:
+  Masked desklet-weather-0.22.ebuild stable for ppc
 
 *desklet-weather-0.25 (27 Apr 2004)
 

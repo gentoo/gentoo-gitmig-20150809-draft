@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gai-album/gai-album-0.6.ebuild,v 1.3 2004/06/24 22:52:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gai-album/gai-album-0.6.ebuild,v 1.4 2004/09/02 18:22:39 pvdabeel Exp $
 
 MY_PV="${PV}"
 MY_P="${PN}-${MY_PV}"
@@ -9,7 +9,7 @@ HOMEPAGE="http://gai.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gai/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 IUSE=""
 DEPEND=">=x11-libs/gai-0.5.3
 	>=media-sound/xmms-1.2.10"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmtz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.7 2004/06/24 23:18:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.8 2004/09/02 18:22:40 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> wmtz-0.7.ebuild:
+  Masked wmtz-0.7.ebuild stable for ppc
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> wmtz-0.7.ebuild:
   Inherit eutils for epatch.

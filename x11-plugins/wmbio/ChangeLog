@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbio
 # Copyright 2001-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/ChangeLog,v 1.6 2004/08/23 19:36:44 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/ChangeLog,v 1.7 2004/09/02 18:22:40 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> wmbio-1.02.ebuild:
+  Masked wmbio-1.02.ebuild stable for ppc
 
 *wmbio-1.02 (23 Aug 2004)
 

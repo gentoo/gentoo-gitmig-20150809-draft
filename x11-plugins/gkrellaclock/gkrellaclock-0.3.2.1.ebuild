@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/gkrellaclock-0.3.2.1.ebuild,v 1.3 2004/07/09 22:44:51 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/gkrellaclock-0.3.2.1.ebuild,v 1.4 2004/09/02 18:22:39 pvdabeel Exp $
 
 IUSE=""
 S=${WORKDIR}/${P/a/A}
@@ -12,7 +12,7 @@ DEPEND=">=app-admin/gkrellm-2*"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
+KEYWORDS="~x86 ~sparc ~alpha ppc ~amd64"
 
 src_compile() {
 	export CFLAGS="${CFLAGS/-O?/}"

@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/wmmaiload
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.11 2004/07/13 08:41:26 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.12 2004/09/02 18:22:40 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  wmmaiload-0.6.0.ebuild, wmmaiload-1.0.1.ebuild:
+  Masked wmmaiload-1.0.1.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  wmmaiload-0.6.0.ebuild:
+  Masked wmmaiload-0.6.0.ebuild stable for ppc
 
   13 Jul 2004; Michele Noberasco <s4t4n@gentoo.org>; wmmaiload-1.0.1.ebuild:
   Stable for x86.

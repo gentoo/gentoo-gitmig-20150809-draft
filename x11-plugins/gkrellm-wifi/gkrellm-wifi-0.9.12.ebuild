@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-wifi/gkrellm-wifi-0.9.12.ebuild,v 1.5 2004/07/09 23:35:51 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-wifi/gkrellm-wifi-0.9.12.ebuild,v 1.6 2004/09/02 18:22:39 pvdabeel Exp $
 
 DESCRIPTION="A GKrellM2 plug-in for monitoring the link quality of your wireless LAN cards"
 HOMEPAGE="http://brix.gimp.org/files/gkrellm-wifi/"
@@ -8,7 +8,7 @@ SRC_URI="http://brix.gimp.org/files/gkrellm-wifi/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
 DEPEND=">=app-admin/gkrellm-2.1.12"

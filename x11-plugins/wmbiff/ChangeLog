@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmbiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.12 2004/07/25 20:50:51 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.13 2004/09/02 18:22:40 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  wmbiff-0.4.25.ebuild:
+  Masked wmbiff-0.4.25.ebuild stable for ppc
 
 *wmbiff-0.4.25 (25 Jul 2004)
 

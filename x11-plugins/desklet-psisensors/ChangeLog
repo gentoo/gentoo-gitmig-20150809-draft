@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/desklet-psisensors
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/ChangeLog,v 1.9 2004/07/14 00:31:23 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/ChangeLog,v 1.10 2004/09/02 18:22:39 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  desklet-psisensors-20031028.ebuild, desklet-psisensors-20040420.ebuild:
+  Masked desklet-psisensors-20040420.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  desklet-psisensors-20031028.ebuild:
+  Masked desklet-psisensors-20031028.ebuild stable for ppc
 
   14 Jul 2004; Mike Gardiner <obz@gentoo.org> desklet-psisensors-20031028.ebuild,
   desklet-psisensors-20040420.ebuild:

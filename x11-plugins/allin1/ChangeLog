@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/allin1
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/allin1/ChangeLog,v 1.7 2004/08/31 13:05:00 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/allin1/ChangeLog,v 1.8 2004/09/02 18:22:39 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  allin1-0.4.7.ebuild, allin1-0.5.0.ebuild:
+  Masked allin1-0.5.0.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  allin1-0.4.7.ebuild:
+  Masked allin1-0.4.7.ebuild stable for ppc
 
 *allin1-0.5.0 (31 Aug 2004)
 

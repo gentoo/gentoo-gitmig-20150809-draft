@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-console/gkrellm-console-0.1.2.ebuild,v 1.7 2004/06/24 22:54:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-console/gkrellm-console-0.1.2.ebuild,v 1.8 2004/09/02 18:22:39 pvdabeel Exp $
 
 IUSE=""
 MY_P=consolewatch-${PV}
@@ -11,7 +11,7 @@ HOMEPAGE="http://gkrellm.luon.net/consolewatch.phtml"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="=app-admin/gkrellm-1.2*
 	>=media-libs/imlib-1.9.10-r1"

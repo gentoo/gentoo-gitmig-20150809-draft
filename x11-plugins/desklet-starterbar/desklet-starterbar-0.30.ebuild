@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/desklet-starterbar-0.30.ebuild,v 1.1 2004/07/15 08:01:14 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/desklet-starterbar-0.30.ebuild,v 1.2 2004/09/02 18:22:39 pvdabeel Exp $
 
 DESKLET_NAME="StarterBar"
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ppc ~amd64"
 
 DEPEND=">=gnome-extra/gdesklets-core-0.26
 	>=dev-python/pyxdg-0.5"

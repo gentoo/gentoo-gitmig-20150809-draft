@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/wmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/ChangeLog,v 1.7 2004/08/31 14:35:43 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/ChangeLog,v 1.8 2004/09/02 18:22:39 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  wmail-2.0-r1.ebuild, wmail-2.0.ebuild:
+  Masked wmail-2.0.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  wmail-2.0-r1.ebuild:
+  Masked wmail-2.0-r1.ebuild stable for ppc
 
   31 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmail-2.0-r1.ebuild:
   Stable for x86 as x11-plugins/libdockapp-0.5.0 is now stable as well.

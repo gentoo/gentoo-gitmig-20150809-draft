@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-radio
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-radio/ChangeLog,v 1.13 2004/06/24 22:57:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-radio/ChangeLog,v 1.14 2004/09/02 18:22:39 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gkrellm-radio-2.0.4.ebuild:
+  Masked gkrellm-radio-2.0.4.ebuild stable for ppc
 
 *gkrellm-radio-2.0.4 (22 Jun 2004)
 

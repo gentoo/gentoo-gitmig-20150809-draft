@@ -1,6 +1,19 @@
 # ChangeLog for x11-plugins/desklet-clock
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/ChangeLog,v 1.9 2004/06/24 22:49:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/ChangeLog,v 1.10 2004/09/02 18:22:39 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  desklet-clock-0.31.ebuild, desklet-clock-0.32-r1.ebuild,
+  desklet-clock-0.32.ebuild:
+  Masked desklet-clock-0.32.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  desklet-clock-0.31.ebuild, desklet-clock-0.32-r1.ebuild:
+  Masked desklet-clock-0.32-r1.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  desklet-clock-0.31.ebuild:
+  Masked desklet-clock-0.31.ebuild stable for ppc
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> desklet-clock-0.32-r1.ebuild:
   Mark stable on amd64.

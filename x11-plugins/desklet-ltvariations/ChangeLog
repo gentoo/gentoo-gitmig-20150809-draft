@@ -1,6 +1,19 @@
 # ChangeLog for x11-plugins/desklet-ltvariations
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ltvariations/ChangeLog,v 1.6 2004/07/18 04:25:56 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ltvariations/ChangeLog,v 1.7 2004/09/02 18:22:39 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  desklet-ltvariations-0.21-r1.ebuild, desklet-ltvariations-0.21.ebuild,
+  desklet-ltvariations-0.26.ebuild:
+  Masked desklet-ltvariations-0.26.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  desklet-ltvariations-0.21-r1.ebuild, desklet-ltvariations-0.21.ebuild:
+  Masked desklet-ltvariations-0.21.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  desklet-ltvariations-0.21-r1.ebuild:
+  Masked desklet-ltvariations-0.21-r1.ebuild stable for ppc
 
 *desklet-ltvariations-0.26 (18 Jul 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/desklet-clock-0.31.ebuild,v 1.5 2004/07/13 03:20:24 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/desklet-clock-0.31.ebuild,v 1.6 2004/09/02 18:22:39 pvdabeel Exp $
 
 DESKLET_NAME="Clock"
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 
 DEPEND=">=gnome-extra/gdesklets-core-0.20"
 

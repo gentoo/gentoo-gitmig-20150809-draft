@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellaclock
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/ChangeLog,v 1.10 2004/07/09 22:44:51 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/ChangeLog,v 1.11 2004/09/02 18:22:39 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gkrellaclock-0.3.2.1.ebuild:
+  Masked gkrellaclock-0.3.2.1.ebuild stable for ppc
 
   09 Jul 2004; Tom Martin <slarti@gentoo.org> gkrellaclock-0.3.2.1.ebuild:
   Marked ~amd64.

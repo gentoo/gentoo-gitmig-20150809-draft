@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmnetselect
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetselect/ChangeLog,v 1.7 2004/08/08 01:06:54 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetselect/ChangeLog,v 1.8 2004/09/02 18:22:40 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  wmnetselect-0.8-r1.ebuild:
+  Masked wmnetselect-0.8-r1.ebuild stable for ppc
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> wmnetselect-0.8-r1.ebuild,
   wmnetselect-0.8.ebuild:

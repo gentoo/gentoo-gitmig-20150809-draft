@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bgchanger/gkrellm-bgchanger-0.1.0.ebuild,v 1.3 2004/07/09 22:28:41 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bgchanger/gkrellm-bgchanger-0.1.0.ebuild,v 1.4 2004/09/02 18:22:39 pvdabeel Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.bender-suhl.de/stefan/comp/sources/old/${MY_P}.tar.gz"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~x86 ppc ~sparc ~alpha ~amd64"
 
 DEPEND="=app-admin/gkrellm-2*"
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmblob
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/ChangeLog,v 1.3 2004/08/28 21:45:39 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/ChangeLog,v 1.4 2004/09/02 18:22:40 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  wmblob-1.0.1.ebuild:
+  Masked wmblob-1.0.1.ebuild stable for ppc
 
   28 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmblob-1.0.1.ebuild:
   Stable for x86.

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmupmon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmupmon/ChangeLog,v 1.7 2004/08/02 11:04:39 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmupmon/ChangeLog,v 1.8 2004/09/02 18:22:40 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  wmupmon-0.1.2.ebuild:
+  Masked wmupmon-0.1.2.ebuild stable for ppc
 
   02 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmupmon-0.1.2.ebuild:
   Ebuild clean up, stable on x86.

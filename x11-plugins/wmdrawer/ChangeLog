@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmdrawer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.8 2004/07/31 22:41:36 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.9 2004/09/02 18:22:40 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  wmdrawer-0.10.5.ebuild:
+  Masked wmdrawer-0.10.5.ebuild stable for ppc
 
 *wmdrawer-0.10.5 (01 Aug 2004)
 

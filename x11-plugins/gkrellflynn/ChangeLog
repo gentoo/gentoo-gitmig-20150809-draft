@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellflynn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellflynn/ChangeLog,v 1.7 2004/06/24 22:53:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellflynn/ChangeLog,v 1.8 2004/09/02 18:22:39 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gkrellflynn-0.7.ebuild:
+  Masked gkrellflynn-0.7.ebuild stable for ppc
 
 *gkrellflynn-0.7 (22 Jun 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ascpu/ascpu-1.10.ebuild,v 1.3 2004/07/08 08:30:59 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ascpu/ascpu-1.10.ebuild,v 1.4 2004/09/02 18:22:39 pvdabeel Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.tigr.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc ~mips"
+KEYWORDS="~x86 ~sparc ppc ~mips"
 
 DEPEND="virtual/x11"
 

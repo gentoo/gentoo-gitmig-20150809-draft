@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmxmms
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/ChangeLog,v 1.4 2004/06/24 23:20:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/ChangeLog,v 1.5 2004/09/02 18:22:41 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  wmxmms-0.1.4.ebuild:
+  Masked wmxmms-0.1.4.ebuild stable for ppc
 
   12 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> wmxmms-0.1.4.ebuild:
   Fix bug #44407 by doing a make clean first.  Stable on x86.

@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/desklet-goodweather
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-goodweather/ChangeLog,v 1.8 2004/06/24 22:49:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-goodweather/ChangeLog,v 1.9 2004/09/02 18:22:39 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  desklet-goodweather-0.3.ebuild, desklet-goodweather-0.4.ebuild:
+  Masked desklet-goodweather-0.4.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  desklet-goodweather-0.3.ebuild:
+  Masked desklet-goodweather-0.3.ebuild stable for ppc
 
 *desklet-goodweather-0.4 (27 Apr 2004)
 

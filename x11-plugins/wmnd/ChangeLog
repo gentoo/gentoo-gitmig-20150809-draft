@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.17 2004/08/21 05:00:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.18 2004/09/02 18:22:40 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> wmnd-0.4.9.ebuild:
+  Masked wmnd-0.4.9.ebuild stable for ppc
 
   20 Aug 2004; Jason Wever <weeve@gentoo.org> wmnd-0.4.9.ebuild:
   Stable on sparc.

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asmon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.6 2004/06/24 22:48:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.7 2004/09/02 18:22:39 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> asmon-0.64.ebuild:
+  Masked asmon-0.64.ebuild stable for ppc
 
 *asmon-0.64 (13 Jun 2004)
 

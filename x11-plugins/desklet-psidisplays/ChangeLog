@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/desklet-psidisplays
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psidisplays/ChangeLog,v 1.6 2004/06/24 22:50:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psidisplays/ChangeLog,v 1.7 2004/09/02 18:22:39 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  desklet-psidisplays-20031028.ebuild, desklet-psidisplays-20040420.ebuild:
+  Masked desklet-psidisplays-20040420.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  desklet-psidisplays-20031028.ebuild:
+  Masked desklet-psidisplays-20031028.ebuild stable for ppc
 
 *desklet-psidisplays-20040420 (27 Apr 2004)
 

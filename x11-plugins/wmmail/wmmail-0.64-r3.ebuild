@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmail/wmmail-0.64-r3.ebuild,v 1.5 2004/06/24 23:12:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmail/wmmail-0.64-r3.ebuild,v 1.6 2004/09/02 18:22:40 pvdabeel Exp $
 
 IUSE=""
 MY_PN=WMMail.app
@@ -12,7 +12,7 @@ SRC_URI="http://www.eecg.utoronto.ca/~chanb/${MY_PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64 ~ppc"
+KEYWORDS="x86 sparc amd64 ppc"
 
 DEPEND="virtual/x11
 	x11-libs/libPropList"

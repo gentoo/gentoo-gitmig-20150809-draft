@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.13 2004/07/09 22:55:52 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.14 2004/09/02 18:22:39 pvdabeel Exp $
 
 IUSE=""
 MY_P=${P/_beta/-beta}
@@ -11,7 +11,7 @@ HOMEPAGE="http://coredump.free.fr/linux/harddrive.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~amd64 ~ppc"
+KEYWORDS="x86 sparc ~amd64 ppc"
 
 DEPEND="=app-admin/gkrellm-2*
 	>=sys-apps/sed-4"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-xmmsbar/karamba-xmmsbar-0.3.ebuild,v 1.7 2004/06/24 23:03:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-xmmsbar/karamba-xmmsbar-0.3.ebuild,v 1.8 2004/09/02 18:22:39 pvdabeel Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.kde-look.org/content/files/5882-xmmsbar-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 RDEPEND=">=x11-misc/superkaramba-0.21
