@@ -1,0 +1,69 @@
+Index: preeditarea.c
+===================================================================
+RCS file: /cvsroot/im-ja/im-ja/src/preeditarea.c,v
+retrieving revision 1.3
+retrieving revision 1.7
+diff -u -r1.3 -r1.7
+--- preeditarea.c	7 Aug 2003 14:22:02 -0000	1.3
++++ preeditarea.c	12 Mar 2004 13:34:41 -0000	1.7
+@@ -20,6 +20,7 @@
+  * Based on gtklabel.c
+  */
+ 
++#include <config.h>
+ #include <gtk/gtk.h>
+ #include <math.h>
+ 
+@@ -296,7 +297,7 @@
+   PreeditArea *area;
+   gint width, height;
+   PangoRectangle logical_rect;
+-  GtkWidgetAuxInfo *aux_info;
++  //GtkWidgetAuxInfo *aux_info;
+ 
+ 	//IM_JA_DEBUG("preedit_area_size_request\n");
+   
+@@ -312,7 +313,7 @@
+ 
+   pango_layout_get_extents(area->layout, NULL, &logical_rect);
+   
+-  aux_info = _gtk_widget_get_aux_info(widget, FALSE);
++  //aux_info = _gtk_widget_get_aux_info(widget, FALSE);
+ 	width += PANGO_PIXELS(logical_rect.width);
+   
+   height += PANGO_PIXELS(logical_rect.height);
+@@ -403,25 +404,29 @@
+ 
+ 			PangoRectangle cursor_pos;
+       GdkRectangle cursor_location;
++#ifdef GTK_2_2
+       GdkGC *gc;
++#endif
+ 			PangoLayout *layout = preedit_area_get_layout(PREEDIT_AREA(area));
+ 
+       preedit_area_ensure_layout(area);
+       
+ 			pango_layout_get_cursor_pos(layout, area->cursor_pos, &cursor_pos, NULL);
+ 
+-
+       cursor_location.x = xoffset + PANGO_PIXELS(cursor_pos.x);
+       cursor_location.y = yoffset + PANGO_PIXELS(cursor_pos.y);
+       cursor_location.width = 0;
+       cursor_location.height = PANGO_PIXELS(cursor_pos.height);
+ 
++#ifdef GTK_2_2
+       gc = _gtk_get_insertion_cursor_gc(widget, TRUE);
+-
+-			_gtk_draw_insertion_cursor(widget, widget->window, gc,
+-																 &cursor_location, GTK_TEXT_DIR_LTR,
+-																 FALSE);
++			_gtk_draw_insertion_cursor(widget, widget->window, gc, &cursor_location,
++																 GTK_TEXT_DIR_LTR, FALSE);
+ 			g_object_unref(gc);
++#else
++			gtk_draw_insertion_cursor(widget, widget->window, NULL, &cursor_location, 
++																TRUE, GTK_TEXT_DIR_LTR, FALSE);
++#endif
+       
+  	}
+ 

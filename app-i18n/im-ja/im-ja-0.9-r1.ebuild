@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.9-r1.ebuild,v 1.3 2004/03/04 19:21:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.9-r1.ebuild,v 1.4 2004/03/21 21:26:13 usata Exp $
 
 inherit gnome2
 
@@ -39,10 +39,18 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-canna-3.7-gentoo.diff
+	# fix for the bug #45246
+	if has_version '>=x11-libs/gtk+-2.4' ; then
+		use debug || find . -name 'Makefile*' \
+			-exec sed -i -e "/DEPRECATED/d" {} \;
+		cd src
+		epatch ${FILESDIR}/${P}-gtk24-gentoo.diff
+	fi
 }
 
 src_compile() {
 	local myconf
+	export WANT_AUTOMAKE=1.8
 	use gnome || myconf="$myconf --disable-gnome"
 	use canna || myconf="$myconf --disable-canna"
 	use freewnn || myconf="$myconf --disable-wnn"
