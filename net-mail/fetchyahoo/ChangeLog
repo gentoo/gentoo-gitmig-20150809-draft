@@ -1,12 +1,14 @@
 # ChangeLog for net-mail/fetchyahoo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.4 2003/04/01 12:13:24 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.5 2003/04/01 12:14:33 absinthe Exp $
 
-*fetchyahoo-2.4 (16 Nov 2002)
+*fetchyahoo-2.5 (01 Apr 2003)
 
   01 Apr 2003; Dylan Carlson <absinthe@gentoo.org> :
   Version bump. Fixes bug associated with Yahoo's site login changes. Marked
   stable because this is a necessary upgrade.
+
+*fetchyahoo-2.4 (16 Nov 2002)
 
   13 Dec 2002; Martin Holzer <mholzer@gentoo.org> fetchyahoo-2.4.ebuild ChangeLog :
   Changed Homepage and SRC_URI.
