@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9_rc2.ebuild,v 1.1 2003/09/23 19:18:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9_rc2.ebuild,v 1.2 2003/09/23 19:32:10 aliz Exp $
 
-IUSE="ldap pam postgres mysql ssl tcpd"
+IUSE="ldap pam postgres mysql ssl tcpd ipv6"
 
-MY_P=${P/_/}p
+MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="An advanced and very configurable FTP server"
-SRC_URI="ftp://ftp.proftpd.org/distrib/source/${MY_P}.tar.bz2"
+SRC_URI="ftp://ftp.proftpd.org/distrib/source/${MY_P}p.tar.bz2"
 HOMEPAGE="http://www.proftpd.org/"
 
 SLOT="0"
@@ -37,7 +37,6 @@ src_compile() {
 
 	if use ssl; then
 		einfo ssl
-
 		# enable mod_tls
 		modules="${modules}:mod_tls"
 	fi
@@ -67,7 +66,7 @@ src_compile() {
 		--disable-sendfile \
 		--enable-autoshadow \
 		--with-modules=${modules} \
-		${myconf} || die "bad ./configure"
+		${myconf} $( use_enable ipv6 ) || die "bad ./configure"
 
 	make || die "compile problem"
 }
