@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.27 2004/04/04 22:32:31 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.28 2004/04/05 03:14:16 agriffis Exp $
+
+  04 Apr 2004; Aron Griffis <agriffis@gentoo.org> libpcap-0.8.3-r1.ebuild:
+  Mark stable on alpha and ia64 for bug 46258
 
   04 Apr 2004; Jon Portnoy <avenj@gentoo.org> libpcap-0.8.3-r1.ebuild :
   Stable on AMD64
