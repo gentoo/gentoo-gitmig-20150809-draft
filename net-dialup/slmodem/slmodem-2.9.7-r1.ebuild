@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.7-r1.ebuild,v 1.1 2004/06/05 10:41:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.7-r1.ebuild,v 1.2 2004/06/05 10:48:16 dragonheart Exp $
 
 inherit eutils
 
@@ -76,6 +76,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	depmod -a
 	# Make some devices if we aren't using devfs
 	# If we are using devfs, restart it
 	if [ -e ${ROOT}/dev/.devfsd ]
