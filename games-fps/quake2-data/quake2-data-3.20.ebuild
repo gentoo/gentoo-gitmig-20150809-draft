@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.10 2004/09/18 02:54:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.11 2004/12/30 22:33:18 vapier Exp $
 
 inherit games eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.idsoftware.com/idstuff/quake2/q2-${PV}-x86-full-ctf.exe"
 
 LICENSE="Q2EULA"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="videos"
 
 DEPEND="app-arch/unzip"
