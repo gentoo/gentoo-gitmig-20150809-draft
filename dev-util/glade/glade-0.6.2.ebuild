@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.2.ebuild,v 1.9 2002/03/30 01:26:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.2.ebuild,v 1.10 2002/05/23 06:50:12 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="glade"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/glade/${P}.tar.gz"
 HOMEPAGE="http://glade.gnome.org/"
 
-RDEPEND=">=x11-libs/gtk+-1.2.10-r4
+RDEPEND="=x11-libs/gtk+-1.2*
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 	bonobo? ( >=gnome-base/bonobo-1.0.9-r1 )"
 

@@ -8,7 +8,7 @@ SRC_URI="http://anjuta.sourceforge.net/packages/anjuta-${PV}.tar.gz"
 HOMEPAGE="http://anjuta.sourceforge.net/"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
-	>=x11-libs/gtk+-1.2.10-r4
+	=x11-libs/gtk+-1.2*
 	media-libs/audiofile
 	dev-libs/libxml
 	app-text/scrollkeeper"
@@ -17,7 +17,7 @@ RDEPEND="dev-util/glade
 	 dev-util/glademm
 	 media-gfx/gnome-iconedit
 	 app-text/scrollkeeper
-	 >=x11-libs/gtk+-1.2.10-r4
+	 =x11-libs/gtk+-1.2*
 	 media-libs/audiofile
 	 media-sound/esound
 	 sys-apps/bash

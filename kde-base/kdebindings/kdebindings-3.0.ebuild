@@ -1,18 +1,18 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.0.ebuild,v 1.5 2002/05/21 18:14:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.0.ebuild,v 1.6 2002/05/23 06:50:12 seemant Exp $
 
 inherit kde-dist
 
 DESCRIPTION="${DESCRIPTION}Bindings"
 
 newdepend ">=kde-base/kdebase-${PV}
-	>=x11-libs/gtk+-1.2.10-r4
+	=x11-libs/gtk+-1.2*
 	sys-devel/perl
 	python? ( dev-lang/python )
 	java? (	virtual/jdk )
-	>=x11-libs/gtk+-1.2.6
+	=x11-libs/gtk+-1.2*
 	=dev-libs/glib-1.2*
 	~kde-base/kdenetwork-${PV}"
 

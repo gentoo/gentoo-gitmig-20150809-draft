@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bonobo-conf/bonobo-conf-0.14.ebuild,v 1.2 2002/04/12 16:58:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bonobo-conf/bonobo-conf-0.14.ebuild,v 1.3 2002/05/23 06:50:12 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Bonobo Configuration System"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz
 HOMEPAGE="http://www.gnome.org/"
 
 RDEPEND="=dev-libs/glib-1.2*
-	 >=x11-libs/gtk+-1.2.10-r4
+	 =x11-libs/gtk+-1.2*
 	 >=gnome-base/bonobo-1.0.15
 	 >=gnome-base/oaf-0.6.6-r1"
 

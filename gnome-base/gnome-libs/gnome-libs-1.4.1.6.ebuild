@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.6.ebuild,v 1.1 2002/04/28 23:47:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.6.ebuild,v 1.2 2002/05/23 06:50:12 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Core Libraries"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 DEPEND=">=media-libs/imlib-1.9.10
 		>=media-sound/esound-0.2.23
 		>=gnome-base/ORBit-0.5.12
-		>=x11-libs/gtk+-1.2.10-r4
+		=x11-libs/gtk+-1.2*
 		<sys-libs/db-2
 		doc? ( app-text/docbook-sgml 
 		       dev-util/gtk-doc )"

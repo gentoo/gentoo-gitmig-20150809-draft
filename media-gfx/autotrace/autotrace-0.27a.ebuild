@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.27a.ebuild,v 1.2 2002/04/28 04:50:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.27a.ebuild,v 1.3 2002/05/23 06:50:12 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Converts Bitmaps to vector-grahics"
@@ -10,7 +10,7 @@ HOMEPAGE="http://autotrace.sourceforge.net/"
 
 DEPEND="virtual/glibc
 	>=x11-libs/gtkDPS-0.3.3
-	>=x11-libs/gtk+-1.2.10-r4"
+	=x11-libs/gtk+-1.2*"
 
 
 src_compile() {

@@ -10,7 +10,7 @@ HOMEPAGE="http://home.wtal.de/petig/Gtk/"
 
 DEPEND=">=dev-util/glade-0.6.2"
 
-RDEPEND=">=x11-libs/gtk+-1.2.10-r4
+RDEPEND="=x11-libs/gtk+-1.2*
 	 >=x11-libs/gtkmm-1.2.5-r1
 	 >=dev-util/glade-0.6.2
 	 >=gnome-extra/gnomemm-1.2.0-r1"

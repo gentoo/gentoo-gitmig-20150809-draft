@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3.ebuild,v 1.1 2002/01/27 16:45:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3.ebuild,v 1.2 2002/05/23 06:50:12 seemant Exp $
 
 
 MY_P=${P/guppi/Guppi}
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.yggdrasil.com/mirrors/site/ftp.gnome.org/pub/GNOME/stable/sou
 HOMEPAGE="http://www.gnome.org/guppi/"
 
 RDEPEND=">=sys-apps/portage-1.8.4
-	 >=x11-libs/gtk+-1.2.10-r3
+	 =x11-libs/gtk+-1.2*
 	 >=gnome-base/gnome-libs-1.4.1.2
 	 >=gnome-base/oaf-0.6.7
 	 >=gnome-base/libglade-0.17

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r2.ebuild,v 1.2 2002/03/21 15:14:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r2.ebuild,v 1.3 2002/05/23 06:50:12 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GIMP"
@@ -11,14 +11,14 @@ HOMEPAGE="http://www.gimp.org/"
 DEPEND="nls? ( sys-devel/gettext )
 	sys-devel/autoconf
 	sys-devel/automake
-	>=x11-libs/gtk+-1.2.10-r4
+	=x11-libs/gtk+-1.2*
 	>=media-libs/mpeg-lib-1.3.1
 	aalib? ( >=media-libs/aalib-1.2 )
 	perl? ( >=dev-perl/PDL-2.2.1 >=dev-perl/Parse-RecDescent-1.80 >=dev-perl/gtk-perl-0.7004 )
 	python? ( >=dev-lang/python-2.0 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
 
-RDEPEND=">=x11-libs/gtk+-1.2.10-r4
+RDEPEND="=x11-libs/gtk+-1.2*
 	aalib? ( >=media-libs/aalib-1.2 )
 	perl? ( >=dev-perl/PDL-2.2.1 >=dev-perl/Parse-RecDescent-1.80 >=dev-perl/gtk-perl-0.7004 )
 	python? ( >=dev-lang/python-2.0 )

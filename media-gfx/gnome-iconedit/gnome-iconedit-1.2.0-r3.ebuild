@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/gnome-iconedit-1.2.0-r3.ebuild,v 1.1 2002/04/02 20:35:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/gnome-iconedit-1.2.0-r3.ebuild,v 1.2 2002/05/23 06:50:12 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Edits icons, what more can you say?"
@@ -9,7 +9,7 @@ SRC_URI="http://210.77.60.218/ftp/ftp.debian.org/pool/main/g/gnome-iconedit/gnom
 HOMEPAGE="www.advogato.org/proj/GNOME-Iconedit/"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
-	>=x11-libs/gtk+-1.2.10-r4
+	=x11-libs/gtk+-1.2*
 	>=media-libs/gdk-pixbuf-0.11.0-r1
 	media-libs/libpng
 	gnome-base/ORBit"
