@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2004.3/package.mask,v 1.5 2005/04/04 03:51:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2004.3/package.mask,v 1.6 2005/04/04 17:31:25 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Something between 2.3.3.20040420 and 2.3.4.20040619 breaks blackdown-jdk
@@ -20,38 +20,27 @@ games-emulation/mupen64-alsasnd
 games-roguelike/crossfire-client
 media-libs/alsa-lib
 media-libs/alsa-oss
-media-libs/bio2jack
 media-libs/ladcca
 media-libs/libclalsadrv
-media-libs/libjackasyn
 media-libs/libmustux
 media-plugins/alsa-jack
 media-plugins/gst-plugins-alsa
 media-plugins/xmms-alsa
-media-plugins/xmms-jack
 media-sound/alsa-patch-bay
-media-sound/alsaplayer
 media-sound/alsa-tools
 media-sound/alsa-utils
 media-sound/alsamixergui
 media-sound/ams
 media-sound/aseqview
-media-sound/bitscope
 media-sound/brutefir
-media-sound/freqtweak
-media-sound/glmix
 media-sound/gmorgan
 media-sound/gnome-alsamixer
 media-sound/horgand
 media-sound/jaaa
-media-sound/jack-audio-connection-kit
-media-sound/jack-rack
 media-sound/jamin
-media-sound/kaconnect
 media-sound/kamix
 media-sound/tk707
 media-sound/krecord
-media-sound/meterbridge
 media-sound/museseq
 media-sound/pmidi
 media-sound/qjackconnect
@@ -60,8 +49,6 @@ media-sound/qmidiarp
 media-sound/rosegarden
 media-sound/seq24
 media-sound/sfc
-media-sound/specimen
 media-sound/supercollider
 media-sound/tapiir
-media-sound/timemachine
 media-video/gephe
