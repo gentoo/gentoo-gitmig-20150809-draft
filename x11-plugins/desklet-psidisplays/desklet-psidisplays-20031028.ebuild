@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psidisplays/desklet-psidisplays-20031028.ebuild,v 1.3 2004/06/24 22:50:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psidisplays/desklet-psidisplays-20031028.ebuild,v 1.4 2004/07/13 04:07:55 obz Exp $
 
 MY_PN="PsiDisplayPackage"
 MY_P=${MY_PN}-${PV}
@@ -8,7 +8,7 @@ S=${WORKDIR}
 
 DESCRIPTION="A CPU Monitor Sensor for gdesklets"
 SRC_URI="http://gdesklets.gnomedesktop.org/files/${MY_P}.tar.bz2"
-HOMEPAGE="http://www.pycage.de/"
+HOMEPAGE="http://gdesklets.gnomedesktop.org/categories.php?func=gd_show_app&gd_app_id=38"
 LICENSE="as-is"
 
 SLOT="0"
