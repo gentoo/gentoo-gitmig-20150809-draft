@@ -6,10 +6,11 @@ MD5 24c0cb2d4ce8da969c77f6ada1f8e60c metadata.xml 530
 MD5 49231dc4cb4889208fc1db99680122f4 selinux-squid-20040106.ebuild 382
 MD5 75547e0314eea980756dc5ad85b4009e selinux-squid-20041109.ebuild 438
 MD5 f58029b1e34511ea86b828ba9c4932c2 files/digest-selinux-squid-20040106 73
+MD5 f5ed2fcce0e51005a8e47002129845d8 files/digest-selinux-squid-20041109 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBljKdGSBEIeh4AEYRAnkpAJ9e7Mc2m+EK5jfFRt/CDhKu7WsrIwCfdRnd
-S3BFZXit6Es6U3FrDXW0Vnk=
-=0CJ3
+iD8DBQFBljLUGSBEIeh4AEYRAlGnAJwNZng1AYgqLzfihpLkKmR+CGWluACdFO2s
+nnSq7F24PD2/Qsd9Aj0Q6sI=
+=fq5k
 -----END PGP SIGNATURE-----

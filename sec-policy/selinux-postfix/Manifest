@@ -8,10 +8,11 @@ MD5 1ffb12508a6ffb6802e6e0b5707f818e selinux-postfix-20041021.ebuild 395
 MD5 489a1887c3888035a47e27205d6cecd9 selinux-postfix-20041109.ebuild 395
 MD5 d68c2a4162175e6950c0c77d9e529f88 files/digest-selinux-postfix-20040427 75
 MD5 8814206bdaf996778f94cb3fadce696a files/digest-selinux-postfix-20041021 75
+MD5 3e527377db06e4cb148b9e63834ae5fe files/digest-selinux-postfix-20041109 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBljHqGSBEIeh4AEYRAlZ3AJ0VqoGSIQCKqYEdvkvd2jg5UjnOawCfeoIQ
-e4RNdtGr2+UcrsQXHuoFIFo=
-=yaXP
+iD8DBQFBljMcGSBEIeh4AEYRAlTIAJsGYg6MK/r577xWVRbb+0DMtS+nCACfQ2/3
+z6naml50dr0Arl/fpMjR10k=
+=2anP
 -----END PGP SIGNATURE-----
