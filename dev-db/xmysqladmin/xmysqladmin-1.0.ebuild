@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xmysqladmin/xmysqladmin-1.0.ebuild,v 1.13 2004/06/24 22:02:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xmysqladmin/xmysqladmin-1.0.ebuild,v 1.14 2004/06/29 17:53:40 agriffis Exp $
 
 DESCRIPTION="xforms based front end to mysql"
 SRC_URI="ftp://ftp.mysql.com/Contrib/${P}.tar.gz"
@@ -9,6 +9,7 @@ HOMEPAGE="http://www.mysql.org"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 DEPEND="virtual/x11
 	x11-libs/xforms
@@ -42,4 +43,3 @@ src_install () {
 
 	dodoc README INSTALL CHANGES ANNOUNCE TODO
 }
-
