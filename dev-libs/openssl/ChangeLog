@@ -1,7 +1,15 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.6 2002/05/14 05:30:10 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.7 2002/07/11 06:06:32 jtegart Exp $
 
+*openssl-0.9.6d-r1 (10 Jul 2002)
+
+  10 Jul 2002; Josh Tegart <jtegart@gentoo.org> : 
+
+  Fixed problem that prevented openssl-0.9.6d from building on sparc. The 
+  Configure script incorrectly set the SHARED_LDFLAGS in the Makefile. The new 
+  ebuild simply removes the incorrect value if ARCH="sparc".
+  
 *openssl-0.9.6d (13 May 2002)
 
   13 May 2002; Donny Davies <woodchip@gentoo.org> :
