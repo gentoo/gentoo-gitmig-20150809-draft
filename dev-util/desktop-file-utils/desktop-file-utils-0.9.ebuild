@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.9.ebuild,v 1.1 2004/10/04 22:59:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.9.ebuild,v 1.2 2004/10/14 15:22:25 agriffis Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.freedesktop.org/software/desktop-file-utils/releases/${P}.ta
 HOMEPAGE="http://www.freedesktop.org/software/desktop-file-utils/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~mips ~hppa"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~mips ~hppa ~alpha ~ia64"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.0.0
