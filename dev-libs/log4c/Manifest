@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7b48a6c8e62b5226e233cfc38baa352b ChangeLog 3881
+MD5 0e1e289d73124790738af909f4efd9f0 ChangeLog 3986
 MD5 5a8170fab84628b043e5fb94bb663f24 log4c-1.0.11.ebuild 1531
 MD5 18cd38ca1baee2e12e1ea8d8deec7d1d log4c-1.0.12.ebuild 1174
 MD5 47bcb101a6d5b94977305f73c8dbdbb0 log4c-1.0.6-r1.ebuild 1011
 MD5 4eafc1e08f52712fd036e73730b0a172 metadata.xml 435
-MD5 f9435d53bbe298570ce506ec3b3e51c9 log4c-1.0.10-r1.ebuild 1878
+MD5 3604c4fb2593a7002cdd88b95c446994 log4c-1.0.10-r1.ebuild 1874
 MD5 37d8d5f4cc1cf6074bcd576c3c294b99 files/configure.in.patch 854
 MD5 1f0fac7267c1cff0be0ee973376e272e files/digest-log4c-1.0.11 64
 MD5 fef7d3e32cce5efd15a56a6dcff9c4d1 files/digest-log4c-1.0.12 64
@@ -15,13 +15,13 @@ MD5 81e6117c525d7118531b1868a13738fc files/log4c_1.0.11_test.patch 464
 MD5 1902a2badd2a965f9e4072f4b6e7adfe files/makefile.doc.am.patch 350
 MD5 028648da7dc4850b5dbc3ec0469eba94 files/makefile.doc.in.patch 352
 MD5 a9fba68dfd5dea143cfe49ccb0662fc1 files/digest-log4c-1.0.10-r1 64
-MD5 80234f09351af06e9eda20bf7dd1c2bd files/log4c-1.0.12-function.patch 998
-MD5 80234f09351af06e9eda20bf7dd1c2bd files/log4c-1.0.11-function.patch 998
 MD5 2debb494dcd9f4261f707e22e453f391 files/log4c-1.0.10-nodocs.patch 838
+MD5 80234f09351af06e9eda20bf7dd1c2bd files/log4c-1.0.11-function.patch 998
+MD5 80234f09351af06e9eda20bf7dd1c2bd files/log4c-1.0.12-function.patch 998
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB12HsmdTrptrqvGERAvv+AJ9oP+lmBwGon97AUhwnrxzip1kc6gCfTFna
-7ldNPahatYU0wzHGTyqYA98=
-=Akut
+iD8DBQFB2Ww5KRy60XGEcJIRAnNQAJ4r3RZGj38HV76zXMbI4KucL7TWzgCaA/Kr
+CUsKaZUd4SoGGJVrQJk2IHU=
+=rqOK
 -----END PGP SIGNATURE-----
