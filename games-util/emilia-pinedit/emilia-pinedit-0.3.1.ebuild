@@ -10,9 +10,9 @@ DESCRIPTION="A table-editor for the emilia-pinball"
 HOMEPAGE="http://pinball.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pinball/${MY_P}.tar.gz"
 
-KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/opengl
@@ -29,11 +29,11 @@ src_unpack() {
 		-e "/^CFLAGS=/s:-g -W -Wall:${CFLAGS}:" \
 		-e "/^CXXFLAGS=/s:-g -W -Wall:${CXXFLAGS}:" \
 		configure \
-			|| die "sed configure failed"
+		|| die "sed configure failed"
 	sed -i \
 		-e "/^LDFLAGS/s:$:`pinball-config --libs` @LIBS@ -lSDL -lSDL_image -lSDL_mixer:" \
 		pinedit/Makefile.in \
-			|| die "sed pinedit/Makefile.in failed"
+		|| die "sed pinedit/Makefile.in failed"
 	epatch ${FILESDIR}/${PV}-assert.patch
 }
 
@@ -43,7 +43,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc AUTHORS INSTALL NEWS README || die "dodoc failed"
+	dodoc AUTHORS INSTALL NEWS README
 	make DESTDIR=${D} install || die "make install failed"
 	rm -rf ${D}/${GAMES_PREFIX}/{include,lib}
 	prepgamesdirs
