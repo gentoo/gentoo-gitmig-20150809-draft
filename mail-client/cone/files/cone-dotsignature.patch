@@ -1,0 +1,83 @@
+diff -ur cone-0.57/cone/cursesmessage.C cone-0.57.my/cone/cursesmessage.C
+--- cone-0.57/cone/cursesmessage.C	2003-09-30 07:31:49.000000000 +0400
++++ cone-0.57.my/cone/cursesmessage.C	2004-05-20 23:53:22.000000000 +0400
+@@ -2044,6 +2044,7 @@
+ 			if (ifs.eof())
+ 				break;
+ 		}
++		ifs.close();
+ 
+ 		if (reformatterPtr)
+ 		{
+@@ -2059,6 +2060,8 @@
+ 		LIBMAIL_THROW();
+ 	}
+ 
++	writeSignature(otmpfile);
++
+ 	otmpfile << flush;
+ 
+ 	if (otmpfile.fail() ||
+@@ -2323,6 +2326,9 @@
+ 				if (reformatterPtr)
+ 					delete reformatterPtr;
+ 			}
++
++			writeSignature(otmpfile);
++
+ 			otmpfile << flush;
+ 		}
+ 	}
+diff -ur cone-0.57/cone/mymessage.C cone-0.57.my/cone/mymessage.C
+--- cone-0.57/cone/mymessage.C	2003-06-12 02:36:30.000000000 +0400
++++ cone-0.57.my/cone/mymessage.C	2004-05-21 00:00:04.000000000 +0400
+@@ -566,9 +566,15 @@
+ 		if (customheaders.size() > 0)
+ 			o << customheaders << "\n";
+ 
++		o << "Mime-Version: 1.0\n"                                                                     
++                  << "Content-Type: text/plain; charset="
++                  << Gettext::defaultCharset()->chset
++                  << "\nContent-Transfer-Encoding: 8bit\n";
++		  
+ 		o << "From: " << from << "\n"
+ 		  << "Reply-To: " << replyto << "\n\n";
+ 
++		writeSignature(o);
+ 		o.flush();
+ 
+ 		if (o.bad() || o.fail() ||
+@@ -848,3 +854,20 @@
+ 			return true;
+ 	return false;
+ }
++
++void myMessage::writeSignature(std::ofstream &o)
++{
++	string homedir = myServer::getHomeDir();
++        string signpath = homedir + "/.signature";
++	string line;
++	ifstream signfile(signpath.c_str());
++	if(signfile.is_open())
++	{
++    	    o << "\n\n--\n";
++	    while (!getline(signfile, line).fail())
++	    {
++    		    o << line << endl;
++	    }
++    	    signfile.close();
++	}
++}
+diff -ur cone-0.57/cone/mymessage.H cone-0.57.my/cone/mymessage.H
+--- cone-0.57/cone/mymessage.H	2003-06-12 02:36:30.000000000 +0400
++++ cone-0.57.my/cone/mymessage.H	2004-05-20 23:51:22.000000000 +0400
+@@ -149,6 +149,9 @@
+ private:
+ 	static bool isSignedEncrypted(mail::mimestruct &, bool);
+ 
++protected:
++	static void writeSignature(std::ofstream &);
++
+ };
+ 
+ #endif

@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/cone
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.4 2004/07/01 19:47:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.5 2004/07/07 05:40:45 merlin Exp $
+
+*cone-0.57-r1 (07 Jul 2004)
+
+  07 Jul 2004; Cory Visi <merlin@gentoo.org> cone-0.57-r1.ebuild,
+  files/cone-dotsignature.patch:
+  Add .signature support re: Bug 51842, thanks to Andrey Ulanov
+  <drey@rt.mipt.ru> for the patch
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> cone-0.56.ebuild,
   cone-0.57.ebuild:
