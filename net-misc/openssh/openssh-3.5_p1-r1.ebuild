@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.18 2003/10/29 03:17:56 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.19 2003/11/14 08:20:12 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/${PARCH}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha mips ~hppa arm"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 IUSE="ipv6 static pam tcpd kerberos"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
