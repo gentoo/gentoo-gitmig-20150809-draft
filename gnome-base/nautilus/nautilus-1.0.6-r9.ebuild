@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.25 2005/01/08 23:19:34 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.26 2005/03/23 16:17:00 seemant Exp $
 
 DESCRIPTION="nautilus"
 HOMEPAGE="http://www.gnome.org/projects/nautilus/"
@@ -12,7 +12,7 @@ KEYWORDS="x86 ppc sparc"
 IUSE="nls mozilla"
 
 # =gnome-base/gnome-core-1.4*
-RDEPEND="mozilla? ( >=net-www/mozilla-1.0_rc3 )
+RDEPEND="mozilla? ( >=www-client/mozilla-1.0_rc3 )
 	virtual/fam
 	>=media-sound/cdparanoia-3.9.8
 	>=gnome-base/bonobo-1.0.9-r1
