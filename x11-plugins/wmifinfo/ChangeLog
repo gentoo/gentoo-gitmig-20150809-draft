@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/wmifinfo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/ChangeLog,v 1.6 2004/11/24 23:05:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/ChangeLog,v 1.7 2004/12/01 09:17:01 s4t4n Exp $
+
+*wmifinfo-0.08 (01 Dec 2004)
+
+  01 Dec 2004; Michele Noberasco <s4t4n@gentoo.org> wmifinfo-0.08.ebuild:
+  Version bump. Closes #72998. Added some magic sed to allow usage of
+  Gentoo's CFLAGS...
+  metadata.xml:
+  Properly assign to the desktop-dock herd...
 
   24 Nov 2004; Jason Wever <weeve@gentoo.org> wmifinfo-0.06.ebuild:
   Added ~sparc keyword.
