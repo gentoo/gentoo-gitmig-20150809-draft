@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/beaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/ChangeLog,v 1.2 2002/08/06 17:32:23 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/ChangeLog,v 1.3 2002/08/13 12:50:22 stroke Exp $
+
+*beaver-0.2.4 (13 Aug 2002)
+  13 Aug 2002; Gabriele Giorgetti <stroke@gentoo.org> beaver-0.2.4.ebuild:
+  Updated version, Added missing Copyright header, why was it missing ? 
+  Corrected gtk+ dep. we don't want gtk+2 to be emerged in place of 1.2 
 
 *beaver-0.2.3 (18 Jul 2002)
 
