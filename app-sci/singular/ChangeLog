@@ -1,0 +1,11 @@
+# ChangeLog for app-sci/singular
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/ChangeLog,v 1.1 2003/10/24 10:13:41 phosphan Exp $
+
+*singular-2.0.4 (24 Oct 2003)
+
+  24 Oct 2003; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.4.ebuild,
+  files/singular-2.0.4-gentoo.diff:
+  Initial import, based on the submission in bug 26115. Thanks to all
+  contributors.
+
