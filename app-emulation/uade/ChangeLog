@@ -1,9 +1,12 @@
 # ChangeLog for app-emulation/uade
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.11 2004/08/01 11:36:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.12 2004/08/22 09:27:45 malc Exp $
 
   01 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> uade-0.91.ebuild:
   IUSE sync
+
+  22 Aug 2004; Malcolm Lashley <malc@gentoo.org> uade-0.91.ebuild:
+  Keyword ~amd64 - closes bug #58649
 
 *uade-0.91 (28 Jul 2004)
 
