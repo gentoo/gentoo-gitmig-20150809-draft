@@ -7,9 +7,6 @@
 # Masked for testing. (sunflare 20 Jun 2002)
 =net-analyzer/ettercap-0.6.6.6
 
-# Masked for testing. (sunflare 20 Jun 2002)
-=net-analyzer/ethereal-0.9.4
-
 #masked for testing (bangert 20 Jun 2002)
 =dev-perl/mod_perl-1.27
 
