@@ -1,0 +1,15 @@
+diff -r -C2 -P gzip-1.2.4a.orig/gzip.texi gzip-1.2.4a/gzip.texi
+*** gzip-1.2.4a.orig/gzip.texi	Tue Feb  2 18:51:38 1999
+--- gzip-1.2.4a/gzip.texi	Thu Jul 26 23:33:25 2001
+***************
+*** 8,11 ****
+--- 8,16 ----
+  
+  @ifinfo
++ 
++ @dircategory Utilities
++ @direntry
++ * gzip: (gzip).			The GNU compression utility.
++ @end direntry
+  This file documents the the GNU @code{gzip} command for compressing files.
+  
