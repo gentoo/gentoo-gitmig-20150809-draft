@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.11 2003/11/16 17:02:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.12 2003/11/23 13:45:48 taviso Exp $
 
 IUSE="nls pic build nptl"
 
@@ -33,6 +33,7 @@ strip-flags
 # Lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
 export CFLAGS="${CFLAGS//-O?} -O2"
 export CXXFLAGS="${CFLAGS}"
+export LDFLAGS="${LDFLAGS//-Wl,--relax}"
 
 NPTL_VER="0.28"
 
