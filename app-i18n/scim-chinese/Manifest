@@ -1,6 +1,14 @@
-MD5 82a1732d9477650ba07d341c5d4c7f25 scim-chinese-0.3.0.ebuild 674
-MD5 844be851c36c07f15a34992a5739369f scim-chinese-0.4.2.ebuild 680
-MD5 1e2e2586a0eea7fe6e36d4dc966dc3e3 ChangeLog 3668
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 64b96a2c4aebefeb0e5035ecd75fe0a4 ChangeLog 3823
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 a9b283e15eb05eeac84a66262bdb0521 files/digest-scim-chinese-0.3.0 71
+MD5 6bbcb225949f560f4076557bde6a37f3 scim-chinese-0.4.2.ebuild 659
 MD5 39d6e4d5b7c41ccc15c51caa55a36e55 files/digest-scim-chinese-0.4.2 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCDFilVWNWqTUmv+0RAkdVAKCU2S5jlxnggWfzHPeDS6KpReuUnACfZg39
+4a+EXZ6xYdsba91MnsJ9uCU=
+=iI3c
+-----END PGP SIGNATURE-----
