@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-zipcode/canna-zipcode-20021021.ebuild,v 1.2 2003/06/29 17:14:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-zipcode/canna-zipcode-20021021.ebuild,v 1.3 2003/07/16 15:02:42 pvdabeel Exp $
 
 MY_P="${P/canna-/}"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://bonobo.gnome.gr.jp/~nakai/canna/"
 SRC_URI="http://bonobo.gnome.gr.jp/~nakai/canna/${MY_P}.tar.bz2"
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc ~sparc ~alpha"
 IUSE=""
 DEPEND=">=canna-3.6_p3-r1 app-i18n/nkf app-arch/lha"
 RDEPEND=">=canna-3.6_p3-r1"
