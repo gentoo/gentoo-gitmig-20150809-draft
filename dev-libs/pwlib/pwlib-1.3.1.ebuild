@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.3.1.ebuild,v 1.1 2002/07/03 18:00:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.3.1.ebuild,v 1.2 2002/07/03 18:33:26 drobbins Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="Libs needed for GnomeMeeting"
@@ -42,5 +42,5 @@ src_install() {
 	rm -rf ${D}/usr/share/pwlib/include/ptlib/unix/CVS
 	rm -rf ${D}/usr/share/pwlib/include/ptlib/CVS
 	cd ${D}/usr/lib
-	ln -sf libpt_linux_x86_r.so.1.2.12 libpt.so
+	ln -sf libpt_linux_x86_r.so.${PV} libpt.so
 }
