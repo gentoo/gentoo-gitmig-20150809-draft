@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/pgf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.8 2004/06/25 02:16:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.9 2004/08/19 01:58:46 usata Exp $
+
+*pgf-0.62 (19 Aug 2004)
+
+  19 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> -pgf-0.60.ebuild,
+  pgf-0.61.ebuild, +pgf-0.62.ebuild:
+  Version bumped. Added to ~alpha. This closes bug #60801.
 
   06 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> pgf-0.60.ebuild,
   pgf-0.61.ebuild:
