@@ -1,4 +1,6 @@
-MD5 04552450d280597ce45fa23d59ad8d5f externaleditor-0.5.ebuild 875
+MD5 0097cc684675510ad0c75b6174f14c1f externaleditor-0.5.ebuild 887
+MD5 0097cc684675510ad0c75b6174f14c1f externaleditor-0.7.ebuild 887
 MD5 7d8ff9e26086385a48160bdbc908c9a3 ChangeLog 541
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 f776cc08e81cabfdf81c550fbdebf042 files/digest-externaleditor-0.5 129
+MD5 d384ad8ba1ef44821fd6d4bc7d7306a3 files/digest-externaleditor-0.7 130
