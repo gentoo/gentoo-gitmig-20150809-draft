@@ -1,5 +1,5 @@
-MD5 23d42339a1da980f3d3398dcec75a3fd gtkhtml-1.1.10.ebuild 4089
-MD5 e8af59a159db4b323eb1287bacb9a5f4 gtkhtml-1.1.10-r1.ebuild 4096
+MD5 593c1f3eb6427b68defa458574541da9 gtkhtml-1.1.10.ebuild 4062
+MD5 7a7fe27dd7fd2590d1b4e1f87b45672b gtkhtml-1.1.10-r1.ebuild 4090
 MD5 4fcf2bba79840b0ab6ec2a361d1250a2 ChangeLog 5770
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 beee6dc1f9b01326aec9a28c8959c395 files/digest-gtkhtml-1.1.10-r1 68
