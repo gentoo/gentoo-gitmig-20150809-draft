@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.2 2002/03/21 14:17:23 seemant Exp $
+
+*openssl-0.9.6c (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> openssl-0.9.6c.ebuild :
+
+  Fixed so that html documentation is no longer gzipped.  Small enough to
+  not warrant a revision bump on the ebuild.
 
 *openssl-0.9.6c (1 Feb 2002)
 

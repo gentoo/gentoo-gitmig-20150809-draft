@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6c.ebuild,v 1.1 2002/01/03 16:49:00 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6c.ebuild,v 1.2 2002/03/21 14:17:23 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
@@ -32,11 +32,7 @@ src_install() {
 	make INSTALL_PREFIX=${D} install || die
 	dodoc CHANGES* FAQ LICENSE NEWS README
 	dodoc doc/*.txt
-	docinto html
-	dodoc doc/*.gif doc/*.html
+	dohtml -r doc
 	insinto /usr/share/emacs/site-lisp
 	doins doc/c-indentation.el
 }
-
-
-
