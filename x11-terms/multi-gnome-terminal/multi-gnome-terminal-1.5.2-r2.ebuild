@@ -1,12 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.5.2-r2.ebuild,v 1.1 2002/08/01 15:16:53 azarah Exp $
-
-# NOTE: any reason why somebody needs to keep on screwing with
-#       my ebuild without even updating the ChangeLog???
-#       The default is to use the .bz2 if present (230k is a
-#       lot on dialup.  It is better to use relative symlinks.
-#       I like spacing as it keeps it more readible. Let it be.
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.5.2-r2.ebuild,v 1.2 2002/08/05 17:57:12 azarah Exp $
 
 inherit libtool
 
