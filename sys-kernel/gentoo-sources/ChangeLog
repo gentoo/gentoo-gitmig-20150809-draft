@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.64 2004/04/12 16:36:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.65 2004/04/15 21:34:08 plasmaroo Exp $
+
+*gentoo-sources-2.4.20-r14 (15 Apr 2004)
+
+  15 Apr 2004; <plasmaroo@gentoo.org>
+  +files/gentoo-sources-2.4.CAN-2004-0109.patch,
+  -gentoo-sources-2.4.19-r11.ebuild, +gentoo-sources-2.4.19-r12.ebuild,
+  -gentoo-sources-2.4.20-r14.ebuild, +gentoo-sources-2.4.20-r15.ebuild,
+  +gentoo-sources-2.4.22-r8.ebuild, +gentoo-sources-2.4.25-r1.ebuild:
+  Version bump for the CAN-2004-0109 issue; bug #47881.
 
 *gentoo-sources-2.4.26_pre6 (26 Mar 2004)
 
