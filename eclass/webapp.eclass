@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.13 2004/04/30 08:25:38 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.14 2004/05/01 00:45:45 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -20,9 +20,13 @@ ECLASS=webapp
 INHERITED="$INHERITED $ECLASS"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
-DEPEND="$DEPEND >=net-www/webapp-config-1.6"
+DEPEND="$DEPEND >=net-www/webapp-config-1.7"
 
 EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install
+
+INSTALL_DIR="/$PN"
+IS_UPGRADE=0
+IS_REPLACE=0
 
 # ------------------------------------------------------------------------
 # INTERNAL FUNCTION - USED BY THIS ECLASS ONLY
@@ -53,6 +57,17 @@ function webapp_checkfileexists ()
 # INTERNAL FUNCTION - USED BY THIS ECLASS ONLY
 # ------------------------------------------------------------------------
 
+function webapp_check_installedat
+{
+	local my_output
+
+	/usr/sbin/webapp-config --show-installed -h localhost -d $INSTALL_DIR 2> /dev/null
+}
+
+# ------------------------------------------------------------------------
+# INTERNAL FUNCTION - USED BY THIS ECLASS ONLY
+# ------------------------------------------------------------------------
+
 function webapp_import_config ()
 {
 	if [ -z "${MY_HTDOCSDIR}" ]; then
@@ -71,6 +86,7 @@ function webapp_import_config ()
 
 function webapp_strip_appdir ()
 {
+	local my_stripped="$1"
 	echo "$1" | sed -e "s|${MY_APPDIR}/||g;"
 }
 
@@ -81,6 +97,7 @@ function webapp_strip_d ()
 
 function webapp_strip_cwd ()
 {
+	local my_stripped="$1"
 	echo "$1" | sed -e 's|/./|/|g;'
 }
 
@@ -241,13 +258,47 @@ function webapp_pkg_setup ()
 	# pull in the shared configuration file
 
 	. /etc/vhosts/webapp-config || die "Unable to open /etc/vhosts/webapp-config file"
+}
 
+function webapp_getinstalltype ()
+{
 	# are we emerging something that is already installed?
 
 	if [ -d "${D}${MY_APPROOT}/${MY_APPSUFFIX}" ]; then
 		# yes we are
 		ewarn "Removing existing copy of ${PN}-${PVR}"
 		rm -rf "${D}${MY_APPROOT}/${MY_APPSUFFIX}"
+	fi
+
+	# or are we upgrading?
+
+	if ! use vhosts ; then
+		# we only run webapp-config if vhosts USE flag is not set
+
+		local my_output
+
+		my_output="`webapp_check_installedat`"
+
+		if [ "$?" = "0" ] ; then
+			# something is already installed there
+			#
+			# make sure it isn't the same version
+
+			local my_pn="`echo $my_output | awk '{ print $1 }'`"
+			local my_pvr="`echo $my_output | awk '{ print $2 }'`"
+
+			REMOVE_PKG="${my_pn}-${my_pvr}"
+
+			if [ "$my_pn" == "$PN" ]; then
+				if [ "$my_pvr" != "$PVR" ]; then
+					einfo "This is an upgrade"
+					IS_UPGRADE=1
+				else
+					einfo "This is a re-installation"
+					IS_REPLACE=1
+				fi
+			fi
+		fi
 	fi
 }
 
@@ -265,72 +316,50 @@ function webapp_src_preinst ()
 
 function webapp_pkg_postinst ()
 {
-	einfo "webapp_pkg_postinst() called"
-
 	# if 'vhosts' is not set in your USE flags, we install a copy of
 	# this application in /var/www/localhost/htdocs/${PN}/ for you
-
 	
 	if ! use vhosts ; then
+		echo
 		einfo "vhosts USE flag not set - auto-installing using webapp-config"
+
+		webapp_getinstalltype
 
 		G_HOSTNAME="localhost"
 		. /etc/vhosts/webapp-config
 
 		local my_mode=-I
-		local my_dir="/${PN}"
 
-		# are we installing afresh - or are we upgrading?
-		# find out by looking to see what (if anything) is installed
-		# in there already
-
-		my_cmd="/usr/sbin/webapp-config --show-installed -d $my_dir 2> /dev/null"
-		einfo "$my_cmd"
-
-		my_output="`/usr/sbin/webapp-config --show-installed -d $my_dir 2> /dev/null`"
-
-		# we can't use the exit status from webapp-config
-
-		if [ "$?" = "0" ]; then
-
-			# something is in there - but the question has to be ... what?
-
-			ewarn "$my_output already installed"
-
-			if [ "`echo $my_output | awk '{ print $1 }'`" = "${PN}" ]; then
-				einfo "$my_output is a copy of ${PN}"
-				if [ "`echo $my_output | awk '{ print $2 }'`" = "${PVR}" ]; then
-					# this version is already installed
-					# we need to remove it first
-
-					/usr/sbin/webapp-config -C -d $my_dir
-				else
-					# we have an older version of whatever it is our ebuild is
-					# trying to install ;-)
-					#
-					# this is the situation we can deal with
-
-					einfo "selecting upgrade mode"
-					my_mode=-U
-				fi
-			else
-				# this should never happen - but just in case ...
-				#
-				# whatever is in that directory, it isn't the application
-				# that we are currently trying to install
-				#
-				# rather than overwrite the contents, we bail with an error
-				# instead
-
-				die "$my_output is already installed in $my_dir"
-			fi
+		if [ "$IS_REPLACE" = "1" ]; then
+			einfo "${PN}-${PVR} is already installed - replacing"
+			/usr/sbin/webapp-config -C -d "$INSTALL_DIR"
+		elif [ "$IS_UPGRADE" = "1" ]; then
+			einfo "$REMOVE_PKG is already installed - upgrading"
+			my_mode=-U
 		else
 			einfo "${PN}-${PVR} is not installed - using install mode"
 		fi
 	
-		my_cmd="/usr/sbin/webapp-config $my_mode -h localhost -u root -d $my_dir ${PN} ${PVR}"
+		my_cmd="/usr/sbin/webapp-config $my_mode -h localhost -u root -d $INSTALL_DIR ${PN} ${PVR}"
 		einfo "Running $my_cmd"
 		$my_cmd
+
+		# remove the old version
+		#
+		# why do we do this?  well ...
+		#
+		# normally, emerge -u installs a new version and then removes the
+		# old version.  however, if the new version goes into a different
+		# slot to the old version, then the old version gets left behind
+		#
+		# if USE=-vhosts, then we want to remove the old version, because
+		# the user is relying on portage to do the magical thing for it
+
+		if [ "$IS_UPGRADE" = "1" ] ; then
+			einfo "Removing old version $REMOVE_PKG"
+
+			echo emerge -C $CATEGORY/$REMOVE_PKG
+		fi
 	fi
 
 	return 0
