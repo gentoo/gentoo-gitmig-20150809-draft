@@ -1,7 +1,7 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.1 2002/04/27 12:22:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.2 2002/04/28 04:12:40 seemant Exp $
 
 SYSTEM_ARCH=`echo $ARCH |\
   sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
@@ -14,7 +14,7 @@ fi
 #Change FCS if you want to use a beta version
 PLATFORM="i386"
 FCS="FCS"
-A="j2re-1.3.1-FCS-linux-i386.tar.bz2"
+MY_P="j2re-1.3.1-FCS-linux-i386"
 
 #Adapt for multi-arch:
 
@@ -42,7 +42,7 @@ esac
 
 S=${WORKDIR}/j2re1.3.1
 DESCRIPTION="Blackdown Java Runtime Environment 1.3.1"
-SRC_URI="ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.1/${PLATFORM}/${FCS}/${A}"
+SRC_URI="ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.1/${PLATFORM}/${FCS}/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.blackdown.org"
 
 DEPEND="virtual/glibc
@@ -54,7 +54,7 @@ PROVIDE="virtual/jre-1.3
 
 src_unpack () {
 	if [ $PLATFORM = "ppc" ]; then
-		tail +422 ${DISTDIR}/${A} > j2re-1.3.1-ppc.tar.bz2
+		tail +422 ${DISTDIR}/${MY_P}.tar.bz2 > j2re-1.3.1-ppc.tar.bz2
 		tar -xjf j2re-1.3.1-ppc.tar.bz2
 	else
 	unpack ${A}

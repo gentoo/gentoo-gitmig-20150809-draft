@@ -1,12 +1,12 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r6.ebuild,v 1.1 2002/04/09 21:58:31 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r6.ebuild,v 1.2 2002/04/28 04:12:40 seemant Exp $
 
-A=j2re-1.3.1-FCS-linux-i386.tar.bz2
+MY_P=j2re-1.3.1-FCS-linux-i386
 S=${WORKDIR}/j2re1.3.1
 DESCRIPTION="Blackdown Java Runtime Environment 1.3.1"
-SRC_URI="ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.1/i386/FCS/${A}"
+SRC_URI="ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.1/i386/FCS/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.blackdown.org"
 
 DEPEND="virtual/glibc
