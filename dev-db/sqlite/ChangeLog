@@ -1,13 +1,19 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.8 2002/11/05 19:29:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.9 2002/11/11 20:13:44 cretin Exp $
 
 *sqlite-2.7.3 (05 Nov 2002)
+
+  11 Nov 2002: Stefan Jones <cretin@gentoo.org>:
+  Added sparc keywords
 
   05 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump.
 
 *sqlite-2.6.3 (18 Aug 2002)
+
+  11 Nov 2002: Stefan Jones <cretin@gentoo.org>:
+  Added sparc keywords
 
   19 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> sqlite-2.6.3.ebuild :
 
