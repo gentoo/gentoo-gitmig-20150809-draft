@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/latexsuite-1.5_rc1.ebuild,v 1.4 2004/03/16 00:30:21 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/latexsuite-1.5_rc1.ebuild,v 1.5 2004/05/17 15:35:49 usata Exp $
 
 inherit vim-plugin
 
@@ -16,7 +16,7 @@ MY_P="latexSuite-${PV/_/-}"
 S="${WORKDIR}"
 SRC_URI="http://vim-latex.sourceforge.net/download/${MY_P}.tar.gz"
 
-RDEPEND="app-text/tetex"
+RDEPEND="virtual/tetex"
 
 src_install() {
 	into /usr ; dobin ltags ; rm ltags

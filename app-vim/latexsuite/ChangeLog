@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/latexsuite
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/ChangeLog,v 1.4 2004/03/16 00:30:21 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/ChangeLog,v 1.5 2004/05/17 15:35:49 usata Exp $
+
+  18 May 2004; Mamoru KOMACHI <usata@gentoo.org> latexsuite-1.5_rc1.ebuild:
+  Changed app-text/tetex to virtual/tetex.
 
   16 Mar 2004; David Holm <dholm@gentoo.org> latexsuite-1.5_rc1.ebuild:
   Added to ~ppc.
