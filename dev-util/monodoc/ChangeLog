@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.33 2005/03/11 03:19:07 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.34 2005/03/15 00:27:04 latexer Exp $
+
+  14 Mar 2005; Peter Johanson <latexer@gentoo.org> monodoc-1.0.4-r1.ebuild,
+  monodoc-1.0.5.ebuild, monodoc-1.0.6.ebuild:
+  Mark stable on x86 and dep on gtk-sharp-1.0.x to avoid future 2.0 SLOT
+  problems.
 
   10 Mar 2005; Peter Johanson <latexer@gentoo.org> monodoc-1.0.4-r1.ebuild,
   monodoc-1.0.5.ebuild, monodoc-1.0.6.ebuild:
