@@ -9,3 +9,4 @@ icc-pgo
 mmx
 svga
 sse
+scanner 
