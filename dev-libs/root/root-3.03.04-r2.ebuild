@@ -1,20 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.03.04-r2.ebuild,v 1.1 2003/02/22 10:39:32 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.03.04-r2.ebuild,v 1.2 2003/02/28 21:59:21 vapier Exp $
 
-IUSE="mysql postgres opengl"
+inherit flag-o-matic eutils
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="An Object-Oriented Data Analysis Framework"
-SRC_URI="ftp://root.cern.ch/root/root_v3.03.04.source.tar.gz"
+SRC_URI="ftp://root.cern.ch/root/root_v${PV}.source.tar.gz"
 HOMEPAGE="http://root.cern.ch/"
-
-inherit flag-o-matic
-inherit eutils
 
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc ~ppc"
+IUSE="mysql postgres opengl"
 
 DEPEND="virtual/x11
 	>=media-libs/xpm-3.4k
@@ -31,18 +29,6 @@ src_unpack() {
 }
 
 src_compile() {
-	
-	use opengl \
-		&& myconf="${myconf} --enable-opengl" \
-		|| myconf="${myconf} --disable-opengl"
-
-	use mysql \
-		&& myconf="${myconf} --enable-mysql" \
-		|| myconf="${myconf} --disable-mysql"
-
-	use postgres \
-		&& myconf="${myconf} --enable-pgsql" \
-		|| myconf="${myconf} --disable-pgsql"
 
 	case $SYSTEM_ARCH in
 		ppc)
@@ -70,11 +56,14 @@ src_compile() {
 		--disable-pythia6 \
 		--disable-venus \
 		--enable-soversion \
+		`use_enable opengl` \
+		`use_enable mysql` \
+		`use_enable postgres pgsql` \
 		${myconf} || die "./configure failed"
 	make || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	
 	dodir /etc/env.d
