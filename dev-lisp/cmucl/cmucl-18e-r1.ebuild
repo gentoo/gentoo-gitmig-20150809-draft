@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-18e-r1.ebuild,v 1.3 2004/04/25 20:55:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-18e-r1.ebuild,v 1.4 2004/05/17 15:53:53 usata Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ IUSE="doc X"
 
 DEPEND="dev-lisp/common-lisp-controller
 	x11-libs/lesstif
-	doc? ( app-text/tetex )"
+	doc? ( virtual/tetex )"
 #	X? ( x11-libs/lesstif )"
 PROVIDE="virtual/commonlisp"
 
