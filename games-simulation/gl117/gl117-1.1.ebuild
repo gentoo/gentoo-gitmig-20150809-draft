@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/gl117-1.1.ebuild,v 1.1 2004/01/12 03:21:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/gl117-1.1.ebuild,v 1.2 2004/02/04 20:09:55 dholm Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ DESCRIPTION="An action flight simulator"
 HOMEPAGE="http://home.t-online.de/home/primetime./gl-117/"
 SRC_URI="mirror://sourceforge/gl-117/${MY_P}.tar.gz"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="sdl"
