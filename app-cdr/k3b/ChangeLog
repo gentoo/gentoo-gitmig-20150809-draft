@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.31 2003/12/04 20:18:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.32 2003/12/14 21:53:37 azarah Exp $
+
+*k3b-0.10.3-r1 (14 Dec 2003)
+  14 Dec 2003; Martin Schlemmer <azarah@gentoo.org> k3b-0.10.3-r1.ebuild:
+  For some reason things gets borked if the linguas stuff is done without
+  LINGUAS set (I am assuming that it runs the automake in the k3b main source
+  dir ...), bug #33434. Also add some other cleanups and form fixes.
 
 *k3b-0.10.3 (04 Dec 2003)
 
