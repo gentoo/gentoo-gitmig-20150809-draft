@@ -1,6 +1,6 @@
 # ChangeLog for app-text/docbook-sgml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml/ChangeLog,v 1.6 2003/02/12 05:23:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml/ChangeLog,v 1.7 2003/07/04 05:28:17 gmsoft Exp $
 
   23 Jan 2003; Aron Griffis <agriffis@gentoo.org> docbook-sgml-1.0.ebuild :
   Add alpha to KEYWORDS
@@ -8,6 +8,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *docbook-sgml-1.0 (1 Feb 2002)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> docbook-sgml-1.0.ebuild :
+  Added hppa to KEYWORDS.
 
   01 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
