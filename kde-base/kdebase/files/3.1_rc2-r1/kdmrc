@@ -249,7 +249,7 @@ SessionTypes=Xsession,kde-3.0.4,kde-3.1_rc2,
 # Widget Style of the greeter:
 # Default, Windows, Platinum, Motif, MotifPlus, CDE, SGI, and any styles you
 # may have installed, e.g., HighColor; Default is "Default"
-GUIStyle=keramik
+GUIStyle=Keramik
 # Widget Colors of the greeter:
 # Default, and any color schemes you may have installed. Default is "Default"
 #ColorScheme=Pumpkin
