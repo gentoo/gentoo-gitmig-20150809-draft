@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/xmms-volnorm-0.8.1.ebuild,v 1.1 2004/07/19 18:43:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/xmms-volnorm-0.8.1.ebuild,v 1.2 2005/03/14 00:07:32 luckyduck Exp $
 
 IUSE=""
 
@@ -21,8 +21,19 @@ KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc"
 
 DEPEND="media-sound/xmms"
 
+src_unpack() {
+	unpack ${A}
+
+	# see #83138
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gentoo.patch
+
+	autoconf
+	libtoolize --copy --force || die "libtoolize failed"
+}
+
 src_install() {
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS BUGS COPYING ChangeLog NEWS INSTALL README RELEASE TODO
 }

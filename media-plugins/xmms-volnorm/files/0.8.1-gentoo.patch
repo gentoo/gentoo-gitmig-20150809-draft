@@ -1,0 +1,29 @@
+--- ../volnorm-0.8.1.orig/configure.in	2005-03-13 16:04:40.000000000 +0100
++++ configure.in	2005-03-14 00:56:46.277870752 +0100
+@@ -33,17 +33,15 @@
+ AC_SUBST(plugindir)
+ AC_MSG_RESULT($plugindir)
+ 
+-if test ! -d "$libdir"; then
+-  if test "x$enable_one_plugin_dir" = "xyes"; then
+-    AC_MSG_CHECKING(XMMS single plugin dir)
+-    libdir="$plugindir/Plugins"
+-    AC_MSG_RESULT($libdir)
+-  else
+-    AC_MSG_CHECKING(XMMS Effect plugin dir)
+-    libdir=`xmms-config --effect-plugin-dir`
+-    AC_MSG_RESULT($libdir)
+-  fi
+-fi 
++if test "x$enable_one_plugin_dir" = "xyes"; then
++	AC_MSG_CHECKING(XMMS single plugin dir)
++	libdir="$plugindir/Plugins"
++	AC_MSG_RESULT($libdir)
++else
++	AC_MSG_CHECKING(XMMS Effect plugin dir)
++	libdir=`xmms-config --effect-plugin-dir`
++	AC_MSG_RESULT($libdir)
++fi
+ 
+ dnl Checks for libraries.
+ AM_PATH_GLIB(1.2.6,,AC_MSG_ERROR([*** GLIB >= 1.2.6 not installed - please install first ***]))
