@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.48 2004/04/05 02:59:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.49 2004/04/27 14:26:53 randy Exp $
+
+  26 Apr 2004; Michael McCabe <randy@gentoo.org> nano-1.3.2.ebuild:
+  stable on s390
 
   04 Apr 2004; Guy Martin <gmsoft@gentoo.org> :
   Marked stable on hppa.
