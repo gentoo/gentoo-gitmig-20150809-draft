@@ -5,11 +5,11 @@ MD5 567903747018f2534965ab6cb3976b38 X430src-4.tgz 12906091
 MD5 4dbdbe9a85c8f7f98dd0ee015a3c7b4f X430src-5.tgz 4388018
 MD5 163d9864e1353a4a9f992cb3843c240f X430src-6.tgz 8074919
 MD5 e002e70f24098ca4f62fabd1c2809ed1 X430src-7.tgz 9317241
-MD5 be9e638a6e1fa3a7097b65d73741de8e XFree86-4.3.0-patches-2.1.6.tar.bz2 491999
+MD5 d330c59069166ab2630b7a2dc2ab867a XFree86-4.3.0-patches-2.1.8.tar.bz2 492053
 MD5 e0c52f0e726e20db445e9708665a26d4 xfree86-dri-resume-v8.patch 15333
 MD5 222bffcae6c2be37ec5cd993037f4f45 xf86Wacom.c.gz 26156
 MD5 537bb3e2da7642bd979ebc1cafa8dce7 savage-1.1.27t.zip 76974
-MD5 e3848a87ea835bd80ed91f674e24fb02 sis_drv_src_180403-1.tar.gz 378880
+MD5 f196aaf1542000e2d7caac5d03b88661 sis_drv_src_100803-1.tar.gz 419840
 MD5 e170657ec4c11fe5be21f3668c236aec synaptics-0.11.3.tar.gz 41989
 MD5 3d4ee581df78c9dacc6e97aa07a1af72 gemini-koi8-u.tar.bz2 439173
 MD5 4d7d5fdc4ed56c144ef998302581478c eurofonts-X11.tar.bz2 8811
@@ -20,7 +20,7 @@ MD5 2e2263bb4adaee6f959fbb6c8df5336a XFree86-locale.alias.bz2 3592
 MD5 d4402be729da91e849aa5b9f506bda06 XFree86-locale.dir.bz2 2094
 MD5 d0fab996daf97adf095e2dad0bd9012e gentoo-cursors-tad-0.3.1.tar.bz2 1196991
 MD5 977f998187b7c0f3cb10192085f4ea76 XFree86-synaptics-fixup-0.11.3.diff 263
-MD5 eddd56d872c54761b93f9610673d06a0 XFree86-synaptics-update-0.11.3p7.diff 87623
+MD5 7ce1e73495a9b4414a9771274138704e XFree86-synaptics-update-0.11.3p11.diff 97485
 MD5 cbdc2fdd7d2ed0832795e86a8b9ee19a andale32.exe 198384
 MD5 9637df0e91703179f0723ec095a36cb5 arial32.exe 554208
 MD5 c9089ae0c3b3d0d8c4b0a95979bb9ff0 arialb32.exe 168176
