@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/torrent/torrent-0.8.2.ebuild,v 1.3 2004/06/24 23:10:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/torrent/torrent-0.8.2.ebuild,v 1.4 2004/11/22 21:33:26 josejx Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ DESCRIPTION="Match rising tiles to score as many points as possible before the t
 HOMEPAGE="http://www.shiftygames.com/torrent/torrent.html"
 SRC_URI="http://www.shiftygames.com/torrent/${P}.tar.gz"
 
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""

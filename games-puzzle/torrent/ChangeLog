@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/torrent
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/torrent/ChangeLog,v 1.5 2004/06/24 23:10:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/torrent/ChangeLog,v 1.6 2004/11/22 21:33:26 josejx Exp $
+
+  23 Nov 2004; Joseph Jezak <josejx@gentoo.org> torrent-0.8.2.ebuild:
+  Marked ppc stable.
 
 *torrent-0.8.2 (05 May 2004)
 
