@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/siphon
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.2 2003/10/30 23:11:33 port001 Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.3 2004/03/21 23:11:32 weeve Exp $
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> siphon-666.ebuild:
+  Added ~sparc keyword.
 
 *siphon-666 (30 Oct 2003)
 
