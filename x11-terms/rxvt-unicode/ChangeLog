@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.45 2005/02/27 00:13:26 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.46 2005/02/28 23:12:55 latexer Exp $
+
+  28 Feb 2005; Peter Johanson <latexer@gentoo.org> rxvt-unicode-5.1.ebuild,
+  rxvt-unicode-5.2.ebuild:
+  Fix sed.
 
   26 Feb 2005; Peter Johanson <latexer@gentoo.org> rxvt-unicode-3.0.ebuild,
   rxvt-unicode-4.0.ebuild, rxvt-unicode-4.8.ebuild, rxvt-unicode-5.1.ebuild,
