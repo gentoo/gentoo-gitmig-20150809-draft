@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.88 2005/04/01 19:26:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.89 2005/04/02 03:27:28 geoman Exp $
+
+  02 Apr 2005; Stephen P. Becker <geoman@gentoo.org>
+  gnome-terminal-2.8.2.ebuild:
+  stable on mips
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> gnome-terminal-2.8.2.ebuild:
   stable on ia64
