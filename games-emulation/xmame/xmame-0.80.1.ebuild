@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.80.1.ebuild,v 1.2 2004/06/06 23:21:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.80.1.ebuild,v 1.3 2004/06/06 23:24:31 agriffis Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -241,7 +241,7 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	einfo "Your available MAME binaries are: ${TARGET}"
-	if use X || use dga || use xv; then 
+	if use X || use dga || use xv; then
 		einfo " ${TARGET}.x11"
 	fi
 	use sdl                       && einfo " ${TARGET}.SDL"
