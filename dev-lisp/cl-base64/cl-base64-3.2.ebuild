@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-base64/cl-base64-3.2.ebuild,v 1.4 2004/06/24 23:41:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-base64/cl-base64-3.2.ebuild,v 1.5 2004/07/14 15:21:49 agriffis Exp $
 
 inherit common-lisp
 
@@ -16,7 +16,6 @@ DEPEND="dev-lisp/cl-kmrcl"
 
 CLPACKAGE=base64
 
-S=${WORKDIR}/${P}
 
 src_install() {
 	common-lisp-install *.lisp *.asd
