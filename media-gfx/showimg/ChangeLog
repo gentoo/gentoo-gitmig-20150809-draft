@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/showimg
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.22 2004/12/31 19:15:04 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.23 2005/01/03 06:34:38 josejx Exp $
+
+  03 Jan 2005; Joseph Jezak <josejx@gentoo.org> showimg-0.9.4.ebuild:
+  Marked ~ppc for bug #72943.
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> showimg-0.9.4.ebuild:
   Added ~sparc keyword.
