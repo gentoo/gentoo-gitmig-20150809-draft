@@ -1,0 +1,9 @@
+# ChangeLog for media-gfx/fbv
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/ChangeLog,v 1.1 2003/08/25 13:43:46 usata Exp $
+
+*fbv-0.99 (25 Aug 2003)
+
+  25 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> fbv-0.99.ebuild:
+  Initial import.  Closing Bug #27281
+
