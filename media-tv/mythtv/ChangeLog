@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.38 2004/09/18 10:18:02 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.39 2004/12/05 00:46:13 iggy Exp $
+
+  04 Dec 2004; Brian Jackson <iggy@gentoo.org> mythtv-0.16.ebuild:
+  I can't find any of the other media-tv guys, and it's been fairly bug free
+  (except 69251 which is fixed by this), so marrking as x86
 
   18 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mythtv-0.16.ebuild:
   Check if neither X or directfb are in USE, closing #64289.
