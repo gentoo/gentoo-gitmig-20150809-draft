@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/kanatest
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.2 2004/02/09 15:30:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.3 2004/04/01 13:56:42 hattya Exp $
+
+  01 Apr 2004; Akinori Hattori <hattya@gentoo.org> kanatest-0.3.6.ebuild:
+  marked stable on x86.
 
 *kanatest-0.3.6 (03 Feb 2004)
 
