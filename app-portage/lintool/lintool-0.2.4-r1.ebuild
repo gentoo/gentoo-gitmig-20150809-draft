@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/lintool/lintool-0.2.4-r1.ebuild,v 1.1 2003/09/26 01:26:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/lintool/lintool-0.2.4-r1.ebuild,v 1.2 2003/11/14 16:34:18 plasmaroo Exp $
 
 IUSE=""
 
@@ -26,5 +26,5 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-	dodoc README NEWS ChangeLog COPYING AUTHORS
+	dodoc README ChangeLog COPYING AUTHORS
 }
