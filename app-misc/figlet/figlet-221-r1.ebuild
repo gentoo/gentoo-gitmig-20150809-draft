@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-221-r1.ebuild,v 1.2 2004/02/22 07:08:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-221-r1.ebuild,v 1.3 2004/03/17 04:37:51 mr_bones_ Exp $
 
 inherit eutils
 
@@ -20,18 +20,18 @@ LICENSE="Artistic"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/glibc
-	>=sys-apps/portage-2.0.47-r10
+RDEPEND="virtual/glibc"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	cp ${WORKDIR}/contributed/*.flf fonts/
-	cp ${WORKDIR}/contributed/bdffonts/*.flf fonts/
 	cp ${WORKDIR}/contributed/C64-fonts/*.flf fonts/
+	cp ${WORKDIR}/contributed/bdffonts/*.flf fonts/
 	cp ${WORKDIR}/ms-dos/*.flf fonts/
+	cp ${WORKDIR}/contributed/*.flf fonts/
 
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	sed -i \
