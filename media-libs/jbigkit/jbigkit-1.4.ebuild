@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-1.4.ebuild,v 1.11 2003/08/04 19:25:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-1.4.ebuild,v 1.12 2003/08/04 20:31:30 gmsoft Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="JBIG-KIT implements a highly effective data compression algorithm for bi-level high-resolution images such as fax pages or scanned documents"
@@ -17,6 +17,8 @@ DEPEND="virtual/glibc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	[ "${ARCH}" = "hppa" ] && CFLAGS="${CFLAGS} -fPIC"
 
 	sed -i \
 		-e "s:-O2 -W:${CFLAGS}:" Makefile || \
