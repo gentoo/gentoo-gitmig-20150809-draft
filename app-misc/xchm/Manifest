@@ -1,3 +1,4 @@
+MD5 47d931d685463ba922a6b5dd1345a6bf xchm-0.8.5.ebuild 732
 MD5 b129ed050c2fbba65df93f3610ee5c24 xchm-0.7.1.ebuild 698
 MD5 0e7711100005ca675286084ea7e89e33 xchm-0.8.ebuild 696
 MD5 cea406ea5c91902fcbfcf4e7ab5d4b8d ChangeLog 948
@@ -7,3 +8,4 @@ MD5 26584a1580591452400d9bb636a461d5 files/digest-xchm-0.7.1 62
 MD5 92b8f0416b73ae4aa95523e93586dbef files/digest-xchm-0.8 123
 MD5 ff653a77c56925824fe8a2ea59618534 files/digest-xchm-0.8.3 127
 MD5 e87b5a3b230b0c38c3c6b244bdfc813b files/digest-xchm-0.8.4 127
+MD5 4ca71374e999cc132afde4583fba0204 files/digest-xchm-0.8.5 127
