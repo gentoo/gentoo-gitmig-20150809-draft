@@ -1,4 +1,4 @@
-MD5 6cc3bc2bc84636f8f4fdb2a436cf3eed files/digest-erss-0.0.2.20040221 72
-MD5 799a062cb46bb1fa0162aaa177517e06 erss-0.0.2.20040221.ebuild 664
 MD5 f39b3236a5998ceb87d3bf74b3013cc8 ChangeLog 332
 MD5 cb8d01797400f9634ed2362ed5b13ffd metadata.xml 329
+MD5 f90af10c3f459cfc4b28b933d5ceda15 erss-0.0.2.20040313.ebuild 664
+MD5 f632b0e46620ac5d962b20586ca9fbb2 files/digest-erss-0.0.2.20040313 72
