@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.30 2004/03/22 19:20:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.31 2004/03/26 20:48:59 kanaka Exp $
+
+  26 Mar 2004; Joel Martin <kanaka@gentoo.org> ffmpeg-0.4.8.20040222.ebuild,
+  ffmpeg-0.4.8.20040322.ebuild:
+  Filter out -momit-leaf-frame-pointer flag from libpostproc compilation
 
 *ffmpeg-0.4.8.20040322 (22 Mar 2004)
 
