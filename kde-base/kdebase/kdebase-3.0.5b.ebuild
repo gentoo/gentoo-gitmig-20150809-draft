@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5b.ebuild,v 1.1 2003/04/08 19:58:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5b.ebuild,v 1.2 2003/04/09 11:53:27 danarmak Exp $
 inherit eutils flag-o-matic kde-dist
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"
@@ -133,6 +133,9 @@ pkg_setup() {
 src_unpack() {
 
 	kde_src_unpack
+
+	cd ${S}
+	epatch ${FILESDIR}/${PVR}/${P}-nspluginviewer-qt31.diff.gz
 
 	get_xft_setup
 
