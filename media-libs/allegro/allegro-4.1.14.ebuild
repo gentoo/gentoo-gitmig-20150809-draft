@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.14.ebuild,v 1.1 2004/06/04 07:08:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.14.ebuild,v 1.2 2004/06/09 18:00:37 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	tetex? ( virtual/tetex )"
 
 src_compile() {
-	filter-flags -fPIC
+	filter-flags -fPIC -fprefetch-loop-arrays
 	econf \
 		--enable-linux \
 		--enable-vga \
