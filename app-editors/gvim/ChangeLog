@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.23 2003/03/19 13:15:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.24 2003/03/23 20:36:26 agriffis Exp $
+
+*gvim-6.1-r8 (22 Mar 2003)
+
+  22 Mar 2003; Aron Griffis <agriffis@gentoo.org> gvim-6.1-r8.ebuild,
+  files/gvimrc:
+  Remove security fix from gvimrc since it only needs to be in vimrc. Remove
+  EXCLUDE_PATCHES since the updated eclass no longer needs that crutch. 
+  Update to patchlevel 411.  Added IUSE.  Mark stable on x86, alpha.  See vim
+  ChangeLog for changes to the eclass.
 
   19 Mar 2003; foser <foser@gentoo.org> gvim-6.1.-r7.ebuild :
   Fixed xft dep to be virtual (#15109)

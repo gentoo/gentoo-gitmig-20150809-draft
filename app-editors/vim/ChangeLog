@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.47 2003/03/14 15:59:13 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.48 2003/03/23 20:36:26 agriffis Exp $
+
+*vim-6.1-r21 (22 Mar 2003)
+
+  22 Mar 2003; Aron Griffis <agriffis@gentoo.org> vim-6.1-r21.ebuild:
+  Move vimrc to vim-core since it applies to both vim and gvim. 
+  Update to patchlevel 411.  Mark stable on x86, alpha.  Remove
+  EXCLUDE_PATCHES crutch since it's no longer needed by the eclass.  The
+  eclass now snoops the patches to determine what is relevant instead of using
+  the README.  Create vim->gvim and vi->vim symlinks when there's no conflict.
 
 *vim-6.1-r20.ebuild (13 Mar 2003)
 
@@ -155,106 +164,106 @@ vim-6.1-r9.ebuild (29 Jul 2002)
   Updated patches. The patches no longer take tons of space in portage.
 
 vim-6.1-r8.ebuild (06 Jul 2002)
-		
+  	
   15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
 
   Added KEYWORDS.
 
-	06 Jul 2002; Michael Nazaroff <naz@gentoo.org> vim-6.1-r8.ebuild :
+  06 Jul 2002; Michael Nazaroff <naz@gentoo.org> vim-6.1-r8.ebuild :
 
-	Added back gpm support, since gpm should now be fixed. I also added a
-	addpredict line to hopefully remove those sandbox violations we where
-	occasionally getting.  Also added a few more misc patch's. I also added
-	LICENSE lines to all of the ebuilds.
+  Added back gpm support, since gpm should now be fixed. I also added a
+  addpredict line to hopefully remove those sandbox violations we where
+  occasionally getting.  Also added a few more misc patch's. I also added
+  LICENSE lines to all of the ebuilds.
 
 *vim-6.1-r7 (27 May 2002)
 
-	27 May 2002; Aron Griffis <agriffis@gentoo.org> vim-6.1-r7.ebuild :
+  27 May 2002; Aron Griffis <agriffis@gentoo.org> vim-6.1-r7.ebuild :
 
-	Removed gpm support to close bug #1808.
+  Removed gpm support to close bug #1808.
 
 *vim-6.1-r6 (19 May 2002)
 
-	19 May 2002; Ryan Phillips <rphillips@gentoo.org> vim-6.1-r6.ebuild :
+  19 May 2002; Ryan Phillips <rphillips@gentoo.org> vim-6.1-r6.ebuild :
 
-	Added more patches to files/
+  Added more patches to files/
 
 *vim-6.1-r5 (30 Apr 2002)
 
-	30 Apr 2002; Ryan Phillips <rphillips@gentoo.org> vim-6.1-r5.ebuild :
+  30 Apr 2002; Ryan Phillips <rphillips@gentoo.org> vim-6.1-r5.ebuild :
 
-	NLS will enable multibyte support now.  I don't see a problem with
-	this...
+  NLS will enable multibyte support now.  I don't see a problem with
+  this...
 
-	30 Apr 2002; Ryan Phillips <rphillips@gentoo.org> vim-6.1-r5.ebuild :
+  30 Apr 2002; Ryan Phillips <rphillips@gentoo.org> vim-6.1-r5.ebuild :
 
-	Included patches for 6.1 in the files/ directory.
+  Included patches for 6.1 in the files/ directory.
 
 *vim-6.1-r4 (15 Apr 2002)
 
-	15 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> vim-6.1-r4.ebuild :
+  15 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> vim-6.1-r4.ebuild :
 
-	Replaced --enable-max-features with --with-features=huge
-	--enable-max-features was the old, 5.0 way to enable all features.
-	6.0+ uses --with-features=tiny,small,normal,big or huge
-	This fixes bug #1597
-	
+  Replaced --enable-max-features with --with-features=huge
+  --enable-max-features was the old, 5.0 way to enable all features.
+  6.0+ uses --with-features=tiny,small,normal,big or huge
+  This fixes bug #1597
+  
 *vim-6.1-r3 (9 Apr 2002)
 
-	9 Apr 2002; M.Schlemmer <azarah@gentoo.org> :
+  9 Apr 2002; M.Schlemmer <azarah@gentoo.org> :
 
-	I havent looked at 6.0, but it seems that in 6.1, $VIMRUNTIME is not
-	set in the Makefiles, and thus vim cant find its syntax files, etc. It
-	works for me ... Aron Griffis, please verify, and fix if it is not the
-	correct method.  Resolved by creating /etc/env.d/40vim in src_install().
+  I havent looked at 6.0, but it seems that in 6.1, $VIMRUNTIME is not
+  set in the Makefiles, and thus vim cant find its syntax files, etc. It
+  works for me ... Aron Griffis, please verify, and fix if it is not the
+  correct method.  Resolved by creating /etc/env.d/40vim in src_install().
 
 *vim-6.1-r2 (7 Apr 2002)
 
-	7 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> vim-6.1-r2.ebuild :
+  7 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> vim-6.1-r2.ebuild :
 
-	Removed "addpredict /dev/vc/" from ebuild, portage-1.8.17 now
-	includes /dev/vc/ in sandbox as a default writable directory,
-	as it did with /dev/pts/ before 1.8.17.
+  Removed "addpredict /dev/vc/" from ebuild, portage-1.8.17 now
+  includes /dev/vc/ in sandbox as a default writable directory,
+  as it did with /dev/pts/ before 1.8.17.
 
 *vim-6.1-r1 (4 Apr 2002)
 
-	4 Apr 2002; Seemant Kulleen <seemant@gentoo.org> vim-6.1-r1.ebuild :
+  4 Apr 2002; Seemant Kulleen <seemant@gentoo.org> vim-6.1-r1.ebuild :
 
-	This is a dirty hack, in my opinion, to bypass the sandbox violation
-	errors on the /dev/vc/*.  I think this is a portage bug more than
-	a vim  bug because it happens for new to 1.0 users.
+  This is a dirty hack, in my opinion, to bypass the sandbox violation
+  errors on the /dev/vc/*.  I think this is a portage bug more than
+  a vim  bug because it happens for new to 1.0 users.
 
 *vim-6.1 (30 Mar 2002)
 
-	30 Mar 2002; Seemant Kulleen <seemant@gentoo.org> vim-6.1.ebuild
+  30 Mar 2002; Seemant Kulleen <seemant@gentoo.org> vim-6.1.ebuild
 
-	Resolved bug 1426: SRC_URI points primarily to ftp.vim.org instead
-	of ftp.us.vim.org which no longer contains the tar ball for 6.1
-	Thanks to jnelson@jamponi.net
+  Resolved bug 1426: SRC_URI points primarily to ftp.vim.org instead
+  of ftp.us.vim.org which no longer contains the tar ball for 6.1
+  Thanks to jnelson@jamponi.net
 
 *vim-6.1 (26 Mar 2002)
 
-	26 Mar 2002; Aron Griffis <agriffis@gentoo.org> vim-6.0-r6.ebuild, vim-6.1.ebuild:
+  26 Mar 2002; Aron Griffis <agriffis@gentoo.org> vim-6.0-r6.ebuild, vim-6.1.ebuild:
 
-	Resolved bug 1335: vim 6.1 released
-	Resolved bug 1293: vim python support disabled
+  Resolved bug 1335: vim 6.1 released
+  Resolved bug 1293: vim python support disabled
 
 *vim-6.0-r5 (19 Feb 2002)
 
-	19 Feb 2002; Aron Griffis <agriffis@gentoo.org> vim-6.0-r5.ebuild:
+  19 Feb 2002; Aron Griffis <agriffis@gentoo.org> vim-6.0-r5.ebuild:
 
-	Resolved bug 583: "patch to vim-6.0-r4 to install a vimrc in
-	/usr/share/vim instead of /etc/skel/.vimrc".  Additionally install
-	a default, reasonable gvimrc.  Updated vim to 6.0.223 with all
-	available patches.
+  Resolved bug 583: "patch to vim-6.0-r4 to install a vimrc in
+  /usr/share/vim instead of /etc/skel/.vimrc".  Additionally install
+  a default, reasonable gvimrc.  Updated vim to 6.0.223 with all
+  available patches.
 
 *vim-6.0-r4 (1 Feb 2002)
 
-	1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
 
-	Added initial ChangeLog which should be updated whenever the package is
-	updated in any way. This changelog is targetted to users. This means that
-	the comments should well explained and written in clean English. The
-	details about writing correct changelogs are explained in the
-	skel.ChangeLog file which you can find in the root directory of the
-	portage repository.
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that
+  the comments should well explained and written in clean English. The
+  details about writing correct changelogs are explained in the
+  skel.ChangeLog file which you can find in the root directory of the
+  portage repository.

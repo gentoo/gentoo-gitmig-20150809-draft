@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.16 2003/03/15 00:44:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.17 2003/03/23 20:36:26 agriffis Exp $
+
+*vim-core-6.1-r5 (22 Mar 2003)
+
+  22 Mar 2003; Aron Griffis <agriffis@gentoo.org> vim-core-6.1-r5.ebuild,
+  files/vimrc:
+  Move vimrc from vim to vim-core. Update to patchlevel 411. Mark stable on
+  x86, alpha.  Changes to the eclass are described in the vim ChangeLog.
 
   08 Feb 2003; Guy Martin <gmsoft@gentoo.org> vim-core-6.1-r4.ebuild :
   Added hppa to keywords.

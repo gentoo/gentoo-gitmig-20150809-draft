@@ -10,10 +10,6 @@
 set columns=80 lines=30       " don't inherit geometry from parent term
 set mousemodel=popup          " right mouse button pops up a menu in the GUI
 
-" added to default to high security within Gentoo. Fixes #14088
-"  -rphillips
-set modelines=0
-
 " Use a sufficiently wide window automatically when started as "gvimdiff"
 if (&foldmethod == 'diff')
 	set columns=165
