@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1.ebuild,v 1.4 2004/04/27 09:48:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1.ebuild,v 1.5 2004/04/29 18:21:21 eradicator Exp $
 
 inherit rpm
 
@@ -26,9 +26,9 @@ KEYWORDS="~x86"
 DEPEND="app-arch/unzip"
 
 RDEPEND=">=sys-libs/lib-compat-1.3
-	 !bundled-libs ( =x11-libs/qt-3*
-	                 >=sys-devel/gcc-3*
-	                 >=x11-libs/openmotif-2.1.30 )
+	 !bundled-libs? ( =x11-libs/qt-3*
+	                  >=sys-devel/gcc-3*
+	                  >=x11-libs/openmotif-2.1.30 )
 	 virtual/opengl"
 
 pkg_nofetch() {
@@ -153,6 +153,9 @@ src_install() {
 	cd ${S}/docs.upgrade/style
 	insinto /usr/aw/maya5.0/docs/Documents/Maya5.0/en_US/style
 	doins *
+
+	# Fix permissions
+	find ${D}/usr/aw -type d -exec chmod 755 {} \;
 }
 
 pkg_postinstall() {
