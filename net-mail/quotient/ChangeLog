@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/quotient
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/quotient/ChangeLog,v 1.3 2004/06/07 15:05:21 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/quotient/ChangeLog,v 1.4 2004/06/07 15:33:00 lordvan Exp $
+
+  07 Jun 2004; Thomas Raschbacher <lordvan@gentoo.org> quotient-0.9.1.ebuild:
+  fixes bug #52340, thanks to Matteo Bertini <veb@freemail.it>
+  bin/* installed to docs dir because of conflict
 
 *quotient-0.9.1 (07 Jun 2004)
 
