@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.117 2004/12/29 18:01:11 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.118 2004/12/29 22:17:26 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   29 Dec 2004; Tom Gall <tgall@gentoo.org> glib-1.2.10-r5.ebuild:
   add back in call for gnuconfig_update bug #76039
@@ -61,7 +64,7 @@
   11 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> glib-1.2.10-r5.ebuild:
   Fixed shared libraries compilation on macos. This closes bug #60580.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> glib-2.4.6.ebuild:
+  10 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> glib-2.4.6.ebuild:
   Stable on alpha.
 
 *glib-2.4.7 (09 Oct 2004)
@@ -78,7 +81,7 @@
   06 Sep 2004; Guy Martin <gmsoft@gentoo.org> glib-2.4.5.ebuild:
   Marked stable on hppa.
 
-  06 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> glib-2.4.5.ebuild:
+  06 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> glib-2.4.5.ebuild:
   Stable on alpha.
 
   31 Aug 2004; Michael Hanselmann <hansmi@gentoo.org> glib-1.2.10-r5.ebuild:
@@ -92,7 +95,7 @@
   19 Aug 2004; foser <foser@gentoo.org> glib-2.4.6.ebuild :
   New release
 
-  08 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> glib-2.4.4.ebuild:
+  08 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> glib-2.4.4.ebuild:
   Stable on alpha.
 
   07 Aug 2004; Travis Tilley <lv@gentoo.org> glib-2.4.4.ebuild:
@@ -137,7 +140,7 @@
   19 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> glib-2.4.1.ebuild:
   sparc stable
 
-  16 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> glib-2.4.1.ebuild:
+  16 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> glib-2.4.1.ebuild:
   Stable on alpha.
 
 *glib-2.4.2 (15 Jun 2004)

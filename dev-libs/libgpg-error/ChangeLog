@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.30 2004/12/21 16:38:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.31 2004/12/29 22:23:56 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   21 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   libgpg-error-1.0-r1.ebuild:
@@ -24,7 +27,7 @@
   12 Oct 2004; Guy Martin <gmsoft@gentoo.org> libgpg-error-1.0.ebuild:
   Stable on hppa.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> libgpg-error-1.0.ebuild:
+  10 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libgpg-error-1.0.ebuild:
   Stable on alpha.
 
 *libgpg-error-0.6-r1 (21 Sep 2004)
@@ -77,7 +80,7 @@
   29 Jul 2004; Stephen P. Becker <geoman@gentoo.org> libgpg-error-0.6.ebuild:
   stable on mips
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> libgpg-error-0.6.ebuild:
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libgpg-error-0.6.ebuild:
   Stable on alpha.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
@@ -87,7 +90,7 @@
   01 Jul 2004; Tom Gall <tgall@gentoo.org> libgpg-error-0.7.ebuild:
   stable on ppc64, bug #54804
 
-  12 May 2004; Bryan Østergaard <kloeri@gentoo.org> libgpg-error-0.7.ebuild:
+  12 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libgpg-error-0.7.ebuild:
   Add ~alpha.
 
   02 May 2004; Stephen P. Becker <geoman@gentoo.org> libgpg-error-0.7.ebuild:
@@ -95,7 +98,7 @@
 
 *libgpg-error-0.7 (02 May 2004)
 
-  02 May 2004; Bryan Østergaard <kloeri@gentoo.org> +libgpg-error-0.7.ebuild:
+  02 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +libgpg-error-0.7.ebuild:
   Version bump, bug #49620.
 
   29 Feb 2004; Jason Wever <weeve@gentoo.org> libgpg-error-0.6.ebuild:

@@ -1,12 +1,15 @@
 # ChangeLog for dev-libs/libots
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libots/ChangeLog,v 1.11 2004/07/02 04:47:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libots/ChangeLog,v 1.12 2004/12/29 22:27:51 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libots-2.2.7-r1.ebuild, libots-2.2.7-r2.ebuild, libots-2.2.7.ebuild:
   virtual/glibc -> virtual/libc
 
-  24 May 2004; Bryan Østergaard <kloeri@gentoo.org> libots-2.2.7-r2.ebuild:
+  24 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libots-2.2.7-r2.ebuild:
   Stable on alpha.
 
 *libots-2.2.7-r2 (19 Feb 2004)

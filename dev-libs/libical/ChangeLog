@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/libical
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.10 2004/10/19 19:09:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.11 2004/12/29 22:24:25 ciaranm Exp $
 
-  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  19 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   libical-0.24_rc4-r1.ebuild:
   ~alpha keyword, bug 66691.
 

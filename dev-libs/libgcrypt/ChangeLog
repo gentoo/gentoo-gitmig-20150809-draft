@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.41 2004/11/26 16:35:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.42 2004/12/29 22:23:17 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   26 Nov 2004; Jason Wever <weeve@gentoo.org> libgcrypt-1.2.0-r2.ebuild:
   Stable on sparc.
@@ -41,7 +44,7 @@
   29 Jul 2004; Stephen P. Becker <geoman@gentoo.org> libgcrypt-1.1.94.ebuild:
   Stable on mips.
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> libgcrypt-1.1.94.ebuild:
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libgcrypt-1.1.94.ebuild:
   Stable on alpha.
 
   01 Jul 2004; Tom Gall <tgall@gentoo.org> libgcrypt-1.2.0.ebuild:
@@ -61,7 +64,7 @@
   30 May 2004; Mike Frysinger <vapier@gentoo.org> +libgcrypt-1.2.0.ebuild:
   Version bump #48916 by Erinn Looney-Triggs.
 
-  12 May 2004; Bryan Østergaard <kloeri@gentoo.org> libgcrypt-1.1.94.ebuild:
+  12 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libgcrypt-1.1.94.ebuild:
   Add ~alpha.
 
   02 May 2004; Stephen P. Becker <geoman@gentoo.org> libgcrypt-1.1.94.ebuild:
@@ -69,7 +72,7 @@
 
 *libgcrypt-1.1.94 (02 May 2004)
 
-  02 May 2004; Bryan Østergaard <kloeri@gentoo.org> +libgcrypt-1.1.94.ebuild:
+  02 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +libgcrypt-1.1.94.ebuild:
   Version bump, bug #49610.
 
   29 Feb 2004; Jason Wever <weeve@gentoo.org> libgcrypt-1.1.92.ebuild:

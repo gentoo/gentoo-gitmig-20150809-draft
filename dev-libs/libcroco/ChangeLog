@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcroco
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.19 2004/12/23 17:20:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.20 2004/12/29 22:20:43 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org> libcroco-0.6.0.ebuild:
   Stable on hppa.
@@ -31,7 +34,7 @@
   13 Jul 2004; Tom Gall <tgall@gentoo.org> libcroco-0.5.1.ebuild:
   stable on ppc64, bug #54807
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> libcroco-0.5.1.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libcroco-0.5.1.ebuild:
   Stable on alpha.
 
   04 Jun 2004; Stephen P. Becker <geoman@gentoo.org> libcroco-0.5.1.ebuild:

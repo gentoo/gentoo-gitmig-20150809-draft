@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.21 2004/10/19 08:28:11 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.22 2004/12/29 22:25:16 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> libmcal-0.7-r3.ebuild:
   Stable on amd64.
@@ -8,7 +11,7 @@
   12 Oct 2004; Guy Martin <gmsoft@gentoo.org> libmcal-0.7-r3.ebuild:
   Stable on hppa.
 
-  06 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> libmcal-0.7-r3.ebuild:
+  06 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libmcal-0.7-r3.ebuild:
   Stable on alpha.
 
   18 Sep 2004; Jason Wever <weeve@gentoo.org> libmcal-0.7-r3.ebuild:
