@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.14-r3.ebuild,v 1.10 2004/08/18 07:35:41 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.14-r3.ebuild,v 1.11 2004/08/27 00:00:19 weeve Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ SRC_URI="ftp://ftp.mostang.com/pub/sane/${P}/${P}.tar.gz
 	usb? ( mirror://gentoo/${BROTHERMFCDRIVER}.bz2 )"
 SLOT="0"
 LICENSE="GPL-2 public-domain"
-KEYWORDS="x86 ~sparc ppc ppc64"
+KEYWORDS="x86 sparc ppc ppc64"
 
 
 src_unpack() {
