@@ -1,0 +1,14 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/files/microcode_ctl.rc,v 1.1 2004/09/01 01:16:46 vapier Exp $
+
+depend() {
+	need localmount
+}
+
+start() {
+	ebegin "Updating microcode"
+	/usr/sbin/microcode_ctl -iqu -d ${MICROCODE_DEV}
+	eend $? "Failed to update microcode via '${MICROCODE_DEV}'"
+}
