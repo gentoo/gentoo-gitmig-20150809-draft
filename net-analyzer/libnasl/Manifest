@@ -5,8 +5,8 @@ MD5 3a0616467b1fcf453d78c68032e9d317 libnasl-2.0.6a.ebuild 1227
 MD5 e2237b9c1c0e1d25afd011db56e90683 libnasl-1.2.6.ebuild 1165
 MD5 8bc6508d80695d868a22ecc50c9caa58 libnasl-2.0.5.ebuild 1227
 MD5 bdb7c95623eb9625babd2426ddd8e656 libnasl-2.0.0.ebuild 1226
-MD5 2b65fa9480d68670b48375310d0c7871 ChangeLog 2172
-MD5 3a0616467b1fcf453d78c68032e9d317 libnasl-2.0.7.ebuild 1227
+MD5 cd314ac4c13b942a3bb82da579b4cde3 ChangeLog 2329
+MD5 19c5509459e870cd4f4e45c0ec853f96 libnasl-2.0.7.ebuild 1233
 MD5 ffa8b1ea4e7564853e83e2a9b1b97d1a files/digest-libnasl-1.2.4 65
 MD5 2d642948f2d341e47ca4f8fb334a811c files/digest-libnasl-1.2.6 65
 MD5 90a151137ea58f2508d1610285909547 files/digest-libnasl-1.2.7 65
