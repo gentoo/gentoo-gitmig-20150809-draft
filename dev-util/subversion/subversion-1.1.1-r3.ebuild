@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r3.ebuild,v 1.1 2004/11/12 20:12:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r3.ebuild,v 1.2 2004/11/28 19:56:31 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion
 
@@ -28,7 +28,8 @@ RDEPEND="apache2? ( >=net-www/apache-2.0.49 )
 
 DEPEND="${RDEPEND}
 	|| ( >=sys-devel/autoconf-2.59 =sys-devel/autoconf-2.57* )
-	!=sys-devel/autoconf-2.58"
+	!=sys-devel/autoconf-2.58
+	jikes? (dev-java/jikes)"
 
 # Allow for custion repository locations.
 # This can't be in pkg_setup because the variable needs to be available to
