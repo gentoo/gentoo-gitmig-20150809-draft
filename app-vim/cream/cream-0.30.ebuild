@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.30.ebuild,v 1.2 2004/06/24 23:00:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.30.ebuild,v 1.3 2004/07/12 17:51:53 ciaranm Exp $
 
 inherit vim-plugin
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~mips"
+KEYWORDS="~x86 sparc ~ppc mips"
 
 DEPEND=""
 RDEPEND=">=app-editors/gvim-6.2
