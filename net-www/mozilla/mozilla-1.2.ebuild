@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.ebuild,v 1.2 2002/12/01 09:35:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.ebuild,v 1.3 2002/12/01 17:50:33 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -67,7 +67,7 @@ RDEPEND=">=x11-base/xfree-4.2.0-r11
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
-	( gtk2? >=x11-libs/gtk+-2.1.2 :
+	( gtk2? >=x11-libs/gtk+-2.0.9 :
 	        =x11-libs/gtk+-1.2* )
 	( gtk2? >=dev-libs/glib-2.0.6 :
 	        =dev-libs/glib-1.2* )
@@ -81,42 +81,55 @@ DEPEND="${RDEPEND}
 	sys-devel/perl
 	java? ( >=dev-java/java-config-0.2.0 )"
 
-# needed by src_compile() and src_install()
-export MOZILLA_OFFICIAL=1
-export BUILD_OFFICIAL=1
-
-# enable XFT
-[ "${DISABLE_XFT}" != "1" ] && export MOZ_ENABLE_XFT=1
-
-# make sure the nss module gets build (for NSS support)
-[ -n "`use ssl`" ] && export MOZ_PSM=1
-
-# do we build java support for the NSS stuff ?
-# NOTE: this is broken for the moment
-#[ "`use java`" ] && export NS_USE_JDK=1
-
 
 pkg_setup() {
 
 	# Setup CC and CXX
-	if [ -z "${CC}" ] ; then
+	if [ -z "${CC}" ]
+	then
 		export CC="gcc"
 
-		if [ "$(gcc-major-version)" -eq "3" ] ; then
+		if [ "$(gcc-major-version)" -eq "3" ]
+		then
 			export CXX="g++"
 		else
 			export CXX="gcc"
 		fi
 	fi
-	if [ -z "${CXX}" ] ; then
+	if [ -z "${CXX}" ]
+	then
 		export CXX="${CC}"
 	fi
 
 	#This should enable parallel builds, I hope
-	if [ -f /proc/cpuinfo ] ; then
+	if [ -f /proc/cpuinfo ]
+	then
 		export MAKEOPTS="${MAKEOPTS/-j[0-9]?} -j$((`grep -c ^processor /proc/cpuinfo` * 2))"
 		export MAKE="emake"
 	fi
+
+	# needed by src_compile() and src_install()
+	export MOZILLA_OFFICIAL=1
+	export BUILD_OFFICIAL=1
+
+	# enable XFT
+	if [ "${DISABLE_XFT}" != "1" ]
+	then
+		export MOZ_ENABLE_XFT="1"
+	fi
+	
+	# make sure the nss module gets build (for NSS support)
+	if [ -n "`use ssl`" ]
+	then
+		export MOZ_PSM="1"
+	fi
+
+	# do we build java support for the NSS stuff ?
+	# NOTE: this is broken for the moment
+#	if [ "`use java`" ]
+#	then
+#		export NS_USE_JDK="1"
+#	fi
 }
 
 src_unpack() {
@@ -129,9 +142,11 @@ src_unpack() {
 	#   http://bugzilla.mozilla.org/show_bug.cgi?id=182506
 	epatch ${FILESDIR}/${PV}/${P}-branch-update.patch.bz2
 
-	if [ "$(gcc-major-version)" -eq "3" ] ; then
+	if [ "$(gcc-major-version)" -eq "3" ]
+	then
 		# ABI Patch for alpha/xpcom for gcc-3.x
-		if [ "${ARCH}" = "alpha" ] ; then
+		if [ "${ARCH}" = "alpha" ]
+		then
 			cd ${S}; epatch ${FILESDIR}/${PN}-alpha-xpcom-subs-fix.patch
 		fi
 	fi
@@ -154,7 +169,8 @@ src_unpack() {
 	# <azarah@gentoo.org> (30 Nov 2002)
 	epatch ${FILESDIR}/${PV}/${P}-cutnpaste-limit-fix.patch.bz2
 
-	if [ -z "`use gtk2`" ]; then
+	if [ -z "`use gtk2`" ]
+	then
 		# Get mozilla to link to Xft2.0 that we install in tmp directory
 		# <azarah@gentoo.org> (18 Nov 2002)
 		epatch ${FILESDIR}/${PV}/${P}b-Xft-includes.patch.bz2
@@ -171,8 +187,8 @@ src_unpack() {
 	# Unpack the enigmail plugin
 	if [ -n "`use crypt`" -a -z "`use moznomail`" ]
 	then
-		mv ${WORKDIR}/ipc ${S}/extensions/
-		mv ${WORKDIR}/enigmail ${S}/extensions/
+		mv -f ${WORKDIR}/ipc ${S}/extensions/
+		mv -f ${WORKDIR}/enigmail ${S}/extensions/
 	fi
 
 	cd ${FC_S}
@@ -186,7 +202,8 @@ src_compile() {
 	local myconf=""
 	# NOTE: QT and XLIB toolkit seems very unstable, leave disabled until
 	#       tested ok -- azarah
-	if [ -n "`use gtk2`" ] ; then
+	if [ -n "`use gtk2`" ]
+	then
 		myconf="${myconf} --enable-toolkit-gtk2 \
 		                  --enable-default-toolkit=gtk2 \
 		                  --disable-toolkit-qt \
@@ -200,11 +217,13 @@ src_compile() {
 			              --disable-toolkit-gtk2"
 	fi
 
-	if [ -z "`use ldap`" ] ; then
+	if [ -z "`use ldap`" ]
+	then
 		myconf="${myconf} --disable-ldap"
 	fi
 
-	if [ "${DEBUGBUILD}" != "yes" ] ; then
+	if [ "${DEBUGBUILD}" != "yes" ]
+	then
 		myconf="${myconf} --enable-strip-libs \
 			              --disable-debug \
 			              --disable-tests \
@@ -215,17 +234,38 @@ src_compile() {
 						  --enable-elf-dynstr-gc \
 						  --enable-cpp-rtti"
 
-		if [ -z "`use gtk2`" ]; then
+		if [ -z "`use gtk2`" ]
+		then
 			myconf="${myconf} --disable-accessibility \
 							  --disable-logging"
 		fi
 	fi
 
-	if [ -n "${MOZ_ENABLE_XFT}" ] ; then
-		myconf="${myconf} --enable-xft"
+	if [ -n "${MOZ_ENABLE_XFT}" ]
+	then
+		if [ -n "`use gtk2`" ]
+		then
+			local pango_version=""
+			
+		    pango_version="`pkg-config --modversion pango | cut -d. -f1,2`"
+			pango_version="`echo ${pango_version} | sed -e 's:\.::g'`"
+		
+			# Only enable Xft if we have pango-1.1 or Xft2.0 installed ...
+			if [ "${pango_version}" -gt "10" ] || (pkg-config xft 2> /dev/null)
+			then
+				einfo "Building with Xft2.0 support!"
+				myconf="${myconf} --enable-xft"
+			else
+				myconf="${myconf} --disable-xft"
+			fi
+		else
+			einfo "Building with Xft2.0 support!"
+			myconf="${myconf} --enable-xft"
+		fi
 	fi
 
-	if [ -n "`use ipv6`" ] ; then
+	if [ -n "`use ipv6`" ]
+	then
 		myconf="${myconf} --enable-ipv6"
 	fi
 
@@ -241,20 +281,25 @@ src_compile() {
 	# Non-defaults are:
 	#     xmlterm access-builtin p3p interfaceinfo datetime finger cview
 	local myext="default"
-	if [ -n "`use mozxmlterm`" ] ; then
+	if [ -n "`use mozxmlterm`" ]
+	then
 		myext="${myext},xmlterm"
 	fi
-	if [ -n "`use mozaccess-builtin`" ] ; then
+	if [ -n "`use mozaccess-builtin`" ]
+	then
 		myext="${myext},access-builtin"
 	fi
-	if [ -n "`use mozp3p`" ] ; then
+	if [ -n "`use mozp3p`" ]
+	then
 		myext="${myext},p3p"
 	fi
-	if [ -n "`use mozinterfaceinfo`" ] ; then
+	if [ -n "`use mozinterfaceinfo`" ]
+	then
 		myext="${myext},interfaceinfo"
 	fi
 
-	if [ -n "`use mozsvg`" ] ; then
+	if [ -n "`use mozsvg`" ]
+	then
 		export MOZ_INTERNAL_LIBART_LGPL="1"
 		myconf="${myconf} --enable-svg"
 	else
@@ -262,22 +307,26 @@ src_compile() {
 	fi
 # This puppy needs libical, which is not in portage yet.  Also make mozilla
 # depend on swig, so not sure if its the best idea around to enable ...
-#	if [ -n "`use mozcalendar`" ] ; then
+#	if [ -n "`use mozcalendar`" ]
+#	then
 #		myconf="${myconf} --enable-calendar"
 #	fi
 	
-	if [ -n "`use moznomail`" ] ; then
+	if [ -n "`use moznomail`" ]
+	then
 		myconf="${myconf} --disable-mailnews"
 	fi
-	if [ -n "`use moznocompose`" ] ; then
+	if [ -n "`use moznocompose`" ]
+	then
 		myconf="${myconf} --disable-composer"
 	fi
 	
-	if [ "$(gcc-major-version)" -eq "3" ] ; then
-
+	if [ "$(gcc-major-version)" -eq "3" ]
+	then
 		# If CXX is not set, 'c++' is used to compile and not 'g++', which
 		# could cause problems.
-		if [ -z "${CC}" -o -z "${CXX}" ] ; then
+		if [ -z "${CC}" -o -z "${CXX}" ]
+		then
 			eerror "CC or CXX are not set.  This may be due to pkg_setup() not"
 			eerror "being run.  Please file a bug report that include your portage"
 			eerror "version, USE flags and CFLAGS."
@@ -286,13 +335,15 @@ src_compile() {
 		
 		# Currently gcc-3.2 or older do not work well if we specify "-march"
 		# and other optimizations for pentium4.
-		if [ "$(${CC} -dumpversion | sed -e 's:\.::g')" -lt "321" ] ; then
+		if [ "$(${CC} -dumpversion | sed -e 's:\.::g')" -lt "321" ]
+		then
 			export CFLAGS="${CFLAGS/pentium4/pentium3}"
 			export CXXFLAGS="${CXXFLAGS/pentium4/pentium3}"
 		fi
 
 		# Enable us to use flash, etc plugins compiled with gcc-2.95.3
-		if [ "${ARCH}" = "x86" ] ; then
+		if [ "${ARCH}" = "x86" ]
+		then
 			myconf="${myconf} --enable-old-abi-compat-wrappers"
 		fi
 	fi
@@ -303,8 +354,8 @@ src_compile() {
 	#
 	# *********************************************************************
 
-	if [ -z "`use gtk2`" ] ; then
-	
+	if [ -z "`use gtk2`" ]
+	then
 		cd ${FC_S}
 		einfo "Configuring Xft2.0..."
 		mkdir -p ${WORKDIR}/Xft
@@ -375,7 +426,8 @@ src_compile() {
 	# *********************************************************************
 
 	# Build the NSS/SSL support
-	if [ "`use ssl`" ] ; then
+	if [ "`use ssl`" ]
+	then
 		einfo "Building Mozilla NSS..."
 		cd ${S}/security/coreconf
 		
@@ -422,7 +474,8 @@ src_install() {
 	make MOZ_PKG_FORMAT="raw" TAR_CREATE_FLAGS="-chf" > /dev/null || die
 	mv -f ${S}/dist/mozilla ${D}/usr/lib/mozilla
 
-	if [ -z "`use gtk2`" ]; then
+	if [ -z "`use gtk2`" ]
+	then
 		einfo "Installing Xft2.0..."
 		cp -df ${WORKDIR}/Xft/lib/libXft.so.* ${D}/usr/lib/mozilla
 		cp -df ${WORKDIR}/Xft/lib/libXrender.so.* ${D}/usr/lib/mozilla
@@ -441,7 +494,8 @@ src_install() {
 	mv ${D}/usr/lib/mozilla/{xpcshell,xpidl,xpt_dump,xpt_link} ${D}/usr/bin
 
 	# Install the NSS/SSL libs, headers and tools
-	if [ "`use ssl`" ] ; then
+	if [ "`use ssl`" ]
+	then
 		einfo "Installing Mozilla NSS..."
 		# Install the headers ('make install' do not work for headers ...)
 		insinto /usr/lib/mozilla/include/nss
@@ -500,7 +554,8 @@ src_install() {
 	doins ${S}/build/package/rpm/SOURCES/mozicon50.xpm
 
 	# Install icon and .desktop for menu entry
-	if [ "`use gnome`" ] ; then
+	if [ "`use gnome`" ]
+	then
 		insinto /usr/share/pixmaps
 		doins ${S}/build/package/rpm/SOURCES/mozilla-icon.png
 
@@ -521,15 +576,18 @@ src_install() {
 
 pkg_preinst() {
 	# Stale components and chrome files break when unmerging old
-	if [ -d ${ROOT}/usr/lib/mozilla/components ] ; then
+	if [ -d ${ROOT}/usr/lib/mozilla/components ]
+	then
 		rm -rf ${ROOT}/usr/lib/mozilla/components
 	fi
-	if [ -d ${ROOT}/usr/lib/mozilla/chrome ] ; then
+	if [ -d ${ROOT}/usr/lib/mozilla/chrome ]
+	then
 		rm -rf ${ROOT}/usr/lib/mozilla/chrome
 	fi
 
 	# Remove stale component registry.
-    if [ -e ${ROOT}/usr/lib/component.reg ] ; then
+    if [ -e ${ROOT}/usr/lib/component.reg ]
+	then
 		rm -f ${ROOT}/usr/lib/component.reg
 	fi
 
@@ -543,7 +601,7 @@ pkg_postinst() {
 
 	# Make symlink for Java plugin (do not do in src_install(), else it only
 	# gets installed every second time)
-	if [ "`use java`" -a "$(gcc-major-version)" -ne "3" \
+	if [ "`use java`" -a "`gcc-major-version`" -ne "3" \
 	     -a ! -L ${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` ]
 	then
 		if [ -e `java-config --full-browser-plugin-path=mozilla` ]
@@ -556,7 +614,8 @@ pkg_postinst() {
 	# Take care of component registration
 
 	# Remove any stale component.reg
-	if [ -e ${MOZILLA_FIVE_HOME}/component.reg ] ; then
+	if [ -e ${MOZILLA_FIVE_HOME}/component.reg ]
+	then
 		rm -f ${MOZILLA_FIVE_HOME}/component.reg
 	fi
 
@@ -568,7 +627,8 @@ pkg_postinst() {
 	# Register components, setup Chrome .rdf files and fix file permissions
 	einfo "Registering Components and Chrome..."
 	${MOZILLA_FIVE_HOME}/regxpcom &> /dev/null
-	if [ -e ${MOZILLA_FIVE_HOME}/component.reg ] ; then
+	if [ -e ${MOZILLA_FIVE_HOME}/component.reg ]
+	then
 		chmod 0644 ${MOZILLA_FIVE_HOME}/component.reg
 	fi
 	# Setup the default skin and locale to correctly generate the Chrome .rdf files
@@ -592,16 +652,18 @@ pkg_postinst() {
 pkg_postrm() {
 
 	# Regenerate component.reg in case some things changed
-	if [ -e ${ROOT}/usr/lib/mozilla/regxpcom ] ; then
-	
+	if [ -e ${ROOT}/usr/lib/mozilla/regxpcom ]
+	then
 		export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/mozilla"
 	
-		if [ -e ${MOZILLA_FIVE_HOME}/component.reg ] ; then
+		if [ -e ${MOZILLA_FIVE_HOME}/component.reg ]
+		then
 			rm -f ${MOZILLA_FIVE_HOME}/component.reg
 		fi
 
 		${MOZILLA_FIVE_HOME}/regxpcom
-		if [ -e ${MOZILLA_FIVE_HOME}/component.reg ] ; then
+		if [ -e ${MOZILLA_FIVE_HOME}/component.reg ]
+		then
 			chmod g+r,o+r ${MOZILLA_FIVE_HOME}/component.reg
 		fi
 
