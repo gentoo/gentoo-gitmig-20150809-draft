@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/pnetlib
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pnetlib/ChangeLog,v 1.4 2003/06/17 08:40:01 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pnetlib/ChangeLog,v 1.5 2003/07/02 16:55:07 scandium Exp $
+
+  02 Jul 2003; Rainer Groesslinger <scandium@gentoo.org> pnetlib-0.5.8.ebuild,
+  files/Xsharp.patch, files/configure-X11.patch:
+  Added X USE flag,
+  Added Patches for fixing Xsharp compilation on systems without X11
 
 *pnetlib-0.5.8 (17 Jun 2003)
 

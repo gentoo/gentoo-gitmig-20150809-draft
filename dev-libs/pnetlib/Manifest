@@ -1,3 +1,5 @@
-MD5 844ad2c2edeb18987241fc844168b779 ChangeLog 858
-MD5 b49e3ee70a0debb3b7c651874afae778 pnetlib-0.5.8.ebuild 614
+MD5 c3e510244f88507855857b7f95c6a390 ChangeLog 1076
+MD5 7c7f32c0204da3a68f64441d01acdfa9 pnetlib-0.5.8.ebuild 864
+MD5 cd196cf2d1660318c6bd5f237db30b17 files/Xsharp.patch 415
 MD5 655a67b55b475808a9b00c128e408026 files/digest-pnetlib-0.5.8 66
+MD5 6aaecd9809adecd2a82d6f7bd5524876 files/configure-X11.patch 711
