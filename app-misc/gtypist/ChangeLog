@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gtypist
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.7 2004/06/24 22:15:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.8 2004/08/06 23:00:29 slarti Exp $
+
+  06 Aug 2004; Tom Martin <slarti@gentoo.org> gtypist-2.7.ebuild:
+  Marked ~amd64; resolves bug 59637. Thanks to Jan Van Uytven <wyvern@crm3.com>
+  for reporting.
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> gtypist-2.7.ebuild,
   +metadata.xml:
