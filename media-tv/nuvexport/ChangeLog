@@ -1,6 +1,16 @@
 # ChangeLog for media-tv/nuvexport
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/ChangeLog,v 1.16 2005/03/11 06:32:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/ChangeLog,v 1.17 2005/03/15 05:37:58 cardoe Exp $
+
+*nuvexport-0.2_pre20050311 (15 Mar 2005)
+
+  15 Mar 2005; Doug Goldstein <cardoe@gentoo.org>
+  -nuvexport-0.2_pre20050207.ebuild, -nuvexport-0.2_pre20050212.ebuild,
+  -nuvexport-0.2_pre20050221.ebuild, -nuvexport-0.2_pre20050309.ebuild,
+  +nuvexport-0.2_pre20050311.ebuild:
+  rev bump
+  update ebuild to check USE flags for ffmpeg
+  require version of ffmpeg that actually works
 
 *nuvexport-0.2_pre20050309 (11 Mar 2005)
 
