@@ -8,7 +8,7 @@ DESCRIPTION="XSane is a graphical scanning frontend"
 SRC_URI="http://www.xsane.org/download/${P}.tar.gz"
 HOMEPAGE="http://www.xsane.org"
 
-DEPEND="media-gfx/sane-backends media-gfx/gimp"
+DEPEND="media-gfx/sane-backends"
 
 src_compile() {
 

@@ -1,8 +1,10 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.2 2002/06/12 00:37:59 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.3 2002/07/08 17:03:00 owen Exp $
 
 *xsane-0.86 (11 June 2002)
+  07 July 2002; Owen Stampflee <owen@gentoo.org> xsane-0.86.ebuild :
+  Removed the depend on The GIMP. It doesn't actually need it.
 
   11 June 2002; Ryan Phillips <rphillips@gentoo.org> xsane-0.86.ebuild :
   
