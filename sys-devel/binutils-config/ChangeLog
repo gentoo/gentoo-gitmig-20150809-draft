@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils-config
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.6 2004/12/30 22:18:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.7 2004/12/31 10:24:58 eradicator Exp $
+
+  31 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  files/binutils-config-1.5:
+  Fixed syntax error in binutils-condif-1.5.
 
 *binutils-config-1.5 (30 Dec 2004)
 
