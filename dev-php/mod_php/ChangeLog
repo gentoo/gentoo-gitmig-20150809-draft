@@ -1,8 +1,13 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.14 2002/09/02 02:19:19 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.15 2002/09/02 16:47:00 lostlogic Exp $
 
 *mod_php-4.2.2-r1 (18 Aug 2002)
+
+  1 Sep 2002; Brandon Low <lostlogic@gentoo.org> mod_php-4.2.2-r1.ebuild :
+
+  Test your ebuilds, you can't just comment in the middle like that, then
+  the next thing becomes a separate funky command.
 
   1 Sep 2002; Ryan Phillips <rphillips@gentoo.org> mod_php-4.2.2-r1.ebuild :
 
