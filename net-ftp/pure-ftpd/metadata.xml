@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>raker@gentoo.org</email>
-  <name>Nick Hadaway</name>
+  <email>humpback@gentoo.org</email>
 </maintainer>
+<longdescription>Free (BSD), secure, production-quality and standard-conformant FTP server based upon Troll-FTPd. It doesn't provide useless bells and whistles, but focuses on efficiency and ease of use.</longdescription>
 </pkgmetadata>
