@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.4.ebuild,v 1.2 2003/09/07 00:17:35 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.4.ebuild,v 1.3 2003/09/21 12:29:30 liquidx Exp $
 
-IUSE="oggvorbis hyriand"
+IUSE="oggvorbis"
 inherit eutils distutils
 MY_PN="${PN/soulseek/slsk}"
 MY_PV="${PV/_/}"
