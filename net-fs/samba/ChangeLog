@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.12 2002/08/25 06:20:18 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.13 2002/08/27 20:39:48 woodchip Exp $
+
+*samba-2.2.5-r1 (Aug 27 2002)
+
+  27 Aug 2002; Donny Davies <woodchip@gentoo.org> samba-2.2.5-r1.ebuid,
+  smb.conf.example :
+
+  Fix #6936; thanks shadow@ines.ro.  Fix #7133, thanks klebermass@limtec.de.
 
 *samba-2.2.5 (23 Jun 2002)
 
@@ -19,9 +26,9 @@
 
   13 May 2002; Donny Davies <woodchip@gentoo.org> :
 
-  o Install smbmnt and smbumount suid root, making user's lives easier; closes #2635.
-  o Pass --bindir to ./configure, un-breaking mount.smbfs; closes #2515.
-  o Add a few more codepages.
+  Install smbmnt and smbumount suid root, close #2635.
+  Pass --bindir to ./configure, close #2515.
+  Add a few more codepages.
 
 *samba-2.2.4 (6 May 2002)
   
@@ -29,40 +36,15 @@
   smb.conf.example, system-auth-winbind, samba-svc, winbind-init, lmhosts,
   samba-init, nsswitch.conf-winbind, nsswitch.conf-wins :
 
-  Update to latest; samba-2.2.4.
-
-  o Added a much better smb.conf.example
-  o Added smbwrapper (smbsh)
-  o Added libnss_winbind (see /etc/nsswitch.conf-winbind)
-  o Added libnss_wins (see /etc/nsswitch.conf-wins)
-  o Added libsmbclient
-  o Added USE ssl and ldap support (apparently they work but I haven't had
-    time to test them; feedback appreciated.  the support builds ok though.)
-  o Added better winbind support including an example nsswitch.conf, a pam.d/
-    service snippet and a winbind initscript.  Also see smb.conf.example.
-  o Mucho cleaned up the docs (no more 2 copies of the book!)
-  o Removed the recycle bin patches.  There is now some generic VFS layer
-    support for this.  If you're interested, please see examples/VFS in the
-    documentation.  Perhaps we might build it if enough people ask ;)
-  o Removed the afs patch.  Consider this unmaintained by me.  If you really
-    want it, you'll have to patch, test and submit it yourself.
-  o src_install is now all done by hand.  (easier this way, actually)
-  o Added a few convenience directories for netlogon, profiles, samba-hosted
-    printer drivers and the samba spool directory.  These are only really for
-    those who will blindly follow smb.conf.example.  If you already have
-    your own setup/layout, they're not really needed.
-
-  ** Changes important for people upgrading **
-  o None
-    If you're coming from samba-2.2.3, then this is a transparent upgrade.
-    Just down your daemon, merge 2.2.4, and bring it back up.
-
-    If you're coming from something older than 2.2.3 there's instructions
-    printed after install.  Follow them!
-
-  All-in-all this update basically adds more features, better documentation,
-  better out-of-the-box support for various things, and bug fixes.  There
-  are no sweeping changes to the package layout and such.
+  Added a much better smb.conf.example.  Added smbwrapper (smbsh).  Added
+  libnss_winbind (see /etc/nsswitch.conf-winbind).  Added libnss_wins
+  (see /etc/nsswitch.conf-wins).  Added libsmbclient.  Added USE ssl and
+  ldap support.  Added better winbind support including an example
+  nsswitch.conf, a pam.d/ service snippet and a winbind initscript.  Also
+  see smb.conf.example.  Mucho cleaned up the docs (no more 2 copies of
+  the book!).  Removed the recycle bin patches.  Removed the afs patch.
+  Added a few convenience directories for netlogon, profiles, samba-hosted
+  printer drivers and the samba spool directory.
 
 *samba-2.2.3a-r3 (3 May 2002)
   
@@ -75,23 +57,14 @@
   27 March 2002; Donny Davies <woodchip@gentoo.org> samba-2.2.3a-r2.ebuild,
   swat.xinetd, smbusers, samba.rc6, samba-2.2.3a-srv_spoolss_nt.patch :
 
-  The "tidy up a bunch of loose-ends before the 1.0 release, release :)"
-
-  *** Changes important for people upgrading ***:
-    o /etc/smb has moved to the better-suited /etc/samba directory.
-       Simply move your /etc/smb/* to /etc/samba.  Then delete the /etc/samba/codepages
-       directory.  These files are now in /var/lib/samba/codepages since I see no need
-       to have 3.3MB of files in /etc which people will never change :)
-    o /var/run/smb has moved to /var/run/samba.
-       Again, simply move your /var/run/smb/* to /var/run/samba and all will be well.
-    o If you have the string "/etc/smb" in your smb.conf file (likely), then please
-       change all occurances of that to "/etc/samba".  Thats it, you're done.
-
-  Other changes:
-    As mentioned above, /etc/smb/codepages has moved to /var/lib/samba/codepages.  The
-    initscript was tweaked to start cupsd before samba and also tweaked to start smbd
-    before nmbd.  Added a sample smbusers file.  Added an xinetd snippet for the swat
-    service.  Added a patch to fix changing printer properties from Windows NT.
+  /etc/smb has moved to the better-suited /etc/samba directory.  Simply move
+  your /etc/smb/* to /etc/samba.  Then delete the /etc/samba/codepages
+  directory.  These files are now in /var/lib/samba/codepages.  /var/run/smb
+  has moved to /var/run/samba.  Simply move your /var/run/smb/* to
+  /var/run/samba.  If you have the string "/etc/smb" in your smb.conf file,
+  then please change all occurances of that to "/etc/samba".  Added a
+  sample smbusers file.  Added an xinetd snippet for the swat service.
+  Added a patch to fix changing printer properties from Windows NT.
 
   10 March 2002; Donny Davies <woodchip@gentoo.org> files/samba.rc6 :
 
