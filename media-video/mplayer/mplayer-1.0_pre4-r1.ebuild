@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r1.ebuild,v 1.5 2004/05/27 05:08:14 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r1.ebuild,v 1.6 2004/06/01 14:13:34 ferringb Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live mad bidi divx4linux xvid"
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live mad bidi divx4linux xvid mpeg"
 
 inherit eutils flag-o-matic
 
@@ -184,9 +184,10 @@ src_compile() {
 	# Disable dvdnav support as its not considered to be
 	# functional anyhow, and will be removed.
 
-	use mpeg \
-		&& myconf="${myconf} --enable-external-faad" \
-		|| myconf="${myconf} --disable-external-faad"
+
+	# disable internal if external is enabled.
+	use matroska && myconf="${myconf} --disable-internal-matroska"
+	use mpeg && myconf="${myconf} --disable-internal-faad"
 
 	use dvb \
 		&& myconf="${myconf} --enable-dvb" \
@@ -255,6 +256,8 @@ src_compile() {
 		`use_enable live` \
 		`use_enable bidi fribidi` \
 		`use_enable mad` \
+		`use_enable mpeg external-faad` \
+		`use_enable matroska external-matroska` \
 		`use_enable divx4linux` \
 		${myconf} || die
 	# Breaks with gcc-2.95.3, bug #14479:

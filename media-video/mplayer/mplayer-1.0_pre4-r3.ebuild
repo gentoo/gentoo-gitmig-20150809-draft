@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r3.ebuild,v 1.6 2004/06/01 09:17:54 ferringb Exp $
-
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live bidi mad xvid divx4linux"
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r3.ebuild,v 1.7 2004/06/01 14:13:34 ferringb Exp $
 
 inherit eutils flag-o-matic kmod
+
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live bidi mad xvid divx4linux mpeg"
 
 # NOTE to myself:  Test this thing with and without dvd/gtk+ support,
 #                  as it seems the mplayer guys dont really care to
@@ -34,6 +34,7 @@ RDEPEND="xvid? (
 	       virtual/x11
 			=x11-libs/gtk+-1.2*
 			=dev-libs/glib-1.2* )
+	xinerama? ( virtual/x11 )
 	jpeg? ( media-libs/jpeg )
 	gif? ( media-libs/giflib
 	       media-libs/libungif )
@@ -183,6 +184,10 @@ src_compile() {
 	# Disable dvdnav support as its not considered to be
 	# functional anyhow, and will be removed.
 
+	# Disable internal if external is enabled
+	use mpeg && myconf="${myconf} --disable-internal-faad"
+	use matroska && myconf="${myconf} --disable-internal-matroska"
+
 	myconf="${myconf} `use_enable dvb`"
 	use dvb || myconf="${myconf} --disable-dvbhead"
 
@@ -253,12 +258,14 @@ src_compile() {
 		`use_enable nas` \
 		`use_enable 3dfx tdfxfb` \
 		`use_enable matrox mga` \
+		`use_enable mad` \
 		`use_enable xmms` \
 		`use_enable ipv6 inet6` \
 		`use_enable live` \
 		`use_enable v4l tv-v4l` \
 		`use_enable v4l2 tv-v4l2` \
 		`use_enable mpeg external-faad` \
+		`use_enable matroska external-matroska` \
 		`use_enable jpeg` \
 		`use_enable divx4linux` \
 		${myconf} || die

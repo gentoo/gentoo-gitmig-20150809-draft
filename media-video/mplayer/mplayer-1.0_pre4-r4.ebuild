@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r4.ebuild,v 1.4 2004/06/01 09:17:54 ferringb Exp $
-
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live bidi mad xvid divx4linux png xinerama libcaca"
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r4.ebuild,v 1.5 2004/06/01 14:13:34 ferringb Exp $
 
 inherit eutils flag-o-matic kmod
+
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live bidi mad xvid divx4linux png xinerama libcaca mpeg"
 
 # NOTE to myself:  Test this thing with and without dvd/gtk+ support,
 #                  as it seems the mplayer guys dont really care to
@@ -195,6 +195,10 @@ src_compile() {
 	myconf="${myconf} `use_enable dvb`"
 	use dvb || myconf="${myconf} --disable-dvbhead"
 
+	#if the flag is enabled, use external rather then internal
+	use matroska && myconf="${myconf} --disable-internal-matroska"
+	use mpeg && myconf="${myconf} --disable-internal-faad"
+
 	mconf="${myconf} `use_enable xvid`"
 	( use xvid && use 3dfx ) \
 		&& myconf="${myconf} --enable-tdfxvid" \
@@ -269,7 +273,9 @@ src_compile() {
 		`use_enable v4l tv-v4l` \
 		`use_enable v4l2 tv-v4l2` \
 		`use_enable mpeg external-faad` \
+		`use_enable matroska external-matroska` \
 		`use_enable jpeg` \
+		`use_enable mad` \
 		`use_enable divx4linux` \
 		${myconf} || die
 	# Breaks with gcc-2.95.3, bug #14479:

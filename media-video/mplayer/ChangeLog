@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.140 2004/06/01 09:04:10 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.141 2004/06/01 14:13:34 ferringb Exp $
+
+  01 Jun 2004; Brian Harring <ferringb@gentoo.org> mplayer-1.0_pre4-r1.ebuild,
+  mplayer-1.0_pre4-r2.ebuild, mplayer-1.0_pre4-r3.ebuild,
+  mplayer-1.0_pre4-r4.ebuild, mplayer-1.0_pre4.ebuild:
+  Added necessary --internal-(matroska|faad) for matroska (bug #50533) and mpeg.
+  MPlayer uses external libs when those flags are specified, otherwise,
+  internal. Also fixed missing IUSE flags.  Fixed use dvb syntax error in pre4-r2.
 
   01 Jun 2004; Brian Harring <ferringb@gentoo.org> mplayer-1.0_pre4-r4.ebuild,
   mplayer-1.0_pre4.ebuild:

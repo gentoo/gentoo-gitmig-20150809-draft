@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4.ebuild,v 1.6 2004/06/01 09:04:10 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4.ebuild,v 1.7 2004/06/01 14:13:34 ferringb Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 mad bidi xvid divx4linux xinerama libcaca"
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 mad bidi xvid divx4linux xinerama libcaca mpeg"
 
 inherit eutils flag-o-matic
 
@@ -169,6 +169,10 @@ src_compile() {
 
 	use gif || myconf="${myconf} --disable-gif"
 
+	# Disable internal if external is enabled.
+	use matroska && myconf="${myconf} --disable-internal-matroska"
+	use mpeg && myconf="${myconf} --disable-internal-faad"
+
 	myconf="${myconf} `use_enable xvid`"
 	( use xvid && use 3dfx ) \
 		&& myconf="${myconf} --enable-tdfxvid" \
@@ -192,7 +196,9 @@ src_compile() {
 		REALLIBDIR="/usr/lib/real"
 	fi
 
-	if has_version >=media-plugins/live-2004.01.05
+	# this is *really* evil.  soon as the necessary version is x86
+	# kill this.
+	if has_version '>=media-plugins/live-2004.01.05'
 	then
 		einfo "Enabling LIVE.COM Streaming Media..."
 		myconf="${myconf} --enable-live"
@@ -245,6 +251,7 @@ src_compile() {
 		`use_enable ipv6 inet6` \
 		`use_enable mad` \
 		`use_enable bidi fribidi` \
+		`use_enable matroska external-matroska` \
 		`use_enable mpeg external-faad` \
 		`use_enable v4l tv-v4l` \
 		`use_enable v4l2 tv-v4l2` \

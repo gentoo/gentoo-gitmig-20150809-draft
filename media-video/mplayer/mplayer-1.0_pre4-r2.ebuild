@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r2.ebuild,v 1.3 2004/06/01 09:17:54 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r2.ebuild,v 1.4 2004/06/01 14:13:34 ferringb Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live mad bidi xvid divx4linux"
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live mad bidi xvid divx4linux mpeg libcaca"
 
 inherit eutils flag-o-matic check-kernel
 
@@ -63,6 +63,7 @@ RDEPEND="xvid? ( ppc?  ( >=media-libs/xvid-0.9.0 )
 	live? ( >=media-plugins/live-2004.01.05 )
 	mad? ( media-libs/libmad )
 	bidi? ( dev-libs/fribidi )
+	libcaca? ( media-libs/libcaca )
 	>=sys-apps/portage-2.0.36"
 #	dvd? ( media-libs/libdvdnav )
 # Hardcode paranoia support for now, as there is no
@@ -179,11 +180,12 @@ src_compile() {
 	# Disable dvdnav support as its not considered to be
 	# functional anyhow, and will be removed.
 
-	use mpeg \
-		&& myconf="${myconf} --enable-external-faad" \
-		|| myconf="${myconf} --disable-external-faad"
 
-	myconf="${myconf} `use dvb`"
+	# Disable internal if external enabled.
+	use mpeg && myconf="${myconf} --disable-internal-faad"
+	use matroska && myconf="${myconf} --disable-internal-matroska"
+
+	myconf="${myconf} `use_enable dvb`"
 	use dvb || myconf="${myconf} --disable-dvbhead"
 
 	use debug \
@@ -241,6 +243,7 @@ src_compile() {
 		`use_enable lirc` \
 		`use_enable joystick` \
 		`use_enable theora` \
+		`use_enable libcaca caca` \
 		`use_enable bidi fribidi` \
 		`use_enable nas` \
 		`use_enable 3dfx tdfxfb` \
@@ -249,9 +252,11 @@ src_compile() {
 		`use_enable ipv6 inet6` \
 		`use_enable live` \
 		`use_enable mpeg external-faad` \
+		`use_enable matroska external-matroska` \
 		`use_enable v4l tv-v4l` \
 		`use_enable v4l2 tv-v4l2` \
 		`use_enable divx4linux` \
+		`use_enable mad` \
 		`use_enable jpeg` \
 		${myconf} || die
 	# Breaks with gcc-2.95.3, bug #14479:
