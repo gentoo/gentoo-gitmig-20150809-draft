@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.1-r1.ebuild,v 1.1 2004/08/17 23:59:30 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.1-r1.ebuild,v 1.2 2004/08/18 13:22:02 latexer Exp $
 
 inherit eutils mono flag-o-matic debug
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.go-mono.com/archive/${PV}/${P}.tar.gz"
 LICENSE="GPL-2 | LGPL-2 | X11"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE=""
+IUSE="nptl"
 
 DEPEND="virtual/libc
 	>=dev-libs/glib-2.0
@@ -26,7 +26,7 @@ RDEPEND="${DEPEND}
 src_compile() {
 	strip-flags
 
-	if have_NPTL
+	if use nptl || have_NPTL
 	then
 		eerror "mono currently has bug in garbage collection when"
 		eerror "using a NPTL enabled glibc. Please see bug #54603"
