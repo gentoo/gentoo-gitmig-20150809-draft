@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.169 2004/07/04 19:17:48 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.170 2004/07/06 21:34:48 lostlogic Exp $
+
+*mm-sources-2.6.7-r6 (06 Jul 2004)
+
+  06 Jul 2004; Brandon Low <lostlogic@gentoo.org> -mm-sources-2.6.6-r1.ebuild,
+  -mm-sources-2.6.6-r2.ebuild, -mm-sources-2.6.6-r4.ebuild,
+  -mm-sources-2.6.6-r5.ebuild, +mm-sources-2.6.7-r6.ebuild:
+  Bump and clean up
 
   04 Jul 2004; <plasmaroo@gentoo.org> mm-sources-2.6.7-r4.ebuild:
   Added a patch for the IPTables RDoS vulnerability; bug #55694.
