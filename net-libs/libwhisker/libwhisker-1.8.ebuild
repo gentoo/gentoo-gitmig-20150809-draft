@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/libwhisker-1.8.ebuild,v 1.3 2004/02/27 14:14:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/libwhisker-1.8.ebuild,v 1.4 2004/03/14 11:55:24 mcummings Exp $
 
 DESCRIPTION="Perl module geared to HTTP testing."
 HOMEPAGE="http://www.wiretrip.net/rfp/"
@@ -9,9 +9,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
 S="${WORKDIR}/${P}"
-DEPEND=">=perl-5.6.1
+DEPEND=${RDEPEND}
+RDEPEND=">=perl-5.6.1
 		ssl? ( >=Net-SSLeay-1.19 )"
-RDEPEND=${DEPEND}
 IUSE="ssl"
 RESTRICT="fetch"
 

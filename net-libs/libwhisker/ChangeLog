@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwhisker
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/ChangeLog,v 1.3 2004/02/27 14:14:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/ChangeLog,v 1.4 2004/03/14 11:55:24 mcummings Exp $
+
+  14 Mar 2004; Michael Cummings <mcummings@gentoo.org> libwhisker-1.8.ebuild:
+  Swapped depend and rdepend, closing bug 44513
 
   27 Feb 2004; Michael Cummings <mcummings@gentoo.org> libwhisker-1.8.ebuild:
   Unmasking after 144 days masked
