@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r1.ebuild,v 1.8 2004/11/09 02:17:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r1.ebuild,v 1.9 2004/11/09 16:51:31 vapier Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
@@ -28,7 +28,7 @@ src_unpack() {
 	cd ${S}
 
 	mkdir -p ${WORKDIR}/patch/skip
-	mv ${WORKDIR}/patch/*no_rel_ro* ${WORKDIR}/patch/20_* ${WORKDIR}/patch/*ldsoconf* skip/
+	mv ${WORKDIR}/patch/*no_rel_ro* ${WORKDIR}/patch/20_* ${WORKDIR}/patch/*ldsoconf* ${WORKDIR}/patch/skip/
 
 	epatch ${WORKDIR}/patch
 	epatch ${WORKDIR}/uclibc-patches
