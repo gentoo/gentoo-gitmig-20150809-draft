@@ -2,7 +2,7 @@ MD5 cd7883c531ff082f92c7272d35069545 linuxtv-dvb-1.0.0_pre2-r2.ebuild 3127
 MD5 37141f55f354f5c8543ece2c96b5b8a3 linuxtv-dvb-1.0.0_pre2-r1.ebuild 2881
 MD5 6121b6cc8d6ff48ae23c313ff031d31c ChangeLog 2102
 MD5 6e77f3196f8735be5ba01cafd0c6b1bc metadata.xml 219
-MD5 7d83f10832a8b756441b2fca63d33ab7 linuxtv-dvb-1.0.1.ebuild 3119
+MD5 9e51bee5c633a2736f7037d6f59dee73 linuxtv-dvb-1.0.1.ebuild 3101
 MD5 e1f301cd0191586916bc7c3cd2b02288 files/dvb 179
 MD5 d2fe0d162036705e62a8498c876425e4 files/digest-linuxtv-dvb-1.0.1 69
 MD5 f7b660880f7e9eb4f5fdafaf794dfbe6 files/digest-linuxtv-dvb-1.0.0_pre2-r1 74
