@@ -201,7 +201,10 @@ rm -f $SETUPFILE.tmp
 ##
 LANG=$LOCALE
 export LANG
-exec "$OOHOME/soffice" "$@"
+case `basename $0` in
+	oosetup) exec "$OOHOME/setup"
+	oopadmin) exec "$OOHOME/spadmin"
+	*) exec "$OOHOME/soffice" "$@"
 
 ## Changelog
 # 2003/04/01 halls
