@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.2.0.ebuild,v 1.3 2003/03/25 22:18:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.2.3.ebuild,v 1.1 2003/05/18 09:22:02 jje Exp $
 
-IUSE="ncurses arts alsa python oss mikmod audiofile oggvorbis"
+IUSE="ncurses arts alsa python oss mikmod oggvorbis"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A package for multitrack audio processing"
@@ -16,10 +16,10 @@ KEYWORDS="~x86"
 DEPEND="virtual/glibc
 	virtual/jack
 	media-libs/ladspa-sdk
+	media-libs/audiofile
 	alsa?		( media-libs/alsa-lib )
 	oggvorbis?	( media-libs/libvorbis )
 	arts?		( kde-base/arts )
-	audiofile?	( media-libs/audiofile )
 	mikmod?	( media-libs/libmikmod )
 	python?		( dev-lang/python )
 	ncurses?	( sys-libs/ncurses )"
