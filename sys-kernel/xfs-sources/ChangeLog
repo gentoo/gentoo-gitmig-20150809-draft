@@ -1,7 +1,18 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.26 2003/10/11 19:58:02 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.27 2003/10/27 01:14:24 livewire Exp $
 
+*xfs-sources-2.4.22 (26 October 2003)
+
+  26 October 2003; Bob Johnson <livewire@gentoo.org>
+
+  - bumped to 2.4.22
+  - xfs-2.4.22-all
+  - evms 1.2.1
+  - freeswan 2.03
+  - grsecurity 1.9.12-2.4.22
+  - v4l2-2.422
+  
   11 Oct 2003; <plasmaroo@gentoo.org> xfs-sources-2.4.20-r3.ebuild,
   xfs-sources-2.4.20_pre6.ebuild, files/xfs-sources-2.4.20-gcc33.patch:
   Added GCC 3.3 patches: Bug 30891.
