@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.97 2004/12/23 16:18:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.98 2004/12/23 23:54:34 kloeri Exp $
+
+  24 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> gconf-2.8.1-r1.ebuild:
+  Stable on alpha.
 
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org> gconf-2.8.1-r1.ebuild:
   Stable on hppa.
