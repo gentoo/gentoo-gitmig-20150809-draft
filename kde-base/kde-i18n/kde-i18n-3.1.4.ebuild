@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.1.4.ebuild,v 1.6 2003/10/13 16:03:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.1.4.ebuild,v 1.7 2003/10/13 19:32:32 caleb Exp $
 
 inherit kde
 need-kde ${PV}
@@ -31,8 +31,16 @@ do
 done
 
 
-
 src_unpack() {
+
+	if [ -z ${LINGUAS} ]; then
+		ewarn
+		ewarn "You must define a LINGUAS environment variable that contains a list"
+		ewarn "of the country codes for which languages you would like to install."
+		ewarn
+		die
+	fi
+
 	base_src_unpack unpack
 }
 
