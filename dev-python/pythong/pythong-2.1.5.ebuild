@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.5.ebuild,v 1.1 2004/01/24 21:38:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.5.ebuild,v 1.2 2004/01/25 02:31:43 mr_bones_ Exp $
 
 inherit python distutils
 
@@ -42,8 +42,8 @@ src_install() {
 	python_version
 
 	sed -e  "s#^fullpath = .*#fullpath = '/usr/lib/python${PYVER}/site-packages/'#" \
-		-i pythong.py 
-	
+		-i pythong.py
+
 	insinto /usr/lib/python${PYVER}/site-packages/
 	doins modulepythong.py
 	dodir /usr/lib/python${PYVER}/site-packages/libpythong/
