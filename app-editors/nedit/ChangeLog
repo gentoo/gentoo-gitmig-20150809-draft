@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/nedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.16 2003/10/03 11:57:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.17 2003/10/21 23:32:39 seemant Exp $
+
+  21 Oct 2003; Seemant Kulleen <seemant@gentoo.org> nedit-5.3-r1.ebuild,
+  nedit-5.3-r2.ebuild, nedit-5.4_pre20030213.ebuild:
+  changed SRC_URIs for nedit downloads to mirror://nedit, recently added to
+  thirdpartymirrors file
 
   03 Oct 2003; Aron Griffis <agriffis@gentoo.org> nedit-5.3-r2.ebuild:
   Stable on alpha

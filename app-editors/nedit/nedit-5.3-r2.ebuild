@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3-r2.ebuild,v 1.8 2003/10/03 11:57:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3-r2.ebuild,v 1.9 2003/10/21 23:32:39 seemant Exp $
 
 inherit eutils
 
 MY_PV=${PV/./_}
 DESCRIPTION="multi-purpose text editor for the X Window System"
-SRC_URI="http://www.nedit.org/ftp/v${MY_PV}/${P}-source.tar.gz"
 HOMEPAGE="http://nedit.org/"
+SRC_URI="mirror://nedit/v${MY_PV}/${P}-source.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
