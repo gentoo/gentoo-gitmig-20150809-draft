@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.17 2004/01/07 21:05:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.18 2004/01/09 02:22:50 genone Exp $
+
+*gentoolkit-0.2.0_pre2 (09 Jan 2004)
+
+  09 Jan 2004; Marius Mauch <genone@gentoo.org>
+  gentoolkit-0.2.0_pre2.ebuild: Lots of bugfixes from _pre1, closing bugs
+  37364, 37514, 37525, 37531 and 37572. Minor code cleanups.
 
 *gentoolkit-0.1.38 (07 Jan 2004)
 
