@@ -1,6 +1,16 @@
 # ChangeLog for media-gfx/wings
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/ChangeLog,v 1.7 2004/02/21 12:47:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/ChangeLog,v 1.8 2004/03/23 02:34:48 vapier Exp $
+
+*wings-0.98.21 (22 Mar 2004)
+
+  22 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump from Robust.
+
+*wings-0.98.20c (22 Mar 2004)
+
+  22 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump from Robust.
 
 *wings-0.98.19b (21 Feb 2004)
 
