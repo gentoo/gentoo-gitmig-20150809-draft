@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-1.2.7.ebuild,v 1.2 2003/02/13 11:57:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-1.2.7.ebuild,v 1.3 2003/02/15 07:28:58 gerk Exp $
 
 inherit kde-base
 
@@ -16,6 +16,6 @@ myconf="${myconf} --with-kde-version=3"
 export LIBQTMT="-lqt-mt"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="~x86 ~sparc  ~ppc"
 
 RDEPEND=">=sys-devel/gdb-5.0"
