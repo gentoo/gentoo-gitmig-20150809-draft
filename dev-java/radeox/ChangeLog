@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/radeox
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/radeox/ChangeLog,v 1.7 2004/10/22 10:02:37 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/radeox/ChangeLog,v 1.8 2005/03/29 16:18:19 luckyduck Exp $
+
+  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> radeox-1.0_beta2.ebuild:
+  moved from dev-java/oro to dev-java/jakarta-oro dependency. see #71337.
+  introduced support for the jikes useflag
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> radeox-1.0_beta2.ebuild:
   Keywords ~amd64.
