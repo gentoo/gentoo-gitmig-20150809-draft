@@ -1,6 +1,11 @@
 # ChangeLog for media-video/spca5xx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.6 2005/03/12 16:14:58 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.7 2005/03/30 13:43:46 luckyduck Exp $
+
+*spca5xx-20050328 (30 Mar 2005)
+
+  30 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +spca5xx-20050328.ebuild:
+  new upstream version, fixes #87250
 
   12 Mar 2005; Mike Doty <kingtaco@gentoo.org> spca5xx-20050301.ebuild:
   removed src_compile, as it's provided by linux-mod.eclass
