@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/proxychains-2.1.ebuild,v 1.1 2004/08/31 01:47:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/proxychains-2.1.ebuild,v 1.2 2004/11/06 16:17:30 pyrania Exp $
 
 DESCRIPTION="force any tcp connections to flow through a proxy (or proxy chain)"
 HOMEPAGE="http://proxychains.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/proxychains/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND=""

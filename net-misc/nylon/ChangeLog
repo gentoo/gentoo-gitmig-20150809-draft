@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nylon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nylon/ChangeLog,v 1.7 2004/09/28 01:25:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nylon/ChangeLog,v 1.8 2004/11/06 16:13:09 pyrania Exp $
+
+  06 Nov 2004; <pyrania@gentoo.org> nylon-1.2-r1.ebuild, nylon-1.2.ebuild:
+  Marked stable on x86.
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> files/nylon.init:
   Gentoo Technologies, Inc. -> Gentoo Foundation

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bk2site
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bk2site/ChangeLog,v 1.12 2004/07/01 20:46:31 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bk2site/ChangeLog,v 1.13 2004/11/06 16:12:32 pyrania Exp $
+
+  06 Nov 2004; <pyrania@gentoo.org> bk2site-1.1.9.ebuild:
+  Marked stable on x86.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> bk2site-1.1.9.ebuild:
   change virtual/glibc to virtual/libc, add IUSE

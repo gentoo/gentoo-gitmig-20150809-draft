@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mrouted
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/ChangeLog,v 1.4 2004/10/01 23:23:09 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/ChangeLog,v 1.5 2004/11/06 16:06:39 pyrania Exp $
+
+  06 Nov 2004; <pyrania@gentoo.org> mrouted-3.9_beta3.ebuild:
+  Marked stable on x86.
 
   02 Oct 2004; Markus Nigbur <pyrania@gentoo.org> mrouted-3.9_beta3.ebuild:
   yes, we do have debian in mirrors.
