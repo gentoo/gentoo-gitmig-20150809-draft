@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901.ebuild,v 1.7 2002/10/05 05:39:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901.ebuild,v 1.8 2002/10/24 23:23:44 blizzy Exp $
 
 IUSE="ncurses X libwww png"
 
@@ -159,6 +159,7 @@ pkg_postinst() {
 		texconfig confall >/dev/null 2>&1
 		texconfig font vardir /var/cache/fonts >/dev/null 2>&1
 		texconfig font rw
-		echo "*** use 'texconfig font ro' to allow only root to generate fonts ***"
+		echo
+		einfo "Use 'texconfig font ro' to allow only root to generate fonts."
 	fi
 }

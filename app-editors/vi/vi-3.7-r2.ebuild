@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r2.ebuild,v 1.3 2002/10/20 18:37:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r2.ebuild,v 1.4 2002/10/24 23:23:44 blizzy Exp $
 
 MY_P=ex-020403
 S=${WORKDIR}/${MY_P}
@@ -16,7 +16,6 @@ KEYWORDS="x86 ppc sparc sparc64"
 DEPEND="virtual/glibc sys-libs/ncurses"
 
 src_compile() {
-
 	addpredict /dev/ptys/*
 
 	make DESTDIR=/usr \
@@ -41,14 +40,12 @@ pkg_postinst() {
 
 	if [ "${ROOT}" = "/" ] && [ ! -f /etc/termcap ]
 	then
-		ewarn "*********************************************************"
-		ewarn " vi needs /etc/termcap, so please install the latest    *"
-		ewarn " baselaout (if 1.8.1 is released yet), or get it from:  *"
-		ewarn "                                                        *"
-		ewarn "   http://www.ibiblio.org/gentoo/distfiles/termcap.bz2  *"
-		ewarn "                                                        *"
-		ewarn " and install it in /etc with permissions 0644.          *"
-		ewarn "*********************************************************"
+		ewarn "vi needs /etc/termcap, so please install the latest"
+		ewarn "baselaout (if 1.8.1 is released yet), or get it from:"
+		ewarn ""
+		ewarn "http://www.ibiblio.org/gentoo/distfiles/termcap.bz2"
+		ewarn ""
+		ewarn "and install it in /etc with permissions 0644."
 	fi
 }
 

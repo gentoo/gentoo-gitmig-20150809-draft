@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020904.ebuild,v 1.2 2002/10/05 05:39:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020904.ebuild,v 1.3 2002/10/24 23:23:44 blizzy Exp $
 
 IUSE="nas arts cups opengl alsa"
 
@@ -88,13 +88,13 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "**********************************************************************"
-	einfo "* NOTE: Use /usr/bin/wine to start wine. This is a wrapper-script    *"
-	einfo "*       which will take care of everything else.                     *"
-	einfo "*       Use /usr/bin/regedit-wine to import registry files into the  *"
-	einfo "*       wine registry.                                               *"
-	einfo "*       If you have further questions, enhancements or patches       *"
-	einfo "*       send an email to phoenix@gentoo.org                          *"
-	einfo "**********************************************************************"
+	einfo "Use /usr/bin/wine to start wine. This is a wrapper-script"
+	einfo "which will take care of everything else."
+	einfo ""
+	einfo "Use /usr/bin/regedit-wine to import registry files into the"
+	einfo "wine registry."
+	einfo ""
+	einfo "If you have further questions, enhancements or patches"
+	einfo "send an email to phoenix@gentoo.org"
 }
 

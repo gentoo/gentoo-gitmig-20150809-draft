@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r9.ebuild,v 1.8 2002/10/05 05:39:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r9.ebuild,v 1.9 2002/10/24 23:23:44 blizzy Exp $
 
 IUSE="X ncurse libwww png"
 
@@ -164,6 +164,7 @@ pkg_postinst() {
 		texconfig init >/dev/null 2>&1
 		texconfig confall >/dev/null 2>&1
 		texconfig font vardir /var/cache/fonts >/dev/null 2>&1
-		echo "*** use 'texconfig font rw' to allow all users to generate fonts ***"
+		echo
+		einfo "Use 'texconfig font rw' to allow all users to generate fonts."
 	fi
 }

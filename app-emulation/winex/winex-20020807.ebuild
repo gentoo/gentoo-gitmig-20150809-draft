@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020807.ebuild,v 1.5 2002/10/20 18:37:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020807.ebuild,v 1.6 2002/10/24 23:23:44 blizzy Exp $
 
 IUSE="cups opengl"
 
@@ -101,11 +101,9 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "**********************************************************************"
-	einfo "* NOTE: Use /usr/bin/winex to start winex.                           *"
-	einfo "*       This is a wrapper-script which will take care of everything  *"
-	einfo "*       else. If you have further questions, enhancements or patches *"
-	einfo "*       send an email to phoenix@gentoo.org                          *"
-	einfo "**********************************************************************"
+	einfo "Use /usr/bin/winex to start winex."
+	einfo "This is a wrapper-script which will take care of everything"
+	einfo "else. If you have further questions, enhancements or patches"
+	einfo "send an email to phoenix@gentoo.org"
 }
 

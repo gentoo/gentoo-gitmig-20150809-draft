@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.2-r1.ebuild,v 1.6 2002/10/05 05:39:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.2-r1.ebuild,v 1.7 2002/10/24 23:23:44 blizzy Exp $
 
 IUSE="perl nls gnome build spell jpeg xml2"
 
@@ -102,12 +102,7 @@ src_compile() {
 
 	./autogen.sh
 	
-	echo
-	echo "*************************************************"
-	echo "* Ignore above ERROR as it does not cause build *"
-	echo "* to fail.                                      *"
-	echo "*************************************************"
-	echo
+	einfo "Ignore above ERROR as it does not cause build to fail."
 
 	CFLAGS="${CFLAGS} `gdk-pixbuf-config --cflags`"
 	
