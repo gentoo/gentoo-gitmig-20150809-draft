@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.ebuild,v 1.4 2005/03/15 20:00:17 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.ebuild,v 1.5 2005/03/18 09:43:20 genstef Exp $
 
 inherit nsplugins eutils
 
@@ -39,7 +39,6 @@ src_install() {
 
 	dodir ${INSTALLDIR}
 	DIRS="Reader Resource"
-	use !noplugin && DIRS="${DIRS} Browser"
 	for i in ${DIRS}
 	do
 		if [ -d ${i} ] ; then
@@ -50,12 +49,12 @@ src_install() {
 
 	exeinto ${INSTALLDIR}
 	doexe bin/acroread || die "doexe failed"
-	dodoc README LICREAD.TXT
+	dodoc README LICREAD.TXT Browser/Browser_Plugin_HowTo.txt
 
 	if ! use noplugin ; then
-		dodir /opt/netscape/plugins
-		dosym ${INSTALLDIR}/Browser/intellinux/nppdf.so /opt/netscape/plugins
-		inst_plugin ${INSTALLDIR}/Browser/intellinux/nppdf.so
+		exeinto /opt/netscape/plugins
+		doexe Browser/intellinux/nppdf.so
+		inst_plugin /opt/netscape/plugins/nppdf.so
 	fi
 
 	if use amd64 ; then
@@ -64,8 +63,7 @@ src_install() {
 	fi
 
 	if use amd64 || ! use ldap ; then
-		mv ${D}${INSTALLDIR}/Reader/intellinux/plug_ins/PPKLite.api \
-			${D}${INSTALLDIR}/Reader/intellinux/plug_ins/PPKLite.api.disabled
+		rm ${D}${INSTALLDIR}/Reader/intellinux/plug_ins/PPKLite.api
 	fi
 
 	dodir /usr/bin
@@ -76,13 +74,11 @@ pkg_postinst () {
 	# fix wrong directory permissions (bug #25931)
 	find ${INSTALLDIR} -type d | xargs chmod 755 || die
 
-	einfo "The browser plugin does not work on firefox 1.0.1 (yet)"
-	einfo
-	einfo "Asianfonts are not avaiable seperately for version 7 (yet)"
-	einfo "The work around for the time being is to copy the 'Resource' directory from"
+	einfo "Asianfonts are not available separately for version 7 (yet)"
+	einfo "The workaround for the time being is to copy the 'Resource' directory from"
 	einfo "a windows machine with acrobat reader 7 and asian font support installed."
 	einfo
 	einfo "The Acrobat(TM) Security Plugin will be enabled with USE=ldap, it"
-	einfo "does not work with amd64 because there there is no x86 ldap-emulation"
+	einfo "does not work with amd64 because there is no x86 ldap-emulation"
 	einfo "package available in portage."
 }
