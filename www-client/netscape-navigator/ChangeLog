@@ -1,0 +1,54 @@
+# ChangeLog for net-www/netscape-navigator
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/netscape-navigator/ChangeLog,v 1.5 2005/03/15 21:33:21 seemant Exp $
+
+*netscape-navigator-4.80 (15 Mar 2005)
+*netscape-navigator-4.79-r1 (15 Mar 2005)
+
+  15 Mar 2005; Seemant Kulleen <seemant@gentoo.org> +files/netscape,
+  +metadata.xml, +netscape-navigator-4.79-r1.ebuild,
+  +netscape-navigator-4.80.ebuild:
+  Moved from net-www/netscape-navigator to www-client/netscape-navigator.
+
+  15 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
+  netscape-navigator-4.80.ebuild:
+  Dependency update: net-www/netscape-communicator ->
+  www-client/netscape-communicator.
+
+*netscape-navigator-4.80 (04 Jul 2004)
+
+  04 Jul 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +netscape-navigator-4.80.ebuild:
+  Version bumped. Closing bug #16605
+
+  17 Oct 2003; Jason Wever <weeve@gentoo.org>
+  netscape-navigator-4.79-r1.ebuild:
+  Masked for sparc as it's an x86 binary pacakge.
+
+*netscape-navigator-4.79-r1 (19 Aug 2002)
+
+  01 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Removed libflash plugin and depended on newer netscape-flash package to fix #15751.
+
+  19 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, netscape-navigator-4.79-r1.ebuild :
+  Added -ppc to the keywords.
+
+*netscape-navigator-4.79-r1 (28 Apr 2002)
+
+  28 Apr 2002; Jon Nelson <jnelson@gentoo.org> netscape-navigator-4.79-r1.ebuild
+  Make sure to extract nif files as root
+  
+*netscape-navigator-4.79 (9 Apr 2002)
+
+  9 Apr 2002; Jon Nelson <jnelson@gentoo.org> netscape-navigator-4.79.ebuild
+  Update to 4.79
+
+*netscape-navigator-4.08 (9 Apr 2002)
+
+  9 Apr 2002; Jon Nelson <jnelson@gentoo.org> netscape-navigator-4.08.ebuild
+  Rename navigator to netscape-navigator
+
+*navigator-4.08 (6 Apr 2002)
+
+  6 Apr 2002; Jon Nelson <jnelson@gentoo.org> navigator-4.08.ebuild
+  Initial release of navigator package
