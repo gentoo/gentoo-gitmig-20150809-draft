@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmacpi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.13 2004/10/04 20:45:12 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.14 2004/10/19 08:46:22 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> wmacpi-1.99_p7.ebuild:
+  Stable on amd64.
 
 *wmacpi-1.99_p7 (20 Aug 2004)
 

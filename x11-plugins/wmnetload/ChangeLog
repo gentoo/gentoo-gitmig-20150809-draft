@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnetload
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.19 2004/09/03 03:09:41 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.20 2004/10/19 08:59:35 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> wmnetload-1.3-r1.ebuild:
+  Stable on amd64.
 
   02 Sep 2004; Tom Gall <tgall@gentoo.org> wmnetload-1.3-r1.ebuild:
   stable on ppc64, bug #62266

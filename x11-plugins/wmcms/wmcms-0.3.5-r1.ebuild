@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/wmcms-0.3.5-r1.ebuild,v 1.5 2004/09/13 01:28:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/wmcms-0.3.5-r1.ebuild,v 1.6 2004/10/19 08:53:14 absinthe Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ DEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~amd64 ppc ppc64"
+KEYWORDS="x86 sparc amd64 ppc ppc64"
 
 src_unpack()
 {

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmfsm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/ChangeLog,v 1.7 2004/09/04 00:41:09 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/ChangeLog,v 1.8 2004/10/19 08:55:06 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> wmfsm-0.34-r1.ebuild:
+  Stable on amd64.
 
   04 Sep 2004; Michele Noberasco <s4t4n@gentoo.org> wmfsm-0.34-r1.ebuild:
   Stable for x86.

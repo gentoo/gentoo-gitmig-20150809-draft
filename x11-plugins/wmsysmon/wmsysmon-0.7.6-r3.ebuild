@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/wmsysmon-0.7.6-r3.ebuild,v 1.4 2004/09/03 03:05:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/wmsysmon-0.7.6-r3.ebuild,v 1.5 2004/10/19 09:03:25 absinthe Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnugeneration.com/software/wmsysmon/src/${P}.tar.gz"
 HOMEPAGE="http://www.gnugeneration.com/software/wmsysmon/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~alpha ~amd64 ppc ppc64"
+KEYWORDS="x86 sparc ~alpha amd64 ppc ppc64"
 
 DEPEND="virtual/x11"
 

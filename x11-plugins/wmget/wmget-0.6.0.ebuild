@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmget/wmget-0.6.0.ebuild,v 1.3 2004/09/04 00:43:55 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmget/wmget-0.6.0.ebuild,v 1.4 2004/10/19 08:55:59 absinthe Exp $
 
 IUSE=""
 DESCRIPTION="libcurl-based dockapp for automated-downloads"
@@ -9,7 +9,7 @@ SRC_URI="http://amtrickey.net/download/${P}-src.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ppc"
+KEYWORDS="x86 amd64 ppc"
 
 DEPEND="virtual/x11
 	>=net-misc/curl-7.9.7"

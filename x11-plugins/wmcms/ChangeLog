@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/ChangeLog,v 1.11 2004/09/13 01:28:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/ChangeLog,v 1.12 2004/10/19 08:53:14 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> wmcms-0.3.5-r1.ebuild:
+  Stable on amd64.
 
   12 Sep 2004; Jason Wever <weeve@gentoo.org> wmcms-0.3.5-r1.ebuild:
   Stable on sparc.

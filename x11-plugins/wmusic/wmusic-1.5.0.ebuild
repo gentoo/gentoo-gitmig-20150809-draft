@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmusic/wmusic-1.5.0.ebuild,v 1.3 2004/09/22 22:42:29 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmusic/wmusic-1.5.0.ebuild,v 1.4 2004/10/19 09:04:05 absinthe Exp $
 
 DESCRIPTION="dockapp for xmms"
 HOMEPAGE="http://home.jtan.com/~john/wmusic/"
 SRC_URI="http://home.jtan.com/~john/wmusic/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE=""
 DEPEND="virtual/libc
 	virtual/x11
