@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.22 2003/04/19 19:36:25 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.23 2003/04/22 23:04:35 lostlogic Exp $
 
 *netpbm-10.11.5-r2 (20 Mar 2003)
 
@@ -57,6 +57,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *netpbm-9.12-r4 (16 Oct 2002)
+
+  22 Apr 2003; Brandon Low <lostlogic@gentoo.org> netpbm-9.12-r4.ebuild:
+  Adjust CC and CXX settings for weird environments
 
   19 Apr 2003; Brandon Low <lostlogic@gentoo.org> netpbm-9.12-r4.ebuild:
   Typo in sed
