@@ -1,14 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.67-r2.ebuild,v 1.1 2003/04/13 01:48:37 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.69-r3.ebuild,v 1.1 2003/05/09 03:29:14 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 inherit eutils 
 
 OKV=${PV}
-if [ "${PR}" != "r0" ]; then 
-	PATCH_URI="http://www.kernel.org/pub/linux/kernel/people/akpm/patches/2.5/${PV}/${PVR/r/mm}/${PVR/r/mm}.gz"
-fi
 KV=${PVR/r/mm}
 S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
@@ -19,7 +16,8 @@ ETYPE="sources"
 # The development branch of the linux kernel with Andrew Morton's patch
 
 DESCRIPTION="Full sources for the development linux kernel with Andrew Morton's patchset"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.5/linux-${OKV}.tar.bz2 ${PATCH_URI}"
+SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.5/linux-${OKV}.tar.bz2 ${PATCH_URI}
+http://www.kernel.org/pub/linux/kernel/people/akpm/patches/2.5/${PV}/${PVR/r/mm}/${PVR/r/mm}.bz2"
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
@@ -40,16 +38,10 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
 
-	if [ "${PATCH_URI}" ]; then
-		mv linux-${OKV} linux-${KV}
-		cd ${S}
-		epatch ${DISTDIR}/${PVR/r/mm}.gz
-		sed -e "s:^EXTRAVERSION.*$:EXTRAVERSION = -${PR/r/mm}:" \
-			Makefile > Makefile.new
-		mv Makefile.new Makefile
-	else
-		cd ${S}
-	fi
+	mv linux-${OKV} linux-${KV}
+	cd ${S}
+	bzcat ${DISTDIR}/${PVR/r/mm}.bz2 | patch -p1 || die "mm patch failed"
+	sed -i -e "s:^EXTRAVERSION.*$:EXTRAVERSION = -${PR/r/mm}:" Makefile
 
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
