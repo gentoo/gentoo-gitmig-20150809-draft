@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r1.ebuild,v 1.1 2004/11/24 11:35:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r1.ebuild,v 1.2 2004/11/24 11:43:46 eradicator Exp $
 
 IUSE="oss doc"
 
@@ -18,7 +18,8 @@ SLOT="${KV}"
 #KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
 
 #alsa-driver-1.0.7-r1 only has ioctl32 updates over 1.0.7
-KEYWORDS="~amd64 ~mips ~sparc"
+#KEYWORDS="~amd64 ~mips ~sparc"
+KEYWORDS="-*"
 
 RDEPEND="virtual/modutils
 	 ~media-sound/alsa-headers-${PV}"
