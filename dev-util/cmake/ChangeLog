@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.6 2004/07/03 03:21:13 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.7 2004/08/10 18:23:07 vapier Exp $
+
+*cmake-2.0.3 (10 Aug 2004)
+
+  10 Aug 2004; Mike Frysinger <vapier@gentoo.org> +cmake-2.0.3.ebuild:
+  Version bump.
 
 *cmake-2.0.2 (02 Jul 2004)
 
