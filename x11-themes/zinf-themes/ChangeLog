@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/zinf-themes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zinf-themes/ChangeLog,v 1.4 2004/09/17 17:56:04 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zinf-themes/ChangeLog,v 1.5 2004/10/28 14:42:58 humpback Exp $
+
+  28 Oct 2004; Gustavo Felisberto <humpback@gentoo.org> :
+  Fixed digest error.
 
   17 Sep 2004; Gustavo Felisberto <humpback@gentoo.org>;
   zinf-themes-0.0.1.ebuild:

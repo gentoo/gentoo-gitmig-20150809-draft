@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 20e218e4e473febe1ec0fa949a8695b5 ChangeLog 568
+MD5 c131ab0122a79f57194cec139e570890 ChangeLog 649
 MD5 34105d947dfeceefebbe11b855c5f54b metadata.xml 336
 MD5 b9d943d85abb4ad2b344adb036215584 zinf-themes-0.0.1.ebuild 1843
-MD5 2f399b2a261281b68f91cfa8cfdc7d0c files/digest-zinf-themes-0.0.1 2429
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBSyWLKSoOBZY9iUIRAvSUAKCPBJtHf8d+xokbl/KbgxGvm8L8cgCgjkjl
-B6GFpF+5tj7/BuZ1AaI3BVo=
-=pIUV
------END PGP SIGNATURE-----
+MD5 6c5f592f1dfb944340e65cec610dc714 files/digest-zinf-themes-0.0.1 2429
