@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.23 2004/01/26 17:46:57 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.24 2004/01/31 20:24:24 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -366,6 +366,11 @@ unipatch() {
 	do
 		KPATCH_DIR="${KPATCH_DIR} ${i}"
 	done
+	
+	# this is to ensure the returned list is sorted.
+	# this doesnt appear to happen in findutils in the current stable profile.
+	# inefficient and not very nice, but "thats life"
+	KPATCH_DIR="$(echo ${KPATCH_DIR} | sort -u)"
 
 	#so now lets get rid of the patchno's we want to exclude
 	UNIPATCH_DROP="${UNIPATCH_EXCLUDE} ${UNIPATCH_DROP}"
