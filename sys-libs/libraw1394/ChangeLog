@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.5 2003/06/12 22:16:11 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.6 2003/09/02 09:26:34 seemant Exp $
+
+  02 Sep 2003; Seemant Kulleen <seemant@gentoo.org> libraw1394-0.9.0.ebuild:
+  devfs will create the /dev/raw1394 device when the module is loaded -- thanks
+  to Luca Barbato <lu_zero@gentoo.org> in #gentoo-ppc
 
   12 Jun 2003; <msterret@gentoo.org> libraw1394-0.9.0.ebuild:
   fix Header

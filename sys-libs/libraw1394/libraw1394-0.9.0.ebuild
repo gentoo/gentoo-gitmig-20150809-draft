@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/libraw1394-0.9.0.ebuild,v 1.9 2003/06/22 05:10:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/libraw1394-0.9.0.ebuild,v 1.10 2003/09/02 09:26:34 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libraw1394 provides direct access to the IEEE 1394 bus through the Linux 1394 subsystem's raw1394 user space interface."
@@ -17,10 +17,11 @@ src_compile() {
 	econf || die
 	emake || die
 
-	if [ ! -f /dev/raw1394 ]
-	then
-		emake dev
-	fi
+	# DevFS should create this automatically
+#	if [ ! -f /dev/raw1394 ]
+#	then
+#		emake dev
+#	fi
 }
 
 src_install () {
