@@ -1,11 +1,11 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.11 2002/12/02 13:00:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.12 2002/12/02 13:16:36 aliz Exp $
 
 *w3m-0.3.2.1 (02 Dec 2002)
   
   02 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> :
-  Security update.
+  Version bump
 
 w3m-0.3-r6 (18 Aug 2002)
 
