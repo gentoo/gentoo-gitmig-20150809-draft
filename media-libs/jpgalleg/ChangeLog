@@ -1,4 +1,6 @@
 # ChangeLog for media-libs/jpgalleg
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpgalleg/ChangeLog,v 1.5 2004/09/30 00:47:36 swegener Exp $
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> jpgalleg-1.1-r1.ebuild:
   Add inherit eutils

@@ -1,4 +1,6 @@
 # ChangeLog for media-libs/allegromp3
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegromp3/ChangeLog,v 1.6 2004/09/30 00:50:58 swegener Exp $
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   allegromp3-2.0.2.ebuild:
