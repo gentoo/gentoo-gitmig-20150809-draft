@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/idmapd/files/idmapd.rc,v 1.5 2004/11/08 05:08:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/idmapd/files/idmapd.rc,v 1.6 2004/11/08 05:11:29 vapier Exp $
 
 depend() {
 	need net
@@ -24,11 +24,18 @@ start() {
 }
 
 stop() {
+	local ret
 	ebegin "Stopping idmapd"
 	start-stop-daemon --stop --quiet --exec /sbin/idmapd
-	eend $?
+	ret=$?
+	eend ${ret}
 
-	ebegin "Unmounting RPC pipefs"
-	umount /var/lib/rpc_pipes
-	eend $? "Error unmounting RPC pipefs"
+	if grep -q "rpc_pipefs /var/lib/rpc_pipes" /proc/mounts ; then
+		ebegin "Unmounting RPC pipefs"
+		umount /var/lib/rpc_pipes
+		ret=$?
+		eend ${ret} "Error unmounting RPC pipefs"
+	fi
+
+	return ${ret}
 }
