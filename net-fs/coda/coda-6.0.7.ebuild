@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.7.ebuild,v 1.1 2004/10/23 15:33:57 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.7.ebuild,v 1.2 2004/10/23 18:18:47 griffon26 Exp $
 
 inherit eutils
 
@@ -77,7 +77,7 @@ src_install () {
 	dodoc README* ChangeLog CREDITS LICENSE
 
 	exeinto /etc/init.d
-	doexe ${FILESDIR}/venus
+	doexe ${FILESDIR}/${PV}/venus
 	doexe ${FILESDIR}/coda-update
 	doexe ${FILESDIR}/codasrv
 	doexe ${FILESDIR}/auth2
@@ -230,15 +230,26 @@ pkg_config () {
 
 	einfo "Creating root volume..."
 	# Create root volume
-	createvol_rep ${CODA_ROOT_VOLUME} E0000100 ${CODA_STORAGE_DIR}/${VICE_PARTITION} &> /dev/null <<- EOF
+	createvoloutput=`createvol_rep ${CODA_ROOT_VOLUME} ${FQDN} 2>&1 <<- EOF
 	n
-	EOF
+	EOF`
+	if ! volutil info ${CODA_ROOT_VOLUME} &> /dev/null
+	then
+		eerror "Unable to create root volume, output of createvol_rep follows"
+		echo "$createvoloutput"
+		exit 1
+	fi
 
 	einfo "Creating writable volume..."
 	# Create test volume
-	createvol_rep ${CODA_TEST_VOLUME} E0000100 ${CODA_STORAGE_DIR}/${VICE_PARTITION} &> /dev/null <<- EOF
+	createvoloutput=`createvol_rep ${CODA_TEST_VOLUME} ${FQDN} 2>&1 <<- EOF
 	n
-	EOF
+	EOF`
+	if ! volutil info ${CODA_TEST_VOLUME} &> /dev/null; then
+		eerror "Unable to create writable volume, output of createvol_rep follows"
+		echo "$createvoloutput"
+		exit 1
+	fi
 
 	einfo "Setting up venus (the coda client)..."
 	venus-setup ${FQDN} 20000 > /dev/null

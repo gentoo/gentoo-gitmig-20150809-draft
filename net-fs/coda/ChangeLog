@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/coda
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.12 2004/10/23 15:33:57 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.13 2004/10/23 18:18:47 griffon26 Exp $
+
+  23 Oct 2004; Maurice van der Pot <griffon26@gentoo.org> +files/6.0.7/venus,
+  coda-6.0.7.ebuild:
+  Fixed init script to not start venus in the background as it now daemonizes
+  after startup. Also adapted pkg_config to work with new createvol_rep.
 
 *coda-6.0.7 (23 Oct 2004)
 
