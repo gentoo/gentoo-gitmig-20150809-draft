@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2001a-r2.ebuild,v 1.4 2002/08/17 02:34:05 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2001a-r2.ebuild,v 1.5 2002/08/18 00:22:47 raker Exp $
 
 PN0=imap
 S=${WORKDIR}/${PN0}-${PV}
@@ -20,14 +20,14 @@ src_unpack() {
 	cd ${S}/src/osdep/unix/
 	sed "s:-g -fno-omit-frame-pointer -O6:${CFLAGS}:" Makefile > Makefile.bak
 	mv Makefile.bak Makefile
+	cd ${S}
+	patch -p1 < ${FILESDIR}/gentoo.diff || die
 }
 
 src_compile() {                           
 	if use ssl; then
-		make lnp SPECIALAUTHENTICATORS=ssl \
-			SSLTYPE=unix SSLDIR=/usr/ssl \
-			SSLINCLUDE=/usr/include/openssl \
-			EXTRACFLAGS=-DMAILSUBDIR="mail" || die
+		cd ${S}
+		make lnp SPECIALAUTHENTICATORS=ssl SSLTYPE=unix || die
 	# I was SO tempted to add -DY4KBUGFIX to the EXTRACFLAGS... 
 	# but I didn't.  S0meday s00n.
 
@@ -54,7 +54,7 @@ EOF
 			umask 022
 		done
 	else
-		make lnp || die
+		make lnp EXTRACFLAGS=-DMAILSUBDIR=\"mail\" || die
 	fi
 }
 
