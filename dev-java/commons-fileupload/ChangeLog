@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-fileupload
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.14 2004/10/17 18:35:17 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.15 2004/10/20 05:27:00 absinthe Exp $
+
+  20 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  commons-fileupload-1.0.ebuild:
+  Keywords ~amd64.
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
   commons-fileupload-1.0.ebuild:
