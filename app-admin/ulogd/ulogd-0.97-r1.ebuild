@@ -1,18 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-0.97-r1.ebuild,v 1.9 2002/10/20 18:14:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-0.97-r1.ebuild,v 1.10 2002/11/04 07:49:51 seemant Exp $
+
+IUSE="mysql"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="iptables daemon for ULOG target for userspace iptables filter logging"
-SRC_URI="ftp://ftp.netfilter.org/pub/ulogd/ulogd-0.97.tar.gz"
+SRC_URI="ftp://ftp.netfilter.org/pub/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnumonks.org/gnumonks/projects/project_details?p_id=1"
-
-DEPEND="sys-apps/iptables"
-IUSE="mysql"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
+
+DEPEND="sys-apps/iptables"
 
 src_compile() {
 	local myconf
@@ -29,7 +30,8 @@ src_compile() {
 src_install() {
 	# the Makefile seems to be "broken" - 
 	# it relies on the existance of /usr, /etc ..
-	mkdir -p ${D}/usr/sbin ${D}/etc/init.d
+	dodir /usr/sbin
+	dodir /etc/init.d
 
 	make DESTDIR=${D} install || die "install failed"
 	
