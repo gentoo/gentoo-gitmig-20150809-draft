@@ -3,10 +3,10 @@ Hash: SHA1
 
 MD5 ad11192a436c59acc05fb317397f9114 ChangeLog 11598
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 1273d9fc802f39eef7ab1936150d4012 bash-3.0-r5.ebuild 4989
-MD5 5925b2e0d1168e7e71b40ee073316ade bash-2.05b-r9.ebuild 3516
-MD5 3fc88abbe1b798055c1e79955f1175b0 bash-3.0-r6.ebuild 3915
-MD5 f78294e5418778ec2dab45be3140ec35 bash-2.05b-r11.ebuild 3726
+MD5 6d389a481ddb0ba754db1fa6ad2986cc bash-3.0-r5.ebuild 5001
+MD5 0308d34140806e94e459da940dedf638 bash-2.05b-r9.ebuild 3524
+MD5 7d3a5febfc90c5de4acdf04fdc2ba25c bash-3.0-r6.ebuild 3927
+MD5 fe0daeb3f024d7b48db4a71a02f92168 bash-2.05b-r11.ebuild 3734
 MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836
 MD5 90ba92c981c1d26e45d88ecd23a1fbf5 files/bash-2.05b-multibyte-locale.patch 1897
 MD5 3b905c7c9341c9009bd68f14c047815e files/bash-2.05b-rbash.patch 804
@@ -28,7 +28,7 @@ MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r11 461
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBXiRBHTu7gpaalycRAvToAKDf60/zyBOecPmRi+pEAV0QSdlzpgCfVBzo
-tOgwaDnVwJO977c0cZO09JM=
-=l7go
+iD8DBQFBa0IQHTu7gpaalycRAh/PAJ44d+gYwuAIA0qcRYJvX20njRdHKQCeJOBF
+IQOrqgNO3lQ2x9B+wlieCEA=
+=FKca
 -----END PGP SIGNATURE-----

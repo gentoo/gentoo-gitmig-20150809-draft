@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.25 2004/10/02 03:44:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.26 2004/10/12 02:31:30 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig gcc
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic gnuconfig gcc
 PLEVEL="x002 x003 x004 x005 x006 x007"
 
 DESCRIPTION="The standard GNU Bourne again shell"
-HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
+HOMEPAGE="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html"
 SRC_URI="mirror://gnu/bash/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2
 	${PLEVEL//x/mirror://gnu/bash/bash-${PV}-patches/bash${PV/\.}-}"
