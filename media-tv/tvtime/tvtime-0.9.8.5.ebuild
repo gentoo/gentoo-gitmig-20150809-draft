@@ -25,7 +25,7 @@ src_compile() {
 
 	econf ${myconf} || die
 	emake || die
-	
+
 }
 
 src_install () {

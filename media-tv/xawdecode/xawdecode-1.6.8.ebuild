@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/xawdecode-1.6.8.ebuild,v 1.2 2003/06/18 12:03:11 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/xawdecode-1.6.8.ebuild,v 1.3 2003/09/07 00:06:41 msterret Exp $
 
 inherit eutils
 
@@ -51,10 +51,10 @@ src_compile() {
 }
 
 src_install() {
-	
+
 	sed -i \
 		"s:^SUBDIRS.*:SUBDIRS = alevt src:" Makefile
-	
+
 	insinto /usr/X11R6/lib/X11/fonts/misc
 	doins font/led-fixed.pcf
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nvrec/nvrec-0.1_pre20030316.ebuild,v 1.3 2003/08/21 06:04:08 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvrec/nvrec-0.1_pre20030316.ebuild,v 1.4 2003/09/07 00:06:41 msterret Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${MY_VER}.patch
-	ffS=${WORKDIR}/${ffP}	
+	ffS=${WORKDIR}/${ffP}
 	cd ${ffS}
 	epatch ${PORTDIR}/media-video/ffmpeg/files/${ffP}-Makefiles.diff
 	cd ${WORKDIR}
@@ -60,14 +60,14 @@ src_unpack() {
 src_compile() {
 	cd ${ffS}
 	ffmpeg_src_compile
-	cd ${S}	
+	cd ${S}
 	./bootstrap
 	local myconf
 	myconf="$(use_with avi avifile)"
 	myconf="${myconf} $(use_with quicktime)"
 	myconf="${myconf} $(use_with sdl sdl) $(use_with sdl mad)"
 	econf || die "configure failed"
-	# ugly ugly ugly... but no configure option there 
+	# ugly ugly ugly... but no configure option there
 	use oggvorbis && ( sed < Makefile > Makefile.new -e \
 		's/\(^.*LDADD = .*\)/\1 -lvorbis -lvorbisenc/' && \
 		mv Makefile.new Makefile)
