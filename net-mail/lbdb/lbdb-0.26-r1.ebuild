@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.26-r1.ebuild,v 1.11 2004/06/24 23:23:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.26-r1.ebuild,v 1.12 2004/07/15 01:49:39 agriffis Exp $
 
 IUSE="pda"
 
 MY_P=${P/-/_}
-S=${WORKDIR}/${P}
 DESCRIPTION="Little Brother database"
 SRC_URI="http://www.spinnaker.de/debian/${MY_P}.tar.gz"
 HOMEPAGE="http://www.spinnaker.de/debian/lbdb.html"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/mairix-0.10.ebuild,v 1.6 2004/07/01 22:32:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/mairix-0.10.ebuild,v 1.7 2004/07/15 01:50:50 agriffis Exp $
 
 DESCRIPTION="Indexes and searches Maildir/MH folders"
 HOMEPAGE="http://www.rrbcurnow.freeuk.com/mairix/"
@@ -11,7 +11,6 @@ KEYWORDS="x86 s390"
 IUSE=""
 DEPEND="virtual/libc
 	>=sys-apps/texinfo-4.2"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	emake prefix=/usr CFLAGS="${CFLAGS}" all mairix.info || die
