@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r8.ebuild,v 1.15 2004/07/17 01:28:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r8.ebuild,v 1.16 2004/07/19 05:28:39 vapier Exp $
 
 inherit eutils
 
 MY_P="${P//-/_}"
-
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="TCP Wrappers"
 HOMEPAGE="ftp://ftp.porcupine.org/pub/security/index.html"
 SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz
 	mirror://gentoo/${PF}-patches.tar.bz2"
 
-LICENSE="freedist"
+LICENSE="tcp_wrappers_license"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE="ipv6 static"

@@ -1,11 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ff0780e39a0eca8e49bd6e1fc0f660d3 ChangeLog 5015
-MD5 def919da672543e26cf30ae7df7fae5d tcp-wrappers-7.6-r3.ebuild 1256
-MD5 2d100f6d6d05e361d79c05427aa8a22e tcp-wrappers-7.6-r4.ebuild 1315
-MD5 25e150e571fa2f48f56d14e7f727ef6d tcp-wrappers-7.6-r6.ebuild 1966
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 0b3757d9e07468946cfa0ad1fe99e697 tcp-wrappers-7.6-r8.ebuild 2279
-MD5 9ad8321e86bbd0c9a7bab821564b3fc1 files/digest-tcp-wrappers-7.6-r3 144
-MD5 d8f39ad34a5d8154665fb5bf431a781d files/digest-tcp-wrappers-7.6-r4 145
-MD5 dfac556cbaad927748c6d2345fb44e1b files/digest-tcp-wrappers-7.6-r6 142
+MD5 2d7830db011bc50602d527bb0577903b tcp-wrappers-7.6-r8.ebuild 2287
 MD5 b4d27b4d9d3d841a7199217735e52049 files/digest-tcp-wrappers-7.6-r8 146
 MD5 da6fe337f8e6ddda00b5d52c588ca70a files/hosts.allow.example 585
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA+1whHTu7gpaalycRAqGkAKCEetPrWYl5Okr4b9BboZTXyuTTrACffRmG
+GmKlEv+jOEBXHvwoEQ6p6sk=
+=OX1m
+-----END PGP SIGNATURE-----
