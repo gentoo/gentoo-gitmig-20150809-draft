@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/netwib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.4 2004/01/30 14:47:33 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.5 2004/02/28 05:28:54 mboman Exp $
+
+*netwib-5.9.0 (28 Feb 2004)
+
+  28 Feb 2004; Michael Boman <mboman@gentoo.org> metadata.xml,
+  netwib-5.9.0.ebuild:
+  Bumped to version 5.9.0 (required for bug 42960). Added the software to the
+  netmon herd.
 
   30 Jan 2004; Grant Goodyear <g2boojum@hotmail.com> metadata.xml,
   netwib-5.6.0.ebuild:
