@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 73f5bf27c701284d208719bcc3d6f12d gai-pager-0.2-r1.ebuild 1092
 MD5 b796a75d664b4620bc48ac02820c691a ChangeLog 783
-MD5 4de810beafe6af976494dfe29abd5c60 metadata.xml 405
+MD5 0b02f54e912487912d18ae699b0fec8e metadata.xml 258
 MD5 e674768842f1983b98ad479c2a8c26be files/digest-gai-pager-0.2-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBw0arI1lqEGTUzyQRAqB/AKC921cceQfR/YxzOrNIWBqWAV3xngCfeoY2
+IhPX4v+9kLVMuwPiuQO4Drs=
+=u+fI
+-----END PGP SIGNATURE-----

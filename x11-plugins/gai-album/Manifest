@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 76f72e3c48ef51fa8ea377fada8b6a32 gai-album-0.6.ebuild 1205
 MD5 0861d43702adb4a2d6bc36f2d32c21dc gai-album-0.7.ebuild 1201
 MD5 3b12d51d481363edc4abd20840df3749 ChangeLog 810
-MD5 4de810beafe6af976494dfe29abd5c60 metadata.xml 405
+MD5 0b02f54e912487912d18ae699b0fec8e metadata.xml 258
 MD5 a80f4d39670dede97d4703b6bcb2d89b files/digest-gai-album-0.6 65
 MD5 b785cc68cd01df1f06893ff6003af0d5 files/digest-gai-album-0.7 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBw0aMI1lqEGTUzyQRAqmWAKCvvSGl9OiPoL1bWiwWRJywhy1V+ACeMm6+
+B7sZzIE+QD0I0MMzog389gE=
+=S9F8
+-----END PGP SIGNATURE-----
