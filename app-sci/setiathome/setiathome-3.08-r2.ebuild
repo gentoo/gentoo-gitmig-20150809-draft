@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.08-r2.ebuild,v 1.1 2004/03/01 11:23:40 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.08-r2.ebuild,v 1.2 2004/03/30 06:44:13 phosphan Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -17,7 +17,7 @@ SRC_URI="x86? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.i686-pc-linux-
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="X"
 # Don't know if this is necessary, will have to check the license
 RESTRICT="nomirror"

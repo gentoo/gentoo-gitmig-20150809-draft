@@ -18,7 +18,7 @@ checkconfig() {
 	if [ ! -e "${SETIATHOME_DIR}/user_info.sah" ] ; then
 		eerror "Please setup SETI@home first by running the following commands:"
 		eerror cd "${SETIATHOME_DIR}"
-		eerror ${SETIATHOME_DIR}/setiathome -login ${SETIATHOME_OPTIONS}
+		eerror ${SETIBINDIR}/setiathome -login ${SETIATHOME_OPTIONS}
 		return 1
 	fi
 
