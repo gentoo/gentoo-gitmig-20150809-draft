@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.17 2004/11/10 22:39:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.18 2004/11/13 10:29:19 mrness Exp $
+
+*capi4k-utils-20041006-r2 (13 Nov 2004)
+
+  13 Nov 2004; Alin Nastac <mrness@gentoo.org> +files/20041006/README.gentoo,
+  +files/20041006/capi.init, +files/20041006/capi4k-utils.patch,
+  +files/20041006/config, +files/20041006/rcapid.xinetd,
+  +capi4k-utils-20041006-r2.ebuild:
+  Import from #71022, thanks to Stefan Briesenick <sbriesen@gmx.de>
 
 *capi4k-utils-20041006-r1 (11 Nov 2004)
 
