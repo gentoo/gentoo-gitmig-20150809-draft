@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.4.3.ebuild,v 1.7 2004/06/24 22:27:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.4.3.ebuild,v 1.8 2004/07/14 22:54:25 agriffis Exp $
 
-S=$WORKDIR/${P}
 DESCRIPTION="a client that plugs into your handphone"
 SRC_URI="http://freesoftware.fsf.org/download/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnokii.org"
