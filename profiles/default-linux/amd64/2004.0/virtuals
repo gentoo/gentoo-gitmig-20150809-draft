@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.0/virtuals,v 1.8 2004/07/27 00:06:08 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.0/virtuals,v 1.9 2004/08/17 13:39:29 usata Exp $
 
 # Virtuals specific to the Gentoo/amd64 2004.0 release
 
@@ -20,4 +20,3 @@ virtual/mailx			mail-client/mailx
 
 # Package Remapping
 sys-apps/reiserfs-utils		sys-fs/reiserfsprogs
-virtual/ruby		dev-lang/ruby
