@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libieee1284
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.9 2005/01/16 23:23:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.10 2005/01/27 03:51:45 josejx Exp $
+
+  27 Jan 2005; Joseph Jezak <josejx@gentoo.org> libieee1284-0.2.8.ebuild:
+  Marked ~ppc, as it seems to work now.
 
 *libieee1284-0.2.8 (16 Jan 2005)
 
