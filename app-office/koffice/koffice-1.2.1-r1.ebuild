@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2.1-r1.ebuild,v 1.8 2004/04/16 01:15:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2.1-r1.ebuild,v 1.9 2004/04/20 15:48:26 mholzer Exp $
 inherit kde-base flag-o-matic
 
 filter-flags "-fomit-frame-pointer"
@@ -23,6 +23,6 @@ PATCHES="$FILESDIR/${P}-kword-crashes.diff"
 
 export LIBPYTHON="`python-config --libs`"
 export LIBPYTHON="${LIBPYTHON//-L \/usr\/lib\/python2.2\/config}"
-export WANT_AUTOCONF_2_5=1
-export WANT_AUTOMAKE_1_5=1
+export WANT_AUTOCONF=2.5
+export WANT_AUTOMAKE=1.5
 

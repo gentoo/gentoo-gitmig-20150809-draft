@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.40 2004/04/16 01:15:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.41 2004/04/20 15:48:26 mholzer Exp $
+
+  20 Apr 2004; Martin Holzer <mholzer@gentoo.org> koffice-1.2.1-r1.ebuild:
+  fixing qa issue with autoconf/automake
 
   15 Apr 2004; Caleb Tennis <caleb@gentoo.org> :
   Fix automake and autoconf wantages
