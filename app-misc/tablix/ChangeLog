@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/tablix
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/ChangeLog,v 1.1 2003/07/18 14:31:11 rizzo Exp $
+
+*tablix-0.0.3 (18 Jul 2003)
+
+  18 Jul 2003; Don Seiler <rizzo@gentoo.org>; tablix-0.0.3.ebuild:
+  Initial import. Thanks to Christian Hollander <gentoo@fire-live.de> for
+  submitting the ebuild.
+
