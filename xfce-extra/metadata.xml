@@ -4,5 +4,9 @@
 	<longdescription lang="en">
 		The xfce-extra category contains non-core XFCE applications.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie xfce-extra enthält zusätzliche Software für den
+		XFCE-Desktop.
+	</longdescription>
 </catmetadata>
 
