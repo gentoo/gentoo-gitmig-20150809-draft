@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcpuload
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.14 2004/06/24 23:07:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.15 2004/09/03 02:51:34 tgall Exp $
+
+  02 Sep 2004; Tom Gall <tgall@gentoo.org> wmcpuload-1.0.1.ebuild:
+  stable on ppc64, bug #62252
 
   13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> wmcpuload-1.0.1.ebuild:
   Added ~mips keyword.

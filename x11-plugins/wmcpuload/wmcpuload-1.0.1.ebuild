@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/wmcpuload-1.0.1.ebuild,v 1.10 2004/06/24 23:07:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/wmcpuload-1.0.1.ebuild,v 1.11 2004/09/03 02:51:34 tgall Exp $
 
 IUSE=""
 DESCRIPTION="WMCPULoad is a program to monitor CPU usage."
@@ -11,7 +11,7 @@ DEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64 ppc ~mips"
+KEYWORDS="x86 sparc amd64 ppc ~mips ppc64"
 
 src_install () {
 	einstall || die "make install failed"
