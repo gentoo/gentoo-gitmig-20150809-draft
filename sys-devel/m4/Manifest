@@ -1,3 +1,5 @@
-MD5 a568d9cad10c5d54cae4deabbb03e91a ChangeLog 2038
-MD5 e442ae44c4203c439289521d3e5b0e32 m4-1.4.ebuild 1212
+MD5 7daeecfb65c637a7fd2f4c53a9b812d1 ChangeLog 2268
+MD5 a5f6d6cf8a4d5a2d4354b6db058b13c7 m4-1.4-r1.ebuild 1281
+MD5 3a1ad00a5190235c14de437e7ef73f65 m4-1.4.ebuild 1184
+MD5 fb5019b10f93accd0972fa7676ed9ac0 files/digest-m4-1.4-r1 118
 MD5 bb66a9e8ca60b752e95b5234d7f7b0b0 files/digest-m4-1.4 118
