@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.28 2004/12/15 21:29:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.29 2004/12/17 20:24:31 corsair Exp $
+
+  17 Dec 2004; Markus Rothe <corsair@gentoo.org> libebml-0.7.2.ebuild:
+  Stable on ppc64
 
   15 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> libebml-0.7.2.ebuild:
   Add back ~alpha keyword.
