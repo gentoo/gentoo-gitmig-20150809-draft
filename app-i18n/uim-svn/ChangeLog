@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim-svn
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.4 2004/04/05 14:36:15 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.5 2004/04/07 11:52:39 hattya Exp $
+
+  07 Apr 2004; Akinori Hattori <hattya@gentoo.org> uim-svn-20040124.ebuild:
+  inherit flag-o-matic.
 
   05 Apr 2004; Akinori Hattori <hattya@gentoo.org> uim-svn-20040124.ebuild,
   files/uim-svn-gtk-query-immodules-gentoo.diff:
