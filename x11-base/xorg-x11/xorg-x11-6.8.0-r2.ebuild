@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.22 2004/10/19 07:40:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.23 2004/10/19 07:53:08 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -656,6 +656,7 @@ src_unpack() {
 	if use doc
 	then
 		# These are not included anymore as they are obsolete
+		local x
 		for x in ${S}/programs/Xserver/hw/xfree86/{XF98Conf.cpp,XF98Config}
 		do
 			if [ -f ${x} ]
@@ -723,6 +724,7 @@ backward_compat_setup() {
 compose_files_setup() {
 	# Hack from Mandrake (update ours that just created Compose files for
 	# all locales)
+	local x
 	for x in $(find ${D}/usr/$(get_libdir)/X11/locale/ -mindepth 1 -type d)
 	do
 		# make empty Compose files for some locales
@@ -745,6 +747,7 @@ compose_files_setup() {
 
 	# Another hack from Mandrake -- to fix dead + space for the us
 	# international keyboard
+	local i
 	for i in ${D}/usr/$(get_libdir)/X11/locale/*/Compose
 	do
 		sed -i \
@@ -766,6 +769,7 @@ etc_files_install() {
 	# new display manager script
 	doexe ${FILES_DIR}/startDM.sh
 	exeinto /etc/X11/Sessions
+	local x
 	for x in ${FILES_DIR}/Sessions/*
 	do
 		[ -f ${x} ] && doexe ${x}
@@ -814,7 +818,7 @@ setup_dynamic_libgl() {
 				mv -f ${x} ${D}/usr/$(get_libdir)/opengl/${PN}/$(get_libdir)
 			fi
 		done
-		for x in ${D}/usr/$(get_libdir)/modules/extensions/libglx*
+			for x in ${D}/usr/$(get_libdir)/modules/extensions/libglx*
 		do
 			if [ -f ${x} -o -L ${x} ]
 			then
@@ -856,6 +860,7 @@ strip_execs() {
 		einfo "Stripping binaries and libraries..."
 		# This bit I got from Redhat ... strip binaries and drivers ..
 		# NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
+		local x
 		for x in $(find ${D}/ -type f -perm +0111 -exec file {} \; | \
 		           grep -v ' shared object,' | \
 		           sed -n -e 's/^\(.*\):[  ]*ELF.*, not stripped/\1/p')
@@ -911,6 +916,7 @@ update_config_files() {
 		#	/etc/fonts/fonts.conf
 		#	/etc/fonts/local.conf
 
+		local FILE
 		for FILE in ${FILES}
 		do
 			if [ -e ${FILE} ]
@@ -938,6 +944,7 @@ update_config_files() {
 
 fix_opengl_symlinks() {
 	# Remove invalid symlinks
+	local LINK
 	for LINK in $(find ${D}/usr/$(get_libdir) \
 		-name libGL.* -type l)
 	do
@@ -986,6 +993,7 @@ src_install() {
 	backward_compat_setup
 
 	# Fix permissions on locale/common/*.so
+	local x
 	for x in ${D}/usr/$(get_libdir)/X11/locale/$(get_libdir)/common/*.so*
 	do
 		if [ -f ${x} ]
@@ -1257,6 +1265,7 @@ font_setup() {
 	if [ -x ${ROOT}/usr/X11R6/bin/ttmkfdir ]
 	then
 		ebegin "Creating fonts.scale files..."
+			local x
 			for x in $(find ${ROOT}/usr/share/fonts/* -type d -maxdepth 1)
 			do
 				[ -z "$(ls ${x}/)" ] && continue
@@ -1398,12 +1407,12 @@ switch_opengl_implem() {
 
 pkg_postinst() {
 
+	local x=""
+
 	env-update
 
 	if [ "${ROOT}" = "/" ]
 	then
-		local x=""
-
 		umask 022
 
 		font_setup
