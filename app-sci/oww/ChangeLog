@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/oww
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/oww/ChangeLog,v 1.1 2003/12/17 07:10:49 phosphan Exp $
+
+*oww-0.71.1 (17 Dec 2003)
+
+  17 Dec 2003; Patrick Kursawe <phosphan@gentoo.org> metadata.xml,
+  oww-0.71.1.ebuild:
+  Initial import based on bug #19974 by Roger Pau Monné <royger@bdftech.com>
+
