@@ -1,8 +1,12 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.4 2002/03/03 19:37:28 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.5 2002/07/16 03:15:50 owen Exp $
 
 *zsh-4.0.4-r2 (3 Mar 2002)
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added KEYWORDS.
 
   3 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> zsh-4.0.4-r2.ebuild zsh-4.0.4-r1.ebuild files/digest-zsh-4.0.4-r1 files/digest-zsh-4.0.4-r2
 
