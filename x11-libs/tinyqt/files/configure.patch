@@ -1,0 +1,65 @@
+--- configure_orig	2002-02-22 00:23:34.000000000 +0100
++++ configure	2002-02-22 00:24:28.000000000 +0100
+@@ -994,44 +994,6 @@
+ #unix
+ unixtests=$relpath/config.tests/unix
+ 
+-# Auto-detect SQL-modules support
+-if echo $MODULES | grep sql >/dev/null
+-then
+-    SQL_AVAIL=`find $relpath/plugins/src/sqldrivers/* -prune -type d -print | awk -F/ '{print $NF}'`
+-    SQL_AVAIL=`echo $SQL_AVAIL`
+-    MYSQL_REQ="-lmysqlclient mysql.h"
+-    OCI_REQ="-lclntsh -lwtc8 oci.h"
+-    PSQL_REQ="-lpq postgres.h libpq/libpq-fs.h catalog/pg_type.h libpq-fe.h"
+-    ODBC_REQ="-lodbc sql.h sqlext.h"
+-    TDS_REQ="-lsybdb sybfront.h sybdb.h"
+-    for _SQLDR in $SQL_AVAIL
+-    do
+-	case $_SQLDR in
+-	mysql)
+-	    $unixtests/checkavail "MySQL" $VERBOSE $MYSQL_REQ $L_FLAGS $I_FLAGS && SQL_AUTODETECTED="$SQL_AUTODETECTED mysql"
+-	;;
+-	psql)
+-	    $unixtests/checkavail "PostgreSQL" $VERBOSE $PSQL_REQ $L_FLAGS $I_FLAGS && SQL_AUTODETECTED="$SQL_AUTODETECTED psql"
+-	    ;;
+-	odbc)
+-	    $unixtests/checkavail "ODBC" $VERBOSE $ODBC_REQ $L_FLAGS $I_FLAGS && SQL_AUTODETECTED="$SQL_AUTODETECTED odbc"
+-	    ;;
+-	oci)
+-	    $unixtests/checkavail "OCI" $VERBOSE $OCI_REQ $L_FLAGS $I_FLAGS && SQL_AUTODETECTED="$SQL_AUTODETECTED oci"
+-	    ;;
+-	tds)
+-	    $unixtests/checkavail "TDS" $VERBOSE $TDS_REQ $L_FLAGS $I_FLAGS && SQL_AUTODETECTED="$SQL_AUTODETECTED tds"
+-	    ;;
+-	*)
+-	    if [ "x$VERBOSE" = "xyes" ]
+-	    then
+-		echo "unknown SQL driver: $_SQLDR"
+-	    fi
+-	    ;;
+-	esac
+-    done
+-fi
+-
+ #x11
+ if [ "$X11_PLATFORM" = "yes" ]
+ then
+@@ -1396,7 +1358,7 @@
+ 	echo "Type 'no' to decline this license offer."
+ 	echo
+ 	echo "Do you accept the terms of $QWS_EITHER license?"
+-	read acceptance
++	acceptance=yes
+ 	if [ "$acceptance" = yes ]
+ 	then
+ 	    break
+@@ -1544,6 +1506,8 @@
+     QMAKE_VARS="$QMAKE_VARS  \"QMAKE_CXXFLAGS+=-fpermissive\""
+ fi
+ 
++exit 0
++
+ # STL must be way down here after qmake has been made, because the test itself uses qmake
+ 
+ if [ $PLATFORM = "hpux-acc" -a $STL != no ]

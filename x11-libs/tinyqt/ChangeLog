@@ -1,0 +1,11 @@
+# ChangeLog for x11-libs/tinyqt
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tinyqt/ChangeLog,v 1.1 2002/02/21 23:41:08 gbevin Exp $
+
+*tinyqt-3.0.1 (22 February 2002)
+
+  22 Feb 2002; G.Bevin <gbevin@gentoo.org> :
+  
+  Stripped down Qt 3 to support everything that's needed to do commanline
+  development without any GUI classes. Thus providing a nice C++ framework
+  for console applications without having to resort to STL or other bloatware.

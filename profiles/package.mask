@@ -1,10 +1,6 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
-#gbevin@gentoo.org, 20 Feb 2002
-#unstable version only for testing purposes
->=dev-libs/glib-1.3.14
-
 # (blocke, 17-Feb-2002) pam 0.75-r2 masked out... needs more work and testing
 >=sys-libs/pam-0.75-r2
 
@@ -388,3 +384,13 @@ dev-lang/tcl-tk
 
 #simply won't compile for us
 =dev-python/PyQt-3.0
+
+#gbevin@gentoo.org, 22 Feb 2002
+#unstable version only for testing purposes
+#trying out to distribute qt without any gui components
+#for console applications development
+x11-libs/tinyqt
+
+#gbevin@gentoo.org, 20 Feb 2002
+#unstable version only for testing purposes
+>=dev-libs/glib-1.3.14
