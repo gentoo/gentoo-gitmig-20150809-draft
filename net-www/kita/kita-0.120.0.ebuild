@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.120.0.ebuild,v 1.2 2004/05/07 17:54:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.120.0.ebuild,v 1.3 2004/05/16 10:12:11 usata Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge.jp/kita/9291/${P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND="virtual/glibc
 	>=x11-libs/qt-3.1
