@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-config
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ChangeLog,v 1.21 2004/11/04 16:13:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ChangeLog,v 1.22 2004/11/07 17:55:37 fmccor Exp $
+
+  07 Nov 2004; Ferris McCormick <fmccor@gentoo.org> ruby-config-0.3.1.ebuild:
+  Mark stable for sparc.
 
   05 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-config-0.3.1.ebuild:
   Stable on x86, alpha and ppc.
