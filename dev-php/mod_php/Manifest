@@ -7,7 +7,7 @@ MD5 7515e9b1dc298a0fb1c12d35a58c265d files/mod_php-4.3.4-amd64hack.diff 1028
 MD5 cceddd5c262e0ffef31d45b7da269851 files/mod_php.conf 148
 MD5 0c2e81f561985f3749c37cf525de7583 files/70_mod_php.conf 1364
 MD5 11f305b98b753ee023da8503a360762a files/digest-mod_php-5.0.0-r1 63
-MD5 04d61d327938150326eeb2cb17cf4b58 files/php-5.0.0-httpauthfix.patch 919
+MD5 cd07c33356df77acd61cd300f2869d19 files/php-5.0.0-httpauthfix.patch 518
 MD5 390a659097a43447e44ab5bdd59378b5 files/digest-mod_php-4.3.8 282
 MD5 11f305b98b753ee023da8503a360762a files/digest-mod_php-5.0.0 63
 MD5 3bf664b414787f8f3c1dcbda5750aef4 files/mod_php-4.3.5-apache1security.diff 425
