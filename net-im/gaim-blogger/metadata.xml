@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>net-im</herd>
+<maintainer>
+  <email>rizzo@gentoo.org</email>
+  <name>Don Seiler</name>
+  <description>You hang out in #gaim, you learn about stuff.</description>
+</maintainer>
+<longdescription>Gaim-blogger is a protocol plugin for Gaim which makes use of Gaim's IM interface to post, edit, view and track blogs.  This plugin implements the xml-rpc blogger api 1.0, published by Blogger. Gaim-blogger is not endorsed by or affiliated with Blogger or its parent company Google.</longdescription>
+</pkgmetadata>
