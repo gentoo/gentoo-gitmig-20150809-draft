@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.34 2004/08/22 22:38:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.35 2004/10/14 14:32:48 usata Exp $
+
+  14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> stunnel-3.26.ebuild:
+  Added to ~ppc-macos.
 
   22 Aug 2004; Jason Wever <weeve@gentoo.org> stunnel-4.05.ebuild:
   Stable on sparc.
