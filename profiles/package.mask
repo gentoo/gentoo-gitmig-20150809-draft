@@ -42,6 +42,7 @@ app-editors/gtk-xemacs
 # untested
 >=x11-base/xfree-4.1.0-r1
 >=sys-devel/libtool-1.4
+>=net-fs/netatalk-1.5
 
 #OK, I assume that the XFS in 2.4.4-r5 is hosed; alkaline?
 
