@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3397 2004/12/16 16:19:40 ribosome Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3398 2004/12/17 18:07:47 swegener Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -154,7 +154,6 @@ www-client/prozilla
 
 # <swegener@gentoo.org> (22 Nov 2004)
 # Masked because of dependency on >=dev-db/mysql-4.1 which is also p.mask'ed
->=dev-db/mysql-administrator-1.0.14
 >=dev-db/mysql-query-browser-1.1.1
 
 # <langthang@gentoo.org> (18 Nov 2004)
