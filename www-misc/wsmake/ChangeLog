@@ -1,0 +1,14 @@
+# ChangeLog for net-www/wsmake
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/wsmake/ChangeLog,v 1.1 2004/08/15 18:18:25 stuart Exp $
+
+*wsmake-0.6.4 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +files/wsmake-0.6.4-bv.diff,
+  +wsmake-0.6.4.ebuild:
+  Moved from net-www/wsmake to www-misc/wsmake.
+
+*wsmake-0.6.4 (09 Feb 2003)
+
+  09 Feb 2003; Seth Chandler <sethbc@gentoo.org>: wsmake-0.6.4.ebuild
+  added wsmake to portage thanks to Benedict.Verhegghe@rug.ac.be
