@@ -35,7 +35,7 @@ command_directory = /usr/sbin
 # default value is $program_directory. This directory must be owned
 # by root.
 #
-daemon_directory = /usr/libexec/postfix
+daemon_directory = /usr/lib/postfix
 
 # QUEUE AND PROCESS OWNERSHIP
 #
