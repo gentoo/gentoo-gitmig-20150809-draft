@@ -56,3 +56,4 @@ move app-admin/gentoo-stats app-portage/gentoo-stats
 move app-admin/mirrorselect app-portage/mirrorselect
 move app-admin/portagemaster app-portage/portagemaster
 move sys-apps/epm app-portage/epm
+move app-admin/rmerge2 app-portage/rmerge2
