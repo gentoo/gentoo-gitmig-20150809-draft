@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.04.ebuild,v 1.5 2004/06/24 22:41:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.04.ebuild,v 1.6 2004/07/15 00:57:23 agriffis Exp $
 
 IUSE="nas esd motif opengl truetype gtk pam"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Just another screensaver application for X"
 SRC_URI="http://cvs.gentoo.org/~mholzer/${P}.tar.bz2
 		mirror://gentoo/${P}.tar.bz2"

@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gpasman/gpasman-1.3.0.ebuild,v 1.15 2004/06/24 22:20:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gpasman/gpasman-1.3.0.ebuild,v 1.16 2004/07/15 00:53:09 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Gpasman: GTK Password manager"
 # This is _NOT_ the offical download site, but the official site
 # seems to not work (ever).
