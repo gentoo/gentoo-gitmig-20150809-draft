@@ -2,8 +2,8 @@
 Encoding=UTF-8
 Name=Fluxbox
 Comment=This session logs you into Fluxbox
-Exec=fluxbox
-TryExec=fluxbox
+Exec=startfluxbox
+TryExec=startfluxbox
 # no icon yet, only the top three are currently used
 Icon=
 Type=Application
