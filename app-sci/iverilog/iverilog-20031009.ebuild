@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/iverilog-20031009.ebuild,v 1.2 2004/04/19 10:25:42 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/iverilog-20031009.ebuild,v 1.3 2004/04/25 19:12:40 squinky86 Exp $
 
 S="${WORKDIR}/verilog-${PV}"
 
@@ -17,8 +17,8 @@ IUSE=""
 
 src_compile() {
 
-	econf || "./configure failed"
-	emake -j1 || "emake failed"
+	econf || die "./configure failed"
+	emake -j1 || die "emake failed"
 
 }
 

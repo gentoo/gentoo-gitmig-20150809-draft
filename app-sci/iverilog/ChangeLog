@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/iverilog
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/ChangeLog,v 1.9 2004/04/19 10:25:42 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/ChangeLog,v 1.10 2004/04/25 19:12:40 squinky86 Exp $
+
+  25 Apr 2004; Jon Hood <squinky86@gentoo.org> iverilog-0.6.1.ebuild,
+  iverilog-0.7.0.ebuild, iverilog-20031009.ebuild:
+  add "die" to failure messages in econf and emake lines
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> iverilog-20031009.ebuild:
   Adding IUSE
