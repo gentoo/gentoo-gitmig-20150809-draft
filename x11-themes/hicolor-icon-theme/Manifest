@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6d19d2c8ecefb4ab467adc3da60e98c6 ChangeLog 1230
-MD5 bfb98f3e33e571291517aebfaa417f8d hicolor-icon-theme-0.4.ebuild 700
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 cedb6bf60c8432814dc019996a413661 hicolor-icon-theme-0.4.ebuild 699
 MD5 5ea70b917f381970560b6ee69bf396c9 hicolor-icon-theme-0.5.ebuild 638
+MD5 373d69258aa68a70d181bc6eaba26a56 ChangeLog 1339
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 9d8f1dff4a9f5bea1b71884da643a0f4 files/digest-hicolor-icon-theme-0.4 73
 MD5 6599810c94e5a4151ccb152425adf81b files/digest-hicolor-icon-theme-0.5 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAvjykHTu7gpaalycRAg0eAJ9fxGa3kW8ad1LNF0Zf1ISTnkyWpwCg4RCl
-WYK8dsRvjErtZQSdtbew5JY=
-=1P5P
------END PGP SIGNATURE-----
