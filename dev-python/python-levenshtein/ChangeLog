@@ -1,0 +1,7 @@
+# ChangeLog for dev-python/python-levenshtein
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-levenshtein/ChangeLog,v 1.1 2004/05/25 11:13:23 carlo Exp $
+
+  25 May 2004; Carsten Lohrke <carlo@gentoo.org> files/genextdoc.py:
+  Initial import.
+
