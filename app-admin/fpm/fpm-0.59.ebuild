@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fpm/fpm-0.59.ebuild,v 1.3 2003/12/30 00:57:21 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fpm/fpm-0.59.ebuild,v 1.4 2004/03/06 13:45:13 zul Exp $
 
 DESCRIPTION="A password manager for gnome."
 SRC_URI="mirror://sourceforge/fpm/${P}.tar.gz"

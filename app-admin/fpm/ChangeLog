@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fpm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fpm/ChangeLog,v 1.4 2003/12/30 01:05:57 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fpm/ChangeLog,v 1.5 2004/03/06 13:45:13 zul Exp $
+
+  06 Mar 2004; Chuck Short <zul@gentoo.org> fpm-0.60.ebuild:
+  Marked stable for x86.
 
 *fpm-0.60 (29 Dec 2003)
 
