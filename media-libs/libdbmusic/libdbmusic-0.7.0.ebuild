@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdbmusic/libdbmusic-0.7.0.ebuild,v 1.5 2004/06/29 00:14:29 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdbmusic/libdbmusic-0.7.0.ebuild,v 1.6 2004/07/13 05:49:50 eradicator Exp $
 
 inherit kde
 
@@ -11,11 +11,12 @@ SRC_URI="mirror://sourceforge/kmusicdb/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64 ~sparc"
 IUSE=""
 
 DEPEND=">=dev-db/postgresql-7.2.0
 	>=dev-cpp/libpqpp-4.0-r1"
+
 need-kde 3
 
 myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-pqdir=/usr/include/ --with-qtdir=/usr/qt/3/ --with-kdedir=${KDEDIR}"
