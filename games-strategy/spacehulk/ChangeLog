@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/spacehulk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/spacehulk/ChangeLog,v 1.4 2004/06/24 23:29:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/spacehulk/ChangeLog,v 1.5 2004/11/08 02:01:20 josejx Exp $
+
+  08 Nov 2004; Joseph Jezak <josejx@gentoo.org> spacehulk-1.4.5.ebuild:
+  Added ~ppc.
 
 *spacehulk-1.4.99 (08 Nov 2003)
 
