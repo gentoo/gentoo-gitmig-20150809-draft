@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-1.7.1.ebuild,v 1.7 2004/07/24 01:55:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-1.8.7.ebuild,v 1.1 2004/07/30 00:14:08 swegener Exp $
 
 inherit eutils
 
@@ -22,15 +22,16 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/cwirc-1.7.1-gentoo.patch
+	sed -i -e 's:$(STRIP):echo:' Makefile
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake CFLAGS="${CFLAGS} -DLINUX" || die "emake failed"
 }
 
 src_install() {
 	einstall || die "einstall failed"
 
-	dodoc README README_IAMBIC RELEASE_NOTES Changelog
+	dodoc README RELEASE_NOTES Changelog
 	cp -R schematics/ ${D}/usr/share/doc/${PF}/schematics/
 }
