@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-0.8.0.ebuild,v 1.5 2002/11/02 10:55:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-0.8.0.ebuild,v 1.6 2002/11/30 20:37:20 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Genealogical Research and Analysis Management Programming System"
 SRC_URI="mirror://sourceforge/gramps/${P}.tar.gz"
 HOMEPAGE="http://gramps.sourceforge.net/"
@@ -25,17 +24,16 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}
 	export WANT_AUTOMAKE_1_6=1
 	aclocal || die
 	automake --gnu || die
 	autoconf || die
-	econf || die
+	econf
 	emake || die
 }
 
 src_install() {
-	einstall || die
+	einstall
 	dodoc COPYING NEWS README TODO
 }
 

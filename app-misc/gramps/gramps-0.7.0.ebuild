@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-0.7.0.ebuild,v 1.8 2002/10/20 18:40:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-0.7.0.ebuild,v 1.9 2002/11/30 20:36:51 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Genealogical Research and Analysis Management Programming System"
 SRC_URI="mirror://sourceforge/gramps/${P}.tar.gz"
 HOMEPAGE="http://gramps.sourceforge.net/"
@@ -19,20 +18,19 @@ DEPEND=">=dev-lang/python-2.0
 	dev-python/ReportLab"
 
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${A}
 	cd ${S}/src
 
 	#Apply patch to allow compiling with python-2.2
 	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
-
 }
 
 src_compile() {
-	econf || die
+	econf
 	emake || die
 }
 
 src_install() {
-	einstall || die
+	einstall
 	dodoc COPYING NEWS README TODO
 }
