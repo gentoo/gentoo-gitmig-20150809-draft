@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.75 2004/10/19 00:38:24 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.76 2004/10/23 05:56:57 gregkh Exp $
+
+*udev-042 (22 Oct 2004)
+
+  22 Oct 2004; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-042.ebuild:
+  042 release
+  wait_for_sysfs updates (needed for -mm or latest -bk kernels)
+  inotify fix
+  Other bug fixes.
 
 *udev-040 (18 Oct 2004)
 
