@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.929 2005/02/05 00:29:07 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.930 2005/02/05 01:49:23 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -459,6 +459,7 @@ net-dns/bind:dlz - enables dynamic loaded zones, 3rd party extension
 net-dns/bind:bind-mysql - enables mysql support for bind
 net-dns/pdnsd:isdn - enable isdn features
 net-firewall/iptables:extensions - Enable support for 3rd patch-o-matic extensions
+net-fs/nfs-utils:nfsv4 - Enable support for NFSv4
 net-fs/samba:libclamav - Enable clamav as virus scanner
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/samba:quotas - Add support for user quotas
