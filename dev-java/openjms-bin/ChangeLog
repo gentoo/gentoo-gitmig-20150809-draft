@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/openjms-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms-bin/ChangeLog,v 1.16 2005/01/26 20:44:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms-bin/ChangeLog,v 1.17 2005/03/23 13:52:25 gustavoz Exp $
+
+  23 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  openjms-bin-0.7.6.ebuild:
+  Keyworded ~sparc wrt #84992
 
   26 Jan 2005; Markus Rothe <corsair@gentoo.org> openjms-bin-0.7.6.ebuild:
   Stable on ppc64
