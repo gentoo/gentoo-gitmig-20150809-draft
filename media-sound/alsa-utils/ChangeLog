@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.41 2004/02/07 05:00:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.42 2004/02/09 12:01:37 eradicator Exp $
+
+  09 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
+  Updated alsasound init script to not load sequencer modules that are compiled
+  into the kernel. Fixes bug #37786.
 
   06 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
   init script now checks /proc/modules to see if module is loaded before
