@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-albert/cl-albert-0.4.6.ebuild,v 1.4 2004/05/08 23:26:22 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-albert/cl-albert-0.4.10.ebuild,v 1.1 2004/05/08 23:26:22 mkennedy Exp $
 
 inherit common-lisp
 
-DESCRIPTION="Albert is a doc-generator for Common Lisp, comparable to Javadoc and Doxygen. Currently it generates DocBook documentation. It reads an ASDF system definition and documents the system."
+DESCRIPTION="Albert is a documentation-generator for Common Lisp, comparable to Javadoc and Doxygen. Currently it generates DocBook documentation. It reads an ASDF system definition and documents the system."
 HOMEPAGE="http://albert.sourceforge.net/"
 SRC_URI="mirror://sourceforge/albert/${P/cl-/}.tar.gz"
 LICENSE="GPL-2"
@@ -42,12 +42,4 @@ src_install() {
 	doins data/icons/*
 	insinto /usr/share/albert/apis
 	doins data/apis
-}
-
-pkg_preinst() {
-	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
-}
-
-pkg_postrm() {
-	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }
