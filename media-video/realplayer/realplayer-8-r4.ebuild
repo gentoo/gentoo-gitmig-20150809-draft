@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r4.ebuild,v 1.3 2003/01/12 14:49:57 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r4.ebuild,v 1.4 2003/01/13 04:11:19 seemant Exp $
+
+inherit nsplugins
 
 DESCRIPTION="RealPlayer 8 is a streaming media player"
 HOMEPAGE="http://forms.real.com/real/player/unix/unix.html"
@@ -25,8 +27,7 @@ then
 fi
 
 
-SRC_URI="${MY_P}
-	x86? http://docs.real.com/docs/playerpatch/unix/rv9_libc6_i386_cs2.tgz"
+SRC_URI="x86? http://docs.real.com/docs/playerpatch/unix/rv9_libc6_i386_cs2.tgz"
 
 LICENSE="realplayer8"
 SLOT="0"
