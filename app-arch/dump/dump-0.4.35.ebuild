@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.35.ebuild,v 1.1 2004/04/27 19:10:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.35.ebuild,v 1.2 2004/06/01 22:38:03 agriffis Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	if [ `use readline` ] ; then
+	if use readline ; then
 		for i in configure.in configure
 		do
 			sed -i "s:-ltermcap:-lncurses:g" \
