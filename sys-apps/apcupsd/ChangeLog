@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/apcupsd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.25 2004/01/03 00:54:46 tantive Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.26 2004/01/14 16:05:42 tantive Exp $
+
+  14 Jan 2004; Michael Imhof <tantive@gentoo.org> apcupsd-3.10.5-r2.ebuild,
+  apcupsd-3.10.5-r3.ebuild, apcupsd-3.10.8.ebuild:
+  Marked stable and removed old ebuilds.
 
 *apcupsd-3.10.8 (03 Jan 2004)
 
