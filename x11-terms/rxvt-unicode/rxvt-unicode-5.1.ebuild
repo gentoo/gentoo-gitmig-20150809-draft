@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-5.1.ebuild,v 1.1 2005/02/18 19:25:13 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-5.1.ebuild,v 1.2 2005/02/27 00:08:45 latexer Exp $
 
 inherit 64-bit eutils
 
@@ -25,6 +25,9 @@ src_unpack() {
 	sed -i -e \
 		"s~@TIC@ \(etc/rxvt\)~@TIC@ -o ${D}/${tdir} \1~" \
 		doc/Makefile.in
+	sed -i -e \
+		"s:-g -O3:${CFLAGS}" \
+		configure
 }
 
 src_compile() {
@@ -59,7 +62,7 @@ src_install() {
 
 	dodoc README.unicode Changes
 	cd ${S}/doc
-	dodoc README* changes.txt BUGS TODO etc/*
+	dodoc README* changes.txt etc/*
 }
 
 pkg_postinst() {

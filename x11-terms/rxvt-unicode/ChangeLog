@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.43 2005/02/20 23:31:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.44 2005/02/27 00:08:45 latexer Exp $
+
+  26 Feb 2005; Peter Johanson <latexer@gentoo.org> rxvt-unicode-4.8.ebuild,
+  rxvt-unicode-5.1.ebuild, rxvt-unicode-5.2.ebuild:
+  Stop trying to install non-existant docs, respect user USE flags, strip some
+  unsafe flags (bug #68715).
 
 *rxvt-unicode-5.2 (20 Feb 2005)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-5.2.ebuild,v 1.1 2005/02/20 23:31:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-5.2.ebuild,v 1.2 2005/02/27 00:08:45 latexer Exp $
 
-inherit 64-bit eutils
+inherit 64-bit eutils flag-o-matic
 
 IUSE="xgetdefault tabs"
 
@@ -19,6 +19,11 @@ DEPEND="virtual/libc
 	dev-lang/perl
 	tabs? ( dev-perl/gtk2-perl )"
 
+pkg_preinst() {
+	filter-flags -mno-accumulate-outgoing-args
+	replace-flags -Os -O2
+}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -26,6 +31,9 @@ src_unpack() {
 	sed -i -e \
 		"s~@TIC@ \(etc/rxvt\)~@TIC@ -o ${D}/${tdir} \1~" \
 		doc/Makefile.in
+	sed -i -e \
+		"s:-g -O3:${CFLAGS}" \
+		configure
 }
 
 src_compile() {
@@ -66,7 +74,7 @@ src_install() {
 
 	dodoc README.FAQ Changes
 	cd ${S}/doc
-	dodoc README* changes.txt BUGS TODO etc/*
+	dodoc README* changes.txt etc/*
 
 	if useq tabs ; then
 		newbin rxvt-tabbed urxvt-tabbed
