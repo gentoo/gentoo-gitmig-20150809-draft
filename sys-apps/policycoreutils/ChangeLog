@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.16 2004/01/31 09:07:38 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.17 2004/02/10 03:55:05 pebenito Exp $
+
+*policycoreutils-1.4-r1 (09 Feb 2004)
+
+  09 Feb 2004; Chris PeBenito <pebenito@gentoo.org>
+  policycoreutils-1.4-r1.ebuild:
+  Move extras to mirrors, and add runscript_selinux.so.
 
   31 Jan 2004; Chris PeBenito <pebenito@gentoo.org> files/rlpkg:
   Switch to portageq from inline python.  Add missing quotes for completeness.
