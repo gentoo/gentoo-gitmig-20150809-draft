@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 38972e77397e3c549de0b736a62359c4 drgeo-0.9.12.ebuild 647
-MD5 495d39e0785cd0e44d6a180afb5cddee drgeo-0.9.14.ebuild 1151
-MD5 98e98869cd001910444e771ef5a096e9 ChangeLog 1365
+MD5 b9eb6cf0c49362a3a8ad9f7f77d206c5 drgeo-0.9.12.ebuild 644
+MD5 f37c590b31f0dee6917b6bafe048e50c drgeo-0.9.14.ebuild 1146
+MD5 a10c44a4b0988d927196959caa1af950 ChangeLog 1470
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 9ea30754ac7c2be75033142b679dcb0d files/digest-drgeo-0.9.12 65
 MD5 071a0455c3fec522e4561a64a2cdbf2f files/digest-drgeo-0.9.14 131
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB0bzQI1lqEGTUzyQRApq6AJsHt3S0KkaVn/1DqKJrUPTuoSSj0gCgt/57
-AyEFocJGhBbOQYaAvy00Cqw=
-=YsL0
+iD8DBQFCBX23ntT9W3vfTuoRAi92AJsFK2y7lpH7pJhsVfLDYh+ENzxFOwCgjPdq
+/CYkDDLz3N/9isPOVWXvP8Q=
+=EdzP
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/drgeo-0.9.14.ebuild,v 1.1 2004/12/28 05:04:51 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/drgeo-0.9.14.ebuild,v 1.2 2005/02/06 02:15:26 cryos Exp $
 
 DOCN="${PN}-doc"
 DOCV="1.5"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/ofset/${P}.tar.gz
 	mirror://sourceforge/ofset/${DOC}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE="nls no-helpbrowser"
 
 DEPEND=">=x11-libs/gtk+-2
