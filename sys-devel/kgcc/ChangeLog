@@ -1,0 +1,35 @@
+# ChangeLog for sys-devel/kgcc
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc/ChangeLog,v 1.10 2004/10/21 02:28:39 weeve Exp $
+
+*kgcc-2.95.3 (20 Oct 2004)
+
+  20 Oct 2004; Jason Wever <weeve@gentoo.org> +metadata.xml,
+  +files/kgcc-2.95.3-new-atexit.diff, +kgcc-2.95.3.ebuild:
+  Added kgcc back in as it's needed to build sparc32 2.2 kernels and so Skunky
+  won't kill me :)
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> kgcc-2.95.3.ebuild:
+  virtual/glibc -> virtual/libc
+
+  23 Jun 2004; Aron Griffis <agriffis@gentoo.org> kgcc-2.95.3.ebuild:
+  QA - fix use invocation
+
+  12 May 2004; Alexander Gabert <pappy@gentoo.org> kgcc-2.95.3.ebuild:
+  changed hardened-gcc logic to filter-flags
+
+  11 Oct 2003; Alexander Gabert <pappy@gentoo.org> kgcc-2.95.3.ebuild:
+  added yno_propolice flags for kgcc building due to guard symbol bailing out
+  while processing libiberty
+
+*kgcc-2.95.3 (31 Dec 2002)
+
+  09 Jan 2003; Seemant Kulleen <seemant@gentoo.org> :
+
+  KEYWORDED for only sparc, as that is the only architecture which needs it,
+  even though it can work for others (for future references).
+
+  31 Dec 2002; Stefan Jones <Cretin@gentoo.org> :
+  Installs a gcc-2.95.3 C-compiler only, named kgcc, used to compile sparc
+  32bit kernels.
+
