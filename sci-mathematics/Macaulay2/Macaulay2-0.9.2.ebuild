@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.2.ebuild,v 1.1 2004/12/28 14:30:11 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-0.9.2.ebuild,v 1.2 2005/03/18 20:14:45 seemant Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -65,10 +65,10 @@ src_install () {
 	elif has_version 'net-www/mozilla' ; then
 		einfo "Using mozilla as default help-browser!"
 		sed "s:netscape:mozilla:g" < tmp > ${D}/usr/bin/M2-help
-	elif has_version 'net-www/mozilla-firefox' ; then
+	elif has_version 'www-client/mozilla-firefox' ; then
 		einfo "Using mozilla-firefox as default help-browser!"
 		sed "s:netscape:firefox:g" < tmp > ${D}/usr/bin/M2-help
-	elif has_version 'net-www/epiphany' ; then
+	elif has_version 'www-client/epiphany' ; then
 		einfo "Using epiphany as default help-browser!"
 		sed "s:netscape:epiphany:g" < tmp > ${D}/usr/bin/M2-help
 	else
