@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.24-r2.ebuild,v 1.1 2004/04/15 22:28:46 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.24-r2.ebuild,v 1.2 2004/04/16 18:49:04 method Exp $
 
 IUSE="selinux"
 ETYPE="sources"
@@ -17,7 +17,7 @@ DESCRIPTION="Special Security Hardened Gentoo Linux Kernel"
 BASE_URI="http://dev.gentoo.org/~scox/kernels/v2.4"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	${BASE_URI}/hardened-sources-${OKV}-base.patch.bz2
-	selinux?  ( ${BASE_URI}/hardened-sources-${OKV}-selinux.patch.bz2 )
+	selinux? ( ${BASE_URI}/hardened-sources-${OKV}-selinux.patch.bz2 )
 	!selinux? ( ${BASE_URI}/hardened-sources-${OKV}-grsec.patch.bz2 )"
 
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/"
