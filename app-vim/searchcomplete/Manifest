@@ -1,4 +1,14 @@
-MD5 2189aa2cb6b123801583ae7593800ed6 ChangeLog 1026
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 747d57eb525dbb7eee80ece30dc52d0d ChangeLog 1113
+MD5 974d643786e7947fa169418f7f0f8a5c searchcomplete-1.1.ebuild 509
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
-MD5 f08256ac0c20cecbed7b8cbd79cc69ec searchcomplete-1.1.ebuild 514
 MD5 90c085ebd4d83a6c8b84e7954f9f9a23 files/digest-searchcomplete-1.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCFk2iCHk4+ZoBpvsRAgjlAKCWErWIjxPOBgQx9Dh399Tri6zW0wCeI94n
+MXYZg4saTxBJJP7GdpUDijg=
+=+YGq
+-----END PGP SIGNATURE-----
