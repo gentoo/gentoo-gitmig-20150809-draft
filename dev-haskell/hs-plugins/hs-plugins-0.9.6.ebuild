@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-0.9.6.ebuild,v 1.1 2004/10/20 23:00:52 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-0.9.6.ebuild,v 1.2 2004/10/20 23:15:01 kosmikus Exp $
 
 inherit base
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 LICENSE="as-is"
 
-DEPEND=">=virtual/ghc-5.04"
+DEPEND=">=virtual/ghc-6.2"
 
 RDEPEND=""
 

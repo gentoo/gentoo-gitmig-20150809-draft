@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hs-plugins
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/ChangeLog,v 1.1 2004/10/20 23:00:52 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/ChangeLog,v 1.2 2004/10/20 23:15:01 kosmikus Exp $
+
+  21 Oct 2004; Andres Loeh <kosmikus@gentoo.org> hs-plugins-0.9.6.ebuild:
+  Fixed dependency on ghc.
 
 *hs-plugins-0.9.6 (21 Oct 2004)
 
