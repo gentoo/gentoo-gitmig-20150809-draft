@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.2.0.ebuild,v 1.8 2004/02/23 18:02:41 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.2.0.ebuild,v 1.9 2004/03/02 13:06:37 caleb Exp $
 
 inherit kde-dist
 
@@ -23,6 +23,10 @@ RDEPEND="${DEPEND}
 	app-text/xpdf"
 
 src_compile() {
+	# Disable kpdf because it's both deprecated AND it doesn't compile cleanly
+	# using parallel make.  If you really want it, comment out the line below.
+	DO_NOT_COMPILE="$DO_NOT_COMPILE kpdf"
+
 	use gphoto2	\
 		&& myconf="$myconf --with-kamera \
 				   --with-gphoto2-includes=/usr/include/gphoto2 \
