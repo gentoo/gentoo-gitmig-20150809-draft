@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.3-r1.ebuild,v 1.2 2000/08/16 04:38:35 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.3-r1.ebuild,v 1.3 2000/08/17 15:37:34 achim Exp $
 
 P=glibc-2.1.3
 A="glibc-2.1.3.tar.gz glibc-crypt-2.1.tar.gz 
@@ -75,13 +75,14 @@ src_install() {
     dodoc documentation/*
     docinto html
     dodoc documentation/html/*.html
-    dodir /usr/doc/${P}/examples.threads
-    install -m0644 linuxthreads/Examples/*.c ${D}/usr/doc/${P}/examples.threads
-    install -m0644 linuxthreads/Examples/Makefile ${D}/usr/doc/${P}/examples.threads
+    dodir /usr/doc/${PF}/examples.threads
+    install -m0644 linuxthreads/Examples/*.c ${D}/usr/doc/${PF}/examples.threads
+    install -m0644 linuxthreads/Examples/Makefile ${D}/usr/doc/${PF}/examples.threads
     # Patch ucontext.h (needed for lynx, xfree)
     cd ${D}/usr/include/sys
     cp ucontext.h ucontext.h.orig
     sed -e "s/ERR/GLIBCBUG/g" ucontext.h.orig > ucontext.h
 }
+
 
 

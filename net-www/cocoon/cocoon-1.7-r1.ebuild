@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-1.7-r1.ebuild,v 1.2 2000/08/16 04:38:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-1.7-r1.ebuild,v 1.3 2000/08/17 15:37:34 achim Exp $
 
 P=cocoon-1.7
 A=Cocoon-1.7.tar.gz
@@ -38,10 +38,11 @@ src_install() {
   insinto /opt/jakarta/tomcat/conf
   doins ${O}/files/cocoon.properties
   dodoc README LICENSE
-  dodir /usr/doc/${P}/html
-  cp -a docs/* ${D}/usr/doc/${P}/html
-  find ${D}/usr/doc/${P}/html -type f -exec gzip -9 {} \;
+  dodir /usr/doc/${PF}/html
+  cp -a docs/* ${D}/usr/doc/${PF}/html
+  find ${D}/usr/doc/${PF}/html -type f -exec gzip -9 {} \;
 }
+
 
 
 
