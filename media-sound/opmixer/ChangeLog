@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/opmixer
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/ChangeLog,v 1.1 2002/07/11 22:05:13 stroke Exp $
+
+*opmixer-0.75 (11 Jul 2002)
+
+  11 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> opmixer-0.75.ebuild :
+  
+  New package 
+  Ebuild written by: Mattias Bengtsson <moonlite@linux.nu>
