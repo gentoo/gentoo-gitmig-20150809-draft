@@ -1,17 +1,11 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.22 2003/12/05 08:15:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.23 2003/12/07 14:22:21 usata Exp $
 
-  05 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> mlterm-2.6.3-r2.ebuild,
+  07 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> mlterm-2.6.3-r2.ebuild,
   mlterm-2.7.0-r1.ebuild, mlterm-2.8.0_p1-r1.ebuild:
-  Removed deprecated : operator.
-
-  30 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> mlterm-2.6.3-r2.ebuild,
-  mlterm-2.7.0-r1.ebuild, mlterm-2.8.0_p1-r1.ebuild:
-  Corrected DEPEND. Removed nopixbuf IUSE flag. (mlterm uses either
-  imlib, gdk-pixbuf1 or gdk-pixbuf2, so there's no good reason for
-  associating nopixbuf with gdk-pixbuf1 and making it default)
-  Closing bug #34573
+  Corrected DEPEND. Thanks to spider@gentoo.org, see comments in ebuilds
+  and bug #34573
 
   01 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> mlterm-2.6.3-r1.ebuild,
   mlterm-2.6.3-r2.ebuild, mlterm-2.6.3.ebuild, mlterm-2.7.0.ebuild,
