@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.ebuild,v 1.7 2004/06/24 22:54:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.ebuild,v 1.8 2004/07/03 18:54:29 humpback Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.jabberstudio.org/files/jabberd2/${PN}-${MY_PV}.tar.gz"
 SLOT="1"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
-IUSE="ldap ipv6 mysql postgres pam berkdb"
+IUSE="ldap ipv6 mysql postgres pam berkdb ssl"
 
 DEPEND="!net-im/jabber-server
 	>=dev-libs/openssl-0.9.6i
@@ -44,7 +44,7 @@ src_compile() {
 	storage="fs"
 	authreg="anon"
 
-	if use db; then
+	if use berkdb; then
 		storage="${storage} db"
 		authreg="${authreg} db"
 	fi
