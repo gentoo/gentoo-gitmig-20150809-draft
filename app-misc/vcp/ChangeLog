@@ -1,15 +1,11 @@
 # ChangeLog for app-misc/vcp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vcp/ChangeLog,v 1.4 2004/04/28 22:36:08 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vcp/ChangeLog,v 1.5 2004/05/07 05:18:12 vapier Exp $
 
-  28 Apr 2004; Jon Portnoy <avenj@gentoo.org> vcp-1.6.2.ebuild :
-  Stablew on AMD64.
+*vcp-1.7.2 (07 May 2004)
 
-  20 Jan 2004; Jon Portnoy <avenj@gentoo.org> vcp-1.6.2.ebuild :
-  AMD64 keywords.
-
-  08 Oct 2003; Joel Hill <hillster@gentoo.org> vcp-1.6.2.ebuild:
-  cleanup, marking stable.
+  07 May 2004; Mike Frysinger <vapier@gentoo.org> +vcp-1.7.2.ebuild:
+  Version bump #49777 by Daniel Webert
 
 *vcp-1.6.2 (02 Sep 2003)
 
