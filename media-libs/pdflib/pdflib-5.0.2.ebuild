@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.11 2004/01/24 12:08:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.12 2004/01/26 16:32:54 scandium Exp $
 
 IUSE="tcltk perl python java"
 
@@ -19,7 +19,7 @@ KEYWORDS="x86 ppc sparc alpha hppa ~mips ~arm amd64 ia64 ~ppc64"
 DEPEND=">=sys-apps/sed-4
 	tcltk? ( >=dev-lang/tk-8.2 )
 	perl? ( >=dev-lang/perl-5.1 )
-	python? ( =dev-lang/python-2.2* )
+	python? ( >=dev-lang/python-2.2 )
 	java? ( >=virtual/jdk-1.3 )"
 
 src_compile() {
