@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.14 2004/09/24 20:47:37 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.15 2004/10/18 16:45:58 usata Exp $
+
+  19 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> haddock-0.4.ebuild,
+  haddock-0.5.ebuild, haddock-0.6-r1.ebuild, haddock-0.6-r2.ebuild,
+  haddock-0.6.ebuild:
+  Fixed missing dependencies; bug #68021.
 
   24 Sep 2004; <SeJo@gentoo.org> haddock-0.6-r2.ebuild:
   stable bump due to bug 59753

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/alex
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.5 2004/06/24 22:14:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.6 2004/10/18 16:46:47 usata Exp $
+
+  19 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> alex-2.0.ebuild:
+  Fixed missing dependencies; bug #68021.
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> alex-2.0.ebuild:
   Fix use invocation

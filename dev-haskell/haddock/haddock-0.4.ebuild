@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.4.ebuild,v 1.10 2004/06/24 22:14:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.4.ebuild,v 1.11 2004/10/18 16:45:58 usata Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -22,7 +22,7 @@ LICENSE="as-is"
 DEPEND="virtual/ghc
 	doc? ( >=app-text/openjade-1.3.1
 		>=app-text/sgml-common-0.6.3
-		=app-text/docbook-sgml-dtd-3.1-r1
+		~app-text/docbook-sgml-dtd-3.1
 		>=app-text/docbook-dsssl-stylesheets-1.64
 		tetex? ( virtual/tetex
 		>=app-text/jadetex-3.12 ) )"
