@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.0.8.ebuild,v 1.1 2004/08/06 20:07:05 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.0.8.ebuild,v 1.2 2004/08/06 22:42:46 slarti Exp $
 
 inherit distutils
 IUSE=""
@@ -35,9 +35,6 @@ src_install() {
 	mkdir ${D}/usr/share/doc/${PF}/html
 	mv ${D}/usr/share/doc/${PF}/*.html ${D}/usr/share/doc/${PF}/*.css ${D}/usr/share/doc/${PF}/html
 	gzip --silent ${D}/usr/share/doc/${PF}/*
-
-	# and the man pages..
-	gzip --silent ${D}/usr/share/man/getmail*
 }
 
 pkg_postinst() {
