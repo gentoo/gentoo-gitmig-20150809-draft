@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/psmisc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.18 2003/07/06 14:51:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.19 2003/08/04 21:15:06 azarah Exp $
+
+*psmisc-21.2-r3 (04 Aug 2003)
+
+  04 Aug 2003; Martin Schlemmer <azarah@gentoo.org> psmisc-21.2-r3.ebuild:
+  We use pidof from baselayout, bug #21191
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> psmisc-21.2-r2.ebuild:
   Mark stable on alpha
