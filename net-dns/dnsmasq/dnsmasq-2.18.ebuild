@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.18.ebuild,v 1.2 2004/11/23 01:36:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.18.ebuild,v 1.3 2005/02/07 02:53:17 kumba Exp $
 
 inherit toolchain-funcs
 
