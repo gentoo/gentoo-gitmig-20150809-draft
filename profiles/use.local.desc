@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.707 2004/11/02 15:44:51 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.708 2004/11/02 18:45:37 stuart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -637,6 +637,10 @@ www-client/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mi
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-client/w3m:migemo - Enables migemo support
 www-proxy/tinyproxy:transparent-proxy - enable support for transparent proxies
+www-servers/lighttpd:modchat - if you want mod_chat enabled
+www-servers/lighttpd:modcache - if you want mod_cache enabled
+www-servers/lighttpd:modlocalizer - if you want mod_localizer enabled
+www-servers/lighttpd:xattr - if you want extended attributes enabled
 www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
 www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
