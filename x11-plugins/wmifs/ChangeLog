@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmifs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/ChangeLog,v 1.6 2003/11/02 07:45:17 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/ChangeLog,v 1.7 2004/03/27 15:41:11 aliz Exp $
+
+  27 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> wmifs-1.3_beta1-r1.ebuild:
+  Mark stable on amd64.
 
 *wmifs-1.3_beta1-r1 (01 Nov 2003)
 

@@ -1,8 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r1.ebuild,v 1.9 2004/01/04 18:36:48 aliz Exp $
-S="${WORKDIR}/wmmon.app"
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r1.ebuild,v 1.10 2004/03/27 15:41:11 aliz Exp $
 
+S="${WORKDIR}/wmmon.app"
+IUSE=""
 DESCRIPTION="Dockable system resources monitor applette for WindowMaker"
 WMMON_VERSION=1_0b2
 SRC_URI="http://rpig.dyndns.org/~anstinus/Linux/wmmon-${WMMON_VERSION}.tar.gz"

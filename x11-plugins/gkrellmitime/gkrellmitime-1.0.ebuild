@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/gkrellmitime-1.0.ebuild,v 1.8 2004/01/20 15:50:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/gkrellmitime-1.0.ebuild,v 1.9 2004/03/27 15:41:09 aliz Exp $
 
-S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="Internet Time plugin for Gkrellm2"
 SRC_URI="http://eric.bianchi.free.fr/gkrellm/${P}.tar.gz"
 HOMEPAGE="http://eric.bianchi.free.fr/gkrellm/"

@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4.ebuild,v 1.2 2004/03/14 00:14:31 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4.ebuild,v 1.3 2004/03/27 15:41:11 aliz Exp $
 
 IUSE="alsa oss"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="The next generation of WMMixer with native ALSA and OSS support."
 SRC_URI="http://freakzone.net/gordon/src/${PN}-2.0b4.tar.gz"
 HOMEPAGE="http://freakzone.net/gordon/#wmmixer"

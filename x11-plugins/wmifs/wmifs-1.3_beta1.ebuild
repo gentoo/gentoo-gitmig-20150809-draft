@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1.ebuild,v 1.6 2004/02/17 07:49:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1.ebuild,v 1.7 2004/03/27 15:41:11 aliz Exp $
 
+IUSE=""
 S=${WORKDIR}/wmifs.app/wmifs
 DESCRIPTION="Network monitoring dock.app"
 SRC_URI="http://linux.tucows.tierra.net/files/x11/dock/wmifs-1.3b1.tar.gz"
