@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.2 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla-launcher.eclass,v 1.3 2004/08/20 03:15:21 agriffis Exp $
 
 ECLASS=mozilla-launcher
 INHERITED="$INHERITED $ECLASS"
 
 update_mozilla_launcher_symlinks() {
-	local f browsers="mozilla firefox thunderbird"
+	local f browsers="mozilla firefox thunderbird sunbird"
 	cd ${ROOT}/usr/bin
 
 	# Remove launcher symlinks that no longer apply
