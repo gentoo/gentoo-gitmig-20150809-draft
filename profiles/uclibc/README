@@ -23,8 +23,6 @@ cat <<EOF>> /etc/portage/package.keywords
 # faulty on uclibc
 #app-arch/tar ~x86
 dev-libs/uclibc ~x86
-net-misc/iputils ~x86
-net-misc/openssh ~x86
 sys-apps/modutils ~x86
 sys-apps/shadow ~x86
 sys-devel/binutils ~x86
@@ -33,11 +31,9 @@ sys-devel/gcc ~x86
 sys-devel/libtool ~x86
 sys-devel/automake ~x86
 sys-fs/devfsd ~x86
-sys-libs/zlib ~x86
 sys-libs/db ~x86
 sys-libs/ncurses ~x86
 sys-devel/libperl ~x86
 dev-lang/perl ~x86
-sys-libs/cracklib ~x86
 
 EOF
