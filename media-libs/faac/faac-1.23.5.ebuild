@@ -1,27 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.23.5.ebuild,v 1.7 2004/09/28 04:37:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.23.5.ebuild,v 1.8 2004/11/12 02:15:37 vapier Exp $
 
 inherit libtool
 
-IUSE=""
-
-S=${WORKDIR}/${PN}
 DESCRIPTION="Free MPEG-4 audio codecs by AudioCoding.com"
 HOMEPAGE="http://www.audiocoding.com/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ~sparc ~amd64 ~ppc"
+SLOT="0"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
+IUSE=""
 
 RDEPEND=">=media-libs/libsndfile-1.0.0"
-
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.3.5
 	sys-devel/autoconf
 	sys-devel/automake"
 
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
