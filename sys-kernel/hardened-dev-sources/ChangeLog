@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.40 2004/10/16 19:15:51 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.41 2004/11/01 14:03:44 method Exp $
+
+*hardened-dev-sources-2.6.7-r10 (01 Nov 2004)
+
+  01 Nov 2004; Joshua Brindle <method@gentoo.org>
+  hardened-dev-sources-2.6.7-r10.ebuild, hardened-dev-sources-2.6.7-r9.ebuild,
+  files/hardened-dev-sources-2.6.7.CAN-2004-0816.patch:
+  Add CAN-2004-0816 iptables patch
 
 *hardened-dev-sources-2.6.7-r9 (16 Oct 2004)
 
