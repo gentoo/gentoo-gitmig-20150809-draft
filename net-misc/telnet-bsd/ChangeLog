@@ -1,0 +1,12 @@
+# ChangeLog for net-misc/telnet-bsd
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.1 2002/12/12 00:20:58 bcowan Exp $
+
+*telnet-bsd-1.0 (11 Dec 2002)
+
+  11 Dec 2002; Brad Cowan <bcowan@gentoo.org> telnet-bsd-1.0.ebuild,
+  ChangeLog, files/digest-telnet-bsd-1.0, telnet-bsd_gentoo.diff.gz:
+  
+  Initial import, Thanks to Andrey Ulanov closes bug #11521.
+  
+  
