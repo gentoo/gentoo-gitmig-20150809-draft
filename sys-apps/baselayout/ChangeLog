@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.84 2003/07/15 20:03:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.85 2003/07/15 20:31:53 azarah Exp $
+
+  15 Jul 2003; Martin Schlemmer <azarah@gentoo.org>
+  baselayout-1.8.6.8-r1.ebuild:
+  Add lastb symlink.
 
   15 Jul 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.5.9.ebuild,
   baselayout-1.8.6.7.ebuild, baselayout-1.8.6.8-r1.ebuild:
