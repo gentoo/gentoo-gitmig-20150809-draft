@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.126 2004/02/23 16:07:53 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.127 2004/02/23 16:26:59 lostlogic Exp $
+
+  23 Feb 2004; Brandon Low <lostlogic@gentoo.org> mm-sources-2.6.3-r3.ebuild,
+  files/mm-sources-2.6.3-r3-misc-modules-fixes.diff:
+  Add fixage for misc. modules related breakage from lkml
 
   23 Feb 2004; Brandon Low <lostlogic@gentoo.org> mm-sources-2.6.2-r1.ebuild,
   mm-sources-2.6.3_rc1-r1.ebuild, mm-sources-2.6.3_rc2-r1.ebuild,
