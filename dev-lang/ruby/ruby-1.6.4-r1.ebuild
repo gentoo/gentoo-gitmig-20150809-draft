@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.4.ebuild,v 1.1 2001/09/09 17:32:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.4-r1.ebuild,v 1.1 2001/11/10 00:15:08 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="An object-oriented scripting language"
-SRC_URI="ftp://ftp.netlab.co.jp/pub/lang/ruby/${A}"
+SRC_URI="ftp://ftp.netlab.co.jp/pub/lang/ruby/${P}.tar.gz"
 HOMEPAGE="http://www.ruby-lang.org/"
 
 DEPEND=">=sys-libs/glibc-2.1.3
@@ -15,11 +14,16 @@ DEPEND=">=sys-libs/glibc-2.1.3
         >=sys-libs/ncurses-5.2"
 
 src_compile() {
-    ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} || die
-    make || die
+	./configure --host=${CHOST}					\
+		    --prefix=/usr					\
+		    --mandir=/usr/share/man
+	assert
+
+	emake || die
 }
 
 src_install () {
-    make DESTDIR=${D} install || die
-    dodoc COPYING* ChangeLog MANIFEST README* ToDo
+	make DESTDIR=${D} install || die
+
+	dodoc COPYING* ChangeLog MANIFEST README* ToDo
 }
