@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.2.1.ebuild,v 1.1 2001/06/04 06:41:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.2.1.ebuild,v 1.2 2001/09/26 06:46:49 blocke Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,18 +11,18 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-module/PDL/${P}.readme"
 
 DEPEND=">=sys-devel/perl-5
 	>=sys-libs/ncurses-5.2
-	>=dev-perl/ExtUtils-F77-1.13
-	opengl? ( virtual/opengl virtual/glu )"
+	>=dev-perl/ExtUtils-F77-1.13"
+#	opengl? ( virtual/opengl virtual/glu )
 
 src_unpack() {
 
   unpack ${A}
-  cp ${FILESDIR}/perldl.conf ${S}
+
   #open gl does not work at the moment
   if [ "`use opengl`" ]
   then
-     echo "Disabled at the moment"
-    sed -e "s:WITH_3D => undef:WITH_3D => 1:" ${FILESDIR}/perldl.conf > ${S}/perldl.conf
+     echo "OpenGL support is current disabled due to build issues"
+    sed -e "s:WITH_3D => undef:WITH_3D => 0:" ${FILESDIR}/perldl.conf > ${S}/perldl.conf
   else
     sed -e "s:WITH_3D => undef:WITH_3D => 0:" ${FILESDIR}/perldl.conf > ${S}/perldl.conf
   fi
@@ -39,7 +39,7 @@ src_compile() {
 
 src_install () {
 
-    try make PREFIX=${D}/usr INSTALLMAN3DIR=/usr/share/man/man3 \
+    try make PREFIX=${D}/usr INSTALLMAN3DIR=${D}/usr/share/man/man3 \
 	INSTALLMAN1DIR=${D}/usr/share/man/man1 install
 
     dodoc COPYING Changes DEPENDENCIES DEVELOPMENT README MANIFEST*
