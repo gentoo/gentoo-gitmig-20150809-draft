@@ -1,7 +1,8 @@
-MD5 c3339664f38fee9d30739fde0179e80d ChangeLog 5604
+MD5 2dc3f4334efc6a28baa1739aa19696d1 ChangeLog 5800
 MD5 effd006ee5a76d62ceeef715b5dbf00b selinux-small-2003040709-r3.ebuild 4399
-MD5 8098f68887ec205cb21d4e5a7355d764 selinux-small-2003040709-r4.ebuild 5447
+MD5 9f30142e6197aec98bf939ef613a37fc selinux-small-2003071106.ebuild 5328
 MD5 74ed0ebe40bb920f2c477898e6e9abc0 metadata.xml 457
+MD5 8098f68887ec205cb21d4e5a7355d764 selinux-small-2003040709-r4.ebuild 5447
 MD5 0986e11cde481cc9d4f8061654dedead files/digest-selinux-small-2003040709-r3 151
 MD5 14ef7a8e2104665076099d6fe3f0f664 files/digest-selinux-small-2003040709-r4 73
 MD5 8daee4f4fd3e4a74c4d5f2ddb6b086a5 files/newrole 1197
@@ -14,3 +15,5 @@ MD5 ece4a7821d33af42526916fa2725724a files/selinux-small-2003040709-gentoo.diff 
 MD5 2ebe97274132b6318b82fe6e3f185ea1 files/selinux-small-2003040709-newrole.diff 2640
 MD5 16b7e55b13429ce3e437bfc457cc2a8d files/selinux-small-2003040709-newstat.diff 8495
 MD5 3809db44913b783d2b8bb31c8361aa92 files/selinux-small-2003040709-setfiles.diff 2623
+MD5 07da3114715047bd86d116215779b54e files/selinux-small-2003071106-gentoo.diff 9267
+MD5 4ed6e763e1f7562bb3ecb31414f3cb5e files/digest-selinux-small-2003071106 73

@@ -1,0 +1,206 @@
+diff -urN selinux.orig/devfsd/devfsd-conflet selinux/devfsd/devfsd-conflet
+--- selinux.orig/devfsd/devfsd-conflet	2002-07-17 17:00:40.000000000 -0500
++++ selinux/devfsd/devfsd-conflet	2003-07-13 15:00:48.000000000 -0500
+@@ -1,23 +1,7 @@
+-REGISTER ^(kmem|mem|port)	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:memory_device_t
+-REGISTER ^u?random	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:random_device_t
+-REGISTER ^tty		CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:devtty_t
+-REGISTER /disc$		CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:fixed_disk_device_t
+-REGISTER /part[0-9]+$	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:fixed_disk_device_t
+-REGISTER ^[mr]d/[0-9]+$	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:fixed_disk_device_t
++REGISTER ^nb[^/]+$	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:fixed_disk_device_t
+ REGISTER [0-9]/cd$	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:removable_device_t
+-REGISTER ^floppy/	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:removable_device_t
+-REGISTER ^misc/rtc	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:clock_device_t
+ REGISTER ^initctl	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:initctl_t
+-REGISTER ^printers/	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:printer_t
+-REGISTER ^input/(mouse|mice|event)	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:mouse_device_t
+-REGISTER ^misc/psaux	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:mouse_device_t
+ REGISTER ^gpmctl	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:gpmctl_t
+-REGISTER ^ptmx		CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:ptmx_t
+-REGISTER ^sound/	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:sound_device_t
+-REGISTER ^agpgart	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:agp_device_t
+ REGISTER ^dri		CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:dri_device_t
+-REGISTER ^misc/apm_bios	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:apm_bios_t
+-REGISTER ^ppp$		CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:ppp_device_t
+-REGISTER ^fb/.*$	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:framebuf_device_t
+-
+-
++REGISTER ^sound/.*	CFUNCTION devfsd-se.so set_sid $devname system_u:object_r:sound_device_t
++REGISTER ^pts/.*	IGNORE
+diff -urN selinux.orig/devfsd/devfsd-se.c selinux/devfsd/devfsd-se.c
+--- selinux.orig/devfsd/devfsd-se.c	2002-04-19 15:32:37.000000000 -0500
++++ selinux/devfsd/devfsd-se.c	2003-07-13 15:00:48.000000000 -0500
+@@ -19,7 +19,7 @@
+ {
+   security_id_t sid;
+   struct stat buf;
+-  const char * const initial_context = "system_u:object_r:devfs_t";
++  const char * const initial_context = "system_u:object_r:device_t";
+   const char * const no_context = "system_u:object_r:unlabeled_t";
+ 
+   if(is_flask_enabled())
+diff -urN selinux.orig/libsecure/Makefile selinux/libsecure/Makefile
+--- selinux.orig/libsecure/Makefile	2002-10-28 14:16:20.000000000 -0600
++++ selinux/libsecure/Makefile	2003-07-13 15:00:48.000000000 -0500
+@@ -1,6 +1,6 @@
+ all: 
+-	$(MAKE) -C src 
+-	$(MAKE) -C test 
++	$(MAKE) -C src SE_INC=$(SE_INC) EXTRA_CFLAGS="$(EXTRA_CFLAGS)"
++	$(MAKE) -C test SE_INC=$(SE_INC) EXTRA_CFLAGS="$(EXTRA_CFLAGS) $(EXTRA_LDFLAGS)"
+ 
+ install: 
+ 	$(MAKE) -C include install
+diff -urN selinux.orig/libsecure/src/Makefile selinux/libsecure/src/Makefile
+--- selinux.orig/libsecure/src/Makefile	2003-04-22 08:24:05.000000000 -0500
++++ selinux/libsecure/src/Makefile	2003-07-13 15:03:38.000000000 -0500
+@@ -2,7 +2,7 @@
+ LIBDIR=$(PREFIX)/lib
+ TARGET=libsecure.a
+ OBJS= $(patsubst %.c,%.o,$(wildcard *.c))
+-CFLAGS = -I../include -I$(PREFIX)/include
++CFLAGS = -I../include -I$(SE_INC) $(EXTRA_CFLAGS)
+ 
+ ARCH := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/)
+ OBJS+= $(patsubst %.c,%.o,$(wildcard arch/$(ARCH)/*.c))
+diff -urN selinux.orig/libsecure/src/xstat_conv.h selinux/libsecure/src/xstat_conv.h
+--- selinux.orig/libsecure/src/xstat_conv.h	2003-06-18 08:56:00.000000000 -0500
++++ selinux/libsecure/src/xstat_conv.h	2003-07-13 15:00:48.000000000 -0500
+@@ -36,7 +36,7 @@
+ 
+     case _STAT_VER_LINUX:
+       {
+-	struct stat *buf = ubuf;
++	struct kernel_stat *buf = ubuf;
+ 
+ 	/* Convert to current kernel version of `struct stat'.  */
+ 	buf->st_dev = kbuf->st_dev;
+diff -urN selinux.orig/libsecure/test/Makefile selinux/libsecure/test/Makefile
+--- selinux.orig/libsecure/test/Makefile	2003-04-22 08:24:05.000000000 -0500
++++ selinux/libsecure/test/Makefile	2003-07-13 15:05:48.000000000 -0500
+@@ -3,14 +3,14 @@
+ BINDIR=$(PREFIX)/bin
+ LDFLAGS=-L../src 
+ LDLIBS=-lsecure
+-CFLAGS=-I../include -I$(PREFIX)/include
++CFLAGS=-I../include -I$(SE_INC) $(EXTRA_CFLAGS)
+ 
+ ARCH := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/)
+ TARGETS+= $(patsubst %.c,%,$(wildcard arch/$(ARCH)/*.c))
+ 
+ # Only install the programs that are useful to users
+ # and that are not redundant with the modified utilities.
+-UTILS=avc_enforcing avc_toggle load_policy context_to_sid sid_to_context list_sids chsid lchsid chsidfs
++UTILS=avc_enforcing avc_toggle load_policy context_to_sid sid_to_context list_sids chsid lchsid chsidfs get_user_sids
+ # Add 'exec_s' if you do not have 'runas'.
+ # Add 'getsecsid' if you do not have the modified 'id'.
+ # Add 'lstat_s' and 'stat_s' if you do not have the modified 'stat'.
+diff -urN selinux.orig/module/Makefile selinux/module/Makefile
+--- selinux.orig/module/Makefile	2003-04-22 08:24:05.000000000 -0500
++++ selinux/module/Makefile	2003-07-13 15:00:48.000000000 -0500
+@@ -6,7 +6,7 @@
+ FLASKDIR=$(PREFIX)/flask
+ INCDIR=$(PREFIX)/include
+ 
+-ARCH := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/)
++ARCH := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/parisc.*/hppa/)
+ 
+ # Build the checkpolicy program.
+ all:
+diff -urN selinux.orig/module/checkpolicy/Makefile selinux/module/checkpolicy/Makefile
+--- selinux.orig/module/checkpolicy/Makefile	2003-04-22 08:24:06.000000000 -0500
++++ selinux/module/checkpolicy/Makefile	2003-07-13 15:00:48.000000000 -0500
+@@ -17,7 +17,9 @@
+ OPTIONS = 
+ endif
+ 
+-CFLAGS = -g $(OPTIONS) -I$(LSMDIR)/include -Wall -O2 -pipe -include $(MODDIR)/ss/global.h -I$(MODDIR)/include -I$(MODDIR)/ss 
++YACC = bison -y
++
++CFLAGS = $(OPTIONS) -I$(LSMDIR)/include -Wall -O2 -pipe -include $(MODDIR)/ss/global.h -I$(MODDIR)/include -I$(MODDIR)/ss 
+ 
+ OBJS = ebitmap.o queue.o hashtab.o symtab.o sidtab.o avtab.o policydb.o services.o y.tab.o lex.yy.o checkpolicy.o 
+ 
+@@ -28,7 +30,7 @@
+ LIBS=-lfl
+ 
+ checkpolicy: $(OBJS)
+-	$(CC) -o $@ $^ $(LIBS)
++	$(CC) -o $@ $^ $(LIBS) $(LDFLAGS)
+ 
+ %.o: $(MODDIR)/ss/%.c 
+ 	$(CC) $(CFLAGS) -o $@ -c $<
+diff -urN selinux.orig/utils/newrole/Makefile selinux/utils/newrole/Makefile
+--- selinux.orig/utils/newrole/Makefile	2003-04-22 08:24:07.000000000 -0500
++++ selinux/utils/newrole/Makefile	2003-07-13 15:15:17.000000000 -0500
+@@ -36,7 +36,7 @@
+ # End Release flags
+ 
+ LDFLAGS += -L$(LIBDIR)
+-LIBS += $(LIBDIR)/libsecure.a
++LIBS += ../../libsecure/src/libsecure.a
+ 
+ PROGS = newrole
+ 
+diff -urN selinux.orig/utils/run_init/Makefile selinux/utils/run_init/Makefile
+--- selinux.orig/utils/run_init/Makefile	2003-04-22 08:24:07.000000000 -0500
++++ selinux/utils/run_init/Makefile	2003-07-13 15:22:16.000000000 -0500
+@@ -37,7 +37,7 @@
+ # End Release flags
+ 
+ LDFLAGS += -L$(LIBDIR)
+-LIBS += $(LIBDIR)/libsecure.a
++LIBS += ../../libsecure/src/libsecure.a
+ 
+ PROGS = run_init
+ 
+diff -urN selinux.orig/utils/run_init/run_init.c selinux/utils/run_init/run_init.c
+--- selinux.orig/utils/run_init/run_init.c	2002-11-26 11:32:36.000000000 -0600
++++ selinux/utils/run_init/run_init.c	2003-07-13 15:00:48.000000000 -0500
+@@ -386,7 +386,7 @@
+ 	  exit(-1);
+   }
+ 
+-  if ( execvp_secure(argv[1], sid, argv + 1) ) {
++  if ( execvp_secure("/usr/sbin/open_init_pty", sid, argv) ) {
+     perror("execvp_secure");
+     exit(-1);
+   }
+diff -urN selinux.orig/utils/spasswd/Makefile selinux/utils/spasswd/Makefile
+--- selinux.orig/utils/spasswd/Makefile	2003-06-06 09:23:36.000000000 -0500
++++ selinux/utils/spasswd/Makefile	2003-07-13 15:00:48.000000000 -0500
+@@ -14,12 +14,13 @@
+ GROUPDEL=/usr/sbin/groupdel
+ GROUPMOD=/usr/sbin/groupmod
+ VIPW=/usr/sbin/vipw
++VIGR=/usr/sbin/vigr
+ 
+ CFLAGS += -Wall -g -I$(INCDIR)
+ LDFLAGS += -static -L$(LIBDIR)
+ LIBS += -lsecure
+ 
+-PROGS = spasswd sadminpasswd suseradd suserdel svipw schfn schsh sgpasswd susermod \
++PROGS = spasswd sadminpasswd suseradd suserdel svipw svigr schfn schsh sgpasswd susermod \
+ 	sgroupadd sgroupdel sgroupmod
+ 
+ all:  $(PROGS)
+@@ -42,6 +43,9 @@
+ svipw.o: spasswd.c
+ 	$(CC) $(CFLAGS) -DADMIN_USE -DPASSWD=\"$(VIPW)\" -c -o $@ $<
+ 
++svigr.o: spasswd.c
++	$(CC) $(CFLAGS) -DADMIN_USE -DPASSWD=\"$(VIGR)\" -c -o $@ $<
++
+ schfn.o: spasswd.c
+ 	$(CC) $(CFLAGS) -DPASSWD=\"$(CHFN)\" -c -o $@ $<
+ 
+@@ -64,7 +68,7 @@
+ 	$(CC) $(CFLAGS) -DADMIN_USE  -DPASSWD=\"$(GROUPMOD)\" -c -o $@ $<
+ 
+ install: all
+-	test -d $(BINDIR) || install -m 755 -o root -g root $(BINDIR)
++	test -d $(BINDIR) || install -m 755 -d -o root -g root $(BINDIR)
+ 	install -m 555 -o root -g root $(PROGS) $(BINDIR)
+ 
+ clean:
