@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/colorschemes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.10 2004/09/06 22:46:36 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.11 2004/09/09 20:47:42 kugelfang Exp $
+
+  09 Sep 2004; Danny van Dyk <kugelfang@gentoo.org>
+  colorschemes-20040821.ebuild:
+  Marked stable on amd64.
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   colorschemes-20040821.ebuild:
