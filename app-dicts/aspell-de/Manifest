@@ -1,4 +1,6 @@
-MD5 c13602b6de0c29e4d2d76963adbf62a8 ChangeLog 1608
+MD5 585edf0c65795370d5be35acf187a98d ChangeLog 1763
 MD5 5d00dde11ecc61ce5c7a415583ab64f6 aspell-de-0.50.2.ebuild 304
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
+MD5 8ab4b896e235834d647fd9c1f254a25f aspell-de-0.60_pre20030222.ebuild 530
 MD5 b23e32935f902e1b912185191ad9f560 files/digest-aspell-de-0.50.2 69
+MD5 89fc461f9e060ce81deae1889876bb20 files/digest-aspell-de-0.60_pre20030222 74
