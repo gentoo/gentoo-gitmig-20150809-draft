@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.3.0.ebuild,v 1.1 2004/05/04 07:27:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.3.0.ebuild,v 1.2 2004/05/04 20:24:35 dholm Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="http://freedesktop.org/~suzhe/${PN}/${P}.tar.gz"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/x11
 	>=app-i18n/scim-0.9.0"
