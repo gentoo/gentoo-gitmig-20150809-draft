@@ -42,11 +42,6 @@ dev-dotnet/gtk-sharp-base
 dev-dotnet/glib-sharp
 
 # <caleb@gentoo.org> (20 July 2003)
-# Masked until announcement is made
-=kde-base/kdelibs-3.1.2-r1
-=kde-base/kdelibs-3.0.5b-r1
-
-# <caleb@gentoo.org> (20 July 2003)
 # pre-release testing
 # <pauldv@gentoo.org> (29 July 2003)
 # Add more of them
