@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.0.ebuild,v 1.1 2004/11/08 13:29:55 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.0.ebuild,v 1.2 2004/11/08 14:18:16 kosmikus Exp $
 
 DESCRIPTION="David's Advanced Revision Control System is yet another replacement for CVS"
 HOMEPAGE="http://abridgegame.org/darcs"
@@ -29,18 +29,13 @@ src_compile() {
 	# distribution contains garbage files
 	make clean || die "make clean failed"
 	if use doc ; then
-		mv GNUmakefile GNUmakefile.orig
-		cat GNUmakefile.orig \
-			| sed "s:/doc:/doc/${PF}:" \
-			> GNUmakefile
+		sed -i "s:/doc:/doc/${PF}:" GNUmakefile
 	else
-		mv configure configure.orig
-		cat configure.orig \
-			| sed 's: installdocs::' \
-			| sed 's:^.*BUILDDOC.*yes.*$::' \
-			| sed 's/^.*TARGETS.*\(darcs\.ps\|manual\).*$/:/' \
-			> configure
-		chmod u+x configure
+		sed -i \
+			-e 's: installdocs::' \
+			-e 's:^.*BUILDDOC.*yes.*$::' \
+			-e 's/^.*TARGETS.*\(darcs\.ps\|manual\).*$/:/' \
+			configure
 	fi
 	econf ${myconf} || die "configure failed"
 	echo 'INSTALLWHAT=installbin' >> autoconf.mk
@@ -48,5 +43,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die "installation failed"
 }
