@@ -1,8 +1,16 @@
-MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 7b5e12c93e5e33b12f4e6b5abd823564 gwenview-1.2.0_pre1.ebuild 480
-MD5 50c901fbd96766cb01ffde61b79fcfb6 ChangeLog 3252
-MD5 36caebaf6b15207103cd45bc7485fff8 gwenview-1.1.8.ebuild 437
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bb4552a0e34234595fece18159247012 gwenview-1.2.0_pre4.ebuild 480
 MD5 8f5b2ac340c74aa79197e0b2264c64e1 gwenview-1.0.1.ebuild 424
+MD5 100d1a46258ee0dd76dc2d8c089399bc ChangeLog 3439
+MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
+MD5 a24985c21c0077a9e8820a5919ef5e94 files/digest-gwenview-1.2.0_pre4 72
 MD5 ec9b547539178737eb9327ca97270c50 files/digest-gwenview-1.0.1 67
-MD5 2db32e09353e2e93e1e6a18aad79ace7 files/digest-gwenview-1.1.8 67
-MD5 2d2c6fb1a61ac6280df4d5f96cc1d17a files/digest-gwenview-1.2.0_pre1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQG8xevY57Fted3ERAoCaAJ916T6vevoT1c1xfHFXWzBAEcbyMACfd0mq
+57bgoyoQQ0trB1QRr9gpJoY=
+=jyzq
+-----END PGP SIGNATURE-----

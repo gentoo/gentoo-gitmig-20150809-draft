@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.2.0_pre1.ebuild,v 1.1 2005/01/29 11:30:12 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.2.0_pre4.ebuild,v 1.1 2005/03/22 19:16:32 lanius Exp $
 
 inherit kde
 
