@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.7.ebuild,v 1.1 2005/02/17 13:40:55 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.7.ebuild,v 1.2 2005/03/30 00:13:43 pylon Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.nongnu.org/${PN}/${PN}-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="debug doc dvd mad nls oggvorbis sox"
+IUSE="debug doc dvdr mad nls oggvorbis sox"
 
 DEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/glib-2.4
@@ -22,7 +22,7 @@ DEPEND=">=x11-libs/gtk+-2.4
 		>=media-libs/libmad-0.15 )
 	oggvorbis? ( >=media-libs/libogg-1.0
 		>=media-libs/libvorbis-1.0 )
-	dvd? ( app-cdr/dvd+rw-tools )"
+	dvdr? ( app-cdr/dvd+rw-tools )"
 RDEPEND="${DEPEND}
 	sox? ( >=media-sound/sox-12.17.0 )
 	>=app-cdr/cdrtools-2.0"

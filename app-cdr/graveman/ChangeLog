@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/graveman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.5 2005/03/01 15:34:27 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.6 2005/03/30 00:13:43 pylon Exp $
+
+  30 Mar 2005; Lars Weiler <pylon@gentoo.org> graveman-0.3.7.ebuild,
+  graveman-0.3.8.ebuild:
+  USE-flag change: dvd->dvdr; see bug #84662.
 
 *graveman-0.3.8 (01 Mar 2005)
 
