@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.21 2003/07/06 19:26:44 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.22 2003/07/09 11:47:14 raker Exp $
+
+  09 Jul 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.0.ebuild:
+  A little sed to change glide location from /usr/include/glide to
+  /usr/include/glide3
 
   06 Jul 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.0.ebuild:
   Marked stable for x86
