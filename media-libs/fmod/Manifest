@@ -1,6 +1,16 @@
-MD5 38b108367fd86145430c6a88debe21df ChangeLog 2486
-MD5 2183ad7b0014eace4cccbee5d0211398 fmod-3.74.ebuild 920
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fd52a5f2f0dae00665d438c2e8e22c38 fmod-3.73.ebuild 877
+MD5 b9129a1819af8a3d0500d24afb52c055 fmod-3.74.ebuild 919
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 e8f73d41b0136b5ae0e11e8b109a4d33 ChangeLog 2584
 MD5 4fb7e37aff652fe8fb9d4dd6ea0b4ed8 files/digest-fmod-3.74 67
 MD5 5aef506f9dde9b67e021567843ea46de files/digest-fmod-3.73 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBxQ1gArHZZzCEUG0RAtsIAJ4kF0gn8gDg83DyIgGzvkL5o0MvnwCggFgZ
+xeDJdsd0Q+sRq4ohW1wftwU=
+=VC51
+-----END PGP SIGNATURE-----
