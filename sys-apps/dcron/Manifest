@@ -3,17 +3,16 @@ Hash: SHA1
 
 MD5 98d7b5bc80d5893bdde23612845358e1 ChangeLog 4656
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 718db99a373e0614cf58623ef0cba879 dcron-2.9-r2.ebuild 1889
+MD5 0f4af8d6f00d205e0e7bd63ee2233303 dcron-2.9-r2.ebuild 1873
 MD5 e8f5ee014b850e0f248649e283b21d7b files/dcron.rc6 619
-MD5 562feacfdde7b16558e57b142a98326f files/crontab 824
-MD5 b228d65fab81803ea4ca5c29ea43e648 files/crontab-2.9-r1 830
+MD5 b228d65fab81803ea4ca5c29ea43e648 files/crontab 830
 MD5 932978359b7a3b3a2d29a96827ceca83 files/dcron-2.7-Makefile-gentoo.diff 534
 MD5 2db10e843ecdf10a2b3aa5f70322310b files/digest-dcron-2.9-r2 55
 MD5 a82da32a58b097ea2ccd1b7a4aed72f3 files/dcron-2.9-ldflags.patch 590
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBUKppHTu7gpaalycRAqSyAJ4yrVNAf5KUA1H04JeTUQvy3XO3VgCbB4d1
-eM3QAC1/W4j2mZo0nu7TUHM=
-=NajX
+iD8DBQFBUKqXHTu7gpaalycRAhCQAKCrs8EshZLWYeN6ydEPfc8JTTErngCg9hbt
+/2Jd1orUHq5wFHxihC+nicY=
+=nAcx
 -----END PGP SIGNATURE-----

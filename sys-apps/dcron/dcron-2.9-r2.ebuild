@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r2.ebuild,v 1.14 2004/09/21 22:24:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r2.ebuild,v 1.15 2004/09/21 22:26:03 vapier Exp $
 
 inherit eutils
 
@@ -65,7 +65,7 @@ src_install() {
 
 	insopts -o root -g root -m 0644
 	insinto /etc
-	newins ${FILESDIR}/crontab-2.9-r1 crontab
+	doins ${FILESDIR}/crontab
 }
 
 pkg_postinst() {
