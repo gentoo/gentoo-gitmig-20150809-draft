@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-1.1.ebuild,v 1.2 2004/04/14 05:50:42 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-1.1.ebuild,v 1.3 2004/04/14 11:47:28 kugelfang Exp $
 
 DESCRIPTION="X11R6 libraries for emulation of 32bit x86 on amd64"
 SRC_URI="mirror://gentoo/distfiles/emul-linux-x86-xlibs-1.1.tar.bz2"
@@ -8,7 +8,7 @@ HOMEPAGE=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-*"
+KEYWORDS="~amd64"
 
 DEPEND="virtual/glibc"
 
@@ -28,7 +28,9 @@ src_install() {
 	mkdir -p ${D}/emul/linux/x86/usr/X11R6/lib/modules/drivers
 	mkdir -p ${D}/emul/linux/x86/usr/X11R6/lib/modules/input
 	mkdir -p ${D}/etc/env.d
-	mv ${WORKDIR}/etc/env.d/75emul-linux-x86-xlibs ${D}/etc/env.d/
-	rm -Rf ${WORKDIR}/etc
+	# ARGH, forgot to include env.d file, workaround till next version
+	echo "LDPATH=/emul/linux/x86/usr/X11R6/lib:/emul/linux/x86/usr/lib/opengl/xorg-x11/lib" > ${D}/etc/env.d/75emul-linux-x86-xlibs
+	#mv -v ${WORKDIR}/etc/env.d/75emul-linux-x86-xlibs ${D}/etc/env.d/
+	#rm -Rf ${WORKDIR}/etc
 	cp -Rpvf ${WORKDIR}/* ${D}/emul/linux/x86
 }

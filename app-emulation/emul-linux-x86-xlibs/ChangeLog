@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.5 2004/04/14 05:50:42 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.6 2004/04/14 11:47:28 kugelfang Exp $
+
+  14 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> emul-linux-x86-xlibs-1.1.ebuild:
+  Ebuild now adds /etc/env.d/75emul-linux-x86-xlibs "on the fly", I forgot to
+  include that into the tarball. Fixes BUG #47773.
 
   14 Apr 2004; Travis Tilley <lv@gentoo.org> emul-linux-x86-xlibs-1.1.ebuild:
   it seems xlibs 1.1 is broken for some people, so i'm going to mask it for now
