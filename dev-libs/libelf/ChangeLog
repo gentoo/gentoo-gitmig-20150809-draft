@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libelf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.4 2002/12/13 10:56:29 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.5 2002/12/18 16:37:47 gerk Exp $
+
+  18 Dec 2002; Mark Guertin <gerk@gentoo.org> libelf-0.8.2.ebuild :
+  set ppc in keywords
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
