@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b.ebuild,v 1.1 2002/11/27 23:57:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b.ebuild,v 1.2 2002/11/28 10:53:42 cretin Exp $
 
 DESCRIPTION="Network Time Protocol suite/programs"
 SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/${P}.tar.gz"
@@ -26,7 +26,8 @@ src_compile() {
 	cp configure configure.orig
 	sed -e "s:-Wpointer-arith::" configure.orig > configure
 
-	econf
+	./configure --prefix=/usr --mandir=/usr/share/man \
+        --host=${CHOST} --build=${CHOST} || die
 	emake || die
 }
 
