@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.8 2002/12/01 12:34:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.9 2002/12/01 15:48:27 azarah Exp $
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
 #
@@ -92,6 +92,8 @@ EPATCH_OPTS=""
 # List of patches not to apply.  Not this is only file names,
 # and not the full path ..
 EPATCH_EXCLUDE=""
+# Change the printed message for a single patch.
+EPATCH_SINGLE_MSG=""
 
 # This function is for bulk patching, or in theory for just one
 # or two patches.
@@ -192,14 +194,14 @@ epatch() {
 		#   ???_arch_foo.patch
 		#
 		if [ -f ${x} ] && \
-		   [ -n "$1" -o "${x/_all_}" != "${x}" -o "`eval echo \$\{x/_${ARCH}_\}`" != "${x}" ]
+		   [ "${SINGLE_PATCH}" = "yes" -o "${x/_all_}" != "${x}" -o "`eval echo \$\{x/_${ARCH}_\}`" != "${x}" ]
 		then
 			local count=0
 			local popts="${EPATCH_OPTS}"
 
 			if [ -n "${EPATCH_EXCLUDE}" ]
 			then
-				if [ "${EPATCH_EXCLUDE/${x##*/}}" != "${EPATCH_EXCLUDE}" ]
+				if [ "`eval echo \$\{EPATCH_EXCLUDE/${x##*/}\}`" != "${EPATCH_EXCLUDE}" ]
 				then
 					continue
 				fi
@@ -207,7 +209,12 @@ epatch() {
 			
 			if [ "${SINGLE_PATCH}" = "yes" ]
 			then
-				einfo "Applying ${x##*/}..."
+				if [ -n "${EPATCH_SINGLE_MSG}" ]
+				then
+					einfo "${EPATCH_SINGLE_MSG}"
+				else
+					einfo "Applying ${x##*/}..."
+				fi
 			else
 				einfo "  ${x##*/}..."
 			fi
