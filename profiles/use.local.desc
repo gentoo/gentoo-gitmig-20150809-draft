@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.865 2005/01/14 13:31:39 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.866 2005/01/14 15:09:33 phosphan Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -688,6 +688,7 @@ sci-mathematics/octave-forge:qhull - Adds media-libs/qhull (geometric extensions
 sci-mathematics/octave:blas - Adds dependency for virtual/blas.
 sci-mathematics/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to sci-mathematics/octave (may be merged with hdf when opendx is completed)
 sci-mathematics/scilab:atlas - Add support for the atlas library
+sci-mathematics/yacas:glut - Build an OpenGL plugin using the GLUT library
 sys-apps/busybox:devfs - Remove devfs options that crash busybox systems without devfs unless explicitly requested
 sys-apps/busybox:diet - Compile and link with dietlibc
 sys-apps/busybox:make-busybox-symlinks - Create all the appropriate symlinks in /bin and /sbin
