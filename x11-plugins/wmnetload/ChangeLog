@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmnetload
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.4 2002/12/13 11:00:58 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.5 2002/12/17 17:53:50 bcowan Exp $
+
+*wmnetload-1.2 (17 Dec 2002)
+
+  17 Dec 2002; Brad Cowan <bcowan@gentoo.org> wmnetload-1.2.ebuild,
+  files/digest-wmnetload-1.2:
+  
+  Version bump.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
