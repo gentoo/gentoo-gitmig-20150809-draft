@@ -1,6 +1,6 @@
 # Copyright 2002, Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-0.940.ebuild,v 1.3 2002/12/09 04:17:36 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-0.940.ebuild,v 1.4 2002/12/15 10:44:09 bjb Exp $
 
 IUSE="ssl"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.webmin.com/index6.html"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 sparc  alpha ppc"
+KEYWORDS="x86 sparc alpha ppc"
 
 DEPEND="sys-devel/perl
 	ssl? ( dev-perl/Net-SSLeay )
