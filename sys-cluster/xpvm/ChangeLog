@@ -1,13 +1,18 @@
 # ChangeLog for sys-cluster/xpvm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/ChangeLog,v 1.3 2003/07/10 11:17:41 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/ChangeLog,v 1.4 2003/09/10 10:04:35 tantive Exp $
+
+*xpvm-1.2.5-r2 (10 Sep 2003)
+
+  10 Sep 2003; Michael Imhof <tantive@gentoo.org> xpvm-1.2.5-r2.ebuild:
+  Version bumped.  Submitted by the <the@weird-birds.org>.
+  Should close #28329.
 
 *xpvm-1.2.5-r1 (10 Jul 2003)
   
   10 Jul 2003; Michael Imhof <tantive@gentoo.org>:
   Submitted by the <the@weird-birds.org>.
   Should close #24198.
-
 
 *xpvm-1.2.5 (22 Jun 2003)
   
