@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmacpi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.14 2004/10/19 08:46:22 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.15 2004/11/01 20:21:38 gustavoz Exp $
+
+  01 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> wmacpi-1.34.ebuild,
+  wmacpi-1.99_p7.ebuild:
+  Keyworded -sparc... no ACPI, move along
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> wmacpi-1.99_p7.ebuild:
   Stable on amd64.
