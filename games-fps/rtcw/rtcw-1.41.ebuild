@@ -32,7 +32,6 @@ pkg_setup() {
 src_unpack() {
 	unpack_makeself wolf-linux-1.4-full.x86.run
 	unpack_makeself wolf-linux-update-${PV}.x86.run
-#	tail +179 ${DISTDIR}/wolf-linux-1.4-full.x86.run | gzip -cd | tar xf - || die "full"
 }
 
 src_install() {
@@ -50,8 +49,9 @@ src_install() {
 		dogamesbin ${FILESDIR}/wolf-ded
 		dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/wolf-ded
 	fi
-	dogamesbin ${FILESDIR}/wolf
+	dogamesbin ${FILESDIR}/wolf ${FILESDIR}/wolfsp
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/wolf
+	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/wolfsp
 
 	if [ "`use dedicated`" ];
 	then
@@ -74,6 +74,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo "You need to copy pak0.pk3, mp_pak0.pk3, mp_pak1.pk3, mp_pak2.pk3,"
 	einfo "sp_pak1.pk3 and sp_pak2.pk3 from a Window installation into ${dir}/main/"
 	echo
@@ -90,5 +91,4 @@ pkg_postinst() {
 		echo
 		einfo "The dedicated server is started under the ${GAMES_USER_DED} user account"
 	fi
-	games_pkg_postinst
 }
