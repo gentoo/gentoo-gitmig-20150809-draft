@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.340 2005/02/21 06:04:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.341 2005/02/26 00:50:42 eradicator Exp $
+
+  25 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  xorg-x11-6.8.2.ebuild:
+  dosyms should've been ln -s in postinst's migration code.
 
   20 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2.ebuild,v 1.10 2005/02/21 06:04:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2.ebuild,v 1.11 2005/02/26 00:50:42 eradicator Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1514,15 +1514,15 @@ check_migrate_return() {
 	if use amd64; then
 		if [[ -L ${ROOT}usr/lib64 ]]; then
 			rm ${ROOT}usr/lib64
-			dosym lib ${ROOT}usr/lib64
+			ln -s lib ${ROOT}usr/lib64
 		elif [[ -L ${ROOT}usr/lib ]]; then
 			rm -f ${ROOT}usr/lib
-			dosym lib64 ${ROOT}usr/lib
+			ln -s lib64 ${ROOT}usr/lib
 		elif [[ -L ${ROOT}usr/lib32 ]]; then
 			if has_multilib_profile; then
-				dosym lib ${ROOT}usr/lib32
+			ln -s lib ${ROOT}usr/lib32
 			else
-				dosym ../emul/linux/x86/usr/lib ${ROOT}usr/lib32
+				ln -s ../emul/linux/x86/usr/lib ${ROOT}usr/lib32
 			fi
 		fi
 	fi
