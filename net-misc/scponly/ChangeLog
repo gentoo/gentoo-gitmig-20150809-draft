@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/scponly
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.12 2004/10/31 14:49:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.13 2004/12/02 15:30:22 matsuu Exp $
+
+*scponly-4.0 (03 Dec 2004)
+
+  03 Dec 2004; MATSUU Takuto <matsuu@gentoo.org> +scponly-4.0.ebuild:
+  security bump - bug 72815
 
   31 Oct 2004; MATSUU Takuto <matsuu@gentoo.org> scponly-3.11-r2.ebuild,
   -scponly-3.7.ebuild, -scponly-3.8.ebuild:

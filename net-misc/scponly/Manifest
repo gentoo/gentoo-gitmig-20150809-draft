@@ -1,4 +1,6 @@
+MD5 48f3604e22751295c07e471844ade2bb scponly-4.0.ebuild 3067
 MD5 e8351ad8c6e76a8b538676e19940e5c7 scponly-3.11-r2.ebuild 3142
-MD5 f54d9da22b4c711bd1fc28fad6d597f8 ChangeLog 1904
+MD5 fbaae0854d8aa8a9a93d0f6ad1795856 ChangeLog 2031
 MD5 e10a0da4fac2882942ffa8360ccdd921 metadata.xml 201
 MD5 e4d07123d938d81c26fa0f70de4b6a8d files/digest-scponly-3.11-r2 60
+MD5 a1f6bee0be7b749e155d9ec945ce31a4 files/digest-scponly-4.0 59
