@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r1.ebuild,v 1.2 2004/07/02 10:31:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r4.ebuild,v 1.1 2004/07/03 15:36:32 aliz Exp $
 
 inherit eutils flag-o-matic
-
-#extensions versions
 
 DESCRIPTION="Linux kernel (2.4+) firewall, NAT and packet mangling tools"
 HOMEPAGE="http://www.iptables.org/"
@@ -12,7 +10,7 @@ SRC_URI="http://www.iptables.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 ppc sparc ~mips alpha arm hppa amd64 ia64"
 IUSE="ipv6 static extensions"
 DEPEND="virtual/linux-sources"
 
@@ -32,26 +30,23 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-	epatch ${FILESDIR}/${PV}-files/grsecurity-1.2.8-iptables.patch.bz2
-	epatch ${FILESDIR}/${PV}-files/install_ipv6_apps.patch.bz2
-	epatch ${FILESDIR}/${PV}-files/install_all_dev_files.patch.bz2
-	use hppa && epatch ${FILESDIR}/${PV}-files/hppa.patch.bz2
+	epatch ${FILESDIR}/${PV}-files/04_all_install_ipv6_apps.patch.bz2
+	epatch ${FILESDIR}/${PV}-files/05_all_install_all_dev_files.patch.bz2
 
-	sed -i "s:PF_EXT_SLIB=:PF_EXT_SLIB=stealth :g" extensions/Makefile
+	# The folowing hack is needed because ${ARCH} is "sparc" and not "sparc64"
+	# and epatch uses ??_${ARCH}_foo.${EPATCH_SUFFIX} when reading from directories
+	[ "${PROFILE_ARCH}" = "sparc64" ] && epatch ${FILESDIR}/${PV}-files/sparc64_limit_fix.patch.bz2
+	use hppa && epatch ${FILESDIR}/${PV}-files/03_hppa_gentoo.patch.bz2
 
 	if use extensions; then
-		epatch ${FILESDIR}/${PV}-files/iptables-1.2.9-imq1.diff.bz2
-		epatch ${FILESDIR}/${PV}-files/iptables-layer7-0.9.0.patch.bz2
+		epatch ${FILESDIR}/${PV}-files/01_all_grsecurity.patch.bz2
+		epatch ${FILESDIR}/${PV}-files/02_all_imq.patch.bz2
+		epatch ${FILESDIR}/${PV}-files/06_all_l7.patch.bz2
 
 		chmod +x extensions/.IMQ-test*
 		chmod +x extensions/.childlevel-test*
 		chmod +x extensions/.layer7-test*
-
 	fi
-}
-
-src_compile() {
-	replace-flags -O0 -O2
 
 	if [ -z `get-flag O` ]; then
 		append-flags -O2
@@ -61,6 +56,10 @@ src_compile() {
 	# http://bugs.gentoo.org/show_bug.cgi?id=23645
 	filter-flags "-fstack-protector"
 
+	sed -i -e "s:-O2:${CFLAGS} -Iinclude:g" -e "s:/usr/local::g" -e "s:-Iinclude/::" Makefile
+}
+
+src_compile() {
 	# iptables and libraries are now installed to /sbin and /lib, so that
 	# systems with remote network-mounted /usr filesystems can get their
 	# network interfaces up and running correctly without /usr.
@@ -77,8 +76,7 @@ src_compile() {
 			ewarn "Iptables will be built against linux-headers."
 		fi
 
-		make COPT_FLAGS="${CFLAGS}" ${myconf} \
-			PREFIX= \
+		make ${myconf} \
 			LIBDIR=/lib \
 			BINDIR=/sbin \
 			MANDIR=/usr/share/man \
@@ -86,8 +84,7 @@ src_compile() {
 			KERNEL_DIR=/usr/src/linux \
 			|| die "Please check http://cvs.iptables.org/patch-o-matic-ng/updates/ if your kernel needs to be patched for iptables"
 	else
-		make COPT_FLAGS="${CFLAGS}" ${myconf} \
-			PREFIX= \
+		make ${myconf} \
 			LIBDIR=/lib \
 			BINDIR=/sbin \
 			MANDIR=/usr/share/man \
@@ -98,18 +95,35 @@ src_compile() {
 }
 
 src_install() {
-	make COPT_FLAGS="${CFLAGS}" ${myconf} \
-		PREFIX= \
-		DESTDIR=${D} \
-		MANDIR=/usr/share/man \
-		install || die
-	make COPT_FLAGS="${CFLAGS}" ${myconf} \
-		DESTDIR=${D} \
-		PREFIX= \
-		LIBDIR=/usr/lib \
-		MANDIR=/usr/share/man \
-		INCDIR=/usr/include \
-		install-devel || die
+	if use extensions; then
+		make DESTDIR=${D} ${myconf} \
+			LIBDIR=/lib \
+			MANDIR=/usr/share/man \
+			INCDIR=/usr/include \
+			KERNEL_DIR=/usr/src/linux \
+			install || die "Please check http://cvs.iptables.org/patch-o-matic-ng/updates/ if your kernel needs to be patched for iptables"
+
+		make DESTDIR=${D} ${myconf} \
+			LIBDIR=/usr/lib \
+			MANDIR=/usr/share/man \
+			INCDIR=/usr/include \
+			KERNEL_DIR=/usr/src/linux \
+			install-devel || die "Please check http://cvs.iptables.org/patch-o-matic-ng/updates/ if your kernel needs to be patched for iptables"
+	else
+		make DESTDIR=${D} ${myconf} \
+			LIBDIR=/lib \
+			MANDIR=/usr/share/man \
+			INCDIR=/usr/include \
+			KERNEL_DIR=/usr \
+			install || die
+
+		make DESTDIR=${D} ${myconf} \
+			LIBDIR=/usr/lib \
+			MANDIR=/usr/share/man \
+			INCDIR=/usr/include \
+			KERNEL_DIR=/usr \
+			install-devel || die
+	fi
 
 	dodoc COPYING
 	dodir /var/lib/iptables ; keepdir /var/lib/iptables
