@@ -1,17 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.33.ebuild,v 1.1 2003/04/22 06:30:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.33.ebuild,v 1.2 2003/06/01 04:24:56 drobbins Exp $
 
 IUSE="nls"
-
-inherit eutils
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Standard EXT2 and EXT3 filesystem utilities"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -23,9 +21,13 @@ DEPEND="virtual/glibc
 	
 RDEPEND="virtual/glibc"
 
+#eutils has newdepend in it; needs to be inherited *after* DEPEND and RDEPEND
+#are defined.
+
+inherit eutils
+
 src_unpack() {
 	unpack ${A}
-
 	# Fix a cosmetic error in mk_cmds's help output.
 	cd ${S}; epatch ${FILESDIR}/e2fsprogs-1.32-mk_cmds-cosmetic.patch
 }

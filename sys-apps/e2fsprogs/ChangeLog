@@ -1,6 +1,8 @@
 # ChangeLog for sys-apps/e2fsprogs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/ChangeLog,v 1.21 2003/04/22 06:30:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/ChangeLog,v 1.22 2003/06/01 04:24:56 drobbins Exp $
+
+  31 May 2003; Daniel Robbins <drobbins@gentoo.org>: moving to x86 (stable.)
 
 *e2fsprogs-1.33 (21 Apr 2003)
 
