@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8-r1.ebuild,v 1.1 2003/11/24 07:57:51 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8-r1.ebuild,v 1.2 2003/12/09 17:57:59 lanius Exp $
 
 # This is basically unchanged from the one supplied by Stephane Loeuillet
 # to Gentoo bug: http://bugs.gentoo.org/show_bug.cgi?id=28574
@@ -20,7 +20,7 @@ KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 
 DEPEND="net-dialup/mgetty
 	>=sys-libs/zlib-1.1.4
-	>=app-text/ghostscript-5.50
+	virtual/ghostscript
 	>=media-libs/tiff-3.5.5
 	jpeg? ( media-libs/jpeg )
 	sys-apps/gawk"
