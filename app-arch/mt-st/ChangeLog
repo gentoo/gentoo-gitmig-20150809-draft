@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/mt-st
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.9 2003/06/29 15:40:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.10 2003/10/12 21:53:37 zul Exp $
+
+  12 Oct 2003; Chuck Short <zul@gentoo.org> mt-st-0.7-r1.ebuild:
+  Added ~ia64 to keywords.
 
 *mt-st-0.6 (13 Feb 2003)
 
